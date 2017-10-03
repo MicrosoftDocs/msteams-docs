@@ -1,1 +1,1 @@
-# Welcome to developer-docs!
+# Welcome to Microsoft Teams - where you build awesome stuff!
