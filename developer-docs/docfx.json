@@ -1,37 +1,42 @@
 {
-  "build": {
-    "content": [
-      {
-        "files": [
-          "**/*.md"
-        ],
-        "exclude": [
-          "**/obj/**",
-          "**/includes/**",
-          "README.md",
-          "LICENSE",
-          "LICENSE-CODE",
-          "ThirdPartyNotices"
-        ]
-      }
-    ],
-    "resource": [
-      {
-        "files": [
-          "**/*.png",
-          "**/*.jpg"
-        ],
-        "exclude": [
-          "**/obj/**",
-          "**/includes/**"
-        ]
-      }
-    ],
-    "overwrite": [],
-    "externalReference": [],
-    "globalMetadata": {},
-    "fileMetadata": {},
-    "template": [],
-    "dest": "developer-docs"
-  }
+    "build": {
+        "content": [{
+            "files": [
+                "**/*.md"
+            ],
+            "exclude": [
+                "**/obj/**",
+                "**/includes/**",
+                "README.md",
+                "LICENSE",
+                "LICENSE-CODE",
+                "ThirdPartyNotices"
+            ]
+        }],
+        "resource": [{
+            "files": [
+                "**/*.png",
+                "**/*.jpg"
+            ],
+            "exclude": [
+                "**/obj/**",
+                "**/includes/**"
+            ]
+        }],
+        "overwrite": [],
+        "externalReference": [],
+        "globalMetadata": {
+            "uhfHeaderId": "MSDocsHeader-BotFramework",
+            "breadcrumb_path": "/msteams-developer-docs/breadcrumb/TOC.json",
+            "extendBreadcrumb": true,
+            "author": "CharlesPrakashDasari",
+            "ms.prod": "msteams",
+            "searchScope": ["Teams"],
+            "ms.date": "10/05/2017",
+            "titleSuffix": "Teams"
+        },
+        "fileMetadata": {},
+        "template": [],
+        "dest": "msteams-developer-docs"
+    }
 }

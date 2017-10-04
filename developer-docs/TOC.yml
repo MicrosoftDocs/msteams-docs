@@ -1,0 +1,22 @@
+- name: Getting Started
+  expanded: true
+  items:
+  - name: Getting Started with .NET/C#
+    href: ./get-started/get-started-csharp
+  - name: Getting Started with NodeJS
+    href: ./get-started/get-started-nodejs
+- name: Concepts
+  href: ./concepts/
+- name: Scenarios
+  href: ./scenarios/
+- name: Reference
+  items:
+  - name: Teams JavaScript Reference
+    href: ./reference/ref-teams-js
+  - name: Teams CSharp Reference
+    href: ./reference/ref-teams-csharp
+- name: Troubleshooting
+  href: ./troubleshoot/
+- name: Samples
+  href: ./samples/
+
