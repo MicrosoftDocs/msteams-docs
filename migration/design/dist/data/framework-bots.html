@@ -1,0 +1,377 @@
+<div>
+    <div class="two-column-layout framework-header">
+        <div class="column-left">
+            <h1>
+                Start talking  
+            </h1>
+        </div>
+        <div class="column-right">
+            <img src="../images/framework/07_framework_bots.png">
+        </div>
+    </div>
+    <p>
+        Bots are conversational apps that perform a narrow or specific set of tasks. They give you an opportunity to communicate with users, respond to their questions, and proactively notify them about changes. They’re a great way to reach out.  
+    </p>
+</div>
+<hr>
+
+<div>
+    <h1>
+        Guidelines
+    </h1>
+    <ul class="list-no-images">
+        <li>
+            <h4>
+                Avatars
+            </h4>
+            <p>
+                Bot avatars in Teams are shaped like hexagons so people can quickly tell that they’re talking to a bot instead of a person. You’ll submit your avatar as a square and we’ll crop it for you. When it comes to avatars, we recommend making yours legible from 2 feet away and using a higher contrast. 
+            </p>
+            <div class="image-frame">
+                <img src="../images/framework/framework_bots_avatar.png" />
+            </div>
+        </li>
+        <li>
+            <h4>
+                Buttons
+            </h4>
+            <p>
+                We support up to six buttons per card. Be concise when writing button text, and keep in mind that most buttons should only address the task at hand. 
+            </p>
+        </li>
+        <li>
+            <h4>
+                Graphics
+            </h4>
+            <p>
+                Graphics are a good way to tell a story, but not all bot conversations require graphics, so use them for maximum impact. 
+            </p>
+        </li>
+        <li>
+            <h4>
+                Respond to users and failing gracefully, like this:
+            </h4>
+                <p>
+                    Your bot should also be able to respond to things like 'Hi', 'Help', and 'Thanks' while taking common misspellings and colloquialisms into account.
+                </p>
+                <h5>
+                    Hello
+                </h5>
+                <span class="bot-quote">
+                    Hi
+                </span>
+                <span class="bot-quote">
+                    how are you
+                </span>
+                <span class="bot-quote">
+                    howdy
+                </span>
+                <h5>
+                    Help
+                </h5>
+                <span class="bot-quote">
+                    What do you do?
+                </span>
+                <span class="bot-quote">
+                    How does this work?
+                </span>
+                <span class="bot-quote">
+                    What the heck?
+                </span>
+                <h5>
+                    Thanks
+                </h5>
+                <span class="bot-quote">
+                    Thank you
+                </span>
+                <span class="bot-quote">
+                    thankyou
+                </span>
+                <span class="bot-quote">
+                    thx
+                </span>
+            <p>
+                Your bot should be able to handle the following types of queries and inputs:  
+            </p>
+            <ul class="list-inside-bullets">
+                <li>
+                    <h5>
+                        Recognized questions
+                    </h5>
+                    <p>
+                        These are the “best case scenario” questions you’d anticipate from users. 
+                    </p>
+                </li>
+                <li>
+                    <h5>
+                        Recognized non-questions
+                    </h5>
+                    <p>
+                        Queries about unsupported functionality, random pieces of information, or when someone wants to curse at your bot. 
+                    </p>
+                </li>
+                <li>
+                    <h5>
+                        Unrecognized questions
+                    </h5>
+                    <p>
+                        Unintelligible inputs (i.e., gibberish). 
+                    </p>
+                </li>
+            </ul>
+            <p>
+                Examples of bot personality and response types:  
+            </p>
+            <table class="tg">
+                <tr>
+                    <th><img src="../images/framework/guidelines_bots_table_user-input.png" />User input</th>
+                    <th><img src="../images/framework/guidelines_bots_table_no-personality.png" />No personality</th>
+                    <th><img src="../images/framework/guidelines_bots_table_unflappable-librarian.png" /><div>Unflappable<br>librarian</div></th>
+                    <th><img src="../images/framework/guidelines_bots_table_class-clown.png" />Class clown</th>
+                </tr>
+                <tr>
+                    <td class="tg-m8at" colspan="4">Recognized question</td>
+                </tr>
+                <tr>
+                    <td class="tg-yw4l">
+                        <div class="bot-header">
+                            <img src="../images/framework/guidelines_bots_table_user-input_mobile.png" />User input
+                        </div>
+                        <span>How do I make a new channel?</span>
+                    </td>
+                    <td class="tg-yw4l">
+                        <div class="bot-header">
+                            <img src="../images/framework/guidelines_bots_table_no-personality_mobile.png" />No personality
+                        </div>
+                        <span>Results for your query</span>
+                    </td>
+                    <td class="tg-yw4l">
+                        <div class="bot-header">
+                            <img src="../images/framework/guidelines_bots_table_unflappable-librarian_mobile.png" />Unflappable librarian
+                        </div>
+                        <span>I found this for you</span>
+                        <span>Here’s what you were looking for</span>
+                    </td>
+                    <td class="tg-yw4l">
+                        <div class="bot-header">
+                            <img src="../images/framework/guidelines_bots_table_class-clown_mobile.png" />Class clown
+                        </div>
+                        <span>Seriously? You were looking for this?</span>
+                        <span>Dude, how many times do I need to do this for you?</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tg-m8at" colspan="4">Recognized non-question </td>
+                </tr>
+                <tr>
+                    <td class="tg-yw4l">
+                        <div class="bot-header">
+                            <img src="../images/framework/guidelines_bots_table_user-input_mobile.png" />User input
+                        </div>
+                        <span>Thanks</span>
+                    </td>
+                    <td class="tg-yw4l">
+                        <div class="bot-header">
+                            <img src="../images/framework/guidelines_bots_table_no-personality_mobile.png" />No personality
+                        </div>
+                        <span>no results</span>
+                    </td>
+                    <td class="tg-yw4l">
+                        <div class="bot-header">
+                            <img src="../images/framework/guidelines_bots_table_unflappable-librarian_mobile.png" />Unflappable librarian
+                        </div>
+                        <span><img src="../images/framework/guidelines_bots_table_smile-emoij.png" /></span>
+                    </td>
+                    <td class="tg-yw4l">
+                        <div class="bot-header">
+                            <img src="../images/framework/guidelines_bots_table_class-clown_mobile.png" />Class clown
+                        </div>
+                        <span>You’re <i>thanking</i> me? You know I’m a bot, right?</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tg-m8at" colspan="4">Unrecognized question</td>
+                </tr>
+                <tr>
+                    <td class="tg-yw4l">
+                        <div class="bot-header">
+                            <img src="../images/framework/guidelines_bots_table_user-input_mobile.png" />User input
+                        </div>
+                        <span>qwermvosadfioi</span>
+                    </td>
+                    <td class="tg-yw4l">
+                        <div class="bot-header">
+                            <img src="../images/framework/guidelines_bots_table_no-personality_mobile.png" />No personality
+                        </div>
+                        <span>no results</span>
+                    </td>
+                    <td class="tg-yw4l">
+                        <div class="bot-header">
+                            <img src="../images/framework/guidelines_bots_table_unflappable-librarian_mobile.png" />Unflappable librarian
+                        </div>
+                        <span>Hmm, I couldn’t find any matches. Can you please try again using more or different words?</span>
+                    </td>
+                    <td class="tg-yw4l">
+                        <div class="bot-header">
+                            <img src="../images/framework/guidelines_bots_table_class-clown_mobile.png" />Class clown
+                        </div>
+                        <span>I – Have – No – Idea what you are talking about. Once again from the top. </span>
+                        <span>Nope. I don’t roll that way.</span>
+                    </td>
+                </tr>
+            </table>
+            <div class="pro-tip">
+                <p>
+                    When writing your bot script, ask yourself: “Will my company be embarrassed if a response is screen captured and shared?” 
+                </p>
+            </div>
+        </li>
+        <li>
+            <h4>
+                Understanding what users are trying to say  
+            </h4>
+            <ul>
+                <li>
+                    <h5>
+                        Use a thesaurus for synonyms
+                    </h5>
+                    <p>
+                        When brainstorming variants, use a thesaurus and get people from as many different backgrounds as possible to help you generate different interpretations of each query.
+                    </p>
+                </li>
+                <li>
+                    <h5>
+                        Make use of telemetry and interviews
+                    </h5>
+                    <p>
+                        Find out what users are saying and what their intent was when querying your bot. This will be an ongoing process as you get users in different locations and types of companies. You can fine tune language recognition and intent mapping with <a href="https://www.luis.ai/">LUIS</a>. 
+                    </p>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h4>
+                How often should you use your bot to reach out to a user?
+            </h4>
+            <ul>
+                <li>
+                    <h5>
+                        When a state has changed
+                    </h5>
+                    <p>
+                        For example, if an assignment is marked as complete, when a bug changes, when new social media is available, or when a poll has been completed.
+                    </p>
+                </li>
+                <li>
+                    <h5>
+                        When the timing is right
+                    </h5>
+                    <p>
+                        Your bot can act like a daily digest, sending a notification to the user or channel at a specific frequency.
+                    </p>
+                </li>
+            </ul>
+            <p>
+                Leave the user in control. Provide notification settings that include frequency and priority. 
+            </p>
+            <div class="image-frame">
+                <img src="../images/framework/framework_bots_notification.png" />
+            </div>
+        </li>
+    </ul>
+</div>
+<hr>
+
+<div>
+    <h1>
+        Using tabs
+    </h1>
+    <p>
+        Tabs make your bot much more functional. With tabs, you get the following:
+    </p>
+    <ul>
+        <li>
+            <h4>
+                A place to host standing queries
+            </h4>
+            <p>
+                In one-on-one conversations, tabs can house user-specific information and lists. They’re also a good place to maintain bot responses to frequently-asked questions (so users don’t need to keep asking). 
+            </p>
+        </li>
+        <li>
+            <h4>
+                A place to finish a conversation
+            </h4>
+            <p>
+                 You can link to a tab from a card. If your bot provides an answer that requires a few more steps, it can link to a tab to complete the task or flow. 
+            </p>
+        </li>
+        <li>
+            <h4>
+                A place to provide some help
+            </h4>
+            <p>
+                Add a tab that educates users about how to communicate with your bot. You can provide some context for what it does or FAQs. 
+            </p>
+        </li>
+    </ul>
+    <img src="../images/framework/framework_bots_tbot-help.png" />
+    <div class="pro-tip">
+        <p>
+            Embedding parts of your site in a tab will help someone maintain the context of a conversation as they use your service. It removes the need to launch your service in a browser and switch back and forth between apps. 
+        </p>
+    </div>
+</div>
+<hr>
+
+<div>
+    <h1>
+        Best practices
+    </h1>
+    <ul class="list-left-bar">
+        <li>
+            <h4>
+                Bots aren’t assistants
+            </h4>
+            <p>
+                Unlike agents (like Cortana), bots act as specialists. 
+            </p>
+        </li>
+        <li>
+            <h4>
+                Discourage chit chat
+            </h4>
+            <p>
+                Unless your bot is <i>for</i> conversation, find ways to redirect chit chat toward task completion.
+            </p>
+        </li>
+        <li>
+            <h4>
+                Introduce some personality
+            </h4>
+            <p>
+                Keep your bot personality consistent with the voice of your product. Think of your bot as speaking <i>for</i> your company. 
+            </p>
+        </li>
+        <li>
+            <h4>
+                Maintain tone
+            </h4>
+            <p>
+                Determine whether you want your tone to be friendly and light, “just the facts”, or super quirky. 
+            </p>
+        </li>
+        <li>
+            <h4>
+                Encourage easy task flow
+            </h4>
+            <p>
+               Support multi-turn interactions while still allowing for fully formed questions. Anticipating the next step will help users get through task flows much easier. 
+            </p>
+            <p>
+                If a user takes several steps to complete a task, allow your bot to take them through each step, but finish by having it suggest a quicker path. For example, if a user has taken several conversational turns to set a meeting (by first specifying a meeting, then identifying with whom, then stating the time, then stating the day), finish the conversation with the following suggestion: “Next time, try asking if you can ‘schedule a meeting with Bob at 1:00 tomorrow’”. 
+            </p>
+        </li>
+    </ul>
+    <a class="resources-end-link" href="https://aka.ms/teamsbotsplatform">View resources</a>
+</div>

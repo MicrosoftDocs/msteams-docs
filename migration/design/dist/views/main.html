@@ -1,0 +1,108 @@
+<div class="topbar-container layout-outer">
+  <div class="layout-inner">
+    <div class="topbar navigation">
+      <div class="title" ng-click="returnToRoot()">
+        <span>
+          {{applicationData.apptitle}}
+        </span>
+        <span>
+          {{applicationData.appsubtitle}}
+        </span>
+      </div>
+      <div class="nav-wide chapter-navigation">
+        <div class="chapter-title" ng-repeat="chapter in applicationData.chapters" ng-click="selectChapter(chapter)">
+          <div>
+            <span class="visible-title" ng-class="{true:'is-selected'}[chapter === appDataFactory.currentChapter]">{{chapter.chaptertitle}}</span>
+          </div>
+          <span class="is-selected ghost-title">{{chapter.chaptertitle}}</span>
+        </div>
+      </div>
+
+      <div class="nav-narrow nav-buttons">
+        <!--<div class="icon menu"></div>-->
+        <div class="menu-button" ng-hide="showNavMenu" ng-click="showNavMenu = true">
+          <ng-include class="site-icon icon-menu" src="'icons/icon-menu.html'"></ng-include>
+        </div>
+        <div class="close-button" ng-show="showNavMenu" ng-click="showNavMenu = false">
+          <ng-include class="site-icon icon-close" src="'icons/icon-close.html'"></ng-include>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--make this into the mobile/full screen navigation-->
+<div class="navigation nav-narrow full-screen-nav" ng-show="showNavMenu">
+  <div class="layout-outer">
+    <div class="layout-inner" ng-repeat="chapter in applicationData.chapters">
+      <div class="chapter-title" ng-click="selectChapter(chapter)">
+        <span ng-class="{true:'is-selected'}[chapter === appDataFactory.currentChapter]">{{chapter.chaptertitle}}</span>
+      </div>
+      <div ng-if="chapter.showSectionNav" ng-repeat="section in chapter.sections">
+        <div class="section-title" ng-click="selectSection(chapter, section)">
+          <span ng-class="{true:'is-selected'}[section === appDataFactory.currentSection]">{{section.title}}</span>
+        </div>
+      </div>
+      <hr>
+    </div>
+  </div>
+</div>
+
+
+<div class="content-container">
+  <div class="detail-view" ng-if="appDataFactory.currentChapter.showSectionNav">
+    <div class="">
+      <div class="content-view">
+                
+        <div class="page-column-container" scroll-handle-selection>
+            <div class="sidebar page-column-left navigation nav-wide">
+            <!-- Sidebar navigation shows sections for current "chapter" -->
+            <div class="sidebar-navigation">
+              <div ng-show="appDataFactory.currentChapter.sections" ng-repeat="section in appDataFactory.currentChapter.sections">
+                <div class="section-title" ng-click="selectSection(appDataFactory.currentChapter, section)">
+                  <span ng-class="{true:'is-selected'}[section === appDataFactory.currentSection]">{{section.title}}</span>
+                </div>
+                <div class="sub-section-title" ng-show="section === appDataFactory.currentSection" ng-repeat="subSection in section.subSections" ng-click="selectSubSection(subSection)">
+                  <span><!--ng-class="{true:'is-selected'}[subSection === appDataFactory.currentSubSection]"-->{{subSection.title}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-column-right">
+            <div ng-if="appDataFactory.currentChapter && !appDataFactory.currentSection">
+              <ng-include src="appDataFactory.currentChapter.filepath"></ng-include>
+            </div>
+            <div ng-if="appDataFactory.currentSection">
+              <div class="section-details" >
+                <div class="sub-section-details not-separate-pages" ng-if="!appDataFactory.currentSection.subSections">
+                  <ng-include  src="appDataFactory.currentSection.filepath"></ng-include>
+                </div>
+                  <div class="sub-section-details" ng-if="appDataFactory.currentSection.subSections" ng-repeat="subSection in appDataFactory.currentSection.subSections">
+                    <a name="{{subSection.pathID}}"></a>
+                    <div>
+                      <ng-include src="subSection.filepath"></ng-include>
+                    </div>
+                    <hr>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <site-footer></site-footer>
+      </div>
+    </div>
+  </div>
+
+  <div class="single-page-view" ng-if="!appDataFactory.currentChapter.showSectionNav">
+    <div class="layout-outer">
+      <ng-include class="layout-inner" src="appDataFactory.currentChapter.filepath"></ng-include>
+    </div>
+    <div class="layout-outer" ng-class="section.cssClasses" ng-repeat="section in appDataFactory.currentChapter.sections">
+      <div class="layout-inner">
+        <ng-include src="section.filepath"></ng-include>
+      </div>
+    </div>
+    <site-footer></site-footer>
+  </div>
+
+</div>

@@ -1,0 +1,257 @@
+{  
+   "apptitle":"Microsoft Teams",
+   "appsubtitle" : "Design guidelines",
+   "chapters":[  
+      {  
+         "chaptertitle":"Getting started",
+         "pathID":"gettingstarted",
+         "showSectionNav":false,
+         "sections":[
+            {  
+               "pathID":"how"
+            },
+            {  
+               "pathID":"partners"
+            },
+            {
+                "pathID":"ready"
+            }
+         ]
+      },
+      {  
+         "chaptertitle":"Framework",
+         "pathID":"framework",
+         "showSectionNav":true,
+         "sections":[  
+            {  
+               "title":"The basics",
+               "pathID":"basics"
+            },
+            {  
+               "title":"Apps",
+               "pathID":"apps"
+            },
+            {  
+               "title":"Activity feed",
+               "pathID":"feed"
+            },
+            {  
+               "title":"Search",
+               "pathID":"search"
+            },
+            {  
+               "title":"Tabs",
+               "pathID":"tabs",
+               "subSections":[  
+                  {  
+                     "title":"Overview",
+                     "pathID":"overview"
+                  },
+                                    {  
+                     "title":"Guidelines",
+                     "pathID":"guidelines"
+                  },
+                  {  
+                     "title":"Tab layouts",
+                     "pathID":"layouts"
+                  },
+                  {  
+                     "title":"Types of tabs",
+                     "pathID":"types"
+                  },
+                  {  
+                     "title":"Best practices",
+                     "pathID":"practices"
+                  }
+               ]
+            },
+            {  
+               "title":"Compose extensions",
+               "pathID":"compose"
+            },
+            {  
+               "title":"Bots",
+               "pathID":"bots"
+            },
+            {  
+               "title":"Cards",
+               "pathID":"cards",
+               "subSections":[  
+                  {  
+                     "title":"Overview",
+                     "pathID":"overview"
+                  },
+                  {  
+                     "title":"Guidelines",
+                     "pathID":"guidelines"
+                  },
+                  {  
+                     "title":"Types of cards",
+                     "pathID":"types"
+                  },
+                  {  
+                     "title":"Collections",
+                     "pathID":"collections"
+                  },
+                  {  
+                     "title":"Best practices",
+                     "pathID":"practices"
+                  }
+               ]
+            },
+            {  
+               "title":"Submitting your app",
+               "pathID":"submitting"
+            }
+         ]
+      },
+      {  
+         "chaptertitle":"Components",
+         "pathID":"components",
+         "showSectionNav":true,
+         "sections":[
+            {  
+               "title":"Color",
+               "pathID":"color"
+            },
+            {  
+               "title":"Buttons, links, and controls",
+               "pathID":"controls"
+            },
+            {  
+               "title":"Fields and flyouts",
+               "pathID":"fields"
+            },
+            {  
+               "title":"Dialogs",
+               "pathID":"dialogs"
+            },
+            {  
+               "title":"Typography",
+               "pathID":"typography"
+            },
+            {  
+               "title":"Themes",
+               "pathID":"theme"
+            }
+         ]
+      },
+      {  
+         "chaptertitle":"Resources",
+         "pathID":"resources",
+         "showSectionNav":false,
+         "sections":[  
+            {  
+               "title":"Downloads",
+               "pathID":"downloads",
+               "cssClasses": "light-background"
+            },
+            {  
+               "title":"Developer",
+               "pathID":"developer",
+               "cssClasses": "light-background p-t-none"
+            }
+         ]
+      }
+   ],
+   "interactiveLists": [
+        {
+            "listName" : "overview-list",
+            "data" : [
+                {
+                    "heading" : "Immersive experience",
+                    "imagePath" : "../images/getting_started/01_homepage_immersive-experience.png",
+                    "details" : "Our platform places content and conversations side by side.",
+                    "link" : "#!/framework/basics"
+                },
+                {
+                    "heading" : "Tabs and conversations",
+                    "imagePath" : "../images/getting_started/02_homepage_tabs-and-conversations.png",
+                    "details" : "Tabs give your app a dedicated canvas that allows people to jump between conversations and your experience.",
+                    "link" : "#!/framework/tabs"
+                },
+                {
+                    "heading" : "Customizable cards",
+                    "imagePath" : "../images/getting_started/03_homepage_cards.png",
+                    "details" : "Cards let you to surface important tasks, information, and reminders in actionable ways.",
+                    "link" : "#!/framework/cards"
+                },
+                {
+                    "heading" : "Bot framework",
+                    "imagePath" : "../images/getting_started/04_homepage_bots.png",
+                    "details" : "Our framework offers a natural language UX that can interact with your services.",
+                    "link" : "#!/framework/bots"
+                },
+                {
+                    "heading" : "Instant notifications",
+                    "imagePath" : "../images/getting_started/05_homepage_instant-notifications.png",
+                    "details" : "The activity feed displays notifications for your users.",
+                    "link" : "#!/framework/feed"
+                },
+                {
+                    "heading" : "Compose extensions",
+                    "imagePath" : "../images/getting_started/06_homepage_compose-extensions.png",
+                    "details" : "Compose Extensions are quick and easy shortcuts to key components of your service.",
+                    "link" : "#!/framework/compose"
+                }
+            ]
+        }
+   ],
+   "footerContent": {
+       "description" : "Microsoft Teams is the new chat-based collaboration tool for Office 365.",
+       "columnData" : [
+            {
+                "title" : "Get started",
+                "links" : [
+                    {
+                        "text" : "Sign in to Teams",
+                        "link" : "https://teams.microsoft.com"
+                    },
+                    {
+                        "text" : "Download the app",
+                        "link" : "https://teams.microsoft.com/download"
+                    }
+                ]
+            },
+            {
+                "title" : "Resources",
+                "links" : [
+                    {
+                        "iconPath" : "../icons/resources_help.svg",
+                        "text" : "Microsoft Teams help",
+                        "link" : "https://support.office.com/en-us/teams"
+                    },
+                    {
+                        "iconPath" : "../icons/resources_community.svg",
+                        "text" : "Microsoft Teams tech community",
+                        "link" : "https://techcommunity.microsoft.com/t5/Microsoft-Teams/ct-p/MicrosoftTeams"
+                    },
+                    {
+                        "iconPath" : "../icons/resources_developer-platform.svg",
+                        "text" : "Microsoft Teams developer platform",
+                        "link" : "https://dev.office.com/microsoft-teams"
+                    }
+                ]
+            }
+       ],
+       "copyrightText" : "© 2017 Microsoft",
+        "footerLinks": [
+            {
+                "text" : "Contact us",
+                "link" : "https://go.microsoft.com/?linkid=2028325"
+            },
+            {
+                "text" : "Privacy & cookies",
+                "link" : "https://go.microsoft.com/fwlink/?LinkId=248681"
+            },
+            {
+                "text" : "Terms of Use",
+                "link" : "https://go.microsoft.com/fwlink/?LinkID=206977"
+            },
+            {
+                "text" : "Trademarks",
+                "link" : "https://www.microsoft.com/trademarks"
+            }
+        ]
+   }
+}

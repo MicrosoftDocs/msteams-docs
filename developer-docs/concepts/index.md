@@ -9,3 +9,5 @@ ms.prod: msteams
 ms.date: 10/05/2017
 keywords: template article teams
 ---
+
+# Concepts

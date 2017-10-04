@@ -1,0 +1,31 @@
+<div class="site-footer">
+    <div class="layout-outer">
+        <div class="layout-inner">
+            <div class="three-column-layout">
+                <div>
+                    <blockquote>
+                        {{footerContent.description}}
+                    </blockquote>
+                </div>
+                <div ng-repeat="columnData in footerContent.columnData">
+                    <h6>{{columnData.title}}</h6>
+                    <a ng-repeat="link in columnData.links" href="{{link.link}}" target="_blank">
+                        <img ng-if="link.iconPath" ng-src="{{link.iconPath}}" /><span>{{link.text}}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layout-outer">
+        <div class="layout-inner">
+            <span>
+                {{footerContent.copyrightText}}
+            </span>
+            <div class="footer-links">
+                <span ng-repeat="footerLink in footerContent.footerLinks">
+                    <a ng-href="{{footerLink.link}}" target="_blank">{{footerLink.text}}</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
