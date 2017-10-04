@@ -2,11 +2,14 @@
     "build": {
         "content": [{
             "files": [
-                "**/*.md"
+                "**/*.md",
+                "**/*.yml"
             ],
             "exclude": [
                 "**/obj/**",
                 "**/includes/**",
+                "**/_themes/**",
+                "**/_themes.pdf/**",
                 "README.md",
                 "LICENSE",
                 "LICENSE-CODE",
