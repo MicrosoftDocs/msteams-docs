@@ -1,1 +1,10 @@
-# Welcome to msteams-platform!
+---
+# aka.ms/skyeye/meta for more information
+layout: HubPage
+hide_bc: true
+ms.topic: hub-page
+title: Teams Developer Documentation
+description: Contains documentation for developers to enable them build great apps with Microsoft Teams
+---
+
+[!include[Content](./includes/landing-page.html)]

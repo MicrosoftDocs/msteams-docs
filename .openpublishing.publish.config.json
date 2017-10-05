@@ -1,35 +1,51 @@
 {
-  "docsets_to_publish": [
-    {
-      "docset_name": "msteams-platform",
-      "build_source_folder": "msteams-platform",
-      "build_output_subfolder": "msteams-platform",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes"
+    "need_generate_pdf_url_template": true,
+    "Targets": {
+        "Pdf": {
+            "template_folder": "_themes.pdf"
+        }
+    },
+    "docsets_to_publish": [{
+        "docset_name": "msteams-platform",
+        "build_source_folder": "msteams-platform",
+        "build_output_subfolder": "msteams-platform",
+        "locale": "en-us",
+        "monikers": [],
+        "moniker_ranges": [],
+        "open_to_public_contributors": true,
+        "type_mapping": {
+            "Conceptual": "Content",
+            "ManagedReference": "Content",
+            "RestApi": "Content"
+        },
+        "build_entry_point": "docs",
+        "template_folder": "_themes"
+    }],
+    "notification_subscribers": [],
+    "branches_to_filter": [],
+    "skip_source_output_uploading": false,
+    "need_preview_pull_request": true,
+    "contribution_branch_mappings": {},
+    "dependent_repositories": [{
+            "path_to_root": "_themes",
+            "url": "https://github.com/Microsoft/templates.docs.msft",
+            "branch": "master",
+            "branch_mapping": {}
+        },
+        {
+            "path_to_root": "_themes.pdf",
+            "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+            "branch": "master"
+        }
+    ],
+    "branch_target_mapping": {
+        "live": [
+            "Publish",
+            "Pdf"
+        ],
+        "master": [
+            "Publish",
+            "Pdf"
+        ]
     }
-  ],
-  "notification_subscribers": [],
-  "branches_to_filter": [],
-  "skip_source_output_uploading": false,
-  "need_preview_pull_request": false,
-  "contribution_branch_mappings": {},
-  "dependent_repositories": [
-    {
-      "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft",
-      "branch": "master",
-      "branch_mapping": {}
-    }
-  ],
-  "branch_target_mapping": {},
-  "need_generate_pdf_url_template": false
 }

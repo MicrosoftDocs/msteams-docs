@@ -1,0 +1,7 @@
+- name: Docs
+  href: /
+  homepage: /
+  items:
+  - name: Teams Platform
+    tocHref: /msteams-platform/
+    topicHref: /msteams-platform/index
