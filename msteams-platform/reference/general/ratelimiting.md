@@ -1,3 +1,9 @@
+---
+title: Rate limiting | Microsoft Docs
+description: Rate limiting and best practices in Microsoft Teams
+keywords: teams bots rate limiting
+---
+
 # Optimize your bot: Rate limiting and best practices in Microsoft Teams
 
 As a general principle, your application should limit the number of messages it posts into an individual chat or channel conversation. This ensures an optimal experience that does not feel “spammy” to your end users.

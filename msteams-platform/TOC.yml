@@ -39,14 +39,32 @@
     href: ./scenarios/sso
 - name: Reference
   items:
-  - name: Teams JavaScript Reference
-    href: ./reference/ref-teams-js
-  - name: Teams CSharp Reference
-    href: ./reference/ref-teams-csharp
-  - name: Manifest Schema Reference
-    href: ./reference/schema
-  - name: Migrating Your Manifest to v1.0
-    href: ./reference/schemamigrate
+  - name: General
+    items:
+    - name: Crossdomain Redirects
+      href: ./reference/general/crossdomain
+    - name: Debugging
+      href: ./reference/general/debugging
+    - name: Prerequisites
+      href: ./reference/general/prerequisites
+    - name: Rate Limiting
+      href: ./reference/general/ratelimiting
+  - name: Library
+    items:
+    - name: Teams JavaScript Reference
+      href: ./reference/library/ref-teams-js
+    - name: Teams CSharp Reference
+      href: ./reference/library/ref-teams-csharp
+  - name: Design Framework
+    items:
+    - name: Overview
+      href: ./reference/design/index
+  - name: Schema
+    items:
+    - name: Manifest Schema Reference
+      href: ./reference/schema
+    - name: Migrating Your Manifest to v1.0
+      href: ./reference/schemamigrate
 - name: Troubleshooting
   href: ./troubleshoot/index
 - name: Samples

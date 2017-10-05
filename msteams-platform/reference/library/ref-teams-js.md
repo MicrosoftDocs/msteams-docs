@@ -1,3 +1,8 @@
+---
+title: Microsoft Teams JavaScript Library | Microsoft Docs
+description: Microsoft Teams JavaScript reference documentation
+keywords: teams javascript reference
+---
 # Reference: Microsoft Teams JavaScript library
 
 >**Important:** Use of the Microsoft Teams JavaScript library is subject to the [Terms of Use](https://aka.ms/bf-terms), [Privacy Statement](https://aka.ms/bf-privacy), and [Code of Conduct](https://aka.ms/bf-conduct) for the Microsoft Bot Framework (Preview).

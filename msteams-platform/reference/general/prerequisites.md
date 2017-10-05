@@ -1,3 +1,9 @@
+---
+title: Requirements for Tab Pages | Microsoft Docs
+description: Prerequisites for building tab pages in Teams
+keywords: teams requirements prerequisites tabs apps
+---
+
 # Requirements for tab pages in Microsoft Teams
 
 >**Important:** Use of the Microsoft Teams JavaScript library is subject to the [Terms of Use](https://aka.ms/bf-terms), [Privacy Statement](https://aka.ms/bf-privacy), and [Code of Conduct](https://aka.ms/bf-conduct) for the Microsoft Bot Framework (Preview).
