@@ -62,9 +62,11 @@
   - name: Schema
     items:
     - name: Manifest Schema Reference
-      href: ./reference/schema
+      href: ./reference/schema/schema
     - name: Migrating Your Manifest to v1.0
-      href: ./reference/schemamigrate
+      href: ./reference/schema/schemamigrate
+    - name: Manifest Schema Reference (v0.4)
+      href: ./reference/schema/schema-v04
 - name: Troubleshooting
   href: ./troubleshoot/index
 - name: Samples
