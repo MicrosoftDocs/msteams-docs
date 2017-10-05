@@ -1,3 +1,15 @@
+---
+title: Custom Bot | Microsoft Docs
+description: Describes the custom bot functionality and how to use it in your apps
+author: charlesprakash
+ms.author: charlesprakash
+manager: billbl
+ms.topic: article
+ms.prod: msteams
+ms.date: 10/05/2017
+keywords: teams bots custom bot
+---
+
 # Custom bots in Microsoft Teams
 
 If you've integrated with outgoing webhooks or slash commands in other chat platforms, you can now easily bring those integrations over to Microsoft Teams via Custom Bots.  Custom bots are an easy way of extending your team with Teams interactivity without having to go through the full process of creating a bot via the Microsoft Bot Framework.  You can use them for custom workflows and commands, such as kicking off a build or checking the latest set of livesite issues. With custom bots, too, you have effective way of ensuring your service is accessible only by authorized users, as the shared secret used by your custom bot will only be scoped to the team in which it has been added.

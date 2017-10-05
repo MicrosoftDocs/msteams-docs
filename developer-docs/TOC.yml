@@ -10,7 +10,13 @@
   - name: Getting Started with NodeJS
     href: ./get-started/get-started-nodejs
 - name: Concepts
-  href: ./concepts/index
+  items:
+  - name: Activity Feed
+    href: ./concepts/activityfeed
+  - name: Authentication
+    href: ./concepts/auth
+  - name: Custom Bot
+    href: ./concepts/custombot
 - name: Scenarios
   href: ./scenarios/index
 - name: Reference
