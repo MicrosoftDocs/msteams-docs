@@ -19,4 +19,5 @@
   href: ./troubleshoot/
 - name: Samples
   href: ./samples/
-
+- name: Feedback
+  href: ./feedback
