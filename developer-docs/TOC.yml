@@ -6,9 +6,9 @@
   - name: Getting Started with NodeJS
     href: ./get-started/get-started-nodejs
 - name: Concepts
-  href: ./concepts/
+  href: ./concepts/index
 - name: Scenarios
-  href: ./scenarios/
+  href: ./scenarios/index
 - name: Reference
   items:
   - name: Teams JavaScript Reference
@@ -16,8 +16,8 @@
   - name: Teams CSharp Reference
     href: ./reference/ref-teams-csharp
 - name: Troubleshooting
-  href: ./troubleshoot/
+  href: ./troubleshoot/index
 - name: Samples
-  href: ./samples/
+  href: ./samples/index
 - name: Feedback
   href: ./feedback
