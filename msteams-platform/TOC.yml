@@ -55,7 +55,7 @@
       href: ./reference/library/ref-teams-js
     - name: Teams CSharp Reference
       href: ./reference/library/ref-teams-csharp
-  - name: Design Framework
+  - name: Design Guidelines
     items:
     - name: Overview
       href: ./reference/design/index
