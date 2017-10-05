@@ -17,6 +17,17 @@
     href: ./concepts/auth
   - name: Custom Bot
     href: ./concepts/custombot
+  - name: Deep Links
+    href: ./concepts/deeplinks
+  - name: User Context
+    href: ./concepts/getusercontext
+- name: Publishing
+  href: ./publishing/index
+  items:
+  - name: Checklist
+    href: ./publshing/checklist
+  - name: Guidance
+    href: ./publishing/guidance
 - name: Scenarios
   href: ./scenarios/index
 - name: Reference

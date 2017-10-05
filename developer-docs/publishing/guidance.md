@@ -1,3 +1,15 @@
+---
+title: Publishing Guidance | Microsoft Docs
+description: Describes the process of publishing your app to the store
+author: charlesprakash
+ms.author: charlesprakash
+manager: billbl
+ms.topic: article
+ms.prod: msteams
+ms.date: 10/05/2017
+keywords: teams publish store office publishing
+---
+
 # Use the Seller Dashboard to submit your Microsoft Teams app
 
 For a general overview of the Microsoft Teams app submission flow, see [Submit your solutions to the Office Store](submission.md).

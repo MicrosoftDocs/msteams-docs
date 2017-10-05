@@ -1,3 +1,15 @@
+---
+title: Deep Links | Microsoft Docs
+description: Describes the deep links functionality and how to use it in your apps
+author: charlesprakash
+ms.author: charlesprakash
+manager: billbl
+ms.topic: article
+ms.prod: msteams
+ms.date: 10/05/2017
+keywords: teams deep link deeplink
+---
+
 # Create deep links to a Microsoft Teams tab
 
 For every tab, Microsoft Teams adds a **Copy link to tab** menu item. This generates a deep link that points to this tab, which users can share.

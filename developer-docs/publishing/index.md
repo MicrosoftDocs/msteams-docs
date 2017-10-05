@@ -1,3 +1,15 @@
+---
+title: Publishing Your App | Microsoft Docs
+description: Describes the process of publishing your app to the store
+author: charlesprakash
+ms.author: charlesprakash
+manager: billbl
+ms.topic: article
+ms.prod: msteams
+ms.date: 10/05/2017
+keywords: teams publish store office publishing
+---
+
 # Publish your Microsoft Teams app to the Office Store
 
 >**Important: Your Microsoft Teams app *must* use the [latest schema](schema.md) and follow [current packaging guidelines](createpackage.md).**
