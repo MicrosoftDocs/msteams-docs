@@ -1,12 +1,6 @@
 ---
 title: 1 on 1 Conversations with Microsoft Bots | Microsoft Docs
 description: Describes the scenario of having a 1 on 1 conversation with a bot end to end
-author: charlesprakash
-ms.author: charlesprakash
-manager: billbl
-ms.topic: article
-ms.prod: msteams
-ms.date: 10/05/2017
 keywords: teams scenarios 1on1 converation bot
 ---
 # Interact one-on-one (1:1) with a Microsoft Teams bot

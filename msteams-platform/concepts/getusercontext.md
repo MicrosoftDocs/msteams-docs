@@ -1,12 +1,6 @@
 ---
 title: User Context | Microsoft Docs
 description: Describes how to get user context to your apps
-author: charlesprakash
-ms.author: charlesprakash
-manager: billbl
-ms.topic: article
-ms.prod: msteams
-ms.date: 10/05/2017
 keywords: teams user context
 ---
 

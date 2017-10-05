@@ -1,12 +1,6 @@
 ---
 title: Publishing Your App | Microsoft Docs
 description: Describes the process of publishing your app to the store
-author: charlesprakash
-ms.author: charlesprakash
-manager: billbl
-ms.topic: article
-ms.prod: msteams
-ms.date: 10/05/2017
 keywords: teams publish store office publishing
 ---
 

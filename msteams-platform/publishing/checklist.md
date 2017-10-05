@@ -1,12 +1,6 @@
 ---
 title: Publishing Checklist | Microsoft Docs
 description: The checklist you should use to publish your app to the store
-author: charlesprakash
-ms.author: charlesprakash
-manager: billbl
-ms.topic: article
-ms.prod: msteams
-ms.date: 10/05/2017
 keywords: teams publish store office publishing checklist
 ---
 

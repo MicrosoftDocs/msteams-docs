@@ -1,12 +1,6 @@
 ---
 title: Manifest Schema Reference | Microsoft Docs
 description: Describes the schema supported in the manifest file
-author: charlesprakash
-ms.author: charlesprakash
-manager: billbl
-ms.topic: article
-ms.prod: msteams
-ms.date: 10/05/2017
 keywords: teams manifest schema
 ---
 

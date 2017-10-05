@@ -1,12 +1,6 @@
 ---
 title: Feedback | Microsoft Docs
 description: Provide your feedback to us
-author: charlesprakash
-ms.author: charlesprakash
-manager: billbl
-ms.topic: article
-ms.prod: msteams
-ms.date: 10/05/2017
 keywords: teams feedback
 ---
 # Submit your questions, bugs, feature requests, and contributions (Microsoft Teams developer platform)
