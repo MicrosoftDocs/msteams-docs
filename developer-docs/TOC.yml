@@ -32,11 +32,11 @@
   href: ./scenarios/index
   items:
   - name: 1 on 1 Conversations with Bots
-    href: ./schema/bots1on1
+    href: ./scenarios/bots1on1
   - name: Workflows with LOB Apps
-    href: ./schema/lobworkflow
+    href: ./scenarios/lobworkflow
   - name: Single Sign-On
-    href: ./schema/sso
+    href: ./scenarios/sso
 - name: Reference
   items:
   - name: Teams JavaScript Reference
