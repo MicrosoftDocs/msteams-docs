@@ -11,4 +11,4 @@ title: Teams Developer Documentation
 description:
 ---
 
-[!include[Content](landing-page.html)]
+[!include[Content](./includes/landing-page.html)]
