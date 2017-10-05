@@ -1,3 +1,14 @@
+---
+title: Migrating v0.4 Manifest To v1.0 | Microsoft Docs
+description: Describes the changes and process to migrate the manifest file from v0.4 to v1.0
+author: charlesprakash
+ms.author: charlesprakash
+manager: billbl
+ms.topic: article
+ms.prod: msteams
+ms.date: 10/05/2017
+keywords: teams manifest migrate v0.4 v1.0
+---
 # Migrate your v0.4 manifest to v1.0 in Microsoft Teams
 
 To support Microsoft Teams apps, we made significant changes in our manifest. If you've already built your app on the [v0.4 manifest](schemav0.4.md), here are a few tips to help in conversion:

@@ -1,3 +1,15 @@
+---
+title: Manifest Schema Reference | Microsoft Docs
+description: Describes the schema supported in the manifest file
+author: charlesprakash
+ms.author: charlesprakash
+manager: billbl
+ms.topic: article
+ms.prod: msteams
+ms.date: 10/05/2017
+keywords: teams manifest schema
+---
+
 # Reference: Manifest schema for Microsoft Teams
 
 >**Note:** For help on migrating your v0.4 manifest to v1.0, see our [migration guide](schemamigrate.md).

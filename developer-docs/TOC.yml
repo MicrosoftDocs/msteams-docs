@@ -30,12 +30,23 @@
     href: ./publishing/guidance
 - name: Scenarios
   href: ./scenarios/index
+  items:
+  - name: 1 on 1 Conversations with Bots
+    href: ./schema/bots1on1
+  - name: Workflows with LOB Apps
+    href: ./schema/lobworkflow
+  - name: Single Sign-On
+    href: ./schema/sso
 - name: Reference
   items:
   - name: Teams JavaScript Reference
     href: ./reference/ref-teams-js
   - name: Teams CSharp Reference
     href: ./reference/ref-teams-csharp
+  - name: Manifest Schema Reference
+    href: ./reference/schema
+  - name: Migrating Your Manifest to v1.0
+    href: ./reference/schemamigrate
 - name: Troubleshooting
   href: ./troubleshoot/index
 - name: Samples
