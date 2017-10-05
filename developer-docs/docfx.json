@@ -38,7 +38,16 @@
             "ms.date": "10/05/2017",
             "titleSuffix": "Teams"
         },
-        "fileMetadata": {},
+        "fileMetadata": {
+            "manager": {
+                "**/*.md": "billbl",
+                "**/*.yml": "billbl"
+            },
+            "ms.service": {
+                "**/*.md": "msteams",
+                "**/*.yml": "msteams"
+            }
+        },
         "template": [],
         "dest": "developer-docs"
     }
