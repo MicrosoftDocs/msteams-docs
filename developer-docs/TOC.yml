@@ -1,3 +1,7 @@
+- name: Overview
+  href: ./overview
+- name: What's New
+  href: ./whatsnew
 - name: Getting Started
   expanded: true
   items:

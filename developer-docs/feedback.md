@@ -11,7 +11,7 @@ keywords: teams feedback
 ---
 # Submit your questions, bugs, feature requests, and contributions (Microsoft Teams developer platform)
 
->Hitting a problem? Have you looked at the [troubleshooting guide](./troubleshoot/)?
+>Hitting a problem? Have you looked at the [troubleshooting guide](troubleshoot/)?
 
 The Microsoft Team product team responds to the developer community across several channels.
 
