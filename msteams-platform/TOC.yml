@@ -60,39 +60,39 @@
     - name: Framework
       items:
       - name: The Basics
-        href: ./references/design/framework/basics
+        href: ./reference/design/framework/basics
       - name: Apps
-        href: ./references/design/framework/apps
+        href: ./reference/design/framework/apps
       - name: Activity Feed
-        href: ./references/design/framework/activity-feed
+        href: ./reference/design/framework/activity-feed
       - name: Search
-        href: ./references/design/framework/search
+        href: ./reference/design/framework/search
       - name: Tabs
-        href: ./references/design/framework/tabs
+        href: ./reference/design/framework/tabs
       - name: Compose Extensions
-        href: ./references/design/framework/compose-extensions
+        href: ./reference/design/framework/compose-extensions
       - name: Bots
-        href: ./references/design/framework/bots
+        href: ./reference/design/framework/bots
       - name: Cards
-        href: ./references/design/framework/cards
+        href: ./reference/design/framework/cards
       - name: Submitting Your App
-        href: ./references/design/framework/submitting
+        href: ./reference/design/framework/submitting
     - name: Components
       items:
       - name: Color
-        href: ./references/design/components/color
+        href: ./reference/design/components/color
       - name: Buttons, links and controls
-        href: ./references/design/components/buttons
+        href: ./reference/design/components/buttons
       - name: Fields and Flyouts
-        href: ./references/design/components/fields
+        href: ./reference/design/components/fields
       - name: Dialogs
-        href: ./references/design/components/dialogs
+        href: ./reference/design/components/dialogs
       - name: Typography
-        href: ./references/design/components/typography
+        href: ./reference/design/components/typography
       - name: Themes
-        href: ./references/design/components/themes
+        href: ./reference/design/components/themes
     - name: Resources
-      href: ./references/design/resources
+      href: ./reference/design/resources
   - name: Schema
     items:
     - name: Manifest Schema Reference
