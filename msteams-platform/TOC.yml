@@ -57,8 +57,42 @@
       href: ./reference/library/ref-teams-csharp
   - name: Design Guidelines
     items:
-    - name: Overview
-      href: ./reference/design/index
+    - name: Framework
+      items:
+      - name: The Basics
+        href: ./references/design/framework/basics
+      - name: Apps
+        href: ./references/design/framework/apps
+      - name: Activity Feed
+        href: ./references/design/framework/activity-feed
+      - name: Search
+        href: ./references/design/framework/search
+      - name: Tabs
+        href: ./references/design/framework/tabs
+      - name: Compose Extensions
+        href: ./references/design/framework/compose-extensions
+      - name: Bots
+        href: ./references/design/framework/bots
+      - name: Cards
+        href: ./references/design/framework/cards
+      - name: Submitting Your App
+        href: ./references/design/framework/submitting
+    - name: Components
+      items:
+      - name: Color
+        href: ./references/design/components/color
+      - name: Buttons, links and controls
+        href: ./references/design/components/buttons
+      - name: Fields and Flyouts
+        href: ./references/design/components/fields
+      - name: Dialogs
+        href: ./references/design/components/dialogs
+      - name: Typography
+        href: ./references/design/components/typography
+      - name: Themes
+        href: ./references/design/components/themes
+    - name: References
+      href: ./references/design/references
   - name: Schema
     items:
     - name: Manifest Schema Reference
