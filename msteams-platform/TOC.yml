@@ -91,8 +91,8 @@
         href: ./references/design/components/typography
       - name: Themes
         href: ./references/design/components/themes
-    - name: References
-      href: ./references/design/references
+    - name: resources
+      href: ./references/design/resources
   - name: Schema
     items:
     - name: Manifest Schema Reference
