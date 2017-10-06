@@ -1,5 +1,5 @@
 ---
-title: Design Guidelines Reference Basics
+title: Design Guidelines Reference
 description: Describes the basics for design guidelines framework
 keywords: teams design guidelines reference framework basics
 ---

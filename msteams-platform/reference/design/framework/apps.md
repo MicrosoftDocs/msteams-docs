@@ -1,5 +1,5 @@
 ---
-title: Showcase your app
+title: Design Guidelines Reference
 description: Describes the guidelines for showcasing the app
 keywords: teams design guidelines reference framework apps
 ---
