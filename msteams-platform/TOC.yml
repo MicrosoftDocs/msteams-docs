@@ -93,7 +93,7 @@
         href: ./reference/design/components/themes
     - name: Resources
       href: ./reference/design/resources
-  - name: Schema
+  - name: Manifest Schema
     items:
     - name: Manifest Schema Reference
       href: ./reference/schema/schema
