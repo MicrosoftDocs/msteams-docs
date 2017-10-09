@@ -31,7 +31,6 @@
         "overwrite": [],
         "externalReference": [],
         "globalMetadata": {
-            "uhfHeaderId": "MSDocsHeader-BotFramework",
             "breadcrumb_path": "/msteams-platform/breadcrumb/TOC.json",
             "extendBreadcrumb": true,
             "ms.topic": "article",
