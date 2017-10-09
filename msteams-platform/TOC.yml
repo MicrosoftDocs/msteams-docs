@@ -13,12 +13,38 @@
     href: ./get-started/get-started-python
 - name: Concepts
   items:
+  - name: Apps in Teams
+    items:
+    - name: Context for Apps
+      href: ./concepts/apps-context
+    - name: Lifecycle
+      href: ./concepts/apps-lifecycle
+    - name: Enterprise Apps (firewalled)
+      href: ./concepts/apps-firewalled
+    - name: App Data
+      href: ./concepts/apps-data
+    - name: Sideloading
+      href: ./concepts/apps-sideloading
   - name: Activity Feed
     href: ./concepts/activityfeed
   - name: Authentication
     href: ./concepts/auth
-  - name: Custom Bot
+  - name: Tabs
+    items:
+    - name: Static
+      href: ./concepts/tabs-static
+    - name: Dynamic
+      href: ./concepts/tabs-dynamic
+  - name: Bots
+    items:
+    - name: Converations
+      href: ./concepts/bot-conversations
+    - name: Notifications
+      href: ./concepts/bot-notifications
+  - name: Outgoing Webhooks
     href: ./concepts/custombot
+  - name: Composing Rich Messages
+    href: ./concepts/compose-extensions
   - name: Deep Links
     href: ./concepts/deeplinks
   - name: User Context
