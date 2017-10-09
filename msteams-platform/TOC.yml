@@ -79,10 +79,14 @@
       href: ./reference/general/ratelimiting
   - name: Library
     items:
-    - name: Teams JavaScript Reference
+    - name: Client SDK Reference
       href: ./reference/library/ref-teams-js
-    - name: Teams CSharp Reference
+    - name: .NET Server SDK Reference
       href: ./reference/library/ref-teams-csharp
+    - name: NodeJS Server SDK Reference
+      href: ./reference/library/ref-teams-nodejs
+    - name: Python Server SDK Reference
+      href: ./reference/library/ref-teams-python
   - name: Design Guidelines
     items:
     - name: Framework
@@ -127,8 +131,6 @@
       href: ./reference/schema/schema
     - name: Migrating Your Manifest to v1.0
       href: ./reference/schema/schemamigrate
-    - name: Manifest Schema Reference (v0.4)
-      href: ./reference/schema/schema-v04
 - name: Troubleshooting
   href: ./troubleshoot/index
 - name: Samples
