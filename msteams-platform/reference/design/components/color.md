@@ -28,55 +28,20 @@ We also use `$app-black` at other opacities for some UI elements:
 
 ### Default theme color ramp
 
-$app-black
-#16233A 
-$app-gray-02
-$app-black at 74% opacity (#525C6D) 
-$app-gray-03
-$app-black at 64% opacity (#6A7281) 
-$app-gray-04
-$app-black at 52% opacity (#858C98) 
-$app-gray-06
-$app-black at 36% opacity (#ABB0B8) 
-$app-gray-08
-$app-black at 14% opacity (#DEE0E3) 
-$app-gray-12
-$app-black at 5% opacity (#F3F4F5) 
-Other default theme colors 
-$app-gray-10
-#EEF1F5 
-Used for our main canvas color
-$app-brand-00
-#5558AF 
-Used for primary buttons, icon button hover states, hover and selected states, and navigation indicators.
-$app-red
-#C50E2E 
-Used for notification badges and @mentions.
-Dark theme color ramp 
-$app-white-darktheme
-#FFFFFF 
-$app-gray-02-darktheme
-$app-white-darktheme at 74% opacity (#C8C8C9) 
-$app-gray-02-darktheme
-$app-white-darktheme at 64% opacity (#B3B3B4) 
-$app-gray-04-darktheme
-$app-white-darktheme at 52% opacity (#9A9A9C) 
-$app-gray-06-darktheme
-$app-white-darktheme at 36% opacity (#77777B) 
-$app-gray-08-darktheme
-$app-white-darktheme at 14% opacity (#49494D) 
-$app-gray-12-darktheme
-$app-white-darktheme at 5% opacity (#36363B) 
-$app-black-darktheme
-#2B2B30 
-Other dark theme colors 
-$app-gray-10-darktheme
-#404045 
-Used for our message bubble color.
-$app-brand-00-darktheme
-#9FA4FE 
-Used for primary buttons, icon button hover states, and navigation indicators.
-$app-red-darktheme
-#ED1B3E 
-Used for notification badges and @mentions.
-Download color swatches 
+![Default theme color ramp](~/assets/images/components/componentAssets_color_lightblackramp.png)
+
+### Other default theme colors
+
+![Other default theme colors](~/assets/images/components/componentAssets_color_light_other.png)
+
+### Dark theme color ramp
+
+![Dark theme color ramp](~/assets/images/components/componentAssets_color_darkblackramp.png)
+
+### Other dark theme colors
+
+![Other dark theme colors](~/assets/images/components/componentAssets_color_darkcolors.png)
+
+### Download color swatches
+
+<a href="~/assets/downloads/MicrosoftTeams-ColorSwatches.pdf" target="_blank">Download</a>
