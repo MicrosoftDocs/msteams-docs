@@ -9,6 +9,8 @@
     href: ./get-started/get-started-csharp
   - name: Getting Started with NodeJS
     href: ./get-started/get-started-nodejs
+  - name: Getting Started with Python
+    href: ./get-started/get-started-python
 - name: Concepts
   items:
   - name: Activity Feed

@@ -20,7 +20,8 @@
             "files": [
                 "**/*.png",
                 "**/*.jpg",
-                "**/*.svg"
+                "**/*.svg",
+                "assets/**/*.pdf"
             ],
             "exclude": [
                 "**/obj/**",
