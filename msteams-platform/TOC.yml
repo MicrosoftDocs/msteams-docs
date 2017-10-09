@@ -37,7 +37,7 @@
       href: ./concepts/tabs-dynamic
   - name: Bots
     items:
-    - name: Converations
+    - name: Conversations
       href: ./concepts/bot-conversations
     - name: Notifications
       href: ./concepts/bot-notifications
