@@ -6,3 +6,4 @@ keywords: teams design guidelines reference components themes
 # Themes
 
 We provide light and dark themes—make sure your app looks great in both.
+[!include[Themes](~/includes/themes-image.html)]
