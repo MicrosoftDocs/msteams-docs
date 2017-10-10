@@ -18,40 +18,51 @@ Buttons can have text, an icon, or a combination of text and an icon. To communi
 In dialogs, you should align buttons to the right, starting with the primary action farthest to the right. In cards, buttons are left-aligned.
 
 Button styles in Teams
-[![Button states](~/includes/buttons-image-states.html)]
+[!include[Button states](~/includes/buttons-image-states.html)]
 
 Dialog buttons
-[![Dialog buttons](~/includes/buttons-image-dialog.html)]
+[!include[Dialog buttons](~/includes/buttons-image-dialog.html)]
 
 Card button states
-[![Card button states](~/includes/buttons-image-cardstates.html)]
+[!include[Card button states](~/includes/buttons-image-cardstates.html)]
 
 Card buttons
-[![Card buttons](~/includes/buttons-image-card.html)]
+[!include[Card buttons](~/includes/buttons-image-card.html)]
 
-Icon buttons
+### Icon buttons
+
 Icon buttons can invoke an action and can also be toggled on and off.
-
+[!include[Icon buttons](~/includes/buttons-image-icon.html)]
 
 In some cases, you can pair an icon and text to increase emphasis.
+[!include[Icon text buttons](~/includes/buttons-image-icontext.html)]
 
+### Miscellaneous buttons
 
-Miscellaneous buttons
 Radial buttons, checkboxes, and toggles.
+[!include[Other buttons](~/includes/buttons-image-others.html)]
 
+---
 
-Links
+## Links
+
 Here are our approved styles for inline text links.
+[!include[Approved link styles](~/includes/links-image-text.html)]
 
+---
 
-Style
-Size and padding
+## Style
+
+## Size and padding
+
 Text buttons, icons, and controls are contained within a 32px high container to ensure all controls are visually aligned and consistent.
+[!include[Size and padding](~/includes/style-image-size.html)]
 
+### Rounded corners
 
-Rounded corners
 Text buttons have a corner radius of 3px.
+[!include[Rounded corners](~/includes/style-image-corners.html)]
 
+### Button text
 
-Button text
 Use sentence case in text for buttons to help with localization and legibility. (In other words, only capitalize the first letter of the first word in a phrase or sentence.)
