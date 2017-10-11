@@ -1,3 +1,8 @@
+---
+title: Tabs in Teams
+description: Describes the how to get started with tabs in Microsoft Teams
+keywords: get started tabs teams
+---
 # Get started with tabs for Microsoft Teams
 
 Tabs in Microsoft Teams allow you to display rich interactive web content. You can build a Microsoft Teams tab from scratch or by adapting your existing web app experience.

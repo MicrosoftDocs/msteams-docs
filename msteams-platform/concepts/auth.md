@@ -3,7 +3,6 @@ title: Authentication | Microsoft Docs
 description: Describes the authentication in Teams and how to use it in your apps
 keywords: teams authentication
 ---
-
 # Authenticate a user in your Microsoft Teams tab
 
 >**Important: Recent breaking change for tab authentication**

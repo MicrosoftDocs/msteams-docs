@@ -1,10 +1,15 @@
+---
+title: Getting Started
+description: Read on how to get started building great apps in Microsoft Teams
+keywords: getting started microsoft teams
+---
 # Get started developing for Microsoft Teams
 
 Microsoft Teams is a service within Office 365. To get started developing extensions for Microsoft Teams, you'll first need an Office 365 commercial account. You'll then need to turn on the Microsoft Teams service for your Office 365 organization. Lastly, you'll need to turn on bots and enable sideloading of bots and tabs for testing.
 
 ## 1. Set up your Office 365 tenant
 
-To develop apps for Microsoft Teams, you need to be an [Office 365 customer with one of the following plans](https://products.office.com/en-us/business/compare-more-office-365-for-business-plans). 
+To develop apps for Microsoft Teams, you need to be an [Office 365 customer with one of the following plans](https://products.office.com/en-us/business/compare-more-office-365-for-business-plans).
 
 * Business Essentials
 * Business Premium
@@ -26,21 +31,21 @@ The Office 365 administrator might have to enable Microsoft Teams for your organ
 2. Select **Admin** to go to the Office 365 Admin Center.
 3. From **Settings**, select **Services & add-ins** or **Apps**.
 
-	![Screenshot of the Settings tab, with 'Services and add-ins' selected](images/setup_services.png)
+	![Screenshot of the Settings tab, with 'Services and add-ins' selected](~/assets/images/setup_services.png)
 
 4. From the list of services and add-ins, or apps, select **Microsoft Teams**.
  
-	![Screenshot of the services listed under Settings, with the Microsoft Teams service selected](images/setup_select_teams.png)
+	![Screenshot of the services listed under Settings, with the Microsoft Teams service selected](~/assets/images/setup_select_teams.png)
 
 5. On the **Microsoft Teams** settings screen, switch Microsoft Teams to **On** and then select **Save**.
  
-	![Screenshot of the services listed under Settings, with Microsoft Teams option switched on](images/setup/enableteamsandapps.PNG)
+	![Screenshot of the services listed under Settings, with Microsoft Teams option switched on](~/assets/images/setup/enableteamsandapps.png)
 
 ## 3. Enable sideloading of apps for Microsoft Teams
 
 To develop and test apps, you need to enable them in Microsoft Teams, and also enable sideloading of external apps.
 
->**Note:** For multi-SKU tenants, **all** SKUs must enable these settings. If one SKU has not enabled this setting, the entire tenant is considered disabled. 
+>**Note:** For multi-SKU tenants, **all** SKUs must enable these settings. If one SKU has not enabled this setting, the entire tenant is considered disabled.
 
 1. [Sign in to Office 365](https://portal.office.com) with your administrator account.
 2. Select **Admin** to go to the Office 365 Admin Center.
@@ -48,7 +53,7 @@ To develop and test apps, you need to enable them in Microsoft Teams, and also e
 4. From the list of services and add-ins, or apps, select **Microsoft Teams**.
 5. On the **Microsoft Teams** settings screen, switch both **Allow external apps in Microsoft Teams** and **Allow sideloading of external apps** to **On**, and then select **Save**.
 
-	![Screenshot of the Apps section, with 'Allow external apps in Microsoft Teams' and 'Allow sideloading of external apps' options switched on.](images/setup/enablesideloading.PNG)
+	![Screenshot of the Apps section, with 'Allow external apps in Microsoft Teams' and 'Allow sideloading of external apps' options switched on.](~/assets/images/setup/enablesideloading.png)
 
 For more information on sideloading, see [Sideloading your app in a team](sideload.md).
 

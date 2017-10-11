@@ -1,3 +1,8 @@
+---
+title: Static Tabs in Teams
+description: Describes the how to get started with static tabs in Microsoft Teams
+keywords: get started static tabs teams
+---
 # Create a static tab in Microsoft Teams
 
 A static tab is a [content page](createcontentpage.md) that is declared directly in your manifest and&mdash;unlike a configurable tab&mdash;does not require a configuration page.

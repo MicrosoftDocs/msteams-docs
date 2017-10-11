@@ -1,3 +1,8 @@
+---
+title: Updating or removing tabs in Teams
+description: Describes the how to update or remove tabs in Microsoft Teams
+keywords: get started tabs teams
+---
 # Update or remove a Microsoft Teams tab
 
 You can enable users to update a tab after it has been added and to choose what happens to tab content if a tab is removed.
