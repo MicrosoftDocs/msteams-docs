@@ -8,3 +8,4 @@ keywords: teams design guidelines reference components typography
 Typography should be clear and purposeful. Emphasize important information and avoid using multiple fonts and sizes to reduce confusion. We recommend using sentence case and avoiding the usage of all caps for localization and legibility.
 
 Please use the following type ramp:
+[!include[Typography](~/includes/typography.html)]
