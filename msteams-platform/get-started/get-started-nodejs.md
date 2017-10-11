@@ -5,6 +5,4 @@ keywords: getting started nodejs
 layout: HubPage
 ms.topic: hub-page
 ---
-# Getting Started with NodeJS
-
 [!include[Getting started with NodeJS](~/includes/start/get-started-skeleton-nodejs.html)]
