@@ -5,9 +5,8 @@ keywords: getting started nodejs
 layout: HubPage
 ms.topic: hub-page
 ---
-# Getting started with NodeJS
+# Getting started with NodeJS (step 2)
 
-This is the first step
+This is the second step
 
-> [!div class="nextstepaction"]
-> [Move to the next step](get-started-step2)
+We are done now!
