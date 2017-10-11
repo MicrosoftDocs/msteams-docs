@@ -189,7 +189,7 @@ Provide support links.
 
 Include screenshots of your app for your profile page (you can add up to five, total). Specify your language, release date, category, and pricing (again, select the ‘Free’ option here).
 
-[!include[Submit profile](~/includes/submit-image-profile.html)]
+[!include[Submit profile](~/includes/design/submit-image-profile.html)]
 
 ---
 

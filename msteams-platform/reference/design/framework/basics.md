@@ -9,4 +9,4 @@ Now that you’re thinking about building on the Teams platform, here’s a shor
 
 ---
 
-[!include[Framework basics](~/includes/framework-basics.html)]
+[!include[Framework basics](~/includes/design/framework-basics.html)]

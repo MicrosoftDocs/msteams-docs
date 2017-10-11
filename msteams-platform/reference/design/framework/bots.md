@@ -15,7 +15,7 @@ Bots are conversational apps that perform a narrow or specific set of tasks. The
 
 Bot avatars in Teams are shaped like hexagons so people can quickly tell that they’re talking to a bot instead of a person. You’ll submit your avatar as a square and we’ll crop it for you. When it comes to avatars, we recommend making yours legible from 2 feet away and using a higher contrast.
 
-[!include[Avatar image](~/includes/bot-avatar-image.html)]
+[!include[Avatar image](~/includes/design/bot-avatar-image.html)]
 
 ### Buttons
 
@@ -49,7 +49,7 @@ Your bot should be able to handle the following types of queries and inputs:
 
 Examples of bot personality and response types:
 
-[!include[Bot responses](~/includes/bot-responses-table.html)]
+[!include[Bot responses](~/includes/design/bot-responses-table.html)]
 
 > [!TIP]
 > When writing your bot script, ask yourself: “Will my company be embarrassed if a response is screen captured and shared?”
@@ -76,7 +76,7 @@ Your bot can act like a daily digest, sending a notification to the user or chan
 
 Leave the user in control. Provide notification settings that include frequency and priority.
 
-[!include[Bot notification](~/includes/bot-notification-image.html)]
+[!include[Bot notification](~/includes/design/bot-notification-image.html)]
 
 ---
 
