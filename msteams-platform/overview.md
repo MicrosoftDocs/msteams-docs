@@ -40,7 +40,7 @@ Personal tabs allow individual users to work privately with your tools and data,
 
 ---
 
-![Example of a tab showing data, alongside a conversation about the tab data](images/tab_example.png)
+![Example of a tab showing data, alongside a conversation about the tab data](~/assets/images/tab_example.png)
 
 ### Bots
 
@@ -54,7 +54,7 @@ While bots can take advantage of the rich natural-language processing provided b
 
 ---
 
-![Example of a bot assisting a user](images/bot_example.png)
+![Example of a bot assisting a user](~/assets/images/bot_example.png)
 
 ### Compose extensions
 
@@ -68,7 +68,7 @@ Leverage the power of your web service to provide a quick and easy way for your 
 
 ---
 
-![Example of a compose extension](images/ComposeExtension/CEOverviewExample.png)
+![Example of a compose extension](~/assets/images/composeextension/ceoverviewexample.png)
 
 ### Connectors
 
@@ -84,7 +84,7 @@ You can integrate your service by posting rich Connector cards into custom incom
 
 ---
 
-![Gallery of Connectors](images/connector_example.png)
+![Gallery of Connectors](~/assets/images/connector_example.png)
 <!-- TODO - update image to latest -->
 
 ## Custom bots

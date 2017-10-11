@@ -12,19 +12,19 @@ In the Seller Dashboard:
 
 1. Enter the Office dashboard by choosing **Continue** under the Office heading.
 
-   ![Office Seller Dashboard entry point](images/submission/SellerDashboardOfficeEntry.PNG)
+   ![Office Seller Dashboard entry point](~/assets/images/submission/sellerdashboardofficeentry.png)
 
 2. Choose **Add a new app** to initiate the submission process.
 
-   ![Office Seller Dashboard Add an app button](images/submission/SellerDashboardAddApp.PNG)
+   ![Office Seller Dashboard Add an app button](~/assets/images/submission/sellerdashboardaddapp.png)
 
 3. Select the **Teams app** option.
 
-   ![Office Seller Dashboard Overview](images/submission/SDAppType.PNG)
+   ![Office Seller Dashboard Overview](~/assets/images/submission/sdapptype.png)
 
 4. Enter the overview information for your app.
 
-   ![Office Seller Dashboard app overview](images/submission/SDOverviewCrop.PNG)
+   ![Office Seller Dashboard app overview](~/assets/images/submission/sdoverviewcrop.png)
 
    * **App package** – Upload your properly formatted 1.0 manifest. Note that the manifest information prepopulates many of the following fields.
    * **Submission title** – The name of your app.
@@ -43,7 +43,7 @@ In the Seller Dashboard:
 
 4. Enter the detail information for your app.
 
-   ![Office Seller Dashboard app details](images/submission/SDDetails.PNG)
+   ![Office Seller Dashboard app details](~/assets/images/submission/sddetails.png)
 
    * **Language** – Select the language your app supports. (Currently there is no way to provide an app with multiple languages. You may submit your app in one language only.)
    * **App name** – This field would specify your localized name, but for now this should be the same as your app name in the manifest.
@@ -55,17 +55,17 @@ In the Seller Dashboard:
 
 5. Opt out of any regions you do not want to be distributed in.
 
-   ![Office Seller Dashboard region block](images/submission/SDBlockRegions.PNG)
+   ![Office Seller Dashboard region block](~/assets/images/submission/sdblockregions.png)
 
    If you do not want to distribute your app in all regions where the Office Store is available, select the regions in which you do *not* want your app to appear.
 
-   ![Office Seller Dashboard available regions](images/submission/SDRegions.PNG)
+   ![Office Seller Dashboard available regions](~/assets/images/submission/sdregions.png)
 
 6. The Lead Management page is currently not supported in Microsoft Teams. Choose **Next**.
 
 7. Currently, Microsoft Teams allows only free apps, so the only option is **This app is free**.
 
-   ![Office Seller Dashboard pricing and submit](images/submission/SDPricing.PNG)
+   ![Office Seller Dashboard pricing and submit](~/assets/images/submission/sdpricing.png)
 
    If you have filled everything in correctly, choose **Submit for approval**. To return later, choose **Save as draft**.
 

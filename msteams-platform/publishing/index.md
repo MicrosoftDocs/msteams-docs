@@ -34,13 +34,13 @@ If you already submitted other product types to the Office Store, this additiona
 
 To start the process, choose the **Continue** button under **Office**.
 
-![Office Store Seller Dashboard entry point](images/submission/SellerDashboardOfficeEntry.PNG)
+![Office Store Seller Dashboard entry point](~/assets/images/submission/sellerdashboardofficeentry.png)
 
 ## Use the Seller Dashboard to submit to the Office Store
 
 After your account is approved, you can submit your solution to the [Seller Dashboard](http://go.microsoft.com/fwlink/?LinkId=248605).  Add an app of type "Teams App" to initiate the submission process.
 
-![Office Store Seller Dashboard add an app](images/submission/SellerDashboardAddApp.PNG)
+![Office Store Seller Dashboard add an app](~/assets/images/submission/sellerdashboardaddapp.png)
 
 You need to upload a [submission package](createpackage.md) and provide the required metadata for the product listing page, including information such as app logo, description, and screenshots. Please review our [Submission and Manifest Metadata Checklist](submissionchecklist.md) for more information.
 

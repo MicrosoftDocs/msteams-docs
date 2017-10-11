@@ -12,11 +12,11 @@ If you've integrated with outgoing webhooks or slash commands in other chat plat
 
 To create a custom bot, click View Team and then navigate to the Bots tab.
 
-![View team](images/tab_view_team.png)
+![View team](~/assets/images/tab_view_team.png)
 
 Click on the Create a custom bot link at the bottom of the page.
  
-![Create a custom bot entry point](images/sideloadentrypoint.png)
+![Create a custom bot entry point](~/assets/images/sideloadentrypoint.png)
 
 In the dialog, you can configure how your bot appears in channels:
 * **Name** is what will show up as the bot’s title and is also how users will @mention the bot
@@ -24,11 +24,11 @@ In the dialog, you can configure how your bot appears in channels:
 * **Description** is a detailed string that what will show up in the profile card and in the team-level App dashboard
 * **Avatar** is the optional display picture of the custom bot
 
-![Create a custom bot dialog](images/createcustombot.png)
+![Create a custom bot dialog](~/assets/images/createcustombot.png)
  
 Upon clicking Create, the custom bot will be available in the team – it will not be available in any other team. The next dialog will then display the shared secret that you can use to authenticate calls from Microsoft Teams. **Make sure to copy this value in a secure location. You will not be able to retrieve it again without recreating the custom bot.**
  
-![Custom bot shared secret](images/custombotsharedsecret.png)
+![Custom bot shared secret](~/assets/images/custombotsharedsecret.png)
 
 ## Interacting with the custom bot
 

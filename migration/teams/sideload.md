@@ -22,7 +22,7 @@ With your package created, you can now load it into a team of your choosing. Thi
 
 2. In the target team, choose **More options** (**&#8943;**) and choose **View team**.
 
-   ![View team](images/tab_view_team.png)
+   ![View team](~/assets/images/tab_view_team.png)
 
    >**Note:** You must be the team owner, or the owner must allow users to add the appropriate app types for this functionality to appear.
 
@@ -30,13 +30,13 @@ With your package created, you can now load it into a team of your choosing. Thi
 
    >**Note**: This same flow works not only for bots but all other app extension types as well.
 
-   ![Sideload entry point](images/sideloadentrypoint.png)
+   ![Sideload entry point](~/assets/images/sideloadentrypoint.png)
 
 4.	Browse to and select your .zip package from your computer.
 
 5.	You will see your sideloaded app in the list.
 
-   ![Example of bot in list of sideloaded bots](images/botinlist.jpg)
+   ![Example of bot in list of sideloaded bots](~/assets/images/botinlist.jpg)
 
 ## Accessing your sideloaded configurable tab
 
@@ -50,7 +50,7 @@ With the app loaded in the team, users can pin the tab to any channel on the tea
 
 4. Configure your tab via its [configuration page](createconfigpage.md) and choose **Save**. 
 
-  ![The Add a tab dialog box, featuring a gallery of available tabs](images/tab_gallery.png)
+  ![The Add a tab dialog box, featuring a gallery of available tabs](~/assets/images/tab_gallery.png)
 
 ## Accessing your sideloaded bot
  
@@ -70,13 +70,13 @@ With the app loaded in the team, users can set up a Connector on any channel in 
 
 3. Configure your Connector via its [configuration page](connectors.md) and choose **Save**. 
 
-  ![The Add a tab dialog box, featuring a gallery of available tabs.](images/connector_gallery.png)
+  ![The Add a tab dialog box, featuring a gallery of available tabs.](~/assets/images/connector_gallery.png)
 
 ## Accessing your sideloaded compose extension
 
 A sideloaded app with a compose extension automatically appears in the **More options** (**&#8943;**) menu in the compose box.
 
-![Compose extensions](images/ComposeExtension/CESampleApp.png)
+![Compose extensions](~/assets/images/composeextension/cesampleapp.png)
 
 ## Removing or updating your app
 
