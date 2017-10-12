@@ -35,8 +35,6 @@
       href: ./concepts/tabs/tabs-dynamic
     - name: Configuration pages
       href: ./concepts/tabs/tabs-configuration
-    - name: Requirements
-      href: ./concepts/tabs/tabs-requirements
     - name: Update or remove tabs
       href: ./concepts/tabs/tabs-update-remove
     - name: Context for tabs
@@ -62,15 +60,17 @@
     href: ./concepts/compose-extensions
   - name: Cards and card actions
     href: ./concepts/cards-actions
+  - name: Outgoing webhooks
+    href: ./concepts/custom-bot
   - name: Deep links
     href: ./concepts/deep-links
+  - name: Sideloading
+    href: ./concepts/apps-sideload
 - name: Publishing
   href: ./publishing/apps-publish
   items:
   - name: Create package
     href: ./publishing/apps-package
-  - name: Sideloading
-    href: ./publishing/apps-sideload
   - name: Office Store checklist
     href: ./publishing/office-store-checklist
   - name: Office Store guidance
@@ -94,6 +94,8 @@
       href: ./reference/general/developer-preview
     - name: Features in Developer Preview
       href: ./reference/general/developer-preview-features
+    - name: Requirements
+      href: ./reference/general/requirements
     - name: Cross-domain redirects
       href: ./reference/general/cross-domain
     - name: Debugging
@@ -102,43 +104,43 @@
       href: ./reference/general/rate-limit
   - name: Libraries
     items:
-    - name: Client library reference
-      href: ./reference/library/library-javascript
-    - name: .NET extensions reference
-      href: ./reference/library/extensions-dotnet
-    - name: Node.js extensions reference
-      href: ./reference/library/extensions-nodejs
-    - name: Python extensions reference
-      href: ./reference/library/extensions-python
+    - name: Client SDK reference
+      href: ./reference/library/client-sdk-javascript
+    - name: .NET server SDK reference
+      href: ./reference/library/server-sdk-dotnet
+    - name: Node.js server SDK reference
+      href: ./reference/library/server-sdk-nodejs
+    - name: Python server SDK reference
+      href: ./reference/library/server-sdk-python
   - name: Design guidelines
     items:
     - name: Framework
       items:
-      - name: The Basics
+      - name: The basics
         href: ./reference/design/framework/basics
       - name: Apps
         href: ./reference/design/framework/apps
-      - name: Activity Feed
+      - name: Activity feed
         href: ./reference/design/framework/activity-feed
       - name: Search
         href: ./reference/design/framework/search
       - name: Tabs
         href: ./reference/design/framework/tabs
-      - name: Compose Extensions
+      - name: Compose extensions
         href: ./reference/design/framework/compose-extensions
       - name: Bots
         href: ./reference/design/framework/bots
       - name: Cards
         href: ./reference/design/framework/cards
-      - name: Submitting Your App
+      - name: Submitting your app
         href: ./reference/design/framework/submitting
     - name: Components
       items:
       - name: Color
         href: ./reference/design/components/color
-      - name: Buttons, links and controls
+      - name: Buttons, links, and controls
         href: ./reference/design/components/buttons
-      - name: Fields and Flyouts
+      - name: Fields and flyouts
         href: ./reference/design/components/fields
       - name: Dialogs
         href: ./reference/design/components/dialogs
