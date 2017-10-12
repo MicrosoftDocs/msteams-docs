@@ -7,7 +7,7 @@
   items:
   - name: Getting Started with .NET/C#
     href: ./get-started/get-started
-  - name: Getting Started with NodeJS
+  - name: Getting Started with Node.js
     href: ./get-started/get-started-nodejs
   - name: Getting Started with Python
     href: ./get-started/get-started-python
@@ -90,7 +90,7 @@
       href: ./reference/library/ref-teams-js
     - name: .NET Server SDK Reference
       href: ./reference/library/ref-teams-csharp
-    - name: NodeJS Server SDK Reference
+    - name: Node.js Server SDK Reference
       href: ./reference/library/ref-teams-nodejs
     - name: Python Server SDK Reference
       href: ./reference/library/ref-teams-python
@@ -157,7 +157,7 @@
 #   items:
 #   - name: Getting Started with .NET/C#
 #     href: ./get-started/get-started-csharp
-#   - name: Getting Started with NodeJS
+#   - name: Getting Started with Node.js
 #     href: ./get-started/get-started-nodejs
 #   - name: Getting Started with Python
 #     href: ./get-started/get-started-python
@@ -233,7 +233,7 @@
 #       href: ./reference/library/ref-teams-js
 #     - name: .NET Server SDK Reference
 #       href: ./reference/library/ref-teams-csharp
-#     - name: NodeJS Server SDK Reference
+#     - name: Node.js Server SDK Reference
 #       href: ./reference/library/ref-teams-nodejs
 #     - name: Python Server SDK Reference
 #       href: ./reference/library/ref-teams-python
