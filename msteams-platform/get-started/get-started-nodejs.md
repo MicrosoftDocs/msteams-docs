@@ -1,10 +1,11 @@
 ---
-title: Getting Started with NodeJS | Microsoft Docs
-description: Read on how to get started building great apps in Microsoft Teams using NodeJS
-keywords: getting started nodejs
-layout: HubPage
-ms.topic: hub-page
+title: Getting Started with Node.js | Microsoft Docs
+description: Read on how to get started building great apps in Microsoft Teams using Node.js
+keywords: getting started node.js nodejs
 ---
-# Getting Started with NodeJS
+# Getting started on Microsoft Teams platform with Node.js
 
-[!include[Getting started with NodeJS](~/includes/start/get-started-skeleton-nodejs.html)]
+This is the first step
+
+> [!div class="nextstepaction"]
+> [Move to the next step](get-started-step2)
