@@ -1,6 +1,6 @@
 ---
-title: Teams Overview | Microsoft Docs
-description: Overview page describing the teams app
+title: Microsoft Teams developer platform | Microsoft Docs
+description: Overview page describing the Microsoft Teams developer platform
 keywords: teams overview
 ---
 # Overview of the Microsoft Teams developer platform
