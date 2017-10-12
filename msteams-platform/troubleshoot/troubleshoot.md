@@ -1,6 +1,6 @@
 ---
-title: Troubleshooting | Microsoft Docs
-description: Troubleshoot issues/errors while building apps for Microsoft Teams
+title: Troubleshoot your Microsoft Teams app | Microsoft Docs
+description: Troubleshoot issues or errors while building apps for Microsoft Teams
 keywords: teams apps development troubleshooting
 ---
 # Troubleshoot your Microsoft Teams app

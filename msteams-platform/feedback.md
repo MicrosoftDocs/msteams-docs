@@ -1,6 +1,6 @@
 ---
-title: Feedback | Microsoft Docs
-description: Provide your feedback to us
+title: Send feedback - Microsoft Teams | Microsoft Docs
+description: Provide your feedback on the Microsoft Teams developer platform
 keywords: teams feedback
 ---
 # Submit your questions, bugs, feature requests, and contributions (Microsoft Teams developer platform)

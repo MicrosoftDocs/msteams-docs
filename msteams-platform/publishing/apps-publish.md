@@ -1,6 +1,6 @@
 ---
-title: Publishing Your App | Microsoft Docs
-description: Describes the process of publishing your app to the store
+title: Publish your Microsoft Teams app | Microsoft Docs
+description: Describes the process of publishing your app to the Office Store
 keywords: teams publish store office publishing
 ---
 

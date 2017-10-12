@@ -1,128 +1,146 @@
 - name: Overview
   href: ./overview
-- name: What's New
-  href: ./whatsnew
-- name: Getting Started
+- name: What's new
+  href: ./whats-new
+- name: Get started
   expanded: true
   items:
-  - name: Getting Started with .NET/C#
-    href: ./get-started/get-started
-  - name: Getting Started with Node.js
+  - name: Get started with .NET and C#
+    href: ./get-started/get-started-dotnet
+  - name: Get started with Node.js
     href: ./get-started/get-started-nodejs
-  - name: Getting Started with Python
+  - name: Get started with Python
     href: ./get-started/get-started-python
 - name: Concepts
   items:
   - name: Apps in Teams
-    href: ./apps/teamsapps
+    href: ./apps/apps-overview
     items:
-    - name: Context for Apps
+    - name: Context for apps
       href: ./concepts/apps-context
-    - name: Lifecycle
-      href: ./concepts/apps-lifecycle
-    - name: Enterprise Apps (firewalled)
+    - name: Life cycle
+      href: ./concepts/apps-life-cycle
+    - name: Enterprise apps (firewalled)
       href: ./concepts/apps-firewalled
-    - name: App Data
+    - name: App data
       href: ./concepts/apps-data
-    - name: Sideloading
-      href: ./concepts/apps-sideloading
   - name: Activity Feed
-    href: ./concepts/activityfeed
-  - name: Authentication
-    href: ./concepts/auth
+    href: ./concepts/activity-feed
   - name: Tabs
-    href: ./concepts/tabs/tabs
+    href: ./concepts/tabs/tabs-overview
     items:
-    - name: Static
-      href: ./concepts/tabs/statictab
-    - name: Dynamic
-      href: ./concepts/tabs/dynamic
-    - name: Updating or Removing Tabs
-      href: ./concepts/tabs/updateremove
+    - name: Static tabs
+      href: ./concepts/tabs/tabs-static
+    - name: Dynamic tabs
+      href: ./concepts/tabs/tabs-dynamic
+    - name: Configuration pages
+      href: ./concepts/tabs/tabs-configuration
+    - name: Update or remove tabs
+      href: ./concepts/tabs/tabs-update-remove
+    - name: Context for tabs
+      href: ./concepts/tabs/tabs-context
   - name: Bots
-    href: ./concepts/bots/bots
+    href: ./concepts/bots/bots-overview
     items:
+    - name: Create a bot
+      href: ./concepts/bots/bots-create
     - name: Conversations
-      href: ./concepts/bot-conversations
+      href: ./concepts/bots/bots-conversations
     - name: Notifications
-      href: ./concepts/bot-notifications
-  - name: Outgoing Webhooks
-    href: ./concepts/custombot
-  - name: Composing Rich Messages
+      href: ./concepts/bots/bots-notifications
+    - name: Context for bots
+      href: ./concepts/bots/bots-context
+    - name: Bot menus
+      href: ./concepts/bots/bots-menus
+    - name: Test a bot
+      href: ./concept/bots/bots-test
+  - name: Authentication
+    href: ./concepts/authentication
+  - name: Compose rich messages
     href: ./concepts/compose-extensions
-  - name: Deep Links
-    href: ./concepts/deeplinks
-  - name: User Context
-    href: ./concepts/getusercontext
+  - name: Cards and card actions
+    href: ./concepts/cards-actions
+  - name: Outgoing webhooks
+    href: ./concepts/custom-bot
+  - name: Deep links
+    href: ./concepts/deep-links
+  - name: Sideloading
+    href: ./concepts/apps-sideload
 - name: Publishing
-  href: ./publishing/index
+  href: ./publishing/apps-publish
   items:
-  - name: Creating Package
-    href: ./publishing/createpackage
-  - name: Checklist
-    href: ./publishing/checklist
-  - name: Guidance
-    href: ./publishing/guidance
+  - name: Create package
+    href: ./publishing/apps-package
+  - name: Office Store checklist
+    href: ./publishing/office-store-checklist
+  - name: Office Store guidance
+    href: ./publishing/office-store-guidance
 - name: Scenarios
-  href: ./scenarios/index
+  href: ./scenarios/scenarios
   items:
-  - name: 1 on 1 Conversations with Bots
-    href: ./scenarios/bots1on1
-  - name: Workflows with LOB Apps
-    href: ./scenarios/lobworkflow
-  - name: Single Sign-On
-    href: ./scenarios/sso
+  - name: 1-on-1 conversations with bots
+    href: ./scenarios/bots-personal-conversations
+  - name: Channel conversations with bots
+    href: ./scenarios/bots-channel-conversations
+  - name: Workflows with LOB apps
+    href: ./scenarios/lob-workflow
+  - name: Single sign-on
+    href: ./scenarios/single-sign-on
 - name: Reference
   items:
   - name: General
     items:
-    - name: Crossdomain Redirects
-      href: ./reference/general/crossdomain
+    - name: Public Developer Preview
+      href: ./reference/general/developer-preview
+    - name: Features in Developer Preview
+      href: ./reference/general/developer-preview-features
+    - name: Requirements
+      href: ./reference/general/requirements
+    - name: Cross-domain redirects
+      href: ./reference/general/cross-domain
     - name: Debugging
-      href: ./reference/general/debugging
-    - name: Prerequisites
-      href: ./reference/general/prerequisites
-    - name: Rate Limiting
-      href: ./reference/general/ratelimiting
-  - name: Library
+      href: ./reference/general/debug
+    - name: Rate limiting
+      href: ./reference/general/rate-limit
+  - name: Libraries
     items:
-    - name: Client SDK Reference
-      href: ./reference/library/ref-teams-js
-    - name: .NET Server SDK Reference
-      href: ./reference/library/ref-teams-csharp
-    - name: Node.js Server SDK Reference
-      href: ./reference/library/ref-teams-nodejs
-    - name: Python Server SDK Reference
-      href: ./reference/library/ref-teams-python
-  - name: Design Guidelines
+    - name: Client SDK reference
+      href: ./reference/library/client-sdk-javascript
+    - name: .NET server SDK reference
+      href: ./reference/library/server-sdk-dotnet
+    - name: Node.js server SDK reference
+      href: ./reference/library/server-sdk-nodejs
+    - name: Python server SDK reference
+      href: ./reference/library/server-sdk-python
+  - name: Design guidelines
     items:
     - name: Framework
       items:
-      - name: The Basics
+      - name: The basics
         href: ./reference/design/framework/basics
       - name: Apps
         href: ./reference/design/framework/apps
-      - name: Activity Feed
+      - name: Activity feed
         href: ./reference/design/framework/activity-feed
       - name: Search
         href: ./reference/design/framework/search
       - name: Tabs
         href: ./reference/design/framework/tabs
-      - name: Compose Extensions
+      - name: Compose extensions
         href: ./reference/design/framework/compose-extensions
       - name: Bots
         href: ./reference/design/framework/bots
       - name: Cards
         href: ./reference/design/framework/cards
-      - name: Submitting Your App
+      - name: Submitting your app
         href: ./reference/design/framework/submitting
     - name: Components
       items:
       - name: Color
         href: ./reference/design/components/color
-      - name: Buttons, links and controls
+      - name: Buttons, links, and controls
         href: ./reference/design/components/buttons
-      - name: Fields and Flyouts
+      - name: Fields and flyouts
         href: ./reference/design/components/fields
       - name: Dialogs
         href: ./reference/design/components/dialogs
@@ -132,16 +150,16 @@
         href: ./reference/design/components/themes
     - name: Resources
       href: ./reference/design/resources
-  - name: Manifest Schema
-    items:
-    - name: Manifest Schema Reference
-      href: ./reference/schema/schema
-    - name: Migrating Your Manifest to v1.0
-      href: ./reference/schema/schemamigrate
+  - name: Manifest schema
+    href: ./reference/schema/manifest-schema
+  - name: Graph APIs
+    href: ./reference/microsoft-graph
 - name: Troubleshooting
-  href: ./troubleshoot/index
+  href: ./troubleshoot/troubleshoot
+- name: FAQ
+  href: ./troubleshoot/faq
 - name: Samples
-  href: ./samples/index
+  href: ./samples/code-samples
 - name: Feedback
   href: ./feedback
 

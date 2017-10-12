@@ -1,3 +1,8 @@
+---
+title: Frequently asked questions - Microsoft Teams | Microsoft Docs
+description: Answers to frequently asked questions about developing apps for Microsoft Teams
+keywords: teams apps faq faqs
+---
 # Frequently asked questions (Microsoft Teams developer platform)
 
 ## Setting up
