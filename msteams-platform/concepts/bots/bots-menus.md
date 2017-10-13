@@ -1,20 +1,26 @@
+---
+title: Add a bot menu
+description: Describes how to create menus for bots in Microsoft Teams
+keywords: teams bots menus creation
+---
+
 # Add a bot menu in Microsoft Teams
 
 To aid discovery and to help educate users about your bot’s functionality, you can now add menus that surface whenever the user interacts with your bot. The menu will show the command text and also provide help text, such as a usage example or description of the command’s purpose.
 
-![Screenshot of bot menu](images/Bot/bot-menus-bot-menu-sample.png)
+![Screenshot of bot menu](~/assets/images/bots/bot-menus-bot-menu-sample.png)
 
 When a user selects a menu item, the command string is inserted into the text box to aid in user completion of the bot message.
 
 ## App manifest
 
-To create a bot menu, add a new [`commandLists`](schema.md#bots-commandlists) object to your app manifest under the bot section. You can declare individual menus with separate commands for 1:1 chat (`scopes`: `personal`) and channels (`scopes`: `team`). Each menu supports up to 10 commands.
+To create a bot menu, add a new [`commandLists`](~/reference/schema/manifest-schema#bots-commandlists) object to your app manifest under the bot section. You can declare individual menus with separate commands for 1:1 chat (`scopes`: `personal`) and channels (`scopes`: `team`). Each menu supports up to 10 commands.
 
 ### Manifest excerpt - single menu for both scopes
 
 ```json
 {
-  ...
+  ⋮
   "bots":[
     {
       "botId":"[Microsoft App ID for your bot]",

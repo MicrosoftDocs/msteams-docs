@@ -1,8 +1,14 @@
+---
+title: Design a great app
+description: How to design great apps in Microsoft Teams
+keywords: teams apps design
+---
+
 # Design a great Microsoft Teams app
 
 Microsoft Teams places content in the middle of everyday conversations. Take a look at some ideas you can use to showcase your brand within Microsoft Teams.
 
->For more details and full guidance, complete with style guides and examples, please review our full [Design guidelines site](http://aka.ms/microsoftteamsdesignguidelines).
+>For more details and full guidance, complete with style guides and examples, please review our full [Design guidelines](http://aka.ms/microsoftteamsdesignguidelines).
 
 ## Designing a great tab 
 
@@ -40,7 +46,7 @@ In general, your bot must respond to every message, especially common questions 
 
 ### Say hello
 
-Leverage the [bot event messages](botevents.md) to ensure that your bot introduces itself when added to a team or first accessed in a one-on-one chat. This is an opportunity to tell the user what value you bring to their workday.
+Leverage the [bot event messages](~/concepts/bots/bots-notifications) to ensure that your bot introduces itself when added to a team or first accessed in a one-on-one chat. This is an opportunity to tell the user what value you bring to their workday.
 
 ## Designing a great compose extension
 

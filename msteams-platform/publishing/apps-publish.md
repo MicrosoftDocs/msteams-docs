@@ -1,12 +1,12 @@
 ---
-title: Publish your Microsoft Teams app | Microsoft Docs
+title: Publish your app to the Office Store
 description: Describes the process of publishing your app to the Office Store
 keywords: teams publish store office publishing
 ---
 
 # Publish your Microsoft Teams app to the Office Store
 
->**Important: Your Microsoft Teams app *must* use the [latest schema](schema.md) and follow [current packaging guidelines](createpackage.md).**
+>**Important: Your Microsoft Teams app *must* use the [latest schema](~/reference/schema/manifest-schema) and follow [current packaging guidelines](~/publishing/apps-package).**
 >
 >**Note:** Teams will soon provide an in-app gallery for users to find or discover [high-quality Teams apps](http://aka.ms/microsoftteamsdesignguidelines). To have your solution available in this gallery, you must publish your solution through the Office Store.
 
@@ -24,7 +24,7 @@ Account management in the Microsoft Store ecosystem relies on a [Microsoft accou
 
 >**Note:** Although you might have leveraged the Windows Store Azure Active Directory (Azure AD) support for Windows Store account management, the Office Store Seller Dashboard requires you to use a Microsoft account, not an Azure AD account.
 
->**Important: If you've developed with a trial developer Office 365 account, do not use this account for your Office Store identity.**  Create a separate Microsoft account instead.
+>**Important: If you've developed with a trial developer Office 365 account, do not use this account for your Office Store identity.** Create a separate Microsoft account instead.
 
 ## Register in the Seller Dashboard to submit to the Office Store
 
@@ -42,17 +42,18 @@ After your account is approved, you can submit your solution to the [Seller Dash
 
 ![Office Store Seller Dashboard add an app](~/assets/images/submission/sellerdashboardaddapp.png)
 
-You need to upload a [submission package](createpackage.md) and provide the required metadata for the product listing page, including information such as app logo, description, and screenshots. Please review our [Submission and Manifest Metadata Checklist](submissionchecklist.md) for more information.
+You need to upload a [submission package](~/publishing/apps-package) and provide the required metadata for the product listing page, including information such as app logo, description, and screenshots. Please review our [Submission and Manifest Metadata Checklist](~/publishing/office-store-checklist) for more information.
 
 >**Important:** All information in the package manifest must match the metadata information you enter into the product listing.
 
-For general information about the Seller Dashboard, see [Use the Seller Dashboard to submit your solution to the Office Store](https://dev.office.com/officestore/docs/use-the-seller-dashboard-to-submit-to-the-office-store). For Teams-specific help, see [Submitting your Microsoft Teams app in the Seller Dashboard](submissionguidance.md).
+For general information about the Seller Dashboard, see [Use the Seller Dashboard to submit your solution to the Office Store](https://dev.office.com/officestore/docs/use-the-seller-dashboard-to-submit-to-the-office-store). For Teams-specific help, see [Submitting your Microsoft Teams app in the Seller Dashboard](~/publishing/office-store-guidance).
 
 ## Microsoft Teams app approval process
 
 Teams app approval is a free service provided by the Office Store that verifies that your app works as described, contains all appropriate metadata, and provides content that would be valuable to an end user.
 
 For your Teams app to be approved:
+
 * It must not contain inadmissible or offensive material.
 * It must be stable and functional.
 * Any material that you associate with your experience, such as descriptions and support documentation, must be accurate. Use correct spelling, capitalization, punctuation, and grammar in your descriptions and materials.
@@ -60,6 +61,7 @@ For your Teams app to be approved:
 * For tabs, it must provide value to users outside of what is possible by simply pinning your website in Teams. This means that, at minimum, it must remove extraneous chrome and disallow navigating outside the configured context. See the [Microsoft Teams Design Guidelines](https://aka.ms/microsoftteamsdesignguidelines) for more guidance.
 
 When the validation process is complete, you will receive a message to let you know that either your Teams experience is approved or it fails one of the stated policies.  You can also follow these steps to check the approval status in the Seller Dashboard:
+
 1. Sign in to the Seller Dashboard.
 2. On the **manage** tab, your submission status appears under the submission name.
    * If the status is **pending approval**, your submission is still being verified. When it is in this state, you can't update or resubmit it.
@@ -76,7 +78,7 @@ Failures are explained, with references to the specific policy violations. All f
 * If your product requires an account on your service or another service, list that in the description.
 * If your product requires additional purchases to function properly, list that in the description.
 * For your Tab configuration page, be sure to provide "About" links and proper guidance—this page is the first thing the user sees, so ensure that a new user understands what to do.
-* Be sure that your bot provides appropriate responses when mentioned (@*botname*) in a channel and in 1:1 conversations as needed. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](schema.md#bots).)
+* Be sure that your bot provides appropriate responses when mentioned (@*botname*) in a channel and in 1:1 conversations as needed. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](~/reference/schema/manifest-schema#bots).)
 * Provide the requisite Terms and Privacy policy links in the manifest and the Seller Dashboard, and verify that they properly resolve to the correct documentation. For bots, you must provide this same information in the Submission section of the Bot Framework registration page.
 * Ensure that metadata in the manifest roughly matches metadata in the Seller Dashboard (and, for bots, in the Bot Framework registration). Note that your Seller Dashboard entry should contain a more detailed and formatted description for use in the Office Store product page.
 * Check your manifest for completeness and accuracy. Then check it again.

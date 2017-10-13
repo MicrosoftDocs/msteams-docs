@@ -1,6 +1,6 @@
 ---
-title: MS Teams Samples Index | Microsoft Docs
-description: Home page for all samples
+title: Sample applications
+description: Links and descriptions of sample applications for the Microsoft Teams developer platform
 keywords: microsoft teams developer samples
 ---
 
@@ -19,7 +19,7 @@ These code samples show you the capabilities of Microsoft Teams apps and various
 
 We recommend the following common prequisites for running our sample experiences:
 
-* [An Office 365 account with access to Microsoft Teams, with sideloading enabled](setup.md)
+* [An Office 365 account with access to Microsoft Teams, with sideloading enabled](~/get-started/get-started)
 * For .NET and C#:
     * Visual Studio (you can download the [Community](https://www.visualstudio.com/free-developer-offers/) version for free)
 * For Node.js:
@@ -82,4 +82,4 @@ For Node.js projects, we provide a Visual Studio Code configuration file (launch
 
 ### Running and debugging
 
-For general information on running and debugging our samples, see [Run and debug your Microsoft Teams app](debugging.md).
+For general information on running and debugging our samples, see [Run and debug your Microsoft Teams app](~/reference/general/debug).

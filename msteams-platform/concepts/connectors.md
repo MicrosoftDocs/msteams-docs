@@ -1,3 +1,9 @@
+---
+title: Get started with Office 365 Connectors
+description: Describes how to get started with Office 365 Connectors in Microsoft Teams
+keywords: teams o365 connector
+---
+
 # Get started with Office 365 Connectors for Microsoft Teams
 
 Office 365 Connectors are a great way to push your app's rich content into Microsoft Teams. Any user can connect a team to services like Trello, GitHub, Bing News, or Twitter and get notified of the team's activity in that service. From tracking a team's progress in Trello to following important hashtags in Twitter, Office 365 Connectors help your team to stay in sync and get more done.
@@ -10,11 +16,11 @@ You can even add actions to your content, turning them into *actionable messages
 
 In Microsoft Teams, choose the **More options** (**&#8943;**) button next to the channel name in the list of channels and then choose **Connectors**.
 
-![Screenshot of the "More options" menu next to the channel name, with the Connectors option selected](images/Connectors/teams-context-menu.PNG)
+![Screenshot of the "More options" menu next to the channel name, with the Connectors option selected](~/assets/images/connectors/teams-context-menu.png)
 
 In the list, choose **Add** for the Connector you want to use.
 
-![Screenshot of a dialog box showing a list of available Connectors, with a button for adding each one](images/connector_list.png)
+![Screenshot of a dialog box showing a list of available Connectors, with a button for adding each one](~/assets/images/connector_list.png)
 
 For more examples, see [Accessing Office 365 Connectors from Microsoft Teams](https://docs.microsoft.com/en-us/outlook/actionable-messages/#accessing-office-365-connectors-from-microsoft-teams).
 
@@ -43,7 +49,7 @@ For all other details about Connector card properties, see the **[Actionable mes
 * `hideOriginalBody`
 * `startGroup`
 
-If you are using .NET and C# or Node.js, you can use the `O365ConnectorCard` class in the [Microsoft Teams extensions for the Bot Builder SDK](code.md#microsoft-teams-extensions-for-the-bot-builder-sdk) to send Connector cards from your bot.
+If you are using .NET and C# or Node.js, you can use the `O365ConnectorCard` class in the [Microsoft Teams extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) to send Connector cards from your bot.
 
 ## Creating messages through Office 365 Connectors
 
@@ -137,7 +143,7 @@ You can also use the markup to include rich inputs, such as text entry, multi-se
 
 This message produces the following card in the channel.
 
-![Screenshot of a Connector card](images/Connectors/connector_message.png)
+![Screenshot of a Connector card](~/assets/images/connectors/connector_message.png)
 
 ## Creating actionable messages
 
@@ -193,17 +199,17 @@ The following steps use [cURL](https://curl.haxx.se/). We assume that you have t
 
 ## Registering your Connector
 
-With Microsoft Teams apps, you can distribute your registered Connector as part of your app package. Whether as a standalone solution, or one of several [capabilities](index.md#apps-in-microsoft-teams) that your experience enables in Teams, you can [package](createpackage.md) and [publish](submission.md) your Connector as part of your Office Store submission, or you can provide it to users directly for sideloading within Teams.
+With Microsoft Teams apps, you can distribute your registered Connector as part of your app package. Whether as a standalone solution, or one of several [capabilities](~/overview#apps-in-microsoft-teams) that your experience enables in Teams, you can [package](~/publishing/apps-package) and [publish](~/publishing/apps-publish) your Connector as part of your Office Store submission, or you can provide it to users directly for sideloading within Teams.
 
 To distribute your Connector, you need to register by using the [Connectors Developer Dashboard](https://go.microsoft.com/fwlink/?LinkID=780623). To have your Connector work in Microsoft Teams, select **Microsoft Teams** under **Enable this integration for**.
 
 <img alt="Screenshot of enabling the Connector for Microsoft Teams" src="images/Connectors/connector_developer_portal.png" height="185" width="336">
 
->**Important:** After you choose **Save** in the Connectors Developer Dashboard, your Connector is registered. Do not choose **Publish to Store** (which appears after you choose **Save**); if you want to publish your Connector in the Office Store, follow the instructions in [Publish your Microsoft Teams app to the Office Store](submission.md).
+>**Important:** After you choose **Save** in the Connectors Developer Dashboard, your Connector is registered. Do not choose **Publish to Store** (which appears after you choose **Save**); if you want to publish your Connector in the Office Store, follow the instructions in [Publish your Microsoft Teams app to the Office Store](~/publishing/apps-publish).
 
 You can download the auto-generated Teams app manifest from the portal. Before you can use it to test or publish your app, though, you must do the following:
 
-* Include two icons, following the instructions in [Icons](createpackage.md#icons).
+* Include two icons, following the instructions in [Icons](~/publishing/apps-package#icons).
 * Modify the `icons` portion of the manifest to refer to the file names of the icons instead of URLs.
 
 The following manifest.json file contains the basic elements needed to test and submit your app.
@@ -256,7 +262,7 @@ To test your Connector, sideload it to a team as you would with any other app. Y
 
 After you sideload the app, open the Connectors list from any channel. Scroll to the bottom to see your app in the **Sideloaded** section.
 
-![Screenshot of sideloaded section in Connector dialog box](images/Connectors/connector_dialog_sideloaded.png)
+![Screenshot of sideloaded section in Connector dialog box](~/assets/images/connectors/connector_dialog_sideloaded.png)
 
 You can now launch the configuration experience. Be aware that this flow occurs entirely within Microsoft Teams through a pop-up window. Currently, this behavior differs from the configuration experience in Connectors that we created; we are working on unifying the experiences.
 
@@ -266,4 +272,4 @@ To verify that an `HttpPOST` action is working correctly, use your [custom incom
 
 >**Note:** Currently, we do not support users configuring your Connector externally via the **Connect to Office 365** button. Users must visit Microsoft Teams first to add a Connector.
 
-When your app is ready for submission, follow the process to [publish your app to the Office Store](https://msdn.microsoft.com/en-us/microsoft-teams/submission).
+When your app is ready for submission, follow the process to [publish your app to the Office Store](~/publishing/apps-publish).

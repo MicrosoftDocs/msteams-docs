@@ -1,5 +1,5 @@
 ---
-title: Rate limiting | Microsoft Docs
+title: Rate limiting
 description: Rate limiting and best practices in Microsoft Teams
 keywords: teams bots rate limiting
 ---

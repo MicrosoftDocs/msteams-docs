@@ -1,3 +1,9 @@
+---
+title: Apps overview
+description: Describes how to get started with apps in Microsoft Teams
+keywords: teams activity feed
+---
+
 # Overview of apps in Microsoft Teams: Tabs, bots, and more
 
 Each app in Microsoft Teams can offer multiple capabilities, including tabs, bots, compose extensions, and Office 365 Connectors. 
@@ -10,7 +16,7 @@ By creating apps in Microsoft Teams, you can make your service available to user
 
 * You offer these capabilities via a single Teams app package that users can acquire through our in-product app gallery, via the Office Store, or sideloaded directly by your team.
 
-* You declare precisely which capabilities you support, in which scopes, via your app package's [manifest file](schema.md).
+* You declare precisely which capabilities you support, in which scopes, via your app package's [manifest file](~/reference/schema/manifest-schema).
 
 ### App bar (personal scope)
 
@@ -18,7 +24,7 @@ By creating apps in Microsoft Teams, you can make your service available to user
 
 The app bar is the area on the left side of Microsoft Teams where the user's activity feed, chat, teams, meetings, and files buttons live. We designed the app bar to serve as a central container giving users quick access to the features that they use the most.
 
-![Microsoft Teams apps bar](images/appbar_apps_flyout.png)
+![Microsoft Teams apps bar](~/assets/images/appbar_apps_flyout.png)
 
 Users can access personal experiences from your app via the app bar, such as holding personal conversations with your app's bot or interacting with personal data in a tab.
 
@@ -36,22 +42,22 @@ Ready to get started adding your experience into Teams? Follow these steps:
 
 ### Build your app's rich capabilities
 
-* [Set up for development](setup.md)
-* [Design your app](design.md)
-* [Code](code.md) your app's capabilities
-  * [Tabs](tabs.md)
-  * [Bots](bots.md)
-  * [Connectors](connectors.md)
-  * [Compose extensions](composeextensions.md)
-  * [Activity feed integrations](activityfeed.md)
+* [Set up for development](~/get-started/get-started)
+* [Design your app](~/get-started/design)
+* [Code](~/get-started/code) your app's capabilities
+  * [Tabs](~/concepts/tabs/tabs-overview)
+  * [Bots](~/concepts/bots/bots-overview)
+  * [Connectors](~/concepts/connectors)
+  * [Compose extensions](~/concepts/compose-extensions)
+  * [Activity feed integrations](~/concepts/activity-feed)
 
 ### Package and test your app within Teams
 
-* [Create package](createpackage.md)
-* [Sideload](sideload.md) in Teams
-* [Test functionality](debugging.md)
+* [Create package](~/publishing/apps-package)
+* [Sideload](~/concepts/apps-sideload) in Teams
+* [Test functionality](~reference/general/debug)
 
 ### Publish your app and drive engagement
 
-* [Register and publish](submission.md) to Office Store
-* Embed deep links on your website
+* [Register and publish](~/publishing/apps-publish) to Office Store
+* [Embed deep links](~/concepts/deep-links)~ on your website

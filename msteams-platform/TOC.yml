@@ -14,16 +14,16 @@
 - name: Concepts
   items:
   - name: Apps in Teams
-    href: ./apps/apps-overview
+    href: ./concepts/apps/apps-overview
     items:
     - name: Context for apps
-      href: ./concepts/apps-context
+      href: ./concepts/apps/apps-context
     - name: Life cycle
-      href: ./concepts/apps-life-cycle
+      href: ./concepts/apps/apps-life-cycle
     - name: Enterprise apps (firewalled)
-      href: ./concepts/apps-firewalled
+      href: ./concepts/apps/apps-firewalled
     - name: App data
-      href: ./concepts/apps-data
+      href: ./concepts/apps/apps-data
   - name: Activity Feed
     href: ./concepts/activity-feed
   - name: Tabs

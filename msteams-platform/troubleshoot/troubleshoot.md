@@ -1,23 +1,24 @@
 ---
-title: Troubleshoot your Microsoft Teams app | Microsoft Docs
+title: Troubleshoot your app
 description: Troubleshoot issues or errors while building apps for Microsoft Teams
 keywords: teams apps development troubleshooting
 ---
+
 # Troubleshoot your Microsoft Teams app
 
 ## Tabs
 
 ### Tabs disappear
 
-During the developer preview, any tabs that you created, and uploaded to a team, may have expired after 29 days.  This expiration issue has since been addressed, but you will have to [sideload](sideload.md) the tab again for it to appear in your Tab Gallery.  
+During the developer preview, any tabs that you created, and uploaded to a team, may have expired after 29 days.  This expiration issue has since been addressed, but you will have to [sideload](~/concepts/app-sideload) the tab again for it to appear in your Tab Gallery.  
 
-Tabs may also disappear during the roll out of a new process for sideloading tabs.  Please check [here](sideload.md) to determine if you need to use this process.
+Tabs may also disappear during the roll out of a new process for sideloading tabs.  Please check [here](~/concepts/app-sideload) to determine whether you need to use this process.
 
 ### Blank tab screen
 
 If you are not seeing your content in the tab view, it could be:
 * your content cannot be displayed in an `<iframe>`.
-* the content domain is not in the [`validDomains`](schema.md#validdomains) list in the manifest.
+* the content domain is not in the [`validDomains`](~/reference/schema/manifest-schema#validdomains) list in the manifest.
 
 ### The Save button isn't enabled on the settings dialog
 
@@ -45,11 +46,11 @@ Common problems with the settings object:
 
 ### Can't authorize the user or display your auth provider in your tab
 
-Unless you are doing silent authentication, you must follow the authentication process provided by the [Microsoft Teams JavaScript library](jslibrary.md).  
+Unless you are doing silent authentication, you must follow the authentication process provided by the [Microsoft Teams JavaScript client SDK](~/reference/library/client-sdk-javascript).  
 
 Also note: Due to changes introduced in July 2017, we require all authentication flow to start and end on your domain, which must be listed in the `validDomains` object in your manifest.
 
-For more information about authentication, please see [Authenticate a user in your Microsoft Teams tab](auth.md).
+For more information about authentication, please see [Authenticate a user](~/concepts/authentication).
 
 ### Static tabs not showing up
 
@@ -61,11 +62,11 @@ There is a known issue where updating an existing bot app with a new or updated 
 
 ### Can't add my bot
 
-Apps must be enabled by the Office 365 tenant admin for them to be loaded by end users. Note that in some cases, the Office 365 tenant might have multiple SKUs associated with it, and for bots to work in any, they must be enabled in all SKUs. See [Enable sideloading of apps](https://msdn.microsoft.com/en-us/microsoft-teams/setup#enable-sideloading-of-bots-and-tabs) for more information.
+Apps must be enabled by the Office 365 tenant admin for them to be loaded by end users. Note that in some cases, the Office 365 tenant might have multiple SKUs associated with it, and for bots to work in any, they must be enabled in all SKUs. See [Enable sideloading of apps](~/get-started/get-started#enable-sideloading-of-bots-and-tabs) for more information.
 
 ### Can't add bot as a member of a team
 
-Bots must first be sideload into a team before it is accessible within any channel of that team.  Please review [Sideloading your app in a team](sideload.md) for more information on this process.
+Bots must first be sideload into a team before it is accessible within any channel of that team.  Please review [Sideloading your app in a team](~/concepts/app-sideload) for more information on this process.
 
 ### My bot doesn't get my message in a channel
 
@@ -73,7 +74,7 @@ Bots in channels receive messages only when they are explicitly @mentioned, even
 
 ### My bot doesn't understand my commands when in a channel
 
-Because bots in channels only receive messages when they are @mentioned, all messages that your bot receives in a channel include that @mention in the text field. It is a best practice to strip the bot name itself out of all incoming text messages before passing along to your parsing logic. Review [Mentions](botsinchannels.md#mentions) for tips on how to handle this case.
+Because bots in channels only receive messages when they are @mentioned, all messages that your bot receives in a channel include that @mention in the text field. It is a best practice to strip the bot name itself out of all incoming text messages before passing along to your parsing logic. Review [Mentions](~/scenarios/bots-channel-conversations#mentions) for tips on how to handle this case.
 
 ---
 
@@ -89,7 +90,7 @@ Common reasons for manifest read errors:
 * Encoding issues. Use UTF-8 for the manifest.json file. Other encodings, specifically with the BOM, may not be readable.
 * Malformed .zip package. The manifest.json file must be at the top level of the .zip file. Note that default Mac file compression might place the manifest.json in a subdirectory, which will not properly load in Microsoft Teams.
 
->**Note:** An issue with the [description.full](schema.md#developer) field in the manifest causes a loading error with a string longer than 256 characters.
+>**Note:** An issue with the [description.full](~/reference/schema/manifest-schema#developer) field in the manifest causes a loading error with a string longer than 256 characters.
 
 ### Another extension with same ID "&lt;id&gt;" exists
 

@@ -1,8 +1,14 @@
+---
+title: Channel conversations with bots
+description: Describes the end-to-end scenario of having a conversation with a bot in a channel in Microsoft Teams
+keywords: teams scenarios channels conversation bot
+---
+
 # Interact in a team channel with a Microsoft Teams bot
 
 Microsoft Teams allows users to bring bots into their channel conversations.  By adding a bot as a team member, all users of the team can take advantage of the bot functionality right in the channel conversation.  You can also access Teams-specific functionality within your bot like querying team information and @mentioning users.
 
-To add a bot to a team, you'll need to follow the [packaging](createpackage.md) and [sideloading](sideload.md) instructions.
+To add a bot to a team, you'll need to follow the [packaging](~/publishing/apps-package) and [sideloading](~/concepts/app-sideload) instructions.
 
 ## Designing a great bot for channels
 
@@ -12,7 +18,7 @@ Bots added to a team become another team member, who can be @mentioned as part o
 
 A bot in a channel should provide information relevant and appropriate for all members of the team.  While your bot can certainly provide any information relevant to the experience, keep in mind conversations with it are visible to all members of the channel.  Therefore, a great bot in a channel should add value to all users on the channel, and certainly not inadvertantly share information that would otherwise be more relevant in a personal context. 
 
-Note that depending on your experience, the bot might be entirely relevant in both scopes (personal and team) as is, and in fact, no significant extra work is required to allow your bot to work in both. In Microsoft Teams, there is no expectation that your bot function in all contexts, but you should ensure your bot makes sense, and provides user value, in whichever scope you choose to support. For more information on scopes, see [Apps in Microsoft Teams](teamsapps.md).
+Note that depending on your experience, the bot might be entirely relevant in both scopes (personal and team) as is, and in fact, no significant extra work is required to allow your bot to work in both. In Microsoft Teams, there is no expectation that your bot function in all contexts, but you should ensure your bot makes sense, and provides user value, in whichever scope you choose to support. For more information on scopes, see [Apps in Microsoft Teams](~/concepts/apps/apps-overview).
 
 ## Building your bot
 
@@ -22,7 +28,7 @@ Developing a bot that works in channels uses much of the same functionality from
 
 For a bot in a channel, in addition to the [regular message schema](https://docs.botframework.com/en-us/core-concepts/reference/#activity), your bot also receives the following properties:
 
-* `channelData`&emsp;See [Teams channel data](botsconversation.md#teams-channel-data)
+* `channelData`&emsp;See [Teams channel data](~/concepts/bots/bots-conversations#teams-channel-data)
 * `conversationData.id`&emsp;The reply chain ID, consisting of channel ID plus the ID of the first message in the reply chain
 * `conversationData.isGroup`&emsp;Set to `true` for bot messages in channels
 * `entities`&emsp;Can contain one or more mentions (see [Mentions](#mentions))
@@ -62,9 +68,9 @@ var result = await connector.Conversations.CreateConversationAsync(conversationP
 
 ### Best practice: Welcome messages in teams
 
-When your bot is first added to the team, it is a best practice to send a welcome message to the team to introduce the bot to all users of the team and tell a bit about its functionality. To do this, ensure that your bot responds to the `conversationUpdate` message, with the `teamsAddMembers` eventType in the `channelData` object. Be sure that the `memberAdded` ID is the bot ID itself, because the same event is sent when a user is added to a team. See [Team member or bot addition](botevents.md#team-member-or-bot-addition) for more details.
+When your bot is first added to the team, it is a best practice to send a welcome message to the team to introduce the bot to all users of the team and tell a bit about its functionality. To do this, ensure that your bot responds to the `conversationUpdate` message, with the `teamsAddMembers` eventType in the `channelData` object. Be sure that the `memberAdded` ID is the bot ID itself, because the same event is sent when a user is added to a team. See [Team member or bot addition](~/concepts/bots/bots-notifications#team-member-or-bot-addition) for more details.
 
-You might also want to send a 1:1 message to each member of the team when the bot is added. To do this, you could [fetch the team roster](botapis.md#fetching-the-team-roster) and send each user a [direct message](bots1on1.md#starting-a-11-conversation).
+You might also want to send a 1:1 message to each member of the team when the bot is added. To do this, you could [fetch the team roster](~/concepts/bots/bots-context#fetching-the-team-roster) and send each user a [direct message](~/scenarios/bots-personal-conversations#starting-a-11-conversation).
 
 We recommend that your bot *not* send a welcome message in the following situations:
 
@@ -72,7 +78,7 @@ We recommend that your bot *not* send a welcome message in the following situati
 * A channel is renamed
 * A team member is added to a channel
 
->For more best practices, see our [design guidelines](design.md).
+>For more best practices, see our [design guidelines](http://aka.ms/microsoftteamsdesignguidelines).
 
 ## Mentions
 
@@ -126,7 +132,7 @@ Your bot can mention other users in messages posted into channels. To do this, y
 * Include `<at>@username</at>` in the message text
 * Include the `mention` object inside the entities collection
 
-The [Teams extensions for the Bot Builder SDK](https://msdn.microsoft.com/en-us/microsoft-teams/code#microsoft-teams-extensions-for-the-bot-builder-sdk) provide functionality to easily accomodate this.
+The [Teams extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) provide functionality to easily accomodate this.
 
 >**Note**: At this time, team and channel mentions are not supported.
 
@@ -210,4 +216,4 @@ session.send(generalMessage);
 
 ## Accessing team context
 
-Your bot can do more than send and receive messages in teams. For instance, it can also fetch the list of team members, including their profile information, as well as the list of channels. See [Get context for your Microsoft Teams bot](botapis.md) to learn more.
+Your bot can do more than send and receive messages in teams. For instance, it can also fetch the list of team members, including their profile information, as well as the list of channels. See [Get context for your Microsoft Teams bot](~/concepts/bots/bots-context) to learn more.
