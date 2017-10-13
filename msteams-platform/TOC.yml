@@ -14,7 +14,7 @@
 - name: Concepts
   items:
   - name: Apps in Teams
-    href: ./apps/apps-overview
+    href: ./concepts/apps/apps-overview
     items:
     - name: Context for apps
       href: ./concepts/apps-context
