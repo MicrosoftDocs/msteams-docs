@@ -6,7 +6,7 @@ keywords: teams bots context
 
 # Get context for your Microsoft Teams bot
 
-Your bot can access additional context about the team or chat, such as user profile.  This information can be used to enrich your bot's functionality and provide a more personalized experience.
+Your bot can access additional context about the team or chat, such as user profile. This information can be used to enrich your bot's functionality and provide a more personalized experience.
 
 >**Note:** These Microsoft Teams&ndash;specific bot APIs are best accessed through our extensions for the Bot Builder SDK. For C#/.NET, download our [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet package. For Node.js development, you can install the [botbuilder-teams](https://www.npmjs.com/package/botbuilder-teams) npm package.  
 
@@ -18,7 +18,11 @@ Your bot can query for the list of team members and their basic profiles, which 
 
 #### REST API example
 
-You can directly issue a GET request to [`/conversations/{teamId}/members/`](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-connector-api-reference#get-conversation-members) resource using `teamId` as the parameter in the API call.
+You can directly issue a GET request on [`/conversations/{teamId}/members/`](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-connector-api-reference#get-conversation-members), using the value of `serviceUrl` as the endpoint.
+
+Currently, the only source for `teamId` is a message from the team context&mdash;either a message from a user or the message that your bot receives when it is added to a team (see [Bot or user added to a team](botevents.md#bot-or-user-added-to-a-team)).
+
+>**Note:** Be aware that the value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value of `serviceUrl`.
 
 ```json
 GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members
@@ -57,7 +61,7 @@ Call `GetTeamsConversationMembersAsync` using `Conversation.Id` to return a list
 var connector = new ConnectorClient(new Uri(context.Activity.ServiceUrl));
 var members = await connector.Conversations.GetTeamsConversationMembersAsync(context.Activity.Conversation.Id);
 
-// Concatenate information about all the members into a string
+// Concatenate information about all members into a string
 var sb = new StringBuilder();
 foreach (var member in members)
 {
@@ -72,7 +76,7 @@ foreach (var member in members)
 await context.PostAsync($"People in this conversation: {sb.ToString()}");
 ```
 
->**Note:** The `GetTeamsConversationMembersAsync(teamId, tenantId)` override is now obsolete. You should migrate your code to use `IConversations.GetConversationMembersAsync(conversationId)` and then use `AsTeamsChannelAccount` to get the extended properties.
+>**Note:** The `GetTeamsConversationMembersAsync(teamId, tenantId)` override is now obsolete. If your code uses this override, update it to use `IConversations.GetConversationMembersAsync(conversationId)`; then use `AsTeamsChannelAccount` to get the extended properties.
 
 #### Node.js example
 
@@ -105,12 +109,16 @@ The API call and SDK methods are identical to fetching the team roster, as is th
 Your bot can query the list of channels in a team.
 
 >**Notes**
->* Right now, the name of the default General channel is returned as `null` to allow for localization.>
+>* Currently, the name of the default General channel is returned as `null` to allow for localization.>
 >* The channel ID for the General channel always matchs the team ID.
 
 #### REST API example
 
-You can directly issue a GET request to `/teams/{teamId}/conversations/`.
+You can directly issue a GET request on `/teams/{teamId}/conversations/`, using the value of `serviceUrl` as the endpoint.
+
+Currently, the only source for `teamId` is a message from the team context&mdash;either a message from a user or the message that your bot receives when it is added to a team (see [Bot or user added to a team](botevents.md#bot-or-user-added-to-a-team)).
+
+>**Note:** Be aware that the value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value of `serviceUrl`.
 
 ```json
 GET /v3/teams/19%3A033451497ea84fcc83d17ed7fb08a1b6%40thread.skype/conversations

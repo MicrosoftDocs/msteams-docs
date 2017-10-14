@@ -234,7 +234,7 @@ If you choose to use the REST API, you can also call the [`/conversations/{conve
 
 The message content itself can contain simple text or some of the Bot Framework&ndash;supplied [cards and card actions](~/concepts/cards-actions).
 
-Please note that in your outbound schema you should always use the same `serviceUrl` as the one you received.
+Please note that in your outbound schema you should always use the same `serviceUrl` as the one you received. Be aware that the value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value of `serviceUrl`.
 
 ## Updating messages 
 
