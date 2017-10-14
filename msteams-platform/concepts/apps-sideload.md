@@ -1,8 +1,14 @@
+---
+title: Sideload your app
+description: Describes how to sideload your app in Microsoft Teams
+keywords: teams apps sideloading
+---
+
 # Sideload your app in Microsoft Teams
 
 To test your app experience within Microsoft Teams, you need to sideload your app using the following instructions. Sideloading adds the app to the team you select, and you and your team members can interact with it like end users.
 
-For bots designed only for 1:1 contexts, see [Adding a bot for 1:1 chat only](botsadd.md#adding-a-bot-for-11-chat-only) for an alternate way to access for testing purposes.
+For bots designed only for 1:1 contexts, see [Adding a bot for 1:1 chat only](~/concepts/bots/bots-test#adding-a-bot-for-11-chat-only) for an alternate way to access for testing purposes.
 
 >**Note:** Sideloading an updated package for an existing app with a bot might not show tab changes when viewed through the Conversations window. We recommend you access via the Apps fly-out, or test on a clean test environment.
 
@@ -10,13 +16,13 @@ For bots designed only for 1:1 contexts, see [Adding a bot for 1:1 chat only](bo
 
 For both development and final Office Store submission, you must create a sideloadable package that contains the information to describe your experience. The package, a .zip file, contains the application manifest and icons that uniquely define your experience.
 
-To create your sideload package, see [Create the package for your Microsoft Teams app](createpackage.md).
+To create your sideload package, see [Create the package for your Microsoft Teams app](~/publishing/apps-package).
 
 ## Load your package into a team
 
 With your package created, you can now load it into a team of your choosing. This adds the experience as an available integration for all users in the selected team.
 
->**Note:** For sideloading to work, your tenant admin must first [enable sideloading of apps](setup.md#3-enable-sideloading-of-apps-for-microsoft-teams).
+>**Note:** For sideloading to work, your tenant admin must first [enable sideloading of apps](~/get-started/get-started#3-enable-sideloading-of-apps-for-microsoft-teams).
 
 1. Create a new team for testing, if necessary. Click **Create team** at the bottom of the left-hand panel.
 
@@ -48,7 +54,7 @@ With the app loaded in the team, users can pin the tab to any channel on the tea
 
 3. Accept the consent prompt.
 
-4. Configure your tab via its [configuration page](createconfigpage.md) and choose **Save**. 
+4. Configure your tab via its [configuration page](~/concepts/tabs/tabs-configuration) and choose **Save**. 
 
   ![The Add a tab dialog box, featuring a gallery of available tabs](~/assets/images/tab_gallery.png)
 
@@ -68,7 +74,7 @@ With the app loaded in the team, users can set up a Connector on any channel in 
 
 2. Select your Connector from the **Sideloaded** section at the bottom.
 
-3. Configure your Connector via its [configuration page](connectors.md) and choose **Save**. 
+3. Configure your Connector via its [configuration page](~/concepts/connectors) and choose **Save**. 
 
   ![The Add a tab dialog box, featuring a gallery of available tabs.](~/assets/images/connector_gallery.png)
 
@@ -76,7 +82,7 @@ With the app loaded in the team, users can set up a Connector on any channel in 
 
 A sideloaded app with a compose extension automatically appears in the **More options** (**&#8943;**) menu in the compose box.
 
-![Compose extensions](~/assets/images/composeextension/cesampleapp.png)
+![Compose extensions](~/assets/images/compose-extension/cesampleapp.png)
 
 ## Removing or updating your app
 
@@ -88,6 +94,6 @@ If you change manifest information, you must first remove the app and then add t
 
 ## Troubleshooting notes
 
-* If the manifest doesn't load, please double-check that you followed all the instructions in [Create the package](createpackage.md) and validated your manifest against the [schema](schema.md).
+* If the manifest doesn't load, please double-check that you followed all the instructions in [Create the package](~/publishing/apps-package) and validated your manifest against the [schema](~/reference/schema/manifest-schema).
 
-* Encountering other problems? See [Troubleshoot your Microsoft Teams app](troubleshooting.md).
+* Encountering other problems? See [Troubleshoot your Microsoft Teams app](~/troubleshoot/troubleshoot).

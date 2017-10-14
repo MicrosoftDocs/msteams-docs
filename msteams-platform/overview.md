@@ -1,8 +1,9 @@
 ---
-title: Microsoft Teams developer platform | Microsoft Docs
+title: Microsoft Teams developer platform
 description: Overview page describing the Microsoft Teams developer platform
 keywords: teams overview
 ---
+
 # Overview of the Microsoft Teams developer platform
 
 Microsoft Teams is a chat-based workspace in Office 365 that integrates with the apps and services teams use to get work done together.  The Microsoft Teams developer platform makes it easy for you to integrate your own service, whether you develop custom apps for your enterprise or SaaS applications for teams around the world.
@@ -22,7 +23,7 @@ With apps in Microsoft Teams, you can make your service available to users withi
 
 <!-- TODO: table of capabilities, screenshots of personal scope -->
 
-Learn more about [scopes in Microsoft Teams](teamsapps.md#scopes-in-microsoft-teams) and where you can surface your app.
+Learn more about [scopes in Microsoft Teams](~/concepts/apps/apps-overview#scopes-in-microsoft-teams) and where you can surface your app.
 
 Here are the capabilities your app can leverage today. You can offer all of them in the team scope, and most of them in the personal scope.
 
@@ -36,7 +37,7 @@ Personal tabs allow individual users to work privately with your tools and data,
 
 ---
 
-[Get started with tabs.](tabs.md)
+[Get started with tabs.](~/concepts/tabs/tabs-overview)
 
 ---
 
@@ -50,7 +51,7 @@ While bots can take advantage of the rich natural-language processing provided b
 
 ---
 
-[Get started with bots.](bots.md)
+[Get started with bots.](~/concepts/bots/bots-overview)
 
 ---
 
@@ -58,13 +59,13 @@ While bots can take advantage of the rich natural-language processing provided b
 
 ### Compose extensions
 
->[Public Developer Preview only](publicpreview.md)
+>[Public Developer Preview only](~/reference/general/developer-preview)
 
 Leverage the power of your web service to provide a quick and easy way for your users to insert your content into the chat stream.
 
 ---
 
-[Get started with compose extensions.](composeextensions.md)
+[Get started with compose extensions.](~/concepts/compose-extensions)
 
 ---
 
@@ -72,7 +73,7 @@ Leverage the power of your web service to provide a quick and easy way for your 
 
 ### Connectors
 
->[Public Developer Preview only](publicpreview.md)
+>[Public Developer Preview only](~/reference/general/developer-preview)
 
 Office 365 Connectors are a great way to get useful information and content into Microsoft Teams.
 
@@ -80,7 +81,7 @@ You can integrate your service by posting rich Connector cards into custom incom
 
 ---
 
-[Get started with Connectors.](connectors.md)
+[Get started with Connectors.](~/concepts/connectors)
 
 ---
 
@@ -93,10 +94,10 @@ You can integrate your service by posting rich Connector cards into custom incom
 
 ---
 
-[Get started with custom bots.](custombot.md)
+[Get started with custom bots.](~/concepts/custom-bot)
 
 ---
 
 ## Submit your questions, bugs, feature requests, and contributions
 
-We listen to the developer community across [several channels](feedback.md).
+We listen to the developer community across [several channels](~/feedback).

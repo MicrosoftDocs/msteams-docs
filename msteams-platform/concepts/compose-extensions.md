@@ -1,12 +1,18 @@
+---
+title: Get started with compose extensions
+description: Describes how to get started with compose extensions in Microsoft Teams
+keywords: teams compose extensions
+---
+
 # Preview: Get started with compose extensions for Microsoft Teams
 
->**Important:** Compose extensions are available only in [Public Developer Preview](publicpreview.md). Many details in this document are subject to change.
+>**Important:** Compose extensions are available only in [Public Developer Preview](~/reference/general/developer-preview). Many details in this document are subject to change.
 >
 >**Note:** The term "compose extensions" is provisional and might change. Until this feature is complete, we recommend not using the term in any customer-facing UI or communications.
 
 Compose extensions are a powerful new way for users to engage with your app within Microsoft Teams. With this capability, users can query for information from your service and post that information, in the form of rich cards, right into the channel conversation.
 
-![Example of compose extension card](images/ComposeExtension/CEExample.png)
+![Example of compose extension card](~/assets/images/compose-extensions/ceexample.png)
 
 Compose extensions appear along the bottom of the compose box. A few are built in, such as Emoji, Giphy, and Sticker. Choose the **More Options** (**&#8943;**) button to see other compose extensions, including those that you add from the app gallery or sideload yourself.
 
@@ -22,19 +28,19 @@ How would you use compose extensions? Here are a few possibilities:
 
 Building a compose extension involves implementing familiar Microsoft Teams developer-platform concepts like bot APIs, rich cards, and tabs.
 
-At its core, a compose extension is a cloud-hosted service that listens to user requests and responds with structured data, such as cards. You integrate your service with Microsoft Teams via Bot Framework `Activity` objects. Our .NET and Node.js [extensions for the Bot Builder SDK](code.md#microsoft-teams-extensions-for-the-bot-builder-sdk) can help you add compose extension functionality to your app.
+At its core, a compose extension is a cloud-hosted service that listens to user requests and responds with structured data, such as cards. You integrate your service with Microsoft Teams via Bot Framework `Activity` objects. Our .NET and Node.js [extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) can help you add compose extension functionality to your app.
 
-![Diagram of message flow for compose extensions](images/ComposeExtension/CEFlow.png)
+![Diagram of message flow for compose extensions](~/assets/images/compose-extensions/ceflow.png)
 
 ### Register in the Bot Framework
 
-If you haven’t done so already, you must first register a bot with the Microsoft Bot Framework. Visit [this link](https://msdn.microsoft.com/en-us/microsoft-teams/botscreate) for instructions. The Microsoft app ID and callback endpoints for your bot, as defined there, will be used in your compose extension to receive and respond to user requests. Remember to enable the Microsoft Teams channel for your bot.
+If you haven’t done so already, you must first register a bot with the Microsoft Bot Framework. (See [Create a bot](~/concepts/bots/bots-create) for instructions.) The Microsoft app ID and callback endpoints for your bot, as defined there, will be used in your compose extension to receive and respond to user requests. Remember to enable the Microsoft Teams channel for your bot.
 
 Record your bot’s app ID and app password—you will need to supply the app ID in your app manifest.
 
 ### Update your app manifest
 
-As with bots and tabs, you update the [manifest](schema.md#composeextensions) of your app to include the compose extension properties. These properties govern how your compose extension appears and behaves in the Microsoft Teams client. Compose extensions are supported beginning with v1.0 of the manifest.
+As with bots and tabs, you update the [manifest](~/reference/schema/manifest-schema#composeextensions) of your app to include the compose extension properties. These properties govern how your compose extension appears and behaves in the Microsoft Teams client. Compose extensions are supported beginning with v1.0 of the manifest.
 
 >**Note:** The `canUpdateConfiguration` property is not yet included in the manifest schema. However, you can still test compose extensions that use `canUpdateConfiguration` by sideloading them.
 
@@ -55,7 +61,7 @@ The extension definition is an object that has the following structure:
 
 Your compose extension should declare one command, which appears when the user selects your app from the **More options** (**&#8943;**) button in the compose box. 
 
-![Screenshot of list of compose extensions in Teams](images/ComposeExtension/compose-extension-list.png)
+![Screenshot of list of compose extensions in Teams](~/assets/images/compose-extensions/compose-extension-list.png)
 
 In the app manifest, your command item is an object with the following structure:
 
@@ -132,7 +138,7 @@ In the app manifest, your command item is an object with the following structure
  
 ### Test via sideloading
 
-You can test your compose extension by sideloading your app. See [Sideloading your app in a team](sideload.md) for details.
+You can test your compose extension by sideloading your app. See [Sideloading your app in a team](~/concepts/app-sideload) for details.
 
 To open your compose extension, navigate to any of your chats or channels. Choose the **More options** (**&#8943;**) button in the compose box, and choose your compose extension.
 
@@ -152,7 +158,7 @@ A compose extension receives an `onQuery` event when anything happens in the com
 
 If your compose extension uses a configuration page, your handler for `onQuery` should first check for any stored configuration information; if the compose extension isn't configured, return a `config` response with a link to your configuration page. Be aware that the response from the configuration page is also handled by `onQuery`. (The sole exception is when the configuration page is called by the handler for `onQuerySettingsUrl`; see the following section.)
 
-If your compose extension requires authentication, check the user state information; if the user isn't signed in, follow the instructions in the [Authentication](composeextensions.md#authentication) section later in this topic.
+If your compose extension requires authentication, check the user state information; if the user isn't signed in, follow the instructions in the [Authentication](#authentication) section later in this topic.
 
 Next, check whether `initialRun` is set; if so, take appropriate action, such as providing instructions or a list of responses.
 
@@ -162,7 +168,7 @@ The remainder of your handler for `onQuery` prompts the user for information, di
 
 The `onQuerySettingsUrl` and `onSettingsUpdate` events work together to enable the **Settings** menu item.
 
-![Screenshots of locations of Settings menu item](images/ComposeExtension/compose-extension-settings-menu-item.png)
+![Screenshots of locations of Settings menu item](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
 
 Your handler for `onQuerySettingsUrl` returns the URL for the configuration page; after the configuration page closes, your handler for `onSettingsUpdate` accepts and saves the returned state. (This is the one case in which `onQuery` *doesn't* receive the response from the configuration page.)
 
@@ -195,7 +201,7 @@ The request parameters itself are found in the value object, which includes the 
 | `parameters` | Array of parameters. Each parameter object contains the parameter name, along with the parameter value provided by the user. |
 | `queryOptions` | Pagination parameters: <br>`skip`: skip count for this query <br>`count`: number of elements to return |
 
->**Note:** You should authenticate any request to your service. See [Receiving messages](botsconversation.md#receiving-messages) for more detailed documentation on receiving messages from the Bot Framework.
+>**Note:** You should authenticate any request to your service. See [Receiving messages](~/concepts/bots/bots-conversations#receiving-messages) for more detailed documentation on receiving messages from the Bot Framework.
 
 #### Request example
 
@@ -264,7 +270,7 @@ We support the following attachment types:
 * Hero card
 * Office 365 Connector card
 
-For full documentation on the thumbnail and hero card types, see [Add cards and card actions](https://msdn.microsoft.com/en-us/microsoft-teams/teams-bots-cards). For additional documentation regarding the Office 365 Connector card, see [Using Office 365 Connector cards](connectors.md#using-office-365-connector-cards-in-microsoft-teams).
+For full documentation on the thumbnail and hero card types, see [Add cards and card actions](~/concepts/cards-actions). For additional documentation regarding the Office 365 Connector card, see [Using Office 365 Connector cards](~/concepts/connectors#using-office-365-connector-cards-in-microsoft-teams).
 
 The result list is displayed in the Microsoft Teams UI with a preview of each item. The preview is generated in one of two ways:
 
@@ -401,11 +407,11 @@ To prompt an unauthenticated user to sign in, respond with a suggested action th
 }
 ```
 
->**Note:** For the sign-in experience to be hosted in a Teams pop-up, the domain portion of the URL must be in your app’s list of valid domains. (See [validDomains](schema.md#validdomains) in the manifest schema.)
+>**Note:** For the sign-in experience to be hosted in a Teams pop-up, the domain portion of the URL must be in your app’s list of valid domains. (See [validDomains](~/reference/schema/manifest-schema#validdomains) in the manifest schema.)
 
 ### Start the sign-in flow
 
-Your sign-in experience should be responsive and fit within a popup window. It should integrate with the [Microsoft Teams JavaScript library](jslibrary.md), which uses message passing.
+Your sign-in experience should be responsive and fit within a popup window. It should integrate with the [Microsoft Teams JavaScript client SDK](~/reference/library/client-sdk-javascript), which uses message passing.
 
 As with other embedded experiences running inside Microsoft Teams, your code inside the window needs to first call `microsoftTeams.initialize()`. If your code performs an OAuth flow, you can pass the Teams user ID into your window, which then can pass it to the OAuth sign-in URL.
 
@@ -516,7 +522,7 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 
 ### Node.js
 
-The [Teams Extensions](https://www.npmjs.com/package/botbuilder-teams) for the Bot Builder SDK for Node.js provide helper objects and methods to simplify receiving, processing, and responding to compose extension requests.
+The [Teams extensions](https://www.npmjs.com/package/botbuilder-teams) for the Bot Builder SDK for Node.js provide helper objects and methods to simplify receiving, processing, and responding to compose extension requests.
 
 #### Example code
 

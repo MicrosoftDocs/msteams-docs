@@ -1,8 +1,9 @@
 ---
-title: Getting Started
-description: Read on how to get started building great apps in Microsoft Teams
+title: Get started
+description: Get started building great apps in Microsoft Teams
 keywords: getting started microsoft teams
 ---
+
 # Get started developing for Microsoft Teams
 
 Microsoft Teams is a service within Office 365. To get started developing extensions for Microsoft Teams, you'll first need an Office 365 commercial account. You'll then need to turn on the Microsoft Teams service for your Office 365 organization. Lastly, you'll need to turn on bots and enable sideloading of bots and tabs for testing.
@@ -55,11 +56,11 @@ To develop and test apps, you need to enable them in Microsoft Teams, and also e
 
 	![Screenshot of the Apps section, with 'Allow external apps in Microsoft Teams' and 'Allow sideloading of external apps' options switched on.](~/assets/images/setup/enablesideloading.png)
 
-For more information on sideloading, see [Sideloading your app in a team](sideload.md).
+For more information on sideloading, see [Sideloading your app in a team](~/concepts/app-sideload).
 
 ## 4. Enable Public Developer Preview for your tenant (optional) 
 
-We'll be rolling out extensibility features for developers to try before they roll out to end users. It's easy to opt in or out, on demand. See [Public Developer Preview](publicpreview.md) for more information.
+We'll be rolling out extensibility features for developers to try before they roll out to end users. It's easy to opt in or out, on demand. See [Public Developer Preview](~/reference/general/developer-preview) for more information.
 
 This is an optional feature and is not required for app development.
 
@@ -69,26 +70,26 @@ With those steps out of the way, you're ready to focus on creating your app.
 
 ### Build your app's rich capabilities
 
-* [Learn about scopes](teamsapps.md)
-* [Design your app](design.md)
-* [Code](code.md) your app's capabilities
-  * [Tabs](tabs.md)
-  * [Bots](bots.md)
-  * [Connectors](connectors.md)
-  * [Compose extensions](composeextensions.md)
-  * [Activity feed integrations](activityfeed.md)
+* [Learn about scopes](~/concepts/apps/apps-overview)
+* [Design your app](~/get-started/design)
+* [Code](~/get-started/code) your app's capabilities
+  * [Tabs](~/concepts/tabs/tabs-overview)
+  * [Bots](~/concepts/bots/bots-overview)
+  * [Connectors](~/concepts/connectors)
+  * [Compose extensions](~/concepts/compose-extensions)
+  * [Activity feed integrations](~/concepts/activity-feed)
 
 ### Package and test your app within Teams
 
-* [Create package](createpackage.md)
-* [Sideload](sideload.md) in Teams
-* [Test functionality](debugging.md)
+* [Create package](~/publishing/apps-package)
+* [Sideload](~/concepts/app-sideload) in Teams
+* [Test functionality](~/reference/general/debug)
 
 ### Publish your app and drive engagement
 
-* [Register and publish](submission.md) to Office Store
-* Embed deep links on your website
+* [Register and publish](~/publishing/apps-publish) to Office Store
+* Embed [deep links](~/concepts/deep-links) on your website
 
 ---
 
-> Running into problems? See the [troubleshooting guide](troubleshooting.md).
+> Running into problems? See the [troubleshooting guide](~/troubleshoot/troubleshoot).

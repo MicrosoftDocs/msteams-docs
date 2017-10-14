@@ -1,15 +1,16 @@
 ---
-title: Getting Started
-description: Read on how to get started building great apps in Microsoft Teams
+title: Get started
+description: Get started building great apps in Microsoft Teams
 keywords: getting started microsoft teams
 ---
+
 # Code your Microsoft Teams app
 
 Because Microsoft Teams apps are composed web services, you can use any web-programming technology. For tabs, we provide a JavaScript library. For bots and compose extensions, we recommend you use either C# or Typescript to take advantage of our [SDK extensions](#microsoft-teams-extensions-for-the-bot-builder-sdk) for .NET and Node.js.
 
 ## Coding your tab
 
-Tabs are simply iframe'd web content. You can leverage your existing web service, written in any language and hosted on any cloud platform, and simply include the [Microsoft Teams JavaScript library](jslibrary.md) in pages you display in Teams. This library provides methods for your tab and your authentication and configuration experiences.
+Tabs are simply iframe'd web content. You can leverage your existing web service, written in any language and hosted on any cloud platform, and simply include the [Microsoft Teams JavaScript client SDK](~/reference/library/client-sdk-javascript) in pages you display in Teams. This library provides methods for your tab and your authentication and configuration experiences.
 
 ## Coding your bot and compose extension
 

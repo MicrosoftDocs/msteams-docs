@@ -1,7 +1,7 @@
 ---
-title: Custom Bot | Microsoft Docs
-description: Describes the custom bot functionality and how to use it in your apps
-keywords: teams bots custom bot
+title: Custom bots
+description: Describes how to create and use custom bots in Microsoft Teams
+keywords: teams bots custom
 ---
 
 # Custom bots in Microsoft Teams
@@ -38,7 +38,7 @@ Once you add a custom bot to the team, it looks and behaves just like a regular 
 
 ### Receiving messages
 
-Your service will receive messages in the standard Microsoft bot messaging schema, as documented here on the [Microsoft Bot Framework](https://docs.botframework.com/en-us/restapi/connector/).
+Your service will receive messages in the standard Microsoft bot messaging schema, as documented in the [API reference](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-connector-api-reference) for the Microsoft Bot Framework.
 
 You can optionally use the existing Bot Framework client SDKs to simplify parsing and handling messages.
 
@@ -100,12 +100,12 @@ Currently, users must mention the custom bot for it to receive messages.
 
 ### Authenticating the caller
 
-You should always authenticate that Microsoft Teams is the service calling your URL. To guarantee the legitimacy of the client, Microsoft Teams will provide the HMAC in the HTTP hmac header.
+You should always authenticate that Microsoft Teams is the service calling your URL. To guarantee the legitimacy of the client, Microsoft Teams provides the HMAC in the HTTP `hmac` header.
 
 Your code should always verify the HMAC signature included in the request:
 1.	Generate the hmac from the request body of the message. There are standard libraries on most platforms. Microsoft Teams uses standard SHA256 HMAC cryptography. You will need to convert the body to a byte array in UTF8.
 2.	To compute the hash, provide the byte array of the shared secret.
-3.	Convert the hash to a String using UTF8 encoding.
+3.	Convert the hash to a string using UTF8 encoding.
 4.	Compare the string value of the generated hash with the value provided in the HTTP request.
 
 #### Code example (C#)
@@ -255,13 +255,13 @@ Your custom bot will need to reply asynchronously to the HTTP request from Micro
 ## Limitations
 
 * Custom bots do not have access to non-messaging APIs, such as team roster membership.
-* Custom bots cannot post into channels asynchronously, i.e. not as a reply to a user message.
-* While custom bots can use rich cards, they cannot leverage button actions like "imBack" or "invoke".
+* Custom bots cannot post into channels asynchronously; that is, not as a reply to a user message.
+* Although custom bots can use rich cards, they cannot leverage button actions like `imBack` or `invoke`.
 
 ## Sample Custom bot 
 
-For sample code illustrating a custom bot, please see our sample located [here](https://github.com/OfficeDev/microsoft-teams-sample-custombot)
+For sample code illustrating a custom bot, see our sample on GitHub: [OfficeDev/microsoft-teams-sample-custombot](https://github.com/OfficeDev/microsoft-teams-sample-custombot)
 
 ## Turn your custom bot into an app for Microsoft Teams
 
-If you’re ready to share your custom bot with others or make it publicly available, you can submit your bot to Microsoft Teams for consideration in the bot gallery. Click [here](https://aka.ms/microsoftteamsdeveloperpreviewinterestform) to learn more.
+If you’re ready to share your custom bot with others or make it publicly available, you can submit your bot to Microsoft Teams for consideration in the bot gallery. See the [Microsoft Teams Developer Preview interest form](https://aka.ms/microsoftteamsdeveloperpreviewinterestform) to learn more.

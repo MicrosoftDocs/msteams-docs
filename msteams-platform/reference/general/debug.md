@@ -1,16 +1,16 @@
 ---
-title: Running and Debugging your Teams App | Microsoft Docs
-description: Describes the steps to be taken to run and debug teams apps
+title: Run and debug your app
+description: Describes the steps to be taken to run and debug Microsoft Teams apps
 keywords: teams run debug apps
 ---
 
 # Run and debug your Microsoft Teams app
 
-Microsoft Teams apps can contain one or more capabilities, and the ways to run or even host them may be different.  When it comes to debugging, in general, we have the following ways to run your Microsoft Teams app:
+Microsoft Teams apps can contain one or more capabilities, and the ways to run or even host them may be different. When it comes to debugging, in general, we have the following ways to run your Microsoft Teams app:
 
 * **Purely local**&emsp;For bots, you can test your experience in the Bot Emulator. For other content, you can run locally in your browser and address content through `http://localhost`.
-* **Locally hosted, in Teams**&emsp;This involves running locally with tunneling software and [creating a package](createpackage.md) to [sideload](sideload.md) into Teams. This allows you to easily run and step-debug your app within the Teams experience.
-* **Cloud-hosted, in Teams**&emsp;This truly simulates (or is) production-level support for a Teams app experience. It involves uploading your solution to your externally accessible server or cloud provider of choice (we recommend Azure, of course) and [creating a package](createpackage.md) to [sideload](sideload.md) into Teams.
+* **Locally hosted, in Teams**&emsp;This involves running locally with tunneling software and [creating a package](~/publishing/apps-package) to [sideload](~/concepts/app-sideload) into Teams. This allows you to easily run and step-debug your app within the Teams experience.
+* **Cloud-hosted, in Teams**&emsp;This truly simulates (or is) production-level support for a Teams app experience. It involves uploading your solution to your externally accessible server or cloud provider of choice (we recommend Azure, of course) and [creating a package](~/publishing/apps-package) to [sideload](~/concepts/app-sideload) into Teams.
 
 For purely local or local Teams testing, you run the experience from your own computer. This allows you to actually compile and run within your IDE, and take full advantage of such techniques as breakpoints and step debugging. For production-scale debugging and testing, we recommend that you follow your own company guidelines to ensure you are able to support testing, staging, and deployment through your own processes.
 
@@ -51,7 +51,7 @@ Please remember that any time you change values in the manifest.json, you need t
 
 ## Cloud-hosted
 
-You can use any externally addressable service to host your development and production code and their HTTPS endpoints. There is no expectation that your capabilities reside on the same service&mdash;it's your project, so it's up to you. We do require that all domains being accessed from your Microsoft Teams apps be listed in the [`validDomains`](https://msdn.microsoft.com/en-us/microsoft-teams/schema#validdomains) object in the manifest.json file.
+You can use any externally addressable service to host your development and production code and their HTTPS endpoints. There is no expectation that your capabilities reside on the same service&mdash;it's your project, so it's up to you. We do require that all domains being accessed from your Microsoft Teams apps be listed in the [`validDomains`](~/reference/schema/manifest-schema#validdomains) object in the manifest.json file.
 
 >**Note:** To ensure a secure environment, we urge you to be explicit about the exact domain and subdomains you reference&mdash;and those domains must be in your control. For example, `*.azurewebsites.net` would not be allowed, but `contoso.azurewebsites.net` would.
 
@@ -59,5 +59,5 @@ You can use any externally addressable service to host your development and prod
 
 In general, to load and run your experience within Microsoft Teams, you need to create a package and sideload it into Teams, using the following guidance:
 
-* [Create the package for your Microsoft Teams app](createpackage.md)
-* [Sideload your app in Microsoft Teams](sideload.md)
+* [Create the package for your Microsoft Teams app](~/publishing/apps-package)
+* [Sideload your app in Microsoft Teams](~/concepts/app-sideload)

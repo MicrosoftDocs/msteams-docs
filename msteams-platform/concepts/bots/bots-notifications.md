@@ -1,3 +1,9 @@
+---
+title: Handle bot events
+description: Describes how to handle events in bots for Microsoft Teams
+keywords: teams bots events
+---
+
 # Handle bot events in Microsoft Teams
 
 Microsoft Teams sends notifications to your bot for changes or events that happen in contexts where your bot is active. You can use these events to trigger service logic, such as the following:
@@ -7,7 +13,7 @@ Microsoft Teams sends notifications to your bot for changes or events that happe
 * Update cached information on team membership or channel information
 * Remove cached information for a team if the bot is removed
 
-Each bot event is sent as an `Activity` object in which `messageType` defines what information is in the object. For messages of type `message`, see [Sending and receiving messages](botsconversation.md).
+Each bot event is sent as an `Activity` object in which `messageType` defines what information is in the object. For messages of type `message`, see [Sending and receiving messages](~/concepts/bots/bots-conversations).
 
 Teams-specific events, usually triggered off the `conversationUpdate` type, have additional Teams event information passed as part of the `channelData` object, and therefore your event handler must query the `channelData` payload for the Teams `eventType` and additional event-specific metadata.
 
@@ -15,12 +21,12 @@ The following table lists the events that your bot can receive and take action o
 
 |Type|Payload object|Teams `eventType` |Description|
 |---|---|---|---|
-| `conversationUpdate` |`membersAdded`| `teamMemberAdded`|[Bot or team member was added to team](botevents.md#team-member-or-bot-addition)|
-| `conversationUpdate` |`membersRemoved`| `teamMemberRemoved`|[Bot or team member was removed from team](botevents.md#team-member-or-bot-removed)|
-| `conversationUpdate` | |`teamRenamed`| [Team in which bot is member was renamed](botevents.md#team-name-updates)|
-| `conversationUpdate` | |`channelCreated`| In a team where bot is member, [a channel was created](botevents.md#channel-updates)|
-| `conversationUpdate` | |`channelRenamed`| In a team where bot is member, [a channel was renamed](botevents.md#channel-updates)|
-| `conversationUpdate` | |`channelDeleted`| In a team where bot is member, [a channel was deleted](botevents.md#channel-updates)|
+| `conversationUpdate` |`membersAdded`| `teamMemberAdded`|[Bot or team member was added to team](~/concepts/bots/bots-notifications#team-member-or-bot-addition)|
+| `conversationUpdate` |`membersRemoved`| `teamMemberRemoved`|[Bot or team member was removed from team](~/concepts/bots/bots-notifications#team-member-or-bot-removed)|
+| `conversationUpdate` | |`teamRenamed`| [Team in which bot is member was renamed](~/concepts/bots/bots-notifications#team-name-updates)|
+| `conversationUpdate` | |`channelCreated`| In a team where bot is member, [a channel was created](~/concepts/bots/bots-notifications#channel-updates)|
+| `conversationUpdate` | |`channelRenamed`| In a team where bot is member, [a channel was renamed](~/concepts/bots/bots-notifications#channel-updates)|
+| `conversationUpdate` | |`channelDeleted`| In a team where bot is member, [a channel was deleted](~/concepts/bots/bots-notifications#channel-updates)|
 | _`contactRelationUpdate`_ | | | This [Bot Framework–provided activity type](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-activities#contactrelationupdate) is not directly supported in Microsoft Teams |
 | _`deleteUserData`_ | | | This [Bot Framework–provided activity type](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-activities#deleteuserdata) is not directly supported in Microsoft Teams |
 
@@ -32,7 +38,7 @@ The [`conversationUpdate`](https://docs.microsoft.com/en-us/bot-framework/dotnet
 
 The `conversationUpdate` event with the `membersAdded` object in the payload is sent when either a bot is added to a team or a new user is added to a team where a bot has been added. Microsoft Teams also adds `eventType.teamMemberAdded` in the `channelData` object.
 
-Because this event is sent in both cases, you should parse the `membersAdded` object to determine whether the addition was a user or the bot itself. For the latter, a best practice is to send a [welcome message](botsinchannels.md#best-practice-welcome-messages-in-teams) to the channel so users can understand the features your bot provides.
+Because this event is sent in both cases, you should parse the `membersAdded` object to determine whether the addition was a user or the bot itself. For the latter, a best practice is to send a [welcome message](~/scenarios/bots-channel-conversations#best-practice-welcome-messages-in-teams) to the channel so users can understand the features your bot provides.
 
 #### Example code: Checking whether bot was the added member 
 
@@ -114,7 +120,7 @@ bot.on('conversationUpdate', (msg) => {
 
 ### Bot added for personal (1:1) context only
 
-Your bot receives a `conversationUpdate` with `membersAdded` when a user adds it directly for 1:1 chat. In this case, the payload that your bot receives doesn't contain the `channelData.team` object. You should use this as a filter in case you want your bot to offer a different [welcome message](bots1on1.md#best-practice-welcome-messages-in-11-conversations) depending on scope.
+Your bot receives a `conversationUpdate` with `membersAdded` when a user adds it directly for 1:1 chat. In this case, the payload that your bot receives doesn't contain the `channelData.team` object. You should use this as a filter in case you want your bot to offer a different [welcome message](~/scenarios/bots-personal-conversations#best-practice-welcome-messages-in-11-conversations) depending on scope.
 
 ## Team member or bot removed
 

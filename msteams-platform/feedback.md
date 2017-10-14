@@ -1,11 +1,12 @@
 ---
-title: Send feedback - Microsoft Teams | Microsoft Docs
+title: Send feedback
 description: Provide your feedback on the Microsoft Teams developer platform
-keywords: teams feedback
+keywords: teams feedback questions issues bugs contributions
 ---
-# Submit your questions, bugs, feature requests, and contributions (Microsoft Teams developer platform)
 
->Hitting a problem? Have you looked at the [troubleshooting guide](troubleshoot/)?
+# Send feedback about the Microsoft Teams developer platform
+
+>Hitting a problem? Have you looked at the [troubleshooting guide](~/troubleshoot/troubleshoot)?
 
 The Microsoft Team product team responds to the developer community across several channels.
 

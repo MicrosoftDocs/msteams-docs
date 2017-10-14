@@ -1,10 +1,16 @@
+---
+title: Add cards and card actions in a bot
+description: Describes cards and card actions in Microsoft Teams and how to use them in your bots
+keywords: teams bots cards actions
+---
+
 # Add cards and card actions in a Microsoft Teams bot
 
 A *card* is a user-interface (UI) container for short or related pieces of information. Microsoft Teams supports rich cards, which can have multiple properties and attachments.
 
 Supported by Microsoft Teams:
-* [Hero card](teams-bots-cards.md#hero-card)
-* [Thumbnail card](teams-bots-cards.md#thumbnail-card)
+* [Hero card](~/concepts/cards-actions#hero-card)
+* [Thumbnail card](~/concepts/cards-actions#thumbnail-card)
 
 Supported with modifications:
 * [Office 365 Connector card](#office-365-connector-card)&mdash;the `heroImage`, `hideOriginalBody`, and `startGroup` properties are not currently supported, and Office 365 Connectors do not render properly in iOS.
@@ -46,7 +52,7 @@ Images must be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated
 
 The [hero card](https://docs.botframework.com/en-us/csharp/builder/sdkreference/attachments.html#herocard) renders a title, subtitle, text, large image, and buttons.
 
-![Example of a hero card](images/Cards/hero.png)
+![Example of a hero card](~/assets/images/cards/hero.png)
 
 | Property | Type  | Description |                                                           
 | --- | --- | --- |
@@ -61,7 +67,7 @@ The [hero card](https://docs.botframework.com/en-us/csharp/builder/sdkreference/
 
 The [thumbnail card](https://docs.botframework.com/en-us/csharp/builder/sdkreference/attachments.html#thumbnailcard) renders a title, subtitle, text, small thumbmail image, and buttons.
 
-![Example of a thumbnail card](images/Cards/thumbnail.png)
+![Example of a thumbnail card](~/assets/images/cards/thumbnail.png)
 
 | Property | Type  | Description |                                                           
 | --- | --- | --- |
@@ -76,14 +82,14 @@ The [thumbnail card](https://docs.botframework.com/en-us/csharp/builder/sdkrefer
 
 The Office 365 Connector card provides a more flexible layout with multiple sections, images, and fields.
 
-Most of the information you need about Connector cards is in [Using Office 365 Connector cards in Microsoft Teams](connectors.md#using-office-365-connector-cards-in-microsoft-teams), including details on actionable messages.
+Most of the information you need about Connector cards is in [Using Office 365 Connector cards in Microsoft Teams](~/concepts/connectors#using-office-365-connector-cards-in-microsoft-teams), including details on actionable messages.
 
 One important difference between using Connector cards from a Connector and using Connector cards in your bot is the handling of card actions:
 
 * For a Connector, the endpoint receives the card payload via HTTP POST.
 * For a bot, the `HttpPOST` action triggers an `invoke` action that sends only the action ID and body to the bot.
 
-To use Connector cards in your bot, we recommend using the `O365ConnectorCard` class in the [Teams extensions for the Bot Builder SDK](code.md#microsoft-teams-extensions-for-the-bot-builder-sdk) for .NET or Node.js. You can simplify handling of the `HttpPOST` action by using the `onO365ConnectorCardAction` method.
+To use Connector cards in your bot, we recommend using the `O365ConnectorCard` class in the [Teams extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) for .NET or Node.js. You can simplify handling of the `HttpPOST` action by using the `onO365ConnectorCardAction` method.
 
 ## Card layouts
 
@@ -95,7 +101,7 @@ The [carousel layout](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-
 
 >**Note:** A carousel can display a maximum of 10 cards per message.
 
-![Example of a carousel of cards](images/Cards/carousel.png)
+![Example of a carousel of cards](~/assets/images/cards/carousel.png)
 
 Properties are the same as for the hero or thumbnail card.
 
@@ -105,7 +111,7 @@ The list layout shows a vertically stacked list of cards, optionally with associ
 
 >**Note:** A list can display a maximum of 10 cards per message.
 
-![Example of a list of cards](images/Cards/list.png)
+![Example of a list of cards](~/assets/images/cards/list.png)
 
 Properties are the same as for the hero or thumbnail card.
 

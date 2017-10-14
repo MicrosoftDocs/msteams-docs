@@ -1,12 +1,12 @@
 ---
-title: User Context | Microsoft Docs
-description: Describes how to get user context to your apps
-keywords: teams user context
+title: Get context for your tab
+description: Describes how to get user context to your tabs
+keywords: teams tabs user context
 ---
 
-# Get context for your Microsoft Team tab
+# Get context for your Microsoft Teams tab
 
-Your tab might require contextual information in order to display the necessary content.
+Your tab might require contextual information to display the necessary content.
 
 * Your tab might need basic information about the user, team, or company.
 * Your tab might need locale and theme information.
@@ -17,25 +17,25 @@ Your tab might require contextual information in order to display the necessary 
 Context about the user, team or company can be especially useful when
 
 * You need to create or associate resources in your app with the specified user or team.
-* You want to initiate an authentication flow against Azure Active Directory or other identity provider, and you don't want to require the user to enter their username again. (For more information on authenticating within your Microsoft Teams tab, see [Authenticate a user in your Microsoft Teams tab](auth.md).)
+* You want to initiate an authentication flow against Azure Active Directory or other identity provider, and you don't want to require the user to enter their username again. (For more information on authenticating within your Microsoft Teams tab, see [Authenticate a user in your Microsoft Teams tab](~/concepts/authentication).)
 
 >**Important:** Although this user information can help provide a smooth user experience, you should *not* use it as proof of identity. For example, an attacker could you load your page in a "bad browser" and provide it with any information they want.
 
-To obtain this identifying information about the user, team, or company, you must add `identity` to the `permissions` object in your [manifest](schema.md#permissions). Doing so prompts the user for consent when they add your tab.
+To obtain this identifying information about the user, team, or company, you must add `identity` to the `permissions` object in your [manifest](~/reference/schema/manifest-schema#permissions). Doing so prompts the user for consent when they add your tab.
 
 ## Accessing context
 
 You can access context information in two ways:
 
 * Insert URL placeholder values
-* Use the [Microsoft Teams JavaScript Library](jslibrary.md)
+* Use the [Microsoft Teams JavaScript client SDK](~/reference/library/client-sdk-javascript)
 
 ### Getting context by inserting URL placeholder values
 
-Use placeholders in your configuration or content URLs. Microsoft Teams replaces the placeholders with the relevant values when determining the actual configuration or content URL to navigate to. The available placeholders include all fields on the [Context](jslibrary.md#Context) object. Common placeholders include the following:
+Use placeholders in your configuration or content URLs. Microsoft Teams replaces the placeholders with the relevant values when determining the actual configuration or content URL to navigate to. The available placeholders include all fields on the [Context](~/reference/library/client-sdk-javascript#Context) object. Common placeholders include the following:
 
-* {entityId}: The ID you supplied for the item in this tab when first [configuring the tab](createconfigpage.md).
-* {subEntityId}: The ID you supplied when generating a [deep link](deeplinks.md) for a specific item _within_ this tab. This should be used to restore to a specific state within an entity; for example, scrolling to or activating a specific piece of content.
+* {entityId}: The ID you supplied for the item in this tab when first [configuring the tab](~/concepts/tabs/tabs-configuration).
+* {subEntityId}: The ID you supplied when generating a [deep link](~/concepts/deep-links) for a specific item _within_ this tab. This should be used to restore to a specific state within an entity; for example, scrolling to or activating a specific piece of content.
 * {upn}: The user name.
 * {groupId}: The ID of an Office 365 group.
 * {tid}: The company ID; that is, the tenant ID.
@@ -57,7 +57,7 @@ When they select your tab, they will be navigated to
 
 ### Getting context by using the Microsoft Teams JavaScript library
 
-You can also retrieve the information listed above using the [Microsoft Teams JavaScript library](jslibrary.md) by calling `microsoftTeams.getContext(function(context) { /* ... */ })`.
+You can also retrieve the information listed above using the [Microsoft Teams JavaScript client SDK](~/reference/library/client-sdk-javascript) by calling `microsoftTeams.getContext(function(context) { /* ... */ })`.
 
 The context variable will look like the following example.
 

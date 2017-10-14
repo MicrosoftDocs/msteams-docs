@@ -1,16 +1,22 @@
+---
+title: Test your bot
+description: Describes how to test bots in Microsoft Teams
+keywords: teams bots testing
+---
+
 # Test your Microsoft Teams bot
 
 To test your bot in Microsoft Teams, you must follow one of the sideloading processes enumerated here.  Note that each method triggers a slightly different flow, and enables bots in different contexts as explained below.
 
 For published bots, end users will be able to access via the discover apps gallery accessable via the Discover Bots access points in the product.
 
->**Note:** Your tenant administrator will need to enable sideloading of apps for your organization. [Here's how](setup.md).
+>**Note:** Your tenant administrator will need to enable sideloading of apps for your organization. [Here's how](~/get-started/get-started).
 
 ## Adding a bot to a team for use in channels
 
-To add a bot to a team, so it is usable in the team channel by all team members, you must [create an app package](createpackage.md) and [sideload it](sideload.md) to the appropriate team.  This process makes the bot available in all channels within the team (when @mentioned) as well as for all team members in 1:1 context.  Please note that the bot will not be available in other teams without being explicitly added to them.
+To add a bot to a team, so it is usable in the team channel by all team members, you must [create an app package](~/publishing/apps-package) and [sideload it](~/concepts/app-sideload) to the appropriate team. This process makes the bot available in all channels within the team (when @mentioned) as well as for all team members in 1:1 context. Please note that the bot will not be available in other teams without being explicitly added to them.
 
-When a bot is first added via the above method, Teams will send the `conversationUpdate` event.  The payload for this event will contain a `channelData` object with the team information.  For more information about bot events, see the documentation [here](botevents.md).
+When a bot is first added via the above method, Teams will send the `conversationUpdate` event. The payload for this event will contain a `channelData` object with the team information. For more information about bot events, see the documentation [here](~/concepts/bots/bots-notifications).
 
 ## Adding a bot for 1:1 chat only
 
@@ -25,11 +31,11 @@ There are two ways to test load your bot for 1:1 conversations in Microsoft Team
 2. Directly reference your bot's app ID from within Microsoft Teams:
    * On the [Bot Dashboard](https://dev.botframework.com/bots) page for your bot, under **Details**, copy the **Microsoft App ID** for your bot.
 	
-     !["Getting the AppID for the bot"](images/Bots_AppID_BotFramework.png)
+     ![Getting the AppID for the bot](~/assets/images/bots_appid_botframework.png)
 	
    * From within Microsoft Teams, on the **Chat** pane, select the **Add chat** icon. For **To:**, paste your bot's Microsoft app ID.
 	
-     !["Getting the AppID for the bot"](images/Bots_Sideloading.png)
+     ![Getting the AppID for the bot](~/assets/images/bots_sideloading.png)
 		
      The app ID should resolve to your bot name.
 
@@ -50,7 +56,7 @@ As with bots added to a team, your bot will receive the `conversationUpdate` eve
 
 Note that users can choose to block your bot from sending 1:1 messages. They may toggle this by right-clicking your bot in the chat channel and choosing **Block bot conversation**. This means your bots will continue to send messages but the user will not receive those messages.
 
-![Blocking a bot](images/Bot/botdisable.PNG)
+![Blocking a bot](~/assets/images/bot/botdisable.png)
 
 ## Removing a bot from a team
 
@@ -68,4 +74,4 @@ To remove your bot completely from Teams, go to your Bot Dashboard and edit the 
 
 ## Removing your bot from the Office Store
 
-If you want to remove your bot from your Teams app in the Office Store, you must remove the bot from your app manifest and resubmit your app for validation. See [Publish your Microsoft Teams app to the Office Store](submission.md) for more information.
+If you want to remove your bot from your Teams app in the Office Store, you must remove the bot from your app manifest and resubmit your app for validation. See [Publish your Microsoft Teams app to the Office Store](~/publishing/apps-publish) for more information.

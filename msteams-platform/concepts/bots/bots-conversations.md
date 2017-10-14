@@ -1,3 +1,9 @@
+---
+title: Send and receive messages with a bot
+description: Describes how to send and receive messages with bots in Microsoft Teams
+keywords: teams bots messages
+---
+
 # Send and receive messages with a Microsoft Teams bot
 
 A conversation is a series of messages sent between your bot and one or more users. Bots in Microsoft Teams allow sending messages in either personal conversations with a single user (also known as one-on-one or 1:1 chats) or a group conversation in a Teams channel.
@@ -8,7 +14,7 @@ A conversation is a series of messages sent between your bot and one or more use
 
 Each message is an `Activity` object. When a user sends a message, the channel on which she or he is communicating posts the message to your bot (web service). Your bot examines the message to determine its type and responds accordingly.
 
-Most content sent between a user and your bot uses `messageType: message`. (For event-style messages, see [Handle bot events in Microsoft Teams](botevents.md). Speech is currently not supported.)
+Most content sent between a user and your bot uses `messageType: message`. (For event-style messages, see [Handle bot events in Microsoft Teams](~/concepts/bots/bots-notifications). Speech is currently not supported.)
 
 Basic conversation is handled through the Bot Framework Connector, a single REST API to enable your bot to communicate with Teams and other channels. The Bot Builder SDK provides easy access to this API, additional functionality to manage conversation flow and state, and simple ways to incorporate cognitive services such as natural language processing (NLP).
 
@@ -63,7 +69,7 @@ To ensure that your formatting works across all platforms supported by Microsoft
 | hyperlink                 | ✔ | ✔ |
 | image link                | ✔ | ✖ |
 
->**Note:** Currently, Connector cards support no formatting across all platforms. See [Cards](botsconversation.md#cards) in the next section for more detail.
+>**Note:** Currently, Connector cards support no formatting across all platforms. See [Cards](~/concepts/bots/bots-conversations#cards) in the next section for more detail.
 
 ### Support by individual platform
 
@@ -87,86 +93,7 @@ Support for text formatting varies by type of message and by platform.
 
 #### Cards
 
-<table>
-	<tr>
-		<td></td>
-		<th colspan="3">Rich cards (XML only)</th>
-		<th colspan="3">Connector cards (markdown)</th>
-		<th colspan="3">Connector cards (XML)</th>
-	</tr>
-	<tr>
-		<th>Style</th>
-		<td>Desktop</td><td>iOS</td><td>Android</td>
-		<td>Desktop</td><td>iOS</td><td>Android</td>
-		<td>Desktop</td><td>iOS</td><td>Android</td>
-	</tr>
-	<tr>
-		<td>bold</td>
-		<td align="center">✔</td><td align="center">✖</td><td align="center">✔</td>
-		<td align="center">✔</td><td align="center">✖</td><td align="center">✔</td>
-		<td align="center">✔</td><td align="center">✖</td><td align="center">✔</td>
-	</tr>
-	<tr>
-		<td>italic</td>
-		<td align="center">✔</td><td align="center">✔</td><td align="center">✔</td>
-		<td align="center">✔*</td><td align="center">✖</td><td align="center">✔*</td>
-		<td align="center">✔</td><td align="center">✖</td><td align="center">✔</td>
-	</tr>
-	<tr>
-		<td>header (levels 1&ndash;3)</td>
-		<td align="center">✔</td><td align="center">✔</td><td align="center">✔</td>
-		<td align="center">✔</td><td align="center">✖</td><td align="center">✖</td>
-		<td align="center">✔</td><td align="center">✖</td><td align="center">✖</td>
-	</tr>
-	<tr>
-		<td>strikethrough</td>
-		<td align="center">✔</td><td align="center">✔</td><td align="center">✔</td>
-		<td align="center">✖</td><td align="center">✖</td><td align="center">✖</td>
-		<td align="center">✔</td><td align="center">✔</td><td align="center">✖</td>
-	</tr>
-	<tr>
-		<td>horizontal rule</td>
-		<td align="center">✔</td><td align="center">✖</td><td align="center">✖</td>
-		<td align="center">✔</td><td align="center">✖</td><td align="center">✖</td>
-		<td align="center">✔</td><td align="center">✖</td><td align="center">✖</td>
-	</tr>
-	<tr>
-		<td>unordered list</td>
-		<td align="center">✔</td><td align="center">✔</td><td align="center">✔</td>
-		<td align="center">✔</td><td align="center">✔</td><td align="center">✖</td>
-		<td align="center">✔</td><td align="center">✔</td><td align="center">✖</td>
-	</tr>
-	<tr>
-		<td>ordered list</td>
-		<td align="center">✔</td><td align="center">✔</td><td align="center">✔</td>
-		<td align="center">✔</td><td align="center">✔</td><td align="center">✖</td>
-		<td align="center">✔</td><td align="center">✔</td><td align="center">✖</td>
-	</tr>
-	<tr>
-		<td>preformatted text</td>
-		<td align="center">✔</td><td align="center">✔</td><td align="center">✔</td>
-		<td align="center">✔</td><td align="center">✔</td><td align="center">✖</td>
-		<td align="center">✔</td><td align="center">✔</td><td align="center">✖</td>
-	</tr>
-	<tr>
-		<td>blockquote</td>
-		<td align="center">✔</td><td align="center">✔</td><td align="center">✔</td>
-		<td align="center">✔</td><td align="center">✔</td><td align="center">✖</td>
-		<td align="center">✔</td><td align="center">✔</td><td align="center">✖</td>
-	</tr>
-	<tr>
-		<td>hyperlink</td>
-		<td align="center">✔</td><td align="center">✔</td><td align="center">✔</td>
-		<td align="center">✔</td><td align="center">✔</td><td align="center">✖</td>
-		<td align="center">✔</td><td align="center">✔</td><td align="center">✖</td>
-	</tr>
-	<tr>
-		<td>image link</td>
-		<td align="center">✔</td><td align="center">✖</td><td align="center">✖</td>
-		<td align="center">✔</td><td align="center">✖</td><td align="center">✖</td>
-		<td align="center">✔</td><td align="center">✖</td><td align="center">✖</td>
-	</tr>
-</table>
+[!include[Formatting text content in cards](~/includes/bots/message-format-cards.html)]
 
 \*Renders as bold
 
@@ -203,7 +130,7 @@ Depending on which scopes are declared, your bot can receive messages in the fol
 * **1:1 chat**&emsp;Users can interact in a private conversation with a bot by simply selecting the added bot in the chat history, or typing its name or app ID in the To: box on a new chat.
 * **Channels**&emsp;A bot can be mentioned ("@_botname_") in a channel if it has been added to the team. Note that additional replies to a bot in a channel require mentioning the bot&mdash;it will not respond to replies where it is not mentioned.
 
-For incoming messages, your bot receives an [`Activity`](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-connector-activities) object of type `message`. Altough the `Activity` object can contain other types of information, like [channel updates](botevents.md#channel-updates) sent to your bot, the `message` type represents communication between bot and user.
+For incoming messages, your bot receives an [`Activity`](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-connector-activities) object of type `message`. Altough the `Activity` object can contain other types of information, like [channel updates](~/concepts/bots/bots-notifications#channel-updates) sent to your bot, the `message` type represents communication between bot and user.
 
 Your bot receives a payload that contains the user message `Text` as well as other information about the user, the source of the message, and Teams information. Of note:
 
@@ -253,20 +180,20 @@ Your bot receives a payload that contains the user message `Text` as well as oth
     }
 }
 ```
->**Note:** The text field for inbound messages sometimes contains mentions. Be sure to properly check and strip those. For more information, see [Mentions](botsinchannels.md#mentions).
+>**Note:** The text field for inbound messages sometimes contains mentions. Be sure to properly check and strip those. For more information, see [Mentions](~/scenarios/bots-channel-conversations#mentions).
 
 ## Teams channel data
 
 Teams-specific information is sent and received in the `channelData` object. A typical channelData in an activity sent to your bot contains the following information:
 
-* `eventType`&emsp;Teams event type; passed only in cases of [channel modification events](botevents.md#channel-updates)
+* `eventType`&emsp;Teams event type; passed only in cases of [channel modification events](~/concepts/bots/bots-notifications#channel-updates)
 * `tenant.id`&emsp;Azure Active Directory tenant ID; passed in all contexts
 * `team`&emsp;Passed only in channel contexts, not 1:1
     - `id`&emsp;GUID for the channel
-    - `name`&emsp;Name of the team; passed only in cases of [team rename events](botevents.md#team-name-updates)
+    - `name`&emsp;Name of the team; passed only in cases of [team rename events](~/concepts/bots/bots-notifications#team-name-updates)
 * `channel`&emsp;Passed only in channel contexts when the bot is mentioned or for events in channels in teams where the bot has been added
     - `id`&emsp;GUID for the channel
-    - `name`&emsp;Channel name; passed only in cases of [channel modification events](botevents.md#channel-updates). 
+    - `name`&emsp;Channel name; passed only in cases of [channel modification events](~/concepts/bots/bots-notifications#channel-updates). 
 
 >**Note:** The payload also contains `channelData.teamsTeamId` and `channelData.teamsChannelId` properties for backward compatibility. These properties are deprecated.
 
@@ -305,7 +232,7 @@ To reply to an existing message, call [`ReplyToActivity`](https://docs.microsoft
 
 If you choose to use the REST API, you can also call the [`/conversations/{conversationId}/activities/{activityId}`](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-connector-send-and-receive-messages#send-the-reply) endpoint.  
 
-The message content itself can contain simple text or some of the Bot Framework&ndash;supplied [cards and card actions](teams-bots-cards.md).
+The message content itself can contain simple text or some of the Bot Framework&ndash;supplied [cards and card actions](~/concepts/cards-actions).
 
 Please note that in your outbound schema you should always use the same `serviceUrl` as the one you received.
 
@@ -375,8 +302,8 @@ function sendCardUpdate(bot, session, originalMessage, address) {
 
 You can create a 1:1 conversation with a user or start a new reply chain in a channel for your team bot. This lets you to message your user or users without having them first initiate contact with your bot. For more information, see the following topics:
 
-* [Starting a 1:1 conversation](bots1on1.md#starting-a-11-conversation)
-* [Creating a channel conversation](botsinchannels.md#creating-a-channel-conversation)
+* [Starting a 1:1 conversation](~/scenarios/bots-personal-conversations#starting-a-11-conversation)
+* [Creating a channel conversation](~/scenarios/bots-channel-conversations#creating-a-channel-conversation)
 
 ## Deleting messages
 

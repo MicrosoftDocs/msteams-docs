@@ -1,9 +1,9 @@
 ---
-title: Getting Started with .NET/CSharp | Microsoft Docs
-description: Read on how to get started building great apps in Microsoft Teams using .NET/C#
-keywords: getting started .NET C# CSharp
+title: Get started with .NET and C#
+description: Get started building great apps in Microsoft Teams using the .NET Framework and C#
+keywords: getting started .net c# csharp
 ---
 
-# Getting Started with .NET/C#
+# Get started on the Microsoft Teams platform with .NET and C#
 
-Testing again ...
+Testing again...
