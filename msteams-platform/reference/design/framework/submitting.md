@@ -12,11 +12,11 @@ Here’s everything you need to submit your app to the Microsoft Seller Dashboar
 ## Overall process
 
 > [!div class="checklist"]
-> * Register as a Microsoft app developer. 
-> * Enclose your icons and manifest in a file, then zip it up. 
-> * Sideload your app, checking to make sure everything looks and works the way it should. 
-> * Go to the Microsoft Seller Dashboard and click the Microsoft Teams logo. 
-> * Select “Upload manifest” then upload your zip file containing your manifest and your icons (details below). 
+> * Register as a Microsoft app developer.
+> * Enclose your icons and manifest in a file, then zip it up.
+> * Sideload your app, checking to make sure everything looks and works the way it should.
+> * Go to the Microsoft Seller Dashboard and click the Microsoft Teams logo.
+> * Select “Upload manifest” then upload your zip file containing your manifest and your icons (details below).
 
 ![App gallery](~/assets/images/framework/framework_submit_gallery.png)
 
