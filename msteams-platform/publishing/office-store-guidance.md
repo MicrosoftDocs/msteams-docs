@@ -6,7 +6,7 @@ keywords: teams publish store office publishing
 
 # Use the Seller Dashboard to submit your Microsoft Teams app
 
-For a general overview of the Microsoft Teams app submission flow, see [Submit your solutions to the Office Store](~/publishing/apps-publish).
+For a general overview of the Microsoft Teams app submission flow, see [Publish your Microsoft Teams app to the Office Store](~/publishing/apps-publish).
 
 In the Seller Dashboard:
 
