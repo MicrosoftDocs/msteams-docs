@@ -22,7 +22,7 @@
     "contribution_branch_mappings": {},
     "dependent_repositories": [{
         "path_to_root": "_themes",
-        "url": "https://github.com/billbliss/templates.docs.msft",
+        "url": "https://github.com/Microsoft/templates.docs.msft",
         "branch": "master",
         "branch_mapping": {}
     }],
