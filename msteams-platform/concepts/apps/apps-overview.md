@@ -60,4 +60,4 @@ Ready to get started adding your experience into Teams? Follow these steps:
 ### Publish your app and drive engagement
 
 * [Register and publish](~/publishing/apps-publish) to Office Store
-* [Embed deep links](~/concepts/deep-links)~ on your website
+* [Embed deep links](~/concepts/deep-links) on your website
