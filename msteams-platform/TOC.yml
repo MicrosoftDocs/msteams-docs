@@ -1,7 +1,5 @@
 - name: Overview
   href: ./overview
-- name: What's new
-  href: ./whats-new
 - name: Get started
   expanded: true
   items:
@@ -9,23 +7,13 @@
     href: ./get-started/get-started-dotnet
   - name: Get started with Node.js
     href: ./get-started/get-started-nodejs
-  - name: Get started with Python
-    href: ./get-started/get-started-python
 - name: Concepts
   items:
   - name: Apps in Teams
     href: ./concepts/apps/apps-overview
     items:
-    - name: Context for apps
-      href: ./concepts/apps/apps-context
-    - name: Life cycle
-      href: ./concepts/apps/apps-life-cycle
-    - name: Enterprise apps (firewalled)
-      href: ./concepts/apps/apps-firewalled
-    - name: App data
-      href: ./concepts/apps/apps-data
-  - name: Activity Feed
-    href: ./concepts/activity-feed
+    - name: Sideloading
+      href: ./concepts/apps-sideload
   - name: Tabs
     href: ./concepts/tabs/tabs-overview
     items:
@@ -46,6 +34,8 @@
       href: ./concepts/bots/bots-create
     - name: Conversations
       href: ./concepts/bots/bots-conversations
+    - name: Cards and card actions
+      href: ./concepts/cards-actions
     - name: Notifications
       href: ./concepts/bots/bots-notifications
     - name: Context for bots
@@ -56,16 +46,19 @@
       href: ./concept/bots/bots-test
   - name: Authentication
     href: ./concepts/authentication
+  - name: Activity Feed
+    href: ./concepts/activity-feed
+  - name: Connectors
+    href: ./concepts/connectors
+    items:
+    - name: Cards and card actions
+      href: ./concepts/cards-actions
   - name: Compose rich messages
     href: ./concepts/compose-extensions
-  - name: Cards and card actions
-    href: ./concepts/cards-actions
   - name: Outgoing webhooks
     href: ./concepts/custom-bot
   - name: Deep links
     href: ./concepts/deep-links
-  - name: Sideloading
-    href: ./concepts/apps-sideload
 - name: Publishing
   href: ./publishing/apps-publish
   items:
@@ -82,10 +75,6 @@
     href: ./scenarios/bots-personal-conversations
   - name: Channel conversations with bots
     href: ./scenarios/bots-channel-conversations
-  - name: Workflows with LOB apps
-    href: ./scenarios/lob-workflow
-  - name: Single sign-on
-    href: ./scenarios/single-sign-on
 - name: Reference
   items:
   - name: General
@@ -106,12 +95,6 @@
     items:
     - name: Client SDK reference
       href: ./reference/library/client-sdk-javascript
-    - name: .NET server SDK reference
-      href: ./reference/library/server-sdk-dotnet
-    - name: Node.js server SDK reference
-      href: ./reference/library/server-sdk-nodejs
-    - name: Python server SDK reference
-      href: ./reference/library/server-sdk-python
   - name: Design guidelines
     items:
     - name: Framework
