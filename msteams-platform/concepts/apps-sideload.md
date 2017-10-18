@@ -82,7 +82,7 @@ With the app loaded in the team, users can set up a Connector on any channel in 
 
 A sideloaded app with a compose extension automatically appears in the **More options** (**&#8943;**) menu in the compose box.
 
-![Compose extensions](~/assets/images/compose-extension/cesampleapp.png)
+![Compose extensions](~/assets/images/compose-extensions/cesampleapp.png)
 
 ## Removing or updating your app
 
