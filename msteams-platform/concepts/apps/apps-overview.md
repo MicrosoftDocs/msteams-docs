@@ -26,7 +26,7 @@ The following table provides a few ideas about bringing resources you've already
 
 | If I have an existing&hellip; | In Microsoft Teams it can be a&hellip; |
 | --- | --- |
-| Web app | Tab |
+| Web app | [Tab](~concepts/tabs/tabs-overview) |
 | Bot built with Bot Framework | [Bot](~/concepts/bots/bots-overview) (and a [compose extension](~/concepts/compose-extensions), if you'd like)
 | Office 365 Connector | [Connector](~/concepts/connectors) |
 | Web service (to look up information) | [Compose extension](~/concepts/compose-extensions) |
@@ -78,9 +78,9 @@ To use the Microsoft Teams extensions for the Bot Builder SDK for Node.js, add t
 
 You can find the full source code for the extensions in the [BotBuilder-MicrosoftTeams](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams) repo on Github.
 
----
+### Create your app
 
-Ready to get started adding your experience into Teams?
+Ready to start adding your experience into Teams?
 
 * [Design your app](~/reference/design/framework/basics)
 * Code your app's capabilities
@@ -89,3 +89,6 @@ Ready to get started adding your experience into Teams?
   * [Connectors](~/concepts/connectors)
   * [Compose extensions](~/concepts/compose-extensions)
   * [Activity feed integrations](~/concepts/activity-feed)
+* Test and publish your app
+  * [Sideload your app](~/concepts/apps-sideload)
+  * [Publish your app](~/publishing/apps-publish)
