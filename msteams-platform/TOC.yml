@@ -43,7 +43,7 @@
     - name: Bot menus
       href: ./concepts/bots/bots-menus
     - name: Test a bot
-      href: ./concept/bots/bots-test
+      href: ./concepts/bots/bots-test
   - name: Authentication
     href: ./concepts/authentication
   - name: Activity Feed
