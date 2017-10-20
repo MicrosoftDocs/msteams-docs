@@ -12,7 +12,7 @@ Microsoft Teams allows users to engage in direct conversations with bots built o
 
 A great bot in Microsoft Teams helps users get the information they need, all within the context of the Teams experience. One-on-one conversations with a bot are private exchanges between a bot and its user; they're a great way to provide information specific and relevant to that user in the personal context. Whereas a bot in a channel might provide information specific to a team or channel, a bot in 1:1 is really a dialog between your service and the individual.
 
-Depending on the experience you want to create, the bot might be entirely relevant in both scopes (personal and team)&mdash;and, in fact, no significant extra work is required to enable your bot to work in both. In Microsoft Teams, there is no expectation that your bot function in all contexts, but you should ensure that your bot makes sense, _and_ provides user value, in whichever scope you choose to support. See [Scopes in Microsoft Teams](~/concepts/apps/apps-overview#scopes-in-microsoft-teams) for more information on scopes.
+Depending on the experience you want to create, the bot might be entirely relevant in both scopes (personal and team)&mdash;and, in fact, no significant extra work is required to enable your bot to work in both. In Microsoft Teams, there is no expectation that your bot function in all contexts, but you should ensure that your bot makes sense, _and_ provides user value, in whichever scope you choose to support.
 
 ## Starting a 1:1 conversation
 

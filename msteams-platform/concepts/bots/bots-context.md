@@ -116,7 +116,7 @@ Your bot can query the list of channels in a team.
 
 You can directly issue a GET request on `/teams/{teamId}/conversations/`, using the value of `serviceUrl` as the endpoint.
 
-Currently, the only source for `teamId` is a message from the team context&mdash;either a message from a user or the message that your bot receives when it is added to a team (see [Bot or user added to a team](botevents.md#bot-or-user-added-to-a-team)).
+Currently, the only source for `teamId` is a message from the team context&mdash;either a message from a user or the message that your bot receives when it is added to a team (see [Bot or user added to a team](~/concepts/bots/bots-notifications#bot-or-user-added-to-a-team)).
 
 >**Note:** Be aware that the value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value of `serviceUrl`.
 
