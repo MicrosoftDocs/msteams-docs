@@ -1,10 +1,10 @@
 ---
-title: Get started with compose extensions
+title: Develop compose extensions
 description: Describes how to get started with compose extensions in Microsoft Teams
 keywords: teams compose extensions
 ---
 
-# Preview: Get started with compose extensions for Microsoft Teams
+# Preview: Develop compose extensions for Microsoft Teams
 
 >**Important:** Compose extensions are available only in [Public Developer Preview](~/reference/general/developer-preview). Many details in this document are subject to change.
 >

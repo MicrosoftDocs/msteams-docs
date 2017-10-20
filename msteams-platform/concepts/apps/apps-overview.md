@@ -4,21 +4,23 @@ description: Describes how to get started developing apps in Microsoft Teams
 keywords: teams development
 ---
 
-# Develop apps in Microsoft Teams
+# Develop apps for Microsoft Teams
 
-In Microsoft Teams, a single app can provide one or more *capabilities*. Deciding which capabilities to offer depends on what you want to do.
+You can extend Microsoft Teams by developing an app that provides content and services. A single app can provide one or more *capabilities*. Deciding which capabilities to offer depends on what you want to do.
 
 For example, your users might want personal views of a planning app just a click away. Or they might need to look up a customer-support ticket and add it directly to a conversation. Or perhaps receive real-time notifications about events in a business system. Or get assistance in scheduling an event for a group, translate a message into another language, or track incoming social-media messages and respond directly from Teams.
 
-Your app can provide services in channels, which enable teams to work collaboratively, or one-on-one with individual users&mdash;or both. (The term we use for services in channels is *team scope*; for one-on-one, *personal scope*.)
+Your app can provide content and services in channels, which enable teams to work collaboratively, or in  one-on-one or group chats&mdash;or both. (The term we use for services in channels is *team scope*; for chats, *personal scope*.)
+
+A Microsoft Teams app is defined by its manifest (a JSON file). Place the manifest and two icons in a .zip file, and you have an *app package*, which enables installation into Teams or publication through the Office Store. (For details, see [Create the package for your Microsoft Teams app](~/publishing/apps-package).)
 
 ## Map your scenario to Teams capabilities
 
 After you decide what your app should do, you can map those activities to capabilities in Teams:
 
-*	For simple information display or interaction with web-based data, consider using *tabs*. Examples of tabs include dashboards with data visualization, documents, notes, task managers, and design canvases.
-*	For natural-language questions and lightweight tasks, consider using *bots*. By using bots, users can monitor and control build systems, receive and sign documents, schedule meetings or travel, and quickly gather information from their teams. Notification-only bots can push relevant information directly to a specific user in a channel or a direct message.
-*	To look up information and insert it directly into a conversation, consider using *compose extensions*. With compose extensions, users can insert text, links, pictures, videos, and other rich media without switching to another app.
+*	For simple information display or interaction with web-based data, consider using [**tabs**](~/concepts/tabs/tabs-overview). Your tabs can be as simple as documents or notes or as rich as dashboards with data visualization, or design canvases.
+*	For natural-language questions and lightweight tasks, consider using [**bots**](~/concepts/bots/bots-overview). Your bots might monitor and control build systems, receive and sign documents, schedule meetings or travel, or quickly gather information from team members. Notification-only bots can push relevant information directly to a specific user in a channel or a direct message.
+*	To look up information and insert it directly into a conversation, consider using [**compose extensions**](~/concepts/compose-extensions). With compose extensions, you enable users to insert text, links, pictures, videos, and other rich media without switching to another app.
 
 ## Leverage what you've already built
 
@@ -32,26 +34,21 @@ The following table provides a few ideas about bringing resources you've already
 | Web service (to look up information) | [Compose extension](~/concepts/compose-extensions) |
 | Outgoing webhook | [Custom bot](~/concepts/custom-bot) |
 
->**Tip:** If you've created a bot that uses the Microsoft Bot Framework, you can make it work in Microsoft Teams, both as a bot that can chat with a user or a team channel and as a compose extension to quickly insert information in a conversation.
+## Learn how to develop an app for Microsoft Teams
 
-## Get started developing
+Because Microsoft Teams apps are composite web apps, you can use any web-programming technology.
 
 The fastest way to create your first Microsoft Teams app is to follow one of our "Get started" guides:
 
 *	[Get started with .NET and C#](~/get-started/get-started-dotnet)
 *	[Get started with Node.js](~/get-started/get-started-nodejs)
 
-Because Microsoft Teams apps are composed web services, you can use any web-programming technology. For tabs, we provide a JavaScript library. For bots and compose extensions, we recommend you use either C# or TypeScript to take advantage of our [SDK extensions](#microsoft-teams-extensions-for-the-bot-builder-sdk) for .NET and Node.js.
+-----------------------------------------------
 
-### Develop your tab
 
-Tabs are simply iframe'd web content. You can leverage your existing web service, written in any language and hosted on any cloud platform, and simply include the [Microsoft Teams JavaScript client SDK](~/reference/library/client-sdk-javascript) in pages you display in Teams. This library provides methods for your tab and your authentication and configuration experiences.
+For bots and compose extensions, we recommend you use either C# or TypeScript to take advantage of our [SDK extensions](#microsoft-teams-extensions-for-the-bot-builder-sdk) for .NET and Node.js.
 
-A *configurable tab* becomes part of a channel and provides a single kind of information to a team. For example, the Planner tab for a channel contains a single plan; the Power BI tab maps to a specific report. Users can drill down to the relevant context, but they should not be able to navigate outside the tab. The Power BI tab, for instance, doesn't enable navigation to other Power BI reports&mdash;but it does enable the **Go to website** button that launches the report in the main Power BI website.
-
-A *static tab* supports an individual user. For example, if your service is a notetaking app, add a tab that holds personal notes. That way, a user can refer to his or her own notes without having to share them with an entire team.
-
-### Develop your bot and compose extension
+### What you need to know: Bots and compose extensions
 
 Because your Teams bots and compose extensions are built on the [Microsoft Bot Framework](https://dev.botframework.com/), we recommend that you leverage the [Bot Builder SDK](https://docs.microsoft.com/en-us/bot-framework/resources-tools-downloads), available for .NET and for Node.js.
 
@@ -78,7 +75,8 @@ To use the Microsoft Teams extensions for the Bot Builder SDK for Node.js, add t
 
 You can find the full source code for the extensions in the [BotBuilder-MicrosoftTeams](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams) repo on Github.
 
-### Create your app
+
+-----------------------------------------------
 
 Ready to start adding your experience into Teams?
 
@@ -89,6 +87,7 @@ Ready to start adding your experience into Teams?
   * [Connectors](~/concepts/connectors)
   * [Compose extensions](~/concepts/compose-extensions)
   * [Activity feed integrations](~/concepts/activity-feed)
-* Test and publish your app
+* Package, test, and publish your app
+  * [Package your app](~/publishing/apps-package)
   * [Sideload your app](~/concepts/apps-sideload)
   * [Publish your app](~/publishing/apps-publish)
