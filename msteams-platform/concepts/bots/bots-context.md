@@ -20,7 +20,7 @@ Your bot can query for the list of team members and their basic profiles, which 
 
 You can directly issue a GET request on [`/conversations/{teamId}/members/`](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-connector-api-reference#get-conversation-members), using the value of `serviceUrl` as the endpoint.
 
-Currently, the only source for `teamId` is a message from the team context&mdash;either a message from a user or the message that your bot receives when it is added to a team (see [Bot or user added to a team](botevents.md#bot-or-user-added-to-a-team)).
+Currently, the only source for `teamId` is a message from the team context&mdash;either a message from a user or the message that your bot receives when it is added to a team (see [Bot or user added to a team](~/concepts/bots/bots-notifications#bot-or-user-added-to-a-team)).
 
 >**Note:** Be aware that the value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value of `serviceUrl`.
 

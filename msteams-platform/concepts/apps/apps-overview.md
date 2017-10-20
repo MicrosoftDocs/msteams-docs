@@ -26,7 +26,7 @@ The following table provides a few ideas about bringing resources you've already
 
 | If I have an existing&hellip; | In Microsoft Teams it can be a&hellip; |
 | --- | --- |
-| Web app | [Tab](~concepts/tabs/tabs-overview) |
+| Web app | [Tab](~/concepts/tabs/tabs-overview) |
 | Bot built with Bot Framework | [Bot](~/concepts/bots/bots-overview) (and a [compose extension](~/concepts/compose-extensions), if you'd like)
 | Office 365 Connector | [Connector](~/concepts/connectors) |
 | Web service (to look up information) | [Compose extension](~/concepts/compose-extensions) |

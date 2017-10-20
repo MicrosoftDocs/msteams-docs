@@ -6,7 +6,7 @@ keywords: teams apps packaging
 
 # Create the package for your Microsoft Teams app
 
-App experiences in Teams are defined by their app manifest, and bundled in an app package for use in sideloading or Office Store submission. You'll need an app package to test your experience in Teams, via the [sideload](~/concepts/app-sideload) process.
+App experiences in Teams are defined by their app manifest, and bundled in an app package for use in sideloading or Office Store submission. You'll need an app package to test your experience in Teams, via the [sideload](~/concepts/apps-sideload) process.
 
 A Teams app package is a .zip file containing the following:
 
