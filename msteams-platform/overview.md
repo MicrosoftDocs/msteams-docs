@@ -34,7 +34,7 @@ The rest of this documentation provides the information you need to extend Micro
 * **Troubleshooting**&emsp;If your app isn't behaving as expected, check here.
 * **FAQ**&emsp;Everyone has them; here are our frequently asked questions.
 * **Samples**&emsp;See how others created Teams apps.
-* ***Feedback**&emsp;Didn't find what you need? Let us know!
+* **Feedback**&emsp;Didn't find what you need? Let us know!
 
 ## Apps in Microsoft Teams
 
