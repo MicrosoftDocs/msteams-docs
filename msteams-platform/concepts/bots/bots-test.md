@@ -14,7 +14,7 @@ For published bots, end users will be able to access via the discover apps galle
 
 ## Adding a bot to a team for use in channels
 
-To add a bot to a team, so it is usable in the team channel by all team members, you must [create an app package](~/publishing/apps-package) and [sideload it](~/concepts/app-sideload) to the appropriate team. This process makes the bot available in all channels within the team (when @mentioned) as well as for all team members in 1:1 context. Please note that the bot will not be available in other teams without being explicitly added to them.
+To add a bot to a team, so it is usable in the team channel by all team members, you must [create an app package](~/publishing/apps-package) and [sideload it](~/concepts/apps-sideload) to the appropriate team. This process makes the bot available in all channels within the team (when @mentioned) as well as for all team members in 1:1 context. Please note that the bot will not be available in other teams without being explicitly added to them.
 
 When a bot is first added via the above method, Teams will send the `conversationUpdate` event. The payload for this event will contain a `channelData` object with the team information. For more information about bot events, see the documentation [here](~/concepts/bots/bots-notifications).
 

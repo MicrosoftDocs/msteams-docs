@@ -56,7 +56,7 @@ To develop and test apps, you need to enable them in Microsoft Teams, and also e
 
 	![Screenshot of the Apps section, with 'Allow external apps in Microsoft Teams' and 'Allow sideloading of external apps' options switched on.](~/assets/images/setup/enablesideloading.png)
 
-For more information on sideloading, see [Sideloading your app in a team](~/concepts/app-sideload).
+For more information on sideloading, see [Sideloading your app in a team](~/concepts/apps-sideload).
 
 ## 4. Enable Public Developer Preview for your tenant (optional) 
 
@@ -82,7 +82,7 @@ With those steps out of the way, you're ready to focus on creating your app.
 ### Package and test your app within Teams
 
 * [Create package](~/publishing/apps-package)
-* [Sideload](~/concepts/app-sideload) in Teams
+* [Sideload](~/concepts/apps-sideload) in Teams
 * [Test functionality](~/reference/general/debug)
 
 ### Publish your app and drive engagement

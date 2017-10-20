@@ -8,7 +8,7 @@ keywords: get started static tabs teams
 
 A static tab is a [content page](~/concepts/tabs/tabs-dynamic) that is declared directly in your manifest and&mdash;unlike a configurable tab&mdash;does not require a configuration page.
 
-Currently, you can add one or more static tabs to your app's "personal scope" experience, accessed via the [app bar](~/concepts/apps/apps-overview#app-bar-personal-scope) or alongside your app's bot conversation.
+Currently, you can add one or more static tabs to your app's "personal scope" experience, accessed via the app bar or alongside your app's bot conversation.
 
 ![Static tabs example](~/assets/images/tabs_in_bot.png)
 

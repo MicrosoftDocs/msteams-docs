@@ -8,7 +8,7 @@ keywords: teams scenarios channels conversation bot
 
 Microsoft Teams allows users to bring bots into their channel conversations.  By adding a bot as a team member, all users of the team can take advantage of the bot functionality right in the channel conversation.  You can also access Teams-specific functionality within your bot like querying team information and @mentioning users.
 
-To add a bot to a team, you'll need to follow the [packaging](~/publishing/apps-package) and [sideloading](~/concepts/app-sideload) instructions.
+To add a bot to a team, you'll need to follow the [packaging](~/publishing/apps-package) and [sideloading](~/concepts/apps-sideload) instructions.
 
 ## Designing a great bot for channels
 

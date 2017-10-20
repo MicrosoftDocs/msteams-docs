@@ -12,7 +12,7 @@ For the best and most extensible option for adding your service into Teams, crea
 
 For quick one-off integration of your existing webhook, you can take advantage of our [custom bot](#custom-bots) feature. With this extensibility option, you can set up webhooks and notifications in a specific team, with no additional coding required.
 
->Don't have Microsoft Teams? Get a free Office 365 developer subscription or activate it for your existing Office 365 account. See [Set up your Office 365 tenant](setup.md#1-set-up-your-office-365-tenant).
+>Don't have Microsoft Teams? Get a free Office 365 developer subscription or activate it for your existing Office 365 account. See [Set up your Office 365 tenant](~/get-started/get-started#1-set-up-your-office-365-tenant).
 
 ## Apps in Microsoft Teams
 
