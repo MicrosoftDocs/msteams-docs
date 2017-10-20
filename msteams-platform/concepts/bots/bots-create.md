@@ -23,5 +23,5 @@ See the [Bot Framework Documentation](https://docs.botframework.com/en-us/) for 
 To make your bot experience Teams-ready:
 
 1. [Create a sideloadable bot package](~/publishing/apps-package) and [sideload it to a team](~/concepts/apps-sideload) to test it in action.
-2. Add [tabs](~/concepts/tabs/tabs-overview) or [other capabilities](~/concepts/apps/apps-overview.md#map-your-scenario-to-teams-capabilities) to make your experience shine in Teams.
+2. Add [tabs](~/concepts/tabs/tabs-overview) or [other capabilities](~/concepts/apps/apps-overview#map-your-scenario-to-teams-capabilities) to make your experience shine in Teams.
 3. [Submit your final app package](~/publishing/apps-publish) for publication in the Office Store.
