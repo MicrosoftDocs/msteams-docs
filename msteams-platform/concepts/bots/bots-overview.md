@@ -6,7 +6,7 @@ keywords: teams bots development
 
 # Develop bots for Microsoft Teams
 
-Build and connect intelligent bots to interact with Microsoft Teams users naturally through chat. Or provide a simple commands-based bot, to be used as your "command-line" interface for your broader Teams app experience. You can make a notification-only bot, which can push information relevant to your users directly to them in a channel or direct message. You can even bring your existing bot from another channel and add Teams-specific support to make your experience shine.
+Build and connect intelligent bots to interact with Microsoft Teams users naturally through chat. Or provide a simple commands-based bot, to be used as your "command-line" interface for your broader Teams app experience. You can make a notification-only bot, which can push information relevant to your users directly to them in a channel or direct message. You can even bring your existing Bot Framework&ndash;based bot and add Teams-specific support to make your experience shine.
 
 ![Example of a bot assisting a user](~/assets/images/bot_example.png)
 
@@ -19,9 +19,9 @@ Other than its hexagonal avatar icon, a bot appears just like any other team mem
 
 Bots in Teams can surface in a one-on-one context ("personal scope"), as a member of a team ("team scope"), or both. For the latter, they take part in a conversation only when you @mention them. For the former, you can address them via the conversation interface or access them in the apps personal experience from the app bar flyout.
 
-With Microsoft Teams apps, you can choose make the bot the star of your experience, or just a helper. Bots are distributed as part of your broader app package, which can include other capabilities such as tabs or compose extensions.
+With Microsoft Teams apps, you can make the bot the star of your experience, or just a helper. Bots are distributed as part of your broader app package, which can include other capabilities such as tabs or compose extensions.
 
-If you bot is the star, be sure to take advantage of the [tabs](~/concepts/tabs/tabs-overview) capability as well. Use this rich web view to surface accompanying experiences and information that helps your users best interact with your service.
+If your bot is the star, be sure to take advantage of the [tabs](~/concepts/tabs/tabs-overview) capability as well. Use this rich web view to surface accompanying experiences and information that helps your users best interact with your service.
 
 Microsoft Teams supports much of the [Microsoft Bot Framework](https://dev.botframework.com/) functionality. (If you already have a bot that's based on the Bot Framework, you can easily adapt it to work in Microsoft Teams.) We recommend you use either C# or TypeScript to take advantage of our SDKs.
 
