@@ -31,7 +31,7 @@
         "overwrite": [],
         "externalReference": [],
         "globalMetadata": {
-            "breadcrumb_path": "/msteams-platform/breadcrumb/TOC.json",
+            "breadcrumb_path": "/MicrosoftTeams/platform/breadcrumb/TOC.json",
             "extendBreadcrumb": true,
             "ms.topic": "article",
             "author": "charlesprakash",
@@ -39,9 +39,6 @@
             "manager": "billbl",
             "ms.suite": "office365",
             "ms.service": "msteams",
-            "search.ms_sitename": "Docs",
-            "search.ms_product": "msteams",
-            "search.ms_docsetname": "msteams-platform",
             "searchScope": ["Teams"],
             "ms.date": "10/05/2017",
             "titleSuffix": "Teams"

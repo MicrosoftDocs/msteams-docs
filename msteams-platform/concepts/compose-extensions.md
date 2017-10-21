@@ -138,7 +138,7 @@ In the app manifest, your command item is an object with the following structure
  
 ### Test via sideloading
 
-You can test your compose extension by sideloading your app. See [Sideloading your app in a team](~/concepts/app-sideload) for details.
+You can test your compose extension by sideloading your app. See [Sideloading your app in a team](~/concepts/apps-sideload) for details.
 
 To open your compose extension, navigate to any of your chats or channels. Choose the **More options** (**&#8943;**) button in the compose box, and choose your compose extension.
 

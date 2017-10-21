@@ -7,7 +7,7 @@ keywords: getting started node.js nodejs
 
 [!include[Step 1 Intro](~/includes/get-started/step1-intro.md)]
 
-This tutorial helps you get started with creating and loading an app in your Teams workspace using Node.js. You can follow the steps below using a Mac, Windows, or Linux machine. Once the prerequisites are installed, it takes about ten(??) minutes to complete the steps.
+This tutorial helps you get started with creating and loading an app in your Teams workspace using Node.js. You can test the app in your personal workspace and 
 
 The steps to get started at a glance are as follows:
 

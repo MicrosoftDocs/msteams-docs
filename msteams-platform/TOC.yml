@@ -1,13 +1,7 @@
 - name: Overview
   href: ./overview
-- name: Get started
-  expanded: true
-  items:
-  - name: Get started with .NET and C#
-    href: ./get-started/get-started-dotnet
-  - name: Get started with Node.js
-    href: ./get-started/get-started-nodejs
 - name: Concepts
+  expanded: true
   items:
   - name: Apps in Teams
     href: ./concepts/apps/apps-overview
