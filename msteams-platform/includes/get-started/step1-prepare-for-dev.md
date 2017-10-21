@@ -14,4 +14,3 @@ Describe the process of enabling sideloading of apps.
 You can sign up for Office Developer Program to get a new tenant.
 
 [See more here](https://dev.office.com/devprogram)
-

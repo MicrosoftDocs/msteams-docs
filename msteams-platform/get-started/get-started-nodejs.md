@@ -7,7 +7,7 @@ keywords: getting started node.js nodejs
 
 [!include[Step 1 Intro](~/includes/get-started/step1-intro.md)]
 
-This tutorial helps you get started with creating and loading an app in your Teams workspace using Node.js. You can test the app in your personal workspace and 
+This tutorial helps you get started with creating a Microsoft Teams app using Node.js. You can test the app by loading it into a 'Team' you have permissions for, or into a test tenant created using the Office Developer Program.
 
 The steps to get started at a glance are as follows:
 
@@ -41,10 +41,14 @@ To complete this tutorial:
 Verify your installation by running the following in a terminal window:
 
 ```bash
+git --version
+```
+
+```NodeJS
 node -v
 ```
 
-```bash
+```NodeJS
 npm -v
 ```
 
