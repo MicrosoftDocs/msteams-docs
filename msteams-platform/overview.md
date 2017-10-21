@@ -35,6 +35,8 @@ If you're new to the Microsoft Teams developer platform, choose one of the follo
 
 The rest of this documentation provides everything else you need to extend Microsoft Teams.
 
+|   |   |
+| - | - |
 | **Concepts** | Learn more about creating Teams apps, and find everything you need to know about the entire range of capabilities in Teams: tabs, bots, Connectors, compose extensions, and more. |
 | **Publishing** | Want to publish your Teams app in the Office Store? Look here for the steps and guidelines. |
 | **Scenarios** | Go deep into end-to-end scenarios. |
