@@ -82,11 +82,13 @@ You should see a bunch of dependencies getting installed. Once they are finished
 npm start
 ```
 
-When the node app starts, it displays `App started listening on port 3333`. When you see this, you can open a browser and navigate to the following URLs to verify that all the app URLs are loading fine:
+When the node app starts, it displays `App started listening on port 3333` on the terminal window.
 
 > [!NOTE]
-> If you see a different port number printed in the message above, it is because you have a PORT environment variable set. You can continue to use that port or
+> If you see a different port number displayed in the message above, it is because you have a PORT environment variable set. You can continue to use that port or
 > change your environment variable to 3333.
+
+At this point, you can open a browser window and navigate to the following URLs to verify that all the app URLs are loading fine:
 
 * [http://localhost:3333](http://localhost:3333)
 * [http://localhost:3333/hello](http://localhost:3333/hello)
@@ -95,7 +97,24 @@ When the node app starts, it displays `App started listening on port 3333`. When
 
 ## Host the sample app
 
-Remember apps in Microsoft Teams are web applications exposing one or more capabilities? For the Teams platform to load your app, your app must be reachable from outside. To satisfy this requirement, we need to 
+Remember apps in Microsoft Teams are web applications exposing one or more capabilities? For the Teams platform to load your app, your app must be reachable from the internet. To make your app reachable from the internet, you need to host your app. You can either host it in Microsoft Azure for free or create a tunnel to the local process run using ngrok.
+
+### Hosting in Azure
+
+Microsoft Azure lets you host your Node.js web application on a free tier using shared infrastructure. This will be sufficient to run our sample.
+
+> [!TIP]
+> If you have never used Azure before, you can get started by creating a new free account.
+> Follow this guide to help you get started: [Azure developer guide](https://docs.microsoft.com/en-us/azure/guides/developer/azure-developer-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json#understanding-accounts-subscriptions-and-billing).
+
+To get your Node.js app hosted in Azure, you can follow the guide here: [Create a Node.js web app in Azure](/azure/app-service/app-service-web-get-started-nodejs?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json#launch-azure-cloud-shell).
+
+> [!NOTE]
+> You would skip the steps to clone the repo from the guide above, because we already are working with a Node.js sample app for Microsoft Teams.
+> For your convenience, the link above takes you directly to the location where you should start from to host your app in Azure.
+
+### Tunneling using ngrok
+
 <!--
 > [!div class="nextstepaction"]
 > [Move to the next step](get-started-step2)
