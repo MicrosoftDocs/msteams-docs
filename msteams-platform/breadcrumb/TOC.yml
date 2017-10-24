@@ -1,7 +1,7 @@
 - name: Microsoft Teams
-  tocHref: /MicrosoftTeams/
-  topicHref: /MicrosoftTeams/
+  tocHref: /microsoftteams/
+  topicHref: /microsoftteams/
   items:
   - name: Microsoft Teams Platform
-    tocHref: /MicrosoftTeams/platform/
-    topicHref: /MicrosoftTeams/platform/index
+    tocHref: /microsoftteams/platform/
+    topicHref: /microsoftteams/platform/index
