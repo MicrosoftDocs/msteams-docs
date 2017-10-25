@@ -12,3 +12,7 @@ Millions of people use Office 365 every day. Building for our platform puts your
 Here’s everything you need to showcase your brand in Microsoft Teams.
 
 [!include[Overview framework](~/includes/design/overview-fx.html)]
+
+## Ready to get started
+
+The framework page has all the information you need to build for our platform. [Get Started](~/reference/design/framework/basics).
