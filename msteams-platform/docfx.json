@@ -38,7 +38,7 @@
             "ms.author": "o365devx",
             "manager": "billbl",
             "ms.suite": "office365",
-            "ms.service": "msteams",
+            "ms.prod": "msteams",
             "searchScope": ["Teams"],
             "ms.date": "10/05/2017",
             "titleSuffix": "Teams"
