@@ -28,13 +28,6 @@ To learn about Teams apps and all the possibilities they offer, see [Develop app
 
 In these docs, you'll find the information you need to bring your content, apps, and services into Microsoft Teams and make them available to your team (or the teams of your customers).
 
-If you're new to the Microsoft Teams developer platform, choose one of the following walkthroughs to quickly learn the basics of developing an app for Microsoft Teams.
-
-*	[Get started with .NET and C#](~/get-started/get-started-dotnet)
-*	[Get started with Node.js](~/get-started/get-started-nodejs)
-
-The rest of this documentation provides everything else you need to extend Microsoft Teams.
-
 |   |   |
 | - | - |
 | **Concepts** | Learn more about creating Teams apps, and find everything you need to know about the entire range of capabilities in Teams: tabs, bots, Connectors, compose extensions, and more. |

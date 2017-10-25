@@ -7,7 +7,7 @@
     href: ./concepts/apps/apps-overview
     items:
     - name: Sideloading
-      href: ./concepts/apps-sideload
+      href: ./concepts/apps/apps-sideload
   - name: Tabs
     href: ./concepts/tabs/tabs-overview
     items:
@@ -49,7 +49,7 @@
       href: ./concepts/cards-actions
   - name: Compose rich messages
     href: ./concepts/compose-extensions
-  - name: Outgoing webhooks
+  - name: Custom bot
     href: ./concepts/custom-bot
   - name: Deep links
     href: ./concepts/deep-links
@@ -168,7 +168,7 @@
 #     - name: App Data
 #       href: ./concepts/apps-data
 #     - name: Sideloading
-#       href: ./concepts/apps-sideloading
+#       href: ./concepts/apps/apps-sideloading
 #   - name: Activity Feed
 #     href: ./concepts/activityfeed
 #   - name: Authentication

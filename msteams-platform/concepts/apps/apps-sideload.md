@@ -22,7 +22,7 @@ To create your sideload package, see [Create the package for your Microsoft Team
 
 With your package created, you can now load it into a team of your choosing. This adds the experience as an available integration for all users in the selected team.
 
->**Note:** For sideloading to work, your tenant admin must first [enable sideloading of apps](~/get-started/get-started#3-enable-sideloading-of-apps-for-microsoft-teams).
+>**Note:** For sideloading to work, your tenant admin must first [enable sideloading of apps](/microsoftteams/admin-settings).
 
 1. Create a new team for testing, if necessary. Click **Create team** at the bottom of the left-hand panel.
 

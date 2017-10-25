@@ -6,21 +6,19 @@ keywords: teams apps packaging
 
 # Create the package for your Microsoft Teams app
 
-App experiences in Teams are defined by their app manifest, and bundled in an app package for use in sideloading or Office Store submission. You'll need an app package to test your experience in Teams, via the [sideload](~/concepts/apps-sideload) process.
+App experiences in Teams are defined by their app manifest, and bundled in an app package for use in sideloading or Office Store submission. You'll need an app package to test your experience in Teams, via the [sideload](~/concepts/apps/apps-sideload) process.
 
 A Teams app package is a .zip file containing the following:
 
 * A manifest file named "manifest.json", which specifies attributes of your app and points to required resources for your experience, such the location of its tab configuration page or the Microsoft app ID for its bot.
 * A transparent "outline" icon and a full "color" icon.  See [Icons](#icons) later in this topic for more information.
 
->**Tip:** Download our [Simple Bot Package](https://github.com/OfficeDev/Microsoft-teams-docs/blob/master/teams/SimpleBotPackage.zip) or [Full App Package](https://github.com/OfficeDev/Microsoft-teams-docs/blob/master/teams/FullAppPackage.zip) to get started. Each package contains a template manifest with fake data and sample icons suitable for sideloading. These sample packages will not load as-is; you must customize them.
-
 ## Creating a manifest
 
-Your manifest file must be named "manifest.json" and be at the top level of the sideload package. Note that manifests and packages built previously might support an older version of the schema. For Teams apps and especially Office Store submission, you must use the current [manifest schema](~/reference/schema/manifest-schema). 
+Your manifest file must be named "manifest.json" and be at the top level of the sideload package. Note that manifests and packages built previously might support an older version of the schema. For Teams apps and especially Office Store submission, you must use the current [manifest schema](~/reference/schema/manifest-schema).
 
 > **Tip:** Specify the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor:
-> 
+>
 > `"$schema": "https://statics.teams.microsoft.com/sdk/v1.0/manifest/MicrosoftTeams.schema.json",`
 
 ## Icons
