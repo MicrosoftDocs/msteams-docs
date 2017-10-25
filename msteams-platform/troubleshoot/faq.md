@@ -36,7 +36,7 @@ Bots in channels receive messages only when they are explicitly @mentioned. Ther
 
 Microsoft Teams apps can be distributed to end users via the Office Store and the in-product app-discovery system. For more information, see [Publish your Microsoft Teams app to the Office Store](~/publishing/apps-publish).
 
-Microsoft Teams app packages can be manually distributed to your colleagues or other end users and sideloaded by them via the [sideloading process](~/concepts/app-sideload). Please note that apps distributed in this format are not tested, validated, or trusted by Microsoft.
+Microsoft Teams app packages can be manually distributed to your colleagues or other end users and sideloaded by them via the [sideloading process](~/concepts/apps/apps-sideload). Please note that apps distributed in this format are not tested, validated, or trusted by Microsoft.
 
 ### What account do I use to create an Office Store or Dev Center account?
 

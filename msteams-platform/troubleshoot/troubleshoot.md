@@ -62,11 +62,11 @@ There is a known issue where updating an existing bot app with a new or updated 
 
 ### Can't add my bot
 
-Apps must be enabled by the Office 365 tenant admin for them to be loaded by end users. Note that in some cases, the Office 365 tenant might have multiple SKUs associated with it, and for bots to work in any, they must be enabled in all SKUs. See [Enable sideloading of apps](~/get-started/get-started#enable-sideloading-of-bots-and-tabs) for more information.
+Apps must be enabled by the Office 365 tenant admin for them to be loaded by end users. Note that in some cases, the Office 365 tenant might have multiple SKUs associated with it, and for bots to work in any, they must be enabled in all SKUs. See [Enable sideloading of apps](~/get-started/get-started#enable-sideloading-of-apps-for-microsoft-teams    ) for more information.
 
 ### Can't add bot as a member of a team
 
-Bots must first be sideload into a team before it is accessible within any channel of that team.  Please review [Sideloading your app in a team](~/concepts/app-sideload) for more information on this process.
+Bots must first be sideload into a team before it is accessible within any channel of that team.  Please review [Sideloading your app in a team](~/concepts/apps/apps-sideload) for more information on this process.
 
 ### My bot doesn't get my message in a channel
 
