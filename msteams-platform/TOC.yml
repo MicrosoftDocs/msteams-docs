@@ -89,6 +89,7 @@
     - name: Client SDK reference
       href: ./reference/library/client-sdk-javascript
   - name: Design guidelines
+    href: ./reference/design/overview
     items:
     - name: Framework
       items:
