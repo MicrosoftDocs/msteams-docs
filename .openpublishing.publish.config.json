@@ -6,7 +6,7 @@
                     "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
                 ]
             },
-            {
+            
         "docset_name": "msteams-platform",
         "build_source_folder": "msteams-platform",
         "build_output_subfolder": "msteams-platform",
