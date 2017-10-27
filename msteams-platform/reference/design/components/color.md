@@ -28,19 +28,23 @@ We also use `$app-black` at other opacities for some UI elements:
 
 ### Default theme color ramp
 
-![Default theme color ramp](~/assets/images/components/componentAssets_color_lightblackramp.png)
+<iframe height='620' scrolling='no' title='Microsoft Teams design guidelines - default theme color ramp' src='//codepen.io/msteams/embed/KyPmqL/?height=682&theme-id=31655&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/msteams/pen/KyPmqL/'>Microsoft Teams design guidelines - default theme color ramp</a> by Microsoft Teams (<a href='https://codepen.io/msteams'>@msteams</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ### Other default theme colors
 
-![Other default theme colors](~/assets/images/components/componentAssets_color_light_other.png)
+<iframe height='392' scrolling='no' title='Microsoft Teams design guidelines - other default theme colors' src='//codepen.io/msteams/embed/zPOdYJ/?height=442&theme-id=31655&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/msteams/pen/zPOdYJ/'>Microsoft Teams design guidelines - other default theme colors</a> by Microsoft Teams (<a href='https://codepen.io/msteams'>@msteams</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ### Dark theme color ramp
 
-![Dark theme color ramp](~/assets/images/components/componentAssets_color_darkblackramp.png)
+<iframe height='798' scrolling='no' title='Microsoft Teams design guidelines - dark theme color ramp' src='//codepen.io/msteams/embed/BmBwjx/?height=846&theme-id=31655&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/msteams/pen/BmBwjx/'>Microsoft Teams design guidelines - dark theme color ramp</a> by Microsoft Teams (<a href='https://codepen.io/msteams'>@msteams</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ### Other dark theme colors
 
-![Other dark theme colors](~/assets/images/components/componentAssets_color_darkcolors.png)
+<iframe height='390' scrolling='no' title='Microsoft Teams design guidelines - other dark theme colors' src='//codepen.io/msteams/embed/zPOEXN/?height=442&theme-id=31655&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/msteams/pen/zPOEXN/'>Microsoft Teams design guidelines - other dark theme colors</a> by Microsoft Teams (<a href='https://codepen.io/msteams'>@msteams</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ### Download color swatches
 

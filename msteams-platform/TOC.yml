@@ -1,5 +1,6 @@
 - name: Overview
   href: ./overview
+  universal_ref_toc: /javascript/api/msteams-client-docs-ref-typescript/toc.json
 - name: Concepts
   expanded: true
   items:
