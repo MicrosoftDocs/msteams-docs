@@ -6,7 +6,7 @@ keywords: teams graph tabs
 
 # Use Microsoft Graph in your Microsoft Teams tab pages
 
-You might want to use [Microsoft Graph](https://developer.microsoft.com/en-us/graph/) in your [configuration](~/concepts/tabs/tabs-configuration) and [content](~/concepts/tabs/tabs-dynamic) pages. For example, you might want to access the user's profile information, calendar, or files.
+You might want to use [Microsoft Graph](https://developer.microsoft.com/en-us/graph/) in your [configuration](~/concepts/tabs/tabs-configuration) and [content](~/concepts/tabs/tabs-content) pages. For example, you might want to access the user's profile information, calendar, or files.
 
 To use the Microsoft Graph APIs, you must [get an access token](https://developer.microsoft.com/en-us/graph/docs/concepts/auth_overview).  When your app is running in Microsoft Teams, the only difference is that you must drive the authentication flow, as described in [Authenticate a user](~/concepts/authentication).
 

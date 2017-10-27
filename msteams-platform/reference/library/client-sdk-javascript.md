@@ -12,7 +12,7 @@ In your tab pages, include the library hosted at `https://statics.teams.microsof
 For more information on specific kinds of tab pages, see the following:
 
 * [Configuration](~/concepts/tabs/tabs-configuration)
-* [Content](~/concepts/tabs/tabs-dynamic)
+* [Content](~/concepts/tabs/tabs-content)
 * [Removal options](~/concepts/tabs/tabs-update-remove#removing-a-tab)
 * [Static tab](~/concepts/tabs/tabs-static)
 

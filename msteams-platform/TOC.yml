@@ -15,7 +15,7 @@
     - name: Static tabs
       href: ./concepts/tabs/tabs-static
     - name: Configurable tabs
-      href: ./concepts/tabs/tabs-dynamic
+      href: ./concepts/tabs/tabs-content
     - name: Configuration pages
       href: ./concepts/tabs/tabs-configuration
     - name: Update or remove tabs
@@ -180,7 +180,7 @@
 #     - name: Static
 #       href: ./concepts/tabs-static
 #     - name: Dynamic
-#       href: ./concepts/tabs-dynamic
+#       href: ./concepts/tabs-content
 #   - name: Bots
 #     items:
 #     - name: Conversations

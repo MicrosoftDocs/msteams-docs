@@ -6,7 +6,7 @@ keywords: get started static tabs teams
 
 # Create a static tab in Microsoft Teams
 
-A static tab is a [content page](~/concepts/tabs/tabs-dynamic) that is declared directly in your manifest and&mdash;unlike a configurable tab&mdash;does not require a configuration page.
+A static tab is a [content page](~/concepts/tabs/tabs-content) that is declared directly in your manifest and&mdash;unlike a configurable tab&mdash;does not require a configuration page.
 
 Currently, you can add one or more static tabs to your app's "personal scope" experience, accessed via the app bar or alongside your app's bot conversation.
 
@@ -14,7 +14,7 @@ Currently, you can add one or more static tabs to your app's "personal scope" ex
 
 ## Creating tab content
 
-Content pages in Teams, regardless of scope or type, should follow the guidelines in [Create a content page](~/concepts/tabs/tabs-dynamic).
+Content pages in Teams, regardless of scope or type, should follow the guidelines in [Create a content page](~/concepts/tabs/tabs-content).
 
 ## Adding your tabbed content to your app package
 

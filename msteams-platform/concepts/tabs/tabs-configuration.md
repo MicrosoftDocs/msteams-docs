@@ -94,12 +94,12 @@ By default, the **Save** button on the configuration dialog box is disabled. Whe
 
 ### Determine the content to display in the tab
 
-Use `microsoftTeams.settings.setSettings({entityId, contentUrl, suggestedTabName, websiteUrl, removeUrl})` to specify the URL of the [content page](~/concepts/tabs/tabs-dynamic) Microsoft Teams should host in the tab. Things to keep in mind:
+Use `microsoftTeams.settings.setSettings({entityId, contentUrl, suggestedTabName, websiteUrl, removeUrl})` to specify the URL of the [content page](~/concepts/tabs/tabs-content) Microsoft Teams should host in the tab. Things to keep in mind:
 
 * This call can be made at any time the configuration page is displayed, including before or after the user selects the **Save** button (see next section).
 * The `entityId` uniquely identifies the entity that is displayed in the tab.
   * Microsoft Teams uses this when creating [deep links to your tab](~/concepts/deep-links).
-  * You can also use it to help obtain context when [displaying your content page](~/concepts/tabs/tabs-dynamic) or when [updating or removing a tab](~/concepts/tabs/tabs-update-remove).
+  * You can also use it to help obtain context when [displaying your content page](~/concepts/tabs/tabs-content) or when [updating or removing a tab](~/concepts/tabs/tabs-update-remove).
   * You can use the `contentUrl` as the `entityId` if you wish.
 * The `contentUrl` is a required field that specifies the URL of the content Microsoft Teams should host in the tab.
   * Be sure you have added the `contentUrl` domain to the `validDomains` element in the tab manifest file. For more information, see [Microsoft Teams tab schema](~/reference/schema/manifest-schema) and [Redirecting across domains within a Microsoft Teams tab](~/reference/general/cross-domain).
