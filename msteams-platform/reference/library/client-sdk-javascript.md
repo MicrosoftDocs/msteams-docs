@@ -1,4 +1,5 @@
 ---
+redirect_url: /javascript/api/msteams-client
 title: JavaScript client SDK
 description: Reference documentation for the JavaScript client SDK for Microsoft Teams
 keywords: teams javascript reference
