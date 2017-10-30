@@ -2,7 +2,6 @@
   href: ./overview
   universal_ref_toc: /javascript/api/msteams-client-docs-ref-typescript/toc.json
 - name: Concepts
-  expanded: true
   items:
   - name: Apps in Teams
     href: ./concepts/apps/apps-overview
