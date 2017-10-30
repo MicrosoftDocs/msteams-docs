@@ -8,7 +8,8 @@ keywords: teams bots messages
 
 A conversation is a series of messages sent between your bot and one or more users. Bots in Microsoft Teams allow sending messages in either personal conversations with a single user (also known as one-on-one or 1:1 chats) or a group conversation in a Teams channel.
 
->**Note:** Bots in private group chats are currently not supported.
+> [!NOTE]
+> Bots in private group chats are currently not supported.
 
 ## Conversation basics
 
@@ -69,7 +70,8 @@ To ensure that your formatting works across all platforms supported by Microsoft
 | hyperlink                 | ✔ | ✔ |
 | image link                | ✔ | ✖ |
 
->**Note:** Currently, Connector cards support no formatting across all platforms. See [Cards](~/concepts/bots/bots-conversations#cards) in the next section for more detail.
+> [!NOTE]
+> Currently, Connector cards support no formatting across all platforms. See [Cards](~/concepts/bots/bots-conversations#cards) in the next section for more detail.
 
 ### Support by individual platform
 
@@ -140,7 +142,8 @@ Your bot receives a payload that contains the user message `Text` as well as oth
 * `from.id`&emsp;A unique and encrypted ID for that user for your bot; suitable as a key if your app needs to store user data
 * `channelData.tenant.id`&emsp;The tenant ID for the user.
 
->**Note:** `from.id` is unique for your bot and cannot be directly used outside your bot instance in any meaningful way to identify that user.
+> [!NOTE]
+> `from.id` is unique for your bot and cannot be directly used outside your bot instance in any meaningful way to identify that user.
 
 #### Full inbound schema example
 
@@ -180,7 +183,9 @@ Your bot receives a payload that contains the user message `Text` as well as oth
     }
 }
 ```
->**Note:** The text field for inbound messages sometimes contains mentions. Be sure to properly check and strip those. For more information, see [Mentions](~/scenarios/bots-channel-conversations#mentions).
+
+> [!NOTE]
+> The text field for inbound messages sometimes contains mentions. Be sure to properly check and strip those. For more information, see [Mentions](~/scenarios/bots-channel-conversations#mentions).
 
 ## Teams channel data
 
@@ -195,7 +200,8 @@ Teams-specific information is sent and received in the `channelData` object. A t
     - `id`&emsp;GUID for the channel
     - `name`&emsp;Channel name; passed only in cases of [channel modification events](~/concepts/bots/bots-notifications#channel-updates). 
 
->**Note:** The payload also contains `channelData.teamsTeamId` and `channelData.teamsChannelId` properties for backward compatibility. These properties are deprecated.
+> [!NOTE]
+> The payload also contains `channelData.teamsTeamId` and `channelData.teamsChannelId` properties for backward compatibility. These properties are deprecated.
 
 Please note that `channelData` should be used as the definitive source for team and channel IDs, which you can cache and use as keys for local storage.
 
@@ -242,7 +248,8 @@ Rather than have your messages be static snapshots of data, your bot can now dyn
 
 The new message need not match the original in type. For instance, if the original message contained an attachment, the new message can be a simple text message.
 
->**Note:** Currently, you can update only content sent in single-attachment messages and carousel layouts. Posting updates to messages with multiple attachments in list layout will be supported soon.
+> [!NOTE]
+> Currently, you can update only content sent in single-attachment messages and carousel layouts. Posting updates to messages with multiple attachments in list layout will be supported soon.
 
 ### REST API
 

@@ -3,14 +3,14 @@ title: Test your bot
 description: Describes how to test bots in Microsoft Teams
 keywords: teams bots testing
 ---
-
 # Test your Microsoft Teams bot
 
 To test your bot in Microsoft Teams, you must follow one of the sideloading processes enumerated here.  Note that each method triggers a slightly different flow, and enables bots in different contexts as explained below.
 
 For published bots, end users will be able to access via the discover apps gallery accessable via the Discover Bots access points in the product.
 
->**Note:** Your tenant administrator will need to enable sideloading of apps for your organization. [Here's how](/microsoftteams/admin-settings).
+> [!NOTE]
+> Your tenant administrator will need to enable sideloading of apps for your organization. [Here's how](/microsoftteams/admin-settings).
 
 ## Adding a bot to a team for use in channels
 
@@ -48,7 +48,8 @@ There are two ways to test load your bot for 1:1 conversations in Microsoft Team
    * Using the Teams deep-link format, you can create a deep link to launch Microsoft Teams directly with your bot's app ID. The format is `https:&#8203;//teams.microsoft.&#8203;com/l/chat/0/0?users=28:_your-bot-app-id_`.
    * Optionally, in the Bot Framework's details Channels page, you can click "Get bot embed codes" and select the Microsoft Teams icon to get both the deep link and a Microsoft Teams&ndash;approved logo for use on your website.
 
->**Note:** When a bot has been added through one of these methods, it will not be addressable in channel conversations. Nor can you take advantage of other Microsoft Teams app capabilities like tabs or compose extensions.
+> [!NOTE]
+> When a bot has been added through one of these methods, it will not be addressable in channel conversations. Nor can you take advantage of other Microsoft Teams app capabilities like tabs or compose extensions.
 
 As with bots added to a team, your bot will receive the `conversationUpdate` event, but without the team information in the `channelData` object.
 

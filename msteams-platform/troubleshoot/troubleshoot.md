@@ -46,7 +46,7 @@ Common problems with the settings object:
 
 ### Can't authorize the user or display your auth provider in your tab
 
-Unless you are doing silent authentication, you must follow the authentication process provided by the [Microsoft Teams JavaScript client SDK](~/reference/library/client-sdk-javascript).  
+Unless you are doing silent authentication, you must follow the authentication process provided by the [Microsoft Teams JavaScript client SDK](~/reference/library/client-sdk-javascript).
 
 Also note: Due to changes introduced in July 2017, we require all authentication flow to start and end on your domain, which must be listed in the `validDomains` object in your manifest.
 

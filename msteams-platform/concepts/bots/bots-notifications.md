@@ -170,7 +170,8 @@ The `conversationUpdate` event with the `membersRemoved` object in the payload i
 
 ## Team name updates
 
->**Note:** At this time, there is no functionality to query all team names, and team name is not returned in payloads from other events.
+> [!NOTE]
+> At this time, there is no functionality to query all team names, and team name is not returned in payloads from other events.
 
 Your bot is notified when the team it is in has been renamed. It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object. Please note that there are no notifications for team creation or deletion, because bots exist only as part of teams and have no visibility outside the scope in which they have been added.
 

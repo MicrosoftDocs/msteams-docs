@@ -419,8 +419,8 @@ As with other embedded experiences running inside Microsoft Teams, your code ins
 
 When the sign-in request completes and redirects back to your page, it should perform the following steps:
 
-1.	Generate a security code. (This can be a random number.) You need to cache this code on your service, along with the credentials obtained through the sign-in flow (such as OAuth 2.0 tokens).
-2.	Call `microsoftTeams.authentication.notifySuccess` and pass the security code.
+1. Generate a security code. (This can be a random number.) You need to cache this code on your service, along with the credentials obtained through the sign-in flow (such as OAuth 2.0 tokens).
+2. Call `microsoftTeams.authentication.notifySuccess` and pass the security code.
 
 At this point, the window closes and control is passed to the Teams client. The client now can reissue the original user query, along with the security code in the `state` property. Your code can use the security code to look up the credentials stored earlier to complete the authentication sequence and then complete the user request.
 

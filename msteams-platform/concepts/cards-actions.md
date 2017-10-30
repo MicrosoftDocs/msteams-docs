@@ -99,7 +99,8 @@ A message can contain more than one rich card. You can display multiple cards in
 
 The [carousel layout](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments) shows a carousel of cards, optionally with associated action buttons.
 
->**Note:** A carousel can display a maximum of 10 cards per message.
+> [!NOTE]
+> A carousel can display a maximum of 10 cards per message.
 
 ![Example of a carousel of cards](~/assets/images/cards/carousel.png)
 
@@ -109,13 +110,15 @@ Properties are the same as for the hero or thumbnail card.
 
 The list layout shows a vertically stacked list of cards, optionally with associated action buttons..
 
->**Note:** A list can display a maximum of 10 cards per message.
+> [!NOTE]
+> A list can display a maximum of 10 cards per message.
 
 ![Example of a list of cards](~/assets/images/cards/list.png)
 
 Properties are the same as for the hero or thumbnail card.
 
->**Note:** Some combinations of list cards are not yet supported on iOS and Android.
+> [!NOTE]
+> Some combinations of list cards are not yet supported on iOS and Android.
 
 ## Buttons
 
@@ -132,7 +135,7 @@ Teams supports the following activity ([`CardAction`](https://docs.microsoft.com
 | `imBack`| Sends a message to the bot (from the user who clicked the button or tapped the card). This message (from user to bot) is visible to all conversation participants. |
 | `invoke` | Sends a message and payload to the bot (from the user who clicked the button or tapped the card). This message is not visible. |
 
->**Notes**
+> [!NOTE]
 >* Teams does not support `CardAction` types not listed in the preceding table.
 >* Teams does not support the `SuggestedActions` property.
 >* Be aware that these actions differ from actions for Office 365 Connector cards.
