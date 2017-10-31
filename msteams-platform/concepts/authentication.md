@@ -6,7 +6,8 @@ keywords: teams authentication
 
 # Authenticate a user in your Microsoft Teams tab
 
->**Important: Recent breaking change for tab authentication**
+> [!IMPORTANT]
+> Recent breaking change for tab authentication**
 >
 >To address a security concern, we made a change that might impact existing tab authentication flows.
 >

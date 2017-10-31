@@ -8,13 +8,15 @@ keywords: teams deep link deeplink
 
 To every tab, Microsoft Teams adds a **Copy link to tab** menu item. This generates a deep link that points to this tab, which users can share.
 
->**Note:** This deep link is in a different format than the one you can generate yourself.
+> [!NOTE]
+> This deep link is in a different format than the one you can generate yourself.
 
 You can also enable team members to create and share links to items _within_ your tab, such as an individual task within a tab that contains a task list. When clicked, the link navigates to your tab, which focuses on the specific item. To implement this, you add a "copy link" action to each item, in whatever way best suits your UI. When the user takes this action, you call `shareDeepLink()` to display a dialog box containing a link that the user can copy to the clipboard. When you make this call, you also pass an ID for your item, which you get back in the [context](~/concepts/tabs/tabs-context) when the link is followed and your tab is reloaded.
 
 Further, you can generate deep links programmatically, using the format specified later in this topic. You might want to use these in [bot](~/concepts/bots/bots-overview) and [Connector](~/concepts/connectors) messages that inform users about changes to your tab, or to items within it. 
 
->**Note:** Deep links work properly only if the tab was configured using the v0.4 or later library and thus has an entity ID. Deep links to tabs without entity IDs still navigate to the tab but can't provide the sub-entity ID to the tab.
+> [!NOTE]
+> Deep links work properly only if the tab was configured using the v0.4 or later library and thus has an entity ID. Deep links to tabs without entity IDs still navigate to the tab but can't provide the sub-entity ID to the tab.
 
 ## Showing a deep link to an item within your tab
 
@@ -43,9 +45,11 @@ The query parameters are:
     * `canvasUrl`&emsp;The URL to load in the tab (same as the `contentUrl` you provided when [configuring the tab](~/concepts/tabs/tabs-configuration)); for example, "https:&#8203;//tab.tasklist.example.&#8203;com/123"
     * `channelId`&emsp;The Microsoft Teams channel ID (available from the tab [context](~/concepts/tabs/tabs-context)); for example, "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"
 
->**Important:** Ensure that `appId`, `entityId`, `entityWebUrl`, `subEntityWebUrl`, `entityLabel`, `subEntityLabel`, and `context` are all URI encoded.
+> [!IMPORTANT]
+> Ensure that `appId`, `entityId`, `entityWebUrl`, `subEntityWebUrl`, `entityLabel`, `subEntityLabel`, and `context` are all URI encoded.
 >
->**Note:** `canvasUrl` is required but isn't currently used; it is reserved for future use.
+> [!NOTE]
+> `canvasUrl` is required but isn't currently used; it is reserved for future use.
 
 Examples:
 

@@ -24,7 +24,8 @@ Because your bot is able to proactively message users, you should use this capab
 
 #### API request
 
->**Note:** Be sure that you authenticate and have a bearer token before creating a new conversation using the REST API.
+> [!NOTE]
+> Be sure that you authenticate and have a bearer token before creating a new conversation using the REST API.
 
 ```json
 POST /v3/conversations

@@ -3,12 +3,13 @@ title: Develop compose extensions
 description: Describes how to get started with compose extensions in Microsoft Teams
 keywords: teams compose extensions
 ---
-
 # Preview: Develop compose extensions for Microsoft Teams
 
->**Important:** Compose extensions are available only in [Public Developer Preview](~/reference/general/developer-preview). Many details in this document are subject to change.
+> [!IMPORTANT]
+> Compose extensions are available only in [Public Developer Preview](~/reference/general/developer-preview). Many details in this document are subject to change.
 >
->**Note:** The term "compose extensions" is provisional and might change. Until this feature is complete, we recommend not using the term in any customer-facing UI or communications.
+> [!NOTE]
+> The term "compose extensions" is provisional and might change. Until this feature is complete, we recommend not using the term in any customer-facing UI or communications.
 
 Compose extensions are a powerful new way for users to engage with your app within Microsoft Teams. With this capability, users can query for information from your service and post that information, in the form of rich cards, right into the channel conversation.
 
@@ -42,7 +43,8 @@ Record your bot’s app ID and app password—you will need to supply the app ID
 
 As with bots and tabs, you update the [manifest](~/reference/schema/manifest-schema#composeextensions) of your app to include the compose extension properties. These properties govern how your compose extension appears and behaves in the Microsoft Teams client. Compose extensions are supported beginning with v1.0 of the manifest.
 
->**Note:** The `canUpdateConfiguration` property is not yet included in the manifest schema. However, you can still test compose extensions that use `canUpdateConfiguration` by sideloading them.
+> [!NOTE]
+> The `canUpdateConfiguration` property is not yet included in the manifest schema. However, you can still test compose extensions that use `canUpdateConfiguration` by sideloading them.
 
 #### Declare your compose extension
 
@@ -142,7 +144,8 @@ You can test your compose extension by sideloading your app. See [Sideloading yo
 
 To open your compose extension, navigate to any of your chats or channels. Choose the **More options** (**&#8943;**) button in the compose box, and choose your compose extension.
 
->**Note:** Your app appears in channels only if you declare the `team` scope. Similarly, it appears in your chats only if it supports the `personal` scope.
+> [!NOTE]
+> Your app appears in channels only if you declare the `team` scope. Similarly, it appears in your chats only if it supports the `personal` scope.
 
 ## Add event handlers
 
@@ -150,7 +153,8 @@ Most of your work involves the `onQuery` event, which handles all interactions i
 
 If you set `canUpdateConfiguration` to `true` in the manifest, you enable the **Settings** menu item for your compose extension and must also handle `onQuerySettingsUrl` and `onSettingsUpdate`.
 
->**Important:** Compose extensions that use `canUpdateConfiguration` can't be published in the Office Store at this time.
+> [!IMPORTANT]
+> Compose extensions that use `canUpdateConfiguration` can't be published in the Office Store at this time.
 
 ### Handle onQuery events
 
@@ -201,7 +205,8 @@ The request parameters itself are found in the value object, which includes the 
 | `parameters` | Array of parameters. Each parameter object contains the parameter name, along with the parameter value provided by the user. |
 | `queryOptions` | Pagination parameters: <br>`skip`: skip count for this query <br>`count`: number of elements to return |
 
->**Note:** You should authenticate any request to your service. See [Receiving messages](~/concepts/bots/bots-conversations#receiving-messages) for more detailed documentation on receiving messages from the Bot Framework.
+> [!NOTE]
+> You should authenticate any request to your service. See [Receiving messages](~/concepts/bots/bots-conversations#receiving-messages) for more detailed documentation on receiving messages from the Bot Framework.
 
 #### Request example
 
@@ -407,7 +412,8 @@ To prompt an unauthenticated user to sign in, respond with a suggested action th
 }
 ```
 
->**Note:** For the sign-in experience to be hosted in a Teams pop-up, the domain portion of the URL must be in your app’s list of valid domains. (See [validDomains](~/reference/schema/manifest-schema#validdomains) in the manifest schema.)
+> [!NOTE]
+> For the sign-in experience to be hosted in a Teams pop-up, the domain portion of the URL must be in your app’s list of valid domains. (See [validDomains](~/reference/schema/manifest-schema#validdomains) in the manifest schema.)
 
 ### Start the sign-in flow
 

@@ -6,13 +6,16 @@ keywords: teams publish store office publishing
 
 # Publish your Microsoft Teams app to the Office Store
 
->**Important: Your Microsoft Teams app *must* use the [latest schema](~/reference/schema/manifest-schema) and follow [current packaging guidelines](~/publishing/apps-package).**
+> [!IMPORTANT]
+> **Your Microsoft Teams app *must* use the [latest schema](~/reference/schema/manifest-schema) and follow [current packaging guidelines](~/publishing/apps-package).**
 >
->**Note:** Teams will soon provide an in-app gallery for users to find or discover [high-quality Teams apps](http://aka.ms/microsoftteamsdesignguidelines). To have your solution available in this gallery, you must publish your solution through the Office Store.
+> [!NOTE]
+> Teams will soon provide an in-app gallery for users to find or discover [high-quality Teams apps](http://aka.ms/microsoftteamsdesignguidelines). To have your solution available in this gallery, you must publish your solution through the Office Store.
 
 The Office Store provides a convenient location for you to upload your Microsoft Teams app, as well as other Office 365 extensibility types such as Office add-ins and Sharepoint add-ins. To include your solution in the Office Store, you submit it to the Seller Dashboard. You need to create an individual or company account if you have not already done so for other Windows apps or Office extensibility types.
 
->**Note:** By developing and submitting a Microsoft Teams app, you are subject to the Bot Developer Framework [Terms of Use](https://aka.ms/bf-terms), [Privacy Policy](https://aka.ms/bf-privacy), and [Code of Conduct](https://aka.ms/bf-conduct) for bot, tab, and compose extension functionality within your app. If your app contains Office 365 Connector functionality, separate terms may also apply as part of your Connector Registration on the [Connectors Developer Dashboard](https://aka.ms/publishconnector).
+> [!NOTE]
+> By developing and submitting a Microsoft Teams app, you are subject to the Bot Developer Framework [Terms of Use](https://aka.ms/bf-terms), [Privacy Policy](https://aka.ms/bf-privacy), and [Code of Conduct](https://aka.ms/bf-conduct) for bot, tab, and compose extension functionality within your app. If your app contains Office 365 Connector functionality, separate terms may also apply as part of your Connector Registration on the [Connectors Developer Dashboard](https://aka.ms/publishconnector).
 
 ## Register as an app developer
 
@@ -20,11 +23,14 @@ If you have already registered in the Microsoft Store ecosystem, either by distr
 
 Account management in the Microsoft Store ecosystem relies on a [Microsoft account](https://account.microsoft.com/account). This identity will be the main administrator/owner of your Office Store experience. For more information, please review [Opening a developer account](https://docs.microsoft.com/en-us/windows/uwp/publish/opening-a-developer-account) and the [Developer program FAQ](https://developer.microsoft.com/en-us/store/register/faq).
 
->**Tip:** We recommend you create a Microsoft account specifically for your developer/Office Store account. Keep this account and password confidential, and share it only with your release team.
-
->**Note:** Although you might have leveraged the Windows Store Azure Active Directory (Azure AD) support for Windows Store account management, the Office Store Seller Dashboard requires you to use a Microsoft account, not an Azure AD account.
-
->**Important: If you've developed with a trial developer Office 365 account, do not use this account for your Office Store identity.** Create a separate Microsoft account instead.
+> [!TIP]
+> We recommend you create a Microsoft account specifically for your developer/Office Store account. Keep this account and password confidential, and share it only with your release team.
+>
+> [!NOTE]
+> Although you might have leveraged the Windows Store Azure Active Directory (Azure AD) support for Windows Store account management, the Office Store Seller Dashboard requires you to use a Microsoft account, not an Azure AD account.
+>
+> [!IMPORTANT]
+> **If you've developed with a trial developer Office 365 account, do not use this account for your Office Store identity.** Create a separate Microsoft account instead.
 
 ## Register in the Seller Dashboard to submit to the Office Store
 
@@ -44,7 +50,8 @@ After your account is approved, you can submit your solution to the [Seller Dash
 
 You need to upload a [submission package](~/publishing/apps-package) and provide the required metadata for the product listing page, including information such as app logo, description, and screenshots. Please review our [Submission and Manifest Metadata Checklist](~/publishing/office-store-checklist) for more information.
 
->**Important:** All information in the package manifest must match the metadata information you enter into the product listing.
+> [!IMPORTANT]
+> All information in the package manifest must match the metadata information you enter into the product listing.
 
 For general information about the Seller Dashboard, see [Use the Seller Dashboard to submit your solution to the Office Store](https://dev.office.com/officestore/docs/use-the-seller-dashboard-to-submit-to-the-office-store). For Teams-specific help, see [Submitting your Microsoft Teams app in the Seller Dashboard](~/publishing/office-store-guidance).
 
@@ -70,7 +77,8 @@ When the validation process is complete, you will receive a message to let you k
 
 Failures are explained, with references to the specific policy violations. All failures must be addressed before resubmission.
 
->**Note:** If you make changes to an approved Teams experience—specifically, changes to core functionality or the manifest—it must go through the approval process again. For all other changes to your service, such as addressing issues or adding new features, resubmission is not required.
+> [!NOTE]
+> If you make changes to an approved Teams experience—specifically, changes to core functionality or the manifest—it must go through the approval process again. For all other changes to your service, such as addressing issues or adding new features, resubmission is not required.
 
 ## Tips for rapid approval
 

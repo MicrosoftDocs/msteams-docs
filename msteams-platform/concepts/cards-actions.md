@@ -247,7 +247,8 @@ The `value` field should contain the text string echoed in the chat and therefor
 
 ### invoke
 
->**Note:** We recommend that you use `messageBack` instead of `invoke`.
+> [!NOTE]
+> We recommend that you use `messageBack` instead of `invoke`.
 
 The `invoke` message type silently sends a JSON payload that you define to your bot.  This is useful if you want to send more detailed information back to your bot without having to send via a simple `imBack` text string.  Note that the user, in 1:1 or in channel, sees no notification as a result of their click.
 

@@ -6,7 +6,8 @@ keywords: teams manifest schema
 
 # Reference: Manifest schema for Microsoft Teams
 
->**Note:** For help on migrating your v0.4 manifest to v1.0, see our [migration guide](~/reference/schema/manifest-schema-migrate).
+> [!NOTE]
+> For help on migrating your v0.4 manifest to v1.0, see our [migration guide](~/reference/schema/manifest-schema-migrate).
 
 The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://statics.teams.microsoft.com/sdk/v1.0/manifest/MicrosoftTeams.schema.json`](https://statics.teams.microsoft.com/sdk/v1.0/manifest/MicrosoftTeams.schema.json).
 
@@ -130,7 +131,8 @@ The following schema sample shows all extensibility options.
 }
 ```
 
->**Tip:** Specify the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor: `"$schema": "https://statics.teams.microsoft.com/sdk/v1.0/manifest/MicrosoftTeams.schema.json",`
+> [!TIP]
+> Specify the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor: `"$schema": "https://statics.teams.microsoft.com/sdk/v1.0/manifest/MicrosoftTeams.schema.json",`
 
 The schema defines the following properties.
 
@@ -199,7 +201,8 @@ Ensure that your description accurately describes your experience and provides i
 |`short`|80 characters|✔|A short description of your app experience, used when space is limited.|
 |`full`|4000 characters|✔|The full description of your app.|
 
->**Important:** We currently have an issue with full descriptions longer than 256 characters. You can use a longer description in your Seller Dashboard app submission.
+> [!IMPORTANT]
+> We currently have an issue with full descriptions longer than 256 characters. You can use a longer description in your Seller Dashboard app submission.
 
 ## icons
 
@@ -339,6 +342,7 @@ Specifics which permissions the extensions are requesting, which lets users know
 
 A list of valid domains from which the extension expects to load any content. Domain listings can include wildcards, for example `*.example.com`. If your tab configuration or content UI needs to navigate to any other domain besides the one use for tab configuration, that domain must be specified here.
 
->**Important:** Do not add domains that are outside your control, either directly or via wildcards. For example, `youapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid.
+> [!IMPORTANT]
+> Do not add domains that are outside your control, either directly or via wildcards. For example, `youapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid.
 
 The object is an array with all elements of the type `string`.

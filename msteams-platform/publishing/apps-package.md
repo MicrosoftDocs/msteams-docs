@@ -17,7 +17,8 @@ A Teams app package is a .zip file containing the following:
 
 Your manifest file must be named "manifest.json" and be at the top level of the sideload package. Note that manifests and packages built previously might support an older version of the schema. For Teams apps and especially Office Store submission, you must use the current [manifest schema](~/reference/schema/manifest-schema).
 
-> **Tip:** Specify the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor:
+> [!TIP]
+> Specify the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor:
 >
 > `"$schema": "https://statics.teams.microsoft.com/sdk/v1.0/manifest/MicrosoftTeams.schema.json",`
 

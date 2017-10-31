@@ -90,7 +90,8 @@ Common reasons for manifest read errors:
 * Encoding issues. Use UTF-8 for the manifest.json file. Other encodings, specifically with the BOM, may not be readable.
 * Malformed .zip package. The manifest.json file must be at the top level of the .zip file. Note that default Mac file compression might place the manifest.json in a subdirectory, which will not properly load in Microsoft Teams.
 
->**Note:** An issue with the [description.full](~/reference/schema/manifest-schema#developer) field in the manifest causes a loading error with a string longer than 256 characters.
+> [!NOTE]
+> An issue with the [description.full](~/reference/schema/manifest-schema#developer) field in the manifest causes a loading error with a string longer than 256 characters.
 
 ### Another extension with same ID "&lt;id&gt;" exists
 

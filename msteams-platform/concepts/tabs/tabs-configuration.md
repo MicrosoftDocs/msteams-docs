@@ -12,7 +12,8 @@ In this page, you present options and gather information from the user about wha
 
 You must include the [Microsoft Teams JavaScript client SDK](~/reference/library/client-sdk-javascript) in your configuration page so that it can communicate with Microsoft Teams.
 
->**Note:** The example here is solely to illustrate the concept. Your configuration page should have a clean UI that fits the appearance of the Microsoft Teams dialog box in which it appears.
+> [!NOTE]
+> The example here is solely to illustrate the concept. Your configuration page should have a clean UI that fits the appearance of the Microsoft Teams dialog box in which it appears.
 
 ![Screenshot of the configuration page for a simple example app, giving the user the option of which map type to select.](~/assets/images/tab_configui.png)
 
