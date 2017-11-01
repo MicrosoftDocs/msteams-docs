@@ -84,10 +84,6 @@
       href: ./reference/general/debug
     - name: Rate limiting
       href: ./reference/general/rate-limit
-  - name: Libraries
-    items:
-    - name: Client SDK reference
-      href: ./reference/library/client-sdk-javascript
   - name: Design guidelines
     href: ./reference/design/overview
     items:
