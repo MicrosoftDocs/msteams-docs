@@ -7,7 +7,7 @@ keywords: teams activity feed
 # Notify users through the activity feed in Microsoft Teams
 
 > [!NOTE]
-> Activity feed support is available only in the [Public Developer Preview](~/reference/general/developer-preview). Additionally, many features in this document are under construction and subject to change.
+> Activity feed support is available only in the [Public Developer Preview](~/resources/general/developer-preview). Additionally, many features in this document are under construction and subject to change.
 
 The activity feed in Microsoft Teams is the user's single inbox for all activity across Teams. The feed aggregates important content from the following:
 

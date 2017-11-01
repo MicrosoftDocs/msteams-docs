@@ -18,7 +18,7 @@ Content pages in Teams, regardless of scope or type, should follow the guideline
 
 ## Adding your tabbed content to your app package
 
-Define your static tab experience in the [`staticTabs`](~/reference/schema/manifest-schema#statictabs) block of the manifest.  
+Define your static tab experience in the [`staticTabs`](~/resources/schema/manifest-schema#statictabs) block of the manifest.  
 
 For more information on creating your app package, see [Create the package for your Microsoft Teams app](~/publishing/apps-package).
 
@@ -57,4 +57,4 @@ The `staticTabs` object allows you to specify one or more tabs, up to 16, with t
 
 ## Add static tab URLs to validDomains
 
-All URLs you add in static tabs must be referenced in the [`validDomains`](~/reference/schema/manifest-schema#validdomains) section of the manifest. Failure to do so could result in a blank tab. Please note that although you can use wildcards for subdomains, be sure to appropriately scope for only the content you control and expect in the tab experience. For example, `yourapp.onmicrosoft.com` is good, but `*.onmicrosoft.com` is not.
+All URLs you add in static tabs must be referenced in the [`validDomains`](~/resources/schema/manifest-schema#validdomains) section of the manifest. Failure to do so could result in a blank tab. Please note that although you can use wildcards for subdomains, be sure to appropriately scope for only the content you control and expect in the tab experience. For example, `yourapp.onmicrosoft.com` is good, but `*.onmicrosoft.com` is not.

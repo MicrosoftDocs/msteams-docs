@@ -21,17 +21,17 @@ keywords: teams authentication
 
 ---
 
-The tab [configuration](~/concepts/tabs/tabs-configuration) and [content](~/concepts/tabs/tabs-content) pages run in iframes. Azure Active Directory (Azure AD), and other identity providers that you may use, do not usually allow their sign-in and consent pages to be hosted within an iframe.  Because of this, your app needs to authenticate the user in a pop-up window. You must use the [Microsoft Teams JavaScript client SDK](~/reference/library/client-sdk-javascript) to do this, so that it works successfully in both the web and desktop apps for Microsoft Teams.
+The tab [configuration](~/concepts/tabs/tabs-configuration) and [content](~/concepts/tabs/tabs-content) pages run in iframes. Azure Active Directory (Azure AD), and other identity providers that you may use, do not usually allow their sign-in and consent pages to be hosted within an iframe.  Because of this, your app needs to authenticate the user in a pop-up window. You must use the [Microsoft Teams JavaScript client SDK](~/resources/library/client-sdk-javascript) to do this, so that it works successfully in both the web and desktop apps for Microsoft Teams.
 
 1. Add UI to your configuration or content page to enable the user to sign in when necessary. You should not drive the authentication pop-up without user action, because this is likely to trigger the browser's pop-up blocker.
 
-2. Add the domain of your authentication URL to the [`validDomains`](~/reference/schema/manifest-schema#validdomains) section of the manifest. Failure to do so might result in an empty pop-up.
+2. Add the domain of your authentication URL to the [`validDomains`](~/resources/schema/manifest-schema#validdomains) section of the manifest. Failure to do so might result in an empty pop-up.
 
 3. You can [get user context information](~/concepts/tabs/tabs-context) to help build authentication requests and URLs. For example, you can use the user's name (upn) as the `login_hint` value for Azure AD sign-in, which means the user might need to type less, or even that sign-in completes with no user action at all. Note that you should *not* use this context directly as proof of identity. For example, an attacker could load your page in a "malicious browser" and provide it with any information they want.
 
 4. When the user selects to sign in, call `microsoftTeams.authentication.authenticate({url: <auth URL>, width: <width>, height: <height>, successCallback: <successCallback>, failureCallback: <failureCallback>})`.
 	
-   This launches the pop-up window in which the authorization should occur. This page should be hosted on your domain and listed in the [`validDomains`](~/reference/schema/manifest-schema#validdomains) section of the manifest. Within this authorization page, you should redirect to your identity provider, so the user can sign in. After the user completes authentication, the pop-up window is redirected to the callback page you specified for your app.
+   This launches the pop-up window in which the authorization should occur. This page should be hosted on your domain and listed in the [`validDomains`](~/resources/schema/manifest-schema#validdomains) section of the manifest. Within this authorization page, you should redirect to your identity provider, so the user can sign in. After the user completes authentication, the pop-up window is redirected to the callback page you specified for your app.
    
 5. In your app's callback page, call `microsoftTeams.authentication.notifySuccess()` or `microsoftTeams.authentication.notifyFailure()`.
 	

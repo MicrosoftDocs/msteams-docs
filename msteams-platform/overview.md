@@ -33,11 +33,13 @@ In these docs, you'll find the information you need to bring your content, apps,
 | **Concepts** | Learn more about creating Teams apps, and find everything you need to know about the entire range of capabilities in Teams: tabs, bots, Connectors, compose extensions, and more. |
 | **Publishing** | Want to publish your Teams app in the Office Store? Look here for the steps and guidelines. |
 | **Scenarios** | Go deep into end-to-end scenarios. |
-| **Reference** | Find all those nitty-gritty details you need to build a Teams app, such as a design topic, an API, or a message structure. |
+| **Resources** | Find all those nitty-gritty details you need to build a Teams app, such as a design topic, or a manifest schema reference. |
 | **Troubleshooting** | If your app isn't behaving as expected, check here. |
 | **FAQ** | Everyone has them; here are our frequently asked questions. |
 | **Samples** | See how others created Teams apps. |
 | **Feedback** | Didn't find what you need? Let us know! |
+|--|--|
+| **SDK Reference** | Find all the specific details about all the elements in the SDK. |
 
 ---
 

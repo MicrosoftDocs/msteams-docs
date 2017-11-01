@@ -19,9 +19,9 @@ In this page, you present the main function of your tab, following our [design r
 
 ## Prerequisites for content displayed in your tab
 
-For your content to display within a Microsoft Teams tab, make sure it meets the [requirements for tab pages](~/reference/general/requirements).
+For your content to display within a Microsoft Teams tab, make sure it meets the [requirements for tab pages](~/resources/general/requirements).
 
->In summary: You must host your page on a secure HTTPS endpoint, ensure that your page permits itself to be iframed, include the [Microsoft Teams JavaScript client SDK](~/reference/library/client-sdk-javascript), and call `microsoftTeams.initialize()`.
+>In summary: You must host your page on a secure HTTPS endpoint, ensure that your page permits itself to be iframed, include the [Microsoft Teams JavaScript client SDK](~/resources/library/client-sdk-javascript), and call `microsoftTeams.initialize()`.
 
 ## Deep links to items within your content page
 

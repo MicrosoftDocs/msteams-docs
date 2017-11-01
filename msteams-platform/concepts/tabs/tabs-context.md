@@ -22,14 +22,14 @@ Context about the user, team or company can be especially useful when
 > [!IMPORTANT]
 > Although this user information can help provide a smooth user experience, you should *not* use it as proof of identity. For example, an attacker could you load your page in a "bad browser" and provide it with any information they want.
 
-To obtain this identifying information about the user, team, or company, you must add `identity` to the `permissions` object in your [manifest](~/reference/schema/manifest-schema#permissions). Doing so prompts the user for consent when they add your tab.
+To obtain this identifying information about the user, team, or company, you must add `identity` to the `permissions` object in your [manifest](~/resources/schema/manifest-schema#permissions). Doing so prompts the user for consent when they add your tab.
 
 ## Accessing context
 
 You can access context information in two ways:
 
 * Insert URL placeholder values
-* Use the [Microsoft Teams JavaScript client SDK](~/reference/library/client-sdk-javascript)
+* Use the [Microsoft Teams JavaScript client SDK](~/resources/library/client-sdk-javascript)
 
 ### Getting context by inserting URL placeholder values
 
@@ -58,7 +58,7 @@ When they select your tab, they will be navigated to
 
 ### Getting context by using the Microsoft Teams JavaScript library
 
-You can also retrieve the information listed above using the [Microsoft Teams JavaScript client SDK](~/reference/library/client-sdk-javascript) by calling `microsoftTeams.getContext(function(context) { /* ... */ })`.
+You can also retrieve the information listed above using the [Microsoft Teams JavaScript client SDK](~/resources/library/client-sdk-javascript) by calling `microsoftTeams.getContext(function(context) { /* ... */ })`.
 
 The context variable will look like the following example.
 

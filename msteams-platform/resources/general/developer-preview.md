@@ -26,4 +26,4 @@ Use the same menu item under Menu → About → Developer preview, and click on 
 
 ## What features will I have access to?
 
-See [Features in the Public Developer Preview](~/reference/general/developer-preview-features).
+See [Features in the Public Developer Preview](~/resources/general/developer-preview-features).

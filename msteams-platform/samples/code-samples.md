@@ -82,4 +82,4 @@ For Node.js projects, we provide a Visual Studio Code configuration file (launch
 
 ### Running and debugging
 
-For general information on running and debugging our samples, see [Run and debug your Microsoft Teams app](~/reference/general/debug).
+For general information on running and debugging our samples, see [Run and debug your Microsoft Teams app](~/resources/general/debug).

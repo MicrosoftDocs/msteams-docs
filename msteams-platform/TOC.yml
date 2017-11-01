@@ -73,60 +73,60 @@
   - name: General
     items:
     - name: Public Developer Preview
-      href: ./reference/general/developer-preview
+      href: ./resources/general/developer-preview
     - name: Features in Developer Preview
-      href: ./reference/general/developer-preview-features
+      href: ./resources/general/developer-preview-features
     - name: Requirements
-      href: ./reference/general/requirements
+      href: ./resources/general/requirements
     - name: Cross-domain redirects
-      href: ./reference/general/cross-domain
+      href: ./resources/general/cross-domain
     - name: Debugging
-      href: ./reference/general/debug
+      href: ./resources/general/debug
     - name: Rate limiting
-      href: ./reference/general/rate-limit
+      href: ./resources/general/rate-limit
   - name: Design guidelines
-    href: ./reference/design/overview
+    href: ./resources/design/overview
     items:
     - name: Framework
       items:
       - name: The basics
-        href: ./reference/design/framework/basics
+        href: ./resources/design/framework/basics
       - name: Apps
-        href: ./reference/design/framework/apps
+        href: ./resources/design/framework/apps
       - name: Activity feed
-        href: ./reference/design/framework/activity-feed
+        href: ./resources/design/framework/activity-feed
       - name: Search
-        href: ./reference/design/framework/search
+        href: ./resources/design/framework/search
       - name: Tabs
-        href: ./reference/design/framework/tabs
+        href: ./resources/design/framework/tabs
       - name: Compose extensions
-        href: ./reference/design/framework/compose-extensions
+        href: ./resources/design/framework/compose-extensions
       - name: Bots
-        href: ./reference/design/framework/bots
+        href: ./resources/design/framework/bots
       - name: Cards
-        href: ./reference/design/framework/cards
+        href: ./resources/design/framework/cards
       - name: Submitting your app
-        href: ./reference/design/framework/submitting
+        href: ./resources/design/framework/submitting
     - name: Components
       items:
       - name: Color
-        href: ./reference/design/components/color
+        href: ./resources/design/components/color
       - name: Buttons, links, and controls
-        href: ./reference/design/components/buttons
+        href: ./resources/design/components/buttons
       - name: Fields and flyouts
-        href: ./reference/design/components/fields
+        href: ./resources/design/components/fields
       - name: Dialogs
-        href: ./reference/design/components/dialogs
+        href: ./resources/design/components/dialogs
       - name: Typography
-        href: ./reference/design/components/typography
+        href: ./resources/design/components/typography
       - name: Themes
-        href: ./reference/design/components/themes
+        href: ./resources/design/components/themes
     - name: Resources
-      href: ./reference/design/resources
+      href: ./resources/design/resources
   - name: Manifest schema
-    href: ./reference/schema/manifest-schema
+    href: ./resources/schema/manifest-schema
   - name: Graph APIs
-    href: ./reference/microsoft-graph
+    href: ./resources/microsoft-graph
 - name: Troubleshooting
   href: ./troubleshoot/troubleshoot
 - name: FAQ
@@ -211,67 +211,67 @@
 #   - name: General
 #     items:
 #     - name: Crossdomain Redirects
-#       href: ./reference/general/crossdomain
+#       href: ./resources/general/crossdomain
 #     - name: Debugging
-#       href: ./reference/general/debugging
+#       href: ./resources/general/debugging
 #     - name: Prerequisites
-#       href: ./reference/general/prerequisites
+#       href: ./resources/general/prerequisites
 #     - name: Rate Limiting
-#       href: ./reference/general/ratelimiting
+#       href: ./resources/general/ratelimiting
 #   - name: Library
 #     items:
 #     - name: Client SDK Reference
-#       href: ./reference/library/ref-teams-js
+#       href: ./resources/library/ref-teams-js
 #     - name: .NET Server SDK Reference
-#       href: ./reference/library/ref-teams-csharp
+#       href: ./resources/library/ref-teams-csharp
 #     - name: Node.js Server SDK Reference
-#       href: ./reference/library/ref-teams-nodejs
+#       href: ./resources/library/ref-teams-nodejs
 #     - name: Python Server SDK Reference
-#       href: ./reference/library/ref-teams-python
+#       href: ./resources/library/ref-teams-python
 #   - name: Design Guidelines
 #     items:
 #     - name: Framework
 #       items:
 #       - name: The Basics
-#         href: ./reference/design/framework/basics
+#         href: ./resources/design/framework/basics
 #       - name: Apps
-#         href: ./reference/design/framework/apps
+#         href: ./resources/design/framework/apps
 #       - name: Activity Feed
-#         href: ./reference/design/framework/activity-feed
+#         href: ./resources/design/framework/activity-feed
 #       - name: Search
-#         href: ./reference/design/framework/search
+#         href: ./resources/design/framework/search
 #       - name: Tabs
-#         href: ./reference/design/framework/tabs
+#         href: ./resources/design/framework/tabs
 #       - name: Compose Extensions
-#         href: ./reference/design/framework/compose-extensions
+#         href: ./resources/design/framework/compose-extensions
 #       - name: Bots
-#         href: ./reference/design/framework/bots
+#         href: ./resources/design/framework/bots
 #       - name: Cards
-#         href: ./reference/design/framework/cards
+#         href: ./resources/design/framework/cards
 #       - name: Submitting Your App
-#         href: ./reference/design/framework/submitting
+#         href: ./resources/design/framework/submitting
 #     - name: Components
 #       items:
 #       - name: Color
-#         href: ./reference/design/components/color
+#         href: ./resources/design/components/color
 #       - name: Buttons, links and controls
-#         href: ./reference/design/components/buttons
+#         href: ./resources/design/components/buttons
 #       - name: Fields and Flyouts
-#         href: ./reference/design/components/fields
+#         href: ./resources/design/components/fields
 #       - name: Dialogs
-#         href: ./reference/design/components/dialogs
+#         href: ./resources/design/components/dialogs
 #       - name: Typography
-#         href: ./reference/design/components/typography
+#         href: ./resources/design/components/typography
 #       - name: Themes
-#         href: ./reference/design/components/themes
+#         href: ./resources/design/components/themes
 #     - name: Resources
-#       href: ./reference/design/resources
+#       href: ./resources/design/resources
 #   - name: Manifest Schema
 #     items:
 #     - name: Manifest Schema Reference
-#       href: ./reference/schema/schema
+#       href: ./resources/schema/schema
 #     - name: Migrating Your Manifest to v1.0
-#       href: ./reference/schema/schemamigrate
+#       href: ./resources/schema/schemamigrate
 # - name: Troubleshooting
 #   href: ./troubleshoot/index
 # - name: Samples

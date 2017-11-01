@@ -10,7 +10,7 @@ The configuration page is an HTML page that you host. When a user chooses to add
 
 In this page, you present options and gather information from the user about what they want in your tab. For example, you may let the user select existing app resources (such as files or task lists) or even create new such resources just for this tab.
 
-You must include the [Microsoft Teams JavaScript client SDK](~/reference/library/client-sdk-javascript) in your configuration page so that it can communicate with Microsoft Teams.
+You must include the [Microsoft Teams JavaScript client SDK](~/resources/library/client-sdk-javascript) in your configuration page so that it can communicate with Microsoft Teams.
 
 > [!NOTE]
 > The example here is solely to illustrate the concept. Your configuration page should have a clean UI that fits the appearance of the Microsoft Teams dialog box in which it appears.
@@ -77,7 +77,7 @@ function onClick() {
 
 ## Prerequisites for your configuration page
 
-For your configuration page to display within Microsoft Teams, ensure that it meets the [requirements for tab pages](~/reference/general/requirements).
+For your configuration page to display within Microsoft Teams, ensure that it meets the [requirements for tab pages](~/resources/general/requirements).
 
 >In summary: You must host your page on a secure HTTPS endpoint, ensure that your page permits itself to be iframed, include the Microsoft Teams JavaScript client SDK, and call `microsoftTeams.initialize()`.
 
@@ -103,7 +103,7 @@ Use `microsoftTeams.settings.setSettings({entityId, contentUrl, suggestedTabName
   * You can also use it to help obtain context when [displaying your content page](~/concepts/tabs/tabs-content) or when [updating or removing a tab](~/concepts/tabs/tabs-update-remove).
   * You can use the `contentUrl` as the `entityId` if you wish.
 * The `contentUrl` is a required field that specifies the URL of the content Microsoft Teams should host in the tab.
-  * Be sure you have added the `contentUrl` domain to the `validDomains` element in the tab manifest file. For more information, see [Microsoft Teams tab schema](~/reference/schema/manifest-schema) and [Redirecting across domains within a Microsoft Teams tab](~/reference/general/cross-domain).
+  * Be sure you have added the `contentUrl` domain to the `validDomains` element in the tab manifest file. For more information, see [Microsoft Teams tab schema](~/resources/schema/manifest-schema) and [Redirecting across domains within a Microsoft Teams tab](~/resources/general/cross-domain).
 *  The other parameters further customize how your tab works in Microsoft Teams:
 	* The optional `suggestedTabName` parameter sets the initial tab name. Users can rename the tab. The default value is the name specified in the manifest.
 	* The optional `websiteUrl` parameter sets where the user is taken if they choose the **Go to website** button. Typically, this is a link to the same content as displayed on the tab, but within your main web app with its regular chrome and navigation.
