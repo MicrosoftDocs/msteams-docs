@@ -6,16 +6,19 @@ keywords: teams activity feed
 
 # Notify users through the activity feed in Microsoft Teams
 
->**Note:** Activity feed support is available only in the [Public Developer Preview](~/reference/general/developer-preview). Additionally, many features in this document are under construction and subject to change.
+> [!NOTE]
+> Activity feed support is available only in the [Public Developer Preview](~/reference/general/developer-preview). Additionally, many features in this document are under construction and subject to change.
 
 The activity feed in Microsoft Teams is the user's single inbox for all activity across Teams. The feed aggregates important content from the following:
+
 * Teams/channels
 * Chats
 * Apps such as Files, Planner, and your Teams apps
 
 If your app posts cards and other messages into a channel, they'll automatically show up in the user's feed if he or she has followed that channel.
 
->**Note:** The following features are coming soon to the Public Developer Preview.
+> [!NOTE]
+> The following features are coming soon to the Public Developer Preview.
 
 Additionally, you can also send personal (1:1 chat) messages into the feed as preview cards summarizing your app's activity. You can construct the message such that choosing the card navigates the user straight to the message or object that triggered the notification, such as an entity in a tab. This allows the user to see the full content of the activity.
 
@@ -80,4 +83,5 @@ POST /v3/conversations/a%3A1pL6i0oY3C0K8oAj8/activities/1493070356924
 
 To navigate the user to content within your tab, your message must include an attachment with a tap action. This tap action should be of type `OpenUrl` and have a value that follows the Microsoft Teams [deep links](~/concepts/deep-links) format.
 
->**Note:** If the deep link does not follow the Teams format, choosing the notification in the feed navigates the user first to the chat with the bot. From there, the user can engage the attachment’s tap action to navigate to an external website.
+> [!NOTE]
+> If the deep link does not follow the Teams format, choosing the notification in the feed navigates the user first to the chat with the bot. From there, the user can engage the attachment’s tap action to navigate to an external website.

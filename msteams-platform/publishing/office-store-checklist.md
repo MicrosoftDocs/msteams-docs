@@ -21,7 +21,8 @@ The follow metadata is required in your manifest.json file and for Seller Dashbo
 
 ## Localized content
 
->**Note:** Microsoft Teams plans to support localized content for the following metadata. Currently, only English is supported for Teams apps.
+> [!NOTE]
+> Microsoft Teams plans to support localized content for the following metadata. Currently, only English is supported for Teams apps.
 
 |Data|Type|Size|Manifest|Seller Dashboard|Description|
 |---|---|---|---|---|---|
@@ -43,4 +44,5 @@ On your bot portal page, click the Publish button. In this dialog there are seve
 
 Fill in the information and choose **Save**.
 
->**Note:** You are not required to publish the bot to the Bot Framework bot directory.
+> [!NOTE]
+> You are not required to publish the bot to the Bot Framework bot directory.

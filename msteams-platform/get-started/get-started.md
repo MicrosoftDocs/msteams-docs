@@ -46,7 +46,8 @@ The Office 365 administrator might have to enable Microsoft Teams for your organ
 
 To develop and test apps, you need to enable them in Microsoft Teams, and also enable sideloading of external apps.
 
->**Note:** For multi-SKU tenants, **all** SKUs must enable these settings. If one SKU has not enabled this setting, the entire tenant is considered disabled.
+> [!NOTE]
+> For multi-SKU tenants, **all** SKUs must enable these settings. If one SKU has not enabled this setting, the entire tenant is considered disabled.
 
 1. [Sign in to Office 365](https://portal.office.com) with your administrator account.
 2. Select **Admin** to go to the Office 365 Admin Center.

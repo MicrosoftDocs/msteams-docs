@@ -3,7 +3,6 @@ title: Get started
 description: Get started building great apps in Microsoft Teams
 keywords: getting started microsoft teams
 ---
-
 # Code your Microsoft Teams app
 
 Because Microsoft Teams apps are composed web services, you can use any web-programming technology. For tabs, we provide a JavaScript library. For bots and compose extensions, we recommend you use either C# or Typescript to take advantage of our [SDK extensions](#microsoft-teams-extensions-for-the-bot-builder-sdk) for .NET and Node.js.
@@ -16,7 +15,8 @@ Tabs are simply iframe'd web content. You can leverage your existing web service
 
 Because your Teams bots and compose extensions are built on the [Microsoft Bot Framework](https://dev.botframework.com/), we recommend that you leverage the [Bot Builder SDK](https://docs.microsoft.com/en-us/bot-framework/resources-tools-downloads), available for .NET and for Node.js.
 
->**Note:** You can develop in any other web-programming technology and call the [Bot Framework REST APIs](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-overview) directly, but you must perform all token handling yourself.
+> [!NOTE]
+> You can develop in any other web-programming technology and call the [Bot Framework REST APIs](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-overview) directly, but you must perform all token handling yourself.
 
 ### Microsoft Teams extensions for the Bot Builder SDK
 

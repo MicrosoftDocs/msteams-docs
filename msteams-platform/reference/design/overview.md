@@ -5,11 +5,11 @@ keywords: teams design guidelines reference overview
 ---
 # Build with us
 
-Millions of people use Office 365 every day. Building for our platform puts your app at the center of all the action.
+Microsoft Teams is the hub for teamwork that is unifying the productivity experience for millions of Office 365 users. Building on our platform puts your app at the center of all that action. With the power of the Microsoft brand, our ecosystem gives you a powerful playground to innovate and profit from our app ecosystem. If you are developing within an enterprise you can be confident that our platform will provide you with the appropriate controls to publish your app to the right users within your company.
 
 ## Let's make teamwork happen
 
-Here’s everything you need to showcase your brand in Microsoft Teams.
+Let's walk you through the kinds of experiences you can build using Microsoft Teams as your development platform.
 
 [!include[Overview framework](~/includes/design/overview-fx.html)]
 

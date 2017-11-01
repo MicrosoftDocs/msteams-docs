@@ -18,7 +18,9 @@ We also provide Teams-specific .NET and Node.js [extensions for the Bot Builder 
 
 ### Where do I sign up to start building Teams apps?
 
-No prerequisites or additional development accounts are needed to start building apps for Microsoft Teams. Although you must have access to Microsoft Teams via an Office 365 subscription, no other sign-up or program access is required. You do need to create accounts for the Bot Framework if you build a bot and create a Dev Center account if you submit your app for publication.
+1. You must have access to Microsoft Teams via an Office 365 subscription
+2. If you are building a bot you must [create accounts for the Bot Framework](//dev.botframework.com/bots)
+3. App publishing requires you [register as a Microsoft app developer](//developer.microsoft.com/en-us/store/register)
 
 ## Bots
 

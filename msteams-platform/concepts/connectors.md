@@ -30,7 +30,8 @@ The Office 365 Connector card provides a flexible layout with multiple sections,
 
 Each Connector card can display a maximum of 10 sections; each section can contain a maximum of 5 images and 5 actions.
 
->**Note:** Any additional sections, images, or actions in a message do not appear.
+> [!NOTE]
+> Any additional sections, images, or actions in a message do not appear.
 
 All text fields support Markdown and HTML formatting. You can control which sections use Markdown or HTML by setting the `markdown` property in a message. By default, `markdown` is set to `true`; if you want to use HTML instead, set `markdown` to `false`.
 
@@ -172,7 +173,8 @@ The `ActionCard` action supports three input types:
 
 If you want a multiselect list initially displayed in the compact style, you must specify both `"isMultiSelect": true` and `"style": true`.
 
->**Note:** Specifying `compact` for the `style` property in Microsoft Teams is the same as specifying `normal` for the `style` property in Microsoft Outlook.
+> [!NOTE]
+> Specifying `compact` for the `style` property in Microsoft Teams is the same as specifying `normal` for the `style` property in Microsoft Outlook.
 
 For all other details about Connector card actions, see **[Actions](https://docs.microsoft.com/en-us/outlook/actionable-messages/card-reference#actions)** in the actionable message card reference.
 
@@ -205,7 +207,8 @@ To distribute your Connector, you need to register by using the [Connectors Deve
 
 <img alt="Screenshot of enabling the Connector for Microsoft Teams" src="images/Connectors/connector_developer_portal.png" height="185" width="336">
 
->**Important:** After you choose **Save** in the Connectors Developer Dashboard, your Connector is registered. Do not choose **Publish to Store** (which appears after you choose **Save**); if you want to publish your Connector in the Office Store, follow the instructions in [Publish your Microsoft Teams app to the Office Store](~/publishing/apps-publish).
+> [!IMPORTANT]
+> After you choose **Save** in the Connectors Developer Dashboard, your Connector is registered. Do not choose **Publish to Store** (which appears after you choose **Save**); if you want to publish your Connector in the Office Store, follow the instructions in [Publish your Microsoft Teams app to the Office Store](~/publishing/apps-publish).
 
 You can download the auto-generated Teams app manifest from the portal. Before you can use it to test or publish your app, though, you must do the following:
 
@@ -214,7 +217,8 @@ You can download the auto-generated Teams app manifest from the portal. Before y
 
 The following manifest.json file contains the basic elements needed to test and submit your app.
 
->**Note:** Replace `id` and `connectorId` in the following example with the GUID of your Connector.
+> [!NOTE]
+> Replace `id` and `connectorId` in the following example with the GUID of your Connector.
 
 #### Example manifest.json with Connector
 
@@ -270,6 +274,7 @@ To verify that an `HttpPOST` action is working correctly, use your [custom incom
 
 ## Publishing your app
 
->**Note:** Currently, we do not support users configuring your Connector externally via the **Connect to Office 365** button. Users must visit Microsoft Teams first to add a Connector.
+> [!NOTE]
+> Currently, we do not support users configuring your Connector externally via the **Connect to Office 365** button. Users must visit Microsoft Teams first to add a Connector.
 
 When your app is ready for submission, follow the process to [publish your app to the Office Store](~/publishing/apps-publish).

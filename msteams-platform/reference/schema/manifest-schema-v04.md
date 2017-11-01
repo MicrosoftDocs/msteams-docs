@@ -6,7 +6,8 @@ keywords: microsoft teams manifest schema reference v0.4
 
 # Reference: Manifest schema v0.4 for Microsoft Teams
 
->**Important:** This schema is included only as a reference to the v0.4 schema used before May 10, 2017. Although Microsoft Teams has backward compatibility support for this schema, new Teams apps must use the [newest schema version](~/reference/schema/manifest-schema). If you need to convert an app that uses the v0.4 schema, see [Migrate your v0.4 manifest to v1.0 in Microsoft Teams](~/reference/schema/manifest-schema-migrate).
+> [!IMPORTANT]
+> This schema is included only as a reference to the v0.4 schema used before May 10, 2017. Although Microsoft Teams has backward compatibility support for this schema, new Teams apps must use the [newest schema version](~/reference/schema/manifest-schema). If you need to convert an app that uses the v0.4 schema, see [Migrate your v0.4 manifest to v1.0 in Microsoft Teams](~/reference/schema/manifest-schema-migrate).
 
 The schema defines the following properties:
 

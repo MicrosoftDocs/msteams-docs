@@ -16,7 +16,8 @@ For purely local or local Teams testing, you run the experience from your own co
 
 In general, too, we recommend you utilize multiple manifests and packages to allow you to maintain separation between production and development services. For example, you might choose to register separate development and production bots and create appropriate packages to sideload them in your testing environment. We also recommend you sideload and test your production package before submitting to the Office Store or distributing to customers.
 
->**Note:** None of these testing solutions fully replicates the end-user experience for an app distributed through the Office Store, because the app installation process does some of the capability checks, such as scope, during installation.
+> [!NOTE]
+> None of these testing solutions fully replicates the end-user experience for an app distributed through the Office Store, because the app installation process does some of the capability checks, such as scope, during installation.
 
 ## Purely local
 
@@ -28,7 +29,8 @@ Our bot samples are designed to run unmodified within the Bot Emulator. This ena
   * .NET/C#: `http://localhost:3979/api/messages`
 * Leave the Microsoft app ID and Microsoft app password blank, to match the default environment variables.
 
->**Note:** Running this way does not give you access to Teams app functionality or Teams-specific bot functions like roster calls and other channel-specific functionality. In addition, some capabilities may be allowed by the Bot Framework in the Bot Emulator that might not function when running in Microsoft Teams.
+> [!NOTE]
+> Running this way does not give you access to Teams app functionality or Teams-specific bot functions like roster calls and other channel-specific functionality. In addition, some capabilities may be allowed by the Bot Framework in the Bot Emulator that might not function when running in Microsoft Teams.
 
 ## Locally hosted
 
@@ -41,7 +43,8 @@ Although you can use any tool of choice, we use and recommend [ngrok](https://ng
 
 This launches ngrok to listen on the port you specify. In return, it gives you an externally addressable URL, valid for as long as ngrok is running.
 
->**Note:** If you stop and restart ngrok, the URL changes.
+> [!NOTE]
+> If you stop and restart ngrok, the URL changes.
 
 To use ngrok in your project, and depending on the capabilities you are using, you must replace all URL references in your code, configuration, and/or manifest.json file to use this URL endpoint.
 
@@ -53,7 +56,8 @@ Please remember that any time you change values in the manifest.json, you need t
 
 You can use any externally addressable service to host your development and production code and their HTTPS endpoints. There is no expectation that your capabilities reside on the same service&mdash;it's your project, so it's up to you. We do require that all domains being accessed from your Microsoft Teams apps be listed in the [`validDomains`](~/reference/schema/manifest-schema#validdomains) object in the manifest.json file.
 
->**Note:** To ensure a secure environment, we urge you to be explicit about the exact domain and subdomains you reference&mdash;and those domains must be in your control. For example, `*.azurewebsites.net` would not be allowed, but `contoso.azurewebsites.net` would.
+> [!NOTE]
+> To ensure a secure environment, we urge you to be explicit about the exact domain and subdomains you reference&mdash;and those domains must be in your control. For example, `*.azurewebsites.net` would not be allowed, but `contoso.azurewebsites.net` would.
 
 ## Loading and running
 

@@ -3,10 +3,10 @@ title: Requirements for tab pages
 description: Requirements for building tab pages in Microsoft Teams
 keywords: teams requirements prerequisites tabs apps
 ---
-
 # Requirements for tab pages in Microsoft Teams
 
->**Important:** Use of the Microsoft Teams JavaScript client SDK is subject to the [Terms of Use](https://aka.ms/bf-terms), [Privacy Statement](https://aka.ms/bf-privacy), and [Code of Conduct](https://aka.ms/bf-conduct) for the Microsoft Bot Framework (Preview).
+> [!IMPORTANT]
+> Use of the Microsoft Teams JavaScript client SDK is subject to the [Terms of Use](https://aka.ms/bf-terms), [Privacy Statement](https://aka.ms/bf-privacy), and [Code of Conduct](https://aka.ms/bf-conduct) for the Microsoft Bot Framework (Preview).
 
 All tab content, including configuration, content, and tab-removal pages must meet the following requirements:
 
@@ -22,9 +22,10 @@ All tab content, including configuration, content, and tab-removal pages must me
 * After your page has successfully loaded, call `microsoftTeams.initialize()` to display your page. Microsoft Teams will not display your page unless you do so.
 * All domains for pages you display in your tabs must be listed in the manifest's `validDomains` list. See [validDomains](~/reference/schema/manifest-schema#validdomains) in the manifest schema reference for more information.
 
->Hitting problems? See the [troubleshooting guide](~/troubleshoot/troubleshoot).
-
->**Tip:** For developers using TypeScript, Microsoft Teams provides a [definition file](https://statics.teams.microsoft.com/sdk/v1.0/types/MicrosoftTeams.d.ts) to enable IntelliSense or similar support from your code editor as well as compile-time type checking as part of your build.
+> Hitting problems? See the [troubleshooting guide](~/troubleshoot/troubleshoot).
+>
+> [!TIP]
+> For developers using TypeScript, Microsoft Teams provides a [definition file](https://statics.teams.microsoft.com/sdk/v1.0/types/MicrosoftTeams.d.ts) to enable IntelliSense or similar support from your code editor as well as compile-time type checking as part of your build.
 
 ## Media format support for audio and video content
 

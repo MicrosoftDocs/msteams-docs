@@ -14,7 +14,8 @@ To add a bot to a team, you'll need to follow the [packaging](~/publishing/apps-
 
 Bots added to a team become another team member, who can be @mentioned as part of the conversation. In fact, bots only receive messages when they are @mentioned, so other conversations on the channel are not sent to the bot. 
 
->**Note:** For convenience when replying to bot messages in a channel, the bot name is prepended automatically.
+> [!NOTE]
+> For convenience when replying to bot messages in a channel, the bot name is prepended automatically.
 
 A bot in a channel should provide information relevant and appropriate for all members of the team.  While your bot can certainly provide any information relevant to the experience, keep in mind conversations with it are visible to all members of the channel.  Therefore, a great bot in a channel should add value to all users on the channel, and certainly not inadvertantly share information that would otherwise be more relevant in a personal context. 
 
@@ -47,7 +48,8 @@ Your team-added bot can post into a channel to create a reply chain. With the Bo
 
 Alternatively, you can issue a POST request to the [`/conversations/{conversationId}/activities/`](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-connector-send-and-receive-messages#send-message) resource.
 
-**Note:** At this point, bots in Microsoft Teams cannot initiate one-to-many or group conversations.
+ > [!NOTE]
+ > At this point, bots in Microsoft Teams cannot initiate one-to-many or group conversations.
 
 #### .NET example
 
@@ -108,7 +110,8 @@ for (int i = 0;i < m.Length;i++)
 }
 ```
 
->**Note:** You can also use the Teams extension function `GetTextWithoutMentions`, which strips out all mentions, including the bot.
+> [!NOTE]
+> You can also use the Teams extension function `GetTextWithoutMentions`, which strips out all mentions, including the bot.
 
 #### Node.js example code: Check for and strip @bot mention
 
@@ -123,7 +126,9 @@ if (message.entities) {
     text = text.trim();
 }
 ```
->**Note:** You can also use the Teams extension function `getTextWithoutMentions`, which strips out all mentions, including the bot.
+
+> [!NOTE]
+> You can also use the Teams extension function `getTextWithoutMentions`, which strips out all mentions, including the bot.
 
 ### Constructing mentions
 
@@ -134,7 +139,8 @@ Your bot can mention other users in messages posted into channels. To do this, y
 
 The [Teams extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) provide functionality to easily accomodate this.
 
->**Note**: At this time, team and channel mentions are not supported.
+> [!NOTE]
+> At this time, team and channel mentions are not supported.
 
 #### .NET example
 

@@ -10,7 +10,8 @@ To test your app experience within Microsoft Teams, you need to sideload your ap
 
 For bots designed only for 1:1 contexts, see [Adding a bot for 1:1 chat only](~/concepts/bots/bots-test#adding-a-bot-for-11-chat-only) for an alternate way to access for testing purposes.
 
->**Note:** Sideloading an updated package for an existing app with a bot might not show tab changes when viewed through the Conversations window. We recommend you access via the Apps fly-out, or test on a clean test environment.
+> [!NOTE]
+> Sideloading an updated package for an existing app with a bot might not show tab changes when viewed through the Conversations window. We recommend you access via the Apps fly-out, or test on a clean test environment.
 
 ## Create your sideload package
 
@@ -22,7 +23,8 @@ To create your sideload package, see [Create the package for your Microsoft Team
 
 With your package created, you can now load it into a team of your choosing. This adds the experience as an available integration for all users in the selected team.
 
->**Note:** For sideloading to work, your tenant admin must first [enable sideloading of apps](/microsoftteams/admin-settings).
+> [!NOTE]
+> For sideloading to work, your tenant admin must first [enable sideloading of apps](/microsoftteams/admin-settings).
 
 1. Create a new team for testing, if necessary. Click **Create team** at the bottom of the left-hand panel.
 
@@ -30,17 +32,19 @@ With your package created, you can now load it into a team of your choosing. Thi
 
    ![View team](~/assets/images/tab_view_team.png)
 
-   >**Note:** You must be the team owner, or the owner must allow users to add the appropriate app types for this functionality to appear.
+   > [!NOTE]
+   > You must be the team owner, or the owner must allow users to add the appropriate app types for this functionality to appear.
 
-3.	Select the Apps tab, and then choose **Sideload an app** on the lower right.
+3. Select the Apps tab, and then choose **Sideload an app** on the lower right.
 
-   >**Note**: This same flow works not only for bots but all other app extension types as well.
+   > [!NOTE]
+   > This same flow works not only for bots but all other app extension types as well.
 
    ![Sideload entry point](~/assets/images/sideloadentrypoint.png)
 
-4.	Browse to and select your .zip package from your computer.
+4. Browse to and select your .zip package from your computer.
 
-5.	You will see your sideloaded app in the list.
+5. You will see your sideloaded app in the list.
 
    ![Example of bot in list of sideloaded bots](~/assets/images/botinlist.jpg)
 
@@ -90,7 +94,8 @@ If you want to remove your app, select the trash-can icon next to the app name i
 
 If you change manifest information, you must first remove the app and then add the updated package (per [Load your package into a team](#load-your-package-into-a-team)). Note that, in general, code changes on your service do not require you to re-sideload your manifest, unless those changes require manifest updates (such as changes to the URL or the Microsoft app ID for its bot). 
 
->**Note:** There is currently no way to completely remove a bot from 1:1 context.
+> [!NOTE]
+> There is currently no way to completely remove a bot from 1:1 context.
 
 ## Troubleshooting notes
 
