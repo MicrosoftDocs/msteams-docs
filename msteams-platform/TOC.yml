@@ -68,6 +68,69 @@
     href: ./scenarios/bots-personal-conversations
   - name: Channel conversations with bots
     href: ./scenarios/bots-channel-conversations
+- name: Reference
+  items:
+  - name: General
+    items:
+    - name: Public Developer Preview
+      href: ./reference/general/developer-preview
+    - name: Features in Developer Preview
+      href: ./reference/general/developer-preview-features
+    - name: Requirements
+      href: ./reference/general/requirements
+    - name: Cross-domain redirects
+      href: ./reference/general/cross-domain
+    - name: Debugging
+      href: ./reference/general/debug
+    - name: Rate limiting
+      href: ./reference/general/rate-limit
+  - name: Libraries
+    items:
+    - name: Client SDK reference
+      href: ./reference/library/client-sdk-javascript
+  - name: Design guidelines
+    href: ./reference/design/overview
+    items:
+    - name: Framework
+      items:
+      - name: The basics
+        href: ./reference/design/framework/basics
+      - name: Apps
+        href: ./reference/design/framework/apps
+      - name: Activity feed
+        href: ./reference/design/framework/activity-feed
+      - name: Search
+        href: ./reference/design/framework/search
+      - name: Tabs
+        href: ./reference/design/framework/tabs
+      - name: Compose extensions
+        href: ./reference/design/framework/compose-extensions
+      - name: Bots
+        href: ./reference/design/framework/bots
+      - name: Cards
+        href: ./reference/design/framework/cards
+      - name: Submitting your app
+        href: ./reference/design/framework/submitting
+    - name: Components
+      items:
+      - name: Color
+        href: ./reference/design/components/color
+      - name: Buttons, links, and controls
+        href: ./reference/design/components/buttons
+      - name: Fields and flyouts
+        href: ./reference/design/components/fields
+      - name: Dialogs
+        href: ./reference/design/components/dialogs
+      - name: Typography
+        href: ./reference/design/components/typography
+      - name: Themes
+        href: ./reference/design/components/themes
+    - name: Resources
+      href: ./reference/design/resources
+  - name: Manifest schema
+    href: ./reference/schema/manifest-schema
+  - name: Graph APIs
+    href: ./reference/microsoft-graph
 - name: Troubleshooting
   href: ./troubleshoot/troubleshoot
 - name: FAQ
