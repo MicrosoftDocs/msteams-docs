@@ -38,7 +38,6 @@ In these docs, you'll find the information you need to bring your content, apps,
 | **FAQ** | Everyone has them; here are our frequently asked questions. |
 | **Samples** | See how others created Teams apps. |
 | **Feedback** | Didn't find what you need? Let us know! |
-|--|--|
 | **SDK Reference** | Find all the specific details about all the elements in the SDK. |
 
 ---
