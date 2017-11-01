@@ -6,7 +6,7 @@ keywords: teams compose extensions
 # Preview: Develop compose extensions for Microsoft Teams
 
 > [!IMPORTANT]
-> Compose extensions are available only in [Public Developer Preview](~/reference/general/developer-preview). Many details in this document are subject to change.
+> Compose extensions are available only in [Public Developer Preview](~/resources/general/developer-preview). Many details in this document are subject to change.
 >
 > [!NOTE]
 > The term "compose extensions" is provisional and might change. Until this feature is complete, we recommend not using the term in any customer-facing UI or communications.
@@ -41,7 +41,7 @@ Record your bot’s app ID and app password—you will need to supply the app ID
 
 ### Update your app manifest
 
-As with bots and tabs, you update the [manifest](~/reference/schema/manifest-schema#composeextensions) of your app to include the compose extension properties. These properties govern how your compose extension appears and behaves in the Microsoft Teams client. Compose extensions are supported beginning with v1.0 of the manifest.
+As with bots and tabs, you update the [manifest](~/resources/schema/manifest-schema#composeextensions) of your app to include the compose extension properties. These properties govern how your compose extension appears and behaves in the Microsoft Teams client. Compose extensions are supported beginning with v1.0 of the manifest.
 
 > [!NOTE]
 > The `canUpdateConfiguration` property is not yet included in the manifest schema. However, you can still test compose extensions that use `canUpdateConfiguration` by sideloading them.
@@ -413,11 +413,11 @@ To prompt an unauthenticated user to sign in, respond with a suggested action th
 ```
 
 > [!NOTE]
-> For the sign-in experience to be hosted in a Teams pop-up, the domain portion of the URL must be in your app’s list of valid domains. (See [validDomains](~/reference/schema/manifest-schema#validdomains) in the manifest schema.)
+> For the sign-in experience to be hosted in a Teams pop-up, the domain portion of the URL must be in your app’s list of valid domains. (See [validDomains](~/resources/schema/manifest-schema#validdomains) in the manifest schema.)
 
 ### Start the sign-in flow
 
-Your sign-in experience should be responsive and fit within a popup window. It should integrate with the [Microsoft Teams JavaScript client SDK](~/reference/library/client-sdk-javascript), which uses message passing.
+Your sign-in experience should be responsive and fit within a popup window. It should integrate with the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client), which uses message passing.
 
 As with other embedded experiences running inside Microsoft Teams, your code inside the window needs to first call `microsoftTeams.initialize()`. If your code performs an OAuth flow, you can pass the Teams user ID into your window, which then can pass it to the OAuth sign-in URL.
 

@@ -18,7 +18,7 @@ Tabs may also disappear during the roll out of a new process for sideloading tab
 
 If you are not seeing your content in the tab view, it could be:
 * your content cannot be displayed in an `<iframe>`.
-* the content domain is not in the [`validDomains`](~/reference/schema/manifest-schema#validdomains) list in the manifest.
+* the content domain is not in the [`validDomains`](~/resources/schema/manifest-schema#validdomains) list in the manifest.
 
 ### The Save button isn't enabled on the settings dialog
 
@@ -46,7 +46,7 @@ Common problems with the settings object:
 
 ### Can't authorize the user or display your auth provider in your tab
 
-Unless you are doing silent authentication, you must follow the authentication process provided by the [Microsoft Teams JavaScript client SDK](~/reference/library/client-sdk-javascript).
+Unless you are doing silent authentication, you must follow the authentication process provided by the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
 
 Also note: Due to changes introduced in July 2017, we require all authentication flow to start and end on your domain, which must be listed in the `validDomains` object in your manifest.
 
@@ -91,7 +91,7 @@ Common reasons for manifest read errors:
 * Malformed .zip package. The manifest.json file must be at the top level of the .zip file. Note that default Mac file compression might place the manifest.json in a subdirectory, which will not properly load in Microsoft Teams.
 
 > [!NOTE]
-> An issue with the [description.full](~/reference/schema/manifest-schema#developer) field in the manifest causes a loading error with a string longer than 256 characters.
+> An issue with the [description.full](~/resources/schema/manifest-schema#developer) field in the manifest causes a loading error with a string longer than 256 characters.
 
 ### Another extension with same ID "&lt;id&gt;" exists
 
