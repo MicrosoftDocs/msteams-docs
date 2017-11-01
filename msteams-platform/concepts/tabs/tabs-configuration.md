@@ -10,7 +10,7 @@ The configuration page is an HTML page that you host. When a user chooses to add
 
 In this page, you present options and gather information from the user about what they want in your tab. For example, you may let the user select existing app resources (such as files or task lists) or even create new such resources just for this tab.
 
-You must include the [Microsoft Teams JavaScript client SDK](~/resources/library/client-sdk-javascript) in your configuration page so that it can communicate with Microsoft Teams.
+You must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) in your configuration page so that it can communicate with Microsoft Teams.
 
 > [!NOTE]
 > The example here is solely to illustrate the concept. Your configuration page should have a clean UI that fits the appearance of the Microsoft Teams dialog box in which it appears.

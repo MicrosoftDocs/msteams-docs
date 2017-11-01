@@ -21,7 +21,7 @@ keywords: teams authentication
 
 ---
 
-The tab [configuration](~/concepts/tabs/tabs-configuration) and [content](~/concepts/tabs/tabs-content) pages run in iframes. Azure Active Directory (Azure AD), and other identity providers that you may use, do not usually allow their sign-in and consent pages to be hosted within an iframe.  Because of this, your app needs to authenticate the user in a pop-up window. You must use the [Microsoft Teams JavaScript client SDK](~/resources/library/client-sdk-javascript) to do this, so that it works successfully in both the web and desktop apps for Microsoft Teams.
+The tab [configuration](~/concepts/tabs/tabs-configuration) and [content](~/concepts/tabs/tabs-content) pages run in iframes. Azure Active Directory (Azure AD), and other identity providers that you may use, do not usually allow their sign-in and consent pages to be hosted within an iframe.  Because of this, your app needs to authenticate the user in a pop-up window. You must use the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) to do this, so that it works successfully in both the web and desktop apps for Microsoft Teams.
 
 1. Add UI to your configuration or content page to enable the user to sign in when necessary. You should not drive the authentication pop-up without user action, because this is likely to trigger the browser's pop-up blocker.
 

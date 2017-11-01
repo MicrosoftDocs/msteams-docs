@@ -23,7 +23,7 @@ You can enable users to select what happens to content when a tab is removed, by
 
 The removal options page is an HTML page that you host. When a user chooses to remove your tab, Microsoft Teams loads the `removeUrl` (that you provided when [configuring a tab](~/concepts/tabs/tabs-configuration)) in an iframe inside the **Remove tab** dialog box.
 
-You must include the [Microsoft Teams JavaScript client SDK](~/resources/library/client-sdk-javascript) in your removal options page so that it can communicate with Microsoft Teams. You might also need to use the [supplied context](~/concepts/tabs/tabs-context) to help display the correct content in this page.
+You must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) in your removal options page so that it can communicate with Microsoft Teams. You might also need to use the [supplied context](~/concepts/tabs/tabs-context) to help display the correct content in this page.
 
 > [!NOTE]
 > The example here is solely to illustrate the concept. Your removal options page should have a clean UI that fits the appearance of the Microsoft Teams dialog box in which it appears.

@@ -9,7 +9,7 @@ Because Microsoft Teams apps are composed web services, you can use any web-prog
 
 ## Coding your tab
 
-Tabs are simply iframe'd web content. You can leverage your existing web service, written in any language and hosted on any cloud platform, and simply include the [Microsoft Teams JavaScript client SDK](~/resources/library/client-sdk-javascript) in pages you display in Teams. This library provides methods for your tab and your authentication and configuration experiences.
+Tabs are simply iframe'd web content. You can leverage your existing web service, written in any language and hosted on any cloud platform, and simply include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) in pages you display in Teams. This library provides methods for your tab and your authentication and configuration experiences.
 
 ## Coding your bot and compose extension
 

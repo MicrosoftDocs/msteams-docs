@@ -29,7 +29,7 @@ To obtain this identifying information about the user, team, or company, you mus
 You can access context information in two ways:
 
 * Insert URL placeholder values
-* Use the [Microsoft Teams JavaScript client SDK](~/resources/library/client-sdk-javascript)
+* Use the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client)
 
 ### Getting context by inserting URL placeholder values
 
@@ -58,7 +58,7 @@ When they select your tab, they will be navigated to
 
 ### Getting context by using the Microsoft Teams JavaScript library
 
-You can also retrieve the information listed above using the [Microsoft Teams JavaScript client SDK](~/resources/library/client-sdk-javascript) by calling `microsoftTeams.getContext(function(context) { /* ... */ })`.
+You can also retrieve the information listed above using the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) by calling `microsoftTeams.getContext(function(context) { /* ... */ })`.
 
 The context variable will look like the following example.
 
