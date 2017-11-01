@@ -1,37 +1,50 @@
 {
-  "build": {
-    "content": [
-      {
-        "files": [
-          "**/*.md"
-        ],
-        "exclude": [
-          "**/obj/**",
-          "**/includes/**",
-          "README.md",
-          "LICENSE",
-          "LICENSE-CODE",
-          "ThirdPartyNotices"
-        ]
-      }
-    ],
-    "resource": [
-      {
-        "files": [
-          "**/*.png",
-          "**/*.jpg"
-        ],
-        "exclude": [
-          "**/obj/**",
-          "**/includes/**"
-        ]
-      }
-    ],
-    "overwrite": [],
-    "externalReference": [],
-    "globalMetadata": {},
-    "fileMetadata": {},
-    "template": [],
-    "dest": "msteams-platform"
-  }
+    "build": {
+        "content": [{
+            "files": [
+                "**/*.md",
+                "**/*.yml"
+            ],
+            "exclude": [
+                "**/obj/**",
+                "**/includes/**",
+                "**/_themes/**",
+                "**/_themes.pdf/**",
+                "README.md",
+                "LICENSE",
+                "LICENSE-CODE",
+                "ThirdPartyNotices"
+            ]
+        }],
+        "resource": [{
+            "files": [
+                "**/*.png",
+                "**/*.jpg",
+                "**/*.svg",
+                "assets/**/*.pdf"
+            ],
+            "exclude": [
+                "**/obj/**",
+                "**/includes/**"
+            ]
+        }],
+        "overwrite": [],
+        "externalReference": [],
+        "globalMetadata": {
+            "breadcrumb_path": "/microsoftteams/platform/breadcrumb/TOC.json",
+            "extendBreadcrumb": true,
+            "ms.topic": "article",
+            "author": "charlesprakash",
+            "ms.author": "o365devx",
+            "manager": "billbl",
+            "ms.suite": "office365",
+            "ms.prod": "msteams",
+            "searchScope": ["Teams"],
+            "ms.date": "10/05/2017",
+            "titleSuffix": "Teams"
+        },
+        "fileMetadata": {},
+        "template": [],
+        "dest": "msteams-platform"
+    }
 }
