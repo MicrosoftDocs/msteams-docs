@@ -5,6 +5,10 @@ keywords: getting started node.js nodejs
 ---
 # Get started on the Microsoft Teams platform with Node.js
 
+> [!div class="op_single_selector"]
+> - [.NET](~/get-started/get-started-dotnet)
+> - [Node.js](~/get-started/get-started-nodejs)
+
 [!include[Step 1 Intro](~/includes/get-started/step1-intro.md)]
 
 This tutorial helps you get started with creating a Microsoft Teams app using Node.js. You can test the app by loading it into a 'Team' you have permissions for, or into a test tenant created using the Office Developer Program.

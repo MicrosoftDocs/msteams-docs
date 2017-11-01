@@ -5,5 +5,8 @@ keywords: getting started .net c# csharp
 ---
 # Get started on the Microsoft Teams platform with .NET and C#
 
-Coming soon ...
+> [!div class="op_single_selector"]
+> - [.NET](~/get-started/get-started-dotnet)
+> - [Node.js](~/get-started/get-started-nodejs)
 
+Coming soon ...
