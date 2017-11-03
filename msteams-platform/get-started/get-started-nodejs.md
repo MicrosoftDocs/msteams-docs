@@ -20,7 +20,7 @@ The steps to get started at a glance are as follows:
 > * Get prerequisites
 > * Download the sample
 > * Build and run the sample
-> * Host the sample, either locally or on Azure (**plug the local app to ngrok or push to Azure**)
+> * Host the sample, either locally or on Azure
 > * Deploy the sample app into Microsoft Teams platform (**by this time the manifest would be generated and they should be able to sideload the app**)
 > * Configure the content visible in your app (**configure the content visible on the tab; TBD**)
 
@@ -66,10 +66,10 @@ b813d12980308015bcd2b3a2f6efa5c810c33ba5
 
 ## Download the sample
 
-We have provided a simple 'Hello, World!' sample to get you started with your app. In a terminal window, run the following command to clone the sample repository to your local machine:
+We have provided a [simple 'Hello, World!' sample](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) to get you started with your app. In a terminal window, run the following command to clone the sample repository to your local machine:
 
 ```bash
-git clone https://github.com/OfficeDev/msteams-nodejs-hello-world
+git clone https://github.com/OfficeDev/msteams-samples-hello-world-nodejs
 ```
 
 ## Build and run the sample
@@ -77,7 +77,7 @@ git clone https://github.com/OfficeDev/msteams-nodejs-hello-world
 Once the repo is cloned, change to the directory where you cloned the sample to:
 
 ```bash
-cd msteams-nodejs-hello-world
+cd msteams-samples-hello-world-nodejs
 ```
 
 You can use this terminal window to run the commands that follow in this tutorial.
