@@ -127,7 +127,16 @@ To get your Node.js app hosted in Azure, you can follow the guide here: [Create 
 
 ### Tunneling using ngrok
 
-[`ngrok`](https://ngrok.com) is a free tool
+If for some reason you are not able to host your app in Azure, you can keep running the app on your local machine and create a tunnel to it through a web endpoint. [`ngrok`](https://ngrok.com) is a free tool that lets you do just that. With `ngrok` you can get a web address such as `https://d0ac14a5.ngrok.io` (this URL is just an example only). You can [download and install](https://ngrok.com/download) <pre>ngrok</pre> for your environment and once install it, you can run the following command to create a tunnel.
+
+```bash
+ngrok http 3333
+```
+
+This will output the forwarding addresses on your console and `ngrok` will keep listening to requests and will route them to your app running on port 3333. You can verify by opening your browser and going to `https://d0ac14a5.ngrok.io/hello` (please note to use the forwarding address printed on your console here) to load our hello page.
+
+> [!NOTE]
+> If you have used a different port in the [build and run](#build-and-run-the-sample) step above, make sure you use the same port number to setup the ngrok tunnel.
 
 <!--
 > [!div class="nextstepaction"]
