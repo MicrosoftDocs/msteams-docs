@@ -39,26 +39,34 @@ To complete this tutorial, you need to get the following prerequisites:
 
 * [Install Git](https://git-scm.com/downloads)
 * [Install Node.js and NPM](https://nodejs.org/)
+* Get any text editor. You can install and use [Visual Studio Code](https://code.visualstudio.com/download) for free.
 
-If you see options to add `git`, `node` and `npm` to the PATH during installation, choose to do so. It will be handy.
+If you see options to add `git`, `node`, `npm`, and `code` to the PATH during installation, choose to do so. It will be handy.
 
 Verify your installation by running the following in a terminal window:
 
 ```bash
-git --version
+$ git --version
+git version 2.15.0.windows.1
+
+$ node -v
+v6.11.4
+
+$ npm -v
+5.5.1
 ```
 
-```bash
-node -v
-```
+If you have installed Visual Studio Code, you can verify the installation by running:
 
 ```bash
-npm -v
+$ code --version
+1.17.2
+b813d12980308015bcd2b3a2f6efa5c810c33ba5
 ```
 
 ## Download the sample
 
-In a terminal window, run the following command to clone the sample repository to your local machine:
+We have provided a simple 'Hello, World!' sample to get you started with your app. In a terminal window, run the following command to clone the sample repository to your local machine:
 
 ```bash
 git clone https://github.com/OfficeDev/msteams-nodejs-hello-world
@@ -101,7 +109,7 @@ At this point, you can open a browser window and navigate to the following URLs 
 
 ## Host the sample app
 
-Remember apps in Microsoft Teams are web applications exposing one or more capabilities? For the Teams platform to load your app, your app must be reachable from the internet. To make your app reachable from the internet, you need to host your app. You can either host it in Microsoft Azure for free or create a tunnel to the local process run using ngrok.
+Remember apps in Microsoft Teams are web applications exposing one or more capabilities? For the Teams platform to load your app, your app must be reachable from the internet. To make your app reachable from the internet, you need to host your app. You can either host it in Microsoft Azure for free or create a tunnel to the local process using ngrok.
 
 ### Hosting in Azure
 
@@ -115,9 +123,11 @@ To get your Node.js app hosted in Azure, you can follow the guide here: [Create 
 
 > [!NOTE]
 > You would skip the steps to clone the repo from the guide above, because we already are working with a Node.js sample app for Microsoft Teams.
-> For your convenience, the link above takes you directly to the location where you should start from to host your app in Azure.
+> For your convenience, the link above takes you directly to the location where you should start from, to host your app in Azure.
 
 ### Tunneling using ngrok
+
+[`ngrok`](https://ngrok.com) is a free tool
 
 <!--
 > [!div class="nextstepaction"]
