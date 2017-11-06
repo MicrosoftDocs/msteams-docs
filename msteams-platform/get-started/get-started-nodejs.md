@@ -72,6 +72,9 @@ We have provided a [simple 'Hello, World!' sample](https://github.com/OfficeDev/
 git clone https://github.com/OfficeDev/msteams-samples-hello-world-nodejs
 ```
 
+> [!TIP]
+> You can [fork](https://help.github.com/articles/fork-a-repo/) this [repo](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) if you want to modify and checkin your changes to GitHub for future reference.
+
 ## Build and run the sample
 
 Once the repo is cloned, change to the directory where you cloned the sample to:
@@ -109,7 +112,7 @@ At this point, you can open a browser window and navigate to the following URLs 
 
 ## Host the sample app
 
-Remember apps in Microsoft Teams are web applications exposing one or more capabilities? For the Teams platform to load your app, your app must be reachable from the internet. To make your app reachable from the internet, you need to host your app. You can either host it in Microsoft Azure for free or create a tunnel to the local process using ngrok.
+Remember apps in Microsoft Teams are web applications exposing one or more capabilities? For the Teams platform to load your app, your app must be reachable from the internet. To make your app reachable from the internet, you need to host your app. You can either host it in Microsoft Azure for free or create a tunnel to the local process using ngrok. When you finish hosting your app either in Azure or tunnel it through ngrok, please make a note of the root URL of your app - e.g. `https://yourteamsapp.azurewebsites.net`.
 
 ### Hosting in Azure
 
@@ -125,18 +128,34 @@ To get your Node.js app hosted in Azure, you can follow the guide here: [Create 
 > You would skip the steps to clone the repo from the guide above, because we already are working with a Node.js sample app for Microsoft Teams.
 > For your convenience, the link above takes you directly to the location where you should start from, to host your app in Azure.
 
+Once you host your app in Azure, you can verify by opening your browser and going to `https://yourteamsapp.azurewebsites.net` (please be sure to use the right endpoint from your Azure App Service instead of this URL) to load your app's hello page.
+
 ### Tunneling using ngrok
 
-If for some reason you are not able to host your app in Azure, you can keep running the app on your local machine and create a tunnel to it through a web endpoint. [`ngrok`](https://ngrok.com) is a free tool that lets you do just that. With `ngrok` you can get a web address such as `https://d0ac14a5.ngrok.io` (this URL is just an example only). You can [download and install](https://ngrok.com/download) <pre>ngrok</pre> for your environment and once install it, you can run the following command to create a tunnel.
+If for some reason you are not able to host your app in Azure, you can keep running the app on your local machine and create a tunnel to it through a web endpoint. [`ngrok`](https://ngrok.com) is a free tool that lets you do just that. With `ngrok` you can get a web address such as `https://d0ac14a5.ngrok.io` (this URL is just an example only). You can [download and install](https://ngrok.com/download) 'ngrok' for your environment and once you install it, you can run the following command to create a tunnel.
 
 ```bash
 ngrok http 3333
 ```
 
-This will output the forwarding addresses on your console and `ngrok` will keep listening to requests and will route them to your app running on port 3333. You can verify by opening your browser and going to `https://d0ac14a5.ngrok.io/hello` (please note to use the forwarding address printed on your console here) to load our hello page.
+This will output the forwarding addresses on your console and `ngrok` will keep listening to requests and will route them to your app running on port 3333. You can verify by opening your browser and going to `https://d0ac14a5.ngrok.io/hello` (please be sure to use the forwarding address displayed on your console instead of this URL) to load your app's hello page.
 
 > [!NOTE]
 > If you have used a different port in the [build and run](#build-and-run-the-sample) step above, make sure you use the same port number to setup the ngrok tunnel.
+
+## Deploying your app to Microsoft Teams
+
+After hosting your app, you need to do a few updates to your manifest before you are ready to deploy your app to your Microsoft Teams environment.
+
+### The App Manifest
+
+The app manifest is a file that tells the Microsoft Teams platform all about your app and the capabilities it provides your users. We will get more into the apps and their capabilities later on [here](~/concepts/apps/apps-overview), but for now we will learn the modifications we need to do to our manifest file so we can load our app in Microsoft Teams.
+
+You can find your manifest file located at `src/manifest.json` within the sample you cloned. Please follow the below steps to make the appropriate changes:
+
+### Step 1: Change the APP ID
+
+You need a unique APP ID for your app to be distinguished from others in the Microsoft Teams platform. Your manifest 
 
 <!--
 > [!div class="nextstepaction"]
