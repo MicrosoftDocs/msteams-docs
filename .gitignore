@@ -7,3 +7,6 @@ _repo.*/
 _dependentPackages/
 
 .openpublishing.buildcore.ps1
+
+# Dependent repos
+_msteams-samples-hello-world-nodejs/

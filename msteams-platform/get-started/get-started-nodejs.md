@@ -157,7 +157,7 @@ You can find your manifest file located at `src/manifest.json` within the sample
 
 You need a unique **ID** for your app to be distinguished from others in the Microsoft Teams platform. This **APP ID** is typically a `GUID` and is set in the app manifest file. You can edit the manifest file in the sample you downloaded.
 
-[!code-json[Manifest file](~/../msteams-samples-hello-world-nodejs/src/manifest.json#L1-L12)]
+[!code-json[Manifest file](//github.com/OfficeDev/msteams-samples-hello-world-nodejs/src/manifest.json#L1-L12)]
 
 <!--
 > [!div class="nextstepaction"]
