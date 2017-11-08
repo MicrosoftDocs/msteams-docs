@@ -39,6 +39,11 @@
             "url": "https://github.com/Microsoft/templates.docs.msft",
             "branch": "master",
             "branch_mapping": {}
+        },
+        {
+            "path_to_root": "msteams-samples-hello-world-nodejs",
+            "url": "https://github.com/OfficeDev/msteams-samples-hello-world-nodejs",
+            "branch": "master"
         }
     ],
     "dependent_packages": [

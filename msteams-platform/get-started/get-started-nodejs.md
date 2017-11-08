@@ -147,7 +147,7 @@ This will output the forwarding addresses on your console and `ngrok` will keep 
 
 After hosting your app, you need to do a few updates to your manifest before you are ready to deploy your app to your Microsoft Teams environment.
 
-### The App Manifest
+### The app manifest
 
 The app manifest is a file that tells the Microsoft Teams platform all about your app and the capabilities it provides your users. We will get more into the apps and their capabilities later on [here](~/concepts/apps/apps-overview), but for now we will learn the modifications we need to do to our manifest file so we can load our app in Microsoft Teams.
 
@@ -155,7 +155,9 @@ You can find your manifest file located at `src/manifest.json` within the sample
 
 ### Step 1: Change the APP ID
 
-You need a unique APP ID for your app to be distinguished from others in the Microsoft Teams platform. Your manifest 
+You need a unique **ID** for your app to be distinguished from others in the Microsoft Teams platform. This **APP ID** is typically a `GUID` and is set in the app manifest file. You can edit the manifest file in the sample you downloaded.
+
+[!code-json[Manifest file](~/msteams-samples-hello-world-nodejs/src/manifest.json#L3-L12)]
 
 <!--
 > [!div class="nextstepaction"]
