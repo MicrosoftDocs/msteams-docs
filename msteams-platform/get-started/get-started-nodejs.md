@@ -159,6 +159,24 @@ You need a unique **ID** for your app to be distinguished from others in the Mic
 
 [!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L1-L12)]
 
+### Step 2: Change the URLs
+
+Change the URLs in the manifest. See below.
+
+[!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L26-L57)]
+
+### Sideload the app
+
+Once you update the manifest, you can rebuild the sample. This will generate a file `helloworldapp.zip` in the `dist` directory within the root of the repo. You can upload this zip file to Microsoft Teams to install your app into Teams.
+
+... show where it is to be uploaded; prbably screenshots or more detailed explanation ... or both ...
+
+## Configure the content
+
+When you install an app in Microsoft Teams, you can install the app for a specific team and then configure what content from your app is made visible in the team/channel the app is installed in.
+
+## Add a bot to your app
+
 <!--
 > [!div class="nextstepaction"]
 > [Move to the next step](get-started-step2)
