@@ -41,7 +41,7 @@
             "branch_mapping": {}
         },
         {
-            "path_to_root": "msteams-samples-hello-world-nodejs",
+            "path_to_root": "_msteams-samples-hello-world-nodejs",
             "url": "https://github.com/OfficeDev/msteams-samples-hello-world-nodejs",
             "branch": "master"
         }
