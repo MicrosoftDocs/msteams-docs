@@ -11,7 +11,7 @@
                 "**/_themes/**",
                 "**/_themes.pdf/**",
                 "**/_dependentPackages/**",
-                "**/_msteams-samples-hello-world-nodejs/**",
+                "**/_msteams-samples-*/**",
                 "README.md",
                 "LICENSE",
                 "LICENSE-CODE",
