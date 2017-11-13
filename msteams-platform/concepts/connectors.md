@@ -188,16 +188,30 @@ Follow these steps to see how to send a simple card to a Connector.
 4. Copy the webhook to the clipboard and save it. You'll need the webhook URL for sending information to Microsoft Teams.
 5. Choose **Done**.
 
-### Post a message to the webhook
+### Post a message to the webhook using cURL
 
 The following steps use [cURL](https://curl.haxx.se/). We assume that you have this installed and are familiar with its basic usage.
 
 1. From the command line, enter the following cURL command:
 
-   `curl -H "Content-Type: application/json" -d "{\"text\": \"Hello World!\"}" <YOUR WEBHOOK URL>`
+   ```bash
+   curl -H "Content-Type: application/json" -d "{\"text\": \"Hello World!\"}" <YOUR WEBHOOK URL>
+   ```
 
-2. If the POST succeeds, you should see a simple **1** output by cURL.
+2. If the POST succeeds, you should see a simple **1** output by `curl`.
 3. Check the Microsoft Team client. You should see the new card posted to the team.
+
+### Post a message to the webhook using PowerShell
+
+The following steps use PowerShell. We assume that you have this installed and are familiar with its basic usage.
+
+1. From the PowerShell prompt, enter the following command:
+
+   ```powershell
+   Invoke-RestMethod -Method post -ContentType 'Application/Json' -Body '{"text":"Hello World!"}' -Uri <YOUR WEBHOOK URL>
+   ```
+2. If the POST succeeds, you should see a simple **1** output by `Invoke-RestMethod`.
+3. Check the Microsoft Teams channel associated with the webhook URL. You should see the new card posted to the channel.
 
 ## Registering your Connector
 
@@ -205,7 +219,7 @@ With Microsoft Teams apps, you can distribute your registered Connector as part 
 
 To distribute your Connector, you need to register by using the [Connectors Developer Dashboard](https://go.microsoft.com/fwlink/?LinkID=780623). To have your Connector work in Microsoft Teams, select **Microsoft Teams** under **Enable this integration for**.
 
-<img alt="Screenshot of enabling the Connector for Microsoft Teams" src="images/Connectors/connector_developer_portal.png" height="185" width="336">
+<img alt="Screenshot of enabling the Connector for Microsoft Teams" src="~/assets/images/connectors/connector_developer_portal.png" height="185" width="336">
 
 > [!IMPORTANT]
 > After you choose **Save** in the Connectors Developer Dashboard, your Connector is registered. Do not choose **Publish to Store** (which appears after you choose **Save**); if you want to publish your Connector in the Office Store, follow the instructions in [Publish your Microsoft Teams app to the Office Store](~/publishing/apps-publish).
