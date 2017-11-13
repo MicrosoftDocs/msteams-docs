@@ -177,6 +177,20 @@ When you install an app in Microsoft Teams, you can install the app for a specif
 
 ## Add a bot to your app
 
+1. Install `botbuilder-teams` npm package:
+
+```npm
+npm install --save botbuilder-teams
+```
+
+2. Create a `bot.js` file in the `src` directory, with the following code:
+
+[!code-javascript[Bot Code](~/../_msteams-samples-hello-world-nodejs_add-a-bot/src/bot.js)]
+
+3. Add the following code to your `app.js` file in the same directory:
+
+[!code-javascript[Adding a bot to app](~/../_msteams-samples-hello-world-nodejs_add-a-bot/src/app.js#L35-L37)]
+
 <!--
 > [!div class="nextstepaction"]
 > [Move to the next step](get-started-step2)
