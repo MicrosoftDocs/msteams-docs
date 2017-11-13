@@ -61,7 +61,7 @@ For more information on sideloading, see [Sideloading your app in a team](~/conc
 
 ## 4. Enable Public Developer Preview for your tenant (optional) 
 
-We'll be rolling out extensibility features for developers to try before they roll out to end users. It's easy to opt in or out, on demand. See [Public Developer Preview](~/reference/general/developer-preview) for more information.
+We'll be rolling out extensibility features for developers to try before they roll out to end users. It's easy to opt in or out, on demand. See [Public Developer Preview](~/resources/general/developer-preview) for more information.
 
 This is an optional feature and is not required for app development.
 
@@ -84,7 +84,7 @@ With those steps out of the way, you're ready to focus on creating your app.
 
 * [Create package](~/publishing/apps-package)
 * [Sideload](~/concepts/apps/apps-sideload) in Teams
-* [Test functionality](~/reference/general/debug)
+* [Test functionality](~/resources/general/debug)
 
 ### Publish your app and drive engagement
 

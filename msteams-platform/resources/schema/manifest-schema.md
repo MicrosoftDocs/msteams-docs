@@ -7,7 +7,7 @@ keywords: teams manifest schema
 # Reference: Manifest schema for Microsoft Teams
 
 > [!NOTE]
-> For help on migrating your v0.4 manifest to v1.0, see our [migration guide](~/reference/schema/manifest-schema-migrate).
+> For help on migrating your v0.4 manifest to v1.0, see our [migration guide](~/resources/schema/manifest-schema-migrate).
 
 The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://statics.teams.microsoft.com/sdk/v1.0/manifest/MicrosoftTeams.schema.json`](https://statics.teams.microsoft.com/sdk/v1.0/manifest/MicrosoftTeams.schema.json).
 
@@ -270,7 +270,7 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 
 ### bots: commandLists
 
->[Public Developer Preview only](~/reference/general/developer-preview)
+>[Public Developer Preview only](~/resources/general/developer-preview)
 
 An optional list of commands that your bot can recommend to users. The object is an array (maximum of 2 elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. See [Bot menus](~/concepts/bots/bots-menus) for more information.
 
@@ -283,7 +283,7 @@ An optional list of commands that your bot can recommend to users. The object is
 
 *Optional*
 
->[Public Developer Preview](~/reference/general/developer-preview) only
+>[Public Developer Preview](~/resources/general/developer-preview) only
 
 The `connectors` block defines an Office 365 Connector for the app.
 
@@ -298,7 +298,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 
 *Optional*
 
->[Public Developer Preview](~/reference/general/developer-preview) only
+>[Public Developer Preview](~/resources/general/developer-preview) only
 
 Defines a compose extension for the app.
 

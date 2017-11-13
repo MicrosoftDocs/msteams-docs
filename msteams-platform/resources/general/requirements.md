@@ -15,12 +15,12 @@ All tab content, including configuration, content, and tab-removal pages must me
   * Set header `Content-Security-Policy: frame-ancestors teams.microsoft.com *.teams.microsoft.com *.skype.com`. Most modern browsers support this.
     * For Internet Explorer 11 compatability, set `X-Content-Security-Policy` as well.
   * Alternatively, set header `X-Frame-Options: ALLOW-FROM https://teams.microsoft.com/`. This header is deprecated but still respected by most browsers.
-* Include the [Microsoft Teams JavaScript client SDK](~/reference/library/client-sdk-javascript) in your page as a script source.
+* Include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) in your page as a script source.
 
   `<script src="https://statics.teams.microsoft.com/sdk/v1.0/js/MicrosoftTeams.min.js" />`
 
 * After your page has successfully loaded, call `microsoftTeams.initialize()` to display your page. Microsoft Teams will not display your page unless you do so.
-* All domains for pages you display in your tabs must be listed in the manifest's `validDomains` list. See [validDomains](~/reference/schema/manifest-schema#validdomains) in the manifest schema reference for more information.
+* All domains for pages you display in your tabs must be listed in the manifest's `validDomains` list. See [validDomains](~/resources/schema/manifest-schema#validdomains) in the manifest schema reference for more information.
 
 > Hitting problems? See the [troubleshooting guide](~/troubleshoot/troubleshoot).
 >

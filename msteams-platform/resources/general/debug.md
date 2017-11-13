@@ -54,7 +54,7 @@ Please remember that any time you change values in the manifest.json, you need t
 
 ## Cloud-hosted
 
-You can use any externally addressable service to host your development and production code and their HTTPS endpoints. There is no expectation that your capabilities reside on the same service&mdash;it's your project, so it's up to you. We do require that all domains being accessed from your Microsoft Teams apps be listed in the [`validDomains`](~/reference/schema/manifest-schema#validdomains) object in the manifest.json file.
+You can use any externally addressable service to host your development and production code and their HTTPS endpoints. There is no expectation that your capabilities reside on the same service&mdash;it's your project, so it's up to you. We do require that all domains being accessed from your Microsoft Teams apps be listed in the [`validDomains`](~/resources/schema/manifest-schema#validdomains) object in the manifest.json file.
 
 > [!NOTE]
 > To ensure a secure environment, we urge you to be explicit about the exact domain and subdomains you reference&mdash;and those domains must be in your control. For example, `*.azurewebsites.net` would not be allowed, but `contoso.azurewebsites.net` would.

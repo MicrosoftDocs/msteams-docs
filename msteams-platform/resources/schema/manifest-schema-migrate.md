@@ -6,7 +6,7 @@ keywords: teams manifest migrate v0.4 v1.0
 
 # Migrate your v0.4 manifest to v1.0 in Microsoft Teams
 
-To support Microsoft Teams apps, we made significant changes in our manifest. If you've already built your app on the [v0.4 manifest](~/reference/schema/manifest-schema-v04), here are a few tips to help in conversion:
+To support Microsoft Teams apps, we made significant changes in our manifest. If you've already built your app on the [v0.4 manifest](~/resources/schema/manifest-schema-v04), here are a few tips to help in conversion:
 
 |v0.4 object| v1.0 object| comments|
 |---|---|---|

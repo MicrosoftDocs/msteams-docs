@@ -15,4 +15,4 @@ Let's walk you through the kinds of experiences you can build using Microsoft Te
 
 ## Ready to get started
 
-The framework page has all the information you need to build for our platform. [Get Started](~/reference/design/framework/basics).
+The framework page has all the information you need to build for our platform. [Get Started](~/resources/design/framework/basics).

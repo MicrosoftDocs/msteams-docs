@@ -6,7 +6,7 @@ keywords: teams preview developer features
 
 # Features in the Public Developer Preview for Microsoft Teams
 
-The following are available to users of the Public Developer Preview ring. See [What is the Public Developer Preview for Microsoft Teams?](~/reference/general/developer-preview) for more information on enabling it for your development tenant.
+The following are available to users of the Public Developer Preview ring. See [What is the Public Developer Preview for Microsoft Teams?](~/resources/general/developer-preview) for more information on enabling it for your development tenant.
 
 The following features are available in the Public Developer Preview as of August 25, 2017.
 
