@@ -1,33 +1,11 @@
 ---
-title: Sample applications
+title: Microsoft Teams code samples
 description: Links and descriptions of sample applications for the Microsoft Teams developer platform
 keywords: microsoft teams developer samples
 ---
+# Code samples for the Microsoft Teams developer platform
 
-# Sample applications for the Microsoft Teams developer platform
-
-These code samples show you the capabilities of Microsoft Teams apps and various ways to implement those capabilities:
-
-* **[Get Started Sample](https://github.com/OfficeDev/microsoft-teams-sample-get-started)**&emsp;This sample shows all the capabilities available in a Microsoft Teams app, including bots, tabs, compose extensions, and connectors. Source code is provided in both C# and Node.js.
-* **[Microsoft Graph API Samples](https://github.com/OfficeDev/microsoft-teams-sample-graph)**&emsp;These samples demonstrate using Microsoft Graph API calls to perform tasks such as querying teams and channels from a web service running outside Microsoft Teams.
-* **["To-do" list sample tab app](https://github.com/OfficeDev/microsoft-teams-sample-todo)**&emsp;This Node.js sample shows how easy it is to convert an existing web app into a tab.
-* **Microsoft Teams extensions for the Bot Builder SDK**&emsp;These sample bots show how to use the [Teams extensions for the Bot Builder SDK](https://msdn.microsoft.com/en-us/microsoft-teams/code#microsoft-teams-extensions-for-the-bot-builder-sdk).
-  * [Sample bot for C# and .NET](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams/tree/master/CSharp/Samples/Microsoft.Bot.Connector.Teams.SampleBot)
-  * [Sample bot for Node.js](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams/tree/master/Node/samples)
-
-## Common prerequisites
-
-We recommend the following common prequisites for running our sample experiences:
-
-* [An Office 365 account with access to Microsoft Teams, with sideloading enabled](~/get-started/get-started)
-* For .NET and C#:
-    * Visual Studio (you can download the [Community](https://www.visualstudio.com/free-developer-offers/) version for free)
-* For Node.js:
-    * [Visual Studio Code](https://code.visualstudio.com/)
-    * [Node.js](https://nodejs.org/en/download/)
-* For samples with bots: [Bot Framework Emulator](https://docs.microsoft.com/en-us/bot-framework/debug-bots-emulator)
-* [Git command line tool](https://git-scm.com/downloads) or [Git for Windows](https://git-for-windows.github.io/)
-* Tunneling software like [ngrok](https://ngrok.com/download)
+Here you will find a list of code samples that demonstrate various capabilities of the Microsoft Teams development platform and how to build apps to leverage those features.
 
 ## Getting samples
 
@@ -54,32 +32,53 @@ We provide a packages.json file that lists all required packages for a sample. S
 
 As always, the project's README file should have more information on specific needs for specific samples.
 
-## Tips for running Microsoft Teams samples
+## Get started
 
-Our sample apps attempt to standardize much of the configuration and structure to simplify your experience. Although each project might have specific additional instructions within its README file, a few commonalities are discussed here.
+| Sample | Description
+|--------|-------------
+| [Hello World in Microsoft Teams with Node.js](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) | A sample teams app in `Node.js` introducing you to the basic app capabilities.
+| [Hello World in Microsoft Teams with C#.NET](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) | A sample teams app in `C#.NET` introducing you to the basic app capabilities.
+| [Get started - all features](https://github.com/OfficeDev/microsoft-teams-sample-get-started) | This sample shows all the capabilities available in a Microsoft Teams app, including bots, tabs, compose extensions, and connectors. Source code is provided in both `C#` and `Node.js`.
 
-### Project structure
+## Bots
 
-For Microsoft Teams app projects, we provide a representative app package (.zip) along with the granular components (icons and manifest.json) in a subfolder named "TeamsAppPackage". In general, these packages are for your convenience in building and sideloading the sample app; they won't run without modification. Please review the manifest file for guidance on which values should be replaced to repackage and sideload your sample for running within Microsoft Teams.
+| Sample | Description
+|--------|-------------
+| [Sample bot for C#.NET](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams/tree/master/CSharp/Samples/Microsoft.Bot.Connector.Teams.SampleBot) | This sample bot shows how to use the [Teams extensions for the Bot Builder SDK] (~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) in `C#.NET`.
+| [Sample bot for Node.js](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams/tree/master/Node/samples) | This sample bot shows how to use the [Teams extensions for the Bot Builder SDK] (~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) in `Node.js`.
+| [Custom bots](https://github.com/OfficeDev/microsoft-teams-sample-custombot) | Samples to create **"Custom Bots"** to be used in Microsoft Teams
 
-#### .NET/C# projects
+## Connectors
 
-For .NET/C# projects, we leverage the web.config file to host environment variables for our project, which you should modify to run as needed for your testing. We use the following environment variables, which are similar to those listed in the previous section:
+| Sample | Description
+|--------|-------------
+| [GitHub connector](https://github.com/OfficeDev/msteams-connector-github) | This contains the source for the GitHub connector for Microsoft Teams.
 
-* `MicrosoftAppId`
-* `MicrosoftAppPassword`
-* `TeamsAppId`
-* `BaseUri` 
+## Graph API
 
-#### Node.js projects
+| Sample | Description
+|--------|-------------
+| [Microsoft Graph API Samples](https://github.com/OfficeDev/microsoft-teams-sample-graph) | These samples demonstrate using Microsoft Graph API calls to perform tasks such as querying teams and channels from a web service running outside Microsoft Teams.
 
-For Node.js projects, we provide a Visual Studio Code configuration file (launch.json), which contains profiles for running in the Bot Emulator (for projects with bots) and for running within Teams. These profiles set default environment variables for you to edit with your own values, such as the following:
+## End to end apps
 
-* `MICROSOFT_APP_ID`&emsp;Set to your registered Bot Framework bot ID (or blank for the Emulator configuration)
-* `MICROSOFT_APP_PASSWORD`&emsp;Set to your registered Bot Framework bot ID (or blank for the Emulator configuration)
-* `TEAMS_APP_ID`&emsp;Set to your registered Bot Framework bot ID, or different as needed
-* `BASE_URI`&emsp;The base URL for your local hosted instance (such as in tab sample projects); most likely set to your tunnel URL from ngrok or other tunneling software for local debugging, or to your production endpoint if cloud-hosted
+| Sample | Description
+|--------|-------------
+| ["To-do" list sample tab app](https://github.com/OfficeDev/microsoft-teams-sample-todo) | This Node.js sample shows how easy it is to convert an existing web app into a tab.
 
-### Running and debugging
+## Community contributed samples
 
-For general information on running and debugging our samples, see [Run and debug your Microsoft Teams app](~/resources/general/debug).
+| Sample | Description
+|--------|-------------
+| [TBD](~/) | More samples from community will come here ...
+
+## Others
+
+| Code | Description
+|------|-------------
+| [Yeoman generator](https://github.com/OfficeDev/generator-teams) | Generates a Microsoft Teams app skeleton with tabs, bots, and more based on Node.js and TypeScript. Optionally it adds support for hosting using Express.
+| [Yeoman generator for compose extensions](https://github.com/OfficeDev/microsoft-teams-generator-compose-extension) | Yeoman generator for building compose extension for Microsoft Teams
+| [Complete sample in `Node.js`](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) | A template for building complex bots for Microsoft Teams - Node.js version
+| [Complete sample in `C#.NET`](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) | This project is meant to help a Teams developers in two ways. First, it shows many examples of how an app can integrate into Teams. Second, it gives a set of patterns, templates, and tools that can be used as a starting point for creating a larger, scalable, more enterprise level app to work within Teams.
+| [Orky](https://github.com/OfficeDev/Orky) | You can use Orky to register your own local bot in Microsoft Teams and execute scripts from ANYWHERE!
+| [Build 2017 Weather](https://github.com/OfficeDev/microsoft-teams-build2017-weather) | Source code for the //build 2017 session to add a weather tab to the skeleton app generated earlier in the session
