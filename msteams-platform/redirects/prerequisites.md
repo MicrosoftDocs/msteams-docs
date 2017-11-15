@@ -1,3 +1,3 @@
 ---
-redirect_url: /microsoftteams/platform/reference/general/requirements
+redirect_url: /microsoftteams/platform/resources/general/requirements
 ---

@@ -1,3 +1,3 @@
 ---
-redirect_url: /microsoftteams/platform/reference/general/debug
+redirect_url: /microsoftteams/platform/resources/general/debug
 ---
