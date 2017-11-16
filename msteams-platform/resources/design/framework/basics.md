@@ -9,4 +9,7 @@ Now that you’re thinking about building on the Teams platform, here’s a shor
 
 ---
 
-[!include[Framework basics](~/includes/design/framework-basics.html)]
+If someone uses your app every day, this is where they will pin it. This area hosts Activity, Chats, Teams, Meetings, Files, and Apps. It’s also the place users will go to change their settings and send us feedback.<br/>
+![Pinning](~/assets/images/framework/framework_basics_01.png)
+
+<!-- [!include[Framework basics](~/includes/design/framework-basics.html)] -->
