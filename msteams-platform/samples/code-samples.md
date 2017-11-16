@@ -52,7 +52,7 @@ As always, the project's README file should have more information on specific ne
 
 | Sample | Description
 |--------|-------------
-| [GitHub connector](https://github.com/OfficeDev/msteams-connector-github) | This contains the source for the GitHub connector for Microsoft Teams.
+| [Sample connector](https://github.com/OfficeDev/msteams-connector-github) | This sample showcases how to build a connector for Microsoft Teams (uses GitHub as an example).
 
 ## Graph API
 
