@@ -11,7 +11,41 @@ Microsoft Teams is the hub for teamwork that is unifying the productivity experi
 
 Let's walk you through the kinds of experiences you can build using Microsoft Teams as your development platform.
 
-[!include[Overview framework](~/includes/design/overview-fx.html)]
+### Immersive experience
+
+Our platform places content and conversations side by side. [Learn more](~/resources/design/framework/basics)
+
+<img width="530" src="~/assets/images/get-started/01_homepage_immersive-experience.png" /><br/><br/>
+
+### Tabs and conversations
+
+Tabs give your app a dedicated canvas that allows people to jump between conversations and your experience. [Learn more](~/resources/design/framework/tabs)
+
+<img width="530" src="~/assets/images/get-started/02_homepage_tabs-and-conversations.png" /><br/><br/>
+
+### Customizable cards
+
+Cards let you to surface important tasks, information, and reminders in actionable ways. [Learn more](~/resources/design/framework/cards)
+
+<img width="530" src="~/assets/images/get-started/03_homepage_cards.png" /><br/><br/>
+
+### Bot framework
+
+Our framework offers a natural language UX that can interact with your services. [Learn more](~/resources/design/framework/bots)
+
+<img width="530" src="~/assets/images/get-started/04_homepage_bots.png" /><br/><br/>
+
+### Instant notifications
+
+The activity feed displays notifications for your users. [Learn more](~/resources/design/framework/activity-feed)
+
+<img width="530" src="~/assets/images/get-started/05_homepage_instant-notifications.png" /><br/><br/>
+
+### Compose extensions
+
+Compose Extensions are quick and easy shortcuts to key components of your service. [Learn more](~/resources/design/framework/compose-extensions)
+
+<img width="530" src="~/assets/images/get-started/06_homepage_compose-extensions.png" /><br/><br/>
 
 ## Ready to get started
 
