@@ -1,3 +1,3 @@
 ---
-redirect_url: /microsoftteams/platform/reference/schema/manifest-schema-v04
+redirect_url: /microsoftteams/platform/resources/schema/manifest-schema-v04
 ---

@@ -1,3 +1,3 @@
 ---
-redirect_url: /microsoftteams/platform/reference/general/developer-preview-features
+redirect_url: /microsoftteams/platform/resources/general/developer-preview-features
 ---

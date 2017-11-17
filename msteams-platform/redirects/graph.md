@@ -1,3 +1,3 @@
 ---
-redirect_url: /microsoftteams/platform/reference/microsoft-graph
+redirect_url: /microsoftteams/platform/resources/microsoft-graph
 ---

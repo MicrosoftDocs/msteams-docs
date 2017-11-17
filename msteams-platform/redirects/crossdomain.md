@@ -1,3 +1,3 @@
 ---
-redirect_url: /microsoftteams/platform/reference/general/cross-domain
+redirect_url: /microsoftteams/platform/resources/general/cross-domain
 ---

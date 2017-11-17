@@ -1,3 +1,3 @@
 ---
-redirect_url: /microsoftteams/platform/reference/general/rate-limit
+redirect_url: /microsoftteams/platform/resources/general/rate-limit
 ---

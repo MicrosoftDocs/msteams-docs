@@ -1,3 +1,3 @@
 ---
-redirect_url: /microsoftteams/platform/reference/schema/manifest-schema-migrate
+redirect_url: /microsoftteams/platform/resources/schema/manifest-schema-migrate
 ---
