@@ -47,8 +47,6 @@ Compose Extensions are quick and easy shortcuts to key components of your servic
 
 <img width="530" src="~/assets/images/get-started/06_homepage_compose-extensions.png" /><br/><br/>
 
-<!-- [!include[Overview framework](~/includes/design/overview-fx.html)] -->
-
 ## Ready to get started
 
 The framework page has all the information you need to build for our platform. [Get Started](~/resources/design/framework/basics).
