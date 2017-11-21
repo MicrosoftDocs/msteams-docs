@@ -125,4 +125,4 @@ Determine whether you want your tone to be friendly and light, “just the facts
 
 Support multi-turn interactions while still allowing for fully formed questions. Anticipating the next step will help users get through task flows much easier.
 
-If a user takes several steps to complete a task, allow your bot to take them through each step, but finish by having it suggest a quicker path. For example, if a user has taken several conversational turns to set a meeting (by first specifying a meeting, then identifying with whom, then stating the time, then stating the day), finish the conversation with the following suggestion: `Next time, try asking if you can ‘schedule a meeting with Bob at 1:00 tomorrow’`.
+If a user takes several steps to complete a task, allow your bot to take them through each step, but finish by having it suggest a quicker path. For example, if a user has taken several conversational turns to set a meeting (by first specifying a meeting, then identifying with whom, then stating the time, then stating the day), finish the conversation with the following suggestion: Next time, try asking if you can ‘schedule a meeting with Bob at 1:00 tomorrow’.
