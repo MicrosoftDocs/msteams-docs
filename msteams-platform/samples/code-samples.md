@@ -66,12 +66,6 @@ As always, the project's README file should have more information on specific ne
 |--------|-------------
 | ["To-do" list sample tab app](https://github.com/OfficeDev/microsoft-teams-sample-todo) | This Node.js sample shows how easy it is to convert an existing web app into a tab.
 
-## Community contributed samples
-
-| Sample | Description
-|--------|-------------
-| [TBD](~/) | More samples from community will come here ...
-
 ## Others
 
 | Code | Description
