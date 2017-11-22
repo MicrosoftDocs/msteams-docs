@@ -18,7 +18,7 @@ Think of a card as a response to a user question or a setting. A card can respon
 > [!TIP]
 > Using one of our standard card types means you’ll already know that all your responses will render nicely across each supported platform.
 
-A card could include any of the following elements:
+A card could include any of the following elements:<br />
 
 [!include[Card anatomy](~/includes/design/card-image-anatomy.html)]
 
@@ -80,7 +80,7 @@ Best used for articles, shopping, and browsing through cards.
 
 [!include[Card anatomy](~/includes/design/card-image-carousel.html)]
 
-> [!TIP] 
+> [!TIP]
 > The carousel will be the max height of your largest card. We recommend using the same card type and content fields throughout.
 
 ### Digest

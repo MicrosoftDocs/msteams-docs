@@ -119,7 +119,7 @@ for (int i = 0;i < m.Length;i++)
 var text = message.text;
 if (message.entities) {
     message.entities
-        .filter(entity => (entity.type === "mention" && entity.id === yourbotid))
+        .filter(entity => ((entity.type === "mention") && (entity.mentioned.id.toLowerCase() === botId)))
         .forEach(entity => {
             text = text.replace(entity.text, "");
         });

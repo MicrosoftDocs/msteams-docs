@@ -17,7 +17,7 @@ keywords: teams authentication
 > 
 >The recommended approach instead is to direct the authentication pop-up to a page on your domain, redirect to Azure AD (or other sign-in provider), and then redirect back to your domain as usual. Basically, the authentication pop-up must start and end on your domain.
 >
->Because `navigateCrossDomain` isn't supported in the authentication window, we recommend that your authentication start and end domains be the same as your content domain and listed in the manifest's `validDomains` list. In the future, we will allow the authentication start and end domains be separate from the content, but for forward compatibility, we recommand you put all on the same domain.
+>Because `navigateCrossDomain` isn't supported in the authentication window, we recommend that your authentication start and end domains be the same as your content domain and listed in the manifest's `validDomains` list. In the future, we will allow the authentication start and end domains be separate from the content, but for forward compatibility, we recommend you put all on the same domain.
 
 ---
 
