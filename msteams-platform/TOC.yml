@@ -1,6 +1,11 @@
 - name: Overview
   href: ./overview
   universal_ref_toc: /javascript/api/msteams-client-docs-ref-typescript/toc.json
+- name: Get started
+  items:
+  - name: Get started with Microsoft Teams
+    href: ./get-started/get-started
+  expanded: true
 - name: Concepts
   items:
   - name: Apps in Teams

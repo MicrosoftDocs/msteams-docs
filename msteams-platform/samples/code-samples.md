@@ -8,12 +8,16 @@ keywords: Microsoft teams developer samples
 
 These code samples show you the capabilities of Microsoft Teams apps and various ways to implement those capabilities:
 
+<<<<<<< HEAD
 * **[Get Started Sample](https://github.com/OfficeDev/microsoft-teams-sample-get-started)**&emsp;This sample shows all the capabilities available in a Microsoft Teams app, including bots, tabs, messaging extensions, and connectors. Source code is provided in both C# and Node.js.
 * **[Microsoft Graph API Samples](https://github.com/OfficeDev/microsoft-teams-sample-graph)**&emsp;These samples demonstrate using Microsoft Graph API calls to perform tasks such as querying teams and channels from a web service running outside Microsoft Teams.
+=======
+>>>>>>> a7a578cb554a5f91c79834f50433d86598943404
 * **["To-do" list sample tab app](https://github.com/OfficeDev/microsoft-teams-sample-todo)**&emsp;This Node.js sample shows how easy it is to convert an existing web app into a tab.
 * **Microsoft Teams extensions for the Bot Builder SDK**&emsp;These sample bots show how to use the [Teams extensions for the Bot Builder SDK](https://msdn.microsoft.com/en-us/microsoft-teams/code#microsoft-teams-extensions-for-the-bot-builder-sdk).
   * [Sample bot for C# and .NET](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams/tree/master/CSharp/Samples/Microsoft.Bot.Connector.Teams.SampleBot)
   * [Sample bot for Node.js](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams/tree/master/Node/samples)
+* **[Microsoft Graph API Samples](https://github.com/OfficeDev/microsoft-teams-sample-graph)**&emsp;These samples demonstrate using Microsoft Graph API calls to perform tasks such as querying teams and channels from a web service running outside Microsoft Teams.
 
 ## Common prerequisites
 
@@ -21,10 +25,10 @@ We recommend the following common prerequisites for running our sample experienc
 
 * [An Office 365 account with access to Microsoft Teams, with sideloading enabled](~/get-started/get-started)
 * For .NET and C#:
-    * Visual Studio (you can download the [Community](https://www.visualstudio.com/free-developer-offers/) version for free)
+  * Visual Studio (you can download the [Community](https://www.visualstudio.com/free-developer-offers/) version for free)
 * For Node.js:
-    * [Visual Studio Code](https://code.visualstudio.com/)
-    * [Node.js](https://nodejs.org/en/download/)
+  * [Visual Studio Code](https://code.visualstudio.com/)
+  * [Node.js](https://nodejs.org/en/download/)
 * For samples with bots: [Bot Framework Emulator](https://docs.microsoft.com/en-us/bot-framework/debug-bots-emulator)
 * [Git command line tool](https://git-scm.com/downloads) or [Git for Windows](https://git-for-windows.github.io/)
 * Tunneling software like [ngrok](https://ngrok.com/download)
