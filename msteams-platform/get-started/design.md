@@ -48,14 +48,14 @@ In general, your bot must respond to every message, especially common questions 
 
 Leverage the [bot event messages](~/concepts/bots/bots-notifications) to ensure that your bot introduces itself when added to a team or first accessed in a one-on-one chat. This is an opportunity to tell the user what value you bring to their workday.
 
-## Designing a great compose extension
+## Designing a great messaging extension
 
-Compose extensions allow you to share rich cards in a conversation. A card can hold instructions to complete a complex task or a simple GIF. Microsoft Teams comes equipped with several compose extensions already. If you look below the compose box, you’ll see a "GIF" icon. Click it, and you’ll see a menu with options to select a featured GIF or search for a specific one—that’s a compose extension! These extensions are one of the best ways to create shareable content and serve information quickly.
+Messaging extensions allow you to share rich cards in a conversation. A card can hold instructions to complete a complex task or a simple GIF. Microsoft Teams comes equipped with several messaging extensions already. If you look below the compose box, you’ll see a "GIF" icon. Click it, and you’ll see a menu with options to select a featured GIF or search for a specific one—that’s a messaging extension! These extensions are one of the best ways to create shareable content and serve information quickly.
 
 ### Optimize your search results
 
-A snappy compose extension returns an easily digestible list of search results. We recommend including an image and no more than two lines of text.
+A snappy messaging extension returns an easily digestible list of search results. We recommend including an image and no more than two lines of text.
 
 ### Optimize your cards
 
-Each compose extension culminates in a card. Because it’s the last thing your user sees, be sure that your cards are useful, good-looking, and easy to share.
+Each messaging extension culminates in a card. Because it’s the last thing your user sees, be sure that your cards are useful, good-looking, and easy to share.

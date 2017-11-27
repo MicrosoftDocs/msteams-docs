@@ -1,7 +1,7 @@
 ---
 title: Sample applications
 description: Links and descriptions of sample applications for the Microsoft Teams developer platform
-keywords: microsoft teams developer samples
+keywords: Microsoft teams developer samples
 ---
 
 # Sample applications for the Microsoft Teams developer platform
@@ -16,7 +16,7 @@ These code samples show you the capabilities of Microsoft Teams apps and various
 
 ## Common prerequisites
 
-We recommend the following common prequisites for running our sample experiences:
+We recommend the following common prerequisites for running our sample experiences:
 
 * [An Office 365 account with access to Microsoft Teams, with sideloading enabled](~/get-started/get-started)
 * For .NET and C#:

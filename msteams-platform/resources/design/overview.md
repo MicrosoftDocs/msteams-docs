@@ -41,9 +41,9 @@ The activity feed displays notifications for your users. [Learn more](~/resource
 
 <img width="530" src="~/assets/images/get-started/05_homepage_instant-notifications.png" /><br/><br/>
 
-### Compose extensions
+### Messaging extensions
 
-Compose Extensions are quick and easy shortcuts to key components of your service. [Learn more](~/resources/design/framework/compose-extensions)
+Messaging extensions are quick and easy shortcuts to key components of your service. [Learn more](~/resources/design/framework/compose-extensions)
 
 <img width="530" src="~/assets/images/get-started/06_homepage_compose-extensions.png" /><br/><br/>
 
