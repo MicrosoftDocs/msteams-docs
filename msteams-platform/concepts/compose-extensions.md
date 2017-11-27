@@ -45,7 +45,7 @@ As with bots and tabs, you update the [manifest](~/resources/schema/manifest-sch
 
 #### Declare your messaging extension
 
-To add a messaging extension, include a new top-level JSON structure in your manifest with the `composeExtensions` property. Currently, you are limited to creating a single messaging extension for your app.
+To add a messaging extension, include a new top-level JSON structure in your manifest with the `composeExtensions` property. Currently, you are limited to creating a single messaging extension for your app. Note that the manifest refers to messaging extensions as composeExtensions.  This is to maintain backwards compatibility.
 
 The extension definition is an object that has the following structure:
 
