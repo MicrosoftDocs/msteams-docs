@@ -32,7 +32,7 @@ The `color` icon is used throughout Microsoft Teams (in app and tab galleries, b
 
 ### outline
 
-The `outline` icon is used in three specific places: the app bar, pinnned compose extensions, and chiclets. This icon must be 20&times;20; it needs to be a trace image using white, and use a transparent background. Here are a few good examples:
+The `outline` icon is used in three specific places: the app bar, pinnned messaging extensions, and chiclets. This icon must be 20&times;20; it needs to be a trace image using white, and use a transparent background. Here are a few good examples:
 
 ![Sample outline icons](~/assets/images/icons/sample20x20s.png)
 

@@ -1,19 +1,19 @@
 ---
 title: Get started
 description: Get started building great apps in Microsoft Teams
-keywords: getting started microsoft teams
+keywords: getting started Microsoft teams
 ---
 # Code your Microsoft Teams app
 
-Because Microsoft Teams apps are composed web services, you can use any web-programming technology. For tabs, we provide a JavaScript library. For bots and compose extensions, we recommend you use either C# or Typescript to take advantage of our [SDK extensions](#microsoft-teams-extensions-for-the-bot-builder-sdk) for .NET and Node.js.
+Because Microsoft Teams apps are composed web services, you can use any web-programming technology. For tabs, we provide a JavaScript library. For bots and messaging extensions, we recommend you use either C# or Typescript to take advantage of our [SDK extensions](#microsoft-teams-extensions-for-the-bot-builder-sdk) for .NET and Node.js.
 
 ## Coding your tab
 
-Tabs are simply iframe'd web content. You can leverage your existing web service, written in any language and hosted on any cloud platform, and simply include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) in pages you display in Teams. This library provides methods for your tab and your authentication and configuration experiences.
+Tabs are simply web content in an iframe. You can leverage your existing web service, written in any language and hosted on any cloud platform, and simply include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) in pages you display in Teams. This library provides methods for your tab and your authentication and configuration experiences.
 
-## Coding your bot and compose extension
+## Coding your bot and messaging extension
 
-Because your Teams bots and compose extensions are built on the [Microsoft Bot Framework](https://dev.botframework.com/), we recommend that you leverage the [Bot Builder SDK](https://docs.microsoft.com/en-us/bot-framework/resources-tools-downloads), available for .NET and for Node.js.
+Because your Teams bots and messaging extensions are built on the [Microsoft Bot Framework](https://dev.botframework.com/), we recommend that you leverage the [Bot Builder SDK](https://docs.microsoft.com/en-us/bot-framework/resources-tools-downloads), available for .NET and for Node.js.
 
 > [!NOTE]
 > You can develop in any other web-programming technology and call the [Bot Framework REST APIs](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-overview) directly, but you must perform all token handling yourself.
@@ -24,7 +24,7 @@ We want to make development of Microsoft Teams apps as easy as possible, so we b
 
 * Specialized Teams card types like the Office 365 Connector card
 * Consuming and setting Teams-specific channel data on activities
-* Processing compose extension requests
+* Processing messaging extension requests
 * Handling rate limiting
 
 Both packages install dependencies, including the Bot Builder SDK.

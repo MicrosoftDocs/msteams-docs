@@ -131,9 +131,9 @@ You can have one connector per app. Include a connector ID that matches its ID i
 
 ---
 
-## Compose extensions
+## Messaging extensions
 
-Specifications for each compose extension should include:
+Specifications for each messaging extension should include:
 
 ### ID
 
@@ -185,7 +185,7 @@ Define the level of encryption used in your app, if any.
 
 Provide support links.
 
-[See the compose extensions design guidelines.](compose-extensions)
+[See the messaging extensions design guidelines.](compose-extensions)
 
 Include screenshots of your app for your profile page (you can add up to five, total). Specify your language, release date, category, and pricing (again, select the ‘Free’ option here).
 

@@ -1,23 +1,20 @@
 ---
-title: Develop compose extensions
-description: Describes how to get started with compose extensions in Microsoft Teams
-keywords: teams compose extensions
+title: Develop messaging extensions
+description: Describes how to get started with messaging extensions in Microsoft Teams
+keywords: teams messaging extensions messaging extensions
 ---
-# Preview: Develop compose extensions for Microsoft Teams
+# Preview: Develop messaging extensions for Microsoft Teams
+
+Messaging extensions are a powerful new way for users to engage with your app within Microsoft Teams. With this capability, users can query for information from your service and post that information, in the form of rich cards, right into the channel conversation.
 
 > [!IMPORTANT]
-> Compose extensions are available only in [Public Developer Preview](~/resources/general/developer-preview). Many details in this document are subject to change.
->
-> [!NOTE]
-> The term "compose extensions" is provisional and might change. Until this feature is complete, we recommend not using the term in any customer-facing UI or communications.
+> messaging extensions are available only in [Public Developer Preview](~/resources/general/developer-preview). Many details in this document are subject to change.
 
-Compose extensions are a powerful new way for users to engage with your app within Microsoft Teams. With this capability, users can query for information from your service and post that information, in the form of rich cards, right into the channel conversation.
+![Example of messaging extension card](~/assets/images/compose-extensions/ceexample.png)
 
-![Example of compose extension card](~/assets/images/compose-extensions/ceexample.png)
+Messaging extensions appear along the bottom of the compose box. A few are built in, such as Emoji, Giphy, and Sticker. Choose the **More Options** (**&#8943;**) button to see other messaging extensions, including those that you add from the app gallery or sideload yourself.
 
-Compose extensions appear along the bottom of the compose box. A few are built in, such as Emoji, Giphy, and Sticker. Choose the **More Options** (**&#8943;**) button to see other compose extensions, including those that you add from the app gallery or sideload yourself.
-
-How would you use compose extensions? Here are a few possibilities:
+How would you use messaging extensions? Here are a few possibilities:
 
 * Work items and bugs
 * Customer support tickets
@@ -25,30 +22,32 @@ How would you use compose extensions? Here are a few possibilities:
 * Images and media content
 * Sales opportunities and leads
 
-## Add a compose extension to your app
+## Add a messaging extension to your app
 
-Building a compose extension involves implementing familiar Microsoft Teams developer-platform concepts like bot APIs, rich cards, and tabs.
+Building a messaging extension involves implementing familiar Microsoft Teams developer-platform concepts like bot APIs, rich cards, and tabs.
 
-At its core, a compose extension is a cloud-hosted service that listens to user requests and responds with structured data, such as cards. You integrate your service with Microsoft Teams via Bot Framework `Activity` objects. Our .NET and Node.js [extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) can help you add compose extension functionality to your app.
+At its core, a messaging extension is a cloud-hosted service that listens to user requests and responds with structured data, such as cards. You integrate your service with Microsoft Teams via Bot Framework `Activity` objects. Our .NET and Node.js [extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) can help you add messaging extension functionality to your app.
 
-![Diagram of message flow for compose extensions](~/assets/images/compose-extensions/ceflow.png)
+![Diagram of message flow for messaging extensions](~/assets/images/compose-extensions/ceflow.png)
 
 ### Register in the Bot Framework
 
-If you haven’t done so already, you must first register a bot with the Microsoft Bot Framework. (See [Create a bot](~/concepts/bots/bots-create) for instructions.) The Microsoft app ID and callback endpoints for your bot, as defined there, will be used in your compose extension to receive and respond to user requests. Remember to enable the Microsoft Teams channel for your bot.
+If you haven’t done so already, you must first register a bot with the Microsoft Bot Framework. (See [Create a bot](~/concepts/bots/bots-create) for instructions.) The Microsoft app ID and callback endpoints for your bot, as defined there, will be used in your messaging extension to receive and respond to user requests. Remember to enable the Microsoft Teams channel for your bot.
 
 Record your bot’s app ID and app password—you will need to supply the app ID in your app manifest.
 
 ### Update your app manifest
 
-As with bots and tabs, you update the [manifest](~/resources/schema/manifest-schema#composeextensions) of your app to include the compose extension properties. These properties govern how your compose extension appears and behaves in the Microsoft Teams client. Compose extensions are supported beginning with v1.0 of the manifest.
+As with bots and tabs, you update the [manifest](~/resources/schema/manifest-schema#composeextensions) of your app to include the messaging extension properties. These properties govern how your messaging extension appears and behaves in the Microsoft Teams client. Messaging extensions are supported beginning with v1.0 of the manifest.
 
 > [!NOTE]
-> The `canUpdateConfiguration` property is not yet included in the manifest schema. However, you can still test compose extensions that use `canUpdateConfiguration` by sideloading them.
+> The `canUpdateConfiguration` property is not yet included in the manifest schema. However, you can still test messaging extensions that use `canUpdateConfiguration` by sideloading them.
 
-#### Declare your compose extension
+#### Declare your messaging extension
 
-To add a compose extension, include a new top-level JSON structure in your manifest with the `composeExtensions` property. Currently, you are limited to creating a single compose extension for your app.
+To add a messaging extension, include a new top-level JSON structure in your manifest with the `composeExtensions` property. Currently, you are limited to creating a single messaging extension for your app. 
+> [!NOTE]
+>The manifest refers to messaging extensions as `composeExtensions`.  This is to maintain backwards compatibility.
 
 The extension definition is an object that has the following structure:
 
@@ -57,13 +56,13 @@ The extension definition is an object that has the following structure:
 | `botId` | The unique Microsoft app ID for the bot as registered with the Bot Framework. This should typically be the same as the ID for your overall Teams app. | Yes |
 | `scopes` | Array declaring whether this extension can be added to `personal` or `team` scopes (or both). | Yes |
 | `canUpdateConfiguration` | Enables **Settings** menu item. | No |
-| `commands` | Array of commands that this compose extension supports. This is currently limited to one command. | Yes |
+| `commands` | Array of commands that this messaging extension supports. This is currently limited to one command. | Yes |
 
 #### Define commands
 
-Your compose extension should declare one command, which appears when the user selects your app from the **More options** (**&#8943;**) button in the compose box. 
+Your messaging extension should declare one command, which appears when the user selects your app from the **More options** (**&#8943;**) button in the compose box.
 
-![Screenshot of list of compose extensions in Teams](~/assets/images/compose-extensions/compose-extension-list.png)
+![Screenshot of list of messaging extensions in Teams](~/assets/images/compose-extensions/compose-extension-list.png)
 
 In the app manifest, your command item is an object with the following structure:
 
@@ -140,29 +139,29 @@ In the app manifest, your command item is an object with the following structure
  
 ### Test via sideloading
 
-You can test your compose extension by sideloading your app. See [Sideloading your app in a team](~/concepts/apps/apps-sideload) for details.
+You can test your messaging extension by sideloading your app. See [Sideloading your app in a team](~/concepts/apps/apps-sideload) for details.
 
-To open your compose extension, navigate to any of your chats or channels. Choose the **More options** (**&#8943;**) button in the compose box, and choose your compose extension.
+To open your messaging extension, navigate to any of your chats or channels. Choose the **More options** (**&#8943;**) button in the compose box, and choose your messaging extension.
 
 > [!NOTE]
 > Your app appears in channels only if you declare the `team` scope. Similarly, it appears in your chats only if it supports the `personal` scope.
 
 ## Add event handlers
 
-Most of your work involves the `onQuery` event, which handles all interactions in the compose extension window.
+Most of your work involves the `onQuery` event, which handles all interactions in the messaging extension window.
 
-If you set `canUpdateConfiguration` to `true` in the manifest, you enable the **Settings** menu item for your compose extension and must also handle `onQuerySettingsUrl` and `onSettingsUpdate`.
+If you set `canUpdateConfiguration` to `true` in the manifest, you enable the **Settings** menu item for your messaging extension and must also handle `onQuerySettingsUrl` and `onSettingsUpdate`.
 
 > [!IMPORTANT]
-> Compose extensions that use `canUpdateConfiguration` can't be published in the Office Store at this time.
+> Messaging extensions that use `canUpdateConfiguration` can't be published in the Office Store at this time.
 
 ### Handle onQuery events
 
-A compose extension receives an `onQuery` event when anything happens in the compose extension window or is sent to the window.
+A messaging extension receives an `onQuery` event when anything happens in the messaging extension window or is sent to the window.
 
-If your compose extension uses a configuration page, your handler for `onQuery` should first check for any stored configuration information; if the compose extension isn't configured, return a `config` response with a link to your configuration page. Be aware that the response from the configuration page is also handled by `onQuery`. (The sole exception is when the configuration page is called by the handler for `onQuerySettingsUrl`; see the following section.)
+If your messaging extension uses a configuration page, your handler for `onQuery` should first check for any stored configuration information; if the messaging extension isn't configured, return a `config` response with a link to your configuration page. Be aware that the response from the configuration page is also handled by `onQuery`. (The sole exception is when the configuration page is called by the handler for `onQuerySettingsUrl`; see the following section.)
 
-If your compose extension requires authentication, check the user state information; if the user isn't signed in, follow the instructions in the [Authentication](#authentication) section later in this topic.
+If your messaging extension requires authentication, check the user state information; if the user isn't signed in, follow the instructions in the [Authentication](#authentication) section later in this topic.
 
 Next, check whether `initialRun` is set; if so, take appropriate action, such as providing instructions or a list of responses.
 
@@ -178,7 +177,7 @@ Your handler for `onQuerySettingsUrl` returns the URL for the configuration page
 
 ## Receive and respond to queries
 
-Every request to your compose extension is done via an `Activity` object that is posted to your callback URL. The request contains information about the user command, such as ID and parameter values. The request also supplies metadata about the context in which your extension was invoked, including user and tenant ID, along with chat ID or channel and team IDs.
+Every request to your messaging extension is done via an `Activity` object that is posted to your callback URL. The request contains information about the user command, such as ID and parameter values. The request also supplies metadata about the context in which your extension was invoked, including user and tenant ID, along with chat ID or channel and team IDs.
 
 ### Receive user requests
 
@@ -334,7 +333,7 @@ The result list is displayed in the Microsoft Teams UI with a preview of each it
 
 ### Default query
 
-If you set `initialRun` to `true` in the manifest, Microsoft Teams issues a "default" query when the user first opens the compose extension. Your service can respond to this query with a set of prepopulated results. This can be useful for displaying, for instance, recently viewed items, favorites, or any other information that is not dependent on user input.
+If you set `initialRun` to `true` in the manifest, Microsoft Teams issues a "default" query when the user first opens the messaging extension. Your service can respond to this query with a set of prepopulated results. This can be useful for displaying, for instance, recently viewed items, favorites, or any other information that is not dependent on user input.
 
 The default query has the same structure as any regular user query, except with a parameter `initialRun` whose Boolean value is `true`.
 
@@ -376,7 +375,7 @@ The `id` value is guaranteed to be that of the authenticated Teams user. It can 
 
 ## Authentication
 
-If your service requires user authentication, you need to sign in the user before he or she can use the compose extension. If you have written a bot or a tab that signs in the user, this section should be familiar.
+If your service requires user authentication, you need to sign in the user before he or she can use the messaging extension. If you have written a bot or a tab that signs in the user, this section should be familiar.
 
 The sequence is as follows:
 
@@ -482,7 +481,7 @@ At this point, the window closes and control is passed to the Teams client. The 
 
 ### .NET
 
-To receive and handle queries with the Bot Builder SDK for .NET, you can check for the `invoke` action type on the incoming activity and then use the helper method in the NuGet package [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) to determine whether it’s a compose extension activity.
+To receive and handle queries with the Bot Builder SDK for .NET, you can check for the `invoke` action type on the incoming activity and then use the helper method in the NuGet package [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) to determine whether it’s a messaging extension activity.
 
 #### Example code
 
@@ -493,7 +492,7 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
     {
         if (activity.IsComposeExtensionQuery())
         {
-            // This is the response object that will get sent back to the compose extension request.
+            // This is the response object that will get sent back to the messaging extension request.
             ComposeExtensionResponse invokeResponse = null;
 
             // This helper method gets the query as an object.
@@ -520,7 +519,7 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
     } else {
       // Failure case catch-all.
       var response = Request.CreateResponse(HttpStatusCode.BadRequest);
-      response.Content = new StringContent("Invalid request! This API supports only compose extension requests. Check your query and try again");
+      response.Content = new StringContent("Invalid request! This API supports only messaging extension requests. Check your query and try again");
       return response;
     }
 }
@@ -528,7 +527,7 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 
 ### Node.js
 
-The [Teams extensions](https://www.npmjs.com/package/botbuilder-teams) for the Bot Builder SDK for Node.js provide helper objects and methods to simplify receiving, processing, and responding to compose extension requests.
+The [Teams extensions](https://www.npmjs.com/package/botbuilder-teams) for the Bot Builder SDK for Node.js provide helper objects and methods to simplify receiving, processing, and responding to messaging extension requests.
 
 #### Example code
 
