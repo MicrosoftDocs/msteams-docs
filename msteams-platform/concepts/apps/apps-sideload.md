@@ -82,11 +82,11 @@ With the app loaded in the team, users can set up a Connector on any channel in 
 
   ![The Add a tab dialog box, featuring a gallery of available tabs.](~/assets/images/connector_gallery.png)
 
-## Accessing your sideloaded compose extension
+## Accessing your sideloaded messaging extension
 
-A sideloaded app with a compose extension automatically appears in the **More options** (**&#8943;**) menu in the compose box.
+A sideloaded app with a messaging extension automatically appears in the **More options** (**&#8943;**) menu in the compose box.
 
-![Compose extensions](~/assets/images/compose-extensions/cesampleapp.png)
+![Messaging extensions](~/assets/images/compose-extensions/cesampleapp.png)
 
 ## Removing or updating your app
 
