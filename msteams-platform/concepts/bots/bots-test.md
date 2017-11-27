@@ -49,7 +49,7 @@ There are two ways to test load your bot for 1:1 conversations in Microsoft Team
    * Optionally, in the Bot Framework's details Channels page, you can click "Get bot embed codes" and select the Microsoft Teams icon to get both the deep link and a Microsoft Teams&ndash;approved logo for use on your website.
 
 > [!NOTE]
-> When a bot has been added through one of these methods, it will not be addressable in channel conversations. Nor can you take advantage of other Microsoft Teams app capabilities like tabs or compose extensions.
+> When a bot has been added through one of these methods, it will not be addressable in channel conversations. Nor can you take advantage of other Microsoft Teams app capabilities like tabs or messaging extensions.
 
 As with bots added to a team, your bot will receive the `conversationUpdate` event, but without the team information in the `channelData` object.
 

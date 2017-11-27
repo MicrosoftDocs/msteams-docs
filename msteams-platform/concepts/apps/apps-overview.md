@@ -20,7 +20,7 @@ After you decide what your app should do, you can map those activities to capabi
 
 *	For simple information display or interaction with web-based data, consider using [**tabs**](~/concepts/tabs/tabs-overview). Your tabs can be as simple as documents or notes or as rich as dashboards with data visualization, or design canvases.
 *	For natural-language questions and lightweight tasks, consider using [**bots**](~/concepts/bots/bots-overview). Your bots might monitor and control build systems, schedule meetings or travel, or quickly gather information from team members. Notification-only bots can push relevant information directly to a specific user in a channel or a direct message.
-*	To look up information and insert it directly into a conversation, consider using [**compose extensions**](~/concepts/compose-extensions). With compose extensions, you enable users to insert text, links, pictures, videos, and other rich media without switching to another app.
+*	To look up information and insert it directly into a conversation, consider using [**messaging extensions**](~/concepts/compose-extensions). With messaging extensions, you enable users to insert text, links, pictures, videos, and other rich media without switching to another app.
 
 ## Leverage what you've already built
 
@@ -29,9 +29,9 @@ The following table provides a few ideas about bringing resources you've already
 | If I have an existing&hellip; | In Microsoft Teams it can be a&hellip; |
 | --- | --- |
 | Web app | [Tab](~/concepts/tabs/tabs-overview) |
-| Bot built with Bot Framework | [Bot](~/concepts/bots/bots-overview) (and a [compose extension](~/concepts/compose-extensions), if you'd like)
+| Bot built with Bot Framework | [Bot](~/concepts/bots/bots-overview) (and a [Messaging extension](~/concepts/compose-extensions), if you'd like)
 | Office 365 Connector | [Connector](~/concepts/connectors) |
-| Web service (to look up information) | [Compose extension](~/concepts/compose-extensions) |
+| Web service (to look up information) | [Messaging extension](~/concepts/compose-extensions) |
 | Outgoing webhook | [Custom bot](~/concepts/custom-bot) |
 
 ## Learn how to develop an app for Microsoft Teams
@@ -45,7 +45,7 @@ Ready to start adding your experience into Teams?
   * [Tabs](~/concepts/tabs/tabs-overview)
   * [Bots](~/concepts/bots/bots-overview)
   * [Connectors](~/concepts/connectors)
-  * [Compose extensions](~/concepts/compose-extensions)
+  * [Messaging extensions](~/concepts/compose-extensions)
   * [Activity feed integrations](~/concepts/activity-feed)
 * Package, test, and publish your app
   * [Package your app](~/publishing/apps-package)

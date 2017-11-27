@@ -12,15 +12,15 @@ The following features are available in the Public Developer Preview as of Augus
 
 ## Apps in Microsoft Teams
 
-Apps in Microsoft Teams allow you to make your service available to users through a single Teams App package, which includes bots, tabs, connectors and compose extensions. Learn more [here](~/overview). 
+Apps in Microsoft Teams allow you to make your service available to users through a single Teams App package, which includes bots, tabs, connectors and messaging extensions. Learn more [here](~/overview). 
   
 ## Discover Apps gallery 
 
 The Discover Apps gallery provides a listing of all apps available in Microsoft Teams spanning various categories. Developers can get apps in here by [submitting their apps to the Office Store](~/publishing/apps-publish).  
   
-## Compose extensions
+## Messaging extensions
 
-Compose extensions make it easy for users to query for information from your service and post them into conversations in the form of rich cards. Learn more [here](~/concepts/compose-extensions).
+Messaging extensions make it easy for users to query for information from your service and post them into conversations in the form of rich cards. Learn more [here](~/concepts/compose-extensions).
    
 ## App notifications 
 

@@ -77,7 +77,7 @@ With those steps out of the way, you're ready to focus on creating your app.
   * [Tabs](~/concepts/tabs/tabs-overview)
   * [Bots](~/concepts/bots/bots-overview)
   * [Connectors](~/concepts/connectors)
-  * [Compose extensions](~/concepts/compose-extensions)
+  * [Messaging extensions](~/concepts/compose-extensions)
   * [Activity feed integrations](~/concepts/activity-feed)
 
 ### Package and test your app within Teams

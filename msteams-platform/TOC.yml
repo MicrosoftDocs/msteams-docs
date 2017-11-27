@@ -99,7 +99,7 @@
         href: ./resources/design/framework/search
       - name: Tabs
         href: ./resources/design/framework/tabs
-      - name: Compose extensions
+      - name: Messaging extensions
         href: ./resources/design/framework/compose-extensions
       - name: Bots
         href: ./resources/design/framework/bots
