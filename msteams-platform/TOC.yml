@@ -105,7 +105,7 @@
       - name: Tabs
         href: ./resources/design/framework/tabs
       - name: Messaging extensions
-        href: ./resources/design/framework/compose-extensions
+        href: ./resources/design/framework/messaging-extensions
       - name: Bots
         href: ./resources/design/framework/bots
       - name: Cards
