@@ -63,11 +63,6 @@ As always, the project's README file should have more information on specific ne
 |--------|-------------
 | [Microsoft Graph API Samples](https://github.com/OfficeDev/microsoft-teams-sample-graph) | These samples demonstrate using Microsoft Graph API calls to perform tasks such as querying teams and channels from a web service running outside Microsoft Teams.
 
-## End to end apps
-
-| Sample | Description
-|--------|-------------
-
 ## Others
 
 | Code | Description
