@@ -32,13 +32,13 @@ We provide a packages.json file that lists all required packages for a sample. S
 
 As always, the project's README file should have more information on specific needs for specific samples.
 
-## Get started
+<!-- ## Get started
 
 | Sample | Description
 |--------|-------------
 | [Hello World in Microsoft Teams with Node.js](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) | A sample teams app in `Node.js` introducing you to the basic app capabilities.
 | [Hello World in Microsoft Teams with C#.NET](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) | A sample teams app in `C#.NET` introducing you to the basic app capabilities.
-| [Get started - all features](https://github.com/OfficeDev/microsoft-teams-sample-get-started) | This sample shows all the capabilities available in a Microsoft Teams app, including bots, tabs, messaging extensions, and connectors. Source code is provided in both `C#` and `Node.js`.
+ -->
 
 ## Bots
 
@@ -72,7 +72,6 @@ As always, the project's README file should have more information on specific ne
 |------|-------------
 | [Yeoman generator](https://github.com/OfficeDev/generator-teams) | Generates a Microsoft Teams app skeleton with tabs, bots, and more based on Node.js and TypeScript. Optionally it adds support for hosting using Express.
 | [Yeoman generator for messaging extensions](https://github.com/OfficeDev/microsoft-teams-generator-compose-extension) | Yeoman generator for building messaging extension for Microsoft Teams
-| [Complete sample in `Node.js`](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) | A template for building complex bots for Microsoft Teams - Node.js version
-| [Complete sample in `C#.NET`](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) | This project is meant to help a Teams developers in two ways. First, it shows many examples of how an app can integrate into Teams. Second, it gives a set of patterns, templates, and tools that can be used as a starting point for creating a larger, scalable, more enterprise level app to work within Teams.
+| [Complete sample in Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) | A template for building complex bots for Microsoft Teams - Node.js version
+| [Complete sample in C#.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) | This project is meant to help a Teams developers in two ways. First, it shows many examples of how an app can integrate into Teams. Second, it gives a set of patterns, templates, and tools that can be used as a starting point for creating a larger, scalable, more enterprise level app to work within Teams.
 | [Orky](https://github.com/OfficeDev/Orky) | You can use Orky to register your own local bot in Microsoft Teams and execute scripts from ANYWHERE!
-| [Build 2017 Weather](https://github.com/OfficeDev/microsoft-teams-build2017-weather) | Source code for the //build 2017 session to add a weather tab to the skeleton app generated earlier in the session
