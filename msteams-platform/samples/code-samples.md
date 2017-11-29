@@ -9,8 +9,6 @@ Here you will find a list of code samples that demonstrate various capabilities 
 
 ## Getting samples
 
-Microsoft hosts much of its sample code in GitHub, a web-based Git repository hosting service. If you’re not familiar with Git or GitHub, we recommend that you review the [Git documentation](https://git-scm.com/doc) and follow the [Hello World](https://guides.github.com/activities/hello-world/) project in GitHub Guides.
-
 To download our samples from GitHub:
 
 1. Open the project in GitHub
@@ -18,11 +16,9 @@ To download our samples from GitHub:
 3. Open a command prompt in the parent directory into which you want to install the sample project
 4. Run `git clone <pasted url>`
 
-This process copies the entire project to your computer. Most samples containing bots provide code in both Node.js and .NET/C#; you can find the code you want in the appropriate subdirectory.
-
 ### For .NET/C# samples
 
-Each of our .NET samples includes a Visual Studio solution file that contains all required libraries.
+Each of our .NET samples includes a Visual Studio solution file that can build the solution fully, including restoring the NuGet packages.
 
 ### For Node.js samples
 
@@ -39,6 +35,13 @@ As always, the project's README file should have more information on specific ne
 | [Hello World in Microsoft Teams with Node.js](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) | A sample teams app in `Node.js` introducing you to the basic app capabilities.
 | [Hello World in Microsoft Teams with C#.NET](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) | A sample teams app in `C#.NET` introducing you to the basic app capabilities.
  -->
+
+## Featured
+
+| Sample | Description
+|--------|-------------
+| [Complete sample in Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) | A template for building complex bots for Microsoft Teams - Node.js version
+| [Complete sample in C#.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) | This project is meant to help a Teams developers in two ways. First, it shows many examples of how an app can integrate into Teams. Second, it gives a set of patterns, templates, and tools that can be used as a starting point for creating a larger, scalable, more enterprise level app to work within Teams.
 
 ## Bots
 
@@ -64,14 +67,12 @@ As always, the project's README file should have more information on specific ne
 
 | Sample | Description
 |--------|-------------
-| ["To-do" list sample tab app](https://github.com/OfficeDev/microsoft-teams-sample-todo) | This Node.js sample shows how easy it is to convert an existing web app into a tab.
 
 ## Others
 
 | Code | Description
 |------|-------------
 | [Yeoman generator](https://github.com/OfficeDev/generator-teams) | Generates a Microsoft Teams app skeleton with tabs, bots, and more based on Node.js and TypeScript. Optionally it adds support for hosting using Express.
-| [Yeoman generator for messaging extensions](https://github.com/OfficeDev/microsoft-teams-generator-compose-extension) | Yeoman generator for building messaging extension for Microsoft Teams
-| [Complete sample in Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) | A template for building complex bots for Microsoft Teams - Node.js version
-| [Complete sample in C#.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) | This project is meant to help a Teams developers in two ways. First, it shows many examples of how an app can integrate into Teams. Second, it gives a set of patterns, templates, and tools that can be used as a starting point for creating a larger, scalable, more enterprise level app to work within Teams.
+| ["To-do" list sample tab app](https://github.com/OfficeDev/microsoft-teams-sample-todo) | This Node.js sample shows how easy it is to convert an existing web app into a tab.
 | [Orky](https://github.com/OfficeDev/Orky) | You can use Orky to register your own local bot in Microsoft Teams and execute scripts from ANYWHERE!
+| [Build 2017 Weather](https://github.com/OfficeDev/microsoft-teams-build2017-weather) | Source code for the //build 2017 session to add a weather tab to the skeleton app generated earlier in the session
