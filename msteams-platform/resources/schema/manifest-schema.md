@@ -300,19 +300,19 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 
 >[Public Developer Preview](~/resources/general/developer-preview) only
 
-Defines a compose extension for the app.
+Defines a messaging extension for the app.
 
-The object is an array (maximum of 1 element) with all elements of type `object`. This block is required only for solutions that provide a compose extension.
+The object is an array (maximum of 1 element) with all elements of type `object`. This block is required only for solutions that provide a messaging extension.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`botId`|String|64 characters|✔|The unique Microsoft app ID for the bot that backs the compose extension, as registered with the Bot Framework. This can be the same as the overall [app ID](#id).|
+|`botId`|String|64 characters|✔|The unique Microsoft app ID for the bot that backs the messaging extension, as registered with the Bot Framework. This can be the same as the overall [app ID](#id).|
 |`scopes`|Array of enum|2|✔|Specifies whether the bot offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
-|`commands`|Array of object|1|✔|Array of commands that the compose extension supports|
+|`commands`|Array of object|1|✔|Array of commands that the messaging extension supports|
 
 ### composeExtensions.commands
 
-Your compose extension should declare one or more commands. Each command appears in Microsoft Teams as a potential interaction from the UI-based entry point.
+Your messaging extension should declare one or more commands. Each command appears in Microsoft Teams as a potential interaction from the UI-based entry point.
 
 Each command item is an object with the following structure:
 

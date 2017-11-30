@@ -53,7 +53,7 @@
     - name: Cards and card actions
       href: ./concepts/cards-actions
   - name: Compose rich messages
-    href: ./concepts/compose-extensions
+    href: ./concepts/messaging-extensions
   - name: Custom bot
     href: ./concepts/custom-bot
   - name: Deep links
@@ -104,8 +104,8 @@
         href: ./resources/design/framework/search
       - name: Tabs
         href: ./resources/design/framework/tabs
-      - name: Compose extensions
-        href: ./resources/design/framework/compose-extensions
+      - name: Messaging extensions
+        href: ./resources/design/framework/messaging-extensions
       - name: Bots
         href: ./resources/design/framework/bots
       - name: Cards
