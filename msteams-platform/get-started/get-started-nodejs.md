@@ -163,7 +163,9 @@ You need a unique **ID** for your app to be distinguished from others in the Mic
 
 Change the URLs in the manifest. See below.
 
-[!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L26-L57)]
+[!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L26-L44)]
+
+[!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L84-L87)]
 
 ### Sideload the app
 
