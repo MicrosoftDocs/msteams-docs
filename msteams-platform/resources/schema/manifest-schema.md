@@ -241,7 +241,7 @@ The object is an array with all elements of the type `object`.  This block is re
 
 *Optional*
 
-Defines a set of tabs that can be "pinned" by default, without the user adding theM manually. Static tabs declared in `personal` scope are always pinned to the app's personal experience. Static tabs declared in the `team` scope are currently not supported. 
+Defines a set of tabs that can be "pinned" by default, without the user adding them manually. Static tabs declared in `personal` scope are always pinned to the app's personal experience. Static tabs declared in the `team` scope are currently not supported. 
 
 The object is an array (maximum of 16 elements) with all elements of the type `object`. This block is required only for solutions that provide a static tab solution.
 
