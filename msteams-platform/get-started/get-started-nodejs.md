@@ -165,11 +165,9 @@ Change the URLs in the manifest. See below.
 
 [!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L26-L44)]
 
-[!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L84-L87)]
-
 ### Sideload the app
 
-Once you update the manifest, you can rebuild the sample. This will generate a file `helloworldapp.zip` in the `dist` directory within the root of the repo. You can upload this zip file to Microsoft Teams to install your app into Teams.
+Once you update the manifest, you can rebuild the sample. This will generate a file `helloworldapp.zip` in the `manifest` directory within the root of the repo. You can upload this zip file to Microsoft Teams to install your app into Teams.
 
 ... show where it is to be uploaded; prbably screenshots or more detailed explanation ... or both ...
 
