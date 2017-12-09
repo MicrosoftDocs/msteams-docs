@@ -177,6 +177,8 @@ When you install an app in Microsoft Teams, you can install the app for a specif
 
 ## Add a bot to your app
 
+<!--
+
 1. Install `botbuilder-teams` npm package:
 
    ```bash
@@ -194,6 +196,8 @@ When you install an app in Microsoft Teams, you can install the app for a specif
 4. Test the bot with the [**Bot Framework Emulator**](https://docs.microsoft.com/en-us/bot-framework/debug-bots-emulator).
 
 5. Register your bot with `Microsoft Bot Framework`.
+
+-->
 
 <!--
 > [!div class="nextstepaction"]
