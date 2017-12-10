@@ -20,14 +20,14 @@ The steps to get started at a glance are as follows:
 > * Get prerequisites
 > * Download the sample
 > * Build and run the sample
-> * Host the sample, either locally or on Azure
-> * Deploy the sample app into Microsoft Teams platform
-> * Configure the content visible in your app
+> * Host the sample
+> * Deploy your app into Microsoft Teams platform
+> * Configure the app tab
 
 Once you have your app running in the Teams platform, you can enhance it further by adding the following capabilities. Follow along this tutorial to learn how to add these capabilities to your app.
 
 > [!div class="checklist"]
-> * Add a bot to your application (**take the user through creation of a simple echo bot that echoes whatever you say**)
+> * Add a bot to your app (**take the user through creation of a simple echo bot that echoes whatever you say**)
 > * Compose rich messages (**adding a simple compose extension**)
 
 [!include[Get teams](~/includes/get-started/step1-prepare-for-dev.md)]
@@ -111,9 +111,22 @@ At this point, you can open a browser window and navigate to the following URLs 
 
 ## Host the sample app
 
-Remember apps in Microsoft Teams are web applications exposing one or more capabilities? For the Teams platform to load your app, your app must be reachable from the internet. To make your app reachable from the internet, you need to host your app. You can either host it in Microsoft Azure for free or create a tunnel to the local process using ngrok. When you finish hosting your app either in Azure or tunnel it through ngrok, please make a note of the root URL of your app - e.g. `https://yourteamsapp.azurewebsites.net`.
+Remember apps in Microsoft Teams are web applications exposing one or more capabilities? For the Teams platform to load your app, your app must be reachable from the internet. To make your app reachable from the internet, you need to host your app. You can either host it in Microsoft Azure for free or create a tunnel to the local process using ngrok. When you finish hosting your app either in Azure or tunnel it through ngrok, please make a note of the root URL of your app - e.g. `https://yourteamsapp.ngrok.io` or `https://yourteamsapp.azurewebsites.net`.
 
-### Hosting in Azure
+### Tunnel using ngrok
+
+If for some reason you are not able to host your app in Azure, you can keep running the app on your local machine and create a tunnel to it through a web endpoint. [`ngrok`](https://ngrok.com) is a free tool that lets you do just that. With `ngrok` you can get a web address such as `https://d0ac14a5.ngrok.io` (this URL is just an example only). You can [download and install](https://ngrok.com/download) 'ngrok' for your environment and once you install it, you can run the following command to create a tunnel.
+
+```bash
+ngrok http 3333
+```
+
+This will output the forwarding addresses on your console and `ngrok` will keep listening to requests and will route them to your app running on port 3333. You can verify by opening your browser and going to `https://d0ac14a5.ngrok.io/hello` (please be sure to use the forwarding address displayed on your console instead of this URL) to load your app's hello page.
+
+> [!NOTE]
+> If you have used a different port in the [build and run](#build-and-run-the-sample) step above, make sure you use the same port number to setup the ngrok tunnel.
+
+### Host in Azure
 
 Microsoft Azure lets you host your Node.js web application on a free tier using shared infrastructure. This will be sufficient to run our sample.
 
@@ -129,20 +142,7 @@ To get your Node.js app hosted in Azure, you can follow the guide here: [Create 
 
 Once you host your app in Azure, you can verify by opening your browser and going to `https://yourteamsapp.azurewebsites.net` (please be sure to use the right endpoint from your Azure App Service instead of this URL) to load your app's hello page.
 
-### Tunneling using ngrok
-
-If for some reason you are not able to host your app in Azure, you can keep running the app on your local machine and create a tunnel to it through a web endpoint. [`ngrok`](https://ngrok.com) is a free tool that lets you do just that. With `ngrok` you can get a web address such as `https://d0ac14a5.ngrok.io` (this URL is just an example only). You can [download and install](https://ngrok.com/download) 'ngrok' for your environment and once you install it, you can run the following command to create a tunnel.
-
-```bash
-ngrok http 3333
-```
-
-This will output the forwarding addresses on your console and `ngrok` will keep listening to requests and will route them to your app running on port 3333. You can verify by opening your browser and going to `https://d0ac14a5.ngrok.io/hello` (please be sure to use the forwarding address displayed on your console instead of this URL) to load your app's hello page.
-
-> [!NOTE]
-> If you have used a different port in the [build and run](#build-and-run-the-sample) step above, make sure you use the same port number to setup the ngrok tunnel.
-
-## Deploying your app to Microsoft Teams
+## Deploy your app into Microsoft Teams platform
 
 After hosting your app, you need to do a few updates to your manifest before you are ready to deploy your app to your Microsoft Teams environment.
 
@@ -152,13 +152,13 @@ The app manifest is a file that tells the Microsoft Teams platform all about you
 
 You can find your manifest file located at `src/manifest.json` within the sample you cloned. Please follow the below steps to make the appropriate changes:
 
-### Step 1: Change the APP ID
+#### Step 1: Change the APP ID
 
 You need a unique **ID** for your app to be distinguished from others in the Microsoft Teams platform. This **APP ID** is typically a `GUID` and is set in the app manifest file. You can edit the manifest file in the sample you downloaded and set the value of the `"id"` property to a new `GUID`.
 
 [!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L1-L12)]
 
-### Step 2: Change the URLs
+#### Step 2: Change the URLs
 
 Change the URLs in the manifest and use the URLs where the app is hosted. Microsoft Teams will load your app from this location. See below.
 
@@ -166,17 +166,19 @@ Change the URLs in the manifest and use the URLs where the app is hosted. Micros
 
 ### Sideload the app
 
-Once you update the manifest, you can rebuild the sample. This will generate a file `helloworldapp.zip` in the `manifest` directory within the root of the project directory. You can upload this zip file to Microsoft Teams to install your app into one of the teams you own via the ***Upload a custom app*** link.
+Once you update the manifest, you can rebuild the sample. This will generate a file `helloworldapp.zip` in the `manifest` directory within the root of the project directory. You can upload this zip file to Microsoft Teams to install your app into one of the teams you own via the **Upload a custom app** link.
 
 **TODO**: ... show where it is to be uploaded; prbably screenshots or more detailed explanation ... or both ...
 
-## Configure the content
+## Configure the app tab
 
 Once you install the app into a team, you will need to configure the app to show the relevant content for the team. Go to a channel in the team you installed the app and click on the **'+'** button to add a new tab. You can then choose `Hello World` app from the list and you will be presented with a configuration dialog. This dialog will let you choose which tab to dispaly in this channel. Once you select the tab and click on `Save` then you can see the `Hello World` tab loaded with the tab you chose.
 
-![Screenshot of configure](~/assets/images/samples-hw-tab-configure.png)
+![Screenshot of configure](~/assets/images/samples-hello-world-tab-configure.png)
 
 ## Add a bot to your app
+
+The sample already comes with a bot. In this step we will test the bot, register it, and update our app in Microsoft Teams platform. To test the bot we will use the [**Bot Framework Emulator**](~/get-started/test-bots-in-emulator).
 
 <!--
 

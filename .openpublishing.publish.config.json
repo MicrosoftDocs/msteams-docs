@@ -39,6 +39,12 @@
             "path_to_root": "_msteams-samples-hello-world-nodejs",
             "url": "https://github.com/OfficeDev/msteams-samples-hello-world-nodejs",
             "branch": "prakash-wip"
+        },
+        {
+            "path_to_root": "_bot-framework-docs",
+            "url": "https://github.com/MicrosoftDocs/bot-framework-docs",
+            "branch": "live",
+            "branch_mapping": {}
         }
     ],
     "dependent_packages": [{
