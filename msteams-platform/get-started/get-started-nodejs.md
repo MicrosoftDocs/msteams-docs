@@ -178,7 +178,7 @@ Once you install the app into a team, you will need to configure the app to show
 
 ## Add a bot to your app
 
-The sample already comes with a bot. In this step we will test the bot, register it, and update our app in Microsoft Teams platform. To test the bot we will use the [**Bot Framework Emulator**](~/get-started/test-bots-in-emulator).
+The sample already comes with a bot. In this step we will test the bot, register it, and update our app in Microsoft Teams platform. To test the bot we will use the [**Bot Framework Emulator**](/bot-framework/debug-bots-emulator?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json).
 
 <!--
 
