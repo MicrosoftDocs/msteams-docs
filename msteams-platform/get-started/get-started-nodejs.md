@@ -21,14 +21,13 @@ The steps to get started at a glance are as follows:
 > * Download the sample
 > * Build and run the sample
 > * Host the sample, either locally or on Azure
-> * Deploy the sample app into Microsoft Teams platform (**by this time the manifest would be generated and they should be able to sideload the app**)
-> * Configure the content visible in your app (**configure the content visible on the tab; TBD**)
+> * Deploy the sample app into Microsoft Teams platform
+> * Configure the content visible in your app
 
 Once you have your app running in the Teams platform, you can enhance it further by adding the following capabilities. Follow along this tutorial to learn how to add these capabilities to your app.
 
 > [!div class="checklist"]
 > * Add a bot to your application (**take the user through creation of a simple echo bot that echoes whatever you say**)
-> * Add a connector to your application (**Not calling it Office 365 connector yet, but will guide the user to use it if they built an O365 connector before**)
 > * Compose rich messages (**adding a simple compose extension**)
 
 [!include[Get teams](~/includes/get-started/step1-prepare-for-dev.md)]
@@ -155,25 +154,27 @@ You can find your manifest file located at `src/manifest.json` within the sample
 
 ### Step 1: Change the APP ID
 
-You need a unique **ID** for your app to be distinguished from others in the Microsoft Teams platform. This **APP ID** is typically a `GUID` and is set in the app manifest file. You can edit the manifest file in the sample you downloaded.
+You need a unique **ID** for your app to be distinguished from others in the Microsoft Teams platform. This **APP ID** is typically a `GUID` and is set in the app manifest file. You can edit the manifest file in the sample you downloaded and set the value of the `"id"` property to a new `GUID`.
 
 [!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L1-L12)]
 
 ### Step 2: Change the URLs
 
-Change the URLs in the manifest. See below.
+Change the URLs in the manifest and use the URLs where the app is hosted. Microsoft Teams will load your app from this location. See below.
 
 [!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L26-L44)]
 
 ### Sideload the app
 
-Once you update the manifest, you can rebuild the sample. This will generate a file `helloworldapp.zip` in the `manifest` directory within the root of the repo. You can upload this zip file to Microsoft Teams to install your app into Teams.
+Once you update the manifest, you can rebuild the sample. This will generate a file `helloworldapp.zip` in the `manifest` directory within the root of the project directory. You can upload this zip file to Microsoft Teams to install your app into one of the teams you own via the ***Upload a custom app*** link.
 
-... show where it is to be uploaded; prbably screenshots or more detailed explanation ... or both ...
+**TODO**: ... show where it is to be uploaded; prbably screenshots or more detailed explanation ... or both ...
 
 ## Configure the content
 
-When you install an app in Microsoft Teams, you can install the app for a specific team and then configure what content from your app is made visible in the team/channel the app is installed in.
+Once you install the app into a team, you will need to configure the app to show the relevant content for the team. Go to a channel in the team you installed the app and click on the **'+'** button to add a new tab. You can then choose `Hello World` app from the list and you will be presented with a configuration dialog. This dialog will let you choose which tab to dispaly in this channel. Once you select the tab and click on `Save` then you can see the `Hello World` tab loaded with the tab you chose.
+
+![Screenshot of configure](~/assets/images/samples-hw-tab-configure.png)
 
 ## Add a bot to your app
 
