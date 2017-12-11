@@ -27,8 +27,8 @@ The steps to get started at a glance are as follows:
 Once you have your app running in the Teams platform, you can enhance it further by adding the following capabilities. Follow along this tutorial to learn how to add these capabilities to your app.
 
 > [!div class="checklist"]
-> * Add a bot to your app (**take the user through creation of a simple echo bot that echoes whatever you say**)
-> * Compose rich messages (**adding a simple compose extension**)
+> * Add a bot to your app
+> * Compose rich messages
 
 [!include[Get teams](~/includes/get-started/step1-prepare-for-dev.md)]
 
@@ -59,8 +59,8 @@ If you have installed Visual Studio Code, you can verify the installation by run
 
 ```bash
 $ code --version
-1.17.2
-b813d12980308015bcd2b3a2f6efa5c810c33ba5
+1.18.1
+929bacba01ef658b873545e26034d1a8067445e9
 ```
 
 ## Download the sample
@@ -125,6 +125,8 @@ This will output the forwarding addresses on your console and `ngrok` will keep 
 
 > [!NOTE]
 > If you have used a different port in the [build and run](#build-and-run-the-sample) step above, make sure you use the same port number to setup the ngrok tunnel.
+> [!TIP]
+> It is a good idea to run `ngrok` in a different terminal window to keep it running without interfering with the node app which you might later have to stop, rebuild and rerun.
 
 ### Host in Azure
 
@@ -160,13 +162,22 @@ You need a unique **ID** for your app to be distinguished from others in the Mic
 
 #### Step 2: Change the URLs
 
-Change the URLs in the manifest and use the URLs where the app is hosted. Microsoft Teams will load your app from this location. See below.
+Change the URLs that point to `yourteamsapp.ngrok.io` in the manifest and use the URLs where the app is hosted. Microsoft Teams will load your app from this location. See below.
 
-[!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L26-L44)]
+[!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L26-L40)]
 
 ### Sideload the app
 
-Once you update the manifest, you can rebuild the sample. This will generate a file `helloworldapp.zip` in the `manifest` directory within the root of the project directory. You can upload this zip file to Microsoft Teams to install your app into one of the teams you own via the **Upload a custom app** link.
+Once you update the manifest, you can rebuild the sample. To rebuild run the following command:
+
+```bash
+gulp
+```
+
+This will generate a file `helloworldapp.zip` in the `manifest` directory within the root of the project directory. You can upload this zip file to Microsoft Teams to install your app into one of the teams you own via the **Upload a custom app** link.
+
+> [!NOTE]
+> You might have stopped the node process in order to rebuild the app. If so, you will need to rerun the node process using `npm start` command as described above.
 
 **TODO**: ... show where it is to be uploaded; prbably screenshots or more detailed explanation ... or both ...
 
@@ -174,35 +185,32 @@ Once you update the manifest, you can rebuild the sample. This will generate a f
 
 Once you install the app into a team, you will need to configure the app to show the relevant content for the team. Go to a channel in the team you installed the app and click on the **'+'** button to add a new tab. You can then choose `Hello World` app from the list and you will be presented with a configuration dialog. This dialog will let you choose which tab to dispaly in this channel. Once you select the tab and click on `Save` then you can see the `Hello World` tab loaded with the tab you chose.
 
-![Screenshot of configure](~/assets/images/samples-hello-world-tab-configure.png)
+<img width="530px" src="~/assets/images/samples-hello-world-tab-configure.png" title="Screenshot of configure" />
 
 ## Add a bot to your app
 
-The sample already comes with a bot. In this step we will test the bot, register it, and update our app in Microsoft Teams platform. To test the bot we will use the [**Bot Framework Emulator**](/bot-framework/debug-bots-emulator?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json).
+The sample already comes with a bot. In this step we will test the bot, register it, and update our app in Microsoft Teams platform.
 
-<!--
+### Test and register the bot
 
-1. Install `botbuilder-teams` npm package:
+To test the bot we will use the [**Bot Framework Emulator**](/bot-framework/debug-bots-emulator?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json).
 
-   ```bash
-   npm install --save botbuilder-teams
-   ```
+Once the bot is working, we need to register the bot so we can add this to our teams app. To register the bot with bot framework, follow the steps outlined here: [Register a bot with the Bot Framework](/bot-framework/portal-register-bot?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json).
 
-2. Create a `bot.js` file in the `src` directory, with the following code:
+> [!NOTE]
+> The registration process above suggests you to set `MICROSOFT_APP_ID` and `MICROSOFT_APP_PASSWORD` as environment variables for Node.js apps. Note that the `MICROSOFT_APP_ID` value here is also the Bot ID.
 
-   [!code-javascript[Bot Code](~/../_msteams-samples-hello-world-nodejs/src/bot.js)]
+### Update the app manifest and reload the app in teams
 
-3. Add the following code to your `app.js` file in the same directory:
+After testing the bot, you should update the bot id in the app manifest file. Update the `botId` property in the manifest file. See below:
 
-   [!code-javascript[Adding a bot to app](~/../_msteams-samples-hello-world-nodejs/src/app.js#L35-L37)]
+[!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L41-L49)]
 
-4. Test the bot with the [**Bot Framework Emulator**](https://docs.microsoft.com/en-us/bot-framework/debug-bots-emulator).
+After updating the manifest, you should rebuild the app using `gulp` and rerun the app using `npm` as described above. When you rebuild your app, you will get an updated app file `helloworldapp.zip` in the `manifest` directory. Reload the app using this new zip file into Microsoft Teams platform.
 
-5. Register your bot with `Microsoft Bot Framework`.
+### Test your app with the bot
 
--->
+After reloading the app into Microsoft Teams platform you can now interact with the bot. To invoke a response from the bot, you can **@mention** the bot using `@msteams-hw`. Whatever message you send to the bot will sent back to you as a reply.
 
-<!--
-> [!div class="nextstepaction"]
-> [Move to the next step](get-started-step2)
--->
+<img width="300px" title="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
+
