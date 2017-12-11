@@ -11,9 +11,9 @@ keywords: getting started node.js nodejs
 
 [!include[Step 1 Intro](~/includes/get-started/step1-intro.md)]
 
-This tutorial helps you get started with creating a Microsoft Teams app using Node.js. You can test the app by loading it into a 'Team' you have permissions for, or into a test tenant created using the Office Developer Program.
+This tutorial helps you get started creating a Microsoft Teams app using Node.js. You can test the app by loading it into a Team that you have permissions for or into a test tenant created using the Office Developer Program.
 
-The steps to get started at a glance are as follows:
+To create your app:
 
 > [!div class="checklist"]
 > * Prepare Microsoft Teams for development
@@ -42,7 +42,9 @@ To complete this tutorial, you need to get the following prerequisites:
 
 If you see options to add `git`, `node`, `npm`, and `code` to the PATH during installation, choose to do so. It will be handy.
 
-Verify your installation by running the following in a terminal window:
+Verify your installation by running the following in Bash:
+> [!NOTE]
+> If Bash is not part of your system it will be installed as part of Git.
 
 ```bash
 $ git --version
@@ -65,32 +67,32 @@ $ code --version
 
 ## Download the sample
 
-We have provided a [simple 'Hello, World!' sample](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) to get you started with your app. In a terminal window, run the following command to clone the sample repository to your local machine:
+We have provided a [simple 'Hello, World!' sample](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) to get you started. In a terminal window, run the following command to clone the sample repository to your local machine:
 
 ```bash
 git clone https://github.com/OfficeDev/msteams-samples-hello-world-nodejs
 ```
 
 > [!TIP]
-> You can [fork](https://help.github.com/articles/fork-a-repo/) this [repo](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) if you want to modify and checkin your changes to GitHub for future reference.
+> You can [fork](https://help.github.com/articles/fork-a-repo/) this [repo](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) if you want to modify and check in your changes to GitHub for future reference.
 
 ## Build and run the sample
 
-Once the repo is cloned, change to the directory where you cloned the sample to:
+Once the repo is cloned, change to the directory that holds the sample:
 
 ```bash
 cd msteams-samples-hello-world-nodejs
 ```
 
-You can use this terminal window to run the commands that follow in this tutorial.
+You can continue to use this terminal window to run the commands that follow in this tutorial.
 
-In order to build the sample, you need to install all the dependencies first. Run the following command to get the dependencies installed:
+In order to build the sample, you need to install all the dependencies. Run the following command to do this:
 
 ```bash
 npm install
 ```
 
-You should see a bunch of dependencies getting installed. Once they are finished, you can run the following:
+You should see a bunch of dependencies getting installed. Once they are finished, run the following:
 
 ```bash
 npm start
@@ -102,7 +104,7 @@ When the node app starts, it displays `App started listening on port 3333` on th
 > If you see a different port number displayed in the message above, it is because you have a PORT environment variable set. You can continue to use that port or
 > change your environment variable to 3333.
 
-At this point, you can open a browser window and navigate to the following URLs to verify that all the app URLs are loading fine:
+At this point, you can open a browser window and navigate to the following URLs to verify that all the app URLs are loading:
 
 * [http://localhost:3333](http://localhost:3333)
 * [http://localhost:3333/hello](http://localhost:3333/hello)
@@ -111,7 +113,7 @@ At this point, you can open a browser window and navigate to the following URLs 
 
 ## Host the sample app
 
-Remember apps in Microsoft Teams are web applications exposing one or more capabilities? For the Teams platform to load your app, your app must be reachable from the internet. To make your app reachable from the internet, you need to host your app. You can either host it in Microsoft Azure for free or create a tunnel to the local process using ngrok. When you finish hosting your app either in Azure or tunnel it through ngrok, please make a note of the root URL of your app - e.g. `https://yourteamsapp.ngrok.io` or `https://yourteamsapp.azurewebsites.net`.
+Remember that apps in Microsoft Teams are web applications exposing one or more capabilities. For the Teams platform to load your app, your app must be reachable from the internet. To make your app reachable from the internet, you need to host your app. You can either host it in Microsoft Azure for free or create a tunnel to the local process using ngrok. When you finish hosting your app either in Azure or tunnel it through ngrok, please make a note of the root URL of your app - e.g. `https://yourteamsapp.ngrok.io` or `https://yourteamsapp.azurewebsites.net`.
 
 ### Tunnel using ngrok
 
