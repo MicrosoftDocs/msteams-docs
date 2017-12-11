@@ -193,7 +193,10 @@ The sample already comes with a bot. In this step we will test the bot, register
 
 ### Test and register the bot
 
-To test the bot we will use the [**Bot Framework Emulator**](/bot-framework/debug-bots-emulator?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json).
+To test the bot we will use the [Bot Framework Emulator](/bot-framework/debug-bots-emulator?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json). Follow the instructions provided in the link and verify that your bot is working fine.
+
+> [!TIP]
+> To verify your bot is working, just verify that it is echoing back whatever you say to it.
 
 Once the bot is working, we need to register the bot so we can add this to our teams app. To register the bot with bot framework, follow the steps outlined here: [Register a bot with the Bot Framework](/bot-framework/portal-register-bot?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json).
 
@@ -202,7 +205,7 @@ Once the bot is working, we need to register the bot so we can add this to our t
 
 ### Update the app manifest and reload the app in teams
 
-After testing the bot, you should update the bot id in the app manifest file. Update the `botId` property in the manifest file. See below:
+After testing the bot, you should update the bot id in the app manifest file. Update the `"botId"` property in the manifest file. See below:
 
 [!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L41-L49)]
 
@@ -210,7 +213,29 @@ After updating the manifest, you should rebuild the app using `gulp` and rerun t
 
 ### Test your app with the bot
 
-After reloading the app into Microsoft Teams platform you can now interact with the bot. To invoke a response from the bot, you can **@mention** the bot using `@msteams-hw`. Whatever message you send to the bot will sent back to you as a reply.
+After reloading the app into Microsoft Teams platform you can now interact with the bot. To invoke a response from the bot, you can **@mention** the bot using `@msteams-hw`. Whatever message you send to the bot will be sent back to you as a reply.
 
-<img width="300px" title="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
+<img width="450px" title="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 
+## Compose rich messages
+
+Microsoft Teams platform allows the users to compose rich messages into their conversations using a feature called **Messaging Extensions**. Messaging extensions are typically used when you have to provide some smart content to be inserted into the conversations, typically triggered by a search like action. For example, you can use messaging extensions to insert a specific work item with its summary details such as title, assigned to, due dates, and links to access it directly on your planning application while starting a conversation about it. Messaging extensions are built over bots through special API and commands. Once you have a bot in the app, it is very easy to extend the bot to also handle **messaging extensions**.
+
+### Update the app manifest and reload the app in teams again
+
+Our sample comes with a built in messaging extension. To enable the messaging extension, we need to update our `manifest` file with the Bot ID in the messaging extensions section of our manifest. See below and update the `"botId"` property in the `manifest` file:
+
+[!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L50-L67)]
+
+> [!NOTE]
+> Note that our manifest file refers to messaging extensions as `composeExtensions`.
+
+After updating the manifest, you should rebuild the app using `gulp` and rerun the app using `npm` as described above. When you rebuild your app, you will get an updated app file `helloworldapp.zip` in the `manifest` directory. Reload the app using this new zip file into Microsoft Teams platform.
+
+### Test your messaging extension
+
+To test your messaging extension, you can click on the three dots below the input box in your conversation view. A menu will pop up with the **'Hello World'** app in it. When you click it, you will see a bunch of random texts showing up. You can choose any one of them to be inserted into your conversation.
+
+<img width="530px" title="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu" />
+
+<img width="530px" title="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-result" />
