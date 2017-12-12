@@ -9,7 +9,7 @@ keywords: teams manifest schema
 > [!NOTE]
 > For help on migrating your v0.4 manifest to v1.0, see our [migration guide](~/resources/schema/manifest-schema-migrate).
 
-The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://statics.teams.microsoft.com/sdk/v1.0/manifest/MicrosoftTeams.schema.json`](https://statics.teams.microsoft.com/sdk/v1.0/manifest/MicrosoftTeams.schema.json).
+The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://statics.teams.microsoft.com/sdk/v1.2/manifest/MicrosoftTeams.schema.json`](https://statics.teams.microsoft.com/sdk/v1.2/manifest/MicrosoftTeams.schema.json). Versions 1.0, 1.1 are also supported. 
 
 The following schema sample shows all extensibility options.
 
@@ -17,8 +17,8 @@ The following schema sample shows all extensibility options.
 
 ```json
 {
-  "$schema": "https://statics.teams.microsoft.com/sdk/v1.0/manifest/MicrosoftTeams.schema.json", 
-  "manifestVersion": "1.0",
+  "$schema": "https://statics.teams.microsoft.com/sdk/v1.2/manifest/MicrosoftTeams.schema.json", 
+  "manifestVersion": "1.2",
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%", 
   "packageName": "com.example.myapp",
@@ -102,7 +102,7 @@ The following schema sample shows all extensibility options.
   "composeExtensions": [
     {
       "botId": "%MICROSOFT-APP-ID-REGISTERED-WITH-BOT-FRAMEWORK%",
-      "scopes": ["team", "personal"],
+      "canUpdateConfiguration": true,
       "commands": [
         {
           "id": "exampleCmd",
@@ -131,16 +131,22 @@ The following schema sample shows all extensibility options.
 }
 ```
 
+The schema defines the following properties:
+
+## $schema
+
+*Optional, but recommended* &ndash; String
+
+The URL referencing the JSON Schema for the manifest.
+
 > [!TIP]
-> Specify the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor: `"$schema": "https://statics.teams.microsoft.com/sdk/v1.0/manifest/MicrosoftTeams.schema.json",`
+> Specify the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor: `"$schema": "https://statics.teams.microsoft.com/sdk/v1.2/manifest/MicrosoftTeams.schema.json",`
 
-The schema defines the following properties.
-
-## ManifestVersion 
+## manifestVersion 
 
 **Required** &ndash; String
 
-The version of the manifest schema this manifest is using. Should be "1.0".
+The version of the manifest schema this manifest is using.  Should be "1.2".
 
 ## version
 
@@ -166,7 +172,7 @@ A unique identifier for this app in reverse domain notation; for example, com.ex
 
 ## developer
 
-**Required** &ndash; String
+**Required**
 
 Specifies information about your company. For apps submitted to the Office Store, these values must match the information in your Office Store entry.
 
@@ -179,7 +185,7 @@ Specifies information about your company. For apps submitted to the Office Store
 
 ## name
 
-**Required** &ndash; String
+**Required**
 
 The name of your app experience, displayed to users in the Teams experience. For apps submitted to the Office Store, these values must match the information in your Office Store entry.
 
@@ -190,7 +196,7 @@ The name of your app experience, displayed to users in the Teams experience. For
 
 ## description
 
-**Required** &ndash; String
+**Required**
 
 Describes your app to users. For apps submitted to the Office Store, these values must match the information in your Office Store entry.
 
@@ -206,7 +212,7 @@ Ensure that your description accurately describes your experience and provides i
 
 ## icons
 
-**Required** &ndash; String
+**Required**
 
 Icons used within the Teams app. The icon files must be included as part of the sideload package. See [Icons](~/publishing/apps-package#icons) for more information.
 
@@ -217,7 +223,7 @@ Icons used within the Teams app. The icon files must be included as part of the 
 
 ## accentColor
 
-**Required** &ndash String
+**Required** &ndash; String
 
 A color to use in conjunction with and as a background for your outline icons.
 
@@ -302,16 +308,18 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 
 Defines a messaging extension for the app.
 
+> [!NOTE]
+> The name of the feature was changed from "compose extension" to "messaging extension" in November, 2017, but the manifest name remains the same so that existing extensions continue to function.
+
 The object is an array (maximum of 1 element) with all elements of type `object`. This block is required only for solutions that provide a messaging extension.
 
-|Name| Type| Maximum size | Required | Description|
+|Name| Type | Maximum Size | Required | Description|
 |---|---|---|---|---|
-|`botId`|String|64 characters|✔|The unique Microsoft app ID for the bot that backs the messaging extension, as registered with the Bot Framework. This can be the same as the overall [app ID](#id).|
-|`scopes`|Array of enum|2|✔|Specifies whether the bot offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
-|`commands`|Array of object|1|✔|Array of commands that the messaging extension supports|
+|`botId`|String|64|✔|The unique Microsoft app ID for the bot that backs the messaging extension, as registered with the Bot Framework. This may well be the same as the overall [app ID](#id).|
+|`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a messaging extension can be updated by the user. The default is `false`.|
+|`commands`|Array of object|1|✔|Array of commands the messaging extension supports|
 
 ### composeExtensions.commands
-
 Your messaging extension should declare one or more commands. Each command appears in Microsoft Teams as a potential interaction from the UI-based entry point.
 
 Each command item is an object with the following structure:
@@ -331,9 +339,9 @@ Each command item is an object with the following structure:
 
 *Optional*
 
-Specifics which permissions the extensions are requesting, which lets users know how the extension will perform. The following options are non-exclusive:
+An array of `string` which specifies which permissions the app requests, which lets end users know how the extension will perform. The following options are non-exclusive:
 
-* `identity` &emsp; Requires user-identity information
+* `identity` &emsp; Requires user identity information
 * `messageTeamMembers` &emsp; Requires permission to send direct messages to team members
 
 ## validDomains
@@ -343,6 +351,6 @@ Specifics which permissions the extensions are requesting, which lets users know
 A list of valid domains from which the extension expects to load any content. Domain listings can include wildcards, for example `*.example.com`. If your tab configuration or content UI needs to navigate to any other domain besides the one use for tab configuration, that domain must be specified here.
 
 > [!IMPORTANT]
-> Do not add domains that are outside your control, either directly or via wildcards. For example, `youapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid.
+> Do not add domains that are outside your control, either directly or via wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid.
 
 The object is an array with all elements of the type `string`.
