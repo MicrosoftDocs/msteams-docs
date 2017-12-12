@@ -17,7 +17,7 @@ To create your app:
 
 > [!div class="checklist"]
 > * Prepare Microsoft Teams for development
-> * Get prerequisites
+> * [Get prerequisites](#GetPrerequisites)
 > * Download the sample
 > * Build and run the sample
 > * Host the sample
@@ -31,6 +31,8 @@ Once you have your app running in the Teams platform, you can enhance it further
 > * Compose rich messages
 
 [!include[Get teams](~/includes/get-started/step1-prepare-for-dev.md)]
+
+<a name="GetPrerequisites"></a>
 
 ## Get prerequisites
 
@@ -181,11 +183,11 @@ This will generate a file `helloworldapp.zip` in the `manifest` directory within
 > [!NOTE]
 > You might have stopped the node process in order to rebuild the app. If so, you will need to rerun the node process using `npm start` command as described above.
 
-**TODO**: ... show where it is to be uploaded; prbably screenshots or more detailed explanation ... or both ...
+**TODO**: ... show where it is to be uploaded; probably screenshots or more detailed explanation ... or both ...
 
 ## Configure the app tab
 
-Once you install the app into a team, you will need to configure the app to show the relevant content for the team. Go to a channel in the team you installed the app and click on the **'+'** button to add a new tab. You can then choose `Hello World` app from the list and you will be presented with a configuration dialog. This dialog will let you choose which tab to dispaly in this channel. Once you select the tab and click on `Save` then you can see the `Hello World` tab loaded with the tab you chose.
+Once you install the app into a team, you will need to configure the app to show the relevant content for the team. Go to a channel in the team you installed the app and click on the **'+'** button to add a new tab. You can then choose `Hello World` app from the list and you will be presented with a configuration dialog. This dialog will let you choose which tab to display in this channel. Once you select the tab and click on `Save` then you can see the `Hello World` tab loaded with the tab you chose.
 
 <img width="530px" src="~/assets/images/samples-hello-world-tab-configure.png" title="Screenshot of configure" />
 
