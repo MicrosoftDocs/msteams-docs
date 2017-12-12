@@ -7,7 +7,7 @@ keywords: teams manifest schema
 # Reference: Manifest schema for Microsoft Teams
 
 > [!NOTE]
-> For help on migrating your v0.4 manifest to v1.0, see our [migration guide](~/resources/schema/manifest-schema-migrate).
+> For help on migrating your v0.4 manifest to v1.x, see our [migration guide](~/resources/schema/manifest-schema-migrate).
 
 The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://statics.teams.microsoft.com/sdk/v1.2/manifest/MicrosoftTeams.schema.json`](https://statics.teams.microsoft.com/sdk/v1.2/manifest/MicrosoftTeams.schema.json). Versions 1.0 and 1.1 are also supported. 
 
