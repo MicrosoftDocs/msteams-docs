@@ -16,19 +16,21 @@ This tutorial helps you get started creating a Microsoft Teams app using Node.js
 To create your app:
 
 > [!div class="checklist"]
-> * Prepare Microsoft Teams for development
+> * [Prepare Microsoft Teams for development](#PrepareMicrosoftTeams)
 > * [Get prerequisites](#GetPrerequisites)
-> * Download the sample
-> * Build and run the sample
-> * Host the sample
-> * Deploy your app into Microsoft Teams platform
-> * Configure the app tab
+> * [Download the sample](#DownloadSample)
+> * [Build and run the sample](#BuildRun)
+> * [Host the sample](#HostSample)
+> * [Deploy your app into Microsoft Teams](#DeployToTeams)
+> * [Configure the app tab](#ConfigureTheAppTab)
 
 Once you have your app running in the Teams platform, you can enhance it further by adding the following capabilities. Follow along this tutorial to learn how to add these capabilities to your app.
 
 > [!div class="checklist"]
-> * Add a bot to your app
-> * Compose rich messages
+> * [Add a bot to your app](#AddBot)
+> * [Compose rich messages](#ComposeRichMessages)
+
+<a name="PrepareMicrosoftTeams"></a>
 
 [!include[Get teams](~/includes/get-started/step1-prepare-for-dev.md)]
 
@@ -67,6 +69,8 @@ $ code --version
 929bacba01ef658b873545e26034d1a8067445e9
 ```
 
+<a name="DownloadSample"></a>
+
 ## Download the sample
 
 We have provided a [simple 'Hello, World!' sample](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) to get you started. In a terminal window, run the following command to clone the sample repository to your local machine:
@@ -77,6 +81,8 @@ git clone https://github.com/OfficeDev/msteams-samples-hello-world-nodejs
 
 > [!TIP]
 > You can [fork](https://help.github.com/articles/fork-a-repo/) this [repo](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) if you want to modify and check in your changes to GitHub for future reference.
+
+<a name="BuildRun"></a>
 
 ## Build and run the sample
 
@@ -113,6 +119,8 @@ At this point, you can open a browser window and navigate to the following URLs 
 * [http://localhost:3333/first](http://localhost:3333/first)
 * [http://localhost:3333/second](http://localhost:3333/second)
 
+<a name="HostSample"></a>
+
 ## Host the sample app
 
 Remember that apps in Microsoft Teams are web applications exposing one or more capabilities. For the Teams platform to load your app, your app must be reachable from the internet. To make your app reachable from the internet, you need to host your app. You can either host it in Microsoft Azure for free or create a tunnel to the local process using ngrok. When you finish hosting your app either in Azure or tunnel it through ngrok, please make a note of the root URL of your app - e.g. `https://yourteamsapp.ngrok.io` or `https://yourteamsapp.azurewebsites.net`.
@@ -148,7 +156,9 @@ To get your Node.js app hosted in Azure, you can follow the guide here: [Create 
 
 Once you host your app in Azure, you can verify by opening your browser and going to `https://yourteamsapp.azurewebsites.net` (please be sure to use the right endpoint from your Azure App Service instead of this URL) to load your app's hello page.
 
-## Deploy your app into Microsoft Teams platform
+<a name="DeployToTeams"></a>
+
+## Deploy your app into Microsoft Teams
 
 After hosting your app, you need to do a few updates to your manifest before you are ready to deploy your app to your Microsoft Teams environment.
 
@@ -185,11 +195,15 @@ This will generate a file `helloworldapp.zip` in the `manifest` directory within
 
 **TODO**: ... show where it is to be uploaded; probably screenshots or more detailed explanation ... or both ...
 
+<a name="ConfigureTheAppTab"></a>
+
 ## Configure the app tab
 
 Once you install the app into a team, you will need to configure the app to show the relevant content for the team. Go to a channel in the team you installed the app and click on the **'+'** button to add a new tab. You can then choose `Hello World` app from the list and you will be presented with a configuration dialog. This dialog will let you choose which tab to display in this channel. Once you select the tab and click on `Save` then you can see the `Hello World` tab loaded with the tab you chose.
 
 <img width="530px" src="~/assets/images/samples-hello-world-tab-configure.png" title="Screenshot of configure" />
+
+<a name="AddBot"></a>
 
 ## Add a bot to your app
 
@@ -220,6 +234,8 @@ After updating the manifest, you should rebuild the app using `gulp` and rerun t
 After reloading the app into Microsoft Teams platform you can now interact with the bot. To invoke a response from the bot, you can **@mention** the bot using `@msteams-hw`. Whatever message you send to the bot will be sent back to you as a reply.
 
 <img width="450px" title="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
+
+<a name="ComposeRichMessages"></a>
 
 ## Compose rich messages
 
