@@ -146,7 +146,7 @@ The URL referencing the JSON Schema for the manifest.
 
 **Required** &ndash; String
 
-The version of the manifest schema this manifest is using.  Should be "1.2".
+The version of the manifest schema this manifest is using. It should be "1.2".
 
 ## version
 
