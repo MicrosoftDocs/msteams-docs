@@ -46,25 +46,25 @@ To complete this tutorial, you need to get the following prerequisites:
 
 If you see options to add `git`, `node`, `npm`, and `code` to the PATH during installation, choose to do so. It will be handy.
 
-Verify your installation by running the following in Bash:
+Verify your installation by running the following in a terminal window:
 > [!NOTE]
-> If Bash is not part of your system it will be installed as part of Git.
+> Use the terminal window that you are most comfortable with on your platform. These examples use Bash, but will run on most platforms. If Bash is not part of your system it can be installed as part of Git.
 
 ```bash
-$ git --version
+git --version
 git version 2.15.0.windows.1
 
-$ node -v
+node -v
 v6.11.4
 
-$ npm -v
+npm -v
 5.5.1
 ```
 
 If you have installed Visual Studio Code, you can verify the installation by running:
 
 ```bash
-$ code --version
+code --version
 1.18.1
 929bacba01ef658b873545e26034d1a8067445e9
 ```
@@ -94,19 +94,19 @@ cd msteams-samples-hello-world-nodejs
 
 You can continue to use this terminal window to run the commands that follow in this tutorial.
 
-In order to build the sample, you need to install all the dependencies. Run the following command to do this:
+In order to build the sample, you need to install all its dependencies. Run the following command to do this:
 
 ```bash
 npm install
 ```
 
-You should see a bunch of dependencies getting installed. Once they are finished, run the following:
+You should see a bunch of dependencies getting installed. Once they are finished, you can run the app:
 
 ```bash
 npm start
 ```
 
-When the node app starts, it displays `App started listening on port 3333` on the terminal window.
+When the hello-world app starts, it displays `App started listening on port 3333` in the terminal window.
 
 > [!NOTE]
 > If you see a different port number displayed in the message above, it is because you have a PORT environment variable set. You can continue to use that port or
@@ -123,11 +123,11 @@ At this point, you can open a browser window and navigate to the following URLs 
 
 ## Host the sample app
 
-Remember that apps in Microsoft Teams are web applications exposing one or more capabilities. For the Teams platform to load your app, your app must be reachable from the internet. To make your app reachable from the internet, you need to host your app. You can either host it in Microsoft Azure for free or create a tunnel to the local process using ngrok. When you finish hosting your app either in Azure or tunnel it through ngrok, please make a note of the root URL of your app - e.g. `https://yourteamsapp.ngrok.io` or `https://yourteamsapp.azurewebsites.net`.
+Remember that apps in Microsoft Teams are web applications exposing one or more capabilities. For the Teams platform to load your app, your app must be reachable from the internet. To make your app reachable from the internet, you need to host your app. You can either host it in Microsoft Azure for free or create a tunnel to the local process on your development machine using ngrok. When you finish hosting your app make a note of its root URL. It will look something like: `https://yourteamsapp.ngrok.io` or `https://yourteamsapp.azurewebsites.net`.
 
 ### Tunnel using ngrok
 
-If for some reason you are not able to host your app in Azure, you can keep running the app on your local machine and create a tunnel to it through a web endpoint. [`ngrok`](https://ngrok.com) is a free tool that lets you do just that. With `ngrok` you can get a web address such as `https://d0ac14a5.ngrok.io` (this URL is just an example only). You can [download and install](https://ngrok.com/download) 'ngrok' for your environment and once you install it, you can run the following command to create a tunnel.
+For quick testing you can run the app on your local machine and create a tunnel to it through a web endpoint. [`ngrok`](https://ngrok.com) is a free tool that lets you do just that. With `ngrok` you can get a web address such as `https://d0ac14a5.ngrok.io` (this URL is just an example). You can [download and install](https://ngrok.com/download) 'ngrok' for your environment and once you install it, you can run the following command to create a tunnel.
 
 ```bash
 ngrok http 3333
@@ -140,13 +140,14 @@ This will output the forwarding addresses on your console and `ngrok` will keep 
 > [!TIP]
 > It is a good idea to run `ngrok` in a different terminal window to keep it running without interfering with the node app which you might later have to stop, rebuild and rerun.
 
+The app will only be available during the current session on your development machine. If the machine is shut down or goes to sleep the service will no longer be available. Remember this when sharing the app for testing by other users.
+
 ### Host in Azure
 
-Microsoft Azure lets you host your Node.js web application on a free tier using shared infrastructure. This will be sufficient to run our sample.
+Microsoft Azure lets you host your Node.js web application on a free tier using shared infrastructure. This will be sufficient to run this Hello-world sample.
 
-> [!TIP]
-> If you have never used Azure before, you can get started by creating a new free account.
-> Follow this guide to help you get started: [Azure developer guide](https://docs.microsoft.com/en-us/azure/guides/developer/azure-developer-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json#understanding-accounts-subscriptions-and-billing).
+If you have never used Azure before, you can get started by creating a new free account.
+Follow this guide to help you get started: [Azure developer guide](https://docs.microsoft.com/en-us/azure/guides/developer/azure-developer-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json#understanding-accounts-subscriptions-and-billing).
 
 To get your Node.js app hosted in Azure, you can follow the guide here: [Create a Node.js web app in Azure](/azure/app-service/app-service-web-get-started-nodejs?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json#launch-azure-cloud-shell).
 
@@ -158,25 +159,25 @@ Once you host your app in Azure, you can verify by opening your browser and goin
 
 <a name="DeployToTeams"></a>
 
-## Deploy your app into Microsoft Teams
+## Deploy your app to Microsoft Teams
 
 After hosting your app, you need to do a few updates to your manifest before you are ready to deploy your app to your Microsoft Teams environment.
 
 ### The app manifest
 
-The app manifest is a file that tells the Microsoft Teams platform all about your app and the capabilities it provides your users. We will get more into the apps and their capabilities later on [here](~/concepts/apps/apps-overview), but for now we will learn the modifications we need to do to our manifest file so we can load our app in Microsoft Teams.
+The app manifest is a file that tells the Microsoft Teams platform all about your app and the capabilities it provides your users. You will learn more about apps and their capabilities later [here](~/concepts/apps/apps-overview), but for now focus on the modifications to the manifest needed to load the hello-world app in Microsoft Teams.
 
-You can find your manifest file located at `src/manifest.json` within the sample you cloned. Please follow the below steps to make the appropriate changes:
+You can find the manifest file at `src/manifest.json` within the hello-world sample. Please follow these steps to make the appropriate changes:
 
-#### Step 1: Change the APP ID
+#### Step 1: Change the APP ID in the manifest
 
-You need a unique **ID** for your app to be distinguished from others in the Microsoft Teams platform. This **APP ID** is typically a `GUID` and is set in the app manifest file. You can edit the manifest file in the sample you downloaded and set the value of the `"id"` property to a new `GUID`.
+You need a unique **ID** to distinguish your app from others on the Microsoft Teams platform. This **APP ID** is typically a `GUID` and is set in the app manifest file. You can edit the manifest file and set the value of the `"id"` property to a new `GUID`.
 
 [!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L1-L12)]
 
-#### Step 2: Change the URLs
+#### Step 2: Change the URLs in the manifest
 
-Change the URLs that point to `yourteamsapp.ngrok.io` in the manifest and use the URLs where the app is hosted. Microsoft Teams will load your app from this location. See below.
+Change the URLs that point to `yourteamsapp.ngrok.io` to the URLs where the app is hosted. Microsoft Teams will load your app from this location.
 
 [!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L26-L40)]
 
@@ -188,18 +189,18 @@ Once you update the manifest, you can rebuild the sample. To rebuild run the fol
 gulp
 ```
 
-This will generate a file `helloworldapp.zip` in the `manifest` directory within the root of the project directory. You can upload this zip file to Microsoft Teams to install your app into one of the teams you own via the **Upload a custom app** link.
+This will generate a file `helloworldapp.zip` in the `manifest` directory within the root of the project directory. Use the **Upload a custom app** link in Teams to upload this zip file and install your app into one of the teams you own. See [Sideload your app in Microsoft Teams](~/concepts/apps/apps-sideload) for more information on how to do this.
 
 > [!NOTE]
-> You might have stopped the node process in order to rebuild the app. If so, you will need to rerun the node process using `npm start` command as described above.
+> You might have stopped the node process in order to rebuild the app. If so, you will need to rerun the node process using the `npm start` command described in [Build and run the sample](#BuildRun).
 
-**TODO**: ... show where it is to be uploaded; probably screenshots or more detailed explanation ... or both ...
+**TODO**: ... show where it is to be uploaded; probably screenshots or more detailed explanation ... or both ... NS - this info is in the apps-sideload topic, but that topic is slightly out of date, and needs terminology and screenshots updated. I added a link and will update the topic shortly if that makes sense to you.
 
 <a name="ConfigureTheAppTab"></a>
 
 ## Configure the app tab
 
-Once you install the app into a team, you will need to configure the app to show the relevant content for the team. Go to a channel in the team you installed the app and click on the **'+'** button to add a new tab. You can then choose `Hello World` app from the list and you will be presented with a configuration dialog. This dialog will let you choose which tab to display in this channel. Once you select the tab and click on `Save` then you can see the `Hello World` tab loaded with the tab you chose.
+Once you install the app into a team, you will need to configure it to show content. Go to a channel in the team and click on the **'+'** button to add a new tab. You can then choose `Hello World` from the **Add a tab** list.  You will then be presented with a configuration dialog. This dialog will let you choose which tab to display in this channel. Once you select the tab and click on `Save` then you can see the `Hello World` tab loaded with the tab you chose.
 
 <img width="530px" src="~/assets/images/samples-hello-world-tab-configure.png" title="Screenshot of configure" />
 
@@ -211,7 +212,7 @@ The sample already comes with a bot. In this step we will test the bot, register
 
 ### Test and register the bot
 
-To test the bot we will use the [Bot Framework Emulator](/bot-framework/debug-bots-emulator?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json). Follow the instructions provided in the link and verify that your bot is working fine.
+To test the bot we will use the [Bot Framework Emulator](/bot-framework/debug-bots-emulator?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json), a desktop application that allows bot developers to test and debug their bots. Follow the instructions provided in the link and verify that your bot is working.
 
 > [!TIP]
 > To verify your bot is working, just verify that it is echoing back whatever you say to it.
@@ -227,7 +228,7 @@ After testing the bot, you should update the bot id in the app manifest file. Up
 
 [!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L41-L49)]
 
-After updating the manifest, you should rebuild the app using `gulp` and rerun the app using `npm` as described above. When you rebuild your app, you will get an updated app file `helloworldapp.zip` in the `manifest` directory. Reload the app using this new zip file into Microsoft Teams platform.
+After updating the manifest, you should rebuild the app using `gulp` and rerun the app using `npm` as described above. When you rebuild your app, you will get an updated app file `helloworldapp.zip` in the `manifest` directory. Reload the app using this new zip file into Microsoft Teams.
 
 ### Test your app with the bot
 
@@ -239,22 +240,22 @@ After reloading the app into Microsoft Teams platform you can now interact with 
 
 ## Compose rich messages
 
-Microsoft Teams platform allows the users to compose rich messages into their conversations using a feature called **Messaging Extensions**. Messaging extensions are typically used when you have to provide some smart content to be inserted into the conversations, typically triggered by a search like action. For example, you can use messaging extensions to insert a specific work item with its summary details such as title, assigned to, due dates, and links to access it directly on your planning application while starting a conversation about it. Messaging extensions are built over bots through special API and commands. Once you have a bot in the app, it is very easy to extend the bot to also handle **messaging extensions**.
+The Microsoft Teams developer platform allows the users to compose custom rich messages in their conversations using a feature called **Messaging Extensions**. Messaging extensions are used when you want to insert smart content in the conversations, typically triggered by a search like action. For example you can use messaging extensions to insert a specific work item with its summary details such as title, assigned to, due dates, and links to access it directly on your planning application while starting a conversation about it. Messaging extensions are built over bots through special APIs and commands. Once you have a bot in the app, it is very easy to extend the bot to also handle **messaging extensions**.
 
 ### Update the app manifest and reload the app in teams again
 
-Our sample comes with a built in messaging extension. To enable the messaging extension, we need to update our `manifest` file with the Bot ID in the messaging extensions section of our manifest. See below and update the `"botId"` property in the `manifest` file:
+The hello-world sample comes with a built in messaging extension. To enable the messaging extension, we need to update our `manifest` file with the Bot ID in the messaging extensions section of the manifest. To enable this functionality, update the `"botId"` property in the `manifest` file:
 
 [!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L50-L67)]
 
 > [!NOTE]
-> Note that our manifest file refers to messaging extensions as `composeExtensions`.
+> Note that our manifest file refers to messaging extensions as `composeExtensions`. This is for backwards compatibility.
 
-After updating the manifest, you should rebuild the app using `gulp` and rerun the app using `npm` as described above. When you rebuild your app, you will get an updated app file `helloworldapp.zip` in the `manifest` directory. Reload the app using this new zip file into Microsoft Teams platform.
+After updating the manifest, you should rebuild the app using `gulp` and rerun the app using `npm` as described above. When you rebuild your app, you will get an updated app file `helloworldapp.zip` in the `manifest` directory. Reload the app using this new zip file in Microsoft Teams.
 
 ### Test your messaging extension
 
-To test your messaging extension, you can click on the three dots below the input box in your conversation view. A menu will pop up with the **'Hello World'** app in it. When you click it, you will see a bunch of random texts showing up. You can choose any one of them to be inserted into your conversation.
+To test your messaging extension, you can click on the three dots below the input box in your conversation view. A menu will pop up with the **'Hello World'** app in it. When you click it, you will see a bunch of random texts showing up. You can choose any one of them and it will be inserted it into your conversation.
 
 <img width="530px" title="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
 
