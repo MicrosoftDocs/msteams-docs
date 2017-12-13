@@ -5,6 +5,7 @@ keywords: teams requirements prerequisites tabs apps
 ---
 # Requirements for tab pages in Microsoft Teams
 
+**$TODO$** Update this - it's not right.
 > [!IMPORTANT]
 > Use of the Microsoft Teams JavaScript client SDK is subject to the [Terms of Use](https://aka.ms/bf-terms), [Privacy Statement](https://aka.ms/bf-privacy), and [Code of Conduct](https://aka.ms/bf-conduct) for the Microsoft Bot Framework (Preview).
 

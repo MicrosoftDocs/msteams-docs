@@ -19,7 +19,7 @@ We also provide Teams-specific .NET and Node.js [extensions for the Bot Builder 
 ### Where do I sign up to start building Teams apps?
 
 1. You must have access to Microsoft Teams via an Office 365 subscription
-2. If you are building a bot you must [create accounts for the Bot Framework](//dev.botframework.com/bots)
+2. If you are building a bot you must [register it with Bot Framework](~/concepts/bots/bots-create)
 3. App publishing requires you [register as a Microsoft app developer](//developer.microsoft.com/en-us/store/register)
 
 ## Bots

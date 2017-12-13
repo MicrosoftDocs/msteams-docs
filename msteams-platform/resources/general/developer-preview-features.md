@@ -25,11 +25,3 @@ Messaging extensions make it easy for users to query for information from your s
 ## App notifications 
 
 App notifications allow apps to send messages using the Bot Framework without having to implement a conversational bot. It also enables them to mark messages as important and to post messages to the activity feed. Learn more [here](~/concepts/activity-feed).
- 
-## Actionable connectors
-
-Actionable connectors use the new Actionable Message card type within Microsoft Teams that allow users to interact with connector cards. Learn more [here](~/concepts/connectors). 
- 
-## Bot message updates
-
-Bot messages can be updated after they have been delivered, enabling apps to always show up-to-date state in their messages as new information becomes available. Learn more [here](~/concepts/bots/bots-conversations#updating-messages).
