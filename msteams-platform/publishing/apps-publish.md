@@ -10,7 +10,7 @@ keywords: teams publish store office publishing
 > **Your Microsoft Teams app *must* use the [latest schema](~/resources/schema/manifest-schema) and follow [current packaging guidelines](~/publishing/apps-package).**
 >
 > [!NOTE]
-> Teams will soon provide an in-app gallery for users to find or discover [high-quality Teams apps](http://aka.ms/microsoftteamsdesignguidelines). To have your solution available in this gallery, you must publish your solution through the Office Store.
+> Teams will soon provide an in-app gallery for users to find or discover [high-quality Teams apps](~/resources/design/overview). To have your solution available in this gallery, you must publish your solution through the Office Store.
 
 The Office Store provides a convenient location for you to upload your Microsoft Teams app, as well as other Office 365 extensibility types such as Office add-ins and Sharepoint add-ins. To include your solution in the Office Store, you submit it to the Seller Dashboard. You need to create an individual or company account if you have not already done so for other Windows apps or Office extensibility types.
 

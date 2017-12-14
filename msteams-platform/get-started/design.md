@@ -8,7 +8,7 @@ keywords: teams apps design
 
 Microsoft Teams places content in the middle of everyday conversations. Take a look at some ideas you can use to showcase your brand within Microsoft Teams.
 
->For more details and full guidance, complete with style guides and examples, please review our full [Design guidelines](http://aka.ms/microsoftteamsdesignguidelines).
+>For more details and full guidance, complete with style guides and examples, please review our full [Design guidelines](https://docs.microsoft.com/en-us/microsoftteams/platform/resources/design/overview).
 
 ## Designing a great tab 
 
