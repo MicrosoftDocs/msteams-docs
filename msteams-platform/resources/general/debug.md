@@ -48,7 +48,10 @@ This launches ngrok to listen on the port you specify. In return, it gives you a
 
 To use ngrok in your project, and depending on the capabilities you are using, you must replace all URL references in your code, configuration, and/or manifest.json file to use this URL endpoint.
 
-For example, for bots registered in the Microsoft Bot Framework, update the bot's endpoint to use this new ngrok endpoint&mdash;for example, `https://2d1224fb.ngrok.io/api/messages`. You can validate that ngrok is working, too, by testing bot response in the Bot Framework portal's Test chat window. (Again, like the emulator, this test doesn't allow you to access Teams-specific functionality.) 
+For example, for bots registered in the Microsoft Bot Framework, update the bot's messaging endpoint to use this new ngrok endpoint&mdash;for example, `https://2d1224fb.ngrok.io/api/messages`. You can validate that ngrok is working, too, by testing bot response in the Bot Framework portal's Test chat window. (Again, like the emulator, this test doesn't allow you to access Teams-specific functionality.)
+
+> [!NOTE]
+> To update the messaging endpoint for a bot, you must use the Bot Framework &ndash; click on your bot in [your list of bots in Bot Framework](https://dev.botframework.com/bots). You do not need to migrate your bot to Microsoft Azure; [more information on this here](~/concepts/bots/bots-create#bots-and-microsoft-azure).
 
 Please remember that any time you change values in the manifest.json, you need to repackage and re-sideload into Teams.
 

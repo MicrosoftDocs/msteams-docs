@@ -34,15 +34,4 @@ The follow metadata is required in your manifest.json file and for Seller Dashbo
 
 ## Submission extras for bots
 
-Bots in Microsoft Teams must be built and registered in the Bot Framework. Teams pulls some information from the Bot Framework to display to end users, so you must ensure you provide the following information on the Bot Framework Dev Portal as well as in the Teams Manifest.
-
-On your bot portal page, click the Publish button. In this dialog there are several required fields that you must enter:
-
-* **Icon**&emsp;Use your 96&times;96 color icon
-* **Privacy statement**&emsp;Must match the privacy link URL you provide in your manifest and the Seller Dashboard
-* **Terms of use**&emsp;Must match the terms of service URL you provide in your manifest
-
-Fill in the information and choose **Save**.
-
-> [!NOTE]
-> You are not required to publish the bot to the Bot Framework bot directory.
+Bots in Microsoft Teams must be created using Bot Framework. (See [Create a bot](~/concepts/bots/bots-create) for instructions.) Use your Use your 96&times;96 color icon for your bot's icon in Bot Framework.

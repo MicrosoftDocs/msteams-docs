@@ -40,9 +40,6 @@ Record your bot’s app ID and app password—you will need to supply the app ID
 
 As with bots and tabs, you update the [manifest](~/resources/schema/manifest-schema#composeextensions) of your app to include the messaging extension properties. These properties govern how your messaging extension appears and behaves in the Microsoft Teams client. Messaging extensions are supported beginning with v1.0 of the manifest.
 
-> [!NOTE]
-> The `canUpdateConfiguration` property is not yet included in the manifest schema. However, you can still test messaging extensions that use `canUpdateConfiguration` by sideloading them.
-
 #### Declare your messaging extension
 
 To add a messaging extension, include a new top-level JSON structure in your manifest with the `composeExtensions` property. Currently, you are limited to creating a single messaging extension for your app.
