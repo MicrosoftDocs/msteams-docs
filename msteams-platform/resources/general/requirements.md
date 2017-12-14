@@ -5,9 +5,6 @@ keywords: teams requirements prerequisites tabs apps
 ---
 # Requirements for tab pages in Microsoft Teams
 
-> [!IMPORTANT]
-> Use of the Microsoft Teams JavaScript client SDK is subject to the [Terms of Use](https://aka.ms/bf-terms), [Privacy Statement](https://aka.ms/bf-privacy), and [Code of Conduct](https://aka.ms/bf-conduct) for the Microsoft Bot Framework (Preview).
-
 All tab content, including configuration, content, and tab-removal pages must meet the following requirements:
 
 * Pages must be hosted on a secure HTTPS endpoint. Microsoft Teams will not display insecure HTTP content.

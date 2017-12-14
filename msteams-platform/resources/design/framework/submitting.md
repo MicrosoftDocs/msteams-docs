@@ -105,7 +105,7 @@ You can include a maximum of one bot per app. Specifications for your bot must i
 
 ### A bot name
 
-This should match its ID in the bot framework. Your max character length is 64.
+This should match its ID in the Bot Framework. Your max character length is 64.
 
 ### A channel selector
 
@@ -137,7 +137,7 @@ Specifications for each messaging extension should include:
 
 ### ID
 
-This should match its ID in the bot framework. Your max character length is 64.
+This should match its ID in the Bot Framework. Your max character length is 64.
 
 ### Defined scope
 
