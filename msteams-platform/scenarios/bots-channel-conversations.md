@@ -80,7 +80,7 @@ We recommend that your bot *not* send a welcome message in the following situati
 * A channel is renamed
 * A team member is added to a channel
 
->For more best practices, see our [design guidelines](http://aka.ms/microsoftteamsdesignguidelines).
+>For more best practices, see our [design guidelines](~/resources/design/overview).
 
 ## Mentions
 
