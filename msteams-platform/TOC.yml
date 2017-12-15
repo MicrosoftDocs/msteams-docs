@@ -3,8 +3,8 @@
   universal_ref_toc: /javascript/api/msteams-client-docs-ref-typescript/toc.json
 - name: Get started
   items:
-  - name: Get started with Microsoft Teams
-    href: ./get-started/get-started
+  - name: Get started with Node.js
+    href: ./get-started/get-started-nodejs
   expanded: true
 - name: Concepts
   items:
