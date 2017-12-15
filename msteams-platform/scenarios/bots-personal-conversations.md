@@ -112,4 +112,4 @@ For bots that are added directly by a user, and not already part of any of the u
 
 Your bot should proactively send a welcome message to a 1:1 chat the first time (and only the first time) a user initiates a 1:1 chat with your bot. (This recommendation does not apply to first-time contacts in a channel.)
 
->For more best practices, see our [design guidelines](http://aka.ms/microsoftteamsdesignguidelines).
+>For more best practices, see our [design guidelines](~/resources/design/overview).

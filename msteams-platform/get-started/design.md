@@ -8,7 +8,7 @@ keywords: teams apps design
 
 Microsoft Teams places content in the middle of everyday conversations. Take a look at some ideas you can use to showcase your brand within Microsoft Teams.
 
->For more details and full guidance, complete with style guides and examples, please review our full [Design guidelines](http://aka.ms/microsoftteamsdesignguidelines).
+>For more details and full guidance, complete with style guides and examples, please review our full [Design guidelines](~/resources/design/overview).
 
 ## Designing a great tab 
 
@@ -18,7 +18,7 @@ Tabs give your app a dedicated canvas at the center of a team’s workflow, allo
 
 Teams add configurable tabs to channels. A *channel* is a specific topic or purpose that the team has. Find the concepts in your app that best fit this context; users are more likely to want to add these as tabs. For example, the Planner tab for a channel contains a single plan. The Power BI tab maps to a specific report.
 
-Use static tabs for your single-user experience. For example, if your service is a notetaking app, add a tab that holds personal notes. That way, a user can refer to his or her own notes without having to share them with an entire team.
+Use static tabs for your single-user experience. For example, if your service is a note taking app, add a tab that holds personal notes. That way, a user can refer to his or her own notes without having to share them with an entire team.
 
 ### Scope and focus the user experience
 
