@@ -11,7 +11,7 @@ keywords: getting started node.js nodejs
 
 [!include[Step 1 Intro](~/includes/get-started/step1-intro.md)]
 
-This tutorial helps you get started creating a Microsoft Teams app using Node.js. You can test the app by loading it into a Team that you have permissions for or into a test tenant created using the Office Developer Program.
+This tutorial helps you get started creating a Microsoft Teams app using Node.js. You can test the app by loading it into a Team that you have permissions for or into a test tenant created using the Office Developer Program. This topic is written to be platform independent.
 
 To create your app:
 
@@ -48,18 +48,25 @@ If you see options to add `git`, `node`, `npm`, and `code` to the PATH during in
 
 Verify your installation by running the following in a terminal window:
 > [!NOTE]
-> Use the terminal window that you are most comfortable with on your platform. These examples use Bash, but will run on most platforms. If Bash is not part of your system it can be installed as part of Git.
+> Use the terminal window that you are most comfortable with on your platform. These examples use Bash, but will run on most platforms.
 
 ```bash
-git --version
+$ git --version
 git version 2.15.0.windows.1
 
-node -v
+$ node -v
 v6.11.4
 
-npm -v
+$ npm -v
 5.5.1
+
+$ gulp -v
+CLI version 1.4.0
+Local version 3.9.1
 ```
+
+You may have a different version of these applications. This should not be a problem.
+If you don't have gulp installed, do so now by running `npm install gulp -g` in your terminal window.
 
 If you have installed Visual Studio Code, you can verify the installation by running:
 
@@ -68,6 +75,8 @@ code --version
 1.18.1
 929bacba01ef658b873545e26034d1a8067445e9
 ```
+
+You can continue to use this terminal window to run the commands that follow in this tutorial.
 
 <a name="DownloadSample"></a>
 
@@ -91,8 +100,6 @@ Once the repo is cloned, change to the directory that holds the sample:
 ```bash
 cd msteams-samples-hello-world-nodejs
 ```
-
-You can continue to use this terminal window to run the commands that follow in this tutorial.
 
 In order to build the sample, you need to install all its dependencies. Run the following command to do this:
 
@@ -123,11 +130,12 @@ At this point, you can open a browser window and navigate to the following URLs 
 
 ## Host the sample app
 
-Remember that apps in Microsoft Teams are web applications exposing one or more capabilities. For the Teams platform to load your app, your app must be reachable from the internet. To make your app reachable from the internet, you need to host your app. You can either host it in Microsoft Azure for free or create a tunnel to the local process on your development machine using ngrok. When you finish hosting your app make a note of its root URL. It will look something like: `https://yourteamsapp.ngrok.io` or `https://yourteamsapp.azurewebsites.net`.
+Remember that apps in Microsoft Teams are web applications exposing one or more capabilities. For the Teams platform to load your app, your app must be reachable from the internet. To make your app reachable from the internet, you need to host your app. You can either host it in Microsoft Azure for free or create a tunnel to the local process on your development machine using `ngrok`. When you finish hosting your app make a note of its root URL. It will look something like: `https://yourteamsapp.ngrok.io` or `https://yourteamsapp.azurewebsites.net`.
 
 ### Tunnel using ngrok
 
-For quick testing you can run the app on your local machine and create a tunnel to it through a web endpoint. [`ngrok`](https://ngrok.com) is a free tool that lets you do just that. With `ngrok` you can get a web address such as `https://d0ac14a5.ngrok.io` (this URL is just an example). You can [download and install](https://ngrok.com/download) 'ngrok' for your environment and once you install it, you can run the following command to create a tunnel.
+For quick testing you can run the app on your local machine and create a tunnel to it through a web endpoint. [`ngrok`](https://ngrok.com) is a free tool that lets you do just that. With `ngrok` you can get a web address such as `https://d0ac14a5.ngrok.io` (this URL is just an example). You can [download and install](https://ngrok.com/download) `ngrok` for your environment. Make sure you add it to a location in your `PATH`.
+Once you install it, you can open a new terminal window and run the following command to create a tunnel.
 
 ```bash
 ngrok http 3333
@@ -136,11 +144,11 @@ ngrok http 3333
 This will output the forwarding addresses on your console and `ngrok` will keep listening to requests and will route them to your app running on port 3333. You can verify by opening your browser and going to `https://d0ac14a5.ngrok.io/hello` (please be sure to use the forwarding address displayed on your console instead of this URL) to load your app's hello page.
 
 > [!NOTE]
-> If you have used a different port in the [build and run](#build-and-run-the-sample) step above, make sure you use the same port number to setup the ngrok tunnel.
+> If you have used a different port in the [build and run](#build-and-run-the-sample) step above, make sure you use the same port number to setup the `ngrok` tunnel.
 > [!TIP]
-> It is a good idea to run `ngrok` in a different terminal window to keep it running without interfering with the node app which you might later have to stop, rebuild and rerun.
+> It is a good idea to run `ngrok` in a different terminal window to keep it running without interfering with the node app which you might later have to stop, rebuild and rerun. The `ngrok` session will return useful debugging information in this window.
 
-The app will only be available during the current session on your development machine. If the machine is shut down or goes to sleep the service will no longer be available. Remember this when sharing the app for testing by other users.
+The app will only be available during the current session on your development machine. If the machine is shut down or goes to sleep the service will no longer be available. Remember this when sharing the app for testing by other users. If you have to restart the service it will return a new address and you will have to update every place that uses that address.
 
 ### Host in Azure
 
@@ -171,9 +179,19 @@ You can find the manifest file at `src/manifest.json` within the hello-world sam
 
 #### Step 1: Change the APP ID in the manifest
 
-You need a unique **ID** to distinguish your app from others on the Microsoft Teams platform. This **APP ID** is typically a `GUID` and is set in the app manifest file. You can edit the manifest file and set the value of the `"id"` property to a new `GUID`.
+You need a unique **ID** to distinguish your app from others on the Microsoft Teams platform. This **APP ID** is a `GUID` and is set in the app manifest file.
+
+To get a unique value for your app follow the instructions in [Create a bot for Microsoft Teams](~/concepts/bots/bots-create) using your app URL for the Messaging endpoint, followed by `"/api/messages"`. This should look something like: `https://d0ac14a5.ngrok.io/api/messages`.
+
+Now edit the manifest file and set the value of the `"id"` property to the AppID returned by BotFramework.
 
 [!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L1-L12)]
+
+You will also need to change the botID value in the bots and the composeExtensions sections later in the manifest.
+
+[!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L41-L67)]
+
+You will learn more about Bots later in this guide.
 
 #### Step 2: Change the URLs in the manifest
 
@@ -183,18 +201,18 @@ Change the URLs that point to `yourteamsapp.ngrok.io` to the URLs where the app 
 
 ### Sideload the app
 
-Once you update the manifest, you can rebuild the sample. To rebuild run the following command:
+Once you update the manifest, you can rebuild the sample. To rebuild run the following command in the app terminal window, stopping the app if needed:
 
 ```bash
 gulp
 ```
 
-This will generate a file `helloworldapp.zip` in the `manifest` directory within the root of the project directory. Use the **Upload a custom app** link in Teams to upload this zip file and install your app into one of the teams you own. See [Sideload your app in Microsoft Teams](~/concepts/apps/apps-sideload) for more information on how to do this.
+This will generate a file `helloworldapp.zip` in the `manifest` directory within the root of the project directory.
+
+Use the **Upload a custom app** link in Teams to upload this zip file and install your app into one of the teams you own. See **Load your package into a team** in [Sideload your app in Microsoft Teams](~/concepts/apps/apps-sideload) for more information on how to do this.
 
 > [!NOTE]
 > You might have stopped the node process in order to rebuild the app. If so, you will need to rerun the node process using the `npm start` command described in [Build and run the sample](#BuildRun).
-
-**TODO**: ... show where it is to be uploaded; probably screenshots or more detailed explanation ... or both ... NS - this info is in the apps-sideload topic, but that topic is slightly out of date, and needs terminology and screenshots updated. I added a link and will update the topic shortly if that makes sense to you.
 
 <a name="ConfigureTheAppTab"></a>
 
