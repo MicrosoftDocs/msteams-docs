@@ -38,10 +38,15 @@ The following table provides a few ideas about bringing resources you've already
 
 Because Microsoft Teams apps are composite web apps, you can use any web-programming technology.
 
+The fastest way to create your first Microsoft Teams app is to follow one of our "Get started" guides:
+
+* [Get started with .NET and C#](~/get-started/get-started-dotnet)
+* [Get started with Node.js](~/get-started/get-started-nodejs)
+
 Ready to start adding your experience into Teams?
 
 * [Design your app](~/get-started/design)
-* [Code your app's capabilities](~/get-started/code)
+* Code your app's capabilities
   * [Tabs](~/concepts/tabs/tabs-overview)
   * [Bots](~/concepts/bots/bots-overview)
   * [Connectors](~/concepts/connectors)

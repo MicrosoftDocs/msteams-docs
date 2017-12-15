@@ -10,6 +10,8 @@
                 "**/includes/**",
                 "**/_themes/**",
                 "**/_themes.pdf/**",
+                "**/_dependentPackages/**",
+                "**/_msteams-samples-*/**",
                 "README.md",
                 "LICENSE",
                 "LICENSE-CODE",
