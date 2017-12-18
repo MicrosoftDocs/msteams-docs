@@ -236,7 +236,7 @@ The sample already comes with a bot. The bot is defined in the manifest and look
 
 [!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L41-L49)]
 
-You need a bot definition for each bot contained in your app. In this case you already have a bot and have given it a registered bot it, so in this step all we will do is add credentials for the bot and test it.
+You need a bot definition for each bot contained in your app. In this case you already have a bot and have given it a registered **bot ID**, so in this step all you will do is add credentials for the bot and test it.
 
 ### Add credentials for the bot
 In the hello-world project navigate to a folder called config. In this folder you will find a json file called default. This file contains the following code:
@@ -245,7 +245,7 @@ In the hello-world project navigate to a folder called config. In this folder yo
 
 Earlier you made note of the **APP ID** from the bot framework as well as a password. Use those vales for "microsoftAppId" and "microsoftAppPassword" in the config.js file. This is not a particularly safe location to store credentials, but it will work for the sake of demonstration.
 
-After these values are changed the app must be stopped, built using gulp and run again using npm start. Reload the app using this new zip file in Microsoft Teams.
+After these values are changed the app must be stopped, built using gulp, and run again using npm start. Reload the app using this new zip file in Microsoft Teams.
 
 Do NOT stop your ngrok session or you will have to update all the ngrok urls associated with your app.
 
@@ -255,16 +255,18 @@ Before you run the bot in Teams, confirm that the bot works as expected  using t
 
 Once you have the emulator running, you will need three things to set up a connection:
 
-* The endpoint URL, which is the address where your bot is exposed.  It can be the local address http://localhost:3333/api/messages, or an external address using the ngrok tunnel you set up earlier like `https://d0ac14a5.ngrok.io/api/messages`.
-* The Microsoft App ID, which is the **APP ID** you used earlier.
+* The endpoint URL, which is the address where your bot is exposed.  It can be the local address 'http://localhost:3333/api/messages', or an external address using the ngrok tunnel you set up earlier like `https://d0ac14a5.ngrok.io/api/messages`.
+* The Microsoft App ID, which is the **ID** you used earlier.
 * The Microsoft App Password from the Bot Framework which you made a note of earlier.
 
 > [!TIP]
 > To verify your bot is working, just verify that it is echoing back whatever you say to it.
 
-### Test your app with the bot in Teams
+If the bot is not working, check to see if your app is running, and check ngrok if you are using it.
 
-You can now interact with the bot. To invoke a response from the bot, you can **@mention** the bot using `@your-bot-name`. Whatever message you send to the bot will be sent back to you as a reply.
+### Test your bot in Teams
+
+You can now interact with the bot in Teams. Choose a channel in the team where you registered your app, and type `@your-bot-name`. This is called an **@mention**. Whatever message you send to the bot will be sent back to you as a reply.
 
 <img width="450px" title="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 
