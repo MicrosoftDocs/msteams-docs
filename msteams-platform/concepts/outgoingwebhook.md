@@ -265,7 +265,8 @@ Your outgoing webhook will need to reply asynchronously to the HTTP request from
 
 ## Sample Outgoing webhook
 
-For sample code illustrating a outgoing webhook, see our sample on GitHub: [OfficeDev/microsoft-teams-sample-custombot](https://github.com/OfficeDev/microsoft-teams-sample-custombot)
+For sample code illustrating a outgoing webhook, see this sample on GitHub: [OfficeDev/microsoft-teams-sample-custombot](https://github.com/OfficeDev/microsoft-teams-sample-custombot)
+Custom Bots is a previous name for outgoing webhooks.
 
 ## Turn your outgoing webhook into an app for Microsoft Teams
 
