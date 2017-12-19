@@ -6,7 +6,9 @@ keywords: teams bots custom
 
 # Outgoing webhooks in Microsoft Teams
 
-If you've integrated with outgoing webhooks or slash commands in other chat platforms, you can now easily bring those integrations over to Microsoft Teams via Custom Bots.  Custom bots are an easy way of extending your team with Teams interactivity without having to go through the full process of creating a bot via the Microsoft Bot Framework.  You can use them for custom workflows and commands, such as kicking off a build or checking the latest set of livesite issues. With outgoing webhooks, too, you have effective way of ensuring your service is accessible only by authorized users, as the shared secret used by your outgoing webhook will only be scoped to the team in which it has been added.
+If you've worked with outgoing webhooks or slash commands in other chat platforms, you can now bring those functions over to Microsoft Teams via outgoing webhooks.  Outgoing webhooks are an easy way of extending your team without having to go through the full process of creating a bot via the Microsoft Bot Framework. You can use them for custom workflows and commands such as kicking off a build or checking the latest set of livesite issues.
+
+You also have an effective way of ensuring that your service is accessible only by authorized users, as the shared secret used by your outgoing webhook will only be scoped to the team in which it has been added.
 
 ## Creating an outgoing webhook
 
@@ -14,25 +16,27 @@ To create an outgoing webhook, click View Team and then navigate to the Bots tab
 
 ![View team](~/assets/images/ManageTeam.png)
 
-Click on the Create a outgoing webhook link at the bottom of the page.
+Click on the **Create a outgoing webhook** link at the bottom of the page.
  
 ![Create a outgoing webhook entry point](~/assets/images/createwebhook.png)
 
-In the dialog, you can configure how your bot appears in channels:
+In the **Create an outgoing webhook** dialog, you can configure how your bot appears in channels:
+
 * **Name** is what will show up as the bot’s title and is also how users will @mention the bot
 * **Callback URL** is the endpoint that will receive messages from Teams
 * **Description** is a detailed string that what will show up in the profile card and in the team-level App dashboard
-* **Avatar** is the optional display picture of the outgoing webhook
+* **Profile Picture** is the optional display picture of the outgoing webhook.
 
 ![Create a outgoing webhook dialog](~/assets/images/outgoingwebhook.png)
  
-Upon clicking Create, the outgoing webhook will be available in the team – it will not be available in any other team. The next dialog will then display the shared secret that you can use to authenticate calls from Microsoft Teams. **Make sure to copy this value in a secure location. You will not be able to retrieve it again without recreating the outgoing webhook.**
+Upon clicking Create, the outgoing webhook will be available in the team – it will not be available in any other team. The next dialog will display a security token that you will use to authenticate calls from Microsoft Teams.
+**Make sure to copy this value in a secure location. You will not be able to retrieve it again and will have to recreate the outgoing webhook.**
  
-![outgoing webhook shared secret](~/assets/images/congratulationsoutgoingwebhook.png)
+![outgoing webhook security token](~/assets/images/congratulationsoutgoingwebhook.png)
 
 ## Interacting with the outgoing webhook
 
-Once you add a outgoing webhook to the team, it looks and behaves just like a regular bot, so it’s easy for users to interact with them. They listen to messages that @mention the bot name and can respond with rich messages, including images and cards.
+Once you add a outgoing webhook to the team, it looks and behaves just like a regular bot, so it’s easy for users to interact with them. They listen to messages that **@mention** the bot name and can respond with rich messages, including images and cards.
 
 ## Receiving and replying to messages
 
@@ -42,7 +46,7 @@ Your service will receive messages in the standard Microsoft bot messaging schem
 
 You can optionally use the existing Bot Framework client SDKs to simplify parsing and handling messages.
 
-Currently, users must mention the outgoing webhook for it to receive messages.
+Users must mention the outgoing webhook for it to receive messages.
 
 #### Example inbound message
 
@@ -100,13 +104,14 @@ Currently, users must mention the outgoing webhook for it to receive messages.
 
 ### Authenticating the caller
 
-You should always authenticate that Microsoft Teams is the service calling your URL. To guarantee the legitimacy of the client, Microsoft Teams provides the HMAC in the HTTP `hmac` header.
+Your service should always authenticate clients. To guarantee the legitimacy of the client, Microsoft Teams provides the HMAC in the HTTP `hmac` header.
 
 Your code should always verify the HMAC signature included in the request:
-1.	Generate the hmac from the request body of the message. There are standard libraries on most platforms. Microsoft Teams uses standard SHA256 HMAC cryptography. You will need to convert the body to a byte array in UTF8.
-2.	To compute the hash, provide the byte array of the shared secret.
-3.	Convert the hash to a string using UTF8 encoding.
-4.	Compare the string value of the generated hash with the value provided in the HTTP request.
+
+1. Generate the hmac from the request body of the message. There are standard libraries to do this on most platforms. Microsoft Teams uses standard SHA256 HMAC cryptography. You will need to convert the body to a byte array in UTF8.
+2. To compute the hash, provide the byte array of the security token provided by Microsoft Teams when you registered the outgoing webhook.
+3. Convert the hash to a string using UTF8 encoding.
+4. Compare the string value of the generated hash with the value provided in the HTTP request.
 
 #### Code example (C#)
 ```csharp
@@ -254,11 +259,11 @@ Your outgoing webhook will need to reply asynchronously to the HTTP request from
 
 ## Limitations
 
-* Custom bots do not have access to non-messaging APIs, such as team roster membership.
-* Custom bots cannot post into channels asynchronously; that is, not as a reply to a user message.
+* Outgoing webhooks do not have access to non-messaging APIs, such as team roster membership.
+* Outgoing webhooks cannot post into channels asynchronously; that is, not as a reply to a user message.
 * Although outgoing webhooks can use rich cards, they cannot leverage button actions like `imBack` or `invoke`.
 
-## Sample Custom bot 
+## Sample Outgoing webhook
 
 For sample code illustrating a outgoing webhook, see our sample on GitHub: [OfficeDev/microsoft-teams-sample-custombot](https://github.com/OfficeDev/microsoft-teams-sample-custombot)
 
