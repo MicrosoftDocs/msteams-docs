@@ -1,38 +1,38 @@
 ---
-title: Custom bots
-description: Describes how to create and use custom bots in Microsoft Teams
+title: Outgoing webhooks
+description: Describes how to create and use outgoing webhooks in Microsoft Teams
 keywords: teams bots custom
 ---
 
-# Custom bots in Microsoft Teams
+# outgoing webhooks in Microsoft Teams
 
-If you've integrated with outgoing webhooks or slash commands in other chat platforms, you can now easily bring those integrations over to Microsoft Teams via Custom Bots.  Custom bots are an easy way of extending your team with Teams interactivity without having to go through the full process of creating a bot via the Microsoft Bot Framework.  You can use them for custom workflows and commands, such as kicking off a build or checking the latest set of livesite issues. With custom bots, too, you have effective way of ensuring your service is accessible only by authorized users, as the shared secret used by your custom bot will only be scoped to the team in which it has been added.
+If you've integrated with outgoing webhooks or slash commands in other chat platforms, you can now easily bring those integrations over to Microsoft Teams via Custom Bots.  Custom bots are an easy way of extending your team with Teams interactivity without having to go through the full process of creating a bot via the Microsoft Bot Framework.  You can use them for custom workflows and commands, such as kicking off a build or checking the latest set of livesite issues. With outgoing webhooks, too, you have effective way of ensuring your service is accessible only by authorized users, as the shared secret used by your outgoing webhook will only be scoped to the team in which it has been added.
 
-## Creating a custom bot
+## Creating an outgoing webhook
 
-To create a custom bot, click View Team and then navigate to the Bots tab.
+To create an outgoing webhook, click View Team and then navigate to the Bots tab.
 
 ![View team](~/assets/images/tab_view_team.png)
 
-Click on the Create a custom bot link at the bottom of the page.
+Click on the Create a outgoing webhook link at the bottom of the page.
  
-![Create a custom bot entry point](~/assets/images/sideloadentrypoint.png)
+![Create a outgoing webhook entry point](~/assets/images/sideloadentrypoint.png)
 
 In the dialog, you can configure how your bot appears in channels:
 * **Name** is what will show up as the bot’s title and is also how users will @mention the bot
 * **Callback URL** is the endpoint that will receive messages from Teams
 * **Description** is a detailed string that what will show up in the profile card and in the team-level App dashboard
-* **Avatar** is the optional display picture of the custom bot
+* **Avatar** is the optional display picture of the outgoing webhook
 
-![Create a custom bot dialog](~/assets/images/createcustombot.png)
+![Create a outgoing webhook dialog](~/assets/images/createcustombot.png)
  
-Upon clicking Create, the custom bot will be available in the team – it will not be available in any other team. The next dialog will then display the shared secret that you can use to authenticate calls from Microsoft Teams. **Make sure to copy this value in a secure location. You will not be able to retrieve it again without recreating the custom bot.**
+Upon clicking Create, the outgoing webhook will be available in the team – it will not be available in any other team. The next dialog will then display the shared secret that you can use to authenticate calls from Microsoft Teams. **Make sure to copy this value in a secure location. You will not be able to retrieve it again without recreating the outgoing webhook.**
  
 ![Custom bot shared secret](~/assets/images/custombotsharedsecret.png)
 
-## Interacting with the custom bot
+## Interacting with the outgoing webhook
 
-Once you add a custom bot to the team, it looks and behaves just like a regular bot, so it’s easy for users to interact with them. They listen to messages that @mention the bot name and can respond with rich messages, including images and cards.
+Once you add a outgoing webhook to the team, it looks and behaves just like a regular bot, so it’s easy for users to interact with them. They listen to messages that @mention the bot name and can respond with rich messages, including images and cards.
 
 ## Receiving and replying to messages
 
@@ -42,7 +42,7 @@ Your service will receive messages in the standard Microsoft bot messaging schem
 
 You can optionally use the existing Bot Framework client SDKs to simplify parsing and handling messages.
 
-Currently, users must mention the custom bot for it to receive messages.
+Currently, users must mention the outgoing webhook for it to receive messages.
 
 #### Example inbound message
 
@@ -69,15 +69,15 @@ Currently, users must mention the custom bot for it to receive messages.
     "text": "<at>MyCustomBot</at> Hello <at>Larry Brown</at>",
     "attachments": [{
         "contentType": "text/html",
-        "content": "<div><span contenteditable=\"false\" itemscope=\"\" itemtype=\"http://schema.skype.com/Mention\" itemid=\"0\">MyCustomBot </span> Hello <span contenteditable=\"false\" itemscope=\"\" itemtype=\"http://schema.skype.com/Mention\" itemid=\"1\">Larry Brown </span></div>"
+        "content": "<div><span contenteditable=\"false\" itemscope=\"\" itemtype=\"http://schema.skype.com/Mention\" itemid=\"0\">MyWebHook </span> Hello <span contenteditable=\"false\" itemscope=\"\" itemtype=\"http://schema.skype.com/Mention\" itemid=\"1\">Larry Brown </span></div>"
     }],
     "entities": [{
         "type": "mention",
         "mentioned": {
             "id": "28:c9e8c047-2a74-40a2-b28a-b162d5f5327c", 
-            "name": "MyCustomBot"
+            "name": "MyWebHook"
         },
-        "text": "<at>MyCustomBot</at>"
+        "text": "<at>MyWebHook</at>"
     }, {
         "type": "mention",
         "mentioned": {
@@ -150,7 +150,7 @@ Your code should always verify the HMAC signature included in the request:
     {
         /// <summary>
         /// A dictionary for storing signing keys. Here, the look up key is based on the value of the query parameter 'id'.
-        /// The signing keys must be valid 256 bit base64 encoded strings that are provided during custom bot registration in MS Teams client.
+        /// The signing keys must be valid 256 bit base64 encoded strings that are provided during outgoing webhook registration in MS Teams client.
         /// </summary>
         private static readonly Dictionary<string, string> SigningKeyDictionary = new Dictionary<string, string>()
             {
@@ -170,7 +170,7 @@ Your code should always verify the HMAC signature included in the request:
             string messageContent = await httpRequestMessage.Content.ReadAsStringAsync();
             AuthenticationHeaderValue authenticationHeaderValue = httpRequestMessage.Headers.Authorization;
 
-            // It is up to the custom bot owner to decide how to pass in the lookup id for the signing key.
+            // It is up to the outgoing webhook owner to decide how to pass in the lookup id for the signing key.
             // Here, we have used the query parameter "id" as an example.
             string claimedSenderId = HttpUtility.ParseQueryString(httpRequestMessage.RequestUri.Query).Get("id");
 
@@ -239,9 +239,9 @@ Your code should always verify the HMAC signature included in the request:
 
 ### Sending a reply
 
-As with regular bots, replies from your custom bot will appear in the same reply chain as the original message. You can send a reply message that takes advantage of any of the Bot Framework’s activities, including rich cards and image attachments.
+As with regular bots, replies from your outgoing webhook will appear in the same reply chain as the original message. You can send a reply message that takes advantage of any of the Bot Framework’s activities, including rich cards and image attachments.
 
-Your custom bot will need to reply asynchronously to the HTTP request from Microsoft Teams. It will have 5 seconds to reply to the message before the connection is terminated.
+Your outgoing webhook will need to reply asynchronously to the HTTP request from Microsoft Teams. It will have 5 seconds to reply to the message before the connection is terminated.
 
 #### Example reply message
 
@@ -256,12 +256,12 @@ Your custom bot will need to reply asynchronously to the HTTP request from Micro
 
 * Custom bots do not have access to non-messaging APIs, such as team roster membership.
 * Custom bots cannot post into channels asynchronously; that is, not as a reply to a user message.
-* Although custom bots can use rich cards, they cannot leverage button actions like `imBack` or `invoke`.
+* Although outgoing webhooks can use rich cards, they cannot leverage button actions like `imBack` or `invoke`.
 
 ## Sample Custom bot 
 
-For sample code illustrating a custom bot, see our sample on GitHub: [OfficeDev/microsoft-teams-sample-custombot](https://github.com/OfficeDev/microsoft-teams-sample-custombot)
+For sample code illustrating a outgoing webhook, see our sample on GitHub: [OfficeDev/microsoft-teams-sample-custombot](https://github.com/OfficeDev/microsoft-teams-sample-custombot)
 
-## Turn your custom bot into an app for Microsoft Teams
+## Turn your outgoing webhook into an app for Microsoft Teams
 
-If you’re ready to share your custom bot with others or make it publicly available, you can submit your bot to Microsoft Teams for consideration in the bot gallery. See the [Microsoft Teams Developer Preview interest form](https://aka.ms/microsoftteamsdeveloperpreviewinterestform) to learn more.
+If you’re ready to share your outgoing webhook with others or make it publicly available, you can submit your bot to Microsoft Teams for consideration in the bot gallery. See the [Microsoft Teams Developer Preview interest form](https://aka.ms/microsoftteamsdeveloperpreviewinterestform) to learn more.
