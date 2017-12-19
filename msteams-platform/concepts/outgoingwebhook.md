@@ -28,7 +28,7 @@ In the dialog, you can configure how your bot appears in channels:
  
 Upon clicking Create, the outgoing webhook will be available in the team – it will not be available in any other team. The next dialog will then display the shared secret that you can use to authenticate calls from Microsoft Teams. **Make sure to copy this value in a secure location. You will not be able to retrieve it again without recreating the outgoing webhook.**
  
-![Custom bot shared secret](~/assets/images/custombotsharedsecret.png)
+![outgoing webhook shared secret](~/assets/images/custombotsharedsecret.png)
 
 ## Interacting with the outgoing webhook
 
