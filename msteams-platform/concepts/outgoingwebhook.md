@@ -264,9 +264,15 @@ Your outgoing webhook will need to reply asynchronously to the HTTP request from
 * Outgoing webhooks cannot post into channels asynchronously; that is, not as a reply to a user message.
 * Although outgoing webhooks can use rich cards, they cannot leverage button actions like `imBack` or `invoke`.
 
-## Sample Outgoing webhook
+## Samples for Outgoing webhook
 
-For sample code illustrating a outgoing webhook, see this sample on GitHub: [OfficeDev/microsoft-teams-sample-custombot](https://github.com/OfficeDev/microsoft-teams-sample-custombot)
+For sample code illustrating a outgoing webhook, see this sample on GitHub: 
+
+### Node JS
+[OfficeDev/msteams-samples-outgoing-webhook-nodejs](https://github.com/OfficeDev/msteams-samples-outgoing-webhook-nodejs)
+
+### C#
+[OfficeDev/microsoft-teams-sample-custombot](https://github.com/OfficeDev/microsoft-teams-sample-custombot)
 Custom Bots is a previous name for outgoing webhooks.
 
 ## Turn your outgoing webhook into an app for Microsoft Teams
