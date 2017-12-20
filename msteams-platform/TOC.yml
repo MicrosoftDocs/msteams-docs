@@ -2,7 +2,10 @@
   href: ./overview
   universal_ref_toc: /javascript/api/msteams-client-docs-ref-typescript/toc.json
 - name: Get started
+  href: ./get-started/get-started
   items:
+    name: Set up a developer tenant
+    href: ./get-started/
   - name: Get started with Node.js
     href: ./get-started/get-started-nodejs
   expanded: true
