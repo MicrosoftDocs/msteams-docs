@@ -7,7 +7,7 @@ keywords: teams bots testing
 
 To test your bot in Microsoft Teams, you must follow one of the uploading processes listed here.  Note that each method triggers a slightly different flow, and enables bots in different contexts as explained below.
 
-For published bots, end users will be able to access via the discover apps gallery accessible via the Discover Bots access points in the product.
+For published bots, end users will be able to access the via the Discover Bots access points in the product.
 
 > [!NOTE]
 > Your tenant administrator will need to enable uploading of apps for your organization. [Here's how](/microsoftteams/admin-settings).

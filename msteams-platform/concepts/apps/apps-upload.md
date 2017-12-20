@@ -37,20 +37,19 @@ With your package created, you can now upload it into a team. Once uploaded it w
 
 3. Select the Apps tab, and then choose **Upload a custom app** on the lower right.
 
-   > [!NOTE]
-   > This same flow works not only for bots but all other app extension types as well.
-
    ![Upload entry point](~/assets/images/uploadACustomApp.png)
 
 4. Browse to and select your .zip package from your computer.
 
-5. You will see your uploaded app in the list.
+5. After a brief pause you will see your uploaded app in the list.
 
    ![Example of bot in list of uploaded bots](~/assets/images/botinlist.jpg)
 
+If your app does not load, the most common reason is an error in the manifest, particularly ids for the app, bot and messaging extensions.
+
 ## Accessing your uploaded configurable tab
 
-With the app loaded in the team, users can pin the tab to any channel on the team using the standard tab gallery flow:
+If the app contains tabs, users can pin them to any channel on the team using the standard tab gallery flow:
 
 1. Go to a channel in the team. Choose **+** (**Add a tab**) to the right of the existing tabs.
 
@@ -63,7 +62,7 @@ With the app loaded in the team, users can pin the tab to any channel on the tea
   ![The Add a tab dialog box, featuring a gallery of available tabs](~/assets/images/tab_gallery.png)
 
 ## Accessing your uploaded bot
- 
+
 When you add a bot to the team, it should be usable by anyone on that team, inside and outside the team channels, depending on bot scope definition. You and other team members will see a post in the General channel indicating that the bot has been added to the team.
 
 For a teams-enabled bot, you can start by invoking your bot by @mentioning the name of the bot, which should autocomplete.
@@ -90,7 +89,7 @@ An uploaded app with a messaging extension automatically appears in the **More o
 
 ## Removing or updating your app
 
-If you want to remove your app, select the trash-can icon next to the app name in the View Teams bots list.  
+If you want to remove your app, select the trash-can icon next to the app name in the View Teams bots list.
 
 If you change manifest information, you must first remove the app and then add the updated package (per [Load your package into a team](#load-your-package-into-a-team)). Note that, in general, code changes on your service do not require you to re-upload your manifest, unless those changes require manifest updates (such as changes to the URL or the Microsoft app ID for its bot). 
 
