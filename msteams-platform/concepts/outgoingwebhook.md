@@ -6,9 +6,9 @@ keywords: teams bots custom
 
 # Outgoing webhooks in Microsoft Teams
 
-If you've worked with outgoing webhooks or slash commands in other chat platforms, you can now bring those functions over to Microsoft Teams via outgoing webhooks.  Outgoing webhooks are an easy way of extending your team without having to go through the full process of creating a bot via the Microsoft Bot Framework. You can use them for custom workflows and commands such as kicking off a build or checking the latest set of livesite issues.
+If you've worked with outgoing webhooks or slash commands in other chat platforms, you can now bring what you have developed over to Microsoft Teams via outgoing webhooks.  Outgoing webhooks are an easy way of extending your team without having to go through the full process of creating a bot via the Microsoft Bot Framework. You can use them for custom workflows and commands such as kicking off a build or checking the latest set of livesite issues.
 
-You also have an effective way of ensuring that your service is accessible only by authorized users, as the shared secret used by your outgoing webhook will only be scoped to the team in which it has been added.
+You also have an effective way of ensuring that your service is accessible only by authorized users, as the security token used by your outgoing webhook will only be scoped to the team in which it has been added.
 
 ## Creating an outgoing webhook
 
@@ -28,15 +28,16 @@ In the **Create an outgoing webhook** dialog, you can configure how your bot app
 * **Profile Picture** is the optional display picture of the outgoing webhook.
 
 ![Create a outgoing webhook dialog](~/assets/images/outgoingwebhook.png)
- 
-Upon clicking Create, the outgoing webhook will be available in the team – it will not be available in any other team. The next dialog will display a security token that you will use to authenticate calls from Microsoft Teams.
+
+Click Create and the outgoing webhook will be made available in the current team. It will not be available in any other team. The next dialog will display a security token that you will use to authenticate calls from Microsoft Teams.
+
 **Make sure to copy this value in a secure location. You will not be able to retrieve it again and will have to recreate the outgoing webhook.**
- 
+
 ![outgoing webhook security token](~/assets/images/congratulationsoutgoingwebhook.png)
 
 ## Interacting with the outgoing webhook
 
-Once you add a outgoing webhook to the team, it looks and behaves just like a regular bot, so it’s easy for users to interact with them. They listen to messages that **@mention** the bot name and can respond with rich messages, including images and cards.
+Once you add an outgoing webhook to the team, it looks and behaves just like a bot, so it’s easy for users to interact with. They listen to messages that **@mention** the webhook name and can respond with rich messages, including images and cards.
 
 ## Receiving and replying to messages
 
