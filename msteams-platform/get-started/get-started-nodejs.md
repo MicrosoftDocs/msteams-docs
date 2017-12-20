@@ -215,7 +215,7 @@ gulp
 
 This will generate a file `helloworldapp.zip` in the `manifest` directory within the root of the project directory.
 
-Use the **Upload a custom app** link in Teams to upload this zip file and install your app into one of the teams you own. See **Load your package into a team** in [Sideload your app in Microsoft Teams](~/concepts/apps/apps-sideload) for more information on how to do this.
+Use the **Upload a custom app** link in Teams to upload this zip file and install your app into one of the teams you own. See **Load your package into a team** in [Upload your app in Microsoft Teams](~/concepts/apps/apps-sideload) for more information on how to do this.
 
 > [!NOTE]
 > You might have stopped the node process in order to rebuild the app. If so, you will need to rerun the node process using the `npm start` command described in [Build and run the sample](#BuildRun).
@@ -282,7 +282,7 @@ The hello-world sample comes with a built in messaging extension, which looks so
 
 [!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L50-L67)]
 
-You have already updated the botID used by the compose extension so there is no need to do that again.
+You have already updated the botid used by the compose extension so there is no need to do that again.
 
 ### Test your messaging extension
 
