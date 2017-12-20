@@ -3,14 +3,13 @@ title: Design a great app
 description: How to design great apps in Microsoft Teams
 keywords: teams apps design
 ---
-
 # Design a great Microsoft Teams app
 
 Microsoft Teams places content in the middle of everyday conversations. Take a look at some ideas you can use to showcase your brand within Microsoft Teams.
 
 >For more details and full guidance, complete with style guides and examples, please review our full [Design guidelines](~/resources/design/overview).
 
-## Designing a great tab 
+## Designing a great tab
 
 Tabs give your app a dedicated canvas at the center of a team’s workflow, allowing teams to jump between conversations and your experience. Although it's relatively easy to adapt a web app to become a Microsoft Teams tab, you should consider which experiences and functionality in your app can work most effectively.
 
@@ -28,7 +27,7 @@ Once configured, configurable tabs should drill down to the relevant context and
 
 Your tab experience should feel integrated into Microsoft Teams. If you are adapting an existing web app, do not include your usual web app chrome or display navigational dead ends.
 
-### Streamline access 
+### Streamline access
 
 Consider how to enable access permissions for your tab. Microsoft Teams is based on [Office 365 Groups](https://support.office.com/en-us/article/Learn-about-Office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2), so consider supporting permissions for them. At a minimum, you should make it easy for each new user to request access when they visit the tab. Or consider whether you can make the content generally available without requesting additional permissions.
 

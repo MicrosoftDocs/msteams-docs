@@ -1,14 +1,14 @@
 ## Prepare Microsoft Teams for development
 
-There are two possible ways to prepare a Microsoft Teams environment for building your apps:
+There are two possible ways to prepare a Microsoft Teams environment for building apps:
 
-* Have your organization admin allow to sideload apps into Teams
-* Sign up for Office Developer Program and get a new tenant
+* Have your organization admin allow sideloading apps in Teams
+* Sign up for the Office Developer Program and get a new tenant
 
 ### Enabling sideloading of apps
 
-To sideload apps that you develop, your organization administrator has to enable the corresponding setting in the administrator settings. [This article](/microsoftteams/admin-settings) describes the settings and how to change them.
+To sideload apps that you develop, your organization administrator has to enable sideloading in administrator settings. [This article](/microsoftteams/admin-settings) describes the settings and how to change them.
 
 ### Office Developer Program
 
-In case your organization administrator cannot change the settings for any reason, you can use a test tenant to sideload your apps. [Office 365 Developer Program](https://dev.office.com/devprogram) lets you create test tenants to load and test Office 365 apps that require tenants for developers. [Sign up](https://dev.office.com/devprogram) today to create your own tenant.
+In case your organization administrator cannot change these settings, you can use a test tenant to sideload your apps. The [Office 365 Developer Program](https://dev.office.com/devprogram) lets you create test tenants to load and test Office 365 and Teams apps. [Sign up](https://dev.office.com/devprogram) today to create your own tenant.
