@@ -11,7 +11,7 @@ Build and connect intelligent bots to interact with Microsoft Teams users natura
 ![Example of a bot assisting a user](~/assets/images/bot_example.png)
 
 > [!TIP]
-> If you are just looking for a way to simply extend your team by integrating with custom tools and services in a secure manner, check out our [custom bots](~/concepts/custom-bot) feature. Be aware, though, that custom bots simply leverage your existing web services&mdash;they can't access non-messaging APIs, perform asynchronous posting, or add button actions to cards.
+> If you are just looking for a way to simply extend your team by integrating with custom tools and services in a secure manner, check out our [outgoing webhook](~/concepts/outgoingwebhook) feature. Be aware, though, that outgoing webhooks simply leverage your existing web services&mdash;they can't access non-messaging APIs, perform asynchronous posting, or add button actions to cards.
 
 ## What you need to know: Bots
 
@@ -49,6 +49,6 @@ Follow these steps to build a great Teams bot:
 - [Test your bot](~/concepts/bots/bots-test): Add your bot for 1:1 or team conversations to see it in action.
 - [Publish your bot](~/publishing/apps-publish): Create your Teams package, add other capabilities, and submit it to the Office Store.
 
-## What you need to know: Custom bots
+## What you need to know: outgoing webhooks
 
-Custom bots allow you to create a simple bot for basic interaction, like kicking off a workflow or other simple commands you may need. These custom bots live only in the team in which you create them and are intended for simple processes specific to your company's workflow. See [Custom bots](~/concepts/custom-bot) for more information.
+outgoing webhooks allow you to create a simple bot for basic interaction, like kicking off a workflow or other simple commands you may need. outgoing webhooks live only in the team in which you create them and are intended for simple processes specific to your company's workflow. See [outgoing webhooks](~/concepts/outgoingwebhook) for more information.
