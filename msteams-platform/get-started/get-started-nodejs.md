@@ -282,7 +282,7 @@ The hello-world sample comes with a built in messaging extension, which looks so
 
 [!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L50-L67)]
 
-You have already updated the botid used by the compose extension so there is no need to do that again.
+You have already updated the botId used by the compose extension so there is no need to do that again.
 
 ### Test your messaging extension
 
