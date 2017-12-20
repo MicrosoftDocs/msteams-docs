@@ -12,7 +12,7 @@ You also have an effective way of ensuring that your service is accessible only 
 
 ## Creating an outgoing webhook
 
-To create an outgoing webhook, click View Team and then navigate to the Bots tab.
+To create an outgoing webhook, click **Manage team** and then navigate to the **Bots** tab.
 
 ![View team](~/assets/images/ManageTeam.png)
 
@@ -29,7 +29,7 @@ In the **Create an outgoing webhook** dialog, you can configure how your bot app
 
 ![Create a outgoing webhook dialog](~/assets/images/outgoingwebhook.png)
 
-Click Create and the outgoing webhook will be made available in the current team. It will not be available in any other team. The next dialog will display a security token that you will use to authenticate calls from Microsoft Teams.
+Click **Create** and the outgoing webhook will be made available in the current team. It will not be available in any other team. The next dialog will display a security token that you will use to authenticate calls from Microsoft Teams.
 
 **Make sure to copy this value in a secure location. You will not be able to retrieve it again and will have to recreate the outgoing webhook.**
 
@@ -37,7 +37,7 @@ Click Create and the outgoing webhook will be made available in the current team
 
 ## Interacting with the outgoing webhook
 
-Once you add an outgoing webhook to the team, it looks and behaves just like a bot, so it’s easy for users to interact with. They listen to messages that **@mention** the webhook name and can respond with rich messages, including images and cards.
+Once you add an outgoing webhook to the team, it looks and behaves just like a bot, so it’s easy for users to interact with. It listens for messages using **@mention** with the webhook name and can respond with rich messages, including images and cards.
 
 ## Receiving and replying to messages
 
@@ -47,7 +47,7 @@ Your service will receive messages in the standard Microsoft bot messaging schem
 
 You can optionally use the existing Bot Framework client SDKs to simplify parsing and handling messages.
 
-Users must mention the outgoing webhook for it to receive messages.
+Users must **@mention** the outgoing webhook for it to receive messages.
 
 #### Example inbound message
 
