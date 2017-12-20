@@ -15,7 +15,7 @@ For bots designed only for 1:1 contexts, see [Adding a bot for 1:1 chat only](~/
 
 ## Create your upload package
 
-For both development and final Office Store submission, you must create a uploadable package that contains the information to describe your experience. The package, a .zip file, contains the application manifest and icons that uniquely define your experience.
+For both development and final Office Store submission, you must create an uploadable package that contains the information to describe your experience. The package, a .zip file, contains the application manifest and icons that uniquely define your experience.
 
 To create your upload package, see [Create the package for your Microsoft Teams app](~/publishing/apps-package).
 
@@ -84,7 +84,7 @@ With the app loaded in the team, users can set up a Connector on any channel in 
 
 ## Accessing your uploaded messaging extension
 
-A uploaded app with a messaging extension automatically appears in the **More options** (**&#8943;**) menu in the compose box.
+An uploaded app with a messaging extension automatically appears in the **More options** (**&#8943;**) menu in the compose box.
 
 ![Messaging extensions](~/assets/images/compose-extensions/cesampleapp.png)
 
