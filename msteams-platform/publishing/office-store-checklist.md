@@ -10,7 +10,7 @@ The follow metadata is required in your manifest.json file and for Seller Dashbo
 
 |Data|Type|Size|Manifest|Seller Dashboard|Description|
 |---|---|---|---|---|---|
-|App package|.zip|||✔|The actual app package for sideloading or Office Store submission.|
+|App package|.zip|||✔|The actual app package for uploading or Office Store submission.|
 |App logo|.png|96&times;96 pixels|`icon.color`|✔|The icon to display in the product page listing in the Office Store or Teams gallery. This is your full-color product icon.|
 |App logo outline|.png|20&times;20 pixels|`icon.outline`||The icon to display in Teams, in the Teams chat channel and other locations. This is your logo rendered as a white outline with transparent background.|
 |Support link|URL|||✔|A link to support material for end users. Can be HTTP or HTTPS.|

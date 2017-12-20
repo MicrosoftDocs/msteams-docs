@@ -205,7 +205,7 @@ Change the URLs that point to `yourteamsapp.ngrok.io` to the URLs where the app 
 
 [!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L26-L40)]
 
-### Sideload the app
+### Upload the app
 
 Once you update the manifest, you can rebuild the sample. To rebuild run the following command in the app terminal window, stopping the app if needed:
 
@@ -215,7 +215,7 @@ gulp
 
 This will generate a file `helloworldapp.zip` in the `manifest` directory within the root of the project directory.
 
-Use the **Upload a custom app** link in Teams to upload this zip file and install your app into one of the teams you own. See **Load your package into a team** in [Upload your app in Microsoft Teams](~/concepts/apps/apps-sideload) for more information on how to do this.
+Use the **Upload a custom app** link in Teams to upload this zip file and install your app into one of the teams you own. See **Load your package into a team** in [Upload your app in Microsoft Teams](~/concepts/apps/apps-upload) for more information on how to do this.
 
 > [!NOTE]
 > You might have stopped the node process in order to rebuild the app. If so, you will need to rerun the node process using the `npm start` command described in [Build and run the sample](#BuildRun).

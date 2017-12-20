@@ -12,7 +12,7 @@ Public Developer Preview is a program for developers that provides early access 
 
 To participate in the Public Developer Preview, you need to do the following: 
 
-1.	Turn on the setting for enabling sideloading of apps in the admin console of your tenant as described [here](~/get-started/get-started#3-enable-sideloading-of-apps-for-microsoft-teams).
+1.	Turn on the setting for enabling uploading of apps in the admin console of your tenant as described [here](~/get-started/get-started#3-enable-uploading-of-apps-for-microsoft-teams).
 
 2.	The Teams client shows a menu item for switching to the preview under Menu → About.
 

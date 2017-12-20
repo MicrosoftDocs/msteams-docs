@@ -1,3 +1,3 @@
 ---
-redirect_url: /microsoftteams/platform/concepts/apps/apps-sideload
+redirect_url: /microsoftteams/platform/concepts/apps/apps-upload
 ---

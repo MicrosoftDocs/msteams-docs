@@ -6,7 +6,7 @@ keywords: getting started microsoft teams
 
 # Get started developing for Microsoft Teams
 
-Microsoft Teams is a service within Office 365. To get started developing extensions for Microsoft Teams, you'll first need an Office 365 commercial account. You'll then need to turn on the Microsoft Teams service for your Office 365 organization. Lastly, you'll need to turn on bots and enable sideloading of bots and tabs for testing.
+Microsoft Teams is a service within Office 365. To get started developing extensions for Microsoft Teams, you'll first need an Office 365 commercial account. You'll then need to turn on the Microsoft Teams service for your Office 365 organization. Lastly, you'll need to turn on bots and enable uploading of bots and tabs for testing.
 
 ## 1. Set up your Office 365 tenant
 
@@ -42,9 +42,9 @@ The Office 365 administrator might have to enable Microsoft Teams for your organ
  
 	![Screenshot of the services listed under Settings, with Microsoft Teams option switched on](~/assets/images/setup/enableteamsandapps.png)
 
-## 3. Enable sideloading of apps for Microsoft Teams
+## 3. Enable uploading of apps for Microsoft Teams
 
-To develop and test apps, you need to enable them in Microsoft Teams, and also enable sideloading of external apps.
+To develop and test apps, you need to enable them in Microsoft Teams, and also enable uploading of external apps.
 
 > [!NOTE]
 > For multi-SKU tenants, **all** SKUs must enable these settings. If one SKU has not enabled this setting, the entire tenant is considered disabled.
@@ -53,11 +53,11 @@ To develop and test apps, you need to enable them in Microsoft Teams, and also e
 2. Select **Admin** to go to the Office 365 Admin Center.
 3. From **Settings**, select  **Services & add-ins** or **Apps**.
 4. From the list of services and add-ins, or apps, select **Microsoft Teams**.
-5. On the **Microsoft Teams** settings screen, switch both **Allow external apps in Microsoft Teams** and **Allow sideloading of external apps** to **On**, and then select **Save**.
+5. On the **Microsoft Teams** settings screen, switch both **Allow external apps in Microsoft Teams** and **Allow uploading of external apps** to **On**, and then select **Save**.
 
-	![Screenshot of the Apps section, with 'Allow external apps in Microsoft Teams' and 'Allow sideloading of external apps' options switched on.](~/assets/images/setup/enablesideloading.png)
+	![Screenshot of the Apps section, with 'Allow external apps in Microsoft Teams' and 'Allow uploading of external apps' options switched on.](~/assets/images/setup/enableuploading.png)
 
-For more information on sideloading, see [Sideloading your app in a team](~/concepts/apps/apps-sideload).
+For more information on uploading, see [Uploading your app in a team](~/concepts/apps/apps-upload).
 
 ## 4. Enable Public Developer Preview for your tenant (optional) 
 
@@ -83,7 +83,7 @@ With those steps out of the way, you're ready to focus on creating your app.
 ### Package and test your app within Teams
 
 * [Create package](~/publishing/apps-package)
-* [Sideload](~/concepts/apps/apps-sideload) in Teams
+* [Upload](~/concepts/apps/apps-upload) in Teams
 * [Test functionality](~/resources/general/debug)
 
 ### Publish your app and drive engagement
