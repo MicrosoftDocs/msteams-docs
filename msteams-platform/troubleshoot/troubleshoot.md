@@ -10,9 +10,9 @@ keywords: teams apps development troubleshooting
 
 ### Tabs disappear
 
-During the developer preview, any tabs that you created, and uploaded to a team, may have expired after 29 days.  This expiration issue has since been addressed, but you will have to [sideload](~/concepts/apps/apps-sideload) the tab again for it to appear in your Tab Gallery.
+During the developer preview, any tabs that you created, and uploaded to a team, may have expired after 29 days.  This expiration issue has since been addressed, but you will have to [upload](~/concepts/apps/apps-upload) the tab again for it to appear in your Tab Gallery.
 
-Tabs may also disappear during the roll out of a new process for sideloading tabs.  Please check [here](~/concepts/apps/apps-sideload) to determine whether you need to use this process.
+Tabs may also disappear during the roll out of a new process for uploading tabs.  Please check [here](~/concepts/apps/apps-upload) to determine whether you need to use this process.
 
 ### Blank tab screen
 
@@ -62,11 +62,11 @@ There is a known issue where updating an existing bot app with a new or updated 
 
 ### Can't add my bot
 
-Apps must be enabled by the Office 365 tenant admin for them to be loaded by end users. Note that in some cases, the Office 365 tenant might have multiple SKUs associated with it, and for bots to work in any, they must be enabled in all SKUs. See [Enable sideloading of apps](~/get-started/get-started#3-enable-sideloading-of-apps-for-microsoft-teams) for more information.
+Apps must be enabled by the Office 365 tenant admin for them to be loaded by end users. Note that in some cases, the Office 365 tenant might have multiple SKUs associated with it, and for bots to work in any, they must be enabled in all SKUs. See [Enable uploading of apps](~/get-started/get-started#3-enable-uploading-of-apps-for-microsoft-teams) for more information.
 
 ### Can't add bot as a member of a team
 
-Bots must first be sideload into a team before it is accessible within any channel of that team.  Please review [Sideloading your app in a team](~/concepts/apps/apps-sideload) for more information on this process.
+Bots must first be upload into a team before it is accessible within any channel of that team.  Please review [Uploading your app in a team](~/concepts/apps/apps-upload) for more information on this process.
 
 ### My bot doesn't get my message in a channel
 
@@ -78,7 +78,7 @@ Because bots in channels only receive messages when they are @mentioned, all mes
 
 ---
 
-## Packaging and sideloading
+## Packaging and uploading
 
 ### Error while reading manifest.json
 
