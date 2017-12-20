@@ -3,7 +3,6 @@ title: Configure your Office 365 Tenant
 description: How to get started with Teams in Office 365
 keywords: Configure Office 365 tenant Teams uploading
 ---
-
 # Get started developing for Microsoft Teams
 
 Microsoft Teams is a service within Office 365. To get started developing extensions for Microsoft Teams, you'll first need an Office 365 commercial account, and you'll need to turn on the Microsoft Teams service for your Office 365 organization.
@@ -32,12 +31,12 @@ Teams is enabled by default in the versions of Office 365 that support it, howev
 2. Select the **Admin** tile to go to the Office 365 Admin Center.
 3. From **Settings**, select **Services & add-ins** or **Apps**.
 
-	![Screenshot of the Settings tab, with 'Services and add-ins' selected](~/assets/images/setup_services.png)
+![Screenshot of the Settings tab, with 'Services and add-ins' selected](~/assets/images/setup_services.png)
 
 4. From the list of services and add-ins, or apps, select **Microsoft Teams**.
- 
-	![Screenshot of the services listed under Settings, with the Microsoft Teams service selected](~/assets/images/setup_select_teams.png)
+
+![Screenshot of the services listed under Settings, with the Microsoft Teams service selected](~/assets/images/setup_select_teams.png)
 
 5. On the **Microsoft Teams** settings screen, open **Settings by user/license type** and confirm that Microsoft Teams is set to **On**. Select **Save** if necessary.
- 
-	![Screenshot of the services listed under Settings, with Microsoft Teams option switched on](~/assets/images/setup/enableteamsandapps.png)
+
+![Screenshot of the services listed under Settings, with Microsoft Teams option switched on](~/assets/images/setup/enableteamsandapps.png)

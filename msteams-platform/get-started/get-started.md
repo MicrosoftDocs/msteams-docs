@@ -3,7 +3,6 @@ title: Get started
 description: Get started building great apps in Microsoft Teams
 keywords: getting started Microsoft teams
 ---
-
 # Get started developing apps for Microsoft Teams
 
 Microsoft Teams is a service within Office 365. All users of Teams can install apps from the Store, but you will need to go through special steps to develop and test apps before they are ready to add to the store.
@@ -20,6 +19,7 @@ The biggest issue is where you host your app during development, and how Teams c
 These options will be discussed in more detail later.
 
 Here are some simple steps to create a Teams app and test it in Teams.
+
 * [Set up your tenant](~/get-started/configure-tenant)
 * [Enable development in Teams](~/get-started/enable-development)
 * [Create a minimal app](~/get-started/minimal-app)
