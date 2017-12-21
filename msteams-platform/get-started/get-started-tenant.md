@@ -31,7 +31,7 @@ Teams is enabled by default in the versions of Office 365 that support it, howev
 2. Select the **Admin** tile to go to the Office 365 Admin Center.
 3. From **Settings**, select **Services & add-ins** or **Apps**.
 
-![Screenshot of the Settings tab, with 'Services and add-ins' selected](~/assets/images/setup_services.png)
+    ![Screenshot of the Settings tab, with 'Services and add-ins' selected](~/assets/images/setup_services.png)
 
 4. From the list of services and add-ins, or apps, select **Microsoft Teams**.
 
