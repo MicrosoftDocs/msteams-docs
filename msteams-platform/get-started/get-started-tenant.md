@@ -27,7 +27,7 @@ Teams is enabled by default in the versions of Office 365 that support it, howev
 
 1. [Sign in to Office 365](https://portal.office.com) with your administrator account.
 2. Select the **Admin** tile to go to the Office 365 Admin Center.
-3. From **Settings**, select **Services & add-ins** or **Apps**.
+3. From **Settings**, select **Services & add-ins**.
 
     ![Screenshot of the Settings tab, with 'Services and add-ins' selected](~/assets/images/setup_services.png)
 
@@ -39,4 +39,6 @@ Teams is enabled by default in the versions of Office 365 that support it, howev
 
     ![Screenshot of the services listed under Settings, with Microsoft Teams option switched on](~/assets/images/setup/enableteamsandapps.png)
 
->See general information on [administrator settings](https://support.office.com/article/Administrator-settings-for-Microsoft-Teams-3966a3f5-7e0f-4ea9-a402-41888f455ba2) for Microsoft Teams.
+6. Now is a good time to make sure that apps are enabled in Teams so that you can upload and test the apps that you develop. Make certain that you allow uploading (or sideloading) external apps.
+
+> For more information on O365 administration settings see [administrator settings](https://support.office.com/article/Administrator-settings-for-Microsoft-Teams-3966a3f5-7e0f-4ea9-a402-41888f455ba2).
