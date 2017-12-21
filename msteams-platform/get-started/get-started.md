@@ -20,12 +20,13 @@ These options will be discussed in more detail later.
 
 Here are some simple steps to create a Teams app and test it in Teams.
 
-* [Set up your tenant](~/get-started/configure-tenant)
-* [Enable development in Teams](~/get-started/enable-development)
-* [Create a minimal app](~/get-started/minimal-app)
-* [Host the app for testing](~/get-started/test-app)
-* [Upload the app in Teams](~/get-started/upload-app)
-* [Add tabs to your app](~/get-started/add-tabs)
-* [Add a bot to your app](~/get-started/add-bot)
-* [Add a messaging extension](~/get-started/add-extension)
-* [Conclusion: Hello World!](~/get-started/conclusion)
+> [!div class="checklist"]
+> * [Prepare your Office 365 tenant](~/get-started/get-started-tenant)
+> * [Get prerequisites](~/get-started/get-started-nodejs#GetPrerequisites)
+> * [Download the sample](~/get-started/get-started-nodejs#DownloadSample)
+> * [Build and run the sample](~/get-started/get-started-nodejs#BuildRun)
+> * [Host the sample](~/get-started/get-started-nodejs#HostSample)
+> * [Deploy your app into Microsoft Teams](~/get-started/get-started-nodejs#DeployToTeams)
+> * [Configure the app tab](~/get-started/get-started-nodejs#ConfigureTheAppTab)
+> * [Add a bot to your app](~/get-started/get-started-nodejs#AddBot)
+> * [Compose rich messages](~/get-started/get-started-nodejs#ComposeRichMessages)
