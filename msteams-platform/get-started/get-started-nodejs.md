@@ -16,6 +16,7 @@ This tutorial helps you get started creating a Microsoft Teams app using Node.js
 To create your app:
 
 > [!div class="checklist"]
+> * [Prepare your Office 365 tenant](~/get-started/get-started-tenant)
 > * [Prepare Microsoft Teams for development](#PrepareMicrosoftTeams)
 > * [Get prerequisites](#GetPrerequisites)
 > * [Download the sample](#DownloadSample)
