@@ -37,4 +37,4 @@ Teams is enabled by default in the versions of Office 365 that support it, howev
 
 6. Now is a good time to make sure that apps are enabled in Teams so that you can upload and test the apps that you develop. Make certain that you allow uploading (or sideloading) external apps.
 
-> For more information on O365 administration settings see [administrator settings](https://support.office.com/article/Administrator-settings-for-Microsoft-Teams-3966a3f5-7e0f-4ea9-a402-41888f455ba2).
+> For more information on O365 administration settings see [administrator settings](https://support.office.com/article/Administrator-settings-for-Microsoft-Teams-3966a3f5-7e0f-4ea9-a402-41888f455ba2) in the Teams product documentation.
