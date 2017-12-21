@@ -5,7 +5,7 @@
   href: ./get-started/get-started
   items:
   - name: Set up a developer tenant
-    href: ./get-started/
+    href: ./get-started/get-started-tenant
   - name: Get started with Node.js
     href: ./get-started/get-started-nodejs
   expanded: true
