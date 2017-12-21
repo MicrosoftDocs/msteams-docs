@@ -35,6 +35,6 @@ Teams is enabled by default in the versions of Office 365 that support it, howev
 
     ![Screenshot of the services listed under Settings, with Microsoft Teams option switched on](~/assets/images/setup/enableteamsandapps.png)
 
-6. Now is a good time to make sure that apps are enabled in Teams so that you can upload and test the apps that you develop. Make certain that you allow uploading (or sideloading) external apps.
+6. Now is a good time to make sure that apps are enabled in Teams so that you can upload and test the apps that you develop. Make certain that you allow uploading (or sideloading) external apps. Select **Save** at the bottom of the page if necessary.
 
 > For more information on O365 administration settings see [administrator settings](https://support.office.com/article/Administrator-settings-for-Microsoft-Teams-3966a3f5-7e0f-4ea9-a402-41888f455ba2) in the Teams product documentation.
