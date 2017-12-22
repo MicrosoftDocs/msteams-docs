@@ -13,11 +13,11 @@ To test your app experience within Microsoft Teams, you need to upload your app 
 
 For bots designed only for 1:1 contexts, see [Adding a bot for 1:1 chat only](~/concepts/bots/bots-test#adding-a-bot-for-11-chat-only) for an alternate way to access for testing purposes.
 
-## Create your upload package
+## Create your app package
 
-For development as well as Office Store submission you must create an uploadable package that contains the information to describe your experience. The package, a .zip file, contains the application manifest and icons that uniquely define your experience.
+For development as well as Office Store submission you must create an uploadable app package that contains the information to describe your experience. The package, a .zip file, contains the application manifest and icons that uniquely define your experience.
 
-To create a upload package, see [Create the package for your Microsoft Teams app](~/publishing/apps-package).
+To create a upload package, see [Create the package for your Microsoft Teams app](~/concepts/apps/apps-package).
 
 ## Load your package into a team
 
@@ -98,6 +98,6 @@ If you change manifest information, you must first remove the app and then add t
 
 ## Troubleshooting notes
 
-* If the manifest doesn't load, please double-check that you followed all the instructions in [Create the package](~/publishing/apps-package) and validated your manifest against the [schema](~/resources/schema/manifest-schema).
+* If the manifest doesn't load, please double-check that you followed all the instructions in [Create the package](~/concepts/apps/apps-package) and validated your manifest against the [schema](~/resources/schema/manifest-schema).
 
 * Encountering other problems? See [Troubleshoot your Microsoft Teams app](~/troubleshoot/troubleshoot).
