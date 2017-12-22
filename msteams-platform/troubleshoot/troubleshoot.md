@@ -17,6 +17,7 @@ Tabs may also disappear during the roll out of a new process for uploading tabs.
 ### Blank tab screen
 
 If you are not seeing your content in the tab view, it could be:
+
 * your content cannot be displayed in an `<iframe>`.
 * the content domain is not in the [`validDomains`](~/resources/schema/manifest-schema#validdomains) list in the manifest.
 
@@ -62,7 +63,7 @@ There is a known issue where updating an existing bot app with a new or updated 
 
 ### Can't add my bot
 
-Apps must be enabled by the Office 365 tenant admin for them to be loaded by end users. Note that in some cases, the Office 365 tenant might have multiple SKUs associated with it, and for bots to work in any, they must be enabled in all SKUs. See [Enable uploading of apps](~/get-started/get-started#3-enable-uploading-of-apps-for-microsoft-teams) for more information.
+Apps must be enabled by the Office 365 tenant admin for them to be loaded by end users. Note that in some cases, the Office 365 tenant might have multiple SKUs associated with it, and for bots to work in any, they must be enabled in all SKUs. See [Prepare your Office 365 tenant](~/get-started/get-started-tenant) for more information.
 
 ### Can't add bot as a member of a team
 
