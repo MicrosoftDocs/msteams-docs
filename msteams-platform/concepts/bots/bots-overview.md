@@ -51,4 +51,4 @@ Follow these steps to build a great Teams bot:
 
 ## What you need to know: outgoing webhooks
 
-outgoing webhooks allow you to create a simple bot for basic interaction, like kicking off a workflow or other simple commands you may need. outgoing webhooks live only in the team in which you create them and are intended for simple processes specific to your company's workflow. See [outgoing webhooks](~/concepts/outgoingwebhook) for more information.
+Outgoing webhooks allow you to create a simple bot for basic interaction, like kicking off a workflow or other simple commands you may need. Outgoing webhooks live only in the team in which you create them and are intended for simple processes specific to your company's workflow. See [outgoing webhooks](~/concepts/outgoingwebhook) for more information.

@@ -6,7 +6,7 @@ keywords: teams apps Upload
 
 # Upload your custom app in Microsoft Teams
 
-To test your app experience within Microsoft Teams, you need to upload your app to Teams. uploading adds the app to the team you select, and you and your team members can interact with it like end users.
+To test your app experience within Microsoft Teams, you need to upload your app to Teams. Uploading adds the app to the team you select, and you and your team members can interact with it like end users.
 
 > [!NOTE]
 > Uploading an updated package for an existing app with a bot might not show tab changes when viewed through the Conversations window. It's better to access it via the Apps fly-out, or test on a clean test environment.
@@ -17,7 +17,7 @@ For bots designed only for 1:1 contexts, see [Adding a bot for 1:1 chat only](~/
 
 For development as well as Office Store submission you must create an uploadable package that contains the information to describe your experience. The package, a .zip file, contains the application manifest and icons that uniquely define your experience.
 
-To create a upload package, see [Create the package for your Microsoft Teams app](~/publishing/apps-package).
+To create an upload package, see [Create the package for your Microsoft Teams app](~/publishing/apps-package).
 
 ## Load your package into a team
 

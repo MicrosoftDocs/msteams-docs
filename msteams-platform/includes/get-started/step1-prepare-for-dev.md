@@ -12,4 +12,5 @@ To upload apps that you develop, your organization administrator has to enable u
 ### Office Developer Program
 
 In case your organization administrator cannot change these settings, you can use a test tenant to upload your apps. The [Office 365 Developer Program](https://dev.office.com/devprogram) lets you create test tenants to load and test Office 365 and Teams apps. [Sign up](https://dev.office.com/devprogram) today to create your own tenant.
+
 To configure your tenant for app development for Teams follow the steps in [Prepare your Office 365 tenant](~/get-started/get-started-tenant).
