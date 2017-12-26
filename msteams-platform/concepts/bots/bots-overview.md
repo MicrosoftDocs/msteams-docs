@@ -11,7 +11,7 @@ Build and connect intelligent bots to interact with Microsoft Teams users natura
 ![Example of a bot assisting a user](~/assets/images/bot_example.png)
 
 > [!TIP]
-> If you are just looking for a way to simply extend your team by integrating with custom tools and services in a secure manner, check out our [outgoing webhook](~/concepts/outgoingwebhook) feature. Be aware, though, that outgoing webhooks simply leverage your existing web services&mdash;they can't access non-messaging APIs, perform asynchronous posting, or add button actions to cards.
+> If you are just looking for a way to simply extend your team by integrating with custom tools and services in a secure manner, check out our [Outgoing webhook](~/concepts/outgoingwebhook) feature. Be aware that outgoing webhooks simply leverage your existing web services&mdash;they can't access non-messaging APIs, perform asynchronous posting, or add button actions to cards.
 
 ## What you need to know: Bots
 
@@ -51,4 +51,4 @@ Follow these steps to build a great Teams bot:
 
 ## What you need to know: outgoing webhooks
 
-outgoing webhooks allow you to create a simple bot for basic interaction, like kicking off a workflow or other simple commands you may need. outgoing webhooks live only in the team in which you create them and are intended for simple processes specific to your company's workflow. See [outgoing webhooks](~/concepts/outgoingwebhook) for more information.
+Outgoing webhooks allow you to create a simple bot for basic interaction, like kicking off a workflow or other simple commands you may need. Outgoing webhooks live only in the team in which you create them and are intended for simple processes specific to your company's workflow. See [outgoing webhooks](~/concepts/outgoingwebhook) for more information.
