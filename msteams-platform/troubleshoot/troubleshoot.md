@@ -28,7 +28,7 @@ Be sure to call `microsoftTeams.setValidityState(true)` once the user has input 
 
 When adding a tab, if you click the save buttons but are presented with an error message indicating the settings cannot be saved, the problem could be one of two classes of issues.
 
-### The save success message was never recieved
+### The save success message was never received
 
 If a save handler was registered using `microsoftTeams.settings.registerOnSaveHandler(handler)`, the callback must call `saveEvent.notifySuccess()`. If the callback doesn't call this within 30 seconds or calls `saveEvent.notifyFailure(reason)` instead, this error will be shown.
 

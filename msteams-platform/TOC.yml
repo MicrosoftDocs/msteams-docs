@@ -54,8 +54,8 @@
       href: ./concepts/cards-actions
   - name: Compose rich messages
     href: ./concepts/messaging-extensions
-  - name: Custom bot
-    href: ./concepts/custom-bot
+  - name: Outgoing WebHooks
+    href: ./concepts/outgoingwebhook
   - name: Deep links
     href: ./concepts/deep-links
 - name: Publishing
