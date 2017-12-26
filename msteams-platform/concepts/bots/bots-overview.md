@@ -49,6 +49,6 @@ Follow these steps to build a great Teams bot:
 - [Test your bot](~/concepts/bots/bots-test): Add your bot for 1:1 or team conversations to see it in action.
 - [Publish your bot](~/publishing/apps-publish): Create your Teams package, add other capabilities, and submit it to the Office Store.
 
-## What you need to know: Outgoing webhooks
+## What you need to know: outgoing webhooks
 
-Outgoing webhooks allow you to create a simple bot for basic interaction, like kicking off a workflow or other simple commands you may need. Outgoing webhooks live only in the team in which you create them and are intended for simple processes specific to your company's workflow. See [Outgoing webhooks](~/concepts/outgoingwebhook) for more information.
+Outgoing webhooks allow you to create a simple bot for basic interaction, like kicking off a workflow or other simple commands you may need. Outgoing webhooks live only in the team in which you create them and are intended for simple processes specific to your company's workflow. See [outgoing webhooks](~/concepts/outgoingwebhook) for more information.

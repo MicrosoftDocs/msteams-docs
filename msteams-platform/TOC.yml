@@ -11,8 +11,8 @@
   - name: Apps in Teams
     href: ./concepts/apps/apps-overview
     items:
-    - name: Sideloading
-      href: ./concepts/apps/apps-sideload
+    - name: Uploading
+      href: ./concepts/apps/apps-upload
   - name: Tabs
     href: ./concepts/tabs/tabs-overview
     items:

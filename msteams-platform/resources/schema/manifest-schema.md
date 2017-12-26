@@ -214,7 +214,7 @@ Ensure that your description accurately describes your experience and provides i
 
 **Required**
 
-Icons used within the Teams app. The icon files must be included as part of the sideload package. See [Icons](~/publishing/apps-package#icons) for more information.
+Icons used within the Teams app. The icon files must be included as part of the upload package. See [Icons](~/publishing/apps-package#icons) for more information.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
