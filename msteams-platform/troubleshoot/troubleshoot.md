@@ -8,12 +8,6 @@ keywords: teams apps development troubleshooting
 
 ## Tabs
 
-### Tabs disappear
-
-During the developer preview, any tabs that you created, and uploaded to a team, may have expired after 29 days.  This expiration issue has since been addressed, but you will have to [upload](~/concepts/apps/apps-upload) the tab again for it to appear in your Tab Gallery.
-
-Tabs may also disappear during the roll out of a new process for uploading tabs.  Please check [here](~/concepts/apps/apps-upload) to determine whether you need to use this process.
-
 ### Blank tab screen
 
 If you are not seeing your content in the tab view, it could be:

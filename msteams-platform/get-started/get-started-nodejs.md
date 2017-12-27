@@ -11,11 +11,12 @@ keywords: getting started node.js nodejs
 
 [!include[Step 1 Intro](~/includes/get-started/step1-intro.md)]
 
-This tutorial helps you get started creating a Microsoft Teams app using Node.js. You can test the app by loading it into a Team that you have permissions for or into a test tenant created using the Office Developer Program. This topic is written to be platform independent.
+This tutorial helps you get started creating a Microsoft Teams app using Node.js. You can test the app by loading it into a Team that you have permissions for, or into a test tenant created using the Office Developer Program. This topic is written to be platform independent.
 
 To create your app:
 
 > [!div class="checklist"]
+> * [Prepare your Office 365 tenant](~/get-started/get-started-tenant)
 > * [Prepare Microsoft Teams for development](#PrepareMicrosoftTeams)
 > * [Get prerequisites](#GetPrerequisites)
 > * [Download the sample](#DownloadSample)
@@ -38,7 +39,7 @@ Once you have your app running in the Teams platform, you can enhance it further
 
 ## Get prerequisites
 
-To complete this tutorial, you need to get the following prerequisites:
+To complete this tutorial, you need to get the following tools:
 
 * [Install Git](https://git-scm.com/downloads)
 * [Install Node.js and NPM](https://nodejs.org/)
@@ -239,7 +240,7 @@ The sample already comes with a bot. The bot is defined in the manifest and look
 You need a bot definition for each bot contained in your app. In this case you already have a bot and have given it a registered **bot ID**, so all you will do is add credentials for the bot and test it.
 
 ### Add credentials for the bot
-In the hello-world project navigate to a folder called config. In this folder you will find a json file called default. This file contains the following code:
+In the hello-world project navigate to a folder named config. In this folder you will find a json file called default. This file contains the following code:
 
 [!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/config/default.json#L1-L6)]
 

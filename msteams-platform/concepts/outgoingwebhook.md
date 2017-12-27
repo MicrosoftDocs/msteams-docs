@@ -266,7 +266,7 @@ Your outgoing webhook will need to reply asynchronously to the HTTP request from
 
 ## Samples for Outgoing webhook
 
-For sample code illustrating a outgoing webhook, see these samples on GitHub: 
+For sample code illustrating an outgoing webhook, see these samples on GitHub: 
 
 ### Node JS
 [OfficeDev/msteams-samples-outgoing-webhook-nodejs](https://github.com/OfficeDev/msteams-samples-outgoing-webhook-nodejs)
