@@ -16,18 +16,18 @@ To create an outgoing webhook, click **Manage team** and then navigate to the **
 
 ![View team](~/assets/images/ManageTeam.png)
 
-Click on the **Create a outgoing webhook** link at the bottom of the page.
+Click on the **Create an outgoing webhook** link at the bottom of the page.
  
 ![Create a outgoing webhook entry point](~/assets/images/createwebhook.png)
 
-In the **Create an outgoing webhook** dialog, you can configure how your bot appears in channels:
+In the **Create an outgoing webhook** dialog, you can configure how your outgoing webhook appears in channels:
 
 * **Name** is what will show up as the bot’s title and is also how users will @mention the bot
 * **Callback URL** is the endpoint that will receive messages from Teams
 * **Description** is a detailed string that what will show up in the profile card and in the team-level App dashboard
 * **Profile Picture** is the optional display picture of the outgoing webhook.
 
-![Create a outgoing webhook dialog](~/assets/images/outgoingwebhook.png)
+![Create an outgoing webhook dialog](~/assets/images/outgoingwebhook.png)
 
 Click **Create** and the outgoing webhook will be made available in the current team. It will not be available in any other team. The next dialog will display a security token that you will use to authenticate calls from Microsoft Teams.
 
@@ -266,15 +266,12 @@ Your outgoing webhook will need to reply asynchronously to the HTTP request from
 
 ## Samples for Outgoing webhook
 
-For sample code illustrating a outgoing webhook, see this sample on GitHub: 
+For sample code illustrating an outgoing webhook, see these samples on GitHub:
 
 ### Node JS
 [OfficeDev/msteams-samples-outgoing-webhook-nodejs](https://github.com/OfficeDev/msteams-samples-outgoing-webhook-nodejs)
 
 ### C#
 [OfficeDev/microsoft-teams-sample-custombot](https://github.com/OfficeDev/microsoft-teams-sample-custombot)
+
 Custom Bots is a previous name for outgoing webhooks.
-
-## Turn your outgoing webhook into an app for Microsoft Teams
-
-If you’re ready to share your outgoing webhook with others or make it publicly available, you can submit your bot to Microsoft Teams for consideration in the bot gallery. See the [Microsoft Teams Developer Preview interest form](https://aka.ms/microsoftteamsdeveloperpreviewinterestform) to learn more.
