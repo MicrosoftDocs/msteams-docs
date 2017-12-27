@@ -54,5 +54,5 @@ Ready to start adding your experience into Teams?
   * [Activity feed integrations](~/concepts/activity-feed)
 * Package, test, and publish your app
   * [Package your app](~/publishing/apps-package)
-  * [Sideload your app](~/concepts/apps/apps-sideload)
+  * [Upload your app](~/concepts/apps/apps-upload)
   * [Publish your app](~/publishing/apps-publish)

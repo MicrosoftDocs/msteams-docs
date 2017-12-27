@@ -2,7 +2,10 @@
   href: ./overview
   universal_ref_toc: /javascript/api/msteams-client-docs-ref-typescript/toc.json
 - name: Get started
+  href: ./get-started/get-started
   items:
+  - name:  Prepare your Office 365 tenant
+    href: ./get-started/get-started-tenant
   - name: Get started with Node.js
     href: ./get-started/get-started-nodejs
   expanded: true
@@ -11,8 +14,8 @@
   - name: Apps in Teams
     href: ./concepts/apps/apps-overview
     items:
-    - name: Sideloading
-      href: ./concepts/apps/apps-sideload
+    - name: Uploading
+      href: ./concepts/apps/apps-upload
   - name: Tabs
     href: ./concepts/tabs/tabs-overview
     items:
@@ -54,8 +57,8 @@
       href: ./concepts/cards-actions
   - name: Compose rich messages
     href: ./concepts/messaging-extensions
-  - name: Custom bot
-    href: ./concepts/custom-bot
+  - name: Outgoing WebHooks
+    href: ./concepts/outgoingwebhook
   - name: Deep links
     href: ./concepts/deep-links
 - name: Publishing

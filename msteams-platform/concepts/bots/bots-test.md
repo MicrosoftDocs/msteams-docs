@@ -5,22 +5,22 @@ keywords: teams bots testing
 ---
 # Test your Microsoft Teams bot
 
-To test your bot in Microsoft Teams, you must follow one of the sideloading processes enumerated here.  Note that each method triggers a slightly different flow, and enables bots in different contexts as explained below.
+To test your bot in Microsoft Teams, you must follow one of the uploading processes listed here.  Note that each method triggers a slightly different flow, and enables bots in different contexts as explained below.
 
-For published bots, end users will be able to access via the discover apps gallery accessable via the Discover Bots access points in the product.
+For published bots, end users will be able to access the via the Discover Bots access points in the product.
 
 > [!NOTE]
-> Your tenant administrator will need to enable sideloading of apps for your organization. [Here's how](/microsoftteams/admin-settings).
+> Your tenant administrator will need to enable uploading of apps for your organization. [Here's how](/microsoftteams/admin-settings).
 
 ## Adding a bot to a team for use in channels
 
-To add a bot to a team, so it is usable in the team channel by all team members, you must [create an app package](~/publishing/apps-package) and [sideload it](~/concepts/apps/apps-sideload) to the appropriate team. This process makes the bot available in all channels within the team (when @mentioned) as well as for all team members in 1:1 context. Please note that the bot will not be available in other teams without being explicitly added to them.
+To add a bot to a team, so it is usable in the team channel by all team members, you must [create an app package](~/publishing/apps-package) and [upload it](~/concepts/apps/apps-upload) to the appropriate team. This process makes the bot available in all channels within the team (when @mentioned) as well as for all team members in 1:1 context. Please note that the bot will not be available in other teams without being explicitly added to them.
 
 When a bot is first added via the above method, Teams will send the `conversationUpdate` event. The payload for this event will contain a `channelData` object with the team information. For more information about bot events, see the documentation [here](~/concepts/bots/bots-notifications).
 
 ## Adding a bot for 1:1 chat only
 
-If your bot only needs to be accessed in 1:1, not made available for channel conversations, you can directly sideload your bot for that purpose.  
+If your bot only needs to be accessed in 1:1, not made available for channel conversations, you can directly upload your bot for that purpose.  
 
 There are two ways to test load your bot for 1:1 conversations in Microsoft Teams:
 
@@ -35,7 +35,7 @@ There are two ways to test load your bot for 1:1 conversations in Microsoft Team
 	
    * From within Microsoft Teams, on the **Chat** pane, select the **Add chat** icon. For **To:**, paste your bot's Microsoft App ID.
 	
-     ![Getting the AppID for the bot](~/assets/images/bots_sideloading.png)
+     ![Getting the AppID for the bot](~/assets/images/bots_uploading.png)
 		
      The app ID should resolve to your bot name.
 
