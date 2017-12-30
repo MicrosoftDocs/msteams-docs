@@ -262,7 +262,7 @@ Your service should respond with the results matching the user query. The respon
 |`composeExtension`|Top-level response envelope.|
 |`composeExtension.type`|Type of response. The following types are supported: <br>`auth` <br>`config` <br>`message` <br>`result`|
 |`composeExtension.attachmentLayout`|Specifies the layout of the attachments. Only one value is currently supported: <br>`list`: a list of card objects containing thumbnail, title, and text fields|
-|`composeExtension.attachments`|Array of valid bot attachment objects. Currently the following types are supported: <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd/microsoft.teams.card.o365connector`|
+|`composeExtension.attachments`|Array of valid bot attachment objects. Currently the following types are supported: <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector`|
 
 #### Response card types and previews
 
