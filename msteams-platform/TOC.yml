@@ -14,7 +14,9 @@
   - name: Apps in Teams
     href: ./concepts/apps/apps-overview
     items:
-    - name: Uploading
+    - name: Create an app package
+      href: ./concepts/apps/apps-package
+    - name: Upload an app package
       href: ./concepts/apps/apps-upload
   - name: Tabs
     href: ./concepts/tabs/tabs-overview
@@ -64,6 +66,11 @@
 - name: Publishing
   href: ./publishing/apps-publish
   items:
+<<<<<<< HEAD
+=======
+  - name: Create package
+    href: ./concepts/apps/apps-package
+>>>>>>> 6529be336e4d802ad3f23f4e97c1f74c5a8cdf96
   - name: Office Store checklist
     href: ./publishing/office-store-checklist
   - name: Office Store guidance

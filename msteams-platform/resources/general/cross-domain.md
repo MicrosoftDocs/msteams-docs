@@ -10,5 +10,5 @@ In some cases, you might need to redirect the configuration or content page to a
 
 Instead, you should request that Microsoft Teams perform the cross-domain redirects itself:
 
-* Ensure that the URL is included in the `validDomains` list in your [manifest](~/publishing/apps-package). For more information, see [validDomains](~/resources/schema/manifest-schema#validdomains) in the manifest schema reference.
+* Ensure that the URL is included in the `validDomains` list in your [manifest](~/concepts/apps/apps-package). For more information, see [validDomains](~/resources/schema/manifest-schema#validdomains) in the manifest schema reference.
 * Call `microsoftTeams.navigateCrossDomain(yourNewUrl)` on the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) to request that the iframe containing your page is redirected to the specified URL.

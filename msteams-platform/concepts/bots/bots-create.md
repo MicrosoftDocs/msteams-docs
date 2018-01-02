@@ -4,11 +4,15 @@ description: Describes how to create bots in Microsoft Teams
 keywords: teams bots creation
 ---
 
-# Create a bot for Microsoft Teams
+# Learn about bots
 
 All bots created using the Microsoft Bot Framework are configured and ready to work in Microsoft Teams.
 
-See the [Bot Framework Documentation](https://docs.botframework.com/en-us/) for more information about the following:
+[Get started on the Microsoft Teams platform with Node.js](~/get-started/get-started-nodejs) includes an app sample app with a bot, and has detailed steps for creating your first bot.
+
+See the [Bot Framework Documentation](https://docs.botframework.com/en-us/) for general information on bots.
+
+## Create a bot for Microsoft Teams
 
 1. Create the bot using this link: https://dev.botframework.com/bots/new, being sure to add Microsoft Teams as a channel and that you re-use any Microsoft App ID you generated if you've already created your app package/manifest.
 
@@ -28,7 +32,7 @@ See the [Bot Framework Documentation](https://docs.botframework.com/en-us/) for 
 
 To make your bot experience Teams-ready:
 
-1. [Create an uploadable app package](~/publishing/apps-package) and [upload it to a team](~/concepts/apps/apps-upload) to test it in action.
+1. [Create an uploadable app package](~/concepts/apps/apps-package) and [upload it to a team](~/concepts/apps/apps-upload) to test it in action.
 2. Add [tabs](~/concepts/tabs/tabs-overview) or [other capabilities](~/concepts/apps/apps-overview#map-your-scenario-to-teams-capabilities) to make your experience shine in Teams.
 3. [Submit your final app package](~/publishing/apps-publish) for publication in the Office Store.
 

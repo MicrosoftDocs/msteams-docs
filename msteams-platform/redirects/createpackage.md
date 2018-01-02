@@ -1,3 +1,3 @@
 ---
-redirect_url: /microsoftteams/platform/publishing/apps-package
+redirect_url: /microsoftteams/platform/concepts/apps/apps-package
 ---

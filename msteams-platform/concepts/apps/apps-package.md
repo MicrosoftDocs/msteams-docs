@@ -24,7 +24,7 @@ Your manifest file must be named "manifest.json" and be at the top level of the 
 
 ## Icons
 
-Microsoft Teams requires two icons for your app experience, to be used within the product. Icons must be included in the package and referenced via relative paths in the manifest. The maximum length of each path is 2048 bytes.
+Microsoft Teams requires two icons for your app experience, to be used within the product. Icons must be included in the package and referenced via relative paths in the manifest. The maximum length of each path is 2048 bytes, and the format of the icon is .png.
 
 ### color
 

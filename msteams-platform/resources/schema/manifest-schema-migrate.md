@@ -16,7 +16,7 @@ To support Microsoft Teams apps, we made significant changes in our manifest. If
 | `tabs:name` | `name:short`, `name:long` | Use your existing name. |
 | `tabs:description` | `description` | Use your existing tab description or create new ones to represent your entire app experience. |
 | `tabs:description` | `description` | Use your existing tab description or create new ones to represent your entire app experience. |
-| `tabs:icons` | `icons` | Icons have been promoted to a top-level object. Note that [icons have been changed in v1.x](~/publishing/apps-package#icons), and must be included as part of the package. URLs to hosted icons are not allowed. |
+| `tabs:icons` | `icons` | Icons have been promoted to a top-level object. Note that [icons have been changed in v1.x](~/concepts/apps/apps-package#icons), and must be included as part of the package. URLs to hosted icons are not allowed. |
 | `tabs:accentColor` | `accentColor` | Accent color has been promoted to a top-level object. |
 | `tabs:configUrl` | `tabs:configurationUrl` | The config.html file for the configurable tab. |
 | `bots:mri` | `bots:id` | Same value, the bot's Microsoft app ID as registered with the Bot Framework. |
