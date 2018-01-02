@@ -64,8 +64,6 @@
 - name: Publishing
   href: ./publishing/apps-publish
   items:
-  - name: Create package
-    href: ./publishing/apps-package
   - name: Office Store checklist
     href: ./publishing/office-store-checklist
   - name: Office Store guidance

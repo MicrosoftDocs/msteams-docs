@@ -34,4 +34,4 @@ The follow metadata is required in your manifest.json file and for Seller Dashbo
 
 ## Submission extras for bots
 
-Bots in Microsoft Teams must be created using Bot Framework. (See [Create a bot](~/concepts/bots/bots-create) for instructions.) Use your Use your 96&times;96 color icon for your bot's icon in Bot Framework.
+Bots in Microsoft Teams must be created using Bot Framework. See [Create a bot](~/concepts/bots/bots-create) for instructions. Use your 96&times;96 color icon for your bot's icon in Bot Framework.
