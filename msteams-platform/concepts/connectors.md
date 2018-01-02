@@ -215,7 +215,7 @@ The following steps use PowerShell. We assume that you have this installed and a
 
 ## Registering your Connector
 
-With Microsoft Teams apps, you can distribute your registered Connector as part of your app package. Whether as a standalone solution, or one of several [capabilities](~/overview#apps-in-microsoft-teams) that your experience enables in Teams, you can [package](~/publishing/apps-package) and [publish](~/publishing/apps-publish) your Connector as part of your Office Store submission, or you can provide it to users directly for sideloading within Teams.
+With Microsoft Teams apps, you can distribute your registered Connector as part of your app package. Whether as a standalone solution, or one of several [capabilities](~/overview#apps-in-microsoft-teams) that your experience enables in Teams, you can [package](~/concepts/apps/apps-package) and [publish](~/publishing/apps-publish) your Connector as part of your Office Store submission, or you can provide it to users directly for uploading within Teams.
 
 To distribute your Connector, you need to register by using the [Connectors Developer Dashboard](https://go.microsoft.com/fwlink/?LinkID=780623). To have your Connector work in Microsoft Teams, select **Microsoft Teams** under **Enable this integration for**.
 
@@ -226,7 +226,7 @@ To distribute your Connector, you need to register by using the [Connectors Deve
 
 You can download the auto-generated Teams app manifest from the portal. Before you can use it to test or publish your app, though, you must do the following:
 
-* Include two icons, following the instructions in [Icons](~/publishing/apps-package#icons).
+* Include two icons, following the instructions in [Icons](~/concepts/apps/apps-package#icons).
 * Modify the `icons` portion of the manifest to refer to the file names of the icons instead of URLs.
 
 The following manifest.json file contains the basic elements needed to test and submit your app.
@@ -276,11 +276,11 @@ The following manifest.json file contains the basic elements needed to test and 
 
 ## Testing your Connector
 
-To test your Connector, sideload it to a team as you would with any other app. You can create a .zip package using the manifest file from the Connectors Developer Dashboard (modified as directed in the preceding section) and the two icon files.
+To test your Connector, upload it to a team as you would with any other app. You can create a .zip package using the manifest file from the Connectors Developer Dashboard (modified as directed in the preceding section) and the two icon files.
 
-After you sideload the app, open the Connectors list from any channel. Scroll to the bottom to see your app in the **Sideloaded** section.
+After you upload the app, open the Connectors list from any channel. Scroll to the bottom to see your app in the **Uploaded** section.
 
-![Screenshot of sideloaded section in Connector dialog box](~/assets/images/connectors/connector_dialog_sideloaded.png)
+![Screenshot of uploaded section in Connector dialog box](~/assets/images/connectors/connector_dialog_uploaded.png)
 
 You can now launch the configuration experience. Be aware that this flow occurs entirely within Microsoft Teams through a pop-up window. Currently, this behavior differs from the configuration experience in Connectors that we created; we are working on unifying the experiences.
 

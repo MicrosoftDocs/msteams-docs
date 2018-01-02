@@ -7,12 +7,12 @@ keywords: teams publish store office publishing
 # Publish your Microsoft Teams app to the Office Store
 
 > [!IMPORTANT]
-> **Your Microsoft Teams app *must* use the [latest schema](~/resources/schema/manifest-schema) and follow [current packaging guidelines](~/publishing/apps-package).**
+> **Your Microsoft Teams app *must* use the [latest schema](~/resources/schema/manifest-schema) and follow [current packaging guidelines](~/concepts/apps/apps-package).**
 >
 > [!NOTE]
 > Teams will soon provide an in-app gallery for users to find or discover [high-quality Teams apps](~/resources/design/overview). To have your solution available in this gallery, you must publish your solution through the Office Store.
 
-The Office Store provides a convenient location for you to upload your Microsoft Teams app, as well as other Office 365 extensibility types such as Office add-ins and Sharepoint add-ins. To include your solution in the Office Store, you submit it to the Seller Dashboard. You need to create an individual or company account if you have not already done so for other Windows apps or Office extensibility types.
+The Office Store provides a convenient location for you to distribute your Microsoft Teams app, as well as other Office 365 extensibility types such as Office add-ins and Sharepoint add-ins. To include your solution in the Office Store, you submit it to the Seller Dashboard. You need to create an individual or company account if you have not already done so for other Windows apps or Office extensibility types.
 
 > [!NOTE]
 > By developing and submitting a Microsoft Teams app, you are subject to the Bot Developer Framework [Terms of Use](https://aka.ms/bf-terms), [Privacy Policy](https://aka.ms/bf-privacy), and [Code of Conduct](https://aka.ms/bf-conduct) for bot, tab, and messaging extension functionality within your app. If your app contains Office 365 Connector functionality, separate terms may also apply as part of your Connector Registration on the [Connectors Developer Dashboard](https://aka.ms/publishconnector).
@@ -48,7 +48,7 @@ After your account is approved, you can submit your solution to the [Seller Dash
 
 ![Office Store Seller Dashboard add an app](~/assets/images/submission/sellerdashboardaddapp.png)
 
-You need to upload a [submission package](~/publishing/apps-package) and provide the required metadata for the product listing page, including information such as app logo, description, and screenshots. Please review our [Submission and Manifest Metadata Checklist](~/publishing/office-store-checklist) for more information.
+You need to upload a [submission package](~/concepts/apps/apps-package) and provide the required metadata for the product listing page, including information such as app logo, description, and screenshots. Please review our [Submission and Manifest Metadata Checklist](~/publishing/office-store-checklist) for more information.
 
 > [!IMPORTANT]
 > All information in the package manifest must match the metadata information you enter into the product listing.

@@ -12,7 +12,7 @@ Messaging extensions are a powerful new way for users to engage with your app wi
 
 ![Example of messaging extension card](~/assets/images/compose-extensions/ceexample.png)
 
-Messaging extensions appear along the bottom of the compose box. A few are built in, such as Emoji, Giphy, and Sticker. Choose the **More Options** (**&#8943;**) button to see other messaging extensions, including those that you add from the app gallery or sideload yourself.
+Messaging extensions appear along the bottom of the compose box. A few are built in, such as Emoji, Giphy, and Sticker. Choose the **More Options** (**&#8943;**) button to see other messaging extensions, including those that you add from the app gallery or upload yourself.
 
 How would you use messaging extensions? Here are a few possibilities:
 
@@ -135,9 +135,9 @@ In the app manifest, your command item is an object with the following structure
 }
 ```
  
-### Test via sideloading
+### Test via uploading
 
-You can test your messaging extension by sideloading your app. See [Sideloading your app in a team](~/concepts/apps/apps-sideload) for details.
+You can test your messaging extension by uploading your app. See [Uploading your app in a team](~/concepts/apps/apps-upload) for details.
 
 To open your messaging extension, navigate to any of your chats or channels. Choose the **More options** (**&#8943;**) button in the compose box, and choose your messaging extension.
 

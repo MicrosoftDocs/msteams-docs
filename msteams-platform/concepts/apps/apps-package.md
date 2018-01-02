@@ -1,12 +1,12 @@
 ---
 title: Package your app
-description: Learn how to package your app for testing, sideloading, and publishing in Microsoft Teams
+description: Learn how to package your app for testing, uploading, and publishing in Microsoft Teams
 keywords: teams apps packaging
 ---
 
 # Create the package for your Microsoft Teams app
 
-App experiences in Teams are defined by their app manifest, and bundled in an app package for use in sideloading or Office Store submission. You'll need an app package to test your experience in Teams, via the [sideload](~/concepts/apps/apps-sideload) process.
+App experiences in Teams are defined by their app manifest, and bundled in an app package for use in uploading or Office Store submission. You'll need an app package to test your experience in Teams, via the [upload](~/concepts/apps/apps-upload) process.
 
 A Teams app package is a .zip file containing the following:
 
@@ -15,7 +15,7 @@ A Teams app package is a .zip file containing the following:
 
 ## Creating a manifest
 
-Your manifest file must be named "manifest.json" and be at the top level of the sideload package. Note that manifests and packages built previously might support an older version of the schema. For Teams apps and especially Office Store submission, you must use the current [manifest schema](~/resources/schema/manifest-schema).
+Your manifest file must be named "manifest.json" and be at the top level of the upload package. Note that manifests and packages built previously might support an older version of the schema. For Teams apps and especially Office Store submission, you must use the current [manifest schema](~/resources/schema/manifest-schema).
 
 > [!TIP]
 > Specify the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor:
@@ -24,7 +24,7 @@ Your manifest file must be named "manifest.json" and be at the top level of the 
 
 ## Icons
 
-Microsoft Teams requires two icons for your app experience, to be used within the product. Icons must be included in the package and referenced via relative paths in the manifest. The maximum length of each path is 2048 bytes.
+Microsoft Teams requires two icons for your app experience, to be used within the product. Icons must be included in the package and referenced via relative paths in the manifest. The maximum length of each path is 2048 bytes, and the format of the icon is .png.
 
 ### color
 
