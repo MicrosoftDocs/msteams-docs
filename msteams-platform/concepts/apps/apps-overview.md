@@ -12,8 +12,6 @@ For example, your users might want personal views of a planning app just a click
 
 Your app can provide content and services in channels, which enable groups of people to work collaboratively, or in one-on-one or group chats&mdash;or both. (The term we use for services in channels is *team scope*; for chats, *personal scope*.)
 
-A Microsoft Teams app is defined by its manifest (a JSON file). Place the manifest and two icons in a .zip file, and you have an *app package* that you can install into Teams or publish through the Office Store. (For details, see [Create the package for your Microsoft Teams app](~/publishing/apps-package).)
-
 ## Map your scenario to Teams capabilities
 
 After you decide what your app should do, you can map those activities to capabilities in Teams:
@@ -42,17 +40,3 @@ The fastest way to create your first Microsoft Teams app is to follow one of our
 
 * [Get started with .NET and C#](~/get-started/get-started-dotnet)
 * [Get started with Node.js](~/get-started/get-started-nodejs)
-
-Ready to start adding your experience into Teams?
-
-* [Design your app](~/get-started/design)
-* Code your app's capabilities
-  * [Tabs](~/concepts/tabs/tabs-overview)
-  * [Bots](~/concepts/bots/bots-overview)
-  * [Connectors](~/concepts/connectors)
-  * [Messaging extensions](~/concepts/compose-extensions)
-  * [Activity feed integrations](~/concepts/activity-feed)
-* Package, test, and publish your app
-  * [Package your app](~/publishing/apps-package)
-  * [Upload your app](~/concepts/apps/apps-upload)
-  * [Publish your app](~/publishing/apps-publish)
