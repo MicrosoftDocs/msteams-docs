@@ -2,6 +2,7 @@
 title: Design apps for Microsoft Teams
 description: Describes how to design a great app
 keywords: teams apps design
+ms.date: 01/02/2018
 ---
 # Design apps for Microsoft Teams
 

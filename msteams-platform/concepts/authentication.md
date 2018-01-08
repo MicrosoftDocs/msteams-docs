@@ -1,5 +1,5 @@
 ---
-title: Authentication a user
+title: Authenticate a user
 description: Describes authentication in Teams and how to use it in your apps
 keywords: teams authentication
 ---
