@@ -2,6 +2,7 @@
 title: Outgoing webhooks
 description: Describes how to create and use outgoing webhooks in Microsoft Teams
 keywords: teams bots custom
+ms.date: 01/02/2018
 ---
 
 # Outgoing webhooks in Microsoft Teams
@@ -148,7 +149,7 @@ Your code should always verify the HMAC signature included in the request:
         /// </value>
         public string ErrorMessage { get; private set; }
     }
-    
+
     /// <summary>
     /// Provides authentication results.
     /// </summary>

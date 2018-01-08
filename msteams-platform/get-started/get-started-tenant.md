@@ -2,6 +2,7 @@
 title: Prepare your Office 365 tenant
 description: How to get started with Teams in Office 365
 keywords: Configure Office 365 tenant Teams uploading
+ms.date: 01/02/2018
 ---
 # Prepare your Office 365 tenant
 
