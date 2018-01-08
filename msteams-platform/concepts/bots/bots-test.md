@@ -2,6 +2,7 @@
 title: Test your bot
 description: Describes how to test bots in Microsoft Teams
 keywords: teams bots testing
+ms.date: 01/02/2018
 ---
 # Test your Microsoft Teams bot
 

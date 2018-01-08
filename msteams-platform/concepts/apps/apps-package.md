@@ -2,6 +2,7 @@
 title: Package your app
 description: Learn how to package your app for testing, uploading, and publishing in Microsoft Teams
 keywords: teams apps packaging
+ms.date: 01/02/2018
 ---
 
 # Create the package for your Microsoft Teams app

@@ -2,6 +2,7 @@
 title: Get started
 description: Get started building great apps in Microsoft Teams
 keywords: getting started Microsoft teams
+ms.date: 01/02/2018
 ---
 # Get started developing apps for Microsoft Teams
 
