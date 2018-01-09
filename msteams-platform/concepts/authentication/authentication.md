@@ -1,7 +1,8 @@
 ---
-title: Authentication a user
+title: Authenticate a user
 description: Describes authentication in Teams and how to use it in your apps
-keywords: teams authentication
+keywords: teams authentication OAuth SSO AAD
+ms.date: 01/10/2018
 ---
 
 # Authenticate a user in your Microsoft Teams tab

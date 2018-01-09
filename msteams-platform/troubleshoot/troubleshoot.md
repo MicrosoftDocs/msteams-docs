@@ -45,7 +45,7 @@ Unless you are doing silent authentication, you must follow the authentication p
 
 Also note: Due to changes introduced in July 2017, we require all authentication flow to start and end on your domain, which must be listed in the `validDomains` object in your manifest.
 
-For more information about authentication, please see [Authenticate a user](~/concepts/authentication).
+For more information about authentication, please see [Authenticate a user](~/concepts/authentication/authentication).
 
 ### Static tabs not showing up
 

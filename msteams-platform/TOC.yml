@@ -49,7 +49,14 @@
     - name: Test a bot
       href: ./concepts/bots/bots-test
   - name: Authentication
-    href: ./concepts/authentication
+    href: ./concepts/authentication/authentication
+    items:
+    - name: Authentication for bots (AAD)
+      href: ./concepts/authentication/auth-bot
+    - name: Authentication for tabs (AAD)
+      href: ./concepts/authentication/auth-tab
+    - name: Silent authentication and SSO (AAD)
+      href: ./concepts/authentication/auth-silent
   - name: Activity Feed
     href: ./concepts/activity-feed
   - name: Connectors
