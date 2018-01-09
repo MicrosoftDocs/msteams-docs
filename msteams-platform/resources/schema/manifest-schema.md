@@ -2,6 +2,7 @@
 title: Manifest schema reference
 description: Describes the schema supported by the manifest for Microsoft Teams
 keywords: teams manifest schema
+ms.date: 12/10/2017
 ---
 
 # Reference: Manifest schema for Microsoft Teams

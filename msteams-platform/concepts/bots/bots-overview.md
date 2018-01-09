@@ -2,6 +2,7 @@
 title: Develop bots
 description: Describes how to get started developing bots in Microsoft Teams
 keywords: teams bots development
+ms.date: 01/02/2018
 ---
 
 # Develop bots for Microsoft Teams

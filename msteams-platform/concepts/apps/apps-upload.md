@@ -2,6 +2,7 @@
 title: Upload your custom app in Microsoft Teams
 description: Describes how to upload your app in Microsoft Teams
 keywords: teams apps Upload
+ms.date: 01/02/2018
 ---
 
 # Upload your custom app in Microsoft Teams
