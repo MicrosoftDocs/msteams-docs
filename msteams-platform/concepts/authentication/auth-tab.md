@@ -6,9 +6,9 @@ ms.date: 01/10/2018
 ---
 # Authenticate a user in a Microsoft Teams tab
 
-There are many services that you may wish to consume inside a Teams app, and most of those services require authentication to get access to the service. Services include Facebook, Twitter, and Microsoft Graph, which uses Azure Active Directory. Since users of Teams have user profile information stored in Azure Active Directory (AAD),this article will focus on authentication using AAD for authentication.
+There are many services that you may wish to consume inside your Teams app, and most of those services require authentication to get access to the service. Services include Facebook, Twitter, and of course Teams. Users of Teams have user profile information stored in Azure Active Directory (AAD), and this article will focus on authentication using AAD for authentication to get access to this information.
 
-Most services base their authentication process on OAuth, an open standard for authorization including AAD. Understanding OAuth is a prerequisite for working with authentication in Teams and AAD. The examples below use the OAuth2 Implicit Grant flow to read the user's profile information.
+OAuth is an open standard for authorization used by AAD and many other service providers for authentication. Understanding OAuth is a prerequisite for working with authentication in Teams and AAD. The examples below use the OAuth2 Implicit Grant flow to read the user's profile information.
 
 The code in this article comes from the Teams sample app [Teams sample complete node](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). It contains a static tab that requests an access token for Microsoft Graph and shows the current user's basic profile information from Azure AD.
 
@@ -18,7 +18,7 @@ To address a security concern, changes have been made to tab authentication flow
 
 Before the July 2017 update tabs were allowed to open an authentication window to any arbitrary domain and listen to messages from that window as if they came from the domain of the tab content frame. This is no longer permitted.
 
-Developers used this behavior to do things like launch an authentication pop-up directly to Azure Active Directory (Azure AD), redirect back to their tab content's domain, and then call `notifySuccess`. Although this is a legitimate scenario, it can also allow a pop-up to a phishing site.
+Developers used this behavior to do things like launch an authentication pop-up directly to Azure Active Directory (Azure AD), redirect back to their tab content's domain, and then call `notifySuccess`. Although this was a legitimate scenario, it also would allow a pop-up to a phishing site.
 
 The recommended approach is to direct the authentication pop-up to a page on your domain, redirect to Azure AD (or other sign-in provider), and then redirect back to your domain as usual. Basically, the authentication pop-up must start and end on your domain.
 
@@ -42,13 +42,15 @@ Most service providers require you to register your application with their servi
 
 ![View team](~/assets/images/authentication/AddPlatform.png)
 
-4. The *Add Platform* section of the app properties page now will look something like the following:
+4. The *Add Platform* section of the app properties page will now look something like this:
 
 ![View team](~/assets/images/authentication/Platforms.png)
 
-Add the Redirect and Logout URLs in the Web section of Platforms. For the TypeScript/Node.js and C# sample apps on GitHub, the redirect URLs will be similar to this:
-Redirect URLs: https://yourhost/tab-auth/simple-start
-Logout URL: https://yourhost/tab-auth/silent-end
+Add the redirect and logout URLs in the Web section of Platforms. For the TypeScript/Node.js and C# sample apps on GitHub, the redirect URLs will be similar to this:
+
+* Redirect URLs: https://yourhost/tab-auth/simple-start
+* Logout URL: https://yourhost/tab-auth/silent-end
+
 Where "yourhost" is replaced by your actual host. This might be a dedicated hosting site, Glitch or an ngrok redirect to localhost on your development machine. You may not have this information yet if you have not completed or hosted your app (or the sample app mentioned above), but you can always return to this page when that information is known.
 
 ## Initiate authentication flow
