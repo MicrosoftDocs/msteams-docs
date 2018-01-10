@@ -75,13 +75,13 @@ microsoftTeams.authentication.authenticate({
 
 Notes:
 
- The URL you pass to microsoftTeams.authenticate() is the start page of your authentication flow. The URL in this example, "/tab-auth/simple-start" should match what you registered in the previous step with the authentication provider.
+ The URL you pass to microsoftTeams.authenticate() is the start page of the authentication flow. The URL in this example, "/tab-auth/simple-start" should match what you registered in the previous step with the authentication provider.
 
  Authentication flow must start on a page that's on your domain; don't start it by going directly to your identity provider's login or consent page. In this example, even though we're using Azure AD, we begin at /tab-auth/simple-start rather than going directly to the Azure AD endpoint at https://login.microsoftonline.com. If you skip this step, the login popup may fail to close when you call notifySuccess() or notifyFailure().
 
 2. Add the domain of your authentication redirect URL to the [`validDomains`](~/resources/schema/manifest-schema#validdomains) section of the manifest. Failure to do so might result in an empty pop-up.
 
-3. Create the page /tab-auth/simple-start. This page simply launches the pop-up window in which the authorization happens. Within this authorization page redirect to your identity provider so the user can sign in. This redirection can be done on the server side using HTTP 302, or on the client side using JavaScript to call window.location.assign(). The following code uses the client side option, and also uses microsoftTeams.getContext to retrieve hinting information.
+3. Create the page /tab-auth/simple-start. This page simply launches the pop-up window in which authorization happens. Within this authorization page redirect to your identity provider so the user can sign in. This redirection can be done on the server side using HTTP 302, or on the client side using JavaScript to call window.location.assign(). The following code uses the client side option, and also uses microsoftTeams.getContext to retrieve hinting information.
 
 ```js
 microsoftTeams.getContext(function (context) {
@@ -107,21 +107,21 @@ microsoftTeams.getContext(function (context) {
 });
 ```
 
-After the user completes authentication, the pop-up window is redirected to the callback page you specified for your app ("/tab-auth/simple-end").
+After the user completes authentication, the pop-up window is redirected to the callback page you specified for your app at "/tab-auth/simple-end".
 
 Notes:
 
-See [get user context information](~/concepts/tabs/tabs-context) for help building authentication requests and URLs. For example, you can use the user's name (upn) as the `login_hint` value for Azure AD sign-in, which means the user might need to type less. Note that you should *not* use this context directly as proof of identity. For example, an attacker could load your page in a "malicious browser" and provide it with any information they want.
+See [get user context information](~/concepts/tabs/tabs-context) for help building authentication requests and URLs. For example, you can use the user's name (upn) as the *login_hint* value for Azure AD sign-in, which means the user might need to type less. Remember that you should *not* use this context directly as proof of identity since an attacker could load your page in a malicious browser and provide it with any information they want.
 
 The *state* parameter is used to confirm that the service calling the callback URI is the service you called. If the *state* parameter in the callback does not match the parameter you sent during the call the return call is not verified and should be terminated.
 
-The microsoftTeams.navigateCrossDomain() function is not available in the context of the authentication popup. As a result, it is not necessary to include the the identity provider's domain (e.g., for Azure AD, login.microsoftonline.com) in the validDomains[] list in the app's manifest.json file.
+The `microsoftTeams.navigateCrossDomain()` function is not available in the context of the authentication popup. As a result, it is not necessary to include the identity provider's domain in the *validDomains* list in the app's manifest.json file.
 
 ## Sign in the user and authenticate
 
-In the last section you called the AAD authentication service and passed in user and app information so that AAD could present the user with it's own monolithic authentication experience. Your app has no control over what happens in this experience, all it knows is what is returned by AAD when it calls the callback that you provided "/tab-auth/simple-end".
+In the last section you called the AAD authentication service and passed in user and app information so that AAD could present the user with it's own monolithic authentication experience. Your app has no control over what happens in this experience. All it knows is what is returned by AAD when the callback that you provided ("/tab-auth/simple-end") is called.
 
-1. Create the callback page. In this page, you need to determine the success or failure based on the information returned by AAD and call `microsoftTeams.authentication.notifySuccess()` or `microsoftTeams.authentication.notifyFailure()` functions from the Microsoft Teams client SDK.
+1. Create the callback page. In this page you need to determine success or failure based on the information returned by AAD and call the `microsoftTeams.authentication.notifySuccess()` or `microsoftTeams.authentication.notifyFailure()` functions from the Microsoft Teams client SDK.
 
 ```js
 // Split the key-value pairs passed from Azure AD
@@ -158,9 +158,13 @@ This code parses the key-value pairs received from Azure AD in window.location.h
 Notes:
 NotifyFailure() has the following predefined failure reasons:
 
-* CancelledByUser - the user closed the popup window before completing the authentication flow.
-* FailedToOpenWindow - the popup window could not be opened. When running Microsoft Teams in a browser, this typically means that the window was blocked by a popup blocker.
+* *CancelledByUser* - the user closed the popup window before completing the authentication flow.
+* *FailedToOpenWindow* - the popup window could not be opened. When running Microsoft Teams in a browser, this typically means that the window was blocked by a popup blocker.
 
-If successful, you can refresh or reload the page and show the configuration or content relevant to the now-authenticated user. If authentication fails, display an error message.
+If successful, you can refresh or reload the page and show content relevant to the now-authenticated user. If authentication fails, display an error message.
 
-Your app can set its own session cookie in the usual way so that the user need not sign in again when they return to your tab on the current device.
+Your app can set its own session cookie so that the user need not sign in again when they return to your tab on the current device.
+
+For more information on Single Sign-On (SSO) see the article [Silent authentication](~/concepts/authentication/auth-silent).
+
+For more information on using AAD authentication outside of a web context (in bots or in mobile) see [Authentication for bots (AAD)](~/concepts/authentication/auth-bot)
