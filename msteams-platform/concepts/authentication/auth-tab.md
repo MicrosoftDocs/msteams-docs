@@ -72,6 +72,7 @@ microsoftTeams.authentication.authenticate({
 ```
 
 Notes:
+
  The URL you pass to microsoftTeams.authenticate() is the start page of your authentication flow. The URL in this example, "/tab-auth/simple-start" should match what you registered in the previous step with the authentication provider.
 
  Authentication flow must start on a page that's on your domain; don't start it by going directly to your identity provider's login or consent page. In this example, even though we're using Azure AD, we begin at /tab-auth/simple-start rather than going directly to the Azure AD endpoint at https://login.microsoftonline.com. If you skip this step, the login popup may fail to close when you call notifySuccess() or notifyFailure().
@@ -107,6 +108,7 @@ microsoftTeams.getContext(function (context) {
 After the user completes authentication, the pop-up window is redirected to the callback page you specified for your app ("/tab-auth/simple-end").
 
 Notes:
+
 See [get user context information](~/concepts/tabs/tabs-context) for help building authentication requests and URLs. For example, you can use the user's name (upn) as the `login_hint` value for Azure AD sign-in, which means the user might need to type less. Note that you should *not* use this context directly as proof of identity. For example, an attacker could load your page in a "malicious browser" and provide it with any information they want.
 
 The *state* parameter is used to confirm that the service calling the callback URI is the service you called. If the *state* parameter in the callback does not match the parameter you sent during the call the return call is not verified and should be terminated.
@@ -151,6 +153,7 @@ if (hashParams["error"]) {
 
 This code parses the key-value pairs received from Azure AD in window.location.hash using the getHashParameters() helper function. If it finds an *access_token*, and the *state* value is the same as the one provided at the start of the authentication flow, it returns the access token to the tab by calling notifySuccess(); otherwise it reports an error with notifyFailure().
 
+Notes:
 NotifyFailure() has the following predefined failure reasons:
 
 * CancelledByUser - the user closed the popup window before completing the authentication flow.
