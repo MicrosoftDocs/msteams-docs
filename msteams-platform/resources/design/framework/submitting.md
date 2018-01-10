@@ -70,8 +70,13 @@ You can provide both a short name (max character length 30) and a long name (max
 Include both a short (max character length 80) and a long (max character length 4000) description of your app. Both fields are required, so if your app description is 80 characters or less, simply duplicate the same description in both fields.
 
 ### Icons
+Include two icons, a full color icon and a transparent outline icon. Submit both as PNGs.
 
-Include two icons, one 96x96 full color icon and one 20x20 transparent outline. Your full color icon background should match your branded accent color. Submit both as PNGs.
+#### Full color icon
+This icon should be 96x96 pixels. Your icon can be any color (or colors), but the background should be your branded accent color. It should also have a small amount of padding surrounding the icon to accommodate the hexagonal cropping for the bot version of the icon. 
+
+#### Transparent outline icon
+This icon should be 20x20 pixels. Your transparent outline icon must contain only white and transparency (no other colors). The icon can be white with transparent background or transparent with a white background. The outline icon should not have extra padding surrounding the icon and should be as tightly cropped as possible while still maintaining the 20x20 dimensions. 
 
 ![Icon showcase](~/assets/images/framework/framework_submit_icon.png)
 
