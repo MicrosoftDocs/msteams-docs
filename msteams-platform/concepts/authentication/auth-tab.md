@@ -26,7 +26,7 @@ Because `navigateCrossDomain` isn't supported in the authentication window, we r
 
 ## Treat tab context as hints
 
-Although the tab context provides useful information regarding the user, don't use this information to authenticate the user whether you get it as URL parameters to your tab content URL or by calling the microsoftTeams.getContext() function in the Microsoft Teams client SDK. A malicious actor could invoke your tab content URL with its own parameters, and a web page impersonating Microsoft Teams could load your tab content URL in an <iframe> and return its own data to the getContext() function. You should treat the identity-related information in the tab context simply as hints and validate them before use.
+Although the tab context provides useful information regarding the user, don't use this information to authenticate the user whether you get it as URL parameters to your tab content URL or by calling the microsoftTeams.getContext() function in the Microsoft Teams client SDK. A malicious actor could invoke your tab content URL with its own parameters, and a web page impersonating Microsoft Teams could load your tab content URL in an iframe and return its own data to the getContext() function. You should treat the identity-related information in the tab context simply as hints and validate them before use.
 
 ## Configure an Azure Active Directory application
 
