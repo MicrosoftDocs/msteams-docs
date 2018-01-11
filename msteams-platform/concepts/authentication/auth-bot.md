@@ -31,14 +31,14 @@ Most service providers require you to register your application with their servi
 
 4. The *Add Platform* section of the app properties page will now look something like this:
 
-    ![View team](~/assets/images/authentication/Platforms.png)
+  ![View team](~/assets/images/authentication/Platforms.png)
 
-    Add the redirect and logout URLs in the Web section of Platforms. For the TypeScript/Node.js and C# sample apps on GitHub, the redirect URLs will be similar to this:
+   Add the redirect and logout URLs in the Web section of Platforms. For the TypeScript/Node.js and C# sample apps on GitHub, the redirect URLs will be similar to this:
 
     * Redirect URLs: https://yourhost/tab-auth/simple-start
     * Logout URL: https://yourhost/tab-auth/silent-end
 
-    Where "yourhost" is replaced by your actual host. This might be a dedicated hosting site, Glitch or an ngrok redirect to localhost on your development machine. You may not have this information yet if you have not completed or hosted your app (or the sample app mentioned above), but you can always return to this page when that information is known.
+  Where "yourhost" is replaced by your actual host. This might be a dedicated hosting site, Glitch or an ngrok redirect to localhost on your development machine. You may not have this information yet if you have not completed or hosted your app (or the sample app mentioned above), but you can always return to this page when that information is known.
 
 ## Initiate authentication flow
 
