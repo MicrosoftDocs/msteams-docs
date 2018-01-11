@@ -57,7 +57,7 @@ Where "yourhost" is replaced by your actual host. This might be a dedicated host
 
 Usually authentication flow is triggered by a user action. You should not drive the authentication pop-up automatically because this is likely to trigger the browser's pop-up blocker as well as confuse the user.
 
-### Add test UI to start authentication
+### Add UI to start authentication
 
 Add a button to your configuration or content page to enable the user to sign in when needed. This can be done from Tab [configuration](~/concepts/tabs/tabs-configuration) and [content](~/concepts/tabs/tabs-content) pages run in iframes. Since AAD requires your app to authenticate the user in a pop-up window use the microsoftTeams.authenticate() function of the Microsoft Teams client SDK to launch a popup that will host the authentication flow.
 
@@ -127,9 +127,9 @@ In the last section you called the AAD authentication service and passed in user
 
 ### Create the callback page
 
-    In this page you need to determine success or failure based on the information returned by AAD and call the `microsoftTeams.authentication.notifySuccess()` or `microsoftTeams.authentication.notifyFailure()` functions from the Microsoft Teams client SDK.
+In this page you need to determine success or failure based on the information returned by AAD and call the `microsoftTeams.authentication.notifySuccess()` or `microsoftTeams.authentication.notifyFailure()` functions from the Microsoft Teams client SDK.
 
-      ````js
+````js
 // Split the key-value pairs passed from Azure AD
 // getHashParameters is a helper function that parses the arguments sent
 // to the callback URL by Azure AD after the authorization call
@@ -157,7 +157,7 @@ if (hashParams["error"]) {
     // Unexpected condition: hash does not contain error or access_token parameter
     microsoftTeams.authentication.notifyFailure("UnexpectedFailure");
 }
-      ````
+````
 
 This code parses the key-value pairs received from Azure AD in window.location.hash using the getHashParameters() helper function. If it finds an *access_token*, and the *state* value is the same as the one provided at the start of the authentication flow, it returns the access token to the tab by calling notifySuccess(); otherwise it reports an error with notifyFailure().
 
