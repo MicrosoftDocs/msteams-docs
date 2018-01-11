@@ -62,11 +62,11 @@ microsoftTeams.authentication.authenticate({
 });
 ```
 
-     Notes:
+    Notes:
 
-     The URL you pass to microsoftTeams.authenticate() is the start page of the authentication flow. The URL in this example, "/tab-auth/simple-start" should match what you registered in the previous step with the authentication provider.
+    The URL you pass to microsoftTeams.authenticate() is the start page of the authentication flow. The URL in this example, "/tab-auth/simple-start" should match what you registered in the previous step with the authentication provider.
 
-     Authentication flow must start on a page that's on your domain; don't start it by going directly to your identity provider's login or consent page. In this example, even though we're using Azure AD, we begin at /tab-auth/simple-start rather than going directly to the Azure AD endpoint at https://login.microsoftonline.com. If you skip this step, the login popup may fail to close when you call notifySuccess() or notifyFailure().
+    Authentication flow must start on a page that's on your domain; don't start it by going directly to your identity provider's login or consent page. In this example, even though we're using Azure AD, we begin at /tab-auth/simple-start rather than going directly to the Azure AD endpoint at https://login.microsoftonline.com. If you skip this step, the login popup may fail to close when you call notifySuccess() or notifyFailure().
 
 2. Add the domain of your authentication redirect URL to the [`validDomains`](~/resources/schema/manifest-schema#validdomains) section of the manifest. Failure to do so might result in an empty pop-up.
 
