@@ -4,7 +4,6 @@ description: Describes authentication in Teams and how to use it in your bots
 keywords: teams authentication bots AAD
 ms.date: 01/10/2018
 ---
-
 # Authenticate a user in a Microsoft Teams bot
 
 There are many services that you may wish to consume inside your Teams app, and most of those services require authentication to get access to the service. Services include Facebook, Twitter, and of course Teams. Users of Teams have user profile information stored in Azure Active Directory (AAD), and this article will focus on authentication using AAD for authentication to get access to this information.
@@ -32,6 +31,7 @@ Most service providers require you to register your application with their servi
 4. The *Add Platform* section of the app properties page will now look something like this:
 
     ![View team](~/assets/images/authentication/Platforms.png)
+
     Add the redirect and logout URLs in the Web section of Platforms. For the TypeScript/Node.js and C# sample apps on GitHub, the redirect URLs will be similar to this:
 
     Redirect URLs: https://yourhost/tab-auth/simple-start
@@ -43,6 +43,8 @@ Most service providers require you to register your application with their servi
 ### Call your authentication popup
 
 Usually authentication flow is triggered by a user action. You should not drive the authentication pop-up automatically because this is likely to trigger the browser's pop-up blocker as well as confuse the user.
+
+### Add UI to start authentication
 
 Add UI to your configuration or content page to enable the user to sign in when needed. This can be done from Tab [configuration](~/concepts/tabs/tabs-configuration) and [content](~/concepts/tabs/tabs-content) pages run in iframes.
 
@@ -67,8 +69,6 @@ Notes:
 The URL you pass to microsoftTeams.authenticate() is the start page of the authentication flow. The URL in this example, "/tab-auth/simple-start" should match what you registered in the previous step with the authentication provider.
 
 Authentication flow must start on a page that's on your domain; don't start it by going directly to your identity provider's login or consent page. In this example, even though we're using Azure AD, we begin at /tab-auth/simple-start rather than going directly to the Azure AD endpoint at https://login.microsoftonline.com. If you skip this step, the login popup may fail to close when you call notifySuccess() or notifyFailure().
-
-### Add the domain to validDomains
 
 Add the domain of your authentication redirect URL to the [`validDomains`](~/resources/schema/manifest-schema#validdomains) section of the manifest. Failure to do so might result in an empty pop-up.
 
@@ -110,11 +110,13 @@ The *state* parameter is used to confirm that the service calling the callback U
 
 The `microsoftTeams.navigateCrossDomain()` function is not available in the context of the authentication popup. As a result, it is not necessary to include the identity provider's domain in the *validDomains* list in the app's manifest.json file.
 
-### Sign in the user and authenticate
+### Sign in and authenticate the user
 
 In the last section you called the AAD authentication service and passed in user and app information so that AAD could present the user with it's own monolithic authentication experience. Your app has no control over what happens in this experience. All it knows is what is returned by AAD when the callback that you provided ("/tab-auth/simple-end") is called.
 
-1. Create the callback page. In this page you need to determine success or failure based on the information returned by AAD and call the `microsoftTeams.authentication.notifySuccess()` or `microsoftTeams.authentication.notifyFailure()` functions from the Microsoft Teams client SDK.
+### Create the callback page
+
+In this page you need to determine success or failure based on the information returned by AAD and call the `microsoftTeams.authentication.notifySuccess()` or `microsoftTeams.authentication.notifyFailure()` functions from the Microsoft Teams client SDK.
 
 ```js
 // Split the key-value pairs passed from Azure AD
@@ -161,3 +163,8 @@ Your app can set its own session cookie so that the user need not sign in again 
 For more information on Single Sign-On (SSO) see the article [Silent authentication](~/concepts/authentication/auth-silent).
 
 For more information on using AAD authentication outside of a web context (in bots or in mobile) see [Authentication for bots (AAD)](~/concepts/authentication/auth-bot)
+
+For sample code showing the authentication process using AAD see:
+
+* [Teams sample complete node](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
+* [Teams sample complete csharp](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)

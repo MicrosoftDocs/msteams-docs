@@ -36,24 +36,25 @@ Most service providers require you to register your application with their servi
 
 2. Select your app to view it's properties. Find the *Platforms* section for the app and select *Add Platform*.
 
-![View team](~/assets/images/authentication/AppRegistration.png)
+    ![View team](~/assets/images/authentication/AppRegistration.png)
 
 3. From the *Add Platform* dialog select *Web*.
 
-![View team](~/assets/images/authentication/AddPlatform.png)
+    ![View team](~/assets/images/authentication/AddPlatform.png)
 
 4. The *Add Platform* section of the app properties page will now look something like this:
 
-![View team](~/assets/images/authentication/Platforms.png)
+    ![View team](~/assets/images/authentication/Platforms.png)
 
-Add the redirect and logout URLs in the Web section of Platforms. For the TypeScript/Node.js and C# sample apps on GitHub, the redirect URLs will be similar to this:
+    Add the redirect and logout URLs in the Web section of Platforms. For the TypeScript/Node.js and C# sample apps on GitHub, the redirect URLs will be similar to this:
 
-* Redirect URLs: https://yourhost/tab-auth/simple-start
-* Logout URL: https://yourhost/tab-auth/silent-end
+    Redirect URLs: https://yourhost/tab-auth/simple-start
 
-Where "yourhost" is replaced by your actual host. This might be a dedicated hosting site, Glitch or an ngrok redirect to localhost on your development machine. You may not have this information yet if you have not completed or hosted your app (or the sample app mentioned above), but you can always return to this page when that information is known.
+    Logout URL: https://yourhost/tab-auth/silent-end
 
-## Call the authentication provider
+    Where "yourhost" is replaced by your actual host. This might be a dedicated hosting site, Glitch or an ngrok redirect to localhost on your development machine. You may not have this information yet if you have not completed or hosted your app (or the sample app mentioned above), but you can always return to this page when that information is known.
+
+### Call your authentication popup
 
 Usually authentication flow is triggered by a user action. You should not drive the authentication pop-up automatically because this is likely to trigger the browser's pop-up blocker as well as confuse the user.
 
@@ -121,7 +122,7 @@ The *state* parameter is used to confirm that the service calling the callback U
 
 The `microsoftTeams.navigateCrossDomain()` function is not available in the context of the authentication popup. As a result, it is not necessary to include the identity provider's domain in the *validDomains* list in the app's manifest.json file.
 
-## Sign in and authenticate the user
+### Sign in and authenticate the user
 
 In the last section you called the AAD authentication service and passed in user and app information so that AAD could present the user with it's own monolithic authentication experience. Your app has no control over what happens in this experience. All it knows is what is returned by AAD when the callback that you provided ("/tab-auth/simple-end") is called.
 
@@ -176,5 +177,6 @@ For more information on Single Sign-On (SSO) see the article [Silent authenticat
 For more information on using AAD authentication outside of a web context (in bots or in mobile) see [Authentication for bots (AAD)](~/concepts/authentication/auth-bot)
 
 For sample code showing the authentication process using AAD see:
+
 * [Teams sample complete node](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
 * [Teams sample complete csharp](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
