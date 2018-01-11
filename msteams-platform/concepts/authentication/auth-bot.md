@@ -73,27 +73,27 @@ microsoftTeams.authentication.authenticate({
 3. Create the page /tab-auth/simple-start. This page simply launches the pop-up window in which authorization happens. Within this authorization page redirect to your identity provider so the user can sign in. This redirection can be done on the server side using HTTP 302, or on the client side using JavaScript to call window.location.assign(). The following code uses the client side option, and also uses microsoftTeams.getContext to retrieve hinting information.
 
 ```js
-microsoftTeams.getContext(function (context) {
-    // Generate random state string and store it, so we can verify it in the callback
-    let state = _guid(); // _guid() is a helper function in the sample
-    localStorage.setItem("simple.state", state);
-    localStorage.removeItem("simple.error");
-    // Go to the Azure AD authorization endpoint
-    let queryParams = {
-        client_id: "YOUR_APP_ID_HERE",
-        response_type: "id_token token",
-        response_mode: "fragment",
-        resource: "https://graph.microsoft.com/User.Read openid",
-        redirect_uri: window.location.origin + "/tab-auth/simple-end",
-        nonce: _guid(),
-        state: state,
-        // The context object is populated by Teams; the upn attribute
-         // is used as hinting information
-        login_hint: context.upn,
-    };
-    let authorizeEndpoint = "https://login.microsoftonline.com/common/oauth2/authorize?" + toQueryString(queryParams);
-    window.location.assign(authorizeEndpoint);
-});
+    microsoftTeams.getContext(function (context) {
+        // Generate random state string and store it, so we can verify it in the callback
+        let state = _guid(); // _guid() is a helper function in the sample
+        localStorage.setItem("simple.state", state);
+        localStorage.removeItem("simple.error");
+        // Go to the Azure AD authorization endpoint
+        let queryParams = {
+            client_id: "YOUR_APP_ID_HERE",
+            response_type: "id_token token",
+            response_mode: "fragment",
+            resource: "https://graph.microsoft.com/User.Read openid",
+            redirect_uri: window.location.origin + "/tab-auth/simple-end",
+            nonce: _guid(),
+            state: state,
+            // The context object is populated by Teams; the upn attribute
+            // is used as hinting information
+            login_hint: context.upn,
+        };
+        let authorizeEndpoint = "https://login.microsoftonline.com/common/oauth2/authorize?" + toQueryString(queryParams);
+        window.location.assign(authorizeEndpoint);
+    });
 ```
 
     After the user completes authentication, the pop-up window is redirected to the callback page you specified for your app at "/tab-auth/simple-end".
