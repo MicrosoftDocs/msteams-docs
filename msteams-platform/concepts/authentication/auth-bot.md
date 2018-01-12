@@ -6,7 +6,7 @@ ms.date: 01/10/2018
 ---
 # Authenticate a user in a Microsoft Teams bot
 
-There are many services that you may wish to consume inside your Teams app, and most of those services require authentication to get access to the service. Services include Facebook, Twitter, and of course Teams. Users of Teams have user profile information stored in Azure Active Directory (AAD), and this article will focus on authentication using AAD for authentication to get access to this information.
+There are many services that you may wish to consume inside your Teams app, and most of those services require authentication to get access to the service. Services include Facebook, Twitter, and of course Teams. Users of Teams have user profile information stored in Azure Active Directory (AAD) using Microsoft Graph. This article will focus on authentication using AAD for authentication to get access to this information.
 
 OAuth is an open standard for authorization used by AAD and many other service providers for authentication. Understanding OAuth is a prerequisite for working with authentication in Teams and AAD. The examples below use the OAuth2 Implicit Grant flow to read the user's profile information.
 
@@ -36,11 +36,11 @@ Most service providers require you to register your application with their servi
 
     Add the redirect and logout URLs in the Web section of Platforms. For the TypeScript/Node.js and C# sample apps on GitHub, the redirect URLs will be similar to this:
 
-    Redirect URLs: https://yourhost/tab-auth/simple-start
+    Redirect URLs: https://yourhost/bot-auth/simple-start
 
-    Logout URL: https://yourhost/tab-auth/silent-end
+    No logout URL is required.
 
-    Where "yourhost" is replaced by your actual host. This might be a dedicated hosting site, Glitch or an ngrok redirect to localhost on your development machine. You may not have this information yet if you have not completed or hosted your app (or the sample app mentioned above), but you can always return to this page when that information is known.
+    "yourhost" is replaced by your actual host. This might be a dedicated hosting site, Glitch or an ngrok redirect to localhost on your development machine. You may not have this information yet if you have not completed or hosted your app (or the sample app mentioned above), but you can always return to this page when that information is known.
 
 ### Call your authentication popup
 
@@ -135,7 +135,7 @@ case "getProfile":
     }
 ```
 
-If the user is not signed in they are prompted to do so now.  Otherwise basic information is obtained from the Graph.
+If the user is not signed in they are prompted to do so now.  Otherwise basic information is obtained from Graph.
 
 ### Sign the user out
 
