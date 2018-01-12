@@ -11,7 +11,7 @@
   expanded: true
 - name: Concepts
   items:
-  - name: Apps in Teams
+  - name: Apps for Teams
     href: ./concepts/apps/apps-overview
     items:
     - name: Create an app package
