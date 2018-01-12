@@ -1,10 +1,10 @@
 ---
-title: Add tabs
+title: Add tabs to Microsoft Teams apps
 description: Describes how to get started developing tabs in Microsoft Teams
 keywords: teams tabs development
 ms.date: 01/12/2018
 ---
-# Add tabs to Microsoft Teams
+# Add tabs to Microsoft Teams apps
 
 Tabs in Microsoft Teams allow you to display rich interactive web content. You can build a Microsoft Teams tab from scratch or adapt your existing web-app experience.
 

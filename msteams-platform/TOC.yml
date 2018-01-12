@@ -40,7 +40,7 @@
       href: ./concepts/bots/bots-conversations
     - name: Cards and card actions
       href: ./concepts/bots/bots-cards
-    - name: Notifications
+    - name: Bot events
       href: ./concepts/bots/bots-notifications
     - name: Context for bots
       href: ./concepts/bots/bots-context

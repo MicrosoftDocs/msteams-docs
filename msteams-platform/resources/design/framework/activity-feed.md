@@ -1,9 +1,9 @@
 ---
-title: Design Guidelines Reference
+title: Design guidelines for activity feeds
 description: Describes the guidelines for showcasing the app
 keywords: teams design guidelines reference framework apps
 ---
-# Initiate quick, easy communication
+# Activity feeds for quick, easy communication
 
 The activity feed is a great way to communicate with your audience. You can use it to tell people about recent updates or send important notifications. For example, if your app focuses on task management, you can send a notification to someone’s activity feed whenever they receive a new task. Notifications in the activity feed will show up on someone’s desktop app and their mobile app, which helps draw attention to important information.
 

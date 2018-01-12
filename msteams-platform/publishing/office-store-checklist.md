@@ -3,8 +3,7 @@ title: Publishing checklist
 description: The checklist to use before publishing your Microsoft Teams app to the Office Store
 keywords: teams publish store office publishing checklist
 ---
-
-# Checklist for manifest metadata and Seller Dashboard submission
+# Office Store checklist for Seller Dashboard submission
 
 The follow metadata is required in your manifest.json file and for Seller Dashboard submission:
 
