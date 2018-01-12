@@ -16,6 +16,8 @@ The authentication flow described in this article is very similar to that descri
 
 ## Configure an Azure Active Directory application
 
+The steps that follow assume that you have followed the installation instructions for the sample [Teams sample complete node](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) such as registering a bot, filling out the manifest and uploading it, and filling in the values in the launch.json file.
+
 Most service providers require you to register your application with their service before you can authenticate and consume service resources. To do this with AAD follow these steps:
 
 1. Open the [Application Registration Portal](https://apps.dev.microsoft.com/), click on *Add an app* and follow the steps to register your app. If your app has already been registered (for example if you have previously registered a bot in your app) locate your app.
@@ -42,125 +44,43 @@ Most service providers require you to register your application with their servi
 
 ### Call your authentication popup
 
-Usually authentication flow is triggered by a user action. You should not drive the authentication pop-up automatically because this is likely to trigger the browser's pop-up blocker as well as confuse the user.
+Usually authentication flow is triggered by a user action.
 
 ### Add UI to start authentication
 
-Add UI to your configuration or content page to enable the user to sign in when needed. This can be done from Tab [configuration](~/concepts/tabs/tabs-configuration) and [content](~/concepts/tabs/tabs-content) pages run in iframes.
-
-Since AAD requires your app to authenticate the user in a pop-up window use the microsoftTeams.authenticate() function of the Microsoft Teams client SDK to launch a popup that will host the authentication flow.
+Add UI to the bot to enable the user to sign in when needed. In the example this is done from the bot's hero card found in HeroCardDialog.ts.
 
 ```js
-microsoftTeams.authentication.authenticate({
-    url: window.location.origin + "/tab-auth/simple-start",
-    width: 600,
-    height: 535,
-    successCallback: function (result) {
-        getUserProfile(result.accessToken);
-    },
-    failureCallback: function (reason) {
-        handleAuthError(reason);
-    }
-});
+buttons.push(new builder.CardAction(session)
+    .type("signin")
+    .title("Sign In")
+    .value(config.get("app.baseUri") + "/tab-auth/simple-start?width=5000&height=5000"),
+);
 ```
 
 Notes:
 
-The URL you pass to microsoftTeams.authenticate() is the start page of the authentication flow. The URL in this example, "/tab-auth/simple-start" should match what you registered in the previous step with the authentication provider.
-
-Authentication flow must start on a page that's on your domain; don't start it by going directly to your identity provider's login or consent page. In this example, even though we're using Azure AD, we begin at /tab-auth/simple-start rather than going directly to the Azure AD endpoint at https://login.microsoftonline.com. If you skip this step, the login popup may fail to close when you call notifySuccess() or notifyFailure().
+Authentication flow must start on a page that's on your domain; don't start it by going directly to your identity provider's login or consent page. In this example, even though we're using Azure AD, we begin at /tab-auth/simple-start rather than going directly to the Graph endpoint at https://graph.microsoft.com/v1.0/me/. If you skip this step, the login popup may fail to close when you call notifySuccess() or notifyFailure().
 
 Add the domain of your authentication redirect URL to the [`validDomains`](~/resources/schema/manifest-schema#validdomains) section of the manifest. Failure to do so might result in an empty pop-up.
 
-### Create the page /tab-auth/simple-start
-
-This page simply launches the pop-up window in which authorization happens. Within this authorization page redirect to your identity provider so the user can sign in. This redirection can be done on the server side using HTTP 302, or on the client side using JavaScript to call window.location.assign(). The following code uses the client side option, and also uses microsoftTeams.getContext to retrieve hinting information.
+When the user chooses to sign in this is done in `getInvokeHandler` using this code:
 
 ```js
-    microsoftTeams.getContext(function (context) {
-        // Generate random state string and store it, so we can verify it in the callback
-        let state = _guid(); // _guid() is a helper function in the sample
-        localStorage.setItem("simple.state", state);
-        localStorage.removeItem("simple.error");
-        // Go to the Azure AD authorization endpoint
-        let queryParams = {
-            client_id: "YOUR_APP_ID_HERE",
-            response_type: "id_token token",
-            response_mode: "fragment",
-            resource: "https://graph.microsoft.com/User.Read openid",
-            redirect_uri: window.location.origin + "/tab-auth/simple-end",
-            nonce: _guid(),
-            state: state,
-            // The context object is populated by Teams; the upn attribute
-            // is used as hinting information
-            login_hint: context.upn,
-        };
-        let authorizeEndpoint = "https://login.microsoftonline.com/common/oauth2/authorize?" + toQueryString(queryParams);
-        window.location.assign(authorizeEndpoint);
-    });
-```
+if ((event as any).name === "signin/verifyState") {
+    let aadApi = new AADRequestAPI();
+    let response = await aadApi.getAsync("https://graph.microsoft.com/v1.0/me/", { Authorization: " Bearer " + (event as any).value.state.accessToken }, null);
 
-After the user completes authentication, the pop-up window is redirected to the callback page you specified for your app at "/tab-auth/simple-end".
+    let info = JSON.parse(response);
 
-Notes:
+    session.send(info.displayName + "<br />" + info.mail + "<br />" + info.officeLocation);
 
-See [get user context information](~/concepts/tabs/tabs-context) for help building authentication requests and URLs. For example, you can use the user's name (upn) as the *login_hint* value for Azure AD sign-in, which means the user might need to type less. Remember that you should *not* use this context directly as proof of identity since an attacker could load your page in a malicious browser and provide it with any information they want.
-
-The *state* parameter is used to confirm that the service calling the callback URI is the service you called. If the *state* parameter in the callback does not match the parameter you sent during the call the return call is not verified and should be terminated.
-
-The `microsoftTeams.navigateCrossDomain()` function is not available in the context of the authentication popup. As a result, it is not necessary to include the identity provider's domain in the *validDomains* list in the app's manifest.json file.
-
-### Sign in and authenticate the user
-
-In the last section you called the AAD authentication service and passed in user and app information so that AAD could present the user with it's own monolithic authentication experience. Your app has no control over what happens in this experience. All it knows is what is returned by AAD when the callback that you provided ("/tab-auth/simple-end") is called.
-
-### Create the callback page
-
-In this page you need to determine success or failure based on the information returned by AAD and call the `microsoftTeams.authentication.notifySuccess()` or `microsoftTeams.authentication.notifyFailure()` functions from the Microsoft Teams client SDK.
-
-```js
-// Split the key-value pairs passed from Azure AD
-// getHashParameters is a helper function that parses the arguments sent
-// to the callback URL by Azure AD after the authorization call
-let hashParams = getHashParameters(); 
-if (hashParams["error"]) {
-    // Authentication/authorization failed
-    microsoftTeams.authentication.notifyFailure(hashParams["error"]);
-} else if (hashParams["access_token"]) {
-    // Get the stored state parameter and compare with incoming state
-    // This validates that the data is coming from Azure AD
-    let expectedState = localStorage.getItem("simple.state");
-    if (expectedState !== hashParams["state"]) {
-        // State does not match, report error
-        microsoftTeams.authentication.notifyFailure("StateDoesNotMatch");
-    } else {
-        // Success: return token information to the tab
-        microsoftTeams.authentication.notifySuccess({
-            idToken: hashParams["id_token"],
-            accessToken: hashParams["access_token"],
-            tokenType: hashParams["token_type"],
-            expiresIn: hashParams["expires_in"]
-        })
-    }
-} else {
-    // Unexpected condition: hash does not contain error or access_token parameter
-    microsoftTeams.authentication.notifyFailure("UnexpectedFailure");
+    callback(null, "", 200);
+    return;
 }
 ```
 
-This code parses the key-value pairs received from Azure AD in window.location.hash using the getHashParameters() helper function. If it finds an *access_token*, and the *state* value is the same as the one provided at the start of the authentication flow, it returns the access token to the tab by calling notifySuccess(); otherwise it reports an error with notifyFailure().
-
-Notes:
-NotifyFailure() has the following predefined failure reasons:
-
-* *CancelledByUser* - the user closed the popup window before completing the authentication flow.
-* *FailedToOpenWindow* - the popup window could not be opened. When running Microsoft Teams in a browser, this typically means that the window was blocked by a popup blocker.
-
-If successful, you can refresh or reload the page and show content relevant to the now-authenticated user. If authentication fails, display an error message.
-
-Your app can set its own session cookie so that the user need not sign in again when they return to your tab on the current device.
-
-For more information on Single Sign-On (SSO) see the article [Silent authentication](~/concepts/authentication/auth-silent).
+Here the bot makes a call to the “me” Graph endpoint with the token it gets from the invoke payload. Graph responds with the user information for the person who logged in. The response is then parsed and specific parts of it are sent to the chat session.
 
 For more information on using AAD authentication outside of a web context (in bots or in mobile) see [Authentication for bots (AAD)](~/concepts/authentication/auth-bot)
 
