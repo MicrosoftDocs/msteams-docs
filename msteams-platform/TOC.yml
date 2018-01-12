@@ -23,7 +23,7 @@
     items:
     - name: Static tabs
       href: ./concepts/tabs/tabs-static
-    - name: Configurable tabs
+    - name: Content pages
       href: ./concepts/tabs/tabs-content
     - name: Configuration pages
       href: ./concepts/tabs/tabs-configuration
