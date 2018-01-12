@@ -50,23 +50,33 @@ Usually authentication flow is triggered by a user action.
 
 Add UI to the bot to enable the user to sign in when needed. In the example this is done from the bot's hero card found in HeroCardDialog.ts.
 
-```js
+```TypeScript
+let buttons = new Array<builder.CardAction>();
 buttons.push(new builder.CardAction(session)
     .type("signin")
     .title("Sign In")
-    .value(config.get("app.baseUri") + "/tab-auth/simple-start?width=5000&height=5000"),
+    .value(config.get("app.baseUri") + "/bot-auth/simple-start?width=5000&height=5000"),
 );
+
+let messageBackButton = builder.CardAction.messageBack(session, JSON.stringify({ action: "getProfile" }), "Get Profile")
+    .displayText("Get Profile")
+    .text(Strings.messageBack_button_text); // this matches match for MessageBackReceiverDialog
+buttons.push(messageBackButton);
+
+let messageBackButton2 = builder.CardAction.messageBack(session, JSON.stringify({ action: "signout" }), "Sign Out")
+.displayText("Sign Out")
+.text(Strings.messageBack_button_text); // this matches match for MessageBackReceiverDialog
+buttons.push(messageBackButton2);
+
 ```
 
-Notes:
+Three buttons have been added to the Hero Card: Sign in, Get Profile, and Sign Out.
 
-Authentication flow must start on a page that's on your domain; don't start it by going directly to your identity provider's login or consent page. In this example, even though we're using Azure AD, we begin at /tab-auth/simple-start rather than going directly to the Graph endpoint at https://graph.microsoft.com/v1.0/me/. If you skip this step, the login popup may fail to close when you call notifySuccess() or notifyFailure().
+### Sign the user in
 
-Add the domain of your authentication redirect URL to the [`validDomains`](~/resources/schema/manifest-schema#validdomains) section of the manifest. Failure to do so might result in an empty pop-up.
+When the user chooses to sign in they select the Sign in button, which generates an event that is handled in `getInvokeHandler` using this code:
 
-When the user chooses to sign in this is done in `getInvokeHandler` using this code:
-
-```js
+```TypeScript
 if ((event as any).name === "signin/verifyState") {
     let aadApi = new AADRequestAPI();
     let response = await aadApi.getAsync("https://graph.microsoft.com/v1.0/me/", { Authorization: " Bearer " + (event as any).value.state.accessToken }, null);
@@ -82,7 +92,59 @@ if ((event as any).name === "signin/verifyState") {
 
 Here the bot makes a call to the “me” Graph endpoint with the token it gets from the invoke payload. Graph responds with the user information for the person who logged in. The response is then parsed and specific parts of it are sent to the chat session.
 
-For more information on using AAD authentication outside of a web context (in bots or in mobile) see [Authentication for bots (AAD)](~/concepts/authentication/auth-bot)
+Notes:
+
+Authentication flow must start on a page that's on your domain; don't start it by going directly to your identity provider's login or consent page. In this example, even though we're using Azure AD, we begin at /tab-auth/simple-start rather than going directly to the Graph endpoint at https://graph.microsoft.com/v1.0/me/. If you skip this step, the login popup may fail to close when you call notifySuccess() or notifyFailure().
+
+Add the domain of your authentication redirect URL to the [`validDomains`](~/resources/schema/manifest-schema#validdomains) section of the manifest. Failure to do so might result in an empty pop-up.
+
+### Get the users profile
+
+When the user selects the *Get Profile" button in the Hero card the following code is executed.
+
+```TypeScript
+case "getProfile":
+    // See if we have an AAD token
+    const graphResource = "https://graph.microsoft.com";
+    let aadTokens = session.userData.aadTokens || {};
+    let graphToken = aadTokens[graphResource] as TokenResponse;
+
+    if (!graphToken) {
+        // We don't have a Graph token for the user, ask them to sign in
+        session.send(new builder.Message(session)
+            .addAttachment(new builder.HeroCard(session)
+                .text("You're not yet signed in. Please click on the Sign In button to log in.")
+                .buttons([
+                    new builder.CardAction(session)
+                        .type("signin")
+                        .title("Sign In")
+                        .value(config.get("app.baseUri") + "/bot-auth/simple-start?width=5000&height=5000"),
+                    ])));
+    } else {
+        // Use the Graph token to get the basic profile
+        try {
+            let requestHelper = new AADRequestAPI();
+            let response = await requestHelper.getAsync("https://graph.microsoft.com/v1.0/me/", { Authorization: "Bearer " + graphToken.access_token }, null);
+
+            let info = JSON.parse(response);
+            session.send(info.displayName + "<br />" + info.mail + "<br />" + info.officeLocation);
+        } catch (e) {
+            console.log(e);
+            session.send("There was an error getting the user's profile.");
+        }
+    }
+```
+
+If the user is not signed in they are prompted to do so now.  Otherwise basic information is obtained from the Graph.
+
+### Sign the user out
+
+```TypeScript
+case "signout":
+    session.userData.aadTokens = {};
+    session.send("Ok, I've cleared your tokens.");
+    break;
+```
 
 For sample code showing the authentication process using AAD see:
 
