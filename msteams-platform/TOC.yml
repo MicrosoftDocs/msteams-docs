@@ -51,11 +51,11 @@
   - name: Authentication
     href: ./concepts/authentication/authentication
     items:
-    - name: Authentication for bots (AAD)
+    - name: Authentication for bots
       href: ./concepts/authentication/auth-bot
-    - name: Authentication for tabs (AAD)
+    - name: Authentication for tabs
       href: ./concepts/authentication/auth-tab
-    - name: Silent authentication and SSO (AAD)
+    - name: Silent authentication and SSO
       href: ./concepts/authentication/auth-silent
   - name: Activity Feed
     href: ./concepts/activity-feed
