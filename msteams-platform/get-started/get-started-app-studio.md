@@ -10,7 +10,7 @@ Microsoft Teams is a chat-based workspace in Office 365 that integrates with the
 
 ## Apps
 
-Creating an app can be cumbersome and error prone which is why Teams App Studio was created to streamline the process.
+Teams App Studio was created to simplify and streamline the process of creating real apps. It is much faster than the manual process described in [Getting started with node.js](~/get-started/get-started-with-nodejs).
 
 Apps for Teams are made up from two parts:
 
@@ -47,7 +47,7 @@ Once you are in the Teams App Studio page in Teams, move to the teams tab where 
 
 The defining artifact for a Microsoft Teams app is its manifest. This json file, which must conform to the [Teams App schema](~\resources\schema\manifest-schema.md), contains the necessary data and metadata which allows Teams to correctly ingest and present your app to users.
 
-Handcrafting this file is cumbersome and error prone. The Manifest Editor tab of App Studio simplifies this process, allowing you to describe the app, upload your icons, add app capabilities, and product a zip file which can easily be uploaded into Teams for testing or distributed for others to use. Note that app studio does not produce functional code for your app, or host your app.  Your app must already be hosted and running at the URL listed in the manifest for the app upload process to result in a working app.
+Handcrafting this file is time consuming. The Manifest Editor tab of App Studio simplifies this process, allowing you to describe the app, upload your icons, add app capabilities, and product a zip file which can easily be uploaded into Teams for testing or distributed for others to use. Note that app studio does not produce functional code for your app, or host your app.  Your app must already be hosted and running at the URL listed in the manifest for the app upload process to result in a working app.
 
 ### Details
 
