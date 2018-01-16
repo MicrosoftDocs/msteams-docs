@@ -29,11 +29,11 @@ Microsoft Teams requires two icons for your app experience, to be used within th
 
 ### color
 
-The `color` icon is used throughout Microsoft Teams (in app and tab galleries, bots, flyouts, and so on). This icon should be 96&times;96 pixels. If it has transparency, the `accentColor` will be used as the background.
+The `color` icon is used throughout Microsoft Teams (in app and tab galleries, bots, flyouts, and so on). This icon should be 96&times;96 pixels. Your icon can be any color (or colors), but the background should be your branded accent color. It should also have a small amount of padding surrounding the icon to accommodate the hexagonal cropping for the bot version of the icon.
 
 ### outline
 
-The `outline` icon is used in three specific places: the app bar, pinnned messaging extensions, and chiclets. This icon must be 20&times;20; it needs to be a trace image using white, and use a transparent background. Here are a few good examples:
+The `outline` icon is used in three specific places: the app bar, pinnned messaging extensions, and chiclets. This icon must be 20&times;20 pixels. Your outline icon must contain only white and transparency (no other colors). The icon can be white with transparent background or transparent with a white background. The outline icon should not have extra padding surrounding the icon and should be as tightly cropped as possible while still maintaining the 20x20 dimensions. Here are a few good examples:
 
 ![Sample outline icons](~/assets/images/icons/sample20x20s.png)
 
