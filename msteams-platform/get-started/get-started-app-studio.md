@@ -25,19 +25,19 @@ Teams App Studio streamlines the creation of the manifest for your app, and also
 
 Teams App Studio is a Teams app which can be found in the Teams store. See the Store Icon in the left hand ribbon.
 
-![Store icon](~/assets/images/get-started/storeicon.png")
+![Store icon](~/assets/images/get-started/storeicon.png)
 
 In the store, search for Teams App Studio.
 
-![Store entry for app studio](~/assets/images/get-started/storeappstudio.png")
+![Store entry for app studio](~/assets/images/get-started/storeappstudio.png)
 
 Select the Teams App Studio tile to open the app configuration page:
 
-![Configure app studio](~/assets/images/get-started/teamsappstudioconfiguration.png")
+![Configure app studio](~/assets/images/get-started/teamsappstudioconfiguration.png)
 
 Select *Available to set up*.
 
-![Teams app studio](~/assets/images/get-started/teamsappstudio.png")
+![Teams app studio](~/assets/images/get-started/teamsappstudio.png)
 
 Once you are in the Teams App Studio page in Teams, move to the teams tab where you can either connect to an existing app or create a new app.
 
@@ -71,11 +71,11 @@ This section lets you define a set of tabs that are presented by default in the 
 
 ### Bots
 
-This section allows you to add a bot to your app. As of now an app can only have one bot. If you already have a bot registered with Bot Framework you can add that information by clicking “Set Up” and supplying the bot’s name, Bot Framework botID, and defining the scopes in which the bot can work.
+This section allows you to add a bot to your app. As of now an app can only have one bot. If you already have a bot registered with Bot Framework you can add that information by clicking *Set Up* and supplying the bot’s name, Bot Framework botID, and defining the scopes in which the bot can work.
 
 If you have not yet registered a bot with the Bot Framework, click register to kick of the registration process in your browser. Once you’re done registering your bot, come back to this section of the Manifest Editor to enter it.
 
-Once you supplied your bot’s information, you can now optionally define a list of commands that your bot can recommend to users. Add the name of the command, a description of the command which indicates its syntax and arguments, and the scope(s) to which this command should apply.
+Once you supplied your bot’s information, you can now optionally define a list of commands that your bot can suggest to users. Add the name of the command, a description of the command which indicates its syntax and arguments, and the scope(s) to which this command should apply.
 
 Note that if you have defined your bot to only support one scope, commands specified for the unsupported scope will be ignored. You can edit the scope your bot supports at any time. 
 
