@@ -130,4 +130,4 @@ Controls include:
 
 ### Source
 
-This The control library is an open source library which and the source is can be found on [GitHub] (https://github.com/OfficeDev/msteams-ui-components/tree/develop/msteams-ui-components-react).
+The control library is open source and can be found on [GitHub](https://github.com/OfficeDev/msteams-ui-components/tree/develop/msteams-ui-components-react).
