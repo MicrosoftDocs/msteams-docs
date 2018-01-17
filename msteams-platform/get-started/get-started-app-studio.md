@@ -8,6 +8,8 @@ ms.date: 01/02/2018
 
 Microsoft Teams is a chat-based workspace in Office 365 that integrates with the apps and services that people use to get work done together. The Microsoft Teams App Studio makes it easy to start creating integrate your own service, whether you develop custom apps for your enterprise or SaaS applications for teams around the world.
 
+Teams App Studio is now the recommended starting point for developing apps for Teams. Other documentation on this site will be updated to reflect this at a later date.
+
 ## Apps
 
 Teams App Studio was created to simplify and streamline the process of creating real apps. It is much faster than the manual process described in [Getting started with node.js](~/get-started/get-started-with-nodejs).
@@ -19,7 +21,7 @@ Apps for Teams are made up from two parts:
 
 The most significant part of the application package is the app manifest.
 
-Teams App Studio streamlines the creation of the manifest for your app, and also provides some useful tools like the Card Editor and the Control Library. Writing and hosting the code is still up to you.
+Teams App Studio streamlines the creation of the manifest for your app, and also provides some useful tools like the Card Editor and a React control library. Writing and hosting the code is still up to you.
 
 ## Installing App Studio
 
@@ -107,9 +109,9 @@ A card is a user-interface (UI) container for short or related pieces of informa
 
 If you already have the a card you would like to verify inside Teams, you can provide the code for that card and send it via a bot. Currently only JSON is supported.
 
-## Control Library
+## React Control Library
 
-Creating an app that follows the Teams best practices is a great way to give your app a look and feel that fits seamlessly with the Teams client experience. The UI controls that you use are critical to achieving that end. In an effort to make it easier to create a consistent UI, App Studio provides several categories of UI controls which follow Teams design principles. 
+Creating an app that follows the Teams best practices is a great way to give your app a look and feel that fits seamlessly with the Teams client experience. The UI controls that you use are critical to achieving that end. In an effort to make it easier to create a consistent UI, App Studio provides several categories of UI controls which follow Teams design principles.
 
 Examples of the controls and corresponding React components are provided and ready to use in building your app.
 

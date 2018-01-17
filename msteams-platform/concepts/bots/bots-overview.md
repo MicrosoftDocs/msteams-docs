@@ -42,13 +42,16 @@ The SDK extensions install dependencies, including the Bot Builder SDK.
 > [!IMPORTANT]
 > You can develop Teams apps in any other web-programming technology and call the [Bot Framework REST APIs](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-overview) directly, but you must perform all token handling yourself.
 
-Follow these steps to build a great Teams bot:
-
+Follow these links to build a great Teams bot:
+- [Get started with apps for Teams](~/get-started/get-started-nodejs)
 - [Design a great bot](~/get-started/design#designing-a-great-bot): Microsoft Teams is the place for group and team collaboration. Consider what functionality your bot can bring to this collaboration environment, via 1:1 conversations or as part of a channel conversation. A great bot on Teams will also find ways to leverage the unique tabs feature, via a [configurable tab](~/concepts/tabs/tabs-overview) or a [static tab](~/concepts/tabs/tabs-static).
 - [Create and register your bot in the Bot Framework](~/concepts/bots/bots-create): Take advantage of the great tools, documentation, and community provided by the Bot Framework team.
 - [Develop your bot](~/concepts/bots/bots-conversations): Add basic conversation flow and leverage channel-specific functionality. If you develop in .NET or Node.js, use our [extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) to simplify your work.
 - [Test your bot](~/concepts/bots/bots-test): Add your bot for 1:1 or team conversations to see it in action.
 - [Publish your bot](~/publishing/apps-publish): Create your Teams package, add other capabilities, and submit it to the Office Store.
+
+## What you need to know: Teams App Studio
+*Teams App Studio* is a new tool that can help configure your manifest and your app. It also contains a React control library and configurable samples for cards.  See [Getting started with Teams App Studio](~/get-started/get-started-app-studio).
 
 ## What you need to know: outgoing webhooks
 
