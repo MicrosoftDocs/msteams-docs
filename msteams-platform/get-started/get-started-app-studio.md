@@ -10,7 +10,7 @@ Microsoft Teams is a chat-based workspace in Office 365 that integrates with the
 
 ## Apps
 
-Teams App Studio was created to simplify and streamline the process of creating real apps. It is much faster than the manual process described in [Getting started with node.js](~/get-started/get-started-with-nodejs).
+Teams App Studio was created to simplify and streamline the process of creating real apps. It is much faster than the manual process described in [Getting started with node.js](~/get-started/get-started-with-nodejs). Using Teams App Studio is now the recommended way to develop Teams apps. Getting started documentation will be updated at a later date.
 
 Apps for Teams are made up from two parts:
 
@@ -49,11 +49,11 @@ The defining artifact for a Microsoft Teams app is its manifest. This json file,
 
 Handcrafting this file is time consuming. The Manifest Editor tab of App Studio simplifies this process, allowing you to describe the app, upload your icons, add app capabilities, and product a zip file which can easily be uploaded into Teams for testing or distributed for others to use. Note that app studio does not produce functional code for your app, or host your app.  Your app must already be hosted and running at the URL listed in the manifest for the app upload process to result in a working app.
 
-### Details
+#### Details
 
 The details section of the Manifest Editor provides a place to give a high level description of the app you are making. This includes things such as the app’s name, description, and visual branding. Here you can also have a GUID for your app automatically generated and provide URLs for your privacy statement and terms of use.
 
-### Capabilities
+#### Capabilities
 
 The capabilities section of the Manifest Editor is where one can define which capabilities their app will include, and describe the details of each of those capabilities.
 
@@ -97,7 +97,7 @@ The command requires a title and an ID for the command. The command can optional
 * A user- friendly title
 * An optional description of the parameter
 
-### Test and Distribute
+## Test and Distribute
 
 Once you have finished defining your application, the Test and Distribute section allows you export your app’s definition as a zip file which then can be shared and uploaded into the Teams client for testing. Clicking export downloads the zip file as *“appname.zip”* in your default download directory.
 
