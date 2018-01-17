@@ -143,7 +143,7 @@ The URL referencing the JSON Schema for the manifest.
 > [!TIP]
 > Specify the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor: `"$schema": "https://statics.teams.microsoft.com/sdk/v1.2/manifest/MicrosoftTeams.schema.json",`
 
-## manifestVersion 
+## manifestVersion
 
 **Required** &ndash; String
 
@@ -284,7 +284,7 @@ An optional list of commands that your bot can recommend to users. The object is
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`items.properties`|array of enum|2|✔|Specifies the scope for which the command list is valid.|
-|`items.commands`|array of objects|10|✔|An array of commands the bot supports:<br>`title`: the bot command name (string, 32)<br>`description`: a simple description or example of the command syntax and its argumenst (string, 128)|
+|`items.commands`|array of objects|10|✔|An array of commands the bot supports:<br>`title`: the bot command name (string, 32)<br>`description`: a simple description or example of the command syntax and its argument (string, 128)|
 
 ## connectors
 
