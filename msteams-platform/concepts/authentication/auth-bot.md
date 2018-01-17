@@ -6,9 +6,9 @@ ms.date: 01/10/2018
 ---
 # Authenticate a user in a Microsoft Teams bot
 
-There are many services that you may wish to consume inside your Teams app, and most of those services require authentication to get access to the service. Services include Facebook, Twitter, and of course Teams. Users of Teams have user profile information stored in Azure Active Directory (AAD) using Microsoft Graph. This article will focus on authentication using AAD for authentication to get access to this information.
+There are many services that you may wish to consume inside your Teams app, and most of those services require authentication and authorization to get access to the service. Services include Facebook, Twitter, and of course Teams. Users of Teams have user profile information stored in Azure Active Directory (AAD) using Microsoft Graph. This article will focus on authentication using AAD to get access to this information.
 
-OAuth is an open standard for authorization used by AAD and many other service providers for authentication. Understanding OAuth is a prerequisite for working with authentication in Teams and AAD. The examples below use the OAuth2 Implicit Grant flow to read the user's profile information.
+OAuth is an open standard for authentication used by AAD and many other service providers. Understanding OAuth is a prerequisite for working with authentication in Teams and AAD. The examples below use the OAuth2 Implicit Grant flow with the goal of eventually reading the user's profile information from AAD and Graph.
 
 The code in this article comes from the Teams sample app [Teams sample complete node](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). It contains a static tab that requests an access token for Microsoft Graph and shows the current user's basic profile information from Azure AD.
 
@@ -42,9 +42,9 @@ Most service providers require you to register your application with their servi
 
     "yourhost" is replaced by your actual host. This might be a dedicated hosting site, Glitch or an ngrok redirect to localhost on your development machine. You may not have this information yet if you have not completed or hosted your app (or the sample app mentioned above), but you can always return to this page when that information is known.
 
-### Call your authentication popup
+### Initiate authentication flow
 
-Usually authentication flow is triggered by a user action.
+Usually authentication flow is triggered by a user action. You should not drive the authentication pop-up automatically because this is likely to trigger the browser's pop-up blocker as well as confuse the user.
 
 ### Add UI to start authentication
 
@@ -74,7 +74,7 @@ Three buttons have been added to the Hero Card: Sign in, Get Profile, and Sign O
 
 ### Sign the user in
 
-When the user chooses to sign in they select the Sign in button, which generates an event that is handled in `getInvokeHandler` using this code:
+select the Sign in button, which generates an event that is handled in `getInvokeHandler` using this code:
 
 ```TypeScript
 if ((event as any).name === "signin/verifyState") {
