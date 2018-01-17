@@ -57,19 +57,19 @@ The details section of the Manifest Editor provides a place to give a high level
 
 The capabilities section of the Manifest Editor is where one can define which capabilities their app will include, and describe the details of each of those capabilities.
 
-### Tabs
+##### Tabs
 
-#### Team Tabs
+###### Team Tabs
 
 A team tab becomes part of a channel and provides a single kind of information to a team. For example, the Planner tab for a channel contains a single plan; the Power BI tab maps to a specific report. Users can drill down to the relevant context, but they should not be able to navigate outside the tab. The Power BI tab, for instance, doesn't enable navigation to other Power BI reports—but it does enable the Go to website button that launches the report in the main Power BI website.
 For team tabs, you must provide a configuration URL to present options and gather information so users can customize the content and experience with your tab. This iframed HTML page is displayed when a user first adds the tab to a channel.
 You must also provide any additional domains from which the tab expects to load any content.
 
-#### Personal Tabs
+###### Personal Tabs
 
 This section lets you define a set of tabs that are presented by default in the one-on-one app experience (i.e. the experience a user has with your app outside the context of a team or channel).  In this section provide the tab name, a unique identifier, the url that points to the UI to be displayed in Teams, and optionally, a URL to point to if a user opts to view the tab in a browser. As usual, provide any additional domains from which the tab expects to load any content.
 
-### Bots
+##### Bots
 
 This section allows you to add a bot to your app. As of now an app can only have one bot. If you already have a bot registered with Bot Framework you can add that information by clicking *Set Up* and supplying the bot’s name, Bot Framework botID, and defining the scopes in which the bot can work.
 
@@ -79,11 +79,11 @@ Once you supplied your bot’s information, you can now optionally define a list
 
 Note that if you have defined your bot to only support one scope, commands specified for the unsupported scope will be ignored. You can edit the scope your bot supports at any time. 
 
-### Connectors
+##### Connectors
 
 This section allows you to add a connector to your app. If you already have a registered an Office 365 connector, choose Set up and enter the name and ID of the connector. If you want a new connector click register to go be taken to the Connector Developer Dashboard in your browser.
 
-### Messaging Extensions
+##### Messaging Extensions
 
 Messaging extensions are a powerful new way for users to engage with your app within Microsoft Teams. Users can query for information from your service and post that information in the form of rich cards, right into the channel conversation.
 
@@ -97,23 +97,23 @@ The command requires a title and an ID for the command. The command can optional
 * A user- friendly title
 * An optional description of the parameter
 
-## Test and Distribute
+#### Test and Distribute
 
 Once you have finished defining your application, the Test and Distribute section allows you export your app’s definition as a zip file which then can be shared and uploaded into the Teams client for testing. Clicking export downloads the zip file as *“appname.zip”* in your default download directory.
 
-## Card Editor
+### Card Editor
 
 A card is a user-interface (UI) container for short or related pieces of information. Microsoft Teams supports rich cards, which can have multiple properties and attachments. Cards are a key way that bots and connectors relay actionable information to users. To make this process easier and less error-prone, the Card Editor tab lets you build Hero Cards or Thumbnail Cards using a form and verify and test the resulting card (exactly as a user would see it) via a bot. It also provides the corresponding JSON, C#, or NodeJS code for that you can card to quickly copy and use in your app.
 
 If you already have the a card you would like to verify inside Teams, you can provide the code for that card and send it via a bot. Currently only JSON is supported.
 
-## React Control Library
+### React Control Library
 
 Creating an app that follows the Teams best practices is a great way to give your app a look and feel that fits seamlessly with the Teams client experience. The UI controls that you use are critical to achieving that end. In an effort to make it easier to create a consistent UI, App Studio provides several categories of UI controls which follow Teams design principles.
 
 Examples of the controls and corresponding React components are provided and ready to use in building your app.
 
-### Controls
+#### Controls
 
 Controls include:
 
@@ -128,6 +128,6 @@ Controls include:
 * Tables
 * Icons
 
-### Source
+#### Source
 
 The control library is open source and can be found on [GitHub](https://github.com/OfficeDev/msteams-ui-components/tree/develop/msteams-ui-components-react).
