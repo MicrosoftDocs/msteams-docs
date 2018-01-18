@@ -11,7 +11,7 @@
   expanded: true
 - name: Concepts
   items:
-  - name: Apps in Teams
+  - name: Apps for Teams
     href: ./concepts/apps/apps-overview
     items:
     - name: Create an app package
@@ -23,7 +23,7 @@
     items:
     - name: Static tabs
       href: ./concepts/tabs/tabs-static
-    - name: Configurable tabs
+    - name: Content pages
       href: ./concepts/tabs/tabs-content
     - name: Configuration pages
       href: ./concepts/tabs/tabs-configuration
@@ -40,7 +40,7 @@
       href: ./concepts/bots/bots-conversations
     - name: Cards and card actions
       href: ./concepts/bots/bots-cards
-    - name: Notifications
+    - name: Bot events
       href: ./concepts/bots/bots-notifications
     - name: Context for bots
       href: ./concepts/bots/bots-context

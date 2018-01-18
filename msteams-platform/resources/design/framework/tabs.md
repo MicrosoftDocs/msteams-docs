@@ -1,9 +1,9 @@
 ---
-title: Design Guidelines Reference
+title: Design guidelines for tabs
 description: Describes the guidelines for creating tabs for content and collaboration
 keywords: teams design guidelines reference framework tabs
 ---
-# Content and conversations, all at once
+# Content and conversations, all at once using tabs
 
 Tabs are canvases that you can use to share content, hold conversations, and host third-party services, all within a team’s organic workflow. When you build a tab in Microsoft Teams, it puts your web app front and center where it’s easily accessible from key conversations.
 

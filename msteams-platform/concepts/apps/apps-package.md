@@ -5,7 +5,7 @@ keywords: teams apps packaging
 ms.date: 01/02/2018
 ---
 
-# Create the package for your Microsoft Teams app
+# Create an app package for your Microsoft Teams app
 
 App experiences in Teams are defined by their app manifest, and bundled in an app package for use in uploading or Office Store submission. You'll need an app package to test your experience in Teams, via the [upload](~/concepts/apps/apps-upload) process.
 
