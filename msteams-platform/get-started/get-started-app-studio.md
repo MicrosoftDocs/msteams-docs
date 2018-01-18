@@ -39,7 +39,7 @@ Select *Available to set up*.
 
 ![Teams app studio](~/assets/images/get-started/teamsappstudio.png)
 
-Once you are in the Teams App Studio page in Teams, move to the teams tab where you can either connect to an existing app or create a new app.
+Once you are in the Teams App Studio, click on the "Manifest editor" tab where you can either import an existing app or create a new app.
 
 ## App Studio Features
 
