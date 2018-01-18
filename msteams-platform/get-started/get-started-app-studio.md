@@ -23,7 +23,7 @@ Teams App Studio streamlines the creation of the manifest for your app, and also
 
 ## Installing App Studio
 
-Teams App Studio is a Teams app which can be found in the Teams store. See the Store Icon in the left hand ribbon.
+Teams App Studio is a Teams app which can be found in the Teams store. See the Store Icon in the left-hand ribbon.
 
 ![Store icon](~/assets/images/get-started/storeicon.png)
 
@@ -83,7 +83,7 @@ Note that if you have defined your bot to only support one scope, commands speci
 
 ##### Connectors
 
-This section allows you to add a connector to your app. If you already have a registered an Office 365 connector, choose Set up and enter the name and ID of the connector. If you want a new connector click *Register* to go be taken to the Connector Developer Dashboard in your browser.
+This section allows you to add a connector to your app. If you already have a registered an Office 365 connector, choose Set up and enter the name and ID of the connector. If you want a new connector click *Register* to be taken to the Connector Developer Dashboard in your browser.
 
 ##### Messaging Extensions
 
@@ -91,7 +91,7 @@ This section allows you to add a connector to your app. If you already have a re
 
 Messaging extensions are powered by Bot Framework bots, so they require a configured bot to operate. If you have the name and Bot Framework ID of the bot you would like to power the messaging extension, enter it. Otherwise, click *Register* to create one and enter the information afterward. Select whether the configuration of a messaging extension can be updated by the user.
 
-Once you have your the underlying bot configured, define the command and parameters which the messaging extension can accept.
+Once you have the underlying bot configured, define the command and parameters which the messaging extension can accept.
 
 Each command requires a title and an ID. The command can optionally contain a description for the user. Each command can support up to five parameters, each of which requires:
 
@@ -111,7 +111,7 @@ If you already have the a card you would like to verify inside Teams, you can pa
 
 ### React Control Library
 
-Creating an app that follows the Teams best practices is a great way to give your app a look and feel that fits seamlessly with the Teams client experience. The UI controls that you use are critical to achieving that end. In an effort to make it easier to create a consistent UI, App Studio provides several categories of UI controls which follow Teams design principles.
+Creating an app that follows the Teams best practices is a great way to give your app a look and feel that fits seamlessly with the Teams client experience. The UI controls that you use are critical to achieving that end. In order to make it easier to create a consistent UI, App Studio provides several categories of UI controls which follow Teams design principles.
 
 Examples of the controls and corresponding React components are provided and ready to use in building your app.
 
@@ -132,4 +132,4 @@ Controls include:
 
 #### Source
 
-The control library is open source and can be found on [GitHub](https://github.com/OfficeDev/msteams-ui-components/tree/develop/msteams-ui-components-react).
+The control library is open source. It is found on [GitHub](https://github.com/OfficeDev/msteams-ui-components/tree/develop/msteams-ui-components-react).
