@@ -41,7 +41,7 @@ Select *Available to set up*.
 
 Once you are in the Teams App Studio page in Teams, move to the teams tab where you can either connect to an existing app or create a new app.
 
-## Teams app studio
+## App Studio Features
 
 ### Conversation
 
@@ -111,7 +111,7 @@ Once you have finished defining your application, the Test and Distribute sectio
 
 A card is a container for short or related pieces of information. Microsoft Teams supports rich cards, which can have multiple properties and attachments. Cards are a key way that bots and connectors relay actionable information to users. To make this process easier and less error-prone, the Card Editor tab lets you build Hero Cards or Thumbnail Cards using a form and verify and test the resulting card (exactly as a user would see it) via a bot. It also provides the corresponding JSON, C#, or Node.js code for that card you can copy/paste into your app's source code.
 
-If you already have the a card you would like to verify inside Teams, you can paste the JSON for that card into the JSON tab under "Add card info" and send it to yourself to see what it looks like in the App Studio conversation tab.
+If you already have the a card you would like to verify inside Teams, you can paste the JSON for that card into the JSON tab under "Add card info" and send it to yourself to see what it looks like in a chat.
 
 ### React Control Library
 
