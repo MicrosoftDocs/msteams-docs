@@ -4,7 +4,7 @@ description: Describes the features in the Public Developer Preview of Microsoft
 keywords: teams preview developer features
 ms.date: 01/20/2018
 ---
-# What is the Developer Preview for Microsoft Teams
+# What is the Developer Preview for Microsoft Teams?
 
 Developer Preview is a public program for developers that provides early access to unreleased features in Microsoft Teams.
 Features included in preview may not be complete and may undergo changes before becoming available in the public release.

@@ -89,10 +89,10 @@
       href: ./resources/general/debug
     - name: Rate limiting
       href: ./resources/general/rate-limit
-  - name: Developer Preview
+  - name: Public Developer Preview
     href: ./resources/dev-preview/developer-preview-intro
     items:
-    - name: Public Developer Preview
+    - name: Public Developer Preview access
       href: ./resources/dev-preview/developer-preview
     - name: Features in Developer Preview
       href: ./resources/dev-preview/developer-preview-features
