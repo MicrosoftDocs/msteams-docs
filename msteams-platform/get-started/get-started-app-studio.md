@@ -6,7 +6,7 @@ ms.date: 01/02/2018
 ---
 # Quickly develop apps with Teams App Studio
 
-Microsoft Teams is a chat-based workspace in Office 365 that integrates with the apps and services that people use to get work done together. The Microsoft Teams App Studio makes it easy to start creating integrate your own service, whether you develop custom apps for your enterprise or SaaS applications for teams around the world.
+Microsoft Teams is a chat-based workspace in Office 365 that integrates with the apps and services that people use to get work done together. Microsoft Teams App Studio makes it easy to start creating or integrating your own service, whether you develop custom apps for your enterprise or SaaS applications for teams around the world.
 
 ## Apps
 
