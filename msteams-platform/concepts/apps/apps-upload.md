@@ -18,7 +18,7 @@ For bots designed only for 1:1 contexts, see [Adding a bot for 1:1 chat only](~/
 
 For development as well as Office Store submission you must create an uploadable package that contains the information to describe your experience. The package, a .zip file, contains the application manifest and icons that uniquely define your experience.
 
-To create an upload package, see [Create the package for your Microsoft Teams app](~/publishing/apps-package).
+To create an upload package, see [Create the package for your Microsoft Teams app](~/concepts/apps/apps-package).
 
 ## Load your package into a team
 
