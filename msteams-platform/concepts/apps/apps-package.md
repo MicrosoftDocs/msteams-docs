@@ -2,10 +2,10 @@
 title: Package your app
 description: Learn how to package your app for testing, uploading, and publishing in Microsoft Teams
 keywords: teams apps packaging
-ms.date: 01/02/2018
+ms.date: 01/22/2018
 ---
 
-# Create the package for your Microsoft Teams app
+# Create an app package for your Microsoft Teams app
 
 App experiences in Teams are defined by their app manifest, and bundled in an app package for use in uploading or Office Store submission. You'll need an app package to test your experience in Teams, via the [upload](~/concepts/apps/apps-upload) process.
 
@@ -35,7 +35,7 @@ The `color` icon is used throughout Microsoft Teams (in app and tab galleries, b
 
 ### outline
 
-The `outline` icon is used in three specific places: the app bar, pinnned messaging extensions, and chiclets. This icon must be 20&times;20 pixels. Your outline icon must contain only white and transparency (no other colors). The icon can be white with transparent background or transparent with a white background. The outline icon should not have extra padding surrounding the icon and should be as tightly cropped as possible while still maintaining the 20x20 dimensions. Here are a few good examples:
+The `outline` icon is used in these places: the app bar and messaging extensions the user has marked as a "favorite." This icon must be 20&times;20 pixels. Your outline icon must contain only white and transparency (no other colors). The icon can be white with transparent background or transparent with a white background. The outline icon should not have extra padding surrounding the icon and should be as tightly cropped as possible while still maintaining the 20x20 dimensions. Here are a few good examples:
 
 ![Sample outline icons](~/assets/images/icons/sample20x20s.png)
 

@@ -277,8 +277,6 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 
 ### bots: commandLists
 
->[Public Developer Preview only](~/resources/general/developer-preview)
-
 An optional list of commands that your bot can recommend to users. The object is an array (maximum of 2 elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. See [Bot menus](~/concepts/bots/bots-menus) for more information.
 
 |Name| Type| Maximum size | Required | Description|
@@ -289,8 +287,7 @@ An optional list of commands that your bot can recommend to users. The object is
 ## connectors
 
 *Optional*
-
->[Public Developer Preview](~/resources/general/developer-preview) only
+App support for connectors is only available in the [Public Developer Preview](~/resources/general/developer-preview). Connectors themselves are generally available.
 
 The `connectors` block defines an Office 365 Connector for the app.
 

@@ -4,7 +4,7 @@ description: Describes how to send and receive messages with bots in Microsoft T
 keywords: teams bots messages
 ---
 
-# Send and receive messages with a Microsoft Teams bot
+# Have a conversation with a Microsoft Teams bot
 
 A conversation is a series of messages sent between your bot and one or more users. Bots in Microsoft Teams allow sending messages in either personal conversations with a single user (also known as one-on-one or 1:1 chats) or a group conversation in a Teams channel.
 

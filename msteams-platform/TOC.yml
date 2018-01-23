@@ -13,7 +13,7 @@
   expanded: true
 - name: Concepts
   items:
-  - name: Apps in Teams
+  - name: Apps for Teams
     href: ./concepts/apps/apps-overview
     items:
     - name: Create an app package
@@ -25,7 +25,7 @@
     items:
     - name: Static tabs
       href: ./concepts/tabs/tabs-static
-    - name: Configurable tabs
+    - name: Content pages
       href: ./concepts/tabs/tabs-content
     - name: Configuration pages
       href: ./concepts/tabs/tabs-configuration
@@ -42,7 +42,7 @@
       href: ./concepts/bots/bots-conversations
     - name: Cards and card actions
       href: ./concepts/bots/bots-cards
-    - name: Notifications
+    - name: Bot events
       href: ./concepts/bots/bots-notifications
     - name: Context for bots
       href: ./concepts/bots/bots-context
@@ -82,10 +82,6 @@
   items:
   - name: General
     items:
-    - name: Public Developer Preview
-      href: ./resources/general/developer-preview
-    - name: Features in Developer Preview
-      href: ./resources/general/developer-preview-features
     - name: Requirements
       href: ./resources/general/requirements
     - name: Cross-domain redirects
@@ -94,6 +90,13 @@
       href: ./resources/general/debug
     - name: Rate limiting
       href: ./resources/general/rate-limit
+  - name: Public Developer Preview
+    href: ./resources/dev-preview/developer-preview-intro
+    items:
+    - name: Public Developer Preview access
+      href: ./resources/dev-preview/developer-preview
+    - name: Features in Developer Preview
+      href: ./resources/dev-preview/developer-preview-features
   - name: Design guidelines
     href: ./resources/design/overview
     items:

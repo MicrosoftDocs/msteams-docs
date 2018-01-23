@@ -1,11 +1,11 @@
 ---
-title: Develop bots
+title: Add bots to Microsoft Teams apps
 description: Describes how to get started developing bots in Microsoft Teams
 keywords: teams bots development
 ms.date: 01/02/2018
 ---
 
-# Develop bots for Microsoft Teams
+# Add bots to Microsoft Teams apps
 
 Build and connect intelligent bots to interact with Microsoft Teams users naturally through chat. Or provide a simple commands-based bot, to be used as your "command-line" interface for your broader Teams app experience. You can make a notification-only bot, which can push information relevant to your users directly to them in a channel or direct message. You can even bring your existing Bot Framework&ndash;based bot and add Teams-specific support to make your experience shine.
 
