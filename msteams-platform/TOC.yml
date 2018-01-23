@@ -80,10 +80,7 @@
   items:
   - name: General
     items:
-    - name: Public Developer Preview
-      href: ./resources/general/developer-preview
-    - name: Features in Developer Preview
-      href: ./resources/general/developer-preview-features
+
     - name: Requirements
       href: ./resources/general/requirements
     - name: Cross-domain redirects
@@ -92,6 +89,13 @@
       href: ./resources/general/debug
     - name: Rate limiting
       href: ./resources/general/rate-limit
+  - name: Public Developer Preview
+    href: ./resources/dev-preview/developer-preview-intro
+    items:
+    - name: Public Developer Preview access
+      href: ./resources/dev-preview/developer-preview
+    - name: Features in Developer Preview
+      href: ./resources/dev-preview/developer-preview-features
   - name: Design guidelines
     href: ./resources/design/overview
     items:
