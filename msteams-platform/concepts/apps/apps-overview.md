@@ -1,10 +1,10 @@
 ---
-title: Develop apps
+title: Apps for Microsoft Teams
 description: Describes how to get started developing apps in Microsoft Teams
 keywords: teams development
 ms.date: 01/02/2018
 ---
-# Develop apps for Microsoft Teams
+# Apps for Microsoft Teams
 
 You can extend Microsoft Teams by developing an app that provides content and services. A single app can provide one or more *capabilities*. Deciding which capabilities to offer depends on what you want to do. Apps are available in the Teams store, and can be custom built by you for distribution through the store or directly to your users.
 

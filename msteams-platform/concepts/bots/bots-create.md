@@ -4,8 +4,7 @@ description: Describes how to create bots in Microsoft Teams
 keywords: teams bots creation
 ms.date: 01/02/2018
 ---
-
-# Learn about bots
+# Create a bot
 
 All bots created using the Microsoft Bot Framework are configured and ready to work in Microsoft Teams.
 

@@ -1,9 +1,9 @@
 ---
-title: Design Guidelines Reference
+title: Design guideline basics
 description: Describes the basics for design guidelines framework
 keywords: teams design guidelines reference framework basics
 ---
-# Build with us
+# The basics
 
 Now that you’re thinking about building on the Teams platform, here’s a short tour to help you understand how it works for your app.
 

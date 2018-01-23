@@ -5,7 +5,7 @@ keywords: teams apps Upload
 ms.date: 01/02/2018
 ---
 
-# Upload your custom app in Microsoft Teams
+# Upload an app package to Microsoft Teams
 
 To test your app experience within Microsoft Teams, you need to upload your app to Teams. Uploading adds the app to the team you select, and you and your team members can interact with it like end users.
 
