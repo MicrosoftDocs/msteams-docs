@@ -1,9 +1,9 @@
 ---
-title: Design Guidelines Reference
+title: Design guidelines for bots
 description: Describes the guidelines for creating bots
 keywords: teams design guidelines reference framework bots talking
 ---
-# Start talking
+# Start talking with bots
 
 Bots are conversational apps that perform a narrow or specific set of tasks. They give you an opportunity to communicate with users, respond to their questions, and proactively notify them about changes. They’re a great way to reach out.
 
