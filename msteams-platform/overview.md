@@ -2,6 +2,7 @@
 title: Developer platform
 description: Overview page describing the Microsoft Teams developer platform
 keywords: teams overview
+ms.date: 01/24/2018
 ---
 # The Microsoft Teams developer platform
 
