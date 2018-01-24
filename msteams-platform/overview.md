@@ -29,8 +29,8 @@ In these docs, you'll find the information you need to bring your content, apps,
 | [**Scenarios**](~) | Go deep into end-to-end scenarios. |
 | [**Resources**](~) | Find all those nitty-gritty details you need to build a Teams app, such as a design topic, or a manifest schema reference. |
 | [**Troubleshooting**](~/troubleshoot/troubleshoot) | If your app isn't behaving as expected, check here. |
-| [**FAQ**](~troubleshoot/faq) | Everyone has them; here are our frequently asked questions. |
-| [**Samples**](~samples/code-samples) | See how others created Teams apps. |
+| [**FAQ**](~/troubleshoot/faq) | Everyone has them; here are our frequently asked questions. |
+| [**Samples**](~/samples/code-samples) | See how others created Teams apps. |
 | [**Feedback**](~/feedback) | Didn't find what you need? Let us know! |
 | [**SDK Reference**](https://docs.microsoft.com/en-us/javascript/api/overview/msteams-client) | Find specific details about all the elements in the SDK. |
 
