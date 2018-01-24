@@ -3,7 +3,6 @@ title: Developer platform
 description: Overview page describing the Microsoft Teams developer platform
 keywords: teams overview
 ---
-
 # The Microsoft Teams developer platform
 
 Microsoft Teams is a chat-based workspace in Office 365 that integrates with the apps and services that people use to get work done together. The Microsoft Teams developer platform makes it easy for you to integrate your own service, whether you develop custom apps for your enterprise or SaaS applications for teams around the world.
