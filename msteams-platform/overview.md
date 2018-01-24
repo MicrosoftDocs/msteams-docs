@@ -9,7 +9,7 @@ ms.date: 01/24/2018
 Microsoft Teams is a chat-based workspace in Office 365 that integrates with the apps and services that people use to get work done together. The Microsoft Teams developer platform makes it easy for you to integrate your own service, whether you develop custom apps for your enterprise or SaaS applications for teams around the world.
 
 > [!TIP]
-> Don't have Microsoft Teams? Get a free Office 365 developer subscription or activate it for your existing Office 365 account. See [Set up your Office 365 tenant](~/get-started/get-started-tenant).
+> Don't have Microsoft Teams? Get a free Office 365 developer subscription or activate Teams for your existing Office 365 account. See [Set up your Office 365 tenant](~/get-started/get-started-tenant).
 
 ## Apps in Microsoft Teams
 
