@@ -47,15 +47,22 @@ As always, the project's README file should have more information on specific ne
 
 | Sample | Description
 |--------|-------------
-| [Sample bot for C#.NET](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams/tree/master/CSharp/Samples/Microsoft.Bot.Connector.Teams.SampleBot) | This sample bot shows how to use the [Teams extensions for the Bot Builder SDK] (~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) in `C#.NET`.
+| [Sample bot for C#/.NET](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams/tree/master/CSharp/Samples/Microsoft.Bot.Connector.Teams.SampleBot) | This sample bot shows how to use the [Teams extensions for the Bot Builder SDK] (~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) in `C#.NET`.
 | [Sample bot for Node.js](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams/tree/master/Node/samples) | This sample bot shows how to use the [Teams extensions for the Bot Builder SDK] (~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) in `Node.js`.
-| [Custom bots](https://github.com/OfficeDev/microsoft-teams-sample-custombot) | Samples to create **"Custom Bots"** to be used in Microsoft Teams
+
+## Outgoing Webhooks
+
+| Sample | Description
+|--------|-------------
+| [Outgoing Webhook for C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook) | Illustrates how to create an **Outgoing Webhook** for Microsoft Teams in C#/.NET.
+| [Outgoing Webhook for Node.js](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook) | Illustrates how to create a simple **Outgoing Webhook** for Microsoft Teams in ~50 lines of Node.js code.
 
 ## Connectors
 
 | Sample | Description
 |--------|-------------
-| [Sample connector](https://github.com/OfficeDev/msteams-connector-github) | This sample showcases how to build a connector for Microsoft Teams (uses GitHub as an example).
+| [Sample connector for Node.js](https://github.com/OfficeDev/msteams-connector-github) | This sample, written in Node.js, showcases how to build a connector for Microsoft Teams using GitHub as an example to generate connector notifications.
+| [Sample connector for C#/.NET](https://github.com/OfficeDev/msteams-connector-github) | This sample, written in C#, showcases how to build a connector for Microsoft Teams using a sample task list app as an example to generate connector notifications.
 
 ## Graph API
 
