@@ -1,7 +1,8 @@
 ---
 title: Microsoft Teams code samples
 description: Links and descriptions of sample applications for the Microsoft Teams developer platform
-keywords: Microsoft teams developer samples
+keywords: Microsoft Teams developer samples
+ms.date: 01/23/2018
 ---
 # Code samples for the Microsoft Teams developer platform
 
