@@ -19,7 +19,7 @@ To learn about Teams apps and all the possibilities they offer, see [Develop app
 
 ### What you'll find here
 
-In these docs, you'll find the information you need to bring your content, apps, and services into Microsoft Teams and make them available to your team (or the teams of your customers).
+In these topics, you'll find the information you need to bring your content, apps, and services into Microsoft Teams and make them available to your team (or the teams of your customers).
 
 |   |   |
 | - | - |
