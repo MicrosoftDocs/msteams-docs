@@ -10,6 +10,7 @@
     href: ./get-started/get-started-nodejs
   expanded: true
 - name: Concepts
+  href: ./concepts/concepts-overview
   items:
   - name: Apps for Teams
     href: ./concepts/apps/apps-overview
