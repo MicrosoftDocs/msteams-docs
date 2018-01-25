@@ -24,7 +24,7 @@ In these docs, you'll find the information you need to bring your content, apps,
 |   |   |
 | - | - |
 | [**Get Started**](~/get-started/get-started) | Develop, host and upload your first app and understand how apps work in Teams. |
-| [**Concepts**](~) | Learn more about creating Teams apps, and find everything you need to know about the entire range of capabilities in Teams: tabs, bots, connectors, messaging extensions, and more. |
+| [**Concepts**](~/concepts/concepts-overview) | Learn more about creating Teams apps, and find everything you need to know about the entire range of capabilities in Teams: tabs, bots, connectors, messaging extensions, and more. |
 | [**Publishing**](~/publishing/apps-publish) | Want to publish your Teams app in the Office Store? Look here for the steps and guidelines. |
 | [**Scenarios**](~) | Go deep into end-to-end scenarios. |
 | [**Resources**](~) | Find all those nitty-gritty details you need to build a Teams app, such as a design topic, or a manifest schema reference. |
