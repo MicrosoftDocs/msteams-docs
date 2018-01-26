@@ -6,7 +6,7 @@ ms.date: 01/24/2018
 ---
 # Resources
 
-All the nitty-gritty details you need to design and build a Teams app including the design guide and a manifest reference
+All the nitty-gritty details you need to design and build a Teams app including the design guide and a manifest reference.
 
 ## What you'll find here
 
