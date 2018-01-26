@@ -72,6 +72,7 @@
   - name: Office Store guidance
     href: ./publishing/office-store-guidance
 - name: Scenarios
+  href: ./scenarios/scenarios
   items:
   - name: 1-on-1 conversations with bots
     href: ./scenarios/bots-personal-conversations
