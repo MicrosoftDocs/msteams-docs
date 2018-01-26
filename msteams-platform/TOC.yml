@@ -58,7 +58,7 @@
     items:
     - name: Cards and card actions
       href: ./concepts/cards-actions
-  - name: Compose rich messages
+  - name: Messaging Extensions
     href: ./concepts/messaging-extensions
   - name: Outgoing WebHooks
     href: ./concepts/outgoingwebhook
@@ -81,7 +81,6 @@
   items:
   - name: General
     items:
-
     - name: Requirements
       href: ./resources/general/requirements
     - name: Cross-domain redirects
