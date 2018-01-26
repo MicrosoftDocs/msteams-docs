@@ -78,6 +78,7 @@
   - name: Channel conversations with bots
     href: ./scenarios/bots-channel-conversations
 - name: Resources
+  href: .resources/resource-overview
   items:
   - name: General
     href: .general/general-overview
