@@ -12,7 +12,7 @@ All the nitty-gritty details you need to design and build a Teams app including 
 
 |   |   |
 | - | - |
-| [**General**](~(~/resources/general/general-overview) | Important topics that don't fit elsewhere. |
+| [**General**](~/resources/general/general-overview) | Important topics that don't fit elsewhere. |
 | [**Public Developer Preview**](~/resources/dev-preview/developer-preview-intro) | Get access to the latest features so that your apps can be ready when those features go live. |
 | [**Design Guidelines**](~/resources/design/overview) | How to make your app fit in with Teams and with other apps by following these UI guidelines. |
 | [**Manifest schema reference**](~/resources/manifest-schema) | All the details in this reference for the Teams app schema. |
