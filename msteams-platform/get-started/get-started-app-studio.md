@@ -29,7 +29,7 @@ Teams App Studio is a Teams app which can be found in the Teams store. See the S
 
 In the store, search for Teams App Studio.
 
-![Store entry for app studio](~/assets/images/get-started/storeappstudio.png)
+![Store entry for app studio](~/assets/images/get-started/storeteamsappstudio(preview).png)
 
 Select the Teams App Studio tile to open the app configuration page:
 
@@ -37,7 +37,7 @@ Select the Teams App Studio tile to open the app configuration page:
 
 Select *Available to set up*.
 
-![Teams app studio](~/assets/images/get-started/teamsappstudio.png)
+![Teams app studio](~/assets/images/get-started/teamsappstudio(preview).png)
 
 Once you are in the Teams App Studio, click on the *Manifest editor* tab where you can either import an existing app or create a new app.
 
