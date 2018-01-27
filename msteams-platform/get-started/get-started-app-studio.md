@@ -17,7 +17,7 @@ Teams App Studio was created to simplify and streamline the process of creating 
 Apps for Teams are made up of two parts:
 
 * The functionality of the app is hosted on a web server
-* The definition of the app is contained in an application package that teams uses to find and display your app functionality. The app package is what you upload to Teams when you first test your app
+* The definition of the app is contained in an application package that Teams uses to find and display your app functionality. The app package is what you upload to Teams when you first test your app
 
 The most significant part of the application package is the app manifest.
 
@@ -61,7 +61,7 @@ The details section of the Manifest Editor defines the high level description of
 
 #### Capabilities
 
-The capabilities section of the Manifest Editor is where the capabilities of the app are defined, and describes the details of each of those capabilities.
+The capabilities section of the Manifest Editor is where the app's capabilities are defined and where details of each of those capabilities are listed.
 
 ##### Tabs
 
@@ -85,7 +85,7 @@ Note that if you have defined your bot to only support one scope, commands speci
 
 ##### Connectors
 
-This section allows you to add a connector to your app. If you already have registered an Office 365 connector, choose Set up and enter the name and ID of the connector. If you want a new connector click *Register* to be taken to the Connector Developer Dashboard in your browser.
+This section allows you to add a connector to your app. If you already have registered an Office 365 connector, choose *Set up* and enter the name and ID of the connector. If you want a new connector click *Register* to be taken to the Connector Developer Dashboard in your browser.
 
 ##### Messaging Extensions
 
