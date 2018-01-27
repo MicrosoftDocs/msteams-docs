@@ -31,11 +31,11 @@ In the store, search for Teams App Studio.
 
 ![Store entry for app studio](~/assets/images/get-started/storeteamsappstudio(preview).png)
 
-Select the Teams App Studio tile to open the app configuration page:
+Select the Teams App Studio tile to open the app install page:
 
 ![Configure app studio](~/assets/images/get-started/teamsappstudioconfiguration.png)
 
-Select *Available to set up*.
+Select *install*.
 
 ![Teams app studio](~/assets/images/get-started/teamsappstudio(preview).png)
 
