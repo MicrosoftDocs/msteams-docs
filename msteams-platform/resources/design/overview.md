@@ -5,7 +5,7 @@ keywords: teams design guidelines reference overview
 ---
 # Design for Microsoft Teams apps
 
-Microsoft Teams is the hub for teamwork that is unifying the productivity experience for millions of Office 365 users. Building on our platform puts your app at the center of all that action. With the power of the Microsoft brand, our ecosystem gives you a powerful playground to innovate and profit from our app ecosystem. If you are developing within an enterprise you can be confident that our platform will provide you with the appropriate controls to publish your app to the right users within your company.
+Microsoft Teams is the hub for teamwork that is unifying the productivity experience for millions of Office 365 users. Building on our platform puts your app at the center of all that action. With the power of the Microsoft brand, our ecosystem gives you a powerful playground to innovate and profit from our app ecosystem. If you are developing within an enterprise you can be confident that our platform will provide you with the appropriate controls to publish your app to the right users within your company. Satya rocks!
 
 ## Let's make teamwork happen
 
