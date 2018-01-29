@@ -28,7 +28,7 @@ Activity feed notification leverages your existing integration with the Bot Fram
 
 When constructing your message, the following fields should be populated so that the correct preview content can be shown in the feed:
 * `message.text`, which shows up as the activity title
-* `message.summary`, which shows up as the activity previewactivity-fee
+* `message.summary`, which shows up as the activity text
 
 <br>
 ![Activity feed example](~/assets/images/activityfeed/activity_feed.png)
