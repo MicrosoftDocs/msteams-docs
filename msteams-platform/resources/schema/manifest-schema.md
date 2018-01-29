@@ -61,8 +61,8 @@ The following schema sample shows all extensibility options.
   "bots": [
     {
       "botId": "%MICROSOFT-APP-ID-REGISTERED-WITH-BOT-FRAMEWORK%",
-      "needsChannelSelector": "true",
-      "isNotificationOnly": "false",
+      "needsChannelSelector": false,
+      "isNotificationOnly": false,
       "scopes": [ "team", "personal" ],
       "commandLists": [
         {

@@ -12,6 +12,7 @@
     href: ./get-started/get-started-nodejs
   expanded: true
 - name: Concepts
+  href: ./concepts/concepts-overview
   items:
   - name: Apps for Teams
     href: ./concepts/apps/apps-overview
@@ -59,7 +60,7 @@
     items:
     - name: Cards and card actions
       href: ./concepts/cards-actions
-  - name: Compose rich messages
+  - name: Messaging Extensions
     href: ./concepts/messaging-extensions
   - name: Outgoing WebHooks
     href: ./concepts/outgoingwebhook
@@ -73,14 +74,17 @@
   - name: Office Store guidance
     href: ./publishing/office-store-guidance
 - name: Scenarios
+  href: ./scenarios/scenarios
   items:
   - name: 1-on-1 conversations with bots
     href: ./scenarios/bots-personal-conversations
   - name: Channel conversations with bots
     href: ./scenarios/bots-channel-conversations
 - name: Resources
+  href: ./resources/resource-overview
   items:
   - name: General
+    href: .general/general-overview
     items:
     - name: Requirements
       href: ./resources/general/requirements
