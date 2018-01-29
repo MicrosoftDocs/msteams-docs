@@ -10,8 +10,7 @@ Microsoft Teams is a service within Office 365. All users of Teams can install a
 
 You can think of Teams as a single page web application. Most of the content you see in Teams actually comes from the Office 365 servers that support your enterprise. This makes it easy for Teams to access other web-based content and display it in the teams app. At their core, apps for Teams are similar to web services, hosted on third-party web servers.
 
-Because of this, it easy to publish and update apps, but it adds additional steps when you are starting out developing an app.
-The biggest issue is where you host your app during development, and how Teams connects with that app. You can host your app:
+Because of this, it easy to publish and update apps, but it adds additional steps when you are starting out developing an app. The biggest issue is where you host your app during development, and how Teams connects with that app. You can host your app:
 
 * On your local development machine
 * Using a free service like glitch
@@ -23,6 +22,7 @@ Here are some simple steps to create a Teams app and test it in Teams.
 
 > [!div class="checklist"]
 > * [Prepare your Office 365 tenant](~/get-started/get-started-tenant)
+> * [Get started with Teams App Studio](~/get-started/get-started-app-studio)
 > * [Get prerequisites](~/get-started/get-started-nodejs#GetPrerequisites)
 > * [Download the sample](~/get-started/get-started-nodejs#DownloadSample)
 > * [Build and run the sample](~/get-started/get-started-nodejs#BuildRun)

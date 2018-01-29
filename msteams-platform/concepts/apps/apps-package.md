@@ -16,6 +16,8 @@ A Teams app package is a .zip file containing the following:
 
 ## Creating a manifest
 
+*Teams App Studio* is a new tool that can help configure your manifest. It also contains a React control library and configurable samples for cards.  See [Getting started with Teams App Studio](~/get-started/get-started-app-studio).
+
 Your manifest file must be named "manifest.json" and be at the top level of the upload package. Note that manifests and packages built previously might support an older version of the schema. For Teams apps and especially Office Store submission, you must use the current [manifest schema](~/resources/schema/manifest-schema).
 
 > [!TIP]
