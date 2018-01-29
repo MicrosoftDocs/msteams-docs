@@ -4,11 +4,13 @@ description: Get started building great apps in Microsoft Teams using Teams App 
 keywords: getting started app studio teams
 ms.date: 01/02/2018
 ---
-# Quickly develop apps with Teams App Studio
+# Quickly develop apps with Teams App Studio (Preview)
 
 Microsoft Teams is a chat-based workspace in Office 365 that integrates with the apps and services that people use to get work done together.
 
 Microsoft Teams App Studio makes it easy to start creating or integrating your own service, whether you develop custom apps for your enterprise or SaaS applications for teams around the world.
+
+Teams App Studio is available as part of the [Developer Preview](~/resources/dev-preview/developer-preview).
 
 ## Apps
 
