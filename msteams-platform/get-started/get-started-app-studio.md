@@ -2,7 +2,7 @@
 title: Get started with Teams App Studio
 description: Get started building great apps in Microsoft Teams using Teams App Studio
 keywords: getting started app studio teams
-ms.date: 01/02/2018
+ms.date: 01/29/2018
 ---
 # Quickly develop apps with Teams App Studio (Preview)
 
@@ -27,7 +27,7 @@ Teams App Studio streamlines the creation of the manifest for your app, and also
 
 ## Installing App Studio
 
-Teams App Studio is a Teams app which can be found in the Teams store. See the Store Icon in the left-hand ribbon of Teams.
+Teams App Studio is a Teams app which can be found in the Teams store. See the Store Icon in the left-hand ribbon of Teams, or follow this link for direct download [Teams App Studio](https://aka.ms/InstallTeamsAppStudio).
 
 ![Store icon](~/assets/images/get-started/storeicon.png)
 
@@ -55,7 +55,7 @@ This is where you can see what the [cards you create in App Studio](#card-editor
 
 As mentioned earlier, the most significant part of a Microsoft Teams app package is its manifest.json file. This file, which must conform to the [Teams App schema](~\resources\schema\manifest-schema.md), contains metadata which allows Teams to correctly present your app to users.
 
-Handcrafting this file is time consuming. The Manifest Editor tab in App Studio simplifies this process, allowing you to describe the app, upload your icons, add app capabilities, and produce a .zip file which can easily be uploaded into Teams for testing or distributed for others to use. Note that App Studio does not produce functional code for your app, or host your app.  Your app must already be hosted and running at the URL listed in the manifest for the app upload process to result in a working app.
+The Manifest Editor tab in App Studio simplifies creating the manifest, allowing you to describe the app, upload your icons, add app capabilities, and produce a .zip file which can easily be uploaded into Teams for testing or distributed for others to use. Note that App Studio does not produce functional code for your app, or host your app.  Your app must already be hosted and running at the URL listed in the manifest for the app upload process to result in a working app.
 
 #### Details
 
