@@ -14,7 +14,7 @@ Teams App Studio is available as part of the [Developer Preview](~/resources/dev
 
 ## Apps
 
-Teams App Studio was created to simplify and streamline the process of creating real apps. It is much faster than the manual process described in [Getting started with node.js](~/get-started/get-started-with-nodejs): Teams App Studio is now the recommended way to develop Teams apps. The getting started documentation will be updated at a later date.
+Teams App Studio was created to simplify and streamline the process of creating real apps. It is much faster than the manual process described in [Get started with Node.js](~/get-started/get-started-with-nodejs): Teams App Studio is now the recommended way to develop Teams apps. The getting started documentation will be updated at a later date.
 
 Apps for Teams are made up of two parts:
 
@@ -27,7 +27,7 @@ Teams App Studio streamlines the creation of the manifest for your app, and also
 
 ## Installing App Studio
 
-Teams App Studio is a Teams app which can be found in the Teams store. See the Store Icon in the left-hand ribbon of Teams, or follow this link for direct download [Teams App Studio](https://aka.ms/InstallTeamsAppStudio).
+Teams App Studio is a Teams app which can be found in the Teams store. See the Store Icon in the left-hand ribbon of Teams, or follow this link for direct download: [Teams App Studio](https://aka.ms/InstallTeamsAppStudio).
 
 ![Store icon](~/assets/images/get-started/storeicon.png)
 
