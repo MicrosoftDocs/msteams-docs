@@ -14,9 +14,9 @@ The following features are available in the Public Developer Preview as of Decem
 
 Apps in Microsoft Teams allow you to make your service available to users through a single Teams App package, which includes bots, tabs, connectors and messaging extensions. Learn more [here](~/overview).
 
-### Store
+### AppSource (formerly Office Store)
 
-The Store provides a listing of all apps available in Microsoft Teams spanning various categories. Developers can add their apps by [submitting their apps to the Office Store](~/publishing/apps-publish).
+AppSource provides a listing of all apps available in Microsoft Teams spanning various categories. Developers can add their apps by [submitting their apps to AppSource](~/publishing/apps-publish).
 
 ### Messaging extensions
 
