@@ -22,7 +22,9 @@ Here are some simple steps to create a Teams app and test it in Teams.
 
 > [!div class="checklist"]
 > * [Prepare your Office 365 tenant](~/get-started/get-started-tenant)
+<!---
 > * [Get started with Teams App Studio](~/get-started/get-started-app-studio)
+--->
 > * [Get prerequisites](~/get-started/get-started-nodejs#GetPrerequisites)
 > * [Download the sample](~/get-started/get-started-nodejs#DownloadSample)
 > * [Build and run the sample](~/get-started/get-started-nodejs#BuildRun)
