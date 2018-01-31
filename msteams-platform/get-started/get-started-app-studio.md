@@ -10,8 +10,6 @@ Microsoft Teams is a chat-based workspace in Office 365 that integrates with the
 
 Microsoft Teams App Studio makes it easy to start creating or integrating your own service, whether you develop custom apps for your enterprise or SaaS applications for teams around the world.
 
-Teams App Studio is available as part of the [Developer Preview](~/resources/dev-preview/developer-preview).
-
 ## Apps
 
 Teams App Studio was created to simplify and streamline the process of creating real apps. It is much faster than the manual process described in [Get started with Node.js](~/get-started/get-started-with-nodejs): Teams App Studio is now the recommended way to develop Teams apps. The getting started documentation will be updated at a later date.
