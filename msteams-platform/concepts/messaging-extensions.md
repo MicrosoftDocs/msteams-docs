@@ -3,12 +3,9 @@ title: Develop messaging extensions
 description: Describes how to get started with messaging extensions in Microsoft Teams
 keywords: teams messaging extensions messaging extensions
 ---
-# Preview: Develop messaging extensions for Microsoft Teams
+# Develop messaging extensions for Microsoft Teams
 
 Messaging extensions are a powerful new way for users to engage with your app within Microsoft Teams. With this capability, users can query for information from your service and post that information, in the form of rich cards, right into the channel conversation.
-
-> [!IMPORTANT]
-> messaging extensions are available only in [Public Developer Preview](~/resources/general/developer-preview). Many details in this document are subject to change.
 
 ![Example of messaging extension card](~/assets/images/compose-extensions/ceexample.png)
 
