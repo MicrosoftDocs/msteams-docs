@@ -1,7 +1,8 @@
 ---
 title: Publish your app to AppSource
-description: Describes the process of publishing your app to AppSource (formerly Office Store
+description: Describes the process of publishing your app to AppSource (formerly Office Store)
 keywords: teams publish store office publishing AppSource
+ms.date: 01/31/2018
 ---
 
 # Publish your Microsoft Teams app to AppSource
