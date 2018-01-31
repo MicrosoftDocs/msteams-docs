@@ -15,7 +15,7 @@ The follow metadata is required in your manifest.json file and for Seller Dashbo
 |Support link|URL|||✔|A link to support material for end users. Can be HTTP or HTTPS.|
 |Privacy link|URL||`developer.privacyUrl`|✔|A link to your privacy policy (HTTPS).|
 |Video link|URL|||Optional|A link to a video about your app.|
-|EULA|.doc, .pdf, etc.|||Optional|The Office Store requires an end-user licensing agreement (EULA), which you can provide as an attachment. If you choose not to submit a EULA, one will be provided on your behalf.| 
+|EULA|.doc, .pdf, etc.|||Optional|The Office Store requires an end-user licensing agreement (EULA), which you can provide as an attachment. If you choose not to submit a EULA, one will be provided on your behalf.|
 |Terms of service|URL||`developer.termsOfServiceUrl`||A link to your terms of service (HTTPS).|
 
 ## Localized content
