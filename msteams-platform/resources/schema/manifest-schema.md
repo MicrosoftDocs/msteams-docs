@@ -175,7 +175,7 @@ A unique identifier for this app in reverse domain notation; for example, com.ex
 
 **Required**
 
-Specifies information about your company. For apps submitted to the Office Store, these values must match the information in your Office Store entry.
+Specifies information about your company. For apps submitted to AppSource (formerly Office Store), these values must match the information in your AppSource entry.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -188,7 +188,7 @@ Specifies information about your company. For apps submitted to the Office Store
 
 **Required**
 
-The name of your app experience, displayed to users in the Teams experience. For apps submitted to the Office Store, these values must match the information in your Office Store entry.
+The name of your app experience, displayed to users in the Teams experience. For apps submitted to AppSource, these values must match the information in your AppSource entry.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -199,7 +199,7 @@ The name of your app experience, displayed to users in the Teams experience. For
 
 **Required**
 
-Describes your app to users. For apps submitted to the Office Store, these values must match the information in your Office Store entry.
+Describes your app to users. For apps submitted to AppSource, these values must match the information in your AppSource entry.
 
 Ensure that your description accurately describes your experience and provides information to help potential customers understand what your experience does. You should also note, in the full description, if an external account is required for use.
 
