@@ -71,6 +71,6 @@ To stop your bot receiving messages, go to your Bot Dashboard and edit the Micro
 
 To remove your bot completely from Teams, go to your Bot Dashboard and edit the Microsoft Teams channel. Choose the **Delete** button at the bottom. This prevents users from discovering, adding, or interacting with your bot. Note that this does not remove the bot from other users' Teams instances, although it will cease functioning for them as well.
 
-## Removing your bot from the Office Store
+## Removing your bot from AppSource
 
-If you want to remove your bot from your Teams app in the Office Store, you must remove the bot from your app manifest and resubmit your app for validation. See [Publish your Microsoft Teams app to the Office Store](~/publishing/apps-publish) for more information.
+If you want to remove your bot from your Teams app in AppSource (formerly Office Store), you must remove the bot from your app manifest and resubmit your app for validation. See [Publish your Microsoft Teams app to AppSource](~/publishing/apps-publish) for more information.

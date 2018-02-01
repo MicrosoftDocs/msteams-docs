@@ -21,7 +21,7 @@ How would you use messaging extensions? Here are a few possibilities:
 
 ## Add a messaging extension to your app
 
-Building a messaging extension involves implementing familiar Microsoft Teams developer-platform concepts like bot APIs, rich cards, and tabs.
+Building a messaging extension involves implementing familiar Microsoft Teams developer platform concepts like bot APIs, rich cards, and tabs.
 
 At its core, a messaging extension is a cloud-hosted service that listens to user requests and responds with structured data, such as cards. You integrate your service with Microsoft Teams via Bot Framework `Activity` objects. Our .NET and Node.js [extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) can help you add messaging extension functionality to your app.
 
@@ -131,7 +131,7 @@ In the app manifest, your command item is an object with the following structure
   ]
 }
 ```
- 
+
 ### Test via uploading
 
 You can test your messaging extension by uploading your app. See [Uploading your app in a team](~/concepts/apps/apps-upload) for details.
@@ -148,7 +148,7 @@ Most of your work involves the `onQuery` event, which handles all interactions i
 If you set `canUpdateConfiguration` to `true` in the manifest, you enable the **Settings** menu item for your messaging extension and must also handle `onQuerySettingsUrl` and `onSettingsUpdate`.
 
 > [!IMPORTANT]
-> Messaging extensions that use `canUpdateConfiguration` can't be published in the Office Store at this time.
+> Messaging extensions that use `canUpdateConfiguration` can't be published in AppSource at this time.
 
 ### Handle onQuery events
 

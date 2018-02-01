@@ -14,10 +14,10 @@ Microsoft Teams apps can contain one or more capabilities, and the ways to run o
 
 For purely local or local Teams testing, you run the experience from your own computer. This allows you to actually compile and run within your IDE, and take full advantage of such techniques as breakpoints and step debugging. For production-scale debugging and testing, we recommend that you follow your own company guidelines to ensure you are able to support testing, staging, and deployment through your own processes.
 
-In general, too, we recommend you utilize multiple manifests and packages to allow you to maintain separation between production and development services. For example, you might choose to register separate development and production bots and create appropriate packages to upload them in your testing environment. We also recommend you upload and test your production package before submitting to the Office Store or distributing to customers.
+In general, too, we recommend you utilize multiple manifests and packages to allow you to maintain separation between production and development services. For example, you might choose to register separate development and production bots and create appropriate packages to upload them in your testing environment. We also recommend you upload and test your production package before submitting to AppSource (formerly Office Store) or distributing to customers.
 
 > [!NOTE]
-> None of these testing solutions fully replicates the end-user experience for an app distributed through the Office Store, because the app installation process does some of the capability checks, such as scope, during installation.
+> None of these testing solutions fully replicates the end-user experience for an app distributed through AppSource, because the app installation process does some of the capability checks, such as scope, during installation.
 
 ## Purely local
 
