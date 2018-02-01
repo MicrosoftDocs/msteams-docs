@@ -2,8 +2,8 @@
 title: Publishing guidance
 description: Describes the process of publishing your Microsoft Teams app to AppSource
 keywords: teams publish store office publishing
+ms.date: 01/31/2018
 ---
-
 # Use the Seller Dashboard to submit your Microsoft Teams app
 
 For a general overview of the Microsoft Teams app submission flow, see [Publish your Microsoft Teams app to AppSource](~/publishing/apps-publish).
@@ -14,7 +14,7 @@ In the Seller Dashboard:
 
    ![Office Seller Dashboard entry point](~/assets/images/submission/sellerdashboardofficeentry.png)
 
-2. Choose **Add a new app** to initiate the submission process.
+2. Choose **Add a new app** to initiate the submission process. If you have an existing app its tile should be displayed on this page. Choose this tile for re-submitting an existing app. The following steps assume that you are creating a new app.
 
    ![Office Seller Dashboard Add an app button](~/assets/images/submission/sellerdashboardaddapp.png)
 
@@ -28,10 +28,11 @@ In the Seller Dashboard:
 
    * **App package** – Upload your properly formatted 1.0 manifest. Note that the manifest information prepopulates many of the following fields.
    * **Submission title** – The name of your app.
-   * **Version** – Autopopulated from the manifest.
+   * **Version** – Auto-populated from the manifest.
    * **Release date** – By default, today's date. This means that your app is eligible to be published as soon as it passes validation. If you want to delay publication, specify the date. Please note: Validation times vary, and there is no guarantee the validation process will be done by the specified date.
    * **Category** – You can select up to three categories in which to appear in AppSource. Please select ones that best match your experience.
    * **Testing notes** – Please ensure you provide enough information for our validation team to successfully load and test your experience. This includes providing sign-in instructions and test accounts, as well as any other notes that might assist in the review of your product.
+   * **My app calls, support, contains, or uses cryptography or encryption** – This checkbox helps to ensure that your product is not using cryptography in a way that would prohibit distribution through the Office Store. See [Export restrictions on cryptography](https://docs.microsoft.com/en-us/windows/uwp/security/export-restrictions-on-cryptography) for a detailed explanation.
    * **My app calls, support, contains, or uses cryptography or encryption** – This checkbox helps to ensure taht your product is not using cryptography in a way that would prohibit distribution through AppSource. See [Export restrictions on cryptography](https://docs.microsoft.com/en-us/windows/uwp/security/export-restrictions-on-cryptography) for a detailed explanation.
    * **App logo** – Use your full-color 96&times;96 icon.
    * **Support document link** – The URL for support content for your app.
