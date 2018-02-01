@@ -3,14 +3,13 @@ title: Office 365 Connectors
 description: Describes how to get started with Office 365 Connectors in Microsoft Teams
 keywords: teams o365 connector
 ---
-
 # Office 365 Connectors for Microsoft Teams
 
 Office 365 Connectors are a great way to push your app's rich content into Microsoft Teams. Any user can connect a team to services like Trello, GitHub, Bing News, or Twitter and get notified of the team's activity in that service. From tracking a team's progress in Trello to following important hashtags in Twitter, Office 365 Connectors help your team to stay in sync and get more done.
 
 You can even add actions to your content, turning them into *actionable messages*, so that users can complete tasks directly in the channel. (To learn more about actionable messages in general, see [Actionable messages in Outlook, Office 365 Groups, and Microsoft Teams](https://docs.microsoft.com/en-us/outlook/actionable-messages/).)
 
->**New:** With Microsoft Teams apps, you can add your existing Office 365 Connector or build a new one to include in Microsoft Teams. See [Build your own Connector](https://docs.microsoft.com/en-us/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector) for more information. 
+>**New:** With Microsoft Teams apps, you can add your existing Office 365 Connector or build a new one to include in Microsoft Teams. See [Build your own Connector](https://docs.microsoft.com/en-us/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector) for more information.
 
 ## Access existing Office 365 Connectors from Microsoft Teams
 
@@ -215,14 +214,14 @@ The following steps use PowerShell. We assume that you have this installed and a
 
 ## Registering your Connector
 
-With Microsoft Teams apps, you can distribute your registered Connector as part of your app package. Whether as a standalone solution, or one of several [capabilities](~/overview#apps-in-microsoft-teams) that your experience enables in Teams, you can [package](~/concepts/apps/apps-package) and [publish](~/publishing/apps-publish) your Connector as part of your Office Store submission, or you can provide it to users directly for uploading within Teams.
+With Microsoft Teams apps, you can distribute your registered Connector as part of your app package. Whether as a standalone solution, or one of several [capabilities](~/overview#apps-in-microsoft-teams) that your experience enables in Teams, you can [package](~/concepts/apps/apps-package) and [publish](~/publishing/apps-publish) your Connector as part of your AppSource submission, or you can provide it to users directly for uploading within Teams.
 
 To distribute your Connector, you need to register by using the [Connectors Developer Dashboard](https://go.microsoft.com/fwlink/?LinkID=780623). To have your Connector work in Microsoft Teams, select **Microsoft Teams** under **Enable this integration for**.
 
 <img alt="Screenshot of enabling the Connector for Microsoft Teams" src="~/assets/images/connectors/connector_developer_portal.png" height="185" width="336">
 
 > [!IMPORTANT]
-> After you choose **Save** in the Connectors Developer Dashboard, your Connector is registered. Do not choose **Publish to Store** (which appears after you choose **Save**); if you want to publish your Connector in the Office Store, follow the instructions in [Publish your Microsoft Teams app to the Office Store](~/publishing/apps-publish).
+> After you choose **Save** in the Connectors Developer Dashboard, your Connector is registered. Do not choose **Publish to Store** (which appears after you choose **Save**); if you want to publish your Connector in AppSource, follow the instructions in [Publish your Microsoft Teams app to AppSource](~/publishing/apps-publish).
 
 You can download the auto-generated Teams app manifest from the portal. Before you can use it to test or publish your app, though, you must do the following:
 
@@ -291,4 +290,4 @@ To verify that an `HttpPOST` action is working correctly, use your [custom incom
 > [!NOTE]
 > Currently, we do not support users configuring your Connector externally via the **Connect to Office 365** button. Users must visit Microsoft Teams first to add a Connector.
 
-When your app is ready for submission, follow the process to [publish your app to the Office Store](~/publishing/apps-publish).
+When your app is ready for submission, follow the process to [publish your app to AppSource](~/publishing/apps-publish).

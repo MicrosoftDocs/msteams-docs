@@ -10,7 +10,7 @@ keywords: teams apps faq faqs
 
 ### What technology should I use to build my bot or tab?
 
-Tabs are web content that you build and deploy, so you can use any technology you want.  
+Tabs are web content that you build and deploy, so you can use any technology you want.
 
 Because bots must be built with the Bot Framework, we recommend you use one of the languages supported by the Bot Builder SDK: .NET/C# or Node.js. Although the Bot Framework also provides REST APIs usable by any language you choose, the SDK provides additional functionality and helper functions to simplify the development process.
 
@@ -36,13 +36,13 @@ Bots in channels receive messages only when they are explicitly @mentioned. Ther
 
 ### How can I distribute my Microsoft Teams app?
 
-Microsoft Teams apps can be distributed to end users via the Office Store and the in-product app-discovery system. For more information, see [Publish your Microsoft Teams app to the Office Store](~/publishing/apps-publish).
+Microsoft Teams apps can be distributed to end users via AppSource and the in-product app-discovery system. For more information, see [Publish your Microsoft Teams app to AppSource](~/publishing/apps-publish).
 
 Microsoft Teams app packages can be manually distributed to your colleagues or other end users and uploaded by them via the [uploading process](~/concepts/apps/apps-upload). Please note that apps distributed in this format are not tested, validated, or trusted by Microsoft.
 
-### What account do I use to create an Office Store or Dev Center account?
+### What account do I use to create an AppSource or Dev Center account?
 
-A Microsoft Store developer account is based on a [Microsoft account](https://account.microsoft.com/account), so you should use an existing Microsoft account or create one for this purpose.
+An AppSource developer account is based on a [Microsoft account](https://account.microsoft.com/account), so you should use an existing Microsoft account or create one for this purpose.
 
 If you already have a Windows Store developer account, you must use the original owner Microsoft account for the Seller Dashboard experience. Although the Windows Store portal allows Azure Active Directory association, the Seller Dashboard is a separate system that works only with your original Microsoft account.
 

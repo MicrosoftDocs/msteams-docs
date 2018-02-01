@@ -2,12 +2,10 @@
 title: Activity feed
 description: Describes the activity feed and how to use it in your apps
 keywords: teams activity feed
+msdate: 01/31/2018
 ---
 
 # Notify users through the activity feed in Microsoft Teams
-
-> [!NOTE]
-> Activity feed support is available only in the [Public Developer Preview](~/resources/general/developer-preview). Additionally, many features in this document are under construction and subject to change.
 
 The activity feed in Microsoft Teams is the user's single inbox for all activity across Teams. The feed aggregates important content from the following:
 
@@ -17,9 +15,6 @@ The activity feed in Microsoft Teams is the user's single inbox for all activity
 
 If your app posts cards and other messages into a channel, they'll automatically show up in the user's feed if he or she has followed that channel.
 
-> [!NOTE]
-> The following features are coming soon to the Public Developer Preview.
-
 Additionally, you can also send personal (1:1 chat) messages into the feed as preview cards summarizing your app's activity. You can construct the message such that choosing the card navigates the user straight to the message or object that triggered the notification, such as an entity in a tab. This allows the user to see the full content of the activity.
 
 ## Sending content to the activity feed
@@ -27,6 +22,7 @@ Additionally, you can also send personal (1:1 chat) messages into the feed as pr
 Activity feed notification leverages your existing integration with the Bot Framework APIs.  You can flag specific messages to generate notifications which appear in the activity feed. This allows generating higher levels of engagement by creating alerts on web/desktop and mobile apps.
 
 When constructing your message, the following fields should be populated so that the correct preview content can be shown in the feed:
+
 * `message.text`, which shows up as the activity title
 * `message.summary`, which shows up as the activity text
 
@@ -35,7 +31,7 @@ When constructing your message, the following fields should be populated so that
 
 In addition to simply appearing in the feed, your app can also encode a deep link URL to an entity, such as your app’s tab. This drives user engagement to your app’s tab by allowing "one-click" navigation to that tab’s content.
 
-#### REST API sample
+### REST API sample
 
 For a message to be eligible to be included in the feed, simply mark an existing bot message with a special property, which indicates it should generate a notification:
 
