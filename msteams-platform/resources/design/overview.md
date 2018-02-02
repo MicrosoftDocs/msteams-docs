@@ -13,40 +13,40 @@ Let's walk you through the kinds of experiences you can build using Microsoft Te
 
 ### Immersive experience
 
-Our platform places content and conversations side by side. [Learn more](~/resources/design/framework/basics)
+Our platform places content and conversations side by side. [Learn more](~/msteams-platform/resources/design/framework/basics)
 
-<img width="530" src="~/assets/images/get-started/01_homepage_immersive-experience.png" /><br/><br/>
+<img width="530" src="~/msteams-platform/assets/images/get-started/01_homepage_immersive-experience.png" /><br/><br/>
 
 ### Tabs and conversations
 
-Tabs give your app a dedicated canvas that allows people to jump between conversations and your experience. [Learn more](~/resources/design/framework/tabs)
+Tabs give your app a dedicated canvas that allows people to jump between conversations and your experience. [Learn more](~/msteams-platform/resources/design/framework/tabs)
 
-<img width="530" src="~/assets/images/get-started/02_homepage_tabs-and-conversations.png" /><br/><br/>
+<img width="530" src="~/msteams-platform/assets/images/get-started/02_homepage_tabs-and-conversations.png" /><br/><br/>
 
 ### Customizable cards
 
-Cards let you to surface important tasks, information, and reminders in actionable ways. [Learn more](~/resources/design/framework/cards)
+Cards let you to surface important tasks, information, and reminders in actionable ways. [Learn more](~/msteams-platform/resources/design/framework/cards)
 
-<img width="530" src="~/assets/images/get-started/03_homepage_cards.png" /><br/><br/>
+<img width="530" src="~/msteams-platform/assets/images/get-started/03_homepage_cards.png" /><br/><br/>
 
 ### Bot framework
 
-Our framework offers a natural language UX that can interact with your services. [Learn more](~/resources/design/framework/bots)
+Our framework offers a natural language UX that can interact with your services. [Learn more](~/msteams-platform/resources/design/framework/bots)
 
-<img width="530" src="~/assets/images/get-started/04_homepage_bots.png" /><br/><br/>
+<img width="530" src="~/msteams-platform/assets/images/get-started/04_homepage_bots.png" /><br/><br/>
 
 ### Instant notifications
 
-The activity feed displays notifications for your users. [Learn more](~/resources/design/framework/activity-feed)
+The activity feed displays notifications for your users. [Learn more](~/msteams-platform/resources/design/framework/activity-feed)
 
-<img width="530" src="~/assets/images/get-started/05_homepage_instant-notifications.png" /><br/><br/>
+<img width="530" src="~/msteams-platform/assets/images/get-started/05_homepage_instant-notifications.png" /><br/><br/>
 
 ### Messaging extensions
 
-Messaging extensions are quick and easy shortcuts to key components of your service. [Learn more](~/resources/design/framework/compose-extensions)
+Messaging extensions are quick and easy shortcuts to key components of your service. [Learn more](~/msteams-platform/resources/design/framework/compose-extensions)
 
-<img width="530" src="~/assets/images/get-started/06_homepage_compose-extensions.png" /><br/><br/>
+<img width="530" src="~/msteams-platform/assets/images/get-started/06_homepage_compose-extensions.png" /><br/><br/>
 
 ## Ready to get started
 
-The framework page has all the information you need to build for our platform. [Get Started](~/resources/design/framework/basics).
+The framework page has all the information you need to build for our platform. [Get Started](~/msteams-platform/resources/design/framework/basics).

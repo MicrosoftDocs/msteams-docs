@@ -20,7 +20,7 @@ Think of a card as a response to a user question or a setting. A card can respon
 
 A card could include any of the following elements:<br />
 
-[!include[Card anatomy](~/includes/design/card-image-anatomy.html)]
+[!include[Card anatomy](~/msteams-platform/includes/design/card-image-anatomy.html)]
 
 1. **Envelope text**: Best used for chat messages. For example, if you want a bot to say: “Here’s what I found!” or “Time for your 1:00 news digest”, that message is best displayed in envelope text.
 
@@ -51,19 +51,19 @@ A card could include any of the following elements:<br />
 
 Our largest card. Best used for articles, long descriptions, or scenarios where your image is telling most of the story.
 
-[!include[Card anatomy](~/includes/design/card-image-hero.html)]
+[!include[Card anatomy](~/msteams-platform/includes/design/card-image-hero.html)]
 
 ### Thumbnail
 
 Short and sweet. These cards are ideal for short answers, or if you want to return several cards at once so the user can choose from a bunch of options. We think these are a great way to deep link to another tab or a web service.
 
-[!include[Card anatomy](~/includes/design/card-image-thumbnail.html)]
+[!include[Card anatomy](~/msteams-platform/includes/design/card-image-thumbnail.html)]
 
 ### Sign in
 
 Some services require users to sign in independently of our authentication. In that event, you would present a sign-in card before the user can connect to your service.
 
-[!include[Card anatomy](~/includes/design/card-image-signin.html)]
+[!include[Card anatomy](~/msteams-platform/includes/design/card-image-signin.html)]
 
 > [!TIP]
 > Limit the occurrences of an additional sign-in card since they pose a significant speed bump for new users.
@@ -78,7 +78,7 @@ We also have standard card types that are best used when you want to present sev
 
 Best used for articles, shopping, and browsing through cards.
 
-[!include[Card anatomy](~/includes/design/card-image-carousel.html)]
+[!include[Card anatomy](~/msteams-platform/includes/design/card-image-carousel.html)]
 
 > [!TIP]
 > The carousel will be the max height of your largest card. We recommend using the same card type and content fields throughout.
@@ -87,19 +87,19 @@ Best used for articles, shopping, and browsing through cards.
 
 Best used for news, digests, and whenever you want the user to view multiple cards at once. We recommend using thumbnail cards for digests.
 
-[!include[Card anatomy](~/includes/design/card-image-digest.html)]
+[!include[Card anatomy](~/msteams-platform/includes/design/card-image-digest.html)]
 
 ### Lists
 
 Lists are a great way to present a scannable set of objects in a “pick one of these” scenario. Lists are best used for items that don’t need a lot of explanation.
 
-[!include[Card anatomy](~/includes/design/card-image-list.html)]
+[!include[Card anatomy](~/msteams-platform/includes/design/card-image-list.html)]
 
 ### Bubble merge
 
 Some interesting effects can be achieved by sending one hero and several thumbnails in quick succession. We recommend this approach when you want to serve a main result but include a few more related items.
 
-[!include[Card anatomy](~/includes/design/card-image-bubble-merge.html)]
+[!include[Card anatomy](~/msteams-platform/includes/design/card-image-bubble-merge.html)]
 
 ---
 

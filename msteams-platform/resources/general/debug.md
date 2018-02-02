@@ -9,8 +9,8 @@ keywords: teams run debug apps
 Microsoft Teams apps can contain one or more capabilities, and the ways to run or even host them may be different. When it comes to debugging, in general, we have the following ways to run your Microsoft Teams app:
 
 * **Purely local**&emsp;For bots, you can test your experience in the Bot Emulator. For other content, you can run locally in your browser and address content through `http://localhost`.
-* **Locally hosted, in Teams**&emsp;This involves running locally with tunneling software and [creating a package](~/concepts/apps/apps-package) to [upload](~/concepts/apps/apps-upload) into Teams. This allows you to easily run and step-debug your app within the Teams experience.
-* **Cloud-hosted, in Teams**&emsp;This truly simulates (or is) production-level support for a Teams app experience. It involves uploading your solution to your externally accessible server or cloud provider of choice (we recommend Azure, of course) and [creating a package](~/concepts/apps/apps-package) to [upload](~/concepts/apps/apps-upload) into Teams.
+* **Locally hosted, in Teams**&emsp;This involves running locally with tunneling software and [creating a package](~/msteams-platform/concepts/apps/apps-package) to [upload](~/msteams-platform/concepts/apps/apps-upload) into Teams. This allows you to easily run and step-debug your app within the Teams experience.
+* **Cloud-hosted, in Teams**&emsp;This truly simulates (or is) production-level support for a Teams app experience. It involves uploading your solution to your externally accessible server or cloud provider of choice (we recommend Azure, of course) and [creating a package](~/msteams-platform/concepts/apps/apps-package) to [upload](~/msteams-platform/concepts/apps/apps-upload) into Teams.
 
 For purely local or local Teams testing, you run the experience from your own computer. This allows you to actually compile and run within your IDE, and take full advantage of such techniques as breakpoints and step debugging. For production-scale debugging and testing, we recommend that you follow your own company guidelines to ensure you are able to support testing, staging, and deployment through your own processes.
 
@@ -51,13 +51,13 @@ To use ngrok in your project, and depending on the capabilities you are using, y
 For example, for bots registered in the Microsoft Bot Framework, update the bot's messaging endpoint to use this new ngrok endpoint&mdash;for example, `https://2d1224fb.ngrok.io/api/messages`. You can validate that ngrok is working, too, by testing bot response in the Bot Framework portal's Test chat window. (Again, like the emulator, this test doesn't allow you to access Teams-specific functionality.)
 
 > [!NOTE]
-> To update the messaging endpoint for a bot, you must use the Bot Framework &ndash; click on your bot in [your list of bots in Bot Framework](https://dev.botframework.com/bots). You do not need to migrate your bot to Microsoft Azure; [more information on this here](~/concepts/bots/bots-create#bots-and-microsoft-azure).
+> To update the messaging endpoint for a bot, you must use the Bot Framework &ndash; click on your bot in [your list of bots in Bot Framework](https://dev.botframework.com/bots). You do not need to migrate your bot to Microsoft Azure; [more information on this here](~/msteams-platform/concepts/bots/bots-create#bots-and-microsoft-azure).
 
 Please remember that any time you change values in the manifest.json, you need to repackage and re-upload into Teams.
 
 ## Cloud-hosted
 
-You can use any externally addressable service to host your development and production code and their HTTPS endpoints. There is no expectation that your capabilities reside on the same service&mdash;it's your project, so it's up to you. We do require that all domains being accessed from your Microsoft Teams apps be listed in the [`validDomains`](~/resources/schema/manifest-schema#validdomains) object in the manifest.json file.
+You can use any externally addressable service to host your development and production code and their HTTPS endpoints. There is no expectation that your capabilities reside on the same service&mdash;it's your project, so it's up to you. We do require that all domains being accessed from your Microsoft Teams apps be listed in the [`validDomains`](~/msteams-platform/resources/schema/manifest-schema#validdomains) object in the manifest.json file.
 
 > [!NOTE]
 > To ensure a secure environment, we urge you to be explicit about the exact domain and subdomains you reference&mdash;and those domains must be in your control. For example, `*.azurewebsites.net` would not be allowed, but `contoso.azurewebsites.net` would.
@@ -66,5 +66,5 @@ You can use any externally addressable service to host your development and prod
 
 In general, to load and run your experience within Microsoft Teams, you need to create a package and upload it into Teams, using the following guidance:
 
-* [Create the package for your Microsoft Teams app](~/concepts/apps/apps-package)
-* [Upload your app in Microsoft Teams](~/concepts/apps/apps-upload)
+* [Create the package for your Microsoft Teams app](~/msteams-platform/concepts/apps/apps-package)
+* [Upload your app in Microsoft Teams](~/msteams-platform/concepts/apps/apps-upload)

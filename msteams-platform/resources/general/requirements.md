@@ -17,9 +17,9 @@ All tab content, including configuration, content, and tab-removal pages must me
   `<script src="https://statics.teams.microsoft.com/sdk/v1.0/js/MicrosoftTeams.min.js" />`
 
 * After your page has successfully loaded, call `microsoftTeams.initialize()` to display your page. Microsoft Teams will not display your page unless you do so.
-* All domains for pages you display in your tabs must be listed in the manifest's `validDomains` list. See [validDomains](~/resources/schema/manifest-schema#validdomains) in the manifest schema reference for more information.
+* All domains for pages you display in your tabs must be listed in the manifest's `validDomains` list. See [validDomains](~/msteams-platform/resources/schema/manifest-schema#validdomains) in the manifest schema reference for more information.
 
-> Hitting problems? See the [troubleshooting guide](~/troubleshoot/troubleshoot).
+> Hitting problems? See the [troubleshooting guide](~/msteams-platform/troubleshoot/troubleshoot).
 >
 > [!TIP]
 > For developers using TypeScript, Microsoft Teams provides a [definition file](https://statics.teams.microsoft.com/sdk/v1.0/types/MicrosoftTeams.d.ts) to enable IntelliSense or similar support from your code editor as well as compile-time type checking as part of your build.

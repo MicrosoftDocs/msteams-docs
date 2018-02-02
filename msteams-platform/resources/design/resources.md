@@ -9,4 +9,4 @@ We’ve included some tools and resources to help you get started.
 
 ## Downloads
 
-[!include[Resources](~/includes/design/resources.html)]
+[!include[Resources](~/msteams-platform/includes/design/resources.html)]

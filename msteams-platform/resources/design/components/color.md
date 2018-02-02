@@ -11,7 +11,7 @@ Using our approved neutral palette for backgrounds, notifications, text, and but
 
 Our most commonly-used text color. We use it at five levels of opacity for text. Text should mainly be used at 100%, 74%, 64% opacity since it is accessible. Text at 52% and 36% should be used sparingly since it is not accessible.
 
-[!include[Appblack color and text](~/includes/design/color-image-appblack-text.html)]
+[!include[Appblack color and text](~/msteams-platform/includes/design/color-image-appblack-text.html)]
 
 1. 100% - Headers and base text
 2. 74% - Labels, subheads, attributions, and icon buttons
@@ -21,7 +21,7 @@ Our most commonly-used text color. We use it at five levels of opacity for text.
 
 We also use `$app-black` at other opacities for some UI elements:
 
-[!include[Appblack color and text](~/includes/design/color-image-appblack-ui.html)]
+[!include[Appblack color and text](~/msteams-platform/includes/design/color-image-appblack-ui.html)]
 
 1. 14% - Banner backgrounds
 2. 5% - Disabled button and card borders
@@ -48,4 +48,4 @@ We also use `$app-black` at other opacities for some UI elements:
 
 ### Download color swatches
 
-<a href="~/assets/downloads/MicrosoftTeams-ColorSwatches.pdf" target="_blank">Download</a>
+<a href="~/msteams-platform/assets/downloads/MicrosoftTeams-ColorSwatches.pdf" target="_blank">Download</a>
