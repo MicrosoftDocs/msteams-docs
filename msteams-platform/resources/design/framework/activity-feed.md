@@ -29,7 +29,7 @@ A notification that alerts someone about an important date (a due date or a meet
 
 Your notifications can contain any of the following components:
 
-![Framework Feed](~/assets/images/framework/framework_feed.png)
+![Framework Feed](~/msteams-platform/assets/images/framework/framework_feed.png)
 
 1. **Sender**:
    Usually the name of your app (for example, when a bot wants to send someone an update or notification).

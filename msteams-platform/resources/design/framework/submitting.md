@@ -18,7 +18,7 @@ Here’s everything you need to submit your app to the Microsoft Seller Dashboar
 > * Go to the Microsoft Seller Dashboard and click the Microsoft Teams logo.
 > * Select “Upload manifest” then upload your zip file containing your manifest and your icons (details below).
 
-![App gallery](~/assets/images/framework/framework_submit_gallery.png)
+![App gallery](~/msteams-platform/assets/images/framework/framework_submit_gallery.png)
 
 ---
 
@@ -78,7 +78,7 @@ This icon should be 96x96 pixels. Your icon can be any color (or colors), but th
 #### Transparent outline icon
 This icon should be 20x20 pixels. Your transparent outline icon must contain only white and transparency (no other colors). The icon can be white with transparent background or transparent with a white background. The outline icon should not have extra padding surrounding the icon and should be as tightly cropped as possible while still maintaining the 20x20 dimensions.
 
-![Icon showcase](~/assets/images/framework/framework_submit_icon.png)
+![Icon showcase](~/msteams-platform/assets/images/framework/framework_submit_icon.png)
 
 ### Accent color
 
@@ -194,7 +194,7 @@ Provide support links.
 
 Include screenshots of your app for your profile page (you can add up to five, total). Specify your language, release date, category, and pricing (again, select the ‘Free’ option here).
 
-[!include[Submit profile](~/includes/design/submit-image-profile.html)]
+[!include[Submit profile](~/msteams-platform/includes/design/submit-image-profile.html)]
 
 ---
 

@@ -25,7 +25,7 @@ We use your full-color square icon and apply rounded corners for apps, hexagonal
 
 Provide one line of text that summarizes your app’s capabilities and gives initial directions about installation.
 
-![Search for app](~/assets/images/framework/framework_search.png)
+![Search for app](~/msteams-platform/assets/images/framework/framework_search.png)
 
 > [!TIP]
 > Icons render at 32px in the search auto-suggest menu, so make sure your icon is clearly legible at that size.

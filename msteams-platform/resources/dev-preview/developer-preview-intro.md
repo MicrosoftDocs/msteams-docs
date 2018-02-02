@@ -11,6 +11,6 @@ Features included in preview may not be complete and may undergo changes before 
 
 ## For more information
 
-[How do I get access?](~/resources/dev-preview/developer-preview)
+[How do I get access?](~/msteams-platform/resources/dev-preview/developer-preview)
 
-[What are the features in Developer Preview?](~/resources/dev-preview/developer-preview-features)
+[What are the features in Developer Preview?](~/msteams-platform/resources/dev-preview/developer-preview-features)

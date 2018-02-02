@@ -8,7 +8,7 @@ ms.date: 12/10/2017
 # Reference: Manifest schema for Microsoft Teams
 
 > [!NOTE]
-> For help on migrating your v0.4 manifest to v1.x, see our [migration guide](~/resources/schema/manifest-schema-migrate).
+> For help on migrating your v0.4 manifest to v1.x, see our [migration guide](~/msteams-platform/resources/schema/manifest-schema-migrate).
 
 The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://statics.teams.microsoft.com/sdk/v1.2/manifest/MicrosoftTeams.schema.json`](https://statics.teams.microsoft.com/sdk/v1.2/manifest/MicrosoftTeams.schema.json). Versions 1.0 and 1.1 are also supported. 
 
@@ -163,7 +163,7 @@ This version string must follow the [semver](http://semver.org/) standard (MAJOR
 
 **Required** &ndash; Microsoft app ID
 
-The unique Microsoft-generated identifier for this app. If you have registered a bot via the Microsoft Bot Framework, or your tab's web app already signs in with Microsoft, you should already have an ID and should enter it here. Otherwise, you should generate a new ID at the Microsoft Application Registration Portal ([My Applications](https://apps.dev.microsoft.com)), enter it here, and then reuse it when you [add a bot](~/concepts/bots/bots-create).
+The unique Microsoft-generated identifier for this app. If you have registered a bot via the Microsoft Bot Framework, or your tab's web app already signs in with Microsoft, you should already have an ID and should enter it here. Otherwise, you should generate a new ID at the Microsoft Application Registration Portal ([My Applications](https://apps.dev.microsoft.com)), enter it here, and then reuse it when you [add a bot](~/msteams-platform/concepts/bots/bots-create).
 
 ## packageName
 
@@ -215,7 +215,7 @@ Ensure that your description accurately describes your experience and provides i
 
 **Required**
 
-Icons used within the Teams app. The icon files must be included as part of the upload package. See [Icons](~/concepts/apps/apps-package#icons) for more information.
+Icons used within the Teams app. The icon files must be included as part of the upload package. See [Icons](~/msteams-platform/concepts/apps/apps-package#icons) for more information.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -277,7 +277,7 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 
 ### bots: commandLists
 
-An optional list of commands that your bot can recommend to users. The object is an array (maximum of 2 elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. See [Bot menus](~/concepts/bots/bots-menus) for more information.
+An optional list of commands that your bot can recommend to users. The object is an array (maximum of 2 elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. See [Bot menus](~/msteams-platform/concepts/bots/bots-menus) for more information.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -287,7 +287,7 @@ An optional list of commands that your bot can recommend to users. The object is
 ## connectors
 
 *Optional*
-App support for connectors is only available in the [Public Developer Preview](~/resources/general/developer-preview). Connectors themselves are generally available.
+App support for connectors is only available in the [Public Developer Preview](~/msteams-platform/resources/general/developer-preview). Connectors themselves are generally available.
 
 The `connectors` block defines an Office 365 Connector for the app.
 
@@ -302,7 +302,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 
 *Optional*
 
->[Public Developer Preview](~/resources/general/developer-preview) only
+>[Public Developer Preview](~/msteams-platform/resources/general/developer-preview) only
 
 Defines a messaging extension for the app.
 

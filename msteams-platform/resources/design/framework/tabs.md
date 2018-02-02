@@ -52,13 +52,13 @@ Your logo is an important part of your identity and a connection with your users
 
 ## Tab layouts
 
-[!include[Tab layouts](~/includes/design/tab-layouts.html)]
+[!include[Tab layouts](~/msteams-platform/includes/design/tab-layouts.html)]
 
 ---
 
 ## Types of tabs
 
-[!include[Tab types](~/includes/design/tab-types.html)]
+[!include[Tab types](~/msteams-platform/includes/design/tab-types.html)]
 
 ---
 

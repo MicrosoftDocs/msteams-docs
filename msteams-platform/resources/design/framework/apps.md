@@ -37,7 +37,7 @@ Here are a few examples of tabs that showcase user-specific content
 
 If your app involves per-user settings, include them in a tab. Team settings are handled at the team level.
 
-![My view in an app](~/assets/images/framework/framework_apps_my-view.png)
+![My view in an app](~/msteams-platform/assets/images/framework/framework_apps_my-view.png)
 
 ### Customize your About tab
 
