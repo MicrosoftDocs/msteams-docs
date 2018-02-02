@@ -36,7 +36,7 @@ To make your bot experience Teams-ready:
 
 1. [Create an uploadable app package](~/concepts/apps/apps-package) and [upload it to a team](~/concepts/apps/apps-upload) to test it in action.
 2. Add [tabs](~/concepts/tabs/tabs-overview) or [other capabilities](~/concepts/apps/apps-overview#map-your-scenario-to-teams-capabilities) to make your experience shine in Teams.
-3. [Submit your final app package](~/publishing/apps-publish) for publication in the Office Store.
+3. [Submit your final app package](~/publishing/apps-publish) for publication in AppSource (formerly known as Office Store).
 
 > [!NOTE]
 > ## Bots and Microsoft Azure

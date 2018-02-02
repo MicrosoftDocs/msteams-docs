@@ -175,7 +175,7 @@ A unique identifier for this app in reverse domain notation; for example, com.ex
 
 **Required**
 
-Specifies information about your company. For apps submitted to the Office Store, these values must match the information in your Office Store entry.
+Specifies information about your company. For apps submitted to AppSource (formerly Office Store), these values must match the information in your AppSource entry.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -188,7 +188,7 @@ Specifies information about your company. For apps submitted to the Office Store
 
 **Required**
 
-The name of your app experience, displayed to users in the Teams experience. For apps submitted to the Office Store, these values must match the information in your Office Store entry.
+The name of your app experience, displayed to users in the Teams experience. For apps submitted to AppSource, these values must match the information in your AppSource entry.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -199,7 +199,7 @@ The name of your app experience, displayed to users in the Teams experience. For
 
 **Required**
 
-Describes your app to users. For apps submitted to the Office Store, these values must match the information in your Office Store entry.
+Describes your app to users. For apps submitted to AppSource, these values must match the information in your AppSource entry.
 
 Ensure that your description accurately describes your experience and provides information to help potential customers understand what your experience does. You should also note, in the full description, if an external account is required for use.
 
@@ -232,7 +232,7 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 ## configurableTabs
 
-*Optional*
+**Optional**
 
 Used when your app experience has a team channel tab experience that requires extra configuration before it is added.  Configurable tabs are supported only in the teams scope, and currently only one tab per app is supported.
 
@@ -246,7 +246,7 @@ The object is an array with all elements of the type `object`.  This block is re
 
 ## staticTabs
 
-*Optional*
+**Optional**
 
 Defines a set of tabs that can be "pinned" by default, without the user adding them manually. Static tabs declared in `personal` scope are always pinned to the app's personal experience. Static tabs declared in the `team` scope are currently not supported. 
 
@@ -262,7 +262,7 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 
 ## bots
 
-*Optional*
+**Optional**
 
 Defines a bot solution, along with optional information such as default command properties.
 
@@ -286,13 +286,14 @@ An optional list of commands that your bot can recommend to users. The object is
 
 ## connectors
 
-*Optional*
 App support for connectors is only available in the [Public Developer Preview](~/msteams-platform/resources/general/developer-preview). Connectors themselves are generally available.
+
+**Optional**
 
 The `connectors` block defines an Office 365 Connector for the app.
 
 The object is an array (maximum of 1 element) with all elements of type `object`. This block is required only for solutions that provide a Connector.
-     
+
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`connectorId`|String|64 characters|✔|A unique identifier for the Connector that matches its ID in the Connectors Developer Portal.|
@@ -300,9 +301,11 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 
 ## composeExtensions
 
-*Optional*
+
 
 >[Public Developer Preview](~/msteams-platform/resources/general/developer-preview) only
+
+**Optional**
 
 Defines a messaging extension for the app.
 
@@ -318,6 +321,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 |`commands`|Array of object|1|✔|Array of commands the messaging extension supports|
 
 ### composeExtensions.commands
+
 Your messaging extension should declare one or more commands. Each command appears in Microsoft Teams as a potential interaction from the UI-based entry point.
 
 Each command item is an object with the following structure:
@@ -335,7 +339,7 @@ Each command item is an object with the following structure:
 
 ## permissions
 
-*Optional*
+**Optional**
 
 An array of `string` which specifies which permissions the app requests, which lets end users know how the extension will perform. The following options are non-exclusive:
 
@@ -344,7 +348,7 @@ An array of `string` which specifies which permissions the app requests, which l
 
 ## validDomains
 
-*Optional*, except **Required** for apps with tabs
+**Optional**, except **Required** for apps with tabs
 
 A list of valid domains from which the extension expects to load any content. Domain listings can include wildcards, for example `*.example.com`. If your tab configuration or content UI needs to navigate to any other domain besides the one use for tab configuration, that domain must be specified here.
 

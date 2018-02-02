@@ -2,13 +2,17 @@
 title: Features in the Public Developer Preview
 description: Describes the features in the Public Developer Preview of Microsoft Teams
 keywords: teams preview developer features
-ms.date: 01/20/2018
+ms.date: 01/31/2018
 ---
 # Features in the Public Developer Preview for Microsoft Teams
 
+
 The following are available to users of the Public Developer Preview ring. See [What is the Public Developer Preview for Microsoft Teams?](~/msteams-platform/resources/general/developer-preview) for more information on enabling it for your development tenant.
 
-The following features are available in the Public Developer Preview as of December 12, 2017.
+As of January 31, 2018 there are no new features in Developer Preview. When this changes new items will be added here.
+
+
+See [What is the Public Developer Preview for Microsoft Teams?](~/resources/general/developer-preview) for more information on enabling it for your development tenant.
 
 ## Apps in Microsoft Teams
 
@@ -25,3 +29,4 @@ Messaging extensions make it easy for users to query for information from your s
 ### Activity feed
 
 Activity feed support allows apps to send messages using the Bot Framework without having to implement a conversational bot. It also enables your apps to mark messages as important and to post messages to the activity feed. Learn more [here](~/msteams-platform/concepts/activity-feed).
+

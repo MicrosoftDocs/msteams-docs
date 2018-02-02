@@ -48,7 +48,7 @@ Follow these links to build a great Teams bot:
 - [Create and register your bot in the Bot Framework](~/concepts/bots/bots-create): Take advantage of the great tools, documentation, and community provided by the Bot Framework team.
 - [Develop your bot](~/concepts/bots/bots-conversations): Add basic conversation flow and leverage channel-specific functionality. If you develop in .NET or Node.js, use our [extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) to simplify your work.
 - [Test your bot](~/concepts/bots/bots-test): Add your bot for 1:1 or team conversations to see it in action.
-- [Publish your bot](~/publishing/apps-publish): Create your Teams package, add other capabilities, and submit it to the Office Store.
+- [Publish your bot](~/publishing/apps-publish): Create your Teams package, add other capabilities, and submit it to AppSource.
 
 ## What you need to know: Teams App Studio
 *Teams App Studio* is a new tool that can help configure your manifest and your app. It also contains a React control library and configurable samples for cards.  See [Getting started with Teams App Studio](~/get-started/get-started-app-studio).

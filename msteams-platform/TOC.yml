@@ -69,9 +69,9 @@
 - name: Publishing
   href: ./publishing/apps-publish
   items:
-  - name: Office Store checklist
+  - name: AppSource checklist
     href: ./publishing/office-store-checklist
-  - name: Office Store guidance
+  - name: AppSource guidance
     href: ./publishing/office-store-guidance
 - name: Scenarios
   href: ./scenarios/scenarios
