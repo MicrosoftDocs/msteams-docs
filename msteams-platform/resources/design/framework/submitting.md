@@ -2,6 +2,7 @@
 title: Design Guidelines Reference
 description: Describes the guidelines for submitting your apps
 keywords: teams design guidelines reference framework submitting your apps audience
+msdate: 02/01/2018
 ---
 # Submit your app, expand your audience
 
