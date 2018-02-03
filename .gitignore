@@ -2,6 +2,7 @@ log/
 obj/
 _site/
 .optemp/
+.vscode/
 _themes*/
 _repo.*/
 _dependentPackages/
