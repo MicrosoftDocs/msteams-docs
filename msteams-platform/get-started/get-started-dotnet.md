@@ -1,7 +1,6 @@
 ---
 title: Get started with C#.NET
 description: Get started building great apps in Microsoft Teams using C#.NET
-description: Get started building great apps in Microsoft Teams using Node.js
 keywords: getting started .net c# csharp
 ms.date: 01/02/2018
 ---
