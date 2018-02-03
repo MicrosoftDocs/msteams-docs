@@ -43,12 +43,11 @@ Once you have your app running in the Teams platform, you can enhance it further
 To complete this tutorial, you need to get the following tools:
 
 * [Install Git](https://git-scm.com/downloads)
-* [Install Node.js and NPM](https://nodejs.org/)
-* Get any text editor. You can install and use [Visual Studio Code](https://code.visualstudio.com/download) for free.
+* [Install Visual Studio 2017](https://www.visualstudio.com/downloads/). You can install the free community edition.
 
-If you see options to add `git`, `node`, `npm`, and `code` to the PATH during installation, choose to do so. It will be handy.
+If you see an option to add `git` to the PATH during installation, choose to do so. It will be handy.
 
-Verify your installation by running the following in a terminal window:
+Verify your `git` installation by running the following in a terminal window:
 > [!NOTE]
 > Use the terminal window that you are most comfortable with on your platform. These examples use Bash, but will run on most platforms.
 
@@ -56,27 +55,9 @@ Verify your installation by running the following in a terminal window:
 $ git --version
 git version 2.15.0.windows.1
 
-$ node -v
-v6.11.4
-
-$ npm -v
-5.5.1
-
-$ gulp -v
-CLI version 1.4.0
-Local version 3.9.1
 ```
 
-You may have a different version of these applications. This should not be a problem.
-If you don't have gulp installed, do so now by running `npm install gulp -g` in your terminal window.
-
-If you have installed Visual Studio Code, you can verify the installation by running:
-
-```bash
-code --version
-1.18.1
-929bacba01ef658b873545e26034d1a8067445e9
-```
+Make sure to launch Visual Studio 2017 and install any updates if shown.
 
 You can continue to use this terminal window to run the commands that follow in this tutorial.
 
@@ -84,44 +65,22 @@ You can continue to use this terminal window to run the commands that follow in 
 
 ## Download the sample
 
-We have provided a [simple 'Hello, World!' sample](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) to get you started. In a terminal window, run the following command to clone the sample repository to your local machine:
+We have provided a [simple 'Hello, World!' sample](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) to get you started. In a terminal window, run the following command to clone the sample repository to your local machine:
 
 ```bash
-git clone https://github.com/OfficeDev/msteams-samples-hello-world-nodejs
+git clone https://github.com/OfficeDev/msteams-samples-hello-world-csharp
 ```
 
 > [!TIP]
-> You can [fork](https://help.github.com/articles/fork-a-repo/) this [repo](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) if you want to modify and check in your changes to GitHub for future reference.
+> You can [fork](https://help.github.com/articles/fork-a-repo/) this [repo](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) if you want to modify and check in your changes to GitHub for future reference.
 
 <a name="BuildRun"></a>
 
 ## Build and run the sample
 
-Once the repo is cloned, change to the directory that holds the sample:
+Once the repo is cloned, open the solution file `Microsoft.Teams.Samples.HelloWorld.sln` from the root directory of the sample and click `Build Solution` from the `Build` menu. You can run the sample by pressing `F5` or choosing `Start Debugging` from the `Debug` menu.
 
-```bash
-cd msteams-samples-hello-world-nodejs
-```
-
-In order to build the sample, you need to install all its dependencies. Run the following command to do this:
-
-```bash
-npm install
-```
-
-You should see a bunch of dependencies getting installed. Once they are finished, you can run the app:
-
-```bash
-npm start
-```
-
-When the hello-world app starts, it displays `App started listening on port 3333` in the terminal window.
-
-> [!NOTE]
-> If you see a different port number displayed in the message above, it is because you have a PORT environment variable set. You can continue to use that port or
-> change your environment variable to 3333.
-
-At this point, you can open a browser window and navigate to the following URLs to verify that all the app URLs are loading:
+When the app starts, you will see a browser window open with the root of the app launched. You can navigate to the following URLs to verify that all the app URLs are loading:
 
 * [http://localhost:3333](http://localhost:3333)
 * [http://localhost:3333/hello](http://localhost:3333/hello)
@@ -155,7 +114,10 @@ The app will only be available during the current session on your development ma
 
 ### Host in Azure
 
-Microsoft Azure lets you host your Node.js web application on a free tier using shared infrastructure. This will be sufficient to run this Hello-world sample.
+> [!WARN]
+> Update the following section to host .NET app in Azure using App Service.
+
+Microsoft Azure lets you host your Node.js web application on a free tier using shared infrastructure. This will be sufficient to run this `Hello World` sample.
 
 If you have never used Azure before, you can get started by creating a new free account.
 
@@ -177,9 +139,9 @@ After hosting your app, you need to do a few updates to your app before it is re
 
 ### The app manifest
 
-The app manifest is a file that tells the Microsoft Teams platform all about your app and the capabilities it provides your users. You will learn more about apps and their capabilities later [here](~/concepts/apps/apps-overview), but for now focus on the modifications to the manifest needed to load the hello-world app in Microsoft Teams.
+The app manifest is a file that tells the Microsoft Teams platform all about your app and the capabilities it provides your users. You will learn more about apps and their capabilities later [here](~/concepts/apps/apps-overview), but for now focus on the modifications to the manifest needed to load the `Hello World` app in Microsoft Teams.
 
-You can find the manifest file at `src/manifest.json` within the hello-world sample. Please follow these steps to make the appropriate changes:
+You can find the manifest file at `Manifest/manifest.json` within the root directory of the project `Microsoft.Teams.Samples.HelloWorld.Web`. Please follow these steps to make the appropriate changes:
 
 #### Step 1: Change the APP ID in the manifest
 
@@ -191,13 +153,13 @@ Make a note of the **APP ID** and at least one password generated by the Bot Fra
 
 Now edit the manifest file and set the value of the `"id"` property to the AppID returned by BotFramework.
 
-[!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L1-L12)]
+[!code-json[Manifest file](~/../_msteams-samples-hello-world-csharp/Microsoft.Teams.Samples.HelloWorld.Web/Manifest/manifest.json#L1-L12)]
 
 You will also need to change the botID value in the bots and the composeExtensions sections later in the manifest.
 
-[!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L41-L49)]
+[!code-json[Manifest file](~/../_msteams-samples-hello-world-csharp/Microsoft.Teams.Samples.HelloWorld.Web/Manifest/manifest.json#L45-L55)]
 
-[!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L50-L67)]
+[!code-json[Manifest file](~/../_msteams-samples-hello-world-csharp/Microsoft.Teams.Samples.HelloWorld.Web/Manifest/manifest.json#L56-L79)]
 
 You will learn more about Bots later in this guide.
 
@@ -205,22 +167,16 @@ You will learn more about Bots later in this guide.
 
 Change the URLs that point to `yourteamsapp.ngrok.io` to the URLs where the app is hosted. Microsoft Teams will load your app from this location.
 
-[!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L26-L40)]
+[!code-json[Manifest file](~/../_msteams-samples-hello-world-csharp/Microsoft.Teams.Samples.HelloWorld.Web/Manifest/manifest.json#L26-L44)]
 
 ### Upload the app
 
-Once you update the manifest, you can rebuild the sample. To rebuild run the following command in the app terminal window, stopping the app if needed:
-
-```bash
-gulp
-```
-
-This will generate a file `helloworldapp.zip` in the `manifest` directory within the root of the project directory.
+Once you update the manifest, you can rebuild the sample using `Build Solution` command from the `Build` menu. This will generate a file `helloworldapp.zip` in the `bin` directory within the root of the project directory `Microsoft.Teams.Samples.HelloWorld.Web`.
 
 Use the **Upload a custom app** link in Teams to upload this zip file and install your app into one of the teams you own. See **Load your package into a team** in [Upload your app in Microsoft Teams](~/concepts/apps/apps-upload) for more information on how to do this.
 
 > [!NOTE]
-> You might have stopped the node process in order to rebuild the app. If so, you will need to rerun the node process using the `npm start` command described in [Build and run the sample](#BuildRun).
+> You need to make sure the app is running while you upload it into Teams and use it within it.
 
 <a name="ConfigureTheAppTab"></a>
 
@@ -236,20 +192,21 @@ Once you install the app into a team, you will need to configure it to show cont
 
 The sample already comes with a bot. The bot is defined in the manifest and looks like this:
 
-[!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L41-L49)]
+[!code-json[Manifest file](~/../_msteams-samples-hello-world-csharp/Microsoft.Teams.Samples.HelloWorld.Web/Manifest/manifest.json#L45-L55)]
 
 You need a bot definition for each bot contained in your app. In this case you already have a bot and have given it a registered **bot ID**, so all you will do is add credentials for the bot and test it.
 
 ### Add credentials for the bot
-In the hello-world project navigate to a folder named config. In this folder you will find a json file called default. This file contains the following code:
+In the `Microsoft.Teams.Samples.HelloWorld.Web` project you will find a config file called `Web.config`. This file contains the following code:
 
-[!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/config/default.json#L1-L6)]
+[!code-xml[Web.config file](~/../_msteams-samples-hello-world-csharp/Microsoft.Teams.Samples.HelloWorld.Web/Web.config#L7-L14)]
 
-Earlier you made note of the **APP ID** from the bot framework as well as a password. Use those vales for "microsoftAppId" and "microsoftAppPassword" in the config.js file. This is not a particularly safe location to store credentials, but it will work for this example.
+Earlier you made note of the **APP ID** from the bot framework as well as a password. Use those vales for "MicrosoftAppId" and "MicrosoftAppPassword" in the `Web.config` file. This is not a particularly safe location to store credentials, but it will work for this example.
 
-After these values are changed the app must be stopped, built using 'gulp', and run again using 'npm start'. Reload the app using the newly built zip file in Microsoft Teams.
+After these values are changed the app must be rebuilt using `Build Solution` command, and should be started again using `Start Debugging` from the `Debug` menu. Reload the app using the newly built zip file in Microsoft Teams.
 
-Do NOT stop your ngrok session or you will have to update all the ngrok urls associated with your app.
+> [!NOTE]
+> Do NOT stop your ngrok session or you will have to update all the ngrok urls associated with your app.
 
 ### Test the bot with the bot emulator
 
@@ -280,9 +237,9 @@ The Microsoft Teams developer platform allows users to compose custom rich messa
 
 ### Update the app manifest and reload the app in teams again
 
-The hello-world sample comes with a built in messaging extension, which looks something like this:
+The `Hello World` sample comes with a built in messaging extension, which looks something like this:
 
-[!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L50-L67)]
+[!code-json[Manifest file](~/../_msteams-samples-hello-world-csharp/Microsoft.Teams.Samples.HelloWorld.Web/Manifest/manifest.json#L56-L79)]
 
 You have already updated the botId used by the compose extension so there is no need to do that again.
 
