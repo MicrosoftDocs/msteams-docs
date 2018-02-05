@@ -142,7 +142,7 @@
       href: ./resources/design/resources
   - name: Manifest schema
     href: ./resources/schema/manifest-schema
-  - name: Graph APIs
+  - name: Microsoft Graph APIs
     href: ./resources/microsoft-graph
 - name: Troubleshooting
   href: ./troubleshoot/troubleshoot
