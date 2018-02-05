@@ -78,7 +78,7 @@ git clone https://github.com/OfficeDev/msteams-samples-hello-world-csharp
 
 ## Build and run the sample
 
-Once the repo is cloned, open the solution file `Microsoft.Teams.Samples.HelloWorld.sln` from the root directory of the sample and click `Build Solution` from the `Build` menu. You can run the sample by pressing `F5` or choosing `Start Debugging` from the `Debug` menu.
+Once the repo is cloned, use Visual Studio to open the solution file `Microsoft.Teams.Samples.HelloWorld.sln` from the root directory of the sample and click `Build Solution` from the `Build` menu. You can run the sample by pressing `F5` or choosing `Start Debugging` from the `Debug` menu.
 
 When the app starts, you will see a browser window open with the root of the app launched. You can navigate to the following URLs to verify that all the app URLs are loading:
 
@@ -169,7 +169,7 @@ Once you update the manifest, you can rebuild the sample using `Build Solution` 
 Use the **Upload a custom app** link in Teams to upload this zip file and install your app into one of the teams you own. See **Load your package into a team** in [Upload your app in Microsoft Teams](~/concepts/apps/apps-upload) for more information on how to do this.
 
 > [!NOTE]
-> You need to make sure the app is running while you upload it into Teams and use it within it.
+> You need to make sure the app is running while you upload it into Teams and use it.
 
 <a name="ConfigureTheAppTab"></a>
 
