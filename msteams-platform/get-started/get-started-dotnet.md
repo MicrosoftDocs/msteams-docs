@@ -1,10 +1,10 @@
 ---
-title: Get started with C#.NET
-description: Get started building great apps in Microsoft Teams using C# .NET
+title: Get started with C#/.NET
+description: Get started building great apps in Microsoft Teams using C#/.NET
 keywords: getting started .net c# csharp
-ms.date: 01/02/2018
+ms.date: 02/06/2018
 ---
-# Get started on the Microsoft Teams platform with C#.NET
+# Get started on the Microsoft Teams platform with C#/.NET
 
 > [!div class="op_single_selector"]
 > - [.NET](~/get-started/get-started-dotnet)
