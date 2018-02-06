@@ -2,6 +2,7 @@ log/
 obj/
 _site/
 .optemp/
+.vscode/
 _themes*/
 _repo.*/
 _dependentPackages/
@@ -10,3 +11,4 @@ _dependentPackages/
 
 # Dependent repos
 _msteams-samples-hello-world-nodejs/
+_msteams-samples-hello-world-csharp/
