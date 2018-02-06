@@ -10,6 +10,8 @@
     href: ./get-started/get-started-app-studio
   - name: Get started with Node.js
     href: ./get-started/get-started-nodejs
+  - name: Get started with C#/.NET
+    href: ./get-started/get-started-dotnet
   expanded: true
 - name: Concepts
   href: ./concepts/concepts-overview
