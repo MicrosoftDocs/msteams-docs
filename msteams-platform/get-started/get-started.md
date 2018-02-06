@@ -18,7 +18,7 @@ Because of this, it easy to publish and update apps, but it adds additional step
 
 These options will be discussed in more detail later.
 
-Here are some simple steps to create a Node .JS Teams app and test it in Teams.
+Here are some simple steps to create a Node.js Teams app and test it in Teams.
 
 > [!div class="checklist"]
 > * [Prepare your Office 365 tenant](~/get-started/get-started-tenant)
