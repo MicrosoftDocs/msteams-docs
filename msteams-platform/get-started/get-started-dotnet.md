@@ -1,6 +1,6 @@
 ---
 title: Get started with C#.NET
-description: Get started building great apps in Microsoft Teams using C#.NET
+description: Get started building great apps in Microsoft Teams using C# .NET
 keywords: getting started .net c# csharp
 ms.date: 01/02/2018
 ---
@@ -120,7 +120,7 @@ If you have never used Azure before, you can get started by creating a new free 
 
 Follow this guide to help you get started: [Azure developer guide](https://docs.microsoft.com/en-us/azure/guides/developer/azure-developer-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json#understanding-accounts-subscriptions-and-billing).
 
-To get your .Net app hosted as an App Service in Azure, you can follow the guide here: [Create a .NET core app in Azure](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-dotnet).
+To get your .NET app hosted as an App Service in Azure, you can follow the guide here: [Create a .NET core app in Azure](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-dotnet).
 
 Once you host your app in Azure, you can verify by opening your browser and going to `https://yourteamsapp.azurewebsites.net` (please be sure to use the right endpoint from your Azure App Service instead of this URL) to load your app's hello page.
 
