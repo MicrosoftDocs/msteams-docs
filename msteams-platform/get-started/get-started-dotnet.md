@@ -114,7 +114,7 @@ The app will only be available during the current session on your development ma
 
 ### Host in Azure
 
-Microsoft Azure lets you host your .Net application on a free tier using shared infrastructure. This will be sufficient to run this `Hello World` sample.
+Microsoft Azure lets you host your .NET application on a free tier using shared infrastructure. This will be sufficient to run this `Hello World` sample.
 
 If you have never used Azure before, you can get started by creating a new free account.
 
