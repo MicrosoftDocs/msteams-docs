@@ -2,7 +2,7 @@
 title: Microsoft Teams code samples
 description: Links and descriptions of sample applications for the Microsoft Teams developer platform
 keywords: Microsoft Teams developer samples
-ms.date: 01/23/2018
+ms.date: 02/06/2018
 ---
 # Code samples for the Microsoft Teams developer platform
 
@@ -29,20 +29,19 @@ We provide a packages.json file that lists all required packages for a sample. S
 
 As always, the project's README file should have more information on specific needs for specific samples.
 
-<!-- ## Get started
+## Get Started
 
 | Sample | Description
 |--------|-------------
 | [Hello World in Microsoft Teams with Node.js](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) | A sample teams app in `Node.js` introducing you to the basic app capabilities.
-| [Hello World in Microsoft Teams with C#.NET](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) | A sample teams app in `C#.NET` introducing you to the basic app capabilities.
- -->
+| [Hello World in Microsoft Teams with C#.NET](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) | A sample teams app in `C# .NET` introducing you to the basic app capabilities.
 
 ## Featured
 
 | Sample | Description
 |--------|-------------
-| [Complete sample in Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) | A template for building complex bots for Microsoft Teams - Node.js version
-| [Complete sample in C#.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) | This project is meant to help a Teams developers in two ways. First, it shows many examples of how an app can integrate into Teams. Second, it gives a set of patterns, templates, and tools that can be used as a starting point for creating a larger, scalable, more enterprise level app to work within Teams.
+| [Complete sample in Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) | This sample shows how to use all the features of the Microsoft Teams platform
+| [Complete sample in C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) | This project is meant to help a Teams developers in two ways. First, it shows many examples of how an app can integrate into Teams. Second, it gives a set of patterns, templates, and tools that can be used as a starting point for creating a larger, scalable, more enterprise level app to work within Teams.
 
 ## Bots
 
