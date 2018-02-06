@@ -127,7 +127,7 @@ An indication of whether your bot is for one-way communication (i.e., notificati
 
 The list of common commands you want the bot to respond to. Supply a separate command list for each scope, where each command includes a title (max character length 32) and a description (max character length 128).
 
-[See the bots design guidelines.](bots)
+[See the bots design guidelines.](~/resources/design/framework/bots)
 
 ---
 
@@ -191,7 +191,7 @@ Define the level of encryption used in your app, if any.
 
 Provide support links.
 
-[See the messaging extensions design guidelines.](compose-extensions)
+[See the messaging extensions design guidelines.](~/resources/design/framework/compose-extensions)
 
 Include screenshots of your app for your profile page (you can add up to five, total). Specify your language, release date, category, and pricing (again, select the ‘Free’ option here).
 
