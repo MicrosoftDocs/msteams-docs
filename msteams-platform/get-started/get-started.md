@@ -18,7 +18,7 @@ Because of this, it easy to publish and update apps, but it adds additional step
 
 These options will be discussed in more detail later.
 
-Here are some simple steps to create a Teams app and test it in Teams.
+Here are some simple steps to create a Node.js Teams app and test it in Teams.
 
 > [!div class="checklist"]
 > * [Prepare your Office 365 tenant](~/get-started/get-started-tenant)
@@ -31,3 +31,17 @@ Here are some simple steps to create a Teams app and test it in Teams.
 > * [Configure the app tab](~/get-started/get-started-nodejs#ConfigureTheAppTab)
 > * [Add a bot to your app](~/get-started/get-started-nodejs#AddBot)
 > * [Compose rich messages](~/get-started/get-started-nodejs#ComposeRichMessages)
+
+Here are the steps to create a.NET Teams app and test it in Teams.
+
+> [!div class="checklist"]
+> * [Prepare your Office 365 tenant](~/get-started/get-started-tenant)
+> * [Get started with Teams App Studio](~/get-started/get-started-app-studio)
+> * [Get prerequisites](~/get-started/get-started-dotnet#GetPrerequisites)
+> * [Download the sample](~/get-started/get-started-dotnet#DownloadSample)
+> * [Build and run the sample](~/get-started/get-started-dotnet#BuildRun)
+> * [Host the sample](~/get-started/get-started-dotnet#HostSample)
+> * [Deploy your app into Microsoft Teams](~/get-started/get-started-dotnet#DeployToTeams)
+> * [Configure the app tab](~/get-started/get-started-dotnet#ConfigureTheAppTab)
+> * [Add a bot to your app](~/get-started/get-started-dotnet#AddBot)
+> * [Compose rich messages](~/get-started/get-started-dotnet#ComposeRichMessages)

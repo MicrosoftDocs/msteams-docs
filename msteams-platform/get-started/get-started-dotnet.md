@@ -1,6 +1,6 @@
 ---
 title: Get started with C#.NET
-description: Get started building great apps in Microsoft Teams using C#.NET
+description: Get started building great apps in Microsoft Teams using C# .NET
 keywords: getting started .net c# csharp
 ms.date: 01/02/2018
 ---
@@ -12,7 +12,7 @@ ms.date: 01/02/2018
 
 [!include[Step 1 Intro](~/includes/get-started/step1-intro.md)]
 
-This tutorial helps you get started creating a Microsoft Teams app using C#.NET. You can test the app by loading it into a Team that you have permissions for, or into a test tenant created using the Office Developer Program. This topic is written to be platform independent.
+This tutorial helps you get started creating a Microsoft Teams app using C# on .NET. You can test the app by loading it into a Team that you have permissions for, or into a test tenant created using the Office Developer Program. This topic is written to be platform independent.
 
 To create your app:
 
@@ -78,7 +78,7 @@ git clone https://github.com/OfficeDev/msteams-samples-hello-world-csharp
 
 ## Build and run the sample
 
-Once the repo is cloned, open the solution file `Microsoft.Teams.Samples.HelloWorld.sln` from the root directory of the sample and click `Build Solution` from the `Build` menu. You can run the sample by pressing `F5` or choosing `Start Debugging` from the `Debug` menu.
+Once the repo is cloned, use Visual Studio to open the solution file `Microsoft.Teams.Samples.HelloWorld.sln` from the root directory of the sample and click `Build Solution` from the `Build` menu. You can run the sample by pressing `F5` or choosing `Start Debugging` from the `Debug` menu.
 
 When the app starts, you will see a browser window open with the root of the app launched. You can navigate to the following URLs to verify that all the app URLs are loading:
 
@@ -114,20 +114,13 @@ The app will only be available during the current session on your development ma
 
 ### Host in Azure
 
-> [!WARN]
-> Update the following section to host .NET app in Azure using App Service.
-
-Microsoft Azure lets you host your Node.js web application on a free tier using shared infrastructure. This will be sufficient to run this `Hello World` sample.
+Microsoft Azure lets you host your .NET application on a free tier using shared infrastructure. This will be sufficient to run this `Hello World` sample.
 
 If you have never used Azure before, you can get started by creating a new free account.
 
 Follow this guide to help you get started: [Azure developer guide](https://docs.microsoft.com/en-us/azure/guides/developer/azure-developer-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json#understanding-accounts-subscriptions-and-billing).
 
-To get your Node.js app hosted in Azure, you can follow the guide here: [Create a Node.js web app in Azure](/azure/app-service/app-service-web-get-started-nodejs?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json#launch-azure-cloud-shell).
-
-> [!NOTE]
-> You would skip the steps to clone the repo from the guide above, because we already are working with a Node.js sample app for Microsoft Teams.
-> For your convenience, the link above takes you directly to the location where you should start from, to host your app in Azure.
+To get your .NET app hosted as an App Service in Azure, you can follow the guide here: [Create a .NET core app in Azure](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-dotnet).
 
 Once you host your app in Azure, you can verify by opening your browser and going to `https://yourteamsapp.azurewebsites.net` (please be sure to use the right endpoint from your Azure App Service instead of this URL) to load your app's hello page.
 
@@ -176,7 +169,7 @@ Once you update the manifest, you can rebuild the sample using `Build Solution` 
 Use the **Upload a custom app** link in Teams to upload this zip file and install your app into one of the teams you own. See **Load your package into a team** in [Upload your app in Microsoft Teams](~/concepts/apps/apps-upload) for more information on how to do this.
 
 > [!NOTE]
-> You need to make sure the app is running while you upload it into Teams and use it within it.
+> You need to make sure the app is running while you upload it into Teams and use it.
 
 <a name="ConfigureTheAppTab"></a>
 
