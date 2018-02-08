@@ -155,17 +155,15 @@ The app will only be available during the current session on your development ma
 
 ### Host in Azure
 
-Microsoft Azure lets you host your Node.js web application on a free tier using shared infrastructure. This will be sufficient to run this Hello-world sample.
+Microsoft Azure lets you host your Node.js web application on a free tier using shared infrastructure. This will be sufficient to run this Hello-world sample. See [creating a new free account](https://azure.microsoft.com/en-us/free/) for more information.
 
-If you have never used Azure before, you can get started by creating a new free account.
+For more information on Azure see the [Azure developer guide](https://docs.microsoft.com/en-us/azure/guides/developer/azure-developer-guide).
 
-Follow this guide to help you get started: [Azure developer guide](https://docs.microsoft.com/en-us/azure/guides/developer/azure-developer-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json#understanding-accounts-subscriptions-and-billing).
+You can host your app using the Azure Cloud Shell found on the [Microsoft Azure Dashboard](https://ms.portal.azure.com).
 
-To get your Node.js app hosted in Azure, you can follow the guide here: [Create a Node.js web app in Azure](/azure/app-service/app-service-web-get-started-nodejs?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json#launch-azure-cloud-shell).
+<img width="300px" title="Azure Cloud Shell" src="~/assets/images/get-started/azure-cloud-shell.png"/>
 
-> [!NOTE]
-> You would skip the steps to clone the repo from the guide above, because we already are working with a Node.js sample app for Microsoft Teams.
-> For your convenience, the link above takes you directly to the location where you should start from, to host your app in Azure.
+Follow the steps in [Create a Node.js web app in Azure](/azure/app-service/app-service-web-get-started-nodejs?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json#launch-azure-cloud-shell) to host your app in Azure.
 
 Once you host your app in Azure, you can verify by opening your browser and going to `https://yourteamsapp.azurewebsites.net` (please be sure to use the right endpoint from your Azure App Service instead of this URL) to load your app's hello page.
 

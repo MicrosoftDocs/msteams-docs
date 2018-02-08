@@ -2,7 +2,7 @@
 title: Get started with C#/.NET
 description: Get started building great apps in Microsoft Teams using C#/.NET
 keywords: getting started .net c# csharp
-ms.date: 02/06/2018
+ms.date: 02/07/2018
 ---
 # Get started on the Microsoft Teams platform with C#/.NET
 
@@ -114,15 +114,11 @@ The app will only be available during the current session on your development ma
 
 ### Host in Azure
 
-Microsoft Azure lets you host your .NET application on a free tier using shared infrastructure. This will be sufficient to run this `Hello World` sample.
+Microsoft Azure lets you host your .NET application on a free tier using shared infrastructure. This will be sufficient to run this `Hello World` sample. See [creating a new free account](https://azure.microsoft.com/en-us/free/) for more information.
 
-If you have never used Azure before, you can get started by creating a new free account.
+Visual Studio has built-in support for app deployment to different providers, including Azure. For more details see [Host your .NET Teams app in Azure](~/get-started/get-started-dotnet-in-azure).
 
-Follow this guide to help you get started: [Azure developer guide](https://docs.microsoft.com/en-us/azure/guides/developer/azure-developer-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json#understanding-accounts-subscriptions-and-billing).
-
-To get your .NET app hosted as an App Service in Azure, you can follow the guide here: [Create a .NET core app in Azure](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-dotnet).
-
-Once you host your app in Azure, you can verify by opening your browser and going to `https://yourteamsapp.azurewebsites.net` (please be sure to use the right endpoint from your Azure App Service instead of this URL) to load your app's hello page.
+<img width="530px" src="~/assets/images/get-started/publishtoazure1.png" title="Visual Studio"/>
 
 <a name="DeployToTeams"></a>
 
