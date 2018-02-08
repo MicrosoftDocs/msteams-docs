@@ -34,7 +34,7 @@ This will bring up the *Pick a publish target* screen. In this screen choose *Mi
 
 This brings up the *Create App Service* dialog. If you are signed into Visual Studio with the same account that you associated with your Azure account then this account will be shown in the upper right hand corner of the screen. If you want to use a different account you can do so by using the drop down next to the account name to choose something different.
 
-<img width="530px" src="~/assets/images/get-started/publishtoazure5.png" title="Create an App Service"/>
+<img width="530px" src="~/assets/images/get-started/publishtoazure4.png" title="Create an App Service"/>
 
 All fields should be filled in with default values. Don't change these for now.  Click Create.
 You should now see the Publish dialog. Click *Publish*. Your browser of choice should open, displaying your apps welcome screen.
