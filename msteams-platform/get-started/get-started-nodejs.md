@@ -161,13 +161,11 @@ For more information on Azure see the [Azure developer guide](https://docs.micro
 
 You can host your app using the Azure Cloud Shell found on the [Microsoft Azure Dashboard](https://ms.portal.azure.com).
 
-<img width="450px" title="Azure Cloud Shell" src="~/assets/images/get-started/azure-cloud-shell.png"/>
+<img width="350px" title="Azure Cloud Shell" src="~/assets/images/get-started/azure-cloud-shell.png"/>
 
 Follow the steps in [Create a Node.js web app in Azure](/azure/app-service/app-service-web-get-started-nodejs?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json#launch-azure-cloud-shell) to host your app in Azure.
 
 Once you host your app in Azure, you can verify by opening your browser and going to `https://yourteamsapp.azurewebsites.net` (please be sure to use the right endpoint from your Azure App Service instead of this URL) to load your app's hello page.
-
-<img width="450px" title="Hello World" src="~/assets/images/get-started/publishtoazure5.png"/>
 
 <a name="DeployToTeams"></a>
 
