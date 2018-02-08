@@ -12,6 +12,9 @@
     href: ./get-started/get-started-nodejs
   - name: Get started with C#/.NET
     href: ./get-started/get-started-dotnet
+    items: 
+    - name: Publish to Azure
+      href: ./get-started/get-started-dotnet-in-azure
   expanded: true
 - name: Concepts
   href: ./concepts/concepts-overview
