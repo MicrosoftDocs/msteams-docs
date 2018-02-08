@@ -116,7 +116,7 @@ The app will only be available during the current session on your development ma
 
 Microsoft Azure lets you host your .NET application on a free tier using shared infrastructure. This will be sufficient to run this `Hello World` sample.
 
-Visual Studio has built-in support for app deployment to different providers, including Azure. For more details see [Host your .NET Teams app in Azure](~/get-started-dotnet-in-azure).
+Visual Studio has built-in support for app deployment to different providers, including Azure. For more details see [Host your .NET Teams app in Azure](~/get-started/get-started-dotnet-in-azure).
 
 <img width="530px" src="~/assets/images/get-started/publishtoazure1.png" title="Visual Studio"/>
 
