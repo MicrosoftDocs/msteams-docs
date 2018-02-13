@@ -34,7 +34,7 @@ In the Seller Dashboard:
    * **Testing notes** – Please ensure you provide enough information for our validation team to successfully load and test your experience. This includes providing sign-in instructions and test accounts, as well as any other notes that might assist in the review of your product.
    * **My app calls, support, contains, or uses cryptography or encryption** – This checkbox helps to ensure that your product is not using cryptography in a way that would prohibit distribution through the Office Store. See [Export restrictions on cryptography](https://docs.microsoft.com/en-us/windows/uwp/security/export-restrictions-on-cryptography) for a detailed explanation.
    * **My app calls, support, contains, or uses cryptography or encryption** – This checkbox helps to ensure taht your product is not using cryptography in a way that would prohibit distribution through AppSource. See [Export restrictions on cryptography](https://docs.microsoft.com/en-us/windows/uwp/security/export-restrictions-on-cryptography) for a detailed explanation.
-   * **App logo** – Use your full-color 96&times;96 icon.
+   * **App logo** – Use your full-color 192&times;192 icon.
    * **Support document link** – The URL for support content for your app.
    * **Privacy document link** – Use the URL that appears in `privacyUrl` in your manifest.
    * **Video link** – Optional; the URL of a video of your app. This video appears on your product listing page in AppSource.
