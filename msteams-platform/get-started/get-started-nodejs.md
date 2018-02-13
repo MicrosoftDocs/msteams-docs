@@ -155,11 +155,9 @@ The app will only be available during the current session on your development ma
 
 ### Host in Azure
 
-Microsoft Azure lets you host your Node.js web application on a free tier using shared infrastructure. This will be sufficient to run this Hello-world sample. See [creating a new free account](https://azure.microsoft.com/en-us/free/) for more information.
+Microsoft Azure lets you host your Node.js web application on a free tier using shared infrastructure. This will be sufficient to run this Hello-world sample. See [creating a new free account](https://azure.microsoft.com/en-us/free/) for more information. For more information on Azure see the [Azure developer guide](https://docs.microsoft.com/en-us/azure/guides/developer/azure-developer-guide).
 
-For more information on Azure see the [Azure developer guide](https://docs.microsoft.com/en-us/azure/guides/developer/azure-developer-guide).
-
-You can host your app using the Azure Cloud Shell found on the [Microsoft Azure Dashboard](https://ms.portal.azure.com).
+You can quickly host your app using the Azure Cloud Shell found on the [Microsoft Azure Dashboard](https://ms.portal.azure.com).
 
 <img width="300px" title="Azure Cloud Shell" src="~/assets/images/get-started/azure-cloud-shell.png"/>
 
