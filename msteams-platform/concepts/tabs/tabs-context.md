@@ -2,6 +2,7 @@
 title: Get context for your tab
 description: Describes how to get user context to your tabs
 keywords: teams tabs user context
+msdate: 02/09/2018
 ---
 
 # Get context for your Microsoft Teams tab
@@ -37,24 +38,26 @@ Use placeholders in your configuration or content URLs. Microsoft Teams replaces
 
 * {entityId}: The ID you supplied for the item in this tab when first [configuring the tab](~/concepts/tabs/tabs-configuration).
 * {subEntityId}: The ID you supplied when generating a [deep link](~/concepts/deep-links) for a specific item _within_ this tab. This should be used to restore to a specific state within an entity; for example, scrolling to or activating a specific piece of content.
-* {upn}: The user name.
-* {groupId}: The ID of an Office 365 group.
-* {tid}: The company ID; that is, the tenant ID.
-* {locale}: The user locale, such as 'en-us'.
+* {upn}: The User Principal Name of the current user (usually the user's email address).
+* {theme}: The current UI theme, e.g. `default`, `dark`, or `contrast`.
+* {groupId}: The ID of the Office 365 Group in which the tab resides.
+* {tid}: The Azure AD tenant ID of the current user.
+* {locale}: The current locale of the user formatted as languageId-countryId (for example, en-us).
 
 For example, suppose in your tab manifest you set the `configURL` attribute to
 
-`"https://www.contoso.com/config?name={upn}&tenant={tid}&group={groupId}"`
+`"https://www.contoso.com/config?name={upn}&tenant={tid}&group={groupId}&theme={theme}"`
 
 And the signed-in user has the following attributes:
 
 * Their username is 'user@example.com'
 * Their company tenant ID is 'e2653c-etc'
 * They are a member of the Office 365 group named 'test' 
+* The user has set their Teams theme to 'dark'
 
-When they select your tab, they will be navigated to
+When they configure your tab, Teams calls this URL:
 
-`https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=test`
+`https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=test&theme=dark`
 
 ### Getting context by using the Microsoft Teams JavaScript library
 
@@ -64,15 +67,19 @@ The context variable will look like the following example.
 
 ```json
 {
-    "teamId": "The team ID in the format 19:[id]@thread.skype",
+    "teamId": "The Microsoft Teams ID in the format 19:[id]@thread.skype",
+    "teamName": "The name of the current team",
     "channelId": "The channel ID in the format 19:[id]@thread.skype",
-    "locale": "Lowercase lang-locale",
+    "channelName": "The name of the current channel",
+    "locale": "The current locale of the user formatted as languageId-countryId (for example, en-us)",
     "theme": "default | dark | contrast",
-    "entityId": "The entity id you set up on your config page",
-    "subEntityId": "The sub entity id you set up on your config page",
-    "upn": "The user identifier in email format",
-    "tid": "Guid identifying the current Tenant ID",
-    "groupId": "Guid identifying the current O365 Group ID"
+    "entityId": "The developer-defined unique ID for the entity this content points to",
+    "subEntityId": "The developer-defined unique ID for the sub-entity this content points to",
+    "upn": "The User Principal Name of the current user (usually the user's email address)",
+    "tid": "The Azure AD tenant ID of the current user",
+    "groupId": "Guid identifying the current O365 Group ID",
+    "theme": "The current UI theme, e.g. default, dark, contrast",
+    "isFullScreen": "Indicates whether the tab is in full-screen mode"
 }
 ```
 
@@ -80,4 +87,4 @@ The context variable will look like the following example.
 
 You can register your app to be told if the theme changes by calling `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
 
-Theme will be a string set to `default`, `dark`, or `contrast`
+The `theme` argument in the function will be a string with a value of `default`, `dark`, or `contrast`.
