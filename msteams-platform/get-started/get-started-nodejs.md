@@ -87,7 +87,7 @@ You can continue to use this terminal window to run the commands that follow in 
 We have provided a [simple 'Hello, World!' sample](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) to get you started. In a terminal window, run the following command to clone the sample repository to your local machine:
 
 ```bash
-git clone https://github.com/OfficeDev/msteams-samples-hello-world-nodejs
+git clone https://github.com/OfficeDev/msteams-samples-hello-world-csharp.git
 ```
 
 > [!TIP]
