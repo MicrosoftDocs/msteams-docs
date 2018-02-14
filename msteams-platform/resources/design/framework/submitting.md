@@ -25,7 +25,7 @@ Here’s everything you need to submit your app to the Microsoft Seller Dashboar
 
 ## What you’ll need
 
-Have your manifest and icons ready to go before you start the submission process. Your complete submission package should include two icons (20x20 outline icon, 96x96 full color icon), your app manifest, and up to five screen shots of your app.
+Have your manifest and icons ready to go before you start the submission process. Your complete submission package should include two icons (32 x 32 outline icon, 192 x 192 full color icon), your app manifest, and up to five screen shots of your app.
 
 ---
 
