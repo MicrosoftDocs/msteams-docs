@@ -42,7 +42,7 @@ Install the control library and its peer dependency ‘typestyle’
 npm install --save typestyle && npm install --save msteams-ui-components-react
 ```
 
-*Optional* install the Teams icons.
+*Optional:* Install the Teams icons.
 
 ```terminal
 npm install --save msteams-ui-icons-react
@@ -129,7 +129,7 @@ componentWillMount() {
 
 If you want to use your own CSS code you can still respond to theme changes and use colors defined by teams. TeamsComponentContext allows you to do this.
 
-Once again, edit your ‘src/App.js’ file and replace its content with following code:
+Once again, edit your `src/App.js` file and replace its content with following code:
 
 ```js
 import React, { Component } from ‘react’;
