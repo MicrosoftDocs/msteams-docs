@@ -127,7 +127,7 @@ componentWillMount() {
 
 ## Connect Your Own Component to the TeamsComponentContext
 
-If you want to write your own CSS code you can still respond to theme changes and use some colors defined by teams. TeamsComponentContext allows you to do this.
+If you want to use your own CSS code you can still respond to theme changes and use colors defined by teams. TeamsComponentContext allows you to do this.
 
 Once again, edit your ‘src/App.js’ file and replace its content with following code:
 
@@ -169,11 +169,11 @@ class MyComponent extends Component {
 export default App;
 ```
 
-In the above code, we define a new component called MyComponent. We then use a special component offered by the control library called ConnectedComponent. ConnectedComponent has a property called render which takes a function as parameter. At render time, this function will be called with the appropriate context for your tab. The context includes the theme that the page is being rendered in as well as the global color object that you can use to apply Teams colors to your tab. As you can see in the switch statement above, we choose the theme appropriate div to render.
-To change themes, we need to pass the root-level TeamsComponentContext a different theme. When a theme changes, all the child elements wrapped in ConnectedComponent will be re-rendered. See previous section “Dynamically Handle Theme Change.”
- 
-Alternative Way to Connect Your Component to TeamsComponentContext:
-If you’re familiar with Redux, you may prefer the following way of connecting to TeamsComponentContext:
+In this code, a new component is defined called MyComponent.  Then a special component from the control library called ConnectedComponent is added. ConnectedComponent has a property called render which takes a function as parameter. At render time, this function will be called with the appropriate context for your tab. The context includes the theme that the page is being rendered in as well as the global color object that you can use to apply Teams colors to your tab. As you can see in the switch statement the appropriate div is chosen based onthe theme.
+
+To change themes, we need to pass the root-level TeamsComponentContext a different theme. When a theme changes, all the child elements wrapped in ConnectedComponent will be re-rendered. See previous section “Dynamically Handle Theme Changes.”
+
+There are other ways to Connect Your component to TeamsComponentContext. If you’re familiar with Redux, you may prefer the following:
 
 ```js
 import React, { Component } from ‘react’;
@@ -210,7 +210,8 @@ const MyComponent = connectTeamsComponent(MyComponentInner);
 export default App;
 ```
 
-In this method, instead of using ConnectedComponent, we use the connectTeamsComponent function. The connectTeamsComponent function takes your current component and returns a new component with the context object injected.
+In this method, instead of using ConnectedComponent, you use the connectTeamsComponent function. The connectTeamsComponent function takes your current component and returns a new component with the context object injected.
 
 ## Next Steps
-Head to Teams App Studio and check out all the elements we offer and sample code of how to use them. Don’t forget to explore them in different themes
+
+Head to Teams App Studio and check out all the elements we offer and sample code of how to use them. Don’t forget to explore them in different themes.
