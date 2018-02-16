@@ -24,6 +24,7 @@ Controls include:
 * Icons
 
 ## React or not?
+
 The full Teams control library uses the React UI framework however it is built so that it is not tied to a specific UI framework. There are four different npm packages:
 
 * **msteams-ui-styles-core** The core CSS styles of UI components. It’s independent of any UI framework.
@@ -61,9 +62,9 @@ class App extends Component {
       // library with CSS frameworks such as Bootstrap. Some CSS frameworks
       // set the default font size for the page; retrieve it and use it
       // instead of {16} in the block.
-      // This library uses the power of CSS to most of the work for you.
+      // This library uses the power of CSS to do most of the work for you.
       // Instead of passing themes as a parameter to every UI component,
-      // we set it on a parent HTML element. All HTML elements nested within
+      // we set it on a parent HTML element. All HTML elements nested ithin
       // that parent will inherit these properties.
 
       return (
@@ -88,3 +89,128 @@ npm run start
 When you navigate to http://localhost:3000, you should see the following screen:
 
 <img width="530px" src="~/assets/images/get-started/control-library-button.png" title="Control Library Button"/>
+
+## Dynamically Handling Theme Changes
+
+Your app needs to handle themes when:
+
+* The tab is initially loaded
+* A user changes the theme after the tab is already loaded
+
+The theme is included in a tab’s [Context](https://docs.microsoft.com/en-us/javascript/api/msteams-client/microsoftteams.context), which can be retrieved before the tab is loaded via URL placeholder values, or at any time by using the [Microsoft Teams JavaScript client SDK](https://docs.microsoft.com/en-us/javascript/api/msteams-client/microsoftteams.context).
+
+How the current theme is retrieved and how to respond to theme changes is discussed here: [Get context for your Microsoft Teams tab](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/tabs/tabs-context).
+
+The sample code below shows how this is done.
+
+```JS
+componentWillMount() {
+    // If you are deploying your site as a MS Teams static or configurable tab,
+    // you should add “?theme={theme}” to your tabs URL in the manifest.
+    // That way you will get the current theme before it’s loaded; getContext()
+    // is called only after the tab is loaded, which will cause the tab to flash
+    // if the current theme is different than the default.
+    this.updateTheme(this.getQueryVariable('theme'));
+    this.setState({
+        fontSize: this.pageFontSize(),
+    });
+
+    // If you are not using the MS Teams Javascript SDK, you can remove this entire
+    // if block, but if you want theme changes in the MS Teams client to propagate
+    // to the tab, leave it here.
+    if (this.inTeams()) {
+       microsoftTeams.initialize();
+       microsoftTeams.registerOnThemeChangeHandler(this.updateTheme);
+    }
+}
+```
+
+## Connect Your Own Component to the TeamsComponentContext
+
+If you want to write your own CSS code you can still respond to theme changes and use some colors defined by teams. TeamsComponentContext allows you to do this.
+
+Once again, edit your ‘src/App.js’ file and replace its content with following code:
+
+```js
+import React, { Component } from ‘react’;
+import { TeamsComponentContext, ThemeStyle, ConnectedComponent } from ‘msteams-ui-components-react’
+
+class App extends Component {
+    render() {
+        return (
+            <TeamsComponentContext
+                fontSize={16}
+                theme={ThemeStyle.HighContrast}>
+                <MyComponent />
+            </TeamsComponentContext>
+        );
+    }
+}
+
+class MyComponent extends Component {
+    render() {
+        return (
+            <ConnectedComponent render={(props) => {
+                const context = props.context;
+
+                switch (context.style) {
+                case ThemeStyle.Dark:
+                    return <div style={{ color: context.colors.dark.brand00 }}>Dark theme!</div>;
+                case ThemeStyle.HighContrast:
+                    return <div style={{ color: context.colors.highContrast.black }}>High Contrast theme!</div>;
+                case ThemeStyle.Light:
+                    return <div style={{ color: context.colors.light.brand00 }}>Light theme!</div>;
+                }
+            }} />
+        );
+    }
+}
+
+export default App;
+```
+
+In the above code, we define a new component called MyComponent. We then use a special component offered by the control library called ConnectedComponent. ConnectedComponent has a property called render which takes a function as parameter. At render time, this function will be called with the appropriate context for your tab. The context includes the theme that the page is being rendered in as well as the global color object that you can use to apply Teams colors to your tab. As you can see in the switch statement above, we choose the theme appropriate div to render.
+To change themes, we need to pass the root-level TeamsComponentContext a different theme. When a theme changes, all the child elements wrapped in ConnectedComponent will be re-rendered. See previous section “Dynamically Handle Theme Change.”
+ 
+Alternative Way to Connect Your Component to TeamsComponentContext:
+If you’re familiar with Redux, you may prefer the following way of connecting to TeamsComponentContext:
+
+```js
+import React, { Component } from ‘react’;
+import { TeamsComponentContext, ThemeStyle, connectTeamsComponent } from ‘msteams-ui-components-react’
+
+class App extends Component {
+    render() {
+        return (
+            <TeamsComponentContext
+                fontSize={16}
+                theme={ThemeStyle.HighContrast}>
+                <MyComponent />
+            </TeamsComponentContext>
+        );
+    }
+}
+
+class MyComponentInner extends Component {
+    render() {
+        const context = this.props.context;
+        switch (context.style) {
+            case ThemeStyle.Dark:
+                return <div style={{ color: context.colors.dark.brand00 }}>Dark theme!</div>;
+            case ThemeStyle.HighContrast:
+                return <div style={{ color: context.colors.highContrast.black }}>High Contrast theme!</div>;
+            case ThemeStyle.Light:
+                return <div style={{ color: context.colors.light.brand00 }}>Light theme!</div>;
+        }
+    }
+}
+
+const MyComponent = connectTeamsComponent(MyComponentInner);
+
+export default App;
+```
+
+In this method, instead of using ConnectedComponent, we use the connectTeamsComponent function. The connectTeamsComponent function takes your current component and returns a new component with the context object injected.
+
+## Next Steps
+Head to Teams App Studio and check out all the elements we offer and sample code of how to use them. Don’t forget to explore them in different themes
