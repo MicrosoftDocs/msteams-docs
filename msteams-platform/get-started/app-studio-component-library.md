@@ -6,7 +6,7 @@ ms.date: 02/15/2018
 ---
 # Using the control library in App Studio
 
-Microsoft Teams App Studio provides you with a set of controls that you can use in your own apps. These controls are provided in the *Control Library* tab of App Studio.
+[Microsoft Teams App Studio](https://docs.microsoft.com/en-us/microsoftteams/platform/get-started/get-started-app-studio) provides you with a set of controls that you can use in your own apps. These controls are provided in the *Control Library* tab of App Studio.
 
 These controls were created by the Microsoft Teams designers to streamline their own workflow, standardize control behavior and support Teams default themes. Use this library in your own apps to achieve a unified look and feel.
 
@@ -101,7 +101,7 @@ The theme is included in a tab’s [Context](https://docs.microsoft.com/en-us/ja
 
 How the current theme is retrieved and how to respond to theme changes is discussed here: [Get context for your Microsoft Teams tab](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/tabs/tabs-context).
 
-The sample code below shows how this is done.
+This sample code shows how this is done.
 
 ```JS
 componentWillMount() {
@@ -173,7 +173,7 @@ In this code, a new component is defined called MyComponent.  Then a special com
 
 To change themes, we need to pass the root-level TeamsComponentContext a different theme. When a theme changes, all the child elements wrapped in ConnectedComponent will be re-rendered. See previous section “Dynamically Handle Theme Changes.”
 
-There are other ways to Connect Your component to TeamsComponentContext. If you’re familiar with Redux, you may prefer the following:
+There are other ways to connect Your component to TeamsComponentContext. If you’re familiar with Redux, you may prefer the following:
 
 ```js
 import React, { Component } from ‘react’;
@@ -214,4 +214,4 @@ In this method, instead of using ConnectedComponent, you use the connectTeamsCom
 
 ## Next Steps
 
-Head to Teams App Studio and check out all the elements we offer and sample code of how to use them. Don’t forget to explore them in different themes.
+Head to Teams App Studio and check out all the controls we offer and sample code of how to use them. Don’t forget to explore them in different themes.
