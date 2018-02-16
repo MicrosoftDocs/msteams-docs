@@ -8,6 +8,9 @@
     href: ./get-started/get-started-tenant
   - name: Use Teams App Studio
     href: ./get-started/get-started-app-studio
+    items:
+    - name: App Studio Controls
+      href: app-studio-component-library
   - name: Get started with Node.js
     href: ./get-started/get-started-nodejs
   - name: Get started with C#/.NET
