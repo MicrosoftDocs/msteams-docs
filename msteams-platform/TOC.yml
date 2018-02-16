@@ -3,7 +3,7 @@
   universal_ref_toc: /javascript/api/msteams-client-docs-ref-typescript/toc.json
 - name: Get started
   href: ./get-started/get-started
-  items:
+  items: 
   - name:  Prepare your Office 365 tenant
     href: ./get-started/get-started-tenant
   - name: Use Teams App Studio
