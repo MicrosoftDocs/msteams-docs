@@ -12,6 +12,8 @@ OAuth is an open standard for authentication used by AAD and many other service 
 
 The code in this article comes from the Teams sample app [Teams sample complete node](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). It contains a static tab that requests an access token for Microsoft Graph and shows the current user's basic profile information from Azure AD.
 
+Authentication flow in bots differs slightly from authentication flow in tabs.
+
 ## Changes to authentication flow in Teams
 
 To address a security concern, changes have been made to tab authentication flow.
