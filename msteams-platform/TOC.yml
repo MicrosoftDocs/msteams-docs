@@ -51,6 +51,8 @@
   - name: Authentication
     href: ./concepts/authentication/authentication
     items:
+    - name: Authentication flow
+      href: ./concepts/authentication/auth-flow
     - name: Authentication for tabs
       href: ./concepts/authentication/auth-tab
     - name: Authentication for bots
