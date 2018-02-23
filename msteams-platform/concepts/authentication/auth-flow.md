@@ -6,46 +6,10 @@ ms.date: 02/22/2018
 ---
 # Microsoft teams authentication flow in bots
 
-Authentication flow in bots differs slightly from authentication flow in tabs.
+OAuth is an open standard for authentication used by AAD and many other service providers. Understanding OAuth is a prerequisite for working with authentication in Teams. Authentication flow in bots differs slightly from authentication flow in tabs.
 
 See the github repo [Microsoft Teams Authentication Sample](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
 for an example that demonstrates authentication flow for tabs and bots using node.
-
-## Registration with an identity provider
-
-To be able to use an identity provider, first you have to register your application with the authentication provider. 
-
-This example uses the config package to store configuration information in environment variables. The default configuration is in config\default.json.  Environment variable overrides are defined in config\custom-environment-variables.json. You can set these environment variables when running node. If you are using Visual Studio Code, you can set these in your launch.json file.
-Alternatively, you can specify local modifications in config\local.json.
-
-The instructions below assume that you're using environment variables to configure the app, and will specify the name of the variable to set.
-
-### Using AzureAD
-
-Registering a bot with the Microsoft Bot Framework automatically creates a corresponding Azure AD application with the same name and ID.
-
-1. Go to the [Application Registration Portal](https://apps.dev.microsoft.com/) and sign in with the same account that you used to register your bot.
-2. Find your application in the list and click on the name to edit.
-3. Click on "Add platform", choose "Web", then add the following redirect URL: `https://<your_ngrok_url>/auth/azureADv1/callback` (or use the URL for whatever hosting solution you are using for your app.)
-4. Scroll to the bottom of the page and click on "Save".
-
-The bot uses MICROSOFT_APP_ID and MICROSOFT_APP_PASSWORD, and these should already be set so no further changes are needed!
-
-### Using LinkedIn
-
-1. Follow the instructions in [Step 1 — Configuring your LinkedIn application](https://developer.linkedin.com/docs/oauth2) to create and configure a LinkedIn application for OAuth 2.
-2. In "Authorized Redirect URLs", add `https://<your_ngrok_url>/auth/linkedIn/callback` (or use the URL for whatever hosting solution you are using for your app).
-3. Note your app's "Client ID" and "Client Secret".
-4. Set the environment variables (or equivalent config) LINKEDIN_CLIENT_ID = <your_client_id>, and LINKEDIN_CLIENT_SECRET = <your_client_secret>.
-
-### Using Google
-
-1. Obtain OAuth2 client credentials from the [Google API Console](https://console.developers.google.com/). Enable access to the [Google People API](https://developers.google.com/people/).
-2. In "Authorized redirect URLs" add `https://<your_ngrok_url>/auth/google/callback`. (or use the URL for whatever hosting solution you are using for your app).
-3. Note your app's "Client ID" and "Client Secret".
-4. Set the environment variables (or equivalent config) GOOGLE_CLIENT_ID = <your_client_id>, and GOOGLE_CLIENT_SECRET = <your_client_secret>.
-
-## Bot authentication flow
 
 ![Bot authentication sequence diagram](https://aosolis.github.io/bot-auth/bot_auth_sequence.png)
 
@@ -67,7 +31,7 @@ The bot uses MICROSOFT_APP_ID and MICROSOFT_APP_PASSWORD, and these should alrea
 11. The bot checks the incoming verification code against the code stored in the user's provisional token. ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/dialogs/BaseIdentityDialog.ts#L127-L140))
 12. If they match, the bot marks the token as validated and ready for use. Otherwise, the auth flow fails, and the bot deletes the provisional token.
 
-### Mobile clients
+## Mobile clients
 As of February 2018, the Microsoft Teams mobile clients do not fully support the `signin` action protocol:
 * If the URL provided to the `signin` action has a `fallbackUrl` query string parameter, Teams will launch that URL in the browser.
 * Otherwise, Teams will show an error saying that the action is not yet supported on mobile.
