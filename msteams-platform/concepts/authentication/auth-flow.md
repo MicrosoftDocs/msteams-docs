@@ -27,12 +27,14 @@ for an example that demonstrates authentication flow for tabs and bots using nod
     * In the example, the bot uses information in the OAuth `state` parameter to determine the id of the user that started the signin process. Before proceeding, it checks `state` against the expected value, to detect forged requests. ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/AuthBot.ts#L70-L99))
     * **IMPORTANT**: The bot puts the token in user's data store, but it is marked as "pending validation". The token is not used while in this state. The user has to "complete the loop" first by sending a verification code in Teams. This is to ensure that the user who authorized the bot with the identity provider is the same user who is chatting in Teams. This guards against "man-in-the-middle" attacks. ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/AuthBot.ts#L100-L113))
 9. The OAuth callback renders a page that calls `notifySuccess("<verification code>")`. ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/master/src/views/oauth-callback-success.hbs))
-10. Teams closes the popup and sends the string given to `notifySuccess()` back to the bot. The bot receives an invoke message with `name` = ` signin/verifyState`.
+10. Teams closes the popup and sends the string given to `notifySuccess()` back to the bot. The bot receives an invoke message with `name` = `signin/verifyState`.
 11. The bot checks the incoming verification code against the code stored in the user's provisional token. ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/dialogs/BaseIdentityDialog.ts#L127-L140))
 12. If they match, the bot marks the token as validated and ready for use. Otherwise, the auth flow fails, and the bot deletes the provisional token.
 
 ## Mobile clients
+
 As of February 2018, the Microsoft Teams mobile clients do not fully support the `signin` action protocol:
+
 * If the URL provided to the `signin` action has a `fallbackUrl` query string parameter, Teams will launch that URL in the browser.
 * Otherwise, Teams will show an error saying that the action is not yet supported on mobile.
 
