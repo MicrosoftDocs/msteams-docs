@@ -38,8 +38,8 @@ The following schema sample shows all extensibility options.
     "full": "Full description of your app"
   },
   "icons": {
-    "outline": "%FILENAME-20x20px%", 
-    "color": "%FILENAME-96x96px" 
+    "outline": "%FILENAME-32x32px%", 
+    "color": "%FILENAME-192x192px" 
   },
   "accentColor": "%HEX-COLOR%",
   "configurableTabs": [
@@ -219,8 +219,8 @@ Icons used within the Teams app. The icon files must be included as part of the 
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
-|`outline`|2048 characters|✔|A relative file path to a transparent 20x20 PNG outline icon.|
-|`color`|2048 characters|✔|A relative file path to a full color 96x96 PNG icon.|
+|`outline`|2048 characters|✔|A relative file path to a transparent 32x32 PNG outline icon.|
+|`color`|2048 characters|✔|A relative file path to a full color 192x192 PNG icon.|
 
 ## accentColor
 
