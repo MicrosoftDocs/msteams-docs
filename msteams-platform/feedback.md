@@ -22,6 +22,7 @@ The Microsoft Team product team responds to the developer community across sever
 
 - **Contributions:** We accept pull requests against the Microsoft Teams JavaScript library, documentation, and samples. If you'd like to contribute, please see the contributor's guide in each repo.
   * https://github.com/OfficeDev/microsoft-teams-library-js
-  * https://github.com/OfficeDev/microsoft-teams-sample-get-started 
+  * https://github.com/OfficeDev/msteams-samples-hello-world-csharp (csharp)
+  * https://github.com/OfficeDev/microsoft-teams-sample-complete-node (node)
   * https://github.com/MicrosoftDocs/msteams-docs
  
