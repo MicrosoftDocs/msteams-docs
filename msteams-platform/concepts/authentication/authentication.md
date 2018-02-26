@@ -11,9 +11,11 @@ In order for your app to access user information stored in Azure Active Director
 For more information see the following topics:
 
 * [Authentication in tabs (AAD)](~/concepts/authentication/auth-tab) describes how to connect to Azure Active Directory from within a *tab* in your app in Teams. This shows a typical web based authentication flow.
-* [Authentication in bots (AAD)](~/concepts/authentication/auth-bot) describes how to connect to Azure Active Directory from within a *bot* in your app in Teams. This shows a modified non-web based authentication flow useful for bots or for mobile.
-* [Silent authentication (AAD)](~/concepts/authentication/auth-silent) describes how to implement single sign on in your app using Azure Active Directory. It is based on the same sample that the first two articles use.
+* [Authentication flow in bots (AAD)](~/concepts/authentication/auth-flow) describes how authentication works within a *bot* in your app in Teams. This shows a non-web based authentication flow useful for bots or for mobile.
+* [Silent authentication (AAD)](~/concepts/authentication/auth-silent) describes how to implement single sign on in your app using Azure Active Directory.
 
-For sample code showing the authentication process using AAD:
+For sample code showing the authentication process:
+
+* [Microsoft Teams Authentication Sample](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
 * [Teams sample complete node](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
 * [Teams sample complete csharp](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
