@@ -2,7 +2,7 @@
 title: Using the control library
 description: How to use the control library provided by Microsoft Teams App Studio
 keywords: Teams App Studio Control Library
-ms.date: 02/15/2018
+ms.date: 02/27/2018
 ---
 # Using the control library in App Studio
 
@@ -25,7 +25,7 @@ Controls include:
 
 ## React or not?
 
-The full Teams control library uses the React UI framework however it is built so that it is not tied to a specific UI framework. There are four different npm packages:
+The full Teams control library uses the [React JavaScript UI framework](https://reactjs.org/) however it is built so that it is not tied to a specific UI framework. There are four different npm packages:
 
 * **msteams-ui-styles-core** The core CSS styles of UI components. It’s independent of any UI framework.
 * **msteams-ui-icons-core** The core set of Teams icons.
@@ -36,7 +36,7 @@ These libraries are all open source, and you can use msteams-ui-styles-core and 
 
 ## Adding the control library to your React app
 
-Install the control library and its peer dependency ‘typestyle’
+Install the control library and its peer dependency `typestyle`:
 
 ```terminal
 npm install --save typestyle && npm install --save msteams-ui-components-react
@@ -48,7 +48,7 @@ npm install --save typestyle && npm install --save msteams-ui-components-react
 npm install --save msteams-ui-icons-react
 ```
 
-find and open `src/App.js` and replace its content with following code:
+Find and open `src/App.js` and replace its content with following code:
 
 ```js
 import React, { Component } from ‘react’;
@@ -80,7 +80,7 @@ export default App;
 
 ```
 
-Run the app
+Run the app:
 
 ```terminal
 npm run start
@@ -90,7 +90,7 @@ When you navigate to http://localhost:3000, you should see the following screen:
 
 <img width="530px" src="~/assets/images/get-started/control-library-button.png" title="Control Library Button"/>
 
-## Dynamically Handling Theme Changes
+## Dynamically handling theme changes
 
 Your app needs to handle themes when:
 
@@ -125,7 +125,7 @@ componentWillMount() {
 }
 ```
 
-## Connect Your Own Component to the TeamsComponentContext
+## Connect your own component to the TeamsComponentContext
 
 If you want to use your own CSS code you can still respond to theme changes and use colors defined by teams. TeamsComponentContext allows you to do this.
 
@@ -169,11 +169,11 @@ class MyComponent extends Component {
 export default App;
 ```
 
-In this code, a new component is defined called MyComponent.  Then a special component from the control library called ConnectedComponent is added. ConnectedComponent has a property called render which takes a function as parameter. At render time, this function will be called with the appropriate context for your tab. The context includes the theme that the page is being rendered in as well as the global color object that you can use to apply Teams colors to your tab. As you can see in the switch statement the appropriate div is chosen based onthe theme.
+In this code, a new component is defined called MyComponent.  Then a special component from the control library called ConnectedComponent is added. ConnectedComponent has a property called `render` which takes a function as parameter. At render time, this function will be called with the appropriate context for your tab. The context includes the theme that the page is being rendered in as well as the global color object that you can use to apply Teams colors to your tab. As you can see in the `switch` statement, the appropriate `<div>` is chosen based on the theme.
 
 To change themes, we need to pass the root-level TeamsComponentContext a different theme. When a theme changes, all the child elements wrapped in ConnectedComponent will be re-rendered. See previous section “Dynamically Handle Theme Changes.”
 
-There are other ways to connect Your component to TeamsComponentContext. If you’re familiar with Redux, you may prefer the following:
+There are other ways to connect your component to TeamsComponentContext. If you’re familiar with [Redux](https://redux.js.org/basics/usage-with-react), you may prefer the following pattern:
 
 ```js
 import React, { Component } from ‘react’;
@@ -212,6 +212,6 @@ export default App;
 
 In this method, instead of using ConnectedComponent, you use the connectTeamsComponent function. The connectTeamsComponent function takes your current component and returns a new component with the context object injected.
 
-## Next Steps
+## Next steps
 
 Head to Teams App Studio and check out all the controls we offer and sample code of how to use them. Don’t forget to explore them in different themes.
