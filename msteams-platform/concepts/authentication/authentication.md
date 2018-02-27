@@ -2,11 +2,11 @@
 title: Authenticate a user
 description: Describes authentication in Teams and how to use it in your apps
 keywords: teams authentication OAuth SSO AAD
-ms.date: 01/10/2018
+ms.date: 02//226018
 ---
 # Authentication in Teams
 
-In order for your app to access user information stored in Azure Active Directory, as well as access data from other 3d party providers like Facebook and Twitter your app will have to establish a trusted connection with those providers. Usually this is done in tabs and in bots. The [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) supports this in a way that allows your apps to work both in the web and desktop versions of Teams.
+In order for your app to access user information stored in Azure Active Directory, as well as access data from other services like Facebook and Twitter, your app will have to establish a trusted connection with those providers. The [Microsoft Teams JavaScript client SDK](https://docs.microsoft.com/en-us/javascript/api/overview/msteams-client) supports this in a way that allows your apps to work both in the web and desktop versions of Teams. (Currently, app authentication from iOS and Android is somewhat different, but much of what's described here does, or soon will, work on mobile devices as well.)
 
 For more information see the following topics:
 
@@ -17,5 +17,5 @@ For more information see the following topics:
 For sample code showing the authentication process:
 
 * [Microsoft Teams Authentication Sample](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
-* [Teams sample complete node](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
-* [Teams sample complete csharp](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
+* [Teams Complete Sample for Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
+* [Teams Complete Sample for C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
