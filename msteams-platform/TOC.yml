@@ -59,10 +59,12 @@
   - name: Authentication
     href: ./concepts/authentication/authentication
     items:
+    - name: Authentication flow for tabs
+      href: ./concepts/authentication/auth-flow-tab
     - name: Authentication flow for bots
-      href: ./concepts/authentication/auth-flow
-    - name: Authentication for tabs
-      href: ./concepts/authentication/auth-tab
+      href: ./concepts/authentication/auth-flow-bot
+    - name: AAD tab authentication
+      href: ./concepts/authentication/auth-tab-AAD
     - name: Silent authentication and SSO
       href: ./concepts/authentication/auth-silent
   - name: Activity Feed

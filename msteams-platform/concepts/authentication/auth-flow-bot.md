@@ -2,7 +2,7 @@
 title: Authentication flow for bots
 description: Describes authentication flow in bots
 keywords: teams authentication flow bots
-ms.date: 02/26/2018
+ms.date: 02/27/2018
 ---
 # Microsoft Teams authentication flow for bots
 
@@ -38,7 +38,7 @@ As of March 2018, the Microsoft Teams mobile clients do not fully support the `s
 * If the URL provided to the `signin` button action has a `fallbackUrl` query string parameter, Teams will launch that URL in the browser.
 * Otherwise, Teams will show an error saying that the action is not yet supported on mobile.
 
-In the example, the mobile signin flow works the same way as on the desktop, until the point where the OAuth callback page tries to send the verification code back to the bot. The bot sets the `fallbackUrl` query string parameter to be the same as the original url to the auth start page, so that the user goes to the same page on all platforms. ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/dialogs/BaseIdentityDialog.ts#L173-L178))
+In the example, the mobile sign in flow works the same way as on the desktop, until the point where the OAuth callback page tries to send the verification code back to the bot. The bot sets the `fallbackUrl` query string parameter to be the same as the original url to the auth start page, so that the user goes to the same page on all platforms. ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/dialogs/BaseIdentityDialog.ts#L173-L178))
 
 When the OAuth callback runs in a mobile browser, the call to `notifySuccess()` will fail silently because it's not running inside a Teams client. The window will not close and the bot won't get the verification code. To handle this case, the page has a timer that checks if it's still open after 5 seconds. If so, it asks the user to manually send the verification code via chat. The bot code is able to receive the verification code from either the `signin/verifyState` callback or from a chat message. ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/dialogs/BaseIdentityDialog.ts#L106-L117))
 
@@ -49,4 +49,4 @@ Once the Microsoft Teams mobile clients support the complete `signin` action pro
 For sample code showing the authentication process see:
 
 * [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
-* [Microsoft Teams Authentication Sample (csharp)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
+* [Microsoft Teams Authentication Sample (c#)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)

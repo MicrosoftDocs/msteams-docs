@@ -2,7 +2,7 @@
 title: Authentication flow for tabs
 description: Describes authentication flow in tabs
 keywords: teams authentication flow tabs
-ms.date: 02/26/2018
+ms.date: 02/27/2018
 ---
 # Microsoft Teams authentication flow for tabs
 
@@ -16,10 +16,12 @@ for an example that demonstrates authentication flow for tabs and bots using Nod
 1. The user interacts with the content on the tab such as a log in button.
 2. The tab sets up auth state and constructs the URL for its auth start page, and constructs the URL for its auth start page. It uses information from URL placeholders or calls microsoftTeams.getContext() from the Teams client SDK.
 3. The tab then calls the microsoftTeams.authentication.authenticate() method and registers the successCallback and failureCallback functions.
-4. Teams opens the start page in a pop-up window. This page generates a random token and saves it for future validation.
+4. Teams opens the start page in a pop-up window. This page generates a random `state` token and saves it for future validation.
+    * Like other application auth flows in Teams, the start page must be on a domain that's in your `validDomains` list, and on the same domain as the post-login redirect page.
+    * **IMPORTANT**: The OAuth 2.0 authorization code grant flow calls for a `state` parameter in the authentication request which contains a unique session token to prevent a [cross-site request forgery attack](https://en.wikipedia.org/wiki/Cross-site_request_forgery). The example uses a randomly-generated GUID.
 5. On the provider's site, the user signs in and grants access to the tab.
 6. The provider takes the user to the tab's OAuth redirect page, with an authorization code.
-7. The tab checks that the returned token matches the saved token, and calls microsoftTeams.authentication.notifySuccess(), which call the successCallback function registered in step 3.
+7. The tab checks that the returned `state` token matches the saved token, and calls microsoftTeams.authentication.notifySuccess(), which call the successCallback function registered in step 3.
 8. The tab either displays configuration UI or refreshes or reloads the tabs content.
 
 ## Changes to authentication flow in Teams
@@ -43,4 +45,4 @@ Although the tab context provides useful information regarding the user, don't u
 For sample code showing the authentication process see:
 
 * [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
-* [Microsoft Teams Authentication Sample (csharp)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
+* [Microsoft Teams Authentication Sample (c#)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)

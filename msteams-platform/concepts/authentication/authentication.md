@@ -2,7 +2,7 @@
 title: Authenticate a user
 description: Describes authentication in Teams and how to use it in your apps
 keywords: teams authentication OAuth SSO AAD
-ms.date: 02//226018
+ms.date: 02//27/6018
 ---
 # Authentication in Teams
 
@@ -10,12 +10,13 @@ In order for your app to access user information stored in Azure Active Director
 
 For more information see the following topics:
 
-* [Authentication in tabs (AAD)](~/concepts/authentication/auth-tab) describes how to connect to Azure Active Directory from within a *tab* in your app in Teams. This shows a typical web based authentication flow.
-* [Authentication flow in bots (AAD)](~/concepts/authentication/auth-flow) describes how authentication works within a *bot* in your app in Teams. This shows a non-web based authentication flow useful for bots or for mobile.
+* [Authentication flow in tabs](~/concepts/authentication/auth-tab-AAD) describes how tab authentication works in Teams. This shows a typical web based authentication flow used for tabs.
+* [Authentication flow in bots](~/concepts/authentication/auth-flow-bot) describes how authentication works within a *bot* in your app in Teams. This shows a non-web based authentication flow useful for bots or for mobile.
+* [AAD Authentication in tabs](~/concepts/authentication/auth-tab-AAD) describes how to connect to Azure Active Directory from within a *tab* in your app in Teams.
 * [Silent authentication (AAD)](~/concepts/authentication/auth-silent) describes how to implement single sign on in your app using Azure Active Directory.
 
 For sample code showing the authentication process:
 
 * [Microsoft Teams Authentication Sample](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
-* [Teams Complete Sample for Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
-* [Teams Complete Sample for C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
+* [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
+* [Microsoft Teams Authentication Sample (C#)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
