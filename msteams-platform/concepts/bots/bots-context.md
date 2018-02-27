@@ -49,7 +49,8 @@ Response body
     "id": "29:1URzNQM1x1PNMr1D7L5_lFe6qF6gEfAbkdG8_BUxOW2mTKryQqEZtBTqDt10-MghkzjYDuUj4KG6nvg5lFAyjOLiGJ4jzhb99WrnI7XKriCs",
     "objectId": "6b7b3b2a-2c4b-4175-8582-41c9e685c1b5",
     "givenName": "Rick",
-    "surname": "Stevens",    "email": "Rick.Stevens@company.com",
+    "surname": "Stevens",
+    "email": "Rick.Stevens@company.com",
     "userPrincipalName": "rstevens@company.com"
 }]
 ```
