@@ -45,3 +45,8 @@ When the OAuth callback runs in a mobile browser, the call to `notifySuccess()` 
 If you want to limit signing in to web and desktop only, you can choose to omit the `fallbackUrl` parameter, or point it to your own error page that asks the user to sign in on web or desktop.
 
 Once the Microsoft Teams mobile clients support the complete `signin` action protocol, including passing the verification code via `notifySuccess()`, they will launch the auth start page in a popup window and ignore `fallbackUrl`.
+
+For sample code showing the authentication process see:
+
+* [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
+* [Microsoft Teams Authentication Sample (csharp)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)

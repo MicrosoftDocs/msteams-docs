@@ -10,13 +10,13 @@ There are many services that you may wish to consume inside your Teams app, and 
 
 OAuth is an open standard for authentication used by AAD and many other service providers. Understanding OAuth is a prerequisite for working with authentication in Teams and AAD. The examples below use the OAuth2 Implicit Grant flow with the goal of eventually reading the user's profile information from AAD and Graph.
 
-The code in this article comes from the Teams sample app [Teams sample complete node](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). It contains a static tab that requests an access token for Microsoft Graph and shows the current user's basic profile information from Azure AD.
+The code in this article comes from the Teams sample app [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). It contains a static tab that requests an access token for Microsoft Graph and shows the current user's basic profile information from Azure AD.
 
 The authentication flow described in this article is very similar to that described in [Authentication in tabs (AAD)](~/concepts/authentication/auth-tab) except that tabs can use web based authentication flow, and bots require authentication to be driven from code. The concepts in this article will also be useful when implementing authentication from the mobile platform.
 
 ## Configure an Azure Active Directory application
 
-The steps that follow assume that you have followed the installation instructions for the sample [Teams sample complete node](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) such as registering a bot, filling out the manifest and uploading it, and filling in the values in the launch.json file.
+The steps that follow assume that you have followed the installation instructions for the sample [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) such as registering a bot, filling out the manifest and uploading it, and filling in the values in the launch.json file.
 
 Most service providers require you to register your application with their service before you can authenticate and consume service resources. To do this with AAD follow these steps:
 
@@ -148,5 +148,5 @@ case "signout":
 
 For sample code showing the authentication process using AAD see:
 
-* [Teams sample complete node](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
-* [Teams sample complete csharp](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
+* [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
+* [Microsoft Teams Authentication Sample (csharp)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)

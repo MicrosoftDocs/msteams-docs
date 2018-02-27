@@ -10,7 +10,7 @@ There are many services that you may wish to consume inside your Teams app, and 
 
 OAuth is an open standard for authentication used by AAD and many other service providers. Understanding OAuth is a prerequisite for working with authentication in Teams and AAD. The examples below use the OAuth2 Implicit Grant flow with the goal of eventually reading the user's profile information from AAD and Graph.
 
-The code in this article comes from the Teams sample app [Teams sample complete node](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). It contains a static tab that requests an access token for Microsoft Graph and shows the current user's basic profile information from Azure AD.
+The code in this article comes from the Teams sample app [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). It contains a static tab that requests an access token for Microsoft Graph and shows the current user's basic profile information from Azure AD.
 
 Authentication flow in bots differs slightly from authentication flow in tabs.
 
@@ -179,5 +179,5 @@ For more information on using AAD authentication outside of a web context (in bo
 
 For sample code showing the authentication process using AAD see:
 
-* [Teams sample complete node](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
-* [Teams sample complete csharp](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
+* [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
+* [Microsoft Teams Authentication Sample (C#)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
