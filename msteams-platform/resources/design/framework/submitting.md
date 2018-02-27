@@ -2,6 +2,7 @@
 title: Design Guidelines Reference
 description: Describes the guidelines for submitting your apps
 keywords: teams design guidelines reference framework submitting your apps audience
+msdate: 02/01/2018
 ---
 # Submit your app, expand your audience
 
@@ -24,7 +25,7 @@ Here’s everything you need to submit your app to the Microsoft Seller Dashboar
 
 ## What you’ll need
 
-Have your manifest and icons ready to go before you start the submission process. Your complete submission package should include two icons (20x20 outline icon, 96x96 full color icon), your app manifest, and up to five screen shots of your app.
+Have your manifest and icons ready to go before you start the submission process. Your complete submission package should include two icons (32 x 32 outline icon, 192 x 192 full color icon), your app manifest, and up to five screen shots of your app.
 
 ---
 
@@ -70,13 +71,13 @@ You can provide both a short name (max character length 30) and a long name (max
 Include both a short (max character length 80) and a long (max character length 4000) description of your app. Both fields are required, so if your app description is 80 characters or less, simply duplicate the same description in both fields.
 
 ### Icons
-Include two icons, a full color icon and a transparent outline icon. Submit both as PNGs.
+Include two icons, a full color icon and a white icon on a transparent background. Submit both as PNGs.
 
 #### Full color icon
-This icon should be 96x96 pixels. Your icon can be any color (or colors), but the background should be your branded accent color. It should also have a small amount of padding surrounding the icon to accommodate the hexagonal cropping for the bot version of the icon.
+This icon should be 192 x 192 pixels. Your icon can be any color (or colors), but the background should be your branded accent color. It should also have some padding surrounding the icon to accommodate the hexagonal cropping for the bot version of the icon. Place your logo inside a safe region of 96 x 96 pixels.
 
-#### Transparent outline icon
-This icon should be 20x20 pixels. Your transparent outline icon must contain only white and transparency (no other colors). The icon can be white with transparent background or transparent with a white background. The outline icon should not have extra padding surrounding the icon and should be as tightly cropped as possible while still maintaining the 20x20 dimensions.
+#### White icon on transparent background
+This icon should be 32 x 32 pixels. The icon must be white on a transparent background, and must contain no other colors. There should be no extra padding surrounding your icon.
 
 ![Icon showcase](~/assets/images/framework/framework_submit_icon.png)
 
@@ -126,7 +127,7 @@ An indication of whether your bot is for one-way communication (i.e., notificati
 
 The list of common commands you want the bot to respond to. Supply a separate command list for each scope, where each command includes a title (max character length 32) and a description (max character length 128).
 
-[See the bots design guidelines.](bots)
+[See the bots design guidelines.](~/resources/design/framework/bots)
 
 ---
 
@@ -190,7 +191,7 @@ Define the level of encryption used in your app, if any.
 
 Provide support links.
 
-[See the messaging extensions design guidelines.](compose-extensions)
+[See the messaging extensions design guidelines.](~/resources/design/framework/compose-extensions)
 
 Include screenshots of your app for your profile page (you can add up to five, total). Specify your language, release date, category, and pricing (again, select the ‘Free’ option here).
 

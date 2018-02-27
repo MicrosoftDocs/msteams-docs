@@ -4,7 +4,6 @@ description: Describes how to upload your app in Microsoft Teams
 keywords: teams apps Upload
 ms.date: 01/02/2018
 ---
-
 # Upload an app package to Microsoft Teams
 
 To test your app experience within Microsoft Teams, you need to upload your app to Teams. Uploading adds the app to the team you select, and you and your team members can interact with it like end users.
@@ -16,9 +15,9 @@ For bots designed only for 1:1 contexts, see [Adding a bot for 1:1 chat only](~/
 
 ## Create your upload package
 
-For development as well as Office Store submission you must create an uploadable package that contains the information to describe your experience. The package, a .zip file, contains the application manifest and icons that uniquely define your experience.
+For development as well as AppSource (formerly Office Store) submission you must create an uploadable package that contains the information to describe your experience. The package, a .zip file, contains the application manifest and icons that uniquely define your experience.
 
-To create an upload package, see [Create the package for your Microsoft Teams app](~/publishing/apps-package).
+To create an upload package, see [Create the package for your Microsoft Teams app](~/concepts/apps/apps-package).
 
 ## Load your package into a team
 
@@ -58,7 +57,7 @@ If the app contains tabs, users can pin them to any channel on the team using th
 
 3. Accept the consent prompt.
 
-4. Configure your tab via its [configuration page](~/concepts/tabs/tabs-configuration) and choose **Save**. 
+4. Configure your tab via its [configuration page](~/concepts/tabs/tabs-configuration) and choose **Save**.
 
   ![The Add a tab dialog box, featuring a gallery of available tabs](~/assets/images/tab_gallery.png)
 
@@ -78,7 +77,7 @@ With the app loaded in the team, users can set up a Connector on any channel in 
 
 2. Select your Connector from the **Uploaded** section at the bottom.
 
-3. Configure your Connector via its [configuration page](~/concepts/connectors) and choose **Save**. 
+3. Configure your Connector via its [configuration page](~/concepts/connectors) and choose **Save**.
 
   ![The Add a tab dialog box, featuring a gallery of available tabs.](~/assets/images/connector_gallery.png)
 

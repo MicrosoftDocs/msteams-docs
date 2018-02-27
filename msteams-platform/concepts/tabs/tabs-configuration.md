@@ -111,7 +111,7 @@ Use `microsoftTeams.settings.setSettings({entityId, contentUrl, suggestedTabName
 
 ### React when the user chooses the Save button
 
-Often you might not be able to determine the `entityId` or `contentUrl` immediately. For example, you might first need create a resource (a document or a task), and you want to do this only after the user selects **Save**. To be notified when the user selects **Save**, you must call `microsoftTeams.settings.registerOnSaveHandler(function(saveEvent) { /* ... */ })`. After this is done, when the user selects **Save**, Microsoft Teams calls the save event handler you registered.
+Often you might not be able to determine the `entityId` or `contentUrl` immediately. For example, you might first need to create a resource (a document or a task), and you want to do this only after the user selects **Save**. To be notified when the user selects **Save**, you must call `microsoftTeams.settings.registerOnSaveHandler(function(saveEvent) { /* ... */ })`. After this is done, when the user selects **Save**, Microsoft Teams calls the save event handler you registered.
 
 You can return the settings asynchronously if, for example, the user has requested a new resource which will take time for you to create. To do this, store `saveEvent` for later. If you do not notify the outcome within 30 seconds, Microsoft Teams terminates the operation and displays an error.
 

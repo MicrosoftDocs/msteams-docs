@@ -1,7 +1,8 @@
 ---
 title: Microsoft Teams code samples
 description: Links and descriptions of sample applications for the Microsoft Teams developer platform
-keywords: Microsoft teams developer samples
+keywords: Microsoft Teams developer samples
+ms.date: 02/06/2018
 ---
 # Code samples for the Microsoft Teams developer platform
 
@@ -28,34 +29,40 @@ We provide a packages.json file that lists all required packages for a sample. S
 
 As always, the project's README file should have more information on specific needs for specific samples.
 
-<!-- ## Get started
+## Get Started
 
 | Sample | Description
 |--------|-------------
 | [Hello World in Microsoft Teams with Node.js](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) | A sample teams app in `Node.js` introducing you to the basic app capabilities.
-| [Hello World in Microsoft Teams with C#.NET](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) | A sample teams app in `C#.NET` introducing you to the basic app capabilities.
- -->
+| [Hello World in Microsoft Teams with C#.NET](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) | A sample teams app in `C# .NET` introducing you to the basic app capabilities.
 
 ## Featured
 
 | Sample | Description
 |--------|-------------
-| [Complete sample in Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) | A template for building complex bots for Microsoft Teams - Node.js version
-| [Complete sample in C#.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) | This project is meant to help a Teams developers in two ways. First, it shows many examples of how an app can integrate into Teams. Second, it gives a set of patterns, templates, and tools that can be used as a starting point for creating a larger, scalable, more enterprise level app to work within Teams.
+| [Complete sample in Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) | This sample shows how to use all the features of the Microsoft Teams platform
+| [Complete sample in C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) | This project is meant to help a Teams developers in two ways. First, it shows many examples of how an app can integrate into Teams. Second, it gives a set of patterns, templates, and tools that can be used as a starting point for creating a larger, scalable, more enterprise level app to work within Teams.
 
 ## Bots
 
 | Sample | Description
 |--------|-------------
-| [Sample bot for C#.NET](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams/tree/master/CSharp/Samples/Microsoft.Bot.Connector.Teams.SampleBot) | This sample bot shows how to use the [Teams extensions for the Bot Builder SDK] (~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) in `C#.NET`.
+| [Sample bot for C#/.NET](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams/tree/master/CSharp/Samples/Microsoft.Bot.Connector.Teams.SampleBot) | This sample bot shows how to use the [Teams extensions for the Bot Builder SDK] (~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) in `C#.NET`.
 | [Sample bot for Node.js](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams/tree/master/Node/samples) | This sample bot shows how to use the [Teams extensions for the Bot Builder SDK] (~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) in `Node.js`.
-| [Custom bots](https://github.com/OfficeDev/microsoft-teams-sample-custombot) | Samples to create **"Custom Bots"** to be used in Microsoft Teams
+
+## Outgoing Webhooks
+
+| Sample | Description
+|--------|-------------
+| [Outgoing Webhook for C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook) | Illustrates how to create an **Outgoing Webhook** for Microsoft Teams in C#/.NET.
+| [Outgoing Webhook for Node.js](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook) | Illustrates how to create a simple **Outgoing Webhook** for Microsoft Teams in ~50 lines of Node.js code.
 
 ## Connectors
 
 | Sample | Description
 |--------|-------------
-| [Sample connector](https://github.com/OfficeDev/msteams-connector-github) | This sample showcases how to build a connector for Microsoft Teams (uses GitHub as an example).
+| [Sample connector for Node.js](https://github.com/OfficeDev/microsoft-teams-sample-connector-nodejs) | This sample, written in Node.js, showcases how to build a connector for Microsoft Teams using GitHub as an example to generate connector notifications.
+| [Sample connector for C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-connector-csharp) | This sample, written in C#, showcases how to build a connector for Microsoft Teams using a sample task list app as an example to generate connector notifications.
 
 ## Graph API
 

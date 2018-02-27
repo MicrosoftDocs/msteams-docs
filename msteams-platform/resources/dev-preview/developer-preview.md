@@ -22,4 +22,4 @@ Use the same menu item under About → Developer preview, and click on it to tur
 
 ## What features will I have access to?
 
-See [Features in the Public Developer Preview](~/resources/general/developer-preview-features).
+See [Features in the Public Developer Preview](~/resources/dev-preview/developer-preview-features).
