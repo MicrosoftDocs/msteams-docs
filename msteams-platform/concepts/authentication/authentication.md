@@ -10,7 +10,7 @@ In order for your app to access user information stored in Azure Active Director
 
 For more information see the following topics:
 
-* [Authentication flow in tabs](~/concepts/authentication/auth-tab-AAD) describes how tab authentication works in Teams. This shows a typical web based authentication flow used for tabs.
+* [Authentication flow in tabs](~/concepts/authentication/auth-flow-tab) describes how tab authentication works in Teams. This shows a typical web based authentication flow used for tabs.
 * [Authentication flow in bots](~/concepts/authentication/auth-flow-bot) describes how authentication works within a *bot* in your app in Teams. This shows a non-web based authentication flow useful for bots or for mobile.
 * [AAD Authentication in tabs](~/concepts/authentication/auth-tab-AAD) describes how to connect to Azure Active Directory from within a *tab* in your app in Teams.
 * [Silent authentication (AAD)](~/concepts/authentication/auth-silent) describes how to implement single sign on in your app using Azure Active Directory.
