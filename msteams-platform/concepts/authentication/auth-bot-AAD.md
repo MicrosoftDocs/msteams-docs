@@ -16,7 +16,7 @@ For a general overview of authentication flow for bots see the topic [Authentica
 
 The steps that follow assume that you have followed the installation instructions for the sample [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) such as registering a bot, filling out the manifest and uploading it, and filling in the values in the launch.json file.
 
-## Configure an Azure Active Directory application
+## Configure an authentication provider
 
 See the topic [Configure Azure Active Directory for authentication](~/concepts/authentication/configure-AAD) for detailed steps on configuring Azure Active Directory for authentication.
 

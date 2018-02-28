@@ -65,6 +65,8 @@
       href: ./concepts/authentication/auth-flow-bot
     - name: AAD tab authentication
       href: ./concepts/authentication/auth-tab-AAD
+    - name: AAD bot authentication
+      href: ./concepts/authentication/auth-bot-AAD
     - name: Silent authentication and SSO
       href: ./concepts/authentication/auth-silent
   - name: Activity Feed

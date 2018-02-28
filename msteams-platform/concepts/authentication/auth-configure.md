@@ -1,10 +1,12 @@
 ---
-title: Configure Azure Active Directory for Authentication
-description: Describes authentication in Teams and how to use it in your bots
-keywords: teams authentication bots AAD
+title: Configure an authentication provider
+description: Describes how to configure an authentication provider
+keywords: teams authentication AAD
 ms.date: 01/10/2018
 ---
-# Configure Azure Active Directory for authentication
+# Configure an authentication provider
+
+## Configure Azure Active Directory for authentication
 
 Most service providers require you to register your application with their service before you can authenticate and consume service resources. To do this with AAD follow these steps:
 
@@ -29,3 +31,9 @@ Most service providers require you to register your application with their servi
     No logout URL is required.
 
     "yourhost" is replaced by your actual host. This might be a dedicated hosting site, Glitch or an ngrok redirect to localhost on your development machine. You may not have this information yet if you have not completed or hosted your app (or the sample app mentioned above), but you can always return to this page when that information is known.
+
+## Other authentication providers
+
+* **LinkedIn** Follow the instructions in [Configuring your LinkedIn application](https://developer.linkedin.com/docs/oauth2)
+
+* **Google** Obtain OAuth2 client credentials from the [Google API Console](https://console.developers.google.com/)
