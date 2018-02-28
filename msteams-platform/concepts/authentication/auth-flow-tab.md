@@ -14,14 +14,14 @@ for an example that demonstrates authentication flow for tabs and bots using Nod
 ![Tab authentication sequence diagram](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
 1. The user interacts with the content on the tab configuration or content page, commonly a button labeled "Sign in" or "Log in".
-2. The tab constructs the URL for its auth start page, optionally using information from URL placeholders or by calling `microsoftTeams.getContext()` Teams client SDK method to streamline the authentiation experience for the user. For example, when authenticating with AAD, if the `login_hint` parameter is set to the user's email address, the user may not even have to sign in if they have done so recently, because AAD will use the user's cached credentials if possible: the popup will flash briefly and then disappear.
+2. The tab constructs the URL for its auth start page, optionally using information from URL placeholders or by calling `microsoftTeams.getContext()` Teams client SDK method to streamline the authentication experience for the user. For example, when authenticating with AAD, if the `login_hint` parameter is set to the user's email address, the user may not even have to sign in if they have done so recently, because AAD will use the user's cached credentials if possible: the popup will flash briefly and then disappear.
 3. The tab then calls the `microsoftTeams.authentication.authenticate()` method and registers the `successCallback` and `failureCallback` functions.
-4. Teams opens the start page in an iframe in a pop-up window. The start page generates random `state` data, saves it for future validation, and redirects to the identity provider's /authorize endpoint, e.g. https://login.microsoftonline.com/common/oauth2/authorize for AAD.
+4. Teams opens the start page in an iframe in a pop-up window. The start page generates random `state` data, saves it for future validation, and redirects to the identity provider's `/authorize` endpoint, e.g. https://login.microsoftonline.com/common/oauth2/authorize for AAD.
     * Like other application auth flows in Teams, the start page must be on a domain that's in its `validDomains` list, and on the same domain as the post-login redirect page.
-    * **IMPORTANT**: The OAuth 2.0 implicit grant flow calls for a `state` parameter in the authentication request which contains unique session data to prevent a [cross-site request forgery attack](https://en.wikipedia.org/wiki/Cross-site_request_forgery). The examples below use a randomly-generated GUID.
+    * **IMPORTANT**: The OAuth 2.0 implicit grant flow calls for a `state` parameter in the authentication request which contains unique session data to prevent a [cross-site request forgery attack](https://en.wikipedia.org/wiki/Cross-site_request_forgery). The examples below use a randomly-generated GUID for the `state` parameter.
 5. On the provider's site, the user signs in and grants access to the tab.
 6. The provider takes the user to the tab's OAuth redirect page with an access token.
-7. The tab checks that the returned `state` value matches what was saved earlier, and calls `microsoftTeams.authentication.notifySuccess()`, which in turn calls the `successCallback` function registered in step 3.
+7. The tab checks that the returned `state` parameter matches what was saved earlier, and calls `microsoftTeams.authentication.notifySuccess()`, which in turn calls the `successCallback` function registered in step 3.
 8. Teams closes the pop-up window.
 9. The tab either displays configuration UI or refreshes or reloads the tabs content, depending on where the user started from.
 

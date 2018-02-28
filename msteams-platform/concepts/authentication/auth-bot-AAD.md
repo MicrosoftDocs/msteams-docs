@@ -66,17 +66,17 @@ if ((event as any).name === "signin/verifyState") {
 }
 ```
 
-Here the bot makes a call to the “me” Graph endpoint with the token it gets from the invoke payload. Graph responds with the user information for the person who logged in. The response is then parsed and specific parts of it are sent to the chat session.
+Here the bot makes a call to the `me` Graph endpoint with the token it gets from the invoke payload. Graph responds with the user information for the person who logged in. The response is then parsed and specific parts of it are sent to the chat session.
 
 ### Notes
 
-Authentication flow must start on a page that's on your domain; don't start it by going directly to your identity provider's login or consent page. In this example, even though we're using Azure AD, we begin at /tab-auth/simple-start rather than going directly to the Graph endpoint at `https://graph.microsoft.com/v1.0/me/`. If you skip this step, the login popup may fail to close when you call notifySuccess() or notifyFailure().
+Authentication flow must start on a page that's on your domain; don't start it by going directly to your identity provider's login or consent page. In this example, even though we're using Azure AD, we begin at `/tab-auth/simple-start` rather than going directly to the Graph endpoint at `https://graph.microsoft.com/v1.0/me/`. If you skip this step, the login popup may fail to close when you call `notifySuccess()` or `notifyFailure()`.
 
 Add the domain of your authentication redirect URL to the [`validDomains`](~/resources/schema/manifest-schema#validdomains) section of the manifest. Failure to do so might result in an empty pop-up.
 
 ## Get the users profile
 
-When the user selects the *Get Profile" button in the Hero card the following code is executed.
+When the user selects the `Get Profile` button in the Hero card the following code is executed.
 
 ```TypeScript
 case "getProfile":

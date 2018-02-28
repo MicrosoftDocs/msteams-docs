@@ -14,7 +14,7 @@ Even though the ADAL.js library is optimized for AngularJS applications, it also
 
 ## How silent authentication works
 
-The ADAL.js library creates a hidden iframe for OAuth implicit grant flow, but it specifies *prompt=none* so that AAD never shows the login page. If user interaction is required because the user needs to log in or grant access to the application, Azure AD will immediately return an error that ADAL.js then reports to your app. At this point your app can show a login button if needed.
+The ADAL.js library creates a hidden iframe for OAuth implicit grant flow, but it specifies `prompt=none` so that AAD never shows the login page. If user interaction is required because the user needs to log in or grant access to the application, Azure AD will immediately return an error that ADAL.js then reports to your app. At this point your app can show a login button if needed.
 
 ## How to do silent authentication
 

@@ -30,7 +30,7 @@ Most service providers require you to register your application with their servi
 
     No logout URL is required.
 
-    "yourhost" is replaced by your actual host. This might be a dedicated hosting site, Glitch or an ngrok redirect to localhost on your development machine. You may not have this information yet if you have not completed or hosted your app (or the sample app mentioned above), but you can always return to this page when that information is known.
+    `yourhost` is replaced by your actual host. This might be a dedicated hosting site, Glitch or an ngrok redirect to localhost on your development machine. You may not have this information yet if you have not completed or hosted your app (or the sample app mentioned above), but you can always return to this page when that information is known.
 
 ## Other authentication providers
 
