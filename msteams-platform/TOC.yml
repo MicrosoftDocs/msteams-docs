@@ -68,7 +68,7 @@
     - name: AAD bot authentication
       href: ./concepts/authentication/auth-bot-AAD
     - name: Silent authentication and SSO
-      href: ./concepts/authentication/auth-silent
+      href: ./concepts/authentication/auth-silent-AAD
     - name: Configuring authentication providers
       href: ./concepts/authentication/auth-configure
   - name: Activity Feed

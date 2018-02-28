@@ -18,7 +18,7 @@ Authentication flow in tabs differs slightly from authentication flow in bots.
 
 ## Configure an authentication provider
 
-See the topic [Configure Azure Active Directory for authentication](~/concepts/authentication/configure-AAD) for detailed steps on configuring Azure Active Directory for authentication.
+See the topic [Configure an authentication provider](~/concepts/authentication/configure-AAD) for detailed steps on configuring Azure Active Directory for authentication.
 
 ## Initiate authentication flow
 

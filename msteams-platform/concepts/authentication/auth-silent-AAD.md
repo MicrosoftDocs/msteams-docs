@@ -20,7 +20,7 @@ The ADAL.js library creates a hidden iframe for OAuth implicit grant flow, but i
 
 The code in this article comes from the Teams sample app [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node).
 
-### include and Configure ADAL
+### include and configure ADAL
 
 Include the ADAL.js library in your tab pages and configure ADAL with your client ID and redirect URL:
 

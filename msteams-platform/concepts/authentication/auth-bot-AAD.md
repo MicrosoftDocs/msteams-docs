@@ -1,8 +1,8 @@
 ---
 title: Authentication for bots using Azure Active Directory
-description: Describes authentication in Teams and how to use it in your bots
+description: Describes AAD authentication in Teams and how to use it in your bots
 keywords: teams authentication bots AAD
-ms.date: 01/10/2018
+ms.date: 02/28/2018
 ---
 # Authenticate a user in a Microsoft Teams bot
 
@@ -14,19 +14,17 @@ The authentication flow described in this article is very similar to that of tab
 
 For a general overview of authentication flow for bots see the topic [Authentication flow in bots](~/concepts/authentication/auth-flow-bot).
 
-The steps that follow assume that you have followed the installation instructions for the sample [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) such as registering a bot, filling out the manifest and uploading it, and filling in the values in the launch.json file.
-
 ## Configure an authentication provider
 
-See the topic [Configure Azure Active Directory for authentication](~/concepts/authentication/configure-AAD) for detailed steps on configuring Azure Active Directory for authentication.
+See the topic [Configure an authentication provider](~/concepts/authentication/configure-AAD) for detailed steps on configuring Azure Active Directory for authentication.
 
-### Initiate authentication flow
+## Initiate authentication flow
 
 Usually authentication flow is triggered by a user action. You should not drive the authentication pop-up automatically because this is likely to trigger the browser's pop-up blocker as well as confuse the user.
 
-### Add UI to start authentication
+## Add UI to start authentication
 
-Add UI to the bot to enable the user to sign in when needed. In the example this is done from the bot's hero card found in HeroCardDialog.ts.
+Add UI to the bot to enable the user to sign in when needed. Here it is done from the bot's hero card.
 
 ```TypeScript
 let buttons = new Array<builder.CardAction>();
@@ -50,7 +48,7 @@ buttons.push(messageBackButton2);
 
 Three buttons have been added to the Hero Card: Sign in, Get Profile, and Sign Out.
 
-### Sign the user in
+## Sign the user in
 
 select the Sign in button, which generates an event that is handled in `getInvokeHandler` using this code:
 
@@ -70,13 +68,13 @@ if ((event as any).name === "signin/verifyState") {
 
 Here the bot makes a call to the “me” Graph endpoint with the token it gets from the invoke payload. Graph responds with the user information for the person who logged in. The response is then parsed and specific parts of it are sent to the chat session.
 
-Notes:
+### Notes
 
 Authentication flow must start on a page that's on your domain; don't start it by going directly to your identity provider's login or consent page. In this example, even though we're using Azure AD, we begin at /tab-auth/simple-start rather than going directly to the Graph endpoint at https://graph.microsoft.com/v1.0/me/. If you skip this step, the login popup may fail to close when you call notifySuccess() or notifyFailure().
 
 Add the domain of your authentication redirect URL to the [`validDomains`](~/resources/schema/manifest-schema#validdomains) section of the manifest. Failure to do so might result in an empty pop-up.
 
-### Get the users profile
+## Get the users profile
 
 When the user selects the *Get Profile" button in the Hero card the following code is executed.
 
@@ -115,7 +113,7 @@ case "getProfile":
 
 If the user is not signed in they are prompted to do so now.  Otherwise basic information is obtained from Graph.
 
-### Sign the user out
+## Sign the user out
 
 ```TypeScript
 case "signout":
@@ -124,8 +122,8 @@ case "signout":
     break;
 ```
 
-## Samples
+## Other samples
 
 For sample code showing the bot authentication process see:
 
-* [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
+* [Microsoft Teams Authentication Sample](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
