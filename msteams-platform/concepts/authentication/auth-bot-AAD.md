@@ -126,4 +126,4 @@ case "signout":
 
 For sample code showing the bot authentication process see:
 
-* [Microsoft Teams Authentication Sample](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
+* [Microsoft Teams bot authentication sample](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)

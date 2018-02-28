@@ -146,5 +146,5 @@ For more information on using AAD authentication outside of a web context (in bo
 
 For sample code showing the tab authentication process using AAD see:
 
-* [Microsoft Teams authentication sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
-* [Microsoft Teams authentication sample (C#)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
+* [Microsoft Teams tab authentication sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
+* [Microsoft Teams tab authentication sample (C#)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)

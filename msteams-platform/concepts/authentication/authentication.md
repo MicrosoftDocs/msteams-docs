@@ -21,9 +21,9 @@ Detailed implementation walkthroughs for authentication using Azure Active Direc
 
 Sample code showing bot authentication in Node:
 
-* [Microsoft Teams authentication sample](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
+* [Microsoft Teams bot authentication sample](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
 
 Sample code showing tab authentication for C# and Node:
 
-* [Microsoft Teams authentication sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
-* [Microsoft Teams authentication sample (C#)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
+* [Microsoft Teams tab authentication sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
+* [Microsoft Teams tab authentication sample (C#)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
