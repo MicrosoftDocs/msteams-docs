@@ -12,49 +12,13 @@ OAuth is an open standard for authentication used by AAD and many other service 
 
 The code in this article comes from the Teams sample app [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). It contains a static tab that requests an access token for Microsoft Graph and shows the current user's basic profile information from Azure AD.
 
-Authentication flow in bots differs slightly from authentication flow in tabs.
+For a general overview of authentication flow for tabs see the topic [Authentication flow in bots](~/concepts/authentication/auth-flow-tab).
 
-## Changes to authentication flow in Teams
-
-To address a security concern, changes have been made to tab authentication flow.
-
-Before the July 2017 update tabs were allowed to open an authentication window to any arbitrary domain and listen to messages from that window as if they came from the domain of the tab content frame. This is no longer permitted.
-
-Developers used this behavior to do things like launch an authentication pop-up directly to Azure Active Directory (Azure AD), redirect back to their tab content's domain, and then call `notifySuccess`. Although this was a legitimate scenario, it also would allow a pop-up to a phishing site.
-
-The recommended approach is to direct the authentication pop-up to a page on your domain, redirect to Azure AD (or other sign-in provider), and then redirect back to your domain as usual. Basically, the authentication pop-up must start and end on your domain.
-
-Because `navigateCrossDomain` isn't supported in the authentication window, we recommend that your authentication start and end domains are the same as your content domain and listed in the manifest's `validDomains` list.
-
-## Treat tab context as hints
-
-Although the tab context provides useful information regarding the user, don't use this information to authenticate the user whether you get it as URL parameters to your tab content URL or by calling the microsoftTeams.getContext() function in the Microsoft Teams client SDK. A malicious actor could invoke your tab content URL with its own parameters, and a web page impersonating Microsoft Teams could load your tab content URL in an iframe and return its own data to the getContext() function. You should treat the identity-related information in the tab context simply as hints and validate them before use.
+Authentication flow in tabs differs slightly from authentication flow in bots.
 
 ## Configure an Azure Active Directory application
 
-Most service providers require you to register your application with their service before you can authenticate and consume service resources. To do this with AAD follow these steps:
-
-1. Open the [Application Registration Portal](https://apps.dev.microsoft.com/), click on *Add an app* and follow the steps to register your app. If your app has already been registered (for example if you have previously registered a bot in your app) locate your app.
-
-2. Select your app to view it's properties. Find the *Platforms* section for the app and select *Add Platform*.
-
-    ![View team](~/assets/images/authentication/AppRegistration.png)
-
-3. From the *Add Platform* dialog select *Web*.
-
-    ![View team](~/assets/images/authentication/AddPlatform.png)
-
-4. The *Add Platform* section of the app properties page will now look something like this:
-
-    ![View team](~/assets/images/authentication/Platforms.png)
-
-    Add the redirect and logout URLs in the Web section of Platforms. For the TypeScript/Node.js and C# sample apps on GitHub, the redirect URLs will be similar to this:
-
-    Redirect URLs: https://yourhost/tab-auth/simple-start
-
-    Logout URL: https://yourhost/tab-auth/silent-end
-
-    Where "yourhost" is replaced by your actual host. This might be a dedicated hosting site, Glitch or an ngrok redirect to localhost on your development machine. You may not have this information yet if you have not completed or hosted your app (or the sample app mentioned above), but you can always return to this page when that information is known.
+See the topic [Configure Azure Active Directory for authentication](~/concepts/authentication/configure-AAD) for detailed steps on configuring Azure Active Directory for authentication.
 
 ## Initiate authentication flow
 
@@ -120,7 +84,7 @@ After the user completes authorization, the user is redirected to the callback p
 ### Notes
 
 * See [get user context information](~/concepts/tabs/tabs-context) for help building authentication requests and URLs. For example, you can use the user's name (upn) as the *login_hint* value for Azure AD sign-in, which means the user might need to type less. Remember that you should *not* use this context directly as proof of identity since an attacker could load your page in a malicious browser and provide it with any information they want.
-
+* Although the tab context provides useful information regarding the user, don't use this information to authenticate the user whether you get it as URL parameters to your tab content URL or by calling the microsoftTeams.getContext() function in the Microsoft Teams client SDK. A malicious actor could invoke your tab content URL with its own parameters, and a web page impersonating Microsoft Teams could load your tab content URL in an iframe and return its own data to the getContext() function. You should treat the identity-related information in the tab context simply as hints and validate them before use.
 * The *state* parameter is used to confirm that the service calling the callback URI is the service you called. If the *state* parameter in the callback does not match the parameter you sent during the call the return call is not verified and should be terminated.
 
 * The `microsoftTeams.navigateCrossDomain()` function is not available in the context of the identity provider's popup. As a result, it is not necessary to include the identity provider's domain in the *validDomains* list in the app's manifest.json file.
@@ -177,7 +141,9 @@ For more information on Single Sign-On (SSO) see the article [Silent authenticat
 
 For more information on using AAD authentication outside of a web context (in bots or in mobile) see [Authentication for bots (AAD)](~/concepts/authentication/auth-bot)
 
-For sample code showing the authentication process using AAD see:
+## Samples
+
+For sample code showing the tab authentication process using AAD see:
 
 * [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
 * [Microsoft Teams Authentication Sample (C#)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)

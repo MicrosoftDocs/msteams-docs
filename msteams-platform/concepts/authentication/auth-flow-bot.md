@@ -9,7 +9,7 @@ ms.date: 02/27/2018
 OAuth 2.0 is an open standard for authentication and authorization used by AAD and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams; [here's a good overview](https://aaronparecki.com/oauth-2-simplified/) that's easier to follow than the [formal specification](https://oauth.net/2/). Authentication flow for tabs and bots are a little different because tabs are very similar to websites so they can use OAuth 2.0 directly, and bots are not and must do a few things differently, but the core concepts are identical.
 
 See the GitHub repo [Microsoft Teams Authentication Sample](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
-for an example that demonstrates authentication flow for tabs and bots using Node using the [OAuth 2.0 authorization code grant type](https://oauth.net/2/grant-types/authorization-code/).
+for an example that demonstrates authentication flow for bots using Node using the [OAuth 2.0 authorization code grant type](https://oauth.net/2/grant-types/authorization-code/).
 
 ![Bot authentication sequence diagram](~/assets/images/authentication/bot_auth_sequence_diagram.png)
 
@@ -46,7 +46,14 @@ If you want to limit signing in to web and desktop only, you can choose to omit 
 
 Once the Microsoft Teams mobile clients support the complete `signin` action protocol, including passing the verification code via `notifySuccess()`, they will launch the auth start page in a popup window and ignore `fallbackUrl`.
 
-For sample code showing the authentication process see:
+## Samples
 
-* [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
-* [Microsoft Teams Authentication Sample (c#)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
+For sample code showing the bot authentication process see:
+
+* [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
+
+## More details
+
+For detailed implementation walkthroughs for bot authentication targeting Azure Active Directory see:
+
+* [Authenticate a user in a Microsoft Teams bot](~/concepts/authentication/auth-bot-AAD)

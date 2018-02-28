@@ -8,7 +8,7 @@ ms.date: 02/27/2018
 
 OAuth 2.0 is an open standard for authentication and authorization used by AAD and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams; [here's a good overview](https://aaronparecki.com/oauth-2-simplified/) that's easier to follow than the [formal specification](https://oauth.net/2/). Authentication flow for tabs and bots are a little different because tabs are very similar to websites so they can use OAuth 2.0 directly; bots are not and must do a few things differently, but the core concepts are identical.
 
-See the GitHub repo [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
+
 for an example that demonstrates authentication flow for tabs and bots using Node using the [OAuth 2.0 implicit grant type](https://oauth.net/2/grant-types/implicit/).
 
 ![Tab authentication sequence diagram](~/assets/images/authentication/tab_auth_sequence_diagram.png)
@@ -29,19 +29,16 @@ for an example that demonstrates authentication flow for tabs and bots using Nod
 
 Although the tab context provides useful information regarding the user, don't use this information to authenticate the user whether you get it as URL parameters to your tab content URL or by calling the `microsoftTeams.getContext()` function in the Microsoft Teams client SDK. A malicious actor could invoke your tab content URL with its own parameters, and a web page impersonating Microsoft Teams could load your tab content URL in an iframe and return its own data to the `getContext()` function. You should treat the identity-related information in the tab context simply as hints and validate them before use.
 
-## Changes to authentication flow in Teams
-
-To address a security concern, changes were made to tab authentication flow in July 2017. Before then, tabs were allowed to open an authentication window to any arbitrary domain and listen to messages from that window as if they came from the domain of the tab content frame. This is no longer permitted.
-
-Developers used this behavior to do things like launch an authentication pop-up directly to Azure Active Directory (Azure AD), redirect back to their tab content's domain, and then call `notifySuccess`. Although this was a legitimate scenario, it also would allow a pop-up to a phishing site.
-
-The recommended approach is to direct the authentication pop-up to a page on your domain, redirect to Azure AD (or other identity provider), and then redirect back to your domain as usual. The authentication pop-up must start and end on your domain.
-
-Because `navigateCrossDomain` isn't supported in the authentication window, we recommend that your authentication start and end domains are the same as your content domain and listed in the manifest's `validDomains` list.
-
 ## Samples
 
-For sample code showing the authentication process see:
+For sample code showing the tab authentication process see:
 
 * [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
 * [Microsoft Teams Authentication Sample (C#)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
+
+## More details
+
+For a detailed implementation walkthrough for tab authentication targeting Azure Active Directory see:
+
+* [Authenticate a user in a Microsoft Teams tab](~/concepts/authentication/auth-tab-AAD)
+* [Silent authentication](~/concepts/authentication/auth-silent-AAD)
