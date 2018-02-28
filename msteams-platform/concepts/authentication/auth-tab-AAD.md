@@ -1,6 +1,6 @@
 ---
 title: Authentication for tabs using Azure Active Directory
-description: Describes authentication in Teams and how to use it in your tabs
+description: Describes authentication in Teams and how to use it in tabs
 keywords: teams authentication tabs AAD
 ms.date: 02/27/2018
 ---
@@ -50,7 +50,7 @@ microsoftTeams.authentication.authenticate({
 
 * Failing to use microsoftTeams.authentication.authenticate might result in problems with the popup not closing at the end of the sign in process.
 
-### Navigate to the authorization page from your popup page
+## Navigate to the authorization page from your popup page
 
 When your popup page ("/tab-auth/simple-start") is displayed the following code is run.
 The main goal of this page is to redirect to your identity provider so the user can sign in. This redirection could be done on the server side using HTTP 302, but in this case it is done on the client side using with a call to window.location.assign(). This also allows microsoftTeams.getContext to be used to retrieve hinting information which can be passed to AAD.
@@ -89,7 +89,7 @@ After the user completes authorization, the user is redirected to the callback p
 
 * The `microsoftTeams.navigateCrossDomain()` function is not available in the context of the identity provider's popup. As a result, it is not necessary to include the identity provider's domain in the *validDomains* list in the app's manifest.json file.
 
-### The callback page
+## The callback page
 
 In the last section you called the AAD authorization service and passed in user and app information so that AAD could present the user with it's own monolithic authorization experience. Your app has no control over what happens in this experience. All it knows is what is returned when AAD calls the  callback page that you provided ("/tab-auth/simple-end").
 
@@ -127,7 +127,8 @@ if (hashParams["error"]) {
 
 This code parses the key-value pairs received from Azure AD in window.location.hash using the getHashParameters() helper function. If it finds an *access_token*, and the *state* value is the same as the one provided at the start of the authentication flow, it returns the access token to the tab by calling notifySuccess(); otherwise it reports an error with notifyFailure().
 
-Notes:
+### Notes
+
 NotifyFailure() has the following predefined failure reasons:
 
 * *CancelledByUser* - the user closed the popup window before completing the authentication flow.
@@ -145,5 +146,5 @@ For more information on using AAD authentication outside of a web context (in bo
 
 For sample code showing the tab authentication process using AAD see:
 
-* [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
-* [Microsoft Teams Authentication Sample (C#)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
+* [Microsoft Teams authentication sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
+* [Microsoft Teams authentication sample (C#)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)

@@ -2,7 +2,7 @@
 title: Configure an authentication provider
 description: Describes how to configure an authentication provider
 keywords: teams authentication AAD
-ms.date: 01/10/2018
+ms.date: 02/28/2018
 ---
 # Configure an authentication provider
 

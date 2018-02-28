@@ -50,7 +50,7 @@ Three buttons have been added to the Hero Card: Sign in, Get Profile, and Sign O
 
 ## Sign the user in
 
-select the Sign in button, which generates an event that is handled in `getInvokeHandler` using this code:
+selecting the Sign in button generates an event that is handled in `getInvokeHandler` using this code:
 
 ```TypeScript
 if ((event as any).name === "signin/verifyState") {

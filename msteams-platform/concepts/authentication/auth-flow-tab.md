@@ -2,7 +2,7 @@
 title: Authentication flow for tabs
 description: Describes authentication flow in tabs
 keywords: teams authentication flow tabs
-ms.date: 02/27/2018
+ms.date: 02/28/2018
 ---
 # Microsoft Teams authentication flow for tabs
 

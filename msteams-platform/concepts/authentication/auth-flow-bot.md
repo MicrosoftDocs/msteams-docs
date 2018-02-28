@@ -2,7 +2,7 @@
 title: Authentication flow for bots
 description: Describes authentication flow in bots
 keywords: teams authentication flow bots
-ms.date: 02/27/2018
+ms.date: 02/28/2018
 ---
 # Microsoft Teams authentication flow for bots
 
