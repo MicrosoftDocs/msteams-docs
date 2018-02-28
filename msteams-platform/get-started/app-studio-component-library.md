@@ -57,7 +57,7 @@ import { TeamsComponentContext, ThemeStyle, PrimaryButton } from ‘msteams-ui-c
 class App extends Component {
    render() {
       // Sets up the top-level context for the library. It accepts global
-      // configurations, e.g. font size and theme. fontSize is your page’s
+      // configurations such as font size and theme. fontSize is your page’s
       // default font size. We made it a parameter so that you could use this
       // library with CSS frameworks such as Bootstrap. Some CSS frameworks
       // set the default font size for the page; retrieve it and use it
