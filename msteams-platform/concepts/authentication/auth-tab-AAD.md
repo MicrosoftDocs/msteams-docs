@@ -2,7 +2,7 @@
 title: Authentication for tabs using Azure Active Directory
 description: Describes authentication in Teams and how to use it in tabs
 keywords: teams authentication tabs AAD
-ms.date: 02/27/2018
+ms.date: 03/01/2018
 ---
 # Authenticate a user in a Microsoft Teams tab
 
@@ -12,21 +12,21 @@ OAuth is an open standard for authentication used by AAD and many other service 
 
 The code in this article comes from the Teams sample app [Microsoft Teams tab authentication sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). It contains a static tab that requests an access token for Microsoft Graph and shows the current user's basic profile information from Azure AD.
 
-For a general overview of authentication flow for tabs see the topic [Authentication flow in bots](~/concepts/authentication/auth-flow-tab).
+For a general overview of authentication flow for tabs see the topic [Authentication flow in tabs](~/concepts/authentication/auth-flow-tab).
 
 Authentication flow in tabs differs slightly from authentication flow in bots.
 
-## Configure an authentication provider
+## Configuring OAuth 2.0 redirect URLs
 
-See the topic [Configure an authentication provider](~/concepts/authentication/configure-AAD) for detailed steps on configuring Azure Active Directory for authentication.
+See the topic [Configure OAuth 2.0 redirect URLs](~/concepts/authentication/configure-AAD) for detailed steps on configuring OAuth 2.0 callback redirect URL(s) when using Azure Active Directory as an identity provider.
 
 ## Initiate authentication flow
 
-Usually authentication flow is triggered by a user action. You should not drive the authentication pop-up automatically because this is likely to trigger the browser's pop-up blocker as well as confuse the user.
+Authentication flow should be triggered by a user action. You should not open the authentication pop-up automatically because this is likely to trigger the browser's pop-up blocker as well as confuse the user.
 
 Add a button to your configuration or content page to enable the user to sign in when needed. This can be done in the tab [configuration](~/concepts/tabs/tabs-configuration) page or any [content](~/concepts/tabs/tabs-content) page.
 
-AAD, like most identity providers, does not allow their content to be placed in an iframe. This means that you will need to add a pop-up page to host the identity provider.  In the following example this page is `/tab-auth/simple-start`. Use the `microsoftTeams.authenticate()` function of the Microsoft Teams client SDK to launch this page when your button is selected.
+AAD, like most identity providers, does not allow its content to be placed in an iframe. This means that you will need to add a pop-up page to host the identity provider.  In the following example this page is `/tab-auth/simple-start`. Use the `microsoftTeams.authenticate()` function of the Microsoft Teams client SDK to launch this page when your button is selected.
 
 ```js
 microsoftTeams.authentication.authenticate({
@@ -44,16 +44,15 @@ microsoftTeams.authentication.authenticate({
 
 ### Notes
 
-* The URL you pass to `microsoftTeams.authentication.authenticate()` is the start page of the authentication flow. In this example that is `/tab-auth/simple-start`. This should match what you registered in the previous step in AAD's Application Registration Portal.
+* The URL you pass to `microsoftTeams.authentication.authenticate()` is the start page of the authentication flow. In this example that is `/tab-auth/simple-start`. This should match what you registered in the [AAD Application Registration Portal](https://apps.dev.microsoft.com).
 
-* Authentication flow must start on a page that's on your domain. This domain should also be listed in the [`validDomains`](~/resources/schema/manifest-schema#validdomains) section of the manifest. Failure to do so might result in an empty pop-up.
+* Authentication flow must start on a page that's on your domain. This domain should also be listed in the [`validDomains`](~/resources/schema/manifest-schema#validdomains) section of the manifest. Failure to do so will result in an empty pop-up.
 
-* Failing to use `microsoftTeams.authentication.authenticate` might result in problems with the popup not closing at the end of the sign in process.
+* Failing to use `microsoftTeams.authentication.authenticate()` will cause a problem with the popup not closing at the end of the sign in process.
 
 ## Navigate to the authorization page from your popup page
 
-When your popup page (`/tab-auth/simple-start`) is displayed the following code is run.
-The main goal of this page is to redirect to your identity provider so the user can sign in. This redirection could be done on the server side using HTTP 302, but in this case it is done on the client side using with a call to `window.location.assign()`. This also allows `microsoftTeams.getContext` to be used to retrieve hinting information which can be passed to AAD.
+When your popup page (`/tab-auth/simple-start`) is displayed the following code is run. The main goal of this page is to redirect to your identity provider so the user can sign in. This redirection could be done on the server side using HTTP 302, but in this case it is done on the client side using with a call to `window.location.assign()`. This also allows `microsoftTeams.getContext()` to be used to retrieve hinting information which can be passed to AAD.
 
 ```js
 microsoftTeams.getContext(function (context) {
@@ -86,7 +85,6 @@ After the user completes authorization, the user is redirected to the callback p
 * See [get user context information](~/concepts/tabs/tabs-context) for help building authentication requests and URLs. For example, you can use the user's name (upn) as the `login_hint` value for Azure AD sign-in, which means the user might need to type less. Remember that you should not use this context directly as proof of identity since an attacker could load your page in a malicious browser and provide it with any information they want.
 * Although the tab context provides useful information regarding the user, don't use this information to authenticate the user whether you get it as URL parameters to your tab content URL or by calling the `microsoftTeams.getContext()` function in the Microsoft Teams client SDK. A malicious actor could invoke your tab content URL with its own parameters, and a web page impersonating Microsoft Teams could load your tab content URL in an iframe and return its own data to the `getContext()` function. You should treat the identity-related information in the tab context simply as hints and validate them before use.
 * The `state` parameter is used to confirm that the service calling the callback URI is the service you called. If the `state` parameter in the callback does not match the parameter you sent during the call the return call is not verified and should be terminated.
-
 * The `microsoftTeams.navigateCrossDomain()` function is not available in the context of the identity provider's popup. As a result, it is not necessary to include the identity provider's domain in the `validDomains` list in the app's manifest.json file.
 
 ## The callback page
@@ -140,7 +138,7 @@ Your app can set its own session cookie so that the user need not sign in again 
 
 For more information on Single Sign-On (SSO) see the article [Silent authentication](~/concepts/authentication/auth-silent-AAD).
 
-For more information on using AAD authentication outside of a web context (in bots or in mobile) see [Authentication for bots (AAD)](~/concepts/authentication/auth-bot-AAD)
+For more information on using AAD authentication for bots, see [Authentication for bots (AAD)](~/concepts/authentication/auth-bot-AAD)
 
 ## Samples
 
