@@ -19,23 +19,23 @@ for an example that demonstrates authentication flow for bots using Node using t
 3. The bot constructs the URL to the start page of the authentication flow, and sends a card to the user with a `signin` action. ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/dialogs/BaseIdentityDialog.ts#L160-L190))
     * Like other application auth flows in Teams, the start page must be on a domain that's in your `validDomains` list, and on the same domain as the post-login redirect page.
     * **IMPORTANT**: The OAuth 2.0 authorization code grant flow calls for a `state` parameter in the authentication request which contains a unique session token to prevent a [cross-site request forgery attack](https://en.wikipedia.org/wiki/Cross-site_request_forgery). The example uses a randomly-generated GUID.
-4. When the user clicks on the `signin` button, Teams opens a popup window and navigates it to the start page.
+4. When the user clicks on the *signin* button, Teams opens a popup window and navigates it to the start page.
 5. The start page redirects the user to the identity provider's `authorize` endpoint. ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/public/html/auth-start.html#L51-L56))
 6. On the provider's site, the user signs in and grants access to the bot.
 7. The provider takes the user to the bot's OAuth redirect page, with an authorization code.
 8. The bot redeems the authorization code for an access token, and **provisionally** associates the token with the user that initiated the sign-in flow.
-    * In the example, the bot associates the value of the `state` parameter with the id of the user that *initiated* the sign-in process so it can later match it with the `state` value returned by the identity provider. ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/AuthBot.ts#L70-L99))
+    * In the example, the bot associates the value of the `state` parameter with the id of the user that initiated the sign-in process so it can later match it with the `state` value returned by the identity provider. ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/AuthBot.ts#L70-L99))
     * **IMPORTANT**: The bot stores the token it receives from the identity provider and associates it with a specific user, but it is marked as "pending validation". The token is not used while in this state. If the `state` pamrameter is valid, Teams then uses a [two-step authentication](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) process to ensure that the user who authorized the bot with the identity provider is the same user who is chatting with the bot. This guards against [man-in-the-middle](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) and [phishing](https://en.wikipedia.org/wiki/Phishing) attacks. On the desktop and web versions of Teams, the verification code is generated and verified automatically; on mobile devices the user may have to enter it manually [as described below](#Mobile-clients). ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/AuthBot.ts#L100-L113))
 9. The OAuth callback renders a page that calls `notifySuccess("<verification code>")`. ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/master/src/views/oauth-callback-success.hbs))
-10. Teams closes the popup and sends the string given to `notifySuccess()` back to the bot. The bot receives an invoke message with `name` = `signin/verifyState`.
+10. Teams closes the popup and sends the string given to `notifySuccess()` back to the bot. The bot receives an invoke message with `name = signin/verifyState`.
 11. The bot checks the incoming verification code against the code stored in the user's provisional token. ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/dialogs/BaseIdentityDialog.ts#L127-L140))
 12. If they match, the bot marks the token as validated and ready for use. Otherwise, the auth flow fails, and the bot deletes the provisional token.
 
 ## Mobile clients
 
-As of March 2018, the Microsoft Teams mobile clients do not fully support the `signin` action protocol:
+As of March 2018, the Microsoft Teams mobile clients do not fully support the signin action protocol:
 
-* If the URL provided to the `signin` button action has a `fallbackUrl` query string parameter, Teams will launch that URL in the browser.
+* If the URL provided to the signin button action has a `fallbackUrl` query string parameter, Teams will launch that URL in the browser.
 * Otherwise, Teams will show an error saying that the action is not yet supported on mobile.
 
 In the example, the mobile sign in flow works the same way as on the desktop, until the point where the OAuth callback page tries to send the verification code back to the bot. The bot sets the `fallbackUrl` query string parameter to be the same as the original url to the auth start page, so that the user goes to the same page on all platforms. ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/dialogs/BaseIdentityDialog.ts#L173-L178))
@@ -44,7 +44,7 @@ When the OAuth callback runs in a mobile browser, the call to `notifySuccess()` 
 
 If you want to limit signing in to web and desktop only, you can choose to omit the `fallbackUrl` parameter, or point it to your own error page that asks the user to sign in on web or desktop.
 
-Once the Microsoft Teams mobile clients support the complete `signin` action protocol, including passing the verification code via `notifySuccess()`, they will launch the auth start page in a popup window and ignore `fallbackUrl`.
+Once the Microsoft Teams mobile clients support the complete signin action protocol, including passing the verification code via `notifySuccess()`, they will launch the auth start page in a popup window and ignore `fallbackUrl`.
 
 ## Samples
 

@@ -131,8 +131,8 @@ This code parses the key-value pairs received from Azure AD in `window.location.
 
 `NotifyFailure()` has the following predefined failure reasons:
 
-* `CancelledByUser` - the user closed the popup window before completing the authentication flow.
-* `FailedToOpenWindow` - the popup window could not be opened. When running Microsoft Teams in a browser, this typically means that the window was blocked by a popup blocker.
+* `CancelledByUser` the user closed the popup window before completing the authentication flow.
+* `FailedToOpenWindow` the popup window could not be opened. When running Microsoft Teams in a browser, this typically means that the window was blocked by a popup blocker.
 
 If successful, you can refresh or reload the page and show content relevant to the now-authenticated user. If authentication fails, display an error message.
 
