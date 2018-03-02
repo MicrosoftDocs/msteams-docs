@@ -1,18 +1,18 @@
 ---
-title: Configure an authentication provider
-description: Describes how to configure an authentication provider
-keywords: teams authentication AAD
-ms.date: 02/28/2018
+title: Configuring OAuth 2.0 identity providers
+description: Describes how to configure identity providers with a focus on AAD
+keywords: teams authentication AAD oauth identity provider
+ms.date: 03/01/2018
 ---
-# Configure an authentication provider
+# Configuring identity providers
 
-## Configure Azure Active Directory for authentication
+## Configuring an application to use Azure Active Directory as an identity provider
 
-Most service providers require you to register your application with their service before you can authenticate and consume service resources. To do this with AAD follow these steps:
+Identity providers supporting OAuth 2.0 will not authenticate requests from unknown applications; applications must be registered ahead of time. To do this with AAD, follow these steps:
 
 1. Open the [Application Registration Portal](https://apps.dev.microsoft.com/), click on *Add an app* and follow the steps to register your app. If your app has already been registered (for example if you have previously registered a bot in your app) locate your app.
 
-2. Select your app to view it's properties. Find the *Platforms* section for the app and select *Add Platform*.
+2. Select your app to view its properties. Find the *Platforms* section for the app and select *Add Platform*.
 
     ![View team](~/assets/images/authentication/AppRegistration.png)
 
@@ -24,13 +24,13 @@ Most service providers require you to register your application with their servi
 
     ![View team](~/assets/images/authentication/Platforms.png)
 
-    Add the redirect and logout URLs in the Web section of Platforms. For the TypeScript/Node.js and C# sample apps on GitHub, the redirect URLs will be similar to this:
+    Add the OAuth 2.0 redirect and logout URLs in the Web section of Platforms. For the TypeScript/Node.js and C# sample apps on GitHub, the redirect URLs will be similar to this:
 
-    Redirect URLs: https://yourhost/bot-auth/simple-start
+    Redirect URLs: https://\<hostname\>/bot-auth/simple-start
 
     No logout URL is required.
 
-    `yourhost` is replaced by your actual host. This might be a dedicated hosting site, Glitch or an ngrok redirect to localhost on your development machine. You may not have this information yet if you have not completed or hosted your app (or the sample app mentioned above), but you can always return to this page when that information is known.
+    Replace `<hostname>` with your actual host. This might be a dedicated hosting site such as Azure, Glitch, or an ngrok tunnel to localhost on your development machine such as `abcd1234.ngrok.io`. You may not have this information yet if you have not completed or hosted your app (or the sample app mentioned above), but you can always return to this page when that information is known.
 
 ## Other authentication providers
 
