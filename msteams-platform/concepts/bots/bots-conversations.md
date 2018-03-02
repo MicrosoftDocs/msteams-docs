@@ -287,21 +287,21 @@ You can use the `session.connector.update` method in the Bot Builder SDK to upda
 
 ```js
 function sendCardUpdate(bot, session, originalMessage, address) {
-	
-	var origAttachment = originalMessage.data.attachments[0];
-	origAttachment.content.subtitle = 'Assigned to Larry Jin';
 
-	var updatedMsg = new builder.Message()
-		.address(address)
-		.textFormat(builder.TextFormat.markdown)
-		.addAttachment(origAttachment)
-		.toMessage();
+  var origAttachment = originalMessage.data.attachments[0];
+  origAttachment.content.subtitle = 'Assigned to Larry Jin';
 
-	session.connector.update(updatedMsg, function(err, addresses) {
-		if (err) {
-			console.log(`Could not update the message`);
-		}
-	});
+  var updatedMsg = new builder.Message()
+    .address(address)
+    .textFormat(builder.TextFormat.markdown)
+    .addAttachment(origAttachment)
+    .toMessage();
+
+  session.connector.update(updatedMsg, function(err, addresses) {
+    if (err) {
+      console.log(`Could not update the message`);
+    }
+  });
 }
 ```
 
@@ -314,7 +314,8 @@ You can create a 1:1 conversation with a user or start a new reply chain in a ch
 
 ## Deleting messages
 
-Messages can be deleted using the delete method in the BotBuilder SDK.
+Messages can be deleted using the `delete()` method in the BotBuilder SDK.
+
 ```js
 bot.dialog('BotDeleteMessage', function (session: builder.Session) {
   var msg = new teams.TeamsMessage(session).text("Bot will delete this message in 5 sec.")
