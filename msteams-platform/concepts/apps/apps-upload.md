@@ -26,16 +26,16 @@ With your package created, you can now upload it into a team. Once uploaded it w
 > [!NOTE]
 > For uploading to work, your tenant admin must first [enable uploading of apps](/microsoftteams/admin-settings).
 
-1. Create a new team for testing, if necessary. Click **Create and join team** at the bottom of the left-hand panel.
+1. Create a new team for testing, if necessary. Click *Create and join team* at the bottom of the left-hand panel.
 
-2. In the target team, choose **More options** (**&#8943;**) and choose **Manage team**.
+2. In the target team, choose *More options* (**&#8943;**) and choose *Manage team*.
 
    ![View team](~/assets/images/ManageTeam.png)
 
    > [!NOTE]
    > You must be the team owner, or the owner must allow users to add the appropriate app types for this functionality to appear.
 
-3. Select the Apps tab, and then choose **Upload a custom app** on the lower right.
+3. Select the Apps tab, and then choose *Upload a custom app* on the lower right.
 
    ![Upload entry point](~/assets/images/uploadACustomApp.png)
 
@@ -51,13 +51,13 @@ If your app does not load, the most common reason is an error in the manifest, p
 
 If the app contains tabs, users can pin them to any channel on the team using the standard tab gallery flow:
 
-1. Go to a channel in the team. Choose **+** (**Add a tab**) to the right of the existing tabs.
+1. Go to a channel in the team. Choose *+* (*Add a tab*) to the right of the existing tabs.
 
 2. Select your tab from the gallery that appears.
 
 3. Accept the consent prompt.
 
-4. Configure your tab via its [configuration page](~/concepts/tabs/tabs-configuration) and choose **Save**.
+4. Configure your tab via its [configuration page](~/concepts/tabs/tabs-configuration) and choose *Save*.
 
   ![The Add a tab dialog box, featuring a gallery of available tabs](~/assets/images/tab_gallery.png)
 
@@ -73,17 +73,17 @@ To test direct chats with your bot, you can either access it via the App home, @
 
 With the app loaded in the team, users can set up a Connector on any channel in the team using the standard Connectors gallery flow:
 
-1. Go to a channel in the team. Choose **More options** (**&#8943;**) and choose **Connectors**.
+1. Go to a channel in the team. Choose *More options* (*&#8943;*) and choose *Connectors*.
 
 2. Select your Connector from the **Uploaded** section at the bottom.
 
-3. Configure your Connector via its [configuration page](~/concepts/connectors) and choose **Save**.
+3. Configure your Connector via its [configuration page](~/concepts/connectors) and choose *Save*.
 
   ![The Add a tab dialog box, featuring a gallery of available tabs.](~/assets/images/connector_gallery.png)
 
 ## Accessing your uploaded messaging extension
 
-An uploaded app with a messaging extension automatically appears in the **More options** (**&#8943;**) menu in the compose box.
+An uploaded app with a messaging extension automatically appears in the *More options* (*&#8943;*) menu in the compose box.
 
 ![Messaging extensions](~/assets/images/compose-extensions/cesampleapp.png)
 
@@ -91,7 +91,7 @@ An uploaded app with a messaging extension automatically appears in the **More o
 
 If you want to remove your app, select the trash-can icon next to the app name in the View Teams bots list.
 
-If you change manifest information, you must first remove the app and then add the updated package (per [Load your package into a team](#load-your-package-into-a-team)). Note that, in general, code changes on your service do not require you to re-upload your manifest, unless those changes require manifest updates (such as changes to the URL or the Microsoft app ID for its bot). 
+If you change manifest information, you must first remove the app and then add the updated package (per [Load your package into a team](#load-your-package-into-a-team)). Note that, in general, code changes on your service do not require you to re-upload your manifest, unless those changes require manifest updates (such as changes to the URL or the Microsoft app ID for its bot).
 
 > [!NOTE]
 > There is currently no way to completely remove a bot from 1:1 context.

@@ -3,11 +3,14 @@
   universal_ref_toc: /javascript/api/msteams-client-docs-ref-typescript/toc.json
 - name: Get started
   href: ./get-started/get-started
-  items:
+  items: 
   - name:  Prepare your Office 365 tenant
     href: ./get-started/get-started-tenant
   - name: Use Teams App Studio
     href: ./get-started/get-started-app-studio
+    items:
+    - name: App Studio Controls
+      href: ./get-started/app-studio-component-library
   - name: Get started with Node.js
     href: ./get-started/get-started-nodejs
   - name: Get started with C#/.NET
@@ -57,7 +60,20 @@
     - name: Test a bot
       href: ./concepts/bots/bots-test
   - name: Authentication
-    href: ./concepts/authentication
+    href: ./concepts/authentication/authentication
+    items:
+    - name: Authentication flow for tabs
+      href: ./concepts/authentication/auth-flow-tab
+    - name: Authentication flow for bots
+      href: ./concepts/authentication/auth-flow-bot
+    - name: AAD tab authentication
+      href: ./concepts/authentication/auth-tab-AAD
+    - name: AAD bot authentication
+      href: ./concepts/authentication/auth-bot-AAD
+    - name: Silent authentication and SSO
+      href: ./concepts/authentication/auth-silent-AAD
+    - name: Configuring identity providers
+      href: ./concepts/authentication/auth-configure
   - name: Activity Feed
     href: ./concepts/activity-feed
   - name: Connectors

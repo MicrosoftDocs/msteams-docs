@@ -79,15 +79,15 @@ function onClick() {
 
 For your configuration page to display within Microsoft Teams, ensure that it meets the [requirements for tab pages](~/resources/general/requirements).
 
->In summary: You must host your page on a secure HTTPS endpoint, ensure that your page permits itself to be iframed, include the Microsoft Teams JavaScript client SDK, and call `microsoftTeams.initialize()`.
+>In summary: You must host your page on a secure HTTPS endpoint, ensure that your page allows display in an iframe, include the Microsoft Teams JavaScript client SDK, and call `microsoftTeams.initialize()`.
 
-## Collecting user information 
+## Collecting user information
 
 Your configuration page needs to perform the following steps:
 
 ### Obtain context and authenticate
 
-If your page requires context about the user or environment, see [Get context for your Microsoft Teams tab](~/concepts/tabs/tabs-context). If it needs to authenticate the user, see [Authenticate a user in your Microsoft Teams tab](~/concepts/authentication).
+If your page requires context about the user or environment, see [Get context for your Microsoft Teams tab](~/concepts/tabs/tabs-context). If it needs to authenticate the user, see [Authenticate a user in your Microsoft Teams tab](~/concepts/authentication/authentication).
 
 ### Determine when the user has specified all required information
  

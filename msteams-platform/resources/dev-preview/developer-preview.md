@@ -4,7 +4,7 @@ description: Explains the Public Developer Preview of Microsoft Teams
 keywords: teams preview developer
 ms.date: 01/20/2018
 ---
-# How do I get access to the Developer Prevew?
+# How do I get access to the Developer Preview?
 
 To participate in the Public Developer Preview, you need to do the following:
 
