@@ -18,7 +18,7 @@ Your tab might require contextual information to display the necessary content.
 Context about the user, team or company can be especially useful when
 
 * You need to create or associate resources in your app with the specified user or team.
-* You want to initiate an authentication flow against Azure Active Directory or other identity provider, and you don't want to require the user to enter their username again. (For more information on authenticating within your Microsoft Teams tab, see [Authenticate a user in your Microsoft Teams tab](~/concepts/authentication).)
+* You want to initiate an authentication flow against Azure Active Directory or other identity provider, and you don't want to require the user to enter their username again. (For more information on authenticating within your Microsoft Teams tab, see [Authenticate a user in your Microsoft Teams tab](~/concepts/authentication/authentication).)
 
 > [!IMPORTANT]
 > Although this user information can help provide a smooth user experience, you should *not* use it as proof of identity. For example, an attacker could you load your page in a "bad browser" and provide it with any information they want.
@@ -39,7 +39,7 @@ Use placeholders in your configuration or content URLs. Microsoft Teams replaces
 * {entityId}: The ID you supplied for the item in this tab when first [configuring the tab](~/concepts/tabs/tabs-configuration).
 * {subEntityId}: The ID you supplied when generating a [deep link](~/concepts/deep-links) for a specific item _within_ this tab. This should be used to restore to a specific state within an entity; for example, scrolling to or activating a specific piece of content.
 * {upn}: The User Principal Name of the current user (usually the user's email address).
-* {theme}: The current UI theme, e.g. `default`, `dark`, or `contrast`.
+* {theme}: The current UI theme such as `default`, `dark`, or `contrast`.
 * {groupId}: The ID of the Office 365 Group in which the tab resides.
 * {tid}: The Azure AD tenant ID of the current user.
 * {locale}: The current locale of the user formatted as languageId-countryId (for example, en-us).
@@ -78,7 +78,7 @@ The context variable will look like the following example.
     "upn": "The User Principal Name of the current user (usually the user's email address)",
     "tid": "The Azure AD tenant ID of the current user",
     "groupId": "Guid identifying the current O365 Group ID",
-    "theme": "The current UI theme, e.g. default, dark, contrast",
+    "theme": "The current UI theme, default, dark, contrast",
     "isFullScreen": "Indicates whether the tab is in full-screen mode"
 }
 ```

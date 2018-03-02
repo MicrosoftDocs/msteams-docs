@@ -60,7 +60,20 @@
     - name: Test a bot
       href: ./concepts/bots/bots-test
   - name: Authentication
-    href: ./concepts/authentication
+    href: ./concepts/authentication/authentication
+    items:
+    - name: Authentication flow for tabs
+      href: ./concepts/authentication/auth-flow-tab
+    - name: Authentication flow for bots
+      href: ./concepts/authentication/auth-flow-bot
+    - name: AAD tab authentication
+      href: ./concepts/authentication/auth-tab-AAD
+    - name: AAD bot authentication
+      href: ./concepts/authentication/auth-bot-AAD
+    - name: Silent authentication and SSO
+      href: ./concepts/authentication/auth-silent-AAD
+    - name: Configuring identity providers
+      href: ./concepts/authentication/auth-configure
   - name: Activity Feed
     href: ./concepts/activity-feed
   - name: Connectors

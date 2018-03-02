@@ -39,13 +39,13 @@ Common problems with the settings object:
 * `settings.contentUrl` is missing. This field is required.
 * `settings.contentUrl` or the optional `settings.removeUrl`, or `settings.websiteUrl` are provided but not valid. The URLs must use HTTPS and also must either be the same domain as the settings page or specified in the manifest's `validDomains` list.
 
-### Can't authorize the user or display your auth provider in your tab
+### Can't authenticate the user or display your auth provider in your tab
 
 Unless you are doing silent authentication, you must follow the authentication process provided by the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
 
 Also note: Due to changes introduced in July 2017, we require all authentication flow to start and end on your domain, which must be listed in the `validDomains` object in your manifest.
 
-For more information about authentication, please see [Authenticate a user](~/concepts/authentication).
+For more information about authentication, please see [Authenticate a user](~/concepts/authentication/authentication).
 
 ### Static tabs not showing up
 

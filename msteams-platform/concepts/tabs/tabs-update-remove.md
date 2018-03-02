@@ -89,7 +89,7 @@ Your code should call `microsoftTeams.settings.getSettings(function(settings) { 
 
 Upon page load, enable the **Remove** button immediately by calling `microsoftTeams.settings.setValidityState(true)`. So that you can do so, ensure that all options in your tab removal page have a default selection. Microsoft Teams enables the **Remove** button after 5 seconds, even if your tab hasn't called `setValidityState`. 
 
-If your tab removal page requires user context, see [Get context for your Microsoft Teams tab](~/concepts/tabs/tabs-context). If your app needs to authenticate the user, see [Authenticate a user in your Microsoft Teams tab](~/concepts/authentication).
+If your tab removal page requires user context, see [Get context for your Microsoft Teams tab](~/concepts/tabs/tabs-context). If your app needs to authenticate the user, see [Authenticate a user in your Microsoft Teams tab](~/concepts/authentication/authentication).
 
 ### Processing the content prior to tab removal
 

@@ -2,7 +2,7 @@
 title: Using the control library
 description: How to use the control library provided by Microsoft Teams App Studio
 keywords: Teams App Studio Control Library
-ms.date: 02/27/2018
+ms.date: 03/01/2018
 ---
 # Using the control library in App Studio
 
@@ -57,7 +57,7 @@ import { TeamsComponentContext, ThemeStyle, PrimaryButton } from ‘msteams-ui-c
 class App extends Component {
    render() {
       // Sets up the top-level context for the library. It accepts global
-      // configurations, e.g. font size and theme. fontSize is your page’s
+      // configurations such as font size and theme. fontSize is your page’s
       // default font size. We made it a parameter so that you could use this
       // library with CSS frameworks such as Bootstrap. Some CSS frameworks
       // set the default font size for the page; retrieve it and use it
@@ -75,12 +75,10 @@ class App extends Component {
       );
    }
 }
-
 export default App;
-
 ```
 
-Run the app:
+Run the app
 
 ```terminal
 npm run start
