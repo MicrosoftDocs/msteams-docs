@@ -2,6 +2,7 @@
 title: Get context for your bot
 description: Describes how to get context for bots in Microsoft Teams
 keywords: teams bots context
+ms.date: 02/27/2018
 ---
 
 # Get context for your Microsoft Teams bot
@@ -79,7 +80,14 @@ await context.PostAsync($"People in this conversation: {sb.ToString()}");
 ```
 
 > [!NOTE]
-> The `GetTeamsConversationMembersAsync(teamId, tenantId)` override is now obsolete. If your code uses this override, update it to use `IConversations.GetConversationMembersAsync(conversationId)`; then use `AsTeamsChannelAccount` to get the extended properties.
+> The `GetTeamsConversationMembersAsync(teamId, tenantId)` override is now obsolete. If your code uses this override, update it to use `IConversations.GetConversationMembersAsync(conversationId)` and use `AsTeamsChannelAccount` to get the extended properties, for example:
+>```csharp
+>var members = await connector.Conversations.GetConversationMembersAsync(message.Conversation.Id);
+>foreach (var member in members.AsTeamsChannelAccounts())
+>{
+>  [...]
+>}
+>```
 
 #### Node.js example
 
