@@ -14,9 +14,9 @@ The authentication flow described in this article is very similar to that of tab
 
 For a general overview of authentication flow for bots see the topic [Authentication flow in bots](~/concepts/authentication/auth-flow-bot).
 
-## Configuring OAuth 2.0 redirect URLs
+## Configuring identity providers
 
-See the topic [Configure OAuth 2.0 redirect URLs](~/concepts/authentication/configure-AAD) for detailed steps on configuring OAuth 2.0 callback redirect URL(s) when using Azure Active Directory as an identity provider.
+See the topic [Configure identity providers](~/concepts/authentication/configure-AAD) for detailed steps on configuring OAuth 2.0 callback redirect URL(s) when using Azure Active Directory as an identity provider.
 
 ## Initiate authentication flow
 
