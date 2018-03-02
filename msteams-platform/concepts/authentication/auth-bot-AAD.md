@@ -2,7 +2,7 @@
 title: Authentication for bots using Azure Active Directory
 description: Describes AAD authentication in Teams and how to use it in your bots
 keywords: teams authentication bots AAD
-ms.date: 02/28/2018
+ms.date: 03/01/2018
 ---
 # Authenticate a user in a Microsoft Teams bot
 
@@ -14,112 +14,102 @@ The authentication flow described in this article is very similar to that of tab
 
 For a general overview of authentication flow for bots see the topic [Authentication flow in bots](~/concepts/authentication/auth-flow-bot).
 
-## Configure an authentication provider
+## Configuring identity providers
 
-See the topic [Configure an authentication provider](~/concepts/authentication/auth-configure) for detailed steps on configuring Azure Active Directory for authentication.
+See the topic [Configure identity providers](~/concepts/authentication/configure-AAD) for detailed steps on configuring OAuth 2.0 callback redirect URL(s) when using Azure Active Directory as an identity provider.
 
 ## Initiate authentication flow
 
-Usually authentication flow is triggered by a user action. You should not drive the authentication pop-up automatically because this is likely to trigger the browser's pop-up blocker as well as confuse the user.
+Authentication flow should be triggered by a user action. You should not open the authentication pop-up automatically because this is likely to trigger the browser's pop-up blocker as well as confuse the user.
 
 ## Add UI to start authentication
 
-Add UI to the bot to enable the user to sign in when needed. Here it is done from the bot's hero card.
+Add UI to the bot to enable the user to sign in when needed. Here it is done from a Thumbnail card, in TypeScript:
 
 ```TypeScript
-let buttons = new Array<builder.CardAction>();
-buttons.push(new builder.CardAction(session)
-    .type("signin")
-    .title("Sign In")
-    .value(config.get("app.baseUri") + "/bot-auth/simple-start?width=5000&height=5000"),
-);
-
-let messageBackButton = builder.CardAction.messageBack(session, JSON.stringify({ action: "getProfile" }), "Get Profile")
-    .displayText("Get Profile")
-    .text(Strings.messageBack_button_text); // this matches match for MessageBackReceiverDialog
-buttons.push(messageBackButton);
-
-let messageBackButton2 = builder.CardAction.messageBack(session, JSON.stringify({ action: "signout" }), "Sign Out")
-.displayText("Sign Out")
-.text(Strings.messageBack_button_text); // this matches match for MessageBackReceiverDialog
-buttons.push(messageBackButton2);
-
-```
-
-Three buttons have been added to the Hero Card: Sign in, Get Profile, and Sign Out.
-
-## Sign the user in
-
-selecting the Sign in button generates an event that is handled in `getInvokeHandler` using this code:
-
-```TypeScript
-if ((event as any).name === "signin/verifyState") {
-    let aadApi = new AADRequestAPI();
-    let response = await aadApi.getAsync("https://graph.microsoft.com/v1.0/me/", { Authorization: " Bearer " + (event as any).value.state.accessToken }, null);
-
-    let info = JSON.parse(response);
-
-    session.send(info.displayName + "<br />" + info.mail + "<br />" + info.officeLocation);
-
-    callback(null, "", 200);
-    return;
+// Show prompt of options
+protected async promptForAction(session: builder.Session): Promise<void> {
+    let msg = new builder.Message(session)
+        .addAttachment(new builder.ThumbnailCard(session)
+            .title(this.providerDisplayName)
+            .buttons([
+                 builder.CardAction.messageBack(session, "{}", "Sign in")
+                     .text("SignIn")
+                     .displayText("Sign in"),
+                  builder.CardAction.messageBack(session, "{}", "Show profile")
+                     .text("ShowProfile")
+                     .displayText("Show profile"),
+                  builder.CardAction.messageBack(session, "{}", "Sign out")
+                     .text("SignOut")
+                     .displayText("Sign out"),
+            ]));
+    session.send(msg);
 }
 ```
 
-Here the bot makes a call to the `me` Graph endpoint with the token it gets from the invoke payload. Graph responds with the user information for the person who logged in. The response is then parsed and specific parts of it are sent to the chat session.
+Three buttons have been added to the Hero Card: Sign in, Show Profile, and Sign out.
 
-### Notes
+## Sign the user in
 
-Authentication flow must start on a page that's on your domain; don't start it by going directly to your identity provider's login or consent page. In this example, even though we're using Azure AD, we begin at `/tab-auth/simple-start` rather than going directly to the Graph endpoint at `https://graph.microsoft.com/v1.0/me/`. If you skip this step, the login popup may fail to close when you call `notifySuccess()` or `notifyFailure()`.
+Because of the validation that must be performed for security reasons and the support for the mobile versions of Teams, the code isn't shown here, but [here's an example of the code that kicks off the process when the user presses the Sign in button.](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/e84020562d7c8b83f4a357a4a4d91298c5d2989d/src/dialogs/BaseIdentityDialog.ts#L154-L195).
 
-Add the domain of your authentication redirect URL to the [`validDomains`](~/resources/schema/manifest-schema#validdomains) section of the manifest. Failure to do so might result in an empty pop-up.
+The validation and mobile support are explained in the topic [Authentication flow in bots](~/concepts/authentication/auth-flow-bot).
 
-## Get the users profile
+Be sure to add the domain of your authentication redirect URL to the [`validDomains`](~/resources/schema/manifest-schema#validdomains) section of the manifest. If you don't, the login popup will not appear.
 
-When the user selects the `Get Profile` button in the Hero card the following code is executed.
+## Showing user profile information
+
+Although getting an access token is difficult because of all the transitions back and forth across different websites and the security issues that must be addressed, once you have a token, obtaining information from Azure Active Directory is straightforward. The bot makes a call to the `me` Graph endpoint with the access token. Graph responds with the user information for the person who logged in. Information from the response is used to construct a bot card and sent.
 
 ```TypeScript
-case "getProfile":
-    // See if we have an AAD token
-    const graphResource = "https://graph.microsoft.com";
-    let aadTokens = session.userData.aadTokens || {};
-    let graphToken = aadTokens[graphResource] as TokenResponse;
+// Show user profile
+protected async showUserProfile(session: builder.Session): Promise<void> {
+    let azureADApi = this.authProvider as AzureADv1Provider;
+    let userToken = this.getUserToken(session);
 
-    if (!graphToken) {
-        // We don't have a Graph token for the user, ask them to sign in
-        session.send(new builder.Message(session)
-            .addAttachment(new builder.HeroCard(session)
-                .text("You're not yet signed in. Please click on the Sign In button to log in.")
-                .buttons([
-                    new builder.CardAction(session)
-                        .type("signin")
-                        .title("Sign In")
-                        .value(config.get("app.baseUri") + "/bot-auth/simple-start?width=5000&height=5000"),
-                    ])));
+    if (userToken) {
+        let profile = await azureADApi.getProfileAsync(userToken.accessToken);
+        let profileCard = new builder.ThumbnailCard()
+            .title(profile.displayName)
+            .subtitle(profile.mail)
+            .text(`${profile.jobTitle}<br/> ${profile.officeLocation}`);
+        session.send(new builder.Message().addAttachment(profileCard));
     } else {
-        // Use the Graph token to get the basic profile
-        try {
-            let requestHelper = new AADRequestAPI();
-            let response = await requestHelper.getAsync("https://graph.microsoft.com/v1.0/me/", { Authorization: "Bearer " + graphToken.access_token }, null);
-
-            let info = JSON.parse(response);
-            session.send(info.displayName + "<br />" + info.mail + "<br />" + info.officeLocation);
-        } catch (e) {
-            console.log(e);
-            session.send("There was an error getting the user's profile.");
-        }
+        session.send("Please sign in to AzureAD so I can access your profile.");
     }
+
+    await this.promptForAction(session);
+}
+
+// Helper function to make the Graph API call
+public async getProfileAsync(accessToken: string): Promise<any> {
+    let options = {
+        url: "https://graph.microsoft.com/v1.0/me",
+        json: true,
+        headers: {
+            "Authorization": `Bearer ${accessToken}`,
+        },
+    };
+    return await request.get(options);
+}
 ```
 
-If the user is not signed in they are prompted to do so now.  Otherwise basic information is obtained from Graph.
+If the user is not signed in they are prompted to do so.
 
 ## Sign the user out
 
 ```TypeScript
-case "signout":
-    session.userData.aadTokens = {};
-    session.send("Ok, I've cleared your tokens.");
-    break;
+// Handle user logout request
+private async handleLogout(session: builder.Session): Promise<void> {
+    if (!utils.getUserToken(session, this.providerName)) {
+        session.send(`You're already signed out of ${this.providerDisplayName}.`);
+    } else {
+        utils.setUserToken(session, this.providerName, null);
+        session.send(`You're now signed out of ${this.providerDisplayName}.`);
+    }
+
+    await this.promptForAction(session);
+}
 ```
 
 ## Other samples

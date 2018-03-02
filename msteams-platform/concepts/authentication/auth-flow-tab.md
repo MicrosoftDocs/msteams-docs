@@ -18,10 +18,10 @@ for an example that demonstrates authentication flow for tabs and bots using Nod
 3. The tab then calls the `microsoftTeams.authentication.authenticate()` method and registers the `successCallback` and `failureCallback` functions.
 4. Teams opens the start page in an iframe in a pop-up window. The start page generates random `state` data, saves it for future validation, and redirects to the identity provider's `/authorize` endpoint such as https://login.microsoftonline.com/common/oauth2/authorize for AAD.
     * Like other application auth flows in Teams, the start page must be on a domain that's in its `validDomains` list, and on the same domain as the post-login redirect page.
-    * **IMPORTANT**: The OAuth 2.0 implicit grant flow calls for a `state` parameter in the authentication request which contains unique session data to prevent a [cross-site request forgery attack](https://en.wikipedia.org/wiki/Cross-site_request_forgery). The examples below use a randomly-generated GUID for the `state` parameter.
+    * **IMPORTANT**: The OAuth 2.0 implicit grant flow calls for a `state` parameter in the authentication request which contains unique session data to prevent a [cross-site request forgery attack](https://en.wikipedia.org/wiki/Cross-site_request_forgery). The examples below use a randomly-generated GUID for the `state` data.
 5. On the provider's site, the user signs in and grants access to the tab.
 6. The provider takes the user to the tab's OAuth redirect page with an access token.
-7. The tab checks that the returned `state` parameter matches what was saved earlier, and calls `microsoftTeams.authentication.notifySuccess()`, which in turn calls the `successCallback` function registered in step 3.
+7. The tab checks that the returned `state` value matches what was saved earlier, and calls `microsoftTeams.authentication.notifySuccess()`, which in turn calls the `successCallback` function registered in step 3.
 8. Teams closes the pop-up window.
 9. The tab either displays configuration UI or refreshes or reloads the tabs content, depending on where the user started from.
 
