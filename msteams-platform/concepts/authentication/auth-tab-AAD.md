@@ -16,9 +16,9 @@ For a general overview of authentication flow for tabs see the topic [Authentica
 
 Authentication flow in tabs differs slightly from authentication flow in bots.
 
-## Configuring OAuth 2.0 redirect URLs
+## Configuring identity providers
 
-See the topic [Configure OAuth 2.0 redirect URLs](~/concepts/authentication/configure-AAD) for detailed steps on configuring OAuth 2.0 callback redirect URL(s) when using Azure Active Directory as an identity provider.
+See the topic [Configure identity providers](~/concepts/authentication/configure-AAD) for detailed steps on configuring OAuth 2.0 callback redirect URL(s) when using Azure Active Directory as an identity provider.
 
 ## Initiate authentication flow
 
