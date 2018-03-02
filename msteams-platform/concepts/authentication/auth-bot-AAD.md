@@ -16,7 +16,7 @@ For a general overview of authentication flow for bots see the topic [Authentica
 
 ## Configuring identity providers
 
-See the topic [Configure identity providers](~/concepts/authentication/configure-AAD) for detailed steps on configuring OAuth 2.0 callback redirect URL(s) when using Azure Active Directory as an identity provider.
+See the topic [Configure identity providers](~/concepts/authentication/auth-configure) for detailed steps on configuring OAuth 2.0 callback redirect URL(s) when using Azure Active Directory as an identity provider.
 
 ## Initiate authentication flow
 
