@@ -314,7 +314,7 @@ You can create a 1:1 conversation with a user or start a new reply chain in a ch
 
 ## Deleting messages
 
-Messages can be deleted using the `delete()` method in the BotBuilder SDK.
+Messages can be deleted using the connectors [`delete()`](https://docs.botframework.com/en-us/node/builder/chat-reference/interfaces/_botbuilder_d_.iconnector.html#delete) method in the [BotBuilder SDK](https://docs.microsoft.com/en-us/bot-framework/bot-builder-overview-getstarted).
 
 ```js
 bot.dialog('BotDeleteMessage', function (session: builder.Session) {
