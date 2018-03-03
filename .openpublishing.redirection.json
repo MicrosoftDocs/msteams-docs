@@ -1,0 +1,9 @@
+{
+  "redirections": [ 
+    {
+       "source_path": "microsoftteams/platform/concepts/authentication",
+       "redirect_url": "microsoftteams/platform/concepts/authentication/authentication",
+       "redirect_document_id": false
+    }
+  ]
+}
