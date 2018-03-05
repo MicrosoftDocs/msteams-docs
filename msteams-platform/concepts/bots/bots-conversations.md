@@ -2,8 +2,8 @@
 title: Send and receive messages with a bot
 description: Describes how to send and receive messages with bots in Microsoft Teams
 keywords: teams bots messages
+ms.date: 03/02/2018
 ---
-
 # Have a conversation with a Microsoft Teams bot
 
 A conversation is a series of messages sent between your bot and one or more users. Bots in Microsoft Teams allow sending messages in either personal conversations with a single user (also known as one-on-one or 1:1 chats) or a group conversation in a Teams channel.
@@ -287,21 +287,21 @@ You can use the `session.connector.update` method in the Bot Builder SDK to upda
 
 ```js
 function sendCardUpdate(bot, session, originalMessage, address) {
-	
-	var origAttachment = originalMessage.data.attachments[0];
-	origAttachment.content.subtitle = 'Assigned to Larry Jin';
 
-	var updatedMsg = new builder.Message()
-		.address(address)
-		.textFormat(builder.TextFormat.markdown)
-		.addAttachment(origAttachment)
-		.toMessage();
+  var origAttachment = originalMessage.data.attachments[0];
+  origAttachment.content.subtitle = 'Assigned to Larry Jin';
 
-	session.connector.update(updatedMsg, function(err, addresses) {
-		if (err) {
-			console.log(`Could not update the message`);
-		}
-	});
+  var updatedMsg = new builder.Message()
+    .address(address)
+    .textFormat(builder.TextFormat.markdown)
+    .addAttachment(origAttachment)
+    .toMessage();
+
+  session.connector.update(updatedMsg, function(err, addresses) {
+    if (err) {
+      console.log(`Could not update the message`);
+    }
+  });
 }
 ```
 
@@ -314,4 +314,75 @@ You can create a 1:1 conversation with a user or start a new reply chain in a ch
 
 ## Deleting messages
 
-At this point, there is no way for you to delete messages via your bot. You can update content in your message (see [Updating messages](#updating-messages) earlier in this topic), but there is no platform support to delete messages from users or your bot.
+Messages can be deleted using the connectors [`delete()`](https://docs.botframework.com/en-us/node/builder/chat-reference/interfaces/_botbuilder_d_.iconnector.html#delete) method in the [BotBuilder SDK](https://docs.microsoft.com/en-us/bot-framework/bot-builder-overview-getstarted).
+
+```TypeScript
+bot.dialog('BotDeleteMessage', function (session: builder.Session) {
+  var msg = new teams.TeamsMessage(session).text("Bot will delete this message in 5 sec.")
+  bot.send(msg, function (err, response) {
+    if (err) {
+      console.log(err);
+      session.endDialog();
+    }
+
+    console.log('Proactive message response:');
+    console.log(response);
+    console.log('---------------------------------------------------')
+    setTimeout(function () {
+      var activityId: string = null;
+      var messageAddress: builder.IChatConnectorAddress = null;
+      if (response[0]){
+        messageAddress = response[0];
+        activityId = messageAddress.id;
+      }
+
+      if (activityId == null)
+      {
+        console.log('Message failed to send.');
+        session.endDialog();
+        return;
+      }
+
+      // Bot delete message
+      let address: builder.IChatConnectorAddress  = {
+        channelId: 'msteams',
+        user: messageAddress.user,
+        bot: messageAddress.bot,
+        id : activityId,
+        serviceUrl : (<builder.IChatConnectorAddress>session.message.address).serviceUrl,
+        conversation: {
+          id: session.message.address.conversation.id
+        }
+      };
+
+      connector.delete(address, function (err) {
+        if (err)
+        {
+          console.log(err);
+        }
+        else
+        {
+          console.log("Message: " + activityId + " deleted successfully.");
+        }
+
+        // Try editing deleted message would fail
+        var newMsg = new builder.Message().address(address).text("To edit message.");
+        connector.update(newMsg.toMessage(), function (err, address) {
+          if (err)
+          {
+            console.log(err);
+            console.log('Deleted message can not be edited.');
+          }
+          else
+          {
+            console.log("There is something wrong. Message: " + activityId + " edited successfully.");
+            console.log(address);
+          }
+
+          session.endDialog();
+        });
+      });
+    }, 5000);
+  });
+})
+```
