@@ -316,7 +316,7 @@ You can create a 1:1 conversation with a user or start a new reply chain in a ch
 
 Messages can be deleted using the connectors [`delete()`](https://docs.botframework.com/en-us/node/builder/chat-reference/interfaces/_botbuilder_d_.iconnector.html#delete) method in the [BotBuilder SDK](https://docs.microsoft.com/en-us/bot-framework/bot-builder-overview-getstarted).
 
-```js
+```TypeScript
 bot.dialog('BotDeleteMessage', function (session: builder.Session) {
   var msg = new teams.TeamsMessage(session).text("Bot will delete this message in 5 sec.")
   bot.send(msg, function (err, response) {
