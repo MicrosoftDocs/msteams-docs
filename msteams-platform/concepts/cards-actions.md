@@ -1,133 +1,10 @@
 ---
-title: Add cards and card actions in a bot
-description: Describes cards and card actions in Microsoft Teams and how to use them in your bots
+title: Add card actions in a bot
+description: Describes card actions in Microsoft Teams and how to use them in your bots
 keywords: teams bots cards actions
+ms.date: 03/06/2018
 ---
-
-# Add cards and card actions in a Microsoft Teams bot
-
-A *card* is a user-interface (UI) container for short or related pieces of information. Microsoft Teams supports rich cards, which can have multiple properties and attachments.
-
-Supported by Microsoft Teams:
-* [Hero card](~/concepts/cards-actions#hero-card)
-* [Thumbnail card](~/concepts/cards-actions#thumbnail-card)
-* Sign-in card
-
-Supported with modifications:
-* [Office 365 Connector card](#office-365-connector-card)&mdash;the `heroImage`, `hideOriginalBody`, and `startGroup` properties are not currently supported, and Office 365 Connectors do not render properly in iOS.
-
-Not supported:
-* Adaptive card
-* Receipt card
-* Media cards (animation card, audio card, and video card)
-
-Additionally, Teams supports the following layouts:
-* Horizontal carousel layout
-* Vertical list layout
-
-Both layouts support hero and thumbnail cards.
-
-You can find information on how to use cards in the documentation for the Bot Builder SDK. Code samples are in the Microsoft/BotBuilder-Samples repository on GitHub.
-* .NET
-  * [Add rich card attachments to messages](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments)
-  * [Rich cards sample code](https://github.com/Microsoft/BotBuilder-Samples/tree/master/CSharp/cards-RichCards)
-* Node.js
-  * [Add rich card attachments to messages](https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-send-rich-cards)
-  * [Rich cards sample code](https://github.com/Microsoft/BotBuilder-Samples/tree/master/Node/cards-RichCards)
-
-## Inline card images
-
-Your card can contain a inline image by including a link to the image content hosted on a public content-delivery network (CDN).
-
-Images are scaled up or down in size while maintaining the aspect ratio to cover the image area, and then cropped from center to achieve the appropriate aspect ratio for the card.
-
-Images must be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF is not officially supported.
-
-| Property | Type  | Description |                                                           
-| --- | --- | --- |
-| url | URL | HTTPS URL to the image |
-| alt | String | Accessible description of the image |
-
-## Hero card
-
-The [hero card](https://docs.botframework.com/en-us/csharp/builder/sdkreference/attachments.html#herocard) renders a title, subtitle, text, large image, and buttons.
-
-![Example of a hero card](~/assets/images/cards/hero.png)
-
-| Property | Type  | Description |                                                           
-| --- | --- | --- |
-| title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
-| subtitle | Rich text | Subtitle of the card. Maximum 2 lines; formatting not currently supported |
-| text | Rich text | Text appears just below the subtitle; see [Message format](~/concepts/bots/bots-conversations#message-format) for formatting options |
-| images | Array of images | Image displayed at top of card. Aspect ratio 16:9 |
-| buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
-| tap | Action object | This action will be activated when the user taps on the card itself |
-
-## Thumbnail card
-
-The [thumbnail card](https://docs.botframework.com/en-us/csharp/builder/sdkreference/attachments.html#thumbnailcard) renders a title, subtitle, text, small thumbmail image, and buttons.
-
-![Example of a thumbnail card](~/assets/images/cards/thumbnail.png)
-
-| Property | Type  | Description |                                                           
-| --- | --- | --- |
-| title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
-| subtitle | Rich text | Subtitle of the card. Maximum 2 lines; formatting not currently supported |
-| text | Rich text | Text appears just below the subtitle; see [Message format](~/concepts/bots/bots-conversations#message-format) for formatting options |
-| images | Array of images | Image displayed at top of card. Aspect ratio 1:1 (square) |
-| buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
-| tap | Action object | This action will be activated when the user taps on the card itself |
-
-## Office 365 Connector card
-
-The Office 365 Connector card provides a more flexible layout with multiple sections, images, and fields.
-
-Most of the information you need about Connector cards is in [Using Office 365 Connector cards in Microsoft Teams](~/concepts/connectors#using-office-365-connector-cards-in-microsoft-teams), including details on actionable messages.
-
-> [!NOTE]
-> Office 365 Connector cards function properly on Microsoft Teams mobile apps with one exception: actionable messages (more specifically, [ActionCard actions](https://docs.microsoft.com/en-us/outlook/actionable-messages/card-reference#actioncard-action)) do not function properly. Support for actionable messages will be fully available in the mobile apps very soon.
-
-One important difference between using Connector cards from a Connector and using Connector cards in your bot is the handling of card actions:
-
-* For a Connector, the endpoint receives the card payload via HTTP POST.
-* For a bot, the `HttpPOST` action triggers an `invoke` action that sends only the action ID and body to the bot.
-
-To use Connector cards in your bot, we recommend using the `O365ConnectorCard` class in the [Teams extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) for .NET or Node.js. You can simplify handling of the `HttpPOST` action by using the `onO365ConnectorCardAction` method.
-
-## Card layouts
-
-A message can contain more than one rich card. You can display multiple cards in either a carousel (horizontal) layout or a list (vertical) layout.
-
-### Carousel layout
-
-The [carousel layout](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments) shows a carousel of cards, optionally with associated action buttons.
-
-> [!NOTE]
-> A carousel can display a maximum of 10 cards per message.
-
-![Example of a carousel of cards](~/assets/images/cards/carousel.png)
-
-Properties are the same as for the hero or thumbnail card.
-
-### List layout
-
-The list layout shows a vertically stacked list of cards, optionally with associated action buttons..
-
-> [!NOTE]
-> A list can display a maximum of 10 cards per message.
-
-![Example of a list of cards](~/assets/images/cards/list.png)
-
-Properties are the same as for the hero or thumbnail card.
-
-> [!NOTE]
-> Some combinations of list cards are not yet supported on iOS and Android.
-
-## Buttons
-
-Buttons are shown stacked at the bottom of the card. Button text is always on a single line and will be truncated if the text exceeds the button width. Any additional buttons beyond the maximum number supported by the card will not be shown.
-
-## Card actions
+# Card actions
 
 Teams supports the following activity ([`CardAction`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards)) types.
 
@@ -143,7 +20,7 @@ Teams supports the following activity ([`CardAction`](https://docs.microsoft.com
 >* Teams does not support the `SuggestedActions` property.
 >* Be aware that these actions differ from actions for Office 365 Connector cards.
 
-### openUrl
+## openUrl
 
 This action type specifies a URL to launch in the default browser.  Note that your bot does not receive any notice on which button was clicked.
 
@@ -157,7 +34,7 @@ The `value` field must contain a full and properly formed URL.
 }
 ```
 
-### messageBack
+## messageBack
 
 >**New**
 
@@ -189,7 +66,7 @@ The flexibility of `messageBack` means that your code can choose not to leave a 
 
 The `value` property can be either a serialized JSON string or a JSON object.
 
-#### Inbound message schema example
+### Inbound message schema example
 ```json
 {
    "text":"User just clicked the MessageBack button",
@@ -234,7 +111,7 @@ The `value` property can be either a serialized JSON string or a JSON object.
 }
 ```
 
-### imBack
+## imBack
 
 This action triggers a return message to your bot, as if the user typed it in a normal chat message.  Thus, your user, and all other users if in a channel, will see that button response.
 
@@ -248,7 +125,7 @@ The `value` field should contain the text string echoed in the chat and therefor
 }
 ```
 
-### invoke
+## invoke
 
 > [!NOTE]
 > We recommend that you use `messageBack` instead of `invoke`.
@@ -269,7 +146,7 @@ The `value` field will contain a stringified JSON object.  You can include ident
 
 When a user clicks the button, your bot will receive the predefined `value` object with some additional info. Please note that the activity type will be `invoke` instead of `message` (activity.Type == "invoke").
 
-#### Example: Invoke button definition (.NET)
+### Example: Invoke button definition (.NET)
 
 ```csharp
 var button = new CardAction()
@@ -280,7 +157,7 @@ var button = new CardAction()
 };
 ```
 
-#### Example: Invoke inbound schema
+### Example: Invoke inbound schema
 
 ```json
 {
