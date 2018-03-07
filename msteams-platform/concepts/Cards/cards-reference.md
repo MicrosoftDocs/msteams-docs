@@ -40,8 +40,6 @@ Buttons are shown stacked at the bottom of the card. Button text is always on a 
 
 ### Card actions
 
-TBD describe
-
 See the topic [Card Actions](`/concepts/cards-actions) for more information.
 
 ## Card formatting
@@ -53,36 +51,33 @@ See the topic [Card Actions](`/concepts/cards-actions) for more information.
 > Currently, Connector cards support no formatting across all platforms.
 
 [!include[Formatting text content in cards](~/includes/bots/message-format-cards.html)]
-\*Renders as bold
 
 ## Cards
 
-### Adaptive Card
+### Adaptive card
 
 Not supported in Teams.
 
 A customizable card that can contain any combination of text, speech, images, buttons, and input fields.
 `https://docs.microsoft.com/en-us/adaptive-cards/get-started/bots`
 
-### Animation Card
+### Animation card
 
 Not supported in Teams.
 
 A card that can play animated GIFs or short videos.
 `https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.animationcard.html`
 
-### Audio Card
+### Audio card
 
 Not supported in Teams.
 A card that can play an audio file.
 `https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.audiocard.html`
 
-### Hero Card
+### Hero card
 
 A card that typically contains a single large image, one or more buttons, and text.
 `https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.herocard.html`
-
-## Hero card
 
 The [hero card](https://docs.botframework.com/en-us/csharp/builder/sdkreference/attachments.html#herocard) renders a title, subtitle, text, large image, and buttons.
 
@@ -97,10 +92,16 @@ The [hero card](https://docs.botframework.com/en-us/csharp/builder/sdkreference/
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
 | tap | Action object | This action will be activated when the user taps on the card itself |
 
-### Office 365 Card
+### List card
+
+The list card has been added by Teams to provide functions beyond what the list collection can provide. The list card provides a scrolling list of items.
+
+### Office 365 card
 
 Supported in teams, not in bot framework.
-The Office 365 Connector card provides a more flexible layout with multiple sections, images, and fields.
+The Office 365 Connector card provides a flexible layout with multiple sections, images, and fields.
+
+The O365 card is the only card that supports proactive messaging.
 
 TBD - fill out the following with correct values
 
@@ -124,18 +125,22 @@ One important difference between using Connector cards from a Connector and usin
 
 To use Connector cards in your bot, we recommend using the `O365ConnectorCard` class in the [Teams extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) for .NET or Node.js. You can simplify handling of the `HttpPOST` action by using the `onO365ConnectorCardAction` method.
 
-### Receipt Card
+### Profile card
+
+The profile card has been added by Teams.
+
+### Receipt card
 
 Not supported in Teams.
 A card that enables a bot to provide a receipt to the user. It typically contains the list of items to include on the receipt, tax and total information, and other text.
 `https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.receiptcard.html` 
 
-### SignIn Card
+### SignIn card
 
 A card that enables a bot to request that a user sign-in. It typically contains text and one or more buttons that the user can click to initiate the sign-in process.
 `https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.signincard.html`
 
-### Thumbnail Card
+### Thumbnail card
 
 A card that typically contains a single thumbnail image, one or more buttons, and text.
 `https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.thumbnailcard.html`
@@ -153,7 +158,7 @@ The [thumbnail card](https://docs.botframework.com/en-us/csharp/builder/sdkrefer
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
 | tap | Action object | This action will be activated when the user taps on the card itself |
 
-### Video Card
+### Video card
 
 Not supported in Teams.
 A card that can play videos.
