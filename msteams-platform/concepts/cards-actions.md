@@ -11,10 +11,10 @@ A *card* is a user-interface (UI) container for short or related pieces of infor
 Supported by Microsoft Teams:
 * [Hero card](~/concepts/cards-actions#hero-card)
 * [Thumbnail card](~/concepts/cards-actions#thumbnail-card)
+* Sign-in card
 
 Supported with modifications:
 * [Office 365 Connector card](#office-365-connector-card)&mdash;the `heroImage`, `hideOriginalBody`, and `startGroup` properties are not currently supported, and Office 365 Connectors do not render properly in iOS.
-* Sign-in card&mdash;the `signin` action is not supported. You can replace the button action with `openUrl` to get the desired result.
 
 Not supported:
 * Adaptive card
