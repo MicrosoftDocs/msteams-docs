@@ -60,8 +60,8 @@ Microsoft Teams supports a subset of Markdown and XML (HTML) formatting tags.
 Currently, the following limitations apply:
 
 * Text-only messages do not support table formatting
-* Cards support formatting in the text property only, not in the title or subtitle properties
-* Cards do not support Markdown or table formatting
+
+For information on formatting in cards see the [Teams Card Reference](~/concepts/cards/cards-reference).
 
 ### Cross-platform support
 
@@ -103,12 +103,6 @@ Support for text formatting varies by type of message and by platform.
 | blockquote                | ✔ | ✔ | ✔ |
 | hyperlink                 | ✔ | ✔ | ✔ |
 | image link                | ✔ | ✔ | ✔ |
-
-#### Cards
-
-[!include[Formatting text content in cards](~/includes/bots/message-format-cards.html)]
-
-\*Renders as bold
 
 ### Examples of text formatting
 
@@ -253,7 +247,7 @@ The message content itself can contain simple text or some of the Bot Framework&
 
 Please note that in your outbound schema you should always use the same `serviceUrl` as the one you received. Be aware that the value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value of `serviceUrl`.
 
-## Updating messages 
+## Updating messages
 
 Rather than have your messages be static snapshots of data, your bot can now dynamically update messages inline after sending them to users. You can use dynamic message updates for scenarios such as poll updates, modifying available actions after a button press, or any other asynchronous state change.
 

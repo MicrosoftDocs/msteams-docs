@@ -49,6 +49,12 @@ See the topic [Card Actions](`/concepts/cards-actions) for more information.
 * Cards support formatting in the text property only, not in the title or subtitle properties
 * Cards do not support Markdown or table formatting
 
+> [!NOTE]
+> Currently, Connector cards support no formatting across all platforms.
+
+[!include[Formatting text content in cards](~/includes/bots/message-format-cards.html)]
+\*Renders as bold
+
 ## Cards
 
 ### Adaptive Card
