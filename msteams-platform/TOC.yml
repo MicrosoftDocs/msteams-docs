@@ -59,13 +59,13 @@
       href: ./concepts/bots/bots-menus
     - name: Test a bot
       href: ./concepts/bots/bots-test
-  - name: Cards (new)
-    href: ./concepts/cards
+  - name: Cards
+    href: ./concepts/cards/cards
     items:
-    - name: Card Actions
-      href: ./concepts/cards-actions
-    - name: Cards Reference
-      href: ./concepts/cards-reference
+    - name: Card actions
+      href: ./concepts/cards/cards-actions
+    - name: Cards reference
+      href: ./concepts/cards/cards-reference
   - name: Authentication
     href: ./concepts/authentication/authentication
     items:
