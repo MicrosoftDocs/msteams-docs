@@ -246,7 +246,7 @@ Your code should always verify the HMAC signature included in the request:
 
 ### Sending a reply
 
-As with regular bots, replies from your outgoing webhook will appear in the same reply chain as the original message. You can send a reply message that takes advantage of any of the Bot Framework’s activities, including rich cards and image attachments.
+As with regular bots, replies from your outgoing webhook will appear in the same reply chain as the original message. You can send a reply message that takes advantage of any of the Bot Framework’s activities, including cards and image attachments.
 
 Your outgoing webhook will need to reply asynchronously to the HTTP request from Microsoft Teams. It will have 5 seconds to reply to the message before the connection is terminated.
 
@@ -263,7 +263,7 @@ Your outgoing webhook will need to reply asynchronously to the HTTP request from
 
 * Outgoing webhooks do not have access to non-messaging APIs, such as team roster membership.
 * Outgoing webhooks cannot post into channels asynchronously; that is, not as a reply to a user message.
-* Although outgoing webhooks can use rich cards, they cannot leverage button actions like `imBack` or `invoke`.
+* Although outgoing webhooks can use cards, they cannot leverage button actions like `imBack` or `invoke`.
 
 ## Samples for Outgoing webhook
 

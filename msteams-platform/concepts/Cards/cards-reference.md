@@ -6,17 +6,18 @@ ms.date: 03/06/18
 ---
 # Cards Reference
 
-The cards listed in this section are supported in Bots for Teams. These cards are based on cards defined by the bot framework, but Teams does not support all the cards provided by bot framework and has added additional cards.
+The cards listed in this section are supported in Bots for Teams. These cards are based on cards defined by the bot framework, but Teams does not support all the cards and has added some of its own.
 
-# Card examples
+## Card examples
 
 You can find information on how to use cards in the documentation for the Bot Builder SDK. Code samples are in the Microsoft/BotBuilder-Samples repository on GitHub.
+
 * .NET
-  * [Add rich card attachments to messages](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments)
-  * [Rich cards sample code](https://github.com/Microsoft/BotBuilder-Samples/tree/master/CSharp/cards-RichCards)
+  * [Add cards as attachments to messages](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments)
+  * [Cards sample code](https://github.com/Microsoft/BotBuilder-Samples/tree/master/CSharp/cards-RichCards)
 * Node.js
-  * [Add rich card attachments to messages](https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-send-rich-cards)
-  * [Rich cards sample code](https://github.com/Microsoft/BotBuilder-Samples/tree/master/Node/cards-RichCards)
+  * [Add cards as attachments to messages](https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-send-rich-cards)
+  * [Cards sample code](https://github.com/Microsoft/BotBuilder-Samples/tree/master/Node/cards-RichCards)
 
 ## Common properties for all cards
 
@@ -42,6 +43,11 @@ Buttons are shown stacked at the bottom of the card. Button text is always on a 
 TBD describe
 
 See the topic [Card Actions](`/concepts/cards-actions) for more information.
+
+## Card formatting
+
+* Cards support formatting in the text property only, not in the title or subtitle properties
+* Cards do not support Markdown or table formatting
 
 ## Cards
 

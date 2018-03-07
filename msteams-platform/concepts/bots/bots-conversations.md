@@ -6,10 +6,21 @@ ms.date: 03/02/2018
 ---
 # Have a conversation with a Microsoft Teams bot
 
-A conversation is a series of messages sent between your bot and one or more users. Bots in Microsoft Teams allow sending messages in either personal conversations with a single user (also known as one-on-one or 1:1 chats) or a group conversation in a Teams channel.
+A conversation is a series of messages sent between your bot and one or more users. Bots in Microsoft Teams allow sending messages in either:
+
+* Personal conversations with a single user (one-on-one or 1:1 chats)
+* Group conversation in a Teams channel.
 
 > [!NOTE]
 > Bots in private group chats are currently not supported.
+
+## Proactive messages
+
+Bots can participate in a conversation or initiate one. Most communication is in response to another message.  If a bot initiates a conversation it is called a `proactive message`. Examples include:
+
+* Welcome messages
+* Event notifications
+* Polling messages
 
 ## Conversation basics
 
@@ -25,10 +36,10 @@ Your bot can send rich text, pictures, and cards. Users can send rich text and p
 | --- | :---: | :---: | --- |
 | Rich text | ✔ | ✔ |  |
 | Pictures | ✔ | ✔ | Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF not officially supported |
-| Cards | ✖ | ✔ | Teams currently supports hero, thumbnail, and Office 365 Connector cards |
+| Cards | ✖ | ✔ | See the [Teams Card Reference](~/concepts/cards/cards-reference) for supported cards |
 | Emojis | ✖ | ✔ | Teams currently supports emojis via UTF-16 (such as U+1F600 for grinning face) |
 
-For more information on the types of bot interaction supported by the Bot Framework and therefore Microsoft Teams, see the Bot Framework documentation on [conversation flow](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-manage-conversation-flow) and related concepts in the documentation for [the Bot Builder SDK for .NET](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-concepts) and [the Bot Builder SDK for Node.js](https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-concepts).
+For more information on the types of bot interaction supported by the Bot Framework (which bots in teams are based on), see the Bot Framework documentation on [conversation flow](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-manage-conversation-flow) and related concepts in the documentation for [the Bot Builder SDK for .NET](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-concepts) and [the Bot Builder SDK for Node.js](https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-concepts).
 
 ## Message format
 
@@ -49,14 +60,14 @@ Microsoft Teams supports a subset of Markdown and XML (HTML) formatting tags.
 Currently, the following limitations apply:
 
 * Text-only messages do not support table formatting
-* Rich cards support formatting in the text property only, not in the title or subtitle properties
-* Rich cards do not support Markdown or table formatting
+* Cards support formatting in the text property only, not in the title or subtitle properties
+* Cards do not support Markdown or table formatting
 
 ### Cross-platform support
 
 To ensure that your formatting works across all platforms supported by Microsoft Teams, be aware that some styles are not currently supported across all platforms.
 
-| Style                     | Text-only messages | Rich cards (XML only) |
+| Style                     | Text-only messages | Cards (XML only) |
 | ---                       | :---: | :---: |
 | bold                      | ✔ | ✖ |
 | italic                    | ✔ | ✔ |

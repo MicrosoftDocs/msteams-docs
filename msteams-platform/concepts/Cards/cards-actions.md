@@ -2,13 +2,13 @@
 title: Add card actions in a bot
 description: Describes card actions in Microsoft Teams and how to use them in your bots
 keywords: teams bots cards actions
-ms.date: 03/06/2018
+ms.date: 03/07/2018
 ---
 # Card actions
 
 Teams supports the following activity ([`CardAction`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards)) types.
 
-| Type | Action | 
+| Type | Action |
 | --- | --- |
 | `openUrl` | Opens a URL in the built-in browser. |
 | `messageBack` | Sends a message and payload to the bot (from the user who clicked the button or tapped the card) and sends a separate message to the chat stream. |
@@ -67,6 +67,7 @@ The flexibility of `messageBack` means that your code can choose not to leave a 
 The `value` property can be either a serialized JSON string or a JSON object.
 
 ### Inbound message schema example
+
 ```json
 {
    "text":"User just clicked the MessageBack button",

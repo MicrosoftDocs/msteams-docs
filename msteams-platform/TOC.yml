@@ -51,9 +51,6 @@
       href: ./concepts/bots/bots-conversations
     - name: Cards and card actions
       href: ./concepts/bots/bots-cards
-      items:
-      - name: Cards Reference
-        href: ./concepts/cards-reference
     - name: Bot events
       href: ./concepts/bots/bots-notifications
     - name: Context for bots
@@ -64,6 +61,11 @@
       href: ./concepts/bots/bots-test
   - name: Cards (new)
     href: ./concepts/cards
+    items:
+    - name: Card Actions
+      href: ./concepts/cards-actions
+    - name: Cards Reference
+      href: ./concepts/cards-reference
   - name: Authentication
     href: ./concepts/authentication/authentication
     items:

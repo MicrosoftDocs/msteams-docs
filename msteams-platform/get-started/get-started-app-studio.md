@@ -89,7 +89,7 @@ This section allows you to add a connector to your app. If you already have regi
 
 ##### Messaging Extensions
 
-[Messaging extensions](~\concepts\messaging-extensions.md) are a powerful new way for users to engage with your app within Microsoft Teams. Users can query for information from your service and post that information in the form of rich cards, right into the channel or chat conversation.
+[Messaging extensions](~\concepts\messaging-extensions.md) are a powerful new way for users to engage with your app within Microsoft Teams. Users can query for information from your service and post that information in the form of cards, right into the channel or chat conversation.
 
 Messaging extensions are powered by Bot Framework bots, so they require a configured bot to operate. If you have the name and Bot Framework ID of the bot you would like to power the messaging extension, enter it. Otherwise, click *Register* to create one and enter the information afterward. Select whether the configuration of a messaging extension can be updated by the user.
 
@@ -107,7 +107,7 @@ Once you have finished defining your application, the Test and Distribute sectio
 
 ### Card Editor
 
-A card is a container for short or related pieces of information. Microsoft Teams supports rich cards, which can have multiple properties and attachments. Cards are a key way that bots and connectors relay actionable information to users. 
+A card is a container for short or related pieces of information. Microsoft Teams supports cards, which can have multiple properties and attachments. Cards are a key way that bots and connectors relay actionable information to users. 
 
 To make this process easier and less error-prone, the Card Editor tab lets you build Hero Cards or Thumbnail Cards using a form and verify and test the resulting card (exactly as a user would see it) via a bot. It also provides the corresponding JSON, C#, or Node.js code for the card that you can copy/paste into your app's source code.
 
