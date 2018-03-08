@@ -120,6 +120,10 @@ A card that typically contains a single large image, one or more buttons, and te
 
 ![Example of a hero card](~/assets/images/cards/hero.png)
 
+#### Notes
+
+#### Properties
+
 | Property | Type  | Description |
 | --- | --- | --- |
 | title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
@@ -128,6 +132,8 @@ A card that typically contains a single large image, one or more buttons, and te
 | images | Array of images | Image displayed at top of card. Aspect ratio 16:9 |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
 | tap | Action object | This action will be activated when the user taps on the card itself |
+
+#### Schema
 
 #### For more information
 
@@ -146,6 +152,12 @@ The list card has been added by Teams to provide functions beyond what the list 
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ |✖ |
 |
+
+#### Example
+
+#### Notes
+
+#### Properties
 
 #### Schema
 
@@ -212,6 +224,9 @@ The Office 365 Connector card provides a flexible layout with multiple sections,
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✖ |
 |
+#### Example
+
+#### Notes
 
 The O365 card is the only card that supports proactive messaging.
 
@@ -228,6 +243,8 @@ To use Connector cards in your bot, we recommend using the `O365ConnectorCard` c
 
 TBD - fill out the following with correct values
 
+#### Properties
+
 | Property | Type  | Description |
 | --- | --- | --- |
 | title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
@@ -236,6 +253,8 @@ TBD - fill out the following with correct values
 | images | Array of images | Image displayed at top of card. Aspect ratio 16:9 |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
 | tap | Action object | This action will be activated when the user taps on the card itself |
+
+#### Schema
 
 ### Profile card
 
@@ -247,6 +266,12 @@ The profile card has been added by Teams.
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✖ |
 |
+
+#### Example
+
+#### Notes
+
+#### Properties
 
 #### Schema
 
@@ -387,6 +412,10 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 
 ![Example of a thumbnail card](~/assets/images/cards/thumbnail.png)
 
+#### Notes
+
+#### Properties
+
 | Property | Type  | Description |
 | --- | --- | --- |
 | title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
@@ -395,6 +424,8 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 | images | Array of images | Image displayed at top of card. Aspect ratio 1:1 (square) |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
 | tap | Action object | This action will be activated when the user taps on the card itself |
+
+#### Schema
 
 #### For more information
 
