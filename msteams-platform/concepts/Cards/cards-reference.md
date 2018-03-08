@@ -116,6 +116,8 @@ A card that typically contains a single large image, one or more buttons, and te
 | ✔ | ✔ | ✖ | ✔ |
 |
 
+#### Example
+
 ![Example of a hero card](~/assets/images/cards/hero.png)
 
 | Property | Type  | Description |
@@ -381,6 +383,8 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 | ✔ | ✔ | ✖ | ✔ |
 |
 
+#### Example
+
 ![Example of a thumbnail card](~/assets/images/cards/thumbnail.png)
 
 | Property | Type  | Description |
@@ -434,6 +438,8 @@ The [carousel layout](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-
 > [!NOTE]
 > A carousel can display a maximum of 10 cards per message.
 
+#### Example
+
 ![Example of a carousel of cards](~/assets/images/cards/carousel.png)
 
 Properties are the same as for the hero or thumbnail card.
@@ -452,6 +458,8 @@ The list layout shows a vertically stacked list of cards, optionally with associ
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
+
+#### Example
 
 ![Example of a list of cards](~/assets/images/cards/list.png)
 
