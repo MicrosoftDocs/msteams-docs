@@ -63,11 +63,11 @@ A customizable card that can contain any combination of text, speech, images, bu
 | Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✖ | ✖ | ✖ | ✔ |
-| | | |
+|
 
-#### Definition
+#### For more information
 
-[Adaptive Card (Bot Framework](https://docs.microsoft.com/en-us/adaptive-cards/get-started/bots)
+[Adaptive Card (Bot Framework)](https://docs.microsoft.com/en-us/adaptive-cards/get-started/bots)
 
 ### Animation card
 
