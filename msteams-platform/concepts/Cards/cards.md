@@ -22,8 +22,8 @@ The cards that are supported by bots are detailed in [Teams Card Reference](~/co
 
 ## Cards in Messaging Extensions
 
-[Messaging Extensions](~/concepts/messaging-extensions) can also return a card. These can be a Hero, Thumbnail or O365ConnectorCard. These cards can be found in the [Teams Card Reference](~/concepts/cards-reference).
+[Messaging Extensions](~/concepts/messaging-extensions) can also return a card. These can be a Hero, Thumbnail or O365ConnectorCard. These cards can be found in the [Teams Card Reference](~/concepts/cards/cards-reference).
 
 ## Card reference
 
-All cards used by Teams are listed in the [Teams Card Reference](~/concepts/cards-reference). This reference also describes differences between Bot Framework cards and cards in Teams.
+All cards used by Teams are listed in the [Teams Card Reference](~/concepts/cards/cards-reference). This reference also describes differences between Bot Framework cards and cards in Teams.

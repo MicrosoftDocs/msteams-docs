@@ -102,7 +102,8 @@ A card that can play an audio file.
 #### For more information
 
 Bot Framework reference:
-[Audio card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.audiocard.html)
+
+* [Audio card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.audiocard.html)
 
 ### Hero card
 
@@ -129,8 +130,9 @@ A card that typically contains a single large image, one or more buttons, and te
 #### For more information
 
 Bot Framework reference:
-[hero card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.herocard.html)
-[hero card C#](https://docs.botframework.com/en-us/csharp/builder/sdkreference/attachments.html#herocard) 
+
+* [hero card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.herocard.html)
+* [hero card C#](https://docs.botframework.com/en-us/csharp/builder/sdkreference/attachments.html#herocard) 
 
 ### List card
 
@@ -341,7 +343,11 @@ A card that enables a bot to provide a receipt to the user. It typically contain
 | ✖ | ✖ | ✖ | ✔ |
 |
 
-`https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.receiptcard.html` 
+#### For more information
+
+Bot Framework reference:
+
+* [Recipt card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.receiptcard.html)
 
 ### SignIn card
 
@@ -360,8 +366,9 @@ Teams users should use the *signin action* instead. See the topic [Microsoft Tea
 #### For more information
 
 Bot Framework reference:
-[Bot Framework SignIn card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.signincard.html)
-[Bot Framework SigninCard C#]()
+
+*[Bot Framework SignIn card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.signincard.html)
+*[Bot Framework SigninCard C#]()
 
 ### Thumbnail card
 
@@ -388,8 +395,9 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 #### For more information
 
 Bot Framework reference:
-[Thumbnail card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.thumbnailcard.html)
-[thumbnail card C#](https://docs.botframework.com/en-us/csharp/builder/sdkreference/attachments.html#thumbnailcard)
+
+* [Thumbnail card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.thumbnailcard.html)
+* [thumbnail card C#](https://docs.botframework.com/en-us/csharp/builder/sdkreference/attachments.html#thumbnailcard)
 
 ### Video card
 
