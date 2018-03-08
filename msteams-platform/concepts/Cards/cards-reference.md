@@ -143,6 +143,60 @@ The list card has been added by Teams to provide functions beyond what the list 
 | ✔ | ✖ | ✖ |✖ |
 |
 
+#### Schema
+
+```JSON
+{
+  "contentType": "application/vnd.microsoft.teams.card.list",
+  "content": {
+    "title": "Card title",
+    "items": [
+      {
+        "type": "file",
+        "id": "https://microsoft.sharepoint.com/teams/skypespacesteamnew/Shared%20Documents/Design/FinancialReport.xslx",
+        "title": "FinancialReport",
+        "subtitle": "teams > skypespacesteamnew > design",
+        "tap": {
+          "type": "imback",
+          "value": "editOnline https://microsoft.sharepoint.com/teams/skypespacesteamnew/Shared%20Documents/Design/FinancialReport.xlsx"
+        }
+      },
+      {
+        "type": "resultItem",
+        "icon": "https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Trello-128.png",
+        "title": "Trello title",
+        "subtitle": "a trello subtitle",
+        "tap": {
+          "type": "openurl",
+          "value": "http://trello.com"
+        } 
+      },
+      {
+        "type": "section",
+        "title": "Manager"
+      },
+      {
+        "type": "person",
+        "id": "gsheldon@microsoft.com",
+        "title": "Graham Sheldon",
+        "subtitle": "Principal PM Manager - Skypespaces PM",
+        "tap": {
+          "type": "imback",
+          "value": "whois gsheldon@microsoft.com"
+        }
+      }
+    ],
+    "buttons": [
+      {
+        "type": "imback",
+        "title": "Select",
+        "value": "whois"
+      }
+    ]
+  }
+}
+```
+
 ### Office 365 card
 
 Supported in teams, not in bot framework.
@@ -189,6 +243,91 @@ The profile card has been added by Teams.
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✖ |
 |
+
+#### Schema
+
+```JSON
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Microsoft CaaP (Conversation as a Platform) Profile Card Schema",
+  "description": "Card schema for the Profile card.",
+  "type": "object",
+  "required": [ "contentType", "content" ],
+  "additionalProperties": false,
+  "properties": {
+    "contentType": {
+      "enum": [ "application/vnd.microsoft.teams.card.profile" ],
+      "description": "MIME type for the Profile card."
+    },
+    "content": {
+      "type": "object",
+      "properties": {
+        "upn": {
+          "type": "string",
+          "description": "Universal Profile Name (UPN) for the individual in the Profile card."
+        },
+        "displayName": {
+          "type": "string",
+          "description": "Display name for the individual in the Profile card."
+        },
+        "jobTitle": {
+          "type": "string",
+          "description": "Job title for the individual in the Profile card."
+        },
+        "department": {
+          "type": "string",
+          "description": "Department for the individual in the Profile card."
+        },
+        "officeLocation": {
+          "type": "string",
+          "description": "Office location for the individual in the Profile card."
+        },
+        "phone": {
+          "type": "string",
+          "description": "Preferred telephone number (could be office or mobile) for the individual in the Profile card."
+        },
+        "text": {
+          "type": "string",
+          "description": "Text for the Profile card."
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/image"
+          }
+        },
+        "buttons": {
+          "type": "array",
+          "items": {
+            "$ref": "action-schema.json/action"
+          },
+          "minItems": 1
+        },
+        "tap": {
+          "$ref": "action-schema.json/action"
+        }
+      },
+      "required": [ "upn", "buttons" ]
+    }
+  },
+
+  "definitions": {
+    "image": {
+      "properties": {
+        "url": {
+          "type": "string"
+        },
+        "type": "string",
+        "description": "Alt text for the image."
+        }
+      },
+      "required": [
+        "url"
+      ]
+    }
+  }
+}
+```
 
 ### Receipt card
 
