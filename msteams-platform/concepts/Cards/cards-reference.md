@@ -63,7 +63,7 @@ A customizable card that can contain any combination of text, speech, images, bu
 | Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✖ | ✖ | ✖ | ✔ |
-| --- | --- | --- | --- |
+| | | |
 
 #### Definition
 
