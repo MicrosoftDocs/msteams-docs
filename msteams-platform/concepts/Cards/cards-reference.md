@@ -56,13 +56,16 @@ See the topic [Card Actions](`/concepts/cards-actions) for more information.
 
 ### Adaptive card
 
-Not supported in Teams.
-
 A customizable card that can contain any combination of text, speech, images, buttons, and input fields.
-Supported by:
+
+#### Support
+
 | Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✖ | ✖ | ✖ | ✔ |
+| --- | --- | --- | --- |
+
+#### Definition
 
 `https://docs.microsoft.com/en-us/adaptive-cards/get-started/bots`
 
