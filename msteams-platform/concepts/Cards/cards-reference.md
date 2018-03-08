@@ -6,7 +6,7 @@ ms.date: 03/06/18
 ---
 # Cards Reference
 
-The cards listed in this section are supported in Bots for Teams. These cards are based on cards defined by the bot framework, but Teams does not support all the cards and has added some of its own.
+The cards listed in this section are supported in Bots for Teams. These cards are based on cards defined by the bot framework, but Teams does not support all Bot Framework cards and has added some of its own.
 
 ## Card examples
 
@@ -59,6 +59,11 @@ See the topic [Card Actions](`/concepts/cards-actions) for more information.
 Not supported in Teams.
 
 A customizable card that can contain any combination of text, speech, images, buttons, and input fields.
+Supported by:
+| Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
+| --- | --- | --- | --- |
+| ✖ | ✖ | ✖ | ✔ |
+
 `https://docs.microsoft.com/en-us/adaptive-cards/get-started/bots`
 
 ### Animation card
