@@ -120,6 +120,8 @@ A card that typically contains a single large image, one or more buttons, and te
 
 ### Notes
 
+TBD: Remove this section if there are no notes
+
 ### Properties
 
 | Property | Type  | Description |
@@ -130,8 +132,11 @@ A card that typically contains a single large image, one or more buttons, and te
 | images | Array of images | Image displayed at top of card. Aspect ratio 16:9 |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
 | tap | Action object | This action will be activated when the user taps on the card itself |
+|
 
 ### Schema
+
+TBD: Add schema here. Coordinate with Property table
 
 ### For more information
 
@@ -153,9 +158,15 @@ The list card has been added by Teams to provide functions beyond what the list 
 
 ### Example
 
+TBD: Need picture of card here
+
 ### Notes
 
+TBD: Delete this section if there are no notes.
+
 ### Properties
+
+TBD: Add property table here
 
 ### Schema
 
@@ -224,6 +235,8 @@ The Office 365 Connector card provides a flexible layout with multiple sections,
 |
 ### Example
 
+TBD: Need picture of card here
+
 ### Notes
 
 The O365 card is the only card that supports proactive messaging.
@@ -254,6 +267,8 @@ TBD - fill out the following with correct values
 
 ### Schema
 
+TBD: Add schema here. Coordinate with Property table
+
 ## Profile card
 
 The profile card has been added by Teams.
@@ -267,9 +282,15 @@ The profile card has been added by Teams.
 
 ### Example
 
+TBD: Need picture of card here
+
 ### Notes
 
+TBD: Remove this section if there are no notes
+
 ### Properties
+
+TBD: Add property table here
 
 ### Schema
 
@@ -412,6 +433,8 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 
 ### Notes
 
+TBD: Remove this section if there are no notes
+
 ### Properties
 
 | Property | Type  | Description |
@@ -424,6 +447,8 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 | tap | Action object | This action will be activated when the user taps on the card itself |
 
 ### Schema
+
+TBD: Add schema here. Coordinate with Property table
 
 ### For more information
 

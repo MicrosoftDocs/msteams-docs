@@ -8,6 +8,12 @@ ms.date: 03/06/18
 
 A *card* is a user-interface (UI) container for short or related pieces of information. Cards can have multiple properties and attachments. Cards can include buttons which can trigger [Card actions](~/concepts/cards/cards-actions).
 
+Teams uses cards in three different places:
+
+* Connectors
+* Bots
+* Messaging extensions
+
 ## Cards in Connectors
 
 Cards were first defined as part of Outlook and Office 365, and are used as part of Office 365 Connectors. Like many Office 365 applications, Teams supports Connectors. You can learn more about Connectors in [Office 365 Connectors for Microsoft Teams](~/concepts/connectors), and find the specification for cards in connectors in [Actionable message card reference](https://docs.microsoft.com/en-us/outlook/actionable-messages/card-reference).
