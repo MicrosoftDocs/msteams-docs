@@ -67,7 +67,7 @@ A customizable card that can contain any combination of text, speech, images, bu
 
 #### Definition
 
-`https://docs.microsoft.com/en-us/adaptive-cards/get-started/bots`
+[Adaptive Card (Bot Framework](https://docs.microsoft.com/en-us/adaptive-cards/get-started/bots)
 
 ### Animation card
 
