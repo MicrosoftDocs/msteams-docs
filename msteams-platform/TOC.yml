@@ -49,6 +49,9 @@
       href: ./concepts/bots/bots-create
     - name: Conversations
       href: ./concepts/bots/bots-conversations
+      items:
+    -   name: Text formatting in conversations
+        href: ./concepts/bots/bots-text-formats
     - name: Cards in bots
       href: ./concepts/bots/bots-cards
     - name: Bot events

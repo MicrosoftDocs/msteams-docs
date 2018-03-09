@@ -30,6 +30,8 @@ Most content sent between a user and your bot uses `messageType: message`. For e
 
 Basic conversation is handled through the Bot Framework Connector, a single REST API to enable your bot to communicate with Teams and other channels. The Bot Builder SDK provides easy access to this API, additional functionality to manage conversation flow and state, and simple ways to incorporate cognitive services such as natural language processing (NLP).
 
+## Message content
+
 Your bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot. You can specify the type of content your bot can handle in the Microsoft Teams settings page for your bot.
 
 | Format | From user to bot  | From bot to user |  Notes |
@@ -42,83 +44,11 @@ Your bot can send rich text, pictures, and cards. Users can send rich text and p
 
 For more information on the types of bot interaction supported by the Bot Framework (which bots in teams are based on), see the Bot Framework documentation on [conversation flow](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-manage-conversation-flow) and related concepts in the documentation for [the Bot Builder SDK for .NET](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-concepts) and [the Bot Builder SDK for Node.js](https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-concepts).
 
-## Message format
+## Message formatting
 
 You can set the optional [`TextFormat`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) property to control how your message's text content is rendered.
 
-Microsoft Teams supports the following formatting options:
-
-| TextFormat value | Description |
-| --- | --- |
-| plain | The text should be treated as raw text with no formatting applied at all |
-| markdown | The text should be treated as Markdown formatting and rendered on the channel as appropriate; see [Formatting text content](#formatting-text-content) for supported styles |
-| xml | The text is simple XML markup; see [Formatting text content](#formatting-text-content) for supported styles |
-
-## Formatting text content
-
-Microsoft Teams supports a subset of Markdown and XML (HTML) formatting tags.
-
-Currently, the following limitations apply:
-
-* Text-only messages do not support table formatting
-
-For information on formatting in cards see the [Teams Card Reference](~/concepts/cards/cards-reference).
-
-### Cross-platform support
-
-To ensure that your formatting works across all platforms supported by Microsoft Teams, be aware that some styles are not currently supported across all platforms.
-
-| Style                     | Text-only messages | Cards (XML only) |
-| ---                       | :---: | :---: |
-| bold                      | ✔ | ✖ |
-| italic                    | ✔ | ✔ |
-| header (levels 1&ndash;3) | ✖ | ✔ |
-| strikethrough             | ✖ | ✔ |
-| horizontal rule           | ✖ | ✖ |
-| unordered list            | ✖ | ✔ |
-| ordered list              | ✖ | ✔ |
-| preformatted text         | ✔ | ✔ |
-| blockquote                | ✔ | ✔ |
-| hyperlink                 | ✔ | ✔ |
-| image link                | ✔ | ✖ |
-
-> [!NOTE]
-> Currently, Connector cards support no formatting across all platforms. See [Cards](~/concepts/bots/bots-conversations#cards) in the next section for more detail.
-
-### Support by individual platform
-
-Support for text formatting varies by type of message and by platform.
-
-#### Text-only messages
-
-| Style                     | Desktop | iOS | Android | 
-| ---                       | :---: | :---: | :---: |
-| bold                      | ✔ | ✔ | ✔ |
-| italic                    | ✔ | ✔ | ✔ |
-| header (levels 1&ndash;3) | ✖ | ✖ | ✖ |
-| strikethrough             | ✔ | ✔ | ✖ |
-| horizontal rule           | ✖ | ✖ | ✖ |
-| unordered list            | ✔ | ✖ | ✖ |
-| ordered list              | ✔ | ✖ | ✖ |
-| preformatted text         | ✔ | ✔ | ✔ |
-| blockquote                | ✔ | ✔ | ✔ |
-| hyperlink                 | ✔ | ✔ | ✔ |
-| image link                | ✔ | ✔ | ✔ |
-
-### Examples of text formatting
-
-| Style | Example | Markdown | XML (HTML) |
-| --- | --- | --- | --- |
-| bold | **text** | `**text**` | `<strong>text</strong>` |
-| italic | *text* | `*text*` | `<em>text</em>` |
-| header (levels 1&ndash;3) | **Text** | `### Text` | `<h3>Text</h3>` |
-| strikethrough | ~~text~~ | `~~text~~` | `<strike>text</strike>` |
-| unordered list | <ul><li>text</li><li>text</li></ul> | `* text`<br>`* text` | `<ul><li>text</li><li>text</li></ul>` |
-| ordered list | <ol><li>text</li><li>text</li></ol> | `1. text`<br>`2. text` | `<ol><li>text</li><li>text</li></ol>` |
-| preformatted text | `text` | `` `text` `` | `<pre>text</pre>` |
-| blockquote | <blockquote>text</blockquote> | `>text` | `<blockquote>text</blockquote>` |
-| hyperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` | `<a href="https://www.bing.com/">Bing</a>` |
-| image link | <img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img> | `![Duck on a rock](http://aka.ms/Fo983c)` | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+For detailed information on how Teams supports text formatting in teams see [Text formatting in bot messages](`/concepts/bots/bots-text-formats).
 
 ## Picture messages
 
