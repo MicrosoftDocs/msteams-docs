@@ -136,7 +136,46 @@ TBD: Remove this section if there are no notes
 
 ### Schema
 
-TBD: Add schema here. Coordinate with Property table
+```JSON
+{
+	"contentType": "application/vnd.microsoft.card.hero",
+	"content": {
+		"title": "Bender Bending RodrÃ­guez",
+		"subtitle": "Main character in the animated television series Futurama",
+		"text": "Bender Bending RodrÃ­guez is a main character in the animated television series Futurama. He was created by series creators Matt Groening and David X. Cohen, and is voiced by John DiMaggio",
+		"images": [
+			{
+				"url": "http://cdn.overclock.net/7/72/72f33e5f_greybender.png",
+				"alt": "Bender_Rodriguez"
+			}
+		],
+		"buttons": [
+			{
+				"type": "imBack",
+				"title": "Thumbs Up",
+				"image": "http://moopz.com/assets_c/2012/06/emoji-thumbs-up-150-thumb-autox125-140616.jpg",
+				"value": "I like it"
+			},
+			{
+				"type": "imBack",
+				"title": "Thumbs Down",
+				"image": "http://yourfaceisstupid.com/wp-content/uploads/2014/08/thumbs-down.png",
+				"value": "I don't like it"
+			},
+			{
+				"type": "openUrl",
+				"title": "I feel lucky",
+				"image": "http://thumb9.shutterstock.com/photos/thumb_large/683806/148441982.jpg",
+				"value": "https://www.bing.com/images/search?q=bender&qpvt=bender&qpvt=bender&qpvt=bender&FORM=IGRE"
+			}
+		],
+		"tap": {
+			"type": "imBack",
+			"value": "Tapped it!"
+		}
+	}
+}
+```
 
 ### For more information
 
@@ -267,7 +306,7 @@ TBD - fill out the following with correct values
 
 ### Schema
 
-TBD: Add schema here. Coordinate with Property table
+TBD: Add schema here. Coordinate with Property table.
 
 ## Profile card
 
@@ -397,7 +436,7 @@ Bot Framework reference:
 
 ## SignIn card
 
-Not supported in Teams. 
+Not supported in Teams.
 A card that enables a bot to request that a user sign-in. It typically contains text and one button that the user can click to initiate the sign-in process.
 
 Teams users should use the *signin action* instead. See the topic [Microsoft Teams authentication flow for bots](`/concepts/bots/auth-flow-bot) for more details on authentication.
@@ -448,7 +487,46 @@ TBD: Remove this section if there are no notes
 
 ### Schema
 
-TBD: Add schema here. Coordinate with Property table
+```JSON
+{
+	"contentType": "application/vnd.microsoft.card.thumbnail",
+	"content": {
+		"title": "Bender",
+		"subtitle": "tale of a robot who dared to love",
+		"text": "Bender Bending RodrÃ­guez is a main character in the animated television series Futurama. He was created by series creators Matt Groening and David X. Cohen, and is voiced by John DiMaggio",
+		"images": [
+			{
+				"url": "https://upload.wikimedia.org/wikipedia/en/a/a6/Bender_Rodriguez.png",
+				"alt": "Bender_Rodriguez"
+			}
+		],
+		"buttons": [
+			{
+				"type": "imBack",
+				"title": "Thumbs Up",
+				"image": "http://moopz.com/assets_c/2012/06/emoji-thumbs-up-150-thumb-autox125-140616.jpg",
+				"value": "I like it"
+			},
+			{
+				"type": "imBack",
+				"title": "Thumbs Down",
+				"image": "http://yourfaceisstupid.com/wp-content/uploads/2014/08/thumbs-down.png",
+				"value": "I don't like it"
+			},
+			{
+				"type": "openUrl",
+				"title": "I feel lucky",
+				"image": "http://thumb9.shutterstock.com/photos/thumb_large/683806/148441982.jpg",
+				"value": "https://www.bing.com/images/search?q=bender&qpvt=bender&qpvt=bender&qpvt=bender&FORM=IGRE"
+			}
+		],
+		"tap": {
+			"type": "imBack",
+			"value": "Tapped it!"
+		}
+	}
+}
+```
 
 ### For more information
 
