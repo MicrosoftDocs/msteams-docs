@@ -26,7 +26,7 @@ Bots can participate in a conversation or initiate one. Most communication is in
 
 Each message is an `Activity` object. When a user sends a message, the channel on which she or he is communicating posts the message to your bot (web service). Your bot examines the message to determine its type and responds accordingly.
 
-Most content sent between a user and your bot uses `messageType: message`. (For event-style messages, see [Handle bot events in Microsoft Teams](~/concepts/bots/bots-notifications). Speech is currently not supported.)
+Most content sent between a user and your bot uses `messageType: message`. For event-style messages, see [Handle bot events in Microsoft Teams](~/concepts/bots/bots-notifications). Speech is currently not supported.
 
 Basic conversation is handled through the Bot Framework Connector, a single REST API to enable your bot to communicate with Teams and other channels. The Bot Builder SDK provides easy access to this API, additional functionality to manage conversation flow and state, and simple ways to incorporate cognitive services such as natural language processing (NLP).
 
@@ -38,6 +38,7 @@ Your bot can send rich text, pictures, and cards. Users can send rich text and p
 | Pictures | ✔ | ✔ | Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF not officially supported |
 | Cards | ✖ | ✔ | See the [Teams Card Reference](~/concepts/cards/cards-reference) for supported cards |
 | Emojis | ✖ | ✔ | Teams currently supports emojis via UTF-16 (such as U+1F600 for grinning face) |
+|
 
 For more information on the types of bot interaction supported by the Bot Framework (which bots in teams are based on), see the Bot Framework documentation on [conversation flow](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-manage-conversation-flow) and related concepts in the documentation for [the Bot Builder SDK for .NET](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-concepts) and [the Bot Builder SDK for Node.js](https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-concepts).
 
@@ -310,7 +311,7 @@ function sendCardUpdate(bot, session, originalMessage, address) {
 }
 ```
 
-## Creating a conversation
+## Creating a conversation (proactive messaging)
 
 You can create a 1:1 conversation with a user or start a new reply chain in a channel for your team bot. This lets you to message your user or users without having them first initiate contact with your bot. For more information, see the following topics:
 

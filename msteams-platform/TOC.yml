@@ -49,7 +49,7 @@
       href: ./concepts/bots/bots-create
     - name: Conversations
       href: ./concepts/bots/bots-conversations
-    - name: Cards and card actions
+    - name: Cards in bots
       href: ./concepts/bots/bots-cards
     - name: Bot events
       href: ./concepts/bots/bots-notifications
