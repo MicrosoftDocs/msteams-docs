@@ -40,7 +40,9 @@ Buttons are shown stacked at the bottom of the card. Button text is always on a 
 
 ### Card actions
 
-See the topic [Card Actions](`/concepts/cards-actions) for more information.
+TBD: can all of these statements be true at the same time?
+
+See the topic [Card Actions](`/concepts/cards/cards-actions) for more information.
 
 ### Card formatting
 
@@ -55,6 +57,7 @@ See the topic [Card Actions](`/concepts/cards-actions) for more information.
 ## Adaptive card
 
 Not supported in Teams.
+
 A customizable card that can contain any combination of text, speech, images, buttons, and input fields.
 
 ### Support
@@ -66,11 +69,14 @@ A customizable card that can contain any combination of text, speech, images, bu
 
 ### For more information
 
-[Adaptive Card (Bot Framework)](https://docs.microsoft.com/en-us/adaptive-cards/get-started/bots)
+Bot Framework reference:
+
+* [Adaptive Card (Bot Framework)](https://docs.microsoft.com/en-us/adaptive-cards/get-started/bots)
 
 ## Animation card
 
 Not supported in Teams.
+
 A card that can play animated GIFs or short videos.
 
 ### Support
@@ -83,11 +89,13 @@ A card that can play animated GIFs or short videos.
 ### For more information
 
 Bot Framework reference:
-[Animation card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.animationcard.html)
+
+* [Animation card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.animationcard.html)
 
 ## Audio card
 
 Not supported in Teams.
+
 A card that can play an audio file.
 
 ### Support
@@ -205,7 +213,14 @@ TBD: Delete this section if there are no notes.
 
 ### Properties
 
-TBD: Add property table here
+| Property | Type  | Description |
+| --- | --- | --- |
+| title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
+| items | Array of list items  | TBD: Need description |
+| buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
+|
+
+TBD: do we need a property table for list items?
 
 ### Schema
 
@@ -329,7 +344,16 @@ TBD: Remove this section if there are no notes
 
 ### Properties
 
-TBD: Add property table here
+| Property | Type  | Description |
+| --- | --- | --- |
+| title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
+| description | Rich text | Subtitle of the card. Maximum 2 lines; formatting not currently supported |
+| type |||
+| required |||
+| additionalProperties |||
+| properties |||
+| definitions |||
+|
 
 ### Schema
 

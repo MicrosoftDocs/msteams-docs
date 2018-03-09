@@ -22,9 +22,9 @@ Any card used by any O365 Connector will work in Teams as part of a Connector in
 
 ## Cards in Bots
 
-The Microsoft Bot Framework extends the cards specification by adding a set of predefined cards that bots can use as part of bot messages. Teams supports bots using the Bot Framework and supports a slightly different set of these cards. General information on cards in Bot Framework can be found in [Add rich card attachments to messages](https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-send-rich-cards).
+The Microsoft Bot Framework extends the cards specification by adding a set of predefined cards that bots can use as part of bot messages. Teams supports bots using the Bot Framework but it supports a slightly different set of these cards. General information on cards in Bot Framework can be found in [Add rich card attachments to messages](https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-send-rich-cards).
 
-The cards that are supported by bots are detailed in [Teams Card Reference](~/concepts/cards/cards-reference). These cards can not be used in connectors.  Connector cards can be used in bots however using the *O365 Connector Card* which encapsulates any card used in Office 365 Connectors.
+The cards that are supported by bots in Teams are detailed in [Teams Card Reference](~/concepts/cards/cards-reference). These cards can not be used in connectors.  Connector cards can be used in bots however using the *O365 Connector Card* which encapsulates any card used in Office 365 Connectors.
 
 ## Cards in Messaging Extensions
 
