@@ -52,8 +52,8 @@
       items:
       - name: Text formatting in conversations
         href: ./concepts/bots/bots-text-formats
-    - name: Cards in bots
-      href: ./concepts/bots/bots-cards
+      - name: Cards in conversations
+        href: ./concepts/bots/bots-cards
     - name: Bot events
       href: ./concepts/bots/bots-notifications
     - name: Context for bots
