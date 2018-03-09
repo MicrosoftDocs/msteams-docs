@@ -6,7 +6,7 @@ ms.date: 03/07/2018
 ---
 # Card actions
 
-Teams supports the following activity ([`CardAction`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards)) types.
+Bots and messaging extensions in Teams support the following activity ([`CardAction`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards)) types. Note that these actions differ from actions for Office 365 Connector cards.
 
 | Type | Action |
 | --- | --- |
@@ -14,11 +14,11 @@ Teams supports the following activity ([`CardAction`](https://docs.microsoft.com
 | `messageBack` | Sends a message and payload to the bot (from the user who clicked the button or tapped the card) and sends a separate message to the chat stream. |
 | `imBack`| Sends a message to the bot (from the user who clicked the button or tapped the card). This message (from user to bot) is visible to all conversation participants. |
 | `invoke` | Sends a message and payload to the bot (from the user who clicked the button or tapped the card). This message is not visible. |
+| `signin` | Initiates OAuth flow, allowing bots to connect with secure services. |
 
 > [!NOTE]
 >* Teams does not support `CardAction` types not listed in the preceding table.
 >* Teams does not support the `SuggestedActions` property.
->* Be aware that these actions differ from actions for Office 365 Connector cards.
 
 ## openUrl
 
