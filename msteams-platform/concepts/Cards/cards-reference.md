@@ -216,7 +216,7 @@ TBD: Delete this section if there are no notes.
 | Property | Type  | Description |
 | --- | --- | --- |
 | title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
-| items | Array of list items  | TBD: Need description |
+| items | Array of list items  ||
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
 |
 
@@ -279,6 +279,7 @@ TBD: do we need a property table for list items?
 ## Office 365 card
 
 Supported in teams, not in bot framework.
+
 The Office 365 Connector card provides a flexible layout with multiple sections, images, and fields.
 
 ### Support
@@ -443,6 +444,7 @@ TBD: Remove this section if there are no notes
 ## Receipt card
 
 Not supported in Teams.
+
 A card that enables a bot to provide a receipt to the user. It typically contains the list of items to include on the receipt, tax and total information, and other text.
 
 ### Support
@@ -461,6 +463,7 @@ Bot Framework reference:
 ## SignIn card
 
 Not supported in Teams.
+
 A card that enables a bot to request that a user sign-in. It typically contains text and one button that the user can click to initiate the sign-in process.
 
 Teams users should use the *signin action* instead. See the topic [Microsoft Teams authentication flow for bots](`/concepts/bots/auth-flow-bot) for more details on authentication.
