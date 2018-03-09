@@ -11,3 +11,5 @@ A *card* is a user-interface (UI) container for short or related pieces of infor
 Bots use cards as part of conversations. See [Bot Conversations](~/concepts/bots/bots-conversations) for the details.
 
 The [Teams Card Reference](~/concepts/cards/cards-reference) lists all cards supported by bots and discusses how to use them.
+
+[Card actions](~/concepts/cards/cards-actions) lists all actions supported by cards and discusses how to use them.

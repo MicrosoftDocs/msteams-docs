@@ -328,6 +328,8 @@ TBD: Add schema here. Coordinate with Property table.
 
 The profile card has been added by Teams.
 
+TBD: Need description
+
 ### Support
 
 | Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |

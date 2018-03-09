@@ -204,3 +204,9 @@ var button = new CardAction()
     }
 }
 ```
+
+## signin 
+
+Initiates OAuth flow, allowing bots to connect with secure services.
+
+TBD: Need content here
