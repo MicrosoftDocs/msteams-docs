@@ -88,9 +88,6 @@
     href: ./concepts/activity-feed
   - name: Connectors
     href: ./concepts/connectors
-    items:
-    - name: Cards and card actions (obsolete)
-      href: ./concepts/cards-actions
   - name: Messaging Extensions
     href: ./concepts/messaging-extensions
   - name: Outgoing WebHooks
