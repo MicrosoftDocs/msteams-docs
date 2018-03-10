@@ -276,11 +276,11 @@ TBD: do we need a property table for list items?
 }
 ```
 
-## Office 365 card
+## Office 365 connector card
 
 Supported in teams, not in bot framework.
 
-The Office 365 Connector card provides a flexible layout with multiple sections, images, and fields.
+The Office 365 Connector card provides a flexible layout with multiple sections, fields, images, and actions. This card encapsulates a connector card so that it can be used by bots. See the notes section for differences between connector cards and the O365 card.
 
 ### Support
 
@@ -296,8 +296,6 @@ TBD: Need picture of card here
 
 The O365 card is the only card that supports proactive messaging.
 
-Most of the information you need about Connector cards is in [Using Office 365 Connector cards in Microsoft Teams](~/concepts/connectors#using-office-365-connector-cards-in-microsoft-teams), including details on actionable messages.
-
 Office 365 Connector cards function properly on Microsoft Teams including [ActionCard actions](https://docs.microsoft.com/en-us/outlook/actionable-messages/card-reference#actioncard-action)).
 
 One important difference between using Connector cards from a Connector and using Connector cards in your bot is the handling of card actions
@@ -306,6 +304,28 @@ One important difference between using Connector cards from a Connector and usin
 * For a bot, the `HttpPOST` action triggers an `invoke` action that sends only the action ID and body to the bot.
 
 To use Connector cards in your bot, we recommend using the `O365ConnectorCard` class in the [Teams extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) for .NET or Node.js. You can simplify handling of the `HttpPOST` action by using the `onO365ConnectorCardAction` method.
+
+Each Connector card can display a maximum of 10 sections; each section can contain a maximum of 5 images and 5 actions.
+
+> [!NOTE]
+> Any additional sections, images, or actions in a message do not appear.
+
+All text fields support Markdown and HTML formatting. You can control which sections use Markdown or HTML by setting the `markdown` property in a message. By default, `markdown` is set to `true`; if you want to use HTML instead, set `markdown` to `false`.
+
+If you specify the `themeColor` property, it overrides the `accentColor` property in the app manifest.
+
+To specify the rendering style for `activityImage`, you can set `activityImage` as follows.
+
+| Value | Description |
+| --- | --- |
+| `avatar` | Default; `activityImage` will be cropped as a circle |
+| `article` | `activityImage` will be displayed as a rectangle and retain its aspect ratio |
+
+For all other details about Connector card properties, see the **[Actionable message card reference](https://docs.microsoft.com/en-us/outlook/actionable-messages/card-reference)**. The only Connector card properties that Microsoft Teams does not currently support are as follows:
+
+* `heroImage`
+* `hideOriginalBody`
+* `startGroup`
 
 TBD - fill out the following with correct values
 
@@ -322,7 +342,68 @@ TBD - fill out the following with correct values
 
 ### Schema
 
-TBD: Add schema here. Coordinate with Property table.
+TBD: this schema came from the messagecardplayground, Connectors reference example per Bill Bliss.  Is this correct?
+```JSON
+{
+    "@type": "MessageCard",
+    "@context": "http://schema.org/extensions",
+    "summary": "Miguel Garcia commented on Trello",
+    "title": "Project Tango",
+    "sections": [
+        {
+            "activityTitle": "Miguel Garcia commented",
+            "activitySubtitle": "On Project Tango",
+            "activityText": "\"Here are the designs\"",
+            "activityImage": "http://connectorsdemo.azurewebsites.net/images/MSC12_Oscar_002.jpg"
+        },
+        {
+            "title": "Details",
+            "facts": [
+                {
+                    "name": "Labels",
+                    "value": "Designs, redlines"
+                },
+                {
+                    "name": "Due date",
+                    "value": "Dec 7, 2016"
+                },
+                {
+                    "name": "Attachments",
+                    "value": "[final.jpg](http://connectorsdemo.azurewebsites.net/images/WIN14_Jan_04.jpg)"
+                }
+            ]
+        },
+        {
+            "title": "Images",
+            "images": [
+                {
+                    "image":"http://connectorsdemo.azurewebsites.net/images/MicrosoftSurface_024_Cafe_OH-06315_VS_R1c.jpg"
+                },
+                {
+                    "image":"http://connectorsdemo.azurewebsites.net/images/WIN12_Scene_01.jpg"
+                },
+                {
+                    "image":"http://connectorsdemo.azurewebsites.net/images/WIN12_Anthony_02.jpg"
+                }
+            ]
+        }
+    ],
+    "potentialAction": [
+        {
+            "@context": "http://schema.org",
+            "@type": "ViewAction",
+            "name": "View in Trello",
+            "target": [
+                "https://trello.com/c/1101/"
+            ]
+        }
+    ]
+}
+```
+
+### Using the O365 Connector card
+
+If you are using .NET and C# or Node.js, you can use the `O365ConnectorCard` class in the [Microsoft Teams extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) to send Connector cards from your bot.
 
 ## Profile card
 

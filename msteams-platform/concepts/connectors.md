@@ -23,34 +23,6 @@ In the list, choose **Add** for the Connector you want to use.
 
 For more examples, see [Accessing Office 365 Connectors from Microsoft Teams](https://docs.microsoft.com/en-us/outlook/actionable-messages/#accessing-office-365-connectors-from-microsoft-teams).
 
-## Using Office 365 Connector cards in Microsoft Teams
-
-The Office 365 Connector card provides a flexible layout with multiple sections, fields, images, and actions.
-
-Each Connector card can display a maximum of 10 sections; each section can contain a maximum of 5 images and 5 actions.
-
-> [!NOTE]
-> Any additional sections, images, or actions in a message do not appear.
-
-All text fields support Markdown and HTML formatting. You can control which sections use Markdown or HTML by setting the `markdown` property in a message. By default, `markdown` is set to `true`; if you want to use HTML instead, set `markdown` to `false`.
-
-If you specify the `themeColor` property, it overrides the `accentColor` property in the app manifest.
-
-To specify the rendering style for `activityImage`, you can set `activityImage` as follows.
-
-| Value | Description |
-| --- | --- |
-| `avatar` | Default; `activityImage` will be cropped as a circle |
-| `article` | `activityImage` will be displayed as a rectangle and retain its aspect ratio |
-
-For all other details about Connector card properties, see the **[Actionable message card reference](https://docs.microsoft.com/en-us/outlook/actionable-messages/card-reference)**. The only Connector card properties that Microsoft Teams does not currently support are as follows:
-
-* `heroImage`
-* `hideOriginalBody`
-* `startGroup`
-
-If you are using .NET and C# or Node.js, you can use the `O365ConnectorCard` class in the [Microsoft Teams extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) to send Connector cards from your bot.
-
 ## Creating messages through Office 365 Connectors
 
 You have two options for posting messages via Connectors:
