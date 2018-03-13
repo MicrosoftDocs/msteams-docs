@@ -32,9 +32,9 @@ You have two options for posting messages via Connectors:
 
 Both options involve posting a simple JSON payload to an HTTP webhook to create the Connector message within Microsoft Teams. (For more details, see [Get started with actionable messages in Office 365](https://docs.microsoft.com/en-us/outlook/actionable-messages/get-started).)
 
-You can also use the markup to include rich inputs, such as text entry, multi-select, or picking a date and time. The code that generates the card and posts to the incoming webhook API can be running on any hosted service.
+You can also use the markup to include cards containing rich inputs, such as text entry, multi-select, or picking a date and time. The code that generates the card and posts to the incoming webhook API can be running on any hosted service.  These cards are defined as part of actionable messages, and are different from the [cards](`/concepts/cards/cards) used in Teams bots and Messaging extensions.
 
-#### Example Connector message
+### Example Connector message
 
 ```json
 {
@@ -119,21 +119,21 @@ This message produces the following card in the channel.
 
 ## Creating actionable messages
 
-The example in the preceding section includes three visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions, each containing an input type: a text field, a date picker, or a multichoice list. Each `ActionCard` action has an associated action&mdash;in the example, `HttpPOST`.
+The example in the preceding section includes three visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions, each containing an input type: a text field, a date picker, or a multi-choice list. Each `ActionCard` action has an associated action&mdash;in the example, `HttpPOST`.
 
 Connector cards support three types of actions:
 
-* `ActionCard`&emsp;Presents one or more input types and associated actions
-* `HttpPOST`&emsp;Sends a POST request to a URL
-* `OpenUri`&emsp;Opens a URI in a separate browser or app; optionally targets different URIs based on operating systems
+- `ActionCard`&emsp;Presents one or more input types and associated actions
+- `HttpPOST`&emsp;Sends a POST request to a URL
+- `OpenUri`&emsp;Opens a URI in a separate browser or app; optionally targets different URIs based on operating systems
 
 (A fourth action, `ViewAction`, is still supported but no longer needed; use `OpenUri` instead.)
 
 The `ActionCard` action supports three input types:
 
-* `TextInput`&emsp;A single-line or multiline text field with an optional length limit
-* `DateInput`&emsp;A date selector with an optional time selector
-* `MultichoiceInput`&emsp;A enumerated list of choices offering either a single selection or multiple selections
+- `TextInput`&emsp;A single-line or multiline text field with an optional length limit
+- `DateInput`&emsp;A date selector with an optional time selector
+- `MultichoiceInput`&emsp;A enumerated list of choices offering either a single selection or multiple selections
 
 `MultichoiceInput` supports a `style` property that controls whether the list initially appears fully expanded. The default value of `style` depends on the value of `isMultiSelect`.
 
