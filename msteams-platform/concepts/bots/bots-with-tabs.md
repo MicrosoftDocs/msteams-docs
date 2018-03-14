@@ -16,7 +16,7 @@ In general, the recommended approach is to sign the user in with the bot using t
 
 This flow works best if your identity provider implements the OAuth 2.0 protocol. You can then associate the Teams user ID with the user’s credentials from your own identity service.
 
-   ![Associating identities](~/assets/images/bots/associating_contexts)
+   ![Associating identities](~/assets/images/bots/associating_contexts.png)
 
 Coming soon: our team roster API will provide basic user profile information, such as email address and Azure ActiveDirectory ObjectID, which is a unique user identifier that is commonly used across Microsoft Office365 applications. If your tab content is authenticated via Azure ActiveDirectory, you can use this value to associate user contexts between bot and tab interactions without requiring the user to sign into the bot.
 Constructing deep links to tabs in messages from your bot
