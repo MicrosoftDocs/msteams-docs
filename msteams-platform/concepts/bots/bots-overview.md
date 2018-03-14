@@ -4,7 +4,6 @@ description: Describes how to get started developing bots in Microsoft Teams
 keywords: teams bots development
 ms.date: 05/15/2018
 ---
-
 # Add bots to Microsoft Teams apps
 
 Build and connect intelligent bots to interact with Microsoft Teams users naturally through chat. Or provide a simple commands-based bot, to be used as your "command-line" interface for your broader Teams app experience. You can make a notification-only bot, which can push information relevant to your users directly to them in a channel or direct message. You can even bring your existing Bot Framework&ndash;based bot and add Teams-specific support to make your experience shine.
@@ -29,7 +28,7 @@ Bots in Teams can appear in one or both of the following ways:
 
 With Microsoft Teams apps, you can make the bot the star of your experience, or just a helper. Bots are distributed as part of your broader app package which can include other capabilities such as tabs or messaging extensions. If your bot is the star, be sure to take advantage of the [tabs](~/concepts/tabs/tabs-overview) capability. Use this rich web view to surface accompanying experiences and information that helps your users best interact with your service.
 
-## What you need to know: Bot APIs
+## Bot APIs
 
 Microsoft Teams supports much of the [Microsoft Bot Framework](https://dev.botframework.com/). (If you already have a bot that's based on the Bot Framework, you can easily adapt it to work in Microsoft Teams.) We recommend you use either C# or TypeScript to take advantage of our SDKs. These packages extend the basic Bot Builder classes and methods:
 
@@ -47,11 +46,11 @@ The SDK extensions install dependencies, including the Bot Builder SDK.
 > [!IMPORTANT]
 > You can develop Teams apps in any other web-programming technology and call the [Bot Framework REST APIs](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-overview) directly, but you must perform all token handling yourself.
 
-## What you need to know: Teams App Studio
+## Teams App Studio
 
 *Teams App Studio* is a new tool that can help configure your manifest and your app. It also contains a React control library and configurable samples for cards.  See [Getting started with Teams App Studio](~/get-started/get-started-app-studio).
 
-## What you need to know: outgoing webhooks
+## Outgoing webhooks
 
 Outgoing webhooks allow you to create a simple bot for basic interaction, like kicking off a workflow or other simple commands you may need. Outgoing webhooks live only in the team in which you create them and are intended for simple processes specific to your company's workflow. See [outgoing webhooks](~/concepts/outgoingwebhook) for more information.
 
