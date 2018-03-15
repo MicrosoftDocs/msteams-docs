@@ -1,5 +1,5 @@
 ---
-title: Authenticate a user
+title: Authenticate a user in Team
 description: Describes authentication in Teams and how to use it in your apps
 keywords: teams authentication OAuth SSO AAD
 ms.date: 02//28/6018
