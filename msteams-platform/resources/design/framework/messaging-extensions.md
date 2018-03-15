@@ -34,11 +34,15 @@ Once a user has queried your extension, they’ll be presented with a list of re
 
 ![Selecting an entity](~/assets/images/framework/framework_message-extentions_03.png)
 
+## Issues
+
+Cards in messaging extensions do not support http post but do allow [deep links](~/concepts/deep-links) to tabs and bots. Cards in bots do support this functionality.
+
 ## Best practices
 
 ### Keep it simple
 
-A messaging extension should be light-weight and fast or it will lose its utility. If your search requirements are very complex or multiple parameters are necessary even in the simplest case, it’s OK to include them. 
+A messaging extension should be light-weight and fast or it will lose its utility. If your search requirements are very complex or multiple parameters are necessary even in the simplest case, it’s OK to include them.
 
 ### Optimize your search results
 
