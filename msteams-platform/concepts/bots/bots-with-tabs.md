@@ -40,17 +40,6 @@ There are two ways of achieving this scenario:
 
 In both cases, use event notifications wisely and never spam the user with unnecessary updates.
 
-## Combining channel and private interactions with your bot
-
-When interacting in a channel, your bot should be smart about taking certain conversations offline with a user. For instance, suppose a user is trying to coordinate a complex task, such as scheduling with a set of team members. Rather than have the entire sequence of interactions visible to the channel, consider sending a 1:1 chat message to the user. Your bot should be able to easily transition the user between 1:1 and channel conversations without losing state.
-Note: don’t forget to update the channel when the interaction is complete to notify the other team members.
-
-## Embedding a button to add your app to Teams
-
-If your app is in the Microsoft Teams store, you can generate a button that, when clicked, launches the Teams experience and shows a selection dialog for the user to add the app.
-The format is:  `https://teams.microsoft.com/l/app/<appId>` where appID is the GUID they declare in the submitted manifest.
-Example: `https://teams.microsoft.com/l/app/56E1A16C-DDB4-46C0-B4B1-FC634ED86DDD`
-
 ## FAQ
 
 - Do you support tabs on mobile?

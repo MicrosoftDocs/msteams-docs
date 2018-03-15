@@ -94,3 +94,9 @@ Failures are explained, with references to the specific policy violations. All f
 * Check your manifest for completeness and accuracy. Then check it again.
 * Be sure to include detailed testing notes and a valid, working test account with appropriate prepopulated data.
 * Do not use the *Add a new app* button to resubmit your app.  Use the tile for your app on the Overview tab instead.
+
+## Add a download button to your product site
+
+If your app is in the Microsoft Teams store, you can generate a button for your website that launches the Teams experience and shows a selection dialog for the user to add the app.
+The format is:  `https://teams.microsoft.com/l/app/<appId>` where appID is the GUID they declare in the submitted manifest.
+Example: `https://teams.microsoft.com/l/app/56E1A16C-DDB4-46C0-B4B1-FC634ED86DDD`
