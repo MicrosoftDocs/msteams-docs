@@ -2,7 +2,7 @@
 title: Test your bot
 description: Describes how to test bots in Microsoft Teams
 keywords: teams bots testing
-ms.date: 01/02/2018
+ms.date: 03/19/2018
 ---
 # Test your Microsoft Teams bot
 
@@ -10,14 +10,13 @@ To test your bot in Microsoft Teams, you must follow one of the uploading proces
 
 For published bots, end users will be able to access the via the Discover Bots access points in the product.
 
-> [!NOTE]
-> Your tenant administrator will need to enable uploading of apps for your organization. [Here's how](/microsoftteams/admin-settings).
+Your tenant administrator will need to enable uploading of apps for your organization. [Here's how](/microsoftteams/admin-settings).
 
 ## Adding a bot to a team for use in channels
 
 To add a bot to a team, so it is usable in the team channel by all team members, the bot must be part of an app. You [create an app package](~/concepts/apps/apps-package) and [upload it](~/concepts/apps/apps-upload) to the appropriate team. This process makes the bot available in all channels within the team (when @mentioned) as well as for all team members in 1:1 context. Please note that the bot will not be available in other teams without being explicitly added to them.
 
-When a bot is first added via the above method, Teams will send the `conversationUpdate` event. The payload for this event will contain a `channelData` object with the team information. For more information about bot events, see the documentation [here](~/concepts/bots/bots-notifications).
+When a bot is first added via the above method, Teams will send the `conversationUpdate` event. The payload for this event will contain a `channelData` object with the team information. For more information about bot events, see the documentation [here](~/concepts/bots/bots-notifications). This event is sent in both team and 1:1 conversations, but in 1:1 conversations the payload is empty since channel data does not apply.
 
 ## Adding a bot for 1:1 chat only
 
@@ -31,13 +30,13 @@ There are two ways to test load your bot for 1:1 conversations in Microsoft Team
 
 2. Directly reference your bot's app ID from within Microsoft Teams:
    * On the [Bot Dashboard](https://dev.botframework.com/bots) page for your bot, under **Details**, copy the **Microsoft App ID** for your bot.
-	
-     ![Getting the AppID for the bot](~/assets/images/bots_appid_botframework.png)
-	
+
+   ![Getting the AppID for the bot](~/assets/images/bots_appid_botframework.png)
+
    * From within Microsoft Teams, on the **Chat** pane, select the **Add chat** icon. For **To:**, paste your bot's Microsoft App ID.
-	
+
      ![Getting the AppID for the bot](~/assets/images/bots_uploading.png)
-		
+
      The app ID should resolve to your bot name.
 
    * Select your bot and send a message to initiate a conversation.
@@ -46,16 +45,19 @@ There are two ways to test load your bot for 1:1 conversations in Microsoft Team
 
 3. Create a deeplink to your bot using the Teams deep-link format. This will launch Microsoft Teams directly with your bot's app ID. The format is `https://teams.microsoft.com/l/chat/0/0?users=28:YOUR_APP_ID`.
 
-> [!NOTE]
-> When a bot has been added through one of these methods, it will not be addressable in channel conversations. Nor can you take advantage of other Microsoft Teams app capabilities like tabs or messaging extensions.
+When a bot has been added through one of these methods, it will not be addressable in channel conversations. Nor can you take advantage of other Microsoft Teams app capabilities like tabs or messaging extensions.
 
-As with bots added to a team, your bot will receive the `conversationUpdate` event, but without the team information in the `channelData` object.
+Your bot will receive the `conversationUpdate` event just like bots added to a team, but without the team information in the `channelData` object.
 
 ## Blocking a bot in 1:1 chat
 
 Note that users can choose to block your bot from sending 1:1 messages. They may toggle this by right-clicking your bot in the chat channel and choosing **Block bot conversation**. This means your bots will continue to send messages but the user will not receive those messages.
 
-![Blocking a bot](~/assets/images/bot/botdisable.png)
+![Blocking a bot](~/assets/images/bots/botdisable.png)
+
+## Resetting a bot
+
+There are times when you will need to repeatedly reset and test your bot's startup behavior. In order to do this easily you can reset your bot to it's initial conditions. This is done in 1:1 with the bot using the command "/resetbotchat" typed in the compose box.
 
 ## Removing a bot from a team
 
