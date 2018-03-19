@@ -6,7 +6,12 @@ ms.date: 03/19/2018
 ---
 # Test your Microsoft Teams bot
 
-To test your bot in Microsoft Teams, you must follow one of the uploading processes listed here.  Note that each method triggers a slightly different flow, and enables bots in different contexts as explained below.
+You can test your bot in two different contexts:
+
+- For use in any team using channels
+- For 1:1 chat with individual team members.
+
+Both processes are listed below. Note that each method triggers a slightly different flow and enables bots in different contexts.
 
 For published bots, end users will be able to access the via the Discover Bots access points in the product.
 
@@ -55,7 +60,7 @@ Note that users can choose to block your bot from sending 1:1 messages. They may
 
 ![Blocking a bot](~/assets/images/bots/botdisable.png)
 
-## Resetting a bot
+## Resetting a bot in 1:1 chat
 
 There are times when you will need to repeatedly reset and test your bot's startup behavior. In order to do this easily you can reset your bot to it's initial conditions. This is done in 1:1 with the bot using the command "/resetbotchat" typed in the compose box.
 
