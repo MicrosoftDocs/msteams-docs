@@ -185,7 +185,7 @@ Your bot receives a payload that contains the user message `Text` as well as oth
 ```
 
 > [!NOTE]
-> The text field for inbound messages sometimes contains mentions. Be sure to properly check and strip those. For more information, see [Mentions](~/concepts/bots/conversations/bots-conv-channel#mentions).
+> The text field for inbound messages sometimes contains mentions. Be sure to properly check and strip those. For more information, see [Mentions](~/concepts/bots/bot-conversations/bots-conv-channel#mentions).
 
 ## Teams channel data
 
@@ -309,8 +309,8 @@ function sendCardUpdate(bot, session, originalMessage, address) {
 
 You can create a 1:1 conversation with a user or start a new reply chain in a channel for your team bot. This lets you to message your user or users without having them first initiate contact with your bot. For more information, see the following topics:
 
-* [Starting a 1:1 conversation](~/concepts/bots/conversations/bots-conv-personal#starting-a-11-conversation)
-* [Creating a channel conversation](~/concepts/bots/conversations/bots-conv-channel#creating-a-channel-conversation)
+* [Starting a 1:1 conversation](~/concepts/bots/bot-conversations/bots-conv-personal#starting-a-11-conversation)
+* [Creating a channel conversation](~/concepts/bots/bot-conversations/bots-conv-channel#creating-a-channel-conversation)
 
 ## Deleting messages
 

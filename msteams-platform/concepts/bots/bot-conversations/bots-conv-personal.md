@@ -7,7 +7,7 @@ ms.date: 03/20/2018
 
 # Interact one-on-one (1:1) with a Microsoft Teams bot
 
-Microsoft Teams allows users to engage in direct conversations with bots built on the [Microsoft Bot Framework](https://docs.botframework.com/en-us/). Users can find bots in the Discover Apps gallery and add them to their Teams experience for 1:1 conversations. Team owners and users with the appropriate permissions can also add bots as full team members (see [Interact in a team channel](~/concepts/bots/conversations/bots-conv-channel)), which not only makes them available in that team's channels, but for 1:1 chat for all of those users as well.
+Microsoft Teams allows users to engage in direct conversations with bots built on the [Microsoft Bot Framework](https://docs.botframework.com/en-us/). Users can find bots in the Discover Apps gallery and add them to their Teams experience for 1:1 conversations. Team owners and users with the appropriate permissions can also add bots as full team members (see [Interact in a team channel](~/concepts/bots/bot-conversations/bots-conv-channel)), which not only makes them available in that team's channels, but for 1:1 chat for all of those users as well.
 
 ## Designing a great personal (1:1) bot
 

@@ -1,3 +1,3 @@
 ---
-redirect_url: /microsoftteams/platform/concepts/bots/conversations/bots-conv-personal
+redirect_url: /microsoftteams/platform/concepts/bots/bot-conversations/bots-conv-personal
 ---
