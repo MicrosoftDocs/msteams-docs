@@ -71,7 +71,7 @@ To ensure that your formatting works across all platforms supported by Microsoft
 | image link                | ✔ | ✖ |
 
 > [!NOTE]
-> Currently, Connector cards support no formatting across all platforms. See [Cards](~/concepts/bots/bots-conversations#cards) in the next section for more detail.
+> Currently, Connector cards support no formatting across all platforms. See [Cards](~/concepts/bots/bot-conversations/bots-conversations#cards) in the next section for more detail.
 
 ### Support by individual platform
 
@@ -145,7 +145,7 @@ Your bot receives a payload that contains the user message `Text` as well as oth
 > [!NOTE]
 > `from.id` is unique for your bot and cannot be directly used outside your bot instance in any meaningful way to identify that user.
 
-#### Full inbound schema example
+### Full inbound schema example
 
 ```json
 {
@@ -198,14 +198,14 @@ Teams-specific information is sent and received in the `channelData` object. A t
     - `name`&emsp;Name of the team; passed only in cases of [team rename events](~/concepts/bots/bots-notifications#team-name-updates)
 * `channel`&emsp;Passed only in channel contexts when the bot is mentioned or for events in channels in teams where the bot has been added
     - `id`&emsp;GUID for the channel
-    - `name`&emsp;Channel name; passed only in cases of [channel modification events](~/concepts/bots/bots-notifications#channel-updates). 
+    - `name`&emsp;Channel name; passed only in cases of [channel modification events](~/concepts/bots/bots-notifications#channel-updates).
 
 > [!NOTE]
 > The payload also contains `channelData.teamsTeamId` and `channelData.teamsChannelId` properties for backward compatibility. These properties are deprecated.
 
 Please note that `channelData` should be used as the definitive source for team and channel IDs, which you can cache and use as keys for local storage.
 
-#### Example channelData object (channelCreated event)
+### Example channelData object (channelCreated event)
 
 ```json
 "channelData": {

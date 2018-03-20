@@ -48,7 +48,7 @@
     - name: Create a bot
       href: ./concepts/bots/bots-create
     - name: Conversations
-      href: ./concepts/bots/bots-conversations
+      href: ./concepts/bots/bot-conversations/bots-conversations
       items:
       - name: 1-on-1 conversations with bots
         href: ./concepts/bots/bot-conversations/bots-conv-personal

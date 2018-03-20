@@ -14,7 +14,7 @@ Microsoft Teams sends notifications to your bot for changes or events that happe
 * Remove cached information for a team if the bot is removed
 * When a bot message is liked by a user
 
-Each bot event is sent as an `Activity` object in which `messageType` defines what information is in the object. For messages of type `message`, see [Sending and receiving messages](~/concepts/bots/bots-conversations).
+Each bot event is sent as an `Activity` object in which `messageType` defines what information is in the object. For messages of type `message`, see [Sending and receiving messages](~/concepts/bots/bot-conversations/bots-conversations).
 
 Teams-specific events, usually triggered off the `conversationUpdate` type, have additional Teams event information passed as part of the `channelData` object, and therefore your event handler must query the `channelData` payload for the Teams `eventType` and additional event-specific metadata.
 

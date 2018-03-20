@@ -30,7 +30,7 @@ Developing a bot that works in channels uses much of the same functionality from
 
 For a bot in a channel, in addition to the [regular message schema](https://docs.botframework.com/en-us/core-concepts/reference/#activity), your bot also receives the following properties:
 
-* `channelData`&emsp;See [Teams channel data](~/concepts/bots/bots-conversations#teams-channel-data)
+* `channelData`&emsp;See [Teams channel data](~/concepts/bots/bot-conversations/bots-conversations#teams-channel-data)
 * `conversationData.id`&emsp;The reply chain ID, consisting of channel ID plus the ID of the first message in the reply chain
 * `conversationData.isGroup`&emsp;Set to `true` for bot messages in channels
 * `entities`&emsp;Can contain one or more mentions (see [Mentions](#mentions))

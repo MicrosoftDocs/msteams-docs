@@ -200,7 +200,7 @@ The request parameters itself are found in the value object, which includes the 
 | `queryOptions` | Pagination parameters: <br>`skip`: skip count for this query <br>`count`: number of elements to return |
 
 > [!NOTE]
-> You should authenticate any request to your service. See [Receiving messages](~/concepts/bots/bots-conversations#receiving-messages) for more detailed documentation on receiving messages from the Bot Framework.
+> You should authenticate any request to your service. See [Receiving messages](~/concepts/bots/bot-conversations/bots-conversations#receiving-messages) for more detailed documentation on receiving messages from the Bot Framework.
 
 #### Request example
 
