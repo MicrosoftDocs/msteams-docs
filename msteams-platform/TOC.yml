@@ -49,6 +49,11 @@
       href: ./concepts/bots/bots-create
     - name: Conversations
       href: ./concepts/bots/bots-conversations
+      items:
+      - name: 1-on-1 conversations with bots
+        href: ./concepts/bots/conversations/bots-conv-personal
+      - name: Channel conversations with bots
+        href: ./concepts/bots/conversations/bots-conv-channel
     - name: Cards and card actions
       href: ./concepts/bots/bots-cards
     - name: Bot events
@@ -98,9 +103,9 @@
   href: ./scenarios/scenarios
   items:
   - name: 1-on-1 conversations with bots
-    href: ./scenarios/bots-personal-conversations
+    href: ./concepts/bots/conversations/bots-conv-personal
   - name: Channel conversations with bots
-    href: ./scenarios/bots-channel-conversations
+    href: ./concepts/bots/conversations/bots-conv-channel
 - name: Resources
   href: ./resources/resource-overview
   items:

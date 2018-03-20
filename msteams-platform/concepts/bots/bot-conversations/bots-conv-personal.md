@@ -6,7 +6,7 @@ keywords: teams scenarios 1on1 1to1 conversation bot
 
 # Interact one-on-one (1:1) with a Microsoft Teams bot
 
-Microsoft Teams allows users to engage in direct conversations with bots built on the [Microsoft Bot Framework](https://docs.botframework.com/en-us/). Users can find bots in the Discover Apps gallery and add them to their Teams experience for 1:1 conversations. Team owners and users with the appropriate permissions can also add bots as full team members (see [Interact in a team channel](~/scenarios/bots-channel-conversations)), which not only makes them available in that team's channels, but for 1:1 chat for all of those users as well.
+Microsoft Teams allows users to engage in direct conversations with bots built on the [Microsoft Bot Framework](https://docs.botframework.com/en-us/). Users can find bots in the Discover Apps gallery and add them to their Teams experience for 1:1 conversations. Team owners and users with the appropriate permissions can also add bots as full team members (see [Interact in a team channel](~/concepts/bots/conversations/bots-conv-channel)), which not only makes them available in that team's channels, but for 1:1 chat for all of those users as well.
 
 ## Designing a great personal (1:1) bot
 
@@ -18,7 +18,7 @@ Depending on the experience you want to create, the bot might be entirely releva
 
 Bots can create new conversations with an individual Microsoft Teams user, as long as your bot has user information obtained through previous addition in a personal or team scope. This information enables your bot to proactively notify them. For instance, if your bot was added to a team, it could query the team roster and send users individual messages in private 1:1 chats, or a user could @mention another user to trigger the bot to send that user a direct message.
 
-You can create the 1:1 chat with a user as long as you have the user’s unique ID and tenant ID. Typically, this information is obtained from a team context, either by [fetching the team roster](~/concepts/bots/bots-context#fetching-the-team-roster) or when a user [interacts with your bot in a channel](~/scenarios/bots-channel-conversations). For bots already added to the user's personal scope, you might already have cached user information via the `conversationUpdate` event (see [Bot or user added to a team](~/concepts/bots/bots-notifications#team-member-or-bot-addition)).
+You can create the 1:1 chat with a user as long as you have the user’s unique ID and tenant ID. Typically, this information is obtained from a team context, either by [fetching the team roster](~/concepts/bots/bots-context#fetching-the-team-roster) or when a user [interacts with your bot in a channel](~/scenarios/bots-conv-channel). For bots already added to the user's personal scope, you might already have cached user information via the `conversationUpdate` event (see [Bot or user added to a team](~/concepts/bots/bots-notifications#team-member-or-bot-addition)).
 
 Because your bot is able to proactively message users, you should use this capability sparingly and consider the user experience. Be sure not to spam end users and to send only the minimum amount of information and number of messages needed to complete your scenario.
 
