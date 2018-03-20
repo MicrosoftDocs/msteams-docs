@@ -2,6 +2,7 @@
 title: Channel conversations with bots
 description: Describes the end-to-end scenario of having a conversation with a bot in a channel in Microsoft Teams
 keywords: teams scenarios channels conversation bot
+ms.date: 03/20/2018
 ---
 
 # Interact in a team channel with a Microsoft Teams bot
@@ -12,7 +13,7 @@ To add a bot to a team, you'll need to follow the [packaging](~/concepts/apps/ap
 
 ## Designing a great bot for channels
 
-Bots added to a team become another team member, who can be @mentioned as part of the conversation. In fact, bots only receive messages when they are @mentioned, so other conversations on the channel are not sent to the bot. 
+Bots added to a team become another team member, who can be @mentioned as part of the conversation. In fact, bots only receive messages when they are @mentioned, so other conversations on the channel are not sent to the bot.
 
 > [!NOTE]
 > For convenience when replying to bot messages in a channel, the bot name is prepended automatically.

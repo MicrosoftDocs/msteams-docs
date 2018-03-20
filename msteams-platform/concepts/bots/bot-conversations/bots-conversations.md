@@ -2,7 +2,7 @@
 title: Send and receive messages with a bot
 description: Describes how to send and receive messages with bots in Microsoft Teams
 keywords: teams bots messages
-ms.date: 03/02/2018
+ms.date: 03/20/2018
 ---
 # Have a conversation with a Microsoft Teams bot
 
@@ -236,13 +236,13 @@ string tenantId = channelData.Tenant.Id;
 
 To reply to an existing message, call [`ReplyToActivity`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-connector#send-a-reply) in .NET or [`session.send`](https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-use-default-message-handler) in Node.js. The Bot Builder SDK handles all the details.
 
-If you choose to use the REST API, you can also call the [`/conversations/{conversationId}/activities/{activityId}`](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-connector-send-and-receive-messages#send-the-reply) endpoint.  
+If you choose to use the REST API, you can also call the [`/conversations/{conversationId}/activities/{activityId}`](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-connector-send-and-receive-messages#send-the-reply) endpoint.
 
 The message content itself can contain simple text or some of the Bot Framework&ndash;supplied [cards and card actions](~/concepts/cards-actions).
 
 Please note that in your outbound schema you should always use the same `serviceUrl` as the one you received. Be aware that the value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value of `serviceUrl`.
 
-## Updating messages 
+## Updating messages
 
 Rather than have your messages be static snapshots of data, your bot can now dynamically update messages inline after sending them to users. You can use dynamic message updates for scenarios such as poll updates, modifying available actions after a button press, or any other asynchronous state change.
 
