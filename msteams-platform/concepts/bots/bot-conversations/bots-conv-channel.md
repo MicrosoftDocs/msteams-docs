@@ -4,7 +4,6 @@ description: Describes the end-to-end scenario of having a conversation with a b
 keywords: teams scenarios channels conversation bot
 ms.date: 03/20/2018
 ---
-
 # Interact in a team channel with a Microsoft Teams bot
 
 Microsoft Teams allows users to bring bots into their channel conversations.  By adding a bot as a team member, all users of the team can take advantage of the bot functionality right in the channel conversation.  You can also access Teams-specific functionality within your bot like querying team information and @mentioning users.
@@ -40,29 +39,6 @@ To reply to an existing message, call [`ReplyToActivity`](https://docs.microsoft
 If you choose to use the REST API, you can also call the [`/conversations/{conversationId}/activities/{activityId}`](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-connector-send-and-receive-messages#send-the-reply) endpoint.
 
 Note that replying to a message in a channel shows as a reply to the initiating reply chain. The `conversationId` contains the channel and the top level message ID. Although the Bot Framework takes care of the details, you can cache that `conversationId` for future replies to that conversation thread as needed.
-
-### Creating a channel conversation
-
-Your team-added bot can post into a channel to create a reply chain. With the Bot Builder SDK, call [`CreateConversation`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-connector#start-a-conversation) for .NET or use [proactive messages](https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-proactive-messages) (`bot.send` and `bot.beginDialog`) in Node.js.
-
-Alternatively, you can issue a POST request to the [`/conversations/{conversationId}/activities/`](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-connector-send-and-receive-messages#send-message) resource.
-
-#### .NET example
-
-```csharp
-var channelData = new TeamsChannelData { Channel = new ChannelInfo(yourChannelId) };
-IMessageActivity newMessage = Activity.CreateMessageActivity();
-newMessage.Type = ActivityTypes.Message;
-newMessage.Text = "Hello, on a new thread";
-ConversationParameters conversationParams = new ConversationParameters(
-    isGroup: true,
-    bot: null,
-    members: null,
-    topicName: "Test Conversation",
-    activity: (Activity)newMessage,
-    channelData: channelData);
-var result = await connector.Conversations.CreateConversationAsync(conversationParams);
-```
 
 ### Best practice: Welcome messages in teams
 

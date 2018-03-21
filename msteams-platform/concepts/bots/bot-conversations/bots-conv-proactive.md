@@ -106,3 +106,26 @@ var address =
 
 bot.beginDialog(address, '/');
 ```
+
+### Creating a channel conversation
+
+Your team-added bot can post into a channel to create a reply chain. With the Bot Builder SDK, call [`CreateConversation`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-connector#start-a-conversation) for .NET or use [proactive messages](https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-proactive-messages) (`bot.send` and `bot.beginDialog`) in Node.js.
+
+Alternatively, you can issue a POST request to the [`/conversations/{conversationId}/activities/`](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-connector-send-and-receive-messages#send-message) resource.
+
+#### .NET example
+
+```csharp
+var channelData = new TeamsChannelData { Channel = new ChannelInfo(yourChannelId) };
+IMessageActivity newMessage = Activity.CreateMessageActivity();
+newMessage.Type = ActivityTypes.Message;
+newMessage.Text = "Hello, on a new thread";
+ConversationParameters conversationParams = new ConversationParameters(
+    isGroup: true,
+    bot: null,
+    members: null,
+    topicName: "Test Conversation",
+    activity: (Activity)newMessage,
+    channelData: channelData);
+var result = await connector.Conversations.CreateConversationAsync(conversationParams);
+```
