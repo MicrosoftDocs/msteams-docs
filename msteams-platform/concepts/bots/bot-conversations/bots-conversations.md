@@ -13,7 +13,7 @@ A conversation is a series of messages sent between your bot and one or more use
 
 ## Conversation basics
 
-Each message is an `Activity` object. When a user sends a message, the channel on which she or he is communicating posts the message to your bot (web service). Your bot examines the message to determine its type and responds accordingly.
+Each message is an `Activity` object. Your bot examines the message to determine its type and responds accordingly.
 
 Most content sent between a user and your bot uses `messageType: message`. (For event-style messages, see [Handle bot events in Microsoft Teams](~/concepts/bots/bots-notifications). Speech is currently not supported.)
 

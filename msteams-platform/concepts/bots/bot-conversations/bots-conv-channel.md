@@ -22,9 +22,7 @@ A bot in a channel should provide information relevant and appropriate for all m
 
 Note that depending on your experience, the bot might be entirely relevant in both scopes (personal and team) as is, and in fact, no significant extra work is required to allow your bot to work in both. In Microsoft Teams, there is no expectation that your bot function in all contexts, but you should ensure your bot makes sense, and provides user value, in whichever scope you choose to support. For more information on scopes, see [Apps in Microsoft Teams](~/concepts/apps/apps-overview).
 
-## Building your bot
-
-Developing a bot that works in channels uses much of the same functionality from 1:1 conversation. Additional events and data in the payload provide Teams channel information. Those differences, as well as key differences in common functionality are enumerated in the following sections.
+Developing a bot that works in channels uses much of the same functionality from 1:1 conversation. Additional events and data in the payload provide Teams channel information. Those differences, as well as key differences in common functionality are described in the following sections.
 
 ### Receiving messages
 
@@ -48,9 +46,6 @@ Note that replying to a message in a channel shows as a reply to the initiating 
 Your team-added bot can post into a channel to create a reply chain. With the Bot Builder SDK, call [`CreateConversation`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-connector#start-a-conversation) for .NET or use [proactive messages](https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-proactive-messages) (`bot.send` and `bot.beginDialog`) in Node.js.
 
 Alternatively, you can issue a POST request to the [`/conversations/{conversationId}/activities/`](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-connector-send-and-receive-messages#send-message) resource.
-
- > [!NOTE]
- > At this point, bots in Microsoft Teams cannot initiate one-to-many or group conversations.
 
 #### .NET example
 
