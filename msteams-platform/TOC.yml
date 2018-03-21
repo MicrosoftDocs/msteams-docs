@@ -56,7 +56,9 @@
         href: ./concepts/bots/bot-conversations/bots-conv-channel
       - name: Starting a conversation
         href: ./concepts/bots/bot-conversations/bots-conv-proactive
-    - name: Cards and card actions
+      - name: Message formatting
+        href: ./concepts/bots/bot-conversations/bots-conv-format
+      - name: Cards and card actions
       href: ./concepts/bots/bots-cards
     - name: Bot events
       href: ./concepts/bots/bots-notifications

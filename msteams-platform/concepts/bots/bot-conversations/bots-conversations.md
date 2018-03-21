@@ -52,11 +52,8 @@ Your bot receives a payload that contains the user message `Text` as well as oth
 - `timestamp` The date and time of the message in Coordinated Universal Time (UTC)
 - `localTimestamp` The date and time of the message in the time zone of the sender
 - `channelId` Always "msteams"
-- `from.id` A unique and encrypted ID for that user for your bot; suitable as a key if your app needs to store user data
+- `from.id` A unique and encrypted ID for that user for your bot; suitable as a key if your app needs to store user data. It is unique for your bot and cannot be directly used outside your bot instance in any meaningful way to identify that user
 - `channelData.tenant.id` The tenant ID for the user.
-
-> [!NOTE]
-> `from.id` is unique for your bot and cannot be directly used outside your bot instance in any meaningful way to identify that user.
 
 ### Full inbound schema example
 
@@ -104,21 +101,20 @@ Your bot receives a payload that contains the user message `Text` as well as oth
 
 Channel data is not included in messages in 1:1 conversations.
 
-Teams-specific information is sent and received in the `channelData` object. A typical channelData in an activity sent to your bot contains the following information:
+The `channelData` object contains Teams-specific information and is the definitive source for team and channel IDs. You should cache and use these ids as keys for local storage.
 
-* `eventType` Teams event type; passed only in cases of [channel modification events](~/concepts/bots/bots-notifications#channel-updates)
-* `tenant.id` Azure Active Directory tenant ID; passed in all contexts
-* `team` Passed only in channel contexts, not 1:1
+A typical channelData in an activity sent to your bot contains the following information:
+
+- `eventType` Teams event type; passed only in cases of [channel modification events](~/concepts/bots/bots-notifications#channel-updates)
+- `tenant.id` Azure Active Directory tenant ID; passed in all contexts
+- `team` Passed only in channel contexts, not 1:1
     - `id` GUID for the channel
     - `name` Name of the team; passed only in cases of [team rename events](~/concepts/bots/bots-notifications#team-name-updates)
-* `channel` Passed only in channel contexts when the bot is mentioned or for events in channels in teams where the bot has been added
+- `channel` Passed only in channel contexts when the bot is mentioned or for events in channels in teams where the bot has been added
     - `id` GUID for the channel
     - `name` Channel name; passed only in cases of [channel modification events](~/concepts/bots/bots-notifications#channel-updates).
-
-> [!NOTE]
-> The payload also contains `channelData.teamsTeamId` and `channelData.teamsChannelId` properties for backward compatibility. These properties are deprecated.
-
-Please note that `channelData` should be used as the definitive source for team and channel IDs, which you can cache and use as keys for local storage.
+- `channelData.teamsTeamId` Depreciated. This property is included only for backwards compatibility.
+- `channelData.teamsChannelId` Depreciated. This property is included only for backwards compatibility.
 
 ### Example channelData object (channelCreated event)
 
