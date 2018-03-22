@@ -59,15 +59,13 @@
       - name: Message formatting
         href: ./concepts/bots/bot-conversations/bots-message-format
       - name: Cards and card actions
-        href: ./concepts/bots/bots-conversations
+        href: ./concepts/bots/bot-conversations/bots-cards
     - name: Bot events
       href: ./concepts/bots/bots-notifications
     - name: Context for bots
       href: ./concepts/bots/bots-context
     - name: Bot menus
       href: ./concepts/bots/bots-menus
-    - name: Cards in bots
-      href: ./concepts/bots/bots-cards
     - name: Test a bot
       href: ./concepts/bots/bots-test
   - name: Cards
