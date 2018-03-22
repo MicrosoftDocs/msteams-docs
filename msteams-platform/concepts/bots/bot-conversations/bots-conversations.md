@@ -42,14 +42,29 @@ Your bot can send rich text, pictures, and cards. Users can send rich text and p
 | --- | :---: | :---: | --- |
 | Rich text | ✔ | ✔ |  |
 | Pictures | ✔ | ✔ | Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF not officially supported |
-| Cards | ✖ | ✔ | Teams currently supports hero, thumbnail, and Office 365 Connector cards |
+| Cards | ✖ | ✔ | See the [Teams Card Reference](~/concepts/cards/cards-reference) for supported cards |
 | Emojis | ✖ | ✔ | Teams currently supports emojis via UTF-16 (such as U+1F600 for grinning face) |
+|
 
-For more information on the types of bot interaction supported by the Bot Framework and therefore Microsoft Teams, see the Bot Framework documentation on [conversation flow](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-manage-conversation-flow) and related concepts in the documentation for [the Bot Builder SDK for .NET](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-concepts) and [the Bot Builder SDK for Node.js](https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-concepts).
+For more information on the types of bot interaction supported by the Bot Framework (which bots in teams are based on), see the Bot Framework documentation on [conversation flow](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-manage-conversation-flow) and related concepts in the documentation for [the Bot Builder SDK for .NET](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-concepts) and [the Bot Builder SDK for Node.js](https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-concepts).
 
-## Message format
+## Message formatting
 
 You can set the optional [`TextFormat`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) property of a `message` to control how your message's text content is rendered. See [Message formatting](~concepts/bots/bot-conversations/bots-message-format) for a detailed description of supported formatting in bot messages.
+You can set the optional [`TextFormat`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) property to control how your message's text content is rendered.
+
+For detailed information on how Teams supports text formatting in teams see [Text formatting in bot messages](`/concepts/bots/bots-text-formats).
+
+## Picture messages
+
+Pictures are sent by adding attachments to a message. You can find more information on attachments in the [Bot Framework documentation](https://docs.botframework.com/en-us/core-concepts/attachments/).
+
+Pictures can be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF is not officially supported.
+
+We recommend that you specify the height and width of each image by using XML. If you use Markdown, the image size defaults to 256×256. For example:
+
+* Use `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
+* Don't use `![Duck on a rock](http://aka.ms/Fo983c)`
 
 ## Receiving messages
 
@@ -62,11 +77,11 @@ For incoming messages, your bot receives an [`Activity`](https://docs.microsoft.
 
 Your bot receives a payload that contains the user message `Text` as well as other information about the user, the source of the message, and Teams information. Of note:
 
-- `timestamp` The date and time of the message in Coordinated Universal Time (UTC)
-- `localTimestamp` The date and time of the message in the time zone of the sender
-- `channelId` Always "msteams"
-- `from.id` A unique and encrypted ID for that user for your bot; suitable as a key if your app needs to store user data. It is unique for your bot and cannot be directly used outside your bot instance in any meaningful way to identify that user
-- `channelData.tenant.id` The tenant ID for the user.
+* `timestamp` The date and time of the message in Coordinated Universal Time (UTC)
+* `localTimestamp` The date and time of the message in the time zone of the sender
+* `channelId` Always "msteams"
+* `from.id` A unique and encrypted ID for that user for your bot; suitable as a key if your app needs to store user data. It is unique for your bot and cannot be directly used outside your bot instance in any meaningful way to identify that user
+* `channelData.tenant.id` The tenant ID for the user.
 
 ### Full inbound schema example
 
@@ -237,6 +252,13 @@ function sendCardUpdate(bot, session, originalMessage, address) {
   });
 }
 ```
+
+## Creating a conversation (proactive messaging)
+
+You can create a 1:1 conversation with a user or start a new reply chain in a channel for your team bot. This lets you to message your user or users without having them first initiate contact with your bot. For more information, see the following topics:
+
+* [Starting a 1:1 conversation](~/scenarios/bots-personal-conversations#starting-a-11-conversation)
+* [Creating a channel conversation](~/scenarios/bots-channel-conversations#creating-a-channel-conversation)
 
 ## Deleting messages
 
