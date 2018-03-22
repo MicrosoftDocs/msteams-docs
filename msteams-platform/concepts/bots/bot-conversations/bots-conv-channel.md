@@ -2,13 +2,13 @@
 title: Channel conversations with bots
 description: Describes the end-to-end scenario of having a conversation with a bot in a channel in Microsoft Teams
 keywords: teams scenarios channels conversation bot
-ms.date: 03/20/2018
+ms.date: 03/22/2018
 ---
 # Interact in a team channel with a Microsoft Teams bot
 
 Microsoft Teams allows users to bring bots into their channel conversations.  By adding a bot as a team member, all users of the team can take advantage of the bot functionality right in the channel conversation.  You can also access Teams-specific functionality within your bot like querying team information and @mentioning users.
 
-To add a bot to a team, you'll need to follow the [packaging](~/concepts/apps/apps-package) and [uploading](~/concepts/apps/apps-upload) instructions.
+Chat in channels differs from 1:1 chat in that the user needs to @mention the bot. If a bot is used in both contexts (1:1 and channel) you will need to detect if the the bot is in a channel, and process messages a little differently. This section will describe those differences.
 
 ## Designing a great bot for channels
 
@@ -17,9 +17,9 @@ Bots added to a team become another team member, who can be @mentioned as part o
 > [!NOTE]
 > For convenience when replying to bot messages in a channel, the bot name is prepended automatically.
 
-A bot in a channel should provide information relevant and appropriate for all members of the team.  While your bot can certainly provide any information relevant to the experience, keep in mind conversations with it are visible to all members of the channel.  Therefore, a great bot in a channel should add value to all users on the channel, and certainly not inadvertantly share information that would otherwise be more relevant in a personal context. 
+A bot in a channel should provide information relevant and appropriate for all members of the team.  While your bot can certainly provide any information relevant to the experience, keep in mind conversations with it are visible to all members of the channel.  Therefore, a great bot in a channel should add value to all users on the channel, and certainly not inadvertently share information that would otherwise be more relevant in a personal context.
 
-Note that depending on your experience, the bot might be entirely relevant in both scopes (personal and team) as is, and in fact, no significant extra work is required to allow your bot to work in both. In Microsoft Teams, there is no expectation that your bot function in all contexts, but you should ensure your bot makes sense, and provides user value, in whichever scope you choose to support. For more information on scopes, see [Apps in Microsoft Teams](~/concepts/apps/apps-overview).
+Note that depending on your experience, the bot might be entirely relevant in both scopes (1:1 and channel) as is, and in fact, no significant extra work is required to allow your bot to work in both. In Microsoft Teams, there is no expectation that your bot function in all contexts, but you should ensure your bot makes sense, and provides user value, in whichever scope you choose to support. For more information on scopes, see [Apps in Microsoft Teams](~/concepts/apps/apps-overview).
 
 Developing a bot that works in channels uses much of the same functionality from 1:1 conversation. Additional events and data in the payload provide Teams channel information. Those differences, as well as key differences in common functionality are described in the following sections.
 
@@ -52,7 +52,7 @@ We recommend that your bot *not* send a welcome message in the following situati
 * A channel is renamed
 * A team member is added to a channel
 
->For more best practices, see our [design guidelines](~/resources/design/overview).
+For more best practices, see our [design guidelines](~/resources/design/overview).
 
 ## @ Mentions
 
@@ -151,14 +151,14 @@ session.send(generalMessage);
 ```json
 {
     "type": "message", 
-    "text": "Hey <at>Larry Jin</at> check out this message", 
-    "timestamp": "2016-10-29T00:51:05.9908157Z", 
-    "localTimestamp": "2016-10-28T17:51:05.9908157-07:00", 
-    "serviceUrl": "https://skype.botframework.com", 
-    "channelId": "msteams", 
+    "text": "Hey <at>Larry Jin</at> check out this message",
+    "timestamp": "2016-10-29T00:51:05.9908157Z",
+    "localTimestamp": "2016-10-28T17:51:05.9908157-07:00",
+    "serviceUrl": "https://skype.botframework.com",
+    "channelId": "msteams",
     "from": {
-        "id": "28:9e52142b-5e5e-4d7b-bb3e- e82dcf620000", 
-        "name": "SchemaTestBot" 
+        "id": "28:9e52142b-5e5e-4d7b-bb3e- e82dcf620000",
+        "name": "SchemaTestBot"
     },
     "conversation": {
         "id": "19:aebd0ad4d6ab42c8b9ed19c251c2fc37@thread.skype;messageid=1481567603816" 
@@ -166,7 +166,7 @@ session.send(generalMessage);
     "recipient": {
         "id": "8:orgid:6aebbad0-e5a5-424a-834a-20fb051f3c1a", 
         "name": "stlrgload100"
-    }, 
+    },
     "attachments": [
         {
             "contentType": "image/png",
@@ -180,10 +180,10 @@ session.send(generalMessage);
             "mentioned":{
                 "id":"29:08q2j2o3jc09au90eucae",
                 "name":"Larry Jin"
-            }, 
+            },
             "text": "<at>@Larry Jin</at>"
-        } 
-    ], 
+        }
+    ],
     "replyToId": "3UP4UTkzUk1zzeyW"
 }
 ```

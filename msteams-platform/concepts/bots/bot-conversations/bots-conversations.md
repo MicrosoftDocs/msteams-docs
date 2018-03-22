@@ -29,8 +29,8 @@ Bots also support event-style messages, see [Handle bot events in Microsoft Team
 
 Bots can take part in both 1:1 conversations and in Teams channel conversations. The messages are for the most part the same, but there are differences in how the bot is accessed in the UI and differences behind the scenes which you will need to know about.
 
-- [Bots in channel conversations](~/concepts/bot-conversations/bots-conv-channel) require the user to @ mention the bot to invoke it in a channel.
-- [Bots in 1:1 conversations](~/concepts/bot-conversations/bots-conv-personal) do not require an @ mention - the user can just type.
+* [Bots in channel conversations](~/concepts/bot-conversations/bots-conv-channel) require the user to @ mention the bot to invoke it in a channel.
+* [Bots in 1:1 conversations](~/concepts/bot-conversations/bots-conv-personal) do not require an @ mention - the user can just type.
 
 Basic conversation is handled through the Bot Framework Connector, a single REST API to enable your bot to communicate with Teams and other channels. The Bot Builder SDK provides easy access to this API, additional functionality to manage conversation flow and state, and simple ways to incorporate cognitive services such as natural language processing (NLP).
 
@@ -70,8 +70,8 @@ We recommend that you specify the height and width of each image by using XML. I
 
 Depending on which scopes are declared, your bot can receive messages in the following contexts:
 
-- **1:1 chat** Users can interact in a private conversation with a bot by simply selecting the added bot in the chat history, or typing its name or app ID in the To: box on a new chat.
-- **Channels** A bot can be mentioned ("@_botname_") in a channel if it has been added to the team. Note that additional replies to a bot in a channel require mentioning the bot. It will not respond to replies where it is not mentioned.
+* **1:1 chat** Users can interact in a private conversation with a bot by simply selecting the added bot in the chat history, or typing its name or app ID in the To: box on a new chat.
+* **Channels** A bot can be mentioned ("@_botname_") in a channel if it has been added to the team. Note that additional replies to a bot in a channel require mentioning the bot. It will not respond to replies where it is not mentioned.
 
 For incoming messages, your bot receives an [`Activity`](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-connector-activities) object of type `message`. Although the `Activity` object can contain other types of information, like [channel updates](~/concepts/bots/bots-notifications#channel-updates) sent to your bot, the `message` type represents communication between bot and user.
 
@@ -133,16 +133,16 @@ The `channelData` object contains Teams-specific information and is the definiti
 
 A typical channelData in an activity sent to your bot contains the following information:
 
-- `eventType` Teams event type; passed only in cases of [channel modification events](~/concepts/bots/bots-notifications#channel-updates)
-- `tenant.id` Azure Active Directory tenant ID; passed in all contexts
-- `team` Passed only in channel contexts, not 1:1
-    - `id` GUID for the channel
-    - `name` Name of the team; passed only in cases of [team rename events](~/concepts/bots/bots-notifications#team-name-updates)
-- `channel` Passed only in channel contexts when the bot is mentioned or for events in channels in teams where the bot has been added
-    - `id` GUID for the channel
-    - `name` Channel name; passed only in cases of [channel modification events](~/concepts/bots/bots-notifications#channel-updates).
-- `channelData.teamsTeamId` Depreciated. This property is included only for backwards compatibility.
-- `channelData.teamsChannelId` Depreciated. This property is included only for backwards compatibility.
+* `eventType` Teams event type; passed only in cases of [channel modification events](~/concepts/bots/bots-notifications#channel-updates)
+* `tenant.id` Azure Active Directory tenant ID; passed in all contexts
+* `team` Passed only in channel contexts, not 1:1
+    * `id` GUID for the channel
+    * `name` Name of the team; passed only in cases of [team rename events](~/concepts/bots/bots-notifications#team-name-updates)
+* `channel` Passed only in channel contexts when the bot is mentioned or for events in channels in teams where the bot has been added
+    * `id` GUID for the channel
+    * `name` Channel name; passed only in cases of [channel modification events](~/concepts/bots/bots-notifications#channel-updates).
+* `channelData.teamsTeamId` Depreciated. This property is included only for backwards compatibility.
+* `channelData.teamsChannelId` Depreciated. This property is included only for backwards compatibility.
 
 ### Example channelData object (channelCreated event)
 
@@ -185,8 +185,8 @@ Please note that in your outbound schema you should always use the same `service
 
 You can create a 1:1 conversation with a user or start a new reply chain in a channel for your team bot. This lets you to message your user or users without having them first initiate contact with your bot. For more information, see the following topics:
 
-- [Starting a 1:1 conversation](~/concepts/bots/bot-conversations/bots-conv-proactive#starting-a-11-conversation)
-- [Creating a channel conversation](~/concepts/bots/bot-conversations/bots-conv-proactive#creating-a-channel-conversation)
+* [Starting a 1:1 conversation](~/concepts/bots/bot-conversations/bots-conv-proactive#starting-a-11-conversation)
+* [Creating a channel conversation](~/concepts/bots/bot-conversations/bots-conv-proactive#creating-a-channel-conversation)
 
 See also [Proactive messaging for bots](~concepts/bots/bot-conversations/bots-conv-proactive) for more general information on conversations started by bots.
 

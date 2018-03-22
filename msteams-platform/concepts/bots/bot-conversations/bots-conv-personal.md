@@ -2,12 +2,13 @@
 title: 1-on-1 conversations with bots
 description: Describes the end-to-end scenario of having a 1-on-1 conversation with a bot in Microsoft Teams
 keywords: teams scenarios 1on1 1to1 conversation bot
-ms.date: 03/20/2018
+ms.date: 03/22/2018
 ---
-
 # Interact one-on-one (1:1) with a Microsoft Teams bot
 
 Microsoft Teams allows users to engage in direct conversations with bots built on the [Microsoft Bot Framework](https://docs.botframework.com/en-us/). Users can find bots in the Discover Apps gallery and add them to their Teams experience for 1:1 conversations. Team owners and users with the appropriate permissions can also add bots as full team members (see [Interact in a team channel](~/concepts/bots/bot-conversations/bots-conv-channel)), which not only makes them available in that team's channels, but for 1:1 chat for all of those users as well.
+
+1:1 chat differs from chat in channels in that the user does not need to @mention the bot. If a bot is used in both contexts (1:1 and channel) you will need to detect if the the bot is in a channel, and process messages a little differently. See [Interact in a team channel](~/concepts/bots/bot-conversations/bots-conv-channel) for more details.
 
 ## Designing a great personal (1:1) bot
 

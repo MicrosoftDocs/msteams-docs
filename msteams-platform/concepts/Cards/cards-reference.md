@@ -580,10 +580,6 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 
 ![Example of a thumbnail card](~/assets/images/cards/thumbnail.png)
 
-### Notes
-
-TBD: Remove this section if there are no notes
-
 ### Properties
 
 | Property | Type  | Description |

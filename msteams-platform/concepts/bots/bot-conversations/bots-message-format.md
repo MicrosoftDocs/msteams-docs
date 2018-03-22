@@ -16,7 +16,7 @@ Microsoft Teams supports the following formatting options:
 | markdown | The text should be treated as Markdown formatting and rendered on the channel as appropriate; see [Formatting text content](#formatting-text-content) for supported styles |
 | xml | The text is simple XML markup; see [Formatting text content](#formatting-text-content) for supported styles |
 
-# Formatting text content
+## Formatting text content
 
 Microsoft Teams supports a subset of Markdown and XML (HTML) formatting tags.
 
@@ -53,7 +53,7 @@ Support for text formatting varies by type of message and by platform.
 
 ### Text-only messages
 
-| Style                     | Desktop | iOS | Android | 
+| Style                     | Desktop | iOS | Android |
 | ---                       | :---: | :---: | :---: |
 | bold                      | ✔ | ✔ | ✔ |
 | italic                    | ✔ | ✔ | ✔ |
@@ -69,32 +69,4 @@ Support for text formatting varies by type of message and by platform.
 
 ### Cards
 
-[!include[Formatting text content in cards](~/includes/bots/message-format-cards.html)]
-
-\*Renders as bold
-
-## Examples of text formatting
-
-| Style | Example | Markdown | XML (HTML) |
-| --- | --- | --- | --- |
-| bold | **text** | `**text**` | `<strong>text</strong>` |
-| italic | *text* | `*text*` | `<em>text</em>` |
-| header (levels 1&ndash;3) | **Text** | `### Text` | `<h3>Text</h3>` |
-| strikethrough | ~~text~~ | `~~text~~` | `<strike>text</strike>` |
-| unordered list | <ul><li>text</li><li>text</li></ul> | `* text`<br>`* text` | `<ul><li>text</li><li>text</li></ul>` |
-| ordered list | <ol><li>text</li><li>text</li></ol> | `1. text`<br>`2. text` | `<ol><li>text</li><li>text</li></ol>` |
-| preformatted text | `text` | `` `text` `` | `<pre>text</pre>` |
-| blockquote | <blockquote>text</blockquote> | `>text` | `<blockquote>text</blockquote>` |
-| hyperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` | `<a href="https://www.bing.com/">Bing</a>` |
-| image link | <img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img> | `![Duck on a rock](http://aka.ms/Fo983c)` | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
-
-# Picture messages
-
-Pictures are sent by adding attachments to a message. You can find more information on attachments in the [Bot Framework documentation](https://docs.botframework.com/en-us/core-concepts/attachments/).
-
-Pictures can be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF is not officially supported.
-
-We recommend that you specify the height and width of each image by using XML. If you use Markdown, the image size defaults to 256×256. For example:
-
-* Use `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
-* Don't use `![Duck on a rock](http://aka.ms/Fo983c)`
+See [Card Formatting](`/concepts/cards/cards-format) for support in cards.
