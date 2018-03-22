@@ -74,7 +74,7 @@ for (int i = 0;i < m.Length;i++)
 {
     if (m[i].Mentioned.Id == sourceMessage.Recipient.Id)
     {
-        //Bot is in the @mention list.  
+        //Bot is in the @mention list.
         //The below example will strip the bot name out of the message, so you can parse it as if it wasn't included.  Note that the Text object will contain the full bot name, if applicable.
         if (m[i].Text != null)
             messageText = messageText.Replace(m[i].Text, "");
@@ -149,42 +149,42 @@ session.send(generalMessage);
 #### Schema example: Outgoing message with user mentioned
 
 ```json
-{ 
+{
     "type": "message", 
     "text": "Hey <at>Larry Jin</at> check out this message", 
     "timestamp": "2016-10-29T00:51:05.9908157Z", 
     "localTimestamp": "2016-10-28T17:51:05.9908157-07:00", 
     "serviceUrl": "https://skype.botframework.com", 
     "channelId": "msteams", 
-    "from": { 
+    "from": {
         "id": "28:9e52142b-5e5e-4d7b-bb3e- e82dcf620000", 
         "name": "SchemaTestBot" 
-    }, 
-    "conversation": { 
+    },
+    "conversation": {
         "id": "19:aebd0ad4d6ab42c8b9ed19c251c2fc37@thread.skype;messageid=1481567603816" 
-    }, 
-    "recipient": { 
+    },
+    "recipient": {
         "id": "8:orgid:6aebbad0-e5a5-424a-834a-20fb051f3c1a", 
-        "name": "stlrgload100" 
+        "name": "stlrgload100"
     }, 
-    "attachments": [ 
-        { 
-            "contentType": "image/png", 
-            "contentUrl": "https://upload.wikimedia.org/wikipedia/en/a/a6/Bender_Rodriguez.png", 
-            "name": "Bender_Rodriguez.png" 
-        } 
-    ], 
-    "entities": [ 
-        { 
-            "type":"mention", 
-            "mentioned":{ 
+    "attachments": [
+        {
+            "contentType": "image/png",
+            "contentUrl": "https://upload.wikimedia.org/wikipedia/en/a/a6/Bender_Rodriguez.png",
+            "name": "Bender_Rodriguez.png"
+        }
+    ],
+    "entities": [
+        {
+            "type":"mention",
+            "mentioned":{
                 "id":"29:08q2j2o3jc09au90eucae",
-                "name":"Larry Jin" 
+                "name":"Larry Jin"
             }, 
             "text": "<at>@Larry Jin</at>"
         } 
     ], 
-    "replyToId": "3UP4UTkzUk1zzeyW" 
+    "replyToId": "3UP4UTkzUk1zzeyW"
 }
 ```
 
