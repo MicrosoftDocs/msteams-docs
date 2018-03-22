@@ -59,6 +59,11 @@
       - name: Message formatting
         href: ./concepts/bots/bot-conversations/bots-message-format
       - name: Cards and card actions
+      href: ./concepts/bots/bots-conversations
+      items:
+      - name: Text formatting in conversations
+        href: ./concepts/bots/bots-text-formats
+      - name: Cards in conversations
         href: ./concepts/bots/bots-cards
     - name: Bot events
       href: ./concepts/bots/bots-notifications
@@ -68,6 +73,13 @@
       href: ./concepts/bots/bots-menus
     - name: Test a bot
       href: ./concepts/bots/bots-test
+  - name: Cards
+    href: ./concepts/cards/cards
+    items:
+    - name: Card actions
+      href: ./concepts/cards/cards-actions
+    - name: Cards reference
+      href: ./concepts/cards/cards-reference
   - name: Authentication
     href: ./concepts/authentication/authentication
     items:
@@ -87,9 +99,6 @@
     href: ./concepts/activity-feed
   - name: Connectors
     href: ./concepts/connectors
-    items:
-    - name: Cards and card actions
-      href: ./concepts/cards-actions
   - name: Messaging Extensions
     href: ./concepts/messaging-extensions
   - name: Outgoing WebHooks

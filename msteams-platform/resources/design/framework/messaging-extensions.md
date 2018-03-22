@@ -5,7 +5,7 @@ keywords: teams design guidelines reference framework messaging extensions
 ---
 # Share your content with messaging extensions
 
-Messaging extensions allow you to share rich cards in a conversation. A card can hold instructions to complete a complex task or a simple GIF. Microsoft Teams comes equipped with several messaging extensions already. If you look below the compose box, you’ll see a “GIF” icon. That’s a messaging extension! These extensions are one of the best ways to create shareable content and serve information quickly.
+Messaging extensions allow you to share cards in a conversation. A card can hold instructions to complete a complex task or a simple GIF. Microsoft Teams comes equipped with several messaging extensions already. If you look below the compose box, you’ll see a “GIF” icon. That’s a messaging extension! These extensions are one of the best ways to create shareable content and serve information quickly.
 
 ---
 

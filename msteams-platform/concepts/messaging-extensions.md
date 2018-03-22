@@ -5,7 +5,7 @@ keywords: teams messaging extensions messaging extensions
 ---
 # Develop messaging extensions for Microsoft Teams
 
-Messaging extensions are a powerful new way for users to engage with your app within Microsoft Teams. With this capability, users can query for information from your service and post that information, in the form of rich cards, right into the channel conversation.
+Messaging extensions are a powerful new way for users to engage with your app within Microsoft Teams. With this capability, users can query for information from your service and post that information, in the form of cards, right into the channel conversation.
 
 ![Example of messaging extension card](~/assets/images/compose-extensions/ceexample.png)
 
@@ -21,7 +21,7 @@ How would you use messaging extensions? Here are a few possibilities:
 
 ## Add a messaging extension to your app
 
-Building a messaging extension involves implementing familiar Microsoft Teams developer platform concepts like bot APIs, rich cards, and tabs.
+Building a messaging extension involves implementing familiar Microsoft Teams developer platform concepts like bot APIs, cards, and tabs.
 
 At its core, a messaging extension is a cloud-hosted service that listens to user requests and responds with structured data, such as cards. You integrate your service with Microsoft Teams via Bot Framework `Activity` objects. Our .NET and Node.js [extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) can help you add messaging extension functionality to your app.
 
