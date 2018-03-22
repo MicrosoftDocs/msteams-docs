@@ -27,10 +27,10 @@ Developing a bot that works in channels uses much of the same functionality from
 
 For a bot in a channel, in addition to the [regular message schema](https://docs.botframework.com/en-us/core-concepts/reference/#activity), your bot also receives the following properties:
 
-* `channelData`&emsp;See [Teams channel data](~/concepts/bots/bot-conversations/bots-conversations#teams-channel-data)
-* `conversationData.id`&emsp;The reply chain ID, consisting of channel ID plus the ID of the first message in the reply chain
-* `conversationData.isGroup`&emsp;Set to `true` for bot messages in channels
-* `entities`&emsp;Can contain one or more mentions (see [Mentions](#mentions))
+* `channelData` See [Teams channel data](~/concepts/bots/bot-conversations/bots-conversations#teams-channel-data)
+* `conversationData.id` The reply chain ID, consisting of channel ID plus the ID of the first message in the reply chain
+* `conversationData.isGroup` Set to `true` for bot messages in channels
+* `entities` Can contain one or more mentions (see [Mentions](#mentions))
 
 ### Replying to messages
 
@@ -54,7 +54,7 @@ We recommend that your bot *not* send a welcome message in the following situati
 
 >For more best practices, see our [design guidelines](~/resources/design/overview).
 
-## Mentions
+## @ Mentions
 
 Bots in a channel respond only when they are mentioned ("@_botname_") in a message. That means every message received by a bot in a channel contains its own name, and you must ensure that your message parsing handles that case. In addition, bots can parse out other users mentioned and mention users as part of their messages.
 
@@ -62,7 +62,7 @@ Bots in a channel respond only when they are mentioned ("@_botname_") in a messa
 
 Mentions are returned in the `entities` object in payload and contain both the unique ID of the user and, in most cases, the name of user mentioned. You can retrieve all mentions in the message by calling the `GetMentions` function in the Bot Builder SDK for .NET, which returns an array of `Mentioned` objects.
 
-All messages that your bot receives have the name of the bot in the channel and should accomodate that in its message parsing.
+All messages that your bot receives have the name of the bot in the channel and should accommodate that in its message parsing.
 
 #### .NET example code: Check for and strip @bot mention
 
@@ -99,8 +99,7 @@ if (message.entities) {
 }
 ```
 
-> [!NOTE]
-> You can also use the Teams extension function `getTextWithoutMentions`, which strips out all mentions, including the bot.
+You can also use the Teams extension function `getTextWithoutMentions`, which strips out all mentions, including the bot.
 
 ### Constructing mentions
 
@@ -109,10 +108,7 @@ Your bot can mention other users in messages posted into channels. To do this, y
 * Include `<at>@username</at>` in the message text
 * Include the `mention` object inside the entities collection
 
-The [Teams extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) provide functionality to easily accomodate this.
-
-> [!NOTE]
-> At this time, team and channel mentions are not supported.
+The [Teams extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) provide functionality to easily m this.
 
 #### .NET example
 

@@ -16,10 +16,10 @@ Each message is an `Activity` object of type `messageType: message`. When a user
 
 Bots also support event-style messages, see [Handle bot events in Microsoft Teams](~/concepts/bots/bots-notifications) for more details. Speech is currently not supported.
 
-Bots can take part in both 1:1 conversations and in Teams channel conversations:
+Bots can take part in both 1:1 conversations and in Teams channel conversations. The messages are for the most part the same, but there are differences in how the bot is accessed in the UI and differences behind the scenes which you will need to know about.
 
-- [Bots in 1:1 conversations](~/concepts/bot-conversations/bots-conv-personal)
-- [Bots in channel conversations](~/concepts/bot-conversations/bots-conv-channel)
+- [Bots in channel conversations](~/concepts/bot-conversations/bots-conv-channel) require the user to @ mention the bot to invoke it in a channel.
+- [Bots in 1:1 conversations](~/concepts/bot-conversations/bots-conv-personal) do not require an @ mention - the user can just type.
 
 Basic conversation is handled through the Bot Framework Connector, a single REST API to enable your bot to communicate with Teams and other channels. The Bot Builder SDK provides easy access to this API, additional functionality to manage conversation flow and state, and simple ways to incorporate cognitive services such as natural language processing (NLP).
 
