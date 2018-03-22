@@ -6,9 +6,20 @@ ms.date: 03/20/2018
 ---
 # Have a conversation with a Microsoft Teams bot
 
-A conversation is a series of messages sent between your bot and one or more users. Bots in Microsoft Teams allow sending messages in either personal conversations with a single user (also known as one-on-one or 1:1 chats) or a group conversation in a Teams channel.
+A conversation is a series of messages sent between your bot and one or more users. Bots in Microsoft Teams allow sending messages in either:
+
+* Personal conversations with a single user (one-on-one or 1:1 chats)
+* Group conversation in a Teams channel.
 
 Bots in private group chats are currently not supported.
+
+## Proactive messages
+
+Bots can participate in a conversation or initiate one. Most communication is in response to another message.  If a bot initiates a conversation it is called a `proactive message`. Examples include:
+
+* Welcome messages
+* Event notifications
+* Polling messages
 
 ## Conversation basics
 
@@ -22,6 +33,8 @@ Bots can take part in both 1:1 conversations and in Teams channel conversations.
 - [Bots in 1:1 conversations](~/concepts/bot-conversations/bots-conv-personal) do not require an @ mention - the user can just type.
 
 Basic conversation is handled through the Bot Framework Connector, a single REST API to enable your bot to communicate with Teams and other channels. The Bot Builder SDK provides easy access to this API, additional functionality to manage conversation flow and state, and simple ways to incorporate cognitive services such as natural language processing (NLP).
+
+## Message content
 
 Your bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot. You can specify the type of content your bot can handle in the Microsoft Teams settings page for your bot.
 
