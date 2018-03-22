@@ -71,7 +71,7 @@
   - name: Cards
     href: ./concepts/cards/cards
     items:
-    - name: Cards reference
+    - name: Card reference
       href: ./concepts/cards/cards-reference
     - name: Card actions
       href: ./concepts/cards/cards-actions

@@ -6,16 +6,16 @@ ms.date: 03/20/2018
 ---
 # Have a conversation with a Microsoft Teams bot
 
-A conversation is a series of messages sent between your bot and one or more users. Bots in Microsoft Teams allow sending messages in either:
+A conversation is a series of messages sent between your bot and one or more users. Microsoft Teams allows bots to send messages in either:
 
-* Personal conversations with a single user (one-on-one or 1:1 chats)
-* Group conversation in a Teams channel.
+* [Bots in channel conversations](~/concepts/bot-conversations/bots-conv-channel) require the user to @ mention the bot to invoke it in a channel. These are group conversations in a Teams channel.
+* [Bots in 1:1 conversations](~/concepts/bot-conversations/bots-conv-personal) do not require an @ mention - the user can just type. These are personal conversations with a single user. They are also called one-on-one or 1:1 chats.
 
 Bots in private group chats are currently not supported.
 
 ## Proactive messages
 
-Bots can participate in a conversation or initiate one. Most communication is in response to another message.  If a bot initiates a conversation it is called a `proactive message`. Examples include:
+Bots can participate in a conversation or initiate one. Most communication is in response to another message.  If a bot initiates a conversation it is called a *proactive message*. Examples include:
 
 * Welcome messages
 * Event notifications
@@ -25,12 +25,9 @@ Bots can participate in a conversation or initiate one. Most communication is in
 
 Each message is an `Activity` object of type `messageType: message`. When a user sends a message, Teams posts the message to your bot; specifically, it sends a JSON object to your bot's messaging endpoint. Your bot examines the message to determine its type and responds accordingly.
 
-Bots also support event-style messages, see [Handle bot events in Microsoft Teams](~/concepts/bots/bots-notifications) for more details. Speech is currently not supported.
+Bots also support event-style messages. See [Handle bot events in Microsoft Teams](~/concepts/bots/bots-notifications) for more details. Speech is currently not supported.
 
-Bots can take part in both 1:1 conversations and in Teams channel conversations. The messages are for the most part the same, but there are differences in how the bot is accessed in the UI and differences behind the scenes which you will need to know about.
-
-* [Bots in channel conversations](~/concepts/bot-conversations/bots-conv-channel) require the user to @ mention the bot to invoke it in a channel.
-* [Bots in 1:1 conversations](~/concepts/bot-conversations/bots-conv-personal) do not require an @ mention - the user can just type.
+Messages are for the most part the same in both 1:1 conversations and channel chats, but there are differences in how the bot is accessed in the UI and differences behind the scenes which you will need to know about.
 
 Basic conversation is handled through the Bot Framework Connector, a single REST API to enable your bot to communicate with Teams and other channels. The Bot Builder SDK provides easy access to this API, additional functionality to manage conversation flow and state, and simple ways to incorporate cognitive services such as natural language processing (NLP).
 
@@ -55,6 +52,8 @@ You can set the optional [`TextFormat`](https://docs.microsoft.com/en-us/bot-fra
 
 For detailed information on how Teams supports text formatting in teams see [Text formatting in bot messages](`/concepts/bots/bots-text-formats).
 
+For information on formatting cards in messages, see [Card formatting](~/concepts/cards/card-format).
+
 ## Picture messages
 
 Pictures are sent by adding attachments to a message. You can find more information on attachments in the [Bot Framework documentation](https://docs.botframework.com/en-us/core-concepts/attachments/).
@@ -73,7 +72,7 @@ Depending on which scopes are declared, your bot can receive messages in the fol
 * **1:1 chat** Users can interact in a private conversation with a bot by simply selecting the added bot in the chat history, or typing its name or app ID in the To: box on a new chat.
 * **Channels** A bot can be mentioned ("@_botname_") in a channel if it has been added to the team. Note that additional replies to a bot in a channel require mentioning the bot. It will not respond to replies where it is not mentioned.
 
-For incoming messages, your bot receives an [`Activity`](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-connector-activities) object of type `message`. Although the `Activity` object can contain other types of information, like [channel updates](~/concepts/bots/bots-notifications#channel-updates) sent to your bot, the `message` type represents communication between bot and user.
+For incoming messages, your bot receives an [`Activity`](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-connector-activities) object of type `messageType: message`. Although the `Activity` object can contain other types of information, like [channel updates](~/concepts/bots/bots-notifications#channel-updates) sent to your bot, the `message` type represents communication between bot and user.
 
 Your bot receives a payload that contains the user message `Text` as well as other information about the user, the source of the message, and Teams information. Of note:
 
@@ -253,7 +252,7 @@ function sendCardUpdate(bot, session, originalMessage, address) {
 }
 ```
 
-## Creating a conversation (proactive messaging)
+## Starting a conversation (proactive messaging)
 
 You can create a 1:1 conversation with a user or start a new reply chain in a channel for your team bot. This lets you to message your user or users without having them first initiate contact with your bot. For more information, see the following topics:
 
