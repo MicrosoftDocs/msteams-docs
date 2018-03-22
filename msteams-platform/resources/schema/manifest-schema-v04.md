@@ -117,15 +117,15 @@ Your bot can optionally provide a static tab, shown alongside the bot's direct c
 
 Developer-defined ID for the tab.
 
-#### `definitionId`	(string, required)
+#### `definitionId`  (string, required)
 
 Like an entity ID for a Teams tab, this can be used by you to identify the specific content on display.
 
-#### `displayName` (string, required)	
+#### `displayName` (string, required)  
 
 Name to show on the tab UI.
 
-#### `url` (string, required)	
+#### `url` (string, required)  
 
 The URL for the content to show in the tab.
 

@@ -374,12 +374,12 @@ If your service requires user authentication, you need to sign in the user befor
 
 The sequence is as follows:
 
-1.	User issues a query, or the default query is automatically sent to your service.
-2.	Your service checks whether the user has first authenticated by inspecting the Teams user ID.
-3.	If the user has not authenticated, send back a `login` action including the authentication URL.
-4.	The Microsoft Teams client launches a pop-up window hosting your webpage using the given authentication URL.
-5.	After the user signs in, you should close your window and send an "authentication code" to the Teams client.
-6.	The Teams client then reissues the query to your service, which includes the authentication code passed in step 5.
+1.  User issues a query, or the default query is automatically sent to your service.
+2.  Your service checks whether the user has first authenticated by inspecting the Teams user ID.
+3.  If the user has not authenticated, send back a `login` action including the authentication URL.
+4.  The Microsoft Teams client launches a pop-up window hosting your webpage using the given authentication URL.
+5.  After the user signs in, you should close your window and send an "authentication code" to the Teams client.
+6.  The Teams client then reissues the query to your service, which includes the authentication code passed in step 5.
 
 Your service should verify that the authentication code received in step 6 matches the one from step 5.  This ensures that a malicious user does not try to spoof or compromise the sign-in flow.  This effectively "closes the loop" to finish the secure authentication sequence.
 

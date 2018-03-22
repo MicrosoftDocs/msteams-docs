@@ -78,7 +78,7 @@ Your bot receives a payload that contains the user message `Text` as well as oth
 
 * `timestamp` The date and time of the message in Coordinated Universal Time (UTC)
 * `localTimestamp` The date and time of the message in the time zone of the sender
-* `channelId` Always "msteams"
+* `channelId` Always "msteams". This refers to a bot framework channel, not a teams channel.
 * `from.id` A unique and encrypted ID for that user for your bot; suitable as a key if your app needs to store user data. It is unique for your bot and cannot be directly used outside your bot instance in any meaningful way to identify that user
 * `channelData.tenant.id` The tenant ID for the user.
 
