@@ -703,8 +703,8 @@ The list layout shows a vertically stacked list of cards, optionally with associ
 
 Properties are the same as for the hero or thumbnail card.
 
-> [!NOTE]
-> A list can display a maximum of 10 cards per message.
+A list can display a maximum of 10 cards per message.
+
 > [!NOTE]
 > Some combinations of list cards are not yet supported on iOS and Android.
 
