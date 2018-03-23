@@ -5,5 +5,5 @@ keywords: teams design guidelines reference components themes
 ---
 # Themes
 
-We provide light and dark themes—make sure your app looks great in both.
+We provide light, dark, and high contrast themes. Make sure your app looks great in all three.
 [!include[Themes](~/includes/design/themes-image.html)]
