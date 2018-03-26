@@ -36,7 +36,7 @@ Once a user has queried your extension, they’ll be presented with a list of re
 
 ## Issues
 
-Cards in messaging extensions do not support http post but do allow [deep links](~/concepts/deep-links) to tabs and bots. Cards in bots do support this functionality.
+Cards in messaging extensions do not support http POST but do allow [deep links](~/concepts/deep-links) to tabs and bots. Cards in bots do support this functionality.
 
 ## Best practices
 
