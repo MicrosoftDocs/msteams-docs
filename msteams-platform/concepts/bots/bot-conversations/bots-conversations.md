@@ -2,7 +2,7 @@
 title: Send and receive messages with a bot
 description: Describes how to send and receive messages with bots in Microsoft Teams
 keywords: teams bots messages
-ms.date: 03/20/2018
+ms.date: 03/26/2018
 ---
 # Have a conversation with a Microsoft Teams bot
 
@@ -19,7 +19,7 @@ Microsoft Teams allows bots to send messages in either:
 
 Not supported yet:
 
-* Groups - Bots in group chats, including meetings are currently not supported.
+* Groups - Bots in group conversations, including meetings, are currently not supported. Group conversations are also called group chats.
 
 In order for the bot to work in a particular scope it should be listed as supporting that scope in the manifest. Scopes are defined and discussed further in the [Manifest Reference](~/references/resources/schema/manifest-schema).
 
@@ -48,7 +48,7 @@ Your bot can send rich text, pictures, and cards. Users can send rich text and p
 | Format | From user to bot  | From bot to user |  Notes |
 | --- | :---: | :---: | --- |
 | Rich text | ✔ | ✔ |  |
-| Pictures | ✔ | ✔ | Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF not officially supported |
+| Pictures | ✔ | ✔ | Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF are not supported |
 | Cards | ✖ | ✔ | See the [Teams Card Reference](~/concepts/cards/cards-reference) for supported cards |
 | Emojis | ✖ | ✔ | Teams currently supports emojis via UTF-16 (such as U+1F600 for grinning face) |
 |
@@ -68,7 +68,7 @@ For information on formatting cards in messages, see [Card formatting](~/concept
 
 Pictures are sent by adding attachments to a message. You can find more information on attachments in the [Bot Framework documentation](https://docs.botframework.com/en-us/core-concepts/attachments/).
 
-Pictures can be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF is not officially supported.
+Pictures can be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF is not supported.
 
 We recommend that you specify the height and width of each image by using XML. If you use Markdown, the image size defaults to 256×256. For example:
 
@@ -92,7 +92,7 @@ Your bot receives a payload that contains the user message `Text` as well as oth
 * `from.id` A unique and encrypted ID for that user for your bot; suitable as a key if your app needs to store user data. It is unique for your bot and cannot be directly used outside your bot instance in any meaningful way to identify that user
 * `channelData.tenant.id` The tenant ID for the user.
 
-### Full inbound schema example
+### Full inbound message schema example
 
 ```json
 {
@@ -136,11 +136,11 @@ Your bot receives a payload that contains the user message `Text` as well as oth
 
 ## Teams channel data
 
-Channel data is not included in messages in 1:1 conversations.
-
 The `channelData` object contains Teams-specific information and is the definitive source for team and channel IDs. You should cache and use these ids as keys for local storage.
 
-A typical channelData in an activity sent to your bot contains the following information:
+The `channelData` object is not included in messages in 1:1 conversations.
+
+A typical channelData object in an activity sent to your bot contains the following information:
 
 * `eventType` Teams event type; passed only in cases of [channel modification events](~/concepts/bots/bots-notifications#channel-updates)
 * `tenant.id` Azure Active Directory tenant ID; passed in all contexts
@@ -201,7 +201,7 @@ See also [Proactive messaging for bots](~concepts/bots/bot-conversations/bots-co
 
 ## Updating messages
 
-Rather than have your messages be static snapshots of data, your bot can now dynamically update messages inline after sending them to users. You can use dynamic message updates for scenarios such as poll updates, modifying available actions after a button press, or any other asynchronous state change.
+Rather than have your messages be static snapshots of data, your bot can dynamically update messages inline after sending them. You can use dynamic message updates for scenarios such as poll updates, modifying available actions after a button press, or any other asynchronous state change.
 
 The new message need not match the original in type. For instance, if the original message contained an attachment, the new message can be a simple text message.
 

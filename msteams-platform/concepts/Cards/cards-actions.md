@@ -6,7 +6,7 @@ ms.date: 03/22/2018
 ---
 # Card actions
 
-Bots and messaging extensions in Teams support the following activity ([`CardAction`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards)) types. Note that these actions differ from actions for Office 365 Connector cards.
+Bots and messaging extensions in Teams support the following activity ([`CardAction`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards)) types. Note that these actions differ from `potentialActions` for Office 365 Connector cards when used from Connectors.
 
 | Type | Action |
 | --- | --- |
@@ -19,6 +19,8 @@ Bots and messaging extensions in Teams support the following activity ([`CardAct
 > [!NOTE]
 >* Teams does not support `CardAction` types not listed in the preceding table.
 >* Teams does not support the `SuggestedActions` property.
+
+TBD: By SuggestedActions, do you mean potentialActions?
 
 ## openUrl
 
@@ -66,7 +68,7 @@ The flexibility of `messageBack` means that your code can choose not to leave a 
 
 The `value` property can be either a serialized JSON string or a JSON object.
 
-### Inbound message schema example
+### Inbound message example
 
 ```json
 {
@@ -158,7 +160,7 @@ var button = new CardAction()
 };
 ```
 
-### Example: Invoke inbound schema
+### Example: Incoming invoke message
 
 ```json
 {
