@@ -2,7 +2,7 @@
 title: Add card actions in a bot
 description: Describes card actions in Microsoft Teams and how to use them in your bots
 keywords: teams bots cards actions
-ms.date: 03/07/2018
+ms.date: 03/22/2018
 ---
 # Card actions
 
@@ -129,7 +129,7 @@ The `value` field should contain the text string echoed in the chat and therefor
 ## invoke
 
 > [!NOTE]
-> We recommend that you use `messageBack` instead of `invoke`.
+> We recommend that you use `messageBack` instead of `invoke`. While `invoke` can be used directly, it is designed to be used indirectly. For example, `invoke` is used to send character-by-character keystrokes for [compose extensions](~/concepts/messaging-extensions.md).
 
 The `invoke` message type silently sends a JSON payload that you define to your bot.  This is useful if you want to send more detailed information back to your bot without having to send via a simple `imBack` text string.  Note that the user, in 1:1 or in channel, sees no notification as a result of their click.
 
@@ -207,6 +207,4 @@ var button = new CardAction()
 
 ## signin 
 
-Initiates OAuth flow, allowing bots to connect with secure services.
-
-TBD: Need content here
+Initiates OAuth flow, allowing bots to connect with secure services, as described in more detail here: [Authentication flow in bots](~/concepts/authentication/auth-flow-bot).
