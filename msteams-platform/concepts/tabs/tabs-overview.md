@@ -21,6 +21,7 @@ Microsoft Teams supports tabs in either:
 
 * Teams - (channel) Tabs in channels allow teams to interact with your shared experience. Currently, all tabs in channels are *configurable tabs*&mdash;a user configures the content of your tab experience when the tab is first added to a channel.
 * Personal - (1:1 conversations or chats) Tabs in the personal scope allow users to interact with your experience privately. Currently, all such tabs are *static tabs*&mdash;content that is relevant to individual users.
+
 Not supported:
 
 * Group - Tabs in group conversations are currently not supported.
