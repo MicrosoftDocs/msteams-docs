@@ -26,7 +26,7 @@ In the Seller Dashboard:
 
    ![Office Seller Dashboard app overview](~/assets/images/submission/sdoverviewcrop.png)
 
-   * **App package** – Upload your properly formatted 1.0 manifest. Note that the manifest information prepopulates many of the following fields.
+   * **App package** – Upload your properly formatted 1.x manifest. Note that the manifest information prepopulates many of the following fields.
    * **Submission title** – The name of your app.
    * **Version** – Auto-populated from the manifest.
    * **Release date** – By default, today's date. This means that your app is eligible to be published as soon as it passes validation. If you want to delay publication, specify the date. Please note: Validation times vary, and there is no guarantee the validation process will be done by the specified date.
