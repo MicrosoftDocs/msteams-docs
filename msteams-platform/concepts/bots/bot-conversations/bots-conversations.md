@@ -6,12 +6,22 @@ ms.date: 03/20/2018
 ---
 # Have a conversation with a Microsoft Teams bot
 
-A conversation is a series of messages sent between your bot and one or more users. Microsoft Teams allows bots to send messages in either:
+A conversation is a series of messages sent between your bot and one or more users. There are three kinds of conversations (also called scopes) in Teams:
 
-* [Bots in channel conversations](~/concepts/bot-conversations/bots-conv-channel) require the user to @ mention the bot to invoke it in a channel. These are group conversations in a Teams channel.
-* [Bots in 1:1 conversations](~/concepts/bot-conversations/bots-conv-personal) do not require an @ mention - the user can just type. These are personal conversations with a single user. They are also called one-on-one or 1:1 chats.
+* `teams` Also called channel conversations
+* `personal` Also called 1:1 conversations
+* `group` Used for group and meeting conversations
 
-Bots in private group chats are currently not supported.
+Microsoft Teams allows bots to send messages in either:
+
+* Teams - [Bots in channel conversations](~/concepts/bot-conversations/bots-conv-channel) require the user to @ mention the bot to invoke it in a channel. These are group conversations in a Teams channel.
+* Personal - [Bots in 1:1 conversations](~/concepts/bot-conversations/bots-conv-personal) do not require an @ mention - the user can just type. These are personal conversations with a single user. They are also called one-on-one or 1:1 chats.
+
+Not supported yet:
+
+* Groups - Bots in group chats, including meetings are currently not supported.
+
+In order for the bot to work in a particular scope it should be listed as supporting that scope in the manifest. Scopes are defined and discussed further in the [Manifest Reference](~/references/resources/schema/manifest-schema).
 
 ## Proactive messages
 
@@ -176,7 +186,7 @@ To reply to an existing message, call [`ReplyToActivity`](https://docs.microsoft
 
 If you choose to use the REST API, you can also call the [`/conversations/{conversationId}/activities/{activityId}`](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-connector-send-and-receive-messages#send-the-reply) endpoint.
 
-The message content itself can contain simple text or some of the Bot Framework&ndash;supplied [cards and card actions](~/concepts/cards-actions).
+The message content itself can contain simple text or some of the Bot Framework supplied [cards and card actions](~/concepts/cards-actions).
 
 Please note that in your outbound schema you should always use the same `serviceUrl` as the one you received. Be aware that the value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value of `serviceUrl`.
 

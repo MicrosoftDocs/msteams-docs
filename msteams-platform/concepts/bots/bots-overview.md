@@ -16,9 +16,24 @@ Build and connect intelligent bots to interact with Microsoft Teams users natura
 
 ## What you need to know: Bots
 
-Other than its hexagonal avatar icon, a bot appears just like any other team member you interact with, in a channel or in one-on-one conversations. It is always online and does not have a mood message.
+A bot appears just like any other team member you interact with in a conversation except that it has a hexagonal avatar icon . It is always online and does not have a mood message.
 
-Bots in Teams can surface in a one-on-one context ("personal scope"), as a member of a team ("team scope"), or both. For the latter, they take part in a conversation only when you @mention them. For the former, you can address them via the conversation interface or access them in the apps personal experience from the app bar flyout.
+A bot behaves slightly depending on what kind of conversation it is involved in.  Teams support three kinds of conversations (called scopes in the [Manifest](~/references/resources/schema/manifest-schema)).
+
+* `teams` Also called channel conversations
+* `personal` Also called 1:1 conversations or chats
+* `group` Used for group and meeting conversations
+
+Microsoft Teams allows bots to send messages in either:
+
+* Teams - (channel) requires the user to @ mention the bot to invoke it in a channel.
+* Personal - (1:1 conversations or chats) These are personal conversations with a single user. They do not require an @ mention - the user can just type or access them in the apps personal experience from the app bar flyout.
+
+Not supported yet:
+
+* Groups - Bots in group chats, including meetings are currently not supported.
+
+In order for the bot to work in a particular scope it should be listed as supporting that scope in the manifest. Scopes are defined and discussed further in the [Manifest Reference](~/references/resources/schema/manifest-schema).
 
 With Microsoft Teams apps, you can make the bot the star of your experience, or just a helper. Bots are distributed as part of your broader app package, which can include other capabilities such as tabs or messaging extensions.
 

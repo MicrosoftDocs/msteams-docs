@@ -18,9 +18,9 @@ Depending on the experience you want to create, the bot might need to work in bo
 
 ## Best practice: Welcome messages in 1:1 conversations
 
-For bots that are added directly by a user, and not already part of any of the user's teams, it is a best practice to send a welcome message to the General channel to introduce the bot to all users of the team and tell a bit about its functionality. 
+For bots that are added directly by a user, and not already part of any of the user's teams, it is a best practice to send a welcome message to introduce itself and tell the user a bit about its functionality.
 
-To do this, ensure that your bot responds to the `conversationUpdate` message, with the `teamsAddMembers` eventType in the `channelData` object.
+To do this, [follow the instructions here](~/concepts/bots/bots-notifications#bot-added-for-personal-11-context-only).
 
 Your bot should proactively send a welcome message to a 1:1 chat the first time (and only the first time) a user initiates a 1:1 chat with your bot. (This recommendation does not apply to first-time contacts in a channel.)
 
