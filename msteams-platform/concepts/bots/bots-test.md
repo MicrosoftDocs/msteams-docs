@@ -2,7 +2,7 @@
 title: Test your bot
 description: Describes how to test bots in Microsoft Teams
 keywords: teams bots testing
-ms.date: 03/19/2018
+ms.date: 03/26/2018
 ---
 # Test your Microsoft Teams bot
 
@@ -62,7 +62,12 @@ Note that users can choose to block your bot from sending 1:1 messages. They may
 
 ## Resetting a bot in 1:1 chat
 
-There are times when you will need to repeatedly reset and test your bot's startup behavior. In order to do this easily you can reset your bot to it's initial conditions. This is done in 1:1 with the bot using the command "/resetbotchat" typed in the compose box.
+When you first chat with a bot, your bot receives a `conversationUpdate` message with a `membersAdded` object in the payload. It can be difficult to test the code that responds to that event if a conversation with the bot already exists, so Teams supports a way to "reset" the bot conversation to re-trigger this event.
+
+Simply type the special command `/resetbotchat` to your bot; this will trigger the same event that occurs when you first started to chat with your bot. You can only use the `/resetbotchat` command for sideloaded bots, and it only works in 1:1 chat. 
+
+> [!NOTE]
+> Eventually, Teams will support the Bot Framework `installationUpdate` event, which is a more elegant approach than using `conversationUpdate`/`membersAdded`.
 
 ## Removing a bot from a team
 
