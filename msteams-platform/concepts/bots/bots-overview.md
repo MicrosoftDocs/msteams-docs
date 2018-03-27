@@ -19,7 +19,6 @@ A bot appears just like any other team member you interact with, in a channel or
 
 - It has a hexagonal avatar icon
 - It is always online
-- It does not have a mood message
 
 Bots in Teams can appear in one or both of the following ways:
 
@@ -30,12 +29,11 @@ With Microsoft Teams apps, you can make the bot the star of your experience, or 
 
 ## Bot APIs
 
-Microsoft Teams supports much of the [Microsoft Bot Framework](https://dev.botframework.com/). (If you already have a bot that's based on the Bot Framework, you can easily adapt it to work in Microsoft Teams.) We recommend you use either C# or TypeScript to take advantage of our SDKs. These packages extend the basic Bot Builder classes and methods:
-
+Microsoft Teams supports most of the [Microsoft Bot Framework](https://dev.botframework.com/). (If you already have a bot that's based on the Bot Framework, you can easily adapt it to work in Microsoft Teams.) We recommend you use either C# or TypeScript to take advantage of our SDKs. These packages extend the basic Bot Builder classes and methods:
+<!--  -->
 - Using specialized card types like the Office 365 Connector card
 - Consuming and setting Teams-specific channel data on activities
 - Processing messaging extension requests
-- Handling rate limiting
 
 The SDK extensions install dependencies, including the Bot Builder SDK.
 
@@ -48,7 +46,7 @@ The SDK extensions install dependencies, including the Bot Builder SDK.
 
 ## Teams App Studio
 
-*Teams App Studio* is a new tool that can help configure your manifest and your app. It also contains a React control library and configurable samples for cards.  See [Getting started with Teams App Studio](~/get-started/get-started-app-studio).
+*Teams App Studio* is a new tool that can help configure your manifest and your app. It also contains a React control library and an interactive card builder.  See [Getting started with Teams App Studio](~/get-started/get-started-app-studio).
 
 ## Outgoing webhooks
 

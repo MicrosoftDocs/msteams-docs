@@ -95,6 +95,6 @@ Failures are explained, with references to the specific policy violations. All f
 
 ## Add a download button to your product site
 
-If your app is in the Microsoft Teams store, you can generate a button for your website that launches the Teams experience and shows a selection dialog for the user to add the app.
+If your app is in the Microsoft Teams store, you can generate a link for your website that launches Teams and shows a consent and installation dialog for users to add the app.
 The format is:  `https://teams.microsoft.com/l/app/<appId>` where appID is the GUID they declare in the submitted manifest.
-Example: `https://teams.microsoft.com/l/app/56E1A16C-DDB4-46C0-B4B1-FC634ED86DDD`
+Example: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd` is the link to install Trello.
