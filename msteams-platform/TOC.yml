@@ -57,6 +57,8 @@
       href: ./concepts/bots/bots-context
     - name: Bot menus
       href: ./concepts/bots/bots-menus
+    - name: Bots with tabs
+      href: ./concepts/bots/bots-with-tabs
     - name: Test a bot
       href: ./concepts/bots/bots-test
   - name: Authentication
