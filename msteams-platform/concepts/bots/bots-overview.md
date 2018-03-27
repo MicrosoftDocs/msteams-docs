@@ -2,7 +2,7 @@
 title: Add bots to Microsoft Teams apps
 description: Describes how to get started developing bots in Microsoft Teams
 keywords: teams bots development
-ms.date: 01/02/2018
+ms.date: 03/26/2018
 ---
 
 # Add bots to Microsoft Teams apps
@@ -16,7 +16,7 @@ Build and connect intelligent bots to interact with Microsoft Teams users natura
 
 ## What you need to know: Bots
 
-A bot appears just like any other team member you interact with in a conversation except that it has a hexagonal avatar icon . It is always online and does not have a mood message.
+A bot appears just like any other team member you interact with in a conversation except that it has a hexagonal avatar icon and is always online.
 
 A bot behaves slightly depending on what kind of conversation it is involved in.  Teams support three kinds of conversations (called scopes in the [Manifest](~/references/resources/schema/manifest-schema)).
 
@@ -31,7 +31,7 @@ Microsoft Teams allows bots to send messages in either:
 
 Not supported yet:
 
-* Groups - Bots in group chats, including meetings are currently not supported.
+* Groups - Bots in group conversations, including meetings, are currently not supported. Group conversations are also called group chats.
 
 In order for the bot to work in a particular scope it should be listed as supporting that scope in the manifest. Scopes are defined and discussed further in the [Manifest Reference](~/references/resources/schema/manifest-schema).
 

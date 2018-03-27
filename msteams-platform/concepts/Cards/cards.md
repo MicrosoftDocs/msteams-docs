@@ -18,13 +18,13 @@ Teams uses cards in three different places:
 
 Cards were first defined as part of Outlook and Office 365, and are used as part of Office 365 Connectors. Like many Office 365 applications, Teams supports Connectors. You can learn more about Connectors in [Office 365 Connectors for Microsoft Teams](~/concepts/connectors), and find the specification for cards in connectors in [Actionable message card reference](https://docs.microsoft.com/en-us/outlook/actionable-messages/card-reference).
 
-Any card used by any O365 Connector will work in Teams as part of a Connector in Teams. Support is detailed in [Using Office 365 Connector cards in Microsoft Teams](`/concepts/connectors) in the *Using Office 365 Connector cards in Microsoft Teams* section.
+Any card used by any Office 365 Connector will work in Teams as part of a Connector in Teams. Support is detailed in [Using Office 365 Connector cards in Microsoft Teams](`/concepts/connectors) in the *Using Office 365 Connector cards in Microsoft Teams* section.
 
 ## Cards in Bots
 
 The Microsoft Bot Framework extends the cards specification by adding a set of predefined cards that bots can use as part of bot messages. Teams supports bots using the Bot Framework but it supports a slightly different set of these cards. General information on cards in Bot Framework can be found in [Add rich card attachments to messages](https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-send-rich-cards).
 
-The cards that are supported by bots in Teams are detailed in [Teams Card Reference](~/concepts/cards/cards-reference). These cards can not be used in connectors.  Connector cards can be used in bots however using the *O365 Connector Card* which encapsulates any card used in Office 365 Connectors.
+The cards that are supported by bots in Teams are detailed in [Teams Card Reference](~/concepts/cards/cards-reference). These cards can not be used in connectors.  Connector cards can be used in bots, however, using the *O365 Connector Card*: any card you can create using the Office 365 Connector Card format can also be used with Microsoft Teams bots.
 
 ## Cards in Messaging Extensions
 

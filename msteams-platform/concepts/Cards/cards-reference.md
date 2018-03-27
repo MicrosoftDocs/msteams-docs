@@ -2,11 +2,11 @@
 title: Cards
 description: Describes all the cards available to bots in Teams
 keywords: bots cards reference
-ms.date: 03/06/18
+ms.date: 03/22/18
 ---
 # Cards Reference
 
-The cards listed in this section are supported in Bots for Teams. These cards are based on cards defined by the bot framework, but Teams does not support all Bot Framework cards and has added some of its own. Differences are called out in the references below.
+The cards listed in this section are supported in bots for Teams. These cards are based on cards defined by the Bot Framework, but Teams does not support all Bot Framework cards and has added some of its own. Differences are called out in the references below.
 
 ## Card examples
 
@@ -38,10 +38,6 @@ Images must be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated
 
 Buttons are shown stacked at the bottom of the card. Button text is always on a single line and will be truncated if the text exceeds the button width. Any additional buttons beyond the maximum number supported by the card will not be shown.
 
-### Card actions
-
-TBD: can all of these statements be true at the same time?
-
 See the topic [Card Actions](`/concepts/cards/cards-actions) for more information.
 
 ### Card formatting
@@ -50,66 +46,9 @@ See the topic [Card Actions](`/concepts/cards/cards-actions) for more informatio
 * Cards do not support Markdown or table formatting
 
 > [!NOTE]
-> Currently, Connector cards support no formatting across all platforms.
+> Currently, Connector cards support no formatting across all platforms. TBD: Define what that really means.
 
-[!include[Formatting text content in cards](~/includes/bots/message-format-cards.html)]
-
-## Adaptive card
-
-Not supported in Teams.
-
-A customizable card that can contain any combination of text, speech, images, buttons, and input fields.
-
-### Support
-
-| Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
-| --- | --- | --- | --- |
-| ✖ | ✖ | ✖ | ✔ |
-|
-
-### For more information
-
-Bot Framework reference:
-
-* [Adaptive Card (Bot Framework)](https://docs.microsoft.com/en-us/adaptive-cards/get-started/bots)
-
-## Animation card
-
-Not supported in Teams.
-
-A card that can play animated GIFs or short videos.
-
-### Support
-
-| Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
-| --- | --- | --- | --- |
-| ✖ | ✖ | ✖ | ✔ |
-|
-
-### For more information
-
-Bot Framework reference:
-
-* [Animation card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.animationcard.html)
-
-## Audio card
-
-Not supported in Teams.
-
-A card that can play an audio file.
-
-### Support
-
-| Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
-| --- | --- | --- | --- |
-| ✖ | ✖ | ✖ | ✔ |
-|
-
-### For more information
-
-Bot Framework reference:
-
-* [Audio card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.audiocard.html)
+[!include[Formatting text content in cards](~/includes/bots/message-format-cards.html)]a
 
 ## Hero card
 
@@ -126,10 +65,6 @@ A card that typically contains a single large image, one or more buttons, and te
 
 ![Example of a hero card](~/assets/images/cards/hero.png)
 
-### Notes
-
-TBD: Remove this section if there are no notes
-
 ### Properties
 
 | Property | Type  | Description |
@@ -142,7 +77,7 @@ TBD: Remove this section if there are no notes
 | tap | Action object | This action will be activated when the user taps on the card itself |
 |
 
-### Schema
+### Example
 
 ```JSON
 {
@@ -189,96 +124,97 @@ TBD: Remove this section if there are no notes
 
 Bot Framework reference:
 
-* [hero card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.herocard.html)
-* [hero card C#](https://docs.botframework.com/en-us/csharp/builder/sdkreference/attachments.html#herocard) 
+* [Hero card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.herocard.html)
+* [Hero card C#](https://docs.botframework.com/en-us/csharp/builder/sdkreference/attachments.html#herocard) 
 
-## List card
+## Thumbnail card
 
-The list card has been added by Teams to provide functions beyond what the list collection can provide. The list card provides a scrolling list of items.
+A card that typically contains a single thumbnail image, one or more buttons, and text.
 
 ### Support
 
 | Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✖ | ✖ |✖ |
+| ✔ | ✔ | ✖ | ✔ |
 |
 
+<<<<<<< HEAD
+=======
 ### Example
 
-TBD: Need picture of card here
+![Example of a thumbnail card](~/assets/images/cards/thumbnail.png)
 
-### Notes
-
-TBD: Delete this section if there are no notes.
-
+>>>>>>> 9ba3b91221646339192fabae8c53b30f7c203b63
 ### Properties
 
 | Property | Type  | Description |
 | --- | --- | --- |
 | title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
-| items | Array of list items  ||
+| subtitle | Rich text | Subtitle of the card. Maximum 2 lines; formatting not currently supported |
+| text | Rich text | Text appears just below the subtitle; see [Message format](~/concepts/bots/bots-conversations#message-format) for formatting options |
+| images | Array of images | Image displayed at top of card. Aspect ratio 1:1 (square) |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
+<<<<<<< HEAD
 |
 
-TBD: do we need a property table for list items?
-
 ### Schema
+=======
+| tap | Action object | This action will be activated when the user taps on the card itself |
+
+### Example
+>>>>>>> 9ba3b91221646339192fabae8c53b30f7c203b63
 
 ```JSON
 {
-  "contentType": "application/vnd.microsoft.teams.card.list",
+  "contentType": "application/vnd.microsoft.card.thumbnail",
   "content": {
-    "title": "Card title",
-    "items": [
+    "title": "Bender",
+    "subtitle": "tale of a robot who dared to love",
+    "text": "Bender Bending RodrÃ­guez is a main character in the animated television series Futurama. He was created by series creators Matt Groening and David X. Cohen, and is voiced by John DiMaggio",
+    "images": [
       {
-        "type": "file",
-        "id": "https://microsoft.sharepoint.com/teams/skypespacesteamnew/Shared%20Documents/Design/FinancialReport.xslx",
-        "title": "FinancialReport",
-        "subtitle": "teams > skypespacesteamnew > design",
-        "tap": {
-          "type": "imback",
-          "value": "editOnline https://microsoft.sharepoint.com/teams/skypespacesteamnew/Shared%20Documents/Design/FinancialReport.xlsx"
-        }
-      },
-      {
-        "type": "resultItem",
-        "icon": "https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Trello-128.png",
-        "title": "Trello title",
-        "subtitle": "a trello subtitle",
-        "tap": {
-          "type": "openurl",
-          "value": "http://trello.com"
-        } 
-      },
-      {
-        "type": "section",
-        "title": "Manager"
-      },
-      {
-        "type": "person",
-        "id": "gsheldon@microsoft.com",
-        "title": "Graham Sheldon",
-        "subtitle": "Principal PM Manager - Skypespaces PM",
-        "tap": {
-          "type": "imback",
-          "value": "whois gsheldon@microsoft.com"
-        }
+        "url": "https://upload.wikimedia.org/wikipedia/en/a/a6/Bender_Rodriguez.png",
+        "alt": "Bender_Rodriguez"
       }
     ],
     "buttons": [
       {
-        "type": "imback",
-        "title": "Select",
-        "value": "whois"
+        "type": "imBack",
+        "title": "Thumbs Up",
+        "image": "http://moopz.com/assets_c/2012/06/emoji-thumbs-up-150-thumb-autox125-140616.jpg",
+        "value": "I like it"
+      },
+      {
+        "type": "imBack",
+        "title": "Thumbs Down",
+        "image": "http://yourfaceisstupid.com/wp-content/uploads/2014/08/thumbs-down.png",
+        "value": "I don't like it"
+      },
+      {
+        "type": "openUrl",
+        "title": "I feel lucky",
+        "image": "http://thumb9.shutterstock.com/photos/thumb_large/683806/148441982.jpg",
+        "value": "https://www.bing.com/images/search?q=bender&qpvt=bender&qpvt=bender&qpvt=bender&FORM=IGRE"
       }
-    ]
+    ],
+    "tap": {
+      "type": "imBack",
+      "value": "Tapped it!"
+    }
   }
 }
 ```
 
+### For more information
+
+Bot Framework reference:
+
+* [Thumbnail card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.thumbnailcard.html)
+* [Thumbnail card C#](https://docs.botframework.com/en-us/csharp/builder/sdkreference/attachments.html#thumbnailcard)
+
 ## Office 365 connector card
 
-Supported in teams, not in bot framework.
+Supported in teams, not in Bot Framework.
 
 The Office 365 Connector card provides a flexible layout with multiple sections, fields, images, and actions. This card encapsulates a connector card so that it can be used by bots. See the notes section for differences between connector cards and the O365 card.
 
@@ -288,17 +224,14 @@ The Office 365 Connector card provides a flexible layout with multiple sections,
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✖ |
 |
-### Example
-
-TBD: Need picture of card here
 
 ### Notes
 
-The O365 card is the only card that supports proactive messaging.
+The Office 365 Connector card is the only card that supports proactive messaging. TBD: Verify - don't think that's true - billbl
 
-Office 365 Connector cards function properly on Microsoft Teams including [ActionCard actions](https://docs.microsoft.com/en-us/outlook/actionable-messages/card-reference#actioncard-action)).
+Office 365 Connector cards function properly on Microsoft Teams including [ActionCard actions](https://docs.microsoft.com/en-us/outlook/actionable-messages/card-reference#actioncard-action).
 
-One important difference between using Connector cards from a Connector and using Connector cards in your bot is the handling of card actions
+One important difference between using Connector cards from a Connector and using Connector cards in your bot is the handling of card actions.
 
 * For a Connector, the endpoint receives the card payload via HTTP POST.
 * For a bot, the `HttpPOST` action triggers an `invoke` action that sends only the action ID and body to the bot.
@@ -327,6 +260,9 @@ For all other details about Connector card properties, see the **[Actionable mes
 * `hideOriginalBody`
 * `startGroup`
 
+<<<<<<< HEAD
+### Schema
+=======
 TBD - fill out the following with correct values
 
 ### Properties
@@ -340,9 +276,11 @@ TBD - fill out the following with correct values
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
 | tap | Action object | This action will be activated when the user taps on the card itself |
 
-### Schema
+### Example
 
-TBD: this schema came from the messagecardplayground, Connectors reference example per Bill Bliss.  Is this correct?
+TBD: this schema came from the messagecardplayground, Connectors reference example per Bill Bliss.  Is this correct? Billbl: try it and see. Should work.
+>>>>>>> 9ba3b91221646339192fabae8c53b30f7c203b63
+
 ```JSON
 {
     "@type": "MessageCard",
@@ -405,6 +343,96 @@ TBD: this schema came from the messagecardplayground, Connectors reference examp
 
 If you are using .NET and C# or Node.js, you can use the `O365ConnectorCard` class in the [Microsoft Teams extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) to send Connector cards from your bot.
 
+<<<<<<< HEAD
+## Receipt card
+=======
+
+## List card
+
+The list card has been added by Teams to provide functions beyond what the list collection can provide. The list card provides a scrolling list of items.
+
+### Support
+
+| Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
+| --- | --- | --- | --- |
+| ✔ | ✖ | ✖ |✖ |
+|
+
+### Example
+
+TBD: Need picture of card here
+
+### Notes
+
+TBD: Delete this section if there are no notes.
+
+### Properties
+
+| Property | Type  | Description |
+| --- | --- | --- |
+| title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
+| items | Array of list items  ||
+| buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
+|
+
+TBD: do we need a property table for list items?
+
+### Example
+
+TBD: replace names and files with fake data, test tenant perhaps
+
+```JSON
+{
+  "contentType": "application/vnd.microsoft.teams.card.list",
+  "content": {
+    "title": "Card title",
+    "items": [
+      {
+        "type": "file",
+        "id": "https://microsoft.sharepoint.com/teams/skypespacesteamnew/Shared%20Documents/Design/FinancialReport.xslx",
+        "title": "FinancialReport",
+        "subtitle": "teams > skypespacesteamnew > design",
+        "tap": {
+          "type": "imback",
+          "value": "editOnline https://microsoft.sharepoint.com/teams/skypespacesteamnew/Shared%20Documents/Design/FinancialReport.xlsx"
+        }
+      },
+      {
+        "type": "resultItem",
+        "icon": "https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Trello-128.png",
+        "title": "Trello title",
+        "subtitle": "A Trello subtitle",
+        "tap": {
+          "type": "openurl",
+          "value": "http://trello.com"
+        } 
+      },
+      {
+        "type": "section",
+        "title": "Manager"
+      },
+      {
+        "type": "person",
+        "id": "gsheldon@microsoft.com",
+        "title": "Graham Sheldon",
+        "subtitle": "Principal PM Manager - Skypespaces PM",
+        "tap": {
+          "type": "imback",
+          "value": "whois gsheldon@microsoft.com"
+        }
+      }
+    ],
+    "buttons": [
+      {
+        "type": "imback",
+        "title": "Select",
+        "value": "whois"
+      }
+    ]
+  }
+}
+```
+
 ## Profile card
 
 The profile card has been added by Teams.
@@ -439,94 +467,70 @@ TBD: Remove this section if there are no notes
 | definitions |||
 |
 
-### Schema
 
-```JSON
-{
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Microsoft CaaP (Conversation as a Platform) Profile Card Schema",
-  "description": "Card schema for the Profile card.",
-  "type": "object",
-  "required": [ "contentType", "content" ],
-  "additionalProperties": false,
-  "properties": {
-    "contentType": {
-      "enum": [ "application/vnd.microsoft.teams.card.profile" ],
-      "description": "MIME type for the Profile card."
-    },
-    "content": {
-      "type": "object",
-      "properties": {
-        "upn": {
-          "type": "string",
-          "description": "Universal Profile Name (UPN) for the individual in the Profile card."
-        },
-        "displayName": {
-          "type": "string",
-          "description": "Display name for the individual in the Profile card."
-        },
-        "jobTitle": {
-          "type": "string",
-          "description": "Job title for the individual in the Profile card."
-        },
-        "department": {
-          "type": "string",
-          "description": "Department for the individual in the Profile card."
-        },
-        "officeLocation": {
-          "type": "string",
-          "description": "Office location for the individual in the Profile card."
-        },
-        "phone": {
-          "type": "string",
-          "description": "Preferred telephone number (could be office or mobile) for the individual in the Profile card."
-        },
-        "text": {
-          "type": "string",
-          "description": "Text for the Profile card."
-        },
-        "images": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/image"
-          }
-        },
-        "buttons": {
-          "type": "array",
-          "items": {
-            "$ref": "action-schema.json/action"
-          },
-          "minItems": 1
-        },
-        "tap": {
-          "$ref": "action-schema.json/action"
-        }
-      },
-      "required": [ "upn", "buttons" ]
-    }
-  },
+## Adaptive card
 
-  "definitions": {
-    "image": {
-      "properties": {
-        "url": {
-          "type": "string"
-        },
-        "type": "string",
-        "description": "Alt text for the image."
-        }
-      },
-      "required": [
-        "url"
-      ]
-    }
-  }
-}
-```
+Not yet supported in Microsoft Teams.
+
+A customizable card that can contain any combination of text, speech, images, buttons, and input fields.
+
+### Support
+
+| Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
+| --- | --- | --- | --- |
+| ✖ | ✖ | ✖ | ✔ |
+|
+
+### For more information
+
+[Adaptive Cards Overview](https://docs.microsoft.com/en-us/adaptive-cards/)
+
+## Animation card
+>>>>>>> 9ba3b91221646339192fabae8c53b30f7c203b63
+
+Not supported in Teams.
+
+A card that can play animated GIFs or short videos.
+
+### Support
+
+| Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
+| --- | --- | --- | --- |
+| ✖ | ✖ | ✖ | ✔ |
+|
+
+### For more information
+
+Bot Framework reference:
+
+* [Animation card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.animationcard.html)
+
+## Audio card
+
+Not supported in Teams.
+
+A card that can play an audio file.
+
+### Support
+
+| Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
+| --- | --- | --- | --- |
+| ✖ | ✖ | ✖ | ✔ |
+|
+
+### For more information
+
+Bot Framework reference:
+
+<<<<<<< HEAD
+*[Bot Framework SignIn card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.signincard.html)
+=======
+* [Audio card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.audiocard.html)
+>>>>>>> 9ba3b91221646339192fabae8c53b30f7c203b63
 
 ## Receipt card
 
-Not supported in Teams.
+Not supported in Teams. TBD: billbl: I think it was implemented. Check with Robyn Liao.
 
 A card that enables a bot to provide a receipt to the user. It typically contains the list of items to include on the receipt, tax and total information, and other text.
 
@@ -543,9 +547,10 @@ Bot Framework reference:
 
 * [Recipt card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.receiptcard.html)
 
-## SignIn card
+## SignIn card 
+TBD: Is it Signin or SignIn? I think it's the former - billbl
 
-Not supported in Teams.
+Not supported in Teams. TBD: it is, as per Robyn. Can you move it up?
 
 A card that enables a bot to request that a user sign-in. It typically contains text and one button that the user can click to initiate the sign-in process.
 
@@ -564,82 +569,6 @@ Bot Framework reference:
 
 *[Bot Framework SignIn card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.signincard.html)
 *[Bot Framework SigninCard C#]()
-
-## Thumbnail card
-
-A card that typically contains a single thumbnail image, one or more buttons, and text.
-
-### Support
-
-| Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
-| --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
-|
-
-### Example
-
-![Example of a thumbnail card](~/assets/images/cards/thumbnail.png)
-
-### Properties
-
-| Property | Type  | Description |
-| --- | --- | --- |
-| title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
-| subtitle | Rich text | Subtitle of the card. Maximum 2 lines; formatting not currently supported |
-| text | Rich text | Text appears just below the subtitle; see [Message format](~/concepts/bots/bots-conversations#message-format) for formatting options |
-| images | Array of images | Image displayed at top of card. Aspect ratio 1:1 (square) |
-| buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
-| tap | Action object | This action will be activated when the user taps on the card itself |
-
-### Schema
-
-```JSON
-{
-  "contentType": "application/vnd.microsoft.card.thumbnail",
-  "content": {
-    "title": "Bender",
-    "subtitle": "tale of a robot who dared to love",
-    "text": "Bender Bending RodrÃ­guez is a main character in the animated television series Futurama. He was created by series creators Matt Groening and David X. Cohen, and is voiced by John DiMaggio",
-    "images": [
-      {
-        "url": "https://upload.wikimedia.org/wikipedia/en/a/a6/Bender_Rodriguez.png",
-        "alt": "Bender_Rodriguez"
-      }
-    ],
-    "buttons": [
-      {
-        "type": "imBack",
-        "title": "Thumbs Up",
-        "image": "http://moopz.com/assets_c/2012/06/emoji-thumbs-up-150-thumb-autox125-140616.jpg",
-        "value": "I like it"
-      },
-      {
-        "type": "imBack",
-        "title": "Thumbs Down",
-        "image": "http://yourfaceisstupid.com/wp-content/uploads/2014/08/thumbs-down.png",
-        "value": "I don't like it"
-      },
-      {
-        "type": "openUrl",
-        "title": "I feel lucky",
-        "image": "http://thumb9.shutterstock.com/photos/thumb_large/683806/148441982.jpg",
-        "value": "https://www.bing.com/images/search?q=bender&qpvt=bender&qpvt=bender&qpvt=bender&FORM=IGRE"
-      }
-    ],
-    "tap": {
-      "type": "imBack",
-      "value": "Tapped it!"
-    }
-  }
-}
-```
-
-### For more information
-
-Bot Framework reference:
-
-* [Thumbnail card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.thumbnailcard.html)
-* [thumbnail card C#](https://docs.botframework.com/en-us/csharp/builder/sdkreference/attachments.html#thumbnailcard)
 
 ## Video card
 
