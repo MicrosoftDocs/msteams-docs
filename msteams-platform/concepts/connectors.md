@@ -32,7 +32,7 @@ You have two options for posting messages via Connectors:
 
 Both options involve posting a simple JSON payload to an HTTP webhook to create the Connector message within Microsoft Teams. (For more details, see [Get started with actionable messages in Office 365](https://docs.microsoft.com/en-us/outlook/actionable-messages/get-started).)
 
-You can also use the markup to include cards containing rich inputs, such as text entry, multi-select, or picking a date and time. The code that generates the card and posts to the incoming webhook API can be running on any hosted service.  These cards are defined as part of actionable messages, and are different from the [cards](`/concepts/cards/cards) used in Teams bots and Messaging extensions.
+You can also use this JSON to create cards containing rich inputs, such as text entry, multi-select, or picking a date and time. The code that generates the card and posts to the incoming webhook API can be running on any hosted service.  These cards are defined as part of actionable messages, and are also supported in [cards](~/concepts/cards/cards) used in Teams bots and Messaging extensions.
 
 ### Example Connector message
 
@@ -119,7 +119,7 @@ This message produces the following card in the channel.
 
 ## Creating actionable messages
 
-The example in the preceding section includes three visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions, each containing an input type: a text field, a date picker, or a multi-choice list. Each `ActionCard` action has an associated action. For example `HttpPOST`.
+The example in the preceding section includes three visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions, each containing an input type: a text field, a date picker, or a multi-choice list. Each `ActionCard` action has an associated action, for example `HttpPOST`.
 
 Connector cards support three types of actions:
 

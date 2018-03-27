@@ -45,9 +45,6 @@ See the topic [Card Actions](`/concepts/cards/cards-actions) for more informatio
 * Cards support formatting in the text property only, not in the title or subtitle properties
 * Cards do not support Markdown or table formatting
 
-> [!NOTE]
-> Currently, Connector cards support no formatting across all platforms. TBD: Define what that really means.
-
 [!include[Formatting text content in cards](~/includes/bots/message-format-cards.html)]a
 
 ## Hero card
@@ -138,13 +135,10 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 | ✔ | ✔ | ✖ | ✔ |
 |
 
-<<<<<<< HEAD
-=======
 ### Example
 
 ![Example of a thumbnail card](~/assets/images/cards/thumbnail.png)
 
->>>>>>> 9ba3b91221646339192fabae8c53b30f7c203b63
 ### Properties
 
 | Property | Type  | Description |
@@ -154,15 +148,13 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 | text | Rich text | Text appears just below the subtitle; see [Message format](~/concepts/bots/bots-conversations#message-format) for formatting options |
 | images | Array of images | Image displayed at top of card. Aspect ratio 1:1 (square) |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
-<<<<<<< HEAD
 |
 
 ### Schema
-=======
+
 | tap | Action object | This action will be activated when the user taps on the card itself |
 
 ### Example
->>>>>>> 9ba3b91221646339192fabae8c53b30f7c203b63
 
 ```JSON
 {
@@ -227,8 +219,6 @@ The Office 365 Connector card provides a flexible layout with multiple sections,
 
 ### Notes
 
-The Office 365 Connector card is the only card that supports proactive messaging. TBD: Verify - don't think that's true - billbl
-
 Office 365 Connector cards function properly on Microsoft Teams including [ActionCard actions](https://docs.microsoft.com/en-us/outlook/actionable-messages/card-reference#actioncard-action).
 
 One important difference between using Connector cards from a Connector and using Connector cards in your bot is the handling of card actions.
@@ -260,11 +250,6 @@ For all other details about Connector card properties, see the **[Actionable mes
 * `hideOriginalBody`
 * `startGroup`
 
-<<<<<<< HEAD
-### Schema
-=======
-TBD - fill out the following with correct values
-
 ### Properties
 
 | Property | Type  | Description |
@@ -278,18 +263,15 @@ TBD - fill out the following with correct values
 
 ### Example
 
-TBD: this schema came from the messagecardplayground, Connectors reference example per Bill Bliss.  Is this correct? Billbl: try it and see. Should work.
->>>>>>> 9ba3b91221646339192fabae8c53b30f7c203b63
-
 ```JSON
 {
     "@type": "MessageCard",
     "@context": "http://schema.org/extensions",
-    "summary": "Miguel Garcia commented on Trello",
+    "summary": "John Doe commented on Trello",
     "title": "Project Tango",
     "sections": [
         {
-            "activityTitle": "Miguel Garcia commented",
+            "activityTitle": "John Doe commented",
             "activitySubtitle": "On Project Tango",
             "activityText": "\"Here are the designs\"",
             "activityImage": "http://connectorsdemo.azurewebsites.net/images/MSC12_Oscar_002.jpg"
@@ -343,9 +325,6 @@ TBD: this schema came from the messagecardplayground, Connectors reference examp
 
 If you are using .NET and C# or Node.js, you can use the `O365ConnectorCard` class in the [Microsoft Teams extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) to send Connector cards from your bot.
 
-<<<<<<< HEAD
-=======
-
 ## List card
 
 The list card has been added by Teams to provide functions beyond what the list collection can provide. The list card provides a scrolling list of items.
@@ -357,14 +336,6 @@ The list card has been added by Teams to provide functions beyond what the list 
 | ✔ | ✖ | ✖ |✖ |
 |
 
-### Example
-
-TBD: Need picture of card here
-
-### Notes
-
-TBD: Delete this section if there are no notes.
-
 ### Properties
 
 | Property | Type  | Description |
@@ -374,11 +345,7 @@ TBD: Delete this section if there are no notes.
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
 |
 
-TBD: do we need a property table for list items?
-
 ### Example
-
-TBD: replace names and files with fake data, test tenant perhaps
 
 ```JSON
 {
@@ -388,12 +355,12 @@ TBD: replace names and files with fake data, test tenant perhaps
     "items": [
       {
         "type": "file",
-        "id": "https://microsoft.sharepoint.com/teams/skypespacesteamnew/Shared%20Documents/Design/FinancialReport.xslx",
-        "title": "FinancialReport",
-        "subtitle": "teams > skypespacesteamnew > design",
+        "id": "https://contoso.sharepoint.com/teams/new/Shared%20Documents/Report.xslx",
+        "title": "Report",
+        "subtitle": "teams > new > design",
         "tap": {
           "type": "imback",
-          "value": "editOnline https://microsoft.sharepoint.com/teams/skypespacesteamnew/Shared%20Documents/Design/FinancialReport.xlsx"
+          "value": "editOnline https://contoso.sharepoint.com/teams/new/Shared%20Documents/Report.xlsx"
         }
       },
       {
@@ -412,12 +379,12 @@ TBD: replace names and files with fake data, test tenant perhaps
       },
       {
         "type": "person",
-        "id": "gsheldon@microsoft.com",
-        "title": "Graham Sheldon",
-        "subtitle": "Principal PM Manager - Skypespaces PM",
+        "id": "JohnDoe@contoso.com",
+        "title": "John Doe",
+        "subtitle": "Manager",
         "tap": {
           "type": "imback",
-          "value": "whois gsheldon@microsoft.com"
+          "value": "whois JohnDoe@contoso.com"
         }
       }
     ],
@@ -436,22 +403,12 @@ TBD: replace names and files with fake data, test tenant perhaps
 
 The profile card has been added by Teams.
 
-TBD: Need description
-
 ### Support
 
 | Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✖ |
 |
-
-### Example
-
-TBD: Need picture of card here
-
-### Notes
-
-TBD: Remove this section if there are no notes
 
 ### Properties
 
@@ -466,10 +423,9 @@ TBD: Remove this section if there are no notes
 | definitions |||
 |
 
-
 ## Adaptive card
 
-Not yet supported in Microsoft Teams.
+Not supported in Microsoft Teams.
 
 A customizable card that can contain any combination of text, speech, images, buttons, and input fields.
 
@@ -485,7 +441,6 @@ A customizable card that can contain any combination of text, speech, images, bu
 [Adaptive Cards Overview](https://docs.microsoft.com/en-us/adaptive-cards/)
 
 ## Animation card
->>>>>>> 9ba3b91221646339192fabae8c53b30f7c203b63
 
 Not supported in Teams.
 
@@ -521,11 +476,7 @@ A card that can play an audio file.
 
 Bot Framework reference:
 
-<<<<<<< HEAD
-*[Bot Framework SignIn card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.signincard.html)
-=======
 * [Audio card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.audiocard.html)
->>>>>>> 9ba3b91221646339192fabae8c53b30f7c203b63
 
 ## Receipt card
 
@@ -546,14 +497,13 @@ Bot Framework reference:
 
 * [Recipt card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.receiptcard.html)
 
-## SignIn card 
-TBD: Is it Signin or SignIn? I think it's the former - billbl
+## Signin card
 
-Not supported in Teams. TBD: it is, as per Robyn. Can you move it up?
+Supported in teams
 
 A card that enables a bot to request that a user sign-in. It typically contains text and one button that the user can click to initiate the sign-in process.
 
-Teams users should use the *signin action* instead. See the topic [Microsoft Teams authentication flow for bots](`/concepts/bots/auth-flow-bot) for more details on authentication.
+Teams users can also use the *signin action* from any card. See the topic [Microsoft Teams authentication flow for bots](`/concepts/bots/auth-flow-bot) for more details.
 
 ### Support
 
