@@ -19,7 +19,7 @@ Bots added to a team become another team member, who can be @mentioned as part o
 
 A bot in a channel should provide information relevant and appropriate for all members of the team.  While your bot can certainly provide any information relevant to the experience, keep in mind conversations with it are visible to all members of the channel.  Therefore, a great bot in a channel should add value to all users on the channel, and certainly not inadvertently share information that would otherwise be more relevant in a personal context.
 
-Note that depending on your experience, the bot might be entirely relevant in both scopes (1:1 and channel) as is, and in fact, no significant extra work is required to allow your bot to work in both. In Microsoft Teams, there is no expectation that your bot function in all contexts, but you should ensure your bot makes sense, and provides user value, in whichever scope you choose to support. For more information on scopes, see [Apps in Microsoft Teams](~/concepts/apps/apps-overview).
+Note that depending on your experience, the bot might be entirely relevant in both scopes (1:1 and channel) as is, and in fact, no significant extra work is required to allow your bot to work in both. In Microsoft Teams, there is no expectation that your bot function in all contexts, but you should ensure your bot makes sense, and provides user value, in whichever scope(s) you choose to support. For more information on scopes, see [Apps in Microsoft Teams](~/concepts/apps/apps-overview).
 
 Developing a bot that works in channels uses much of the same functionality from 1:1 conversation. Additional events and data in the payload provide Teams channel information. Those differences, as well as key differences in common functionality are described in the following sections.
 
@@ -48,7 +48,8 @@ You might also want to send a 1:1 message to each member of the team when the bo
 
 We recommend that your bot *not* send a welcome message in the following situations:
 
-* Your bot is added to a channel (as compared to being added to a team)
+* The team is large (obviously subjective, but for example larger than 100 members). Your bot may be seen as 'spammy' and the person who added it may get complaints unless you clearly communicate your bot's value proposition to everyone who sees the welcome message.
+* Your bot is first mentioned in a channel (versus being first added to a team)
 * A channel is renamed
 * A team member is added to a channel
 
@@ -108,7 +109,7 @@ Your bot can mention other users in messages posted into channels. To do this, y
 * Include `<at>@username</at>` in the message text
 * Include the `mention` object inside the entities collection
 
-The [Teams extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) provide functionality to easily m this.
+The [Teams extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) provide functionality to easily implement this.
 
 #### .NET example
 
@@ -146,14 +147,14 @@ var generalMessage = mentionedMsg.routeReplyToGeneralChannel();
 session.send(generalMessage);
 ```
 
-#### Schema example: Outgoing message with user mentioned
+#### Example: Outgoing message with user mentioned
 
 ```json
 {
     "type": "message", 
     "text": "Hey <at>Larry Jin</at> check out this message",
-    "timestamp": "2016-10-29T00:51:05.9908157Z",
-    "localTimestamp": "2016-10-28T17:51:05.9908157-07:00",
+    "timestamp": "2017-10-29T00:51:05.9908157Z",
+    "localTimestamp": "2017-10-28T17:51:05.9908157-07:00",
     "serviceUrl": "https://skype.botframework.com",
     "channelId": "msteams",
     "from": {
