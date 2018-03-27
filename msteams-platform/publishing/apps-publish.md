@@ -2,16 +2,14 @@
 title: Publish your app to AppSource
 description: Describes the process of publishing your app to AppSource (formerly Office Store)
 keywords: teams publish store office publishing AppSource
-ms.date: 01/31/2018
+ms.date: 03/15/2018
 ---
-
 # Publish your Microsoft Teams app to AppSource
 
 > [!IMPORTANT]
 > **Your Microsoft Teams app *must* use the [latest schema](~/resources/schema/manifest-schema) and follow [current packaging guidelines](~/concepts/apps/apps-package).**
 >
 > [!NOTE]
-
 > Teams provides an in-app gallery for users to find or discover [high-quality Teams apps](~/resources/design/overview). To have your solution available in this gallery, you must publish your solution through AppSource.
 
 AppSource (formerly known as Office Store) provides a convenient location for you to distribute your Microsoft Teams app, as well as other Office 365 extensibility types such as Office add-ins and SharePoint add-ins. To include your solution in AppSource, you submit it to the Seller Dashboard. You need to create an individual or company account if you have not already done so for other Windows apps or Office extensibility types.
@@ -94,3 +92,9 @@ Failures are explained, with references to the specific policy violations. All f
 * Check your manifest for completeness and accuracy. Then check it again.
 * Be sure to include detailed testing notes and a valid, working test account with appropriate prepopulated data.
 * Do not use the *Add a new app* button to resubmit your app.  Use the tile for your app on the Overview tab instead.
+
+## Add a download button to your product site
+
+If your app is in the Microsoft Teams store, you can generate a link for your website that launches Teams and shows a consent and installation dialog for users to add the app.
+The format is:  `https://teams.microsoft.com/l/app/<appId>` where appID is the GUID they declare in the submitted manifest.
+Example: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd` is the link to install Trello.
