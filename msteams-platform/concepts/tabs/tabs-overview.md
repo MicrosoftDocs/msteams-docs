@@ -49,8 +49,10 @@ Tabs display web pages, but not all web pages can display properly in a tab.
 
 Pages loaded inside of a custom tab need to:
 
-* Allow themselves to be iframed by Teams (via the X-Frame-Options and/or Content-Security-Policy headers). A lot of standard webpages don't allow themselves to be iframed which is why there is the option for users to view Website tab instances inside of a webview within the desktop client. Other tabs don't get this special treatment.
-* Handle authentication differently (either via a popup or calling us to fetch tokens). Most websites simply redirect to a login provider which typically dead ends tabs which are hosted inside of an iframe. That's because login pages typically don't render in iframes to prevent click-jacking.
-* Handle cross-domain navigation differently since the Teams client needs to validate the origin against a static validDomains list in the app manifest when loading or communicating with the tab.
-* Style themselves based on the Teams client's theme.
-* Make calls to the Teams client SDK (microsoftTeams.initialize()) which gives Teams a communication channel with the hosted page and more visibility into its operations.
+* Allow themselves to be [iframed](~/concepts/tabs/tabs-content) by Teams (via the X-Frame-Options and/or Content-Security-Policy headers). A lot of standard webpages don't allow themselves to be iframed which is why there is the option for users to view Website tab instances inside of a webview within the desktop client. Other tabs don't get this special treatment.
+* Handle [authentication](~/concepts/authentication/auth-flow-tab) differently (either via a popup or calling us to fetch tokens). Most websites simply redirect to a login provider which typically dead ends tabs which are hosted inside of an iframe. That's because login pages typically don't render in iframes to prevent click-jacking.
+* Handle [cross-domain](~/resources/general/cross-domain) navigation differently since the Teams client needs to validate the origin against a static validDomains list in the app manifest when loading or communicating with the tab.
+* Style themselves based on the Teams client's [theme](~/resources/design/components/themes).
+* Make calls to the [Teams client SDK](https://docs.microsoft.com/en-us/javascript/api/overview/msteams-client) (microsoftTeams.initialize()) which gives Teams a communication channel with the hosted page and more visibility into its operations.
+
+For more details see [Requirements for tab pages in Microsoft Teams](~/resources/general/requirements).
