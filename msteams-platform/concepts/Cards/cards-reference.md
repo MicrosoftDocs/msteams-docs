@@ -344,7 +344,6 @@ TBD: this schema came from the messagecardplayground, Connectors reference examp
 If you are using .NET and C# or Node.js, you can use the `O365ConnectorCard` class in the [Microsoft Teams extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) to send Connector cards from your bot.
 
 <<<<<<< HEAD
-## Receipt card
 =======
 
 ## List card
