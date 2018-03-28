@@ -120,7 +120,7 @@ A card that typically contains a single large image, one or more buttons, and te
 | --- | --- | --- |
 | title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
 | subtitle | Rich text | Subtitle of the card. Maximum 2 lines; formatting not currently supported |
-| text | Rich text | Text appears just below the subtitle; see [Message format](~/concepts/bots/bots-text-formats) for formatting options |
+| text | Rich text | Text appears just below the subtitle; see [Card formatting](~/concepts/cards/cards-format) for formatting options |
 | images | Array of images | Image displayed at top of card. Aspect ratio 16:9 |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
 | tap | Action object | This action will be activated when the user taps on the card itself |
@@ -269,7 +269,7 @@ The Office 365 Connector card provides a flexible layout with multiple sections,
 | --- | --- | --- |
 | title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
 | subtitle | Rich text | Subtitle of the card. Maximum 2 lines; formatting not currently supported |
-| text | Rich text | Text appears just below the subtitle; see [Message format](~/concepts/bots/bots-text-formats) for formatting options |
+| text | Rich text | Text appears just below the subtitle; see [Card formatting](~/concepts/cards/cards-format) for formatting options |
 | images | Array of images | Image displayed at top of card. Aspect ratio 16:9 |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
 | tap | Action object | This action will be activated when the user taps on the card itself |
@@ -456,7 +456,7 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 | --- | --- | --- |
 | title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
 | subtitle | Rich text | Subtitle of the card. Maximum 2 lines; formatting not currently supported |
-| text | Rich text | Text appears just below the subtitle; see [Message format](~/concepts/bots/bots-conversations#message-format) for formatting options |
+| text | Rich text | Text appears just below the subtitle; see [Card formatting](~/concepts/cards/cards-format) for formatting options |
 | images | Array of images | Image displayed at top of card. Aspect ratio 1:1 (square) |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
 | tap | Action object | This action will be activated when the user taps on the card itself |
