@@ -222,7 +222,7 @@ The list card has been added by Teams to provide functions beyond what the list 
         "tap": {
           "type": "openurl",
           "value": "http://trello.com"
-        } 
+        }
       },
       {
         "type": "section",
@@ -425,9 +425,9 @@ A card that enables a bot to request that a user sign in. Supported in teams in 
 |
 
 ### Notes
-The signin card in teams is similar to the signin card in the bot framework with the exception that the signin card in Teams only supports two actions :signin and openURL.
+The signin card in teams is similar to the signin card in the bot framework with the exception that the signin card in Teams only supports two actions: `signin` and `openURL`.
 
-The *signin action* can be used from any card in Teams, not just the signin Card. See the topic [Microsoft Teams authentication flow for bots](`/concepts/authentication/auth-flow-bot) for more details on authentication.
+The *signin action* can be used from any card in Teams, not just the signin Card. See the topic [Microsoft Teams authentication flow for bots](~/concepts/authentication/auth-flow-bot) for more details on authentication.
 
 ### For more information
 
