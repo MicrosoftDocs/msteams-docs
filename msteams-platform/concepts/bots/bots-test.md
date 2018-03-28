@@ -60,15 +60,6 @@ Note that users can choose to block your bot from sending 1:1 messages. They may
 
 ![Blocking a bot](~/assets/images/bots/botdisable.png)
 
-## Resetting a bot in 1:1 chat
-
-When you first chat with a bot, your bot receives a `conversationUpdate` message with a `membersAdded` object in the payload. It can be difficult to test the code that responds to that event if a conversation with the bot already exists, so Teams supports a way to "reset" the bot conversation to re-trigger this event.
-
-Simply type the special command `/resetbotchat` to your bot; this will trigger the same event that occurs when you first started to chat with your bot. You can only use the `/resetbotchat` command for sideloaded bots, and it only works in 1:1 chat. 
-
-> [!NOTE]
-> Eventually, Teams will support the Bot Framework `installationUpdate` event, which is a more elegant approach than using `conversationUpdate`/`membersAdded`.
-
 ## Removing a bot from a team
 
 Users can delete the bot by choosing the trash-can icon on the bots list in their teams view. Note that this only removes the bot from that team's use; individual users will still be able to interact in 1:1 context.
