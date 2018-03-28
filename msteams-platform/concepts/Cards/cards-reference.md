@@ -40,12 +40,9 @@ Buttons are shown stacked at the bottom of the card. Button text is always on a 
 
 See the topic [Card Actions](`/concepts/cards/cards-actions) for more information.
 
-### Card formatting
+### Card Formatting
 
-* Cards support formatting in the text property only, not in the title or subtitle properties
-* Cards do not support Markdown or table formatting
-
-[!include[Formatting text content in cards](~/includes/bots/message-format-cards.html)]
+See the topic [Card Formatting](~/concepts/cards/cards-format) for more information on text formatting in cards.
 
 ## Adaptive card
 
@@ -376,7 +373,7 @@ If you are using .NET and C# or Node.js, you can use the `O365ConnectorCard` cla
 
 ## Profile card
 
-The profile card has been added by Teams.
+The profile card has been added by Teams. It is not supported in Bot Framework.
 
 ### Support
 

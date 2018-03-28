@@ -1,5 +1,7 @@
 # Card formatting
 
+Cards support formatting in the text property only, not in the title or subtitle properties.
+
 [!include[Formatting text content in cards](~/includes/bots/message-format-cards.html)]
 
 ## Examples of text formatting
