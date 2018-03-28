@@ -301,7 +301,7 @@ To specify the rendering style for `activityImage`, you can set `activityImage` 
 | `avatar` | Default; `activityImage` will be cropped as a circle |
 | `article` | `activityImage` will be displayed as a rectangle and retain its aspect ratio |
 
-For all other details about Connector card properties, see the **[Actionable message card reference](https://docs.microsoft.com/en-us/outlook/actionable-messages/card-reference)**. The only Connector card properties that Microsoft Teams does not currently support are as follows:
+For all other details about Connector card properties, see the [Actionable message card reference](https://docs.microsoft.com/en-us/outlook/actionable-messages/card-reference). The only Connector card properties that Microsoft Teams does not currently support are as follows:
 
 * `heroImage`
 * `hideOriginalBody`
