@@ -45,7 +45,7 @@ See the topic [Card Actions](`/concepts/cards/cards-actions) for more informatio
 * Cards support formatting in the text property only, not in the title or subtitle properties
 * Cards do not support Markdown or table formatting
 
-[!include[Formatting text content in cards](~/includes/bots/message-format-cards.html)]a
+[!include[Formatting text content in cards](~/includes/bots/message-format-cards.html)]
 
 ## Adaptive card
 
@@ -123,7 +123,7 @@ A card that typically contains a single large image, one or more buttons, and te
 | --- | --- | --- |
 | title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
 | subtitle | Rich text | Subtitle of the card. Maximum 2 lines; formatting not currently supported |
-| text | Rich text | Text appears just below the subtitle; see [Message format](~/concepts/bots/bots-conversations#message-format) for formatting options |
+| text | Rich text | Text appears just below the subtitle; see [Message format](~/concepts/bots/bots-text-formats) for formatting options |
 | images | Array of images | Image displayed at top of card. Aspect ratio 16:9 |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
 | tap | Action object | This action will be activated when the user taps on the card itself |
@@ -177,7 +177,7 @@ A card that typically contains a single large image, one or more buttons, and te
 Bot Framework reference:
 
 * [Hero card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.herocard.html)
-* [Hero card C#](https://docs.botframework.com/en-us/csharp/builder/sdkreference/attachments.html#herocard) 
+* [Hero card C#](https://docs.botframework.com/en-us/csharp/builder/sdkreference/attachments.html#herocard)
 
 ## List card
 
@@ -272,7 +272,7 @@ The Office 365 Connector card provides a flexible layout with multiple sections,
 | --- | --- | --- |
 | title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
 | subtitle | Rich text | Subtitle of the card. Maximum 2 lines; formatting not currently supported |
-| text | Rich text | Text appears just below the subtitle; see [Message format](~/concepts/bots/bots-conversations#message-format) for formatting options |
+| text | Rich text | Text appears just below the subtitle; see [Message format](~/concepts/bots/bots-text-formats) for formatting options |
 | images | Array of images | Image displayed at top of card. Aspect ratio 16:9 |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
 | tap | Action object | This action will be activated when the user taps on the card itself |
@@ -382,7 +382,7 @@ The profile card has been added by Teams.
 
 | Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✖ | ✖ | ✖ |
+| ✔ | ✔ | ✖ | ✖ |
 |
 
 ### Properties
@@ -391,11 +391,6 @@ The profile card has been added by Teams.
 | --- | --- | --- |
 | title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
 | description | Rich text | Subtitle of the card. Maximum 2 lines; formatting not currently supported |
-| type |||
-| required |||
-| additionalProperties |||
-| properties |||
-| definitions |||
 |
 
 ## Receipt card
@@ -419,15 +414,11 @@ The receipt card in Teams is identical to the sign in card defined in Bot Framew
 
 Bot Framework reference:
 
-* [Recipt card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.receiptcard.html)
+* [Receipt card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.receiptcard.html)
 
 ## Signin card
 
-Supported in teams in a slightly different form than is found in the Bot Framework.
-
-A card that enables a bot to request that a user sign-in. It typically contains text and one button that the user can click to initiate the sign-in process.
-
-Teams users can also use the *signin action* from any card. See the topic [Microsoft Teams authentication flow for bots](`/concepts/bots/auth-flow-bot) for more details.
+A card that enables a bot to request that a user sign in. Supported in teams in a slightly different form than is found in the Bot Framework. See Notes for more details.
 
 ### Support
 
@@ -474,7 +465,7 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 | tap | Action object | This action will be activated when the user taps on the card itself |
 |
 
-### Example
+### JSON Example
 
 ```JSON
 {
