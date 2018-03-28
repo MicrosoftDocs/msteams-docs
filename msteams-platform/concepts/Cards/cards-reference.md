@@ -38,7 +38,7 @@ Images must be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated
 
 Buttons are shown stacked at the bottom of the card. Button text is always on a single line and will be truncated if the text exceeds the button width. Any additional buttons beyond the maximum number supported by the card will not be shown.
 
-See the topic [Card Actions](`/concepts/cards/cards-actions) for more information.
+See the topic [Card Actions](~/concepts/cards/cards-actions) for more information.
 
 ### Card Formatting
 
