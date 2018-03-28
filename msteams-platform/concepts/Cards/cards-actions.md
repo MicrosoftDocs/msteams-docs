@@ -18,9 +18,7 @@ Bots and messaging extensions in Teams support the following activity ([`CardAct
 
 > [!NOTE]
 >* Teams does not support `CardAction` types not listed in the preceding table.
->* Teams does not support the `SuggestedActions` property.
-
-TBD: By SuggestedActions, do you mean potentialActions?
+>* Teams does not support the `potentialActions` property.
 
 ## openUrl
 
