@@ -2,7 +2,7 @@
 title: Cards
 description: Describes all the cards available to bots in Teams
 keywords: bots cards reference
-ms.date: 03/22/18
+ms.date: 03/28/18
 ---
 # Cards Reference
 
@@ -220,7 +220,7 @@ The list card has been added by Teams to provide functions beyond what the list 
         "title": "Trello title",
         "subtitle": "A Trello subtitle",
         "tap": {
-          "type": "openurl",
+          "type": "openUrl",
           "value": "http://trello.com"
         }
       },
@@ -252,7 +252,7 @@ The list card has been added by Teams to provide functions beyond what the list 
 
 ## Office 365 connector card
 
-Supported in teams, not in Bot Framework.
+Supported in Teams, not in Bot Framework.
 
 The Office 365 Connector card provides a flexible layout with multiple sections, fields, images, and actions. This card encapsulates a connector card so that it can be used by bots. See the notes section for differences between connector cards and the O365 card.
 
@@ -392,7 +392,7 @@ The profile card has been added by Teams. It is not supported in Bot Framework.
 
 ## Receipt card
 
-Supported in teams.
+Supported in Teams.
 
 A card that enables a bot to provide a receipt to the user. It typically contains the list of items to include on the receipt, tax and total information, and other text.
 
@@ -415,7 +415,7 @@ Bot Framework reference:
 
 ## Signin card
 
-A card that enables a bot to request that a user sign in. Supported in teams in a slightly different form than is found in the Bot Framework. See Notes for more details.
+A card that enables a bot to request that a user sign in. Supported in Teams in a slightly different form than is found in the Bot Framework. See Notes for more details.
 
 ### Support
 
@@ -425,7 +425,7 @@ A card that enables a bot to request that a user sign in. Supported in teams in 
 |
 
 ### Notes
-The signin card in teams is similar to the signin card in the bot framework with the exception that the signin card in Teams only supports two actions: `signin` and `openURL`.
+The signin card in Teams is similar to the signin card in the Bot Framework with the exception that the signin card in Teams only supports two actions: `signin` and `openUrl`.
 
 The *signin action* can be used from any card in Teams, not just the signin Card. See the topic [Microsoft Teams authentication flow for bots](~/concepts/authentication/auth-flow-bot) for more details on authentication.
 
