@@ -207,7 +207,7 @@ You can create a 1:1 conversation with a user or start a new reply chain in a ch
 * [Starting a 1:1 conversation](~/concepts/bots/bot-conversations/bots-conv-proactive#starting-11-conversations)
 * [Creating a channel conversation](~/concepts/bots/bot-conversations/bots-conv-proactive#creating-a-channel-conversation)
 
-See also [Proactive messaging for bots](~concepts/bots/bot-conversations/bots-conv-proactive) for more general information on conversations started by bots.
+See also [Proactive messaging for bots](~/concepts/bots/bot-conversations/bots-conv-proactive) for more general information on conversations started by bots.
 
 ## Updating messages
 
