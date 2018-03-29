@@ -14,14 +14,14 @@ A conversation is a series of messages sent between your bot and one or more use
 
 Microsoft Teams allows bots to send messages in either:
 
-* Teams - [Bots in channel conversations](~/concepts/bot-conversations/bots-conv-channel) require the user to @ mention the bot to invoke it in a channel.
-* Personal - [Bots in 1:1 conversations](~/concepts/bot-conversations/bots-conv-personal) do not require an @ mention - the user can just type. These are personal conversations with a single user. They are also called one-on-one or 1:1 chats.
+* Teams - [Bots in channel conversations](~/concepts/bots/bot-conversations/bots-conv-channel) require the user to @ mention the bot to invoke it in a channel.
+* Personal - [Bots in 1:1 conversations](~/concepts/bots/bot-conversations/bots-conv-personal) do not require an @ mention - the user can just type. These are personal conversations with a single user. They are also called one-on-one or 1:1 chats.
 
 Not supported yet:
 
 * Groups - Bots in group conversations, including meetings, are currently not supported. Group conversations are also called group chats.
 
-In order for the bot to work in a particular scope it should be listed as supporting that scope in the manifest. Scopes are defined and discussed further in the [Manifest Reference](~/references/resources/schema/manifest-schema).
+In order for the bot to work in a particular scope it should be listed as supporting that scope in the manifest. Scopes are defined and discussed further in the [Manifest Reference](~/resources/schema/manifest-schema).
 
 ## Proactive messages
 
