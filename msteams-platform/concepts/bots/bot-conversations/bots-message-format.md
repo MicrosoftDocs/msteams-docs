@@ -69,4 +69,4 @@ Support for text formatting varies by type of message and by platform.
 
 ### Cards
 
-See [Card Formatting](`/concepts/cards/cards-format) for support in cards.
+See [Card Formatting](~/concepts/cards/cards-format) for support in cards.
