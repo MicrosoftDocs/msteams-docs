@@ -23,34 +23,6 @@ In the list, choose **Add** for the Connector you want to use.
 
 For more examples, see [Accessing Office 365 Connectors from Microsoft Teams](https://docs.microsoft.com/en-us/outlook/actionable-messages/#accessing-office-365-connectors-from-microsoft-teams).
 
-## Using Office 365 Connector cards in Microsoft Teams
-
-The Office 365 Connector card provides a flexible layout with multiple sections, fields, images, and actions.
-
-Each Connector card can display a maximum of 10 sections; each section can contain a maximum of 5 images and 5 actions.
-
-> [!NOTE]
-> Any additional sections, images, or actions in a message do not appear.
-
-All text fields support Markdown and HTML formatting. You can control which sections use Markdown or HTML by setting the `markdown` property in a message. By default, `markdown` is set to `true`; if you want to use HTML instead, set `markdown` to `false`.
-
-If you specify the `themeColor` property, it overrides the `accentColor` property in the app manifest.
-
-To specify the rendering style for `activityImage`, you can set `activityImage` as follows.
-
-| Value | Description |
-| --- | --- |
-| `avatar` | Default; `activityImage` will be cropped as a circle |
-| `article` | `activityImage` will be displayed as a rectangle and retain its aspect ratio |
-
-For all other details about Connector card properties, see the **[Actionable message card reference](https://docs.microsoft.com/en-us/outlook/actionable-messages/card-reference)**. The only Connector card properties that Microsoft Teams does not currently support are as follows:
-
-* `heroImage`
-* `hideOriginalBody`
-* `startGroup`
-
-If you are using .NET and C# or Node.js, you can use the `O365ConnectorCard` class in the [Microsoft Teams extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) to send Connector cards from your bot.
-
 ## Creating messages through Office 365 Connectors
 
 You have two options for posting messages via Connectors:
@@ -60,9 +32,9 @@ You have two options for posting messages via Connectors:
 
 Both options involve posting a simple JSON payload to an HTTP webhook to create the Connector message within Microsoft Teams. (For more details, see [Get started with actionable messages in Office 365](https://docs.microsoft.com/en-us/outlook/actionable-messages/get-started).)
 
-You can also use the markup to include rich inputs, such as text entry, multi-select, or picking a date and time. The code that generates the card and posts to the incoming webhook API can be running on any hosted service.
+You can also use this JSON to create cards containing rich inputs, such as text entry, multi-select, or picking a date and time. The code that generates the card and posts to the incoming webhook API can be running on any hosted service.  These cards are defined as part of actionable messages, and are also supported in [cards](~/concepts/cards/cards) used in Teams bots and Messaging extensions.
 
-#### Example Connector message
+### Example Connector message
 
 ```json
 {
@@ -147,21 +119,21 @@ This message produces the following card in the channel.
 
 ## Creating actionable messages
 
-The example in the preceding section includes three visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions, each containing an input type: a text field, a date picker, or a multichoice list. Each `ActionCard` action has an associated action&mdash;in the example, `HttpPOST`.
+The example in the preceding section includes three visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions, each containing an input type: a text field, a date picker, or a multi-choice list. Each `ActionCard` action has an associated action, for example `HttpPOST`.
 
 Connector cards support three types of actions:
 
-* `ActionCard`&emsp;Presents one or more input types and associated actions
-* `HttpPOST`&emsp;Sends a POST request to a URL
-* `OpenUri`&emsp;Opens a URI in a separate browser or app; optionally targets different URIs based on operating systems
+- `ActionCard` Presents one or more input types and associated actions
+- `HttpPOST` Sends a POST request to a URL
+- `OpenUri` Opens a URI in a separate browser or app; optionally targets different URIs based on operating systems
 
 (A fourth action, `ViewAction`, is still supported but no longer needed; use `OpenUri` instead.)
 
 The `ActionCard` action supports three input types:
 
-* `TextInput`&emsp;A single-line or multiline text field with an optional length limit
-* `DateInput`&emsp;A date selector with an optional time selector
-* `MultichoiceInput`&emsp;A enumerated list of choices offering either a single selection or multiple selections
+- `TextInput` A single-line or multiline text field with an optional length limit
+- `DateInput` A date selector with an optional time selector
+- `MultichoiceInput` A enumerated list of choices offering either a single selection or multiple selections
 
 `MultichoiceInput` supports a `style` property that controls whether the list initially appears fully expanded. The default value of `style` depends on the value of `isMultiSelect`.
 

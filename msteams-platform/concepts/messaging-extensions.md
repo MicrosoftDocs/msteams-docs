@@ -5,7 +5,7 @@ keywords: teams messaging extensions messaging extensions
 ---
 # Develop messaging extensions for Microsoft Teams
 
-Messaging extensions are a powerful new way for users to engage with your app within Microsoft Teams. With this capability, users can query for information from your service and post that information, in the form of rich cards, right into the channel conversation.
+Messaging extensions are a powerful new way for users to engage with your app within Microsoft Teams. With this capability, users can query for information from your service and post that information, in the form of cards, right into the channel conversation.
 
 ![Example of messaging extension card](~/assets/images/compose-extensions/ceexample.png)
 
@@ -21,7 +21,7 @@ How would you use messaging extensions? Here are a few possibilities:
 
 ## Add a messaging extension to your app
 
-Building a messaging extension involves implementing familiar Microsoft Teams developer platform concepts like bot APIs, rich cards, and tabs.
+Building a messaging extension involves implementing familiar Microsoft Teams developer platform concepts like bot APIs, cards, and tabs.
 
 At its core, a messaging extension is a cloud-hosted service that listens to user requests and responds with structured data, such as cards. You integrate your service with Microsoft Teams via Bot Framework `Activity` objects. Our .NET and Node.js [extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) can help you add messaging extension functionality to your app.
 
@@ -200,7 +200,7 @@ The request parameters itself are found in the value object, which includes the 
 | `queryOptions` | Pagination parameters: <br>`skip`: skip count for this query <br>`count`: number of elements to return |
 
 > [!NOTE]
-> You should authenticate any request to your service. See [Receiving messages](~/concepts/bots/bots-conversations#receiving-messages) for more detailed documentation on receiving messages from the Bot Framework.
+> You should authenticate any request to your service. See [Receiving messages](~/concepts/bots/bot-conversations/bots-conversations#receiving-messages) for more detailed documentation on receiving messages from the Bot Framework.
 
 #### Request example
 
@@ -374,12 +374,12 @@ If your service requires user authentication, you need to sign in the user befor
 
 The sequence is as follows:
 
-1.	User issues a query, or the default query is automatically sent to your service.
-2.	Your service checks whether the user has first authenticated by inspecting the Teams user ID.
-3.	If the user has not authenticated, send back a `login` action including the authentication URL.
-4.	The Microsoft Teams client launches a pop-up window hosting your webpage using the given authentication URL.
-5.	After the user signs in, you should close your window and send an "authentication code" to the Teams client.
-6.	The Teams client then reissues the query to your service, which includes the authentication code passed in step 5.
+1.  User issues a query, or the default query is automatically sent to your service.
+2.  Your service checks whether the user has first authenticated by inspecting the Teams user ID.
+3.  If the user has not authenticated, send back a `login` action including the authentication URL.
+4.  The Microsoft Teams client launches a pop-up window hosting your webpage using the given authentication URL.
+5.  After the user signs in, you should close your window and send an "authentication code" to the Teams client.
+6.  The Teams client then reissues the query to your service, which includes the authentication code passed in step 5.
 
 Your service should verify that the authentication code received in step 6 matches the one from step 5.  This ensures that a malicious user does not try to spoof or compromise the sign-in flow.  This effectively "closes the loop" to finish the secure authentication sequence.
 

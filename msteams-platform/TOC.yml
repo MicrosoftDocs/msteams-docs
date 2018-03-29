@@ -48,9 +48,18 @@
     - name: Create a bot
       href: ./concepts/bots/bots-create
     - name: Conversations
-      href: ./concepts/bots/bots-conversations
-    - name: Cards and card actions
-      href: ./concepts/bots/bots-cards
+      href: ./concepts/bots/bot-conversations/bots-conversations
+      items:
+      - name: 1-on-1 conversations with bots
+        href: ./concepts/bots/bot-conversations/bots-conv-personal
+      - name: Channel conversations with bots
+        href: ./concepts/bots/bot-conversations/bots-conv-channel
+      - name: Starting a conversation
+        href: ./concepts/bots/bot-conversations/bots-conv-proactive
+      - name: Message formatting
+        href: ./concepts/bots/bot-conversations/bots-message-format
+      - name: Cards and card actions
+        href: ./concepts/bots/bot-conversations/bots-cards
     - name: Bot events
       href: ./concepts/bots/bots-notifications
     - name: Context for bots
@@ -61,6 +70,15 @@
       href: ./concepts/bots/bots-with-tabs
     - name: Test a bot
       href: ./concepts/bots/bots-test
+  - name: Cards
+    href: ./concepts/cards/cards
+    items:
+    - name: Card reference
+      href: ./concepts/cards/cards-reference
+    - name: Card actions
+      href: ./concepts/cards/cards-actions
+    - name: Card formatting
+      href: ./concepts/cards/cards-format
   - name: Authentication
     href: ./concepts/authentication/authentication
     items:
@@ -80,9 +98,6 @@
     href: ./concepts/activity-feed
   - name: Connectors
     href: ./concepts/connectors
-    items:
-    - name: Cards and card actions
-      href: ./concepts/cards-actions
   - name: Messaging Extensions
     href: ./concepts/messaging-extensions
   - name: Outgoing WebHooks
@@ -100,9 +115,9 @@
   href: ./scenarios/scenarios
   items:
   - name: 1-on-1 conversations with bots
-    href: ./scenarios/bots-personal-conversations
+    href: ./concepts/bots/bot-conversations/bots-conv-personal
   - name: Channel conversations with bots
-    href: ./scenarios/bots-channel-conversations
+    href: ./concepts/bots/bot-conversations/bots-conv-channel
 - name: Resources
   href: ./resources/resource-overview
   items:
