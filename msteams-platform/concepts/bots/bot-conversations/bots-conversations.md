@@ -57,10 +57,10 @@ For more information on the types of bot interaction supported by the Bot Framew
 
 ## Message formatting
 
-You can set the optional [`TextFormat`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) property of a `message` to control how your message's text content is rendered. See [Message formatting](~concepts/bots/bot-conversations/bots-message-format) for a detailed description of supported formatting in bot messages.
+You can set the optional [`TextFormat`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) property of a `message` to control how your message's text content is rendered. See [Message formatting](~/concepts/bots/bot-conversations/bots-message-format) for a detailed description of supported formatting in bot messages.
 You can set the optional [`TextFormat`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) property to control how your message's text content is rendered.
 
-For detailed information on how Teams supports text formatting in teams see [Text formatting in bot messages](`/concepts/bots/bots-text-formats).
+For detailed information on how Teams supports text formatting in teams see [Text formatting in bot messages](~/concepts/bots/bots-text-formats).
 
 For information on formatting cards in messages, see [Card formatting](~/concepts/cards/card-format).
 
