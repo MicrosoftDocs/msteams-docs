@@ -64,6 +64,8 @@
       href: ./concepts/bots/bots-notifications
     - name: Context for bots
       href: ./concepts/bots/bots-context
+    - name: Notification only bots
+      href: ./concepts/bots/bots-notification-only
     - name: Bot menus
       href: ./concepts/bots/bots-menus
     - name: Bots with tabs

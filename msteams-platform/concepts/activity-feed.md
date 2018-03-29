@@ -2,7 +2,7 @@
 title: Activity feed
 description: Describes the activity feed and how to use it in your apps
 keywords: teams activity feed
-msdate: 01/31/2018
+msdate: 03/29/2018
 ---
 
 # Notify users through the activity feed in Microsoft Teams
@@ -84,4 +84,4 @@ To navigate the user to content within your tab, your message must include an at
 
 ## Notification only bots
 
-To access the activity feed, you will need to leverage a bot. If your bot's sole purpose is to send notifications, please take a look at the [notification only bots](~/concepts/bots/bots-notification-only) section.
+To access the activity feed, you will need to use a bot. If your bot's sole purpose is to send notifications, please take a look at the [notification only bots](~/concepts/bots/bots-notification-only) section.
