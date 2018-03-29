@@ -81,3 +81,7 @@ To navigate the user to content within your tab, your message must include an at
 
 > [!NOTE]
 > If the deep link does not follow the Teams format, choosing the notification in the feed navigates the user first to the chat with the bot. From there, the user can engage the attachment’s tap action to navigate to an external website.
+
+## Notification only bots
+
+To access the activity feed, you will need to leverage a bot. If your bot's sole purpose is to send notifications, please take a look at the [notification only bots](~/concepts/bots/bots-notification-only) section.
