@@ -194,7 +194,7 @@ Please note that in your outbound schema you should always use the same `service
 
 You can create a 1:1 conversation with a user or start a new reply chain in a channel for your team bot. This lets you to message your user or users without having them first initiate contact with your bot. For more information, see the following topics:
 
-* [Starting a 1:1 conversation](~/concepts/bots/bot-conversations/bots-conv-proactive#starting-a-11-conversation)
+* [Starting a 1:1 conversation](~/concepts/bots/bot-conversations/bots-conv-proactive#starting-11-conversations)
 * [Creating a channel conversation](~/concepts/bots/bot-conversations/bots-conv-proactive#creating-a-channel-conversation)
 
 See also [Proactive messaging for bots](~concepts/bots/bot-conversations/bots-conv-proactive) for more general information on conversations started by bots.
