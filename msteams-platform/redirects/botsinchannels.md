@@ -1,3 +1,3 @@
 ---
-redirect_url: /microsoftteams/platform/scenarios/bots-conv-channel
+redirect_url: /microsoftteams/platform/concepts/bots/bot-conversations/bots-conv-channel
 ---
