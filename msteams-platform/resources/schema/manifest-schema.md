@@ -21,7 +21,7 @@ The following schema sample shows all extensibility options.
   "$schema": "https://statics.teams.microsoft.com/sdk/v1.2/manifest/MicrosoftTeams.schema.json", 
   "manifestVersion": "1.2",
   "version": "1.0.0",
-  "id": "%MICROSOFT-APP-ID%", 
+  "id": "%MICROSOFT-APP-ID%",
   "packageName": "com.example.myapp",
   "developer": {
     "name": "Publisher Name",

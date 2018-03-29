@@ -45,10 +45,10 @@ With this as a simple example, let's walk through the steps your removal page ne
 <body>
 <form>
   <input type="radio" name="removetype" value="delete" onclick="onClick()">
-	Delete this map and all data the team added to it? <br>
+  Delete this map and all data the team added to it? <br>
   <input type="radio" name="removetype" value="keep" onclick="onClick()">
-	Keep this map available for use at 
-	<a href='https://maps.bing.com' target='_blank'>https://maps.bing.com</a>
+  Keep this map available for use at 
+  <a href='https://maps.bing.com' target='_blank'>https://maps.bing.com</a>
 </form> 
 
 <script src="https://statics.teams.microsoft.com/sdk/v1.0/js/MicrosoftTeams.min.js">
@@ -58,11 +58,11 @@ With this as a simple example, let's walk through the steps your removal page ne
 
 microsoftTeams.initialize();
 microsoftTeams.settings.registerOnRemoveHandler(function(removeEvent){
- 	  
+     
     var radios = document.getElementsByName('removetype');
-  	if (radios[0].checked) {
+    if (radios[0].checked) {
       // Delete the map and all its data from the underlying service.
-	  }
+    }
     
     removeEvent.notifySuccess();
 });

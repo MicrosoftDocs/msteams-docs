@@ -17,6 +17,7 @@ In these topics, you'll find the information you need to bring your apps to life
 | [**Apps for Teams**](~/concepts/apps/apps-overview) |  Understand how apps work in Teams and what features make up an app. |
 | [**Tabs**](~/concepts/tabs/tabs-overview) | Learn more about creating Tabs for Teams apps. |
 | [**Bots**](~/concepts/bots/bots-overview) | Use the Teams extensions for Microsoft bot framework to create interactive conversational bots.|
+| [**Cards**](~/concepts/cards/cards) | How to use cards in bots, connectors and messaging extensions.|
 | [**Authentication**](~/concepts/authentication) | Learn how authentication and authorization work in Teams. |
 | [**Activity feed**](~/concepts/activity-feed) | The activity feed is the user's single inbox for all activity across Teams. The feed aggregates important content from many sources. |
 | [**Connectors**](~/concepts/connectors) | Use Office 365 Connectors to push your app's rich content into Microsoft Teams. |

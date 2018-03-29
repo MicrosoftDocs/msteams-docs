@@ -35,13 +35,13 @@ There are two ways to test load your bot for 1:1 conversations in Microsoft Team
 
 2. Directly reference your bot's app ID from within Microsoft Teams:
    * On the [Bot Dashboard](https://dev.botframework.com/bots) page for your bot, under **Details**, copy the **Microsoft App ID** for your bot.
-
-   ![Getting the AppID for the bot](~/assets/images/bots_appid_botframework.png)
-
+  
+     ![Getting the AppID for the bot](~/assets/images/bots_appid_botframework.png)
+  
    * From within Microsoft Teams, on the **Chat** pane, select the **Add chat** icon. For **To:**, paste your bot's Microsoft App ID.
-
+  
      ![Getting the AppID for the bot](~/assets/images/bots_uploading.png)
-
+    
      The app ID should resolve to your bot name.
 
    * Select your bot and send a message to initiate a conversation.
