@@ -2,7 +2,7 @@
 title: Using cards in bots
 description: Describes cards and how they are used in bot messages
 keywords: bots cards messaging
-ms.date: 03/29/18
+ms.date: 03/29/2018
 ---
 # Cards in bot conversations
 

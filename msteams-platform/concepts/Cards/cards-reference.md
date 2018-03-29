@@ -2,7 +2,7 @@
 title: Cards Reference
 description: Describes all the cards and card actions available to bots in Teams
 keywords: bots cards reference
-ms.date: 03/29/18
+ms.date: 03/29/2018
 ---
 # Cards Reference
 
