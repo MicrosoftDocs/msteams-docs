@@ -62,7 +62,7 @@ You can set the optional [`TextFormat`](https://docs.microsoft.com/en-us/bot-fra
 
 For detailed information on how Teams supports text formatting in teams see [Text formatting in bot messages](~/concepts/bots/bots-text-formats).
 
-For information on formatting cards in messages, see [Card formatting](~/concepts/cards/card-format).
+For information on formatting cards in messages, see [Card formatting](~/concepts/cards/cards-format).
 
 ## Picture messages
 
