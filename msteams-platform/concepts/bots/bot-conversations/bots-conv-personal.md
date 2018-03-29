@@ -2,7 +2,7 @@
 title: 1-on-1 conversations with bots
 description: Describes the end-to-end scenario of having a 1-on-1 conversation with a bot in Microsoft Teams
 keywords: teams scenarios 1on1 1to1 conversation bot
-ms.date: 03/23/2018
+ms.date: 03/29/2018
 ---
 # Interact one-on-one (1:1) with a Microsoft Teams bot
 

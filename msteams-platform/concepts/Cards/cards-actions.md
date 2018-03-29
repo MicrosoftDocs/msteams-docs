@@ -2,7 +2,7 @@
 title: Add card actions in a bot
 description: Describes card actions in Microsoft Teams and how to use them in your bots
 keywords: teams bots cards actions
-ms.date: 03/22/2018
+ms.date: 03/29/2018
 ---
 # Card actions
 

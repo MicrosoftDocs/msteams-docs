@@ -1,3 +1,9 @@
+---
+title: Text formatting in cards
+description: Describes card text formatting in Microsoft Teams
+keywords: teams bots cards format
+ms.date: 03/29/2018
+---
 # Card formatting
 
 Cards support formatting in the text property only, not in the title or subtitle properties.

@@ -2,7 +2,7 @@
 title: Introducing cards
 description: Describes cards and how they are used in bots, connectors and messaging extensions
 keywords: connectors bots cards messaging
-ms.date: 03/06/18
+ms.date: 03/29/18
 ---
 # Cards
 

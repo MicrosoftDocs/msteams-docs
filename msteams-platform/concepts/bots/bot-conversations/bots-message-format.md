@@ -2,7 +2,7 @@
 title: Bot message format
 description: Describes the details of formatting for bot messages
 keywords: teams scenarios channels conversation bot message
-ms.date: 03/21/2018
+ms.date: 03/29/2018
 ---
 # Message formatting for bots
 

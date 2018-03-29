@@ -2,7 +2,7 @@
 title: Channel conversations with bots
 description: Describes the end-to-end scenario of having a conversation with a bot in a channel in Microsoft Teams
 keywords: teams scenarios channels conversation bot
-ms.date: 03/22/2018
+ms.date: 03/29/2018
 ---
 # Interact in a team channel with a Microsoft Teams bot
 
