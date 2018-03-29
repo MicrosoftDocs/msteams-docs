@@ -92,7 +92,17 @@ Your bot receives a payload that contains the user message `Text` as well as oth
 * `from.id` A unique and encrypted ID for that user for your bot; suitable as a key if your app needs to store user data. It is unique for your bot and cannot be directly used outside your bot instance in any meaningful way to identify that user
 * `channelData.tenant.id` The tenant ID for the user.
 
-### Full inbound message schema example
+> [!NOTE]
+> `from.id` is unique for your bot and cannot be directly used outside your bot instance in any meaningful way to identify that user.
+
+## Combining channel and private interactions with your bot
+
+When interacting in a channel, your bot should be smart about taking certain conversations offline with a user. For instance, suppose a user is trying to coordinate a complex task, such as scheduling with a set of team members. Rather than have the entire sequence of interactions visible to the channel, consider sending a 1:1 chat message to the user. Your bot should be able to easily transition the user between 1:1 and channel conversations without losing state.
+
+> [!NOTE]
+>Don’t forget to update the channel when the interaction is complete to notify the other team members.
+
+## Full inbound schema example
 
 ```json
 {
