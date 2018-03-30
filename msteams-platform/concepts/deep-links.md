@@ -13,7 +13,7 @@ You can enable team members to create and share links to items _within_ your tab
 Further, you can generate deep links programmatically, using the format specified later in this topic. You might want to use these in [bot](~/concepts/bots/bots-overview) and [Connector](~/concepts/connectors) messages that inform users about changes to your tab, or to items within it.
 
 > [!NOTE]
-> Static tabs have a scope of "personal" and configurable tabs have a scope of "team". The two tab types have a slightly different syntax since only the configurable tab has a `channel` property associated with its context object. See the [Manifest](~/resources/schema/manifest-schema) reference for more information.
+> Static tabs have a scope of "personal" and configurable tabs have a scope of "team". The two tab types have a slightly different syntax since only the configurable tab has a `channel` property associated with its context object. See the [Manifest](~/resources/schema/manifest-schema) reference for more information on personal and team scopes.
 > [!NOTE]
 > Deep links work properly only if the tab was configured using the v0.4 or later library and thus has an entity ID. Deep links to tabs without entity IDs still navigate to the tab but can't provide the sub-entity ID to the tab.
 
