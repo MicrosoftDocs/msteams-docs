@@ -2,10 +2,10 @@
 title: Publishing checklist
 description: The checklist to use before publishing your Microsoft Teams app to AppSource
 keywords: teams publish store office publishing checklist
+ms.date: 03/30/2018
 ---
 # AppSource checklist for Seller Dashboard submission
-A
-ppSource is the new name for Office Store.
+AppSource is the new name for Office Store.
 
 The follow metadata is required in your manifest.json file and for Seller Dashboard submission:
 
