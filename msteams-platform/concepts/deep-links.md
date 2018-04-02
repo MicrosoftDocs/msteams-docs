@@ -52,8 +52,10 @@ The query parameters are:
 
 Examples:
 
-* Link to the tab itself: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123&context={"canvasUrl": "https://tab.tasklist.example.com/123","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
-* Link to a task item within the tab: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","canvasUrl": "https://tab.tasklist.example.com/123","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
+* Link to a configurable tab itself: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123&context={"canvasUrl": "https://tab.tasklist.example.com/123","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
+* Link to a task item within the configurable tab: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","canvasUrl": "https://tab.tasklist.example.com/123","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
+* Link to a static tab itself: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123&context={"canvasUrl": "https://tab.tasklist.example.com/123":"19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
+* Link to a task item within the static tab: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","canvasUrl": "https://tab.tasklist.example.com/123":"19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
 
 ## Consuming a deep link from a tab
 
