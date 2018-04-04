@@ -2,7 +2,7 @@
 title: Add bots to Microsoft Teams apps
 description: Describes how to get started developing bots in Microsoft Teams
 keywords: teams bots development
-ms.date: 03/26/2018
+ms.date: 04/04/2018
 ---
 # Add bots to Microsoft Teams apps
 
@@ -17,7 +17,7 @@ Build and connect intelligent bots to interact with Microsoft Teams users natura
 
 A bot appears just like any other team member you interact with in a conversation except that it has a hexagonal avatar icon and is always online.
 
-A bot behaves slightly depending on what kind of conversation it is involved in.  Teams support three kinds of conversations (called scopes in the [Manifest](~/references/resources/schema/manifest-schema)).
+A bot behaves slightly depending on what kind of conversation it is involved in.  Teams support three kinds of conversations (called scopes in the [Manifest](~/resources/schema/manifest-schema)).
 
 * `teams` Also called channel conversations
 * `personal` Also called 1:1 conversations or chats
@@ -32,7 +32,7 @@ Not supported yet:
 
 * Groups - Bots in group conversations, including meetings, are currently not supported. Group conversations are also called group chats.
 
-In order for the bot to work in a particular scope it should be listed as supporting that scope in the manifest. Scopes are defined and discussed further in the [Manifest Reference](~/references/resources/schema/manifest-schema).
+In order for the bot to work in a particular scope it should be listed as supporting that scope in the manifest. Scopes are defined and discussed further in the [Manifest Reference](~/resources/schema/manifest-schema).
 
 Bots in Teams can appear in one or both of the following ways:
 
@@ -74,6 +74,7 @@ The following topics will guide you through the process of creating a great bot 
 * [Talk to your bot](~/concepts/bots/bots-conversations): Add basic conversation flow and leverage channel-specific functionality. If you develop in .NET or Node.js, use our [extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) to simplify your work.
 * [Using cards in your bot](~/concepts/bots/bots-cards) Design cards to communicate and accept user response.
 * [Respond to bot events](~/concepts/bots/bots-notifications).
+* [Notification-only bots](~/concepts/bots/bots-notification-only) Using bots to send notifications for your app.
 * [Get context](~/concepts/bots/bots-context) Get information about the user.
 * [Bot menus](~/concepts/bots/bots-menus) Using menus in bots.
 * [Using tabs with bots](~/concepts/bots/bots-with-tabs) Making tabs and bots work together.

@@ -2,6 +2,7 @@
 title: Create deep links
 description: Describes deep links and how to use them in your apps
 keywords: teams deep link deeplink
+ms.date: 04/04/2018
 ---
 
 # Create deep links to a Microsoft Teams tab

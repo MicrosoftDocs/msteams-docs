@@ -2,7 +2,7 @@
 title: Add tabs to Microsoft Teams apps
 description: Describes how to get started developing tabs in Microsoft Teams
 keywords: teams tabs development
-ms.date: 01/12/2018
+ms.date: 04/04/2018
 ---
 # Add tabs to Microsoft Teams apps
 
@@ -11,7 +11,7 @@ Tabs in Microsoft Teams allow you to display rich interactive web content. You c
 ![Example of a tab showing data, alongside a conversation about the tab data](~/assets/images/tab_example.png)
 
 ## Teams scopes for tabs
-Teams support three kinds of conversations (called scopes in the [Manifest](~/references/resources/schema/manifest-schema)).
+Teams support three kinds of conversations (called scopes in the [Manifest](~/resources/schema/manifest-schema)).
 
 * `teams` Also called channel conversations
 * `personal` Also called 1:1 conversations or chats
