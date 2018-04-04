@@ -89,7 +89,7 @@ After the user completes authorization, the user is redirected to the callback p
 
 ## The callback page
 
-In the last section you called the AAD authorization service and passed in user and app information so that AAD could present the user with it's own monolithic authorization experience. Your app has no control over what happens in this experience. All it knows is what is returned when AAD calls the  callback page that you provided (`/tab-auth/simple-end`).
+In the last section you called the AAD authorization service and passed in user and app information so that AAD could present the user with its own monolithic authorization experience. Your app has no control over what happens in this experience. All it knows is what is returned when AAD calls the  callback page that you provided (`/tab-auth/simple-end`).
 
 In this page you need to determine success or failure based on the information returned by AAD and call `microsoftTeams.authentication.notifySuccess()` or `microsoftTeams.authentication.notifyFailure()`. If the login was successful you will have access to service resources.
 
