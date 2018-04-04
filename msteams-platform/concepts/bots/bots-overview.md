@@ -74,6 +74,7 @@ The following topics will guide you through the process of creating a great bot 
 * [Talk to your bot](~/concepts/bots/bots-conversations): Add basic conversation flow and leverage channel-specific functionality. If you develop in .NET or Node.js, use our [extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) to simplify your work.
 * [Using cards in your bot](~/concepts/bots/bots-cards) Design cards to communicate and accept user response.
 * [Respond to bot events](~/concepts/bots/bots-notifications).
+* [Notification-only bots](~/concepts/bots/bots-notification-only) Using bots to send notifications for your app.
 * [Get context](~/concepts/bots/bots-context) Get information about the user.
 * [Bot menus](~/concepts/bots/bots-menus) Using menus in bots.
 * [Using tabs with bots](~/concepts/bots/bots-with-tabs) Making tabs and bots work together.
