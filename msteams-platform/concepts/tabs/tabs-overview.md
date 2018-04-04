@@ -11,7 +11,7 @@ Tabs in Microsoft Teams allow you to display rich interactive web content. You c
 ![Example of a tab showing data, alongside a conversation about the tab data](~/assets/images/tab_example.png)
 
 ## Teams scopes for tabs
-Teams support three kinds of conversations (called scopes in the [Manifest](~/references/resources/schema/manifest-schema)).
+Teams support three kinds of conversations (called scopes in the [Manifest](~/resources/schema/manifest-schema)).
 
 * `teams` Also called channel conversations
 * `personal` Also called 1:1 conversations or chats
