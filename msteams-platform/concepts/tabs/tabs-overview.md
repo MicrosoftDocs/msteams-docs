@@ -2,7 +2,7 @@
 title: Add tabs to Microsoft Teams apps
 description: Describes how to get started developing tabs in Microsoft Teams
 keywords: teams tabs development
-ms.date: 01/12/2018
+ms.date: 04/04/2018
 ---
 # Add tabs to Microsoft Teams apps
 
