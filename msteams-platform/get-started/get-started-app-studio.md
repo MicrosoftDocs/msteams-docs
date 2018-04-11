@@ -2,7 +2,7 @@
 title: Get started with Teams App Studio
 description: Get started building great apps in Microsoft Teams using Teams App Studio
 keywords: getting started app studio teams
-ms.date: 01/29/2018
+ms.date: 04/11/2018
 ---
 # Quickly develop apps with Teams App Studio (Preview)
 
@@ -12,7 +12,7 @@ Microsoft Teams App Studio makes it easy to start creating or integrating your o
 
 ## Apps
 
-Teams App Studio was created to simplify and streamline the process of creating real apps. It is much faster than the manual process described in [Get started with Node.js](~/get-started/get-started-with-nodejs): Teams App Studio is now the recommended way to develop Teams apps. The getting started documentation will be updated at a later date.
+Teams App Studio was created to simplify and streamline the process of creating real apps. It is much faster than the manual process described in [Get started with Node.js](~/get-started/get-started-nodejs): Teams App Studio is now the recommended way to develop Teams apps. The getting started documentation will be updated at a later date.
 
 Apps for Teams are made up of two parts:
 
