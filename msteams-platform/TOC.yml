@@ -1,6 +1,8 @@
 - name: Overview
   href: ./overview
   universal_ref_toc: /javascript/api/msteams-client-docs-ref-typescript/toc.json
+  name: What's new
+  href: ./whats-new
 - name: Get started
   href: ./get-started/get-started
   items: 
