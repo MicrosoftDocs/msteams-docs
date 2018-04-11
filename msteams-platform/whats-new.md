@@ -8,7 +8,7 @@ ms.date: 04/11/2018
 
 | **Date** | **Notes** | **Changed files** |
 | - | - | - |
-| 04/12/2018 | Changed authentication URLs to consistently use the tenant ID in the path. |[Authentication flow for Tabs](~/concepts/authentication/auth-flow-tab) [AAD Tab authentication](~/concepts/authentication/auth-tab-AAD)|
+| 04/12/2018 | Changed authentication URLs to consistently use the tenant ID in the path. | [Authentication flow for Tabs](~/concepts/authentication/auth-flow-tab), [AAD Tab authentication](~/concepts/authentication/auth-tab-AAD)|
 | 04/12/2018 | Added design guidelines for using the Command Box.  |[Authentication flow for Tabs](~/resources/design/framework/command-box)|
 |-|-|-|
 
