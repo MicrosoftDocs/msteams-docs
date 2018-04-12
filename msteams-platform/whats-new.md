@@ -10,11 +10,12 @@ This table lists changes to the document set. Usually these changes follow chang
 
 | **Date** | **Notes** | **Changed topics** |
 | - | - | - |
-| 04/12/2018 | Changed authentication URLs to consistently use the tenant ID in the path. | [Authentication flow for Tabs](~/concepts/authentication/auth-flow-tab), [AAD Tab authentication](~/concepts/authentication/auth-tab-AAD)|
-| 04/12/2018 | Added design guidelines for using the Command Box.  |[Command box](~/resources/design/framework/command-box)|
+
+| 04/12/2018 | Added this topic to track changes to the documentation. | [What's new](~/whats-new)|
+| 04/10/2018 | Changed authentication URLs to consistently use the tenant ID in the path. | [Authentication flow for Tabs](~/concepts/authentication/auth-flow-tab), [AAD Tab authentication](~/concepts/authentication/auth-tab-AAD)|
+| 04/06/2018 | Added design guidelines for using the Command Box.  |[Command box](~/resources/design/framework/command-box)|
 | 04/02/2018 |Using bots to send notifications for your app. |[Notification-only bots](~/concepts/bots/bots-notification-only)|
 | 03/27/2018 | Expanded documentation for proactive messaging |[Starting a conversation](./concepts/bots/bot-conversations/bots-conv-proactive)|
-|03/27/2018 | Updated and expanded documentation for cars in Teams |Cards reference](./concepts/bots/bot-conversations/bots-conv-proactive)|
 |03/15/2018 | Refactored documentation for cards |[Cards](~/concepts/cards/cards), [Card actions](~/concepts/cards/card-actions), [Card formatting](~/concepts/cards/card-format), [Card reference](~/concepts/cards/card-reference)|
 |03/03/2018 | Added documentation for Teams App Studio |[Quickly develop apps with Teams App Studio](~/get-started/get-started-app-studio), [Using the control library in App Studio](~/get-started/app-studio-component-library)|
 |02/27/2018 | Added sample code extract to demonstrate AsTeamsChannelAccounts() method |[Get context for your bot](~/concepts/bots/bots-context)|
