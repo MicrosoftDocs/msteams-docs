@@ -15,7 +15,7 @@ This table lists changes to the document set. Usually these follow changes to th
 | 04/06/2018 | Added design guidelines for using the Command Box.  |[Command box](~/resources/design/framework/command-box)|
 | 04/02/2018 |Using bots to send notifications for your app. |[Notification-only bots](~/concepts/bots/bots-notification-only)|
 | 03/27/2018 | Expanded documentation for proactive messaging |[Starting a conversation](./concepts/bots/bot-conversations/bots-conv-proactive)|
-|03/15/2018 | Refactored documentation for cards |[Cards](~/concepts/cards/cards), [Card actions](~/concepts/cards/card-actions), [Card formatting](~/concepts/cards/card-format), [Card reference](~/concepts/cards/card-reference)|
+|03/15/2018 | Refactored documentation for cards |[Cards](~/concepts/cards/cards), [Card actions](~/concepts/cards/cards-actions), [Card formatting](~/concepts/cards/cards-format), [Card reference](~/concepts/cards/cards-reference)|
 |03/03/2018 | Added documentation for Teams App Studio |[Quickly develop apps with Teams App Studio](~/get-started/get-started-app-studio), [Using the control library in App Studio](~/get-started/app-studio-component-library)|
 |02/27/2018 | Added sample code extract to demonstrate AsTeamsChannelAccounts() method |[Get context for your bot](~/concepts/bots/bots-context)|
 |02/16/2018 | Updated icon sizes ||
