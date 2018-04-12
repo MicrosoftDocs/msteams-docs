@@ -6,7 +6,7 @@ ms.date: 04/12/2018
 ---
 # What's new for developers in Microsoft Teams
 
-This table lists changes to the document set. Usually these changes follow changes to the developer interface for Teams and at times an entry may be used to call attention to a new feature that is simply of interest to teams developers.
+This table lists changes to the document set. Usually these follow changes to the developer interface for Teams, but at times entries may be used to call attention to a new feature that is simply of interest to teams developers.
 
 | **Date** | **Notes** | **Changed topics** |
 | - | - | - |
