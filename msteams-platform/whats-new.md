@@ -10,7 +10,6 @@ This table lists changes to the document set. Usually these follow changes to th
 
 | **Date** | **Notes** | **Changed topics** |
 | - | - | - |
-
 | 04/12/2018 | Added this topic to track changes to the documentation | [What's new](~/whats-new)|
 | 04/10/2018 | Changed authentication URLs to consistently use the tenant ID in the path. | [Authentication flow for Tabs](~/concepts/authentication/auth-flow-tab), [AAD Tab authentication](~/concepts/authentication/auth-tab-AAD)|
 | 04/06/2018 | Added design guidelines for using the Command Box.  |[Command box](~/resources/design/framework/command-box)|
