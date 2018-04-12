@@ -20,6 +20,7 @@ This table lists changes to the document set. Usually these follow changes to th
 |02/27/2018 | Added sample code extract to demonstrate AsTeamsChannelAccounts() method |[Get context for your bot](~/concepts/bots/bots-context)|
 |02/16/2018 | Updated icon sizes ||
 |02/05/2018 | Added topics for getting started using C# |[Get started on the Microsoft Teams platform with C#/.NET](./get-started/get-started-dotnet)|
+||||
 
 ## Submit your questions, bugs, feature requests, and contributions
 
