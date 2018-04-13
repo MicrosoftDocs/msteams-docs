@@ -160,8 +160,8 @@ A typical channelData object in an activity sent to your bot contains the follow
 * `channel` Passed only in channel contexts when the bot is mentioned or for events in channels in teams where the bot has been added
     * `id` GUID for the channel
     * `name` Channel name; passed only in cases of [channel modification events](~/concepts/bots/bots-notifications#channel-updates).
-* `channelData.teamsTeamId` Depreciated. This property is included only for backwards compatibility.
-* `channelData.teamsChannelId` Depreciated. This property is included only for backwards compatibility.
+* `channelData.teamsTeamId` Deprecated. This property is included only for backwards compatibility.
+* `channelData.teamsChannelId` Deprecated. This property is included only for backwards compatibility.
 
 ### Example channelData object (channelCreated event)
 
