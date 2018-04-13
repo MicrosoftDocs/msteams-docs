@@ -318,25 +318,6 @@ For all other details about Connector card properties, see the [Actionable messa
 
 If you are using .NET and C# or Node.js, you can use the `O365ConnectorCard` class in the [Microsoft Teams extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) to send Connector cards from your bot.
 
-### Profile card
-
-The profile card has been added by Teams. It is not supported in Bot Framework.
-
-#### Support
-
-| Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
-| --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✖ |
-|
-
-#### Properties
-
-| Property | Type  | Description |
-| --- | --- | --- |
-| title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
-| description | Rich text | Subtitle of the card. Maximum 2 lines; formatting not currently supported |
-|
-
 ### Receipt card
 
 Supported in teams.
