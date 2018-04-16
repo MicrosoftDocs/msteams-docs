@@ -125,7 +125,7 @@ You can specify whether to show the Files tab in your personal app experience. T
   "bots": [
     {
       "botId": "c201df69-7490-40c3-aa7f-aef4254cb1ee",
-      "canReceiveFiles": true
+      "canReceiveFiles": true,
       "scopes": [
         "team",
         "personal"
