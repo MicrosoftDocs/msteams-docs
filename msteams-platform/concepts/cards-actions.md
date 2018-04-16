@@ -2,32 +2,37 @@
 title: Add cards and card actions in a bot
 description: Describes cards and card actions in Microsoft Teams and how to use them in your bots
 keywords: teams bots cards actions
+ms.date: 04/16/2018
 ---
-
 # Add cards and card actions in a Microsoft Teams bot
 
 A *card* is a user-interface (UI) container for short or related pieces of information. Microsoft Teams supports rich cards, which can have multiple properties and attachments.
 
 Supported by Microsoft Teams:
+
 * [Hero card](~/concepts/cards-actions#hero-card)
 * [Thumbnail card](~/concepts/cards-actions#thumbnail-card)
 * Sign-in card
 
 Supported with modifications:
+
 * [Office 365 Connector card](#office-365-connector-card)&mdash;the `heroImage`, `hideOriginalBody`, and `startGroup` properties are not currently supported, and Office 365 Connectors do not render properly in iOS.
 
 Not supported:
+
 * Adaptive card
 * Receipt card
 * Media cards (animation card, audio card, and video card)
 
 Additionally, Teams supports the following layouts:
+
 * Horizontal carousel layout
 * Vertical list layout
 
 Both layouts support hero and thumbnail cards.
 
 You can find information on how to use cards in the documentation for the Bot Builder SDK. Code samples are in the Microsoft/BotBuilder-Samples repository on GitHub.
+
 * .NET
   * [Add rich card attachments to messages](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments)
   * [Rich cards sample code](https://github.com/Microsoft/BotBuilder-Samples/tree/master/CSharp/cards-RichCards)
@@ -43,7 +48,7 @@ Images are scaled up or down in size while maintaining the aspect ratio to cover
 
 Images must be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF is not officially supported.
 
-| Property | Type  | Description |                                                           
+| Property | Type  | Description |
 | --- | --- | --- |
 | url | URL | HTTPS URL to the image |
 | alt | String | Accessible description of the image |
@@ -54,7 +59,7 @@ The [hero card](https://docs.botframework.com/en-us/csharp/builder/sdkreference/
 
 ![Example of a hero card](~/assets/images/cards/hero.png)
 
-| Property | Type  | Description |                                                           
+| Property | Type  | Description |
 | --- | --- | --- |
 | title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
 | subtitle | Rich text | Subtitle of the card. Maximum 2 lines; formatting not currently supported |
@@ -69,7 +74,7 @@ The [thumbnail card](https://docs.botframework.com/en-us/csharp/builder/sdkrefer
 
 ![Example of a thumbnail card](~/assets/images/cards/thumbnail.png)
 
-| Property | Type  | Description |                                                           
+| Property | Type  | Description |
 | --- | --- | --- |
 | title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
 | subtitle | Rich text | Subtitle of the card. Maximum 2 lines; formatting not currently supported |
@@ -131,7 +136,7 @@ Buttons are shown stacked at the bottom of the card. Button text is always on a 
 
 Teams supports the following activity ([`CardAction`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards)) types.
 
-| Type | Action | 
+| Type | Action |
 | --- | --- |
 | `openUrl` | Opens a URL in the built-in browser. |
 | `messageBack` | Sends a message and payload to the bot (from the user who clicked the button or tapped the card) and sends a separate message to the chat stream. |
