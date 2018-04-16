@@ -190,6 +190,9 @@ The flexibility of `messageBack` means that your code can choose not to leave a 
 The `value` property can be either a serialized JSON string or a JSON object.
 
 #### Inbound message schema example
+
+`replyToId` contains the ID of the specific message.
+
 ```json
 {
    "text":"User just clicked the MessageBack button",
@@ -230,7 +233,8 @@ The `value` property can be either a serialized JSON string or a JSON object.
       "tenant":{
          "id":"bec8e231-67ad-484e-87f4-3e5438390a77"
       }
-   }
+   },
+   "replyToId": "1:19uJ8TZA1cZcms7-2HLOW3pWRF4nSWEoVnRqc0DPa_kY"
 }
 ```
 
@@ -282,6 +286,8 @@ var button = new CardAction()
 
 #### Example: Invoke inbound schema
 
+`replyToId` contains the ID of the specific message.
+
 ```json
 {
     "type": "invoke",
@@ -314,15 +320,16 @@ var button = new CardAction()
         }
     ],
     "channelData": {
-        "channel": { 
-            "id": "19:dc5ba12695be4eb7bf457cad6b4709eb@thread.skype" 
+        "channel": {
+            "id": "19:dc5ba12695be4eb7bf457cad6b4709eb@thread.skype"
         },
-        "team": { 
-            "id": "19:712c61d0ef384e5fa681ba90ca943398@thread.skype" 
+        "team": {
+            "id": "19:712c61d0ef384e5fa681ba90ca943398@thread.skype"
         },
-        "tenant": { 
-            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47" 
+        "tenant": {
+            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
         }
-    }
+    },
+   "replyToId": "1:19uJ8TZA1cZcms7-2HLOW3pWRF4nSWEoVnRqc0DPa_kY"
 }
 ```
