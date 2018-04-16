@@ -14,17 +14,17 @@ When a user sends a file to your bot, the file is first uploaded to the user's O
 ### Message activity with file attachment example
 ```json
 {
-	"attachments": [{
-		"contentType": "application/vnd.microsoft.teams.file.download.info",
-    "contentUrl": "https://contoso.sharepoint.com/personal/johnadams_contoso_com/Documents/Applications/file_example.txt", 
+  "attachments": [{
+    "contentType": "application/vnd.microsoft.teams.file.download.info",
+    "contentUrl": "https://contoso.sharepoint.com/personal/johnadams_contoso_com/Documents/Applications/file_example.txt",
     "name": "file_example.txt",
-		"content": {
+    "content": {
       "downloadUrl" : "https://download.link",
       "uniqueId": "1150D938-8870-4044-9F2C-5BBDEBA70C9D",
-			"fileType": "txt",
+      "fileType": "txt",
       "etag": "123"
-		}
-	}]
+    }
+  }]
 }
 ```
 
@@ -122,5 +122,15 @@ You can specify whether to show the Files tab in your personal app experience. T
 ```json
 {
 ...
+  "bots": [
+    {
+      "botId": "c201df69-7490-40c3-aa7f-aef4254cb1ee",
+      "canReceiveFiles": true
+      "scopes": [
+        "team",
+        "personal"
+      ]
+    }
+  ],
 }
 ```
