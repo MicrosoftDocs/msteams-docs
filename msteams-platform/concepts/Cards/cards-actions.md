@@ -68,7 +68,7 @@ The `value` property can be either a serialized JSON string or a JSON object.
 
 ### Inbound message example
 
-`replyToId` contains the ID of the specific message.
+`replyToId` contains the ID of the message that the card action came from. Use it if you want to update the message.
 
 ```json
 {
@@ -163,7 +163,7 @@ var button = new CardAction()
 
 ### Example: Incoming invoke message
 
-`replyToId` contains the ID of the specific message.
+`replyToId` contains the ID of the message that the card action came from. Use it if you want to update the message.
 
 ```json
 {
