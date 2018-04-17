@@ -4,7 +4,6 @@ description: Describes how to send and receive files from a bot
 keywords: teams bots files send receive
 ms.date: 04/17/2018
 ---
-
 # Send and receive files through your bot
 
 >**Note:** This feature is currently available in Developer Preview.
@@ -16,6 +15,7 @@ Your bot can send and receive files with users in the personal (1:1) context. Yo
 One way of doing this is using the Microsoft Graph APIs for OneDrive and SharePoint, [as documented here](https://docs.microsoft.com/en-us/onedrive/developer/rest-api/). This method requires obtaining ongoing access to the user's OneDrive folder through standard OAuth2 authorization flow. This documentation describes a simple alternative mechanism if you only need to send file content as a result of direct user interaction, e.g. sending a message. This API is provided as part of the Microsoft Teams Bot Platform.
 
 ## Receiving files in 1:1 chat
+
 When a user sends a file to your bot, the file is first uploaded to the user's OneDrive for Business storage. Your bot will then receive a message activity notifying you of the user upload. The activity will contain file metadata, such as its name and the content URL, and the content URL's expiry time (e.g. 24 hours). You can directly read from this URL to fetch its binary content.
 
 ### Message activity with file attachment example
