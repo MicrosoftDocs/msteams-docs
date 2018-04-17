@@ -10,16 +10,16 @@ This table lists changes to the Teams programming environment and this document 
 
 | **Date** | **Notes** | **Changed topics** |
 | - | - | - |
-| 04/17/2018 | replyToID has been added to the payload for the `Invoke` and `MessageBack` card actions. This is especially useful if you need to update the message that the card action came from| [Card actions](~/concepts/cards/cards-actions)|
-| 04/12/2018 | Added this topic to track changes to the Teams programming interface and this documentation set | [What's new](~/whats-new)|
+| 04/17/2018 | replyToID has been added to the payload for the `Invoke` and `MessageBack` card actions. This is especially useful if you need to update the message that the card action came from. | [Card actions](~/concepts/cards/cards-actions)|
+| 04/12/2018 | Added this topic to track changes to the Teams programming interface and this documentation set. | [What's new](~/whats-new)|
 | 04/10/2018 | Changed authentication URLs to consistently use the tenant ID in the path. | [Authentication flow for Tabs](~/concepts/authentication/auth-flow-tab), [AAD Tab authentication](~/concepts/authentication/auth-tab-AAD)|
-| 04/06/2018 | Added design guidelines for using the Command Box |[Command box](~/resources/design/framework/command-box)|
-| 04/02/2018 |Using bots to send notifications for your app |[Notification-only bots](~/concepts/bots/bots-notification-only)|
-| 03/27/2018 | Expanded documentation for proactive messaging |[Starting a conversation](./concepts/bots/bot-conversations/bots-conv-proactive)|
-|03/15/2018 | Refactored documentation for cards |[Cards](~/concepts/cards/cards), [Card actions](~/concepts/cards/cards-actions), [Card formatting](~/concepts/cards/cards-format), [Card reference](~/concepts/cards/cards-reference)|
-|03/03/2018 | Added documentation for Teams App Studio |[Quickly develop apps with Teams App Studio](~/get-started/get-started-app-studio), [Using the control library in App Studio](~/get-started/app-studio-component-library)|
-|02/27/2018 | Added sample code to demonstrate AsTeamsChannelAccounts() method |[Get context for your bot](~/concepts/bots/bots-context)|
-|02/05/2018 | Added topics for getting started using C# |[Get started on the Microsoft Teams platform with C#/.NET](./get-started/get-started-dotnet)|
+| 04/06/2018 | Added design guidelines for using the Command Box. |[Command box](~/resources/design/framework/command-box)|
+| 04/02/2018 |Using bots to send notifications for your app. |[Notification-only bots](~/concepts/bots/bots-notification-only)|
+| 03/27/2018 | Expanded documentation for proactive messaging. |[Starting a conversation](./concepts/bots/bot-conversations/bots-conv-proactive)|
+|03/15/2018 | Refactored documentation for cards. |[Cards](~/concepts/cards/cards), [Card actions](~/concepts/cards/cards-actions), [Card formatting](~/concepts/cards/cards-format), [Card reference](~/concepts/cards/cards-reference)|
+|03/03/2018 | Added documentation for Teams App Studio. |[Quickly develop apps with Teams App Studio](~/get-started/get-started-app-studio), [Using the control library in App Studio](~/get-started/app-studio-component-library)|
+|02/27/2018 | Added sample code to demonstrate AsTeamsChannelAccounts() method. |[Get context for your bot](~/concepts/bots/bots-context)|
+|02/05/2018 | Added topics for getting started using C#. |[Get started on the Microsoft Teams platform with C#/.NET](./get-started/get-started-dotnet)|
 ||||
 
 ## Submit your questions, bugs, feature requests, and contributions
