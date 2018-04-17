@@ -6,7 +6,7 @@ ms.date: 04/12/2018
 ---
 # What's new for developers in Microsoft Teams
 
-This table lists changes to the Teams programming environment and this document set. At times entries may be used to call attention to a new feature that is simply of interest to teams developers.
+The change log lists changes to the Teams programming environment and this document set. At times entries may be used to call attention to a new feature that is simply of interest to teams developers.
 
 ## Change Log
 
