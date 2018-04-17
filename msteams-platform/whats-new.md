@@ -8,6 +8,8 @@ ms.date: 04/12/2018
 
 This table lists changes to the Teams programming environment and this document set. At times entries may be used to call attention to a new feature that is simply of interest to teams developers.
 
+## Change Log
+
 | **Date** | **Notes** | **Changed topics** |
 | - | - | - |
 | 04/17/2018 | replyToID has been added to the payload for the `Invoke` and `MessageBack` card actions. This is especially useful if you need to update the message that the card action came from. | [Card actions](~/concepts/cards/cards-actions)|
