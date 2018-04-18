@@ -2,7 +2,7 @@
 title: Add card actions in a bot
 description: Describes card actions in Microsoft Teams and how to use them in your bots
 keywords: teams bots cards actions
-ms.date: 03/29/2018
+ms.date: 04/16/2018
 ---
 # Card actions
 
@@ -68,6 +68,8 @@ The `value` property can be either a serialized JSON string or a JSON object.
 
 ### Inbound message example
 
+`replyToId` contains the ID of the message that the card action came from. Use it if you want to update the message.
+
 ```json
 {
    "text":"User just clicked the MessageBack button",
@@ -108,7 +110,8 @@ The `value` property can be either a serialized JSON string or a JSON object.
       "tenant":{
          "id":"bec8e231-67ad-484e-87f4-3e5438390a77"
       }
-   }
+   },
+    "replyToId": "1:19uJ8TZA1cZcms7-2HLOW3pWRF4nSWEoVnRqc0DPa_kY"
 }
 ```
 
@@ -139,8 +142,8 @@ The `value` field will contain a stringified JSON object.  You can include ident
 {
     "type": "invoke",
     "title": "Option 1",
-    "value": { 
-        "option": "opt1" 
+    "value": {
+        "option": "opt1"
     } 
 }
 ```
@@ -160,6 +163,8 @@ var button = new CardAction()
 
 ### Example: Incoming invoke message
 
+`replyToId` contains the ID of the message that the card action came from. Use it if you want to update the message.
+
 ```json
 {
     "type": "invoke",
@@ -174,7 +179,7 @@ var button = new CardAction()
     "from": {
         "id": "29:1Eniglq0-uVL83xNB9GU6w_G5a4SZF0gcJLprZzhtEbel21G_5h-
     NgoprRw45mP0AXUIZVeqrsIHSYV4ntgfVJQ",
-        "name": "Richard Moe"
+        "name": "John Doe"
     },
     "conversation": {
         "id": "19:97b1ec61-45bf-453c-9059-6e8984e0cef4_8d88f59b-ae61-4300-bec0-caace7d28446@unq.gbl.spaces"
@@ -192,19 +197,20 @@ var button = new CardAction()
         }
     ],
     "channelData": {
-        "channel": { 
-            "id": "19:dc5ba12695be4eb7bf457cad6b4709eb@thread.skype" 
+        "channel": {
+            "id": "19:dc5ba12695be4eb7bf457cad6b4709eb@thread.skype"
         },
-        "team": { 
-            "id": "19:712c61d0ef384e5fa681ba90ca943398@thread.skype" 
+        "team": {
+            "id": "19:712c61d0ef384e5fa681ba90ca943398@thread.skype"
         },
-        "tenant": { 
-            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47" 
+        "tenant": {
+            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
         }
-    }
+    },
+    "replyToId": "1:19uJ8TZA1cZcms7-2HLOW3pWRF4nSWEoVnRqc0DPa_kY"
 }
 ```
 
-## signin 
+## signin
 
 Initiates OAuth flow, allowing bots to connect with secure services, as described in more detail here: [Authentication flow in bots](~/concepts/authentication/auth-flow-bot).
