@@ -28,11 +28,12 @@ All tab content, including configuration, content, and tab-removal pages must me
 
 ### Universal links for mobile clients
 
-You should ensure that the tab can handle universal link support for iOS and Android devices. Teams on iOS and Android \ will simply open the tab link in default browser.
+You should ensure that the tab can handle universal link support for iOS and Android devices. Teams on iOS and Android will simply open the tab link in default browser.
 
 Information on universal links:
-[iOS](https://developer.apple.com/ios/universal-links/)
-[Android](https://developer.android.com/training/app-links/index.html)
+
+* [iOS](https://developer.apple.com/ios/universal-links/)
+* [Android](https://developer.android.com/training/app-links/index.html)
 
 If you have a native app you should open the tab content in your native app. If the user does not have the native app installed on their device you can prompt them to install it.
 
