@@ -28,24 +28,24 @@ All tab content, including configuration, content, and tab-removal pages must me
 
 ### Universal links for mobile clients
 
-You should ensure that the tab can handle universal link support for iOS and Android devices. Teams on iOS and Android devices would simply open the tab link in default browser.
+You should ensure that the tab can handle universal link support for iOS and Android devices. Teams on iOS and Android \ will simply open the tab link in default browser.
 
 Information on universal links:
 [iOS](https://developer.apple.com/ios/universal-links/)
 [Android](https://developer.android.com/training/app-links/index.html)
 
-If you have a native app you should open the tab content in your native app. If the user does not have the native app installed on their device you can prompt to install the native app.
+If you have a native app you should open the tab content in your native app. If the user does not have the native app installed on their device you can prompt them to install it.
 
-If the deep link fails, open the web experience. Try the following order:
+If the deep link fails, open the web experience. Handle failure in the following order:
 
 1. App deep link to tab content
-2. Web deep link to tab content with native app install prompt if not installed.
-3. Web site if not deep link with native app install prompt if app not installed.
+2. Web deep link to tab content with native app.  Prompt the user if not installed.
+3. Web site if not deep link with native app.   Prompt the user if not installed.
 4. Website link.
 5. No link.
 6. Handle broken links.
 
-Mobile clients should hide the tabs that have no link since the link is not required.
+A link is not required, so mobile clients should hide the tabs that have no link.
 
 ## Media format support for audio and video content
 
