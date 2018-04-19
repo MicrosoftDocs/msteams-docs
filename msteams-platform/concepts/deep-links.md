@@ -2,9 +2,8 @@
 title: Create deep links
 description: Describes deep links and how to use them in your apps
 keywords: teams deep link deeplink
-ms.date: 04/04/2018
+ms.date: 04/19/2018
 ---
-
 # Create deep links to a Microsoft Teams tab
 
 To every tab, Microsoft Teams adds a **Copy link to tab** menu item. This generates a deep link that points to this tab, which users can share. This deep link is in a different format than one you can generate yourself. This topic will describe this second type of deep link.
@@ -46,7 +45,7 @@ The query parameters are:
     * `channelId`&emsp;The Microsoft Teams channel ID (available from the tab [context](~/concepts/tabs/tabs-context)); for example, "19:cbe3683f25094106b826c9cada3afbe0@thread.skype". This property is only available in configurable tabs with a scope of "team". It is not available in static tabs, which have a scope of "personal".
 
 > [!IMPORTANT]
-> Ensure that `appId`, `entityId`, `entityWebUrl`, `subEntityWebUrl`, `entityLabel`, `subEntityLabel`, and `context` are all URI encoded.
+> Ensure that the entire URL is URI encoded.
 >
 > [!NOTE]
 > `canvasUrl` is required but isn't currently used; it is reserved for future use.
