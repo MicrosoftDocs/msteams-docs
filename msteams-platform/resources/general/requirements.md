@@ -3,7 +3,9 @@ title: Requirements for tab pages
 description: Requirements for building tab pages in Microsoft Teams
 keywords: teams requirements prerequisites tabs apps
 ---
-# Requirements for tab pages in Microsoft Teams
+# Requirements
+
+## Tab pages in Microsoft Teams
 
 All tab content, including configuration, content, and tab-removal pages must meet the following requirements:
 
@@ -23,6 +25,27 @@ All tab content, including configuration, content, and tab-removal pages must me
 >
 > [!TIP]
 > For developers using TypeScript, Microsoft Teams provides a [definition file](https://statics.teams.microsoft.com/sdk/v1.0/types/MicrosoftTeams.d.ts) to enable IntelliSense or similar support from your code editor as well as compile-time type checking as part of your build.
+
+### Universal links for mobile clients
+
+You should ensure that the tab can handle universal link support for iOS and Android devices. Teams on iOS and Android devices would simply open the tab link in default browser.
+
+Information on universal links:
+[iOS](https://developer.apple.com/ios/universal-links/)
+[Android](https://developer.android.com/training/app-links/index.html)
+
+If you have a native app you should open the tab content in your native app. If the user does not have the native app installed on their device you can prompt to install the native app.
+
+If the deep link fails, open the web experience. Try the following order:
+
+1. App deep link to tab content
+2. Web deep link to tab content with native app install prompt if not installed.
+3. Web site if not deep link with native app install prompt if app not installed.
+4. Website link.
+5. No link.
+6. Handle broken links.
+
+Mobile clients should hide the tabs that have no link since the link is not required.
 
 ## Media format support for audio and video content
 
