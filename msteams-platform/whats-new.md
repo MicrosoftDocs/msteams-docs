@@ -8,7 +8,7 @@ ms.date: 04/17/2018
 
 ## Change Log
 
-The change log lists changes to the Teams programming environment and this document set. At times entries may be used to call attention to a new feature that is simply of interest to teams developers.
+The change log lists changes to the Microsoft Teams platform and this document set. At times entries may be used to call attention to a new feature that is simply of interest to Teams developers.
 
 | **Date** | **Notes** | **Changed topics** |
 | - | - | - |
