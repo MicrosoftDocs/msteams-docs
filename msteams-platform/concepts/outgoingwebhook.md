@@ -262,7 +262,7 @@ Your outgoing webhook will need to reply asynchronously to the HTTP request from
 ## Limitations
 
 * Outgoing webhooks do not have access to non-messaging APIs, such as team roster membership.
-* Outgoing webhooks cannot post into channels asynchronously; that is, not as a reply to a user message.
+* Outgoing webhooks cannot post into channels asynchronously; that is, only as a reply to a user message.
 * Although outgoing webhooks can use cards, they cannot leverage button actions like `imBack` or `invoke`.
 
 ## Samples for Outgoing webhook
