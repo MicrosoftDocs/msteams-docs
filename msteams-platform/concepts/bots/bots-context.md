@@ -96,7 +96,7 @@ The following example uses the [Microsoft Teams extensions for the Bot Builder S
 ```js
 var conversationId = session.message.address.conversation.id;
   connector.fetchMembers(
-    (<builder.IChatConnectorAddress>session.message.address).serviceUrl,
+    (session.message.address).serviceUrl,
     conversationId,
     (err, result) => {
       if (err) {
