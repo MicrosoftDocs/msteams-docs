@@ -46,7 +46,7 @@ If the deep link fails, open the web experience. Handle failure in the following
 5. No link.
 6. Handle broken links.
 
-A link is not required, so mobile clients should hide the tabs that have no link.
+A link is not required, so mobile clients should hide tabs that have no link.
 
 ## Media format support for audio and video content
 
