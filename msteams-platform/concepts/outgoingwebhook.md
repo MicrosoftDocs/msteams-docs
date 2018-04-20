@@ -247,9 +247,9 @@ Your code should always verify the HMAC signature included in the request:
 
 Responses from your outgoing webhook will appear in the same reply chain as the original message. You can send a response message that takes advantage of any of the Bot Framework’s activities, including cards and image attachments.
 
-Your outgoing webhook will need to respond to the HTTP request from Microsoft Teams. It will have 5 seconds to reply to the message before the connection is terminated.
+Your outgoing webhook will need to respond to the HTTP request from Microsoft Teams. It will have 5 seconds to respond to the message before the connection is terminated.
 
-#### Example reply message
+#### Example response
 
 ```json
 {
@@ -268,7 +268,7 @@ Your outgoing webhook will need to respond to the HTTP request from Microsoft Te
 
 For sample code illustrating an outgoing webhook, see these samples on GitHub:
 
-### Node JS
+### Node.js
 [OfficeDev/msteams-samples-outgoing-webhook-nodejs](https://github.com/OfficeDev/msteams-samples-outgoing-webhook-nodejs)
 
 ### C#
