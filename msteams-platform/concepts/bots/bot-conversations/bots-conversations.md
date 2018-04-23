@@ -276,7 +276,7 @@ See also [Proactive messaging for bots](~/concepts/bots/bot-conversations/bots-c
 
 Messages can be deleted using the connectors [`delete()`](https://docs.botframework.com/en-us/node/builder/chat-reference/interfaces/_botbuilder_d_.iconnector.html#delete) method in the [BotBuilder SDK](https://docs.microsoft.com/en-us/bot-framework/bot-builder-overview-getstarted).
 
-```TypeScript
+```typescript
 bot.dialog('BotDeleteMessage', function (session: builder.Session) {
   var msg = new teams.TeamsMessage(session).text("Bot will delete this message in 5 sec.")
   bot.send(msg, function (err, response) {

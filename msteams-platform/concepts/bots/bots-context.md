@@ -89,11 +89,16 @@ await context.PostAsync($"People in this conversation: {sb.ToString()}");
 >}
 >```
 
-#### Node.js example
+#### Node.js/TypeScript example
 
 The following example uses the [Microsoft Teams extensions for the Bot Builder SDK for Node.js](https://www.npmjs.com/package/botbuilder-teams).
 
-```js
+```typescript
+
+[...]
+import * as builder from "botbuilder";
+[...]
+
 var conversationId = session.message.address.conversation.id;
   connector.fetchMembers(
     (<builder.IChatConnectorAddress>session.message.address).serviceUrl,
@@ -121,7 +126,7 @@ Your bot can query the list of channels in a team.
 
 > [!NOTE]
 >* Currently, the name of the default General channel is returned as `null` to allow for localization.
->* The channel ID for the General channel always matchs the team ID.
+>* The channel ID for the General channel always matches the team ID.
 
 #### REST API example
 
