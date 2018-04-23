@@ -26,7 +26,7 @@ Authentication flow should be triggered by a user action. You should not open th
 
 Add UI to the bot to enable the user to sign in when needed. Here it is done from a Thumbnail card, in TypeScript:
 
-```TypeScript
+```typescript
 // Show prompt of options
 protected async promptForAction(session: builder.Session): Promise<void> {
     let msg = new builder.Message(session)
@@ -61,7 +61,7 @@ Be sure to add the domain of your authentication redirect URL to the [`validDoma
 
 Although getting an access token is difficult because of all the transitions back and forth across different websites and the security issues that must be addressed, once you have a token, obtaining information from Azure Active Directory is straightforward. The bot makes a call to the `me` Graph endpoint with the access token. Graph responds with the user information for the person who logged in. Information from the response is used to construct a bot card and sent.
 
-```TypeScript
+```typescript
 // Show user profile
 protected async showUserProfile(session: builder.Session): Promise<void> {
     let azureADApi = this.authProvider as AzureADv1Provider;
@@ -98,7 +98,7 @@ If the user is not signed in they are prompted to do so.
 
 ## Sign the user out
 
-```TypeScript
+```typescript
 // Handle user logout request
 private async handleLogout(session: builder.Session): Promise<void> {
     if (!utils.getUserToken(session, this.providerName)) {
