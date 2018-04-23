@@ -89,11 +89,11 @@ await context.PostAsync($"People in this conversation: {sb.ToString()}");
 >}
 >```
 
-#### Node.js example
+#### Node.js/typescript example
 
 The following example uses the [Microsoft Teams extensions for the Bot Builder SDK for Node.js](https://www.npmjs.com/package/botbuilder-teams).
 
-```js
+```TypeScript
 var conversationId = session.message.address.conversation.id;
   connector.fetchMembers(
     (<builder.IChatConnectorAddress>session.message.address).serviceUrl,
