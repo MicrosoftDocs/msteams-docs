@@ -126,7 +126,7 @@
   href: ./resources/resource-overview
   items:
   - name: General
-    href: .general/general-overview
+    href: ./resources/general/general-overview
     items:
     - name: Requirements
       href: ./resources/general/requirements
