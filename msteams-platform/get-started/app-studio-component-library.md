@@ -101,7 +101,7 @@ How the current theme is retrieved and how to respond to theme changes is discus
 
 This sample code shows how this is done.
 
-```JS
+```js
 componentWillMount() {
     // If you are deploying your site as a MS Teams static or configurable tab,
     // you should add “?theme={theme}” to your tabs URL in the manifest.

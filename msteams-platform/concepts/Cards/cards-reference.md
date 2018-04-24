@@ -75,7 +75,7 @@ A card that typically contains a single large image, one or more buttons, and te
 
 #### Example
 
-```JSON
+```json
 {
   "contentType": "application/vnd.microsoft.card.hero",
   "content": {
@@ -145,7 +145,7 @@ The list card has been added by Teams to provide functions beyond what the list 
 
 #### Example
 
-```JSON
+```json
 {
   "contentType": "application/vnd.microsoft.teams.card.list",
   "content": {
@@ -256,7 +256,7 @@ For all other details about Connector card properties, see the [Actionable messa
 
 #### Example
 
-```JSON
+```json
 {
     "@type": "MessageCard",
     "@context": "http://schema.org/extensions",
@@ -392,7 +392,7 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 
 #### JSON Example
 
-```JSON
+```json
 {
   "contentType": "application/vnd.microsoft.card.thumbnail",
   "content": {
