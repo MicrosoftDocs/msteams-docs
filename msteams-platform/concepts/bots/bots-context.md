@@ -4,7 +4,6 @@ description: Describes how to get context for bots in Microsoft Teams
 keywords: teams bots context
 ms.date: 02/27/2018
 ---
-
 # Get context for your Microsoft Teams bot
 
 Your bot can access additional context about the team or chat, such as user profile. This information can be used to enrich your bot's functionality and provide a more personalized experience.
@@ -71,7 +70,7 @@ foreach (var member in members)
     sb.AppendFormat(
         "GivenName = {0}, TeamsMemberId = {1}",
         member.Name, member.Id);
-    
+
     sb.AppendLine();
 }
 
