@@ -45,7 +45,7 @@ Include the ADAL.js library in your tab pages and configure ADAL with your clien
 
 In the tab's content page Call `microsoftTeams.getContext()` to get the current user's UPN. Note that you won't be relying on the value reported in the context to log in. It will be used simply as a login_hint in the call to Azure AD.
 
-```js
+```javascript
 // Set up extra query parameters for ADAL
 // - openid and profile scope adds profile information to the id_token
 // - login_hint provides the expected user name
@@ -62,7 +62,7 @@ If ADAL has an unexpired token cached for the user, use that. Otherwise, attempt
 
 If you get an error in the callback function, show a login button and fall back to an explicit login.
 
-```js
+```javascript
 let authContext = new AuthenticationContext(config); // from the ADAL.js library
 // See if there's a cached user and it matches the expected user
 let user = authContext.getCachedUser();
@@ -99,7 +99,7 @@ Let ADAL.js take care of parsing the result from Azure AD by calling `Authentica
 
 Check that we have a valid user and call `microsoftTeams.authentication.notifySuccess()` or `microsoftTeams.authentication.notifyFailure()` to report status back to your main tab content page.
 
-```js
+```javascript
 if (authContext.isCallback(window.location.hash)) {
   authContext.handleWindowCallback(window.location.hash);
   if (authContext.getCachedUser()) {

@@ -522,7 +522,7 @@ The [Teams extensions](https://www.npmjs.com/package/botbuilder-teams) for the B
 
 #### Example code
 
-```js
+```javascript
 require('dotenv').config();
 
 import * as restify from 'restify';

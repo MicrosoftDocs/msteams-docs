@@ -243,7 +243,7 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 
 You can use the `session.connector.update` method in the Bot Builder SDK to update an existing message.
 
-```js
+```javascript
 function sendCardUpdate(bot, session, originalMessage, address) {
 
   var origAttachment = originalMessage.data.attachments[0];
