@@ -2,7 +2,7 @@
 title: Requirements for tab pages in Microsoft Teams
 description: Requirements for tab pages in Microsoft Teams
 keywords: teams formats links
-ms.date: 04/19/2018
+ms.date: 04/25/2018
 ---
 # Requirements for tab pages in Microsoft Teams
 
@@ -27,22 +27,11 @@ All tab content, including configuration, content, and tab-removal pages must me
 
 ## Links for mobile clients
 
-You should ensure that your tab supports the Apple *universal link* and the Android *app link*. Teams on iOS and Android will simply open the tab link in default browser.
+The mobile client for Teams on iOS and Android will render tabs using the native browser. If you have a native app and would like to render the tab in that native app, you should ensure that your tab supports the Apple *universal link* and the Android *app link*.
 
 Information on universal links:
 
 * [iOS universal links](https://developer.apple.com/ios/universal-links/)
 * [Android app links](https://developer.android.com/training/app-links/index.html)
 
-If you have a native app you should open the tab content in your native app. If the user does not have the native app installed on their device you can prompt them to install it.
-
-If the deep link fails, open the web experience. Handle failure in the following order:
-
-1. App deep link to tab content
-2. Web deep link to tab content with native app.  Prompt the user if not installed.
-3. Web site if not deep link with native app.   Prompt the user if not installed.
-4. Website link.
-5. No link.
-6. Handle broken links.
-
-A link is not required. Teams mobile clients do not show tabs that have no link.
+Note that a link is not required, but the Teams mobile clients do not show tabs that have no link.
