@@ -27,7 +27,7 @@ All tab content, including configuration, content, and tab-removal pages must me
 
 ## Links for mobile clients
 
-The mobile client for Teams on iOS and Android will render tabs using the native browser. If you have a native app and would like to render the tab in that native app, you should ensure that your tab supports the Apple *universal link* and the Android *app link*.
+The mobile client for Teams on iOS and Android will render tabs using the native browser. If you have a native app and would like to render the tab in that native app, you should ensure that your tab supports Apple *universal links* and Android *app links*.
 
 Information on universal links:
 
