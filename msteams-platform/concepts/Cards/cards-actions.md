@@ -134,7 +134,7 @@ The `value` field should contain the text string echoed in the chat and therefor
 > [!NOTE]
 > We recommend that you use `messageBack` instead of `invoke`. While `invoke` can be used directly, it is designed to be used indirectly. For example, `invoke` is used to send character-by-character keystrokes for [compose extensions](~/concepts/messaging-extensions.md).
 
-The `invoke` message type silently sends a JSON payload that you define to your bot.  This is useful if you want to send more detailed information back to your bot without having to send via a simple `imBack` text string.  Note that the user, in 1:1 or in channel, sees no notification as a result of their click.
+The `invoke` message type silently sends a JSON payload that you define to your bot.  This is useful if you want to send more detailed information back to your bot without having to send via a simple `imBack` text string.  Note that the user, in personal or channel chat, sees no notification as a result of their click.
 
 The `value` field will contain a stringified JSON object.  You can include identifiers or any other context necessary to carry out the operation.
 

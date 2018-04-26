@@ -52,7 +52,7 @@
     - name: Conversations
       href: ./concepts/bots/bot-conversations/bots-conversations
       items:
-      - name: 1-on-1 conversations with bots
+      - name: Personal conversations with bots
         href: ./concepts/bots/bot-conversations/bots-conv-personal
       - name: Channel conversations with bots
         href: ./concepts/bots/bot-conversations/bots-conv-channel
@@ -118,7 +118,7 @@
 - name: Scenarios
   href: ./scenarios/scenarios
   items:
-  - name: 1-on-1 conversations with bots
+  - name: Personal conversations with bots
     href: ./concepts/bots/bot-conversations/bots-conv-personal
   - name: Channel conversations with bots
     href: ./concepts/bots/bot-conversations/bots-conv-channel
