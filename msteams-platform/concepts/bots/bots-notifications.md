@@ -2,8 +2,8 @@
 title: Handle bot events
 description: Describes how to handle events in bots for Microsoft Teams
 keywords: teams bots events
+ms.date: 04/26/2018
 ---
-
 # Handle bot events in Microsoft Teams
 
 Microsoft Teams sends notifications to your bot for changes or events that happen in contexts where your bot is active. You can use these events to trigger service logic, such as the following:
@@ -33,6 +33,18 @@ The following table lists the events that your bot can receive and take action o
 | _`contactRelationUpdate`_ | | | This [Bot Framework–provided activity type](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-activities#contactrelationupdate) is not directly supported in Microsoft Teams |
 | _`deleteUserData`_ | | | This [Bot Framework–provided activity type](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-activities#deleteuserdata) is not directly supported in Microsoft Teams |
 
+## New event support in the Developer preview
+
+The [Developer preview](`/resources/dev-preview/developer-preview-overview) includes support for the following events to support bots in group chat. These events are limited to the developer preview and may change before they are released publicly.
+
+|Type|Payload object|Teams eventType |Description|
+|---|---|---|---|
+| `conversationUpdate` |`membersAdded`|`teamMemberAdded` |Bot or user was added to the group |
+| `conversationUpdate` |`membersRemoved`| `teamMemberRemoved`|Bot or user was removed from group |
+| `conversationUpdate` | |`botAdded`| [Bot was added to the group] |
+| `message` | |`message`| |
+| `MessageReaction` | `likeAdded` | |
+
 ## Team member or bot addition
 
 The [`conversationUpdate`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-activities#conversationupdate) event is sent to your bot when it receives information on membership updates for teams where it has been added. It also receives an update when it has been added for the first time specifically for personal conversations. Note that the user information (`Id`) is unique for your bot and can be cached for future use by your service (such as sending a message to a specific user).
@@ -43,7 +55,7 @@ The `conversationUpdate` event with the `membersAdded` object in the payload is 
 
 Because this event is sent in both cases, you should parse the `membersAdded` object to determine whether the addition was a user or the bot itself. For the latter, a best practice is to send a [welcome message](~/concepts/bots/bot-conversations/bots-conv-channel#best-practice-welcome-messages-in-teams) to the channel so users can understand the features your bot provides.
 
-#### Example code: Checking whether bot was the added member 
+#### Example code: Checking whether bot was the added member
 
 ##### .NET
 
@@ -86,39 +98,39 @@ bot.on('conversationUpdate', (msg) => {
 #### Schema example: Bot added to team
 
 ```json
-{     
-    "membersAdded": [         
-        {             
+{
+    "membersAdded": [
+        {
             "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0"
-        }     
-    ],     
+        }
+    ],
     "type": "conversationUpdate",
     "timestamp": "2017-02-23T19:38:35.312Z",
     "localTimestamp": "2017-02-23T12:38:35.312-07:00",
-    "id": "f:5f85c2ad",     
-    "channelId": "msteams",     
-    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",     
+    "id": "f:5f85c2ad",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
     "from": {
         "id": "29:1I9Is_Sx0OIy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA"
-    },     
-    "conversation": {         
-        "isGroup": true,         
-        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"     
-    },     
-    "recipient": {         
-        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",         
-        "name": "SongsuggesterBot"     
-    },     
-    "channelData": {         
-        "team": {             
-            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"         
-        },         
-        "eventType": "teamMemberAdded",         
-        "tenant": {             
-            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"         
-        }     
-    } 
-} 
+    },
+    "conversation": {
+        "isGroup": true,
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+    },
+    "recipient": {
+        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+        "name": "SongsuggesterBot"
+    },
+    "channelData": {
+        "team": {
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+        },
+        "eventType": "teamMemberAdded",
+        "tenant": {
+            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+    }
+}
 ```
 
 ### Bot added for personal context only
@@ -132,41 +144,41 @@ The `conversationUpdate` event with the `membersRemoved` object in the payload i
 #### Schema example: Team member removed
 
 ```json
-{     
-    "membersRemoved": [         
-        {             
-            "id": "29:1_LCi5Up14pAy65yZuaJzG1uIT7ujYhjjSTsUNqjORsZHjLHKiQIBJa4cX2XsAsRoaY7va2w6ZymA9-1VtSY_g"         
-        }     
-    ],     
-    "type": "conversationUpdate",     
+{
+    "membersRemoved": [
+        {
+            "id": "29:1_LCi5Up14pAy65yZuaJzG1uIT7ujYhjjSTsUNqjORsZHjLHKiQIBJa4cX2XsAsRoaY7va2w6ZymA9-1VtSY_g"
+        }
+    ],
+    "type": "conversationUpdate",
     "timestamp": "2017-02-23T19:37:06.96Z",
     "localTimestamp": "2017-02-23T12:37:06.96-07:00",
-    "id": "f:d8a6a4aa",     
-    "channelId": "msteams",     
-    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",     
-    "from": {         
-        "id": "29:1I9Is_Sx0OIy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA"     
-    },     
-    "conversation": {         
-        "isGroup": true,         
-        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"     
-    },     
-    "recipient": 
-    {         
-        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",         
-        "name": "SongsuggesterBot"     
-    },     
-    "channelData": {         
-        "team": {             
-            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"         
-        },         
-        "eventType": "teamMemberRemoved",         
-        "tenant": {             
-            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"         
-        }     
-    } 
+    "id": "f:d8a6a4aa",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+    "from": {
+        "id": "29:1I9Is_Sx0OIy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA"
+    },
+    "conversation": {
+        "isGroup": true,
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+    },
+    "recipient":
+    {
+        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+        "name": "SongsuggesterBot"
+    },
+    "channelData": {
+        "team": {
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+        },
+        "eventType": "teamMemberRemoved",
+        "tenant": {
+            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+    }
 }
-``` 
+```
 
 ## Team name updates
 
