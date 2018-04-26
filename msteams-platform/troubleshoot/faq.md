@@ -24,9 +24,9 @@ We also provide Teams-specific .NET and Node.js [extensions for the Bot Builder 
 
 ## Bots
 
-### How can my bot access the ID of a user in a 1:1 chat?
+### How can my bot access the ID of a user in personal chat?
 
-To can obtain the profile information of the user who is chatting with your bot, see [Fetching user profile in 1:1 chat](~/concepts/bots/bots-context#fetching-user-profile-in-11-chat). (The process is almost identical to [Fetching the team roster](~/concepts/bots/bots-context#fetching-the-team-roster).)
+To can obtain the profile information of the user who is chatting with your bot, see [Fetching user profile in personal chat](~/concepts/bots/bots-context#fetching-user-profile-in-11-chat). (The process is almost identical to [Fetching the team roster](~/concepts/bots/bots-context#fetching-the-team-roster).)
 
 ### How can my bot access or listen to all messages in a channel?
 

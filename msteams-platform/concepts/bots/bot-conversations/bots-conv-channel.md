@@ -8,7 +8,7 @@ ms.date: 03/29/2018
 
 Microsoft Teams allows users to bring bots into their channel conversations.  By adding a bot as a team member, all users of the team can take advantage of the bot functionality right in the channel conversation.  You can also access Teams-specific functionality within your bot like querying team information and @mentioning users.
 
-Chat in channels differs from 1:1 chat in that the user needs to @mention the bot. If a bot is used in both contexts (1:1 and channel) you will need to detect if the the bot is in a channel, and process messages a little differently. This section will describe those differences.
+Chat in channels differs from personal chat in that the user needs to @mention the bot. If a bot is used in both contexts (personal and channel) you will need to detect if the the bot is in a channel, and process messages a little differently. This section will describe those differences.
 
 ## Designing a great bot for channels
 
@@ -19,9 +19,9 @@ Bots added to a team become another team member, who can be @mentioned as part o
 
 A bot in a channel should provide information relevant and appropriate for all members of the team.  While your bot can certainly provide any information relevant to the experience, keep in mind conversations with it are visible to all members of the channel.  Therefore, a great bot in a channel should add value to all users on the channel, and certainly not inadvertently share information that would otherwise be more relevant in a personal context.
 
-Note that depending on your experience, the bot might be entirely relevant in both scopes (1:1 and channel) as is, and in fact, no significant extra work is required to allow your bot to work in both. In Microsoft Teams, there is no expectation that your bot function in all contexts, but you should ensure your bot makes sense, and provides user value, in whichever scope(s) you choose to support. For more information on scopes, see [Apps in Microsoft Teams](~/concepts/apps/apps-overview).
+Note that depending on your experience, the bot might be entirely relevant in both scopes (personal and channel) as is, and in fact, no significant extra work is required to allow your bot to work in both. In Microsoft Teams, there is no expectation that your bot function in all contexts, but you should ensure your bot makes sense, and provides user value, in whichever scope(s) you choose to support. For more information on scopes, see [Apps in Microsoft Teams](~/concepts/apps/apps-overview).
 
-Developing a bot that works in channels uses much of the same functionality from 1:1 conversation. Additional events and data in the payload provide Teams channel information. Those differences, as well as key differences in common functionality are described in the following sections.
+Developing a bot that works in channels uses much of the same functionality from personal conversation. Additional events and data in the payload provide Teams channel information. Those differences, as well as key differences in common functionality are described in the following sections.
 
 ### Receiving messages
 
@@ -44,7 +44,7 @@ Note that replying to a message in a channel shows as a reply to the initiating 
 
 When your bot is first added to the team, it is a best practice to send a welcome message to the team to introduce the bot to all users of the team and tell a bit about its functionality. To do this, ensure that your bot responds to the `conversationUpdate` message, with the `teamsAddMembers` eventType in the `channelData` object. Be sure that the `memberAdded` ID is the bot ID itself, because the same event is sent when a user is added to a team. See [Team member or bot addition](~/concepts/bots/bots-notifications#team-member-or-bot-addition) for more details.
 
-You might also want to send a 1:1 message to each member of the team when the bot is added. To do this, you could [fetch the team roster](~/concepts/bots/bots-context#fetching-the-team-roster) and send each user a [direct message](~/concepts/bots/bot-conversations/bots-conv-personal#starting-a-11-conversation).
+You might also want to send a personal message to each member of the team when the bot is added. To do this, you could [fetch the team roster](~/concepts/bots/bots-context#fetching-the-team-roster) and send each user a [direct message](~/concepts/bots/bot-conversations/bots-conv-personal#starting-a-11-conversation).
 
 We recommend that your bot *not* send a welcome message in the following situations:
 

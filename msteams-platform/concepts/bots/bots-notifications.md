@@ -35,7 +35,7 @@ The following table lists the events that your bot can receive and take action o
 
 ## Team member or bot addition
 
-The [`conversationUpdate`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-activities#conversationupdate) event is sent to your bot when it receives information on membership updates for teams where it has been added. It also receives an update when it has been added for the first time specifically for 1:1 conversations. Note that the user information (`Id`) is unique for your bot and can be cached for future use by your service (such as sending a message to a specific user).
+The [`conversationUpdate`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-activities#conversationupdate) event is sent to your bot when it receives information on membership updates for teams where it has been added. It also receives an update when it has been added for the first time specifically for personal conversations. Note that the user information (`Id`) is unique for your bot and can be cached for future use by your service (such as sending a message to a specific user).
 
 ### Bot or user added to a team
 
@@ -121,9 +121,9 @@ bot.on('conversationUpdate', (msg) => {
 } 
 ```
 
-### Bot added for personal (1:1) context only
+### Bot added for personal context only
 
-Your bot receives a `conversationUpdate` with `membersAdded` when a user adds it directly for 1:1 chat. In this case, the payload that your bot receives doesn't contain the `channelData.team` object. You should use this as a filter in case you want your bot to offer a different [welcome message](~/concepts/bots/bot-conversations/bots-conv-personal#best-practice-welcome-messages-in-11-conversations) depending on scope.
+Your bot receives a `conversationUpdate` with `membersAdded` when a user adds it directly for personal chat. In this case, the payload that your bot receives doesn't contain the `channelData.team` object. You should use this as a filter in case you want your bot to offer a different [welcome message](~/concepts/bots/bot-conversations/bots-conv-personal#best-practice-welcome-messages-in-11-conversations) depending on scope.
 
 ## Team member or bot removed
 

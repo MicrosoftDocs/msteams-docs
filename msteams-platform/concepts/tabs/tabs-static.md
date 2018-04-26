@@ -18,7 +18,7 @@ Content pages in Teams, regardless of scope or type, should follow the guideline
 
 ## Adding your tabbed content to your app package
 
-Define your static tab experience in the [`staticTabs`](~/resources/schema/manifest-schema#statictabs) block of the manifest.  
+Define your static tab experience in the [`staticTabs`](~/resources/schema/manifest-schema#statictabs) block of the manifest.
 
 For more information on creating your app package, see [Create the package for your Microsoft Teams app](~/concepts/apps/apps-package).
 
@@ -45,15 +45,13 @@ For more information on creating your app package, see [Create the package for y
 ⋮
 ```
 
-<!-- TODO get this from sample app -->
-
 The `staticTabs` object allows you to specify one or more tabs, up to 16, with the following required elements:
 
 * `entityId`&emsp;A user-defined ID that uniquely identifies the tab; analogous to the `entityId` used in [deep links](~/concepts/deep-links) to a configurable tab
 * `name`&emsp;The name shown on the tab
 * `contentUrl`&emsp;The content URL to show in the tab
 * `websiteUrl`&emsp;The URL to the full chrome content to display in the default browser
-* `scopes`&emsp;At this point, static tabs are used only in the `personal` context
+* `scopes`&emsp; static tabs are used only in the `personal` context
 
 ## Add static tab URLs to validDomains
 

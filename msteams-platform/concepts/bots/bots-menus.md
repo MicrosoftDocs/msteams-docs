@@ -14,7 +14,7 @@ When a user selects a menu item, the command string is inserted into the text bo
 
 ## App manifest
 
-To create a bot menu, add a new [`commandLists`](~/resources/schema/manifest-schema#bots-commandlists) object to your app manifest under the bot section. You can declare individual menus with separate commands for 1:1 chat (`scopes`: `personal`) and channels (`scopes`: `team`). Each menu supports up to 10 commands.
+To create a bot menu, add a new [`commandLists`](~/resources/schema/manifest-schema#bots-commandlists) object to your app manifest under the bot section. You can declare individual menus with separate commands for chat with a single user (`scopes`: `personal`) and channels (`scopes`: `team`). Each menu supports up to 10 commands.
 
 ### Manifest excerpt - single menu for both scopes
 
@@ -91,7 +91,7 @@ To create a bot menu, add a new [`commandLists`](~/resources/schema/manifest-sch
           "commands":[
             {
             "title":"help",
-            "description":"Displays this help message for 1:1 chat"
+            "description":"Displays this help message for personal chat"
             }
           ]
         }

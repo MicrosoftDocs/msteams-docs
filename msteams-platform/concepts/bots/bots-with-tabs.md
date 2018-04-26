@@ -24,7 +24,7 @@ You may want to use tabs to show more content than can fit inside of a card, or 
 
 Deep links rely on an entityId, which is an opaque value that maps to a unique entity in your system. When the tab is created, you ideally store some simple state (e.g. flag) on your backend indicating the tab has been created in the channel. When your bot constructs a message, it can target the entityId associated with that tab.
 
-**Note:** in 1:1 chats, because tabs are “static” and installed with the app, you can always assume their existence and thus construct deep links accordingly.
+**Note:** in personal chats, because tabs are “static” and installed with the app, you can always assume their existence and thus construct deep links accordingly.
 
 ## Sending notifications for tab updates
 
@@ -34,7 +34,7 @@ There are two ways of achieving this scenario:
 
 1. If you wish to notify an entire channel your bot can asynchronously post a message to the channel. Note that there is currently no way for a bot to proactively create the tab conversation if it wasn't created with the tab.
 
-2. If you wish to only notify the recipient or interested parties involved with the action, your bot can send a 1:1 chat message to the user. You should first check to see if a 1:1 conversation between your bot and the user exists. If not, you can call `CreateConversation` to initiate the 1:1 chat.
+2. If you wish to only notify the recipient or interested parties involved with the action, your bot can send a personal chat message to the user. You should first check to see if a personal conversation between your bot and the user exists. If not, you can call `CreateConversation` to initiate the personal chat.
 
 In both cases, use event notifications wisely and never spam the user with unnecessary updates.
 
@@ -43,4 +43,4 @@ In both cases, use event notifications wisely and never spam the user with unnec
 - Do you support tabs on mobile?
   Microsoft Teams does not currently embed content on our mobile clients – we recommend that you supply a fallback URL in your tab definition such that we can load the appropriate responsive web content on mobile devices.
 - How do I send ephemeral messages to a user?
-  Teams does not currently support the ability for a bot to message a user in a channel such that only a specific user can view the message (everyone sees all messages in a channel). The current workaround is to send a message to the user in 1:1 chat.
+  Teams does not currently support the ability for a bot to message a user in a channel such that only a specific user can view the message (everyone sees all messages in a channel). The current workaround is to send a message to the user in personal chat.

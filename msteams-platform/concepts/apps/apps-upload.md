@@ -11,7 +11,7 @@ To test your app experience within Microsoft Teams, you need to upload your app 
 > [!NOTE]
 > Uploading an updated package for an existing app with a bot might not show tab changes when viewed through the Conversations window. It's better to access it via the Apps fly-out, or test on a clean test environment.
 
-For bots designed only for 1:1 contexts, see [Adding a bot for 1:1 chat only](~/concepts/bots/bots-test#adding-a-bot-for-11-chat-only) for an alternate way to access for testing purposes.
+For bots designed only for personal conversations between a bot and a single user, see [Adding a bot for 1:1 chat only](~/concepts/bots/bots-test#adding-a-bot-for-11-chat-only) for an alternate way to access for testing purposes.
 
 ## Create your upload package
 
