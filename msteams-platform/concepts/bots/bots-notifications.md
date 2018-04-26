@@ -20,7 +20,7 @@ Teams-specific events, usually triggered off the `conversationUpdate` type, have
 
 The following table lists the events that your bot can receive and take action on.
 
-|Type|Payload object|Teams `eventType` |Description|
+|Type|Payload object|Teams eventType |Description|
 |---|---|---|---|
 | `conversationUpdate` |`membersAdded`| `teamMemberAdded`|[Bot or team member was added to team](~/concepts/bots/bots-notifications#team-member-or-bot-addition)|
 | `conversationUpdate` |`membersRemoved`| `teamMemberRemoved`|[Bot or team member was removed from team](~/concepts/bots/bots-notifications#team-member-or-bot-removed)|
