@@ -6,6 +6,8 @@ ms.date: 03/15/2018
 ---
 # Publish your Microsoft Teams app to AppSource
 
+Here’s everything you need to submit your app for approval, including details about the submission process and a checklist of everything you should include in your app manifest.
+
 > [!IMPORTANT]
 > **Your Microsoft Teams app *must* use the [latest schema](~/resources/schema/manifest-schema) and follow [current packaging guidelines](~/concepts/apps/apps-package).**
 >
