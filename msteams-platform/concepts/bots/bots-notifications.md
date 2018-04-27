@@ -41,9 +41,9 @@ The [Developer preview](`/resources/dev-preview/developer-preview-overview) incl
 |---|---|---|---|
 | `conversationUpdate` |`membersAdded`|`teamMemberAdded` |Bot or user was added to the group |
 | `conversationUpdate` |`membersRemoved`| `teamMemberRemoved`|Bot or user was removed from group |
-| `conversationUpdate` | |`botAdded`| [Bot was added to the group] |
-| `message` | |`message`| |
-| `MessageReaction` | `likeAdded` | |
+| `conversationUpdate` |`botAdded`| Bot was added to the group | |
+| `message` |`message` | | |
+| `MessageReaction` | `likeAdded` | | |
 
 ## Team member or bot addition
 
@@ -191,39 +191,39 @@ Your bot is notified when the team it is in has been renamed. It receives a `con
 
 ```json
 { 
-    "type": "conversationUpdate", 
+    "type": "conversationUpdate",
     "timestamp": "2017-02-23T19:35:56.825Z",
     "localTimestamp": "2017-02-23T12:35:56.825-07:00",
-    "id": "f:1406033e", 
-    "channelId": "msteams", 
+    "id": "f:1406033e",
+    "channelId": "msteams",
     "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/", 
     "from": { 
-        "id": "29:1I9Is_Sx0O-Iy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA" 
+        "id": "29:1I9Is_Sx0O-Iy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA"
     }, 
-    "conversation": { 
-        "isGroup": true, 
-        "id": "19:efa9296d959346209fea44151c742e73@thread.skype" 
-    }, 
+    "conversation": {
+        "isGroup": true,
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+    },
     "recipient": { 
-        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0", 
-        "name": "SongsuggesterLocal" 
-    }, 
-    "channelData": { 
-        "team": { 
+        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+        "name": "SongsuggesterLocal"
+    },
+    "channelData": {
+        "team": {
             "id": "19:efa9296d959346209fea44151c742e73@thread.skype", 
-            "name": "New Team Name" 
-        }, 
-        "eventType": "teamRenamed", 
+            "name": "New Team Name"
+        },
+        "eventType": "teamRenamed",
         "tenant": { 
-           "id": "72f988bf-86f1-41af-91ab-2d7cd011db47" 
-        } 
-    } 
-} 
+           "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+    }
+}
 ```
- 
+
 ## Channel updates
 
-Your bot is notified when a channel is created, renamed, or deleted in a team where it has been added. Again, the `conversationUpdate` event is received, and a Teams-specific event identifier is sent as part of the `channelData.eventType` object, where the channel data's  `channel.id` is the GUID for the channel, and `channel.name` contains the channel name itself.  
+Your bot is notified when a channel is created, renamed, or deleted in a team where it has been added. Again, the `conversationUpdate` event is received, and a Teams-specific event identifier is sent as part of the `channelData.eventType` object, where the channel data's  `channel.id` is the GUID for the channel, and `channel.name` contains the channel name itself.
 
 The channel events are as follows:
 
@@ -231,44 +231,44 @@ The channel events are as follows:
 * **channelRenamed**&emsp;A user renames an existing channel
 * **channelDeleted**&emsp;A user removes a channel
 
-#### Full schema example: channelCreated
+### Full schema example: channelCreated
 
 ```json
-{     
-    "type": "conversationUpdate",     
+{
+    "type": "conversationUpdate",
     "timestamp": "2017-02-23T19:34:07.478Z",
     "localTimestamp": "2017-02-23T12:34:07.478-07:00",
-    "id": "f:dd6ec311",     
-    "channelId": "msteams",     
-    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",     
-    "from": {         
-        "id": "29:1wR7IdIRIoerMIWbewMi75JA3scaMuxvFon9eRQW2Nix5loMDo0362st2IaRVRirPZBv1WdXT8TIFWWmlQCizZQ"     
-    },     
-    "conversation": {         
-        "isGroup": true,         
-        "id": "19:efa9296d959346209fea44151c742e73@thread.skype" 
-    },     
-    "recipient": {         
-        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",         
-        "name": "SongsuggesterBot"     
-    },     
-    "channelData": {         
-        "channel": {             
-            "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",             
-            "name": "FunDiscussions"         
-        },         
-        "team": {             
-            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"         
-        },         
-        "eventType": "channelCreated",         
-        "tenant": {             
-            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"         
-        }     
-    } 
-} 
+    "id": "f:dd6ec311",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+    "from": {
+        "id": "29:1wR7IdIRIoerMIWbewMi75JA3scaMuxvFon9eRQW2Nix5loMDo0362st2IaRVRirPZBv1WdXT8TIFWWmlQCizZQ"
+    },
+    "conversation": {
+        "isGroup": true,
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+    },
+    "recipient": {
+        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+        "name": "SongsuggesterBot"
+    },
+    "channelData": {
+        "channel": {
+            "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",
+            "name": "FunDiscussions"
+        },
+        "team": {
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+        },
+        "eventType": "channelCreated",
+        "tenant": {
+            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+    }
+}
 ```
 
-#### Schema excerpt: channelData for channelRenamed
+### Schema excerpt: channelData for channelRenamed
 
 ```json
 ⋮
@@ -288,7 +288,7 @@ The channel events are as follows:
 ⋮
 ```
 
-#### Schema excerpt: channelData for channelDeleted
+### Schema excerpt: channelData for channelDeleted
 
 ```json     
 ⋮
@@ -309,9 +309,11 @@ The channel events are as follows:
 ```
 
 ## Reactions
+
 The `messageReaction` event is sent when a user adds or removes his or her reaction to a message which was originally sent by your bot. `replyToId` contains the ID of the specific message.
 
-#### Schema example: A user likes a message
+### Schema example: A user likes a message
+
 ```json
 {
     "reactionsAdded": [
@@ -351,7 +353,8 @@ The `messageReaction` event is sent when a user adds or removes his or her react
 }
 ```
 
-#### Schema example: A user unlikes a message
+### Schema example: A user unlikes a message
+
 ```json
 {
     "reactionsRemoved": [

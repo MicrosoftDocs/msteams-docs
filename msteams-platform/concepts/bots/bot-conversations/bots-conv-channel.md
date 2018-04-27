@@ -162,10 +162,10 @@ session.send(generalMessage);
         "name": "SchemaTestBot"
     },
     "conversation": {
-        "id": "19:aebd0ad4d6ab42c8b9ed19c251c2fc37@thread.skype;messageid=1481567603816" 
+        "id": "19:aebd0ad4d6ab42c8b9ed19c251c2fc37@thread.skype;messageid=1481567603816"
     },
     "recipient": {
-        "id": "8:orgid:6aebbad0-e5a5-424a-834a-20fb051f3c1a", 
+        "id": "8:orgid:6aebbad0-e5a5-424a-834a-20fb051f3c1a",
         "name": "stlrgload100"
     },
     "attachments": [

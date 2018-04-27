@@ -17,9 +17,9 @@ This feature allows you to:
 
 ### Known issues
 
-If you upload an app with a bot to a chat in Developer Preview and you switch back to the public version, the same chat will have the compose box disabled. To fix this, you need to uninstall the app in group chat.
-Input menus do not currently work with “groupchat” scope.
-Deeplinks into tabs in group chat doesn’t work.
+* If you upload an app with a bot to a chat in Developer Preview and you switch back to the public version, the same chat will have the compose box disabled. To fix this, you need to uninstall the app in group chat.
+* Input menus do not currently work with “groupchat” scope.
+* Deeplinks into tabs in group chat doesn’t work.
 
 See [What is the Public Developer Preview for Microsoft Teams?](~/resources/general/developer-preview) for more information on enabling it for your development tenant.
 
