@@ -2,6 +2,7 @@
 title: Design Guidelines Reference
 description: Describes the guidelines for designing a personal app
 keywords: teams design guidelines reference framework personal apps
+ms.date: 04/30/2018
 --- 
 # Personal apps
 
