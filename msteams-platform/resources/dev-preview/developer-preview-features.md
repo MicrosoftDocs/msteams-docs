@@ -17,7 +17,7 @@ This feature allows you to:
 * Add tabs to group chats
 * Add bots to group chats
 
-To enable this feature use the new scope `groupchat` in the manifest definition for bots and tabs. The [Developer preview manifest](~/resources/manifest/manifest-schema-dev-preview) has been updated to include this feature.
+To enable this feature use the new scope `groupchat` in the manifest definition for bots and tabs. The [Developer preview manifest](~/resources/schema/manifest-schema-dev-preview) has been updated to include this feature.
 
 Scopes now include:
 
@@ -68,7 +68,7 @@ See [Bot notifications](~/concepts/bots/bots-notifications) for more details on 
 
 ### Preview manifest
 
-The [Developer preview manifest](~/resources/manifest/manifest-schema-dev-preview) has been updated to include this feature.
+The [Developer preview manifest](~/resources/schema/manifest-schema-dev-preview) has been updated to include this feature.
 
 
 
