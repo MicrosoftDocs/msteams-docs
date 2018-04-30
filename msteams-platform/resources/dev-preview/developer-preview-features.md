@@ -6,20 +6,71 @@ ms.date: 01/31/2018
 ---
 # Features in the Public Developer Preview for Microsoft Teams
 
-As of 04/26/2018 these are the new features in Developer Preview. When new items are added they will be listed here.
+As of 04/26/2018 these are the new features in Developer Preview. When new items are added they will be listed here.  These features are still in development and may change before they are released publicly.
 
 ## Adding tabs and bots to groups
+
+Tabs and bots can now be added to groups in teams. In the past they could only be added to channel and personal (bot to user) conversations.
 
 This feature allows you to:
 
 * Add tabs to group chats
 * Add bots to group chats
 
+To enable this feature use the new scope `groupchat` in the manifest definition for bots and tabs. The [Developer preview manifest](~/resources/manifest/manifest-schema-dev-preview) has been updated to include this feature.
+
+Scopes now include:
+
+* personal – chat between a bot and a user
+* groupChat – chat between a bot and one or more users in a group
+* channel – chat between a bot and members of a team
+
+Tab support is limited to configurable tabs.
+
+### Event changes
+
+All events have been updated to have a new “conversationType” field that returns the scope for the conversation:
+
+```json
+    "conversation": {
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype",
+        "conversationType": "groupChat",
+        "isGroup": true,
+    },
+
+```
+
+* If conversationType is groupChat or channel, then isGroup = true is also sent for compatibility.
+* if conversationType == personal, then the isGroup field is not included.
+
+Bots will receive the following events in group chat. These events are a subset of the events bots receive in channel conversations.
+
+* Bot added (conversationUpdate activity)
+* Member added (conversationUpdate activity)
+* Member removed (conversationUpdate activity)
+* Message (Message activity)
+* Like added/removed (MessageReaction activity)
+
+See [Bot notifications](~/concepts/bots/bots-notifications) for more details on bots and events before these changes.
+
+### Changes to getContext()
+
+`isChat` is returned by `getContext` whether or not the tab is in a chat.
+
 ### Known issues
 
-* If you upload an app with a bot to a chat in Developer Preview and you switch back to the public version, the same chat will have the compose box disabled. To fix this, you need to uninstall the app in group chat.
-* Input menus do not currently work with “groupchat” scope.
-* Deeplinks into tabs in group chat doesn’t work.
+* The UI shown in Developer Preview is still being developed
+* App icons will not work
+* If you upload an app with a bot to a chat in the *Developer Preview* version of Teams, and you switch back to the *Public* version, there might be some UI or behavior inconsistencies. If you run into any issues, please uninstall the app in *Developer Preview*
+* Input menus do not currently work with “groupchat” scope
+* Deeplinks into tabs in group chat doesn’t work
+* There is a limit of 5 uploaded apps apps per chat
 
-See [What is the Public Developer Preview for Microsoft Teams?](~/resources/general/developer-preview) for more information on enabling it for your development tenant.
+### Preview manifest
+
+The [Developer preview manifest](~/resources/manifest/manifest-schema-dev-preview) has been updated to include this feature.
+
+
+
+
 

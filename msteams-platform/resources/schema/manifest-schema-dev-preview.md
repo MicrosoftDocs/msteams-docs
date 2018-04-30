@@ -43,8 +43,8 @@ This is a preview of the 1.3 version of the Teams app manifest. It includes:
     "full": "Full description of your app"
   },
   "icons": {
-    "outline": "%FILENAME-32x32px%", 
-    "color": "%FILENAME-192x192px" 
+    "outline": "%FILENAME-32x32px%",
+    "color": "%FILENAME-192x192px"
   },
   "accentColor": "%HEX-COLOR%",
   "configurableTabs": [

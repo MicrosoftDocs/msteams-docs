@@ -22,10 +22,6 @@ Teams support three kinds of bot conversations (called scopes in the [Manifest](
 * `teams` Also called channel conversations
 * `personal` Conversations between a bot and a single user
 
-New in [Developer preview](`/resources/dev-preview/developer-preview-overview):
-
-* `groupchat` Used for group and meeting conversations
-
 See [Have a conversation with a Microsoft Teams bot](~/concepts/bots/conversations/bots-conversations) for more information.
 
 With Microsoft Teams apps, you can make the bot the star of your experience, or just a helper. Bots are distributed as part of your broader app package which can include other capabilities such as tabs or messaging extensions. If your bot is the star, be sure to take advantage of the [tabs](~/concepts/tabs/tabs-overview) capability. Use this rich web view to surface accompanying experiences and information that helps your users best interact with your service.
@@ -33,7 +29,7 @@ With Microsoft Teams apps, you can make the bot the star of your experience, or 
 ## Bot APIs
 
 Microsoft Teams supports most of the [Microsoft Bot Framework](https://dev.botframework.com/). (If you already have a bot that's based on the Bot Framework, you can easily adapt it to work in Microsoft Teams.) We recommend you use either C# or TypeScript to take advantage of our SDKs. These packages extend the basic Bot Builder classes and methods:
-<!--  -->
+
 * Using specialized card types like the Office 365 Connector card
 * Consuming and setting Teams-specific channel data on activities
 * Processing messaging extension requests

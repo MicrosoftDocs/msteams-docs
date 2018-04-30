@@ -17,10 +17,6 @@ Teams support several scopes for tabs:
 * Teams (`team` scope) - (channel) Tabs in channels allow teams to interact with your shared experience. Currently, all tabs in channels are *configurable tabs*&mdash;a user configures the content of your tab experience when the tab is first added to a channel.
 * Personal (`personal` scope) - Tabs in the personal scope allow users to interact with your experience privately. Currently, all such tabs are *static tabs*&mdash;content that is relevant to individual users.
 
-New in [Developer preview](`/resources/dev-preview/developer-preview-overview):
-
-* Group (`groupchat`) - Tabs in group conversations. Only *configurable tabs* are supported.
-
 ## What you need to know: Configurable tabs
 
 A *configurable tab* becomes part of a channel and provides a single kind of information to a team. For example, the Planner tab for a channel contains a single plan; the Power BI tab maps to a specific report. Users can drill down to the relevant context, but they should not be able to navigate outside the tab. The Power BI tab, for instance, doesn't enable navigation to other Power BI reports&mdash;but it does enable the **Go to website** button that launches the report in the main Power BI website.
