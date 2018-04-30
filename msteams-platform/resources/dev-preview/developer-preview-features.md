@@ -6,11 +6,13 @@ ms.date: 01/31/2018
 ---
 # Features in the Public Developer Preview for Microsoft Teams
 
-As of 04/26/2018 these are the new features in Developer Preview. When new items are added they will be listed here.  These features are still in development and may change before they are released publicly.
+As of 04/26/2018 these are the features in Developer Preview. These features are still in development and may change before they are released publicly.
+
+When new items are added they will be listed here.
 
 ## Adding tabs and bots to groups
 
-Tabs and bots can now be added to groups in teams. In the past they could only be added to channel and personal (bot to user) conversations.
+Tabs and bots can now be added to groups in teams. In the past they could only be added to channels and personal (bot to user) conversations.
 
 This feature allows you to:
 
@@ -40,8 +42,8 @@ All events have been updated to have a new “conversationType” field that ret
 
 ```
 
-* If conversationType is groupChat or channel, then isGroup = true is also sent for compatibility.
-* if conversationType == personal, then the isGroup field is not included.
+* If conversationType is groupChat or channel, then isGroup = true is also sent for compatibility
+* if conversationType == personal, then the isGroup field is not included
 
 Bots will receive the following events in group chat. These events are a subset of the events bots receive in channel conversations.
 
@@ -69,8 +71,3 @@ See [Bot notifications](~/concepts/bots/bots-notifications) for more details on 
 ### Preview manifest
 
 The [Developer preview manifest](~/resources/schema/manifest-schema-dev-preview) has been updated to include this feature.
-
-
-
-
-
