@@ -33,18 +33,6 @@ The following table lists the events that your bot can receive and take action o
 | _`contactRelationUpdate`_ | | | This [Bot Framework–provided activity type](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-activities#contactrelationupdate) is not directly supported in Microsoft Teams |
 | _`deleteUserData`_ | | | This [Bot Framework–provided activity type](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-activities#deleteuserdata) is not directly supported in Microsoft Teams |
 
-## New event support in the Developer preview
-
-The [Developer preview](`/resources/dev-preview/developer-preview-overview) includes support for the following events to support bots in group chat. These events are limited to the developer preview and may change before they are released publicly.
-
-|Type|Payload object|Teams eventType |Description|
-|---|---|---|---|
-| `conversationUpdate` |`membersAdded`|`teamMemberAdded` |Bot or user was added to the group |
-| `conversationUpdate` |`membersRemoved`| `teamMemberRemoved`|Bot or user was removed from group |
-| `conversationUpdate` |`botAdded`| Bot was added to the group | |
-| `message` |`message` | | |
-| `MessageReaction` | `likeAdded` | | |
-
 ## Team member or bot addition
 
 The [`conversationUpdate`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-activities#conversationupdate) event is sent to your bot when it receives information on membership updates for teams where it has been added. It also receives an update when it has been added for the first time specifically for personal conversations. Note that the user information (`Id`) is unique for your bot and can be cached for future use by your service (such as sending a message to a specific user).

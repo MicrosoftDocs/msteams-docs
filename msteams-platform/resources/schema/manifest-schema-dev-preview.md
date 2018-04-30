@@ -4,7 +4,7 @@ description: Describes the schema supported by the manifest for Microsoft Teams
 keywords: teams manifest schema Developer Preview
 ms.date: 04/26/2018
 ---
-# Developer Preview Reference: Manifest schema for Microsoft Teams
+# Developer Preview Reference: version 1.3 manifest schema for Microsoft Teams
 
 >Notes:
 >See [Developer Preview](~/resources/dev-preview/developer-preview-intro) for information on the program and how you can join.
