@@ -50,7 +50,7 @@ npm install --save msteams-ui-icons-react
 
 Find and open `src/App.js` and replace its content with following code:
 
-```js
+```javascript
 import React, { Component } from ‘react’;
 import { TeamsComponentContext, ThemeStyle, PrimaryButton } from ‘msteams-ui-components-react’
 
@@ -101,7 +101,7 @@ How the current theme is retrieved and how to respond to theme changes is discus
 
 This sample code shows how this is done.
 
-```JS
+```js
 componentWillMount() {
     // If you are deploying your site as a MS Teams static or configurable tab,
     // you should add “?theme={theme}” to your tabs URL in the manifest.
@@ -129,7 +129,7 @@ If you want to use your own CSS code you can still respond to theme changes and 
 
 Once again, edit your `src/App.js` file and replace its content with following code:
 
-```js
+```javascript
 import React, { Component } from ‘react’;
 import { TeamsComponentContext, ThemeStyle, ConnectedComponent } from ‘msteams-ui-components-react’
 

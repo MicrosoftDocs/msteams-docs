@@ -28,7 +28,7 @@ Add a button to your configuration or content page to enable the user to sign in
 
 AAD, like most identity providers, does not allow its content to be placed in an iframe. This means that you will need to add a pop-up page to host the identity provider.  In the following example this page is `/tab-auth/simple-start`. Use the `microsoftTeams.authenticate()` function of the Microsoft Teams client SDK to launch this page when your button is selected.
 
-```js
+```javascript
 microsoftTeams.authentication.authenticate({
     url: window.location.origin + "/tab-auth/simple-start",
     width: 600,
@@ -54,7 +54,7 @@ microsoftTeams.authentication.authenticate({
 
 When your popup page (`/tab-auth/simple-start`) is displayed the following code is run. The main goal of this page is to redirect to your identity provider so the user can sign in. This redirection could be done on the server side using HTTP 302, but in this case it is done on the client side using with a call to `window.location.assign()`. This also allows `microsoftTeams.getContext()` to be used to retrieve hinting information which can be passed to AAD.
 
-```js
+```javascript
 microsoftTeams.getContext(function (context) {
     // Generate random state string and store it, so we can verify it in the callback
     let state = _guid(); // _guid() is a helper function in the sample
@@ -94,7 +94,7 @@ In the last section you called the AAD authorization service and passed in user 
 
 In this page you need to determine success or failure based on the information returned by AAD and call `microsoftTeams.authentication.notifySuccess()` or `microsoftTeams.authentication.notifyFailure()`. If the login was successful you will have access to service resources.
 
-````js
+````javascript
 // Split the key-value pairs passed from Azure AD
 // getHashParameters is a helper function that parses the arguments sent
 // to the callback URL by Azure AD after the authorization call

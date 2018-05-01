@@ -83,9 +83,9 @@ await client.Conversations.SendToConversationAsync(newActivity, response.Id);
 
 This example uses the [botbuilder-teams](https://www.npmjs.com/package/botbuilder-teams) npm package.
 
-```js
+```javascript
 var address =
-{ 
+{
     channelId: 'msteams',
     user: { id: userId },
     channelData: {
