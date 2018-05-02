@@ -25,13 +25,13 @@ All tab content, including configuration, content, and tab-removal pages must me
 > [!TIP]
 > For developers using TypeScript, Microsoft Teams provides a [definition file](https://statics.teams.microsoft.com/sdk/v1.0/types/MicrosoftTeams.d.ts) to enable IntelliSense or similar support from your code editor as well as compile-time type checking as part of your build.
 
-## Links for mobile clients
+## Tabs for mobile clients
 
-The mobile client for Teams on iOS and Android will render tabs using the native browser. If you have a native app and would like to render the tab in that native app, you should ensure that your tab supports Apple *universal links* and Android *app links*.
+Tabs behave differently on the Teams desktop experience and the native Teams apps on Android and iOS. The default experience for a tab is set by the value of `contentUrl` (See [Determine the content to display in the tab](~/concepts/tabs/tabs-configuration#determine-the-content-to-display-in-the-tab). Teams on the desktop will render the tab contents itself, but on mobile it will be rendered by the platforms default rendering engine.
+
+You might also want to have the content of the tab displayed in your own native app, in which case you would use the optional `websiteUrl` parameter and set it to a url that follows the format specified by Apple *universal links* and Android *app links*.
 
 Information on universal links:
 
 * [iOS universal links](https://developer.apple.com/ios/universal-links/)
 * [Android app links](https://developer.android.com/training/app-links/index.html)
-
-Note that a link is not required, but the Teams mobile clients do not show tabs that have no link.
