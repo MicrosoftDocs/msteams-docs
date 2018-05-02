@@ -55,7 +55,11 @@ See [Bot notifications](~/concepts/bots/bots-notifications) for more details on 
 
 ### Changes to getContext()
 
-`isChat` is returned by `getContext` whether or not the tab is in a chat.
+`isChat` is returned by `getContext` to indicate whether or not the tab is in a chat.
+
+### Testing your app
+
+To test your app, open up a chat and click *Add apps* in the header. From there you can access *Add custom app* to upload your app package.
 
 ### Known issues
 
