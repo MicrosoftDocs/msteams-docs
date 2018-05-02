@@ -4,16 +4,17 @@ description: The checklist to use before publishing your Microsoft Teams app to 
 keywords: teams publish store office publishing checklist
 ms.date: 03/30/2018
 ---
-# AppSource checklist for Seller Dashboard submission
+# Checklist for Seller Dashboard submission
 AppSource is the new name for Office Store.
 
-The follow metadata is required in your manifest.json file and for Seller Dashboard submission:
+The follow metadata is required in your manifest.json file and for AppSource Seller Dashboard submission:
 
 |Data|Type|Size|Manifest|Seller Dashboard|Description|
 |---|---|---|---|---|---|
 |App package|.zip|||✔|The actual app package for uploading or AppSource submission.|
-|App logo|.png|192&times;192 pixels|`icon.color`|✔|The icon to display in the product page listing in the Teams gallery. This is your full-color product icon.|
-|App logo outline|.png|32&times;32 pixels|`icon.outline`||The icon to display in Teams, in the Teams chat channel and other locations. This is your logo rendered as a white outline with transparent background.|
+|Color logo|.png|192&times;192 pixels|`icon.color`||The icon to display in the product page listing in the Teams gallery. This is your full-color product logo.|
+|Logo outline|.png|32&times;32 pixels|`icon.outline`||The icon to display in Teams, in the Teams chat channel and other locations. This is your logo rendered as a white outline with transparent background.|
+|App logo|.png, .jpg, .jpeg, .gif|300&times;300 pixels||✔|The icon to display in AppSource. This is your full-color product logo, and is a different file that the one used by the manifest `icon.color`. it should be smaller than 512 KB.|
 |Support link|URL|||✔|A link to support material for end users. Can be HTTP or HTTPS.|
 |Privacy link|URL||`developer.privacyUrl`|✔|A link to your privacy policy (HTTPS).|
 |Video link|URL|||Optional|A link to a video about your app.|
