@@ -14,7 +14,7 @@ The follow metadata is required in your manifest.json file and for AppSource Sel
 |App package|.zip|||✔|The actual app package for uploading or AppSource submission.|
 |Color logo|.png|192&times;192 pixels|`icon.color`||The icon to display in the product page listing in the Teams gallery. This is your full-color product logo.|
 |Logo outline|.png|32&times;32 pixels|`icon.outline`||The icon to display in Teams, in the Teams chat channel and other locations. This is your logo rendered as a white outline with transparent background.|
-|App logo|.png, .jpg, .jpeg, .gif|300&times;300 pixels||✔|The icon to display in AppSource. This is your full-color product logo, and is a different file that the one used by the manifest `icon.color`. it should be smaller than 512 KB.|
+|App logo|.png, .jpg, .jpeg, .gif|300&times;300 pixels||✔|The icon to display in AppSource. This is the full-color product logo, and is a different file from the one used in the manifest for `icon.color`. it should be smaller than 512 KB.|
 |Support link|URL|||✔|A link to support material for end users. Can be HTTP or HTTPS.|
 |Privacy link|URL||`developer.privacyUrl`|✔|A link to your privacy policy (HTTPS).|
 |Video link|URL|||Optional|A link to a video about your app.|
