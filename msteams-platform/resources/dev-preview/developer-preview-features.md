@@ -21,17 +21,15 @@ This feature allows you to:
 
 To enable this feature use the new scope `groupchat` in the manifest definition for bots and tabs. The [Developer preview manifest](~/resources/schema/manifest-schema-dev-preview) has been updated to include this feature.
 
-Scopes now include:
-
-* personal – chat between a bot and a user
-* groupChat – chat between a bot and one or more users in a group
-* channel – chat between a bot and members of a team
-
 Tab support is limited to configurable tabs.
 
 ### Event changes
 
-All events have been updated to have a new “conversationType” field that returns the scope for the conversation:
+All events have been updated to have a new `conversationType` field that returns one of the following three values for the conversation:
+
+* 'personal' – chat between a bot and a user
+* 'groupChat' – chat between a bot and one or more users in a group
+* 'channel' – chat between a bot and members of a team
 
 ```json
     "conversation": {
@@ -42,16 +40,16 @@ All events have been updated to have a new “conversationType” field that ret
 
 ```
 
-* If conversationType is groupChat or channel, then isGroup = true is also sent for compatibility
-* if conversationType == personal, then the isGroup field is not included
+* If `conversationType` is `groupChat` or `channel`, then the `isGroup` field is included and set to true for compatibility
+* if `conversationType` is `personal`, then the `isGroup` field is not included
 
 Bots will receive the following events in group chat. These events are a subset of the events bots receive in channel conversations.
 
 * Bot added (conversationUpdate activity)
 * Member added (conversationUpdate activity)
 * Member removed (conversationUpdate activity)
-* Message (Message activity)
-* Like added/removed (MessageReaction activity)
+* Message (message activity)
+* Like added/removed (messageReaction activity)
 
 See [Bot notifications](~/concepts/bots/bots-notifications) for more details on bots and events before these changes.
 
@@ -64,9 +62,9 @@ See [Bot notifications](~/concepts/bots/bots-notifications) for more details on 
 * The UI shown in Developer Preview is still being developed
 * App icons will not work
 * If you upload an app with a bot to a chat in the *Developer Preview* version of Teams, and you switch back to the *Public* version, there might be some UI or behavior inconsistencies. If you run into any issues, please uninstall the app in *Developer Preview*
-* Input menus do not currently work with “groupchat” scope
-* Deeplinks into tabs in group chat doesn’t work
-* There is a limit of 5 uploaded apps apps per chat
+* Bot menus do not currently work with the 'groupChat' scope
+* Deeplinks into tabs in group chat do not work
+* There is a limit of 5 uploaded apps per chat
 
 ### Preview manifest
 
