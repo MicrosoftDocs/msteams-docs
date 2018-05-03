@@ -64,7 +64,7 @@ To test your app, open up a chat and click *Add apps* in the header. From there 
 ### Known issues
 
 * The UI shown in Developer Preview is still being developed
-* App icons will not work
+* Custom defined app icons are currently not working in chat
 * If you upload an app with a bot to a chat in the *Developer Preview* version of Teams, and you switch back to the *Public* version, there might be some UI or behavior inconsistencies. If you run into any issues, please uninstall the app in *Developer Preview*
 * Bot menus do not currently work with the 'groupChat' scope
 * Deeplinks into tabs in group chat do not work
