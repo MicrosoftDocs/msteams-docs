@@ -27,7 +27,7 @@ All tab content, including configuration, content, and tab-removal pages must me
 
 ## Tabs on mobile clients
 
-Tabs behave differently on the Teams desktop app, in the desktop browser and in the native Teams apps on Android and iOS. The default experience for a tab on desktop is set by the value of `contentUrl` (See [Determine the content to display in the tab](~/concepts/tabs/tabs-configuration#determine-the-content-to-display-in-the-tab)). Teams on the desktop will render the tab contents itself. You can tell teams on desktop to use the local browser instead by leaving `contentUrl` blank and setting `websiteUrl` instead.
+Tabs behave differently on the Teams desktop app, in the desktop browser and in the native Teams apps on Android and iOS. The default experience for a tab on desktop is set by the value of `contentUrl` (See [Determine the content to display in the tab](~/concepts/tabs/tabs-configuration#determine-the-content-to-display-in-the-tab)). Teams on the desktop will render the tab contents itself. You can tell teams on desktop to use the local browser instead by leaving `contentUrl` blank and setting `websiteUrl` instead.  You can have both `contentUrl` and `websiteUrl` set, but on the desktop Teams will only use `contentUrl`.
 
 On mobile, Teams can't render your tab internally, so all tabs are rendered by the default browser. This means that you need to have `websiteUrl` set for all tabs on mobile. `contentUrl` can still be set, but it will be ignored by Teams on mobile.  If you only set `contentUrl` Teams on mobile will completely ignore your tab.
 
