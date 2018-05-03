@@ -28,7 +28,7 @@ Tab support is limited to configurable tabs.
 All events have been updated to have a new `conversationType` field that returns one of the following three values for the conversation:
 
 * `personal` – chat between a bot and a user
-* `groupChat` – chat between a bot and one or more users in a group
+* `groupChat` – chat between a bot and two or more users
 * `channel` – chat between a bot and members of a team
 
 ```json
