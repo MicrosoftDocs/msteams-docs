@@ -10,14 +10,14 @@ As of 04/26/2018 these are the features in Developer Preview. These features are
 
 When new items are added they will be listed here.
 
-## Adding tabs and bots to groups
+## Adding tabs and bots to chats
 
-Tabs and bots can now be added to groups in teams. In the past they could only be added to channels and personal (bot to user) conversations.
+Chats are conversations between one or more users in Teams. Tabs and bots can now be added to chats. In the past they could only be added to channels and personal (bot to user) conversations.
 
 This feature allows you to:
 
-* Add tabs to group chats
-* Add bots to group chats
+* Add tabs to chats
+* Add bots to chats
 
 To enable this feature use the new scope `groupchat` in the manifest definition for bots and tabs. The [Developer preview manifest](~/resources/schema/manifest-schema-dev-preview) has been updated to include this feature.
 
