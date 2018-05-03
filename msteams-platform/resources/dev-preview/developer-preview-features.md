@@ -40,7 +40,7 @@ All events have been updated to have a new `conversationType` field that returns
 
 ```
 
-* If `conversationType` is `groupChat` or `channel`, then the `isGroup` field is included and set to true for compatibility
+* If `conversationType` is `groupChat` or `channel`, then the `isGroup` field is included and set to true for backwards compatibility
 * if `conversationType` is `personal`, then the `isGroup` field is not included
 
 Bots will receive the following events in group chat. These events are a subset of the events bots receive in channel conversations.
