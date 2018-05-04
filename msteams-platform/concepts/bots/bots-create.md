@@ -8,7 +8,7 @@ ms.date: 04/20/2018
 
 All bots created using the Microsoft Bot Framework are configured and ready to work in Microsoft Teams.
 
-[Get started on the Microsoft Teams platform with Node.js](~/get-started/get-started-nodejs) includes an app sample app with a bot, and has detailed steps for creating your first bot.
+A sample bot is included in the [Get Started](~/get-started/get-started) sample for Node.js and .NET, along with detailed steps for creating your first bot.
 
 See the [Bot Framework Documentation](https://docs.botframework.com/en-us/) for general information on bots.
 
