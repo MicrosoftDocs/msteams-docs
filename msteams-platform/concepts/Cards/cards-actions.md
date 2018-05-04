@@ -117,7 +117,7 @@ The `value` property can be either a serialized JSON string or a JSON object.
 
 ## imBack
 
-This action triggers a return message to your bot, as if the user typed it in a normal chat message. Thus, your user, and all other users if in a channel, will see that button response.
+This action triggers a return message to your bot, as if the user typed it in a normal chat message. Your user, and all other users if in a channel, will see that button response.
 
 The `value` field should contain the text string echoed in the chat and therefore sent back to the bot. This is the message text you will process in your bot to perform the desired logic. Note: this field is a simple string - there is no support for formatting or hidden characters.
 
