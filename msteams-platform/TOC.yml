@@ -46,6 +46,8 @@
       href: ./concepts/tabs/tabs-update-remove
     - name: Context for tabs
       href: ./concepts/tabs/tabs-context
+    - name: Requirements for tabs
+      href: ./concepts/tabs/tabs-requirements
   - name: Bots
     href: ./concepts/bots/bots-overview
     items:
@@ -130,8 +132,8 @@
   - name: General
     href: ./resources/general/general-overview
     items:
-    - name: Requirements
-      href: ./resources/general/requirements
+    - name: Supported media formats
+      href: ./resources/general/media-formats
     - name: Cross-domain redirects
       href: ./resources/general/cross-domain
     - name: Debugging
