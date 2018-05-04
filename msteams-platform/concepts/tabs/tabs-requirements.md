@@ -2,7 +2,7 @@
 title: Requirements for tab pages in Microsoft Teams
 description: Requirements for tab pages in Microsoft Teams
 keywords: teams formats links
-ms.date: 04/25/2018
+ms.date: 05/03/2018
 ---
 # Requirements for tab pages in Microsoft Teams
 
@@ -27,19 +27,19 @@ All tab content, including configuration, content, and tab-removal pages must me
 
 ## Tabs on mobile clients
 
-Tabs behave differently on the Teams desktop app, in the desktop browser, and in the native Teams apps on Android and iOS.
+Tabs behave differently on the iOS and Android Teams clients than on the Teams desktop or web clients.
 
-### Desktop behavior
+### Desktop and web client behavior
 
-The default experience for a tab on desktop is set by the value of `contentUrl` (See [Determine the content to display in the tab](~/concepts/tabs/tabs-configuration#determine-the-content-to-display-in-the-tab)). Teams on the desktop will render the tab contents itself. You can tell Teams on desktop to use the local browser instead by leaving `contentUrl` blank and setting `websiteUrl` instead.  You can have both `contentUrl` and `websiteUrl` set, but on the desktop Teams will only use `contentUrl`.
+What appears in a tab on desktop/web is defined by the value of `contentUrl`: Teams displays the contents of `contentUrl` in the tab. (See [Determine the content to display in the tab](~/concepts/tabs/tabs-configuration#determine-the-content-to-display-in-the-tab)). If the tab has a value for `websiteUrl`, another icon appears with the others at the upper right of the tab: ![Go to website](~/assets/images/go-to-website-icon.png). When the user clicks on this icon, `websiteUrl` is opened in a new browser tab.
 
-### mobile behavior
+### Mobile client behavior
 
-On mobile, Teams can't render your tab internally, so all tabs are rendered by the default browser. This means that you need to have `websiteUrl` set for all tabs on mobile. `contentUrl` can still be set, but it will be ignored by Teams on mobile.  If you only set `contentUrl` Teams on mobile will completely ignore your tab.
+On mobile clients, where there's far less screen real estate, it's not possible to show the contents of files and tabs embedded inside Teams; instead, the user navigates to them via the "Files & Tabs" tab. The mobile clients only show tabs that have a value for `websiteUrl`: if you want your tab to appear on the Teams mobile clients, you must set the value of `websiteUrl`.
 
-Since the Teams mobile app calls the OS to show the tab using the default browser, you can use iOS *universal links* or Android *app links* to tell the OS to display your tab in your native app. The OS will also prompt the viewer to install your app if it is not already installed.
+Since the Teams mobile clients use the mobile OS to open `websiteUrl`, you can use iOS *universal links* or Android *app links* to open `websiteUrl` in your mobile app. The OS will also prompt the user to install your app if it is not already installed.
 
-Information on universal links:
+Information on universal links and app links:
 
 * [iOS universal links](https://developer.apple.com/ios/universal-links/)
 * [Android app links](https://developer.android.com/training/app-links/index.html)
