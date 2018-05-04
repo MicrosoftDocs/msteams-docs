@@ -6,7 +6,7 @@ ms.date: 04/19/2018
 ---
 # Outgoing webhooks in Microsoft Teams
 
-If you've worked with outgoing webhooks or slash commands in other chat platforms, you can now bring what you have developed over to Microsoft Teams via outgoing webhooks.  Outgoing webhooks are an easy way of extending your team without having to go through the full process of creating a bot via the Microsoft Bot Framework. You can use them for custom workflows and commands such as kicking off a build or checking the latest set of livesite issues.
+If you've worked with outgoing webhooks or slash commands in other chat platforms, you can now bring what you have developed over to Microsoft Teams via outgoing webhooks. Outgoing webhooks are an easy way of extending your team without having to go through the full process of creating a bot via the Microsoft Bot Framework. You can use them for custom workflows and commands such as kicking off a build or checking the latest set of livesite issues.
 
 You also have an effective way of ensuring that your service is accessible only by authorized users, as the security token used by your outgoing webhook will only be scoped to the team in which it has been added.
 

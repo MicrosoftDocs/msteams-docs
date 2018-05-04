@@ -18,7 +18,7 @@ Content pages in Teams, regardless of scope or type, should follow the guideline
 
 ## Adding your tabbed content to your app package
 
-Define your static tab experience in the [`staticTabs`](~/resources/schema/manifest-schema#statictabs) block of the manifest.  
+Define your static tab experience in the [`staticTabs`](~/resources/schema/manifest-schema#statictabs) block of the manifest.
 
 For more information on creating your app package, see [Create the package for your Microsoft Teams app](~/concepts/apps/apps-package).
 

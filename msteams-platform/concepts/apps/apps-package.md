@@ -12,11 +12,11 @@ App experiences in Teams are defined by their app manifest, and bundled in an ap
 A Teams app package is a .zip file containing the following:
 
 * A manifest file named "manifest.json", which specifies attributes of your app and points to required resources for your experience, such the location of its tab configuration page or the Microsoft app ID for its bot.
-* A transparent "outline" icon and a full "color" icon.  See [Icons](#icons) later in this topic for more information.
+* A transparent "outline" icon and a full "color" icon. See [Icons](#icons) later in this topic for more information.
 
 ## Creating a manifest
 
-*Teams App Studio* is a new tool that can help configure your manifest. It also contains a React control library and configurable samples for cards.  See [Getting started with Teams App Studio](~/get-started/get-started-app-studio).
+*Teams App Studio* is a new tool that can help configure your manifest. It also contains a React control library and configurable samples for cards. See [Getting started with Teams App Studio](~/get-started/get-started-app-studio).
 
 Your manifest file must be named "manifest.json" and be at the top level of the upload package. Note that manifests and packages built previously might support an older version of the schema. For Teams apps and especially AppSource (formerly Office Store) submission, you must use the current [manifest schema](~/resources/schema/manifest-schema).
 

@@ -6,16 +6,14 @@ keywords: teams tabs pages content
 
 # Create a content page for your Microsoft Teams tab
 
-The content page is an HTML page that you host.  When the user visits your tab, Microsoft Teams will load the `contentUrl` (that you [provided earlier](~/concepts/tabs/tabs-configuration)) within an iframe inside the main tab canvas area.
+The content page is an HTML page that you host. When the user visits your tab, Microsoft Teams will load the `contentUrl` (that you [provided earlier](~/concepts/tabs/tabs-configuration)) within an iframe inside the main tab canvas area.
 
 In this page, you present the main function of your tab, following our [design recommendations](~/get-started/design#designing-a-great-tab). You might also need to use the [supplied context](~/concepts/tabs/tabs-context) to help display the correct content.
 
 > [!NOTE]
-> The very simple "maps" example in this documentation uses existing Bing and Google maps as content pages for illustration, which of course do not include this library. See the [samples](~/samples/code-samples) for a full example tab that does so.  
+> The very simple "maps" example in this documentation uses existing Bing and Google maps as content pages for illustration, which of course do not include this library. See the [samples](~/samples/code-samples) for a full example tab that does so.
 
 ![Tab with iframed content highlighted.](~/assets/images/tab_content.png)
-
-<!-- TODO: fix to use latest sample app, and remove note when done --> 
 
 ## Prerequisites for content displayed in your tab
 

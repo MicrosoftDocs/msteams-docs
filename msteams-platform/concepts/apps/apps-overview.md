@@ -21,7 +21,7 @@ An app in Teams consists of the following parts:
 
 A Microsoft Teams app is defined by its manifest (a JSON file). Place the manifest and two icons in a .zip file, and you have an *app package* that you can install into Teams or publish through AppSource. (For details, see [Create the package for your Microsoft Teams app](~/concepts/apps/apps-package).)
 
-*Teams App Studio* is a new tool that will help you to configure your application. It also contains a React control library and configurable samples for cards.  See [Getting started with Teams App Studio](~/get-started/get-started-app-studio).
+*Teams App Studio* is a new tool that will help you to configure your application. It also contains a React control library and configurable samples for cards. See [Getting started with Teams App Studio](~/get-started/get-started-app-studio).
 
 A great app is designed before it is built. Guidance on app design can be found in [Design apps for Microsoft Teams](~/concepts/apps/apps-design), as well as in the [Teams design guide] (~/resources/design/overview).
 

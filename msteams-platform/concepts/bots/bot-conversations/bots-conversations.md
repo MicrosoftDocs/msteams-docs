@@ -25,7 +25,7 @@ In order for the bot to work in a particular scope it should be listed as suppor
 
 ## Proactive messages
 
-Bots can participate in a conversation or initiate one. Most communication is in response to another message.  If a bot initiates a conversation it is called a *proactive message*. Examples include:
+Bots can participate in a conversation or initiate one. Most communication is in response to another message. If a bot initiates a conversation it is called a *proactive message*. Examples include:
 
 * Welcome messages
 * Event notifications

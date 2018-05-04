@@ -26,7 +26,7 @@ Authentication flow should be triggered by a user action. You should not open th
 
 Add a button to your configuration or content page to enable the user to sign in when needed. This can be done in the tab [configuration](~/concepts/tabs/tabs-configuration) page or any [content](~/concepts/tabs/tabs-content) page.
 
-AAD, like most identity providers, does not allow its content to be placed in an iframe. This means that you will need to add a pop-up page to host the identity provider.  In the following example this page is `/tab-auth/simple-start`. Use the `microsoftTeams.authenticate()` function of the Microsoft Teams client SDK to launch this page when your button is selected.
+AAD, like most identity providers, does not allow its content to be placed in an iframe. This means that you will need to add a pop-up page to host the identity provider. In the following example this page is `/tab-auth/simple-start`. Use the `microsoftTeams.authenticate()` function of the Microsoft Teams client SDK to launch this page when your button is selected.
 
 ```javascript
 microsoftTeams.authentication.authenticate({

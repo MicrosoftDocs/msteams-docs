@@ -73,7 +73,7 @@ The full description of the extension. Maximum length is 256 characters.
 
 ### `icons` (object, required)
 
-Each icon image file must be a transparent PNG, with a white or light-colored background. You can use a URL to a hosted version of your icons.  
+Each icon image file must be a transparent PNG, with a white or light-colored background. You can use a URL to a hosted version of your icons.
 
 Properties of the `icons` object:
 

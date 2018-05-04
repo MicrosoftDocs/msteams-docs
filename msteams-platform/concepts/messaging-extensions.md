@@ -64,8 +64,8 @@ In the app manifest, your command item is an object with the following structure
 
 | Property name | Purpose | Required? |
 |---|---|---|
-| `id` | Unique ID that you assign to this command.  The user request will include this ID. | Yes |
-| `title` | Command name.  This value appears in the UI. | Yes |
+| `id` | Unique ID that you assign to this command. The user request will include this ID. | Yes |
+| `title` | Command name. This value appears in the UI. | Yes |
 | `description` | Help text indicating what this command does. This value appears in the UI. | Yes |
 | `initialRun` | If set to **true**, indicates this command should be executed as soon as the user chooses this command in the UI. | No |
 | `parameters` | List of parameters. | Yes |
@@ -376,7 +376,7 @@ The sequence is as follows:
 5. After the user signs in, you should close your window and send an "authentication code" to the Teams client.
 6. The Teams client then reissues the query to your service, which includes the authentication code passed in step 5.
 
-Your service should verify that the authentication code received in step 6 matches the one from step 5.  This ensures that a malicious user does not try to spoof or compromise the sign-in flow.  This effectively "closes the loop" to finish the secure authentication sequence.
+Your service should verify that the authentication code received in step 6 matches the one from step 5. This ensures that a malicious user does not try to spoof or compromise the sign-in flow. This effectively "closes the loop" to finish the secure authentication sequence.
 
 ### Respond with a sign-in action
 
