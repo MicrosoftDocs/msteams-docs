@@ -100,7 +100,7 @@ import * as builder from "botbuilder";
 
 var conversationId = session.message.address.conversation.id;
   connector.fetchMembers(
-    (<builder.IChatConnectorAddress>session.message.address).serviceUrl,
+    (session.message.address).serviceUrl,
     conversationId,
     (err, result) => {
       if (err) {
