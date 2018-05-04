@@ -114,7 +114,7 @@ This is a preview of the 1.3 version of the Teams app manifest. It includes:
           "id": "exampleCmd",
           "title": "Example Command",
           "description": "Command Description; e.g., Search on the web",
-          "initialRun": "true",
+          "initialRun": true,
           "parameters": [
             {
               "name": "keyword",
