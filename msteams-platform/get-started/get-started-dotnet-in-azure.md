@@ -36,7 +36,7 @@ This brings up the *Create App Service* dialog. If you are signed into Visual St
 
 <img width="530px" src="~/assets/images/get-started/publishtoazure4.png" title="Create an App Service"/>
 
-All fields should be filled in with default values. Don't change these for now.  Click *Create*.
+All fields should be filled in with default values. Don't change these for now. Click *Create*.
 You should now see the *Publish* dialog. Click *Publish*. Your browser of choice should open, displaying the welcome screen for your app.
 
 If this does not happen, you can verify by opening your browser and going to `https://yourteamsapp.azurewebsites.net` (please be sure to use the right endpoint from your Azure App Service instead of this URL) to load your app's hello page.

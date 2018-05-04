@@ -49,7 +49,7 @@ For more information about authentication, please see [Authenticate a user](~/co
 
 ### Static tabs not showing up
 
-There is a known issue where updating an existing bot app with a new or updated static tab will not show that tab change when accessing the app from a 1:1 bot conversation.  To see the change, you should test on a new user or test instance, or access the bot from the Apps flyout.
+There is a known issue where updating an existing bot app with a new or updated static tab will not show that tab change when accessing the app from a 1:1 bot conversation. To see the change, you should test on a new user or test instance, or access the bot from the Apps flyout.
 
 ---
 
@@ -61,7 +61,7 @@ Apps must be enabled by the Office 365 tenant admin for them to be loaded by end
 
 ### Can't add bot as a member of a team
 
-Bots must first be upload into a team before it is accessible within any channel of that team.  Please review [Uploading your app in a team](~/concepts/apps/apps-upload) for more information on this process.
+Bots must first be upload into a team before it is accessible within any channel of that team. Please review [Uploading your app in a team](~/concepts/apps/apps-upload) for more information on this process.
 
 ### My bot doesn't get my message in a channel
 

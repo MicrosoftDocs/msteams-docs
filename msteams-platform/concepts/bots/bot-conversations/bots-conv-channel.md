@@ -6,7 +6,7 @@ ms.date: 03/29/2018
 ---
 # Interact in a team channel with a Microsoft Teams bot
 
-Microsoft Teams allows users to bring bots into their channel conversations.  By adding a bot as a team member, all users of the team can take advantage of the bot functionality right in the channel conversation.  You can also access Teams-specific functionality within your bot like querying team information and @mentioning users.
+Microsoft Teams allows users to bring bots into their channel conversations. By adding a bot as a team member, all users of the team can take advantage of the bot functionality right in the channel conversation. You can also access Teams-specific functionality within your bot like querying team information and @mentioning users.
 
 Chat in channels differs from 1:1 chat in that the user needs to @mention the bot. If a bot is used in both contexts (1:1 and channel) you will need to detect if the the bot is in a channel, and process messages a little differently. This section will describe those differences.
 
@@ -17,7 +17,7 @@ Bots added to a team become another team member, who can be @mentioned as part o
 > [!NOTE]
 > For convenience when replying to bot messages in a channel, the bot name is prepended automatically.
 
-A bot in a channel should provide information relevant and appropriate for all members of the team.  While your bot can certainly provide any information relevant to the experience, keep in mind conversations with it are visible to all members of the channel.  Therefore, a great bot in a channel should add value to all users on the channel, and certainly not inadvertently share information that would otherwise be more relevant in a personal context.
+A bot in a channel should provide information relevant and appropriate for all members of the team. While your bot can certainly provide any information relevant to the experience, keep in mind conversations with it are visible to all members of the channel. Therefore, a great bot in a channel should add value to all users on the channel, and certainly not inadvertently share information that would otherwise be more relevant in a personal context.
 
 Note that depending on your experience, the bot might be entirely relevant in both scopes (1:1 and channel) as is, and in fact, no significant extra work is required to allow your bot to work in both. In Microsoft Teams, there is no expectation that your bot function in all contexts, but you should ensure your bot makes sense, and provides user value, in whichever scope(s) you choose to support. For more information on scopes, see [Apps in Microsoft Teams](~/concepts/apps/apps-overview).
 
@@ -76,7 +76,7 @@ for (int i = 0;i < m.Length;i++)
     if (m[i].Mentioned.Id == sourceMessage.Recipient.Id)
     {
         //Bot is in the @mention list.
-        //The below example will strip the bot name out of the message, so you can parse it as if it wasn't included.  Note that the Text object will contain the full bot name, if applicable.
+        //The below example will strip the bot name out of the message, so you can parse it as if it wasn't included. Note that the Text object will contain the full bot name, if applicable.
         if (m[i].Text != null)
             messageText = messageText.Replace(m[i].Text, "");
     }

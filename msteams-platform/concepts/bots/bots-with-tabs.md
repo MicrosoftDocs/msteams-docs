@@ -24,7 +24,7 @@ You may want to use tabs to show more content than can fit inside of a card, or 
 
 Deep links rely on an entityId, which is an opaque value that maps to a unique entity in your system. When the tab is created, you ideally store some simple state (e.g. flag) on your backend indicating the tab has been created in the channel. When your bot constructs a message, it can target the entityId associated with that tab.
 
-**Note:** in 1:1 chats, because tabs are “static” and installed with the app, you can always assume their existence and thus construct deep links accordingly.
+**Note:** in 1:1 chats, because tabs are “static” and installed with the app, you can always assume their existence and  construct deep links accordingly.
 
 ## Sending notifications for tab updates
 

@@ -17,7 +17,7 @@ Build and connect intelligent bots to interact with Microsoft Teams users natura
 
 A bot appears just like any other team member you interact with in a conversation except that it has a hexagonal avatar icon and is always online.
 
-A bot behaves slightly depending on what kind of conversation it is involved in.  Teams support three kinds of conversations (called scopes in the [Manifest](~/resources/schema/manifest-schema)).
+A bot behaves slightly depending on what kind of conversation it is involved in. Teams support three kinds of conversations (called scopes in the [Manifest](~/resources/schema/manifest-schema)).
 
 * `teams` Also called channel conversations
 * `personal` Also called 1:1 conversations or chats
@@ -58,7 +58,7 @@ The SDK extensions install dependencies, including the Bot Builder SDK.
 > [!IMPORTANT]
 > You can develop Teams apps in any other web-programming technology and call the [Bot Framework REST APIs](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-overview) directly, but you must perform all token handling yourself.
 
-*Teams App Studio* is a new tool that can help configure your manifest and your app. It also contains a React control library and an interactive card builder.  See [Getting started with Teams App Studio](~/get-started/get-started-app-studio).
+*Teams App Studio* is a new tool that can help configure your manifest and your app. It also contains a React control library and an interactive card builder. See [Getting started with Teams App Studio](~/get-started/get-started-app-studio).
 
 ## Outgoing webhooks
 

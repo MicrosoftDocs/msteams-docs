@@ -53,7 +53,7 @@ This is where you can see what the [cards you create in App Studio](#card-editor
 
 As mentioned earlier, the most significant part of a Microsoft Teams app package is its manifest.json file. This file, which must conform to the [Teams App schema](~\resources\schema\manifest-schema.md), contains metadata which allows Teams to correctly present your app to users.
 
-The Manifest Editor tab in App Studio simplifies creating the manifest, allowing you to describe the app, upload your icons, add app capabilities, and produce a .zip file which can easily be uploaded into Teams for testing or distributed for others to use. Note that App Studio does not produce functional code for your app, or host your app.  Your app must already be hosted and running at the URL listed in the manifest for the app upload process to result in a working app.
+The Manifest Editor tab in App Studio simplifies creating the manifest, allowing you to describe the app, upload your icons, add app capabilities, and produce a .zip file which can easily be uploaded into Teams for testing or distributed for others to use. Note that App Studio does not produce functional code for your app, or host your app. Your app must already be hosted and running at the URL listed in the manifest for the app upload process to result in a working app.
 
 #### Details
 
@@ -71,7 +71,7 @@ The capabilities section of the Manifest Editor is where the app's capabilities 
 
   You must also provide any additional domains that the tab expects to load from or link to.
 
-* **Personal Tabs.** This section lets you define a set of tabs that are presented by default in the one-on-one app experience (i.e. the experience a user has with your app outside the context of a team or channel).  In this section, provide the tab name, a unique identifier, the URL that points to the UI to be displayed in Teams, and optionally, the URL to use if a user opts to view the tab in a browser. As with Teams tabs, provide any additional domains from which the tab expects to load from or link to.
+* **Personal Tabs.** This section lets you define a set of tabs that are presented by default in the one-on-one app experience (i.e. the experience a user has with your app outside the context of a team or channel). In this section, provide the tab name, a unique identifier, the URL that points to the UI to be displayed in Teams, and optionally, the URL to use if a user opts to view the tab in a browser. As with Teams tabs, provide any additional domains from which the tab expects to load from or link to.
 
 ##### Bots
 
