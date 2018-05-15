@@ -14,17 +14,17 @@ When a user sends a file to your bot, the file is first uploaded to the user's O
 ### Message activity with file attachment example
 ```json
 {
-  "attachments": [{
-    "contentType": "application/vnd.microsoft.teams.file.download.info",
-    "contentUrl": "https://contoso.sharepoint.com/personal/johnadams_contoso_com/Documents/Applications/file_example.txt",
+	"attachments": [{
+		"contentType": "application/vnd.microsoft.teams.file.download.info",
+    "contentUrl": "https://contoso.sharepoint.com/personal/johnadams_contoso_com/Documents/Applications/file_example.txt", 
     "name": "file_example.txt",
-    "content": {
+		"content": {
       "downloadUrl" : "https://download.link",
       "uniqueId": "1150D938-8870-4044-9F2C-5BBDEBA70C9D",
-      "fileType": "txt",
+			"fileType": "txt",
       "etag": "123"
-    }
-  }]
+		}
+	}]
 }
 ```
 
@@ -33,12 +33,15 @@ As a best practice, you should acknowledge the file upload by sending back a mes
 ## Uploading files to 1:1 chat
 Uploading a file to a user involves the following steps:
 1. Send a message to the user requesting permission to write the file. This message must contain a `FileConsentCard` attachment with the name of the file to be uploaded.
-2. If the user accepts the file download, your bot will receive an Invoke activity with a location URL.
-3. To transfer the file, your bot performs an HTTP POST directly into the provided location URL.
+2. If the user accepts the file download, your bot will receive an Invoke activity with a location URL in the `uploadInfo.uploadUrl` property.
+3. To transfer the file, your bot performs an HTTP PUT directly into the provided location URL.
 4. Optionally, you can perform a message update on the original message, removing the consent card if you do not want to allow the user to accept further uploads of the same file.
 
 ### Message requesting permission to upload
 This message contains a simple attachment object requesting user permission to upload the file.
+
+![Screenshot of consent card requesting user permission to upload file](~/assets/images/bots/bot-file-consent-card.png)
+
 
 ```json
 {
@@ -57,11 +60,22 @@ This message contains a simple attachment object requesting user permission to u
 }
 ```
 
+The following table describes the content properties of the attachment:
+| Property | Purpose |
+| --- | --- |
+| `description` | Description of the file. May be shown to the user to describe its purpose or to summarize its content. |
+| `sizeInBytes` | Provides the user a hint as to the size of the file and the amount of space it will take in OneDrive. |
+| `acceptContext` | Additional context that will be silently transmitted to your bot when the user accepts the file. |
+| `declineContext` | Additional context that will be silently transmitted to your bot when the user declines the file. |
+
 ### Invoke activity when the user accepts the file
-An activity is sent to your bot if and when the user accepts the file. It contains the OneDrive for Business placeholder URL that your bot can then Post into to transfer the file contents. The following example shows the attachment object that your bot will receive:
+An invoke activity is sent to your bot if and when the user accepts the file. It contains the OneDrive for Business placeholder URL that your bot can then issue a PUT into to transfer the file contents. The following example shows an abridged version of the invoke activity that your bot will receive:
 
 ```json
 {
+  ...
+
+  "name": "fileConsent/invoke",
   "value": {
     "type": "fileUpload",
     "action": "accept",
@@ -73,7 +87,6 @@ An activity is sent to your bot if and when the user accepts the file. It contai
       "uploadUrl": "https://upload.link",
       "uniqueId": "1150D938-8870-4044-9F2C-5BBDEBA70C8C",
       "fileType": "txt",
-      "etag": "123"
     }
   }
 }
@@ -93,7 +106,7 @@ Similarly, if the user declines the file, your bot will receive the following ev
 ```
 
 ## Notifying the user about an uploaded file
-After uploading a file to the user's OneDrive, whether you use the mechanism described above or OneDrive user delegated APIs, you should send a confirmation message to the user. This message should contain  a FileCard attachment that the user can click on, either to preview it, open it in OneDrive, or download locally.
+After uploading a file to the user's OneDrive, whether you use the mechanism described above or OneDrive user delegated APIs, you should send a confirmation message to the user. This message should contain a `FileCard` attachment that the user can click on, either to preview it, open it in OneDrive, or download locally.
 
 ```json
 {
@@ -104,33 +117,18 @@ After uploading a file to the user's OneDrive, whether you use the mechanism des
     "content": {
       "uniqueId": "1150D938-8870-4044-9F2C-5BBDEBA70C8C",
       "fileType": "txt",
-      "etag": "123"
     }
   }]
 }
 ```
 
+The following table describes the content properties of the attachment:
+| Property | Purpose |
+| --- | --- |
+| `uniqueId` | OneDrive/SharePoint drive item ID. |
+| `fileType` | File type, such as pdf or docx. |
+
 ### Notifying channel users
-We recommend using Graph APIs to perform read and write operations with a team's SharePoint folders. You can subscribe, via webhooks, to receive updates whenever users upload files to its SharePoint.
+We recommend using the Microsoft Graph APIs to perform read and write operations with a team's SharePoint folders. Read more [here](https://developer.microsoft.com/en-us/graph/docs/concepts/onedrive-concept-overview). You can also subscribe, via webhooks, to receive updates in real time whenever users upload files to its SharePoint. Read more about webhooks [here](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/resources/webhooks).
 
-With the FileCard, you can now post notifications into channels about files that you write into the team's SharePoint. The format of the message is the same as the Confirmation message example above in 1:1 chat. To populate the URL, you can use the file metadata from the SharePoint file object.
-
-## Coming soon: Enabling the Files tab in your personal app
-You can specify whether to show the Files tab in your personal app experience. This tab will show all the files that your bot has  received from the user, and vice versa. Declaring this involves adding a simple app manifest property.
-
-### App manifest snippet
-```json
-{
-...
-  "bots": [
-    {
-      "botId": "c201df69-7490-40c3-aa7f-aef4254cb1ee",
-      "canReceiveFiles": true,
-      "scopes": [
-        "team",
-        "personal"
-      ]
-    }
-  ],
-}
-```
+With the `FileCard`, you can now post notifications into channels about files that you write into the team's SharePoint. The format of the message is the same as the Confirmation message example above in 1:1 chat. To populate the URL, you can use the file metadata from the SharePoint file object.
