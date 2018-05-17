@@ -130,6 +130,73 @@ The following table describes the content properties of the attachment:
 | `uniqueId` | OneDrive/SharePoint drive item ID. |
 | `fileType` | File type, such as pdf or docx. |
 
+## Basic example in C#
+```csharp
+public virtual async Task MessageReceivedAsync(IDialogContext context, IAwaitable<IMessageActivity> argument)
+{
+    var replyMessage = context.MakeMessage();
+    Attachment returnCard;
+
+    var message = await argument;
+    if(message.Attachments && message.Attachments.Any())
+    {
+        var attachment = message.Attachments.First();
+    
+        if (attachment.ContentType == "application/vnd.microsoft.teams.card.file.info") 
+        {
+            returnCard = CreateFileInfoCard(attachment.ContentUrl, attachment.Content.UniqueId);
+            replyMessage.Attachments.Add(returnCard);
+        } 
+        else 
+        {
+            // when requesting user to consent for a file upload
+            returnCard = CreateFileConsentCard();
+            replyMessage.Attachments.Add(returnCard);
+        }
+    }
+    
+    await context.PostAsync(replyMessage);
+}
+
+private static Attachment CreateFileInfoCard(String url, String uniqueId) 
+{
+    JObject cardJson = new JObject();
+    cardJson["uniqueId"] = uniqueId;
+    cardJson["etag"] = "123";
+    cardJson["fileType"] = "jpg";
+    
+    return new Attachment() 
+    {
+        ContentType = "application/vnd.microsoft.teams.card.file.info",
+        ContentUrl = url,
+        Name = "<-- file name -->",
+        Content = cardJson
+    };
+}
+
+private static Attachment CreateFileConsentCard()
+{
+    JObject acceptContext = new JObject();
+    // Fill in any additional context to be sent back when the user accepts the file.
+
+    JObject declineContext = new JObject();
+    // Fill in any additional context to be sent back when the user declines the file.
+
+    JObject cardJson = new JObject();
+    cardJson["description"] = "file description";
+    cardJson["sizeInBytes"] = "102635";
+    cardJson["acceptContext"] = acceptContext;
+    cardJson["declineContext"] = declineContext;
+
+    return new Attachment()
+    {
+        ContentType = "application/vnd.microsoft.teams.card.file.consent",
+        Name = "<-- file name -->",
+        Content = cardJson
+    };
+}
+```
+
 ### Notifying channel users
 We recommend using the Microsoft Graph APIs to perform read and write operations with a team's SharePoint folders. Read more [here](https://developer.microsoft.com/en-us/graph/docs/concepts/onedrive-concept-overview). You can also subscribe, via webhooks, to receive updates in real time whenever users upload files to its SharePoint. Read more about webhooks [here](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/resources/webhooks).
 
