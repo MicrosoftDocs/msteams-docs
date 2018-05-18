@@ -164,8 +164,6 @@
         href: ./resources/design/framework/cards
         name: Command box
         href: ./resources/design/framework/command-box
-      - name: Submitting your app
-        href: ./resources/design/framework/submitting
     - name: Components
       items:
       - name: Color

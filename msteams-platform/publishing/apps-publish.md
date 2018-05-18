@@ -2,18 +2,25 @@
 title: Publish your app to AppSource
 description: Describes the process of publishing your app to AppSource (formerly Office Store)
 keywords: teams publish store office publishing AppSource
-ms.date: 03/15/2018
+ms.date: 05/02/2018
 ---
 # Publish your Microsoft Teams app to AppSource
 
-Here’s everything you need to submit your app for approval, including details about the submission process and a checklist of everything you should include in your app manifest.
+After you have built your app in [Microsoft Teams App Studio](https://docs.microsoft.com/en-us/microsoftteams/platform/get-started/get-started-app-studio), you can share it with your team by uploading it to one of your Teams channels -as long as you have the appropriate rights. You can also take the next step and share it with the world. 
+
+Teams provides an in-app gallery for users to find or discover [high-quality Teams apps](~/resources/design/overview). To have your solution available in this gallery, you must publish your solution through AppSource. 
+
+## Overall process
+
+ * [Register as a Microsoft app developer](https://developer.microsoft.com/en-us/store/register).
+ * Register in the Seller Dashboard.
+ * Use the Seller Dashboard to submit your Teams app package to AppSource.
+ * Monitor the Seller Dashboard to track validation.
+
 
 > [!IMPORTANT]
 > **Your Microsoft Teams app *must* use the [latest schema](~/resources/schema/manifest-schema) and follow [current packaging guidelines](~/concepts/apps/apps-package).**
 >
-> [!NOTE]
-> Teams provides an in-app gallery for users to find or discover [high-quality Teams apps](~/resources/design/overview). To have your solution available in this gallery, you must publish your solution through AppSource.
-
 AppSource (formerly known as Office Store) provides a convenient location for you to distribute your Microsoft Teams app, as well as other Office 365 extensibility types such as Office add-ins and SharePoint add-ins. To include your solution in AppSource, you submit it to the Seller Dashboard. You need to create an individual or company account if you have not already done so for other Windows apps or Office extensibility types.
 
 > [!NOTE]
@@ -55,7 +62,7 @@ You need to upload a [submission package](~/concepts/apps/apps-package) and prov
 > [!IMPORTANT]
 > All information in the package manifest must match the metadata information you enter into the product listing.
 
-For general information about the Seller Dashboard, see [Use the Seller Dashboard to submit your solution to AppSource](https://dev.office.com/officestore/docs/use-the-seller-dashboard-to-submit-to-the-office-store). For Teams-specific help, see [Submitting your Microsoft Teams app in the Seller Dashboard](~/publishing/office-store-guidance).
+For general information about the Seller Dashboard, see [Use the Seller Dashboard to submit your solution to AppSource](https://dev.office.com/officestore/docs/use-the-seller-dashboard-to-submit-to-the-office-store). For  Teams-specific guidance and a detailed walk through, see [Submitting your Microsoft Teams app in the Seller Dashboard](~/publishing/office-store-guidance).
 
 ## Microsoft Teams app approval process
 
