@@ -131,50 +131,62 @@ The following table describes the content properties of the attachment:
 | `fileType` | File type, such as pdf or docx. |
 
 ## Basic example in C#
+The following sample shows how you can handle file uploads and send file consent requests in your bot's dialog.
+
 ```csharp
-public virtual async Task MessageReceivedAsync(IDialogContext context, IAwaitable<IMessageActivity> argument)
+
+// This sample dialog shows two simple flows:
+// 1) A silly example of receiving a file from the user, processing the key elements,
+//    and then constructing the attachment and sending it back.
+// 2) Creating a new file consent card requesting user permission to upload a file.
+private async Task MessageReceivedAsync(IDialogContext context, IAwaitable<object> result)
 {
     var replyMessage = context.MakeMessage();
     Attachment returnCard;
 
-    var message = await argument;
-    if(message.Attachments && message.Attachments.Any())
+    var message = await result as Activity;
+
+    // Check to see if the user is sending the bot a file.
+    if (message.Attachments != null && message.Attachments.Any())
     {
         var attachment = message.Attachments.First();
-    
-        if (attachment.ContentType == "application/vnd.microsoft.teams.card.file.info") 
+
+        if (attachment.ContentType == FileDownloadInfo.ContentType)
         {
-            returnCard = CreateFileInfoCard(attachment.ContentUrl, attachment.Content.UniqueId);
-            replyMessage.Attachments.Add(returnCard);
-        } 
-        else 
-        {
-            // when requesting user to consent for a file upload
-            returnCard = CreateFileConsentCard();
-            replyMessage.Attachments.Add(returnCard);
+            FileDownloadInfo downloadInfo = (attachment.Content as JObject).ToObject<FileDownloadInfo>();
+            if (downloadInfo != null)
+            {
+                returnCard = CreateFileInfoAttachment(downloadInfo, attachment.Name, attachment.ContentUrl);
+                replyMessage.Attachments.Add(returnCard);
+            }
         }
     }
-    
+    else
+    {
+        // Illustrates creating a file consent card.
+        returnCard = CreateFileConsentAttachment();
+        replyMessage.Attachments.Add(returnCard);
+    }
     await context.PostAsync(replyMessage);
 }
 
-private static Attachment CreateFileInfoCard(String url, String uniqueId) 
+
+private static Attachment CreateFileInfoAttachment(FileDownloadInfo downloadInfo, string name, string contentUrl)
 {
-    JObject cardJson = new JObject();
-    cardJson["uniqueId"] = uniqueId;
-    cardJson["etag"] = "123";
-    cardJson["fileType"] = "jpg";
-    
-    return new Attachment() 
+    FileInfoCard card = new FileInfoCard()
     {
-        ContentType = "application/vnd.microsoft.teams.card.file.info",
-        ContentUrl = url,
-        Name = "<-- file name -->",
-        Content = cardJson
+        FileType = downloadInfo.FileType,
+        UniqueId = downloadInfo.UniqueId
     };
+
+    Attachment att = card.ToAttachment();
+    att.ContentUrl = contentUrl;
+    att.Name = name;
+
+    return att;
 }
 
-private static Attachment CreateFileConsentCard()
+private static Attachment CreateFileConsentAttachment()
 {
     JObject acceptContext = new JObject();
     // Fill in any additional context to be sent back when the user accepts the file.
@@ -182,18 +194,18 @@ private static Attachment CreateFileConsentCard()
     JObject declineContext = new JObject();
     // Fill in any additional context to be sent back when the user declines the file.
 
-    JObject cardJson = new JObject();
-    cardJson["description"] = "file description";
-    cardJson["sizeInBytes"] = "102635";
-    cardJson["acceptContext"] = acceptContext;
-    cardJson["declineContext"] = declineContext;
-
-    return new Attachment()
+    FileConsentCard card = new FileConsentCard()
     {
-        ContentType = "application/vnd.microsoft.teams.card.file.consent",
-        Name = "<-- file name -->",
-        Content = cardJson
+        AcceptContext = acceptContext,
+        DeclineContext = declineContext,
+        SizeInBytes = 102635,
+        Description = "File description"
     };
+
+    Attachment att = card.ToAttachment();
+    att.Name = "Example file";
+
+    return att;
 }
 ```
 
