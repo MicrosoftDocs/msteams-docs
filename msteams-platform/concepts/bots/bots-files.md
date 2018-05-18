@@ -14,7 +14,7 @@ When a user sends a file to your bot, the file is first uploaded to the user's O
 ### Message activity with file attachment example
 ```json
 {
-	"attachments": [{
+  "attachments": [{
     "contentType": "application/vnd.microsoft.teams.file.download.info",
     "contentUrl": "https://contoso.sharepoint.com/personal/johnadams_contoso_com/Documents/Applications/file_example.txt", 
     "name": "file_example.txt",
