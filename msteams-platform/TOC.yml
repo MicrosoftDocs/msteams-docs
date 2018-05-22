@@ -70,6 +70,8 @@
       href: ./concepts/bots/bots-notifications
     - name: Context for bots
       href: ./concepts/bots/bots-context
+    - name: Sending and recieving files (developer preview)
+      href: ./concepts/bots/bots-files
     - name: Notification only bots
       href: ./concepts/bots/bots-notification-only
     - name: Bot menus
