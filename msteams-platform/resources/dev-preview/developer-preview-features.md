@@ -8,6 +8,6 @@ ms.date: 05/22/2018
 
 The developer preview includes the following new feature:
 
-* [Sending and receiving files](~/concepts/bots/bots-files)
+* [Sending and receiving files through your bot](~/concepts/bots/bots-files)
 
 See [What is the Public Developer Preview for Microsoft Teams?](~/resources/general/developer-preview) for more information on enabling it for your development tenant.
