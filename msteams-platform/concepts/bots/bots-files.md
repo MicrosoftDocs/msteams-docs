@@ -2,21 +2,19 @@
 title: Sending and receiving files from a bot
 description: Describes how to send and receive files from a bot
 keywords: teams bots files send receive
-ms.date: 04/17/2018
+ms.date: 05/22/2018
 ---
 # Send and receive files through your bot
 
 >**Note:** This feature is currently available in Developer Preview.
 
-Your bot can send and receive files with users in the personal (1:1) context. You can use this to implement expense reporting, image recognition, file archival, e-signatures, and other scenarios involving direct manipulation of file content. Files shared in Teams typically appear as cards, and allow rich in-app viewing. In channels, you can also post messages with card attachments referencing existing SharePoint files.
+Your bot can send and receive files with users in the personal context. You can use this to implement expense reporting, image recognition, file archival, e-signatures, and other scenarios involving direct manipulation of file content. Files shared in Teams typically appear as cards, and allow rich in-app viewing. In channels you can also post messages with card attachments referencing existing SharePoint files.
 
-## Overview
+One way of sending files is using the Microsoft Graph APIs for OneDrive and SharePoint [as documented here](https://docs.microsoft.com/en-us/onedrive/developer/rest-api/). This method requires obtaining ongoing access to the user's OneDrive folder through the standard OAuth2 authorization flow. The following sections describe a simple alternative mechanism if you only need to send file content as a result of direct user interaction such as sending a message. This API is provided as part of the Microsoft Teams Bot Platform.
 
-One way of doing this is using the Microsoft Graph APIs for OneDrive and SharePoint, [as documented here](https://docs.microsoft.com/en-us/onedrive/developer/rest-api/). This method requires obtaining ongoing access to the user's OneDrive folder through standard OAuth2 authorization flow. This documentation describes a simple alternative mechanism if you only need to send file content as a result of direct user interaction, e.g. sending a message. This API is provided as part of the Microsoft Teams Bot Platform.
+## Receiving files in personal chat
 
-## Receiving files in 1:1 chat
-
-When a user sends a file to your bot, the file is first uploaded to the user's OneDrive for Business storage. Your bot will then receive a message activity notifying you of the user upload. The activity will contain file metadata, such as its name and the content URL, and the content URL's expiry time (e.g. 24 hours). You can directly read from this URL to fetch its binary content.
+When a user sends a file to your bot, the file is first uploaded to the user's OneDrive for Business storage. Your bot will then receive a message activity notifying you of the user upload. The activity will contain file metadata, such as its name and the content URL, and the content URL's expiry time (such as 24 hours). You can directly read from this URL to fetch its binary content.
 
 ### Message activity with file attachment example
 
@@ -38,7 +36,7 @@ When a user sends a file to your bot, the file is first uploaded to the user's O
 
 As a best practice, you should acknowledge the file upload by sending back a message to the user.
 
-## Uploading files to 1:1 chat
+## Uploading files to personal chat
 
 Uploading a file to a user involves the following steps:
 
@@ -57,7 +55,7 @@ This message contains a simple attachment object requesting user permission to u
     "contentType": "application/vnd.microsoft.teams.card.file.consent",
     "name": "file_example.txt",
     "content": {
-      "description": "<Purpose of the file, e.g. this is your monthly expense report>",
+      "description": "<Purpose of the file, such as: this is your monthly expense report>",
       "sizeInBytes": 1029393,
       "acceptContext": {
       },
@@ -125,9 +123,9 @@ After uploading a file to the user's OneDrive, whether you use the mechanism des
 
 ### Notifying channel users
 
-We recommend using Graph APIs to perform read and write operations with a team's SharePoint folders. You can subscribe, via webhooks, to receive updates whenever users upload files to its SharePoint.
+You should use Graph APIs to perform read and write operations with a team's SharePoint folders. You can subscribe using webhooks to receive updates whenever users upload files to its SharePoint site.
 
-With the FileCard, you can now post notifications into channels about files that you write into the team's SharePoint. The format of the message is the same as the Confirmation message example above in 1:1 chat. To populate the URL, you can use the file metadata from the SharePoint file object.
+With the FileCard, you can now post notifications into channels about files that you write into the team's SharePoint site. The format of the message is the same as the Confirmation message example above in personal chat. To populate the URL, you can use the file metadata from the SharePoint file object.
 
 ## Coming soon: Enabling the Files tab in your personal app
 
