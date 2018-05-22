@@ -6,11 +6,11 @@ ms.date: 05/22/2018
 ---
 # Send and receive files through your bot
 
->**Note:** This feature is currently available in Developer Preview.
+>**Note:** This feature is currently available only in [Developer Preview](~/resources/dev-preview/developer-preview).
 
 Your bot can send and receive files with users in the personal context. You can use this to implement expense reporting, image recognition, file archival, e-signatures, and other scenarios involving direct manipulation of file content. Files shared in Teams typically appear as cards, and allow rich in-app viewing. In channels you can also post messages with card attachments referencing existing SharePoint files.
 
-One way of sending files is using the Microsoft Graph APIs for OneDrive and SharePoint [as documented here](https://docs.microsoft.com/en-us/onedrive/developer/rest-api/). This method requires obtaining ongoing access to the user's OneDrive folder through the standard OAuth2 authorization flow. The following sections describe a simple alternative mechanism if you only need to send file content as a result of direct user interaction such as sending a message. This API is provided as part of the Microsoft Teams Bot Platform.
+One way of sending files is using the Microsoft Graph APIs for [OneDrive and SharePoint](https://docs.microsoft.com/en-us/onedrive/developer/rest-api/). This method requires obtaining ongoing access to the user's OneDrive folder through the standard OAuth2 authorization flow. The following sections describe a simple alternative mechanism if you only need to send file content as a result of direct user interaction such as sending a message. This API is provided as part of the Microsoft Teams Bot Platform.
 
 ## Receiving files in personal chat
 
