@@ -9,7 +9,7 @@ Your bot can send and receive files with users in the personal (1:1) context. Yo
 One way of doing this is using the Microsoft Graph APIs for OneDrive and SharePoint, [as documented here](https://docs.microsoft.com/en-us/onedrive/developer/rest-api/). This method requires obtaining ongoing access to the user's OneDrive folder through standard OAuth2 authorization flow. This documentation describes a simple alternative mechanism if you only need to send file content as a result of direct user interaction, e.g. sending a message. This API is provided as part of the Microsoft Teams Bot Platform.
 
 ## Receiving files in 1:1 chat
-When a user sends a file to your bot, the file is first uploaded to the user's OneDrive for Business storage. Your bot will then receive a message activity notifying you of the user upload. The activity will contain file metadata, such as its name and the content URL, and the content URL's expiry time (e.g. 24 hours). You can directly read from this URL to fetch its binary content.
+When a user sends a file to your bot, the file is first uploaded to the user's OneDrive for Business storage. Your bot will then receive a message activity notifying you of the user upload. The activity will contain file metadata, such as its name and the download URL. You can directly read from this URL to fetch its binary content.
 
 ### Message activity with file attachment example
 ```json
@@ -21,12 +21,19 @@ When a user sends a file to your bot, the file is first uploaded to the user's O
     "content": {
       "downloadUrl" : "https://download.link",
       "uniqueId": "1150D938-8870-4044-9F2C-5BBDEBA70C9D",
-      "fileType": "txt",
-      "etag": "123"
+      "fileType": "txt"
     }
   }]
 }
 ```
+
+The following table describes the content properties of the attachment:
+
+| Property | Purpose |
+| --- | --- |
+| `downloadUrl` | OneDrive URL for fetching the content of the file. You can issue an HTTP GET directly from this URL. |
+| `uniqueId` | Unique file ID. This will be the OneDrive drive item ID, in the case of the user sending a file to your bot. |
+| `fileType` | File extension type, such as pdf or docx. |
 
 As a best practice, you should acknowledge the file upload by sending back a message to the user.
 
@@ -35,7 +42,7 @@ Uploading a file to a user involves the following steps:
 1. Send a message to the user requesting permission to write the file. This message must contain a `FileConsentCard` attachment with the name of the file to be uploaded.
 2. If the user accepts the file download, your bot will receive an Invoke activity with a location URL in the `uploadInfo.uploadUrl` property.
 3. To transfer the file, your bot performs an HTTP PUT directly into the provided location URL.
-4. Optionally, you can perform a message update on the original message, removing the consent card if you do not want to allow the user to accept further uploads of the same file.
+4. Optionally, you can remove the original consent card if you do not want to allow the user to accept further uploads of the same file.
 
 ### Message requesting permission to upload
 This message contains a simple attachment object requesting user permission to upload the file.
@@ -65,12 +72,12 @@ The following table describes the content properties of the attachment:
 | Property | Purpose |
 | --- | --- |
 | `description` | Description of the file. May be shown to the user to describe its purpose or to summarize its content. |
-| `sizeInBytes` | Provides the user a hint as to the size of the file and the amount of space it will take in OneDrive. |
+| `sizeInBytes` | Provides the user an estimate of the file size and the amount of space it will take in OneDrive. |
 | `acceptContext` | Additional context that will be silently transmitted to your bot when the user accepts the file. |
 | `declineContext` | Additional context that will be silently transmitted to your bot when the user declines the file. |
 
 ### Invoke activity when the user accepts the file
-An invoke activity is sent to your bot if and when the user accepts the file. It contains the OneDrive for Business placeholder URL that your bot can then issue a PUT into to transfer the file contents. The following example shows an abridged version of the invoke activity that your bot will receive:
+An invoke activity is sent to your bot if and when the user accepts the file. It contains the OneDrive for Business placeholder URL that your bot can then issue a PUT into to transfer the file contents. Read [this article](https://docs.microsoft.com/en-us/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session) for uploading to the OneDrive URL. The following example shows an abridged version of the invoke activity that your bot will receive:
 
 ```json
 {
@@ -93,10 +100,11 @@ An invoke activity is sent to your bot if and when the user accepts the file. It
 }
 ```
 
-Similarly, if the user declines the file, your bot will receive the following event:
+Similarly, if the user declines the file, your bot will receive the following event, with the same overall activity name:
 
 ```json
 {
+  "name": "fileConsent/invoke",
   "value": {
     "type": "fileUpload",
     "action": "decline",
@@ -208,8 +216,3 @@ private static Attachment CreateFileConsentAttachment()
     return att;
 }
 ```
-
-### Notifying channel users
-We recommend using the Microsoft Graph APIs to perform read and write operations with a team's SharePoint folders. Read more [here](https://developer.microsoft.com/en-us/graph/docs/concepts/onedrive-concept-overview). You can also subscribe, via webhooks, to receive updates in real time whenever users upload files to its SharePoint. Read more about webhooks [here](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/resources/webhooks).
-
-With the `FileCard`, you can now post notifications into channels about files that you write into the team's SharePoint. The format of the message is the same as the Confirmation message example above in 1:1 chat. To populate the URL, you can use the file metadata from the SharePoint file object.
