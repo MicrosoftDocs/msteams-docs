@@ -37,7 +37,7 @@ When a user sends a file to your bot, the file is first uploaded to the user's O
 The following table describes the content properties of the attachment:
 | Property | Purpose |
 | --- | --- |
-| `downloadUrl` | OneDrive URL for fetching the content of the file. You can issue an HTTP GET directly from this URL. |
+| `downloadUrl` | OneDrive URL for fetching the content of the file. You can issue an `HTTP GET` directly from this URL. |
 | `uniqueId` | Unique file ID. This will be the OneDrive drive item ID, in the case of the user sending a file to your bot. |
 | `fileType` | File extension type, such as pdf or docx. |
 
@@ -48,8 +48,8 @@ As a best practice, you should acknowledge the file upload by sending back a mes
 Uploading a file to a user involves the following steps:
 
 1. Send a message to the user requesting permission to write the file. This message must contain a `FileConsentCard` attachment with the name of the file to be uploaded.
-2. If the user accepts the file download, your bot will receive an Invoke activity with a location URL.
-3. To transfer the file, your bot performs an HTTP POST directly into the provided location URL.
+2. If the user accepts the file download, your bot will receive an *Invoke* activity with a location URL.
+3. To transfer the file, your bot performs an `HTTP POST` directly into the provided location URL.
 4. Optionally, you can remove the original consent card if you do not want to allow the user to accept further uploads of the same file.
 
 ### Message requesting permission to upload
@@ -85,7 +85,7 @@ This message contains a simple attachment object requesting user permission to u
 
 ### Invoke activity when the user accepts the file
 
-An invoke activity is sent to your bot if and when the user accepts the file. It contains the OneDrive for Business placeholder URL that your bot can then issue a PUT into to transfer the file contents. for information on uploading to the OneDrive URL read this article: [Upload bytes to the upload session](https://docs.microsoft.com/en-us/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
+An invoke activity is sent to your bot if and when the user accepts the file. It contains the OneDrive for Business placeholder URL that your bot can then issue a `PUT` into to transfer the file contents. for information on uploading to the OneDrive URL read this article: [Upload bytes to the upload session](https://docs.microsoft.com/en-us/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
 
 The following example shows an abridged version of the invoke activity that your bot will receive:
 
