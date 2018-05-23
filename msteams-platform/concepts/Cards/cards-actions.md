@@ -6,7 +6,7 @@ ms.date: 04/16/2018
 ---
 # Card actions
 
-Bots and messaging extensions in Teams support the following activity ([`CardAction`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards)) types. Note that these actions differ from `potentialActions` for Office 365 Connector cards when used from Connectors.
+Cards used by bots and messaging extensions in Teams support the following activity ([`CardAction`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards)) types. Note that these actions differ from `potentialActions` for Office 365 Connector cards when used from Connectors.
 
 | Type | Action |
 | --- | --- |
@@ -19,6 +19,8 @@ Bots and messaging extensions in Teams support the following activity ([`CardAct
 > [!NOTE]
 >* Teams does not support `CardAction` types not listed in the preceding table.
 >* Teams does not support the `potentialActions` property.
+
+Teams also supports [Adaptive card actions](~/concepts/cards/cards-actions#adaptive-card-actions), which are only used by Adaptive cards. These actions are listed in their own section at the end of this reference.
 
 ## openUrl
 
@@ -217,8 +219,10 @@ Initiates OAuth flow, allowing bots to connect with secure services, as describe
 
 ## Adaptive card actions
 
-Adaptive cards support three action types.
+Adaptive cards support three action types:
 
 * [Action.OpenUrl](http://adaptivecards.io/explorer/Action.OpenUrl.html)
 * [Action.Submit](http://adaptivecards.io/explorer/Action.Submit.html)
 * [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
+
+These actions are only supported by Adaptive cards.

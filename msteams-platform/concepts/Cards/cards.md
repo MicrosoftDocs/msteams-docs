@@ -30,6 +30,10 @@ The cards that are supported by bots in Teams are detailed in [Teams Card Refere
 
 [Messaging Extensions](~/concepts/messaging-extensions) can also return a card. These can be a Hero, Thumbnail or O365ConnectorCard. These cards can be found in the [Teams Card Reference](~/concepts/cards/cards-reference).
 
+## Adaptive cards
+
+[Adaptive cards](~/concepts/cards/cards-reference?branch=Harysh-Adaptive-cards#adaptive-card) are a new cross product specification for cards in Microsoft products including Bots, Cortana, Outlook, and Windows. For more general information from the Adaptive cards team see [Adaptive Cards Overview](https://docs.microsoft.com/en-us/adaptive-cards). You can use adaptive cards anywhere you can use existing Hero cards, Office365 cards, and Thumbnail cards.
+
 ## Card reference
 
 All cards used by Teams are listed in the [Teams Card Reference](~/concepts/cards/cards-reference). This reference also describes differences between Bot Framework cards and cards in Teams.
