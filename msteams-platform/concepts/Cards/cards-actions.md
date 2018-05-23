@@ -225,4 +225,4 @@ Adaptive cards support three action types:
 * [Action.Submit](http://adaptivecards.io/explorer/Action.Submit.html)
 * [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
 
-These actions are only supported by Adaptive cards.
+These actions are only supported by Adaptive cards. Adaptive cards do not support the other actions listed above this section.
