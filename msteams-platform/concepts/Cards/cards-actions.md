@@ -214,3 +214,11 @@ var button = new CardAction()
 ## signin
 
 Initiates OAuth flow, allowing bots to connect with secure services, as described in more detail here: [Authentication flow in bots](~/concepts/authentication/auth-flow-bot).
+
+## Adaptive card actions
+
+Adaptive cards support three action types.
+
+* [Action.OpenUrl](http://adaptivecards.io/explorer/Action.OpenUrl.html)
+* [Action.Submit](http://adaptivecards.io/explorer/Action.Submit.html)
+* [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
