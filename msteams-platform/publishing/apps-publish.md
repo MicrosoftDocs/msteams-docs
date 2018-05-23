@@ -6,7 +6,7 @@ ms.date: 05/02/2018
 ---
 # Publish your Microsoft Teams app to AppSource
 
-After you have built your app in [Microsoft Teams App Studio](https://docs.microsoft.com/en-us/microsoftteams/platform/get-started/get-started-app-studio), you can share it with your team by uploading it to one of your Teams channels -as long as you have the appropriate rights. You can also take the next step and share it with the world. 
+After you have built your app in [Microsoft Teams App Studio](https://docs.microsoft.com/en-us/microsoftteams/platform/get-started/get-started-app-studio), you can share it with your team by uploading it to one of your Teams channels &mdash; as long as you have the appropriate rights. You can also take the next step and share it with the world. 
 
 Teams provides an in-app gallery for users to find or discover [high-quality Teams apps](~/resources/design/overview). To have your solution available in this gallery, you must publish your solution through AppSource. 
 
