@@ -46,6 +46,159 @@ See the topic [Card Formatting](~/concepts/cards/cards-format) for more informat
 
 ## Cards supported in Teams
 
+### Adaptive card
+
+A customizable card that can contain any combination of text, speech, images, buttons, and input fields.
+
+#### Support
+
+| Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
+| --- | --- | --- | --- |
+| ✔ | ✔ |  ✔* | ✔ |
+|
+
+#### Example
+
+![Example of a adaptive card card](~/assets/images/cards/adaptivecard.png)
+
+#### For more information
+
+[Adaptive Cards Overview](https://docs.microsoft.com/en-us/adaptive-cards/)
+
+*Note: There are some Outlook specific action types like Action.Http which are not supported by Teams. For more information on Outlook specific behavior of adaptive cards please visit: [Designing Outlook Actionable Message cards with the Adaptive Card format](https://docs.microsoft.com/en-us/outlook/actionable-messages/adaptive-card)
+
+#### Example
+
+```json
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
+    {
+      "type": "Container",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "Publish Adaptive Card schema",
+          "weight": "bolder",
+          "size": "medium"
+        },
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "width": "auto",
+              "items": [
+                {
+                  "type": "Image",
+                  "url": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
+                  "size": "small",
+                  "style": "person"
+                }
+              ]
+            },
+            {
+              "type": "Column",
+              "width": "stretch",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "Matt Hidinger",
+                  "weight": "bolder",
+                  "wrap": true
+                },
+                {
+                  "type": "TextBlock",
+                  "spacing": "none",
+                  "text": "Created {{DATE(2017-02-14T06:08:39Z, SHORT)}}",
+                  "isSubtle": true,
+                  "wrap": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Container",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "Now that we have defined the main rules and features of the format, we need to produce a schema and publish it to GitHub. The schema will be the starting point of our reference documentation.",
+          "wrap": true
+        },
+        {
+          "type": "FactSet",
+          "facts": [
+            {
+              "title": "Board:",
+              "value": "Adaptive Card"
+            },
+            {
+              "title": "List:",
+              "value": "Backlog"
+            },
+            {
+              "title": "Assigned to:",
+              "value": "Matt Hidinger"
+            },
+            {
+              "title": "Due date:",
+              "value": "Not set"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.ShowCard",
+      "title": "Set due date",
+      "card": {
+        "type": "AdaptiveCard",
+        "body": [
+          {
+            "type": "Input.Date",
+            "id": "dueDate"
+          }
+        ],
+        "actions": [
+          {
+            "type": "Action.Submit",
+            "title": "OK"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Action.ShowCard",
+      "title": "Comment",
+      "card": {
+        "type": "AdaptiveCard",
+        "body": [
+          {
+            "type": "Input.Text",
+            "id": "comment",
+            "isMultiline": true,
+            "placeholder": "Enter your comment"
+          }
+        ],
+        "actions": [
+          {
+            "type": "Action.Submit",
+            "title": "OK"
+          }
+        ]
+      }
+    }
+  ]
+}
+```
+
 ### Hero card
 
 A card that typically contains a single large image, one or more buttons, and text.
@@ -497,23 +650,6 @@ A list can display a maximum of 10 cards per message.
 ## Cards Not supported in Teams
 
 The following cards are implemented by the Bot Framework, but are NOT supported by Teams.
-
-### Adaptive card
-
-Not supported in Microsoft Teams.
-
-A customizable card that can contain any combination of text, speech, images, buttons, and input fields.
-
-#### Support
-
-| Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
-| --- | --- | --- | --- |
-| ✖ | ✖ | ✖ | ✔ |
-|
-
-#### For more information
-
-[Adaptive Cards Overview](https://docs.microsoft.com/en-us/adaptive-cards/)
 
 ### Animation card
 
