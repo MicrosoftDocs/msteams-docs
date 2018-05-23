@@ -2,7 +2,7 @@
 title: Features in the Public Developer Preview
 description: Describes the features in the Public Developer Preview of Microsoft Teams
 keywords: teams preview developer features
-ms.date: 01/31/2018
+ms.date: 05/23/2018
 ---
 # Features in the Public Developer Preview for Microsoft Teams
 
@@ -23,7 +23,7 @@ To enable this feature use the new scope `groupchat` in the manifest definition 
 
 Tab support is limited to configurable tabs.
 
-### Event changes
+### Bot Event changes
 
 All events have been updated to have a new `conversationType` field that returns one of the following three values for the conversation:
 
@@ -53,7 +53,7 @@ Bots will receive the following events in group chat. These events are a subset 
 
 See [Bot notifications](~/concepts/bots/bots-notifications) for more details on bots and events before these changes.
 
-### Changes to getContext()
+### Tab changes to getContext()
 
 `isChat` is returned by `getContext` to indicate whether or not the tab is in a chat.
 
