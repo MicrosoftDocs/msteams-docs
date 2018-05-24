@@ -12,15 +12,14 @@ Teams provides an in-app gallery for users to find or discover [high-quality Tea
 
 ## Overall process
 
- * [Register as a Microsoft app developer](https://developer.microsoft.com/en-us/store/register).
- * Register in the Seller Dashboard.
- * Use the Seller Dashboard to submit your Teams app package to AppSource.
- * Monitor the Seller Dashboard to track validation.
-
+* [Register as a Microsoft app developer](https://developer.microsoft.com/en-us/store/register).
+* Register in the Seller Dashboard.
+* Use the Seller Dashboard to submit your Teams app package to AppSource.
+* Monitor the Seller Dashboard to track validation.
 
 > [!IMPORTANT]
 > **Your Microsoft Teams app *must* use the [latest schema](~/resources/schema/manifest-schema) and follow [current packaging guidelines](~/concepts/apps/apps-package).**
->
+
 AppSource (formerly known as Office Store) provides a convenient location for you to distribute your Microsoft Teams app, as well as other Office 365 extensibility types such as Office add-ins and SharePoint add-ins. To include your solution in AppSource, you submit it to the Seller Dashboard. You need to create an individual or company account if you have not already done so for other Windows apps or Office extensibility types.
 
 > [!NOTE]
