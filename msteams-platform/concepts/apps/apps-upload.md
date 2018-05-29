@@ -11,7 +11,7 @@ To test your app experience within Microsoft Teams, you need to upload your app 
 > [!NOTE]
 > Uploading an updated package for an existing app with a bot might not show tab changes when viewed through the Conversations window. It's better to access it via the Apps fly-out, or test on a clean test environment.
 
-For bots designed only for 1:1 contexts, see [Adding a bot for 1:1 chat only](~/concepts/bots/bots-test#adding-a-bot-for-11-chat-only) for an alternate way to access for testing purposes.
+For bots designed only for personal conversations between a bot and a single user, see [Adding a bot for personal chat only](~/concepts/bots/bots-test#adding-a-bot-for-personal-chat-only) for an alternate way to access for testing purposes.
 
 ## Create your upload package
 
@@ -94,7 +94,7 @@ If you want to remove your app, select the trash-can icon next to the app name i
 If you change manifest information, you must first remove the app and then add the updated package (per [Load your package into a team](#load-your-package-into-a-team)). Note that, in general, code changes on your service do not require you to re-upload your manifest, unless those changes require manifest updates (such as changes to the URL or the Microsoft app ID for its bot).
 
 > [!NOTE]
-> There is currently no way to completely remove a bot from 1:1 context.
+> There is currently no way to completely remove a bot from personal context.
 
 ## Troubleshooting notes
 

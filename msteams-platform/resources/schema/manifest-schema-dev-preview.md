@@ -1,24 +1,30 @@
 ---
-title: Manifest schema reference
+title: Developer Preview Manifest schema reference
 description: Describes the schema supported by the manifest for Microsoft Teams
-keywords: teams manifest schema
-ms.date: 12/10/2017
+keywords: teams manifest schema Developer Preview
+ms.date: 04/26/2018
 ---
-# Reference: Manifest schema for Microsoft Teams
+# Developer Preview Reference: version 1.3 manifest schema for Microsoft Teams
 
-> [!NOTE]
-> For help on migrating your v0.4 manifest to v1.x, see our [migration guide](~/resources/schema/manifest-schema-migrate).
+>Notes:
+>See [Developer Preview](~/resources/dev-preview/developer-preview-intro) for information on the program and how you can join.
+>If you are not using the developer preview you should not be using this version of the manifest. See [Reference: Manifest schema for Microsoft Teams](~/resources/schema/manifest-schema) for the public version of the manifest.
 
-The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://statics.teams.microsoft.com/sdk/v1.2/manifest/MicrosoftTeams.schema.json`](https://statics.teams.microsoft.com/sdk/v1.2/manifest/MicrosoftTeams.schema.json). Versions 1.0 and 1.1 are also supported.
+The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://statics.teams.microsoft.com/sdk/v1.3/manifest/MicrosoftTeams.schema.json`](https://statics.teams.microsoft.com/sdk/v1.3/manifest/MicrosoftTeams.schema.json).
 
-The following schema sample shows all extensibility options.
+## What's new in the Developer Preview
+
+This is a preview of the 1.3 version of the Teams app manifest. It includes:
+
+* Apps in group chat changes:
+  * A new scope called "groupchat" has been added to the bots and configurable tabs sections of the manifest. For more information on the feature see: [Features in the Public Developer Preview for Microsoft Teams](~/resources/dev-preview/developer-preview-features).
 
 ## Sample full schema
 
 ```json
 {
-  "$schema": "https://statics.teams.microsoft.com/sdk/v1.2/manifest/MicrosoftTeams.schema.json", 
-  "manifestVersion": "1.2",
+  "$schema": "https://statics.teams.microsoft.com/sdk/v1.3/manifest/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.3",
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%",
   "packageName": "com.example.myapp",
@@ -37,15 +43,15 @@ The following schema sample shows all extensibility options.
     "full": "Full description of your app"
   },
   "icons": {
-    "outline": "%FILENAME-32x32px%", 
-    "color": "%FILENAME-192x192px" 
+    "outline": "%FILENAME-32x32px%",
+    "color": "%FILENAME-192x192px"
   },
   "accentColor": "%HEX-COLOR%",
   "configurableTabs": [
     {
       "configurationUrl": "https://taburl.com/config.html",
       "canUpdateConfiguration": true,
-      "scopes": [ "team" ]
+      "scopes": [ "team", "groupchat" ]
     }
   ],
   "staticTabs": [
@@ -62,7 +68,7 @@ The following schema sample shows all extensibility options.
       "botId": "%MICROSOFT-APP-ID-REGISTERED-WITH-BOT-FRAMEWORK%",
       "needsChannelSelector": false,
       "isNotificationOnly": false,
-      "scopes": [ "team", "personal" ],
+      "scopes": [ "team", "personal", "groupchat" ],
       "commandLists": [
         {
           "scopes": ["team"],
@@ -140,13 +146,13 @@ The schema defines the following properties:
 The URL referencing the JSON Schema for the manifest.
 
 > [!TIP]
-> Specify the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor: `"$schema": "https://statics.teams.microsoft.com/sdk/v1.2/manifest/MicrosoftTeams.schema.json",`
+> Specify the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor: `"$schema": "https://statics.teams.microsoft.com/sdk/v1.3/manifest/MicrosoftTeams.schema.json",`
 
 ## manifestVersion
 
 **Required** &ndash; String
 
-The version of the manifest schema this manifest is using. It should be "1.2".
+The version of the manifest schema this manifest is using. It should be "1.3".
 
 ## version
 
@@ -233,21 +239,21 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 **Optional**
 
-Used when your app experience has a team channel tab experience that requires extra configuration before it is added. Configurable tabs are supported only in the teams scope, and currently only one tab per app is supported.
+Used when your app experience has a team channel tab experience that requires extra configuration before it is added.  Configurable tabs are supported only in the teams scope, and currently only one tab per app is supported.
 
-The object is an array with all elements of the type `object`. This block is required only for solutions that provide a configurable channel tab solution.
+The object is an array with all elements of the type `object`.  This block is required only for solutions that provide a configurable channel tab solution.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 characters|✔|The URL to use when configuring the tab.|
-|`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: `true`|
-|`scopes`|Array of enum|1|✔|Currently, configurable tabs support only the `team` scope, which means it can be provisioned only to a channel.|
+|`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation.  Default: `true`|
+|`scopes`|Array of enum|1|✔|Currently, configurable tabs support the `team` scope, which means it can be provisioned to a channel, and the `groupchat` scope for use in groups.|
 
 ## staticTabs
 
 **Optional**
 
-Defines a set of tabs that can be "pinned" by default, without the user adding them manually. Static tabs declared in `personal` scope are always pinned to the app's personal experience. Static tabs declared in the `team` scope are currently not supported. 
+Defines a set of tabs that can be "pinned" by default, without the user adding them manually. Static tabs declared in `personal` scope are always pinned to the app's personal experience. Static tabs declared in the `team` or `groupchat` scope are currently not supported.
 
 The object is an array (maximum of 16 elements) with all elements of the type `object`. This block is required only for solutions that provide a static tab solution.
 
@@ -255,7 +261,7 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 |---|---|---|---|---|
 |`entityId`|String|64 characters|✔|A unique identifier for the entity that the tab displays.|
 |`name`|String|128 characters|✔|The display name of the tab in the channel interface.|
-|`contentUrl`|String|2048 characters|✔|The URL that points to the entity UI to be displayed in the Teams canvas. Must be HTTPS.|
+|`contentUrl`|String|2048 characters|✔|The URL that points to the entity UI to be displayed in the Teams canvas.  Must be HTTPS.|
 |`websiteUrl`|String|2048 characters||The URL to point at if a user opts to view in a browser.|
 |`scopes`|Array of enum|1|✔|Currently, static tabs support only the `personal` scope, which means it can be provisioned only as part of the personal experience.|
 
@@ -272,7 +278,7 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 |`botId`|String|64 characters|✔|The unique Microsoft app ID for the bot as registered with the Bot Framework. This may well be the same as the overall [app ID](#id).|
 |`needsChannelSelector`|Boolean|||Describes whether or not the bot utilizes a user hint to add the bot to a specific channel. Default: `false`|
 |`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. Default: `false`|
-|`scopes`|Array of enum|2|✔|Specifies whether the bot offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
+|`scopes`|Array of enum|2|✔|Specifies whether the bot offers an experience in the context of a channel in a `team`, an experience scoped to an individual user alone (`personal`), or in group chat (`groupchat`) These options are non-exclusive.|
 
 ### bots: commandLists
 
@@ -324,7 +330,7 @@ Each command item is an object with the following structure:
 |`id`|String|64 characters|✔|The ID for the command|
 |`title`|String|32 characters|✔|The user-friendly command name|
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command|
-|`initialRun`|Boolean|||A Boolean value that indicates whether the command should be run initially with no parameters. Default: `false`|
+|`initialRun`|Boolean|||A Boolean value that indicates whether the command should be run initially with no parameters.  Default: `false`|
 |`parameters`|Array of object|5|✔|The list of parameters the command takes. Minimum: 1; maximum: 5|
 |`parameter.name`|String|64 characters|✔|The name of the parameter as it appears in the client. This is included in the user request.|
 |`parameter.title`|String|32 characters|✔|User-friendly title for the parameter.|

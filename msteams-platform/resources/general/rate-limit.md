@@ -33,7 +33,7 @@ catch (HttpOperationException ex)
 
 ### Best practices
 
-In general, you should take simple precautions to avoid receiving `HTTP 429` responses. For instance, avoid issuing multiple requests to the same 1:1 or channel conversation. Instead, consider batching the API requests.
+In general, you should take simple precautions to avoid receiving `HTTP 429` responses. For instance, avoid issuing multiple requests to the same personal or channel conversation. Instead, consider batching the API requests.
 
 Using an exponential backoff with a random jitter is the recommended way to handle 429s. This ensures that multiple requests do not introduce collisions on retries. Following are some of the ways you can handle transient errors.
 
