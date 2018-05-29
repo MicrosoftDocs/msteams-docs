@@ -25,7 +25,7 @@ To enable this feature use the new scope `groupchat` in the manifest definition 
 
 Tab support is limited to configurable tabs.
 
-### Bot Event changes
+### Bot event changes
 
 All events have been updated to have a new `conversationType` field that returns one of the following three values for the conversation:
 
