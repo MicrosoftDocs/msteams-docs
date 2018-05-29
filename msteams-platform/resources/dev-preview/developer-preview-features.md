@@ -27,7 +27,7 @@ Tab support is limited to configurable tabs.
 
 ### Bot event changes
 
-All events have been updated to have a new `conversationType` field that returns one of the following three values for the conversation:
+All events sent to your bot have been updated to have a new `conversationType` field that returns one of the following three values for the conversation:
 
 * `personal` – chat between a bot and a user
 * `groupChat` – chat between a bot and two or more users
@@ -68,7 +68,7 @@ To test your app, open up a chat and click *Add apps* in the header. From there 
 * The UI shown in Developer Preview is still being developed
 * Custom defined app icons are currently not working in chat
 * If you upload an app with a bot to a chat in the *Developer Preview* version of Teams, and you switch back to the *Public* version, there might be some UI or behavior inconsistencies. If you run into any issues, please uninstall the app in *Developer Preview*
-* Bot menus do not currently work with the 'groupChat' scope
+* Bot menus do not currently work with the `groupChat` scope
 * Deeplinks into tabs in group chat do not work
 * There is a limit of 5 uploaded apps per chat
 
@@ -77,3 +77,7 @@ To test your app, open up a chat and click *Add apps* in the header. From there 
 The [Developer preview manifest](~/resources/schema/manifest-schema-dev-preview) has been updated to include this feature.
 
 See [What is the Public Developer Preview for Microsoft Teams?](~/resources/general/developer-preview) for more information on enabling it for your development tenant.
+
+### Group chats are similar to channel chats
+
+Group chat conversations behave very similarly to channel conversations with bots, so the information in the [Interact in a team channel with a Microsoft Teams bot](~/concepts/bots/bot-conversations/bots-conv-channel) topic may also be helpful.

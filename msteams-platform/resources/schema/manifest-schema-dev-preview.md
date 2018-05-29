@@ -10,7 +10,7 @@ ms.date: 04/26/2018
 >See [Developer Preview](~/resources/dev-preview/developer-preview-intro) for information on the program and how you can join.
 >If you are not using the developer preview you should not be using this version of the manifest. See [Reference: Manifest schema for Microsoft Teams](~/resources/schema/manifest-schema) for the public version of the manifest.
 
-The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://statics.teams.microsoft.com/sdk/v1.3/manifest/MicrosoftTeams.schema.json`](https://statics.teams.microsoft.com/sdk/v1.3/manifest/MicrosoftTeams.schema.json).
+The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://statics.teams.microsoft.com/sdk/v1.3.0-beta.2/manifest/MicrosoftTeams.schema.json`](https://statics.teams.microsoft.com/sdk/v1.3.0-beta.2/manifest/MicrosoftTeams.schema.json).
 
 ## What's new in the Developer Preview
 
@@ -239,7 +239,7 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 **Optional**
 
-Used when your app experience has a team channel tab experience that requires extra configuration before it is added.  Configurable tabs are supported only in the teams scope, and currently only one tab per app is supported.
+Used when your app experience has a team channel tab experience that requires extra configuration before it is added.  Configurable tabs are supported in both the `teams` and `groupchat` scope, and currently only one tab per app is supported.
 
 The object is an array with all elements of the type `object`.  This block is required only for solutions that provide a configurable channel tab solution.
 
@@ -247,7 +247,7 @@ The object is an array with all elements of the type `object`.  This block is re
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 characters|✔|The URL to use when configuring the tab.|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation.  Default: `true`|
-|`scopes`|Array of enum|1|✔|Currently, configurable tabs support the `team` scope, which means it can be provisioned to a channel, and the `groupchat` scope for use in groups.|
+|`scopes`|Array of enum|2|✔|Currently, configurable tabs support the `team` scope, which means it can be provisioned to a channel, and the `groupchat` scope for use in groups.|
 
 ## staticTabs
 
@@ -278,7 +278,7 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 |`botId`|String|64 characters|✔|The unique Microsoft app ID for the bot as registered with the Bot Framework. This may well be the same as the overall [app ID](#id).|
 |`needsChannelSelector`|Boolean|||Describes whether or not the bot utilizes a user hint to add the bot to a specific channel. Default: `false`|
 |`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. Default: `false`|
-|`scopes`|Array of enum|2|✔|Specifies whether the bot offers an experience in the context of a channel in a `team`, an experience scoped to an individual user alone (`personal`), or in group chat (`groupchat`) These options are non-exclusive.|
+|`scopes`|Array of enum|3|✔|Specifies whether the bot offers an experience in the context of a channel in a `team`, an experience scoped to an individual user alone (`personal`), or in group chat (`groupchat`) These options are non-exclusive.|
 
 ### bots: commandLists
 
