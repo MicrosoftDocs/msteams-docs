@@ -140,7 +140,7 @@ The list card has been added by Teams to provide functions beyond what the list 
 | --- | --- | --- |
 | title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
 | items | Array of list items  ||
-| buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
+| buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6. Does not render on mobile. |
 |
 
 #### Example
@@ -215,11 +215,9 @@ The Office 365 Connector card provides a flexible layout with multiple sections,
 | Property | Type  | Description |
 | --- | --- | --- |
 | title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
-| subtitle | Rich text | Subtitle of the card. Maximum 2 lines; formatting not currently supported |
+| summary | Rich text | Summary of the card. Maximum 2 lines; formatting not currently supported |
 | text | Rich text | Text appears just below the subtitle; see [Card formatting](~/concepts/cards/cards-format) for formatting options |
-| images | Array of images | Image displayed at top of card. Aspect ratio 16:9 |
-| buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
-| tap | Action object | This action will be activated when the user taps on the card itself |
+| themeColor | HEX string | color that overrides the accentColor provided from the application manifest |
 
 #### Notes
 

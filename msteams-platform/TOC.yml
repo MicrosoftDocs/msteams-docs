@@ -70,6 +70,8 @@
       href: ./concepts/bots/bots-notifications
     - name: Context for bots
       href: ./concepts/bots/bots-context
+    - name: Sending and recieving files (developer preview)
+      href: ./concepts/bots/bots-files
     - name: Notification only bots
       href: ./concepts/bots/bots-notification-only
     - name: Bot menus
@@ -168,7 +170,7 @@
         href: ./resources/design/framework/bots
       - name: Cards
         href: ./resources/design/framework/cards
-        name: Command box
+      - name: Command box
         href: ./resources/design/framework/command-box
       - name: Submitting your app
         href: ./resources/design/framework/submitting
