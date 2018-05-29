@@ -57,7 +57,7 @@ See [Bot notifications](~/concepts/bots/bots-notifications) for more details on 
 
 ### Group chats are similar to channel chats
 
-Group chat conversations behave very similarly to channel conversations with bots, so the information in the [Interact in a team channel with a Microsoft Teams bot](~/concepts/bots/bot-conversations/bots-conv-channel) topic may also be helpful.
+Group chat conversations behave very similarly to channel conversations with bots, so the information in the [Interact in a team channel with a Microsoft Teams bot](~/concepts/bots/bot-conversations/bots-conv-channel) topic may also be helpful. The main difference is that group chat does not support threaded conversations.
 
 ### Tab changes to getContext()
 
