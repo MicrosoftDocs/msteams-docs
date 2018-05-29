@@ -55,6 +55,10 @@ Bots will receive the following events in group chat. These events are a subset 
 
 See [Bot notifications](~/concepts/bots/bots-notifications) for more details on bots and events before these changes.
 
+### Group chats are similar to channel chats
+
+Group chat conversations behave very similarly to channel conversations with bots, so the information in the [Interact in a team channel with a Microsoft Teams bot](~/concepts/bots/bot-conversations/bots-conv-channel) topic may also be helpful.
+
 ### Tab changes to getContext()
 
 `isChat` is returned by `getContext` to indicate whether or not the tab is in a chat.
@@ -68,7 +72,7 @@ To test your app, open up a chat and click *Add apps* in the header. From there 
 * The UI shown in Developer Preview is still being developed
 * Custom defined app icons are currently not working in chat
 * If you upload an app with a bot to a chat in the *Developer Preview* version of Teams, and you switch back to the *Public* version, there might be some UI or behavior inconsistencies. If you run into any issues, please uninstall the app in *Developer Preview*
-* Bot menus do not currently work with the `groupChat` scope
+* Bot menus do not currently work with the `groupchat` scope
 * Deeplinks into tabs in group chat do not work
 * There is a limit of 5 uploaded apps per chat
 
@@ -77,7 +81,3 @@ To test your app, open up a chat and click *Add apps* in the header. From there 
 The [Developer preview manifest](~/resources/schema/manifest-schema-dev-preview) has been updated to include this feature.
 
 See [What is the Public Developer Preview for Microsoft Teams?](~/resources/general/developer-preview) for more information on enabling it for your development tenant.
-
-### Group chats are similar to channel chats
-
-Group chat conversations behave very similarly to channel conversations with bots, so the information in the [Interact in a team channel with a Microsoft Teams bot](~/concepts/bots/bot-conversations/bots-conv-channel) topic may also be helpful.

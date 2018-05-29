@@ -239,7 +239,7 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 **Optional**
 
-Used when your app experience has a team channel tab experience that requires extra configuration before it is added.  Configurable tabs are supported in both the `teams` and `groupchat` scope, and currently only one tab per app is supported.
+Used when your app experience has a team channel tab experience that requires extra configuration before it is added.  Configurable tabs are supported in both the `team` and `groupchat` scope, and currently only one tab per app is supported.
 
 The object is an array with all elements of the type `object`.  This block is required only for solutions that provide a configurable channel tab solution.
 
