@@ -217,7 +217,7 @@ var button = new CardAction()
 
 Initiates OAuth flow, allowing bots to connect with secure services, as described in more detail here: [Authentication flow in bots](~/concepts/authentication/auth-flow-bot).
 
-## Adaptive card actions
+## Adaptive card actions (supported in Developer Preview only)
 
 Adaptive cards support three action types:
 

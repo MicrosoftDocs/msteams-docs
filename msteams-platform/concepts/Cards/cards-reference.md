@@ -46,7 +46,7 @@ See the topic [Card Formatting](~/concepts/cards/cards-format) for more informat
 
 ## Cards supported in Teams
 
-### Adaptive card
+### Adaptive card (supported in Developer Preview only)
 
 A customizable card that can contain any combination of text, speech, images, buttons, and input fields.
 
