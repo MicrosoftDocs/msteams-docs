@@ -24,3 +24,24 @@ Cards support formatting in the text property only, not in the title or subtitle
 | blockquote | <blockquote>text</blockquote> | `>text` | `<blockquote>text</blockquote>` |
 | hyperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` | `<a href="https://www.bing.com/">Bing</a>` |
 | image link | <img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img> | `![Duck on a rock](http://aka.ms/Fo983c)` | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+
+## Text formatting for Adaptive cards
+Adaptive card offers inline markup for a subset of Markdown syntax. The supported styles are:
+
+| Text Style      | Markdown |
+|-----------------|-----|
+| **Bold**        | ```**Bold**``` |
+| _Italic_        | ```_Italic_``` |
+| Bullet list     | ```- Item 1\r- Item 2\r- Item 3``` | 
+| Numbered list   | ```1. Green\r2. Orange\r3. Blue``` |
+| Hyperlinks      | ```[Title](url)``` |
+
+_Not supported_
+
+* Headers
+* Tables
+* Images
+* Anything not in the table above
+
+### For more information 
+[Text features in Adaptive cards](https://docs.microsoft.com/en-us/adaptive-cards/create/textfeatures)
