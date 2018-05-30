@@ -11,7 +11,7 @@ A conversation is a series of messages sent between your bot and one or more use
 * `teams` Also called channel conversations, visible to all members of the channel.
 * `personal` Conversations between bots and a single user.
 
-A bot behaves slightly depending on what kind of conversation it is involved in:
+A bot behaves slightly differently depending on what kind of conversation it is involved in:
 
 * [Bots in channel conversations](~/concepts/bots/bot-conversations/bots-conv-channel) require the user to @ mention the bot to invoke it in a channel.
 * [Bots in single user conversations](~/concepts/bots/bot-conversations/bots-conv-personal) do not require an @ mention -  the user can just type.
