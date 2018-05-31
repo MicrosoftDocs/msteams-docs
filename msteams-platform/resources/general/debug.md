@@ -21,7 +21,7 @@ In general, too, we recommend you utilize multiple manifests and packages to all
 
 ## Purely local
 
-Our bot samples are designed to run unmodified within the Bot Emulator. This enables you to test some of the core 1:1 logic of the bot, see a rough layout of messages, and perform simple tests. Here are the steps:
+Our bot samples are designed to run unmodified within the Bot Emulator. This enables you to test some of the core logic of the bot, see a rough layout of messages, and perform simple tests. Here are the steps:
 
 * Run the code by selecting the pre-built "Launch - Emulator" debug configuration for Node.js, or use the default "web.config" values for .NET/C#.
 * Launch the Bot Emulator and set the URL:

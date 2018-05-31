@@ -17,34 +17,19 @@ Build and connect intelligent bots to interact with Microsoft Teams users natura
 
 A bot appears just like any other team member you interact with in a conversation except that it has a hexagonal avatar icon and is always online.
 
-A bot behaves slightly depending on what kind of conversation it is involved in. Teams support three kinds of conversations (called scopes in the [Manifest](~/resources/schema/manifest-schema)).
+A bot behaves slightly depending on what kind of conversation it is involved in. Teams support several kinds of conversations (called scopes in the [Manifest](~/resources/schema/manifest-schema)).
 
 * `teams` Also called channel conversations
-* `personal` Also called 1:1 conversations or chats
-* `group` Used for group and meeting conversations
+* `personal` Conversations between a bot and a single user
 
-Microsoft Teams allows bots to send messages in either:
-
-* Teams - (channel) requires the user to @ mention the bot to invoke it in a channel.
-* Personal - (1:1 conversations or chats) These are personal conversations with a single user. They do not require an @ mention - the user can just type or access them in the apps personal experience from the app bar flyout.
-
-Not supported yet:
-
-* Groups - Bots in group conversations, including meetings, are currently not supported. Group conversations are also called group chats.
-
-In order for the bot to work in a particular scope it should be listed as supporting that scope in the manifest. Scopes are defined and discussed further in the [Manifest Reference](~/resources/schema/manifest-schema).
-
-Bots in Teams can appear in one or both of the following ways:
-
-* In a one-on-one context ("personal scope"), where you can address them via the conversation interface or access them in the apps personal experience from the app bar flyout.
-* As a member of a team ("team scope") where they take part in a conversation only when you @mention them.
+See [Have a conversation with a Microsoft Teams bot](~/concepts/bots/conversations/bots-conversations) for more information.
 
 With Microsoft Teams apps, you can make the bot the star of your experience, or just a helper. Bots are distributed as part of your broader app package which can include other capabilities such as tabs or messaging extensions. If your bot is the star, be sure to take advantage of the [tabs](~/concepts/tabs/tabs-overview) capability. Use this rich web view to surface accompanying experiences and information that helps your users best interact with your service.
 
 ## Bot APIs
 
 Microsoft Teams supports most of the [Microsoft Bot Framework](https://dev.botframework.com/). (If you already have a bot that's based on the Bot Framework, you can easily adapt it to work in Microsoft Teams.) We recommend you use either C# or TypeScript to take advantage of our SDKs. These packages extend the basic Bot Builder classes and methods:
-<!--  -->
+
 * Using specialized card types like the Office 365 Connector card
 * Consuming and setting Teams-specific channel data on activities
 * Processing messaging extension requests
@@ -69,14 +54,14 @@ Outgoing webhooks allow you to create a simple bot for basic interaction, like k
 The following topics will guide you through the process of creating a great bot for Teams.
 
 * [Get started with apps for Teams](~/get-started/get-started-nodejs) Create a "hello world" app.
-* [Design a great bot](~/get-started/design#designing-a-great-bot): Microsoft Teams is the place for group and team collaboration. Consider what functionality your bot can bring to this collaboration environment, via 1:1 conversations or as part of a channel conversation. A great bot on Teams will also find ways to leverage the unique tabs feature, via a [configurable tab](~/concepts/tabs/tabs-overview) or a [static tab](~/concepts/tabs/tabs-static).
+* [Design a great bot](~/get-started/design#designing-a-great-bot): Microsoft Teams is the place for group and team collaboration. Consider what functionality your bot can bring to this collaboration environment, via personal conversations or as part of a channel conversation. A great bot on Teams will also find ways to leverage the unique tabs feature, via a [configurable tab](~/concepts/tabs/tabs-overview) or a [static tab](~/concepts/tabs/tabs-static).
 * [Create a bot](~/concepts/bots/bots-create): Take advantage of the great tools, documentation, and community provided by the Bot Framework team.
-* [Talk to your bot](~/concepts/bots/bots-conversations): Add basic conversation flow and leverage channel-specific functionality. If you develop in .NET or Node.js, use our [extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) to simplify your work.
-* [Using cards in your bot](~/concepts/bots/bots-cards) Design cards to communicate and accept user response.
+* [Talk to your bot](~/concepts/bots/bot-conversations/bots-conversations): Add basic conversation flow and leverage channel-specific functionality. If you develop in .NET or Node.js, use our [extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) to simplify your work.
+* [Using cards in your bot](~/concepts/bots/bot-conversations/bots-cards) Design cards to communicate and accept user response.
 * [Respond to bot events](~/concepts/bots/bots-notifications).
 * [Notification-only bots](~/concepts/bots/bots-notification-only) Using bots to send notifications for your app.
 * [Get context](~/concepts/bots/bots-context) Get information about the user.
 * [Bot menus](~/concepts/bots/bots-menus) Using menus in bots.
 * [Using tabs with bots](~/concepts/bots/bots-with-tabs) Making tabs and bots work together.
-* [Test your bot](~/concepts/bots/bots-test): Add your bot for 1:1 or team conversations to see it in action.
+* [Test your bot](~/concepts/bots/bots-test): Add your bot for personal or team conversations to see it in action.
 * [Publish your bot](~/publishing/apps-publish): Create your Teams package, add other capabilities, and submit it to AppSource.

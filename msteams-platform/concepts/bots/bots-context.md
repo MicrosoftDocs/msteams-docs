@@ -113,11 +113,11 @@ var conversationId = session.message.address.conversation.id;
 );
 ```
 
-## Fetching user profile in 1:1 chat
+## Fetching user profile in personal chat
 
-You can also make the same API call for any 1:1 chat to obtain the profile information of the user chatting with your bot.
+You can also make the same API call for any personal chat to obtain the profile information of the user chatting with your bot.
 
-The API call and SDK methods are identical to fetching the team roster, as is the response object. The only difference is that you pass the 1:1 `conversationId` instead of the `teamId`.
+The API call and SDK methods are identical to fetching the team roster, as is the response object. The only difference is that you pass the personal `conversationId` instead of the `teamId`.
 
 ## Fetching the list of channels in a team
 

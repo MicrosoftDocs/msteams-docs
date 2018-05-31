@@ -8,15 +8,15 @@ ms.date: 03/29/2018
 
 A proactive message is a message that is sent by a bot to start a conversation. You may want your bot to start a conversation for a number of reasons, including:
 
-- Welcome messages for 1:1 bot conversations
+- Welcome messages for personal bot conversations
 - Poll responses
 - External event notifications
 
 Sending a message to start a new conversation thread   is different than sending a message in response to an existing conversation: when your bot starts a new a conversation, there is no pre-existing conversation to post the message to.
 
-## Starting 1:1 conversations
+## Starting a personal conversations
 
-Bots can create new conversations with an individual Microsoft Teams user as long as your bot has user information obtained through previous addition in a personal or team scope. This information enables your bot to proactively notify them. For instance, if your bot was added to a team, it could query the team roster and send users individual messages in private 1:1 chats, or a user could @mention another user to trigger the bot to send that user a direct message.
+Bots can create new conversations with an individual Microsoft Teams user as long as your bot has user information obtained through previous addition in a personal or team scope. This information enables your bot to proactively notify them. For instance, if your bot was added to a team, it could query the team roster and send users individual messages in personal chats, or a user could @mention another user to trigger the bot to send that user a direct message.
 
 You need the user’s *unique ID* and *tenant ID* to send a proactive message. Typically, these are   obtained from a team context, either by [fetching the team roster](~/concepts/bots/bots-context#fetching-the-team-roster) or when a user [interacts with your bot in a channel](~/concepts/bots/bot-conversations/bots-conv-channel). For bots that have already been added to the user's personal scope, you might have cached user information via the `conversationUpdate` event (see [Bot or user added to a team](~/concepts/bots/bots-notifications#team-member-or-bot-addition)).
 
@@ -54,7 +54,7 @@ You must supply the user ID and the tenant ID. If the call succeeds, the API ret
 }
 ```
 
-This ID is the 1:1 chat's unique conversation ID. Please store this value and reuse it for future interactions with the user.
+This ID is the personal chat's unique conversation ID. Please store this value and reuse it for future interactions with the user.
 
 ### Using .NET
 
