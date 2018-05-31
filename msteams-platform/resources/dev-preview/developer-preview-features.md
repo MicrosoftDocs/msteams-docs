@@ -21,7 +21,9 @@ This feature allows you to:
 * Add tabs to chats
 * Add bots to chats
 
-To enable this feature use the new scope `groupchat` in the manifest definition for bots and tabs. The [Developer preview manifest](~/resources/schema/manifest-schema-dev-preview) has been updated to include this feature.
+To enable this feature use the new scope `groupchat` in the manifest definition for bots and tabs. You must  use the preview schema (1.3) in order to use this feature. You can find the schema here: `https://statics.teams.microsoft.com/sdk/v1.3.0-beta.2/manifest/MicrosoftTeams.schema.json`.
+
+The [Developer preview manifest](~/resources/schema/manifest-schema-dev-preview) documentation has also been updated to include this scope.
 
 Tab support is limited to configurable tabs.
 
