@@ -69,6 +69,18 @@ Group chat conversations behave very similarly to channel conversations with bot
 
 To test your app, open up a chat and click *Add apps* in the header. From there you can access *Add custom app* to upload your app package.
 
+### Preview manifest
+
+The [Developer preview manifest](~/resources/schema/manifest-schema-dev-preview) has been updated to include this feature.
+
+See [What is the Public Developer Preview for Microsoft Teams?](~/resources/general/developer-preview) for more information on enabling it for your development tenant.
+
+### Samples
+
+The samples in this section have been updated to include this feature:
+
+* [Featured code samples](~/samples/code-samples#featured)
+
 ### Known issues
 
 * The UI shown in Developer Preview is still being developed
@@ -77,9 +89,3 @@ To test your app, open up a chat and click *Add apps* in the header. From there 
 * Bot menus do not currently work with the `groupchat` scope
 * Deeplinks into tabs in group chat do not work
 * There is a limit of 5 uploaded apps per chat
-
-### Preview manifest
-
-The [Developer preview manifest](~/resources/schema/manifest-schema-dev-preview) has been updated to include this feature.
-
-See [What is the Public Developer Preview for Microsoft Teams?](~/resources/general/developer-preview) for more information on enabling it for your development tenant.

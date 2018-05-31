@@ -192,6 +192,8 @@
       href: ./resources/design/resources
   - name: Manifest schema
     href: ./resources/schema/manifest-schema
+  - name: Developer preview manifest schema
+    href: ./resources/schema/manifest-schema-dev-preview
   - name: Microsoft Graph APIs
     href: ./resources/microsoft-graph
 - name: Troubleshooting
