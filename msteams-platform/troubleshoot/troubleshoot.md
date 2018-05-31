@@ -49,7 +49,11 @@ For more information about authentication, please see [Authenticate a user](~/co
 
 ### Static tabs not showing up
 
+<<<<<<< HEAD
 There is a known issue where updating an existing bot app with a new or updated static tab will not show that tab change when accessing the app from a 1:1 bot conversation. To see the change, you should test on a new user or test instance, or access the bot from the Apps flyout.
+=======
+There is a known issue where updating an existing bot app with a new or updated static tab will not show that tab change when accessing the app from a personal chat conversation.  To see the change, you should test on a new user or test instance, or access the bot from the Apps flyout.
+>>>>>>> Norm-Apps-Group-Chat
 
 ---
 
