@@ -59,40 +59,40 @@ items:
   durationInMinutes: 2
   content: |
 
-  Once you update the manifest, you can rebuild the sample. 
+    Once you update the manifest, you can rebuild the sample. 
 
-  ## Building your app for C#
+    ## Building your app for C#
 
-  Using `Build Solution` command from the `Build` menu will generate a file `helloworldapp.zip` in the `bin` directory within the root of the project directory `Microsoft.Teams.Samples.HelloWorld.Web`.
+    Using `Build Solution` command from the `Build` menu will generate a file `helloworldapp.zip` in the `bin` directory within the root of the project directory `Microsoft.Teams.Samples.HelloWorld.Web`.
 
-  > [!NOTE]
-  > You need to make sure the app is running while you upload it into Teams and use it.
+    > [!NOTE]
+    > You need to make sure the app is running while you upload it into Teams and use it.
 
-  ## Building your app for Node.js
+    ## Building your app for Node.js
 
-  Run the following command in the app terminal window, stopping the app if needed:
+    Run the following command in the app terminal window, stopping the app if needed:
 
-  ```bash
-  gulp
-  ```
+    ```bash
+    gulp
+    ```
 
-  This will generate a file `helloworldapp.zip` in the `manifest` directory within the root of the project directory.
+    This will generate a file `helloworldapp.zip` in the `manifest` directory within the root of the project directory.
 
-  > [!NOTE]
-  > You might have stopped the node process in order to rebuild the app. If so, you will need to rerun the node process using the `npm start` command described in [Build and run the sample](#BuildRun).
+    > [!NOTE]
+    > You might have stopped the node process in order to rebuild the app. If so, you will need to rerun the node process using the `npm start` command described in [Build and run the sample](#BuildRun).
 
-  ## Uploading the app
+    ## Uploading the app
 
-  Use the **Upload a custom app** link in Teams to upload this zip file and install your app into one of the teams you own. See **Load your package into a team** in [Upload your app in Microsoft Teams](~/concepts/apps/apps-upload) for more information on how to do this.
+    Use the **Upload a custom app** link in Teams to upload this zip file and install your app into one of the teams you own. See **Load your package into a team** in [Upload your app in Microsoft Teams](~/concepts/apps/apps-upload) for more information on how to do this.
 
 
 - title: Configure the app tab
   durationInMinutes: 2
   content: |
 
-  Once you install the app into a team, you will need to configure it to show content. Go to a channel in the team and click on the **'+'** button to add a new tab. You can then choose `Hello World` from the **Add a tab** list.  You will then be presented with a configuration dialog. This dialog will let you choose which tab to display in this channel. Once you select the tab and click on `Save` then you can see the `Hello World` tab loaded with the tab you chose.
+    Once you install the app into a team, you will need to configure it to show content. Go to a channel in the team and click on the **'+'** button to add a new tab. You can then choose `Hello World` from the **Add a tab** list.  You will then be presented with a configuration dialog. This dialog will let you choose which tab to display in this channel. Once you select the tab and click on `Save` then you can see the `Hello World` tab loaded with the tab you chose.
 
-  <img width="530px" src="~/assets/images/samples-hello-world-tab-configure.png" title="Screenshot of configure" />
+    <img width="530px" src="~/assets/images/samples-hello-world-tab-configure.png" title="Screenshot of configure" />
 
 - title: Configure the app tab
   durationInMinutes: 2
