@@ -66,6 +66,7 @@ A customizable card that can contain any combination of text, speech, images, bu
 * [Adaptive Cards Overview](https://docs.microsoft.com/en-us/adaptive-cards/)
 * [Adaptive card actions in Teams](~/concepts/cards/cards-actions#adaptive-card-actions)
 
+
 #### Example
 
 ```json
