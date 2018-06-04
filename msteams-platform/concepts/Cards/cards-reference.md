@@ -54,7 +54,7 @@ A customizable card that can contain any combination of text, speech, images, bu
 
 | Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ |  ✔* | ✔ |
+| ✔ | ✔ | ✖ | ✔ |
 |
 
 #### Example
@@ -63,10 +63,8 @@ A customizable card that can contain any combination of text, speech, images, bu
 
 #### For more information
 
-*[Adaptive Cards Overview](https://docs.microsoft.com/en-us/adaptive-cards/)
-*[Adaptive card actions in Teams](~/concepts/cards/cards-actions#adaptive-card-actions)
-
-*Note: There are some Outlook specific action types like Action.Http which are not supported by Teams. For more information on Outlook specific behavior of adaptive cards please visit: [Designing Outlook Actionable Message cards with the Adaptive Card format](https://docs.microsoft.com/en-us/outlook/actionable-messages/adaptive-card).
+* [Adaptive Cards Overview](https://docs.microsoft.com/en-us/adaptive-cards/)
+* [Adaptive card actions in Teams](~/concepts/cards/cards-actions#adaptive-card-actions)
 
 #### Example
 
