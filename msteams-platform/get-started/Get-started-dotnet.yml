@@ -1,0 +1,98 @@
+### YamlMime:YamlDocument
+documentType: Tutorial
+title: Get started on the Microsoft Teams platform with C#/.NET
+metadata:
+  title: Get started on the Microsoft Teams platform with C#/.NET
+  description: Get started building great apps in Microsoft Teams using C#/.NET
+  audience: Developer
+  level: Intermediate
+  displayType: one-column
+  interactive: azurecli
+  keywords: getting started node.js nodejs
+items:
+- durationInMinutes: 1
+  content: |
+
+    # Get started on the Microsoft Teams platform with C#/.NET
+
+    > [!div class="op_single_selector"]
+    > - [.NET](~/get-started/Get-started-dotnet.yml)
+    > - [Node.js](~/get-started/Get-started-Nodejs.yml)
+
+    [!include[Step 1 Intro](~/includes/get-started/step1-intro.md)]
+
+    > [!NOTE]
+    > Before you begin make sure to check out our [Get started](get-started-common.yml) tutorial to get your prerequistes and environment setup. It will also guide you through the registration process of a bot. 
+
+    This tutorial helps you get started creating a Microsoft Teams app using C#/.NET. You can test the app by loading it into a Team that you have permissions for, or into a test tenant created using the Office Developer Program. This topic is written to be platform independent.
+
+
+- title: Download the sample
+  durationInMinutes: 2
+  content: |
+
+    We have provided a [simple 'Hello, World!' sample](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) to get you started. In a terminal window, run the following command to clone the sample repository to your local machine:
+
+    ```bash
+    git clone https://github.com/OfficeDev/msteams-samples-hello-world-csharp.git
+    ```
+
+    > [!TIP]
+    > You can [fork](https://help.github.com/articles/fork-a-repo/) this [repo](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) if you want to modify and check in your changes to GitHub for future reference.
+
+- title: Build and run the sample
+  durationInMinutes: 2
+  content: |
+
+    Once the repo is cloned, use Visual Studio to open the solution file `Microsoft.Teams.Samples.HelloWorld.sln` from the root directory of the sample and click `Build Solution` from the `Build` menu. You can run the sample by pressing `F5` or choosing `Start Debugging` from the `Debug` menu.
+
+    When the app starts, you will see a browser window open with the root of the app launched. You can navigate to the following URLs to verify that all the app URLs are loading:
+
+    * [http://localhost:3333](http://localhost:3333)
+    * [http://localhost:3333/hello](http://localhost:3333/hello)
+    * [http://localhost:3333/first](http://localhost:3333/first)
+    * [http://localhost:3333/second](http://localhost:3333/second)
+
+- title: Host the sample app
+  durationInMinutes: 2
+  content: |
+
+    Remember that apps in Microsoft Teams are web applications exposing one or more capabilities. For the Teams platform to load your app, your app must be reachable from the internet. To make your app reachable from the internet, you need to host your app. You can either host it in Microsoft Azure for free or create a tunnel to the local process on your development machine using `ngrok`. When you finish hosting your app make a note of its root URL. It will look something like: `https://yourteamsapp.ngrok.io` or `https://yourteamsapp.azurewebsites.net`.
+
+    ## Tunnel using ngrok
+
+    For quick testing you can run the app on your local machine and create a tunnel to it through a web endpoint. [ngrok](https://ngrok.com) is a free tool that lets you do just that. With ngrok you can get a web address such as `https://d0ac14a5.ngrok.io` (this URL is just an example). You can [download and install](https://ngrok.com/download) ngrok for your environment. Make sure you add it to a location in your `PATH`.
+
+    Once you install it, you can open a new terminal window and run the following command to create a tunnel. The sample uses port 3333, so be sure to specify it here.
+
+    ```bash
+    ngrok http 3333
+    ```
+
+    Ngrok will listen to requests from the internet and will route them to your app running on port 3333. You can verify by opening your browser and going to `https://d0ac14a5.ngrok.io/hello` to load your app's hello page. Please be sure to use the forwarding address displayed by ngrok in your console session instead of this URL.
+
+    > [!NOTE]
+    > If you have used a different port in the [build and run](#build-and-run-the-sample) step above, make sure you use the same port number to setup the `ngrok` tunnel.
+    > [!TIP]
+    > It is a good idea to run `ngrok` in a different terminal window to keep it running without interfering with the node app which you might later have to stop, rebuild and rerun. The `ngrok` session will return useful debugging information in this window.
+
+    The app will only be available during the current session on your development machine. If the machine is shut down or goes to sleep the service will no longer be available. Remember this when sharing the app for testing by other users. If you have to restart the service it will return a new address and you will have to update every place that uses that address.
+
+    ## Host in Azure
+
+    Microsoft Azure lets you host your .NET application on a free tier using shared infrastructure. This will be sufficient to run this `Hello World` sample. See [creating a new free account](https://azure.microsoft.com/en-us/free/) for more information.
+
+    Visual Studio has built-in support for app deployment to different providers, including Azure. For more details see [Host your .NET Teams app in Azure](~/get-started/get-started-dotnet-in-azure).
+
+    <img width="530px" src="~/assets/images/get-started/publishtoazure1.png" title="Visual Studio"/>
+
+- title: Next steps
+  durationInMinutes: 1
+  content: |
+    We covered the following key learnings in this training:
+    -   Downloading the sample
+    -   Building and running the sample
+
+    ### Next steps
+
+    1.	[Deploying your sample]((~/get-started/get-start-Deploy-your-app-to-Microsoft-Teams.yml)
