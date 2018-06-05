@@ -23,7 +23,6 @@ We have crafted some tutorials that you can follow to get you setup and deployed
 1. [Getting start by setting up your environment](~/get-started/get-started-common.yml)
 2. Get starting platform specific:
       - [Get started on the Microsoft Teams platform with Node.js](~/get-started/get-started-nodejs.yml)
-      or 
       - [Get started on the Microsoft Teams platform with C#/.NET](~/get-started/get-started-dotnet.yml)
 3. [Deploying your sample](~/get-started/get-start-Deploy-your-app-to-Microsoft-Teams.yml)
 4. [Publish to Azure](~/get-started/get-started-dotnet-in-azure)
