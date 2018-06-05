@@ -15,11 +15,11 @@ The activity feed in Microsoft Teams is the user's single inbox for all activity
 
 If your app posts cards and other messages into a channel, they'll automatically show up in the user's feed if he or she has followed that channel.
 
-Additionally, you can also send personal (1:1 chat) messages into the feed as preview cards summarizing your app's activity. You can construct the message such that choosing the card navigates the user straight to the message or object that triggered the notification, such as an entity in a tab. This allows the user to see the full content of the activity.
+Additionally, you can also send personal chat messages into the feed as preview cards summarizing your app's activity. You can construct the message such that choosing the card navigates the user straight to the message or object that triggered the notification, such as an entity in a tab. This allows the user to see the full content of the activity.
 
 ## Sending content to the activity feed
 
-Activity feed notification leverages your existing integration with the Bot Framework APIs.  You can flag specific messages to generate notifications which appear in the activity feed. This allows generating higher levels of engagement by creating alerts on web/desktop and mobile apps.
+Activity feed notification leverages your existing integration with the Bot Framework APIs. You can flag specific messages to generate notifications which appear in the activity feed. This allows generating higher levels of engagement by creating alerts on web/desktop and mobile apps.
 
 When constructing your message, the following fields should be populated so that the correct preview content can be shown in the feed:
 

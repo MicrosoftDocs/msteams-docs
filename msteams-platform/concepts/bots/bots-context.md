@@ -4,7 +4,6 @@ description: Describes how to get context for bots in Microsoft Teams
 keywords: teams bots context
 ms.date: 02/27/2018
 ---
-
 # Get context for your Microsoft Teams bot
 
 Your bot can access additional context about the team or chat, such as user profile. This information can be used to enrich your bot's functionality and provide a more personalized experience.
@@ -71,7 +70,7 @@ foreach (var member in members)
     sb.AppendFormat(
         "GivenName = {0}, TeamsMemberId = {1}",
         member.Name, member.Id);
-    
+
     sb.AppendLine();
 }
 
@@ -89,11 +88,16 @@ await context.PostAsync($"People in this conversation: {sb.ToString()}");
 >}
 >```
 
-#### Node.js example
+#### Node.js/TypeScript example
 
 The following example uses the [Microsoft Teams extensions for the Bot Builder SDK for Node.js](https://www.npmjs.com/package/botbuilder-teams).
 
-```js
+```typescript
+
+[...]
+import * as builder from "botbuilder";
+[...]
+
 var conversationId = session.message.address.conversation.id;
   connector.fetchMembers(
     (<builder.IChatConnectorAddress>session.message.address).serviceUrl,
@@ -109,11 +113,11 @@ var conversationId = session.message.address.conversation.id;
 );
 ```
 
-## Fetching user profile in 1:1 chat
+## Fetching user profile in personal chat
 
-You can also make the same API call for any 1:1 chat to obtain the profile information of the user chatting with your bot.
+You can also make the same API call for any personal chat to obtain the profile information of the user chatting with your bot.
 
-The API call and SDK methods are identical to fetching the team roster, as is the response object. The only difference is that you pass the 1:1 `conversationId` instead of the `teamId`.
+The API call and SDK methods are identical to fetching the team roster, as is the response object. The only difference is that you pass the personal `conversationId` instead of the `teamId`.
 
 ## Fetching the list of channels in a team
 
@@ -121,7 +125,7 @@ Your bot can query the list of channels in a team.
 
 > [!NOTE]
 >* Currently, the name of the default General channel is returned as `null` to allow for localization.
->* The channel ID for the General channel always matchs the team ID.
+>* The channel ID for the General channel always matches the team ID.
 
 #### REST API example
 

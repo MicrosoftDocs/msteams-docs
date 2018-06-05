@@ -23,6 +23,8 @@
   - name: Apps for Teams
     href: ./concepts/apps/apps-overview
     items:
+    - name: Design apps
+      href: ./concepts/apps/apps-design
     - name: Create an app package
       href: ./concepts/apps/apps-package
     - name: Upload an app package
@@ -40,6 +42,8 @@
       href: ./concepts/tabs/tabs-update-remove
     - name: Context for tabs
       href: ./concepts/tabs/tabs-context
+    - name: Requirements for tabs
+      href: ./concepts/tabs/tabs-requirements
   - name: Bots
     href: ./concepts/bots/bots-overview
     items:
@@ -48,7 +52,7 @@
     - name: Conversations
       href: ./concepts/bots/bot-conversations/bots-conversations
       items:
-      - name: 1-on-1 conversations with bots
+      - name: Personal conversations with bots
         href: ./concepts/bots/bot-conversations/bots-conv-personal
       - name: Channel conversations with bots
         href: ./concepts/bots/bot-conversations/bots-conv-channel
@@ -62,6 +66,8 @@
       href: ./concepts/bots/bots-notifications
     - name: Context for bots
       href: ./concepts/bots/bots-context
+    - name: Sending and recieving files (developer preview)
+      href: ./concepts/bots/bots-files
     - name: Notification only bots
       href: ./concepts/bots/bots-notification-only
     - name: Bot menus
@@ -114,7 +120,7 @@
 - name: Scenarios
   href: ./scenarios/scenarios
   items:
-  - name: 1-on-1 conversations with bots
+  - name: Personal conversations with bots
     href: ./concepts/bots/bot-conversations/bots-conv-personal
   - name: Channel conversations with bots
     href: ./concepts/bots/bot-conversations/bots-conv-channel
@@ -122,10 +128,10 @@
   href: ./resources/resource-overview
   items:
   - name: General
-    href: .general/general-overview
+    href: ./resources/general/general-overview
     items:
-    - name: Requirements
-      href: ./resources/general/requirements
+    - name: Supported media formats
+      href: ./resources/general/media-formats
     - name: Cross-domain redirects
       href: ./resources/general/cross-domain
     - name: Debugging
@@ -160,7 +166,7 @@
         href: ./resources/design/framework/bots
       - name: Cards
         href: ./resources/design/framework/cards
-        name: Command box
+      - name: Command box
         href: ./resources/design/framework/command-box
       - name: Submitting your app
         href: ./resources/design/framework/submitting
@@ -182,6 +188,8 @@
       href: ./resources/design/resources
   - name: Manifest schema
     href: ./resources/schema/manifest-schema
+  - name: Developer preview manifest schema
+    href: ./resources/schema/manifest-schema-dev-preview
   - name: Microsoft Graph APIs
     href: ./resources/microsoft-graph
 - name: Troubleshooting

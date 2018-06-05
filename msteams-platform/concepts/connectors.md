@@ -33,7 +33,7 @@ You have two options for posting messages via Connectors:
 
 Both options involve posting a simple JSON payload to an HTTP webhook to create the Connector message within Microsoft Teams. (For more details, see [Get started with actionable messages in Office 365](https://docs.microsoft.com/en-us/outlook/actionable-messages/get-started).)
 
-You can also use this JSON to create cards containing rich inputs, such as text entry, multi-select, or picking a date and time. The code that generates the card and posts to the incoming webhook API can be running on any hosted service.  These cards are defined as part of actionable messages, and are also supported in [cards](~/concepts/cards/cards) used in Teams bots and Messaging extensions.
+You can also use this JSON to create cards containing rich inputs, such as text entry, multi-select, or picking a date and time. The code that generates the card and posts to the incoming webhook API can be running on any hosted service. These cards are defined as part of actionable messages, and are also supported in [cards](~/concepts/cards/cards) used in Teams bots and Messaging extensions.
 
 ### Example Connector message
 

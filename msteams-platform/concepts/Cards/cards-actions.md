@@ -6,7 +6,7 @@ ms.date: 04/16/2018
 ---
 # Card actions
 
-Bots and messaging extensions in Teams support the following activity ([`CardAction`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards)) types. Note that these actions differ from `potentialActions` for Office 365 Connector cards when used from Connectors.
+Cards used by bots and messaging extensions in Teams support the following activity ([`CardAction`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards)) types. Note that these actions differ from `potentialActions` for Office 365 Connector cards when used from Connectors.
 
 | Type | Action |
 | --- | --- |
@@ -20,9 +20,11 @@ Bots and messaging extensions in Teams support the following activity ([`CardAct
 >* Teams does not support `CardAction` types not listed in the preceding table.
 >* Teams does not support the `potentialActions` property.
 
+Teams also supports [Adaptive card actions](~/concepts/cards/cards-actions#adaptive-card-actions), which are only used by Adaptive cards. These actions are listed in their own section at the end of this reference.
+
 ## openUrl
 
-This action type specifies a URL to launch in the default browser.  Note that your bot does not receive any notice on which button was clicked.
+This action type specifies a URL to launch in the default browser. Note that your bot does not receive any notice on which button was clicked.
 
 The `value` field must contain a full and properly formed URL.
 
@@ -117,9 +119,9 @@ The `value` property can be either a serialized JSON string or a JSON object.
 
 ## imBack
 
-This action triggers a return message to your bot, as if the user typed it in a normal chat message.  Thus, your user, and all other users if in a channel, will see that button response.
+This action triggers a return message to your bot, as if the user typed it in a normal chat message. Your user, and all other users if in a channel, will see that button response.
 
-The `value` field should contain the text string echoed in the chat and therefore sent back to the bot.  This is the message text you will process in your bot to perform the desired logic.  Note: this field is a simple string - there is no support for formatting or hidden characters.
+The `value` field should contain the text string echoed in the chat and therefore sent back to the bot. This is the message text you will process in your bot to perform the desired logic. Note: this field is a simple string - there is no support for formatting or hidden characters.
 
 ```json
 {
@@ -134,9 +136,9 @@ The `value` field should contain the text string echoed in the chat and therefor
 > [!NOTE]
 > We recommend that you use `messageBack` instead of `invoke`. While `invoke` can be used directly, it is designed to be used indirectly. For example, `invoke` is used to send character-by-character keystrokes for [compose extensions](~/concepts/messaging-extensions.md).
 
-The `invoke` message type silently sends a JSON payload that you define to your bot.  This is useful if you want to send more detailed information back to your bot without having to send via a simple `imBack` text string.  Note that the user, in 1:1 or in channel, sees no notification as a result of their click.
+The `invoke` message type silently sends a JSON payload that you define to your bot.  This is useful if you want to send more detailed information back to your bot without having to send via a simple `imBack` text string.  Note that the user, in personal or channel chat, sees no notification as a result of their click.
 
-The `value` field will contain a stringified JSON object.  You can include identifiers or any other context necessary to carry out the operation.
+The `value` field will contain a stringified JSON object. You can include identifiers or any other context necessary to carry out the operation.
 
 ```json
 {
@@ -214,3 +216,13 @@ var button = new CardAction()
 ## signin
 
 Initiates OAuth flow, allowing bots to connect with secure services, as described in more detail here: [Authentication flow in bots](~/concepts/authentication/auth-flow-bot).
+
+## Adaptive card actions (supported in Developer Preview only)
+
+Adaptive cards support three action types:
+
+* [Action.OpenUrl](http://adaptivecards.io/explorer/Action.OpenUrl.html)
+* [Action.Submit](http://adaptivecards.io/explorer/Action.Submit.html)
+* [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
+
+These actions are only supported by Adaptive cards. Adaptive cards do not support the other actions listed above this section.

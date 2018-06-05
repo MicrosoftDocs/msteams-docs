@@ -11,20 +11,11 @@ Tabs in Microsoft Teams allow you to display rich interactive web content. You c
 ![Example of a tab showing data, alongside a conversation about the tab data](~/assets/images/tab_example.png)
 
 ## Teams scopes for tabs
-Teams support three kinds of conversations (called scopes in the [Manifest](~/resources/schema/manifest-schema)).
 
-* `teams` Also called channel conversations
-* `personal` Also called 1:1 conversations or chats
-* `group` Used for group and meeting conversations
+Teams support several scopes for tabs:
 
-Microsoft Teams supports tabs in either:
-
-* Teams - (channel) Tabs in channels allow teams to interact with your shared experience. Currently, all tabs in channels are *configurable tabs*&mdash;a user configures the content of your tab experience when the tab is first added to a channel.
-* Personal - (1:1 conversations or chats) Tabs in the personal scope allow users to interact with your experience privately. Currently, all such tabs are *static tabs*&mdash;content that is relevant to individual users.
-
-Not supported:
-
-* Group - Tabs in group conversations are currently not supported.
+* Teams (`team` scope) - (channel) Tabs in channels allow teams to interact with your shared experience. Currently, all tabs in channels are *configurable tabs*&mdash;a user configures the content of your tab experience when the tab is first added to a channel.
+* Personal (`personal` scope) - Tabs in the personal scope allow users to interact with your experience privately. Currently, all such tabs are *static tabs*&mdash;content that is relevant to individual users.
 
 ## What you need to know: Configurable tabs
 

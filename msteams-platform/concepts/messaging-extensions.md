@@ -2,6 +2,7 @@
 title: Develop messaging extensions
 description: Describes how to get started with messaging extensions in Microsoft Teams
 keywords: teams messaging extensions messaging extensions
+ms.date: 04/24/18
 ---
 # Develop messaging extensions for Microsoft Teams
 
@@ -42,7 +43,7 @@ As with bots and tabs, you update the [manifest](~/resources/schema/manifest-sch
 To add a messaging extension, include a new top-level JSON structure in your manifest with the `composeExtensions` property. Currently, you are limited to creating a single messaging extension for your app.
 
 > [!NOTE]
-> The manifest refers to messaging extensions as `composeExtensions`. This is to maintain backwards compatibility.
+> The manifest refers to messaging extensions as `composeExtensions`. This is to maintain backward compatibility.
 
 The extension definition is an object that has the following structure:
 
@@ -63,8 +64,8 @@ In the app manifest, your command item is an object with the following structure
 
 | Property name | Purpose | Required? |
 |---|---|---|
-| `id` | Unique ID that you assign to this command.  The user request will include this ID. | Yes |
-| `title` | Command name.  This value appears in the UI. | Yes |
+| `id` | Unique ID that you assign to this command. The user request will include this ID. | Yes |
+| `title` | Command name. This value appears in the UI. | Yes |
 | `description` | Help text indicating what this command does. This value appears in the UI. | Yes |
 | `initialRun` | If set to **true**, indicates this command should be executed as soon as the user chooses this command in the UI. | No |
 | `parameters` | List of parameters. | Yes |
@@ -76,8 +77,8 @@ In the app manifest, your command item is an object with the following structure
 
 ```json
 {
-  "$schema": "https://statics.teams.microsoft.com/sdk/v1.0/manifest/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.0",
+  "$schema": "https://statics.teams.microsoft.com/sdk/v1.2/manifest/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.2",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
   "packageName": "com.microsoft.teams.samples.bing",
@@ -103,9 +104,6 @@ In the app manifest, your command item is an object with the following structure
   "composeExtensions": [
     {
       "botId": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
-      "scopes": [
-        "personal"
-      ],
       "canUpdateConfiguration": true,
       "commands": [{
           "id": "searchCmd",
@@ -138,17 +136,11 @@ You can test your messaging extension by uploading your app. See [Uploading your
 
 To open your messaging extension, navigate to any of your chats or channels. Choose the **More options** (**&#8943;**) button in the compose box, and choose your messaging extension.
 
-> [!NOTE]
-> Your app appears in channels only if you declare the `team` scope. Similarly, it appears in your chats only if it supports the `personal` scope.
-
 ## Add event handlers
 
 Most of your work involves the `onQuery` event, which handles all interactions in the messaging extension window.
 
 If you set `canUpdateConfiguration` to `true` in the manifest, you enable the **Settings** menu item for your messaging extension and must also handle `onQuerySettingsUrl` and `onSettingsUpdate`.
-
-> [!IMPORTANT]
-> Messaging extensions that use `canUpdateConfiguration` can't be published in AppSource at this time.
 
 ### Handle onQuery events
 
@@ -186,10 +178,11 @@ In addition to the standard bot activity properties, the payload contains the fo
 |`name`| Type of command that is issued to your service. Currently the following types are supported: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
+|`from.aadObjectId`| Azure Active Directory object id of the user that sent the request. |
 |`channelData.tenant.id`| Azure Active Directory tenant ID. |
 |`channelData.channel.id`| Channel ID (if the request was made in a channel). |
 |`channelData.team.id`| Team ID (if the request was made in a channel). |
-|`clientInfo`| Additional metadata about the client, such as locale/language and type of client. |
+|`clientInfo` entity | Additional metadata about the client, such as locale/language and type of client. |
 
 The request parameters itself are found in the value object, which includes the following properties:
 
@@ -228,7 +221,8 @@ The request parameters itself are found in the value object, which includes the 
   "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
   "from": {
     "id": "29:1C7dbRrC_5yzN1RGtZIrcWT0xz88KPGP9sxdpVpV8sODlgPHeQE9RqQ02hnpuKzy6zZ-AaZx6swUOMj_Dsdse3TQ4sIaeebbFBF-VgjJy_nY",
-    "name": "Larry Jin"
+    "name": "Larry Jin",
+    "aadObjectId": "cd723fa0-0591-416a-9290-e93ecf3a9b92"
   },
   "conversation": {
     "id": "19:skypespaces_8198cfe0dd2647ae91930f0974768a40@thread.skype"
@@ -257,9 +251,11 @@ Your service should respond with the results matching the user query. The respon
 |Property name|Purpose|
 |---|---|
 |`composeExtension`|Top-level response envelope.|
-|`composeExtension.type`|Type of response. The following types are supported: <br>`auth` <br>`config` <br>`message` <br>`result`|
-|`composeExtension.attachmentLayout`|Specifies the layout of the attachments. Only one value is currently supported: <br>`list`: a list of card objects containing thumbnail, title, and text fields|
-|`composeExtension.attachments`|Array of valid bot attachment objects. Currently the following types are supported: <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector`|
+|`composeExtension.type`|Type of response. The following types are supported: <br>`result`: displays a list of search results <br>`auth`: asks the user to authenticate <br>`config`: asks the user to set up the messaging extension <br>`message`: displays a plain text message |
+|`composeExtension.attachmentLayout`|Specifies the layout of the attachments. Used for responses of type `result`. <br>Currently the following types are supported: <br>`list`: a list of card objects containing thumbnail, title, and text fields <br>`grid`: a grid of thumbnail images |
+|`composeExtension.attachments`|Array of valid attachment objects. Used for responses of type `result`. <br>Currently the following types are supported: <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector`|
+|`composeExtension.suggestedActions`|Suggested actions. Used for responses of type `auth` or `config`. |
+|`composeExtension.text`|Message to display. Used for responses of type `message`. |
 
 #### Response card types and previews
 
@@ -268,8 +264,13 @@ We support the following attachment types:
 * Thumbnail card
 * Hero card
 * Office 365 Connector card
+* Adaptive card
 
-For full documentation on the thumbnail and hero card types, see [Add cards and card actions](~/concepts/cards-actions). For additional documentation regarding the Office 365 Connector card, see [Using Office 365 Connector cards](~/concepts/connectors#using-office-365-connector-cards-in-microsoft-teams).
+See [Cards](~/concepts/cards/cards) for more information.
+
+To learn how to use the thumbnail and hero card types, see [Add cards and card actions](~/concepts/cards-actions).
+
+ For additional documentation regarding the Office 365 Connector card, see [Using Office 365 Connector cards](~/concepts/connectors#using-office-365-connector-cards-in-microsoft-teams).
 
 The result list is displayed in the Microsoft Teams UI with a preview of each item. The preview is generated in one of two ways:
 
@@ -282,8 +283,6 @@ The result list is displayed in the Microsoft Teams UI with a preview of each it
 {
   "composeExtension":{
     "type":"result",
-    "channelData":{
-    },
     "attachmentLayout":"list",
     "attachments":[
       {
@@ -330,7 +329,7 @@ The result list is displayed in the Microsoft Teams UI with a preview of each it
 
 If you set `initialRun` to `true` in the manifest, Microsoft Teams issues a "default" query when the user first opens the messaging extension. Your service can respond to this query with a set of prepopulated results. This can be useful for displaying, for instance, recently viewed items, favorites, or any other information that is not dependent on user input.
 
-The default query has the same structure as any regular user query, except with a parameter `initialRun` whose Boolean value is `true`.
+The default query has the same structure as any regular user query, except with a parameter `initialRun` whose string value is `true`.
 
 #### Request example
 
@@ -357,16 +356,17 @@ The default query has the same structure as any regular user query, except with 
 
 ## Identify the user
 
-Every request to your services includes the obfuscated ID of the user that performed the request, as well as the display name.
+Every request to your services includes the obfuscated ID of the user that performed the request, as well as the user's display name and Azure Active Directory object ID.
 
 ```json
 "from": {
   "id": "29:1C7dbRrC_5yzN1RGtZIrcWT0xz88KPGP9sxdpVpV8sODlgPHeQE9RqQ02hnpuKzy6zZ-AaZx6swUOMj_Dsdse3TQ4sIaeebbFBF-VgjJy_nY",
-  "name": "Larry Jin"
+  "name": "Larry Jin",
+  "aadObjectId": "cd723fa0-0591-416a-9290-e93ecf3a9b92"
 },
 ```
 
-The `id` value is guaranteed to be that of the authenticated Teams user. It can be used as a key to look up credentials or any cached state in your service. In addition, each request contains the Azure Active Directory tenant ID of the user, which can be used to identify the user’s organization. If applicable, the request also contains the team and channel IDs from which the request originated.
+The `id` and `aadObjectId` values are guaranteed to be that of the authenticated Teams user. They can be used as keys to look up credentials or any cached state in your service. In addition, each request contains the Azure Active Directory tenant ID of the user, which can be used to identify the user’s organization. If applicable, the request also contains the team and channel IDs from which the request originated.
 
 ## Authentication
 
@@ -374,18 +374,18 @@ If your service requires user authentication, you need to sign in the user befor
 
 The sequence is as follows:
 
-1.  User issues a query, or the default query is automatically sent to your service.
-2.  Your service checks whether the user has first authenticated by inspecting the Teams user ID.
-3.  If the user has not authenticated, send back a `login` action including the authentication URL.
-4.  The Microsoft Teams client launches a pop-up window hosting your webpage using the given authentication URL.
-5.  After the user signs in, you should close your window and send an "authentication code" to the Teams client.
-6.  The Teams client then reissues the query to your service, which includes the authentication code passed in step 5.
+1. User issues a query, or the default query is automatically sent to your service.
+2. Your service checks whether the user has first authenticated by inspecting the Teams user ID.
+3. If the user has not authenticated, send back an `auth` response with an `openUrl` suggested action including the authentication URL.
+4. The Microsoft Teams client launches a pop-up window hosting your webpage using the given authentication URL.
+5. After the user signs in, you should close your window and send an "authentication code" to the Teams client.
+6. The Teams client then reissues the query to your service, which includes the authentication code passed in step 5.
 
-Your service should verify that the authentication code received in step 6 matches the one from step 5.  This ensures that a malicious user does not try to spoof or compromise the sign-in flow.  This effectively "closes the loop" to finish the secure authentication sequence.
+Your service should verify that the authentication code received in step 6 matches the one from step 5. This ensures that a malicious user does not try to spoof or compromise the sign-in flow. This effectively "closes the loop" to finish the secure authentication sequence.
 
 ### Respond with a sign-in action
 
-To prompt an unauthenticated user to sign in, respond with a suggested action that includes the authentication URL.
+To prompt an unauthenticated user to sign in, respond with a suggested action of type `openUrl` that includes the authentication URL.
 
 #### Response example
 
@@ -393,15 +393,15 @@ To prompt an unauthenticated user to sign in, respond with a suggested action th
 {
   "composeExtension":{
     "type":"auth",
-    "channelData":{
-    },
-    "suggestedActions":[
-      {
-        "type": "openApp",
-        "value": "https://example.com/auth",
-        "title": "Sign in to this app"
-      }
-    ]
+    "suggestedActions":{
+      "actions":[
+        {
+          "type": "openUrl",
+          "value": "https://example.com/auth",
+          "title": "Sign in to this app"
+        }
+      ]
+    }
   }
 }
 ```
@@ -456,7 +456,8 @@ At this point, the window closes and control is passed to the Teams client. The 
         "id": "f:7638210432489287768",
         "channelId": "msteams",
         "user": {
-            "id": "29:1A5TJWHkbOwSyu_L9Ktk9QFI1d_kBOEPeNEeO1INscpKHzHTvWfiau5AX_6y3SuiOby-r73dzHJ17HipUWqGPgw"
+            "id": "29:1A5TJWHkbOwSyu_L9Ktk9QFI1d_kBOEPeNEeO1INscpKHzHTvWfiau5AX_6y3SuiOby-r73dzHJ17HipUWqGPgw",
+            "aadObjectId": "fc8ca1c0-d043-4af6-b09f-141536207403"
         },
         "conversation": {
             "id": "19:7705841b240044b297123ad7f9c99217@thread.skype"
@@ -526,7 +527,7 @@ The [Teams extensions](https://www.npmjs.com/package/botbuilder-teams) for the B
 
 #### Example code
 
-```js
+```javascript
 require('dotenv').config();
 
 import * as restify from 'restify';

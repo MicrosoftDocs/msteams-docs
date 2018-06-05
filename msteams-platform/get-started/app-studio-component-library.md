@@ -50,7 +50,7 @@ npm install --save msteams-ui-icons-react
 
 Find and open `src/App.js` and replace its content with following code:
 
-```js
+```javascript
 import React, { Component } from ‘react’;
 import { TeamsComponentContext, ThemeStyle, PrimaryButton } from ‘msteams-ui-components-react’
 
@@ -101,7 +101,7 @@ How the current theme is retrieved and how to respond to theme changes is discus
 
 This sample code shows how this is done.
 
-```JS
+```js
 componentWillMount() {
     // If you are deploying your site as a MS Teams static or configurable tab,
     // you should add “?theme={theme}” to your tabs URL in the manifest.
@@ -129,7 +129,7 @@ If you want to use your own CSS code you can still respond to theme changes and 
 
 Once again, edit your `src/App.js` file and replace its content with following code:
 
-```js
+```javascript
 import React, { Component } from ‘react’;
 import { TeamsComponentContext, ThemeStyle, ConnectedComponent } from ‘msteams-ui-components-react’
 
@@ -167,7 +167,7 @@ class MyComponent extends Component {
 export default App;
 ```
 
-In this code, a new component is defined called MyComponent.  Then a special component from the control library called ConnectedComponent is added. ConnectedComponent has a property called `render` which takes a function as parameter. At render time, this function will be called with the appropriate context for your tab. The context includes the theme that the page is being rendered in as well as the global color object that you can use to apply Teams colors to your tab. As you can see in the `switch` statement, the appropriate `<div>` is chosen based on the theme.
+In this code, a new component is defined called MyComponent. Then a special component from the control library called ConnectedComponent is added. ConnectedComponent has a property called `render` which takes a function as parameter. At render time, this function will be called with the appropriate context for your tab. The context includes the theme that the page is being rendered in as well as the global color object that you can use to apply Teams colors to your tab. As you can see in the `switch` statement, the appropriate `<div>` is chosen based on the theme.
 
 To change themes, we need to pass the root-level TeamsComponentContext a different theme. When a theme changes, all the child elements wrapped in ConnectedComponent will be re-rendered. See previous section “Dynamically Handle Theme Changes.”
 

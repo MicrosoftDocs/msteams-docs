@@ -44,7 +44,7 @@ To start the process, choose the **Continue** button under **Office**.
 
 ## Use the Seller Dashboard to submit to AppSource
 
-After your account is approved, you can submit your solution to the [Seller Dashboard](http://go.microsoft.com/fwlink/?LinkId=248605).  Add an app of type "Teams App" to initiate the submission process.
+After your account is approved, you can submit your solution to the [Seller Dashboard](http://go.microsoft.com/fwlink/?LinkId=248605). Add an app of type "Teams App" to initiate the submission process.
 
 ![AppSource Seller Dashboard add an app](~/assets/images/submission/sellerdashboardaddapp.png)
 
@@ -67,7 +67,7 @@ For your Teams app to be approved:
 * It must pass all current [AppSource validation policies](https://dev.office.com/officestore/docs/validation-policies) for Teams tabs and bots. Please note that these policies are subject to change.
 * For tabs, it must provide value to users outside of what is possible by simply pinning your website in Teams. This means that, at minimum, it must remove extraneous chrome and disallow navigating outside the configured context. See the [Microsoft Teams Design Guidelines](https://aka.ms/microsoftteamsdesignguidelines) for more guidance.
 
-When the validation process is complete, you will receive a message to let you know that either your Teams experience is approved or it fails one of the stated policies.  You can also follow these steps to check the approval status in the Seller Dashboard:
+When the validation process is complete, you will receive a message to let you know that either your Teams experience is approved or it fails one of the stated policies. You can also follow these steps to check the approval status in the Seller Dashboard:
 
 1. Sign in to the Seller Dashboard.
 2. On the **manage** tab, your submission status appears under the submission name.
@@ -86,12 +86,12 @@ Failures are explained, with references to the specific policy violations. All f
 * If your product requires an account on your service or another service, list that in the description.
 * If your product requires additional purchases to function properly, list that in the description.
 * For your Tab configuration page, be sure to provide "About" links and proper guidance—this page is the first thing the user sees, so ensure that a new user understands what to do.
-* Be sure that your bot provides appropriate responses when mentioned (@*botname*) in a channel and in 1:1 conversations as needed. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](~/resources/schema/manifest-schema#bots).)
+* Be sure that your bot provides appropriate responses when mentioned (@*botname*) in a channel and in personal conversations as needed. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](~/resources/schema/manifest-schema#bots).)
 * Provide the requisite Terms and Privacy policy links in the manifest and the Seller Dashboard, and verify that they properly resolve to the correct documentation. For bots, you must provide this same information in the Submission section of the Bot Framework registration page.
 * Ensure that metadata in the manifest roughly matches metadata in the Seller Dashboard (and, for bots, in the Bot Framework registration). Note that your Seller Dashboard entry should contain a more detailed and formatted description for use in the AppSource product page.
 * Check your manifest for completeness and accuracy. Then check it again.
 * Be sure to include detailed testing notes and a valid, working test account with appropriate prepopulated data.
-* Do not use the *Add a new app* button to resubmit your app.  Use the tile for your app on the Overview tab instead.
+* Do not use the *Add a new app* button to resubmit your app. Use the tile for your app on the Overview tab instead.
 
 ## Add a download button to your product site
 

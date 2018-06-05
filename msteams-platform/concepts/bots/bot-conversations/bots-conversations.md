@@ -8,24 +8,19 @@ ms.date: 03/29/2018
 
 A conversation is a series of messages sent between your bot and one or more users. There are three kinds of conversations (also called scopes) in Teams:
 
-* `teams` Also called channel conversations
-* `personal` Also called 1:1 conversations
-* `group` Used for group and meeting conversations
+* `teams` Also called channel conversations, visible to all members of the channel.
+* `personal` Conversations between bots and a single user.
 
-Microsoft Teams allows bots to send messages in either:
+A bot behaves slightly differently depending on what kind of conversation it is involved in:
 
-* Teams - [Bots in channel conversations](~/concepts/bots/bot-conversations/bots-conv-channel) require the user to @ mention the bot to invoke it in a channel.
-* Personal - [Bots in 1:1 conversations](~/concepts/bots/bot-conversations/bots-conv-personal) do not require an @ mention - the user can just type. These are personal conversations with a single user. They are also called one-on-one or 1:1 chats.
-
-Not supported yet:
-
-* Groups - Bots in group conversations, including meetings, are currently not supported. Group conversations are also called group chats.
+* [Bots in channel conversations](~/concepts/bots/bot-conversations/bots-conv-channel) require the user to @ mention the bot to invoke it in a channel.
+* [Bots in single user conversations](~/concepts/bots/bot-conversations/bots-conv-personal) do not require an @ mention -  the user can just type.
 
 In order for the bot to work in a particular scope it should be listed as supporting that scope in the manifest. Scopes are defined and discussed further in the [Manifest Reference](~/resources/schema/manifest-schema).
 
 ## Proactive messages
 
-Bots can participate in a conversation or initiate one. Most communication is in response to another message.  If a bot initiates a conversation it is called a *proactive message*. Examples include:
+Bots can participate in a conversation or initiate one. Most communication is in response to another message. If a bot initiates a conversation it is called a *proactive message*. Examples include:
 
 * Welcome messages
 * Event notifications
@@ -37,7 +32,7 @@ Each message is an `Activity` object of type `messageType: message`. When a user
 
 Bots also support event-style messages. See [Handle bot events in Microsoft Teams](~/concepts/bots/bots-notifications) for more details. Speech is currently not supported.
 
-Messages are for the most part the same in both 1:1 conversations and channel chats, but there are differences in how the bot is accessed in the UI and differences behind the scenes which you will need to know about.
+Messages are for the most part the same in both personal conversations and channel chats, but there are differences in how the bot is accessed in the UI and differences behind the scenes which you will need to know about.
 
 Basic conversation is handled through the Bot Framework Connector, a single REST API to enable your bot to communicate with Teams and other channels. The Bot Builder SDK provides easy access to this API, additional functionality to manage conversation flow and state, and simple ways to incorporate cognitive services such as natural language processing (NLP).
 
@@ -79,7 +74,7 @@ We recommend that you specify the height and width of each image by using XML. I
 
 Depending on which scopes are declared, your bot can receive messages in the following contexts:
 
-* **1:1 chat** Users can interact in a private conversation with a bot by simply selecting the added bot in the chat history, or typing its name or app ID in the To: box on a new chat.
+* **personal chat** Users can interact in a private conversation with a bot by simply selecting the added bot in the chat history, or typing its name or app ID in the To: box on a new chat.
 * **Channels** A bot can be mentioned ("@_botname_") in a channel if it has been added to the team. Note that additional replies to a bot in a channel require mentioning the bot. It will not respond to replies where it is not mentioned.
 
 For incoming messages, your bot receives an [`Activity`](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-connector-activities) object of type `messageType: message`. Although the `Activity` object can contain other types of information, like [channel updates](~/concepts/bots/bots-notifications#channel-updates) sent to your bot, the `message` type represents communication between bot and user.
@@ -97,7 +92,7 @@ Your bot receives a payload that contains the user message `Text` as well as oth
 
 ## Combining channel and private interactions with your bot
 
-When interacting in a channel, your bot should be smart about taking certain conversations offline with a user. For instance, suppose a user is trying to coordinate a complex task, such as scheduling with a set of team members. Rather than have the entire sequence of interactions visible to the channel, consider sending a 1:1 chat message to the user. Your bot should be able to easily transition the user between 1:1 and channel conversations without losing state.
+When interacting in a channel, your bot should be smart about taking certain conversations offline with a user. For instance, suppose a user is trying to coordinate a complex task, such as scheduling with a set of team members. Rather than have the entire sequence of interactions visible to the channel, consider sending a personal chat message to the user. Your bot should be able to easily transition the user between personal and channel conversations without losing state.
 
 > [!NOTE]
 >Don’t forget to update the channel when the interaction is complete to notify the other team members.
@@ -148,13 +143,13 @@ When interacting in a channel, your bot should be smart about taking certain con
 
 The `channelData` object contains Teams-specific information and is the definitive source for team and channel IDs. You should cache and use these ids as keys for local storage.
 
-The `channelData` object is not included in messages in 1:1 conversations.
+The `channelData` object is not included in messages in personal conversations since these take place outside of any channel.
 
 A typical channelData object in an activity sent to your bot contains the following information:
 
 * `eventType` Teams event type; passed only in cases of [channel modification events](~/concepts/bots/bots-notifications#channel-updates)
 * `tenant.id` Azure Active Directory tenant ID; passed in all contexts
-* `team` Passed only in channel contexts, not 1:1
+* `team` Passed only in channel contexts, not in personal chat.
     * `id` GUID for the channel
     * `name` Name of the team; passed only in cases of [team rename events](~/concepts/bots/bots-notifications#team-name-updates)
 * `channel` Passed only in channel contexts when the bot is mentioned or for events in channels in teams where the bot has been added
@@ -243,7 +238,7 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 
 You can use the `session.connector.update` method in the Bot Builder SDK to update an existing message.
 
-```js
+```javascript
 function sendCardUpdate(bot, session, originalMessage, address) {
 
   var origAttachment = originalMessage.data.attachments[0];
@@ -265,9 +260,9 @@ function sendCardUpdate(bot, session, originalMessage, address) {
 
 ## Starting a conversation (proactive messaging)
 
-You can create a 1:1 conversation with a user or start a new reply chain in a channel for your team bot. This lets you to message your user or users without having them first initiate contact with your bot. For more information, see the following topics:
+You can create a personal conversation with a user or start a new reply chain in a channel for your team bot. This lets you to message your user or users without having them first initiate contact with your bot. For more information, see the following topics:
 
-* [Starting a 1:1 conversation](~/concepts/bots/bot-conversations/bots-conv-proactive#starting-11-conversations)
+* [Starting a personal conversation](~/concepts/bots/bot-conversations/bots-conv-proactive#starting-personal-conversations)
 * [Creating a channel conversation](~/concepts/bots/bot-conversations/bots-conv-proactive#creating-a-channel-conversation)
 
 See also [Proactive messaging for bots](~/concepts/bots/bot-conversations/bots-conv-proactive) for more general information on conversations started by bots.
@@ -276,7 +271,7 @@ See also [Proactive messaging for bots](~/concepts/bots/bot-conversations/bots-c
 
 Messages can be deleted using the connectors [`delete()`](https://docs.botframework.com/en-us/node/builder/chat-reference/interfaces/_botbuilder_d_.iconnector.html#delete) method in the [BotBuilder SDK](https://docs.microsoft.com/en-us/bot-framework/bot-builder-overview-getstarted).
 
-```TypeScript
+```typescript
 bot.dialog('BotDeleteMessage', function (session: builder.Session) {
   var msg = new teams.TeamsMessage(session).text("Bot will delete this message in 5 sec.")
   bot.send(msg, function (err, response) {

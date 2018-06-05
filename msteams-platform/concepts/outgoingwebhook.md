@@ -2,12 +2,11 @@
 title: Outgoing webhooks
 description: Describes how to create and use outgoing webhooks in Microsoft Teams
 keywords: teams bots custom
-ms.date: 01/02/2018
+ms.date: 04/19/2018
 ---
-
 # Outgoing webhooks in Microsoft Teams
 
-If you've worked with outgoing webhooks or slash commands in other chat platforms, you can now bring what you have developed over to Microsoft Teams via outgoing webhooks.  Outgoing webhooks are an easy way of extending your team without having to go through the full process of creating a bot via the Microsoft Bot Framework. You can use them for custom workflows and commands such as kicking off a build or checking the latest set of livesite issues.
+If you've worked with outgoing webhooks or slash commands in other chat platforms, you can now bring what you have developed over to Microsoft Teams via outgoing webhooks. Outgoing webhooks are an easy way of extending your team without having to go through the full process of creating a bot via the Microsoft Bot Framework. You can use them for custom workflows and commands such as kicking off a build or checking the latest set of livesite issues.
 
 You also have an effective way of ensuring that your service is accessible only by authorized users, as the security token used by your outgoing webhook will only be scoped to the team in which it has been added.
 
@@ -40,7 +39,7 @@ Click **Create** and the outgoing webhook will be made available in the current 
 
 Once you add an outgoing webhook to the team, it looks and behaves just like a bot, so it’s easy for users to interact with. It listens for messages using **@mention** with the webhook name and can respond with rich messages, including images and cards.
 
-## Receiving and replying to messages
+## Receiving and responding to messages
 
 ### Receiving messages
 
@@ -59,7 +58,7 @@ Users must **@mention** the outgoing webhook for it to receive messages.
     "timestamp": "2017-02-01T21:10:07.437Z",
     "localTimestamp": "2017-02-01T14:10:07.437-07:00",
     "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
-    "channelId": "msteams", 
+    "channelId": "msteams",
     "from": {
         "id": "29:1XJKJMvc5GBtc2JwZq0oj8tHZmzrQgFmB39ATiQWA85gQtHieVkHilBZ9XHoq9j7Zaqt7CZ-NJWi7me2kHTL3Bw",
         "name": "Tim Jones"
@@ -68,7 +67,7 @@ Users must **@mention** the outgoing webhook for it to receive messages.
         "id": "19:253b1f341670408fb6fe51050b6e5ceb@thread.skype;messageid=1485983194839"
     },
     "recipient": {
-        "id": "null", 
+        "id": "null",
         "name": "null"
     },
     "textFormat": "plain",
@@ -244,13 +243,13 @@ Your code should always verify the HMAC signature included in the request:
     }
 ```
 
-### Sending a reply
+### Responding to a message
 
-As with regular bots, replies from your outgoing webhook will appear in the same reply chain as the original message. You can send a reply message that takes advantage of any of the Bot Framework’s activities, including cards and image attachments.
+Responses from your outgoing webhook will appear in the same reply chain as the original message. You can send a response message that takes advantage of any of the Bot Framework’s activities, including cards and image attachments.
 
-Your outgoing webhook will need to reply asynchronously to the HTTP request from Microsoft Teams. It will have 5 seconds to reply to the message before the connection is terminated.
+Your outgoing webhook will need to respond to the HTTP request from Microsoft Teams. It will have 5 seconds to respond to the message before the connection is terminated.
 
-#### Example reply message
+#### Example response
 
 ```json
 {
@@ -262,14 +261,14 @@ Your outgoing webhook will need to reply asynchronously to the HTTP request from
 ## Limitations
 
 * Outgoing webhooks do not have access to non-messaging APIs, such as team roster membership.
-* Outgoing webhooks cannot post into channels asynchronously; that is, not as a reply to a user message.
-* Although outgoing webhooks can use cards, they cannot leverage button actions like `imBack` or `invoke`.
+* Outgoing webhooks cannot post into channels [proactively](~/concepts/bots/bot-conversations/bots-conv-proactive).
+* Although outgoing webhooks can use cards, they cannot use button actions like `imBack` or `invoke`.
 
 ## Samples for Outgoing webhook
 
 For sample code illustrating an outgoing webhook, see these samples on GitHub:
 
-### Node JS
+### Node.js
 [OfficeDev/msteams-samples-outgoing-webhook-nodejs](https://github.com/OfficeDev/msteams-samples-outgoing-webhook-nodejs)
 
 ### C#

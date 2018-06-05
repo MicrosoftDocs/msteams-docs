@@ -24,11 +24,15 @@ Any card used by any Office 365 Connector will work in Teams as part of a Connec
 
 The Microsoft Bot Framework extends the cards specification by adding a set of predefined cards that bots can use as part of bot messages. Teams supports bots using the Bot Framework but it supports a slightly different set of these cards. General information on cards in Bot Framework can be found in [Add rich card attachments to messages](https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-send-rich-cards).
 
-The cards that are supported by bots in Teams are detailed in [Teams Card Reference](~/concepts/cards/cards-reference). These cards can not be used in connectors.  Connector cards can be used in bots, however, using the *O365 Connector Card*. Any card you can create using the Office 365 Card format can be used with Microsoft Teams bots.
+The cards that are supported by bots in Teams are detailed in [Teams Card Reference](~/concepts/cards/cards-reference). These cards can not be used in connectors. Connector cards can be used in bots, however, using the *O365 Connector Card*. Any card you can create using the Office 365 Card format can be used with Microsoft Teams bots.
 
 ## Cards in Messaging Extensions
 
-[Messaging Extensions](~/concepts/messaging-extensions) can also return a card. These can be a Hero, Thumbnail or O365ConnectorCard. These cards can be found in the [Teams Card Reference](~/concepts/cards/cards-reference).
+[Messaging Extensions](~/concepts/messaging-extensions) can also return a card. These can be a Hero, Thumbnail, O365ConnectorCard, or Adaptive cards. These cards can be found in the [Teams Card Reference](~/concepts/cards/cards-reference).
+
+## Adaptive cards
+
+[Adaptive cards](~/concepts/cards/cards-reference?branch=Harysh-Adaptive-cards#adaptive-card) are a new cross product specification for cards in Microsoft products including Bots, Cortana, Outlook, and Windows. For more general information from the Adaptive cards team see [Adaptive Cards Overview](https://docs.microsoft.com/en-us/adaptive-cards). You can use adaptive cards anywhere you can use existing Hero cards, Office365 cards, and Thumbnail cards.
 
 ## Card reference
 
