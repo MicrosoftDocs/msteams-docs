@@ -18,30 +18,11 @@ Because of this, it easy to publish and update apps, but it adds additional step
 
 These options will be discussed in more detail later.
 
-Here are some simple steps to create a Node.js Teams app and test it in Teams.
+We have crafted some tutorials that you can follow to get you setup and deployed with our sample project. 
 
-> [!div class="checklist"]
-> * [Prepare your Office 365 tenant](~/get-started/get-started-tenant)
-> * [Get started with Teams App Studio](~/get-started/get-started-app-studio)
-> * [Get prerequisites](~/get-started/get-started-nodejs#GetPrerequisites)
-> * [Download the sample](~/get-started/get-started-nodejs#DownloadSample)
-> * [Build and run the sample](~/get-started/get-started-nodejs#BuildRun)
-> * [Host the sample](~/get-started/get-started-nodejs#HostSample)
-> * [Deploy your app into Microsoft Teams](~/get-started/get-started-nodejs#DeployToTeams)
-> * [Configure the app tab](~/get-started/get-started-nodejs#ConfigureTheAppTab)
-> * [Add a bot to your app](~/get-started/get-started-nodejs#AddBot)
-> * [Compose rich messages](~/get-started/get-started-nodejs#ComposeRichMessages)
-
-Here are the steps to create a.NET Teams app and test it in Teams.
-
-> [!div class="checklist"]
-> * [Prepare your Office 365 tenant](~/get-started/get-started-tenant)
-> * [Get started with Teams App Studio](~/get-started/get-started-app-studio)
-> * [Get prerequisites](~/get-started/get-started-dotnet#GetPrerequisites)
-> * [Download the sample](~/get-started/get-started-dotnet#DownloadSample)
-> * [Build and run the sample](~/get-started/get-started-dotnet#BuildRun)
-> * [Host the sample](~/get-started/get-started-dotnet#HostSample)
-> * [Deploy your app into Microsoft Teams](~/get-started/get-started-dotnet#DeployToTeams)
-> * [Configure the app tab](~/get-started/get-started-dotnet#ConfigureTheAppTab)
-> * [Add a bot to your app](~/get-started/get-started-dotnet#AddBot)
-> * [Compose rich messages](~/get-started/get-started-dotnet#ComposeRichMessages)
+1. [Getting start by setting up your environment](~/get-started/get-started-common.yml)
+2. Get starting platform specific:
+      - [Get started on the Microsoft Teams platform with Node.js](~/get-started/get-started-nodejs.yml)
+      - [Get started on the Microsoft Teams platform with C#/.NET](~/get-started/get-started-dotnet.yml)
+3. [Deploying your sample](~/get-started/get-start-Deploy-your-app-to-Microsoft-Teams.yml)
+4. [Publish to Azure](~/get-started/get-started-dotnet-in-azure)

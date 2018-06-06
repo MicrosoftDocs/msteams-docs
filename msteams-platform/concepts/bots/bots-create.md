@@ -10,7 +10,7 @@ All bots created using the Microsoft Bot Framework are configured and ready to w
 
 A sample bot is included in the [Get Started](~/get-started/get-started) sample for Node.js and .NET, along with detailed steps for creating your first bot.
 
-See the [Bot Framework Documentation](https://docs.botframework.com/en-us/) for general information on bots.
+See the [Azure Bot Service Documentation](https://docs.microsoft.com/azure/bot-service) for general information on bots.
 
 ## Create a bot for Microsoft Teams
 

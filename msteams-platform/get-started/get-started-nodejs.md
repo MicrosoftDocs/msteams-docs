@@ -7,8 +7,8 @@ ms.date: 01/02/2018
 # Get started on the Microsoft Teams platform with Node.js
 
 > [!div class="op_single_selector"]
-> - [.NET](~/get-started/get-started-dotnet)
-> - [Node.js](~/get-started/get-started-nodejs)
+> - [.NET](~/get-started/Get-started-dotnet.yml)
+> - [Node.js](~/get-started/Get-started-Nodejs.yml)
 
 [!include[Step 1 Intro](~/includes/get-started/step1-intro.md)]
 
