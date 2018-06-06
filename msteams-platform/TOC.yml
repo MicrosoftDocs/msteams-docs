@@ -9,7 +9,7 @@
   - name:  Getting start by setting up your environment
     href: ./get-started/get-started-common.yml
   - name: Get started with Node.js
-    href: ./get-startedget-started-nodejs.yml
+    href: ./get-started/get-started-nodejs.yml
   - name: Get started with C#/.NET
     href: ./get-started/get-started-dotnet.yml
   - name: Deploying your sample
