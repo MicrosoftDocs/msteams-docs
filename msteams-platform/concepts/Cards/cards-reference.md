@@ -651,7 +651,7 @@ A list can display a maximum of 10 cards per message.
 
 `builder.AttachmentLayout.list`
 
-## Cards Not supported in Teams
+## Cards not supported in Teams
 
 The following cards are implemented by the Bot Framework, but are NOT supported by Teams.
 
