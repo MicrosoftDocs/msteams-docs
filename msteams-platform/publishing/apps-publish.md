@@ -8,14 +8,21 @@ ms.date: 03/15/2018
 
 > [!IMPORTANT]
 > **Your Microsoft Teams app *must* use the [latest schema](~/resources/schema/manifest-schema) and follow [current packaging guidelines](~/concepts/apps/apps-package).**
->
-> [!NOTE]
-> Teams provides an in-app gallery for users to find or discover [high-quality Teams apps](~/resources/design/overview). To have your solution available in this gallery, you must publish your solution through AppSource.
+
+Teams provides an in-app gallery for users to find or discover [high-quality Teams apps](~/resources/design/overview). To have your solution available in this gallery, you must either:
+
+* Publish your app through AppSource
+* Publish your app through the Microsoft Teams Private App Store
+
+## Microsoft Teams Private App Store
+
+The Microsoft Teams Private App Store is currently a pre release feature, and is only available to beta users. You can find more information in the article [Publish Apps to the Microsoft Teams Private App Store](https://docs.microsoft.com/en-us/MicrosoftTeams/private-app-store-teams#publish-an-app-to-the-teams-private-app-store-from-the-teams-client). This feature can only be managed by Teams users with admin privileges.
+
+## App Source
 
 AppSource (formerly known as Office Store) provides a convenient location for you to distribute your Microsoft Teams app, as well as other Office 365 extensibility types such as Office add-ins and SharePoint add-ins. To include your solution in AppSource, you submit it to the Seller Dashboard. You need to create an individual or company account if you have not already done so for other Windows apps or Office extensibility types.
 
-> [!NOTE]
-> By developing and submitting a Microsoft Teams app, you are subject to the Bot Developer Framework [Terms of Use](https://aka.ms/bf-terms), [Privacy Policy](https://aka.ms/bf-privacy), and [Code of Conduct](https://aka.ms/bf-conduct) for bot, tab, and messaging extension functionality within your app. If your app contains Office 365 Connector functionality, separate terms may also apply as part of your Connector Registration on the [Connectors Developer Dashboard](https://aka.ms/publishconnector).
+By developing and submitting a Microsoft Teams app, you are subject to the Bot Developer Framework [Terms of Use](https://aka.ms/bf-terms), [Privacy Policy](https://aka.ms/bf-privacy), and [Code of Conduct](https://aka.ms/bf-conduct) for bot, tab, and messaging extension functionality within your app. If your app contains Office 365 Connector functionality, separate terms may also apply as part of your Connector Registration on the [Connectors Developer Dashboard](https://aka.ms/publishconnector).
 
 ## Register as an app developer
 
@@ -23,14 +30,11 @@ If you have already registered in the Microsoft Store ecosystem, either by distr
 
 Account management in the Microsoft Store ecosystem relies on a [Microsoft account](https://account.microsoft.com/account). This identity will be the main administrator/owner of your AppSource experience. For more information, please review [Opening a developer account](https://docs.microsoft.com/en-us/windows/uwp/publish/opening-a-developer-account) and the [Developer program FAQ](https://developer.microsoft.com/en-us/store/register/faq).
 
-> [!TIP]
-> We recommend you create a Microsoft account specifically for your developer/AppSource account. Keep this account and password confidential, and share it only with your release team.
->
-> [!NOTE]
-> Although you might have leveraged the Windows Store Azure Active Directory (Azure AD) support for Windows Store account management, the AppSource Seller Dashboard requires you to use a Microsoft account, not an Azure AD account.
->
-> [!IMPORTANT]
-> **If you've developed with a trial developer Office 365 account, do not use this account for your AppSource identity.** Create a separate Microsoft account instead.
+## Account suggestions
+
+* Create a Microsoft account specifically for your developer/AppSource account. Keep this account and password confidential, and share it only with your release team.
+* Use a Microsoft account, not an Azure AD account. Although you might have leveraged the Windows Store Azure Active Directory (Azure AD) support for Windows Store account management, the AppSource Seller Dashboard requires you to use a Microsoft account, not an Azure AD account.
+* If you've developed with a trial developer Office 365 account, do not use this account for your AppSource identity. Create a separate Microsoft account instead.
 
 ## Register in the Seller Dashboard to submit to AppSource
 
