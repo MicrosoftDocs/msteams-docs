@@ -16,7 +16,7 @@ Teams provides an in-app gallery for users to find or discover [high-quality Tea
 
 ## Microsoft Teams Private App Store
 
-The Microsoft Teams Private App Store is currently a pre release feature, and is only available to beta users. You can find more information in the article [Publish Apps to the Microsoft Teams Private App Store](https://docs.microsoft.com/en-us/MicrosoftTeams/private-app-store-teams#publish-an-app-to-the-teams-private-app-store-from-the-teams-client). This feature can only be managed by Teams users with admin privileges.
+The Microsoft Teams Private App Store is currently a pre-release feature, and is available to a limited number of users. You can find more information in the article [Publish Apps to the Microsoft Teams Private App Store](https://docs.microsoft.com/en-us/MicrosoftTeams/private-app-store-teams). This feature can only be managed by Teams users with admin privileges.
 
 ## App Source
 
