@@ -4,7 +4,7 @@ description: Describes the process of publishing your app to AppSource (formerly
 keywords: teams publish store office publishing AppSource
 ms.date: 03/15/2018
 ---
-# Publish your Microsoft Teams app to AppSource
+# Publish your Microsoft Teams app
 
 > [!IMPORTANT]
 > **Your Microsoft Teams app *must* use the [latest schema](~/resources/schema/manifest-schema) and follow [current packaging guidelines](~/concepts/apps/apps-package).**
