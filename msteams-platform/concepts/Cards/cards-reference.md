@@ -70,131 +70,134 @@ A customizable card that can contain any combination of text, speech, images, bu
 
 ```json
 {
-  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-  "type": "AdaptiveCard",
-  "version": "1.0",
-  "body": [
-    {
-      "type": "Container",
-      "items": [
-        {
-          "type": "TextBlock",
-          "text": "Publish Adaptive Card schema",
-          "weight": "bolder",
-          "size": "medium"
-        },
-        {
-          "type": "ColumnSet",
-          "columns": [
-            {
-              "type": "Column",
-              "width": "auto",
-              "items": [
-                {
-                  "type": "Image",
-                  "url": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
-                  "size": "small",
-                  "style": "person"
-                }
-              ]
-            },
-            {
-              "type": "Column",
-              "width": "stretch",
-              "items": [
-                {
-                  "type": "TextBlock",
-                  "text": "Matt Hidinger",
-                  "weight": "bolder",
-                  "wrap": true
-                },
-                {
-                  "type": "TextBlock",
-                  "spacing": "none",
-                  "text": "Created {{DATE(2017-02-14T06:08:39Z, SHORT)}}",
-                  "isSubtle": true,
-                  "wrap": true
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "Container",
-      "items": [
-        {
-          "type": "TextBlock",
-          "text": "Now that we have defined the main rules and features of the format, we need to produce a schema and publish it to GitHub. The schema will be the starting point of our reference documentation.",
-          "wrap": true
-        },
-        {
-          "type": "FactSet",
-          "facts": [
-            {
-              "title": "Board:",
-              "value": "Adaptive Card"
-            },
-            {
-              "title": "List:",
-              "value": "Backlog"
-            },
-            {
-              "title": "Assigned to:",
-              "value": "Matt Hidinger"
-            },
-            {
-              "title": "Due date:",
-              "value": "Not set"
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "actions": [
-    {
-      "type": "Action.ShowCard",
-      "title": "Set due date",
-      "card": {
-        "type": "AdaptiveCard",
-        "body": [
+  "contentType": "application/vnd.microsoft.card.adaptive",
+  "content": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+      {
+        "type": "Container",
+        "items": [
           {
-            "type": "Input.Date",
-            "id": "dueDate"
+            "type": "TextBlock",
+            "text": "Publish Adaptive Card schema",
+            "weight": "bolder",
+            "size": "medium"
+          },
+          {
+            "type": "ColumnSet",
+            "columns": [
+              {
+                "type": "Column",
+                "width": "auto",
+                "items": [
+                  {
+                    "type": "Image",
+                    "url": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
+                    "size": "small",
+                    "style": "person"
+                  }
+                ]
+              },
+              {
+                "type": "Column",
+                "width": "stretch",
+                "items": [
+                  {
+                    "type": "TextBlock",
+                    "text": "Matt Hidinger",
+                    "weight": "bolder",
+                    "wrap": true
+                  },
+                  {
+                    "type": "TextBlock",
+                    "spacing": "none",
+                    "text": "Created {{DATE(2017-02-14T06:08:39Z, SHORT)}}",
+                    "isSubtle": true,
+                    "wrap": true
+                  }
+                ]
+              }
+            ]
           }
-        ],
-        "actions": [
+        ]
+      },
+      {
+        "type": "Container",
+        "items": [
           {
-            "type": "Action.Submit",
-            "title": "OK"
+            "type": "TextBlock",
+            "text": "Now that we have defined the main rules and features of the format, we need to produce a schema and publish it to GitHub. The schema will be the starting point of our reference documentation.",
+            "wrap": true
+          },
+          {
+            "type": "FactSet",
+            "facts": [
+              {
+                "title": "Board:",
+                "value": "Adaptive Card"
+              },
+              {
+                "title": "List:",
+                "value": "Backlog"
+              },
+              {
+                "title": "Assigned to:",
+                "value": "Matt Hidinger"
+              },
+              {
+                "title": "Due date:",
+                "value": "Not set"
+              }
+            ]
           }
         ]
       }
-    },
-    {
-      "type": "Action.ShowCard",
-      "title": "Comment",
-      "card": {
-        "type": "AdaptiveCard",
-        "body": [
-          {
-            "type": "Input.Text",
-            "id": "comment",
-            "isMultiline": true,
-            "placeholder": "Enter your comment"
-          }
-        ],
-        "actions": [
-          {
-            "type": "Action.Submit",
-            "title": "OK"
-          }
-        ]
+    ],
+    "actions": [
+      {
+        "type": "Action.ShowCard",
+        "title": "Set due date",
+        "card": {
+          "type": "AdaptiveCard",
+          "body": [
+            {
+              "type": "Input.Date",
+              "id": "dueDate"
+            }
+          ],
+          "actions": [
+            {
+              "type": "Action.Submit",
+              "title": "OK"
+            }
+          ]
+        }
+      },
+      {
+        "type": "Action.ShowCard",
+        "title": "Comment",
+        "card": {
+          "type": "AdaptiveCard",
+          "body": [
+            {
+              "type": "Input.Text",
+              "id": "comment",
+              "isMultiline": true,
+              "placeholder": "Enter your comment"
+            }
+          ],
+          "actions": [
+            {
+              "type": "Action.Submit",
+              "title": "OK"
+            }
+          ]
+        }
       }
-    }
-  ]
+    ]
+  }  
 }
 ```
 
@@ -309,7 +312,7 @@ The list card has been added by Teams to provide functions beyond what the list 
         "title": "Report",
         "subtitle": "teams > new > design",
         "tap": {
-          "type": "imback",
+          "type": "imBack",
           "value": "editOnline https://contoso.sharepoint.com/teams/new/Shared%20Documents/Report.xlsx"
         }
       },
@@ -319,7 +322,7 @@ The list card has been added by Teams to provide functions beyond what the list 
         "title": "Trello title",
         "subtitle": "A Trello subtitle",
         "tap": {
-          "type": "openurl",
+          "type": "openUrl",
           "value": "http://trello.com"
         }
       },
@@ -333,14 +336,14 @@ The list card has been added by Teams to provide functions beyond what the list 
         "title": "John Doe",
         "subtitle": "Manager",
         "tap": {
-          "type": "imback",
+          "type": "imBack",
           "value": "whois JohnDoe@contoso.com"
         }
       }
     ],
     "buttons": [
       {
-        "type": "imback",
+        "type": "imBack",
         "title": "Select",
         "value": "whois"
       }
@@ -351,7 +354,7 @@ The list card has been added by Teams to provide functions beyond what the list 
 
 ### Office 365 connector card
 
-Supported in teams, not in Bot Framework.
+Supported in Teams, not in Bot Framework.
 
 The Office 365 Connector card provides a flexible layout with multiple sections, fields, images, and actions. This card encapsulates a connector card so that it can be used by bots. See the notes section for differences between connector cards and the O365 card.
 
@@ -359,7 +362,7 @@ The Office 365 Connector card provides a flexible layout with multiple sections,
 
 | Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✖ |
+| ✔ | ✔ | ✔ | ✖ |
 |
 
 #### Properties
@@ -378,7 +381,7 @@ Office 365 Connector cards function properly on Microsoft Teams including [Actio
 One important difference between using Connector cards from a Connector and using Connector cards in your bot is the handling of card actions.
 
 * For a Connector, the endpoint receives the card payload via HTTP POST.
-* For a bot, the `HttpPOST` action triggers an `invoke` action that sends only the action ID and body to the bot.
+* For a bot, the `HttpPOST` action triggers an `invoke` activity that sends only the action ID and body to the bot.
 
 To use Connector cards in your bot, we recommend using the `O365ConnectorCard` class in the [Teams extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) for .NET or Node.js. You can simplify handling of the `HttpPOST` action by using the `onO365ConnectorCardAction` method.
 
@@ -391,7 +394,7 @@ All text fields support Markdown and HTML formatting. You can control which sect
 
 If you specify the `themeColor` property, it overrides the `accentColor` property in the app manifest.
 
-To specify the rendering style for `activityImage`, you can set `activityImage` as follows.
+To specify the rendering style for `activityImage`, you can set `activityImageType` as follows.
 
 | Value | Description |
 | --- | --- |
@@ -408,6 +411,8 @@ For all other details about Connector card properties, see the [Actionable messa
 
 ```json
 {
+  "contentType": "application/vnd.microsoft.teams.card.o365connector",
+  "content": {
     "@type": "MessageCard",
     "@context": "http://schema.org/extensions",
     "summary": "John Doe commented on Trello",
@@ -461,6 +466,7 @@ For all other details about Connector card properties, see the [Actionable messa
             ]
         }
     ]
+  }
 }
 ```
 
@@ -470,7 +476,7 @@ If you are using .NET and C# or Node.js, you can use the `O365ConnectorCard` cla
 
 ### Receipt card
 
-Supported in teams.
+Supported in Teams.
 
 A card that enables a bot to provide a receipt to the user. It typically contains the list of items to include on the receipt, tax and total information, and other text.
 
@@ -481,19 +487,17 @@ A card that enables a bot to provide a receipt to the user. It typically contain
 | ✔ | ✔ | ✖ | ✔ |
 |
 
-#### Notes
-
-The receipt card in Teams is identical to the sign in card defined in Bot Framework.
-
 #### For more information
 
 Bot Framework reference:
 
 * [Receipt card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.receiptcard.html)
+* [Receipt card C#](https://docs.botframework.com/en-us/csharp/builder/sdkreference/d0/df9/class_microsoft_1_1_bot_1_1_connector_1_1_receipt_card.html)
+
 
 ### Signin card
 
-A card that enables a bot to request that a user sign in. Supported in teams in a slightly different form than is found in the Bot Framework. See Notes for more details.
+A card that enables a bot to request that a user sign in. Supported in Teams in a slightly different form than is found in the Bot Framework. See Notes for more details.
 
 #### Support
 
@@ -503,15 +507,16 @@ A card that enables a bot to request that a user sign in. Supported in teams in 
 |
 
 #### Notes
-The signin card in teams is similar to the signin card in the bot framework with the exception that the signin card in Teams only supports two actions: `signin` and `openURL`.
+The signin card in Teams is similar to the signin card in the bot framework with the exception that the signin card in Teams only supports two actions: `signin` and `openUrl`.
 
-The *signin action* can be used from any card in Teams, not just the signin Card. See the topic [Microsoft Teams authentication flow for bots](~/concepts/authentication/auth-flow-bot) for more details on authentication.
+The *signin action* can be used from any card in Teams, not just the signin card. See the topic [Microsoft Teams authentication flow for bots](~/concepts/authentication/auth-flow-bot) for more details on authentication.
 
 #### For more information
 
 Bot Framework reference:
 
-* [Bot Framework SignIn card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.signincard.html)
+* [Signin card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.signincard.html)
+* [Signin card C#](https://docs.botframework.com/en-us/csharp/builder/sdkreference/dc/d03/class_microsoft_1_1_bot_1_1_connector_1_1_signin_card.html)
 
 ### Thumbnail card
 
@@ -646,7 +651,7 @@ A list can display a maximum of 10 cards per message.
 
 `builder.AttachmentLayout.list`
 
-## Cards Not supported in Teams
+## Cards not supported in Teams
 
 The following cards are implemented by the Bot Framework, but are NOT supported by Teams.
 
@@ -668,6 +673,7 @@ A card that can play animated GIFs or short videos.
 Bot Framework reference:
 
 * [Animation card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.animationcard.html)
+* [Animation card C#](https://docs.botframework.com/en-us/csharp/builder/sdkreference/d9/d78/class_microsoft_1_1_bot_1_1_connector_1_1_animation_card.html)
 
 ### Audio card
 
@@ -687,10 +693,12 @@ A card that can play an audio file.
 Bot Framework reference:
 
 * [Audio card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.audiocard.html)
+* [Audio card C#](https://docs.botframework.com/en-us/csharp/builder/sdkreference/db/d71/class_microsoft_1_1_bot_1_1_connector_1_1_audio_card.html)
 
 ### Video card
 
 Not supported in Teams.
+
 A card that can play videos.
 
 #### Support
@@ -703,4 +711,6 @@ A card that can play videos.
 #### For more information
 
 Bot Framework reference:
-[Video card](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.videocard.html)
+
+* [Video card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.videocard.html)
+* [Video card C#](https://docs.botframework.com/en-us/csharp/builder/sdkreference/d6/da6/class_microsoft_1_1_bot_1_1_connector_1_1_video_card.html)

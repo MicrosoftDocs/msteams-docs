@@ -46,7 +46,7 @@ You can perform backoff and retries using [Transient Fault Handling libraries](h
 ```csharp
 public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectionStrategy
 {
-    // List of error codes on retry on
+    // List of error codes to retry on
     List<int> transientErrorStatusCodes = new List<int>() { 429 };
 
     public bool IsTransient(Exception ex)
