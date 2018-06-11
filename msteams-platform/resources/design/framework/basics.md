@@ -13,7 +13,7 @@ If someone uses your app every day, this is where they will pin it. This area ho
 
 <img width="550" src="~/assets/images/framework/framework_basics_01.png"> <br /><br/>
 
-Each app uses this area differently, but in general, it allows users to navigate to specific content like a one-on-one chat with someone, a channel in a team, or a list of upcoming meetings.<br/>
+Each app uses this area differently, but in general, it allows users to navigate to specific content like a personal chat, a channel in a team, or a list of upcoming meetings.<br/>
 
 <img width="550" src="~/assets/images/framework/framework_basics_02.png"> <br /><br/>
 

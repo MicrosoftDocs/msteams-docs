@@ -86,7 +86,7 @@ Tabs make your bot much more functional. With tabs, you get the following:
 
 ### A place to host standing queries
 
-In one-on-one conversations, tabs can house user-specific information and lists. They’re also a good place to maintain bot responses to frequently-asked questions (so users don’t need to keep asking).
+In personal conversations between a bot and a single person, tabs can house user-specific information and lists. They’re also a good place to maintain bot responses to frequently-asked questions (so users don’t need to keep asking).
 
 ### A place to finish a conversation
 
