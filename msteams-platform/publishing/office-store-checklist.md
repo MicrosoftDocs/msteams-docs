@@ -40,7 +40,7 @@ Bots in Microsoft Teams must be created using Bot Framework. See [Create a bot](
 
 ## Screenshots
 
- The screenshots that are uploaded on the Seller Dashboard will eventually be displayed on Microsoft AppSource to provide visual preview of your app/product along with App Description to all the users.
+ The screenshots that are uploaded on the Seller Dashboard will eventually be displayed on Microsoft AppSource to provide a visual preview of your app/product along with your app description.
 
 Screenshots submitted on the seller dashboard should:
 
