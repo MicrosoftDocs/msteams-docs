@@ -42,6 +42,8 @@ Bots in Microsoft Teams must be created using Bot Framework. See [Create a bot](
 
  The screenshots that are uploaded on the Seller Dashboard will eventually be displayed on Microsoft AppSource to provide a visual preview of your app/product along with your app description.
 
+You can provide 1 to 5 screenshots. These can be .png, .jpg, or .gif files, and should be 1366 pixels wide by 768 pixels high. No screenshot should be larger than 1024 KB.
+
 Screenshots submitted on the seller dashboard should:
 
 * Show good Tab/capability
@@ -49,10 +51,12 @@ Screenshots submitted on the seller dashboard should:
 * Focus only on your apps Tab/Capability
 * Accurately depict the app's functionality
 * Content should be representative of the app
-* Avoid excessive content
+* Content should be well-populated without being excessive.
 
 Alternatively you can surround your screenshots with a background color and add marketing content similar to the Freshdesk example below. In that case the dimensions are not of the screenshot, they are of the overall .png image.
 
 <img width="800px" title="Freshdesk screenshot" src="~/assets/images/freshdesk.png" />
 
 `https://appsource.microsoft.com/en-us/product/office/WA104381505?src=office&tab=Overview`
+
+See more on [Crafting effective AppSource store images](https://docs.microsoft.com/en-us/office/dev/store/craft-effective-appsource-store-images).
