@@ -37,3 +37,22 @@ The follow metadata is required in your manifest.json file and for AppSource Sel
 ## Submission extras for bots
 
 Bots in Microsoft Teams must be created using Bot Framework. See [Create a bot](~/concepts/bots/bots-create) for instructions. Use your 96&times;96 color icon for your bot's icon in Bot Framework.
+
+## Screenshots
+
+ The screenshots that are uploaded on the Seller Dashboard will eventually be displayed on Microsoft AppSource to provide visual preview of your app/product along with App Description to all the users.
+
+Screenshots submitted on the seller dashboard should:
+
+* Show good Tab/capability
+* Not show Browser chrome, Teams UI or any Teams chrome
+* Focus only on your apps Tab/Capability
+* Accurately depict the app's functionality
+* Content should be representative of the app
+* Avoid excessive content
+
+Alternatively you can surround your screenshots with a background color and add a marketing content similar to the Freshdesk example below. In that case the dimensions are not of the screenshot, they are of the overall .png image.
+
+<img width="800px" title="Freshdesk screenshot" src="~/assets/images/freshdesk.png" />
+
+`https://appsource.microsoft.com/en-us/product/office/WA104381505?src=office&tab=Overview`
