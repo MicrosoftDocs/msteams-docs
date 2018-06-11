@@ -22,7 +22,7 @@ A bot behaves slightly depending on what kind of conversation it is involved in.
 * `teams` Also called channel conversations
 * `personal` Conversations between a bot and a single user
 
-See [Have a conversation with a Microsoft Teams bot](~/concepts/bots/conversations/bots-conversations) for more information.
+See [Have a conversation with a Microsoft Teams bot](~/concepts/bots/bot-conversations/bots-conversations) for more information.
 
 With Microsoft Teams apps, you can make the bot the star of your experience, or just a helper. Bots are distributed as part of your broader app package which can include other capabilities such as tabs or messaging extensions. If your bot is the star, be sure to take advantage of the [tabs](~/concepts/tabs/tabs-overview) capability. Use this rich web view to surface accompanying experiences and information that helps your users best interact with your service.
 
