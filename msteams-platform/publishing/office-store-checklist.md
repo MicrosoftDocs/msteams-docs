@@ -53,7 +53,7 @@ Screenshots submitted on the seller dashboard should:
 * Content should be representative of the app
 * Content should be well-populated without being excessive.
 
-Alternatively you can surround your screenshots with a background color and add marketing content similar to the Freshdesk example below. In that case the dimensions are not of the screenshot, they are of the overall .png image.
+Alternatively you can surround your screenshots with a background color and add marketing content similar to the Freshdesk example below. In that case the dimensions are not of the screenshot, they are of the overall image.
 
 <img width="800px" title="Freshdesk screenshot" src="~/assets/images/freshdesk.png" />
 
