@@ -51,7 +51,7 @@ Screenshots submitted on the seller dashboard should:
 * Focus only on your apps Tab/Capability
 * Accurately depict the app's functionality
 * Content should be representative of the app
-* Content should be well-populated without being excessive.
+* Content should be well-populated without being excessive. See [Avoid excess content](https://docs.microsoft.com/en-us/office/dev/store/craft-effective-appsource-store-images#avoid-excess-content) for more details
 
 Alternatively you can surround your screenshots with a background color and add marketing content similar to the [Freshdesk](https://appsource.microsoft.com/en-us/product/office/WA104381505?src=office&tab=Overview) example. In that case the dimensions are not of the screenshot, they are of the overall image.
 
