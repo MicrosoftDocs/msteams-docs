@@ -60,4 +60,4 @@ Alternatively you can surround your screenshots with a background color and add 
 
 See more on the subject here:
 
-* [Crafting effective AppSource store images](https://docs.microsoft.com/en-us/office/dev/store/craft-effective-appsource-store-images).
+* [Crafting effective AppSource store images](https://docs.microsoft.com/en-us/office/dev/store/craft-effective-appsource-store-images)
