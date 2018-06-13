@@ -18,7 +18,7 @@ Teams provides an in-app gallery for users to find or discover [high-quality Tea
 
 The Microsoft Teams Private App Store is currently a pre-release feature, and is available to a limited number of users. You can find more information in the article [Publish Apps to the Microsoft Teams Private App Store](https://docs.microsoft.com/en-us/MicrosoftTeams/private-app-store-teams). This feature can only be managed by Teams users with admin privileges.
 
-## App Source
+## AppSource
 
 AppSource (formerly known as Office Store) provides a convenient location for you to distribute your Microsoft Teams app, as well as other Office 365 extensibility types such as Office add-ins and SharePoint add-ins. To include your solution in AppSource, you submit it to the Seller Dashboard. You need to create an individual or company account if you have not already done so for other Windows apps or Office extensibility types.
 
