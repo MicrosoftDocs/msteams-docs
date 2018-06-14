@@ -8,7 +8,7 @@
   items: 
   - name:  Prepare your Office 365 tenant
     href: ./get-started/get-started-tenant
-  - name: Use Teams App Studio
+  - name: Use App Studio for Microsoft Teams
     href: ./get-started/get-started-app-studio
     items:
     - name: App Studio Controls
