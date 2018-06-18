@@ -48,6 +48,8 @@
       href: ./concepts/tabs/tabs-context
     - name: Requirements for tabs
       href: ./concepts/tabs/tabs-requirements
+    - name: Cross-domain redirects
+      href: ./concepts/tabs/cross-domain      
   - name: Bots
     href: ./concepts/bots/bots-overview
     items:
@@ -136,8 +138,6 @@
     items:
     - name: Supported media formats
       href: ./resources/general/media-formats
-    - name: Cross-domain redirects
-      href: ./resources/general/cross-domain
     - name: Debugging
       href: ./resources/general/debug
     - name: Rate limiting
