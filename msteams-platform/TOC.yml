@@ -48,7 +48,7 @@
       href: ./concepts/tabs/tabs-context
     - name: Requirements for tabs
       href: ./concepts/tabs/tabs-requirements
-   - name: Cross-domain redirects
+    - name: Cross-domain redirects
       href: ./concepts/tabs/cross-domain      
   - name: Bots
     href: ./concepts/bots/bots-overview
