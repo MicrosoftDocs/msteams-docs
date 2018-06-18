@@ -52,15 +52,15 @@ The extension definition is an object that has the following structure:
 | `botId` | The unique Microsoft app ID for the bot as registered with the Bot Framework. This should typically be the same as the ID for your overall Teams app. | Yes |
 | `scopes` | Array declaring whether this extension can be added to `personal` or `team` scopes (or both). | Yes |
 | `canUpdateConfiguration` | Enables **Settings** menu item. | No |
-| `commands` | Array of commands that this messaging extension supports. This is currently limited to ten commands | Yes |
+| `commands` | Array of commands that this messaging extension supports. This is currently limited to one command. | Yes |
 
 #### Define commands
 
-Your messaging extension should declare at least one command, which appears when the user selects your app from the **More options** (**&#8943;**) button in the compose box.
+Your messaging extension should declare one command, which appears when the user selects your app from the **More options** (**&#8943;**) button in the compose box.
 
 ![Screenshot of list of messaging extensions in Teams](~/assets/images/compose-extensions/compose-extension-list.png)
 
-In the app manifest, each of your command items should be an object with the following structure:
+In the app manifest, your command item is an object with the following structure:
 
 | Property name | Purpose | Required? |
 |---|---|---|
@@ -78,7 +78,7 @@ In the app manifest, each of your command items should be an object with the fol
 ```json
 {
   "$schema": "https://statics.teams.microsoft.com/sdk/v1.2/manifest/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.4",
+  "manifestVersion": "1.2",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
   "packageName": "com.microsoft.teams.samples.bing",
