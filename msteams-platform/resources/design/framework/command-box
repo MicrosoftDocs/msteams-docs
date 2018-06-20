@@ -13,7 +13,7 @@ Wherever you go in Teams, the command box is there at the top of the screen. Use
 
 **The @ command**: Typing **@** in the command box will display a list of the user's installed apps. Once someone has installed your app, they'll be able to summon it simply by entering this command and then selecting it from the list or typing its name.
 
-![Command suggestions](~/assets/images/Command box-zoomed suggestions.png)
+![Command suggestions](~/assets/images/Command-box-zoomed-suggestions.png)
 
 **Active app state**: After a user has employed the **@** command and then selected your app, they'll see the app's name and logo on the left side of the box, followed by a line of helper text that should tell the user what they can do (for example, "Enter a search term"). This is the active app state.
 
