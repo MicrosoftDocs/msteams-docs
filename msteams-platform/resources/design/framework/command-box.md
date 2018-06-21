@@ -7,17 +7,17 @@ keywords: teams design guidelines reference framework command box
 
 Wherever you go in Teams, the command box is there at the top of the screen. Users can quickly send commands to any of their installed apps right from the box, enabling them to query and pull content from your app without stepping away from what they're doing.
 
-![Image of the command box](~/assets/images/Command box-rest state.png)
+![Image of the command box](~/assets/images/Command-box-rest-state.png)
 
 ## Guidelines
 
 **The @ command**: Typing **@** in the command box will display a list of the user's installed apps. Once someone has installed your app, they'll be able to summon it simply by entering this command and then selecting it from the list or typing its name.
 
-![Command suggestions](~/assets/images/Command box-zoomed suggestions.png)
+![Command suggestions](~/assets/images/Command-box-zoomed-suggestions.png)
 
 **Active app state**: After a user has employed the **@** command and then selected your app, they'll see the app's name and logo on the left side of the box, followed by a line of helper text that should tell the user what they can do (for example, "Enter a search term"). This is the active app state.
 
-![Command box app state](~/assets/images/Command box-zoomed app state.png)
+![Command box app state](~/assets/images/Command-box-zoomed-app-state.png)
 
 **The command box drop-down**: Suggestions or results based on the user's query will appear in the drop-down field below the command box.
 
@@ -25,7 +25,7 @@ Wherever you go in Teams, the command box is there at the top of the screen. Use
 
 * **Results** can be presented as a list, a grid, or a card.
 
-![Drop-down active state](~/assets/images/Command box-zoomed well.png)
+![Drop-down active state](~/assets/images/Command-box-zoomed-well.png)
 
 ## Best practices
 
