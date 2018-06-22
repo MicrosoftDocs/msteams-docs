@@ -19,12 +19,33 @@ For development as well as AppSource (formerly Office Store) submission you must
 
 To create an upload package, see [Create the package for your Microsoft Teams app](~/concepts/apps/apps-package).
 
-## Load your package into a team
+## Load your package into Teams
 
-With your package created, you can now upload it into a team. Once uploaded it will be available for all users in the selected team, and only the users of that team.
+You can test your package by uploading it into Teams.
 
 > [!NOTE]
 > For uploading to work, your tenant admin must first [enable uploading of apps](/microsoftteams/admin-settings).
+
+There are two ways to upload your app to Teams:
+
+* Using the Store
+* Using the Apps tab
+
+## Upload your package into a team using the Store
+
+1. In the lower left corner of Teams, choose the Store icon. On the Store page, choose "Upload a custom app".
+
+   ![View team](~/assets/images/store-upload-a-custom-app.png)
+
+2. In the *Open* dialog, navigate to the package you want to upload and choose *Open*.
+
+The uploaded package should now be available for use in any Team in the *Apps* tab. If your app does not appear, the most common reason is an error in the manifest, particularly ids for the app, bot and messaging extensions.
+
+![Example of bot in list of uploaded bots](~/assets/images/botinlist.jpg)
+
+## Upload your package into a team using the Apps tab
+
+With your package created, you can now upload it into a team. Once uploaded it will be available for all users in the selected team, and only the users of that team.
 
 1. Create a new team for testing, if necessary. Click *Create and join team* at the bottom of the left-hand panel.
 
