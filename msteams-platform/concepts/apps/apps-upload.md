@@ -39,7 +39,7 @@ There are two ways to upload your app to Teams:
 
 2. In the *Open* dialog, navigate to the package you want to upload and choose *Open*.
 
-The uploaded package should now be available for use in any Team in the *Apps* tab. If your app does not appear, the most common reason is an error in the manifest, particularly ids for the app, bot and messaging extensions.
+The uploaded package should now be available for use in the team specified in the consent dialog. It will be found  *Apps* tab. If your app does not appear, the most common reason is an error in the manifest, particularly ids for the app, bot and messaging extensions.
 
 ![Example of bot in list of uploaded bots](~/assets/images/botinlist.jpg)
 
