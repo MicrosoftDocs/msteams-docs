@@ -2,7 +2,7 @@
 title: Authentication for tabs using Azure Active Directory
 description: Describes authentication in Teams and how to use it in tabs
 keywords: teams authentication tabs AAD
-ms.date: 03/01/2018
+ms.date: 06/26/2018
 ---
 # Authenticate a user in a Microsoft Teams tab
 
@@ -145,5 +145,5 @@ For more information on using AAD authentication for bots, see [Authentication f
 
 For sample code showing the tab authentication process using AAD see:
 
-* [Microsoft Teams tab authentication sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
-* [Microsoft Teams tab authentication sample (C#)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
+* [Microsoft Teams tab authentication sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
+* [Microsoft Teams tab authentication sample (C#)](https://github.com/OfficeDev/microsoft-teams-sample-auth-csharp)
