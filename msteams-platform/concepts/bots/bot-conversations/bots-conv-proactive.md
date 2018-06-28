@@ -14,7 +14,7 @@ A proactive message is a message that is sent by a bot to start a conversation. 
 
 Sending a message to start a new conversation thread   is different than sending a message in response to an existing conversation: when your bot starts a new a conversation, there is no pre-existing conversation to post the message to.
 
-## Starting a personal conversations
+## Starting a personal conversation
 
 Bots can create new conversations with an individual Microsoft Teams user as long as your bot has user information obtained through previous addition in a personal or team scope. This information enables your bot to proactively notify them. For instance, if your bot was added to a team, it could query the team roster and send users individual messages in personal chats, or a user could @mention another user to trigger the bot to send that user a direct message.
 
