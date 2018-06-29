@@ -272,6 +272,4 @@ For sample code illustrating an outgoing webhook, see these samples on GitHub:
 [OfficeDev/msteams-samples-outgoing-webhook-nodejs](https://github.com/OfficeDev/msteams-samples-outgoing-webhook-nodejs)
 
 ### C#
-[OfficeDev/microsoft-teams-sample-custombot](https://github.com/OfficeDev/microsoft-teams-sample-custombot)
-
-Custom Bots is a previous name for outgoing webhooks.
+[OfficeDev/microsoft-teams-sample-outgoing-webhook](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook)
