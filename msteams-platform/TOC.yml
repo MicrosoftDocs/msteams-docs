@@ -94,6 +94,8 @@
   - name: Authentication
     href: ./concepts/authentication/authentication
     items:
+    - name: Using the OAuth card
+      href: ./concepts/authentication/auth-oauth-card
     - name: Authentication flow for tabs
       href: ./concepts/authentication/auth-flow-tab
     - name: Authentication flow for bots
