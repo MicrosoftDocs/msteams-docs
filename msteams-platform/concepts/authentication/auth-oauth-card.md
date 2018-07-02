@@ -14,14 +14,14 @@ With Azure Bot Service’s OAuthCard, it is easier for your Teams bot to sign in
 
 Other topics in this section describe authentication without using the OAuthCard, so if you want to understand authentication in Teams more deeply, or have a situation where you can not use the OAuthCard, you can still refer to those topics.
 
-## How does the Azure Bot Service help me do auth?
+## How does the Azure Bot Service help me do authentication?
 
-Full documentation is available here.
+Full documentation is available in the topic: [Add authentication to your bot via Azure Bot Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-tutorial-authentication?view=azure-bot-service-3.0).
 
 ## Main benefits for Teams developers
 
 * Provides an out-of-box web-based authentication flow: you no longer have to write and host a web page to directs to external login experiences, or provide a redirect
-* Seamless for end users: complete the full signin experience right within Teams
+* Seamless for end users: complete the full sign in experience right within Teams
 * Easy token management: you no longer have to implement your own token storage system – instead, the Bot Service takes care of token caching and provides a secure mechanism for fetching those tokens
 * Complete SDKs: easy to integrate and consume from your bot service
 * Out-of-box support for many popular OAuth providers, such as AAD/MSA, Facebook, and Google
