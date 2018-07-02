@@ -8,6 +8,12 @@ ms.date: 02/28/6018
 
 In order for your app to access user information stored in Azure Active Directory, as well as access data from other services like Facebook and Twitter, your app will have to establish a trusted connection with those providers. The [Microsoft Teams JavaScript client SDK](https://docs.microsoft.com/en-us/javascript/api/overview/msteams-client) supports this in a way that allows your apps to work both in the web and desktop versions of Teams. (Currently, app authentication from iOS and Android is somewhat different, but much of what's described here does, or soon will, work on mobile devices as well.)
 
+The Azure Bot Service’s OAuthCard has been recently introduced to make authentication easier for apps using bots. For more information on using the OAuthCard See:
+
+* [Using the OAuthCard](~/concepts/authentication/auth-oauth-card)
+
+The other topics in this section describe authentication without using the OAuthCard, so if you want to understand authentication in Teams more deeply, or have a situation where you can not use the OAuthCard, you can still refer to those topics.
+
 General information on authentication flow as it applies to any authentication provider:
 
 * [Authentication flow in tabs](~/concepts/authentication/auth-flow-tab) describes how tab authentication works in Teams. This shows a typical web based authentication flow used for tabs.

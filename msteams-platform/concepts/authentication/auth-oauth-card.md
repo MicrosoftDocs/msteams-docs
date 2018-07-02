@@ -1,16 +1,18 @@
 ---
-title: Using the OAuth card for authentication
-description: Describes Using the OAuth card for authentication
-keywords: teams authentication
+title: Using the OAuthCard for authentication
+description: Describes Using the OAuthCard for authentication
+keywords: teams authentication OAuthCard OAuth card
 ms.date: 07/02/2018
 ---
 # Using Azure Bot Service for Authentication in Teams
 
 ## Overview
 
-Traditionally, the work to authenticate users through a bot has been complex. It’s a full-stack challenge that involves building a web experience, integrating with external OAuth providers, token management, and handling the right server-to-server API calls to ensure the authentication flow is completed in a secure manner. Users also end up with clunky experiences with entering in “magic numbers”.
+Before the introduction of the Azure Bot Service’s OAuthCard It was complicated to implement authentication in a bot. It was a full-stack challenge that involved building a web experience, integrating with external OAuth providers, token management, and handling the right server-to-server API calls to ensure the authentication flow was completed in a secure manner. Users often ended up with clunky experiences requiring the entry of “magic numbers”.
 
-With Azure Bot Service’s new OAuthCard, it is now easier than ever for your Teams bot to sign your users in and access external data providers. Whether you’ve already implemented auth and you want to switch over to something simpler, or if you are looking to add authentication to your bot service for the first time, this new system can make it easier.
+With Azure Bot Service’s OAuthCard, it is easier for your Teams bot to sign in your users and access external data providers. Whether you’ve already implemented auth and you want to switch over to something simpler, or if you are looking to add authentication to your bot service for the first time, the OAuthCard can make it easier.
+
+Other topics in this section describe authentication without using the OAuthCard, so if you want to understand authentication in Teams more deeply, or have a situation where you can not use the OAuthCard, you can still refer to those topics.
 
 ## How does the Azure Bot Service help me do auth?
 
