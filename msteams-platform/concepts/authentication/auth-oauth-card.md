@@ -1,32 +1,34 @@
 ---
 title: Using the OAuthCard for authentication
-description: Describes Using the OAuthCard for authentication
-keywords: teams authentication OAuthCard OAuth card
+description: Describes the Azure Bot Service OAuthCard and how it is used for authentication
+keywords: teams authentication OAuthCard OAuth card Azure Bot Service
 ms.date: 07/02/2018
 ---
 # Using Azure Bot Service for Authentication in Teams
 
 ## Overview
 
-Before the introduction of the Azure Bot Service’s OAuthCard It was complicated to implement authentication in a bot. It was a full-stack challenge that involved building a web experience, integrating with external OAuth providers, token management, and handling the right server-to-server API calls to ensure the authentication flow was completed in a secure manner. Users often ended up with clunky experiences requiring the entry of “magic numbers”.
+Before the introduction of the Azure Bot Service’s OAuthCard, it was complicated to implement authentication in a bot. It was a full-stack challenge that involved building a web experience, integrating with external OAuth providers, token management, and handling the right server-to-server API calls to ensure the authentication flow was completed in a secure manner. Users often ended up with clunky experiences requiring the entry of “magic numbers”.
 
 With Azure Bot Service’s OAuthCard, it is easier for your Teams bot to sign in your users and access external data providers. Whether you’ve already implemented auth and you want to switch over to something simpler, or if you are looking to add authentication to your bot service for the first time, the OAuthCard can make it easier.
 
-Other topics in this section describe authentication without using the OAuthCard, so if you want to understand authentication in Teams more deeply, or have a situation where you can not use the OAuthCard, you can still refer to those topics.
+Other topics in [Authentication](~/concepts/authentication/authentication) describe authentication without using the OAuthCard, so if you want to understand authentication in Teams more deeply, or have a situation where you can not use the OAuthCard, you can still refer to those topics.
 
 ## How does the Azure Bot Service help me do authentication?
 
-Full documentation is available in the topic: [Add authentication to your bot via Azure Bot Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-tutorial-authentication?view=azure-bot-service-3.0).
+Full documentation using the OAuthCard is available in the topic: [Add authentication to your bot via Azure Bot Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-tutorial-authentication?view=azure-bot-service-3.0). Note that this topic is in the Azure Bot Framework documentation set, and is not specific to Teams.
+
+Instructions on how to use the OAuthCard in Teams are provided in the following sections.
 
 ## Main benefits for Teams developers
 
 The OAuthCard helps with authentication in the following ways:
 
-* Provides an out-of-box web-based authentication flow: you no longer have to write and host a web page to directs to external login experiences, or provide a redirect
-* Is seamless for end users: complete the full sign in experience right within Teams
-* Includes easy token management: you no longer have to implement your own token storage system – instead, the Bot Service takes care of token caching and provides a secure mechanism for fetching those tokens
-* Is supported by complete SDKs: easy to integrate and consume from your bot service
-* Has out-of-box support for many popular OAuth providers, such as AAD/MSA, Facebook, and Google
+* Provides an out-of-box web-based authentication flow: you no longer have to write and host a web page to directs to external login experiences, or provide a redirect.
+* Is seamless for end users: complete the full sign in experience right within Teams.
+* Includes easy token management: you no longer have to implement your own token storage system – instead, the Bot Service takes care of token caching and provides a secure mechanism for fetching those tokens.
+* Is supported by complete SDKs: easy to integrate and consume from your bot service.
+* Has out-of-box support for many popular OAuth providers, such as AAD/MSA, Facebook, and Google.
 
 ## When should I implement my own solution?
 
@@ -38,7 +40,7 @@ You’ll first need to configure your Azure bot service to set up external authe
 
 To enable authentication using the Azure Bot Service, you need to make these additions to your code:
 
-1. Include token.botframework.com in the validDomains section of your app manifest. This is needed because Teams will embed the Bot Service’s login page.
+1. Include token.botframework.com in the `validDomains` section of your app manifest. This is needed because Teams will embed the Bot Service’s login page.
 2. Whenever your bot needs to access authenticated resources, fetch the token from the Bot Service. If no token is available, send a message with an OAuthCard to the user requesting them to log into the external service.
 3. Handle the login completion activity – this ensures that the authentication request and the token are associated with the user currently interacting with your bot.
 4. Retrieve the token whenever your bot needs to perform authenticated actions, such as calling external REST APIs.
@@ -118,7 +120,7 @@ The following snippet (C#) illustrates how to craft the login response:
 var token = await client.OAuthApi.GetUserTokenAsync(activity.From.Id, ConnectionName).ConfigureAwait(false);
 
 if (token == null)
-{ 
+{
   // Send the login response with the auth link.
   string link = await client.OAuthApi.GetSignInLinkAsync(activity, ConnectionName);
 
@@ -138,9 +140,9 @@ if (token == null)
 }
 ```
 
-Note in the example above that you need to make the call to `GetSignInLinkAsync` directly against the `client.OAuthApi` property.
+Note that in the example above you need to make the call to `GetSignInLinkAsync` directly against the `client.OAuthApi` property.
 
-When the user successfully completes the login sequence, your service will receive another Invoke request containing the original user query, along with a state parameter containing the “magic code”. You can now fetch the token using this string, along with the user ID and connection name.
+When the user successfully completes the login sequence, your service will receive another Invoke request containing the original user query, along with a state parameter string containing the “magic code”. You can now fetch the token using this string, along with the user ID and connection name.
 
 ```CSharp
 var query = activity.GetComposeExtensionQueryData();
