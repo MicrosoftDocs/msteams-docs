@@ -57,11 +57,11 @@ if (token != null)
 else
 {
     // If Bot Service does not have a token, send an OAuth card to sign in 
-    await SendOAuthCardAsync(context, (Activity)context.Activity); 
+    await SendOAuthCardAsync(context, (Activity)context.Activity);
 }
 ```
 
-If one doesn’t exist, your code will then send a message with an OAuthCard to the user:
+If an access token doesn’t exist, your code will then send a message with an OAuthCard to the user:
 
 ```CSharp
 private async Task SendOAuthCardAsync(IDialogContext context, Activity activity)
@@ -73,7 +73,11 @@ private async Task SendOAuthCardAsync(IDialogContext context, Activity activity)
 
     context.Wait(WaitForToken);
 }
+```
+
 To handle the login complete activity, you’ll need to process this Invoke:
+
+```CSharp
 if (activity.Name == "signin/verifyState")
 {
   // We do this so that we can pass handling to the right logic in the dialog. You can
@@ -83,7 +87,11 @@ if (activity.Name == "signin/verifyState")
 
   return Request.CreateResponse(HttpStatusCode.OK);
 }
-In your dialog code, you can then retrieve the token from the Bot auth service:
+```
+
+In your dialog code, you can then retrieve the token from the Bot authentication service:
+
+```CSharp
 if (text.Contains("loginComplete"))
   {
     // Handle login completion event.
