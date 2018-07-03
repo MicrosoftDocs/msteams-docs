@@ -6,9 +6,11 @@ ms.date: 04/30/2018
 --- 
 # Personal apps
 
-When someone installs your app, they have the option of installing it for themselves as well as for a team. The version they install for themselves is called a personal app.
+A personal app is an app with a personal scope. As an app developer, you have the option to provide a version of your app that is built for the individual user. In this version, the collection of tabs (and the bot, if you've included one), are designed for the person. This way, you're able to create a one-on-one interaction with your users. 
 
-A personal app is where your users can see everything that's theirs, all the items they've recently viewed in the app, and every other channel in Teams where the app is being used. It puts everything in one place. If they need to make changes or updates, they can do it right from their personal app. 
+A personal app is where someone can see everything that's theirs, and all the items they've recently viewed in the app. It puts everything in one place. 
+
+![image of the app overflow menu](~/assets/images/Personal-apps-App-flyout.png)
 
 ---
 
@@ -22,19 +24,25 @@ This is where your users will see all their stuff. It's their personal space. Th
 
 Since this tab can show items from multiple channels, each item should display its own team, channel, and tab so the user can easily see where it originated. 
 
+![Personal Tasks tab](~/assets/images/Personal-apps-MY-tab.png)
+
 ### Recent
 
-The **Recent** tab lets someone browse everything they've recently viewed in your app. It's all listed in chronological order (from most to least recent). Clicking on an item in this list will navigate the user to that item's channel and tab.
+The **Recent** tab lets someone browse everything they've recently viewed in your app. It's listed in chronological order (from most to least recent). Clicking on an item in this list will navigate the user to that item's channel and tab.
+
+![Recent tab](~/assets/images/Personal-apps-Recent-tab.png)
 
 ### All
 
-This is a list of all your tabs in the user's organization (the ones they have access to, anyway). In other words, it shows them everywhere the app is being used. As with the **Recent** tab, selecting something in the list will bring the user straight to the relevant channel and tab.
+This is a list of all your tabs in the person's organization (the ones they have access to, anyway). In other words, it shows them everywhere the app is being used. As with the **Recent** tab, selecting something in the list will bring the user straight to the relevant channel and tab.
 
 ### Bot
 
-A bot isn't required, but it gives you a great way to communicate directly and privately with your users. Notification is one of the most important functions of a personal app, and what better way to notify than with direct communication?
+A bot isn't required, but it's a great way to communicate directly and privately with your users. Notification is one of the most important functions of a personal app, and what better way to notify than with direct communication?
 
-Bots deliver messages in the form of cards, which can provide specific information, like an alert that new content is available, or broad updates, like a daily to-do list.
+Bots deliver messages in the form of cards, which can provide specific information (like an alert that new content is available) or broad updates (like a daily to-do list).
+
+![Bot greeting](~/assets/images/Personal-apps-Bot.png)
 
 ### Help and Settings
 
@@ -52,10 +60,10 @@ Include an **About** tab to provide information like version number, capabilitie
 
 Use a bot to notify users of changes and new features.
 
-### Customize your tabs
+### Customize your tabs...
 
 Feel free to add other tabs that will help your users accomplish specific tasks.
 
-### Every tab is visible
+### ...and make them relevant to every user
 
 Every tab you declare in your app manifest will be visible to all users. For example, if your personal app is an expense reporting tool that is used by both managers and employees, an **Approval** tab should provide content that is meaningful to both roles.
