@@ -158,6 +158,8 @@
         href: ./resources/design/framework/basics
       - name: Apps
         href: ./resources/design/framework/apps
+      - name: Personal apps
+        href: ./resources/design/framework/personal-apps
       - name: Activity feed
         href: ./resources/design/framework/activity-feed
       - name: Search
