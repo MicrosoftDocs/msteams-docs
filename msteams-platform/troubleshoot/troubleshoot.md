@@ -67,8 +67,6 @@ Bots in channels receive messages only when they are explicitly @mentioned, even
 
 Because bots in channels only receive messages when they are @mentioned, all messages that your bot receives in a channel include that @mention in the text field. It is a best practice to strip the bot name itself out of all incoming text messages before passing along to your parsing logic. Review [Mentions](~/concepts/bots/bot-conversations/bots-conv-channel#mentions) for tips on how to handle this case.
 
----
-
 ## Issues with packaging and uploading
 
 ### Error while reading manifest.json
