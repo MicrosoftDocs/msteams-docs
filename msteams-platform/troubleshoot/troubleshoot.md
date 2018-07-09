@@ -14,7 +14,7 @@ ms.date: 07/09/2018
 If you are not seeing your content in the tab view, it could be:
 
 * your content cannot be displayed in an `<iframe>`.
-* the content domain is not in the [`validDomains`](~/resources/schema/manifest-schema#validdomains) list in the manifest.
+* the content domain is not in the [validDomains](~/resources/schema/manifest-schema#validdomains) list in the manifest.
 
 ### The Save button isn't enabled on the settings dialog
 
@@ -22,19 +22,15 @@ Be sure to call `microsoftTeams.setValidityState(true)` once the user has input 
 
 ### After selecting the Save button, the tab settings cannot be saved
 
-When adding a tab, if you click the save buttons but are presented with an error message indicating the settings cannot be saved, the problem could be one of two classes of issues.
+When adding a tab, if you click the save buttons but are presented with an error message indicating the settings cannot be saved, the problem could be one of two classes of issues:
 
-### The save success message was never received
+* The save success message was never received. If a save handler was registered using `microsoftTeams.settings.registerOnSaveHandler(handler)`, the callback must call `saveEvent.notifySuccess()`. If the callback doesn't call this within 30 seconds or calls `saveEvent.notifyFailure(reason)` instead, this error will be shown.
 
-If a save handler was registered using `microsoftTeams.settings.registerOnSaveHandler(handler)`, the callback must call `saveEvent.notifySuccess()`. If the callback doesn't call this within 30 seconds or calls `saveEvent.notifyFailure(reason)` instead, this error will be shown.
+* If no save handler was registered, the `saveEvent.notifySuccess()` call is automatically made immediately upon the user selecting the save button.
 
-If no save handler was registered, the `saveEvent.notifySuccess()` call is automatically made immediately upon the user selecting the save button.
+* The provided settings were invalid. The other reason the settings may not be saved is if the call to `microsoftTeams.setSettings(settings)` provided an invalid settings object, or the call wasn't made at all. See the next section, Common problems with the settings object.
 
-### The provided settings were invalid
-
-The other reason the settings may not be saved is if the call to `microsoftTeams.setSettings(settings)` provided an invalid settings object, or the call wasn't made at all.
-
-Common problems with the settings object:
+### Common problems with the settings object
 
 * `settings.entityID` is missing. This field is required.
 * `settings.contentUrl` is missing. This field is required.
@@ -44,15 +40,14 @@ Common problems with the settings object:
 
 Unless you are doing silent authentication, you must follow the authentication process provided by the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
 
-Also note: Due to changes introduced in July 2017, we require all authentication flow to start and end on your domain, which must be listed in the `validDomains` object in your manifest.
+> [!NOTE]
+>Due to changes introduced in July 2017, we require all authentication flow to start and end on your domain, which must be listed in the `validDomains` object in your manifest.
 
 For more information about authentication, please see [Authenticate a user](~/concepts/authentication/authentication).
 
 ### Static tabs not showing up
 
 There is a known issue where updating an existing bot app with a new or updated static tab will not show that tab change when accessing the app from a personal chat conversation.  To see the change, you should test on a new user or test instance, or access the bot from the Apps flyout.
-
----
 
 ## Troubleshooting bots
 
@@ -66,7 +61,7 @@ Bots must first be upload into a team before it is accessible within any channel
 
 ### My bot doesn't get my message in a channel
 
-Bots in channels receive messages only when they are explicitly @mentioned, even if you are replying to a previous bot message. The only exception where you might not see the bot name in a message is if the bot receives an imBack action as a result of a CardAction that it originally sent.
+Bots in channels receive messages only when they are explicitly @mentioned, even if you are replying to a previous bot message. The only exception where you might not see the bot name in a message is if the bot receives an `imBack` action as a result of a CardAction that it originally sent.
 
 ### My bot doesn't understand my commands when in a channel
 
@@ -83,13 +78,13 @@ Most  manifest errors will provide a hint at what specific field is missing or i
 Common reasons for manifest read errors:
 
 * Invalid JSON. Use an IDE such as [Visual Studio Code](https://code.visualstudio.com) or [Visual Studio](https://www.visualstudio.com/vs/) that automatically validates the JSON syntax.
-* Encoding issues. Use UTF-8 for the manifest.json file. Other encodings, specifically with the BOM, may not be readable.
-* Malformed .zip package. The manifest.json file must be at the top level of the .zip file. Note that default Mac file compression might place the manifest.json in a subdirectory, which will not properly load in Microsoft Teams.
+* Encoding issues. Use UTF-8 for the *manifest.json* file. Other encodings, specifically with the BOM, may not be readable.
+* Malformed .zip package. The *manifest.json* file must be at the top level of the .zip file. Note that default Mac file compression might place the *manifest.json* in a subdirectory, which will not properly load in Microsoft Teams.
 
 > [!NOTE]
 > An issue with the [description.full](~/resources/schema/manifest-schema#developer) field in the manifest causes a loading error with a string longer than 256 characters.
 
-### Another extension with same ID "&lt;id&gt;" exists
+### Another extension with same ID exists
 
 If you're attempting to re-upload an updated package with the same ID, choose the **Replace** icon at the end of the tab's table row rather than the **Upload** button.
 
