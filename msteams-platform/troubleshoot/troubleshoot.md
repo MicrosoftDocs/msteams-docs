@@ -2,11 +2,12 @@
 title: Troubleshoot your app
 description: Troubleshoot issues or errors while building apps for Microsoft Teams
 keywords: teams apps development troubleshooting
+ms.date: 07/09/2018
 ---
 
 # Troubleshoot your Microsoft Teams app
 
-## Tabs
+## Troubleshooting tabs
 
 ### Blank tab screen
 
@@ -49,15 +50,11 @@ For more information about authentication, please see [Authenticate a user](~/co
 
 ### Static tabs not showing up
 
-<<<<<<< HEAD
-There is a known issue where updating an existing bot app with a new or updated static tab will not show that tab change when accessing the app from a 1:1 bot conversation. To see the change, you should test on a new user or test instance, or access the bot from the Apps flyout.
-=======
 There is a known issue where updating an existing bot app with a new or updated static tab will not show that tab change when accessing the app from a personal chat conversation.  To see the change, you should test on a new user or test instance, or access the bot from the Apps flyout.
->>>>>>> Norm-Apps-Group-Chat
 
 ---
 
-## Bots
+## Troubleshooting bots
 
 ### Can't add my bot
 
@@ -77,7 +74,7 @@ Because bots in channels only receive messages when they are @mentioned, all mes
 
 ---
 
-## Packaging and uploading
+## Issues with packaging and uploading
 
 ### Error while reading manifest.json
 
