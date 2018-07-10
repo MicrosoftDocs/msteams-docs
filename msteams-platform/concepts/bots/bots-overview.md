@@ -49,6 +49,10 @@ The SDK extensions install dependencies, including the Bot Builder SDK.
 
 Outgoing webhooks allow you to create a simple bot for basic interaction, like kicking off a workflow or other simple commands you may need. Outgoing webhooks live only in the team in which you create them and are intended for simple processes specific to your company's workflow. See [outgoing webhooks](~/concepts/outgoingwebhook) for more information.
 
+## Troubleshooting bots
+
+See the [Troubleshooting bots](~/troubleshoot/troubleshoot#troubleshooting-bots) topic for more information.
+
 ## Build a great Teams bot
 
 The following topics will guide you through the process of creating a great bot for Teams.
