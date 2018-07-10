@@ -47,3 +47,7 @@ Pages loaded inside of a custom tab need to:
 * Make calls to the [Teams client SDK](https://docs.microsoft.com/en-us/javascript/api/overview/msteams-client) (microsoftTeams.initialize()) which gives Teams a communication channel with the hosted page and more visibility into its operations.
 
 For more details see [Requirements for tab pages in Microsoft Teams](~/resources/general/requirements).
+
+## Troubleshooting tabs
+
+See the [Troubleshooting Tabs](~/troubleshoot/troubleshoot#troubleshooting-tabs) topic for more information.

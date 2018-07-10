@@ -16,7 +16,7 @@ Teams provides an in-app gallery for users to find or discover [high-quality Tea
 
 ## Microsoft Teams Private App Store
 
-The Microsoft Teams Private App Store is currently a pre-release feature, and is available to a limited number of users. You can find more information in the article [Publish Apps to the Microsoft Teams Private App Store](https://docs.microsoft.com/en-us/MicrosoftTeams/private-app-store-teams). This feature can only be managed by Teams users with admin privileges.
+The Microsoft Teams Private App Store is currently a pre-release feature, and is available to a limited number of users. You can find more information in the article [Publish Apps to the Microsoft Teams Private App Store](https://docs.microsoft.com/en-us/microsoftteams/tenant-apps-catalog-teams). This feature can only be managed by Teams users with admin privileges.
 
 ## AppSource
 
@@ -102,3 +102,7 @@ Failures are explained, with references to the specific policy violations. All f
 If your app is in the Microsoft Teams store, you can generate a link for your website that launches Teams and shows a consent and installation dialog for users to add the app.
 The format is:  `https://teams.microsoft.com/l/app/<appId>` where appID is the GUID they declare in the submitted manifest.
 Example: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd` is the link to install Trello.
+
+## Troubleshooting publishing issues
+
+See the [Issues with packaging and uploading](~/troubleshoot/troubleshoot#issues-with-packaging-and-uploading) topic for more information.
