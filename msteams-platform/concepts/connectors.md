@@ -236,9 +236,9 @@ If you need to authenticate the user as part of loading your page in step 2 abov
 
 Your code should handle users returning to edit an existing connector configuration. To do this, call `microsoftTeams.settings.setSettings()` during the initial configuration with the following parameters:
 
-* `entityId` is the custom ID that is understood by your service and represents what the user has configured.
-* `configName` is a friendly name that your configuration code can retrieve
-* `contentUrl` is a custom URL that gets loaded when a user edits an existing connector configuration. You can use this URL to make it easier for your code to handle the edit case.
+- `entityId` is the custom ID that is understood by your service and represents what the user has configured.
+- `configName` is a friendly name that your configuration code can retrieve
+- `contentUrl` is a custom URL that gets loaded when a user edits an existing connector configuration. You can use this URL to make it easier for your code to handle the edit case.
 
 Typically, this call is made as part of your save event handler. Then, when the `contentUrl` above is loaded, your code should call `getSettings()` to prepopulate any settings or forms in your configuration UI.
 
@@ -250,8 +250,8 @@ You can optionally execute an event handler when the user removes an existing co
 
 You can download the auto-generated Teams app manifest from the portal. Before you can use it to test or publish your app, though, you must do the following:
 
-* Include two icons, following the instructions in [Icons](~/concepts/apps/apps-package#icons).
-* Modify the `icons` portion of the manifest to refer to the file names of the icons instead of URLs.
+- Include two icons, following the instructions in [Icons](~/concepts/apps/apps-package#icons).
+- Modify the `icons` portion of the manifest to refer to the file names of the icons instead of URLs.
 
 The following manifest.json file contains the basic elements needed to test and submit your app.
 
