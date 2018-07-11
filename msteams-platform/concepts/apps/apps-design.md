@@ -28,6 +28,6 @@ The following table provides a few ideas about bringing resources you've already
 | --- | --- |
 | Web app | [Tab](~/concepts/tabs/tabs-overview) |
 | Bot built with Bot Framework | [Bot](~/concepts/bots/bots-overview) (and a [Messaging extension](~/concepts/compose-extensions), if you'd like)
-| Office 365 Connector | [Connector](~/concepts/connectors) |
+| Office 365 Connector | [Connector](/concepts/connectors/connectors) |
 | Web service (to look up information) | [Messaging extension](~/concepts/compose-extensions) |
 | Outgoing webhook | [Custom bot](~/concepts/custom-bot) |

@@ -109,7 +109,9 @@
   - name: Activity Feed
     href: ./concepts/activity-feed
   - name: Connectors
-    href: ./concepts/connectors
+    href: ./concepts/connectors/connectors
+    - name: Creating connectors
+      href: ./concepts/connectors/connectors-creating
   - name: Messaging Extensions
     href: ./concepts/messaging-extensions
   - name: Outgoing WebHooks
