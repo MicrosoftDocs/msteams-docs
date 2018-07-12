@@ -30,7 +30,8 @@ On July 12, 2018, Microsoft announced a new edition of Microsoft Teams: *Microso
 There are no significant limitations in Microsoft Teams free in terms of how many apps you can use, what they can do or, for the most part, which apps are available. Some of the Teams apps are not available, for example, because they are designed to work with Office 365 services that aren't included in Microsoft Teams free.
 
 Most apps will work in Microsoft Teams free with no modifications. However, apps which require users to log into Azure Active Directory (AAD) may need to make some minor changes. If you want to ensure your app works with Microsoft Teams free, and your app requires users to log into AAD, here's what to do:
-* Ensure that the endpoint you call is in the form https://login.microsoftonline.com/**TENANT_ID**/oauth2/authorize?... and ***not*** https://login.microsoftonline.com/**common**/oauth2/authorize?...
+* Ensure that the endpoint you call is in the form <pre>https://login.microsoftonline.com/**TENANT_ID**/oauth2/authorize?...</pre>
+  and **not**  <pre>https://login.microsoftonline.com/**common**/oauth2/authorize?...</pre>
 * To obtain **TENANT_ID**, use the [bot context](~/concepts/bots/bots-context) or the [tab context](~/concepts/tabs/tabs-context) APIs
 * This will also ensure [Guest users](https://docs.microsoft.com/en-us/MicrosoftTeams/guest-access) can login using your app
 
