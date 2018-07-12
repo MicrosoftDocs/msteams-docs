@@ -2,7 +2,7 @@
 title: Features in the Public Developer Preview
 description: Describes the features in the Public Developer Preview of Microsoft Teams
 keywords: teams preview developer features
-ms.date: 05/28/2018
+ms.date: 07/12/2018
 ---
 # Features in the Public Developer Preview for Microsoft Teams
 
@@ -11,6 +11,18 @@ The developer preview includes the following new features:
 * [Sending and receiving files through your bot](~/concepts/bots/bots-files)
 * Adaptive Cards: [Adaptive card](~/concepts/cards/cards-reference#adaptive-card-supported-in-developer-preview-only), [Adaptive card actions in Teams](~/concepts/cards/cards-actions#adaptive-card-actions-supported-in-developer-preview-only).
 * Tabs and bots in chats: See the following section for details on this feature.  When the feature is out of developer preview this content will be merged into the live doc set.
+
+## Updates to correct tab config area for new resolution
+
+You should follow this guidance to correctly format the tab config area:
+
+* Base the height of the config area of the tab on the fixed-height graphic elements
+* Calculate available vertical space (the height of the config area) using window.innerHeight. This returns the size of the iframe, which may change in future releases.
+* Allocate vertical space to the variable-height elements minus what's needed for the fixed-height elements
+* For the "login" state, vertically and horizontally center the content
+* If you want a background image, you need either a new image (preferred), or can keep the same image and choose between:
+  * aligning to the upper left hand corner
+  * scaling the image to fit
 
 ## Adding tabs and bots to chats
 
