@@ -110,8 +110,11 @@
     href: ./concepts/activity-feed
   - name: Connectors
     href: ./concepts/connectors/connectors
+    items:
     - name: Creating connectors
       href: ./concepts/connectors/connectors-creating
+    - name: Using connectors
+      href: ./concepts/connectors/connectors-using
   - name: Messaging Extensions
     href: ./concepts/messaging-extensions
   - name: Outgoing WebHooks
