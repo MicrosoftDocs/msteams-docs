@@ -14,7 +14,7 @@ The developer preview includes the following new features:
 
 ## The tab configuration page is being expanded
 
-The content area for the tab [Configuration page](/concepts/tabs/tabs-configuration) will be increased in size shortly. It is important for you to update the tab configuration pages associated with your apps before this happens, otherwise your users may encounter formatting issues.  
+The content area for the tab [Configuration page](/concepts/tabs/tabs-configuration) will shortly be increased in size. It is important for you to update the tab configuration pages in your apps before this happens, otherwise your users may encounter formatting issues.  
 
 Follow these guidelines to correctly format content in your tab configuration pages:
 
