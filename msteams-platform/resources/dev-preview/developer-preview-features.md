@@ -12,15 +12,15 @@ The developer preview includes the following new features:
 * Adaptive Cards: [Adaptive card](~/concepts/cards/cards-reference#adaptive-card-supported-in-developer-preview-only), [Adaptive card actions in Teams](~/concepts/cards/cards-actions#adaptive-card-actions-supported-in-developer-preview-only).
 * Tabs and bots in chats: See the following section for details on this feature.  When the feature is out of developer preview this content will be merged into the live doc set.
 
-## The tab config area has been expanded
+## The tab configuration page has been expanded
 
-Follow this guidance to correctly format the tab config area:
+Follow this guidance to correctly format the tab configuration page:
 
-* Base the height of the config area of the tab on the fixed-height graphic elements
-* Calculate available vertical space (the height of the config area) using `window.innerHeight`. This returns the size of the iframe, which may change in future releases
+* Base the height of the content area in the tab on fixed-height graphic elements
+* Calculate available vertical space (the height of the content area in the configuration tab) using `window.innerHeight`. This returns the size of the iframe, which may change in future releases
 * Allocate vertical space to the variable-height elements minus what's needed for the fixed-height elements
 * For the *login* state, vertically and horizontally center the content
-* If you want a background image, you need either a new image (preferred), or can keep the same image and choose between:
+* If you want a background image, you need either a new image, sized to fit the new area (preferred), or can keep the same image and choose between:
   * aligning to the upper left hand corner
   * scaling the image to fit
 
