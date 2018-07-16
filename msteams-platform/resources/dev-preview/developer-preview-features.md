@@ -2,7 +2,7 @@
 title: Features in the Public Developer Preview
 description: Describes the features in the Public Developer Preview of Microsoft Teams
 keywords: teams preview developer features
-ms.date: 05/28/2018
+ms.date: 07/16/2018
 ---
 # Features in the Public Developer Preview for Microsoft Teams
 
@@ -11,6 +11,26 @@ The developer preview includes the following new features:
 * [Sending and receiving files through your bot](~/concepts/bots/bots-files)
 * Adaptive Cards: [Adaptive card](~/concepts/cards/cards-reference#adaptive-card-supported-in-developer-preview-only), [Adaptive card actions in Teams](~/concepts/cards/cards-actions#adaptive-card-actions-supported-in-developer-preview-only).
 * Tabs and bots in chats: See the following section for details on this feature.  When the feature is out of developer preview this content will be merged into the live doc set.
+
+## The tab configuration page is significantly taller
+
+The height of the content area for the tab [Configuration page](~/concepts/tabs/tabs-configuration) will shortly be increased significantly; the width remains unchanged. It is important for you to update the tab configuration pages in your apps before this happens, otherwise your users will see your tab configuration page with a great deal of whitespace. (We have not finalized the date for this change as we cannot be sure how long it will take for most developers to update their apps, but it will likely be before the end of August, 2018.) 
+
+<img width="450px" title="New sizes for configuration tabs" src="~/assets/images/tabs/config-dialog-Contoso2.png" />
+
+Follow these guidelines to correctly format content in your tab configuration pages:
+
+* Base the height of the content area in the tab on fixed-height graphic elements.
+* Calculate available vertical space (the height of the content area in the configuration tab) using `window.innerHeight`. This returns the size of the `<iframe>` in which your configuration page resides, which may change in future releases. By using this value, your content will adjust automatically to future changes.
+* Allocate vertical space to the variable-height elements minus what's needed for the fixed-height elements.
+* For the *login* state, vertically and horizontally center the content.
+* If you want a background image, you need either a new image, sized to fit the new area (preferred), or can keep the same image and choose between:
+  * aligning to the upper left hand corner.
+  * scaling the image to fit.
+
+When properly sized, your tab configuration page should look similar to this:
+
+<img width="450px" title="New configuration tab" src="~/assets/images/tabs/config-dialog-Contoso.png" />
 
 ## Adding tabs and bots to chats
 
@@ -87,5 +107,5 @@ The samples in this section have been updated to include this feature:
 * Custom defined app icons are currently not working in chat
 * If you upload an app with a bot to a chat in the *Developer Preview* version of Teams, and you switch back to the *Public* version, there might be some UI or behavior inconsistencies. If you run into any issues, please uninstall the app in *Developer Preview*
 * Bot menus do not currently work with the `groupchat` scope
-* Deeplinks into tabs in group chat do not work
+* Deep links into tabs in group chat do not work
 * There is a limit of 5 uploaded apps per chat
