@@ -14,7 +14,9 @@ The developer preview includes the following new features:
 
 ## The tab configuration page is being expanded
 
-The content area for the tab [Configuration page](/concepts/tabs/tabs-configuration) will shortly be increased in size. It is important for you to update the tab configuration pages in your apps before this happens, otherwise your users may encounter formatting issues.  
+The content area for the tab [Configuration page](/concepts/tabs/tabs-configuration) will shortly be increased in size. It is important for you to update the tab configuration pages in your apps before this happens, otherwise your users may encounter formatting issues.
+
+<img width="450px" title="New sizes for configuration tabs" src="~/assets/images/tabs/config-dialog-Contoso2.png" />
 
 Follow these guidelines to correctly format content in your tab configuration pages:
 
@@ -25,6 +27,10 @@ Follow these guidelines to correctly format content in your tab configuration pa
 * If you want a background image, you need either a new image, sized to fit the new area (preferred), or can keep the same image and choose between:
   * aligning to the upper left hand corner
   * scaling the image to fit
+
+The tab should look something like this:
+
+<img width="450px" title="New configuration tab" src="~/assets/images/tabs/config-dialog-Contoso.png" />
 
 ## Adding tabs and bots to chats
 
