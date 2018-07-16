@@ -2,7 +2,7 @@
 title: What's new
 description: Describes all the new developer features in Microsoft Teams
 keywords: teams what's new latest
-ms.date: 07/12/2018
+ms.date: 07/16/2018
 ---
 # What's new for developers in Microsoft Teams
 
