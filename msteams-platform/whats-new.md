@@ -12,7 +12,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | - | - | - |
-| 07/16/2018 | In developer preview, more space has been allocated to the tab configuration page. | [The tab configuration page is significantly taller](~/resources/dev-preview#the-tab-configuration-page-is-significantly-taller)|
+| 07/16/2018 | In developer preview, more space has been allocated to the tab configuration page. | [The tab configuration page is significantly taller](~/resources/dev-preview/developer-preview-features#the-tab-configuration-page-is-significantly-taller)|
 | 07/12/2018 | Information on how to ensure your Teams app works on Microsoft Teams Free. | [How do I make my Teams app work with Microsoft Teams free?](~/troubleshoot/faq#how-do-i-make-my-teams-app-work-with-microsoft-teams-free)|
 | 06/07/2018 | Pre-release information for the Microsoft Teams Private App Store has been added. | [Publish your Microsoft Teams app](~/publishing/apps-publish)|
 | 05/31/2018 | The Teams developer preview (ring 3.6) has been updated to include the ability to add bots and tabs to group chat. | [Features in the developer preview](~/resources/dev-preview/developer-preview-features), [Developer preview schema](~/resources/schema/manifest-schema-dev-preview), [Featured code samples](~/samples/code-samples#featured)|
