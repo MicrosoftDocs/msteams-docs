@@ -14,7 +14,7 @@ The developer preview includes the following new features:
 
 ## The tab configuration page is being expanded
 
-The content area for the tab [Configuration page](/concepts/tabs/tabs-configuration) will shortly be increased in size. It is important for you to update the tab configuration pages in your apps before this happens, otherwise your users may encounter formatting issues.
+The content area for the tab [Configuration page](~/concepts/tabs/tabs-configuration) will shortly be increased in size. It is important for you to update the tab configuration pages in your apps before this happens, otherwise your users may encounter formatting issues.
 
 <img width="450px" title="New sizes for configuration tabs" src="~/assets/images/tabs/config-dialog-Contoso2.png" />
 
@@ -28,7 +28,7 @@ Follow these guidelines to correctly format content in your tab configuration pa
   * aligning to the upper left hand corner
   * scaling the image to fit
 
-The tab should look something like this:
+The tab should look similar to this:
 
 <img width="450px" title="New configuration tab" src="~/assets/images/tabs/config-dialog-Contoso.png" />
 
@@ -107,5 +107,5 @@ The samples in this section have been updated to include this feature:
 * Custom defined app icons are currently not working in chat
 * If you upload an app with a bot to a chat in the *Developer Preview* version of Teams, and you switch back to the *Public* version, there might be some UI or behavior inconsistencies. If you run into any issues, please uninstall the app in *Developer Preview*
 * Bot menus do not currently work with the `groupchat` scope
-* Deeplinks into tabs in group chat do not work
+* Deep links into tabs in group chat do not work
 * There is a limit of 5 uploaded apps per chat
