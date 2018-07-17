@@ -2,7 +2,7 @@
 title: Publish your app to AppSource
 description: Describes the process of publishing your app to AppSource (formerly Office Store)
 keywords: teams publish store office publishing AppSource
-ms.date: 06/07/2018
+ms.date: 07/16/2018
 ---
 # Publish your Microsoft Teams app
 
@@ -12,11 +12,11 @@ ms.date: 06/07/2018
 Teams provides an in-app gallery for users to find or discover [high-quality Teams apps](~/resources/design/overview). To have your solution available in this gallery, you must either:
 
 * Publish your app through AppSource
-* Publish your app through the Microsoft Teams Private App Store
+* Publish your app through the Microsoft Teams Tenant App Catalog
 
-## Microsoft Teams Private App Store
+## Microsoft Teams Tenant App Catalog
 
-The Microsoft Teams Private App Store is currently a pre-release feature, and is available to a limited number of users. You can find more information in the article [Publish Apps to the Microsoft Teams Private App Store](https://docs.microsoft.com/en-us/microsoftteams/tenant-apps-catalog-teams). This feature can only be managed by Teams users with admin privileges.
+The Microsoft Teams Tenant App Catalog contains apps unique to your tenant and is completely under your tenant's control. You can find more information in the article [Publish Apps to the Microsoft Teams Tenant App Catalog](https://docs.microsoft.com/en-us/microsoftteams/tenant-apps-catalog-teams). This feature can only be managed by Teams users with Microsoft Office 365 tenant admin privileges.
 
 ## AppSource
 
