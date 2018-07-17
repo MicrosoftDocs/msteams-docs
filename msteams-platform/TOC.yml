@@ -106,6 +106,8 @@
       href: ./concepts/authentication/auth-silent-AAD
     - name: Configuring identity providers
       href: ./concepts/authentication/auth-configure
+    - name: Using the Azure Bot Service
+      href: ./concepts/authentication/auth-oauth-card
   - name: Activity Feed
     href: ./concepts/activity-feed
   - name: Connectors
