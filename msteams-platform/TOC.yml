@@ -94,8 +94,6 @@
   - name: Authentication
     href: ./concepts/authentication/authentication
     items:
-    - name: Using the OAuth card
-      href: ./concepts/authentication/auth-oauth-card
     - name: Authentication flow for tabs
       href: ./concepts/authentication/auth-flow-tab
     - name: Authentication flow for bots
@@ -108,6 +106,8 @@
       href: ./concepts/authentication/auth-silent-AAD
     - name: Configuring identity providers
       href: ./concepts/authentication/auth-configure
+    - name: Using the Azure Bot Service
+      href: ./concepts/authentication/auth-oauth-card
   - name: Activity Feed
     href: ./concepts/activity-feed
   - name: Connectors

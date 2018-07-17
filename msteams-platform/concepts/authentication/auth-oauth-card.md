@@ -8,7 +8,7 @@ ms.date: 07/02/2018
 
 ## Overview
 
-Before the introduction of the Azure Bot Service’s OAuthCard, it was complicated to implement authentication in a bot. It was a full-stack challenge that involved building a web experience, integrating with external OAuth providers, token management, and handling the right server-to-server API calls to ensure the authentication flow was completed in a secure manner. Users often ended up with clunky experiences requiring the entry of “magic numbers”.
+Before the introduction of the Azure Bot Service’s OAuthCard, it was complicated to implement authentication in a bot. It was a full-stack challenge that involved building a web experience, integrating with external OAuth providers, token management, and handling the right server-to-server API calls to ensure the authentication flow was completed securely. Users often ended up with clunky experiences requiring the entry of “magic numbers”.
 
 With Azure Bot Service’s OAuthCard, it is easier for your Teams bot to sign in your users and access external data providers. Whether you’ve already implemented auth and you want to switch over to something simpler, or if you are looking to add authentication to your bot service for the first time, the OAuthCard can make it easier.
 
@@ -18,15 +18,15 @@ Other topics in [Authentication](~/concepts/authentication/authentication) descr
 
 Full documentation using the OAuthCard is available in the topic: [Add authentication to your bot via Azure Bot Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-tutorial-authentication?view=azure-bot-service-3.0). Note that this topic is in the Azure Bot Framework documentation set, and is not specific to Teams.
 
-Instructions on how to use the OAuthCard in Teams are provided in the following sections.
+The following sections tell how to use the OAuthCard in Teams.
 
 ## Main benefits for Teams developers
 
 The OAuthCard helps with authentication in the following ways:
 
-* Provides an out-of-box web-based authentication flow: you no longer have to write and host a web page to directs to external login experiences, or provide a redirect.
+* Provides an out-of-box web-based authentication flow: you no longer have to write and host a web page to direct to external login experiences or provide a redirect.
 * Is seamless for end users: complete the full sign in experience right within Teams.
-* Includes easy token management: you no longer have to implement your own token storage system – instead, the Bot Service takes care of token caching and provides a secure mechanism for fetching those tokens.
+* Includes easy token management: you no longer have to implement a token storage system – instead, the Bot Service takes care of token caching and provides a secure mechanism for fetching those tokens.
 * Is supported by complete SDKs: easy to integrate and consume from your bot service.
 * Has out-of-box support for many popular OAuth providers, such as AAD/MSA, Facebook, and Google.
 
@@ -40,9 +40,9 @@ You’ll first need to configure your Azure bot service to set up external authe
 
 To enable authentication using the Azure Bot Service, you need to make these additions to your code:
 
-1. Include token.botframework.com in the `validDomains` section of your app manifest. This is needed because Teams will embed the Bot Service’s login page.
-2. Whenever your bot needs to access authenticated resources, fetch the token from the Bot Service. If no token is available, send a message with an OAuthCard to the user requesting them to log into the external service.
-3. Handle the login completion activity – this ensures that the authentication request and the token are associated with the user currently interacting with your bot.
+1. Include token.botframework.com in the `validDomains` section of your app manifest because Teams will embed the Bot Service’s login page.
+2. Fetch the token from the Bot Service whenever your bot needs to access authenticated resources. If no token is available, send a message with an OAuthCard to the user requesting them to log into the external service.
+3. Handle the login completion activity. This ensures that the authentication request and the token are associated with the user currently interacting with your bot.
 4. Retrieve the token whenever your bot needs to perform authenticated actions, such as calling external REST APIs.
 
 In your dialog code, you’ll need to add this snippet (C#), which checks for an existing access token:
