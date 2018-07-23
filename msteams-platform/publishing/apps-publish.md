@@ -103,6 +103,15 @@ If your app is in the Microsoft Teams store, you can generate a link for your we
 The format is:  `https://teams.microsoft.com/l/app/<appId>` where appID is the GUID they declare in the submitted manifest.
 Example: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd` is the link to install Trello.
 
+## Updating your app
+
+When a user installs your application one of the first things they do is grant the app permissions to access the services and information that the app needs to do its job.  When you republish your app, this can also trigger this behavior, particularly if you have added new functionality.
+
+The re-consent behavior on a new version of your app is triggered by one or both of these changes:
+
+* Adding a new capability to an app such as adding a bot to an tab only app
+* Changing the permissions array in the manifest
+
 ## Troubleshooting publishing issues
 
 See the [Issues with packaging and uploading](~/troubleshoot/troubleshoot#issues-with-packaging-and-uploading) topic for more information.
