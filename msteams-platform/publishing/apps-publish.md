@@ -2,7 +2,7 @@
 title: Publish your app to AppSource
 description: Describes the process of publishing your app to AppSource (formerly Office Store)
 keywords: teams publish store office publishing AppSource
-ms.date: 07/16/2018
+ms.date: 07/23/2018
 ---
 # Publish your Microsoft Teams app
 
@@ -105,7 +105,7 @@ Example: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd
 
 ## Updating your app
 
-When a user installs your application one of the first things they do is grant the app permissions to access the services and information that the app needs to do its job.  When you republish your app, this can also trigger this behavior, particularly if you have added new functionality.
+When a user installs your application one of the first things they do is consent to give the app permission to access the services and information that the app needs to do its job. When you republish your app, that can also trigger this consent behavior, particularly if you have added new functionality.
 
 The re-consent behavior on a new version of your app is triggered by one or both of these changes:
 
