@@ -105,9 +105,7 @@ Example: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd
 
 ## Updating your app
 
-When a user installs your application one of the first things they do is consent to give the app permission to access the services and information that the app needs to do its job. When you republish your app, that can also trigger this consent behavior, particularly if you have added new functionality.
-
-The re-consent behavior on a new version of your app is triggered by one or both of these changes:
+When a user installs your application one of the first things they do is consent to give the app permission to access the services and information that the app needs to do its job. When you update your app, that can re-trigger this consent behavior, particularly if you have made one or more of the following changes:
 
 * Adding a new capability to an app such as adding a bot to an tab only app
 * Changing the permissions array in the manifest
