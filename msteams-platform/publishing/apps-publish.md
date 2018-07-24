@@ -2,7 +2,7 @@
 title: Publish your app to AppSource
 description: Describes the process of publishing your app to AppSource (formerly Office Store)
 keywords: teams publish store office publishing AppSource
-ms.date: 07/16/2018
+ms.date: 07/23/2018
 ---
 # Publish your Microsoft Teams app
 
@@ -102,6 +102,13 @@ Failures are explained, with references to the specific policy violations. All f
 If your app is in the Microsoft Teams store, you can generate a link for your website that launches Teams and shows a consent and installation dialog for users to add the app.
 The format is:  `https://teams.microsoft.com/l/app/<appId>` where appID is the GUID they declare in the submitted manifest.
 Example: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd` is the link to install Trello.
+
+## Updating your app
+
+When a user installs your application one of the first things they do is consent to give the app permission to access the services and information that the app needs to do its job. When you update your app, that can re-trigger this consent behavior, particularly if you have made one or more of the following changes:
+
+* Adding a new capability to an app such as adding a bot to an tab only app
+* Changing the permissions array in the manifest
 
 ## Troubleshooting publishing issues
 

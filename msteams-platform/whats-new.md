@@ -2,7 +2,7 @@
 title: What's new
 description: Describes all the new developer features in Microsoft Teams
 keywords: teams what's new latest
-ms.date: 07/16/2018
+ms.date: 07/23/2018
 ---
 # What's new for developers in Microsoft Teams
 
@@ -12,6 +12,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | - | - | - |
+| 07/23/2018 | Information about app re-certification has been added to the Publishing section. | [Updating your app](~/publishing/apps-publish#updating-your-app), [Manifest permissions](~/resources/schema/manifest-schema#permissions)|
 | 07/16/2018 | In developer preview, more space has been allocated to the tab configuration page. | [The tab configuration page is significantly taller](~/resources/dev-preview/developer-preview-features#the-tab-configuration-page-is-significantly-taller)|
 | 07/12/2018 | Information on how to ensure your Teams app works on Microsoft Teams Free. | [How do I make my Teams app work with Microsoft Teams free?](~/troubleshoot/faq#how-do-i-make-my-teams-app-work-with-microsoft-teams-free)|
 | 06/07/2018 | Pre-release information for the Microsoft Teams Tenant App Catalog has been added. | [Publish your Microsoft Teams app](~/publishing/apps-publish)|
