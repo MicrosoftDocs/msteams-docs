@@ -54,6 +54,7 @@
             feedback_system": {
                 "docs-ref-autogen/**/*": "None",
                 "resources/status/platform-status": "None"
+            }
         },
         "template": [],
         "dest": "msteams-platform"
