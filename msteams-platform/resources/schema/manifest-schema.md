@@ -2,7 +2,7 @@
 title: Manifest schema reference
 description: Describes the schema supported by the manifest for Microsoft Teams
 keywords: teams manifest schema
-ms.date: 12/10/2017
+ms.date: 07/23/2018
 ---
 # Reference: Manifest schema for Microsoft Teams
 
@@ -338,6 +338,8 @@ An array of `string` which specifies which permissions the app requests, which l
 
 * `identity` &emsp; Requires user identity information
 * `messageTeamMembers` &emsp; Requires permission to send direct messages to team members
+
+Changing these permissions when updating your app will cause your users to repeat the consent process the first time they run the updated app. See [Updating your app](~/publishing/apps-publish#updating-your-app) for more information.
 
 ## validDomains
 
