@@ -51,7 +51,7 @@
             "titleSuffix": "Teams"
         },
         "fileMetadata": {
-            feedback_system": {
+            "feedback_system": {
                 "docs-ref-autogen/**/*": "None",
                 "resources/status/platform-status": "None"
             }
