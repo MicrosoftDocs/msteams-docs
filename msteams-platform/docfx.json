@@ -51,7 +51,7 @@
         "fileMetadata": {
             "feedback_system": {
                 "docs-ref-autogen/**/*": "None",
-                "resources/status/platform-status": "None"
+                "resources/status/**/*": "None"
             }
         },
         "template": [],
