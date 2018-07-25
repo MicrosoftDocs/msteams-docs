@@ -42,10 +42,18 @@
             "ms.suite": "office365",
             "ms.prod": "msteams",
             "searchScope": ["Teams"],
-            "ms.date": "10/05/2017",
+            "feedback_system": "GitHub",
+            "feedback_github_repo": "MicrosoftDocs/msteams-docs",
+            "feedback_product_url": "https://microsoftteams.uservoice.com/forums/555103-public",
+            "ms.date": "07/24/2018",
             "titleSuffix": "Teams"
         },
-        "fileMetadata": {},
+        "fileMetadata": {
+            "feedback_system": {
+                "docs-ref-autogen/**/*": "None",
+                "resources/status/**/*": "None"
+            }
+        },
         "template": [],
         "dest": "msteams-platform"
     }
