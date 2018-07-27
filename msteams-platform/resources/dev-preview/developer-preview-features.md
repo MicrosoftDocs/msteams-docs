@@ -14,7 +14,7 @@ The developer preview includes the following new features:
 In developer preview, you can now use more than one command in a messaging extension.  You are now limited to 10 commands.  This changes the `commands` array in `composeExtensions` to support more than one command.
 
 The manifest version for this feature is:
-`"manifestVersion": "1.4"`
+`"manifestVersion": "1.4"`.
 
 ## You can send and receive files through your bot
 
