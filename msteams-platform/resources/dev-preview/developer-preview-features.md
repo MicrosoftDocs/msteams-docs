@@ -2,15 +2,27 @@
 title: Features in the Public Developer Preview
 description: Describes the features in the Public Developer Preview of Microsoft Teams
 keywords: teams preview developer features
-ms.date: 07/16/2018
+ms.date: 07/27/2018
 ---
 # Features in the Public Developer Preview for Microsoft Teams
 
+When these features are out of developer preview this content will be merged into the live doc set.
 The developer preview includes the following new features:
 
-* [Sending and receiving files through your bot](~/concepts/bots/bots-files)
-* Adaptive Cards: [Adaptive card](~/concepts/cards/cards-reference#adaptive-card-supported-in-developer-preview-only), [Adaptive card actions in Teams](~/concepts/cards/cards-actions#adaptive-card-actions-supported-in-developer-preview-only).
-* Tabs and bots in chats: See the following section for details on this feature.  When the feature is out of developer preview this content will be merged into the live doc set.
+## Messaging extensions have been extended to support more than one command
+
+In developer preview, you can now use more than one command in a messaging extension.  You are now limited to 10 commands.  This changes the `commands` array in `composeExtensions` to support more than one command.
+
+The manifest version for this feature is:
+`"manifestVersion": "1.4"`
+
+## You can send and receive files through your bot
+
+See [Sending and receiving files through your bot](~/concepts/bots/bots-files) for more details.
+
+## Adaptive Cards
+
+See Adaptive Cards: [Adaptive card](~/concepts/cards/cards-reference#adaptive-card-supported-in-developer-preview-only), [Adaptive card actions in Teams](~/concepts/cards/cards-actions#adaptive-card-actions-supported-in-developer-preview-only) for more details.
 
 ## The tab configuration page is significantly taller
 
