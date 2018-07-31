@@ -45,7 +45,7 @@ In general, your bot must respond to every message, especially common questions 
 
 ### Say hello
 
-Leverage the [bot event messages](~/concepts/bots/bots-notifications) to ensure that your bot introduces itself when added to a team or first accessed in a one-on-one chat. This is an opportunity to tell the user what value you bring to their workday.
+Leverage the [bot event messages](~/concepts/bots/bots-notifications) to ensure that your bot introduces itself when added to a team or first accessed in a personal chat. This is an opportunity to tell the user what value you bring to their workday.
 
 ## Designing a great messaging extension
 

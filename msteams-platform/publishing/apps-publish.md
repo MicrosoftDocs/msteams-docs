@@ -2,9 +2,9 @@
 title: Publish your app to AppSource
 description: Describes the process of publishing your app to AppSource (formerly Office Store)
 keywords: teams publish store office publishing AppSource
-ms.date: 05/02/2018
+ms.date: 07/23/2018
 ---
-# Publish your Microsoft Teams app to AppSource
+# Publish your Microsoft Teams app
 
 After you have built your app in [Microsoft Teams App Studio](https://docs.microsoft.com/en-us/microsoftteams/platform/get-started/get-started-app-studio), you can share it with your team by uploading it to one of your Teams channels &mdash; as long as you have the appropriate rights. You can also take the next step and share it with the world. 
 
@@ -20,10 +20,20 @@ Teams provides an in-app gallery for users to find or discover [high-quality Tea
 > [!IMPORTANT]
 > **Your Microsoft Teams app *must* use the [latest schema](~/resources/schema/manifest-schema) and follow [current packaging guidelines](~/concepts/apps/apps-package).**
 
+Teams provides an in-app gallery for users to find or discover [high-quality Teams apps](~/resources/design/overview). To have your solution available in this gallery, you must either:
+
+* Publish your app through AppSource
+* Publish your app through the Microsoft Teams Tenant App Catalog
+
+## Microsoft Teams Tenant App Catalog
+
+The Microsoft Teams Tenant App Catalog contains apps unique to your tenant and is completely under your tenant's control. You can find more information in the article [Publish Apps to the Microsoft Teams Tenant App Catalog](https://docs.microsoft.com/en-us/microsoftteams/tenant-apps-catalog-teams). This feature can only be managed by Teams users with Microsoft Office 365 tenant admin privileges.
+
+## AppSource
+
 AppSource (formerly known as Office Store) provides a convenient location for you to distribute your Microsoft Teams app, as well as other Office 365 extensibility types such as Office add-ins and SharePoint add-ins. To include your solution in AppSource, you submit it to the Seller Dashboard. You need to create an individual or company account if you have not already done so for other Windows apps or Office extensibility types.
 
-> [!NOTE]
-> By developing and submitting a Microsoft Teams app, you are subject to the Bot Developer Framework [Terms of Use](https://aka.ms/bf-terms), [Privacy Policy](https://aka.ms/bf-privacy), and [Code of Conduct](https://aka.ms/bf-conduct) for bot, tab, and messaging extension functionality within your app. If your app contains Office 365 Connector functionality, separate terms may also apply as part of your Connector Registration on the [Connectors Developer Dashboard](https://aka.ms/publishconnector).
+By developing and submitting a Microsoft Teams app, you are subject to the Bot Developer Framework [Terms of Use](https://aka.ms/bf-terms), [Privacy Policy](https://aka.ms/bf-privacy), and [Code of Conduct](https://aka.ms/bf-conduct) for bot, tab, and messaging extension functionality within your app. If your app contains Office 365 Connector functionality, separate terms may also apply as part of your Connector Registration on the [Connectors Developer Dashboard](https://aka.ms/publishconnector).
 
 ## Register as an app developer
 
@@ -31,14 +41,11 @@ If you have already registered in the Microsoft Store ecosystem, either by distr
 
 Account management in the Microsoft Store ecosystem relies on a [Microsoft account](https://account.microsoft.com/account). This identity will be the main administrator/owner of your AppSource experience. For more information, please review [Opening a developer account](https://docs.microsoft.com/en-us/windows/uwp/publish/opening-a-developer-account) and the [Developer program FAQ](https://developer.microsoft.com/en-us/store/register/faq).
 
-> [!TIP]
-> We recommend you create a Microsoft account specifically for your developer/AppSource account. Keep this account and password confidential, and share it only with your release team.
->
-> [!NOTE]
-> Although you might have leveraged the Windows Store Azure Active Directory (Azure AD) support for Windows Store account management, the AppSource Seller Dashboard requires you to use a Microsoft account, not an Azure AD account.
->
-> [!IMPORTANT]
-> **If you've developed with a trial developer Office 365 account, do not use this account for your AppSource identity.** Create a separate Microsoft account instead.
+## Account suggestions
+
+* Create a Microsoft account specifically for your developer/AppSource account. Keep this account and password confidential, and share it only with your release team.
+* Use a Microsoft account, not an Azure AD account. Although you might have leveraged the Windows Store Azure Active Directory (Azure AD) support for Windows Store account management, the AppSource Seller Dashboard requires you to use a Microsoft account, not an Azure AD account.
+* If you've developed with a trial developer Office 365 account, do not use this account for your AppSource identity. Create a separate Microsoft account instead.
 
 ## Register in the Seller Dashboard to submit to AppSource
 
@@ -94,7 +101,7 @@ Failures are explained, with references to the specific policy violations. All f
 * If your product requires an account on your service or another service, list that in the description.
 * If your product requires additional purchases to function properly, list that in the description.
 * For your Tab configuration page, be sure to provide "About" links and proper guidance—this page is the first thing the user sees, so ensure that a new user understands what to do.
-* Be sure that your bot provides appropriate responses when mentioned (@*botname*) in a channel and in 1:1 conversations as needed. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](~/resources/schema/manifest-schema#bots).)
+* Be sure that your bot provides appropriate responses when mentioned (@*botname*) in a channel and in personal conversations as needed. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](~/resources/schema/manifest-schema#bots).)
 * Provide the requisite Terms and Privacy policy links in the manifest and the Seller Dashboard, and verify that they properly resolve to the correct documentation. For bots, you must provide this same information in the Submission section of the Bot Framework registration page.
 * Ensure that metadata in the manifest roughly matches metadata in the Seller Dashboard (and, for bots, in the Bot Framework registration). Note that your Seller Dashboard entry should contain a more detailed and formatted description for use in the AppSource product page.
 * Check your manifest for completeness and accuracy. Then check it again.
@@ -106,3 +113,14 @@ Failures are explained, with references to the specific policy violations. All f
 If your app is in the Microsoft Teams store, you can generate a link for your website that launches Teams and shows a consent and installation dialog for users to add the app.
 The format is:  `https://teams.microsoft.com/l/app/<appId>` where appID is the GUID they declare in the submitted manifest.
 Example: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd` is the link to install Trello.
+
+## Updating your app
+
+When a user installs your application one of the first things they do is consent to give the app permission to access the services and information that the app needs to do its job. When you update your app, that can re-trigger this consent behavior, particularly if you have made one or more of the following changes:
+
+* Adding a new capability to an app such as adding a bot to an tab only app
+* Changing the permissions array in the manifest
+
+## Troubleshooting publishing issues
+
+See the [Issues with packaging and uploading](~/troubleshoot/troubleshoot#issues-with-packaging-and-uploading) topic for more information.

@@ -11,20 +11,11 @@ Tabs in Microsoft Teams allow you to display rich interactive web content. You c
 ![Example of a tab showing data, alongside a conversation about the tab data](~/assets/images/tab_example.png)
 
 ## Teams scopes for tabs
-Teams support three kinds of conversations (called scopes in the [Manifest](~/resources/schema/manifest-schema)).
 
-* `teams` Also called channel conversations
-* `personal` Also called 1:1 conversations or chats
-* `group` Used for group and meeting conversations
+Teams support several scopes for tabs:
 
-Microsoft Teams supports tabs in either:
-
-* Teams - (channel) Tabs in channels allow teams to interact with your shared experience. Currently, all tabs in channels are *configurable tabs*&mdash;a user configures the content of your tab experience when the tab is first added to a channel.
-* Personal - (1:1 conversations or chats) Tabs in the personal scope allow users to interact with your experience privately. Currently, all such tabs are *static tabs*&mdash;content that is relevant to individual users.
-
-Not supported:
-
-* Group - Tabs in group conversations are currently not supported.
+* Teams (`team` scope) - (channel) Tabs in channels allow teams to interact with your shared experience. Currently, all tabs in channels are *configurable tabs*&mdash;a user configures the content of your tab experience when the tab is first added to a channel.
+* Personal (`personal` scope) - Tabs in the personal scope allow users to interact with your experience privately. Currently, all such tabs are *static tabs*&mdash;content that is relevant to individual users.
 
 ## What you need to know: Configurable tabs
 
@@ -51,8 +42,12 @@ Pages loaded inside of a custom tab need to:
 
 * Allow themselves to be [iframed](~/concepts/tabs/tabs-content) by Teams (via the X-Frame-Options and/or Content-Security-Policy headers). A lot of standard webpages don't allow themselves to be iframed which is why there is the option for users to view Website tab instances inside of a webview within the desktop client. Other tabs don't get this special treatment.
 * Handle [authentication](~/concepts/authentication/auth-flow-tab) differently (either via a popup or calling us to fetch tokens). Most websites simply redirect to a login provider which typically dead ends tabs which are hosted inside of an iframe. That's because login pages typically don't render in iframes to prevent click-jacking.
-* Handle [cross-domain](~/resources/general/cross-domain) navigation differently since the Teams client needs to validate the origin against a static validDomains list in the app manifest when loading or communicating with the tab.
+* Handle [cross-domain](~/concepts/tabs/cross-domain) navigation differently since the Teams client needs to validate the origin against a static validDomains list in the app manifest when loading or communicating with the tab.
 * Style themselves based on the Teams client's [theme](~/resources/design/components/themes).
 * Make calls to the [Teams client SDK](https://docs.microsoft.com/en-us/javascript/api/overview/msteams-client) (microsoftTeams.initialize()) which gives Teams a communication channel with the hosted page and more visibility into its operations.
 
 For more details see [Requirements for tab pages in Microsoft Teams](~/resources/general/requirements).
+
+## Troubleshooting tabs
+
+See the [Troubleshooting Tabs](~/troubleshoot/troubleshoot#troubleshooting-tabs) topic for more information.

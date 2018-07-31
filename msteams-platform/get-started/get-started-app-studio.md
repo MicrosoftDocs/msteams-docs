@@ -1,18 +1,18 @@
 ---
-title: Get started with Teams App Studio
-description: Get started building great apps in Microsoft Teams using Teams App Studio
+title: Get started with App Studio for Microsoft Teams
+description: Get started building great apps in Microsoft Teams using App Studio
 keywords: getting started app studio teams
 ms.date: 04/11/2018
 ---
-# Quickly develop apps with Teams App Studio (Preview)
+# Quickly develop apps with App Studio for Microsoft Teams
 
 Microsoft Teams is a chat-based workspace in Office 365 that integrates with the apps and services that people use to get work done together.
 
-Microsoft Teams App Studio makes it easy to start creating or integrating your own service, whether you develop custom apps for your enterprise or SaaS applications for teams around the world.
+App Studio makes it easy to start creating or integrating your own service, whether you develop custom apps for your enterprise or SaaS applications for teams around the world.
 
 ## Apps
 
-Teams App Studio was created to simplify and streamline the process of creating real apps. It is much faster than the manual process described in [Get started with Node.js](~/get-started/get-started-nodejs): Teams App Studio is now the recommended way to develop Teams apps. The getting started documentation will be updated at a later date.
+App Studio was created to simplify and streamline the process of creating real apps. It is much faster than the manual process described in [Get started with Node.js](~/get-started/get-started-nodejs): App Studio is now the recommended way to develop Teams apps. The getting started documentation will be updated at a later date.
 
 Apps for Teams are made up of two parts:
 
@@ -21,27 +21,27 @@ Apps for Teams are made up of two parts:
 
 The most significant part of the application package is the app manifest.
 
-Teams App Studio streamlines the creation of the manifest for your app, and also provides some useful tools like the Card Editor and a React control library. Writing and hosting the code is still up to you.
+App Studio streamlines the creation of the manifest for your app, and also provides some useful tools like the Card Editor and a React control library. Writing and hosting the code is still up to you.
 
 ## Installing App Studio
 
-Teams App Studio is a Teams app which can be found in the Teams store. See the Store Icon in the left-hand ribbon of Teams, or follow this link for direct download: [Teams App Studio](https://aka.ms/InstallTeamsAppStudio).
+App Studio is a Teams app which can be found in the Teams store. See the Store Icon in the left-hand ribbon of Teams, or follow this link for direct download: [App Studio](https://aka.ms/InstallTeamsAppStudio).
 
 ![Store icon](~/assets/images/get-started/storeicon.png)
 
-In the store, search for Teams App Studio.
+In the store, search for App Studio.
 
 ![Store entry for app studio](~/assets/images/get-started/storeteamsappstudio(preview).png)
 
-Select the Teams App Studio tile to open the app install page:
+Select the App Studio tile to open the app install page:
 
 ![Configure app studio](~/assets/images/get-started/teamsappstudioconfiguration.png)
 
 Select *install*.
 
-![Teams app studio](~/assets/images/get-started/teamsappstudio(preview).png)
+![app studio](~/assets/images/get-started/teamsappstudio(preview).png)
 
-Once you are in Teams App Studio, click on the *Manifest editor* tab where you can either import an existing app or create a new app.
+Once you are in App Studio, click on the *Manifest editor* tab where you can either import an existing app or create a new app.
 
 ## App Studio Features
 
@@ -71,7 +71,7 @@ The capabilities section of the Manifest Editor is where the app's capabilities 
 
   You must also provide any additional domains that the tab expects to load from or link to.
 
-* **Personal Tabs.** This section lets you define a set of tabs that are presented by default in the one-on-one app experience (i.e. the experience a user has with your app outside the context of a team or channel). In this section, provide the tab name, a unique identifier, the URL that points to the UI to be displayed in Teams, and optionally, the URL to use if a user opts to view the tab in a browser. As with Teams tabs, provide any additional domains from which the tab expects to load from or link to.
+* **Personal Tabs.** This section lets you define a set of tabs that are presented by default in the personal app experience (i.e. the experience a user has with your app outside the context of a team or channel). In this section, provide the tab name, a unique identifier, the URL that points to the UI to be displayed in Teams, and optionally, the URL to use if a user opts to view the tab in a browser. As with Teams tabs, provide any additional domains from which the tab expects to load from or link to.
 
 ##### Bots
 

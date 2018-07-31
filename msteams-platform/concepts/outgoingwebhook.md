@@ -58,7 +58,7 @@ Users must **@mention** the outgoing webhook for it to receive messages.
     "timestamp": "2017-02-01T21:10:07.437Z",
     "localTimestamp": "2017-02-01T14:10:07.437-07:00",
     "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
-    "channelId": "msteams", 
+    "channelId": "msteams",
     "from": {
         "id": "29:1XJKJMvc5GBtc2JwZq0oj8tHZmzrQgFmB39ATiQWA85gQtHieVkHilBZ9XHoq9j7Zaqt7CZ-NJWi7me2kHTL3Bw",
         "name": "Tim Jones"
@@ -67,7 +67,7 @@ Users must **@mention** the outgoing webhook for it to receive messages.
         "id": "19:253b1f341670408fb6fe51050b6e5ceb@thread.skype;messageid=1485983194839"
     },
     "recipient": {
-        "id": "null", 
+        "id": "null",
         "name": "null"
     },
     "textFormat": "plain",

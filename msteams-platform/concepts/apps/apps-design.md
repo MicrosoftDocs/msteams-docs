@@ -10,7 +10,7 @@ You can extend Microsoft Teams by developing an app that provides content and se
 
 For example, your users might want personal views of a planning app just a click away. Or they might need to look up a customer-support ticket and add it directly to a conversation. Or perhaps receive real-time notifications about events in a business system. Or get assistance in scheduling an event for a group, translate a message into another language, or track incoming social-media messages and respond directly from Teams.
 
-Your app can provide content and services in channels, which enable groups of people to work collaboratively, or in one-on-one or group chats&mdash;or both. (The term we use for services in channels is *team scope*; for chats, *personal scope*.)
+Your app can provide content and services in channels, which enable groups of people to work collaboratively, or in personal or group chats&mdash;or both. (The term we use for services in channels is *team scope*; for chats, *personal scope*.)
 
 ## Map your scenario to Teams capabilities
 

@@ -103,7 +103,7 @@ Use `microsoftTeams.settings.setSettings({entityId, contentUrl, suggestedTabName
   * You can also use it to help obtain context when [displaying your content page](~/concepts/tabs/tabs-content) or when [updating or removing a tab](~/concepts/tabs/tabs-update-remove).
   * You can use the `contentUrl` as the `entityId` if you wish.
 * The `contentUrl` is a required field that specifies the URL of the content Microsoft Teams should host in the tab.
-  * Be sure you have added the `contentUrl` domain to the `validDomains` element in the tab manifest file. For more information, see [Microsoft Teams tab schema](~/resources/schema/manifest-schema) and [Redirecting across domains within a Microsoft Teams tab](~/resources/general/cross-domain).
+  * Be sure you have added the `contentUrl` domain to the `validDomains` element in the tab manifest file. For more information, see [Microsoft Teams tab schema](~/resources/schema/manifest-schema) and [Redirecting across domains within a Microsoft Teams tab](~/concepts/tabs/cross-domain).
 *  The other parameters further customize how your tab works in Microsoft Teams:
   * The optional `suggestedTabName` parameter sets the initial tab name. Users can rename the tab. The default value is the name specified in the manifest.
   * The optional `websiteUrl` parameter sets where the user is taken if they choose the **Go to website** button. Typically, this is a link to the same content as displayed on the tab, but within your main web app with its regular chrome and navigation.

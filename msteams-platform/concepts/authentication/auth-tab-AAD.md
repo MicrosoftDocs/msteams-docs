@@ -2,7 +2,7 @@
 title: Authentication for tabs using Azure Active Directory
 description: Describes authentication in Teams and how to use it in tabs
 keywords: teams authentication tabs AAD
-ms.date: 03/01/2018
+ms.date: 06/26/2018
 ---
 # Authenticate a user in a Microsoft Teams tab
 
@@ -69,9 +69,9 @@ microsoftTeams.getContext(function (context) {
         redirect_uri: window.location.origin + "/tab-auth/simple-end",
         nonce: _guid(),
         state: state,
-        // The context object is populated by Teams; the upn attribute
+        // The context object is populated by Teams; the loginHint attribute
          // is used as hinting information
-        login_hint: context.upn,
+        login_hint: context.loginHint,
     };
 
     let authorizeEndpoint = "https://login.microsoftonline.com/" + context.tid + "/oauth2/authorize?" + toQueryString(queryParams);
@@ -83,7 +83,7 @@ After the user completes authorization, the user is redirected to the callback p
 
 ### Notes
 
-* See [get user context information](~/concepts/tabs/tabs-context) for help building authentication requests and URLs. For example, you can use the user's name (upn) as the `login_hint` value for Azure AD sign-in, which means the user might need to type less. Remember that you should not use this context directly as proof of identity since an attacker could load your page in a malicious browser and provide it with any information they want.
+* See [get user context information](~/concepts/tabs/tabs-context) for help building authentication requests and URLs. For example, you can use the user's login name as the `login_hint` value for Azure AD sign-in, which means the user might need to type less. Remember that you should not use this context directly as proof of identity since an attacker could load your page in a malicious browser and provide it with any information they want.
 * Although the tab context provides useful information regarding the user, don't use this information to authenticate the user whether you get it as URL parameters to your tab content URL or by calling the `microsoftTeams.getContext()` function in the Microsoft Teams client SDK. A malicious actor could invoke your tab content URL with its own parameters, and a web page impersonating Microsoft Teams could load your tab content URL in an iframe and return its own data to the `getContext()` function. You should treat the identity-related information in the tab context simply as hints and validate them before use.
 * The `state` parameter is used to confirm that the service calling the callback URI is the service you called. If the `state` parameter in the callback does not match the parameter you sent during the call the return call is not verified and should be terminated.
 * The `microsoftTeams.navigateCrossDomain()` function is not available in the context of the identity provider's popup. As a result, it is not necessary to include the identity provider's domain in the `validDomains` list in the app's manifest.json file.
@@ -145,5 +145,5 @@ For more information on using AAD authentication for bots, see [Authentication f
 
 For sample code showing the tab authentication process using AAD see:
 
-* [Microsoft Teams tab authentication sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
-* [Microsoft Teams tab authentication sample (C#)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
+* [Microsoft Teams tab authentication sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
+* [Microsoft Teams tab authentication sample (C#)](https://github.com/OfficeDev/microsoft-teams-sample-auth-csharp)

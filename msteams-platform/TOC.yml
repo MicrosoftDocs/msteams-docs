@@ -8,7 +8,7 @@
   items: 
   - name:  Prepare your Office 365 tenant
     href: ./get-started/get-started-tenant
-  - name: Use Teams App Studio
+  - name: Use App Studio for Microsoft Teams
     href: ./get-started/get-started-app-studio
     items:
     - name: App Studio Controls
@@ -48,6 +48,8 @@
       href: ./concepts/tabs/tabs-context
     - name: Requirements for tabs
       href: ./concepts/tabs/tabs-requirements
+    - name: Cross-domain redirects
+      href: ./concepts/tabs/cross-domain      
   - name: Bots
     href: ./concepts/bots/bots-overview
     items:
@@ -56,7 +58,7 @@
     - name: Conversations
       href: ./concepts/bots/bot-conversations/bots-conversations
       items:
-      - name: 1-on-1 conversations with bots
+      - name: Personal conversations with bots
         href: ./concepts/bots/bot-conversations/bots-conv-personal
       - name: Channel conversations with bots
         href: ./concepts/bots/bot-conversations/bots-conv-channel
@@ -104,6 +106,8 @@
       href: ./concepts/authentication/auth-silent-AAD
     - name: Configuring identity providers
       href: ./concepts/authentication/auth-configure
+    - name: Using the Azure Bot Service
+      href: ./concepts/authentication/auth-oauth-card
   - name: Activity Feed
     href: ./concepts/activity-feed
   - name: Connectors
@@ -124,7 +128,7 @@
 - name: Scenarios
   href: ./scenarios/scenarios
   items:
-  - name: 1-on-1 conversations with bots
+  - name: Personal conversations with bots
     href: ./concepts/bots/bot-conversations/bots-conv-personal
   - name: Channel conversations with bots
     href: ./concepts/bots/bot-conversations/bots-conv-channel
@@ -136,8 +140,6 @@
     items:
     - name: Supported media formats
       href: ./resources/general/media-formats
-    - name: Cross-domain redirects
-      href: ./resources/general/cross-domain
     - name: Debugging
       href: ./resources/general/debug
     - name: Rate limiting
@@ -158,6 +160,8 @@
         href: ./resources/design/framework/basics
       - name: Apps
         href: ./resources/design/framework/apps
+      - name: Personal apps
+        href: ./resources/design/framework/personal-apps
       - name: Activity feed
         href: ./resources/design/framework/activity-feed
       - name: Search
@@ -170,7 +174,7 @@
         href: ./resources/design/framework/bots
       - name: Cards
         href: ./resources/design/framework/cards
-        name: Command box
+      - name: Command box
         href: ./resources/design/framework/command-box
     - name: Components
       items:
@@ -190,6 +194,8 @@
       href: ./resources/design/resources
   - name: Manifest schema
     href: ./resources/schema/manifest-schema
+  - name: Developer preview manifest schema
+    href: ./resources/schema/manifest-schema-dev-preview
   - name: Microsoft Graph APIs
     href: ./resources/microsoft-graph
 - name: Troubleshooting

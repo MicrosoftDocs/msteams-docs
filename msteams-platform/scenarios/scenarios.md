@@ -13,7 +13,7 @@ Writing an app usually involves working with more than one feature. Your app may
 |   |   |
 | - | - |
 | [**Interact in a team channel with a Microsoft Teams bot**](~/concepts/bots/bot-conversations/bots-conv-channel) | Let users bring bots into their channel conversations. |
-| [**Interact one-on-one (1:1) with a Microsoft Teams bot**](~/concepts/bots/bot-conversations/bots-conv-personal) | Allow users to engage in direct conversations with bots. |
+| [**Have a personal chat with a Microsoft Teams bot**](~/concepts/bots/bot-conversations/bots-conv-personal) | Allow users to engage in direct conversations with bots. |
 
 ---
 

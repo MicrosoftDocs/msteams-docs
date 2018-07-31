@@ -11,7 +11,7 @@ To test your app experience within Microsoft Teams, you need to upload your app 
 > [!NOTE]
 > Uploading an updated package for an existing app with a bot might not show tab changes when viewed through the Conversations window. It's better to access it via the Apps fly-out, or test on a clean test environment.
 
-For bots designed only for 1:1 contexts, see [Adding a bot for 1:1 chat only](~/concepts/bots/bots-test#adding-a-bot-for-11-chat-only) for an alternate way to access for testing purposes.
+For bots designed only for personal conversations between a bot and a single user, see [Adding a bot for personal chat only](~/concepts/bots/bots-test#adding-a-bot-for-personal-chat-only) for an alternate way to access for testing purposes.
 
 ## Create your upload package
 
@@ -19,12 +19,33 @@ For development as well as AppSource (formerly Office Store) submission you must
 
 To create an upload package, see [Create the package for your Microsoft Teams app](~/concepts/apps/apps-package).
 
-## Load your package into a team
+## Load your package into Teams
 
-With your package created, you can now upload it into a team. Once uploaded it will be available for all users in the selected team, and only the users of that team.
+You can test your package by uploading it into Teams.
 
 > [!NOTE]
 > For uploading to work, your tenant admin must first [enable uploading of apps](/microsoftteams/admin-settings).
+
+There are two ways to upload your app to Teams:
+
+* Using the Store
+* Using the Apps tab
+
+## Upload your package into a team using the Store
+
+1. In the lower left corner of Teams, choose the Store icon. On the Store page, choose "Upload a custom app".
+
+   ![View team](~/assets/images/store-upload-a-custom-app.png)
+
+2. In the *Open* dialog, navigate to the package you want to upload and choose *Open*.
+
+The uploaded package should now be available for use in the team specified in the consent dialog. It will be found  *Apps* tab. If your app does not appear, the most common reason is an error in the manifest, particularly ids for the app, bot and messaging extensions.
+
+![Example of bot in list of uploaded bots](~/assets/images/botinlist.jpg)
+
+## Upload your package into a team using the Apps tab
+
+With your package created, you can now upload it into a team. Once uploaded it will be available for all users in the selected team, and only the users of that team.
 
 1. Create a new team for testing, if necessary. Click *Create and join team* at the bottom of the left-hand panel.
 
@@ -94,7 +115,7 @@ If you want to remove your app, select the trash-can icon next to the app name i
 If you change manifest information, you must first remove the app and then add the updated package (per [Load your package into a team](#load-your-package-into-a-team)). Note that, in general, code changes on your service do not require you to re-upload your manifest, unless those changes require manifest updates (such as changes to the URL or the Microsoft app ID for its bot).
 
 > [!NOTE]
-> There is currently no way to completely remove a bot from 1:1 context.
+> There is currently no way to completely remove a bot from personal context.
 
 ## Troubleshooting notes
 
