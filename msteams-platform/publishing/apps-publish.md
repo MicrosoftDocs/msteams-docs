@@ -68,7 +68,7 @@ You need to upload a [submission package](~/concepts/apps/apps-package) and prov
 > [!IMPORTANT]
 > All information in the package manifest must match the metadata information you enter into the product listing.
 
-For general information about the Seller Dashboard, see [Use the Seller Dashboard to submit your solution to AppSource](https://dev.office.com/officestore/docs/use-the-seller-dashboard-to-submit-to-the-office-store). For  Teams-specific guidance and a detailed walk through, see [Submitting your Microsoft Teams app in the Seller Dashboard](~/publishing/office-store-guidance).
+For general information about the Seller Dashboard, see [Use the Seller Dashboard to submit your solution to AppSource](https://dev.office.com/officestore/docs/use-the-seller-dashboard-to-submit-to-the-office-store). For Teams-specific guidance and a detailed walk through, see [Submitting your Microsoft Teams app in the Seller Dashboard](~/publishing/office-store-guidance).
 
 ## Microsoft Teams app approval process
 
