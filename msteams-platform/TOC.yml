@@ -106,6 +106,8 @@
       href: ./concepts/authentication/auth-silent-AAD
     - name: Configuring identity providers
       href: ./concepts/authentication/auth-configure
+    - name: Using the Azure Bot Service
+      href: ./concepts/authentication/auth-oauth-card
   - name: Activity Feed
     href: ./concepts/activity-feed
   - name: Connectors
@@ -179,8 +181,6 @@
         href: ./resources/design/framework/cards
       - name: Command box
         href: ./resources/design/framework/command-box
-      - name: Submitting your app
-        href: ./resources/design/framework/submitting
     - name: Components
       items:
       - name: Color

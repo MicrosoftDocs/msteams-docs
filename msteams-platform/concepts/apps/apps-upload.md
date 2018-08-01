@@ -119,6 +119,6 @@ If you change manifest information, you must first remove the app and then add t
 
 ## Troubleshooting notes
 
-* If the manifest doesn't load, please double-check that you followed all the instructions in [Create the package](~/publishing/apps-package) and validated your manifest against the [schema](~/resources/schema/manifest-schema).
+* If the manifest doesn't load, please double-check that you followed all the instructions in [Create the package](~/concepts/apps/apps-package) and validated your manifest against the [schema](~/resources/schema/manifest-schema).
 
 * Encountering other problems? See [Troubleshoot your Microsoft Teams app](~/troubleshoot/troubleshoot).

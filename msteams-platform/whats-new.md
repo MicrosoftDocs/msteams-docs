@@ -2,7 +2,7 @@
 title: What's new
 description: Describes all the new developer features in Microsoft Teams
 keywords: teams what's new latest
-ms.date: 06/07/2018
+ms.date: 07/23/2018
 ---
 # What's new for developers in Microsoft Teams
 
@@ -12,7 +12,11 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | - | - | - |
-| 06/07/2018 | Pre-release information for the Microsoft Teams Private App Store has been added. | [Publish your Microsoft Teams app](~/publishing/apps-publish)|
+| 07/27/2018 | The developer preview now supports multiple commands in messaging extensions. | [Messaging extensions have been extended](~/resources/dev-preview/developer-preview-features)|
+| 07/23/2018 | Information about app re-certification has been added to the Publishing section. | [Updating your app](~/publishing/apps-publish#updating-your-app), [Manifest permissions](~/resources/schema/manifest-schema#permissions)|
+| 07/16/2018 | In developer preview, more space has been allocated to the tab configuration page. | [The tab configuration page is significantly taller](~/resources/dev-preview/developer-preview-features#the-tab-configuration-page-is-significantly-taller)|
+| 07/12/2018 | Information on how to ensure your Teams app works on Microsoft Teams Free. | [How do I make my Teams app work with Microsoft Teams free?](~/troubleshoot/faq#how-do-i-make-my-teams-app-work-with-microsoft-teams-free)|
+| 06/07/2018 | Pre-release information for the Microsoft Teams Tenant App Catalog has been added. | [Publish your Microsoft Teams app](~/publishing/apps-publish)|
 | 05/31/2018 | The Teams developer preview (ring 3.6) has been updated to include the ability to add bots and tabs to group chat. | [Features in the developer preview](~/resources/dev-preview/developer-preview-features), [Developer preview schema](~/resources/schema/manifest-schema-dev-preview), [Featured code samples](~/samples/code-samples#featured)|
 | 05/29/2018 | Adaptive cards are now supported in Teams in the [developer preview](~/resources/dev-preview/developer-preview-intro)  | [Adaptive card](~/concepts/cards/cards-reference#adaptive-card-supported-in-developer-preview-only), [Adaptive card actions in Teams](~/concepts/cards/cards-actions#adaptive-card-actions-supported-in-developer-preview-only) |
 | 05/29/2018 | If you are using the [developer preview](~/resources/dev-preview/developer-preview-intro), your bot can now send and receive files.| [Send and receive files through your bot](~/concepts/bots/bots-files), [Features in the Public Developer Preview for Microsoft Teams](~/resources/dev-preview/developer-preview-features)|

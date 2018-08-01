@@ -2,9 +2,20 @@
 title: Publish your app to AppSource
 description: Describes the process of publishing your app to AppSource (formerly Office Store)
 keywords: teams publish store office publishing AppSource
-ms.date: 06/07/2018
+ms.date: 07/23/2018
 ---
 # Publish your Microsoft Teams app
+
+After you have built your app in [Microsoft Teams App Studio](https://docs.microsoft.com/en-us/microsoftteams/platform/get-started/get-started-app-studio), you can share it with your team by uploading it to one of your Teams channels &mdash; as long as you have the appropriate rights. You can also take the next step and share it with the world. 
+
+Teams provides an in-app gallery for users to find or discover [high-quality Teams apps](~/resources/design/overview). To have your solution available in this gallery, you must publish your solution through AppSource. 
+
+## Overall process
+
+* [Register as a Microsoft app developer](https://developer.microsoft.com/en-us/store/register).
+* Register in the Seller Dashboard.
+* Use the Seller Dashboard to submit your Teams app package to AppSource.
+* Monitor the Seller Dashboard to track validation.
 
 > [!IMPORTANT]
 > **Your Microsoft Teams app *must* use the [latest schema](~/resources/schema/manifest-schema) and follow [current packaging guidelines](~/concepts/apps/apps-package).**
@@ -12,11 +23,11 @@ ms.date: 06/07/2018
 Teams provides an in-app gallery for users to find or discover [high-quality Teams apps](~/resources/design/overview). To have your solution available in this gallery, you must either:
 
 * Publish your app through AppSource
-* Publish your app through the Microsoft Teams Private App Store
+* Publish your app through the Microsoft Teams Tenant App Catalog
 
-## Microsoft Teams Private App Store
+## Microsoft Teams Tenant App Catalog
 
-The Microsoft Teams Private App Store is currently a pre-release feature, and is available to a limited number of users. You can find more information in the article [Publish Apps to the Microsoft Teams Private App Store](https://docs.microsoft.com/en-us/microsoftteams/tenant-apps-catalog-teams). This feature can only be managed by Teams users with admin privileges.
+The Microsoft Teams Tenant App Catalog contains apps unique to your tenant and is completely under your tenant's control. You can find more information in the article [Publish Apps to the Microsoft Teams Tenant App Catalog](https://docs.microsoft.com/en-us/microsoftteams/tenant-apps-catalog-teams). This feature can only be managed by Teams users with Microsoft Office 365 tenant admin privileges.
 
 ## AppSource
 
@@ -57,7 +68,7 @@ You need to upload a [submission package](~/concepts/apps/apps-package) and prov
 > [!IMPORTANT]
 > All information in the package manifest must match the metadata information you enter into the product listing.
 
-For general information about the Seller Dashboard, see [Use the Seller Dashboard to submit your solution to AppSource](https://dev.office.com/officestore/docs/use-the-seller-dashboard-to-submit-to-the-office-store). For Teams-specific help, see [Submitting your Microsoft Teams app in the Seller Dashboard](~/publishing/office-store-guidance).
+For general information about the Seller Dashboard, see [Use the Seller Dashboard to submit your solution to AppSource](https://dev.office.com/officestore/docs/use-the-seller-dashboard-to-submit-to-the-office-store). For Teams-specific guidance and a detailed walk through, see [Submitting your Microsoft Teams app in the Seller Dashboard](~/publishing/office-store-guidance).
 
 ## Microsoft Teams app approval process
 
@@ -102,6 +113,13 @@ Failures are explained, with references to the specific policy violations. All f
 If your app is in the Microsoft Teams store, you can generate a link for your website that launches Teams and shows a consent and installation dialog for users to add the app.
 The format is:  `https://teams.microsoft.com/l/app/<appId>` where appID is the GUID they declare in the submitted manifest.
 Example: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd` is the link to install Trello.
+
+## Updating your app
+
+When a user installs your application one of the first things they do is consent to give the app permission to access the services and information that the app needs to do its job. When you update your app, that can re-trigger this consent behavior, particularly if you have made one or more of the following changes:
+
+* Adding a new capability to an app such as adding a bot to an tab only app
+* Changing the permissions array in the manifest
 
 ## Troubleshooting publishing issues
 
