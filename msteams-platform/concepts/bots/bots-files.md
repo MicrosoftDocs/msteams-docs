@@ -6,7 +6,7 @@ ms.date: 05/22/2018
 ---
 # Send and receive files through your bot
 
->**Note:** This feature is currently available only in [Developer Preview](~/resources/dev-preview/developer-preview-intro), and requires the latest JavaScript and C# SDKs.
+>**Note:** This feature is currently available only in [Developer Preview](~/resources/dev-preview/developer-preview-intro), and requires [Manifest V 1.3 (Developer Preview)]~/resources/schema/manifest-schema-dev-preview) and the latest JavaScript and C# SDKs.
 
 Your bot can send and receive files with users in the personal context. You can use this to implement expense reporting, image recognition, file archival, e-signatures, and other scenarios involving direct manipulation of file content. Files shared in Teams typically appear as cards, and allow rich in-app viewing. In channels, you can also post messages with card attachments referencing existing SharePoint files.
 
