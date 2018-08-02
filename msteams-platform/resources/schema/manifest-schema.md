@@ -9,7 +9,7 @@ ms.date: 07/23/2018
 > [!NOTE]
 > For help on migrating your v0.4 manifest to v1.x, see our [migration guide](~/resources/schema/manifest-schema-migrate).
 
-The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://statics.teams.microsoft.com/sdk/v1.2/manifest/MicrosoftTeams.schema.json`](https://statics.teams.microsoft.com/sdk/v1.2/manifest/MicrosoftTeams.schema.json). Versions 1.0 and 1.1 are also supported.
+The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [` https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json). Versions 1.0, 1.1 and 1.2 are also supported.
 
 The following schema sample shows all extensibility options.
 
@@ -17,8 +17,8 @@ The following schema sample shows all extensibility options.
 
 ```json
 {
-  "$schema": "https://statics.teams.microsoft.com/sdk/v1.2/manifest/MicrosoftTeams.schema.json", 
-  "manifestVersion": "1.2",
+  "$schema": " https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.3",
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%",
   "packageName": "com.example.myapp",
@@ -140,13 +140,13 @@ The schema defines the following properties:
 The URL referencing the JSON Schema for the manifest.
 
 > [!TIP]
-> Specify the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor: `"$schema": "https://statics.teams.microsoft.com/sdk/v1.2/manifest/MicrosoftTeams.schema.json",`
+> Specify the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor: `"$schema": " https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json",`
 
 ## manifestVersion
 
 **Required** &ndash; String
 
-The version of the manifest schema this manifest is using. It should be "1.2".
+The version of the manifest schema this manifest is using. It should be "1.3".
 
 ## version
 
