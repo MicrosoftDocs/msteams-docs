@@ -43,17 +43,17 @@ The following schema sample shows all extensibility options.
   "accentColor": "%HEX-COLOR%",
   "configurableTabs": [
     {
-      "configurationUrl": "https://taburl.com/config.html",
+      "configurationUrl": "https://contoso.com/teamstab/configure",
       "canUpdateConfiguration": true,
-      "scopes": [ "team" ]
+      "scopes": [ "team", "groupchat" ]
     }
   ],
   "staticTabs": [
     {
       "entityId": "idForPage",
       "name": "Display name of tab",
-      "contentUrl": "https://teams-specific-webview.website.com",
-      "websiteUrl": "http://fullwebsite.website.com",
+      "contentUrl": "https://contoso.com/content?host=msteams",
+      "websiteUrl": "http://contoso.com/content",
       "scopes": [ "personal" ]
     }
   ],
@@ -62,10 +62,11 @@ The following schema sample shows all extensibility options.
       "botId": "%MICROSOFT-APP-ID-REGISTERED-WITH-BOT-FRAMEWORK%",
       "needsChannelSelector": false,
       "isNotificationOnly": false,
-      "scopes": [ "team", "personal" ],
+      "scopes": [ "team", "personal", "groupchat" ],
+      "supportsFiles": true,
       "commandLists": [
         {
-          "scopes": ["team"],
+          "scopes": [ "team", "groupchat" ],
           "commands": [
             {
               "title": "Command 1",
@@ -78,7 +79,7 @@ The following schema sample shows all extensibility options.
           ]
         },
         {
-          "scopes": ["personal"],
+          "scopes": [ "personal" ],
           "commands": [
             {
               "title": "Personal command 1",
@@ -96,6 +97,7 @@ The following schema sample shows all extensibility options.
   "connectors": [
     {
       "connectorId": "GUID-FROM-CONNECTOR-DEV-PORTAL%",
+      "configurationUrl": "https://contoso.com/teamsconnector/configure",
       "scopes": [ "team"]
     }
   ],
@@ -125,8 +127,7 @@ The following schema sample shows all extensibility options.
     "messageTeamMembers"
   ],
   "validDomains": [
-     "*.taburl.com",
-     "*.otherdomains.com"
+     "contoso.com"
   ]
 }
 ```
@@ -241,7 +242,7 @@ The object is an array with all elements of the type `object`. This block is req
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 characters|✔|The URL to use when configuring the tab.|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: `true`|
-|`scopes`|Array of enum|1|✔|Currently, configurable tabs support only the `team` scope, which means it can be provisioned only to a channel.|
+|`scopes`|Array of enum|1|✔|Currently, configurable tabs support only the `team` scope, which means it can be provisioned only to a channel. Support for tabs in `groupchat` is in Developer Preview.|
 
 ## staticTabs
 
@@ -272,7 +273,8 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 |`botId`|String|64 characters|✔|The unique Microsoft app ID for the bot as registered with the Bot Framework. This may well be the same as the overall [app ID](#id).|
 |`needsChannelSelector`|Boolean|||Describes whether or not the bot utilizes a user hint to add the bot to a specific channel. Default: `false`|
 |`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. Default: `false`|
-|`scopes`|Array of enum|2|✔|Specifies whether the bot offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
+|`supportsFiles`|Boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. Default: `false`|
+|`scopes`|Array of enum|3|✔|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupchat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
 
 ### bots: commandLists
 
@@ -280,7 +282,7 @@ An optional list of commands that your bot can recommend to users. The object is
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`items.properties`|array of enum|2|✔|Specifies the scope for which the command list is valid.|
+|`items.properties`|array of enum|3|✔|Specifies the scope for which the command list is valid.|
 |`items.commands`|array of objects|10|✔|An array of commands the bot supports:<br>`title`: the bot command name (string, 32)<br>`description`: a simple description or example of the command syntax and its argument (string, 128)|
 
 ## connectors
@@ -294,7 +296,8 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`connectorId`|String|64 characters|✔|A unique identifier for the Connector that matches its ID in the Connectors Developer Portal.|
-|`scopes`|Array of enum|1|✔|Specifies whether the Connector offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). Currently, only the `team` scope is supported.|
+|`configurationUrl`|String|2048 characters|✔|The URL used to configure the connector.|
+|`scopes`|Array of enum|1|✔|Specifies whether the Connector offers an experience in the context of a channel in a `team`, group chat (`groupchat`), or an experience scoped to an individual user alone (`personal`). Currently, only the `team` scope is supported.|
 
 ## composeExtensions
 
