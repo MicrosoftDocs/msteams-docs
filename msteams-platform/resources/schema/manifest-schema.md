@@ -2,14 +2,11 @@
 title: Manifest schema reference
 description: Describes the schema supported by the manifest for Microsoft Teams
 keywords: teams manifest schema
-ms.date: 07/23/2018
+ms.date: 08/03/2018
 ---
 # Reference: Manifest schema for Microsoft Teams
 
-> [!NOTE]
-> For help on migrating your v0.4 manifest to v1.x, see our [migration guide](~/resources/schema/manifest-schema-migrate).
-
-The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [` https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json). Versions 1.0, 1.1 and 1.2 are also supported.
+The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json). Versions 1.0, 1.1 and 1.2 are also supported (using "v1.0", "1.1", and "v1.2" in the URL).
 
 The following schema sample shows all extensibility options.
 
@@ -107,7 +104,7 @@ The following schema sample shows all extensibility options.
       "canUpdateConfiguration": true,
       "commands": [
         {
-          "id": "exampleCmd",
+          "id": "exampleCmd1",
           "title": "Example Command",
           "description": "Command Description; e.g., Search on the web",
           "initialRun": true,
@@ -116,6 +113,19 @@ The following schema sample shows all extensibility options.
               "name": "keyword",
               "title": "Search keywords",
               "description": "Enter the keywords to search for"
+            }
+          ]
+        },
+        {
+          "id": "exampleCmd2",
+          "title": "Example Command 2",
+          "description": "Command Description; e.g., Search for a customer",
+          "initialRun": true,
+          "parameters": [
+            {
+              "name": "custinfo",
+              "title": "Customer name or ID",
+              "description": "Enter a customer name or ID to search for"
             }
           ]
         }
