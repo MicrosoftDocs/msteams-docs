@@ -2,7 +2,7 @@
 title: Features in the Public Developer Preview
 description: Describes the features in the Public Developer Preview of Microsoft Teams
 keywords: teams preview developer features
-ms.date: 07/27/2018
+ms.date: 08/06/2018
 ---
 # Features in the Public Developer Preview for Microsoft Teams
 
@@ -15,10 +15,6 @@ In developer preview, you can now use more than one command in a messaging exten
 
 The manifest version for this feature is:
 `"manifestVersion": "1.3"`.
-
-## You can send and receive files through your bot
-
-See [Sending and receiving files through your bot](~/concepts/bots/bots-files) for more details.
 
 ## Adaptive Cards
 
@@ -53,7 +49,7 @@ This feature allows you to:
 * Add tabs to chats
 * Add bots to chats
 
-To enable this feature use the new scope `groupchat` in the manifest definition for bots and tabs. You must  use the preview schema (1.3) in order to use this feature. You can find the schema here: `https://statics.teams.microsoft.com/sdk/v1.3.0-beta.2/manifest/MicrosoftTeams.schema.json`.
+To enable this feature use the new scope `groupchat` in the manifest definition for bots and tabs. You must  use the preview schema (1.3) in order to use this feature. You can find the schema here: `https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json`.
 
 The [Developer preview manifest](~/resources/schema/manifest-schema-dev-preview) documentation has also been updated to include this scope.
 

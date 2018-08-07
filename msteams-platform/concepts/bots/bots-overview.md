@@ -66,6 +66,7 @@ The following topics will guide you through the process of creating a great bot 
 * [Notification-only bots](~/concepts/bots/bots-notification-only) Using bots to send notifications for your app.
 * [Get context](~/concepts/bots/bots-context) Get information about the user.
 * [Bot menus](~/concepts/bots/bots-menus) Using menus in bots.
+* [Bots and files](~/concepts/bots/bots-files) Sending and receiving files from bots.
 * [Using tabs with bots](~/concepts/bots/bots-with-tabs) Making tabs and bots work together.
 * [Test your bot](~/concepts/bots/bots-test): Add your bot for personal or team conversations to see it in action.
 * [Publish your bot](~/publishing/apps-publish): Create your Teams package, add other capabilities, and submit it to AppSource.

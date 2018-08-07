@@ -10,7 +10,7 @@ ms.date: 04/26/2018
 >See [Developer Preview](~/resources/dev-preview/developer-preview-intro) for information on the program and how you can join.
 >If you are not using the developer preview you should not be using this version of the manifest. See [Reference: Manifest schema for Microsoft Teams](~/resources/schema/manifest-schema) for the public version of the manifest.
 
-The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://statics.teams.microsoft.com/sdk/v1.3.0-beta.2/manifest/MicrosoftTeams.schema.json`](https://statics.teams.microsoft.com/sdk/v1.3.0-beta.2/manifest/MicrosoftTeams.schema.json).
+The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json).
 
 ## What's new in the Developer Preview
 
@@ -23,7 +23,7 @@ This is a preview of the 1.3 version of the Teams app manifest. It includes:
 
 ```json
 {
-  "$schema": "https://statics.teams.microsoft.com/sdk/v1.3/manifest/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json",
   "manifestVersion": "1.3",
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%",
@@ -146,7 +146,7 @@ The schema defines the following properties:
 The URL referencing the JSON Schema for the manifest.
 
 > [!TIP]
-> Specify the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor: `"$schema": "https://statics.teams.microsoft.com/sdk/v1.3/manifest/MicrosoftTeams.schema.json",`
+> Specify the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor: `"$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json",`
 
 ## manifestVersion
 

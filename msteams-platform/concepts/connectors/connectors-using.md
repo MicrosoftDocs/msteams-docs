@@ -182,3 +182,70 @@ The following steps use PowerShell. We assume that you have this installed and a
 
 2. If the POST succeeds, you should see a simple **1** output by `Invoke-RestMethod`.
 3. Check the Microsoft Teams channel associated with the webhook URL. You should see the new card posted to the channel.
+
+- Include two icons, following the instructions in [Icons](~/concepts/apps/apps-package#icons).
+- Modify the `icons` portion of the manifest to refer to the file names of the icons instead of URLs.
+
+The following manifest.json file contains the basic elements needed to test and submit your app.
+
+> [!NOTE]
+> Replace `id` and `connectorId` in the following example with the GUID of your Connector.
+
+#### Example manifest.json with Connector
+
+```json
+{
+  "$schema": " https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.3",
+  "id": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
+  "version": "1.0",
+  "packageName": "com.sampleapp",
+  "developer": {
+    "name": "Publisher",
+    "websiteUrl": "https://www.microsoft.com",
+    "privacyUrl": "https://www.microsoft.com",
+    "termsOfUseUrl": "https://www.microsoft.com"
+  },
+  "description": {
+    "full": "This is a small sample app we made for you! This app has samples of all capabilities Microsoft Teams supports.",
+    "short": "This is a small sample app we made for you!"
+  },
+  "icons": {
+    "outline": "sampleapp-outline.png",
+    "color": "sampleapp-color.png"
+  },
+  "connectors": [
+    {
+      "connectorId": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
+      "scopes": [
+        "team"
+      ]
+    }
+  ],
+  "name": {
+    "short": "Sample App",
+    "full": "Sample App"
+  },
+  "accentColor": "#FFFFFF",
+  "needsIdentity": "true"
+}
+```
+
+## Testing your Connector
+
+To test your Connector, upload it to a team as you would with any other app. You can create a .zip package using the manifest file from the Connectors Developer Dashboard (modified as directed in the preceding section) and the two icon files.
+
+After you upload the app, open the Connectors list from any channel. Scroll to the bottom to see your app in the **Uploaded** section.
+
+![Screenshot of uploaded section in Connector dialog box](~/assets/images/connectors/connector_dialog_uploaded.png)
+
+You can now launch the configuration experience. Be aware that this flow occurs entirely within Microsoft Teams through a pop-up window. Currently, this behavior differs from the configuration experience in Connectors that we created; we are working on unifying the experiences.
+
+To verify that an `HttpPOST` action is working correctly, use your [custom incoming webhook](#setting-up-a-custom-incoming-webhook).
+
+## Publishing your app
+
+> [!NOTE]
+> Currently, we do not support users configuring your Connector externally via the **Connect to Office 365** button. Users must visit Microsoft Teams first to add a Connector.
+
+When your app is ready for submission, follow the process to [publish your app to AppSource](~/publishing/apps-publish).
