@@ -12,7 +12,7 @@ ms.date: 04/17/2018
 
 You can distribute your registered Connector as part of your Teams app package. Whether as a standalone solution, or one of several [capabilities](~/overview#apps-in-microsoft-teams) that your experience enables in Teams, you can [package](~/concepts/apps/apps-package) and [publish](~/publishing/apps-publish) your Connector as part of your AppSource submission, or you can provide it to users directly for uploading within Teams.
 
-To distribute your Connector, you need to register by using the [Connectors Developer Dashboard](https://go.microsoft.com/fwlink/?LinkID=780623). By default, once a Connector is registered, it's assumed that your Connector will work in all Office 365 products that support them, including Outlook and Teams. If that is _not_ the case and you need to create a Connector that only works in Microsoft Teams, contact us directly at [Teams Store Submissions Support](mailto:TeamsSubSupport@microsoft.com).
+To distribute your Connector, you need to register by using the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard). By default, once a Connector is registered, it's assumed that your Connector will work in all Office 365 products that support them, including Outlook and Teams. If that is _not_ the case and you need to create a Connector that only works in Microsoft Teams, contact us directly at [Teams Store Submissions Support](mailto:TeamsSubSupport@microsoft.com).
 
 ![Screenshot of creating a new connector through the dashboard.](~/assets/images/connectors/connector_dashboard.png)
 

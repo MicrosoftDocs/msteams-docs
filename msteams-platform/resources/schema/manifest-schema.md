@@ -293,7 +293,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`connectorId`|String|64 characters|✔|A unique identifier for the Connector that matches its ID in the Connectors Developer Portal.|
+|`connectorId`|String|64 characters|✔|A unique identifier for the Connector that matches its ID in the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).|
 |`scopes`|Array of enum|1|✔|Specifies whether the Connector offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). Currently, only the `team` scope is supported.|
 
 ## composeExtensions
