@@ -2,7 +2,7 @@
 title: Using Office 365 Connectors
 description: Describes how to use Office 365 Connectors in Microsoft Teams
 keywords: teams o365 connector
-ms.date: 07/11/2018
+ms.date: 08/08/2018
 ---
 
 # How to add connectors in Microsoft Teams
