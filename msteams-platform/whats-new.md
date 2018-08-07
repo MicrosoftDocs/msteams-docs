@@ -12,6 +12,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | - | - | - |
+| 08/06/2018 | Your bot can now send and receive files.| [Send and receive files through your bot](~/concepts/bots/bots-files)|
 | 07/27/2018 | The developer preview now supports multiple commands in messaging extensions. | [Messaging extensions have been extended](~/resources/dev-preview/developer-preview-features)|
 | 07/23/2018 | Information about app re-certification has been added to the Publishing section. | [Updating your app](~/publishing/apps-publish#updating-your-app), [Manifest permissions](~/resources/schema/manifest-schema#permissions)|
 | 07/16/2018 | In developer preview, more space has been allocated to the tab configuration page. | [The tab configuration page is significantly taller](~/resources/dev-preview/developer-preview-features#the-tab-configuration-page-is-significantly-taller)|

@@ -2,7 +2,7 @@
 title: Features in the Public Developer Preview
 description: Describes the features in the Public Developer Preview of Microsoft Teams
 keywords: teams preview developer features
-ms.date: 07/27/2018
+ms.date: 08/06/2018
 ---
 # Features in the Public Developer Preview for Microsoft Teams
 
@@ -15,10 +15,6 @@ In developer preview, you can now use more than one command in a messaging exten
 
 The manifest version for this feature is:
 `"manifestVersion": "1.3"`.
-
-## You can send and receive files through your bot
-
-See [Sending and receiving files through your bot](~/concepts/bots/bots-files) for more details.
 
 ## Adaptive Cards
 
