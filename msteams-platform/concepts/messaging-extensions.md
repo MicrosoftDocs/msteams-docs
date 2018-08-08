@@ -270,7 +270,7 @@ See [Cards](~/concepts/cards/cards) for more information.
 
 To learn how to use the thumbnail and hero card types, see [Add cards and card actions](~/concepts/cards-actions).
 
- For additional documentation regarding the Office 365 Connector card, see [Using Office 365 Connector cards](~/concepts/connectors#using-office-365-connector-cards-in-microsoft-teams).
+ For additional documentation regarding the Office 365 Connector card, see [Using Office 365 Connector cards](~/concepts/connectors/connectors#using-office-365-connector-cards-in-microsoft-teams).
 
 The result list is displayed in the Microsoft Teams UI with a preview of each item. The preview is generated in one of two ways:
 

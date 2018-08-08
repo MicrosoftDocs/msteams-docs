@@ -1,16 +1,13 @@
 ---
-title: Office 365 Connectors
-description: Describes how to get started with Office 365 Connectors in Microsoft Teams
+title: Using Office 365 Connectors
+description: Describes how to use Office 365 Connectors in Microsoft Teams
 keywords: teams o365 connector
-ms.date: 04/17/2018
+ms.date: 08/08/2018
 ---
-# Office 365 Connectors for Microsoft Teams
 
-Office 365 Connectors are a great way to push your app's rich content into Microsoft Teams. Any user can connect a team to services like Trello, GitHub, Bing News, or Twitter and get notified of the team's activity in that service. From tracking a team's progress in Trello to following important hashtags in Twitter, Office 365 Connectors help your team to stay in sync and get more done.
+# How to add connectors in Microsoft Teams
 
-You can even add actions to your content, turning them into *actionable messages*, so that users can complete tasks directly in the channel. (To learn more about actionable messages in general, see [Actionable messages in Outlook, Office 365 Groups, and Microsoft Teams](https://docs.microsoft.com/en-us/outlook/actionable-messages/).)
-
->**New:** With Microsoft Teams apps, you can add your existing Office 365 Connector or build a new one to include in Microsoft Teams. See [Build your own Connector](https://docs.microsoft.com/en-us/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector) for more information.
+Any user can connect a team to services like Trello, GitHub, Bing News, or Twitter and get notified of the team's activity in that service. From tracking a team's progress in Trello to following important hashtags in Twitter, Office 365 Connectors help your team to stay in sync and get more done.
 
 ## Access existing Office 365 Connectors from Microsoft Teams
 
@@ -182,22 +179,12 @@ The following steps use PowerShell. We assume that you have this installed and a
    ```powershell
    Invoke-RestMethod -Method post -ContentType 'Application/Json' -Body '{"text":"Hello World!"}' -Uri <YOUR WEBHOOK URL>
    ```
+
 2. If the POST succeeds, you should see a simple **1** output by `Invoke-RestMethod`.
 3. Check the Microsoft Teams channel associated with the webhook URL. You should see the new card posted to the channel.
 
-## Registering your Connector
-
-With Microsoft Teams apps, you can distribute your registered Connector as part of your app package. Whether as a standalone solution, or one of several [capabilities](~/overview#apps-in-microsoft-teams) that your experience enables in Teams, you can [package](~/concepts/apps/apps-package) and [publish](~/publishing/apps-publish) your Connector as part of your AppSource submission, or you can provide it to users directly for uploading within Teams.
-
-To distribute your Connector, you need to register by using the [Connectors Developer Dashboard](https://go.microsoft.com/fwlink/?LinkID=780623). By default, once a Connector is registered, it's assumed that your Connector will work in all Office 365 products that support them, including Outlook, Teams, and Yammer. If that is _not_ the case and you need to create a Connector that only works in Microsoft Teams, contact us directly at [Teams Store Submissions Support](mailto:TeamsSubSupport@microsoft.com).
-
-> [!IMPORTANT]
-> After you choose **Save** in the Connectors Developer Dashboard, your Connector is registered. Do not choose **Publish to Store** (which appears after you choose **Save**); if you want to publish your Connector in AppSource, follow the instructions in [Publish your Microsoft Teams app to AppSource](~/publishing/apps-publish).
-
-You can download the auto-generated Teams app manifest from the portal. Before you can use it to test or publish your app, though, you must do the following:
-
-* Include two icons, following the instructions in [Icons](~/concepts/apps/apps-package#icons).
-* Modify the `icons` portion of the manifest to refer to the file names of the icons instead of URLs.
+- Include two icons, following the instructions in [Icons](~/concepts/apps/apps-package#icons).
+- Modify the `icons` portion of the manifest to refer to the file names of the icons instead of URLs.
 
 The following manifest.json file contains the basic elements needed to test and submit your app.
 
