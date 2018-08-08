@@ -84,8 +84,7 @@ The following manifest.json file contains the basic elements needed to test and 
 
 ```json
 {
-  "$schema":"
-  https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json",
   "manifestVersion": "1.3",
   "id": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
   "version": "1.0",
@@ -97,8 +96,8 @@ The following manifest.json file contains the basic elements needed to test and 
     "termsOfUseUrl": "https://www.microsoft.com"
   },
   "description": {
-    "full": "This is a small sample app we made for you! This app has samples of all capabilities Microsoft Teams supports.",
-    "short": "This is a small sample app we made for you!"
+    "full": "This is a sample manifest for an app with a connector with an inline configuration experience.",
+    "short": "This is a sample manifest for an app with a connector."
   },
   "icons": {
     "outline": "sampleapp-outline.png",
@@ -115,10 +114,9 @@ The following manifest.json file contains the basic elements needed to test and 
   ],
   "name": {
     "short": "Sample App",
-    "full": "Sample App"
+    "full": "Sample App Long Name"
   },
-  "accentColor": "#FFFFFF",
-  "needsIdentity": "true"
+  "accentColor": "#FFFFFF"
 }
 ```
 
