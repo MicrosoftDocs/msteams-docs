@@ -2,7 +2,7 @@
 title: Developer Preview Manifest schema reference
 description: Describes the schema supported by the manifest for Microsoft Teams
 keywords: teams manifest schema Developer Preview
-ms.date: 04/26/2018
+ms.date: 08/07/2018
 ---
 # Developer Preview Reference: version 1.3 manifest schema for Microsoft Teams
 
