@@ -12,7 +12,7 @@ One way of sending files is using the Microsoft Graph APIs for [OneDrive and Sha
 
 ## Configure your bot to support files
 
-In order to send and receive files in your bot, you have to set the `supportsFiles' property in the manifest to true. This property is described in the [bots](~/resources/schema/manifest-schema#bots) section of the Manifest reference.
+In order to send and receive files in your bot, you have to set the `supportsFiles` property in the manifest to true. This property is described in the [bots](~/resources/schema/manifest-schema#bots) section of the Manifest reference.
 
 The definition will look like this: `"supportsFiles": true`. If your bot does not enable `supportFiles`, the following features will not work.
 
