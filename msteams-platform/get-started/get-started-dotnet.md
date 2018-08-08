@@ -54,7 +54,6 @@ Verify your `git` installation by running the following in a terminal window:
 ```bash
 $ git --version
 git version 2.15.0.windows.1
-
 ```
 
 Make sure to launch Visual Studio 2017 and install any updates if shown.
@@ -203,7 +202,7 @@ Before you run the bot in Teams, confirm that the bot works as expected  using t
 
 Once you have the emulator running, you will need three things to set up a connection:
 
-* The endpoint URL, which is the address where your bot is exposed. It can be the local address 'http://localhost:3333/api/messages', or an external address using the ngrok tunnel you set up earlier like `https://d0ac14a5.ngrok.io/api/messages`.
+* The endpoint URL, which is the address where your bot is exposed. It can be the local address '<http://localhost:3333/api/messages>', or an external address using the ngrok tunnel you set up earlier like `https://d0ac14a5.ngrok.io/api/messages`.
 * The Microsoft App ID, which is the **ID** you used earlier.
 * The Microsoft App Password from the Bot Framework which you made a note of earlier.
 
@@ -214,7 +213,7 @@ If the bot is not working, check to see if your app is running, and check ngrok 
 
 ### Test your bot in Teams
 
-You can now interact with the bot in Teams. Choose a channel in the team where you registered your app, and type `@your-bot-name`. This is called an **@mention**. Whatever message you send to the bot will be sent back to you as a reply.
+You can now interact with the bot in Teams. Choose a channel in the team where you registered your app, and type `@your-bot-name`. This is called an <strong>@mention</strong>. Whatever message you send to the bot will be sent back to you as a reply.
 
 <img width="450px" title="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 

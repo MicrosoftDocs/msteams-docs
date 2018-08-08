@@ -51,7 +51,7 @@ This is where you can see what the [cards you create in App Studio](#card-editor
 
 ### Manifest Editor
 
-As mentioned earlier, the most significant part of a Microsoft Teams app package is its manifest.json file. This file, which must conform to the [Teams App schema](~\resources\schema\manifest-schema.md), contains metadata which allows Teams to correctly present your app to users.
+As mentioned earlier, the most significant part of a Microsoft Teams app package is its manifest.json file. This file, which must conform to the [Teams App schema](~/resources/schema/manifest-schema.md), contains metadata which allows Teams to correctly present your app to users.
 
 The Manifest Editor tab in App Studio simplifies creating the manifest, allowing you to describe the app, upload your icons, add app capabilities, and produce a .zip file which can easily be uploaded into Teams for testing or distributed for others to use. Note that App Studio does not produce functional code for your app, or host your app. Your app must already be hosted and running at the URL listed in the manifest for the app upload process to result in a working app.
 
@@ -89,7 +89,7 @@ This section allows you to add a connector to your app. If you already have regi
 
 ##### Messaging Extensions
 
-[Messaging extensions](~\concepts\messaging-extensions.md) are a powerful new way for users to engage with your app within Microsoft Teams. Users can query for information from your service and post that information in the form of cards, right into the channel or chat conversation.
+[Messaging extensions](~/concepts/messaging-extensions.md) are a powerful new way for users to engage with your app within Microsoft Teams. Users can query for information from your service and post that information in the form of cards, right into the channel or chat conversation.
 
 Messaging extensions are powered by Bot Framework bots, so they require a configured bot to operate. If you have the name and Bot Framework ID of the bot you would like to power the messaging extension, enter it. Otherwise, click *Register* to create one and enter the information afterward. Select whether the configuration of a messaging extension can be updated by the user.
 

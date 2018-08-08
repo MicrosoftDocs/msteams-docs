@@ -1,0 +1,5567 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/a/1/s/target_repo/msteams-platform",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/downloads/MicrosoftTeams-BasicElements.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "assets/downloads/MicrosoftTeams-BasicElements.pdf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/downloads/MicrosoftTeams-BotCards.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "assets/downloads/MicrosoftTeams-BotCards.pdf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/downloads/MicrosoftTeams-ColorSwatches.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "assets/downloads/MicrosoftTeams-ColorSwatches.pdf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/downloads/MicrosoftTeams-Screens-Darktheme.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "assets/downloads/MicrosoftTeams-Screens-Darktheme.pdf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/downloads/MicrosoftTeams-Screens.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "assets/downloads/MicrosoftTeams-Screens.pdf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/downloads/MicrosoftTeams-Tabs.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "assets/downloads/MicrosoftTeams-Tabs.pdf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/icons/1.svg",
+      "output": {
+        "resource": {
+          "relative_path": "assets/icons/1.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/icons/2.svg",
+      "output": {
+        "resource": {
+          "relative_path": "assets/icons/2.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/icons/3.svg",
+      "output": {
+        "resource": {
+          "relative_path": "assets/icons/3.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/icons/4.svg",
+      "output": {
+        "resource": {
+          "relative_path": "assets/icons/4.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/icons/5.svg",
+      "output": {
+        "resource": {
+          "relative_path": "assets/icons/5.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/icons/6.svg",
+      "output": {
+        "resource": {
+          "relative_path": "assets/icons/6.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/icons/7.svg",
+      "output": {
+        "resource": {
+          "relative_path": "assets/icons/7.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/icons/cta-arrow.svg",
+      "output": {
+        "resource": {
+          "relative_path": "assets/icons/cta-arrow.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/icons/download.svg",
+      "output": {
+        "resource": {
+          "relative_path": "assets/icons/download.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/icons/favicon-16x16.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/icons/favicon-16x16.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/icons/favicon-32x32.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/icons/favicon-32x32.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/icons/favicon-96x96.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/icons/favicon-96x96.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/icons/get-code.svg",
+      "output": {
+        "resource": {
+          "relative_path": "assets/icons/get-code.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/icons/menu.svg",
+      "output": {
+        "resource": {
+          "relative_path": "assets/icons/menu.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/icons/pro-tip-icon-old.svg",
+      "output": {
+        "resource": {
+          "relative_path": "assets/icons/pro-tip-icon-old.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/icons/pro-tip-icon.svg",
+      "output": {
+        "resource": {
+          "relative_path": "assets/icons/pro-tip-icon.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/icons/resources_community.svg",
+      "output": {
+        "resource": {
+          "relative_path": "assets/icons/resources_community.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/icons/resources_developer-platform.svg",
+      "output": {
+        "resource": {
+          "relative_path": "assets/icons/resources_developer-platform.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/icons/resources_help.svg",
+      "output": {
+        "resource": {
+          "relative_path": "assets/icons/resources_help.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/icons/see-example.svg",
+      "output": {
+        "resource": {
+          "relative_path": "assets/icons/see-example.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/icons/social_facebook.svg",
+      "output": {
+        "resource": {
+          "relative_path": "assets/icons/social_facebook.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/icons/social_linkedin.svg",
+      "output": {
+        "resource": {
+          "relative_path": "assets/icons/social_linkedin.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/icons/social_twitter.svg",
+      "output": {
+        "resource": {
+          "relative_path": "assets/icons/social_twitter.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/Cards/adaptivecard.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/Cards/adaptivecard.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/Cards/carousel.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/Cards/carousel.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/Cards/list.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/Cards/list.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/Cards/o365connector.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/Cards/o365connector.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/Cards/thumbnail.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/Cards/thumbnail.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/Command-box-rest-state.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/Command-box-rest-state.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/Command-box-zoomed-app-state.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/Command-box-zoomed-app-state.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/Command-box-zoomed-suggestions.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/Command-box-zoomed-suggestions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/Command-box-zoomed-well.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/Command-box-zoomed-well.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/Connectors/connector_dashboard.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/Connectors/connector_dashboard.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/Connectors/connector_dialog_uploaded.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/Connectors/connector_dialog_uploaded.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/Connectors/connector_message.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/Connectors/connector_message.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/Connectors/teams-context-menu.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/Connectors/teams-context-menu.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/ManageTeam.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/ManageTeam.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/Personal-apps-App-flyout.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/Personal-apps-App-flyout.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/Personal-apps-Bot.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/Personal-apps-Bot.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/Personal-apps-MY-tab.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/Personal-apps-MY-tab.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/Personal-apps-Recent-tab.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/Personal-apps-Recent-tab.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/UploadACustomApp.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/UploadACustomApp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/activity-feed/activity_feed.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/activity-feed/activity_feed.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/appbar_apps_flyout.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/appbar_apps_flyout.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/authentication/AddPlatform.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/authentication/AddPlatform.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/authentication/AppRegistration.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/authentication/AppRegistration.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/authentication/Platforms.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/authentication/Platforms.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/authentication/bot_auth_sequence_diagram.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/authentication/bot_auth_sequence_diagram.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/authentication/tab_auth_sequence_diagram.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/authentication/tab_auth_sequence_diagram.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/bot_add_to_team.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/bot_add_to_team.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/bot_example.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/bot_example.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/botinlist.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/botinlist.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/bots/associating_contexts.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/bots/associating_contexts.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/bots/bf-migrate-bot-to-azure.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/bots/bf-migrate-bot-to-azure.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/bots/bfpublish.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/bots/bfpublish.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/bots/bfregister.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/bots/bfregister.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/bots/bot-file-consent-card.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/bots/bot-file-consent-card.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/bots/bot-menus-bot-menu-sample.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/bots/bot-menus-bot-menu-sample.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/bots/botdisable.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/bots/botdisable.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/bots/botmenu.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/bots/botmenu.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/bots/botmenusmall.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/bots/botmenusmall.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/bots_appid_botframework.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/bots_appid_botframework.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/bots_carouselexample.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/bots_carouselexample.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/bots_herocarexample.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/bots_herocarexample.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/bots_listexample.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/bots_listexample.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/bots_o365connectorcardexample.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/bots_o365connectorcardexample.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/bots_thumbnailexample.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/bots_thumbnailexample.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/bots_uploading.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/bots_uploading.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_buttons_Links.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_buttons_Links.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_buttons_card.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_buttons_card.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_buttons_cardstates.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_buttons_cardstates.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_buttons_dialog.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_buttons_dialog.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_buttons_icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_buttons_icon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_buttons_icontext.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_buttons_icontext.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_buttons_others.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_buttons_others.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_buttons_roundedcorners.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_buttons_roundedcorners.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_buttons_states.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_buttons_states.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_buttons_style.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_buttons_style.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_color_appblack_UI.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_color_appblack_UI.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_color_appblack_text.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_color_appblack_text.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_color_darkblackramp.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_color_darkblackramp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_color_darkcolors.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_color_darkcolors.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_color_light_other.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_color_light_other.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_color_light_ramp.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_color_light_ramp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_color_lightblackramp.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_color_lightblackramp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_color_lightcolors.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_color_lightcolors.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_darktheme.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_darktheme.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_dialogs_buttons.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_dialogs_buttons.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_dialogs_padding.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_dialogs_padding.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_dialogs_scrolling.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_dialogs_scrolling.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_dialogs_sizes.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_dialogs_sizes.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_dialogs_typography.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_dialogs_typography.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_fields_paddingSize.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_fields_paddingSize.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_fields_states.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_fields_states.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_fields_typography.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_fields_typography.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_flyouts.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_flyouts.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_flyouts_scrolling.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_flyouts_scrolling.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/components/componentAssets_flyouts_sizepadding.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/components/componentAssets_flyouts_sizepadding.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/compose-extensions/ceentry.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/compose-extensions/ceentry.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/compose-extensions/ceexample.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/compose-extensions/ceexample.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/compose-extensions/ceflow.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/compose-extensions/ceflow.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/compose-extensions/ceoverviewexample.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/compose-extensions/ceoverviewexample.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/compose-extensions/cesampleapp.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/compose-extensions/cesampleapp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/compose-extensions/cesearch.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/compose-extensions/cesearch.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/compose-extensions/cesuggest.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/compose-extensions/cesuggest.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/compose-extensions/compose-extension-list.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/compose-extensions/compose-extension-list.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/compose-extensions/compose-extension-more-options.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/compose-extensions/compose-extension-more-options.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/compose-extensions/compose-extension-right-click-pin.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/compose-extensions/compose-extension-right-click-pin.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/compose-extensions/compose-extension-settings-menu-item.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/compose-extensions/compose-extension-settings-menu-item.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/congratulationsOutgoingWebHook.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/congratulationsOutgoingWebHook.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/connector_example.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/connector_example.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/connector_gallery.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/connector_gallery.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/connector_list.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/connector_list.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/connector_select.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/connector_select.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/createWebHook.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/createWebHook.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/developerpreview.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/developerpreview.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/01_framework_basics.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/01_framework_basics.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/02_framework_apps.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/02_framework_apps.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/03_framework_activity-feed.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/03_framework_activity-feed.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/03_framework_apps.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/03_framework_apps.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/04_framework_search.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/04_framework_search.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/05_framework_tabs.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/05_framework_tabs.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/06_framework_compose-extensions.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/06_framework_compose-extensions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/07_framework_bots.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/07_framework_bots.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/08_framework_cards.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/08_framework_cards.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/09_framework_submit.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/09_framework_submit.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_apps_flyout.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_apps_flyout.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_apps_my-view.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_apps_my-view.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_basics_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_basics_01.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_basics_02.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_basics_02.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_basics_03.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_basics_03.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_basics_04.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_basics_04.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_basics_05.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_basics_05.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_bots_avatar.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_bots_avatar.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_bots_notification.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_bots_notification.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_bots_tbot-help.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_bots_tbot-help.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_cards_anatomy.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_cards_anatomy.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_cards_bubble-merge.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_cards_bubble-merge.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_cards_carousel.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_cards_carousel.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_cards_digest.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_cards_digest.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_cards_hero.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_cards_hero.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_cards_list.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_cards_list.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_cards_sign-in.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_cards_sign-in.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_cards_thumbnail.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_cards_thumbnail.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_feed.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_feed.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_message-extentions_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_message-extentions_01.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_message-extentions_02.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_message-extentions_02.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_message-extentions_03.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_message-extentions_03.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_search.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_search.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_submit_gallery.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_submit_gallery.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_submit_icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_submit_icon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_submit_profile.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_submit_profile.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_tabs_canvas.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_tabs_canvas.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_tabs_column.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_tabs_column.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_tabs_grid.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_tabs_grid.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_tabs_illustration_canvas.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_tabs_illustration_canvas.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_tabs_illustration_columns.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_tabs_illustration_columns.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_tabs_illustration_grid.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_tabs_illustration_grid.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_tabs_illustration_list.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_tabs_illustration_list.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/framework_tabs_list.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/framework_tabs_list.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/guidelines_bots_table_class-clown.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/guidelines_bots_table_class-clown.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/guidelines_bots_table_class-clown_mobile.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/guidelines_bots_table_class-clown_mobile.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/guidelines_bots_table_no-personality.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/guidelines_bots_table_no-personality.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/guidelines_bots_table_no-personality_mobile.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/guidelines_bots_table_no-personality_mobile.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/guidelines_bots_table_smile-emoij.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/guidelines_bots_table_smile-emoij.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/guidelines_bots_table_unflappable-librarian.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/guidelines_bots_table_unflappable-librarian.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/guidelines_bots_table_unflappable-librarian_mobile.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/guidelines_bots_table_unflappable-librarian_mobile.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/guidelines_bots_table_user-input.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/guidelines_bots_table_user-input.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/guidelines_bots_table_user-input_mobile.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/guidelines_bots_table_user-input_mobile.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/framework/illustration-placeholder.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/framework/illustration-placeholder.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/freshdesk.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/freshdesk.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/01_homepage_immersive-experience.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/01_homepage_immersive-experience.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/02_homepage_tabs-and-conversations.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/02_homepage_tabs-and-conversations.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/03_homepage_cards.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/03_homepage_cards.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/04_homepage_bots.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/04_homepage_bots.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/05_homepage_instant-notifications.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/05_homepage_instant-notifications.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/06_homepage_compose-extensions.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/06_homepage_compose-extensions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/Asana.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/Asana.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/Blueprints.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/Blueprints.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/Coffecup.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/Coffecup.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/Eraser.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/Eraser.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/Github.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/Github.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/Hootsuite.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/Hootsuite.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/Intercom.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/Intercom.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/MathCompass.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/MathCompass.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/Meekan.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/Meekan.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/Pencil.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/Pencil.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/Pin.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/Pin.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/Polly.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/Polly.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/PublishToAzure1.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/PublishToAzure1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/PublishToAzure2.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/PublishToAzure2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/PublishToAzure3.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/PublishToAzure3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/PublishToAzure4.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/PublishToAzure4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/PublishToAzure5.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/PublishToAzure5.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/Ruler.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/Ruler.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/Sapho.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/Sapho.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/Smartsheet.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/Smartsheet.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/StoreAppStudio.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/StoreAppStudio.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/StoreIcon.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/StoreIcon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/StoreTeamsAppStudio(Preview).png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/StoreTeamsAppStudio(Preview).png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/TeamsAppStudio(Preview).png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/TeamsAppStudio(Preview).png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/TeamsAppStudio.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/TeamsAppStudio.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/Trello.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/Trello.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/Wrike.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/Wrike.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/Zendesk.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/Zendesk.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/azure-cloud-shell.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/azure-cloud-shell.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/control-library-button.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/control-library-button.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/gettingstarted-integrations-large.svg",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/gettingstarted-integrations-large.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/teamsAppStudioConfiguration.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/teamsAppStudioConfiguration.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/get-started/visual-studio.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/get-started/visual-studio.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/go-to-website-icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/go-to-website-icon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/icons/appbarhomescreen.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/icons/appbarhomescreen.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/icons/botandchiclet.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/icons/botandchiclet.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/icons/contosoicons.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/icons/contosoicons.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/icons/flyout.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/icons/flyout.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/icons/sample20x20s.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/icons/sample20x20s.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/landing-page/team-services-get-started.svg",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/landing-page/team-services-get-started.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/landing-page/team-services-immersive-experiences.svg",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/landing-page/team-services-immersive-experiences.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/landing-page/team-services-introduction.svg",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/landing-page/team-services-introduction.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/landing-page/team-services-sdk.svg",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/landing-page/team-services-sdk.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/outgoingwebhook.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/outgoingwebhook.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/publicpreview.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/publicpreview.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/samples-hello-world-bot.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/samples-hello-world-bot.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/samples-hello-world-messaging-extensions-menu.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/samples-hello-world-messaging-extensions-menu.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/samples-hello-world-messaging-extensions-result.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/samples-hello-world-messaging-extensions-result.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/samples-hello-world-messaging-extensions-send.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/samples-hello-world-messaging-extensions-send.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/samples-hello-world-tab-configure.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/samples-hello-world-tab-configure.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/setup/enableteamsandapps.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/setup/enableteamsandapps.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/setup_select_teams.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/setup_select_teams.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/setup_services.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/setup_services.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/store-upload-a-custom-app.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/store-upload-a-custom-app.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/submission/sdapptype.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/submission/sdapptype.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/submission/sdblockregions.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/submission/sdblockregions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/submission/sddetails.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/submission/sddetails.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/submission/sdoverviewcrop.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/submission/sdoverviewcrop.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/submission/sdpricing.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/submission/sdpricing.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/submission/sdregions.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/submission/sdregions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/submission/sellerdashboardaddapp.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/submission/sellerdashboardaddapp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/submission/sellerdashboardofficeentry.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/submission/sellerdashboardofficeentry.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/tab_configui.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/tab_configui.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/tab_content.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/tab_content.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/tab_example.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/tab_example.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/tab_gallery.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/tab_gallery.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/tab_removal.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/tab_removal.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/tab_settings.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/tab_settings.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/tabs/config-dialog-Contoso.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/tabs/config-dialog-Contoso.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/tabs/config-dialog-Contoso2.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/tabs/config-dialog-Contoso2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/tabs_in_bot.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/tabs_in_bot.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/viewteam.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/viewteam.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/icons/1.svg",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/icons/1.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/icons/2.svg",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/icons/2.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/icons/3.svg",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/icons/3.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/icons/4.svg",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/icons/4.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/icons/5.svg",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/icons/5.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/icons/6.svg",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/icons/6.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/icons/7.svg",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/icons/7.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/icons/cta-arrow.svg",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/icons/cta-arrow.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/icons/download.svg",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/icons/download.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/icons/favicon-16x16.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/icons/favicon-16x16.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/icons/favicon-32x32.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/icons/favicon-32x32.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/icons/favicon-96x96.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/icons/favicon-96x96.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/icons/get-code.svg",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/icons/get-code.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/icons/menu.svg",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/icons/menu.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/icons/pro-tip-icon-old.svg",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/icons/pro-tip-icon-old.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/icons/pro-tip-icon.svg",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/icons/pro-tip-icon.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/icons/resources_community.svg",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/icons/resources_community.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/icons/resources_developer-platform.svg",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/icons/resources_developer-platform.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/icons/resources_help.svg",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/icons/resources_help.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/icons/see-example.svg",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/icons/see-example.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/icons/social_facebook.svg",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/icons/social_facebook.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/icons/social_linkedin.svg",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/icons/social_linkedin.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/icons/social_twitter.svg",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/icons/social_twitter.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/Cards/adaptivecard.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/Cards/adaptivecard.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/Cards/carousel.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/Cards/carousel.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/Cards/list.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/Cards/list.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/Cards/o365connector.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/Cards/o365connector.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/Cards/thumbnail.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/Cards/thumbnail.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/Command-box-rest-state.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/Command-box-rest-state.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/Command-box-zoomed-app-state.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/Command-box-zoomed-app-state.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/Command-box-zoomed-suggestions.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/Command-box-zoomed-suggestions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/Command-box-zoomed-well.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/Command-box-zoomed-well.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/Connectors/connector_dashboard.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/Connectors/connector_dashboard.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/Connectors/connector_dialog_uploaded.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/Connectors/connector_dialog_uploaded.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/Connectors/connector_message.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/Connectors/connector_message.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/Connectors/teams-context-menu.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/Connectors/teams-context-menu.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/ManageTeam.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/ManageTeam.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/Personal-apps-App-flyout.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/Personal-apps-App-flyout.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/Personal-apps-Bot.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/Personal-apps-Bot.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/Personal-apps-MY-tab.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/Personal-apps-MY-tab.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/Personal-apps-Recent-tab.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/Personal-apps-Recent-tab.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/UploadACustomApp.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/UploadACustomApp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/activity-feed/activity_feed.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/activity-feed/activity_feed.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/appbar_apps_flyout.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/appbar_apps_flyout.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/authentication/AddPlatform.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/authentication/AddPlatform.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/authentication/AppRegistration.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/authentication/AppRegistration.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/authentication/Platforms.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/authentication/Platforms.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/authentication/bot_auth_sequence_diagram.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/authentication/bot_auth_sequence_diagram.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/authentication/tab_auth_sequence_diagram.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/authentication/tab_auth_sequence_diagram.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/bot_add_to_team.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/bot_add_to_team.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/bot_example.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/bot_example.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/botinlist.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/botinlist.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/bots/associating_contexts.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/bots/associating_contexts.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/bots/bf-migrate-bot-to-azure.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/bots/bf-migrate-bot-to-azure.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/bots/bfpublish.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/bots/bfpublish.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/bots/bfregister.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/bots/bfregister.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/bots/bot-file-consent-card.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/bots/bot-file-consent-card.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/bots/bot-menus-bot-menu-sample.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/bots/bot-menus-bot-menu-sample.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/bots/botdisable.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/bots/botdisable.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/bots/botmenu.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/bots/botmenu.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/bots/botmenusmall.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/bots/botmenusmall.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/bots_appid_botframework.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/bots_appid_botframework.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/bots_carouselexample.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/bots_carouselexample.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/bots_herocarexample.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/bots_herocarexample.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/bots_listexample.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/bots_listexample.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/bots_o365connectorcardexample.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/bots_o365connectorcardexample.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/bots_thumbnailexample.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/bots_thumbnailexample.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/bots_uploading.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/bots_uploading.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_buttons_Links.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_buttons_Links.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_buttons_card.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_buttons_card.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_buttons_cardstates.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_buttons_cardstates.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_buttons_dialog.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_buttons_dialog.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_buttons_icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_buttons_icon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_buttons_icontext.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_buttons_icontext.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_buttons_others.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_buttons_others.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_buttons_roundedcorners.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_buttons_roundedcorners.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_buttons_states.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_buttons_states.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_buttons_style.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_buttons_style.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_color_appblack_UI.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_color_appblack_UI.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_color_appblack_text.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_color_appblack_text.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_color_darkblackramp.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_color_darkblackramp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_color_darkcolors.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_color_darkcolors.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_color_light_other.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_color_light_other.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_color_light_ramp.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_color_light_ramp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_color_lightblackramp.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_color_lightblackramp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_color_lightcolors.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_color_lightcolors.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_darktheme.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_darktheme.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_dialogs_buttons.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_dialogs_buttons.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_dialogs_padding.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_dialogs_padding.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_dialogs_scrolling.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_dialogs_scrolling.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_dialogs_sizes.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_dialogs_sizes.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_dialogs_typography.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_dialogs_typography.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_fields_paddingSize.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_fields_paddingSize.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_fields_states.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_fields_states.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_fields_typography.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_fields_typography.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_flyouts.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_flyouts.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_flyouts_scrolling.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_flyouts_scrolling.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/components/componentAssets_flyouts_sizepadding.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/components/componentAssets_flyouts_sizepadding.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/compose-extensions/ceentry.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/compose-extensions/ceentry.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/compose-extensions/ceexample.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/compose-extensions/ceexample.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/compose-extensions/ceflow.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/compose-extensions/ceflow.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/compose-extensions/ceoverviewexample.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/compose-extensions/ceoverviewexample.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/compose-extensions/cesampleapp.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/compose-extensions/cesampleapp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/compose-extensions/cesearch.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/compose-extensions/cesearch.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/compose-extensions/cesuggest.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/compose-extensions/cesuggest.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/compose-extensions/compose-extension-list.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/compose-extensions/compose-extension-list.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/compose-extensions/compose-extension-more-options.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/compose-extensions/compose-extension-more-options.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/compose-extensions/compose-extension-right-click-pin.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/compose-extensions/compose-extension-right-click-pin.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/compose-extensions/compose-extension-settings-menu-item.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/compose-extensions/compose-extension-settings-menu-item.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/congratulationsOutgoingWebHook.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/congratulationsOutgoingWebHook.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/connector_example.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/connector_example.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/connector_gallery.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/connector_gallery.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/connector_list.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/connector_list.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/connector_select.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/connector_select.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/createWebHook.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/createWebHook.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/developerpreview.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/developerpreview.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/01_framework_basics.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/01_framework_basics.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/02_framework_apps.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/02_framework_apps.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/03_framework_activity-feed.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/03_framework_activity-feed.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/03_framework_apps.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/03_framework_apps.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/04_framework_search.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/04_framework_search.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/05_framework_tabs.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/05_framework_tabs.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/06_framework_compose-extensions.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/06_framework_compose-extensions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/07_framework_bots.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/07_framework_bots.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/08_framework_cards.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/08_framework_cards.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/09_framework_submit.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/09_framework_submit.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_apps_flyout.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_apps_flyout.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_apps_my-view.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_apps_my-view.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_basics_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_basics_01.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_basics_02.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_basics_02.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_basics_03.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_basics_03.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_basics_04.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_basics_04.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_basics_05.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_basics_05.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_bots_avatar.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_bots_avatar.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_bots_notification.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_bots_notification.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_bots_tbot-help.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_bots_tbot-help.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_cards_anatomy.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_cards_anatomy.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_cards_bubble-merge.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_cards_bubble-merge.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_cards_carousel.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_cards_carousel.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_cards_digest.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_cards_digest.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_cards_hero.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_cards_hero.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_cards_list.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_cards_list.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_cards_sign-in.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_cards_sign-in.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_cards_thumbnail.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_cards_thumbnail.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_feed.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_feed.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_message-extentions_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_message-extentions_01.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_message-extentions_02.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_message-extentions_02.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_message-extentions_03.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_message-extentions_03.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_search.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_search.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_submit_gallery.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_submit_gallery.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_submit_icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_submit_icon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_submit_profile.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_submit_profile.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_tabs_canvas.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_tabs_canvas.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_tabs_column.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_tabs_column.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_tabs_grid.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_tabs_grid.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_tabs_illustration_canvas.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_tabs_illustration_canvas.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_tabs_illustration_columns.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_tabs_illustration_columns.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_tabs_illustration_grid.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_tabs_illustration_grid.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_tabs_illustration_list.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_tabs_illustration_list.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/framework_tabs_list.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/framework_tabs_list.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/guidelines_bots_table_class-clown.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/guidelines_bots_table_class-clown.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/guidelines_bots_table_class-clown_mobile.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/guidelines_bots_table_class-clown_mobile.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/guidelines_bots_table_no-personality.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/guidelines_bots_table_no-personality.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/guidelines_bots_table_no-personality_mobile.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/guidelines_bots_table_no-personality_mobile.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/guidelines_bots_table_smile-emoij.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/guidelines_bots_table_smile-emoij.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/guidelines_bots_table_unflappable-librarian.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/guidelines_bots_table_unflappable-librarian.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/guidelines_bots_table_unflappable-librarian_mobile.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/guidelines_bots_table_unflappable-librarian_mobile.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/guidelines_bots_table_user-input.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/guidelines_bots_table_user-input.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/guidelines_bots_table_user-input_mobile.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/guidelines_bots_table_user-input_mobile.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/framework/illustration-placeholder.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/framework/illustration-placeholder.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/freshdesk.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/freshdesk.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/01_homepage_immersive-experience.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/01_homepage_immersive-experience.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/02_homepage_tabs-and-conversations.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/02_homepage_tabs-and-conversations.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/03_homepage_cards.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/03_homepage_cards.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/04_homepage_bots.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/04_homepage_bots.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/05_homepage_instant-notifications.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/05_homepage_instant-notifications.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/06_homepage_compose-extensions.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/06_homepage_compose-extensions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/Asana.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/Asana.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/Blueprints.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/Blueprints.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/Coffecup.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/Coffecup.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/Eraser.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/Eraser.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/Github.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/Github.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/Hootsuite.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/Hootsuite.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/Intercom.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/Intercom.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/MathCompass.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/MathCompass.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/Meekan.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/Meekan.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/Pencil.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/Pencil.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/Pin.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/Pin.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/Polly.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/Polly.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/PublishToAzure1.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/PublishToAzure1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/PublishToAzure2.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/PublishToAzure2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/PublishToAzure3.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/PublishToAzure3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/PublishToAzure4.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/PublishToAzure4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/PublishToAzure5.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/PublishToAzure5.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/Ruler.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/Ruler.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/Sapho.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/Sapho.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/Smartsheet.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/Smartsheet.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/StoreAppStudio.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/StoreAppStudio.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/StoreIcon.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/StoreIcon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/StoreTeamsAppStudio(Preview).png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/StoreTeamsAppStudio(Preview).png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/TeamsAppStudio(Preview).png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/TeamsAppStudio(Preview).png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/TeamsAppStudio.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/TeamsAppStudio.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/Trello.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/Trello.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/Wrike.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/Wrike.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/Zendesk.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/Zendesk.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/azure-cloud-shell.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/azure-cloud-shell.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/control-library-button.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/control-library-button.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/gettingstarted-integrations-large.svg",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/gettingstarted-integrations-large.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/teamsAppStudioConfiguration.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/teamsAppStudioConfiguration.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/get-started/visual-studio.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/get-started/visual-studio.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/go-to-website-icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/go-to-website-icon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/icons/appbarhomescreen.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/icons/appbarhomescreen.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/icons/botandchiclet.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/icons/botandchiclet.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/icons/contosoicons.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/icons/contosoicons.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/icons/flyout.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/icons/flyout.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/icons/sample20x20s.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/icons/sample20x20s.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/landing-page/team-services-get-started.svg",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/landing-page/team-services-get-started.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/landing-page/team-services-immersive-experiences.svg",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/landing-page/team-services-immersive-experiences.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/landing-page/team-services-introduction.svg",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/landing-page/team-services-introduction.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/landing-page/team-services-sdk.svg",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/landing-page/team-services-sdk.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/outgoingwebhook.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/outgoingwebhook.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/publicpreview.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/publicpreview.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/samples-hello-world-bot.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/samples-hello-world-bot.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/samples-hello-world-messaging-extensions-menu.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/samples-hello-world-messaging-extensions-menu.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/samples-hello-world-messaging-extensions-result.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/samples-hello-world-messaging-extensions-result.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/samples-hello-world-messaging-extensions-send.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/samples-hello-world-messaging-extensions-send.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/samples-hello-world-tab-configure.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/samples-hello-world-tab-configure.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/setup/enableteamsandapps.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/setup/enableteamsandapps.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/setup_select_teams.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/setup_select_teams.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/setup_services.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/setup_services.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/store-upload-a-custom-app.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/store-upload-a-custom-app.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/submission/sdapptype.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/submission/sdapptype.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/submission/sdblockregions.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/submission/sdblockregions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/submission/sddetails.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/submission/sddetails.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/submission/sdoverviewcrop.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/submission/sdoverviewcrop.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/submission/sdpricing.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/submission/sdpricing.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/submission/sdregions.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/submission/sdregions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/submission/sellerdashboardaddapp.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/submission/sellerdashboardaddapp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/submission/sellerdashboardofficeentry.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/submission/sellerdashboardofficeentry.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/tab_configui.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/tab_configui.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/tab_content.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/tab_content.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/tab_example.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/tab_example.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/tab_gallery.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/tab_gallery.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/tab_removal.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/tab_removal.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/tab_settings.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/tab_settings.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/tabs/config-dialog-Contoso.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/tabs/config-dialog-Contoso.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/tabs/config-dialog-Contoso2.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/tabs/config-dialog-Contoso2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/tabs_in_bot.png",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/tabs_in_bot.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "msteams-platform/assets/images/viewteam.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "msteams-platform/assets/images/viewteam.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

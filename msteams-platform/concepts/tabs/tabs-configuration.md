@@ -1,4 +1,4 @@
-﻿---
+---
 title: Create a configuration page for your tab
 description: Describes how to create and use a configuration page in a tab
 keywords: teams tabs configuration
@@ -104,7 +104,7 @@ Use `microsoftTeams.settings.setSettings({entityId, contentUrl, suggestedTabName
   * You can use the `contentUrl` as the `entityId` if you wish.
 * The `contentUrl` is a required field that specifies the URL of the content Microsoft Teams should host in the tab.
   * Be sure you have added the `contentUrl` domain to the `validDomains` element in the tab manifest file. For more information, see [Microsoft Teams tab schema](~/resources/schema/manifest-schema) and [Redirecting across domains within a Microsoft Teams tab](~/concepts/tabs/cross-domain).
-*  The other parameters further customize how your tab works in Microsoft Teams:
+* The other parameters further customize how your tab works in Microsoft Teams:
   * The optional `suggestedTabName` parameter sets the initial tab name. Users can rename the tab. The default value is the name specified in the manifest.
   * The optional `websiteUrl` parameter sets where the user is taken if they choose the **Go to website** button. Typically, this is a link to the same content as displayed on the tab, but within your main web app with its regular chrome and navigation.
   * The optional `removeUrl` parameter sets the URL for your [removal options page](~/concepts/tabs/tabs-update-remove#removing-a-tab).

@@ -37,12 +37,12 @@ The query parameters are:
 
 * `appId`&emsp;The ID from your manifest; for example, "fe4a8eba-2a31-4737-8e33-e5fae6fee194"
 * `entityId`&emsp;The ID for the item in the tab, which you provided when [configuring the tab](~/concepts/tabs/tabs-configuration); for example, "tasklist123"
-* `entityWebUrl` or `subEntityWebUrl`&emsp;An optional field with a fallback URL to use if the client does not support rendering the tab; for example, "https://tasklist.example.com/123" or "https//tasklist.example.com/list123/task456"
+* `entityWebUrl` or `subEntityWebUrl`&emsp;An optional field with a fallback URL to use if the client does not support rendering the tab; for example, "<https://tasklist.example.com/123>" or "https//tasklist.example.com/list123/task456"
 * `entityLabel` or `subEntityLabel`&emsp;A label for the item in your tab, to use when displaying the deep link; for example, "Task List 123" or "Task 456"
 * `context`&emsp;A JSON object containing the following fields:
-    * `subEntityId`&emsp;An ID for the item _within_ the tab; for example, "task456"
-    * `canvasUrl`&emsp;The URL to load in the tab (same as the `contentUrl` you provided when [configuring the tab](~/concepts/tabs/tabs-configuration)); for example, "https://tab.tasklist.example.com/123"
-    * `channelId`&emsp;The Microsoft Teams channel ID (available from the tab [context](~/concepts/tabs/tabs-context)); for example, "19:cbe3683f25094106b826c9cada3afbe0@thread.skype". This property is only available in configurable tabs with a scope of "team". It is not available in static tabs, which have a scope of "personal".
+  * `subEntityId`&emsp;An ID for the item _within_ the tab; for example, "task456"
+  * `canvasUrl`&emsp;The URL to load in the tab (same as the `contentUrl` you provided when [configuring the tab](~/concepts/tabs/tabs-configuration)); for example, "<https://tab.tasklist.example.com/123>"
+  * `channelId`&emsp;The Microsoft Teams channel ID (available from the tab [context](~/concepts/tabs/tabs-context)); for example, "19:cbe3683f25094106b826c9cada3afbe0@thread.skype". This property is only available in configurable tabs with a scope of "team". It is not available in static tabs, which have a scope of "personal".
 
 > [!NOTE]
 > `canvasUrl` is required but isn't currently used; it is reserved for future use.

@@ -80,7 +80,7 @@ If the app contains tabs, users can pin them to any channel on the team using th
 
 4. Configure your tab via its [configuration page](~/concepts/tabs/tabs-configuration) and choose *Save*.
 
-  ![The Add a tab dialog box, featuring a gallery of available tabs](~/assets/images/tab_gallery.png)
+   ![The Add a tab dialog box, featuring a gallery of available tabs](~/assets/images/tab_gallery.png)
 
 ## Accessing your uploaded bot
 
@@ -100,7 +100,7 @@ With the app loaded in the team, users can set up a Connector on any channel in 
 
 3. Configure your Connector via its [configuration page](~/concepts/connectors/connectors) and choose *Save*.
 
-  ![The Add a tab dialog box, featuring a gallery of available tabs.](~/assets/images/connector_gallery.png)
+   ![The Add a tab dialog box, featuring a gallery of available tabs.](~/assets/images/connector_gallery.png)
 
 ## Accessing your uploaded messaging extension
 

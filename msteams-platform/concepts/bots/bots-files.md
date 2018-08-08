@@ -39,6 +39,7 @@ When a user sends a file to your bot, the file is first uploaded to the user's O
 ```
 
 The following table describes the content properties of the attachment:
+
 | Property | Purpose |
 | --- | --- |
 | `downloadUrl` | OneDrive URL for fetching the content of the file. You can issue an `HTTP GET` directly from this URL. |
@@ -80,6 +81,7 @@ This message contains a simple attachment object requesting user permission to u
 ```
 
 +The following table describes the content properties of the attachment:
+
 | Property | Purpose |
 | --- | --- |
 | `description` | Description of the file. May be shown to the user to describe its purpose or to summarize its content. |
@@ -148,6 +150,7 @@ After uploading a file to the user's OneDrive, whether you use the mechanism des
 ```
 
 The following table describes the content properties of the attachment: 
+
 | Property | Purpose |
 | --- | --- |
 | `uniqueId` | OneDrive/SharePoint drive item ID. |

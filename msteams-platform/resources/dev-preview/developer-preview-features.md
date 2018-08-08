@@ -69,7 +69,6 @@ All events sent to your bot have been updated to have a new `conversationType` f
         "conversationType": "groupChat",
         "isGroup": true,
     },
-
 ```
 
 * If `conversationType` is `groupChat` or `channel`, then the `isGroup` field is included and set to true for backwards compatibility

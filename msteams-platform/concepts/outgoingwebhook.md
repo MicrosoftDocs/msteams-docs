@@ -37,7 +37,7 @@ Click **Create** and the outgoing webhook will be made available in the current 
 
 ## Interacting with the outgoing webhook
 
-Once you add an outgoing webhook to the team, it looks and behaves just like a bot, so it’s easy for users to interact with. It listens for messages using **@mention** with the webhook name and can respond with rich messages, including images and cards.
+Once you add an outgoing webhook to the team, it looks and behaves just like a bot, so it’s easy for users to interact with. It listens for messages using <strong>@mention</strong> with the webhook name and can respond with rich messages, including images and cards.
 
 ## Receiving and responding to messages
 
@@ -47,7 +47,7 @@ Your service will receive messages in the standard Microsoft bot messaging schem
 
 You can optionally use the existing Bot Framework client SDKs to simplify parsing and handling messages.
 
-Users must **@mention** the outgoing webhook for it to receive messages.
+Users must <strong>@mention</strong> the outgoing webhook for it to receive messages.
 
 #### Example inbound message
 
