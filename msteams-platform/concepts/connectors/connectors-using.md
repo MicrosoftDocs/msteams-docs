@@ -164,7 +164,7 @@ The following steps use [cURL](https://curl.haxx.se/). We assume that you have t
 1. From the command line, enter the following cURL command:
 
    ```bash
-   curl -H "Content-Type: application/json" -d "{\"text\": \"Hello World!\"}" <YOUR WEBHOOK URL>
+   curl -H "Content-Type: application/json" -d "{\"text\": \"Hello World\"}" <YOUR WEBHOOK URL>
    ```
 
 2. If the POST succeeds, you should see a simple **1** output by `curl`.

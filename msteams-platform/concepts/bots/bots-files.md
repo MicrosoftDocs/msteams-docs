@@ -10,6 +10,12 @@ Your bot can send and receive files with users in the personal context. You can 
 
 One way of sending files is using the Microsoft Graph APIs for [OneDrive and SharePoint](https://docs.microsoft.com/en-us/onedrive/developer/rest-api/). This method requires obtaining ongoing access to the user's OneDrive folder through the standard OAuth2 authorization flow. This documentation describes a simple alternative mechanism if you only need to send file content as a result of direct user interaction, e.g. sending a message. This API is provided as part of the Microsoft Teams Bot Platform.
 
+## Configure your bot to support files
+
+In order to send and receive files in your bot, you have to set the `supportsFiles` property in the manifest to true. This property is described in the [bots](~/resources/schema/manifest-schema#bots) section of the Manifest reference.
+
+The definition will look like this: `"supportsFiles": true`. If your bot does not enable `supportFiles`, the following features will not work.
+
 ## Receiving files in personal chat
 
 When a user sends a file to your bot, the file is first uploaded to the user's OneDrive for Business storage. Your bot will then receive a message activity notifying you of the user upload. The activity will contain file metadata, such as its name and the content URL. You can directly read from this URL to fetch its binary content.
