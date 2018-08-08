@@ -37,7 +37,7 @@ With this as a simple example, let's walk through the steps your configuration p
   <input type="radio" name="maptype" value="google" onclick="onClick()"> Google Maps
 </form> 
 
-<script src="https://statics.teams.microsoft.com/sdk/v1.0/js/MicrosoftTeams.min.js"></script>
+<script src="node_modules/@microsoft/teams-js@1.3.3/dist/MicrosoftTeams.min.js"></script>
  
 <script type="text/javascript">  
 
