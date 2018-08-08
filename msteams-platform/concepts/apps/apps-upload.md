@@ -98,7 +98,7 @@ With the app loaded in the team, users can set up a Connector on any channel in 
 
 2. Select your Connector from the **Uploaded** section at the bottom.
 
-3. Configure your Connector via its [configuration page](~/concepts/connectors) and choose *Save*.
+3. Configure your Connector via its [configuration page](~/concepts/connectors/connectors) and choose *Save*.
 
   ![The Add a tab dialog box, featuring a gallery of available tabs.](~/assets/images/connector_gallery.png)
 

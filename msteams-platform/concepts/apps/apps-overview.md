@@ -14,7 +14,7 @@ An app in Teams consists of the following parts:
 
 * [Tabs](~/concepts/tabs/tabs-overview)
 * [Bots](~/concepts/bots/bots-overview)
-* [Connectors](~/concepts/connectors)
+* [Connectors](~/concepts/connectors/connectors)
 * [Messaging extensions](~/concepts/compose-extensions)
 * [Activity feed integrations](~/concepts/activity-feed)
 * [Outgoing web hooks](~/concepts/outgoingwebhook.md)

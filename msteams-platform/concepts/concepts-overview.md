@@ -2,7 +2,7 @@
 title: Concepts
 description: Describes the core functions of Microsoft Teams apps
 keywords: apps concepts teams overview
-msdate: 03/29/2018
+msdate: 08/07/2018
 ---
 # Concepts
 
@@ -20,7 +20,7 @@ In these topics, you'll find the information you need to bring your apps to life
 | [**Cards**](~/concepts/cards/cards) | How to use cards in bots, connectors and messaging extensions.|
 | [**Authentication**](~/concepts/authentication) | Learn how authentication and authorization work in Teams. |
 | [**Activity feed**](~/concepts/activity-feed) | The activity feed is the user's single inbox for all activity across Teams. The feed aggregates important content from many sources. |
-| [**Connectors**](~/concepts/connectors) | Use Office 365 Connectors to push your app's rich content into Microsoft Teams. |
+| [**Connectors**](~/concepts/connectors/connectors) | Use Office 365 Connectors to push your app's rich content into Microsoft Teams. |
 | [**Notification only bots**](~/concepts/bots/bots-notification-only) | How to write bots that only send messages using the `isNotificationOnly` field in the app manifest. |
 | [**Messaging extensions**](~/concepts/messaging-extensions) | Let users query for information from your service and post that information, in the form of rich cards, right into the channel conversation. |
 | [**Outgoing webhooks**](~/concepts/outgoingwebhook) | Outgoing webhooks are an easy way to connect to your service without going through the full process of creating a bot. |

@@ -2,7 +2,7 @@
 title: What's new
 description: Describes all the new developer features in Microsoft Teams
 keywords: teams what's new latest
-ms.date: 07/23/2018
+ms.date: 08/07/2018
 ---
 # What's new for developers in Microsoft Teams
 
@@ -12,6 +12,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | - | - | - |
+| 08/07/2018 | Inline configuration is now supported in Connectors. The Connectors documentation has also been revised and expanded for clarity| [Connectors](~/concepts/connectors/connectors)|
 | 08/06/2018 | Your bot can now send and receive files.| [Send and receive files through your bot](~/concepts/bots/bots-files)|
 | 07/27/2018 | The developer preview now supports multiple commands in messaging extensions. | [Messaging extensions have been extended](~/resources/dev-preview/developer-preview-features)|
 | 07/23/2018 | Information about app re-certification has been added to the Publishing section. | [Updating your app](~/publishing/apps-publish#updating-your-app), [Manifest permissions](~/resources/schema/manifest-schema#permissions)|
