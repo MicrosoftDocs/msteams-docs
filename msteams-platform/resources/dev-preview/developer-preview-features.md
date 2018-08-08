@@ -9,13 +9,6 @@ ms.date: 08/06/2018
 When these features are out of developer preview this content will be merged into the live doc set.
 The developer preview includes the following new features:
 
-## Messaging extensions have been extended to support more than one command
-
-In developer preview, you can now use more than one command in a messaging extension.  You are now limited to 10 commands.  This changes the `commands` array in `composeExtensions` to support more than one command.
-
-The manifest version for this feature is:
-`"manifestVersion": "1.3"`.
-
 ## Adaptive Cards
 
 See Adaptive Cards: [Adaptive card](~/concepts/cards/cards-reference#adaptive-card-supported-in-developer-preview-only), [Adaptive card actions in Teams](~/concepts/cards/cards-actions#adaptive-card-actions-supported-in-developer-preview-only) for more details.

@@ -327,7 +327,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 
 ### composeExtensions.commands
 
-Your messaging extension should declare one or more commands. Each command appears in Microsoft Teams as a potential interaction from the UI-based entry point.
+Your messaging extension should declare one or more commands. Each command appears in Microsoft Teams as a potential interaction from the UI-based entry point. There is a maximum of 10 commands.
 
 Each command item is an object with the following structure:
 
