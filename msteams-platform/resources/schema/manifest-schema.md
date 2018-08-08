@@ -323,7 +323,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 |---|---|---|---|---|
 |`botId`|String|64|✔|The unique Microsoft app ID for the bot that backs the messaging extension, as registered with the Bot Framework. This may well be the same as the overall [app ID](#id).|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a messaging extension can be updated by the user. The default is `false`.|
-|`commands`|Array of object|1|✔|Array of commands the messaging extension supports|
+|`commands`|Array of object|10|✔|Array of commands the messaging extension supports|
 
 ### composeExtensions.commands
 
