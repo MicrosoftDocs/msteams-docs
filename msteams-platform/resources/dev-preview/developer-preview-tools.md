@@ -18,12 +18,12 @@ To use it, first open up a tab so you have something to inspect with the DevTool
 
 On Windows, you open DevTools via the Microsoft Teams icon in the desktop tray:
 
-Screenshot
+![Right-click to open DevTools](~/assets/images/dev-preview/devtools-right-click.png)
 
-On MacOS, you open DevTools by clicking on the Microsoft Teams icon in the Dock:
-
-Screenshot
+On MacOS, you open DevTools by clicking on the Microsoft Teams icon in the Dock.
 
 Here’s what a sample tab looks like with the DevTools open and an element selected:
+
+![Tab and DevTools](~/assets/images/dev-preview/tab-and-devtools.png)
 
 While this feature is live worldwide today, you may have to quit and restart Microsoft Teams to use it (I did). You’ll only have to do this once, if you have to do it at all.
