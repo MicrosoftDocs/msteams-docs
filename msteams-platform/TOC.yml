@@ -156,7 +156,8 @@
       href: ./resources/dev-preview/developer-preview
     - name: Features in Developer Preview
       href: ./resources/dev-preview/developer-preview-features
-    - name: ./resources/dev-preview/developer-preview-tools
+    - name: Using DevTools in the Client
+      href: ./resources/dev-preview/developer-preview-tools
   - name: Design guidelines
     href: ./resources/design/overview
     items:
