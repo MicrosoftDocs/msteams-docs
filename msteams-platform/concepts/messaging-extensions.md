@@ -277,8 +277,6 @@ The result list is displayed in the Microsoft Teams UI with a preview of each it
 * Using the `preview` property within the `attachment` object.
 * Extracted from the basic `title`, `text`, and `image` properties of the attachment. These are used only if the `preview` property is not set and these properties are available.
 
-An adaptive card must have a preview property set to hero or thumbnail so that it can be rendered properly.
-
 #### Response example
 
 ```json
