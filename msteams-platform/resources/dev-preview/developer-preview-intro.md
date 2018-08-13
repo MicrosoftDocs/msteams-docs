@@ -14,3 +14,5 @@ Features included in preview may not be complete and may undergo changes before 
 [How do I get access?](~/resources/dev-preview/developer-preview)
 
 [What are the features in Developer Preview?](~/resources/dev-preview/developer-preview-features)
+
+[DevTools for the Microsoft Teams Desktop Client](~/resources/dev-preview/developer-preview-tools)
