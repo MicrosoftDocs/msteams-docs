@@ -8,8 +8,12 @@ ms.date: 08/06/2018
 
 There are two ways to send files to and from a bot:
 
-* Using the Microsoft Graph APIs. This method works for bots in all contexts in Teams: `personal`, `channel` or `group`.
-* Using the Teams APIs. These only support files in the `personal` context.
+* Using the Microsoft Graph APIs. This method works for bots in all contexts in Teams:
+  * `personal`
+  * `channel`
+  * `group`
+* Using the Teams APIs. These only support files in one context:
+  * `personal`
 
 ## Using the Microsoft Graph APIs
 
