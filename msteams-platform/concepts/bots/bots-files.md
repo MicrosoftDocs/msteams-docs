@@ -2,7 +2,7 @@
 title: Sending and receiving files from a bot
 description: Describes how to send and receive files from a bot
 keywords: teams bots files send receive
-ms.date: 08/06/2018
+ms.date: 08/14/2018
 ---
 # Send and receive files through your bot
 
@@ -17,9 +17,9 @@ There are two ways to send files to and from a bot:
 
 ## Using the Microsoft Graph APIs
 
-You can post messages with card attachments referencing existing SharePoint files using the Microsoft Graph APIs for [OneDrive and SharePoint](https://docs.microsoft.com/en-us/onedrive/developer/rest-api/). Using the Graph APIs requires obtaining ongoing access to the user's OneDrive folder through the standard OAuth2 authorization flow. This method works in all teams contexts.
+You can post messages with card attachments referencing existing SharePoint files using the Microsoft Graph APIs for [OneDrive and SharePoint](https://docs.microsoft.com/en-us/onedrive/developer/rest-api/). Using the Graph APIs requires obtaining access to a user's OneDrive folder (for `personal` and `group` files) or the files in a team's channels (for `channel` files) through the standard OAuth2 authorization flow. This method works in all Teams contexts.
 
-## Using the Teams APIs
+## Using the Teams Bot APIs
 
 > [!NOTE]
 > This method works only in the `personal` context. It does not work in the `channel` or `group` context.
