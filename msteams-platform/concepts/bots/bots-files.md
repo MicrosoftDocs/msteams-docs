@@ -11,18 +11,18 @@ There are two ways to send files to and from a bot:
 * Using the Microsoft Graph APIs. This method works for bots in all contexts in Teams:
   * `personal`
   * `channel`
-  * `group`
+  * `groupchat`
 * Using the Teams APIs. These only support files in one context:
   * `personal`
 
 ## Using the Microsoft Graph APIs
 
-You can post messages with card attachments referencing existing SharePoint files using the Microsoft Graph APIs for [OneDrive and SharePoint](https://docs.microsoft.com/en-us/onedrive/developer/rest-api/). Using the Graph APIs requires obtaining access to a user's OneDrive folder (for `personal` and `group` files) or the files in a team's channels (for `channel` files) through the standard OAuth2 authorization flow. This method works in all Teams contexts.
+You can post messages with card attachments referencing existing SharePoint files using the Microsoft Graph APIs for [OneDrive and SharePoint](https://docs.microsoft.com/en-us/onedrive/developer/rest-api/). Using the Graph APIs requires obtaining access to a user's OneDrive folder (for `personal` and `groupchat` files) or the files in a team's channels (for `channel` files) through the standard OAuth2 authorization flow. This method works in all Teams contexts.
 
 ## Using the Teams Bot APIs
 
 > [!NOTE]
-> This method works only in the `personal` context. It does not work in the `channel` or `group` context.
+> This method works only in the `personal` context. It does not work in the `channel` or `groupchat` context.
 
 Your bot can directly send and receive files with users in the `personal` context, also known as personal chats, using Teams APIs. This lets you implement expense reporting, image recognition, file archival, e-signatures, and other scenarios involving direct manipulation of file content. Files shared in Teams typically appear as cards, and allow rich in-app viewing.
 
