@@ -2,7 +2,7 @@
 title: Send and receive messages with a bot
 description: Describes how to send and receive messages with bots in Microsoft Teams
 keywords: teams bots messages
-ms.date: 03/29/2018
+ms.date: 08/15/2018
 ---
 # Have a conversation with a Microsoft Teams bot
 
@@ -121,12 +121,13 @@ When interacting in a channel, your bot should be smart about taking certain con
     "textFormat": "plain",
     "text": "Hello Teams TestBot",
     "entities": [
-        {
-            "type": "clientInfo",
-            "locale": "en-US",
-            "country": "US",
-            "platform": "Windows"
-        }
+      { 
+        locale: "en-US",
+        country: "US",
+        platform: "Windows",
+        timezone: "America/Los_Angeles",
+        type: "clientInfo" 
+      }
     ],
     "channelData": {
         "tenant": {

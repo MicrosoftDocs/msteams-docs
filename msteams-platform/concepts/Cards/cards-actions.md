@@ -2,7 +2,7 @@
 title: Add card actions in a bot
 description: Describes card actions in Microsoft Teams and how to use them in your bots
 keywords: teams bots cards actions
-ms.date: 04/16/2018
+ms.date: 08/15/2018
 ---
 # Card actions
 
@@ -95,11 +95,12 @@ The `value` property can be either a serialized JSON string or a JSON object.
       "name":"MyBot"
    },
    "entities":[
-      {
-         "locale":"en-US",
-         "country":"US",
-         "platform":"Windows",
-         "type":"clientInfo"
+      { 
+        locale: "en-US",
+        country: "US",
+        platform: "Windows",
+        timezone: "America/Los_Angeles",
+        type: "clientInfo" 
       }
    ],
    "channelData":{
