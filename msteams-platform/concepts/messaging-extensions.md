@@ -232,12 +232,12 @@ The request parameters itself are found in the value object, which includes the 
     "name": "TheComposeExtensionDev"
   },
   "entities": [
-    { 
+    {
       locale: "en-US",
       country: "US",
       platform: "Windows",
       timezone: "America/Los_Angeles",
-      type: "clientInfo" 
+      type: "clientInfo"
     }
   ]
 }
