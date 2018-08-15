@@ -2,7 +2,7 @@
 title: Cards Reference
 description: Describes all the cards and card actions available to bots in Teams
 keywords: bots cards reference
-ms.date: 03/29/2018
+ms.date: 08/15/2018
 ---
 # Cards Reference
 
@@ -234,13 +234,13 @@ A card that typically contains a single large image, one or more buttons, and te
 {
   "contentType": "application/vnd.microsoft.card.hero",
   "content": {
-    "title": "Bender Bending RodrÃ­guez",
+    "title": "Bender Bending Rodríguez",
     "subtitle": "Main character in the animated television series Futurama",
-    "text": "Bender Bending RodrÃ­guez is a main character in the animated television series Futurama. He was created by series creators Matt Groening and David X. Cohen, and is voiced by John DiMaggio",
+    "text": "Bender Bending Rodríguez is a main character in the animated television series Futurama. He was created by series creators Matt Groening and David X. Cohen, and is voiced by John DiMaggio",
     "images": [
       {
         "url": "http://cdn.overclock.net/7/72/72f33e5f_greybender.png",
-        "alt": "Bender_Rodriguez"
+        "alt": "Bender Rodríguez"
       }
     ],
     "buttons": [
@@ -553,11 +553,11 @@ A card that typically contains a single thumbnail image, one or more buttons, an
   "content": {
     "title": "Bender",
     "subtitle": "tale of a robot who dared to love",
-    "text": "Bender Bending RodrÃ­guez is a main character in the animated television series Futurama. He was created by series creators Matt Groening and David X. Cohen, and is voiced by John DiMaggio",
+    "text": "Bender Bending Rodríguez is a main character in the animated television series Futurama. He was created by series creators Matt Groening and David X. Cohen, and is voiced by John DiMaggio",
     "images": [
       {
         "url": "https://upload.wikimedia.org/wikipedia/en/a/a6/Bender_Rodriguez.png",
-        "alt": "Bender_Rodriguez"
+        "alt": "Bender Rodríguez"
       }
     ],
     "buttons": [
