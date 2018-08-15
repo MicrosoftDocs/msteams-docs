@@ -2,7 +2,7 @@
 title: Outgoing webhooks
 description: Describes how to create and use outgoing webhooks in Microsoft Teams
 keywords: teams bots custom
-ms.date: 04/19/2018
+ms.date: 08/15/2018
 ---
 # Outgoing webhooks in Microsoft Teams
 
@@ -76,26 +76,31 @@ Users must **@mention** the outgoing webhook for it to receive messages.
         "contentType": "text/html",
         "content": "<div><span contenteditable=\"false\" itemscope=\"\" itemtype=\"http://schema.skype.com/Mention\" itemid=\"0\">MyWebHook </span> Hello <span contenteditable=\"false\" itemscope=\"\" itemtype=\"http://schema.skype.com/Mention\" itemid=\"1\">Larry Brown </span></div>"
     }],
-    "entities": [{
+    "entities": [
+      {
         "type": "mention",
         "mentioned": {
             "id": "28:c9e8c047-2a74-40a2-b28a-b162d5f5327c", 
             "name": "MyWebHook"
         },
         "text": "<at>MyWebHook</at>"
-    }, {
+      },
+      {
         "type": "mention",
         "mentioned": {
             "id": "29:1jnFbZYs0qXMLH-O4S9-sDLNc3NVEIMWMnC-q0tVdEa-8BRosfojI35QdNoB-yW8iutWLJzHUm_mqEZSSU8si0Q",
             "name": "Larry Brown"
         },
         "text": "<at>Larry Brown</at>"
-    }, {
-        "type": "clientInfo",
-        "locale": "en-US",
-        "country": "US",
-        "platform": "Windows"
-    }],
+      },
+      { 
+        locale: "en-US",
+        country: "US",
+        platform: "Windows",
+        timezone: "America/Los_Angeles",
+        type: "clientInfo" 
+      }
+    ],
     "channelData": {
         "teamsChannelId": "19:253b1f341670408fb6fe51050b6e5ceb@thread.skype",
         "teamsTeamId": "19:712c61d0ef384e5fa681ba90ca943398@thread.skype"
