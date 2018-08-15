@@ -2,7 +2,7 @@
 title: What's new
 description: Describes all the new developer features in Microsoft Teams
 keywords: teams what's new latest
-ms.date: 08/07/2018
+ms.date: 08/15/2018
 ---
 # What's new for developers in Microsoft Teams
 
@@ -12,6 +12,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | - | - | - |
+| 08/15/2018 | Adaptive cards are now supported in Teams.| [Adaptive card](~/concepts/cards/cards-reference#adaptive-card), [Adaptive card actions in Teams](~/concepts/cards/cards-actions#adaptive-card-actions) |
 | 08/10/2018 | Client support for DevTools has been documented for Developer Preview.| [DevTools for the Microsoft Teams Desktop Client](~/resources/dev-preview/developer-preview-tools.md)|
 | 08/08/2018 | Messaging extensions now supports multiple commands. This feature has been in Developer Preview, and is now released to all users.| [composeExtensions.commands](~/resources/schema/manifest-schema#composeextensionscommands)|
 | 08/07/2018 | Inline configuration is now supported in Connectors. The Connectors documentation has also been revised and expanded for clarity| [Connectors](~/concepts/connectors/connectors)|
@@ -22,7 +23,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 | 07/12/2018 | Information on how to ensure your Teams app works on Microsoft Teams Free. | [How do I make my Teams app work with Microsoft Teams free?](~/troubleshoot/faq#how-do-i-make-my-teams-app-work-with-microsoft-teams-free)|
 | 06/07/2018 | Pre-release information for the Microsoft Teams Tenant App Catalog has been added. | [Publish your Microsoft Teams app](~/publishing/apps-publish)|
 | 05/31/2018 | The Teams developer preview (ring 3.6) has been updated to include the ability to add bots and tabs to group chat. | [Features in the developer preview](~/resources/dev-preview/developer-preview-features), [Developer preview schema](~/resources/schema/manifest-schema-dev-preview), [Featured code samples](~/samples/code-samples#featured)|
-| 05/29/2018 | Adaptive cards are now supported in Teams in the [developer preview](~/resources/dev-preview/developer-preview-intro)  | [Adaptive card](~/concepts/cards/cards-reference#adaptive-card-supported-in-developer-preview-only), [Adaptive card actions in Teams](~/concepts/cards/cards-actions#adaptive-card-actions-supported-in-developer-preview-only) |
+| 05/29/2018 | Adaptive cards are now supported in Teams in the [developer preview](~/resources/dev-preview/developer-preview-intro)  | [Adaptive card](~/concepts/cards/cards-reference#adaptive-card), [Adaptive card actions in Teams](~/concepts/cards/cards-actions#adaptive-card-actions) |
 | 05/29/2018 | If you are using the [developer preview](~/resources/dev-preview/developer-preview-intro), your bot can now send and receive files.| [Send and receive files through your bot](~/concepts/bots/bots-files), [Features in the Public Developer Preview for Microsoft Teams](~/resources/dev-preview/developer-preview-features)|
 | 05/02/2018 | The app logo image used to identify your app in AppSource has been changed to 300 by 300 pixels.| [Checklist for Seller Dashboard submission](~/publishing/office-store-checklist), [Use the Seller Dashboard to submit your Microsoft Teams app](~/publishing/office-store-guidance)|| 05/02/2018 | The app logo image used to identify your app in AppSource has been changed to 300 by 300 pixels.| [Checklist for Seller Dashboard submission](~/publishing/office-store-checklist), [Use the Seller Dashboard to submit your Microsoft Teams app](~/publishing/office-store-guidance)|| 05/02/2018 | The app logo image used to identify your app in AppSource has been changed to 300 by 300 pixels.| [Checklist for Seller Dashboard submission](~/publishing/office-store-checklist), [Use the Seller Dashboard to submit your Microsoft Teams app](~/publishing/office-store-guidance)|
 | 04/17/2018 | replyToID has been added to the payload for the `Invoke` and `MessageBack` card actions. This is especially useful if you need to update the message that the card action came from. | [Card actions](~/concepts/cards/cards-actions)|

@@ -2,7 +2,7 @@
 title: Add card actions in a bot
 description: Describes card actions in Microsoft Teams and how to use them in your bots
 keywords: teams bots cards actions
-ms.date: 04/16/2018
+ms.date: 08/15/2018
 ---
 # Card actions
 
@@ -95,11 +95,12 @@ The `value` property can be either a serialized JSON string or a JSON object.
       "name":"MyBot"
    },
    "entities":[
-      {
-         "locale":"en-US",
-         "country":"US",
-         "platform":"Windows",
-         "type":"clientInfo"
+      { 
+        locale: "en-US",
+        country: "US",
+        platform: "Windows",
+        timezone: "America/Los_Angeles",
+        type: "clientInfo" 
       }
    ],
    "channelData":{
@@ -217,7 +218,7 @@ var button = new CardAction()
 
 Initiates OAuth flow, allowing bots to connect with secure services, as described in more detail here: [Authentication flow in bots](~/concepts/authentication/auth-flow-bot).
 
-## Adaptive card actions (supported in Developer Preview only)
+## Adaptive card actions
 
 Adaptive cards support three action types:
 

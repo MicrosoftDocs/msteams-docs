@@ -2,7 +2,7 @@
 title: Develop messaging extensions
 description: Describes how to get started with messaging extensions in Microsoft Teams
 keywords: teams messaging extensions messaging extensions
-ms.date: 07/25/18
+ms.date: 08/15/18
 ---
 # Develop messaging extensions for Microsoft Teams
 
@@ -233,10 +233,11 @@ The request parameters itself are found in the value object, which includes the 
   },
   "entities": [
     {
-      "locale": "en-US",
-      "country": "US",
-      "platform": "Web",
-      "type": "clientInfo"
+      locale: "en-US",
+      country: "US",
+      platform: "Windows",
+      timezone: "America/Los_Angeles",
+      type: "clientInfo"
     }
   ]
 }
@@ -253,7 +254,7 @@ Your service should respond with the results matching the user query. The respon
 |`composeExtension`|Top-level response envelope.|
 |`composeExtension.type`|Type of response. The following types are supported: <br>`result`: displays a list of search results <br>`auth`: asks the user to authenticate <br>`config`: asks the user to set up the messaging extension <br>`message`: displays a plain text message |
 |`composeExtension.attachmentLayout`|Specifies the layout of the attachments. Used for responses of type `result`. <br>Currently the following types are supported: <br>`list`: a list of card objects containing thumbnail, title, and text fields <br>`grid`: a grid of thumbnail images |
-|`composeExtension.attachments`|Array of valid attachment objects. Used for responses of type `result`. <br>Currently the following types are supported: <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector`|
+|`composeExtension.attachments`|Array of valid attachment objects. Used for responses of type `result`. <br>Currently the following types are supported: <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
 |`composeExtension.suggestedActions`|Suggested actions. Used for responses of type `auth` or `config`. |
 |`composeExtension.text`|Message to display. Used for responses of type `message`. |
 

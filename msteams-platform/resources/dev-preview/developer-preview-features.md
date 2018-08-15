@@ -9,10 +9,6 @@ ms.date: 08/06/2018
 When these features are out of developer preview this content will be merged into the live doc set.
 The developer preview includes the following new features:
 
-## Adaptive Cards
-
-See Adaptive Cards: [Adaptive card](~/concepts/cards/cards-reference#adaptive-card-supported-in-developer-preview-only), [Adaptive card actions in Teams](~/concepts/cards/cards-actions#adaptive-card-actions-supported-in-developer-preview-only) for more details.
-
 ## The tab configuration page is significantly taller
 
 The height of the content area for the tab [Configuration page](~/concepts/tabs/tabs-configuration) will shortly be increased significantly; the width remains unchanged. It is important for you to update the tab configuration pages in your apps before this happens, otherwise your users will see your tab configuration page with a great deal of whitespace. (We have not finalized the date for this change as we cannot be sure how long it will take for most developers to update their apps, but it will likely be before the end of August, 2018.) 
