@@ -2,25 +2,43 @@
 title: Sending and receiving files from a bot
 description: Describes how to send and receive files from a bot
 keywords: teams bots files send receive
-ms.date: 08/06/2018
+ms.date: 08/14/2018
 ---
 # Send and receive files through your bot
 
-Your bot can send and receive files with users in the personal context. You can use this to implement expense reporting, image recognition, file archival, e-signatures, and other scenarios involving direct manipulation of file content. Files shared in Teams typically appear as cards, and allow rich in-app viewing. In channels, you can also post messages with card attachments referencing existing SharePoint files.
+There are two ways to send files to and from a bot:
 
-One way of sending files is using the Microsoft Graph APIs for [OneDrive and SharePoint](https://docs.microsoft.com/en-us/onedrive/developer/rest-api/). This method requires obtaining ongoing access to the user's OneDrive folder through the standard OAuth2 authorization flow. This documentation describes a simple alternative mechanism if you only need to send file content as a result of direct user interaction, e.g. sending a message. This API is provided as part of the Microsoft Teams Bot Platform.
+* Using the Microsoft Graph APIs. This method works for bots in all contexts in Teams:
+  * `personal`
+  * `channel`
+  * `group`
+* Using the Teams APIs. These only support files in one context:
+  * `personal`
 
-## Configure your bot to support files
+## Using the Microsoft Graph APIs
+
+You can post messages with card attachments referencing existing SharePoint files using the Microsoft Graph APIs for [OneDrive and SharePoint](https://docs.microsoft.com/en-us/onedrive/developer/rest-api/). Using the Graph APIs requires obtaining access to a user's OneDrive folder (for `personal` and `group` files) or the files in a team's channels (for `channel` files) through the standard OAuth2 authorization flow. This method works in all Teams contexts.
+
+## Using the Teams Bot APIs
+
+> [!NOTE]
+> This method works only in the `personal` context. It does not work in the `channel` or `group` context.
+
+Your bot can directly send and receive files with users in the `personal` context, also known as personal chats, using Teams APIs. This lets you implement expense reporting, image recognition, file archival, e-signatures, and other scenarios involving direct manipulation of file content. Files shared in Teams typically appear as cards, and allow rich in-app viewing.
+
+The following sections describe how to do this to send file content as a result of direct user interaction, like sending a message. This API is provided as part of the Microsoft Teams Bot Platform.
+
+### Configure your bot to support files
 
 In order to send and receive files in your bot, you have to set the `supportsFiles` property in the manifest to true. This property is described in the [bots](~/resources/schema/manifest-schema#bots) section of the Manifest reference.
 
 The definition will look like this: `"supportsFiles": true`. If your bot does not enable `supportFiles`, the following features will not work.
 
-## Receiving files in personal chat
+### Receiving files in personal chat
 
 When a user sends a file to your bot, the file is first uploaded to the user's OneDrive for Business storage. Your bot will then receive a message activity notifying you of the user upload. The activity will contain file metadata, such as its name and the content URL. You can directly read from this URL to fetch its binary content.
 
-### Message activity with file attachment example
+#### Message activity with file attachment example
 
 ```json
 {
@@ -47,7 +65,7 @@ The following table describes the content properties of the attachment:
 
 As a best practice, you should acknowledge the file upload by sending back a message to the user.
 
-## Uploading files to personal chat
+### Uploading files to personal chat
 
 Uploading a file to a user involves the following steps:
 
@@ -56,7 +74,7 @@ Uploading a file to a user involves the following steps:
 3. To transfer the file, your bot performs an `HTTP POST` directly into the provided location URL.
 4. Optionally, you can remove the original consent card if you do not want to allow the user to accept further uploads of the same file.
 
-### Message requesting permission to upload
+#### Message requesting permission to upload
 
 This message contains a simple attachment object requesting user permission to upload the file.
 
@@ -87,7 +105,7 @@ This message contains a simple attachment object requesting user permission to u
 | `acceptContext` | Additional context that will be silently transmitted to your bot when the user accepts the file. |
 | `declineContext` | Additional context that will be silently transmitted to your bot when the user declines the file. |
 
-### Invoke activity when the user accepts the file
+#### Invoke activity when the user accepts the file
 
 An invoke activity is sent to your bot if and when the user accepts the file. It contains the OneDrive for Business placeholder URL that your bot can then issue a `PUT` into to transfer the file contents. for information on uploading to the OneDrive URL read this article: [Upload bytes to the upload session](https://docs.microsoft.com/en-us/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
 
@@ -129,7 +147,7 @@ Similarly, if the user declines the file, your bot will receive the following ev
 }
 ```
 
-## Notifying the user about an uploaded file
+### Notifying the user about an uploaded file
 
 After uploading a file to the user's OneDrive, whether you use the mechanism described above or OneDrive user delegated APIs, you should send a confirmation message to the user. This message should contain  a `FileCard` attachment that the user can click on, either to preview it, open it in OneDrive, or download locally.
 
@@ -153,7 +171,7 @@ The following table describes the content properties of the attachment:
 | `uniqueId` | OneDrive/SharePoint drive item ID. |
 | `fileType` | File type, such as pdf or docx. |
 
-## Basic example in C#
+### Basic example in C#
 
 The following sample shows how you can handle file uploads and send file consent requests in your bot's dialog.
 
