@@ -232,12 +232,12 @@ The request parameters itself are found in the value object, which includes the 
     "name": "TheComposeExtensionDev"
   },
   "entities": [
-    { 
-        "locale": "en-US",
-        "country": "US",
-        "platform": "Windows",
-        "timezone": "America/Los_Angeles",
-        "type": "clientInfo" 
+    {
+      locale: "en-US",
+      country: "US",
+      platform: "Windows",
+      timezone: "America/Los_Angeles",
+      type: "clientInfo"
     }
   ]
 }
@@ -445,14 +445,12 @@ At this point, the window closes and control is passed to the Teams client. The 
     "type": "invoke",
     "timestamp": "2017-04-26T05:18:25.629Z",
     "localTimestamp": "2017-04-25T22:18:25.629-07:00",
-    "entities": [
-      {
+    "entities": [{
         "locale": "en-US",
         "country": "US",
         "platform": "Web",
         "type": "clientInfo"
-      }
-    ],
+    }],
     "text": "",
     "attachments": [],
     "address": {
