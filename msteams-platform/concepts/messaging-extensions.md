@@ -262,12 +262,12 @@ Your service should respond with the results matching the user query. The respon
 
 We support the following attachment types:
 
-* Thumbnail card
-* Hero card
-* Office 365 Connector card
-* Adaptive card
+* [Thumbnail card](~/concepts/cards/cards-reference#thumbnail-card)
+* [Hero card](~/concepts/cards/cards-reference#hero-card)
+* [Office 365 Connector card](~/concepts/cards/cards-reference#office-365-connector-card)
+* [Adaptive card](~/concepts/cards/cards-reference#adaptive-card)
 
-See [Cards](~/concepts/cards/cards) for more information.
+See [Cards](~/concepts/cards/cards) for an overview.
 
 To learn how to use the thumbnail and hero card types, see [Add cards and card actions](~/concepts/cards-actions).
 
@@ -277,6 +277,8 @@ The result list is displayed in the Microsoft Teams UI with a preview of each it
 
 * Using the `preview` property within the `attachment` object.
 * Extracted from the basic `title`, `text`, and `image` properties of the attachment. These are used only if the `preview` property is not set and these properties are available.
+
+You can display a preview of an adaptive card in results lists simply by setting its preview property to hero or thumbnail. If no preview property is specified, the preview of the adaptive card will fail and nothing will be displayed. More details are given in the [Adaptive card](~/concepts/cards/cards-reference#adaptive-card) reference topic.
 
 #### Response example
 
