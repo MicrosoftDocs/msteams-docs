@@ -122,11 +122,11 @@ When interacting in a channel, your bot should be smart about taking certain con
     "text": "Hello Teams TestBot",
     "entities": [
       { 
-        locale: "en-US",
-        country: "US",
-        platform: "Windows",
-        timezone: "America/Los_Angeles",
-        type: "clientInfo" 
+        "locale": "en-US",
+        "country": "US",
+        "platform": "Windows",
+        "timezone": "America/Los_Angeles",
+        "type": "clientInfo"
       }
     ],
     "channelData": {

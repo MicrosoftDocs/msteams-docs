@@ -233,11 +233,11 @@ The request parameters itself are found in the value object, which includes the 
   },
   "entities": [
     {
-      locale: "en-US",
-      country: "US",
-      platform: "Windows",
-      timezone: "America/Los_Angeles",
-      type: "clientInfo"
+      "locale": "en-US",
+      "country": "US",
+      "platform": "Windows",
+      "timezone": "America/Los_Angeles",
+      "type": "clientInfo"
     }
   ]
 }
@@ -262,12 +262,12 @@ Your service should respond with the results matching the user query. The respon
 
 We support the following attachment types:
 
-* Thumbnail card
-* Hero card
-* Office 365 Connector card
-* Adaptive card
+* [Thumbnail card](~/concepts/cards/cards-reference#thumbnail-card)
+* [Hero card](~/concepts/cards/cards-reference#hero-card)
+* [Office 365 Connector card](~/concepts/cards/cards-reference#office-365-connector-card)
+* [Adaptive card](~/concepts/cards/cards-reference#adaptive-card)
 
-See [Cards](~/concepts/cards/cards) for more information.
+See [Cards](~/concepts/cards/cards) for an overview.
 
 To learn how to use the thumbnail and hero card types, see [Add cards and card actions](~/concepts/cards-actions).
 
@@ -278,46 +278,134 @@ The result list is displayed in the Microsoft Teams UI with a preview of each it
 * Using the `preview` property within the `attachment` object.
 * Extracted from the basic `title`, `text`, and `image` properties of the attachment. These are used only if the `preview` property is not set and these properties are available.
 
+You can display a preview of an Adaptive or Office 365 Connector card in the result list simply by setting its preview property; this is not necessary if the results are already hero or thumbnail cards. If no preview property is specified, the preview of the card will fail and nothing will be displayed.
+
 #### Response example
+
+This example shows a response with two results, mixing different card formats: Office 365 Connector and Adaptive. While you'll likely want to stick with one card format in your response, it shows how the `preview` property of each element in the `attachments` collection must explicitly define a preview in hero or thumbnail format as described above.
 
 ```json
 {
-  "composeExtension":{
-    "type":"result",
-    "attachmentLayout":"list",
-    "attachments":[
+  "composeExtension": {
+    "type": "result",
+    "attachmentLayout": "list",
+    "attachments": [
       {
-        "contentType":"application/vnd.microsoft.teams.card.o365connector",
-        "content":{
-          "sections":[
+        "contentType": "application/vnd.microsoft.teams.card.o365connector",
+        "content": {
+          "sections": [
             {
-              "activityTitle":"[85069]: Create a cool app",
-              "activityImage":"https://<ImageUrl1>"
+              "activityTitle": "[85069]: Create a cool app",
+              "activityImage": "https://placekitten.com/200/200"
             },
             {
-              "title":"Details",
-              "facts":[
+              "title": "Details",
+              "facts": [
                 {
-                  "name":"Assigned to:",
-                  "value":"[Larry Brown](mailto:larryb@example.com)"
+                  "name": "Assigned to:",
+                  "value": "[Larry Brown](mailto:larryb@example.com)"
                 },
                 {
-                  "name":"State:",
-                  "value":"Active"
+                  "name": "State:",
+                  "value": "Active"
                 }
               ]
             }
           ]
         },
-        "preview":{
-        "contentType":"application/vnd.microsoft.card.thumbnail",
-        "content":{
-            "title":"85069: Create a cool app",
-            "images":[
+        "preview": {
+          "contentType": "application/vnd.microsoft.card.thumbnail",
+          "content": {
+            "title": "85069: Create a cool app",
+            "images": [
               {
-              "url":"https://<ImageUrl1>"
+                "url": "https://placekitten.com/200/200"
               }
             ]
+          }
+        }
+      },
+      {
+        "contentType": "application/vnd.microsoft.card.adaptive",
+        "content": {
+          "type": "AdaptiveCard",
+          "body": [
+            {
+              "type": "Container",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "Microsoft Corp (NASDAQ: MSFT)",
+                  "size": "medium",
+                  "isSubtle": true
+                },
+                {
+                  "type": "TextBlock",
+                  "text": "September 19, 4:00 PM EST",
+                  "isSubtle": true
+                }
+              ]
+            },
+            {
+              "type": "Container",
+              "spacing": "none",
+              "items": [
+                {
+                  "type": "ColumnSet",
+                  "columns": [
+                    {
+                      "type": "Column",
+                      "width": "stretch",
+                      "items": [
+                        {
+                          "type": "TextBlock",
+                          "text": "75.30",
+                          "size": "extraLarge"
+                        },
+                        {
+                          "type": "TextBlock",
+                          "text": "▼ 0.20 (0.32%)",
+                          "size": "small",
+                          "color": "attention",
+                          "spacing": "none"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Column",
+                      "width": "auto",
+                      "items": [
+                        {
+                          "type": "FactSet",
+                          "facts": [
+                            {
+                              "title": "Open",
+                              "value": "62.24"
+                            },
+                            {
+                              "title": "High",
+                              "value": "62.98"
+                            },
+                            {
+                              "title": "Low",
+                              "value": "62.20"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "version": "1.0"
+        },
+        "preview": {
+          "contentType": "application/vnd.microsoft.card.thumbnail",
+          "content": {
+            "title": "Microsoft Corp (NASDAQ: MSFT)",
+            "text": "75.30 ▼ 0.20 (0.32%)"
           }
         }
       }

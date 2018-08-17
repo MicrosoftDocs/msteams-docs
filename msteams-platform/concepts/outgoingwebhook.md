@@ -94,11 +94,11 @@ Users must **@mention** the outgoing webhook for it to receive messages.
         "text": "<at>Larry Brown</at>"
       },
       { 
-        locale: "en-US",
-        country: "US",
-        platform: "Windows",
-        timezone: "America/Los_Angeles",
-        type: "clientInfo" 
+        "locale": "en-US",
+        "country": "US",
+        "platform": "Windows",
+        "timezone": "America/Los_Angeles",
+        "type": "clientInfo"
       }
     ],
     "channelData": {

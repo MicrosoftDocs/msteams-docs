@@ -96,11 +96,11 @@ The `value` property can be either a serialized JSON string or a JSON object.
    },
    "entities":[
       { 
-        locale: "en-US",
-        country: "US",
-        platform: "Windows",
-        timezone: "America/Los_Angeles",
-        type: "clientInfo" 
+        "locale": "en-US",
+        "country": "US",
+        "platform": "Windows",
+        "timezone": "America/Los_Angeles",
+        "type": "clientInfo" 
       }
    ],
    "channelData":{
