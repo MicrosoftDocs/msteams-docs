@@ -61,7 +61,7 @@ A customizable card that can contain any combination of text, speech, images, bu
 
 ![Example of a adaptive card card](~/assets/images/cards/adaptivecard.png)
 
-#### Example code
+#### Example
 
 ```json
 {
