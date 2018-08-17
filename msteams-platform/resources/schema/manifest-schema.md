@@ -2,7 +2,7 @@
 title: Manifest schema reference
 description: Describes the schema supported by the manifest for Microsoft Teams
 keywords: teams manifest schema
-ms.date: 08/03/2018
+ms.date: 08/17/2018
 ---
 # Reference: Manifest schema for Microsoft Teams
 
@@ -148,7 +148,7 @@ The schema defines the following properties:
 
 *Optional, but recommended* &ndash; String
 
-The URL referencing the JSON Schema for the manifest.
+The https:// URL referencing the JSON Schema for the manifest.
 
 > [!TIP]
 > Specify the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor: `"$schema": " https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json",`
@@ -190,15 +190,15 @@ Specifies information about your company. For apps submitted to AppSource (forme
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
 |`name`|32 characters|✔|The display name for the developer.|
-|`websiteUrl`|2048 characters|✔|The URL to the developer's website. This link should take users to your company or product-specific landing page.|
-|`privacyUrl`|2048 characters|✔|The URL to the developer's privacy policy.|
-|`termsOfUseUrl`|2048 characters|✔|The URL to the developer's terms of use.|
+|`websiteUrl`|2048 characters|✔|The https:// URL to the developer's website. This link should take users to your company or product-specific landing page.|
+|`privacyUrl`|2048 characters|✔|The https:// URL to the developer's privacy policy.|
+|`termsOfUseUrl`|2048 characters|✔|The https:// URL to the developer's terms of use.|
 
 ## name
 
 **Required**
 
-The name of your app experience, displayed to users in the Teams experience. For apps submitted to AppSource, these values must match the information in your AppSource entry.
+The name of your app experience, displayed to users in the Teams experience. For apps submitted to AppSource, these values must match the information in your AppSource entry. The values of `short` and `full` should not be the same.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -211,15 +211,12 @@ The name of your app experience, displayed to users in the Teams experience. For
 
 Describes your app to users. For apps submitted to AppSource, these values must match the information in your AppSource entry.
 
-Ensure that your description accurately describes your experience and provides information to help potential customers understand what your experience does. You should also note, in the full description, if an external account is required for use.
+Ensure that your description accurately describes your experience and provides information to help potential customers understand what your experience does. You should also note, in the full description, if an external account is required for use. The values of `short` and `full` should not be the same.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
 |`short`|80 characters|✔|A short description of your app experience, used when space is limited.|
 |`full`|4000 characters|✔|The full description of your app.|
-
-> [!IMPORTANT]
-> We currently have an issue with full descriptions longer than 256 characters. You can use a longer description in your Seller Dashboard app submission.
 
 ## icons
 
@@ -250,7 +247,7 @@ The object is an array with all elements of the type `object`. This block is req
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`configurationUrl`|String|2048 characters|✔|The URL to use when configuring the tab.|
+|`configurationUrl`|String|2048 characters|✔|The https:// URL to use when configuring the tab.|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: `true`|
 |`scopes`|Array of enum|1|✔|Currently, configurable tabs support only the `team` scope, which means it can be provisioned only to a channel. Support for tabs in `groupchat` is in Developer Preview.|
 
@@ -266,8 +263,8 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 |---|---|---|---|---|
 |`entityId`|String|64 characters|✔|A unique identifier for the entity that the tab displays.|
 |`name`|String|128 characters|✔|The display name of the tab in the channel interface.|
-|`contentUrl`|String|2048 characters|✔|The URL that points to the entity UI to be displayed in the Teams canvas. Must be HTTPS.|
-|`websiteUrl`|String|2048 characters||The URL to point at if a user opts to view in a browser.|
+|`contentUrl`|String|2048 characters|✔|The https:// URL that points to the entity UI to be displayed in the Teams canvas.|
+|`websiteUrl`|String|2048 characters||The https:// URL to point at if a user opts to view in a browser.|
 |`scopes`|Array of enum|1|✔|Currently, static tabs support only the `personal` scope, which means it can be provisioned only as part of the personal experience.|
 
 ## bots
