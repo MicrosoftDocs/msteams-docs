@@ -7,7 +7,7 @@ msdate: 08/20/2018
 
 # Get context for your Microsoft Teams tab
 
-Your tab might require contextual information to display the necessary content.
+Your tab might require contextual information to display relevant content.
 
 * Your tab might need basic information about the user, team, or company.
 * Your tab might need locale and theme information.
