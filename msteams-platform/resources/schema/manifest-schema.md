@@ -50,7 +50,7 @@ The following schema sample shows all extensibility options.
       "entityId": "idForPage",
       "name": "Display name of tab",
       "contentUrl": "https://contoso.com/content?host=msteams",
-      "websiteUrl": "http://contoso.com/content",
+      "websiteUrl": "https://contoso.com/content",
       "scopes": [ "personal" ]
     }
   ],

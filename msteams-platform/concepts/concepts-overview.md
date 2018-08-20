@@ -2,7 +2,7 @@
 title: Concepts
 description: Describes the core functions of Microsoft Teams apps
 keywords: apps concepts teams overview
-msdate: 08/07/2018
+ms.date: 08/07/2018
 ---
 # Concepts
 
