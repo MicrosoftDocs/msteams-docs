@@ -2,12 +2,12 @@
 title: Get context for your tab
 description: Describes how to get user context to your tabs
 keywords: teams tabs user context
-msdate: 02/09/2018
+ms.date: 08/20/2018
 ---
 
 # Get context for your Microsoft Teams tab
 
-Your tab might require contextual information to display the necessary content.
+Your tab might require contextual information to display relevant content.
 
 * Your tab might need basic information about the user, team, or company.
 * Your tab might need locale and theme information.
@@ -34,7 +34,7 @@ You can access context information in two ways:
 
 ### Getting context by inserting URL placeholder values
 
-Use placeholders in your configuration or content URLs. Microsoft Teams replaces the placeholders with the relevant values when determining the actual configuration or content URL to navigate to. The available placeholders include all fields on the [Context](/javascript/api/msteams-client/microsoftteams.context) object. Common placeholders include the following:
+Use placeholders in your configuration or content URLs. Microsoft Teams replaces the placeholders with the relevant values when determining the actual configuration or content URL to navigate to. The available placeholders include all fields on the [Context](https://docs.microsoft.com/en-us/javascript/api/@microsoft/teams-js/microsoftteams.context) object. Common placeholders include the following:
 
 * {entityId}: The ID you supplied for the item in this tab when first [configuring the tab](~/concepts/tabs/tabs-configuration).
 * {subEntityId}: The ID you supplied when generating a [deep link](~/concepts/deep-links) for a specific item _within_ this tab. This should be used to restore to a specific state within an entity; for example, scrolling to or activating a specific piece of content.
