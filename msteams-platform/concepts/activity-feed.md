@@ -2,7 +2,7 @@
 title: Activity feed
 description: Describes the activity feed and how to use it in your apps
 keywords: teams activity feed
-msdate: 03/29/2018
+ms.date: 03/29/2018
 ---
 
 # Notify users through the activity feed in Microsoft Teams
