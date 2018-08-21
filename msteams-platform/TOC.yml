@@ -108,8 +108,6 @@
       href: ./concepts/authentication/auth-configure
     - name: Using the Azure Bot Service
       href: ./concepts/authentication/auth-oauth-card
-  - name: Activity Feed
-    href: ./concepts/activity-feed
   - name: Connectors
     href: ./concepts/connectors/connectors
     items:
@@ -117,9 +115,41 @@
       href: ./concepts/connectors/connectors-creating
     - name: Using connectors
       href: ./concepts/connectors/connectors-using
-  - name: Messaging Extensions
+  - name: Messaging extensions
     href: ./concepts/messaging-extensions
-  - name: Outgoing WebHooks
+  - name: Calling and meetings apps
+    href: ./concepts/calling-and-meeting
+    items:
+    - name: Registering a calling bot
+      href: ./concepts/calling-and-meeting/registering-calling-bot
+    - name: Introduction to local vs. remote media
+      href: ./concepts/calling-and-meeting/local-vs-remote-media
+    - name: Overview of audio/video calling
+      href: ./concepts/calling-and-meeting/overview-audio-video-calling
+    - name: Requirements and considerations for audio/video calling bots
+      href: ./concepts/calling-and-meeting/requirements-considerations-audio-video-calling-bots
+    - name: Build an audio/video calling bot
+      href: ./concepts/calling-and-meeting/build-audio-video-calling-bot
+    - name: Deploy a local media calling bot
+      href: ./concepts/calling-and-meeting/deploy-audio-video-calling-bot
+    - name: Remote media overview
+      href: ./concepts/calling-and-meeting/remote-media-overview
+    - name: Debugging and local testing of calling bots
+      href: ./concepts/calling-and-meeting/debugging-and-local-testing-calling-bots
+    - name: Permissions for calling and meeting apps
+      href: ./concepts/calling-and-meeting/permissions-for-calling-meeting-bots
+    - name: Authentication and authorization
+      href: ./concepts/calling-and-meeting/authentication-and-authorization-calling-apps
+    - name: Stateful vs. stateless development
+      href: ./concepts/calling-and-meeting/stateful-vs-stateless-calling-app-development
+    - name: High-availability
+      href: ./concepts/calling-and-meeting/high-availability-calling-apps
+    - name: Graph API notifications
+      href: ./concepts/calling-and-meeting/graph-api-notifications
+  - name:
+  - name: Activity feed
+    href: ./concepts/activity-feed
+  - name: Outgoing webhooks
     href: ./concepts/outgoingwebhook
   - name: Deep links
     href: ./concepts/deep-links
