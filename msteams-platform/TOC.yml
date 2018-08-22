@@ -146,7 +146,6 @@
       href: ./concepts/calling-and-meeting/high-availability-calling-apps
     - name: Graph API notifications
       href: ./concepts/calling-and-meeting/graph-api-notifications
-  - name:
   - name: Activity feed
     href: ./concepts/activity-feed
   - name: Outgoing webhooks
