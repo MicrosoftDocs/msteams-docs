@@ -122,9 +122,9 @@
     items:
     - name: Registering a calling bot
       href: ./concepts/calling-and-meeting/registering-calling-bot
-    - name: Introduction to local vs. remote media
+    - name: Introduction to local vs. remote media (TBD)
       href: ./concepts/calling-and-meeting/local-vs-remote-media
-    - name: Overview of audio/video calling
+    - name: Overview of audio/video calling (TBD)
       href: ./concepts/calling-and-meeting/overview-audio-video-calling
     - name: Requirements and considerations for audio/video calling bots
       href: ./concepts/calling-and-meeting/requirements-considerations-audio-video-calling-bots
@@ -132,19 +132,19 @@
       href: ./concepts/calling-and-meeting/build-audio-video-calling-bot
     - name: Deploy a local media calling bot
       href: ./concepts/calling-and-meeting/deploy-audio-video-calling-bot
-    - name: Remote media overview
+    - name: Remote media overview (TBD)
       href: ./concepts/calling-and-meeting/remote-media-overview
-    - name: Debugging and local testing of calling bots
+    - name: Debugging and local testing of calling bots (TBD)
       href: ./concepts/calling-and-meeting/debugging-and-local-testing-calling-bots
-    - name: Permissions for calling and meeting apps
+    - name: Permissions for calling and meeting apps (TBD)
       href: ./concepts/calling-and-meeting/permissions-for-calling-meeting-bots
-    - name: Authentication and authorization
+    - name: Authentication and authorization (TBD)
       href: ./concepts/calling-and-meeting/authentication-and-authorization-calling-apps
-    - name: Stateful vs. stateless development
+    - name: Stateful vs. stateless development (TBD)
       href: ./concepts/calling-and-meeting/stateful-vs-stateless-calling-app-development
-    - name: High-availability
+    - name: High-availability (TBD)
       href: ./concepts/calling-and-meeting/high-availability-calling-apps
-    - name: Graph API notifications
+    - name: Graph API notifications (TBD)
       href: ./concepts/calling-and-meeting/graph-api-notifications
   - name: Activity feed
     href: ./concepts/activity-feed
