@@ -245,7 +245,7 @@ To include a `messageBack` action with an adaptive card include the following de
   "type": "Action.Submit",
   "title": "Click me for messageBack",
   "data": {
-    "msteams": { //msteams field with messageBack details
+    "msteams": { 
       {
         "type": "messageBack",
         "displayText": "I clicked this button",
@@ -273,7 +273,7 @@ To include a `imBack` action with an adaptive card include the following details
   "type": "Action.Submit",
   "title": "Click me for imBack",
   "data": {
-    "msteams": { //msteams field with imBack details
+    "msteams": { 
       {
         "type": "imBack",
         "value": "Text to reply in chat",
@@ -298,7 +298,7 @@ To include a `signin` action with an adaptive card include the following details
   "type": "Action.Submit",
   "title": "Click me for signin",
   "data": {
-    "msteams": { //msteams field with signin details
+    "msteams": { 
       {
         "type": "signin",
         "value": "https://signin.com",
