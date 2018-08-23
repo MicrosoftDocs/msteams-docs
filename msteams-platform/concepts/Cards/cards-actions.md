@@ -246,13 +246,11 @@ To include a `messageBack` action with an adaptive card include the following de
   "title": "Click me for messageBack",
   "data": {
     "msteams": { 
-      {
         "type": "messageBack",
         "displayText": "I clicked this button",
         "text": "text to bots",
         "value": "{\"bfKey\": \"bfVal\", 
 \"conflictKey\": \"from value\"}"
-      }
     }
   }
 }
@@ -274,10 +272,8 @@ To include a `imBack` action with an adaptive card include the following details
   "title": "Click me for imBack",
   "data": {
     "msteams": { 
-      {
         "type": "imBack",
-        "value": "Text to reply in chat",
-      }
+        "value": "Text to reply in chat"
     }
   }
 }
@@ -299,10 +295,8 @@ To include a `signin` action with an adaptive card include the following details
   "title": "Click me for signin",
   "data": {
     "msteams": { 
-      {
         "type": "signin",
         "value": "https://signin.com",
-      }
     }
   }
 }
