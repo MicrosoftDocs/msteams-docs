@@ -226,10 +226,10 @@ Adaptive cards support three action types:
 * [Action.Submit](http://adaptivecards.io/explorer/Action.Submit.html)
 * [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
 
-In addition to the actions mentioned above, you can modify the Adaptive Action.Submit payload to support existing bot framework actions using a `msteams` property in the `data` bag of `Action.Submit`. The below sections detail how to use existing bot framework actions with Adaptive.
+In addition to the actions mentioned above, you can modify the Adaptive Action.Submit payload to support existing bot framework actions using a `msteams` property in the `data` object of `Action.Submit`. The below sections detail how to use existing bot framework actions with Adaptive.
 
 ### Adaptive card with messageBack action
-To include a `messageBack` action with an adaptive card include the following details in the `msteams` object. Note that you can include additional hidden properties in the `data` bag if needed.
+To include a `messageBack` action with an adaptive card include the following details in the `msteams` object. Note that you can include additional hidden properties in the `data` object if needed.
 
 | Property | Description |
 | --- | --- |
@@ -257,7 +257,7 @@ To include a `messageBack` action with an adaptive card include the following de
 ```
 
 ### Adaptive card with imBack action
-To include a `imBack` action with an adaptive card include the following details in the `msteams` object. Note that you can include additional hiddern properties in the `data` bag if needed.
+To include a `imBack` action with an adaptive card include the following details in the `msteams` object. Note that you can include additional hiddern properties in the `data` object if needed.
 
 | Property | Description |
 | --- | --- |
@@ -280,7 +280,7 @@ To include a `imBack` action with an adaptive card include the following details
 ```
 
 ### Adaptive card with signin action
-To include a `signin` action with an adaptive card include the following details in the `msteams` object. Note that you can include additional hiddern properties in the `data` bag if needed.
+To include a `signin` action with an adaptive card include the following details in the `msteams` object. Note that you can include additional hiddern properties in the `data` object if needed.
 
 | Property | Description |
 | --- | --- |
