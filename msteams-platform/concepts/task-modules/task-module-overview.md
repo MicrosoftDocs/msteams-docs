@@ -43,9 +43,10 @@ Since task modules can be invoked from tabs, bots, or deep links, and what appea
 
 ## The `taskInfo` object
 
-The `taskInfo` object is a JSON object that contains all the metadata for a task module. Here's what it contains:
+The `taskInfo` object contains all the metadata for a task module. Here's what it contains:
 
 | Attribute | Type | Description |
+| --------- | ---- | ----------- |
 | appId | string or array of strings | Description |
 | title | string | Appears below the app name and to the right of the app icon |
 | height | number or string | This can be a number, representing the task module's height in pixels, or `small`, `medium`, `large`. Teams will make a best effort to honor the requested height, but guarantees the aspect ratio of width/height. |
