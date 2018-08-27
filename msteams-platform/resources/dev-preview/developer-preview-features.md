@@ -80,7 +80,7 @@ Group chat conversations behave very similarly to channel conversations with bot
 
 ### Tab changes to getContext()
 
-`isChat` is returned by `getContext` to indicate whether or not the tab is in a chat.
+When calling `getContext` from a chat, `chatId` will be returned with the ID of the chat.
 
 ### Testing your app
 
