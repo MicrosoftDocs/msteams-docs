@@ -20,7 +20,7 @@ Task modules can be invoked in three ways:
 
 Here's what a task module looks like when invoked from a bot: ($TODO - Need Final image)
 
-![Task Module Example](~/assets/images/task-modules/task-module-example.png)
+![Task Module Example](~/assets/images/task-module/task-module-example.png)
 
 Let's walk through it:
 
