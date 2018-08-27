@@ -108,8 +108,15 @@ The point is, there's no need be concerned about whether you are invoking a task
 
 A task module deep link is just a serialization of the [`taskInfo` object](#the-taskinfo-object) with two other pieces of information:
 
-```
-https://teams.microsoft.com/l/task/APP_ID?url=URL&height=HEIGHT&width=HEIGHT&title=TITLE
-```
+`https://teams.microsoft.com/l/task/APP_ID?url=URL&height=HEIGHT&width=HEIGHT&title=TITLE&completionBotId=BOT_APP_ID`
 
-| `appId` | string | This indicates the appId invoking the task module. The [`validDomains[]` array](~/resources/schema/manifest-schema#validdomains) in the manifest for appId must contain the domain for `url` if `url` is in the URL.  |
+See [`taskInfo` object](#the-taskinfo-object) for the data types and allowable values for `URL`, `HEIGHT`, `WIDTH`, and `TITLE`.
+
+Here's the information on `APP_ID` and `BOT_APP_ID`:
+
+| Parameter | Type | Required? | Description |
+| --------- | ---- | --------- | ----------- |
+| `APP_ID` | string | Yes | This indicates the [id](~/resources/schema/manifest-schema#id) of the app invoking the task module. The [`validDomains[]` array](~/resources/schema/manifest-schema#validdomains) in the manifest for `APP_ID` must contain the domain for `url` if `url` is in the URL. (The app ID is already known when a task module is invoked from a tab or a bot, which is why it's not included in `taskInfo`.) |
+| `completionBotId` | string | No | If specified, the `result` object is sent via a a `task/submit invoke` message to the specified bot. `BOT_APP_ID` must be specified as a bot in the app's manifest, i.e. you can't just send it to any bot. |
+
+Note that it's valid for `APP_ID` and `BOT_APP_ID` to be the same, and in many cases will be if an app has a bot since it's recommended to use that as an app's ID if there is one.
