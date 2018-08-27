@@ -108,6 +108,8 @@
       href: ./concepts/authentication/auth-configure
     - name: Using the Azure Bot Service
       href: ./concepts/authentication/auth-oauth-card
+  - name: Task Modules
+    href: ./concepts/task-modules/task-modules-overview
   - name: Activity Feed
     href: ./concepts/activity-feed
   - name: Connectors
