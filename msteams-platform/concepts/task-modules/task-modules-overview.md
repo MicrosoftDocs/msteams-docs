@@ -1,6 +1,6 @@
 ---
 title: Overview of Microsoft Teams Task Modules
-description: Describes Microsoft Teams Task Modules - what they are and how you can use them
+description: A task module allows you to create modal popup experiences in your Teams application. Inside the popup, you can run your own custom HTML/JavaScript code, show an <iframe>-based widget such as a YouTube or Microsoft Stream video, or display an Adaptive Card.
 keywords: task modules modal popup 
 ms.date: 08/27/2018
 ---
@@ -8,7 +8,7 @@ ms.date: 08/27/2018
 
 A task module allows you to create modal popup experiences in your Teams application. Inside the popup, you can run your own custom HTML/JavaScript code, show an &lt;iframe&gt;-based widget such as a YouTube or Microsoft Stream video, or display an [Adaptive Card](https://docs.microsoft.com/en-us/adaptive-cards/).
 
-They are called *task modules* because they are especially useful for initiating and completing tasks, although they are also great for displaying rich information such as videos and dashboards. We created task module because many developers asked us for the ability to create arbitrary forms and to re-use existing, well-understood HTML-based flows. A popup can be a more natural UX for initiating and completing tasks in many cases, compared to a tab or a conversation-based bot experience.
+They are called *task modules* because they are especially useful for initiating and completing tasks, although they are also great for displaying rich information such as videos and (for example) Power BI dashboards. We created task module because many developers asked us for the ability to create arbitrary forms and to re-use existing, well-understood HTML-based flows. A popup can be a more natural UX for initiating and completing tasks in many cases, compared to a tab or a conversation-based bot experience.
 
 Task modules can be invoked in three ways:
 
@@ -48,12 +48,18 @@ The `taskInfo` object contains the metadata for a task module. Here's what it co
 | Attribute | Type | Description |
 | --------- | ---- | ----------- |
 | `title` | string | Appears below the app name and to the right of the app icon |
-| `height` | number or string | This can be a number, representing the task module's height in pixels, or `small`, `medium`, `large`. Teams will make a best effort to honor the requested height, but guarantees the aspect ratio of width/height. |
-| `width` | string | This can be a number, representing the task module's width in pixels, or `small`, `medium`, `large`. Teams will make a best effort to honor the requested width, but guarantees the aspect ratio of width/height. |
+| `height` | number or string | This can be a number, representing the task module's height in pixels, or a string, one of: `small`, `medium`, `large`. [See below for how height and width are handled](#task-module-sizing). |
+| `width` | string | This can be a number, representing the task module's width in pixels, or a string, one of:  `small`, `medium`, `large`. [See below for how height and width are handled](#task-module-sizing). |
 | `url` | string | The URL of the page powering the task module experience: it's what is loaded as an &lt;iframe&gt; inside the task module. The URL's domain must be in the app's [`validDomains[]` array](~/resources/schema/manifest-schema#validdomains). One of `url` or `card` is required. |
 | `card` | Adaptive Card or an Adaptive Card bot card attachment | The JSON for the Adaptive Card to appear in the task module. Bot developers are used to embedding Adaptive Card JSON in a Bot Framework `attachment` object; tab developers may not be. Both formats are accepted. [Here's an example.](#adaptive-card-or-adaptive-card-bot-card-attachment) |
 | `fallbackUrl` | string | Task modules are not yet supported on Teams mobile clients. If a client does not support the task module feature, this URL is opened in a browser tab. |
 | `completionBotId` | string | Specifies a bot ID to send the result of the user's interaction with the task module. If specified, the bot will receive a `task/complete invoke` event with a JSON object in the event payload. |
+
+### Task module sizing
+
+If `taskInfo.width` and `taskInfo.height` are numbers, Teams will make a best effort to honor the requested width and height. This isn't always possible, depending on the size of the Teams window and screen resolution, but if there's not enough space, Teams will reduce it proportionally, honoring the aspect ratio of width/height.
+
+If `taskInfo.width` and `taskInfo.height` are `small`, `medium`, or `large`, Teams sizes the red rectangle in the picture above based on a proportion of the available space: 20%/50%/60% for `width`, and 20%/50%/66% for `height`, respectively.
 
 ### Adaptive Card or Adaptive Card bot card attachment
 
@@ -102,21 +108,25 @@ With task modules, the value of `card` can be what's shown above, or it can be i
 }
 ```
 
-The point is, there's no need be concerned about whether you are invoking a task module containing an Adaptive Card from a bot or a tab.
+The point is, there's no need to remember whether you are invoking a task module containing an Adaptive Card from a bot or a tab.
 
 ## Task module deep link syntax
 
 A task module deep link is just a serialization of the [`taskInfo` object](#the-taskinfo-object) with two other pieces of information:
 
-`https://teams.microsoft.com/l/task/APP_ID?url=URL&height=HEIGHT&width=HEIGHT&title=TITLE&completionBotId=BOT_APP_ID`
+`https://teams.microsoft.com/l/task/APP_ID?url=<taskInfo.url>&height=<taskInfo.height>&width=<taskInfo.width>&title=<taskInfo.title>&completionBotId=BOT_APP_ID`
+`https://teams.microsoft.com/l/task/APP_ID?card=<taskInfo.card>&height=<taskInfo.height>&width=<taskInfo.width>&title=<taskInfo.title>&completionBotId=BOT_APP_ID`
 
-See [`taskInfo` object](#the-taskinfo-object) for the data types and allowable values for `URL`, `HEIGHT`, `WIDTH`, and `TITLE`.
+See [`taskInfo` object](#the-taskinfo-object) for the data types and allowable values for `<taskInfo.url>`, `<taskInfo.url>`, `<taskInfo.height>`, `<taskInfo.width>`, and `<taskInfo.title>`.
+
+> [!TIP]
+> Be sure to URL encode the deep link, especially when using the `card` parameter (for example, JavaScript's [`encodeURI()` function](https://www.w3schools.com/jsref/jsref_encodeURI.asp)).
 
 Here's the information on `APP_ID` and `BOT_APP_ID`:
 
-| Parameter | Type | Required? | Description |
-| --------- | ---- | --------- | ----------- |
+| Value | Type | Required? | Description |
+| ----- | ---- | --------- | ----------- |
 | `APP_ID` | string | Yes | This indicates the [id](~/resources/schema/manifest-schema#id) of the app invoking the task module. The [`validDomains[]` array](~/resources/schema/manifest-schema#validdomains) in the manifest for `APP_ID` must contain the domain for `url` if `url` is in the URL. (The app ID is already known when a task module is invoked from a tab or a bot, which is why it's not included in `taskInfo`.) |
-| `completionBotId` | string | No | If specified, the `result` object is sent via a a `task/submit invoke` message to the specified bot. `BOT_APP_ID` must be specified as a bot in the app's manifest, i.e. you can't just send it to any bot. |
+| `BOT_APP_ID` | string | No | If a value for `completionBotId` is specified, the `result` object is sent via a a `task/submit invoke` message to the specified bot. `BOT_APP_ID` must be specified as a bot in the app's manifest, i.e. you can't just send it to any bot. |
 
 Note that it's valid for `APP_ID` and `BOT_APP_ID` to be the same, and in many cases will be if an app has a bot since it's recommended to use that as an app's ID if there is one.

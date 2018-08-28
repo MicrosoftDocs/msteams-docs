@@ -110,6 +110,11 @@
       href: ./concepts/authentication/auth-oauth-card
   - name: Task Modules
     href: ./concepts/task-modules/task-modules-overview
+    items:
+    - name: Using task modules in tabs
+      href: ./concepts/task-modules/task-modules-tabs
+    - name: Using task modules in bots
+      href: ./concepts/task-modules/task-modules-bots
   - name: Activity Feed
     href: ./concepts/activity-feed
   - name: Connectors
