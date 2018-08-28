@@ -78,9 +78,9 @@ See [Bot notifications](~/concepts/bots/bots-notifications) for more details on 
 
 Group chat conversations behave very similarly to channel conversations with bots, so the information in the [Interact in a team channel with a Microsoft Teams bot](~/concepts/bots/bot-conversations/bots-conv-channel) topic may also be helpful. The main difference is that group chat does not support threaded conversations.
 
-### Tab changes to getContext()
+### Changes to getContext() for tabs
 
-`isChat` is returned by `getContext` to indicate whether or not the tab is in a chat.
+When calling `getContext` from a tab in chat, `chatId` will be returned with the ID of the chat.
 
 ### Testing your app
 

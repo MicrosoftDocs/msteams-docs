@@ -10,7 +10,7 @@ When Teams is running in a browser, it’s easy to access the browser's DevTools
 
 While the web version of Teams and the desktop version of teams are almost exactly the same, there are some differences, particularly with respect to authentication. Sometimes the only way to figure out what’s going on is to use the DevTools. Here's how to get to them from the Teams desktop client.
 
-The feature is only available in the Developer Preview version of Microsoft Teams. See [How do I get access to the Developer Preview](~/resources/dev-preview/developer-preview-features) for more information.
+The feature is only available in the desktop Developer Preview version of Microsoft Teams. See [How do I get access to the Developer Preview](~/resources/dev-preview/developer-preview) for more information. These tools are not available for the mobile client.
 
 ## Accessing DevTools in the Teams Client
 
