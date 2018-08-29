@@ -2,7 +2,7 @@
 title: Outgoing webhooks
 description: Describes how to create and use outgoing webhooks in Microsoft Teams
 keywords: teams bots custom
-ms.date: 08/15/2018
+ms.date: 08/29/2018
 ---
 # Outgoing webhooks in Microsoft Teams
 
@@ -12,13 +12,16 @@ You also have an effective way of ensuring that your service is accessible only 
 
 ## Creating an outgoing webhook
 
-To create an outgoing webhook, click **Manage team** and then navigate to the **Bots** tab.
+To create an outgoing webhook, click **Manage team** and then navigate to the **Apps** tab.
 
 ![View team](~/assets/images/ManageTeam.png)
 
 Click on the **Create an outgoing webhook** link at the bottom of the page.
  
 ![Create a outgoing webhook entry point](~/assets/images/createwebhook.png)
+
+> [!IMPORTANT]
+> "Allow sideloading of external apps" must be **On** for your tenant for outgoing webhooks to work. If you don't see **Create an outgoing webhook** on the **Apps** tab, that's why. For more information, see steps 5 and 6 on [Prepare your Office 365 tenant](~/get-started/get-started-tenant#turn-on-microsoft-teams-for-your-organization).
 
 In the **Create an outgoing webhook** dialog, you can configure how your outgoing webhook appears in channels:
 
@@ -110,14 +113,14 @@ Users must **@mention** the outgoing webhook for it to receive messages.
 
 ### Authenticating the caller
 
-Your service should always authenticate clients. To guarantee the legitimacy of the client, Microsoft Teams provides the HMAC in the HTTP `hmac` header.
+Your service should always authenticate clients. To guarantee the legitimacy of the client (in this case, to guarantee it's Microsoft Teams that's calling you and not someone else, Microsoft Teams provides an [HMAC code](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) in the HTTP `hmac` header.
 
 Your code should always verify the HMAC signature included in the request:
 
 1. Generate the hmac from the request body of the message. There are standard libraries to do this on most platforms. Microsoft Teams uses standard SHA256 HMAC cryptography. You will need to convert the body to a byte array in UTF8.
-2. To compute the hash, provide the byte array of the security token provided by Microsoft Teams when you registered the outgoing webhook.
-3. Convert the hash to a string using UTF8 encoding.
-4. Compare the string value of the generated hash with the value provided in the HTTP request.
+1. To compute the hash, provide the byte array of the security token provided by Microsoft Teams when you registered the outgoing webhook.
+1. Convert the hash to a string using UTF8 encoding.
+1. Compare the string value of the generated hash with the value provided in the HTTP request.
 
 #### Code example (C#)
 ```csharp
