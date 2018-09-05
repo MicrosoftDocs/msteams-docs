@@ -2,7 +2,7 @@
 title: Using Task Modules in Microsoft Teams tabs
 description: Explains how invoke task modules from Teams tabs using the Microsoft Teams client SDK.
 keywords: task modules teams tabs client sdk
-ms.date: 09/04/2018
+ms.date: 09/05/2018
 ---
 # Using task modules in tabs
 
@@ -69,7 +69,7 @@ The `submitHandler` function is used with `TaskInfo.url`: the `submitHandler` fu
 If there's no invocation error and the user doesn't press X to dismiss it, the user presses a button when finished. Depending on whether it's a URL or an Adaptive card in the task module, here's what happens:
 
 * **HTML/JavaScript (`TaskInfo.url`)**. Once you've validated what the user has entered, you call the `microsoftTeams.tasks.submitTask()` SDK function (referred to hereafter as `submitTask()` for readability purposes). You can call `submitTask()` without any parameters if you just want Teams to close the task module, but most of the time you'll want to pass an object or a string to your `submitHandler`. Simply pass it as the first parameter, `result`. Teams will invoke `submitHandler`: `err` will be `null` and `result` will be the object/string you passed to `submitTask()`. If you do call `submitTask()` with a `result` parameter, you **must** pass an `appId` or an array of `appId` strings: this allows Teams to validate that the app sending the result is the same one which invoked the task module.
-* **Adaptive card (`TaskInfo.card`)**. As mentioned briefly above, if your app contains a bot in addition to a tab, simply include the `appId` of the bot as the value of `completionBotId` in the `TaskInfo` object. The Adaptive card body (as filled in by the user) will be sent to the bot via a `task/submit invoke` message when the user presses an `Action.Submit` button. This case is very similar to [$TODO in task-modules-bots]($TODO); the only difference is that the schema of the JSON object is slightly different: it's an Adaptive card object as opposed to an object *containing* an Adaptive card object as [when Adaptive cards are used with bots]($TODO).
+* **Adaptive card (`TaskInfo.card`)**. As mentioned briefly above, if your app contains a bot in addition to a tab, simply include the `appId` of the bot as the value of `completionBotId` in the `TaskInfo` object. The Adaptive card body (as filled in by the user) will be sent to the bot via a `task/submit invoke` message when the user presses an `Action.Submit` button. The schema for the object you receive is very similar to [the schema you receive for task/fetch and task/submit messages](~/concepts/task-modules/task-modules-bots#payload-of-task-fetch-and-task-submit-messages); the only difference is that the schema of the JSON object is slightly different: it's an Adaptive card object as opposed to an object *containing* an Adaptive card object as [when Adaptive cards are used with bots](~/concepts/task-modules/task-modules-bots#payload-of-task-fetch-and-task-submit-messages).
 
 ## Example: submitting the result of a task module
 
