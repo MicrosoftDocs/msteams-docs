@@ -2,6 +2,7 @@
 title: Design Guidelines Reference
 description: Describes the guidelines for showcasing the app
 keywords: teams design guidelines reference framework apps
+ms.date: 09/05/2018
 ---
 # Showcase your app
 
