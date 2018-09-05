@@ -19,7 +19,7 @@ Make sure to consider the experience of a single user as well as an entire team.
 
 ### Encourage someone to click
 
-When someone navigates to the App gallery, they’ll be able to search for your app (either by name or category). Your app will appear as a tile in a collection. That tile will include your app name, icon, and a short two-line description of what your service does. Clicking on your tile will open a profile page that contains a lot more info. Make sure to sell yourself in this longer description. Let someone know what your app does, what categories it falls into, and what skills your bot or app has. (See Submitting your app)
+When someone navigates to the App gallery, they’ll be able to search for your app (either by name or category). Your app will appear as a tile in a collection. That tile will include your app name, icon, and a short two-line description of what your service does. Clicking on your tile will open a profile page that contains a lot more info. Make sure to sell yourself in this longer description. Let someone know what your app does, what categories it falls into, and what skills your bot or app has.
 
 ### Add some custom tabs
 
