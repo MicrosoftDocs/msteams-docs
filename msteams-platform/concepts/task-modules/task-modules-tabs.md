@@ -60,7 +60,7 @@ submitHandler = (err, result) => {
 microsoftTeams.tasks.startTask(taskInfo, submitHandler);
 ```
 
-[Below](#example-submitting-the-result-of-a-task-module) you'll see the code for the value of `result` is set.
+[Below](#example-submitting-the-result-of-a-task-module) you'll see the code where the value of `result` is set.
 
 ## Submitting the result of a task module
 
@@ -103,5 +103,5 @@ Here are the possible values of `err` that can be received by your `submitHandle
 | ------- | ------------------------------ |
 | Values for both `TaskInfo.url` and `TaskInfo.card` were specified. | "Values for both card and url were specified. One or the other, but not both, are allowed." |
 | Neither `TaskInfo.url` nor `TaskInfo.card` specified. | "You must specify a value for either card or url." |
-| Invalid appId. | "Invalid appId." |
+| Invalid `appId`. | "Invalid appId." |
 | User pressed X button, closing it. | "User cancelled/closed the task module." |

@@ -38,7 +38,7 @@ In the previous section, you learned that when the user finishes with a task mod
 | HTTP Body Response | Scenario |
 | --- | --- |
 | None (ignore the `task/submit` message) | The simplest response is no response at all. Your bot is not required to respond when the user is finished with the task module. |
-| `{`<br/>&nbsp;&nbsp;`"task": {`<br/>&nbsp;&nbsp;&nbsp;&nbsp;`"type": "message",`<br/>&nbsp;&nbsp;&nbsp;&nbsp;`"value": "Message text to display to user"`<br/>&nbsp;&nbsp;`}` | Teams will display the value of `value` in a popup message box. |
+| `{`<br/>&nbsp;&nbsp;`"task": {`<br/>&nbsp;&nbsp;&nbsp;&nbsp;`"type": "message",`<br/>&nbsp;&nbsp;&nbsp;&nbsp;`"value": "Message text"`<br/>&nbsp;&nbsp;`}` | Teams will display the value of `value` in a popup message box. |
 | `{`<br/>&nbsp;&nbsp;`"task": {`<br/>&nbsp;&nbsp;&nbsp;&nbsp;`"type": "continue",`<br/>&nbsp;&nbsp;&nbsp;&nbsp;`"value": <TaskInfo object>`<br/>&nbsp;&nbsp;`}`<br/> | Allows you to "chain" sequences of Adaptive cards together in a wizard/multi-step experience. |
 
 **$TODO** - update if we follow the spec and send an `invoke` object when the user presses the X (Cancel) button. [Bug #369378](https://domoreexp.visualstudio.com/MSTeams/_workitems/edit/369378?source=compose)
