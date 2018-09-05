@@ -2,7 +2,7 @@
 title: Get started with App Studio for Microsoft Teams
 description: Get started building great apps in Microsoft Teams using App Studio
 keywords: getting started app studio teams
-ms.date: 04/11/2018
+ms.date: 09/05/2018
 ---
 # Quickly develop apps with App Studio for Microsoft Teams
 
@@ -31,7 +31,7 @@ App Studio is a Teams app which can be found in the Teams store. See the Store I
 
 In the store, search for App Studio.
 
-![Store entry for app studio](~/assets/images/get-started/storeteamsappstudio(preview).png)
+![Store entry for app studio](~/assets/images/get-started/storeteamsappstudio.png)
 
 Select the App Studio tile to open the app install page:
 
@@ -39,7 +39,7 @@ Select the App Studio tile to open the app install page:
 
 Select *install*.
 
-![app studio](~/assets/images/get-started/teamsappstudio(preview).png)
+![app studio](~/assets/images/get-started/teamsappstudio.png)
 
 Once you are in App Studio, click on the *Manifest editor* tab where you can either import an existing app or create a new app.
 
