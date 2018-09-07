@@ -239,7 +239,7 @@ A card that typically contains a single large image, one or more buttons, and te
      "text": "This is the text of the hero card",
      "images": [
        {
-         "url": "https://en.wikipedia.org/wiki/Hero#/media/File:Batman_and_Robin_1966.JPG"
+         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Seattle_monorail01_2008-02-25.jpg/1024px-Seattle_monorail01_2008-02-25.jpg"
        }
      ],
     "buttons": [
