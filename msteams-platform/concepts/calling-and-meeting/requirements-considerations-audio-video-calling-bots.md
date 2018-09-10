@@ -1,7 +1,7 @@
 ---
 title: Requirements and considerations for real-time media bots
 description: Understand important requirements and considerations related to creating real-time media bots for Microsoft Teams.
-keywords: 
+keywords: real-time media windows server azure vm
 ms.date: 09/10/2018
 ---
 
