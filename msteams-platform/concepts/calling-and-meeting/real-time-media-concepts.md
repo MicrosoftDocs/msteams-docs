@@ -1,7 +1,7 @@
 ---
 title: Real-time media calling and meetings with Microsoft Teams
 description: Understand key concepts in building a bot that can conduct real-time audio and video calls.
-keywords: 
+keywords: audio stream video stream audio/video calling meeting real-time media 
 ms.date: 09/10/2018
 ---
 
@@ -53,3 +53,5 @@ In a 1:1 call, the bot will automatically receive the video of the caller (if th
 To develop a real-time media bot, you must install the following NuGet package within your Visual Studio project:
 
 - [Microsoft.Skype.Bots.Media .NET library](https://www.nuget.org/packages?q=Microsoft.Skype.Bots.Media)
+
+Currently, we only support real-time media for bots written in .NET/C#.
