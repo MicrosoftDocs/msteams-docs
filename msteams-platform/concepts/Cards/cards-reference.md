@@ -234,9 +234,9 @@ A card that typically contains a single large image, one or more buttons, and te
 {
    "contentType": "application/vnd.microsoft.card.hero",
    "content": {
-     "title": "Example hero card",
-     "subtitle": "Hero card subtitle",
-     "text": "This is the text of the hero card",
+     "title": "Seattle Center Monorail",
+     "subtitle": "Seattle Center Monorail",
+     "text": "The Seattle Center Monorail is an elevated train line between Seattle Center (near the Space Needle) and downtown Seattle. It was built for the 1962 World's Fair. Its original two trains, completed in 1961, are still in service.",
      "images": [
        {
          "url":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Seattle_monorail01_2008-02-25.jpg/1024px-Seattle_monorail01_2008-02-25.jpg"
@@ -245,11 +245,13 @@ A card that typically contains a single large image, one or more buttons, and te
     "buttons": [
       {
          "type": "openUrl",
-         "title": "Yes"
+         "title": "Official website",
+         "value": "https://www.seattlemonorail.com"
        },
       {
         "type": "openUrl",
-        "title": "No"
+        "title": "Wikipeda page",
+        "value": "https://en.wikipedia.org/wiki/Seattle_Center_Monorail"
        }
      ]
    }
