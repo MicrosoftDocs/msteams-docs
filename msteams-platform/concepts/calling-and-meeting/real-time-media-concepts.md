@@ -54,4 +54,4 @@ To develop a real-time media bot, you must install the following NuGet package w
 
 - [Microsoft.Skype.Bots.Media .NET library](https://www.nuget.org/packages?q=Microsoft.Skype.Bots.Media)
 
-Real-time media bots require .NET/C# and Windows Server, as described in detail in [requirements and considerations for real-time media bots](~/concepts/calling-and-meeting/requirements-considerations-audio-video-calling-bots#real-time-media-bot-development-requires-cnet-and-windows-server).
+Real-time media bots require .NET/C# and Windows Server, as described in detail in [requirements and considerations for real-time media bots](~/concepts/calling-and-meeting/requirements-considerations-real-time-media-bots#real-time-media-bot-development-requires-cnet-and-windows-server).

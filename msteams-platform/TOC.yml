@@ -128,8 +128,8 @@
       href: ./concepts/calling-and-meeting/local-vs-remote-media
     - name: Overview of audio/video calling (TBD)
       href: ./concepts/calling-and-meeting/overview-audio-video-calling
-    - name: Requirements and considerations for audio/video calling bots
-      href: ./concepts/calling-and-meeting/requirements-considerations-audio-video-calling-bots
+    - name: Requirements and considerations for real-time media bots
+      href: ./concepts/calling-and-meeting/requirements-considerations-real-time-media-bots
     - name: Build an audio/video calling bot
       href: ./concepts/calling-and-meeting/build-audio-video-calling-bot
     - name: Deploy a local media calling bot
