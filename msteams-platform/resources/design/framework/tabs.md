@@ -85,11 +85,11 @@ In September 2018, the height of the content area for the tab [Configuration pag
 
 Follow these guidelines to correctly format content in your tab configuration pages:
 
-* Base the height of the content area in the tab on fixed-height graphic elements.
-* Calculate available vertical space (the height of the content area in the configuration tab) using `window.innerHeight`. This returns the size of the `<iframe>` in which your configuration page resides, which may change in future releases. By using this value, your content will adjust automatically to future changes.
+* Base the minimum height of your content area of your tab configuration page on fixed-height graphic elements.
+* Calculate available vertical space (the height of the content area in the configuration page) using `window.innerHeight`. This returns the size of the `<iframe>` in which your configuration page resides, which may change in future releases. By using this value, your content will adjust automatically to future changes.
 * Allocate vertical space to the variable-height elements minus what's needed for the fixed-height elements.
 * For the *login* state, vertically and horizontally center the content.
-* If you want a background image, you need either a new image, sized to fit the new area (preferred), or can keep the same image and choose between:
+* If you want a background image, you need either a new image, sized to fit the new area (preferred), or you can keep the same image and choose between:
   * aligning to the upper left hand corner.
   * scaling the image to fit.
 
