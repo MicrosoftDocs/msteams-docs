@@ -23,8 +23,6 @@ Context about the user, team or company can be especially useful when
 > [!IMPORTANT]
 > Although this user information can help provide a smooth user experience, you should *not* use it as proof of identity. For example, an attacker could you load your page in a "bad browser" and provide it with any information they want.
 
-To obtain this identifying information about the user, team, or company, you must add `identity` to the `permissions` object in your [manifest](~/resources/schema/manifest-schema#permissions). Doing so prompts the user for consent when they add your tab.
-
 ## Accessing context
 
 You can access context information in two ways:
