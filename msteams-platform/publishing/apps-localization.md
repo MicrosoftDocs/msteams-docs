@@ -1,17 +1,17 @@
 ---
 title: Localization for Team apps
 description: Describes issues around localizing your app
-keywords: teams publish store office publishing AppSource localization language
+keywords: teams publish store office publishing AppSource localization language seller dashboard
 ms.date: 09/07/2018
 ---
-# Localization for Teams apps
+# Localization for Microsoft Teams apps
 
 > [!NOTE]
-> Microsoft Teams plans to support localized content in the future. Currently, only English is supported for Teams apps. You can still publish an app in another language using the following steps.
+> Microsoft Teams plans to allow apps to support multiple languages. Currently, only English is officially supported for Teams apps that appear in the Teams Store and [AppSource](https://appsource.microsoft.com). However, you can still publish an app in another language using the following steps.
 
-## Recommendations for Non-English and Mixed language apps for short term until Localization is implemented
+## Recommendations for non-English and mixed-language apps until localization is implemented
 
-Please select the Seller dashboard language as both English and the actual Language of the app. French is used in this example.
+In [Seller Dashboard](http://go.microsoft.com/fwlink/?LinkId=248605), select both English and the actual language of the app (even if the app is not available in English). French is used in this example.
 
 ### Add English language
 
@@ -19,7 +19,7 @@ Please select the Seller dashboard language as both English and the actual Langu
 * Fill in a short description of the app in English.
 * Fill in the long description of the app in English.
 * In the long description, please also add the line “This app is in “French”.
-* Upload the images of your app UI. The screenshots will show the actual language.
+* Upload the images of your app UI. The screenshots will show the actual language (in this example, French).
 
 ### Add French language
 
