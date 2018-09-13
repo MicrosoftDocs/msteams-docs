@@ -2,7 +2,7 @@
 title: Overview of Microsoft Teams Task Modules
 description: A task module allows you to create modal popup experiences in your Teams application. Inside the popup, you can run your own custom HTML/JavaScript code, show an <iframe>-based widget such as a YouTube or Microsoft Stream video, or display an Adaptive card.
 keywords: task modules modal popup 
-ms.date: 09/05/2018
+ms.date: 09/13/2018
 ---
 # Task modules
 
@@ -201,12 +201,12 @@ Here's the information on `APP_ID` and `BOT_APP_ID`:
 
 Note that it's valid for `APP_ID` and `BOT_APP_ID` to be the same, and in many cases will be if an app has a bot since it's recommended to use that as an app's ID if there is one.
 
-## Keyboard and accessibility guidelines for HTML/JavaScript task modules
+## Keyboard and accessibility guidelines
 
-With HTML/JavaScript-based task modules, it is your responsibility to ensure your app's task module can be used with a keyboard. And since screen reader programs also depend on the ability to navigate using the keyboard, proper keyboard support also helps ensure that your task module can be used with screen reader programs. As a practical matter, this means two things:
+With HTML/JavaScript-based task modules, it is your responsibility to ensure your app's task module can be used with a keyboard. And since screen reader programs also depend on the ability to navigate using the keyboard, proper keyboard support also helps ensure that your task module can be used by the people who use them. As a practical matter, this means two things:
 
-* Using the [tabindex attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) in your HTML tags to control which elements can be focused, and if/where it particpates in sequential keyboard navigation (usually with the <kbd>Tab</kbd> and <kbd>Shift-Tab</kbd> keys).
-* Handling the event when the user presses the <kbd>Esc</kbd> keyboard button in the JavaScript for your task module. Here's a code sample showing how to do this:
+1. Using the [tabindex attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) in your HTML tags to control which elements can be focused, and if/where it particpates in sequential keyboard navigation (usually with the <kbd>Tab</kbd> and <kbd>Shift-Tab</kbd> keys).
+2. Handling the event when the user presses the <kbd>Esc</kbd> keyboard button in the JavaScript for your task module. Here's a code sample showing how to do this:
 
   ```javascript
   // Handle the Esc key
