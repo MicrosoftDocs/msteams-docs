@@ -14,7 +14,7 @@ The following schema sample shows all extensibility options.
 
 ```json
 {
-  "$schema": " https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json",
   "manifestVersion": "1.3",
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%",
