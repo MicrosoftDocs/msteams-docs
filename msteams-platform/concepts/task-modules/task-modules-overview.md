@@ -10,7 +10,7 @@ A task module allows you to create modal popup experiences in your Teams applica
 
 They are called *task modules* because they are especially useful for initiating and completing tasks, although they are also great for displaying rich information such as videos and (for example) Power BI dashboards. We created task modules because many developers asked us for the ability to create arbitrary forms and to re-use existing, well-understood HTML-based flows. A popup can be a more natural UX for initiating and completing tasks in many cases, compared to a tab or a conversation-based bot experience.
 
-Task modules build on the foundation of Microsoft Teams tabs: a task module is essentially a tab in a popup window. It uses the same SDK, so if you've built a tab you already are 90% of the way to being able to create a task module.
+Task modules build on the foundation of Microsoft Teams tabs: a task module is essentially a tab in a popup window. It uses the same SDK, so if you've built a tab you are already 90% of the way to being able to create a task module.
 
 Task modules can be invoked in three ways:
 
@@ -58,17 +58,17 @@ The `TaskInfo` object contains the metadata for a task module. Here's what it co
 | `fallbackUrl` | string | Task modules are not yet supported on Teams mobile clients. If a client does not support the task module feature, this URL is opened in a browser tab. |
 | `completionBotId` | string | Specifies a bot ID to send the result of the user's interaction with the task module. If specified, the bot will receive a `task/complete invoke` event with a JSON object in the event payload. |
 
-### Task module sizing
+## Task module sizing
 
 If `TaskInfo.width` and `TaskInfo.height` are numbers, Teams will make a best effort to honor the requested width and height. This isn't always possible, depending on the size of the Teams window and screen resolution, but if there's not enough space, Teams will reduce it proportionally, maintaining the aspect ratio (width/height) even as the Teams window is resized.
 
 If `TaskInfo.width` and `TaskInfo.height` are `"small"`, `"medium"`, or `"large"`, Teams sizes the red rectangle in the picture above based on a proportion of the available space: 20%, 50%, 60% for `width`; 20%, 50%, 66% for `height`, respectively.
 
-### Task module CSS for HTML/JavaScript task modules
+## Task module CSS for HTML/JavaScript task modules
 
-As mentioned earlier, for HTML/JavaScript-based task modules have access to the entire area of the task module below the header. While that offers a great deal of flexibility, if you want padding around the edges, to align with the header elements, and avoid scrollbars, you need to provide the right CSS. Here are some tips for a few use cases.
+As mentioned earlier, HTML/JavaScript-based task modules have access to the entire area of the task module below the header. While that offers a great deal of flexibility, if you want padding around the edges, to align with the header elements, and avoid scrollbars, you need to provide the right CSS. Here are some tips for a few use cases.
 
-#### Example 1 - YouTube video
+### Example 1 - YouTube video
 
 YouTube, like many online video sites, offers the ability to embed videos on web pages. Using a simple stub web page, it's easy to show this in a task module:
 
@@ -107,7 +107,7 @@ Note that there's a `div` enclosing the YouTube `<iframe>`. The CSS looks like t
 }
 ```
 
-#### Example 2 - PowerApp
+### Example 2 - PowerApp
 
 This CSS should work for most embedded `<iframe>` cases, but you may need to tweak it. For example, you may need to tweak `width` or  `height` if scrollbars appear. For example, here's a tweak needed to optimize the appearance of a specific PowerApp (all of which are sized differently):
 
@@ -119,7 +119,7 @@ This CSS should work for most embedded `<iframe>` cases, but you may need to twe
 
 Note the `style="width: 94%;"` element style: that's all it needed.
 
-#### Example 3 - Custom Form
+### Example 3 - Custom Form
 
 In other cases, you'll only need a few overrides for the CSS you already have. For example, the [example shown at the beginning of this article](#what-a-task-module-looks-like) only needed a few CSS tweaks to align with the header:
 
@@ -187,7 +187,7 @@ A task module deep link is just a serialization of the [TaskInfo object](#the-ta
 `https://teams.microsoft.com/l/task/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID`
 `https://teams.microsoft.com/l/task/APP_ID?card=<TaskInfo.card>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID`
 
-See [TaskInfo object](#the-taskinfo-object) for the data types and allowable values for `<TaskInfo.url>`, `<TaskInfo.url>`, `<TaskInfo.height>`, `<TaskInfo.width>`, and `<TaskInfo.title>`.
+See [TaskInfo object](#the-taskinfo-object) for the data types and allowable values for `<TaskInfo.url>`, `<TaskInfo.card>`, `<TaskInfo.height>`, `<TaskInfo.width>`, and `<TaskInfo.title>`.
 
 > [!TIP]
 > Be sure to URL encode the deep link, especially when using the `card` parameter (for example, JavaScript's [`encodeURI()` function](https://www.w3schools.com/jsref/jsref_encodeURI.asp)).
@@ -200,6 +200,24 @@ Here's the information on `APP_ID` and `BOT_APP_ID`:
 | `BOT_APP_ID` | string | No | If a value for `completionBotId` is specified, the `result` object is sent via a a `task/submit invoke` message to the specified bot. `BOT_APP_ID` must be specified as a bot in the app's manifest, i.e. you can't just send it to any bot. |
 
 Note that it's valid for `APP_ID` and `BOT_APP_ID` to be the same, and in many cases will be if an app has a bot since it's recommended to use that as an app's ID if there is one.
+
+## Keyboard and accessibility guidelines for HTML/JavaScript task modules
+
+With HTML/JavaScript-based task modules, it is your responsibility to ensure your app's task module can be used with a keyboard. And since screen reader programs also depend on the ability to navigate using the keyboard, proper keyboard support also helps ensure that your task module can be used with screen reader programs. As a practical matter, this means two things:
+
+* Using the [tabindex attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) in your HTML tags to control which elements can be focused, and if/where it particpates in sequential keyboard navigation (usually with the <kbd>Tab</kbd> and <kbd>Shift-Tab</kbd> keys).
+* Handling the event when the user presses the <kbd>Esc</kbd> keyboard button in the JavaScript for your task module. Here's a code sample showing how to do this:
+
+  ```javascript
+  // Handle the Esc key
+  document.onkeyup = function(event) {
+  if (event.key === 27) {
+    microsoftTeams.submitTask(null); // this will return an err object to the completionHandler() 
+    }
+  }
+  ```
+
+Microsoft Teams will ensure that keyboard navigation works properly from the task module header into your HTML and vice-versa.
 
 ## Task module sample
 
