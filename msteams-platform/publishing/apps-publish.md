@@ -107,7 +107,7 @@ Failures are explained, with references to the specific policy violations. All f
 * Check your manifest for completeness and accuracy. Then check it again.
 * Be sure to include detailed testing notes and a valid, working test account with appropriate prepopulated data.
 * Do not use the *Add a new app* button to resubmit your app. Use the tile for your app on the Overview tab instead.
-* For apps incorporating private URLS a signed-in user must have a sign-out option. For apps incorporating public URLS a sign-out option is not mandatory but is a better user experience.
+* For apps incorporating private URLs a signed-in user must have a sign-out option. For apps incorporating public URLs a sign-out option is not mandatory but is a better user experience.
 
 ## Add a download button to your product site
 
