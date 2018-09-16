@@ -516,8 +516,6 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 | ✔ | ✔ | ✖ | ✔ |
 |
 
-### Example
-
 ![Example of a thumbnail card](~/assets/images/cards/thumbnail.png)
 
 ### Properties
