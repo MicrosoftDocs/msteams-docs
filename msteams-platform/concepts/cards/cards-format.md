@@ -12,7 +12,7 @@ Formatting support differs slightly between different card types, and between th
 
 ## Using XML (HTML) markup
 
-Regular cards such as the Hero card support the following HTML tags:
+Regular cards such as the Hero card support the following HTML tags in the text property.
 
 * bold `<strong>Bold Text</strong>`
 * italic `<em>Italic text</em>`
@@ -27,15 +27,17 @@ Regular cards such as the Hero card support the following HTML tags:
 * hyperlink `<a href=\"https://www.bing.com/\">Bing</a>`
 * embedded image `<img src=\"http://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img>`
 
-## Mobile and desktop text formatting
+## Mobile and desktop differences
 
 Because of resolution differences between the desktop and mobile platform, formatting is different between the desktop and the mobile version of Teams.
 
-On the desktop formatting appears like this:
-[![XML formatting in the desktop client](~/images/cards/card-formatting-xml-desktop-v2)]
+On the desktop XML formatting appears like this:
+![XML formatting in the desktop client](~/images/cards/card-formatting-xml-desktop-v2)
 
-On mobile formatting appears like this:
-[![XML formatting in the mobile client](~/images/cards/card-formatting-xml-mobile-v2)]
+On mobile XML formatting appears like this:
+![XML formatting in the mobile client](~/images/cards/card-formatting-xml-mobile-v2)
+
+Note that character formatting like bold and italic are not rendered differently on mobile.
 
 These screenshots were created by setting the text property of a hero card to the following string. You can test formatting in your particular cards by modifying this code.
 
