@@ -14,18 +14,18 @@ Formatting support differs slightly between different card types, and between th
 
 Regular cards such as the Hero card support the following HTML tags:
 
-* bold <strong>Bold Text</strong>
-* italic <em>Italic text</em>
-* header 1: <h1>Header 1</h1>
-* header 2: <h2>Header 2</h2>
-* header 3: <h3>Header 3</h3>
-* strikethrough <strike>text</strike>
-* bullet list <ul><li>text</li><li>text</li></ul>
-* ordered list <ol><li>text</li><li>text</li></ol>
-* preformatted text (code) <pre>text</pre>
-* blockquote <blockquote>text</blockquote>
-* hyperlink <a href=\"https://www.bing.com/\">Bing</a>
-* embedded image <img src=\"http://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img>
+* bold `<strong>Bold Text</strong>`
+* italic `<em>Italic text</em>`
+* header 1: `<h1>Header 1</h1>`
+* header 2: `<h2>Header 2</h2>`
+* header 3: `<h3>Header 3</h3>`
+* strikethrough `<strike>text</strike>`
+* bullet list `<ul><li>text</li><li>text</li></ul>`
+* ordered list `<ol><li>text</li><li>text</li></ol>`
+* preformatted text (code) `<pre>text</pre>`
+* blockquote `<blockquote>text</blockquote>`
+* hyperlink `<a href=\"https://www.bing.com/\">Bing</a>`
+* embedded image `<img src=\"http://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img>`
 
 ## Mobile and desktop text formatting
 
