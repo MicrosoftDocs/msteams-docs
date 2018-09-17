@@ -31,11 +31,11 @@ Because of resolution differences between the desktop and mobile platform, forma
 
 On the desktop XML formatting appears like this:
 
-![XML formatting in the desktop client](~/images/cards/card-formatting-xml-desktop-v2)
+![XML formatting in the desktop client](~/images/cards/card-formatting-xml-desktop-v2.png)
 
 On mobile XML formatting appears like this:
 
-![XML formatting in the mobile client](~/images/cards/card-formatting-xml-mobile-v2)
+![XML formatting in the mobile client](~/images/cards/card-formatting-xml-mobile-v2.png)
 
 Note that character formatting like bold and italic are not rendered on mobile.
 
