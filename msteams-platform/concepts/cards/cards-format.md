@@ -8,24 +8,22 @@ ms.date: 03/29/2018
 
 Cards support formatting in the text property only, not in the title or subtitle properties. Formatting can be specified using a subset of XML (HTML) markup, or Markdown.
 
-Formatting support differs slightly between different card types, and between the desktop and the mobile platform. Those differences are described below.
+Formatting support differs slightly between different card types, and between the desktop and the mobile platform. Those differences are described below. 
 
-## Using XML (HTML) markup
+In general these tags are supported:
 
-Regular cards such as the Hero card support the following HTML tags in the text property.
-
-* bold `<strong>Bold Text</strong>`
-* italic `<em>Italic text</em>`
-* header 1: `<h1>Header 1</h1>`
-* header 2: `<h2>Header 2</h2>`
-* header 3: `<h3>Header 3</h3>`
-* strikethrough `<strike>text</strike>`
-* bullet list `<ul><li>text</li><li>text</li></ul>`
-* ordered list `<ol><li>text</li><li>text</li></ol>`
-* preformatted text (code) `<pre>text</pre>`
-* blockquote `<blockquote>text</blockquote>`
-* hyperlink `<a href=\"https://www.bing.com/\">Bing</a>`
-* embedded image `<img src=\"http://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img>`
+| Style | Example | Markdown | XML (HTML) |
+| --- | --- | --- | --- |
+| bold | **text** | `**text**` | `<strong>text</strong>` |
+| italic | *text* | `*text*` | `<em>text</em>` |
+| header (levels 1&ndash;3) | **Text** | `### Text` | `<h3>Text</h3>` |
+| strikethrough | ~~text~~ | `~~text~~` | `<strike>text</strike>` |
+| unordered list | <ul><li>text</li><li>text</li></ul> | `* text`<br>`* text` | `<ul><li>text</li><li>text</li></ul>` |
+| ordered list | <ol><li>text</li><li>text</li></ol> | `1. text`<br>`2. text` | `<ol><li>text</li><li>text</li></ol>` |
+| preformatted text | `text` | `` `text` `` | `<pre>text</pre>` |
+| blockquote | <blockquote>text</blockquote> | `>text` | `<blockquote>text</blockquote>` |
+| hyperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` | `<a href="https://www.bing.com/">Bing</a>` |
+| image link | <img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img> | `![Duck on a rock](http://aka.ms/Fo983c)` | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 ## Mobile and desktop differences
 
@@ -37,7 +35,7 @@ On the desktop XML formatting appears like this:
 On mobile XML formatting appears like this:
 ![XML formatting in the mobile client](~/images/cards/card-formatting-xml-mobile-v2)
 
-Note that character formatting like bold and italic are not rendered differently on mobile.
+Note that character formatting like bold and italic are not rendered on mobile.
 
 These screenshots were created by setting the text property of a hero card to the following string. You can test formatting in your particular cards by modifying this code.
 
