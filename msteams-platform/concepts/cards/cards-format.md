@@ -16,7 +16,7 @@ These tags are supported for regular cards such as the hero and thumbnail card. 
 
 | Style | Example | XML (HTML) |
 | --- | --- | --- |
-| bold | `**text**` | `<strong>text</strong>` |
+| bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
 | header (levels 1&ndash;3) | **Text** | `<h3>Text</h3>` |
 | strikethrough | ~~text~~ | `<strike>text</strike>` |
