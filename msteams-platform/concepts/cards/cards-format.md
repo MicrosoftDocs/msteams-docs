@@ -8,7 +8,7 @@ ms.date: 03/29/2018
 
 Cards support formatting in the text property only, not in the title or subtitle properties. Formatting can be specified using a subset of XML (HTML) markup, or Markdown.
 
-Formatting support differs slightly between different card types, and between the desktop and the mobile platform. Those differences are described below. 
+Formatting support differs slightly between different card types, and between the desktop and the mobile platform. Those differences are described below.
 
 In general these tags are supported:
 
@@ -23,7 +23,7 @@ In general these tags are supported:
 | preformatted text | `text` | `` `text` `` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `>text` | `<blockquote>text</blockquote>` |
 | hyperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` | `<a href="https://www.bing.com/">Bing</a>` |
-| image link | <img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img> | `![Duck on a rock](http://aka.ms/Fo983c)` | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| image link | <img src="http://aka.ms/Fo983c" alt="Duck on a rock"> `![Duck on a rock](http://aka.ms/Fo983c)` | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 ## Mobile and desktop differences
 
