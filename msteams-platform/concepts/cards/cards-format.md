@@ -31,11 +31,11 @@ These tags are supported for regular cards such as the hero and thumbnail card. 
 
 Because of resolution differences between the desktop and mobile platform, formatting is different between the desktop and the mobile version of Teams.
 
-On the desktop XML formatting appears like this:
+On the desktop, XML formatting appears like this:
 
 ![XML formatting in the desktop client](~/assets/images/cards/card-formatting-xml-desktop-v2.png)
 
-On mobile XML formatting appears like this:
+On mobile, XML formatting appears like this:
 
 ![XML formatting in the mobile client](~/assets/images/cards/card-formatting-xml-mobile-v2.png)
 
