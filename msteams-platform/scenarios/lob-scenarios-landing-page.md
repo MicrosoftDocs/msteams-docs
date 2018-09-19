@@ -1,31 +1,33 @@
 ---
-title: Microsoft Teams Developer Line of Business Reference Scenarios
-description: Reference architectures, guidance for common line of business (lob) apps in Microsoft Teams.
+title: Microsoft Teams Developer Line of Business Tenant App Reference Scenarios
+description: Reference architectures, guidance for common line of business (lob) apps or Tenant apps in Microsoft Teams.
 layout: LandingPage
 ms.topic: landing-page
 ---
 
-# Microsoft Teams Developer LOB Reference Scenarios
+# Microsoft Teams Tenant App Reference Scenarios
 
-Our reference scenarios are grouped by Teams app functionality. Each scenario includes a scenario summary, use case, user story and provides some decision points and next steps to execute the scenario for your own organization. Some examples also include a reference architecture for deploying the scenario.
+Tenant app reference scenarios are built to help you envision real possibilities for your organization to benefit from integrating your company workflows into Microsoft Teams. Each scenario page includes a scenario summary, a user story, decision points and a high level reference architecture to show how you could execute the scenario for your own organization. 
+
+Choose a scenario below to see whats possible!
 
 
 ## Example Scenarios
 
-<ul  class="panelContent cardsY">
+<ul  class="panelContent cardsC">
 <li>
-    <a href="lob-intelligent-insights.md">
+    <a href="lob-faq-scenario.md">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="../assets/images/lob/lob-ref-scenario-bots-1.png" alt=" " />
+                        <div class="cardImage bgdAccent1">
+                            <img src="https://docs.microsoft.com/media/illustrations/bcs-partner-advanced-management-faq-2.svg" alt=" " />
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Acting on intelligent insights</h3>
-                        <p>Take decisive action based on intelligent insights powered by Microsoft Cognitive Services.</p>
+                        <h3>Turn conversation into actions</h3>
+                        <p>Empower users to get answers to their questions in Microsoft Teams.</p>
                     </div>
                 </div>
             </div>
@@ -33,18 +35,18 @@ Our reference scenarios are grouped by Teams app functionality. Each scenario in
     </a>
 </li>
 <li>
-    <a href="lob-conversations-to-actions.md">
+    <a href="lob-marketing-scenario.md">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="../assets/images/lob/lob-ref-scenario-bots-1.png" alt=" " />
+                        <div class="cardImage bgdAccent1">
+                            <img src="https://docs.microsoft.com/media/illustrations/virtualization-hperv-server-community.svg" alt=" " />
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Turn Conversations into Actions</h3>
-                        <p>Help users get tasks done in conversations.</p>
+                        <h3>Acting on intelligent insights</h3>
+                        <p>Responding to user sentiment changes using Microsoft Teams.</p>
                     </div>
                 </div>
             </div>
@@ -57,51 +59,13 @@ Our reference scenarios are grouped by Teams app functionality. Each scenario in
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="../assets/images/lob/lob-ref-scenario-bots-1.png" alt=" " />
+                        <div class="cardImage bgdAccent1">
+                            <img src="https://docs.microsoft.com/media/illustrations/teams-fast-track.svg" alt=" " />
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Bootstrap your PMO</h3>
-                        <p>Provide simple tools to empower your PMO to kickstart projects powered by Teams.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li>
-    <a href="bots-conv-personal.md">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="../assets/images/lob/lob-ref-scenario-bots-1.png" alt=" " />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Personal conversations with bots</h3>
-                        <p>Have a personal (one-on-one) conversation with a Microsoft Teams bot.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-<li>
-    <a href="bots-conv-channel.md">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="../assets/images/lob/lob-ref-scenario-bots-1.png" alt=" " />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Channel conversations with bots</h3>
-                        <p>Interact in a team channel with a Microsoft Teams bot.</p>
+                        <h3>Bootstrap your Project Management Organization</h3>
+                        <p>Provide simple tools to empower your PMO to kickstart projects powered by Microsoft Teams.</p>
                     </div>
                 </div>
             </div>
