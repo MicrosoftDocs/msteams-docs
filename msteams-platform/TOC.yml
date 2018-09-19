@@ -135,10 +135,12 @@
 - name: Scenarios
   href: ./scenarios/lob-scenarios-landing-page
   items:
-  - name: Personal conversations with bots
-    href: ./concepts/bots/bot-conversations/bots-conv-personal
-  - name: Channel conversations with bots
-    href: ./concepts/bots/bot-conversations/bots-conv-channel
+  - name: Turn conversation into actions
+    href: ./scenarios/lob-faq-scenario
+  - name: Acting on intelligent insights
+    href: ./scenarios/lob-marketing-scenario
+  - name: Bootstrap your Project Management Organization
+    href: ./scenarios/lob-pmo-scenario
 - name: Resources
   href: ./resources/resource-overview
   items:
