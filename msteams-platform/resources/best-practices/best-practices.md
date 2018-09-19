@@ -1,10 +1,10 @@
 ---
-title: Scenarios for apps
-description: Scenarios that you can power up using Microsoft teams and the capability to build apps in Teams
+title: BEst practice for apps
+description: Best practices that you can power up using Microsoft teams and the capability to build apps in Teams
 keywords: teams apps scenarios
 ms.date: 01/26/2018
 ---
-# Scenarios for apps in Microsoft Teams
+# Best practices for apps in Microsoft Teams
 
 Writing an app usually involves working with more than one feature. Your app may have bots, tabs, messaging extensions and more. The topics in this section describe how to implement apps that span these technologies.
 

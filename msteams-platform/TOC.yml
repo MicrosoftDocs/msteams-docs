@@ -133,7 +133,7 @@
   - name: Localizing your app
     href: ./publishing/apps-localization
 - name: Scenarios
-  href: ./scenarios/scenarios
+  href: ./scenarios/lob-scenarios-landing-page
   items:
   - name: Personal conversations with bots
     href: ./concepts/bots/bot-conversations/bots-conv-personal
@@ -201,6 +201,13 @@
         href: ./resources/design/components/themes
     - name: Resources
       href: ./resources/design/resources
+  - name: Best Practices
+    href: ./resources/best-practices/best-practices
+    items:
+  -   name: Personal conversations with bots
+      href: ./concepts/bots/bot-conversations/bots-conv-personal
+  -   name: Channel conversations with bots
+      href: ./concepts/bots/bot-conversations/bots-conv-channel
   - name: Manifest schema
     href: ./resources/schema/manifest-schema
   - name: Developer preview manifest schema
