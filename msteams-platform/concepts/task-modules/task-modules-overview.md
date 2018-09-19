@@ -2,7 +2,7 @@
 title: Overview of Microsoft Teams Task Modules
 description: A task module allows you to create modal popup experiences in your Teams application. Inside the popup, you can run your own custom HTML/JavaScript code, show an <iframe>-based widget such as a YouTube or Microsoft Stream video, or display an Adaptive card.
 keywords: task modules modal popup 
-ms.date: 09/13/2018
+ms.date: 09/18/2018
 ---
 # Task modules
 
@@ -53,10 +53,13 @@ The `TaskInfo` object contains the metadata for a task module. Here's what it co
 | `title` | string | Appears below the app name and to the right of the app icon |
 | `height` | number or string | This can be a number, representing the task module's height in pixels, or a string, one of: `small`, `medium`, `large`. [See below for how height and width are handled](#task-module-sizing). |
 | `width` | string | This can be a number, representing the task module's width in pixels, or a string, one of:  `small`, `medium`, `large`. [See below for how height and width are handled](#task-module-sizing). |
-| `url` | string | The URL of the page powering the task module experience: it's what is loaded as an &lt;iframe&gt; inside the task module. The URL's domain must be in the app's [`validDomains[]` array](~/resources/schema/manifest-schema#validdomains). One of `url` or `card` is required. |
+| `url` | string | The URL of the page powering the task module experience: it's what is loaded as an `<iframe>` inside the task module. The URL's domain must be in the app's [validDomains[] array](~/resources/schema/manifest-schema#validdomains) in your app's manifest. One of `url` or `card` is required. |
 | `card` | Adaptive card or an Adaptive card bot card attachment | The JSON for the Adaptive card to appear in the task module. Bot developers are used to embedding Adaptive card JSON in a Bot Framework `attachment` object; tab developers may not be. Both formats are accepted. [Here's an example.](#adaptive-card-or-adaptive-card-bot-card-attachment) |
 | `fallbackUrl` | string | Task modules are not yet supported on Teams mobile clients. If a client does not support the task module feature, this URL is opened in a browser tab. |
 | `completionBotId` | string | Specifies a bot ID to send the result of the user's interaction with the task module. If specified, the bot will receive a `task/complete invoke` event with a JSON object in the event payload. |
+
+> [!NOTE]
+> The task module feature requires that the domains of the URLs you want to load are included in the `validDomains[]` array in your app's manifest. As a result, must create or modify an app manifest in order to use the task module functionality.
 
 ## Task module sizing
 
@@ -196,7 +199,7 @@ Here's the information on `APP_ID` and `BOT_APP_ID`:
 
 | Value | Type | Required? | Description |
 | --- | --- | --- | --- |
-| `APP_ID` | string | Yes | This indicates the [id](~/resources/schema/manifest-schema#id) of the app invoking the task module. The [`validDomains[]` array](~/resources/schema/manifest-schema#validdomains) in the manifest for `APP_ID` must contain the domain for `url` if `url` is in the URL. (The app ID is already known when a task module is invoked from a tab or a bot, which is why it's not included in `TaskInfo`.) |
+| `APP_ID` | string | Yes | This indicates the [id](~/resources/schema/manifest-schema#id) of the app invoking the task module. The [validDomains[] array](~/resources/schema/manifest-schema#validdomains) in the manifest for `APP_ID` must contain the domain for `url` if `url` is in the URL. (The app ID is already known when a task module is invoked from a tab or a bot, which is why it's not included in `TaskInfo`.) |
 | `BOT_APP_ID` | string | No | If a value for `completionBotId` is specified, the `result` object is sent via a a `task/submit invoke` message to the specified bot. `BOT_APP_ID` must be specified as a bot in the app's manifest, i.e. you can't just send it to any bot. |
 
 Note that it's valid for `APP_ID` and `BOT_APP_ID` to be the same, and in many cases will be if an app has a bot since it's recommended to use that as an app's ID if there is one.
