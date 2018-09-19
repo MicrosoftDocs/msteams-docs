@@ -132,7 +132,7 @@
     href: ./publishing/office-store-guidance
   - name: Localizing your app
     href: ./publishing/apps-localization
-- name: Scenarios
+- name: App scenarios
   href: ./scenarios/lob-scenarios-landing-page
   items:
   - name: Turn conversation into actions
