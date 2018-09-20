@@ -1,8 +1,8 @@
 ---
-title: BEst practice for apps
-description: Best practices that you can power up using Microsoft teams and the capability to build apps in Teams
-keywords: teams apps scenarios
-ms.date: 01/26/2018
+title: Best practice for apps
+description: Best practices and tips that you can power up using Microsoft teams and the capability to build apps in Teams
+keywords: teams apps best practices and tips
+ms.date: 09/20/2018
 ---
 # Best practices for apps in Microsoft Teams
 
