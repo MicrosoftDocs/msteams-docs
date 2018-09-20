@@ -7,7 +7,7 @@ ms.topic: MicrosoftTeams
 
 
 
-# Acting on intelligent insights
+# Turn Conversation into Action
 
 ## Summary
 FAQ bot in Microsoft Teams
@@ -37,7 +37,7 @@ The people organization gets valuable information on how well the answers they a
 <br>
 |         |         |         |
 |---------|---------|---------|
-|<img src="../assets/images/lob/audio_conferencing_image7.png" />|Decision points|<ul><li>Which internal FAQ resources would your organization want to include in such an app?</li></ul>|
+|<img src="../assets/images/app-scenarios/audio_conferencing_image7.png" />|Decision points|<ul><li>Which internal FAQ resources would your organization want to include in such an app?</li></ul>|
 
 
 ## Architecture

@@ -36,7 +36,7 @@ The PMO manages the change control of the key assets published via the Teams app
 <br>
 |         |         |         |
 |---------|---------|---------|
-|<img src="../assets/images/lob/audio_conferencing_image7.png" />|Decision points|<ul><li>Which internal PMO resources would your PMO want to include in such an app?</li><li>Have you started to use Planner to manage your projects?</li><li>...?</li></ul>|
+|<img src="../assets/images/app-scenarios/audio_conferencing_image7.png" />|Decision points|<ul><li>Which internal PMO resources would your PMO want to include in such an app?</li><li>Have you started to use Planner to manage your projects?</li><li>...?</li></ul>|
 
 
 ## Architecture

@@ -8,6 +8,13 @@ ms.date: 01/24/2018
 
 Microsoft Teams is a chat-based workspace in Office 365 that integrates with the apps and services that people use to get work done together. The Microsoft Teams developer platform makes it easy to integrate your own services with Teams, whether you develop custom apps for your enterprise or SaaS applications for teams around the world.
 
+Using the Teams developer platform, you can create two classes of apps: 
+ 
+•    Apps that others can access via the publicly available commercial Teams store.
+•    Apps that you publish to a private Teams store that’s only available to your organization. These are known as line-of-business apps. 
+ 
+The key concepts and guidance for developers are applicable to both classes of apps, except you go through a formal submission process to publish apps to the Teams public store. For information about the benefits of creating apps for the private Teams store, see the [LOB apps overview](~/lob-apps-value-prop) page.
+
 > [!TIP]
 > Don't have Microsoft Teams? Get a free Office 365 developer subscription or activate Teams for your existing Office 365 account. See [Set up your Office 365 tenant](~/get-started/get-started-tenant).
 

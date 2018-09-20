@@ -1,6 +1,8 @@
 - name: Overview
   href: ./overview
   universal_ref_toc: /javascript/api/msteams-client-docs-ref-typescript/toc.json
+- name: LOB Apps overview
+  href: ./lob-apps-value-prop
 - name: What's new
   href: ./whats-new
 - name: Get started
@@ -203,7 +205,7 @@
         href: ./resources/design/components/themes
     - name: Resources
       href: ./resources/design/resources
-  - name: Best Practices
+  - name: Best practices and tips
     href: ./resources/best-practices/best-practices
     items:
   -   name: Personal conversations with bots

@@ -7,7 +7,7 @@ ms.topic: MicrosoftTeams
 
 
 
-# Turn Conversation into Action
+# Acting on intelligent insights
 
 ## Summary
 Acting on intelligent insights -responding to user sentiment changes in Microsoft Teams
@@ -31,7 +31,7 @@ Your organisation deployed Microsoft Teams and as part of this you see an opport
 <br>
 |         |         |         |
 |---------|---------|---------|
-|<img src="../assets/images/lob/audio_conferencing_image7.png" />|Decision points|<ul><li>Which social media feeds would be of interest to your Marketing org?</li><li>Would there need to be a formal sign off any outbound tweets that may need an authorisation flow?</li></ul>|
+|<img src="../assets/images/app-scenarios/audio_conferencing_image7.png" />|Decision points|<ul><li>Which social media feeds would be of interest to your Marketing org?</li><li>Would there need to be a formal sign off any outbound tweets that may need an authorisation flow?</li></ul>|
 
 
 ## Architecture

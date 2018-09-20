@@ -6,7 +6,9 @@ ms.date: 01/26/2018
 ---
 # Best practices for apps in Microsoft Teams
 
-Writing an app usually involves working with more than one feature. Your app may have bots, tabs, messaging extensions and more. The topics in this section describe how to implement apps that span these technologies.
+The articles in this section contain best practices for using the Teams developer platform to design and develop solutions to integrate into Microsoft Teams. These practices are derived from our collective experience working with partners and customers like you.
+
+The best practices are intended for designers, architects, developers, and testers who build and deploy solutions by using the Teams developer platform.
 
 ## What you'll find here
 
