@@ -35,22 +35,22 @@ Response body
     "objectId": "9d3e08f9-a7ae-43aa-a4d3-de3f319a8a9c",
     "givenName": "Larry",
     "surname": "Brown",
-    "email": "Larry.Brown@company.com",
-    "userPrincipalName": "labrown@company.com"
+    "email": "Larry.Brown@fabrikam.com",
+    "userPrincipalName": "labrown@fabrikam.com"
 }, {
     "id": "29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk",
     "objectId": "76b0b09f-d410-48fd-993e-84da521a597b",
     "givenName": "John",
     "surname": "Patterson",
-    "email": "johnp@company.com",
-    "userPrincipalName": "johnp@company.com"
+    "email": "johnp@fabrikam.com",
+    "userPrincipalName": "johnp@fabrikam.com"
 }, {
     "id": "29:1URzNQM1x1PNMr1D7L5_lFe6qF6gEfAbkdG8_BUxOW2mTKryQqEZtBTqDt10-MghkzjYDuUj4KG6nvg5lFAyjOLiGJ4jzhb99WrnI7XKriCs",
     "objectId": "6b7b3b2a-2c4b-4175-8582-41c9e685c1b5",
     "givenName": "Rick",
     "surname": "Stevens",
-    "email": "Rick.Stevens@company.com",
-    "userPrincipalName": "rstevens@company.com"
+    "email": "Rick.Stevens@fabrikam.com",
+    "userPrincipalName": "rstevens@fabrikam.com"
 }]
 ```
 
