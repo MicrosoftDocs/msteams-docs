@@ -55,10 +55,11 @@ Examples:
 * Link to a task item within the static tab: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456"}`
 
 > [!IMPORTANT]
-> Ensure that the entire URL is URI encoded. For the sake of readability, the above examples are not, but you should. Using the last example:
+> Ensure that all query parameters are properly URI encoded. For the sake of readability, the above examples are not, but you should. Using the last example:
 > ```javascript
-> var taskItemUrl = 'https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456"}';
-> var encodedUri = encodeURI(taskItemUrl);
+> var encodedWebUrl = encodeURI('https://tasklist.example.com/123/456&label=Task 456');
+> var encodedContext = encodeURI('{"subEntityId": "task456"}');
+> var taskItemUrl = 'https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=' + encodedWebUrl + '&context=' + encodedContext;
 > ```
 
 ## Consuming a deep link from a tab
