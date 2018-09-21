@@ -13,7 +13,7 @@ productivity, make decisions faster, provide focus (by reducing context
 switching), and create collaboration around existing content and workflows.
 
 *Teams line-of-business apps* integrate the custom apps and services that your
-organization developed, or create new capabilities to meet the needs of users
+organization developed or create new capabilities to meet the needs of users
 that can’t be met via commonly available, off-the-shelf software or public Teams
 apps.
 
