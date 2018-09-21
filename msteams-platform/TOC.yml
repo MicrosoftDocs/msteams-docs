@@ -208,15 +208,9 @@
   - name: Best practices and tips
     href: ./resources/best-practices/best-practices
     items:
-<<<<<<< HEAD
     - name: Personal conversations with bots
       href: ./concepts/bots/bot-conversations/bots-conv-personal
     - name: Channel conversations with bots
-=======
-  -   name: Personal conversations with bots
-      href: ./concepts/bots/bot-conversations/bots-conv-personal
-  -   name: Channel conversations with bots
->>>>>>> e24ffce9b720775f523109c66ae7dc1a30074751
       href: ./concepts/bots/bot-conversations/bots-conv-channel
   - name: Manifest schema
     href: ./resources/schema/manifest-schema
