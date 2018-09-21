@@ -126,8 +126,6 @@
       href: ./concepts/calling-and-meeting/registering-calling-bot
     - name: Requirements and considerations for real-time media bots
       href: ./concepts/calling-and-meeting/requirements-considerations-real-time-media-bots
-    - name: Deploy a local media calling bot
-      href: ./concepts/calling-and-meeting/deploy-audio-video-calling-bot
     - name: Debugging and local testing of calling and meeting bots
       href: ./concepts/calling-and-meeting/debugging-local-testing-calling-meeting-bots
   - name: Activity feed
