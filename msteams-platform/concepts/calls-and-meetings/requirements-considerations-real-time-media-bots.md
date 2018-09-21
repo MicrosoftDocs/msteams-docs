@@ -10,13 +10,20 @@ ms.date: 09/10/2018
 Not all guidance for developing messaging and IVR calling bots applies equally to building real-time media bots. This article describes some of the important requirements and considerations for developing and running a real-time media bot.
 
 > [!NOTE]
-> Because the Real-Time Media Platform for Bots is a Preview technology, the guidance in this article is subject to change.
+> Because the Microsoft Real-Time Media Platform for Bots is a Preview technology, the guidance in this article is subject to change.
 
 ## Real-time media bot development requires C#/.NET and Windows Server
 
-- A real-time media bot requires the `Microsoft.Skype.Bots.Media` .NET library (available via <a href="https://www.nuget.org/" target="_blank">NuGet</a>) to access the audio and video media streams, and the bot must be deployed on a Windows Server machine (or Windows Server guest OS in Azure). Therefore, the bot should be developed with C# and the standard .NET Framework, and deployed in Azure. You cannot use C++ or Node.js APIs to access real-time media. .NET Core is not supported for a real-time media bot.
+- A real-time media bot requires the `Microsoft.Skype.Bots.Media` .NET library (available via <a href="https://www.nuget.org/" target="_blank">NuGet</a>) to access the audio and video media streams, and the bot must be deployed on a Windows Server machine (or Windows Server guest OS in Azure). Therefore, the bot should be developed with C# and the standard .NET Framework, and deployed in Microsoft Azure. You cannot use C++ or Node.js APIs to access real-time media. .NET Core is not supported for a real-time media bot.
 
-- The real-time media bot must be running on a recent version of the `Microsoft.Skype.Bots.Media` .NET library. The bot should use either the newest available version of the <a href="https://www.nuget.org/" target="_blank">NuGet</a> package, or a version which is not more than three months old. Older versions of the library will be deprecated and may not work after a few months. Keeping the `Microsoft.Skype.Bots.Media` library up-to-date will ensure the best interoperability between the bot and Microsoft Teams.
+- A real-time media bot can be hosted within one of the following Azure service environments:
+  - Cloud Service
+  - Service Fabric with Virtual Machine Scale Sets (VMSS)
+  - Infrastructure as a Service (IaaS) Virtual Machine (VM)  
+
+  A real-time media bot cannot be deployed as an Azure Web App.
+
+- A real-time media bot must be running on a recent version of the `Microsoft.Skype.Bots.Media` .NET library. The bot should use either the newest available version of the <a href="https://www.nuget.org/" target="_blank">NuGet</a> package, or a version which is not more than three months old. Older versions of the library will be deprecated and may not work after a few months. Keeping the `Microsoft.Skype.Bots.Media` library up-to-date will ensure the best interoperability between the bot and Microsoft Teams.
 
 ## Real-time media calls stay on the machine where they were created
 
@@ -26,7 +33,13 @@ Not all guidance for developing messaging and IVR calling bots applies equally t
 
 ## Real-time media bots must be directly accessible on the Internet
 
-- Each VM instance hosting a real-time media bot must be directly accessible from the Internet. For bots hosted in Azure, each VM instance must have an instance-level public IP address (ILPIP). For information about obtaining and configuring an ILPIP, see <a href="/azure/virtual-network/virtual-networks-instance-level-public-ip" target="_blank">Instance level public IP (Classic) overview</a>. By default, an Azure Cloud Service can obtain 5 ILPIP addresses; please contact Azure support to increase your subscription's quota.
+- Each VM instance hosting a real-time media bot in Azure must be directly accessible from the Internet using an instance-level public IP address (ILPIP).
+  - For obtaining and configuring an ILPIP for an Azure Cloud Service, see <a href="/azure/virtual-network/virtual-networks-instance-level-public-ip" target="_blank">Instance level public IP (Classic) overview</a>.
+  - For configuring an ILPIP for a VM Scale Set, see <a href="/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-networking#public-ipv4-per-virtual-machine" target="_blank">Public IPv4 per virtual machine</a>.
+
+- The service hosting a real-time media bot must also configure each VM instance with a public-facing port which maps to the specific instance.
+  - For an Azure Cloud Service, this requires an instance input endpoint; see <a href="/azure/cloud-services/cloud-services-enable-communication-role-instances" target="_blank">Enable communication for role instances in azure</a>.
+  - For a VM Scale Set, a NAT rule on the load balancer must be configured; see <a href="/azure/virtual-machines/windows/network-overview" target="_blank">Virtual networks and virtual machines in Azure</a>.
 
 - Real-time media bots are not supported by the Bot Framework Emulator.
 
