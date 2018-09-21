@@ -13,7 +13,11 @@ productivity, make decisions faster, provide focus (by reducing context
 switching), and create collaboration around existing content and workflows.
 
 *Teams line-of-business apps* integrate the custom apps and services that your
+<<<<<<< HEAD
 organization developed, or create new capabilities to meet the needs of users
+=======
+organization developed or create new capabilities to meet the needs of users
+>>>>>>> e24ffce9b720775f523109c66ae7dc1a30074751
 that can’t be met via commonly available, off-the-shelf software or public Teams
 apps.
 
@@ -58,7 +62,11 @@ Let’s look at two approaches that can be delivered through Teams
 line-of-business apps. (These are just examples; let your imagination and
 business needs guide your investigations!)
 
+<<<<<<< HEAD
 ## Acting on intelligent insights
+=======
+## Acting on intelligent insights (Service + People + Actions)
+>>>>>>> e24ffce9b720775f523109c66ae7dc1a30074751
 
 We can imagine one category of this type of conversational enhancement as
 “Acting on intelligent insights.” People are provided with insights from a
@@ -96,7 +104,11 @@ The bot pings the Instant Response channel to alert the team when customers are
 unhappy. The team collaborates quickly to create a response, which is then
 posted on Twitter via a connector, a bot, or a flow that has an approval chain.
 
+<<<<<<< HEAD
 ## Turn conversations into actions
+=======
+## Turn conversations into actions (People + data + Actions)
+>>>>>>> e24ffce9b720775f523109c66ae7dc1a30074751
 
 We can imagine a second category of this type of conversational enhancement as
 “Turn conversations into actions,” where Teams extensions are used to create and

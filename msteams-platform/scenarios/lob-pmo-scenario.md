@@ -41,4 +41,3 @@ The high-level architecture of this Teams app is as follows:
 
 <img src="../assets/images/app-scenarios/pmo-scenario-architecture.png">
 
-
