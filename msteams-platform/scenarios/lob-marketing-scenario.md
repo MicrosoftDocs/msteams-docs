@@ -37,6 +37,3 @@ The high-level architecture of the Marketing Team Notification Bot is as follows
 
 <img src="../assets/images/app-scenarios/marketing-scenario-architecture.png">
 
-## Resources
-
-Links to Bots, Tabs, App Studio, Azure 

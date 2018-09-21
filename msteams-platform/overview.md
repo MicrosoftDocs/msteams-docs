@@ -10,8 +10,13 @@ Microsoft Teams is a chat-based workspace in Office 365 that integrates with the
 
 Using the Teams developer platform, you can create two classes of apps: 
  
+<<<<<<< HEAD
+- Apps that others can access via the publicly available commercial Teams store.
+- Apps that you publish to a private Teams store that’s only available to your organization. These are known as line-of-business apps. 
+=======
 •    Apps that others can access via the publicly available commercial Teams store.
 •    Apps that you publish to a private Teams store that’s only available to your organization. These are known as line-of-business apps. 
+>>>>>>> e24ffce9b720775f523109c66ae7dc1a30074751
  
 The key concepts and guidance for developers are applicable to both classes of apps, except you go through a formal submission process to publish apps to the Teams public store. For information about the benefits of creating apps for the private Teams store, see the [LOB apps overview](~/lob-apps-value-prop) page.
 

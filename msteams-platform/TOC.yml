@@ -1,7 +1,7 @@
 - name: Overview
   href: ./overview
   universal_ref_toc: /javascript/api/msteams-client-docs-ref-typescript/toc.json
-- name: LOB Apps overview
+- name: LOB apps overview
   href: ./lob-apps-value-prop
 - name: What's new
   href: ./whats-new
@@ -208,9 +208,9 @@
   - name: Best practices and tips
     href: ./resources/best-practices/best-practices
     items:
-  -   name: Personal conversations with bots
+    - name: Personal conversations with bots
       href: ./concepts/bots/bot-conversations/bots-conv-personal
-  -   name: Channel conversations with bots
+    - name: Channel conversations with bots
       href: ./concepts/bots/bot-conversations/bots-conv-channel
   - name: Manifest schema
     href: ./resources/schema/manifest-schema

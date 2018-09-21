@@ -48,7 +48,3 @@ The high-level architecture of this Teams app is:
 -   [Microsoft Teams Bot](https://docs.microsoft.com/microsoftteams/platform/concepts/bots/bots-overview) (personal context)<br>Build and connect intelligent bots to interact with Microsoft Teams users naturally through chat.
 
 <img src="../assets/images/app-scenarios/faq-scenario-architecture.png">
-
-## Resources
-
-Links to bots, App Studio, Azure, etc.
