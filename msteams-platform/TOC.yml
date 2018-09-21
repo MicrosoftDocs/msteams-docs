@@ -1,6 +1,8 @@
 - name: Overview
   href: ./overview
   universal_ref_toc: /javascript/api/msteams-client-docs-ref-typescript/toc.json
+- name: LOB Apps overview
+  href: ./lob-apps-value-prop
 - name: What's new
   href: ./whats-new
 - name: Get started
@@ -132,13 +134,15 @@
     href: ./publishing/office-store-guidance
   - name: Localizing your app
     href: ./publishing/apps-localization
-- name: Scenarios
-  href: ./scenarios/scenarios
+- name: App scenarios
+  href: ./scenarios/lob-scenarios-landing-page
   items:
-  - name: Personal conversations with bots
-    href: ./concepts/bots/bot-conversations/bots-conv-personal
-  - name: Channel conversations with bots
-    href: ./concepts/bots/bot-conversations/bots-conv-channel
+  - name: Turn conversation into actions
+    href: ./scenarios/lob-faq-scenario
+  - name: Acting on intelligent insights
+    href: ./scenarios/lob-marketing-scenario
+  - name: Bootstrap your Project Management Organization
+    href: ./scenarios/lob-pmo-scenario
 - name: Resources
   href: ./resources/resource-overview
   items:
@@ -201,6 +205,13 @@
         href: ./resources/design/components/themes
     - name: Resources
       href: ./resources/design/resources
+  - name: Best practices and tips
+    href: ./resources/best-practices/best-practices
+    items:
+  -   name: Personal conversations with bots
+      href: ./concepts/bots/bot-conversations/bots-conv-personal
+  -   name: Channel conversations with bots
+      href: ./concepts/bots/bot-conversations/bots-conv-channel
   - name: Manifest schema
     href: ./resources/schema/manifest-schema
   - name: Developer preview manifest schema
