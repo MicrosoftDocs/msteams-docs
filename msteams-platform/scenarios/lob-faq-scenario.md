@@ -49,6 +49,3 @@ The high-level architecture of this Teams app is:
 
 <img src="../assets/images/app-scenarios/faq-scenario-architecture.png">
 
-## Resources
-
-Links to bots, App Studio, Azure, etc.

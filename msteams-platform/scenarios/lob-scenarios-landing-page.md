@@ -5,9 +5,9 @@ layout: LandingPage
 ms.topic: landing-page
 ---
 
-# Microsoft Teams Tenant App Reference Scenarios
+# App Scenarios
 
-Tenant app reference scenarios are built to help you envision real possibilities for your organization to benefit from integrating your company workflows into Microsoft Teams. Each scenario page includes a scenario summary, a user story, decision points and a high level reference architecture to show how you could execute the scenario for your own organization. 
+The reference app scenarios are built to help you envision real possibilities for your organization to benefit from integrating your company workflows into Microsoft Teams. Each scenario page includes a scenario summary, a user story, decision points and a high level reference architecture to show how you could execute the scenario for your own organization. 
 
 Choose a scenario below to see whats possible!
 
