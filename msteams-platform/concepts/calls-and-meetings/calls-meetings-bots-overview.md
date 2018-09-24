@@ -36,3 +36,4 @@ Here's more information on how to create and test calls and online meetings bots
 * [Registering a bot that supports calls and online meetings](~/concepts/calls-and-meetings/registering-calling-bot) and [Microsoft Graph permissions for calls and online meetings bots](~/concepts/calls-and-meetings/registering-calling-bot#application-permissions)
 * [How to develop calling and online meeting bots on your local PC](~/concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots)
 * [More information on real-time media processing](~/concepts/calls-and-meetings/real-time-media-concepts), and [what's needed to support application-hosted media](~/concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots)
+* [Technical information on handling incoming call notifications](~/concepts/calls-and-meetings/call-notifications)
