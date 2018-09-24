@@ -27,7 +27,7 @@ Creating a bot for Microsoft Teams is covered in more detail in the [Create a ne
 
 Microsoft Graph exposes granular permissions controlling the access that apps have to resources. As a developer, you decide which permissions for Microsoft Graph your app requests.  The Microsoft Graph Calling APIs support _Application permissions_, which are used by apps that run without a signed-in user present.  A tenant administrator must grant consent to application permissions. Below is a list of those permissions:
 
-### Application permissions
+### Application permissions: calls
 
 |Permission    |Display String   |Description |Admin Consent Required |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
@@ -38,6 +38,13 @@ Microsoft Graph exposes granular permissions controlling the access that apps ha
 |_Calls.AccessMedia.All_ <sup>_see below_</sup>|Access media streams in a call as an app (preview)|Allows the app to get direct access to media streams in a call, without a signed-in user.|Yes|
 
 > **Important:** You may not use the Microsoft.Graph.Calls.Media API to record or otherwise persist media content from calls or meetings that your bot accesses.
+
+### Application permissions: online meetings
+
+|Permission    |Display String   |Description |Admin Consent Required |
+|:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
+|_OnlineMeetings.Read.All_|Read Online Meeting details from the app (preview)|Allows the app to read Online Meeting details in your organization, without a signed-in user.|Yes|
+|_OnlineMeetings.ReadWrite.All_|Read and Create Online Meetings from the app (preview) on behalf of a user|Allows the app to create Online Meetings in your organization on behalf of a user, without a signed-in user.|Yes|
 
 ### Assigning permissions
 

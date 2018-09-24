@@ -7,7 +7,7 @@ ms.date: 09/24/2018
 
 # Incoming call notifications: technical details
 
-In [Registering a calling and meeting bot for Microsoft Teams](~/concepts/calls-and-meetings/registering-calling-bot#creating-a-new-bot-or-adding-calling-capabilities-to-an-existing-bot), we mentioned the **Webhook (for calling)** URL, the webhook endpoint for all incoming calls to your bot. This topic discusses low-level technical information you may need to respond to these notifications.
+In [Registering a calling and meeting bot for Microsoft Teams](~/concepts/calls-and-meetings/registering-calling-bot#creating-a-new-bot-or-adding-calling-capabilities-to-an-existing-bot), we mentioned the **Webhook (for calling)** URL, the webhook endpoint for all incoming calls to your bot. This topic discusses the technical details you'll need to respond to these notifications.
 
 ## Protocol determination
 
@@ -34,7 +34,7 @@ You may decide to pick up the call and call the [answer](https://developer.micro
 
 ## Authenticating the callback
 
-Your bot should inspect the token passed to your webhook to validate the request. Whenever the API posts to the webhook, HTTP POST message contains an OAuth token in the Authorization header as a Bearer token, with audience as your application's App ID.
+Your bot should inspect the token posted to your webhook to validate the request. Whenever the API posts to the webhook, the HTTP POST message contains an OAuth token in the Authorization header as a Bearer token, with audience as your application's App ID.
 
 Your application should validate this token before accepting the callback request.
 
@@ -55,7 +55,7 @@ Authentication: Bearer <TOKEN>
 ]
 ```
 
-The OAuth token would have values like the following, and will be signed by Microsoft. The OpenID configuration published at https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration can be used to verify the token.
+The OAuth token would have values like the following, and will be signed by Skype. The OpenID configuration published at <https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration> can be used to verify the token.
 
 ```json
 {
@@ -77,7 +77,7 @@ Your code handling the webhook should validate the token, ensure it has not expi
 [Sample](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs) shows how to validate inbound requests.
 
 > [!NOTE]
-> In the future, we will send you OAuth tokens issued by AAD instead of Skype. To prepare for this migration, write your code to accept both kinds of tokens.
+> In the future, we will send you OAuth tokens issued by AAD instead of Skype. To prepare for this migration, your bot should accept both kinds of tokens.
 
 The new token would look like following.
 
@@ -100,9 +100,9 @@ The new token would look like following.
 * **aud** audience is the App ID specified for the application.
 * **tid** is the tenant id for contoso
 * **iss** is the token issuer, `https://login.microsoftonline.com/{tenantId}/v2.0`
-* **appid** is the appid of our service 
+* **appid** is the appid of our service
 
-As before, your code handling the webhook should validate the token, ensure it has not expired, and check whether it has been signed by our published OpenID configuration. You should also check whether **aud** matches your App ID before accepting the callback request.
+As before, your code handling the webhook should validate the token, ensure it has not expired, and check whether it has been signed by the [Azure AD published OpenID configuration](https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration). You should also check whether **aud** matches your App ID before accepting the callback request.
 
 ## Additional information
 
