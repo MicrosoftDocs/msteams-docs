@@ -7,9 +7,9 @@ ms.topic: MicrosoftTeams
 
 
 
-# Respond to user sentiment changes in Microsoft Teams
+# Act on intelligent insights
 
-## User story
+## User story; Respond to user sentiment changes in Microsoft Teams
 
 Your company is launching new products into the market. The marketing team is running social media campaigns to promote the launch and new events. The team wants to ensure that any trending negative comments on social media are quickly identified and an appropriately responded to, to help drive a wider positive attitude toward the new products.
 

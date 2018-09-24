@@ -7,9 +7,9 @@ ms.topic: MicrosoftTeams
 
 
 
-# FAQ bot in Microsoft Teams
+# Turn conversations into actions
 
-## User story
+## User story: FAQ bot in Microsoft Teams
 
 As a member of your organization’s personnel department (human resources, or HR) you’re responsible for maintaining a frequently asked questions (FAQ) page to provide answers to questions that employees commonly ask. 
 
