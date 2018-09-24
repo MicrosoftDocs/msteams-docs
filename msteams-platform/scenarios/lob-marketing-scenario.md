@@ -3,13 +3,9 @@ title: Microsoft Teams Turn Conversation into Action
 description: Microsoft Teams Line of Business (LOB) Scenario.
 ms.topic: MicrosoftTeams
 ---
-
-
-
-
 # Act on intelligent insights
 
-## User story: Respond to user sentiment changes in Microsoft Teams
+## User story; Respond to user sentiment changes in Microsoft Teams
 
 Your company is launching new products into the market. The marketing team is running social media campaigns to promote the launch and new events. The team wants to ensure that any trending negative comments on social media are quickly identified and an appropriately responded to, to help drive a wider positive attitude toward the new products.
 
