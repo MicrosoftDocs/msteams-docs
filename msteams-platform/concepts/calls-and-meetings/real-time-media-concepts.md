@@ -7,7 +7,7 @@ ms.date: 09/23/2018
 
 # Real-time media calls and meetings with Microsoft Teams
 
-The Real-time Media Platform enables bots to interact with Microsoft Teams calls and meetings using real-time voice, video and screen sharing modalities. This is an advanced capability which allows the bot to send and receive voice and video content *frame by frame*. The bot has "raw" access to the voice, video and screen sharing media streams. (Bots which process media themselves are called _application-hosted media_ bots, as opposed to simpler _service-hosted media_ bots that rely on the Real-time Media platform for all media processing.)
+The Real-time Media Platform enables bots to interact with Microsoft Teams calls and meetings using real-time voice, video and screen sharing. This is an advanced capability which allows the bot to send and receive voice and video content *frame by frame*. The bot has "raw" access to the voice, video and screen sharing media streams. (Bots which process media themselves are called _application-hosted media_ bots, as opposed to simpler _service-hosted media_ bots that rely on the Real-time Media platform for all media processing.)
 
 For example, in a 1:1 call with a bot, as the user speaks, the bot will receive 50 audio frames per second, with each frame containing 20 milliseconds (ms) of audio. An application-hosted media bot can perform real-time speech recognition as the audio frames are received, rather than having to wait for a recording after the user has stopped speaking. The bot can also send and receive high-definition-resolution video, including video-based screen sharing content.
 
