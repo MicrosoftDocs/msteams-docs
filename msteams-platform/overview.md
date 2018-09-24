@@ -13,10 +13,10 @@ Microsoft Teams is a chat-based workspace in Office 365 that integrates with the
 
 Using the Teams developer platform, you can create two classes of apps:
 
-- Apps that others can access via the publicly available commercial Teams store.
-- Apps that you publish to your tenant’s Teams App Catalog that’s only available to your organization. These are known as *line-of-business apps*.
+- Apps that any organization using Office 365 can access via the Teams Store.
+- Apps that you publish to your tenant’s Teams App Catalog that’s only available to your organization. These are known as *line-of-business* apps.
 
-The key concepts and guidance for developers are applicable to both classes of apps, except you go through a formal submission process to publish apps to [AppSource](https://docs.microsoft.com/microsoftteams/platform/publishing/apps-publish#appsource). For information about the benefits of creating apps for your tenant’s Teams App Catalog, see the [Line-of-business apps overview](~/lob-apps-value-prop) page.
+The key concepts and guidance for developers are applicable to both classes of apps, except you go through a formal submission process to publish apps to [Publish apps](https://docs.microsoft.com/microsoftteams/platform/publishing/apps-publish#appsource). For information about the benefits of creating apps for your tenant’s Teams App Catalog, see the [Line-of-business apps overview](~/lob-apps-value-prop) page.
 
 ## Apps in Microsoft Teams
 
