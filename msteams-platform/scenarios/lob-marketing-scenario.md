@@ -7,9 +7,9 @@ ms.topic: MicrosoftTeams
 
 
 
-# Respond to user sentiment changes in Microsoft Teams
+# Act on intelligent insights
 
-## User story
+## User story; Respond to user sentiment changes in Microsoft Teams
 
 Your company is launching new products into the market. The marketing team is running social media campaigns to promote the launch and new events. The team wants to ensure that any trending negative comments on social media are quickly identified and an appropriately responded to, to help drive a wider positive attitude toward the new products.
 
@@ -20,6 +20,8 @@ Your organization deployed Microsoft Teams, and as part of this you see an oppor
 -   The bot leverages the social media sentiment analysis approach [described in this article](https://docs.microsoft.com/azure/azure-databricks/databricks-sentiment-analysis-cognitive-services) to provide notifications of negative trends in customer sentiment and identify the product the trend relates to.
 -   The marketing team collaborates in the channel to create an immediate response.
 -   The final response is posted directly from the Teams chat to the social media channels via a social media connector.
+
+Marketing team members are now updated in real time, can respond simply and rapidly to negative trends in user sentiment, and work to improve perception of the product.
 
 |         |         |
 |---------|---------|

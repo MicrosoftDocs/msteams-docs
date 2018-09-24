@@ -7,9 +7,9 @@ ms.topic: MicrosoftTeams
 
 
 
-# Kick-start your PMO projects in Microsoft Teams
+# Set up your teams for success
 
-## User story
+## User story: Bootstrap your projects
 
 You run a successful project management organization (PMO) function in your organization, maintain Microsoft Planner and Word templates for your projects, and follow processes that have been proven to drive successful projects in your company. Now you want to make it easy to onboard new project teams to use these assets.
 
@@ -29,7 +29,7 @@ The PMO manages the change control of the key assets published via the Teams app
 
 |         |         |
 |---------|---------|
-|<img src="../assets/images/lob/audio_conferencing_image7.png" /><br>|Decision points|<ul><li>Which internal PMO resources does your PMO want to include in such an app?</li><li>Have you started to use Planner to manage your projects?</li></ul>|
+|<img src="../assets/images/app-scenarios/audio_conferencing_image7.png" /><br>Decision points|<ul><li>Which internal PMO resources does your PMO want to include in such an app?</li><li>Have you started to use Planner to manage your projects?</li></ul>|
 
 
 ## Architecture
