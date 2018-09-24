@@ -40,8 +40,8 @@ tunnels:
 Application-hosted media uses certificates and TCP tunnels. The following steps are required:
 
 - Ngrok's public TCP endpoints have fixed urls. They are `0.tcp.ngrok.io`, `1.tcp.ngrok.io`, and so on. You should have a DNS CNAME entry for your service that points to these URLs. In this example, let's say `0.bot.contoso.com` refers to `0.tcp.ngrok.io`, `1.bot.contoso.com` refers to `1.tcp.ngrok.io`, and so on.
-- An SSL certificate is required for your URLs. To make it easy, use an SSL certificate issued to a wild card domain. In this case, it would be `*.bot.contoso.com`. This SSL certificate is validated by the media SDK, so it should match your bot's public url. Note the thumbprint and install the thumbprint in your machine certificates.
-- Now, we setup a TCP tunnel to forward the traffic to localhost. Write the following lines into your ngrok.yml.
+- A SSL certificate is required for your URLs. To make it easy, use a SSL certificate issued to a wild card domain. In this case, it would be `*.bot.contoso.com`. This SSL certificate is validated by the media SDK, so it should match your bot's public url. Note the thumbprint and install the thumbprint in your machine certificates.
+- Now, setup a TCP tunnel to forward the traffic to localhost. Write the following lines into your ngrok.yml.
 
     ```yaml
     media:
@@ -63,11 +63,11 @@ Forwarding  https://signal.ngrok.io -> localhost:12345
 Forwarding  tcp://1.tcp.ngrok.io:12332 -> localhost:8445
 ```
 
-Here, `12345` is my signaling port, `8445` is the application-hosted port and `12332` is the remote media port exposed by ngrok. Note that we have a forwarding from `1.bot.contoso.com` to `1.tcp.ngrok.io`. This will be used as the media url forthe bot. Of course, these port numbers are just suggestive and you can use any available port.
+Here, `12345` is the signaling port, `8445` is the application-hosted port and `12332` is the remote media port exposed by ngrok. Note that we have a forwarding from `1.bot.contoso.com` to `1.tcp.ngrok.io`. This will be used as the media url forthe bot. Of course, these port numbers are just examples and you can use any available port.
 
 ### Update code
 
-Once ngrok is up and running, we update the code to use the config we just set up.
+Once ngrok is up and running, update the code to use the config you just set up.
 
 #### Update signaling
 
