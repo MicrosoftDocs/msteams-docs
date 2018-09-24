@@ -6,7 +6,9 @@ ms.date: 09/05/2018
 ---
 # Using task modules from Microsoft Teams bots
 
-Task modules can also be invoked from Microsoft Teams bots using buttons on Adaptive cards and Bot Framework cards (Hero, Thumbnail, and Office 365 Connector). There are two ways of invoking task modules:
+Task modules can also be invoked from Microsoft Teams bots using buttons on Adaptive cards and Bot Framework cards (Hero, Thumbnail, and Office 365 Connector). Task modules are often a better user experience than multiple conversation steps, where you as a developer have to keep track of bot state and allow the user to interrupt/cancel the sequence.
+
+There are two ways of invoking task modules:
 
 * **A new kind of invoke message, `task/fetch`.** Using the `invoke` [card action](~/concepts/cards/cards-actions#invoke) for Bot Framework cards, or the `Action.Submit` [card action](~/concepts/cards/cards-actions#adaptive-card-actions) for Adaptive cards, with `task/fetch`, the task module (either a URL or an Adaptive card) is fetched dynamically from your bot.
 * **Deep link URLs.** Using the [deep link syntax for task modules](~/concepts/task-modules/task-modules-overview#task-module-deep-link-syntax), you can use the `openUrl` [card action](~/concepts/cards/cards-actions#openurl) for Bot Framework cards or the `Action.OpenUrl` [card action](~/concepts/cards/cards-actions#adaptive-card-actions) for Adaptive cards, respectively. With deep link URLs, the task module URL or Adaptive card body is obviously known in advance, avoiding a server round-trip relative to `task/fetch`.
@@ -58,7 +60,7 @@ This section defines the schema of what your bot receives when it receives a `ta
 Dealing with `invoke` messages in Bot Framework can be a little tricky because there's no formal support for them in the Bot Framework SDK. To make it easier, Teams has created `onInvoke()` helper functions in the [Microsoft.Bot.Connector.Teams NuGet package (for C#)](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) and in the [botbuilder-teams npm package (for Node.js)](https://www.npmjs.com/package/botbuilder-teams). The Node.js example below shows the latter:
 
 ```typescript
-// Handle requests and responses for a "Custom Form" task module.
+// Handle requests and responses for a "Custom Form" and an "Adaptive card" task module.
 // Assumes request is coming from an Adaptive card Action.Submit button that has a "taskModule" property indicating what to invoke
 private async onInvoke(event: builder.IEvent, cb: (err: Error, body: any, status?: number) => void): Promise<void> {
     let invokeType = (event as any).name;
@@ -78,6 +80,34 @@ private async onInvoke(event: builder.IEvent, cb: (err: Error, body: any, status
                         "width": 430,
                         "fallbackUrl": "https://contoso.com/teamsapp/customform",
                         "url": "https://contoso.com/teamsapp/customform",
+                    },
+                };
+                cb(null, fetchTemplate, 200);
+            };
+            if (invokeValue !== undefined && invokeValue.taskModule === "adaptivecard") {
+                let adaptiveCard = {
+                    "type": "AdaptiveCard",
+                    "body": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Here is a ninja cat:"
+                        },
+                        {
+                            "type": "Image",
+                            "url": "http://adaptivecards.io/content/cats/1.png",
+                            "size": "Medium"
+                        }
+                    ],
+                    "version": "1.0"
+                };
+                // Return the specified task module response to the bot
+                let fetchTemplate: any = "task": {
+                    "type": "continue",
+                    "value": {
+                        "title": "Ninja Cat",
+                        "height": "small",
+                        "width": "small",
+                        "card": adaptiveCard,
                     },
                 };
                 cb(null, fetchTemplate, 200);
