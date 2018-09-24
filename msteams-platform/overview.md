@@ -11,6 +11,13 @@ Microsoft Teams is a chat-based workspace in Office 365 that integrates with the
 > [!TIP]
 > Don't have Microsoft Teams? Get a free Office 365 developer subscription or activate Teams for your existing Office 365 account. See [Set up your Office 365 tenant](~/get-started/get-started-tenant).
 
+Using the Teams developer platform, you can create two classes of apps:
+
+- Apps that others can access via the publicly available commercial Teams store.
+- Apps that you publish to your tenant’s Teams App Catalog that’s only available to your organization. These are known as *line-of-business apps*.
+
+The key concepts and guidance for developers are applicable to both classes of apps, except you go through a formal submission process to publish apps to [AppSource](https://docs.microsoft.com/microsoftteams/platform/publishing/apps-publish#appsource). For information about the benefits of creating apps for your tenant’s Teams App Catalog, see the [Line-of-business apps overview](~/lob-apps-value-prop) page.
+
 ## Apps in Microsoft Teams
 
 To extend Microsoft Teams you create a Microsoft Teams app&mdash;a package of capabilities that you host and that can be distributed through Microsoft Teams or installed by individual teams.
@@ -26,7 +33,7 @@ In these topics, you'll find the information you need to bring your content, app
 | [**Get Started**](~/get-started/get-started) | Develop, host and upload your first app and understand how apps work in Teams. |
 | [**Concepts**](~/concepts/concepts-overview) | Learn more about creating Teams apps, and find everything you need to know about the entire range of capabilities in Teams: tabs, bots, connectors, messaging extensions, and more. |
 | [**Publishing**](~/publishing/apps-publish) | Want to publish your Teams app in AppSource? Look here for the steps and guidelines. |
-| [**Scenarios**](~/scenarios/scenarios) | Go deep into end-to-end scenarios. |
+| [**App Scenarios**](~/scenarios/scenarios) | Go deep into end-to-end scenarios for line of business apps. |
 | [**Resources**](~/resources/resource-overview) | Find all those nitty-gritty details you need to build a Teams app, such as a design topic, or a manifest schema reference. |
 | [**Troubleshooting**](~/troubleshoot/troubleshoot) | If your app isn't behaving as expected, check here. |
 | [**FAQ**](~/troubleshoot/faq) | Everyone has them; here are our frequently asked questions. |
