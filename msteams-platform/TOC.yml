@@ -108,8 +108,6 @@
       href: ./concepts/authentication/auth-configure
     - name: Using the Azure Bot Service
       href: ./concepts/authentication/auth-oauth-card
-  - name: Activity Feed
-    href: ./concepts/activity-feed
   - name: Connectors
     href: ./concepts/connectors/connectors
     items:
@@ -117,9 +115,22 @@
       href: ./concepts/connectors/connectors-creating
     - name: Using connectors
       href: ./concepts/connectors/connectors-using
-  - name: Messaging Extensions
+  - name: Messaging extensions
     href: ./concepts/messaging-extensions
-  - name: Outgoing WebHooks
+  - name: Calls and online meetings
+    href: ./concepts/calls-and-meetings/calls-meetings-bots-overview
+    items:
+    - name: Real-time media concepts
+      href: ./concepts/calls-and-meetings/real-time-media-concepts
+    - name: Registering a calling bot
+      href: ./concepts/calls-and-meetings/registering-calling-bot
+    - name: Debugging and local testing
+      href: ./concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots
+    - name: Application-hosted media
+      href: ./concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots
+  - name: Activity feed
+    href: ./concepts/activity-feed
+  - name: Outgoing webhooks
     href: ./concepts/outgoingwebhook
   - name: Deep links
     href: ./concepts/deep-links
