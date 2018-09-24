@@ -117,17 +117,17 @@
       href: ./concepts/connectors/connectors-using
   - name: Messaging extensions
     href: ./concepts/messaging-extensions
-  - name: Calling and meetings apps
+  - name: Calls and online meetings
     href: ./concepts/calls-and-meetings/calls-meetings-bots-overview
     items:
     - name: Real-time media concepts
       href: ./concepts/calling-and-meeting/real-time-media-concepts
     - name: Registering a calling bot
       href: ./concepts/calling-and-meeting/registering-calling-bot
-    - name: Requirements and considerations for real-time media bots
-      href: ./concepts/calling-and-meeting/requirements-considerations-real-time-media-bots
     - name: Debugging and local testing of calling and meeting bots
       href: ./concepts/calling-and-meeting/debugging-local-testing-calling-meeting-bots
+    - name: Requirements and considerations for real-time media bots
+      href: ./concepts/calling-and-meeting/requirements-considerations-application-hosted-media-bots
   - name: Activity feed
     href: ./concepts/activity-feed
   - name: Outgoing webhooks
