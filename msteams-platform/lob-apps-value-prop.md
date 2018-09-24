@@ -1,10 +1,11 @@
 ---
-title: Developer platform
+title: Line of Business Apps
 description: Overview page describing the Microsoft Teams line-of-business apps value
 keywords: teams overview line of business apps
 ms.date: 09/24/2018
 ---
-# What can you do with the Microsoft Teams developer platform?
+
+# Line-of-business apps overview
 
 The Microsoft Teams developer platform makes it easy for developers to integrate
 their own line-of-business apps and services within Teams to add value, improve

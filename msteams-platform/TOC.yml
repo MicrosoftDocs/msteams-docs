@@ -140,9 +140,9 @@
   items:
   - name: Turn conversation into actions
     href: ./scenarios/lob-faq-scenario
-  - name: Acting on intelligent insights
+  - name: Act on intelligent insights
     href: ./scenarios/lob-marketing-scenario
-  - name: Bootstrap your Project Management Organization
+  - name: Set up your teams for success
     href: ./scenarios/lob-pmo-scenario
 - name: Resources
   href: ./resources/resource-overview
