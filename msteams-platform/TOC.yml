@@ -147,7 +147,7 @@
   - name: Localizing your app
     href: ./publishing/apps-localization
 - name: Scenarios
-  href: ./scenarios/scenarios
+  href: ./scenarios/lob-scenarios-landing-page
   items:
   - name: Turn conversation into actions
     href: ./scenarios/lob-faq-scenario

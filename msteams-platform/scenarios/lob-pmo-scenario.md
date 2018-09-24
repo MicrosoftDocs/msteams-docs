@@ -2,6 +2,7 @@
 title: Microsoft Teams Project Management Organization
 description: Microsoft Teams Line of Business (LOB) Scenario.
 ms.topic: MicrosoftTeams
+ms.date: 09/24/2018
 ---
 
 
