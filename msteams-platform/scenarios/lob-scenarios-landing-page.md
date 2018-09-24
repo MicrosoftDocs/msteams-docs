@@ -7,7 +7,7 @@ ms.topic: landing-page
 
 # App scenarios
 
-The reference app scenarios are built to help you envision real possibilities for your organization to benefit from integrating your company workflows into Microsoft Teams. Each scenario page includes a scenario summary, a user story, decision points and a high level reference architecture to show how you could execute the scenario for your own organization. 
+The reference app scenarios are built to help you envision real possibilities for your organization to benefit from integrating your company workflows into Microsoft Teams. Each scenario page includes a scenario summary, a user story, decision points, and a high-level reference architecture to show how you can execute the scenario for your own organization. 
 
 Choose a scenario below to see what’s possible!
 
