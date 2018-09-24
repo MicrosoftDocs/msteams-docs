@@ -4,7 +4,6 @@ description: Overview page describing the Microsoft Teams line-of-business apps 
 keywords: teams overview line of business apps
 ms.date: 09/24/2018
 ---
-
 # Line-of-business apps overview
 
 The Microsoft Teams developer platform makes it easy for developers to integrate
