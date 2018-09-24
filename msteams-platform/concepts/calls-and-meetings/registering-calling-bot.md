@@ -21,7 +21,7 @@ Creating a bot for Microsoft Teams is covered in more detail in the [Create a ne
 
 1. Use this link to a new bot: <https://dev.botframework.com/bots/new.> If you click on the *Create a bot* button in the Bot Framework portal instead, you will [create your bot in Microsoft Azure](~/concepts/bots/bots-create#bots-and-microsoft-azure) instead, for which you'll need an Azure account.
 1. Add both the Microsoft Teams and Skype channels (or for an existing Teams bot, just add the Skype channel). Click on the "Calling" tab on the Skype channel page and click on **Enable calling**, and then select whether your bot is designed for IVR (interactive voice response) scenarios or [real-time media](~/concepts/calls-and-meetings/real-time-media-concepts) scenarios. Update **Webhook (for calling)** with your https URL where you will receive incoming notifications, e.g.`https://contoso.com/teamsapp/api/calling`. Refer to [Configuring Channels](https://docs.microsoft.com/en-us/bot-framework/portal-configure-channels) for more information on how to configure channels.
-  ![Configure Skype channel information](~/assets/images/calls-and-meetings/configure-skype-channel)
+  ![Configure Skype channel information](~/assets/images/calls-and-meetings/configure-skype-channel.png)
 
 ## Add Microsoft Graph permissions
 
