@@ -151,7 +151,7 @@ You might consider two possible approaches:
 
 Try the following high-level process to get you started:
 
-1.Consider how Teams line-of-business apps can help your organization and
+1. Consider how Teams line-of-business apps can help your organization and
     understand how to develop them.
 
 2. Engage with a target business unit and define one or two areas where this
