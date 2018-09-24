@@ -2,10 +2,9 @@
 title: Developer platform
 description: Overview page describing the Microsoft Teams line-of-business apps value
 keywords: teams overview line of business apps
-ms.date: 09/20/2018
+ms.date: 09/24/2018
 ---
-
-## What can you do with the Microsoft Teams developer platform?
+# What can you do with the Microsoft Teams developer platform?
 
 The Microsoft Teams developer platform makes it easy for developers to integrate
 their own line-of-business apps and services within Teams to add value, improve
@@ -36,9 +35,9 @@ entry point for your app.
 
 ## Does this support my organization’s digital transformation strategy?
 
-Yes, our customers are engaging on their digital transformation journeys to
+Yes, Teams customers are engaging on their digital transformation journeys to
 transform the way that they do business. A key component of any business
-consists of the conversations that we all routinely have as part of our daily
+consists of the conversations that they routinely have as part of their daily
 work.
 
 The modern Teams workplace is encouraging people to consider these conversations
@@ -60,7 +59,7 @@ business needs guide your investigations!)
 
 ## Acting on intelligent insights
 
-We can imagine one category of this type of conversational enhancement as
+Imagine one category of this type of conversational enhancement as
 “Acting on intelligent insights.” People are provided with insights from a
 number of internal and external sources via bots and connectors in a Teams
 channel or conversation, and then they discuss the most appropriate action and
@@ -68,23 +67,23 @@ initiate a follow-up.
 
 You can consider a number of sources where these insights might come from:
 
--   Microsoft Cognitive Services
+- Microsoft Cognitive Services
 
--   Platform metadata (Azure)
+- Platform metadata (Azure)
 
--   Office 365 Graph (user interaction, usage, and so on)
+- Office 365 Graph (user interaction, usage, and so on)
 
--   Connection from external and internal systems
+- Connection from external and internal systems
 
-What actions can we then take?
+What actions can you then take?
 
--   Engage with humans (that is, have further conversation in the channel)
+- Engage with humans (that is, have further conversation in the channel)
 
--   Trigger predefined workflows (Microsoft Flow)
+- Trigger predefined workflows (Microsoft Flow)
 
--   Trigger Azure Automation events
+- Trigger Azure Automation events
 
--   Pass control sentences to another bot to execute the outcomes
+- Pass control sentences to another bot to execute the outcomes
 
 In the following example, a team uses Azure sentiment analysis services via the
 bot framework to inform them about changes in customer sentiment.
@@ -106,15 +105,15 @@ common processes.
 Consider which internal processes in your organization would be enhanced if
 people were able to take direct action from within a conversation:
 
--   Real-time incident response
+- Real-time incident response
 
--   Sports events
+- Sports events
 
--   Crowd management
+- Crowd management
 
--   Weekly triage meetings
+- Weekly triage meetings
 
--   FAQ bot
+- FAQ bot
 
 Example: Imagine a sales meeting support bot: a salesperson pings the bot with
 the customer name, and the bot interacts with a number of internal customer
@@ -138,11 +137,11 @@ conversation and the item are all in the same place.
 
 You might consider two possible approaches:
 
--   If the current line-of-business apps have browser-based presentations, you
+- If the current line-of-business apps have browser-based presentations, you
     can simply pin the pages in a channel, to give easy access to the apps that
     are part of a workflow and to drive conversation in Teams.
 
--   If the current line-of-business apps are used to gather information or data
+- If the current line-of-business apps are used to gather information or data
     that is then summarized, why not create a bot that can interface with each
     app and return the summarized data in a single response or card into the
     channel? This way, the data will be accessible where it’s needed to support
@@ -150,55 +149,54 @@ You might consider two possible approaches:
 
 ## So where do I start?
 
-We propose the following high-level process to get you started:
+Try the following high-level process to get you started:
 
-1.  Consider how Teams line-of-business apps can help your organization and
+1.Consider how Teams line-of-business apps can help your organization and
     understand how to develop them.
 
-2.  Engage with a target business unit and define one or two areas where this
+2. Engage with a target business unit and define one or two areas where this
     approach can bring benefit to your organization.
 
-3.  Envision, scope, develop, and test your Teams apps by using the [guidance
+3. Envision, scope, develop, and test your Teams apps by using the [guidance
     here](https://docs.microsoft.com/microsoftteams/platform/concepts/concepts-overview).
 
-4.  Publish the Teams apps in your company store.
+4. Publish the Teams apps in your company store.
 
-5.  Review usage and drive feedback via a dedicated channel.
+5. Review usage and drive feedback via a dedicated channel.
 
-6.  Evangelize and create an Ideas channel, where people see what can be done
+6. Evangelize and create an Ideas channel, where people see what can be done
     and can share, discuss, and prioritize ideas.
 
 Here are some common examples to get you going:
 
 Departmental tools
 
--   DevOps for admins
+- DevOps for admins
 
--   Sales dashboards
+- Sales dashboards
 
--   Candidate management
+- Candidate management
 
 Employee resources
 
--   Benefits administration
+- Benefits administration
 
--   Time and absence reporting
+- Time and absence reporting
 
--   Employee profile
+- Employee profile
 
 Support and information
 
--   IT helpdesk
+- IT helpdesk
 
--   Company information
+- Company information
 
--   New employee onboarding
+- New employee onboarding
 
 Process and workflow
 
--   Approvals
+- Approvals
 
--   Tickets
+- Tickets
 
-You can find a list of inspiring scenarios on the [App Scenarios](~/scenarios/lob-scenarios-landing-page) page, which we’ll add to
-over time.
+You can find a list of inspiring scenarios on the [App Scenarios](~/scenarios/lob-scenarios-landing-page) page.
