@@ -1,8 +1,8 @@
 - name: Overview
   href: ./overview
   universal_ref_toc: /javascript/api/msteams-client-docs-ref-typescript/toc.json
-- name: LOB apps overview
-  href: ./lob-apps-value-prop
+  - name: Line-of-business apps overview
+    href: ./lob-apps-value-prop
 - name: What's new
   href: ./whats-new
 - name: Get started

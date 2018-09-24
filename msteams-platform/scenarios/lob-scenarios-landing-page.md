@@ -9,7 +9,7 @@ ms.topic: landing-page
 
 The reference app scenarios are built to help you envision real possibilities for your organization to benefit from integrating your company workflows into Microsoft Teams. Each scenario page includes a scenario summary, a user story, decision points and a high level reference architecture to show how you could execute the scenario for your own organization. 
 
-Choose a scenario below to see whats possible!
+Choose a scenario below to see what’s possible!
 
 
 ## Example scenarios
@@ -64,8 +64,8 @@ Choose a scenario below to see whats possible!
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Bootstrap your Project Management Organization</h3>
-                        <p>Provide simple tools to empower your PMO to kick-start projects powered by Microsoft Teams.</p>
+                        <h3>Set your teams up for success</h3>
+                        <p>Provide simple tools to empower your project management org to bootstrap projects powered by Microsoft Teams.</p>
                     </div>
                 </div>
             </div>
