@@ -79,12 +79,12 @@ Your code handling the webhook should validate the token, ensure it has not expi
 > [!NOTE]
 > In the future, we will send you OAuth tokens issued by AAD instead of Skype. To prepare for this migration, your bot should accept both kinds of tokens.
 
-The new token would look like following.
+The new token would look like following:
 
 ```json
 {
-    "aud": "8A34A46B-3D17-4ADC-8DCE-DC4E7D572698",
-    "iss": "https://login.microsoftonline.com/b9419818-09af-49c2-b0c3-653adc1f376e/v2.0",
+    "aud": "0efc74f7-41c3-47a4-8775-7259bfef4241",
+    "iss": "https://sts.windows.net/31537af4-6d77-4bb9-a681-d2394888ea26/",
     "iat": 1466741440,
     "nbf": 1466741440,
     "exp": 1466745340,
@@ -93,17 +93,17 @@ The new token would look like following.
     "oid": "2d452913-80c9-4b56-8419-43a7da179822",
     "sub": "MF4f-ggWMEji12KynJUNQZphaUTvLcQug5jdF2nl01Q",
     "tid": "b9419818-09af-49c2-b0c3-653adc1f376e",
-    "ver": "2.0"
+    "ver": "1.0"
 }
 ```
 
 * **aud** audience is the App ID specified for the application.
-* **tid** is the tenant id for contoso
-* **iss** is the token issuer, `https://login.microsoftonline.com/{tenantId}/v2.0`
+* **tid** is the tenant id for Contoso.com
+* **iss** is the token issuer, `https://sts.windows.net/{tenantId}/`
 * **appid** is the appid of our service
 
-As before, your code handling the webhook should validate the token, ensure it has not expired, and check whether it has been signed by the [Azure AD published OpenID configuration](https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration). You should also check whether **aud** matches your App ID before accepting the callback request.
+As before, your code handling the webhook should validate the token, ensure it has not expired, and check whether it has been signed by the [Azure AD published OpenID configuration](https://sts.windows.net/common/v2.0/.well-known/openid-configuration). You should also check whether **aud** matches your App ID before accepting the callback request.
 
 ## Additional information
 
-You can read more about [AAD tokens and validation here](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-id-and-access-tokens).
+You can read more about [AAD tokens and validation here](http://www.cloudidentity.com/blog/2014/03/03/principles-of-token-validation/).
