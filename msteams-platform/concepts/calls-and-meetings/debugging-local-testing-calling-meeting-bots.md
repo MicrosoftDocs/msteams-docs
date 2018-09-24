@@ -115,4 +115,4 @@ Your bot can now run locally and all the flows work from your localhost.
 
 - The free accounts of ngrok do **NOT** provide end-to-end encryption. The HTTPS data ends at the ngrok url and the data flows unencrypted from ngrok to `localhost`. If you require end-to-end encryption, consider the the paid version of ngrok. See [end-to-end TLS tunnels](http://ngrok.com/dohttps://ngrok.com/pricingcs) for steps on setting up secure E2E tunnels.
 
-- Because the bot callback url is dynamic, incoming call scenarios require you to continuously update your ngrok endpoints. One way to fix this is to use a paid ngrok account which provides fixed subdomains to which you can point your bot and the platform.
+- Because the bot callback url is dynamic, incoming call scenarios require you to frequently update your ngrok endpoints. One way to fix this is to use a paid ngrok account which provides fixed subdomains to which you can point your bot and the platform.
