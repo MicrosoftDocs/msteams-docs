@@ -19,7 +19,7 @@ HTTP/1.1 204 No Content
 
 Your bot will receive the notification again, but this time in the Microsoft Graph protocol.
 
-You may configure the protocol your application supports and avoid receiving the initial callback in legacy format. The setting is available as a configuration option in the Skype Channel. $TODO - WHERE?
+In a future release of the Real-time Media Platform, we will allow you configure the protocol your application supports to avoid receiving the initial callback in the legacy format.
 
 ## Redirects for region affinity
 
