@@ -2,7 +2,7 @@
 title: What's new
 description: Describes all the new developer features in Microsoft Teams
 keywords: teams what's new latest
-ms.date: 09/11/2018
+ms.date: 09/24/2018
 ---
 # What's new for developers in Microsoft Teams
 
@@ -12,6 +12,8 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | - | - | - |
+| 09/24/2018 | Teams apps can now interact with users in rich ways using voice and video. | [Calls and online meetings bots](~/concepts/calls-and-meetings/calls-meetings-bots-overview) |
+| 09/24/2018 | New line-of-business scenarios have been added. | [App scenerios](~/scenarios/lob-scenarios-landing-page), [Line-of-business apps overview](~/lob-apps-value-prop) |
 | 09/11/2018 | Tab configuration pages are now significantly taller. | [Configuration page height](~/resources/design/framework/tabs.md#configuration-page-height) |
 | 08/15/2018 | Adaptive cards are now supported in Teams.| [Adaptive card](~/concepts/cards/cards-reference#adaptive-card), [Adaptive card actions in Teams](~/concepts/cards/cards-actions#adaptive-card-actions) |
 | 08/10/2018 | Client support for DevTools has been documented for Developer Preview.| [DevTools for the Microsoft Teams Desktop Client](~/resources/dev-preview/developer-preview-tools.md)|
