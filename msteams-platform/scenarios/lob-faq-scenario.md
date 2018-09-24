@@ -2,10 +2,8 @@
 title: Microsoft Teams Intelligent Insights
 description: Microsoft Teams Line of Business (LOB) Scenario.
 ms.topic: MicrosoftTeams
+ms.date: 09/24/2018
 ---
-
-
-
 
 # Turn conversations into actions
 
@@ -17,12 +15,12 @@ Your organization recently deployed Microsoft Teams and you see an opportunity t
 
 The Teams FAQ app would:
 
--   Respond to questions asked by employees via chat by providing the most appropriate answer.
--   Use natural language processing to reduce the dependency on the employee’s using exact terminology when asking a question.
--   Enable connecting the user to a live support team member in case the question can’t be answered, or the answer doesn’t meet the employee’s needs.
--   Allow employees to rate their satisfaction with the answer provided (or not provided).
--   Allow employees to rate their overall experience with the Teams FAQ app.
--   Capture telemetry, which can provide statistics on the most commonly asked questions and generate data to improve future employee training and information sharing.
+- Respond to questions asked by employees via chat by providing the most appropriate answer.
+- Use natural language processing to reduce the dependency on the employee’s using exact terminology when asking a question.
+- Enable connecting the user to a live support team member in case the question can’t be answered, or the answer doesn’t meet the employee’s needs.
+- Allow employees to rate their satisfaction with the answer provided (or not provided).
+- Allow employees to rate their overall experience with the Teams FAQ app.
+- Capture telemetry, which can provide statistics on the most commonly asked questions and generate data to improve future employee training and information sharing.
 
 Employees can interact easily with the Teams FAQ app to quickly get answers to their questions. This reduces context switching and saves them valuable time by focusing on simple, human-style interactions to get the information they need.
 

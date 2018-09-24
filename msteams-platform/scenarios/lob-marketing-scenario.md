@@ -2,6 +2,7 @@
 title: Microsoft Teams Turn Conversation into Action
 description: Microsoft Teams Line of Business (LOB) Scenario.
 ms.topic: MicrosoftTeams
+ms.date: 09/24/2018
 ---
 # Act on intelligent insights
 
