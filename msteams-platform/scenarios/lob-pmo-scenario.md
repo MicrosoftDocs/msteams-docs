@@ -7,9 +7,9 @@ ms.topic: MicrosoftTeams
 
 
 
-# Bootstrap your Project Management Organization
+# Set up your teams for success
 
-## User story
+## User story: Bootstrap your projects
 
 You run a successful project management organization (PMO) function in your organization, maintain Microsoft Planner and Word templates for your projects, and follow processes that have been proven to drive successful projects in your company. Now you want to make it easy to onboard new project teams to use these assets.
 
