@@ -21,6 +21,8 @@ Your organization deployed Microsoft Teams, and as part of this you see an oppor
 -   The marketing team collaborates in the channel to create an immediate response.
 -   The final response is posted directly from the Teams chat to the social media channels via a social media connector.
 
+Marketing team members are now updated in real time, can respond simply and rapidly to negative trends in user sentiment, and work to improve perception of the product.
+
 |         |         |
 |---------|---------|
 |<img src="../assets/images/app-scenarios/audio_conferencing_image7.png" /><br>Decision points|<ul><li>Which social media feeds would be of interest to your marketing team?</li><li>Would there need to be a formal sign-off for any outbound tweets that might need an authorization flow?</li></ul>|
