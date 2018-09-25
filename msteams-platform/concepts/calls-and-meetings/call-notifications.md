@@ -102,7 +102,7 @@ The new token would look like following:
 * **iss** is the token issuer, `https://sts.windows.net/{tenantId}/`
 * **appid** is the appid of our service
 
-As before, your code handling the webhook should validate the token, ensure it has not expired, and check whether it has been signed by the [Azure AD published OpenID configuration](https://sts.windows.net/common/v2.0/.well-known/openid-configuration). You should also check whether **aud** matches your App ID before accepting the callback request.
+As before, your code handling the webhook should validate the token, ensure it has not expired, and check whether it has been signed by the [Azure AD published OpenID configuration](https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration). You should also check whether **aud** matches your App ID before accepting the callback request.
 
 ## Additional information
 
