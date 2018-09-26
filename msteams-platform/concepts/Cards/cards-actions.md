@@ -2,7 +2,7 @@
 title: Add card actions in a bot
 description: Describes card actions in Microsoft Teams and how to use them in your bots
 keywords: teams bots cards actions
-ms.date: 08/15/2018
+ms.date: 09/04/2018
 ---
 # Card actions
 
@@ -37,8 +37,6 @@ The `value` field must contain a full and properly formed URL.
 ```
 
 ## messageBack
-
->**New**
 
 With `messageBack`, you can create a fully customized action with the following properties:
 
@@ -134,12 +132,9 @@ The `value` field should contain the text string echoed in the chat and therefor
 
 ## invoke
 
-> [!NOTE]
-> We recommend that you use `messageBack` instead of `invoke`. While `invoke` can be used directly, it is designed to be used indirectly. For example, `invoke` is used to send character-by-character keystrokes for [compose extensions](~/concepts/messaging-extensions.md).
+The `invoke` action is used for invoking [task modules](~/concepts/task-modules/task-modules-bots.md).
 
-The `invoke` message type silently sends a JSON payload that you define to your bot.  This is useful if you want to send more detailed information back to your bot without having to send via a simple `imBack` text string.  Note that the user, in personal or channel chat, sees no notification as a result of their click.
-
-The `value` field will contain a stringified JSON object. You can include identifiers or any other context necessary to carry out the operation.
+The `invoke` action contains three properties: `type`, `title`, and `value`. The `value` property can contain a string, a stringified JSON object, or a JSON object.
 
 ```json
 {
@@ -147,11 +142,11 @@ The `value` field will contain a stringified JSON object. You can include identi
     "title": "Option 1",
     "value": {
         "option": "opt1"
-    } 
+    }
 }
 ```
 
-When a user clicks the button, your bot will receive the predefined `value` object with some additional info. Please note that the activity type will be `invoke` instead of `message` (activity.Type == "invoke").
+When a user clicks the button, your bot will receive the `value` object with some additional info. Please note that the activity type will be `invoke` instead of `message` (`activity.Type == "invoke"`).
 
 ### Example: Invoke button definition (.NET)
 
@@ -166,7 +161,7 @@ var button = new CardAction()
 
 ### Example: Incoming invoke message
 
-`replyToId` contains the ID of the message that the card action came from. Use it if you want to update the message.
+The top-level `replyToId` property contains the ID of the message that the card action came from. Use it if you want to update the message.
 
 ```json
 {
@@ -216,7 +211,7 @@ var button = new CardAction()
 
 ## signin
 
-Initiates OAuth flow, allowing bots to connect with secure services, as described in more detail here: [Authentication flow in bots](~/concepts/authentication/auth-flow-bot).
+Initiates an OAuth flow, allowing bots to connect with secure services, as described in more detail here: [Authentication flow in bots](~/concepts/authentication/auth-flow-bot).
 
 ## Adaptive card actions
 
