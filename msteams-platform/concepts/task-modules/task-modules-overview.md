@@ -2,9 +2,12 @@
 title: Overview of Microsoft Teams Task Modules
 description: A task module allows you to create modal popup experiences in your Teams application. Inside the popup, you can run your own custom HTML/JavaScript code, show an <iframe>-based widget such as a YouTube or Microsoft Stream video, or display an Adaptive card.
 keywords: task modules modal popup 
-ms.date: 09/18/2018
+ms.date: 09/26/2018
 ---
 # Task modules
+
+> [!NOTE]
+> This feature is currently available in [Developer Preview](~/concepts/resources/dev-preview/developer-preview-intro).
 
 A task module allows you to create modal popup experiences in your Teams application. Inside the popup, you can run your own custom HTML/JavaScript code, show an `<iframe>`-based widget such as a YouTube or Microsoft Stream video, or display an [Adaptive card](https://docs.microsoft.com/en-us/adaptive-cards/).
 
@@ -29,7 +32,7 @@ Let's walk through it:
 1. Your app's [`color` icon](~/resources/schema/manifest-schema#icons).
 2. Your app's [`short` name](~/resources/schema/manifest-schema#name).
 3. The task module's title, specified in the `title` property of the [TaskInfo object](#the-taskinfo-object).
-4. The task module's close/cancel button. If the user presses this, your app will receive an `err` event as described [here](~/concepts/task-modules/task-modules-tabs#example-submitting-the-result-of-a-task-module). (It is currently not possible to detect this event when a task module is invoked from a bot. **$TODO - VERIFY - FILED [Bug #369378](https://domoreexp.visualstudio.com/MSTeams/_workitems/edit/369378?source=compose)**)
+4. The task module's close/cancel button. If the user presses this, your app will receive an `err` event as described [here](~/concepts/task-modules/task-modules-tabs#example-submitting-the-result-of-a-task-module). (**Developer preview note:** It is currently not possible to detect this event when a task module is invoked from a bot. We plan to fix this before we release the task module feature.)
 5. This area, indicated by the blue rectangle, is the where your web page appears if you are loading your own web page using the `url` property of the [TaskInfo object](#the-taskinfo-object). Note that the entire area of the task module window, except for its header, is available to you. You can use the entire area if you want; if you want it to be aligned with the header elements and have padding at the bottom, that's up to you, as shown in the red rectangle (number 6, discussed next). This is covered in more detail in [task module sizing](#task-module-sizing) below.
 6. This area, indicated by the red rectangle, is aligned with the header area and has padding at the bottom. As described in number 5, this is your responsibility if you are displaying a URL; Teams does this for you if you are displaying an Adaptive card via the `card` property of the [TaskInfo object](#the-taskinfo-object).
 7. The "Sign up" button is part of the web page - it is not rendered by Teams. It's completely up to the developer whether the task module has a button or not. With Adaptive cards, the buttons do appear.
