@@ -11,7 +11,7 @@ A bot that particpates in audio/video calls and online meetings is an ordinary M
 * In addition to being enabled for the Microsoft Teams channel in Bot Framework, it must also be enabled for the Skype channel so you can configure settings in addition to the messaging endpoint. This is only necessary for the preview version of the Calls and Online Meetings APIs: future versions of [Teams App Studio](~/get-started/get-started-app-studio) will allow you to configure these settings directly.
 * [Microsoft Graph permissions](~/concepts/calls-and-meetings/registering-calling-bot#application-permissions) must be configured for your bot's Microsoft App ID.
 * The Microsoft Graph calls and online meetings APIs permissions require tenant admin consent.
-* There's a new version of the Teams app manifest with two extra settings. This will eventually be integrated into an official release of the manifest, but in the interim you can find it here: <https://github.com/OfficeDev/microsoft-teams-app-schema/blob/preview/calling-bots/MicrosoftTeams.schema.json.>
+* There's a new version of the Teams app manifest with two extra settings. This will eventually be integrated into an official release of the manifest, but in the interim you can find it here: <https://github.com/OfficeDev/microsoft-teams-app-schema/blob/preview/calling-bots/MicrosoftTeams.schema.json>.
 
 Let's discuss the above in more detail.
 
