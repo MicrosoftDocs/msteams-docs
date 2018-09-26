@@ -222,6 +222,6 @@ With HTML/JavaScript-based task modules, it is your responsibility to ensure you
 
 Microsoft Teams will ensure that keyboard navigation works properly from the task module header into your HTML and vice-versa.
 
-## Task module sample
+## Task module samples
 
-$TODO
+* [Node.js/TypeScript sample](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs)
