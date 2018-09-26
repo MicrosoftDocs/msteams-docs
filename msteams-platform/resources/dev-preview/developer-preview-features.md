@@ -2,12 +2,44 @@
 title: Features in the Public Developer Preview
 description: Describes the features in the Public Developer Preview of Microsoft Teams
 keywords: teams preview developer features
-ms.date: 09/11/2018
+ms.date: 09/26/2018
 ---
 # Features in the Public Developer Preview for Microsoft Teams
 
 When these features are out of developer preview this content will be merged into the live doc set.
 The developer preview includes the following new features:
+
+## Introducing "task modules"
+
+A task module allows you to create modal popup experiences in your Teams application, from both bots and tabs. Inside the popup, you can run your own custom HTML/JavaScript code, show an `<iframe>`-based widget such as a YouTube or Microsoft Stream video, or display an [Adaptive card](https://docs.microsoft.com/en-us/adaptive-cards/).
+
+Task module documentation has been added as a new section, including an [overview](~/concepts/task-modules/task-modules-overview), how to use task module from [tabs](~/concepts/task-modules/task-modules-tabs) and [bots](~/concepts/task-modules/task-modules-bots).
+
+## Calls and online meeting bots
+
+With the addition of [Microsoft Graph APIs for calls and online meetings](https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/calls-api-overview), Microsoft Teams apps can now interact with users in rich ways using voice and video. These APIs allow you to add new app features such as interactive voice response (IVR), call control, and access to real-time audio and/or video streams for calls and meetings, including desktop and app sharing.
+
+We've added a new section on how to create and develop calls and online meetings bots, starting with the [overview](~/concepts/calls-and-meetings/calls-meetings-bots-overview).
+
+## The tab configuration page is significantly taller
+
+The height of the content area for the tab [Configuration page](~/concepts/tabs/tabs-configuration) will shortly be increased significantly; the width remains unchanged. It is important for you to update the tab configuration pages in your apps before this happens, otherwise your users will see your tab configuration page with a great deal of whitespace. (We have not finalized the date for this change as we cannot be sure how long it will take for most developers to update their apps, but it will likely be before the end of August, 2018.) 
+
+<img width="450px" title="New sizes for configuration tabs" src="~/assets/images/tabs/config-dialog-Contoso2.png" />
+
+Follow these guidelines to correctly format content in your tab configuration pages:
+
+* Base the height of the content area in the tab on fixed-height graphic elements.
+* Calculate available vertical space (the height of the content area in the configuration tab) using `window.innerHeight`. This returns the size of the `<iframe>` in which your configuration page resides, which may change in future releases. By using this value, your content will adjust automatically to future changes.
+* Allocate vertical space to the variable-height elements minus what's needed for the fixed-height elements.
+* For the *login* state, vertically and horizontally center the content.
+* If you want a background image, you need either a new image, sized to fit the new area (preferred), or can keep the same image and choose between:
+  * aligning to the upper left hand corner.
+  * scaling the image to fit.
+
+When properly sized, your tab configuration page should look similar to this:
+
+<img width="450px" title="New configuration tab" src="~/assets/images/tabs/config-dialog-Contoso.png" />
 
 ## Adding tabs and bots to chats
 
