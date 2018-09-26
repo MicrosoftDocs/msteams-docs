@@ -12,7 +12,7 @@ Formatting support differs between different card types, and between the desktop
 
 ## Formatting for regular cards:
 
-These tags are supported for regular cards such as the hero and thumbnail card. Markdown is not supported.
+These XML tags are supported for regular cards such as the hero and thumbnail card. Markdown is not supported.
 
 | Style | Example | XML (HTML) |
 | --- | --- | --- |
@@ -41,7 +41,7 @@ On mobile, XML formatting appears like this:
 
 Note that character formatting like bold and italic are not rendered on mobile.
 
-These screenshots were created by setting the text property of a hero card to the following string. You can test formatting in your own cards by modifying this code.
+These screenshots were created using Teams AppStudio, where the text property of a hero card was set to the following string. You can test formatting in your own cards by modifying this code.
 
 `<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"http://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
 
