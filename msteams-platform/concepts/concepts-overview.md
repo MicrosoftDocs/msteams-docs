@@ -2,7 +2,7 @@
 title: Concepts
 description: Describes the core functions of Microsoft Teams apps
 keywords: apps concepts teams overview
-ms.date: 08/07/2018
+ms.date: 09/07/2018
 ---
 # Concepts
 
@@ -23,5 +23,6 @@ In these topics, you'll find the information you need to bring your apps to life
 | [**Connectors**](~/concepts/connectors/connectors) | Use Office 365 Connectors to push your app's rich content into Microsoft Teams. |
 | [**Notification only bots**](~/concepts/bots/bots-notification-only) | How to write bots that only send messages using the `isNotificationOnly` field in the app manifest. |
 | [**Messaging extensions**](~/concepts/messaging-extensions) | Let users query for information from your service and post that information, in the form of rich cards, right into the channel conversation. |
-| [**Outgoing webhooks**](~/concepts/outgoingwebhook) | Outgoing webhooks are an easy way to connect to your service without going through the full process of creating a bot. |
+| [**Messaging extensions**](~/concepts/messaging-extensions) | Let users query for information from your service and post that information, in the form of rich cards, right into the channel conversation. |
+| [**Task modules**](~/concepts/task-modules-overview) | A task module allows you to create modal popup experiences in your Teams application. Inside the popup, you can run your own custom HTML/JavaScript code, show an `<iframe>`-based widget such as a YouTube or Microsoft Stream video, or display an Adaptive card. |
 | [**Deep links**](~/concepts/deep-links) | You can enable team members to create and share links to items _within_ your tab by adding a "copy link" action to each item, in whatever way best suits your UI. |
