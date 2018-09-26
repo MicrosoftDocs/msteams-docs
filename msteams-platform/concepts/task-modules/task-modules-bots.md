@@ -37,21 +37,21 @@ When the user is finished with the task module, submitting the result back to th
 
 In the previous section, you learned that when the user finishes with a task module invoked from a bot, the bot always receives a `task/submit invoke` message. As a developer, you have several options when *responding* to the `task/submit` message:
 
-| HTTP Body Response | Scenario |
-| --- | --- |
+| HTTP Body Response                      | Scenario                                |
+| --------------------------------------- | --------------------------------------- |
 | None (ignore the `task/submit` message) | The simplest response is no response at all. Your bot is not required to respond when the user is finished with the task module. |
-| `{`<br/>&nbsp;&nbsp;`"task": {`<br/>&nbsp;&nbsp;&nbsp;&nbsp;`"type": "message",`<br/>&nbsp;&nbsp;&nbsp;&nbsp;`"value": "Message text"`<br/>&nbsp;&nbsp;`}` | Teams will display the value of `value` in a popup message box. |
-| `{`<br/>&nbsp;&nbsp;`"task": {`<br/>&nbsp;&nbsp;&nbsp;&nbsp;`"type": "continue",`<br/>&nbsp;&nbsp;&nbsp;&nbsp;`"value": <TaskInfo object>`<br/>&nbsp;&nbsp;`}`<br/> | Allows you to "chain" sequences of Adaptive cards together in a wizard/multi-step experience. _Note that chaining Adaptive cards into a sequence is an advanced scenario and not documented here. The Node.js sample app supports it, however, and how it works is documented in [its README.md file](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs#implementation-notes)._ |
+| <pre>{<br/>  "task": {<br/>    "type": "message",<br/>    "value": "Message text"<br/>  }<br/>}</pre> | Teams will display the value of `value` in a popup message box. |
+| <pre>{<br/>  "task": {<br/>    "type": "continue",<br/>    "value": &lt;TaskInfo object&gt;<br/>  }<br/>}</pre> | Allows you to "chain" sequences of Adaptive cards together in a wizard/multi-step experience. _Note that chaining Adaptive cards into a sequence is an advanced scenario and not documented here. The Node.js sample app supports it, however, and how it works is documented in [its README.md file](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs#implementation-notes)._ |
 
 ## Payload of task/fetch and task/submit messages
 
 This section defines the schema of what your bot receives when it receives a `task/fetch` or `task/submit` Bot Framework `Activity` object. The important top-level appear below:
 
-| Property | Description |
-| --- | --- |
-| `type` | Will always be `invoke` |
-| `name` | Either `task/fetch` or `task/submit` |
-| `value` | The developer-defined payload. Normally the structure of the `value` object mirrors what was sent from Teams. In this case, however, it's different because we want to support dynamic fetch (`task/fetch`) from both Bot Framework (`value`) and Adaptive card `Action.Submit` actions (`data`), and we need a way to communicate Teams `context` to the bot in addition to what was included in `value`/`data`.<br/><br/>We do this by combining the two into a parent object:<br/><br/>`{`<br/>&nbsp;&nbsp;`"context": {`<br/>&nbsp;&nbsp;&nbsp;&nbsp;`"theme": "default" | "dark" | "contrast",`<br/>&nbsp;&nbsp;`},`<br/>&nbsp;&nbsp;`"data": [value field from Bot Framework card] | [data field from Adaptive Card]`<br/>`}` |
+| Property | Description                          |
+| -------- | ------------------------------------ |
+| `type`   | Will always be `invoke`              |
+| `name`   | Either `task/fetch` or `task/submit` |
+| `value`  | The developer-defined payload. Normally the structure of the `value` object mirrors what was sent from Teams. In this case, however, it's different because we want to support dynamic fetch (`task/fetch`) from both Bot Framework (`value`) and Adaptive card `Action.Submit` actions (`data`), and we need a way to communicate Teams `context` to the bot in addition to what was included in `value`/`data`.<br/><br/>We do this by combining the two into a parent object:<br/><br/><pre>{<br/>  "context": {<br/>    "theme": "default" &vert; "dark" &vert; "contrast",<br/>  },<br/>  "data": [value field from Bot Framework card] &vert; [data field from Adaptive Card] <br/>}</pre>  |
 
 ## Example: Receiving and responding to task/fetch and task/submit invoke messages
 
@@ -130,6 +130,6 @@ private async onInvoke(event: builder.IEvent, cb: (err: Error, body: any, status
 
 The schema for Bot Framework card actions is slightly different from Adaptive card Action.Submmit actions. As a result, the way to invoke task modules is slightly different too: the `data` object in `Action.Submit` contains an `msteams` object so it won't interfere with other properties in the form. The following table shows an example of each:
 
-| Bot Framework card action | Adaptive card Action.Submit action |
-| --- | --- |
-| `{`<br/>&nbsp;&nbsp;`"type": "invoke",`<br/>&nbsp;&nbsp;`"title": "Buy",`<br/>&nbsp;&nbsp;`"value": {`<br/>&nbsp;&nbsp;&nbsp;&nbsp;`"type": "task/fetch",`<br/>&nbsp;&nbsp;&nbsp;&nbsp;`<...>`<br/>&nbsp;&nbsp;`}`<br/>`}` | `{`<br/>&nbsp;&nbsp;`"type": "Action.Submit",`<br/>&nbsp;&nbsp;`"id": "btnBuy",`<br/>&nbsp;&nbsp;`"title": "Buy",`<br/>&nbsp;&nbsp;`"data": {`<br/>&nbsp;&nbsp;&nbsp;&nbsp;`"msteams": {",`<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`"type": "task/fetch"`<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<...>`<br/>&nbsp;&nbsp;&nbsp;&nbsp;`}`<br/>`}` |
+| Bot Framework card action                              | Adaptive card Action.Submit action                     |
+| ------------------------------------------------------ | ------------------------------------------------------ |
+| <pre>{<br/>   "type": "invoke",<br/>   "title": "Buy",<br/>   "value": {<br/>     "type": "task/fetch",<br/>     &lt;...&gt;<br/>  }<br/>}</pre> | <pre>{<br/>   "type": "Action.Submit",<br/>   "id": "btnBuy",<br/>   "title": "Buy",<br/>   "data": {<br/>    &lt;...&gt;,<br/>    "msteams": {<br/>       "type": "task/fetch"<br/>    }<br/>  }<br/>}</pre>  |
