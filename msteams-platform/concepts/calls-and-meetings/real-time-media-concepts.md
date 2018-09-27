@@ -41,7 +41,7 @@ A very advanced capability of the platform allows a bot to send/receive video as
 
 ## Active and dominant speakers
 
-When joined to a Teams meeting consisting of multiple participants, the bot can identify which meeeting participants are currently speaking. **Active speakers** identify which participants are being heard in each received audio frame. **Dominant speakers** identify which participants are currently most active (or "dominant") in the group conversation, even though their voice may not be heard in every audio frame. The set of dominant speakers can change as different participants take turns speaking.
+When joined to a Teams meeting consisting of multiple participants, the bot can identify which meeting participants are currently speaking. **Active speakers** identify which participants are being heard in each received audio frame. **Dominant speakers** identify which participants are currently most active (or "dominant") in the group conversation, even though their voice may not be heard in every audio frame. The set of dominant speakers can change as different participants take turns speaking.
 
 ## Video subscription
 
