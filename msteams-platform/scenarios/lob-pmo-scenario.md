@@ -48,7 +48,7 @@ Contoso decided to create a Teams Personal App that they’ll publish to their t
 | ![one](../assets/images/app-scenarios/callout-1-purple.png "one") | The user opens the PMO Teams Personal Tenant App, which is back-ended by an Azure Web App. |
 | ![two](../assets/images/app-scenarios/callout-2-blue.png "two") | The user is prompted for authentication. |
 | ![three](../assets/images/app-scenarios/callout-3-blue.png "three") | The available Microsoft Planner templates that Contoso customized are retrieved and available for the user to select from. |
-| ![four](../assets/images/app-scenarios/callout-4-yellow.png "four") | The user selects a Microsoft Planner plan, supplies basic information about the project, and then clicks **Create team**, which results in the Azure Web App making a call to the Microsoft Graph using the details the user supplied. |
+| ![four](../assets/images/app-scenarios/callout-4-yellow.png "four") | The user selects a Microsoft Planner plan, supplies basic information about the project, and then selects **Create team**, which results in the Azure Web App making a call to the Microsoft Graph using the details the user supplied. |
 | ![five](../assets/images/app-scenarios/callout-5-yellow.png "five") | A Microsoft Planner plan is created from the template. |
 | ![six](../assets/images/app-scenarios/callout-6-yellow.png "six") | Customized project forms are uploaded to SharePoint on the **Files** tab of the new team’s General channel. |
 | ![seven](../assets/images/app-scenarios/callout-7-yellow.png "seven") | The team is created by using resources approved by the PMO. |
