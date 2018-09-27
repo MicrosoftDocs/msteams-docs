@@ -228,3 +228,4 @@ Microsoft Teams will ensure that keyboard navigation works properly from the tas
 ## Task module samples
 
 * [Node.js/TypeScript sample](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs)
+* [C#/.NET sample](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp)

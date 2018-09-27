@@ -53,9 +53,9 @@ This section defines the schema of what your bot receives when it receives a `ta
 | `name`   | Either `task/fetch` or `task/submit` |
 | `value`  | The developer-defined payload. Normally the structure of the `value` object mirrors what was sent from Teams. In this case, however, it's different because we want to support dynamic fetch (`task/fetch`) from both Bot Framework (`value`) and Adaptive card `Action.Submit` actions (`data`), and we need a way to communicate Teams `context` to the bot in addition to what was included in `value`/`data`.<br/><br/>We do this by combining the two into a parent object:<br/><br/><pre>{<br/>  "context": {<br/>    "theme": "default" &vert; "dark" &vert; "contrast",<br/>  },<br/>  "data": [value field from Bot Framework card] &vert; [data field from Adaptive Card] <br/>}</pre>  |
 
-## Example: Receiving and responding to task/fetch and task/submit invoke messages
+## Example: Receiving and responding to task/fetch and task/submit invoke messages - Node.js
 
-Dealing with `invoke` messages in Bot Framework can be a little tricky because there's no formal support for them in the Bot Framework SDK. To make it easier, Teams has created `onInvoke()` helper functions in the [Microsoft.Bot.Connector.Teams NuGet package (for C#)](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) and in the [botbuilder-teams npm package (for Node.js)](https://www.npmjs.com/package/botbuilder-teams). The Node.js example below shows the latter:
+Dealing with `invoke` messages in Bot Framework can be a little tricky because there's no formal support for them in the Bot Framework SDK. To make it easier, Teams has created `onInvoke()` helper functions in the [botbuilder-teams npm package (for Node.js)](https://www.npmjs.com/package/botbuilder-teams). This example below shows how to do it:
 
 ```typescript
 // Handle requests and responses for a "Custom Form" and an "Adaptive card" task module.
@@ -123,6 +123,54 @@ private async onInvoke(event: builder.IEvent, cb: (err: Error, body: any, status
             }
         }
     }
+}
+```
+
+## Example: Receiving and responding to task/fetch and task/submit invoke messages - C#
+
+In C# bots, `invoke` messages are processed by an `HttpResponseMessage()` controller processing an `Activity` message. The `task/fetch` and `task/submit` requests and responses are JSON. In C#, it's not as convenient to deal with raw JSON as it is in Node.js, so you need wrapper classes to handle the serialization to and from JSON. There's no direct support for this in the C# SDK yet, but you can see an example of what these simple wrapper classes would look like in the [C# sample app](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp/blob/master/Microsoft.Teams.Samples.TaskModule.Web/Models/TaskModel.cs).
+
+Here's example code in C# for handling `task/fetch` and `task/submit` messages using these wrapper classes (`TaskInfo`, `TaskEnvelope`), exerpted from the [sample](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp/blob/master/Microsoft.Teams.Samples.TaskModule.Web/Controllers/MessagesController.cs):
+
+```c#
+private HttpResponseMessage HandleInvokeMessages(Activity activity)
+{
+    var activityValue = activity.Value.ToString();
+    if (activity.Name == "task/fetch")
+    {
+        var action = Newtonsoft.Json.JsonConvert.DeserializeObject<Models.FetchActionDetails>(activityValue);
+        Models.TaskInfo taskInfo = new Models.TaskInfo()
+        {
+            Title = "Task Module",
+            Height = "medium",
+            Width = "medium"
+        };
+
+        // 
+        if (action.AdditionalInfo.Contains("html"))
+            taskInfo.Url = ApplicationSettings.BaseUrl + "/customform";
+        else
+            taskInfo.Card = AdaptiveCardHelper.GetAdaptiveCard();// Attachment AdaptiveCardHelper.GetAdaptiveCard();
+
+        Models.TaskEnvelope taskEnvelope = new Models.TaskEnvelope
+        {
+            Task = new Models.Task()
+            {
+                Type = Models.TaskType.Continue,
+                TaskInfo = taskInfo
+            }
+        };
+        return Request.CreateResponse(HttpStatusCode.OK, taskEnvelope);
+    }
+    else if (activity.Name == "task/submit")
+    {
+        Console.WriteLine(activity.Value);
+
+        ConnectorClient connector = new ConnectorClient(new Uri(activity.ServiceUrl));
+        Activity reply = activity.CreateReply("Received = " + activity.Value.ToString());
+        connector.Conversations.ReplyToActivity(reply);
+    }
+    return new HttpResponseMessage(HttpStatusCode.Accepted);
 }
 ```
 
