@@ -46,12 +46,11 @@ Account management in the Microsoft Store ecosystem relies on a [Microsoft accou
 * Create a Microsoft account specifically for your developer/AppSource account. Keep this account and password confidential, and share it only with your release team.
 * Use a Microsoft account, not an Azure AD account. Although you might have leveraged the Windows Store Azure Active Directory (Azure AD) support for Windows Store account management, the AppSource Seller Dashboard requires you to use a Microsoft account, not an Azure AD account.
 * If you've developed with a trial developer Office 365 account, do not use this account for your AppSource identity. Create a separate Microsoft account instead.
-
 ## Register in the Seller Dashboard to submit to AppSource
 
 A second approval process happens after you create your developer account: You need to create your identity in the AppSource Seller Dashboard. Although the content here should be similar to the details of your developer account, this extra step ensures that AppSource has all the required information and that your identity in that storefront accurately reflects your business.
 
-If you already submitted other product types to AppSource, this additional registration may not be necessary.
+If you already submitted other product types to AppSource, this additional registration may not be necessary. 
 
 To start the process, choose the **Continue** button under **Office**.
 
@@ -98,16 +97,17 @@ Failures are explained, with references to the specific policy violations. All f
 ## Tips for rapid approval
 
 * Don't use "Teams" or "Microsoft" in your app name; in all contexts, that extra clarification is superfluous.
-* If your product requires an account on your service or another service, list that in the description.
+* If your product requires an account on your service or another service, list that in the description and ensure there are links to sign up, sign in and sign out.
 * If your product requires additional purchases to function properly, list that in the description.
 * For your Tab configuration page, be sure to provide "About" links and proper guidance—this page is the first thing the user sees, so ensure that a new user understands what to do.
 * Be sure that your bot provides appropriate responses when mentioned (@*botname*) in a channel and in personal conversations as needed. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](~/resources/schema/manifest-schema#bots).)
-* Provide the requisite Terms and Privacy policy links in the manifest and the Seller Dashboard, and verify that they properly resolve to the correct documentation. For bots, you must provide this same information in the Submission section of the Bot Framework registration page.
+* Provide the requisite Terms and Privacy policy links in the manifest and the Seller Dashboard. Verify that the links properly resolve to the correct documentation, ideally Teams specific. For bots, you must provide this same information in the Submission section of the Bot Framework registration page.
 * Ensure that metadata in the manifest roughly matches metadata in the Seller Dashboard (and, for bots, in the Bot Framework registration). Note that your Seller Dashboard entry should contain a more detailed and formatted description for use in the AppSource product page.
 * Check your manifest for completeness and accuracy. Then check it again.
 * Be sure to include detailed testing notes and a valid, working test account with appropriate prepopulated data.
 * Do not use the *Add a new app* button to resubmit your app. Use the tile for your app on the Overview tab instead.
-
+* For apps incorporating private URLs a signed-in user must have a sign-out option. For apps incorporating public URLs a sign-out option is not mandatory but is a better user experience.
+* The Privacy policy can be specific to your app/add-in or can be an overall privacy policy for all the services from a developer. There should be no broken links and no beta or staging URLs.
 ## Add a download button to your product site
 
 If your app is in the Microsoft Teams store, you can generate a link for your website that launches Teams and shows a consent and installation dialog for users to add the app.
