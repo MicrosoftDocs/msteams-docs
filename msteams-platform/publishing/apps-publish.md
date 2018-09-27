@@ -46,6 +46,7 @@ Account management in the Microsoft Store ecosystem relies on a [Microsoft accou
 * Create a Microsoft account specifically for your developer/AppSource account. Keep this account and password confidential, and share it only with your release team.
 * Use a Microsoft account, not an Azure AD account. Although you might have leveraged the Windows Store Azure Active Directory (Azure AD) support for Windows Store account management, the AppSource Seller Dashboard requires you to use a Microsoft account, not an Azure AD account.
 * If you've developed with a trial developer Office 365 account, do not use this account for your AppSource identity. Create a separate Microsoft account instead.
+
 ## Register in the Seller Dashboard to submit to AppSource
 
 A second approval process happens after you create your developer account: You need to create your identity in the AppSource Seller Dashboard. Although the content here should be similar to the details of your developer account, this extra step ensures that AppSource has all the required information and that your identity in that storefront accurately reflects your business.
@@ -108,6 +109,7 @@ Failures are explained, with references to the specific policy violations. All f
 * Do not use the *Add a new app* button to resubmit your app. Use the tile for your app on the Overview tab instead.
 * For apps incorporating private URLs a signed-in user must have a sign-out option. For apps incorporating public URLs a sign-out option is not mandatory but is a better user experience.
 * The Privacy policy can be specific to your app/add-in or can be an overall privacy policy for all the services from a developer. There should be no broken links and no beta or staging URLs.
+
 ## Add a download button to your product site
 
 If your app is in the Microsoft Teams store, you can generate a link for your website that launches Teams and shows a consent and installation dialog for users to add the app.
