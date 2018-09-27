@@ -2,13 +2,19 @@
 title: Features in the Public Developer Preview
 description: Describes the features in the Public Developer Preview of Microsoft Teams
 keywords: teams preview developer features
+<<<<<<< HEAD
+ms.date: 09/11/2018
+=======
 ms.date: 09/26/2018
+>>>>>>> master
 ---
 # Features in the Public Developer Preview for Microsoft Teams
 
 When these features are out of developer preview this content will be merged into the live doc set.
 The developer preview includes the following new features:
 
+<<<<<<< HEAD
+=======
 ## Introducing "task modules"
 
 A task module allows you to create modal popup experiences in your Teams application, from both bots and tabs. Inside the popup, you can run your own custom HTML/JavaScript code, show an `<iframe>`-based widget such as a YouTube or Microsoft Stream video, or display an [Adaptive card](https://docs.microsoft.com/en-us/adaptive-cards/).
@@ -41,6 +47,7 @@ When properly sized, your tab configuration page should look similar to this:
 
 <img width="450px" title="New configuration tab" src="~/assets/images/tabs/config-dialog-Contoso.png" />
 
+>>>>>>> master
 ## Adding tabs and bots to chats
 
 Chats are conversations between one or more users in Teams. Tabs and bots can now be added to chats. In the past they could only be added to channels and personal (bot to user) conversations.

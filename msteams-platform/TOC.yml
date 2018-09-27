@@ -155,7 +155,11 @@
     href: ./publishing/office-store-guidance
   - name: Localizing your app
     href: ./publishing/apps-localization
+<<<<<<< HEAD
+- name: App scenarios
+=======
 - name: Scenarios
+>>>>>>> master
   href: ./scenarios/lob-scenarios-landing-page
   items:
   - name: Turn conversation into actions
