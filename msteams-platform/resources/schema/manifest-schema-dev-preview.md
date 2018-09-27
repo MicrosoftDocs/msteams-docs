@@ -6,9 +6,9 @@ ms.date: 08/07/2018
 ---
 # Developer Preview Reference: version 1.3 manifest schema for Microsoft Teams
 
->Notes:
->See [Developer Preview](~/resources/dev-preview/developer-preview-intro) for information on the program and how you can join.
->If you are not using the developer preview you should not be using this version of the manifest. See [Reference: Manifest schema for Microsoft Teams](~/resources/schema/manifest-schema) for the public version of the manifest.
+> [!NOTE]
+> See [Developer Preview](~/resources/dev-preview/developer-preview-intro) for information on the program and how you can join.
+> If you are not using the developer preview you should not be using this version of the manifest. See [Reference: Manifest schema for Microsoft Teams](~/resources/schema/manifest-schema) for the public version of the manifest.
 
 The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json).
 

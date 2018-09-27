@@ -3,11 +3,19 @@ title: Microsoft Teams Developer Line of Business Tenant App Reference Scenarios
 description: Reference architectures, guidance for common line of business (lob) apps or Tenant apps in Microsoft Teams.
 layout: LandingPage
 ms.topic: landing-page
+<<<<<<< HEAD
+=======
+ms.date: 09/24/2018
+>>>>>>> master
 ---
 
 # App scenarios
 
+<<<<<<< HEAD
 The reference app scenarios are built to help you envision real possibilities for your organization to benefit from integrating your company workflows into Microsoft Teams. Each scenario page includes a scenario summary, a user story, decision points, and a high-level reference architecture to show how you can execute the scenario for your own organization. 
+=======
+The reference app scenarios are built to help you envision real possibilities for your organization to benefit from integrating your company workflows into Microsoft Teams. Each scenario page includes a scenario summary, a user story, decision points, and a high-level reference architecture to show how you can execute the scenario for your own organization.
+>>>>>>> master
 
 Choose a scenario below to see what’s possible!
 
