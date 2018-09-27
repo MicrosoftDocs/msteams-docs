@@ -2,15 +2,8 @@
 title: Microsoft Teams Project Management Organization
 description: Microsoft Teams Line of Business (LOB) Scenario.
 ms.topic: MicrosoftTeams
-<<<<<<< HEAD
-=======
 ms.date: 09/24/2018
->>>>>>> master
 ---
-
-
-
-
 # Set up your teams for success
 
 ## User story: Bootstrap your projects
@@ -35,7 +28,6 @@ The PMO manages the change control of the key assets published via the Teams app
 |---------|---------|
 |<img src="../assets/images/app-scenarios/audio_conferencing_image7.png" /><br>Decision points|<ul><li>Which internal PMO resources does your PMO want to include in such an app?</li><li>Have you started to use Planner to manage your projects?</li></ul>|
 
-
 ## Architecture
 
 The high-level architecture of this Teams app is as follows:
@@ -43,5 +35,20 @@ The high-level architecture of this Teams app is as follows:
 -   Azure web services are used to host the Teams PMO app UI. Key assets are stored in Azure Storage. The web services drive the creation of the teams and channels and addition of the key assets via the Graph API.
 -   The approval is created in Flow and maintained by the PMO.
 
+**_PMO Personal Teams App_**
+
+Contoso has a PMO that requires all projects in the organization to adhere to specific project-management guidelines. Contoso recently deployed Microsoft Teams. The company is looking to streamline existing manual processes into an automated workflow that ensures that these guidelines are followed.
+
+Contoso decided to create a Teams Personal App that they’ll publish to their tenant store. As new projects are kicked off, the app will create a team to be used by everyone involved in the project. It will also create predefined Microsoft Planner templates.
+
 <img src="../assets/images/app-scenarios/pmo-scenario-architecture.png">
 
+|             |           |
+| ------------|-----------|
+| ![one](../assets/images/app-scenarios/callout-1-purple.png "one") | The user opens the PMO Teams Personal Tenant App, which is back-ended by an Azure Web App. |
+| ![two](../assets/images/app-scenarios/callout-2-blue.png "two") | The user is prompted for authentication. |
+| ![three](../assets/images/app-scenarios/callout-3-blue.png "three") | The available Microsoft Planner templates that Contoso customized are retrieved and available for the user to select from. |
+| ![four](../assets/images/app-scenarios/callout-4-yellow.png "four") | The user selects a Microsoft Planner plan, supplies basic information about the project, and then clicks **Create team**, which results in the Azure Web App making a call to the Microsoft Graph using the details the user supplied. |
+| ![five](../assets/images/app-scenarios/callout-5-yellow.png "five") | A Microsoft Planner plan is created from the template. |
+| ![six](../assets/images/app-scenarios/callout-6-yellow.png "six") | Customized project forms are uploaded to SharePoint on the **Files** tab of the new team’s General channel. |
+| ![seven](../assets/images/app-scenarios/callout-7-yellow.png "seven") | The team is created by using resources approved by the PMO. |

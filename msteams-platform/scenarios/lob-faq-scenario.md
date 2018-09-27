@@ -2,17 +2,9 @@
 title: Microsoft Teams Intelligent Insights
 description: Microsoft Teams Line of Business (LOB) Scenario.
 ms.topic: MicrosoftTeams
-<<<<<<< HEAD
----
-
-
-
-
-=======
 ms.date: 09/24/2018
 ---
 
->>>>>>> master
 # Turn conversations into actions
 
 ## User story: FAQ bot in Microsoft Teams
@@ -23,21 +15,12 @@ Your organization recently deployed Microsoft Teams and you see an opportunity t
 
 The Teams FAQ app would:
 
-<<<<<<< HEAD
 -   Respond to questions asked by employees via chat by providing the most appropriate answer.
 -   Use natural language processing to reduce the dependency on the employee’s using exact terminology when asking a question.
 -   Enable connecting the user to a live support team member in case the question can’t be answered, or the answer doesn’t meet the employee’s needs.
 -   Allow employees to rate their satisfaction with the answer provided (or not provided).
 -   Allow employees to rate their overall experience with the Teams FAQ app.
 -   Capture telemetry, which can provide statistics on the most commonly asked questions and generate data to improve future employee training and information sharing.
-=======
-- Respond to questions asked by employees via chat by providing the most appropriate answer.
-- Use natural language processing to reduce the dependency on the employee’s using exact terminology when asking a question.
-- Enable connecting the user to a live support team member in case the question can’t be answered, or the answer doesn’t meet the employee’s needs.
-- Allow employees to rate their satisfaction with the answer provided (or not provided).
-- Allow employees to rate their overall experience with the Teams FAQ app.
-- Capture telemetry, which can provide statistics on the most commonly asked questions and generate data to improve future employee training and information sharing.
->>>>>>> master
 
 Employees can interact easily with the Teams FAQ app to quickly get answers to their questions. This reduces context switching and saves them valuable time by focusing on simple, human-style interactions to get the information they need.
 
@@ -46,7 +29,6 @@ HR gets valuable information about how well the answers they’re providing are 
 |         |         |
 |---------|---------|
 |<img src="../assets/images/app-scenarios/audio_conferencing_image7.png" /><br>Decision point|<ul><li>Which internal FAQ resources would your organization want to include in such an app?</li></ul>|
-
 
 ## Architecture
 
@@ -62,4 +44,14 @@ The high-level architecture of this Teams app is:
     -   Data on the reduction of support incidents requiring HR engagement.
 -   [Microsoft Teams Bot](https://docs.microsoft.com/microsoftteams/platform/concepts/bots/bots-overview) (personal context)<br>Build and connect intelligent bots to interact with Microsoft Teams users naturally through chat.
 
+**_FAQ Bot_**
+
+Contoso recently deployed Microsoft Teams. The company sees an opportunity to use a line-of-business app to improve how employees get answers to their questions while empowering the organization to collect valuable information over time to improve questions, answers, and the employee experience.
+
 <img src="../assets/images/app-scenarios/faq-scenario-architecture.png">
+
+|             |           |
+| ------------|-----------|
+| ![one](../assets/images/app-scenarios/callout-1-yellow.png "one") | The user asks a question of the FAQ bot via Teams. |
+| ![two](../assets/images/app-scenarios/callout-2-blue.png "two") | The FAQ Bot communicates with the Bot Framework. |
+| ![three](../assets/images/app-scenarios/callout-3-blue.png "three") | The Bot Framework retrieves answers from Cognitive Services, sourced by various Contoso datasets. |
