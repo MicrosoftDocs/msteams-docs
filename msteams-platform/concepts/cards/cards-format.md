@@ -45,6 +45,8 @@ On Android, XML formatting appears like this:
 
 ![XML formatting in the Android client](~/assets/images/cards/card-formatting-xml-android.jpg)
 
+![XML formatting in the Android client](~/assets/images/cards/card-formatting-xml-android-v2.jpg)
+
 Note that character formatting like bold and italic display correctly on Android.
 
 These screenshots were created using Teams AppStudio, where the text property of a hero card was set to the following string. You can test formatting in your own cards by modifying this code.
