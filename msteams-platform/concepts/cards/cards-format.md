@@ -35,11 +35,17 @@ On the desktop, XML formatting appears like this:
 
 ![XML formatting in the desktop client](~/assets/images/cards/card-formatting-xml-desktop-v2.png)
 
-On mobile, XML formatting appears like this:
+On iOS, XML formatting appears like this:
 
-![XML formatting in the mobile client](~/assets/images/cards/card-formatting-xml-mobile-v2.png)
+![XML formatting in the iOS client](~/assets/images/cards/card-formatting-xml-mobile-v2.png)
 
-Note that character formatting like bold and italic are not rendered on mobile.
+Note that character formatting like bold and italic are not rendered on iOS mobile.
+
+On Android, XML formatting appears like this:
+
+![XML formatting in the Android client](~/assets/images/cards/card-formatting-xml-android.png)
+
+Note that character formatting like bold and italic display correctly on Android.
 
 These screenshots were created using Teams AppStudio, where the text property of a hero card was set to the following string. You can test formatting in your own cards by modifying this code.
 
