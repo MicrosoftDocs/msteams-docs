@@ -43,9 +43,7 @@ Note that character formatting like bold and italic are not rendered on iOS mobi
 
 On Android, XML formatting appears like this:
 
-![XML formatting in the Android client](~/assets/images/cards/card-formatting-xml-android.jpg)
-
-![XML formatting in the Android client](~/assets/images/cards/card-formatting-xml-android-v2.jpg)
+![XML formatting in the Android client](~/assets/images/cards/card-formatting-xml-android-60.png)
 
 Note that character formatting like bold and italic display correctly on Android.
 
