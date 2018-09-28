@@ -213,8 +213,6 @@ Ensure that your description accurately describes your experience and provides i
 |`short`|80 characters|✔|A short description of your app experience, used when space is limited.|
 |`full`|4000 characters|✔|The full description of your app.|
 
-> [!IMPORTANT]
-> We currently have an issue with full descriptions longer than 256 characters. You can use a longer description in your Seller Dashboard app submission.
 
 ## icons
 
