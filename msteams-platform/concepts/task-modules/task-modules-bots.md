@@ -24,6 +24,7 @@ Let's look at each step in a bit more detail:
 1. This example shows a Bot Framework Hero card with a "Buy" `invoke` [card action](~/concepts/cards/cards-actions#invoke). The value of the `type` property is `task/fetch` - the rest of the `value` object can be whatever you like.
 2. The bot receives the `invoke` HTTP POST message.
 3. The bot creates a response object and returns it in the body of the POST response with an HTTP 200 response code. The schema for responses is described [below in the discussion on task/submit](#the-flexibility-of-task-submit), but the important thing to remember now is that the body of the HTTP response contains a [TaskInfo object](~/concepts/task-modules/task-modules-overview#the-taskinfo-object) embedded in a wrapper object, e.g.:
+
     ```json
     {
       "task": {
@@ -38,6 +39,7 @@ Let's look at each step in a bit more detail:
       }
     }
     ```
+    
     The `task/fetch` event and its response for bots is similar, conceptually, to the `microsoftTeams.tasks.startTask()` function in the client SDK.
 4. Microsoft Teams displays the task module.
 
