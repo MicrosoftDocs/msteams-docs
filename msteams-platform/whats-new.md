@@ -2,7 +2,7 @@
 title: What's new
 description: Describes all the new developer features in Microsoft Teams
 keywords: teams what's new latest
-ms.date: 09/11/2018
+ms.date: 09/26/2018
 ---
 # What's new for developers in Microsoft Teams
 
@@ -11,7 +11,10 @@ ms.date: 09/11/2018
 The change log lists changes to the Microsoft Teams platform and this document set. At times entries may be used to call attention to a new feature that is simply of interest to Teams developers.
 
 | **Date** | **Notes** | **Changed topics** |
-| - | - | - |
+| -------- | --------- | ------------------ |
+| 09/26/2018 | The "Task modules" capability was released to Developer Preview. | [Task modules overview](~/concepts/task-modules/task-modules-overview), [Using task modules in tabs](~/concepts/task-modules/task-modules-tabs), [Using task modules in bots](~/concepts/task-modules/task-modules-bots) |
+| 09/24/2018 | Calls and online meetings APIs for Microsoft Graph were released to beta, and Teams apps can now interact with users in rich ways using voice and video. | [Calls and online meetings bots](~/concepts/calls-and-meetings/calls-meetings-bots-overview), [Real-time media concepts](~/concepts/calls-and-meetings/real-time-media-concepts), [Registering a calling bot](~/concepts/calls-and-meetings/register-calling-bot), [Debugging and local testing](~/concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots), [Application-hosted media](~/concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots), [Handling incoming call notifications](~/concepts/calls-and-meetings/call-notifications) |
+| 09/24/2018 | New line-of-business scenarios have been added. | [App scenerios](~/scenarios/lob-scenarios-landing-page), [Line-of-business apps overview](~/lob-apps-value-prop) |
 | 09/11/2018 | Tab configuration pages are now significantly taller. | [Configuration page height](~/resources/design/framework/tabs.md#configuration-page-height) |
 | 08/15/2018 | Adaptive cards are now supported in Teams.| [Adaptive card](~/concepts/cards/cards-reference#adaptive-card), [Adaptive card actions in Teams](~/concepts/cards/cards-actions#adaptive-card-actions) |
 | 08/10/2018 | Client support for DevTools has been documented for Developer Preview.| [DevTools for the Microsoft Teams Desktop Client](~/resources/dev-preview/developer-preview-tools.md)|
@@ -37,7 +40,6 @@ The change log lists changes to the Microsoft Teams platform and this document s
 |03/03/2018 | Added documentation for Teams App Studio. |[Quickly develop apps with Teams App Studio](~/get-started/get-started-app-studio), [Using the control library in App Studio](~/get-started/app-studio-component-library)|
 |02/27/2018 | Added sample code to demonstrate AsTeamsChannelAccounts() method. |[Get context for your bot](~/concepts/bots/bots-context)|
 |02/05/2018 | Added topics for getting started using C#. |[Get started on the Microsoft Teams platform with C#/.NET](./get-started/get-started-dotnet)|
-| |||
 
 ## Submit your questions, bugs, feature requests, and contributions
 

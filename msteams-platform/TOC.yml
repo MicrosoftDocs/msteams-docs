@@ -1,6 +1,9 @@
 - name: Overview
   href: ./overview
   universal_ref_toc: /javascript/api/msteams-client-docs-ref-typescript/toc.json
+  items:
+  - name: Line-of-business apps overview
+    href: ./lob-apps-value-prop
 - name: What's new
   href: ./whats-new
 - name: Get started
@@ -108,6 +111,13 @@
       href: ./concepts/authentication/auth-configure
     - name: Using the Azure Bot Service
       href: ./concepts/authentication/auth-oauth-card
+  - name: Task Modules
+    href: ./concepts/task-modules/task-modules-overview
+    items:
+    - name: Using task modules in tabs
+      href: ./concepts/task-modules/task-modules-tabs
+    - name: Using task modules in bots
+      href: ./concepts/task-modules/task-modules-bots
   - name: Activity Feed
     href: ./concepts/activity-feed
   - name: Connectors
@@ -117,9 +127,22 @@
       href: ./concepts/connectors/connectors-creating
     - name: Using connectors
       href: ./concepts/connectors/connectors-using
-  - name: Messaging Extensions
+  - name: Messaging extensions
     href: ./concepts/messaging-extensions
-  - name: Outgoing WebHooks
+  - name: Calls and online meetings
+    href: ./concepts/calls-and-meetings/calls-meetings-bots-overview
+    items:
+    - name: Real-time media concepts
+      href: ./concepts/calls-and-meetings/real-time-media-concepts
+    - name: Registering a calling bot
+      href: ./concepts/calls-and-meetings/registering-calling-bot
+    - name: Debugging and local testing
+      href: ./concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots
+    - name: Application-hosted media
+      href: ./concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots
+  - name: Activity feed
+    href: ./concepts/activity-feed
+  - name: Outgoing webhooks
     href: ./concepts/outgoingwebhook
   - name: Deep links
     href: ./concepts/deep-links
@@ -130,13 +153,17 @@
     href: ./publishing/office-store-checklist
   - name: AppSource guidance
     href: ./publishing/office-store-guidance
+  - name: Localizing your app
+    href: ./publishing/apps-localization
 - name: Scenarios
-  href: ./scenarios/scenarios
+  href: ./scenarios/lob-scenarios-landing-page
   items:
-  - name: Personal conversations with bots
-    href: ./concepts/bots/bot-conversations/bots-conv-personal
-  - name: Channel conversations with bots
-    href: ./concepts/bots/bot-conversations/bots-conv-channel
+  - name: Turn conversation into actions
+    href: ./scenarios/lob-faq-scenario
+  - name: Act on intelligent insights
+    href: ./scenarios/lob-marketing-scenario
+  - name: Set up your teams for success
+    href: ./scenarios/lob-pmo-scenario
 - name: Resources
   href: ./resources/resource-overview
   items:
@@ -199,6 +226,13 @@
         href: ./resources/design/components/themes
     - name: Resources
       href: ./resources/design/resources
+  - name: Best practices and tips
+    href: ./resources/best-practices/best-practices
+    items:
+    - name: Personal conversations with bots
+      href: ./concepts/bots/bot-conversations/bots-conv-personal
+    - name: Channel conversations with bots
+      href: ./concepts/bots/bot-conversations/bots-conv-channel
   - name: Manifest schema
     href: ./resources/schema/manifest-schema
   - name: Developer preview manifest schema
