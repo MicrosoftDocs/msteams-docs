@@ -2,7 +2,7 @@
 title: Using Task Modules in Microsoft Teams bots
 description: How to use task modules with Microsoft Teams bots, including Bot Framework cards, Adaptive cards, and deep links.
 keywords: task modules teams bots
-ms.date: 09/24/2018
+ms.date: 09/28/2018
 ---
 # Using task modules from Microsoft Teams bots
 
@@ -15,7 +15,7 @@ There are two ways of invoking task modules:
 
 ## Invoking a task module via task/fetch
 
-When the `value` object of the `invoke` card action or `Action.Submit` is initialized in the proper way (explained in more detail below), when a user presses the button an `invoke` message is sent to the bot. In the HTTP response to the `invoke` message, there's a [TaskInfo object](~/concepts/task-modules/task-modules-overview#the-taskinfo-object) object, which Teams uses to display the task module.
+When the `value` object of the `invoke` card action or `Action.Submit` is initialized in the proper way (explained in more detail below), when a user presses the button an `invoke` message is sent to the bot. In the HTTP response to the `invoke` message, there's a [TaskInfo object](~/concepts/task-modules/task-modules-overview#the-taskinfo-object) embedded in a wrapper object, which Teams uses to display the task module.
 
 ![task/fetch request/response](~/assets/images/task-module/task-module-invoke-request-response.png)
 
@@ -23,7 +23,22 @@ Let's look at each step in a bit more detail:
 
 1. This example shows a Bot Framework Hero card with a "Buy" `invoke` [card action](~/concepts/cards/cards-actions#invoke). The value of the `type` property is `task/fetch` - the rest of the `value` object can be whatever you like.
 2. The bot receives the `invoke` HTTP POST message.
-3. The bot creates a response object and returns it in the body of the POST response with an HTTP 200 response code. The schema for responses is described [below in the discussion on task/submit](#the-flexibility-of-task-submit), but the important thing to remember now is that the body of the HTTP response contains a [TaskInfo object](~/concepts/task-modules/task-modules-overview#the-taskinfo-object). The `task/fetch` event and its response for bots is similar, conceptually, to the `microsoftTeams.tasks.startTask()` function in the client SDK.
+3. The bot creates a response object and returns it in the body of the POST response with an HTTP 200 response code. The schema for responses is described [below in the discussion on task/submit](#the-flexibility-of-task-submit), but the important thing to remember now is that the body of the HTTP response contains a [TaskInfo object](~/concepts/task-modules/task-modules-overview#the-taskinfo-object) embedded in a wrapper object, e.g.:
+    ```json
+    {
+      "task": {
+        "type": "continue",
+        "value": {
+          "title": "Task module title",
+          "height": 500,
+          "width": "medium",
+          "url": "https://contoso.com/msteams/taskmodules/newcustomer",
+          "fallbackUrl": "https://contoso.com/msteams/taskmodules/newcustomer"
+        }
+      }
+    }
+    ```
+    The `task/fetch` event and its response for bots is similar, conceptually, to the `microsoftTeams.tasks.startTask()` function in the client SDK.
 4. Microsoft Teams displays the task module.
 
 ## Submitting the result of a task module
@@ -128,30 +143,19 @@ private async onInvoke(event: builder.IEvent, cb: (err: Error, body: any, status
 
 ## Example: Receiving and responding to task/fetch and task/submit invoke messages - C#
 
-In C# bots, `invoke` messages are processed by an `HttpResponseMessage()` controller processing an `Activity` message. The `task/fetch` and `task/submit` requests and responses are JSON. In C#, it's not as convenient to deal with raw JSON as it is in Node.js, so you need wrapper classes to handle the serialization to and from JSON. There's no direct support for this in the C# SDK yet, but you can see an example of what these simple wrapper classes would look like in the [C# sample app](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp/blob/master/Microsoft.Teams.Samples.TaskModule.Web/Models/TaskModel.cs).
+In C# bots, `invoke` messages are processed by an `HttpResponseMessage()` controller processing an `Activity` message. The `task/fetch` and `task/submit` requests and responses are JSON. In C#, it's not as convenient to deal with raw JSON as it is in Node.js, so you need wrapper classes to handle the serialization to and from JSON. There's no direct support for this in the Microsoft Teams [C# SDK](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) yet, but you can see an example of what these simple wrapper classes would look like in the [C# sample app](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp/blob/master/Microsoft.Teams.Samples.TaskModule.Web/Models/TaskModel.cs).
 
-Here's example code in C# for handling `task/fetch` and `task/submit` messages using these wrapper classes (`TaskInfo`, `TaskEnvelope`), exerpted from the [sample](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp/blob/master/Microsoft.Teams.Samples.TaskModule.Web/Controllers/MessagesController.cs):
+Below is example code in C# for handling `task/fetch` and `task/submit` messages using these wrapper classes (`TaskInfo`, `TaskEnvelope`), exerpted from the [sample](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp/blob/master/Microsoft.Teams.Samples.TaskModule.Web/Controllers/MessagesController.cs):
 
-```c#
+```csharp
 private HttpResponseMessage HandleInvokeMessages(Activity activity)
 {
     var activityValue = activity.Value.ToString();
     if (activity.Name == "task/fetch")
     {
-        var action = Newtonsoft.Json.JsonConvert.DeserializeObject<Models.FetchActionDetails>(activityValue);
-        Models.TaskInfo taskInfo = new Models.TaskInfo()
-        {
-            Title = "Task Module",
-            Height = "medium",
-            Width = "medium"
-        };
+        var action = Newtonsoft.Json.JsonConvert.DeserializeObject<Models.BotFrameworkCardValue<string>>(activityValue);
 
-        // 
-        if (action.AdditionalInfo.Contains("html"))
-            taskInfo.Url = ApplicationSettings.BaseUrl + "/customform";
-        else
-            taskInfo.Card = AdaptiveCardHelper.GetAdaptiveCard();// Attachment AdaptiveCardHelper.GetAdaptiveCard();
-
+        Models.TaskInfo taskInfo = GetTaskInfo(action.Data);
         Models.TaskEnvelope taskEnvelope = new Models.TaskEnvelope
         {
             Task = new Models.Task()
@@ -164,15 +168,43 @@ private HttpResponseMessage HandleInvokeMessages(Activity activity)
     }
     else if (activity.Name == "task/submit")
     {
-        Console.WriteLine(activity.Value);
-
         ConnectorClient connector = new ConnectorClient(new Uri(activity.ServiceUrl));
         Activity reply = activity.CreateReply("Received = " + activity.Value.ToString());
         connector.Conversations.ReplyToActivity(reply);
     }
     return new HttpResponseMessage(HttpStatusCode.Accepted);
 }
+
+// Helper function for building the TaskInfo object based on the incoming request
+private static Models.TaskInfo GetTaskInfo(string actionInfo)
+{
+    Models.TaskInfo taskInfo = new Models.TaskInfo();
+    switch (actionInfo)
+    {
+        case TaskModuleIds.YouTube:
+            taskInfo.Url = taskInfo.FallbackUrl = ApplicationSettings.BaseUrl + "/" + TaskModuleIds.YouTube;
+            SetTaskInfo(taskInfo, TaskModuleUIConstants.YouTube);
+            break;
+        case TaskModuleIds.PowerApp:
+            taskInfo.Url = taskInfo.FallbackUrl = ApplicationSettings.BaseUrl + "/" + TaskModuleIds.PowerApp;
+            SetTaskInfo(taskInfo, TaskModuleUIConstants.PowerApp);
+            break;
+        case TaskModuleIds.CustomForm:
+            taskInfo.Url = taskInfo.FallbackUrl = ApplicationSettings.BaseUrl + "/" + TaskModuleIds.CustomForm;
+            SetTaskInfo(taskInfo, TaskModuleUIConstants.CustomForm);
+            break;
+        case TaskModuleIds.AdaptiveCard:
+            taskInfo.Card = AdaptiveCardHelper.GetAdaptiveCard();
+            SetTaskInfo(taskInfo, TaskModuleUIConstants.AdaptiveCard);
+            break;
+        default:
+            break;
+    }
+    return taskInfo;
+}
 ```
+
+Not shown in the above example is the `SetTaskInfo()` function, which sets the `height`, `width`, and `title` properties of the `TaskInfo` object for each case. Here's the [source code for SetTaskInfo()](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp/blob/master/Microsoft.Teams.Samples.TaskModule.Web/Controllers/MessagesController.cs).
 
 ### Bot Framework card actions vs. Adaptive card Action.Submit actions
 
