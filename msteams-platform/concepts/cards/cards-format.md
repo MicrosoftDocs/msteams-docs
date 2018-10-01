@@ -106,7 +106,7 @@ On the desktop, Adaptive Card markdown formatting appears like this in both web 
 
 On iOS, Adaptive Card markdown formatting appears like this:
 
-![Adaptive Card Markdown formatting in iOS](~/assets/images/cards/Adaptive-markdown-iOS.png)
+![Adaptive Card Markdown formatting in iOS](~/assets/images/cards/Adaptive-markdown-iOS-75.png)
 
 On Android, Adaptive Card markdown formatting appears like this:
 
