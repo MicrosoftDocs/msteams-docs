@@ -31,7 +31,7 @@ These HTML tags are supported for regular cards such as the hero and thumbnail c
 | hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | image link | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
-### Mobile and desktop differences for HTML formatting
+### Mobile and desktop differences for regular cards
 
 Because of resolution differences between the desktop and mobile platform, formatting is different between the desktop and the mobile version of Teams.
 
@@ -89,9 +89,32 @@ The following markdown tags are not supported
 * Headers
 * Tables
 * Images
-* Anything not in the table above
+* Preformatted text
+* Blockquotes
+
+Anything not in the table above
 
 Adaptive cards do not support HTML formatting.
+
+### Mobile and desktop differences for Adaptive Cards
+
+Formatting is slightly different between the desktop and the mobile versions of Teams.
+
+On the desktop, Adaptive Card markdown formatting appears like this in both web browsers and in the Teams client application:
+
+![Adaptive Card Markdown formatting in the desktop client](~/assets/images/cards/Adaptive-markdown-desktop-client.png)
+
+On the iOS, Adaptive Card markdown formatting appears like this:
+
+![Adaptive Card Markdown formatting in iOS](~/assets/images/cards/Adaptive-markdown-iOS.png)
+
+On the iOS, Adaptive Card markdown formatting appears like this:
+
+![Adaptive Card Markdown formatting in iOS](~/assets/images/cards/Adaptive-markdown-iOS.png)
+
+On the iOS, Adaptive Card markdown formatting appears like this:
+
+![Adaptive Card Markdown formatting in Android](~/assets/images/cards/Adaptive-markdown-Android.png)
 
 ### For more information on Adaptive Cards
 
