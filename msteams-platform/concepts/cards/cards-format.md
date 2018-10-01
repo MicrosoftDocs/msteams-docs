@@ -8,9 +8,13 @@ ms.date: 03/29/2018
 
 Cards support formatting in the text property only, not in the title or subtitle properties. Formatting can be specified using a subset of XML (HTML) markup, or Markdown.
 
-Formatting support differs between different card types, and between the desktop and the mobile platform. Those differences are described below.
+Formatting support differs between different card types, and between the desktop and the mobile platform.
 
-## Formatting for regular cards:
+* **Regular Cards**: Markdown is not supported in Hero/Thumbnail card text fields, but limited HTML is supported.
+* **O365 Connector Cards**: Markdown and limited HTML is supported in Office 365 Connector cards in the text fields.
+* **Adaptive Cards**: Markdown is supported in Adaptive Card Textblock fields, as well as field and Fact.Title & Fact.Value. Limited HTML is not supported.
+
+## Formatting for regular cards
 
 These XML tags are supported for regular cards such as the hero and thumbnail card. Markdown is not supported.
 
@@ -53,9 +57,19 @@ These screenshots were created using Teams AppStudio, where the text property of
 
 ## Formatting for Connector cards
 
+Connector cards support both HTML formatting and markdown formatting.
+
+### HTML formatting for Connector Cards
+
+### Markdown formatting for Connector Cards
+
 ## Formatting for Adaptive cards
 
-Adaptive card offers inline markup for a subset of Markdown syntax. The supported styles are:
+Adaptive card offers inline markup for a subset of Markdown syntax.
+
+### Markdown formatting for Adaptive Cards
+
+ The supported styles are:
 
 | Text Style      | Markdown |
 |-----------------|-----|
@@ -72,7 +86,9 @@ The following markdown tags are not supported
 * Images
 * Anything not in the table above
 
-### For more information
+Adaptive cards do not support HTML formatting.
+
+### For more information on Adaptive Cards
 
 [Text features in Adaptive cards](https://docs.microsoft.com/en-us/adaptive-cards/create/textfeatures)
 Note that the date and localization features mentioned in this topic are not supported in Teams.
