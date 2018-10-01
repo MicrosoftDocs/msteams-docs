@@ -76,13 +76,13 @@ These screenshots were created using Teams AppStudio, where the text property of
 
  The supported styles are:
 
-| Text Style      | Markdown |
-|-----------------|-----|
-| **Bold**        | ```**Bold**``` |
-| _Italic_        | ```_Italic_``` |
-| Bullet list     | ```- Item 1\r- Item 2\r- Item 3``` | 
-| Numbered list   | ```1. Green\r2. Orange\r3. Blue``` |
-| Hyperlinks      | ```[Title](url)``` |
+| Style | Example | Markdown |
+| --- | --- | --- |
+| bold | **Bold** | ```**Bold**``` |
+| italic | _Italic_ | ```_Italic_``` |
+| unordered list | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
+| ordered list | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
+| Hyperlinks |[Bing](https://www.bing.com/)| ```[Title](url)``` |
 
 The following markdown tags are not supported
 
