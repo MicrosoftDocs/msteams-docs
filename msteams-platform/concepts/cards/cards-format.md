@@ -14,11 +14,11 @@ Formatting support differs between different card types, and between the desktop
 * **O365 Connector Cards**: Markdown and limited HTML is supported in Office 365 Connector cards in the text fields.
 * **Adaptive Cards**: Markdown is supported in Adaptive Card Textblock fields, as well as field and Fact.Title & Fact.Value. Limited HTML is not supported.
 
-## Formatting for regular cards
+## HTML Formatting for regular cards
 
-These XML tags are supported for regular cards such as the hero and thumbnail card. Markdown is not supported.
+These HTML tags are supported for regular cards such as the hero and thumbnail card. Markdown is not supported.
 
-| Style | Example | XML (HTML) |
+| Style | Example | HTML |
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
@@ -31,23 +31,23 @@ These XML tags are supported for regular cards such as the hero and thumbnail ca
 | hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | image link | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
-### Mobile and desktop differences for XML formatting
+### Mobile and desktop differences for HTML formatting
 
 Because of resolution differences between the desktop and mobile platform, formatting is different between the desktop and the mobile version of Teams.
 
-On the desktop, XML formatting appears like this:
+On the desktop, HTML formatting appears like this:
 
-![XML formatting in the desktop client](~/assets/images/cards/card-formatting-xml-desktop-v2.png)
+![HTML formatting in the desktop client](~/assets/images/cards/card-formatting-xml-desktop-v2.png)
 
-On iOS, XML formatting appears like this:
+On iOS, HTML formatting appears like this:
 
-![XML formatting in the iOS client](~/assets/images/cards/card-formatting-xml-mobile-v2.png)
+![HTML formatting in the iOS client](~/assets/images/cards/card-formatting-xml-mobile-v2.png)
 
 Note that character formatting like bold and italic are not rendered on iOS mobile.
 
-On Android, XML formatting appears like this:
+On Android, HTML formatting appears like this:
 
-![XML formatting in the Android client](~/assets/images/cards/card-formatting-xml-android-60.png)
+![HTML formatting in the Android client](~/assets/images/cards/card-formatting-xml-android-60.png)
 
 Note that character formatting like bold and italic display correctly on Android.
 
@@ -55,17 +55,22 @@ These screenshots were created using Teams AppStudio, where the text property of
 
 `<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"http://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
 
-## Formatting for Connector cards
-
-Connector cards support both HTML formatting and markdown formatting.
-
 ### HTML formatting for Connector Cards
 
+| Style | Example | HTML |
+| --- | --- | --- |
+| bold | **text** | `<strong>text</strong>` |
+| italic | *text* | `<em>text</em>` |
+| header (levels 1&ndash;3) | **Text** | `<h3>Text</h3>` |
+| strikethrough | ~~text~~ | `<strike>text</strike>` |
+| unordered list | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
+| ordered list | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
+| preformatted text | `text` | `<pre>text</pre>` |
+| blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
+| hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
+| image link | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+
 ### Markdown formatting for Connector Cards
-
-## Formatting for Adaptive cards
-
-Adaptive card offers inline markup for a subset of Markdown syntax.
 
 ### Markdown formatting for Adaptive Cards
 
