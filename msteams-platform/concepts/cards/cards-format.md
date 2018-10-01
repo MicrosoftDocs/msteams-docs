@@ -55,7 +55,7 @@ These screenshots were created using Teams AppStudio, where the text property of
 
 `<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"http://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
 
-### HTML formatting for Connector Cards
+## HTML formatting for Connector Cards
 
 | Style | Example | HTML |
 | --- | --- | --- |
@@ -70,9 +70,9 @@ These screenshots were created using Teams AppStudio, where the text property of
 | hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | image link | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
-### Markdown formatting for Connector Cards
+## Markdown formatting for Connector Cards
 
-### Markdown formatting for Adaptive Cards
+## Markdown formatting for Adaptive Cards
 
  The supported styles are:
 
