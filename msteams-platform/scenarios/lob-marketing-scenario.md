@@ -33,5 +33,22 @@ The high-level architecture of the Marketing Team Notification Bot is as follows
 - [Microsoft Teams bot](https://docs.microsoft.com/microsoftteams/platform/concepts/bots/bots-overview) (channel scope)<br>The users interact via the bot that’s added to the channel. The bot interacts with Microsoft Teams users naturally through chat, sharing the latest changes in customer sentiment.
 - [Office 365 Connectors for Microsoft Teams](https://docs.microsoft.com/microsoftteams/platform/concepts/connectors/connectors)<br>Any user can connect a team to services like Trello, GitHub, Bing News, or Twitter and be notified of the team’s activity in that service. From tracking a team’s progress in Trello to following important hashtags in Twitter, Office 365 Connectors help your team to stay in sync and get more done. The connectors are used to connect to the marketing social media accounts to post new information.
 
+**_External Sentiment Connector_**
+
+Fabrikam recently rolled out Microsoft Teams. They’re looking to reduce the effort needed to understand external sentiment about their company and its products as expressed in various social media channels.
+
+Fabrikam decided to optimize this process by developing services in Microsoft Azure that collect and process sentiment from various external sources. The insights extracted are then pushed to the External Sentiment channel in Fabrikam’s marketing team’s team, via their External Sentiment Connector.
+
 <img src="../assets/images/app-scenarios/marketing-scenario-architecture.png">
+
+|             |           |
+| ------------|-----------|
+| ![one](../assets/images/app-scenarios/callout-1-purple.png "one") | Social media data sources feed Azure Event Hubs. |
+| ![two](../assets/images/app-scenarios/callout-2-blue.png "two") | Event Hub data to Azure Databricks. |
+| ![three](../assets/images/app-scenarios/callout-3-blue.png "three") | Cognitive Services post-processes data to determine sentiment changes. |
+| ![four](../assets/images/app-scenarios/callout-4-blue.png "four") | The Web App API endpoint notifies the bot. |
+| ![five](../assets/images/app-scenarios/callout-5-blue.png "five") | The bot posts to the marketing team and notifies channel members. |
+| ![six](../assets/images/app-scenarios/callout-6-yellow.png "six") | The marketing team discusses the response. |
+| ![seven](../assets/images/app-scenarios/callout-7-yellow.png "seven") | The marketing team posts the agreed-on response to a connector. |
+| ![eight](../assets/images/app-scenarios/callout-8-yellow.png "eight") | The Office 365 Connector is used to send the update to the social media platform. |
 

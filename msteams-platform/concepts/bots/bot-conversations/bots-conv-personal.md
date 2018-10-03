@@ -8,7 +8,7 @@ ms.date: 03/29/2018
 
 Microsoft Teams allows users to engage in direct conversations with bots built on the [Microsoft Bot Framework](https://docs.botframework.com/en-us/). Users can find bots in the Discover Apps gallery and add them to their Teams experience for personal conversations. Team owners and users with the appropriate permissions can also add bots as team members (see [Interact in a team channel](~/concepts/bots/bot-conversations/bots-conv-channel)), which not only makes them available in that team's channels, but for personal chat for all of those users as well.
 
-Personal chat differs from chat in channels in that the user does not need to @mention the bot. If a bot is used in both contexts (personal and channel) you will need to detect if the the bot is in a channel, and process messages a little differently. See [Interact in a team channel](~/concepts/bots/bot-conversations/bots-conv-channel) for more details.
+Personal chat differs from chat in channels in that the user does not need to @mention the bot. If a bot is used in both contexts (personal and channel) you will need to detect if the bot is in a channel, and process messages a little differently. See [Interact in a team channel](~/concepts/bots/bot-conversations/bots-conv-channel) for more details.
 
 ## Designing a great personal bot
 
@@ -18,7 +18,7 @@ Depending on the experience you want to create, the bot might need to work in bo
 
 ## Best practice: Welcome messages in personal conversations
 
-For bots that are added directly by a user, and not already part of any of the user's teams, it is a best practice to send a welcome message to the General channel to introduce the bot to all users of the team and tell a bit about its functionality. 
+For bots that are added directly by a user, and not already part of any of the user's teams, it is a best practice to send a welcome message to the General channel to introduce the bot to all users of the team. The welcome message should provide a description of the bot’s functionality and user benefits. Ideally the message should include also commands for the user to interact with the app.
 
 To do this, ensure that your bot responds to the `conversationUpdate` message, with the `teamsAddMembers` eventType in the `channelData` object.
 
