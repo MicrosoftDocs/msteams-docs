@@ -12,7 +12,7 @@ App Studio makes it easy to start creating or integrating your own service, whet
 
 ## Apps
 
-App Studio was created to simplify and streamline the process of creating real apps. It is much faster than the manual process described in [Get started with Node.js](~/get-started/get-started-nodejs): App Studio is now the recommended way to develop Teams apps. The getting started documentation will be updated at a later date.
+App Studio was created to simplify and streamline the process of creating real apps. It is much faster than the manual process described in [Get started with Node.js](get-started-nodejs.md): App Studio is now the recommended way to develop Teams apps. The getting started documentation will be updated at a later date.
 
 Apps for Teams are made up of two parts:
 
