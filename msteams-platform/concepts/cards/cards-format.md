@@ -37,7 +37,7 @@ Because of resolution differences between the desktop and mobile platform, forma
 
 On the desktop, HTML formatting appears like this:
 
-![HTML formatting in the desktop client](~/assets/images/cards/card-formatting-xml-desktop-v2.png)
+![HTML formatting in the Desktop client](~/assets/images/cards/card-formatting-xml-desktop-v2.png)
 
 On iOS, HTML formatting appears like this:
 
@@ -57,6 +57,8 @@ These screenshots were created using Teams AppStudio, where the text property of
 
 ## HTML formatting for Connector Cards
 
+Connector cards support limited markdown and HTML formatting. Markdown is described in the next section.
+
 | Style | Example | HTML |
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
@@ -70,7 +72,52 @@ These screenshots were created using Teams AppStudio, where the text property of
 | hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | image link | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
+### Mobile and desktop differences for connector cards using HTML
+
+On the desktop, HTML formatting for connector cards looks like this:
+
+![HTML formatting for connector cards in the Desktop client](~/assets/images/cards/Connector-HTML-Desktop-combined.png)
+
+On iOS, HTML formatting looks like this:
+
+![HTML formatting for connector cards  in the iOS client](~/assets/images/cards/card-formatting-xml-mobile-v2.png)
+
+Note that character formatting like bold and italic are not rendered on iOS mobile.
+
+On Android, HTML formatting looks like this:
+
+![HTML formatting for connector cards in the Android client](~/assets/images/cards/card-formatting-xml-android-60.png)
+
 ## Markdown formatting for Connector Cards
+
+Connector cards support limited markdown and HTML formatting. HTML is described in the last section.
+
+| Style | Example | Markdown |
+| --- | --- | --- |
+| bold | **text** | `**text**` |
+| italic | *text* | `*text*` |
+| header (levels 1&ndash;3) | **Text** | `### Text`|
+| strikethrough | ~~text~~ | `~~text~~` |
+| unordered list | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
+| ordered list | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
+| preformatted text | `text` | ``preformatted text`` |
+| blockquote | <blockquote>text</blockquote> | `< blockquote text` |
+| hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
+| image link | ![Duck](http://aka.ms/Fo983c)|`![Duck](http://aka.ms/Fo983c)` |
+
+### Mobile and desktop differences for connector cards using markdown
+
+On the desktop, markdown formatting for connector cards looks like this:
+
+![HTML formatting for connector cards in the Desktop client](~/assets/images/cards/Connector-HTML-Desktop-combined.png)
+
+On iOS, markdown formatting for connector cards looks like this:
+
+![HTML formatting for connector cards in the iOS client](~/assets/images/cards/ .png)
+
+On Android, markdown formatting for connector cards looks like this:
+
+![HTML formatting for connector cards in the Android client](~/assets/images/cards/ .png)
 
 ## Markdown formatting for Adaptive Cards
 
