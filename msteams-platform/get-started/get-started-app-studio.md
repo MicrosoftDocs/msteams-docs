@@ -128,7 +128,7 @@ Controls include:
 * Checkboxes
 * Radio Buttons
 * Toggles
-* Test Areas
+* Text Areas
 * Links
 * Tabs
 * Tables
