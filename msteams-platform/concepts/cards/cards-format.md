@@ -14,13 +14,13 @@ Formatting support differs between different card types, and rendering of the ca
 
 There are three types of cards supported in Teams:
 
-* **Adaptive Cards**: Markdown is supported in Adaptive Card Textblock fields, as well as Fact.Title & Fact.Value. Limited HTML is not supported in adaptive cards.
+* **Adaptive Cards**: Markdown is supported in Adaptive Card `Textblock` field, as well as `Fact.Title` and `Fact.Value`. Limited HTML is not supported in adaptive cards.
 * **O365 Connector Cards**: Markdown and limited HTML is supported in Office 365 Connector cards in the text fields.
-* **Simple Cards**: Limited HTML is supported, but markdown is not supported in simple cards such as Hero/Thumbnail card text fields.
+* **Simple Cards**: Limited HTML is supported, but markdown is not supported in simple cards.
 
 ## Markdown formatting for Adaptive Cards
 
- The supported styles for textblock, Fact.Title & Fact.Value are:
+ The supported styles for `Textblock`, `Fact.Title` & `Fact.Value` are:
 
 | Style | Example | Markdown |
 | --- | --- | --- |
@@ -38,9 +38,7 @@ The following markdown tags are not supported
 * Preformatted text
 * Blockquotes
 
-Anything not in the table above
-
-Adaptive cards do not support HTML formatting.
+Adaptive cards do not support any HTML formatting.
 
 ### Mobile and desktop differences for Adaptive Cards
 
@@ -243,7 +241,7 @@ On Android, markdown formatting for connector cards looks like this:
 
 ![HTML formatting for connector cards in the Android client](~/assets/images/cards/connector-android-markdown-combined.png)
 
-## Formatting example for markdown Connector Cards
+### Formatting example for markdown Connector Cards
 
 ``` json
 {
@@ -328,6 +326,8 @@ On Android, HTML formatting appears like this:
 ![HTML formatting in the Android client](~/assets/images/cards/card-formatting-xml-android-60.png)
 
 Character formatting like bold and italic display correctly on Android.
+
+### Formatting sample for HTML formatting in simple cards
 
 These screenshots were created using Teams AppStudio, where the text property of a hero card was set to the following string. You can test formatting in your own cards by modifying this code.
 
