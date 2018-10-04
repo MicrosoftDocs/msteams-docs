@@ -6,9 +6,13 @@ ms.date: 03/29/2018
 ---
 # Card formatting
 
-Cards support formatting in the text property only, not in the title or subtitle properties. Formatting can be specified using a subset of XML (HTML) formatting, or Markdown. For current amd future development Adaptive cards using markdown formatting is recommended.
+Cards support formatting in the text property only, not in the title or subtitle properties. Formatting can be specified using a subset of XML (HTML) formatting, or Markdown depending on card type. For current amd future development Adaptive cards using markdown formatting is recommended.
 
-Formatting support differs between different card types, and between the desktop and the mobile platform.
+Formatting support differs between different card types, and rendering of the card can differ slightly between the desktop and the mobile Teams clients, as well as Teams in the desktop browser.
+
+## Card types
+
+There are three types of cards supported in Teams:
 
 * **Adaptive Cards**: Markdown is supported in Adaptive Card Textblock fields, as well as Fact.Title & Fact.Value. Limited HTML is not supported in adaptive cards.
 * **O365 Connector Cards**: Markdown and limited HTML is supported in Office 365 Connector cards in the text fields.

@@ -16,7 +16,7 @@ Teams uses cards in three different places:
 
 ## Adaptive cards
 
-[Adaptive cards](~/concepts/cards/cards-reference?branch=Harysh-Adaptive-cards#adaptive-card) are a new cross product specification for cards in Microsoft products including Bots, Cortana, Outlook, and Windows. For more general information from the Adaptive cards team see [Adaptive Cards Overview](https://docs.microsoft.com/en-us/adaptive-cards). You can use adaptive cards anywhere you can use existing Hero cards, Office365 cards, and Thumbnail cards.  These cards are called *adaptive cards* in Teams, and are the recommended card type for new development.
+[Adaptive cards](~/concepts/cards/cards-reference?branch=Harysh-Adaptive-cards#adaptive-card) are a new cross product specification for cards in Microsoft products including Bots, Cortana, Outlook, and Windows. For more general information from the Adaptive cards team see [Adaptive Cards Overview](https://docs.microsoft.com/en-us/adaptive-cards). You can use adaptive cards anywhere you can use existing Hero cards, Office365 cards, and Thumbnail cards.  These cards are called *Adaptive Cards* in Teams, and are the recommended card type for new development.
 
 ## Cards in Connectors
 
@@ -26,13 +26,13 @@ Any card used by any Office 365 Connector will work in Teams as part of a Connec
 
 ## Cards in Bots
 
-The Microsoft Bot Framework extends the cards specification by adding a set of predefined cards that bots can use as part of bot messages. Teams supports bots using the Bot Framework but it supports a slightly different set of these cards. General information on cards in Bot Framework can be found in [Add rich card attachments to messages](https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-send-rich-cards). These cards are called *simple cards* in Teams.
+The Microsoft Bot Framework extended the cards specification by adding a set of predefined cards that bots could use as part of bot messages. Teams supports bots using the Bot Framework but it supports a slightly different set of these cards. General information on cards in Bot Framework can be found in [Add rich card attachments to messages](https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-send-rich-cards). These cards are called *simple cards* in Teams.
 
-Bots in Teams can use any type of card: simple, connector or adaptive. The cards that are supported by bots in Teams are detailed in [Teams Card Reference](~/concepts/cards/cards-reference).  
+Bots in Teams can use any type of card: simple, connector or adaptive. Cards that are supported by bots in Teams are detailed in [Teams Card Reference](~/concepts/cards/cards-reference).  
 
 ## Cards in Messaging Extensions
 
-[Messaging Extensions](~/concepts/messaging-extensions) can also return a card. Messaging extensions can use any type of card: simple, connector or adaptive. These cards can be found in the [Teams Card Reference](~/concepts/cards/cards-reference).
+[Messaging Extensions](~/concepts/messaging-extensions) can also return a card. Messaging extensions can use any type of card: simple, connector or adaptive. These cards are found in the [Teams Card Reference](~/concepts/cards/cards-reference).
 
 ## Card reference
 
