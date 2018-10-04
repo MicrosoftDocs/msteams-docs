@@ -10,13 +10,13 @@ Cards support formatting in the text property only, not in the title or subtitle
 
 Formatting support differs between different card types, and between the desktop and the mobile platform.
 
-* **Regular Cards**: Markdown is not supported in Hero/Thumbnail card text fields, but limited HTML is supported.
+* **Simple Cards**: Markdown is not supported in Hero/Thumbnail card text fields, but limited HTML is supported.
 * **O365 Connector Cards**: Markdown and limited HTML is supported in Office 365 Connector cards in the text fields.
 * **Adaptive Cards**: Markdown is supported in Adaptive Card Textblock fields, as well as field and Fact.Title & Fact.Value. Limited HTML is not supported.
 
-## HTML Formatting for regular cards
+## HTML Formatting for simple cards
 
-These HTML tags are supported for regular cards such as the hero and thumbnail card. Markdown is not supported.
+These HTML tags are supported for simple cards such as the hero and thumbnail card. Markdown is not supported.
 
 | Style | Example | HTML |
 | --- | --- | --- |
@@ -31,7 +31,7 @@ These HTML tags are supported for regular cards such as the hero and thumbnail c
 | hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | image link | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
-### Mobile and desktop differences for regular cards
+### Mobile and desktop differences for simple cards
 
 Because of resolution differences between the desktop and mobile platform, formatting is different between the desktop and the mobile version of Teams.
 
