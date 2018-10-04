@@ -303,7 +303,7 @@ These HTML tags are supported for simple cards such as the hero and thumbnail ca
 | preformatted text | `text` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
 | hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| image link | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| image link |<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 ### Mobile and desktop differences for simple cards
 
