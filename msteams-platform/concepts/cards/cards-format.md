@@ -40,6 +40,10 @@ The following markdown tags are not supported
 
 Adaptive cards do not support any HTML formatting.
 
+### Newlines for Adaptive Cards
+
+In lists you can use the `\r` or `\n` excape sequences for newlines. If you need newlines elsewhere in the textblock, use `\n\n`. Using `\n\n` in a list will cause the next elememt in the list to be indented.
+
 ### Mobile and desktop differences for Adaptive Cards
 
 Formatting is slightly different between the desktop and the mobile versions of Teams.
@@ -97,20 +101,8 @@ The date and localization features mentioned in this topic are not supported in 
         },
         {
             "type": "TextBlock",
-            "text": "# Header 1\r## Header 2\r### Header 3\r"
-        },
-        {
-            "type": "TextBlock",
-            "text": "`preformatted text`"
-        },
-        {
-            "type": "TextBlock",
             "text": "embedded image link: ![Duck on a rock](http://aka.ms/Fo983c)"
         },
-        {
-            "type": "TextBlock",
-            "text": ">This is a blockquote that\rcontinues to the next line"
-        }
     ]
 }
 ```
