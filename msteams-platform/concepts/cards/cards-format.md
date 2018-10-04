@@ -130,7 +130,7 @@ Connector cards support limited markdown and HTML formatting. Markdown is descri
 | preformatted text | `text` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
 | hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| image link | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| image link |! [Duck](http://aka.ms/Fo983c) | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 In connector cards, newlines are rendered in HTML using the `<p>` tag.
 
