@@ -216,9 +216,9 @@ Connector cards support limited markdown and HTML formatting. HTML is described 
 | unordered list | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | ordered list | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
 | preformatted text | `text` | ``preformatted text`` |
-| blockquote | <blockquote>text</blockquote> | `>blockquote text` |
+| blockquote | >blockquote text | `>blockquote text` |
 | hyperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
-| image link | ![Duck](http://aka.ms/Fo983c)|`![Duck](http://aka.ms/Fo983c)` |
+| image link |! [Duck](http://aka.ms/Fo983c) | `![Duck](http://aka.ms/Fo983c)` |
 
 In connector cards, newlines are rendered for `\n\n`, but not for `\n` or `\r`.
 
