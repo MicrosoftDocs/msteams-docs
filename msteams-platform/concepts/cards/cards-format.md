@@ -6,7 +6,7 @@ ms.date: 03/29/2018
 ---
 # Card formatting
 
-Cards support formatting in the text property only, not in the title or subtitle properties. Formatting can be specified using a subset of XML (HTML) markup, or Markdown.
+Cards support formatting in the text property only, not in the title or subtitle properties. Formatting can be specified using a subset of XML (HTML) formatting, or Markdown.
 
 Formatting support differs between different card types, and between the desktop and the mobile platform.
 
@@ -43,13 +43,15 @@ On iOS, HTML formatting appears like this:
 
 ![HTML formatting in the iOS client](~/assets/images/cards/card-formatting-xml-mobile-v2.png)
 
-Note that character formatting like bold and italic are not rendered on iOS mobile.
+Issues:
+
+* Character formatting like bold and italic are not rendered on iOS.
 
 On Android, HTML formatting appears like this:
 
 ![HTML formatting in the Android client](~/assets/images/cards/card-formatting-xml-android-60.png)
 
-Note that character formatting like bold and italic display correctly on Android.
+Character formatting like bold and italic display correctly on Android.
 
 These screenshots were created using Teams AppStudio, where the text property of a hero card was set to the following string. You can test formatting in your own cards by modifying this code.
 
@@ -72,6 +74,8 @@ Connector cards support limited markdown and HTML formatting. Markdown is descri
 | hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | image link | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
+In connector cards, newlines are rendered in HTML using the `<p>` tag.
+
 ### Mobile and desktop differences for connector cards using HTML
 
 On the desktop, HTML formatting for connector cards looks like this:
@@ -82,7 +86,10 @@ On iOS, HTML formatting looks like this:
 
 ![HTML formatting for connector cards  in the iOS client](~/assets/images/cards/connector-iphone-html-combined-80.png)
 
-Note that character formatting like bold and italic are not rendered on iOS mobile.
+Issues:
+
+* Inline images are not rendered on iOS using either markdown or HTML in Connector Cards.
+* Preformatted text is rendered but does not have a gray background.
 
 On Android, HTML formatting looks like this:
 
@@ -101,9 +108,11 @@ Connector cards support limited markdown and HTML formatting. HTML is described 
 | unordered list | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | ordered list | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
 | preformatted text | `text` | ``preformatted text`` |
-| blockquote | <blockquote>text</blockquote> | `< blockquote text` |
-| hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
+| blockquote | <blockquote>text</blockquote> | `<blockquote text` |
+| hyperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
 | image link | ![Duck](http://aka.ms/Fo983c)|`![Duck](http://aka.ms/Fo983c)` |
+
+In connector cards, newlines are rendered for `\n\n`, but not for `\n` or `\r`.
 
 ### Mobile and desktop differences for connector cards using markdown
 
@@ -114,6 +123,11 @@ On the desktop, markdown formatting for connector cards looks like this:
 On iOS, markdown formatting for connector cards looks like this:
 
 ![HTML formatting for connector cards in the iOS client](~/assets/images/cards/connector-iphone-markdown-combined-80.png)
+
+Issues:
+
+* The iOS client for Teams does not render markdown or HTML inline images in Connector Cards.
+* Blockquotes are rendered as indented but without a gray background.
 
 On Android, markdown formatting for connector cards looks like this:
 
@@ -162,4 +176,4 @@ On Android, Adaptive Card markdown formatting appears like this:
 ### For more information on Adaptive Cards
 
 [Text features in Adaptive cards](https://docs.microsoft.com/en-us/adaptive-cards/create/textfeatures)
-Note that the date and localization features mentioned in this topic are not supported in Teams.
+The date and localization features mentioned in this topic are not supported in Teams.
