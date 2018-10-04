@@ -76,17 +76,17 @@ Connector cards support limited markdown and HTML formatting. Markdown is descri
 
 On the desktop, HTML formatting for connector cards looks like this:
 
-![HTML formatting for connector cards in the Desktop client](~/assets/images/cards/Connector-HTML-Desktop-combined.png)
+![HTML formatting for connector cards in the Desktop client](~/assets/images/cards/Connector-desktop-html-combined.png)
 
 On iOS, HTML formatting looks like this:
 
-![HTML formatting for connector cards  in the iOS client](~/assets/images/cards/card-formatting-xml-mobile-v2.png)
+![HTML formatting for connector cards  in the iOS client](~/assets/images/cards/connector-iphone-html-combined-80.png)
 
 Note that character formatting like bold and italic are not rendered on iOS mobile.
 
 On Android, HTML formatting looks like this:
 
-![HTML formatting for connector cards in the Android client](~/assets/images/cards/card-formatting-xml-android-60.png)
+![HTML formatting for connector cards in the Android client](~/assets/images/cards/connector-android-html-combined.png)
 
 ## Markdown formatting for Connector Cards
 
@@ -109,15 +109,15 @@ Connector cards support limited markdown and HTML formatting. HTML is described 
 
 On the desktop, markdown formatting for connector cards looks like this:
 
-![HTML formatting for connector cards in the Desktop client](~/assets/images/cards/Connector-HTML-Desktop-combined.png)
+![HTML formatting for connector cards in the Desktop client](~/assets/images/cards/connector-desktop-markdown-combined.png)
 
 On iOS, markdown formatting for connector cards looks like this:
 
-![HTML formatting for connector cards in the iOS client](~/assets/images/cards/ .png)
+![HTML formatting for connector cards in the iOS client](~/assets/images/cards/connector-iphone-markdown-combined-80.png)
 
 On Android, markdown formatting for connector cards looks like this:
 
-![HTML formatting for connector cards in the Android client](~/assets/images/cards/ .png)
+![HTML formatting for connector cards in the Android client](~/assets/images/cards/connector-android-markdown-combined.png)
 
 ## Markdown formatting for Adaptive Cards
 
