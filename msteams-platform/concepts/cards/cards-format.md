@@ -6,56 +6,112 @@ ms.date: 03/29/2018
 ---
 # Card formatting
 
-Cards support formatting in the text property only, not in the title or subtitle properties. Formatting can be specified using a subset of XML (HTML) formatting, or Markdown.
+Cards support formatting in the text property only, not in the title or subtitle properties. Formatting can be specified using a subset of XML (HTML) formatting, or Markdown. For current amd future development Adaptive cards using markdown formatting is recommended.
 
 Formatting support differs between different card types, and between the desktop and the mobile platform.
 
-* **Simple Cards**: Markdown is not supported in Hero/Thumbnail card text fields, but limited HTML is supported.
-* **O365 Connector Cards**: Markdown and limited HTML is supported in Office 365 Connector cards in the text fields.
 * **Adaptive Cards**: Markdown is supported in Adaptive Card Textblock fields, as well as field and Fact.Title & Fact.Value. Limited HTML is not supported.
+* **O365 Connector Cards**: Markdown and limited HTML is supported in Office 365 Connector cards in the text fields and in the Fact.Title and Fact.Value fields.
+* **Simple Cards**: Markdown is not supported in Hero/Thumbnail card text fields, but limited HTML is supported.
 
-## HTML Formatting for simple cards
+## Markdown formatting for Adaptive Cards
 
-These HTML tags are supported for simple cards such as the hero and thumbnail card. Markdown is not supported.
+ The supported styles are:
 
-| Style | Example | HTML |
+| Style | Example | Markdown |
 | --- | --- | --- |
-| bold | **text** | `<strong>text</strong>` |
-| italic | *text* | `<em>text</em>` |
-| header (levels 1&ndash;3) | **Text** | `<h3>Text</h3>` |
-| strikethrough | ~~text~~ | `<strike>text</strike>` |
-| unordered list | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
-| ordered list | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
-| preformatted text | `text` | `<pre>text</pre>` |
-| blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
-| hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| image link | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| bold | **Bold** | ```**Bold**``` |
+| italic | _Italic_ | ```_Italic_``` |
+| unordered list | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
+| ordered list | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
+| Hyperlinks |[Bing](https://www.bing.com/)| ```[Title](url)``` |
 
-### Mobile and desktop differences for simple cards
+The following markdown tags are not supported
 
-Because of resolution differences between the desktop and mobile platform, formatting is different between the desktop and the mobile version of Teams.
+* Headers
+* Tables
+* Images
+* Preformatted text
+* Blockquotes
 
-On the desktop, HTML formatting appears like this:
+Anything not in the table above
 
-![HTML formatting in the Desktop client](~/assets/images/cards/card-formatting-xml-desktop-v2.png)
+Adaptive cards do not support HTML formatting.
 
-On iOS, HTML formatting appears like this:
+### Mobile and desktop differences for Adaptive Cards
 
-![HTML formatting in the iOS client](~/assets/images/cards/card-formatting-xml-mobile-v2.png)
+Formatting is slightly different between the desktop and the mobile versions of Teams.
 
-Issues:
+On the desktop, Adaptive Card markdown formatting appears like this in both web browsers and in the Teams client application:
 
-* Character formatting like bold and italic are not rendered on iOS.
+![Adaptive Card Markdown formatting in the desktop client](~/assets/images/cards/Adaptive-markdown-desktop-client.png)
 
-On Android, HTML formatting appears like this:
+On iOS, Adaptive Card markdown formatting appears like this:
 
-![HTML formatting in the Android client](~/assets/images/cards/card-formatting-xml-android-60.png)
+![Adaptive Card Markdown formatting in iOS](~/assets/images/cards/Adaptive-markdown-iOS-75.png)
 
-Character formatting like bold and italic display correctly on Android.
+On Android, Adaptive Card markdown formatting appears like this:
 
-These screenshots were created using Teams AppStudio, where the text property of a hero card was set to the following string. You can test formatting in your own cards by modifying this code.
+![Adaptive Card Markdown formatting in Android](~/assets/images/cards/Adaptive-markdown-Android.png)
 
-`<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"http://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
+### For more information on Adaptive Cards
+
+[Text features in Adaptive cards](https://docs.microsoft.com/en-us/adaptive-cards/create/textfeatures)
+The date and localization features mentioned in this topic are not supported in Teams.
+
+### Formatting sample for Adaptive cards
+
+``` json
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "This is some **bold** text"
+        },
+        {
+            "type": "TextBlock",
+            "text": "This is some _italic_ text"
+        },
+        {
+            "type": "TextBlock",
+            "text": "- Bullet \r- List \r",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "1. Numbered\r2. List\r",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Check out [Adaptive Cards](http://adaptivecards.io)"
+        },
+        {
+            "type": "TextBlock",
+            "text": "embedded image link: ![Duck on a rock](http://aka.ms/Fo983c)"
+        },
+        {
+            "type": "TextBlock",
+            "text": "# Header 1\r## Header 2\r### Header 3\r"
+        },
+        {
+            "type": "TextBlock",
+            "text": "`preformatted text`"
+        },
+        {
+            "type": "TextBlock",
+            "text": "embedded image link: ![Duck on a rock](http://aka.ms/Fo983c)"
+        },
+        {
+            "type": "TextBlock",
+            "text": ">This is a blockquote that\rcontinues to the next line"
+        }
+    ]
+}
+```
 
 ## HTML formatting for Connector Cards
 
@@ -133,47 +189,45 @@ On Android, markdown formatting for connector cards looks like this:
 
 ![HTML formatting for connector cards in the Android client](~/assets/images/cards/connector-android-markdown-combined.png)
 
-## Markdown formatting for Adaptive Cards
+## HTML Formatting for simple cards
 
- The supported styles are:
+These HTML tags are supported for simple cards such as the hero and thumbnail card. Markdown is not supported.
 
-| Style | Example | Markdown |
+| Style | Example | HTML |
 | --- | --- | --- |
-| bold | **Bold** | ```**Bold**``` |
-| italic | _Italic_ | ```_Italic_``` |
-| unordered list | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
-| ordered list | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
-| Hyperlinks |[Bing](https://www.bing.com/)| ```[Title](url)``` |
+| bold | **text** | `<strong>text</strong>` |
+| italic | *text* | `<em>text</em>` |
+| header (levels 1&ndash;3) | **Text** | `<h3>Text</h3>` |
+| strikethrough | ~~text~~ | `<strike>text</strike>` |
+| unordered list | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
+| ordered list | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
+| preformatted text | `text` | `<pre>text</pre>` |
+| blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
+| hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
+| image link | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
-The following markdown tags are not supported
+### Mobile and desktop differences for simple cards
 
-* Headers
-* Tables
-* Images
-* Preformatted text
-* Blockquotes
+Because of resolution differences between the desktop and mobile platform, formatting is different between the desktop and the mobile version of Teams.
 
-Anything not in the table above
+On the desktop, HTML formatting appears like this:
 
-Adaptive cards do not support HTML formatting.
+![HTML formatting in the Desktop client](~/assets/images/cards/card-formatting-xml-desktop-v2.png)
 
-### Mobile and desktop differences for Adaptive Cards
+On iOS, HTML formatting appears like this:
 
-Formatting is slightly different between the desktop and the mobile versions of Teams.
+![HTML formatting in the iOS client](~/assets/images/cards/card-formatting-xml-mobile-v2.png)
 
-On the desktop, Adaptive Card markdown formatting appears like this in both web browsers and in the Teams client application:
+Issues:
 
-![Adaptive Card Markdown formatting in the desktop client](~/assets/images/cards/Adaptive-markdown-desktop-client.png)
+* Character formatting like bold and italic are not rendered on iOS.
 
-On iOS, Adaptive Card markdown formatting appears like this:
+On Android, HTML formatting appears like this:
 
-![Adaptive Card Markdown formatting in iOS](~/assets/images/cards/Adaptive-markdown-iOS-75.png)
+![HTML formatting in the Android client](~/assets/images/cards/card-formatting-xml-android-60.png)
 
-On Android, Adaptive Card markdown formatting appears like this:
+Character formatting like bold and italic display correctly on Android.
 
-![Adaptive Card Markdown formatting in Android](~/assets/images/cards/Adaptive-markdown-Android.png)
+These screenshots were created using Teams AppStudio, where the text property of a hero card was set to the following string. You can test formatting in your own cards by modifying this code.
 
-### For more information on Adaptive Cards
-
-[Text features in Adaptive cards](https://docs.microsoft.com/en-us/adaptive-cards/create/textfeatures)
-The date and localization features mentioned in this topic are not supported in Teams.
+`<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"http://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`

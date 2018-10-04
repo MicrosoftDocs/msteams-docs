@@ -44,8 +44,6 @@ See the topic [Card Actions](~/concepts/cards/cards-actions) for more informatio
 
 See the topic [Card Formatting](~/concepts/cards/cards-format) for more information on text formatting in cards.
 
-
-
 ## Adaptive card
 
 A customizable card that can contain any combination of text, speech, images, buttons, and input fields.
