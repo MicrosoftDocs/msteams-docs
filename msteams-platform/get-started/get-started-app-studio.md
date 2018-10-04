@@ -2,7 +2,7 @@
 title: Get started with App Studio for Microsoft Teams
 description: Get started building great apps in Microsoft Teams using App Studio
 keywords: getting started app studio teams
-ms.date: 09/05/2018
+ms.date: 10/03/2018
 ---
 # Quickly develop apps with App Studio for Microsoft Teams
 
@@ -128,7 +128,7 @@ Controls include:
 * Checkboxes
 * Radio Buttons
 * Toggles
-* Test Areas
+* Text Areas
 * Links
 * Tabs
 * Tables
