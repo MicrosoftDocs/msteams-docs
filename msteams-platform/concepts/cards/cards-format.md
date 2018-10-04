@@ -10,13 +10,13 @@ Cards support formatting in the text property only, not in the title or subtitle
 
 Formatting support differs between different card types, and between the desktop and the mobile platform.
 
-* **Adaptive Cards**: Markdown is supported in Adaptive Card Textblock fields, as well as field and Fact.Title & Fact.Value. Limited HTML is not supported.
-* **O365 Connector Cards**: Markdown and limited HTML is supported in Office 365 Connector cards in the text fields and in the Fact.Title and Fact.Value fields.
-* **Simple Cards**: Markdown is not supported in Hero/Thumbnail card text fields, but limited HTML is supported.
+* **Adaptive Cards**: Markdown is supported in Adaptive Card Textblock fields, as well as Fact.Title & Fact.Value. Limited HTML is not supported in adaptive cards.
+* **O365 Connector Cards**: Markdown and limited HTML is supported in Office 365 Connector cards in the text fields.
+* **Simple Cards**: Limited HTML is supported, but markdown is not supported in simple cards such as Hero/Thumbnail card text fields.
 
 ## Markdown formatting for Adaptive Cards
 
- The supported styles are:
+ The supported styles for textblock, Fact.Title & Fact.Value are:
 
 | Style | Example | Markdown |
 | --- | --- | --- |
@@ -151,6 +151,56 @@ On Android, HTML formatting looks like this:
 
 ![HTML formatting for connector cards in the Android client](~/assets/images/cards/connector-android-html-combined.png)
 
+### Formatting sample for HTML Connector Cards
+
+``` json
+{
+  "contentType": "application/vnd.microsoft.teams.card.o365connector",
+  "content": {
+    "@type": "MessageCard",
+    "@context": "http://schema.org/extensions",
+    "summary": "Summary",
+    "title": "Connector Card HTML formatting",
+    "sections": [
+        {
+            "text": "This is some <strong>bold</strong> text"
+        },
+        {
+            "text": "This is some <em>italic</em> text"
+        },
+        {
+            "text": "This is some <strike>strikethrough</strike> text"
+        },
+        {
+            "text": "<h1>Header 1</h1>\r<h2>Header 2</h2>\r <h3>Header 3</h3>"
+        },
+        {
+            "text": "bullet list <ul><li>text</li><li>text</li></ul>"
+        },
+        {
+            "text": "ordered list <ol><li>text</li><li>text</li></ol>"
+        },
+        {
+            "text": "hyperlink <a href=\"https://www.bing.com/\">Bing</a>"
+        },
+        {
+            "text": "embedded image <img src=\"http://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img>"
+        },
+        {
+            "text": "preformatted text <pre>text</pre>"
+        },
+        {
+            "text": "Paragraphs <p>Line a</p><p>Line b</p>"
+        },
+        {
+            "text": "<blockquote>Blockquote text</blockquote>"
+        }
+     ]
+  }
+}
+
+```
+
 ## Markdown formatting for Connector Cards
 
 Connector cards support limited markdown and HTML formatting. HTML is described in the last section.
@@ -164,7 +214,7 @@ Connector cards support limited markdown and HTML formatting. HTML is described 
 | unordered list | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | ordered list | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
 | preformatted text | `text` | ``preformatted text`` |
-| blockquote | <blockquote>text</blockquote> | `<blockquote text` |
+| blockquote | <blockquote>text</blockquote> | `>blockquote text` |
 | hyperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
 | image link | ![Duck](http://aka.ms/Fo983c)|`![Duck](http://aka.ms/Fo983c)` |
 
@@ -188,6 +238,53 @@ Issues:
 On Android, markdown formatting for connector cards looks like this:
 
 ![HTML formatting for connector cards in the Android client](~/assets/images/cards/connector-android-markdown-combined.png)
+
+## Formatting example for markdown Connector Cards
+
+``` json
+{
+  "contentType": "application/vnd.microsoft.teams.card.o365connector",
+  "content": {
+    "@type": "MessageCard",
+    "@context": "http://schema.org/extensions",
+    "summary": "Summary",
+    "title": "Connector Card Markdown formatting",
+    "sections": [
+        {
+            "text": "This is some **bold** text"
+        },
+        {
+            "text": "This is some _italic_ text"
+        },
+        {
+            "text": "# Header 1\r## Header 2\r### Header 3"
+        },
+        {
+            "text": "- Bullet \r- List \r"
+        },
+        {
+            "text": "1. Numbered\r1. List \r"
+        },
+        {
+            "text": "Link: [Bing](https://www.bing.com)"
+        },
+        {
+            "text": "embedded image link: ![Duck on a rock](http://aka.ms/Fo983c)"
+        },
+        {
+            "text": "`preformatted text`"
+        },
+        {
+            "text": "Newlines (backslash n, backslash n):\n\nline a\n\nline b\n\nline c"
+        },
+        {
+            "text": ">This is a blockquote"
+        }
+     ]
+  }
+}
+
+```
 
 ## HTML Formatting for simple cards
 
