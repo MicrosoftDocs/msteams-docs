@@ -6,6 +6,8 @@ ms.date: 03/29/2018
 ---
 # Card formatting
 
+You can add rich text formatting to your cards using either markdown or HTML, depending on the card type.
+
 Cards support formatting in the text property only, not in the title or subtitle properties. Formatting can be specified using a subset of XML (HTML) formatting, or Markdown depending on card type. For current amd future development Adaptive cards using markdown formatting is recommended.
 
 Formatting support differs between different card types, and rendering of the card can differ slightly between the desktop and the mobile Teams clients, as well as Teams in the desktop browser.
