@@ -30,7 +30,7 @@ There are three types of cards supported in Teams:
 | ordered list | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
 | Hyperlinks |[Bing](https://www.bing.com/)| ```[Title](url)``` |
 
-The following markdown tags are not supported
+The following markdown tags are not supported:
 
 * Headers
 * Tables
@@ -42,7 +42,7 @@ Adaptive cards do not support any HTML formatting.
 
 ### Newlines for Adaptive Cards
 
-In lists you can use the `\r` or `\n` excape sequences for newlines. If you need newlines elsewhere in the textblock, use `\n\n`. Using `\n\n` in a list will cause the next elememt in the list to be indented.
+In lists you can use the `\r` or `\n` excape sequences for newlines. Using `\n\n` in a list will cause the next elememt in the list to be indented. If you need newlines elsewhere in the textblock, use `\n\n`.
 
 ### Mobile and desktop differences for Adaptive Cards
 
@@ -94,15 +94,7 @@ The date and localization features mentioned in this topic are not supported in 
         {
             "type": "TextBlock",
             "text": "Check out [Adaptive Cards](http://adaptivecards.io)"
-        },
-        {
-            "type": "TextBlock",
-            "text": "embedded image link: ![Duck on a rock](http://aka.ms/Fo983c)"
-        },
-        {
-            "type": "TextBlock",
-            "text": "embedded image link: ![Duck on a rock](http://aka.ms/Fo983c)"
-        },
+        }
     ]
 }
 ```
