@@ -2,18 +2,31 @@
 title: Registering a calling and meeting bot for Microsoft Teams
 description: Learn how to register a new audio/video calling bot for Microsoft Teams
 keywords: calling bot audio/video audio video media
-ms.date: 09/21/18
+ms.date: 10/04/18
 ---
 # Registering a calling bot for Microsoft Teams
 
 A bot that particpates in audio/video calls and online meetings is an ordinary Microsoft Teams bot with a few extra things:
 
+* There's a new version of the Teams app manifest with two extra settings, `supportsCalling` and `supportsVideo`. These settings are included in the Developer Preview version of the Microsoft Teams app manifest.
 * In addition to being enabled for the Microsoft Teams channel in Bot Framework, it must also be enabled for the Skype channel so you can configure settings in addition to the messaging endpoint. This is only necessary for the preview version of the Calls and Online Meetings APIs: future versions of [Teams App Studio](~/get-started/get-started-app-studio) will allow you to configure these settings directly.
 * [Microsoft Graph permissions](~/concepts/calls-and-meetings/registering-calling-bot#application-permissions) must be configured for your bot's Microsoft App ID.
 * The Microsoft Graph calls and online meetings APIs permissions require tenant admin consent.
-* There's a new version of the Teams app manifest with two extra settings. This will eventually be integrated into an official release of the manifest, but in the interim you can find it here: <https://github.com/OfficeDev/microsoft-teams-app-schema/blob/preview/calling-bots/MicrosoftTeams.schema.json>.
 
 Let's discuss the above in more detail.
+
+## New manifest settings
+
+Calling and online meetings bots have two extra settings in the manifest.json that enable audio/video for your bot in Teams.
+
+* `bots[0].supportsCalling`. If present and set to `true`, Teams will allow your bot to participate in calls and online meetings.
+* `bots[0].supportsVideo`. If present and set to `true`, Teams knows that your bot supports video.
+
+If you want your IDE to properly validate the manifest.json schema for your calling and meeting bot for these values, you can change the `$schema` attribute to this:
+
+```json
+"$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
+```
 
 ## Creating a new bot or adding calling capabilities to an existing bot
 
