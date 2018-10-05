@@ -14,13 +14,13 @@ Formatting support differs between different card types, and rendering of the ca
 
 There are three types of cards supported in Teams:
 
-* **Adaptive Cards**: Markdown is supported in Adaptive Card `Textblock` field, as well as `Fact.Title` and `Fact.Value`. Limited HTML is not supported in adaptive cards.
+* **Adaptive Cards**: Markdown is supported in Adaptive Card `Textblock` field, as well as `Fact.Title` and `Fact.Value`. HTML is not supported in adaptive cards.
 * **O365 Connector Cards**: Markdown and limited HTML is supported in Office 365 Connector cards in the text fields.
 * **Simple Cards**: Limited HTML is supported, but markdown is not supported in simple cards.
 
 ## Markdown formatting for Adaptive Cards
 
- The supported styles for `Textblock`, `Fact.Title` & `Fact.Value` are:
+ The supported styles for `Textblock`, `Fact.Title` and `Fact.Value` are:
 
 | Style | Example | Markdown |
 | --- | --- | --- |
@@ -42,7 +42,7 @@ Adaptive cards do not support any HTML formatting.
 
 ### Newlines for Adaptive Cards
 
-In lists you can use the `\r` or `\n` excape sequences for newlines. Using `\n\n` in a list will cause the next elememt in the list to be indented. If you need newlines elsewhere in the textblock, use `\n\n`.
+In lists you can use the `\r` or `\n` excape sequences for newlines. Using `\n\n` in a list will cause the next element in the list to be indented. If you need newlines elsewhere in the textblock, use `\n\n`.
 
 ### Mobile and desktop differences for Adaptive Cards
 
