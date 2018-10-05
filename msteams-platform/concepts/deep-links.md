@@ -4,7 +4,9 @@ description: Describes deep links and how to use them in your apps
 keywords: teams deep link deeplink
 ms.date: 04/19/2018
 ---
-# Create deep links to a Microsoft Teams tab
+# Create deep links to entities in Microsoft Teams
+
+## Deep linking to your tab
 
 To every tab, Microsoft Teams adds a **Copy link to tab** menu item. This generates a deep link that points to this tab, which users can share. This deep link is in a different format than one you can generate yourself. This topic will describe this second type of deep link.
 
@@ -17,7 +19,7 @@ Further, you can generate deep links programmatically, using the format specifie
 > [!NOTE]
 > Deep links work properly only if the tab was configured using the v0.4 or later library and because of that has an entity ID. Deep links to tabs without entity IDs still navigate to the tab but can't provide the sub-entity ID to the tab.
 
-## Showing a deep link to an item within your tab
+### Showing a deep link to an item within your tab
 
 To show a dialog box that contains a deep link to an item within your tab, call `microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })`
 
@@ -27,9 +29,9 @@ The fields to provide are as follows:
 * `subEntityLabel`&emsp;A label for the item to use for displaying the deep link
 * `subEntityWebUrl`&emsp;An optional field with a fallback URL to use if the client does not support rendering the tab
 
-## Generating a deep link to your tab
+### Generating a deep link to your tab
 
-The format for a deep link that you can use in a bot or Connector message is as follows:
+The format for a deep link that you can use in a bot, Connector, or messaging extension card is as follows:
 
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 
@@ -62,8 +64,28 @@ Examples:
 > var taskItemUrl = 'https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=' + encodedWebUrl + '&context=' + encodedContext;
 > ```
 
-## Consuming a deep link from a tab
+### Consuming a deep link from a tab
 
 When navigating to a deep link, Microsoft Teams simply navigates to the tab and provides a mechanism via the Microsoft Teams JavaScript library to retrieve the sub-entity ID (if it exists).
 
 The [`microsoftTeams.getContext`](/javascript/api/msteams-client/microsoftteams.global) call returns a context that includes the `subEntityId` field if the tab was navigated to via a deep link.
+
+## Deep linking to a chat
+> [!NOTE]
+> This functionality is currently available in Developer Preview
+
+You can now create deep links to private chats between users. You can link to an existing chat, or you can specify a set of chat participants to start a new chat. Optionally, you can specify the name of the chat, along with text that should be inserted into the user's compose box. New chats will be created in draft state until the user sends the first message. You can think of this feature as a shortcut for a basic user action.
+
+As an example use case, if you are displaying an Office 365 user in your tab or card, this deep link can allow the user to easily chat with that person.
+
+### Generating a deep link to a chat
+
+The format for a deep link that you can use in a bot, Connector, or messaging extension card is as follows:
+
+`https://teams.microsoft.com/l/chat/0/0/?users=<user1>,<user2>,...&name=<chat name>&text=<precanned text>`
+
+The query parameters are:
+
+* `users`&emsp;The comma-separated list of user IDs, which can be either AAD UserPrincipalName (typically an email address) or User ID value
+* `name`&emsp;An optional field for chat's display name, in the case of a chat with 3 or more users. If this field is not specified, the chat's display name will be based on the names of the participants
+* `text`&emsp;An optional field for text that you want to insert into the current user's compose box while the chat is in a draft state
