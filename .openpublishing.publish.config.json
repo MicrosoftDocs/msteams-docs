@@ -22,7 +22,7 @@
     }],
     "JoinTOCPlugin": [{
         "ConceptualTOC": "/msteams-platform/toc.yml",
-        "ReferenceTOCUrl": "/javascript/api/msteams-client-docs-ref-typescript/toc.json"
+        "ReferenceTOCUrl": "/javascript/api/msteams-client-docs-ref-typescript/toc.json?view=msteams-client-js-latest"
     }],
     "notification_subscribers": [],
     "branches_to_filter": [],
