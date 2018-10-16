@@ -5,7 +5,7 @@ keywords: teams tabs sharepoint spfx development
 ms.date: 10/15/2018
 ---
 
-# Bring Your SPFx Solution in Teams
+# Bring Your SharePoint Framework Solution in Teams
 
 
 > [!Note]
