@@ -12,7 +12,7 @@ ms.date: 10/15/2018
 
 ## Background
 
-- Reach SharePoint users with your existing provider-hosted tab application
+- Reach SharePoint users with your existing Teams tab application
 - Upload your app manifest directly to your SharePoint app catalog – format is natively recognized by SharePoint​
 - End user sets up and configures the tab on a page just like any other web part​
 - Just like bringing your SPFx solution into Teams, your tab is able to get the right application context
