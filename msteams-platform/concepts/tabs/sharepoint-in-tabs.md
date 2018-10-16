@@ -7,15 +7,52 @@ ms.date: 10/15/2018
 
 # Bring Your SPFx Solution in Teams
 
-In this hands-on lab, we will use the "Build your first web part" SharePoint Framework lab as a baseline to build a web part in SharePoint and then add it as a tab in Teams.
+
+> [!Note]
+> This feature is still in Dev Preview and while it closely reflects the final version, there may be small changes before this feature is Generally Availability
+
+## Background
+
+- SPFx has become the standard way for Enterprise Devlopers to develop “Office365-hosted” solutions for SharePoint
+- We are enabling SPFx developers to bring their SPFx components and run them as line-of-business applications inside of Teams
+- Developers can “target” the Sharepoint environment in their Teams `manifest.json` file
+- Standard features available to SPFx developers will also be available in Teams
+    - Authentication
+    - Graph and WebAPI Access
+    - CDN hosting
+    - Config experience
+    - Solution hosting
+- The SPFx component is able to get the right application context inside of Teams
+
+![Surfacing SPFx in Teams 1/2](~/assets/images/tabs/sharepoint-in-tabs/image013.png)
+
+![Surfacing SPFx in Teams 2/2](~/assets/images/tabs/sharepoint-in-tabs/image014.png)
+
+In this tutorial, we will use the "[Build your first web part](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part)" SharePoint Framework lab as a baseline to build a web part in SharePoint and then add it as a tab in Teams.
+
+## Prerequisites
+
+- (Internal) Make sure you were provided with a special `.npmrc` file
+- [Provision your Tenant App Catalog in SPO](https://docs.microsoft.com/en-us/sharepoint/use-app-catalog)
+- [Provision the LoB Catalog in Teams](https://docs.microsoft.com/en-us/microsoftteams/tenant-apps-catalog-teams)
+- Point NPM to the internal VSO repository:
+    - Copy the .npmrc file (that you were provided) to the NPM home directory
+    - Ensure the file is named .npmrc (the ‘.’ is important)
+    - Run the following:
+
+```
+npm uninstall -g @microsoft/generator-sharepoint
+npm install -g @microsoft/generator-sharepoint@1.6.0-dk.3
+```
+
 
 ## Set up a web part in SharePoint
 
-1. Ensure you have installed the `.npmrc` file and ran the `npm install` command as mentioned in the deck; use it in Step 2.
+1. Ensure you have installed the `.npmrc` file and ran the `npm install` command mentioned above
 2. Follow the steps in [Build your first web part](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part).
 3. For now, you need to disable the reactive property pane.  You do this by adding the following code to your webpart
 
-```
+```javascript
   public get disableReactivePropertyChanges(): boolean {
     return true;
   }
@@ -26,7 +63,7 @@ In this hands-on lab, we will use the "Build your first web part" SharePoint Fra
 
 Inside the **render** method, add the following:
 
-```
+```html
 let teamsMessage: string = `<p class="${styles.description}">We're not in Teams.</p>`;
 
 if (this.context.pageContext.teams) {
@@ -40,7 +77,7 @@ if (this.context.pageContext.teams) {
 
 Then add `${teamsMessage}` to the **innerHTML** code block after the line
 
-```
+```html
 <p class="${ styles.description }">Loading from ${escape(this.context.pageContext.web.title)}</p>:
 ```
 
@@ -56,46 +93,19 @@ To see this code in action, we must first deploy the web part to SharePoint and 
 ## Upload your app to Teams
 
 7. Configure the zip file:
-    * In `teams\manifest.json`, under "webApplicationInfo" → "resource", replace the url with your tenant url. The tenant url looks like this: [https://www.your-tenant-name.sharepoint.com](https://www.your-tenant-name.sharepoint.com)
+    * In `teams\manifest.json`, under "webApplicationInfo" → "resource", replace the url with your tenant url. The tenant url looks like this: `https://www.your-tenant-name.sharepoint.com`
     * Optionally, customize the name of your app in the "tabs" → "name" field of the manifest. This is the name that will show up in the "Add a Tab" pane in Teams.
-    * Go to the teams folder in your project and create a .ZIP file by including the manifed.json and the two SharePoint icon files. Follow the steps in [Upload your package into a team using the Apps tab](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/apps/apps-upload). Note: For uploading to work, your tenant admin must first [enable uploading of apps](https://docs.microsoft.com/en-us/microsoftteams/admin-settings). Look at the section on sideloading.
+    * Go to the teams folder in your project and create a .ZIP file by including the manifed.json and the two SharePoint icon files. Follow the steps in [Upload your package into a team using the Apps tab](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/apps/apps-upload). 
+    
+> [!Note]
+> For uploading to work, your tenant admin must first [enable uploading of apps](https://docs.microsoft.com/en-us/microsoftteams/admin-settings). Look at the section on sideloading.
 
 ## View your app in Teams
 
-8. Go to your teamsite and create a new list:
-    * Title: HostedAppConfigList
-    * Add a column:
-        * Title: HostType
-        * Type: Single line of text
-    * Add a column:
-        * Title: HostData
-        * Type: Mulitple line of text
-9. Follow the steps in [Accessing your uploaded configurable tab](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/apps/apps-upload#accessing-your-uploaded-configurable-tab).
-10. Now you should see your web part in a tab inside your Team's channel.
-11. If you would like to update the properties in the Property Pane, press 'Settings' and you will return to the Config Pane. If you would like to remove your tab, press 'Remove.'
-
-![](~/assets/images/tabs/sharepoint-in-tabs/image001.png)
+8. Follow the steps in [Accessing your uploaded configurable tab](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/apps/apps-upload#accessing-your-uploaded-configurable-tab).
+9. Now you should see your web part in a tab inside your Team's channel.
+10. If you would like to update the properties in the Property Pane, press 'Settings' and you will return to the Config Pane. If you would like to remove your tab, press 'Remove.'
 
 ## Use MSGraph and other Web APIs
 
-If you want, you can now go through the [Consume the Microsoft Graph in the SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/use-aad-tutorial) lab and host that SPFx component in a Teams tab.
-
-Note that, to see the SPFx component working in the Teams rich client you will have to use the workaround below to ensure that authentication properly performs. This is _a temporary workaround for Dev Kitchen only_ :
-
-1. In the "add a tab" dialog find and select **PowerApps**
-
-![](~/assets/images/tabs/sharepoint-in-tabs/image003.png)
-
-2. Leave the default options and click on Install
-
-![](~/assets/images/tabs/sharepoint-in-tabs/image005.png)
-
-3. In the following window click on Sign in The Azure Active Directory log in flow will start, use your tenant credentials to complete the flow
-
-![](~/assets/images/tabs/sharepoint-in-tabs/image007.png)
-
-![](~/assets/images/tabs/sharepoint-in-tabs/image009.png)
-
-4. Once the configuration process is completed click on Back as you don't need to add the tab.
-
-![](~/assets/images/tabs/sharepoint-in-tabs/image011.png)
+If you want, you can now go through the [Consume the Microsoft Graph in the SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/use-aad-tutorial) tutorial and host that SPFx component in a Teams tab.
