@@ -12,7 +12,7 @@ App Studio makes it easy to start creating or integrating your own service, whet
 
 ## Apps
 
-App Studio was created to simplify and streamline the process of creating real apps. It is much faster than the manual process described in [Get started with Node.js](~/get-started/get-started-nodejs): App Studio is now the recommended way to develop Teams apps. The getting started documentation will be updated at a later date.
+App Studio was created to simplify the process of creating productive and robust apps. It streamlines the manual process described in [Get started with Node.js](~/get-started/get-started-nodejs). App Studio is now the recommended way to develop Teams apps. The getting started documentation will be updated at a later date.
 
 Apps for Teams are made up of two parts:
 
@@ -21,7 +21,7 @@ Apps for Teams are made up of two parts:
 
 The most significant part of the application package is the app manifest.
 
-App Studio streamlines the creation of the manifest for your app, and also provides some useful tools like the Card Editor and a React control library. Writing and hosting the code is still up to you.
+App Studio streamlines the creation of the manifest for your app and provides some useful tools like the Card Editor and a React control library. Writing and hosting the code is still up to you.
 
 ## Installing App Studio
 
@@ -47,7 +47,7 @@ Once you are in App Studio, click on the *Manifest editor* tab where you can eit
 
 ### Conversation
 
-This is where you can see what the [cards you create in App Studio](#card-editor) look like in Teams when you test them by sending them to yourself.
+This is where you can see what [cards you create in App Studio](#card-editor) look like in Teams when you test them by sending them to yourself.
 
 ### Manifest Editor
 
@@ -57,7 +57,7 @@ The Manifest Editor tab in App Studio simplifies creating the manifest, allowing
 
 #### Details
 
-The details section of the Manifest Editor defines the high level description of the app you are making. This includes things such as the app’s name, description, and visual branding. You can automatically generate a GUID for your app and provide URLs for your privacy statement and terms of use.
+The details section of the Manifest Editor defines the high-level description of the app you are making. This includes things such as the app’s name, description, and visual branding. You can automatically generate a GUID for your app and provide URLs for your privacy statement and terms of use.
 
 #### Capabilities
 
@@ -65,7 +65,7 @@ The capabilities section of the Manifest Editor is where the app's capabilities 
 
 ##### Tabs
 
-* **Team Tabs.** A team tab becomes part of a channel and provides a single kind of information to a team. For example, the Planner tab for a channel contains a single plan; the Power BI tab maps to a specific report. Users can drill down to the relevant context, but they should not be able to navigate outside the tab. The Power BI tab, for instance, doesn't enable navigation to other Power BI reports, but it does enable the *Go to website* button that launches the report in the main Power BI website.
+* **Team Tabs.** A team tab becomes part of a channel and provides quick access to team information and resources. For example, the Planner tab for a channel contains a single plan; the Power BI tab maps to a specific report. Users can drill down to the relevant context, but they should not be able to navigate outside the tab. The Power BI tab, for instance, doesn't enable navigation to other Power BI reports, but it does enable the *Go to website* button that launches the report in the main Power BI website.
 
   For team tabs, you must provide a *Configuration URL* to present options and gather information so users can customize the content and experience of your tab. This iframed HTML page is displayed when a user first adds the tab to a channel.
 
@@ -115,7 +115,7 @@ If you already have a card that you would like to verify inside Teams, you can p
 
 ### React Control Library
 
-Creating an app that follows the Teams best practices is a great way to give your app a look and feel that fits seamlessly with the Teams client experience. The UI controls that you use are critical to achieving that end. In order to make it easier to create a consistent UI, App Studio provides several categories of UI controls which follow Teams design principles.
+Creating an app that follows the Teams best practices is a great way to give your app a look and feel that fits seamlessly with the Teams client experience. The UI controls that you use are critical to achieving that end. To make it easier to create a consistent UI, App Studio provides several categories of UI controls which follow Teams design principles.
 
 Examples of the controls and corresponding React components are provided and ready to use in building your app.
 
