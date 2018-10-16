@@ -7,6 +7,9 @@ ms.date: 10/15/2018
 
 # Add a Teams tab to your Sharepoint site
 
+> [!Note]
+> This feature is still in Dev Preview and while it closely reflects the final version, there may be small changes before this feature is Generally Availability
+
 ## Background
 
 - Reach SharePoint users with your existing provider-hosted tab application
@@ -106,18 +109,7 @@ You can also use the Teams Tab as a web part, integrating its behavior with othe
 
 ## Step 4: Exploring the APIs
 
-As part of our internal development, there is a web part called "Provider hosted app" that's available in the web part toolbox:
-
-![](~/assets/images/tabs/tabs-in-sharepoint/image077.png)
-
-
-This web part contains a few samples that are accessible by clicking the "App Gallery" button. The second one, "Teams Test…" provides a UI that allows you to interact with the Teams SDK from within the web part.
-
-![](~/assets/images/tabs/tabs-in-sharepoint/image078.png)
-
-Click on "initialize" to initialize the Teams SDK, and then "getContext". You will get the Teams SDK context, which, on SharePoint, includes all the data from SharePoint's PageContext.
-
-![](~/assets/images/tabs/tabs-in-sharepoint/image080.png)
+Microsoft Teams developers are able to get SharePoint-specific contexts when their app is loaded as a webpart. For example, the "getContext" call will return all the data from SharePoint's PageContext.
 
 Example from a formatted version of this JSON:
 
