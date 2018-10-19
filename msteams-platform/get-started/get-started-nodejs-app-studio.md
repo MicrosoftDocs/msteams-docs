@@ -18,7 +18,7 @@ You will need a Office 365 tenant that has been set up for development, and you 
 - [Prepare your Office 365 tenant](~/get-started/get-started-tenant)
 - [Prepare Microsoft Teams for development](~/get-started/get-started-configure-teams)
 
-## create your app
+## create and host your app
 
 These are the steps you will follow to create and host a simple "hello world" app in Teams:
 
@@ -125,11 +125,11 @@ At this point, you can open a browser window and navigate to the following URLs 
 
 <a name="HostSample"></a>
 
-## Host the sample app
+### Host the sample app
 
 Remember that apps in Microsoft Teams are web applications exposing one or more capabilities. For the Teams platform to load your app, your app must be reachable from the internet. To make your app reachable from the internet, you need to *host* your app. A simple way to do this during development is to create a tunnel to the local process on your development machine using `ngrok`. When you finish hosting your app make a note of its root URL. It will look something like: `https://yourteamsapp.ngrok.io`.
 
-### Tunnel using ngrok
+#### Tunnel using ngrok
 
 For quick testing you can run the app on your local machine and create a tunnel to it through a web endpoint. [ngrok](https://ngrok.com) is a free tool that lets you do just that. With ngrok you can get a web address such as `https://d0ac14a5.ngrok.io` (this URL is just an example). You can [download and install](https://ngrok.com/download) ngrok for your environment. Make sure you add it to a location in your `PATH`.
 
@@ -152,7 +152,11 @@ The app will only be available during the current session on your development ma
 
 ## Deploy your app to Microsoft Teams
 
-After hosting your app, you need to do a few updates to your app before it is ready to be deployed to your Microsoft Teams environment.
+At this point you have an app hosted on the internet, but you have no way yet of telling Teams where to look, or even what your app is called. You now have to create an app package, which is little more than a text file that contains the app manifest, and some icons that the Teams client will use to properly display and brand your app.
+
+
+
+### Using App Studio to 
 
 ### The app manifest
 

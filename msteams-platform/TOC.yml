@@ -17,7 +17,7 @@
     - name: App Studio Controls
       href: ./get-started/app-studio-component-library
   - name: Get started with Node.js
-    href: ./get-started/get-started-nodejs
+    href: ./get-started/get-started-nodejs-app-studio
   - name: Get started with C#/.NET
     href: ./get-started/get-started-dotnet
     items: 
