@@ -129,8 +129,6 @@ At this point, you can open a browser window and navigate to the following URLs 
 
 Remember that apps in Microsoft Teams are web applications exposing one or more capabilities. For the Teams platform to load your app, your app must be reachable from the internet. To make your app reachable from the internet, you need to *host* your app. A simple way to do this during development is to create a tunnel to the local process on your development machine using `ngrok`. When you finish hosting your app make a note of its root URL. It will look something like: `https://yourteamsapp.ngrok.io`.
 
-You can also use Azure for development for free. Once you deploy your app you should use a robust, scalable service like Azure.
-
 ### Tunnel using ngrok
 
 For quick testing you can run the app on your local machine and create a tunnel to it through a web endpoint. [ngrok](https://ngrok.com) is a free tool that lets you do just that. With ngrok you can get a web address such as `https://d0ac14a5.ngrok.io` (this URL is just an example). You can [download and install](https://ngrok.com/download) ngrok for your environment. Make sure you add it to a location in your `PATH`.

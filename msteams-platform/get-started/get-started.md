@@ -2,7 +2,7 @@
 title: Get started
 description: Get started building great apps in Microsoft Teams
 keywords: getting started Microsoft teams
-ms.date: 02/06/2018
+ms.date: 10/22/2018
 ---
 # Get started developing apps for Microsoft Teams
 
@@ -10,7 +10,13 @@ Microsoft Teams is a service within Office 365. All users of Teams can install a
 
 You can think of Teams as a single page web application. Most of the content you see in Teams actually comes from the Office 365 servers that support your enterprise. This makes it easy for Teams to access other web-based content and display it in the teams app. At their core, apps for Teams are similar to web services, hosted on third-party web servers.
 
-Like other web services, you can build apps using Node.JS or using C# and .NET. The following walkthroughs will result in a working Teams app using either technology.
+In addition to hosting the functions of your app on the web, you need to create an app package, which tells the Teams client where on the web to find that functionality. The app package does this via a text file called the manifest. It also contains icons that Teams uses when it displays the app within the Teams client. Teams includes App Studio, which walks you through the process of creating this app package and defining the manifest.
+
+You can follow these walkthroughs to become more familiar with both parts of a Teams app, using either Node.JS or C# and .NET. The following walkthroughs will result in a working app using either technology.
 
 - [Get started using Node.JS](~/get-started/get-started-nodejs)
 - [Get started using C# and .NET](~/get-started/get-started-dotnet)
+
+For more detailed information on Teams apps read:
+
+- [Apps for Microsoft Teams](~/Concepts/apps-overview)
