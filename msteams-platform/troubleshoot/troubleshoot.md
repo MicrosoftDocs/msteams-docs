@@ -18,7 +18,7 @@ If you are not seeing your content in the tab view, it could be:
 
 ### The Save button isn't enabled on the settings dialog
 
-Be sure to call `microsoftTeams.setValidityState(true)` once the user has input or selected all required data on your settings page to enable the save button.
+Be sure to call `microsoftTeams.settings.setValidityState(true)` once the user has input or selected all required data on your settings page to enable the save button.
 
 ### After selecting the Save button, the tab settings cannot be saved
 
@@ -78,7 +78,6 @@ Common reasons for manifest read errors:
 * Invalid JSON. Use an IDE such as [Visual Studio Code](https://code.visualstudio.com) or [Visual Studio](https://www.visualstudio.com/vs/) that automatically validates the JSON syntax.
 * Encoding issues. Use UTF-8 for the *manifest.json* file. Other encodings, specifically with the BOM, may not be readable.
 * Malformed .zip package. The *manifest.json* file must be at the top level of the .zip file. Note that default Mac file compression might place the *manifest.json* in a subdirectory, which will not properly load in Microsoft Teams.
-
 
 ### Another extension with same ID exists
 

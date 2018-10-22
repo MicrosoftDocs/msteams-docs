@@ -51,7 +51,6 @@ The flexibility of `messageBack` means that your code can choose not to leave a 
 
 ```json
 {
-  ⋮
   "buttons": [
     {
     "type": "messageBack",
@@ -93,7 +92,7 @@ The `value` property can be either a serialized JSON string or a JSON object.
       "name":"MyBot"
    },
    "entities":[
-      { 
+      {
         "locale": "en-US",
         "country": "US",
         "platform": "Windows",
@@ -241,7 +240,7 @@ To include a `messageBack` action with an adaptive card include the following de
   "type": "Action.Submit",
   "title": "Click me for messageBack",
   "data": {
-    "msteams": { 
+    "msteams": {
         "type": "messageBack",
         "displayText": "I clicked this button",
         "text": "text to bots",
