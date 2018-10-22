@@ -277,7 +277,7 @@ To include a `imBack` action with an adaptive card include the following details
 
 ### Adaptive card with signin action
 
-To include a `signin` action with an adaptive card include the following details in the `msteams` object. Note that you can include additional hiddern properties in the `data` object if needed.
+To include a `signin` action with an adaptive card include the following details in the `msteams` object. Note that you can include additional hidden properties in the `data` object if needed.
 
 | Property | Description |
 | --- | --- |
@@ -291,7 +291,7 @@ To include a `signin` action with an adaptive card include the following details
   "type": "Action.Submit",
   "title": "Click me for signin",
   "data": {
-    "msteams": { 
+    "msteams": {
         "type": "signin",
         "value": "https://signin.com",
     }
