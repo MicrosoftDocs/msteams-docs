@@ -51,7 +51,6 @@ The flexibility of `messageBack` means that your code can choose not to leave a 
 
 ```json
 {
-  ⋮
   "buttons": [
     {
     "type": "messageBack",
@@ -93,7 +92,7 @@ The `value` property can be either a serialized JSON string or a JSON object.
       "name":"MyBot"
    },
    "entities":[
-      { 
+      {
         "locale": "en-US",
         "country": "US",
         "platform": "Windows",
@@ -221,4 +220,80 @@ Adaptive cards support three action types:
 * [Action.Submit](http://adaptivecards.io/explorer/Action.Submit.html)
 * [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
 
-These actions are only supported by Adaptive cards. Adaptive cards do not support the other actions listed above this section.
+In addition to the actions mentioned above, you can modify the Adaptive Action.Submit payload to support existing bot framework actions using a `msteams` property in the `data` object of `Action.Submit`. The below sections detail how to use existing bot framework actions with Adaptive.
+
+### Adaptive card with messageBack action
+
+To include a `messageBack` action with an adaptive card include the following details in the `msteams` object. Note that you can include additional hidden properties in the `data` object if needed.
+
+| Property | Description |
+| --- | --- |
+| `type` | Set to `messageBack` |
+| `displayText` | Optional. Echoed by the user into the chat stream when the action is performed. This text is *not* sent to your bot. |
+| `value` | Sent to your bot when the action is performed. You can encode context for the action, such as unique identifiers or a JSON object. |
+| `text` | Sent to your bot when the action is performed. Use this property to simplify bot development: Your code can check a single top-level property to dispatch bot logic. |
+
+#### Example
+
+```json
+{
+  "type": "Action.Submit",
+  "title": "Click me for messageBack",
+  "data": {
+    "msteams": {
+        "type": "messageBack",
+        "displayText": "I clicked this button",
+        "text": "text to bots",
+        "value": "{\"bfKey\": \"bfVal\", \"conflictKey\": \"from value\"}"
+    }
+  }
+}
+```
+
+### Adaptive card with imBack action
+
+To include a `imBack` action with an adaptive card include the following details in the `msteams` object. Note that you can include additional hidden properties in the `data` object if needed.
+
+| Property | Description |
+| --- | --- |
+| `type` | Set to `imBack` |
+| `value` | String that needs to be echoed back in the chat |
+
+#### Example
+
+```json
+{
+  "type": "Action.Submit",
+  "title": "Click me for imBack",
+  "data": {
+    "msteams": {
+        "type": "imBack",
+        "value": "Text to reply in chat"
+    }
+  }
+}
+```
+
+### Adaptive card with signin action
+
+To include a `signin` action with an adaptive card include the following details in the `msteams` object. Note that you can include additional hidden properties in the `data` object if needed.
+
+| Property | Description |
+| --- | --- |
+| `type` | Set to `signin` |
+| `value` | Set to the URL that you want to redirect to  |
+
+#### Example
+
+```json
+{
+  "type": "Action.Submit",
+  "title": "Click me for signin",
+  "data": {
+    "msteams": {
+        "type": "signin",
+        "value": "https://signin.com",
+    }
+  }
+}
+```
