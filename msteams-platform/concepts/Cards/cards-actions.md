@@ -267,7 +267,7 @@ To include a `imBack` action with an adaptive card include the following details
   "type": "Action.Submit",
   "title": "Click me for imBack",
   "data": {
-    "msteams": { 
+    "msteams": {
         "type": "imBack",
         "value": "Text to reply in chat"
     }
