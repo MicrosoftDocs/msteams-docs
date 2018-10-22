@@ -253,7 +253,7 @@ To include a `messageBack` action with an adaptive card include the following de
 
 ### Adaptive card with imBack action
 
-To include a `imBack` action with an adaptive card include the following details in the `msteams` object. Note that you can include additional hiddern properties in the `data` object if needed.
+To include a `imBack` action with an adaptive card include the following details in the `msteams` object. Note that you can include additional hidden properties in the `data` object if needed.
 
 | Property | Description |
 | --- | --- |
