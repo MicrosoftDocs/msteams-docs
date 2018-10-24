@@ -122,7 +122,10 @@ private async onInvoke(event: builder.IEvent, cb: (err: Error, body: any, status
                         "title": "Ninja Cat",
                         "height": "small",
                         "width": "small",
-                        "card": adaptiveCard,
+                        "card": {
+                            contentType: "application/vnd.microsoft.card.adaptive",
+                            content: adaptiveCard,
+                        }
                     },
                 };
                 cb(null, fetchTemplate, 200);
