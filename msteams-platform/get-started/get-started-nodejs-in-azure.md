@@ -48,3 +48,25 @@ You can now return to VS Code, where the Azure pane will now look something like
 What you actually see will depend on the type of account you have with Azure.
 
 ## Deploy the app to Azure
+
+Look for the up-arrow button at the top of the Azure pane in VS Code. This is the *Deploy to Web App...* button. click on it to start. 
+
+You will first be asked if you want to create a new web app. Choose this option.
+
+You will then be asked to enter a globally unique name for the new Web App. Do so and press enter.
+
+<img title="Azure icon" src="~/assets/images/get-started/visual-studio-azure-name-web-app"/>
+
+You will then be asked to select a Node.js runtime for your app. Choose the version marked LTS - Recommended for new apps.
+
+You will see several messages as your app is deployed. 
+
+You may be asked if you would like to update your workspace configuration to run npm install on the target server. Choose yes.
+
+You may then be asked if you want to always deploy the workspace. You can answer yes to this also.
+
+Finally you will see this message, assuming everything went well.
+
+<img title="Azure icon" src="~/assets/images/get-started/visual-studio-azure-new-web-app-finished"/>
+
+## Testing your app on Azure
