@@ -18,9 +18,10 @@ You will need a Office 365 tenant that has been set up for development, and you 
 - [Prepare your Office 365 tenant](~/get-started/get-started-tenant)
 - [Prepare Microsoft Teams for development](~/get-started/get-started-configure-teams)
 
-## create and host your app
+<a name="DownloadAndHost"></a>
+## download and host your app
 
-These are the steps you will follow to create and host a simple "hello world" app in Teams:
+These are the steps you will follow to download and host a simple "hello world" app in Teams:
 
 - Download the "hello world" sample app
 - Host it on the net so that Teams can find it
