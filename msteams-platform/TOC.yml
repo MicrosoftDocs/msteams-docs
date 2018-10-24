@@ -18,6 +18,9 @@
       href: ./get-started/app-studio-component-library
   - name: Get started with Node.js
     href: ./get-started/get-started-nodejs-app-studio
+    items: 
+    - name: Publish to Azure
+      href: ./get-started/get-started-nodejs-in-azure   
   - name: Get started with C#/.NET
     href: ./get-started/get-started-dotnet
     items: 

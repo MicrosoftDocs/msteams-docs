@@ -225,6 +225,7 @@ The sample already comes with a bot. The bot is defined in the manifest and look
 You need a bot definition for each bot contained in your app. In this case you already have a bot and have given it a registered **bot ID**, so all you will do is add credentials for the bot and test it.
 
 ### Add credentials for the bot
+
 In the hello-world project navigate to a folder named config. In this folder you will find a json file called default. This file contains the following code:
 
 [!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/config/default.json#L1-L6)]
@@ -241,9 +242,9 @@ Before you run the bot in Teams, confirm that the bot works as expected  using t
 
 Once you have the emulator running, you will need three things to set up a connection:
 
-* The endpoint URL, which is the address where your bot is exposed. It can be the local address 'http://localhost:3333/api/messages', or an external address using the ngrok tunnel you set up earlier like `https://d0ac14a5.ngrok.io/api/messages`.
-* The Microsoft App ID, which is the **ID** you used earlier.
-* The Microsoft App Password from the Bot Framework which you made a note of earlier.
+- The endpoint URL, which is the address where your bot is exposed. It can be the local address 'http://localhost:3333/api/messages', or an external address using the ngrok tunnel you set up earlier like `https://d0ac14a5.ngrok.io/api/messages`.
+- The Microsoft App ID, which is the **ID** you used earlier.
+- The Microsoft App Password from the Bot Framework which you made a note of earlier.
 
 > [!TIP]
 > To verify your bot is working, just verify that it is echoing back whatever you say to it.
