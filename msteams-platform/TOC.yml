@@ -19,12 +19,12 @@
   - name: Get started with Node.js
     href: ./get-started/get-started-nodejs-app-studio
     items: 
-    - name: Publish VS Code to Azure
+    - name: Publish Node.js to Azure
       href: ./get-started/get-started-nodejs-in-azure   
   - name: Get started with C#/.NET
     href: ./get-started/get-started-dotnet
     items: 
-    - name: Publish Visual Studio to Azure
+    - name: Publish .Net to Azure
       href: ./get-started/get-started-dotnet-in-azure
   expanded: true
 - name: Concepts

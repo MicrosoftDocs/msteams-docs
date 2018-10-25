@@ -128,7 +128,11 @@ At this point, you can open a browser window and navigate to the following URLs 
 
 ### Host the sample app
 
-Remember that apps in Microsoft Teams are web applications exposing one or more capabilities. For the Teams platform to load your app, your app must be reachable from the internet. To make your app reachable from the internet, you need to *host* your app. A simple way to do this during development is to create a tunnel to the local process on your development machine using `ngrok`. When you finish hosting your app make a note of its root URL. It will look something like: `https://yourteamsapp.ngrok.io`.
+Remember that apps in Microsoft Teams are web applications exposing one or more capabilities. For the Teams platform to load your app, your app must be reachable from the internet. To make your app reachable from the internet, you need to *host* your app.
+
+You can host your sample app on any web service that you have access to, such Azure where you can host this app for free. See [Host your .NET Teams app in Azure](~/get-started/get-started-nodejs-in-azure) for detailed instructions using this sample.
+
+You can also host your app locally during development by creating a tunnel to the local process on your development machine using `ngrok`. The downside of local hosting is that your machine must stay online for the service to be available.
 
 #### Tunnel using ngrok
 
@@ -154,10 +158,6 @@ The app will only be available during the current session on your development ma
 ## Deploy your app to Microsoft Teams
 
 At this point you have an app hosted on the internet, but you have no way yet of telling Teams where to look, or even what your app is called. You now have to create an app package, which is little more than a text file that contains the app manifest, and some icons that the Teams client will use to properly display and brand your app.
-
-
-
-### Using App Studio to 
 
 ### The app manifest
 
