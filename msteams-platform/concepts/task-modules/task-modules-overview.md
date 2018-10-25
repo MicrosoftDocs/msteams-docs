@@ -7,7 +7,7 @@ ms.date: 09/28/2018
 # Task modules
 
 > [!NOTE]
-> This feature is currently available in [Developer Preview](~/concepts/resources/dev-preview/developer-preview-intro).
+> This feature is currently available in [Developer Preview](~/resources/dev-preview/developer-preview-intro).
 
 A task module allows you to create modal popup experiences in your Teams application. Inside the popup, you can run your own custom HTML/JavaScript code, show an `<iframe>`-based widget such as a YouTube or Microsoft Stream video, or display an [Adaptive card](https://docs.microsoft.com/en-us/adaptive-cards/).
 
