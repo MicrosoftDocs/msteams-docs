@@ -19,6 +19,7 @@ You will need a Office 365 tenant that has been set up for development, and you 
 - [Prepare Microsoft Teams for development](~/get-started/get-started-configure-teams)
 
 <a name="DownloadAndHost"></a>
+
 ## download and host your app
 
 These are the steps you will follow to download and host a simple "hello world" app in Teams:
@@ -119,10 +120,10 @@ When the hello-world app starts, it displays `App started listening on port 3333
 
 At this point, you can open a browser window and navigate to the following URLs to verify that all the app URLs are loading:
 
-* [http://localhost:3333](http://localhost:3333)
-* [http://localhost:3333/hello](http://localhost:3333/hello)
-* [http://localhost:3333/first](http://localhost:3333/first)
-* [http://localhost:3333/second](http://localhost:3333/second)
+- [http://localhost:3333](http://localhost:3333)
+- [http://localhost:3333/hello](http://localhost:3333/hello)
+- [http://localhost:3333/first](http://localhost:3333/first)
+- [http://localhost:3333/second](http://localhost:3333/second)
 
 <a name="HostSample"></a>
 
@@ -130,11 +131,13 @@ At this point, you can open a browser window and navigate to the following URLs 
 
 Remember that apps in Microsoft Teams are web applications exposing one or more capabilities. For the Teams platform to load your app, your app must be reachable from the internet. To make your app reachable from the internet, you need to *host* your app.
 
+#### Host on the web using Azure
+
 You can host your sample app on any web service that you have access to, such Azure where you can host this app for free. See [Host your .NET Teams app in Azure](~/get-started/get-started-nodejs-in-azure) for detailed instructions using this sample.
 
-You can also host your app locally during development by creating a tunnel to the local process on your development machine using `ngrok`. The downside of local hosting is that your machine must stay online for the service to be available.
+#### Host locally using ngrok
 
-#### Tunnel using ngrok
+You can also host your app locally during development by creating a tunnel to the local process on your development machine using `ngrok`. The downside of local hosting is that your machine must stay online for the service to be available.
 
 For quick testing you can run the app on your local machine and create a tunnel to it through a web endpoint. [ngrok](https://ngrok.com) is a free tool that lets you do just that. With ngrok you can get a web address such as `https://d0ac14a5.ngrok.io` (this URL is just an example). You can [download and install](https://ngrok.com/download) ngrok for your environment. Make sure you add it to a location in your `PATH`.
 
@@ -157,9 +160,32 @@ The app will only be available during the current session on your development ma
 
 ## Deploy your app to Microsoft Teams
 
-At this point you have an app hosted on the internet, but you have no way yet of telling Teams where to look, or even what your app is called. You now have to create an app package, which is little more than a text file that contains the app manifest, and some icons that the Teams client will use to properly display and brand your app.
+At this point you have an app hosted on the internet, but you have no way yet of telling Teams where to look, or even what your app is called. You now have to create an app package, which is little more than a text file that contains the app manifest, and some icons that the Teams client will use to properly display and brand your app. You can manually create this app package, or you can use App Studio, an app that runs in Teams that will simplify the process of registering the app. App Studio is the recommended way of creating the app package.
 
-### The app manifest
+For either method you will need the following:
+
+- The URL where your app can be found on the internet.
+- Icons that Teams will use to brand your app. The sample comes with placeholder icons located in "src\static\images.
+
+### Use App Studio to manage the app package
+
+App Studio is a Teams app that you can install from the Teams store. Simply click on the app store icon at the bottom of the left hand bar in Teams, and search on App Studio.
+
+<img title="Finding App Studio in the Store" src="~/assets/images/get-started/app-studio-store.png"/>
+
+Click on the App Studio tile, and choose *install* in the dialog that pops up.
+
+<img title="Installing App Studio" src="~/assets/images/get-started/app-studio-install.png"/>
+
+When App Studio is installed click on the Manifest editor to begin creating the app package for your Teams app.
+
+<img title="Installing App Studio" src="~/assets/images/get-started/app-studio-install.png"/>
+
+The sample comes with it's own manifest and app package, but that is to support manual creation of the app package. In this part of the tutorial you are going to create an app package from scratch by selecting the *Create a new app* tile in the Manifest Editor.
+
+<img title="Creating a new app" src="~/assets/images/get-started/app-studio-manifest-editor.png"/>
+
+### Manually create the app package
 
 The app manifest is a file that tells the Microsoft Teams platform all about your app and the capabilities it provides your users. You will learn more about apps and their capabilities later [here](~/concepts/apps/apps-overview), but for now focus on the modifications to the manifest needed to load the hello-world app in Microsoft Teams.
 
@@ -205,6 +231,7 @@ Use the **Upload a custom app** link in Teams to upload this zip file and instal
 
 > [!NOTE]
 > You might have stopped the node process in order to rebuild the app. If so, you will need to rerun the node process using the `npm start` command described in [Build and run the sample](#BuildRun).
+
 
 <a name="ConfigureTheAppTab"></a>
 
