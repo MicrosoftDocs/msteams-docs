@@ -179,11 +179,23 @@ Click on the App Studio tile, and choose *install* in the dialog that pops up.
 
 When App Studio is installed click on the Manifest editor to begin creating the app package for your Teams app.
 
-<img title="Installing App Studio" src="~/assets/images/get-started/app-studio-install.png"/>
+<img title="App Studio" src="~/assets/images/get-started/app-studio.png"/>
 
 The sample comes with it's own manifest and app package, but that is to support manual creation of the app package. In this part of the tutorial you are going to create an app package from scratch by selecting the *Create a new app* tile in the Manifest Editor.
 
 <img title="Creating a new app" src="~/assets/images/get-started/app-studio-manifest-editor.png"/>
+
+There is a list of steps in the left-hand side of the Manifest editor, and on the right a list of properties that need to be filled in for each of those steps. Since this is a sample app, you can choose to enter the suggested placeholder values below, or choose your own.
+
+#### App details
+
+ Name | Value | Description |
+| --- | --- | --- |
+| Name | Contoso | This is the name of the organization responsible for this app.|
+| Website | https://www.contoso.com | This is the main website for the organization.|
+| Short name | Hello World |The name you want Teams to use to identify your app.|
+| Long name | A sample app for you to deploy and test |A longer description of the app which Teams will use when space permits.|
+| App ID | --- | This is a unique, random number which will be used internally to identify your app. Click the Generate button below the field to create an appropriate value. |
 
 ### Manually create the app package
 
