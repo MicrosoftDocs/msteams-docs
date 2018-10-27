@@ -169,21 +169,23 @@ For either method you will need the following:
 
 ### Use App Studio to manage the app package
 
+App Studio can simplify the creation of an app, and really helps when adding bots, since manually these these require online registration with Azure bot services.
+
 App Studio is a Teams app that you can install from the Teams store. Simply click on the app store icon at the bottom of the left hand bar in Teams, and search on App Studio.
 
-<img title="Finding App Studio in the Store" src="~/assets/images/get-started/app-studio-store.png"/>
+<img  width="450px" title="Finding App Studio in the Store" src="~/assets/images/get-started/app-studio-store.png"/>
 
 Click on the App Studio tile, and choose *install* in the dialog that pops up.
 
-<img title="Installing App Studio" src="~/assets/images/get-started/app-studio-install.png"/>
+<img  width="450px" title="Installing App Studio" src="~/assets/images/get-started/app-studio-install.png"/>
 
 When App Studio is installed click on the Manifest editor to begin creating the app package for your Teams app.
 
-<img title="App Studio" src="~/assets/images/get-started/app-studio.png"/>
+<img  width="450px" title="App Studio" src="~/assets/images/get-started/app-studio.png"/>
 
 The sample comes with it's own manifest and app package, but that is to support manual creation of the app package. In this part of the tutorial you are going to create an app package from scratch by selecting the *Create a new app* tile in the Manifest Editor.
 
-<img title="Creating a new app" src="~/assets/images/get-started/app-studio-manifest-editor.png"/>
+<img  width="550px" title="Creating a new app" src="~/assets/images/get-started/app-studio-manifest-editor.png"/>
 
 There is a list of steps in the left-hand side of the Manifest editor, and on the right a list of properties that need to be filled in for each of those steps. Since this is a sample app, you can choose to enter the suggested placeholder values below, or choose your own.
 
