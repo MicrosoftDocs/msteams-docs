@@ -2,14 +2,13 @@
 title: Registering a calling and meeting bot for Microsoft Teams
 description: Learn how to register a new audio/video calling bot for Microsoft Teams
 keywords: calling bot audio/video audio video media
-ms.date: 10/04/18
+ms.date: 10/26/18
 ---
 # Registering a calling bot for Microsoft Teams
 
 A bot that particpates in audio/video calls and online meetings is an ordinary Microsoft Teams bot with a few extra things:
 
 * There's a new version of the Teams app manifest with two extra settings, `supportsCalling` and `supportsVideo`. These settings are included in the Developer Preview version of the Microsoft Teams app manifest.
-* In addition to being enabled for the Microsoft Teams channel in Bot Framework, it must also be enabled for the Skype channel so you can configure settings in addition to the messaging endpoint. This is only necessary for the preview version of the Calls and Online Meetings APIs: future versions of [Teams App Studio](~/get-started/get-started-app-studio) will allow you to configure these settings directly.
 * [Microsoft Graph permissions](~/concepts/calls-and-meetings/registering-calling-bot#application-permissions) must be configured for your bot's Microsoft App ID.
 * The Microsoft Graph calls and online meetings APIs permissions require tenant admin consent.
 
@@ -33,8 +32,8 @@ If you want your IDE to properly validate the manifest.json schema for your call
 Creating a bot for Microsoft Teams is covered in more detail in the [Create a new bot](~/concepts/bots/bots-create) topic, but we'll repeat some of it here:
 
 1. Use this link to a new bot: <https://dev.botframework.com/bots/new.> If you click on the *Create a bot* button in the Bot Framework portal instead, you will [create your bot in Microsoft Azure](~/concepts/bots/bots-create#bots-and-microsoft-azure) instead, for which you'll need an Azure account.
-1. Add both the Microsoft Teams and Skype channels (or for an existing Teams bot, just add the Skype channel). Click on the "Calling" tab on the Skype channel page and click on **Enable calling**, and then select whether your bot is designed for IVR (interactive voice response) scenarios or [real-time media](~/concepts/calls-and-meetings/real-time-media-concepts) scenarios. Update **Webhook (for calling)** with your https URL where you will receive incoming notifications, e.g.`https://contoso.com/teamsapp/api/calling`. Refer to [Configuring Channels](https://docs.microsoft.com/en-us/bot-framework/portal-configure-channels) for more information on how to configure channels.
-  ![Configure Skype channel information](~/assets/images/calls-and-meetings/configure-skype-channel.png)
+1. Add the Microsoft Teams channel. Click on the "Calling" tab on the Microsoft Teams channel page and click on **Enable calling**, and then update **Webhook (for calling)** with your https URL where you will receive incoming notifications, e.g.`https://contoso.com/teamsapp/api/calling`. Refer to [Configuring Channels](https://docs.microsoft.com/en-us/bot-framework/portal-configure-channels) for more information on how to configure channels.
+  ![Configure Microsoft Teams channel information](~/assets/images/calls-and-meetings/configure-msteams-channel.png)
 
 ## Add Microsoft Graph permissions
 
