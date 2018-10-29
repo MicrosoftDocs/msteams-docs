@@ -12,7 +12,7 @@ Here you will find a list of code samples that demonstrate various capabilities 
 
 To download our samples from GitHub:
 
-1. Open the project in GitHub
+1. Select one of the projects listed below and open the project in GitHub.
 2. Choose the **Clone or download** button and copy the URL
 3. Open a command prompt in the parent directory into which you want to install the sample project
 4. Run `git clone <pasted url>`
