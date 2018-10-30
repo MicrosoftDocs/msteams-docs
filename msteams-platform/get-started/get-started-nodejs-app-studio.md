@@ -156,6 +156,8 @@ Ngrok will listen to requests from the internet and will route them to your app 
 
 The app will only be available during the current session on your development machine. If the machine is shut down or goes to sleep the service will no longer be available. Remember this when sharing the app for testing by other users. If you have to restart the service it will return a new address and you will have to update every place that uses that address.
 
+Make a note of the URL of your app because you will need this later when you register the app with Teams using App studio.
+
 <a name="DeployToTeams"></a>
 
 ## Deploy your app to Microsoft Teams
@@ -183,51 +185,76 @@ When App Studio is installed click on the Manifest editor to begin creating the 
 
 <img  width="450px" title="App Studio" src="~/assets/images/get-started/app-studio.png"/>
 
-The sample comes with it's own manifest and app package, but that is to support manual creation of the app package. In this part of the tutorial you are going to create an app package from scratch by selecting the *Create a new app* tile in the Manifest Editor.
+The sample comes with it's own manifest and is designed to build an app package simply by typing `gulp` at the command line in the root directory of the project.
 
-<img  width="450px" title="Creating a new app" src="~/assets/images/get-started/app-studio-manifest-editor.png"/>
+```bash
+$ gulp
+[13:39:27] Using gulpfile ~\documents\github\msteams-samples-hello-world-nodejs\gulpfile.js
+[13:39:27] Starting 'clean'...
+[13:39:27] Starting 'generate-manifest'...
+[13:39:27] Finished 'generate-manifest' after 11 ms
+[13:39:27] Finished 'clean' after 21 ms
+[13:39:27] Starting 'default'...
+Build completed. Output in manifest folder
+[13:39:27] Finished 'default' after 62 μs
+```
 
-There is a list of steps in the left-hand side of the Manifest editor, and on the right a list of properties that need to be filled in for each of those steps. Since this is a sample app, you can choose to enter the suggested placeholder values below, or choose your own.
+In this part of the tutorial you are going to modify this app package by selecting the *Import an existing app* tile in the Manifest Editor.
+
+<img  width="450px" title="Importing an app" src="~/assets/images/get-started/app-studio-import.png"/>
+
+Once the app package has been imported App Studio should look like this.
+
+<img  width="450px" title="Importing an app" src="~/assets/images/get-started/app-studio-imported-app.png"/>
+
+Click on the tile for your newly imported app, *Hello World*.
+
+<img  width="450px" title="Importing an app" src="~/assets/images/get-started/app-studio-manifest-editor.png"/>
+
+There is a list of steps in the left-hand side of the Manifest editor, and on the right a list of properties that need to be filled in for each of those steps. Since this is a sample app, much of the information is already filled out. The next steps will walk you through changing the parts that need to be updated.
 
 #### App details
 
- Name | Value | Description |
-| --- | --- | --- |
-| Name | Contoso | This is the name of the organization responsible for this app.|
-| Website | https://www.contoso.com | This is the main website for the organization.|
-| Short name | HelloWorld |The name you want Teams to use to identify your app.|
-| Long name | A sample app for you to deploy and test |A longer description of the app which Teams will use when space permits.|
-| App ID | --- | This is a unique, random number which will be used internally to identify your app. Click the Generate button below the field to create an appropriate value. |
-| Package Name | com.contoso.test | --- |
-| Version | --- | --- |
-| Short description | This is a test app | 80 characters or less |
-| Long description | This is a longer description of a test app | 4000 characters or less |
-| Name | --- | --- |
-| Website | --- | --- |
-| Privacy statement | --- | --- |
-| Terms of use | --- | --- |
-| Full color 192x192 icon | --- | --- |
-| Transparent outline 32x32 icon | --- | --- |
-| Accent color | --- | --- |
+Click on the *App details* entry under *Details*. The only thing you need to do here is to let App Studio create a new identifier for your app by clicking the *Generate* button.
+
+Your new app id should look something like: `2322041b-72bf-459d-b107-f4f335bc35bd`.
+
+Scroll through the rest of the App details in the right hand pane, and familiarize yourself with some of the entries such as *Developer information* and *Branding*. These sections become important when you are writing a new app for distribution.
 
 #### Capabilities: Tabs
 
 ##### Team tab
 
-| --- | --- | --- |
-| Tab configuration URL | --- | You can only add a single team tab |
+Your app can only have one Team tab.
+
+<img  width="450px" title="Adding a bot" src="~/assets/images/get-started/app-studio-manifest-editor-tabs.png"/>
+
+The Team tab is where your configuration page goes. It looks like this:
+
+`https://yourteamsapp.ngrok.io/configure` where `yourteamsapp.ngrok.io` should be replaced by the URL that you used above when hosting your app.  The url is followed by '/configure".
 
 ##### Personal tabs
 
-You can use the *Add* button to add up to 16 personal tabs. These tabs will be listed in this section.
+Your app can have up to 16 tabs, including the team tab.
+
+Personal tabs are represented differently from the team tab. You should see *Hello Tab* already listed in the personal tabs list. At the moment it has a placeholder value `com.contoso.helloworld.hellotab`. Click on the ... symbol at the end of the entry and choose *Edit* from the drop-down. The following dialog will appear.
+
+<img  width="450px" title="Adding a bot" src="~/assets/images/get-started/app-studio-manifest-editor-p-tabs-dialog.png"/>
+
+There are two fields that you need to update with your app url.
+
+| --- | --- | --- |
+| Name | Value | Description |
+| Content URL | https://yourteamsapp.com/hello | --- |
+| Website URL | https://yourteamsapp.com/hello | --- |
 
 #### Capabilities: Bots
 
-Use the *Set up* button to add a bot to your app. This opens the *Set up a bot* dialog.
+Now click on the bots entry under Capabilities.
 
-<img  width="450px" title="Adding a bot" src="~/assets/images/get-started/app-studio-bot-setup.png"/>
+<img  width="450px" title="Adding a bot" src="~/assets/images/get-started/app-studio-manifest-editor-bots.png"/>
 
-The hello world sample already has a bot as part of the sample, but it has not been registered with Microsoft yet, so choose the New bot tab and fill out the required information.
+The hello world sample already has a bot as part of the sample, but it has not been registered with Microsoft yet. 
 
 | Name | Contoso bot | --- |
 
