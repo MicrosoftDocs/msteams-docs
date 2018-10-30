@@ -2,7 +2,7 @@
 title: Using Task Modules in Microsoft Teams bots
 description: How to use task modules with Microsoft Teams bots, including Bot Framework cards, Adaptive cards, and deep links.
 keywords: task modules teams bots
-ms.date: 10/24/2018
+ms.date: 10/30/2018
 ---
 # Using task modules from Microsoft Teams bots
 
@@ -85,7 +85,7 @@ private async onInvoke(event: builder.IEvent, cb: (err: Error, body: any, status
     }
     switch (invokeType) {
         case "task/fetch": {
-            if (invokeValue !== undefined && invokeValue.taskModule === "customform") {
+            if (invokeValue !== undefined && invokeValue.data.taskModule === "customform") {
                 // Return the specified task module response to the bot
                 let fetchTemplate: any = "task": {
                     "type": "continue",
@@ -99,7 +99,7 @@ private async onInvoke(event: builder.IEvent, cb: (err: Error, body: any, status
                 };
                 cb(null, fetchTemplate, 200);
             };
-            if (invokeValue !== undefined && invokeValue.taskModule === "adaptivecard") {
+            if (invokeValue !== undefined && invokeValue.data.taskModule === "adaptivecard") {
                 let adaptiveCard = {
                     "type": "AdaptiveCard",
                     "body": [
