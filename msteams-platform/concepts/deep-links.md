@@ -76,16 +76,18 @@ The [`microsoftTeams.getContext`](/javascript/api/msteams-client/microsoftteams.
 
 You can now create deep links to private chats between users. You can link to an existing chat, or you can specify a set of chat participants to start a new chat. Optionally, you can specify the name of the chat, along with text that should be inserted into the user's compose box. New chats will be created in draft state until the user sends the first message. You can think of this feature as a shortcut for a basic user action.
 
-As an example use case, if you are displaying an Office 365 user in your tab or card, this deep link can allow the user to easily chat with that person.
+As an example use case, if you are returning an Office 365 user profile from your bot as a card, this deep link can allow the user to easily chat with that person.
 
 ### Generating a deep link to a chat
 
 The format for a deep link that you can use in a bot, Connector, or messaging extension card is as follows:
 
-`https://teams.microsoft.com/l/chat/0/0/?users=<user1>,<user2>,...&name=<chat name>&text=<precanned text>`
+`https://teams.microsoft.com/l/chat/0/0/?users=<user1>,<user2>,...&topicName=<chat name>&message=<precanned text>`
 
 The query parameters are:
 
 * `users`&emsp;The comma-separated list of user IDs, which can be either AAD UserPrincipalName (typically an email address) or User ID value
-* `name`&emsp;An optional field for chat's display name, in the case of a chat with 3 or more users. If this field is not specified, the chat's display name will be based on the names of the participants
-* `text`&emsp;An optional field for text that you want to insert into the current user's compose box while the chat is in a draft state
+* `topicName`&emsp;An optional field for chat's display name, in the case of a chat with 3 or more users. If this field is not specified, the chat's display name will be based on the names of the participants
+* `message`&emsp;An optional field for the message text that you want to insert into the current user's compose box while the chat is in a draft state
+
+To use this deep link with your bot, you can specify this as the URL target in your card's button or tap action through the `openUrl` action type.
