@@ -2,7 +2,7 @@
 title: Get started with C#/.NET
 description: Get started building great apps in Microsoft Teams using C#/.NET
 keywords: getting started .net c# csharp
-ms.date: 02/07/2018
+ms.date: 10/30/2018
 ---
 # Get started on the Microsoft Teams platform with C#/.NET
 
@@ -17,20 +17,20 @@ This tutorial helps you get started creating a Microsoft Teams app using C# on .
 To create your app:
 
 > [!div class="checklist"]
-> * [Prepare your Office 365 tenant](~/get-started/get-started-tenant)
-> * [Prepare Microsoft Teams for development](#PrepareMicrosoftTeams)
-> * [Get prerequisites](#GetPrerequisites)
-> * [Download the sample](#DownloadSample)
-> * [Build and run the sample](#BuildRun)
-> * [Host the sample](#HostSample)
-> * [Deploy your app into Microsoft Teams](#DeployToTeams)
-> * [Configure the app tab](#ConfigureTheAppTab)
+> - [Prepare your Office 365 tenant](~/get-started/get-started-tenant)
+> - [Prepare Microsoft Teams for development](#PrepareMicrosoftTeams)
+> - [Get prerequisites](#GetPrerequisites)
+> - [Download the sample](#DownloadSample)
+> - [Build and run the sample](#BuildRun)
+> - [Host the sample](#HostSample)
+> - [Deploy your app into Microsoft Teams](#DeployToTeams)
+> - [Configure the app tab](#ConfigureTheAppTab)
 
 Once you have your app running in the Teams platform, you can enhance it further by adding the following capabilities. Follow along this tutorial to learn how to add these capabilities to your app.
 
 > [!div class="checklist"]
-> * [Add a bot to your app](#AddBot)
-> * [Compose rich messages](#ComposeRichMessages)
+> - [Add a bot to your app](#AddBot)
+> - [Compose rich messages](#ComposeRichMessages)
 
 <a name="PrepareMicrosoftTeams"></a>
 
@@ -42,8 +42,8 @@ Once you have your app running in the Teams platform, you can enhance it further
 
 To complete this tutorial, you need to get the following tools:
 
-* [Install Git](https://git-scm.com/downloads)
-* [Install Visual Studio 2017](https://www.visualstudio.com/downloads/). You can install the free community edition.
+- [Install Git](https://git-scm.com/downloads)
+- [Install Visual Studio 2017](https://www.visualstudio.com/downloads/). You can install the free community edition.
 
 If you see an option to add `git` to the PATH during installation, choose to do so. It will be handy.
 
@@ -82,10 +82,10 @@ Once the repo is cloned, use Visual Studio to open the solution file `Microsoft.
 
 When the app starts, you will see a browser window open with the root of the app launched. You can navigate to the following URLs to verify that all the app URLs are loading:
 
-* [http://localhost:3333](http://localhost:3333)
-* [http://localhost:3333/hello](http://localhost:3333/hello)
-* [http://localhost:3333/first](http://localhost:3333/first)
-* [http://localhost:3333/second](http://localhost:3333/second)
+- [http://localhost:3333](http://localhost:3333)
+- [http://localhost:3333/hello](http://localhost:3333/hello)
+- [http://localhost:3333/first](http://localhost:3333/first)
+- [http://localhost:3333/second](http://localhost:3333/second)
 
 <a name="HostSample"></a>
 
@@ -186,6 +186,7 @@ The sample already comes with a bot. The bot is defined in the manifest and look
 You need a bot definition for each bot contained in your app. In this case you already have a bot and have given it a registered **bot ID**, so all you will do is add credentials for the bot and test it.
 
 ### Add credentials for the bot
+
 In the `Microsoft.Teams.Samples.HelloWorld.Web` project you will find a config file called `Web.config`. This file contains the following code:
 
 [!code-xml[Web.config file](~/../_msteams-samples-hello-world-csharp/Microsoft.Teams.Samples.HelloWorld.Web/Web.config#L7-L14)]
@@ -203,9 +204,9 @@ Before you run the bot in Teams, confirm that the bot works as expected  using t
 
 Once you have the emulator running, you will need three things to set up a connection:
 
-* The endpoint URL, which is the address where your bot is exposed. It can be the local address 'http://localhost:3333/api/messages', or an external address using the ngrok tunnel you set up earlier like `https://d0ac14a5.ngrok.io/api/messages`.
-* The Microsoft App ID, which is the **ID** you used earlier.
-* The Microsoft App Password from the Bot Framework which you made a note of earlier.
+- The endpoint URL, which is the address where your bot is exposed. It can be the local address 'http://localhost:3333/api/messages', or an external address using the ngrok tunnel you set up earlier like `https://d0ac14a5.ngrok.io/api/messages`.
+- The Microsoft App ID, which is the **ID** you used earlier.
+- The Microsoft App Password from the Bot Framework which you made a note of earlier.
 
 > [!TIP]
 > To verify your bot is working, just verify that it is echoing back whatever you say to it.

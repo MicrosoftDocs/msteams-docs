@@ -241,8 +241,6 @@ Scope
 | Personal | Yes | --- |
 | Team | Yes | --- |
 
-
-
 #### Capabilities: Connectors
 
 | --- | --- | --- |
@@ -279,10 +277,11 @@ Scope
 | --- | --- | --- |
 | --- | --- | --- |
 
-
 ### Manually create the app package
 
-The app manifest is a file that tells the Microsoft Teams platform all about your app and the capabilities it provides your users. You will learn more about apps and their capabilities later [here](~/concepts/apps/apps-overview), but for now focus on the modifications to the manifest needed to load the hello-world app in Microsoft Teams.
+App Studio is the recommended way to create and modify the app package, however this section is still included for those who want to understand what is happening behind the scenes.
+
+The app manifest is the main component of the app package. It is a file that tells the Microsoft Teams platform all about your app and the capabilities it provides your users. You will learn more about apps and their capabilities later [here](~/concepts/apps/apps-overview), but for now focus on the modifications to the manifest needed to load the hello-world app in Microsoft Teams.
 
 You can find the manifest file at `src/manifest.json` within the hello-world sample. Please follow these steps to make the appropriate changes:
 
