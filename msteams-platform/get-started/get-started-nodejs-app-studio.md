@@ -81,7 +81,7 @@ You can continue to use this terminal window to run the commands that follow in 
 
 ### Download the sample
 
-We have provided a [simple 'Hello, World!' sample](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) to get you started. In a terminal window, run the following command to clone the sample repository to your local machine:
+We have provided a simple [Hello, World!](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) sample to get you started. In a terminal window, run the following command to clone the sample repository to your local machine:
 
 ```bash
 git clone https://github.com/OfficeDev/msteams-samples-hello-world-nodejs.git
@@ -133,7 +133,7 @@ Remember that apps in Microsoft Teams are web applications exposing one or more 
 
 #### Host on the web using Azure
 
-You can host your sample app on any web service that you have access to, such Azure where you can host this app for free. See [Host your .NET Teams app in Azure](~/get-started/get-started-nodejs-in-azure) for detailed instructions using this sample.
+You can host your sample app on any web service that you have access to, such Azure where you can host this app for free. See [Host your .NET Teams app in Azure](~/get-started/get-started-nodejs-in-azure) for detailed instructions using this sample. Once your app is hosted, make a note of the URL. You will need this later when you deploy your app to teams.
 
 #### Host locally using ngrok
 
@@ -195,9 +195,90 @@ There is a list of steps in the left-hand side of the Manifest editor, and on th
 | --- | --- | --- |
 | Name | Contoso | This is the name of the organization responsible for this app.|
 | Website | https://www.contoso.com | This is the main website for the organization.|
-| Short name | Hello World |The name you want Teams to use to identify your app.|
+| Short name | HelloWorld |The name you want Teams to use to identify your app.|
 | Long name | A sample app for you to deploy and test |A longer description of the app which Teams will use when space permits.|
 | App ID | --- | This is a unique, random number which will be used internally to identify your app. Click the Generate button below the field to create an appropriate value. |
+| Package Name | com.contoso.test | --- |
+| Version | --- | --- |
+| Short description | This is a test app | 80 characters or less |
+| Long description | This is a longer description of a test app | 4000 characters or less |
+| Name | --- | --- |
+| Website | --- | --- |
+| Privacy statement | --- | --- |
+| Terms of use | --- | --- |
+| Full color 192x192 icon | --- | --- |
+| Transparent outline 32x32 icon | --- | --- |
+| Accent color | --- | --- |
+
+#### Capabilities: Tabs
+
+##### Team tab
+
+| --- | --- | --- |
+| Tab configuration URL | --- | You can only add a single team tab |
+
+##### Personal tabs
+
+You can use the *Add* button to add up to 16 personal tabs. These tabs will be listed in this section.
+
+#### Capabilities: Bots
+
+Use the *Set up* button to add a bot to your app. This opens the *Set up a bot* dialog.
+
+<img  width="450px" title="Adding a bot" src="~/assets/images/get-started/app-studio-bot-setup.png"/>
+
+The hello world sample already has a bot as part of the sample, but it has not been registered with Microsoft yet, so choose the New bot tab and fill out the required information.
+
+| Name | Contoso bot | --- |
+
+Messaging bot
+
+| My bot supports files | No | --- |
+| My bot is a one-way notification only bot | No | --- |
+
+Scope
+
+| Personal | Yes | --- |
+| Team | Yes | --- |
+
+
+
+#### Capabilities: Connectors
+
+| --- | --- | --- |
+| --- | --- | --- |
+| --- | --- | --- |
+| --- | --- | --- |
+| --- | --- | --- |
+| --- | --- | --- |
+
+#### Capabilities: Messaging extensions
+
+| --- | --- | --- |
+| --- | --- | --- |
+| --- | --- | --- |
+| --- | --- | --- |
+| --- | --- | --- |
+| --- | --- | --- |
+
+#### Finish: Valid domains
+
+| --- | --- | --- |
+| --- | --- | --- |
+| --- | --- | --- |
+| --- | --- | --- |
+| --- | --- | --- |
+| --- | --- | --- |
+
+#### Finish: Test and distribute
+
+| --- | --- | --- |
+| --- | --- | --- |
+| --- | --- | --- |
+| --- | --- | --- |
+| --- | --- | --- |
+| --- | --- | --- |
+
 
 ### Manually create the app package
 
