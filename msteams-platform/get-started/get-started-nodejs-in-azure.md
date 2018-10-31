@@ -32,18 +32,18 @@ In VS Code, click on the Azure icon in the left hand tool bar.
 
 This will display the Azure sign in and management pane.
 
-<img title="Signing in to Azure" src="~/assets/images/get-started/visual-studio-code-azure-sign-in.png"/>
+<img width="450px" title="Signing in to Azure" src="~/assets/images/get-started/visual-studio-code-azure-sign-in.png"/>
 
 Click on *Sign in to Azure...*. A dialog will open in the lower right corner of VS Code. Read the instructions and Click *Copy & Open*.
 A web page will be displayed where you can enter a confirmation code.
 
-<img title="Confirm in Azure" src="~/assets/images/get-started/visual-studio-code-azure-login-web.png"/>
+<img width="450px" title="Confirm in Azure" src="~/assets/images/get-started/visual-studio-code-azure-login-web.png"/>
 
 Right click where it says *Code*, and select paste from the right click menu.  This will enter a code provided by the previous dialog.
 
 You can now return to VS Code, where the Azure pane will now look something like this:
 
-<img title="Azure pane in VS Code" src="~/assets/images/get-started/visual-studio-azure-account.png"/>
+<img width="450px" title="Azure pane in VS Code" src="~/assets/images/get-started/visual-studio-azure-account.png"/>
 
 What you actually see will depend on the type of account you have with Azure.
 
@@ -79,7 +79,7 @@ You may then be asked if you want to always deploy the workspace. You can answer
 
 Finally you will see this message, assuming everything went well.
 
-<img title="Azure icon" src="~/assets/images/get-started/visual-studio-azure-new-web-app-finished.png"/>
+<img width="450px" title="Azure icon" src="~/assets/images/get-started/visual-studio-azure-new-web-app-finished.png"/>
 
 ## Testing your app on Azure
 
