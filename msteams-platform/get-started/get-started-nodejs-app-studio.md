@@ -237,16 +237,14 @@ The Team tab is where your configuration page goes. It looks like this:
 
 Your app can have up to 16 tabs, including the team tab.
 
-Personal tabs are represented differently from the team tab. You should see *Hello Tab* already listed in the personal tabs list. At the moment it has a placeholder value `com.contoso.helloworld.hellotab`. Click on the ... symbol at the end of the entry and choose *Edit* from the drop-down. The following dialog will appear.
+Personal tabs are represented differently from the team tab. You should see *Hello Tab* already listed in the personal tabs list. At the moment it has a placeholder value `com.contoso.helloworld.hellotab`. Click on the *...* symbol at the end of the entry and choose *Edit* from the drop-down. The following dialog will appear.
 
 <img  width="450px" title="Adding a personal tab dialog" src="~/assets/images/get-started/app-studio-manifest-editor-p-tabs-dialog.png"/>
 
 There are two fields that you need to update with your app URL.
 
-| --- | --- | --- |
-| Name | Value | Description |
-| Content URL | https://yourteamsapp.com/hello | --- |
-| Website URL | https://yourteamsapp.com/hello | --- |
+- Change Content URL to https://yourteamsapp.com/hello
+- Change Website URL to https://yourteamsapp.com/hello
 
 #### Bots
 
