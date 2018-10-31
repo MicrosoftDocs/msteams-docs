@@ -49,7 +49,7 @@ What you actually see will depend on the type of account you have with Azure.
 
 ## Configure environment variables
 
-Environment variables are used in Azure to securely hold sensitive information like app ids and passwords. You will need to manually add the following Application Settings (environment variables) in the app VS Code
+Environment variables are used in Azure to securely hold sensitive information like app ids and passwords. You will need to manually add the following Application Settings (environment variables) in VS Code.
 
 ```
 MICROSOFT_APP_ID=<YOUR BOT'S APP ID>
