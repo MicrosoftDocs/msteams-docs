@@ -237,6 +237,7 @@ The sample already comes with a bot. The bot is defined in the manifest and look
 You need a bot definition for each bot contained in your app. In this case you already have a bot and have given it a registered **bot ID**, so all you will do is add credentials for the bot and test it.
 
 ### Add credentials for the bot
+
 In the hello-world project navigate to a folder named config. In this folder you will find a json file called default. This file contains the following code:
 
 [!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/config/default.json#L1-L6)]

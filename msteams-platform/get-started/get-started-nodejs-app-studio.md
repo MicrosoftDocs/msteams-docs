@@ -169,7 +169,7 @@ For either method you will need the following:
 - The URL where your app can be found on the internet.
 - Icons that Teams will use to brand your app. The sample comes with placeholder icons located in "src\static\images.
 
-### Use App Studio to manage the app package
+### Use App Studio to update the app package
 
 App Studio can simplify the creation of an app, and really helps when adding bots, since manually these these require online registration with Azure bot services.
 
@@ -227,7 +227,7 @@ Scroll through the rest of the App details in the right hand pane, and familiari
 
 Your app can only have one Team tab.
 
-<img  width="450px" title="Adding a bot" src="~/assets/images/get-started/app-studio-manifest-editor-tabs.png"/>
+<img  width="450px" title="Adding a Teams tab" src="~/assets/images/get-started/app-studio-manifest-editor-tabs.png"/>
 
 The Team tab is where your configuration page goes. It looks like this:
 
@@ -239,120 +239,63 @@ Your app can have up to 16 tabs, including the team tab.
 
 Personal tabs are represented differently from the team tab. You should see *Hello Tab* already listed in the personal tabs list. At the moment it has a placeholder value `com.contoso.helloworld.hellotab`. Click on the ... symbol at the end of the entry and choose *Edit* from the drop-down. The following dialog will appear.
 
-<img  width="450px" title="Adding a bot" src="~/assets/images/get-started/app-studio-manifest-editor-p-tabs-dialog.png"/>
+<img  width="450px" title="Adding a personal tab dialog" src="~/assets/images/get-started/app-studio-manifest-editor-p-tabs-dialog.png"/>
 
-There are two fields that you need to update with your app url.
+There are two fields that you need to update with your app URL.
 
 | --- | --- | --- |
 | Name | Value | Description |
 | Content URL | https://yourteamsapp.com/hello | --- |
 | Website URL | https://yourteamsapp.com/hello | --- |
 
-#### Capabilities: Bots
+#### Bots
 
 Now click on the bots entry under Capabilities.
 
 <img  width="450px" title="Adding a bot" src="~/assets/images/get-started/app-studio-manifest-editor-bots.png"/>
 
-The hello world sample already has a bot as part of the sample, but it has not been registered with Microsoft yet. 
+The hello world sample already has a bot as part of the sample, but it has not been registered with Microsoft yet. To do this, click the *Edit* button below the entry *Imported Bot*.
 
-| Name | Contoso bot | --- |
+This will display the *Bot* dialog.
 
-Messaging bot
+<img  width="450px" title="Adding a bot dialog" src="~/assets/images/get-started/app-studio-manifest-editor-bot-dialog.png"/>
 
-| My bot supports files | No | --- |
-| My bot is a one-way notification only bot | No | --- |
+TODO: The current Bot dialog does not allow you to register the bot if the bot was imported from an existing app package that had a placeholder app ID. That blocks further testing.
+The manual walkthrough also mentions passwords associated with the ID. Are these managed by App Studio in the background? Are these the same as app Secrets? Later in the document it looks like there is some confusion between the APP ID and App Secrets. Needs to be resolved and tested.
 
-Scope
+No other setting has to be changed in this dialog. Choose *Save* to exit the dialog.
 
-| Personal | Yes | --- |
-| Team | Yes | --- |
+#### Messaging extensions
 
-#### Capabilities: Connectors
+The sample app has a messaging extension, which you can enable by clicking on *Messaging extensions* under Capabilities in the left hand column of App Studio.
 
-| --- | --- | --- |
-| --- | --- | --- |
-| --- | --- | --- |
-| --- | --- | --- |
-| --- | --- | --- |
-| --- | --- | --- |
+<img  width="450px" title="Adding a messaging extension" src="~/assets/images/get-started/app-studio-manifest-editor-mess-ext.png"/>
 
-#### Capabilities: Messaging extensions
+App Studio has imported the sample messaging extension, which is listed in the right hand pane under *Messaging Extensions*. To edit this extension, click the *Edit* button under the extension name.
 
-| --- | --- | --- |
-| --- | --- | --- |
-| --- | --- | --- |
-| --- | --- | --- |
-| --- | --- | --- |
-| --- | --- | --- |
+<img  width="450px" title="Adding a messaging extension dialog" src="~/assets/images/get-started/app-studio-manifest-editor-mess-ext-dialog.png"/>
 
-#### Finish: Valid domains
+You can use the same Microsoft App ID as you used for the bot.
 
-| --- | --- | --- |
-| --- | --- | --- |
-| --- | --- | --- |
-| --- | --- | --- |
-| --- | --- | --- |
-| --- | --- | --- |
+TODO: There is no way to update this value in App Studio since the dialog does not allow the value to be changed.  Not sure why.  No content for this yet, since I don't have working messaging extensions to test.
 
-#### Finish: Test and distribute
+#### Test your app in Teams
 
-| --- | --- | --- |
-| --- | --- | --- |
-| --- | --- | --- |
-| --- | --- | --- |
-| --- | --- | --- |
-| --- | --- | --- |
+Click on the *Test and distribute* item under *Finish* in the left hand column of App Studio.
 
-### Manually create the app package
+<img  width="450px" title="Testing your app" src="~/assets/images/get-started/app-studio-manifest-editor-test.png"/>
 
-App Studio is the recommended way to create and modify the app package, however this section is still included for those who want to understand what is happening behind the scenes.
+In order to upload your app to Teams, click the *Install* button under *Test and Distribute*.
 
-The app manifest is the main component of the app package. It is a file that tells the Microsoft Teams platform all about your app and the capabilities it provides your users. You will learn more about apps and their capabilities later [here](~/concepts/apps/apps-overview), but for now focus on the modifications to the manifest needed to load the hello-world app in Microsoft Teams.
+<img  width="450px" title="Adding a messaging extension dialog" src="~/assets/images/get-started/app-studio-manifest-editor-test-dialog.png"/>
 
-You can find the manifest file at `src/manifest.json` within the hello-world sample. Please follow these steps to make the appropriate changes:
+You can turn off the *Add to a team* switch since you are just testing and probably don't want to add any un needed noise to existing teams in your group.
 
-#### Step 1: Change the APP ID in the manifest
+Once you turn off this button, the *Install* button at the bottom of the dialog is activated and can be chosen to finish this process.
 
-You need a unique **ID** to distinguish your app from others on the Microsoft Teams platform. This **APP ID** is a `GUID` and is set in the app manifest file.
+This finishes the App Studio portion of this walkthrough.  You should now see your app running in Teams.
 
-To get a unique value for your app follow the instructions in [Create a bot for Microsoft Teams](~/concepts/bots/bots-create). You will use the App Framework website to register your app. Use your app URL for the Messaging endpoint, followed by `"/api/messages"`. This should look something like: `https://d0ac14a5.ngrok.io/api/messages`.
-
-Make a note of the **APP ID** and at least one password generated by the Bot Framework. You will need this information later.
-
-Now edit the manifest file and set the value of the `"id"` property to the AppID returned by BotFramework.
-
-[!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L1-L12)]
-
-You will also need to change the botID value in the bots and the composeExtensions sections later in the manifest.
-
-[!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L41-L49)]
-
-[!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L50-L67)]
-
-You will learn more about Bots later in this guide.
-
-#### Step 2: Change the URLs in the manifest
-
-Change the URLs that point to `yourteamsapp.ngrok.io` to the URLs where the app is hosted. Microsoft Teams will load your app from this location.
-
-[!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L26-L40)]
-
-### Upload the app
-
-Once you update the manifest, you can rebuild the sample. To rebuild run the following command in the app terminal window, stopping the app if needed:
-
-```bash
-gulp
-```
-
-This will generate a file `helloworldapp.zip` in the `manifest` directory within the root of the project directory.
-
-Use the **Upload a custom app** link in Teams to upload this zip file and install your app into one of the teams you own. See **Load your package into a team** in [Upload your app in Microsoft Teams](~/concepts/apps/apps-upload) for more information on how to do this.
-
-> [!NOTE]
-> You might have stopped the node process in order to rebuild the app. If so, you will need to rerun the node process using the `npm start` command described in [Build and run the sample](#BuildRun).
-
+<img  width="450px" title="The finished app" src="~/assets/images/get-started/app-studio-finished-app.png"/>
 
 <a name="ConfigureTheAppTab"></a>
 
@@ -362,43 +305,6 @@ Once you install the app into a team, you will need to configure it to show cont
 
 <img width="530px" src="~/assets/images/samples-hello-world-tab-configure.png" title="Screenshot of configure" />
 
-<a name="AddBot"></a>
-
-## Add a bot to your app
-
-The sample already comes with a bot. The bot is defined in the manifest and looks like this:
-
-[!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L41-L49)]
-
-You need a bot definition for each bot contained in your app. In this case you already have a bot and have given it a registered **bot ID**, so all you will do is add credentials for the bot and test it.
-
-### Add credentials for the bot
-
-In the hello-world project navigate to a folder named config. In this folder you will find a json file called default. This file contains the following code:
-
-[!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/config/default.json#L1-L6)]
-
-Earlier you made note of the **APP ID** from the bot framework as well as a password. Use those vales for "microsoftAppId" and "microsoftAppPassword" in the config.js file. This is not a particularly safe location to store credentials, but it will work for this example.
-
-After these values are changed the app must be stopped, built using 'gulp', and run again using 'npm start'. Reload the app using the newly built zip file in Microsoft Teams.
-
-Do NOT stop your ngrok session or you will have to update all the ngrok urls associated with your app.
-
-### Test the bot with the bot emulator
-
-Before you run the bot in Teams, confirm that the bot works as expected  using the [Bot Framework Emulator](/bot-framework/debug-bots-emulator?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json), a desktop application that allows bot developers to test and debug their bots.
-
-Once you have the emulator running, you will need three things to set up a connection:
-
-- The endpoint URL, which is the address where your bot is exposed. It can be the local address 'http://localhost:3333/api/messages', or an external address using the ngrok tunnel you set up earlier like `https://d0ac14a5.ngrok.io/api/messages`.
-- The Microsoft App ID, which is the **ID** you used earlier.
-- The Microsoft App Password from the Bot Framework which you made a note of earlier.
-
-> [!TIP]
-> To verify your bot is working, just verify that it is echoing back whatever you say to it.
-
-If the bot is not working, check to see if your app is running, and check ngrok if you are using it.
-
 ### Test your bot in Teams
 
 You can now interact with the bot in Teams. Choose a channel in the team where you registered your app, and type `@your-bot-name`. This is called an **@mention**. Whatever message you send to the bot will be sent back to you as a reply.
@@ -406,18 +312,6 @@ You can now interact with the bot in Teams. Choose a channel in the team where y
 <img width="450px" title="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 
 <a name="ComposeRichMessages"></a>
-
-## Compose rich messages
-
-The Microsoft Teams developer platform allows users to compose custom rich messages in their conversations through a feature called **Messaging Extensions**. Messaging extensions are used when you want to insert smart content into conversations, typically triggered by a search like action. For example you can use messaging extensions to insert a specific work item with its summary details such as title, assigned to, due dates, and links to access it directly on your planning application while starting a conversation about it. Messaging extensions are built over bots through special APIs and commands. Once you have a bot in the app, it is very easy to extend the bot to also handle **messaging extensions**.
-
-### Update the app manifest and reload the app in teams again
-
-The hello-world sample comes with a built in messaging extension, which looks something like this:
-
-[!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L50-L67)]
-
-You have already updated the botId used by the compose extension so there is no need to do that again.
 
 ### Test your messaging extension
 
