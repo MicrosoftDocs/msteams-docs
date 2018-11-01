@@ -39,7 +39,39 @@ Let's look at each step in a bit more detail:
       }
     }
     ```
-    
+   
+   A note when using Bot SDK v4 and IBot interface. 
+   To return the response from within OnTurn in a bot you need to answer with an InvokeResponse activity. 
+   
+   Example:
+   ```csharp
+        var resp = new InvokeResponse()
+        {
+            Body = @"{
+                  ""task"": {
+                    ""type"": ""message"",
+                    ""value"": {
+                      ""title"": ""Login"",
+                      ""height"": 800,
+                      ""width"": 600,
+                      ""id"":  ""examples.login"", 
+                      ""url"": ""https://www.microsoft.com"",
+                      ""fallbackUrl"": ""https://www.microsoft.com""
+                    }
+                  }
+                }",
+            Status = (int) HttpStatusCode.OK,
+        };
+
+        var activity = new Activity
+        {
+            Value = resp,
+            Type = ActivityTypesEx.InvokeResponse,
+        };
+
+
+        await turnContext.SendActivityAsync(activity, cancellationToken);
+     ```  
     The `task/fetch` event and its response for bots is similar, conceptually, to the `microsoftTeams.tasks.startTask()` function in the client SDK.
 4. Microsoft Teams displays the task module.
 
