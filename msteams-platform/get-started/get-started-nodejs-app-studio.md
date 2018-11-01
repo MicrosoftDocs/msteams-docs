@@ -248,21 +248,35 @@ Bots are the most common way to add functionality to your app. The hello world s
 
 <img  width="450px" title="Adding a bot" src="~/assets/images/get-started/app-studio-manifest-editor-bots.png"/>
 
-To edit your bot, click the *Edit* button below the entry *Imported Bot*.
+The bot that was imported from the sample does not have an App ID associated with it yet. You will have to create a new bot so that App Studio can create a new App ID and register it with Microsoft.  Note that this is the bots App ID, not the apps App ID. Each bot in an app requires its own id.
 
-This will display the *Bot* dialog.
+Click the *delete* button next to the *Imported bot* in the bot list.
 
 <img  width="450px" title="Adding a bot dialog" src="~/assets/images/get-started/app-studio-manifest-editor-bot-dialog.png"/>
 
-No other setting has to be changed in this dialog. Choose *Save* to exit the dialog.
+Now there are no bots left to show.  Click *Setup*. This will display the *Set up a bot* dialog.
+
+<img  width="450px" title="Adding a bot dialog" src="~/assets/images/get-started/app-studio-manifest-editor-bots-setup-dialog.png"/>
+
+Add a bot name such as `Contoso bot`, and click both the buttons under *scope*.
+
+Choose *Create bot* to exit the dialog.  App Studio will spend a moment registering your bot with Microsoft, and then should display your new bot in the bot list. Now would be a good time to open a text file in notepad and copy and paste your new bot id into it. You will need this id later.
+
+Now look under *App Secrets* in the *Bots* pane of App Studio, and click *Manage*. This should open a browser and take you to the *My Applications* page at https://apps.dev.microsoft.com/#/appList.
+
+On this page click on the name of your bot. This will take you to the *Contoso bot Registration* page. Here you will need to click *Generate New Password*, and make a note of the password in the same text file you noted your Bot app ID in.  This is the only time your password will be shown, so be sure to do this now.
+
+Scroll to the bottom of this page and click *Save*.  Now would also be a good time to save your text file if you have not done so already.
 
 #### Messaging extensions
+
+Messaging extensions let users ask for information from your service and post that information, in the form of cards, right into the channel conversation. Messaging extensions appear along the bottom of the compose box.
 
 The sample app has a messaging extension, which you can enable by clicking on *Messaging extensions* under Capabilities in the left hand column of App Studio.
 
 <img  width="450px" title="Adding a messaging extension" src="~/assets/images/get-started/app-studio-manifest-editor-mess-ext.png"/>
 
-App Studio has imported the sample messaging extension, which is listed in the right hand pane under *Messaging Extensions*. To edit this extension, click the *Edit* button under the extension name.
+The sample messaging extension is listed in the right hand pane under *Messaging Extensions*. To edit this extension, click the *Edit* button under the extension name.
 
 <img  width="450px" title="Adding a messaging extension dialog" src="~/assets/images/get-started/app-studio-manifest-editor-mess-ext-dialog.png"/>
 
