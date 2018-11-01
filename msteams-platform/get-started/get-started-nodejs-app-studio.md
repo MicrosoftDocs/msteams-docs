@@ -245,18 +245,15 @@ There are two fields that you need to update with your app URL.
 
 #### Bots
 
-Now click on the bots entry under Capabilities.
+Bots are the most common way to add functionality to your app. The hello world sample already has a bot as part of the sample, but it has not been registered with Microsoft yet.
 
 <img  width="450px" title="Adding a bot" src="~/assets/images/get-started/app-studio-manifest-editor-bots.png"/>
 
-The hello world sample already has a bot as part of the sample, but it has not been registered with Microsoft yet. To do this, click the *Edit* button below the entry *Imported Bot*.
+To edit your bot, click the *Edit* button below the entry *Imported Bot*.
 
 This will display the *Bot* dialog.
 
 <img  width="450px" title="Adding a bot dialog" src="~/assets/images/get-started/app-studio-manifest-editor-bot-dialog.png"/>
-
-TODO: The current Bot dialog does not allow you to register the bot if the bot was imported from an existing app package that had a placeholder app ID. That blocks further testing.
-Generating the APP ID and App Secrets also need to be added to the docs here.
 
 No other setting has to be changed in this dialog. Choose *Save* to exit the dialog.
 

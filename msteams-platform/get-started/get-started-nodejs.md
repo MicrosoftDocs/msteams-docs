@@ -234,7 +234,7 @@ The sample already comes with a bot. The bot is defined in the manifest and look
 
 [!code-json[Manifest file](~/../_msteams-samples-hello-world-nodejs/src/manifest.json#L41-L49)]
 
-You need a bot definition for each bot contained in your app. In this case you already have a bot and have given it a registered **bot ID**, so all you will do is add credentials for the bot and test it.
+You need a bot definition for each bot contained in your app. In this case you already have a bot and have given it a registered **App ID**, so all you will do is add credentials for the bot and test it.
 
 ### Add credentials for the bot
 
