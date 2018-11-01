@@ -13,7 +13,7 @@ To extend Microsoft Teams, you need to create a Microsoft Teams [app](~/concepts
 
 ## Before you start this tutorial
 
-You will need a Office 365 tenant that has been set up for development, and you will need to configure teams to allow you to upload apps. You can work with your Office 365 administrator to confirm that your tenant is ready, or you can install a private evaluation version of Office 365 that you can manage. For more information see these topics:
+You will need an Office 365 tenant that has been set up for development, and you will need to configure teams to allow you to upload apps. You can work with your Office 365 administrator to confirm that your tenant is ready, or you can install a private evaluation version of Office 365 that you can manage. For more information see these topics:
 
 - [Prepare your Office 365 tenant](~/get-started/get-started-tenant)
 - [Prepare Microsoft Teams for development](~/get-started/get-started-configure-teams)
@@ -22,7 +22,7 @@ You will need a Office 365 tenant that has been set up for development, and you 
 
 ## download and host your app
 
-These are the steps you will follow to download and host a simple "hello world" app in Teams:
+Follow these steps to download and host a simple "hello world" app in Teams:
 
 - Download the "hello world" sample app
 - Host it on the net so that Teams can find it
@@ -167,7 +167,7 @@ At this point you have an app hosted on the internet, but you have no way yet of
 For either method you will need the following:
 
 - The URL where your app can be found on the internet.
-- Icons that Teams will use to brand your app. The sample comes with placeholder icons located in "src\static\images.
+- Icons that Teams will use to brand your app. The sample comes with placeholder icons located in "src\static\images. App Studio also will provide default icons if needed.
 
 ### Use App Studio to update the app package
 
@@ -185,7 +185,7 @@ When App Studio is installed click on the Manifest editor to begin creating the 
 
 <img  width="450px" title="App Studio" src="~/assets/images/get-started/app-studio.png"/>
 
-The sample comes with it's own manifest and is designed to build an app package simply by typing `gulp` at the command line in the root directory of the project.
+The sample comes with its own manifest and is designed to build an app package simply by typing `gulp` at the command line in the root directory of the project.
 
 ```bash
 $ gulp
@@ -199,7 +199,7 @@ Build completed. Output in manifest folder
 [13:39:27] Finished 'default' after 62 μs
 ```
 
-In this part of the tutorial you are going to modify this app package by selecting the *Import an existing app* tile in the Manifest Editor.
+In the next part of the tutorial you are going to modify this app package by selecting the *Import an existing app* tile in the Manifest Editor.
 
 <img  width="450px" title="Importing an app" src="~/assets/images/get-started/app-studio-import.png"/>
 
@@ -211,7 +211,7 @@ Click on the tile for your newly imported app, *Hello World*.
 
 <img  width="450px" title="Importing an app" src="~/assets/images/get-started/app-studio-manifest-editor.png"/>
 
-There is a list of steps in the left-hand side of the Manifest editor, and on the right a list of properties that need to be filled in for each of those steps. Since this is a sample app, much of the information is already filled out. The next steps will walk you through changing the parts that need to be updated.
+There is a list of steps in the left-hand side of the Manifest editor, and on the right a list of properties that need to be filled in for each of those steps. Since you started with a sample app, much of the information is already filled out. The next steps will walk you through changing the parts that need to be updated.
 
 #### App details
 
@@ -223,13 +223,15 @@ Scroll through the rest of the App details in the right hand pane, and familiari
 
 #### Capabilities: Tabs
 
+Tabs are among the simplest elements to add to a Teams app. The sample app already supports several tabs, and you can add them as follows.
+
 ##### Team tab
 
 Your app can only have one Team tab.
 
 <img  width="450px" title="Adding a Teams tab" src="~/assets/images/get-started/app-studio-manifest-editor-tabs.png"/>
 
-The Team tab is where your configuration page goes. It looks like this:
+In this sample, the Team tab is where your configuration page goes. It looks like this:
 
 `https://yourteamsapp.ngrok.io/configure` where `yourteamsapp.ngrok.io` should be replaced by the URL that you used above when hosting your app.  The url is followed by '/configure".
 
@@ -259,7 +261,7 @@ This will display the *Bot* dialog.
 <img  width="450px" title="Adding a bot dialog" src="~/assets/images/get-started/app-studio-manifest-editor-bot-dialog.png"/>
 
 TODO: The current Bot dialog does not allow you to register the bot if the bot was imported from an existing app package that had a placeholder app ID. That blocks further testing.
-The manual walkthrough also mentions passwords associated with the ID. Are these managed by App Studio in the background? Are these the same as app Secrets? Later in the document it looks like there is some confusion between the APP ID and App Secrets. Needs to be resolved and tested.
+Generating the APP ID and App Secrets also need to be added to the docs here.
 
 No other setting has to be changed in this dialog. Choose *Save* to exit the dialog.
 
