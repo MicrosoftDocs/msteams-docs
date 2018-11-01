@@ -48,17 +48,16 @@ Verify that the tools are available by running the following in a terminal windo
 
 ```bash
 $ git --version
-git version 2.15.0.windows.1
+git version 2.19.0.windows.1
 
 $ node -v
-v6.11.4
+v8.9.3
 
 $ npm -v
 5.5.1
 
 $ gulp -v
-CLI version 1.4.0
-Local version 3.9.1
+CLI version 3.9.1
 ```
 
 You may have a different version of these applications. This should not be a problem.
@@ -68,7 +67,7 @@ If you have installed Visual Studio Code, you can verify the installation by run
 
 ```bash
 code --version
-1.18.1
+1.28.2
 929bacba01ef658b873545e26034d1a8067445e9
 ```
 

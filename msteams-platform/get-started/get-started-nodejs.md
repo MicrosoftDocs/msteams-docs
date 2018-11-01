@@ -246,7 +246,7 @@ Earlier you made note of the **APP ID** from the bot framework as well as a pass
 
 After these values are changed the app must be stopped, built using 'gulp', and run again using 'npm start'. Reload the app using the newly built zip file in Microsoft Teams.
 
-Do NOT stop your ngrok session or you will have to update all the ngrok urls associated with your app.
+Do NOT stop your ngrok session or you will have to update all the *ngrok* urls associated with your app.
 
 ### Test the bot with the bot emulator
 
