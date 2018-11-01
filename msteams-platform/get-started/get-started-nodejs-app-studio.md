@@ -268,6 +268,8 @@ On this page click on the name of your bot. This will take you to the *Contoso b
 
 Scroll to the bottom of this page and click *Save*.  Now would also be a good time to save your text file if you have not done so already.
 
+You will add this information to your hosted app later in this walkthrough, which will allow secure communication with your bot.
+
 #### Messaging extensions
 
 Messaging extensions let users ask for information from your service and post that information, in the form of cards, right into the channel conversation. Messaging extensions appear along the bottom of the compose box.
@@ -276,15 +278,17 @@ The sample app has a messaging extension, which you can enable by clicking on *M
 
 <img  width="450px" title="Adding a messaging extension" src="~/assets/images/get-started/app-studio-manifest-editor-mess-ext.png"/>
 
-The sample messaging extension is listed in the right hand pane under *Messaging Extensions*. To edit this extension, click the *Edit* button under the extension name.
+The sample messaging extension is listed in the right hand pane under *Messaging Extensions*. To use App Studio to update the App ID for the messaging extension you will need to go through the same steps as you did for the bot. Delete the existing messaging extension, and click *Set up* to set up and register your app extension.
 
-<img  width="450px" title="Adding a messaging extension dialog" src="~/assets/images/get-started/app-studio-manifest-editor-mess-ext-dialog.png"/>
+In the Messaging Extension dialog enter the name of your messaging extension `Contoso messaging Extension`, and click *Create*.  Make a note of the App ID for your messaging extension in *Notepad*.
 
-You can use the same Microsoft App ID as you used for the bot.
+Now click *Manage*, and in the *Contoso messaging extension Registration* web page, click *Generate New Password*.  Make a note of this password in Notepad, and then scroll to the bottom of the page and click *Save*. Now would also be a good time to save your text file if you have not done so already.
 
-TODO: There is no way to update this value in App Studio since the dialog does not allow the value to be changed.  Not sure why.  No content for this yet, since I don't have working messaging extensions to test.
+You will add this information to your hosted app later in this walkthrough, which will allow secure communication with your messaging extension.
 
-#### Test your app in Teams
+#### Register your app in Teams
+
+You have completed entering the details of your app, but two steps remain. First you must use the Test and Distribute section of App Studio to install your app in Teams, and second you must update your hosted application with the App IDs and passwords for your bot and your messaging extension.
 
 Click on the *Test and distribute* item under *Finish* in the left hand column of App Studio.
 
@@ -298,9 +302,15 @@ Be careful what team you add the app to. Most often you will want to set up a sp
 
 Once you turn off this button, the *Install* button at the bottom of the dialog is activated and can be chosen to finish this process.
 
-This finishes the App Studio portion of this walkthrough.  You should now see your app running in Teams.
+This finishes the App Studio portion of this walkthrough.  You should now see your app running in Teams, however the bot and the messaging extension will not work until you update the hosted application to know what the App IDs and passwords are.
 
 <img  width="450px" title="The finished app" src="~/assets/images/get-started/app-studio-finished-app.png"/>
+
+## Update your hosted application
+
+
+
+
 
 <a name="ConfigureTheAppTab"></a>
 
