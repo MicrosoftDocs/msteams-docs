@@ -29,23 +29,17 @@ In this tutorial, we will use the "[Build your first web part](https://docs.micr
 
 ## Prerequisites
 
-- (Internal) Make sure you were provided with a special `.npmrc` file
 - [Provision your Tenant App Catalog in SPO](https://docs.microsoft.com/en-us/sharepoint/use-app-catalog)
 - [Provision the LoB Catalog in Teams](https://docs.microsoft.com/en-us/microsoftteams/tenant-apps-catalog-teams)
-- Point NPM to the internal VSO repository:
-    - Copy the .npmrc file (that you were provided) to the NPM home directory
-    - Ensure the file is named .npmrc (the ‘.’ is important)
-    - Run the following:
+- Run the following:
 
 ```
-npm uninstall -g @microsoft/generator-sharepoint
-npm install -g @microsoft/generator-sharepoint@1.6.0-dk.3
+npm install -g @microsoft/generator-sharepoint@1.7.0
 ```
-
 
 ## Set up a web part in SharePoint
 
-1. Ensure you have installed the `.npmrc` file and ran the `npm install` command mentioned above
+1. Ensure you successfully ran the `npm install` command mentioned above
 2. Follow the steps in [Build your first web part](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part).
 3. For now, you need to disable the reactive property pane.  You do this by adding the following code to your webpart
 

@@ -12,6 +12,12 @@ ms.date: 10/15/2018
 
 ## Background
 
+In Microsoft Teams, Tabs bring the user experience of entire applications alongside the conversations that drive action in a team.  When open, Tabs occupy a substantial amount of visual space inside of the Microsoft Teams user experience – Tabs can provide a full application experience. 
+
+![Teams Tab fullscreen in SharePoint](~/assets/images/tabs/tabs-in-sharepoint/image084.png)
+
+With SharePoint Framework v.1.7, we’re now supporting the ability for developers to take that Teams Tab application experience and host it back in SharePoint. As Tabs are hosted in SharePoint they get a similar “full page” experience, exposing the full power of applications while retaining the context and familiarity of a SharePoint site.  Developers can also choose to create new application experiences, from scratch, with the SharePoint Framework, and layer in other Microsoft Teams experiences such as custom chatbots, adaptive cards, and other features.
+
 - Reach SharePoint users with your existing Teams tab application
 - Upload your app manifest directly to your SharePoint app catalog – format is natively recognized by SharePoint​
 - End user sets up and configures the tab on a page just like any other web part​
