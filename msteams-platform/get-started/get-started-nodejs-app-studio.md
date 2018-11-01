@@ -20,16 +20,13 @@ You will need an Office 365 tenant that has been set up for development, and you
 
 <a name="DownloadAndHost"></a>
 
-## download and host your app
+## Download and host your app
 
 Follow these steps to download and host a simple "hello world" app in Teams:
 
 - Download the "hello world" sample app
-- Host it on the net so that Teams can find it
+- Host it on the internet so that Teams can find it
 - Use App Studio (a Teams app) to create and upload a Teams app package that tells Teams about your app and where to look for it
-
-Once you have your app running in the Teams platform, you can enhance it further by adding the following capabilities. Follow along this tutorial to learn how to add these capabilities to your app.
-
 - Add a bot to your app
 - Compose rich messages
 
@@ -88,7 +85,7 @@ git clone https://github.com/OfficeDev/msteams-samples-hello-world-nodejs.git
 ```
 
 > [!TIP]
-> You can [fork](https://help.github.com/articles/fork-a-repo/) this [repo](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) if you want to modify and check in your changes to GitHub for future reference.
+> You can [fork](https://help.github.com/articles/fork-a-repo/) this [repo](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) if you want to modify and check in your changes to your GitHub repo for future reference.
 
 <a name="BuildRun"></a>
 
@@ -133,13 +130,11 @@ Remember that apps in Microsoft Teams are web applications exposing one or more 
 
 #### Host on the web using Azure
 
-You can host your sample app on any web service that you have access to, such Azure where you can host this app for free. See [Host your .NET Teams app in Azure](~/get-started/get-started-nodejs-in-azure) for detailed instructions using this sample. Once your app is hosted, make a note of the URL. You will need this later when you deploy your app to teams.
+You can host your sample app on any web service that you have access to, such Azure where you can host this app for free. See [Host your .NET Teams app in Azure](~/get-started/get-started-nodejs-in-azure) for detailed instructions using this sample. Once your app is hosted, make a note of the hosted apps URL. Notepad works fine for this purpose. You will need this later when you deploy your app to teams.
 
-#### Host locally using ngrok
+#### Host locally using *ngrok*
 
-You can also host your app locally during development by creating a tunnel to the local process on your development machine using `ngrok`. The downside of local hosting is that your machine must stay online for the service to be available.
-
-For quick testing you can run the app on your local machine and create a tunnel to it through a web endpoint. [ngrok](https://ngrok.com) is a free tool that lets you do just that. With ngrok you can get a web address such as `https://d0ac14a5.ngrok.io` (this URL is just an example). You can [download and install](https://ngrok.com/download) ngrok for your environment. Make sure you add it to a location in your `PATH`.
+For quick testing you can run the app on your local machine and create a tunnel to it through a web endpoint. [ngrok](https://ngrok.com) is a free tool that lets you do just that. With *ngrok* you can get a web address such as `https://d0ac14a5.ngrok.io` (this URL is just an example). You can [download and install](https://ngrok.com/download) *ngrok* for your environment. Make sure you add it to a location in your `PATH`.
 
 Once you install it, you can open a new terminal window and run the following command to create a tunnel. The sample uses port 3333, so be sure to specify it here.
 
@@ -147,16 +142,16 @@ Once you install it, you can open a new terminal window and run the following co
 ngrok http 3333
 ```
 
-Ngrok will listen to requests from the internet and will route them to your app running on port 3333. You can verify by opening your browser and going to `https://d0ac14a5.ngrok.io/hello` to load your app's hello page. Please be sure to use the forwarding address displayed by ngrok in your console session instead of this URL.
+*Ngrok* will listen to requests from the internet and will route them to your app running on port 3333. You can verify by opening your browser and going to `https://d0ac14a5.ngrok.io/hello` to load your app's hello page. Please be sure to use the forwarding address displayed by *ngrok* in your console session instead of this URL.
 
 > [!NOTE]
-> If you have used a different port in the [build and run](#build-and-run-the-sample) step above, make sure you use the same port number to setup the `ngrok` tunnel.
+> If you have used a different port in the [build and run](#build-and-run-the-sample) step above, make sure you use the same port number to setup the *ngrok* tunnel.
 > [!TIP]
-> It is a good idea to run `ngrok` in a different terminal window to keep it running without interfering with the node app which you might later have to stop, rebuild and rerun. The `ngrok` session will return useful debugging information in this window.
+> It is a good idea to run *ngrok* in a different terminal window to keep it running without interfering with the node app which you might later have to stop, rebuild and rerun. The *ngrok* session will return useful debugging information in this window.
 
-The app will only be available during the current session on your development machine. If the machine is shut down or goes to sleep the service will no longer be available. Remember this when sharing the app for testing by other users. If you have to restart the service it will return a new address and you will have to update every place that uses that address.
+There is a paid version of *ngrok* that allows persistent names. If you use the free version your app will only be available during the current session on your development machine. If the machine is shut down or goes to sleep the service will no longer be available. Remember this when sharing the app for testing by other users. If you have to restart the service it will return a new address and you will have to update every place that uses that address.
 
-Make a note of the URL of your app because you will need this later when you register the app with Teams using App studio.
+Make a note of the URL of your app because you will need this later when you register the app with Teams using App studio. Notepad works fine for this purpose.
 
 <a name="DeployToTeams"></a>
 
@@ -289,7 +284,7 @@ In order to upload your app to Teams, click the *Install* button under *Test and
 
 <img  width="450px" title="Adding a messaging extension dialog" src="~/assets/images/get-started/app-studio-manifest-editor-test-dialog.png"/>
 
-You can turn off the *Add to a team* switch since you are just testing and probably don't want to add any un needed noise to existing teams in your group.
+Be careful what team you add the app to. Most often you will want to set up a special team for testing.
 
 Once you turn off this button, the *Install* button at the bottom of the dialog is activated and can be chosen to finish this process.
 

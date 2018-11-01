@@ -87,5 +87,5 @@ Navigate to the following URLs and confirm that the correct pages appear.
 
 - https://YourAzureSite.com
 - https://YourAzureSite.com/hello
-- https://YourAzureSite.com/hello/first
-- https://YourAzureSite.com/hello/second
+- https://YourAzureSite.com/first
+- https://YourAzureSite.com/second
