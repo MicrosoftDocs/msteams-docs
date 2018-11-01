@@ -1,28 +1,25 @@
 ---
-title: Bring your SPFx Solution in Teams
+title: Bring your SPFx Solution to Teams
 description: Describes how to bring your SharePoint Framework webpart and use deploy it in Teams 
 keywords: teams tabs sharepoint spfx development
 ms.date: 10/15/2018
 ---
 
-# Bring Your SharePoint Framework Solution in Teams
+# Bring Your SharePoint Framework Solution to Teams
 
 
 > [!Note]
-> This feature is still in Dev Preview and while it closely reflects the final version, there may be small changes before this feature is Generally Availability
+> This feature is still in Dev Preview and while it closely reflects the final version, there may be small changes before this feature is Generally Availabile
 
 ## Background
 
-- SPFx has become the standard way for Enterprise Devlopers to develop “Office365-hosted” solutions for SharePoint
-- We are enabling SPFx developers to bring their SPFx components and run them as line-of-business applications inside of Teams
-- Developers can “target” the Sharepoint environment in their Teams `manifest.json` file
-- Standard features available to SPFx developers will also be available in Teams
-    - Authentication
-    - Graph and WebAPI Access
-    - CDN hosting
-    - Config experience
-    - Solution hosting
-- The SPFx component is able to get the right application context inside of Teams
+### Bring your apps to more places with new SharePoint Framework and Microsoft Teams integration 
+ 
+For a growing number of organizations, Microsoft Teams provides a hub for communications, tools, and work.  As developers integrate and deploy more tools to Microsoft Teams, it becomes easier for every user to stay in the flow of their work when tools are close at hand.  For all developers, creating tailored Microsoft Teams experiences can be at the center of unlocking creativity and transforming teamwork. With SharePoint Framework v1.7 and upcoming releases in Microsoft Teams, you can now share some of your best customizations across SharePoint and Microsoft Teams. 
+
+![Surfacing SPFx in Teams 1/2](~/assets/images/tabs/sharepoint-in-tabs/image001.png)
+
+For example, web parts are one of the most popular ways to customize SharePoint – providing page authors with building blocks they can use to create customized pages. With the release of SharePoint Framework 1.7 and new integrations in preview, you can take the web parts built with SharePoint Framework and make them available as applications for Microsoft Teams.  With some adjustments to the package metadata, every web part you’ve built can become a Tab in Microsoft Teams. In addition, you'll get to use the tools you know and love as a SharePoint developer, such as the Yeoman generator or accessing MS Graph APIs.
 
 ![Surfacing SPFx in Teams 1/2](~/assets/images/tabs/sharepoint-in-tabs/image013.png)
 
