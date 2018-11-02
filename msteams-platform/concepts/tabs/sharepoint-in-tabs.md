@@ -7,7 +7,6 @@ ms.date: 10/15/2018
 
 # Bring Your SharePoint Framework Solution to Teams
 
-
 > [!Note]
 > This feature is still in Dev Preview and while it closely reflects the final version, there may be small changes before this feature is Generally Availabile
 
@@ -41,7 +40,7 @@ npm install -g @microsoft/generator-sharepoint@1.7.0
 
 1. Ensure you successfully ran the `npm install` command mentioned above
 2. Follow the steps in [Build your first web part](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part).
-3. For now, you need to disable the reactive property pane.  You do this by adding the following code to your webpart
+3. For now, you need to disable the reactive property pane.  You do this by adding the following code to your HelloWorldWebPart class
 
 ```javascript
   public get disableReactivePropertyChanges(): boolean {

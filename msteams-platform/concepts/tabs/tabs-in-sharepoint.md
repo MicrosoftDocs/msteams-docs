@@ -12,11 +12,11 @@ ms.date: 10/15/2018
 
 ## Background
 
-In Microsoft Teams, Tabs bring the user experience of entire applications alongside the conversations that drive action in a team.  When open, Tabs occupy a substantial amount of visual space inside of the Microsoft Teams user experience – Tabs can provide a full application experience. 
+With SharePoint Framework v.1.7, we’re now supporting the ability for developers to take that Teams Tab application experience and host it back in SharePoint. As Tabs are hosted in SharePoint they get a similar “full page” experience, exposing the full power of applications while retaining the context and familiarity of a SharePoint site.  Developers can also choose to create new application experiences, from scratch, with the SharePoint Framework, and layer in other Microsoft Teams experiences such as custom chatbots, adaptive cards, and other features.
 
 ![Teams Tab fullscreen in SharePoint](~/assets/images/tabs/tabs-in-sharepoint/image084.png)
 
-With SharePoint Framework v.1.7, we’re now supporting the ability for developers to take that Teams Tab application experience and host it back in SharePoint. As Tabs are hosted in SharePoint they get a similar “full page” experience, exposing the full power of applications while retaining the context and familiarity of a SharePoint site.  Developers can also choose to create new application experiences, from scratch, with the SharePoint Framework, and layer in other Microsoft Teams experiences such as custom chatbots, adaptive cards, and other features.
+### Benefits of this approach:
 
 - Reach SharePoint users with your existing Teams tab application
 - Upload your app manifest directly to your SharePoint app catalog – format is natively recognized by SharePoint​
@@ -37,13 +37,7 @@ The sample app we're using manages the hiring process of candidates for open pos
 
 Download the sample app manifest from [**here**](https://github.com/billbliss/microsoft-teams-sample-talent-acquisition/raw/master/TeamsAppPackages/hr-app-package.zip)
 
-In Microsoft Teams, click on the Store icon and then "Upload a custom app" at the lower left – the file will be located in your Downloads folder and it's called hr-app-package.zip (if you are using the Azure version) or "ContosoHR.zip" if you built it yourself. If all goes well, you'll see the install/consent screen for your app. Choose the team you want to install to (presumably, a test team you created earlier this week) and click the Install button (of course the team names will be different):
-
-![](~/assets/images/tabs/tabs-in-sharepoint/image057.png)
-
-Next, you'll see the dialog below (of course, the team name will be different). Here, it shows the General Channel:
-
-![](~/assets/images/tabs/tabs-in-sharepoint/image059.png)
+In Microsoft Teams, click on the Store icon and then "Upload a custom app" at the lower left – the file will be located in your Downloads folder and it's called hr-app-package.zip. If all goes well, you'll see the install/consent screen for your app. Choose the team you want to install to and click the Install button.
 
 You're now free to experiment with your app:
 
@@ -55,7 +49,7 @@ You're now free to experiment with your app:
 
 ## Step 2: SharePoint Setup
 
-We have created a tool to make it easy to create App Pages (until we get it worked into the product). In your App Catalog (`https://YOUR_TENANT_NAME.sharepoint.com/sites/AppCat/AppCatalog/Forms/AllItems.aspx`), upload and deploy the SPA extension package.
+We have created a tool to make it easy to create App Pages. In your App Catalog (`https://YOUR_TENANT_NAME.sharepoint.com/sites/AppCat/AppCatalog/Forms/AllItems.aspx`), upload and deploy the SPA extension package.
 
 [You can find the package here](https://microsoft.sharepoint-df.com/:u:/t/TeamsDevKitchen/EfMg48rpcNhDmRKFEc9IP_UB0obEd_RDg1TmmVwR3bWUcQ?e=umeuIF).
 
@@ -66,7 +60,7 @@ We have created a tool to make it easy to create App Pages (until we get it work
 
 Install the SPA extension in the SharePoint team site for your test team
 
-- Go to Site Contents, and then click New > App
+- Go to Site Contents, and then click New → App
 - In the list "Apps you can add" you will find "spa-extension-client-side-solution". Click on it to install in the site.
 
 ![](~/assets/images/tabs/tabs-in-sharepoint/image063.png)
