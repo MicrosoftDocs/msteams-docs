@@ -1,10 +1,10 @@
 ---
 title: Host your Node based Teams app in Azure
 description: Host your Teams app in Azure using Node.JS
-keywords: getting started azure teams apps .net Node
+keywords: getting started azure teams apps Node
 ms.date: 10/24/2018
 ---
-# Host your .NET Teams app in Azure
+# Host your Node Teams app in Azure
 
 ## You will need:
 
@@ -46,6 +46,8 @@ You can now return to VS Code, where the Azure pane will now look something like
 <img width="450px" title="Azure pane in VS Code" src="~/assets/images/get-started/visual-studio-azure-account.png"/>
 
 What you actually see will depend on the type of account you have with Azure.
+
+<a name="configureenvironmentvariables"></a>
 
 ## Configure environment variables
 

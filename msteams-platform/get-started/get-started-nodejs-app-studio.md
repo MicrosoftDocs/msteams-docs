@@ -306,11 +306,11 @@ This finishes the App Studio portion of this walkthrough.  You should now see yo
 
 <img  width="450px" title="The finished app" src="~/assets/images/get-started/app-studio-finished-app.png"/>
 
-## Update your hosted application
+## Update your hosted app
 
+### Update your app in Azure
 
-
-
+If you followed the instructions in [Host your Node Teams app in Azure](~/get-started/get-started-nodejs-in-azure), you might remember the [Configure environment variables](~/get-started/get-started-nodejs-in-azure#configureenvironmentvariables). Refer to that section and enter the values you saved to notepad earlier in this walkthrough.
 
 <a name="ConfigureTheAppTab"></a>
 
