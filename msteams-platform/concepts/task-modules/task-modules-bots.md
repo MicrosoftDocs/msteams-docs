@@ -2,7 +2,7 @@
 title: Using Task Modules in Microsoft Teams bots
 description: How to use task modules with Microsoft Teams bots, including Bot Framework cards, Adaptive cards, and deep links.
 keywords: task modules teams bots
-ms.date: 10/24/2018
+ms.date: 10/30/2018
 ---
 # Using task modules from Microsoft Teams bots
 
@@ -74,6 +74,9 @@ This section defines the schema of what your bot receives when it receives a `ta
 
 Dealing with `invoke` messages in Bot Framework can be a little tricky because there's no formal support for them in the Bot Framework SDK. To make it easier, Teams has created `onInvoke()` helper functions in the [botbuilder-teams npm package (for Node.js)](https://www.npmjs.com/package/botbuilder-teams). This example below shows how to do it:
 
+> [!NOTE]
+> The sample code below was modified between Technical Preview and final release of this feature: the schema of the `task/fetch` request changed to follow what was [documented in the previous section](#payload-of-taskfetch-and-tasksubmit-messages). That is, the documentation was correct but the implementation was not. See the `// for Technical Preview [...]` comments below for what changed.
+
 ```typescript
 // Handle requests and responses for a "Custom Form" and an "Adaptive card" task module.
 // Assumes request is coming from an Adaptive card Action.Submit button that has a "taskModule" property indicating what to invoke
@@ -85,7 +88,7 @@ private async onInvoke(event: builder.IEvent, cb: (err: Error, body: any, status
     }
     switch (invokeType) {
         case "task/fetch": {
-            if (invokeValue !== undefined && invokeValue.taskModule === "customform") {
+            if (invokeValue !== undefined && invokeValue.data.taskModule === "customform") { // for Technical Preview, was invokeValue.taskModule
                 // Return the specified task module response to the bot
                 let fetchTemplate: any = "task": {
                     "type": "continue",
@@ -99,7 +102,7 @@ private async onInvoke(event: builder.IEvent, cb: (err: Error, body: any, status
                 };
                 cb(null, fetchTemplate, 200);
             };
-            if (invokeValue !== undefined && invokeValue.taskModule === "adaptivecard") {
+            if (invokeValue !== undefined && invokeValue.data.taskModule === "adaptivecard") { // for Technical Preview, was invokeValue.taskModule
                 let adaptiveCard = {
                     "type": "AdaptiveCard",
                     "body": [
