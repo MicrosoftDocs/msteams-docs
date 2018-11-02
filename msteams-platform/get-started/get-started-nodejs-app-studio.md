@@ -317,13 +317,14 @@ MICROSOFT_EXT_APP_ID=<YOUR MESSAGE EXTENSION'S APP ID>
 MICROSOFT_EXT_APP_PASSWORD=<YOUR MESSAGE EXTENSION"S PASSWORD>
 WEBSITE_NODE_DEFAULT_VERSION=8.9.4
 ```
+
 How you do that differs depending on how you hosted your app.
 
 ### Update your app in Azure
 
 If you followed the instructions in [Host your Node Teams app in Azure](~/get-started/get-started-nodejs-in-azure), you might remember the [Configure environment variables](~/get-started/get-started-nodejs-in-azure#configureenvironmentvariables). Refer to that section and enter the values you saved to notepad earlier in this walkthrough.
 
-### Update your app in Node.js
+### Update your app in ngrok
 
 If you are running the app using ngrok you'll need to set up some environment variables. There are many ways to do this, but the easiest, if you are using Visual Studio Code, is to add a [launch configuration](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations):
 
