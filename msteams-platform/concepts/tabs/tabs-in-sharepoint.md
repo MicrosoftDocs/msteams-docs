@@ -61,7 +61,7 @@ Install the SPA extension in the SharePoint team site for your test team
 - Go to Site Contents, and then click New → App
 - In the list "Apps you can add" you will find "spa-extension-client-side-solution". Click on it to install in the site.
 
-<div class="small-images">
+<div style="width: 50%;">
 ![](~/assets/images/tabs/tabs-in-sharepoint/image063.png)
 </div>
 
@@ -73,13 +73,13 @@ Upload and deploy your Teams Tab package (either the one you downloaded from [he
 
 When prompted, enable "Make this solution available to all sites in the organization".
 
-<div class="small-images">
+<div style="width: 50%;">
 ![](~/assets/images/tabs/tabs-in-sharepoint/image065.png)
 </div>
 
 In your site, create a new page, by clicking in the gear button (top-right) and then "Add a page"
 
-<div class="small-images">
+<div style="width: 50%;">
 ![](~/assets/images/tabs/tabs-in-sharepoint/image066.png)
 </div>
 
@@ -87,7 +87,7 @@ You'll see the pages authoring experience. Name your page, for example "My Teams
 
 Open the web part toolbox, by pressing the + button, and select your Teams Tab (named "Contoso HR"). Web parts are sorted alphabetically. You can use the search bar for the right name. This will create a web part in the canvas that contains your Teams Tab:
 
-<div class="small-images">
+<div style="width: 50%;">
 ![](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
 </div>
 
@@ -95,7 +95,7 @@ Press the "Publish" button to finish editing.
 
 Note: You may want to click "Add page to navigation" to have a quick reference to your page in the left navigation bar:
 
-<div class="small-images">
+<div style="width: 50%;">
 ![](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
 </div>
 
@@ -103,7 +103,7 @@ Once your page is published, you can click on the "Make SPA" button in the top-l
 
 This operation can take a few seconds. After that you will have an app page integrated in SharePoint, accessible from the local navigation from anywhere in the site.
 
-<div class="small-images">
+<div style="width: 50%;">
 ![](~/assets/images/tabs/tabs-in-sharepoint/image075.png)
 </div>
 
@@ -116,11 +116,3 @@ Microsoft Teams developers are able to get SharePoint-specific contexts when the
 Example from a formatted version of this JSON:
 
 ![](~/assets/images/tabs/tabs-in-sharepoint/image081.png)
-
-
-<style>
-.small-images img {
-    text-align: center;
-    width: 50%;
-}
-</style>
