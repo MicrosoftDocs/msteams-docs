@@ -67,11 +67,14 @@ In the app manifest, your command item is an object with the following structure
 | `id` | Unique ID that you assign to this command. The user request will include this ID. | Yes |
 | `title` | Command name. This value appears in the UI. | Yes |
 | `description` | Help text indicating what this command does. This value appears in the UI. | Yes |
-| `initialRun` | If set to **true**, indicates this command should be executed as soon as the user chooses this command in the UI. | No |
-| `parameters` | List of parameters. | Yes |
+| `type` | Set the type of command. Possible values include `query` and `action`. If not present the default value is set to `query` | No |
+| `initialRun` | Optional parameter, used with `query` commands. If set to **true**, indicates this command should be executed as soon as the user chooses this command in the UI. | No |
+| `fetchTask` | Optional parameter, used with `action` commands. Set to **true** to fetch the adaptive card or web url to display within the [task module](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/task-modules/task-modules-overview). This is used when the inputs to the `action` command is dynamic as opposed to a static set of parameters. Note that the if set to **true** the static parameter list for the command is ignored | No |
+| `parameters` | Static list of parameters for the command. | Yes |
 | `parameter.name` | The name of the parameter. This is sent to your service in the user request. | Yes |
 | `parameter.description` | Describes this parameter’s purposes or example of the value that should be provided. This value appears in the UI. | Yes |
 | `parameter.title` | Short user-friendly parameter title or label. | Yes |
+| `parameter.inputType` | Set to the type of input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text` | No |
 
 #### Complete app manifest example
 
@@ -81,33 +84,34 @@ In the app manifest, your command item is an object with the following structure
   "manifestVersion": "1.3",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
-  "packageName": "com.microsoft.teams.samples.bing",
+  "packageName": "com.microsoft.teams.samples.Todo",
   "developer": {
     "name": "John Developer",
-    "websiteUrl": "http://bingbotservice.azurewebsites.net/",
-    "privacyUrl": "http://bingbotservice.azurewebsites.net/privacy",
-    "termsOfUseUrl": "http://bingbotservice.azurewebsites.net/termsofuse"
+    "websiteUrl": "http://todobotservice.azurewebsites.net/",
+    "privacyUrl": "http://todobotservice.azurewebsites.net/privacy",
+    "termsOfUseUrl": "http://todobotservice.azurewebsites.net/termsofuse"
   },
   "name": {
-    "short": "Bing",
-    "full": "Bing"
+    "short": "To Do",
+    "full": "To Do"
   },
   "description": {
-    "short": "Find Bing search results",
-    "full": "Find Bing search results and share them with your team members."
+    "short": "Find or create a new task in To Do",
+    "full": "Find or create a new task in To Do"
   },
   "icons": {
-    "outline": "bing-outline.jpg",
-    "color": "bing-color.jpg"
+    "outline": "todo-outline.jpg",
+    "color": "todo-color.jpg"
   },
   "accentColor": "#ff6a00",
   "composeExtensions": [
     {
       "botId": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
       "canUpdateConfiguration": true,
-      "commands": [{
+      "commands": [
+        {
           "id": "searchCmd",
-          "description": "Search Bing for information on the web",
+          "description": "Search you Todo's",
           "title": "Search",
           "initialRun": true,
           "parameters": [{
@@ -115,6 +119,39 @@ In the app manifest, your command item is an object with the following structure
             "description": "Enter your search keywords",
             "title": "Keywords"
           }]
+        },
+        {
+          "id": "addTodo",
+          "description": "Create a To Do item",
+          "title": "Create To Do",
+          "type": "Action",
+          "parameters": [
+            {
+            "name": "Title",
+            "description": "To Do Title",
+            "title": "Title",
+            "inputType": "text"
+            },
+            {
+            "name": "Description",
+            "description": "Description of the task",
+            "title": "Description",
+            "inputType": "textarea"
+            },
+            {
+            "name": "Date",
+            "description": "Due date for the task",
+            "title": "Date",
+            "inputType": "date"
+            }
+          ]
+        },
+        {
+          "id": "reassignTodo",
+          "description": "Reassign a todo item",
+          "title": "Create To Do",
+          "type": "Action",
+          "fetchTask": true
         }
       ]
     }
@@ -124,8 +161,8 @@ In the app manifest, your command item is an object with the following structure
     "messageTeamMembers"
   ],
   "validDomains": [
-    "bingbotservice.azurewebsites.net",
-    "*.bingbotservice.azurewebsites.net"
+    "todobotservice.azurewebsites.net",
+    "*.todobotservice.azurewebsites.net"
   ]
 }
 ```
@@ -168,14 +205,14 @@ Every request to your messaging extension is done via an `Activity` object that 
 
 ### Receive user requests
 
-When a user performs a query, Microsoft Teams sends your service a standard Bot Framework `Activity` object. Your service should perform its logic for an `Activity` that has `type` set to `invoke` and `name` set to a supported `composeExtension` type, as shown in the following table.
+When a user executes a command, Microsoft Teams sends your service a standard Bot Framework `Activity` object. Your service should perform its logic for an `Activity` that has `type` set to `invoke` and `name` set to a supported `composeExtension` type, as shown in the following table.
 
 In addition to the standard bot activity properties, the payload contains the following request metadata:
 
 |Property name|Purpose|
 |---|---|
 |`type`| Type of request; must be `invoke`. |
-|`name`| Type of command that is issued to your service. Currently the following types are supported: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` |
+|`name`| Type of command that is issued to your service. Currently the following types are supported: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/fetchTask` <br> `composeExtension/submitAction` <br> `composeExtension/setting` |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
 |`from.aadObjectId`| Azure Active Directory object id of the user that sent the request. |
@@ -252,7 +289,7 @@ Your service should respond with the results matching the user query. The respon
 |Property name|Purpose|
 |---|---|
 |`composeExtension`|Top-level response envelope.|
-|`composeExtension.type`|Type of response. The following types are supported: <br>`result`: displays a list of search results <br>`auth`: asks the user to authenticate <br>`config`: asks the user to set up the messaging extension <br>`message`: displays a plain text message |
+|`composeExtension.type`|Type of response. The following types are supported: <br>`result`: displays a list of search results <br>`auth`: asks the user to authenticate <br>`config`: asks the user to set up the messaging extension <br>`message`: displays a plain text message <br>`task`: Used to render the task module for `fetchTask` scenarios |
 |`composeExtension.attachmentLayout`|Specifies the layout of the attachments. Used for responses of type `result`. <br>Currently the following types are supported: <br>`list`: a list of card objects containing thumbnail, title, and text fields <br>`grid`: a grid of thumbnail images |
 |`composeExtension.attachments`|Array of valid attachment objects. Used for responses of type `result`. <br>Currently the following types are supported: <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
 |`composeExtension.suggestedActions`|Suggested actions. Used for responses of type `auth` or `config`. |
@@ -279,6 +316,8 @@ The result list is displayed in the Microsoft Teams UI with a preview of each it
 * Extracted from the basic `title`, `text`, and `image` properties of the attachment. These are used only if the `preview` property is not set and these properties are available.
 
 You can display a preview of an Adaptive or Office 365 Connector card in the result list simply by setting its preview property; this is not necessary if the results are already hero or thumbnail cards. If no preview property is specified, the preview of the card will fail and nothing will be displayed.
+
+Note that the result of an `action` based command can only be a single card today. 
 
 #### Response example
 
