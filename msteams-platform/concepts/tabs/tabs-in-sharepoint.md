@@ -61,9 +61,7 @@ Install the SPA extension in the SharePoint team site for your test team
 - Go to Site Contents, and then click New → App
 - In the list "Apps you can add" you will find "spa-extension-client-side-solution". Click on it to install in the site.
 
-<div style="width: 50%;">
 ![](~/assets/images/tabs/tabs-in-sharepoint/image063.png)
-</div>
 
 - This process can take up to a few minutes. Once it's finished you will be able to switch from site pages to single-page application experience, and vice versa.
 
@@ -73,39 +71,29 @@ Upload and deploy your Teams Tab package (either the one you downloaded from [he
 
 When prompted, enable "Make this solution available to all sites in the organization".
 
-<div style="width: 50%;">
 ![](~/assets/images/tabs/tabs-in-sharepoint/image065.png)
-</div>
 
 In your site, create a new page, by clicking in the gear button (top-right) and then "Add a page"
 
-<div style="width: 50%;">
 ![](~/assets/images/tabs/tabs-in-sharepoint/image066.png)
-</div>
 
 You'll see the pages authoring experience. Name your page, for example "My Teams Tab".
 
 Open the web part toolbox, by pressing the + button, and select your Teams Tab (named "Contoso HR"). Web parts are sorted alphabetically. You can use the search bar for the right name. This will create a web part in the canvas that contains your Teams Tab:
 
-<div style="width: 50%;">
 ![](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
-</div>
 
 Press the "Publish" button to finish editing.
 
 Note: You may want to click "Add page to navigation" to have a quick reference to your page in the left navigation bar:
 
-<div style="width: 50%;">
 ![](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
-</div>
 
 Once your page is published, you can click on the "Make SPA" button in the top-left corner (it will be there if you followed the "Setup" step at the beginning of this lab). This will convert the current page into an App Page, showing the normal page chrome with a full-page experience for the Teams Tab.
 
 This operation can take a few seconds. After that you will have an app page integrated in SharePoint, accessible from the local navigation from anywhere in the site.
 
-<div style="width: 50%;">
 ![](~/assets/images/tabs/tabs-in-sharepoint/image075.png)
-</div>
 
 You can also use the Teams Tab as a web part, integrating its behavior with other web parts to build a rich page experience.
 
