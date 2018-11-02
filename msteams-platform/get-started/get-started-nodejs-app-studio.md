@@ -348,7 +348,7 @@ If you are running the app using ngrok you'll need to set up some environment va
 Where:
 
 MICROSOFT_BOT_APP_ID and MICROSOFT_BOT_APP_PASSWORD is the ID and password, respectively, for your bot.
-MICROSOFT_BOT_APP_ID and MICROSOFT_BOT_APP_PASSWORD is the ID and password, respectively, for your messaging extension.
+MICROSOFT_EXT_APP_ID and MICROSOFT_EXT_APP_PASSWORD is the ID and password, respectively, for your messaging extension.
 NODE_DEBUG will show you what's happening in your bot in the Visual Studio Code debug console.
 NODE_CONFIG_DIR points to the directory at the root of the repository (by default, when the app is run locally, it looks for it in the src folder).
 
