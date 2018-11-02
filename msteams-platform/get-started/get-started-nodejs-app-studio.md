@@ -328,7 +328,7 @@ If you followed the instructions in [Host your Node Teams app in Azure](~/get-st
 
 If you are running the app using ngrok you'll need to set up some environment variables. There are many ways to do this, but the easiest, if you are using Visual Studio Code, is to add a [launch configuration](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations):
 
-[...]
+``` 
         {
             "type": "node",
             "request": "launch",
@@ -345,7 +345,8 @@ If you are running the app using ngrok you'll need to set up some environment va
                 "SUPPRESS_NO_CONFIG_WARNING": "y",
                 "NODE_CONFIG_DIR": "../config"
             }
-[...]
+```
+
 Where:
 
 MICROSOFT_BOT_APP_ID and MICROSOFT_BOT_APP_PASSWORD is the ID and password, respectively, for your bot.
