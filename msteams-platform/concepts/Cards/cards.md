@@ -10,7 +10,7 @@ A *card* is a user-interface (UI) container for short or related pieces of infor
 
 ## Adaptive cards
 
-[Adaptive cards](~/concepts/cards/cards-reference?branch=Harysh-Adaptive-cards#adaptive-card) are a new cross product specification for cards in Microsoft products including Bots, Cortana, Outlook, and Windows. They aare the recommended card type for new Teams development. For general information from the Adaptive cards team see [Adaptive Cards Overview](https://docs.microsoft.com/en-us/adaptive-cards). You can use adaptive cards anywhere you can use existing Hero cards, Office365 cards, and Thumbnail cards.
+[Adaptive cards](~/concepts/cards/cards-reference?branch=Harysh-Adaptive-cards#adaptive-card) are a new cross product specification for cards in Microsoft products including Bots, Cortana, Outlook, and Windows. They are the recommended card type for new Teams development. For general information from the Adaptive cards team see [Adaptive Cards Overview](https://docs.microsoft.com/en-us/adaptive-cards). You can use adaptive cards anywhere you can use existing Hero cards, Office365 cards, and Thumbnail cards.
 
 In addition to Adaptive Cards, Teams supports two other types of cards:
 
@@ -35,7 +35,7 @@ Any card used by any Office 365 Connector will work in Teams as part of a Connec
 
 The Microsoft Bot Framework extended the cards specification by adding a set of predefined cards that bots could use as part of bot messages. Teams supports bots using the Bot Framework but it supports a slightly different set of these cards. General information on cards in Bot Framework can be found in [Add rich card attachments to messages](https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-send-rich-cards). These cards are called *simple cards* in Teams.
 
-Bots in Teams can use any type of card: simple, connector or adaptive. Cards that are supported by bots in Teams are detailed in [Teams Card Reference](~/concepts/cards/cards-reference).  
+Bots in Teams can use any type of card: simple, connector or adaptive. Cards that are supported by bots in Teams are detailed in [Teams Card Reference](~/concepts/cards/cards-reference).
 
 ## Cards in Messaging Extensions
 
