@@ -11,11 +11,6 @@
   items: 
   - name:  Prepare your Office 365 tenant
     href: ./get-started/get-started-tenant
-  - name: Use App Studio for Microsoft Teams
-    href: ./get-started/get-started-app-studio
-    items:
-    - name: App Studio Controls
-      href: ./get-started/app-studio-component-library
   - name: Get started with Node.js
     href: ./get-started/get-started-nodejs-app-studio
     items: 
@@ -26,6 +21,11 @@
     items: 
     - name: Publish .Net to Azure
       href: ./get-started/get-started-dotnet-in-azure
+  - name: Use App Studio for Microsoft Teams
+    href: ./get-started/get-started-app-studio
+    items:
+    - name: App Studio Controls
+      href: ./get-started/app-studio-component-library
   expanded: true
 - name: Concepts
   href: ./concepts/concepts-overview
