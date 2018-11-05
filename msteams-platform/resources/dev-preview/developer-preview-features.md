@@ -9,6 +9,9 @@ ms.date: 09/26/2018
 When these features are out of developer preview this content will be merged into the live doc set.
 The developer preview includes the following new features:
 
+## Action based commands for Messaging Extensions
+The messaging extension infrastructure is being updated to include non-search based commands. This can be used to collect input from a user and make an update to your service. Possible exampls include: Create a task, Create a workitem, Queue a build and so on. The [messaging extension section](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/messaging-extensions) has been updated to reflect the new changes. 
+
 ## Introducing "task modules"
 
 A task module allows you to create modal popup experiences in your Teams application, from both bots and tabs. Inside the popup, you can run your own custom HTML/JavaScript code, show an `<iframe>`-based widget such as a YouTube or Microsoft Stream video, or display an [Adaptive card](https://docs.microsoft.com/en-us/adaptive-cards/).

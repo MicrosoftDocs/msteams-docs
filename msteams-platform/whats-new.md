@@ -12,6 +12,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+| 11/05/2018 | Action based command support for messaging extensions | [Messaging Extensions](~/concepts/compose-extensions) |
 | 10/05/2018 | Formatting information for cards has been updated, and tested in the desktop, iOS and Android clients for Teams. | [Cards](~/concepts/cards/cards), [Card formatting](~/concepts/cards/cards-format) |
 | 09/26/2018 | The "Task modules" capability was released to Developer Preview. | [Task modules overview](~/concepts/task-modules/task-modules-overview), [Using task modules in tabs](~/concepts/task-modules/task-modules-tabs), [Using task modules in bots](~/concepts/task-modules/task-modules-bots) |
 | 09/24/2018 | Calls and online meetings APIs for Microsoft Graph were released to beta, and Teams apps can now interact with users in rich ways using voice and video. | [Calls and online meetings bots](~/concepts/calls-and-meetings/calls-meetings-bots-overview), [Real-time media concepts](~/concepts/calls-and-meetings/real-time-media-concepts), [Registering a calling bot](~/concepts/calls-and-meetings/register-calling-bot), [Debugging and local testing](~/concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots), [Application-hosted media](~/concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots), [Handling incoming call notifications](~/concepts/calls-and-meetings/call-notifications) |
