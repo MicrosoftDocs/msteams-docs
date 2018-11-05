@@ -22,7 +22,7 @@
     - name: Publish Node.js to Azure
       href: ./get-started/get-started-nodejs-in-azure   
   - name: Get started with C#/.NET
-    href: ./get-started/get-started-dotnet
+    href: ./get-started/get-started-dotnet-app-studio
     items: 
     - name: Publish .Net to Azure
       href: ./get-started/get-started-dotnet-in-azure
