@@ -186,20 +186,21 @@ If you followed the instructions in [Host your Node Teams app in Azure](~/get-st
 If you are running the app using ngrok you'll need to set up some local environment variables. There are many ways to do this, but the easiest, if you are using Visual Studio Code, is to add a [launch configuration](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations):
 
 ``` 
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Launch - Teams Debug",
-            "program": "${workspaceRoot}/src/app.js",
-            "cwd": "${workspaceFolder}/src",
-            "env": {
-                "BASE_URI": "https://yourNgrokURL.ngrok.io",
-                "MICROSOFT_APP_ID": "00000000-0000-0000-0000-000000000000",
-                "MICROSOFT_APP_PASSWORD": "yourBotAppPassword",
-                "NODE_DEBUG": "botbuilder",
-                "SUPPRESS_NO_CONFIG_WARNING": "y",
-                "NODE_CONFIG_DIR": "../config"
-            }
+{
+    "type": "node",
+    "request": "launch",
+    "name": "Launch - Teams Debug",
+    "program": "${workspaceRoot}/src/app.js",
+    "cwd": "${workspaceFolder}/src",
+    "env": {
+        "BASE_URI": "https://yourNgrokURL.ngrok.io",
+        "MICROSOFT_APP_ID": "00000000-0000-0000-0000-000000000000",
+        "MICROSOFT_APP_PASSWORD": "yourBotAppPassword",
+        "NODE_DEBUG": "botbuilder",
+        "SUPPRESS_NO_CONFIG_WARNING": "y",
+        "NODE_CONFIG_DIR": "../config"
+    }
+}
 ```
 
 Where:
