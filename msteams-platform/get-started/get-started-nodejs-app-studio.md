@@ -129,11 +129,11 @@ Remember that apps in Microsoft Teams are web applications exposing one or more 
 
 #### Host on the web using Azure
 
-You can host your sample app on any web service that you have access to, such Azure where you can host this app for free. See [Host your .NET Teams app in Azure](~/get-started/get-started-nodejs-in-azure) for detailed instructions using this sample. Once your app is hosted, make a note of the hosted apps URL. Notepad works fine for this purpose. You will need this later when you deploy your app to teams.
+You can host your sample app on any web service that you have access to, such as Azure where you can host this app for free. See [Host your .NET Teams app in Azure](~/get-started/get-started-nodejs-in-azure) for detailed instructions to host this sample. Once your app is hosted, make a note of the URL of the hosted app. Notepad works fine for this purpose. You will need this URL later when you deploy your app to teams.
 
 #### Host locally using *ngrok*
 
-For quick testing you can run the app on your local machine and create a tunnel to it through a web endpoint. [ngrok](https://ngrok.com) is a free tool that lets you do just that. With *ngrok* you can get a web address such as `https://d0ac14a5.ngrok.io` (this URL is just an example). You can [download and install](https://ngrok.com/download) *ngrok* for your environment. Make sure you add it to a location in your `PATH`.
+For quick testing you can run the app on your local machine and create a tunnel to it with a web endpoint. [ngrok](https://ngrok.com) is a free tool that lets you do just that. With *ngrok* you can get a web address such as `https://d0ac14a5.ngrok.io` (this URL is just an example). You can [download and install](https://ngrok.com/download) *ngrok* for your environment. Make sure you add it to a location in your `PATH`.
 
 Once you install it, you can open a new terminal window and run the following command to create a tunnel. The sample uses port 3333, so be sure to specify it here.
 
@@ -150,13 +150,13 @@ ngrok http 3333
 
 There is a paid version of *ngrok* that allows persistent names. If you use the free version your app will only be available during the current session on your development machine. If the machine is shut down or goes to sleep the service will no longer be available. Remember this when sharing the app for testing by other users. If you have to restart the service it will return a new address and you will have to update every place that uses that address.
 
-Make a note of the URL of your app because you will need this later when you register the app with Teams using App studio. Notepad works fine for this purpose.
+Remember, make a note of the URL of your app because you will need this later when you register the app with Teams using App studio. Notepad works fine for this purpose.
 
 <a name="DeployToTeams"></a>
 
 ## Deploy your app to Microsoft Teams
 
-At this point you have an app hosted on the internet, but you have no way yet of telling Teams where to look, or even what your app is called. You now have to create an app package, which is little more than a text file that contains the app manifest, and some icons that the Teams client will use to properly display and brand your app. You can manually create this app package, or you can use App Studio, an app that runs in Teams that will simplify the process of registering the app. App Studio is the recommended way of creating the app package.
+At this point you have an app hosted on the internet, but you have no way yet of telling Teams where to look for it, or even what your app is called. To do this you now have to create an app package. This is little more than a text file that contains the app manifest and some icons that the Teams client will use to properly display and brand your app. You can manually create this app package, or you can use App Studio, a tool that runs in Teams that will simplify the process of registering the app. App Studio is the recommended way of creating and updating the app package.
 
 For either method you will need the following:
 
@@ -175,15 +175,15 @@ MICROSOFT_APP_PASSWORD=<YOUR BOT'S PASSWORD>
 WEBSITE_NODE_DEFAULT_VERSION=8.9.4
 ```
 
-How you do that differs depending on how you hosted your app.
+How you do that differs depending on how you hosted your app. The important thing about using environment variables is that these values are part of your environment - they can be accessed by the code for your app, but they are not exposed to third parties who might examine the files that make up your site.
 
 ### Update your app in Azure
 
-If you followed the instructions in [Host your Node Teams app in Azure](~/get-started/get-started-nodejs-in-azure), you might remember the [Configure environment variables](~/get-started/get-started-nodejs-in-azure#configureenvironmentvariables). Refer to that section and enter the values you saved to notepad earlier in this walkthrough.
+If you followed the instructions in [Host your Node Teams app in Azure](~/get-started/get-started-nodejs-in-azure), you might remember the [Configure environment variables](~/get-started/get-started-nodejs-in-azure#configureenvironmentvariables) step. Refer to that section and enter the values you saved to notepad earlier in this walkthrough. These environment variables will be hosted on the server.
 
 ### Update your app in ngrok
 
-If you are running the app using ngrok you'll need to set up some environment variables. There are many ways to do this, but the easiest, if you are using Visual Studio Code, is to add a [launch configuration](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations):
+If you are running the app using ngrok you'll need to set up some local environment variables. There are many ways to do this, but the easiest, if you are using Visual Studio Code, is to add a [launch configuration](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations):
 
 ``` 
         {
@@ -204,7 +204,7 @@ If you are running the app using ngrok you'll need to set up some environment va
 
 Where:
 
-MICROSOFT_BOT_APP_ID and MICROSOFT_BOT_APP_PASSWORD is the ID and password, respectively, for your bot.
+MICROSOFT_APP_ID and MICROSOFT_APP_PASSWORD is the ID and password, respectively, for your bot.
 NODE_DEBUG will show you what's happening in your bot in the Visual Studio Code debug console.
 NODE_CONFIG_DIR points to the directory at the root of the repository (by default, when the app is run locally, it looks for it in the src folder).
 
@@ -212,7 +212,7 @@ NODE_CONFIG_DIR points to the directory at the root of the repository (by defaul
 
 ## Configure the app tab
 
-Once you install the app into a team, you will need to configure it to show content. Go to a channel in the team and click on the **'+'** button to add a new tab. You can then choose `Hello World` from the **Add a tab** list. You will then be presented with a configuration dialog. This dialog will let you choose which tab to display in this channel. Once you select the tab and click on `Save` then you can see the `Hello World` tab loaded with the tab you chose.
+Once you install the app into a team, you will need to configure it to show content. Go to a channel in the team and click on the **'+'** button to add a new tab. You can then choose `Hello World` from the **Add a tab** list. You will then be presented with a configuration dialog. This dialog will let you choose which tab to display in this channel. Once you select the tab and click on `Save` you can see the `Hello World` tab loaded with the tab you chose.
 
 <img width="530px" src="~/assets/images/samples-hello-world-tab-configure.png" title="Screenshot of configure" />
 
@@ -226,7 +226,7 @@ You can now interact with the bot in Teams. Choose a channel in the team where y
 
 ### Test your messaging extension
 
-To test your messaging extension, you can click on the three dots below the input box in your conversation view. A menu will pop up with the **'Hello World'** app in it. When you click it, you will see a bunch of random texts showing up. You can choose any one of them and it will be inserted it into your conversation.
+To test your messaging extension, you can click on the three dots below the input box in your conversation view. A menu will pop up with the **'Hello World'** app in it. When you click it, you will see a number of random texts. You can choose any one of them and it will be inserted it into your conversation.
 
 <img width="530px" title="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
 

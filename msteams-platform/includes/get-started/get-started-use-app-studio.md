@@ -6,15 +6,15 @@ App Studio is a Teams app that you can install from the Teams store. Simply clic
 
 <img  width="450px" title="Finding App Studio in the Store" src="~/assets/images/get-started/app-studio-store.png"/>
 
-Click on the App Studio tile, and choose *install* in the dialog that pops up.
+Once you find the tile for App Studio, click on it and choose *install* in the dialog that pops up.
 
 <img  width="450px" title="Installing App Studio" src="~/assets/images/get-started/app-studio-install.png"/>
 
-When App Studio is installed click on the Manifest editor to begin creating the app package for your Teams app.
+Once App Studio is installed click on the Manifest editor tab to begin creating the app package for your Teams app.
 
 <img  width="450px" title="App Studio" src="~/assets/images/get-started/app-studio.png"/>
 
-The sample comes with its own manifest and is designed to build an app package simply by typing `gulp` at the command line in the root directory of the project.
+The sample comes with its own pre-made manifest, and is designed to build an app package simply by typing `gulp` at the command line in the root directory of the project.
 
 ```bash
 $ gulp
@@ -28,11 +28,11 @@ Build completed. Output in manifest folder
 [13:39:27] Finished 'default' after 62 μs
 ```
 
-In the next part of the tutorial you are going to modify this app package by selecting the *Import an existing app* tile in the Manifest Editor.
+In the next part of this walkthrough you are going to modify this app package by selecting the *Import an existing app* tile in the Manifest Editor.
 
 <img  width="450px" title="Importing an app" src="~/assets/images/get-started/app-studio-import.png"/>
 
-Once the app package has been imported App Studio should look like this.
+Once the app package has been imported App Studio should look like this:
 
 <img  width="450px" title="Importing an app" src="~/assets/images/get-started/app-studio-imported-app.png"/>
 
@@ -40,11 +40,11 @@ Click on the tile for your newly imported app, *Hello World*.
 
 <img  width="450px" title="Importing an app" src="~/assets/images/get-started/app-studio-manifest-editor.png"/>
 
-There is a list of steps in the left-hand side of the Manifest editor, and on the right a list of properties that need to be filled in for each of those steps. Since you started with a sample app, much of the information is already filled out. The next steps will walk you through changing the parts that need to be updated.
+There is a list of steps in the left-hand side of the Manifest editor, and on the right a list of properties that need to be filled in for each of those steps. Since you started with a sample app, much of the information is already filled out. The next steps will walk you through changing the parts that still need to be updated.
 
 #### App details
 
-Click on the *App details* entry under *Details*. The only thing you need to do here is to let App Studio create a new identifier for your app by clicking the *Generate* button.
+Click on the *App details* entry under *Details*. The only thing you need to do here is to let App Studio create a new app identifier id for your app by clicking the *Generate* button.
 
 Your new app id should look something like: `2322041b-72bf-459d-b107-f4f335bc35bd`.
 
@@ -52,7 +52,7 @@ Scroll through the rest of the App details in the right hand pane, and familiari
 
 #### Capabilities: Tabs
 
-Tabs are among the simplest elements to add to a Teams app. The sample app already supports several tabs, and you can add them as follows.
+Tabs are among the simplest elements to add to a Teams app. The sample app already supports several tabs, and you can enable them as follows.
 
 ##### Team tab
 
@@ -83,7 +83,7 @@ Bots are the most common way to add functionality to your app. The hello world s
 
 <img  width="450px" title="Adding a bot" src="~/assets/images/get-started/app-studio-manifest-editor-bots.png"/>
 
-The bot that was imported from the sample does not have an App ID associated with it yet. You will have to create a new bot so that App Studio can create a new App ID and register it with Microsoft.  Note that this is the bots App ID, not the apps App ID. Each bot in an app requires its own id.
+The bot that was imported from the sample does not have an App ID associated with it yet. You will have to create a new bot so that App Studio can create a new App ID and register it with Microsoft.  Note that this is the App ID for the bot, which is different from the App ID that we created for the app in a earlier step. Each bot in an app requires its own App ID.
 
 Click the *delete* button next to the *Imported bot* in the bot list.
 
@@ -101,9 +101,7 @@ Now look under *App Secrets* in the *Bots* pane of App Studio, and click *Manage
 
 On this page click on the name of your bot. This will take you to the *Contoso bot Registration* page. Here you will need to click *Generate New Password*, and make a note of the password in the same text file you noted your Bot app ID in.  This is the only time your password will be shown, so be sure to do this now.
 
-Scroll to the bottom of this page and click *Save*.  Now would also be a good time to save your text file if you have not done so already.
-
-You will add this information to your hosted app later in this walkthrough, which will allow secure communication with your bot.
+Scroll to the bottom of this page and click *Save*.  Now would also be a good time to save your text file if you have not done so already. You will add this information to your hosted app later in this walkthrough, which will allow secure communication with your bot.
 
 #### Messaging extensions
 
@@ -113,13 +111,13 @@ The sample app has a messaging extension, which you can enable by clicking on *M
 
 <img  width="450px" title="Adding a messaging extension" src="~/assets/images/get-started/app-studio-manifest-editor-mess-ext.png"/>
 
-The sample messaging extension is listed in the right hand pane under *Messaging Extensions*. This time you will simply copy the app ID that you created previously for your bot. Because of this re-use you will not need to register an id for this messaging extension.
+The sample messaging extension is listed in the right hand pane under *Messaging Extensions*. This time you will simply copy the app ID that you created previously for your bot. Because of this re-use you will not need to register an id for the messaging extension.
 
 In the Messaging Extension dialog enter the name of your messaging extension `Contoso messaging Extension`, and click *Create*.
 
 #### Register your app in Teams
 
-You have completed entering the details of your app, but two steps remain. First you must use the Test and Distribute section of App Studio to install your app in Teams, and second you must update your hosted application with the App IDs and passwords for your bot and your messaging extension.
+You have now completed entering the details of your app, but two steps remain. First you must use the Test and Distribute section of App Studio to install your app in Teams, and second you must update your hosted application with the App ID and password for your bot. Remember that the sample expects to use the same App ID and password for both the bot and the messaging extension.
 
 Click on the *Test and distribute* item under *Finish* in the left hand column of App Studio.
 
@@ -131,8 +129,8 @@ In order to upload your app to Teams, click the *Install* button under *Test and
 
 Be careful what team you add the app to. Most often you will want to set up a special team for testing.
 
-Once you turn off this button, the *Install* button at the bottom of the dialog is activated and can be chosen to finish this process.
+Once you do this, the *Install* button at the bottom of the dialog is activated and can be chosen to finish this process.
 
-This finishes the App Studio portion of this walkthrough.  You should now see your app running in Teams, however the bot and the messaging extension will not work until you update the hosted application to know what the App IDs and passwords are.
+This finishes the App Studio portion of this walkthrough.  You should now see your app running in Teams, however the bot and the messaging extension will not work until you update the hosted applications environment to know what the App IDs and passwords are.
 
 <img  width="450px" title="The finished app" src="~/assets/images/get-started/app-studio-finished-app.png"/>
