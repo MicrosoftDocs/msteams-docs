@@ -113,13 +113,9 @@ The sample app has a messaging extension, which you can enable by clicking on *M
 
 <img  width="450px" title="Adding a messaging extension" src="~/assets/images/get-started/app-studio-manifest-editor-mess-ext.png"/>
 
-The sample messaging extension is listed in the right hand pane under *Messaging Extensions*. To use App Studio to update the App ID for the messaging extension you will need to go through the same steps as you did for the bot. Delete the existing messaging extension, and click *Set up* to set up and register your app extension.
+The sample messaging extension is listed in the right hand pane under *Messaging Extensions*. This time you will simply copy the app ID that you created previously for your bot. Because of this re-use you will not need to register an id for this messaging extension.
 
-In the Messaging Extension dialog enter the name of your messaging extension `Contoso messaging Extension`, and click *Create*.  Make a note of the App ID for your messaging extension in *Notepad*.
-
-Now click *Manage*, and in the *Contoso messaging extension Registration* web page, click *Generate New Password*.  Make a note of this password in Notepad, and then scroll to the bottom of the page and click *Save*. Now would also be a good time to save your text file if you have not done so already.
-
-You will add this information to your hosted app later in this walkthrough, which will allow secure communication with your messaging extension.
+In the Messaging Extension dialog enter the name of your messaging extension `Contoso messaging Extension`, and click *Create*.
 
 #### Register your app in Teams
 

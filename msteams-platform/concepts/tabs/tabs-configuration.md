@@ -27,8 +27,6 @@ On save, the code determines which button was selected and sets the various para
 
 With this as a simple example, let's walk through the steps your configuration page needs to perform to load your tab content.
 
-<!-- TODO: fix to use latest sample app --> 
-
 ```HTML
 <html>
 <body>

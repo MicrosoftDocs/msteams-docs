@@ -170,10 +170,8 @@ For either method you will need the following:
 The sample app requires the following environment variables to be set to the values you made a note of earlier.
 
 ```
-MICROSOFT_BOT_APP_ID=<YOUR BOT'S APP ID>
-MICROSOFT_BOT_APP_PASSWORD=<YOUR BOT'S PASSWORD>
-MICROSOFT_EXT_APP_ID=<YOUR MESSAGE EXTENSION'S APP ID>
-MICROSOFT_EXT_APP_PASSWORD=<YOUR MESSAGE EXTENSION"S PASSWORD>
+MICROSOFT_APP_ID=<YOUR BOT'S APP ID>
+MICROSOFT_APP_PASSWORD=<YOUR BOT'S PASSWORD>
 WEBSITE_NODE_DEFAULT_VERSION=8.9.4
 ```
 
@@ -196,10 +194,8 @@ If you are running the app using ngrok you'll need to set up some environment va
             "cwd": "${workspaceFolder}/src",
             "env": {
                 "BASE_URI": "https://yourNgrokURL.ngrok.io",
-                "MICROSOFT_BOT_APP_ID": "00000000-0000-0000-0000-000000000000",
-                "MICROSOFT_BOT_APP_PASSWORD": "yourBotAppPassword",
-                "MICROSOFT_EXT_APP_ID": "00000000-0000-0000-0000-000000000000",
-                "MICROSOFT_EXT_APP_PASSWORD": "yourMessageExtensionPassword",
+                "MICROSOFT_APP_ID": "00000000-0000-0000-0000-000000000000",
+                "MICROSOFT_APP_PASSWORD": "yourBotAppPassword",
                 "NODE_DEBUG": "botbuilder",
                 "SUPPRESS_NO_CONFIG_WARNING": "y",
                 "NODE_CONFIG_DIR": "../config"
@@ -209,7 +205,6 @@ If you are running the app using ngrok you'll need to set up some environment va
 Where:
 
 MICROSOFT_BOT_APP_ID and MICROSOFT_BOT_APP_PASSWORD is the ID and password, respectively, for your bot.
-MICROSOFT_EXT_APP_ID and MICROSOFT_EXT_APP_PASSWORD is the ID and password, respectively, for your messaging extension.
 NODE_DEBUG will show you what's happening in your bot in the Visual Studio Code debug console.
 NODE_CONFIG_DIR points to the directory at the root of the repository (by default, when the app is run locally, it looks for it in the src folder).
 
