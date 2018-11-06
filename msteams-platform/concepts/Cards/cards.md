@@ -10,7 +10,7 @@ A *card* is a user-interface (UI) container for short or related pieces of infor
 
 ## Adaptive cards
 
-[Adaptive cards](~/concepts/cards/cards-reference?branch=Harysh-Adaptive-cards#adaptive-card) are a new cross product specification for cards in Microsoft products including Bots, Cortana, Outlook, and Windows. They aare the recommended card type for new Teams development. For general information from the Adaptive cards team see [Adaptive Cards Overview](https://docs.microsoft.com/en-us/adaptive-cards). You can use adaptive cards anywhere you can use existing Hero cards, Office365 cards, and Thumbnail cards.
+[Adaptive cards](~/concepts/cards/cards-reference?branch=Harysh-Adaptive-cards#adaptive-card) are a new cross product specification for cards in Microsoft products including Bots, Cortana, Outlook, and Windows. They are the recommended card type for new Teams development. For general information from the Adaptive cards team see [Adaptive Cards Overview](https://docs.microsoft.com/en-us/adaptive-cards). You can use adaptive cards anywhere you can use existing Hero cards, Office365 cards, and Thumbnail cards.
 
 In addition to Adaptive Cards, Teams supports two other types of cards:
 
