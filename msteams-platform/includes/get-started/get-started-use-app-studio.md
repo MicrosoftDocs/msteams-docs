@@ -107,13 +107,37 @@ Scroll to the bottom of this page and click *Save*.  Now would also be a good ti
 
 Messaging extensions let users ask for information from your service and post that information, in the form of cards, right into the channel conversation. Messaging extensions appear along the bottom of the compose box.
 
-The sample app has a messaging extension, which you can enable by clicking on *Messaging extensions* under Capabilities in the left hand column of App Studio.
+The sample app has a messaging extension, which you can enable by clicking on *Messaging extensions* under *Capabilities* in the left hand column of App Studio.
 
 <img  width="450px" title="Adding a messaging extension" src="~/assets/images/get-started/app-studio-manifest-editor-mess-ext.png"/>
 
-The sample messaging extension is listed in the right hand pane under *Messaging Extensions*. This time you will simply copy the app ID that you created previously for your bot. Because of this re-use you will not need to register an id for the messaging extension.
+The sample messaging extension is listed in the right hand pane under *Messaging Extensions*. Click *Delete* again to remove this entry, and then click the Set up button following the same steps as you followed for bots.
 
-In the Messaging Extension dialog enter the name of your messaging extension `Contoso messaging Extension`, and click *Create*.
+<img  width="450px" title="Adding a messaging extension" src="~/assets/images/get-started/app-studio-manifest-editor-mess-ext.png"/>
+
+In the *Messaging Extension* dialog, choose the *Existing* tab, then under *Bot ID* choose *Select from one of my existing bots*.
+
+In the drop down below *Bot ID* expand the drop down and choose the ID of the bot you created previously, and then choose the *Save* button. This returns you to the main page for Messaging Extensions.
+
+You now need to add a *Command* to your messaging extension. Do this by clicking the *Add* button in the *Command* section of *Messaging Extensions*. The *New Command* button will appear.
+
+<img  width="450px" title="Adding a messaging extension command" src="~/assets/images/get-started/app-studio-manifest-editor-command-dialog.png"/>
+
+In the Command dialog enter the following values.
+
+Under *New command*:
+
+- *Command ID*  = getRandomText
+- *Title*       = Get some random text for fun
+- *Description* = Gets some random text and images
+
+Under *Parameter*
+
+- *Name*        = cardTitle
+- *Title*       = Card title
+- *Description* = Card title to use
+
+And finally click the *Save* button. You are now done with configuring your messaging extension.
 
 #### Register your app in Teams
 
