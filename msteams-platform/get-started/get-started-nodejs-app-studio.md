@@ -234,5 +234,6 @@ To test your messaging extension, you can click on the three dots below the inpu
 
 <img width="430px" title="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
 
+Choose one of the random texts, and you will see a card formatted and ready to send with your own message at the bottom.
 
 <img width="430px" title="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
