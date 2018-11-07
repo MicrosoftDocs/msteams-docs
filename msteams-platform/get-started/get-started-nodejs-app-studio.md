@@ -215,7 +215,7 @@ NODE_CONFIG_DIR points to the directory at the root of the repository (by defaul
 
 Once you install the app into a team, you will need to configure it to show content. Go to a channel in the team and click on the **'+'** button to add a new tab. You can then choose `Hello World` from the **Add a tab** list. You will then be presented with a configuration dialog. This dialog will let you choose which tab to display in this channel. Once you select the tab and click on `Save` you can see the `Hello World` tab loaded with the tab you chose.
 
-<img width="530px" src="~/assets/images/samples-hello-world-tab-configure.png" title="Screenshot of configure" />
+<img width="430px" src="~/assets/images/samples-hello-world-tab-configure.png" title="Screenshot of configure" />
 
 ### Test your bot in Teams
 
@@ -231,6 +231,8 @@ To test your messaging extension, you can click on the three dots below the inpu
 
 <img width="430px" title="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
 
+
 <img width="430px" title="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
+
 
 <img width="430px" title="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />

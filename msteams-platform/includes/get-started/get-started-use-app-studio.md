@@ -113,7 +113,7 @@ The sample app has a messaging extension, which you can enable by clicking on *M
 
 The sample messaging extension is listed in the right hand pane under *Messaging Extensions*. Click *Delete* again to remove this entry, and then click the Set up button following the same steps as you followed for bots.
 
-<img  width="450px" title="Adding a messaging extension" src="~/assets/images/get-started/app-studio-manifest-editor-mess-ext.png"/>
+<img  width="450px" title="Adding a messaging extension" src="~/assets/images/get-started/app-studio-manifest-editor-mess-ext-dialog.png"/>
 
 In the *Messaging Extension* dialog, choose the *Existing* tab, then under *Bot ID* choose *Select from one of my existing bots*.
 
