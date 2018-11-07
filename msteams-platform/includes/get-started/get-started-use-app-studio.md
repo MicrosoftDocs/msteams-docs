@@ -1,8 +1,8 @@
 ### Use App Studio to update the app package
 
-App Studio can simplify the creation of an app, and really helps when adding bots, since manually these these require online registration with Azure bot services.
+App Studio can simplify the creation of an app, and really helps when adding bots, since manually these these require online registration with Microsoft Bot Framework.
 
-App Studio is a Teams app that you can install from the Teams store. Simply click on the app store icon at the bottom of the left hand bar in Teams, and search on App Studio.
+App Studio is a Teams app that you can install from the Teams store. Simply click on the app store icon at the bottom of the left hand bar in Teams, and search for App Studio.
 
 <img  width="450px" title="Finding App Studio in the Store" src="~/assets/images/get-started/app-studio-store.png"/>
 

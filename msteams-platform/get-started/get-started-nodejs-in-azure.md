@@ -9,7 +9,7 @@ ms.date: 10/24/2018
 ## You will need:
 
 * **A Microsoft Azure account**. For testing you can use a free trial account and migrate to a production ready account when the app is ready for public use. If you have never used Azure before, you can get started by [creating a new free account](https://azure.microsoft.com/en-us/free/). If you already have an Azure account you can use your existing account to host this app for free.
-* **Visual Studio Code**. This free code editor can be downloaded at:[Visual Studio Code](https://code.visualstudio.com/download). Once VS Code is installed, add support for Azure deployment by clicking this link to install the [App service extension](vscode:extension/ms-azuretools.vscode-azureappservice).
+* **Visual Studio Code**. This free code editor can be downloaded at: [Visual Studio Code](https://code.visualstudio.com/download). Once VS Code is installed, add support for Azure deployment by clicking this link to install the [App service extension](vscode:extension/ms-azuretools.vscode-azureappservice).
 * **A downloaded sample app to deploy**. See [Getting Started with Node.JS](~/get-started/get-started-nodejs-app-studio#DownloadAndHost) to download and test the sample app. Return to this topic when it is time to host the app.
 
 ## Open the app in VS.Code
@@ -73,7 +73,7 @@ Finally you will see this message, assuming everything went well.
 
 ## Configure environment variables
 
-Environment variables are used in Azure to securely hold sensitive information like app ids and passwords. You will need to manually add the following Application Settings (environment variables) in VS Code.
+Environment variables are used in Azure to securely hold sensitive information like app ids and passwords. You will need to manually add the following Application Settings (environment variables) in VS Code by right-clicking *Application Settings*.
 
 ```
 MICROSOFT_BOT_APP_ID=<YOUR BOT'S APP ID>

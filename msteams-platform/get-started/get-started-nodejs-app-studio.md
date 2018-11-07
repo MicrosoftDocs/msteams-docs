@@ -22,13 +22,7 @@ You will need an Office 365 tenant that has been set up for development, and you
 
 ## Download and host your app
 
-Follow these steps to download and host a simple "hello world" app in Teams:
-
-- Download the "hello world" sample app
-- Host it on the internet so that Teams can find it
-- Use App Studio (a Teams app) to create and upload a Teams app package that tells Teams about your app and where to look for it
-- Add a bot to your app
-- Compose rich messages
+Follow these steps to download and host a simple "hello world" app in Teams.
 
 <a name="GetPrerequisites"></a>
 
@@ -38,7 +32,7 @@ To complete this tutorial, you need the following tools. If you don't already ha
 
 - [Git](https://git-scm.com/downloads)
 - [Node.js and NPM](https://nodejs.org/)
-- Get any text editor. You can install and use [Visual Studio Code](https://code.visualstudio.com/download) for free.
+- Get any text editor or IDE. You can install and use [Visual Studio Code](https://code.visualstudio.com/download) for free.
 
 If you see options to add `git`, `node`, `npm`, and `code` to the PATH during installation, choose to do so. It will be handy.
 
