@@ -128,7 +128,13 @@
     - name: Using connectors
       href: ./concepts/connectors/connectors-using
   - name: Messaging extensions
-    href: ./concepts/messaging-extensions
+    href: ./concepts/messaging-extensions/messaging-extensions-overview
+    items:
+    - name: Search based messaging extensions
+      href: ./concepts/messaging-extensions/search-extensions
+    items:
+    - name: Create based messaging extensions
+      href: ./concept/messaging-extensions/create-extensions
   - name: Calls and online meetings
     href: ./concepts/calls-and-meetings/calls-meetings-bots-overview
     items:
