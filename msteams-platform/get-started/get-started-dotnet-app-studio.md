@@ -7,25 +7,11 @@ ms.date: 10/30/2018
 
 # Get started on the Microsoft Teams platform with C#/.NET
 
-> [!div class="op_single_selector"]
-> - [.NET](~/get-started/get-started-dotnet)
-> - [Node.js](~/get-started/get-started-nodejs)
+The [Microsoft Teams](/microsoftteams/) developer platform makes it easy for you to extend Teams and integrate your own applications and services seamlessly into the Teams workspace. These apps can then be distributed to your enterprise or for teams around the world.
 
-[!include[Step 1 Intro](~/includes/get-started/step1-intro.md)]
+To extend Microsoft Teams, you will need to create a Microsoft Teams [app](~/concepts/apps/apps-overview). A Microsoft Teams app is a web application that you host. This app can then be integrated into the user's workspace in Teams.
 
 This tutorial helps you get started creating a Microsoft Teams app using C# on .NET. You can test the app by loading it into a Team that you have permissions for, or into a test tenant created using the Office Developer Program. This topic is written to be platform independent.
-
-To create your app:
-
-> [!div class="checklist"]
-> - [Get prerequisites](#GetPrerequisites)
-> - [Download the sample](#DownloadSample)
-> - [Build and run the sample](#BuildRun)
-> - [Host the sample](#HostSample)
-> - [Deploy your app into Microsoft Teams](#DeployToTeams)
-> - [Configure the app tab](#ConfigureTheAppTab)
-> - [Add a bot to your app](#AddBot)
-> - [Compose rich messages](#ComposeRichMessages)
 
 ## Before you start this tutorial
 
@@ -120,20 +106,50 @@ Visual Studio has built-in support for app deployment to different providers, in
 
 [!include[Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
 
-### Add credentials for the bot
+## Update your hosted app
 
-In the `Microsoft.Teams.Samples.HelloWorld.Web` project you will find a config file called `Web.config`. This file contains the following code:
+The sample app requires the following environment variables to be set to the values you made a note of earlier.
 
-[!code-xml[Web.config file](~/../_msteams-samples-hello-world-csharp/Microsoft.Teams.Samples.HelloWorld.Web/Web.config#L7-L14)]
+```
+MICROSOFT_APP_ID=<YOUR BOT'S APP ID>
+MICROSOFT_APP_PASSWORD=<YOUR BOT'S PASSWORD>
+WEBSITE_NODE_DEFAULT_VERSION=8.9.4
+```
 
-Earlier you made note of the **APP ID** from the bot framework as well as a password. Use those vales for "MicrosoftAppId" and "MicrosoftAppPassword" in the `Web.config` file. This is not a particularly safe location to store credentials, but it will work for this example.
+How you do that differs depending on how you hosted your app. The important thing about using environment variables is that these values are part of your environment - they can be accessed by the code for your app, but they are not exposed to third parties who might examine the files that make up your site.
 
-After these values are changed the app must be rebuilt using `Build Solution` command, and should be started again using `Start Debugging` from the `Debug` menu. Reload the app using the newly built zip file in Microsoft Teams.
+### Update your app in Azure
 
-> [!NOTE]
-> Do NOT stop your ngrok session or you will have to update all the ngrok urls associated with your app.
+If you followed the instructions in [Host your Node Teams app in Azure](~/get-started/get-started-nodejs-in-azure), you might remember the [Configure environment variables](~/get-started/get-started-nodejs-in-azure#configureenvironmentvariables) step. Refer to that section and enter the values you saved to notepad earlier in this walkthrough. These environment variables will be hosted on the server.
 
-If you are hosting in Azure you will need to add credentials there.
+### Update your app in ngrok
+
+If you are running the app using ngrok you'll need to set up some local environment variables. There are many ways to do this, but the easiest, if you are using Visual Studio Code, is to add a [launch configuration](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations):
+
+``` 
+{
+    "type": "node",
+    "request": "launch",
+    "name": "Launch - Teams Debug",
+    "program": "${workspaceRoot}/src/app.js",
+    "cwd": "${workspaceFolder}/src",
+    "env": {
+        "BASE_URI": "https://yourNgrokURL.ngrok.io",
+        "MICROSOFT_APP_ID": "00000000-0000-0000-0000-000000000000",
+        "MICROSOFT_APP_PASSWORD": "yourBotAppPassword",
+        "NODE_DEBUG": "botbuilder",
+        "SUPPRESS_NO_CONFIG_WARNING": "y",
+        "NODE_CONFIG_DIR": "../config"
+    }
+}
+```
+
+Where:
+
+MICROSOFT_APP_ID and MICROSOFT_APP_PASSWORD is the ID and password, respectively, for your bot.
+NODE_DEBUG will show you what's happening in your bot in the Visual Studio Code debug console.
+NODE_CONFIG_DIR points to the directory at the root of the repository (by default, when the app is run locally, it looks for it in the src folder).
+
 
 ## Configure the app tab
 
