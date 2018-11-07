@@ -169,8 +169,138 @@ To open your messaging extension, navigate to any of your chats or channels. Cho
 
 There are three ways to collect information from an end user in Teams.
 
-* **Static parameter list**: In this method, all you need to do is define a static list of parameters in the manfifest as shown above in the "Create To Do" command. In this method, Teams will construct a simple form based adaptive card and display it within a task module. To use this method ensure `fetchTask` is set to `false` and that you define your paramters in the manifest.
-* **Dynamic input using an adaptive card**: In this method, your service can define a custom adaptive card to collect the end user input. For this approach, set the `fetchTask` parameter to `true` in the manifest. In this method your service will be send a fetchTask event and needs to respond with an adaptive card based [task module response](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/task-modules/task-modules-overview#the-taskinfo-object).
-* **Dynamic input using a web view**: In this method, your service can show an `<iframe>` based widget to show any custom UI and collect user input. For this approach, set the `fetchTask` parameter to `true` in the manifest. Just like in the adaptive card flow your service will be send a fetchTask event and needs to respond with a url based [task module response](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/task-modules/task-modules-overview#the-taskinfo-object).
+### Static parameter list ###
+
+In this method, all you need to do is define a static list of parameters in the manfifest as shown above in the "Create To Do" command. To use this method ensure `fetchTask` is set to `false` and that you define your paramters in the manifest.
+
+When a user chooses a command with static parameters, Teams will generate a form in a Task Module with the parameters defined in the manifest. On hitting Submit a `composeExtension/submitAction` is sent to the bot. See the [responding to submit](#Responding to submit) section for more info ont he expected set of responses.
 
 
+### Dynamic input using an adaptive card
+
+In this method, your service can define a custom adaptive card to collect the end user input. For this approach, set the `fetchTask` parameter to `true` in the manifest. Note that if you set `fetchTask` to `true` any static parameters defined for the command will be ignored.
+
+In this method your service will be receive a `composeExtension/fetchTask` event and needs to respond with an adaptive card based [task module response](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/task-modules/task-modules-overview#the-taskinfo-object). Below is an sample response with an adaptive card:
+
+```json
+{
+    "task": {
+        "value": {
+            "card": {
+                "type": "AdaptiveCard",
+                "body": [
+                    {
+                        "type": "TextBlock",
+                        "text": "Please enter the following information:"
+                    },
+                    {
+                        "type": "TextBlock",
+                        "text": "Name"
+                    },
+                    {
+                        "type": "Input.Text",
+                        "spacing": "None",
+                        "title": "New Input.Toggle",
+                        "placeholder": "Placeholder text"
+                    },
+                    {
+                        "type": "TextBlock",
+                        "text": "Date of birth"
+                    },
+                    {
+                        "type": "Input.Date",
+                        "spacing": "None",
+                        "title": "New Input.Toggle"
+                    }
+                ],
+                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                "version": "1.0"
+            }
+        },
+        "type": "continue"
+    }
+}
+```
+The bot can also respond with an auth/config response if the user needs to authenticate or configure the extesion before getting the user input.
+
+### Dynamic input using a web view
+
+In this method, your service can show an `<iframe>` based widget to show any custom UI and collect user input. For this approach, set the `fetchTask` parameter to `true` in the manifest. 
+
+Just like in the adaptive card flow your service will be send a fetchTask event and needs to respond with a url based [task module response](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/task-modules/task-modules-overview#the-taskinfo-object). Below is an sample response with an adaptive card
+
+```json
+{
+    "task": {
+        "value": {
+            "url": "http://mywebapp.com/input"
+        },
+        "type": "continue"
+    }
+}
+```
+The bot can also respond with an auth/config response if the user needs to authenticate or configure the extesion before getting the user input.
+
+## Responding to submit
+
+Once a user completes entering their input your bot will receive a `composeExtension/submitAction` event with the command id and parameter values set. 
+
+There are three different expected responses to a submitAction.
+
+### Task Module response
+
+This is used when your extension needs to chain dialogs together to get more information. The response is exactly the same as the `fetchTask` section mentioned earlier
+
+### Compose extension auth/config response
+
+This is used when your extension needs to either authenticate or configure in order to continue. See the [authentication section](~/concepts/messaging-extensions/search-extensions#Authentication) defined in the search section for more details.
+
+### Compose extension result response
+
+This used to insert a card into the compose box as a result of a the comand. It's the same response that's used in the search command, but it's limited to one command in the array. 
+
+```json
+{
+  "composeExtension": {
+    "attachments": [
+      {  
+        "contentType": "application/vnd.microsoft.teams.card.o365connector",
+        "content": {
+          "sections": [
+            {
+              "activityTitle": "[85069]: Create a cool app",
+              "activityImage": "https://placekitten.com/200/200"
+            },
+            {
+              "title": "Details",
+              "facts": [
+                {
+                  "name": "Assigned to:",
+                  "value": "[Larry Brown](mailto:larryb@example.com)"
+                },
+                {
+                  "name": "State:",
+                  "value": "Active"
+                }
+              ]
+            }
+          ]
+        },
+        "preview": {
+          "contentType": "application/vnd.microsoft.card.thumbnail",
+          "content": {
+            "title": "85069: Create a cool app",
+            "images": [
+              {
+                "url": "https://placekitten.com/200/200"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "type": "result",
+    "attachmentLayout": "list"
+  }
+}
+```
