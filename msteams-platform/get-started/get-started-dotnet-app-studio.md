@@ -18,24 +18,21 @@ This tutorial helps you get started creating a Microsoft Teams app using C# on .
 To create your app:
 
 > [!div class="checklist"]
-> - [Prepare your Office 365 tenant](~/get-started/get-started-tenant)
-> - [Prepare Microsoft Teams for development](#PrepareMicrosoftTeams)
 > - [Get prerequisites](#GetPrerequisites)
 > - [Download the sample](#DownloadSample)
 > - [Build and run the sample](#BuildRun)
 > - [Host the sample](#HostSample)
 > - [Deploy your app into Microsoft Teams](#DeployToTeams)
 > - [Configure the app tab](#ConfigureTheAppTab)
-
-Once you have your app running in the Teams platform, you can enhance it further by adding the following capabilities. Follow along this tutorial to learn how to add these capabilities to your app.
-
-> [!div class="checklist"]
 > - [Add a bot to your app](#AddBot)
 > - [Compose rich messages](#ComposeRichMessages)
 
-<a name="PrepareMicrosoftTeams"></a>
+## Before you start this tutorial
 
-[!include[Get teams](~/includes/get-started/step1-prepare-for-dev.md)]
+You will need an Office 365 tenant that has been set up for development, and you will need to configure teams to allow you to upload apps. You can work with your Office 365 administrator to confirm that your tenant is ready, or you can install a private evaluation version of Office 365 that you can manage. For more information see these topics:
+
+- [Prepare your Office 365 tenant](~/get-started/get-started-tenant)
+- [Prepare Microsoft Teams for development](~/get-started/get-started-configure-teams)
 
 <a name="GetPrerequisites"></a>
 
@@ -66,7 +63,7 @@ You can continue to use this terminal window to run the commands that follow in 
 
 ## Download the sample
 
-We have provided a [simple 'Hello, World!' sample](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) to get you started. In a terminal window, run the following command to clone the sample repository to your local machine:
+We have provided a simple [Hello, World!](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) sample in C# to get you started. In a terminal window, run the following command to clone the sample repository to your local machine:
 
 ```bash
 git clone https://github.com/OfficeDev/msteams-samples-hello-world-csharp.git
@@ -123,22 +120,6 @@ Visual Studio has built-in support for app deployment to different providers, in
 
 [!include[Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
 
-## Configure the app tab
-
-Once you install the app into a team, you will need to configure it to show content. Go to a channel in the team and click on the **'+'** button to add a new tab. You can then choose `Hello World` from the **Add a tab** list. You will then be presented with a configuration dialog. This dialog will let you choose which tab to display in this channel. Once you select the tab and click on `Save` then you can see the `Hello World` tab loaded with the tab you chose.
-
-<img width="530px" src="~/assets/images/samples-hello-world-tab-configure.png" title="Screenshot of configure" />
-
-<a name="AddBot"></a>
-
-## Add a bot to your app
-
-The sample already comes with a bot. The bot is defined in the manifest and looks like this:
-
-[!code-json[Manifest file](~/../_msteams-samples-hello-world-csharp/Microsoft.Teams.Samples.HelloWorld.Web/Manifest/manifest.json#L45-L55)]
-
-You need a bot definition for each bot contained in your app. In this case you already have a bot and have given it a registered **App ID**, so all you will do is add credentials for the bot and test it.
-
 ### Add credentials for the bot
 
 In the `Microsoft.Teams.Samples.HelloWorld.Web` project you will find a config file called `Web.config`. This file contains the following code:
@@ -151,6 +132,16 @@ After these values are changed the app must be rebuilt using `Build Solution` co
 
 > [!NOTE]
 > Do NOT stop your ngrok session or you will have to update all the ngrok urls associated with your app.
+
+If you are hosting in Azure you will need to add credentials there.
+
+## Configure the app tab
+
+Once you install the app into a team, you will need to configure it to show content. Go to a channel in the team and click on the **'+'** button to add a new tab. You can then choose `Hello World` from the **Add a tab** list. You will then be presented with a configuration dialog. This dialog will let you choose which tab to display in this channel. Once you select the tab and click on `Save` then you can see the `Hello World` tab loaded with the tab you chose.
+
+<img width="530px" src="~/assets/images/samples-hello-world-tab-configure.png" title="Screenshot of configure" />
+
+<a name="AddBot"></a>
 
 ### Test the bot with the bot emulator
 
