@@ -120,7 +120,7 @@ How you do that differs depending on how you hosted your app. The important thin
 
 ### Update your app in Azure
 
-If you followed the instructions in [Host your Node Teams app in Azure](~/get-started/get-started-nodejs-in-azure), you might remember the [Configure environment variables](~/get-started/get-started-nodejs-in-azure#configureenvironmentvariables) step. Refer to that section and enter the values you saved to notepad earlier in this walkthrough. These environment variables will be hosted on the server.
+If you are hosting in Azure, you will need to add these environment variables to your project and redeploy it.
 
 ### Update your app in ngrok
 
@@ -149,7 +149,6 @@ Where:
 MICROSOFT_APP_ID and MICROSOFT_APP_PASSWORD is the ID and password, respectively, for your bot.
 NODE_DEBUG will show you what's happening in your bot in the Visual Studio Code debug console.
 NODE_CONFIG_DIR points to the directory at the root of the repository (by default, when the app is run locally, it looks for it in the src folder).
-
 
 ## Configure the app tab
 
@@ -180,20 +179,6 @@ You can now interact with the bot in Teams. Choose a channel in the team where y
 
 <img width="450px" title="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 
-<a name="ComposeRichMessages"></a>
-
-## Compose rich messages
-
-The Microsoft Teams developer platform allows users to compose custom rich messages in their conversations through a feature called **Messaging Extensions**. Messaging extensions are used when you want to insert smart content into conversations, typically triggered by a search like action. For example you can use messaging extensions to insert a specific work item with its summary details such as title, assigned to, due dates, and links to access it directly on your planning application while starting a conversation about it. Messaging extensions are built over bots through special APIs and commands. Once you have a bot in the app, it is very easy to extend the bot to also handle **messaging extensions**.
-
-### Update the app manifest and reload the app in teams again
-
-The `Hello World` sample comes with a built in messaging extension, which looks something like this:
-
-[!code-json[Manifest file](~/../_msteams-samples-hello-world-csharp/Microsoft.Teams.Samples.HelloWorld.Web/Manifest/manifest.json#L56-L79)]
-
-You have already updated the botId used by the compose extension so there is no need to do that again.
-
 ### Test your messaging extension
 
 To test your messaging extension, you can click on the three dots below the input box in your conversation view. A menu will pop up with the **'Hello World'** app in it. When you click it, you will see a bunch of random texts showing up. You can choose any one of them and it will be inserted it into your conversation.
@@ -201,5 +186,7 @@ To test your messaging extension, you can click on the three dots below the inpu
 <img width="530px" title="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
 
 <img width="530px" title="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
+
+Choose one of the random texts, and you will see a card formatted and ready to send with your own message at the bottom.
 
 <img width="530px" title="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
