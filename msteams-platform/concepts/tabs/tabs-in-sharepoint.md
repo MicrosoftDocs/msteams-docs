@@ -2,6 +2,7 @@
 title: Using a Microsoft Teams tab as a SharePoint Framework web part
 description: Tutorial on how to deploy your existing Teams tab as a SharePoint web part. Capability was released to preview with SharePoint Framework v1.7.
 keywords: teams tabs sharepoint development
+layout: LandingPage
 ms.date: 11/05/2018
 ---
 
