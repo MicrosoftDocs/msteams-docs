@@ -120,7 +120,12 @@ How you do that differs depending on how you hosted your app. The important thin
 
 ### Update your app in Azure
 
-If you are hosting in Azure, you will need to add these environment variables to your project and redeploy it.
+If you are hosting in Azure, you will need to add these environment variables to your project and redeploy it. This is done in the Web.config file by setting these keys:
+
+* MicrosoftAppId
+* MicrosoftAppPassword
+
+<img width="530px" src="~/assets/images/get-started/get-started-net-azure-add-keys.png" title="setting the keys"/>
 
 ### Update your app in ngrok
 
@@ -155,23 +160,6 @@ NODE_CONFIG_DIR points to the directory at the root of the repository (by defaul
 Once you install the app into a team, you will need to configure it to show content. Go to a channel in the team and click on the **'+'** button to add a new tab. You can then choose `Hello World` from the **Add a tab** list. You will then be presented with a configuration dialog. This dialog will let you choose which tab to display in this channel. Once you select the tab and click on `Save` then you can see the `Hello World` tab loaded with the tab you chose.
 
 <img width="530px" src="~/assets/images/samples-hello-world-tab-configure.png" title="Screenshot of configure" />
-
-<a name="AddBot"></a>
-
-### Test the bot with the bot emulator
-
-Before you run the bot in Teams, confirm that the bot works as expected  using the [Bot Framework Emulator](/bot-framework/debug-bots-emulator?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json), a desktop application that allows bot developers to test and debug their bots.
-
-Once you have the emulator running, you will need three things to set up a connection:
-
-- The endpoint URL, which is the address where your bot is exposed. It can be the local address 'http://localhost:3333/api/messages', or an external address using the ngrok tunnel you set up earlier like `https://d0ac14a5.ngrok.io/api/messages`.
-- The Microsoft App ID, which is the **ID** you used earlier.
-- The Microsoft App Password from the Bot Framework which you made a note of earlier.
-
-> [!TIP]
-> To verify your bot is working, just verify that it is echoing back whatever you say to it.
-
-If the bot is not working, check to see if your app is running, and check ngrok if you are using it.
 
 ### Test your bot in Teams
 
