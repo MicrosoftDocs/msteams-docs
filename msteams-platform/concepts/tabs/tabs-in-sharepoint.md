@@ -12,6 +12,8 @@ ms.date: 11/05/2018
 
 With SharePoint Framework v.1.7, we’re now supporting the ability for developers to take their Teams Tab application experience and host it back in SharePoint. As Tabs are hosted in SharePoint they get a similar “full page” experience, exposing the full power of applications while retaining the context and familiarity of a SharePoint site.
 
+![](~/assets/images/tabs/tabs-in-sharepoint/image084.png)
+
 ### Benefits of this approach
 
 - Reach SharePoint users with your existing Teams tab application
