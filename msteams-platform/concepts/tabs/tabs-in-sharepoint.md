@@ -22,7 +22,7 @@ With SharePoint Framework v.1.7, we’re now supporting the ability for develope
 - End user can configure the tab on a page just like any other SharePoint web part​
 - Just like bringing your SPFx solution into Teams, your tab is able to get the right application context
 
-[Developers can also use their SharePoint Framework web part as a Microsoft Teams tab](link-to-sharepoint-docs.html)
+[Developers can also use their SharePoint Framework web part as a Microsoft Teams tab](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
 
 
 ## Introduction
@@ -39,7 +39,7 @@ In Microsoft Teams, click on the Store icon and then "Upload a custom app" at th
 
 ## Step 2: Using the Teams Tab in SharePoint
 
-Upload and deploy your Teams Tab package (either the one you downloaded from [here](https://github.com/billbliss/microsoft-teams-sample-talent-acquisition/blob/master/TeamsAppPackages/TalentMgmt-Azure.zip?raw=true)) or the one you exported from Teams App Studio) to your SharePoint App Catalog (in SharePoint).
+Upload and deploy your Teams Tab package to your SharePoint App Catalog (in SharePoint) by visiting (`https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx`).
 
 When prompted, enable "Make this solution available to all sites in the organization".
 
@@ -64,12 +64,9 @@ Note: You may want to click "Add page to navigation" to have a quick reference t
 
 ## Step 3: Explore App Pages in SharePoint
 
+Once your page is published, you can explore [turning your Teams app into a fuller experience inside of SharePoint.](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/single-part-app-pages). This will convert the current page into an App Page, showing the normal page chrome with a full-page experience for the Teams Tab.
 
-
-
-Once your page is published, you can explore [turning your Teams app into a fuller experience inside of SharePoint.](https://github.com/SharePoint/sp-dev-docs-internal/blob/master/spfx-170/spfx/web-parts/single-part-app-pages.md#changing-page-layout-using-javascript-in-browser-console). This will convert the current page into an App Page, showing the normal page chrome with a full-page experience for the Teams Tab.
-
-- [Using single part app pages in SharePoint Online.](https://github.com/SharePoint/sp-dev-docs-internal/blob/master/spfx-170/spfx/web-parts/single-part-app-pages.md#changing-page-layout-using-javascript-in-browser-console)
+- [Using single part app pages in SharePoint Online.](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/single-part-app-pages)
 
 ![](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
 
@@ -83,5 +80,5 @@ Example from a formatted version of this JSON:
 
 ## Other Links
 
-- [Building Microsoft Teams tab using SharePoint Framework - Tutorial](link)
-- [Using single part app pages in SharePoint Online](link)
+- [Building Microsoft Teams tab using SharePoint Framework - Tutorial](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+- [Using single part app pages in SharePoint Online](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/single-part-app-pages)
