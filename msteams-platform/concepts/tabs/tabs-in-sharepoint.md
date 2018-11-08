@@ -12,8 +12,6 @@ ms.date: 11/05/2018
 
 With SharePoint Framework v.1.7, we’re now supporting the ability for developers to take their Teams Tab application experience and host it back in SharePoint. As Tabs are hosted in SharePoint they get a similar “full page” experience, exposing the full power of applications while retaining the context and familiarity of a SharePoint site.
 
-![](~/assets/images/tabs/tabs-in-sharepoint/image084.png)
-
 ### Benefits of this approach
 
 - Reach SharePoint users with your existing Teams tab application
@@ -22,8 +20,12 @@ With SharePoint Framework v.1.7, we’re now supporting the ability for develope
 - End user can configure the tab on a page just like any other SharePoint web part​
 - Just like bringing your SPFx solution into Teams, your tab is able to get the right application context
 
-[Developers can also use their SharePoint Framework web part as a Microsoft Teams tab](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+## Rich SharePoint/Teams Integration
 
+| **Teams tab as a SharePoint Web Part** | **SharePoint Framework in Teams** |
+| -------- | --------- |
+| ![](~/assets/images/tabs/tabs-in-sharepoint/image084.png) | ![](~/assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png) |
+|  Follow the instructions below to bring your Teams tab to SharePoint | [Documentation on bringing your SharePoint Framework web part to Teams](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
 
 ## Introduction
 
@@ -69,14 +71,6 @@ Once your page is published, you can explore [turning your Teams app into a full
 - [Using single part app pages in SharePoint Online.](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/single-part-app-pages)
 
 ![](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
-
-## Step 4: Exploring the APIs
-
-(Coming Soon) Microsoft Teams developers are able to get SharePoint-specific contexts when their app is loaded as a webpart. For example, the "getContext" call will return all the data from SharePoint's PageContext
-
-Example from a formatted version of this JSON:
-
-![](~/assets/images/tabs/tabs-in-sharepoint/image081.png)
 
 ## Other Links
 
