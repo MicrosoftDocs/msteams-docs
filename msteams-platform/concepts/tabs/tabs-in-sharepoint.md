@@ -26,8 +26,7 @@ ms.date: 11/05/2018
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Teams tab as a SharePoint web part</h3>
-                        <p> With SharePoint Framework v.1.7, we’re now supporting the ability for developers to take their Teams Tab application experience and host it back in SharePoint. As Tabs are hosted in SharePoint they get a similar “full page” experience, exposing the full power of applications while retaining the context and familiarity of a SharePoint site.</p>
+                        <h3>Teams tab in SharePoint</h3>
                     </div>
                 </div>
             </div>
@@ -46,7 +45,6 @@ ms.date: 11/05/2018
                     </div>
                     <div class="cardText">
                         <h3>SharePoint Framework in Teams</h3>
-                        <p> You can also implement your Microsoft Teams tabs using SharePoint Framework. This significantly simplifies Teams tab development process as SharePoint Framework web parts are automatically hosted within SharePoint without any need for external services. </p>
                     </div>
                 </div>
             </div>
@@ -54,6 +52,14 @@ ms.date: 11/05/2018
     </a>
 </li>
 </ul>
+
+### Teams tab in SharePoint
+
+With SharePoint Framework v.1.7, we’re now supporting the ability for developers to take their Teams Tab application experience and host it back in SharePoint. As Tabs are hosted in SharePoint they get a similar “full page” experience, exposing the full power of applications while retaining the context and familiarity of a SharePoint site
+
+### SharePoint Framework in Teams
+
+You can also implement your Microsoft Teams tabs using SharePoint Framework. This significantly simplifies Teams tab development process as SharePoint Framework web parts are automatically hosted within SharePoint without any need for external services.
 
 ## Introduction
 
