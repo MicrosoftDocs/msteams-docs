@@ -27,7 +27,7 @@ ms.date: 11/05/2018
                     </div>
                     <div class="cardText">
                         <h3>Teams tab in SharePoint</h3>
-                        <p> Create rich app experiences in SharePoint </p>
+                        <p> Create rich app experiences in SharePoint by bringing your Teams app into Sharepoint </p>
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@ ms.date: 11/05/2018
                     </div>
                     <div class="cardText">
                         <h3>SharePoint Framework in Teams</h3>
-                        <p> Bring your SharePoint web parts to Teams </p>
+                        <p> Bring your SharePoint web parts to Teams and we'll manage the hosting for you. </p>
                     </div>
                 </div>
             </div>
