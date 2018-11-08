@@ -34,7 +34,12 @@ Once you have your app running in the Teams platform, you can enhance it further
 
 <a name="PrepareMicrosoftTeams"></a>
 
-[!include[Get teams](~/includes/get-started/step1-prepare-for-dev.md)]
+## PrepareMicrosoftTeams
+
+You will need an Office 365 tenant that has been set up for development, and you will need to configure teams to allow you to upload apps. You can work with your Office 365 administrator to confirm that your tenant is ready, or you can install a private evaluation version of Office 365 that you can manage. For more information see these topics:
+
+- [Prepare your Office 365 tenant](~/get-started/get-started-tenant)
+- [Prepare Microsoft Teams for development](~/get-started/get-started-configure-teams)
 
 <a name="GetPrerequisites"></a>
 
