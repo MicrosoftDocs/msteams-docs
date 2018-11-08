@@ -14,7 +14,7 @@ Once App Studio is installed click on the Manifest editor tab to begin creating 
 
 <img  width="450px" title="App Studio" src="~/assets/images/get-started/app-studio.png"/>
 
-The sample comes with its own pre-made manifest, and is designed to build an app package simply by typing `gulp` at the command line in the root directory of the project.
+The sample comes with its own pre-made manifest, and is designed to build an app package when the project is built. On .NET this is done in Visual Studio, and on Node JS this is done by typing `gulp` at the command line in the root directory of the project.
 
 ```bash
 $ gulp

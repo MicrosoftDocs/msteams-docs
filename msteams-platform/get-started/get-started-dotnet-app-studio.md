@@ -5,7 +5,7 @@ keywords: getting started .net c# csharp
 ms.date: 11/08/2018
 ---
 
-# Get started on the Microsoft Teams platform with C#/.NET
+# Get started on the Microsoft Teams platform with C#/.NET and App Studio
 
 The [Microsoft Teams](/microsoftteams/) developer platform makes it easy for you to extend Teams and integrate your own applications and services seamlessly into the Teams workspace. These apps can then be distributed to your enterprise or for teams around the world.
 
