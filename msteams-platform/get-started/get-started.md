@@ -2,7 +2,7 @@
 title: Get started
 description: Get started building great apps in Microsoft Teams
 keywords: getting started Microsoft teams
-ms.date: 10/22/2018
+ms.date: 11/08/2018
 ---
 # Get started developing apps for Microsoft Teams
 
@@ -14,8 +14,8 @@ In addition to hosting the functions of your app on the web, you need to create 
 
 You can follow these walkthroughs to become more familiar with both parts of a Teams app, using either Node.JS or C# and .NET. The following walkthroughs will result in a working app using either technology.
 
-- [Get started using Node.JS](~/get-started/get-started-nodejs)
-- [Get started using C# and .NET](~/get-started/get-started-dotnet)
+- [Get started using Node.JS](~/get-started/get-started-nodejs-app-studio)
+- [Get started using C# and .NET](~/get-started/get-started-dotnet-app-studio)
 
 For more detailed information on Teams apps read:
 
