@@ -125,7 +125,9 @@ If you are hosting in Azure, you will need to add these environment variables to
 * MicrosoftAppId
 * MicrosoftAppPassword
 
-<img width="530px" src="~/assets/images/get-started/get-started-net-azure-add-keys.png" title="setting the keys"/>
+<img width="560px" src="~/assets/images/get-started/get-started-net-azure-add-keys.png" title="setting the keys"/>
+
+Once these changes are made you should redeploy the app to Azure.
 
 ### Update your app in ngrok
 
