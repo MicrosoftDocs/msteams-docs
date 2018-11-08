@@ -15,43 +15,44 @@ With SharePoint Framework v.1.7, we’re now supporting the ability for develope
 ### Benefits of this approach
 
 - Reach SharePoint users with your existing Teams tab application
-- Upload your app manifest directly to your SharePoint app catalog – 
+- Upload your app manifest directly to your SharePoint app catalog
   - The Teams application manifest is natively recognized by SharePoint
-- End user can configure the tab on a page just like any other SharePoint web part​
+- Your end user can configure the tab on a page just like any other SharePoint web part​
 - Just like bringing your SPFx solution into Teams, your tab is able to get the right application context
 
 ## Rich SharePoint/Teams Integration
 
-| **Teams tab as a SharePoint Web Part** | **SharePoint Framework in Teams** |
+| **Teams tab as a SharePoint web part** | **SharePoint Framework in Teams** |
 | -------- | --------- |
 | ![](~/assets/images/tabs/tabs-in-sharepoint/image084.png) | ![](~/assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png) |
-|  Follow the instructions below to bring your Teams tab to SharePoint | [Documentation on bringing your SharePoint Framework web part to Teams](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+|  Follow the instructions below to bring your Teams tab to SharePoint | [Go to the documentation on bringing your SharePoint Framework web part to Teams](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+
 
 ## Introduction
 
 These instructions will explain how you can take a tab from a Microsoft Teams sample app and use it in SharePoint. We will be using a tab that's already hosted on Azure in order to focus on the required intergration work.
 
-The sample app we're using manages the hiring process of candidates for open positions in a team – a Talent Management Application. The app itself, while it looks good, doesn't actually do anything – we want to focus on building a Teams app and loading it into Teams, not create a real talent management application.
+The sample app we're using is a a Talent Management Application. It manages the hiring process of candidates for open positions in a team. The app itself, while it looks good, doesn't actually do anything. We want to focus on building a Teams app and loading it into Teams, not create a real talent management application.
 
 ## Step 1: Testing the Sample App
 
 Download the sample app manifest from [**here**](https://github.com/billbliss/microsoft-teams-sample-talent-acquisition/raw/master/TeamsAppPackages/hr-app-package.zip)
 
-In Microsoft Teams, click on the Store icon and then "Upload a custom app" at the lower left – the file will be located in your Downloads folder and it's called hr-app-package.zip. If all goes well, you'll see the install/consent screen for your app. Choose the team you want to install to and click the Install button. You're now free to experiment with your app.
+In Microsoft Teams, click on the Store icon and then "Upload a custom app" at the lower left. The file will be located in your Downloads folder and it's called hr-app-package.zip. If all goes well, you'll see the install/consent screen for your app. Choose the team you want to install to and click the Install button. You're now free to experiment with your app.
 
 ## Step 2: Using the Teams Tab in SharePoint
 
-Upload and deploy your Teams Tab package to your SharePoint App Catalog (in SharePoint) by visiting (`https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx`).
+Upload and deploy your Teams Tab package to your SharePoint App Catalog (in SharePoint) by visiting `https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx`.
 
 When prompted, enable "Make this solution available to all sites in the organization".
 
 ![](~/assets/images/tabs/tabs-in-sharepoint/image065.png)
 
-In your site, create a new page, by clicking in the gear button (top-right) and then "Add a page"
+In your site, create a new page, by clicking in the gear button (top-right) and then "Add a page".
 
 ![](~/assets/images/tabs/tabs-in-sharepoint/image066.png)
 
-You'll see the pages authoring experience. Name your page, for example "My Teams Tab".
+You'll see the pages authoring experience. Name your page "My Teams Tab".
 
 Open the web part toolbox, by pressing the + button, and select your Teams Tab (named "Contoso HR"). Web parts are sorted alphabetically. You can use the search bar for the right name. This will create a web part in the canvas that contains your Teams Tab:
 
@@ -59,10 +60,9 @@ Open the web part toolbox, by pressing the + button, and select your Teams Tab (
 
 Press the "Publish" button to finish editing.
 
-Note: You may want to click "Add page to navigation" to have a quick reference to your page in the left navigation bar:
+You may want to click "Add page to navigation" to have a quick reference to your page in the left navigation bar:
 
 ![](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
-
 
 ## Step 3: Explore App Pages in SharePoint
 
