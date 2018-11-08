@@ -1,31 +1,27 @@
 ---
-title: Add a Teams tab to your Sharepoint site
-description: Describes how to take an existing Teams tab and have it 
+title: Using a Microsoft Teams tab as a SharePoint Framework web part
+description: Tutorial on how to deploy your existing Teams tab as a SharePoint web part. Capability was released to preview with SharePoint Framework v1.7.
 keywords: teams tabs sharepoint development
-ms.date: 10/15/2018
+ms.date: 11/05/2018
 ---
 
-# Add a Teams tab to your Sharepoint site
+# Using a Microsoft Teams tab as a SharePoint Framework web part
 
-> [!Note]
-> This feature is still in Dev Preview and while it closely reflects the final version, there may be small changes before this feature is Generally Availability
+> [!IMPORTANT]
+> This feature is currently in preview and is subject to change. It is not currently supported for use in production environments. Your feedback and input around this capability is welcome using the [SharePoint Dev Docs issue list](https://github.com/SharePoint/sp-dev-docs/issues).
 
-## Background
+With SharePoint Framework v.1.7, we’re now supporting the ability for developers to take their Teams Tab application experience and host it back in SharePoint. As Tabs are hosted in SharePoint they get a similar “full page” experience, exposing the full power of applications while retaining the context and familiarity of a SharePoint site.
 
-With SharePoint Framework v.1.7, we’re now supporting the ability for developers to take that Teams Tab application experience and host it back in SharePoint. As Tabs are hosted in SharePoint they get a similar “full page” experience, exposing the full power of applications while retaining the context and familiarity of a SharePoint site.  Developers can also choose to create new application experiences, from scratch, with the SharePoint Framework, and layer in other Microsoft Teams experiences such as custom chatbots, adaptive cards, and other features.
-
-![Teams Tab fullscreen in SharePoint](~/assets/images/tabs/tabs-in-sharepoint/image084.png)
-
-### Benefits of this approach:
+### Benefits of this approach
 
 - Reach SharePoint users with your existing Teams tab application
-- Upload your app manifest directly to your SharePoint app catalog – format is natively recognized by SharePoint​
-- End user sets up and configures the tab on a page just like any other web part​
+- Upload your app manifest directly to your SharePoint app catalog – 
+  - The Teams application manifest is natively recognized by SharePoint
+- End user can configure the tab on a page just like any other SharePoint web part​
 - Just like bringing your SPFx solution into Teams, your tab is able to get the right application context
 
-![Surfacing Teams Tab in SharePoint 1/2](~/assets/images/tabs/tabs-in-sharepoint/image082.png)
+[Developers can also use their SharePoint Framework web part as a Microsoft Teams tab](link-to-sharepoint-docs.html)
 
-![Surfacing Teams Tab in SharePoint 2/2](~/assets/images/tabs/tabs-in-sharepoint/image083.png)
 
 ## Introduction
 
@@ -37,19 +33,11 @@ The sample app we're using manages the hiring process of candidates for open pos
 
 Download the sample app manifest from [**here**](https://github.com/billbliss/microsoft-teams-sample-talent-acquisition/raw/master/TeamsAppPackages/hr-app-package.zip)
 
-In Microsoft Teams, click on the Store icon and then "Upload a custom app" at the lower left – the file will be located in your Downloads folder and it's called hr-app-package.zip. If all goes well, you'll see the install/consent screen for your app. Choose the team you want to install to and click the Install button.
-
-You're now free to experiment with your app:
-
-- Use the "Personal App" version via the "..." menu on the left side of Teams
-- Talk to the bot in both 1:1 and channel mode
-- Use actionable messages to schedule interviews
-- Create tabs and add them to channels
-- Use the messaging extension to find candidate cards to enrich your conversations
+In Microsoft Teams, click on the Store icon and then "Upload a custom app" at the lower left – the file will be located in your Downloads folder and it's called hr-app-package.zip. If all goes well, you'll see the install/consent screen for your app. Choose the team you want to install to and click the Install button. You're now free to experiment with your app.
 
 ## Step 2: SharePoint Setup
 
-We have created a tool to make it easy to create App Pages. In your App Catalog (`https://YOUR_TENANT_NAME.sharepoint.com/sites/AppCat/AppCatalog/Forms/AllItems.aspx`), upload and deploy the SPA extension package.
+We have created a tool to make it easy to create App Pages. In your App Catalog (`https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx`), upload and deploy the SPA extension package.
 
 [You can find the package here](https://microsoft.sharepoint-df.com/:u:/t/TeamsDevKitchen/EfMg48rpcNhDmRKFEc9IP_UB0obEd_RDg1TmmVwR3bWUcQ?e=umeuIF).
 
