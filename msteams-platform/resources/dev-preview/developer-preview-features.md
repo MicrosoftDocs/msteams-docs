@@ -9,6 +9,16 @@ ms.date: 11/05/2018
 When these features are out of developer preview this content will be merged into the live doc set.
 The developer preview includes the following new features:
 
+## SharePoint Framework v1.7 Integration with Tabs in Microsoft Teams 
+
+Starting with the SharePoint Framework v1.7, you can also implement your Microsoft Teams tabs using SharePoint Framework. This significantly simplifies Teams tab development process as SharePoint Framework web parts are automatically hosted within SharePoint without any need for external services. We’re also supporting the ability for developers to take their Teams Tab application experience and host it back in SharePoint. As Tabs are hosted in SharePoint they get a similar “full page” experience, exposing the full power of applications while retaining the context and familiarity of a SharePoint site.
+
+- [Teams Tabs as SharePoint web parts](./concepts/tabs/tabs-in-sharepoint)
+- [SharePoint web parts as a Teams Tabs](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+- [SharePoint App Pages for richer experiences](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/single-part-app-pages)
+
+![](~/assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png)
+
 ## Calls and online meeting bots
 
 With the addition of [Microsoft Graph APIs for calls and online meetings](https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/calls-api-overview), Microsoft Teams apps can now interact with users in rich ways using voice and video. These APIs allow you to add new app features such as interactive voice response (IVR), call control, and access to real-time audio and/or video streams for calls and meetings, including desktop and app sharing.
