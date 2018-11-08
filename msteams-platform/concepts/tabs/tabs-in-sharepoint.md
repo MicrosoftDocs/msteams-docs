@@ -10,7 +10,20 @@ ms.date: 11/05/2018
 > [!IMPORTANT]
 > This feature is currently in preview and is subject to change. It is not currently supported for use in production environments. Your feedback and input around this capability is welcome using the [SharePoint Dev Docs issue list](https://github.com/SharePoint/sp-dev-docs/issues).
 
-With SharePoint Framework v.1.7, we’re now supporting the ability for developers to take their Teams Tab application experience and host it back in SharePoint. As Tabs are hosted in SharePoint they get a similar “full page” experience, exposing the full power of applications while retaining the context and familiarity of a SharePoint site.
+
+## Rich Integration with  Teams and SharePoint 
+
+| **Teams tab as a SharePoint web part** | **SharePoint Framework in Teams** |
+| -------- | --------- |
+| <img src="~/assets/images/tabs/tabs-in-sharepoint/image084.png" style="max-width: 100%;" /> | <img src="~/assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png" style="max-width: 100%;" /> |
+|  With SharePoint Framework v.1.7, we’re now supporting the ability for developers to take their Teams Tab application experience and host it back in SharePoint. As Tabs are hosted in SharePoint they get a similar “full page” experience, exposing the full power of applications while retaining the context and familiarity of a SharePoint site. Follow the instructions below to bring your Teams tab to SharePoint | You can also implement your Microsoft Teams tabs using SharePoint Framework. This significantly simplifies Teams tab development process as SharePoint Framework web parts are automatically hosted within SharePoint without any need for external services. [Go to the documentation on bringing your SharePoint Framework web part to Teams](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+</div>
+
+## Introduction
+
+These instructions will explain how you can take a tab from a Microsoft Teams sample app and use it in SharePoint. We will be using a tab that's already hosted on Azure in order to focus on the required intergration work.
+
+The sample app we're using is a a Talent Management Application. It manages the hiring process of candidates for open positions in a team. The app itself, while it looks good, doesn't actually do anything. We want to focus on building a Teams app and loading it into Teams, not create a real talent management application.
 
 ### Benefits of this approach
 
@@ -19,20 +32,6 @@ With SharePoint Framework v.1.7, we’re now supporting the ability for develope
   - The Teams application manifest is natively recognized by SharePoint
 - Your end user can configure the tab on a page just like any other SharePoint web part​
 - Just like bringing your SPFx solution into Teams, your tab is able to get the right application context
-
-## Rich SharePoint/Teams Integration
-
-| **Teams tab as a SharePoint web part** | **SharePoint Framework in Teams** |
-| -------- | --------- |
-| ![](~/assets/images/tabs/tabs-in-sharepoint/image084.png) | ![](~/assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png) |
-|  Follow the instructions below to bring your Teams tab to SharePoint | [Go to the documentation on bringing your SharePoint Framework web part to Teams](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
-
-
-## Introduction
-
-These instructions will explain how you can take a tab from a Microsoft Teams sample app and use it in SharePoint. We will be using a tab that's already hosted on Azure in order to focus on the required intergration work.
-
-The sample app we're using is a a Talent Management Application. It manages the hiring process of candidates for open positions in a team. The app itself, while it looks good, doesn't actually do anything. We want to focus on building a Teams app and loading it into Teams, not create a real talent management application.
 
 ## Step 1: Testing the Sample App
 
