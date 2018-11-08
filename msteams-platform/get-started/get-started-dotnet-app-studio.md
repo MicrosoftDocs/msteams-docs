@@ -11,7 +11,7 @@ The [Microsoft Teams](/microsoftteams/) developer platform makes it easy for you
 
 To extend Microsoft Teams, you will need to create a Microsoft Teams [app](~/concepts/apps/apps-overview). A Microsoft Teams app is a web application that you host. This app can then be integrated into the user's workspace in Teams.
 
-This tutorial helps you get started creating a Microsoft Teams app using C# on .NET. You can test the app by loading it into a Team that you have permissions for, or into a test tenant created using the Office Developer Program. This topic is written to be platform independent.
+This tutorial helps you get started creating a Microsoft Teams app using C# on .NET. You can test the app by loading it into a Team that you have permissions for, or into a test tenant created using the Office Developer Program.
 
 ## Before you start this tutorial
 
@@ -94,7 +94,7 @@ Ngrok will listen to requests from the internet and will route them to your app 
 > [!TIP]
 > It is a good idea to run `ngrok` in a different terminal window to keep it running without interfering with the node app which you might later have to stop, rebuild and rerun. The `ngrok` session will return useful debugging information in this window.
 
-The app will only be available during the current session on your development machine. If the machine is shut down or goes to sleep the service will no longer be available. Remember this when sharing the app for testing by other users. If you have to restart the service it will return a new address and you will have to update every place that uses that address.
+The app will only be available during the current session on your development machine. If the machine is shut down or goes to sleep the service will no longer be available. Remember this when sharing the app for testing by other users. If you have to restart the service it will return a new address and you will have to update every place that uses that address. The paid version of Ngrok does not have this limitation.
 
 ### Host in Azure
 
@@ -106,56 +106,18 @@ Visual Studio has built-in support for app deployment to different providers, in
 
 [!include[Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
 
-## Update your hosted app
+## Update the credentials for your hosted app
 
 The sample app requires the following environment variables to be set to the values you made a note of earlier.
 
-```
-MICROSOFT_APP_ID=<YOUR BOT'S APP ID>
-MICROSOFT_APP_PASSWORD=<YOUR BOT'S PASSWORD>
-WEBSITE_NODE_DEFAULT_VERSION=8.9.4
-```
-
-How you do that differs depending on how you hosted your app. The important thing about using environment variables is that these values are part of your environment - they can be accessed by the code for your app, but they are not exposed to third parties who might examine the files that make up your site.
-
-### Update your app in Azure
-
-If you are hosting in Azure, you will need to add these environment variables to your project and redeploy it. This is done in the Web.config file by setting these keys:
+This is done in the Web.config file by setting these keys:
 
 * MicrosoftAppId
 * MicrosoftAppPassword
 
 <img width="560px" src="~/assets/images/get-started/get-started-net-azure-add-keys.png" title="setting the keys"/>
 
-Once these changes are made you should redeploy the app to Azure.
-
-### Update your app in ngrok
-
-If you are running the app using ngrok you'll need to set up some local environment variables. There are many ways to do this, but the easiest, if you are using Visual Studio Code, is to add a [launch configuration](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations):
-
-``` 
-{
-    "type": "node",
-    "request": "launch",
-    "name": "Launch - Teams Debug",
-    "program": "${workspaceRoot}/src/app.js",
-    "cwd": "${workspaceFolder}/src",
-    "env": {
-        "BASE_URI": "https://yourNgrokURL.ngrok.io",
-        "MICROSOFT_APP_ID": "00000000-0000-0000-0000-000000000000",
-        "MICROSOFT_APP_PASSWORD": "yourBotAppPassword",
-        "NODE_DEBUG": "botbuilder",
-        "SUPPRESS_NO_CONFIG_WARNING": "y",
-        "NODE_CONFIG_DIR": "../config"
-    }
-}
-```
-
-Where:
-
-MICROSOFT_APP_ID and MICROSOFT_APP_PASSWORD is the ID and password, respectively, for your bot.
-NODE_DEBUG will show you what's happening in your bot in the Visual Studio Code debug console.
-NODE_CONFIG_DIR points to the directory at the root of the repository (by default, when the app is run locally, it looks for it in the src folder).
+Once these changes are made, rebuild the app. If you are using ngrok, run the app locally, and if you are hosting in Azure redeploy the app.
 
 ## Configure the app tab
 
