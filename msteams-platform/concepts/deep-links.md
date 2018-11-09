@@ -82,9 +82,9 @@ As an example use case, if you are returning an Office 365 user profile from you
 
 The format for a deep link that you can use in a bot, Connector, or messaging extension card is as follows:
 
-`https://teams.microsoft.com/l/chat/0/0/?users=<user1>,<user2>,...&topicName=<chat name>&message=<precanned text>`
+`https://teams.microsoft.com/l/chat/0/0?users=<user1>,<user2>,...&topicName=<chat name>&message=<precanned text>`
 
-Example: `https://teams.microsoft.com/l/chat/0/0/?users=joe@contoso.com,bob@contoso.com&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow`
+Example: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@contoso.com&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow`
 
 The query parameters are:
 
