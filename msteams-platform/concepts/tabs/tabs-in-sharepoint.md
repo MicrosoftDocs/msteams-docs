@@ -73,7 +73,7 @@ The sample app we're using is a a Talent Management application. It manages the 
 ### Benefits of this approach
 
 - Reach SharePoint users with your existing Teams tab
-- Upload your app manifest directly to your SharePoint app catalog. [Teams application packages](~/concepts/apps/app-package) are now supported by SharePoint
+- Upload your app manifest directly to your SharePoint app catalog. [Teams application packages](~/concepts/apps/apps-package) are now supported by SharePoint
 - End users configure the tab on a page just like any other SharePoint web part
 - Your tab can access its [context](~/concepts/tabs/tabs-context) just as it can when running inside Teams
 
