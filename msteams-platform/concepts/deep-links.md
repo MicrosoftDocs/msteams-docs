@@ -74,7 +74,7 @@ The [`microsoftTeams.getContext`](/javascript/api/msteams-client/microsoftteams.
 > [!NOTE]
 > This functionality is currently available in Developer Preview
 
-You can now create deep links to private chats between users by specifying the set of participants. If the chat doesn't exist, the link will navigate the user to a new chat. New chats will be created in draft state until the user sends the first message. Optionally, you can specify the name of the chat (if it doesn't already exist), along with text that should be inserted into the user's compose box. You can think of this feature as a shortcut for the user taking the manual action of navigating to or creating the chat, and then typing out the message.
+You can now create deep links to private chats between users by specifying the set of participants. If a chat doesn't exist with the specified participants, the link will navigate the user to an empty new chat. New chats will be created in draft state until the user sends the first message. Optionally, you can specify the name of the chat (if it doesn't already exist), along with text that should be inserted into the user's compose box. You can think of this feature as a shortcut for the user taking the manual action of navigating to or creating the chat, and then typing out the message.
 
 As an example use case, if you are returning an Office 365 user profile from your bot as a card, this deep link can allow the user to easily chat with that person.
 
