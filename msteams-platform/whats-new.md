@@ -12,6 +12,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+| 11/09/2018 | You can now create deep links to private chats between users. | [Deep linking to a chat](~concepts/deep-links#deep-linking-to-a-chat) |
 | 11/08/2018 | SharePoint Framework 1.7 has shipped and with it a new feature to use Microsoft Teams tab as a SharePoint Framework web part. | [Tabs in SharePoint](~/concepts/tabs/tabs-in-sharepoint) |
 | 11/05/2018 | The "task module" feature was released. A task module allows you to create modal popup experiences in your Teams application, from both bots and tabs. Inside the popup, you can run your own custom HTML/JavaScript code, show an `<iframe>`-based widget such as a YouTube or Microsoft Stream video, or display an [Adaptive card](https://docs.microsoft.com/en-us/adaptive-cards/). | [Task module Overview](~/concepts/task-modules/task-modules-overview), [task module in tabs](~/concepts/task-modules/task-modules-tabs),  [task module in bots](~/concepts/task-modules/task-modules-bots) |
 | 10/05/2018 | Formatting information for cards has been updated, and tested in the desktop, iOS and Android clients for Teams. | [Cards](~/concepts/cards/cards), [Card formatting](~/concepts/cards/cards-format) |
