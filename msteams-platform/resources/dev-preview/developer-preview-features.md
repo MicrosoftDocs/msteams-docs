@@ -9,6 +9,10 @@ ms.date: 09/26/2018
 When these features are out of developer preview this content will be merged into the live doc set.
 The developer preview includes the following new features:
 
+## Deep linking to a chat
+
+You can now create deep links to private chats between users. You can link to an existing chat, or you can specify a set of chat participants to start a new chat. See [Deep linking to a chat](~concepts/deep-links#deep-linking-to-a-chat) for more details.
+
 ## Introducing "task modules"
 
 A task module allows you to create modal popup experiences in your Teams application, from both bots and tabs. Inside the popup, you can run your own custom HTML/JavaScript code, show an `<iframe>`-based widget such as a YouTube or Microsoft Stream video, or display an [Adaptive card](https://docs.microsoft.com/en-us/adaptive-cards/).
