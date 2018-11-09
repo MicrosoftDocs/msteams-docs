@@ -2,22 +2,23 @@
 title: Features in the Public Developer Preview
 description: Describes the features in the Public Developer Preview of Microsoft Teams
 keywords: teams preview developer features
-ms.date: 11/05/2018
+ms.date: 10/09/2018
 ---
 # Features in the Public Developer Preview for Microsoft Teams
 
 When these features are out of developer preview this content will be merged into the live doc set.
 The developer preview includes the following new features:
 
-## SharePoint Framework v1.7 Integration with Tabs in Microsoft Teams 
 
-Starting with SharePoint Framework v1.7, you can also implement your Microsoft Teams tabs using SharePoint Framework. This significantly simplifies Teams tab development process as SharePoint Framework web parts are automatically hosted within SharePoint without any need for external services. We’re also supporting the ability for developers to take their Teams Tab application experience and host it back in SharePoint. As Tabs are hosted in SharePoint they get a similar “full page” experience, exposing the full power of applications while retaining the context and familiarity of a SharePoint site.
+## Deep linking to a chat
 
-- [Teams Tabs as SharePoint web parts](./concepts/tabs/tabs-in-sharepoint)
-- [SharePoint web parts as a Teams Tabs](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
-- [SharePoint App Pages for richer experiences](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/single-part-app-pages)
+You can now create deep links to private chats between users. You can link to an existing chat, or you can specify a set of chat participants to start a new chat. See [Deep linking to a chat](~/concepts/deep-links#deep-linking-to-a-chat) for more details.
 
-![](~/assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png)
+## Introducing "task modules"
+
+A task module allows you to create modal popup experiences in your Teams application, from both bots and tabs. Inside the popup, you can run your own custom HTML/JavaScript code, show an `<iframe>`-based widget such as a YouTube or Microsoft Stream video, or display an [Adaptive card](https://docs.microsoft.com/en-us/adaptive-cards/).
+
+Task module documentation has been added as a new section, including an [overview](~/concepts/task-modules/task-modules-overview), how to use task module from [tabs](~/concepts/task-modules/task-modules-tabs) and [bots](~/concepts/task-modules/task-modules-bots).
 
 ## Calls and online meeting bots
 
