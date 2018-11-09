@@ -12,7 +12,7 @@ The developer preview includes the following new features:
 
 ## Deep linking to a chat
 
-You can now create deep links to private chats between users. You can link to an existing chat, or you can specify a set of chat participants to start a new chat. See [Deep linking to a chat](~concepts/deep-links#deep-linking-to-a-chat) for more details.
+You can now create deep links to private chats between users. You can link to an existing chat, or you can specify a set of chat participants to start a new chat. See [Deep linking to a chat](~/concepts/deep-links#deep-linking-to-a-chat) for more details.
 
 ## Introducing "task modules"
 
