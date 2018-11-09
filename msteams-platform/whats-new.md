@@ -2,7 +2,7 @@
 title: What's new
 description: Describes all the new developer features in Microsoft Teams
 keywords: teams what's new latest
-ms.date: 09/26/2018
+ms.date: 11/05/2018
 ---
 # What's new for developers in Microsoft Teams
 
@@ -12,7 +12,9 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
-| 09/26/2018 | The "Task modules" capability was released to Developer Preview. | [Task modules overview](~/concepts/task-modules/task-modules-overview), [Using task modules in tabs](~/concepts/task-modules/task-modules-tabs), [Using task modules in bots](~/concepts/task-modules/task-modules-bots) |
+| 11/08/2018 | SharePoint Framework 1.7 has shipped and with it a new feature to use Microsoft Teams tab as a SharePoint Framework web part. | [Tabs in SharePoint](~/concepts/tabs/tabs-in-sharepoint) |
+| 11/05/2018 | The "task module" feature was released. A task module allows you to create modal popup experiences in your Teams application, from both bots and tabs. Inside the popup, you can run your own custom HTML/JavaScript code, show an `<iframe>`-based widget such as a YouTube or Microsoft Stream video, or display an [Adaptive card](https://docs.microsoft.com/en-us/adaptive-cards/). | [Task module Overview](~/concepts/task-modules/task-modules-overview), [task module in tabs](~/concepts/task-modules/task-modules-tabs),  [task module in bots](~/concepts/task-modules/task-modules-bots) |
+| 10/05/2018 | Formatting information for cards has been updated, and tested in the desktop, iOS and Android clients for Teams. | [Cards](~/concepts/cards/cards), [Card formatting](~/concepts/cards/cards-format) |
 | 09/24/2018 | Calls and online meetings APIs for Microsoft Graph were released to beta, and Teams apps can now interact with users in rich ways using voice and video. | [Calls and online meetings bots](~/concepts/calls-and-meetings/calls-meetings-bots-overview), [Real-time media concepts](~/concepts/calls-and-meetings/real-time-media-concepts), [Registering a calling bot](~/concepts/calls-and-meetings/register-calling-bot), [Debugging and local testing](~/concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots), [Application-hosted media](~/concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots), [Handling incoming call notifications](~/concepts/calls-and-meetings/call-notifications) |
 | 09/24/2018 | New line-of-business scenarios have been added. | [App scenerios](~/scenarios/lob-scenarios-landing-page), [Line-of-business apps overview](~/lob-apps-value-prop) |
 | 09/11/2018 | Tab configuration pages are now significantly taller. | [Configuration page height](~/resources/design/framework/tabs.md#configuration-page-height) |
