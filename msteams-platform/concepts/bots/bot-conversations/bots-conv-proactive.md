@@ -20,7 +20,9 @@ Bots can create new conversations with an individual Microsoft Teams user as lon
 
 You need the user’s *unique ID* and *tenant ID* to send a proactive message. Typically, these are   obtained from a team context, either by [fetching the team roster](~/concepts/bots/bots-context#fetching-the-team-roster) or when a user [interacts with your bot in a channel](~/concepts/bots/bot-conversations/bots-conv-channel). For bots that have already been added to the user's personal scope, you might have cached user information via the `conversationUpdate` event (see [Bot or user added to a team](~/concepts/bots/bots-notifications#team-member-or-bot-addition)).
 
-You should use this capability sparingly and consider the user experience. Be sure not to spam end users and to send only the minimum amount of information and number of messages needed to complete your scenario.
+You should use this capability sparingly and consider the user experience. Be sure not to spam end users and to send only the minimum amount of information and number of messages needed to complete your scenario. As a best practice, we also recommend indicating to the user why he or she is receiving the message. For instance, it may be due to action taken by another user in a common team. Here is an example of this practice from Karma:
+
+![Example of providing a reason for a proactive message](~/assets/images/bots/karma-proactive-message.png)
 
 ### Example
 
