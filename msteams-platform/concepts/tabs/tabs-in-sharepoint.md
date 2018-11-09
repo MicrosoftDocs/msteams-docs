@@ -73,7 +73,7 @@ The sample app we're using is a a Talent Management application. It manages the 
 ### Benefits of this approach
 
 - Reach SharePoint users with your existing Teams tab
-- Upload your app manifest directly to your SharePoint app catalog. [Teams application packages](~/concepts/apps-app-package) are now supported by SharePoint
+- Upload your app manifest directly to your SharePoint app catalog. [Teams application packages](~/concepts/apps/app-package) are now supported by SharePoint
 - End users configure the tab on a page just like any other SharePoint web part
 - Your tab can access its [context](~/concepts/tabs/tabs-context) just as it can when running inside Teams
 
@@ -95,13 +95,13 @@ In your site, create a new page by clicking in the gear button at the upper righ
 
 ![](~/assets/images/tabs/tabs-in-sharepoint/image066.png)
 
-You'll see the SharePoint Pages authoring experience. Name your page "My Teams Tab":
+You'll see the SharePoint Pages authoring experience. Name your page "My Teams Tab".
 
-Open the web part toolbox by pressing the + button, and select your Teams Tab (named "Contoso HR"). Web parts are sorted alphabetically; if it's a long list, you can use the search bar to find it. This will create a web part in the canvas that contains your Teams Tab:
+Open the web part toolbox by pressing the + button, and select your Teams Tab (named "Contoso HR"). Web parts are sorted alphabetically; if it's a long list, you can use the search bar to find it. This will create a web part in the canvas that contains your Teams tab:
 
 ![](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
 
-Press the "Publish" button to finish editing.
+Press the "Publish" button when you are finished editing.
 
 You may want to click "Add page to navigation" to have a quick reference to your page in the left navigation bar:
 
