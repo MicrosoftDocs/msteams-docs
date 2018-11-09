@@ -22,7 +22,7 @@ If you want more information on hosting apps in Azure, see:
 
 ### Open the app in Visual Studio
 
-These steps assume that you have a .NET teams app open in Visual Studio. You can follow the steps in [Get started on the Microsoft Teams platform with C#/.NET](~/get-started/get-started-dotnet) to get going quickly.
+These steps assume that you have a .NET teams app open in Visual Studio. You can follow the steps in [Get started on the Microsoft Teams platform with C#/.NET](~/get-started/get-started-dotnet-app-studio) to get going quickly.
 
 Once your app is open and built in Visual Studio click on Build and select *Publish*.
 

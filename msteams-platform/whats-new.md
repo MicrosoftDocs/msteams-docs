@@ -42,7 +42,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 |03/15/2018 | Refactored documentation for cards. |[Cards](~/concepts/cards/cards), [Card actions](~/concepts/cards/cards-actions), [Card formatting](~/concepts/cards/cards-format), [Card reference](~/concepts/cards/cards-reference)|
 |03/03/2018 | Added documentation for Teams App Studio. |[Quickly develop apps with Teams App Studio](~/get-started/get-started-app-studio), [Using the control library in App Studio](~/get-started/app-studio-component-library)|
 |02/27/2018 | Added sample code to demonstrate AsTeamsChannelAccounts() method. |[Get context for your bot](~/concepts/bots/bots-context)|
-|02/05/2018 | Added topics for getting started using C#. |[Get started on the Microsoft Teams platform with C#/.NET](./get-started/get-started-dotnet)|
+|02/05/2018 | Added topics for getting started using C#. |[Get started on the Microsoft Teams platform with C#/.NET](./get-started/get-started-dotnet-app-studio)|
 
 ## Submit your questions, bugs, feature requests, and contributions
 
