@@ -2,7 +2,7 @@
 title: Host your Teams app in Azure
 description: Host your Teams app in Azure using C#/.NET
 keywords: getting started azure teams apps .net c# csharp
-ms.date: 02/07/2018
+ms.date: 11/09/2018
 ---
 # Host your .NET Teams app in Azure
 

@@ -2,7 +2,7 @@
 title: Host your Node based Teams app in Azure
 description: Host your Teams app in Azure using Node.JS
 keywords: getting started azure teams apps Node
-ms.date: 10/24/2018
+ms.date: 11/09/2018
 ---
 # Host your Node Teams app in Azure
 

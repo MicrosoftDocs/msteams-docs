@@ -2,7 +2,7 @@
 title: Get started with Node.js
 description: Get started building great apps in Microsoft Teams using Node.js
 keywords: getting started node.js nodejs
-ms.date: 01/02/2018
+ms.date: 11/09/2018
 ---
 # Get started on the Microsoft Teams platform with Node.js
 
