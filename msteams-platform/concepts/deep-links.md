@@ -2,17 +2,17 @@
 title: Create deep links
 description: Describes deep links and how to use them in your apps
 keywords: teams deep link deeplink
-ms.date: 04/19/2018
+ms.date: 10/09/2018
 ---
 # Create deep links to entities in Microsoft Teams
 
 ## Deep linking to your tab
 
-To every tab, Microsoft Teams adds a **Copy link to tab** menu item. This generates a deep link that points to this tab, which users can share. This deep link is in a different format than one you can generate yourself. This topic will describe this second type of deep link.
+This topic describes how to create deep links to entities in Teams. This is different from the links provided by the **Copy link to tab** menu item, which just generates a deep link that points to this tab.
 
-You can enable team members to create and share links to items _within_ your tab, such as an individual task within a tab that contains a task list. When clicked, the link navigates to your tab, which focuses on the specific item. To implement this, you add a "copy link" action to each item, in whatever way best suits your UI. When the user takes this action, you call `shareDeepLink()` to display a dialog box containing a link that the user can copy to the clipboard. When you make this call, you also pass an ID for your item, which you get back in the [context](~/concepts/tabs/tabs-context) when the link is followed and your tab is reloaded.
+You can allow team members to create and share links to items _within_ your tab, such as an individual task within a tab that contains a task list. When clicked, the link navigates to your tab, which focuses on the specific item. To implement this, you add a "copy link" action to each item, in whatever way best suits your UI. When the user takes this action, you call `shareDeepLink()` to display a dialog box containing a link that the user can copy to the clipboard. When you make this call, you also pass an ID for your item, which you get back in the [context](~/concepts/tabs/tabs-context) when the link is followed and your tab is reloaded.
 
-Further, you can generate deep links programmatically, using the format specified later in this topic. You might want to use these in [bot](~/concepts/bots/bots-overview) and [Connector](~/concepts/connectors/connectors) messages that inform users about changes to your tab, or to items within it.
+You can also generate deep links programmatically, using the format specified later in this topic. You might want to use these in [bot](~/concepts/bots/bots-overview) and [Connector](~/concepts/connectors/connectors) messages that inform users about changes to your tab, or to items within it.
 
 > [!NOTE]
 > Static tabs have a scope of "personal" and configurable tabs have a scope of "team". The two tab types have a slightly different syntax since only the configurable tab has a `channel` property associated with its context object. See the [Manifest](~/resources/schema/manifest-schema) reference for more information on personal and team scopes.
@@ -23,7 +23,7 @@ Further, you can generate deep links programmatically, using the format specifie
 
 To show a dialog box that contains a deep link to an item within your tab, call `microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })`
 
-The fields to provide are as follows:
+Provide these fields:
 
 * `subEntityId`&emsp;A unique identifier for the item within your tab to which you are deep linking
 * `subEntityLabel`&emsp;A label for the item to use for displaying the deep link
@@ -31,7 +31,7 @@ The fields to provide are as follows:
 
 ### Generating a deep link to your tab
 
-The format for a deep link that you can use in a bot, Connector, or messaging extension card is as follows:
+Use this format for a deep link that you can use in a bot, Connector, or messaging extension card:
 
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 
@@ -80,7 +80,7 @@ As an example use case, if you are returning an Office 365 user profile from you
 
 ### Generating a deep link to a chat
 
-The format for a deep link that you can use in a bot, Connector, or messaging extension card is as follows:
+Use this format for a deep link that you can use in a bot, Connector, or messaging extension card:
 
 `https://teams.microsoft.com/l/chat/0/0?users=<user1>,<user2>,...&topicName=<chat name>&message=<precanned text>`
 
