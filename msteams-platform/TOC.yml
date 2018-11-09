@@ -55,7 +55,9 @@
     - name: Requirements for tabs
       href: ./concepts/tabs/tabs-requirements
     - name: Cross-domain redirects
-      href: ./concepts/tabs/cross-domain      
+      href: ./concepts/tabs/cross-domain
+    - name: Tabs as SharePoint web parts
+      href: ./concepts/tabs/tabs-in-sharepoint
   - name: Bots
     href: ./concepts/bots/bots-overview
     items:
