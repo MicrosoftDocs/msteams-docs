@@ -74,7 +74,7 @@ The [`microsoftTeams.getContext`](/javascript/api/msteams-client/microsoftteams.
 > [!NOTE]
 > This functionality is currently available in Developer Preview
 
-You can now create deep links to private chats between users. You can link to an existing chat, or you can specify a set of chat participants to start a new chat. Optionally, you can specify the name of the chat, along with text that should be inserted into the user's compose box. New chats will be created in draft state until the user sends the first message. You can think of this feature as a shortcut for a basic user action.
+You can now create deep links to private chats between users by specifying the set of participants. If the chat doesn't exist, the link will navigate the user to a new chat. New chats will be created in draft state until the user sends the first message. Optionally, you can specify the name of the chat (if it doesn't already exist), along with text that should be inserted into the user's compose box. You can think of this feature as a shortcut for the user taking the manual action of navigating to or creating the chat, and then typing out the message.
 
 As an example use case, if you are returning an Office 365 user profile from your bot as a card, this deep link can allow the user to easily chat with that person.
 
@@ -88,8 +88,8 @@ Example: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@conto
 
 The query parameters are:
 
-* `users`&emsp;The comma-separated list of user IDs, which can be either AAD UserPrincipalName (typically an email address) or User ID value
-* `topicName`&emsp;An optional field for chat's display name, in the case of a chat with 3 or more users. If this field is not specified, the chat's display name will be based on the names of the participants
-* `message`&emsp;An optional field for the message text that you want to insert into the current user's compose box while the chat is in a draft state
+* `users`&emsp;The comma-separated list of user IDs representing the participants of the chat. The user performing the action is always included as a participant. The User ID field currently only supports the Azure AD UserPrincipalName (typically an email address).
+* `topicName`&emsp;An optional field for chat's display name, in the case of a chat with 3 or more users. If this field is not specified, the chat's display name will be based on the names of the participants.
+* `message`&emsp;An optional field for the message text that you want to insert into the current user's compose box while the chat is in a draft state.
 
 To use this deep link with your bot, you can specify this as the URL target in your card's button or tap action through the `openUrl` action type.
