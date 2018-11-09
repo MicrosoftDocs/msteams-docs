@@ -2,7 +2,7 @@
 title: Create deep links
 description: Describes deep links and how to use them in your apps
 keywords: teams deep link deeplink
-ms.date: 04/19/2018
+ms.date: 10/09/2018
 ---
 # Create deep links to entities in Microsoft Teams
 
