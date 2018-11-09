@@ -28,7 +28,7 @@ With the November release of Teams and SharePoint Framework v. 1.7, developers h
                     </div>
                     <div class="cardText">
                         <h3>Teams Tabs in SharePoint</h3>
-                        <p> Create rich app experiences in SharePoint by bringing your Teams app into Sharepoint.</p>
+                        <p>Create rich app experiences in SharePoint by bringing your Teams app into Sharepoint (this article).</p>
                     </div>
                 </div>
             </div>
@@ -47,7 +47,7 @@ With the November release of Teams and SharePoint Framework v. 1.7, developers h
                     </div>
                     <div class="cardText">
                         <h3>SharePoint Framework in Teams</h3>
-                        <p> Bring your SharePoint web parts to Teams: SharePoint manages the hosting for you.</p>
+                        <p>Bring your SharePoint web parts to Teams and let SharePoint manage the hosting for you.</p>
                     </div>
                 </div>
             </div>
