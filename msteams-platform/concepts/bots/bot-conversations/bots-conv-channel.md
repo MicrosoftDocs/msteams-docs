@@ -2,7 +2,7 @@
 title: Channel conversations with bots
 description: Describes the end-to-end scenario of having a conversation with a bot in a channel in Microsoft Teams
 keywords: teams scenarios channels conversation bot
-ms.date: 03/29/2018
+ms.date: 11/11/2018
 ---
 # Interact in a team channel with a Microsoft Teams bot
 
@@ -42,7 +42,7 @@ Note that replying to a message in a channel shows as a reply to the initiating 
 
 ### Best practice: Welcome messages in teams
 
-When your bot is first added to the team, it is a best practice to send a welcome message to the team to introduce the bot to all users of the team. The welcome message should provide a description of the bot’s functionality and user benefits. Ideally the message should also include commands for the user to interact with the app. To do this, ensure that your bot responds to the `conversationUpdate` message, with the `teamsAddMembers` eventType in the `channelData` object. Be sure that the `memberAdded` ID is the bots App ID itself, because the same event is sent when a user is added to a team. See [Team member or bot addition](~/concepts/bots/bots-notifications#team-member-or-bot-addition) for more details.
+When your bot is first added to the team, it is a best practice to send a welcome message to the team to introduce the bot to all users of the team. The welcome message should provide a description of the bot’s functionality and user benefits. Ideally the message should also include commands for the user to interact with the app. To do this, ensure that your bot responds to the `conversationUpdate` message, with the `teamsAddMembers` eventType in the `channelData` object. Be sure that the `memberAdded` ID is the bot's App ID itself, because the same event is sent when a user is added to a team. See [Team member or bot addition](~/concepts/bots/bots-notifications#team-member-or-bot-addition) for more details.
 
 You might also want to send a personal message to each member of the team when the bot is added. To do this, you could [fetch the team roster](~/concepts/bots/bots-context#fetching-the-team-roster) and send each user a [direct message](~/concepts/bots/bot-conversations/bots-conv-personal#starting-a-11-conversation).
 
