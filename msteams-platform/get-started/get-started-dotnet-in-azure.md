@@ -2,7 +2,7 @@
 title: Host your Teams app in Azure
 description: Host your Teams app in Azure using C#/.NET
 keywords: getting started azure teams apps .net c# csharp
-ms.date: 02/07/2018
+ms.date: 11/09/2018
 ---
 # Host your .NET Teams app in Azure
 
@@ -22,7 +22,7 @@ If you want more information on hosting apps in Azure, see:
 
 ### Open the app in Visual Studio
 
-These steps assume that you have a .NET teams app open in Visual Studio. You can follow the steps in [Get started on the Microsoft Teams platform with C#/.NET](~/get-started/get-started-dotnet) to get going quickly.
+These steps assume that you have a .NET teams app open in Visual Studio. You can follow the steps in [Get started on the Microsoft Teams platform with C#/.NET](~/get-started/get-started-dotnet-app-studio) to get going quickly.
 
 Once your app is open and built in Visual Studio click on Build and select *Publish*.
 
