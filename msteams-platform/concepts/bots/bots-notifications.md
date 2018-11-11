@@ -2,7 +2,7 @@
 title: Handle bot events
 description: Describes how to handle events in bots for Microsoft Teams
 keywords: teams bots events
-ms.date: 04/26/2018
+ms.date: 11/11/2018
 ---
 # Handle bot events in Microsoft Teams
 
@@ -127,7 +127,7 @@ Your bot receives a `conversationUpdate` with `membersAdded` when a user adds it
 
 ## Team member or bot removed
 
-The `conversationUpdate` event with the `membersRemoved` object in the payload is sent when either your bot is removed from a team, or a user is removed from a team where a bot has been added. Microsoft Teams also adds `eventType.teamMemberRemoved` in the `channelData` object. As with the `membersAdded` object, you should parse the `membersRemoved` object for your bots App ID to determine who was removed.
+The `conversationUpdate` event with the `membersRemoved` object in the payload is sent when either your bot is removed from a team, or a user is removed from a team where a bot has been added. Microsoft Teams also adds `eventType.teamMemberRemoved` in the `channelData` object. As with the `membersAdded` object, you should parse the `membersRemoved` object for your bot's App ID to determine who was removed.
 
 #### Schema example: Team member removed
 
