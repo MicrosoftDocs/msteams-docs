@@ -36,4 +36,4 @@ The fastest way to create your first Microsoft Teams app is to follow one of our
 * [Get started with .NET and C#](~/get-started/get-started-dotnet-app-studio)
 * [Get started with Node.js](~/get-started/get-started-nodejs-app-studio)
 
-After you understand the basics other sections of this guide are designed to let you dive deeper into apps for Teams.
+After you understand the basics, other sections of this guide are designed to let you dive deeper into apps for Teams.
