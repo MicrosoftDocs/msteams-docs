@@ -17,6 +17,6 @@ You can follow these walkthroughs to become more familiar with both parts of a T
 - [Get started using Node.JS](~/get-started/get-started-nodejs-app-studio)
 - [Get started using C# and .NET](~/get-started/get-started-dotnet-app-studio)
 
-For more detailed information on Teams apps read:
+For more detailed information on Teams apps, see:
 
 - [Apps for Microsoft Teams](~/Concepts/apps-overview)
