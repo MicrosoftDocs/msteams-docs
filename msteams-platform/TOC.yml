@@ -47,10 +47,10 @@
     - name: Configurable tabs
       href: ./concepts/tabs/tabs-configurable
       items:
-      - name: Content pages
-        href: ./concepts/tabs/tabs-content
       - name: Configuration pages
         href: ./concepts/tabs/tabs-configuration
+    - name: Content pages
+      href: ./concepts/tabs/tabs-content
     - name: Requirements for tabs
       href: ./concepts/tabs/tabs-requirements
     - name: Update or remove tabs
