@@ -44,16 +44,19 @@
     items:
     - name: Static tabs
       href: ./concepts/tabs/tabs-static
-    - name: Content pages
-      href: ./concepts/tabs/tabs-content
-    - name: Configuration pages
-      href: ./concepts/tabs/tabs-configuration
+    - name: Configurable tabs
+      href: ./concepts/tabs/tabs-configurable
+      items:
+      - name: Content pages
+        href: ./concepts/tabs/tabs-content
+      - name: Configuration pages
+        href: ./concepts/tabs/tabs-configuration
+    - name: Requirements for tabs
+      href: ./concepts/tabs/tabs-requirements
     - name: Update or remove tabs
       href: ./concepts/tabs/tabs-update-remove
     - name: Context for tabs
       href: ./concepts/tabs/tabs-context
-    - name: Requirements for tabs
-      href: ./concepts/tabs/tabs-requirements
     - name: Cross-domain redirects
       href: ./concepts/tabs/cross-domain
     - name: Tabs as SharePoint web parts
