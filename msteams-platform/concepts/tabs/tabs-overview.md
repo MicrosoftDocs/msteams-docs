@@ -20,7 +20,7 @@ There are two types of tabs in Teams.
 Teams determines where a tab can be used based on it's *scope*. Scope is set in the app manifest, and can be one of these values:
 
 * Teams (`team` scope) - Tabs in channels allow teams to interact with your shared experience. Currently, all tabs in channels are *configurable tabs*&mdash;a user configures the content of your tab experience when the tab is first added to a channel.
-* Group chat (`groupchat`) - configurable tabs can also be used in group chats. These are conversations between several users in a team.
+* Group chat (`groupchat` scope) - configurable tabs can also be used in group chats. These are conversations between several users in a team.
 * Personal (`personal` scope) - Tabs in the personal scope allow users to interact with your experience privately. Currently, all such tabs are *static tabs*&mdash;content that is relevant to individual users.
 
 ## How do tabs in Teams differ from a browser viewing the same content URL?

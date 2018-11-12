@@ -7,11 +7,19 @@ ms.date: 11/12/2018
 
 # Configurable tabs
 
- A *configurable tab* becomes part of a channel and provides a single kind of information to a team. For example, the Planner tab for a channel contains a single plan; the Power BI tab maps to a specific report. Users can drill down to the relevant context, but they should not be able to navigate outside the tab. The Power BI tab, for instance, doesn't enable navigation to other Power BI reports&mdash;but it does enable the **Go to website** button that launches the report in the main Power BI website.
+A *configurable tab* becomes part of a channel and provides a single kind of information to a team. 
+
+For example:
+
+* the Planner tab for a channel contains a single plan; the Power BI tab maps to a specific report. Users can drill down to the relevant context, but they should not be able to navigate outside the tab.
+* The Power BI tab doesn't enable navigation to other Power BI reports&mdash;but it does enable the **Go to website** button that launches the report in the main Power BI website.
 
 ## Scopes
 
- Configurable tabs are defined in the app manifest, and can have a scope of either `team` or `groupchat`.
+Configurable tabs are defined in the app manifest, and can have a scope of either `team` or `groupchat`.
+
+* Teams (`team` scope) - Tabs in channels allow teams to interact with your shared experience. Currently, all tabs in channels are *configurable tabs*&mdash;a user configures the content of your tab experience when the tab is first added to a channel.
+* Group chat (`groupchat` scope) - configurable tabs can also be used in group chats. These are conversations between several users in a team.
 
 ## Creating a configurable tab
 
