@@ -13,7 +13,7 @@ Tabs in Microsoft Teams allow you to display rich interactive web content. You c
 There are two types of tabs in Teams.
 
 * [*Static tabs*](~/concepts/tabs/tabs-static) support an individual user. For example, if your service is a notetaking app, add a tab that holds a user's personal notes. That way, a user can refer to his or her own notes without having to share them with the entire team.
-* [*Configurable tabs*](~/concepts/tabs/tabs-configurable) A configurable tab becomes part of a channel and provides a single kind of information to a team.
+* [*Configurable tabs*](~/concepts/tabs/tabs-configurable) A configurable tab becomes part of a channel and provides a single kind of information to a team. Configurable tabs have a configuration page in addition to a content page.
 
 ## Tab scope
 
