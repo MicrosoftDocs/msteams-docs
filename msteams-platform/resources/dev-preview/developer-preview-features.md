@@ -111,7 +111,6 @@ The samples in this section have been updated to include this feature:
 ### Known issues
 
 * The UI shown in Developer Preview is still being developed
-* Custom defined app icons are currently not working in chat
 * If you upload an app with a bot to a chat in the *Developer Preview* version of Teams, and you switch back to the *Public* version, there might be some UI or behavior inconsistencies. If you run into any issues, please uninstall the app in *Developer Preview*
 * Bot menus do not currently work with the `groupchat` scope
 * There is a limit of 5 uploaded apps per chat

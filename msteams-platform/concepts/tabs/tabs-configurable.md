@@ -19,7 +19,7 @@ For example:
 Configurable tabs are defined in the app manifest, and can have a scope of either `team` or `groupchat`, which determine where they can be used in Teams.
 
 * Teams (`team` scope) - Tabs in channels allow teams to interact with your shared experience. Currently, all tabs in channels are *configurable tabs*&mdash;a user configures the content of your tab experience when the tab is first added to a channel.
-* Group chat (`groupchat` scope) - configurable tabs can also be used in group chats. These are conversations between several users in a team.
+* Group chat (`groupchat` scope) - configurable tabs can also be used in group chats. These are conversations between 2 or more users.
 
 ## Creating a configurable tab
 
