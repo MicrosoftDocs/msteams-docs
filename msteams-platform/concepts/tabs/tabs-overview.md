@@ -17,7 +17,7 @@ There are two types of tabs in Teams.
 
 ## Tab scope
 
-Teams determines where a tab can be used based on it's *scope*. Scope is set in the app manifest, and can be one of these values:
+Teams determines where a tab can be used based on its *scope*. Scope is set in the app manifest, and can be one of these values:
 
 * Teams (`team` scope) - Tabs in channels allow teams to interact with your shared experience. Currently, all tabs in channels are *configurable tabs*&mdash;a user configures the content of your tab experience when the tab is first added to a channel.
 * Group chat (`groupchat` scope) - configurable tabs can also be used in group chats. These are conversations between 2 or more users.
