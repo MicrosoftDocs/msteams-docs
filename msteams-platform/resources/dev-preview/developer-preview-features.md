@@ -2,13 +2,12 @@
 title: Features in the Public Developer Preview
 description: Describes the features in the Public Developer Preview of Microsoft Teams
 keywords: teams preview developer features
-ms.date: 10/09/2018
+ms.date: 11/12/2018
 ---
 # Features in the Public Developer Preview for Microsoft Teams
 
 When these features are out of developer preview this content will be merged into the live doc set.
 The developer preview includes the following new features:
-
 
 ## Deep linking to a chat
 
@@ -46,20 +45,17 @@ When properly sized, your tab configuration page should look similar to this:
 
 <img width="450px" title="New configuration tab" src="~/assets/images/tabs/config-dialog-Contoso.png" />
 
-## Adding tabs and bots to chats
+## Adding bots to chats
 
-Chats are conversations between one or more users in Teams. Tabs and bots can now be added to chats. In the past they could only be added to channels and personal (bot to user) conversations.
+Chats are conversations between one or more users in Teams. bBots can now be added to chats. In the past they could only be added to channels and personal (bot to user) conversations.
 
 This feature allows you to:
 
-* Add tabs to chats
 * Add bots to chats
 
-To enable this feature use the new scope `groupchat` in the manifest definition for bots and tabs. You must  use the preview schema (1.3) in order to use this feature. You can find the schema here: `https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json`.
+To enable this feature use the new scope `groupchat` in the manifest definition for bots. You must use the preview schema (1.3) in order to use this feature. You can find the schema here: `https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json`.
 
 The [Developer preview manifest](~/resources/schema/manifest-schema-dev-preview) documentation has also been updated to include this scope.
-
-Tab support is limited to configurable tabs.
 
 ### Bot event changes
 
@@ -95,13 +91,9 @@ See [Bot notifications](~/concepts/bots/bots-notifications) for more details on 
 
 Group chat conversations behave very similarly to channel conversations with bots, so the information in the [Interact in a team channel with a Microsoft Teams bot](~/concepts/bots/bot-conversations/bots-conv-channel) topic may also be helpful. The main difference is that group chat does not support threaded conversations.
 
-### Changes to getContext() for tabs
-
-When calling `getContext` from a tab in chat, `chatId` will be returned with the ID of the chat.
-
 ### Testing your app
 
-To test your app, open up a chat and click *Add apps* in the header. From there you can access *Add custom app* to upload your app package.
+To test your app, open up a chat and click Manage apps from the tab gallery or by right clicking your chat on the left chat rail. From there you can access Upload a custom app to upload your app package.
 
 ### Preview manifest
 
@@ -118,8 +110,6 @@ The samples in this section have been updated to include this feature:
 ### Known issues
 
 * The UI shown in Developer Preview is still being developed
-* Custom defined app icons are currently not working in chat
 * If you upload an app with a bot to a chat in the *Developer Preview* version of Teams, and you switch back to the *Public* version, there might be some UI or behavior inconsistencies. If you run into any issues, please uninstall the app in *Developer Preview*
 * Bot menus do not currently work with the `groupchat` scope
-* Deep links into tabs in group chat do not work
 * There is a limit of 5 uploaded apps per chat

@@ -33,10 +33,10 @@ With this as a simple example, let's walk through the steps your configuration p
 <form>
   <input type="radio" name="maptype" value="bing" onclick="onClick()"> Bing Maps<br>
   <input type="radio" name="maptype" value="google" onclick="onClick()"> Google Maps
-</form> 
+</form>
 
 <script src="node_modules/@microsoft/teams-js@1.3.3/dist/MicrosoftTeams.min.js"></script>
- 
+
 <script type="text/javascript">  
 
 microsoftTeams.initialize();
@@ -60,7 +60,7 @@ microsoftTeams.settings.registerOnSaveHandler(function(saveEvent){
          removeUrl: "https://teams-get-started-sample.azurewebsites.net/tabremove.html",
       });
     }
-    
+
     saveEvent.notifySuccess();
 });
 
