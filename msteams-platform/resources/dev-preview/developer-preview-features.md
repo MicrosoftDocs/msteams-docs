@@ -9,7 +9,6 @@ ms.date: 11/12/2018
 When these features are out of developer preview this content will be merged into the live doc set.
 The developer preview includes the following new features:
 
-
 ## Deep linking to a chat
 
 You can now create deep links to private chats between users. You can link to an existing chat, or you can specify a set of chat participants to start a new chat. See [Deep linking to a chat](~/concepts/deep-links#deep-linking-to-a-chat) for more details.
@@ -94,7 +93,7 @@ Group chat conversations behave very similarly to channel conversations with bot
 
 ### Testing your app
 
-To test your app, open up a chat and click *Add apps* in the header. From there you can access *Add custom app* to upload your app package.
+To test your app, open up a chat and click Manage apps from the tab gallery or by right clicking your chat on the left chat rail. From there you can access Upload a custom app to upload your app package.
 
 ### Preview manifest
 
