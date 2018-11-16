@@ -4,7 +4,7 @@ description: How to restrict bots to a single tenant
 keywords: single tenant bot authentication
 ms.date: 10/16/2018
 ---
-# Bots and Tenants
+# Bots for single tenants
 
 Bots support multiple tenants by design. There are situations where this is not appropriate, such as line of business apps that support a single enterprise. In this case you don't want to expose a WebAPI on the internet. This topic discusses how to limit bots to work with one tenant.
 

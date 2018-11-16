@@ -115,6 +115,8 @@
       href: ./concepts/authentication/auth-bot-AAD
     - name: Silent authentication and SSO
       href: ./concepts/authentication/auth-silent-AAD
+    - name: Bots for single tenants
+      href: ./concepts/authentication/auth-single-tenant
     - name: Configuring identity providers
       href: ./concepts/authentication/auth-configure
     - name: Using the Azure Bot Service
