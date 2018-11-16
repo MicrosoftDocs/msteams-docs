@@ -12,6 +12,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+| 11/16/2018 | A new topic has been added discussing how to limit bot availability to a single tenant.| [Bots for single tenants](~/concepts/authentication/auth-single-tenant) |
 | 11/12/2018 | Tabs in group chat is now available in the released version of Teams, and has been moved out of developer preview. As part of this work, the tabs section has been reworked for clarity.| [Configurable tabs](~/concepts/tabs/tabs-configurable) |
 | 11/11/2018 | Getting started for Node JS and for .NET/C# has been updated to use App Studio in Teams, and a new section has been added on hosting Node based Teams apps in Azure. | [Get started on the Microsoft Teams platform with C#/.NET and App Studio](~/concepts/getting-started/get-started-dotnet-app-studio),  [Get started on the Microsoft Teams platform with Node JS and App Studio](~/concepts/getting-started/get-started-nodejs-app-studio), [Host your Node Teams app in Azure](~/concepts/getting-started/get-started-nodejs-in-azure)|
 | 11/09/2018 | You can now create deep links to private chats between users. | [Deep linking to a chat](~/concepts/deep-links#deep-linking-to-a-chat) |
