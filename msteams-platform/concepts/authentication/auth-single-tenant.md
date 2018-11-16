@@ -6,7 +6,7 @@ ms.date: 10/16/2018
 ---
 # Bots for single tenants
 
-Bots support multiple tenants by design. There are situations where this is not appropriate, such as line of business apps that support a single enterprise. In this case you don't want to expose your bot for consumption outside of your orginization. This topic discusses how to do this by limiting bots to work with one tenant.
+Bots support multiple tenants by design. There are situations where this is not appropriate, such as line of business apps that support a single enterprise. In this case you don't want to expose your bot for consumption outside of your organization. This topic discusses how to do this by checking for a specific tenant ID.
 
 ## Node.JS/Javascript
 
@@ -15,9 +15,9 @@ Here's how to limit bots to work with a single tenant in JavaScript/Node.JS.
 > [!Note]
 >For Microsoft Teams, the Office 365 tenant ID can be found here: session.message.sourceEvent.tenant.id.
 
-1. Define an environment variable called OFFICE_365_TENANT_FILTER that will allow your code to filter for a particular tenant.
+1. Define an environment variable called OFFICE_365_TENANT_FILTER and set this variable to the ID of your specific tenant
 
-2. Check for the tenant ID, and drop further processing of the message if the filter is set and it doesn't match the filter.
+2. Check for the tenant ID, and drop further processing of the message if the filter is set and it doesn't match the ID of the requesting tenant.
 
 ``` JavaScript
 
