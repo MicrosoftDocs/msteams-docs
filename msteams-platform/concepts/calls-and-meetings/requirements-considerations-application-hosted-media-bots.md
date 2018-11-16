@@ -2,7 +2,7 @@
 title: Requirements and considerations for application-hosted media bots
 description: Understand important requirements and considerations related to creating application-hosted media bots for Microsoft Teams.
 keywords: application-hosted media windows server azure vm
-ms.date: 09/24/2018
+ms.date: 11/16/2018
 ---
 
 # Requirements and considerations for application-hosted media bots
@@ -14,14 +14,14 @@ Not all guidance for developing messaging and IVR calling bots applies equally t
 
 ## Application-hosted media bot development requires C#/.NET and Windows Server
 
-- An application-hosted media bot requires the `Microsoft.Graph.Calls.Media` .NET library ([available here](https://www.nuget.org/packages/Microsoft.Graph.Calls.Media/) to access the audio and video media streams, and the bot must be deployed on a Windows Server machine (or Windows Server guest OS in Azure). Therefore, the bot must be developed in C# and the standard .NET Framework, and deployed in Microsoft Azure. You cannot use C++ or Node.js APIs to access real-time media. .NET Core is not supported for an application-hosted media bot.
+- An application-hosted media bot requires the `Microsoft.Graph.Communications.Calls.Media` .NET library ([available here](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) to access the audio and video media streams, and the bot must be deployed on a Windows Server machine (or Windows Server guest OS in Azure). Therefore, the bot must be developed in C# and the standard .NET Framework, and deployed in Microsoft Azure. You cannot use C++ or Node.js APIs to access real-time media. .NET Core is not supported for an application-hosted media bot.
 
 - An application-hosted media bot can be hosted within one of the following Azure service environments:
   - Cloud Service
   - Service Fabric with Virtual Machine Scale Sets (VMSS)
   - Infrastructure as a Service (IaaS) Virtual Machine (VM)  
   An application-hosted media bot cannot be deployed as an Azure Web App.
-- An application-hosted media bot must be running on a recent version of the `Microsoft.Graph.Calls.Media` .NET library. The bot should use either the newest available version of the [NuGet package](https://www.nuget.org/packages/Microsoft.Graph.Calls.Media/), or a version which is not more than three months old. Older versions of the library will be deprecated and may not work after a few months. Keeping the `Microsoft.Graph.Calls.Media` library up-to-date will ensure the best interoperability between the bot and Microsoft Teams.
+- An application-hosted media bot must be running on a recent version of the `Microsoft.Graph.Communications.Calls.Media` .NET library. The bot should use either the newest available version of the [NuGet package](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/), or a version which is not more than three months old. Older versions of the library will be deprecated and may not work after a few months. Keeping the `Microsoft.Graph.Communications.Calls.Media` library up-to-date will ensure the best interoperability between the bot and Microsoft Teams.
 
 ## Real-time media calls stay on the machine where they were created
 
