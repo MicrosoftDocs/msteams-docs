@@ -2,7 +2,7 @@
 title: What's new
 description: Describes all the new developer features in Microsoft Teams
 keywords: teams what's new latest
-ms.date: 09/26/2018
+ms.date: 11/12/2018
 ---
 # What's new for developers in Microsoft Teams
 
@@ -12,11 +12,15 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
-| 11/05/2018 | Action based command support for messaging extensions | [Messaging Extensions](~/concepts/compose-extensions) |
+| 11/16/2018 | Action based command support for messaging extensions | [Messaging Extensions](~/concepts/compose-extensions) |
+| 11/12/2018 | Tabs in group chat is now available in the released version of Teams, and has been moved out of developer preview. As part of this work, the tabs section has been reworked for clarity.| [Configurable tabs](~/concepts/tabs/tabs-configurable) |
+| 11/11/2018 | Getting started for Node JS and for .NET/C# has been updated to use App Studio in Teams, and a new section has been added on hosting Node based Teams apps in Azure. | [Get started on the Microsoft Teams platform with C#/.NET and App Studio](~/concepts/getting-started/get-started-dotnet-app-studio),  [Get started on the Microsoft Teams platform with Node JS and App Studio](~/concepts/getting-started/get-started-nodejs-app-studio), [Host your Node Teams app in Azure](~/concepts/getting-started/get-started-nodejs-in-azure)|
+| 11/09/2018 | You can now create deep links to private chats between users. | [Deep linking to a chat](~/concepts/deep-links#deep-linking-to-a-chat) |
+| 11/08/2018 | SharePoint Framework 1.7 has shipped and with it a new feature to use Microsoft Teams tab as a SharePoint Framework web part. | [Tabs in SharePoint](~/concepts/tabs/tabs-in-sharepoint) |
+| 11/05/2018 | The "task module" feature was released. A task module allows you to create modal popup experiences in your Teams application, from both bots and tabs. Inside the popup, you can run your own custom HTML/JavaScript code, show an `<iframe>`-based widget such as a YouTube or Microsoft Stream video, or display an [Adaptive card](https://docs.microsoft.com/en-us/adaptive-cards/). | [Task module Overview](~/concepts/task-modules/task-modules-overview), [task module in tabs](~/concepts/task-modules/task-modules-tabs),  [task module in bots](~/concepts/task-modules/task-modules-bots) |
 | 10/05/2018 | Formatting information for cards has been updated, and tested in the desktop, iOS and Android clients for Teams. | [Cards](~/concepts/cards/cards), [Card formatting](~/concepts/cards/cards-format) |
-| 09/26/2018 | The "Task modules" capability was released to Developer Preview. | [Task modules overview](~/concepts/task-modules/task-modules-overview), [Using task modules in tabs](~/concepts/task-modules/task-modules-tabs), [Using task modules in bots](~/concepts/task-modules/task-modules-bots) |
 | 09/24/2018 | Calls and online meetings APIs for Microsoft Graph were released to beta, and Teams apps can now interact with users in rich ways using voice and video. | [Calls and online meetings bots](~/concepts/calls-and-meetings/calls-meetings-bots-overview), [Real-time media concepts](~/concepts/calls-and-meetings/real-time-media-concepts), [Registering a calling bot](~/concepts/calls-and-meetings/register-calling-bot), [Debugging and local testing](~/concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots), [Application-hosted media](~/concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots), [Handling incoming call notifications](~/concepts/calls-and-meetings/call-notifications) |
-| 09/24/2018 | New line-of-business scenarios have been added. | [App scenerios](~/scenarios/lob-scenarios-landing-page), [Line-of-business apps overview](~/lob-apps-value-prop) |
+| 09/24/2018 | New line-of-business scenarios have been added. | [App scenarios](~/scenarios/lob-scenarios-landing-page), [Line-of-business apps overview](~/lob-apps-value-prop) |
 | 09/11/2018 | Tab configuration pages are now significantly taller. | [Configuration page height](~/resources/design/framework/tabs.md#configuration-page-height) |
 | 08/15/2018 | Adaptive cards are now supported in Teams.| [Adaptive card](~/concepts/cards/cards-reference#adaptive-card), [Adaptive card actions in Teams](~/concepts/cards/cards-actions#adaptive-card-actions) |
 | 08/10/2018 | Client support for DevTools has been documented for Developer Preview.| [DevTools for the Microsoft Teams Desktop Client](~/resources/dev-preview/developer-preview-tools.md)|
@@ -36,12 +40,12 @@ The change log lists changes to the Microsoft Teams platform and this document s
 | 04/12/2018 | Added this topic to track changes to the Teams programming interface and this documentation set. | [What's new](~/whats-new)|
 | 04/10/2018 | Changed authentication URLs to consistently use the tenant ID in the path. | [Authentication flow for Tabs](~/concepts/authentication/auth-flow-tab), [AAD Tab authentication](~/concepts/authentication/auth-tab-AAD)|
 | 04/06/2018 | Added design guidelines for using the Command Box. |[Command box](~/resources/design/framework/command-box)|
-| 04/02/2018 |Using bots to send notifications for your app. |[Notification-only bots](~/concepts/bots/bots-notification-only)|
+| 04/02/2018 | Using bots to send notifications for your app. |[Notification-only bots](~/concepts/bots/bots-notification-only)|
 | 03/27/2018 | Expanded documentation for proactive messaging. |[Starting a conversation](./concepts/bots/bot-conversations/bots-conv-proactive)|
-|03/15/2018 | Refactored documentation for cards. |[Cards](~/concepts/cards/cards), [Card actions](~/concepts/cards/cards-actions), [Card formatting](~/concepts/cards/cards-format), [Card reference](~/concepts/cards/cards-reference)|
-|03/03/2018 | Added documentation for Teams App Studio. |[Quickly develop apps with Teams App Studio](~/get-started/get-started-app-studio), [Using the control library in App Studio](~/get-started/app-studio-component-library)|
-|02/27/2018 | Added sample code to demonstrate AsTeamsChannelAccounts() method. |[Get context for your bot](~/concepts/bots/bots-context)|
-|02/05/2018 | Added topics for getting started using C#. |[Get started on the Microsoft Teams platform with C#/.NET](./get-started/get-started-dotnet)|
+| 03/15/2018 | Refactored documentation for cards. |[Cards](~/concepts/cards/cards), [Card actions](~/concepts/cards/cards-actions), [Card formatting](~/concepts/cards/cards-format), [Card reference](~/concepts/cards/cards-reference)|
+| 03/03/2018 | Added documentation for Teams App Studio. |[Quickly develop apps with Teams App Studio](~/get-started/get-started-app-studio), [Using the control library in App Studio](~/get-started/app-studio-component-library)|
+| 02/27/2018 | Added sample code to demonstrate AsTeamsChannelAccounts() method. |[Get context for your bot](~/concepts/bots/bots-context)|
+| 02/05/2018 | Added topics for getting started using C#. |[Get started on the Microsoft Teams platform with C#/.NET](./get-started/get-started-dotnet-app-studio)|
 
 ## Submit your questions, bugs, feature requests, and contributions
 
