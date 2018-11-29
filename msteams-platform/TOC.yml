@@ -115,8 +115,6 @@
       href: ./concepts/authentication/auth-bot-AAD
     - name: Silent authentication and SSO
       href: ./concepts/authentication/auth-silent-AAD
-    - name: Bots for single tenants
-      href: ./concepts/authentication/auth-single-tenant
     - name: Configuring identity providers
       href: ./concepts/authentication/auth-configure
     - name: Using the Azure Bot Service
@@ -174,6 +172,8 @@
     href: ./scenarios/lob-marketing-scenario
   - name: Set up your teams for success
     href: ./scenarios/lob-pmo-scenario
+  - name: Bots for limited tenants
+    href: ./scenarios/limited-tenant
 - name: Resources
   href: ./resources/resource-overview
   items:

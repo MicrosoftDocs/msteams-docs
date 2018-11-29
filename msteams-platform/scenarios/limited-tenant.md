@@ -1,16 +1,16 @@
 ---
-title: Bots for single tenants
-description: How to restrict bots to a single tenant
-keywords: single tenant bot authentication
-ms.date: 10/16/2018
+title: Bots for limited tenants
+description: How to restrict bots to one or two tenants
+keywords: single limited tenant bot authentication
+ms.date: 11/29/2018
 ---
-# Bots for single tenants
+# Bots for one or more tenants
 
-Bots support multiple tenants by design. There are situations where this is not appropriate, such as line of business apps that support a single enterprise. In this case you don't want to expose your bot for consumption outside of your organization. This topic discusses how to do this by checking for a specific tenant ID.
+Bots support all tenants by design. There are situations where this is not appropriate, such as line of business apps that support one enterprise. In this case you don't want to expose your bot for consumption outside of your organization. This topic discusses how to do this by checking for specific tenant IDs.
 
 ## Node.JS/Javascript
 
-Here's how to limit bots to work with a single tenant in JavaScript/Node.JS.
+Here's how to limit bots to work with a limited number of tenants in JavaScript/Node.JS. This example supports a single tenant, but can be extended to support more than one tenant if needed.
 
 > [!Note]
 >For Microsoft Teams, the Office 365 tenant ID can be found here: `session.message.sourceEvent.tenant.id`.
@@ -53,7 +53,7 @@ bot.use({
 
 ## C#
 
-Here's how to limit bots to work with a single tenant in C#. The SDK exposes TenantFilter, which allows you to add this action filter to the controller class as shown below.
+Here's how to limit bots to work with single or multiple tenants in C#. The SDK exposes TenantFilter, which allows you to add this action filter to the controller class as shown below.
 
 ``` C#
 
