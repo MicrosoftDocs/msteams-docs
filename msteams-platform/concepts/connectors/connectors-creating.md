@@ -2,7 +2,7 @@
 title: Office 365 Connectors
 description: Describes how to get started with Office 365 Connectors in Microsoft Teams
 keywords: teams o365 connector
-ms.date: 10/11/2018
+ms.date: 11/29/2018
 ---
 # Creating Office 365 Connectors for Microsoft Teams
 
