@@ -50,7 +50,6 @@ The extension definition is an object that has the following structure:
 | Property name | Purpose | Required? |
 |---|---|---|
 | `botId` | The unique Microsoft app ID for the bot as registered with the Bot Framework. This should typically be the same as the ID for your overall Teams app. | Yes |
-| `scopes` | Array declaring whether this extension can be added to `personal` or `team` scopes (or both). | Yes |
 | `canUpdateConfiguration` | Enables **Settings** menu item. | No |
 | `commands` | Array of commands that this messaging extension supports. You are limited to 10 commands. | Yes |
 
