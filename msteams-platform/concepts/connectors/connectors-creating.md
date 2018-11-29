@@ -130,7 +130,7 @@ After you upload the app, open the Connectors list from any channel. Scroll to t
 
 You can now launch the configuration experience. Be aware that this flow occurs entirely within Microsoft Teams as a hosted experience.
 
-To verify that an `HttpPOST` action is working correctly, use your [custom incoming webhook](~/connectors/connectors-using#setting-up-a-custom-incoming-webhook).
+To verify that an `HttpPOST` action is working correctly, use your [custom incoming webhook](~/concepts/connectors/connectors-using#setting-up-a-custom-incoming-webhook).
 
 ## Publishing your app
 
