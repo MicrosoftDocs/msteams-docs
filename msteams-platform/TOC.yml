@@ -140,8 +140,7 @@
     items:
     - name: Search based messaging extensions
       href: ./concepts/messaging-extensions/search-extensions
-    items:
-    - name: Create based messaging extensions
+    - name: Initiate actions with messaging extensions
       href: ./concept/messaging-extensions/create-extensions
   - name: Calls and online meetings
     href: ./concepts/calls-and-meetings/calls-meetings-bots-overview

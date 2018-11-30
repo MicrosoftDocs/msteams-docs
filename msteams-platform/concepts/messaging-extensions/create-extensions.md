@@ -5,10 +5,13 @@ keywords: teams messaging extensions messaging extensions search
 ms.date: 11/07/18
 ---
 
-# Create based messaging extensions 
-Create based messaging extensions allow you to take inputs from users and post to your service. Note that create based messaging extensions are currently in Developer preview.
+# Initiate actions with messaging extensions (Developer preview)
+
+You can initiate actions from messaging extensions to allow you to take inputs from users and post to your service.
 
 ![Example of messaging extension card](~/assets/images/compose-extensions/ceexample.png)
+
+The following sections describe how to do this.
 
 ## Add a messaging extension to your app
 
@@ -46,7 +49,7 @@ The extension definition is an object that has the following structure:
 
 #### Define commands
 
-Your messaging extension should declare one command, which appears when the user selects your app from the **More options** (**&#8943;**) button in the compose box. 
+Your messaging extension should declare one command, which appears when the user selects your app from the **More options** (**&#8943;**) button in the compose box.
 
 ![Screenshot of list of messaging extensions in Teams](~/assets/images/compose-extensions/compose-extension-list.png)
 
@@ -169,12 +172,11 @@ To open your messaging extension, navigate to any of your chats or channels. Cho
 
 There are three ways to collect information from an end user in Teams.
 
-### Static parameter list ###
+### Static parameter list
 
-In this method, all you need to do is define a static list of parameters in the manfifest as shown above in the "Create To Do" command. To use this method ensure `fetchTask` is set to `false` and that you define your paramters in the manifest.
+In this method, all you need to do is define a static list of parameters in the manifest as shown above in the "Create To Do" command. To use this method ensure `fetchTask` is set to `false` and that you define your parameters in the manifest.
 
-When a user chooses a command with static parameters, Teams will generate a form in a Task Module with the parameters defined in the manifest. On hitting Submit a `composeExtension/submitAction` is sent to the bot. See the [responding to submit](#Responding to submit) section for more info ont he expected set of responses.
-
+When a user chooses a command with static parameters, Teams will generate a form in a Task Module with the parameters defined in the manifest. On hitting Submit a `composeExtension/submitAction` is sent to the bot. See the [responding to submit](#Responding to submit) section for more info on he expected set of responses.
 
 ### Dynamic input using an adaptive card
 
@@ -221,6 +223,7 @@ In this method your service will be receive a `composeExtension/fetchTask` event
     }
 }
 ```
+
 The bot can also respond with an auth/config response if the user needs to authenticate or configure the extesion before getting the user input.
 
 ### Dynamic input using a web view
@@ -239,7 +242,8 @@ Just like in the adaptive card flow your service will be send a fetchTask event 
     }
 }
 ```
-The bot can also respond with an auth/config response if the user needs to authenticate or configure the extesion before getting the user input.
+
+The bot can also respond with an auth/config response if the user needs to authenticate or configure the extension before getting the user input.
 
 ## Responding to submit
 
