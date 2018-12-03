@@ -13,6 +13,7 @@ Search based messaging extensions allow you to query your service and post that 
 
 The following sections describe how to do this.
 
+
 [!include[Content](~/concepts/connectors/messaging-extensions-common.md)]
 
 ### Search type message extensions
