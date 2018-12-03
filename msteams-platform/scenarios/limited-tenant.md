@@ -8,7 +8,7 @@ ms.date: 11/29/2018
 
 Bots support all tenants by design. There are situations where this is not appropriate, such as line of business apps that support one enterprise. In this case you don't want to expose your bot for consumption outside of your organization. This topic discusses how to do this by checking for specific tenant IDs.
 
-## Node.JS/Javascript
+## Node.js/Javascript
 
 Here's how to limit bots to work with a limited number of tenants in JavaScript/Node.JS. This example supports a single tenant, but can be extended to support more than one tenant if needed.
 
@@ -68,7 +68,7 @@ namespace Microsoft.Teams.Samples.HelloWorld.Web.Controllers
         public async Task<HttpResponseMessage> Post([FromBody] Activity activity)
 ```
 
-The tenant filter will take a comma separated list of tenantIds that are placed in web.config
+The tenant filter will take a comma separated list of tenantIds that are placed in web.config:
 
 ``` JSON
 <configuration>
@@ -78,6 +78,6 @@ The tenant filter will take a comma separated list of tenantIds that are placed 
 
 ```
 
-## Find the tenant ID using PowerShell
+## Find the tenant ID using PowerShell or the Azure portal
 
-The article [Find your Office 365 tenant ID](https://support.office.com/article/Find-your-Office-365-tenant-ID-6891b561-a52d-4ade-9f39-b492285e2c9b) shows how you can find the tenant ID using PowerShell.
+The article [Find your Office 365 tenant ID](https://support.office.com/article/Find-your-Office-365-tenant-ID-6891b561-a52d-4ade-9f39-b492285e2c9b) shows how you can find the tenant ID using PowerShell or the Azure portal.
