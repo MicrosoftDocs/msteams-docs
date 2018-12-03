@@ -130,7 +130,7 @@ When a user chooses a command with static parameters, Teams will generate a form
 
 In this method, your service can define a custom adaptive card to collect the end user input. For this approach, set the `fetchTask` parameter to `true` in the manifest. Note that if you set `fetchTask` to `true` any static parameters defined for the command will be ignored.
 
-In this method your service will be receive a `composeExtension/fetchTask` event and needs to respond with an adaptive card based [task module response](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/task-modules/task-modules-overview#the-taskinfo-object). Below is an sample response with an adaptive card:
+In this method your service will receive a `composeExtension/fetchTask` event and needs to respond with an adaptive card based [task module response](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/task-modules/task-modules-overview#the-taskinfo-object). Below is an sample response with an adaptive card:
 
 ```json
 {
@@ -176,7 +176,7 @@ The bot can also respond with an auth/config response if the user needs to authe
 
 ### Dynamic input using a web view
 
-In this method, your service can show an `<iframe>` based widget to show any custom UI and collect user input. For this approach, set the `fetchTask` parameter to `true` in the manifest. 
+In this method, your service can show an `<iframe>` based widget to show any custom UI and collect user input. For this approach, set the `fetchTask` parameter to `true` in the manifest.
 
 Just like in the adaptive card flow your service will be send a fetchTask event and needs to respond with a URL based [task module response](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/task-modules/task-modules-overview#the-taskinfo-object). Below is an sample response with an adaptive card:
 
@@ -201,7 +201,7 @@ There are three different expected responses to a submitAction.
 
 ### Task Module response
 
-This is used when your extension needs to chain dialogs together to get more information. The response is exactly the same as `fetchTask` mentioned earlier
+This is used when your extension needs to chain dialogs together to get more information. The response is exactly the same as `fetchTask` mentioned earlier.
 
 ### Compose extension auth/config response
 
