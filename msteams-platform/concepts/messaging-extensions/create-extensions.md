@@ -1,6 +1,6 @@
 ---
-title: Create based messaging extensions
-description: Describes how to develop create based messaging extensions
+title: Action based messaging extensions
+description: Describes how to develop action based messaging extensions
 keywords: teams messaging extensions messaging extensions search
 ms.date: 11/07/18
 ---
@@ -17,7 +17,7 @@ The following sections describe how to do this.
 
 ### Action type message extensions
 
-For create based  messaging extension set the `type` parameter to `action`. Below is an example of a manifest with a search and a create command. A single messaging extension can have up to 10 different commands associated with it. This can include both multiple search and multiple create based commands.
+To initiate actions from a  messaging extension set the `type` parameter to `action`. Below is an example of a manifest with a search and a create command. A single messaging extension can have up to 10 different commands associated with it. This can include both multiple search and multiple action-based commands.
 
 #### Complete app manifest example
 
