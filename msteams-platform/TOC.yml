@@ -180,7 +180,7 @@
   - name: General
     href: ./resources/general/general-overview
     items:
-    - name: Supported media formats in Teams
+    - name: Supported media formats
       href: ./resources/general/media-formats
     - name: Debugging
       href: ./resources/general/debug
