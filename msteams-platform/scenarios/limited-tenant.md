@@ -1,12 +1,12 @@
 ---
 title: Bots for limited tenants
-description: How to restrict bots to one or two tenants
+description: Bots support all tenants by design. There are situations where this is not appropriate, such as line of business apps that support one enterprise. In this case you don't want to expose your bot for consumption outside of your organization. This topic discusses how to do this by checking for specific tenant IDs.
 keywords: single limited tenant bot authentication
 ms.date: 11/29/2018
 ---
 # Bots for one or more tenants
 
-Bots support all tenants by design. There are situations where this is not appropriate, such as line of business apps that support one enterprise. In this case you don't want to expose your bot for consumption outside of your organization. This topic discusses how to do this by checking for specific tenant IDs.
+Bots support all tenants by design. There are situations where this is not appropriate, such as line of business apps that support one organization. In this case you don't want to expose your bot for consumption outside of your organization. This topic discusses how to do this by checking for specific tenant IDs.
 
 ## Node.js/Javascript
 
