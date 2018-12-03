@@ -13,11 +13,11 @@ You can initiate actions from messaging extensions to allow you to take inputs f
 
 The following sections describe how to do this.
 
-[!include[Common content for creating extensions](~/concepts/connectors/messaging-extensions-common.md)]
+[!include[Common content for creating extensions](~/concepts//messaging-extensions/messaging-extensions-common.md)]
 
 ### Action type message extensions
 
-For create based  messaging extension set the `type` parameter to `action`. Below is an example of a manifest with a search and a create command. Note that a single messaging extension can have up to 10 different commands associated with it. This can include both multiple search and multiple create based commands.
+For create based  messaging extension set the `type` parameter to `action`. Below is an example of a manifest with a search and a create command. A single messaging extension can have up to 10 different commands associated with it. This can include both multiple search and multiple create based commands.
 
 #### Complete app manifest example
 

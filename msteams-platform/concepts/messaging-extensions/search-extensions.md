@@ -13,11 +13,11 @@ Search based messaging extensions allow you to query your service and post that 
 
 The following sections describe how to do this.
 
-[!include[common content for creating extensions](~/concepts/connectors/messaging-extensions-common.md)]
+[!include[common content for creating extensions](~/concepts/messaging-extensions/messaging-extensions-common.md)]
 
 ### Search type message extensions
 
-For search based messaging extension set the `type` parameter to `query`. Below is an example of a manifest with a single search command. Note that a single messaging extension can have up to 10 different commands associated with it. This can include both multiple search and multiple create based commands.
+For search based messaging extension set the `type` parameter to `query`. Below is an example of a manifest with a single search command. A single messaging extension can have up to 10 different commands associated with it. This can include both multiple search and multiple create based commands.
 
 #### Complete app manifest example
 
