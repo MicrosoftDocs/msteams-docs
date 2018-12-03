@@ -124,7 +124,7 @@ There are three ways to collect information from an end user in Teams.
 
 In this method, all you need to do is define a static list of parameters in the manifest as shown above in the "Create To Do" command. To use this method ensure `fetchTask` is set to `false` and that you define your parameters in the manifest.
 
-When a user chooses a command with static parameters, Teams will generate a form in a Task Module with the parameters defined in the manifest. On hitting Submit a `composeExtension/submitAction` is sent to the bot. See the [responding to submit](#Responding to submit) section for more info on he expected set of responses.
+When a user chooses a command with static parameters, Teams will generate a form in a Task Module with the parameters defined in the manifest. On hitting Submit a `composeExtension/submitAction` is sent to the bot. See the topic `Responding to submit` for more information on the expected set of responses.
 
 ### Dynamic input using an adaptive card
 
@@ -172,13 +172,13 @@ In this method your service will be receive a `composeExtension/fetchTask` event
 }
 ```
 
-The bot can also respond with an auth/config response if the user needs to authenticate or configure the extesion before getting the user input.
+The bot can also respond with an auth/config response if the user needs to authenticate or configure the extension before getting the user input.
 
 ### Dynamic input using a web view
 
 In this method, your service can show an `<iframe>` based widget to show any custom UI and collect user input. For this approach, set the `fetchTask` parameter to `true` in the manifest. 
 
-Just like in the adaptive card flow your service will be send a fetchTask event and needs to respond with a url based [task module response](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/task-modules/task-modules-overview#the-taskinfo-object). Below is an sample response with an adaptive card
+Just like in the adaptive card flow your service will be send a fetchTask event and needs to respond with a URL based [task module response](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/task-modules/task-modules-overview#the-taskinfo-object). Below is an sample response with an adaptive card:
 
 ```json
 {
@@ -195,21 +195,21 @@ The bot can also respond with an auth/config response if the user needs to authe
 
 ## Responding to submit
 
-Once a user completes entering their input your bot will receive a `composeExtension/submitAction` event with the command id and parameter values set. 
+Once a user completes entering their input your bot will receive a `composeExtension/submitAction` event with the command id and parameter values set.
 
 There are three different expected responses to a submitAction.
 
 ### Task Module response
 
-This is used when your extension needs to chain dialogs together to get more information. The response is exactly the same as the `fetchTask` section mentioned earlier
+This is used when your extension needs to chain dialogs together to get more information. The response is exactly the same as `fetchTask` mentioned earlier
 
 ### Compose extension auth/config response
 
-This is used when your extension needs to either authenticate or configure in order to continue. See the [authentication section](~/concepts/messaging-extensions/search-extensions#Authentication) defined in the search section for more details.
+This is used when your extension needs to either authenticate or configure in order to continue. See [authentication section](~/concepts/messaging-extensions/search-extensions#Authentication) in the search section for more details.
 
 ### Compose extension result response
 
-This used to insert a card into the compose box as a result of a the comand. It's the same response that's used in the search command, but it's limited to one command in the array. 
+This used to insert a card into the compose box as a result of a the command. It's the same response that's used in the search command, but it's limited to one command in the array.
 
 ```json
 {
