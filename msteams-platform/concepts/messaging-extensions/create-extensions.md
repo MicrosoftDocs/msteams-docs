@@ -13,7 +13,7 @@ You can initiate actions from messaging extensions to allow you to take inputs f
 
 The following sections describe how to do this.
 
-[!include[Content](~/concepts/connectors/messaging-extensions-common.md)]
+[!include[Content](~/concepts/connectors/messaging-extensions-common.md)
 
 ### Action type message extensions
 
