@@ -7,7 +7,7 @@ ms.date: 11/07/18
 
 # Initiate actions with messaging extensions (Developer preview)
 
-You can initiate actions from messaging extensions to allow you to take inputs from users and post to your service.
+Action based messaging extensions allow your users to trigger actions in 3rd party services while inside of Teams.
 
 ![Example of messaging extension card](~/assets/images/compose-extensions/ceexample.png)
 
