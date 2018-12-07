@@ -101,6 +101,10 @@ Now look under *App Secrets* in the *Bots* pane of App Studio, and click *Manage
 
 On this page click on the name of your bot. This will take you to the *Contoso bot Registration* page. Here you will need to click *Generate New Password*, and make a note of the password in the same text file you noted your Bot app ID in.  This is the only time your password will be shown, so be sure to do this now.
 
+Update the *Messaging endpoint* url to reflect the one you use `https://yourteamsapp.com/api/messages`.
+
+<img  width="450px" title="Adding a bot dialog" src="~/assets/images/get-started/app-studio-bot-Messaging-endpoint.png"/>
+
 Scroll to the bottom of this page and click *Save*.  Now would also be a good time to save your text file if you have not done so already. You will add this information to your hosted app later in this walkthrough, which will allow secure communication with your bot.
 
 #### Messaging extensions
