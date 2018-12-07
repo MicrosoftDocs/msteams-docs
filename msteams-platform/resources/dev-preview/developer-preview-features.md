@@ -2,12 +2,16 @@
 title: Features in the Public Developer Preview
 description: Describes the features in the Public Developer Preview of Microsoft Teams
 keywords: teams preview developer features
-ms.date: 11/12/2018
+ms.date: 12/07/2018
 ---
 # Features in the Public Developer Preview for Microsoft Teams
 
 When these features are out of developer preview this content will be merged into the live doc set.
 The developer preview includes the following new features:
+
+## Action-based commands for Messaging Extensions
+
+The messaging extension infrastructure is being updated to include non-search based commands. This can be used to collect input from a user and make an update to your service. Possible examples include: Create a task, Create a work item, Queue a build and so on. See [messaging extension section](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/messaging-extensions) for more on this change.
 
 ## Deep linking to a chat
 
