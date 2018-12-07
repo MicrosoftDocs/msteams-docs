@@ -20,7 +20,7 @@ The following sections describe how to do this.
 
 ### Action type message extensions
 
-To initiate actions from a  messaging extension set the `type` parameter to `action`. Below is an example of a manifest with a search and a create command. A single messaging extension can have up to 10 different commands associated with it. This can include both multiple search and multiple action-based commands.
+To initiate actions from a  messaging extension set the `type` parameter to `action`. Below is an example of a manifest with a search and a create command. A single messaging extension can have up to 10 different commands. This can include both multiple search and multiple action-based commands.
 
 #### Complete app manifest example
 
@@ -181,7 +181,7 @@ The bot can also respond with an auth/config response if the user needs to authe
 
 In this method, your service can show an `<iframe>` based widget to show any custom UI and collect user input. For this approach, set the `fetchTask` parameter to `true` in the manifest.
 
-Just like in the adaptive card flow your service will be send a fetchTask event and needs to respond with a URL based [task module response](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/task-modules/task-modules-overview#the-taskinfo-object). Below is an sample response with an adaptive card:
+Just like in the adaptive card flow your service will be send a `fetchTask` event and needs to respond with a URL based [task module response](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/task-modules/task-modules-overview#the-taskinfo-object). Below is an sample response with an Adaptive card:
 
 ```json
 {
@@ -200,7 +200,7 @@ The bot can also respond with an auth/config response if the user needs to authe
 
 Once a user completes entering their input your bot will receive a `composeExtension/submitAction` event with the command id and parameter values set.
 
-There are three different expected responses to a submitAction.
+There are three different expected responses to a `submitAction`.
 
 ### Task Module response
 
@@ -212,7 +212,7 @@ This is used when your extension needs to either authenticate or configure in or
 
 ### Compose extension result response
 
-This used to insert a card into the compose box as a result of a the command. It's the same response that's used in the search command, but it's limited to one command in the array.
+This used to insert a card into the compose box as a result of a the command. It's the same response that's used in the search command, but it's limited to one card or one result in the array.
 
 ```json
 {

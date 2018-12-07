@@ -11,7 +11,7 @@ The developer preview includes the following new features:
 
 ## Action-based commands for Messaging Extensions
 
-The messaging extension infrastructure is being updated to include non-search based commands. This can be used to collect input from a user and make an update to your service. Possible examples include: Create a task, Create a work item, Queue a build and so on. See [messaging extension section](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/messaging-extensions) for more on this change.
+The messaging extension infrastructure is being updated to include non-search based commands. This can be used to collect input from a user and make an update to your service. Possible examples include: Create a task, Create a work item, and start a build. See [messaging extension section](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/messaging-extensions) for more on this change.
 
 ## Deep linking to a chat
 
