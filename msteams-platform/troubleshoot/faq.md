@@ -2,7 +2,7 @@
 title: Frequently asked questions
 description: Answers to frequently asked questions about developing apps for Microsoft Teams
 keywords: teams apps faq faqs
-ms.date: 07/12/2018
+ms.date: 12/07/2018
 ---
 
 # Frequently asked questions (Microsoft Teams developer platform)
@@ -23,7 +23,7 @@ We also provide Teams-specific .NET and Node.js [extensions for the Bot Builder 
 2. If you are building a bot you must [register it with Bot Framework](~/concepts/bots/bots-create)
 3. App publishing requires you [register as a Microsoft app developer](//developer.microsoft.com/en-us/store/register)
 
-## How do I make my Teams app work with Microsoft Teams free?
+## Teams apps and authentication with guest users and Microsoft Teams free
 
 On July 12, 2018, Microsoft announced a new edition of Microsoft Teams: *Microsoft Teams free*. This allows users to create their own Teams organizations of up to 300 users for free (not a free trial; free, period). You can find more information about Microsoft Teams free [here](https://support.office.com/article/6d79a648-6913-4696-9237-ed13de64ae3c).
 
