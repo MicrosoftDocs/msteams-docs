@@ -17,7 +17,7 @@ The following sections describe how to do this.
 
 ### Search type message extensions
 
-For search based messaging extension set the `type` parameter to `query`. Below is an example of a manifest with a single search command. A single messaging extension can have up to 10 different commands associated with it. This can include both multiple search and multiple action based commands.
+For search based messaging extension set the `type` parameter to `query`. Below is an example of a manifest with a single search command. A single messaging extension can have up to 10 different commands associated with it. This can include both multiple search and multiple Action-based commands.
 
 #### Complete app manifest example
 

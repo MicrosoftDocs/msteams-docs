@@ -1,13 +1,16 @@
 ---
-title: Action based messaging extensions
-description: Describes how to develop action based messaging extensions
+title: Action-based messaging extensions
+description: Create Action-based messaging extensions to allow users to trigger external services
 keywords: teams messaging extensions messaging extensions search
-ms.date: 11/07/18
+ms.date: 12/07/18
 ---
 
-# Initiate actions with messaging extensions (Developer preview)
+# Initiate actions with messaging extensions
 
-Action based messaging extensions allow your users to trigger actions in 3rd party services while inside of Teams.
+>[!NOTE]
+>This feature is in developer preview.
+
+Action-based messaging extensions allow your users to trigger actions in external services while inside of Teams.
 
 ![Example of messaging extension card](~/assets/images/compose-extensions/ceexample.png)
 
