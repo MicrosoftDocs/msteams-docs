@@ -8,6 +8,9 @@ ms.date: 12/07/2018
 
 All bots created using the Microsoft Bot Framework are configured and ready to work in Microsoft Teams.
 
+>[!Note]
+>These steps require Bot Framework version 3. The bot framework documentation has been updated to version 4, which does not work with Teams.
+
 A sample bot is included in the [Get Started](~/get-started/get-started) sample for Node.js and .NET, along with detailed steps for creating your first bot.
 
 See the [Bot Framework Documentation](https://docs.botframework.com/en-us/) for general information on bots.
