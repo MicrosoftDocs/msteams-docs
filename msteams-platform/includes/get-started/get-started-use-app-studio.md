@@ -28,6 +28,8 @@ Build completed. Output in manifest folder
 [13:39:27] Finished 'default' after 62 μs
 ```
 
+The name of the generated app package is *helloworldapp.zip*. You can search for this file if the location is not clear in the tool you are using.
+
 In the next part of this walkthrough you are going to modify this app package by selecting the *Import an existing app* tile in the Manifest Editor.
 
 <img  width="450px" title="Importing an app" src="~/assets/images/get-started/app-studio-import.png"/>
