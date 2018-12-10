@@ -2,7 +2,7 @@
 title: Manifest schema reference
 description: Describes the schema supported by the manifest for Microsoft Teams
 keywords: teams manifest schema
-ms.date: 08/20/2018
+ms.date: 11/29/2018
 ---
 # Reference: Manifest schema for Microsoft Teams
 
@@ -302,6 +302,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
+|`configurationUrl`|String|2048 characters|✔|The https:// URL to use when configuring the connector.|
 |`connectorId`|String|64 characters|✔|A unique identifier for the Connector that matches its ID in the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).|
 |`scopes`|Array of enum|1|✔|Specifies whether the Connector offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). Currently, only the `team` scope is supported.|
 

@@ -2,12 +2,9 @@
 title: Overview of Microsoft Teams Task Modules
 description: A task module allows you to create modal popup experiences in your Teams application. Inside the popup, you can run your own custom HTML/JavaScript code, show an <iframe>-based widget such as a YouTube or Microsoft Stream video, or display an Adaptive card.
 keywords: task modules modal popup 
-ms.date: 09/28/2018
+ms.date: 11/12/2018
 ---
 # Task modules
-
-> [!NOTE]
-> This feature is currently available in [Developer Preview](~/resources/dev-preview/developer-preview-intro).
 
 A task module allows you to create modal popup experiences in your Teams application. Inside the popup, you can run your own custom HTML/JavaScript code, show an `<iframe>`-based widget such as a YouTube or Microsoft Stream video, or display an [Adaptive card](https://docs.microsoft.com/en-us/adaptive-cards/).
 
@@ -59,7 +56,7 @@ The `TaskInfo` object contains the metadata for a task module. Here's what it co
 | `url` | string | The URL of the page powering the task module experience: it's what is loaded as an `<iframe>` inside the task module. The URL's domain must be in the app's [validDomains[] array](~/resources/schema/manifest-schema#validdomains) in your app's manifest. One of `url` or `card` is required. |
 | `card` | Adaptive card or an Adaptive card bot card attachment | The JSON for the Adaptive card to appear in the task module. Bot developers are used to embedding Adaptive card JSON in a Bot Framework `attachment` object; tab developers may not be. Both formats are accepted. [Here's an example.](#adaptive-card-or-adaptive-card-bot-card-attachment) |
 | `fallbackUrl` | string | Task modules are not yet supported on Teams mobile clients. If a client does not support the task module feature, this URL is opened in a browser tab. |
-| `completionBotId` | string | Specifies a bot ID to send the result of the user's interaction with the task module. If specified, the bot will receive a `task/submit invoke` event with a JSON object in the event payload. |
+| `completionBotId` | string | Specifies a bot's App ID to send the result of the user's interaction with the task module. If specified, the bot will receive a `task/submit invoke` event with a JSON object in the event payload. |
 
 > [!NOTE]
 > The task module feature requires that the domains of the URLs you want to load are included in the `validDomains[]` array in your app's manifest. As a result, must create or modify an app manifest in order to use the task module functionality.

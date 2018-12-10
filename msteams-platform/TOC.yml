@@ -11,18 +11,21 @@
   items: 
   - name:  Prepare your Office 365 tenant
     href: ./get-started/get-started-tenant
+  - name: Get started with Node.js
+    href: ./get-started/get-started-nodejs-app-studio
+    items: 
+    - name: Publish Node.js to Azure
+      href: ./get-started/get-started-nodejs-in-azure   
+  - name: Get started with C#/.NET
+    href: ./get-started/get-started-dotnet-app-studio
+    items: 
+    - name: Publish .Net to Azure
+      href: ./get-started/get-started-dotnet-in-azure
   - name: Use App Studio for Microsoft Teams
     href: ./get-started/get-started-app-studio
     items:
     - name: App Studio Controls
       href: ./get-started/app-studio-component-library
-  - name: Get started with Node.js
-    href: ./get-started/get-started-nodejs
-  - name: Get started with C#/.NET
-    href: ./get-started/get-started-dotnet
-    items: 
-    - name: Publish to Azure
-      href: ./get-started/get-started-dotnet-in-azure
   expanded: true
 - name: Concepts
   href: ./concepts/concepts-overview
@@ -41,16 +44,19 @@
     items:
     - name: Static tabs
       href: ./concepts/tabs/tabs-static
+    - name: Configurable tabs
+      href: ./concepts/tabs/tabs-configurable
+      items:
+      - name: Configuration pages
+        href: ./concepts/tabs/tabs-configuration
     - name: Content pages
       href: ./concepts/tabs/tabs-content
-    - name: Configuration pages
-      href: ./concepts/tabs/tabs-configuration
+    - name: Requirements for tabs
+      href: ./concepts/tabs/tabs-requirements
     - name: Update or remove tabs
       href: ./concepts/tabs/tabs-update-remove
     - name: Context for tabs
       href: ./concepts/tabs/tabs-context
-    - name: Requirements for tabs
-      href: ./concepts/tabs/tabs-requirements
     - name: Cross-domain redirects
       href: ./concepts/tabs/cross-domain
     - name: Tabs as SharePoint web parts
@@ -130,7 +136,12 @@
     - name: Using connectors
       href: ./concepts/connectors/connectors-using
   - name: Messaging extensions
-    href: ./concepts/messaging-extensions
+    href: ./concepts/messaging-extensions/messaging-extensions-overview
+    items:
+    - name: Search with messaging extensions
+      href: ./concepts/messaging-extensions/search-extensions
+    - name: Initiate actions with messaging extensions
+      href: ./concepts/messaging-extensions/create-extensions
   - name: Calls and online meetings
     href: ./concepts/calls-and-meetings/calls-meetings-bots-overview
     items:
@@ -166,6 +177,8 @@
     href: ./scenarios/lob-marketing-scenario
   - name: Set up your teams for success
     href: ./scenarios/lob-pmo-scenario
+  - name: Bots for limited tenants
+    href: ./scenarios/limited-tenant
 - name: Resources
   href: ./resources/resource-overview
   items:
