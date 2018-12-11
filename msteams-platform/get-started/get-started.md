@@ -19,4 +19,4 @@ You can follow these walkthroughs to become more familiar with both parts of a T
 
 For more detailed information on Teams apps, see:
 
-- [Apps for Microsoft Teams](~/Concepts/apps-overview)
+- [Apps for Microsoft Teams](~/Concepts/apps/apps-overview)
