@@ -17,11 +17,8 @@ To create an outgoing webhook, click **Manage team** and then navigate to the **
 ![View team](~/assets/images/ManageTeam.png)
 
 Click on the **Create an outgoing webhook** link at the bottom of the page.
- 
-![Create a outgoing webhook entry point](~/assets/images/createwebhook.png)
 
-> [!IMPORTANT]
-> "Allow sideloading of external apps" must be **On** for your tenant for outgoing webhooks to work. If you don't see **Create an outgoing webhook** on the **Apps** tab, that's why. For more information, see steps 5 and 6 on [Prepare your Office 365 tenant](~/get-started/get-started-tenant#turn-on-microsoft-teams-for-your-organization).
+![Create a outgoing webhook entry point](~/assets/images/createwebhook.png)
 
 In the **Create an outgoing webhook** dialog, you can configure how your outgoing webhook appears in channels:
 
