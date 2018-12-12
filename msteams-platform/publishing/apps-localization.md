@@ -15,7 +15,7 @@ In [Seller Dashboard](http://go.microsoft.com/fwlink/?LinkId=248605), select bot
 
 ### Add English language
 
-* Fill in the app name
+* Fill in the app name.
 * Fill in a short description of the app in English.
 * Fill in the long description of the app in English.
 * In the long description, please also add the line “This app is in “French”.
