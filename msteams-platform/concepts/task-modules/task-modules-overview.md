@@ -216,7 +216,7 @@ With HTML/JavaScript-based task modules, it is your responsibility to ensure you
   // Handle the Esc key
   document.onkeyup = function(event) {
   if ((event.key === 27) || (event.key === "Escape")) {
-    microsoftTeams.submitTask(null); // this will return an err object to the completionHandler() 
+    microsoftTeams.submitTask(null); // this will return an err object to the completionHandler()
     }
   }
   ```
