@@ -71,7 +71,7 @@ You can consider a number of sources where these insights might come from:
 
 - Platform metadata (Azure)
 
-- Office 365 Graph (user interaction, usage, and so on)
+- Microsoft Graph (user interaction, usage, and so on)
 
 - Connection from external and internal systems
 
