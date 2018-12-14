@@ -46,11 +46,11 @@ There is a list of steps in the left-hand side of the Manifest editor, and on th
 
 #### App details
 
-Click on the *App details* entry under *Details*. The only thing you need to do here is to let App Studio create a new app identifier id for your app by clicking the *Generate* button.
+Click on the *App details* entry under *Details*. Click the *Generate* button to create a new app id.
 
 Your new app id should look something like: `2322041b-72bf-459d-b107-f4f335bc35bd`.
 
-Scroll through the rest of the App details in the right hand pane, and familiarize yourself with some of the entries such as *Developer information* and *Branding*. These sections become important when you are writing a new app for distribution.
+Look through the rest of the App details in the right hand pane, and familiarize yourself with some of the entries such as *Developer information* and *Branding*. These sections are important if you are writing a new app for distribution.
 
 #### Capabilities: Tabs
 
@@ -62,9 +62,7 @@ Your app can only have one Team tab.
 
 <img  width="450px" title="Adding a Teams tab" src="~/assets/images/get-started/app-studio-manifest-editor-tabs.png"/>
 
-In this sample, the Team tab is where your configuration page goes. It looks like this:
-
-`https://yourteamsapp.ngrok.io/configure` where `yourteamsapp.ngrok.io` should be replaced by the URL that you used above when hosting your app.  The url is followed by '/configure".
+In this sample, the Team tab is where your configuration page goes. Click on the *...* symbol at the end of the entry and choose *Edit* from the drop-down. Change the URL to `https://yourteamsapp.ngrok.io/configure` where `yourteamsapp.ngrok.io` should be replaced by the URL that you used above when hosting your app.
 
 ##### Personal tabs
 
@@ -76,8 +74,10 @@ Personal tabs are represented differently from the team tab. You should see *Hel
 
 There are two fields that you need to update with your app URL.
 
-- Change Content URL to https://yourteamsapp.com/hello
-- Change Website URL to https://yourteamsapp.com/hello
+- Change Content URL to `https://yourteamsapp.ngrok.io/hello`
+- Change Website URL to `https://yourteamsapp.ngrok.io/hello`
+
+Where `yourteamsapp.ngrok.io` should be replaced by the URL that you used above when hosting your app.
 
 #### Bots
 
@@ -85,31 +85,27 @@ Bots are the most common way to add functionality to your app. The hello world s
 
 <img  width="450px" title="Adding a bot" src="~/assets/images/get-started/app-studio-manifest-editor-bots.png"/>
 
-The bot that was imported from the sample does not have an App ID associated with it yet. You will have to create a new bot so that App Studio can create a new App ID and register it with Microsoft.  Note that this is the App ID for the bot, which is different from the App ID that we created for the app in a earlier step. Each bot in an app requires its own App ID.
+The bot that was imported from the sample does not have an App ID associated with it yet. You will have to create a new bot so that App Studio can create a new App ID and register it with Microsoft. Note that this is the App ID for the bot, which is different from the App ID that we created for the app in a earlier step. Each bot in an app requires its own App ID.
 
 Click the *delete* button next to the *Imported bot* in the bot list.
 
-<img  width="450px" title="Adding a bot dialog" src="~/assets/images/get-started/app-studio-manifest-editor-bot-dialog.png"/>
-
-Now there are no bots left to show.  Click *Setup*. This will display the *Set up a bot* dialog.
+Now there are no bots left to show. Click *Setup*. This will display the *Set up a bot* dialog.
 
 <img  width="450px" title="Adding a bot dialog" src="~/assets/images/get-started/app-studio-manifest-editor-bots-setup-dialog.png"/>
 
 Add a bot name such as `Contoso bot`, and click both the buttons under *scope*.
 
-Choose *Create bot* to exit the dialog.  App Studio will spend a moment registering your bot with Microsoft, and then should display your new bot in the bot list. Now would be a good time to open a text file in notepad and copy and paste your new bot id into it. You will need this id later.
+Choose *Create bot* to exit the dialog. App Studio will spend a moment registering your bot with Microsoft, and then should display your new bot in the bot list. Now would be a good time to open a text file in notepad and copy and paste your new bot id into it. You will need this id later.
 
-Now look under *App Secrets* in the *Bots* pane of App Studio, and click *Manage*. This should open a browser and take you to the *My Applications* page at https://apps.dev.microsoft.com/#/appList.
+Click *Generate New Password*, and make a note of the password in the same text file you noted your Bot app ID in. This is the only time your password will be shown, so be sure to do this now.
 
-On this page click on the name of your bot. This will take you to the *Contoso bot Registration* page. Here you will need to click *Generate New Password*, and make a note of the password in the same text file you noted your Bot app ID in.  This is the only time your password will be shown, so be sure to do this now.
-
-Scroll to the bottom of this page and click *Save*.  Now would also be a good time to save your text file if you have not done so already. You will add this information to your hosted app later in this walkthrough, which will allow secure communication with your bot.
+Now would be a good time to save your text file if you have not done so already. You will add this information to your hosted app later in this walkthrough, which will allow secure communication with your bot.
 
 #### Messaging extensions
 
 Messaging extensions let users ask for information from your service and post that information, in the form of cards, right into the channel conversation. Messaging extensions appear along the bottom of the compose box.
 
-The sample app has a messaging extension, which you can enable by clicking on *Messaging extensions* under *Capabilities* in the left hand column of App Studio.
+Click on *Messaging extensions* under *Capabilities* in the left hand column of App Studio to begin configuring the messaging extension.
 
 <img  width="450px" title="Adding a messaging extension" src="~/assets/images/get-started/app-studio-manifest-editor-mess-ext.png"/>
 
@@ -119,7 +115,9 @@ The sample messaging extension is listed in the right hand pane under *Messaging
 
 In the *Messaging Extension* dialog, choose the *Existing* tab, then under *Bot ID* choose *Select from one of my existing bots*.
 
-In the drop down below *Bot ID* expand the drop down and choose the ID of the bot you created previously, and then choose the *Save* button. This returns you to the main page for *Messaging Extensions*.
+Expand the drop down below *Bot ID* and choose the ID of the bot you created previously. Then choose the *Save* button. This returns you to the main page for *Messaging Extensions*.
+
+In the *Messaging endpoint* section update the *Bot endpoint address* to `https://yourteamsapp.ngrok.io/api/messages` where `yourteamsapp.ngrok.io` should be replaced by the URL that you used above when hosting your app.
 
 You now need to add a *Command* to your messaging extension. Do this by clicking the *Add* button in the *Command* section of *Messaging Extensions*. The *New command* dialog will appear.
 
@@ -139,7 +137,7 @@ Under *Parameter*:
 - *Title*       = Card title
 - *Description* = Card title to use
 
-And finally click the *Save* button. You are now done with configuring your messaging extension.
+You are now done with configuring your messaging extension.
 
 #### Register your app in Teams
 
@@ -153,10 +151,10 @@ In order to upload your app to Teams, click the *Install* button under *Test and
 
 <img  width="450px" title="Adding a messaging extension dialog" src="~/assets/images/get-started/app-studio-manifest-editor-test-dialog.png"/>
 
-Be careful what team you add the app to. Most often you will want to set up a special team for testing.
+Click on the *Search* box in the *Add to a team* section and select a team to add the sample app to. Usually you will want to set up a special team for testing.
 
-Once you do this, the *Install* button at the bottom of the dialog is activated and can be chosen to finish this process.
+Click the *Install* button at the bottom of the dialog.
 
-This finishes the App Studio portion of this walkthrough.  You should now see your app running in Teams, however the bot and the messaging extension will not work until you update the hosted applications environment to know what the App IDs and passwords are.
+This finishes the App Studio portion of this walkthrough. You should now see your app running in Teams, however the bot and the messaging extension will not work until you update the hosted applications environment to know what the App IDs and passwords are.
 
 <img  width="450px" title="The finished app" src="~/assets/images/get-started/app-studio-finished-app.png"/>
