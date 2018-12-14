@@ -67,6 +67,8 @@ If `TaskInfo.width` and `TaskInfo.height` are numbers, Teams will make a best ef
 
 If `TaskInfo.width` and `TaskInfo.height` are `"small"`, `"medium"`, or `"large"`, Teams sizes the red rectangle in the picture above based on a proportion of the available space: 20%, 50%, 60% for `width`; 20%, 50%, 66% for `height`, respectively.
 
+Task modules invoked from a tab can be dynamically resized. After calling `tasks.startTask()` you can call `tasks.updateTask(newSize)` where height and width properties on the newSize object conform to the TaskInfo spec (ex. `{ height: 'medium', width: 'medium' }`).
+
 ## Task module CSS for HTML/JavaScript task modules
 
 As mentioned earlier, HTML/JavaScript-based task modules have access to the entire area of the task module below the header. While that offers a great deal of flexibility, if you want padding around the edges, to align with the header elements, and avoid scrollbars, you need to provide the right CSS. Here are some tips for a few use cases.
