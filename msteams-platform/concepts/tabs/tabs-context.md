@@ -76,7 +76,6 @@ The context variable will look like the following example.
     "channelName": "The name of the current channel",
     "chatId": "The chat ID in the in the format 19:[id]@thread.skype",
     "locale": "The current locale of the user formatted as languageId-countryId (for example, en-us)",
-    "theme": "default | dark | contrast",
     "entityId": "The developer-defined unique ID for the entity this content points to",
     "subEntityId": "The developer-defined unique ID for the sub-entity this content points to",
     "loginHint": "A value suitable as a login hint for Azure AD. This is usually the login name of the current user, in their home tenant",
