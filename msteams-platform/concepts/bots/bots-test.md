@@ -23,7 +23,9 @@ To add a bot to a team, so it is usable in the team channel by all team members,
 
 When a bot is first added via the above method, Teams will send the `conversationUpdate` event. The payload for this event will contain a `channelData` object with the team information. For more information about bot events, see the documentation [here](~/concepts/bots/bots-notifications). This event is sent in both team and personal conversations, but in personal conversations the payload is empty since channel data does not apply.
 
-## Adding a bot for personal chat only
+## Adding a bot for personal chat
+
+> [!Note]
 
 If your bot only needs to be accessed in personal chat, not made available for channel conversations, you can directly upload your bot for that purpose.
 
