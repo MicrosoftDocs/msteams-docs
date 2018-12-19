@@ -22,7 +22,6 @@ There are currently some restrictions to where you can use the OAuthCard. These 
 * It will not work with [Microsoft Teams free](https://products.office.com/en-US/microsoft-teams/free)
 * It can only be used for bot authentication
 * It only works for bots registered in the [Azure Bot Service](https://azure.microsoft.com/en-us/services/bot-service/)
-* The Bot Framework SDK for Node.js does not currently support OAuthCard
 
 ## How does the Azure Bot Service help me do authentication?
 
