@@ -109,9 +109,9 @@
       href: ./concepts/authentication/auth-flow-tab
     - name: Authentication flow for bots
       href: ./concepts/authentication/auth-flow-bot
-    - name: AAD tab authentication
+    - name: Azure AD tab authentication
       href: ./concepts/authentication/auth-tab-AAD
-    - name: AAD bot authentication
+    - name: Azure AD bot authentication
       href: ./concepts/authentication/auth-bot-AAD
     - name: Silent authentication and SSO
       href: ./concepts/authentication/auth-silent-AAD
