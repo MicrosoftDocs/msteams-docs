@@ -99,6 +99,8 @@ Choose *Create bot* to exit the dialog. App Studio will spend a moment registeri
 
 Click *Generate New Password*, and make a note of the password in the same text file you noted your Bot app ID in. This is the only time your password will be shown, so be sure to do this now.
 
+Update the *Bot endpoint address* to `https://yourteamsapp.ngrok.io/api/messages`, where `yourteamsapp.ngrok.io` should be replaced by the URL that you used above when hosting your app.
+
 Now would be a good time to save your text file if you have not done so already. You will add this information to your hosted app later in this walkthrough, which will allow secure communication with your bot.
 
 #### Messaging extensions
