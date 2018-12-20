@@ -1,6 +1,6 @@
 ---
 title: Configuring OAuth 2.0 identity providers
-description: Describes how to configure identity providers with a focus on AAD
+description: Describes how to configure identity providers with a focus on Azure AD
 keywords: teams authentication AAD oauth identity provider
 ms.date: 03/01/2018
 ---
@@ -8,7 +8,7 @@ ms.date: 03/01/2018
 
 ## Configuring an application to use Azure Active Directory as an identity provider
 
-Identity providers supporting OAuth 2.0 will not authenticate requests from unknown applications; applications must be registered ahead of time. To do this with AAD, follow these steps:
+Identity providers supporting OAuth 2.0 will not authenticate requests from unknown applications; applications must be registered ahead of time. To do this with Azure AD, follow these steps:
 
 1. Open the [Application Registration Portal](https://apps.dev.microsoft.com/), click on *Add an app* and follow the steps to register your app. If your app has already been registered (for example if you have previously registered a bot in your app) locate your app.
 
@@ -36,4 +36,4 @@ Identity providers supporting OAuth 2.0 will not authenticate requests from unkn
 
 * **LinkedIn** Follow the instructions in [Configuring your LinkedIn application](https://developer.linkedin.com/docs/oauth2)
 
-* **Google** Obtain OAuth2 client credentials from the [Google API Console](https://console.developers.google.com/)
+* **Google** Obtain OAuth 2.0 client credentials from the [Google API Console](https://console.developers.google.com/)
