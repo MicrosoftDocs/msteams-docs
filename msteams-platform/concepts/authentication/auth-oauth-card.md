@@ -37,7 +37,7 @@ The OAuthCard helps with authentication in the following ways:
 * Is seamless for end users: complete the full sign in experience right within Teams.
 * Includes easy token management: you no longer have to implement a token storage system – instead, the Bot Service takes care of token caching and provides a secure mechanism for fetching those tokens.
 * Is supported by complete SDKs: easy to integrate and consume from your bot service.
-* Has out-of-box support for many popular OAuth providers, such as AAD/MSA, Facebook, and Google.
+* Has out-of-box support for many popular OAuth providers, such as Azure AD/MSA, Facebook, and Google.
 
 ## When should I implement my own solution?
 
