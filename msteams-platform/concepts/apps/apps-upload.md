@@ -19,6 +19,8 @@ For development as well as AppSource (formerly Office Store) submission you must
 
 To create an upload package, see [Create the package for your Microsoft Teams app](~/concepts/apps/apps-package).
 
+With your package created, you can now upload it into a team. Once uploaded it will be available for all users in the selected team, and only the users of that team.
+
 ## Load your package into Teams
 
 You can test your package by uploading it into Teams.
@@ -31,7 +33,7 @@ There are two ways to upload your app to Teams:
 * Using the Store
 * Using the Apps tab
 
-## Upload your package into a team using the Store
+## Upload your package into a team or conversation using the Store
 
 1. In the lower left corner of Teams, choose the Store icon. On the Store page, choose "Upload a custom app".
 
@@ -39,30 +41,29 @@ There are two ways to upload your app to Teams:
 
 2. In the *Open* dialog, navigate to the package you want to upload and choose *Open*.
 
-The uploaded package should now be available for use in the team specified in the consent dialog. It will be found  *Apps* tab. If your app does not appear, the most common reason is an error in the manifest, particularly ids for the app, bot and messaging extensions.
+The uploaded package should now be available for use in the team or conversation specified in the consent dialog. If your app does not appear, the most common reason is an error in the manifest, particularly ids for the app, bot and messaging extensions. If the app is not scoped for conversations, that option will not appear.
+
+>[Note:]
+Apps in conversations is currently in [Developer Preview](~/resources/dev-preview/developer-preview), and the option will not appear if Teams is not running in that mode.
 
 ![Example of bot in list of uploaded bots](~/assets/images/botinlist.jpg)
 
 ## Upload your package into a team using the Apps tab
 
-With your package created, you can now upload it into a team. Once uploaded it will be available for all users in the selected team, and only the users of that team.
-
-1. Create a new team for testing, if necessary. Click *Create and join team* at the bottom of the left-hand panel.
-
-2. In the target team, choose *More options* (**&#8943;**) and choose *Manage team*.
+1. In the target team, choose *More options* (**&#8943;**) and choose *Manage team*.
 
    ![View team](~/assets/images/ManageTeam.png)
 
    > [!NOTE]
    > You must be the team owner, or the owner must allow users to add the appropriate app types for this functionality to appear.
 
-3. Select the Apps tab, and then choose *Upload a custom app* on the lower right.
+2. Select the Apps tab, and then choose *Upload a custom app* on the lower right.
 
    ![Upload entry point](~/assets/images/uploadACustomApp.png)
 
-4. Browse to and select your .zip package from your computer.
+3. Browse to and select your .zip package from your computer.
 
-5. After a brief pause you will see your uploaded app in the list.
+4. After a brief pause you will see your uploaded app in the list.
 
    ![Example of bot in list of uploaded bots](~/assets/images/botinlist.jpg)
 
