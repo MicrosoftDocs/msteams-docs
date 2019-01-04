@@ -111,12 +111,12 @@ Your team-added bot can post into a channel to create a reply chain. Use `startR
 
 In the past it was recommended to use `bot.beginDialog` which could cause the following problems:
 
-* You would not be able to append to that reply chain since the conversation id is incorrect
-* If the dialog sent multiple messages (or requires multiple turns) that would create separate reply chains in the channel.
+- You would not be able to append to that reply chain since the conversation id is incorrect
+- If the dialog sent multiple messages (or requires multiple turns) that would create separate reply chains in the channel.
 
 This is no longer recommended.
 
-Alternatively, you can issue a POST request to the [`/conversations/{conversationId}/activities/`](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-connector-send-and-receive-messages#send-message) resource.
+Alternatively, you can use the REST API and issue a POST request to [`/conversations/{conversationId}/activities/`](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-connector-send-and-receive-messages#send-message) resource.
 
 #### .NET example (from [this sample](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs))
 
