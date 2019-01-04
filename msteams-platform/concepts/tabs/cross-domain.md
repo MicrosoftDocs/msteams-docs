@@ -20,4 +20,4 @@ There are several ways to do this using JavaScript:
 
 If you don't want the navigation to appear in browser history, use `window.location.replace`.
 
-* Ensure that the URL is included in the `validDomains` list in your [manifest](~/concepts/apps/apps-package). For more information, see [validDomains](~/resources/schema/manifest-schema#validdomains) in the manifest schema reference.
+Ensure that the URL is included in the `validDomains` list in your [manifest](~/concepts/apps/apps-package). For more information, see [validDomains](~/resources/schema/manifest-schema#validdomains) in the manifest schema reference.
