@@ -25,11 +25,11 @@ Authentication flow as it applies to any authentication provider:
 
 ## Authentication in Azure Active Directory
 
-Detailed implementation walkthroughs for authentication using Azure Active Directory (AAD):
+Detailed implementation walkthroughs for authentication using Azure Active Directory (Azure AD):
 
-* [AAD authentication in tabs](~/concepts/authentication/auth-tab-AAD) describes how to connect to Azure Active Directory from within a tab in your app in Teams.
-* [AAD authentication in bots](~/concepts/authentication/auth-bot-AAD) describes how to connect to Azure Active Directory from within a bot in your app in Teams.
-* [Silent authentication (AAD)](~/concepts/authentication/auth-silent-AAD) describes how to implement single sign on (SSO) in your app using Azure Active Directory. Currently SSO only works for tabs.
+* [Azure AD authentication in tabs](~/concepts/authentication/auth-tab-AAD) describes how to connect to Azure Active Directory from within a tab in your app in Teams.
+* [Azure AD authentication in bots](~/concepts/authentication/auth-bot-AAD) describes how to connect to Azure Active Directory from within a bot in your app in Teams.
+* [Silent authentication (Azure AD)](~/concepts/authentication/auth-silent-AAD) describes how to implement single sign on (SSO) in your app using Azure Active Directory. Currently SSO only works for tabs.
 
 ## Samples
 

@@ -112,7 +112,7 @@ An uploaded app with a messaging extension automatically appears in the *More op
 
 If you want to remove your app, select the trash-can icon next to the app name in the View Teams bots list.
 
-If you change manifest information, you must first remove the app and then add the updated package (per [Load your package into a team](#load-your-package-into-a-team)). Note that, in general, code changes on your service do not require you to re-upload your manifest, unless those changes require manifest updates (such as changes to the URL or the Microsoft app ID for its bot).
+If you change manifest information, you must first remove the app and then add the updated package (per [Load your package into a team](#load-your-package-into-teams)). Note that, in general, code changes on your service do not require you to re-upload your manifest, unless those changes require manifest updates (such as changes to the URL or the Microsoft app ID for its bot).
 
 > [!NOTE]
 > There is currently no way to completely remove a bot from personal context.
