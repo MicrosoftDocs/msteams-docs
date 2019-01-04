@@ -11,6 +11,9 @@ To test your app experience within Microsoft Teams, you need to upload your app 
 > [!NOTE]
 > Uploading an updated package for an existing app with a bot might not show tab changes when viewed through the Conversations window. It's better to access it via the Apps fly-out, or test on a clean test environment.
 
+> [!NOTE]
+Bots in conversations is a new feature currently in [Developer Preview](~/resources/dev-preview/developer-preview). If that mode is not enabled, support for conversations will not appear in your Teams client.
+
 For bots designed only for personal conversations between a bot and a single user, see [Adding a bot for personal chat only](~/concepts/bots/bots-test#adding-a-bot-for-personal-chat-only) for an alternate way to access for testing purposes.
 
 ## Create your upload package
@@ -71,7 +74,7 @@ If your app does not load, the most common reason is an error in the manifest, p
 
 ## Accessing your uploaded configurable tab
 
-If the app contains tabs, users can pin them to any channel on the team using the standard tab gallery flow:
+If the app contains tabs, users can pin them to any conversation or team channel using the standard tab gallery flow:
 
 1. Go to a channel in the team. Choose *+* (*Add a tab*) to the right of the existing tabs.
 
@@ -85,15 +88,17 @@ If the app contains tabs, users can pin them to any channel on the team using th
 
 ## Accessing your uploaded bot
 
-When you add a bot to the team, it should be usable by anyone on that team, inside and outside the team channels, depending on bot scope definition. You and other team members will see a post in the General channel indicating that the bot has been added to the team.
+When you add a bot to a team, it should be usable by anyone on that team, inside and outside the team channels, depending on bot scope definition. You and other team members will see a post in the General channel indicating that the bot has been added to the team.
 
 For a teams-enabled bot, you can start by invoking your bot by @mentioning the name of the bot, which should autocomplete.
 
 To test direct chats with your bot, you can either access it via the App home, @mention it in a channel, or search for it in the **New Chat** window.
 
+When you add your bot to a conversation To test direct chats with your bot, you can @mention it in a conversation, or search for it in the **New Chat** window.
+
 ## Accessing your uploaded Connector
 
-With the app loaded in the team, users can set up a Connector on any channel in the team using the standard Connectors gallery flow:
+With the app loaded in the team or conversation, users can set up a Connector using the standard Connectors gallery flow:
 
 1. Go to a channel in the team. Choose *More options* (*&#8943;*) and choose *Connectors*.
 
