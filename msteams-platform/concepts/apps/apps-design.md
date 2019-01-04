@@ -16,9 +16,9 @@ Your app can provide content and services in channels, which enable groups of pe
 
 After you decide what your app should do, you can map those activities to capabilities in Teams:
 
-*  For simple information display or interaction with web-based data, consider using [**tabs**](~/concepts/tabs/tabs-overview). Your tabs can be as simple as documents or notes or as rich as dashboards with data visualization, or design canvases.
-*  For natural-language questions and lightweight tasks, consider using [**bots**](~/concepts/bots/bots-overview). Your bots might monitor and control build systems, schedule meetings or travel, or quickly gather information from team members. Notification-only bots can push relevant information directly to a specific user in a channel or a direct message.
-*  To look up information and insert it directly into a conversation, consider using [**messaging extensions**](~/concepts/compose-extensions). With messaging extensions, you enable users to insert text, links, pictures, videos, and other rich media without switching to another app.
+- For simple information display or interaction with web-based data, consider using [**tabs**](~/concepts/tabs/tabs-overview). Your tabs can be as simple as documents or notes or as rich as dashboards with data visualization, or design canvases.
+- For natural-language questions and lightweight tasks, consider using [**bots**](~/concepts/bots/bots-overview). Your bots might monitor and control build systems, schedule meetings or travel, or quickly gather information from team members. Notification-only bots can push relevant information directly to a specific user in a channel or a direct message.
+- To look up information and insert it directly into a conversation, consider using [**messaging extensions**](~/concepts/compose-extensions). With messaging extensions, you enable users to insert text, links, pictures, videos, and other rich media without switching to another app.
 
 ## Leverage what you've already built
 
