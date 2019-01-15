@@ -59,7 +59,7 @@ Once you’ve added `devicePermissions` to your app manifest, you can check perm
 navigator.permissions.query({ name: 'camera' });
 navigator.permissions.query({ name: 'microphone' });
 navigator.permissions.query({ name: 'geolocation' });
-navigator.permissions.query({ name: 'push', userVisibleOnly: true });
+navigator.permissions.query({ name: 'notifications' });
 navigator.permissions.query({ name: 'midi', sysex: true });
 
 // Example:
