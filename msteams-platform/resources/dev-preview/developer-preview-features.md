@@ -9,10 +9,6 @@ ms.date: 12/07/2018
 When these features are out of developer preview this content will be merged into the live doc set.
 The developer preview includes the following new features:
 
-## Action-based commands for Messaging Extensions
-
-The messaging extension infrastructure is being updated to include non-search based commands. This can be used to collect input from a user and make an update to your service. Possible examples include: Create a task, Create a work item, and start a build. See [messaging extension section](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/messaging-extensions) for more on this change.
-
 ## Deep linking to a chat
 
 You can now create deep links to private chats between users. You can link to an existing chat, or you can specify a set of chat participants to start a new chat. See [Deep linking to a chat](~/concepts/deep-links#deep-linking-to-a-chat) for more details.
