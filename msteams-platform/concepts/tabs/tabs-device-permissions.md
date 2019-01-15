@@ -10,7 +10,7 @@ ms.date: 11/05/2018
 
 Your tab might require access to native features that usually require user consent, such as:
 
-* Camera, microphone, speakers
+* Camera, microphone
 * Location
 * Notifications
 
@@ -30,7 +30,6 @@ While access to these features are standard in most modern web browsers, you nee
 
 Update your app's `manifest.json` by adding `devicePermissions` and specifying which of the five properties you’d like to use in your application:
 
-
 ``` json
 "devicePermissions": [
     "media",
@@ -45,7 +44,7 @@ Each property will allow you to prompt the user to ask for their consent
 
 | Property      | Description   |
 | --- | --- |
-| media         | permission to use the camera and microphone |
+| media         | permission to use the camera, microphone and speakers |
 | geolocation   | permission to return the user's location      |
 | notifications | permission to send the user notifications      |
 | midi          | permission to send and receive midi information from a digital musical instrument   |
@@ -53,7 +52,7 @@ Each property will allow you to prompt the user to ask for their consent
 
 ## Checking permissions from your tab
 
-Once you’ve added `devicePermissions` to your app manifest, you can check permissions using the HTML5 “permissions” API without causing a prompt. 
+Once you’ve added `devicePermissions` to your app manifest, you can check permissions using the HTML5 “permissions” API without causing a prompt.
 
 ``` Javascript
 // Different query options:
@@ -93,6 +92,4 @@ Notifications will prompt the user when you call `requestPermission`
 Notification.requestPermission(function(result) { /* ... */ });
 ```
 
-![](~/assets/images/tabs/device-permissions-prompt.png)
-
-
+![Tabs device permissions prompt](~/assets/images/tabs/device-permissions-prompt.png)
