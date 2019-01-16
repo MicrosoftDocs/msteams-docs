@@ -7,9 +7,6 @@ ms.date: 12/07/18
 
 # Initiate actions with messaging extensions
 
->[!NOTE]
->This feature is in developer preview.
-
 Action-based messaging extensions allow your users to trigger actions in external services while inside of Teams.
 
 ![Example of messaging extension card](~/assets/images/compose-extensions/ceexample.png)
