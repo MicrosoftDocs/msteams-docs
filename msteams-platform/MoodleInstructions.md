@@ -6,7 +6,7 @@ ms.date: 01/17/2019
 ---
 # Installing the Moodle integration with Microsoft Teams
 
-This is some overview text that goes right here. This thing is awesome, and this is why. Going through the steps below is totally worth it.
+This is some overview text that goes right here. This thing is awesome, and this is why.
 
 ## Prerequisites
 
