@@ -1,12 +1,22 @@
 ---
 title: Installing the Moodle integration with Microsoft Teams
 description: How to install and configure the Moodle integration app for Microsoft Teams
-keywords: Teams Moodle app 
+keywords: Teams Moodle app integration plugin
 ms.date: 01/17/2019
 ---
 # Installing the Moodle integration with Microsoft Teams
 
-This is some overview text that goes right here. This thing is awesome, and this is why.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OHlPt22nKoE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[Moodle](https://moodle.org/), the most popular and open-source Learning Management System (LMS) in the world, is now integrated with Microsoft Teams! This integration helps educators and teachers collaborate around Moodle courses, ask questions about their grades and assignments and stay updated with notifications -- right within Teams!
+
+To help IT admins easily set this integration up, we have updated our open-source Office 365 Moodle Plugin with the following capabilities:
+
+* Auto-registration of your Moodle server with Azure AD.
+* One-click deployment of your Moodle Assistant bot to Azure.
+* Auto-provisioning of teams and auto-synchronization of team enrollments for all or select Moodle courses.
+* Auto-installation of the Moodle tab and the Moodle Assistant bot into each synchronized team. (Coming soon)
+* One-click publishing of the Moodle app into your private Teams App Store. (Coming soon)
 
 ## Prerequisites
 
@@ -136,4 +146,4 @@ Before you can install the app you'll need to make sure external apps and sidelo
 
 Now that you have the app installed you can add the tab to any channel that you have access to. To do so navigate to the channel, click the **+** symbol and select your app from the list. Follow the prompts to finish adding your Moodle course tab to a channel.
 
-That's it! You, and your team, can now start working with your Moodle courses directly from Microsoft Teams.
+That's it! You and your team, can now start working with your Moodle courses directly from Microsoft Teams.
