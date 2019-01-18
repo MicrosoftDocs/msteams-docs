@@ -125,52 +125,15 @@ Once the resources are finished deploying to Azure, you'll need to configure the
 
 [!VIDEO https://www.youtube.com/embed/2rMb7gtM_ZM]
 
-Now that you have your Bot deployed to Azure and configured to talk to your Moodle server, it's time to deploy your Microsoft Teams app that will talk to your bot and host your Moodle tab(s). To do this you'll load the manifest file you downloaded from the Office 365 Moodle Plugin Team Settings page in the previous step. 
+Now that you have your Bot deployed to Azure and configured to talk to your Moodle server, it's time to deploy your Microsoft Teams app. To do this you'll load the manifest file you downloaded from the Office 365 Moodle Plugin Team Settings page in the previous step.
 
 Before you can install the app you'll need to make sure external apps and sideloading of apps is enabled. To do so you can follow [these steps](https://docs.microsoft.com/en-us/MicrosoftTeams/admin-settings). Once you've ensured that external apps are enabled, you can follow the steps below to deploy your app.
 
 1. Open Microsoft Teams.
-2. Click the **Store** icon on the left navigation bar.
+2. Click the **Store** icon on the lower-left of the navigation bar.
 3. Click the **Upload a custom app** link from the list of options. *Note:* If you're logged in as a global administer you'll have the option of uploading the app to your organization's app store, otherwise you'll only be able to load the app for Teams you're a part of ("sideloading").
 4. Select the `manifest.zip` package you downloaded previously and click **Save**.
 
 Now that you have the app installed you can add the tab to any channel that you have access to. To do so navigate to the channel, click the **+** symbol and select your app from the list. Follow the prompts to finish adding your Moodle course tab to a channel.
 
 That's it! You, and your team, can now start working with your Moodle courses directly from Microsoft Teams.
-
-<!--Code sample example
-```js
-import React, { Component } from ‘react’;
-import { TeamsComponentContext, ThemeStyle, connectTeamsComponent } from ‘msteams-ui-components-react’
-
-class App extends Component {
-    render() {
-        return (
-            <TeamsComponentContext
-                fontSize={16}
-                theme={ThemeStyle.HighContrast}>
-                <MyComponent />
-            </TeamsComponentContext>
-        );
-    }
-}
-
-class MyComponentInner extends Component {
-    render() {
-        const context = this.props.context;
-        switch (context.style) {
-            case ThemeStyle.Dark:
-                return <div style={{ color: context.colors.dark.brand00 }}>Dark theme!</div>;
-            case ThemeStyle.HighContrast:
-                return <div style={{ color: context.colors.highContrast.black }}>High Contrast theme!</div>;
-            case ThemeStyle.Light:
-                return <div style={{ color: context.colors.light.brand00 }}>Light theme!</div>;
-        }
-    }
-}
-
-const MyComponent = connectTeamsComponent(MyComponentInner);
-
-export default App;
-```
--->
