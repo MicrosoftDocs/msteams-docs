@@ -19,6 +19,7 @@ Cards used by bots and messaging extensions in Teams support the following activ
 > [!NOTE]
 >* Teams does not support `CardAction` types not listed in the preceding table.
 >* Teams does not support the `potentialActions` property.
+>* Card actions are different than [suggested actions](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button) in Bot Framework/Azure Bot Service. Suggested actions are not supported in Microsoft Teams: if you want buttons to appear on a Teams bot message, use a card.
 
 Teams also supports [Adaptive card actions](~/concepts/cards/cards-actions#adaptive-card-actions), which are only used by Adaptive cards. These actions are listed in their own section at the end of this reference.
 
