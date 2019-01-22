@@ -297,3 +297,7 @@ To include a `signin` action with an adaptive card include the following details
   }
 }
 ```
+
+> [!NOTE]
+>* Teams does not support Adaptive Card `Action` types not shown here.
+>* Teams does not support the Adaptive Card's `suggestedActions` method, use Hero Card instead.
