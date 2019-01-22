@@ -55,7 +55,6 @@ The `TaskInfo` object contains the metadata for a task module. Here's what it co
 | `width` | string | This can be a number, representing the task module's width in pixels, or a string, one of:  `small`, `medium`, `large`. [See below for how height and width are handled](#task-module-sizing). |
 | `url` | string | The URL of the page powering the task module experience: it's what is loaded as an `<iframe>` inside the task module. The URL's domain must be in the app's [validDomains[] array](~/resources/schema/manifest-schema#validdomains) in your app's manifest. One of `url` or `card` is required. |
 | `card` | Adaptive card or an Adaptive card bot card attachment | The JSON for the Adaptive card to appear in the task module. Bot developers are used to embedding Adaptive card JSON in a Bot Framework `attachment` object; tab developers may not be. Both formats are accepted. [Here's an example.](#adaptive-card-or-adaptive-card-bot-card-attachment) |
-| `fallbackUrl` | string | Task modules are not yet supported on Teams mobile clients. If a client does not support the task module feature, this URL is opened in a browser tab. |
 | `completionBotId` | string | Specifies a bot's App ID to send the result of the user's interaction with the task module. If specified, the bot will receive a `task/submit invoke` event with a JSON object in the event payload. |
 
 > [!NOTE]
