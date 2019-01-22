@@ -6,7 +6,7 @@ ms.date: 01/17/2019
 ---
 # Installing the Moodle integration with Microsoft Teams
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OHlPt22nKoE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[!VIDEO https://www.youtube.com/embed/OHlPt22nKoE]
 
 [Moodle](https://moodle.org/), the most popular and open-source Learning Management System (LMS) in the world, is now integrated with Microsoft Teams! This integration helps educators and teachers collaborate around Moodle courses, ask questions about their grades and assignments and stay updated with notifications -- right within Teams!
 
