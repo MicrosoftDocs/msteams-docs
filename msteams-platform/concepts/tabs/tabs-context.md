@@ -85,7 +85,9 @@ The context variable will look like the following example.
     "tid": "The Azure AD tenant ID of the current user",
     "groupId": "Guid identifying the current O365 Group ID",
     "theme": "The current UI theme: default, dark, contrast",
-    "isFullScreen": "Indicates whether the tab is in full-screen mode"
+    "isFullScreen": "Indicates whether the tab is in full-screen mode",
+    "userLicenseType": "Indicates the user licence type in the given SKU (for example, student or teacher)",
+    "tenantSKU": "Indicates the SKU category of the tenant (for example, EDU)"
 }
 ```
 
