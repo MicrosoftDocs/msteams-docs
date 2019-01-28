@@ -3,7 +3,7 @@ title: Request permissions for your Microsoft Teams tab
 description: How to update your app manifest in order to request access to native features that usually require user consent
 keywords: teams tabs sharepoint framework development
 layout: LandingPage
-ms.date: 11/05/2018
+ms.date: 01/28/2019
 ---
 
 # Request permissions for your Microsoft Teams tab
