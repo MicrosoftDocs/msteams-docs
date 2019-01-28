@@ -1,16 +1,17 @@
 ---
 title: Request permissions for your Microsoft Teams tab
 description: How to update your app manifest in order to request access to native features that usually require user consent
-keywords: teams tabs sharepoint framework development
+keywords: teams tabs development
 layout: LandingPage
 ms.date: 01/28/2019
 ---
 
 # Request permissions for your Microsoft Teams tab
 
-Your tab might require access to native features that usually require user consent, such as:
+You might want to enrich your tab with features that require access native device functionality like: 
 
-* Camera, microphone
+* Camera
+* Microphone
 * Location
 * Notifications
 
@@ -20,9 +21,9 @@ Your tab might require access to native features that usually require user conse
 
 Accessing a user’s device permissions allows you to build much richer experiences, for example:
 
-* FlipGrid lets students record short videos
-* OneNote lets you record short audio memos
-* Bing can return local information
+* Record and share short videos
+* Record short audio memos and save them for later
+* Use user location information to display relevant information
 
 While access to these features are standard in most modern web browsers, you need to let Teams know which features you’d like to use by updating your app manifest. This will allow you to ask for permissions, the same way you would in a browser, while your app is running on the Teams desktop client.
 
