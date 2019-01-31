@@ -117,7 +117,7 @@ The free Moodle Assistant Bot for Microsoft Teams helps teachers and students an
 
 > [!NOTE]
 > In this section you will deploy resources to your Azure subscription, and all resources will be configured using the **free** tier. Depending on the usage of your bot, you may need to scale these resources.
-> If you want to just use the Moodle tab without , skip to [step 4](#step-4-deploy-your-microsoft-teams-app).
+> If you want to just use the Moodle tab without the bot, skip to [step 4](#step-4-deploy-your-microsoft-teams-app).
 
 ### Moodle bot information flow
 
