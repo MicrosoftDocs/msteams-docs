@@ -18,6 +18,8 @@ To help IT admins easily set this integration up, we have updated our open-sourc
 * Auto-installation of the Moodle tab and the Moodle Assistant bot into each synchronized team. (Coming soon)
 * One-click publishing of the Moodle app into your private Teams App Store. (Coming soon)
 
+To learn more about the functionality this integration provides, go [here](https://education.microsoft.com/courses-and-resources/resources/microsoft-teams-moodle).
+
 ## Prerequisites
 
 In order to install and configure this application you'll need:
@@ -30,9 +32,10 @@ In order to install and configure this application you'll need:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SETEC5nzMgk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-The Moodle integration in Microsoft Teams is powered by the open source [Office 365 Moodle plugin](https://github.com/Microsoft/o365-moodle). To install the plugin in your Moodle server:
+The Moodle integration in Microsoft Teams is powered by the open source [Office 365 Moodle plugin set](https://github.com/Microsoft/o365-moodle). To install the plugin in your Moodle server:
 
 1. First, download the [Office 365 plugin set](https://moodle.org/plugins/pluginversions.php?plugin=local_o365) and save it to your local computer. You'll need to use version 3.5 or newer.
+    * Installing the local_o365 plugin will also install the [auth_oidc](https://moodle.org/plugins/auth_oidc) and [boost_o365Teams](https://moodle.org/plugins/pluginversions.php?plugin=theme_boost_o365teams) plugins.
 1. Login to your Moodle server as an administrator, and select **Site administration** from the left navigation panel.
 1. Select the **Plugins** tab, and then click **Install plugins**.
 1. Under the **Install plugin from ZIP file** section click the **Choose a file** button.
@@ -106,9 +109,13 @@ Next you'll need to register Moodle as an application in your Azure Active Direc
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gbkJxf8FlfY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-The Moodle Assistant Bot for Microsoft Teams helps teachers and students answer questions about their courses, assignments, grades and other information in Moodle. The bot also sends Moodle notifications to students and teachers right within Teams. This bot is an open source project maintained by Microsoft, and is [available on GitHub](https://github.com/microsoft/Moodle-Teams-Bot).
+The free Moodle Assistant Bot for Microsoft Teams helps teachers and students answer questions about their courses, assignments, grades and other information in Moodle. The bot also sends Moodle notifications to students and teachers right within Teams. This bot is an open source project maintained by Microsoft, and is [available on GitHub](https://github.com/microsoft/Moodle-Teams-Bot).
 
-First, you'll need to register your Bot on the [Microsoft Identity Platform](https://identity.microsoft.com/Landing). This will allow your Bot to authenticate against your Microsoft endpoints. To register your bot:
+> [!NOTE]
+> In this section you will deploy resources to your Azure subscription, and all resources will be configured to the **free** tier. Depending on the usage of your bot, you may need to scale these resources.
+> If you want to just use the Moodle tab, skip to [step 4](#step-4-deploy-your-microsoft-teams-app).
+
+To install the bot, you'll first need to register it on the [Microsoft Identity Platform](https://identity.microsoft.com/Landing). This allows your Bot to authenticate against your Microsoft endpoints. To register your bot:
 
 1. Return to the plugin administration page (Site administration > Plugins > Microsoft Office 365 Integration) and select the **Teams Settings** tab.
 1. Click the **Microsoft Application Registration Portal** link and login with your Microsoft Id.
@@ -117,7 +124,7 @@ First, you'll need to register your Bot on the [Microsoft Identity Platform](htt
 1. Click the **Generate New Password** button. Copy the generated password and and paste it into the **Bot Application Password** field on the **Team Settings** page.
 1. Scroll to the bottom of the form and click **Save Changes**.
 
-Now that you've generated your Application Id and Password, it's time to deploy your bot to Azure. Click on the **Deploy to Azure** button and fill out the form with the necessary information (the Bot Id and Password are on the **Team Settings** page, and the Azure information is on the **Setup** page). Once you've got the form filled out, click the check box to agree to the terms and conditions then click the **Purchase** button.
+Now that you've generated your Application Id and Password, it's time to deploy your bot to Azure. Click on the **Deploy to Azure** button and fill out the form with the necessary information (the Bot Id and Password are on the **Team Settings** page, and the Azure information is on the **Setup** page). Once you've got the form filled out, click the check box to agree to the terms and conditions then click the **Purchase** button (all Azure resources are deployed to the free tier).
 
 Once the resources are finished deploying to Azure, you'll need to configure the Office 365 Moodle plugin with it's messaging endpoint. First, you'll need to get the endpoint from you Bot in Azure. To do that:
 
@@ -142,8 +149,12 @@ Before you can install the app you'll need to make sure external apps and sidelo
 1. Open Microsoft Teams.
 2. Click the **Store** icon on the lower-left of the navigation bar.
 3. Click the **Upload a custom app** link from the list of options. *Note:* If you're logged in as a global administer you'll have the option of uploading the app to your organization's app store, otherwise you'll only be able to load the app for Teams you're a part of ("sideloading").
-4. Select the `manifest.zip` package you downloaded previously and click **Save**.
+4. Select the `manifest.zip` package you downloaded previously and click **Save**. If you haven't yet downloaded the manifest package, you can do so from the **Team Settings** tab of the plugin configuration page in Moodle.
 
 Now that you have the app installed you can add the tab to any channel that you have access to. To do so navigate to the channel, click the **+** symbol and select your app from the list. Follow the prompts to finish adding your Moodle course tab to a channel.
 
 That's it! You and your team, can now start working with your Moodle courses directly from Microsoft Teams.
+
+To share any feature requests or feedback with us, please visit our [User Voice page](https://microsoftteams.uservoice.com/forums/916759-moodle).
+
+<a href="https://www.microsoft.com" target="_blank">test new tab link</a>
