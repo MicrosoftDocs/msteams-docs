@@ -107,7 +107,7 @@ bot.beginDialog(address, '/');
 
 ### Creating a channel conversation
 
-Your team-added bot can post into a channel to create a reply chain. Use `startReplyChain()` in the Teams SDK: that gives you a fully-populated address with the correct activity id and conversation id.
+Your team-added bot can post into a channel to create a reply chain. If you're using the Node.js Teams SDK, use `startReplyChain()` which gives you a fully-populated address with the correct activity id and conversation id. If you are using C#, see the example below.
 
 In the past it was recommended to use `bot.beginDialog` which could cause the following problems:
 
