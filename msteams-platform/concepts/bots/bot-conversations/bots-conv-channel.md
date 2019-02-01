@@ -23,6 +23,10 @@ Note that depending on your experience, the bot might be entirely relevant in bo
 
 Developing a bot that works in channels uses much of the same functionality from personal conversation. Additional events and data in the payload provide Teams channel information. Those differences, as well as key differences in common functionality are described in the following sections.
 
+### Creating messages
+
+For more information on bots creating messages in channels see [Proactive messaging for bots](~/concepts/bots/bot-conversations/bots-conv-proactive), and specifically [Creating a channel conversation](~/concepts/bots/bot-conversations/bots-conv-proactive#creating-a-channel-conversation).
+
 ### Receiving messages
 
 For a bot in a channel, in addition to the [regular message schema](https://docs.botframework.com/en-us/core-concepts/reference/#activity), your bot also receives the following properties:
