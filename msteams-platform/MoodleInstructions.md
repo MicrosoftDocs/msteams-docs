@@ -56,7 +56,7 @@ Next you'll need to register Moodle as an application in your Azure Active Direc
 
 ### Moodle tab for Microsoft Teams information flow
 
-![Moodle tab for Microsoft Teams information flow](/assets/images/MoodleTabInformationFlow.png)
+<img width="530px" src="~/assets/images/MoodleTabInformationFlow.png" title="Moodle tab for Microsoft Teams information flow" />
 
 1. From the Microsoft Office 365 Integration plugin page slect the **Setup** tab.
 1. Click the **Download PowerShell Script** button and save it to your local computer.
@@ -121,7 +121,7 @@ The free Moodle Assistant Bot for Microsoft Teams helps teachers and students an
 
 ### Moodle bot information flow
 
-![Moodle bot information flow diagram](/assets/images/MoodleBotInformationFlow.png)
+<img width="530px" src="~/assets/images/MoodleBotInformationFlow.png" title="Moodle bot for Microsoft Teams information flow" />
 
 To install the bot, you'll first need to register it on the [Microsoft Identity Platform](https://identity.microsoft.com/Landing). This allows your Bot to authenticate against your Microsoft endpoints. To register your bot:
 
@@ -132,7 +132,7 @@ To install the bot, you'll first need to register it on the [Microsoft Identity 
 1. Click the **Generate New Password** button. Copy the generated password and and paste it into the **Bot Application Password** field on the **Team Settings** page.
 1. Scroll to the bottom of the form and click **Save Changes**.
 
-Now that you've generated your Application Id and Password, it's time to deploy your bot to Azure. Click on the **Deploy to Azure** button and fill out the form with the necessary information (the Bot Id and Password are on the **Team Settings** page, and the Azure information is on the **Setup** page). Once you've got the form filled out, click the check box to agree to the terms and conditions then click the **Purchase** button (all Azure resources are deployed to the free tier).
+Now that you've generated your Application Id and Password, it's time to deploy your bot to Azure. Click on the **Deploy to Azure** button and fill out the form with the necessary information (the Bot Application Id, Bot Application Password and the Moodle Secret are on the **Team Settings** page, and the Azure information is on the **Setup** page). Once you've got the form filled out, click the check box to agree to the terms and conditions then click the **Purchase** button (all Azure resources are deployed to the free tier).
 
 Once the resources are finished deploying to Azure, you'll need to configure the Office 365 Moodle plugin with it's messaging endpoint. First, you'll need to get the endpoint from you Bot in Azure. To do that:
 
