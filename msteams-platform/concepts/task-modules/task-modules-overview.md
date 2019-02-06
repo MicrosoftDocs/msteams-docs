@@ -6,14 +6,14 @@ ms.date: 02/05/2019
 ---
 # Task modules
 
-A task module allows you to create modal popup experiences in your Teams application. Inside the popup you can run your own custom HTML/JavaScript code, show an `<iframe>`-based widget such as a YouTube or Microsoft Stream video or display an [Adaptive card](https://docs.microsoft.com/en-us/adaptive-cards/). *Task modules* are especially useful for initiating and completing tasks, as well as displaying rich information like videos or Power BI dashboards. A popup experience is often more natural for users initiating and completing tasks compared to a tab or a conversation-based bot experience.
+Task modules allow you to create modal popup experiences in your Teams application. Inside the popup you can run your own custom HTML/JavaScript code, show an `<iframe>`-based widget such as a YouTube or Microsoft Stream video or display an [Adaptive card](https://docs.microsoft.com/en-us/adaptive-cards/). They are especially useful for initiating and completing tasks or displaying rich information like videos or Power BI dashboards. A popup experience is often more natural for users initiating and completing tasks compared to a tab or a conversation-based bot experience.
 
-Task modules build on the foundation of Microsoft Teams tabs; a task module is essentially a tab in a popup window. It uses the same SDK, so if you've built a tab you are already 90% of the way to being able to create a task module.
+Task modules build on the foundation of Microsoft Teams tabs; they are essentially a tab inside a popup window. They use the same SDK, so if you've built a tab you are already 90% of the way to being able to create a task module.
 
 Task modules can be invoked in three ways:
 
-* **Channel tabs or personal tabs.** Using the Microsoft Teams Tabs SDK you can invoke task modules from buttons, links or menus on your tab. [This is covered in detail here.](~/concepts/task-modules/task-modules-tabs)
-* **Bots.** Buttons on [cards](~/concepts/cards/cards) sent from your bot. This is particularly useful when you don't want or need everyone in a channel to see what you are doing with a bot. For example, when you want to have people fill out a poll in a channel it's not terribly useful to see a record of that poll being created. [This is covered in detail here.](~/concepts/task-modules/task-modules-bots)
+* **Channel or personal tabs.** Using the Microsoft Teams Tabs SDK you can invoke task modules from buttons, links or menus on your tab. [This is covered in detail here.](~/concepts/task-modules/task-modules-tabs)
+* **Bots.** Buttons on [cards](~/concepts/cards/cards) sent from your bot. This is particularly useful when you don't need everyone in a channel to see what you are doing with a bot. For example, when having users respond to a poll in a channel it's not terribly useful to see a record of that poll being created. [This is covered in detail here.](~/concepts/task-modules/task-modules-bots)
 * **Outside of Teams from a deep link.** You can also create URLs to invoke a task module from anywhere. [This is covered in detail here.](#task-module-deep-link-syntax)
 
 ## What a task module looks like
@@ -29,12 +29,12 @@ Let's walk through it:
 3. The task module's title specified in the `title` property of the [TaskInfo object](#the-taskinfo-object).
 4. The task module's close/cancel button. If the user presses this, your app will receive an `err` event as described [here](~/concepts/task-modules/task-modules-tabs#example-submitting-the-result-of-a-task-module). (**Note:** It is currently not possible to detect this event when a task module is invoked from a bot.)
 5. The blue rectangle is the where your web page appears if you are loading your own web page using the `url` property of the [TaskInfo object](#the-taskinfo-object). More detail is in the [task module sizing](#task-module-sizing) section below.
-6. If you are displaying an Adaptive card via the `card` property of the [TaskInfo object](#the-taskinfo-object) the padding is added for you.
+6. If you are displaying an Adaptive card via the `card` property of the [TaskInfo object](#the-taskinfo-object) the padding is added for you, otherwise you'll need to [handle this yourself](#task-module-css-for-htmljavascript-task-modules).
 7. Adaptive card buttons will render here. If you're using your own page you must create your own buttons.
 
 ## Overview of invoking and dismissing task modules
 
-Task modules can be invoked from tabs, bots or deep links and what appears in one can be either HTML or an Adaptive card, so there's a lot of flexibility in terms of how they are invoked and how to deal with the result of a user's interaction with one. The table below summarizes how it works:
+Task modules can be invoked from tabs, bots or deep links and what appears in one can be either HTML or an Adaptive card, so there's a lot of flexibility in terms of how they are invoked and how to deal with the result of a user's interaction. The table below summarizes how this works:
 
 | **Invoked via...** | **Task module is HTML/JavaScript** | **Task module is Adaptive card** |
 | --- | --- | --- |
