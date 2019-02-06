@@ -1,8 +1,8 @@
 ---
-title: Action-based messaging extensions
+title: Initiate actions with messaging extensions
 description: Create Action-based messaging extensions to allow users to trigger external services
 keywords: teams messaging extensions messaging extensions search
-ms.date: 12/07/18
+ms.date: 02/05/2019
 ---
 
 # Initiate actions with messaging extensions
@@ -135,39 +135,42 @@ In this method your service will receive a `composeExtension/fetchTask` event an
 ```json
 {
     "task": {
+        "type": "continue",
         "value": {
             "card": {
-                "type": "AdaptiveCard",
-                "body": [
-                    {
-                        "type": "TextBlock",
-                        "text": "Please enter the following information:"
-                    },
-                    {
-                        "type": "TextBlock",
-                        "text": "Name"
-                    },
-                    {
-                        "type": "Input.Text",
-                        "spacing": "None",
-                        "title": "New Input.Toggle",
-                        "placeholder": "Placeholder text"
-                    },
-                    {
-                        "type": "TextBlock",
-                        "text": "Date of birth"
-                    },
-                    {
-                        "type": "Input.Date",
-                        "spacing": "None",
-                        "title": "New Input.Toggle"
-                    }
-                ],
-                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-                "version": "1.0"
+                "contentType": "application/vnd.microsoft.card.adaptive",
+                "content": {
+                    "body": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Please enter the following information:"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Name"
+                        },
+                        {
+                            "type": "Input.Text",
+                            "spacing": "None",
+                            "title": "New Input.Toggle",
+                            "placeholder": "Placeholder text"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Date of birth"
+                        },
+                        {
+                            "type": "Input.Date",
+                            "spacing": "None",
+                            "title": "New Input.Toggle"
+                        }
+                    ],
+                    "type": "AdaptiveCard",
+                    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                    "version": "1.0"
+                }
             }
-        },
-        "type": "continue"
+        }
     }
 }
 ```
@@ -176,7 +179,7 @@ The bot can also respond with an auth/config response if the user needs to authe
 
 ### Dynamic input using a web view
 
-In this method, your service can show an `<iframe>` based widget to show any custom UI and collect user input. For this approach, set the `fetchTask` parameter to `true` in the manifest.
+In this method your service can show an `<iframe>` based widget to show any custom UI and collect user input. For this approach, set the `fetchTask` parameter to `true` in the manifest.
 
 Just like in the adaptive card flow your service will be send a `fetchTask` event and needs to respond with a URL based [task module response](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/task-modules/task-modules-overview#the-taskinfo-object). Below is an sample response with an Adaptive card:
 
