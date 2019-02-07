@@ -2,7 +2,7 @@
 title: Get context for your tab
 description: Describes how to get user context to your tabs
 keywords: teams tabs user context
-ms.date: 08/20/2018
+ms.date: 02/06/2019
 ---
 
 # Get context for your Microsoft Teams tab

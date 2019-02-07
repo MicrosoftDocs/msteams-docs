@@ -10,7 +10,7 @@ A conversation is a series of messages sent between your bot and one or more use
 
 * `teams` Also called channel conversations, visible to all members of the channel.
 * `personal` Conversations between bots and a single user.
-* `groupchat` Chat between a bot and two or more users. Rignt now groupchat is limited to developer preview, but will be released to the production version of Teams shortly. See [Adding tabs and bots to chats](~/resources/dev-preview/developer-preview-features#adding-tabs-and-bots-to-chats) for more information.
+* `groupchat` Chat between a bot and two or more users. `groupchat` is limited to developer preview currently. See [Adding tabs and bots to chats](~/resources/dev-preview/developer-preview-features#adding-tabs-and-bots-to-chats) for more information.
 
 A bot behaves slightly differently depending on what kind of conversation it is involved in:
 
