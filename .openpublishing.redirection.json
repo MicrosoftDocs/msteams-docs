@@ -1,7 +1,7 @@
 {
     "redirections": [
         {
-            "source_path": "msteams-platform/concepts/connectors/connectors-creating",
+            "source_path": "msteams-platform/concepts/connectors/connectors-creating.md",
             "redirect_url": "/microsoftteams/platform/concepts/connectors#setting-up-a-custom-incoming-webhook",
             "redirect_document_id": false
         },
