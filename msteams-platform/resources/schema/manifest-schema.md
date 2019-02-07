@@ -167,7 +167,7 @@ The version of the specific app. If you update something in your manifest, the v
 
 If the app requested permissions change, users will be prompted to upgrade and re-consent to the app. 
 
-This version string must follow the [semver](http://semver.org/) standard (MAJOR.MINOR.PATH).
+This version string must follow the [semver](http://semver.org/) standard (MAJOR.MINOR.PATCH).
 
 ## id
 
