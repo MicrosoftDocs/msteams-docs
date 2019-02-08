@@ -4,6 +4,11 @@
          "source_path": "msteams-platform/concepts/authentication.md",
          "redirect_url": "/microsoftteams/platform/concepts/authentication/authentication",
          "redirect_document_id": false
-      }
+      },
+      {
+        "source_path": "microsoftteams/platform/concepts/connectors#setting-up-a-custom-incoming-webhook",
+        "redirect_url": "/microsoftteams/platform/concepts/connectors/connectors-using#setting-up-a-custom-incoming-webhook",
+        "redirect_document_id": false
+     }
     ]
 }
