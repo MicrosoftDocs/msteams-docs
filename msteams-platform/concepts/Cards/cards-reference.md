@@ -2,28 +2,43 @@
 title: Cards Reference
 description: Describes all the cards and card actions available to bots in Teams
 keywords: bots cards reference
-ms.date: 09/20/2018
+ms.date: 02/11/2019
 ---
 # Cards Reference
 
-The cards listed in this section are supported in bots for Teams. These cards are based on cards defined by the Bot Framework, but Teams does not support all Bot Framework cards and has added some of its own. Differences are called out in the references below.
+The cards listed in this section are supported in bots for Teams. They are based on cards defined by the Bot Framework, but Teams does not support all Bot Framework cards and has added some of its own. Differences are called out in the references below.
 
 ## Card examples
 
-You can find information on how to use cards in the documentation for the Bot Builder SDK. Code samples are in the Microsoft/BotBuilder-Samples repository on GitHub.
+You can find additional information on how to use cards in the documentation for the Bot Builder SDK (v3). There are also code samples available in the Microsoft/BotBuilder-Samples repository on GitHub.
 
 * .NET
   * [Add cards as attachments to messages](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments)
-  * [Cards sample code](https://github.com/Microsoft/BotBuilder-Samples/tree/master/CSharp/cards-RichCards)
+  * [Cards sample code (Bot Builder v3)](https://github.com/Microsoft/BotBuilder-Samples/tree/v3-sdk-samples/CSharp/cards-RichCards)
 * Node.js
   * [Add cards as attachments to messages](https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-send-rich-cards)
-  * [Cards sample code](https://github.com/Microsoft/BotBuilder-Samples/tree/master/Node/cards-RichCards)
+  * [Cards sample code (Bot Builder v3)](https://github.com/Microsoft/BotBuilder-Samples/tree/v3-sdk-samples/Node/cards-RichCards)
+
+## Types of cards
+
+This table shows the types of cards available to you.
+
+| Card Type | Description |
+| --- | --- |
+| [Adaptive Card](#adaptive-card) | Highly customizable card that can contain any combination of text, speech, images, buttons and input fields. |
+| [Hero Card](#hero-card) | Typically contains a single large image, one or more buttons, and a small amount of text. |
+| [List Card](#list-card) | A scrolling list of items. |
+| [Office 365 Connector Card](##office-365-connector-card) | Flexible layout with multiple sections, fields, images and actions. |
+| [Receipt Card](#receipt-card) | Provides a receipt to the user. |
+| [Signin Card](#signin-card) | Enables a bot to request that a user sign in. |
+| [Thumbnail Card](#thumbnail-card) | Typically contains a single thumbnail image, some short text, and one or more buttons. |
+| [Card Collections](#card-collections) | Used to return multiple items in a single response |
 
 ## Common properties for all cards
 
 ### Inline card images
 
-Your card can contain a inline image by including a link to the image content hosted on a public content-delivery network (CDN).
+Your card can contain an inline image by including a link to your publically available image. For performance purposes we highly recommend you host your image on a public content-delivery network (CDN).
 
 Images are scaled up or down in size while maintaining the aspect ratio to cover the image area, and then cropped from center to achieve the appropriate aspect ratio for the card.
 
@@ -38,33 +53,26 @@ Images must be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated
 
 Buttons are shown stacked at the bottom of the card. Button text is always on a single line and will be truncated if the text exceeds the button width. Any additional buttons beyond the maximum number supported by the card will not be shown.
 
-See the topic [Card Actions](~/concepts/cards/cards-actions) for more information.
+See [Card Actions](~/concepts/cards/cards-actions.md) for more information.
 
 ### Card Formatting
 
-See the topic [Card Formatting](~/concepts/cards/cards-format) for more information on text formatting in cards.
+See [Card Formatting](~/concepts/cards/cards-format.md) for more information on text formatting in cards.
 
 ## Adaptive card
 
 A customizable card that can contain any combination of text, speech, images, buttons, and input fields.
 
-### Support
+### Support for Adaptive cards
 
 | Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
 
-### Example
+### Example Adaptive card
 
 ![Example of a adaptive card card](~/assets/images/cards/adaptivecard.png)
-
-#### For more information
-
-* [Adaptive Cards Overview](https://docs.microsoft.com/en-us/adaptive-cards/)
-* [Adaptive card actions in Teams](~/concepts/cards/cards-actions#adaptive-card-actions)
-
-### Example
 
 ```json
 {
@@ -199,34 +207,37 @@ A customizable card that can contain any combination of text, speech, images, bu
 }
 ```
 
+#### For more information on Adaptive cards
+
+* [Adaptive Cards Overview](https://docs.microsoft.com/en-us/adaptive-cards/)
+* [Adaptive card actions in Teams](~/concepts/cards/cards-actions#adaptive-card-actions.md)
+
 ## Hero card
 
-A card that typically contains a single large image, one or more buttons, and text.
+A card that typically contains a single large image, one or more buttons and text.
 
-### Support
+### Support for Hero cards
 
 | Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
 
-### Example
-
-![Example of a hero card](~/assets/images/cards/hero.png)
-
-### Properties
+### Properties of a Hero card
 
 | Property | Type  | Description |
 | --- | --- | --- |
 | title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
 | subtitle | Rich text | Subtitle of the card. Maximum 2 lines; formatting not currently supported |
-| text | Rich text | Text appears just below the subtitle; see [Card formatting](~/concepts/cards/cards-format) for formatting options |
+| text | Rich text | Text appears just below the subtitle; see [Card formatting](~/concepts/cards/cards-format.md) for formatting options |
 | images | Array of images | Image displayed at top of card. Aspect ratio 16:9 |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
 | tap | Action object | This action will be activated when the user taps on the card itself |
 |
 
-### Example
+### Example Hero card
+
+![Example of a hero card](~/assets/images/cards/hero.png)
 
 ```json
 {
@@ -257,25 +268,25 @@ A card that typically contains a single large image, one or more buttons, and te
 
 ```
 
-### For more information
+### For more information on Hero cards
 
 Bot Framework reference:
 
-* [Hero card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.herocard.html)
-* [Hero card C#](https://docs.botframework.com/en-us/csharp/builder/sdkreference/attachments.html#herocard)
+* [Hero card Node](https://docs.microsoft.com/en-us/javascript/api/botframework-schema/herocard)
+* [Hero card C#](https://docs.microsoft.com/en-us/dotnet/api/microsoft.bot.connector.herocard?view=botbuilder-dotnet-3.0)
 
 ## List card
 
 The list card has been added by Teams to provide functions beyond what the list collection can provide. The list card provides a scrolling list of items.
 
-### Support
+### Support for List cards
 
 | Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ |✖ |
 |
 
-### Properties
+### Properties of a List card
 
 | Property | Type  | Description |
 | --- | --- | --- |
@@ -284,7 +295,7 @@ The list card has been added by Teams to provide functions beyond what the list 
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6. Does not render on mobile. |
 |
 
-### Example
+### Example List card
 
 ```json
 {
@@ -344,39 +355,39 @@ Supported in Teams, not in Bot Framework.
 
 The Office 365 Connector card provides a flexible layout with multiple sections, fields, images, and actions. This card encapsulates a connector card so that it can be used by bots. See the notes section for differences between connector cards and the O365 card.
 
-### Support
+### Support for Office 365 connector cards
 
 | Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✔ | ✖ |
 |
 
-### Properties
+### Properties of the Office 365 connector card
 
 | Property | Type  | Description |
 | --- | --- | --- |
 | title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
 | summary | Rich text | Summary of the card. Maximum 2 lines; formatting not currently supported |
-| text | Rich text | Text appears just below the subtitle; see [Card formatting](~/concepts/cards/cards-format) for formatting options |
+| text | Rich text | Text appears just below the subtitle; see [Card formatting](~/concepts/cards/cards-format.md) for formatting options |
 | themeColor | HEX string | color that overrides the accentColor provided from the application manifest |
 
-### Notes
+### Notes on the Office 365 connector card
 
-Office 365 Connector cards function properly on Microsoft Teams including [ActionCard actions](https://docs.microsoft.com/en-us/outlook/actionable-messages/card-reference#actioncard-action).
+Office 365 Connector cards function properly on Microsoft Teams, including [ActionCard actions](https://docs.microsoft.com/en-us/outlook/actionable-messages/card-reference#actioncard-action).
 
 One important difference between using Connector cards from a Connector and using Connector cards in your bot is the handling of card actions.
 
 * For a Connector, the endpoint receives the card payload via HTTP POST.
 * For a bot, the `HttpPOST` action triggers an `invoke` activity that sends only the action ID and body to the bot.
 
-To use Connector cards in your bot, we recommend using the `O365ConnectorCard` class in the [Teams extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) for .NET or Node.js. You can simplify handling of the `HttpPOST` action by using the `onO365ConnectorCardAction` method.
+To use Connector cards in your bot, we recommend using the `O365ConnectorCard` class in the [Teams extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk.md) for .NET or Node.js. You can simplify handling of the `HttpPOST` action by using the `onO365ConnectorCardAction` method.
 
-Each Connector card can display a maximum of 10 sections; each section can contain a maximum of 5 images and 5 actions.
+Each Connector card can display a maximum of 10 sections, and each section can contain a maximum of 5 images and 5 actions.
 
 > [!NOTE]
-> Any additional sections, images, or actions in a message do not appear.
+> Any additional sections, images, or actions in a message will not appear.
 
-All text fields support Markdown and HTML formatting. You can control which sections use Markdown or HTML by setting the `markdown` property in a message. By default, `markdown` is set to `true`; if you want to use HTML instead, set `markdown` to `false`.
+All text fields support Markdown and HTML. You can control which sections use Markdown or HTML by setting the `markdown` property in a message. By default, `markdown` is set to `true`; if you want to use HTML instead, set `markdown` to `false`.
 
 If you specify the `themeColor` property, it overrides the `accentColor` property in the app manifest.
 
@@ -393,7 +404,7 @@ For all other details about Connector card properties, see the [Actionable messa
 * `hideOriginalBody`
 * `startGroup`
 
-### Example
+### Example Office 365 connector card
 
 ```json
 {
@@ -458,7 +469,7 @@ For all other details about Connector card properties, see the [Actionable messa
 
 ### Using the O365 Connector card
 
-If you are using .NET and C# or Node.js, you can use the `O365ConnectorCard` class in the [Microsoft Teams extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) to send Connector cards from your bot.
+If you are using .NET and C# or Node.js, you can use the `O365ConnectorCard` class in the [Microsoft Teams extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk.md) to send Connector cards from your bot.
 
 ## Receipt card
 
@@ -466,48 +477,45 @@ Supported in Teams.
 
 A card that enables a bot to provide a receipt to the user. It typically contains the list of items to include on the receipt, tax and total information, and other text.
 
-### Support
+### Support for Receipts cards
 
 | Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
 
-### For more information
+### For more information on Receipt cards
 
 Bot Framework reference:
 
-* [Receipt card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.receiptcard.html)
-* [Receipt card C#](https://docs.botframework.com/en-us/csharp/builder/sdkreference/d0/df9/class_microsoft_1_1_bot_1_1_connector_1_1_receipt_card.html)
+* [Receipt card Node](https://docs.microsoft.com/en-us/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest)
+* [Receipt card C#](https://docs.microsoft.com/en-us/dotnet/api/microsoft.bot.connector.receiptcard?view=botbuilder-dotnet-3.0)
 
 ## Signin card
 
-A card that enables a bot to request that a user sign in. Supported in Teams in a slightly different form than is found in the Bot Framework. See Notes for more details.
+A card that enables a bot to request that a user sign in. Supported in Teams in a slightly different form than is found in the Bot Framework. The signin card in Teams is similar to the signin card in the bot framework with the exception that the signin card in Teams only supports two actions: `signin` and `openUrl`.
 
-### Support
+The *signin action* can be used from any card in Teams, not just the signin card. See the topic [Microsoft Teams authentication flow for bots](~/concepts/authentication/auth-flow-bot.md) for more details on authentication.
+
+### Support for Signin cards
 
 | Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 |
 
-### Notes
-The signin card in Teams is similar to the signin card in the bot framework with the exception that the signin card in Teams only supports two actions: `signin` and `openUrl`.
-
-The *signin action* can be used from any card in Teams, not just the signin card. See the topic [Microsoft Teams authentication flow for bots](~/concepts/authentication/auth-flow-bot) for more details on authentication.
-
-### For more information
+### For more information on Signin cards
 
 Bot Framework reference:
 
-* [Signin card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.signincard.html)
-* [Signin card C#](https://docs.botframework.com/en-us/csharp/builder/sdkreference/dc/d03/class_microsoft_1_1_bot_1_1_connector_1_1_signin_card.html)
+* [Signin card Node](https://docs.microsoft.com/en-us/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest)
+* [Signin card C#](https://docs.microsoft.com/en-us/dotnet/api/microsoft.bot.connector.signincard?view=botbuilder-dotnet-3.0)
 
 ## Thumbnail card
 
 A card that typically contains a single thumbnail image, one or more buttons, and text.
 
-### Support
+### Support for Thumbnail cards
 
 | Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
@@ -516,19 +524,19 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 
 ![Example of a thumbnail card](~/assets/images/cards/thumbnail.png)
 
-### Properties
+### Properties of a Thumbnail card
 
 | Property | Type  | Description |
 | --- | --- | --- |
 | title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
 | subtitle | Rich text | Subtitle of the card. Maximum 2 lines; formatting not currently supported |
-| text | Rich text | Text appears just below the subtitle; see [Card formatting](~/concepts/cards/cards-format) for formatting options |
+| text | Rich text | Text appears just below the subtitle; see [Card formatting](~/concepts/cards/cards-format.md) for formatting options |
 | images | Array of images | Image displayed at top of card. Aspect ratio 1:1 (square) |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
 | tap | Action object | This action will be activated when the user taps on the card itself |
 |
 
-### JSON Example
+### Example Thumbnail card
 
 ```json
 {
@@ -575,8 +583,8 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 
 Bot Framework reference:
 
-* [Thumbnail card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.thumbnailcard.html)
-* [Thumbnail card C#](https://docs.botframework.com/en-us/csharp/builder/sdkreference/attachments.html#thumbnailcard)
+* [Thumbnail card Node](https://docs.microsoft.com/en-us/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest)
+* [Thumbnail card C#](https://docs.microsoft.com/en-us/dotnet/api/microsoft.bot.connector.thumbnailcard?view=botbuilder-dotnet-3.0)
 
 ## Card collections
 
@@ -588,7 +596,7 @@ Card collections are provided by the Bot Framework: `builder.AttachmentLayout.ca
 
 The [carousel layout](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments) shows a carousel of cards, optionally with associated action buttons.
 
-### Support
+### Support for Carousel collections
 
 | Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
@@ -598,19 +606,19 @@ The [carousel layout](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-
 > [!NOTE]
 > A carousel can display a maximum of 10 cards per message.
 
-### Example
+### Example Carousel collection
 
 ![Example of a carousel of cards](~/assets/images/cards/carousel.png)
 
 Properties are the same as for the hero or thumbnail card.
 
-### Syntax
+### Syntax for Carousel collections
 
 `builder.AttachmentLayout.carousel`
 
 ## List collection
 
-### Support
+### Support for List collections
 
 The list layout shows a vertically stacked list of cards, optionally with associated action buttons.
 
@@ -619,7 +627,7 @@ The list layout shows a vertically stacked list of cards, optionally with associ
 | ✔ | ✔ | ✖ | ✔ |
 |
 
-### Example
+### Example List collection
 
 ![Example of a list of cards](~/assets/images/cards/list.png)
 
@@ -630,7 +638,7 @@ A list can display a maximum of 10 cards per message.
 > [!NOTE]
 > Some combinations of list cards are not yet supported on iOS and Android.
 
-### Syntax
+### Syntax for List collections
 
 `builder.AttachmentLayout.list`
 
@@ -638,62 +646,6 @@ A list can display a maximum of 10 cards per message.
 
 The following cards are implemented by the Bot Framework, but are NOT supported by Teams.
 
-## Animation card
-
-Not supported in Teams.
-
-A card that can play animated GIFs or short videos.
-
-### Support
-
-| Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
-| --- | --- | --- | --- |
-| ✖ | ✖ | ✖ | ✔ |
-|
-
-### For more information
-
-Bot Framework reference:
-
-* [Animation card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.animationcard.html)
-* [Animation card C#](https://docs.botframework.com/en-us/csharp/builder/sdkreference/d9/d78/class_microsoft_1_1_bot_1_1_connector_1_1_animation_card.html)
-
-## Audio card
-
-Not supported in Teams.
-
-A card that can play an audio file.
-
-### Support
-
-| Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
-| --- | --- | --- | --- |
-| ✖ | ✖ | ✖ | ✔ |
-|
-
-### For more information
-
-Bot Framework reference:
-
-* [Audio card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.audiocard.html)
-* [Audio card C#](https://docs.botframework.com/en-us/csharp/builder/sdkreference/db/d71/class_microsoft_1_1_bot_1_1_connector_1_1_audio_card.html)
-
-## Video card
-
-Not supported in Teams.
-
-A card that can play videos.
-
-### Support
-
-| Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
-| --- | --- | --- | --- |
-| ✖ | ✖ | ✖ | ✔ |
-|
-
-### For more information
-
-Bot Framework reference:
-
-* [Video card Node](https://docs.botframework.com/en-us/node/builder/chat-reference/classes/_botbuilder_d_.videocard.html)
-* [Video card C#](https://docs.botframework.com/en-us/csharp/builder/sdkreference/d6/da6/class_microsoft_1_1_bot_1_1_connector_1_1_video_card.html)
+* Animation cards
+* Audio cards
+* Video cards
