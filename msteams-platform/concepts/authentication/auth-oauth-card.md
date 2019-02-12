@@ -9,7 +9,7 @@ ms.date: 07/17/2018
 ## Overview
 
 > [!NOTE]
-> The examples in this article apply to Bot Builder version 3.x.
+> The examples in this article apply to [Bot Builder V3](https://github.com/microsoft/botbuilder-v3).
 
 Without the Azure Bot Service’s OAuthCard it is complicated to implement authentication in a bot. It is a full-stack challenge that involving building a web experience, integrating with external OAuth providers, token management, and handling the right server-to-server API calls to complete authentication flow securely. This can result in clunky experiences requiring the entry of “magic numbers”.
 
