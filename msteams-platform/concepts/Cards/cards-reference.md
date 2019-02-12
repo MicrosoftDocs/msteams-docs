@@ -28,7 +28,7 @@ This table shows the types of cards available to you.
 | [Adaptive Card](#adaptive-card) | Highly customizable card that can contain any combination of text, speech, images, buttons and input fields. |
 | [Hero Card](#hero-card) | Typically contains a single large image, one or more buttons, and a small amount of text. |
 | [List Card](#list-card) | A scrolling list of items. |
-| [Office 365 Connector Card](##office-365-connector-card) | Flexible layout with multiple sections, fields, images and actions. |
+| [Office 365 Connector Card](#office-365-connector-card) | Flexible layout with multiple sections, fields, images and actions. |
 | [Receipt Card](#receipt-card) | Provides a receipt to the user. |
 | [Signin Card](#signin-card) | Enables a bot to request that a user sign in. |
 | [Thumbnail Card](#thumbnail-card) | Typically contains a single thumbnail image, some short text, and one or more buttons. |
