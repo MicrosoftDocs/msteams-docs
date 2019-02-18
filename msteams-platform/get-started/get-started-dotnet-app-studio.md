@@ -37,7 +37,7 @@ Verify your `git` installation by running the following in a terminal window:
 
 ```bash
 $ git --version
-git version 2.15.0.windows.1
+git version 2.17.1.windows.2
 
 ```
 
@@ -100,7 +100,7 @@ The app will only be available during the current session on your development ma
 
 Microsoft Azure lets you host your .NET application on a free tier using shared infrastructure. This will be sufficient to run this `Hello World` sample. See [creating a new free account](https://azure.microsoft.com/en-us/free/) for more information.
 
-Visual Studio has built-in support for app deployment to different providers, including Azure. For more details see [Host your .NET Teams app in Azure](~/get-started/get-started-dotnet-in-azure).
+Visual Studio has built-in support for app deployment to different providers, including Azure. For more details see [Publish your .NET Teams app in Azure](~/get-started/get-started-dotnet-in-azure).
 
 <img width="530px" src="~/assets/images/get-started/publishtoazure1.png" title="Visual Studio"/>
 
@@ -110,10 +110,7 @@ Visual Studio has built-in support for app deployment to different providers, in
 
 The sample app requires the following environment variables to be set to the values you made a note of earlier.
 
-This is done in the Web.config file by setting these keys:
-
-* MicrosoftAppId
-* MicrosoftAppPassword
+Open up the web.config file and find the *appSettings* section. Update the *MicrosoftAppId* value with your Bot ID that you saved earlier. Update the *MicrosoftAppPassword* with the Bot password you saved earler.
 
 <img width="560px" src="~/assets/images/get-started/get-started-net-azure-add-keys.png" title="setting the keys"/>
 
@@ -121,7 +118,7 @@ Once these changes are made, rebuild the app. If you are using ngrok, run the ap
 
 ## Configure the app tab
 
-Once you install the app into a team, you will need to configure it to show content. Go to a channel in the team and click on the **'+'** button to add a new tab. You can then choose `Hello World` from the **Add a tab** list. You will then be presented with a configuration dialog. This dialog will let you choose which tab to display in this channel. Once you select the tab and click on `Save` then you can see the `Hello World` tab loaded with the tab you chose.
+Once you install the app into a team, you will need to configure it to show content. Go to a channel in the team where you installed the sample app and click on the **'+'** button to add a new tab. You can then choose `Hello World` from the **Add a tab** list. You will then be presented with a configuration dialog. This dialog will let you choose which tab to display in this channel. Once you select the tab and click on `Save` then you can see the `Hello World` tab loaded with the tab you chose.
 
 <img width="530px" src="~/assets/images/samples-hello-world-tab-configure.png" title="Screenshot of configure" />
 

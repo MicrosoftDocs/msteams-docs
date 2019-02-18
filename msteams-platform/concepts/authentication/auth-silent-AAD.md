@@ -6,7 +6,7 @@ ms.date: 02/28/2018
 ---
 # Silent authentication
 
-Silent authentication in Azure Active Directory (AAD) is a simplified form of single sign-on (SSO). Its purpose it to minimize the number of times a user needs to enter login credentials while using your app.
+Silent authentication in Azure Active Directory (Azure AD) is a simplified form of single sign-on (SSO). Its purpose it to minimize the number of times a user needs to enter login credentials while using your app.
 
 If you want to keep your code completely client-side, you can use the [Azure Active Directory Authentication Library](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-authentication-libraries) for JavaScript to attempt to acquire an Azure AD access token silently. This means that the user may never see a popup dialog if they have signed in recently.
 
@@ -17,7 +17,7 @@ Even though the ADAL.js library is optimized for AngularJS applications, it also
 
 ## How silent authentication works
 
-The ADAL.js library creates a hidden iframe for OAuth implicit grant flow, but it specifies `prompt=none` so that AAD never shows the login page. If user interaction is required because the user needs to log in or grant access to the application, Azure AD will immediately return an error that ADAL.js then reports to your app. At this point your app can show a login button if needed.
+The ADAL.js library creates a hidden iframe for OAuth 2.0 implicit grant flow, but it specifies `prompt=none` so that Azure AD never shows the login page. If user interaction is required because the user needs to log in or grant access to the application, Azure AD will immediately return an error that ADAL.js then reports to your app. At this point your app can show a login button if needed.
 
 ## How to do silent authentication
 
@@ -33,7 +33,7 @@ Include the ADAL.js library in your tab pages and configure ADAL with your clien
     // ADAL.js configuration
     let config = {
         clientId: "YOUR_APP_ID_HERE",
-        // redirectUri must be in the list of redirect URLs for the AAD app
+        // redirectUri must be in the list of redirect URLs for the Azure AD app
         redirectUri: window.location.origin + "/tab-auth/silent-end",
         cacheLocation: "localStorage",
         navigateToLoginRequestUrl: false,

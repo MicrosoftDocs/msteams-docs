@@ -123,7 +123,7 @@ Remember that apps in Microsoft Teams are web applications exposing one or more 
 
 #### Host on the web using Azure
 
-You can host your sample app on any web service that you have access to, such as Azure where you can host this app for free. See [Host your .NET Teams app in Azure](~/get-started/get-started-nodejs-in-azure) for detailed instructions to host this sample. Once your app is hosted, make a note of the URL of the hosted app. Notepad works fine for this purpose. You will need this URL later when you deploy your app to teams.
+You can host your sample app on any web service that you have access to, such as Azure where you can host this app for free. See [Host your Node.js Teams app in Azure](~/get-started/get-started-nodejs-in-azure) for detailed instructions to host this sample. Once your app is hosted, make a note of the URL of the hosted app. Notepad works fine for this purpose. You will need this URL later when you deploy your app to teams.
 
 #### Host locally using *ngrok*
 

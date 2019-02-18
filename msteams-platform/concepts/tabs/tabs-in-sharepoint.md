@@ -79,7 +79,7 @@ The sample app we're using is a a Talent Management application. It manages the 
 
 ## Step 1: Testing the sample app
 
-Download the sample app manifest from [**here**](~/assets/downloads/TalentMgmt-Azure.zip).
+Download the sample app manifest from [**here**](https://github.com/MicrosoftDocs/msteams-docs/raw/master/msteams-platform/assets/downloads/TalentMgmt-Azure.zip).
 
 In Microsoft Teams, click on the Store icon at the lower left and then "Upload a custom app" at the lower left. The file to upload will be located in your Downloads folder; it's called TalentMgmt-Azure.zip. If all goes well, you'll see the install/consent screen for the talent management app. Choose the team you want to install to and click the Install button. You're now free to experiment with the app.
 
