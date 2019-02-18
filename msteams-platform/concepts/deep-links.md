@@ -78,9 +78,6 @@ The [`microsoftTeams.getContext`](/javascript/api/msteams-client/microsoftteams.
 
 ## Deep linking to a chat
 
-> [!NOTE]
-> This functionality is currently available in Developer Preview
-
 You can create deep links to private chats between users by specifying the set of participants. If a chat doesn't exist with the specified participants, the link will navigate the user to an empty new chat. New chats will be created in draft state until the user sends the first message. Optionally, you can specify the name of the chat (if it doesn't already exist), along with text that should be inserted into the user's compose box. You can think of this feature as a shortcut for the user taking the manual action of navigating to or creating the chat, and then typing out the message.
 
 As an example use case, if you are returning an Office 365 user profile from your bot as a card, this deep link can allow the user to easily chat with that person.
@@ -102,9 +99,6 @@ The query parameters are:
 To use this deep link with your bot, you can specify this as the URL target in your card's button or tap action through the `openUrl` action type.
 
 ## Linking to the scheduling dialog
-
-> [!NOTE]
-> This functionality is currently available in Developer Preview
 
 You can create deep links to the Teams client's built-in scheduling dialog. This is especially useful if your app helps the user complete calendar or scheduling-related tasks.
 
