@@ -95,7 +95,7 @@ To test your app, open up a chat and click Manage apps from the tab gallery or b
 
 The [Developer preview manifest](~/resources/schema/manifest-schema-dev-preview.md) has been updated to include this feature.
 
-See [What is the Public Developer Preview for Microsoft Teams?](~/resources/general/developer-preview.md) for more information on enabling it for your development tenant.
+See [What is the Public Developer Preview for Microsoft Teams?](~/resources/dev-preview/developer-preview.md) for more information on enabling it for your development tenant.
 
 ### Samples
 
