@@ -2,7 +2,7 @@
 title: What's new
 description: Describes all the new developer features in Microsoft Teams
 keywords: teams what's new latest
-ms.date: 12/07/2018
+ms.date: 1/28/2019
 ---
 # What's new for developers in Microsoft Teams
 
@@ -12,7 +12,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
-| 2/18/2018 | | Creating [deep links](~/concepts/deep-links.md#deep-linking-to-a-chat) to private chat is out of developer preview and available |
+| 02/18/2018 | Creating [deep links](~/concepts/deep-links.md#deep-linking-to-a-chat) to private chat is out of developer preview and available |
 | 12/07/2018 | Action-based command support for messaging extensions | [Messaging Extensions](~/concepts/compose-extensions.md) |
 | 12/03/2018 | A new topic has been added discussing how to limit bot availability to specific single tenants.| [Bots for limited tenants](~/scenarios/limited-tenant.md) |
 | 11/12/2018 | Tabs in group chat is now available in the released version of Teams, and has been moved out of developer preview. As part of this work, the tabs section has been reworked for clarity.| [Configurable tabs](~/concepts/tabs/tabs-configurable.md) |
