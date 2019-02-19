@@ -2,7 +2,7 @@
 title: Create deep links
 description: Describes deep links and how to use them in your apps
 keywords: teams deep link deeplink
-ms.date: 10/09/2018
+ms.date: 02/19/2019
 ---
 # Create deep links to content and features in Microsoft Teams
 
@@ -99,6 +99,9 @@ The query parameters are:
 To use this deep link with your bot, you can specify this as the URL target in your card's button or tap action through the `openUrl` action type.
 
 ## Linking to the scheduling dialog
+
+> [!Note]
+> This feature is currently in developer preview.
 
 You can create deep links to the Teams client's built-in scheduling dialog. This is especially useful if your app helps the user complete calendar or scheduling-related tasks.
 
