@@ -9,12 +9,6 @@ ms.date: 02/19/2019
 When these features are out of developer preview this content will be merged into the live doc set.
 The developer preview includes the following new features:
 
-## Introducing "task modules"
-
-A task module allows you to create modal popup experiences in your Teams application, from both bots and tabs. Inside the popup, you can run your own custom HTML/JavaScript code, show an `<iframe>`-based widget such as a YouTube or Microsoft Stream video, or display an [Adaptive card](https://docs.microsoft.com/en-us/adaptive-cards/).
-
-Task module documentation has been added as a new section, including an [overview](~/concepts/task-modules/task-modules-overview.md), how to use task module from [tabs](~/concepts/task-modules/task-modules-tabs.md) and [bots](~/concepts/task-modules/task-modules-bots.md).
-
 ## Calls and online meeting bots
 
 With the addition of [Microsoft Graph APIs for calls and online meetings](https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/calls-api-overview.md), Microsoft Teams apps can now interact with users in rich ways using voice and video. These APIs allow you to add new app features such as interactive voice response (IVR), call control, and access to real-time audio and/or video streams for calls and meetings, including desktop and app sharing.
@@ -43,7 +37,7 @@ When properly sized, your tab configuration page should look similar to this:
 
 ## Adding bots to chats
 
-Chats are conversations between one or more users in Teams. bBots can now be added to chats. In the past they could only be added to channels and personal (bot to user) conversations.
+Chats are conversations between one or more users in Teams. Bots can now be added to chats. In the past they could only be added to channels and personal (bot to user) conversations.
 
 This feature allows you to:
 
