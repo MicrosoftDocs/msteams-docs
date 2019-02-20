@@ -11,7 +11,7 @@ Task modules can be invoked from Microsoft Teams bots using buttons on Adaptive 
 There are two ways of invoking task modules:
 
 * **A new kind of invoke message `task/fetch`.** Using the `invoke` [card action](~/concepts/cards/cards-actions.md#invoke) for Bot Framework cards, or the `Action.Submit` [card action](~/concepts/cards/cards-actions.md#adaptive-card-actions) for Adaptive cards, with `task/fetch`, the task module (either a URL or an Adaptive card) is fetched dynamically from your bot.
-* **Deep link URLs.** Using the [deep link syntax for task modules](~/concepts/task-modules/task-modules-overview.md#task-module-deep-link-syntax), you can use the `openUrl` [card action](~/concepts/cards/cards-actions.md#openurl) for Bot Framework cards or the `Action.OpenUrl` [card action](~/concepts/cards/cards-action.md#adaptive-card-actions) for Adaptive cards, respectively. With deep link URLs, the task module URL or Adaptive card body is obviously known in advance, avoiding a server round-trip relative to `task/fetch`.
+* **Deep link URLs.** Using the [deep link syntax for task modules](~/concepts/task-modules/task-modules-overview.md#task-module-deep-link-syntax), you can use the `openUrl` [card action](~/concepts/cards/cards-actions.md#openurl) for Bot Framework cards or the `Action.OpenUrl` [card action](~/concepts/cards/cards-actions.md#adaptive-card-actions) for Adaptive cards, respectively. With deep link URLs, the task module URL or Adaptive card body is obviously known in advance, avoiding a server round-trip relative to `task/fetch`.
 
 ## Invoking a task module via task/fetch
 

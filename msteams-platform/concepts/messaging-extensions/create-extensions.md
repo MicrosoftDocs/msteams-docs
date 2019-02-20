@@ -208,7 +208,7 @@ This is used when your extension needs to chain dialogs together to get more inf
 
 ### Compose extension auth/config response
 
-This is used when your extension needs to either authenticate or configure in order to continue. See [authentication section](~/concepts/messaging-extensions/search-extension.md#Authentication) in the search section for more details.
+This is used when your extension needs to either authenticate or configure in order to continue. See [authentication section](~/concepts/messaging-extensions/search-extensions.md#authentication) in the search section for more details.
 
 ### Compose extension result response
 
