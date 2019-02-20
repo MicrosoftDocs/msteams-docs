@@ -2,7 +2,7 @@
 title: What's new
 description: Describes all the new developer features in Microsoft Teams
 keywords: teams what's new latest
-ms.date: 1/23/2019
+ms.date: 1/28/2019
 ---
 # What's new for developers in Microsoft Teams
 
@@ -12,6 +12,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+| 01/28/2018 | Device permissions lets a tab ask for consent to use the user's camera or microphone, get their location, send notifications, open external links or use midi instruments | [Request permissions for your Microsoft Teams tab](~/concepts/tabs/tabs-device-permissions) |
 | 1/23/2019 | Surfacing SKU and licenceType information in the tab context | [Tab Context](~/concepts/tabs/tabs-context) |
 | 12/07/2018 | Action-based command support for messaging extensions | [Messaging Extensions](~/concepts/compose-extensions) |
 | 12/03/2018 | A new topic has been added discussing how to limit bot availability to specific single tenants.| [Bots for limited tenants](~/scenarios/limited-tenant) |
