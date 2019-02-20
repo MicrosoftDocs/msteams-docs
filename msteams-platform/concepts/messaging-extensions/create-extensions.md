@@ -13,7 +13,7 @@ Action-based messaging extensions allow your users to trigger actions in externa
 
 The following sections describe how to do this.
 
-[!include[Common content for creating extensions](~/concepts//messaging-extensions/messaging-extensions-common.md)]
+[!include[Common content for creating extensions](~/concepts/messaging-extensions/messaging-extensions-common.md)]
 
 ### Action type message extensions
 
@@ -112,7 +112,7 @@ To initiate actions from a  messaging extension set the `type` parameter to `act
 
 ### Test via uploading
 
-You can test your messaging extension by uploading your app. See [Uploading your app in a team](~/concepts/apps/apps-upload) for details.
+You can test your messaging extension by uploading your app. See [Uploading your app in a team](~/concepts/apps/apps-upload.md) for details.
 
 To open your messaging extension, navigate to any of your chats or channels. Choose the **More options** (**&#8943;**) button in the compose box, and choose your messaging extension.
 
@@ -130,7 +130,7 @@ When a user chooses a command with static parameters, Teams will generate a form
 
 In this method, your service can define a custom adaptive card to collect the end user input. For this approach, set the `fetchTask` parameter to `true` in the manifest. Note that if you set `fetchTask` to `true` any static parameters defined for the command will be ignored.
 
-In this method your service will receive a `composeExtension/fetchTask` event and needs to respond with an adaptive card based [task module response](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/task-modules/task-modules-overview#the-taskinfo-object). Below is an sample response with an adaptive card:
+In this method your service will receive a `composeExtension/fetchTask` event and needs to respond with an adaptive card based [task module response](~/concepts/task-modules/task-modules-overview.md#the-taskinfo-object). Below is an sample response with an adaptive card:
 
 ```json
 {
@@ -181,7 +181,7 @@ The bot can also respond with an auth/config response if the user needs to authe
 
 In this method your service can show an `<iframe>` based widget to show any custom UI and collect user input. For this approach, set the `fetchTask` parameter to `true` in the manifest.
 
-Just like in the adaptive card flow your service will be send a `fetchTask` event and needs to respond with a URL based [task module response](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/task-modules/task-modules-overview#the-taskinfo-object). Below is an sample response with an Adaptive card:
+Just like in the adaptive card flow your service will be send a `fetchTask` event and needs to respond with a URL based [task module response](~/concepts/task-modules/task-modules-overview.md#the-taskinfo-object). Below is an sample response with an Adaptive card:
 
 ```json
 {
@@ -208,7 +208,7 @@ This is used when your extension needs to chain dialogs together to get more inf
 
 ### Compose extension auth/config response
 
-This is used when your extension needs to either authenticate or configure in order to continue. See [authentication section](~/concepts/messaging-extensions/search-extensions#Authentication) in the search section for more details.
+This is used when your extension needs to either authenticate or configure in order to continue. See [authentication section](~/concepts/messaging-extensions/search-extension.mds#Authentication) in the search section for more details.
 
 ### Compose extension result response
 
