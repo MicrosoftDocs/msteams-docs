@@ -12,7 +12,6 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
-| 01/28/2018 | Device permissions lets a tab ask for consent to use the user's camera or microphone, get their location, send notifications, open external links or use midi instruments | [Request permissions for your Microsoft Teams tab](~/concepts/tabs/tabs-device-permissions) |
 | 12/07/2018 | Action-based command support for messaging extensions | [Messaging Extensions](~/concepts/compose-extensions) |
 | 12/03/2018 | A new topic has been added discussing how to limit bot availability to specific single tenants.| [Bots for limited tenants](~/scenarios/limited-tenant) |
 | 11/12/2018 | Tabs in group chat is now available in the released version of Teams, and has been moved out of developer preview. As part of this work, the tabs section has been reworked for clarity.| [Configurable tabs](~/concepts/tabs/tabs-configurable) |
