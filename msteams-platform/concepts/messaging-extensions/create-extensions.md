@@ -111,7 +111,7 @@ To initiate actions from a  messaging extension set the `type` parameter to `act
 ```
 
 > [!NOTE]
-> Initiating actions from messages is in [developer preview](~/resources/dev-preview/developer-preview-intro.md). Currently only action type commands are supported from messages.
+> Initiating actions from messages is in [developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 ### Initiate actions from messages
 
