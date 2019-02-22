@@ -110,12 +110,12 @@ To initiate actions from a  messaging extension set the `type` parameter to `act
 }
 ```
 
+### Initiate actions from messages
+
 > [!NOTE]
 > Initiating actions from messages is in [developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
-### Initiate actions from messages
-
-In addition to initiating actions from the compose message area, you can also use your messaging extension to initiate an action from a message. This will allow you to send the contents of the message to your bot for processing, and optionally reply to that message with the results. Your users can access your messaging extension from the overflow `...` menu and then selecting `More Actions` as in the image below.
+In addition to initiating actions from the compose message area, you can also use your messaging extension to initiate an action from a message. This will allow you to send the contents of the message to your bot for processing, and optionally reply to that message with the results. Your users can access your messaging extension from the overflow `...` menu and then selecting `Take action` as in the image below.
 
 ![Example of initiating an action from a message](~/assets/images/compose-extensions/messageextensions_messageaction.png)
 
