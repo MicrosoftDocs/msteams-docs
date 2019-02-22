@@ -2,7 +2,7 @@
 title: Microsoft Teams code samples
 description: Links and descriptions of sample applications for the Microsoft Teams developer platform
 keywords: Microsoft Teams developer samples
-ms.date: 02/06/2018
+ms.date: 02/21/2019
 ---
 # Code samples for the Microsoft Teams developer platform
 
@@ -42,6 +42,7 @@ As always, the project's README file should have more information on specific ne
 |--------|-------------
 | [Complete sample in Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) | This sample shows how to use all the features of the Microsoft Teams platform
 | [Complete sample in C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) | This project is meant to help a Teams developers in two ways. First, it shows many examples of how an app can integrate into Teams. Second, it gives a set of patterns, templates, and tools that can be used as a starting point for creating a larger, scalable, more enterprise level app to work within Teams.
+| [Line of Business apps in C#/.NET](https://github.com/OfficeDev/msteams-sample-line-of-business-apps-csharp) | This repository contains multiple example Line of Business apps that can be used for either inspiration or as templates to build on top of. |
 
 ## Bots
 

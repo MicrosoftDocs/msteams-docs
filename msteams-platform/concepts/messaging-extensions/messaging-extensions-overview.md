@@ -6,11 +6,11 @@ ms.date: 08/15/18
 ---
 # Develop messaging extensions for Microsoft Teams
 
-Messaging extensions are a powerful new way for users to engage with your app within Microsoft Teams. With this capability, users can query or post information to and from your service and post that information, in the form of cards, right into a message.
+Messaging extensions are a powerful way for users to engage with your app from Microsoft Teams. With this capability, users can query or post information to and from your service and post that information, in the form of cards, right into a message.
 
 ![Example of messaging extension card](~/assets/images/compose-extensions/ceexample.png)
 
-Messaging extensions appear along the bottom of the compose box. A few are built in, such as Emoji, Giphy, and Sticker. Choose the **More Options** (**&#8943;**) button to see other messaging extensions, including those that you add from the app gallery or upload yourself.
+Messaging extensions appear along the bottom of the compose box. A few are built in, such as Emoji, Giphy, and Sticker. Choose the **More Options** (**&#8943;**) button to see other messaging extensions, including those you add from the app gallery or upload yourself.
 
 How would you use messaging extensions? Here are a few possibilities:
 

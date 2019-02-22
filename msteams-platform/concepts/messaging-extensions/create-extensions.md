@@ -2,7 +2,7 @@
 title: Initiate actions with messaging extensions
 description: Create Action-based messaging extensions to allow users to trigger external services
 keywords: teams messaging extensions messaging extensions search
-ms.date: 02/05/2019
+ms.date: 02/21/2019
 ---
 
 # Initiate actions with messaging extensions
@@ -110,6 +110,37 @@ To initiate actions from a  messaging extension set the `type` parameter to `act
 }
 ```
 
+> [!NOTE]
+> Initiating actions from messages is in [developer preview](~/resources/dev-preview/developer-preview-intro.md). Currently only action type commands are supported from messages.
+
+### Initiate actions from messages
+
+In addition to initiating actions from the compose message area, you can also use your messaging extension to initiate an action from a message. This will allow you to send the contents of the message to your bot for processing, and optionally reply to that message with the results. Your users can access your messaging extension from the overflow `...` menu and then selecting `More Actions` as in the image below.
+
+![Example of initiating an action from a message](~/assets/images/compose-extensions/messageextensions_messageaction.png)
+
+To enable your messaging extension to work from an action you'll need to add the `context` parameter to your messaging extension's `commands` object in your app manifest as in the example below. Valid strings for the `context` array are `"message"`, `"commandBar"`, and `"compose"`. The default value is `["compose", "commandBar"]`.
+
+```json
+"composeExtensions": [
+  {
+    "botId": "12345ab8-ab12-cd34-ef56-098abc123876",
+    "canUpdateConfiguration": true,
+    "commands": [
+      {
+        "id": "reassignTodo",
+        "description": "Reassign a todo item",
+        "title": "Create To Do",
+        "type": "Action",
+        "context": ["message"],
+        "fetchTask": true
+    }]
+    ...
+
+```
+
+The request sent to your bot is the same as described [below](#responding-to-submit), where the `content` object will contain the contents of the message the action was initiated from.
+
 ### Test via uploading
 
 You can test your messaging extension by uploading your app. See [Uploading your app in a team](~/concepts/apps/apps-upload.md) for details.
@@ -124,7 +155,7 @@ There are three ways to collect information from an end user in Teams.
 
 In this method, all you need to do is define a static list of parameters in the manifest as shown above in the "Create To Do" command. To use this method ensure `fetchTask` is set to `false` and that you define your parameters in the manifest.
 
-When a user chooses a command with static parameters, Teams will generate a form in a Task Module with the parameters defined in the manifest. On hitting Submit a `composeExtension/submitAction` is sent to the bot. See the topic `Responding to submit` for more information on the expected set of responses.
+When a user chooses a command with static parameters, Teams will generate a form in a Task Module with the parameters defined in the manifest. On hitting Submit a `composeExtension/submitAction` is sent to the bot. See the topic [Responding to submit](#responding-to-submit) for more information on the expected set of responses.
 
 ### Dynamic input using an adaptive card
 
