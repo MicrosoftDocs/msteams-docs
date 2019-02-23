@@ -260,7 +260,7 @@ See [Cards](~/concepts/cards/cards.md) for an overview.
 
 To learn how to use the thumbnail and hero card types, see [Add cards and card actions](~/concepts/cards-actions.md).
 
- For additional documentation regarding the Office 365 Connector card, see [Using Office 365 Connector cards](~/concepts/connectors/connectors.md#using-office-365-connector-cards-in-microsoft-teams).
+For additional documentation regarding the Office 365 Connector card, see [Using Office 365 Connector cards](~/concepts/cards/cards-reference.md#office-365-connector-card).
 
 The result list is displayed in the Microsoft Teams UI with a preview of each item. The preview is generated in one of two ways:
 
@@ -485,7 +485,7 @@ To prompt an unauthenticated user to sign in, respond with a suggested action of
 ```
 
 > [!NOTE]
-> For the sign-in experience to be hosted in a Teams pop-up, the domain portion of the URL must be in your app’s list of valid domains. (See [validDomains](~/resources/schema/manifest-schema#validdomains) in the manifest schema.)
+> For the sign-in experience to be hosted in a Teams pop-up, the domain portion of the URL must be in your app’s list of valid domains. (See [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the manifest schema.)
 
 ### Start the sign-in flow
 
