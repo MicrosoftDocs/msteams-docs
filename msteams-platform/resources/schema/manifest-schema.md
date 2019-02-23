@@ -339,6 +339,11 @@ Each command item is an object with the following structure:
 |`parameter.name`|String|64 characters|✔|The name of the parameter as it appears in the client. This is included in the user request.|
 |`parameter.title`|String|32 characters|✔|User-friendly title for the parameter.|
 |`parameter.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
+|`taskInfo`|Object|||Defines the dialog presented to the user|
+|`taskInfo.title`|String|64 characters||Initial dialog title|
+|`taskInfo.width`|String|16 characters||Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'|
+|`taskInfo.height`|String|16 characters||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'|
+|`taskInfo.url`|String|2048 characters||Initial webview URL|
 
 ## permissions
 
