@@ -15,7 +15,7 @@ You can now configure your messaging extension to respond to a URL inserted into
 
 ## Deep linking to a chat
 
-You can now create deep links to private chats between users. You can link to an existing chat, or you can specify a set of chat participants to start a new chat. See [Deep linking to a chat](~/concepts/deep-links#deep-linking-to-a-chat.md) for more details.
+You can now create deep links to private chats between users. You can link to an existing chat, or you can specify a set of chat participants to start a new chat. See [Deep linking to a chat](~/concepts/deep-links.md#deep-linking-to-a-chat) for more details.
 
 ## Calls and online meeting bots
 
@@ -97,7 +97,7 @@ To test your app, open up a chat and click Manage apps from the tab gallery or b
 
 The [Developer preview manifest](~/resources/schema/manifest-schema-dev-preview.md) has been updated to include this feature.
 
-See [What is the Public Developer Preview for Microsoft Teams?](~/resources/general/developer-preview.md) for more information on enabling it for your development tenant.
+See [What is the Public Developer Preview for Microsoft Teams?](~/resources/dev-preview/developer-preview.md) for more information on enabling it for your development tenant.
 
 ### Samples
 
