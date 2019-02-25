@@ -115,11 +115,11 @@ Example: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&atten
 The query parameters are:
 
 * `attendees`&emsp;The optional comma-separated list of user IDs representing the attendees of the meeting. The user performing the action is the meeting organizer. The User ID field currently only supports the Azure AD UserPrincipalName (typically an email address).
-* `startTime`&emsp;The optional start time of the event. This should be in [long ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601), for example “2018-03-12T23:55:25Z”.
+* `startTime`&emsp;The optional start time of the event. This should be in [long ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601), for example “2018-03-12T23:55:25+02:00”.
 * `endTime`&emsp;The optional end time of the event, also in ISO 8601 format.
 * `subject`&emsp;An optional field for the meeting subject.
 * `content`&emsp;An optional field for the meeting details field.
 
-Currently, specifying the location is not supported.
+Currently, specifying the location is not supported. When generating your start and end times be sure to specify the UTC offeset (time zones).
 
 To use this deep link with your bot, you can specify this as the URL target in your card's button or tap action through the `openUrl` action type.
