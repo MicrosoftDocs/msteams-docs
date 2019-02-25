@@ -61,8 +61,6 @@
       href: ./concepts/tabs/cross-domain
     - name: Tabs as SharePoint web parts
       href: ./concepts/tabs/tabs-in-sharepoint
-    - name: Device permissions
-      href: ./concepts/tabs/tabs-device-permissions
   - name: Bots
     href: ./concepts/bots/bots-overview
     items:
@@ -128,8 +126,6 @@
       href: ./concepts/task-modules/task-modules-tabs
     - name: Using task modules in bots
       href: ./concepts/task-modules/task-modules-bots
-  - name: Activity Feed
-    href: ./concepts/activity-feed
   - name: Connectors
     href: ./concepts/connectors/connectors
     items:
