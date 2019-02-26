@@ -54,8 +54,9 @@ $ gulp -v
 CLI version 3.9.1
 ```
 
-You may have a different version of these applications. This should not be a problem.
-If you don't have gulp installed, do so now by running `npm install gulp -g` in your terminal window.
+You may have a different version of these applications. This should not be a problem, except for gulp. For gulp you'll need to use version 3.9.1.
+
+If you don't have gulp installed (or have the wrong version installed), do so now by running `npm install gulp@3.9.1` in your terminal window.
 
 If you have installed Visual Studio Code, you can verify the installation by running:
 
