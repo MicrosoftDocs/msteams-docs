@@ -124,7 +124,7 @@ To enable your messaging extension to work from an action you'll need to add the
 ```json
 "composeExtensions": [
   {
-    "botId": "12345ab8-ab12-cd34-ef56-098abc123876",
+    "botId": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
     "canUpdateConfiguration": true,
     "commands": [
       {
@@ -257,8 +257,8 @@ Below is an example of the request that will be sent to your bot.
       "id": "11:1343112341j1341234@thread.skype;messageid=1234321234"
     },
     "bot": {
-      "id": "11:12345ab8-ab12-cd34-ef56-098abc123876",
-      "name": "Bot-Name"
+      "id": "11:57a3c29f-1fc5-4d97-a142-35bb662b7b23",
+      "name": "To Do"
     },
     "serviceUrl": "https://smba.trafficmanager.net/amer/"
   },
