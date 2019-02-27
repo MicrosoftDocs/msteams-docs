@@ -2,7 +2,7 @@
 title: Send and receive messages with a bot
 description: Describes how to send and receive messages with bots in Microsoft Teams
 keywords: teams bots messages
-ms.date: 02/27/2018
+ms.date: 02/27/2019
 ---
 # Have a conversation with a Microsoft Teams bot
 
