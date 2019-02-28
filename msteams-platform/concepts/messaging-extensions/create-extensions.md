@@ -139,23 +139,13 @@ To enable your messaging extension to work from an action you'll need to add the
 
 ```
 
-Below is an example of the request that will be sent to your bot.
+Below is an example of the `value` object containing the message details that will be sent as part of the `composeExtension` request be sent to your bot.
 
 ```json
 {
   "name": "composeExtension/submitAction",
   "type": "invoke",
-  "timestamp": "2019-02-26T01:01:24.509Z",
-  "localTimestamp": "2019-02-26T01:01:24.509Z",
-  "entities": [
-    {
-      "locale": "en-US",
-      "country": "US",
-      "platform": "Windows",
-      "timezone": "America/Los_Angeles",
-      "type": "clientInfo"
-    }
-  ],
+...
   "value": {
     "commandId": "setReminder",
     "commandContext": "message",
@@ -215,55 +205,8 @@ Below is an example of the request that will be sent to your bot.
           }
         }
       ]
-    },
-    "context": {
-      "theme": "default"
-    },
-    "data": {
-      "dateChoice": "15-sec",
-      "customDeltaHour": "",
-      "customDeltaMin": "",
-      "customDeltaSec": ""
     }
-  },
-  "textLocale": "en-US",
-  "sourceEvent": {
-    "channel": {
-      "id": "11:123413432123412341234@thread.skype"
-    },
-    "team": {
-      "id": "11:something_asdfadf12341234dasdf1341@thread.skype"
-    },
-    "tenant": {
-      "id": "12345ab8-ab12-cd34-ef56-098abc123876"
-    },
-    "source": {
-      "name": "compose"
-    }
-  },
-  "text": "",
-  "attachments": [],
-  "address": {
-    "id": "f:1234123412341234",
-    "channelId": "msteams",
-    "user": {
-      "id": "29:1234POMDASDFasdf_2131234_efieBIKR123432124_ISKjM-fw",
-      "name": "Pranav Chande",
-      "aadObjectId": "12345ab8-ab12-cd34-ef56-098abc123876"
-    },
-    "conversation": {
-      "isGroup": true,
-      "conversationType": "channel",
-      "id": "11:1343112341j1341234@thread.skype;messageid=1234321234"
-    },
-    "bot": {
-      "id": "11:57a3c29f-1fc5-4d97-a142-35bb662b7b23",
-      "name": "To Do"
-    },
-    "serviceUrl": "https://smba.trafficmanager.net/amer/"
-  },
-  "source": "msteams"
-}
+  ...
 ```
 
 ### Test via uploading
