@@ -16,10 +16,6 @@ To create an outgoing webhook, click **Manage team** and then navigate to the **
 
 ![View team](~/assets/images/ManageTeam.png)
 
-Click on the **Create an outgoing webhook** link at the bottom of the page.
-
-![Create a outgoing webhook entry point](~/assets/images/createwebhook.png)
-
 In the **Create an outgoing webhook** dialog, you can configure how your outgoing webhook appears in channels:
 
 * **Name** is what will show up as the bot’s title and is also how users will @mention the bot
