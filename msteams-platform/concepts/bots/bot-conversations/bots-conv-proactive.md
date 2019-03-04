@@ -2,7 +2,7 @@
 title: Proactive messages
 description: Describes bots can start a conversation in Microsoft Teams
 keywords: teams scenarios proactive messaging conversation bot
-ms.date: 03/29/2018
+ms.date: 03/04/2019
 ---
 # Proactive messaging for bots
 
@@ -18,7 +18,7 @@ Sending a message to start a new conversation thread   is different than sending
 
 Bots can create new conversations with an individual Microsoft Teams user as long as your bot has user information obtained through previous addition in a personal or team scope. This information enables your bot to proactively notify them. For instance, if your bot was added to a team, it could query the team roster and send users individual messages in personal chats, or a user could @mention another user to trigger the bot to send that user a direct message.
 
-You need the user’s *unique ID* and *tenant ID* to send a proactive message. Typically, these are   obtained from a team context, either by [fetching the team roster](~/concepts/bots/bots-context#fetching-the-team-roster) or when a user [interacts with your bot in a channel](~/concepts/bots/bot-conversations/bots-conv-channel). For bots that have already been added to the user's personal scope, you might have cached user information via the `conversationUpdate` event (see [Bot or user added to a team](~/concepts/bots/bots-notifications#team-member-or-bot-addition)).
+You need the user’s *unique ID* and *tenant ID* to send a proactive message. Typically, these are   obtained from a team context, either by [fetching the team roster](~/concepts/bots/bots-context.md#fetching-the-team-roster) or when a user [interacts with your bot in a channel](~/concepts/bots/bot-conversations/bots-conv-channel.md). For bots that have already been added to the user's personal scope, you might have cached user information via the `conversationUpdate` event (see [Bot or user added to a team](~/concepts/bots/bots-notifications.md#team-member-or-bot-addition)).
 
 You should use this capability sparingly and consider the user experience. Be sure not to spam end users and to send only the minimum amount of information and number of messages needed to complete your scenario. As a best practice, we also recommend indicating to the user why he or she is receiving the message. For instance, it may be due to action taken by another user in a common team. Here is an example of this practice from Karma:
 
