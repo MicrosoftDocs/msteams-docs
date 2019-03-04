@@ -54,8 +54,9 @@ $ gulp -v
 CLI version 3.9.1
 ```
 
-You may have a different version of these applications. This should not be a problem.
-If you don't have gulp installed, do so now by running `npm install gulp -g` in your terminal window.
+You may have a different version of these applications. This should not be a problem, except for gulp. For gulp you'll need to use version 3.9.1.
+
+If you don't have gulp installed (or have the wrong version installed), do so now by running `npm install gulp@3.9.1` in your terminal window.
 
 If you have installed Visual Studio Code, you can verify the installation by running:
 
@@ -132,7 +133,7 @@ For quick testing you can run the app on your local machine and create a tunnel 
 Once you install it, you can open a new terminal window and run the following command to create a tunnel. The sample uses port 3333, so be sure to specify it here.
 
 ```bash
-ngrok http 3333
+ngrok http 3333 -host-header=localhost:3333
 ```
 
 *Ngrok* will listen to requests from the internet and will route them to your app running on port 3333. You can verify by opening your browser and going to `https://d0ac14a5.ngrok.io/hello` to load your app's hello page. Please be sure to use the forwarding address displayed by *ngrok* in your console session instead of this URL.
