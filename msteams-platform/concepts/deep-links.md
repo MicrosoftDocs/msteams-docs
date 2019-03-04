@@ -91,7 +91,7 @@ This will navigate you to the correct URL, or trigger a client action such as op
 microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=​​​​​​​test%3Acontent​​​​​​​​​​​​​​");
 
 // Open an app install dialog from your tab
-microsoftTeams.executeDeepLink("https://teams.microsoft.com/_#/l/app/f46ad259-0fe5-4f12-872d-c737b174bcb4 ")
+microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-4f12-872d-c737b174bcb4");
 ```
 
 ## Deep linking to a chat
