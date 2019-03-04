@@ -2,7 +2,7 @@
 title: Real-time media calls and online meetings with Microsoft Teams
 description: Understand key concepts in building bot that can conduct real-time audio and video calls and online meetings.
 keywords: audio stream video stream audio/video calling meeting real-time media application-hosted media service-hosted media
-ms.date: 09/23/2018
+ms.date: 11/16/2018
 ---
 
 # Real-time media calls and meetings with Microsoft Teams
@@ -51,6 +51,6 @@ In a 1:1 call, the bot will automatically receive the video of the caller if the
 
 To develop an application-hosted media bot, you must install the following NuGet package within your Visual Studio project:
 
-- [Microsoft.Graph.Calls.Media .NET library](https://www.nuget.org/packages/Microsoft.Graph.Calls.Media/)
+- [Microsoft.Graph.Calls.Media .NET library](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)
 
 Application-hosted media bots require .NET/C# and Windows Server, as described in detail in [requirements and considerations for application-hosted media bots](~/concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots#real-time-media-bot-development-requires-cnet-and-windows-server).

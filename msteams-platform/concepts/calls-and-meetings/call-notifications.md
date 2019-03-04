@@ -77,7 +77,7 @@ Your code handling the webhook should validate the token, ensure it has not expi
 [Sample](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs) shows how to validate inbound requests.
 
 > [!NOTE]
-> In the future, we will send you OAuth tokens issued by AAD instead of Skype. To prepare for this migration, your bot should accept both kinds of tokens.
+> In the future, we will send you access tokens issued by Azure AD instead of Skype. To prepare for this migration, your bot should accept both kinds of tokens.
 
 The new token would look like following:
 
@@ -106,4 +106,4 @@ As before, your code handling the webhook should validate the token, ensure it h
 
 ## Additional information
 
-You can read more about [AAD tokens and validation here](http://www.cloudidentity.com/blog/2014/03/03/principles-of-token-validation/).
+You can read more about [Azure AD tokens and validation here](https://docs.microsoft.com/azure/active-directory/develop/access-tokens).

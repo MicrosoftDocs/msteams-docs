@@ -2,15 +2,18 @@
 title: Create a bot
 description: Describes how to create bots in Microsoft Teams
 keywords: teams bots creation
-ms.date: 04/20/2018
+ms.date: 12/07/2018
 ---
 # Create a bot
 
 All bots created using the Microsoft Bot Framework are configured and ready to work in Microsoft Teams.
 
+>[!Note]
+>These steps require Bot Framework version 3. The Bot Framework documentation has been updated to version 4, which does not work with Teams.
+
 A sample bot is included in the [Get Started](~/get-started/get-started) sample for Node.js and .NET, along with detailed steps for creating your first bot.
 
-See the [Bot Framework Documentation](https://docs.botframework.com/en-us/) for general information on bots.
+See the [Bot Framework Documentation](https://docs.microsoft.com/en-us/azure/bot-service/?view=azure-bot-service-3.0) for general information on bots.
 
 ## Create a bot for Microsoft Teams
 
@@ -46,4 +49,4 @@ To make your bot experience Teams-ready:
    ![Edit Bot Properties](~/assets/images/bots/bf-migrate-bot-to-azure.png)
 > * If you register your bot using Microsoft Azure, it does not need to be *hosted* on Microsoft Azure.
 > * If you do register a bot using Microsoft Azure portal, you must have a Microsoft Azure account. You can [create one for free](https://azure.microsoft.com/en-us/free/). To verify your identity when you create one, you must provide a credit card, but it won't be charged; it's always free to create and use bots with Microsoft Teams.
-> * In the near future, you'll be able to register/update app and bot information directly within Microsoft Teams. Once this is supported, you'll only have to use the Microsoft Azure portal for adding/configuring other Bot Framework channels such as Direct Line, Web Chat, Skype, Facebook Messenger, etc. 
+> * You can now use App Studo to register/update app and bot information directly within Microsoft Teams. You'll only have to use the Microsoft Azure portal for adding/configuring other Bot Framework channels such as Direct Line, Web Chat, Skype, and Facebook Messenger.

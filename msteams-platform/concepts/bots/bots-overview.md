@@ -57,7 +57,7 @@ See the [Troubleshooting bots](~/troubleshoot/troubleshoot#troubleshooting-bots)
 
 The following topics will guide you through the process of creating a great bot for Teams.
 
-* [Get started with apps for Teams](~/get-started/get-started-nodejs) Create a "hello world" app.
+* [Get started with apps for Teams](~/get-started/get-started-nodejs-app-studio) Create a "hello world" app.
 * [Design a great bot](~/get-started/design#designing-a-great-bot): Microsoft Teams is the place for group and team collaboration. Consider what functionality your bot can bring to this collaboration environment, via personal conversations or as part of a channel conversation. A great bot on Teams will also find ways to leverage the unique tabs feature, via a [configurable tab](~/concepts/tabs/tabs-overview) or a [static tab](~/concepts/tabs/tabs-static).
 * [Create a bot](~/concepts/bots/bots-create): Take advantage of the great tools, documentation, and community provided by the Bot Framework team.
 * [Talk to your bot](~/concepts/bots/bot-conversations/bots-conversations): Add basic conversation flow and leverage channel-specific functionality. If you develop in .NET or Node.js, use our [extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) to simplify your work.

@@ -2,32 +2,22 @@
 title: Features in the Public Developer Preview
 description: Describes the features in the Public Developer Preview of Microsoft Teams
 keywords: teams preview developer features
-ms.date: 11/05/2018
+ms.date: 02/19/2019
 ---
 # Features in the Public Developer Preview for Microsoft Teams
 
 When these features are out of developer preview this content will be merged into the live doc set.
 The developer preview includes the following new features:
 
-## SharePoint Framework v1.7 Integration with Tabs in Microsoft Teams 
-
-Starting with SharePoint Framework v1.7, you can also implement your Microsoft Teams tabs using SharePoint Framework. This significantly simplifies Teams tab development process as SharePoint Framework web parts are automatically hosted within SharePoint without any need for external services. We’re also supporting the ability for developers to take their Teams Tab application experience and host it back in SharePoint. As Tabs are hosted in SharePoint they get a similar “full page” experience, exposing the full power of applications while retaining the context and familiarity of a SharePoint site.
-
-- [Teams Tabs as SharePoint web parts](./concepts/tabs/tabs-in-sharepoint)
-- [SharePoint web parts as a Teams Tabs](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
-- [SharePoint App Pages for richer experiences](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/single-part-app-pages)
-
-![](~/assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png)
-
 ## Calls and online meeting bots
 
-With the addition of [Microsoft Graph APIs for calls and online meetings](https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/calls-api-overview), Microsoft Teams apps can now interact with users in rich ways using voice and video. These APIs allow you to add new app features such as interactive voice response (IVR), call control, and access to real-time audio and/or video streams for calls and meetings, including desktop and app sharing.
+With the addition of [Microsoft Graph APIs for calls and online meetings](https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/calls-api-overview.md), Microsoft Teams apps can now interact with users in rich ways using voice and video. These APIs allow you to add new app features such as interactive voice response (IVR), call control, and access to real-time audio and/or video streams for calls and meetings, including desktop and app sharing.
 
-We've added a new section on how to create and develop calls and online meetings bots, starting with the [overview](~/concepts/calls-and-meetings/calls-meetings-bots-overview).
+We've added a new section on how to create and develop calls and online meetings bots, starting with the [overview](~/concepts/calls-and-meetings/calls-meetings-bots-overview.md).
 
 ## The tab configuration page is significantly taller
 
-The height of the content area for the tab [Configuration page](~/concepts/tabs/tabs-configuration) will shortly be increased significantly; the width remains unchanged. It is important for you to update the tab configuration pages in your apps before this happens, otherwise your users will see your tab configuration page with a great deal of whitespace. (We have not finalized the date for this change as we cannot be sure how long it will take for most developers to update their apps, but it will likely be before the end of August, 2018.) 
+The height of the content area for the tab [Configuration page](~/concepts/tabs/tabs-configuration.md) will shortly be increased significantly; the width remains unchanged. It is important for you to update the tab configuration pages in your apps before this happens, otherwise your users will see your tab configuration page with a great deal of whitespace. (We have not finalized the date for this change as we cannot be sure how long it will take for most developers to update their apps, but it will likely be before the end of August, 2018.)
 
 <img width="450px" title="New sizes for configuration tabs" src="~/assets/images/tabs/config-dialog-Contoso2.png" />
 
@@ -45,20 +35,17 @@ When properly sized, your tab configuration page should look similar to this:
 
 <img width="450px" title="New configuration tab" src="~/assets/images/tabs/config-dialog-Contoso.png" />
 
-## Adding tabs and bots to chats
+## Adding bots to chats
 
-Chats are conversations between one or more users in Teams. Tabs and bots can now be added to chats. In the past they could only be added to channels and personal (bot to user) conversations.
+Chats are conversations between one or more users in Teams. Bots can now be added to chats. In the past they could only be added to channels and personal (bot to user) conversations.
 
 This feature allows you to:
 
-* Add tabs to chats
 * Add bots to chats
 
-To enable this feature use the new scope `groupchat` in the manifest definition for bots and tabs. You must  use the preview schema (1.3) in order to use this feature. You can find the schema here: `https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json`.
+To enable this feature use the new scope `groupchat` in the manifest definition for bots. You must use the preview schema (1.3) in order to use this feature. You can find the schema here: `https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json`.
 
-The [Developer preview manifest](~/resources/schema/manifest-schema-dev-preview) documentation has also been updated to include this scope.
-
-Tab support is limited to configurable tabs.
+The [Developer preview manifest](~/resources/schema/manifest-schema-dev-preview.md) documentation has also been updated to include this scope.
 
 ### Bot event changes
 
@@ -88,37 +75,31 @@ Bots will receive the following events in group chat. These events are a subset 
 * Message (message activity)
 * Like added/removed (messageReaction activity)
 
-See [Bot notifications](~/concepts/bots/bots-notifications) for more details on bots and events before these changes.
+See [Bot notifications](~/concepts/bots/bots-notifications.md) for more details on bots and events before these changes.
 
 ### Group chats are similar to channel chats
 
-Group chat conversations behave very similarly to channel conversations with bots, so the information in the [Interact in a team channel with a Microsoft Teams bot](~/concepts/bots/bot-conversations/bots-conv-channel) topic may also be helpful. The main difference is that group chat does not support threaded conversations.
-
-### Changes to getContext() for tabs
-
-When calling `getContext` from a tab in chat, `chatId` will be returned with the ID of the chat.
+Group chat conversations behave very similarly to channel conversations with bots, so the information in the [Interact in a team channel with a Microsoft Teams bot](~/concepts/bots/bot-conversations/bots-conv-channel.md) topic may also be helpful. The main difference is that group chat does not support threaded conversations.
 
 ### Testing your app
 
-To test your app, open up a chat and click *Add apps* in the header. From there you can access *Add custom app* to upload your app package.
+To test your app, open up a chat and click Manage apps from the tab gallery or by right clicking your chat on the left chat rail. From there you can access Upload a custom app to upload your app package.
 
 ### Preview manifest
 
-The [Developer preview manifest](~/resources/schema/manifest-schema-dev-preview) has been updated to include this feature.
+The [Developer preview manifest](~/resources/schema/manifest-schema-dev-preview.md) has been updated to include this feature.
 
-See [What is the Public Developer Preview for Microsoft Teams?](~/resources/general/developer-preview) for more information on enabling it for your development tenant.
+See [What is the Public Developer Preview for Microsoft Teams?](~/resources/dev-preview/developer-preview.md) for more information on enabling it for your development tenant.
 
 ### Samples
 
 The samples in this section have been updated to include this feature:
 
-* [Featured code samples](~/samples/code-samples#featured)
+* [Featured code samples](~/samples/code-samples.md#featured)
 
 ### Known issues
 
 * The UI shown in Developer Preview is still being developed
-* Custom defined app icons are currently not working in chat
 * If you upload an app with a bot to a chat in the *Developer Preview* version of Teams, and you switch back to the *Public* version, there might be some UI or behavior inconsistencies. If you run into any issues, please uninstall the app in *Developer Preview*
 * Bot menus do not currently work with the `groupchat` scope
-* Deep links into tabs in group chat do not work
 * There is a limit of 5 uploaded apps per chat
