@@ -49,4 +49,4 @@ To make your bot experience Teams-ready:
    ![Edit Bot Properties](~/assets/images/bots/bf-migrate-bot-to-azure.png)
 > * If you register your bot using Microsoft Azure, it does not need to be *hosted* on Microsoft Azure.
 > * If you do register a bot using Microsoft Azure portal, you must have a Microsoft Azure account. You can [create one for free](https://azure.microsoft.com/en-us/free/). To verify your identity when you create one, you must provide a credit card, but it won't be charged; it's always free to create and use bots with Microsoft Teams.
-> * You can now use App Studo to register/update app and bot information directly within Microsoft Teams. You'll only have to use the Microsoft Azure portal for adding/configuring other Bot Framework channels such as Direct Line, Web Chat, Skype, and Facebook Messenger.
+> * You can now use App Studio to register/update app and bot information directly within Microsoft Teams. You'll only have to use the Microsoft Azure portal for adding/configuring other Bot Framework channels such as Direct Line, Web Chat, Skype, and Facebook Messenger.
