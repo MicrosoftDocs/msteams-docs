@@ -2,12 +2,20 @@
 title: Features in the Public Developer Preview
 description: Describes the features in the Public Developer Preview of Microsoft Teams
 keywords: teams preview developer features
-ms.date: 02/19/2019
+ms.date: 03/05/2019
 ---
 # Features in the Public Developer Preview for Microsoft Teams
 
 When these features are out of developer preview this content will be merged into the live doc set.
 The developer preview includes the following new features:
+
+## Trigger messaging extension from links inserted into the compose message box
+
+You can now configure your messaging extension to respond to a URL inserted into the compose message box similarly to a user using your messaging extension for search. This allows you to automatically resolve the URL into a card. See [Receive requests from links inserted into the compose message box](~/concepts/messaging-extensions/search-extensions.md#receive-requests-from-links-inserted-into-the-compose-message-box) for more information.
+
+## Deep linking to a chat
+
+You can now create deep links to private chats between users. You can link to an existing chat, or you can specify a set of chat participants to start a new chat. See [Deep linking to a chat](~/concepts/deep-links.md#deep-linking-to-a-chat) for more details.
 
 ## Calls and online meeting bots
 
@@ -17,7 +25,7 @@ We've added a new section on how to create and develop calls and online meetings
 
 ## The tab configuration page is significantly taller
 
-The height of the content area for the tab [Configuration page](~/concepts/tabs/tabs-configuration.md) will shortly be increased significantly; the width remains unchanged. It is important for you to update the tab configuration pages in your apps before this happens, otherwise your users will see your tab configuration page with a great deal of whitespace. (We have not finalized the date for this change as we cannot be sure how long it will take for most developers to update their apps, but it will likely be before the end of August, 2018.)
+The height of the content area for the tab [Configuration page](~/concepts/tabs/tabs-configuration.md) will shortly be increased significantly; the width remains unchanged. It is important for you to update the tab configuration pages in your apps before this happens, otherwise your users will see your tab configuration page with a great deal of whitespace. (We have not finalized the date for this change as we cannot be sure how long it will take for most developers to update their apps, but it will likely be before the end of August, 2018.) 
 
 <img width="450px" title="New sizes for configuration tabs" src="~/assets/images/tabs/config-dialog-Contoso2.png" />
 

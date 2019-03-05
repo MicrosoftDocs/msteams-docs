@@ -16,10 +16,6 @@ To create an outgoing webhook, click **Manage team** and then navigate to the **
 
 ![View team](~/assets/images/ManageTeam.png)
 
-Click on the **Create an outgoing webhook** link at the bottom of the page.
-
-![Create a outgoing webhook entry point](~/assets/images/createwebhook.png)
-
 In the **Create an outgoing webhook** dialog, you can configure how your outgoing webhook appears in channels:
 
 * **Name** is what will show up as the bot’s title and is also how users will @mention the bot
@@ -266,7 +262,7 @@ Your outgoing webhook will need to respond to the HTTP request from Microsoft Te
 ## Limitations
 
 * Outgoing webhooks do not have access to non-messaging APIs, such as team roster membership.
-* Outgoing webhooks cannot post into channels [proactively](~/concepts/bots/bot-conversations/bots-conv-proactive).
+* Outgoing webhooks cannot post into channels [proactively](~/concepts/bots/bot-conversations/bots-conv-proactive.md).
 * Although outgoing webhooks can use cards, they cannot use button actions like `imBack` or `invoke`.
 
 ## Samples for Outgoing webhook
