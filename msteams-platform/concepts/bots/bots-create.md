@@ -11,13 +11,13 @@ All bots created using the Microsoft Bot Framework are configured and ready to w
 >[!Note]
 >These steps require Bot Framework version 3. The Bot Framework documentation has been updated to version 4, which does not work with Teams.
 
-A sample bot is included in the [Get Started](~/get-started/get-started) sample for Node.js and .NET, along with detailed steps for creating your first bot.
+A sample bot is included in the [Get Started](~/get-started/get-started.md) sample for Node.js and .NET, along with detailed steps for creating your first bot.
 
 See the [Bot Framework Documentation](https://docs.microsoft.com/en-us/azure/bot-service/?view=azure-bot-service-3.0) for general information on bots.
 
 ## Create a bot for Microsoft Teams
 
-*Teams App Studio* is a new tool that can help create your bot. It also contains a React control library and configurable samples for cards. See [Getting started with Teams App Studio](~/get-started/get-started-app-studio). The steps that follow assume that you are hand configuring your bot and not using *Teams App Studio*.
+*Teams App Studio* is a new tool that can help create your bot. It also contains a React control library and configurable samples for cards. See [Getting started with Teams App Studio](~/get-started/get-started-app-studio.md). The steps that follow assume that you are hand configuring your bot and not using *Teams App Studio*.
 
 1. Create the bot using this link: https://dev.botframework.com/bots/new. **Be sure to add Microsoft Teams as a channel from the featured channels list after creating your bot.** Feel free to re-use any Microsoft App ID you generated if you've already created your app package/manifest.
 
@@ -37,9 +37,9 @@ See the [Bot Framework Documentation](https://docs.microsoft.com/en-us/azure/bot
 
 To make your bot experience Teams-ready:
 
-1. [Create an uploadable app package](~/concepts/apps/apps-package) and [upload it to a team](~/concepts/apps/apps-upload) to test it in action.
-2. Add [tabs](~/concepts/tabs/tabs-overview) or [other capabilities](~/concepts/apps/apps-overview#map-your-scenario-to-teams-capabilities) to make your experience shine in Teams.
-3. [Submit your final app package](~/publishing/apps-publish#appsource) for publication in AppSource (formerly known as Office Store) or publish it for your organization by uploading it to your [Tenant App Catalog](~/publishing/apps-publish#microsoft-teams-tenant-app-catalog).
+1. [Create an uploadable app package](~/concepts/apps/apps-package.md) and [upload it to a team](~/concepts/apps/apps-upload.md) to test it in action.
+2. Add [tabs](~/concepts/tabs/tabs-overview.md) or [other capabilities](~/concepts/apps/apps-overview.md#map-your-scenario-to-teams-capabilities) to make your experience shine in Teams.
+3. [Submit your final app package](~/publishing/apps-publish.md#appsource) for publication in AppSource (formerly known as Office Store) or publish it for your organization by uploading it to your [Tenant App Catalog](~/publishing/apps-publish.md#microsoft-teams-tenant-app-catalog).
 
 > [!NOTE]
 > ## Bots and Microsoft Azure
