@@ -33,12 +33,12 @@ See the [Bot Framework Documentation](https://docs.microsoft.com/en-us/azure/bot
 4. Deploy the bot to a cloud service, such as [Microsoft Azure](https://azure.microsoft.com/). Alternatively, run your app locally and use a tunneling service such [ngrok](https://ngrok.com) to expose an https:// endpoint for your bot, such as `https://45az0eb1.ngrok.io/api/messages`.
 
 > [!TIP]
-> [Here's more information on the various approaches for running and debugging your bots](~/resources/general/debug).
+> [Here's more information on the various approaches for running and debugging your bots](~/resources/general/debug.md).
 
 To make your bot experience Teams-ready:
 
 1. [Create an uploadable app package](~/concepts/apps/apps-package.md) and [upload it to a team](~/concepts/apps/apps-upload.md) to test it in action.
-2. Add [tabs](~/concepts/tabs/tabs-overview.md) or [other capabilities](~/concepts/apps/apps-overview.md#map-your-scenario-to-teams-capabilities) to make your experience shine in Teams.
+2. Add [tabs](~/concepts/tabs/tabs-overview.md) or [other capabilities](~/concepts/apps/apps-design.md#map-your-scenario-to-teams-capabilities) to make your experience shine in Teams.
 3. [Submit your final app package](~/publishing/apps-publish.md#appsource) for publication in AppSource (formerly known as Office Store) or publish it for your organization by uploading it to your [Tenant App Catalog](~/publishing/apps-publish.md#microsoft-teams-tenant-app-catalog).
 
 > [!NOTE]
