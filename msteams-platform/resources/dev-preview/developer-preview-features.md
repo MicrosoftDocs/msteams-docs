@@ -2,7 +2,7 @@
 title: Features in the Public Developer Preview
 description: Describes the features in the Public Developer Preview of Microsoft Teams
 keywords: teams preview developer features
-ms.date: 02/19/2019
+ms.date: 03/05/2019
 ---
 # Features in the Public Developer Preview for Microsoft Teams
 
