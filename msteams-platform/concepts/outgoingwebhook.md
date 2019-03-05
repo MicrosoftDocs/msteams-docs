@@ -262,7 +262,7 @@ Your outgoing webhook will need to respond to the HTTP request from Microsoft Te
 ## Limitations
 
 * Outgoing webhooks do not have access to non-messaging APIs, such as team roster membership.
-* Outgoing webhooks cannot post into channels [proactively](~/concepts/bots/bot-conversations/bots-conv-proactive).
+* Outgoing webhooks cannot post into channels [proactively](~/concepts/bots/bot-conversations/bots-conv-proactive.md).
 * Although outgoing webhooks can use cards, they cannot use button actions like `imBack` or `invoke`.
 
 ## Samples for Outgoing webhook
