@@ -2,7 +2,7 @@
 title: Search with messaging extensions
 description: Describes how to develop search based messaging extensions
 keywords: teams messaging extensions messaging extensions search
-ms.date: 11/07/18
+ms.date: 03/05/2019
 ---
 
 # Search with messaging extensions
