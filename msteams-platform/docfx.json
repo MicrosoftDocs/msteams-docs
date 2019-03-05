@@ -33,7 +33,7 @@
         "overwrite": [],
         "externalReference": [],
         "globalMetadata": {
-            "uhfHeaderID": "MSDocsHeader-Dev_MicrosoftTeams",
+            "uhfHeaderId": "MSDocsHeader-Dev_MicrosoftTeams",
             "breadcrumb_path": "/microsoftteams/platform/breadcrumb/TOC.json",
             "extendBreadcrumb": true,
             "ms.topic": "article",
