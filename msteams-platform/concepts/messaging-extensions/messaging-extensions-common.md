@@ -1,20 +1,18 @@
 ## Add a messaging extension to your app
 
-Building a messaging extension involves implementing familiar Microsoft Teams developer platform concepts like bot APIs, cards, and tabs.
-
-At its core, a messaging extension is a cloud-hosted service that listens to user requests and responds with structured data, such as cards. You integrate your service with Microsoft Teams via Bot Framework `Activity` objects. Our .NET and Node.js [extensions for the Bot Builder SDK](~/get-started/code#microsoft-teams-extensions-for-the-bot-builder-sdk) can help you add messaging extension functionality to your app.
+A messaging extension is a cloud-hosted service that listens to user requests and responds with structured data, such as a [card](~/concepts/cards/cards.md). You integrate your service with Microsoft Teams via Bot Framework `Activity` objects. Our .NET and Node.js [extensions for the Bot Builder SDK](~/get-started/code.md#microsoft-teams-extensions-for-the-bot-builder-sdk) can help you add messaging extension functionality to your app.
 
 ![Diagram of message flow for messaging extensions](~/assets/images/compose-extensions/ceflow.png)
 
 ### Register in the Bot Framework
 
-If you haven’t done so already, you must first register a bot with the Microsoft Bot Framework. (See [Create a bot](~/concepts/bots/bots-create) for instructions.) The Microsoft app ID and callback endpoints for your bot, as defined there, will be used in your messaging extension to receive and respond to user requests. Remember to enable the Microsoft Teams channel for your bot.
+If you haven’t done so already, you must first register a bot with the Microsoft Bot Framework. (See [Create a bot](~/concepts/bots/bots-create.md) for instructions.) The Microsoft app ID and callback endpoints for your bot, as defined there, will be used in your messaging extension to receive and respond to user requests. Remember to enable the Microsoft Teams channel for your bot.
 
-Record your bot’s app ID and app password—you will need to supply the app ID in your app manifest.
+Record your bot app ID and app password, you will need to supply the app ID in your app manifest.
 
 ### Update your app manifest
 
-As with bots and tabs, you update the [manifest](~/resources/schema/manifest-schema#composeextensions) of your app to include the messaging extension properties. These properties govern how your messaging extension appears and behaves in the Microsoft Teams client. Messaging extensions are supported beginning with v1.0 of the manifest.
+As with bots and tabs, you update the [manifest](~/resources/schema/manifest-schema.md#composeextensions) of your app to include the messaging extension properties. These properties govern how your messaging extension appears and behaves in the Microsoft Teams client. Messaging extensions are supported beginning with v1.0 of the manifest.
 
 #### Declare your messaging extension
 
@@ -53,3 +51,4 @@ In the app manifest, your command item is an object with the following structure
 | `parameter.description` | Describes this parameter’s purposes or example of the value that should be provided. This value appears in the UI. | Yes |
 | `parameter.title` | Short user-friendly parameter title or label. | Yes |
 | `parameter.inputType` | Set to the type of input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text` | No |
+| `context` | **Developer Preview** Optional array of values that defines the context the message action is available in. Possible values are `message`, `compose`, or `commandBox`. Default is `["compose", "commandBox"]`. | No |

@@ -2,7 +2,7 @@
 title: Features in the Public Developer Preview
 description: Describes the features in the Public Developer Preview of Microsoft Teams
 keywords: teams preview developer features
-ms.date: 12/07/2018
+ms.date: 02/19/2019
 ---
 # Features in the Public Developer Preview for Microsoft Teams
 
@@ -19,7 +19,7 @@ You can now create deep links to private chats between users. You can link to an
 
 ## Calls and online meeting bots
 
-With the addition of [Microsoft Graph APIs for calls and online meetings](https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/calls-api-overview), Microsoft Teams apps can now interact with users in rich ways using voice and video. These APIs allow you to add new app features such as interactive voice response (IVR), call control, and access to real-time audio and/or video streams for calls and meetings, including desktop and app sharing.
+With the addition of [Microsoft Graph APIs for calls and online meetings](https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/calls-api-overview.md), Microsoft Teams apps can now interact with users in rich ways using voice and video. These APIs allow you to add new app features such as interactive voice response (IVR), call control, and access to real-time audio and/or video streams for calls and meetings, including desktop and app sharing.
 
 We've added a new section on how to create and develop calls and online meetings bots, starting with the [overview](~/concepts/calls-and-meetings/calls-meetings-bots-overview.md).
 
@@ -45,7 +45,7 @@ When properly sized, your tab configuration page should look similar to this:
 
 ## Adding bots to chats
 
-Chats are conversations between one or more users in Teams. bBots can now be added to chats. In the past they could only be added to channels and personal (bot to user) conversations.
+Chats are conversations between one or more users in Teams. Bots can now be added to chats. In the past they could only be added to channels and personal (bot to user) conversations.
 
 This feature allows you to:
 
