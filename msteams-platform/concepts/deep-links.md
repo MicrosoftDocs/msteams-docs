@@ -4,6 +4,7 @@ description: Describes deep links and how to use them in your apps
 keywords: teams deep link deeplink
 ms.date: 02/19/2019
 ---
+
 # Create deep links to content and features in Microsoft Teams
 
 You can create links to information and features within the Teams client. Examples of where this may be useful:
