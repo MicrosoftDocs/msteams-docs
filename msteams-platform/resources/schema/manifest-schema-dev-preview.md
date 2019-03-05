@@ -335,8 +335,8 @@ Each command item is an object with the following structure:
 |`parameter.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
 |`taskInfo`|Object|||Defines the dialog presented to the user|
 |`taskInfo.title`|String|64 characters||Initial dialog title|
-|`taskInfo.width`|String|16 characters||Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'|
-|`taskInfo.height`|String|16 characters||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'|
+|`taskInfo.width`|String|16 characters||Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'. See [task module sizing](~/concepts/task-modules/task-modules-overview.md#task-module-sizing) for more info.|
+|`taskInfo.height`|String|16 characters||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'. See [task module sizing](~/concepts/task-modules/task-modules-overview.md#task-module-sizing) for more info.|
 |`taskInfo.url`|String|2048 characters||Initial webview URL|
 
 ## permissions
