@@ -2,7 +2,7 @@
 title: Get context for your tab
 description: Describes how to get user context to your tabs
 keywords: teams tabs user context
-ms.date: 08/20/2018
+ms.date: 02/06/2019
 ---
 
 # Get context for your Microsoft Teams tab
@@ -84,7 +84,10 @@ The context variable will look like the following example.
     "userObjectId": "The Azure AD object id of the current user, in the current tenant",
     "tid": "The Azure AD tenant ID of the current user",
     "groupId": "Guid identifying the current O365 Group ID",
-    "isFullScreen": "Indicates whether the tab is in full-screen mode"
+    "theme": "The current UI theme: default, dark, contrast",
+    "isFullScreen": "Indicates whether the tab is in full-screen mode",
+    "userLicenseType": "Indicates the user licence type in the given SKU (for example, student or teacher)",
+    "tenantSKU": "Indicates the SKU category of the tenant (for example, EDU)"
 }
 ```
 
