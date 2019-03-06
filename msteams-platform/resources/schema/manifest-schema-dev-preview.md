@@ -7,8 +7,8 @@ ms.date: 08/07/2018
 # Developer Preview Reference: version 1.3 manifest schema for Microsoft Teams
 
 > [!NOTE]
-> See [Developer Preview](~/resources/dev-preview/developer-preview-intro) for information on the program and how you can join.
-> If you are not using the developer preview you should not be using this version of the manifest. See [Reference: Manifest schema for Microsoft Teams](~/resources/schema/manifest-schema) for the public version of the manifest.
+> See [Developer Preview](~/resources/dev-preview/developer-preview-intro.md) for information on the program and how you can join.
+> If you are not using the developer preview you should not be using this version of the manifest. See [Reference: Manifest schema for Microsoft Teams](~/resources/schema/manifest-schema.md) for the public version of the manifest.
 
 The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json).
 
@@ -17,7 +17,7 @@ The Microsoft Teams manifest describes how the app integrates into the Microsoft
 This is a preview of the 1.3 version of the Teams app manifest. It includes:
 
 * Apps in group chat changes:
-  * A new scope called "groupchat" has been added to the bots and configurable tabs sections of the manifest. For more information on the feature see: [Features in the Public Developer Preview for Microsoft Teams](~/resources/dev-preview/developer-preview-features).
+  * A new scope called "groupchat" has been added to the bots and configurable tabs sections of the manifest. For more information on the feature see: [Features in the Public Developer Preview for Microsoft Teams](~/resources/dev-preview/developer-preview-features.md).
 
 ## Sample full schema
 
@@ -168,7 +168,7 @@ This version string must follow the [semver](http://semver.org/) standard (MAJOR
 
 **Required** &ndash; Microsoft app ID
 
-The unique Microsoft-generated identifier for this app. If you have registered a bot via the Microsoft Bot Framework, or your tab's web app already signs in with Microsoft, you should already have an ID and should enter it here. Otherwise, you should generate a new ID at the Microsoft Application Registration Portal ([My Applications](https://apps.dev.microsoft.com)), enter it here, and then reuse it when you [add a bot](~/concepts/bots/bots-create).
+The unique Microsoft-generated identifier for this app. If you have registered a bot via the Microsoft Bot Framework, or your tab's web app already signs in with Microsoft, you should already have an ID and should enter it here. Otherwise, you should generate a new ID at the Microsoft Application Registration Portal ([My Applications](https://apps.dev.microsoft.com)), enter it here, and then reuse it when you [add a bot](~/concepts/bots/bots-create.md).
 
 ## packageName
 
@@ -218,7 +218,7 @@ Ensure that your description accurately describes your experience and provides i
 
 **Required**
 
-Icons used within the Teams app. The icon files must be included as part of the upload package. See [Icons](~/concepts/apps/apps-package#icons) for more information.
+Icons used within the Teams app. The icon files must be included as part of the upload package. See [Icons](~/concepts/apps/apps-package.md#icons) for more information.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -280,7 +280,7 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 
 ### bots: commandLists
 
-An optional list of commands that your bot can recommend to users. The object is an array (maximum of 2 elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. See [Bot menus](~/concepts/bots/bots-menus) for more information.
+An optional list of commands that your bot can recommend to users. The object is an array (maximum of 2 elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. See [Bot menus](~/concepts/bots/bots-menus.md) for more information.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|

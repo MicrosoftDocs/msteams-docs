@@ -1,262 +1,264 @@
 - name: Overview
-  href: ./overview
+  href: ./overview.md
   universal_ref_toc: /javascript/api/msteams-client-docs-ref-typescript/toc.json
   items:
   - name: Line-of-business apps overview
-    href: ./lob-apps-value-prop
+    href: ./lob-apps-value-prop.md
 - name: What's new
-  href: ./whats-new
+  href: ./whats-new.md
 - name: Get started
-  href: ./get-started/get-started
+  href: ./get-started/get-started.md
   items: 
   - name:  Prepare your Office 365 tenant
-    href: ./get-started/get-started-tenant
+    href: ./get-started/get-started-tenant.md
   - name: Get started with Node.js
-    href: ./get-started/get-started-nodejs-app-studio
+    href: ./get-started/get-started-nodejs-app-studio.md
     items: 
     - name: Publish Node.js to Azure
-      href: ./get-started/get-started-nodejs-in-azure   
+      href: ./get-started/get-started-nodejs-in-azure.md
   - name: Get started with C#/.NET
-    href: ./get-started/get-started-dotnet-app-studio
+    href: ./get-started/get-started-dotnet-app-studio.md
     items: 
     - name: Publish .Net to Azure
-      href: ./get-started/get-started-dotnet-in-azure
+      href: ./get-started/get-started-dotnet-in-azure.md
   - name: Use App Studio for Microsoft Teams
-    href: ./get-started/get-started-app-studio
+    href: ./get-started/get-started-app-studio.md
     items:
     - name: App Studio Controls
-      href: ./get-started/app-studio-component-library
+      href: ./get-started/app-studio-component-library.md
   expanded: true
 - name: Concepts
-  href: ./concepts/concepts-overview
+  href: ./concepts/concepts-overview.md
   items:
   - name: Apps for Teams
-    href: ./concepts/apps/apps-overview
+    href: ./concepts/apps/apps-overview.md
     items:
     - name: Design apps
-      href: ./concepts/apps/apps-design
+      href: ./concepts/apps/apps-design.md
     - name: Create an app package
-      href: ./concepts/apps/apps-package
+      href: ./concepts/apps/apps-package.md
     - name: Upload an app package
-      href: ./concepts/apps/apps-upload
+      href: ./concepts/apps/apps-upload.md
   - name: Tabs
-    href: ./concepts/tabs/tabs-overview
+    href: ./concepts/tabs/tabs-overview.md
     items:
     - name: Static tabs
-      href: ./concepts/tabs/tabs-static
+      href: ./concepts/tabs/tabs-static.md
     - name: Configurable tabs
-      href: ./concepts/tabs/tabs-configurable
+      href: ./concepts/tabs/tabs-configurable.md
       items:
       - name: Configuration pages
-        href: ./concepts/tabs/tabs-configuration
+        href: ./concepts/tabs/tabs-configuration.md
     - name: Content pages
-      href: ./concepts/tabs/tabs-content
+      href: ./concepts/tabs/tabs-content.md
     - name: Requirements for tabs
-      href: ./concepts/tabs/tabs-requirements
+      href: ./concepts/tabs/tabs-requirements.md
     - name: Update or remove tabs
-      href: ./concepts/tabs/tabs-update-remove
+      href: ./concepts/tabs/tabs-update-remove.md
     - name: Context for tabs
-      href: ./concepts/tabs/tabs-context
+      href: ./concepts/tabs/tabs-context.md
     - name: Cross-domain redirects
-      href: ./concepts/tabs/cross-domain
+      href: ./concepts/tabs/cross-domain.md
     - name: Tabs as SharePoint web parts
-      href: ./concepts/tabs/tabs-in-sharepoint
+      href: ./concepts/tabs/tabs-in-sharepoint.md
+    - name: Device permissions
+      href: ./concepts/tabs/tabs-device-permissions.md
   - name: Bots
-    href: ./concepts/bots/bots-overview
+    href: ./concepts/bots/bots-overview.md
     items:
     - name: Create a bot
-      href: ./concepts/bots/bots-create
+      href: ./concepts/bots/bots-create.md
     - name: Conversations
-      href: ./concepts/bots/bot-conversations/bots-conversations
+      href: ./concepts/bots/bot-conversations/bots-conversations.md
       items:
       - name: Personal conversations with bots
-        href: ./concepts/bots/bot-conversations/bots-conv-personal
+        href: ./concepts/bots/bot-conversations/bots-conv-personal.md
       - name: Channel conversations with bots
-        href: ./concepts/bots/bot-conversations/bots-conv-channel
+        href: ./concepts/bots/bot-conversations/bots-conv-channel.md
       - name: Starting a conversation
-        href: ./concepts/bots/bot-conversations/bots-conv-proactive
+        href: ./concepts/bots/bot-conversations/bots-conv-proactive.md
       - name: Message formatting
-        href: ./concepts/bots/bot-conversations/bots-message-format
+        href: ./concepts/bots/bot-conversations/bots-message-format.md
       - name: Cards and card actions
-        href: ./concepts/bots/bot-conversations/bots-cards
+        href: ./concepts/bots/bot-conversations/bots-cards.md
     - name: Bot events
-      href: ./concepts/bots/bots-notifications
+      href: ./concepts/bots/bots-notifications.md
     - name: Context for bots
-      href: ./concepts/bots/bots-context
+      href: ./concepts/bots/bots-context.md
     - name: Sending and receiving files
-      href: ./concepts/bots/bots-files
+      href: ./concepts/bots/bots-files.md
     - name: Notification only bots
-      href: ./concepts/bots/bots-notification-only
+      href: ./concepts/bots/bots-notification-only.md
     - name: Bot menus
-      href: ./concepts/bots/bots-menus
+      href: ./concepts/bots/bots-menus.md
     - name: Bots with tabs
-      href: ./concepts/bots/bots-with-tabs
+      href: ./concepts/bots/bots-with-tabs.md
     - name: Test a bot
-      href: ./concepts/bots/bots-test
+      href: ./concepts/bots/bots-test.md
   - name: Cards
-    href: ./concepts/cards/cards
+    href: ./concepts/cards/cards.md
     items:
     - name: Card reference
-      href: ./concepts/cards/cards-reference
+      href: ./concepts/cards/cards-reference.md
     - name: Card actions
-      href: ./concepts/cards/cards-actions
+      href: ./concepts/cards/cards-actions.md
     - name: Card formatting
-      href: ./concepts/cards/cards-format
+      href: ./concepts/cards/cards-format.md
   - name: Authentication
-    href: ./concepts/authentication/authentication
+    href: ./concepts/authentication/authentication.md
     items:
     - name: Authentication flow for tabs
-      href: ./concepts/authentication/auth-flow-tab
+      href: ./concepts/authentication/auth-flow-tab.md
     - name: Authentication flow for bots
-      href: ./concepts/authentication/auth-flow-bot
+      href: ./concepts/authentication/auth-flow-bot.md
     - name: Azure AD tab authentication
-      href: ./concepts/authentication/auth-tab-AAD
+      href: ./concepts/authentication/auth-tab-AAD.md
     - name: Azure AD bot authentication
-      href: ./concepts/authentication/auth-bot-AAD
+      href: ./concepts/authentication/auth-bot-AAD.md
     - name: Silent authentication and SSO
-      href: ./concepts/authentication/auth-silent-AAD
+      href: ./concepts/authentication/auth-silent-AAD.md
     - name: Configuring identity providers
-      href: ./concepts/authentication/auth-configure
+      href: ./concepts/authentication/auth-configure.md
     - name: Using the Azure Bot Service
-      href: ./concepts/authentication/auth-oauth-card
+      href: ./concepts/authentication/auth-oauth-card.md
   - name: Task Modules
-    href: ./concepts/task-modules/task-modules-overview
+    href: ./concepts/task-modules/task-modules-overview.md
     items:
     - name: Using task modules in tabs
-      href: ./concepts/task-modules/task-modules-tabs
+      href: ./concepts/task-modules/task-modules-tabs.md
     - name: Using task modules in bots
-      href: ./concepts/task-modules/task-modules-bots
+      href: ./concepts/task-modules/task-modules-bots.md
   - name: Connectors
-    href: ./concepts/connectors/connectors
+    href: ./concepts/connectors/connectors.md
     items:
     - name: Creating connectors
-      href: ./concepts/connectors/connectors-creating
+      href: ./concepts/connectors/connectors-creating.md
     - name: Using connectors
-      href: ./concepts/connectors/connectors-using
+      href: ./concepts/connectors/connectors-using.md
   - name: Messaging extensions
-    href: ./concepts/messaging-extensions/messaging-extensions-overview
+    href: ./concepts/messaging-extensions/messaging-extensions-overview.md
     items:
     - name: Search with messaging extensions
-      href: ./concepts/messaging-extensions/search-extensions
+      href: ./concepts/messaging-extensions/search-extensions.md
     - name: Initiate actions with messaging extensions
-      href: ./concepts/messaging-extensions/create-extensions
+      href: ./concepts/messaging-extensions/create-extensions.md
   - name: Calls and online meetings
-    href: ./concepts/calls-and-meetings/calls-meetings-bots-overview
+    href: ./concepts/calls-and-meetings/calls-meetings-bots-overview.md
     items:
     - name: Real-time media concepts
-      href: ./concepts/calls-and-meetings/real-time-media-concepts
+      href: ./concepts/calls-and-meetings/real-time-media-concepts.md
     - name: Registering a calling bot
-      href: ./concepts/calls-and-meetings/registering-calling-bot
+      href: ./concepts/calls-and-meetings/registering-calling-bot.md
     - name: Debugging and local testing
-      href: ./concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots
+      href: ./concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
     - name: Application-hosted media
-      href: ./concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots
+      href: ./concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
   - name: Activity feed
-    href: ./concepts/activity-feed
+    href: ./concepts/activity-feed.md
   - name: Outgoing webhooks
-    href: ./concepts/outgoingwebhook
+    href: ./concepts/outgoingwebhook.md
   - name: Deep links
-    href: ./concepts/deep-links
+    href: ./concepts/deep-links.md
 - name: Publishing
-  href: ./publishing/apps-publish
+  href: ./publishing/apps-publish.md
   items:
   - name: AppSource checklist
-    href: ./publishing/office-store-checklist
+    href: ./publishing/office-store-checklist.md
   - name: AppSource guidance
-    href: ./publishing/office-store-guidance
+    href: ./publishing/office-store-guidance.md
   - name: Localizing your app
-    href: ./publishing/apps-localization
+    href: ./publishing/apps-localization.md
 - name: App scenarios
-  href: ./scenarios/lob-scenarios-landing-page
+  href: ./scenarios/lob-scenarios-landing-page.md
   items:
   - name: Turn conversation into actions
-    href: ./scenarios/lob-faq-scenario
+    href: ./scenarios/lob-faq-scenario.md
   - name: Act on intelligent insights
-    href: ./scenarios/lob-marketing-scenario
+    href: ./scenarios/lob-marketing-scenario.md
   - name: Set up your teams for success
-    href: ./scenarios/lob-pmo-scenario
+    href: ./scenarios/lob-pmo-scenario.md
   - name: Bots for limited tenants
-    href: ./scenarios/limited-tenant
+    href: ./scenarios/limited-tenant.md
 - name: Resources
-  href: ./resources/resource-overview
+  href: ./resources/resource-overview.md
   items:
   - name: General
-    href: ./resources/general/general-overview
+    href: ./resources/general/general-overview.md
     items:
     - name: Supported media formats
-      href: ./resources/general/media-formats
+      href: ./resources/general/media-formats.md
     - name: Debugging
-      href: ./resources/general/debug
+      href: ./resources/general/debug.md
     - name: Rate limiting
-      href: ./resources/general/rate-limit
+      href: ./resources/general/rate-limit.md
   - name: Public Developer Preview
-    href: ./resources/dev-preview/developer-preview-intro
+    href: ./resources/dev-preview/developer-preview-intro.md
     items:
     - name: Public Developer Preview access
-      href: ./resources/dev-preview/developer-preview
+      href: ./resources/dev-preview/developer-preview.md
     - name: Features in Developer Preview
-      href: ./resources/dev-preview/developer-preview-features
+      href: ./resources/dev-preview/developer-preview-features.md
     - name: Using DevTools in the client
-      href: ./resources/dev-preview/developer-preview-tools
+      href: ./resources/dev-preview/developer-preview-tools.md
   - name: Design guidelines
-    href: ./resources/design/overview
+    href: ./resources/design/overview.md
     items:
     - name: Framework
       items:
       - name: The basics
-        href: ./resources/design/framework/basics
+        href: ./resources/design/framework/basics.md
       - name: Apps
-        href: ./resources/design/framework/apps
+        href: ./resources/design/framework/apps.md
       - name: Personal apps
-        href: ./resources/design/framework/personal-apps
+        href: ./resources/design/framework/personal-apps.md
       - name: Activity feed
-        href: ./resources/design/framework/activity-feed
+        href: ./resources/design/framework/activity-feed.md
       - name: Search
-        href: ./resources/design/framework/search
+        href: ./resources/design/framework/search.md
       - name: Tabs
-        href: ./resources/design/framework/tabs
+        href: ./resources/design/framework/tabs.md
       - name: Messaging extensions
-        href: ./resources/design/framework/messaging-extensions
+        href: ./resources/design/framework/messaging-extensions.md
       - name: Bots
-        href: ./resources/design/framework/bots
+        href: ./resources/design/framework/bots.md
       - name: Cards
-        href: ./resources/design/framework/cards
+        href: ./resources/design/framework/cards.md
       - name: Command box
-        href: ./resources/design/framework/command-box
+        href: ./resources/design/framework/command-box.md
     - name: Components
       items:
       - name: Color
-        href: ./resources/design/components/color
+        href: ./resources/design/components/color.md
       - name: Buttons, links, and controls
-        href: ./resources/design/components/buttons
+        href: ./resources/design/components/buttons.md
       - name: Fields and flyouts
-        href: ./resources/design/components/fields
+        href: ./resources/design/components/fields.md
       - name: Dialogs
-        href: ./resources/design/components/dialogs
+        href: ./resources/design/components/dialogs.md
       - name: Typography
-        href: ./resources/design/components/typography
+        href: ./resources/design/components/typography.md
       - name: Themes
-        href: ./resources/design/components/themes
+        href: ./resources/design/components/themes.md
     - name: Resources
-      href: ./resources/design/resources
+      href: ./resources/design/resources.md
   - name: Best practices and tips
-    href: ./resources/best-practices/best-practices
+    href: ./resources/best-practices/best-practices.md
     items:
     - name: Personal conversations with bots
-      href: ./concepts/bots/bot-conversations/bots-conv-personal
+      href: ./concepts/bots/bot-conversations/bots-conv-personal.md
     - name: Channel conversations with bots
-      href: ./concepts/bots/bot-conversations/bots-conv-channel
+      href: ./concepts/bots/bot-conversations/bots-conv-channel.md
   - name: Manifest schema
-    href: ./resources/schema/manifest-schema
+    href: ./resources/schema/manifest-schema.md
   - name: Developer preview manifest schema
-    href: ./resources/schema/manifest-schema-dev-preview
+    href: ./resources/schema/manifest-schema-dev-preview.md
   - name: Microsoft Graph APIs
-    href: ./resources/microsoft-graph
+    href: ./resources/microsoft-graph.md
 - name: Troubleshooting
-  href: ./troubleshoot/troubleshoot
+  href: ./troubleshoot/troubleshoot.md
 - name: FAQ
-  href: ./troubleshoot/faq
+  href: ./troubleshoot/faq.md
 - name: Samples
-  href: ./samples/code-samples
+  href: ./samples/code-samples.md
 - name: Feedback
-  href: ./feedback
+  href: ./feedback.md

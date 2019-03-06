@@ -2,7 +2,7 @@
 title: Get context for your tab
 description: Describes how to get user context to your tabs
 keywords: teams tabs user context
-ms.date: 08/20/2018
+ms.date: 02/06/2019
 ---
 
 # Get context for your Microsoft Teams tab
@@ -18,7 +18,7 @@ Your tab might require contextual information to display relevant content.
 Context about the user, team or company can be especially useful when
 
 * You need to create or associate resources in your app with the specified user or team.
-* You want to initiate an authentication flow against Azure Active Directory or other identity provider, and you don't want to require the user to enter their username again. (For more information on authenticating within your Microsoft Teams tab, see [Authenticate a user in your Microsoft Teams tab](~/concepts/authentication/authentication).)
+* You want to initiate an authentication flow against Azure Active Directory or other identity provider, and you don't want to require the user to enter their username again. (For more information on authenticating within your Microsoft Teams tab, see [Authenticate a user in your Microsoft Teams tab](~/concepts/authentication/authentication.md).)
 
 > [!IMPORTANT]
 > Although this user information can help provide a smooth user experience, you should *not* use it as proof of identity. For example, an attacker could you load your page in a "bad browser" and provide it with any information they want.
@@ -34,8 +34,8 @@ You can access context information in two ways:
 
 Use placeholders in your configuration or content URLs. Microsoft Teams replaces the placeholders with the relevant values when determining the actual configuration or content URL to navigate to. The available placeholders include all fields on the [Context](https://docs.microsoft.com/en-us/javascript/api/@microsoft/teams-js/microsoftteams.context) object. Common placeholders include the following:
 
-* {entityId}: The ID you supplied for the item in this tab when first [configuring the tab](~/concepts/tabs/tabs-configuration).
-* {subEntityId}: The ID you supplied when generating a [deep link](~/concepts/deep-links) for a specific item _within_ this tab. This should be used to restore to a specific state within an entity; for example, scrolling to or activating a specific piece of content.
+* {entityId}: The ID you supplied for the item in this tab when first [configuring the tab](~/concepts/tabs/tabs-configuration.md).
+* {subEntityId}: The ID you supplied when generating a [deep link](~/concepts/deep-links.md) for a specific item _within_ this tab. This should be used to restore to a specific state within an entity; for example, scrolling to or activating a specific piece of content.
 * {loginHint}: A value suitable as a login hint for Azure AD.This is usually the login name of the current user, in their home tenant.
 * {userPrincipalName}: The User Principal Name of the current user, in the current tenant.
 * {userObjectId}: The Azure AD object ID of the current user, in the current tenant.
@@ -84,7 +84,10 @@ The context variable will look like the following example.
     "userObjectId": "The Azure AD object id of the current user, in the current tenant",
     "tid": "The Azure AD tenant ID of the current user",
     "groupId": "Guid identifying the current O365 Group ID",
-    "isFullScreen": "Indicates whether the tab is in full-screen mode"
+    "theme": "The current UI theme: default, dark, contrast",
+    "isFullScreen": "Indicates whether the tab is in full-screen mode",
+    "userLicenseType": "Indicates the user licence type in the given SKU (for example, student or teacher)",
+    "tenantSKU": "Indicates the SKU category of the tenant (for example, EDU)"
 }
 ```
 

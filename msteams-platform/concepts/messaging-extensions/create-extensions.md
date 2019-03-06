@@ -2,7 +2,7 @@
 title: Initiate actions with messaging extensions
 description: Create Action-based messaging extensions to allow users to trigger external services
 keywords: teams messaging extensions messaging extensions search
-ms.date: 02/05/2019
+ms.date: 02/21/2019
 ---
 
 # Initiate actions with messaging extensions
@@ -110,6 +110,105 @@ To initiate actions from a  messaging extension set the `type` parameter to `act
 }
 ```
 
+### Initiate actions from messages
+
+> [!NOTE]
+> Initiating actions from messages is in [developer preview](~/resources/dev-preview/developer-preview-intro.md).
+
+In addition to initiating actions from the compose message area, you can also use your messaging extension to initiate an action from a message. This will allow you to send the contents of the message to your bot for processing, and optionally reply to that message with a response using the method described in [Responding to submit](#responding-to-submit). The response will be inserted as a reply to the message that your users can edit before submitting. Your users can access your messaging extension from the overflow `...` menu and then selecting `Take action` as in the image below.
+
+![Example of initiating an action from a message](~/assets/images/compose-extensions/messageextensions_messageaction.png)
+
+To enable your messaging extension to work from an action you'll need to add the `context` parameter to your messaging extension's `commands` object in your app manifest as in the example below. Valid strings for the `context` array are `"message"`, `"commandBar"`, and `"compose"`. The default value is `["compose", "commandBar"]`.
+
+```json
+"composeExtensions": [
+  {
+    "botId": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
+    "canUpdateConfiguration": true,
+    "commands": [
+      {
+        "id": "reassignTodo",
+        "description": "Reassign a todo item",
+        "title": "Create To Do",
+        "type": "Action",
+        "context": ["message"],
+        "fetchTask": true
+    }]
+    ...
+
+```
+
+Below is an example of the `value` object containing the message details that will be sent as part of the `composeExtension` request be sent to your bot.
+
+```json
+{
+  "name": "composeExtension/submitAction",
+  "type": "invoke",
+...
+  "value": {
+    "commandId": "setReminder",
+    "commandContext": "message",
+    "messagePayload": {
+      "id": "1111111111",
+      "replyToId": null,
+      "createdDateTime": "2019-02-25T21:29:36.065Z",
+      "lastModifiedDateTime": null,
+      "deleted": false,
+      "subject": "Message subject",
+      "summary": null,
+      "importance": "normal",
+      "locale": "en-us",
+      "body": {
+        "contentType": "html",
+        "content": "this is the message"
+		},
+      "from": {
+        "device": null,
+        "conversation": null,
+        "user": {
+          "userIdentityType": "aadUser",
+          "id": "wxyz12ab8-ab12-cd34-ef56-098abc123876",
+          "displayName": "Jamie Smythe"
+        },
+        "application": null
+      },
+      "reactions": [
+        {
+          "reactionType": "like",
+          "createdDateTime": "2019-02-25T22:40:40.806Z",
+          "user": {
+            "device": null,
+            "conversation": null,
+            "user": {
+              "userIdentityType": "aadUser",
+              "id": "qrst12346-ab12-cd34-ef56-098abc123876",
+              "displayName": "Jim Brown"
+            },
+            "application": null
+          }
+        }
+      ],
+      "mentions": [
+        {
+          "id": 0,
+          "mentionText": "Sarah",
+          "mentioned": {
+            "device": null,
+            "conversation": null,
+            "user": {
+              "userIdentityType": "aadUser",
+              "id": "ab12345678-ab12-cd34-ef56-098abc123876",
+              "displayName": "Sarah"
+            },
+            "application": null
+          }
+        }
+      ]
+    }
+  ...
+```
+
 ### Test via uploading
 
 You can test your messaging extension by uploading your app. See [Uploading your app in a team](~/concepts/apps/apps-upload.md) for details.
@@ -124,7 +223,7 @@ There are three ways to collect information from an end user in Teams.
 
 In this method, all you need to do is define a static list of parameters in the manifest as shown above in the "Create To Do" command. To use this method ensure `fetchTask` is set to `false` and that you define your parameters in the manifest.
 
-When a user chooses a command with static parameters, Teams will generate a form in a Task Module with the parameters defined in the manifest. On hitting Submit a `composeExtension/submitAction` is sent to the bot. See the topic `Responding to submit` for more information on the expected set of responses.
+When a user chooses a command with static parameters, Teams will generate a form in a Task Module with the parameters defined in the manifest. On hitting Submit a `composeExtension/submitAction` is sent to the bot. See the topic [Responding to submit](#responding-to-submit) for more information on the expected set of responses.
 
 ### Dynamic input using an adaptive card
 
