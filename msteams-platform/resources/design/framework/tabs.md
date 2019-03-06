@@ -2,7 +2,7 @@
 title: Design guidelines for tabs
 description: Describes the guidelines for creating tabs for content and collaboration
 keywords: teams design guidelines reference framework tabs configuration
-ms.date: 09/11/2018
+ms.date: 03/06/2018
 ---
 # Content and conversations, all at once using tabs
 
@@ -63,6 +63,29 @@ Your logo is an important part of your identity and a connection with your users
 
 ---
 
+## Configuration page height
+
+>[!NOTE]
+>In September 2018, the height for the tab [configuration page](~/concepts/tabs/tabs-configuration.md) was increased while the width remained unchanged. If your app is designed for the older size your tab configuration page will have a great deal of vertical whitespace. Legacy store apps exempted from this change will need to contact Microsoft after updating to accommodate the new dimensions.
+
+The dimensions of the tab configuration page:
+
+<img width="450px" title="Sizes for configuration tabs" src="~/assets/images/tabs/config-dialog-Contoso2.png" />
+
+### Guidelines for tab configuration page format
+
+* Base the minimum height of your content area of your tab configuration page on fixed-height graphic elements.
+* Calculate available vertical space (the height of the content area in the configuration page) using `window.innerHeight`. This returns the size of the `<iframe>` in which your configuration page resides, which may change in future releases. By using this value your content will adjust automatically to future changes.
+* Allocate vertical space to the variable-height elements minus what's needed for the fixed-height elements.
+* For the *login* state, vertically and horizontally center the content.
+* If you want a background image, you need either a new image, sized to fit the area (preferred), or you can keep the same image and choose between:
+  * aligning to the upper left hand corner.
+  * scaling the image to fit.
+
+When properly sized, your tab configuration page should look similar to this:
+
+<img width="450px" title="New configuration tab" src="~/assets/images/tabs/config-dialog-Contoso.png" />
+
 ## Best practices
 
 ### Always include a default state
@@ -76,23 +99,3 @@ Whenever possible, cards and bots should deep link to richer data in a hosted ta
 ### Naming
 
 In many cases, the name of your app may make a great tab name. But consider naming your tabs according to the functionality they provide.
-
-### Configuration page height
-
-In September 2018, the height of the content area for the tab [Configuration page](~/concepts/tabs/tabs-configuration) was increased significantly; the width remained unchanged. If you have a tab configuration page designed for the older, smaller size, your tab configuration page will have a great deal of vertical whitespace. Here are the new dimensions:
-
-<img width="450px" title="New sizes for configuration tabs" src="~/assets/images/tabs/config-dialog-Contoso2.png" />
-
-Follow these guidelines to correctly format content in your tab configuration pages:
-
-* Base the minimum height of your content area of your tab configuration page on fixed-height graphic elements.
-* Calculate available vertical space (the height of the content area in the configuration page) using `window.innerHeight`. This returns the size of the `<iframe>` in which your configuration page resides, which may change in future releases. By using this value, your content will adjust automatically to future changes.
-* Allocate vertical space to the variable-height elements minus what's needed for the fixed-height elements.
-* For the *login* state, vertically and horizontally center the content.
-* If you want a background image, you need either a new image, sized to fit the new area (preferred), or you can keep the same image and choose between:
-  * aligning to the upper left hand corner.
-  * scaling the image to fit.
-
-When properly sized, your tab configuration page should look similar to this:
-
-<img width="450px" title="New configuration tab" src="~/assets/images/tabs/config-dialog-Contoso.png" />

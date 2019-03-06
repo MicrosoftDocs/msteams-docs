@@ -27,28 +27,6 @@ With the addition of [Microsoft Graph APIs for calls and online meetings](https:
 
 We've added a new section on how to create and develop calls and online meetings bots, starting with the [overview](~/concepts/calls-and-meetings/calls-meetings-bots-overview.md).
 
-## The tab configuration page is significantly taller
-
-The height of the content area for the tab [Configuration page](~/concepts/tabs/tabs-configuration.md) has been increased significantly; the width remains unchanged. This is now the default for all new Teams applications, but there are a few older applications which haven't been updated and have been exempted from this change, so this information is still relevant to them. Owners of these applications will need to contact Microsoft to benefit from the taller size. 
-
-<img width="450px" title="New sizes for configuration tabs" src="~/assets/images/tabs/config-dialog-Contoso2.png" />
-
-Follow these guidelines to correctly format content in your tab configuration pages:
-
-* Base the height of the content area in the tab on fixed-height graphic elements.
-* Calculate available vertical space (the height of the content area in the configuration tab) using `window.innerHeight`. This returns the size of the `<iframe>` in which your configuration page resides, which may change in future releases. By using this value, your content will adjust automatically to future changes.
-* Allocate vertical space to the variable-height elements minus what's needed for the fixed-height elements.
-* For the *login* state, vertically and horizontally center the content.
-* If you want a background image, you need either a new image, sized to fit the new area (preferred), or can keep the same image and choose between:
-  * aligning to the upper left hand corner.
-  * scaling the image to fit.
-
-When properly sized, your tab configuration page should look similar to this:
-
-<img width="450px" title="New configuration tab" src="~/assets/images/tabs/config-dialog-Contoso.png" />
-
-While we don't have any immediate plans to change the size of the configuration page, the advice above should also ensure your configuration experience looks good when the size changes in the future. 
-
 ## Adding bots to chats
 
 Chats are conversations between one or more users in Teams. Bots can now be added to chats. In the past they could only be added to channels and personal (bot to user) conversations.
