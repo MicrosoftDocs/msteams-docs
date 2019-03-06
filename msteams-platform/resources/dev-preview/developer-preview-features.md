@@ -2,7 +2,7 @@
 title: Features in the Public Developer Preview
 description: Describes the features in the Public Developer Preview of Microsoft Teams
 keywords: teams preview developer features
-ms.date: 03/05/2019
+ms.date: 03/06/2019
 ---
 # Features in the Public Developer Preview for Microsoft Teams
 
@@ -29,7 +29,7 @@ We've added a new section on how to create and develop calls and online meetings
 
 ## The tab configuration page is significantly taller
 
-The height of the content area for the tab [Configuration page](~/concepts/tabs/tabs-configuration.md) will shortly be increased significantly; the width remains unchanged. It is important for you to update the tab configuration pages in your apps before this happens, otherwise your users will see your tab configuration page with a great deal of whitespace. (We have not finalized the date for this change as we cannot be sure how long it will take for most developers to update their apps, but it will likely be before the end of August, 2018.) 
+The height of the content area for the tab [Configuration page](~/concepts/tabs/tabs-configuration.md) has been increased significantly; the width remains unchanged. This is now the default for all new Teams applications, but there are a few older applications which haven't been updated and have been exempted from this change, so this information is still relevant to them. Owners of these applications will need to contact Microsoft to benefit from the taller size. 
 
 <img width="450px" title="New sizes for configuration tabs" src="~/assets/images/tabs/config-dialog-Contoso2.png" />
 
@@ -46,6 +46,8 @@ Follow these guidelines to correctly format content in your tab configuration pa
 When properly sized, your tab configuration page should look similar to this:
 
 <img width="450px" title="New configuration tab" src="~/assets/images/tabs/config-dialog-Contoso.png" />
+
+While we don't have any immediate plans to change the size of the configuration page, the advice above should also ensure your configuration experience looks good when the size changes in the future. 
 
 ## Adding bots to chats
 
