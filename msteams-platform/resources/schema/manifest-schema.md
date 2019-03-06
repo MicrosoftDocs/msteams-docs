@@ -6,7 +6,7 @@ ms.date: 11/29/2018
 ---
 # Reference: Manifest schema for Microsoft Teams
 
-The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json). Versions 1.0, 1.1 and 1.2 are also supported (using "v1.0", "1.1", and "v1.2" in the URL).
+The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json). Versions 1.0, 1.1 and 1.2 are also supported (using "v1.0", "v1.1", and "v1.2" in the URL).
 
 The following schema sample shows all extensibility options.
 
@@ -167,7 +167,7 @@ The version of the specific app. If you update something in your manifest, the v
 
 If the app requested permissions change, users will be prompted to upgrade and re-consent to the app. 
 
-This version string must follow the [semver](http://semver.org/) standard (MAJOR.MINOR.PATH).
+This version string must follow the [semver](http://semver.org/) standard (MAJOR.MINOR.PATCH).
 
 ## id
 

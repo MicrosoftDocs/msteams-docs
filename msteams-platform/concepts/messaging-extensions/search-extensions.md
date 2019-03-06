@@ -2,7 +2,7 @@
 title: Search with messaging extensions
 description: Describes how to develop search based messaging extensions
 keywords: teams messaging extensions messaging extensions search
-ms.date: 11/07/18
+ms.date: 03/05/2019
 ---
 
 # Search with messaging extensions
@@ -78,7 +78,7 @@ For search based messaging extension set the `type` parameter to `query`. Below 
 
 ### Test via uploading
 
-You can test your messaging extension by uploading your app. See [Uploading your app in a team](~/concepts/apps/apps-upload) for details.
+You can test your messaging extension by uploading your app. See [Uploading your app in a team](~/concepts/apps/apps-upload.md) for details.
 
 To open your messaging extension, navigate to any of your chats or channels. Choose the **More options** (**&#8943;**) button in the compose box, and choose your messaging extension.
 
@@ -121,7 +121,7 @@ In addition to the standard bot activity properties, the payload contains the fo
 |Property name|Purpose|
 |---|---|
 |`type`| Type of request; must be `invoke`. |
-|`name`| Type of command that is issued to your service. Currently the following types are supported: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` |
+|`name`| Type of command that is issued to your service. Currently the following types are supported: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>**Developer Preview** `composeExtension/queryLink` |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
 |`from.aadObjectId`| Azure Active Directory object id of the user that sent the request. |
@@ -139,7 +139,7 @@ The request parameters itself are found in the value object, which includes the 
 | `queryOptions` | Pagination parameters: <br>`skip`: skip count for this query <br>`count`: number of elements to return |
 
 > [!NOTE]
-> You should authenticate any request to your service. See [Receiving messages](~/concepts/bots/bot-conversations/bots-conversations#receiving-messages) for more detailed documentation on receiving messages from the Bot Framework.
+> You should authenticate any request to your service. See [Receiving messages](~/concepts/bots/bot-conversations/bots-conversations.md#receiving-messages) for more detailed documentation on receiving messages from the Bot Framework.
 
 #### Request example
 
@@ -189,6 +189,49 @@ The request parameters itself are found in the value object, which includes the 
 }
 ```
 
+### Receive requests from links inserted into the compose message box
+
+> [!NOTE]
+> Receiving requests from links inserted into the compose message box is in [developer preview](~/resources/dev-preview/developer-preview-intro.md).
+
+As an alternative (or in addition) to searching your external service, you can use a URL inserted into the compose message box to query your service and return a card. In the screenshot below a user has pasted in a URL for a work item in Azure DevOps which the messaging extension has resolved into a card.
+
+![Example of link unfurling](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
+
+To enable your messaging extension to interact with links this way you'll first need to add the `messageHandlers` array to your app manifest as in the example below:
+
+```json
+"composeExtensions": [
+  {
+    "botId": "abc123456-ab12-ab12-ab12-abcdef123456",
+    "messageHandlers": [
+      {
+        "type": "link",
+        "value": {
+          "domains": [
+            "*.trackeddomain.com"
+          ]
+        }
+      }
+    ]
+  }
+]
+```
+
+Once you've added the domain to listen on to the app manifest, you'll need to change your bot code to [respond](#respond-to-user-requests) to the below invoke request.
+
+```json
+{
+  "type": "invoke",
+  "name": "composeExtension/queryLink",
+  "value": {
+    "url": "https://theurlsubmittedbyyouruser.trackeddomain.com/id/1234"
+  }
+}
+```
+
+If your app returns multiple items only the first will be used.
+
 ### Respond to user requests
 
 When the user performs a query, Microsoft Teams issues a synchronous HTTP request to your service. At that point, your code has 5 seconds to provide an HTTP response to the request. During this time, your service can perform additional lookup, or any other business logic needed to serve the request.
@@ -208,16 +251,16 @@ Your service should respond with the results matching the user query. The respon
 
 We support the following attachment types:
 
-* [Thumbnail card](~/concepts/cards/cards-reference#thumbnail-card)
-* [Hero card](~/concepts/cards/cards-reference#hero-card)
-* [Office 365 Connector card](~/concepts/cards/cards-reference#office-365-connector-card)
-* [Adaptive card](~/concepts/cards/cards-reference#adaptive-card)
+* [Thumbnail card](~/concepts/cards/cards-reference.md#thumbnail-card)
+* [Hero card](~/concepts/cards/cards-reference.md#hero-card)
+* [Office 365 Connector card](~/concepts/cards/cards-reference.md#office-365-connector-card)
+* [Adaptive card](~/concepts/cards/cards-reference.md#adaptive-card)
 
-See [Cards](~/concepts/cards/cards) for an overview.
+See [Cards](~/concepts/cards/cards.md) for an overview.
 
-To learn how to use the thumbnail and hero card types, see [Add cards and card actions](~/concepts/cards-actions).
+To learn how to use the thumbnail and hero card types, see [Add cards and card actions](~/concepts/cards-actions.md).
 
- For additional documentation regarding the Office 365 Connector card, see [Using Office 365 Connector cards](~/concepts/connectors/connectors#using-office-365-connector-cards-in-microsoft-teams).
+For additional documentation regarding the Office 365 Connector card, see [Using Office 365 Connector cards](~/concepts/cards/cards-reference.md#office-365-connector-card).
 
 The result list is displayed in the Microsoft Teams UI with a preview of each item. The preview is generated in one of two ways:
 
@@ -366,7 +409,7 @@ If you set `initialRun` to `true` in the manifest, Microsoft Teams issues a "def
 
 The default query has the same structure as any regular user query, except with a parameter `initialRun` whose string value is `true`.
 
-#### Request example
+#### Request example for a default query
 
 ```json
 {
@@ -422,7 +465,7 @@ Your service should verify that the authentication code received in step 6 match
 
 To prompt an unauthenticated user to sign in, respond with a suggested action of type `openUrl` that includes the authentication URL.
 
-#### Response example
+#### Response example for a sign-in action
 
 ```json
 {
@@ -442,7 +485,7 @@ To prompt an unauthenticated user to sign in, respond with a suggested action of
 ```
 
 > [!NOTE]
-> For the sign-in experience to be hosted in a Teams pop-up, the domain portion of the URL must be in your app’s list of valid domains. (See [validDomains](~/resources/schema/manifest-schema#validdomains) in the manifest schema.)
+> For the sign-in experience to be hosted in a Teams pop-up, the domain portion of the URL must be in your app’s list of valid domains. (See [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the manifest schema.)
 
 ### Start the sign-in flow
 
@@ -507,13 +550,14 @@ At this point, the window closes and control is passed to the Teams client. The 
     "source": "msteams"
 }
 ```
+
 ## SDK support
 
 ### .NET
 
 To receive and handle queries with the Bot Builder SDK for .NET, you can check for the `invoke` action type on the incoming activity and then use the helper method in the NuGet package [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) to determine whether it’s a messaging extension activity.
 
-#### Example code
+#### Example code in .NET
 
 ```csharp
 public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
@@ -559,7 +603,7 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 
 The [Teams extensions](https://www.npmjs.com/package/botbuilder-teams) for the Bot Builder SDK for Node.js provide helper objects and methods to simplify receiving, processing, and responding to messaging extension requests.
 
-#### Example code
+#### Example code in Node.js
 
 ```javascript
 require('dotenv').config();
