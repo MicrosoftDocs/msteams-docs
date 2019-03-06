@@ -13,7 +13,6 @@ The change log lists changes to the Microsoft Teams platform and this document s
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
 | 02/18/2018 | Creating [deep links](~/concepts/deep-links.md#deep-linking-to-a-chat) to private chat is out of developer preview and available |
-| 01/28/2018 | Device permissions lets a tab ask for consent to use the user's camera or microphone, get their location, send notifications, open external links or use midi instruments | [Request permissions for your Microsoft Teams tab](~/concepts/tabs/tabs-device-permissions.md) |
 | 01/23/2019 | Surfacing SKU and licenceType information in the tab context | [Tab Context](~/concepts/tabs/tabs-context.md) |
 | 12/07/2018 | Action-based command support for messaging extensions | [Messaging Extensions](~/concepts/compose-extensions.md) |
 | 12/03/2018 | A new topic has been added discussing how to limit bot availability to specific single tenants.| [Bots for limited tenants](~/scenarios/limited-tenant.md) |

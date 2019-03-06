@@ -8,6 +8,9 @@ ms.date: 01/28/2019
 
 # Request permissions for your Microsoft Teams tab
 
+> [!NOTE]
+> Device permissions is in [developer preview](~/resources/dev-preview/developer-preview-intro.md).
+
 You might want to enrich your tab with features that require access native device functionality like:
 
 * Camera

@@ -9,6 +9,10 @@ ms.date: 03/05/2019
 When these features are out of developer preview this content will be merged into the live doc set.
 The developer preview includes the following new features:
 
+## Request device permissions in tabs
+
+You can request access to native device permissions like a camera, microphone, device location, and notifications. See [Request permissions for your Microsoft Teams tab](~/concepts/tabs/tabs-device-permissions.md)
+
 ## Trigger messaging extension from links inserted into the compose message box
 
 You can now configure your messaging extension to respond to a URL inserted into the compose message box similarly to a user using your messaging extension for search. This allows you to automatically resolve the URL into a card. See [Receive requests from links inserted into the compose message box](~/concepts/messaging-extensions/search-extensions.md#receive-requests-from-links-inserted-into-the-compose-message-box) for more information.
