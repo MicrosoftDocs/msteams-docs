@@ -2,7 +2,7 @@
 title: Send and receive messages with a bot
 description: Describes how to send and receive messages with bots in Microsoft Teams
 keywords: teams bots messages
-ms.date: 08/15/2018
+ms.date: 02/27/2019
 ---
 # Have a conversation with a Microsoft Teams bot
 
@@ -106,13 +106,15 @@ When interacting in a channel, your bot should be smart about taking certain con
     "id": "1485983408511",
     "timestamp": "2017-02-01T21:10:07.437Z",
     "localTimestamp": "2017-02-01T14:10:07.437-07:00",
-    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+    "serviceUrl": "https://smba.trafficmanager.net/amer/",
     "channelId": "msteams",
     "from": {
         "id": "29:1XJKJMvc5GBtc2JwZq0oj8tHZmzrQgFmB39ATiQWA85gQtHieVkKilBZ9XHoq9j7Zaqt7CZ-NJWi7me2kHTL3Bw",
-        "name": "Richard Moe"
+        "name": "Megan Bowen",
+        "aadObjectId": "7faf8ab2-3d56-4244-b585-20c8a42ed2b8"
     },
     "conversation": {
+        "conversationType": "personal",
         "id": "a:17I0kl9EkpE1O9PH5TWrzrLNwnWWcfrU7QZjKR0WSfOpzbfcAg2IaydGElSo10tVr4C7Fc6GtieTJX663WuJCc1uA83n4CSrHSgGBj5XNYLcVlJAs2ZX8DbYBPck201w-"
     },
     "recipient": {
@@ -134,7 +136,8 @@ When interacting in a channel, your bot should be smart about taking certain con
         "tenant": {
             "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
         }
-    }
+    },
+    "locale": "en-US"
 }
 ```
 

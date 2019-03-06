@@ -2,22 +2,24 @@
 title: Create deep links
 description: Describes deep links and how to use them in your apps
 keywords: teams deep link deeplink
-ms.date: 10/09/2018
+ms.date: 02/19/2019
 ---
-# Create deep links to entities in Microsoft Teams
+
+# Create deep links to content and features in Microsoft Teams
+
+You can create links to information and features within the Teams client. Examples of where this may be useful:
+
+* Navigating the user to content within one of your app's tabs. For instance, your app may have a bot that sends messages notifying the user of an important activity. When the user taps on the notification, the deep link navigates to the tab so the user can view more details about the activity.
+* Your app automates or simplifies certain user tasks, such as creating a chat or scheduling a meeting, by pre-populating the deep links with required parameters. This avoids the need for users to manually enter information.
 
 ## Deep linking to your tab
 
-This topic describes how to create deep links to entities in Teams. This is different from the links provided by the **Copy link to tab** menu item, which just generates a deep link that points to this tab.
+You can create deep links to entities in Teams. Typically, this is used to create links that navigate to content and information within your tab. For example, if your tab contains a task list team members may create and share links to individual tasks. When clicked, the link navigates to your tab which focuses on the specific item. To implement this, you add a "copy link" action to each item, in whatever way best suits your UI. When the user takes this action, you call `shareDeepLink()` to display a dialog box containing a link that the user can copy to the clipboard. When you make this call, you also pass an ID for your item, which you get back in the [context](~/concepts/tabs/tabs-context.md) when the link is followed and your tab is reloaded.
 
-You can allow team members to create and share links to items _within_ your tab, such as an individual task within a tab that contains a task list. When clicked, the link navigates to your tab, which focuses on the specific item. To implement this, you add a "copy link" action to each item, in whatever way best suits your UI. When the user takes this action, you call `shareDeepLink()` to display a dialog box containing a link that the user can copy to the clipboard. When you make this call, you also pass an ID for your item, which you get back in the [context](~/concepts/tabs/tabs-context) when the link is followed and your tab is reloaded.
-
-You can also generate deep links programmatically, using the format specified later in this topic. You might want to use these in [bot](~/concepts/bots/bots-overview) and [Connector](~/concepts/connectors/connectors) messages that inform users about changes to your tab, or to items within it.
+Alternatively, you can also generate deep links programmatically, using the format specified later in this topic. You might want to use these in [bot](~/concepts/bots/bots-overview.md) and [Connector](~/concepts/connectors/connectors.md) messages that inform users about changes to your tab, or to items within it.
 
 > [!NOTE]
-> Static tabs have a scope of "personal" and configurable tabs have a scope of "team". The two tab types have a slightly different syntax since only the configurable tab has a `channel` property associated with its context object. See the [Manifest](~/resources/schema/manifest-schema) reference for more information on personal and team scopes.
-> [!NOTE]
-> Deep links work properly only if the tab was configured using the v0.4 or later library and because of that has an entity ID. Deep links to tabs without entity IDs still navigate to the tab but can't provide the sub-entity ID to the tab.
+> This is different from the links provided by the **Copy link to tab** menu item, which just generates a deep link that points to this tab.
 
 ### Showing a deep link to an item within your tab
 
@@ -31,6 +33,11 @@ Provide these fields:
 
 ### Generating a deep link to your tab
 
+> [!NOTE]
+> Static tabs have a scope of "personal" and configurable tabs have a scope of "team". The two tab types have a slightly different syntax since only the configurable tab has a `channel` property associated with its context object. See the [Manifest](~/resources/schema/manifest-schema.md) reference for more information on personal and team scopes.
+> [!NOTE]
+> Deep links work properly only if the tab was configured using the v0.4 or later library and because of that has an entity ID. Deep links to tabs without entity IDs still navigate to the tab but can't provide the sub-entity ID to the tab.
+
 Use this format for a deep link that you can use in a bot, Connector, or messaging extension card:
 
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
@@ -38,13 +45,13 @@ Use this format for a deep link that you can use in a bot, Connector, or messagi
 The query parameters are:
 
 * `appId`&emsp;The ID from your manifest; for example, "fe4a8eba-2a31-4737-8e33-e5fae6fee194"
-* `entityId`&emsp;The ID for the item in the tab, which you provided when [configuring the tab](~/concepts/tabs/tabs-configuration); for example, "tasklist123"
-* `entityWebUrl` or `subEntityWebUrl`&emsp;An optional field with a fallback URL to use if the client does not support rendering the tab; for example, "https://tasklist.example.com/123" or "https//tasklist.example.com/list123/task456"
+* `entityId`&emsp;The ID for the item in the tab, which you provided when [configuring the tab](~/concepts/tabs/tabs-configuration.md); for example, "tasklist123"
+* `entityWebUrl` or `subEntityWebUrl`&emsp;An optional field with a fallback URL to use if the client does not support rendering the tab; for example, "https://tasklist.example.com/123" or "https://tasklist.example.com/list123/task456"
 * `entityLabel` or `subEntityLabel`&emsp;A label for the item in your tab, to use when displaying the deep link; for example, "Task List 123" or "Task 456"
 * `context`&emsp;A JSON object containing the following fields:
-    * `subEntityId`&emsp;An ID for the item _within_ the tab; for example, "task456"
-    * `canvasUrl`&emsp;The URL to load in the tab (same as the `contentUrl` you provided when [configuring the tab](~/concepts/tabs/tabs-configuration)); for example, "https://tab.tasklist.example.com/123"
-    * `channelId`&emsp;The Microsoft Teams channel ID (available from the tab [context](~/concepts/tabs/tabs-context)); for example, "19:cbe3683f25094106b826c9cada3afbe0@thread.skype". This property is only available in configurable tabs with a scope of "team". It is not available in static tabs, which have a scope of "personal".
+  * `subEntityId`&emsp;An ID for the item _within_ the tab; for example, "task456"
+  * `canvasUrl`&emsp;The URL to load in the tab (same as the `contentUrl` you provided when [configuring the tab](~/concepts/tabs/tabs-configuration.md)); for example, "https://tab.tasklist.example.com/123"
+  * `channelId`&emsp;The Microsoft Teams channel ID (available from the tab [context](~/concepts/tabs/tabs-context.md)); for example, "19:cbe3683f25094106b826c9cada3afbe0@thread.skype". This property is only available in configurable tabs with a scope of "team". It is not available in static tabs, which have a scope of "personal".
 
 > [!NOTE]
 > `canvasUrl` is required but isn't currently used; it is reserved for future use.
@@ -71,10 +78,8 @@ When navigating to a deep link, Microsoft Teams simply navigates to the tab and 
 The [`microsoftTeams.getContext`](/javascript/api/msteams-client/microsoftteams.global) call returns a context that includes the `subEntityId` field if the tab was navigated to via a deep link.
 
 ## Deep linking to a chat
-> [!NOTE]
-> This functionality is currently available in Developer Preview
 
-You can now create deep links to private chats between users by specifying the set of participants. If a chat doesn't exist with the specified participants, the link will navigate the user to an empty new chat. New chats will be created in draft state until the user sends the first message. Optionally, you can specify the name of the chat (if it doesn't already exist), along with text that should be inserted into the user's compose box. You can think of this feature as a shortcut for the user taking the manual action of navigating to or creating the chat, and then typing out the message.
+You can create deep links to private chats between users by specifying the set of participants. If a chat doesn't exist with the specified participants, the link will navigate the user to an empty new chat. New chats will be created in draft state until the user sends the first message. Optionally, you can specify the name of the chat (if it doesn't already exist), along with text that should be inserted into the user's compose box. You can think of this feature as a shortcut for the user taking the manual action of navigating to or creating the chat, and then typing out the message.
 
 As an example use case, if you are returning an Office 365 user profile from your bot as a card, this deep link can allow the user to easily chat with that person.
 
@@ -91,5 +96,31 @@ The query parameters are:
 * `users`&emsp;The comma-separated list of user IDs representing the participants of the chat. The user performing the action is always included as a participant. The User ID field currently only supports the Azure AD UserPrincipalName (typically an email address).
 * `topicName`&emsp;An optional field for chat's display name, in the case of a chat with 3 or more users. If this field is not specified, the chat's display name will be based on the names of the participants.
 * `message`&emsp;An optional field for the message text that you want to insert into the current user's compose box while the chat is in a draft state.
+
+To use this deep link with your bot, you can specify this as the URL target in your card's button or tap action through the `openUrl` action type.
+
+## Linking to the scheduling dialog
+
+> [!Note]
+> This feature is currently in developer preview.
+
+You can create deep links to the Teams client's built-in scheduling dialog. This is especially useful if your app helps the user complete calendar or scheduling-related tasks.
+
+### Generating a deep link to the scheduling dialog
+
+Use this format for a deep link that you can use in a bot, Connector, or messaging extension card:
+`https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
+
+Example: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=​​​​​​​test%3Acontent​​​​​​​​​​​​​​`
+
+The query parameters are:
+
+* `attendees`&emsp;The optional comma-separated list of user IDs representing the attendees of the meeting. The user performing the action is the meeting organizer. The User ID field currently only supports the Azure AD UserPrincipalName (typically an email address).
+* `startTime`&emsp;The optional start time of the event. This should be in [long ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601), for example “2018-03-12T23:55:25+02:00”.
+* `endTime`&emsp;The optional end time of the event, also in ISO 8601 format.
+* `subject`&emsp;An optional field for the meeting subject.
+* `content`&emsp;An optional field for the meeting details field.
+
+Currently, specifying the location is not supported. When generating your start and end times be sure to specify the UTC offeset (time zones).
 
 To use this deep link with your bot, you can specify this as the URL target in your card's button or tap action through the `openUrl` action type.
