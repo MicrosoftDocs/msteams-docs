@@ -8,7 +8,7 @@ ms.date: 01/28/2019
 
 # Request permissions for your Microsoft Teams tab
 
-You might want to enrich your tab with features that require access native device functionality like: 
+You might want to enrich your tab with features that require access native device functionality like:
 
 * Camera
 * Microphone
