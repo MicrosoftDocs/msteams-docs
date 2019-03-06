@@ -34,8 +34,8 @@ The following schema sample shows all extensibility options.
     "full": "Full description of your app"
   },
   "icons": {
-    "outline": "%FILENAME-32x32px%", 
-    "color": "%FILENAME-192x192px" 
+    "outline": "%FILENAME-32x32px%",
+    "color": "%FILENAME-192x192px"
   },
   "accentColor": "%HEX-COLOR%",
   "configurableTabs": [
@@ -165,7 +165,7 @@ The version of the manifest schema this manifest is using. It should be "1.3".
 
 The version of the specific app. If you update something in your manifest, the version must be incremented as well. This way, when the new manifest is installed, it will overwrite the existing one and the user will get the new functionality. If this app was submitted to the store, the new manifest will have to be re-submitted and re-validated. Then, users of this app will get the new updated manifest automatically in a few hours, after it is approved.
 
-If the app requested permissions change, users will be prompted to upgrade and re-consent to the app. 
+If the app requested permissions change, users will be prompted to upgrade and re-consent to the app.
 
 This version string must follow the [semver](http://semver.org/) standard (MAJOR.MINOR.PATCH).
 
@@ -173,7 +173,7 @@ This version string must follow the [semver](http://semver.org/) standard (MAJOR
 
 **Required** &ndash; Microsoft app ID
 
-The unique Microsoft-generated identifier for this app. If you have registered a bot via the Microsoft Bot Framework, or your tab's web app already signs in with Microsoft, you should already have an ID and should enter it here. Otherwise, you should generate a new ID at the Microsoft Application Registration Portal ([My Applications](https://apps.dev.microsoft.com)), enter it here, and then reuse it when you [add a bot](~/concepts/bots/bots-create).
+The unique Microsoft-generated identifier for this app. If you have registered a bot via the Microsoft Bot Framework, or your tab's web app already signs in with Microsoft, you should already have an ID and should enter it here. Otherwise, you should generate a new ID at the Microsoft Application Registration Portal ([My Applications](https://apps.dev.microsoft.com)), enter it here, and then reuse it when you [add a bot](~/concepts/bots/bots-create.md).
 
 ## packageName
 
@@ -222,7 +222,7 @@ Ensure that your description accurately describes your experience and provides i
 
 **Required**
 
-Icons used within the Teams app. The icon files must be included as part of the upload package. See [Icons](~/concepts/apps/apps-package#icons) for more information.
+Icons used within the Teams app. The icon files must be included as part of the upload package. See [Icons](~/concepts/apps/apps-package.md#icons) for more information.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -255,7 +255,7 @@ The object is an array with all elements of the type `object`. This block is req
 
 **Optional**
 
-Defines a set of tabs that can be "pinned" by default, without the user adding them manually. Static tabs declared in `personal` scope are always pinned to the app's personal experience. Static tabs declared in the `team` scope are currently not supported. 
+Defines a set of tabs that can be "pinned" by default, without the user adding them manually. Static tabs declared in `personal` scope are always pinned to the app's personal experience. Static tabs declared in the `team` scope are currently not supported.
 
 The object is an array (maximum of 16 elements) with all elements of the type `object`. This block is required only for solutions that provide a static tab solution.
 
@@ -285,7 +285,7 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 
 ### bots: commandLists
 
-An optional list of commands that your bot can recommend to users. The object is an array (maximum of 2 elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. See [Bot menus](~/concepts/bots/bots-menus) for more information.
+An optional list of commands that your bot can recommend to users. The object is an array (maximum of 2 elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. See [Bot menus](~/concepts/bots/bots-menus.md) for more information.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -349,7 +349,7 @@ An array of `string` which specifies which permissions the app requests, which l
 * `identity` &emsp; Requires user identity information
 * `messageTeamMembers` &emsp; Requires permission to send direct messages to team members
 
-Changing these permissions when updating your app will cause your users to repeat the consent process the first time they run the updated app. See [Updating your app](~/publishing/apps-publish#updating-your-app) for more information.
+Changing these permissions when updating your app will cause your users to repeat the consent process the first time they run the updated app. See [Updating your app](~/publishing/apps-publish.md#updating-your-app) for more information.
 
 ## validDomains
 
