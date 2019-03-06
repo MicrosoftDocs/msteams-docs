@@ -1,5 +1,5 @@
 - name: Overview
-  href: ./overview
+  href: ./overview.md
   universal_ref_toc: /javascript/api/msteams-client-docs-ref-typescript/toc.json
   items:
   - name: Line-of-business apps overview
