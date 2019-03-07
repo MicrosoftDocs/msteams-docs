@@ -18,7 +18,7 @@ Many features enabled in developer preview will require alterations to your app 
 >[!NOTE]
 >You may find it useful to use App Studio to create the non-developer preview portions of your app package, then export that package and manually edit the `manifest.json` file to add the developer preview features you wish to use. Once you've added developer preview features to the `manifest.json` file you will not be able to re-import the package into App Studio.
 
-## Enable developer Preview
+## Enable developer preview
 
 To participate in the Public Developer Preview, you need to do the following:
 
@@ -34,6 +34,6 @@ To participate in the Public Developer Preview, you need to do the following:
 
 Use the same menu item under About → Developer preview, and click on it to turn it off.
 
-## Features available in Developer Preview
+## Features available in developer preview
 
 For a full list of the features currently enabled in developer preview see: [Features in the Public Developer Preview](~/resources/dev-preview/developer-preview-features.md).
