@@ -20,20 +20,20 @@ Many features enabled in developer preview will require alterations to your app 
 
 ## Enable developer preview
 
-To participate in the Public Developer Preview, you need to do the following:
+To enable the public developer preview, you need to do the following:
 
 1. Turn on the setting for enabling uploading of apps in the admin console of your tenant as described [here](~/get-started/get-started-tenant.md).
-2. Click on your profile (either in the upper right or lower left of the Teams interface) to display the Teams menu. The developer preview option is found in About → Developer preview. If you do not see an entry for Developer preview the most likely reason is your organization is not configured for app uploading as described in step 1.
+2. Click on your profile (either in the upper right or lower left of the Teams interface) to display the Teams menu. The developer preview option is found in About → Developer preview. If you do not see an entry for developer preview the most likely reason is your organization is not configured for app uploading as described in step 1.
 
 ![Developer preview setting](~/assets/images/developerpreview.png)
 
 >[!NOTE]
 >Developer preview is enabled on a per-client basis. Uploading an app that uses developer preview features may cause clients that have not enabled developer preview to behave unexpectedly.
 
-## Disable developer Preview
+## Disable developer preview
 
 Use the same menu item under About → Developer preview, and click on it to turn it off.
 
 ## Features available in developer preview
 
-For a full list of the features currently enabled in developer preview see: [Features in the Public Developer Preview](~/resources/dev-preview/developer-preview-features.md).
+For a full list of the features currently enabled in developer preview see: [Features in the public developer preview](~/resources/dev-preview/developer-preview-features.md).
