@@ -4,7 +4,7 @@ description: Describes the schema supported by the manifest for Microsoft Teams
 keywords: teams manifest schema Developer Preview
 ms.date: 03/07/2019
 ---
-# Developer Preview Reference: version 1.4 manifest schema for Microsoft Teams
+# Developer preview manifest schema for Microsoft Teams
 
 > [!NOTE]
 > See [Developer Preview](~/resources/dev-preview/developer-preview-intro.md) for information on the program and how you can join.
@@ -12,7 +12,7 @@ ms.date: 03/07/2019
 
 The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json).
 
-This is a preview of the 1.4 version of the Teams app manifest. For more information on the features available see: [Features in the Public Developer Preview for Microsoft Teams](~/resources/dev-preview/developer-preview-features.md).
+For more information on the features available see: [Features in the Public Developer Preview for Microsoft Teams](~/resources/dev-preview/developer-preview-features.md).
 
 ## Sample full schema
 
