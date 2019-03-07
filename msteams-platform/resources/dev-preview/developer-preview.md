@@ -3,8 +3,11 @@ title: Public Developer Preview
 description: Explains the Public Developer Preview of Microsoft Teams
 keywords: teams preview developer
 ms.date: 07/26/2018
+author: clearab
+ROBOTS: NOINDEX
 ---
-# How do I get access to the Developer Preview?
+
+# Enable Public Developer Preview
 
 To participate in the Public Developer Preview, you need to do the following:
 
@@ -12,11 +15,11 @@ To participate in the Public Developer Preview, you need to do the following:
 
 2. Click on your profile (either in the upper right or lower left of the Teams interface) to display the Teams menu. The developer preview option is found in About→Developer preview. If you do not see an entry for Developer preview the most likely reason is that the tenant is not configured for app uploading as described in step 1.
 
-   ![Developer preview setting](~/assets/images/developerpreview.png)
+![Developer preview setting](~/assets/images/developerpreview.png)
 
 Note that enabling Developer Preview might result in messages that don't render correctly for others using the official version of the Teams client.
 
-## How do I turn it off?
+## Disable Public Developer Preview
 
 Use the same menu item under About → Developer preview, and click on it to turn it off.
 
