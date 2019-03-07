@@ -4,6 +4,11 @@
          "source_path": "msteams-platform/concepts/authentication.md",
          "redirect_url": "/microsoftteams/platform/concepts/authentication/authentication",
          "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/resources/dev-preview/developer-preview.md",
+        "redirect_url": "/microsoftteams/platform/resources/dev-preview/developer-preview-intro.md",
+        "redirect_document_id": false
       }
     ]
 }
