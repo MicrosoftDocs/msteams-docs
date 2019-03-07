@@ -2,7 +2,7 @@
 title: Developer Preview Manifest schema reference
 description: Describes the schema supported by the manifest for Microsoft Teams
 keywords: teams manifest schema Developer Preview
-ms.date: 08/07/2018
+ms.date: 03/07/2019
 ---
 # Developer Preview Reference: version 1.4 manifest schema for Microsoft Teams
 
@@ -240,7 +240,7 @@ The object is an array with all elements of the type `object`.  This block is re
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 characters|✔|The URL to use when configuring the tab.|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation.  Default: `true`|
-|`scopes`|Array of enum|2|✔|Currently, configurable tabs support the `team` scope, which means it can be provisioned to a channel, and the `groupchat` scope for use in groups.|
+|`scopes`|Array of strings|2|✔|Currently, configurable tabs support the `team` scope, which means it can be provisioned to a channel, and the `groupchat` scope for use in groups.|
 
 ## staticTabs
 
@@ -256,7 +256,7 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 |`name`|String|128 characters|✔|The display name of the tab in the channel interface.|
 |`contentUrl`|String|2048 characters|✔|The URL that points to the entity UI to be displayed in the Teams canvas.  Must be HTTPS.|
 |`websiteUrl`|String|2048 characters||The URL to point at if a user opts to view in a browser.|
-|`scopes`|Array of enum|1|✔|Currently, static tabs support only the `personal` scope, which means it can be provisioned only as part of the personal experience.|
+|`scopes`|Array of Strings|1|✔|Currently, static tabs support only the `personal` scope, which means it can be provisioned only as part of the personal experience.|
 
 ## bots
 
@@ -274,7 +274,7 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 |`supportsFiles`|Boolean|||A value indicating whether the bot supports uploading/downloading of files|
 |`supportsCalling`|Boolean|||A value indicating whether the bot supports audio calling|
 |`supportsVideo`|Boolean|||A value indicating whether the bot supports video calling|
-|`scopes`|Array of enum|3|✔|Specifies whether the bot offers an experience in the context of a channel in a `team`, an experience scoped to an individual user alone (`personal`), or in group chat (`groupchat`) These options are non-exclusive.|
+|`scopes`|Array of Strings|3|✔|Specifies whether the bot offers an experience in the context of a channel in a `team`, an experience scoped to an individual user alone (`personal`), or in group chat (`groupchat`) These options are non-exclusive.|
 
 ### bots: commandLists
 
@@ -282,8 +282,8 @@ An optional list of commands that your bot can recommend to users. The object is
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`items.properties`|array of enum|3|✔|Specifies the scope for which the command list is valid.|
-|`items.commands`|array of objects|10|✔|An array of commands the bot supports:<br>`title`: the bot command name (string, 32)<br>`description`: a simple description or example of the command syntax and its argument (string, 128)|
+|`items.properties`|Array of Strings|3|✔|Specifies the scope for which the command list is valid.|
+|`items.commands`|Array of Objects|10|✔|An array of commands the bot supports:<br>`title`: the bot command name (string, 32)<br>`description`: a simple description or example of the command syntax and its argument (string, 128)|
 
 ## connectors
 
@@ -333,7 +333,7 @@ Each command item is an object with the following structure:
 |`parameters`|Array of object|5||Required if `"context":"search"`. The list of parameters the command takes. Minimum: 1; maximum: 5|
 |`parameter.name`|String|64 characters||Required if `"context":"search"`. The name of the parameter as it appears in the client. This is included in the user request.|
 |`parameter.inputType`|String|||One of `"text", "textarea", "number", "date", "time", "toggle", "choiceset"`|
-|`parameter.title`|String|32 characters||Required if `"context":"search"`. User-friendly title for the parameter.|
+|`parameter.title`|String|32 characters||Required if `"type":"query"`. User-friendly title for the parameter.|
 |`parameter.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
 |`parameter.value`|String|512 characters||Initial value of the parameter|
 |`parameter.choices`|Array of objects|10 objects||Required if `"inputType":"choiceset"`.|
