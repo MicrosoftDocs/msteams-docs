@@ -194,8 +194,8 @@
   - name: Public Developer Preview
     href: ./resources/dev-preview/developer-preview-intro.md
     items:
-    - name: Public Developer Preview access
-      href: ./resources/dev-preview/developer-preview.md
+    - name: Developer preview manifest schema
+      href: ./resources/schema/manifest-schema-dev-preview.md
     - name: Features in Developer Preview
       href: ./resources/dev-preview/developer-preview-features.md
     - name: Using DevTools in the client
@@ -250,8 +250,7 @@
       href: ./concepts/bots/bot-conversations/bots-conv-channel.md
   - name: Manifest schema
     href: ./resources/schema/manifest-schema.md
-  - name: Developer preview manifest schema
-    href: ./resources/schema/manifest-schema-dev-preview.md
+
   - name: Microsoft Graph APIs
     href: ./resources/microsoft-graph.md
 - name: Troubleshooting
