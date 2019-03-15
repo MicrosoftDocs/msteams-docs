@@ -2,7 +2,7 @@
 title: Initiate actions with messaging extensions
 description: Create Action-based messaging extensions to allow users to trigger external services
 keywords: teams messaging extensions messaging extensions search
-ms.date: 02/21/2019
+ms.date: 03/15/2019
 ---
 
 # Initiate actions with messaging extensions
@@ -364,7 +364,7 @@ This used to insert a card into the compose box as a result of a the command. It
 > [!NOTE]
 > Responding with an adaptive card message sent from a bot is in [developer preview](~/resources/dev-preview/developer-preview-intro.md). Currently the only type of response attachment supported is an adaptive card.
 
-You can also respond to the submit action by inserting a message with an [adaptive card](~/) into the channel with a bot. Your user will be able to preview the message before submitting it, and potentially edit/interact with it as well. This can be very useful in scenarios where you need to gather information from your users before creating an adaptive card response. The following scenario shows how you can use this flow to configure a poll without including the configuration steps in the channel message.
+You can also respond to the submit action by inserting a message with an [adaptive card](~/concepts/cards/cards.md#adaptive-card) into the channel with a bot. Your user will be able to preview the message before submitting it, and potentially edit/interact with it as well. This can be very useful in scenarios where you need to gather information from your users before creating an adaptive card response. The following scenario shows how you can use this flow to configure a poll without including the configuration steps in the channel message.
 
 1. The user clicks the messaging extension to trigger the task module.
 1. The user uses the task module to configure the poll.
@@ -422,6 +422,54 @@ Your message extension will now need to respond to two new types of interactions
 }
 ```
 
-When responding to the `edit` request you should respond with an adaptive card similar to the original `fetch\task` response, but with the values populated with the information the user has already submitted.
+When responding to the `edit` request you should respond with an adaptive card similar to the original `fetch\task` response, but with the values populated with the information the user has already submitted. When responding to the `submit` request you should send a message to the channel containing the finalized adaptive card. The example below shows how to do this using the [Node.js Teams Bot Builder SDK](https://www.npmjs.com/package/botbuilder-teams).
 
-When responding to the `submit` response you should <<DO THINGS>.
+```typescript
+teamChatConnector.onComposeExtensionSubmitAction((
+    event: builder.IEvent,
+    request: teamBuilder.IComposeExtensionActionCommandRequest,
+    callback: (err: Error, result: any, statusCode: number) => void) => {
+        let invokeValue = (<any> event).value;
+
+        if (invokeValue.botMessagePreviewAction ) {
+            let attachment = invokeValue.botActivityPreview[0].attachments[0];
+
+            if (invokeValue.botMessagePreviewAction === 'send') {
+                let response = { composeExtension: { attachmentLayout: "list", type: "result", attachments: [] } };
+                response.composeExtension.attachments.push(attachment);
+                delete this.recentUserInput;
+                let msg = new builder.Message()
+                    .address(event.address)
+                    .addAttachment(attachment);
+                teamChatConnector.send([msg.toMessage()],
+                    (error) => {
+                        if(error){
+                            //TODO: Handle error and callback
+                        }
+                        else {
+                            callback(null, null, 200);
+                        }
+                    }
+                );
+            }
+
+            else if (invokeValue.botMessagePreviewAction === 'edit') {
+                // Create the card and populate with recentUserInput information
+                let card = {
+                  //adaptive card
+                }
+                let editAttachment = {
+                    content: card,
+                    contentType: adaptiveCardType
+                };
+                let response = { composeExtension: { attachmentLayout: "list", type: "result", attachments: [] } };
+                response.composeExtension.attachments.push(editAttachment);
+                callback(null, response, 200);
+            }
+        }
+        //Send the initial task module
+        else {
+            callback(null, this.onCreatePoll(invokeValue.data, event.address.user.name, event.address.user.id), 200);
+        }
+    });
+```

@@ -2,16 +2,20 @@
 title: Features in the Public Developer Preview
 description: Describes the features in the Public Developer Preview of Microsoft Teams
 keywords: teams preview developer features
-ms.date: 03/06/2019
+ms.date: 03/15/2019
 ---
 # Features in the Public Developer Preview for Microsoft Teams
 
 When these features are out of developer preview this content will be merged into the live doc set.
 The developer preview includes the following new features:
 
+## Respond to message extension submit action with an adaptive card message sent from a bot
+
+You can also respond to the submit action by inserting a message with an [adaptive card](~/concepts/cards/cards.md#adaptive-card) into the channel with a bot. Your user will be able to preview the message before submitting it, and potentially edit/interact with it as well. This can be very useful in scenarios where you need to gather information from your users before creating an adaptive card response. The following scenario shows how you can use this flow to configure a poll without including the configuration steps in the channel message. See [Respond with an adaptive card message sent from a bot](~/concepts/messaging-extensions/create-extensions#respond-with-an-adaptive-card-message-sent-from-a-bot).
+
 ## Request device permissions in tabs
 
-You can request access to native device permissions like a camera, microphone, device location, and notifications. See [Request permissions for your Microsoft Teams tab](~/concepts/tabs/tabs-device-permissions.md)
+You can request access to native device permissions like a camera, microphone, device location, and notifications. See [Request permissions for your Microsoft Teams tab](~/concepts/tabs/tabs-device-permissions.md).
 
 ## Trigger messaging extension from links inserted into the compose message box
 
