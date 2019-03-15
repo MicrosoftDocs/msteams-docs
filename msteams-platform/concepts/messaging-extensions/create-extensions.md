@@ -364,7 +364,7 @@ This used to insert a card into the compose box as a result of a the command. It
 > [!NOTE]
 > Responding with an adaptive card message sent from a bot is in [developer preview](~/resources/dev-preview/developer-preview-intro.md). Currently the only type of response attachment supported is an adaptive card.
 
-You can also respond to the submit action by inserting a message with an [adaptive card](~/concepts/cards/cards.md#adaptive-card) into the channel with a bot. Your user will be able to preview the message before submitting it, and potentially edit/interact with it as well. This can be very useful in scenarios where you need to gather information from your users before creating an adaptive card response. The following scenario shows how you can use this flow to configure a poll without including the configuration steps in the channel message.
+You can also respond to the submit action by inserting a message with an [adaptive card](~/concepts/cards/cards.md#adaptive-cards) into the channel with a bot. Your user will be able to preview the message before submitting it, and potentially edit/interact with it as well. This can be very useful in scenarios where you need to gather information from your users before creating an adaptive card response. The following scenario shows how you can use this flow to configure a poll without including the configuration steps in the channel message.
 
 1. The user clicks the messaging extension to trigger the task module.
 1. The user uses the task module to configure the poll.
