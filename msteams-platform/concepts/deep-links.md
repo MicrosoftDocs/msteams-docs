@@ -94,7 +94,7 @@ Example: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@conto
 The query parameters are:
 
 * `users`&emsp;The comma-separated list of user IDs representing the participants of the chat. The user performing the action is always included as a participant. The User ID field currently only supports the Azure AD UserPrincipalName (typically an email address).
-* `topicName`&emsp;An optional field for chat's display name, in the case of a chat with 3 or more users. If this field is not specified, the chat's display name will be based on the names of the participants.
+* `topicName`&emsp;An optional field for chat's display name, in the case of a chat with 3 or more users. If this field is not specified, the chat's display name will be based on the names of the participants. This parameter is ignored on mobile clients.
 * `message`&emsp;An optional field for the message text that you want to insert into the current user's compose box while the chat is in a draft state.
 
 To use this deep link with your bot, you can specify this as the URL target in your card's button or tap action through the `openUrl` action type.
@@ -102,7 +102,7 @@ To use this deep link with your bot, you can specify this as the URL target in y
 ## Linking to the scheduling dialog
 
 > [!Note]
-> This feature is currently in developer preview.
+> This feature is currently in developer preview, and is not available on mobile clients.
 
 You can create deep links to the Teams client's built-in scheduling dialog. This is especially useful if your app helps the user complete calendar or scheduling-related tasks.
 
