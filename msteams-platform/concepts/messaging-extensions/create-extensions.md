@@ -162,7 +162,7 @@ Below is an example of the `value` object containing the message details that wi
       "body": {
         "contentType": "html",
         "content": "this is the message"
-		},
+    },
       "from": {
         "device": null,
         "conversation": null,
@@ -467,9 +467,15 @@ teamChatConnector.onComposeExtensionSubmitAction((
                 callback(null, response, 200);
             }
         }
-        //Send the initial task module
         else {
-            callback(null, this.onCreatePoll(invokeValue.data, event.address.user.name, event.address.user.id), 200);
+            let attachment = {
+                  //create adaptive card
+                };
+            let activity = new builder.Message().addAttachment(attachment).toMessage();
+            let response = teamBuilder.ComposeExtensionResponse.messagePreview()
+                .preview(activity)
+                .toResponse();
+            callback(null, response, 200);
         }
     });
 ```
