@@ -2,13 +2,13 @@
 title: Test and debug your bot
 description: Describes how to test bots in Microsoft Teams
 keywords: teams bots testing
-ms.date: 03/08/2019
+ms.date: 03/20/2019
 ---
 # Test and debug your Microsoft Teams bot
 
 When testing your bot you need to take into consideration both the context(s) you want your bot to run in, as well as any functionality you may have added to your bot that requires data specific to Microsoft Teams. Make sure that the method you chose to test your bot's aligns with its functionality.
 
-## Test by uploading your to Teams
+## Test by uploading to Teams
 
 The most comprehensive way to test your bot is by creating an app package and uploading it to Teams. This is the only method to test the full functionality available to your bot, across all scopes.
 
