@@ -6,11 +6,13 @@ ms.date: 03/08/2019
 ---
 # Test and debug your Microsoft Teams bot
 
-testing your bot is a good idea, testing your bot in all enabled contexts is a good idea
+When testing your bot you need to take into consideration both the context(s) you want your bot to run in, as well as any functionality you may have added to your bot that requires data specific to Microsoft Teams. Make sure that the method you chose to test your bot's aligns with its functionality.
 
-## Test by uploading
+## Test by uploading your to Teams
 
-The most comprehensive way to test your bot is by creating an [app package](~/concepts/apps/apps-package.md) and [uploading](~/concepts/apps/apps-upload.md) it to Teams. This is the only method to test the full functionality available to your bot.
+The most comprehensive way to test your bot is by creating an app package and uploading it to Teams. This is the only method to test the full functionality available to your bot, across all scopes.
+
+There are two methods for uploading your app. You can either use [App Studio](~/get-started/get-started-app-studio.md) to help you, or you can manually [create an app package](~/concepts/apps/apps-package.md) and [upload your app](~/concepts/apps/apps-upload.md). If you need to alter your manifest and re-upload your app, you should [delete your bot](#deleting-a bot-from-teams) before uploading your altered app package.
 
 ## Debug your bot locally
 
@@ -24,7 +26,7 @@ Use the https endpoint provided by ngrok in your app manifest. If you close your
 
 You can find additional information [here](~/resources/general/debug.md#locally-hosted).
 
-## Testing your bot without installing in Teams
+## Testing your bot without uploading to Teams
 
 Occasionally it may be necessary to test your bot without installing it as an app in Teams. We provide two methods for doing so below. Testing your bot without installing it as an app can be useful to ensure your bot is available and responding, however it will not allow you to test the full breadth of Microsoft Teams functionality you may have added to your bot. If you need to fully test your bot, please follow the instructions for [testing by uploading](#test-by-uploading).
 
@@ -36,7 +38,7 @@ Complete instructions on the Bot Framework Emulator can be found [here](/azure/b
 
 ### Talk to you bot directly by Id
 
-You can also initiate a conversation with your bot by using its Id. When a bot has been added through one of these methods it will not be addressable in channel conversations. Nor can you take advantage of other Microsoft Teams app capabilities like tabs or messaging extensions.
+You can also initiate a conversation with your bot by using its Id. Two methods for doing so are given below. When a bot has been added through one of these methods it will not be addressable in channel conversations, and you cannot take advantage of other Microsoft Teams app capabilities like tabs or messaging extensions.
 
 1. On the [Bot Dashboard](https://dev.botframework.com/bots) page for your bot, under **Channels**, select **Add to Microsoft Teams**. Microsoft Teams will launch with a personal chat with your bot.
 2. Directly reference your bot's app ID from within Microsoft Teams:
@@ -77,4 +79,4 @@ To remove your bot completely from Teams, go to your Bot Dashboard and edit the 
 
 ## Removing your bot from AppSource
 
-If you want to remove your bot from your Teams app in AppSource (formerly Office Store), you must remove the bot from your app manifest and resubmit your app for validation. See [Publish your Microsoft Teams app to AppSource](~/publishing/apps-publish) for more information.
+If you want to remove your bot from your Teams app in AppSource (formerly Office Store), you must remove the bot from your app manifest and resubmit your app for validation. See [Publish your Microsoft Teams app to AppSource](~/publishing/apps-publish.md) for more information.
