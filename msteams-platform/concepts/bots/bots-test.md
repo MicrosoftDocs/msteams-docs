@@ -36,7 +36,7 @@ The Bot Framework Emulator is a desktop application that allows bot developers t
 
 Complete instructions on the Bot Framework Emulator can be found [here](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0).
 
-### Talk to you bot directly by Id
+### Talk to your bot directly by Id
 
 You can also initiate a conversation with your bot by using its Id. Two methods for doing so are given below. When a bot has been added through one of these methods it will not be addressable in channel conversations, and you cannot take advantage of other Microsoft Teams app capabilities like tabs or messaging extensions.
 
