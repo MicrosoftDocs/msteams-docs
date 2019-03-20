@@ -30,7 +30,7 @@ The full Teams control library uses the [React JavaScript UI framework](https://
 * **msteams-ui-styles-core** The core CSS styles of UI components. It’s independent of any UI framework.
 * **msteams-ui-icons-core** The core set of Teams icons.
 * **msteams-ui-components-react** The React binding library. It depends on msteams-ui-styles-core.
-* **msteams-ui-icons-react** The React binding library for the set of Teams icons. It depends on msteams-ui-icons.
+* **msteams-ui-icons-react** The React binding library for the set of Teams icons. It depends on msteams-ui-icons-core.
 
 These libraries are all open source, and you can use msteams-ui-styles-core and msteams-ui-icons-core without React.
 
