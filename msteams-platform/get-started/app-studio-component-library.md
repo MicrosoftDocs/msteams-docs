@@ -2,7 +2,7 @@
 title: Using the control library
 description: How to use the control library provided by Microsoft Teams App Studio
 keywords: Teams App Studio Control Library
-ms.date: 03/01/2018
+ms.date: 03/19/2019
 ---
 # Using the control library in App Studio
 
@@ -30,7 +30,7 @@ The full Teams control library uses the [React JavaScript UI framework](https://
 * **msteams-ui-styles-core** The core CSS styles of UI components. It’s independent of any UI framework.
 * **msteams-ui-icons-core** The core set of Teams icons.
 * **msteams-ui-components-react** The React binding library. It depends on msteams-ui-styles-core.
-* **msteams-ui-icons-react** The React binding library for the set of Teams icons. It depends on msteams-ui-icons-react.
+* **msteams-ui-icons-react** The React binding library for the set of Teams icons. It depends on msteams-ui-icons-core.
 
 These libraries are all open source, and you can use msteams-ui-styles-core and msteams-ui-icons-core without React.
 
