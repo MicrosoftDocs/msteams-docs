@@ -62,7 +62,7 @@ See [Card Formatting](~/concepts/cards/cards-format.md) for more information on 
 ## Adaptive card
 
 > [!NOTE]
-> Only version 1.0 of Adaptive Cards are supported.
+> Only version 1.0 of Adaptive Cards is supported.
 
 A customizable card that can contain any combination of text, speech, images, buttons, and input fields.
 
