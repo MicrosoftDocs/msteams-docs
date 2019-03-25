@@ -1,40 +1,46 @@
 ---
-title: Test your bot
+title: Test and debug your bot
 description: Describes how to test bots in Microsoft Teams
 keywords: teams bots testing
-ms.date: 03/26/2018
+ms.date: 03/20/2019
 ---
-# Test your Microsoft Teams bot
+# Test and debug your Microsoft Teams bot
 
-You can test your bot in two different contexts:
+When testing your bot you need to take into consideration both the context(s) you want your bot to run in, as well as any functionality you may have added to your bot that requires data specific to Microsoft Teams. Make sure that the method you chose to test your bot aligns with its functionality.
 
-- For use in any team using channels
-- For personal chat with individual team members.
+## Test by uploading to Teams
 
-Both processes are listed below. Note that each method triggers a slightly different flow and enables bots in different contexts.
+The most comprehensive way to test your bot is by creating an app package and uploading it to Teams. This is the only method to test the full functionality available to your bot, across all scopes.
 
-For published bots, end users will be able to access the via the Discover Bots access points in the product.
+There are two methods for uploading your app. You can either use [App Studio](~/get-started/get-started-app-studio.md) to help you, or you can manually [create an app package](~/concepts/apps/apps-package.md) and [upload your app](~/concepts/apps/apps-upload.md). If you need to alter your manifest and re-upload your app, you should [delete your bot](#deleting-a bot-from-teams) before uploading your altered app package.
 
-Your tenant administrator will need to enable uploading of apps for your organization. [Here's how](/microsoftteams/admin-settings).
+## Debug your bot locally
 
-## Adding a bot to a team for use in channels
+If you are hosting your bot locally during development you'll need to use a tunneling service like [ngrok](https://ngrok.com/) in order to test your bot. Once you've downloaded and installed ngrok, run the below command to start the tunneling service (you may need to add ngrok to your path).
 
-To add a bot to a team, so it is usable in the team channel by all team members, the bot must be part of an app. You [create an app package](~/concepts/apps/apps-package) and [upload it](~/concepts/apps/apps-upload) to the appropriate team. This process makes the bot available in all channels within the team (when @mentioned) as well as for all team members in personal context. Please note that the bot will not be available in other teams without being explicitly added to them.
+```bash
+ngrok http <port> -host-header=localhost:<port>
+```
 
-When a bot is first added via the above method, Teams will send the `conversationUpdate` event. The payload for this event will contain a `channelData` object with the team information. For more information about bot events, see the documentation [here](~/concepts/bots/bots-notifications). This event is sent in both team and personal conversations, but in personal conversations the payload is empty since channel data does not apply.
+Use the https endpoint provided by ngrok in your app manifest. If you close your command window and restart you'll get a new URL, and you'll need to update your bot endpoint address to use that one as well.
 
-## Adding a bot for personal chat
+You can find additional information [here](~/resources/general/debug.md#locally-hosted).
 
-> [!Note]
+## Testing your bot without uploading to Teams
 
-If your bot only needs to be accessed in personal chat, not made available for channel conversations, you can directly upload your bot for that purpose.
+Occasionally it may be necessary to test your bot without installing it as an app in Teams. We provide two methods for doing so below. Testing your bot without installing it as an app can be useful to ensure your bot is available and responding, however it will not allow you to test the full breadth of Microsoft Teams functionality you may have added to your bot. If you need to fully test your bot, please follow the instructions for [testing by uploading](#test-by-uploading-to-teams).
 
-There are two ways to test load your bot for personal conversations in Microsoft Teams:
+### Use the Bot Emulator
 
-1. On the [Bot Dashboard](https://dev.botframework.com/bots) page for your bot, under **Channels**, select **Add to Microsoft Teams**.
+The Bot Framework Emulator is a desktop application that allows bot developers to test and debug their bots, either locally or remotely. Using the emulator, you can chat with your bot and inspect the messages that your bot sends and receives. This can be useful for verifying that your bot is available and responding, however the emulator will not allow you to test any Teams-specific functionality you've added to your bot, nor will responses from your bot be an accurate visual representation of how they will be rendered in Teams. If you need to test either of those things it is best to [upload your bot](#test-by-uploading-to-teams).
 
-   Microsoft Teams will launch with a personal chat with your bot.
+Complete instructions on the Bot Framework Emulator can be found [here](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0).
 
+### Talk to your bot directly by Id
+
+You can also initiate a conversation with your bot by using its Id. Two methods for doing so are given below. When a bot has been added through one of these methods it will not be addressable in channel conversations, and you cannot take advantage of other Microsoft Teams app capabilities like tabs or messaging extensions.
+
+1. On the [Bot Dashboard](https://dev.botframework.com/bots) page for your bot, under **Channels**, select **Add to Microsoft Teams**. Microsoft Teams will launch with a personal chat with your bot.
 2. Directly reference your bot's app ID from within Microsoft Teams:
    * On the [Bot Dashboard](https://dev.botframework.com/bots) page for your bot, under **Details**, copy the **Microsoft App ID** for your bot.
   
@@ -43,16 +49,11 @@ There are two ways to test load your bot for personal conversations in Microsoft
    * From within Microsoft Teams, on the **Chat** pane, select the **Add chat** icon. For **To:**, paste your bot's Microsoft App ID.
   
      ![Getting the AppID for the bot](~/assets/images/bots_uploading.png)
-    
+
      The app ID should resolve to your bot name.
 
    * Select your bot and send a message to initiate a conversation.
-
    * Alternatively, you can paste your bot's app ID in the search box in the top left in Microsoft Teams. In the search results page, navigate to the People tab to see your bot and to start chatting with it.
-
-3. Create a deeplink to your bot using the Teams deep-link format. This will launch Microsoft Teams directly with your bot's app ID. The format is `https://teams.microsoft.com/l/chat/0/0?users=28:YOUR_APP_ID`.
-
-When a bot has been added through one of these methods, it will not be addressable in channel conversations. Nor can you take advantage of other Microsoft Teams app capabilities like tabs or messaging extensions.
 
 Your bot will receive the `conversationUpdate` event just like bots added to a team, but without the team information in the `channelData` object.
 
@@ -78,4 +79,4 @@ To remove your bot completely from Teams, go to your Bot Dashboard and edit the 
 
 ## Removing your bot from AppSource
 
-If you want to remove your bot from your Teams app in AppSource (formerly Office Store), you must remove the bot from your app manifest and resubmit your app for validation. See [Publish your Microsoft Teams app to AppSource](~/publishing/apps-publish) for more information.
+If you want to remove your bot from your Teams app in AppSource (formerly Office Store), you must remove the bot from your app manifest and resubmit your app for validation. See [Publish your Microsoft Teams app to AppSource](~/publishing/apps-publish.md) for more information.
