@@ -2,26 +2,11 @@
 title: Get started with App Studio for Microsoft Teams
 description: Get started building great apps in Microsoft Teams using App Studio
 keywords: getting started app studio teams
-ms.date: 10/03/2018
+ms.date: 03/20/2019
 ---
 # Quickly develop apps with App Studio for Microsoft Teams
 
-Microsoft Teams is a chat-based workspace in Office 365 that integrates with the apps and services that people use to get work done together.
-
-App Studio makes it easy to start creating or integrating your own service, whether you develop custom apps for your enterprise or SaaS applications for teams around the world.
-
-## Apps
-
-App Studio was created to simplify the process of creating productive and robust apps. It streamlines the manual process described in [Get started with Node.js](~/get-started/get-started-nodejs-app-studio). App Studio is now the recommended way to develop Teams apps. The getting started documentation will be updated at a later date.
-
-Apps for Teams are made up of two parts:
-
-* The functionality of the app is hosted on a web server
-* The definition of the app is contained in an application package that Teams uses to find and display your app functionality. The app package is what you upload to Teams when you first test your app
-
-The most significant part of the application package is the app manifest.
-
-App Studio streamlines the creation of the manifest for your app and provides some useful tools like the Card Editor and a React control library. Writing and hosting the code is still up to you.
+App Studio makes it easy to start creating or integrating your own Microsoft Teams apps, whether you develop custom apps for your enterprise or SaaS applications for teams around the world by streamlining the creation of the manifest and package for your app and providing useful tools like the Card Editor and a React control library.
 
 ## Installing App Studio
 
@@ -51,7 +36,7 @@ This is where you can see what [cards you create in App Studio](#card-editor) lo
 
 ### Manifest Editor
 
-As mentioned earlier, the most significant part of a Microsoft Teams app package is its manifest.json file. This file, which must conform to the [Teams App schema](~\resources\schema\manifest-schema.md), contains metadata which allows Teams to correctly present your app to users.
+As mentioned earlier, the most significant part of a Microsoft Teams app package is its manifest.json file. This file, which must conform to the [Teams App schema](~/resources/schema/manifest-schema.md), contains metadata which allows Teams to correctly present your app to users.
 
 The Manifest Editor tab in App Studio simplifies creating the manifest, allowing you to describe the app, upload your icons, add app capabilities, and produce a .zip file which can easily be uploaded into Teams for testing or distributed for others to use. Note that App Studio does not produce functional code for your app, or host your app. Your app must already be hosted and running at the URL listed in the manifest for the app upload process to result in a working app.
 
@@ -89,7 +74,7 @@ This section allows you to add a connector to your app. If you already have regi
 
 ##### Messaging Extensions
 
-[Messaging extensions](~\concepts\messaging-extensions.md) are a powerful new way for users to engage with your app within Microsoft Teams. Users can query for information from your service and post that information in the form of cards, right into the channel or chat conversation.
+[Messaging extensions](~/concepts/messaging-extensions.md) are a powerful new way for users to engage with your app within Microsoft Teams. Users can query for information from your service and post that information in the form of cards, right into the channel or chat conversation.
 
 Messaging extensions are powered by Bot Framework bots, so they require a configured bot to operate. If you have the name and Bot Framework ID of the bot you would like to power the messaging extension, enter it. Otherwise, click *Register* to create one and enter the information afterward. Select whether the configuration of a messaging extension can be updated by the user.
 
