@@ -28,11 +28,11 @@ You can find additional information [here](~/resources/general/debug.md#locally-
 
 ## Testing your bot without uploading to Teams
 
-Occasionally it may be necessary to test your bot without installing it as an app in Teams. We provide two methods for doing so below. Testing your bot without installing it as an app can be useful to ensure your bot is available and responding, however it will not allow you to test the full breadth of Microsoft Teams functionality you may have added to your bot. If you need to fully test your bot, please follow the instructions for [testing by uploading](#test-by-uploading).
+Occasionally it may be necessary to test your bot without installing it as an app in Teams. We provide two methods for doing so below. Testing your bot without installing it as an app can be useful to ensure your bot is available and responding, however it will not allow you to test the full breadth of Microsoft Teams functionality you may have added to your bot. If you need to fully test your bot, please follow the instructions for [testing by uploading](#test-by-uploading-to-teams).
 
 ### Use the Bot Emulator
 
-The Bot Framework Emulator is a desktop application that allows bot developers to test and debug their bots, either locally or remotely. Using the emulator, you can chat with your bot and inspect the messages that your bot sends and receives. This can be useful for verifying that your bot is available and responding, however the emulator will not allow you to test any Teams-specific functionality you've added to your bot, nor will responses from your bot be an accurate visual representation of how they will be rendered in Teams. If you need to test either of those things it is best to [upload your bot](#test-by-uploading).
+The Bot Framework Emulator is a desktop application that allows bot developers to test and debug their bots, either locally or remotely. Using the emulator, you can chat with your bot and inspect the messages that your bot sends and receives. This can be useful for verifying that your bot is available and responding, however the emulator will not allow you to test any Teams-specific functionality you've added to your bot, nor will responses from your bot be an accurate visual representation of how they will be rendered in Teams. If you need to test either of those things it is best to [upload your bot](#test-by-uploading-to-teams).
 
 Complete instructions on the Bot Framework Emulator can be found [here](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0).
 
