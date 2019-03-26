@@ -6,7 +6,7 @@ ms.date: 03/26/2019
 ---
 # Creating a Share-to-Teams embedded button
 
-Third-party websites use the launcher script to embed Share-to-Teams buttons on their webpages to launch the Share-to-Teams experience in a popup window when clicked.
+Third-party websites can use the launcher script to embed Share-to-Teams buttons on their webpages which will launch the Share-to-Teams experience in a popup window when clicked. This will allow you to share a link directly to any person or Microsoft Teams channel without switching context.
 
 ## How to embed a Share-to-Teams button
 
