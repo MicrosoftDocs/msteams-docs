@@ -51,4 +51,4 @@ If you know that the URL preview from your link to be shared won't render well i
 |---------|---------|---------|---------|
 |data-href|string|n/a|The href of the content to share.|
 |data-preview|boolean (as string)|true|Whether or not to show a preview of the content to share|
-|data-icon-px-size|number (as string)|32|The size in pixels of the Share-to-Teams button|
+|data-icon-px-size|number (as string)|32|The size in pixels of the Share-to-Teams button, maximum 128|
