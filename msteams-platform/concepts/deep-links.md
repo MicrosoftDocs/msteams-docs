@@ -75,7 +75,7 @@ Examples:
 
 When navigating to a deep link, Microsoft Teams simply navigates to the tab and provides a mechanism via the Microsoft Teams JavaScript library to retrieve the sub-entity ID (if it exists).
 
-The [`microsoftTeams.getContext`](/javascript/api/msteams-client/microsoftteams.global) call returns a context that includes the `subEntityId` field if the tab was navigated to via a deep link.
+The [`microsoftTeams.getContext`](/javascript/api/@microsoft/teams-js#getcontext--context--context-----void-) call returns a context that includes the `subEntityId` field if the tab was navigated to via a deep link.
 
 ## Deep linking to a chat
 
