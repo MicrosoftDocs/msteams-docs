@@ -2,12 +2,12 @@
 title: Technical details on handling incoming call notifications
 description: Detailed technical information on handling notifications from incoming calls
 keywords: calling calls notifications callback region affinity
-ms.date: 09/24/2018
+ms.date: 04/02/2019
 ---
 
 # Incoming call notifications: technical details
 
-In [Registering a calling and meeting bot for Microsoft Teams](registering-calling-bot.md#creating-a-new-bot-or-adding-calling-capabilities-to-an-existing-bot.md), we mentioned the **Webhook (for calling)** URL, the webhook endpoint for all incoming calls to your bot. This topic discusses the technical details you'll need to respond to these notifications.
+In [Registering a calling and meeting bot for Microsoft Teams](registering-calling-bot.md#creating-a-new-bot-or-adding-calling-capabilities-to-an-existing-bot), we mentioned the **Webhook (for calling)** URL, the webhook endpoint for all incoming calls to your bot. This topic discusses the technical details you'll need to respond to these notifications.
 
 ## Protocol determination
 
