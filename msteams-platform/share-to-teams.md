@@ -6,6 +6,9 @@ ms.date: 03/26/2019
 ---
 # Creating a Share-to-Teams embedded button
 
+>[!NOTE]
+>Share-to-Teams is currently in [Developer Preview](~/resources/dev-preview/developer-preview-intro.md)
+
 Third-party websites can use the launcher script to embed Share-to-Teams buttons on their webpages which will launch the Share-to-Teams experience in a popup window when clicked. This will allow you to share a link directly to any person or Microsoft Teams channel without switching context.
 
 ![Share-to-Teams popup](~/assets/images/share-to-teams-popup.png)
@@ -46,6 +49,12 @@ If you know that the URL preview from your link to be shared won't render well i
   data-preview="false" >
 </div>
 ```
+
+## Share-to-Teams for Education
+
+For teachers using the Share-to-Teams button you'll be given an additional option to `Create an Assignment`. This enables you to quickly create an assignment in a Team based on the shared link.
+
+![Share-to-Teams popup](~/assets/images/share-to-teams-popup-edu.png)
 
 ## Full launcher.js definition
 
