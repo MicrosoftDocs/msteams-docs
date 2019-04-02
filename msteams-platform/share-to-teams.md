@@ -52,7 +52,7 @@ If you know that the URL preview from your link to be shared won't render well i
 
 ## Share-to-Teams for Education
 
-For teachers using the Share-to-Teams button you'll be given an additional option to `Create an Assignment`. This enables you to quickly create an assignment in a Team based on the shared link.
+For teachers using the Share-to-Teams button you'll be given an additional option to `Create an Assignment`. This enables you to quickly create an assignment in the chosen Team based on the shared link.
 
 ![Share-to-Teams popup](~/assets/images/share-to-teams-popup-edu.png)
 
