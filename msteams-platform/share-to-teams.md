@@ -2,7 +2,7 @@
 title: Share to Teams embedded button
 description: How to add the Share-to-Teams embedded button on your website
 keywords: Share Teams Share-to-Teams
-ms.date: 03/26/2019
+ms.date: 04/01/2019
 ---
 # Creating a Share-to-Teams embedded button
 
