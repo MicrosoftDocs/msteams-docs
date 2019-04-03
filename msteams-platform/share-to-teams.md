@@ -18,7 +18,7 @@ Third-party websites can use the launcher script to embed Share-to-Teams buttons
 First, you'll need to add the `launcher.js` script on your webpage.
 
 ```html
-<script async defer src="https://teams.microsoft.com/share/launcher.js" />
+<script async defer src="https://teams.microsoft.com/share/launcher.js" ></script>
 ```
 
 Next, add an HTML element on your webpage with the `teams-share-button` class attribute and the link to share in the `data-href` attribute.
