@@ -23,8 +23,8 @@ To initiate actions from a  messaging extension set the `type` parameter to `act
 
 ```json
 {
-  "$schema": " https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.3",
+  "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
   "packageName": "com.microsoft.teams.samples.Todo",
@@ -57,35 +57,37 @@ To initiate actions from a  messaging extension set the `type` parameter to `act
           "description": "Search you Todo's",
           "title": "Search",
           "initialRun": true,
-          "parameters": [{
-            "name": "searchKeyword",
-            "description": "Enter your search keywords",
-            "title": "Keywords"
-          }]
+          "parameters": [
+            {
+              "name": "searchKeyword",
+              "description": "Enter your search keywords",
+              "title": "Keywords"
+            }
+          ]
         },
         {
           "id": "addTodo",
           "description": "Create a To Do item",
           "title": "Create To Do",
-          "type": "Action",
+          "type": "action",
           "parameters": [
             {
-            "name": "Title",
-            "description": "To Do Title",
-            "title": "Title",
-            "inputType": "text"
+              "name": "Name",
+              "description": "To Do Title",
+              "title": "Title",
+              "inputType": "text"
             },
             {
-            "name": "Description",
-            "description": "Description of the task",
-            "title": "Description",
-            "inputType": "textarea"
+              "name": "Description",
+              "description": "Description of the task",
+              "title": "Description",
+              "inputType": "textarea"
             },
             {
-            "name": "Date",
-            "description": "Due date for the task",
-            "title": "Date",
-            "inputType": "date"
+              "name": "Date",
+              "description": "Due date for the task",
+              "title": "Date",
+              "inputType": "date"
             }
           ]
         },
@@ -93,8 +95,14 @@ To initiate actions from a  messaging extension set the `type` parameter to `act
           "id": "reassignTodo",
           "description": "Reassign a todo item",
           "title": "Create To Do",
-          "type": "Action",
-          "fetchTask": true
+          "type": "action",
+          "fetchTask": true,
+          "parameters": [
+            {
+              "name": "Name",
+              "title": "Title"
+            }
+          ]
         }
       ]
     }
