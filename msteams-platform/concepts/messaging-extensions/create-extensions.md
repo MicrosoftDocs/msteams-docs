@@ -375,11 +375,15 @@ You can also respond to the submit action by inserting a message with an [adapti
 
 To enable this flow your task module should respond as in the example below, which will present the preview message to the user.
 
+>[!Note]
+>You may only respond using an Adaptive Card, and with only a single Adaptive Card.
+
 ```json
 {
   "composeExtension": {
     "type": "botMessagePreview",
     "activityPreview": {
+      "type": "message",
       "attachments":  [
         {
           "contentType": "application/vnd.microsoft.card.adaptive",
@@ -399,7 +403,7 @@ Your message extension will now need to respond to two new types of interactions
   "type": "invoke",
   ...
   "value": {
-    "botMessagePreviewAction": "send",
+    "botMessagePreviewAction": "send" | "edit",
     "botActivityPreview": [
       {
         "type": "message/card",
@@ -409,7 +413,8 @@ Your message extension will now need to respond to two new types of interactions
               {
                 "type": "AdaptiveCard",
                 "body": [{<<card payload>>}]
-              }
+              },
+            "contentType" : "application/vnd.microsoft.card.adaptive"
           }
         ],
         "context": { "theme": "default" }
@@ -422,7 +427,7 @@ Your message extension will now need to respond to two new types of interactions
 }
 ```
 
-When responding to the `edit` request you should respond with an adaptive card similar to the original `fetch\task` response, but with the values populated with the information the user has already submitted. When responding to the `submit` request you should send a message to the channel containing the finalized adaptive card. The example below shows how to do this using the [Node.js Teams Bot Builder SDK](https://www.npmjs.com/package/botbuilder-teams).
+When responding to the `edit` request you should respond with a `task` response with the values populated with the information the user has already submitted. When responding to the `submit` request you should send a message to the channel containing the finalized adaptive card. The example below shows how to do this using the [Node.js Teams Bot Builder SDK](https://www.npmjs.com/package/botbuilder-teams).
 
 ```typescript
 teamChatConnector.onComposeExtensionSubmitAction((
@@ -435,9 +440,6 @@ teamChatConnector.onComposeExtensionSubmitAction((
             let attachment = invokeValue.botActivityPreview[0].attachments[0];
 
             if (invokeValue.botMessagePreviewAction === 'send') {
-                let response = { composeExtension: { attachmentLayout: "list", type: "result", attachments: [] } };
-                response.composeExtension.attachments.push(attachment);
-                delete this.recentUserInput;
                 let msg = new builder.Message()
                     .address(event.address)
                     .addAttachment(attachment);
@@ -454,19 +456,24 @@ teamChatConnector.onComposeExtensionSubmitAction((
             }
 
             else if (invokeValue.botMessagePreviewAction === 'edit') {
-                // Create the card and populate with recentUserInput information
-                let card = {
-                  //adaptive card
+              // Create the card and populate with user-inputted information
+              let card = { ... }
+
+              let taskResponse = {
+                task: {
+                  type: "continue",
+                  value: {
+                    title: "Card Preview",
+                    card: {
+                      contentType: 'application/vnd.microsoft.card.adaptive',
+                      content: card
+                    }
+                  }
                 }
-                let editAttachment = {
-                    content: card,
-                    contentType: adaptiveCardType
-                };
-                let response = { composeExtension: { attachmentLayout: "list", type: "result", attachments: [] } };
-                response.composeExtension.attachments.push(editAttachment);
-                callback(null, response, 200);
+              }
+              callback(null, taskResponse, 200);
             }
-        }
+
         else {
             let attachment = {
                   //create adaptive card
