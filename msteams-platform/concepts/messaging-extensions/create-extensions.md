@@ -401,6 +401,8 @@ Your message extension will now need to respond to two new types of interactions
 {
   "name": "composeExtension/submitAction",
   "type": "invoke",
+  "conversation": { "id": "19:c366b75791784100b6e8b515fd55b063@thread.skype" },
+  "imdisplayname": "Pranav Smith",
   ...
   "value": {
     "botMessagePreviewAction": "send" | "edit",
@@ -420,9 +422,6 @@ Your message extension will now need to respond to two new types of interactions
         "context": { "theme": "default" }
       }
     ],
-    "conversation": { "id": "19:c366b75791784100b6e8b515fd55b063@thread.skype" },
-    "name": "composeExtension/submitAction",
-    "imdisplayname": "Pranav Smith"
   }
 }
 ```
