@@ -6,7 +6,7 @@ ms.date: 10/26/18
 ---
 # Registering a calling bot for Microsoft Teams
 
-A bot that particpates in audio/video calls and online meetings is an ordinary Microsoft Teams bot with a few extra things:
+A bot that participates in audio/video calls and online meetings is an ordinary Microsoft Teams bot with a few extra things:
 
 * There's a new version of the Teams app manifest with two extra settings, `supportsCalling` and `supportsVideo`. These settings are included in the Developer Preview version of the Microsoft Teams app manifest.
 * [Microsoft Graph permissions](~/concepts/calls-and-meetings/registering-calling-bot#application-permissions) must be configured for your bot's Microsoft App ID.
