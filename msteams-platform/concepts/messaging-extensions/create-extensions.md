@@ -115,7 +115,7 @@ To initiate actions from a  messaging extension set the `type` parameter to `act
 > [!NOTE]
 > Initiating actions from messages is in [developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
-In addition to initiating actions from the compose message area, you can also use your messaging extension to initiate an action from a message. This will allow you to send the contents of the message to your bot for processing, and optionally reply to that message with a response using the method described in [Responding to submit](#responding-to-submit). The response will be inserted as a reply to the message that your users can edit before submitting. Your users can access your messaging extension from the overflow `...` menu and then selecting `Take action` as in the image below.
+In addition to initiatinghttps://review.docs.microsoft.com/en-us/microsoftteams/platform/?branch=ac-landing-page actions from the compose message area, you can also use your messaging extension to initiate an action from a message. This will allow you to send the contents of the message to your bot for processing, and optionally reply to that message with a response using the method described in [Responding to submit](#responding-to-submit). The response will be inserted as a reply to the message that your users can edit before submitting. Your users can access your messaging extension from the overflow `...` menu and then selecting `Take action` as in the image below.
 
 ![Example of initiating an action from a message](~/assets/images/compose-extensions/messageextensions_messageaction.png)
 
@@ -376,7 +376,7 @@ You can also respond to the submit action by inserting a message with an [adapti
 To enable this flow your task module should respond as in the example below, which will present the preview message to the user.
 
 >[!Note]
->You may only respond using an Adaptive Card, and with only a single Adaptive Card.
+>The `activityPreview` must contain a `message` activity with exactly 1 adaptive card attachment.
 
 ```json
 {
