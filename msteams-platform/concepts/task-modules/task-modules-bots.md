@@ -216,7 +216,7 @@ Not shown in the above example is the `SetTaskInfo()` function, which sets the `
 
 ### Bot Framework card actions vs. Adaptive card Action.Submit actions
 
-The schema for Bot Framework card actions is slightly different from Adaptive card `Action.Submmit` actions. As a result, the way to invoke task modules is slightly different too: the `data` object in `Action.Submit` contains an `msteams` object so it won't interfere with other properties in the card. The following table shows an example of each:
+The schema for Bot Framework card actions is slightly different from Adaptive card `Action.Submit` actions. As a result, the way to invoke task modules is slightly different too: the `data` object in `Action.Submit` contains an `msteams` object so it won't interfere with other properties in the card. The following table shows an example of each:
 
 | Bot Framework card action                              | Adaptive card Action.Submit action                     |
 | ------------------------------------------------------ | ------------------------------------------------------ |
