@@ -9,7 +9,7 @@ ms.date: 11/09/2018
 
 The [Microsoft Teams](/microsoftteams/) developer platform makes it easy for you to extend Teams and integrate your own applications and services seamlessly into the Teams workspace. These apps can then be distributed to your enterprise or for teams around the world.
 
-To extend Microsoft Teams, you will need to create a Microsoft Teams [app](~/concepts/apps/apps-overview). A Microsoft Teams app is a web application that you host. This app can then be integrated into the user's workspace in Teams.
+To extend Microsoft Teams, you will need to create a Microsoft Teams [app](~/concepts/apps/apps-overview.md). A Microsoft Teams app is a web application that you host. This app can then be integrated into the user's workspace in Teams.
 
 This tutorial helps you get started creating a Microsoft Teams app using C# on .NET. You can test the app by loading it into a Team that you have permissions for, or into a test tenant created using the Office Developer Program.
 
@@ -17,8 +17,8 @@ This tutorial helps you get started creating a Microsoft Teams app using C# on .
 
 You will need an Office 365 tenant that has been set up for development, and you will need to configure teams to allow you to upload apps. You can work with your Office 365 administrator to confirm that your tenant is ready, or you can install a private evaluation version of Office 365 that you can manage. For more information see these topics:
 
-- [Prepare your Office 365 tenant](~/get-started/get-started-tenant)
-- [Prepare Microsoft Teams for development](~/get-started/get-started-configure-teams)
+- [Prepare your Office 365 tenant](~/get-started/get-started-tenant.md)
+- [Prepare Microsoft Teams for development](~/get-started/get-started-configure-teams.md)
 
 <a name="GetPrerequisites"></a>
 
@@ -100,7 +100,7 @@ The app will only be available during the current session on your development ma
 
 Microsoft Azure lets you host your .NET application on a free tier using shared infrastructure. This will be sufficient to run this `Hello World` sample. See [creating a new free account](https://azure.microsoft.com/en-us/free/) for more information.
 
-Visual Studio has built-in support for app deployment to different providers, including Azure. For more details see [Publish your .NET Teams app in Azure](~/get-started/get-started-dotnet-in-azure).
+Visual Studio has built-in support for app deployment to different providers, including Azure. For more details see [Publish your .NET Teams app in Azure](~/get-started/get-started-dotnet-in-azure.md).
 
 <img width="530px" src="~/assets/images/get-started/publishtoazure1.png" title="Visual Studio"/>
 
