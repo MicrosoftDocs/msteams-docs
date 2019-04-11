@@ -92,7 +92,7 @@ Ngrok will listen to requests from the internet and will route them to your app 
 > [!NOTE]
 > If you have used a different port in the [build and run](#build-and-run-the-sample) step above, make sure you use the same port number to setup the `ngrok` tunnel.
 > [!TIP]
-> It is a good idea to run `ngrok` in a different terminal window to keep it running without interfering with the node app which you might later have to stop, rebuild and rerun. The `ngrok` session will return useful debugging information in this window.
+> It is a good idea to run `ngrok` in a different terminal window to keep it running without interfering with the app which you might later have to stop, rebuild and rerun. The `ngrok` session will return useful debugging information in this window.
 
 The app will only be available during the current session on your development machine. If the machine is shut down or goes to sleep the service will no longer be available. Remember this when sharing the app for testing by other users. If you have to restart the service it will return a new address and you will have to update every place that uses that address. The paid version of Ngrok does not have this limitation.
 
