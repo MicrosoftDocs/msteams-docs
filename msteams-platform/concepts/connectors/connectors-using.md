@@ -19,7 +19,7 @@ In the list, choose **Add** for the Connector you want to use.
 
 ![Screenshot of a dialog box showing a list of available Connectors, with a button for adding each one](~/assets/images/connector_list.png)
 
-For more examples, see [Accessing Office 365 Connectors from Microsoft Teams](https://docs.microsoft.com/en-us/outlook/actionable-messages/#accessing-office-365-connectors-from-microsoft-teams).
+For more examples, see [Accessing Office 365 Connectors from Microsoft Teams](/outlook/actionable-messages/#accessing-office-365-connectors-from-microsoft-teams).
 
 ## Creating messages through Office 365 Connectors
 
@@ -28,9 +28,9 @@ You have two options for posting messages via Connectors:
 - Set up a custom incoming webhook if you want an integration just for your team.
 - Register a Connector and submit it as a Microsoft Teams app if you want others to use it.
 
-Both options involve posting a simple JSON payload to an HTTP webhook to create the Connector message within Microsoft Teams. (For more details, see [Get started with actionable messages in Office 365](https://docs.microsoft.com/en-us/outlook/actionable-messages/get-started).)
+Both options involve posting a simple JSON payload to an HTTP webhook to create the Connector message within Microsoft Teams. (For more details, see [Get started with actionable messages in Office 365](/outlook/actionable-messages/get-started).)
 
-You can also use this JSON to create cards containing rich inputs, such as text entry, multi-select, or picking a date and time. The code that generates the card and posts to the incoming webhook API can be running on any hosted service. These cards are defined as part of actionable messages, and are also supported in [cards](~/concepts/cards/cards) used in Teams bots and Messaging extensions.
+You can also use this JSON to create cards containing rich inputs, such as text entry, multi-select, or picking a date and time. The code that generates the card and posts to the incoming webhook API can be running on any hosted service. These cards are defined as part of actionable messages, and are also supported in [cards](~/concepts/cards/cards.md) used in Teams bots and Messaging extensions.
 
 ### Example Connector message
 
@@ -145,7 +145,7 @@ If you want a multiselect list initially displayed in the compact style, you mus
 > [!NOTE]
 > Specifying `compact` for the `style` property in Microsoft Teams is the same as specifying `normal` for the `style` property in Microsoft Outlook.
 
-For all other details about Connector card actions, see **[Actions](https://docs.microsoft.com/en-us/outlook/actionable-messages/card-reference#actions)** in the actionable message card reference.
+For all other details about Connector card actions, see **[Actions](/outlook/actionable-messages/card-reference#actions)** in the actionable message card reference.
 
 ## Setting up a custom incoming webhook
 
@@ -183,7 +183,7 @@ The following steps use PowerShell. We assume that you have this installed and a
 2. If the POST succeeds, you should see a simple **1** output by `Invoke-RestMethod`.
 3. Check the Microsoft Teams channel associated with the webhook URL. You should see the new card posted to the channel.
 
-- Include two icons, following the instructions in [Icons](~/concepts/apps/apps-package#icons).
+- Include two icons, following the instructions in [Icons](~/concepts/apps/apps-package.md#icons).
 - Modify the `icons` portion of the manifest to refer to the file names of the icons instead of URLs.
 
 The following manifest.json file contains the basic elements needed to test and submit your app.
@@ -248,4 +248,4 @@ To verify that an `HttpPOST` action is working correctly, use your [custom incom
 > [!NOTE]
 > Currently, we do not support users configuring your Connector externally via the **Connect to Office 365** button. Users must visit Microsoft Teams first to add a Connector.
 
-When your app is ready for submission, follow the process to [publish your app to AppSource](~/publishing/apps-publish).
+When your app is ready for submission, follow the process to [publish your app to AppSource](~/publishing/apps-publish.md).
