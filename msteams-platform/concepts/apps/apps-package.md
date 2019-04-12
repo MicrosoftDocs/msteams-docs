@@ -7,7 +7,7 @@ ms.date: 01/22/2018
 
 # Create an app package for your Microsoft Teams app
 
-App experiences in Teams are defined by their app manifest, and bundled in an app package for use in uploading or AppSource submission. You'll need an app package to test your experience in Teams, via the [upload](~/concepts/apps/apps-upload) process.
+App experiences in Teams are defined by their app manifest, and bundled in an app package for use in uploading or AppSource submission. You'll need an app package to test your experience in Teams, via the [upload](~/concepts/apps/apps-upload.md) process.
 
 A Teams app package is a .zip file containing the following:
 
@@ -16,9 +16,9 @@ A Teams app package is a .zip file containing the following:
 
 ## Creating a manifest
 
-*Teams App Studio* is a new tool that can help configure your manifest. It also contains a React control library and configurable samples for cards. See [Getting started with Teams App Studio](~/get-started/get-started-app-studio).
+*Teams App Studio* is a new tool that can help configure your manifest. It also contains a React control library and configurable samples for cards. See [Getting started with Teams App Studio](~/get-started/get-started-app-studio.md).
 
-Your manifest file must be named "manifest.json" and be at the top level of the upload package. Note that manifests and packages built previously might support an older version of the schema. For Teams apps and especially AppSource (formerly Office Store) submission, you must use the current [manifest schema](~/resources/schema/manifest-schema).
+Your manifest file must be named "manifest.json" and be at the top level of the upload package. Note that manifests and packages built previously might support an older version of the schema. For Teams apps and especially AppSource (formerly Office Store) submission, you must use the current [manifest schema](~/resources/schema/manifest-schema.md).
 
 > [!TIP]
 > Specify the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor:
@@ -57,4 +57,4 @@ Here's how the icons would appear in the UI:
 
 ![Sample Contoso icons](~/assets/images/icons/appbarhomescreen.png)
  
-> Hitting problems? See the [troubleshooting guide](~/troubleshoot/troubleshoot).
+> Hitting problems? See the [troubleshooting guide](~/troubleshoot/troubleshoot.md).
