@@ -6,7 +6,7 @@ keywords: teams manifest migrate v0.4 v1.x v1.0
 
 # Migrate your v0.4 manifest to v1.x in Microsoft Teams
 
-To support Microsoft Teams apps, we made significant changes in our manifest. If you've already built your app on the [v0.4 manifest](~/resources/schema/manifest-schema-v04), here are a few tips to help in conversion:
+To support Microsoft Teams apps, we made significant changes in our manifest. If you've already built your app on the [v0.4 manifest](~/resources/schema/manifest-schema-v04.md), here are a few tips to help in conversion:
 
 |v0.4 object| v1.x object| comments|
 |---|---|---|
@@ -16,7 +16,7 @@ To support Microsoft Teams apps, we made significant changes in our manifest. If
 | `tabs:name` | `name:short`, `name:long` | Use your existing name. |
 | `tabs:description` | `description` | Use your existing tab description or create new ones to represent your entire app experience. |
 | `tabs:description` | `description` | Use your existing tab description or create new ones to represent your entire app experience. |
-| `tabs:icons` | `icons` | Icons have been promoted to a top-level object. Note that [icons have been changed in v1.x](~/concepts/apps/apps-package#icons), and must be included as part of the package. URLs to hosted icons are not allowed. |
+| `tabs:icons` | `icons` | Icons have been promoted to a top-level object. Note that [icons have been changed in v1.x](~/concepts/apps/apps-package.md#icons), and must be included as part of the package. URLs to hosted icons are not allowed. |
 | `tabs:accentColor` | `accentColor` | Accent color has been promoted to a top-level object. |
 | `tabs:configUrl` | `tabs:configurationUrl` | The config.html file for the configurable tab. |
 | `bots:mri` | `bots:id` | Same value, the bot's Microsoft app ID as registered with the Bot Framework. |
