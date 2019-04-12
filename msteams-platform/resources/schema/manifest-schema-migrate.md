@@ -10,7 +10,7 @@ To support Microsoft Teams apps, we made significant changes in our manifest. If
 
 |v0.4 object| v1.x object| comments|
 |---|---|---|
-| `id`, `tabs:id`, or `bot.mri` | `id` | Use a Microsoft app ID. You'll already have one if you registerd a bot with the Bot Framework, or if your tab's web app signs in with Microsoft. Otherwise, generate a new ID at the [Microsoft App registration portal](https://apps.dev.microsoft.com). This ID will uniquely represent your app moving forward and may not change once published. |
+| `id`, `tabs:id`, or `bot.mri` | `id` | Use a Microsoft app ID. You'll already have one if you registered a bot with the Bot Framework, or if your tab's web app signs in with Microsoft. Otherwise, generate a new ID at the [Microsoft App registration portal](https://apps.dev.microsoft.com). This ID will uniquely represent your app moving forward and may not change once published. |
 | `tabs` | `configurableTabs` | In v0.4, all `tabs` were channel/configurable tabs. In v1.x, this distinction is called out to distinguish from `staticTabs` |
 | `tabs:id` | `id` | This field was deprecated in v1.x. Your GUID should migrate to the overall app `id` in v1.x. |
 | `tabs:name` | `name:short`, `name:long` | Use your existing name. |
