@@ -104,7 +104,9 @@ var address =
     useAuth: true
 }
 
-bot.beginDialog(address, '/');
+var msg = new builder.Message().address(address);
+msg.text('Hello, this is a notification');
+bot.send(msg);
 ```
 
 ### Creating a channel conversation

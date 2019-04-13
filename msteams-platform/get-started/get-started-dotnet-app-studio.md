@@ -9,7 +9,7 @@ ms.date: 11/09/2018
 
 The [Microsoft Teams](/microsoftteams/) developer platform makes it easy for you to extend Teams and integrate your own applications and services seamlessly into the Teams workspace. These apps can then be distributed to your enterprise or for teams around the world.
 
-To extend Microsoft Teams, you will need to create a Microsoft Teams [app](~/concepts/apps/apps-overview). A Microsoft Teams app is a web application that you host. This app can then be integrated into the user's workspace in Teams.
+To extend Microsoft Teams, you will need to create a Microsoft Teams [app](~/concepts/apps/apps-overview.md). A Microsoft Teams app is a web application that you host. This app can then be integrated into the user's workspace in Teams.
 
 This tutorial helps you get started creating a Microsoft Teams app using C# on .NET. You can test the app by loading it into a Team that you have permissions for, or into a test tenant created using the Office Developer Program.
 
@@ -17,8 +17,8 @@ This tutorial helps you get started creating a Microsoft Teams app using C# on .
 
 You will need an Office 365 tenant that has been set up for development, and you will need to configure teams to allow you to upload apps. You can work with your Office 365 administrator to confirm that your tenant is ready, or you can install a private evaluation version of Office 365 that you can manage. For more information see these topics:
 
-- [Prepare your Office 365 tenant](~/get-started/get-started-tenant)
-- [Prepare Microsoft Teams for development](~/get-started/get-started-configure-teams)
+- [Prepare your Office 365 tenant](~/get-started/get-started-tenant.md)
+- [Prepare Microsoft Teams for development](~/get-started/get-started-configure-teams.md)
 
 <a name="GetPrerequisites"></a>
 
@@ -92,7 +92,7 @@ Ngrok will listen to requests from the internet and will route them to your app 
 > [!NOTE]
 > If you have used a different port in the [build and run](#build-and-run-the-sample) step above, make sure you use the same port number to setup the `ngrok` tunnel.
 > [!TIP]
-> It is a good idea to run `ngrok` in a different terminal window to keep it running without interfering with the node app which you might later have to stop, rebuild and rerun. The `ngrok` session will return useful debugging information in this window.
+> It is a good idea to run `ngrok` in a different terminal window to keep it running without interfering with the app which you might later have to stop, rebuild and rerun. The `ngrok` session will return useful debugging information in this window.
 
 The app will only be available during the current session on your development machine. If the machine is shut down or goes to sleep the service will no longer be available. Remember this when sharing the app for testing by other users. If you have to restart the service it will return a new address and you will have to update every place that uses that address. The paid version of Ngrok does not have this limitation.
 
@@ -100,7 +100,7 @@ The app will only be available during the current session on your development ma
 
 Microsoft Azure lets you host your .NET application on a free tier using shared infrastructure. This will be sufficient to run this `Hello World` sample. See [creating a new free account](https://azure.microsoft.com/en-us/free/) for more information.
 
-Visual Studio has built-in support for app deployment to different providers, including Azure. For more details see [Publish your .NET Teams app in Azure](~/get-started/get-started-dotnet-in-azure).
+Visual Studio has built-in support for app deployment to different providers, including Azure. For more details see [Publish your .NET Teams app in Azure](~/get-started/get-started-dotnet-in-azure.md).
 
 <img width="530px" src="~/assets/images/get-started/publishtoazure1.png" title="Visual Studio"/>
 
@@ -110,7 +110,7 @@ Visual Studio has built-in support for app deployment to different providers, in
 
 The sample app requires the following environment variables to be set to the values you made a note of earlier.
 
-Open up the web.config file and find the *appSettings* section. Update the *MicrosoftAppId* value with your Bot ID that you saved earlier. Update the *MicrosoftAppPassword* with the Bot password you saved earler.
+Open up the web.config file and find the *appSettings* section. Update the *MicrosoftAppId* value with your Bot ID that you saved earlier. Update the *MicrosoftAppPassword* with the Bot password you saved earlier.
 
 <img width="560px" src="~/assets/images/get-started/get-started-net-azure-add-keys.png" title="setting the keys"/>
 

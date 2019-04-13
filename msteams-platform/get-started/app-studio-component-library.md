@@ -95,7 +95,7 @@ Your app needs to handle themes when:
 * The tab is initially loaded
 * A user changes the theme after the tab is already loaded
 
-The theme is included in a tab’s [Context](/javascript/api/%40microsoft/teams-js/context), which can be retrieved before the tab is loaded via URL placeholder values, or at any time by using the [Microsoft Teams JavaScript client SDK](/javascript/api/%40microsoft/teams-js/context).
+The theme is included in a tab’s [Context](/javascript/api/@microsoft/teams-js/context&view=msteams-client-js-latest), which can be retrieved before the tab is loaded via URL placeholder values, or at any time by using the [Microsoft Teams JavaScript client SDK](/javascript/api/%40microsoft/teams-js/context).
 
 How the current theme is retrieved and how to respond to theme changes is discussed here: [Get context for your Microsoft Teams tab](~/concepts/tabs/tabs-context.md).
 

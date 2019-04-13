@@ -2,8 +2,11 @@
 title: Initiate actions with messaging extensions
 description: Create Action-based messaging extensions to allow users to trigger external services
 keywords: teams messaging extensions messaging extensions search
-ms.date: 02/21/2019
+ms.date: 03/15/2019
 ---
+
+> [!NOTE]
+> Action-based message extensions are in [developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 # Initiate actions with messaging extensions
 
@@ -23,8 +26,8 @@ To initiate actions from a  messaging extension set the `type` parameter to `act
 
 ```json
 {
-  "$schema": " https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.3",
+  "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
   "packageName": "com.microsoft.teams.samples.Todo",
@@ -57,35 +60,37 @@ To initiate actions from a  messaging extension set the `type` parameter to `act
           "description": "Search you Todo's",
           "title": "Search",
           "initialRun": true,
-          "parameters": [{
-            "name": "searchKeyword",
-            "description": "Enter your search keywords",
-            "title": "Keywords"
-          }]
+          "parameters": [
+            {
+              "name": "searchKeyword",
+              "description": "Enter your search keywords",
+              "title": "Keywords"
+            }
+          ]
         },
         {
           "id": "addTodo",
           "description": "Create a To Do item",
           "title": "Create To Do",
-          "type": "Action",
+          "type": "action",
           "parameters": [
             {
-            "name": "Title",
-            "description": "To Do Title",
-            "title": "Title",
-            "inputType": "text"
+              "name": "Name",
+              "description": "To Do Title",
+              "title": "Title",
+              "inputType": "text"
             },
             {
-            "name": "Description",
-            "description": "Description of the task",
-            "title": "Description",
-            "inputType": "textarea"
+              "name": "Description",
+              "description": "Description of the task",
+              "title": "Description",
+              "inputType": "textarea"
             },
             {
-            "name": "Date",
-            "description": "Due date for the task",
-            "title": "Date",
-            "inputType": "date"
+              "name": "Date",
+              "description": "Due date for the task",
+              "title": "Date",
+              "inputType": "date"
             }
           ]
         },
@@ -93,8 +98,14 @@ To initiate actions from a  messaging extension set the `type` parameter to `act
           "id": "reassignTodo",
           "description": "Reassign a todo item",
           "title": "Create To Do",
-          "type": "Action",
-          "fetchTask": true
+          "type": "action",
+          "fetchTask": true,
+          "parameters": [
+            {
+              "name": "Name",
+              "title": "Title"
+            }
+          ]
         }
       ]
     }
@@ -115,7 +126,7 @@ To initiate actions from a  messaging extension set the `type` parameter to `act
 > [!NOTE]
 > Initiating actions from messages is in [developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
-In addition to initiating actions from the compose message area, you can also use your messaging extension to initiate an action from a message. This will allow you to send the contents of the message to your bot for processing, and optionally reply to that message with a response using the method described in [Responding to submit](#responding-to-submit). The response will be inserted as a reply to the message that your users can edit before submitting. Your users can access your messaging extension from the overflow `...` menu and then selecting `Take action` as in the image below.
+In addition to initiatinghttps://review.docs.microsoft.com/en-us/microsoftteams/platform/?branch=ac-landing-page actions from the compose message area, you can also use your messaging extension to initiate an action from a message. This will allow you to send the contents of the message to your bot for processing, and optionally reply to that message with a response using the method described in [Responding to submit](#responding-to-submit). The response will be inserted as a reply to the message that your users can edit before submitting. Your users can access your messaging extension from the overflow `...` menu and then selecting `Take action` as in the image below.
 
 ![Example of initiating an action from a message](~/assets/images/compose-extensions/messageextensions_messageaction.png)
 
@@ -162,7 +173,7 @@ Below is an example of the `value` object containing the message details that wi
       "body": {
         "contentType": "html",
         "content": "this is the message"
-		},
+    },
       "from": {
         "device": null,
         "conversation": null,
@@ -299,7 +310,7 @@ The bot can also respond with an auth/config response if the user needs to authe
 
 Once a user completes entering their input your bot will receive a `composeExtension/submitAction` event with the command id and parameter values set.
 
-There are three different expected responses to a `submitAction`.
+These are the different expected responses to a `submitAction`.
 
 ### Task Module response
 
@@ -316,6 +327,19 @@ This used to insert a card into the compose box as a result of a the command. It
 ```json
 {
   "composeExtension": {
+    "type": "result",
+    "attachmentLayout": "list",
+    "preview": {
+          "contentType": "application/vnd.microsoft.card.thumbnail",
+          "content": {
+            "title": "85069: Create a cool app",
+            "images": [
+              {
+                "url": "https://placekitten.com/200/200"
+              }
+            ]
+          }
+        },
     "attachments": [
       {  
         "contentType": "application/vnd.microsoft.teams.card.o365connector",
@@ -339,22 +363,136 @@ This used to insert a card into the compose box as a result of a the command. It
               ]
             }
           ]
-        },
-        "preview": {
-          "contentType": "application/vnd.microsoft.card.thumbnail",
-          "content": {
-            "title": "85069: Create a cool app",
-            "images": [
-              {
-                "url": "https://placekitten.com/200/200"
-              }
-            ]
-          }
         }
       }
-    ],
-    "type": "result",
-    "attachmentLayout": "list"
+    ]
   }
 }
+```
+
+### Respond with an adaptive card message sent from a bot
+
+> [!NOTE]
+> Responding with an adaptive card message sent from a bot is in [developer preview](~/resources/dev-preview/developer-preview-intro.md). Currently the only type of response attachment supported is an adaptive card.
+
+You can also respond to the submit action by inserting a message with an [adaptive card](~/concepts/cards/cards.md#adaptive-cards) into the channel with a bot. Your user will be able to preview the message before submitting it, and potentially edit/interact with it as well. This can be very useful in scenarios where you need to gather information from your users before creating an adaptive card response. The following scenario shows how you can use this flow to configure a poll without including the configuration steps in the channel message.
+
+1. The user clicks the messaging extension to trigger the task module.
+1. The user uses the task module to configure the poll.
+1. After submitting the configuration task module the app uses the information provided in the task module to craft an adaptive card and sends it as a `botMessagePreview` response to the client.
+1. The user can then preview the adaptive card message before the bot will inserts it into the channel. If the bot is not already a member of the channel, clicking `Send` will add the bot.
+1. Interacting with the adaptive card will change the message before sending it.
+1. Once the user clicks `Send` the bot will post the message to the channel.
+
+To enable this flow your task module should respond as in the example below, which will present the preview message to the user.
+
+>[!Note]
+>The `activityPreview` must contain a `message` activity with exactly 1 adaptive card attachment.
+
+```json
+{
+  "composeExtension": {
+    "type": "botMessagePreview",
+    "activityPreview": {
+      "type": "message",
+      "attachments":  [
+        {
+          "contentType": "application/vnd.microsoft.card.adaptive",
+          "content": << Card Payload >>
+        }
+      ]
+    }
+  }
+}
+```
+
+Your message extension will now need to respond to two new types of interactions, `value.botMessagePreviewAction = "send"` and `value.botMessagePreviewAction = "edit"`. Below is an example of the `value` object you will need to process:
+
+```json
+{
+  "name": "composeExtension/submitAction",
+  "type": "invoke",
+  "conversation": { "id": "19:c366b75791784100b6e8b515fd55b063@thread.skype" },
+  "imdisplayname": "Pranav Smith",
+  ...
+  "value": {
+    "botMessagePreviewAction": "send" | "edit",
+    "botActivityPreview": [
+      {
+        "type": "message/card",
+        "attachments": [
+          {
+            "content":
+              {
+                "type": "AdaptiveCard",
+                "body": [{<<card payload>>}]
+              },
+            "contentType" : "application/vnd.microsoft.card.adaptive"
+          }
+        ],
+        "context": { "theme": "default" }
+      }
+    ],
+  }
+}
+```
+
+When responding to the `edit` request you should respond with a `task` response with the values populated with the information the user has already submitted. When responding to the `submit` request you should send a message to the channel containing the finalized adaptive card. The example below shows how to do this using the [Node.js Teams Bot Builder SDK](https://www.npmjs.com/package/botbuilder-teams).
+
+```typescript
+teamChatConnector.onComposeExtensionSubmitAction((
+    event: builder.IEvent,
+    request: teamBuilder.IComposeExtensionActionCommandRequest,
+    callback: (err: Error, result: any, statusCode: number) => void) => {
+        let invokeValue = (<any> event).value;
+
+        if (invokeValue.botMessagePreviewAction ) {
+            let attachment = invokeValue.botActivityPreview[0].attachments[0];
+
+            if (invokeValue.botMessagePreviewAction === 'send') {
+                let msg = new builder.Message()
+                    .address(event.address)
+                    .addAttachment(attachment);
+                teamChatConnector.send([msg.toMessage()],
+                    (error) => {
+                        if(error){
+                            //TODO: Handle error and callback
+                        }
+                        else {
+                            callback(null, null, 200);
+                        }
+                    }
+                );
+            }
+
+            else if (invokeValue.botMessagePreviewAction === 'edit') {
+              // Create the card and populate with user-inputted information
+              let card = { ... }
+
+              let taskResponse = {
+                task: {
+                  type: "continue",
+                  value: {
+                    title: "Card Preview",
+                    card: {
+                      contentType: 'application/vnd.microsoft.card.adaptive',
+                      content: card
+                    }
+                  }
+                }
+              }
+              callback(null, taskResponse, 200);
+            }
+
+        else {
+            let attachment = {
+                  //create adaptive card
+                };
+            let activity = new builder.Message().addAttachment(attachment).toMessage();
+            let response = teamBuilder.ComposeExtensionResponse.messagePreview()
+                .preview(activity)
+                .toResponse();
+            callback(null, response, 200);
+        }
+    });
 ```

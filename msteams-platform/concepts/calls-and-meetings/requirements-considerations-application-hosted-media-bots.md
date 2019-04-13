@@ -42,4 +42,9 @@ Not all guidance for developing messaging and IVR calling bots applies equally t
 
 - Application-hosted media bots require more compute and network (bandwidth) capacity than messaging bots and may incur significantly higher operational costs. A real-time media bot developer must carefully measure the bot's scalability, and ensure the bot does not accept more simultaneous calls than it can manage. A video-enabled bot may be able to sustain only one or two concurrent media sessions per CPU core (if using the "raw" RGB24 or NV12 video formats).
 - The Real-time Media Platform does not currently take advantage of any Graphics Processing Units (GPU) available on the VM to off-load H.264 video encoding/decoding. Instead, video encode and decode are done in software on the CPU. If a GPU is available, the bot may take advantage of it for its own graphics rendering (e.g. if the bot is using a 3D graphics engine).
-- The VM instance hosting the real-time media bot must have at least 2 CPU cores. For Azure, a Dv2-series virtual machine is recommended. For other Azure VM types, a system with 4 virtual CPUs (vCPU) is the mininum size required. Detailed information about Azure VM types is available in the [Azure documentation](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes-general).
+- The VM instance hosting the real-time media bot must have at least 2 CPU cores. For Azure, a Dv2-series virtual machine is recommended. For other Azure VM types, a system with 4 virtual CPUs (vCPU) is the minimum size required. Detailed information about Azure VM types is available in the [Azure documentation](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes-general).
+
+## Samples and Additional Resources
+
+* [Sample applications](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/LocalMediaSamples)
+* [Graph Calling SDK Documentation](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
