@@ -12,7 +12,7 @@ The developer preview includes the following new features:
 
 ## Initiate an action from a Message Extension
 
-Action-based messaging extensions allow your users to trigger actions in external services while inside of Teams. see[Initiate actions with messaging extensions](~/concepts/messaging-extensions/create-extensions.md)
+Action-based messaging extensions allow your users to trigger actions in external services while inside of Teams. See [Initiate actions with messaging extensions](~/concepts/messaging-extensions/create-extensions.md)
 
 ## Respond to message extension submit action with an adaptive card message sent from a bot
 
