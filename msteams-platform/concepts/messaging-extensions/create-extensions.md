@@ -5,6 +5,9 @@ keywords: teams messaging extensions messaging extensions search
 ms.date: 03/15/2019
 ---
 
+> [!NOTE]
+> Action-based message extensions are in [developer preview](~/resources/dev-preview/developer-preview-intro.md).
+
 # Initiate actions with messaging extensions
 
 Action-based messaging extensions allow your users to trigger actions in external services while inside of Teams.
