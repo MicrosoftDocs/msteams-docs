@@ -62,7 +62,7 @@ With SharePoint Framework v.1.7, we’re now supporting the ability for develope
 
 ### SharePoint Framework in Teams
 
-You can also implement your Microsoft Teams tabs using SharePoint Framework. For SharePoint developers, this significantly simplifies the development process for Teams tabs because SharePoint Framework web parts are hosted within SharePoint without any need for external services such as Azure. [Learn more about using the SharePoint Framework in Teams.](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+You can also implement your Microsoft Teams tabs using SharePoint Framework. For SharePoint developers, this significantly simplifies the development process for Teams tabs because SharePoint Framework web parts are hosted within SharePoint without any need for external services such as Azure. [Learn more about using the SharePoint Framework in Teams.](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
 
 ## Introduction
 
@@ -73,9 +73,9 @@ The sample app we're using is a a Talent Management application. It manages the 
 ### Benefits of this approach
 
 - Reach SharePoint users with your existing Teams tab
-- Upload your app manifest directly to your SharePoint app catalog. [Teams application packages](~/concepts/apps/apps-package) are now supported by SharePoint
+- Upload your app manifest directly to your SharePoint app catalog. [Teams application packages](~/concepts/apps/apps-package.md) are now supported by SharePoint
 - End users configure the tab on a page just like any other SharePoint web part
-- Your tab can access its [context](~/concepts/tabs/tabs-context) just as it can when running inside Teams
+- Your tab can access its [context](~/concepts/tabs/tabs-context.md) just as it can when running inside Teams
 
 ## Step 1: Testing the sample app
 
@@ -109,11 +109,11 @@ You may want to click "Add page to navigation" to have a quick reference to your
 
 ## Step 3: Explore App Pages in SharePoint
 
-Once your page is published, you can explore [turning your Teams app into a more complete experience inside SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/single-part-app-pages). This converts the current page into an App Page, showing the normal SharePoint page layout with a full-page experience for the Teams tab:
+Once your page is published, you can explore [turning your Teams app into a more complete experience inside SharePoint](/sharepoint/dev/spfx/web-parts/single-part-app-pages). This converts the current page into an App Page, showing the normal SharePoint page layout with a full-page experience for the Teams tab:
 
 ![](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
 
 ## More information
 
-- [Building Microsoft Teams tab using SharePoint Framework - Tutorial](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
-- [Using single part app pages in SharePoint Online](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/single-part-app-pages)
+- [Building Microsoft Teams tab using SharePoint Framework - Tutorial](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+- [Using single part app pages in SharePoint Online](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
