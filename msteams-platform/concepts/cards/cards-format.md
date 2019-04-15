@@ -44,7 +44,7 @@ Adaptive cards do not support any HTML formatting.
 
 ### Newlines for Adaptive Cards
 
-In lists you can use the `\r` or `\n` excape sequences for newlines. Using `\n\n` in a list will cause the next element in the list to be indented. If you need newlines elsewhere in the textblock, use `\n\n`.
+In lists you can use the `\r` or `\n` escape sequences for newlines. Using `\n\n` in a list will cause the next element in the list to be indented. If you need newlines elsewhere in the textblock, use `\n\n`.
 
 ### Mobile and desktop differences for Adaptive Cards
 
@@ -64,7 +64,7 @@ On Android, Adaptive Card markdown formatting appears like this:
 
 ### For more information on Adaptive Cards
 
-[Text features in Adaptive cards](https://docs.microsoft.com/en-us/adaptive-cards/create/textfeatures)
+[Text features in Adaptive cards](/adaptive-cards/create/textfeatures)
 The date and localization features mentioned in this topic are not supported in Teams.
 
 ### Formatting sample for Adaptive cards
