@@ -39,7 +39,7 @@ Once you add an outgoing webhook to the team, it looks and behaves just like a b
 
 ### Receiving messages
 
-Your service will receive messages in the standard Microsoft bot messaging schema, as documented in the [API reference](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-connector-api-reference) for the Microsoft Bot Framework.
+Your service will receive messages in the standard Microsoft bot messaging schema, as documented in the [API reference](/bot-framework/rest-api/bot-framework-rest-connector-api-reference) for the Microsoft Bot Framework.
 
 You can optionally use the existing Bot Framework client SDKs to simplify parsing and handling messages.
 
