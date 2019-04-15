@@ -44,7 +44,7 @@ Adaptive cards do not support any HTML formatting.
 
 ### Newlines for Adaptive Cards
 
-In lists you can use the `\r` or `\n` excape sequences for newlines. Using `\n\n` in a list will cause the next element in the list to be indented. If you need newlines elsewhere in the textblock, use `\n\n`.
+In lists you can use the `\r` or `\n` escape sequences for newlines. Using `\n\n` in a list will cause the next element in the list to be indented. If you need newlines elsewhere in the textblock, use `\n\n`.
 
 ### Mobile and desktop differences for Adaptive Cards
 

@@ -237,7 +237,7 @@ Your code should always verify the HMAC signature included in the request:
             }
             catch (Exception ex)
             {
-                Trace.TraceError("Exception occcured while verifying HMAC on the incoming request. Exception: {0}", ex);
+                Trace.TraceError("Exception occured while verifying HMAC on the incoming request. Exception: {0}", ex);
                 return new AuthResponse(false, "Exception thrown while verifying MAC on incoming request.");
             }
         }

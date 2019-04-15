@@ -66,7 +66,7 @@ You can also implement your Microsoft Teams tabs using SharePoint Framework. For
 
 ## Introduction
 
-These instructions will explain how you can take a tab from a Microsoft Teams sample app and use it in SharePoint. We will be using a tab that's already hosted on Azure in order to focus on the required intergration work.
+These instructions will explain how you can take a tab from a Microsoft Teams sample app and use it in SharePoint. We will be using a tab that's already hosted on Azure in order to focus on the required integration work.
 
 The sample app we're using is a a Talent Management application. It manages the hiring process of candidates for open positions in a team. (The app itself, while it looks nice, doesn't actually do anything. We want to focus on building a Teams app and loading it into Teams, not create a real talent management application.)
 
