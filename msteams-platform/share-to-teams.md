@@ -7,7 +7,15 @@ ms.date: 04/01/2019
 # Creating a Share-to-Teams embedded button
 
 >[!NOTE]
->Share-to-Teams is currently in [Developer Preview](~/resources/dev-preview/developer-preview-intro.md)
+>Share-to-Teams is currently in [Developer Preview](~/resources/dev-preview/developer-preview-intro.md). 
+>
+>To view this functionality in Developer Preview, you'll need to:
+>
+>1. Go to [https://teams.microsoft.com](https://teams.microsoft.com) from the **same browser** that you wish to test the functionality from
+>1. Set your browser client to Developer Preview (similar to how you would configure your desktop client for Developer Preview)
+>1. Test the functionality
+>
+>If you receive the error message "The resource you are looking for has been removed, had its name changed, or is temporarily unavailable." you have not properly configured your browser session to use Developer Preview.
 
 Third-party websites can use the launcher script to embed Share-to-Teams buttons on their webpages which will launch the Share-to-Teams experience in a popup window when clicked. This will allow you to share a link directly to any person or Microsoft Teams channel without switching context.
 
