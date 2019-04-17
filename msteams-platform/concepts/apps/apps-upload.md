@@ -12,7 +12,7 @@ To test your app experience within Microsoft Teams, you need to upload your app 
 > Uploading an updated package for an existing app with a bot might not show tab changes when viewed through the Conversations window. It's better to access it via the Apps fly-out, or test on a clean test environment.
 
 > [!NOTE]
-Bots in conversations is a new feature currently in [Developer Preview](~/resources/dev-preview/developer-preview). If that mode is not enabled, support for conversations will not appear in your Teams client.
+> Bots in conversations is a new feature currently in [Developer Preview](~/resources/dev-preview/developer-preview). If that mode is not enabled, support for conversations will not appear in your Teams client.
 
 For bots designed only for personal conversations between a bot and a single user, see [Adding a bot for personal chat only](~/concepts/bots/bots-test#adding-a-bot-for-personal-chat-only) for an alternate way to access for testing purposes.
 
