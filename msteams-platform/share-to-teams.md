@@ -11,12 +11,12 @@ ms.date: 04/01/2019
 >
 >To view this functionality in Developer Preview, you'll need to:
 >
->1. Go to [https://teams.microsoft.com](https://teams.microsoft.com) from the **same browser** that you wish to test the functionality from
->1. Set your browser client to Developer Preview (similar to how you would configure your desktop client for Developer Preview)
->    * Click your Avatar in the top right corner
->    * Select About, then Developer Preview
->1. Test your configuration by going to [https://teams.microsoft.com/share](https://teams.microsoft.com/share). The Share-to-Teams form should load
->1. Proceed to test your application in a separate tab in the same browser
+>1. Go to [https://teams.microsoft.com](https://teams.microsoft.com) from the **same browser** that you wish to test the functionality from.
+>1. Set your browser client to Developer Preview (similar to how you would configure your desktop client for Developer Preview).
+>    * Click your Avatar in the top right corner.
+>    * Select About, then Developer Preview.
+>1. Test your configuration by going to [https://teams.microsoft.com/share](https://teams.microsoft.com/share). The Share-to-Teams form should load.
+>1. Proceed to test your application in a separate tab in the same browser.
 >
 >If you receive the error message "The resource you are looking for has been removed, had its name changed, or is temporarily unavailable." you have not properly configured your browser session to use Developer Preview.
 
