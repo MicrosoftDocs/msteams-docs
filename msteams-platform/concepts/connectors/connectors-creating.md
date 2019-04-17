@@ -66,7 +66,11 @@ Typically, this call is made as part of your save event handler. Then, when the 
 
 #### Handling removals
 
-You can optionally execute an event handler when the user removes an existing connector configuration. You register this handler by calling `microsoftTeams.settings.registerOnRemoveHandler()`. This handler can be used to perform cleanup operations such as removing entries from a database.
+Connector configurations can be removed via the Manage button in *Configured* page from Connectors dashboard. When the Connector Configuration is successfully removed, the webhook request from your service, when performing POST to the `webhookUrl` endpoint corresponding to the connector configuration that was removed, will receive an **HTTP 410 Gone** response.
+On receiving this response, it is recommended to handle and perform any cleanup operations such as removing entries from a database.
+
+> [!NOTE]
+> Please be advised that the Teams SDK remove handler `microsoftTeams.settings.registerOnRemoveHandler()` has been found unreliable to be used as a trigger for performing cleanup operations, since its invocation does not guarantee successful deletion of Connector configuration. 
 
 ### Including the Connector in your Manifest
 
