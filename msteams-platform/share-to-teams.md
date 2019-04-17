@@ -43,7 +43,7 @@ Next, add an HTML element on your webpage with the `teams-share-button` class at
 
 This will add the Microsoft Teams icon to your website.
 
-![Share-to-Teams icon](!/assets/images/share-to-teams-icon.png)
+![Share-to-Teams icon](~/assets/images/share-to-teams-icon.png)
 
 Optionally, if you want a different icon size for the Share-to-Teams button, use the `data-icon-px-size` attribute.
 
