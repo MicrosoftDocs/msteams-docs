@@ -12,15 +12,15 @@ To test your app experience within Microsoft Teams, you need to upload your app 
 > Uploading an updated package for an existing app with a bot might not show tab changes when viewed through the Conversations window. It's better to access it via the Apps fly-out, or test on a clean test environment.
 
 > [!NOTE]
-> Bots in conversations is a new feature currently in [Developer Preview](~/resources/dev-preview/developer-preview). If that mode is not enabled, support for conversations will not appear in your Teams client.
+> Bots in conversations is currently in [Developer Preview](~/resources/dev-preview/developer-preview-intro.md). If that mode is not enabled, support for conversations will not appear in your Teams client.
 
-For bots designed only for personal conversations between a bot and a single user, see [Adding a bot for personal chat only](~/concepts/bots/bots-test#adding-a-bot-for-personal-chat-only) for an alternate way to access for testing purposes.
+For bots designed only for personal conversations between a bot and a single user, see [Adding a bot for personal chat only](~/concepts/bots/bots-test.md#adding-a-bot-for-personal-chat-only) for an alternate way to access for testing purposes.
 
 ## Create your upload package
 
 For development as well as AppSource (formerly Office Store) submission you must create an uploadable package that contains the information to describe your experience. The package, a .zip file, contains the application manifest and icons that uniquely define your experience.
 
-To create an upload package, see [Create the package for your Microsoft Teams app](~/concepts/apps/apps-package).
+To create an upload package, see [Create the package for your Microsoft Teams app](~/concepts/apps/apps-package.md).
 
 With your package created, you can now upload it into a team. Once uploaded it will be available for all users in the selected team, and only the users of that team.
 
@@ -47,7 +47,7 @@ There are two ways to upload your app to Teams:
 The uploaded package should now be available for use in the team or conversation specified in the consent dialog. If your app does not appear, the most common reason is an error in the manifest, particularly ids for the app, bot and messaging extensions. If the app is not scoped for conversations, that option will not appear.
 
 >[!NOTE]
-Apps in conversations is currently in [Developer Preview](~/resources/dev-preview/developer-preview), and the option will not appear if Teams is not running in that mode.
+Apps in conversations is currently in [Developer Preview](~/resources/dev-preview/developer-preview-intro.md), and the option will not appear if Teams is not running in that mode.
 
 ![Example of bot in list of uploaded bots](~/assets/images/botinlist.jpg)
 
@@ -82,7 +82,7 @@ If the app contains tabs, users can pin them to any conversation or team channel
 
 3. Accept the consent prompt.
 
-4. Configure your tab via its [configuration page](~/concepts/tabs/tabs-configuration) and choose *Save*.
+4. Configure your tab via its [configuration page](~/concepts/tabs/tabs-configuration.md) and choose *Save*.
 
   ![The Add a tab dialog box, featuring a gallery of available tabs](~/assets/images/tab_gallery.png)
 
@@ -104,7 +104,7 @@ With the app loaded in the team or conversation, users can set up a Connector us
 
 2. Select your Connector from the **Uploaded** section at the bottom.
 
-3. Configure your Connector via its [configuration page](~/concepts/connectors/connectors) and choose *Save*.
+3. Configure your Connector via its [configuration page](~/concepts/connectors/connectors.md) and choose *Save*.
 
   ![The Add a tab dialog box, featuring a gallery of available tabs.](~/assets/images/connector_gallery.png)
 
@@ -125,6 +125,6 @@ If you change manifest information, you must first remove the app and then add t
 
 ## Troubleshooting notes
 
-* If the manifest doesn't load, please double-check that you followed all the instructions in [Create the package](~/concepts/apps/apps-package) and validated your manifest against the [schema](~/resources/schema/manifest-schema).
+* If the manifest doesn't load, please double-check that you followed all the instructions in [Create the package](~/concepts/apps/apps-package.md) and validated your manifest against the [schema](~/resources/schema/manifest-schema.md).
 
-* Encountering other problems? See [Troubleshoot your Microsoft Teams app](~/troubleshoot/troubleshoot).
+* Encountering other problems? See [Troubleshoot your Microsoft Teams app](~/troubleshoot/troubleshoot.md).
