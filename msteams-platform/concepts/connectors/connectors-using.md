@@ -249,32 +249,3 @@ To verify that an `HttpPOST` action is working correctly, use your [custom incom
 > Currently, we do not support users configuring your Connector externally via the **Connect to Office 365** button. Users must visit Microsoft Teams first to add a Connector.
 
 When your app is ready for submission, follow the process to [publish your app to AppSource](~/publishing/apps-publish.md).
-
-## Using Connectors in your Tenant App Catalog
-
-Sometimes, you may not want to publish your connector app to the public AppSource/Store but would like it to be available only to the users in a Tenant. In such cases, you can upload your custom connector app to the [Tenant App Catalog](https://docs.microsoft.com/en-us/microsoftteams/tenant-apps-catalog-teams). 
-
-This way, your connector app will be available only to that Tenant and will be accessible from the Tenant App Catalog. Please note that it will not show up in Connector list under any team at this point.
-
-All connector apps uploaded this way are considered as *sideloaded*.
-To configure and use the *sideloaded* connector in a Team, an user with the right permissions for the team needs to install it from the Tenant App Catalog by following these steps: 
-
-1. Open store and navigate to your tenant app catalog page.
-
-![Screenshot of the Tenant App Catalog with connector app](~/assets/images/connectors/tenant-app-catalog.png)
-
-2. Open the connector app.
-3. Select Team and click Install.
-
-![Screenshot of the Connector App Install Dialog](~/assets/images/connectors/connector-app-install.png)
-
-4. Click on Set Up button for the connector and you will be taken to Connectors dashboard page.
-
-![Screenshot of the Connector App Set Up dialog](~/assets/images/connectors/connector-app-setup.png)
-
-5. The connector will be available in the *Sideloaded* section for that team. You can navigate by scrolling to this section or search for the connector app.
-6. Click on "Configure" and the connector can be configured. From this point, it will be available in connectors list under *Sideloaded* section for this team.
-
-![Screenshot of the Connector dashobard with sideloaded connector highlighted](~/assets/images/connectors/connector-dialog-sideloaded.png)
-
-From this point, it will be available in connectors list under *Sideloaded* section for this team.
