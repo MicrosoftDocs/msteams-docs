@@ -21,7 +21,7 @@ Create an ngrok configuration file `ngrok.yml` (see [here](https://ngrok.com/doc
 
 ## Setting up signaling
 
-In [the introduction to calls and meetings bots](~/concepts/calls-and-meetings/calls-meetings-bots-overivew), we discussed call signaling: how bots detect and respond to new calls and events during a call. Call signaling events are sent via HTTP POST to the bot's calling endpoint.
+In [the introduction to calls and meetings bots](~/concepts/calls-and-meetings/calls-meetings-bots-overview.md), we discussed call signaling: how bots detect and respond to new calls and events during a call. Call signaling events are sent via HTTP POST to the bot's calling endpoint.
 
 As with the bot's messaging API, in order for the Real-time Media Platform to talk to your bot, your bot must be reachable over the internet. Ngrok makes this simple: add the following lines to your ngrok.yml:
 
@@ -63,7 +63,7 @@ Forwarding  https://signal.ngrok.io -> localhost:12345
 Forwarding  tcp://1.tcp.ngrok.io:12332 -> localhost:8445
 ```
 
-Here, `12345` is the signaling port, `8445` is the application-hosted port and `12332` is the remote media port exposed by ngrok. Note that we have a forwarding from `1.bot.contoso.com` to `1.tcp.ngrok.io`. This will be used as the media url forthe bot. Of course, these port numbers are just examples and you can use any available port.
+Here, `12345` is the signaling port, `8445` is the application-hosted port and `12332` is the remote media port exposed by ngrok. Note that we have a forwarding from `1.bot.contoso.com` to `1.tcp.ngrok.io`. This will be used as the media url for the bot. Of course, these port numbers are just examples and you can use any available port.
 
 ### Update code
 
@@ -115,4 +115,4 @@ Your bot can now run locally and all the flows work from your localhost.
 
 - The free accounts of ngrok do **NOT** provide end-to-end encryption. The HTTPS data ends at the ngrok url and the data flows unencrypted from ngrok to `localhost`. If you require end-to-end encryption, consider the the paid version of ngrok. See [end-to-end TLS tunnels](https://ngrok.com/docs#tls) for steps on setting up secure E2E tunnels.
 - Because the bot callback url is dynamic, incoming call scenarios require you to frequently update your ngrok endpoints. One way to fix this is to use a paid ngrok account which provides fixed subdomains to which you can point your bot and the platform.
-- Ngrok tunnels can also be used with [Azure Service Fabric](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-overview). For an example of how to do this, see the [HueBot sample app](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/LocalMediaSamples/HueBot/HueBot).
+- Ngrok tunnels can also be used with [Azure Service Fabric](/azure/service-fabric/service-fabric-overview). For an example of how to do this, see the [HueBot sample app](/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/LocalMediaSamples/HueBot/HueBot).
