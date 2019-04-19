@@ -14,7 +14,7 @@ To test your app experience within Microsoft Teams, you need to upload your app 
 > [!NOTE]
 > Bots in conversations is currently in [Developer Preview](~/resources/dev-preview/developer-preview-intro.md). If that mode is not enabled, support for conversations will not appear in your Teams client.
 
-For bots designed only for personal conversations between a bot and a single user, see [Adding a bot for personal chat only](~/concepts/bots/bots-test.md#adding-a-bot-for-personal-chat-only) for an alternate way to access for testing purposes.
+For bots designed only for personal conversations between a bot and a single user, see [Adding a bot for personal chat only](~/concepts/bots/bots-test.md#talk-to-your-bot-directly-by-id) for an alternate way to access for testing purposes.
 
 ## Create your upload package
 
