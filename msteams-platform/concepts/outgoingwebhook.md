@@ -39,7 +39,7 @@ Once you add an outgoing webhook to the team, it looks and behaves just like a b
 
 ### Receiving messages
 
-Your service will receive messages in the standard Microsoft bot messaging schema, as documented in the [API reference](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-connector-api-reference) for the Microsoft Bot Framework.
+Your service will receive messages in the standard Microsoft bot messaging schema, as documented in the [API reference](/bot-framework/rest-api/bot-framework-rest-connector-api-reference) for the Microsoft Bot Framework.
 
 You can optionally use the existing Bot Framework client SDKs to simplify parsing and handling messages.
 
@@ -237,7 +237,7 @@ Your code should always verify the HMAC signature included in the request:
             }
             catch (Exception ex)
             {
-                Trace.TraceError("Exception occcured while verifying HMAC on the incoming request. Exception: {0}", ex);
+                Trace.TraceError("Exception occured while verifying HMAC on the incoming request. Exception: {0}", ex);
                 return new AuthResponse(false, "Exception thrown while verifying MAC on incoming request.");
             }
         }

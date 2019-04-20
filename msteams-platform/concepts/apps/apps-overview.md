@@ -12,28 +12,28 @@ Microsoft Teams apps are web apps, you can use any web-programming technology an
 
 An app in Teams consists of the following parts:
 
-* [Tabs](~/concepts/tabs/tabs-overview)
-* [Bots](~/concepts/bots/bots-overview)
-* [Connectors](~/concepts/connectors/connectors)
-* [Messaging extensions](~/concepts/compose-extensions)
-* [Activity feed integrations](~/concepts/activity-feed)
+* [Tabs](~/concepts/tabs/tabs-overview.md)
+* [Bots](~/concepts/bots/bots-overview.md)
+* [Connectors](~/concepts/connectors/connectors.md)
+* [Messaging extensions](~/concepts/compose-extensions.md)
+* [Activity feed integrations](~/concepts/activity-feed.md)
 * [Outgoing web hooks](~/concepts/outgoingwebhook.md)
 
-A Microsoft Teams app is defined by its manifest (a JSON file). Place the manifest and two icons in a .zip file, and you have an *app package* that you can install into Teams or publish through AppSource. (For details, see [Create the package for your Microsoft Teams app](~/concepts/apps/apps-package).)
+A Microsoft Teams app is defined by its manifest (a JSON file). Place the manifest and two icons in a .zip file, and you have an *app package* that you can install into Teams or publish through AppSource. (For details, see [Create the package for your Microsoft Teams app](~/concepts/apps/apps-package.md).)
 
-*Teams App Studio* is a new tool that will help you to configure your application. It also contains a React control library and configurable samples for cards. See [Getting started with Teams App Studio](~/get-started/get-started-app-studio).
+*Teams App Studio* is a new tool that will help you to configure your application. It also contains a React control library and configurable samples for cards. See [Getting started with Teams App Studio](~/get-started/get-started-app-studio.md).
 
-A great app is designed before it is built. Guidance on app design can be found in [Design apps for Microsoft Teams](~/concepts/apps/apps-design), as well as in the [Teams design guide] (~/resources/design/overview).
+A great app is designed before it is built. Guidance on app design can be found in [Design apps for Microsoft Teams](~/concepts/apps/apps-design.md), as well as in the [Teams design guide](~/resources/design/overview.md).
 
-Once an app has been created and has been a manifest it can be uploaded into a teams channel that you have rights to. See [Upload your custom app in Microsoft Teams](~/concepts/apps/apps-upload).
+Once an app has been created and has been a manifest it can be uploaded into a teams channel that you have rights to. See [Upload your custom app in Microsoft Teams](~/concepts/apps/apps-upload.md).
 
-The final step of creating an app is publication. For more information see: [Publish your app](~/publishing/apps-publish).
+The final step of creating an app is publication. For more information see: [Publish your app](~/publishing/apps-publish.md).
 
 ## Learn how to develop an app for Microsoft Teams
 
 The fastest way to create your first Microsoft Teams app is to follow one of our "Get started" guides:
 
-* [Get started with .NET and C#](~/get-started/get-started-dotnet-app-studio)
-* [Get started with Node.js](~/get-started/get-started-nodejs-app-studio)
+* [Get started with .NET and C#](~/get-started/get-started-dotnet-app-studio.md)
+* [Get started with Node.js](~/get-started/get-started-nodejs-app-studio.md)
 
 After you understand the basics, other sections of this guide are designed to let you dive deeper into apps for Teams.
