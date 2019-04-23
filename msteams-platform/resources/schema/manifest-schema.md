@@ -6,7 +6,7 @@ ms.date: 11/29/2018
 ---
 # Reference: Manifest schema for Microsoft Teams
 
-The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json). Versions 1.0, 1.1 and 1.2 are also supported (using "v1.0", "v1.1", and "v1.2" in the URL).
+The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.4/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json). Versions 1.0, 1.1, 1.2 and 1.3 are also supported (using "v1.0", "v1.1", "v1.2", and "v1.3" in the URL).
 
 The following schema sample shows all extensibility options.
 
@@ -14,8 +14,8 @@ The following schema sample shows all extensibility options.
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.3",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.4/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.4",
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%",
   "packageName": "com.example.myapp",
@@ -151,13 +151,13 @@ The schema defines the following properties:
 The https:// URL referencing the JSON Schema for the manifest.
 
 > [!TIP]
-> Specify the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor: `"$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json",`
+> Specify the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor: `"$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.4/MicrosoftTeams.schema.json",`
 
 ## manifestVersion
 
 **Required** &ndash; String
 
-The version of the manifest schema this manifest is using. It should be "1.3".
+The version of the manifest schema this manifest is using. It should be "1.4".
 
 ## version
 

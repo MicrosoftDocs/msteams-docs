@@ -23,8 +23,8 @@ For search based messaging extension set the `type` parameter to `query`. Below 
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.3",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.4/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.4",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
   "packageName": "com.microsoft.teams.samples.bing",

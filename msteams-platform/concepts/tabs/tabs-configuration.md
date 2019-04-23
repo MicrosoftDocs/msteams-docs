@@ -32,7 +32,7 @@ On save, the code sets the parameters of `microsoftTeams.settings.setSettings`. 
   <input type="radio" name="maptype" value="google" onclick="onClick()"> Google Maps
 </form>
 
-<script src="node_modules/@microsoft/teams-js@1.3.3/dist/MicrosoftTeams.min.js"></script>
+<script src="node_modules/@microsoft/teams-js@1.4.1/dist/MicrosoftTeams.min.js"></script>
 
 <script type="text/javascript">  
 
