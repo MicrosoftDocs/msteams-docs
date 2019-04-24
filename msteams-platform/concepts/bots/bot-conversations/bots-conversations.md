@@ -10,7 +10,7 @@ A conversation is a series of messages sent between your bot and one or more use
 
 * `teams` Also called channel conversations, visible to all members of the channel.
 * `personal` Conversations between bots and a single user.
-* `groupchat` Chat between a bot and two or more users.
+* `groupchat` Chat between a bot and two or more users. Use of bots in `groupchat` is currently in [Developer Preview](~\resources\dev-preview\developer-preview-intro.md).
 
 A bot behaves slightly differently depending on what kind of conversation it is involved in:
 
@@ -77,7 +77,6 @@ Depending on which scopes are declared, your bot can receive messages in the fol
 
 * **personal chat** Users can interact in a private conversation with a bot by simply selecting the added bot in the chat history, or typing its name or app ID in the To: box on a new chat.
 * **Channels** A bot can be mentioned ("@_botname_") in a channel if it has been added to the team. Note that additional replies to a bot in a channel require mentioning the bot. It will not respond to replies where it is not mentioned.
-* **group chat** A bot can be mentioned ("@_botname_") in a groupchat if it has already been added. You can add a bot to a groupchat in the same manner that you would add another team member.
 
 For incoming messages, your bot receives an [`Activity`](/azure/bot-service/rest-api/bot-framework-rest-connector-activities?view=azure-bot-service-3.0) object of type `messageType: message`. Although the `Activity` object can contain other types of information, like [channel updates](~/concepts/bots/bots-notifications.md#channel-updates) sent to your bot, the `message` type represents communication between bot and user.
 
