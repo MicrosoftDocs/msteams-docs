@@ -36,7 +36,7 @@ Once a user has queried your extension, they’ll be presented with a list of re
 
 ## Issues
 
-Cards in messaging extensions only support the openUrl cardAction, including [deep links](~/concepts/deep-links) to tabs and bots.
+Cards in messaging extensions only support the openUrl cardAction, including [deep links](~/concepts/deep-links.md) to tabs and bots.
 
 ## Best practices
 
