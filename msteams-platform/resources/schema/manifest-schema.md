@@ -2,7 +2,7 @@
 title: Manifest schema reference
 description: Describes the schema supported by the manifest for Microsoft Teams
 keywords: teams manifest schema
-ms.date: 11/29/2018
+ms.date: 04/23/2019
 ---
 # Reference: Manifest schema for Microsoft Teams
 
@@ -19,6 +19,7 @@ The following schema sample shows all extensibility options.
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%",
   "packageName": "com.example.myapp",
+  "devicePermissions" : [ "geolocation", "media" ],
   "developer": {
     "name": "Publisher Name",
     "websiteUrl": "https://website.com/",
@@ -76,7 +77,7 @@ The following schema sample shows all extensibility options.
           ]
         },
         {
-          "scopes": [ "personal" ],
+          "scopes": [ "personal", "groupchat" ],
           "commands": [
             {
               "title": "Personal command 1",
@@ -108,6 +109,7 @@ The following schema sample shows all extensibility options.
           "title": "Example Command",
           "description": "Command Description; e.g., Search on the web",
           "initialRun": true,
+          "type" : "search",
           "parameters": [
             {
               "name": "keyword",
@@ -121,11 +123,14 @@ The following schema sample shows all extensibility options.
           "title": "Example Command 2",
           "description": "Command Description; e.g., Search for a customer",
           "initialRun": true,
+          "type" : "action",
+          "fetchTask" : true,
           "parameters": [
             {
               "name": "custinfo",
-              "title": "Customer name or ID",
-              "description": "Enter a customer name or ID to search for"
+              "title": "Customer name",
+              "description": "Enter a customer name",
+              "inputType" : "text"
             }
           ]
         }
@@ -249,7 +254,9 @@ The object is an array with all elements of the type `object`. This block is req
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 characters|✔|The https:// URL to use when configuring the tab.|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: `true`|
-|`scopes`|Array of enum|1|✔|Currently, configurable tabs support only the `team` scope, which means it can be provisioned only to a channel. Support for tabs in `groupchat` is in Developer Preview.|
+|`scopes`|Array of enum|1|✔|Currently, configurable tabs support only the `team` and `groupchat` scopes. |
+|`sharePointPreviewImage`|String|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
+|`supportedSharePointHosts`|Array of enum|1||Defines how your tab will be made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart` |
 
 ## staticTabs
 
@@ -289,7 +296,7 @@ An optional list of commands that your bot can recommend to users. The object is
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`items.properties`|array of enum|3|✔|Specifies the scope for which the command list is valid.|
+|`items.scopes`|array of enum|3|✔|Specifies the scope for which the command list is valid. Options are `team`, `personal`, and `groupchat`.|
 |`items.commands`|array of objects|10|✔|An array of commands the bot supports:<br>`title`: the bot command name (string, 32)<br>`description`: a simple description or example of the command syntax and its argument (string, 128)|
 
 ## connectors
@@ -332,13 +339,16 @@ Each command item is an object with the following structure:
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`|String|64 characters|✔|The ID for the command|
+|`type`|String|64 characters||Type of the command. One of `query` or `action`. Default: `query`|
 |`title`|String|32 characters|✔|The user-friendly command name|
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command|
 |`initialRun`|Boolean|||A Boolean value that indicates whether the command should be run initially with no parameters. Default: `false`|
+|`fetchTask`|Boolean|||A boolean value that indicates if it should fetch the task module dynamically|
 |`parameters`|Array of object|5|✔|The list of parameters the command takes. Minimum: 1; maximum: 5|
 |`parameter.name`|String|64 characters|✔|The name of the parameter as it appears in the client. This is included in the user request.|
 |`parameter.title`|String|32 characters|✔|User-friendly title for the parameter.|
 |`parameter.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
+|`parameter.inputType`|String|128 characters||Defines the type of control displayed on a task module for `fetchTask: true`. One of `text`, `textarea`, `number`, `date`, `time`, `toggle`|
 
 ## permissions
 
@@ -350,6 +360,18 @@ An array of `string` which specifies which permissions the app requests, which l
 * `messageTeamMembers` &emsp; Requires permission to send direct messages to team members
 
 Changing these permissions when updating your app will cause your users to repeat the consent process the first time they run the updated app. See [Updating your app](~/publishing/apps-publish.md#updating-your-app) for more information.
+
+## devicePermissions
+
+**Optional** Array of Strings
+
+Specifies the native features on a user's device that your app may request access to. Options are:
+
+*`geolocation`
+*`media`
+*`notifications`
+*`midi`
+*`openExternal`
 
 ## validDomains
 
@@ -363,3 +385,14 @@ It is **not** necessary to include the domains of identity providers you want to
 > Do not add domains that are outside your control, either directly or via wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid.
 
 The object is an array with all elements of the type `string`.
+
+## webApplicationInfo
+
+**Optional**
+
+Specify your AAD App ID and Graph information to help users seamlessly sign into your AAD app.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`id`|String|36 characters|✔|AAD application id of the app. This id must be a GUID.|
+|`resource`|String|2048 characters|✔|Resource url of app for acquiring auth token for SSO.|
