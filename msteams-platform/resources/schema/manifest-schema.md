@@ -367,11 +367,11 @@ Changing these permissions when updating your app will cause your users to repea
 
 Specifies the native features on a user's device that your app may request access to. Options are:
 
-*`geolocation`
-*`media`
-*`notifications`
-*`midi`
-*`openExternal`
+* `geolocation`
+* `media`
+* `notifications`
+* `midi`
+* `openExternal`
 
 ## validDomains
 
