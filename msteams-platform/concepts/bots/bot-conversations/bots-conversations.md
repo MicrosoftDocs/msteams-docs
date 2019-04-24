@@ -10,7 +10,7 @@ A conversation is a series of messages sent between your bot and one or more use
 
 * `teams` Also called channel conversations, visible to all members of the channel.
 * `personal` Conversations between bots and a single user.
-* `groupchat` Chat between a bot and two or more users. Use of bots in `groupchat` is currently in [Developer Preview](~\resources\dev-preview\developer-preview-intro.md).
+* `groupchat` Chat between a bot and two or more users. Use of bots in `groupchat` is currently in [Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
 
 A bot behaves slightly differently depending on what kind of conversation it is involved in:
 
@@ -142,7 +142,7 @@ When interacting in a channel, your bot should be smart about taking certain con
 ```
 
 > [!NOTE]
-> The text field for inbound messages sometimes contains mentions. Be sure to properly check and strip those. For more information, see [Mentions](~/concepts/bots/bot-conversations/bots-conv-channel.md#mentions).
+> The text field for inbound messages sometimes contains mentions. Be sure to properly check and strip those. For more information, see [Mentions](~/concepts/bots/bot-conversations/bots-conv-channel.md#-mentions).
 
 ## Teams channel data
 

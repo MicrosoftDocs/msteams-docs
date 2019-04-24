@@ -12,7 +12,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
-| 04/23/2019 | Action-based Messaging Extensions are now available | [Action-based Message Extensions](~//messaging-extensions/create-extensions.md) |
+| 04/23/2019 | Action-based Messaging Extensions are now available | [Action-based Message Extensions](~/concepts/messaging-extensions/create-extensions.md) |
 | 02/18/2018 | Creating [deep links](~/concepts/deep-links.md#deep-linking-to-a-chat) to private chat is out of developer preview and available |
 | 01/23/2019 | Surfacing SKU and licenceType information in the tab context | [Tab Context](~/concepts/tabs/tabs-context.md) |
 | 12/03/2018 | A new topic has been added discussing how to limit bot availability to specific single tenants.| [Bots for limited tenants](~/scenarios/limited-tenant.md) |
