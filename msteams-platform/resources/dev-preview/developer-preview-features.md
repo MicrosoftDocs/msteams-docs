@@ -10,17 +10,9 @@ ms.date: 03/15/2019
 When these features are out of developer preview this content will be merged into the live doc set.
 The developer preview includes the following new features:
 
-## Initiate an action from a Message Extension
-
-Action-based messaging extensions allow your users to trigger actions in external services while inside of Teams. See [Initiate actions with messaging extensions](~/concepts/messaging-extensions/create-extensions.md)
-
 ## Respond to message extension submit action with an adaptive card message sent from a bot
 
 You can also respond to the submit action by inserting a message with an [adaptive card](~/concepts/cards/cards.md#adaptive-cards) into the channel with a bot. Your user will be able to preview the message before submitting it, and potentially edit/interact with it as well. This can be very useful in scenarios where you need to gather information from your users before creating an adaptive card response. The following scenario shows how you can use this flow to configure a poll without including the configuration steps in the channel message. See [Respond with an adaptive card message sent from a bot](~/concepts/messaging-extensions/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot).
-
-## Request device permissions in tabs
-
-You can request access to native device permissions like a camera, microphone, device location, and notifications. See [Request permissions for your Microsoft Teams tab](~/concepts/tabs/tabs-device-permissions.md).
 
 ## Trigger messaging extension from links inserted into the compose message box
 
@@ -62,7 +54,6 @@ All events sent to your bot have been updated to have a new `conversationType` f
         "conversationType": "groupChat",
         "isGroup": true,
     },
-
 ```
 
 * If `conversationType` is `groupChat` or `channel`, then the `isGroup` field is included and set to true for backwards compatibility
@@ -92,15 +83,8 @@ The [Developer preview manifest](~/resources/schema/manifest-schema-dev-preview.
 
 See [What is the Public Developer Preview for Microsoft Teams?](~/resources/dev-preview/developer-preview.md) for more information on enabling it for your development tenant.
 
-### Samples
-
-The samples in this section have been updated to include this feature:
-
-* [Featured code samples](~/samples/code-samples.md#featured)
-
 ### Known issues
 
-* The UI shown in Developer Preview is still being developed
 * If you upload an app with a bot to a chat in the *Developer Preview* version of Teams, and you switch back to the *Public* version, there might be some UI or behavior inconsistencies. If you run into any issues, please uninstall the app in *Developer Preview*
 * Bot menus do not currently work with the `groupchat` scope
 * There is a limit of 5 uploaded apps per chat
