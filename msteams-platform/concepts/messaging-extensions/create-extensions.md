@@ -5,9 +5,6 @@ keywords: teams messaging extensions messaging extensions search
 ms.date: 03/15/2019
 ---
 
-> [!NOTE]
-> Action-based message extensions are in [developer preview](~/resources/dev-preview/developer-preview-intro.md).
-
 # Initiate actions with messaging extensions
 
 Action-based messaging extensions allow your users to trigger actions in external services while inside of Teams.
@@ -126,7 +123,7 @@ To initiate actions from a  messaging extension set the `type` parameter to `act
 > [!NOTE]
 > Initiating actions from messages is in [developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
-In addition to initiatinghttps://review.docs.microsoft.com/en-us/microsoftteams/platform/?branch=ac-landing-page actions from the compose message area, you can also use your messaging extension to initiate an action from a message. This will allow you to send the contents of the message to your bot for processing, and optionally reply to that message with a response using the method described in [Responding to submit](#responding-to-submit). The response will be inserted as a reply to the message that your users can edit before submitting. Your users can access your messaging extension from the overflow `...` menu and then selecting `Take action` as in the image below.
+In addition to initiating actions from the compose message area, you can also use your messaging extension to initiate an action from a message. This will allow you to send the contents of the message to your bot for processing, and optionally reply to that message with a response using the method described in [Responding to submit](#responding-to-submit). The response will be inserted as a reply to the message that your users can edit before submitting. Your users can access your messaging extension from the overflow `...` menu and then selecting `Take action` as in the image below.
 
 ![Example of initiating an action from a message](~/assets/images/compose-extensions/messageextensions_messageaction.png)
 
