@@ -313,11 +313,11 @@ These are the different expected responses to a `submitAction`.
 
 This is used when your extension needs to chain dialogs together to get more information. The response is exactly the same as `fetchTask` mentioned earlier.
 
-### Compose extension auth/config response
+### Messaging extension auth/config response
 
 This is used when your extension needs to either authenticate or configure in order to continue. See [authentication section](~/concepts/messaging-extensions/search-extensions.md#authentication) in the search section for more details.
 
-### Compose extension result response
+### Messaging extension result response
 
 This used to insert a card into the compose box as a result of a the command. It's the same response that's used in the search command, but it's limited to one card or one result in the array.
 
