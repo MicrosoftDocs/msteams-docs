@@ -77,6 +77,24 @@ When navigating to a deep link, Microsoft Teams simply navigates to the tab and 
 
 The [`microsoftTeams.getContext`](/javascript/api/@microsoft/teams-js#getcontext--context--context-----void-) call returns a context that includes the `subEntityId` field if the tab was navigated to via a deep link.
 
+## Deep linking from your tab
+
+You can deeplink to content in Teams from your tab. This is useful if your tab needs to link to other content in Teams such as to a channel, message, another tab or even to open a scheduling dialog. To trigger a deeplink from your tab you should call:
+
+```Javascript
+microsoftTeams.executeDeepLink(/*deepLink*/);
+```
+
+This will navigate you to the correct URL, or trigger a client action such as opening a scheduling or app install dialog. Example:
+
+```Javascript
+// Open a scheduling dialog from your tab
+microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=​​​​​​​test%3Acontent​​​​​​​​​​​​​​");
+
+// Open an app install dialog from your tab
+microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-4f12-872d-c737b174bcb4");
+```
+
 ## Deep linking to a chat
 
 You can create deep links to private chats between users by specifying the set of participants. If a chat doesn't exist with the specified participants, the link will navigate the user to an empty new chat. New chats will be created in draft state until the user sends the first message. Optionally, you can specify the name of the chat (if it doesn't already exist), along with text that should be inserted into the user's compose box. You can think of this feature as a shortcut for the user taking the manual action of navigating to or creating the chat, and then typing out the message.
