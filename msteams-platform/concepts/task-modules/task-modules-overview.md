@@ -53,7 +53,7 @@ The `TaskInfo` object contains the metadata for a task module. The object defini
 | --- | --- | --- |
 | `title` | string | Appears below the app name and to the right of the app icon |
 | `height` | number or string | This can be a number representing the task module's height in pixels, or `small`, `medium`, or `large`. [See below for how height and width are handled](#task-module-sizing). |
-| `width` | string | This can be a number representing the task module's width in pixels, or `small`, `medium`, or `large`. [See below for how height and width are handled](#task-module-sizing). |
+| `width` | number or string | This can be a number representing the task module's width in pixels, or `small`, `medium`, or `large`. [See below for how height and width are handled](#task-module-sizing). |
 | `url` | string | The URL of the page loaded as an `<iframe>` inside the task module. The URL's domain must be in the app's [validDomains array](~/resources/schema/manifest-schema.md#validdomains) in your app's manifest. |
 | `card` | Adaptive card or an Adaptive card bot card attachment | The JSON for the Adaptive card to appear in the task module. If you're invoking from a bot, you'll need to use the Adaptive card JSON in a Bot Framework `attachment` object. From a tab you'll use just an Adaptive Card. [Here's an example.](#adaptive-card-or-adaptive-card-bot-card-attachment) |
 | `fallbackUrl` | string | If a client does not support the task module feature, this URL is opened in a browser tab. |
