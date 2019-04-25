@@ -125,6 +125,44 @@ bot.on('conversationUpdate', (msg) => {
 
 Your bot receives a `conversationUpdate` with `membersAdded` when a user adds it directly for personal chat. In this case, the payload that your bot receives doesn't contain the `channelData.team` object. You should use this as a filter in case you want your bot to offer a different [welcome message](~/concepts/bots/bot-conversations/bots-conv-personal#best-practice-welcome-messages-in-11-conversations) depending on scope.
 
+>[!NOTE] For personal scoped bots, your bot will only ever receive the `conversationUpdate` event a single time, even if the bot is removed and re-added.
+
+#### Schema example: bot added to personal context
+```json
+{
+  "membersAdded": [{
+      "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0"
+    },
+    {
+      "id": "29:<userID>",
+      "aadObjectId": "***"
+    }
+  ],
+  "type": "conversationUpdate",
+  "timestamp": "2019-04-23T10:17:44.349Z",
+  "id": "f:5f85c2ad",
+  "channelId": "msteams",
+  "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+  "from": {
+    "id": "29:<USERID>",
+    "aadObjectId": "***"
+  },
+  "conversation": {
+    "conversationType": "personal",
+    "id": "***"
+  },
+  "recipient": {
+    "id": "28:<BOT ID>",
+    "name": "<BOT NAME>"
+  },
+  "channelData": {
+    "tenant": {
+      "id": "<TENANT ID>"
+    }
+  }
+}
+```
+
 ## Team member or bot removed
 
 The `conversationUpdate` event with the `membersRemoved` object in the payload is sent when either your bot is removed from a team, or a user is removed from a team where a bot has been added. Microsoft Teams also adds `eventType.teamMemberRemoved` in the `channelData` object. As with the `membersAdded` object, you should parse the `membersRemoved` object for your bot's App ID to determine who was removed.
