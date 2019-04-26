@@ -169,7 +169,7 @@
   - name: Localizing your app
     href: ./publishing/apps-localization.md
   - name: App self-assessment program
-    href: ./publishing/app-self-assessment
+    href: ./publishing/apps-self-assessment
 - name: App scenarios
   href: ./scenarios/lob-scenarios-landing-page.md
   items:
