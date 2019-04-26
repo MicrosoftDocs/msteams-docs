@@ -11,9 +11,13 @@ As part of the [app submission process](~/platform/publishing/apps-publish.md) y
 
 Once you've completed the assessment your app will receive the following benefits:
 
-* A badge prominently displayed on your app in the app store, making it easy for potential customers to identify your app.
-* A badge will be displayed in the [administrative portal](/microsoftteams/admin-settings) when IT admins are setting app policies.
+* A badge prominently displayed on your app in the app store, making it easy for potential customers to identify your app. The badge will also be displayed in the [administrative portal](/microsoftteams/admin-settings) when IT admins are setting app policies.
+
+_screenshot goes here_
+
 * You responses will be compiled and a page for your app will be created on [this site](/otherplace). You'll be able to point your customers to this page for complete information on your app, instead of responding to requests for information individually.
+
+_screenshot goes here_
 
 ## How to join the program
 
