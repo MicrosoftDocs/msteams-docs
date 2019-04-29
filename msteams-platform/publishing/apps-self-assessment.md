@@ -1,13 +1,17 @@
 ---
-title: Apps self-assessment
+title: Developer self-assessment program
 description: Describes the self-assessment program from store apps
 keywords: teams compliance appsource store self assessment partner center
 ms.date: 05/06/2019
 ---
 
-# Microsoft Teams apps self-assessment program
+# Microsoft Teams developer self-assessment program
+
+//be more introductory
 
 As part of the [app submission process](~/platform/publishing/apps-publish.md) you'll have the option to complete a voluntary self-assessment covering your app security, data handling and compliance practices. The information you provide will be processed and presented to your potential customers so that they may better evaluate your app before enabling it for their organization. App developers that complete the assessment will receive a badge that will be displayed alongside your app in the app store, making easy for customers to identify apps that will be significantly simpler for their organization to evaluate and enable.
+
+## Program benefits
 
 Once you've completed the assessment your app will receive the following benefits:
 
@@ -33,4 +37,8 @@ For newly submitted apps, or update submissions to existing apps, you'll be aske
 
 ### Information you'll need to provide
 
-TBD
+When you're completing the self-assessment, you'll need the following types of information:
+
+* **General:** Basic information about your app like name, description, where it is hosted etc.
+* **Security:** You'll need to provide information about password policies, data encryption, and auditing of your application.
+* **Compliance:** 
