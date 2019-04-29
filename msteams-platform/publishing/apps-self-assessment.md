@@ -13,6 +13,8 @@ As part of the [app submission process](~/platform/publishing/apps-publish.md) y
 
 ## Program benefits
 
+// remove badge, split second benefit
+
 Once you've completed the assessment your app will receive the following benefits:
 
 * A badge prominently displayed on your app in the app store, making it easy for potential customers to identify your app. The badge will also be displayed in the [administrative portal](/microsoftteams/admin-settings) when IT admins are setting app policies.
@@ -37,8 +39,16 @@ For newly submitted apps, or update submissions to existing apps, you'll be aske
 
 ### Information you'll need to provide
 
-When you're completing the self-assessment, you'll need the following types of information:
+When you're completing the self-assessment, you'll need the following types of information.
 
-* **General:** Basic information about your app like name, description, where it is hosted etc.
-* **Security:** You'll need to provide information about password policies, data encryption, and auditing of your application.
-* **Compliance:** 
+#### General
+
+Basic information about your app like licensing details and contact information.
+
+#### Data Handling
+
+Information about what data your app is collecting, why you're collecting that information, and does the administrator have any control over what information is collection. Examples include data accessed through Microsoft Graph, any bot capabilities, and any telemetry you're collecting.
+
+#### Security & Compliance
+
+AD & attributes related to security and compliance of the entire app, information is stored in Microsoft Cloud App Security catalog (link to that)
