@@ -7,23 +7,13 @@ ms.date: 05/06/2019
 
 # Microsoft Teams developer self-assessment program
 
-//be more introductory
+The Microsoft Teams developer self-assessment program is a voluntary self-assessment of your app's security, data handling and compliance practices. The information you provide will be processed and presented to your potential customers so they can better evaluate your app before enabling it for their organization. As part of the [app submission process](~/platform/publishing/apps-publish.md) you'll have the option to complete the self-assessment, which will then be compiled and presented to Microsoft Teams administrators.
 
-As part of the [app submission process](~/platform/publishing/apps-publish.md) you'll have the option to complete a voluntary self-assessment covering your app security, data handling and compliance practices. The information you provide will be processed and presented to your potential customers so that they may better evaluate your app before enabling it for their organization. App developers that complete the assessment will receive a badge that will be displayed alongside your app in the app store, making easy for customers to identify apps that will be significantly simpler for their organization to evaluate and enable.
+![Microsoft Teams developer self-assessment](~/assets/images/self-assessment.png)
 
 ## Program benefits
 
-// remove badge, split second benefit
-
-Once you've completed the assessment your app will receive the following benefits:
-
-* A badge prominently displayed on your app in the app store, making it easy for potential customers to identify your app. The badge will also be displayed in the [administrative portal](/microsoftteams/admin-settings) when IT admins are setting app policies.
-
-_screenshot goes here_
-
-* You responses will be compiled and a page for your app will be created on [this site](/otherplace). You'll be able to point your customers to this page for complete information on your app, instead of responding to requests for information individually.
-
-_screenshot goes here_
+Once you've completed the assessment your responses will be compiled and a page for your app will be created on [this site](/otherplace). Instead of responding to requests for information individually, you'll be able to point your customers here for complete information on your app. Microsoft Teams administrators are encouraged to use this catalogue to discover new apps that will be easier for them to assess and onboard into their organizations.
 
 ## How to join the program
 
@@ -47,7 +37,7 @@ Basic information about your app like licensing details and contact information.
 
 #### Data Handling
 
-Information about what data your app is collecting, why you're collecting that information, and does the administrator have any control over what information is collection. Examples include data accessed through Microsoft Graph, any bot capabilities, and any telemetry you're collecting.
+Information about what data your app is collecting, why you're collecting that information, and if the administrator has any control over the collected information. Examples include data accessed through Microsoft Graph, any bot capabilities, and any telemetry you're collecting.
 
 #### Security & Compliance
 
