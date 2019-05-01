@@ -41,4 +41,4 @@ Information about what data your app is collecting, why you're collecting that i
 
 #### Security & Compliance
 
-AD & attributes related to security and compliance of the entire app, information is stored in Microsoft Cloud App Security catalog (link to that)
+Information related to security and compliance of the entire app (not just your Teams app, but the underlying services as well). The information is stored in Microsoft Cloud App Security catalog (link to that).
