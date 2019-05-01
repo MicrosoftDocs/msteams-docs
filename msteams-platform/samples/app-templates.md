@@ -18,22 +18,8 @@ App templates are production-ready apps for Microsoft Teams that are community d
 
 ## Available app templates
 
-### SharePoint List Search
-
-The List Search app template allows you to search your SharePoint lists and insert information about that item directly into a chat. This app makes use of [task modules](~/concepts/task-modules/task-modules-overview.md) triggered from a [action-based messaging extension](~/concepts/messaging-extensions/create-extensions.md) to allow your users to search across multiple SharePoint lists and then insert the results into a chat as an [adaptive card](~/concepts/cards/cards-reference.md#adaptive-card.md), along with a link to the item in SharePoint.
-
-When you are configuring the app you can specify which SharePoint lists your users will be able to search, as well as what columns they will search across. You can also specify more than one administrator that can alter these settings as your needs evolve.
-
-[Get it on GitHub here](https://github.com)
-
-### Icebreaker
-
-Icebreaker is a [Microsoft Teams bot](~/concepts/bots/bots-overview.md) that helps your team get closer by pairing two random team members up every week at to meet. The bot also makes scheduling easy by automatically suggesting free times that work for both members. Strengthen personal connections and build a tightly knit community with this app.
-
-[Get it on GitHub here](https://github.com)
-
 ### Customer Stickers
 
 Self-expression is core to a healthy team culture. This app template is a [messaging extension](~/concepts/messaging-extensions/search-extensions.md) that enables your users to use custom stickers and GIFs within Microsoft Teams. This template provides an easy web-based configuration experience where anyone with configuration access can upload the GIFs/stickers/images they want their end-users to have, allowing your entire team to use any set of stickers you chose.
 
-[Get it on GitHub here](https://github.com)
+[Get it on GitHub here](https://github.com/OfficeDev/microsoft-teams-stickers-app)
