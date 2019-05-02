@@ -168,8 +168,8 @@
     href: ./publishing/office-store-guidance.md
   - name: Localizing your app
     href: ./publishing/apps-localization.md
-  - name: App self-assessment program
-    href: ./publishing/apps-self-assessment
+  - name: Application Certification
+    href: ./publishing/application-certification.md
 - name: App scenarios
   href: ./scenarios/lob-scenarios-landing-page.md
   items:
