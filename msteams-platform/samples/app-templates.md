@@ -2,7 +2,7 @@
 title: Microsoft Teams app templates
 description: Links and descriptions of app templates for the Microsoft Teams platform
 keywords: Microsoft Teams templates samples demo
-ms.date: 05/06/2019
+ms.date: 05/05/2019
 
 # App Templates for Microsoft Teams
 
