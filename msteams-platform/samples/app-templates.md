@@ -26,7 +26,7 @@ This app also enables easy sharing of images/GIFs/stickers across teams without 
 
 [Get it on GitHub here](https://github.com/OfficeDev/microsoft-teams-stickers-app)
 
-![Store icon](~/assets/images/stickers.png)
+![Stickers app](~/assets/images/stickers.png)
 
 ### Icebreaker
 
@@ -36,6 +36,6 @@ In addition to encouraging personal connections across your entire team, the Ice
 
 [Get it on GitHub here](https://github.com)
 
-![Store icon](~/assets/images/icbreaker.png)
+![Icebreaker app](~/assets/images/icebreaker.png)
 
 Have an idea for an app template you'd like to see? Please let us know [here](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
