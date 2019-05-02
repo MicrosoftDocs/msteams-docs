@@ -259,7 +259,11 @@
   href: ./troubleshoot/troubleshoot.md
 - name: FAQ
   href: ./troubleshoot/faq.md
-- name: Samples
-  href: ./samples/code-samples.md
+- name: Samples & templates
+  items: 
+  - name: Sample apps
+    href: ./samples/code-samples.md
+  - name: App templates
+    href: ./samples/app-templates.md
 - name: Feedback
   href: ./feedback.md
