@@ -3,6 +3,7 @@ title: Microsoft Teams app templates
 description: Links and descriptions of app templates for the Microsoft Teams platform
 keywords: Microsoft Teams templates samples demo
 ms.date: 05/05/2019
+---
 
 # App Templates for Microsoft Teams
 
@@ -35,6 +36,6 @@ In addition to encouraging personal connections across your entire team, the Ice
 
 [Get it on GitHub here](https://github.com)
 
-![Store icon](~/assets/images/icebreaker.png)
+![Store icon](~/assets/images/icbreaker.png)
 
 Have an idea for an app template you'd like to see? Please let us know [here](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
