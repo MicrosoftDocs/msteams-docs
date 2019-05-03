@@ -2,13 +2,17 @@
 title: Features in the Public Developer Preview
 description: Describes the features in the Public Developer Preview of Microsoft Teams
 keywords: teams preview developer features
-ms.date: 03/15/2019
+ms.date: 05/03/2019
 ---
 
 # Features in the Public Developer Preview for Microsoft Teams
 
 When these features are out of developer preview this content will be merged into the live doc set.
 The developer preview includes the following new features:
+
+## Embed Share-to-Teams button on your website
+
+You can now embed a Share-to-Teams button on your website that will insert a message into a channel. For Education tenants, you can also create an assigment from an external website using the same functionality. See [Share-to-Teams](~/concepts/share-to-teams.md).
 
 ## Respond to message extension submit action with an adaptive card message sent from a bot
 
