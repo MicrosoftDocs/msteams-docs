@@ -7,7 +7,7 @@ ms.date: 04/01/2019
 # Creating a Share-to-Teams embedded button
 
 >[!NOTE]
->Share-to-Teams is currently in [Developer Preview](~/resources/dev-preview/developer-preview-intro.md). 
+>Share-to-Teams is currently in [Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
 >
 >To view this functionality in Developer Preview, you'll need to:
 >
@@ -19,6 +19,8 @@ ms.date: 04/01/2019
 >1. Proceed to test your application in a separate tab in the same browser.
 >
 >If you receive the error message "The resource you are looking for has been removed, had its name changed, or is temporarily unavailable." you have not properly configured your browser session to use Developer Preview.
+>
+>**Safari and mobile browsers are not currently supported.**
 
 Third-party websites can use the launcher script to embed Share-to-Teams buttons on their webpages which will launch the Share-to-Teams experience in a popup window when clicked. This will allow you to share a link directly to any person or Microsoft Teams channel without switching context.
 
@@ -43,7 +45,7 @@ Next, add an HTML element on your webpage with the `teams-share-button` class at
 
 This will add the Microsoft Teams icon to your website.
 
-![Share-to-Teams icon](~/assets/images/share-to-teams-icon.png)
+![Share-to-Teams icon](~/assets/icons/share-to-teams-icon.png)
 
 Optionally, if you want a different icon size for the Share-to-Teams button, use the `data-icon-px-size` attribute.
 
