@@ -13,7 +13,7 @@ The Microsoft Teams application certification program is a voluntary self-assess
 
 ## Program benefits
 
-Once you've completed the assessment your responses will be compiled and a page for your app will be created on [this site](/otherplace). Instead of responding to requests for information individually, you'll be able to point your customers here for complete information on your app. Microsoft Teams administrators are encouraged to use this catalogue to discover new apps that will be easier for them to assess and onboard into their organizations.
+Once you've completed the assessment your responses will be compiled and a page for your app will be created on [this site](https://aka.ms/AppCertification). Instead of responding to requests for information individually, you'll be able to point your customers here for complete information on your app. Microsoft Teams administrators are encouraged to use this catalogue to discover new apps that will be easier for them to assess and onboard into their organizations.
 
 ## How to join the program
 
@@ -41,4 +41,4 @@ Information about what data your app is collecting, why you're collecting that i
 
 #### Security & Compliance
 
-Information related to security and compliance of the entire app (not just your Teams app, but the underlying services as well). The information is stored in Microsoft Cloud App Security catalog (link to that).
+Information related to security and compliance of the entire app (not just your Teams app, but the underlying services as well). The information is stored in Microsoft Cloud App Security catalog.
