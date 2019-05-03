@@ -18,7 +18,7 @@ App templates are production-ready apps for Microsoft Teams that are community d
 
 ## Available app templates
 
-### Customer Stickers
+### Custom Stickers
 
 Self-expression is core to a healthy team culture. This app template is a [messaging extension](~/concepts/messaging-extensions/search-extensions.md) that enables your users to use custom stickers and GIFs within Microsoft Teams. This template provides an easy web-based configuration experience where anyone with configuration access can upload the GIFs/stickers/images they want their end-users to have, allowing your entire team to use any set of stickers you chose.
 
