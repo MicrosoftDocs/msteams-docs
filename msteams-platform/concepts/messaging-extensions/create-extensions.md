@@ -23,8 +23,8 @@ To initiate actions from a  messaging extension set the `type` parameter to `act
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
-  "manifestVersion": "devPreview",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.4/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.4",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
   "packageName": "com.microsoft.teams.samples.Todo",
