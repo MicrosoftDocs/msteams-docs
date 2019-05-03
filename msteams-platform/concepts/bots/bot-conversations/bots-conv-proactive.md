@@ -63,22 +63,29 @@ This ID is the personal chat's unique conversation ID. Please store this value a
 This example uses the [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet package.
 
 ```csharp
-// Create or get existing chat conversation with user
-var response = client.Conversations.CreateOrGetDirectConversation(activity.Recipient, activity.From, activity.GetTenantId());
+var channelData = context.Activity.GetChannelData<TeamsChannelData>();
+var message = Activity.CreateMessageActivity();
+message.Text = "Hello World";
 
-// Construct the message to post to conversation
-Activity newActivity = new Activity()
+var conversationParameters = new ConversationParameters
 {
-    Text = "Hello",
-    Type = ActivityTypes.Message,
-    Conversation = new ConversationAccount
-    {
-        Id = response.Id
-    },
+      IsGroup = true,
+      ChannelData = new TeamsChannelData
+      {
+          Channel = new ChannelInfo(channelData.Channel.Id),
+      },
+      Activity = (Activity) message
 };
 
-// Post the message to chat conversation with user
-await client.Conversations.SendToConversationAsync(newActivity, response.Id);
+var connectorClient = new ConnectorClient(new Uri(activity.ServiceUrl));
+var response = await connectorClient.Conversations.CreateConversationAsync(conversationParameters);
+```
+
+If you are calling this from outside the bot's controller, you'll need to call *TrustServiceUrl* on *serviceUrl* as in the example below.
+
+```csharp
+MicrosoftAppCredentials.TrustServiceUrl(serviceUrl, DateTime.MaxValue);
+var connectorClient = new ConnectorClient(new Uri(serviceUrl));
 ```
 
 ### Using Node.js
