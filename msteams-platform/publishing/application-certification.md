@@ -5,19 +5,19 @@ keywords: teams compliance appsource store  partner center
 ms.date: 05/06/2019
 ---
 
-# Microsoft Teams Application Certification
+# Microsoft Teams App Certification
 
-The Microsoft Teams application certification program is a voluntary self-assessment of your app's security, data handling and compliance practices. The information you provide will be processed and presented to your potential customers so they can better evaluate your app before enabling it for their organization. As part of the [app submission process](~/platform/publishing/apps-publish.md) you'll have the option to complete the assessment, which will then be compiled and presented to Microsoft Teams administrators.
+The Microsoft Teams app certification program, starts with a pilot that allows you to submit a voluntary self-assessment of your app's security, data handling and compliance practices. The information you provide will be processed and presented to your potential customers so they can better evaluate your app before enabling it for their organization. As part of the [app submission process](~/platform/publishing/apps-publish.md) you'll have the option to complete the assessment, which will then be compiled and presented to Microsoft Teams administrators.
 
 ![Microsoft Teams Application Certification](~/assets/images/self-assessment.png)
 
 ## Program benefits
 
-Once you've completed the assessment your responses will be compiled and a page for your app will be created on [this site](https://aka.ms/AppCertification). Instead of responding to requests for information individually, you'll be able to point your customers here for complete information on your app. Microsoft Teams administrators are encouraged to use this catalogue to discover new apps that will be easier for them to assess and onboard into their organizations.
+Once you've completed the assessment your responses will be compiled and a page for your app will be created on [this site](https://aka.ms/AppCertification). Instead of responding to requests for information individually, you'll be able to point your customers here for complete information on your app's data handling, security and compliance practices. Microsoft Teams administrators are encouraged to use this catalogue to discover new apps that will be easier for them to assess and onboard into their organizations.
 
 ## How to join the program
 
-Completing application certification is voluntary, but highly encouraged. Just let us know you're interested and we'll guide you through the process.
+Completing app certification is voluntary, but highly encouraged. Just let us know you're interested and we'll guide you through the process.
 
 ### For existing store apps
 
