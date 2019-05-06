@@ -113,13 +113,6 @@ bot.send(msg);
 
 Your team-added bot can post into a channel to create a reply chain. If you're using the Node.js Teams SDK, use `startReplyChain()` which gives you a fully-populated address with the correct activity id and conversation id. If you are using C#, see the example below.
 
-In the past it was recommended to use `bot.beginDialog` which could cause the following problems:
-
-- You would not be able to append to that reply chain since the conversation id is incorrect
-- If the dialog sent multiple messages (or requires multiple turns) that would create separate reply chains in the channel.
-
-This is no longer recommended.
-
 Alternatively, you can use the REST API and issue a POST request to [`/conversations`](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) resource.
 
 #### .NET example (from [this sample](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs))
@@ -134,9 +127,6 @@ using System.Threading.Tasks;
 
 namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
 {
-    /// <summary>
-    /// This is Proactive Message Dialog Class. Main purpose of this class is to show the Send Proactive Message Example
-    /// </summary>
     [Serializable]
     public class ProactiveMsgTo1to1Dialog : IDialog<object>
     {
@@ -147,34 +137,23 @@ namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
                 throw new ArgumentNullException(nameof(context));
             }
 
-            //Set the Last Dialog in Conversation Data
-            context.UserData.SetValue(Strings.LastDialogKey, Strings.LastDialogSend1on1Dialog);
-
-            var userId = context.Activity.From.Id;
-            var botId = context.Activity.Recipient.Id;
-            var botName = context.Activity.Recipient.Name;
-
             var channelData = context.Activity.GetChannelData<TeamsChannelData>();
-            var connectorClient = new ConnectorClient(new Uri(context.Activity.ServiceUrl));
+            var message = Activity.CreateMessageActivity();
+            message.Text = "Hello World";
 
-            var parameters = new ConversationParameters
+            var conversationParameters = new ConversationParameters
             {
-                Bot = new ChannelAccount(botId, botName),
-                Members = new ChannelAccount[] { new ChannelAccount(userId) },
-                ChannelData = new TeamsChannelData
-                {
-                    Tenant = channelData.Tenant
-                }
+                  IsGroup = true,
+                  ChannelData = new TeamsChannelData
+                  {
+                      Channel = new ChannelInfo(channelData.Channel.Id),
+                  },
+                  Activity = (Activity) message
             };
 
-            var conversationResource = await connectorClient.Conversations.CreateConversationAsync(parameters);
-
-            var message = Activity.CreateMessageActivity();
-            message.From = new ChannelAccount(botId, botName);
-            message.Conversation = new ConversationAccount(id: conversationResource.Id.ToString());
-            message.Text = Strings.Send1on1Prompt;
-
-            await connectorClient.Conversations.SendToConversationAsync((Activity)message);
+            MicrosoftAppCredentials.TrustServiceUrl(serviceUrl, DateTime.MaxValue);
+            var connectorClient = new ConnectorClient(new Uri(activity.ServiceUrl));
+            var response = await connectorClient.Conversations.CreateConversationAsync(conversationParameters);
 
             context.Done<object>(null);
         }

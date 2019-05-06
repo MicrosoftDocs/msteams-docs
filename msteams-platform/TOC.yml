@@ -159,6 +159,8 @@
     href: ./concepts/outgoingwebhook.md
   - name: Deep links
     href: ./concepts/deep-links.md
+  - name: Share-to-Teams
+    href: ./share-to-teams.md
 - name: Publishing
   href: ./publishing/apps-publish.md
   items:
@@ -168,6 +170,8 @@
     href: ./publishing/office-store-guidance.md
   - name: Localizing your app
     href: ./publishing/apps-localization.md
+  - name: Application Certification
+    href: ./publishing/application-certification.md
 - name: App scenarios
   href: ./scenarios/lob-scenarios-landing-page.md
   items:
@@ -257,7 +261,11 @@
   href: ./troubleshoot/troubleshoot.md
 - name: FAQ
   href: ./troubleshoot/faq.md
-- name: Samples
-  href: ./samples/code-samples.md
+- name: Samples & templates
+  items: 
+  - name: Sample apps
+    href: ./samples/code-samples.md
+  - name: App templates
+    href: ./samples/app-templates.md
 - name: Feedback
   href: ./feedback.md
