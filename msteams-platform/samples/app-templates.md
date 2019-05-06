@@ -34,7 +34,7 @@ Icebreaker is a [Microsoft Teams bot](~/concepts/bots/bots-overview.md) that hel
 
 In addition to encouraging personal connections across your entire team, the Icebreaker app can help cultivate interest-based communities within your organization. For example, you can use this app for a DevOps interest group to help ideas and best practices organically spread across your organization.
 
-[Get it on GitHub here](https://github.com)
+[Get it on GitHub here](https://github.com/OfficeDev/microsoft-teams-icebreaker-app)
 
 ![Icebreaker app](~/assets/images/icebreaker.png)
 
