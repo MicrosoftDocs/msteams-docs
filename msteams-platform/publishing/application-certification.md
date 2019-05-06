@@ -7,7 +7,7 @@ ms.date: 05/06/2019
 
 # Microsoft Teams App Certification
 
-The Microsoft Teams app certification program, starts with a pilot that allows you to submit a voluntary self-assessment of your app's security, data handling and compliance practices. The information you provide will be processed and presented to your potential customers so they can better evaluate your app before enabling it for their organization. As part of the [app submission process](~/platform/publishing/apps-publish.md) you'll have the option to complete the assessment, which will then be compiled and presented to Microsoft Teams administrators.
+The Microsoft Teams app certification program, is a pilot program that allows you to complete a voluntary self-assessment of your app's security, data handling and compliance practices. The information you provide will be processed and presented to your potential customers so they can better evaluate your app before enabling it for their organization. As part of the [app submission process](~/platform/publishing/apps-publish.md) you'll have the option to complete the assessment, which will then be compiled and presented to Microsoft Teams administrators.
 
 ![Microsoft Teams App Certification](~/assets/images/self-assessment.png)
 
