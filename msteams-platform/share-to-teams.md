@@ -2,7 +2,7 @@
 title: Share to Teams embedded button
 description: How to add the Share-to-Teams embedded button on your website
 keywords: Share Teams Share-to-Teams
-ms.date: 04/01/2019
+ms.date: 05/06/2019
 ---
 # Creating a Share-to-Teams embedded button
 
@@ -20,7 +20,7 @@ ms.date: 04/01/2019
 >
 >If you receive the error message "The resource you are looking for has been removed, had its name changed, or is temporarily unavailable." you have not properly configured your browser session to use Developer Preview.
 >
->**Safari and mobile browsers are not currently supported.**
+>**Only the desktop versions of Edge, Firefox, and Chrome are supported.**
 
 Third-party websites can use the launcher script to embed Share-to-Teams buttons on their webpages which will launch the Share-to-Teams experience in a popup window when clicked. This will allow you to share a link directly to any person or Microsoft Teams channel without switching context.
 
