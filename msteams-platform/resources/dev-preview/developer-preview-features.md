@@ -12,7 +12,7 @@ The developer preview includes the following new features:
 
 ## Embed Share-to-Teams button on your website
 
-You can now embed a Share-to-Teams button on your website that will insert a message into a channel. For Education tenants, you can also create an assigment from an external website using the same functionality. See [Share-to-Teams](~/concepts/share-to-teams.md).
+You can now embed a Share-to-Teams button on your website that will insert a message into a channel. For Education tenants, you can also create an assigment from an external website using the same functionality. See [Share-to-Teams](~/share-to-teams.md).
 
 ## Respond to message extension submit action with an adaptive card message sent from a bot
 
