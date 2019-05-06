@@ -159,6 +159,8 @@
     href: ./concepts/outgoingwebhook.md
   - name: Deep links
     href: ./concepts/deep-links.md
+  - name: Share-to-Teams
+    href: ./share-to-teams.md
 - name: Publishing
   href: ./publishing/apps-publish.md
   items:

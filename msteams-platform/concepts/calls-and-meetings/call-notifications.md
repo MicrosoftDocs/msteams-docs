@@ -7,11 +7,11 @@ ms.date: 04/02/2019
 
 # Incoming call notifications: technical details
 
-In [Registering a calling and meeting bot for Microsoft Teams](registering-calling-bot.md#creating-a-new-bot-or-adding-calling-capabilities-to-an-existing-bot), we mentioned the **Webhook (for calling)** URL, the webhook endpoint for all incoming calls to your bot. This topic discusses the technical details you'll need to respond to these notifications.
+In [Registering a calling and meeting bot for Microsoft Teams](~/concepts/calls-and-meetings/registering-calling-bot.md#creating-a-new-bot-or-adding-calling-capabilities-to-an-existing-bot), we mentioned the **Webhook (for calling)** URL, the webhook endpoint for all incoming calls to your bot. This topic discusses the technical details you'll need to respond to these notifications.
 
 ## Protocol determination
 
-The incoming notification is provided in legacy format for compatibility with the previous [Skype protocol](https://docs.microsoft.com/en-us/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0). In order to convert the call to the Microsoft Graph protocol, your bot must determine whether the notification is in legacy format and reply with:
+The incoming notification is provided in legacy format for compatibility with the previous [Skype protocol](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0). In order to convert the call to the Microsoft Graph protocol, your bot must determine whether the notification is in legacy format and reply with:
 
 ```http
 HTTP/1.1 204 No Content
@@ -30,7 +30,7 @@ HTTP/1.1 302 Found
 Location: your-new-location
 ```
 
-You may decide to pick up the call and call the [answer](https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/api/call_answer) API. You can specify the `callbackUri` to handle this particular call. This is useful for _stateful_ instances where your call is handled by a particular partition and you want to embed this information in the `callbackUri` for routing to the right instance.
+You may decide to pick up the call and call the [answer](https://developer.microsoft.com/graph/docs/api-reference/beta/api/call_answer) API. You can specify the `callbackUri` to handle this particular call. This is useful for _stateful_ instances where your call is handled by a particular partition and you want to embed this information in the `callbackUri` for routing to the right instance.
 
 ## Authenticating the callback
 
