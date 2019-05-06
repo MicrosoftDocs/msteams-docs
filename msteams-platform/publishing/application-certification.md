@@ -13,7 +13,7 @@ The Microsoft Teams app certification program, is a pilot program that allows yo
 
 ## Program benefits
 
-Once you've completed the assessment your responses will be compiled and a page for your app will be created. Instead of responding to requests for information individually, you'll be able to point your customers here for complete information on your app's data handling, security and compliance practices. Microsoft Teams administrators are encouraged to use this catalogue to discover new apps that will be easier for them to assess and onboard into their organizations.
+Once you've completed the assessment your responses will be compiled and a page for your app will be created on [this site](https://aka.ms/AppCertification). Instead of responding to requests for information individually, you'll be able to point your customers here for complete information on your app's data handling, security and compliance practices. Microsoft Teams administrators are encouraged to use this catalogue to discover new apps that will be easier for them to assess and onboard into their organizations.
 
 ## How to join the program
 
