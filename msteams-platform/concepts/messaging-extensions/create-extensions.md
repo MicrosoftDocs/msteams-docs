@@ -127,7 +127,7 @@ In addition to initiating actions from the compose message area, you can also us
 
 ![Example of initiating an action from a message](~/assets/images/compose-extensions/messageextensions_messageaction.png)
 
-To enable your messaging extension to work from an action you'll need to add the `context` parameter to your messaging extension's `commands` object in your app manifest as in the example below. Valid strings for the `context` array are `"message"`, `"commandbar"`, and `"compose"`. The default value is `["compose", "commandbar"]`.
+To enable your messaging extension to work from a message you'll need to add the `context` parameter to your messaging extension's `commands` object in your app manifest as in the example below. Valid strings for the `context` array are `"message"`, `"commandbar"`, and `"compose"`. The default value is `["compose", "commandbar"]`. See the [define commands](#define-commands) section for complete details on the `context` parameter.
 
 ```json
 "composeExtensions": [
