@@ -27,26 +27,14 @@ for an example that demonstrates authentication flow for bots using Node using t
     * In the example, the bot associates the value of the `state` parameter with the id of the user that initiated the sign-in process so it can later match it with the `state` value returned by the identity provider. ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/AuthBot.ts#L70-L99))
     * **IMPORTANT**: The bot stores the token it receives from the identity provider and associates it with a specific user, but it is marked as "pending validation". The provisional token cannot be used yet: it must be further validated: 
       1. **Validate what's received from the identity provider.** The value of the `state` parameter must be confirmed against what was saved earlier. 
-      1. **Validate what's received from Teams.** A [two-step authentication](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) validation is performed to ensure that the user who authorized the bot with the identity provider is the same user who is chatting with the bot. This guards against [man-in-the-middle](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) and [phishing](https://en.wikipedia.org/wiki/Phishing) attacks. The bot generates a verification code and stores it, associated with the user. On the desktop and web versions of Teams, the verification code is sent automatically by Teams as described below in steps 9 and 10; on mobile devices the user may have to enter it manually [as described below](#Mobile-clients). ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/AuthBot.ts#L100-L113))
+      1. **Validate what's received from Teams.** A [two-step authentication](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) validation is performed to ensure that the user who authorized the bot with the identity provider is the same user who is chatting with the bot. This guards against [man-in-the-middle](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) and [phishing](https://en.wikipedia.org/wiki/Phishing) attacks. The bot generates a verification code and stores it, associated with the user. The verification code is sent automatically by Teams as described below in steps 9 and 10. ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/AuthBot.ts#L100-L113))
 9. The OAuth callback renders a page that calls `notifySuccess("<verification code>")`. ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/master/src/views/oauth-callback-success.hbs))
-10. Teams closes the popup and sends the `<verification code>` sent to `notifySuccess()` back to the bot. The bot receives an [invoke](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-activities#invoke) message with `name = signin/verifyState`.
+10. Teams closes the popup and sends the `<verification code>` sent to `notifySuccess()` back to the bot. The bot receives an [invoke](/bot-framework/dotnet/bot-builder-dotnet-activities#invoke) message with `name = signin/verifyState`.
 11. The bot checks the incoming verification code against the verification code stored with the user's provisional token. ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/dialogs/BaseIdentityDialog.ts#L127-L140))
 12. If they match, the bot marks the token as validated and ready for use. Otherwise, the auth flow fails, and the bot deletes the provisional token.
 
-## Mobile clients
-
-As of March 2018, the Microsoft Teams mobile clients do not fully support the signin action protocol:
-
-* If the URL provided to the signin button action has a `fallbackUrl` query string parameter, Teams will launch that URL in the browser.
-* Otherwise, Teams will show an error saying that the action is not yet supported on mobile.
-
-In the example, the mobile sign in flow works the same way as on the desktop, until the point where the OAuth callback page tries to send the verification code back to the bot. The bot sets the `fallbackUrl` query string parameter to be the same as the original url to the auth start page, so that the user goes to the same page on all platforms. ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/dialogs/BaseIdentityDialog.ts#L173-L178))
-
-When the OAuth callback runs in a mobile browser, the call to `notifySuccess()` will fail silently because it's not running inside a Teams client. The window will not close and the bot won't get the verification code. To handle this case, the page has a timer that checks if it's still open after 5 seconds. If so, it asks the user to manually send the verification code via chat. The bot code is able to receive the verification code from either the `signin/verifyState` callback or from a chat message. ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/dialogs/BaseIdentityDialog.ts#L106-L117))
-
-If you want to limit signing in to web and desktop only, you can choose to omit the `fallbackUrl` parameter, or point it to your own error page that asks the user to sign in on web or desktop.
-
-Once the Microsoft Teams mobile clients support the complete signin action protocol, including passing the verification code via `notifySuccess()`, they will launch the auth start page in a popup window and ignore `fallbackUrl`, just like the desktop and web clients.
+> [!Note]
+> If you experience issues with authentication on mobile, ensure your Javascript SDK is update to version 1.4.1 or later.
 
 ## Samples
 
@@ -58,4 +46,4 @@ For sample code showing the bot authentication process see:
 
 For detailed implementation walkthroughs for bot authentication targeting Azure Active Directory see:
 
-* [Authenticate a user in a Microsoft Teams bot](~/concepts/authentication/auth-bot-AAD)
+* [Authenticate a user in a Microsoft Teams bot](~/concepts/authentication/auth-bot-AAD.md)
