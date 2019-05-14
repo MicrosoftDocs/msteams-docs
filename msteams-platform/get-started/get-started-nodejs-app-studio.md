@@ -37,6 +37,7 @@ To complete this tutorial, you need the following tools. If you don't already ha
 If you see options to add `git`, `node`, `npm`, and `code` to the PATH during installation, choose to do so. It will be handy.
 
 Verify that the tools are available by running the following in a terminal window:
+
 > [!NOTE]
 > Use the terminal window that you are most comfortable with on your platform. These examples use Bash (which is included in Git), but these scripts will run on most platforms.
 
@@ -51,12 +52,12 @@ $ npm -v
 5.5.1
 
 $ gulp -v
-CLI version 3.9.1
+CLI version 4.0.2
 ```
 
-You may have a different version of these applications. This should not be a problem, except for gulp. For gulp you'll need to use version 3.9.1.
+You may have a different version of these applications. This should not be a problem, except for gulp. For gulp you'll need to use version 4.0.0 or later.
 
-If you don't have gulp installed (or have the wrong version installed), do so now by running `npm install gulp@3.9.1` in your terminal window.
+If you don't have gulp installed (or have the wrong version installed), do so now by running `npm install gulp` in your terminal window.
 
 If you have installed Visual Studio Code, you can verify the installation by running:
 
