@@ -6,7 +6,7 @@ ms.date: 04/23/2019
 ---
 # Reference: Manifest schema for Microsoft Teams
 
-The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.4/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/en-us/json-schemas/teams/v1.4/MicrosoftTeams.schema.json). Versions 1.0, 1.1, 1.2 and 1.3 are also supported (using "v1.0", "v1.1", "v1.2", and "v1.3" in the URL).
+The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.4/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json). Previous versions 1.0-1.4 are also supported (using "v1.x" in the URL).
 
 The following schema sample shows all extensibility options.
 
@@ -14,8 +14,8 @@ The following schema sample shows all extensibility options.
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.4/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.4",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.5",
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%",
   "packageName": "com.example.myapp",
@@ -24,7 +24,17 @@ The following schema sample shows all extensibility options.
     "name": "Publisher Name",
     "websiteUrl": "https://website.com/",
     "privacyUrl": "https://website.com/privacy",
-    "termsOfUseUrl": "https://website.com/app-tos"
+    "termsOfUseUrl": "https://website.com/app-tos",
+    "mpnId": "1234567890"
+  },
+  "localizationInfo": {
+    "defaultLanguageTag": "es-es",
+    "additionalLanguages": [
+      {
+        "languageTag": "en-us",
+        "file": "en-us.json"
+      }
+    ]
   },
   "name": {
     "short": "Name of your app (<=30 chars)",
@@ -198,6 +208,26 @@ Specifies information about your company. For apps submitted to AppSource (forme
 |`websiteUrl`|2048 characters|✔|The https:// URL to the developer's website. This link should take users to your company or product-specific landing page.|
 |`privacyUrl`|2048 characters|✔|The https:// URL to the developer's privacy policy.|
 |`termsOfUseUrl`|2048 characters|✔|The https:// URL to the developer's terms of use.|
+|`mpnId`|10 characters|✔|**Optional** The Microsoft Partner Network ID that identifies the partner organization building the app.|
+
+## localizationInfo
+
+**Optional**
+
+Allows the specification of a default language, as well as pointers to additional language files. See [localization](~/publishing/apps-localization.md).
+
+|Name| Maximum size | Required | Description|
+|---|---|---|---|
+|`defaultLanguageTag`|4 characters|✔|The language tag of the strings in this top level manifest file.|
+
+### localizationInfo.additionalLanguages
+
+An array of objects specifying additional language translations.
+
+|Name| Maximum size | Required | Description|
+|---|---|---|---|
+|`languageTag`|4 characters|✔|The language tag of the strings in the provided file.|
+|`file`|4 characters|✔|A relative file path to a the .json file containing the translated strings.|
 
 ## name
 
@@ -290,7 +320,7 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 |`supportsFiles`|Boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. Default: `false`|
 |`scopes`|Array of enum|3|✔|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupchat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
 
-### bots: commandLists
+### bots.commandLists
 
 An optional list of commands that your bot can recommend to users. The object is an array (maximum of 2 elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. See [Bot menus](~/concepts/bots/bots-menus.md) for more information.
 
