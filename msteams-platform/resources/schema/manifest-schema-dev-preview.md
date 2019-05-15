@@ -397,7 +397,7 @@ Each command item is an object with the following structure:
 |`title`|String|32 characters|✔|The user-friendly command name|
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command|
 |`initialRun`|Boolean|||A Boolean value that indicates whether the command should be run initially with no parameters. Default: `false`|
-|`context`|Array of Strings|3||Defines where the message extension can be invoked from. Any combination of `compose`, `commandBar`, `message`. Default is `["compose", "commandBar"]`|
+|`context`|Array of Strings|3||Defines where the message extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. Default is `["compose", "commandBox"]`|
 |`fetchTask`|Boolean|||A boolean value that indicates if it should fetch the task module dynamically|
 |`taskInfo`|Object|||Specify the task module to preload when using a messaging extension command|
 |`taskInfo.title`|String|64||Initial dialog title|
@@ -441,9 +441,9 @@ Specifies the native features on a user's device that your app may request acces
 
 ## validDomains
 
-**Optional**, except **Required** for apps with tabs
+**Optional**, except **Required** where noted
 
-A list of valid domains from which the extension expects to load any content. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`. If your tab configuration or content UI needs to navigate to any other domain besides the one use for tab configuration, that domain must be specified here.
+A list of valid domains from which the app expects to load any content. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`. If your tab configuration or content UI needs to navigate to any other domain besides the one use for tab configuration, that domain must be specified here.
 
 It is **not** necessary to include the domains of identity providers you want to support in your app, however. For example, to authenticate using a Google ID, it's necessary to redirect to accounts.google.com, but you should not include accounts.google.com in `validDomains[]`.
 
