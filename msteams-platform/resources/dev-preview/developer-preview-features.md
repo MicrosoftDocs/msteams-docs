@@ -2,12 +2,11 @@
 title: Features in the Public Developer Preview
 description: Describes the features in the Public Developer Preview of Microsoft Teams
 keywords: teams preview developer features
-ms.date: 05/03/2019
+ms.date: 05/15/2019
 ---
 
 # Features in the Public Developer Preview for Microsoft Teams
 
-When these features are out of developer preview this content will be merged into the live doc set.
 The developer preview includes the following new features:
 
 ## Embed Share-to-Teams button on your website
@@ -76,19 +75,3 @@ See [Bot notifications](~/concepts/bots/bots-notifications.md) for more details 
 ### Group chats are similar to channel chats
 
 Group chat conversations behave very similarly to channel conversations with bots, so the information in the [Interact in a team channel with a Microsoft Teams bot](~/concepts/bots/bot-conversations/bots-conv-channel.md) topic may also be helpful. The main difference is that group chat does not support threaded conversations.
-
-### Testing your app
-
-To test your app, open up a chat and click Manage apps from the tab gallery or by right clicking your chat on the left chat rail. From there you can access Upload a custom app to upload your app package.
-
-### Preview manifest
-
-The [Developer preview manifest](~/resources/schema/manifest-schema-dev-preview.md) has been updated to include this feature.
-
-See [What is the Public Developer Preview for Microsoft Teams?](~/resources/dev-preview/developer-preview.md) for more information on enabling it for your development tenant.
-
-### Known issues
-
-* If you upload an app with a bot to a chat in the *Developer Preview* version of Teams, and you switch back to the *Public* version, there might be some UI or behavior inconsistencies. If you run into any issues, please uninstall the app in *Developer Preview*
-* Bot menus do not currently work with the `groupchat` scope
-* There is a limit of 5 uploaded apps per chat
