@@ -14,7 +14,7 @@ The following schema sample shows all extensibility options.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
   "manifestVersion": "devPreview",
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%",
@@ -184,9 +184,6 @@ The schema defines the following properties:
 *Optional, but recommended* &ndash; String
 
 The https:// URL referencing the JSON Schema for the manifest.
-
-> [!TIP]
-> Specify the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor: `"$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.4/MicrosoftTeams.schema.json",`
 
 ## manifestVersion
 
