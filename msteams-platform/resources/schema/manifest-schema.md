@@ -235,7 +235,7 @@ Allows the specification of a default language, as well as pointers to additiona
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
-|`defaultLanguageTag`|4 characters|✔|The language tag of the strings in this top level manifest file.|
+|`defaultLanguageTag`||✔|The language tag of the strings in this top level manifest file.|
 
 ### localizationInfo.additionalLanguages
 
@@ -243,8 +243,8 @@ An array of objects specifying additional language translations.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
-|`languageTag`|4 characters|✔|The language tag of the strings in the provided file.|
-|`file`|4 characters|✔|A relative file path to a the .json file containing the translated strings.|
+|`languageTag`||✔|The language tag of the strings in the provided file.|
+|`file`||✔|A relative file path to a the .json file containing the translated strings.|
 
 ## name
 
