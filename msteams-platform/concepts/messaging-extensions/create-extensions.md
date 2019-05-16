@@ -57,7 +57,7 @@ To initiate actions from a  messaging extension set the `type` parameter to `act
           "description": "Search you Todo's",
           "title": "Search",
           "initialRun": true,
-          "context": ["commandBar", "compose"],
+          "context": ["commandBox", "compose"],
           "parameters": [
             {
               "name": "searchKeyword",
@@ -71,7 +71,7 @@ To initiate actions from a  messaging extension set the `type` parameter to `act
           "description": "Create a To Do item",
           "title": "Create To Do",
           "type": "action",
-          "context": ["commandBar", "message", "compose"],
+          "context": ["commandBox", "message", "compose"],
           "parameters": [
             {
               "name": "Name",
@@ -126,7 +126,7 @@ In addition to initiating actions from the compose message area, you can also us
 
 ![Example of initiating an action from a message](~/assets/images/compose-extensions/messageextensions_messageaction.png)
 
-To enable your messaging extension to work from a message you'll need to add the `context` parameter to your messaging extension's `commands` object in your app manifest as in the example below. Valid strings for the `context` array are `"message"`, `"commandBar"`, and `"compose"`. The default value is `["compose", "commandBar"]`. See the [define commands](#define-commands) section for complete details on the `context` parameter.
+To enable your messaging extension to work from a message you'll need to add the `context` parameter to your messaging extension's `commands` object in your app manifest as in the example below. Valid strings for the `context` array are `"message"`, `"commandBox"`, and `"compose"`. The default value is `["compose", "commandBox"]`. See the [define commands](#define-commands) section for complete details on the `context` parameter.
 
 ```json
 "composeExtensions": [
