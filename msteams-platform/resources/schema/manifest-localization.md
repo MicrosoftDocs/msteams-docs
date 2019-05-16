@@ -2,12 +2,12 @@
 title: Localization manifest schema reference
 description: Describes the localization schema supported by the localization manifest for Microsoft Teams
 keywords: teams manifest schema localization
-ms.date: 05/15/2019
+ms.date: 05/20/2019
 ---
 
 # Reference: Localization manifest schema for Microsoft Teams
 
-The Microsoft Teams localization manifest describes language translations that will be served based on the client language settings. Your file must conform to the schema hosted at [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.Localization.schema.json`]( https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.Localization.schema.json). Previous versions 1.0-1.4 are also supported (using "v1.x" in the URL). For additional information see [app localization](~/publishing/apps-localization.md).
+The Microsoft Teams localization manifest describes language translations that will be served based on the client language settings. Your file must conform to the schema hosted at [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.Localization.schema.json`]( https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.Localization.schema.json). For additional information see [app localization](~/publishing/apps-localization.md).
 
 ## Sample
 

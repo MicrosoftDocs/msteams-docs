@@ -2,7 +2,7 @@
 title: Features in the Public Developer Preview
 description: Describes the features in the Public Developer Preview of Microsoft Teams
 keywords: teams preview developer features
-ms.date: 05/15/2019
+ms.date: 05/20/2019
 ---
 
 # Features in the Public Developer Preview for Microsoft Teams
@@ -16,10 +16,6 @@ You can now embed a Share-to-Teams button on your website that will insert a mes
 ## Respond to message extension submit action with an adaptive card message sent from a bot
 
 You can also respond to the submit action by inserting a message with an [adaptive card](~/concepts/cards/cards.md#adaptive-cards) into the channel with a bot. Your user will be able to preview the message before submitting it, and potentially edit/interact with it as well. This can be very useful in scenarios where you need to gather information from your users before creating an adaptive card response. The following scenario shows how you can use this flow to configure a poll without including the configuration steps in the channel message. See [Respond with an adaptive card message sent from a bot](~/concepts/messaging-extensions/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot).
-
-## Trigger messaging extension from links inserted into the compose message box
-
-You can now configure your messaging extension to respond to a URL inserted into the compose message box similarly to a user using your messaging extension for search. This allows you to automatically resolve the URL into a card. See [Receive requests from links inserted into the compose message box](~/concepts/messaging-extensions/search-extensions.md#receive-requests-from-links-inserted-into-the-compose-message-box) for more information.
 
 ## Deep linking to a chat
 

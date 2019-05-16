@@ -2,7 +2,7 @@
 title: Initiate actions with messaging extensions
 description: Create Action-based messaging extensions to allow users to trigger external services
 keywords: teams messaging extensions messaging extensions search
-ms.date: 03/15/2019
+ms.date: 05/20/2019
 ---
 
 # Initiate actions with messaging extensions
@@ -23,8 +23,8 @@ To initiate actions from a  messaging extension set the `type` parameter to `act
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.4/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.4",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.5",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
   "packageName": "com.microsoft.teams.samples.Todo",
@@ -57,6 +57,7 @@ To initiate actions from a  messaging extension set the `type` parameter to `act
           "description": "Search you Todo's",
           "title": "Search",
           "initialRun": true,
+          "context": ["commandBar", "compose"],
           "parameters": [
             {
               "name": "searchKeyword",
@@ -70,6 +71,7 @@ To initiate actions from a  messaging extension set the `type` parameter to `act
           "description": "Create a To Do item",
           "title": "Create To Do",
           "type": "action",
+          "context": ["commandBar", "message", "compose"],
           "parameters": [
             {
               "name": "Name",
@@ -120,14 +122,11 @@ To initiate actions from a  messaging extension set the `type` parameter to `act
 
 ### Initiate actions from messages
 
-> [!NOTE]
-> Initiating actions from messages is in [developer preview](~/resources/dev-preview/developer-preview-intro.md).
-
 In addition to initiating actions from the compose message area, you can also use your messaging extension to initiate an action from a message. This will allow you to send the contents of the message to your bot for processing, and optionally reply to that message with a response using the method described in [Responding to submit](#responding-to-submit). The response will be inserted as a reply to the message that your users can edit before submitting. Your users can access your messaging extension from the overflow `...` menu and then selecting `Take action` as in the image below.
 
 ![Example of initiating an action from a message](~/assets/images/compose-extensions/messageextensions_messageaction.png)
 
-To enable your messaging extension to work from a message you'll need to add the `context` parameter to your messaging extension's `commands` object in your app manifest as in the example below. Valid strings for the `context` array are `"message"`, `"commandbar"`, and `"compose"`. The default value is `["compose", "commandbar"]`. See the [define commands](#define-commands) section for complete details on the `context` parameter.
+To enable your messaging extension to work from a message you'll need to add the `context` parameter to your messaging extension's `commands` object in your app manifest as in the example below. Valid strings for the `context` array are `"message"`, `"commandBar"`, and `"compose"`. The default value is `["compose", "commandBar"]`. See the [define commands](#define-commands) section for complete details on the `context` parameter.
 
 ```json
 "composeExtensions": [

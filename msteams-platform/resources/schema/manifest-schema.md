@@ -2,7 +2,7 @@
 title: Manifest schema reference
 description: Describes the schema supported by the manifest for Microsoft Teams
 keywords: teams manifest schema
-ms.date: 05/15/2019
+ms.date: 05/20/2019
 ---
 # Reference: Manifest schema for Microsoft Teams
 
@@ -15,7 +15,7 @@ The following schema sample shows all extensibility options.
 ```json
 {
   "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
-  "manifestVersion": "devPreview",
+  "manifestVersion": "1.5",
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%",
   "packageName": "com.example.myapp",
@@ -397,7 +397,7 @@ Each command item is an object with the following structure:
 |`taskInfo.width`|String|||Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'|
 |`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'|
 |`taskInfo.url`|String|||Initial webview URL|
-|`messageHandlers`|Array of Objects|5||**Developer Preview** A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`|
+|`messageHandlers`|Array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`|
 |`messageHandlers.type`|String|||The type of message handler. Must be `"link"`.|
 |`messageHandlers.value.domains`|Array of Strings|||Array of domains that the link message handler can register for.|
 |`parameters`|Array of object|5|✔|The list of parameters the command takes. Minimum: 1; maximum: 5|
