@@ -28,10 +28,10 @@ The following schema sample shows all extensibility options.
     "mpnId": "1234567890"
   },
   "localizationInfo": {
-    "defaultLanguageTag": "es-es",
+    "defaultLanguageTag": "en-us",
     "additionalLanguages": [
       {
-        "languageTag": "en-us",
+        "languageTag": "es-es",
         "file": "en-us.json"
       }
     ]
