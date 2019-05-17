@@ -38,7 +38,7 @@ Your messaging extension should declare one command, which appears when the user
 
 In the app manifest, your command item is an object with the following structure:
 
-| Property name | Purpose | Required? | Minumum required manifest version |
+| Property name | Purpose | Required? | Minumum manifest version |
 |---|---|---|---|
 | `id` | Unique ID that you assign to this command. The user request will include this ID. | Yes | 1.0 |
 | `title` | Command name. This value appears in the UI. | Yes | 1.0 |
@@ -51,4 +51,4 @@ In the app manifest, your command item is an object with the following structure
 | `parameter.description` | Describes this parameter’s purposes or example of the value that should be provided. This value appears in the UI. | Yes | 1.0 |
 | `parameter.title` | Short user-friendly parameter title or label. | Yes | 1.0 |
 | `parameter.inputType` | Set to the type of input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text` | No | 1.4 |
-| `context` | Optional array of values that defines the context the message action is available in. Possible values are `message`, `compose`, or `commandBox`. Default is `["compose", "commandBox"]`. | No | devPreview |
+| `context` | Optional array of values that defines the context the message action is available in. Possible values are `message`, `compose`, or `commandBox`. Default is `["compose", "commandBox"]`. | No | 1.5 |
