@@ -23,7 +23,7 @@ The following metadata is required in your manifest.json file and for AppSource 
 ## Localized content
 
 > [!NOTE]
-> AppSource plans to support localized content for the following metadata. Currently, only English is supported for Teams apps, but in preparation you can provide additional languages for these. See [localizing your app](~/publishing/apps-localization.md) for more information.
+> AppSource plans to support localized content for the following metadata. Currently, your app listing will only show in English in AppSource, but will display properly localized in the Teams client. See [localizing your app](~/publishing/apps-localization.md) for more information.
 
 |Data|Type|Size|Manifest|Seller Dashboard|Description|
 |---|---|---|---|---|---|
@@ -39,7 +39,7 @@ Bots in Microsoft Teams must be created using Bot Framework. See [Create a bot](
 
 ## Screenshots
 
-The screenshots that are uploaded on the Seller Dashboard are displayed on [Microsoft AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) to provide a visual preview of your app along with your app description.
+The screenshots uploaded on the Seller Dashboard are displayed in both [Microsoft AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) and your app listing in the Teams client to provide a visual preview of your app along with your app description.
 
 You can provide 1 to 5 screenshots. They can be .png, .jpg, or .gif files, and should be 1366x768 pixels, with a max size of 1024 KB.
 
