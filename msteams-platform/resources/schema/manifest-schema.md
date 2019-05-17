@@ -10,7 +10,7 @@ The Microsoft Teams manifest describes how the app integrates into the Microsoft
 
 The following schema sample shows all extensibility options.
 
-## Sample full schema
+## Sample full manifest
 
 ```json
 {

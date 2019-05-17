@@ -14,7 +14,7 @@ The Microsoft Teams manifest describes how the app integrates into the Microsoft
 
 For more information on the features available see: [Features in the Public Developer Preview for Microsoft Teams](~/resources/dev-preview/developer-preview-features.md).
 
-## Sample full schema
+## Sample full manifest
 
 ```json
 {
@@ -193,7 +193,7 @@ The https:// URL referencing the JSON Schema for the manifest.
 
 **Required** &ndash; String
 
-The version of the manifest schema this manifest is using. It should be "1.5".
+The version of the manifest schema this manifest is using. It should be "devPreview".
 
 ## version
 
