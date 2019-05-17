@@ -2,7 +2,7 @@
 title: Proactive messages
 description: Describes bots can start a conversation in Microsoft Teams
 keywords: teams scenarios proactive messaging conversation bot
-ms.date: 03/04/2019
+ms.date: 05/20/2019
 ---
 # Proactive messaging for bots
 
@@ -12,7 +12,7 @@ A proactive message is a message that is sent by a bot to start a conversation. 
 - Poll responses
 - External event notifications
 
-Sending a message to start a new conversation thread   is different than sending a message in response to an existing conversation: when your bot starts a new a conversation, there is no pre-existing conversation to post the message to.
+Sending a message to start a new conversation thread is different than sending a message in response to an existing conversation: when your bot starts a new a conversation, there is no pre-existing conversation to post the message to.
 
 ## Starting personal conversations
 
