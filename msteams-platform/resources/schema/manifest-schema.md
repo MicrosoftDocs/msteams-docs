@@ -2,20 +2,20 @@
 title: Manifest schema reference
 description: Describes the schema supported by the manifest for Microsoft Teams
 keywords: teams manifest schema
-ms.date: 04/23/2019
+ms.date: 05/20/2019
 ---
 # Reference: Manifest schema for Microsoft Teams
 
-The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.4/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/en-us/json-schemas/teams/v1.4/MicrosoftTeams.schema.json). Versions 1.0, 1.1, 1.2 and 1.3 are also supported (using "v1.0", "v1.1", "v1.2", and "v1.3" in the URL).
+The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json). Previous versions 1.0-1.4 are also supported (using "v1.x" in the URL).
 
 The following schema sample shows all extensibility options.
 
-## Sample full schema
+## Sample full manifest
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.4/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.4",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.5",
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%",
   "packageName": "com.example.myapp",
@@ -24,7 +24,17 @@ The following schema sample shows all extensibility options.
     "name": "Publisher Name",
     "websiteUrl": "https://website.com/",
     "privacyUrl": "https://website.com/privacy",
-    "termsOfUseUrl": "https://website.com/app-tos"
+    "termsOfUseUrl": "https://website.com/app-tos",
+    "mpnId": "1234567890"
+  },
+  "localizationInfo": {
+    "defaultLanguageTag": "en-us",
+    "additionalLanguages": [
+      {
+        "languageTag": "es-es",
+        "file": "en-us.json"
+      }
+    ]
   },
   "name": {
     "short": "Name of your app (<=30 chars)",
@@ -110,6 +120,7 @@ The following schema sample shows all extensibility options.
           "description": "Command Description; e.g., Search on the web",
           "initialRun": true,
           "type" : "search",
+          "context" : ["compose", "commandBox"],
           "parameters": [
             {
               "name": "keyword",
@@ -125,6 +136,7 @@ The following schema sample shows all extensibility options.
           "initialRun": true,
           "type" : "action",
           "fetchTask" : true,
+          "context" : ["message"],
           "parameters": [
             {
               "name": "custinfo",
@@ -133,16 +145,34 @@ The following schema sample shows all extensibility options.
               "inputType" : "text"
             }
           ]
+        },
+        {
+          "id": "exampleMessageHandler",
+          "title": "Message Handler",
+          "description": "Domains that will create a preview when pasted into the compose box",
+          "messageHandlers": [
+            {
+              "type" : "link",
+              "value" : {
+                "domains" : [
+                  "mysite.someplace.com",
+                  "othersite.someplace.com"
+                ]
+              }
+            }
+          ]
         }
       ]
     }
   ],
   "permissions": [
     "identity",
-    "messageTeamMembers"
+    "messageTeamMembers",
   ],
   "validDomains": [
-     "contoso.com"
+     "contoso.com",
+     "mysite.someplace.com",
+     "othersite.someplace.com"
   ]
 }
 ```
@@ -155,14 +185,11 @@ The schema defines the following properties:
 
 The https:// URL referencing the JSON Schema for the manifest.
 
-> [!TIP]
-> Specify the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor: `"$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.4/MicrosoftTeams.schema.json",`
-
 ## manifestVersion
 
 **Required** &ndash; String
 
-The version of the manifest schema this manifest is using. It should be "1.4".
+The version of the manifest schema this manifest is using. It should be "1.5".
 
 ## version
 
@@ -198,6 +225,26 @@ Specifies information about your company. For apps submitted to AppSource (forme
 |`websiteUrl`|2048 characters|✔|The https:// URL to the developer's website. This link should take users to your company or product-specific landing page.|
 |`privacyUrl`|2048 characters|✔|The https:// URL to the developer's privacy policy.|
 |`termsOfUseUrl`|2048 characters|✔|The https:// URL to the developer's terms of use.|
+|`mpnId`|10 characters|✔|**Optional** The Microsoft Partner Network ID that identifies the partner organization building the app.|
+
+## localizationInfo
+
+**Optional**
+
+Allows the specification of a default language, as well as pointers to additional language files. See [localization](~/publishing/apps-localization.md).
+
+|Name| Maximum size | Required | Description|
+|---|---|---|---|
+|`defaultLanguageTag`||✔|The language tag of the strings in this top level manifest file.|
+
+### localizationInfo.additionalLanguages
+
+An array of objects specifying additional language translations.
+
+|Name| Maximum size | Required | Description|
+|---|---|---|---|
+|`languageTag`||✔|The language tag of the strings in the provided file.|
+|`file`||✔|A relative file path to a the .json file containing the translated strings.|
 
 ## name
 
@@ -290,7 +337,7 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 |`supportsFiles`|Boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. Default: `false`|
 |`scopes`|Array of enum|3|✔|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupchat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
 
-### bots: commandLists
+### bots.commandLists
 
 An optional list of commands that your bot can recommend to users. The object is an array (maximum of 2 elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. See [Bot menus](~/concepts/bots/bots-menus.md) for more information.
 
@@ -343,12 +390,24 @@ Each command item is an object with the following structure:
 |`title`|String|32 characters|✔|The user-friendly command name|
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command|
 |`initialRun`|Boolean|||A Boolean value that indicates whether the command should be run initially with no parameters. Default: `false`|
+|`context`|Array of Strings|3||Defines where the message extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. Default is `["compose", "commandBox"]`|
 |`fetchTask`|Boolean|||A boolean value that indicates if it should fetch the task module dynamically|
+|`taskInfo`|Object|||Specify the task module to preload when using a messaging extension command|
+|`taskInfo.title`|String|64||Initial dialog title|
+|`taskInfo.width`|String|||Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'|
+|`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'|
+|`taskInfo.url`|String|||Initial webview URL|
+|`messageHandlers`|Array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`|
+|`messageHandlers.type`|String|||The type of message handler. Must be `"link"`.|
+|`messageHandlers.value.domains`|Array of Strings|||Array of domains that the link message handler can register for.|
 |`parameters`|Array of object|5|✔|The list of parameters the command takes. Minimum: 1; maximum: 5|
 |`parameter.name`|String|64 characters|✔|The name of the parameter as it appears in the client. This is included in the user request.|
 |`parameter.title`|String|32 characters|✔|User-friendly title for the parameter.|
 |`parameter.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
-|`parameter.inputType`|String|128 characters||Defines the type of control displayed on a task module for `fetchTask: true`. One of `text`, `textarea`, `number`, `date`, `time`, `toggle`|
+|`parameter.inputType`|String|128 characters||Defines the type of control displayed on a task module for `fetchTask: true`. One of `text`, `textarea`, `number`, `date`, `time`, `toggle`, `choiceset`|
+|`parameter.choices`|Array of Objects|10||The choice options for the `choiceset`. Use only when `parameter.inputType` is `choiceset`|
+|`parameter.choices.title`|String|128||Title of the choice|
+|`parameter.choices.value`|String|512||Value of the choice|
 
 ## permissions
 
@@ -375,9 +434,9 @@ Specifies the native features on a user's device that your app may request acces
 
 ## validDomains
 
-**Optional**, except **Required** for apps with tabs
+**Optional**, except **Required** where noted
 
-A list of valid domains from which the extension expects to load any content. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`. If your tab configuration or content UI needs to navigate to any other domain besides the one use for tab configuration, that domain must be specified here.
+A list of valid domains from which the app expects to load any content. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`. If your tab configuration or content UI needs to navigate to any other domain besides the one use for tab configuration, that domain must be specified here.
 
 It is **not** necessary to include the domains of identity providers you want to support in your app, however. For example, to authenticate using a Google ID, it's necessary to redirect to accounts.google.com, but you should not include accounts.google.com in `validDomains[]`.
 

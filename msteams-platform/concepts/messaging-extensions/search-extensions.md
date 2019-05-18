@@ -2,7 +2,7 @@
 title: Search with messaging extensions
 description: Describes how to develop search based messaging extensions
 keywords: teams messaging extensions messaging extensions search
-ms.date: 03/05/2019
+ms.date: 05/20/2019
 ---
 
 # Search with messaging extensions
@@ -23,8 +23,8 @@ For search based messaging extension set the `type` parameter to `query`. Below 
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.4/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.4",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.5",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
   "packageName": "com.microsoft.teams.samples.bing",
@@ -121,7 +121,7 @@ In addition to the standard bot activity properties, the payload contains the fo
 |Property name|Purpose|
 |---|---|
 |`type`| Type of request; must be `invoke`. |
-|`name`| Type of command that is issued to your service. Currently the following types are supported: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>**Developer Preview** `composeExtension/queryLink` |
+|`name`| Type of command that is issued to your service. Currently the following types are supported: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
 |`from.aadObjectId`| Azure Active Directory object id of the user that sent the request. |
@@ -190,9 +190,6 @@ The request parameters itself are found in the value object, which includes the 
 ```
 
 ### Receive requests from links inserted into the compose message box
-
-> [!NOTE]
-> Receiving requests from links inserted into the compose message box is in [developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 As an alternative (or in addition) to searching your external service, you can use a URL inserted into the compose message box to query your service and return a card. In the screenshot below a user has pasted in a URL for a work item in Azure DevOps which the messaging extension has resolved into a card.
 

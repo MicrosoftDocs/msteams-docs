@@ -2,7 +2,7 @@
 title: What's new
 description: Describes all the new developer features in Microsoft Teams
 keywords: teams what's new latest
-ms.date: 05/06/2019
+ms.date: 05/20/2019
 ---
 # What's new for developers in Microsoft Teams
 
@@ -12,6 +12,9 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+| 05/20/2019 | App manifest localization | [App localization](~/publishing/apps-localization.md) |
+| 05/20/2019 | Message actions | [Message Actions](~/concepts/messaging-extensions/create-extensions.md#action-type-message-extensions) |
+| 05/20/2019 | Link unfurling (custom URL previews) | [Application Certification](~/concepts/messaging-extensions/search-extensions.md#receive-requests-from-links-inserted-into-the-compose-message-box) |
 | 05/06/2019 | Application Certification program for store apps | [Application Certification](~/publishing/application-certification.md) |
 | 05/06/2019 | App Templates are now available. | [App Templates](~/samples/app-templates.md) |
 | 04/23/2019 | Action-based Messaging Extensions are now available | [Action-based Message Extensions](~/concepts/messaging-extensions/create-extensions.md) |
