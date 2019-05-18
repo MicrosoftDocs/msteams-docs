@@ -254,7 +254,8 @@
       href: ./concepts/bots/bot-conversations/bots-conv-channel.md
   - name: Manifest schema
     href: ./resources/schema/manifest-schema.md
-
+  - name: Localization file JSON schema
+    href: ./resources/schema/localization-schema.md
   - name: Microsoft Graph APIs
     href: ./resources/microsoft-graph.md
 - name: Troubleshooting
