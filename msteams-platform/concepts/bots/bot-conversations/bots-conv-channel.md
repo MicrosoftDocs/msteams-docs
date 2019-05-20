@@ -15,13 +15,13 @@ Chat in channels and group chats differ from personal chat in that the user need
 Bots added to a team become another team member, who can be @mentioned as part of the conversation. In fact, bots only receive messages when they are @mentioned, so other conversations on the channel are not sent to the bot.
 
 > [!NOTE]
-> For convenience when replying to bot messages in a channel, the bot name is prepended automatically.
+> For convenience when replying to bot messages in a channel, the bot name is prepended in the compose message box automatically.
 
-A bot in a channel should provide information relevant and appropriate for all members of the team. While your bot can certainly provide any information relevant to the experience, keep in mind conversations with it are visible to all members of the channel. Therefore, a great bot in a channel should add value to all users on the channel, and certainly not inadvertently share information that would otherwise be more relevant in a personal context.
+A bot in a group or channel should provide information relevant and appropriate for all members. While your bot can certainly provide any information relevant to the experience, keep in mind conversations with it are visible to everyone. Therefore, a great bot in a group or channel should add value to all users, and certainly not inadvertently share information more appropriate in a one-to-one conversation.
 
-Note that depending on your experience, the bot might be entirely relevant in both scopes (personal and channel) as is, and in fact, no significant extra work is required to allow your bot to work in both. In Microsoft Teams, there is no expectation that your bot function in all contexts, but you should ensure your bot makes sense, and provides user value, in whichever scope(s) you choose to support. For more information on scopes, see [Apps in Microsoft Teams](~/concepts/apps/apps-overview.md).
+Your bot might be entirely relevant in both scopes (personal and channel) as is, and no significant extra work is required to allow your bot to work in both. In Microsoft Teams there is no expectation that your bot function in all scopes, but you should ensure your bot provides user value in whichever scope(s) you choose to support. For more information on scopes, see [Apps in Microsoft Teams](~/concepts/apps/apps-overview.md).
 
-Developing a bot that works in channels uses much of the same functionality from personal conversation. Additional events and data in the payload provide Teams channel information. Those differences, as well as key differences in common functionality are described in the following sections.
+Developing a bot that works in groups or channels uses much of the same functionality from personal conversations. Additional events and data in the payload provide Teams group and channel information. Those differences, as well as key differences in common functionality are described in the following sections.
 
 ### Creating messages
 
@@ -29,11 +29,12 @@ For more information on bots creating messages in channels see [Proactive messag
 
 ### Receiving messages
 
-For a bot in a channel, in addition to the [regular message schema](https://docs.botframework.com/en-us/core-concepts/reference/#activity), your bot also receives the following properties:
+For a bot in a group or channel, in addition to the [regular message schema](https://docs.botframework.com/en-us/core-concepts/reference/#activity), your bot also receives the following properties:
 
-* `channelData` See [Teams channel data](~/concepts/bots/bot-conversations/bots-conversations.md#teams-channel-data)
-* `conversationData.id` The reply chain ID, consisting of channel ID plus the ID of the first message in the reply chain
-* `conversationData.isGroup` Set to `true` for bot messages in channels
+* `channelData` See [Teams channel data](~/concepts/bots/bot-conversations/bots-conversations.md#teams-channel-data). In a groupChat, contains information specific to that chat.
+* `conversation.id` The reply chain ID, consisting of channel ID plus the ID of the first message in the reply chain
+* `conversation.isGroup` Set to `true` for bot messages in channels
+* `conversation.conversationType` Either `groupChat` or `channel`
 * `entities` Can contain one or more mentions (see [Mentions](#mentions))
 
 ### Replying to messages
@@ -42,32 +43,30 @@ To reply to an existing message, call [`ReplyToActivity`](/bot-framework/dotnet/
 
 If you choose to use the REST API, you can also call the [`/conversations/{conversationId}/activities/{activityId}`](/bot-framework/rest-api/bot-framework-rest-connector-send-and-receive-messages#send-the-reply) endpoint.
 
-Note that replying to a message in a channel shows as a reply to the initiating reply chain. The `conversationId` contains the channel and the top level message ID. Although the Bot Framework takes care of the details, you can cache that `conversationId` for future replies to that conversation thread as needed.
+In a channel, replying to a message shows as a reply to the initiating reply chain. The `conversationId` contains the channel and the top level message ID. Although the Bot Framework takes care of the details, you can cache that `conversationId` for future replies to that conversation thread as needed.
 
-### Best practice: Welcome messages in teams
+### Best practice: Welcome messages in Teams
 
-When your bot is first added to the team, it is a best practice to send a welcome message to the team to introduce the bot to all users of the team. The welcome message should provide a description of the bot’s functionality and user benefits. Ideally the message should also include commands for the user to interact with the app. To do this, ensure that your bot responds to the `conversationUpdate` message, with the `teamsAddMembers` eventType in the `channelData` object. Be sure that the `memberAdded` ID is the bot's App ID itself, because the same event is sent when a user is added to a team. See [Team member or bot addition](~/concepts/bots/bots-notifications.md#team-member-or-bot-addition) for more details.
+When your bot is first added to the group or team, it is generally useful to send a welcome message introducing the bot to all users. The welcome message should provide a description of the bot’s functionality and user benefits. Ideally the message should also include commands for the user to interact with the app. To do this, ensure that your bot responds to the `conversationUpdate` message, with the `teamsAddMembers` eventType in the `channelData` object. Be sure that the `memberAdded` ID is the bot's App ID itself, because the same event is sent when a user is added to a team. See [Team member or bot addition](~/concepts/bots/bots-notifications.md#team-member-or-bot-addition) for more details.
 
 You might also want to send a personal message to each member of the team when the bot is added. To do this, you could [fetch the team roster](~/concepts/bots/bots-context.md#fetching-the-team-roster) and send each user a [direct message](~/concepts/bots/bot-conversations/bots-conv-personal.md#starting-a-11-conversation).
 
 We recommend that your bot *not* send a welcome message in the following situations:
 
 * The team is large (obviously subjective, but for example larger than 100 members). Your bot may be seen as 'spammy' and the person who added it may get complaints unless you clearly communicate your bot's value proposition to everyone who sees the welcome message.
-* Your bot is first mentioned in a channel (versus being first added to a team)
-* A channel is renamed
-* A team member is added to a channel
+* Your bot is first mentioned in a group or channel (versus being first added to a team)
+* A group or channel is renamed
+* A team member is added to a group or channel
 
 For more best practices, see our [design guidelines](~/resources/design/overview.md).
 
 ## @ Mentions
 
-Bots in a channel respond only when they are mentioned ("@_botname_") in a message. That means every message received by a bot in a channel contains its own name, and you must ensure that your message parsing handles that case. In addition, bots can parse out other users mentioned and mention users as part of their messages.
+Because bots in a group or channel respond only when they are mentioned ("@_botname_") in a message, every message received by a bot in a group channel contains its own name, and you must ensure your message parsing handles that. In addition, bots can parse out other users mentioned and mention users as part of their messages.
 
 ### Retrieving mentions
 
 Mentions are returned in the `entities` object in payload and contain both the unique ID of the user and, in most cases, the name of user mentioned. You can retrieve all mentions in the message by calling the `GetMentions` function in the Bot Builder SDK for .NET, which returns an array of `Mentioned` objects.
-
-All messages that your bot receives have the name of the bot in the channel and should accommodate that in its message parsing.
 
 #### .NET example code: Check for and strip @bot mention
 
@@ -156,7 +155,7 @@ session.send(generalMessage);
 ```json
 {
     "type": "message", 
-    "text": "Hey <at>Larry Jin</at> check out this message",
+    "text": "Hey <at>Pranav Smith</at> check out this message",
     "timestamp": "2017-10-29T00:51:05.9908157Z",
     "localTimestamp": "2017-10-28T17:51:05.9908157-07:00",
     "serviceUrl": "https://skype.botframework.com",
@@ -184,15 +183,15 @@ session.send(generalMessage);
             "type":"mention",
             "mentioned":{
                 "id":"29:08q2j2o3jc09au90eucae",
-                "name":"Larry Jin"
+                "name":"Pranav Smith"
             },
-            "text": "<at>@Larry Jin</at>"
+            "text": "<at>@Pranav Smith</at>"
         }
     ],
     "replyToId": "3UP4UTkzUk1zzeyW"
 }
 ```
 
-## Accessing team context
+## Accessing groupChat or channel scope
 
-Your bot can do more than send and receive messages in teams. For instance, it can also fetch the list of team members, including their profile information, as well as the list of channels. See [Get context for your Microsoft Teams bot](~/concepts/bots/bots-context.md) to learn more.
+Your bot can do more than send and receive messages in groups and teams. For instance, it can also fetch the list of members, including their profile information, as well as the list of channels. See [Get context for your Microsoft Teams bot](~/concepts/bots/bots-context.md) to learn more.

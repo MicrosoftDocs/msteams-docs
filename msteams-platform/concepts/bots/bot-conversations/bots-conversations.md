@@ -155,11 +155,11 @@ A typical channelData object in an activity sent to your bot contains the follow
 * `eventType` Teams event type; passed only in cases of [channel modification events](~/concepts/bots/bots-notifications.md#channel-updates)
 * `tenant.id` Azure Active Directory tenant ID; passed in all contexts
 * `team` Passed only in channel contexts, not in personal chat.
-    * `id` GUID for the channel
-    * `name` Name of the team; passed only in cases of [team rename events](~/concepts/bots/bots-notifications.md#team-name-updates)
+  * `id` GUID for the channel
+  * `name` Name of the team; passed only in cases of [team rename events](~/concepts/bots/bots-notifications.md#team-name-updates)
 * `channel` Passed only in channel contexts when the bot is mentioned or for events in channels in teams where the bot has been added
-    * `id` GUID for the channel
-    * `name` Channel name; passed only in cases of [channel modification events](~/concepts/bots/bots-notifications.md#channel-updates).
+  * `id` GUID for the channel
+  * `name` Channel name; passed only in cases of [channel modification events](~/concepts/bots/bots-notifications.md#channel-updates).
 * `channelData.teamsTeamId` Deprecated. This property is included only for backwards compatibility.
 * `channelData.teamsChannelId` Deprecated. This property is included only for backwards compatibility.
 
