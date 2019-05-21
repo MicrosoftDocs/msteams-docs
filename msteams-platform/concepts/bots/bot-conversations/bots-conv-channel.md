@@ -1,10 +1,10 @@
 ---
-title: Channel and Group conversations with bots
+title: Channel and Group chat conversations with bots
 description: Describes the end-to-end scenario of having a conversation with a bot in a channel in Microsoft Teams
 keywords: teams scenarios channels conversation bot
 ms.date: 05/20/2019
 ---
-# Channel and Group conversation with a Microsoft Teams bot
+# Channel and Group chat conversations with a Microsoft Teams bot
 
 Microsoft Teams allows users to bring bots into their channel or group chat conversations. By adding a bot to a team or chat, all users of the conversation can take advantage of the bot functionality right in the conversation. You can also access Teams-specific functionality within your bot like querying team information and @mentioning users.
 
