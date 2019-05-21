@@ -101,6 +101,7 @@ bot.on('conversationUpdate', (msg) => {
     },
     "conversation": {
         "isGroup": true,
+        "conversationType": "channel",
         "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
     },
     "recipient": {
@@ -187,6 +188,7 @@ The `conversationUpdate` event with the `membersRemoved` object in the payload i
     },
     "conversation": {
         "isGroup": true,
+        "conversationType": "channel",
         "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
     },
     "recipient":
@@ -209,7 +211,7 @@ The `conversationUpdate` event with the `membersRemoved` object in the payload i
 ## Team name updates
 
 > [!NOTE]
-> At this time, there is no functionality to query all team names, and team name is not returned in payloads from other events.
+> There is no functionality to query all team names, and team name is not returned in payloads from other events.
 
 Your bot is notified when the team it is in has been renamed. It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object. Please note that there are no notifications for team creation or deletion, because bots exist only as part of teams and have no visibility outside the scope in which they have been added.
 
@@ -228,6 +230,7 @@ Your bot is notified when the team it is in has been renamed. It receives a `con
     }, 
     "conversation": {
         "isGroup": true,
+        "conversationType": "channel",
         "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
     },
     "recipient": { 
@@ -272,6 +275,7 @@ The channel events are as follows:
     },
     "conversation": {
         "isGroup": true,
+        "conversationType": "channel",
         "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
     },
     "recipient": {
@@ -358,6 +362,7 @@ The `messageReaction` event is sent when a user adds or removes his or her react
     },
     "conversation": {
         "isGroup": true,
+        "conversationType": "channel",
         "id": "19:3629591d4b774aa08cb0887902eee7c1@thread.skype"
     },
     "recipient": {
@@ -399,6 +404,7 @@ The `messageReaction` event is sent when a user adds or removes his or her react
     },
     "conversation": {
         "isGroup": true,
+        "conversationType": "channel",
         "id": "19:3629591d4b774aa08cb0887902eee7c1@thread.skype"
     },
     "recipient": {
