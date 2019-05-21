@@ -109,13 +109,13 @@ msg.text('Hello, this is a notification');
 bot.send(msg);
 ```
 
-### Creating a channel conversation
+## Creating a channel conversation
 
 Your team-added bot can post into a channel to create a new reply chain. If you're using the Node.js Teams SDK, use `startReplyChain()` which gives you a fully-populated address with the correct activity id and conversation id. If you are using C#, see the example below.
 
 Alternatively, you can use the REST API and issue a POST request to [`/conversations`](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) resource.
 
-#### .NET example (from [this sample](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs))
+### .NET example (from [this sample](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs))
 
 ```csharp
 using Microsoft.Bot.Builder.Dialogs;

@@ -23,7 +23,7 @@ A bot behaves differently depending on what kind of conversation it is involved 
 * `personal` Conversations between a bot and a single user
 * `groupChat` A conversation between a bot and 2 or more users
 
-See [Have a conversation with a Microsoft Teams bot](~/concepts/bots/bot-conversations/bots-conversations) for more information.
+See [Have a conversation with a Microsoft Teams bot](~/concepts/bots/bot-conversations/bots-conversations.md) for more information.
 
 With Microsoft Teams apps, you can make the bot the star of your experience, or just a helper. Bots are distributed as part of your broader app package which can include other capabilities such as [tabs](~/concepts/tabs/tabs-overview.md) or [messaging extensions](~/concepts/messaging-extensions/messaging-extensions-overview.md).
 
@@ -59,7 +59,7 @@ See the [Troubleshooting bots](~/troubleshoot/troubleshoot.md#troubleshooting-bo
 The following topics will guide you through the process of creating a great bot for Teams.
 
 * [Get started with apps for Teams](~/get-started/get-started-nodejs-app-studio.md) Create a "hello world" app.
-* [Design a great bot](~/get-started/design#designing-a-great-bot.md): Microsoft Teams is the place for group and team collaboration. Consider what functionality your bot can bring to this collaboration environment, via personal conversations or as part of a channel conversation. A great bot on Teams will also find ways to leverage the unique tabs feature, via a [configurable tab](~/concepts/tabs/tabs-overview.md) or a [static tab](~/concepts/tabs/tabs-static.md).
+* [Design a great bot](~/get-started/design.md#designing-a-great-bot): Microsoft Teams is the place for group and team collaboration. Consider what functionality your bot can bring to this collaboration environment, via personal conversations or as part of a channel conversation. A great bot on Teams will also find ways to leverage the unique tabs feature, via a [configurable tab](~/concepts/tabs/tabs-overview.md) or a [static tab](~/concepts/tabs/tabs-static.md).
 * [Create a bot](~/concepts/bots/bots-create.md): Take advantage of the great tools, documentation, and community provided by the Bot Framework team.
 * [Talk to your bot](~/concepts/bots/bot-conversations/bots-conversations.md): Add basic conversation flow and leverage channel-specific functionality. If you develop in .NET or Node.js, use our [extensions for the Bot Builder SDK](~/get-started/code.md#microsoft-teams-extensions-for-the-bot-builder-sdk) to simplify your work.
 * [Using cards in your bot](~/concepts/bots/bot-conversations/bots-cards.md) Design cards to communicate and accept user response.

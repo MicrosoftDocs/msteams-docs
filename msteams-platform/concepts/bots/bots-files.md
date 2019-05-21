@@ -30,7 +30,7 @@ The following sections describe how to do this to send file content as a result 
 
 ### Configure your bot to support files
 
-In order to send and receive files in your bot, you have to set the `supportsFiles` property in the manifest to `true`. This property is described in the [bots](~/resources/schema/manifest-schema#bots) section of the Manifest reference.
+In order to send and receive files in your bot, you have to set the `supportsFiles` property in the manifest to `true`. This property is described in the [bots](~/resources/schema/manifest-schema.md#bots) section of the Manifest reference.
 
 The definition will look like this: `"supportsFiles": true`. If your bot does not enable `supportsFiles`, the following features will not work.
 
