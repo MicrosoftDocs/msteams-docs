@@ -13,7 +13,7 @@ All bots created using the Microsoft Bot Framework are configured and ready to w
 
 A sample bot is included in the [Get Started](~/get-started/get-started.md) sample for Node.js and .NET, along with detailed steps for creating your first bot.
 
-See the [Bot Framework Documentation](https://docs.microsoft.com/en-us/azure/bot-service/?view=azure-bot-service-3.0) for general information on bots.
+See the [Bot Framework Documentation](/azure/bot-service/?view=azure-bot-service-3.0) for general information on bots.
 
 ## Create a bot for Microsoft Teams
 
@@ -24,7 +24,7 @@ See the [Bot Framework Documentation](https://docs.microsoft.com/en-us/azure/bot
    ![Bot Framework registration page](~/assets/images/bots/bfregister.png)
 
 > [!NOTE]
-> You **must** use this link to create a new bot: https://dev.botframework.com/bots/new. If you click on the *Create a bot* button in the Bot Framework portal instead, you will [create your bot in Microsoft Azure](#bots-and-microsoft-azure) instead.
+> If you do not wish to create your bot in Azure, you **must** use this link to create a new bot: https://dev.botframework.com/bots/new. If you click on the *Create a bot* button in the Bot Framework portal instead, you will [create your bot in Microsoft Azure](#bots-and-microsoft-azure) instead.
 
 2. Build the bot using the [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet package, the [botbuilder-teams](https://www.npmjs.com/package/botbuilder-teams) npm package, or the [Bot Connector API](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-connector-api-reference).
 

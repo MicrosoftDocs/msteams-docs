@@ -2,14 +2,14 @@
 title: Handle bot events
 description: Describes how to handle events in bots for Microsoft Teams
 keywords: teams bots events
-ms.date: 11/11/2018
+ms.date: 05/20/2019
 ---
 # Handle bot events in Microsoft Teams
 
 Microsoft Teams sends notifications to your bot for changes or events that happen in contexts where your bot is active. You can use these events to trigger service logic, such as the following:
 
 * Trigger a welcome message when your bot is added to a team
-* Query and cache team information when the bot is added to a team
+* Query and cache group information when the bot is added to a group chat
 * Update cached information on team membership or channel information
 * Remove cached information for a team if the bot is removed
 * When a bot message is liked by a user
@@ -236,7 +236,7 @@ Your bot is notified when the team it is in has been renamed. It receives a `con
     },
     "channelData": {
         "team": {
-            "id": "19:efa9296d959346209fea44151c742e73@thread.skype", 
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype",
             "name": "New Team Name"
         },
         "eventType": "teamRenamed",
@@ -298,39 +298,39 @@ The channel events are as follows:
 
 ```json
 ⋮
-"channelData": {         
-    "channel": {             
-        "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",             
-        "name": "PhotographyUpdates"         
-    },         
-    "team": {             
-        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"         
-    },         
-    "eventType": "channelRenamed",         
-    "tenant": {             
-        "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"         
-    }     
-} 
+"channelData": {
+    "channel": {
+        "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",
+        "name": "PhotographyUpdates"
+    },
+    "team": {
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+    },
+    "eventType": "channelRenamed",
+    "tenant": {
+        "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+    }
+}
 ⋮
 ```
 
 ### Schema excerpt: channelData for channelDeleted
 
-```json     
+```json
 ⋮
-"channelData": {         
-    "channel": {             
-        "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",               
-        "name": "PhotographyUpdates"       
+"channelData": {
+    "channel": {
+        "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",
+        "name": "PhotographyUpdates"
     },
-    "team": {             
-        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"         
-    },         
-    "eventType": "channelDeleted",         
-    "tenant": {             
-        "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"         
-    }     
-} 
+    "team": {
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+    },
+    "eventType": "channelDeleted",
+    "tenant": {
+        "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+    }
+}
 ⋮
 ```
 
