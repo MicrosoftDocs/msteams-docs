@@ -6,7 +6,7 @@ ms.date: 05/20/2019
 ---
 # Handle bot events in Microsoft Teams
 
-Microsoft Teams sends notifications to your bot for changes or events that happen in contexts where your bot is active. You can use these events to trigger service logic, such as the following:
+Microsoft Teams sends notifications to your bot for changes or events that happen in scopes where your bot is active. You can use these events to trigger service logic, such as the following:
 
 * Trigger a welcome message when your bot is added to a team
 * Query and cache group information when the bot is added to a group chat
@@ -16,20 +16,20 @@ Microsoft Teams sends notifications to your bot for changes or events that happe
 
 Each bot event is sent as an `Activity` object in which `messageType` defines what information is in the object. For messages of type `message`, see [Sending and receiving messages](~/concepts/bots/bot-conversations/bots-conversations.md).
 
-Teams-specific events, usually triggered off the `conversationUpdate` type, have additional Teams event information passed as part of the `channelData` object, and therefore your event handler must query the `channelData` payload for the Teams `eventType` and additional event-specific metadata.
+Teams and group events, usually triggered off the `conversationUpdate` type, have additional Teams event information passed as part of the `channelData` object, and therefore your event handler must query the `channelData` payload for the Teams `eventType` and additional event-specific metadata.
 
 The following table lists the events that your bot can receive and take action on.
 
-|Type|Payload object|Teams eventType |Description|
-|---|---|---|---|
-| `conversationUpdate` |`membersAdded`| `teamMemberAdded`|[Bot or team member was added to team](#team-member-or-bot-addition)|
-| `conversationUpdate` |`membersRemoved`| `teamMemberRemoved`|[Bot or team member was removed from team](#team-member-or-bot-removed)|
-| `conversationUpdate` | |`teamRenamed`| [Team in which bot is member was renamed](#team-name-updates)|
-| `conversationUpdate` | |`channelCreated`| In a team where bot is member, [a channel was created](#channel-updates)|
-| `conversationUpdate` | |`channelRenamed`| In a team where bot is member, [a channel was renamed](#channel-updates)|
-| `conversationUpdate` | |`channelDeleted`| In a team where bot is member, [a channel was deleted](#channel-updates)|
-| `messageReaction` |`reactionsAdded`|| [A user adds his or her reaction to a bot message](#reactions)|
-| `messageReaction` |`reactionsRemoved`|| [A user removes his or her reaction to a bot message](#reactions)|
+|Type|Payload object|Teams eventType |Description|Scope|
+|---|---|---|---|---|
+| `conversationUpdate` |`membersAdded`| `teamMemberAdded`|[Member added to team](#team-member-or-bot-addition)| all |
+| `conversationUpdate` |`membersRemoved`| `teamMemberRemoved`|[Member was removed from team](#team-member-or-bot-removed)| `groupChat` & `team` |
+| `conversationUpdate` | |`teamRenamed`| [Member was renamed](#team-name-updates)| `team` |
+| `conversationUpdate` | |`channelCreated`| [A channel was created](#channel-updates)|`team` |
+| `conversationUpdate` | |`channelRenamed`| [A channel was renamed](#channel-updates)|`team` |
+| `conversationUpdate` | |`channelDeleted`| [A channel was deleted](#channel-updates)|`team` |
+| `messageReaction` |`reactionsAdded`|| [Reaction to bot message](#reactions)| all |
+| `messageReaction` |`reactionsRemoved`|| [Reaction removed from bot message](#reactions)| all |
 
 ## Team member or bot addition
 
