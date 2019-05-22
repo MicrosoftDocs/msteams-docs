@@ -1,6 +1,7 @@
 - name: Microsoft Teams Platform Documentation
   href: foo.md
 - name: Overview
+  expanded: true
   items:
   - name: What are Microsoft Teams apps?
     href: overview.md
