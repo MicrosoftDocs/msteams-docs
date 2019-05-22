@@ -1,134 +1,155 @@
 - name: Microsoft Teams Platform Documentation
-  href: ./foo.md
+  href: foo.md
 - name: Overview
   items:
   - name: What are Microsoft Teams apps?
-    href: ./overview.md
+    href: overview.md
 - name: Tutorials
   items:
   - name: Create tab and bot app using C#
-    href: ./_old/get-started/get-started-dotnet-app-studio.md
+    href: _old/get-started/get-started-dotnet-app-studio.md
   - name: Create tab and bot app using JavaScript
-    href: ./_old/get-started/get-started-nodejs-app-studio.md
+    href: _old/get-started/get-started-nodejs-app-studio.md
 - name: Samples & templates
   items: 
   - name: Sample apps
-    href: ./old/samples/code-samples.md
+    href: old/samples/code-samples.md
   - name: App templates
-    href: ./old/samples/app-templates.md
+    href: old/samples/app-templates.md
 - name: Concepts
+  expanded: true
   items:
   - name: Understanding Teams app capabilities
-    href: ./foo.md
+    href: foo.md
   - name: Planning your app
     items:
     - name: Understanding your use cases
-      href: ./foo.md
+      href: foo.md
     - name: Choosing the right app capabilities
-      href: ./foo.md
+      href: foo.md
     - name: Decide how you will distribute your app
-      href: ./foo.md
+      href: foo.md
   - name: Designing an effective app
     items:
-      - name: Communicating with users
-        href: ./foo.md
-      - 
-  
+    - name: Communicating with users
+      href: foo.md
+    - name: Designing engaging and actionable cards
+      href: foo.md
+  - name: Deploy and publish your app
+    items:
+    - name: Your Teams app lifecycle
+      href: foo.md
+    - name: Create your app package
+      href: foo.md
+    - name: Deploy to your Teams
+      href: foo.md
+    - name: Publish to your organization
+      href: foo.md
+    - name: Publish to the app store
+      href: foo.md
+    - name: Localize your app
+      href: foo.md
+  - name: Authentication in Teams apps
+    items:
+    - name: Understanding authentication in Teams apps
+      href: foo.md
+    - name: Configuring identity providers
+      href: foo.md
 - name: Task-oriented interactions with Messaging Extensions
   items:
   - name: What are Messaging Extensions?
-    href: ./messaging-extensions/what-are-messaging-extensions.md
+    href: messaging-extensions/what-are-messaging-extensions.md
   - name: Quickstarts
     items:
     - name: Action-based messaging extensions
       items:
       - name: C#/.NET
-        href: ./foo.md
+        href: foo.md
       - name: JavaScript/Node.js
-        href: ./foo.md
+        href: foo.md
     - name: Search-based messaging extensions
       items:
       - name: C#/.NET
-        href: ./foo.md
+        href: foo.md
       - name: JavaScript/Node.js
-        href: ./foo.md    
+        href: foo.md    
   - name: Samples
-    href: ./old/samples/code-samples.md
+    href: old/samples/code-samples.md
   - name: How-to guides
     items:
     - name: Initiate actions and collect information
       items:
       - name: Create your action-based messaging extension
-        href: ./foo.md
+        href: foo.md
       - name: Handling the initial invoke message
-        href: ./foo.md
+        href: foo.md
       - name: Collect information with a task module response
-        href: ./foo.md
+        href: foo.md
       - name: Send a response to the submit action
-        href: ./foo.md
+        href: foo.md
     - name: Search and insert results
       items:
       - name: Create your search-based messaging extension
-        href: ./foo.md
+        href: foo.md
       - name: Receive and respond to search queries
-        href: ./foo.md
+        href: foo.md
       - name: Settings and configuration
-        href: ./foo.md
+        href: foo.md
     - name: Authentication in messaging extensions
       items:
       - name: Authentication flow for messaging extensions
-        href: ./foo.md
+        href: foo.md
       - name: Using Azure AD Authentication
-        href: ./foo.md
+        href: foo.md
       - name: Using OAuthCard and the Azure Bot Service
-        href: ./foo.md
+        href: foo.md
 - name: Embedded web experiences with Tabs
   items:
   - name: What are tabs?
-    href: ./foo.md
+    href: foo.md
 - name: Conversational bots
   items:
   - name: What are bots in Microsoft Teams?
-    href: ./foo.md
+    href: foo.md
 - name: Webhooks and Connectors
   items:
   - name: What are Webhooks and Connectors?
-    href: ./foo.md
+    href: foo.md
 - name: Resources
   items:
   - name: Share-to-Teams
-    href: ./_old/share-to-teams.md
+    href: _old/share-to-teams.md
   - name: Supported media formats
-    href: ./_old/resources/general/media-formats.md
+    href: _old/resources/general/media-formats.md
   - name: Public Developer Preview
-    href: ./_old/resources/dev-preview/developer-preview-intro.md
+    href: _old/resources/dev-preview/developer-preview-intro.md
     items:
     - name: Developer preview manifest schema
-      href: ./_old/resources/schema/manifest-schema-dev-preview.md
+      href: _old/resources/schema/manifest-schema-dev-preview.md
     - name: Features in Developer Preview
-      href: ./_old/resources/dev-preview/developer-preview-features.md
+      href: _old/resources/dev-preview/developer-preview-features.md
     - name: Using DevTools in the client
-      href: ./_old/resources/dev-preview/developer-preview-tools.md
+      href: _old/resources/dev-preview/developer-preview-tools.md
   - name: Design components
-    href: ./_old/resources/design/overview.md
+    href: _old/resources/design/overview.md
     items:
     - name: Color
-      href: ./_old/resources/design/components/color.md
+      href: _old/resources/design/components/color.md
     - name: Buttons, links, and controls
-      href: ./_old/resources/design/components/buttons.md
+      href: _old/resources/design/components/buttons.md
     - name: Fields and flyouts
-      href: ./_old/resources/design/components/fields.md
+      href: _old/resources/design/components/fields.md
     - name: Dialogs
-      href: ./_old/resources/design/components/dialogs.md
+      href: _old/resources/design/components/dialogs.md
     - name: Typography
-      href: ./_old/resources/design/components/typography.md
+      href: _old/resources/design/components/typography.md
     - name: Themes
-      href: ./_old/resources/design/components/themes.md
+      href: _old/resources/design/components/themes.md
   - name: Manifest schema
-    href: ./_old/resources/schema/manifest-schema.md
+    href: _old/resources/schema/manifest-schema.md
   - name: Localization file JSON schema
-    href: ./_old/resources/schema/localization-schema.md
+    href: _old/resources/schema/localization-schema.md
   - name: Microsoft Graph APIs
-    href: ./_old/resources/microsoft-graph.md
+    href: _old/resources/microsoft-graph.md
 - name: Feedback
-  href: ./_old/feedback.md
+  href: _old/feedback.md
