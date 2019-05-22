@@ -1,5 +1,4 @@
 - name: Overview
-  universal_ref_toc: /javascript/api/msteams-client-docs-ref-typescript/toc.json
   items:
   - name: What are Microsoft Teams apps?
     href: ./overview.md
@@ -18,57 +17,56 @@
 - name: Concepts
   items:
   - name: Share-to-Teams
-    href: ./old/share-to-teams.md
+    href: ./_old/share-to-teams.md
 - name: Task-oriented interactions with Messaging Extensions
   items:
   - name: What are Messaging Extensions?
-    href: ./
+    href: ./foo.md
 - name: Embedded web experiences with Tabs
   items:
   - name: What are tabs?
-    href: ./
+    href: ./foo.md
 - name: Conversational bots
   items:
   - name: What are bots in Microsoft Teams?
-    href: ./
+    href: ./foo.md
 - name: Connectors and Webhooks
   items:
   - name: What are Connectors and Webhooks?
-    href: ./
+    href: ./foo.md
 - name: Resources
   items:
   - name: Supported media formats
-    href: ./resources/general/media-formats.md
-  - name: General
+    href: ./_old/resources/general/media-formats.md
   - name: Public Developer Preview
-    href: ./old/resources/dev-preview/developer-preview-intro.md
+    href: ./_old/resources/dev-preview/developer-preview-intro.md
     items:
     - name: Developer preview manifest schema
-      href: ./old/resources/schema/manifest-schema-dev-preview.md
+      href: ./_old/resources/schema/manifest-schema-dev-preview.md
     - name: Features in Developer Preview
-      href: ./old/resources/dev-preview/developer-preview-features.md
+      href: ./_old/resources/dev-preview/developer-preview-features.md
     - name: Using DevTools in the client
-      href: ./old/resources/dev-preview/developer-preview-tools.md
+      href: ./_old/resources/dev-preview/developer-preview-tools.md
   - name: Design components
-    href: ./resources/design/overview.md
+    href: ./_old/resources/design/overview.md
     items:
     - name: Color
-      href: ./resources/design/components/color.md
+      href: ./_old/resources/design/components/color.md
     - name: Buttons, links, and controls
-      href: ./resources/design/components/buttons.md
+      href: ./_old/resources/design/components/buttons.md
     - name: Fields and flyouts
-      href: ./resources/design/components/fields.md
+      href: ./_old/resources/design/components/fields.md
     - name: Dialogs
-      href: ./resources/design/components/dialogs.md
+      href: ./_old/resources/design/components/dialogs.md
     - name: Typography
-      href: ./resources/design/components/typography.md
+      href: ./_old/resources/design/components/typography.md
     - name: Themes
-      href: ./resources/design/components/themes.md
+      href: ./_old/resources/design/components/themes.md
   - name: Manifest schema
-    href: ./resources/schema/manifest-schema.md
+    href: ./_old/resources/schema/manifest-schema.md
   - name: Localization file JSON schema
-    href: ./resources/schema/localization-schema.md
+    href: ./_old/resources/schema/localization-schema.md
   - name: Microsoft Graph APIs
-    href: ./resources/microsoft-graph.md
+    href: ./_old/resources/microsoft-graph.md
 - name: Feedback
-  href: ./feedback.md
+  href: ./_old/feedback.md
