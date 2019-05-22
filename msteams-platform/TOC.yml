@@ -21,7 +21,51 @@
 - name: Task-oriented interactions with Messaging Extensions
   items:
   - name: What are Messaging Extensions?
-    href: ./foo.md
+    href: ./messaging-extensions/what-are-messaging-extensions.md
+  - name: Quickstarts
+    items:
+    - name: Action-based messaging extensions
+      items:
+      - name: C#/.NET
+        href: ./foo.md
+      - name: JavaScript/Node.js
+        href: ./foo.md
+    - name: Search-based messaging extensions
+      items:
+      - name: C#/.NET
+        href: ./foo.md
+      - name: JavaScript/Node.js
+        href: ./foo.md    
+  - name: Samples
+    href: ./old/samples/code-samples.md
+  - name: How-to guides
+    items:
+    - name: Initiate actions and collect information
+      items:
+      - name: Create your action-based messaging extension
+        href: ./foo.md
+      - name: Handling the initial invoke message
+        href: ./foo.md
+      - name: Collect information with a task module response
+        href: ./foo.md
+      - name: Send a response to the submit action
+        href: ./foo.md
+    - name: Search and insert results
+      items:
+      - name: Create your search-based messaging extension
+        href: ./foo.md
+      - name: Receive and respond to search queries
+        href: ./foo.md
+      - name: Settings and configuration
+        href: ./foo.md
+    - name: Authentication in messaginge extensions
+      items:
+      - name: Authentication flow for messaging extensions
+        href: ./foo.md
+      - name: Using Azure AD Authentication
+        href: ./foo.md
+      - name: Using OAuthCard and the Azure Bot Service
+        href: ./foo.md
 - name: Embedded web experiences with Tabs
   items:
   - name: What are tabs?
