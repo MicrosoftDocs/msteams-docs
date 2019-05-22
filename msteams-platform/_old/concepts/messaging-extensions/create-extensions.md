@@ -13,7 +13,7 @@ Action-based messaging extensions allow your users to trigger actions in externa
 
 The following sections describe how to do this.
 
-[!include[Common content for creating extensions](~/concepts/messaging-extensions/messaging-extensions-common.md)]
+[!include[Common content for creating extensions](~/_old/concepts/messaging-extensions/messaging-extensions-common.md)]
 
 ### Action type message extensions
 
