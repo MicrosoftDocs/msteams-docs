@@ -1,3 +1,5 @@
+- name: Microsoft Teams Platform Documentation
+  href: ./foo.md
 - name: Overview
   items:
   - name: What are Microsoft Teams apps?
@@ -16,8 +18,22 @@
     href: ./old/samples/app-templates.md
 - name: Concepts
   items:
-  - name: Share-to-Teams
-    href: ./_old/share-to-teams.md
+  - name: Understanding Teams app capabilities
+    href: ./foo.md
+  - name: Planning your app
+    items:
+    - name: Understanding your use cases
+      href: ./foo.md
+    - name: Choosing the right app capabilities
+      href: ./foo.md
+    - name: Decide how you will distribute your app
+      href: ./foo.md
+  - name: Designing an effective app
+    items:
+      - name: Communicating with users
+        href: ./foo.md
+      - 
+  
 - name: Task-oriented interactions with Messaging Extensions
   items:
   - name: What are Messaging Extensions?
@@ -58,7 +74,7 @@
         href: ./foo.md
       - name: Settings and configuration
         href: ./foo.md
-    - name: Authentication in messaginge extensions
+    - name: Authentication in messaging extensions
       items:
       - name: Authentication flow for messaging extensions
         href: ./foo.md
@@ -74,12 +90,14 @@
   items:
   - name: What are bots in Microsoft Teams?
     href: ./foo.md
-- name: Connectors and Webhooks
+- name: Webhooks and Connectors
   items:
-  - name: What are Connectors and Webhooks?
+  - name: What are Webhooks and Connectors?
     href: ./foo.md
 - name: Resources
   items:
+  - name: Share-to-Teams
+    href: ./_old/share-to-teams.md
   - name: Supported media formats
     href: ./_old/resources/general/media-formats.md
   - name: Public Developer Preview
