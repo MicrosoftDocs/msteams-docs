@@ -26,9 +26,9 @@
     items:
     - name: Understanding your use cases
       href: foo.md
-    - name: Choosing the right app capabilities
+    - name: Choosing the right capabilities for your app
       href: foo.md
-    - name: Decide how you will distribute your app
+    - name: Deciding how you will distribute your app
       href: foo.md
   - name: Designing an effective app
     items:
@@ -77,6 +77,7 @@
   - name: Samples
     href: old/samples/code-samples.md
   - name: How-to guides
+    expanded: true
     items:
     - name: Initiate actions and collect information
       items:
@@ -108,7 +109,7 @@
   items:
   - name: What are tabs?
     href: foo.md
-- name: Conversational bots
+- name: Conversational Bots
   items:
   - name: What are bots in Microsoft Teams?
     href: foo.md
