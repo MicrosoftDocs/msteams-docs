@@ -30,9 +30,9 @@ The following sections describe how to do this to send file content as a result 
 
 ### Configure your bot to support files
 
-In order to send and receive files in your bot, you have to set the `supportsFiles` property in the manifest to true. This property is described in the [bots](~/resources/schema/manifest-schema#bots) section of the Manifest reference.
+In order to send and receive files in your bot, you have to set the `supportsFiles` property in the manifest to `true`. This property is described in the [bots](~/resources/schema/manifest-schema#bots) section of the Manifest reference.
 
-The definition will look like this: `"supportsFiles": true`. If your bot does not enable `supportFiles`, the following features will not work.
+The definition will look like this: `"supportsFiles": true`. If your bot does not enable `supportsFiles`, the following features will not work.
 
 ### Receiving files in personal chat
 
@@ -107,7 +107,7 @@ This message contains a simple attachment object requesting user permission to u
 
 #### Invoke activity when the user accepts the file
 
-An invoke activity is sent to your bot if and when the user accepts the file. It contains the OneDrive for Business placeholder URL that your bot can then issue a `PUT` into to transfer the file contents. for information on uploading to the OneDrive URL read this article: [Upload bytes to the upload session](https://docs.microsoft.com/en-us/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
+An invoke activity is sent to your bot if and when the user accepts the file. It contains the OneDrive for Business placeholder URL that your bot can then issue a `PUT` into to transfer the file contents. for information on uploading to the OneDrive URL read this article: [Upload bytes to the upload session](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
 
 The following example shows an abridged version of the invoke activity that your bot will receive:
 
