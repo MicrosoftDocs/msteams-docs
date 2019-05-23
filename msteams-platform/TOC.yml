@@ -76,6 +76,12 @@
         href: foo.md    
   - name: Samples
     href: old/samples/code-samples.md
+  - name: Designing your messaging extension
+    items:
+    - name: somthing something Design
+      href: foo.md
+    - name: somethingelse Design
+      href: foo.md
   - name: How-to guides
     expanded: true
     items:
@@ -109,14 +115,80 @@
   items:
   - name: What are tabs?
     href: foo.md
+  - name: Quickstarts
+    items:
+    - name: Create a personal tab
+      href: foo.md
+    - name: Create a channel tab
+      href: foo.md
+    - name: Create a configuration page
+      href: foo.md
+  - name: Samples
+    href: old/samples/code-samples.md
+  - name: Designing your tabs
+    items:
+    - name: something somethign Design
+      href: foo.md
+    - name: somethingelse design
+      href: foo.md
+  - name: How-to guides
+    items:
+    - name: dosoemthign
+      href: foo.md
+    - name: dosomethingelse
+      href: foo.md
 - name: Conversational Bots
   items:
   - name: What are bots in Microsoft Teams?
     href: foo.md
+  - name: PH Understanding v3 versus v4
+    href: foo.md
+  - name: Quickstarts
+    items:
+    - name: Create a personal bot
+      href: foo.md
+    - name: Create a channel tab
+      href: foo.md
+  - name: Samples
+    href: old/samples/code-samples.md
+  - name: Designing your bot
+    items:
+    - name: something somethign Design
+      href: foo.md
+    - name: somethingelse design
+      href: foo.md
+  - name: How-to guides
+    items:
+    - name: dosoemthign
+      href: foo.md
+    - name: dosomethingelse
+      href: foo.md
 - name: Webhooks and Connectors
   items:
   - name: What are Webhooks and Connectors?
     href: foo.md
+  - name: Quickstarts
+    items:
+    - name: Create an incoming webhook
+      href: foo.md
+    - name: Create a outgoing webhook
+      href: foo.md
+    - name: Create an O365 Connector
+      href: foo.md
+  - name: Samples
+    href: old/samples/code-samples.md
+  - name: Designing your webhooks and Connectors
+    items:
+    - name: something somethign Design
+      href: foo.md
+    - name: somethingelse design
+      href: foo.md
+  - name: How-to guides
+    items:
+    - name: dosoemthign
+      href: foo.md
+    - name: dosomethingelse
+      href: foo.md
 - name: Resources
   items:
   - name: Share-to-Teams
