@@ -27,6 +27,7 @@ When constructing your message, the following fields should be populated so that
 * `message.summary`, which shows up as the activity text
 
 <br>
+
 ![Activity feed example](~/assets/images/activity-feed/activity_feed.png)
 
 In addition to simply appearing in the feed, your app can also encode a deep link URL to an entity, such as your app’s tab. This drives user engagement to your app’s tab by allowing "one-click" navigation to that tab’s content.
@@ -77,7 +78,7 @@ POST /v3/conversations/a%3A1pL6i0oY3C0K8oAj8/activities/1493070356924
 
 ## Deep linking
 
-To navigate the user to content within your tab, your message must include an attachment with a tap action. This tap action should be of type `OpenUrl` and have a value that follows the Microsoft Teams [deep links](~/concepts/deep-links) format.
+To navigate the user to content within your tab, your message must include an attachment with a tap action. This tap action should be of type `openUrl` and have a value that follows the Microsoft Teams [deep links](~/concepts/deep-links) format.
 
 > [!NOTE]
 > If the deep link does not follow the Teams format, choosing the notification in the feed navigates the user first to the chat with the bot. From there, the user can engage the attachment’s tap action to navigate to an external website.
