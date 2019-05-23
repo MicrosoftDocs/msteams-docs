@@ -15,26 +15,26 @@
   items: 
   - name: Sample apps
     href: old/samples/code-samples.md
-  - name: App templates
+  - name: Production-ready app templates
     href: old/samples/app-templates.md
 - name: Concepts
   expanded: true
   items:
-  - name: Understanding Teams app capabilities
+  - name: Understand Teams app capabilities
     href: foo.md
   - name: Planning your app
     items:
-    - name: Understanding your use cases
+    - name: Understand your use cases
       href: foo.md
-    - name: Choosing the right capabilities for your app
+    - name: Choose the right capabilities for your app
       href: foo.md
-    - name: Deciding how you will distribute your app
+    - name: Decide how you will distribute your app
       href: foo.md
-  - name: Designing an effective app
+  - name: Design an effective app
     items:
-    - name: Communicating with users
+    - name: Communicate with users
       href: foo.md
-    - name: Designing engaging and actionable cards
+    - name: Design engaging and actionable cards
       href: foo.md
   - name: Deploy and publish your app
     items:
@@ -52,9 +52,9 @@
       href: foo.md
   - name: Authentication in Teams apps
     items:
-    - name: Understanding authentication in Teams apps
+    - name: Understand authentication in Teams apps
       href: foo.md
-    - name: Configuring identity providers
+    - name: Configure identity providers
       href: foo.md
 - name: Task-oriented interactions with Messaging Extensions
   items:
@@ -76,7 +76,7 @@
         href: foo.md    
   - name: Samples
     href: old/samples/code-samples.md
-  - name: Designing your messaging extension
+  - name: Design your messaging extension
     items:
     - name: somthing something Design
       href: foo.md
@@ -89,7 +89,7 @@
       items:
       - name: Create your action-based messaging extension
         href: foo.md
-      - name: Handling the initial invoke message
+      - name: Handle the initial invoke message
         href: foo.md
       - name: Collect information with a task module response
         href: foo.md
@@ -125,7 +125,7 @@
       href: foo.md
   - name: Samples
     href: old/samples/code-samples.md
-  - name: Designing your tabs
+  - name: Design your tabs
     items:
     - name: something somethign Design
       href: foo.md
@@ -141,7 +141,7 @@
   items:
   - name: What are bots in Microsoft Teams?
     href: foo.md
-  - name: PH Understanding v3 versus v4
+  - name: Understand v3 versus v4 PH title
     href: foo.md
   - name: Quickstarts
     items:
@@ -151,7 +151,7 @@
       href: foo.md
   - name: Samples
     href: old/samples/code-samples.md
-  - name: Designing your bot
+  - name: Design your bot
     items:
     - name: something somethign Design
       href: foo.md
@@ -177,7 +177,7 @@
       href: foo.md
   - name: Samples
     href: old/samples/code-samples.md
-  - name: Designing your webhooks and Connectors
+  - name: Design your webhooks and Connectors
     items:
     - name: something somethign Design
       href: foo.md
