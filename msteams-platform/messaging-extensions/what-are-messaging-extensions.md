@@ -7,7 +7,7 @@ ms.author: anclear
 ---
 # What are messaging extensions?
 
-Messaging extensions enable an alternative way for your Microsoft Teams users to interact with bots built on the Azure Bot Framework. Unlike conversational bots, users interact with your messaging extensions through buttons and forms, giving you more control over the interaction. They allow you to search, or take action, in an external system from the compose message area, the command box, or directly from a message in Teams.
+Messaging extensions enable an alternative way for your Microsoft Teams users to interact with bots built on the Azure Bot Framework. Unlike conversational bots, users interact with your messaging extensions through buttons and forms, giving you more control over the interaction. They allow you to search, or take action, in an external system from the compose message area, the command box, or directly from a message in Teams. You can then insert the results of that interaction into a message in Microsoft Teams.
 
 foo.md => screenshot needed, fullscreen, red box around three areas you can trigger an ME from.
 
