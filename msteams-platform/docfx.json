@@ -36,17 +36,13 @@
             "uhfHeaderId": "MSDocsHeader-Dev_Office",
             "breadcrumb_path": "/microsoftteams/platform/breadcrumb/TOC.json",
             "extendBreadcrumb": true,
-            "ms.topic": "article",
-            "author": "o365devx",
-            "ms.author": "o365devx",
-            "manager": "billbl",
+            "manager": "anclear",
             "ms.suite": "office365",
             "ms.prod": "msteams",
             "searchScope": ["Teams"],
             "feedback_system": "GitHub",
             "feedback_github_repo": "MicrosoftDocs/msteams-docs",
             "feedback_product_url": "https://microsoftteams.uservoice.com/forums/555103-public",
-            "ms.date": "07/24/2018",
             "titleSuffix": "Teams"
         },
         "fileMetadata": {

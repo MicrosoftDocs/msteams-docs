@@ -11,7 +11,7 @@
     href: _old/get-started/get-started-dotnet-app-studio.md
   - name: Create tab and bot app using JavaScript
     href: _old/get-started/get-started-nodejs-app-studio.md
-- name: Samples & templates
+- name: Samples and templates
   items: 
   - name: Sample apps
     href: old/samples/code-samples.md

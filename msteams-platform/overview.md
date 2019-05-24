@@ -1,8 +1,9 @@
 ---
 title: Developer platform
+author: aclear16
 description: Overview page describing the Microsoft Teams developer platform
-keywords: teams overview
-ms.date: 01/24/2018
+ms.topic: overview
+ms.author: anclear
 ---
 # The Microsoft Teams developer platform
 

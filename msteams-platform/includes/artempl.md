@@ -1,5 +1,8 @@
 ---
-title: Article Template Page | Microsoft Docs
-description: Serves as the article template page that can be copied and reused to create article pages
-keywords: template article teams
+title: https://review.docs.microsoft.com/en-us/help/contribute/metadata-attributes?branch=master
+author: 
+description: 
+ms.topic: 
+ms.author: 
 ---
+# title of article visible to user
