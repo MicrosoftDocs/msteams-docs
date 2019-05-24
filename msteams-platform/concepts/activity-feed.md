@@ -76,11 +76,11 @@ POST /v3/conversations/a%3A1pL6i0oY3C0K8oAj8/activities/1493070356924
 
 ## Deep linking
 
-To navigate the user to content within your tab, your message must include an attachment with a tap action. This tap action should be of type `openUrl` and have a value that follows the Microsoft Teams [deep links](~/concepts/deep-links) format.
+To navigate the user to content within your tab, your message must include an attachment with a tap action. This tap action should be of type `openUrl` and have a value that follows the Microsoft Teams [deep links](~/concepts/deep-links.md) format.
 
 > [!NOTE]
 > If the deep link does not follow the Teams format, choosing the notification in the feed navigates the user first to the chat with the bot. From there, the user can engage the attachment’s tap action to navigate to an external website.
 
 ## Notification only bots
 
-To access the activity feed, you will need to use a bot. If your bot's sole purpose is to send notifications, please take a look at the [notification only bots](~/concepts/bots/bots-notification-only) section.
+To access the activity feed, you will need to use a bot. If your bot's sole purpose is to send notifications, please take a look at the [notification only bots](~/concepts/bots/bots-notification-only.md) section.
