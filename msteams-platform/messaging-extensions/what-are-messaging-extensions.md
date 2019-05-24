@@ -13,14 +13,14 @@ foo.md => screenshot needed, fullscreen, red box around three areas you can trig
 
 ## Messaging extensions user scenarios
 
-**Scenario:** I need some external system to do something and I want the result of the action to be sent back to my conversation.
-**Example:** Reserve a resource and let the channel know what day/time you reserved it for.
+* **Scenario:** I need some external system to do something and I want the result of the action to be sent back to my conversation.
+* **Example:** Reserve a resource and let the channel know what day/time you reserved it for.
 
-**Scenario:** I need to find something in an external system, and I want to share the results with my conversation.
-**Example:**  Search for a work item in Azure DevOps, and share it with the group as an adaptive card.
+* **Scenario:** I need to find something in an external system, and I want to share the results with my conversation.
+* **Example:**  Search for a work item in Azure DevOps, and share it with the group as an adaptive card.
 
-**Scenario:** I need to complete a complex task involving multiple steps (or lots of information) in an external system, and the results should be shared with a conversation
-**Example:** Create a bug in your tracking system based on a Teams message, assign that bug to Bob, then send a card to the conversation thread with the bug's details.
+* **Scenario:** I need to complete a complex task involving multiple steps (or lots of information) in an external system, and the results should be shared with a conversation
+* **Example:** Create a bug in your tracking system based on a Teams message, assign that bug to Bob, then send a card to the conversation thread with the bug's details.
 
 ## Types of messaging extension commands
 
@@ -31,7 +31,7 @@ Messaging extensions commands come in two types, and can be triggered from three
 
 ## How do messaging extensions work?
 
-Your messaging extension is made of a bot, and a set of commands that define how your users can interact with it. Using your [app manifest](foo.md), you can only define a single messaging extension in a Teams app, however you can define up to 10 commands. Depending on the type of command, the flow can be slightly different.
+Your messaging extension is made of a bot and a set of commands that define how your users can interact with it. Using your [app manifest](foo.md), you can only define a single messaging extension in a Teams app, however you can define up to 10 commands. Depending on the type of command, the flow can be slightly different.
 
 ### Action-based messaging extension commands
 
