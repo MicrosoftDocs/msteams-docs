@@ -27,7 +27,7 @@ To configure an additional language for your app, in [Seller Dashboard](http://g
 2. Add French language
     * Fill in the app name.
     * Fill in a short description of the app in French.
-    * Fill in the Long description of the app in French.
+    * Fill in the long description of the app in French.
     * Upload the images of your app UI (in French).
 
 The images you upload with the English language will be the ones used in AppSource.
