@@ -26,8 +26,6 @@ When constructing your message, the following fields should be populated so that
 * `message.text`, which shows up as the activity title
 * `message.summary`, which shows up as the activity text
 
-<br>
-
 ![Activity feed example](~/assets/images/activity-feed/activity_feed.png)
 
 In addition to simply appearing in the feed, your app can also encode a deep link URL to an entity, such as your app’s tab. This drives user engagement to your app’s tab by allowing "one-click" navigation to that tab’s content.
