@@ -2,7 +2,7 @@
 title: Send and receive messages with a bot
 description: Describes how to send and receive messages with bots in Microsoft Teams
 keywords: teams bots messages
-ms.date: 04/23/2019
+ms.date: 05/20/2019
 ---
 # Have a conversation with a Microsoft Teams bot
 
@@ -10,11 +10,11 @@ A conversation is a series of messages sent between your bot and one or more use
 
 * `teams` Also called channel conversations, visible to all members of the channel.
 * `personal` Conversations between bots and a single user.
-* `groupchat` Chat between a bot and two or more users. Use of bots in `groupchat` is currently in [Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
+* `groupchat` Chat between a bot and two or more users.
 
 A bot behaves slightly differently depending on what kind of conversation it is involved in:
 
-* [Bots in channel conversations](~/concepts/bots/bot-conversations/bots-conv-channel.md) require the user to @ mention the bot to invoke it in a channel.
+* [Bots in channel and group chat conversations](~/concepts/bots/bot-conversations/bots-conv-channel.md) require the user to @ mention the bot to invoke it in a channel.
 * [Bots in single user conversations](~/concepts/bots/bot-conversations/bots-conv-personal.md) do not require an @ mention -  the user can just type.
 
 In order for the bot to work in a particular scope it should be listed as supporting that scope in the manifest. Scopes are defined and discussed further in the [Manifest Reference](~/resources/schema/manifest-schema.md).
@@ -33,7 +33,7 @@ Each message is an `Activity` object of type `messageType: message`. When a user
 
 Bots also support event-style messages. See [Handle bot events in Microsoft Teams](~/concepts/bots/bots-notifications.md) for more details. Speech is currently not supported.
 
-Messages are for the most part the same in both personal conversations and channel chats, but there are differences in how the bot is accessed in the UI and differences behind the scenes which you will need to know about.
+Messages are for the most part the same in across all scopes, but there are differences in how the bot is accessed in the UI and differences behind the scenes which you will need to know about.
 
 Basic conversation is handled through the Bot Framework Connector, a single REST API to enable your bot to communicate with Teams and other channels. The Bot Builder SDK provides easy access to this API, additional functionality to manage conversation flow and state, and simple ways to incorporate cognitive services such as natural language processing (NLP).
 
@@ -155,11 +155,11 @@ A typical channelData object in an activity sent to your bot contains the follow
 * `eventType` Teams event type; passed only in cases of [channel modification events](~/concepts/bots/bots-notifications.md#channel-updates)
 * `tenant.id` Azure Active Directory tenant ID; passed in all contexts
 * `team` Passed only in channel contexts, not in personal chat.
-    * `id` GUID for the channel
-    * `name` Name of the team; passed only in cases of [team rename events](~/concepts/bots/bots-notifications.md#team-name-updates)
+  * `id` GUID for the channel
+  * `name` Name of the team; passed only in cases of [team rename events](~/concepts/bots/bots-notifications.md#team-name-updates)
 * `channel` Passed only in channel contexts when the bot is mentioned or for events in channels in teams where the bot has been added
-    * `id` GUID for the channel
-    * `name` Channel name; passed only in cases of [channel modification events](~/concepts/bots/bots-notifications.md#channel-updates).
+  * `id` GUID for the channel
+  * `name` Channel name; passed only in cases of [channel modification events](~/concepts/bots/bots-notifications.md#channel-updates).
 * `channelData.teamsTeamId` Deprecated. This property is included only for backwards compatibility.
 * `channelData.teamsChannelId` Deprecated. This property is included only for backwards compatibility.
 
