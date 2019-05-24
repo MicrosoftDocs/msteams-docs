@@ -16,9 +16,7 @@ App templates are production-ready apps for Microsoft Teams that are community d
 * **Customizable and extensible:** While all app templates are ready to deploy as they are, we provide the entire code base and deployment scripts so that you can easily customize or extend them to fit your unique needs.
 * **Detailed documentation & support:** All app templates are accompanied by end-to-end documentation on solution architecture, deployment, and configuration steps. The repositories are monitored as well, so please report any issues you encounter by raising an Issue on GitHub.
 
-## Available app templates
-
-### Customer Stickers
+## Customer Stickers
 
 Self-expression is core to a healthy team culture. This app template is a [messaging extension](~/concepts/messaging-extensions/search-extensions.md) that enables your users to use custom stickers and GIFs within Microsoft Teams. This template provides an easy web-based configuration experience where anyone with configuration access can upload the GIFs/stickers/images they want their end-users to have, allowing your entire team to use any set of stickers you chose.
 
@@ -28,7 +26,7 @@ This app also enables easy sharing of images/GIFs/stickers across teams without 
 
 ![Stickers app](~/assets/images/stickers.png)
 
-### Icebreaker
+## Icebreaker
 
 Icebreaker is a [Microsoft Teams bot](~/concepts/bots/bots-overview.md) that helps your team get closer by pairing two random team members up every week to meet. The bot makes scheduling easy by automatically suggesting free times that work for both members. Strengthen personal connections and build a tightly knit community with this app.
 
