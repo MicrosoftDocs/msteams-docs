@@ -32,7 +32,7 @@ Often you’ll want to notify the end user whenever an update or a user action o
 
 There are two ways of achieving this scenario:
 
-1. If you wish to notify an entire channel your bot can asynchronously post a message to the channel. Note that there is currently no way for a bot to proactively create the tab conversation if it wasn't created with the tab.
+1. If you wish to notify an entire channel your bot can asynchronously post a message to the channel. There is no way for a bot to proactively create the tab conversation if it wasn't created with the tab.
 
 2. If you wish to only notify the recipient or interested parties involved with the action, your bot can send a personal chat message to the user. You should first check to see if a personal conversation between your bot and the user exists. If not, you can call `CreateConversation` to initiate the personal chat.
 
@@ -41,6 +41,6 @@ In both cases, use event notifications wisely and never spam the user with unnec
 ## FAQ
 
 - Do you support tabs on mobile?
-  Microsoft Teams does not currently embed content on our mobile clients – we recommend that you supply a fallback URL in your tab definition such that we can load the appropriate responsive web content on mobile devices.
+  Microsoft Teams does not embed content on our mobile clients – we recommend that you supply a fallback URL in your tab definition such that we can load the appropriate responsive web content on mobile devices.
 - How do I send ephemeral messages to a user?
-  Teams does not currently support the ability for a bot to message a user in a channel such that only a specific user can view the message (everyone sees all messages in a channel). The current workaround is to send a message to the user in personal chat.
+  Teams does not support the ability for a bot to message a user in a channel such that only a specific user can view the message (everyone sees all messages in a channel). Send a message to the user in personal chat instead.

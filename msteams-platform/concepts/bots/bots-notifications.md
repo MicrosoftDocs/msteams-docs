@@ -2,34 +2,34 @@
 title: Handle bot events
 description: Describes how to handle events in bots for Microsoft Teams
 keywords: teams bots events
-ms.date: 11/11/2018
+ms.date: 05/20/2019
 ---
 # Handle bot events in Microsoft Teams
 
-Microsoft Teams sends notifications to your bot for changes or events that happen in contexts where your bot is active. You can use these events to trigger service logic, such as the following:
+Microsoft Teams sends notifications to your bot for changes or events that happen in scopes where your bot is active. You can use these events to trigger service logic, such as the following:
 
 * Trigger a welcome message when your bot is added to a team
-* Query and cache team information when the bot is added to a team
+* Query and cache group information when the bot is added to a group chat
 * Update cached information on team membership or channel information
 * Remove cached information for a team if the bot is removed
 * When a bot message is liked by a user
 
 Each bot event is sent as an `Activity` object in which `messageType` defines what information is in the object. For messages of type `message`, see [Sending and receiving messages](~/concepts/bots/bot-conversations/bots-conversations.md).
 
-Teams-specific events, usually triggered off the `conversationUpdate` type, have additional Teams event information passed as part of the `channelData` object, and therefore your event handler must query the `channelData` payload for the Teams `eventType` and additional event-specific metadata.
+Teams and group events, usually triggered off the `conversationUpdate` type, have additional Teams event information passed as part of the `channelData` object, and therefore your event handler must query the `channelData` payload for the Teams `eventType` and additional event-specific metadata.
 
 The following table lists the events that your bot can receive and take action on.
 
-|Type|Payload object|Teams eventType |Description|
-|---|---|---|---|
-| `conversationUpdate` |`membersAdded`| `teamMemberAdded`|[Bot or team member was added to team](#team-member-or-bot-addition)|
-| `conversationUpdate` |`membersRemoved`| `teamMemberRemoved`|[Bot or team member was removed from team](#team-member-or-bot-removed)|
-| `conversationUpdate` | |`teamRenamed`| [Team in which bot is member was renamed](#team-name-updates)|
-| `conversationUpdate` | |`channelCreated`| In a team where bot is member, [a channel was created](#channel-updates)|
-| `conversationUpdate` | |`channelRenamed`| In a team where bot is member, [a channel was renamed](#channel-updates)|
-| `conversationUpdate` | |`channelDeleted`| In a team where bot is member, [a channel was deleted](#channel-updates)|
-| `messageReaction` |`reactionsAdded`|| [A user adds his or her reaction to a bot message](#reactions)|
-| `messageReaction` |`reactionsRemoved`|| [A user removes his or her reaction to a bot message](#reactions)|
+|Type|Payload object|Teams eventType |Description|Scope|
+|---|---|---|---|---|
+| `conversationUpdate` |`membersAdded`| `teamMemberAdded`|[Member added to team](#team-member-or-bot-addition)| all |
+| `conversationUpdate` |`membersRemoved`| `teamMemberRemoved`|[Member was removed from team](#team-member-or-bot-removed)| `groupChat` & `team` |
+| `conversationUpdate` | |`teamRenamed`| [Member was renamed](#team-name-updates)| `team` |
+| `conversationUpdate` | |`channelCreated`| [A channel was created](#channel-updates)|`team` |
+| `conversationUpdate` | |`channelRenamed`| [A channel was renamed](#channel-updates)|`team` |
+| `conversationUpdate` | |`channelDeleted`| [A channel was deleted](#channel-updates)|`team` |
+| `messageReaction` |`reactionsAdded`|| [Reaction to bot message](#reactions)| all |
+| `messageReaction` |`reactionsRemoved`|| [Reaction removed from bot message](#reactions)| all |
 
 ## Team member or bot addition
 
@@ -101,6 +101,7 @@ bot.on('conversationUpdate', (msg) => {
     },
     "conversation": {
         "isGroup": true,
+        "conversationType": "channel",
         "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
     },
     "recipient": {
@@ -121,7 +122,7 @@ bot.on('conversationUpdate', (msg) => {
 
 ### Bot added for personal context only
 
-Your bot receives a `conversationUpdate` with `membersAdded` when a user adds it directly for personal chat. In this case, the payload that your bot receives doesn't contain the `channelData.team` object. You should use this as a filter in case you want your bot to offer a different [welcome message](~/concepts/bots/bot-conversations/bots-conv-personal#best-practice-welcome-messages-in-personal-conversations) depending on scope.
+Your bot receives a `conversationUpdate` with `membersAdded` when a user adds it directly for personal chat. In this case, the payload that your bot receives doesn't contain the `channelData.team` object. You should use this as a filter in case you want your bot to offer a different [welcome message](~/concepts/bots/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations) depending on scope.
 
 > [!NOTE]
 > For personal scoped bots, your bot will only ever receive the `conversationUpdate` event a single time, even if the bot is removed and re-added. For development and testing you may find it useful to add a helper function that will allow you to reset your bot completely. See a [Node.js example](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) or [C# example](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) for more details on implementing this.
@@ -187,6 +188,7 @@ The `conversationUpdate` event with the `membersRemoved` object in the payload i
     },
     "conversation": {
         "isGroup": true,
+        "conversationType": "channel",
         "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
     },
     "recipient":
@@ -209,7 +211,7 @@ The `conversationUpdate` event with the `membersRemoved` object in the payload i
 ## Team name updates
 
 > [!NOTE]
-> At this time, there is no functionality to query all team names, and team name is not returned in payloads from other events.
+> There is no functionality to query all team names, and team name is not returned in payloads from other events.
 
 Your bot is notified when the team it is in has been renamed. It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object. Please note that there are no notifications for team creation or deletion, because bots exist only as part of teams and have no visibility outside the scope in which they have been added.
 
@@ -228,6 +230,7 @@ Your bot is notified when the team it is in has been renamed. It receives a `con
     }, 
     "conversation": {
         "isGroup": true,
+        "conversationType": "channel",
         "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
     },
     "recipient": { 
@@ -236,7 +239,7 @@ Your bot is notified when the team it is in has been renamed. It receives a `con
     },
     "channelData": {
         "team": {
-            "id": "19:efa9296d959346209fea44151c742e73@thread.skype", 
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype",
             "name": "New Team Name"
         },
         "eventType": "teamRenamed",
@@ -272,6 +275,7 @@ The channel events are as follows:
     },
     "conversation": {
         "isGroup": true,
+        "conversationType": "channel",
         "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
     },
     "recipient": {
@@ -298,39 +302,39 @@ The channel events are as follows:
 
 ```json
 ⋮
-"channelData": {         
-    "channel": {             
-        "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",             
-        "name": "PhotographyUpdates"         
-    },         
-    "team": {             
-        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"         
-    },         
-    "eventType": "channelRenamed",         
-    "tenant": {             
-        "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"         
-    }     
-} 
+"channelData": {
+    "channel": {
+        "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",
+        "name": "PhotographyUpdates"
+    },
+    "team": {
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+    },
+    "eventType": "channelRenamed",
+    "tenant": {
+        "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+    }
+}
 ⋮
 ```
 
 ### Schema excerpt: channelData for channelDeleted
 
-```json     
+```json
 ⋮
-"channelData": {         
-    "channel": {             
-        "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",               
-        "name": "PhotographyUpdates"       
+"channelData": {
+    "channel": {
+        "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",
+        "name": "PhotographyUpdates"
     },
-    "team": {             
-        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"         
-    },         
-    "eventType": "channelDeleted",         
-    "tenant": {             
-        "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"         
-    }     
-} 
+    "team": {
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+    },
+    "eventType": "channelDeleted",
+    "tenant": {
+        "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+    }
+}
 ⋮
 ```
 
@@ -358,6 +362,7 @@ The `messageReaction` event is sent when a user adds or removes his or her react
     },
     "conversation": {
         "isGroup": true,
+        "conversationType": "channel",
         "id": "19:3629591d4b774aa08cb0887902eee7c1@thread.skype"
     },
     "recipient": {
@@ -399,6 +404,7 @@ The `messageReaction` event is sent when a user adds or removes his or her react
     },
     "conversation": {
         "isGroup": true,
+        "conversationType": "channel",
         "id": "19:3629591d4b774aa08cb0887902eee7c1@thread.skype"
     },
     "recipient": {
