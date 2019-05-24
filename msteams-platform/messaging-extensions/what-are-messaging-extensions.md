@@ -13,13 +13,13 @@ foo.md => screenshot needed, fullscreen, red box around three areas you can trig
 
 ## Messaging extensions user scenarios
 
-**Scenario:** I need some external system to do something and I want the result of the action to be sent back to my conversation.</br>
+**Scenario:** I need some external system to do something and I want the result of the action to be sent back to my conversation.\
 **Example:** Reserve a resource and let the channel know what day/time you reserved it for.
 
-**Scenario:** I need to find something in an external system, and I want to share the results with my conversation.</br>
+**Scenario:** I need to find something in an external system, and I want to share the results with my conversation.\
 **Example:**  Search for a work item in Azure DevOps, and share it with the group as an adaptive card.
 
-**Scenario:** I need to complete a complex task involving multiple steps (or lots of information) in an external system, and the results should be shared with a conversation.</br>
+**Scenario:** I need to complete a complex task involving multiple steps (or lots of information) in an external system, and the results should be shared with a conversation.\
 **Example:** Create a bug in your tracking system based on a Teams message, assign that bug to Bob, then send a card to the conversation thread with the bug's details.
 
 ## Types of messaging extension commands
