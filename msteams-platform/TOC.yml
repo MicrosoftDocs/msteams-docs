@@ -85,19 +85,21 @@
   - name: How-to guides
     expanded: true
     items:
-    - name: Initiate actions and collect information
+    - name: Create a messaging extension
+      href: foo.md
+    - name: Action-based messaging extension commands
       items:
-      - name: Create your action-based messaging extension
+      - name: Define action-based messaging extension commands
         href: foo.md
       - name: Handle the initial invoke message
         href: foo.md
-      - name: Collect information with a task module response
+      - name: Create a task module
         href: foo.md
       - name: Send a response to the submit action
         href: foo.md
-    - name: Search and insert results
+    - name: Search-based messaging extension commands
       items:
-      - name: Create your search-based messaging extension
+      - name: Define search-based messaging extension commands
         href: foo.md
       - name: Receive and respond to search queries
         href: foo.md
