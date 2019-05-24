@@ -31,13 +31,17 @@ Messaging extensions commands come in two types, and can be triggered from three
 
 ## How do messaging extensions work?
 
-Your messaging extension contains a bot, and a set of commands that define how your users can interact with it. You can only define a single messaging extension in a Teams app, however you can define up to 10 commands. Depending on the type of command, the flow can be slightly different.
+Your messaging extension is made of a bot, and a set of commands that define how your users can interact with it. Using your [app manifest](foo.md), you can only define a single messaging extension in a Teams app, however you can define up to 10 commands. Depending on the type of command, the flow can be slightly different.
 
-### Information flow for action-based messaging extension commands
+### Action-based messaging extension commands
+
+The diagram below outlines the information flow for action-based commands. foo.md => fill this part in with a walkthrough of the diagram
 
 foo.md => information flow diagram
 
-### Information flow for search-based messaging extension commands
+### Search-based messaging extension commands
+
+The diagram below outlines the information flow for search-based commands. foo.md => fill this part in with a walkthrough of the diagram
 
 foo.md => information flow diagram
 
