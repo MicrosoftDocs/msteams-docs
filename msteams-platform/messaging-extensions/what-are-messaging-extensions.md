@@ -7,7 +7,7 @@ ms.author: anclear
 ---
 # What are messaging extensions?
 
-Messaging extensions enable an alternative way for your Microsoft Teams users to interact with bots built on the Azure Bot Framework. Unlike conversational bots, users interact with your messaging extensions through buttons and forms, giving you more control over the interaction. They allow you to search, or take action, in an external system from the compose message area, the command box, or directly from a message in Teams. You can then insert the results of that interaction into a message in Microsoft Teams.
+Messaging extensions enable an alternative way for your Microsoft Teams users to interact with bots built on the Azure Bot Framework. Unlike conversational bots, users interact with your messaging extensions through buttons and forms, giving you more control over the interaction. They allow you to search, or take action, in an external system from the compose message area, the command box, or directly from a message in Teams. You can then insert the results of that interaction into a message in Microsoft Teams (typically as an adaptive card).
 
 foo.md => screenshot needed, fullscreen, red box around three areas you can trigger an ME from.
 
@@ -27,7 +27,7 @@ foo.md => screenshot needed, fullscreen, red box around three areas you can trig
 Messaging extensions commands come in two types, and can be triggered from three different areas. Each command defines the type of interaction, and the location the interaction can be triggered from. For example, with a single message extension you could define commands allowing users to search a SharePoint list, create a list item from a message, and create a new list item from the compose message area.
 
 * [Action-based messaging extensions commands](./foo.md) allow you present your users with a modal popup to collect or display information, then process their interaction and send information back to Teams. They can be triggered from the compose message area, the command box, or from a message.
-* [Search-based messaging extensions commands](./foo.md) allow your users to search an external system for information, then insert the results of the search into a message. They can be triggered from the compose message area or the command box.
+* [Search-based messaging extensions commands](./foo.md) allow your users to search an external system for information (either manually through a search box, or by pasting a link to a monitored domain into the compose message area), then insert the results of the search into a message. They can be triggered from the compose message area or the command box.
 
 ## How do messaging extensions work?
 
@@ -47,7 +47,7 @@ foo.md => information flow diagram
 
 ## Get Started
 
-Ready to get started? Try out one of our quickstarts:
+Ready to get started building? Try one of our quickstarts:
 
 * Action-based messaging extensions
   * [In C#/.NET](foo.md)
@@ -67,7 +67,7 @@ Learn about designing effective messaging extensions:
 
 * [linkToMEDesignArticle](./foo.md)
 
-Learn more about how to build messaging extensions:
+Learn about how to build messaging extensions:
 
 * [Create a messaging extension](./foo.md)
 * [Define action-based messaging extension command](./foo.md)
