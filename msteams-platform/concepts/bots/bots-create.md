@@ -6,6 +6,9 @@ ms.date: 12/07/2018
 ---
 # Create a bot
 
+>[!Note]
+>Both v3 and v4 bots built on the Bot Framework work with Microsoft Teams. However, the [Teams Bot Builder SDKs](/microsoftteams/platform/#pivot=sdk-tools) for v4 bots are in beta. The documentation in this section follow the patterns for v3 bots. For v4 guidance, see the samples included in the SDK repositories.
+
 All bots created using the Microsoft Bot Framework are configured and ready to work in Microsoft Teams.
 
 A sample bot is included in the [Get Started](~/get-started/get-started.md) sample for Node.js and .NET, along with detailed steps for creating your first bot.
