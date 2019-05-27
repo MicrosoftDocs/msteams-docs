@@ -16,7 +16,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 | 05/25/2019 | Bots in group chats | [Interact with a bot in group chat or channel](~/concepts/bots/bot-conversations/bots-conv-channel.md) |
 | 05/20/2019 | App manifest localization | [App localization](~/publishing/apps-localization.md) |
 | 05/20/2019 | Message actions | [Message Actions](~/concepts/messaging-extensions/create-extensions.md#action-type-message-extensions) |
-| 05/20/2019 | Link unfurling (custom URL previews) | [Application Certification](~/concepts/messaging-extensions/search-extensions.md#receive-requests-from-links-inserted-into-the-compose-message-box) |
+| 05/20/2019 | Link unfurling (custom URL previews) | [Link unfurling](~/concepts/messaging-extensions/search-extensions.md#receive-requests-from-links-inserted-into-the-compose-message-box) |
 | 05/06/2019 | Application Certification program for store apps | [Application Certification](~/publishing/application-certification.md) |
 | 05/06/2019 | App Templates are now available. | [App Templates](~/samples/app-templates.md) |
 | 04/23/2019 | Action-based Messaging Extensions are now available | [Action-based Message Extensions](~/concepts/messaging-extensions/create-extensions.md) |
