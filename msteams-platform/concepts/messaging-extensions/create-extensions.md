@@ -96,7 +96,7 @@ To initiate actions from a  messaging extension set the `type` parameter to `act
         {
           "id": "reassignTodo",
           "description": "Reassign a todo item",
-          "title": "Create To Do",
+          "title": "Reassign a todo item",
           "type": "action",
           "fetchTask": true,
           "parameters": [
