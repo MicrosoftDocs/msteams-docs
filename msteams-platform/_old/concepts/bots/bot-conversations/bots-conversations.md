@@ -10,7 +10,7 @@ A conversation is a series of messages sent between your bot and one or more use
 
 * `teams` Also called channel conversations, visible to all members of the channel.
 * `personal` Conversations between bots and a single user.
-* `groupchat` Chat between a bot and two or more users.
+* `groupChat` Chat between a bot and two or more users.
 
 A bot behaves slightly differently depending on what kind of conversation it is involved in:
 
