@@ -11,7 +11,6 @@ If your bot's sole purpose is to deliver notification to users and is not conver
 
 * Users cannot message your notification only bot.
 * Users cannot @mention the bot.
-* You bot must be added to a a team in order to recieve the necessary information to send a proactive message to a user. Before your notification only bot can message a user, you must receive and store the necessary information from the `membersAdded` event sent to your bot.
 
 If you need more information about inserting messages into the Activity Feed, see [this article](~/concepts/activity-feed.md).
 
