@@ -1,6 +1,6 @@
 ---
 title: Define action-based messaging extension command
-author: aclear16
+author: clearab
 description: An overview of messaging extensions on the Microsoft Teams platform
 ms.topic: conceptual
 ms.author: anclear

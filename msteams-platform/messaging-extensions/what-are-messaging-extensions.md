@@ -1,6 +1,6 @@
 ---
 title: What are messaging extensions?
-author: aclear16
+author: clearab
 description: An overview of messaging extensions on the Microsoft Teams platform
 ms.topic: overview
 ms.author: anclear

@@ -1,6 +1,6 @@
 ---
 title: Developer platform
-author: aclear16
+author: clearab
 description: Overview page describing the Microsoft Teams developer platform
 ms.topic: overview
 ms.author: anclear

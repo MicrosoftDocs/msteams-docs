@@ -1,6 +1,6 @@
 ---
 title: Create a messaging extension
-author: aclear16
+author: clearab
 description: An overview of messaging extensions on the Microsoft Teams platform
 ms.topic: conceptual
 ms.author: anclear
