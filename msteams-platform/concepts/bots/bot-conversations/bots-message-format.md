@@ -2,11 +2,11 @@
 title: Bot message format
 description: Describes the details of formatting for bot messages
 keywords: teams scenarios channels conversation bot message
-ms.date: 03/29/2018
+ms.date: 05/20/2019
 ---
 # Message formatting for bots
 
-You can set the optional [`TextFormat`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) property to control how your message's text content is rendered.
+You can set the optional [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) property to control how your message's text content is rendered.
 
 Microsoft Teams supports the following formatting options:
 
@@ -44,9 +44,6 @@ To ensure that your formatting works across all platforms supported by Microsoft
 | hyperlink                 | ✔ | ✔ |
 | image link                | ✔ | ✖ |
 
-> [!NOTE]
-> Currently, Connector cards support no formatting across all platforms. See [Cards](~/concepts/bots/bot-conversations/bots-conversations#cards) in the next section for more detail.
-
 ## Support by individual platform
 
 Support for text formatting varies by type of message and by platform.
@@ -69,4 +66,4 @@ Support for text formatting varies by type of message and by platform.
 
 ### Cards
 
-See [Card Formatting](~/concepts/cards/cards-format) for support in cards.
+See [Card Formatting](~/concepts/cards/cards-format.md) for support in cards.

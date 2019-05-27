@@ -2,6 +2,7 @@
 title: Add a bot menu
 description: Describes how to create menus for bots in Microsoft Teams
 keywords: teams bots menus creation
+ms.date: 05/20/2019
 ---
 
 # Add a bot menu in Microsoft Teams
@@ -14,7 +15,7 @@ When a user selects a menu item, the command string is inserted into the text bo
 
 ## App manifest
 
-To create a bot menu, add a new [`commandLists`](~/resources/schema/manifest-schema#bots-commandlists) object to your app manifest under the bot section. You can declare individual menus with separate commands for chat with a single user (`scopes`: `personal`) and channels (`scopes`: `team`). Each menu supports up to 10 commands.
+To create a bot menu, add a new [`commandLists`](~/resources/schema/manifest-schema.md#botscommandlists) object to your app manifest under the bot section. You can declare individual menus with separate commands for each scope your bot supports (`personal`, `groupChat` or `team`) Each menu supports up to 10 commands.
 
 ### Manifest excerpt - single menu for both scopes
 
@@ -69,7 +70,7 @@ To create a bot menu, add a new [`commandLists`](~/resources/schema/manifest-sch
     {
       "botId":"[Microsoft app ID for your bot]",
       "scopes": [
-        "personal",
+        "groupChat",
         "team"
       ],
       "commandLists":[
@@ -86,12 +87,12 @@ To create a bot menu, add a new [`commandLists`](~/resources/schema/manifest-sch
         },
         {
           "scopes":[
-            "personal"
+            "groupChat"
           ],
           "commands":[
             {
             "title":"help",
-            "description":"Displays this help message for personal chat"
+            "description":"Displays this help message for group chat"
             }
           ]
         }
@@ -104,8 +105,6 @@ To create a bot menu, add a new [`commandLists`](~/resources/schema/manifest-sch
 
 ## Best practices
 
-* Keep it simple: The bot menu is meant to present the key 3&ndash;5 capabilities or commands of your bot.
-
-* Keep it short: Menu options shouldn’t be extremely long and complex natural language statements&mdash;they should be simple commands.
-
+* Keep it simple: The bot menu is meant to present the key capabilities of your bot.
+* Keep it short: Menu options shouldn’t be extremely long and complex natural language statements - they should be simple commands.
 * Always available: Bot menu actions/commands should be always invokable, regardless of the state of the conversation or the dialog the bot is in.

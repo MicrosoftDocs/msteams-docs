@@ -73,7 +73,7 @@
       items:
       - name: Personal conversations with bots
         href: ./concepts/bots/bot-conversations/bots-conv-personal.md
-      - name: Channel conversations with bots
+      - name: Channel and group conversations with bots
         href: ./concepts/bots/bot-conversations/bots-conv-channel.md
       - name: Starting a conversation
         href: ./concepts/bots/bot-conversations/bots-conv-proactive.md
@@ -250,7 +250,7 @@
     items:
     - name: Personal conversations with bots
       href: ./concepts/bots/bot-conversations/bots-conv-personal.md
-    - name: Channel conversations with bots
+    - name: Channel and group chat conversations with bots
       href: ./concepts/bots/bot-conversations/bots-conv-channel.md
   - name: Manifest schema
     href: ./resources/schema/manifest-schema.md
