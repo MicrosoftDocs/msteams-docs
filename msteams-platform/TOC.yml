@@ -9,7 +9,7 @@
   items:
   - name: Create tab and bot app using C#
     href: _old/get-started/get-started-dotnet-app-studio.md
-  - name: Create tab and bot app using JavaScript
+  - name: Create tab and bot app using Node
     href: _old/get-started/get-started-nodejs-app-studio.md
 - name: Samples and templates
   items: 
