@@ -24,7 +24,7 @@
     href: foo.md
   - name: Your Teams app lifecycle
     href: foo.md
-  - name: Planning your app
+  - name: Plan your app
     items:
     - name: Understand your use cases
       href: foo.md
@@ -115,9 +115,9 @@
       items:
       - name: Authentication flow for messaging extensions
         href: foo.md
-      - name: Using Azure AD Authentication
+      - name: Use Azure AD Authentication
         href: foo.md
-      - name: Using OAuthCard and the Azure Bot Service
+      - name: Use OAuthCard and the Azure Bot Service
         href: foo.md
 - name: Embedded web experiences with Tabs
   items:
