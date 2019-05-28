@@ -22,6 +22,8 @@
   items:
   - name: Understand Teams app capabilities
     href: foo.md
+  - name: Your Teams app lifecycle
+    href: foo.md
   - name: Planning your app
     items:
     - name: Understand your use cases
@@ -40,21 +42,19 @@
     items:
     - name: Set up your development environment
       href: foo.md
-    - name: something something
+    - name: Build your app package
+      href: foo.md
+    - name: Localize your app
       href: foo.md
   - name: Deploy and publish your app
     items:
-    - name: Your Teams app lifecycle
-      href: foo.md
-    - name: Create your app package
+    - name: Understand deployment options
       href: foo.md
     - name: Deploy to your Teams
       href: foo.md
     - name: Publish to your organization
       href: foo.md
     - name: Publish to the app store
-      href: foo.md
-    - name: Localize your app
       href: foo.md
   - name: Authentication in Teams apps
     items:
