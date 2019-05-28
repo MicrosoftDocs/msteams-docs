@@ -98,7 +98,7 @@ This message contains a simple attachment object requesting user permission to u
 }
 ```
 
-+The following table describes the content properties of the attachment:
+The following table describes the content properties of the attachment:
 
 | Property | Purpose |
 | --- | --- |
