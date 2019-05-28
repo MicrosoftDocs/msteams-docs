@@ -36,6 +36,12 @@
       href: foo.md
     - name: Design engaging and actionable cards
       href: foo.md
+  - name: Build and test your app
+    items:
+    - name: Set up your development environment
+      href: foo.md
+    - name: something something
+      href: foo.md
   - name: Deploy and publish your app
     items:
     - name: Your Teams app lifecycle
@@ -66,13 +72,13 @@
       items:
       - name: C#/.NET
         href: foo.md
-      - name: JavaScript/Node.js
+      - name: TypeScript/Node.js
         href: foo.md
     - name: Search-based messaging extensions
       items:
       - name: C#/.NET
         href: foo.md
-      - name: JavaScript/Node.js
+      - name: TypeScript/Node.js
         href: foo.md    
   - name: Samples
     href: old/samples/code-samples.md
