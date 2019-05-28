@@ -116,7 +116,7 @@
 - name: Embedded web experiences with Tabs
   items:
   - name: What are tabs?
-    href: foo.md
+    href: tabs/what-are-custom-tabs.md
   - name: Quickstarts
     items:
     - name: Create a personal tab
