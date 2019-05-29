@@ -405,7 +405,9 @@ For all other details about Connector card properties, see the [Actionable messa
 
 * `heroImage`
 * `hideOriginalBody`
-* `startGroup`
+* `startGroup` (always treated as `true` in Teams)
+* `originator`
+* `correlationId`
 
 ### Example Office 365 connector card
 
