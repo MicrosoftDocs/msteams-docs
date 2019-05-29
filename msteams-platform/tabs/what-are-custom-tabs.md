@@ -1,11 +1,10 @@
 ---
-title: https://review.docs.microsoft.com/en-us/microsoftteams/platform/concepts/tabs/tabs-overview?branch=master
+title: What are custom tabs in Microsoft Teams?
 author: laujan
 description: An overview of custom tabs on the Microsoft Teams platform
 ms.topic: overview
 ms.author: laujan
 ms.topic: overview
-ms.date: \"$CURRENT_MONTH-$CURRENT_DATE-$CURRENT_YEAR\"
 ---
 # What are custom tabs in Microsoft Teams?
 
@@ -16,7 +15,7 @@ There are two types of tabs - static and configurable. A static tab delivers the
 Teams tabs have the following scope:
 
 |Tabs Names | Tabs Availability  | Tabs Types|
-| --- | --- | --- | --- |
+|---|---|---|
 |Personal | Individual User | Only **static** tabs are allowed within the personal scope. |
 |Group Chat | Group Members | Only **configurable** tabs are allowed within the group chat scope. |
 |Teams| Team| Only **configurable** tabs are allowed withing the team scope.|
