@@ -22,7 +22,9 @@
   items:
   - name: Understand Teams app capabilities
     href: foo.md
-  - name: Planning your app
+  - name: Your Teams app lifecycle
+    href: foo.md
+  - name: Plan your app
     items:
     - name: Understand your use cases
       href: foo.md
@@ -36,19 +38,23 @@
       href: foo.md
     - name: Design engaging and actionable cards
       href: foo.md
+  - name: Build and test your app
+    items:
+    - name: Set up your development environment
+      href: foo.md
+    - name: Build your app package
+      href: foo.md
+    - name: Localize your app
+      href: foo.md
   - name: Deploy and publish your app
     items:
-    - name: Your Teams app lifecycle
-      href: foo.md
-    - name: Create your app package
+    - name: Understand deployment options
       href: foo.md
     - name: Deploy to your Teams
       href: foo.md
     - name: Publish to your organization
       href: foo.md
     - name: Publish to the app store
-      href: foo.md
-    - name: Localize your app
       href: foo.md
   - name: Authentication in Teams apps
     items:
@@ -66,13 +72,13 @@
       items:
       - name: C#/.NET
         href: foo.md
-      - name: JavaScript/Node.js
+      - name: TypeScript/Node.js
         href: foo.md
     - name: Search-based messaging extensions
       items:
       - name: C#/.NET
         href: foo.md
-      - name: JavaScript/Node.js
+      - name: TypeScript/Node.js
         href: foo.md    
   - name: Samples
     href: old/samples/code-samples.md
@@ -109,9 +115,9 @@
       items:
       - name: Authentication flow for messaging extensions
         href: foo.md
-      - name: Using Azure AD Authentication
+      - name: Use Azure AD Authentication
         href: foo.md
-      - name: Using OAuthCard and the Azure Bot Service
+      - name: Use OAuthCard and the Azure Bot Service
         href: foo.md
 - name: Embedded web experiences with Tabs
   items:
