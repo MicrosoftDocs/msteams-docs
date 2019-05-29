@@ -126,7 +126,7 @@
   - name: Quickstarts
     items:
     - name: Create a personal tab
-      href: foo.md
+      href: tabs/quickstarts/create-personal-tab.md
     - name: Create a channel tab
       href: foo.md
     - name: Create a configuration page
