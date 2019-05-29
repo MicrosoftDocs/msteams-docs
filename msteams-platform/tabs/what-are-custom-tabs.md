@@ -9,13 +9,13 @@ ms.date: \"$CURRENT_MONTH-$CURRENT_DATE-$CURRENT_YEAR\"
 ---
 # What are custom tabs in Microsoft Teams?
 
-Custom tabs enable you to embed web-based content directly into Teams channels. You can build your own tab or expand your existing app's UI experience.
+Custom tabs enable you to embed web-based content directly into Teams. You can build your own tab or expand your existing app's UI experience.
 
 There are two types of tabs - static and configurable. A static tab delivers the same content to each user and does not require a configuration page. A configurable tab delivers dynamic content that can be altered by user input and requires a configuration page.
 
 Teams tabs have the following scope:
 
-|Tabs Names |  Tabs Availability  | Tabs Types|
+|Tabs Names | Tabs Availability  | Tabs Types|
 | --- | --- | --- | --- |
 |Personal | Individual User | Only **static** tabs are allowed within the personal scope. |
 |Group Chat | Group Members | Only **configurable** tabs are allowed within the group chat scope. |
@@ -23,7 +23,7 @@ Teams tabs have the following scope:
 
 ## Tabs user scenarios
 
-I built a sales tracking app and need to add tabs to support individuals, groups, and teams. \
+I built a sales tracking app and I need to add tabs to support individuals, groups, and teams. \
 **Scenario:** personal \
 **Example:** I need a tab for individual users to list personal goals and strategies without having to share them with the entire team.
 
