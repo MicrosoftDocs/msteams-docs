@@ -26,6 +26,8 @@ foo.md => screenshot needed, fullscreen, red box around three areas you can trig
 
 Your messaging extension is made of a bot and a set of commands that define how your users can interact with it. Using your [app manifest](foo.md), you can only define a single messaging extension in a Teams app, however you can define up to 10 commands. Depending on the type of command, the flow can be slightly different.
 
+foo.md => need more here on the the activity/invoke message, a bit about the back and forth between the ME and the bot
+
 ## Types of messaging extension commands
 
 Messaging extensions commands come in two types, and can be triggered from three different areas. Each command defines the type of interaction, and the location the interaction can be triggered from. For example, with a single message extension you could define commands allowing users to search a SharePoint list, create a list item from a message, and create a new list item from the compose message area.
