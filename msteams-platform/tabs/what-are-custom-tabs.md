@@ -49,3 +49,6 @@ Ready to get started building? Here are a few guidelines:
 Learn more about how tabs function with other Teams app capabilities:
 
 [Combine bots with tabs](https://docs.microsoft.com/microsoftteams/platform/concepts/bots/bots-with-tabs)
+
+
+foo.md
