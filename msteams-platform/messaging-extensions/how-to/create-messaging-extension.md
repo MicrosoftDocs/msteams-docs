@@ -7,11 +7,11 @@ ms.author: anclear
 ---
 # Create a messaging extension in Microsoft Teams
 
-1. Create a bot on the Bot Framework.
-1. Declare your messaging extension in your app manifest.
-1. Declare the commands your messaging extension will support in your app manifest.
-1. Create your app package.
-1. Deploy your app package to a team.
+1. Create and deploy your app service
+1. Create and register your bot service
+1. Create your app package
+1. Upload your package
+1. Extend your bot with additional capabilities
 
 ## Create a bot on the Bot Framework
 
@@ -19,25 +19,11 @@ Messaging extensions are powered by bots built on the Bot Framework; if you don'
 
 ## Declare your messaging extension in your app manifest
 
->[!Note]
->For compatibility reasons, the app manifest JSON refers to messaging extensions as `composeExtensions`.
-
-As with bots and tabs, you define your messaging extension inside a top-level node in your app manifest. These properties govern how your messaging extension appears and behaves in the Microsoft Teams client, and controls what types of `Activity` messages your bot will receive from your messaging extension.
-
-### Using App Studio
-
-You can use the [App Studio teams app](~/foo.md) to help you create your app manifest.
-
-1. From the Teams client, open App Studio from the `...` overflow menu on the app bar (on the left).
-1. Select the **Manifest editor** tab, then click **Create a new app** (you can also import an existing app manifest if you are adding a messaging to an existing app)
-
-You'll be presented with a form to guide you through the app creation process. In this section we'll only cover adding your messaging extension. For additional information on building your app manifest see [creating your app package](~/foo.md).
-
-1. Select Capabilities => Messaging extensions, then click **Set up**
-1. 
+ASD
 
 ### Manual declaration
 
+ASDF
 
 ## Learn more
 
