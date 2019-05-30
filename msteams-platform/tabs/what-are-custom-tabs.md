@@ -10,19 +10,21 @@ ms.topic: overview
 
 Custom tabs enable you to embed web-based content directly into Teams. You can build your own tab or expand your existing app's UI experience.
 
-There are two types of tabs - static and configurable. A static tab delivers the same content to each user and does not require a configuration page. A configurable tab delivers dynamic content that can be altered by user input and requires a configuration page.
+There are two types of tabs - group/channel and personal. A group/channel tab delivers dynamic content to group chats and channels and requires both a [content page](https://docs.microsoft.com/microsoftteams/platform/concepts/tabs/tabs-content) and a [configuration page](https://docs.microsoft.com/microsoftteams/platform/concepts/tabs/tabs-configuration). A personal tab delivers static content to individuals and requires only a [content page](https://docs.microsoft.com/microsoftteams/platform/concepts/tabs/tabs-content).
 
-Teams tabs have the following scope:
+## Tabs Scope
 
-|Tabs Names | Tabs Availability  | Tabs Types|
-|---|---|---|
-|Personal | Individual User | Only **static** tabs are allowed within the personal scope. |
-|Group Chat | Group Members | Only **configurable** tabs are allowed within the group chat scope. |
-|Teams| Team| Only **configurable** tabs are allowed withing the team scope.|
+Conversations, content, and collaboration objectives are essential considerations in your tabs design. Your tab's capabilities are based on scope. Scope maps to your intended users:
+
+|Tab Scope|Tab User|Tab Type| Tab Functionality |
+| --- | ---| --- | --- |
+|"personal"|individual|personal|static only|
+|"groupchat"|group| group/channel|configurable only|
+|"teams"|channel| group/channel|configurable only|
 
 ## Tabs user scenarios
 
-I built a sales tracking app and I need to add tabs to support individuals, groups, and teams. \
+I am building a sales tracking app and I want to add tabs to support individuals, groups, and channels. \
 **Scenario:** personal \
 **Example:** I need a tab for individual users to list personal goals and strategies without having to share them with the entire team.
 
@@ -40,14 +42,18 @@ All Teams development (custom tabs, connectors, extensions, or bots) needs to be
 
 Ready to get started building? Here are a few guidelines:
 
-[Content and conversations, all at once using tabs](https://docs.microsoft.com/microsoftteams/platform/resources/design/framework/tabs)
+- [Content and conversations, all at once using tabs](https://docs.microsoft.com/microsoftteams/platform/resources/design/framework/tabs)
+
+- [QuickStart/staticTabs/foo.md](https://quickstart/statictabs)
+- [QuickStart/configurableTabs/foo.md](https://quickstart/configurabletabs)
 
 
 ## Learn more
 
 Learn more about how tabs function with other Teams app capabilities:
 
-[Combine bots with tabs](https://docs.microsoft.com/microsoftteams/platform/concepts/bots/bots-with-tabs)
+- [Combine bots with tabs](https://docs.microsoft.com/microsoftteams/platform/concepts/bots/bots-with-tabs)
 
+- [Design a great Microsoft Teams app - Designing a great tab](https://docs.microsoft.com/en-us/microsoftteams/platform/get-started/design#designing-a-great-tab)
 
-foo.md
+- foo.md
