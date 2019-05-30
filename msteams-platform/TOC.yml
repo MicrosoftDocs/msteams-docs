@@ -28,7 +28,7 @@
     items:
     - name: Understand your use cases
       href: foo.md
-    - name: Choose the right capabilities for your app
+    - name: Choose the right capabilities
       href: foo.md
     - name: Decide how you will distribute your app
       href: foo.md
@@ -50,7 +50,7 @@
     items:
     - name: Understand deployment options
       href: foo.md
-    - name: Deploy to your Teams
+    - name: Deploy to your team
       href: foo.md
     - name: Publish to your organization
       href: foo.md
@@ -58,7 +58,7 @@
       href: foo.md
   - name: Authentication in Teams apps
     items:
-    - name: Understand authentication in Teams apps
+    - name: Aunthentication overview
       href: foo.md
     - name: Configure identity providers
       href: foo.md
@@ -68,13 +68,13 @@
     href: messaging-extensions/what-are-messaging-extensions.md
   - name: Quickstarts
     items:
-    - name: Action-based messaging extensions
+    - name: With action-based command
       items:
       - name: C#/.NET
         href: foo.md
       - name: TypeScript/Node.js
         href: foo.md
-    - name: Search-based messaging extensions
+    - name: With search-based command
       items:
       - name: C#/.NET
         href: foo.md
@@ -93,9 +93,9 @@
     items:
     - name: Create a messaging extension
       href: foo.md
-    - name: Action-based messaging extension commands
+    - name: Action-based commands
       items:
-      - name: Define action-based messaging extension commands
+      - name: Define action-based commands
         href: foo.md
       - name: Handle the initial invoke message
         href: foo.md
@@ -103,22 +103,22 @@
         href: foo.md
       - name: Send a response to the submit action
         href: foo.md
-    - name: Search-based messaging extension commands
+    - name: Search-based commands
       items:
-      - name: Define search-based messaging extension commands
+      - name: Define search-based commands
         href: foo.md
       - name: Receive and respond to search queries
         href: foo.md
-      - name: Settings and configuration
-        href: foo.md
-    - name: Authentication in messaging extensions
+    - name: Authentication
       items:
-      - name: Authentication flow for messaging extensions
+      - name: Authentication flow
         href: foo.md
       - name: Use Azure AD Authentication
         href: foo.md
       - name: Use OAuthCard and the Azure Bot Service
         href: foo.md
+    - name: Add a configuration page
+      href: foo.md
 - name: Embedded web experiences with Tabs
   items:
   - name: What are tabs?

@@ -95,3 +95,7 @@ Learn how to add commands to your messaging extension
 
 * [Define action-based messaging extension command](./foo.md)
 * [Define search-based messaging extension command](./foo.md)
+
+Learn about authentication in messaging extensions
+
+* [something something authentication](./foo.md)
