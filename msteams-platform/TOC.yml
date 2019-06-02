@@ -243,8 +243,8 @@
 #        href: ./resources/design/components/typography.md
 #      - name: Themes
 #        href: ./resources/design/components/themes.md
-    - name: Resources
-      href: ./resources/design/resources.md
+#    - name: Resources
+#      href: ./resources/design/resources.md
   - name: Best practices and tips
     href: ./resources/best-practices/best-practices.md
     items:
