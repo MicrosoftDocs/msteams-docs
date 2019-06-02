@@ -39,4 +39,4 @@ For more details see [Requirements for tab pages in Microsoft Teams](~/resources
 
 ## Troubleshooting tabs
 
-See the [Troubleshooting Tabs](~/troubleshoot/troubleshoot#troubleshooting-tabs.md) topic for more information.
+See the [Troubleshooting Tabs](~/troubleshoot/troubleshoot.md#troubleshooting-tabs) topic for more information.
