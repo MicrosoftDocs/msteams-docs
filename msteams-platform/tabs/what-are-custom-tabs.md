@@ -45,6 +45,7 @@ All Teams development (custom tabs, connectors, extensions, or bots) needs to be
 {
   "$schema": "[Optional, but specifying the schema at the beginning of your manifest enables IntelliSense or similar support from your code editor.]",
   "manifestVersion": "[Required. The current version of the manifest schema your app manifest is using.]",
+"id": "[Required. A unique identifier for this app. This id must be a GUID.]"
   "version": "[Required. The version of your app]",
   "packageName": "[Required. A unique identifier for the your app in reverse domain notation.]",
   "developer": {
@@ -52,7 +53,7 @@ All Teams development (custom tabs, connectors, extensions, or bots) needs to be
     "websiteUrl": "[Required. The https:// URL to your website.]",
     "privacyUrl": "[Required. The https:// URL to your privacy policy.]",
     "termsOfUseUrl": "[Required. The https:// URL to your terms of use.]",
-    "mpnId": "[Optional.  ]"
+    "mpnId": "[Optional. This field is not required, and should only be used if you are already part of the Microsoft Partner Network. More info at https://aka.ms/partner]"
   },
   "name": {
     "short": "[Required. The short display name for your app. It must be <=30 characters]",
@@ -103,7 +104,6 @@ Ready to get started building? Here are a few guidelines:
 - [QuickStart/staticTabs/foo.md](https://quickstart/statictabs)
 - [QuickStart/configurableTabs/foo.md](https://quickstart/configurabletabs)
 
-
 ## Learn more
 
 Learn more about how tabs function with other Teams app capabilities:
@@ -113,3 +113,4 @@ Learn more about how tabs function with other Teams app capabilities:
 - [Design a great Microsoft Teams app - Designing a great tab](https://docs.microsoft.com/en-us/microsoftteams/platform/get-started/design#designing-a-great-tab)
 
 - foo.md
+
