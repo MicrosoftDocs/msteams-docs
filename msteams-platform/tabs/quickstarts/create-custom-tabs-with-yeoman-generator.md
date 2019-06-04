@@ -54,9 +54,8 @@ Your Tab logic is located in the `./src/app/scripts/<yourTabName>Tab/<yourTabNam
 ### Create your personal tab
 
 If you do not want to add a personal tab you can skip this section of the quickStart. To include a personal tab:
-|     |
-| --- |
-| 1.&emsp;In your code editor, create a new HTML file named, `static.html` .  Add the following code to this file:
+
+> 1.&emsp; In your code editor, create a new HTML file named, `static.html` .  Add the following code to this file:
 
 ```html
 <!DOCTYPE html>
@@ -76,13 +75,13 @@ If you do not want to add a personal tab you can skip this section of the quickS
             <p>This is your static tab!</p>
         </body>
 </html>
+
+Save the file.
 ```
 
 Save this file  in your apps web folder: `./src/app/web/<yourAppName>Tab/ ` 
 
-|     |
-| --- |
-|2.&emsp;In your code editor, navigate to your app's `manifest.json` file: `./src/manifest/manifest.json/` . Scroll down to the empty staticTabs array ( `"staticTabs":[]` ) and add the following JSON object:
+> 2.&emsp; In your code editor, navigate to your app's `manifest.json` file: `./src/manifest/manifest.json/` . Scroll down to the empty staticTabs array ( `"staticTabs":[]` ) and add the following JSON object:
 
 ```json
 {
@@ -92,20 +91,17 @@ Save this file  in your apps web folder: `./src/app/web/<yourAppName>Tab/ `
     "websiteUrl": "https://{{HOSTNAME}}",
     "scopes": ["personal"]
 }
+
+Save the file.
 ```
 
-|     |
-| --- |
-|3.&emsp;Finally, your page must be served in an iFrame. In your code editor, navigate to `./src/app/<yourAppName>Tab/<yourApptab>Tab.ts` and add the following to the list of iFrame decorators:
+> 3.&emsp; Finally, your page must be served in an iFrame. In your code editor, navigate to `./src/app/<yourAppName>Tab/<yourApptab>Tab.ts` and add the following to the list of iFrame decorators:
 
 ```typescript
  @PreventIframe("/<yourAppName>Tab/static.html")
+
+Save the file and Save all.
 ```
-
-|     |
-| --- |
-|4.&emsp;Save all.|
-
 
 ### Build and Run your App in localhost
 
@@ -117,8 +113,6 @@ To view tabs in the personal scope click the Apps icon in the left-hand menu of 
 
 <footer>
 
-|     |     |
-| --- | --- |
-| [![npm (latest)](https://img.shields.io/npm/v/generator-teams/latest.svg)](https://www.npmjs.com/package/generator-teams) | [![npm (preview)](https://img.shields.io/npm/v/generator-teams/preview.svg)](https://www.npmjs.com/package/generator-teams) |
+[![npm (latest)](https://img.shields.io/npm/v/generator-teams/latest.svg)](https://www.npmjs.com/package/generator-teams)&emsp; &emsp; [![npm (preview)](https://img.shields.io/npm/v/generator-teams/preview.svg)](https://www.npmjs.com/package/generator-teams)
 
 </footer>
