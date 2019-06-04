@@ -29,7 +29,7 @@ In this quickstart we will walk through creating custom group/channel and person
         npm install generator - teams @preview--global
 ```
 
-## Let's Get Started
+## Get Started
 
 ### Generate your project and create a group/channel tab
 
@@ -37,20 +37,7 @@ Open a command prompt and create a new directory for your tab project. Navigate 
 
 <img src="./TeamsTabScreen.png/" alt="generator opening screenshot" width="500">
 
-|     |
-| --- |
-| ***What is your solution name?*** <br>&emsp; This is your project name. You can accept the suggested name by pressing enter.|
-|  ***Where do you want to place the files?*** <br>&emsp; You are currently in your project directory. Press enter.|
-|  ***Title of your Microsoft Teams App project*** <br>&emsp; This title will be used in the manifest and description of your app. |
-|  ***Your (company) name? (max 32 characters)*** <br>&emsp; Your company name will be used in the manifest. |
-|  ***Which manifest version would you like to use*** <br>&emsp; For this tutorial select v1.5, the current general available schema. |
-|  ***Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)*** <br> &emsp; This field is not required, and should only be used if you are already part of the [Microsoft Partner Network](https://partner.microsoft.com). |
-|  ***What do you want to add to your project?*** <br>&emsp; Select *( \* ) a Tab* |
-|  ***The URL where you will host this solution?***  <br>&emsp; This can be any URL, but by default the generator suggests an Azure Web Sites URL. Note: As this is a demo, A valid URL is not necessary to complete this quickstart. We will be testing locally.|
-|  ***Would you like to include Test framework and initial tests?*** (Y/n) <br>&emsp; For this quickstart choose <u>not</u> to include a test framework. The default is yes; enter **n**. |
-|  ***Would you like to use Azure Applications Insights for telemetry?*** (Y/n) <br>&emsp; For this quickstart choose <u>not</u> to include [Azure Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview). The default is yes, so enter **n**.|
-|  ***Default Tab Name (max 16 characters)*** <br>&emsp; Name your tab. |
-|  ***Do you want this tab to be available in SharePoint Online?*** (Y/n) <br>&emsp; Select **n** unless, in the future, you want to use this app as a [SharePoint Online web part](https://docs.microsoft.com/microsoftteams/platform/concepts/tabs/tabs-in-sharepoint)|
+> ***What is your solution name?*** <br>&emsp; This is your project name. You can accept the suggested name by pressing enter.<br>***Where do you want to place the files?*** <br>&emsp; You are currently in your project directory. Press enter.<br>***Title of your Microsoft Teams App project*** <br>&emsp; This title will be used in the manifest and description of your app. <br>***Your (company) name? (max 32 characters)*** <br>&emsp; Your company name will be used in the manifest.<br>***Which manifest version would you like to use*** <br>&emsp; For this tutorial select v1.5, the current general available schema.<br>***Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)*** <br> &emsp; This field is not required, and should only be used if you are already part of the [Microsoft Partner Network](https://partner.microsoft.com).<br>***What do you want to add to your project?*** <br>&emsp; Select *( \* ) a Tab*<br>***The URL where you will host this solution?***  <br>&emsp; This can be any URL, but by default the generator suggests an Azure Web Sites URL. Note: As this is a demo, A valid URL is not necessary to complete this quickstart. We will be testing locally.<br>***Would you like to include Test framework and initial tests?*** (Y/n) <br>&emsp; For this quickstart choose <u>not</u> to include a test framework. The default is yes; enter **n**.<br>***Would you like to use Azure Applications Insights for telemetry?*** (Y/n) <br>&emsp; For this quickstart choose <u>not</u> to include [Azure Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview). The default is yes, so enter **n**.<br>***Default Tab Name (max 16 characters)*** <br>&emsp; Name your tab.<br>***Do you want this tab to be available in SharePoint Online?*** (Y/n) <br>&emsp; Select **n** unless, in the future, you want to use this app as a [SharePoint Online web part](https://docs.microsoft.com/microsoftteams/platform/concepts/tabs/tabs-in-sharepoint)|
 
 ### Add some code to your group/channel tab
 
