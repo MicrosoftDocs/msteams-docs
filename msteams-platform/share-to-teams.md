@@ -67,6 +67,8 @@ If you know that the URL preview from your link to be shared won't render well i
 </div>
 ```
 
+If your page dynamically renders content, you can use the the `shareToMicrosoftTeams.renderButtons()` method to force the Share button to render at the appropriate place in the pipeline.
+
 ## Share-to-Teams for Education
 
 For teachers using the Share-to-Teams button you'll be given an additional option to `Create an Assignment`. This enables you to quickly create an assignment in the chosen Team based on the shared link.
@@ -80,3 +82,7 @@ For teachers using the Share-to-Teams button you'll be given an additional optio
 |data-href|string|n/a|The href of the content to share.|
 |data-preview|boolean (as string)|true|Whether or not to show a preview of the content to share|
 |data-icon-px-size|number (as string)|32|The size in pixels of the Share-to-Teams button, maximum 128|
+
+| Method | Parameters | Description |
+| ------ | ---------- | ----------- |
+| `shareToMicrosoftTeams.renderButtons()` | None | Renders all share buttons currently on the page |
