@@ -11,23 +11,25 @@ ms.author: laujan #Required; Microsoft alias of author; optional team alias.
 
 Custom tabs enable you to embed web-based content directly into Microsoft Teams via your [Teams App Package](https://docs.microsoft.com//microsoftteams/platform/concepts/apps/apps-package), see [What are custom tabs in Microsoft Teams?](https://github.com/MicrosoftDocs/msteams-docs/blob/restructure/msteams-platform/tabs/what-are-custom-tabs.md). Custom tabs can be scoped for either group/channel use serving configurable/dynamic content or personal use serving static content. An app can have only one group/channel tab and up to sixteen personal tabs.
 
+In this quickstart we will walk-through creating custom *group/channel* and *personal tabs* using the [Microsoft Teams App Project Generator](https://github.com/OfficeDev/generator-teams). For more information, see the Microsoft Teams App [Project Structure](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) documentation.
+
 ## Prerequisites
 
-In this quickstart we will walk-through creating custom *group/channel* and *personal tabs* using the [Microsoft Teams App Project Generator](https://github.com/OfficeDev/generator-teams). For more information, see the Microsoft Teams App [Project Structure](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) documentation. 
+- To complete this tutorial you need to have a Microsoft Teams team with uploading enabled, see [enabled uploading of Microsoft Teams apps](https://docs.microsoft.com/en-us/MicrosoftTeams/enable-features-office-365) where you have permissions to test your tabs. If you don't currently have an Office 365 account, you can sign up for the Office 365 Developer program to get a free 90 days (can be renewed for as long as you're using it for development activity) Office 365 Developer Tenant.
 
-1. &emsp;To complete this tutorial you need to have a Microsoft Teams team with uploading enabled, see [enabled uploading of Microsoft Teams apps](https://docs.microsoft.com/en-us/MicrosoftTeams/enable-features-office-365) where your can test your tabs.In addition you must have the following installed in your development environment:
+In addition you need the following installed in your development environment:
 
-2. &emsp;[Node.js/NPM](https://nodejs.org/en/). You should use the latest LTS version. NPM (Node Package Manager) will get installed into your system with the installation of Node.js.
+- [Node.js/NPM](https://nodejs.org/en/). You should use the latest LTS version. NPM (Node Package Manager) will get installed into your system with the installation of Node.js.
 
-3. &emsp;Any text editor or IDE. You can install and use [Visual Studio Code](https://code.visualstudio.com/download) for free.
+- Any text editor or IDE. You can install and use [Visual Studio Code](https://code.visualstudio.com/download) for free.
 
-4. &emsp;After you have successfully installed Node.js/NPM, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) (global command line interface) packages by typing the following (recommended):
+- After you have successfully installed Node.js/NPM, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) (global command line interface) packages by typing the following (recommended):
 
 ```cmd
          npm install yo gulp - cli--global
 ```
 
-5. &emsp;However, if you prefer to install preview versions of the Teams generator type the following:
+- If you prefer to install preview versions of the Teams generator type the following:
 
 ```cmd
         npm install generator - teams@preview--global
@@ -183,4 +185,4 @@ Return to your team's General channel and select ➕ to add your tab from the li
 1. In the navbar located at the far-left of the Teams App, click (**&#8943;**) *More added apps*. You will be presented with a list of personal view apps.
 2. Select your app's personal/static tab from the list to view.
 
-Yo! You just built and published your Microsoft Teams custom tabs!
+### Nice work! You just built and published a Microsoft Teams custom tabs.
