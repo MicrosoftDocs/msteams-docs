@@ -25,13 +25,13 @@ In addition you need the following installed in your development environment:
 
 - After you have successfully installed Node.js/NPM, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) (global command line interface) packages by typing the following (recommended):
 
-```cmd
+```shell
          npm install yo gulp - cli--global
 ```
 
 - If you prefer to install preview versions of the Teams generator type the following:
 
-```cmd
+```shell
         npm install generator - teams@preview--global
 ```
 
@@ -123,7 +123,7 @@ If you prefer not to add a personal tab to your app, you can skip this section o
 Now that your have tab code is complete, you can build your project:
 >The [Teams App manifest](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema) will be part of your app package zip file (along with your two app icons) and will be uploaded into Microsoft Teams. This is achieved through a Gulp task that validates the manifest and creates the zip file in the `./package directory`. In the command prompt, type the following:
 
-```cmd
+```shell
 gulp manifest
 ```
 
@@ -131,7 +131,7 @@ gulp manifest
 
 >The build command compiles your solution into the `./dist` folder. In the command prompt, type the following:
 
-```cmd
+```shell
 gulp build
 ```
 
@@ -139,7 +139,7 @@ gulp build
 
 >To build and start a local web server, in the command prompt, type the following:
 
-```cmd
+```shell
 gulp serve
 ```
 
@@ -161,7 +161,7 @@ For this quickstart we will use [Ngrok](https://ngrok.com/docs) which is built-i
 
 >In your command prompt, enter the following command:
 
-```cmd
+```shell
 gulp ngrok-serve
 ```
 
