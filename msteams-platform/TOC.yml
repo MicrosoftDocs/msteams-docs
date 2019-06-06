@@ -121,16 +121,18 @@
       href: foo.md
 - name: Embedded web experiences with Tabs
   items:
-  - name: What are tabs?
+  - name: What are custom tabs?
     href: tabs/what-are-custom-tabs.md
-  - name: Quickstarts
+  - name: Quickstart
     items:
-    - name: Create a personal tab
-      href: tabs/quickstarts/create-personal-tab.md
-    - name: Create a channel tab
-      href: foo.md
+    - name: Build custom tabs using the Microsoft Teams Yeoman Generator 
+      href: tabs/quickstart/build-custom-tabs-with-yeoman.md
     - name: Create a configuration page
       href: foo.md
+  - name: Tutorials
+    items: 
+    - name: Build Microsoft Teams tab using SharePoint Framework
+      href: old/get-started/using-web-part-as-ms-teams-tab.md
   - name: Samples
     href: old/samples/code-samples.md
   - name: Design your tabs
