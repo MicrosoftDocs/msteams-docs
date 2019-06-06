@@ -1,5 +1,5 @@
 ---
-title: "Quickstart: Build Custom Tabs with the Microsoft Teams Yeoman Generator" #Required; page title displayed in search results. Include the word "quickstart". Include the brand.
+title: "Quickstart: Build Custom Tabs with the Microsoft Teams Yeoman Generator and Node.js" #Required; page title displayed in search results. Include the word "quickstart". Include the brand.
 author: laujan #Required; your GitHub user alias, with correct capitalization.
 description: A quickstart guide to building custom tabs. #Required; article description that is displayed in search results. Include the word "quickstart".
 ms.topic: quickstart #Required
@@ -7,48 +7,48 @@ ms.author: laujan #Required; Microsoft alias of author; optional team alias.
 ---
 # Quickstart: build custom tabs with the Microsoft Teams Yeoman Generator and Node.js
 
->[!NOTE]This quickstart is derived, in large part, from the [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in Microsoft's OfficeDev GitHub repository.
+>[!NOTE]This quickstart follows the steps outlined in [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in Microsoft's OfficeDev GitHub repository.
 
-Custom tabs enable you to embed web-based content page directly into Microsoft Teams. For more information, see [What are custom tabs in Microsoft Teams?](https://github.com/MicrosoftDocs/msteams-docs/blob/restructure/msteams-platform/tabs/what-are-custom-tabs.md). Custom tabs can be scoped for either personal (static content) or group/channel (configurable/dynamic content) use. An app can only one (1) group/channel tab and up to sixteen (16) personal tabs.
+Custom tabs enable you to embed web-based content directly into Microsoft Teams via your [Teams App Package](https://docs.microsoft.com//microsoftteams/platform/concepts/apps/apps-package), see [What are custom tabs in Microsoft Teams?](https://github.com/MicrosoftDocs/msteams-docs/blob/restructure/msteams-platform/tabs/what-are-custom-tabs.md). Custom tabs can be scoped for either group/channel use serving configurable/dynamic content or personal use serving static content. An app can have only one group/channel tab and up to sixteen personal tabs.
 
 ## Prerequisites
 
-In this quickstart we will walk through creating custom *group/channel* and *personal tabs* using the [Microsoft Teams App Project Generator](https://github.com/OfficeDev/generator-teams). For more information you can read the Microsoft Teams App [Project Structure](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) documentation. To complete this tutorial you need to have [enabled uploading of Microsoft Teams apps](https://docs.microsoft.com/en-us/MicrosoftTeams/enable-features-office-365) and have the following installed in your development environment:
+In this quickstart we will walk-through creating custom *group/channel* and *personal tabs* using the [Microsoft Teams App Project Generator](https://github.com/OfficeDev/generator-teams). For more information, see the Microsoft Teams App [Project Structure](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) documentation. 
 
-- [Node.js/NPM](https://nodejs.org/en/). You should use the latest LTS version. NPM (Node Package Manager) will get installed into your system with the installation of Node.js.
+1. &emsp;To complete this tutorial you need to have a Microsoft Teams team with uploading enabled, see [enabled uploading of Microsoft Teams apps](https://docs.microsoft.com/en-us/MicrosoftTeams/enable-features-office-365) where your can test your tabs.In addition you must have the following installed in your development environment:
 
-- Any text editor or IDE. You can install and use [Visual Studio Code](https://code.visualstudio.com/download) for free.
+2. &emsp;[Node.js/NPM](https://nodejs.org/en/). You should use the latest LTS version. NPM (Node Package Manager) will get installed into your system with the installation of Node.js.
 
-- After you have successfully installed Node.js/NPM, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) (global command line interface) packages by typing the following:
+3. &emsp;Any text editor or IDE. You can install and use [Visual Studio Code](https://code.visualstudio.com/download) for free.
+
+4. &emsp;After you have successfully installed Node.js/NPM, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) (global command line interface) packages by typing the following (recommended):
 
 ```cmd
          npm install yo gulp - cli--global
 ```
 
-- If you want to install preview versions of the Teams generator type the following:
+5. &emsp;However, if you prefer to install preview versions of the Teams generator type the following:
 
 ```cmd
         npm install generator - teams@preview--global
 ```
 
-- Finally, you should have a team setup in Microsoft Teams where you can test your tabs.
-
 ## Generate your project and create a group/channel tab
 
-Open a command prompt and create a new directory for your tab project. Navigate (cd) to your new directory and type the command `yo teams` . This will display a classic ascii drawing and start the Teams Apps generator. Next, you will be asked a series of config questions:
+Open a command prompt and create a new directory for your tab project. Navigate to your new directory and type the command `yo teams` . This will display a classic ascii drawing and start the Teams Apps generator. Next, you will be asked a series of config questions:
 
 ![generator opening screenshot](images/TeamsTabScreen.PNG)
 
-> ***What is your solution name?*** <br>&emsp; This is your project name. You can accept the suggested name by pressing enter.<br>***Where do you want to place the files?*** <br>&emsp; You are currently in your project directory. Press enter.<br>***Title of your Microsoft Teams App project*** <br>&emsp; This title will be used in the manifest and description of your app. <br>***Your (company) name? (max 32 characters)*** <br>&emsp; Your company name will be used in the manifest.<br>***Which manifest version would you like to use*** <br>&emsp; For this tutorial select v1.5, the current general available schema.<br>***Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)*** <br>&emsp;This field is not required, and should only be used if you are already part of the [Microsoft Partner Network](https://partner.microsoft.com) <br>***What do you want to add to your project?*** <br>&emsp; Select *( \* ) A Tab.*  <br>***The URL where you will host this solution?***  <br>&emsp; This can be any URL, but by default the generator suggests an Azure Web Sites URL. Note: As this is a demo and you will be testing locally, A valid URL is not necessary to complete this quickstart.<br>***Would you like to include Test framework and initial tests?*** (Y/n) <br>&emsp; For this quickstart choose <u>not</u> to include a test framework. The default is yes; enter **n**.<br>***Would you like to use Azure Applications Insights for telemetry?*** (Y/n) <br>&emsp; For this quickstart choose <u>not</u> to include [Azure Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview). The default is yes, so enter **n**.<br>***Default Tab Name (max 16 characters)*** <br>&emsp; Name your tab.<br>***Do you want this tab to be available in SharePoint Online?*** (Y/n) <br>&emsp; Select **n** unless, in the future, you want to use this app as a [SharePoint Online web part](https://docs.microsoft.com/microsoftteams/platform/concepts/tabs/tabs-in-sharepoint)
+> ***What is your solution name?*** <br>&emsp; This is your project name. You can accept the suggested name by pressing enter.<br>***Where do you want to place the files?*** <br>&emsp; You are currently in your project directory. Press enter.<br>***Title of your Microsoft Teams App project*** <br>&emsp; This is your app package name and will be used in the manifest and description of your app. <br>***Your (company) name? (max 32 characters)*** <br>&emsp; Your company name will be used in the manifest.<br>***Which manifest version would you like to use*** <br>&emsp; For this quickstart select v1.5 which is App generator's current general available schema.<br>***Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)*** <br>&emsp;This field is not required, and should only be used if you are already part of the [Microsoft Partner Network](https://partner.microsoft.com) <br>***What do you want to add to your project?*** <br>&emsp; Select *( \* ) A Tab.*  <br>***The URL where you will host this solution?***  <br>&emsp; This can be any URL, but by default the generator suggests an Azure Web Sites URL. Since you will only be testing your app locally, A valid URL is not necessary to complete this quickstart.<br>***Would you like to include Test framework and initial tests?*** (Y/n) <br>&emsp; For this quickstart choose <u>not</u> to include a test framework. The default is yes; enter **n**.<br>***Would you like to use Azure Applications Insights for telemetry?*** (Y/n) <br>&emsp; For this quickstart choose <u>not</u> to include [Azure Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview). The default is yes, so enter **n**.<br>***Default Tab Name (max 16 characters)*** <br>&emsp; Name your tab. The default tab name will be used throughout your project as a file path component.<br>***Do you want this tab to be available in SharePoint Online?*** (Y/n) <br>&emsp; Select **n** unless, in the future, you want to use this app as a [SharePoint Online web part](https://docs.microsoft.com/microsoftteams/platform/concepts/tabs/tabs-in-sharepoint)
 
 >[!NOTE]
->For the file locations referenced in this quickstart, the path component  ***\<yourDefaultTabNameTab>*** is the name that you selected in the generator for ***Default Tab Name*** plus the word ***Tab***.<br>
+>For the file locations referenced in this quickstart, the path component  ***\<yourDefaultTabNameTab>*** is the name that you selected in the generator for ***Default Tab Name*** plus the word ***Tab***.
 <br>For example:<br>
 DefaultTabName: **MyTab** => **/MyTabTab/**
 
 ## Add code to your group/channel tab
 
-Your tab logic is located in the `./src/app/scripts/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.tsx` . Locate the `render()` method and add the following div at the top of `<PanelBody>` :
+Your tab logic is located in the `./src/app/scripts/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.tsx` TypeScript file . Locate the `render()` method and add the following div at the top of the `<PanelBody>` container code:
 
 ```html
     <PanelBody>
@@ -60,9 +60,9 @@ Your tab logic is located in the `./src/app/scripts/<yourDefaultTabNameTab>/<you
 
 ## Create your personal tab
 
-If you do not want to add a personal tab to your app, you can skip this section of the quickStart. To include a personal tab:
+If you prefer not to add a personal tab to your app, you can skip this section of the quickStart. To include a personal tab requires you to add an html file and  few lines of code to the project:
 
-> 1.&emsp; In your code editor, create a new HTML file named, `static.html` .  Add the following code to this file:
+> 1.&emsp; In your code editor, create a new HTML file named, `static.html` .  Add the following code:
 
 ```html
 <!DOCTYPE html>
@@ -86,7 +86,8 @@ If you do not want to add a personal tab to your app, you can skip this section 
 ```
 
 > 2.&emsp;Save the `static.html` file in your app's `web` folder. The relative file path should be: <br>&emsp;`./src/app/web/<yourDefaultTabNameTab>/static.html`<br>
-> 3.&emsp; In your code editor, navigate to your app's `manifest.json` file: `./src/manifest/manifest.json/` . Scroll down to the empty staticTabs array ( `"staticTabs":[]` ) and add the following JSON object (make sure that you update the contentURL value to include `<yourDefaultTabNameTab>`):
+
+> 3.&emsp; In your code editor, navigate to your app's `manifest.json` file: `./src/manifest/manifest.json/` . Scroll down to the empty staticTabs array ( `"staticTabs":[]` ) and add the following JSON object:
 
 ```json
 {
@@ -102,8 +103,9 @@ If you do not want to add a personal tab to your app, you can skip this section 
 > [!Tip]
 > Don't forget to update the `"contentURL"` path component `<yourDefaultTabNameTab>` with your DefaultTabName + Tab.
 
-> 4.&emsp; Save the updated `manifest.json` file.<br>
-> 5.&emsp; Since your content page must be served in an iFrame, in your code editor, navigate to your app's `Tab.ts` file: `./src/app/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts`. Add the following to the list of iFrame decorators:
+> 4.&emsp; Save the updated `manifest.json` file.
+
+> 5.&emsp; Since your content page must be served in an iFrame, open your app's `Tab.ts` TypeScript file in your code editor: `./src/app/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts` and  the following to the list of iFrame decorators:
 
 ```typescript
  @PreventIframe("/<yourDefaultAppName>TabNameTab>/static.html")
@@ -112,12 +114,12 @@ If you do not want to add a personal tab to your app, you can skip this section 
 > 6.&emsp; *Save* the updated `Tab.ts` file and *Save all* for good measure.
 
 > [!Note]
-> Open your command prompt in your app's project directory to complete the following gulp tasks.
+> Open your command prompt in your app's project folder to complete all Gulp tasks.
 
 ## Create a Teams App manifest
 
-Now that you have tab code is complete, you can build your project:
->The [Teams App manifest](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema) is part of the app package zip file (along with your two app icons) that will be uploaded into Microsoft Teams. This is achieved through a Gulp task that validates the manifest and creates the zip file in the `./package directory`. In the command prompt, type the following:
+Now that your have tab code is complete, you can build your project:
+>The [Teams App manifest](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema) will be part of your app package zip file (along with your two app icons) and will be uploaded into Microsoft Teams. This is achieved through a Gulp task that validates the manifest and creates the zip file in the `./package directory`. In the command prompt, type the following:
 
 ```cmd
 gulp manifest
@@ -139,7 +141,7 @@ gulp build
 gulp serve
 ```
 
->Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser and view your configurable tab content page:
+>Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser and view your configurable tab's content page:
 
 ![configurable tab screenshot](images/configTab.PNG)
 
@@ -151,9 +153,9 @@ gulp serve
 
 ## Package your app for Microsoft Teams
 
-Microsoft Teams is an entirely cloud-based product and, thus requires your app to be available from the cloud using HTTPS endpoints. Microsoft Teams does not allow for apps to be hosted on localhost.  Therefore, you need to either publish your app to a public URL or use a proxy which will expose your local port to an internet-facing URL. 
+Microsoft Teams is an entirely cloud-based product and, thus requires your app to be available from the cloud using HTTPS endpoints. Microsoft Teams does not allow for apps to be hosted on localhost, therefore, you need to either publish your app to a public URL or use a proxy which will expose your local port to an internet-facing URL. 
 
-For this quickstart we will use [ngrok](https://ngrok.com/docs) which is built-in to the project. Ngrok will create a tunnel to your locally running web server's publicly-available HTTPS endpoints. Your server's web endpoints will be available during the current session on your local machine. When the machine is shut down or goes to sleep the service will no longer be available.
+For this quickstart we will use [Ngrok](https://ngrok.com/docs) which is built-in to the project. Ngrok will create a tunnel to your locally running web server's publicly-available HTTPS endpoints. Your server's web endpoints will be available during the current session on your local machine. When the machine is shut down or goes to sleep the service will no longer be available.
 
 >In your command prompt, enter the following command:
 
@@ -163,31 +165,22 @@ gulp ngrok-serve
 
 ## Upload and run your app in Microsoft Teams
 
-Open Microsoft Teams. In the *YourTeams* panel click (**&#8943;**) *More options* next to the team that you are using to test your app's tabs and Select *Manage team*.  In the main panel click on *Apps* from the tab bar and click on *Upload a custom app* located in the lower right-hand corner of the page. Open your project folder, browse to the `./package` folder, select the zip file in the `./package` folder, right-click, and choose open. Your app will upload into Microsoft Teams.
+Open Microsoft Teams. In the **YourTeams** panel click (**&#8943;**) *More options* next to the team that you are using to test your app's tabs and Select *Manage team*.  In the main panel click on *Apps* from the tab bar and click on *Upload a custom app* located in the lower right-hand corner of the page. Open your project folder, browse to the `./package` folder, select the zip file in the `./package` folder, right-click, and choose open. Your app will upload into Microsoft Teams.
 
- At the bottom of the tab page click on ⚙️ (gear) - *Manage apps*. 
-
-
-Return to your team's General channel and select ➕ to add your tab from the list of tabs. Follow the directions for adding a tab. Note that there is a custom configuration dialog. Select *Save* and your configurable tab should be loaded in Microsoft Teams.
-
-If you chose to add a personal tab, it will appear in the list presented when you click ⚪⚪⚪  which are personal view apps,  button n in the far left panel. Ellipsis: Allows you to add personal views to your favorite apps, meaning content won’t be filtered to a specific Team.
+Return to your team's General channel and select ➕ to add your tab from the list of tabs. Follow the directions for adding a tab. Note that there is a custom configuration dialog for your group/channel tab. Select *Save* and your tabs should be loaded in Microsoft Teams.
 
 ## View your group/channel tab
 
 1. Choose ➕ *Add a tab*  from the tab bar.
 2. Select your tab from the gallery.
-3. Accent the consent prompt.
+3. Accept the consent prompt.
 4. Enter a value for the configuration page.
 5. *Save*.
 6. To view, select your new tab from the tab bar.
 
 ## View your personal tabs
 
-1. In the navbar located at the far-left of the Teams App, click (**&#8943;**) *More added apps*. You will be presented with a list of personal view apps. 
+1. In the navbar located at the far-left of the Teams App, click (**&#8943;**) *More added apps*. You will be presented with a list of personal view apps.
 2. Select your app's personal/static tab from the list to view.
 
-<footer>
-
-[![npm (latest)](https://img.shields.io/npm/v/generator-teams/latest.svg)](https://www.npmjs.com/package/generator-teams)&emsp; &emsp; [![npm (preview)](https://img.shields.io/npm/v/generator-teams/preview.svg)](https://www.npmjs.com/package/generator-teams)
-
-</footer>
+Yo! You just built and published your Microsoft Teams custom tabs!
