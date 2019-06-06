@@ -129,6 +129,10 @@
       href: tabs/quickstart/build-custom-tabs-with-yeoman.md
     - name: Create a configuration page
       href: foo.md
+  - name: Tutorials
+    items: 
+    - name: Build Microsoft Teams tab using SharePoint Framework
+      href: old/get-started/using-web-part-as-ms-teams-tab.md
   - name: Samples
     href: old/samples/code-samples.md
   - name: Design your tabs
