@@ -185,4 +185,4 @@ Return to your team's General channel and select ➕ to add your tab from the li
 1. In the navbar located at the far-left of the Teams App, click (**&#8943;**) *More added apps*. You will be presented with a list of personal view apps.
 2. Select your app's personal/static tab from the list to view.
 
-### Nice work! You just built and published Microsoft Teams custom tabs.
+### Nice work! You just extended Microsoft Teams with custom tabs.
