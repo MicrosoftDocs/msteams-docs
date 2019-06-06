@@ -19,7 +19,10 @@ Additionally, you can also send personal chat messages into the feed as preview 
 
 ## Sending content to the activity feed
 
-Activity feed notification leverages your existing integration with the Bot Framework APIs. You can flag specific messages to generate notifications which appear in the activity feed. This allows generating higher levels of engagement by creating alerts on web/desktop and mobile apps.
+> [!NOTE]
+> This applies to one-to-one messages between a bot and a user. Messages inserted into a channel generate a notification in the activity feed based on the user's notification settings for that channel.
+
+Activity feed notification leverages your existing integration with the Bot Framework APIs. You can flag specific one-to-one messages to generate notifications which appear in the activity feed. This allows generating higher levels of engagement by creating alerts on web/desktop and mobile apps.
 
 When constructing your message, the following fields should be populated so that the correct preview content can be shown in the feed:
 
