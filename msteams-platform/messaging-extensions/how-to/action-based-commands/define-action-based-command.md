@@ -6,3 +6,9 @@ ms.topic: conceptual
 ms.author: anclear
 ---
 # Define action-based messaging extension commands
+
+words
+
+## Using App Studio
+
+## Manually define
