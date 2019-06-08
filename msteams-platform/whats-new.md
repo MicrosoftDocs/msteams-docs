@@ -20,7 +20,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 | 05/06/2019 | Application Certification program for store apps | [Application Certification](~/publishing/application-certification.md) |
 | 05/06/2019 | App Templates are now available. | [App Templates](~/samples/app-templates.md) |
 | 04/23/2019 | Action-based Messaging Extensions are now available | [Action-based Message Extensions](~/concepts/messaging-extensions/create-extensions.md) |
-| 02/18/2018 | Creating [deep links](~/concepts/deep-links.md#deep-linking-to-a-chat) to private chat is out of developer preview and available |
+| 02/18/2019 | Creating deep links to private chat is out of developer preview and available | [Deep linking to a chat](~/concepts/deep-links.md#deep-linking-to-a-chat) |
 | 01/23/2019 | Surfacing SKU and licenceType information in the tab context | [Tab Context](~/concepts/tabs/tabs-context.md) |
 | 12/03/2018 | A new topic has been added discussing how to limit bot availability to specific single tenants.| [Bots for limited tenants](~/scenarios/limited-tenant.md) |
 | 11/12/2018 | Tabs in group chat is now available in the released version of Teams, and has been moved out of developer preview. As part of this work, the tabs section has been reworked for clarity.| [Configurable tabs](~/concepts/tabs/tabs-configurable.md) |
