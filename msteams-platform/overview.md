@@ -8,7 +8,7 @@ ms.author: anclear
 ---
 # What are Microsoft Teams apps?
 
-Microsoft Teams is a collaboration workspace in Office 365 that integrates with apps and services tpeople use to get work done together. The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services to improve productivity, make decisions faster, provide focus (by reducing context switching), and create collaboration around existing content and workflows. Apps built on the Microsoft Teams platform are bridges between the Teams client and your services and workflows; bringing them directly into the context of your collaboration platform.
+Microsoft Teams is a collaboration workspace in Office 365 that integrates with apps and services people use to get work done together. The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services to improve productivity, make decisions faster, provide focus (by reducing context switching), and create collaboration around existing content and workflows. Apps built on the Microsoft Teams platform are bridges between the Teams client and your services and workflows; bringing them directly into the context of your collaboration platform.
 
 A Teams app consists of three major pieces:
 
@@ -30,7 +30,7 @@ Apps built on the Microsoft Teams platform primarily focus on increasing collabo
 
 ### Notify your team of important events
 
-### something else?
+### Embed functionality from other sites/services
 
 ## Building and distributing apps
 
