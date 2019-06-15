@@ -125,8 +125,13 @@
     href: tabs/what-are-custom-tabs.md
   - name: Quickstart
     items:
-    - name: Build custom tabs using the Microsoft Teams Yeoman Generator 
-      href: tabs/quickstart/build-custom-tabs-with-yeoman.md
+    - name: Build custom tabs using the Node.js and the Microsoft Teams Yeoman Generator 
+      href: tabs/quickstart/build-custom-tabs-with-Node-js.md
+    - name: Create a configuration page
+      href: foo.md
+      items:
+    - name: Build custom tabs using C-Sharp and ASP.Net Core
+      href: tabs/quickstart/build-custom-tabs-with-c-sharp.md
     - name: Create a configuration page
       href: foo.md
   - name: Tutorials
