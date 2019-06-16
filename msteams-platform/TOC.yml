@@ -213,6 +213,8 @@
         href: ./resources/design/framework/basics.md
       - name: Apps
         href: ./resources/design/framework/apps.md
+      - name: Mobile apps
+        href: ./resources/design/framework/mobile.md
       - name: Personal apps
         href: ./resources/design/framework/personal-apps.md
       - name: Activity feed

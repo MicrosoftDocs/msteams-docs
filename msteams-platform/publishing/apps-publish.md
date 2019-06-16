@@ -81,6 +81,10 @@ For your Teams app to be approved:
 * Any material that you associate with your experience, such as descriptions and support documentation, must be accurate. Use correct spelling, capitalization, punctuation, and grammar in your descriptions and materials.
 * It must pass all current [AppSource validation policies](https://dev.office.com/officestore/docs/validation-policies) for Teams tabs and bots. Please note that these policies are subject to change.
 * For tabs, it must provide value to users outside of what is possible by simply pinning your website in Teams. This means that, at minimum, it must remove extraneous chrome and disallow navigating outside the configured context. See the [Microsoft Teams Design Guidelines](https://aka.ms/microsoftteamsdesignguidelines) for more guidance.
+* It must not include "app" in the App Title or App Short Description.
+* The version of your app that is available on mobile clients must be free, free of in-app purchases, trial offers, UI that aims to upsell to paid, or links to any online stores where users can purchase or acquire other content, apps, or add-ins.
+* Your Privacy Policy and Terms of Use pages must also be free of any commerce UI or Store links.
+* During submission, you must accept Apple's Terms and Conditions, your app must be compliant with all relevant Apple App Store policies, and you must provide a valid Apple Developer Id.
 
 When the validation process is complete, you will receive a message to let you know that either your Teams experience is approved or it fails one of the stated policies. You can also follow these steps to check the approval status in the Seller Dashboard:
 
@@ -97,7 +101,7 @@ Failures are explained, with references to the specific policy violations. All f
 
 ## Tips for rapid approval
 
-* Don't use "Teams" or "Microsoft" in your app name; in all contexts, that extra clarification is superfluous.
+* Don't use "Teams" or "Microsoft", or "app" in your app name; in all contexts, that extra clarification is superfluous.
 * If your product requires an account on your service or another service, list that in the description and ensure there are links to sign up, sign in and sign out.
 * If your product requires additional purchases to function properly, list that in the description.
 * For your Tab configuration page, be sure to provide "About" links and proper guidance—this page is the first thing the user sees, so ensure that a new user understands what to do.
