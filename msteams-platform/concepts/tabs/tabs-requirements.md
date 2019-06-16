@@ -14,11 +14,11 @@ All tab content, including configuration, content, and tab-removal pages must me
     Most modern browsers support this.
     * For Internet Explorer 11 compatibility, set `X-Content-Security-Policy` as well.
   * Alternatively, set header `X-Frame-Options: ALLOW-FROM https://teams.microsoft.com/`. This header is deprecated but still respected by most browsers.
-* Include the [Microsoft Teams JavaScript client SDK](https://docs.microsoft.com/en-us/javascript/api/overview/msteams-client) in your page as a script source. There are multiple ways to do this; please refer to [this](https://docs.microsoft.com/en-us/javascript/api/overview/msteams-client) for detailed instructions.
+* Include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) in your page as a script source. There are multiple ways to do this; please refer to [this](/javascript/api/overview/msteams-client) for detailed instructions.
 * After your page has successfully loaded, call `microsoftTeams.initialize()` to display your page. Microsoft Teams will not display your page unless you do so.
-* All domains for pages you display in your tabs must be listed in the manifest's `validDomains` list. See [validDomains](~/resources/schema/manifest-schema#validdomains) in the manifest schema reference for more information.
+* All domains for pages you display in your tabs must be listed in the manifest's `validDomains` list. See [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the manifest schema reference for more information.
 
-Hitting problems? See the [troubleshooting guide](~/troubleshoot/troubleshoot).
+Hitting problems? See the [troubleshooting guide](~/troubleshoot/troubleshoot.md).
 
 > [!TIP]
 > For developers using TypeScript, Microsoft Teams provides a [definition file](https://statics.teams.microsoft.com/sdk/v1.0/types/MicrosoftTeams.d.ts) to enable IntelliSense or similar support from your code editor as well as compile-time type checking as part of your build.
@@ -33,7 +33,7 @@ Tabs behave differently on the iOS and Android Teams clients than on the Teams d
 
 ### Desktop and web client behavior
 
-What appears in a tab on desktop/web is defined by the value of `contentUrl`: Teams displays the contents of `contentUrl` in the tab. (See [Determine the content to display in the tab](~/concepts/tabs/tabs-configuration#determine-the-content-to-display-in-the-tab)). If the tab has a value for `websiteUrl`, another icon appears with the others at the upper right of the tab: ![Go to website](~/assets/images/go-to-website-icon.png). When the user clicks on this icon, `websiteUrl` is opened in a new browser tab.
+What appears in a tab on desktop/web is defined by the value of `contentUrl`: Teams displays the contents of `contentUrl` in the tab. (See [Determine the content to display in the tab](~/concepts/tabs/tabs-configuration.md#determine-the-content-to-display-in-the-tab)). If the tab has a value for `websiteUrl`, another icon appears with the others at the upper right of the tab: ![Go to website](~/assets/images/go-to-website-icon.png). When the user clicks on this icon, `websiteUrl` is opened in a new browser tab.
 
 ### Mobile client behavior
 
