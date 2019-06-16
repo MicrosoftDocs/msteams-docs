@@ -2,12 +2,15 @@
 title: Features in the Public Developer Preview
 description: Describes the features in the Public Developer Preview of Microsoft Teams
 keywords: teams preview developer features
-ms.date: 05/20/2019
 ---
 
 # Features in the Public Developer Preview for Microsoft Teams
 
 The developer preview includes the following new features:
+
+## Personal (static) tabs and one-to-one bots on mobile
+
+Personal tabs and one-to-one bots are enabled on mobile clients when developer preview is enabled.
 
 ## Embed Share-to-Teams button on your website
 

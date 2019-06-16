@@ -2,11 +2,10 @@
 title: Combine bots with tabs
 description: Describes how to use tabs and bots together
 keywords: teams bots tabs development
-ms.date: 03/15/2018
 ---
 # Combine bots with tabs
 
-Bots and tabs work well together, and are often combined into a single back-end service. This section describes best practices and common patterns for using tabs and bots together.
+Bots and tabs work well together, and are often combined into a app. This section describes best practices and common patterns for using tabs and bots together.
 
 ## Associating user identities across bot and tab
 
@@ -37,10 +36,3 @@ There are two ways of achieving this scenario:
 2. If you wish to only notify the recipient or interested parties involved with the action, your bot can send a personal chat message to the user. You should first check to see if a personal conversation between your bot and the user exists. If not, you can call `CreateConversation` to initiate the personal chat.
 
 In both cases, use event notifications wisely and never spam the user with unnecessary updates.
-
-## FAQ
-
-- Do you support tabs on mobile?
-  Microsoft Teams does not embed content on our mobile clients – we recommend that you supply a fallback URL in your tab definition such that we can load the appropriate responsive web content on mobile devices.
-- How do I send ephemeral messages to a user?
-  Teams does not support the ability for a bot to message a user in a channel such that only a specific user can view the message (everyone sees all messages in a channel). Send a message to the user in personal chat instead.

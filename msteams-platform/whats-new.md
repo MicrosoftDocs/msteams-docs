@@ -2,7 +2,6 @@
 title: What's new
 description: Describes all the new developer features in Microsoft Teams
 keywords: teams what's new latest
-ms.date: 05/20/2019
 ---
 # What's new for developers in Microsoft Teams
 
@@ -12,6 +11,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+| 06/20/2019 | Enable [Developer Preview](~/resources/developer-preview-intro.md) on a mobile client |
 | 05/25/2019 | Respond with bot message from task module | [Respond with bot message from task module](~/concepts/messaging-extensions/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot) |
 | 05/25/2019 | Bots in group chats | [Interact with a bot in group chat or channel](~/concepts/bots/bot-conversations/bots-conv-channel.md) |
 | 05/20/2019 | App manifest localization | [App localization](~/publishing/apps-localization.md) |

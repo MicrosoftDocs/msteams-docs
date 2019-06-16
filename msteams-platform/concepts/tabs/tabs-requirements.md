@@ -1,8 +1,7 @@
 ---
 title: Requirements for tab pages in Microsoft Teams
 description: Requirements for tab pages in Microsoft Teams
-keywords: teams formats links
-ms.date: 08/28/2018
+keywords: teams tabs contentUrl websiteUrl mobile
 ---
 # Requirements for tab pages in Microsoft Teams
 
@@ -19,12 +18,16 @@ All tab content, including configuration, content, and tab-removal pages must me
 * After your page has successfully loaded, call `microsoftTeams.initialize()` to display your page. Microsoft Teams will not display your page unless you do so.
 * All domains for pages you display in your tabs must be listed in the manifest's `validDomains` list. See [validDomains](~/resources/schema/manifest-schema#validdomains) in the manifest schema reference for more information.
 
-> Hitting problems? See the [troubleshooting guide](~/troubleshoot/troubleshoot).
->
+Hitting problems? See the [troubleshooting guide](~/troubleshoot/troubleshoot).
+
 > [!TIP]
 > For developers using TypeScript, Microsoft Teams provides a [definition file](https://statics.teams.microsoft.com/sdk/v1.0/types/MicrosoftTeams.d.ts) to enable IntelliSense or similar support from your code editor as well as compile-time type checking as part of your build.
 
 ## Tabs on mobile clients
+
+> [!NOTE]
+> Embedded personal (static) tabs for mobile clients is currently in [Developer Preview](~/resources/dev-preview/developer-preview-intro.md). When developer preview is enabled on the mobile client, the `contentUrl` will be loaded inside the Teams mobile client. 
+> For existing store applications if your app does not work well on mobile we will display a banner notifying the user that it is recommended to use the **Open in broswer** functionality to open the `websiteUrl` in the browser.
 
 Tabs behave differently on the iOS and Android Teams clients than on the Teams desktop or web clients.
 
