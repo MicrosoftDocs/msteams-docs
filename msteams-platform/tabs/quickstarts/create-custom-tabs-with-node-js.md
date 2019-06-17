@@ -15,11 +15,11 @@ In this quickstart we will walk-through creating custom *group/channel* and *per
 
 ## Prerequisites
 
-- To complete this tutorial you will need an Office 365 tenant that has been set up for development and you will need to configure your team with uploading enabled and permissions to test your tabs (see [Manage Microsoft Teams settings for your organization](https://docs.microsoft.com/en-us/MicrosoftTeams/enable-features-office-365)). If you do not currently have an Office 365 account, you can sign up for the Office 365 Developer Program to get a free subscription that can be continually renewed every 90 days if you are actively using the subscription for development (see [Welcome to the Office 365 Developer Program](https://docs.microsoft.com/office/developer-program/office-365-developer-program)).
+- To complete this tutorial you will need an Office 365 tenant and a team configured with *Allow uploading custom apps* enabled (see [Manage Microsoft Teams settings for your organization](https://docs.microsoft.com/en-us/MicrosoftTeams/enable-features-office-365)). If you do not currently have an Office 365 account, you can sign up for the Office 365 Developer Program to get a free subscription to build your own solutions. The subscription will remain active as long as you are using the subscription for ongoing development (see [Welcome to the Office 365 Developer Program](https://docs.microsoft.com/office/developer-program/office-365-developer-program)).
 
-In addition, you need to have the following installed in your development environment:
+In addition, the project requires that you have the following installed in your development environment:
 
-- [Node.js/npm](https://nodejs.org/en/). You should use the latest LTS version. The Node Package Manager (npm) will get installed into your system with the installation of Node.js.
+- [Node.js/npm](https://nodejs.org/en/). You should use the latest LTS version. The Node Package Manager (npm) will install into your system with the installation of Node.js.
 
 - Any text editor or IDE. You can install and use [Visual Studio Code](https://code.visualstudio.com/download) for free.
 
@@ -37,13 +37,13 @@ In addition, you need to have the following installed in your development enviro
 
 ## Generate your project and create a group/channel tab
 
-Open a command prompt and create a new directory for your tab project. Navigate to your new directory and type the command `yo teams` . This will start the Teams Apps generator. Next, you will be asked a series of config questions:
+Open a command prompt and create a new directory for your tab project. Navigate to your new directory and type the command `yo teams` . This will start the Teams Yeoman generator. Next, you will be asked a series of config questions:
 
 ![generator opening screenshot](/msteams-platform/assets/TeamsTabScreen.PNG)
 
 > ***What is your solution name?*** <br>&emsp; This is your project name. You can accept the suggested name by pressing enter.<br>***Where do you want to place the files?*** <br>&emsp; You are currently in your project directory. Press enter.<br>***Title of your Microsoft Teams app project?*** <br>&emsp; This is your app package name and will be used in the manifest and description of your app. <br>***Your (company) name? (max 32 characters)*** <br>&emsp; Your company name will be used in the manifest.<br>***Which manifest version would you like to use?*** <br>&emsp; For this quickstart select v1.5 which is the generator's current general available schema.<br>***Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)*** <br>&emsp;This field is not required, and should only be used if you are already part of the [Microsoft Partner Network](https://partner.microsoft.com). <br>***What do you want to add to your project?*** <br>&emsp; Select ( &ast; ) A Tab.<br>
-.***The URL where you will host this solution?***  <br>&emsp;
->This can be any URL, but by default the generator suggests an Azure Web Sites URL. <br>&emsp; Since you will only be testing your app locally, A valid URL is not necessary to complete this quickstart.<br>***Would you like to include Test framework and initial tests?*** (Y/n) <br>&emsp; For this quickstart choose <u>not</u> to include a test framework. The default is yes; enter **n**.<br>***Would you like to use Azure Applications Insights for telemetry?*** (Y/n) <br>&emsp; For this quickstart choose <u>not</u> to include [Azure Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview). The default is yes, enter **n**.<br>***Default Tab Name (max 16 characters)?*** <br>&emsp; Name your tab. The default tab name will be used throughout your project as a file path component.<br>***Do you want this tab to be available in SharePoint Online?*** (Y/n) <br>&emsp; Select **n** unless, in the future, you want to use this app as a [SharePoint Online web part](https://docs.microsoft.com/microsoftteams/platform/concepts/tabs/tabs-in-sharepoint).
+***The URL where you will host this solution?*** <br>&emsp;
+>This can be any URL, but by default the generator suggests an Azure Web Sites URL. <br>&emsp; Since you will only be testing your app locally, A valid URL is not necessary to complete this quickstart.<br>***Would you like to include Test framework and initial tests?*** (Y/n) <br>&emsp; For this quickstart choose <u>not</u> to include a test framework. The default is yes; enter **n**.<br>***Would you like to use Azure Applications Insights for telemetry?*** (Y/n) <br>&emsp; For this quickstart choose <u>not</u> to include [Azure Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview). The default is yes; enter **n**.<br>***Default Tab Name (max 16 characters)?*** <br>&emsp; Name your tab. The default tab name will be used throughout your project as a file path component.<br>***Do you want this tab to be available in SharePoint Online?*** (Y/n) <br>&emsp; Select **n** unless, in the future, you want to use this app as a [SharePoint Online web part](https://docs.microsoft.com/microsoftteams/platform/concepts/tabs/tabs-in-sharepoint).
 
 >[!NOTE]
 >For the file locations referenced in this quickstart, the path component  ***<yourDefaultTabNameTab\>*** is the name that you selected in the generator for ***Default Tab Name*** plus the word ***Tab***.
@@ -52,7 +52,7 @@ DefaultTabName: **MyTab** => **/MyTabTab/**
 
 ## Add code to your group/channel tab
 
-Your tab logic is located in the `./src/app/scripts/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.tsx` TypeScript file . Locate the `render()` method and add the following <div\> at the top of the `<PanelBody>` container code:
+Your tab logic is located in the `./src/app/scripts/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.tsx` TypeScript JSX file . Locate the `render()` method and add the following <div\> at the top of the `<PanelBody>` container code:
 
 ```html
     <PanelBody>
@@ -64,7 +64,7 @@ Your tab logic is located in the `./src/app/scripts/<yourDefaultTabNameTab>/<you
 
 ## Create your personal tab
 
-If you prefer *not* to add a personal tab to your app, you can skip this section of the quickStart. Including a personal tab will require you to add an HTML file and a few lines of code to the project:
+If you prefer *not* to add a personal tab to your app, you can skip this section of the quickStart. Including a personal tab requires creating an additional HTML page and adding few lines of code to existing project files:
 
 > 1.&emsp; In your code editor, create a new HTML file named, `static.html` .  Add the following code:
 
@@ -105,7 +105,7 @@ If you prefer *not* to add a personal tab to your app, you can skip this section
 ```
 
 > [!Tip]
-> Don't forget to update the `"contentURL"` path component in the the staticTabs JSON object with `<yourDefaultTabNameTab>` using your DefaultTabName + Tab.
+> Don't forget to update the `"contentURL"` path component in the the staticTabs JSON object with `<yourDefaultTabNameTab>` using your *DefaultTabName* + *Tab*.
 
 > 4.&emsp; Save the updated `manifest.json` file.
 
@@ -118,7 +118,7 @@ If you prefer *not* to add a personal tab to your app, you can skip this section
 > 6.&emsp; *Save* the updated `Tab.ts` file and *Save all* for good measure.
 
 > [!Note]
-> Open your command prompt in your app's project folder to complete all gulp tasks.
+> Open a command prompt in your app's project folder to complete the project's gulp tasks.
 
 ## Create a Teams App manifest
 
@@ -158,11 +158,11 @@ gulp serve
 
 ## Package your app for Microsoft Teams
 
-Microsoft Teams is an entirely cloud-based product and thus, requires your app to be available from the cloud using HTTPS endpoints. Microsoft Teams does not allow apps to be hosted on localhost. Therefore, you need to either publish your app to a public URL or use a proxy which will expose your local port to an internet-facing URL.
+Microsoft Teams is an entirely cloud-based product, and thus requires your app to be available from the cloud using HTTPS endpoints. Microsoft Teams does not allow apps to be hosted on localhost. Therefore, you need to either publish your app to a public URL or use a proxy which will expose your local port to an internet-facing URL.
 
-For this quickstart we will use [ngrok](https://ngrok.com/docs) which is built into the project. The ngrok reverse proxy will create a tunnel to your locally running web server's publicly-available HTTPS endpoints. Your server's web endpoints will be available during the current session on your local machine. When the machine is shut down or goes to sleep the service will no longer be available.
+The [ngrok](https://ngrok.com/docs) tool, which is built into this project, is a reverse proxy software application that will create a tunnel to your locally running web server's publicly-available HTTPS endpoints. Your server's web endpoints will be available during the current session on your local machine. When the machine is shut down or goes to sleep the service will no longer be available.
 
->In your command prompt, enter the following command:
+>In your command prompt, enter the following:
 
 ```shell
 gulp ngrok-serve
