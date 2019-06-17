@@ -1,15 +1,15 @@
 ---
-title: "Quickstart: Build Custom Tabs with the Microsoft Teams Yeoman Generator and Node.js" #Required; page title displayed in search results. Include the word "quickstart". Include the brand.
+title: "Quickstart: Build Custom Tabs with Node.js and the Microsoft Teams Yeoman Generator" #Required; page title displayed in search results. Include the word "quickstart". Include the brand.
 author: laujan #Required; your GitHub user alias, with correct capitalization.
-description: A quickstart guide to building custom tabs. #Required; article description that is displayed in search results. Include the word "quickstart".
+description: A quickstart guide to building custom tabs with node.js. #Required; article description that is displayed in search results. Include the word "quickstart".
 ms.topic: quickstart #Required
 ms.author: laujan #Required; Microsoft alias of author; optional team alias.
 ---
-# Quickstart: build custom tabs with the Microsoft Teams Yeoman Generator and Node.js
+# Quickstart: build custom tabs with Node.js and the Microsoft Teams Yeoman Generator
 
->[!NOTE]This quickstart follows the steps outlined in [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in Microsoft's OfficeDev GitHub repository.
+- >[!NOTE]This quickstart follows the steps outlined in [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App.md) Wiki found in Microsoft's OfficeDev GitHub repository.
 
-Custom tabs enable you to embed web-based content directly into Microsoft Teams via your [Teams App Package](https://docs.microsoft.com//microsoftteams/platform/concepts/apps/apps-package), see [What are custom tabs in Microsoft Teams?](https://github.com/MicrosoftDocs/msteams-docs/blob/restructure/msteams-platform/tabs/what-are-custom-tabs.md). Custom tabs can be scoped for either group/channel use serving configurable/dynamic content or personal use serving static content. An app can have only one group/channel tab and up to sixteen personal tabs.
+Custom tabs enable you to embed web-based content directly into Microsoft Teams via your [Teams App Package](../../_old/concepts/apps/apps-package.md), see [What are custom tabs in Microsoft Teams?](../what-are-custom-tabs.md). Custom tabs can be scoped for either group/channel use serving configurable/dynamic content or personal use serving static content. An app can have only one group/channel tab and up to sixteen personal tabs.
 
 In this quickstart we will walk-through creating custom *group/channel* and *personal tabs* using the [Microsoft Teams App Project Generator](https://github.com/OfficeDev/generator-teams). For more information, see the Microsoft Teams App [Project Structure](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) documentation.
 
@@ -39,7 +39,7 @@ In addition you need the following installed in your development environment:
 
 Open a command prompt and create a new directory for your tab project. Navigate to your new directory and type the command `yo teams` . This will display a classic ascii drawing and start the Teams Apps generator. Next, you will be asked a series of config questions:
 
-![generator opening screenshot](images/TeamsTabScreen.PNG)
+![generator opening screenshot](../../TeamsTabScreen.PNG)
 
 > ***What is your solution name?*** <br>&emsp; This is your project name. You can accept the suggested name by pressing enter.<br>***Where do you want to place the files?*** <br>&emsp; You are currently in your project directory. Press enter.<br>***Title of your Microsoft Teams App project*** <br>&emsp; This is your app package name and will be used in the manifest and description of your app. <br>***Your (company) name? (max 32 characters)*** <br>&emsp; Your company name will be used in the manifest.<br>***Which manifest version would you like to use*** <br>&emsp; For this quickstart select v1.5 which is App generator's current general available schema.<br>***Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)*** <br>&emsp;This field is not required, and should only be used if you are already part of the [Microsoft Partner Network](https://partner.microsoft.com) <br>***What do you want to add to your project?*** <br>&emsp; Select *( \* ) A Tab.*  <br>***The URL where you will host this solution?***  <br>&emsp; This can be any URL, but by default the generator suggests an Azure Web Sites URL. Since you will only be testing your app locally, A valid URL is not necessary to complete this quickstart.<br>***Would you like to include Test framework and initial tests?*** (Y/n) <br>&emsp; For this quickstart choose <u>not</u> to include a test framework. The default is yes; enter **n**.<br>***Would you like to use Azure Applications Insights for telemetry?*** (Y/n) <br>&emsp; For this quickstart choose <u>not</u> to include [Azure Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview). The default is yes, so enter **n**.<br>***Default Tab Name (max 16 characters)*** <br>&emsp; Name your tab. The default tab name will be used throughout your project as a file path component.<br>***Do you want this tab to be available in SharePoint Online?*** (Y/n) <br>&emsp; Select **n** unless, in the future, you want to use this app as a [SharePoint Online web part](https://docs.microsoft.com/microsoftteams/platform/concepts/tabs/tabs-in-sharepoint)
 
@@ -145,11 +145,11 @@ gulp serve
 
 >Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser and view your configurable tab's content page:
 
-![configurable tab screenshot](images/configTab.PNG)
+![configurable tab screenshot](../../configTab.PNG)
 
 >To view your personal tab, remain in the current browser and add `static.html` to the app's file path: `http://localhost:3007/<yourDefaultAppNameTab>/static.html` Press Enter.<br>
 
-![static tab screenshot](images/staticTab.PNG)
+![static tab screenshot](../../staticTab.PNG)
 
 >If you would like to view your configuration page, add  `config.html` to the file path: `http://localhost:3007/<yourDefaultAppNameTab>/config.html`.
 
