@@ -19,7 +19,7 @@ Teams provides an in-app gallery for users to find or discover [high-quality Tea
 > [!IMPORTANT]
 > **Your Microsoft Teams app *must* use the [latest schema](~/resources/schema/manifest-schema.md) and follow [current packaging guidelines](~/concepts/apps/apps-package.md).**
 
-Teams provides an in-app gallery for users to find or discover [high-quality Teams apps](~/resources/design/overview). To have your solution available in this gallery, you must either:
+Teams provides an in-app gallery for users to find or discover [high-quality Teams apps](~/resources/design/overview.md). To have your solution available in this gallery, you must either:
 
 * Publish your app through AppSource
 * Publish your app through the Microsoft Teams Tenant App Catalog
