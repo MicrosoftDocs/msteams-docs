@@ -430,7 +430,7 @@ Your message extension will now need to respond to two new types of interactions
 }
 ```
 
-When responding to the `edit` request you should respond with a `task` response with the values populated with the information the user has already submitted. When responding to the `submit` request you should send a message to the channel containing the finalized adaptive card. The example below shows how to do this using the [Node.js Teams Bot Builder SDK](https://www.npmjs.com/package/botbuilder-teams).
+When responding to the `edit` request you should respond with a `task` response with the values populated with the information the user has already submitted. When responding to the `send` request you should send a message to the channel containing the finalized adaptive card. The example below shows how to do this using the [Node.js Teams Bot Builder SDK](https://www.npmjs.com/package/botbuilder-teams).
 
 ```typescript
 teamChatConnector.onComposeExtensionSubmitAction((
