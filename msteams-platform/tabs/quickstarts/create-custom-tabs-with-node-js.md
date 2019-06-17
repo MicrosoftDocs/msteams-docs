@@ -7,7 +7,7 @@ ms.author: laujan #Required; Microsoft alias of author; optional team alias.
 ---
 # Quickstart: build custom tabs with Node.js and the Microsoft Teams Yeoman Generator
 
-- >[!NOTE]This quickstart follows the steps outlined in [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App.md) Wiki found in Microsoft's OfficeDev GitHub repository.
+- >[!NOTE]This quickstart follows the steps outlined in [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki) Wiki found in Microsoft's OfficeDev GitHub repository.
 
 Custom tabs enable you to embed web-based content directly into Microsoft Teams via your [Teams App Package](../../_old/concepts/apps/apps-package.md), see [What are custom tabs in Microsoft Teams?](../what-are-custom-tabs.md). Custom tabs can be scoped for either group/channel use serving configurable/dynamic content or personal use serving static content. An app can have only one group/channel tab and up to sixteen personal tabs.
 
