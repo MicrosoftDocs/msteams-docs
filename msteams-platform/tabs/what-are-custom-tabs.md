@@ -12,7 +12,7 @@ Custom tabs enable you to embed web-based content directly into Teams. You can b
 
 ## Tabs Scope
 
-Conversations, content, and collaboration objectives are essential considerations in your tab design. There are two tab schema available in Teams - group/channel(configurable) and personal(static). A group/channel tab delivers dynamic content to group chats and channels and requires both a [content page](../old/concepts/tabs/tabs-content.md) and a [configuration page](../_old/concepts/tabs/tabs-configuration.md). A personal tab delivers static content to individuals and requires only a [content page](../_old/concepts/tabs/tabs-content.md).
+Conversations, content, and collaboration objectives are essential considerations in your tab design. There are two tab schema available in Teams - group/channel(configurable) and personal(static). A group/channel tab delivers dynamic content to group chats and channels and requires both a [content page](/msteams-platform/_old/concepts/tabs/tabs-content.md) and a [configuration page](/msteams-platform/_old/concepts/tabs/tabs-configuration.md). A personal tab delivers static content to individuals and requires only a [content page](/msteams-platform/_old/concepts/tabs/tabs-content.md).
 
 |Tab Scope|Tab User|Tab Type| Tab Functionality |
 | --- | ---| --- | --- |
@@ -35,9 +35,9 @@ I am building a sales tracking app and I want to add tabs to support individuals
 
 ## How are tabs added to a Teams app package?
 
-All Teams development (custom tabs, connectors, extensions, or bots) needs to be bundled in a [Teams app package](../_old/concepts/apps/apps-package) for distribution either in the Teams App Store or within a team. A custom tab is declared directly in the manifest of your app package. Your app can have a maximum of one (1) group/channel tab and up to sixteen (16) personal tabs.
+All Teams development (custom tabs, connectors, extensions, or bots) needs to be bundled in a [Teams app package](/msteams-platform/_old/concepts/apps/apps-package.md) for distribution either in the Teams App Store or within a team. A custom tab is declared directly in the manifest of your app package. Your app can have a maximum of one (1) group/channel tab and up to sixteen (16) personal tabs.
 
-**Your app manifest must conform to the [Manifest schema for Microsoft Teams](../_old/resources/schema/manifest-schema.md) and will include the following required keys:**
+**Your app manifest must conform to the [Manifest schema for Microsoft Teams](/msteams-platform/_old/resources/schema/manifest-schema.md) and will include the following required keys:**
 
 1. "schema"
 1. "manifestVersion"
@@ -78,20 +78,20 @@ In addition to the basic template, you declare the group/channel tab schema in t
 
 Ready to get started building custom tabs? Here are a few guidelines:
 
-- [Requirements for tab pages in Microsoft Teams](../_old/concepts/tabs/tabs-requirements.md)
+- [Requirements for tab pages in Microsoft Teams](/msteams-platform/_old/concepts/tabs/tabs-requirements.md)
 
-- [Content and conversations, all at once using tabs](../_old/resources/design/framework/tabs.md)
+- [Content and conversations, all at once using tabs](/msteams-platform/_old/resources/design/framework/tabs.md)
 
-- [QuickStart custom tabs node.js](quickstarts/create-custom-tabs-with-node-js.md)
+- [QuickStart create custom tabs with node.js](/msteams-platform/tabs/quickstarts/create-custom-tabs-with-node-js.md)
 
-- [QuickStart custom tabs c-sharp](quickstart/foo.md)
+- [QuickStart create custom tabs with c-sharp](quickstart/foo.md)
 
 ## Learn more
 
 Learn more about how tabs function with other Teams app capabilities:
 
-- [Combine bots with tabs](../_old/concepts/bots/bots-with-tabs.md)
+- [Combine bots with tabs](/msteams-platform/_old/concepts/bots/bots-with-tabs.md)
 
-- [Design a great Microsoft Teams app - Designing a great tab](../_old/get-started/design#designing-a-great-tab.md)
+- [Design a great Microsoft Teams app - Designing a great tab](/msteams-platform/_old/get-started/design.md)
 
 - foo.md
