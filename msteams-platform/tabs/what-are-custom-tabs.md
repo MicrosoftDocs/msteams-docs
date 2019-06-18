@@ -22,22 +22,22 @@ Conversations, content, and collaboration objectives are essential consideration
 
 ## Tabs user scenarios
 
-I am building a sales tracking app for a midsize company' Microsoft Teams application . The company operates in four regional areas comprised of multiple sales teams. I want to add tabs to support individuals, groups, and channels. \
+I am building a sales tracking app for a midsize company's Microsoft Teams application . The company operates in four regional areas comprised of multiple sales teams. I need to add tabs to support individuals, groups, and channels. \
 \
 **Scenario:** personal \
 **Example:** I need to build tabs for individual users to create personal to-do lists, track  personal sales goals, record hours worked, track expenses, and view the daily cafeteria menu.
 
 **Scenario:** group chat \
-**Example:** I need a tab for all members of travelling sales teams to select their current location and view that region's sales trends and goals.
+**Example:** I need a tab for all members of travelling sales teams to select their current location and view local sales trends and goals.
 
 **Scenario:** team \
 **Example:** I need to create a tab with current and vital company information that can be configured to support a multilingual employee base.
 
 ## How are tabs added to a Teams app package?
 
-All Teams development (custom tabs, connectors, extensions, or bots) needs to be bundled in a [Teams app package](/msteams-platform/_old/concepts/apps/apps-package.md) for distribution either in the Teams App Store or within a team. A custom tab is declared directly in the manifest of your app package. Your app can have a maximum of one (1) group/channel tab and up to sixteen (16) personal tabs.
+All Teams development (custom tabs, connectors, extensions, or bots) needs to be bundled in a [Teams app package](/msteams-platform/_old/concepts/apps/apps-package.md) for distribution either in the Teams App Store or within a team. A custom tab is declared directly in the manifest of your app package.
 
-**Your app manifest must conform to the [Manifest schema for Microsoft Teams](/msteams-platform/_old/resources/schema/manifest-schema.md) and will include the following required keys:**
+**Your app manifest must conform to the [Manifest schema for Microsoft Teams](/msteams-platform/_old/resources/schema/manifest-schema.md) and will include the following keys:**
 
 1. "schema"
 1. "manifestVersion"
