@@ -52,7 +52,7 @@ DefaultTabName: **MyTab** => **/MyTabTab/**
 
 ## Add code to your group/channel tab
 
-Your tab logic is located in the `./src/app/scripts/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.tsx` TypeScript JSX file . Locate the `render()` method and add the following <div\> at the top of the `<PanelBody>` container code:
+Your tab logic is located in the `./src/app/scripts/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.tsx` TypeScript JSX file . Locate the `render()` method and add the following <div\><&#47;div\> at the top of the `<PanelBody>` container code:
 
 ```html
     <PanelBody>
