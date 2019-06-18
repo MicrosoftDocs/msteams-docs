@@ -8,11 +8,11 @@ ms.topic: overview
 ---
 # What are custom tabs in Microsoft Teams?
 
-Custom tabs enable you to embed web-based content directly into Teams. You can build your own tab or expand your existing app's UI experience. Tab's capabilities are based on scope which maps to your intended users.
+Custom tabs enable you to embed web-based content directly into Teams in a single page format. You can build your own tab or expand your existing app's UI experience. An app can have one group/channel tab and up to sixteen personal tabs.
 
 ## Tabs Scope
 
-Conversations, content, and collaboration objectives are essential considerations in your tab design. There are two tab schema available in Teams - group/channel(configurable) and personal(static). A group/channel tab delivers dynamic content to group chats and channels and requires both a [content page](/msteams-platform/_old/concepts/tabs/tabs-content.md) and a [configuration page](/msteams-platform/_old/concepts/tabs/tabs-configuration.md). A personal tab delivers static content to individuals and requires only a [content page](/msteams-platform/_old/concepts/tabs/tabs-content.md).
+Conversations, content, and collaboration objectives are essential considerations in your tab design. There are two tab schema available in Teams - group/channel (configurable) and personal (static). Both group/channel and personal tabs require a [content page](/msteams-platform/_old/concepts/tabs/tabs-content.md). In addition, the group/channel tab also requires a [configuration page](/msteams-platform/_old/concepts/tabs/tabs-configuration.md). A tab's capabilities are based on scope which maps to your intended users:
 
 |Tab Scope|Tab User|Tab Type| Tab Functionality |
 | --- | ---| --- | --- |
@@ -22,16 +22,16 @@ Conversations, content, and collaboration objectives are essential consideration
 
 ## Tabs user scenarios
 
-I am building a sales tracking app and I want to add tabs to support individuals, groups, and channels. \
+I am building a sales tracking app for a midsize company' Microsoft Teams application . The company operates in four regional areas comprised of multiple sales teams. I want to add tabs to support individuals, groups, and channels. \
 \
 **Scenario:** personal \
-**Example:** I need a tab for individual users to list personal goals and strategies without having to share them with the entire team.
+**Example:** I need to build tabs for individual users to create personal to-do lists, track  personal sales goals, record hours worked, track expenses, and view the daily cafeteria menu.
 
 **Scenario:** group chat \
-**Example:** I need a tab for members of traveling sales groups to select their current location and view regional sales trends and goals.
+**Example:** I need a tab for all members of travelling sales teams to select their current location and view that region's sales trends and goals.
 
 **Scenario:** team \
-**Example:** I need a tab for team members to select the company's daily, weekly, monthly or quarterly sales metrics in a comparison view.
+**Example:** I need to create a tab with current and vital company information that can be configured to support a multilingual employee base.
 
 ## How are tabs added to a Teams app package?
 
