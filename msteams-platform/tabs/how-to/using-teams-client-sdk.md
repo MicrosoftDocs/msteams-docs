@@ -6,3 +6,6 @@ keywords: teams tabs group channel configurable static SDK JavaScript personal
 ms.topic: conceptual
 ms.author: 
 ---
+
+This may need to be multiple articles
+

@@ -6,3 +6,6 @@ keywords: teams tabs personal static
 ms.topic: conceptual
 ms.author: 
 ---
+
+current pages:
+https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/tabs/tabs-static

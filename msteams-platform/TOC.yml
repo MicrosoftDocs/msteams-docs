@@ -149,16 +149,26 @@
       href: foo.md
   - name: How-to guides
     items:
-    - name: Create a personal tab
-      href: tabs/how-to/create-personal-tab.md
-    - name: Create a group or channel tab
-      href: tabs/how-to/create-group-channel-tab.md
-    - name: Create a configuration page
-      href: tabs/how-to/create-configuration-page.md
-    - name: Create a tab removal page
-      href: tabs/how-to/create-tab-removal-page.md
+    - name: Create custom tabs
+      items:
+      - name: Add tabs to your app manifest
+        href: tabs/how-to/create-custom-tabs/add-tab-to-app-manifest.md
+      - name: Create a personal tab
+        href: tabs/how-to/create-custom-tabs/personal-tab.md
+      - name: Create a group or channel tab
+        href: tabs/how-to/create-custom-tabs/group-channel-tab.md
+      - name: Create a configuration page
+        href: tabs/how-to/create-custom-tabs/configuration-page.md
+      - name: Create a tab removal page
+        href: tabs/how-to/create-custom-tabs/tab-removal-page.md
     - name: Add authentication to your tabs
-      href: tabs/how-to/authentication-in-tabs.md
+      items:  
+      - name: Authentication flow 
+        href: tabs/how-to/authentication-in-tabs/authentication-flow.md
+      - name: Using Azure AD authentication
+        href: tabs/how-to/authentication-in-tabs/azure-ad.md
+      - name: Using SSO and silent authentication
+        href: tabs/how-to/authentication-in-tabs/sso-and-silent.md
     - name: Using the Teams client SDK
       href: tabs/how-to/using-teams-client-sdk.md
     - name: Adding your custom tab to SharePoint
