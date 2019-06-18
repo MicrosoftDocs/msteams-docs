@@ -1,17 +1,8 @@
----
-title: "Quickstart: Build Custom Tabs with Node.js and the Microsoft Teams Yeoman Generator" #Required; page title displayed in search results. Include the word "quickstart". Include the brand.
-author: laujan #Required; your GitHub user alias, with correct capitalization.
-description: A quickstart guide to building custom tabs with node.js. #Required; article description that is displayed in search results. Include the word "quickstart".
-ms.topic: quickstart #Required
-ms.author: laujan #Required; Microsoft alias of author; optional team alias.
----
-# Quickstart: Build custom tabs with Node.js and the Microsoft Teams Yeoman Generator
-
 >[!NOTE]This quickstart follows the steps outlined in the [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
 
 Custom tabs enable you to embed web-based content directly into Microsoft Teams via your [Teams App Package](/msteams-platform/_old/concepts/apps/apps-package.md) (see [What are custom tabs in Microsoft Teams?](/msteams-platform/tabs/what-are-custom-tabs.md)). Custom tabs can be scoped for either group/channel use, serving configurable/dynamic content, or personal use, serving static content. An app can have one group/channel tab and up to sixteen personal tabs.
 
-In this quickstart we will walk-through creating custom *group/channel* and *personal tabs* using the [Microsoft Teams App Project Generator](https://github.com/OfficeDev/generator-teams). For more information, see the Microsoft Teams App [Project Structure](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) documentation.
+In this quickstart we will walk-through creating custom foo[*group/channel* and *personal tabs*] using the [Microsoft Teams App Project Generator](/OfficeDev/generator-teams). For more information, see the Microsoft Teams App [Project Structure](/OfficeDev/generator-teams/wiki/Project-Structure) documentation.
 
 ## Prerequisites
 
