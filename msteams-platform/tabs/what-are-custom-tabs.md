@@ -8,109 +8,53 @@ ms.topic: overview
 ---
 # What are custom tabs in Microsoft Teams?
 
-Custom tabs enable you to embed web-based content directly into Teams. You can build your own tab or expand your existing app's UI experience.
+Tabs are Teams-aware web experiences embedded in Microsoft Teams. They can be added as part of a channel inside a Team, a group chat, or part of a [personal app](~/foo.md) for an individual user. As part of your app, you can build custom tabs that embed your own web content in Teams, and add Teams-specific functionality using our Teams client SDK.
 
-There are two tabs schema available in Teams - group/channel(configurable) and personal(static). A group/channel tab delivers dynamic content to group chats and channels and requires both a [content page](https://docs.microsoft.com/microsoftteams/platform/concepts/tabs/tabs-content) and a [configuration page](https://docs.microsoft.com/microsoftteams/platform/concepts/tabs/tabs-configuration). A personal tab delivers static content to individuals and requires only a [content page](https://docs.microsoft.com/microsoftteams/platform/concepts/tabs/tabs-content).
-
-## Tabs Scope
-
-Conversations, content, and collaboration objectives are essential considerations in your tabs design. Your tab's capabilities are based on scope which maps to your intended users:
-
-|Tab Scope|Tab User|Tab Type| Tab Functionality |
-| --- | ---| --- | --- |
-|"personal"|individual|personal|static only|
-|"groupchat"|group| group/channel|configurable only|
-|"teams"|channel| group/channel|configurable only|
+There are two types of tabs available in Teams - group/channel and personal. A group/channel tab delivers content to group chats and channels, and are a great way to create collaboration spaces around web-based content. Personal tabs, along with one-to-one bots, are part of personal apps and are scoped to a single user. They can be pinned to the left navigation bar and are very good at increasing productivity by making your service available directly inside the Teams client.
 
 ## Tabs user scenarios
 
-I am building a sales tracking app and I want to add tabs to support individuals, groups, and channels. \
-\
-**Scenario:** personal \
-**Example:** I need a tab for individual users to list personal goals and strategies without having to share them with the entire team.
+**Scenario:** Make an existing web-based resource available inside Microsoft Teams.
+**Example:** You have an informational corporate website you make available as a personal tab in Teams.
 
-**Scenario:** group chat \
-**Example:** I need a tab for members of traveling sales groups to select their current location and view regional sales trends and goals.
+**Scenario:** You want to add an about or help page for your bot or messaging extension.
+**Example:** You have a static webpage that you make available as a personal tab in Teams.
 
-**Scenario:** team \
-**Example:** I need a tab for team members to select the company's daily, weekly, monthly or quarterly sales metrics in a comparison view.
+**Scenario:** You have items in a system that your users need to discuss or collaborate around regularly.
+**Example:** You create a group/channel tab that is configurable with deep linking to individual items.
 
-## How are tabs added to a Teams app package?
+## How do tabs work?
 
-All Teams development (custom tabs, connectors, extensions, or bots) needs to be bundled in a [Teams app package](https://docs.microsoft.com/microsoftteams/platform/concepts/apps/apps-package)  for distribution either in the Teams App Store or within a team. A custom tab is declared directly in the manifest of your app package. Your app can have a maximum of one (1) group/channel tab and up to sixteen (16) personal tabs.
+All Teams development (custom tabs, messaging extensions, or bots) needs to be bundled in a [Teams app package](foo.md) for distribution either in the Teams App Store (AppSource), to your organization or within a team. A custom tab is declared directly in the manifest of your app package. Your app can have a maximum of one (1) group/channel tab and up to sixteen (16) personal tabs
 
-**Your app manifest must conform to the [Manifest schema for Microsoft Teams](https://docs.microsoft.com/en-us/microsoftteams/platform/resources/schema/manifest-schema) and will include the following template:**
+At their core, tabs are iFramed websites you host that can contain Teams-aware functionality through the use of our [Teams client SDK](/javascript/api/overview/msteams-client). Pages loaded inside of a custom tab need to:
 
-```json
-{
-  "$schema": "[Optional, but specifying the schema at the beginning of your manifest enables IntelliSense or similar support from your code editor.]",
-  "manifestVersion": "[Required. The current version of the manifest schema your app manifest is using.]",
-"id": "[Required. A unique identifier for this app. This id must be a GUID.]"
-  "version": "[Required. The version of your app]",
-  "packageName": "[Required. A unique identifier for the your app in reverse domain notation.]",
-  "developer": {
-    "name": "[Required. Your display name.]",
-    "websiteUrl": "[Required. The https:// URL to your website.]",
-    "privacyUrl": "[Required. The https:// URL to your privacy policy.]",
-    "termsOfUseUrl": "[Required. The https:// URL to your terms of use.]",
-    "mpnId": "[Optional. This field is not required, and should only be used if you are already part of the Microsoft Partner Network. More info at https://aka.ms/partner]"
-  },
-  "name": {
-    "short": "[Required. The short display name for your app. It must be <=30 characters]",
-    "full": "[Required if the full name of your app exceeds 30 characters.]"
-  },
-  "description": {
-    "short": "[Required. A short description of your app to users. ]",
-    "full": "[Required. The full description of your app to provide additional useful information to users.]"
-  },
-  "icons": {
-    "outline": "[Required. A relative path to a transparent 32X32 PNG outline icon.]",
-    "color": "[Required. A relative path to a full-color 192X192 PNG icon.]"
-  },
-  "accentColor": "[Required. A valid HTML color code for use with and as a background for your outline icons.]",
-```
+* Allow themselves to be iFramed by Teams (via the X-Frame-Options and/or Content-Security-Policy headers). A lot of standard webpages don't allow themselves to be iFramed which is why there is the option for users to view Website tab instances inside of a webview within the desktop client. Other tabs don't get this special treatment.
+* Handle [authentication](foo.md) differently (either via a popup or calling us to fetch tokens). Most websites simply redirect to a login provider which typically dead ends tabs which are hosted inside of an iframe. That's because login pages typically don't render in iFrames to prevent click-jacking.
+* Handle [cross-domain](foo.md) navigation differently since the Teams client needs to validate the origin against a static validDomains list in the app manifest when loading or communicating with the tab.
+* Style themselves based on the Teams client's theme.
+* On page load, call `microsoftTeams.initialize()` from the [Teams client SDK](/javascript/api/overview/msteams-client), which gives Teams a communication channel with the hosted page and more visibility into its operations.
 
-***In addition to the basic template, you declare the group/channel tab schema in the configurableTabs section and the personal tab schema in the staticTabs section of your manifest with the following name/value pairs:**
+## Tabs on mobile clients
 
-```json
-"configurableTabs": [
-    {
-      "configurationUrl": "[The https://URL to use when configuring your tab.]",
-      "canUpdateConfiguration": "A boolean value indicating whether an instance of your tab's configuration can be updated by the user after creation. Default: "true"]",
-      "scopes": [ "team", "groupchat" ]
-    }
-  ],
-```
+Teams is xPlat, your app needs to as be as well.
 
-```json
-  "staticTabs": [
-    {
-      "entityId": "[Required. A unique identifier for the entity that your tab displays]",
-      "name": "Display name of tab",
-      "contentUrl": "https://contoso.com/content?host=msteams",
-      "websiteUrl": "https://contoso.com/content",
-      "scopes": [ "personal" ]
-    }
-  ],
-}
-```
+contentUrl vs websiteUrl.
 
 ## Get Started
 
 Ready to get started building? Here are a few guidelines:
 
-- [Content and conversations, all at once using tabs](https://docs.microsoft.com/microsoftteams/platform/resources/design/framework/tabs)
-
-- [QuickStart/staticTabs/foo.md](https://quickstart/statictabs)
-- [QuickStart/configurableTabs/foo.md](https://quickstart/configurabletabs)
+* [Design effective tabs](~/foo.md)
+* [QuickStart/staticTabs/foo.md](https://quickstart/statictabs)
+* [QuickStart/configurableTabs/foo.md](https://quickstart/configurabletabs)
 
 ## Learn more
 
 Learn more about how tabs function with other Teams app capabilities:
 
-- [Combine bots with tabs](https://docs.microsoft.com/microsoftteams/platform/concepts/bots/bots-with-tabs)
-
-- [Design a great Microsoft Teams app - Designing a great tab](https://docs.microsoft.com/en-us/microsoftteams/platform/get-started/design#designing-a-great-tab)
-
-- foo.md
-
+* [Create a configuration page](~/foo.md)
+* [Create a group or channel tab](~/foo.md)
+* [Create personal tab](~/foo.md)
+* [Authentication in tabs](~/foo.md)
+* foo.md
