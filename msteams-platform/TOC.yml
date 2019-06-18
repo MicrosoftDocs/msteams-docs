@@ -148,6 +148,7 @@
     - name: somethingelse design
       href: foo.md
   - name: How-to guides
+    expanded: true
     items:
     - name: Create custom tabs
       items:
@@ -194,6 +195,7 @@
     - name: somethingelse design
       href: foo.md
   - name: How-to guides
+    expanded: true
     items:
     - name: dosoemthign
       href: foo.md
@@ -220,6 +222,7 @@
     - name: somethingelse design
       href: foo.md
   - name: How-to guides
+    expanded: true
     items:
     - name: dosoemthign
       href: foo.md
