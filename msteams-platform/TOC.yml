@@ -131,6 +131,8 @@
         href: tabs/quickstart/build-custom-tabs-with-yeoman.md
     - name: C#/.NET
       items:
+      - name: Build custom tabs using C-Sharp and ASP.NET Core
+        href: tabs/quickstart/build-custom-tabs-with-c-sharp.md
       - name: Create a configuration page
         href: foo.md
   - name: Tutorials
