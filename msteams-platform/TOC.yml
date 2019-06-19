@@ -127,20 +127,22 @@
     items:
     - name: Node.js and React
       items:
-      - name: Build a custom channel and group tab
-        href: tabs/quickstart/build-custom-tabs-with-yeoman.md
-      - name: Build a custom personal tab
-        href: tabs/quickstart/build-custom-tabs-with-yeoman.md
+      - name: Build a custom channel and group tab with Node.js and Yeoman
+        href: tabs/quickstart/build-custom-channel-group-tab-node-js-yeoman.md
+      - name: Build a custom personal tab with Node.js and Yeoman
+        href: tabs/quickstart/build-custom-personal-tab-node.js-yeoman.md
+      - name: Build custom tab with Node.js common
+      - href: tabs/quickstart/build-custom-tab-node.js-common.md  
     - name: C#/.NET
       items:
-      - name: Build custom a channel and group tab with ASP.NET Core
-        href: tabs/quickstart/build-custom-tabs-with-c-sharp.md
-      - name: Create a personal tab with ASP.NET Core
-        href: foo.md
-      - name: Build custom a channel and group tab with ASP.NET MVC
-        href: tabs/quickstart/build-custom-tabs-with-c-sharp.md
-      - name: Create a personal tab with ASP.NET MVC
-        href: foo.md
+      - name: Build a custom channel and group tab with C# and ASP.NET Core
+        href: tabs/quickstart/build-custom-channel-group-tab-c-sharp-asp-net-core.md
+      - name: Build a custom personal tab with C# and ASP.NET Core
+        href: tabs/quickstart/build-custom-personal-tab-c-sharp-asp-net-core.md
+      - name: Build a custom channel and group tab with C# and ASP.NET MVC
+        href: tabs/quickstart/build-custom-channel-group-tab-c-sharp-asp-net-mvc.md
+      - name: Build a custom personal tab with C# and ASP.NET MVC
+        href: tabs/quickstart/build-custom-personal-tab-c-sharp-asp-net-mvc.md
   - name: Tutorials
     items: 
     - name: Build Microsoft Teams tab using SharePoint Framework
