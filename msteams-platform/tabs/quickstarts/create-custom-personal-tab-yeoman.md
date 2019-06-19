@@ -1,7 +1,7 @@
 ---
-title: "Quickstart: Build a Custom Personal Tab with Node.js and the Teams Yeoman Generator"
+title: "Quickstart: Create a Custom Personal Tab with the Teams Yeoman Generator"
 author: laujan 
-description: A quickstart guide to building a custom personal tab with node.js and the Teams Yeoman Generator. 
+description: A quickstart guide to creating a custom personal tab with the Teams Yeoman Generator. 
 ms.topic: quickstart 
 ms.author: laujan
 ---

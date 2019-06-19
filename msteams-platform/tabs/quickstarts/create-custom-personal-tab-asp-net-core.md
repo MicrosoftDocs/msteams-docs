@@ -1,7 +1,7 @@
 ---
-title: "Quickstart: Build a Custom Personal Tab with C-Sharp and ASP.NET Core" 
+title: "Quickstart: Create a Custom Personal Tab with ASP.NET Core" 
 author: laujan 
-description: A quickstart guide to building a custom personal tab with C-sharp and ASP.Net Core. 
+description: A quickstart guide to creating a custom personal tab with ASP.NET Core. 
 ms.topic: quickstart 
 ms.author: laujan 
 ---

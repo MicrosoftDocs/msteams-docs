@@ -1,7 +1,7 @@
 ---
-title: "Quickstart: Build a Custom Group and Channel Tab with Node.js and the Teams Yeoman Generator"
+title: "Quickstart: Create a Custom Group and Channel Tab with the Teams Yeoman Generator"
 author: laujan
-description: A quickstart guide to building custom tabs with node.js and the Teams Yeoman Generator.
+description: A quickstart guide to creating a custom group and channel tab with the Teams Yeoman Generator.
 ms.topic: quickstart
 ms.author: laujan
 ---
