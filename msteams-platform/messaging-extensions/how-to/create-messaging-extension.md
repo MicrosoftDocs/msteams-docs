@@ -97,9 +97,14 @@ The example below is a simple messaging extension object in the app manifest wit
 
 Configuration complete, it's time to start writing code. When your users trigger your messaging extention you'll need to handle the initial invoke message, collect some information from the user, then process that information and respond appropriately. To do that, you'll first need to decide what kind of commands you want to add to your messaging extension and either [add an action-based commands](~/messaging-extensions/how-to/action-based-commands/define-action-based-command.md) or [add a search-based commands](~/messaging-extensions/how-to/search-based-commands/define-search-based-command.md).
 
+## Next steps
+
+* [Create action-based commands](~/messaging-extensions/how-to/action-based-commands/define-action-based-command.md)
+* [Create search-based commands](~/messaging-extensions/how-to/search-based-commands/define-search-based-command.md)
+
 ## Learn more
 
-Ready to get started?
+Try it out in a quickstart:
 
 * Quickstarts for C#
   * [Messaging extension with action-based commands](~/foo.md)
@@ -107,11 +112,6 @@ Ready to get started?
 * Quickstarts for Node.js
   * [Messaging extension with action-based commands](~/foo.md)
   * [Messaging extension with search-based commands](~/foo.md)
-
-Learn about creating commands for messaging extensions:
-
-* [Define action-based commands](~/messaging-extensions/how-to/action-based-commands/define-action-based-command.md)
-* [Define search-based commands](~/messaging-extensions/how-to/search-based-commands/define-search-based-command.md)
 
 Learn more about messaging extensions concepts:
 
