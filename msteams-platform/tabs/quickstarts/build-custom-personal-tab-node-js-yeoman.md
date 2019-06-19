@@ -7,7 +7,7 @@ ms.author: laujan
 ---
 # Quickstart: Build a custom personal tab with Node.js and the Teams Yeoman Generator
 
-[!INCLUDE [common-node-js-build-custom-tabs](~/includes/common-node-js-build-custom-tabs.md)]
+[!INCLUDE [common-node-js-build-custom-tabs](~/includes/build-custom-tab-node-js-common.md)]
 
 ## Create your personal tab
 
