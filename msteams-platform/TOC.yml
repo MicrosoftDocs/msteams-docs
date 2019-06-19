@@ -92,7 +92,7 @@
     expanded: true
     items:
     - name: Create a messaging extension
-      href: foo.md
+      href: messaging-extensions/how-to/create-messaging-extension.md
     - name: Action-based commands
       items:
       - name: Define action-based commands
