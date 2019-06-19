@@ -1,9 +1,9 @@
 ---
-title: "Quickstart: Build Custom Tabs with C-Sharp and ASP.NET Core" #Required; page title displayed in search results. Include the word "quickstart". Include the brand.
-author: laujan #Required; your GitHub user alias, with correct capitalization.
-description: A quickstart guide to building custom tabs with c-sharp. #Required; article description that is displayed in search results. Include the word "quickstart".
-ms.topic: quickstart #Required
-ms.author: laujan #Required; Microsoft alias of author; optional team alias.
+title: "Quickstart: Build a Custom Personal Tab with C-Sharp and ASP.NET Core" 
+author: laujan 
+description: A quickstart guide to building a custom personal tab with C-sharp and ASP.Net Core. 
+ms.topic: quickstart 
+ms.author: laujan 
 ---
 # Quickstart: build custom tabs with C-Sharp and ASP.NET Core
 
