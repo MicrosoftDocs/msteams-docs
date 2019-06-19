@@ -1,28 +1,71 @@
 ---
-title: "Quickstart: Build a Custom Group and Channel Tab with Node.js and the Teams Yeoman Generator"
-author: laujan
-description: A quickstart guide to building custom tabs with node.js and the Teams Yeoman Generator.
-ms.topic: quickstart
+title: "Quickstart: Build a Custom Personal Tab with Node.js and the Teams Yeoman Generator"
+author: laujan 
+description: A quickstart guide to building a custom personal tab with node.js and the Teams Yeoman Generator. 
+ms.topic: quickstart 
 ms.author: laujan
 ---
-# Quickstart: build a custom group or channel tabs with Node.js and the Microsoft Teams Yeoman Generator
+# Quickstart: Build a custom personal tab with Node.js and the Teams Yeoman Generator
 
-[!INCLUDE [build-custom-tab-node-js-common](build-custom-tab-node-js-common.md)]
+[!INCLUDE [common-node-js-build-custom-tabs](~/includes/common-node-js-build-custom-tabs.md)]
 
-## Add code to your group/channel tab
+## Create your personal tab
 
-Your tab logic is located in the `./src/app/scripts/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.tsx` TypeScript JSX file . Locate the `render()` method and add the following <div\><&#47;div\> at the top of the `<PanelBody>` container code:
+Including a personal tab requires creating an additional HTML page and adding few lines of code to the existing project files:
+
+> 1.&emsp; In your code editor, create a new HTML file named, `static.html` .  Add the following code:
 
 ```html
-    <PanelBody>
-        <div style={styles.section}>
-        Hello World! Yo Teams rocks!
-        </div>
-    </PanelBody>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            <!-- Todo: add your a title here -->
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- inject:css -->
+        <!-- endinject -->
+    </head>
+        <body>
+            <h1>Static Tab</h1>
+            <p><img src="/assets/icon.png"></p>
+            <p>This is your personal tab!</p>
+        </body>
+</html>
+
 ```
 
->[!NOTE]
->Open a command prompt in your app's project folder to complete the project's gulp tasks.
+> 2.&emsp;Save the `static.html` file in your app's `web` folder. The relative file path should be: <br>&emsp;`./src/app/web/<yourDefaultTabNameTab>/static.html`<br>
+
+> 3.&emsp; In your code editor, navigate to your app's `manifest.json` file: `./src/manifest/manifest.json/` . Scroll down to the empty staticTabs array ( `"staticTabs":[]` ) and add the following JSON object:
+
+```json
+{
+    "entityId": "staticTab",
+    "name": "Static Tab ",
+    "contentUrl": "https://{{HOSTNAME}}/<yourDefaultTabNameTab>/static.html",
+    "websiteUrl": "https://{{HOSTNAME}}",
+    "scopes": ["personal"]
+}
+
+```
+
+> [!TIP]
+> Don't forget to update the `"contentURL"` path component in the the staticTabs JSON object with `<yourDefaultTabNameTab>` using your *DefaultTabName* + *Tab*.
+
+> 4.&emsp; Save the updated `manifest.json` file.
+
+> 5.&emsp; Since your content page must be served in an iFrame, open your app's `Tab.ts` TypeScript file in your code editor: `./src/app/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts` and add the following to the list of iFrame decorators:
+
+```typescript
+ @PreventIframe("/<yourDefaultAppName>TabNameTab>/static.html")
+```
+
+> 6.&emsp; *Save* the updated `Tab.ts` file and *Save all* for good measure.
+
+> [!NOTE]
+> Open a command prompt in your app's project folder to complete the project's gulp tasks.
 
 ## Create a Teams App manifest
 
@@ -51,11 +94,10 @@ gulp serve
 
 >Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser and view your configurable tab's content page:
 >>![content page screenshot](/msteams-platform/assets/configTab.PNG)
->To view your personal tab, remain in the current browser and add `static.html` to the app's file path: `http://localhost:3007/<yourDefaultAppNameTab>/static.html` Press Enter.<br>
->![static tab screenshot](/msteams-platform/assets/staticTab.PNG)
 
->[!NOTE]
->To view your configuration page, add  `config.html` to the file path: `http://localhost:3007/<yourDefaultAppNameTab>/config.html`.
+>To view your personal tab, remain in the current browser and add `static.html` to the app's file path: `http://localhost:3007/<yourDefaultAppNameTab>/static.html` Press Enter.<br>
+
+>>![static tab screenshot](/msteams-platform/assets/staticTab.PNG)
 
 ## Package your app for Microsoft Teams
 
@@ -75,13 +117,9 @@ Open Microsoft Teams. In the **YourTeams** panel click (**&#8943;**) *More optio
 
 Return to your team's General channel and select ➕ to add your tab from the list of tabs. Follow the directions for adding a tab. Note that there is a custom configuration dialog for your group/channel tab. Select *Save* and your tabs should be loaded in Microsoft Teams.
 
-## Add and view your group/channel tab
+## View your personal tabs
 
-1. Choose ➕ *Add a tab*  from the tab bar.
-2. Select your tab from the gallery.
-3. Accept the consent prompt.
-4. Enter a value for the configuration page.
-5. *Save*.
-6. To view, select your new tab from the tab bar.
+1. In the navbar located at the far-left of the Teams App, click (**&#8943;**) *More added apps*. You will be presented with a list of personal view apps.
+2. Select your app's personal tab from the list to view.
 
 ### Nice work! You just extended Microsoft Teams with custom tabs.
