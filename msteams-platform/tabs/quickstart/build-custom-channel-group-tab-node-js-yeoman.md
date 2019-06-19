@@ -7,7 +7,7 @@ ms.author: laujan
 ---
 # Quickstart: build a custom group or channel tabs with Node.js and the Microsoft Teams Yeoman Generator
 
-[!INCLUDE [build-custom-tab-node.js-common](build-custom-tab-node.js-common.md)]
+[!INCLUDE [build-custom-tab-node-js-common](build-custom-tab-node-js-common.md)]
 
 ## Add code to your group/channel tab
 
