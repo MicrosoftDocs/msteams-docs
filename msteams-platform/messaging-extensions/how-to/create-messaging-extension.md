@@ -15,6 +15,8 @@ At a high level, you'll need to complete the following steps to create a messagi
 1. Create your app package
 1. Upload your package to Microsoft Teams
 
+As you're building your messaging extension, you'll regularly be moving between changing your app manifest, and deploying code to your bot's app service. When working with the app manifest, keep in mind that you can either manually manipulate the JSON file, or make changes through App Studio. Either way, you'll need to re-deploy (sideload) your app in Teams when you make a change.
+
 ## Prepare your development environment
 
 The first thing you'll need to do is prepare your development environment. You'll need to make sure app sideloading is enabled for the Office 365 organization you want to test your app on. If you need a dedicated development tenant, you can sign up for the [Office 365 developer program](https://developer.microsoft.com/en-us/office/dev-program). For additional information see [Setup your development environment](~/concepts/build-and-test-your-app/foo.md).
@@ -95,7 +97,7 @@ The example below is a simple messaging extension object in the app manifest wit
 
 ## Add your invoke message handlers
 
-Configuration complete, it's time to start writing code. When your users trigger your messaging extention you'll need to handle the initial invoke message, collect some information from the user, then process that information and respond appropriately. To do that, you'll first need to decide what kind of commands you want to add to your messaging extension and either [add an action-based commands](~/messaging-extensions/how-to/action-based-commands/define-action-based-command.md) or [add a search-based commands](~/messaging-extensions/how-to/search-based-commands/define-search-based-command.md).
+Configuration complete, it's time to start writing code. When your users trigger your messaging extension you'll need to handle the initial invoke message, collect some information from the user, then process that information and respond appropriately. To do that, you'll first need to decide what kind of commands you want to add to your messaging extension and either [add an action-based commands](~/messaging-extensions/how-to/action-based-commands/define-action-based-command.md) or [add a search-based commands](~/messaging-extensions/how-to/search-based-commands/define-search-based-command.md).
 
 ## Next steps
 
