@@ -3,13 +3,13 @@ title: Share to Teams embedded button
 description: How to add the Share-to-Teams embedded button on your website
 keywords: Share Teams Share-to-Teams
 ---
-# Creating a Share-to-Teams embedded button
+# Creating a Share to Teams embedded button
 
 >[!NOTE]
 > * Only the desktop versions of Edge, Firefox, and Chrome are supported.
 > * Use of Freemium or guest accounts is not supported.
 
-Third-party websites can use the launcher script to embed Share-to-Teams buttons on their webpages which will launch the Share-to-Teams experience in a popup window when clicked. This will allow you to share a link directly to any person or Microsoft Teams channel without switching context.
+Third-party websites can use the launcher script to embed Share to Teams buttons on their webpages which will launch the Share to Teams experience in a popup window when clicked. This will allow you to share a link directly to any person or Microsoft Teams channel without switching context.
 
 ![Share-to-Teams popup](~/assets/images/share-to-teams-popup.png)
 
@@ -34,7 +34,7 @@ This will add the Microsoft Teams icon to your website.
 
 ![Share-to-Teams icon](~/assets/icons/share-to-teams-icon.png)
 
-Optionally, if you want a different icon size for the Share-to-Teams button, use the `data-icon-px-size` attribute.
+Optionally, if you want a different icon size for the Share to Teams button, use the `data-icon-px-size` attribute.
 
 ```html
 <div
@@ -54,7 +54,7 @@ If you know that the URL preview from your link to be shared won't render well i
 </div>
 ```
 
-If your page dynamically renders content, you can use the the `shareToMicrosoftTeams.renderButtons()` method to force the Share button to render at the appropriate place in the pipeline.
+If your page dynamically renders content, you can use the the `shareToMicrosoftTeams.renderButtons()` method to force the **Share** button to render at the appropriate place in the pipeline.
 
 ## Crafting your website preview
 
@@ -73,7 +73,7 @@ In order for the preview to be displayed you must:
 
 ## Share-to-Teams for Education
 
-For teachers using the Share-to-Teams button you'll be given an additional option to `Create an Assignment`. This enables you to quickly create an assignment in the chosen Team based on the shared link.
+For teachers using the Share to Teams button you'll be given an additional option to `Create an Assignment`. This enables you to quickly create an assignment in the chosen Team based on the shared link.
 
 ![Share-to-Teams popup](~/assets/images/share-to-teams-popup-edu.png)
 

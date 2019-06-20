@@ -11,7 +11,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
-| 06/20/2019 | Share an external website, from an external website, into a Teams channel | [Share-to-Teams](~/share-to-teams.md) |
+| 06/20/2019 | Share an external website, from an external website, into a Teams channel | [Share to Teams](~/share-to-teams.md) |
 | 05/25/2019 | Respond with bot message from task module | [Respond with bot message from task module](~/concepts/messaging-extensions/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot) |
 | 05/25/2019 | Bots in group chats | [Interact with a bot in group chat or channel](~/concepts/bots/bot-conversations/bots-conv-channel.md) |
 | 05/20/2019 | App manifest localization | [App localization](~/publishing/apps-localization.md) |
