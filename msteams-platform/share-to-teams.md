@@ -2,25 +2,13 @@
 title: Share to Teams embedded button
 description: How to add the Share-to-Teams embedded button on your website
 keywords: Share Teams Share-to-Teams
-ms.date: 05/06/2019
 ---
 # Creating a Share-to-Teams embedded button
 
 >[!NOTE]
->Share-to-Teams is currently in [Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
+> Only the desktop versions of Edge, Firefox, and Chrome are supported.
 >
->To view this functionality in Developer Preview, you'll need to:
->
->1. Go to [https://teams.microsoft.com](https://teams.microsoft.com) from the **same browser** that you wish to test the functionality from.
->1. Set your browser client to Developer Preview (similar to how you would configure your desktop client for Developer Preview).
->    * Click your Avatar in the top right corner.
->    * Select About, then Developer Preview.
->1. Test your configuration by going to [https://teams.microsoft.com/share](https://teams.microsoft.com/share). The Share-to-Teams form should load.
->1. Proceed to test your application in a separate tab in the same browser.
->
->If you receive the error message "The resource you are looking for has been removed, had its name changed, or is temporarily unavailable." you have not properly configured your browser session to use Developer Preview.
->
->**Only the desktop versions of Edge, Firefox, and Chrome are supported.**
+> Use of Freemium or guest accounts is not supported.
 
 Third-party websites can use the launcher script to embed Share-to-Teams buttons on their webpages which will launch the Share-to-Teams experience in a popup window when clicked. This will allow you to share a link directly to any person or Microsoft Teams channel without switching context.
 
@@ -68,6 +56,21 @@ If you know that the URL preview from your link to be shared won't render well i
 ```
 
 If your page dynamically renders content, you can use the the `shareToMicrosoftTeams.renderButtons()` method to force the Share button to render at the appropriate place in the pipeline.
+
+## Crafting your website preview
+
+When your website is shared to Teams, the card that is inserted into the selected channel will contain a preview of your website. You can control the behavior of this preview by ensuring the appropriate meta-data is added to the website being shared (the `data-href` URL). The table below outlines the necessary tags. You can use either the html default versions, or the Open Graph version.
+
+In order for the preview to be displayed you must:
+
+* Include either a Thumbnail image, or both a Title and Description (for best results, include all three).
+* The URL being shared cannot require authentication. If it does you can still share it, but the preview will not be created.
+
+|Value|Meta tag| Open Graph|
+|----|----|----|
+|Title|`<meta property="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
+|Description|`<meta name=”description” content=”Example Page Description”>`|`<meta property=”og:description” content=”Example Page Description”>`|
+|Thumbnail Image| none |`<meta property=”og:image” content=”http://example.com/image.jpg”>`|
 
 ## Share-to-Teams for Education
 
