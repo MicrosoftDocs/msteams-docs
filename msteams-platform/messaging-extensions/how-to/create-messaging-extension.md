@@ -9,28 +9,46 @@ ms.author: anclear
 
 At a high level, you'll need to complete the following steps to create a messaging extension.
 
+1. Prepare your development environment
 1. Create and register your bot service
 1. Create and deploy your app service (you can use service like ngrok to [run it locally](~/foo.md))
 1. Create your app package
 1. Upload your package to Microsoft Teams
 
+As you're building your messaging extension, you'll regularly be moving between changing your app manifest, and deploying code to your bot's app service. When working with the app manifest, keep in mind that you can either manually manipulate the JSON file, or make changes through App Studio. Either way, you'll need to re-deploy (sideload) your app in Teams when you make a change.
+
+## Prepare your development environment
+
+The first thing you'll need to do is prepare your development environment. You'll need to make sure app sideloading is enabled for the Office 365 organization you want to test your app on. If you need a dedicated development tenant, you can sign up for the [Office 365 developer program](https://developer.microsoft.com/en-us/office/dev-program). For additional information see [Setup your development environment](~/concepts/build-and-test-your-app/foo.md).
+
 ## Create a bot on the Bot Framework
 
 Messaging extensions are powered by bots built on the Bot Framework; if you don't already have on you'll need to [create a bot and register it on the Bot Framework](/foo.md). The Microsoft App Id (we'll refer to this as your Bot Id from inside of Teams, to identify it from other App Id's you might be working with) and the messaging endpoints for your bot will be used in your messaging extension to receive and respond to requests. If you're using an existing bot, make sure you [enable the Microsoft Teams channel](/azure/bot-service/bot-service-manage-channels.md?view=azure-bot-service-4.0).
 
-Once you've got your bot service created, if you're starting from a new bot you'll need to create and deploy the app service that powers your bot. Depending on how you chose to create your bot service, you may need to do this manually. For Node.js bots we recommend using the Teams Yeoman generator, and for C#/.NET bots starting with the EchoBot in the [Bot Framework Visual Studio Template](https://marketplace.visualstudio.com/items?itemName=BotBuilder.botbuilderv4). For more information see [create a bot](foo.md).
+Once you've got your bot service created, if you're starting from a new bot you'll need to create and deploy the app service that powers your bot. Depending on how you chose to create your bot service, you may need to do this manually. For Node.js bots we recommend using the **Teams Yeoman generator**, and for C#/.NET bots starting with the **EchoBot** template in the [Bot Framework Visual Studio Template](https://marketplace.visualstudio.com/items?itemName=BotBuilder.botbuilderv4). For more information see [create a bot](foo.md).
 
 ## Create your app manifest using App Studio
 
-foo.md
+You can use the App Studio app from within the Microsoft Teams client to help create your app manifest.
+
+1. In the Teams client, open App Studio from the **...** overflow menu on the left navigation rail.
+1. On the **Manifest editor** tab select **Create a new app** (or if you're adding a messaging extension to an existing app, you can import your app package)
+1. Add your app details (see [manifest schema](~/resoureces/foo.md) for full descriptions of each field).
+1. On the **Messaging extensions** tab click the **Setup** button.
+1. You can either create a new bot for your messaging extension to use, or if you've already registered a bot select/add it here.
+1. If necessary, update your bot endpoint address to point to your bot. It should look something like `https://someplace.com/api/messages`.
+1. The **Add** button in the **Command** section will guide you through adding commands to your messaging extension. See the [Learn more](#learn-more) section for links to more information on adding commands. Remember you can define up to 10 commands for your messaging extension.
+1. The **Message Handlers** section allows you to add a domain that your messaging will trigger on. See [link unfurling](foo.md) for more information.
+
+From the **Finish => Test and distribute** tab you can **Download** your app package (which includes your app manifest as well as your app icons), or **Install** the package into a team.
 
 ## Create your app manifest manually
 
-As with bots and tabs, you update the [manifest](~/resources/schema/manifest-schema.md#composeextensions) of your app to include the messaging extension properties. These properties govern how your messaging extension appears and behaves in the Microsoft Teams client. Messaging extensions are supported beginning with v1.0 of the manifest.
+As with bots and tabs, you update the [app manifest](~/resources/schema/manifest-schema.md#composeextensions) of your app to include the messaging extension properties. These properties govern how your messaging extension appears and behaves in the Microsoft Teams client. Messaging extensions are supported beginning with v1.0 of the manifest.
 
 ### Declare your messaging extension
 
-To add a messaging extension, include a new top-level JSON structure in your [app manifest](foo.md) with the `composeExtensions` property. You create a single messaging extension for your app, with up to 10 commands.
+To add a messaging extension, include a new top-level JSON structure in your app manifest with the `composeExtensions` property. You create a single messaging extension for your app, with up to 10 commands.
 
 > [!NOTE]
 > The manifest refers to messaging extensions as `composeExtensions`. This is to maintain backward compatibility.
@@ -79,22 +97,32 @@ The example below is a simple messaging extension object in the app manifest wit
 
 ## Add your invoke message handlers
 
-Configuration complete, it's time to start writing code. foo.md => more things
+Configuration complete, it's time to start writing code. When your users trigger your messaging extension you'll need to handle the initial invoke message, collect some information from the user, then process that information and respond appropriately. To do that, you'll first need to decide what kind of commands you want to add to your messaging extension and either [add an action-based commands](~/messaging-extensions/how-to/action-based-commands/define-action-based-command.md) or [add a search-based commands](~/messaging-extensions/how-to/search-based-commands/define-search-based-command.md).
+
+## Next steps
+
+* [Create action-based commands](~/messaging-extensions/how-to/action-based-commands/define-action-based-command.md)
+* [Create search-based commands](~/messaging-extensions/how-to/search-based-commands/define-search-based-command.md)
 
 ## Learn more
 
-Learn more about messaging extensions:
+Try it out in a quickstart:
 
+* Quickstarts for C#
+  * [Messaging extension with action-based commands](~/foo.md)
+  * [Messaging extension with search-based commands](~/foo.md)
+* Quickstarts for Node.js
+  * [Messaging extension with action-based commands](~/foo.md)
+  * [Messaging extension with search-based commands](~/foo.md)
+
+Learn more about messaging extensions concepts:
+
+* [Understand Teams app capabilities ?](~/concepts/understand-teams-app-capabilities.md)
 * [What are messaging extensions?](~/messaging-extensions/what-are-messaging-extensions.md)
 
 Learn about designing effective messaging extensions:
 
 * [linkToMEDesignArticle](./foo.md)
-
-Learn how to add commands to your messaging extension
-
-* [Define action-based messaging extension command](./foo.md)
-* [Define search-based messaging extension command](./foo.md)
 
 Learn about authentication in messaging extensions
 
