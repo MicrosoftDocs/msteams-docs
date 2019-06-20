@@ -5,7 +5,7 @@ description: A quickstart guide to creating a channel and group tab with the Tea
 ms.topic: quickstart
 ms.author: laujan
 ---
-# Quickstart: create a custom channel and group tabs with Node.js and the Teams Yeoman Generator
+# Quickstart: Use the Teams Yeoman Generator to create a Node.js custom channel and group tab
 
 >[!NOTE]
 >This quickstart follows the steps outlined in the [Build Your First Microsoft Teams App](/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.

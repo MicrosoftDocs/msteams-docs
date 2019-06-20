@@ -5,12 +5,12 @@ description: A quickstart guide to creating a personal tab with the Teams Yeoman
 ms.topic: quickstart 
 ms.author: laujan
 ---
-# Quickstart: Create a custom personal tab with Node.js and the Teams Yeoman Generator
+# Quickstart: Use the Teams Yeoman Generator to create a Node.js custom personal tab
 
 >[!NOTE]
 >This quickstart follows the steps outlined in the [Build Your First Microsoft Teams App](/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
 
-Custom tabs enable you to embed web-based content directly into Microsoft Teams via your [Teams App Package](/msteams-platform/_old/concepts/apps/apps-package.md) (see [What are custom tabs in Microsoft Teams?](/msteams-platform/tabs/what-are-custom-tabs.md)). Custom tabs can be scoped for either channel and group use, serving configurable/dynamic content, or personal use, serving static content. An app can have one channel and group tab and up to sixteen personal tabs.
+Teams custom tabs enable you to embed web-based content directly into Microsoft Teams via your [Teams App Package](/msteams-platform/_old/concepts/apps/apps-package.md) (see [What are custom tabs in Microsoft Teams?](/msteams-platform/tabs/what-are-custom-tabs.md)). There are two types of tabs available in Teams - channel/group and personal. Custom tabs can be scoped for either channel/group use, serving dynamic content, or personal use, serving static content. An app can have one channel/group tab and up to sixteen personal tabs.
 
 In this quickstart we will walk-through creating a custom personal tab using the [Microsoft Teams App Project Generator](/OfficeDev/generator-teams). For more information, see the Microsoft Teams App [Project Structure](/OfficeDev/generator-teams/wiki/Project-Structure) documentation.
 
