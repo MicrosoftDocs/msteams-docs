@@ -1,15 +1,8 @@
->[!NOTE]
->This quickstart follows the steps outlined in the [Build Your First Microsoft Teams App](/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
-
-Custom tabs enable you to embed web-based content directly into Microsoft Teams via your [Teams App Package](/msteams-platform/_old/concepts/apps/apps-package.md) (see [What are custom tabs in Microsoft Teams?](/msteams-platform/tabs/what-are-custom-tabs.md)). Custom tabs can be scoped for either group and channel use, serving configurable/dynamic content, or personal use, serving static content. An app can have one group/channel tab and up to sixteen personal tabs.
-
-In this quickstart we will walk-through creating a custom tab using the [Microsoft Teams App Project Generator](/OfficeDev/generator-teams). For more information, see the Microsoft Teams App [Project Structure](/OfficeDev/generator-teams/wiki/Project-Structure) documentation.
-
 ## Prerequisites
 
-- To complete this tutorial you will need an Office 365 tenant and a team configured with *Allow uploading custom apps* enabled (see [Manage Microsoft Teams settings for your organization](/OfficeDocs-SkypeForBusiness/Teams/enable-features-office-365.md)). If you do not currently have an Office 365 account, you can sign up for the Office 365 Developer Program to get a free subscription to build your own solutions. The subscription will remain active as long as you are using the subscription for ongoing development (see [Welcome to the Office 365 Developer Program](/OfficeDev/office-dev-program-docs/docs/office-365-developer-program.md)).
+- To complete this tutorial you will need an Office 365 tenant and a team configured with *Allow uploading custom apps* enabled (see [Manage Microsoft Teams settings for your organization](/OfficeDocs-SkypeForBusiness/Teams/enable-features-office-365.md)). If you do not currently have an Office 365 account, you can sign up for free subscription through the Office 365 Developer Program. The subscription will remain active as long as you are using it for ongoing development (see [Welcome to the Office 365 Developer Program](/OfficeDev/office-dev-program-docs/docs/office-365-developer-program.md)).
 
-In addition, the project requires that you have the following installed in your development environment:
+In addition, this project requires that you have the following installed in your development environment:
 
 - [Node.js/npm](https://nodejs.org/en/). You should use the latest LTS version. The Node Package Manager (npm) will install into your system with the installation of Node.js.
 

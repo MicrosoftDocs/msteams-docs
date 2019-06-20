@@ -5,13 +5,20 @@ description: A quickstart guide to creating a personal tab with the Teams Yeoman
 ms.topic: quickstart 
 ms.author: laujan
 ---
-# Quickstart: Build a custom personal tab with Node.js and the Teams Yeoman Generator
+# Quickstart: Create a custom personal tab with Node.js and the Teams Yeoman Generator
 
-[!INCLUDE [common-node-js-build-custom-tabs](~/includes/build-custom-tab-node-js-common.md)]
+>[!NOTE]
+>This quickstart follows the steps outlined in the [Build Your First Microsoft Teams App](/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
+
+Custom tabs enable you to embed web-based content directly into Microsoft Teams via your [Teams App Package](/msteams-platform/_old/concepts/apps/apps-package.md) (see [What are custom tabs in Microsoft Teams?](/msteams-platform/tabs/what-are-custom-tabs.md)). Custom tabs can be scoped for either group and channel use, serving configurable/dynamic content, or personal use, serving static content. An app can have one group/channel tab and up to sixteen personal tabs.
+
+In this quickstart we will walk-through creating a custom personal tab using the [Microsoft Teams App Project Generator](/OfficeDev/generator-teams). For more information, see the Microsoft Teams App [Project Structure](/OfficeDev/generator-teams/wiki/Project-Structure) documentation.
+
+[!INCLUDE [build-custom-tab-node-js-common](../../includes/build-custom-tab-node-js-common.md)]
 
 ## Create your personal tab
 
-Including a personal tab requires creating an additional HTML page and adding few lines of code to the existing project files:
+Adding a personal tab to your app project requires creating a content page and adding few lines of code to the existing project files:
 
 > 1.&emsp; In your code editor, create a new HTML file named, `static.html` .  Add the following code:
 
@@ -52,11 +59,11 @@ Including a personal tab requires creating an additional HTML page and adding fe
 ```
 
 > [!TIP]
-> Don't forget to update the `"contentURL"` path component in the the staticTabs JSON object with `<yourDefaultTabNameTab>` using your *DefaultTabName* + *Tab*.
+> Remember to update the `"contentURL"` path component in the the staticTabs JSON object with `<yourDefaultTabNameTab>` using your *DefaultTabName* + *Tab*.
 
 > 4.&emsp; Save the updated `manifest.json` file.
 
-> 5.&emsp; Since your content page must be served in an iFrame, open your app's `Tab.ts` TypeScript file in your code editor: `./src/app/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts` and add the following to the list of iFrame decorators:
+> 5.&emsp; Your content page must be served in an iFrame. Open your app's `Tab.ts` TypeScript file in your code editor: `./src/app/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts` and add the following to the list of iFrame decorators:
 
 ```typescript
  @PreventIframe("/<yourDefaultAppName>TabNameTab>/static.html")
@@ -70,7 +77,7 @@ Including a personal tab requires creating an additional HTML page and adding fe
 ## Create a Teams App manifest
 
 Now that your tab code is complete, you can build your project:
->The [Teams Manifest](foo.md) will be part of your app package zip file (along with your two app icons) and will be uploaded into Microsoft Teams. This is achieved through a gulp task that validates the manifest and creates the zip file in the `./package directory`. In the command prompt, type the following:
+>The [Teams Manifest](foo.md) will be part of your app package zip file (along with your two app icons) and will be uploaded into Microsoft Teams. This is achieved through a gulp task that validates the manifest and creates the zip file in the `./package` folder. In the command prompt, type the following:
 
 ```bash
 gulp manifest
@@ -92,8 +99,7 @@ gulp build
 gulp serve
 ```
 
->Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser and view your configurable tab's content page:
->>![content page screenshot](/msteams-platform/assets/configTab.PNG)
+>Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser and view your app's home page.
 
 >To view your personal tab, remain in the current browser and add `static.html` to the app's file path: `http://localhost:3007/<yourDefaultAppNameTab>/static.html` Press Enter.<br>
 
@@ -101,9 +107,9 @@ gulp serve
 
 ## Package your app for Microsoft Teams
 
-Microsoft Teams is an entirely cloud-based product, and thus requires your app to be available from the cloud using HTTPS endpoints. Microsoft Teams does not allow apps to be hosted on localhost. Therefore, you need to either publish your app to a public URL or use a proxy which will expose your local port to an internet-facing URL.
+Microsoft Teams is an entirely cloud-based product, and thus requires your app to be available from the cloud using HTTPS endpoints. Teams does not allow apps to be hosted on localhost. Therefore, you need to either publish your app to a public URL or use a proxy which will expose your local port to an internet-facing URL.
 
-The [ngrok](https://ngrok.com/docs) tool, which is built into this project, is a reverse proxy software application that will create a tunnel to your locally running web server's publicly-available HTTPS endpoints. Your server's web endpoints will be available during the current session on your local machine. When the machine is shut down or goes to sleep the service will no longer be available.
+To test your tab extension we will use [ngrok](https://ngrok.com/docs), which is built into this project. Ngrok is a reverse proxy software tool that will create a tunnel to your locally running web server's publicly-available HTTPS endpoints. Your server's web endpoints will be available during the current session on your local machine. When the machine is shut down or goes to sleep the service will no longer be available.
 
 >In your command prompt, enter the following:
 
@@ -113,13 +119,14 @@ gulp ngrok-serve
 
 ## Upload and run your app in Microsoft Teams
 
-Open Microsoft Teams. In the **YourTeams** panel click (**&#8943;**) *More options* next to the team that you are using to test your app's tabs and Select *Manage team*.  In the main panel click on *Apps* from the tab bar and click on *Upload a custom app* located in the lower right-hand corner of the page. Open your project folder, browse to the `./package` folder, select the zip file in the `./package` folder, right-click, and choose open. Your app will upload into Microsoft Teams.
-
-Return to your team's General channel and select ➕ to add your tab from the list of tabs. Follow the directions for adding a tab. Note that there is a custom configuration dialog for your group/channel tab. Select *Save* and your tabs should be loaded in Microsoft Teams.
+- Open Microsoft Teams. In the **YourTeams** panel click (**&#8943;**) *More options* next to the team that you are using to test your app's tabs and Select *Manage team*. 
+- In the main panel click on *Apps* from the tab bar and click on *Upload a custom app* located in the lower right-hand corner of the page. 
+- Open your project folder, browse to the `./package` folder, select the zip file in the `./package` folder, right-click, and choose open. 
+- Your app will upload into Microsoft Teams.
 
 ## View your personal tabs
 
-1. In the navbar located at the far-left of the Teams App, click (**&#8943;**) *More added apps*. You will be presented with a list of personal view apps.
-2. Select your app's personal tab from the list to view.
+- In the navbar located at the far-left of the Teams App, click (**&#8943;**) *More added apps*. You will be presented with a list of personal view apps.
+- Select your app's personal tab from the list to view.
 
 ### Nice work! You just extended Microsoft Teams with custom tabs.

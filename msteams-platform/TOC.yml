@@ -209,10 +209,10 @@
           name: 'C#/ASP.NET MVC'
           items:
             -
-              name: 'Create a channel and group tab with ASP.NET MVC'
+              name: 'Create a channel and group tab'
               href: tabs/quickstarts/create-channel-group-tab-asp-net-mvc.md
             -
-              name: 'Create a personal tab with ASP.NET MVC'
+              name: 'Create a personal tab'
               href: tabs/quickstarts/create-personal-tab-asp-net-mvc.md
     -
       name: Tutorials
