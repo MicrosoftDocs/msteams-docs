@@ -10,11 +10,11 @@ ms.author: laujan
 >[!NOTE]
 >This quickstart follows the steps outlined in the [Build Your First Microsoft Teams App](/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
 
-Custom tabs enable you to embed web-based content directly into Microsoft Teams via your [Teams App Package](/msteams-platform/_old/concepts/apps/apps-package.md) (see [What are custom tabs in Microsoft Teams?](/msteams-platform/tabs/what-are-custom-tabs.md)). Custom tabs can be scoped for either group and channel use, serving configurable/dynamic content, or personal use, serving static content. An app can have one group/channel tab and up to sixteen personal tabs.
+Custom tabs enable you to embed web-based content directly into Microsoft Teams via your [Teams App Package](/msteams-platform/_old/concepts/apps/apps-package.md) (see [What are custom tabs in Microsoft Teams?](/msteams-platform/tabs/what-are-custom-tabs.md)). Custom tabs can be scoped for either channel and group use, serving configurable/dynamic content, or personal use, serving static content. An app can have one channel and group tab and up to sixteen personal tabs.
 
 In this quickstart we will walk-through creating a custom personal tab using the [Microsoft Teams App Project Generator](/OfficeDev/generator-teams). For more information, see the Microsoft Teams App [Project Structure](/OfficeDev/generator-teams/wiki/Project-Structure) documentation.
 
-[!INCLUDE [build-custom-tab-node-js-common](../../includes/build-custom-tab-node-js-common.md)]
+[!INCLUDE [create-custom-tab-node-js-common](../../includes/create-custom-tab-node-js-common.md)]
 
 ## Create your personal tab
 
@@ -117,7 +117,7 @@ To test your tab extension we will use [ngrok](https://ngrok.com/docs), which is
 gulp ngrok-serve
 ```
 
-## Upload and run your app in Microsoft Teams
+## Upload your app in Microsoft Teams
 
 - Open Microsoft Teams. In the **YourTeams** panel click (**&#8943;**) *More options* next to the team that you are using to test your app's tabs and Select *Manage team*. 
 - In the main panel click on *Apps* from the tab bar and click on *Upload a custom app* located in the lower right-hand corner of the page. 

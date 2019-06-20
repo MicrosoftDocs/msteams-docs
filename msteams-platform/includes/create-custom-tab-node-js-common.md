@@ -1,6 +1,6 @@
 ## Prerequisites
 
-- To complete this tutorial you will need an Office 365 tenant and a team configured with *Allow uploading custom apps* enabled (see [Manage Microsoft Teams settings for your organization](/OfficeDocs-SkypeForBusiness/Teams/enable-features-office-365.md)). If you do not currently have an Office 365 account, you can sign up for free subscription through the Office 365 Developer Program. The subscription will remain active as long as you are using it for ongoing development (see [Welcome to the Office 365 Developer Program](/OfficeDev/office-dev-program-docs/docs/office-365-developer-program.md)).
+- To complete this tutorial you will need an Office 365 tenant and a team configured with *Allow uploading custom apps* enabled (see [Manage Microsoft Teams settings for your organization](/OfficeDocs-SkypeForBusiness/Teams/enable-features-office-365.md)). If you do not currently have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program. The subscription will remain active as long as you are using it for ongoing development (see [Welcome to the Office 365 Developer Program](/OfficeDev/office-dev-program-docs/docs/office-365-developer-program.md)).
 
 In addition, this project requires that you have the following installed in your development environment:
 
@@ -30,8 +30,7 @@ Open a command prompt and create a new directory for your tab project. Navigate 
 ***The URL where you will host this solution?*** <br>&emsp;
 >This can be any URL, but by default the generator suggests an Azure Web Sites URL. <br>&emsp; Since you will only be testing your app locally, A valid URL is not necessary to complete this quickstart.<br>***Would you like to include Test framework and initial tests?*** (Y/n) <br>&emsp; For this quickstart choose <u>not</u> to include a test framework. The default is yes; enter **n**.<br>***Would you like to use Azure Applications Insights for telemetry?*** (Y/n) <br>&emsp; For this quickstart choose <u>not</u> to include [Azure Application Insights](/azure-docs/articles/azure-monitor/app/app-insights-overview.md). The default is yes; enter **n**.<br>***Default Tab Name (max 16 characters)?*** <br>&emsp; Name your tab. The default tab name will be used throughout your project as a file path component.<br>***Do you want this tab to be available in SharePoint Online?*** (Y/n) <br>&emsp; Select **n** unless, in the future, you want to use this app as a [SharePoint Framework web part](/msteams-platform/concepts/tabs/tabs-in-sharepoint).
 
->[!NOTE]
+>[!IMPORTANT]
 >For the file locations referenced in this quickstart, the path component  ***<yourDefaultTabNameTab\>*** is the name that you selected in the generator for ***Default Tab Name*** plus the word ***Tab***.
 <br>For example:<br>
 DefaultTabName: **MyTab** => **/MyTabTab/**
-// end-snippet
