@@ -1,6 +1,6 @@
 ---
 title: Share to Teams embedded button
-description: How to add the Share-to-Teams embedded button on your website
+description: How to add the Share to Teams embedded button on your website
 keywords: Share Teams Share-to-Teams
 ---
 # Creating a Share to Teams embedded button
@@ -11,9 +11,9 @@ keywords: Share Teams Share-to-Teams
 
 Third-party websites can use the launcher script to embed Share to Teams buttons on their webpages which will launch the Share to Teams experience in a popup window when clicked. This will allow you to share a link directly to any person or Microsoft Teams channel without switching context.
 
-![Share-to-Teams popup](~/assets/images/share-to-teams-popup.png)
+![Share to Teams popup](~/assets/images/share-to-teams-popup.png)
 
-## How to embed a Share-to-Teams button
+## How to embed a Share to Teams button
 
 First, you'll need to add the `launcher.js` script on your webpage.
 
@@ -32,7 +32,7 @@ Next, add an HTML element on your webpage with the `teams-share-button` class at
 
 This will add the Microsoft Teams icon to your website.
 
-![Share-to-Teams icon](~/assets/icons/share-to-teams-icon.png)
+![Share to Teams icon](~/assets/icons/share-to-teams-icon.png)
 
 Optionally, if you want a different icon size for the Share to Teams button, use the `data-icon-px-size` attribute.
 
@@ -71,11 +71,11 @@ In order for the preview to be displayed you must:
 |Description|`<meta name=”description” content=”Example Page Description”>`|`<meta property=”og:description” content=”Example Page Description”>`|
 |Thumbnail Image| none |`<meta property=”og:image” content=”http://example.com/image.jpg”>`|
 
-## Share-to-Teams for Education
+## Share to Teams for Education
 
 For teachers using the Share to Teams button you'll be given an additional option to `Create an Assignment`. This enables you to quickly create an assignment in the chosen Team based on the shared link.
 
-![Share-to-Teams popup](~/assets/images/share-to-teams-popup-edu.png)
+![Share to Teams popup](~/assets/images/share-to-teams-popup-edu.png)
 
 ## Full launcher.js definition
 
@@ -83,7 +83,7 @@ For teachers using the Share to Teams button you'll be given an additional optio
 |---------|---------|---------|---------|
 |data-href|string|n/a|The href of the content to share.|
 |data-preview|boolean (as string)|true|Whether or not to show a preview of the content to share|
-|data-icon-px-size|number (as string)|32|The size in pixels of the Share-to-Teams button, maximum 128|
+|data-icon-px-size|number (as string)|32|The size in pixels of the Share to Teams button, maximum 128|
 
 | Method | Parameters | Description |
 | ------ | ---------- | ----------- |
