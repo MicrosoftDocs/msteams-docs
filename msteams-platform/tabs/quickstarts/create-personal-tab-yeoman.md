@@ -103,7 +103,7 @@ gulp serve
 
 >To view your personal tab, remain in the current browser and add `static.html` to the app's file path: `http://localhost:3007/<yourDefaultAppNameTab>/static.html` Press Enter.<br>
 
->>![static tab screenshot](/msteams-platform/assets/staticTab.PNG)
+>>![personal tab screenshot](/microsoftteams/platform/assets/personalTab.PNG)
 
 ## Package your app for Microsoft Teams
 
