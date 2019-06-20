@@ -85,6 +85,10 @@ For teachers using the Share to Teams button you'll be given an additional optio
 |data-preview|boolean (as string)|true|Whether or not to show a preview of the content to share|
 |data-icon-px-size|number (as string)|32|The size in pixels of the Share to Teams button, maximum 128|
 
-| Method | Parameters | Description |
-| ------ | ---------- | ----------- |
-| `shareToMicrosoftTeams.renderButtons()` | None | Renders all share buttons currently on the page |
+### Methods
+
+**`shareToMicrosoftTeams.renderButtons(options)`**
+
+`options` (optional): `{ elements?: HTMLElement[] }`
+
+Renders all share buttons currently on the page. If an optional `options` object is supplied with a list of elements, those elements will be rendered into share buttons.
