@@ -12,3 +12,11 @@
 | `parameter.title` | Short user-friendly parameter title or label. | Yes | 1.0 |
 | `parameter.inputType` | Set to the type of input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text` | No | 1.4 |
 | `context` | Optional array of values that defines the context the message action is available in. Possible values are `message`, `compose`, or `commandBox`. Default is `["compose", "commandBox"]`. | No | 1.5 |
+|`taskInfo`||Specify the task module to preload when using a messaging extension command| No | 1.4 |
+|`taskInfo.title`|Initial dialog title|No | 1.4 |
+|`taskInfo.width`|Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'|No | 1.4 |
+|`taskInfo.height`|Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'|No | 1.4 |
+|`taskInfo.url`|Initial webview URL|No | 1.4 |
+|`messageHandlers`|A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`|No | 1.5 |
+|`messageHandlers.type`|The type of message handler. Must be `"link"`.|No | 1.5 |
+|`messageHandlers.value.domains`|Array of domains that the link message handler can register for.|No | 1.5 |
