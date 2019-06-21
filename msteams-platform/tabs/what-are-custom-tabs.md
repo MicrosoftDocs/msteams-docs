@@ -8,9 +8,9 @@ ms.topic: overview
 ---
 # What are Microsoft Teams custom tabs?
 
-Tabs are your hosted Teams-aware IFrame webpages embedded in Microsoft Teams. The dedicated tab experience can be added as part of a [channel or group chat](~/foo.md) inside a Team or as a [personal app](~/foo.md) for an individual user. As part of your app, you can add custom tabs, using our [Teams JavaScript client SDK](/javascript/api/overview/msteams-client), to embed your own web content in Teams and add Teams-specific functionality.
+Custom tabs are your hosted Teams-aware IFrame webpages embedded in Microsoft Teams. The dedicated tab experience can be added as part of a [channel or group chat](~/foo.md) inside a Team or as a [personal app](~/foo.md) for an individual user. As part of your app, you can add custom tabs, using our [Teams JavaScript client SDK](/javascript/api/overview/msteams-client), to embed your own web content in Teams and add Teams-specific functionality.
 
-There are two types of tabs available in Teams - channel/group and personal. A channel/group tab delivers content to channels and group chats, and are a great way to create collaborative spaces around web-based content. Personal tabs, along with direct conversation bots, are part of personal apps and are scoped to a single user. They can be pinned to the left navigation bar and promote increased productivity by making your service available directly inside the Teams client.
+There are two types of tabs available in Teams - channel/group and personal. A channel/group tab delivers content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content. Personal tabs, along with direct conversation bots, are part of personal apps and are scoped to a single user. They can be pinned to the left navigation bar and promote increased productivity by making your service available directly inside the Teams client.
 
 ## Tabs user scenarios
 
