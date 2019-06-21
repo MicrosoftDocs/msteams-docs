@@ -10,10 +10,10 @@ ms.author: laujan
 >[!NOTE]
 >This quickstart follows the steps outlined in the [Build Your First Microsoft Teams App](/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
 
-Custom tabs enable you to embed your hosted web content directly into Microsoft Teams and add Teams-specific functionality via your [Teams App Package](foo.md). See [What are custom tabs in Microsoft Teams?](/msteams-platform/tabs/what-are-custom-tabs.md)). There are two types of tabs available in Teams - channel/group and personal. A channel/group tab delivers content to channels and group chats, and personal tabs, along with direct conversation bots, are part of personal apps and are scoped to a single user. Personal tabs can be pinned to the left navigation bar and promote increased productivity by making your service available directly inside the Teams client. 
+Custom tabs enable you to embed your hosted web content directly into Microsoft Teams and add Teams-specific functionality via your [Teams App Package](foo.md). See [What are custom tabs in Microsoft Teams?](/msteams-platform/tabs/what-are-custom-tabs.md). There are two types of tabs available in Teams - channel/group and personal. A channel/group tab delivers content to channels and group chats, and personal tabs, along with direct conversation bots, are part of personal apps and are scoped to a single user. Personal tabs can be pinned to the left navigation bar and promote increased productivity by making your service available directly inside the Teams client. 
 Your app can have up to sixteen (16) personal tabs
 
-In this quickstart we'll walk-through creating a custom personal tab using the [Microsoft Teams App Project Generator](/OfficeDev/generator-teams). To Learn more, see the Microsoft Teams App [Project Structure](/OfficeDev/generator-teams/wiki/Project-Structure) documentation.
+In this quickstart we'll walk-through creating a custom personal tab using the [Microsoft Teams App Project Generator](/OfficeDev/generator-teams). To learn more, see the Microsoft Teams App [Project Structure](/OfficeDev/generator-teams/wiki/Project-Structure) documentation.
 
 [!INCLUDE [create-custom-tab-node-js-common](../../includes/create-custom-tab-node-js-common.md)]
 
@@ -102,7 +102,7 @@ gulp serve
 
 >Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser and view your app's home page.
 
->To view your personal tab, remain in the current browser and add `static.html` to the app's file path: `http://localhost:3007/<yourDefaultAppNameTab>/static.html` Press Enter.<br>
+>To view your personal tab, remain in the current browser and add `static.html` to the app's file path: `http://localhost:3007/<yourDefaultAppNameTab>/static.html` Press enter.<br>
 
 >>![personal tab screenshot](/microsoftteams/platform/assets/personalTab.PNG)
 
