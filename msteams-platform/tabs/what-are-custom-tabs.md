@@ -8,7 +8,7 @@ ms.topic: overview
 ---
 # What are Microsoft Teams custom tabs?
 
-Tabs are your hosted Teams-aware iFramed webpages embedded in Microsoft Teams. The dedicated tab experience can be added as part of a [channel or group chat](~/foo.md) inside a Team or as a [personal app](~/foo.md) for an individual user. As part of your app, you can add custom tabs, using our [Teams JavaScript client SDK](/javascript/api/overview/msteams-client), to embed your own web content in Teams and add Teams-specific functionality.
+Tabs are your hosted Teams-aware IFrame webpages embedded in Microsoft Teams. The dedicated tab experience can be added as part of a [channel or group chat](~/foo.md) inside a Team or as a [personal app](~/foo.md) for an individual user. As part of your app, you can add custom tabs, using our [Teams JavaScript client SDK](/javascript/api/overview/msteams-client), to embed your own web content in Teams and add Teams-specific functionality.
 
 There are two types of tabs available in Teams - channel/group and personal. A channel/group tab delivers content to channels and group chats, and are a great way to create collaborative spaces around web-based content. Personal tabs, along with direct conversation bots, are part of personal apps and are scoped to a single user. They can be pinned to the left navigation bar and promote increased productivity by making your service available directly inside the Teams client.
 
@@ -17,11 +17,10 @@ There are two types of tabs available in Teams - channel/group and personal. A c
 **Scenario:** Bring an existing web-based resource inside Teams. \
 **Example:** You create a personal tab in your Teams app that presents an informational corporate website to users.
 
-
 **Scenario:** Add static support pages to a Teams bot or messaging extension. \
 **Example:** You create personal tabs that provide about and help webpage content to users.
 
-**Scenario:** Provide accessibility to system-level items that your users access regularly for cooperative dialogue and collaboration.
+**Scenario:** Provide accessibility to system-level items your users access regularly for cooperative dialogue and collaboration. \
 **Example:** You create a configurable channel/group tab with deep linking to individual items.
 
 ## How do tabs function?
@@ -30,10 +29,10 @@ Teams development and integration (custom tabs, messaging extensions, or bots) n
 
 ## Tab content requirements
 
->&#x2705; You must allow your pages to be served in a nested browsing context by Teams in an HTML inline frame (iFrame) via X-Frame-Options and/or Content-Security-Policy HTTP response headers.
-<br><br>Many standard websites block their pages from loading in an iFrame. However, Teams provides a unique webview option for users to view embedded content within the desktop client.
+>&#x2705; You must allow your pages to be served in a nested browsing context by Teams in an HTML inline frame (IFrame) via X-Frame-Options and/or Content-Security-Policy HTTP response headers.
+<br><br>Many standard websites block their pages from loading in an IFrame. However, Teams provides a unique webview option for users to view embedded content within the desktop client.
 
->&#x2705; Your [authentication](foo.md) logic must leverage a method other than redirect (e.g., token-based or cookie-based authentication).
+>&#x2705; Your [authentication](foo.md) logic must leverage a method other than redirect (e.g., use token-based or cookie-based authentication).
 <br><br>Typically, as a safeguard against click-jacking, login pages do not render in IFrames.
 
 >&#x2705; Your [cross-domain](foo.md) navigation logic should utilize methods that allow the Teams client to validate the origin against a static validDomains list in the app manifest when loading or communicating with the tab.
@@ -46,9 +45,9 @@ Teams development and integration (custom tabs, messaging extensions, or bots) n
 <br><br>Your script must include the microsoftTeams.initialize() method call for your page to be displayed.
 
 
-## Tabs on mobile clients
+## Tabs across platforms and environments
 
-The Teams application is cross-platform and your tab should operate across multiple platforms and operating environments as well. Microsoft's [Fluent Design System](foo.md) provides principled design guidelines, patterns, and tools for devices and interactions across platforms.
+The Teams application is cross-platform and your tab should also operate across multiple platforms and operating environments. Microsoft's [Fluent Design System](foo.md) provides principled design guidelines, patterns, and tools for devices and interactions across multiple platforms.
 
 ## Get Started
 
