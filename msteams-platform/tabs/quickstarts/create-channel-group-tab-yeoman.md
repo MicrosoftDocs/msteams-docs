@@ -1,18 +1,18 @@
 ---
-title: "Quickstart: Create a Channel and Group Tab with the Teams Yeoman Generator"
+title: "Quickstart: Create a Custom channel and group Tab with Node.js and the Teams Yeoman Generator"
 author: laujan
 description: A quickstart guide to creating a channel and group tab with the Teams Yeoman Generator.
 ms.topic: quickstart
 ms.author: laujan
 ---
-# Quickstart: Use the Teams Yeoman Generator to create a Node.js custom channel and group tab
+# Quickstart: Create a custom channel and group tab with Node.js and the Teams Yeoman Generator 
 
 >[!NOTE]
 >This quickstart follows the steps outlined in the [Build Your First Microsoft Teams App](/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
 
-Custom tabs enable you to embed web-based content directly into Microsoft Teams via your [Teams App Package](/msteams-platform/_old/concepts/apps/apps-package.md) (see [What are custom tabs in Microsoft Teams?](/msteams-platform/tabs/what-are-custom-tabs.md)). Custom tabs can be scoped for either channel and group use, serving configurable/dynamic content, or personal use, serving static content. An app can have one channel and group tab and up to sixteen personal tabs.
+Custom tabs enable you to embed your hosted web content directly into Microsoft Teams and add Teams-specific functionality via your  [Teams App Package](foo.md) See [What are custom tabs in Microsoft Teams?](/msteams-platform/tabs/what-are-custom-tabs.md). There are two types of tabs available in Teams - channel/group and personal. A channel/group tab delivers content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content. A channel/group tab can be pinned to the tabs bar located at the top of the channel and each channel or group can have its own tabs to support specific focus areas.  However, an app can only have one channel/group tab.
 
-In this quickstart we will walk-through creating a custom channel and group tab using the [Microsoft Teams App Project Generator](/OfficeDev/generator-teams). For more information, see the Microsoft Teams App [Project Structure](/OfficeDev/generator-teams/wiki/Project-Structure) documentation.
+In this quickstart we'll walk-through creating a custom channel and group tab using the [Microsoft Teams App Project Generator](/OfficeDev/generator-teams). For more information, see the Microsoft Teams App [Project Structure](/OfficeDev/generator-teams/wiki/Project-Structure) documentation.
 
 [!INCLUDE [build-custom-tab-node-js-common](../../includes/create-custom-tab-node-js-common.md)]
 
@@ -64,9 +64,9 @@ gulp serve
 
 ## Package your app for Microsoft Teams
 
-Microsoft Teams is an entirely cloud-based product, and thus requires your app to be available from the cloud using HTTPS endpoints. Teams does not allow apps to be hosted on localhost. Therefore, you need to either publish your app to a public URL or use a proxy which will expose your local port to an internet-facing URL.
+Microsoft Teams is an entirely cloud-based product, and thus requires your app to be available from the cloud using HTTPS endpoints. Teams doesn't allow apps to be hosted on localhost. Therefore, you need to either publish your app to a public URL or use a proxy which will expose your local port to an internet-facing URL.
 
-To test your tab extension we will use [ngrok](https://ngrok.com/docs), which is built into this project. Ngrok is a reverse proxy software tool that will create a tunnel to your locally running web server's publicly-available HTTPS endpoints. Your server's web endpoints will be available during the current session on your local machine. When the machine is shut down or goes to sleep the service will no longer be available.
+To test your tab extension you'll use [ngrok](https://ngrok.com/docs), which is built into this project. Ngrok is a reverse proxy software tool that will create a tunnel to your locally running web server's publicly-available HTTPS endpoints. Your server's web endpoints will be available during the current session on your local machine. When the machine is shut down or goes to sleep the service will no longer be available.
 
 >In your command prompt, enter the following:
 
@@ -76,12 +76,12 @@ gulp ngrok-serve
 
 ## Upload your app in Microsoft Teams
 
-- Open Microsoft Teams. In the **YourTeams** panel click (**&#8943;**) *More options* next to the team that you are using to test your app's tabs and Select *Manage team*. 
+- Open Microsoft Teams. In the **YourTeams** panel click (**&#8943;**) *More options* next to the team that you're using to test your app's tabs and Select *Manage team*. 
 - In the main panel click on *Apps* from the tab bar and click on *Upload a custom app* located in the lower right-hand corner of the page. 
 - Open your project folder, browse to the `./package` folder, select the zip file in the `./package` folder, right-click, and choose open. 
 - Your app will upload into Microsoft Teams.
 - Return to your team's General channel and select ➕ to add your tab from the list of tabs. 
-- Follow the directions for adding a tab. Note that there is a custom configuration dialog for your channel and group tab. 
+- Follow the directions for adding a tab. Note that there's a custom configuration dialog for your channel and group tab. 
 - Select *Save* and your tabs should be loaded in Microsoft Teams.
 
 ## Add your channel and group tab to the tab bar
