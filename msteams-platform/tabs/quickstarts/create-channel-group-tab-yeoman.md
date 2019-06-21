@@ -10,7 +10,7 @@ ms.author: laujan
 >[!NOTE]
 >This quickstart follows the steps outlined in the [Build Your First Microsoft Teams App](/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
 
-Custom tabs enable you to embed your hosted web content directly into Microsoft Teams and add Teams-specific functionality via your  [Teams App Package](foo.md) See [What are custom tabs in Microsoft Teams?](/msteams-platform/tabs/what-are-custom-tabs.md). There are two types of tabs available in Teams - channel/group and personal. A channel/group tab delivers content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content. A channel/group tab can be pinned to the tabs bar located at the top of the channel and each channel or group can have its own tabs to support specific focus areas.  However, an app can only have one channel/group tab.
+Custom tabs enable you to embed your hosted web content directly into Microsoft Teams and add Teams-specific functionality via your  [Teams App Package](foo.md). See [What are custom tabs in Microsoft Teams?](/msteams-platform/tabs/what-are-custom-tabs.md). There are two types of tabs available in Teams - channel/group and personal. A channel/group tab delivers content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content. A channel/group tab can be pinned to the tabs bar located at the top of the channel and each channel or group can have its own tabs to support specific focus areas.  However, an app can only have one channel/group tab.
 
 In this quickstart we'll walk-through creating a custom channel and group tab using the [Microsoft Teams App Project Generator](/OfficeDev/generator-teams). For more information, see the Microsoft Teams App [Project Structure](/OfficeDev/generator-teams/wiki/Project-Structure) documentation.
 
@@ -76,13 +76,13 @@ gulp ngrok-serve
 
 ## Upload your app in Microsoft Teams
 
-- Open Microsoft Teams. In the **YourTeams** panel click (**&#8943;**) *More options* next to the team that you're using to test your app's tabs and Select *Manage team*. 
+- Open Microsoft Teams. In the **YourTeams** panel click (**&#8943;**) *More options* next to the team that you're using to test your app's tabs and select *Manage team*. 
 - In the main panel click on *Apps* from the tab bar and click on *Upload a custom app* located in the lower right-hand corner of the page. 
 - Open your project folder, browse to the `./package` folder, select the zip file in the `./package` folder, right-click, and choose open. 
 - Your app will upload into Microsoft Teams.
 - Return to your team's General channel and select ➕ to add your tab from the list of tabs. 
-- Follow the directions for adding a tab. Note that there's a custom configuration dialog for your channel and group tab. 
-- Select *Save* and your tabs should be loaded in Microsoft Teams.
+- Follow the directions for adding a tab. Note that there's a custom configuration dialog for your channel/group tab. 
+- Select *Save* and your tabs will be loaded in Microsoft Teams.
 
 ## Add your channel and group tab to the tab bar
 
