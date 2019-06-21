@@ -86,11 +86,11 @@ If you are using a static list of parameters, you'll add them as well.
 If you are using an embedded web view, you can optionally add the `taskInfo` object to fetch your web view without calling your bot directly. If you choose to use this option, the behavior is similar to using a static list of parameters in that the first interaction with your bot will be [responding to the task module submit action](~/foo.md).
 
 | Property name | Purpose | Required? | Minimum manifest version |
-|`taskInfo`||Specify the task module to preload when using a messaging extension command| No | 1.4 |
+|`taskInfo`|Specify the task module to preload when using a messaging extension command| No | 1.4 |
 |`taskInfo.title`|Initial dialog title|No | 1.4 |
 |`taskInfo.width`|Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'|No | 1.4 |
 |`taskInfo.height`|Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'|No | 1.4 |
-|`taskInfo.url`|Initial webview URL|No | 1.4 |
+|`taskInfo.url`|Initial web view URL|No | 1.4 |
 
 ## Next steps
 
