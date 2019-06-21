@@ -14,9 +14,9 @@
 - name: Samples and templates
   items: 
   - name: Sample apps
-    href: old/samples/code-samples.md
+    href: _old/samples/code-samples.md
   - name: Production-ready app templates
-    href: old/samples/app-templates.md
+    href: _old/samples/app-templates.md
 - name: Concepts
   expanded: true
   items:
@@ -96,7 +96,7 @@
     - name: Action-based commands
       items:
       - name: Define action-based commands
-        href: foo.md
+        href: messaging-extensions/how-to/define-action-based-command.md
       - name: Handle the initial invoke message
         href: foo.md
       - name: Create a task module
