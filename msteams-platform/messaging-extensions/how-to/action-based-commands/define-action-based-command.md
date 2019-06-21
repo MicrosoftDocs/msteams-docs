@@ -13,13 +13,15 @@ Action-based messaging extensions commands allow you present your users with a m
 1. How will the task module be created?
 1. Will the final message or card be sent to the channel from a bot, or will the message or card be inserted into the compose message area for the user to submit?
 
+For additional guidance on designing your messaging extension see: [Designing effective messaging extensions](~/foo.md).
+
 ## Choose messaging extension invoke locations
 
 The first thing you need to decide is where your messaging extension can be triggered (or more specifically, *invoked* from). Your options are:
 
-* The compose message area
-* The command box
-* Directly from an existing message
+* The buttons at the bottom of the compose message area
+* By @mentioning in the command box
+* Directly from an existing message via the ... overflow menu on a message.
 
 Invoking your messaging extension from either the compose message area or the command box will immediately present your users with your task module to collect information from them. If you enable invoking directly from a message, the initial invoke to your bot will include a JSON object containing the message from which it was invoked, which you can process before presenting them with a task module.
 
