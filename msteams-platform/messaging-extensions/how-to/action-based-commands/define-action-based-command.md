@@ -33,11 +33,13 @@ In addition to choosing where your command can be invoked from, you must also ch
 
 ## Choose how the final message will be sent
 
-asdf
+In most cases, your action-based messaging extension command will result in a card inserted into the compose message box that your user can then decide to send into the channel or chat. The message in this case comes from the user; your bot will not be able to edit or update the card further.
+
+However, if your messaging extension is triggered from the compose box or directly from a message, you can also choose to have your bot insert the final response directly into the channel or chat. In this case, the message comes from the bot and the bot will be able to update it, and reply to the conversation thread if needed.
 
 ## Add the command to your app manifest
 
-Now that you've decided how users will interact with your action-based messaging extension command, it is time to add it to your app manifest.
+Now that you've decided how users will interact with your action-based messaging extension command, it is time to add it to your app manifest. To do this you'll add a new `composeExtension` object to the top level of your app manifest JSON. You can either do so with the help of App Studio, or manually.
 
 ### Create a command using App Studio
 
