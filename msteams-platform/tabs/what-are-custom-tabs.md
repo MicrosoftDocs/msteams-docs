@@ -47,7 +47,7 @@ Teams development and integration (custom tabs, messaging extensions, or bots) n
 
 ## Tabs across platforms and environments
 
-The Teams application is cross-platform and your tab should also operate across multiple platforms and operating environments. Microsoft's [Fluent Design System](foo.md) provides principled design guidelines, patterns, and tools for devices and interactions across multiple platforms.
+The Teams application is cross-platform and your tab should also operate across platforms and operating environments. Microsoft's [Fluent Design System](foo.md) provides principled design guidelines, patterns, and tools for devices and interactions across multiple technologies.
 
 ## Get Started
 
