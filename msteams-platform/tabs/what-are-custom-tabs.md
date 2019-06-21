@@ -8,41 +8,47 @@ ms.topic: overview
 ---
 # What are Microsoft Teams custom tabs?
 
-Tabs are Teams-aware iFramed webpages that you host and are embedded in Microsoft Teams. The tab experience can be added as part of a [channel or group chat](~/foo.md) inside a Team or as a [personal app](~/foo.md) for an individual user. As part of your app, you can add custom tabs, using our [Teams JavaScript client SDK](/javascript/api/overview/msteams-client), that embed your own web content in Teams and add Teams-specific functionality.
+Tabs are your hosted Teams-aware iFramed webpages embedded in Microsoft Teams. The dedicated tab experience can be added as part of a [channel or group chat](~/foo.md) inside a Team or as a [personal app](~/foo.md) for an individual user. As part of your app, you can add custom tabs, using our [Teams JavaScript client SDK](/javascript/api/overview/msteams-client), to embed your own web content in Teams and add Teams-specific functionality.
 
-There are two types of tabs available in Teams - channel/group and personal. A channel/group tab delivers content to channels and group chats, and are a great way to create collaborative spaces around web-based content. Personal tabs, along with direct conversation bots, are part of personal apps and are scoped to a single user. They can be pinned to the left navigation bar and promote increas productivity by making your service available directly inside the Teams client.
+There are two types of tabs available in Teams - channel/group and personal. A channel/group tab delivers content to channels and group chats, and are a great way to create collaborative spaces around web-based content. Personal tabs, along with direct conversation bots, are part of personal apps and are scoped to a single user. They can be pinned to the left navigation bar and promote increased productivity by making your service available directly inside the Teams client.
 
 ## Tabs user scenarios
 
-**Scenario:** Make an existing web-based resource available inside Teams.
+**Scenario:** Bring an existing web-based resource inside Teams. \
 **Example:** You create a personal tab in your Teams app that presents an informational corporate website to users.
 
 
-**Scenario:** Add static support pages to a Teams bot or messaging extension.
+**Scenario:** Add static support pages to a Teams bot or messaging extension. \
 **Example:** You create personal tabs that provide about and help webpage content to users.
 
-**Scenario:** Provide accessibility to system-level items upon which your users regularly collaborate and confer.
+**Scenario:** Provide accessibility to system-level items that your users access regularly for cooperative dialogue and collaboration.
 **Example:** You create a configurable channel/group tab with deep linking to individual items.
 
-## How do tabs work?
+## How do tabs function?
 
-Teams development and integration (custom tabs, messaging extensions, or bots) need to be bundled in a [Teams app package](foo.md) for distribution either in the Teams App Store ([AppSource](https://appsource.microsoft.com), to your organization, or within a team. A custom tab is declared directly in the manifest of your app package. Your app can have a maximum of one (1) channel/group tab and up to sixteen (16) personal tabs
+Teams development and integration (custom tabs, messaging extensions, or bots) need to be bundled in a [Teams app package](foo.md) for distribution either in the Teams App Store ([AppSource](https://appsource.microsoft.com)), to your organization, or within a team. A custom tab is declared directly in the manifest of your app package. Your app can have a maximum of one (1) channel/group tab and up to sixteen (16) personal tabs
 
-Your tab content pages, must meet required specifications:
+## Tab content requirements
 
--  Many standard websites block their pages from loading in an iFrame, therefore, Teams provides a unique webview option for users to view embedded content within the desktop client. 
+>&#x2705; You must allow your pages to be served in a nested browsing context by Teams in an HTML inline frame (iFrame) via X-Frame-Options and/or Content-Security-Policy HTTP response headers.
+<br><br>Many standard websites block their pages from loading in an iFrame. However, Teams provides a unique webview option for users to view embedded content within the desktop client.
 
- >Allow for a nested browsing context by Teams in an HTML inline frame (iFrame) via X-Frame-Options and/or Content-Security-Policy HTTP response headers.
-* Manage [authentication](foo.md) in a method other than redirect (e.g., token-based or cookie-based authentication). Typically, as a safeguard against click-jacking, login pages do not render in IFrames. 
-* Control [cross-domain](foo.md) navigation differently since the Teams client needs to validate the origin against a static validDomains list in the app manifest when loading or communicating with the tab.
-* Style themselves based on the Teams client's theme.
-* On page load, call `microsoftTeams.initialize()` from the [Teams client SDK](/javascript/api/overview/msteams-client), which gives Teams a communication channel with the hosted page and more visibility into its operations.
+>&#x2705; Your [authentication](foo.md) logic must leverage a method other than redirect (e.g., token-based or cookie-based authentication).
+<br><br>Typically, as a safeguard against click-jacking, login pages do not render in IFrames.
+
+>&#x2705; Your [cross-domain](foo.md) navigation logic should utilize methods that allow the Teams client to validate the origin against a static validDomains list in the app manifest when loading or communicating with the tab.
+<br><br>Browsers adhere to a same-origin policy restriction that prevents a webpage from making requests to a different domain than the one that served a web page. However, you may need to redirect the configuration or content page to a location in a different domain or subdomain.
+
+>&#x2705; Style your tabs based on the Teams client's theme, design, and intent (see [Content and conversations, all at once using tabs](foo.md)).
+<br><br>Tabs work best when they are built to address a specific need and focus on a small set of tasks or a subset of data that is relevant to the tab's channel location.
+
+>&#x2705; Following your page load, make a call to `microsoftTeams.initialize()` in the [Teams client SDK](/javascript/api/overview/msteams-client).
+<br><br>Your script must include the microsoftTeams.initialize() method call for your page to be displayed.
+
 
 ## Tabs on mobile clients
 
-Teams is xPlat, your app needs to as be as well.
-
-contentUrl vs websiteUrl.
+The Teams application is cross-platform and your tab should operate across multiple platforms and operating environments as well. Microsoft's [Fluent Design System](foo.md) provides principled design guidelines, patterns, and tools for devices and interactions across platforms.
 
 ## Get Started
 
