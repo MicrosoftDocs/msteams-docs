@@ -33,13 +33,13 @@ Teams development and integration (custom tabs, messaging extensions, or bots) n
 <br><br>Many standard websites block their pages from loading in an IFrame. However, Teams provides a unique webview option for users to view embedded content within the desktop client.
 
 >&#x2705; Your [authentication](foo.md) logic must leverage a method other than redirect (e.g., use token-based or cookie-based authentication).
-<br><br>Typically, as a safeguard against click-jacking, login pages do not render in IFrames.
+<br><br>Typically, as a safeguard against click-jacking, login pages don't render in IFrames.
 
 >&#x2705; Your [cross-domain](foo.md) navigation logic should utilize methods that allow the Teams client to validate the origin against a static validDomains list in the app manifest when loading or communicating with the tab.
-<br><br>Browsers adhere to a same-origin policy restriction that prevents a webpage from making requests to a different domain than the one that served a web page. However, you may need to redirect the configuration or content page to a location in a different domain or subdomain.
+<br><br>Browsers adhere to a same-origin policy restriction that prevents a webpage from making requests to a different domain than the one that served a web page. However, you may need to redirect the configuration or content page to a another domain or subdomain.
 
 >&#x2705; Style your tabs based on the Teams client's theme, design, and intent (see [Content and conversations, all at once using tabs](foo.md)).
-<br><br>Tabs work best when they are built to address a specific need and focus on a small set of tasks or a subset of data that is relevant to the tab's channel location.
+<br><br>Tabs work best when they're built to address a specific need and focus on a small set of tasks or a subset of data that is relevant to the tab's channel location.
 
 >&#x2705; Following your page load, make a call to `microsoftTeams.initialize()` in the [Teams client SDK](/javascript/api/overview/msteams-client).
 <br><br>Your script must include the microsoftTeams.initialize() method call for your page to be displayed.
