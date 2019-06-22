@@ -34,7 +34,7 @@ The images you upload with the English language will be the ones used in AppSour
 
 ## Localizing the strings in your app manifest
 
-In your app manifest file you provide multiple strings that are displayed to the end-user. If you choose, you can provide additional .json files with translations of these strings. Teams will use the translation that matches your end-user's default language settings in their client if it is available. Teams will also use the closest base language to any specific dialect. For example, if the client default language is set to `fr-ca` (French Canadien) and you do not provide a `fr-ca` translation but you do provide a `fr` (French) translation, we will use the `fr` translation.
+In your app manifest file you provide multiple strings that are displayed to the end-user. If you choose, you can provide additional .json files with translations of these strings. Teams will use the translation that matches your end-user's default language settings in their client if it is available. Teams will also use the closest base language to any specific dialect. For example, if the client default language is set to `fr-ca` (French Canadien) and you do not provide a `fr-ca` translation but you do provide a `fr` (French) translation, we will use the `fr` translation. See: [Localization file JSON schema](~/resources/schema/localization-schema.md) for addtional information on the localization file.
 
 To accomplish this you'll need to add the `localizationInfo` object to your app manifest file, providing the default language and pointers to any additional languages you'd like to support. For each additional language you wish to support you'll need to provide a .json file with translations of the strings you wish to localized.
 

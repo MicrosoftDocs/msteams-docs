@@ -2,7 +2,6 @@
 title: What's new
 description: Describes all the new developer features in Microsoft Teams
 keywords: teams what's new latest
-ms.date: 05/20/2019
 ---
 # What's new for developers in Microsoft Teams
 
@@ -12,6 +11,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+| 06/20/2019 | Share an external website, from an external website, into a Teams channel | [Share to Teams](~/share-to-teams.md) |
 | 05/25/2019 | Respond with bot message from task module | [Respond with bot message from task module](~/concepts/messaging-extensions/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot) |
 | 05/25/2019 | Bots in group chats | [Interact with a bot in group chat or channel](~/concepts/bots/bot-conversations/bots-conv-channel.md) |
 | 05/20/2019 | App manifest localization | [App localization](~/publishing/apps-localization.md) |
@@ -20,7 +20,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 | 05/06/2019 | Application Certification program for store apps | [Application Certification](~/publishing/application-certification.md) |
 | 05/06/2019 | App Templates are now available. | [App Templates](~/samples/app-templates.md) |
 | 04/23/2019 | Action-based Messaging Extensions are now available | [Action-based Message Extensions](~/concepts/messaging-extensions/create-extensions.md) |
-| 02/18/2018 | Creating [deep links](~/concepts/deep-links.md#deep-linking-to-a-chat) to private chat is out of developer preview and available |
+| 02/18/2019 | Creating deep links to private chat is out of developer preview and available | [Deep linking to a chat](~/concepts/deep-links.md#deep-linking-to-a-chat) |
 | 01/23/2019 | Surfacing SKU and licenceType information in the tab context | [Tab Context](~/concepts/tabs/tabs-context.md) |
 | 12/03/2018 | A new topic has been added discussing how to limit bot availability to specific single tenants.| [Bots for limited tenants](~/scenarios/limited-tenant.md) |
 | 11/12/2018 | Tabs in group chat is now available in the released version of Teams, and has been moved out of developer preview. As part of this work, the tabs section has been reworked for clarity.| [Configurable tabs](~/concepts/tabs/tabs-configurable.md) |

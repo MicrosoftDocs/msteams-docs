@@ -76,8 +76,8 @@ Finally you will see this message, assuming everything went well.
 Environment variables are used in Azure to securely hold sensitive information like app ids and passwords. You will need to manually add the following Application Settings (environment variables) in VS Code by right-clicking *Application Settings*.
 
 ```
-MICROSOFT_BOT_APP_ID=<YOUR BOT'S APP ID>
-MICROSOFT_BOT_APP_PASSWORD=<YOUR BOT'S PASSWORD>
+MICROSOFT_APP_ID=<YOUR BOT'S APP ID>
+MICROSOFT_APP_PASSWORD=<YOUR BOT'S PASSWORD>
 WEBSITE_NODE_DEFAULT_VERSION=8.9.4
 ```
 
