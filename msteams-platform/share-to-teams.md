@@ -6,7 +6,7 @@ keywords: Share Teams Share-to-Teams
 # Creating a Share to Teams embedded button
 
 >[!NOTE]
-> * Only the desktop versions of Edge, Firefox, and Chrome are supported.
+> * Only the desktop versions of Edge and Chrome are supported.
 > * Use of Freemium or guest accounts is not supported.
 
 Third-party websites can use the launcher script to embed Share to Teams buttons on their webpages which will launch the Share to Teams experience in a popup window when clicked. This will allow you to share a link directly to any person or Microsoft Teams channel without switching context.
