@@ -2,7 +2,6 @@
 title: Using the OAuthCard for authentication
 description: Describes the Azure Bot Service OAuthCard and how it is used for authentication
 keywords: teams authentication OAuthCard OAuth card Azure Bot Service
-ms.date: 01/22/2019
 ---
 # Using Azure Bot Service for Authentication in Teams
 
@@ -15,20 +14,20 @@ Without the Azure Bot Service’s OAuthCard it is complicated to implement authe
 
 With Azure Bot Service’s OAuthCard, it is easier for your Teams bot to sign in your users and access external data providers. Whether you’ve already implemented auth and you want to switch over to something simpler, or if you are looking to add authentication to your bot service for the first time, the OAuthCard can make it easier.
 
-Other topics in [Authentication](~/concepts/authentication/authentication) describe authentication without using the OAuthCard, so if you want to understand authentication in Teams more deeply, or have a situation where you can not use the OAuthCard, you can still refer to those topics.
+Other topics in [Authentication](~/concepts/authentication/authentication.md) describe authentication without using the OAuthCard, so if you want to understand authentication in Teams more deeply, or have a situation where you can not use the OAuthCard, you can still refer to those topics.
 
 ## Support for the OAuthCard
 
 There are currently some restrictions to where you can use the OAuthCard. These include:
 
-* The card will not work with [guest access](https://docs.microsoft.com/en-us/MicrosoftTeams/guest-access)
-* It will not work with [Microsoft Teams free](https://products.office.com/en-US/microsoft-teams/free)
+* The card will not work with [guest access](/MicrosoftTeams/guest-access)
+* It will not work with [Microsoft Teams free](https://products.office.com/microsoft-teams/free)
 * It can only be used for bot authentication
-* It only works for bots registered in the [Azure Bot Service](https://azure.microsoft.com/en-us/services/bot-service/)
+* It only works for bots registered in the [Azure Bot Service](https://azure.microsoft.com/services/bot-service/)
 
 ## How does the Azure Bot Service help me do authentication?
 
-Full documentation using the OAuthCard is available in the topic: [Add authentication to your bot via Azure Bot Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-tutorial-authentication?view=azure-bot-service-3.0). Note that this topic is in the Azure Bot Framework documentation set, and is not specific to Teams.
+Full documentation using the OAuthCard is available in the topic: [Add authentication to your bot via Azure Bot Service](/azure/bot-service/bot-builder-tutorial-authentication?view=azure-bot-service-3.0). Note that this topic is in the Azure Bot Framework documentation set, and is not specific to Teams.
 
 The following sections tell how to use the OAuthCard in Teams.
 
@@ -44,14 +43,14 @@ The OAuthCard helps with authentication in the following ways:
 
 ## When should I implement my own solution?
 
-Because access tokens are sensitive information, you may not wish to have them stored in an external service. In this case, you may choose to still implement your own token management system and login experience within Teams, as described in the rest of the Teams [Authentication](~/concepts/authentication/authentication) topics.
+Because access tokens are sensitive information, you may not wish to have them stored in an external service. In this case, you may choose to still implement your own token management system and login experience within Teams, as described in the rest of the Teams [Authentication](~/concepts/authentication/authentication.md) topics.
 
 ## Getting started with OAuthCard in Teams
 
 > [!NOTE]
-> This guide is using the Bot Framework v3 SDK. You can find the v4 implementation [here](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-authentication?view=azure-bot-service-4.0&tabs=csharp). You will still need to create a manifest and include token.botframework.com in the `validDomains` section, because otherwise the Sign in button will not open the authentication window. Use the [App Studio](https://docs.microsoft.com/en-us/microsoftteams/platform/get-started/get-started-app-studio) to generate your manifest.
+> This guide is using the Bot Framework v3 SDK. You can find the v4 implementation [here](/azure/bot-service/bot-builder-authentication?view=azure-bot-service-4.0&tabs=csharp). You will still need to create a manifest and include token.botframework.com in the `validDomains` section, because otherwise the Sign in button will not open the authentication window. Use the [App Studio](~/get-started/get-started-app-studio.md) to generate your manifest.
 
-You’ll first need to configure your Azure bot service to set up external authentication providers. Read [Configuring identity providers](~/concepts/authentication/auth-configure) for detailed steps.
+You’ll first need to configure your Azure bot service to set up external authentication providers. Read [Configuring identity providers](~/concepts/authentication/auth-configure.md) for detailed steps.
 
 To enable authentication using the Azure Bot Service, you need to make these additions to your code:
 
@@ -128,10 +127,6 @@ if (text.Contains("loginComplete"))
   return;
 }
 ```
-
-## Support on mobile
-
-As of July 2018, using the Bot Service to authenticate is not supported on mobile. For now, use of the OAuthCard to sign-in is limited to web/desktop Teams clients.
 
 ## Using OAuthCard with messaging extensions
 
