@@ -71,7 +71,7 @@ To manually add your action-based messaging extension command to your app manife
 | `id` | Unique ID that you assign to this command. The user request will include this ID. | Yes | 1.0 |
 | `title` | Command name. This value appears in the UI. | Yes | 1.0 |
 | `type` | Must be `action` | No | 1.4 |
-| `fetchTask` | Set to `true` when using an adaptive card or embedded web view for your task module, `false` for a static list of parameters | No | 1.4 |
+| `fetchTask` | `true` for an adaptive card or embedded web view for your task module, `false` for a static list of parameters or when loading the web view by a `taskInfo` | No | 1.4 |
 | `context` | Optional array of values that defines the context the message action is available in. Possible values are `message`, `compose`, or `commandBox`. Default is `["compose", "commandBox"]`. | No | 1.5 |
 
 If you are using a static list of parameters, you'll add them as well.
@@ -87,20 +87,71 @@ If you are using an embedded web view, you can optionally add the `taskInfo` obj
 
 | Property name | Purpose | Required? | Minimum manifest version |
 |`taskInfo`|Specify the task module to preload when using a messaging extension command| No | 1.4 |
-|`taskInfo.title`|Initial dialog title|No | 1.4 |
-|`taskInfo.width`|Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'|No | 1.4 |
-|`taskInfo.height`|Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'|No | 1.4 |
+|`taskInfo.title`|Initial task module title|No | 1.4 |
+|`taskInfo.width`|Task module width - either a number in pixels or default layout such as 'large', 'medium', or 'small'|No | 1.4 |
+|`taskInfo.height`|Task module height - either a number in pixels or default layout such as 'large', 'medium', or 'small'|No | 1.4 |
 |`taskInfo.url`|Initial web view URL|No | 1.4 |
+
+#### App manifest example
+
+The below is an example of a `composeExtensions` object defining two action-based commands. It is not an example of the complete manifest, for the full app manifest schema see: [App manifest schema](~/foo.md).
+
+```json
+...
+"composeExtensions": [
+  {
+    "botId": "12a3c29f-1fc5-4d97-a142-12bb662b7b23",
+    "canUpdateConfiguration": true,
+    "commands": [
+      {
+        "id": "addTodo",
+        "description": "Create a To Do item",
+        "title": "Create To Do",
+        "type": "action",
+        "context": ["commandBox", "message", "compose"],
+        "parameters": [
+          {
+            "name": "Name",
+            "description": "To Do Title",
+            "title": "Title",
+            "inputType": "text"
+          },
+          {
+            "name": "Description",
+            "description": "Description of the task",
+            "title": "Description",
+            "inputType": "textarea"
+          },
+          {
+            "name": "Date",
+            "description": "Due date for the task",
+            "title": "Date",
+            "inputType": "date"
+          }
+        ]
+      },
+      {
+        "id": "reassignTodo",
+        "description": "Reassign a todo item",
+        "title": "Reassign a todo item",
+        "type": "action",
+        "fetchTask": true,
+      }
+    ]
+  }
+]
+...
+```
 
 ## Next steps
 
 If you are using either an adaptive card or an embedded web view without a `taskInfo` object, you'll want to:
 
-* [Handle the initial invoke request](~/messaging-extensions/how-to/action-based-commands/define-action-based-command.md)
+* [Create and respond with a task module](~/messaging-extensions/how-to/action-based-commands/create-task-module.md)
 
 If you are using parameters or an embedded web view with a `taskInfo` object, the next step for you is to:
 
-* [Respond to task module submit](~/foo.md)
+* [Respond to task module submit](~/messaging-extensions/how-to/action-based-commands/respond-to-task-module-submit.md)
 
 ## Learn more
 
