@@ -11,22 +11,22 @@
 -
   name: Tutorials
   items:
-    -
-      name: 'Create tab and bot app using C#'
-      href: _old/get-started/get-started-dotnet-app-studio.md
-    -
-      name: 'Create tab and bot app using Node'
-      href: _old/get-started/get-started-nodejs-app-studio.md
--
-  name: 'Samples and templates'
-  items:
-    -
-      name: 'Sample apps'
-      href: old/samples/code-samples.md
-    -
-      name: 'Production-ready app templates'
-      href: old/samples/app-templates.md
--
+  - 
+    name: Create tab and bot app using C#
+    href: _old/get-started/get-started-dotnet-app-studio.md
+  - 
+    name: Create tab and bot app using Node
+    href: _old/get-started/get-started-nodejs-app-studio.md
+- 
+  name: Samples and templates
+  items: 
+  - 
+    name: Sample apps
+    href: _old/samples/code-samples.md
+  - 
+    name: Production-ready app templates
+    href: _old/samples/app-templates.md
+- 
   name: Concepts
   expanded: true
   items:
@@ -60,17 +60,20 @@
     -
       name: 'Build and test your app'
       items:
-        -
-          name: 'Set up your development environment'
-          href: foo.md
-        -
-          name: 'Build your app package'
-          href: foo.md
-        -
-          name: 'Localize your app'
-          href: foo.md
-    -
-      name: 'Deploy and publish your app'
+      - 
+        name: Define action-based commands
+        href: messaging-extensions/how-to/define-action-based-command.md
+      - 
+        name: Handle the initial invoke message
+        href: foo.md
+      - 
+        name: Create a task module
+        href: foo.md
+      - 
+        name: Send a response to the submit action
+        href: foo.md
+    - 
+      name: Search-based commands
       items:
         -
           name: 'Understand deployment options'
