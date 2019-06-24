@@ -20,7 +20,7 @@ There are two types of tabs available in Teams - channel/group and personal. A c
 **Scenario:** Add support pages to a Teams bot or messaging extension. \
 **Example:** You create personal tabs that provide about and help webpage content to users.
 
-**Scenario:** Provide access to items your users access regularly for cooperative dialogue and collaboration. \
+**Scenario:** Provide access to items that your users interact with regularly for cooperative dialogue and collaboration. \
 **Example:** You create a channel/group tab with deep linking to individual items.
 
 ## How do tabs work?
