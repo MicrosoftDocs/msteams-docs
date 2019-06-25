@@ -1,18 +1,18 @@
 ---
-title: "Quickstart: Create a Custom channel and group Tab with Node.js and the Teams Yeoman Generator"
+title: "Quickstart: Create a Custom channel and group Tab with Node.js and the Yeoman generator for Microsoft Teams"
 author: laujan
-description: A quickstart guide to creating a channel and group tab with the Teams Yeoman Generator.
+description: A quickstart guide to creating a channel and group tab with the Teams Yeoman generator for Microsoft Teams.
 ms.topic: quickstart
 ms.author: laujan
 ---
-# Quickstart: Create a custom channel and group tab with Node.js and the Teams Yeoman Generator 
+# Quickstart: Create a custom channel and group tab with Node.js and the Yeoman generator for Microsoft Teams 
 
 >[!NOTE]
->This quickstart follows the steps outlined in the [Build Your First Microsoft Teams App](/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
+>This quickstart follows the steps outlined in the [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
 
 Custom tabs enable you to embed your hosted web content directly into Microsoft Teams and add Teams-specific functionality via your  [Teams App Package](foo.md). See [What are custom tabs in Microsoft Teams?](/msteams-platform/tabs/what-are-custom-tabs.md). There are two types of tabs available in Teams - channel/group and personal. A channel/group tab delivers content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content. A channel/group tab can be pinned to the tabs bar located at the top of the channel and each channel or group can have its own tabs to support specific focus areas.  However, an app can only have one channel/group tab.
 
-In this quickstart we'll walk-through creating a custom channel and group tab using the [Microsoft Teams App Project Generator](/OfficeDev/generator-teams). For more information, see the Microsoft Teams App [Project Structure](/OfficeDev/generator-teams/wiki/Project-Structure) documentation.
+In this quickstart we'll walk-through creating a custom channel and group tab using the [Microsoft Teams App Project Generator - #YoTeams](/OfficeDev/generator-teams). For more information, see the Microsoft Teams App [Project Structure](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) documentation.
 
 [!INCLUDE [build-custom-tab-node-js-common](../../includes/create-custom-tab-node-js-common.md)]
 
