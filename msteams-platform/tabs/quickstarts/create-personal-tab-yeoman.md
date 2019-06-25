@@ -21,7 +21,7 @@ In this quickstart we'll walk-through creating a custom personal tab using the [
 
 To add a personal tab to this app project you'll create a content page and add a few lines of code to the existing project files:
 
-> 1.&emsp; In your code editor, create a new HTML file named, `static.html` .  Add the following code:
+1.&emsp; In your code editor, create a new HTML file named, `personal.html` .  Add the following code:
 
 ```html
 <!DOCTYPE html>
@@ -36,7 +36,7 @@ To add a personal tab to this app project you'll create a content page and add a
         <!-- endinject -->
     </head>
         <body>
-            <h1>Static Tab</h1>
+            <h1>Personal Tab</h1>
             <p><img src="/assets/icon.png"></p>
             <p>This is your personal tab!</p>
         </body>
@@ -44,15 +44,15 @@ To add a personal tab to this app project you'll create a content page and add a
 
 ```
 
-> 2.&emsp;Save the `static.html` file in your app's `web` folder. The relative file path should be: <br>&emsp;`./src/app/web/<yourDefaultTabNameTab>/static.html`<br>
+2.&emsp;Save the `personal.html` file in your app's `web` folder. The relative file path should be: <br>&emsp;`./src/app/web/<yourDefaultTabNameTab>/personal.html`<br>
 
-> 3.&emsp; In your code editor, navigate to your app's `manifest.json` file: `./src/manifest/manifest.json/` . Scroll down to the empty staticTabs array ( `"staticTabs":[]` ) and add the following JSON object:
+3.&emsp; In your code editor, navigate to your app's `manifest.json` file: `./src/manifest/manifest.json/` . Scroll down to the empty staticTabs array ( `"staticTabs":[]` ) and add the following JSON object:
 
 ```json
 {
-    "entityId": "staticTab",
-    "name": "Static Tab ",
-    "contentUrl": "https://{{HOSTNAME}}/<yourDefaultTabNameTab>/static.html",
+    "entityId": "personalTab",
+    "name": "Personal Tab ",
+    "contentUrl": "https://{{HOSTNAME}}/<yourDefaultTabNameTab>/personal.html",
     "websiteUrl": "https://{{HOSTNAME}}",
     "scopes": ["personal"]
 }
@@ -62,15 +62,15 @@ To add a personal tab to this app project you'll create a content page and add a
 > [!TIP]
 > Remember to update the `"contentURL"` path component in the the staticTabs JSON object with `<yourDefaultTabNameTab>` using your *DefaultTabName* + *Tab*.
 
-> 4.&emsp; Save the updated `manifest.json` file.
+4.&emsp; Save the updated `manifest.json` file.
 
-> 5.&emsp; Your content page must be served in an IFrame. Open your app's `Tab.ts` TypeScript file in your code editor: `./src/app/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts` and add the following to the list of IFrame decorators:
+5.&emsp; Your content page must be served in an IFrame. Open your app's `Tab.ts` TypeScript file in your code editor: `./src/app/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts` and add the following to the list of IFrame decorators:
 
 ```typescript
- @PreventIframe("/<yourDefaultAppName>TabNameTab>/static.html")
+ @PreventIframe("/<yourDefaultAppName>TabNameTab>/personal.html")
 ```
 
-> 6.&emsp; *Save* the updated `Tab.ts` file and *Save all* for good measure.
+6.&emsp; *Save* the updated `Tab.ts` file and *Save all* for good measure.
 
 > [!NOTE]
 > Open a command prompt in your app's project folder to complete the project's gulp tasks.
@@ -78,7 +78,8 @@ To add a personal tab to this app project you'll create a content page and add a
 ## Create a Teams App manifest
 
 Now that your tab code is complete, you can build your project:
->The [Teams Manifest](foo.md) will be part of your app package zip file (along with your two app icons) and will be uploaded into Microsoft Teams. This is achieved through a gulp task that validates the manifest and creates the zip file in the `./package` folder. In the command prompt, type the following:
+
+The [Teams Manifest](foo.md) will be part of your app package zip file (along with your two app icons) and will be uploaded into Microsoft Teams. This is achieved through a gulp task that validates the manifest and creates the zip file in the `./package` folder. In the command prompt, type the following:
 
 ```bash
 gulp manifest
@@ -86,7 +87,7 @@ gulp manifest
 
 ## Build your app
 
->The build command compiles your solution into the `./dist` folder. In the command prompt, type the following:
+The build command compiles your solution into the `./dist` folder. In the command prompt, type the following:
 
 ```bash
 gulp build
@@ -94,17 +95,17 @@ gulp build
 
 ## Run your app in localhost
 
->To build and start a local web server, in the command prompt, type the following:
+To build and start a local web server, in the command prompt, type the following:
 
 ```bash
 gulp serve
 ```
 
->Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser and view your app's home page.
+Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser and view your app's home page.
 
->To view your personal tab, remain in the current browser and add `static.html` to the app's file path: `http://localhost:3007/<yourDefaultAppNameTab>/static.html` Press enter.<br>
+To view your personal tab, remain in the current browser and add `personal.html` to the app's file path: `http://localhost:3007/<yourDefaultAppNameTab>/personal.html` Press enter.<br>
 
->>![personal tab screenshot](/microsoftteams/platform/assets/personalTab.PNG)
+>![personal tab screenshot](/microsoftteams/platform/assets/personalTab.PNG)
 
 ## Package your app for Microsoft Teams
 
@@ -112,7 +113,7 @@ Microsoft Teams is an entirely cloud-based product, and thus requires that your 
 
 To test your tab extension, you'll use [ngrok](https://ngrok.com/docs), which is built into this project. Ngrok is a reverse proxy software tool that will create a tunnel to your locally running web server's publicly-available HTTPS endpoints. Your server's web endpoints will be available during the current session on your local machine. When the machine is shut down or goes to sleep the service will no longer be available.
 
->In your command prompt, enter the following:
+In your command prompt, enter the following:
 
 ```bash
 gulp ngrok-serve

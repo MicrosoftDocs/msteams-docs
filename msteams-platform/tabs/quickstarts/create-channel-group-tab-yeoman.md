@@ -93,4 +93,4 @@ gulp ngrok-serve
 - *Save*.
 - To view, select your new tab from the tab bar.
 
-### Nice work! You just extended Microsoft Teams with custom tabs.
+### Nice work! You just extended Microsoft Teams with custom tabs
