@@ -11,7 +11,7 @@ Messaging extensions are an alternative way for your Microsoft Teams users to in
 
 foo.md => screenshot needed, fullscreen, red box around three areas you can trigger an ME from.
 
-## Messaging extensions user scenarios
+## What kinds of tasks are they good for?
 
 **Scenario:** I need some external system to do something and I want the result of the action to be sent back to my conversation.\
 **Example:** Reserve a resource and let the channel know what day/time you reserved it for.
