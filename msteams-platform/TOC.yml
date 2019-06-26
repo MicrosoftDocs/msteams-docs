@@ -60,6 +60,7 @@
     -
       name: 'Build and test your app'
       items:
+<<<<<<< HEAD
       - 
         name: Define action-based commands
         href: messaging-extensions/how-to/define-action-based-command.md
@@ -72,6 +73,17 @@
       - 
         name: Send a response to the submit action
         href: foo.md
+=======
+        - 
+          name: Define action-based commands
+          href: messaging-extensions/how-to/action-based-commands/define-action-based-command.md
+        - 
+          name: Create and send the task module
+          href: messaging-extensions/how-to/action-based-commands/create-task-module.md
+        - 
+          name: Send a response to the submit action
+          href: messaging-extensions/how-to/action-based-commands/respond-to-task-module-submit.md
+>>>>>>> e562b6d0896d370f1ccd359b5a34ef0bb1ffdfc4
     - 
       name: Search-based commands
       items:
@@ -130,17 +142,26 @@
       name: 'Design your messaging extension'
       items:
         -
+<<<<<<< HEAD
           name: 'somthing something Design'
           href: foo.md
         -
           name: 'somethingelse Design'
           href: foo.md
+=======
+          name: 'Design your messaging extension'
+          href: messaging-extensions/design/messaging-extension.md
+        -
+          name: 'Design your task module'
+          href: messaging-extensions/design/task-module.md
+>>>>>>> e562b6d0896d370f1ccd359b5a34ef0bb1ffdfc4
     -
       name: 'How-to guides'
       expanded: true
       items:
         -
           name: 'Create a messaging extension'
+<<<<<<< HEAD
           href: foo.md
         -
           name: 'Action-based commands'
@@ -158,6 +179,22 @@
               name: 'Send a response to the submit action'
               href: foo.md
         -
+=======
+          href: messaging-extensions/how-to/create-messaging-extension.md
+        -
+          name: 'Action-based commands'
+          items:
+            - 
+              name: Define action-based commands
+              href: messaging-extensions/how-to/action-based-commands/define-action-based-command.md
+            - 
+              name: Create and send the task module
+              href: messaging-extensions/how-to/action-based-commands/create-task-module.md
+            - 
+              name: Send a response to the submit action
+              href: messaging-extensions/how-to/action-based-commands/respond-to-task-module-submit.md
+        -  
+>>>>>>> e562b6d0896d370f1ccd359b5a34ef0bb1ffdfc4
           name: 'Search-based commands'
           items:
             -
