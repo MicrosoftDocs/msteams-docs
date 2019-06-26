@@ -11,21 +11,21 @@
 -
   name: Tutorials
   items:
-  - 
-    name: Create tab and bot app using C#
-    href: _old/get-started/get-started-dotnet-app-studio.md
-  - 
-    name: Create tab and bot app using Node
-    href: _old/get-started/get-started-nodejs-app-studio.md
+    - 
+      name: Create tab and bot app using C#
+      href: _old/get-started/get-started-dotnet-app-studio.md
+    - 
+      name: Create tab and bot app using Node
+      href: _old/get-started/get-started-nodejs-app-studio.md
 - 
   name: Samples and templates
   items: 
-  - 
-    name: Sample apps
-    href: _old/samples/code-samples.md
-  - 
-    name: Production-ready app templates
-    href: _old/samples/app-templates.md
+    - 
+      name: Sample apps
+      href: _old/samples/code-samples.md
+    - 
+      name: Production-ready app templates
+      href: _old/samples/app-templates.md
 - 
   name: Concepts
   expanded: true
@@ -60,18 +60,15 @@
     -
       name: 'Build and test your app'
       items:
-      - 
-        name: Define action-based commands
-        href: messaging-extensions/how-to/define-action-based-command.md
-      - 
-        name: Handle the initial invoke message
-        href: foo.md
-      - 
-        name: Create a task module
-        href: foo.md
-      - 
-        name: Send a response to the submit action
-        href: foo.md
+        - 
+          name: Define action-based commands
+          href: messaging-extensions/how-to/action-based-commands/define-action-based-command.md
+        - 
+          name: Create and send the task module
+          href: messaging-extensions/how-to/action-based-commands/create-task-module.md
+        - 
+          name: Send a response to the submit action
+          href: messaging-extensions/how-to/action-based-commands/respond-to-task-module-submit.md
     - 
       name: Search-based commands
       items:
