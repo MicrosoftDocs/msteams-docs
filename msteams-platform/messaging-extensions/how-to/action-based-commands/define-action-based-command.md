@@ -17,7 +17,7 @@ For additional guidance on designing your messaging extension see: [Designing ef
 
 ## Choose messaging extension invoke locations
 
-The first thing you need to decide is where your messaging extension can be triggered (or more specifically, *invoked* from). Your options are:
+The first thing you need to decide is where your messaging extension can be triggered (or more specifically, *invoked* from). Your extension can be invoked from one or more of the following locations:
 
 * The buttons at the bottom of the compose message area
 * By @mentioning in the command box
@@ -39,7 +39,7 @@ If you choose to create your task module with a static list of parameters, the f
 
 ## Choose how the final message will be sent
 
-In most cases, your action-based messaging extension command will result in a card inserted into the compose message box that your user can then decide to send into the channel or chat. The message in this case comes from the user; your bot will not be able to edit or update the card further.
+In most cases, your action-based messaging extension command will result in a card inserted into the compose message box that your user can then decide to send into the channel or chat. The message in this case comes from the user, and your bot will not be able to edit or update the card further.
 
 However, if your messaging extension is triggered from the compose box or directly from a message, your bot can insert the final response directly into the channel or chat. In this case the adaptive card comes from the bot, the bot will be able to update it, and can the bot can also reply to the conversation thread if needed.
 
@@ -77,6 +77,7 @@ To manually add your action-based messaging extension command to your app manife
 If you are using a static list of parameters, you'll add them as well.
 
 | Property name | Purpose | Required? | Minimum manifest version |
+|---|---|---|---|
 | `parameters` | Static list of parameters for the command. Only use when `fetchTask` is `false` | No | 1.0 |
 | `parameter.name` | The name of the parameter. This is sent to your service in the user request. | Yes | 1.0 |
 | `parameter.description` | Describes this parameter’s purposes or example of the value that should be provided. This value appears in the UI. | Yes | 1.0 |
@@ -86,6 +87,7 @@ If you are using a static list of parameters, you'll add them as well.
 If you are using an embedded web view, you can optionally add the `taskInfo` object to fetch your web view without calling your bot directly. If you choose to use this option, the behavior is similar to using a static list of parameters in that the first interaction with your bot will be [responding to the task module submit action](~/foo.md).
 
 | Property name | Purpose | Required? | Minimum manifest version |
+|---|---|---|---|
 |`taskInfo`|Specify the task module to preload when using a messaging extension command| No | 1.4 |
 |`taskInfo.title`|Initial task module title|No | 1.4 |
 |`taskInfo.width`|Task module width - either a number in pixels or default layout such as 'large', 'medium', or 'small'|No | 1.4 |
