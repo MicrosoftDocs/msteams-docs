@@ -16,6 +16,16 @@ App templates are production-ready apps for Microsoft Teams that are community d
 * **Customizable and extensible:** While all app templates are ready to deploy as they are, we provide the entire code base and deployment scripts so that you can easily customize or extend them to fit your unique needs.
 * **Detailed documentation & support:** All app templates are accompanied by end-to-end documentation on solution architecture, deployment, and configuration steps. The repositories are monitored as well, so please report any issues you encounter by raising an Issue on GitHub.
 
+## List Search
+
+Collaboration in Microsoft Teams quite often references information contained within items in a SharePoint list. Simply pasting a link to the item in question forces everyone to switch context away from the conversation, find the needed information, then return to Teams to continue the conversation. As the conversation continues typically people will have to switch back to the reference item multiple times to verify new comments and refresh their memories of the information contained within the item. This context switching creates a barrier to smooth collaboration, and is a recipe for things falling through the cracks.
+
+To help alleviate this pain, we are happy to bring to you the List Search app template. Millions of users use SharePoint to power some of the core workflows in their organizations. However, collaborating around lists can be especially tedious. Using the List Search app template in Microsoft Teams, users can insert information from SharePoint list items directly within a chat conversation to alleviate the context-switching caused when simply inserting a link into a chat. The information is inserted as an easy-to-read auto-formatted card, helping your users stay engaged in the conversation.
+
+[Get it on GitHub here](https://github.com/OfficeDev/microsoft-teams-listsearch-app)
+
+![List Search app](~/assets/images/list-search-template.png)
+
 ## Customer Stickers
 
 Self-expression is core to a healthy team culture. This app template is a [messaging extension](~/concepts/messaging-extensions/search-extensions.md) that enables your users to use custom stickers and GIFs within Microsoft Teams. This template provides an easy web-based configuration experience where anyone with configuration access can upload the GIFs/stickers/images they want their end-users to have, allowing your entire team to use any set of stickers you chose.
