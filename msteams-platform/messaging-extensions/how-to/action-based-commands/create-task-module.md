@@ -156,7 +156,7 @@ When using an adaptive card, you'll need to respond with a `task` object with th
 
 ### With an embedded web view
 
-When using an adaptive card, you'll need to respond with a `task` object with the `value` object containing the URL to the web form you'd like to load. The domains of any URL you want to load must be included in the `validDomains` array in your app's manifest. See the [task module documentation](~/task-modules/what-are-task-modules.md) for complete information on building your embedded web view.
+When using an embedded web view, you'll need to respond with a `task` object with the `value` object containing the URL to the web form you'd like to load. The domains of any URL you want to load must be included in the `validDomains` array in your app's manifest. See the [task module documentation](~/task-modules/what-are-task-modules.md) for complete information on building your embedded web view.
 
 #### Example fetchTask response with an embedded web view
 
@@ -175,7 +175,9 @@ When using an adaptive card, you'll need to respond with a `task` object with th
 }
 ```
 
-## Complete sample
+## Complete sample using an adaptive card
+
+You can see the [complete sample project on GitHub](~/foo.md).
 
 # [C#/.NET](#tab/dotnet)
 
