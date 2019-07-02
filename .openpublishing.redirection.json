@@ -9,6 +9,10 @@
         "source_path": "msteams-platform/resources/dev-preview/developer-preview.md",
         "redirect_url": "/microsoftteams/platform/resources/dev-preview/developer-preview-intro",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/resources/general/rate-limit.md",
+        "redirect_url": "/microsoftteams/platform/concepts/bots/rate-limit"
       }
     ]
 }

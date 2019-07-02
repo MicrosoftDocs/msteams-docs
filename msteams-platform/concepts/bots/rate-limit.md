@@ -12,7 +12,7 @@ To protect Microsoft Teams, the bot APIs rate-limit incoming requests. Apps that
 
 Because the exact values of rate limits are subject to change, we recommend your application implement the appropriate back-off behavior when the API returns `HTTP 429 Too Many Requests`.
 
-### Handling rate limits
+## Handling rate limits
 
 When issuing a Bot Builder SDK operation, you can handle `Microsoft.Rest.HttpOperationException` and check for the status code.
 
@@ -31,17 +31,17 @@ catch (HttpOperationException ex)
 }
 ```
 
-### Best practices
+## Best practices
 
 In general, you should take simple precautions to avoid receiving `HTTP 429` responses. For instance, avoid issuing multiple requests to the same personal or channel conversation. Instead, consider batching the API requests.
 
 Using an exponential backoff with a random jitter is the recommended way to handle 429s. This ensures that multiple requests do not introduce collisions on retries. Following are some of the ways you can handle transient errors.
 
-### Example: detecting transient exceptions
+## Example: detecting transient exceptions
 
 Here is a sample using exponential backoff via the Transient Fault Handling Application Block.
 
-You can perform backoff and retries using [Transient Fault Handling libraries](https://msdn.microsoft.com/en-us/library/hh680901(v=pandp.50).aspx). For guidelines on obtaining and installing the NuGet package, see [Adding the Transient Fault Handling Application Block to Your Solution](https://msdn.microsoft.com/en-us/library/hh680891(v=pandp.50).aspx).
+You can perform backoff and retries using [Transient Fault Handling libraries](/previous-versions/msp-n-p/hh680901(v=pandp.50)). For guidelines on obtaining and installing the NuGet package, see [Adding the Transient Fault Handling Application Block to Your Solution](/previous-versions/msp-n-p/hh680891(v=pandp.50)).
 
 ```csharp
 public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectionStrategy
@@ -63,7 +63,7 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
 }
 ```
 
-### Example: backoff
+## Example: backoff
 
 In addition to detecting rate limits, you can also perform an exponential backoff.
 
@@ -88,4 +88,64 @@ You can also perform a `System.Action` method execution with the retry policy de
 
 We recommend storing the value and strategy in a configuration file to fine tune and tweak values at run time. 
 
-For more information, check out this handy guide on various retry patterns: [Retry pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/retry).
+For more information, check out this handy guide on various retry patterns: [Retry pattern](/azure/architecture/patterns/retry).
+
+## What are the limits?
+
+| **Scenario** | **Time-period (sec)** | **Max allowed operations** |
+| --- | --- | --- |
+| NewMessage | 1 | 7 |
+| NewMessage | 2 | 8 |
+| NewMessage | 30 | 60 |
+| NewMessage | 3600 | 1800 |
+| UpdateMessage | 1 | 7 |
+| UpdateMessage | 2 | 8 |
+| UpdateMessage | 30 | 60 |
+| UpdateMessage | 3600 | 1800 |
+| NewThread | 1 | 7 |
+| NewThread | 2 | 8 |
+| NewThread | 30 | 60 |
+| NewThread | 3600 | 1800 |
+| GetThreadMembers | 1 | 14 |
+| GetThreadMembers | 2 | 16 |
+| GetThreadMembers | 30 | 120 |
+| GetThreadMembers | 3600 | 3600 |
+| GetThread | 1 | 14 |
+| GetThread | 2 | 16 |
+| GetThread | 30 | 120 |
+| GetThread | 3600 | 3600 |
+
+## Per thread limit for all bots
+
+### What does this mean?
+
+This limit controls the traffic that all bot are allowed to generate across a single thread. A &quot;thread&quot; here is a 1:1 between bot and user, a group-chat, or a channel in a team.
+
+### What are the limits?
+
+| **Scenario** | **Time-period (sec)** | **Max allowed operations** |
+| --- | --- | --- |
+| NewMessage | 1 | 14 |
+| NewMessage | 2 | 16 |
+| UpdateMessage | 1 | 14 |
+| UpdateMessage | 2 | 16 |
+| NewThread | 1 | 14 |
+| NewThread | 2 | 16 |
+| GetThreadMembers | 1 | 28 |
+| GetThreadMembers | 2 | 32 |
+| GetThread | 1 | 28 |
+| GetThread | 2 | 32 |
+
+## Bot per DC limit
+
+### What does this mean?
+
+This limit controls the traffic that a bot is allowed to generate across all threads in a data-center.
+
+### What are the limits?
+
+| **Scenario** | **Time-period (sec)** | **Max allowed operations** |
+| --- | --- | --- |
+| \* | 1 | 20 |
+| \* | 1800 | 8000 |
+| \* | 3600 | 15000 |
