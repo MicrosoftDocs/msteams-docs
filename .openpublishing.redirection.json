@@ -12,7 +12,8 @@
       },
       {
         "source_path": "msteams-platform/platform/concepts/bots/rate-limit.md",
-        "redirect_url": "/microsoftteams/resources/general/rate-limit"
+        "redirect_url": "/microsoftteams/resources/general/rate-limit",
+        "redirect_document_id": false
       }
     ]
 }
