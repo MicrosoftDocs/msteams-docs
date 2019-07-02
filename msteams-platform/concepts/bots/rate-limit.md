@@ -92,6 +92,9 @@ For more information, check out this handy guide on various retry patterns: [Ret
 
 ## What are the limits?
 
+>[!Note]
+>Message splitting at the service level can result in higher than expected requests per second(RPS). If you are concerned about approaching the limits, you should implement the backoff strategy described above.
+
 | **Scenario** | **Time-period (sec)** | **Max allowed operations** |
 | --- | --- | --- |
 | NewMessage | 1 | 7 |
