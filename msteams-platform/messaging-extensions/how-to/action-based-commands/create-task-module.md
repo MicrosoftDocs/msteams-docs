@@ -235,7 +235,7 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 //this is the javascript example.
 ```
 
-# [TypeScript/Node.js](#tabs/typescript)
+# [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 let something = `an example in typescript`;
