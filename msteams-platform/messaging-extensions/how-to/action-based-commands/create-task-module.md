@@ -7,7 +7,7 @@ ms.author: anclear
 ---
 # Create and send the task module
 
-If you are not populating your task module with parameters defined in your app manifest, you'll need to create the task module to be presented to your users. You can use either an [adaptive card](#using-an-adaptive-card) or [an embedded web view](#using-an-embedded-web-view). This article will guide you through creating fairly simple task modules. See the [documentation for task modules](~/task-modules/what-are-task-modules.md) for the complete documentation on them.
+If you are not populating your task module with parameters defined in your app manifest, you'll need to create the task module to be presented to your users. You can use either an adaptive card or an embedded web view. This article will guide you through creating fairly simple task modules. See the [documentation for task modules](~/task-modules/what-are-task-modules.md) for the complete documentation on them.
 
 ## The initial invoke request
 
