@@ -180,48 +180,53 @@ When using an adaptive card, you'll need to respond with a `task` object with th
 # [C#/.NET](#tab/dotnet)
 
 ```csharp
-if (activity.Type == ActivityTypes.Invoke)
+[BotAuthentication]
+public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 {
-	if (activity.Name == "composeExtension/fetchTask")
-	{
-		//Create the adaptive card
-		AdaptiveCard card = new AdaptiveCard(new AdaptiveSchemaVersion("1.0"));
-		card.Body.Add(new AdaptiveTextBlock()
-		{
-			Text = "Please enter the following information:"
-		});
-		card.Body.Add(new AdaptiveTextBlock()
-		{
-			Text = "Name"
-		});
-		card.Body.Add(new AdaptiveTextInput()
-		{
-			Id = "name",
-			Spacing = AdaptiveSpacing.None,
-			Placeholder = "Name goes here"
-		});
-		card.Actions.Add(new AdaptiveSubmitAction()
-		{
-			Title = "Submit"
-		});
-
-		string cardJson = card.ToJson();
-
-		//Create the task module response
-		string task = $@"{{
-			'task': {{
-				'type': 'continue',
-				'value': {{
-					'card': {{
-						'contentType': 'application/vnd.microsoft.card.adaptive',
-						'content': {cardJson}
-						}}
-					}}
-				}}
-			}}";
-
-		return Request.CreateResponse(HttpStatusCode.OK, JObject.Parse(task));
-	}
+  if (activity.Type == ActivityTypes.Invoke)
+  {
+    if (activity.Name == "composeExtension/fetchTask")
+    {
+      //Create the adaptive card
+      AdaptiveCard card = new AdaptiveCard(new AdaptiveSchemaVersion("1.0"));
+      card.Body.Add(new AdaptiveTextBlock()
+      {
+        Text = "Please enter the following information:"
+      });
+      card.Body.Add(new AdaptiveTextBlock()
+      {
+        Text = "Name"
+      });
+      card.Body.Add(new AdaptiveTextInput()
+      {
+        Id = "name",
+        Spacing = AdaptiveSpacing.None,
+        Placeholder = "Name goes here"
+      });
+      card.Actions.Add(new AdaptiveSubmitAction()
+      {
+        Title = "Submit"
+      });
+  
+      string cardJson = card.ToJson();
+  
+      //Create the task module response
+      string task = $@"{{
+        'task': {{
+          'type': 'continue',
+          'value': {{
+            'card': {{
+              'contentType': 'application/vnd.microsoft.card.adaptive',
+              'content': {cardJson}
+              }}
+            }}
+          }}
+        }}";
+  
+      return Request.CreateResponse(HttpStatusCode.OK, JObject.Parse(task));
+    }
+  }
+}
 ```
 
 # [JavaScript/Node.js](#tab/javascript)
