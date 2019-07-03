@@ -44,6 +44,13 @@ Apps must provide a clear, simple sign in/out and (when appropriate) sign-up exp
   * Register an account/service => un-register the account/service
 * If your app requires an account or service, you must provide a way to sign-up or request sign-up.
 
+For additional information on authentication see:
+
+* [Authentication documentation](~/concepts/authentication/authentication.md)
+* [Bot authentication sample in Node](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
+* [Tab authentication sample in Node](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
+* [Tab/bot authentication in C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
+
 ### Test Notes for validation/approval
 
 You must provide at least two login credentials, one admin and one not, so we can validate your app.
@@ -76,7 +83,7 @@ It is highly recommended to have help/FAQ link for your Teams app and to provide
 
 ### Privacy policy, terms of use and support URLs
 
-* The Privacy policy can be specific to your app/add-in or can be an overall privacy policy for all the services from a developer. There should be no broken links and no beta or staging URLs.
+* The Privacy policy can be specific to your app/add-in or can be an overall privacy policy for all the services from a developer. There should be no broken links and no beta or staging URLs. If you use a generic privacy policy, it must reference "Services/Applications/Platforms", and not just "Website".
 * Privacy policy should cover how you handle user data storage, data retention, and security controls information.
 * Your privacy policy must have your contact information.
 * Your support URL should not require authentication before contacting you for any issues with your app.
