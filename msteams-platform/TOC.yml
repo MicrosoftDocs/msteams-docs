@@ -95,6 +95,8 @@
       href: ./concepts/bots/bots-with-tabs.md
     - name: Test a bot
       href: ./concepts/bots/bots-test.md
+    - name: Rate limiting
+      href: ./concepts/bots/rate-limit.md
   - name: Cards
     href: ./concepts/cards/cards.md
     items:
@@ -193,8 +195,6 @@
       href: ./resources/general/media-formats.md
     - name: Debugging
       href: ./resources/general/debug.md
-    - name: Rate limiting
-      href: ./resources/general/rate-limit.md
   - name: Public Developer Preview
     href: ./resources/dev-preview/developer-preview-intro.md
     items:
