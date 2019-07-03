@@ -90,10 +90,12 @@ We recommend storing the value and strategy in a configuration file to fine tune
 
 For more information, check out this handy guide on various retry patterns: [Retry pattern](/azure/architecture/patterns/retry).
 
-## What are the limits?
+## Per bot per thread limit
 
 >[!Note]
->Message splitting at the service level can result in higher than expected requests per second(RPS). If you are concerned about approaching the limits, you should implement the backoff strategy described above.
+>Message splitting at the service level will result in higher than expected requests per second(RPS). If you are concerned about approaching the limits, you should implement the backoff strategy described above. The values provided below are for estimation only.
+
+This limit controls the traffic that a bot is allowed to generate on a single conversation. A conversation here is a 1:1 between bot and user, a group-chat, or a channel in a team.
 
 | **Scenario** | **Time-period (sec)** | **Max allowed operations** |
 | --- | --- | --- |
@@ -120,11 +122,7 @@ For more information, check out this handy guide on various retry patterns: [Ret
 
 ## Per thread limit for all bots
 
-### What does this mean?
-
-This limit controls the traffic that all bot are allowed to generate across a single thread. A &quot;thread&quot; here is a 1:1 between bot and user, a group-chat, or a channel in a team.
-
-### What are the limits?
+This limit controls the traffic that all bots are allowed to generate across a single conversation. A conversation here is a 1:1 between bot and user, a group-chat, or a channel in a team.
 
 | **Scenario** | **Time-period (sec)** | **Max allowed operations** |
 | --- | --- | --- |
@@ -139,16 +137,12 @@ This limit controls the traffic that all bot are allowed to generate across a si
 | GetThread | 1 | 28 |
 | GetThread | 2 | 32 |
 
-## Bot per DC limit
+## Bot per datacenter limit
 
-### What does this mean?
+This limit controls the traffic that a bot is allowed to generate across all threads in a data-center (across multiple tenants).
 
-This limit controls the traffic that a bot is allowed to generate across all threads in a data-center.
-
-### What are the limits?
-
-| **Scenario** | **Time-period (sec)** | **Max allowed operations** |
-| --- | --- | --- |
-| \* | 1 | 20 |
-| \* | 1800 | 8000 |
-| \* | 3600 | 15000 |
+|**Time-period (sec)** | **Max allowed operations** |
+| --- | --- |
+| 1 | 20 |
+| 1800 | 8000 |
+| 3600 | 15000 |
