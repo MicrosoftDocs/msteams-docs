@@ -34,7 +34,7 @@ The images you upload with the English language will be the ones used in AppSour
 
 ## Localizing the strings in your app manifest
 
-You must utilize the Microsoft Teams app schema v1.5 to properly localize your app. You can do this by setting the $schema attribute in your manifest.json file to 'https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json' and updating the 'manifestVersion' property to '1.5'.
+You must use the Microsoft Teams app schema v1.5 to properly localize your app. You can do this by setting the `$schema` attribute in your manifest.json file to 'https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json' and updating the 'manifestVersion' property to '1.5'.
 
 ### Example manifest.json change
 
