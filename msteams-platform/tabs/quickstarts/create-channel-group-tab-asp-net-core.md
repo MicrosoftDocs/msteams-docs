@@ -5,6 +5,7 @@ description: A quickstart guide to creating a channel and group tab with ASP.NET
 ms.topic: quickstart 
 ms.author: laujan 
 ---
+# Quickstart: Create a Channel and Group Tab with ASP.NET Core
 
 Custom tabs enable you to embed your hosted web content directly into Microsoft Teams and add Teams-specific functionality via your  [Teams App Package](foo.md) (see [What are custom tabs in Microsoft Teams?](/msteams-platform/tabs/what-are-custom-tabs.md)). There are two types of tabs available in Teams - channel/group and personal. A channel/group tab delivers content to channels and group chats and are a great way to create collaborative spaces around dedicated web-based content. A channel/group tab can be pinned to the tabs bar located at the top of the channel and each channel or group chat can have its own tabs to support specific focus areas. An app can only have one channel/group tab.
 
@@ -22,7 +23,7 @@ In addition, this project requires that you have the following installed in your
 
 - The Visual Studio 2019 IDE with the `.NET CORE cross-platform development` workload installed. If you don't already have Visual Studio, you can download and install the latest [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) version for free.
 
-![screenshot: visual studio install options](/msteams-docs/platform/assets/workloads.png)
+![screenshot: visual studio install options](/msteams-docs/platform/assets/images/tab-images/workloads.png)
 
 - The [Ngrok](https://ngrok.com/docs) reverse proxy tool. You will use ngrok to create a tunnel to your locally running web server's publicly-available HTTPS endpoints. Go to https://ngrok.com/download to get the download for your environment. You will use ngrok to create a tunnel to your locally running web server's publicly-available HTTPS endpoints.
 
@@ -225,7 +226,7 @@ After your channel/group has been uploaded to Microsoft teams, via ngrok, and su
 
 - In the next popup choose the team channel where you would like the tab displayed and click ![set up button](/microsoftteams/platform/assets/images/tab-images/setUp-button.png.
 
-- In the final popup select a value for the configuration page and ![save button](/microsoftteams/platform/assets/images/tab-images/save-button.png.
+- In the final popup select a value for the configuration page and ![save button](/microsoftteams/platform/assets/images/tab-images/save-button.png).
 
 - To view, select your new tab from the tab bar.
 
