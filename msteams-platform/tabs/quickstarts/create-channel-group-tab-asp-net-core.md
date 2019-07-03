@@ -213,7 +213,7 @@ The `Domains from your tabs` should contain only your ngrok URL without the HTTP
 
 ##### Test and distribute
 
-- Click the /msteams-docs/msteams-platform/includes/design/install-button.html/ button.
+- Click the <button type="button" style="background-color:#5458AE;color:white;font-size:small;letter-spacing:1px; font-weight:light; border-radius:4px; width:75px; height: 35px; margin:3px">Install</button>button.
 
 >[!IMPORTANT]
 >In the `Description` field on the right you will see the following warning:\
