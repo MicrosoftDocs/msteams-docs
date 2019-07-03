@@ -5,7 +5,7 @@ description: A quickstart guide to creating a channel and group tab with ASP.NET
 ms.topic: quickstart 
 ms.author: laujan 
 ---
-# Quickstart: Create a Channel and Group Tab with ASP.NET Core
+# Quickstart: Create a Channel and Group Tab with ASP.NET Core Razor Pages
 
 Custom tabs enable you to embed your hosted web content directly into Microsoft Teams and add Teams-specific functionality via your  [Teams App Package](foo.md) (see [What are custom tabs in Microsoft Teams?](/msteams-platform/tabs/what-are-custom-tabs.md)). There are two types of tabs available in Teams - channel/group and personal. A channel/group tab delivers content to channels and group chats and are a great way to create collaborative spaces around dedicated web-based content. A channel/group tab can be pinned to the tabs bar located at the top of the channel and each channel or group chat can have its own tabs to support specific focus areas. An app can only have one channel/group tab.
 
