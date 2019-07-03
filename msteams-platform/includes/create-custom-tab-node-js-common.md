@@ -1,10 +1,6 @@
 ## Prerequisites
 
-<<<<<<< HEAD
-- To complete this quickstart you will need an Office 365 tenant and a team configured with *Allow uploading custom apps* enabled. To learn more, see [Manage Microsoft Teams settings for your organization](/OfficeDocs-SkypeForBusiness/Teams/enable-features-office-365.md). If you don't currently have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program. The subscription will remain active as long as you're using it for ongoing development (see [Welcome to the Office 365 Developer Program](/OfficeDev/office-dev-program-docs/docs/office-365-developer-program.md)).
-=======
 - To complete this quickstart you will need an Office 365 tenant and a team configured with *Allow uploading custom apps* enabled. To learn more, see [Manage Microsoft Teams settings for your organization](/OfficeDocs-SkypeForBusiness/Teams/enable-features-office-365.md). If you don't currently have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program. The subscription will remain active as long as you're using it for ongoing development. See [Welcome to the Office 365 Developer Program](/OfficeDev/office-dev-program-docs/docs/office-365-developer-program.md).
->>>>>>> ac92aaebfe1e7047409842217aa7dfddb682963a
 
 In addition, this project requires that you have the following installed in your development environment:
 
@@ -28,7 +24,7 @@ In addition, this project requires that you have the following installed in your
 
 Open a command prompt and create a new directory for your tab project. Navigate to your new directory and type the command `yo teams` . This will start the Teams Yeoman generator. Next, you'll be asked a series of config questions:
 
-![generator opening screenshot](/microsoftteams/platform/assets/teamsTabScreen.PNG)
+![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreen.PNG)
 
 ***What is your solution name?*** <br>&emsp; This is your project name. You can accept the suggested name by pressing enter.<br>***Where do you want to place the files?*** <br>&emsp; You're currently in your project directory. Press enter.<br>***Title of your Microsoft Teams app project?*** <br>&emsp; This is your app package name and will be used in the manifest and description of your app. <br>***Your (company) name? (max 32 characters)*** <br>&emsp; Your company name will be used in the manifest.<br>***Which manifest version would you like to use?*** <br>&emsp; For this quickstart select v1.5 which is the generator's current general available schema.<br>***Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)*** <br>&emsp;This field isn't required, and should only be used if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com). <br>***What do you want to add to your project?*** <br>&emsp; Select ( &ast; ) A Tab.<br>
 ***The URL where you will host this solution?*** <br>&emsp;

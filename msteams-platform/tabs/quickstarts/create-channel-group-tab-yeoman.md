@@ -57,10 +57,10 @@ gulp serve
 ```
 
 >Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser and view your app's content page:
->>![content page screenshot](/microsoftteams/platform/assets/channelGroupTab.PNG)
+>>![content page screenshot](/microsoftteams/platform/assets/images/tab-images/channelGroupTab.PNG)
 
 >To view your tab configuration page, add  `config.html` to the file path: `http://localhost:3007/<yourDefaultAppNameTab>/config.html`and press Enter. You should see the following:
->>![configuration page screenshot](/microsoftteams/platform/assets/configurationPage.PNG)
+>>![configuration page screenshot](/microsoftteams/platform/assets/images/tab-images/configurationPage.PNG)
 
 ## Package your app for Microsoft Teams
 
