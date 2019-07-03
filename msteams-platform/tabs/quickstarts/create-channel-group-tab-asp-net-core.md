@@ -212,10 +212,7 @@ There is a list of steps in the left-hand side of the Manifest editor, and on th
 The `Domains from your tabs` should contain only your ngrok URL without the HTTPS prefix, similar to `yo8urGro7upChann3elTa2b.ngrok.io/`.
 
 ##### Test and distribute
-
-<style>.bt{color:red;}</style>
-
-- Click the <button class="bt" style="background-color:#5458AE;color:white;font-size:small;letter-spacing:1px; font-weight:light; border-radius:4px; width:75px; height: 35px; margin:3px;">Install</button>button.
+- Click the <button type="button" style="background-color:#5458AE;color:white;font-size:small;letter-spacing:1px; font-weight:light; border-radius:4px; width:75px; height: 35px; margin:3px;">Install</button> button.
 
 >[!IMPORTANT]
 >In the `Description` field on the right you will see the following warning:\
