@@ -7,13 +7,13 @@ ms.author: laujan
 ---
 # Quickstart: Create a Channel and Group Tab with ASP.NET Core Razor Pages
 
-Custom tabs enable you to embed your hosted web content directly into Microsoft Teams and add Teams-specific functionality via your  [Teams App Package](foo.md) (see [What are custom tabs in Microsoft Teams?](/msteams-platform/tabs/what-are-custom-tabs.md)). There are two types of tabs available in Teams - channel/group and personal. A channel/group tab delivers content to channels and group chats and are a great way to create collaborative spaces around dedicated web-based content. A channel/group tab can be pinned to the tabs bar located at the top of the channel and each channel or group chat can have its own tabs to support specific focus areas. An app can only have one channel/group tab.
+Custom tabs enable you to embed your hosted web content directly into Microsoft Teams and add Teams-specific functionality via your  [Teams App Package](foo.md). See [What are custom tabs in Microsoft Teams?](/msteams-platform/tabs/what-are-custom-tabs.md). There are two types of tabs available in Teams - channel/group and personal. A channel/group tab delivers content to channels and group chats and are a great way to create collaborative spaces around dedicated web-based content. A channel/group tab can be pinned to the tabs bar located at the top of the channel and each channel or group chat can have its own tabs to support specific focus areas. An app can only have one channel/group tab.
 
 In this quickstart we'll walk-through creating a custom channel/group tab with C# and [ASP.Net Core](AspNetCore.Docs/aspnetcore/index.md) [Razor Pages](/aspnet/AspNetCore.Docs/aspnetcore/mvc/views/razor.md). When a user chooses to add or update your tab, Microsoft Teams will load the configurationUrl, specified in your manifest, within an IFrame and render it in your channel or group chat.You will also use App Studio for Microsoft Teams [App Studio for Microsoft Teams](/msteams-platform/get-started/get-started-app-studio.md) to test your tab's Teams integration.
 
 ## Prerequisites
 
-- To complete this quickstart you will need an Office 365 tenant and a team configured with *Allow uploading custom apps* enabled. To learn more, see [Manage Microsoft Teams settings for your organization](/OfficeDocs-SkypeForBusiness/Teams/enable-features-office-365.md). If you don't currently have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program. The subscription will remain active as long as you're using it for ongoing development (see [Welcome to the Office 365 Developer Program](/OfficeDev/office-dev-program-docs/docs/office-365-developer-program.md).
+- To complete this quickstart you will need an Office 365 tenant and a team configured with *Allow uploading custom apps* enabled. To learn more, see [Manage Microsoft Teams settings for your organization](/OfficeDocs-SkypeForBusiness/Teams/enable-features-office-365.md). If you don't currently have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program. The subscription will remain active as long as you're using it for ongoing development. See [Welcome to the Office 365 Developer Program](/OfficeDev/office-dev-program-docs/docs/office-365-developer-program.md).
 
 - You will use the App Studio for Microsoft Teams to import your app package to Teams. To install App Studio in Teams click **Apps** ![Store App](/msteams-docs/platform/assets/storeApp.png) at the bottom-left corner of the app, and search for App Studio. Once you find the tile for App Studio, click on it and choose install in the popup dialog box.
 
@@ -23,7 +23,7 @@ In addition, this project requires that you have the following installed in your
 
 - The Visual Studio 2019 IDE with the `.NET CORE cross-platform development` workload installed. If you don't already have Visual Studio, you can download and install the latest [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) version for free.
 
-![screenshot: visual studio install options](/msteams-docs/platform/assets/images/tab-images/workloads.png)
+![screenshot: visual studio install options](/microsoftteams/platform/assets/images/tab-images/workloads.png)
 
 - The [Ngrok](https://ngrok.com/docs) reverse proxy tool. You will use ngrok to create a tunnel to your locally running web server's publicly-available HTTPS endpoints. Go to https://ngrok.com/download to get the download for your environment. You will use ngrok to create a tunnel to your locally running web server's publicly-available HTTPS endpoints.
 
@@ -226,7 +226,7 @@ After your channel/group has been uploaded to Microsoft teams, via ngrok, and su
 
 - In the next popup choose the team channel where you would like the tab displayed and click ![set up button](/microsoftteams/platform/assets/images/tab-images/setUp-button.png.
 
-- In the final popup select a value for the configuration page and ![save button](/microsoftteams/platform/assets/images/tab-images/save-button.png).
+- In the final popup select a value for the configuration page and click ![save button](/microsoftteams/platform/assets/images/tab-images/save-button.png).
 
 - To view, select your new tab from the tab bar.
 
