@@ -120,7 +120,8 @@ gulp ngrok-serve
 
 ## Upload your app in Microsoft Teams
 
-- Open Microsoft Teams. In the **YourTeams** panel click (**&#8943;**) *More options* next to the team that you're using to test your app's tabs and Select *Manage team*. 
+- Open Microsoft Teams using the web based version of [Teams](https://teams.microsoft.com) so that you can inspect your JavaScript code with your browser's developer tools.
+- In the **YourTeams** panel click (**&#8226;&#8226;&#8226;**) *More options* next to the team that you're using to test your app's tabs and Select *Manage team*. 
 - In the main panel click on *Apps* from the tab bar and click on *Upload a custom app* located in the lower right-hand corner of the page. 
 - Open your project folder, browse to the `./package` folder, select the zip file in the `./package` folder, right-click, and choose open. 
 - Your app will upload into Microsoft Teams.

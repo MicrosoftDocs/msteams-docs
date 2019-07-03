@@ -64,7 +64,7 @@ gulp serve
 
 ## Package your app for Microsoft Teams
 
-Microsoft Teams is an entirely cloud-based product, and thus requires your app to be available from the cloud using HTTPS endpoints. Teams doesn't allow apps to be hosted on localhost. Therefore, you need to either publish your app to a public URL or use a proxy which will expose your local port to an internet-facing URL.
+Microsoft Teams is an entirely cloud-based product, and thus requires your app to be available from the cloud using HTTPS endpoints. Teams doesn't allow apps to be hosted on localhost. Therefore, you need to either publish your app to a public URL, or use a proxy which will expose your local port to an internet-facing URL.
 
 To test your tab extension you'll use [ngrok](https://ngrok.com/docs), which is built into this project. Ngrok is a reverse proxy software tool that will create a tunnel to your locally running web server's publicly-available HTTPS endpoints. Your server's web endpoints will be available during the current session on your local machine. When the machine is shut down or goes to sleep the service will no longer be available.
 
@@ -74,18 +74,19 @@ To test your tab extension you'll use [ngrok](https://ngrok.com/docs), which is 
 gulp ngrok-serve
 ```
 
+> [!IMPORTANT]
+> After your channel/group has been uploaded to Microsoft teams, via ngrok, and successfully saved, you can view it in tabs gallery, add it to the tabs bar, and interact with it until your tunnel session ends . However, you must serve your tab on your hosted website before submitting your app to the Teams app store for approval.
+
 ## Upload your app in Microsoft Teams
 
-- Open Microsoft Teams. In the **YourTeams** panel click (**&#8943;**) *More options* next to the team that you're using to test your app's tabs and select *Manage team*. 
+- Open Microsoft Teams using the web based version of [Teams](https://teams.microsoft.com) so that you can inspect your JavaScript code with your browser's developer tools.
+- In the **YourTeams** panel click (**&#8226;&#8226;&#8226;**) *More options* next to the team that you're using to test your app's tabs and select *Manage team*.
 - In the main panel click on *Apps* from the tab bar and click on *Upload a custom app* located in the lower right-hand corner of the page.
 - Open your project folder, browse to the `./package` folder, select the zip file in the `./package` folder, right-click, and choose open.
 - Your app will upload into Microsoft Teams.
 - Return to your team's General channel and select ➕ to add your tab from the list of tabs. 
 - Follow the directions for adding a tab. Note that there's a custom configuration dialog for your channel/group tab.
 - Select *Save* and your tabs will be loaded in Microsoft Teams.
-
-> [!IMPORTANT]
-> After your channel/group has been uploaded to Microsoft teams via ngrok and successfully saved, you can view it in tabs gallery and interact with it until your tunnel session ends . However, you must serve your tab on your hosted website to add it to the tabs bar.
 
 ## Add your channel/group tab to the tab bar
 
@@ -95,5 +96,6 @@ gulp ngrok-serve
 - Enter a value for the configuration page.
 - *Save*.
 - To view, select your new tab from the tab bar.
+
 
 ### Nice work! You just extended Microsoft Teams with custom tabs
