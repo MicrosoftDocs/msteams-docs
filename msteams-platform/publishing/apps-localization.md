@@ -34,11 +34,37 @@ The images you upload with the English language will be the ones used in AppSour
 
 ## Localizing the strings in your app manifest
 
-In your app manifest file you provide multiple strings that are displayed to the end-user. If you choose, you can provide additional .json files with translations of these strings. Teams will use the translation that matches your end-user's default language settings in their client if it is available. Teams will also use the closest base language to any specific dialect. For example, if the client default language is set to `fr-ca` (French Canadien) and you do not provide a `fr-ca` translation but you do provide a `fr` (French) translation, we will use the `fr` translation. See: [Localization file JSON schema](~/resources/schema/localization-schema.md) for addtional information on the localization file.
+You must use the Microsoft Teams app schema v1.5 to properly localize your app. You can do this by setting the `$schema` attribute in your manifest.json file to 'https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json' and updating the 'manifestVersion' property to '1.5'.
 
-To accomplish this you'll need to add the `localizationInfo` object to your app manifest file, providing the default language and pointers to any additional languages you'd like to support. For each additional language you wish to support you'll need to provide a .json file with translations of the strings you wish to localized.
+### Example manifest.json change
 
-### Example manifest change
+```json
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.5",
+  ...
+}
+```
+
+You will then want to add the 'localizationInfo' property with the default language that your application supports.
+
+### Example manifest.json change
+
+```json
+{
+  ...
+  "localizationInfo": {
+    "defaultLanguageTag": "en-us"
+  }
+  ...
+}
+```
+
+If you choose, you can provide additional .json files with translations of these strings. Teams will use the translation that matches your end-user's default language settings in their client if it is available. Teams will also use the closest base language to any specific dialect. For example, if the client default language is set to `fr-ca` (French Canadien) and you do not provide a `fr-ca` translation but you do provide a `fr` (French) translation, we will use the `fr` translation. See: [Localization file JSON schema](~/resources/schema/localization-schema.md) for addtional information on the localization file.
+
+For each additional language you wish to support you'll need to provide a .json file with translations of the strings you wish to localize and reference this file in the 'localizationInfo' object of your manifest.json file.
+
+### Example manifest.json change
 
 ```json
 {
