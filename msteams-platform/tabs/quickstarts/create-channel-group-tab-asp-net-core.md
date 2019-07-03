@@ -213,7 +213,7 @@ The `Domains from your tabs` should contain only your ngrok URL without the HTTP
 
 ##### Test and distribute
 
-- Click the <button style="background-color:	#5458AE;color:white;font-size:small;letter-spacing:1px; font-weight:light; border-radius:4px; width:75px; height: 35px; margin:3px" disabled>Install</button> button. 
+- Click the <button style="background-color:	#5458AE;color:white;font-size:small;letter-spacing:1px; font-weight:light; border-radius:4px; width:75px; height: 35px; margin:3px">Install</button> button.
 
 >[!IMPORTANT]
 >In the `Description` field on the right you will see the following warning:\
@@ -221,12 +221,12 @@ The `Domains from your tabs` should contain only your ngrok URL without the HTTP
 After your channel/group has been uploaded to Microsoft teams, via ngrok, and successfully saved, you can view it in tabs gallery, add it to the tabs bar, and interact with it until your tunnel session ends . \
 **Remember to serve your tab on your hosted website prior to submission to the Teams app store for approval**.
 
-- In the popup's `Add to a team or chat` field enter your team and click <button style="background-color:	#5458AE;color:white;font-size:small;letter-spacing:1px; font-weight:light; border-radius:4px; width:75px; height: 35px; margin:3px" disabled>Install</button>.
+- In the popup's `Add to a team or chat` field enter your team and click <button style="background-color:	#5458AE;color:white;font-size:small;letter-spacing:1px; font-weight:light; border-radius:4px; width:75px; height: 35px; margin:3px">Install</button>.
 
 -In the next popup choose the team channel where you would like the tab displayed and click
-<button style="background-color:white;color:black;font-size:small;letter-spacing:1px; font-weight:light; border-radius:4px; width:75px; height: 35px; margin:3px" disabled>Set up</button>
+<button style="background-color:white;color:black;font-size:small;letter-spacing:1px; font-weight:light; border-radius:4px; width:75px; height: 35px; margin:3px">Set up</button>
 
--In the final popup select a value for the configuration page and click <button style="background-color:	#5458AE;color:white;font-size:small;letter-spacing:1px; font-weight:light; border-radius:4px; width:75px; height: 35px; margin:3px" disabled>Save</button>
+-In the final popup select a value for the configuration page and click <button style="background-color:	#5458AE;color:white;font-size:small;letter-spacing:1px; font-weight:light; border-radius:4px; width:75px; height: 35px; margin:3px">Save</button>
 
 - To view, select your new tab from the tab bar.
 

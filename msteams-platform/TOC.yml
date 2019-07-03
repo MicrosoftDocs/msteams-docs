@@ -28,7 +28,6 @@
     href: _old/samples/app-templates.md
 - 
   name: Concepts
-  expanded: true
   items:
     -
       name: 'Understand Teams app capabilities'
@@ -316,6 +315,46 @@
           name: dosomethingelse
           href: foo.md
 -
+  name: 'Task modules'
+  items:
+    -
+      name: 'What are task modules?'
+      href: foo.md
+    -
+      name: Quickstarts
+      items:
+        -
+          name: 'Create an incoming webhook'
+          href: foo.md
+        -
+          name: 'Create a outgoing webhook'
+          href: foo.md
+        -
+          name: 'Create an O365 Connector'
+          href: foo.md
+    -
+      name: Samples
+      href: old/samples/code-samples.md
+    -
+      name: 'Design your task module'
+      items:
+        -
+          name: 'something somethign Design'
+          href: foo.md
+        -
+          name: 'somethingelse design'
+          href: foo.md
+    -
+      name: 'How-to guides'
+      expanded: true
+      items:
+        -
+          name: dosoemthign
+          href: foo.md
+        -
+          name: dosomethingelse
+          href: foo.md
+-
   name: 'Webhooks and Connectors'
   items:
     -
@@ -409,5 +448,5 @@
       name: 'Microsoft Graph APIs'
       href: _old/resources/microsoft-graph.md
 -
-  name: Feedback
+  name: Support and feedback
   href: _old/feedback.md
