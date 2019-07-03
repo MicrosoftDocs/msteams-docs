@@ -164,15 +164,18 @@
   - name: Share to Teams
     href: ./share-to-teams.md
 - name: Publishing
-  href: ./publishing/apps-publish.md
   items:
-  - name: AppSource checklist
+  - name: Publishing your app
+    href: ./publishing/apps-publish.md
+  - name: AppSource package checklist
     href: ./publishing/office-store-checklist.md
-  - name: AppSource guidance
+  - name: AppSource submission walkthrough
     href: ./publishing/office-store-guidance.md
+  - name: AppSource app approval guidance
+    href: ./publishing/office-store-approval.md
   - name: Localizing your app
     href: ./publishing/apps-localization.md
-  - name: Application Certification
+  - name: App Certification Program
     href: ./publishing/application-certification.md
 - name: App scenarios
   href: ./scenarios/lob-scenarios-landing-page.md
