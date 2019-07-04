@@ -33,16 +33,17 @@ The information below covers some of the most common reasons apps fail validatio
 
 Apps must provide a clear, simple sign in/out and (when appropriate) sign-up experience. The experience must be reachable across all capabilities in your app.
 
-* If there is a sign-in option, there must be a sign-out option, even if the app is using SSO/Silent Authentication.
-* The sign-out option must sign them out of only the capability, not the Teams client.
-* The sign-out behavior has to be consistent with the sign-in behavior.
+* If there is an explicit sign-in option provided to the user, there must be a sign-out option too (even if the app is using SSO/Silent Authentication)
+* The sign-out option must sign the user out of only your app's capability, and not from the Teams client.
+* Every scope that has a sign in must have a sign out as well. A sign out can sign out from one scope or all scopes. (Example: If the sign in option signs the user into a messaging extension and tab, the sign out option must sign the user from the message extension and tab (at minimum)). 
+
 * Make sure there is always a way to reverse the following (or similar) behaviors:
   * Sign-in => sign-out
   * Link an account/service => un-link an account/service
   * Connect an account/service => disconnect the account/service
   * Authorize an account/service => de/un-authorize the account/service
   * Register an account/service => un-register the account/service
-* If your app requires an account or service, you must provide a way to sign-up or request sign-up.
+* If your app requires an account or service, you must provide a way for the user to sign-up or request sign-up. An exception can be sought for sign up process if you app fits in the "Enterprise" app category.
 
 For additional information on authentication see:
 
@@ -79,20 +80,21 @@ Make sure your app descriptions and screenshots follow the [AppSource guidance](
 
 ### Help and configuration pages
 
-It is highly recommended to have help/FAQ link for your Teams app and to provide this link in first-run user experience. For all personal apps we recommend you provide your help page as a personal tab for ease of discovery.
+It is highly recommended to have help/FAQ link for your Teams app and to provide this link in first-run user experience. For all personal apps we recommend you provide your help page as a personal tab for better user experience.
 
 ### Privacy policy, terms of use and support URLs
 
-* The Privacy policy can be specific to your app/add-in or can be an overall privacy policy for all the services from a developer. There should be no broken links and no beta or staging URLs. If you use a generic privacy policy, it must reference "Services/Applications/Platforms", and not just "Website".
-* Privacy policy should cover how you handle user data storage, data retention, and security controls information.
+* The Privacy policy can be specific to your app/add-in or can be an overall privacy policy for all the services from a developer. There should be no broken links and no beta or staging URLs. If you use a generic privacy policy, it must reference "Services/Applications/Platforms" which will also cover your Teams app, and not just your "Website".
+* Privacy policy should cover how you handle user data storage, user data retention, deletion and security controls information.
 * Your privacy policy must have your contact information.
-* Your support URL should not require authentication before contacting you for any issues with your app.
+* Your support URL should not require authentication/login before contacting you for any issues with your app.
 
 ### Bots and messaging extensions
 
 * Be sure that your bot provides appropriate responses when mentioned (@*botname*) in a channel and in personal conversations as needed. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](~/resources/schema/manifest-schema.md#bots).)
+* Bot must provide a Welcome message outlinig its value for the user along with the valid commands.
 * Your bot should respond to invalid commands with help content. For example "I'm sorry, I don't understand. Type "help" for more information."
-* Your bot must include a help command that provides your value proposition and valid commands.
+* Your bot must include a help command that provides your value proposition along with all your valid commands.
 * For bots, a response to a user command must occur within two seconds. If longer processing is required, you must use a typing indicator.
 * For messaging extensions, a response to a user command must occur within five seconds.
 
@@ -100,10 +102,11 @@ It is highly recommended to have help/FAQ link for your Teams app and to provide
 
 * For your tab configuration page, be sure to provide "About" links and proper guidance. This page is the first thing the user sees, so ensure that a new user understands what to do.
 * If a response to an action takes more than three seconds, you must provide a loading message or warning.
+* The core functionality of your tab offering must occue within Teams and not outside of Teams
 
 ### Miscellaneous
 
 * Check your manifest for completeness and accuracy. Then check it again.
 * Do not make changes to your app while validation is in progress. This will require a complete re-validation of your app.
-* Your app  must not stop responding, end unexpectedly, or contain programming errors. If there is an issue it should fail gracefully with a valid message to user.
-* Your app must not automatically download or install or launch other executable code on the user's environment.
+* Your app  must not stop responding, end unexpectedly, or contain programming errors. If there is an issue it should fail gracefully with a valid way forward message to user.
+* Your app must not automatically download or install or launch any executable code on the user's environment. Any download should seek an explicit permission from user
