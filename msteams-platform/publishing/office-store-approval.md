@@ -69,7 +69,7 @@ You must provide at least two login credentials, one admin and one not, so we ca
 
 Make sure your app descriptions and screenshots follow the [AppSource guidance](/office/dev/store/create-effective-office-store-listings).
 
-* Don't use "Teams" or "Microsoft" in your app name; in all contexts, that extra clarification is superfluous.
+* Don't use "Teams", "Microsoft", or "app" in your app name.
 * The developerName in the App Manifest must be same as the Provider Name defined in Seller Dashboard.
 * Make sure the app description, screenshots, text, and promotional images describe only the app and do not contain any additional advertising, promotions or copyrighted brand names.
 * If your product requires an account on your service or another service, list that in the description and ensure there are links to sign up, sign in and sign out.
@@ -79,7 +79,7 @@ Make sure your app descriptions and screenshots follow the [AppSource guidance](
 
 ### Help and configuration pages
 
-It is highly recommended to have help/FAQ link for your Teams app and to provide this link in first run user experience, and while installing the app. For all personal apps - we recommend you provide your help page as a personal tab.
+It is highly recommended to have help/FAQ link for your Teams app and to provide this link in first-run user experience. For all personal apps we recommend you provide your help page as a personal tab for ease of discovery.
 
 ### Privacy policy, terms of use and support URLs
 
@@ -105,5 +105,5 @@ It is highly recommended to have help/FAQ link for your Teams app and to provide
 
 * Check your manifest for completeness and accuracy. Then check it again.
 * Do not make changes to your app while validation is in progress. This will require a complete re-validation of your app.
-* Your app  must not stop responding, end unexpectedly, or contain programming errors. If there is an issue - always it should fail gracefully with a valid message to user.
-* Make sure your app must not automatically download or install or launch other executable code on the user's environment.
+* Your app  must not stop responding, end unexpectedly, or contain programming errors. If there is an issue it should fail gracefully with a valid message to user.
+* Your app must not automatically download or install or launch other executable code on the user's environment.
