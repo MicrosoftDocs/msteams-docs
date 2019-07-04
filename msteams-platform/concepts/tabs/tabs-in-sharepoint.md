@@ -116,4 +116,4 @@ Once your page is published, you can explore [turning your Teams app into a more
 ## More information
 
 - [Building Microsoft Teams tab using SharePoint Framework - Tutorial](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
-- [Using single part app pages in SharePoint Online](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
+- [Using single part app pages in SharePoint](/sharepoint/dev/spfx/web-parts/single-part-app-pages)

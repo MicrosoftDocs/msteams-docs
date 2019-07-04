@@ -6,7 +6,7 @@ ms.date: 02/28/2018
 ---
 # Silent authentication
 
-Silent authentication in Azure Active Directory (Azure AD) is a simplified form of single sign-on (SSO). Its purpose it to minimize the number of times a user needs to enter login credentials while using your app.
+Silent authentication in Azure Active Directory (Azure AD) is a simplified form of single sign-on (SSO). Its purpose is to minimize the number of times a user needs to enter login credentials while using your app.
 
 If you want to keep your code completely client-side, you can use the [Azure Active Directory Authentication Library](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-authentication-libraries) for JavaScript to attempt to acquire an Azure AD access token silently. This means that the user may never see a popup dialog if they have signed in recently.
 

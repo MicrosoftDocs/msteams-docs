@@ -60,11 +60,11 @@ Call `GetTeamsConversationMembersAsync` using `Team.Id` to return a list of user
 // Fetch the members in the current conversation
 var connector = new ConnectorClient(new Uri(context.Activity.ServiceUrl));
 var teamId = context.Activity.GetChannelData<TeamsChannelData>().Team.Id;
-var members = await connector.Conversations.GetTeamsConversationMembersAsync(teamId);
+var members = await connector.Conversations.GetConversationMembersAsync(teamId);
 
 // Concatenate information about all members into a string
 var sb = new StringBuilder();
-foreach (var member in members AsTeamsChannelAccounts())
+foreach (var member in members.AsTeamsChannelAccounts())
 {
     sb.AppendFormat(
         "GivenName = {0}, TeamsMemberId = {1}",
