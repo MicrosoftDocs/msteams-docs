@@ -153,7 +153,7 @@ The markup should resemble the following with the **latest versions** referenced
     microsoftTeams.initialize();
 ```
 
-- Within the next set of script tags, you will find the two settings functions. Update the `websiteUrl` and `contentUrl` values in each function with the HTTPS `ngrok` URL to your app. Your code should look like the following (where `y8urGr7pChan3Ta2b` is replaced with your ngrok URL):
+- Within the next set of script tags, you will find the two settings functions. Update the `websiteUrl` and `contentUrl` values in each function with the HTTPS `ngrok` URL to your app. Your code should look like the following (except `y8urGr7pChan3Ta2b` is replaced with your ngrok URL):
 
 ```javascript
 let saveRed = () => {
@@ -223,6 +223,7 @@ There's a list of steps in the left-hand side of the Manifest editor, and on the
 ##### Team Tab
 
 - Under `Team Tab` click on the (**&#8226;&#8226;&#8226;**) button under the `Tab configuration url` field and select &#128393; `Edit`.
+
 - Update the `Configuration URL` with your `ngrok` HTTPS URL. Remember to include the */channelgroup* parameter at the end of the URL.
 
 #### Finish
@@ -236,14 +237,14 @@ The `Domains from your tabs` should contain only your ngrok URL without the HTTP
 - Click ![install](/microsoftteams/platform/assets/images/tab-images/install-button.png).
 
 >[!IMPORTANT]
->In the `Description` field on the right you will see the following warning:\
-&#9888; "**The 'validDomains' array cannot contain a tunneling site.**" <br>**The warning can be ignored while you are testing your app.** \
-After your channel/group has been uploaded to Microsoft teams, via ngrok, and successfully saved, you can view it in tabs gallery, add it to the tabs bar, and interact with it until your tunnel session ends . \
+>In the `Description` field on the right you will see the following warning:<br><br>
+&#9888; "**The 'validDomains' array cannot contain a tunneling site.**" <br>**The warning can be ignored while you are testing your app.**<br><br>
+After your channel/group has been uploaded to Microsoft teams, via ngrok, and successfully saved, you can view it in tabs gallery, add it to the tabs bar, and interact with it until your tunnel session ends .<br><br>
 **Remember to serve your tab on your hosted website prior to submission to the Teams app store for approval**.
 
 - In the pop-up window's `Add to a team or chat` field enter your Teams team and click ![install](/microsoftteams/platform/assets/images/tab-images/install-button.png)
 
-- In the next pop-up window choose the team channel where you would like the tab displayed and click ![set up](/microsoftteams/platform/assets/images/tab-images/setUp-button.png.
+- In the next pop-up window choose the team channel where you would like the tab displayed and click ![set up](/microsoftteams/platform/assets/images/tab-images/setUp-button.png).
 
 - In the final pop-up window select a value for the tab page (either a red or gray icon) and click ![save](/microsoftteams/platform/assets/images/tab-images/save-button.png).
 
