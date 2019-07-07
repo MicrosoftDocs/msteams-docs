@@ -15,7 +15,7 @@ In this quickstart we'll walk-through creating a custom channel/group tab with C
 
 - To complete this quickstart you'll need an Office 365 tenant and a team configured with *Allow uploading custom apps* enabled. To learn more, see [Manage Microsoft Teams settings for your organization](/OfficeDocs-SkypeForBusiness/Teams/enable-features-office-365.md). If you don't currently have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program. The subscription will remain active as long as you're using it for ongoing development. See [Welcome to the Office 365 Developer Program](/OfficeDev/office-dev-program-docs/docs/office-365-developer-program.md).
 
-- You'll use App Studio for Microsoft Teams to import your app package to Teams. To install App Studio in Teams click **Apps** ![Store App](/microsoftteams/platform/assets/images/tab-images/storeApp.png) at the bottom-left corner of the Teams app, and search for App Studio. Once you find the tile for App Studio, click on it and choose install in the popup window dialog box.
+- You'll use App Studio for Microsoft Teams to import your app package to Teams. To install App Studio in Teams select **Apps** ![Store App](/microsoftteams/platform/assets/images/tab-images/storeApp.png) at the bottom-left corner of the Teams app, and search for App Studio. Once you find the tile for App Studio, select it and choose install in the pop-up window dialog box.
 
 - You'll also need a [GitHub](https://github.com) account so that you can get a copy of the source code for for this project.
 
@@ -37,7 +37,7 @@ Open a command prompt and create a new directory for your tab project. You can f
 git clone https://github.com/MicrosoftDocs/CreateChannelGroupTabNetCore/foo.md
 ```
 
-Once the repository is cloned, open the solution file, `foo.md`, in Visual Studio and click `Build Solution` from the `Build` menu. Run the sample by pressing `F5` or choosing `Start Debugging` from the `Debug` menu and navigate to the following URLs to verify that the app URLS are loading:
+Once the repository is cloned, open the solution file, `foo.md`, in Visual Studio and select `Build Solution` from the `Build` menu. Run the sample by pressing `F5` or choosing `Start Debugging` from the `Debug` menu and navigate to the following URLs to verify that the app URLS are loading:
 
 - `http://localhost:44311`
 - `http://localhost:44311/privacy`
@@ -47,7 +47,7 @@ Once the repository is cloned, open the solution file, `foo.md`, in Visual Studi
 
 &#9989; Startup.cs
 
-This project was created from an ASP.NET Core web application empty template. Since Razor pages are a subset of the ASP.NET Core MVC framework, we needed to register the MVC services to the components to the service collection that MVC and, therefore, Razor Pages require. To do so, we added the dependency injection framework to the  `ConfigureServices()` method. Additionally,
+This project was created from an ASP.NET Core web application empty template. Since Razor pages are a subset of the ASP.NET Core MVC framework, we needed to register the MVC services for the components to the service collection that MVC and, therefore, Razor Pages require. To do so, we added the dependency injection framework to the  `ConfigureServices()` method. Additionally,
 the empty template doesn't enable serving static content by default, however, since your project will be serving static files&mdash;HTML, CSS, and images, we added the static files middleware to the `Configure()` method:
 
 ```csharp
@@ -64,7 +64,7 @@ public void Configure(IApplicationBuilder app)
 
 &#9989; wwwroot folder
 
-In the ASP.NET Core application, the web root (wwwroot) folder is the default static file location and isn't included with the empty template. We added a new folder to the root of our project, and named it wwwroot. When the newly created folder displayed in Solution Explorer it had the proper appearance and &#127760; icon. With the static files middleware added to the project, ASP.NET Core will look in the wwwroot folder of your app for static files and return them if the filename matches the request. The wwwroot folder contails the CSS styling tyling for our app `site.css`, an images folder containing several icons, and a library folder containing `bootstrap.css` files.
+In the ASP.NET Core application, the web root (wwwroot) folder is the default static file location and isn't included with the empty template. We added a new folder to the root of our project, and named it wwwroot. When the newly created folder displayed in Solution Explorer it had the proper appearance and &#127760; icon. With the static files middleware added to the project, ASP.NET Core will look in the wwwroot folder of your app for static files and return them if the filename matches the request. The wwwroot folder contains the CSS styling for your app `site.css`, an images folder containing several icons, and a library folder containing `bootstrap.css` files.
 
 &#9989; Index.cshtml
 
@@ -76,15 +76,15 @@ This C# file contains two simple methods that will be called from the `channelGr
 
 &#9989; Manifest folder
 
-The folder contains the following required files:
+This folder contains the following required files:
 
-- A full color icon measuring 192 x 192 pixels color
+- A full color icon measuring 192 x 192 pixels.
 - A transparent outline icon measuring 32 x 32 pixels.
 - A manifest.json file which specifies the attributes of your tab and points to required resources like the channelGroup page.
 
-These files will need to be zipped in an app package for use in uploading your app to Teams. When a user chooses to add or update your tab, Microsoft Teams will load the configurationUrl, specified in your manifest,load it in an IFrame, and render it in your channel or group chat.
+These files will need to be zipped in an app package for use in uploading your app to Teams. When a user chooses to add or update your tab, Microsoft Teams will load the configurationUrl, specified in your manifest, load it in an IFrame, and render it in your channel or group chat.
 
-In the Solution Explorer window right click on the foo.md project and click on `Edit Project File`. At the bottom of the file you will see the code that creates/updates your zip file when the project builds:
+In the Solution Explorer window right-click on the foo.md project and select on `Edit Project File`. At the bottom of the file you will see the code that creates/updates your zip file when the project builds:
 
 ```xml
 <PropertyGroup>
@@ -104,9 +104,9 @@ In the Solution Explorer window right click on the foo.md project and click on `
   </ItemGroup>
 ``` 
 
-## Establish an secure tunnel to your app
+## Establish a secure tunnel to your app
 
-Microsoft Teams is an entirely cloud-based product, and thus requires your app to be available from the cloud using HTTPS endpoints. Teams doesn't allow apps to be hosted on localhost. Therefore, you need to either publish your app to a public URL, or use a proxy that will expose your local port to an internet-facing URL.
+Microsoft Teams is an entirely cloud-based product, and thus requires that your app be available from the cloud using HTTPS endpoints. Teams doesn't allow apps to be hosted on localhost. Therefore, you need to either publish your app to a public URL, or use a proxy that will expose your local port to an internet-facing URL.
 
 To test your tab extension you'll use [ngrok](https://ngrok.com/docs). Your server's web endpoints will be available during the current session on your local machine. When the machine is shut down or goes to sleep the service will no longer be available.
 
@@ -116,7 +116,7 @@ To test your tab extension you'll use [ngrok](https://ngrok.com/docs). Your serv
 ngrok http https://localhost:44311 -host-header="localhost:44311"
 ```
 
-- Ngrok will listen to requests from the internet and will route them to your app when it is running on port 44311.  It should resemble `https://yo8urGro7upChann3elTa2b.ngrok.io/` where `yo8urGro7upChann3elTa2b` is replaced by the ngrok alpha-numeric URL.
+- Ngrok will listen to requests from the internet and will route them to your app when it is running on port 44311.  It should resemble `https://yo8urGro7upChann3elTa2b.ngrok.io/` where `yo8urGro7upChann3elTa2b` is replaced by ngrok's alpha-numeric HTTPS URL.
 
 - Make note of the HTTPS ngrok URL - you can copy it to `Notepad for Windows`. You will need the ngrok HTTPS URL to test your app in Teams.
 
@@ -124,11 +124,11 @@ ngrok http https://localhost:44311 -host-header="localhost:44311"
 
 In order for your channel/group tab to display within Microsoft Teams, you must include the `Microsoft Teams JavaScript client SDK` and include a call to the Teams SDK&mdash;`microsoftTeams.initialize()`&mdash;within your channel/group page &#60;`script`&#62; tags. This is how your app and the Teams app communicate.
 
-This project presents the user with two option buttons for displaying their channel/group tab with either a red or gray icon. Clicking the `Select Gray` or `Select Red` button fires either the `saveGray` or `saveRed` functions, respectively, sets `microsoftTeams.settings.setValidityState(true)`, and enables the *Save* button in the Teams UI. This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed.  Without this you'll be stuck in a loop and unable to proceed.
+This project presents the user with two option buttons for displaying the channel/group tab with either a red or gray icon. Selecting the `Select Gray` or `Select Red` button fires either the `saveGray` or `saveRed` functions, respectively, sets `microsoftTeams.settings.setValidityState(true)`, and enables the *Save* button in the Teams UI. This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed.  Without this you'll be stuck in a loop and unable to proceed.
 
 On save, the parameters of `microsoftTeams.settings.setSettings` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.  
 
-- The `Pages` folder is where the framework looks for Razor Pages by default. To reference the [Microsoft Teams Library](https://github.com/OfficeDev/microsoft-teams-library-js), click on the `Pages` folder, open the  `ChannelGroup.cshtml` file and add the markup for the latest version of the`jQuery Library` and the `MicrosoftTeams SDK` below the following Razor page shared layout reference:
+- The `Pages` folder is where the framework looks for Razor Pages by default. To reference the [Microsoft Teams Library](https://github.com/OfficeDev/microsoft-teams-library-js), select the `Pages` folder, open the  `ChannelGroup.cshtml` file, and add the markup for the latest version of the`jQuery Library` and the `MicrosoftTeams SDK` below the following Razor page shared layout reference:
 
 ```html
 @{
@@ -194,7 +194,7 @@ Your tab code is complete. Now you can build your project. But first, *Save all*
 
 - Open `Microsoft Teams` using the [web based version](https://teams.microsoft.com) so that you can inspect your front-end code using your browser's developer tools.
 
-- Open App studio and click on the `Manifest editor` tab.
+- Open App studio and select the `Manifest editor` tab.
 
 - Select the *Import an existing app* tile in the Manifest Editor to begin updating the app package for your tab. Recall that the source code comes with its own pre-made manifest and the `.csproj file` contains code to create an app package when the project is built. The name of your app package is *tab.zip*. You can search your local machine's file explorer or switch to Visual Studio `Folder View` to find your zip file's location. It should be found here:
 
@@ -206,7 +206,7 @@ Your tab code is complete. Now you can build your project. But first, *Save all*
 
 - Once you've uploaded your app into Teams, you will need to configure it to show content.
 
-- Click on the tile for your newly imported tab in the right panel of the Manifest Editor welcome page.
+- Select the tile for your newly imported tab in the right panel of the Manifest Editor welcome page.
 
 There's a list of steps in the left-hand side of the Manifest editor, and on the right a list of properties that need to be filled in for each of those steps. Much of the information has been provided by your `manifest.json` file but there are a few fields that you will need to update:
 
@@ -218,11 +218,11 @@ There's a list of steps in the left-hand side of the Manifest editor, and on the
 
 #### Capabilities:
 
-- Click on *Tabs*.
+- Select *Tabs*.
 
 ##### Team Tab
 
-- Under `Team Tab` click on the (**&#8226;&#8226;&#8226;**) button under the `Tab configuration url` field and select &#128393; `Edit`.
+- Under `Team Tab` select the (**&#8226;&#8226;&#8226;**) button under the `Tab configuration url` field and choose &#128393; `Edit`.
 
 - Update the `Configuration URL` with your `ngrok` HTTPS URL. Remember to include the */channelgroup* parameter at the end of the URL.
 
@@ -234,7 +234,7 @@ The `Domains from your tabs` should contain only your ngrok URL without the HTTP
 
 ##### Test and distribute
 
-- Click ![install](/microsoftteams/platform/assets/images/tab-images/install-button.png).
+- Select ![install](/microsoftteams/platform/assets/images/tab-images/install-button.png).
 
 >[!IMPORTANT]
 >In the `Description` field on the right you will see the following warning:<br><br>
@@ -242,11 +242,11 @@ The `Domains from your tabs` should contain only your ngrok URL without the HTTP
 After your channel/group has been uploaded to Microsoft teams, via ngrok, and successfully saved, you can view it in tabs gallery, add it to the tabs bar, and interact with it until your tunnel session ends .<br><br>
 **Remember to serve your tab on your hosted website prior to submission to the Teams app store for approval**.
 
-- In the pop-up window's `Add to a team or chat` field enter your Teams team and click ![install](/microsoftteams/platform/assets/images/tab-images/install-button.png)
+- In the pop-up window's `Add to a team or chat` field enter your Teams team and select ![install](/microsoftteams/platform/assets/images/tab-images/install-button.png)
 
-- In the next pop-up window choose the team channel where you would like the tab displayed and click ![set up](/microsoftteams/platform/assets/images/tab-images/setUp-button.png).
+- In the next pop-up window choose the team channel where you would like the tab displayed and select ![set up](/microsoftteams/platform/assets/images/tab-images/setUp-button.png).
 
-- In the final pop-up window select a value for the tab page (either a red or gray icon) and click ![save](/microsoftteams/platform/assets/images/tab-images/save-button.png).
+- In the final pop-up window select a value for the tab page (either a red or gray icon) and select ![save](/microsoftteams/platform/assets/images/tab-images/save-button.png).
 
 - To view, select your new tab from the tab bar.
 
