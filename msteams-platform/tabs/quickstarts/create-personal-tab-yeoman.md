@@ -131,4 +131,4 @@ gulp ngrok-serve
 - In the navbar located at the far-left of the Teams App, click (**&#8943;**) *More added apps*. You'll be presented with a list of personal view apps.
 - Select your app's personal tab from the list to view.
 
-### Nice work! You just extended Microsoft Teams with custom tabs.
+### Nice work! You just extended Microsoft Teams with a custom personal tab.
