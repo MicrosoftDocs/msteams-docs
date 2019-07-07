@@ -74,17 +74,17 @@ ASP.NET Core treats files called `Index` as the default page for the site. When 
 
 This C# file contains two simple methods that will be called from the `channelGroup.cshtml` file when your channel/group page is configured.
 
-&#9989; manifest folder
+&#9989; Manifest folder
 
-The Manifest folder contains the following required files:
+The folder contains the following required files:
 
 - A full color icon measuring 192 x 192 pixels color
 - A transparent outline icon measuring 32 x 32 pixels.
 - A manifest.json file which specifies the attributes of your tab and points to required resources like the channelGroup page.
 
-These files will need to be zipped in an app package for use in uploading your app to Teams. When a user chooses to add or update your tab, Microsoft Teams will load the configurationUrl, specified in your manifest, within an IFrame and render it in your channel or group chat.
+These files will need to be zipped in an app package for use in uploading your app to Teams. When a user chooses to add or update your tab, Microsoft Teams will load the configurationUrl, specified in your manifest,load it in an IFrame, and render it in your channel or group chat.
 
-In the Solution Explorer window right click on the foo.md project and click on `Edit Project File`. At the bottom of the file you will see the  code that builds your zip file when the project builds:
+In the Solution Explorer window right click on the foo.md project and click on `Edit Project File`. At the bottom of the file you will see the code that creates/updates your zip file when the project builds:
 
 ```xml
 <PropertyGroup>
@@ -106,7 +106,7 @@ In the Solution Explorer window right click on the foo.md project and click on `
 
 ## Establish an ngrok secure tunnel
 
-Microsoft Teams is an entirely cloud-based product, and thus requires your app to be available from the cloud using HTTPS endpoints. Teams doesn't allow apps to be hosted on localhost. Therefore, you need to either publish your app to a public URL, or use a proxy which will expose your local port to an internet-facing URL.
+Microsoft Teams is an entirely cloud-based product, and thus requires your app to be available from the cloud using HTTPS endpoints. Teams doesn't allow apps to be hosted on localhost. Therefore, you need to either publish your app to a public URL, or use a proxy that will expose your local port to an internet-facing URL.
 
 To test your tab extension you'll use [ngrok](https://ngrok.com/docs). Your server's web endpoints will be available during the current session on your local machine. When the machine is shut down or goes to sleep the service will no longer be available.
 
@@ -116,17 +116,19 @@ To test your tab extension you'll use [ngrok](https://ngrok.com/docs). Your serv
 ngrok http https://localhost:44311 -host-header="localhost:44311"
 ```
 
-- Ngrok will listen to requests from the internet and will route them to your app when it is running on port 44311.  It should look something like `https://yo8urGro7upChann3elTa2b.ngrok.io/` where `yo8urGro7upChann3elTa2b` is replaced by the ngrok alpha-numeric URL prefix. Make note of the HTTPS ngrok address - you can copy it to `Notepad for Windows`. You will need the ngrok HTTPS address to test your app in Teams.
+- Ngrok will listen to requests from the internet and will route them to your app when it is running on port 44311.  It should resemble `https://yo8urGro7upChann3elTa2b.ngrok.io/` where `yo8urGro7upChann3elTa2b` is replaced by the ngrok alpha-numeric URL. Make note of the HTTPS ngrok URL - you can copy it to `Notepad for Windows`. You will need the ngrok HTTPS URL to test your app in Teams.
 
 ## Update your configuration page for Teams
 
-The `Pages` folder is where the framework looks for Razor Pages by default. Click on the Pages folder and open the `ChannelGroup.cshtml` file.
+The `Pages` folder is where the framework looks for Razor Pages by default.
 
-In order for your channel/group tab to display within Microsoft Teams, you must include the `Microsoft Teams JavaScript client SDK` and include a call to the Teams SDK&mdash;`microsoftTeams.initialize()`&mdash;within your &#60;`script`&#62; tags. This is how your app and the Teams app communicate.
+In order for your channel/group tab to display within Microsoft Teams, you must include the `Microsoft Teams JavaScript client SDK` and include a call to the Teams SDK&mdash;`microsoftTeams.initialize()`&mdash;within your channel/group page &#60;`script`&#62; tags. This is how your app and the Teams app communicate.
 
- To reference the [Microsoft Teams Library](https://github.com/OfficeDev/microsoft-teams-library-js), 
+This project presents the user with two option buttons for displaying their channel/group tab with either a red or gray icon. Clicking the `Select Gray` or `Select Red` button fires either the `saveGray` or `saveRed` functions, respectively, sets `microsoftTeams.settings.setValidityState(true)`, and enables the *Save* button in the Teams UI. This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed.  Without this you'll be stuck in a loop and unable to proceed.
 
-- Click on the `Pages` folder, open the  `ChannelGroup.cshtml` file and add the markup for the latest version of the`jQuery Library` and the `MicrosoftTeams SDK` below the following Razor page shared layout reference:
+On save, the parameters of `microsoftTeams.settings.setSettings` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.  
+
+- To reference the [Microsoft Teams Library](https://github.com/OfficeDev/microsoft-teams-library-js), click on the `Pages` folder, open the  `ChannelGroup.cshtml` file and add the markup for the latest version of the`jQuery Library` and the `MicrosoftTeams SDK` below the following Razor page shared layout reference:
 
 ```html
 @{
@@ -151,11 +153,7 @@ The markup should resemble the following with the **latest versions** referenced
     microsoftTeams.initialize();
 ```
 
-This project presents the user with two option buttons for displaying their channel/group tab with either a red or gray icon. Clicking the `Select Gray` or `Select Red` button fires either the `saveGray` or `saveRed` functions, respectively, sets `microsoftTeams.settings.setValidityState(true)`, and enables the *Save* button in the Teams UI. This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed.  Without this you'll be stuck in a loop and unable to proceed.
-
-On save, the parameters of `microsoftTeams.settings.setSettings` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.  
-
-Within the next set of script tags, you will find the two settings functions. Update the `websiteUrl` and `contentUrl` values in each function with the HTTPS `ngrok` URL to your app. Your code should look like the following (where `y8urGr7pChan3Ta2b` is replaced with your ngrok URL):
+- Within the next set of script tags, you will find the two settings functions. Update the `websiteUrl` and `contentUrl` values in each function with the HTTPS `ngrok` URL to your app. Your code should look like the following (where `y8urGr7pChan3Ta2b` is replaced with your ngrok URL):
 
 ```javascript
 let saveRed = () => {
@@ -190,7 +188,7 @@ Your tab code is complete. Now you can build your project. But first, *Save all*
 - You can run the project by pressing `F5` or choosing `Start Debugging` from the `Debug` menu. Verify that `ngrok` is running and working properly by opening your browser and going to the HTTPS URL supplied by `ngrok` in your command prompt window.
 
 >[!TIP]
->You need to have both your app in Visual Studio and ngrok running to complete this quickstart. If you need to stop running your app in Visual Studio to work on it **keep ngrok running**. Ngrok will continue to listen  and will resume routing your app's request when your app restarts in Visual Studio. If you have to restart the ngrok service it will return a new address and you will have to update every place that uses that address.
+>You need to have both your app in Visual Studio and ngrok running to complete this quickstart. If you need to stop running your app in Visual Studio to work on it **keep ngrok running**. Ngrok will continue to listen  and will resume routing your app's request when your app restarts in Visual Studio. If you have to restart the ngrok service it will return a new URL and you will have to update every place that uses that URL.
 
 ### Upload your app in Microsoft Teams with App Studio
 
