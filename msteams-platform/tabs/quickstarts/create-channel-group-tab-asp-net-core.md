@@ -27,7 +27,7 @@ In addition, this project requires that you have the following installed in your
 
 If you don't already have Visual Studio, you can download and install the latest [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) version for free.
 
-- The [ngrok](https://ngrok.com/docs) reverse proxy tool. You'll use ngrok to create a tunnel to your locally running web server's publicly-available HTTPS endpoints. Go to https://ngrok.com/download to get the download for your environment. 
+- The [ngrok](https://ngrok.com/docs) reverse proxy tool. You'll use ngrok to create a tunnel to your locally running web server's publicly-available HTTPS endpoints. Go to https://ngrok.com/download to get the download for your environment.
 
 ## Get the source code for this project
 
@@ -64,7 +64,7 @@ public void Configure(IApplicationBuilder app)
 
 &#9989; wwwroot folder
 
-In the ASP.NET Core application, the web root (wwwroot) folder is the default static file location and isn't included with the empty template. We added a new folder to the root of our project, and named it wwwroot. When the newly created folder displayed in Solution Explorer it had the proper appearance and &#127760; icon. With the static files middleware added to the project, ASP.NET Core will look in the wwwroot folder of your app for static files and return them if the filename matches the request. The wwwroot folder contains the CSS styling for your app `site.css`, an images folder containing several icons, and a library folder containing `bootstrap.css` files.
+In the ASP.NET Core application, the web root (wwwroot) folder is the default static file location and isn't included with the empty template. We added a new folder to the root of our project, and named it wwwroot. When the newly created folder displayed in Solution Explorer it had the proper appearance and &#127760; icon. With the static files middleware added to the project, ASP.NET Core will look in the wwwroot folder of your project for static files and return them if the filename matches the request. The wwwroot folder contains the CSS styling for your project, `site.css`, an images folder containing several icons, and a library folder containing `bootstrap.css` files.
 
 &#9989; Index.cshtml
 
@@ -82,7 +82,7 @@ This folder contains the following required files:
 - A transparent outline icon measuring 32 x 32 pixels.
 - A manifest.json file which specifies the attributes of your tab and points to required resources like the channelGroup page.
 
-These files will need to be zipped in an app package for use in uploading your app to Teams. When a user chooses to add or update your tab, Microsoft Teams will load the configurationUrl, specified in your manifest, load it in an IFrame, and render it in your channel or group chat.
+These files will need to be zipped in an app package for use in uploading your tab to Teams. When a user chooses to add or update your tab, Microsoft Teams will load the configurationUrl, specified in your manifest, load it in an IFrame, and render it in your channel or group chat.
 
 In the Solution Explorer window right-click on the foo.md project and select on `Edit Project File`. At the bottom of the file you will see the code that creates/updates your zip file when the project builds:
 
@@ -104,9 +104,9 @@ In the Solution Explorer window right-click on the foo.md project and select on 
   </ItemGroup>
 ``` 
 
-## Establish a secure tunnel to your app
+## Establish a secure tunnel to your tab content
 
-Microsoft Teams is an entirely cloud-based product, and thus requires that your app be available from the cloud using HTTPS endpoints. Teams doesn't allow apps to be hosted on localhost. Therefore, you need to either publish your app to a public URL, or use a proxy that will expose your local port to an internet-facing URL.
+Microsoft Teams is an entirely cloud-based product, and thus requires that your tab content be available from the cloud using HTTPS endpoints. Teams doesn't allow hosting on localhost. Therefore, you need to either publish your tab content to a public URL, or use a proxy that will expose your local port to an internet-facing URL.
 
 To test your tab extension you'll use [ngrok](https://ngrok.com/docs). Your server's web endpoints will be available during the current session on your local machine. When the machine is shut down or goes to sleep the service will no longer be available.
 
@@ -116,13 +116,13 @@ To test your tab extension you'll use [ngrok](https://ngrok.com/docs). Your serv
 ngrok http https://localhost:44311 -host-header="localhost:44311"
 ```
 
-- Ngrok will listen to requests from the internet and will route them to your app when it is running on port 44311.  It should resemble `https://yo8urGro7upChann3elTa2b.ngrok.io/` where `yo8urGro7upChann3elTa2b` is replaced by ngrok's alpha-numeric HTTPS URL.
+- Ngrok will listen to requests from the internet and will route them to your project when it is running on port 44311.  It should resemble `https://yo8urGro7upChann3elTa2b.ngrok.io/` where `yo8urGro7upChann3elTa2b` is replaced by the ngrok alpha-numeric HTTPS URL.
 
-- Make note of the HTTPS ngrok URL - you can copy it to `Notepad for Windows`. You will need the ngrok HTTPS URL to test your app in Teams.
+- Make note of the HTTPS ngrok URL - you can copy it to `Notepad for Windows`. You will need the ngrok HTTPS URL to test your tab in Teams.
 
 ## Update your configuration page for Teams
 
-In order for your channel/group tab to display within Microsoft Teams, you must include the `Microsoft Teams JavaScript client SDK` and include a call to the Teams SDK&mdash;`microsoftTeams.initialize()`&mdash;within your channel/group page &#60;`script`&#62; tags. This is how your app and the Teams app communicate.
+In order for your channel/group tab to display within Microsoft Teams, you must include the `Microsoft Teams JavaScript client SDK` and include a call to the Teams SDK&mdash;`microsoftTeams.initialize()`&mdash;within your channel/group page &#60;`script`&#62; tags. This is how your tab and the Teams app communicate.
 
 This project presents the user with two option buttons for displaying the channel/group tab with either a red or gray icon. Selecting the `Select Gray` or `Select Red` button fires either the `saveGray` or `saveRed` functions, respectively, sets `microsoftTeams.settings.setValidityState(true)`, and enables the *Save* button in the Teams UI. This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed.  Without this you'll be stuck in a loop and unable to proceed.
 
@@ -153,7 +153,7 @@ The markup should resemble the following with the **latest versions** referenced
     microsoftTeams.initialize();
 ```
 
-- Within the next set of script tags, you will find the two settings functions. Update the `websiteUrl` and `contentUrl` values in each function with the HTTPS `ngrok` URL to your app. Your code should look like the following (except `y8urGr7pChan3Ta2b` is replaced with your ngrok URL):
+- Within the next set of script tags, you will find the two settings functions. Update the `websiteUrl` and `contentUrl` values in each function with the HTTPS `ngrok` URL to your tab. Your code should look like the following (except `y8urGr7pChan3Ta2b` is replaced with your ngrok URL):
 
 ```javascript
 let saveRed = () => {
@@ -188,9 +188,9 @@ Your tab code is complete. Now you can build your project. But first, *Save all*
 - You can run the project by pressing `F5` or choosing `Start Debugging` from the `Debug` menu. Verify that `ngrok` is running and working properly by opening your browser and going to the HTTPS URL supplied by `ngrok` in your command prompt window.
 
 >[!TIP]
->You need to have both your app in Visual Studio and ngrok running to complete this quickstart. If you need to stop running your app in Visual Studio to work on it **keep ngrok running**. Ngrok will continue to listen  and will resume routing your app's request when your app restarts in Visual Studio. If you have to restart the ngrok service it will return a new URL and you will have to update every place that uses that URL.
+>You need to have both your project in Visual Studio and ngrok running to complete this quickstart. If you need to stop running your project in Visual Studio to work on it **keep ngrok running**. Ngrok will continue to listen and will resume routing your project's request when your it restarts in Visual Studio. If you have to restart the ngrok service it will return a new URL and you will have to update every place that uses that URL.
 
-### Upload your app in Microsoft Teams with App Studio
+### Upload your tab in Microsoft Teams with App Studio
 
 - Open `Microsoft Teams` using the [web based version](https://teams.microsoft.com) so that you can inspect your front-end code using your browser's developer tools.
 
@@ -204,7 +204,7 @@ Your tab code is complete. Now you can build your project. But first, *Save all*
 
 ### Update your app package with Manifest Editor
 
-- Once you've uploaded your app into Teams, you will need to configure it to show content.
+- Once you've uploaded your tab into Teams, you will need to configure it to show content.
 
 - Select the tile for your newly imported tab in the right panel of the Manifest Editor welcome page.
 
@@ -238,7 +238,7 @@ The `Domains from your tabs` should contain only your ngrok URL without the HTTP
 
 >[!IMPORTANT]
 >In the `Description` field on the right you will see the following warning:<br><br>
-&#9888; "**The 'validDomains' array cannot contain a tunneling site.**" <br>**The warning can be ignored while you are testing your app.**<br><br>
+&#9888; "**The 'validDomains' array cannot contain a tunneling site.**" <br>**The warning can be ignored while you are testing your tab.**<br><br>
 After your channel/group has been uploaded to Microsoft teams, via ngrok, and successfully saved, you can view it in tabs gallery, add it to the tabs bar, and interact with it until your tunnel session ends .<br><br>
 **Remember to serve your tab on your hosted website prior to submission to the Teams app store for approval**.
 
