@@ -84,7 +84,7 @@ This folder contains the following required app package files:
 
 These files will need to be zipped in an app package for use in uploading your tab to Teams. When a user chooses to add or update your tab, Microsoft Teams will load the configurationUrl, specified in your manifest, load it in an IFrame, and render it in your channel or group chat.
 
-In the Solution Explorer window right-click on the foo.md project and select `Edit Project File`. At the bottom of the file you will see the code that creates/updates your zip file when the project builds:
+In the Solution Explorer window right-click on the foo.md project and select `Edit Project File`. At the bottom of the file you'll see the code that creates/updates your zip file when the project builds:
 
 ```xml
 <PropertyGroup>
@@ -106,7 +106,7 @@ In the Solution Explorer window right-click on the foo.md project and select `Ed
 
 ## Establish a secure tunnel to your tab content
 
-Microsoft Teams is an entirely cloud-based product, and thus requires that your tab content be available from the cloud using HTTPS endpoints. Teams doesn't allow local hosting. Therefore, you need to either publish your tab to a public URL, or use a proxy that will expose your local port to an internet-facing URL.
+Microsoft Teams is an entirely cloud-based product, and thus requires that your tab content be available from the cloud using HTTPS endpoints. Teams doesn't allow local hosting, therefore, you need to either publish your tab to a public URL, or use a proxy that will expose your local port to an internet-facing URL.
 
 To test your tab you'll use [ngrok](https://ngrok.com/docs). Your server's web endpoints will be available during the current session on your local machine. When the machine is shut down or goes to sleep the service will no longer be available.
 
@@ -118,13 +118,13 @@ ngrok http https://localhost:44311 -host-header="localhost:44311"
 
 - Ngrok will listen to requests from the internet and will route them to your project when it is running on port 44311.  It should resemble `https://yo8urGro7upChann3elTa2b.ngrok.io/` where `yo8urGro7upChann3elTa2b` is replaced by the ngrok alpha-numeric HTTPS URL.
 
-- Make note of the HTTPS ngrok URL - you can copy it to `Notepad for Windows`. You will need the ngrok HTTPS URL to test your tab in Teams.
+- Make note of the HTTPS ngrok URL - you can copy it to `Notepad for Windows`. You'll need the ngrok HTTPS URL to test your tab in Teams.
 
 ## Update your configuration page for Teams
 
-In order for your channel/group tab to display within Microsoft Teams, you must include the `Microsoft Teams JavaScript client SDK` and include a call to the Teams SDK&mdash;`microsoftTeams.initialize()`&mdash;within your channel/group page &#60;`script`&#62; tags. This is how your tab and the Teams app communicate.
+For your channel/group tab to display within Microsoft Teams, you must include the `Microsoft Teams JavaScript client SDK` and include a call to the Teams SDK&mdash;`microsoftTeams.initialize()`&mdash;within your channel/group page &#60;`script`&#62; tags. This is how your tab and the Teams app communicate.
 
-This project presents the user with two option buttons for displaying the channel/group tab with either a red or gray icon. Selecting the `Select Gray` or `Select Red` button fires either the `saveGray()` or `saveRed()` functions, respectively, sets `microsoftTeams.settings.setValidityState(true)`, and enables the *Save* button in the Teams UI. This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed.  Without this you'll be stuck in a loop and unable to proceed.
+This project presents the user with two option buttons for displaying the channel/group tab with either a red or gray icon. Choosing the `Select Gray` or `Select Red` button fires either the `saveGray()` or `saveRed()` functions, respectively, sets `microsoftTeams.settings.setValidityState(true)`, and enables the *Save* button in the Teams UI. This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed.  Without this you'll be stuck in a loop and unable to proceed.
 
 On save, the parameters of `microsoftTeams.settings.setSettings` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.  
 
@@ -144,7 +144,7 @@ The markup should resemble the following with the **latest versions** referenced
 ```
 
 >[!IMPORTANT]
->Do not copy/paste the &#60;script src="..." URLs from this page, they may not represent the latest version. To get the latest version of the SDK markup, always go to:
+>Don't copy/paste the &#60;script src="..." URLs from this page, they may not represent the latest version. To get the latest version of the SDK markup, always go to:
 `foo.md(SDK)` and [jQuery CDN - Latest Stable Versions](https://code.jquery.com) or [Microsoft jQuery Releases on the CDN.](/aspnet/ajax/cdn/overview#jquery-releases-on-the-cdn)
 
 - Within the first set of &#60;`script`&#62; tags, call the `initialize()` method on `microsoftTeams` as follows:
@@ -188,7 +188,7 @@ Your tab code is complete. Now you can build your project. But first, *Save all*
 - You can run the project by pressing `F5` or choosing `Start Debugging` from the `Debug` menu. Verify that `ngrok` is running and working properly by opening your browser and going to the HTTPS URL supplied by `ngrok` in your command prompt window.
 
 >[!TIP]
->You need to have both your project in Visual Studio and ngrok running to complete this quickstart. If you need to stop running your project in Visual Studio to work on it **keep ngrok running**. Ngrok will continue to listen and will resume routing your project's request when your restarts in Visual Studio. If you have to restart the ngrok service it will return a new URL and you will have to update every place that uses that URL.
+>You need to have both your project in Visual Studio and ngrok running to complete this quickstart. If you need to stop running your project in Visual Studio to work on it **keep ngrok running**. Ngrok will continue to listen and will resume routing your project's request when your restarts in Visual Studio. If you have to restart the ngrok service it will return a new URL and you'll have to update every place that uses that URL.
 
 ### Upload your tab in Microsoft Teams with App Studio
 
@@ -198,17 +198,19 @@ Your tab code is complete. Now you can build your project. But first, *Save all*
 
 - Select the *Import an existing app* tile in the Manifest editor to begin updating the app package for your tab. Recall that the source code comes with its own pre-made manifest and the `.csproj file` contains code to create an app package when the project is built. The name of your app package is *tab.zip*. You can search your local machine's file explorer or switch to Visual Studio `Folder View` to find your zip file's location. It should be found here:
 
- `/bin/Debug/netcoreapp2.2/tab.zip`
+```bash
+ /bin/Debug/netcoreapp2.2/tab.zip
+```
 
 - Upload `tab.zip` to App Studio.
 
 ### Update your app package with Manifest editor
 
-- Once you've uploaded your tab into Teams, you will need to configure it to show content.
+- Once you've uploaded your tab into Teams, you'll need to configure it to show content.
 
 - Select the tile for your newly imported tab in the right panel of the Manifest editor welcome page.
 
-There's a list of steps in the left-hand side of the Manifest editor, and on the right a list of properties that need to be filled in for each of those steps. Much of the information has been provided by your `manifest.json` file but there are a few fields that you will need to update:
+There's a list of steps in the left-hand side of the Manifest editor, and on the right a list of properties that need to be filled in for each of those steps. Much of the information has been provided by your `manifest.json` file but there are a few fields that you'll need to update:
 
 #### Details: App details
 
@@ -237,12 +239,12 @@ The `Domains from your tabs` should contain only your ngrok URL without the HTTP
 - Select ![install](/microsoftteams/platform/assets/images/tab-images/install-button.png).
 
 >[!IMPORTANT]
->In the `Description` field on the right you will see the following warning:<br><br>
-&#9888; "**The 'validDomains' array cannot contain a tunneling site.**" <br><br>**The warning can be ignored while you are testing your tab.**<br><br>
+>In the `Description` field on the right you'll see the following warning:<br><br>
+&#9888; "**The 'validDomains' array cannot contain a tunneling site.**" <br><br>**The warning can be ignored while you're testing your tab.**<br><br>
 After your channel/group has been uploaded to Microsoft teams, via ngrok, and successfully saved, you can view it in tabs gallery, add it to the tabs bar, and interact with it until your tunnel session ends .<br><br>
 **Remember to serve your tab on your hosted website prior to submission to the Teams app store for approval**.
 
-- In the pop-up window's `Add to a team or chat` field enter your Teams team and select ![install](/microsoftteams/platform/assets/images/tab-images/install-button.png)
+- In the pop-up window's `Add to a team or chat` field enter your Teams team and select ![install](/microsoftteams/platform/assets/images/tab-images/install-button.png).
 
 - In the next pop-up window choose the team channel where you would like the tab displayed and select ![set up](/microsoftteams/platform/assets/images/tab-images/setUp-button.png).
 
