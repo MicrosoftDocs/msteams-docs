@@ -18,7 +18,7 @@ In this quickstart we'll walk-through creating a custom personal tab using the [
 
 ## Create your personal tab
 
-To add a personal tab to this project you'll create a content page and add a few lines of code to the existing project files:
+To add a personal tab to this application you'll create a content page and add a few lines of code to the existing files:
 
 1.&emsp; In your code editor, create a new HTML file named, `personal.html` .  Add the following code:
 
@@ -43,9 +43,9 @@ To add a personal tab to this project you'll create a content page and add a few
 
 ```
 
-2.&emsp;Save the `personal.html` file in your project's `web` folder. The relative file path should be: <br>&emsp;`./src/app/web/<yourDefaultTabNameTab>/personal.html`<br>
+2.&emsp;Save the `personal.html` file in your application's `web` folder. The relative file path should be: <br>&emsp;`./src/app/web/<yourDefaultTabNameTab>/personal.html`<br>
 
-3.&emsp; In your code editor, navigate to your project's `manifest.json` file: `./src/manifest/manifest.json/` . Scroll down to the empty staticTabs array ( `"staticTabs":[]` ) and add the following JSON object:
+3.&emsp; In your code editor, navigate to your application's `manifest.json` file: `./src/manifest/manifest.json/` . Scroll down to the empty staticTabs array ( `"staticTabs":[]` ) and add the following JSON object:
 
 ```json
 {
@@ -72,11 +72,11 @@ To add a personal tab to this project you'll create a content page and add a few
 6.&emsp; *Save* the updated `Tab.ts` file and *Save all* for good measure.
 
 > [!NOTE]
-> Open a command prompt in your project folder to complete the project's gulp tasks.
+> Open a command prompt in your project folder to complete the application's gulp tasks.
 
 ## Create a Teams App Manifest
 
-Now that your tab code is complete, you can build your project:
+Now that your tab code is complete, you can build your application:
 
 The [Teams Manifest](foo.md) will be part of your app package zip file (along with your two app icons) and will be uploaded into Microsoft Teams. This is achieved through a gulp task that validates the manifest and creates the zip file in the `./package` folder. In the command prompt, type the following:
 
@@ -84,7 +84,7 @@ The [Teams Manifest](foo.md) will be part of your app package zip file (along wi
 gulp manifest
 ```
 
-## Build your project
+## Build your application
 
 The build command compiles your solution into the `./dist` folder. In the command prompt, type the following:
 
@@ -92,7 +92,7 @@ The build command compiles your solution into the `./dist` folder. In the comman
 gulp build
 ```
 
-## Run your project in localhost
+## Run your application in localhost
 
 To build and start a local web server, in the command prompt, type the following:
 
@@ -100,17 +100,17 @@ To build and start a local web server, in the command prompt, type the following
 gulp serve
 ```
 
-Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser and view your project's home page.
+Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser and view your application's home page.
 
 To view your personal tab, remain in the current browser and add `personal.html` to the file path: `http://localhost:3007/<yourDefaultAppNameTab>/personal.html` Press enter.<br>
 
 >![personal tab screenshot](/microsoftteams/platform/assets/personalTab.PNG)
 
-## Package your project for Microsoft Teams
+## Package your application for Microsoft Teams
 
-Microsoft Teams is an entirely cloud-based product, and thus requires that your tab be available from the cloud using HTTPS endpoints. Teams doesn't allow local hosting. Therefore, you need to either publish your tab to a public URL or use a proxy that will expose your local port to an internet-facing URL.
+Microsoft Teams is an entirely cloud-based product and requires that your tab be available from the cloud using HTTPS endpoints. Teams doesn't allow local hosting. Therefore, you need to either publish your tab to a public URL or use a proxy that will expose your local port to an internet-facing URL.
 
-To test your tab extension, you'll use [ngrok](https://ngrok.com/docs), which is built into this project. Ngrok is a reverse proxy software tool that will create a tunnel to your locally running web server's publicly-available HTTPS endpoints. Your server's web endpoints will be available during the current session on your local machine. When the machine is shut down or goes to sleep the service will no longer be available.
+To test your tab extension, you'll use [ngrok](https://ngrok.com/docs), which is built into this application. Ngrok is a reverse proxy software tool that will create a tunnel to your locally running web server's publicly-available HTTPS endpoints. Your server's web endpoints will be available during the current session on your local machine. When the machine is shut down or goes to sleep the service will no longer be available.
 
 In your command prompt, enter the following:
 

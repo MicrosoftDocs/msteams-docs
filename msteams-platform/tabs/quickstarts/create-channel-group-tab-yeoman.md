@@ -29,18 +29,18 @@ Your tab logic is located in the `./src/app/scripts/<yourDefaultTabNameTab>/<you
 ```
 
 >[!NOTE]
->Open a command prompt in your project folder to complete the project's gulp tasks.
+>Open a command prompt in your project folder to complete the application's gulp tasks.
 
 ## Create a Teams App Manifest
 
-Now that your tab code is complete, you can build your project:
+Now that your tab code is complete, you can build your application:
 >The [Teams Manifest](foo.md) will be part of your package zip file (along with your two app icons) and will be uploaded into Microsoft Teams. This is achieved through a gulp task that validates the manifest and creates the zip file in the `./package directory`. In the command prompt, type the following:
 
 ```bash
 gulp manifest
 ```
 
-## Build your project
+## Build your application
 
 >The build command compiles your solution into the `./dist` folder. In the command prompt, type the following:
 
@@ -48,7 +48,7 @@ gulp manifest
 gulp build
 ```
 
-## Run your project in localhost
+## Run your application in localhost
 
 >To build and start a local web server, in the command prompt, type the following:
 
@@ -56,17 +56,17 @@ gulp build
 gulp serve
 ```
 
->Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser and view your project's content page:
+>Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser and view your application's content page:
 >>![content page screenshot](/microsoftteams/platform/assets/images/tab-images/channelGroupTab.PNG)
 
 >To view your tab configuration page, add  `config.html` to the file path: `http://localhost:3007/<yourDefaultAppNameTab>/config.html`and press Enter. You should see the following:
 >>![configuration page screenshot](/microsoftteams/platform/assets/images/tab-images/configurationPage.PNG)
 
-## Package your project for Microsoft Teams
+## Package your application for Microsoft Teams
 
-Microsoft Teams is an entirely cloud-based product, and thus requires that your tab be available from the cloud using HTTPS endpoints. Teams doesn't allow local hosting. Therefore, you need to either publish your tab to a public URL, or use a proxy that will expose your local port to an internet-facing URL.
+Microsoft Teams is an entirely cloud-based product and requires that your tab be available from the cloud using HTTPS endpoints. Teams doesn't allow local hosting. Therefore, you need to either publish your tab to a public URL, or use a proxy that will expose your local port to an internet-facing URL.
 
-To test your tab extension you'll use [ngrok](https://ngrok.com/docs), which is built into this project. Ngrok is a reverse proxy software tool that will create a tunnel to your locally running web server's publicly-available HTTPS endpoints. Your server's web endpoints will be available during the current session on your local machine. When the machine is shut down or goes to sleep the service will no longer be available.
+To test your tab extension you'll use [ngrok](https://ngrok.com/docs), which is built into this application. Ngrok is a reverse proxy software tool that will create a tunnel to your locally running web server's publicly-available HTTPS endpoints. Your server's web endpoints will be available during the current session on your local machine. When the machine is shut down or goes to sleep the service will no longer be available.
 
 >In your command prompt, enter the following:
 
@@ -77,7 +77,7 @@ gulp ngrok-serve
 > [!IMPORTANT]
 > After your channel/group has been uploaded to Microsoft teams, via ngrok, and successfully saved, you can view it in tabs gallery, add it to the tabs bar, and interact with it until your tunnel session ends . However, you must serve your tab on your hosted website before submitting your tab to the Teams app store for approval.
 
-## Upload your project in Microsoft Teams
+## Upload your application in Microsoft Teams
 
 - Open Microsoft Teams using the web based version of [Teams](https://teams.microsoft.com) so that you can inspect your JavaScript code with your browser's developer tools.
 - In the **YourTeams** panel select (**&#8226;&#8226;&#8226;**) *More options* next to the team that you're using to test your tab and select *Manage team*.
