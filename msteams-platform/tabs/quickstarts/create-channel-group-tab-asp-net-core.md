@@ -1,11 +1,11 @@
 ---
 title: "Quickstart: Create a Channel and Group Tab with ASP.NET Core" 
 author: laujan 
-description: A quickstart guide to creating a channel and group tab with ASP.NET Core. 
+description: A quickstart guide to creating a custom channel and group tab with ASP.NET Core. 
 ms.topic: quickstart 
 ms.author: laujan 
 ---
-# Quickstart: Create a Channel and Group Tab with ASP.NET Core
+# Quickstart: Create a Custom Channel and Group Tab with ASP.NET Core
 
 Custom tabs enable you to embed your hosted web content directly into Microsoft Teams and add Teams-specific functionality via your  [Teams App Package](foo.md). See [What are custom tabs in Microsoft Teams?](/msteams-platform/tabs/what-are-custom-tabs.md). There are two types of tabs available in Teams&mdash;channel/group and personal. A channel/group tab delivers content to channels and group chats and are a great way to create collaborative spaces around dedicated web-based content. A channel/group tab can be pinned to the tabs bar located at the top of the channel and each channel or group chat can have its own tabs to support specific focus areas. An app can have only one channel/group tab.
 
@@ -214,6 +214,8 @@ There's a list of steps in the left-hand side of the Manifest editor, and on the
 
 #### Details: App details
 
+- Under *Identification* select ![generate](/microsoftteams/platform/assets/images/tab-images/setUp-button.png) to replace the placeholder id with a required Microsoft-generated GUID for your tab.
+
 - In the **Developer information** field update the `Website URL` with your `ngrok` HTTPS URL.
 
 - In the **App URLs** field update the `Privacy statement` and `Terms of use` URLs with your `ngrok` HTTPS URL. Remember to include the */privacy* and */tou* parameters at the end of the URLs.
@@ -221,6 +223,8 @@ There's a list of steps in the left-hand side of the Manifest editor, and on the
 #### Capabilities:
 
 - Select *Tabs*.
+
+- To clear placeholder URLs from the manifest, scroll to the bottom of the Tabs section (*Select a tab from the following list to include any additional domains*) select the (•••) button and choose &#x1F5D1; Delete.
 
 ##### Team Tab
 
