@@ -303,11 +303,59 @@
       expanded: true
       items:
         -
-          name: dosoemthign
-          href: foo.md
+          name: Create a bot
+          href: bots/how-to/bots-create.md
+        - 
+          name: Conversations with bots
+          items:
+          - 
+            name: Conversation overview
+            href: bots/how-to/bot-conversations/bots-conversations.md
+          - 
+            name: Personal conversations
+            href: bots/how-to/bot-conversations/bots-conv-personal.md
+          - 
+            name: Channel and group conversations
+            href: bots/how-to/bot-conversations/bots-conv-channel.md
+          - 
+            name: Proactive messaging
+            href: bots/how-to/bot-conversations/bots-conv-proactive.md
+        - 
+          name: Bot authentication
+          items:
+          - 
+            name: Authentication flow for bots
+            href: bots/how-to/bot-authentication/auth-flow-bot.md
+          - 
+            name: Azure AD authentication
+            href: bots/how-to/bot-authentication/auth-bot-aad.md
+          - 
+            name: Using the Azure Bot Service OAuth card
+            href: bots/how-to/bot-authentication/auth-oauth-card.md
         -
-          name: dosomethingelse
-          href: foo.md
+          name: Teams context for bots
+          href: bots/how-to/bots-context.md
+        -
+          name: Create a bot commands menu
+          href: bots/how-to/bot-menus.md
+        -
+          name: Send and receive files
+          href: bots/how-to/bots-files.md
+        -
+          name: Bot events
+          href: bots/how-to/bots-notifications.md
+        -
+          name: Notification-only bots
+          href: bots/how-to/bots-notification-only.md
+        -
+          name: Bot message formatting
+          href: bots/how-to/bots-text-formats.md
+        -
+          name: Test and debug a bot
+          href: bots/how-to/bots-test.md
+        -
+          name: Bots and tabs
+          href: bots/how-to/bots-with-tabs.md
 -
   name: 'Task modules'
   items:
