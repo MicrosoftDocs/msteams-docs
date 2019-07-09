@@ -17,7 +17,7 @@ In this quickstart we'll walk-through creating a custom personal tab with C# and
 
 - You'll use App Studio for Microsoft Teams to import your application to Teams. To install App Studio in Teams select **Apps** ![Store App](/microsoftteams/platform/assets/images/tab-images/storeApp.png) at the bottom-left corner of the Teams app, and search for App Studio. Once you find the tile for App Studio, select it and choose install in the pop-up window dialog box.
 
-- You'll also need a [GitHub](https://github.com) account so that you can download a copy of the source code for for this project.
+- You'll also need a [GitHub](https://github.com) account so that you can download a copy of the source code for this project.
 
 In addition, this project requires that you have the following installed in your development environment:
 
@@ -48,8 +48,7 @@ Once the repository is cloned, open the solution file, `foo.md`, in Visual Studi
 
 &#9989; Startup.cs
 
-This project was created from an ASP.NET Core web application empty template. Since Razor pages are a subset of the ASP.NET Core MVC framework, we had to register the MVC services for the components to the service collection that MVC and, therefore, Razor Pages require. To do so, we added the dependency injection framework to the  `ConfigureServices()` method. Additionally,
-the empty template doesn't enable serving static content by default, however, since your application will be serving static files&mdash;HTML, CSS, and images, we added the static files middleware to the `Configure()` method:
+This project was created from an ASP.NET Core web application empty template. Since Razor pages are a subset of the ASP.NET Core MVC framework, we had to register the MVC services for the components to the service collection that MVC and, therefore, Razor Pages require. To do so, we added the dependency injection framework to `ConfigureServices()`. Additionally, the empty template doesn't enable serving static content by default, however, since your application will be serving static files&mdash;HTML, CSS, and images, we added the static files middleware to the `Configure()`:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -113,12 +112,10 @@ Layout= #_Layout";
 }
 ```
 
-The markup be the latest versions of the following:
+The markup will be the latest versions of the following:
 
-```html
-`<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>`
+`<script <src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>`<br><br>
 `<script src='https://statics.teams.microsoft.com/sdk/v1.4.3/js/MicrosoftTeams.min.js'></script>`
-```
 
 >[!IMPORTANT]
 >Don't copy/paste the &#60;script src="..." URLs from this page, they may not represent the latest version. To get the latest version of the SDK markup, always go to:
@@ -150,14 +147,14 @@ To test your tab you'll use [ngrok](https://ngrok.com/docs). Your server's web e
 ngrok http https://localhost:44311 -host-header="localhost:44311"
 ```
 
-- Ngrok will listen to requests from the internet and will route them to your application when it is running on port 44311.  It should resemble `https://yo8urGro7upChann3elTa2b.ngrok.io/` where `yo8urGro7upChann3elTa2b` is replaced by the ngrok alpha-numeric HTTPS URL.
+- Ngrok will listen to requests from the internet and will route them to your application when it is running on port 44311.  It should resemble `https://yo8urGro7upChann3elTa2b.ngrok.io/` where `yo8urGro7upChann3elTa2b` is replaced by your ngrok alpha-numeric HTTPS URL.
 
 - Verify that `ngrok` is running and working properly by opening your browser and going to the HTTPS URL supplied by `ngrok` in your command prompt window.
 
 - Make note of the HTTPS ngrok URL - you can copy it to `Notepad for Windows`. You'll need the ngrok HTTPS URL to test your tab in Teams.
 
 >[!TIP]
->You need to have both your application in Visual Studio and ngrok running to complete this quickstart. If you need to stop running your application in Visual Studio to work on it **keep ngrok running**. Ngrok will continue to listen and will resume routing your application's request when your restarts in Visual Studio. If you have to restart the ngrok service it will return a new URL and you'll have to update every place that uses that URL.
+>You need to have both your application in Visual Studio and ngrok running to complete this quickstart. If you need to stop running your application in Visual Studio to work on it **keep ngrok running**. Ngrok will continue to listen and will resume routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service it will return a new URL and you'll have to update every place that uses that URL.
 
 ### Upload your tab in Microsoft Teams with App Studio
 
@@ -205,7 +202,7 @@ There's a list of steps in the left-hand side of the Manifest editor, and on the
 
 ##### Domains and permissions
 
-The `Domains from your tabs` should contain only your ngrok URL without the HTTPS prefix&mdash;`y8urGr7pChan3Ta2b.ngrok.io/`. If the *Additional valid domains* field is completed, select the (•••) button and choose 🗑 Delete.
+The `Domains from your tabs` should contain only your ngrok URL without the HTTPS prefix&mdash;`y8urGr7pChan3Ta2b.ngrok.io`. If the *Additional valid domains* field has a value, select the (•••) button and choose 🗑 Delete.
 
 ##### Test and distribute
 
