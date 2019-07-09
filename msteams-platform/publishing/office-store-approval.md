@@ -35,7 +35,7 @@ Apps must provide a clear, simple sign in/out and (when appropriate) sign-up exp
 
 1. If there is an explicit sign-in option provided to the user, there must be a sign-out option too (even if the app is using SSO/Silent Authentication)
 2. The sign-out option must sign the user out of only your app's capability, and not from the Teams client.
-3. Every scope that has a sign-in must have a sign-out as well. The sign-out option should, at minimum, sign the user out from all capabilities that the sign-in option signed him into. For example, if the sign-in option signs the user into both messaging extension and tab, then the sign out option must , at minimum, sign the user out of the message extension and tab.
+3. Every scope that has a sign-in must have a sign-out as well. The sign-out option should, at minimum, sign the user out from all capabilities that the sign-in option signed them into. For example, if the sign-in option signs the user into both messaging extension and tab, then the sign out option must , at minimum, sign the user out of the message extension and tab.
 
 4. Make sure there is always a way to reverse the following (or similar) behaviors:
   * Sign-in => sign-out
