@@ -186,7 +186,7 @@ There's a list of steps in the left-hand side of the Manifest editor, and on the
 
 #### Capabilities
 
-- Select *Tabs*.
+- Select **Tabs**.
 
 - To clear placeholder URLs from Manifest editor, scroll to the bottom of the Tabs section (*Select a tab from the following list to include any additional domains*) select the (•••) button and choose &#x1F5D1; Delete.
 
@@ -212,9 +212,9 @@ The `Domains from your tabs` should contain only your ngrok URL without the HTTP
 After your personal tab has been uploaded to Microsoft teams, via ngrok, and successfully saved, you can view its content until your tunnel session ends .<br><br>
 **Remember to serve your tab on your hosted website prior to submission to the Teams app store for approval**.
 
-- In the pop-up window select  <text style="color:#6364A5">Install</text>.
+- In the pop-up window select  <text style="color:#6364A5">***Install***</text>.
 
-- In the next pop-up window select ***Open** and your personal tab will be displayed.
+- In the next pop-up window select ***Open*** and your personal tab will be displayed.
  
 ## View your personal tabs
 
