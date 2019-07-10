@@ -178,7 +178,7 @@ There's a list of steps in the left-hand side of the Manifest editor, and on the
 
 #### Details: App details
 
-- Under *Identification* select ![generate](/microsoftteams/platform/assets/images/tab-images/generate-button.png) to replace the placeholder id with a required Microsoft-generated GUID for your tab.
+- Under *Identification* select <text style="color:#6364A5">***Generate***</text> to replace the placeholder id with a required Microsoft-generated GUID for your tab.
 
 - In the **Developer information** field update the `Website URL` with your `ngrok` HTTPS URL.
 
@@ -192,9 +192,9 @@ There's a list of steps in the left-hand side of the Manifest editor, and on the
 
 ##### Add a personal tab
 
-- Scroll up to *Add a personal tab*, select ![add button](/microsoftteams/platform/assets/images/tab-images/add-button.png).
+- Scroll up to *Add a personal tab*, select ***Add***.
 
-- Complete the *Name* (The display name of the tab) and *Entity ID* (The ID for the item in the tab, for example, "redIcon123") fields and select ![Save](/microsoftteams/platform/assets/images/tab-images/save-button.png).
+- Complete the *Name* (The display name of the tab) and *Entity ID* (The ID for the item in the tab, for example, "redIcon123") fields and select ***Save***.
 
 #### Finish
 
@@ -204,7 +204,7 @@ The `Domains from your tabs` should contain only your ngrok URL without the HTTP
 
 ##### Test and distribute
 
-- Select ![install](/microsoftteams/platform/assets/images/tab-images/install-button.png).
+- Select  <text style="color:#6364A5">***Install***</text>.
 
 >[!IMPORTANT]
 >In the `Description` field on the right you'll see the following warning:<br><br>
@@ -212,9 +212,9 @@ The `Domains from your tabs` should contain only your ngrok URL without the HTTP
 After your personal tab has been uploaded to Microsoft teams, via ngrok, and successfully saved, you can view its content until your tunnel session ends .<br><br>
 **Remember to serve your tab on your hosted website prior to submission to the Teams app store for approval**.
 
-- In the pop-up window select ![install](/microsoftteams/platform/assets/images/tab-images/install-button.png).
+- In the pop-up window select  <text style="color:#6364A5">Install</text>.
 
-- In the next pop-up window select ![open](/microsoftteams/platform/assets/images/tab-images/open-button.png) and your personal tab will be displayed.
+- In the next pop-up window select ***Open** and your personal tab will be displayed.
  
 ## View your personal tabs
 

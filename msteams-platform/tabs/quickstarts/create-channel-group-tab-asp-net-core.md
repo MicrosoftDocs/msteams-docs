@@ -214,7 +214,7 @@ There's a list of steps in the left-hand side of the Manifest editor, and on the
 
 #### Details: App details
 
-- Under *Identification* select ![generate](/microsoftteams/platform/assets/images/tab-images/setUp-button.png) to replace the placeholder id with a required Microsoft-generated GUID for your tab.
+- Under *Identification* select  <text style="color:#6364A5">***Generate***</text> to replace the placeholder id with a required Microsoft-generated GUID for your tab.
 
 - In the **Developer information** field update the `Website URL` with your `ngrok` HTTPS URL.
 
@@ -240,7 +240,7 @@ The `Domains from your tabs` should contain only your ngrok URL without the HTTP
 
 ##### Test and distribute
 
-- Select ![install](/microsoftteams/platform/assets/images/tab-images/install-button.png).
+- Select  <text style="color:#6364A5">***Install***</text>.
 
 >[!IMPORTANT]
 >In the `Description` field on the right you'll see the following warning:<br><br>
@@ -248,11 +248,11 @@ The `Domains from your tabs` should contain only your ngrok URL without the HTTP
 After your channel/group has been uploaded to Microsoft teams, via ngrok, and successfully saved, you can view it in tabs gallery, add it to the tabs bar, and interact with it until your tunnel session ends .<br><br>
 **Remember to serve your tab on your hosted website prior to submission to the Teams app store for approval**.
 
-- In the pop-up window's `Add to a team or chat` field enter your Teams team and select ![install](/microsoftteams/platform/assets/images/tab-images/install-button.png).
+- In the pop-up window's `Add to a team or chat` field enter your Teams team and select  <text style="color:#6364A5">***Install***</text>.
 
-- In the next pop-up window choose the team channel where you would like the tab displayed and select ![set up](/microsoftteams/platform/assets/images/tab-images/setUp-button.png).
+- In the next pop-up window choose the team channel where you would like the tab displayed and select ***Set up***.
 
-- In the final pop-up window select a value for the tab page (either a red or gray icon) and select ![save](/microsoftteams/platform/assets/images/tab-images/save-button.png).
+- In the final pop-up window select a value for the tab page (either a red or gray icon) and select  <text style="color:#6364A5">***Save***</text>.
 
 - To view, select your new tab from the tab bar.
 
