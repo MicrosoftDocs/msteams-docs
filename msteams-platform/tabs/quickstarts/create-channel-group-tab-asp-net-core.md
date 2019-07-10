@@ -222,7 +222,7 @@ There's a list of steps in the left-hand side of the Manifest editor, and on the
 
 #### Capabilities
 
-- Select **Tabs**.
+- Select ***Tabs***.
 
 - To clear placeholder URLs from Manifest editor, scroll to the bottom of the Tabs section (*Select a tab from the following list to include any additional domains*) select the (•••) button and choose &#x1F5D1; Delete.
 
