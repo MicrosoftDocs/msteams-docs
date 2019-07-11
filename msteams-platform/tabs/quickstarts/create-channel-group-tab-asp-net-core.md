@@ -119,7 +119,7 @@ ngrok http https://localhost:44311 -host-header="localhost:44311"
 
 - Make note of the HTTPS ngrok URL - you can copy it to `Notepad for Windows`. You'll need the ngrok HTTPS URL to test your tab in Teams.
 
-## Update your tab for Teams
+## Update your tab for Teams Integration
 
 For your tab to display within Microsoft Teams, you must include the **Microsoft Teams JavaScript client SDK** and include a call to the Teams SDK&mdash;`microsoftTeams.initialize()`&mdash;within your channel/group page &#60;`script`&#62; tags. This is how your tab and the Teams app communicate.
 
