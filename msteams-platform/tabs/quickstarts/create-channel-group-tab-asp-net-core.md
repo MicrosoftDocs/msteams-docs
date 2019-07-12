@@ -34,33 +34,37 @@ We have provided a simple [Channel Group Tab](OfficeDev/msteams-samples/samples/
 git clone https://github.com/OfficeDev/msteams-samples.git
 ```
 
-Once have the source code, open Visual Studio, select **Open a project or solution**,navigate to the tab solution file, **msteams-samples/samples/dotnet/tabs/channelGroupTab/**, and open **channelGroupTab.sln**. Select **Build Solution** from the **Build** menu. Run the application by pressing **F5** or choosing **Start Debugging** from the **Debug** menu and navigate to the following URLs to verify that the application URLS are loading:
+Once you have the source code:
+- open Visual Studio and select **Open a project or solution**
+- navigate to the tab solution file, **msteams-samples/samples/dotnet/tabs/channelGroupTab/**, and open **channelGroupTab.sln** 
+- Select **Build Solution** from the **Build** menu. 
+- Run the application by pressing **F5** or choosing **Start Debugging** from the **Debug** menu and navigate to the following URLs to verify that the application URLS are loading:
 
-- **http://localhost:44355**
-- **http://localhost:44355/privacy**
-- **http://localhost:44355/tou**
+- `http://localhost:44355`
+- `http://localhost:44355/privacy`
+- `http://localhost:44355/tou`
 
 ## Review the source code
 
 &#9989; Startup.cs
 
-This project was created from an ASP.NET Core web application empty template. We registered the MVC services that MVC and Razor Pages require by adding the dependency injection framework to the  **ConfigureServices()** method. Additionally, the empty template doesn't enable serving static content by default, so we added the static files middleware to the **Configure()** method:
+This project was created from an ASP.NET Core web application empty template. We registered the MVC services by adding the dependency injection framework to the  **ConfigureServices()** method. Additionally, the empty template doesn't enable serving static content by default, so we added the static files middleware to the **Configure()** method:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
         {
-           services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 public void Configure(IApplicationBuilder app)
         {
-        app.UseStaticFiles();
-        app.UseMvc();
+            app.UseStaticFiles();
+            app.UseMvc();
         }
 ```
 
 &#9989; wwwroot folder
 
-In the ASP.NET Core framework, the web root folder is where the application looks for static files. We added a new folder to the root of the application, and named it wwwroot which, when displayed in Solution Explorer, has the proper appearance and globe icon.
+In ASP.NET Core, the web root folder is where the application looks for static files. We added a new folder to the root of the application, and named it wwwroot which, when displayed in Solution Explorer, has the proper appearance and globe icon.
 
 &#9989; index.cshtml
 
@@ -76,9 +80,9 @@ This folder contains the following required app package files:
 
 - A **full color icon** measuring 192 x 192 pixels.
 - A **transparent outline icon** measuring 32 x 32 pixels.
-- A **manifest.json** file that specifies the attributes of your tab and points to required resources like the channelGroup page.
+- A **manifest.json** file that specifies the attributes of your tab and points to required resources like the tab.cshtml page.
 
-These files will need to be zipped in an app package for use in uploading your tab to Teams. When a user chooses to add or update your tab, Microsoft Teams will load the configurationUrl, specified in your manifest, load it in an IFrame, and render it in your channel or group chat.
+These files need to be zipped in an app package for use in uploading your tab to Teams. When a user chooses to add or update your tab, Microsoft Teams will load the configurationUrl, specified in your manifest, load it in an IFrame, and render it in your channel or group chat.
 
 &#9989; channelGroupTab.csproj
 
@@ -114,7 +118,7 @@ To test your tab you'll use [ngrok](https://ngrok.com/docs). Your server's web e
 ngrok http https://localhost:44355 -host-header="localhost:44355"
 ```
 
-- Ngrok will listen to requests from the internet and will route them to your project when it is running on port 44355.  It should resemble **https://yo8urGro7upChann3elTa2b.ngrok.io/** where **yo8urGro7upChann3elTa2b** is replaced by the ngrok alpha-numeric HTTPS URL.
+- Ngrok will listen to requests from the internet and will route them to your project when it is running on port 44355.  It should resemble `https://y8rGr7pCh3nlT2b.ngrok.io/ where **y8rGr7pCh3nlT2b** is replaced by the ngrok alpha-numeric HTTPS URL.
 
 - Make note of the HTTPS ngrok URL - you can copy it to **Notepad for Windows**. You'll need the ngrok HTTPS URL to test your tab in Teams.
 
@@ -138,7 +142,7 @@ The markup should be the latest versions of the following:
 
 ```html
 `<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>`
-`<script src='https://statics.teams.microsoft.com/sdk/v1.4.3/js/MicrosoftTeams.min.js'></script>`
+`<script src="https://statics.teams.microsoft.com/sdk/v1.4.3/js/MicrosoftTeams.min.js"></script>`
 ```
 
 >[!IMPORTANT]
@@ -151,7 +155,7 @@ The markup should be the latest versions of the following:
     microsoftTeams.initialize();
 ```
 
-- Within the next set of script tags, you'll find the two settings functions. Update the **websiteUrl** and **contentUrl** values in each function with the HTTPS **ngrok** URL to your tab. Your code should look like the following (except **y8urGr7pChan3Ta2b** is replaced with your ngrok URL):
+- Within the next set of script tags, you'll find the two settings functions. Update the **websiteUrl** and **contentUrl** values in each function with the HTTPS **ngrok** URL to your tab. Your code should look like the following (except **y8rGr7pCh3nlT2b** is replaced with your ngrok URL):
 
 ```javascript
 
@@ -159,8 +163,8 @@ The markup should be the latest versions of the following:
     let saveGray = () => {
         microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
             microsoftTeams.settings.setSettings({
-                websiteUrl: "https://y8urGr7pChan3Ta2b.ngrok.io",
-                contentUrl: "https://y8urGr7pChan3Ta2b.ngrok.io/gray/",
+                websiteUrl: "https://y8rGr7pCh3nlT2b.ngrok.io",
+                contentUrl: "https://y8rGr7pCh3nlT2b.ngrok.io/gray/",
                 entityId: "grayIconTab",
                 suggestedDisplayName: "MyNewTab"
             });
@@ -171,8 +175,8 @@ The markup should be the latest versions of the following:
 let saveRed = () => {
         microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
             microsoftTeams.settings.setSettings({
-                websiteUrl: "https://y8urGr7pChan3Ta2b.ngrok.io",
-                contentUrl: "https://y8urGr7pChan3Ta2b.ngrok.io/red/",
+                websiteUrl: "https://y8rGr7pCh3nlT2b.ngrok.io",
+                contentUrl: "https://y8rGr7pCh3nlT2b.ngrok.io/red/",
                 entityId: "redIconTab",
                 suggestedDisplayName: "MyNewTab"
             });
@@ -238,7 +242,7 @@ There's a list of steps in the left-hand side of the Manifest editor, and on the
 
 ##### Domains and permissions
 
-The **Domains from your tabs** should contain only your ngrok URL without the HTTPS prefix&mdash;**y8urGr7pChan3Ta2b.ngrok.io/**.
+The **Domains from your tabs** should contain only your ngrok URL without the HTTPS prefix&mdash;**y8rGr7pCh3nlT2b.ngrok.io/**.
 
 ##### Test and distribute
 
