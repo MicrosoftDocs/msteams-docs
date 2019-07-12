@@ -26,8 +26,7 @@ Hitting problems? See the [troubleshooting guide](~/troubleshoot/troubleshoot.md
 ## Tabs on mobile clients
 
 > [!NOTE]
-> Embedded personal (static) tabs for mobile clients is currently in [Developer Preview](~/resources/dev-preview/developer-preview-intro.md). When developer preview is enabled on the mobile client, the `contentUrl` will be loaded inside the Teams mobile client. 
-> For existing store applications if your app does not work well on mobile we will display a banner notifying the user that it is recommended to use the **Open in broswer** functionality to open the `websiteUrl` in the browser.
+> Embedded personal (static) tabs for mobile clients is currently in [Developer Preview](~/resources/dev-preview/developer-preview-intro.md). When developer preview is enabled on the mobile client, the `contentUrl` will be loaded inside the Teams mobile client. See [Guidelines for apps on mobile clients](~/resources/design/framework/mobile.md).
 
 Tabs behave differently on the iOS and Android Teams clients than on the Teams desktop or web clients.
 

@@ -7,8 +7,8 @@ keywords: get started static tabs teams
 # Static tabs
 
 > [!NOTE]
-> Embedded personal (static) tabs for mobile clients is currently in [Developer Preview](~/resources/dev-preview/developer-preview-intro.md). When developer preview is enabled on the mobile client, the `contentUrl` will be loaded inside the Teams mobile client. 
-> For existing store applications, if the app does not work well on mobile we will display a banner notifying the user that it is recommended to use the **Open in broswer** functionality to open the `websiteUrl` in the browser. 
+> Embedded personal (static) tabs for mobile clients is currently in [Developer Preview](~/resources/dev-preview/developer-preview-intro.md). When developer preview is enabled on the mobile client, the `contentUrl` will be loaded inside the Teams mobile client.  See [Guidelines for apps on mobile clients](~/resources/design/framework/mobile.md).
+>
 > If your tab requires authentication, ensure that you're using the tabs SDK version 1.4.1 or later.
 
 A *static tab* supports an individual user. For example, if your service is a notetaking app, add a tab that holds a user's personal notes. That way, a user can refer to his or her own notes without having to share them with the entire team.
