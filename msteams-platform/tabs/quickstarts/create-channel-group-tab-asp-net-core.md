@@ -33,7 +33,7 @@ Open a command prompt and create a new directory for your tab project. You can f
 git clone https://github.com/MicrosoftDocs/CreateChannelGroupTabNetCore/foo.md
 ```
 
-You can also download the zip file and extract it to your local machine and extract the files into your new directory.
+You can also download the zip file and extract the files into your new directory.
 
 Once have the source code, open the solution file, **foo.md**, in Visual Studio and select **Build Solution** from the **Build** menu. Run the application by pressing **F5** or choosing **Start Debugging** from the **Debug** menu and navigate to the following URLs to verify that the app URLS are loading:
 
@@ -83,7 +83,7 @@ These files will need to be zipped in an app package for use in uploading your t
 
 &#9989; foo.csproj
 
-In the Solution Explorer window right-click on the project and select `Edit Project File`. At the bottom of the file you'll see the code that creates/updates your zip file when the application builds:
+In the Solution Explorer window right-click on the project and select **Edit Project File**. At the bottom of the file you'll see the code that creates/updates your zip file when the application builds:
 
 ```xml
 <PropertyGroup>
