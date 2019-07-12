@@ -27,25 +27,24 @@ If you don't already have Visual Studio, you can download and install the latest
 
 ## Get the source code
 
-Open a command prompt and create a new directory for your tab project. You can find the GitHub repository for this quickstart at [GitHubRepository foo.md](https:///github.com/MicrosoftDocs). To retrieve the source code you can [clone](https://help.github.com/en/articles/cloning-a-repository) the sample repository into your new directory on your local machine:
+Open a command prompt and create a new directory for your tab project.
+We have provided a simple [Channel Group Tab](OfficeDev/msteams-samples/samples/dotnet/tabs/channelgroup) sample to get you started.To retrieve the source code you can download the zip file and extract the files or [clone](https://help.github.com/en/articles/cloning-a-repository) the sample repository into your new directory:
 
 ```bash
-git clone https://github.com/MicrosoftDocs/CreateChannelGroupTabNetCore/foo.md
+git clone https://github.com/OfficeDev/msteams-samples.git
 ```
 
-You can also download the zip file and extract the files into your new directory.
+Once have the source code, open Visual Studio, select **Open a project or solution**,navigate to the tab solution file, **msteams-samples/samples/dotnet/tabs/channelGroupTab/**, and open **channelGroupTab.sln**. Select **Build Solution** from the **Build** menu. Run the application by pressing **F5** or choosing **Start Debugging** from the **Debug** menu and navigate to the following URLs to verify that the application URLS are loading:
 
-Once have the source code, open the solution file, **foo.md**, in Visual Studio and select **Build Solution** from the **Build** menu. Run the application by pressing **F5** or choosing **Start Debugging** from the **Debug** menu and navigate to the following URLs to verify that the app URLS are loading:
-
-- **http://localhost:44311**
-- **http://localhost:44311/privacy**
-- **http://localhost:44311/tou**
+- **http://localhost:44355**
+- **http://localhost:44355/privacy**
+- **http://localhost:44355/tou**
 
 ## Review the source code
 
 &#9989; Startup.cs
 
-This project was created from an ASP.NET Core web application empty template. Since Razor pages are a subset of the ASP.NET Core MVC framework, registered the MVC services that MVC and, therefore, Razor Pages require by adding the dependency injection framework to the  **ConfigureServices()** method. Additionally, the empty template doesn't enable serving static content by default, so we added the static files middleware to the **Configure()** method:
+This project was created from an ASP.NET Core web application empty template. We registered the MVC services that MVC and Razor Pages require by adding the dependency injection framework to the  **ConfigureServices()** method. Additionally, the empty template doesn't enable serving static content by default, so we added the static files middleware to the **Configure()** method:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -61,43 +60,43 @@ public void Configure(IApplicationBuilder app)
 
 &#9989; wwwroot folder
 
-In the ASP.NET Core framework, the web root folder is where the application looks for static files return them if the filename matches the request. We added a new folder to the root of the application, and named it wwwroot which, when displayed in Solution Explorer had the proper appearance and globe icon.
+In the ASP.NET Core framework, the web root folder is where the application looks for static files. We added a new folder to the root of the application, and named it wwwroot which, when displayed in Solution Explorer, has the proper appearance and globe icon.
 
-&#9989; Index.cshtml
+&#9989; index.cshtml
 
-ASP.NET Core treats files called **Index** as the default page for the site. When your browser URL points to the root of the site, Index.cshtml will be displayed. This will be the content page for your tab.
+ASP.NET Core treats files called **index** as the default page for the site. When your browser URL points to the root of the site, index.cshtml will be displayed and will be the content page for your tab.
 
-&#9989; ChannelGroup.cs
+&#9989; tab.cs
 
-This C# file contains a method that will be called from **channelGroup.cshtml** when your ChannelGroup.cshtml page is configured.
+This C# file contains a method that will be called from **tab.cshtml** during configuration.
 
-&#9989; Manifest folder
+&#9989; AppManifest folder
 
 This folder contains the following required app package files:
 
-- A full color icon measuring 192 x 192 pixels.
-- A transparent outline icon measuring 32 x 32 pixels.
-- A manifest.json file which specifies the attributes of your tab and points to required resources like the channelGroup page.
+- A **full color icon** measuring 192 x 192 pixels.
+- A **transparent outline icon** measuring 32 x 32 pixels.
+- A **manifest.json** file that specifies the attributes of your tab and points to required resources like the channelGroup page.
 
 These files will need to be zipped in an app package for use in uploading your tab to Teams. When a user chooses to add or update your tab, Microsoft Teams will load the configurationUrl, specified in your manifest, load it in an IFrame, and render it in your channel or group chat.
 
-&#9989; foo.csproj
+&#9989; channelGroupTab.csproj
 
 In the Solution Explorer window right-click on the project and select **Edit Project File**. At the bottom of the file you'll see the code that creates/updates your zip file when the application builds:
 
 ```xml
 <PropertyGroup>
-    <PostBuildEvent>powershell.exe Compress-Archive -Path \"$(ProjectDir)Manifest\*\" -DestinationPath \"$(TargetDir)tab.zip\" -Force</PostBuildEvent>
+    <PostBuildEvent>powershell.exe Compress-Archive -Path \"$(ProjectDir)AppManifest\*\" -DestinationPath \"$(TargetDir)tab.zip\" -Force</PostBuildEvent>
   </PropertyGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Manifest\icon-outline.png">
+    <EmbeddedResource Include="AppManifest\icon-outline.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manifest\icon-color.png">
+    <EmbeddedResource Include="AppManifest\icon-color.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manifest\manifest.json">
+    <EmbeddedResource Include="AppManifest\manifest.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
@@ -112,22 +111,22 @@ To test your tab you'll use [ngrok](https://ngrok.com/docs). Your server's web e
 - Open a command prompt in the root of your project folder and run the following command:
 
 ```bash
-ngrok http https://localhost:44311 -host-header="localhost:44311"
+ngrok http https://localhost:44355 -host-header="localhost:44355"
 ```
 
-- Ngrok will listen to requests from the internet and will route them to your project when it is running on port 44311.  It should resemble **https://yo8urGro7upChann3elTa2b.ngrok.io/** where **yo8urGro7upChann3elTa2b** is replaced by the ngrok alpha-numeric HTTPS URL.
+- Ngrok will listen to requests from the internet and will route them to your project when it is running on port 44355.  It should resemble **https://yo8urGro7upChann3elTa2b.ngrok.io/** where **yo8urGro7upChann3elTa2b** is replaced by the ngrok alpha-numeric HTTPS URL.
 
-- Make note of the HTTPS ngrok URL - you can copy it to `Notepad for Windows`. You'll need the ngrok HTTPS URL to test your tab in Teams.
+- Make note of the HTTPS ngrok URL - you can copy it to **Notepad for Windows**. You'll need the ngrok HTTPS URL to test your tab in Teams.
 
 ## Update your tab for Teams Integration
 
-For your tab to display within Microsoft Teams, you must include the **Microsoft Teams JavaScript client SDK** and include a call to the Teams SDK&mdash;`microsoftTeams.initialize()`&mdash;within your channel/group page &#60;`script`&#62; tags. This is how your tab and the Teams app communicate.
+For your tab to display within Microsoft Teams, you must include the **Microsoft Teams JavaScript client SDK** and include a call to the Teams SDK&mdash;**microsoftTeams.initialize()**&mdash;within your tab page &#60;`script`&#62; tags. This is how your tab and the Teams app communicate.
 
-This application presents the user with two option buttons for displaying the tab content with either a red or gray icon. Choosing the **Select Gray** or **Select Red** button fires **saveGray()** or **saveRed()**, respectively, sets **microsoftTeams.settings.setValidityState(true)**, and enables the ***Save*** button in the Teams UI. This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed.  Without this you'll be stuck in a loop and unable to proceed.
+This application presents the user with two option buttons for displaying the tab with either a red or gray icon. Choosing the **Select Gray** or **Select Red** button fires **saveGray()** or **saveRed()**, respectively, sets **microsoftTeams.settings.setValidityState(true)**, and enables ***Save*** in the Teams UI. This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed.  Without this you'll be stuck in a loop and unable to proceed.
 
 On save, the parameters of **microsoftTeams.settings.setSettings** are set. Finally, **saveEvent.notifySuccess()** is called to indicate that the content URL has successfully resolved.  
 
-- The **Pages** folder is where the framework looks for Razor Pages by default. To reference the [Microsoft Teams Library](https://github.com/OfficeDev/microsoft-teams-library-js), select the **Pages** folder, open **ChannelGroup.cshtml**, and add the markup for the latest version of the **jQuery Library** and the **MicrosoftTeams SDK** below the following Razor page shared layout reference:
+- To reference the [Microsoft Teams Library](https://github.com/OfficeDev/microsoft-teams-library-js), select the **Pages** folder, open **tab.cshtml**, and add the markup for the latest version of the **jQuery Library** and the **MicrosoftTeams SDK** below the following Razor page shared layout reference:
 
 ```html
 @{
@@ -144,7 +143,7 @@ The markup should be the latest versions of the following:
 
 >[!IMPORTANT]
 >Don't copy/paste the &#60;script src="..." URLs from this page, they may not represent the latest version. To get the latest version of the SDK markup, always go to:
-**foo.md(SDK)** and [jQuery CDN - Latest Stable Versions](https://code.jquery.com) or [Microsoft jQuery Releases on the CDN.](/aspnet/ajax/cdn/overview#jquery-releases-on-the-cdn)
+**[Microsoft Teams JavaScript API (via CDN)](foo.com)** and **[jQuery CDN - Latest Stable Versions](https://code.jquery.com)** or [Microsoft jQuery Releases on the CDN.](/aspnet/ajax/cdn/overview#jquery-releases-on-the-cdn)
 
 - Within the first set of &#60;**script**&#62; tags, call **initialize()** on **microsoftTeams** as follows:
 
@@ -155,34 +154,36 @@ The markup should be the latest versions of the following:
 - Within the next set of script tags, you'll find the two settings functions. Update the **websiteUrl** and **contentUrl** values in each function with the HTTPS **ngrok** URL to your tab. Your code should look like the following (except **y8urGr7pChan3Ta2b** is replaced with your ngrok URL):
 
 ```javascript
-let saveRed = () => {
-        microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-            microsoftTeams.settings.setSettings({
-                websiteUrl: "https://y8urGr7pChan3Ta2b.ngrok.io",
-                contentUrl: "https://y8urGr7pChan3Ta2b.ngrok.io/red/",
-                entityId: "tabby",
-                suggestedDisplayName: "tabby"
-            });
-            saveEvent.notifySuccess();
-        });
-    }
+
 
     let saveGray = () => {
         microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
             microsoftTeams.settings.setSettings({
                 websiteUrl: "https://y8urGr7pChan3Ta2b.ngrok.io",
                 contentUrl: "https://y8urGr7pChan3Ta2b.ngrok.io/gray/",
-                entityId: "tabby",
-                suggestedDisplayName: "tabby"
+                entityId: "grayIconTab",
+                suggestedDisplayName: "MyNewTab"
+            });
+            saveEvent.notifySuccess();
+        });
+    }
+
+let saveRed = () => {
+        microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
+            microsoftTeams.settings.setSettings({
+                websiteUrl: "https://y8urGr7pChan3Ta2b.ngrok.io",
+                contentUrl: "https://y8urGr7pChan3Ta2b.ngrok.io/red/",
+                entityId: "redIconTab",
+                suggestedDisplayName: "MyNewTab"
             });
             saveEvent.notifySuccess();
         });
     }
 ```
 
-- *Save* the updated **channelGroup.cshtml** and *Save all* for good measure.
+- *Save* the updated **tab.cshtml** and *Save all* for good measure.
 
-Your tab code is complete. Now you can build your application. 
+Your tab code is complete. You can build your application.
 
 ### Run your application
 
@@ -244,8 +245,8 @@ The **Domains from your tabs** should contain only your ngrok URL without the HT
 - Select ***Install***.
 
 >[!IMPORTANT]
->In the **Description** field on the right you'll see the following warning:<br><br>
-&#9888; "**The 'validDomains' array cannot contain a tunneling site...**" <br><br>**This warning can be ignored while you're testing your tab.**<br><br>
+>In the **Description** field on the right you'll see the following warning:<br>
+&#9888; "**The 'validDomains' array cannot contain a tunneling site...**" <br>**This warning can be ignored while you're testing your tab.**<br>
 After your tab has been uploaded to Microsoft teams, via ngrok, and successfully saved, you can view it in tabs gallery, add it to the tabs bar, and interact with it until your tunnel session ends .<br><br>
 **Remember to serve your tab on your hosted website prior to submission to the Teams app store for approval**.
 
