@@ -11,7 +11,7 @@ In this quickstart we'll walk-through creating a custom personal tab with C# and
 
 ## Prerequisites
 
-- To complete this quickstart you will need an Office 365 tenant and a team configured with *Allow uploading custom apps* enabled. To learn more, see [Manage Microsoft Teams settings for your organization](/OfficeDocs-SkypeForBusiness/Teams/enable-features-office-365.md). If you don't currently have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program. The subscription will remain active as long as you're using it for ongoing development. See [Welcome to the Office 365 Developer Program](/OfficeDev/office-dev-program-docs/docs/office-365-developer-program.md).
+- To complete this quickstart you will need an Office 365 tenant and a team configured with *Allow uploading custom apps* enabled. To learn more, see [Manage Microsoft Teams settings for your organization](/OfficeDocs-SkypeForBusiness/Teams/enable-features-office-365). If you don't currently have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program. The subscription will remain active as long as you're using it for ongoing development. See [Welcome to the Office 365 Developer Program](/OfficeDev/office-dev-program-docs/docs/office-365-developer-program).
 
 - You'll use App Studio for Microsoft Teams to import your application to Teams. To install App Studio in Teams select **Apps** ![Store App](/microsoftteams/platform/assets/images/tab-images/storeApp.png) at the bottom-left corner of the Teams app, and search for App Studio. Once you find the tile for App Studio, select it and choose install in the pop-up window dialog box.
 
@@ -127,7 +127,7 @@ The markup will be the latest versions of the following:
 
 - *Save* the updated **Personal.cshtml** and *Save all* for good measure.
 
-Your tab code is complete. Now you can build your application. 
+Your tab code is complete. Now you can build your application.
 
 ### Run your application
 
