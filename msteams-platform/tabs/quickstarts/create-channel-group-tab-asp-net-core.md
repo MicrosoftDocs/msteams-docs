@@ -34,11 +34,9 @@ We have provided a simple [Channel Group Tab](OfficeDev/msteams-samples/samples/
 git clone https://github.com/OfficeDev/msteams-samples.git
 ```
 
-Once you have the source code:
-- open Visual Studio and select **Open a project or solution**
-- navigate to the tab solution file, **msteams-samples/samples/dotnet/tabs/channelGroupTab/**, and open **channelGroupTab.sln** 
-- Select **Build Solution** from the **Build** menu. 
-- Run the application by pressing **F5** or choosing **Start Debugging** from the **Debug** menu and navigate to the following URLs to verify that the application URLS are loading:
+Once you have the source code Open Visual Studio and select *Open a project or solution*. Navigate to the tab solution file, *msteams-samples/samples/dotnet/tabs/channelGroupTab/*, and open **channelGroupTab.sln**.
+
+To build and run your application select *F5* or choose *Start Debugging* from the *Debug* menu and navigate to the following and verify that the application URLS are loading:
 
 - `http://localhost:44355`
 - `http://localhost:44355/privacy`
@@ -68,7 +66,7 @@ In ASP.NET Core, the web root folder is where the application looks for static f
 
 &#9989; index.cshtml
 
-ASP.NET Core treats files called **index** as the default page for the site. When your browser URL points to the root of the site, index.cshtml will be displayed and will be the content page for your tab.
+ASP.NET Core treats files called *index* as the default page for the site. When your browser URL points to the root of the site, index.cshtml will be displayed and will be the content page for your tab.
 
 &#9989; tab.cs
 
@@ -118,27 +116,15 @@ To test your tab you'll use [ngrok](https://ngrok.com/docs). Your server's web e
 ngrok http https://localhost:44355 -host-header="localhost:44355"
 ```
 
-- Ngrok will listen to requests from the internet and will route them to your project when it is running on port 44355.  It should resemble `https://y8rGr7pCh3nlT2b.ngrok.io/ where **y8rGr7pCh3nlT2b** is replaced by the ngrok alpha-numeric HTTPS URL.
+- Ngrok will listen to requests from the internet and will route them to your project when it is running on port 44355.  It should resemble `https://y8rGr7pCh3nlT2b.ngrok.io/` where **y8rGr7pCh3nlT2b** is replaced by the ngrok alpha-numeric HTTPS URL.
 
 - Make note of the HTTPS ngrok URL - you can copy it to **Notepad for Windows**. You'll need the ngrok HTTPS URL to test your tab in Teams.
 
-## Update your tab for Teams Integration
+## Update your application for Teams Integration
 
-For your tab to display within Microsoft Teams, you must include the **Microsoft Teams JavaScript client SDK** and include a call to the Teams SDK&mdash;**microsoftTeams.initialize()**&mdash;within your tab page &#60;`script`&#62; tags. This is how your tab and the Teams app communicate.
+For your tab to display within Microsoft Teams, you must include the **Microsoft Teams JavaScript client SDK** and include a call to the Teams SDK&mdash;**microsoftTeams.initialize()**&mdash;within your tab page &#60;`script`&#62; tags. This is how your tab and the Teams app communicate:
 
-This application presents the user with two option buttons for displaying the tab with either a red or gray icon. Choosing the **Select Gray** or **Select Red** button fires **saveGray()** or **saveRed()**, respectively, sets **microsoftTeams.settings.setValidityState(true)**, and enables ***Save*** in the Teams UI. This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed.  Without this you'll be stuck in a loop and unable to proceed.
-
-On save, the parameters of **microsoftTeams.settings.setSettings** are set. Finally, **saveEvent.notifySuccess()** is called to indicate that the content URL has successfully resolved.  
-
-- To reference the [Microsoft Teams Library](https://github.com/OfficeDev/microsoft-teams-library-js), select the **Pages** folder, open **tab.cshtml**, and add the markup for the latest version of the **jQuery Library** and the **MicrosoftTeams SDK** below the following Razor page shared layout reference:
-
-```html
-@{
-Layout= #_Layout";
-}
-```
-
-The markup should be the latest versions of the following:
+-Navigate to the Pages folder and select the Shared folder, open _Layout.cshtml and add the following to the <head> tag section:
 
 ```html
 `<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>`
@@ -149,17 +135,21 @@ The markup should be the latest versions of the following:
 >Don't copy/paste the &#60;script src="..." URLs from this page, they may not represent the latest version. To get the latest version of the SDK markup, always go to:
 **[Microsoft Teams JavaScript API (via CDN)](foo.com)** and **[jQuery CDN - Latest Stable Versions](https://code.jquery.com)** or [Microsoft jQuery Releases on the CDN.](/aspnet/ajax/cdn/overview#jquery-releases-on-the-cdn)
 
-- Within the first set of &#60;**script**&#62; tags, call **initialize()** on **microsoftTeams** as follows:
+## Configure your tab
+
+This application presents the user with two option buttons for displaying the tab with either a red or gray icon. Choosing the **Select Gray** or **Select Red** button fires **saveGray()** or **saveRed()**, respectively, sets **microsoftTeams.settings.setValidityState(true)**, and enables ***Save*** in the Teams UI. This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed(without this you'll be stuck in a loop and unable to proceed). On save, the parameters of **microsoftTeams.settings.setSettings** are set. Finally, **saveEvent.notifySuccess()** is called to indicate that the content URL has successfully resolved. Update your configuration page as follows: 
+
+- In the **Pages** folder select **tab.cshtml**, reference the [Microsoft Teams Library](https://github.com/OfficeDev/microsoft-teams-library-js) by as follows:
+
+- Within the first set of &#60;**script**&#62; tags, call **initialize()** on **microsoftTeams**:
 
 ```javascript
     microsoftTeams.initialize();
 ```
 
-- Within the next set of script tags, you'll find the two settings functions. Update the **websiteUrl** and **contentUrl** values in each function with the HTTPS **ngrok** URL to your tab. Your code should look like the following (except **y8rGr7pCh3nlT2b** is replaced with your ngrok URL):
+- Within the next set of script tags, you'll find the two settings functions. Update the **websiteUrl** and **contentUrl** values in each function with the HTTPS ngrok URL to your tab. Your code should look like the following with **y8rGr7pCh3nlT2b** replaced with your ngrok URL:
 
 ```javascript
-
-
     let saveGray = () => {
         microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
             microsoftTeams.settings.setSettings({
@@ -172,7 +162,7 @@ The markup should be the latest versions of the following:
         });
     }
 
-let saveRed = () => {
+    let saveRed = () => {
         microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
             microsoftTeams.settings.setSettings({
                 websiteUrl: "https://y8rGr7pCh3nlT2b.ngrok.io",
@@ -230,19 +220,22 @@ There's a list of steps in the left-hand side of the Manifest editor, and on the
 
 - Select ***Tabs***.
 
-- To clear placeholder URLs from Manifest editor, scroll to the bottom of the Tabs section (*Select a tab from the following list to include any additional domains*) select the (•••) button and choose **Delete**.
-
 ##### Team Tab
 
-- Under **Team Tab** select the (**&#8226;&#8226;&#8226;**) button under the **Tab configuration url** field and choose **Edit**.
+- Under **Team Tab** select **Add**.
 
-- Update the **Configuration URL** with your **ngrok** HTTPS URL. Remember to include the */channelgroup* parameter at the end of the URL.
+- In the Team tab pop-up window  Update the **Configuration URL** with your **ngrok** HTTPS URL. Remember to include the */tab* parameter at the end of the URL.
+
+ Finally, make sure the *can update configuration?, *Team*, and/or *Group chat* boxes are checked and select **Save**.
+
 
 #### Finish
 
 ##### Domains and permissions
 
-The **Domains from your tabs** should contain only your ngrok URL without the HTTPS prefix&mdash;**y8rGr7pCh3nlT2b.ngrok.io/**.
+- The **Domains from your tabs** should contain only your ngrok URL without the HTTPS prefix&mdash;**y8rGr7pCh3nlT2b.ngrok.io/**.
+
+- To clear placeholder URLs from Manifest editor, scroll to the bottom of the Tabs section (*Select a tab from the following list to include any additional domains*) select the (•••) button and choose **Delete**.
 
 ##### Test and distribute
 
