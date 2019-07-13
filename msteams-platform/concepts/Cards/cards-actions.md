@@ -21,7 +21,7 @@ Cards used by bots and messaging extensions in Teams support the following activ
 >* Teams does not support the `potentialActions` property.
 >* Card actions are different than [suggested actions](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button) in Bot Framework/Azure Bot Service. Suggested actions are not supported in Microsoft Teams: if you want buttons to appear on a Teams bot message, use a card.
 
-Teams also supports [Adaptive card actions](~/concepts/cards/cards-actions#adaptive-card-actions), which are only used by Adaptive cards. These actions are listed in their own section at the end of this reference.
+Teams also supports [Adaptive Cards actions](~/concepts/cards/cards-actions#adaptive-card-actions), which are only used by Adaptive Cards. These actions are listed in their own section at the end of this reference.
 
 ## openUrl
 
@@ -213,19 +213,19 @@ The top-level `replyToId` property contains the ID of the message that the card 
 
 Initiates an OAuth flow, allowing bots to connect with secure services, as described in more detail here: [Authentication flow in bots](~/concepts/authentication/auth-flow-bot).
 
-## Adaptive card actions
+## Adaptive Cards actions
 
-Adaptive cards support three action types:
+Adaptive Cards support three action types:
 
 * [Action.OpenUrl](http://adaptivecards.io/explorer/Action.OpenUrl.html)
 * [Action.Submit](http://adaptivecards.io/explorer/Action.Submit.html)
 * [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
 
-In addition to the actions mentioned above, you can modify the Adaptive Action.Submit payload to support existing bot framework actions using a `msteams` property in the `data` object of `Action.Submit`. The below sections detail how to use existing bot framework actions with Adaptive.
+In addition to the actions mentioned above, you can modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using a `msteams` property in the `data` object of `Action.Submit`. The below sections detail how to use existing Bot Framework actions with Adaptive Cards.
 
-### Adaptive card with messageBack action
+### Adaptive Cards with messageBack action
 
-To include a `messageBack` action with an adaptive card include the following details in the `msteams` object. Note that you can include additional hidden properties in the `data` object if needed.
+To include a `messageBack` action with an Adaptive Card include the following details in the `msteams` object. Note that you can include additional hidden properties in the `data` object if needed.
 
 | Property | Description |
 | --- | --- |
@@ -251,9 +251,9 @@ To include a `messageBack` action with an adaptive card include the following de
 }
 ```
 
-### Adaptive card with imBack action
+### Adaptive Cards with imBack action
 
-To include a `imBack` action with an adaptive card include the following details in the `msteams` object. Note that you can include additional hidden properties in the `data` object if needed.
+To include a `imBack` action with an Adaptive Card include the following details in the `msteams` object. Note that you can include additional hidden properties in the `data` object if needed.
 
 | Property | Description |
 | --- | --- |
@@ -275,9 +275,9 @@ To include a `imBack` action with an adaptive card include the following details
 }
 ```
 
-### Adaptive card with signin action
+### Adaptive Cards with signin action
 
-To include a `signin` action with an adaptive card include the following details in the `msteams` object. Note that you can include additional hidden properties in the `data` object if needed.
+To include a `signin` action with an Adaptive Card include the following details in the `msteams` object. Note that you can include additional hidden properties in the `data` object if needed.
 
 | Property | Description |
 | --- | --- |
