@@ -66,7 +66,7 @@ In ASP.NET Core, the web root folder is where the application looks for static f
 
 &#9989; index.cshtml
 
-ASP.NET Core treats files called *index* as the default/home page for the site. When your browser URL points to the root of the site, index.cshtml will be displayed as the content page for your tab.
+ASP.NET Core treats files called *index* as the default/home page for the site. When your browser URL points to the root of the site, index.cshtml will be displayed as the home page for your application.
 
 &#9989; tab.cs
 
@@ -181,7 +181,7 @@ Your tab code is complete.
 
 ### Run your application
 
-- In Visual Studio select **F5** or choose **Start Debugging** from your application's **Debug** menu. Verify that **ngrok** is running and working properly by opening your browser and going to your content page via the HTTPS URL supplied by **ngrok** in your command prompt window.
+- In Visual Studio select **F5** or choose **Start Debugging** from your application's **Debug** menu. Verify that **ngrok** is running and working properly by opening your browser and going to your content page via the HTTPS URL that was provided by **ngrok** in your command prompt window.
 
 >[!TIP]
 >You need to have both your application in Visual Studio and ngrok running to complete this quickstart. If you need to stop running your application in Visual Studio to work on it **keep ngrok running**. Ngrok will continue to listen and will resume routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service it will return a new URL and you'll have to update every place that uses that URL.
