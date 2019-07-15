@@ -6,7 +6,7 @@ keywords: teams tabs development
 # Add tabs to Microsoft Teams apps
 
 > [!Important]
-> Full support for tabs on mobile clients is currently in [developer preview](~/resources/dev-preview/developer-preview-intro.md), and will be released soon. To prepare for this change you should follow the [guidance for personal apps on mobile](~/resources/design/framework/tabs-mobile.md) when creating your tabs. When full support for tabs is release, your `contentUrl` **will be loaded in the mobile Teams client**. Your users will still have the option of opening your tab in a separate browser via your `websiteUrl`, however your `contentUrl` will be loaded first.
+> Full support for static tabs on mobile clients is currently in [developer preview](~/resources/dev-preview/developer-preview-intro.md), and will be released soon. To prepare for this change you should follow the [guidance for personal apps on mobile](~/resources/design/framework/tabs-mobile.md) when creating your tabs. When full support for tabs is release, your `contentUrl` **will be loaded in the mobile Teams client**. Your users will still have the option of opening your tab in a separate browser via your `websiteUrl`, however your `contentUrl` will be loaded first.
 
 Tabs in Microsoft Teams allow you to display rich interactive web content. You can build a Microsoft Teams tab from scratch or adapt your existing web-app experience.
 
