@@ -10,7 +10,7 @@ Bots support all tenants by design. There are situations where this is not appro
 
 ## Node.js/Javascript
 
-Here's how to limit bots to work with a limited number of tenants in JavaScript/Node.JS. This example supports a single tenant, but can be extended to support more than one tenant if needed.
+Here's how to limit bots to work with a limited number of tenants in JavaScript/Node.js. This example supports a single tenant, but can be extended to support more than one tenant if needed.
 
 > [!Note]
 >For Microsoft Teams, the Office 365 tenant ID can be found here: `session.message.sourceEvent.tenant.id`.
@@ -53,7 +53,7 @@ bot.use({
 
 ## C#
 
-Here's how to limit bots to work with single or multiple tenants in C#. The SDK exposes TenantFilter, which allows you to add this action filter to the controller class as shown below.
+Here's how to limit bots to work with single or multiple tenants in C#. The SDK exposes `TenantFilter`, which allows you to add this action filter to the controller class as shown below.
 
 ``` C#
 
