@@ -36,7 +36,7 @@ When adding a tab, if you click the save buttons but are presented with an error
 
 ### Common problems with the settings object
 
-* `settings.entityID` is missing. This field is required.
+* `settings.entityId` is missing. This field is required.
 * `settings.contentUrl` is missing. This field is required.
 * `settings.contentUrl` or the optional `settings.removeUrl`, or `settings.websiteUrl` are provided but not valid. The URLs must use HTTPS and also must either be the same domain as the settings page or specified in the manifest's `validDomains` list.
 
