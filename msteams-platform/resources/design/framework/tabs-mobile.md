@@ -106,7 +106,7 @@ Fields are areas where users can input text. Flyouts are more lightweight than d
 
 ##### Field controls
 
-![mobile field controls](~/assets/images/mobile-field-control.png)
+![mobile field controls](~/assets/images/mobile-field-controls.png)
 
 ##### Flyout control
 
