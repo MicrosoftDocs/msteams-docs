@@ -92,13 +92,16 @@ It is highly recommended to have help/FAQ link for your Teams app and to provide
 ### Bots and messaging extensions
 
 * Be sure that your bot provides appropriate responses when mentioned (@*botname*) in a channel and in personal conversations as needed. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](~/resources/schema/manifest-schema.md#bots).)
-* Your bot should provide a "welcome message" outlinig its value for the user along with the valid commands.
+* Your bot should provide a "welcome message" outlining its value for the user along with the valid commands.
 * Your bot should respond to invalid commands with help content. For example "I'm sorry, I don't understand. Type "help" for more information."
 * Your bot must include a help command that provides your value proposition along with all your valid commands.
 * For bots, a response to a user command must occur within two seconds. If longer processing is required, you must use a typing indicator.
 * For messaging extensions, a response to a user command must occur within five seconds.
 
 ### Tabs
+
+> [!Important]
+> Full support for tabs on mobile clients is currently in [developer preview](~/resources/dev-preview/developer-preview-intro.md), and will be released soon. To prepare for this change you should follow the [guidance for personal apps on mobile](~/resources/design/framework/personal-apps-mobile.md) when creating your tabs.
 
 * For your tab configuration page, be sure to provide "About" links and proper guidance. This page is the first thing the user sees, so ensure that a new user understands what to do.
 * If a response to an action takes more than three seconds, you must provide a loading message or warning.
@@ -109,4 +112,4 @@ It is highly recommended to have help/FAQ link for your Teams app and to provide
 * Check your manifest for completeness and accuracy. Then check it again.
 * Do not make changes to your app while validation is in progress. This will require a complete re-validation of your app.
 * Your app  must not stop responding, end unexpectedly, or contain programming errors. If there is an issue it should fail gracefully with a valid way forward message to user.
-* Your app must not automatically download or install or launch any executable code on the user's environment. Any download should seek an explicit permission from the user.
+* Your app must not automatically download, install or launch any executable code on the user's environment. Any download should seek an explicit permission from the user.
