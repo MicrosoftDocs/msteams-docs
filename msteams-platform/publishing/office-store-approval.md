@@ -101,7 +101,7 @@ It is highly recommended to have help/FAQ link for your Teams app and to provide
 ### Tabs
 
 > [!Important]
-> Full support for tabs on mobile clients is currently in [developer preview](~/resources/dev-preview/developer-preview-intro.md), and will be released soon. To prepare for this change you should follow the [guidance for personal apps on mobile](~/resources/design/framework/personal-apps-mobile.md) when creating your tabs.
+> Full support for tabs on mobile clients is currently in [developer preview](~/resources/dev-preview/developer-preview-intro.md), and will be released soon. To prepare for this change you should follow the [guidance for personal apps on mobile](~/resources/design/framework/tabs-mobile.md) when creating your tabs.
 
 * For your tab configuration page, be sure to provide "About" links and proper guidance. This page is the first thing the user sees, so ensure that a new user understands what to do.
 * If a response to an action takes more than three seconds, you must provide a loading message or warning.

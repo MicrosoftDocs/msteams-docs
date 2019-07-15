@@ -30,7 +30,7 @@ Content pages in Teams, regardless of scope or type, should follow the guideline
 > [!Note]
 > Static tabs on mobile are currently in [developer preview](~/resources/dev-preview/developer-preview-intro.md). Static tabs on a mobile client with developer preview enabled will open their content URL within the Teams mobile client.
 
-Static tabs should also follow the guidance for [personal apps on mobile](~/resources/design/framework/personal-apps-mobile.md). Your tab should follow [responsive web design](https://www.w3schools.com/html/html_responsive.asp) principles, and work well on any screen resolution. If you are using authentication, make sure that you upgrade your Teams SDK to at least version 1.4.1, and validate that your authentication works on the Android and iOS Teams mobile clients.
+Static tabs should also follow the guidance for [personal apps on mobile](~/resources/design/framework/tabs-mobile.md). Your tab should follow [responsive web design](https://www.w3schools.com/html/html_responsive.asp) principles, and work well on any screen resolution. If you are using authentication, make sure that you upgrade your Teams SDK to at least version 1.4.1, and validate that your authentication works on the Android and iOS Teams mobile clients.
 
 ## Adding your tabbed content to your app package
 

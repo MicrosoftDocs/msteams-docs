@@ -10,7 +10,7 @@ The developer preview includes the following new features:
 
 ## Personal apps (static tabs and 1-1 bots) enabled on mobile
 
-Installed personal apps (static tabs and 1-1 bots) are now available in the app tray on mobile devices. See [Design guidelines for mobile](~/resources/design/framework/personal-apps-mobile.md) for design guidance. Apps can only be installed from a desktop or web client, and can take up to 24 hours to be available on mobile after installation.
+Installed personal apps (static tabs and 1-1 bots) are now available in the app tray on mobile devices. See [Design guidelines for mobile](~/resources/design/framework/tabs-mobile.md) for design guidance. Apps can only be installed from a desktop or web client, and can take up to 24 hours to be available on mobile after installation.
 
 ## Calls and online meeting bots
 

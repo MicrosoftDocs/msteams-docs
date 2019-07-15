@@ -218,6 +218,8 @@
         href: ./resources/design/framework/apps.md
       - name: Personal apps
         href: ./resources/design/framework/personal-apps.md
+      - name: Tabs on mobile clients
+        href: ./resources/design/framework/tabs-mobile.md
       - name: Activity feed
         href: ./resources/design/framework/activity-feed.md
       - name: Search
