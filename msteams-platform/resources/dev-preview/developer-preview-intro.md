@@ -26,6 +26,7 @@ Using an app that contains developer preview features may cause clients that hav
 
 To enable the public developer preview on a desktop or web client, you need to do the following:
 
+1. Enabling uploading of apps in the admin console of your tenant as described [here](~/get-started/get-started-tenant.md).
 1. Click on your profile (either in the upper right or lower left of the Teams interface) to display the Teams menu.
 1. Select About → Developer preview.
 1. Select **Switch to Developer preview**.
@@ -34,6 +35,7 @@ To enable the public developer preview on a desktop or web client, you need to d
 
 To enable the public developer preview on a mobile client, you need to do the following:
 
+1. Enabling uploading of apps in the admin console of your tenant as described [here](~/get-started/get-started-tenant.md).
 1. Open the hamburger menu on the top left, then select **Settings**.
 1. Select **About**.
 1. Click the Developer preview toggle.

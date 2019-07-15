@@ -210,30 +210,26 @@
   - name: Design guidelines
     href: ./resources/design/overview.md
     items:
-    - name: Framework
-      items:
-      - name: The basics
-        href: ./resources/design/framework/basics.md
-      - name: Apps
-        href: ./resources/design/framework/apps.md
-      - name: Personal apps
-        href: ./resources/design/framework/personal-apps.md
-      - name: Tabs on mobile clients
-        href: ./resources/design/framework/tabs-mobile.md
-      - name: Activity feed
-        href: ./resources/design/framework/activity-feed.md
-      - name: Search
-        href: ./resources/design/framework/search.md
-      - name: Tabs
-        href: ./resources/design/framework/tabs.md
-      - name: Messaging extensions
-        href: ./resources/design/framework/messaging-extensions.md
-      - name: Bots
-        href: ./resources/design/framework/bots.md
-      - name: Cards
-        href: ./resources/design/framework/cards.md
-      - name: Command box
-        href: ./resources/design/framework/command-box.md
+    - name: Apps
+      href: ./resources/design/framework/apps.md
+    - name: Personal apps
+      href: ./resources/design/framework/personal-apps.md
+    - name: Tabs
+      href: ./resources/design/framework/tabs.md
+    - name: Tabs on mobile clients
+      href: ./resources/design/framework/tabs-mobile.md
+    - name: Activity feed
+      href: ./resources/design/framework/activity-feed.md
+    - name: Search
+      href: ./resources/design/framework/search.md
+    - name: Messaging extensions
+      href: ./resources/design/framework/messaging-extensions.md
+    - name: Bots
+      href: ./resources/design/framework/bots.md
+    - name: Cards
+      href: ./resources/design/framework/cards.md
+    - name: Command box
+      href: ./resources/design/framework/command-box.md
 #    - name: Components
 #      items:
 #      - name: Color

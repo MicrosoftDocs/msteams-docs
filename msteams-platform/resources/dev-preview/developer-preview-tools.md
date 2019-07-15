@@ -1,12 +1,15 @@
 ---
 title: DevTools for Microsoft Teams tabs
 description: Describes how to get to the DevTools when using the Microsoft Teams Desktop Client
-keywords: devtools desktop client
-ms.date: 08/10/2018
+keywords: devtools debug mobile chrome desktop client developer tools
 ---
 # DevTools for Microsoft Teams tabs
 
-When Teams is running in a browser, it’s easy to access the browser's DevTools: F12 (on Windows) or Command-Option-I (on MacOS).
+When Teams is running in a browser, it’s easy to access the browser's DevTools: F12 (on Windows) or Command-Option-I (on MacOS). The DevTools gives you access to:
+
+1. View console logs.
+1. View/modify html, css, and network requests during runtime.
+1. Add breakpoints to your JavaScript code, and perform interactive debugging.
 
 The feature is only available in desktop and Android clients after Developer Preview has been enabled. See [How do I enable Developer Preview](~/resources/dev-preview/developer-preview-intro.md) for more information.
 
