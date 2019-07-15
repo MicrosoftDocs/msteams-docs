@@ -36,4 +36,46 @@ Mobile clients regularly need to function with low bandwith and intermittent con
 
 ## Design considerations for mobile
 
-adsf
+Our mobile platform allows apps to be an immersive experience with the app content taking up all of the screen apart from main Teams navigation. To create an immersive experience that fits seamlessly within the Microsoft Teams client, follow the guidelines below.
+
+### Layouts
+
+Choosing the correct layout for your tab is important. You should consider the kind of information you're presenting, and choose a layout that organizes it for easy consumption. Some potential options are outlined below.
+
+#### Single canvas
+
+This is one large area where work gets done. The Wiki app follows this pattern. If you have an app that doesn’t separate content into smaller components this would be a good fit.
+
+![single canvas layout](~/assets/images/mobile-single-canvas.png)
+
+#### List
+
+Lists are great for sorting and filtering large quantities of data and are great at keeping the most important things at the top. It is helpful to use sortable columns. Actions can be added to each list item under the ellipsis menu.
+
+![list layout](~/assets/images/mobile-list.png)
+
+#### Grid
+
+Grids are useful for showing elements which are highly visual. It helps to include a filter or search control at the top.
+
+![grid layout](~/assets/images/mobile-grid.png)
+
+### Tabs with bots on mobile
+
+The below is an example personal app that contains two static tabs and a bot.
+
+![tabs and bots on mobile](~/assets/images/mobile-tab-with-bot.png)
+
+### UI Components
+
+#### Color palettes
+
+Using our approved neutral palette for backgrounds, notifications, text, and buttons will help your app feel more at home in Teams. Since Teams mobile has two colour themes (light and dark), it’s a good idea to make sure your app looks great in both.
+
+##### Light color
+
+![light color palette](~/assets/images/light-color.png)
+
+##### Dark color
+
+![dark color palette](~/assets/images/dark-color.png)
