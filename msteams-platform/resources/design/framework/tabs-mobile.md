@@ -79,3 +79,35 @@ Using our approved neutral palette for backgrounds, notifications, text, and but
 ##### Dark color
 
 ![dark color palette](~/assets/images/dark-color.png)
+
+#### Buttons and controls
+
+The way buttons are styled helps communicate what kind of action they trigger. We maintain a wide range of buttons that are formatted to show different levels of emphasis. Buttons can have text, an icon, or a combination of text and an icon. To communicate different levels in a hierarchy, we designed primary and secondary buttons within each category.
+
+![buttons](~/assets/images/buttons.png)
+
+![selection controls](~/assets/images/selection-controls.png)
+
+![chiclets and pills](~/assets/images/chiclets-and-pills.png)
+
+#### Typography
+
+Typography should be clear and purposeful. Emphasize important information and avoid using multiple fonts and sizes to reduce confusion. We recommend using sentence case and avoiding the usage of all caps for localization and legibility.
+
+![mobile typograph](~/assets/images/mobile-typograph.png)
+
+#### Fields and Flyouts
+
+Fields are areas where users can input text. Flyouts are more lightweight than dialogs, and appear from the top pane.
+
+##### List controls
+
+![mobile list controls](~/assets/images/mobile-list-controls.png)
+
+##### Field controls
+
+![mobile field controls](~/assets/images/mobile-field-controls.png)
+
+##### Flyout control
+
+![mobile flyout controls](~/assets/images/mobile-flyout.png)
