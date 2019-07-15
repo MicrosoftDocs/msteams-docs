@@ -37,10 +37,10 @@ Once you have the source code, open Visual Studio and select *Open a project or 
 
 To build and run your application select *F5* or choose *Start Debugging* from the *Debug* menu, navigate to the following, and verify that the application URLS load properly:
 
-- **http://localhost:44311**
-- **http://localhost:44311/personal**
-- **http://localhost:44311/privacy**
-- **http://localhost:44311/tou**
+- **http://localhost:44325/**
+- **http://localhost:44325/personal**
+- **http://localhost:44325/privacy**
+- **http://localhost:44325/tou**
 
 ## Review the source code
 
@@ -82,17 +82,17 @@ n the Visual Studio Solution Explorer window right-click on the project and sele
 
 ```xml
 <PropertyGroup>
-    <PostBuildEvent>powershell.exe Compress-Archive -Path \"$(ProjectDir)Manifest\*\" -DestinationPath \"$(TargetDir)tab.zip\" -Force</PostBuildEvent>
+    <PostBuildEvent>powershell.exe Compress-Archive -Path \"$(ProjectDir)AppManifest\*\" -DestinationPath \"$(TargetDir)tab.zip\" -Force</PostBuildEvent>
   </PropertyGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Manifest\icon-outline.png">
+    <EmbeddedResource Include="AppManifest\icon-outline.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manifest\icon-color.png">
+    <EmbeddedResource Include="AppManifest\icon-color.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manifest\manifest.json">
+    <EmbeddedResource Include="AppManifest\manifest.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
@@ -136,10 +136,10 @@ To test your tab you'll use [ngrok](https://ngrok.com/docs). Your server's web e
 - Open a command prompt in the root of your project folder and run the following command:
 
 ```bash
-ngrok http https://localhost:44311 -host-header="localhost:44311"
+ngrok http https://localhost:44325 -host-header="localhost:44325"
 ```
 
-- Ngrok will listen to requests from the internet and will route them to your application when it is running on port 44311.  It should resemble `https://yo8urGro7upChann3elTa2b.ngrok.io/` where *yo8urGro7upChann3elTa2b* is replaced by your ngrok alpha-numeric HTTPS URL.
+- Ngrok will listen to requests from the internet and will route them to your application when it is running on port 44325.  It should resemble `https://yo8urGro7upChann3elTa2b.ngrok.io/` where *yo8urGro7upChann3elTa2b* is replaced by your ngrok alpha-numeric HTTPS URL.
 
 - Verify that **ngrok** is running and working properly by opening your browser and going to your home page via the HTTPS URL that was provided by **ngrok** in your command prompt window.
 
@@ -209,9 +209,9 @@ If the **Additional valid domains** field is populated, select (•••) and c
 ##### Test and distribute
 
 >[!IMPORTANT]
->In the **Description** field on the right you'll see the following warning:<br><br>
-&#9888; "**The 'validDomains' array cannot contain a tunneling site...**" <br><br>**This warning can be ignored while you're testing your tab.**<br><br>
-After your tab has been uploaded to Microsoft teams, via ngrok, and successfully saved, you can view its content until your tunnel session ends .<br><br>
+>In the **Description** field on the right you'll see the following warning:<br>
+&#9888; "**The 'validDomains' array cannot contain a tunneling site...**" <br>**This warning can be ignored while you're testing your tab.**<br>
+After your tab has been uploaded to Microsoft teams, via ngrok, and successfully saved, you can view it in tabs gallery, add it to the tabs bar, and interact with it until your tunnel session ends .<br><br>
 **Remember to serve your tab on your hosted website prior to submission to the Teams app store for approval**.
 
 - Select ***Install***.
@@ -221,7 +221,7 @@ After your tab has been uploaded to Microsoft teams, via ngrok, and successfully
 - Select ***Install***.
 
 - In the next pop-up window select ***Open*** and your tab will be displayed.
- 
+
 ## View your personal tabs
 
 - In the navbar located at the far-left of the Teams App, select (•••) *More added apps*. You'll be presented with a list of personal view apps.
