@@ -27,13 +27,13 @@ If you don't already have Visual Studio, you can download and install the latest
 
 ## Get the source code
 
-Open a command prompt and create a new directory for your tab project. We have provided a simple [Channel Group Tab](OfficeDev/msteams-samples/samples/dotnet/tabs/personalTab) project to get you started.To retrieve the source code you can download the zip file and extract the files or [clone](https://help.github.com/en/articles/cloning-a-repository) the sample repository into your new directory:
+Open a command prompt and create a new directory for your tab project. We have provided a simple [Personal Tab](OfficeDev/msteams-samples/samples/dotnet/tabs/personalTab) project to get you started.To retrieve the source code you can download the zip file and extract the files or [clone](https://help.github.com/en/articles/cloning-a-repository) the sample repository into your new directory:
 
 ```bash
 git clone https://github.com/OfficeDev/msteams-samples.git
 ```
 
-Once you have the source code, open Visual Studio and select *Open a project or solution*. Navigate to the tab solution file, [Personal](msteams-samples/samples/dotnet/tabs/personalTab/), and open **personalTab.sln**.
+Once you have the source code, open Visual Studio and select *Open a project or solution*. Navigate to the tab solution file, [PersonalTab](msteams-samples/samples/dotnet/tabs/personalTab/), and open **personalTab.sln**.
 
 To build and run your application select *F5* or choose *Start Debugging* from the *Debug* menu, navigate to the following, and verify that the application URLS load properly:
 
@@ -66,7 +66,7 @@ In ASP.NET Core, the web root folder is where the application looks for static f
 
 &#9989; index.cshtml
 
-ASP.NET Core treats files called **index** as the default page for the site. When your browser URL points to the root of the site, index.cshtml will be displayed as the home page for your application.
+ASP.NET Core treats files called *index* as the default page for the site. When your browser URL points to the root of the site, index.cshtml will be displayed as the home page for your application.
 
 &#9989; App Manifest folder
 
@@ -76,7 +76,7 @@ This folder contains the following required app package files:
 - A **transparent outline icon** measuring 32 x 32 pixels.
 - A **manifest.json** file that specifies the attributes of your tab and points to required resources like the tab.cshtml page.
 
-These files will need to be zipped in an app package for use in uploading your tab to Teams. Microsoft Teams will load the contentUrl, specified in your manifest, load it in an IFrame, and render it in your tab.
+These files need to be zipped in an app package for use in uploading your tab to Teams. Microsoft Teams will load the contentUrl, specified in your manifest, load it in an IFrame, and render it in your tab.
 
 n the Visual Studio Solution Explorer window right-click on the project and select **Edit Project File**. At the bottom of the file you'll see the code that creates and updates your zip file when the application builds:
 
@@ -102,7 +102,7 @@ n the Visual Studio Solution Explorer window right-click on the project and sele
 
 For your tab to display in Teams, you must include the **Microsoft Teams JavaScript client SDK** and include a call to the Teams SDK&mdash;**microsoftTeams.initialize()**&mdash;within your tab page &#60;script&#62; tags. This is how your tab and the Teams app communicate:
 
-- Open the **Pages** folder, navigate to the **Shared** folder, open **_Layout.cshtml**, and add the following to the &#60;head&#62; tags section:
+- Open the **Pages** folder, navigate to the **Shared** folder, open **_Layout.cshtml**, and add the following to the &#60;**head**&#62; tags section:
 
 ```html
 `<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>`
@@ -141,12 +141,12 @@ ngrok http https://localhost:44325 -host-header="localhost:44325"
 
 - Ngrok will listen to requests from the internet and will route them to your application when it is running on port 44325.  It should resemble `https://yo8urGro7upChann3elTa2b.ngrok.io/` where *yo8urGro7upChann3elTa2b* is replaced by your ngrok alpha-numeric HTTPS URL.
 
-- Verify that **ngrok** is running and working properly by opening your browser and going to your home page via the HTTPS URL that was provided by **ngrok** in your command prompt window.
+- Verify that *ngrok* is running and working properly by opening your browser and going to your home page via the ngrok HTTPS URL that was provided your command prompt window.
 
 - Make note of the HTTPS ngrok URL&mdash;you can copy it to **Notepad for Windows**. You'll need the ngrok HTTPS URL to test your tab in Teams.
 
 >[!TIP]
->You need to have both your application in Visual Studio and ngrok running to complete this quickstart. If you need to stop running your application in Visual Studio to work on it **keep ngrok running**. Ngrok will continue to listen and will resume routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service it will return a new URL and you'll have to update every place that uses that URL.
+>You need to have both your application in Visual Studio and ngrok running to complete this quickstart. If you need to stop running your application in Visual Studio to work on it **keep ngrok running**. It will continue to listen and will resume routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service it will return a new URL and you'll have to update every place that uses that URL.
 
 ### Upload your tab with App Studio
 
@@ -154,7 +154,7 @@ ngrok http https://localhost:44325 -host-header="localhost:44325"
 
 - Open App studio and select the **Manifest editor** tab.
 
-- Select the *Import an existing app* tile in the Manifest editor to begin updating the app package for your tab. Recall that the source code comes with its own pre-made manifest and the **.csproj file** contains code to create an app package when the application is built. The name of your app package is **tab.zip**. You can search your local machine's file explorer or switch to Visual Studio **Folder View** to find your zip file's location. It should be found here:
+- Select the *Import an existing app* tile in the Manifest editor to begin updating the app package for your tab. Recall that the source code comes with its own pre-made manifest and the *.csproj file* contains code to create an app package when the application is built. The name of your app package is **tab.zip**. You can search your local machine's file explorer or switch to Visual Studio *Folder View* to find your zip file's location. It should be found here:
 
 ```bash
  /bin/Debug/netcoreapp2.2/tab.zip
@@ -168,49 +168,47 @@ ngrok http https://localhost:44325 -host-header="localhost:44325"
 
 - Select the tile for your newly imported tab in the right panel of the Manifest editor welcome page.
 
-There's a list of steps in the left-hand side of the Manifest editor, and on the right, a list of properties that need to have values for each of those steps. Much of the information has been provided by your **manifest.json** but there are a few fields that you'll need to update:
+There's a list of steps in the left-hand side of the Manifest editor, and on the right, a list of properties that need to have values for each of those steps. Much of the information has been provided by your *manifest.json* but there are a few fields that you'll need to update:
 
 #### Details: App details
 
 - Under *Identification* select ***Generate*** to replace the placeholder id with a required GUID for your tab.
 
-- Under **Developer information** update the **Website URL** with your **ngrok** HTTPS URL.
+- Under *Developer information* update the **Website URL** with your *ngrok* HTTPS URL.
 
-- Under **App URLs** update the **Privacy statement** and **Terms of use** URL fields with your **ngrok** HTTPS URL. Remember to include the */privacy* and */tou* parameters at the end of the URLs.
+- Under *App URLs* update the **Privacy statement** and **Terms of use** URL fields with your *ngrok* HTTPS URL. Remember to include the */privacy* and */tou* parameters at the end of the URLs.
 
 #### Capabilities
 
 - Select ***Tabs***.
 
--Under **Add a personal tab** select ***Add***. You will be presented with a pop-up dialogue window.
+- Under *Add a personal tab* select ***Add***. You will be presented with a pop-up dialogue window.
 
-- In the **Name** field, enter "foo".
+- Complete the *Name* field.
 
-- In the **Entity Id**, enter "foo".
+- Complete the *Entity Id* field.
 
 - Complete the **Content URL** field with your ngrok HTTPS URL including the */personalTab* parameter.
 
-- Complete the **Website URL** field with your ngrok HTTPS URL.
+- Complete the *Website URL* field with your *ngrok* HTTPS URL.
 
 - Select ***Save***.
 
 #### Finish
 
-- Select **Domains and permissions**
+- Select *Domains and permissions*
 
--Leave the **Enter a valid domain** field empty.
+- Leave the *Enter a valid domain* field empty.
 
-If the **Additional valid domains** field is populated, select (•••) and choose **Delete**.
+If the *Additional valid domains* field is populated, select (•••) and choose ***Delete***.
 
-- To clear placeholder URLs from Manifest editor, scroll to the bottom of the Tabs section (*Select a tab from the following list to include any additional domains*) select the (•••) button and choose **Delete**.
-
-- The **Domains from your tabs** should contain your ngrok URL without the HTTPS prefix&mdash;**y8rGr7pCh3nlT2b.ngrok.io/**.
+- The *Domains from your tabs* should contain your ngrok URL without the HTTPS prefix&mdash;**y8rGr7pCh3nlT2b.ngrok.io/**.
 
 ##### Test and distribute
 
 >[!IMPORTANT]
 >In the **Description** field on the right you'll see the following warning:<br>
-&#9888; "**The 'validDomains' array cannot contain a tunneling site...**" <br>**This warning can be ignored while you're testing your tab.**<br>
+&#9888; "**The 'validDomains' array cannot contain a tunneling site...**" <br>**This warning can be ignored while testing your tab.**<br>
 After your tab has been uploaded to Microsoft teams, via ngrok, and successfully saved, you can view it in tabs gallery, add it to the tabs bar, and interact with it until your tunnel session ends .<br><br>
 **Remember to serve your tab on your hosted website prior to submission to the Teams app store for approval**.
 
