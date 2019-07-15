@@ -6,8 +6,14 @@ keywords: teams tabs pages content
 
 # Create a content page for your Microsoft Teams tab
 
-> [!Note]
-> Static tabs on mobile are currently in [developer preview](~/resources/dev-preview/developer-preview-intro.md). Static tabs on a mobile client with developer preview enabled will open their content URL within the Teams client.
+> [!Important]
+> Full support for tabs on mobile clients is coming soon. To prepare for this change you should follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md) when creating your tabs. Personal apps (static tabs) are currently available in [developer preview](~/resources/dev-preview/developer-preview-intro.md).
+>
+> When full support for tabs is released:
+>
+> * All tabs will always be available on mobile
+> * Your `contentUrl` **will be loaded in the mobile Teams client**.
+> * For channel/group tabs, users can still open your tab in a separate browser via your `websiteUrl`, however your `contentUrl` will be loaded first.
 
 The content page is an HTML page that you host. When the user visits your tab, Microsoft Teams will load the `contentUrl` (that you [provided earlier](~/concepts/tabs/tabs-configuration.md)) within an iframe inside the main tab canvas area.
 
