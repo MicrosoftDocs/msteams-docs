@@ -36,11 +36,7 @@ What appears in a tab on desktop/web is defined by the value of `contentUrl`: Te
 
 ### Mobile client behavior
 
+> [!Important]
+> Full support for tabs on mobile clients is coming soon. To prepare for this change you should follow the [guidance for personal apps on mobile](~/resources/design/framework/personal-apps-mobile.md) when creating your tabs. When full support for tabs is release, your `contentUrl` **will be loaded in the mobile Teams client**. Your users will still have the option of opening your tab in a separate browser via your `websiteUrl`, however your `contentUrl` will be loaded first.
+
 On mobile clients, where there's far less screen real estate, it's not possible to show the contents of files and tabs embedded inside Teams; instead, the user navigates to them via the "Files & Tabs" tab. The mobile clients only show tabs that have a value for `websiteUrl`: if you want your tab to appear on the Teams mobile clients, you must set the value of `websiteUrl`.
-
-Since the Teams mobile clients use the mobile OS to open `websiteUrl`, you can use iOS *universal links* or Android *app links* to open `websiteUrl` in your mobile app. The OS will also prompt the user to install your app if it is not already installed.
-
-Information on universal links and app links:
-
-* [iOS universal links](https://developer.apple.com/ios/universal-links/)
-* [Android app links](https://developer.android.com/training/app-links/index.html)
