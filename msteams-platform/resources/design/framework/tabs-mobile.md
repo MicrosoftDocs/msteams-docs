@@ -12,7 +12,7 @@ Personal apps (apps that contain static tabs and/or a one-to-one bot) are availa
 
 Once launched, your tab's `contentUrl` will be loaded inside the Teams mobile client.
 
-![mobile app drawer](~/assets/images/dev-preview/app-drawer.png)
+![mobile app drawer](~/assets/images/app-drawer.png)
 
 ## Developer considerations for mobile support
 
