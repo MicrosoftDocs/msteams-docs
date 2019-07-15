@@ -94,7 +94,7 @@ The way buttons are styled helps communicate what kind of action they trigger. W
 
 Typography should be clear and purposeful. Emphasize important information and avoid using multiple fonts and sizes to reduce confusion. We recommend using sentence case and avoiding the usage of all caps for localization and legibility.
 
-![mobile typograph](~/assets/images/mobile-typograph.png)
+![mobile typograph](~/assets/images/mobile-typography.png)
 
 #### Fields and Flyouts
 
@@ -106,7 +106,7 @@ Fields are areas where users can input text. Flyouts are more lightweight than d
 
 ##### Field controls
 
-![mobile field controls](~/assets/images/mobile-field-controls.png)
+![mobile field controls](~/assets/images/mobile-field-control.png)
 
 ##### Flyout control
 
