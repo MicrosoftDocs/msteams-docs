@@ -14,7 +14,7 @@ In this quickstart we'll walk-through creating a custom channel/group tab with C
 - To complete this quickstart you'll need an Office 365 tenant and a team configured with *Allow uploading custom apps* enabled. To learn more, see [Manage Microsoft Teams settings for your organization](/OfficeDocs-SkypeForBusiness/Teams/enable-features-office-365).
   - If you don't currently have an Office 365 account, you can sign up for a free subscription through the [Office 365 Developer Program](/OfficeDev/office-dev-program-docs/docs/office-365-developer-program). The subscription will remain active as long as you're using it for ongoing development.
 
-- You'll use App Studio to import your application to Teams. To install App Studio select ***Apps*** ![Store App](/microsoftteams/platform/assets/images/tab-images/storeApp.png) at the bottom-left corner of the Teams app, and search for App Studio. Once you find the tile, select it and choose install in the pop-up window dialog box.
+- You'll use App Studio to import your application to Teams. To install App Studio select **Apps** ![Store App](/microsoftteams/platform/assets/images/tab-images/storeApp.png) at the bottom-left corner of the Teams app, and search for App Studio. Once you find the tile, select it and choose install in the pop-up window dialog box.
 
 In addition, this project requires that you have the following installed in your development environment:
 
@@ -30,9 +30,9 @@ Open a command prompt and create a new directory for your tab project. We have p
 git clone https://github.com/OfficeDev/msteams-samples.git
 ```
 
-Once you have the source code, open Visual Studio and select *Open a project or solution*. Navigate to the tab solution file, [Channel group tab project](msteams-samples/samples/dotnet/tabs/ChannelGroupTab/), and open **channelGroupTab.sln**.
+Once you have the source code, open Visual Studio and select **Open a project or solution**. Navigate to the tab solution folder and open the **channelGroupTab.sln** file.
 
-To build and run your application press *F5* or choose *Start Debugging* from the *Debug* menu. In a browser navigate to the URLs below, to verify the application loaded properly.
+To build and run your application press **F5** or choose **Start Debugging** from the **Debug** menu. In a browser navigate to the URLs below, to verify the application loaded properly.
 
 - `http://localhost:44355`
 - `http://localhost:44355/privacy`
@@ -40,9 +40,9 @@ To build and run your application press *F5* or choose *Start Debugging* from th
 
 ## Review the source code
 
-&#9989; Startup.cs
+### Startup.cs
 
-This project was created from an ASP.NET Core web application empty template. The MVC services are registered by the dependency injection framework's **ConfigureServices()** method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the **Configure()** method:
+This project was created from an ASP.NET Core web application empty template. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -56,19 +56,19 @@ public void Configure(IApplicationBuilder app)
         }
 ```
 
-&#9989; wwwroot folder
+### wwwroot folder
 
 In ASP.NET Core, the web root folder is where the application looks for static files.
 
-&#9989; index.cshtml
+### index.cshtml
 
-ASP.NET Core treats files called *index* as the default/home page for the site. When your browser URL points to the root of the site, index.cshtml will be displayed as the home page for your application.
+ASP.NET Core treats files called *index* as the default/home page for the site. When your browser URL points to the root of the site, **index.cshtml** will be displayed as the home page for your application.
 
-&#9989; tab.cs
+### tab.cs
 
 This C# file contains a method that will be called from **tab.cshtml** during configuration.
 
-&#9989; AppManifest folder
+### AppManifest folder
 
 This folder contains the following required app package files:
 
@@ -78,7 +78,7 @@ This folder contains the following required app package files:
 
 These files need to be zipped in an app package for use in uploading your tab to Teams. When a user chooses to add or update your tab, Microsoft Teams will load the `configurationUrl` specified in your manifest, load it in an IFrame, and render it in your channel or group chat.
 
-&#9989; channelGroupTab.csproj
+### channelGroupTab.csproj
 
 In the Visual Studio Solution Explorer window right-click on the project and select **Edit Project File**. At the bottom of the file you'll see the code that creates and updates your zip file when the application builds:
 
