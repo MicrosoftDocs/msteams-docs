@@ -2,6 +2,7 @@
 title: Share to Teams embedded button
 description: How to add the Share to Teams embedded button on your website
 keywords: Share Teams Share-to-Teams
+ms.date: 06/24/2019
 ---
 # Creating a Share to Teams embedded button
 
@@ -18,7 +19,7 @@ Third-party websites can use the launcher script to embed Share to Teams buttons
 First, you'll need to add the `launcher.js` script on your webpage.
 
 ```html
-<script async defer src="https://teams.microsoft.com/share/launcher.js" ></script>
+<script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
 ```
 
 Next, add an HTML element on your webpage with the `teams-share-button` class attribute and the link to share in the `data-href` attribute.
@@ -26,7 +27,7 @@ Next, add an HTML element on your webpage with the `teams-share-button` class at
 ```html
 <div
   class="teams-share-button"
-  data-href="https://<link-to-be-shared>" >
+  data-href="https://<link-to-be-shared>">
 </div>
 ```
 
@@ -40,7 +41,7 @@ Optionally, if you want a different icon size for the Share to Teams button, use
 <div
   class="teams-share-button"
   data-href="https://<link-to-be-shared>"
-  data-icon-px-size="64" >
+  data-icon-px-size="64">
 </div>
 ```
 
@@ -50,7 +51,7 @@ If you know that the URL preview from your link to be shared won't render well i
 <div
   class="teams-share-button"
   data-href="https://<link-to-be-shared>"
-  data-preview="false" >
+  data-preview="false">
 </div>
 ```
 
@@ -68,8 +69,8 @@ In order for the preview to be displayed you must:
 |Value|Meta tag| Open Graph|
 |----|----|----|
 |Title|`<meta property="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
-|Description|`<meta name=”description” content=”Example Page Description”>`|`<meta property=”og:description” content=”Example Page Description”>`|
-|Thumbnail Image| none |`<meta property=”og:image” content=”http://example.com/image.jpg”>`|
+|Description|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
+|Thumbnail Image| none |`<meta property="og:image" content="http://example.com/image.jpg">`|
 
 ## Share to Teams for Education
 

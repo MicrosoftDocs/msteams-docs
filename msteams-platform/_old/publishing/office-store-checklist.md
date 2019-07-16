@@ -2,7 +2,6 @@
 title: Publishing checklist
 description: The checklist to use before publishing your Microsoft Teams app to AppSource
 keywords: teams publish store office publishing checklist
-ms.date: 05/15/2018
 ---
 # Checklist for Seller Dashboard submission
 
@@ -35,7 +34,7 @@ The following metadata is required in your manifest.json file and for AppSource 
 
 ## Submission extras for bots
 
-Bots in Microsoft Teams must be created using Bot Framework. See [Create a bot](~/concepts/bots/bots-create.md) for instructions. Use your 96x96 color icon for your bot's icon in Bot Framework.
+Bots in Microsoft Teams must be created using Bot Framework. See [Create a bot](~/concepts/bots/bots-create.md) for instructions. Use a 96x96 color icon for your bot's icon in Bot Framework.
 
 ## Screenshots
 
@@ -50,7 +49,7 @@ Screenshots submitted on the seller dashboard should:
 * Content should be representative of the app; do not include mock-ups that do not accurately reflect your apps actual UI
 * Text should be well-populated without being excessive
 
-You can surround your screenshots with a background color and add marketing content similar to the [Freshdesk](https://appsource.microsoft.com/en-us/product/office/WA104381505?src=office&tab=Overview) example. In that case the dimensions are not of the screenshot, they are of the overall image.
+You can surround your screenshots with a background color and add marketing content similar to the [Freshdesk](https://appsource.microsoft.com/product/office/WA104381505?src=office&tab=Overview) example. In that case the dimensions are not of the screenshot, they are of the overall image.
 
 <img width="800px" title="Freshdesk screenshot" src="~/assets/images/freshdesk.png" />
 
