@@ -2,7 +2,6 @@
 title: Upload your custom app in Microsoft Teams
 description: Describes how to upload your app in Microsoft Teams
 keywords: teams apps Upload
-ms.date: 01/02/2018
 ---
 # Upload an app package to Microsoft Teams
 
@@ -10,9 +9,6 @@ To test your app experience within Microsoft Teams, you need to upload your app 
 
 > [!NOTE]
 > Uploading an updated package for an existing app with a bot might not show tab changes when viewed through the Conversations window. It's better to access it via the Apps fly-out, or test on a clean test environment.
-
-> [!NOTE]
-> Bots in conversations is currently in [Developer Preview](~/resources/dev-preview/developer-preview-intro.md). If that mode is not enabled, support for conversations will not appear in your Teams client.
 
 For bots designed only for personal conversations between a bot and a single user, see [Adding a bot for personal chat only](~/concepts/bots/bots-test.md#talk-to-your-bot-directly-by-id) for an alternate way to access for testing purposes.
 
@@ -121,7 +117,7 @@ If you want to remove your app, select the trash-can icon next to the app name i
 If you change manifest information, you must first remove the app and then add the updated package (per [Load your package into a team](#load-your-package-into-teams)). Note that, in general, code changes on your service do not require you to re-upload your manifest, unless those changes require manifest updates (such as changes to the URL or the Microsoft app ID for its bot).
 
 > [!NOTE]
-> There is currently no way to completely remove a bot from personal context.
+> There is no way to completely remove a bot from personal context. If the bot is removed and re-added, additional communication with the bot will append to the previous conversation.
 
 ## Troubleshooting notes
 

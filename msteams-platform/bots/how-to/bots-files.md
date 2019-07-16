@@ -168,6 +168,7 @@ After uploading a file to the user's OneDrive, whether you use the mechanism des
 ```
 
 The following table describes the content properties of the attachment: 
+
 | Property | Purpose |
 | --- | --- |
 | `uniqueId` | OneDrive/SharePoint drive item ID. |

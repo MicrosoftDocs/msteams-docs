@@ -58,7 +58,7 @@ Next you'll need to register Moodle as an application in your Azure Active Direc
 
 <img width="530px" src="~/assets/images/MoodleTabInformationFlow.png" title="Moodle tab for Microsoft Teams information flow" />
 
-1. From the Microsoft Office 365 Integration plugin page slect the **Setup** tab.
+1. From the Microsoft Office 365 Integration plugin page select the **Setup** tab.
 1. Click the **Download PowerShell Script** button and save it to your local computer.
 1. You'll need to prepare the PowerShell script from the ZIP file. To do so:
     * Download and extract the `Moodle-AzureAD-Powershell.zip` file.

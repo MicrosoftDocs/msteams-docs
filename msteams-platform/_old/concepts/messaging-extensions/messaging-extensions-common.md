@@ -38,7 +38,7 @@ Your messaging extension should declare one command, which appears when the user
 
 In the app manifest, your command item is an object with the following structure:
 
-| Property name | Purpose | Required? | Minumum manifest version |
+| Property name | Purpose | Required? | Minimum manifest version |
 |---|---|---|---|
 | `id` | Unique ID that you assign to this command. The user request will include this ID. | Yes | 1.0 |
 | `title` | Command name. This value appears in the UI. | Yes | 1.0 |
