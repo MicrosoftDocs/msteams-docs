@@ -185,7 +185,7 @@ Make sure to save the updated **tab.cshtml**, and then your configuration page c
 ## Upload your tab to Teams with App Studio
 
 >[!Note]
-> We use App Studio to edit your **manifest.json** file and upload the completed package to Teams. You can also manually edit the `manifest.json` file if you prefer. If you do, be sure to build the solution again to create the **tab.zip** file to upload.
+> We use App Studio to edit your **manifest.json** file and upload the completed package to Teams. You can also manually edit the **manifest.json** file if you prefer. If you do, be sure to build the solution again to create the **tab.zip** file to upload.
 
 - Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/foo.md).
 
