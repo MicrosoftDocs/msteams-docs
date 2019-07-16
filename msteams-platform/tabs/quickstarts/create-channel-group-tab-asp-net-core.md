@@ -28,13 +28,13 @@ If you don't already have Visual Studio, you can download and install the latest
 ## Get the source code
 
 Open a command prompt and create a new directory for your tab project.
-We have provided a simple [Channel Group Tab](OfficeDev/msteams-samples/samples/dotnet/tabs/channelgroup) project to get you started.To retrieve the source code you can download the zip file and extract the files or [clone](https://help.github.com/en/articles/cloning-a-repository) the sample repository into your new directory:
+We have provided a simple [Channel Group Tab](OfficeDev/msteams-samples/samples/dotnet/tabs/ChannelGroupTab) project to get you started.To retrieve the source code you can download the zip file and extract the files or [clone](https://help.github.com/en/articles/cloning-a-repository) the sample repository into your new directory:
 
 ```bash
 git clone https://github.com/OfficeDev/msteams-samples.git
 ```
 
-Once you have the source code, open Visual Studio and select *Open a project or solution*. Navigate to the tab solution file, [Channel group tab project](msteams-samples/samples/dotnet/tabs/channelGroupTab/), and open **channelGroupTab.sln**.
+Once you have the source code, open Visual Studio and select *Open a project or solution*. Navigate to the tab solution file, [Channel group tab project](msteams-samples/samples/dotnet/tabs/ChannelGroupTab/), and open **channelGroupTab.sln**.
 
 To build and run your application select *F5* or choose *Start Debugging* from the *Debug* menu, navigate to the following, and verify that the application URLs load properly:
 
