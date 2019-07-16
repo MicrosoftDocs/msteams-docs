@@ -10,15 +10,13 @@ ms.author: laujan
 >[!NOTE]
 >This quickstart follows the steps outlined in the [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
 
-Custom tabs enable you to embed your hosted web content directly into Microsoft Teams and add Teams-specific functionality via your  [Teams App Package](foo.md). See [What are custom tabs in Microsoft Teams?](/msteams-platform/tabs/what-are-custom-tabs.md). There are two types of tabs available in Teams - channel/group and personal. A channel/group tab delivers content to channels and group chats and are a great way to create collaborative spaces around dedicated web-based content. A channel/group tab can be pinned to the tabs bar located at the top of the channel and each channel or group chat can have its own tabs to support specific focus areas.  An app can only have one channel/group tab.
+In this quickstart we'll walk-through creating a custom channel and group tab using the [Microsoft Teams App Project Generator - #YoTeams](/OfficeDev/generator-teams). For more information, see the Microsoft Teams App [Project Structure](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) documentation. We'll also test your tab's Teams integration by uploading it into a Teams channel.
 
-In this quickstart we'll walk-through creating a custom channel and group tab using the [Microsoft Teams App Project Generator - #YoTeams](/OfficeDev/generator-teams). For more information, see the Microsoft Teams App [Project Structure](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) documentation. You'll also test your tab's Teams integration by uploading it into a Teams channel.
+<!-- [!INCLUDE [build-custom-tab-node-js-common](../../includes/create-custom-tab-node-js-common.md)] -->
 
-[!INCLUDE [build-custom-tab-node-js-common](../../includes/create-custom-tab-node-js-common.md)]
+## Update your application for Teams Integration
 
-## Add code to your channel and group tab
-
-Your tab logic is located in the `./src/app/scripts/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.tsx` TypeScript JSX file . Locate the `render()` method and add the following div tag and content to the top of the `<PanelBody>` container code:
+Your tab logic is located in the ./src/app/scripts/**yourDefaultTabNameTab**/**yourDefaultTabNameTab**.tsx TypeScript JSX file . Locate the **render()** method and add the following div tag and content to the top of the **`<`PanelBody`>`** container code:
 
 ```html
     <PanelBody>
@@ -34,7 +32,8 @@ Your tab logic is located in the `./src/app/scripts/<yourDefaultTabNameTab>/<you
 ## Create a Teams App Manifest
 
 Now that your tab code is complete, you can build your application:
->The [Teams Manifest](foo.md) will be part of your package zip file (along with your two app icons) and will be uploaded into Microsoft Teams. This is achieved through a gulp task that validates the manifest and creates the zip file in the `./package directory`. In the command prompt, type the following:
+
+The [Teams Manifest](foo.md) will be part of your package zip file (along with your two app package icons) and will be uploaded into Microsoft Teams. This is achieved through a gulp task that validates the manifest and creates the zip file in the *./package directory*. In the command prompt, type the following:
 
 ```bash
 gulp manifest
@@ -42,7 +41,7 @@ gulp manifest
 
 ## Build your application
 
->The build command compiles your solution into the `./dist` folder. In the command prompt, type the following:
+The build command compiles your solution into the *./dist* folder. In the command prompt, type the following:
 
 ```bash
 gulp build
@@ -50,34 +49,37 @@ gulp build
 
 ## Run your application in localhost
 
->To build and start a local web server, in the command prompt, type the following:
+To build your application and start a local web server, in the command prompt type the following:
 
 ```bash
 gulp serve
 ```
 
->Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser and view your application's content page:
->>![content page screenshot](/microsoftteams/platform/assets/images/tab-images/channelGroupTab.PNG)
+Enter `http://localhost:3007/`**yourDefaultAppNameTab/** in your browser and view your application's content page:
 
->To view your tab configuration page, add  `config.html` to the file path: `http://localhost:3007/<yourDefaultAppNameTab>/config.html`and press Enter. You should see the following:
->>![configuration page screenshot](/microsoftteams/platform/assets/images/tab-images/configurationPage.PNG)
+![content page screenshot](/microsoftteams/platform/assets/images/tab-images/channelGroupTab.PNG)
 
-## Package your application for Microsoft Teams
+To view your tab configuration page, add  `config.html` to the file path: `http://localhost:3007/<yourDefaultAppNameTab>/config.html`and press Enter. You should see the following:
 
-Microsoft Teams is an entirely cloud-based product and requires that your tab be available from the cloud using HTTPS endpoints. Teams doesn't allow local hosting. Therefore, you need to either publish your tab to a public URL, or use a proxy that will expose your local port to an internet-facing URL.
+![configuration page screenshot](/microsoftteams/platform/assets/images/tab-images/configurationPage.PNG)
+
+## Establish a secure tunnel to your tab
+
+Microsoft Teams is an entirely cloud-based product and requires that your tab content be available from the cloud using HTTPS endpoints. Teams doesn't allow local hosting, therefore, you need to either publish your tab to a public URL, or use a proxy that will expose your local port to an internet-facing URL.
 
 To test your tab extension you'll use [ngrok](https://ngrok.com/docs), which is built into this application. Ngrok is a reverse proxy software tool that will create a tunnel to your locally running web server's publicly-available HTTPS endpoints. Your server's web endpoints will be available during the current session on your local machine. When the machine is shut down or goes to sleep the service will no longer be available.
 
->In your command prompt, enter the following:
+In your command prompt, enter the following:
 
 ```bash
 gulp ngrok-serve
 ```
 
 > [!IMPORTANT]
-> After your channel/group has been uploaded to Microsoft teams, via ngrok, and successfully saved, you can view it in tabs gallery, add it to the tabs bar, and interact with it until your tunnel session ends . However, you must serve your tab on your hosted website before submitting your tab to the Teams app store for approval.
+> After your tab has been uploaded to Microsoft teams, via *ngrok*, and successfully saved, you can view it in tabs gallery, add it to the tabs bar, and interact with it until your tunnel session ends .<br><br>
+**Remember to serve your tab on your hosted website prior to submission to the Teams app store for approval**.
 
-## Upload your application in Microsoft Teams
+## Upload your application to Teams
 
 - Open Microsoft Teams using the web based version of [Teams](https://teams.microsoft.com) so that you can inspect your JavaScript code with your browser's developer tools.
 - In the **YourTeams** panel select (**&#8226;&#8226;&#8226;**) *More options* next to the team that you're using to test your tab and select *Manage team*.
@@ -96,6 +98,5 @@ gulp ngrok-serve
 - Enter a value for the configuration page.
 - *Save*.
 - To view, select your new tab from the tab bar.
-
 
 ### Nice work! You just extended Microsoft Teams with a custom channel/group tab.
