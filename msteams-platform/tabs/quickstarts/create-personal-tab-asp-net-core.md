@@ -139,7 +139,7 @@ To test your tab you'll use [ngrok](https://ngrok.com/docs). Your server's web e
 ngrok http https://localhost:44325 -host-header="localhost:44325"
 ```
 
-- Ngrok will listen to requests from the internet and will route them to your application when it is running on port 44325.  It should resemble `https://yo8urGro7upChann3elTa2b.ngrok.io/` where *yo8urGro7upChann3elTa2b* is replaced by your ngrok alpha-numeric HTTPS URL.
+- Ngrok will listen to requests from the internet and will route them to your application when it is running on port 44325.  It should resemble `https://y8rPrT2b.ngrok.io/` where *y8rPrT2b* is replaced by your ngrok alpha-numeric HTTPS URL.
 
 - Verify that *ngrok* is running and working properly by opening your browser and going to your home page via the ngrok HTTPS URL that was provided your command prompt window.
 
@@ -202,7 +202,7 @@ There's a list of steps in the left-hand side of the Manifest editor, and on the
 
 If the *Additional valid domains* field is populated, select (•••) and choose ***Delete***.
 
-- The *Domains from your tabs* should contain your ngrok URL without the HTTPS prefix&mdash;**y8rGr7pCh3nlT2b.ngrok.io/**.
+- The *Domains from your tabs* should contain your ngrok URL without the HTTPS prefix&mdash;**y8rPrT2b.ngrok.io/**.
 
 ##### Test and distribute
 

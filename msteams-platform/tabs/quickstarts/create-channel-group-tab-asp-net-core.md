@@ -116,7 +116,7 @@ To test your tab you'll use [ngrok](https://ngrok.com/docs). Your server's web e
 ngrok http https://localhost:44355 -host-header="localhost:44355"
 ```
 
-- Ngrok will listen to requests from the internet and will route them to your project when it is running on port 44355.  It should resemble `https://y8rGr7pCh3nlT2b.ngrok.io/` where *y8rGr7pCh3nlT2b* is replaced by the ngrok alpha-numeric HTTPS URL.
+- Ngrok will listen to requests from the internet and will route them to your project when it is running on port 44355.  It should resemble `https://y8rCgT2b.ngrok.io/` where *y8rCgT2b* is replaced by the ngrok alpha-numeric HTTPS URL.
 
 - Make note of the HTTPS ngrok URL&mdash;you can copy it to **Notepad for Windows**. You'll need the ngrok HTTPS URL to test your tab in Teams.
 
@@ -147,14 +147,14 @@ This application presents the user with two option buttons for displaying the ta
     microsoftTeams.initialize();
 ```
 
-- Within the next set of &#60;**script**&#62; tags, you'll find two settings functions. Update the **websiteUrl** and **contentUrl** values in each function with the HTTPS ngrok URL to your tab. Your code should look like the following with **y8rGr7pCh3nlT2b** replaced with your ngrok URL:
+- Within the next set of &#60;**script**&#62; tags, you'll find two settings functions. Update the **websiteUrl** and **contentUrl** values in each function with the HTTPS ngrok URL to your tab. Your code should look like the following with **y8rCgT2b** replaced with your ngrok URL:
 
 ```javascript
     let saveGray = () => {
         microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
             microsoftTeams.settings.setSettings({
-                websiteUrl: `https://y8rGr7pCh3nlT2b.ngrok.io`,
-                contentUrl: `https://y8rGr7pCh3nlT2b.ngrok.io/gray/`,
+                websiteUrl: `https://y8rCgT2b.ngrok.io`,
+                contentUrl: `https://y8rCgT2b.ngrok.io/gray/`,
                 entityId: "grayIconTab",
                 suggestedDisplayName: "MyNewTab"
             });
@@ -165,8 +165,8 @@ This application presents the user with two option buttons for displaying the ta
     let saveRed = () => {
         microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
             microsoftTeams.settings.setSettings({
-                websiteUrl: `https://y8rGr7pCh3nlT2b.ngrok.io`,
-                contentUrl: `https://y8rGr7pCh3nlT2b.ngrok.io/red/`,
+                websiteUrl: `https://y8rCgT2b.ngrok.io`,
+                contentUrl: `https://y8rCgT2b.ngrok.io/red/`,
                 entityId: "redIconTab",
                 suggestedDisplayName: "MyNewTab"
             });
@@ -234,7 +234,7 @@ There's a list of steps in the left-hand side of the Manifest editor, and on the
 
 If the *Additional valid domains* field is populated, select (•••) and choose ***Delete***.
 
-- The *Domains from your tabs* field should contain your ngrok URL without the HTTPS prefix&mdash;**y8rGr7pCh3nlT2b.ngrok.io/**.
+- The *Domains from your tabs* field should contain your ngrok URL without the HTTPS prefix&mdash;**y8rCgT2b.ngrok.io/**.
 
 ##### Test and distribute
 
