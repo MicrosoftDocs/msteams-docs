@@ -194,28 +194,28 @@
           items:
             -
               name: 'Create a channel and group tab'
-              href: tabs/quickstarts/create-channel-group-tab-yeoman.md
+              href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
             -
               name: 'Create a personal tab'
-              href: tabs/quickstarts/create-personal-tab-yeoman.md
+              href: tabs/quickstarts/create-personal-tab-node-yeoman.md
         -
           name: 'C#/ASP.NET Core'
           items:
             -
               name: 'Create a channel and group tab'
-              href: tabs/quickstarts/create-channel-group-tab-asp-net-core.md
+              href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
             -
               name: 'Create a personal tab'
-              href: tabs/quickstarts/create-personal-tab-asp-net-core.md
+              href: tabs/quickstarts/create-personal-tab-dotnet-core.md
         -
           name: 'C#/ASP.NET MVC'
           items:
             -
               name: 'Create a channel and group tab'
-              href: tabs/quickstarts/create-channel-group-tab-asp-net-mvc.md
+              href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
             -
               name: 'Create a personal tab'
-              href: tabs/quickstarts/create-personal-tab-asp-net-mvc.md
+              href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
     -
       name: Tutorials
       items:
