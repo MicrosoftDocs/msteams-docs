@@ -237,10 +237,13 @@ If the *Additional valid domains* field is populated, select (•••) and cho
 ##### Test and distribute
 
 >[!IMPORTANT]
->In the **Description** field on the right you'll see the following warning:<br>
-&#9888; "**The 'validDomains' array cannot contain a tunneling site...**" <br>**This warning can be ignored while testing your tab.**<br>
-After your tab has been uploaded to Microsoft teams, via *ngrok*, and successfully saved, you can view it in tabs gallery, add it to the tabs bar, and interact with it until your tunnel session ends .<br><br>
-**Remember to serve your tab on your hosted website prior to submission to the Teams app store for approval**.
+>In the **Description** field on the right you'll see the following warning:
+>
+>&#9888; "**The 'validDomains' array cannot contain a tunneling site...**"
+>
+>**This warning can be ignored while testing your tab.** After your tab has been uploaded to Microsoft teams, via *ngrok*, and successfully saved, you can view it in tabs gallery, add it to the tabs bar, and interact with it until your tunnel session ends .
+>
+>**Remember to serve your tab on your hosted website prior to submission to the Teams app store for approval**.
 
 - Select ***Install***.
 
