@@ -8,15 +8,15 @@ ms.author: laujan
 # Quickstart: Create a custom channel and group tab with Node.js and the Yeoman generator 
 
 >[!NOTE]
->This quickstart follows the steps outlined in the [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
+>This project follows the steps outlined in the [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
 
-In this quickstart we'll walk-through creating a custom channel and group tab using the [Microsoft Teams App Project Generator - #YoTeams](/OfficeDev/generator-teams). For more information, see the Microsoft Teams App [Project Structure](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) documentation. We'll also test your tab's Teams integration by uploading it into a Teams channel.
+In this quickstart we'll walk-through creating a custom channel and group tab using [Teams App Project Generator - #YoTeams](/OfficeDev/generator-teams). For more information, see the [Project Structure](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) documentation. We'll upload the application to Teams and test your tab's integration.
 
-<!-- [!INCLUDE [build-custom-tab-node-js-common](../../includes/create-custom-tab-node-js-common.md)] -->
+[!INCLUDE [build-custom-tab-node-js-common](../../includes/create-custom-tab-node-js-common.md)]
 
-## Update your application for Teams Integration
+## Update your application for Teams
 
-Your tab logic is located in the ./src/app/scripts/**yourDefaultTabNameTab**/**yourDefaultTabNameTab**.tsx TypeScript JSX file . Locate the **render()** method and add the following div tag and content to the top of the **`<`PanelBody`>`** container code:
+Your tab logic is located in the *./src/app/scripts/**yourDefaultTabNameTab**/**yourDefaultTabNameTab**.tsx* TypeScript JSX file . Locate the **render()** method and add the following div tag and content to the top of the **`<`PanelBody`>`** container code:
 
 ```html
     <PanelBody>
