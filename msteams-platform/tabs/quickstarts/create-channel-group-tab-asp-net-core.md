@@ -7,28 +7,24 @@ ms.author: laujan
 ---
 # Quickstart: Create a Custom Channel and Group Tab with ASP.NET Core
 
-In this quickstart we'll walk-through creating a custom channel/group tab with C# and [ASP.Net Core](AspNetCore.Docs/aspnetcore/index) [Razor Pages](/aspnet/AspNetCore.Docs/aspnetcore/mvc/views/razor). We'll also use [App Studio for Microsoft Teams](/msteams-platform/get-started/get-started-app-studio.md) to test your tab's Teams integration.
+In this quickstart we'll walk-through creating a custom channel/group tab with C# and [ASP.Net Core](AspNetCore.Docs/aspnetcore/index) [Razor Pages](/aspnet/AspNetCore.Docs/aspnetcore/mvc/views/razor). We'll also use [App Studio for Microsoft Teams](/foo.md) to test your tab's Teams integration.
 
 ## Prerequisites
 
-- To complete this quickstart you'll need an Office 365 tenant and a team configured with *Allow uploading custom apps* enabled. To learn more, see [Manage Microsoft Teams settings for your organization](/OfficeDocs-SkypeForBusiness/Teams/enable-features-office-365). If you don't currently have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program. The subscription will remain active as long as you're using it for ongoing development. See [Welcome to the Office 365 Developer Program](/OfficeDev/office-dev-program-docs/docs/office-365-developer-program).
+- To complete this quickstart you'll need an Office 365 tenant and a team configured with *Allow uploading custom apps* enabled. To learn more, see [Manage Microsoft Teams settings for your organization](/OfficeDocs-SkypeForBusiness/Teams/enable-features-office-365).
+  - If you don't currently have an Office 365 account, you can sign up for a free subscription through the [Office 365 Developer Program](/OfficeDev/office-dev-program-docs/docs/office-365-developer-program). The subscription will remain active as long as you're using it for ongoing development.
 
 - You'll use App Studio to import your application to Teams. To install App Studio select ***Apps*** ![Store App](/microsoftteams/platform/assets/images/tab-images/storeApp.png) at the bottom-left corner of the Teams app, and search for App Studio. Once you find the tile, select it and choose install in the pop-up window dialog box.
 
 In addition, this project requires that you have the following installed in your development environment:
 
-- The Visual Studio 2019 IDE with the **.NET CORE cross-platform development** workload installed:
-
-![screenshot: visual studio install options](/microsoftteams/platform/assets/images/tab-images/workloads.png)
-
-If you don't already have Visual Studio, you can download and install the latest [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) version for free.
+- The Visual Studio 2019 IDE with the **.NET CORE cross-platform development** workload installed. If you don't already have Visual Studio, you can download and install the latest [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) version for free.
 
 - The [ngrok](https://ngrok.com/docs) reverse proxy tool. You'll use ngrok to create a tunnel to your locally running web server's publicly-available HTTPS endpoints. Go to https://ngrok.com/download to get the download for your environment.
 
 ## Get the source code
 
-Open a command prompt and create a new directory for your tab project.
-We have provided a simple [Channel Group Tab](OfficeDev/msteams-samples/samples/dotnet/tabs/ChannelGroupTab) project to get you started.To retrieve the source code you can download the zip file and extract the files or [clone](https://help.github.com/en/articles/cloning-a-repository) the sample repository into your new directory:
+Open a command prompt and create a new directory for your tab project. We have provided a simple [Channel Group Tab](OfficeDev/msteams-samples/samples/dotnet/tabs/ChannelGroupTab) project to get you started.To retrieve the source code you can download the zip file and extract the files or [clone](https://help.github.com/en/articles/cloning-a-repository) the sample repository into your new directory:
 
 ```bash
 git clone https://github.com/OfficeDev/msteams-samples.git
@@ -36,7 +32,7 @@ git clone https://github.com/OfficeDev/msteams-samples.git
 
 Once you have the source code, open Visual Studio and select *Open a project or solution*. Navigate to the tab solution file, [Channel group tab project](msteams-samples/samples/dotnet/tabs/ChannelGroupTab/), and open **channelGroupTab.sln**.
 
-To build and run your application select *F5* or choose *Start Debugging* from the *Debug* menu, navigate to the following, and verify that the application URLs load properly:
+To build and run your application press *F5* or choose *Start Debugging* from the *Debug* menu. In a browser navigate to the URLs below, to verify the application loaded properly.
 
 - `http://localhost:44355`
 - `http://localhost:44355/privacy`
@@ -46,7 +42,7 @@ To build and run your application select *F5* or choose *Start Debugging* from t
 
 &#9989; Startup.cs
 
-This project was created from an ASP.NET Core web application empty template. We registered the MVC services by adding the dependency injection framework to the  **ConfigureServices()** method. Additionally, the empty template doesn't enable serving static content by default, so we added the static files middleware to the **Configure()** method:
+This project was created from an ASP.NET Core web application empty template. The MVC services are registered by the dependency injection framework's **ConfigureServices()** method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the **Configure()** method:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -62,7 +58,7 @@ public void Configure(IApplicationBuilder app)
 
 &#9989; wwwroot folder
 
-In ASP.NET Core, the web root folder is where the application looks for static files. We added a new folder to the root of the application, and named it wwwroot which, when displayed in Solution Explorer, has the proper appearance and globe icon.
+In ASP.NET Core, the web root folder is where the application looks for static files.
 
 &#9989; index.cshtml
 
@@ -80,7 +76,7 @@ This folder contains the following required app package files:
 - A **transparent outline icon** measuring 32 x 32 pixels.
 - A **manifest.json** file that specifies the attributes of your tab and points to required resources like the tab.cshtml page.
 
-These files need to be zipped in an app package for use in uploading your tab to Teams. When a user chooses to add or update your tab, Microsoft Teams will load the configurationUrl, specified in your manifest, load it in an IFrame, and render it in your channel or group chat.
+These files need to be zipped in an app package for use in uploading your tab to Teams. When a user chooses to add or update your tab, Microsoft Teams will load the `configurationUrl` specified in your manifest, load it in an IFrame, and render it in your channel or group chat.
 
 &#9989; channelGroupTab.csproj
 
@@ -108,7 +104,7 @@ In the Visual Studio Solution Explorer window right-click on the project and sel
 
 Microsoft Teams is an entirely cloud-based product and requires that your tab content be available from the cloud using HTTPS endpoints. Teams doesn't allow local hosting, therefore, you need to either publish your tab to a public URL, or use a proxy that will expose your local port to an internet-facing URL.
 
-To test your tab you'll use [ngrok](https://ngrok.com/docs). Your server's web endpoints will be available during the current session on your local machine. When the machine is shut down or goes to sleep the service will no longer be available.
+To test your tab you'll use [ngrok](https://ngrok.com/docs). Your server's web endpoints will be available while ngrok is running on your local machine. If you close ngrok, the URLs will be different the next time you start it.
 
 - Open a command prompt in the root of your project folder and run the following command:
 
@@ -118,36 +114,38 @@ ngrok http https://localhost:44355 -host-header="localhost:44355"
 
 - Ngrok will listen to requests from the internet and will route them to your project when it is running on port 44355.  It should resemble `https://y8rCgT2b.ngrok.io/` where *y8rCgT2b* is replaced by the ngrok alpha-numeric HTTPS URL.
 
-- Make note of the HTTPS ngrok URL&mdash;you can copy it to **Notepad for Windows**. You'll need the ngrok HTTPS URL to test your tab in Teams.
+- Be sure to keep the command prompt with ngrok running, and to make note of the URL. You'll need it later.
 
 ## Update your application for Teams Integration
 
-For your tab to display in Teams, you must include the **Microsoft Teams JavaScript client SDK** and include a call to the Teams SDK&mdash;**microsoftTeams.initialize()**&mdash;within your tab page &#60;script&#62; tags. This is how your tab and the Teams app communicate:
+For your tab to display in Teams, you must include the **Microsoft Teams JavaScript client SDK** and include a call to `microsoftTeams.initialize()` after your page loads. This is how your tab and the Teams app communicate.
 
 - Open the **Pages** folder, navigate to the **Shared** folder, open **_Layout.cshtml**, and add the following to the &#60;**head**&#62; tags section:
 
 ```html
-`<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>`
-`<script src="https://statics.teams.microsoft.com/sdk/v1.4.3/js/MicrosoftTeams.min.js"></script>`
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+<script src="https://statics.teams.microsoft.com/sdk/v1.4.3/js/MicrosoftTeams.min.js"></script>
 ```
 
 >[!IMPORTANT]
->Don't copy/paste the &#60;script src="..." URLs from this page, they may not represent the latest version. To get the latest version of the SDK markup, always go to:
-**[Microsoft Teams JavaScript API (via CDN)](foo.com)** and **[jQuery CDN - Latest Stable Versions](https://code.jquery.com)** or [Microsoft jQuery Releases on the CDN.](/aspnet/ajax/cdn/overview#jquery-releases-on-the-cdn)
+>Don't copy/paste the &#60;script src="..."&#62; URLs from this page, as they may not represent the latest version. To get the latest version of the SDK markup, always go to:
+[Microsoft Teams JavaScript API (via CDN)](foo.com) and [jQuery CDN - Latest Stable Versions](https://code.jquery.com) or [Microsoft jQuery Releases on the CDN.](/aspnet/ajax/cdn/overview#jquery-releases-on-the-cdn)
 
 ## Configure your tab
 
-This application presents the user with two option buttons for displaying the tab with either a red or gray icon. Choosing the **Select Gray** or **Select Red** button fires **saveGray()** or **saveRed()**, respectively, sets **settings.setValidityState(true)**, and enables ***Save*** in the Teams UI. This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed. On save, the parameters of **settings.setSettings** are set. Finally, **saveEvent.notifySuccess()** is called to indicate that the content URL has successfully resolved. Update your configuration page as follows:
+This application presents the user with two option buttons for displaying the tab with either a red or gray icon. Choosing the **Select Gray** or **Select Red** button fires `saveGray()` or `saveRed()`, respectively, sets `settings.setValidityState(true)`, and enables the **Save** button on the configuration page. This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed. On save, the parameters of `settings.setSettings` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
+
+Update your configuration page as follows:
 
 - In the **Pages** folder select **tab.cshtml**, reference the [Microsoft Teams Library](https://github.com/OfficeDev/microsoft-teams-library-js) as follows:
 
-- Within the first set of &#60;**script**&#62; tags, call **initialize()** on **microsoftTeams**:
+- Within the first set of &#60;**script**&#62; tags, call `initialize()` on `microsoftTeams`:
 
 ```javascript
-    microsoftTeams.initialize();
+microsoftTeams.initialize();
 ```
 
-- Within the next set of &#60;**script**&#62; tags, you'll find two settings functions. Update the **websiteUrl** and **contentUrl** values in each function with the HTTPS ngrok URL to your tab. Your code should look like the following with **y8rCgT2b** replaced with your ngrok URL:
+- Within the next set of &#60;**script**&#62; tags, you'll find two settings functions. Update the `websiteUrl` and `contentUrl` values in each function with the HTTPS ngrok URL to your tab. Your code should look like the following with **y8rCgT2b** replaced with your ngrok URL:
 
 ```javascript
     let saveGray = () => {
@@ -175,27 +173,27 @@ This application presents the user with two option buttons for displaying the ta
     }
 ```
 
-- *Save* the updated **tab.cshtml** and *Save all* for good measure.
+- Save the updated **tab.cshtml**.
 
-Your tab code is complete.
+Your configuration page code is complete.
 
 ### Run your application
 
-- In Visual Studio select **F5** or choose **Start Debugging** from your application's **Debug** menu. Verify that **ngrok** is running and working properly by opening your browser and going to your content page via the ngrok HTTPS URL that was provided in your command prompt window.
+- In Visual Studio press **F5**, or choose **Start Debugging** from the **Debug** menu. Verify that **ngrok** is running and working properly by opening your browser and going to your content page via the ngrok HTTPS URL that was provided in your command prompt window.
 
 >[!TIP]
->You need to have both your application in Visual Studio and ngrok running to complete this quickstart. If you need to stop running your application in Visual Studio to work on it **keep ngrok running**. It will continue to listen and will resume routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service it will return a new URL and you'll have to update every place that uses that URL.
+>You need to have both your application in Visual Studio and ngrok running to complete this quickstart. If you need to stop running your application in Visual Studio to work on it **keep ngrok running**. It will continue to listen and will resume routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service it will return a new URL and you'll have to update your application with the new URL.
 
 ### Upload your tab with App Studio
 
-- Open **Microsoft Teams** using the [web based version](https://teams.microsoft.com) so that you can inspect your front-end code using your browser's developer tools.
+- Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/foo.md).
 
 - Open App studio and select the **Manifest editor** tab.
 
 - Select the *Import an existing app* tile in the Manifest editor to begin updating the app package for your tab. Recall that the source code comes with its own pre-made manifest and the *.csproj file* contains code to create an app package when the application is built. The name of your app package is **tab.zip**. You can search your local machine's file explorer or switch to Visual Studio *Folder View* to find your zip file's location. It should be found here:
 
 ```bash
- /bin/Debug/netcoreapp2.2/tab.zip
+/bin/Debug/netcoreapp2.2/tab.zip
 ```
 
 - Upload **tab.zip** to App Studio.
@@ -214,7 +212,7 @@ There's a list of steps in the left-hand side of the Manifest editor, and on the
 
 - Under *Developer information* update the **Website URL** field with your *ngrok* HTTPS URL.
 
-- Under *App URLs* update the **Privacy statement** and **Terms of use** URL fields with your *ngrok* HTTPS URL. Remember to include the */privacy* and */tou* parameters at the end of the URLs.
+- Under *App URLs* update the **Privacy statement** and **Terms of use** URL fields with your *ngrok* HTTPS URL. Remember to include the */privacy* and */tou* paths at the end of the URLs.
 
 #### Capabilities
 
@@ -254,4 +252,8 @@ After your tab has been uploaded to Microsoft teams, via *ngrok*, and successful
 
 - To view, select your new tab from the tab bar.
 
-### Nice work! You just extended Microsoft Teams with a custom tab.
+## Next Steps
+
+- [learn something](~/foo.md)
+- [and something else](~/foo.md)
+
