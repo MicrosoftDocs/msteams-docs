@@ -30,7 +30,7 @@ Open a command prompt and create a new directory for your tab project. We have p
 git clone https://github.com/OfficeDev/msteams-samples.git
 ```
 
-Once you have the source code, open Visual Studio and select **Open a project or solution**. Navigate to the tab solution folder and open the **channelGroupTab.sln** file.
+Once you have the source code, open Visual Studio and select **Open a project or solution**. Navigate to the tab application directory and open the **channelGroupTab.sln** file.
 
 To build and run your application press **F5** or choose **Start Debugging** from the **Debug** menu. In a browser navigate to the URLs below, to verify the application loaded properly.
 
@@ -106,7 +106,7 @@ Microsoft Teams is an entirely cloud-based product and requires that your tab co
 
 To test your tab you'll use [ngrok](https://ngrok.com/docs). Your server's web endpoints will be available while ngrok is running on your local machine. If you close ngrok, the URLs will be different the next time you start it.
 
-- Open a command prompt in the root of your project folder and run the following command:
+- Open a command prompt in the root of your project directory and run the following command:
 
 ```bash
 ngrok http https://localhost:44355 -host-header="localhost:44355"

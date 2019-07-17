@@ -133,7 +133,7 @@ Microsoft Teams is an entirely cloud-based product and requires that your tab co
 
 To test your tab you'll use [ngrok](https://ngrok.com/docs). Your server's web endpoints will be available during the current session on your local machine. When the machine is shut down or goes to sleep the service will no longer be available.
 
-- Open a command prompt in the root of your project folder and run the following command:
+- Open a command prompt in the root of your project directory and run the following command:
 
 ```bash
 ngrok http https://localhost:44325 -host-header="localhost:44325"
