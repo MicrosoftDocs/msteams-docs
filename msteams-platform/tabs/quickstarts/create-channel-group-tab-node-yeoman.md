@@ -12,7 +12,7 @@ ms.author: laujan
 
 In this quickstart we'll walk-through creating a custom channel and group tab using the [Teams App Project Generator - #YoTeams](/OfficeDev/generator-teams). For more information, see the [Project Structure](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) documentation. We'll also upload the application to test your tab's integration in Teams.
 
-<!-- [!INCLUDE [build-custom-tab-node-js-common](../../includes/create-custom-tab-node-js-common.md)] -->
+[!INCLUDE [build-custom-tab-node-js-common](../../includes/create-custom-tab-node-js-common.md)]
 
 ## Update your application for Teams
 
