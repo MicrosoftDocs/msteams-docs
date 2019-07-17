@@ -59,7 +59,7 @@ gulp build
 
 ## Run your application in localhost
 
-Start a local web server. Enter:
+Start a local web server. Lastly enter:
 
 ```bash
 gulp serve
