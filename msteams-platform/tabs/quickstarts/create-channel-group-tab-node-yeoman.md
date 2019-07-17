@@ -5,18 +5,22 @@ description: A quickstart guide to creating a channel and group tab with the Tea
 ms.topic: quickstart
 ms.author: laujan
 ---
-# Quickstart: Create a custom channel and group tab with Node.js and the Yeoman generator 
+# Quickstart: Create a custom channel and group tab with Node.js and the Teams Yeoman generator 
 
 >[!NOTE]
 >This project follows the steps outlined in the [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
 
-In this quickstart we'll walk-through creating a custom channel and group tab using the [Teams App Project Generator - #YoTeams](/OfficeDev/generator-teams). For more information, see the [Project Structure](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) documentation. We'll also upload the application to test your tab's integration in Teams.
+In this quickstart we'll walk-through creating a custom channel and group tab using the [Teams App Project Generator - #YoTeams](/OfficeDev/generator-teams). For more information, see the [Project Structure](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) documentation. We'll also upload the application to Teams and test your tab's integration.
 
 [!INCLUDE [build-custom-tab-node-js-common](../../includes/create-custom-tab-node-js-common.md)]
 
 ## Update your application for Teams
 
-Navigate to *./src/app/scripts/**yourDefaultTabNameTab**/**yourDefaultTabNameTab**.tsx* where you will find your tab logic. Locate the **render()** method and add the following `<`div`>` tag and content to the top of the **`<`PanelBody`>`** container code:
+In your project directory, navigate to the following:
+
+ *./src/app/scripts/**yourDefaultTabNameTab**/**yourDefaultTabNameTab**.tsx* 
+
+That is where you'll find your tab logic. Locate the **render()** method and add the following `<`div`>` tag and content to the top of the **`<`PanelBody`>`** container code:
 
 ```html
     <PanelBody>
@@ -26,8 +30,8 @@ Navigate to *./src/app/scripts/**yourDefaultTabNameTab**/**yourDefaultTabNameTab
     </PanelBody>
 ```
 
-Now that your tab code is complete, you can build your application.
-Open a command prompt in your project folder to complete the application's gulp tasks.
+Your tab code is complete; now you can build your application.
+Open a command prompt in your project directory to complete next steps.
 
 ## Create the app package
 
@@ -37,7 +41,7 @@ You'll need an app package to test your tab in Teams. It is a zip folder that co
 - A **transparent outline icon** measuring 32 x 32 pixels.
 - A **manifest.json** file that specifies the attributes of your tab and points to required resources like the config.html page.
 
-The package is created via a gulp task that validates the manifest.json and generates the zip folder in the *./package directory*:
+The package is created via a gulp task that validates the manifest.json and generates the zip folder in the *./package directory*. In the command prompt enter:
 
 ```bash
 gulp manifest
@@ -45,7 +49,7 @@ gulp manifest
 
 ## Build your application
 
-The build command compiles your solution in the *./dist* folder:
+The build command compiles your solution in the *./dist* folder. Next,enter:
 
 ```bash
 gulp build
@@ -53,7 +57,7 @@ gulp build
 
 ## Run your application in localhost
 
-Start a local web server:
+Start a local web server by entering:
 
 ```bash
 gulp serve
@@ -73,7 +77,7 @@ Microsoft Teams is an entirely cloud-based product and requires that your tab co
 
 To test your tab extension you'll use [ngrok](https://ngrok.com/docs), which is built into the application. Ngrok is a reverse proxy software tool that will create a tunnel to your locally running web server's publicly-available HTTPS endpoints. Your server's web endpoints will be available during the current session on your local machine. When the machine is shut down or goes to sleep the service will no longer be available.
 
-In your command prompt, type the following:
+In your command prompt, exit localhost and enter the following:
 
 ```bash
 gulp ngrok-serve
