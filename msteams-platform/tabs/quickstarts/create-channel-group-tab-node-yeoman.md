@@ -10,7 +10,7 @@ ms.author: laujan
 >[!NOTE]
 >This project follows the steps outlined in the [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
 
-In this quickstart we'll walk-through creating a custom channel and group tab using the [Teams App Project Generator - #YoTeams](/OfficeDev/generator-teams). For more information, see the [Project Structure](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) documentation. We'll also upload the application to Teams and test your tab's integration.
+In this quickstart we'll walk-through creating a custom channel and group tab using the [Teams App Project Generator - #YoTeams](/OfficeDev/generator-teams). For more information, see the [Project Structure documentation](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure). We'll also upload the application to Teams and test your tab's integration.
 
 [!INCLUDE [build-custom-tab-node-js-common](../../includes/create-custom-tab-node-js-common.md)]
 
@@ -22,7 +22,7 @@ In your project directory, navigate to the following:
      ./src/app/scripts/**yourDefaultTabNameTab**/**yourDefaultTabNameTab**.tsx
 ```
 
-That is where you'll find your tab logic. Locate the **render()** method and add the following `<`div`>` tag and content to the top of the **`<`PanelBody`>`** container code:
+That is where you'll find your tab logic. Locate the **render()** method and add the following **`<`div`>`** tag and content to the top of the **`<`PanelBody`>`** container code:
 
 ```html
     <PanelBody>
@@ -33,11 +33,11 @@ That is where you'll find your tab logic. Locate the **render()** method and add
 ```
 
 Your tab code is complete; now you can build your application.
-Open a command prompt in your project directory to complete next steps.
+Open a command prompt in your project directory to complete the next steps.
 
 ## Create the app package
 
-You'll need an app package to test your tab in Teams. It is a zip folder that contains the following required files:
+You'll need an app package to test your tab in Teams. It's a zip folder that contains the following required files:
 
 - A **full color icon** measuring 192 x 192 pixels.
 - A **transparent outline icon** measuring 32 x 32 pixels.
@@ -59,7 +59,7 @@ gulp build
 
 ## Run your application in localhost
 
-Start a local web server. Lastly enter:
+Start a local web server by entering the following:
 
 ```bash
 gulp serve
