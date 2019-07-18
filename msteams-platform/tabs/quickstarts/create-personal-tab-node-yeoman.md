@@ -71,10 +71,10 @@ Remember to update the **"contentURL"** path component **yourDefaultTabNameTab**
 - Save the updated **manifest.json**.
 
 - Your content page must be served in an IFrame. Open **Tab.ts** in your code editor:
- 
+
  ```bash
 ./src/app/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
-``` 
+```
 
 - Add the following to the list of IFrame decorators:
 
@@ -88,7 +88,7 @@ Remember to update the **"contentURL"** path component **yourDefaultTabNameTab**
 
 To view your personal tab, remain in the current browser and add `personal.html` to the file path: `http://localhost:3007/<yourDefaultAppNameTab>/personal.html` Press enter.<br>
 
->![personal tab screenshot](/microsoftteams/platform/assets/personalTab.PNG)
+>![personal tab screenshot](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
 
 ## Package your application for Microsoft Teams
 
