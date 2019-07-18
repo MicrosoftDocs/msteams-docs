@@ -46,7 +46,7 @@ To build and run your application select *F5* or choose *Start Debugging* from t
 
 &#9989; Startup.cs
 
-This project was created from an ASP.NET Core web application empty template. We registered the MVC services by adding the dependency injection framework to the  **ConfigureServices()** method. Additionally, the empty template doesn't enable serving static content by default, so we added the static files middleware to the **Configure()** method:
+This project was created from an ASP.NET Core web application empty template with HTTPS enabled. We registered the MVC services by adding the dependency injection framework to the  **ConfigureServices()** method. Additionally, the empty template doesn't enable serving static content by default, so we added the static files middleware to the **Configure()** method:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -102,7 +102,7 @@ n the Visual Studio Solution Explorer window right-click on the project and sele
 
 For your tab to display in Teams, you must include the **Microsoft Teams JavaScript client SDK** and include a call to the Teams SDK&mdash;**microsoftTeams.initialize()**&mdash;within your tab page &#60;script&#62; tags. This is how your tab and the Teams app communicate:
 
-- Open the **Pages** folder, navigate to the **Shared** folder, open **_Layout.cshtml**, and add the following to the &#60;**head**&#62; tags section:
+- Open the **Pages/Shared** folder, open **_Layout.cshtml**, and add the following to the &#60;**head**&#62; tags section:
 
 ```html
 `<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>`

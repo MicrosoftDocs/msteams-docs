@@ -9,22 +9,11 @@ ms.author: laujan
 
 In this quickstart we'll walk-through creating a custom channel/group tab with C# and [ASP.Net Core](AspNetCore.Docs/aspnetcore/index) [Razor Pages](/aspnet/AspNetCore.Docs/aspnetcore/mvc/views/razor). We'll also use [App Studio for Microsoft Teams](/foo.md) to test your tab's Teams integration.
 
-## Prerequisites
-
-- To complete this quickstart you'll need an Office 365 tenant and a team configured with *Allow uploading custom apps* enabled. To learn more, see [Manage Microsoft Teams settings for your organization](/OfficeDocs-SkypeForBusiness/Teams/enable-features-office-365).
-  - If you don't currently have an Office 365 account, you can sign up for a free subscription through the [Office 365 Developer Program](/OfficeDev/office-dev-program-docs/docs/office-365-developer-program). The subscription will remain active as long as you're using it for ongoing development.
-
-- You'll use App Studio to import your application to Teams. To install App Studio select **Apps** ![Store App](/microsoftteams/platform/assets/images/tab-images/storeApp.png) at the bottom-left corner of the Teams app, and search for App Studio. Once you find the tile, select it and choose install in the pop-up window dialog box.
-
-In addition, this project requires that you have the following installed in your development environment:
-
-- The Visual Studio 2019 IDE with the **.NET CORE cross-platform development** workload installed. If you don't already have Visual Studio, you can download and install the latest [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) version for free.
-
-- The [ngrok](https://ngrok.com/docs) reverse proxy tool. You'll use ngrok to create a tunnel to your locally running web server's publicly-available HTTPS endpoints. Go to https://ngrok.com/download to get the download for your environment.
+[!INCLUDE [dotnet-core-prereq](../../includes/tabs/dotnet-core-prereq.md)]
 
 ## Get the source code
 
-Open a command prompt and create a new directory for your tab project. We have provided a simple [Channel Group Tab](OfficeDev/msteams-samples/samples/dotnet/tabs/ChannelGroupTab) project to get you started.To retrieve the source code you can download the zip file and extract the files or [clone](https://help.github.com/en/articles/cloning-a-repository) the sample repository into your new directory:
+Open a command prompt and create a new directory for your tab project. We have provided a simple [Channel Group Tab](OfficeDev/msteams-samples/samples/dotnet/tabs/ChannelGroupTab) project to get you started.To retrieve the source code you can download the zip folder and extract the files or [clone](https://help.github.com/en/articles/cloning-a-repository) the sample repository into your new directory:
 
 ```bash
 git clone https://github.com/OfficeDev/msteams-samples.git
@@ -42,7 +31,7 @@ To build and run your application press **F5** or choose **Start Debugging** fro
 
 ### Startup.cs
 
-This project was created from an ASP.NET Core web application empty template. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method:
+This project was created from an ASP.NET Core web application empty template with HTTPS enabled. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -124,7 +113,7 @@ This application presents the user with two option buttons for displaying the ta
 
 For your tab to display in Teams, you must include the **Microsoft Teams JavaScript client SDK** and include a call to `microsoftTeams.initialize()` after your page loads. This is how your tab and the Teams app communicate.
 
-- Open the **Pages** folder, navigate to the **Shared** folder, open **_Layout.cshtml**, and add the following to the `<head>` tag:
+- Navigate to the **Pages/Shared** folder, open **_Layout.cshtml**, and add the following to the `<head>` tag:
 
 ```html
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
