@@ -5,22 +5,20 @@ description: A quickstart guide to creating a personal tab with the Yeoman gener
 ms.topic: quickstart 
 ms.author: laujan
 ---
-# Quickstart: Create a custom personal tab with Node.js and the Yeoman generator for Microsoft Teams
+# Quickstart: Create a custom personal tab with Node.js and the Teams Yeoman generator for Microsoft Teams
 
 >[!NOTE]
 >This quickstart follows the steps outlined in the [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
 
-Custom tabs enable you to embed your hosted web content directly into Microsoft Teams and add Teams-specific functionality via your [Teams App Package](foo.md). See [What are custom tabs in Microsoft Teams?](/msteams-platform/tabs/what-are-custom-tabs.md). There are two types of tabs available in Teams - channel/group and personal. A channel/group tab delivers content to channels and group chats. Personal tabs, along with direct conversation bots, are part of personal apps and are scoped to a single user. Personal tabs can be pinned to the left navigation bar and promote increased productivity by making your service available directly inside the Teams client. An app can have up to sixteen (16) personal tabs.
+In this quickstart we'll walk-through creating a custom personal tab using the [Microsoft Teams App Project Generator](/OfficeDev/generator-teams). To learn more, see the [Project Structure documentation](/OfficeDev/generator-teams/wiki/Project-Structure) documentation.
 
-In this quickstart we'll walk-through creating a custom personal tab using the [Microsoft Teams App Project Generator](/OfficeDev/generator-teams). To learn more, see the Microsoft Teams App [Project Structure](/OfficeDev/generator-teams/wiki/Project-Structure) documentation.
-
-[!INCLUDE [create-custom-tab-node-js-common](../../includes/create-custom-tab-node-js-common.md)]
+[!INCLUDE [node-js-yeoman-prereq](../../includes/tabs/node-js-yeoman-prereq.md)]
 
 ## Create your personal tab
 
-To add a personal tab to this application you'll create a content page and add a few lines of code to the existing files:
+To add a personal tab to this application you'll create a content page and update existing files:
 
-1.&emsp; In your code editor, create a new HTML file named, `personal.html` .  Add the following code:
+- In your code editor, create a new HTML file, **personal.html** and add the following markup:
 
 ```html
 <!DOCTYPE html>
@@ -43,9 +41,19 @@ To add a personal tab to this application you'll create a content page and add a
 
 ```
 
-2.&emsp;Save the `personal.html` file in your application's `web` folder. The relative file path should be: <br>&emsp;`./src/app/web/<yourDefaultTabNameTab>/personal.html`<br>
+- Save **personal.html** in your application's **web** folder:
 
-3.&emsp; In your code editor, navigate to your application's `manifest.json` file: `./src/manifest/manifest.json/` . Scroll down to the empty staticTabs array ( `"staticTabs":[]` ) and add the following JSON object:
+```bash
+./src/app/web/<yourDefaultTabNameTab>/personal.html
+```
+
+- Open **manifest.json** in your code editor:
+
+```bash
+./src/manifest/manifest.json/
+```
+
+Add the following to the empty **staticTabs** array (**staticTabs":[]** and add the following JSON object:
 
 ```json
 {
@@ -58,49 +66,25 @@ To add a personal tab to this application you'll create a content page and add a
 
 ```
 
-> [!TIP]
-> Remember to update the `"contentURL"` path component in the the staticTabs JSON object with `<yourDefaultTabNameTab>` using your *DefaultTabName* + *Tab*.
+Remember to update the **"contentURL"** path component **yourDefaultTabNameTab** with your *DefaultTabName* + *Tab*.
 
-4.&emsp; Save the updated `manifest.json` file.
+- Save the updated **manifest.json**.
 
-5.&emsp; Your content page must be served in an IFrame. Open your app's `Tab.ts` TypeScript file in your code editor: `./src/app/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts` and add the following to the list of IFrame decorators:
+- Your content page must be served in an IFrame. Open **Tab.ts** in your code editor:
+ 
+ ```bash
+./src/app/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
+``` 
+
+- Add the following to the list of IFrame decorators:
 
 ```typescript
  @PreventIframe("/<yourDefaultAppName>TabNameTab>/personal.html")
 ```
 
-6.&emsp; *Save* the updated `Tab.ts` file and *Save all* for good measure.
+- *Save* the updated `Tab.ts` and *Save all* for good measure. Your tab code is complete; now you can build your application. Open a command prompt in your project directory to complete the next tasks.
 
-> [!NOTE]
-> Open a command prompt in your project folder to complete the application's gulp tasks.
-
-## Create a Teams App Manifest
-
-Now that your tab code is complete, you can build your application:
-
-The [Teams Manifest](foo.md) will be part of your app package zip file (along with your two app icons) and will be uploaded into Microsoft Teams. This is achieved through a gulp task that validates the manifest and creates the zip file in the `./package` folder. In the command prompt, type the following:
-
-```bash
-gulp manifest
-```
-
-## Build your application
-
-The build command compiles your solution into the `./dist` folder. In the command prompt, type the following:
-
-```bash
-gulp build
-```
-
-## Run your application in localhost
-
-To build and start a local web server, in the command prompt, type the following:
-
-```bash
-gulp serve
-```
-
-Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser and view your application's home page.
+[!INCLUDE [node-js-yeoman-gulp-tasks](../../includes/tabs/node-js-yeoman-gulp-tasks.md)]
 
 To view your personal tab, remain in the current browser and add `personal.html` to the file path: `http://localhost:3007/<yourDefaultAppNameTab>/personal.html` Press enter.<br>
 

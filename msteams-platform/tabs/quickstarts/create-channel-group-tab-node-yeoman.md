@@ -10,9 +10,9 @@ ms.author: laujan
 >[!NOTE]
 >This project follows the steps outlined in the [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
 
-In this quickstart we'll walk-through creating a custom channel and group tab using the [Teams App Project Generator - #YoTeams](/OfficeDev/generator-teams). For more information, see the [Project Structure documentation](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure). We'll also upload the application to Teams and test your tab's integration.
+In this quickstart we'll walk-through creating a custom channel and group tab using the [Teams App Project Generator - #YoTeams](/OfficeDev/generator-teams). To learn more, see the [Project Structure documentation](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure). We'll also upload the application to Teams and test your tab's integration.
 
-[!INCLUDE [build-custom-tab-node-js-common](../../includes/create-custom-tab-node-js-common.md)]
+[!INCLUDE [node-js-yeoman-prereq](../../includes/tabs/node-js-yeoman-prereq.md)]
 
 ## Update your application for Teams
 
@@ -33,41 +33,9 @@ That is where you'll find your tab logic. Locate the **render()** method and add
 ```
 
 Your tab code is complete; now you can build your application.
-Open a command prompt in your project directory to complete the next steps.
+Open a command prompt in your project directory to complete the next tasks.
 
-## Create the app package
-
-You'll need an app package to test your tab in Teams. It's a zip folder that contains the following required files:
-
-- A **full color icon** measuring 192 x 192 pixels.
-- A **transparent outline icon** measuring 32 x 32 pixels.
-- A **manifest.json** file that specifies the attributes of your tab and points to required resources like the config.html page.
-
-The package is created via a gulp task that validates the manifest.json and generates the zip folder in the *./package directory*. In the command prompt enter:
-
-```bash
-gulp manifest
-```
-
-## Build your application
-
-The build command compiles your solution in the *./dist* folder. Next,enter:
-
-```bash
-gulp build
-```
-
-## Run your application in localhost
-
-Start a local web server by entering the following:
-
-```bash
-gulp serve
-```
-
-Enter `http://localhost:3007/`**yourDefaultAppNameTab/** in your browser and view your application's content page:
-
-![content page screenshot](/microsoftteams/platform/assets/images/tab-images/channelGroupTab.PNG)
+[!INCLUDE [node-js-yeoman-gulp-tasks](../../includes/tabs/node-js-yeoman-gulp-tasks.md)]
 
 To view your tab configuration page, add  **config.html** to the file path—`http://localhost:3007/<yourDefaultAppNameTab>/config.html`. You should see the following:
 
