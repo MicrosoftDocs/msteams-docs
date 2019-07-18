@@ -67,4 +67,4 @@ gulp ngrok-serve
 - Follow the directions for adding a tab. Note that there's a custom configuration dialog for your channel/group tab.
 - Select *Save* and your tab will be added to the channel's tab bar.
 
-### Nice work! You just extended Microsoft Teams with a custom channel/group tab.
+### Nice work! You just extended Microsoft Teams with a custom channel/group tab
