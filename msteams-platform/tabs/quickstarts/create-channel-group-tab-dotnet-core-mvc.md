@@ -49,31 +49,64 @@ public void Configure(IApplicationBuilder app)
 
 In ASP.NET Core, the web root folder is where the application looks for static files.
 
+### AppManifest folder
+
+This folder contains the following required app package files:
+
+- A **full color icon** measuring 192 x 192 pixels.
+- A **transparent outline icon** measuring 32 x 32 pixels.
+- A **manifest.json** file that specifies the attributes of your tab and points to required resources like tab.cshtml.
+
+### ChanGrpTabMVC.csproj
+
+In the Visual Studio Solution Explorer window right-click on the project and select **Edit Project File**. At the bottom of the file you'll see the code that creates and updates your zip file when the application builds:
+
+```xml
+<PropertyGroup>
+    <PostBuildEvent>powershell.exe Compress-Archive -Path \"$(ProjectDir)AppManifest\*\" -DestinationPath \"$(TargetDir)tab.zip\" -Force</PostBuildEvent>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="AppManifest\icon-outline.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppManifest\icon-color.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppManifest\manifest.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+```
+
 ### Models
 
-- ChannelGroup.cs
+- ChannelGroup.cs presents a Message object and methods that will be called from Controllers during configuration.
 
 ### *Views*
 
 - Home/Index.cshtml
-ASP.NET Core treats files called *index* as the default/home page for the site. When your browser URL points to the root of the site, **index.cshtml** will be displayed as the home page for your application.
+ASP.NET Core treats files called *Index* as the default/home page for the site. When your browser URL points to the root of the site, **Index.cshtml** will be displayed as the home page for your application.
 
 - Shared/_Layout.cshtml
-
-- ChannelGroup/ChannelGroup.cshtml
-- Gray/Gray.cshtml
-- Red/Red.cshtml
-
-- Privacy/Privacy.cshtml
-- Tou/Tou.cshtml
+ This markup file contains the application's overall page structure and shared visual elements. It will also be used to reference the Teams Library.
 
 ### Controllers
 
-- HomeController.cs
+The controllers use the ViewBag property to transfer values dynamically to the Views.
 
-- ChannelGroup
-- GrayController.cs
-- RedController.cs
+[!INCLUDE [dotnet-core-prereq](../../includes/tabs/dotnet-ngrok-intro.md)]
 
-- PrivacyController.cs
-- TouController.cs
+- Open a command prompt in the root of your project directory and run the following command:
+
+```bash
+ngrok http https://localhost:44355 -host-header="localhost:44355"
+```
+
+- Ngrok will listen to requests from the internet and will route them to your project when it is running on port 44355.  It should resemble `https://y8rCgT2b.ngrok.io/` where *y8rCgT2b* is replaced by the ngrok alpha-numeric HTTPS URL.
+
+- Be sure to keep the command prompt with ngrok running, and to make note of the URL. You'll need it later.
+
+[!INCLUDE [dotnet-update-app](../../includes/tabs/dotnet-update-app.md)]
+
+[!INCLUDE [dotnet-upload-to-teams](../../includes/tabs/dotnet-upload-to-teams.md)]
