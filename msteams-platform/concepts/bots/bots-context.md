@@ -54,7 +54,7 @@ Response body
 
 ### .NET example
 
-Call `GetTeamsConversationMembersAsync` using `Team.Id` to return a list of user IDs.
+Call `GetConversationMembersAsync` using `Team.Id` to return a list of user IDs.
 
 ```csharp
 // Fetch the members in the current conversation
