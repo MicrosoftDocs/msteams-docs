@@ -2,9 +2,17 @@
 title: Design Guidelines Reference
 description: Describes the guidelines for designing a personal app
 keywords: teams design guidelines reference framework personal apps
-ms.date: 04/30/2018
 --- 
 # Personal apps
+
+> [!Important]
+> Full support for tabs on mobile clients is coming soon. To prepare for this change you should follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md) when creating your tabs. Personal apps (static tabs) are currently available in [developer preview](~/resources/dev-preview/developer-preview-intro.md).
+>
+> When full support for tabs is released:
+>
+> * All tabs will always be available on mobile
+> * Your `contentUrl` **will be loaded in the mobile Teams client**.
+> * For channel/group tabs, users can still open your tab in a separate browser via your `websiteUrl`, however your `contentUrl` will be loaded first.
 
 A personal app is an app with a personal scope. As an app developer, you have the option to provide a version of your app that is built for the individual user. In this version, the collection of tabs (and the bot, if you've included one), are designed for the person. This way, you're able to create a one-on-one interaction with your users. 
 
