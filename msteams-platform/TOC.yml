@@ -194,7 +194,7 @@
   - name: General
     href: ./resources/general/general-overview.md
     items:
-    - name: Supported media formats
+    - name: Supported media formats for bots
       href: ./resources/general/media-formats.md
     - name: Debugging
       href: ./resources/general/debug.md
