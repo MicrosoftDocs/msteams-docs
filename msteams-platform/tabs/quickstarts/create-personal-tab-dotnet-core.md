@@ -46,7 +46,7 @@ To build and run your application select *F5* or choose *Start Debugging* from t
 
 &#9989; Startup.cs
 
-This project was created from an ASP.NET Core web application empty template with HTTPS enabled. We registered the MVC services by adding the dependency injection framework to the  **ConfigureServices()** method. Additionally, the empty template doesn't enable serving static content by default, so we added the static files middleware to the **Configure()** method:
+This project was created from an ASP.NET Core 2.2 Web Application empty template with the **Advanced - Configure for HTTPS** check box selected at setup. We registered the MVC services by adding the dependency injection framework to the  **ConfigureServices()** method. Additionally, the empty template doesn't enable serving static content by default, so we added the static files middleware to the **Configure()** method:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -62,7 +62,7 @@ public void Configure(IApplicationBuilder app)
 
 &#9989; wwwroot folder
 
-In ASP.NET Core, the web root folder is where the application looks for static files. We added a new folder to the root of the application, and named it wwwroot which, when displayed in Solution Explorer, has the proper appearance and globe icon.
+In ASP.NET Core, the web root folder is where the application looks for static files.
 
 &#9989; index.cshtml
 

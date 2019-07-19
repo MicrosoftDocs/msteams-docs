@@ -31,7 +31,7 @@ To build and run your application press **F5** or choose **Start Debugging** fro
 
 ### Startup.cs
 
-This project was created from an ASP.NET Core web application empty template with HTTPS enabled. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method:
+This project was created from an ASP.NET Core 2.2 Web Application empty template with the **Advanced - Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -63,7 +63,7 @@ This folder contains the following required app package files:
 
 - A **full color icon** measuring 192 x 192 pixels.
 - A **transparent outline icon** measuring 32 x 32 pixels.
-- A **manifest.json** file that specifies the attributes of your tab and points to required resources like the tab.cshtml page.
+- A **manifest.json** file that specifies the attributes of your tab and points to required resources like tab.cshtml.
 
 These files need to be zipped in an app package for use in uploading your tab to Teams. When a user chooses to add or update your tab, Microsoft Teams will load the `configurationUrl` specified in your manifest, load it in an IFrame, and render it in your channel or group chat.
 
