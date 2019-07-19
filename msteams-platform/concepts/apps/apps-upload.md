@@ -51,8 +51,6 @@ Apps in conversations is currently in [Developer Preview](~/resources/dev-previe
 
 1. In the target team, choose *More options* (**&#8943;**) and choose *Manage team*.
 
-   ![View team](~/assets/images/ManageTeam.png)
-
    > [!NOTE]
    > You must be the team owner, or the owner must allow users to add the appropriate app types for this functionality to appear.
 
