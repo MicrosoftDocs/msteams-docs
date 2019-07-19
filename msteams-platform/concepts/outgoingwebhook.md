@@ -35,9 +35,7 @@ Click **Create** and the outgoing webhook will be made available in the current 
 
 Once you add an outgoing webhook to the team, it looks and behaves just like a bot, so it’s easy for users to interact with. It listens for messages using **@mention** with the webhook name and can respond with rich messages, including images and cards.
 
-## Receiving and responding to messages
-
-### Receiving messages
+## Receiving messages
 
 Your service will receive messages in the standard Microsoft bot messaging schema, as documented in the [API reference](/bot-framework/rest-api/bot-framework-rest-connector-api-reference) for the Microsoft Bot Framework.
 
@@ -45,7 +43,7 @@ You can optionally use the existing Bot Framework client SDKs to simplify parsin
 
 Users must **@mention** the outgoing webhook for it to receive messages.
 
-#### Example inbound message
+### Example inbound message
 
 ```json
 {
@@ -104,7 +102,7 @@ Users must **@mention** the outgoing webhook for it to receive messages.
 }
 ```
 
-### Authenticating the caller
+## Authenticating the caller
 
 Your service should always authenticate clients. To guarantee the legitimacy of the client (in this case, to guarantee it's Microsoft Teams that's calling you and not someone else, Microsoft Teams provides an [HMAC code](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) in the HTTP `hmac` header.
 
@@ -115,7 +113,8 @@ Your code should always verify the HMAC signature included in the request:
 1. Convert the hash to a string using UTF8 encoding.
 1. Compare the string value of the generated hash with the value provided in the HTTP request.
 
-#### Code example (C#)
+### Code example (C#)
+
 ```csharp
     /// <summary>
     /// Encapsulates auth results.
@@ -244,13 +243,13 @@ Your code should always verify the HMAC signature included in the request:
     }
 ```
 
-### Responding to a message
+## Responding to a message
 
 Responses from your outgoing webhook will appear in the same reply chain as the original message. You can send a response message that takes advantage of any of the Bot Framework’s activities, including cards and image attachments.
 
 Your outgoing webhook will need to respond to the HTTP request from Microsoft Teams. It will have 5 seconds to respond to the message before the connection is terminated.
 
-#### Example response
+### Example response
 
 ```json
 {
