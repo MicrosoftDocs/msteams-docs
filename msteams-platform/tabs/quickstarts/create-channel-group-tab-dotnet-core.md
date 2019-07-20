@@ -13,7 +13,7 @@ In this quickstart we'll walk-through creating a custom channel/group tab with C
 
 ## Get the source code
 
-Open a command prompt and create a new directory for your tab project. We have provided a simple [Channel Group Tab](OfficeDev/msteams-samples/samples/dotnet/tabs/ChannelGroupTab) project to get you started.To retrieve the source code you can download the zip folder and extract the files or [clone](https://help.github.com/en/articles/cloning-a-repository) the sample repository into your new directory:
+Open a command prompt and create a new directory for your tab project. We have provided a simple [Channel Group Tab](OfficeDev/msteams-samples/samples/dotnet/tabs/ChannelGroupTab) project to get you started. To retrieve the source code you can download the zip folder and extract the files or [clone](https://help.github.com/en/articles/cloning-a-repository) the sample repository into your new directory:
 
 ```bash
 git clone https://github.com/OfficeDev/msteams-samples.git
@@ -67,7 +67,7 @@ This folder contains the following required app package files:
 
 These files need to be zipped in an app package for use in uploading your tab to Teams. When a user chooses to add or update your tab, Microsoft Teams will load the `configurationUrl` specified in your manifest, load it in an IFrame, and render it in your channel or group chat.
 
-### channelGroupTab.csproj
+### .csproj
 
 In the Visual Studio Solution Explorer window right-click on the project and select **Edit Project File**. At the bottom of the file you'll see the code that creates and updates your zip file when the application builds:
 
@@ -89,7 +89,7 @@ In the Visual Studio Solution Explorer window right-click on the project and sel
   </ItemGroup>
 ```
 
-[!INCLUDE [dotnet-core-prereq](../../includes/tabs/dotnet-ngrok-intro.md)]
+[!INCLUDE [dotnet-ngrok-intro](../../includes/tabs/dotnet-ngrok-intro.md)]
 
 - Open a command prompt in the root of your project directory and run the following command:
 
@@ -99,7 +99,11 @@ ngrok http https://localhost:44355 -host-header="localhost:44355"
 
 - Ngrok will listen to requests from the internet and will route them to your project when it is running on port 44355.  It should resemble `https://y8rCgT2b.ngrok.io/` where *y8rCgT2b* is replaced by the ngrok alpha-numeric HTTPS URL.
 
-- Be sure to keep the command prompt with ngrok running, and to make note of the URL. You'll need it later.
+- Be sure to keep the command prompt with ngrok running, and to make note of the URL—you'll need it later.
+
+## Update your application
+
+Within **Tab.cshtml** the application presents the user with two option buttons for displaying the tab with either a red or gray icon. Choosing the **Select Gray** or **Select Red** button fires `saveGray()` or `saveRed()`, respectively, sets `settings.setValidityState(true)`, and enables the **Save** button on the configuration page. This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed. On save, the parameters of `settings.setSettings` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
 
 [!INCLUDE [dotnet-update-app](../../includes/tabs/dotnet-update-app.md)]
 
