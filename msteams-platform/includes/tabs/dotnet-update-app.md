@@ -1,8 +1,4 @@
-## Update your application
-
-Within **Tab.cshtml** the application presents the user with two option buttons for displaying the tab with either a red or gray icon. Choosing the **Select Gray** or **Select Red** button fires `saveGray()` or `saveRed()`, respectively, sets `settings.setValidityState(true)`, and enables the **Save** button on the configuration page. This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed. On save, the parameters of `settings.setSettings` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
-
-### Update _Layout.cshtml
+### _Layout.cshtml
 
 For your tab to display in Teams, you must include the **Microsoft Teams JavaScript client SDK** and include a call to `microsoftTeams.initialize()` after your page loads. This is how your tab and the Teams app communicate.
 
@@ -17,9 +13,9 @@ For your tab to display in Teams, you must include the **Microsoft Teams JavaScr
 >Don't copy/paste the `<script src="...">` URLs from this page, as they may not represent the latest version. To get the latest version of the SDK markup, always go to:
 [Microsoft Teams JavaScript API (via CDN)](foo.com) and [jQuery CDN - Latest Stable Versions](https://code.jquery.com) or [Microsoft jQuery Releases on the CDN.](/aspnet/ajax/cdn/overview#jquery-releases-on-the-cdn)
 
-### Update Tab.cshtml
+### Tab.cshtml
 
-Open the **Tab.cshtml**, and update the embedded `<script>` as follows:
+Open **Tab.cshtml** and update the embedded `<script>` as follows:
 
 - At the top of the script, call `microsoftTeams.initialize()`.
 
