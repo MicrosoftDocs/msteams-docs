@@ -13,26 +13,26 @@ In this quickstart we'll walk-through creating a custom personal tab with C# and
 
 ## Get the source code
 
-Open a command prompt and create a new directory for your tab project. We have provided a simple [Personal Tab](OfficeDev/msteams-samples/samples/dotnet/tabs/personalTab) project to get you started.To retrieve the source code you can download the zip file and extract the files or [clone](https://help.github.com/en/articles/cloning-a-repository) the sample repository into your new directory:
+Open a command prompt and create a new directory for your tab project. We have provided a simple [Personal Tab](OfficeDev/msteams-samples/samples/dotnet/tabs/personalTab) project to get you started.To retrieve the source code you can download the zip folder and extract the files or [clone](https://help.github.com/en/articles/cloning-a-repository) the sample repository into your new directory:
 
 ```bash
 git clone https://github.com/OfficeDev/msteams-samples.git
 ```
 
-Once you have the source code, open Visual Studio and select *Open a project or solution*. Navigate to the tab solution file, [PersonalTab](msteams-samples/samples/dotnet/tabs/personalTab/), and open **personalTab.sln**.
+Once you have the source code, open Visual Studio and select *Open a project or solution*. Navigate to the tab application directory, and open **personalTab.sln**.
 
-To build and run your application select *F5* or choose *Start Debugging* from the *Debug* menu, navigate to the following, and verify that the application URLS load properly:
+To build and run your application select *F5* or choose *Start Debugging* from the *Debug* menu.In a browser navigate to the URLs below to verify that the application loaded properly:
 
-- **http://localhost:44325/**
-- **http://localhost:44325/personal**
-- **http://localhost:44325/privacy**
-- **http://localhost:44325/tou**
+- `http://localhost:44325/`
+- `http://localhost:44325/personal`
+- `http://localhost:44325/privacy`
+- `http://localhost:44325/tou`
 
 ## Review the source code
 
 ### Startup.cs
 
-This project was created from an ASP.NET Core web application empty template. We registered the MVC services by adding the dependency injection framework to the  **ConfigureServices()** method. Additionally, the empty template doesn't enable serving static content by default, so we added the static files middleware to the **Configure()** method:
+This project was created from an ASP.NET Core 2.2 Web Application empty template with the **Advanced - Configure for HTTPS* check box selected at setup. The MVC services are registered by the dependency injection framework's **ConfigureServices()** method. Additionally, the empty template doesn't enable serving static content by default, so we the static files middleware is added to the **Configure()** method:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -62,11 +62,11 @@ This folder contains the following required app package files:
 - A **transparent outline icon** measuring 32 x 32 pixels.
 - A **manifest.json** file that specifies the attributes of your tab and points to required resources like the tab.cshtml page.
 
-These files need to be zipped in an app package for use in uploading your tab to Teams. Microsoft Teams will load the contentUrl, specified in your manifest, load it in an IFrame, and render it in your tab.
+These files need to be zipped in an app package for use in uploading your tab to Teams. Microsoft Teams will load the *contentUrl*, specified in your manifest, load it in an IFrame, and render it in your tab.
 
 ### .csproj
 
-In the Visual Studio Solution Explorer window right-click on the project and select **Edit Project File**. At the bottom of the file you'll see the code that creates and updates your zip file when the application builds:
+In the Visual Studio Solution Explorer window right-click on the project and select **Edit Project File**. At the bottom of the file you'll see the code that creates and updates your zip folder when the application builds:
 
 ```xml
 <PropertyGroup>
@@ -90,7 +90,7 @@ In the Visual Studio Solution Explorer window right-click on the project and sel
 
 ### _Layout.cshtml
 
-For your tab to display in Teams, you must include the **Microsoft Teams JavaScript client SDK** and include a call to the Teams SDK&mdash;**microsoftTeams.initialize()**&mdash;within your tab page &#60;script&#62; tags. This is how your tab and the Teams app communicate:
+For your tab to display in Teams, you must include the **Microsoft Teams JavaScript client SDK** and include a call to the Teams SDK—**microsoftTeams.initialize()**—;within your tab page &#60;script&#62; tags. This is how your tab and the Teams app communicate:
 
 - Navigate to the **Shared** folder, open **_Layout.cshtml**, and add the following to the &#60;**head**&#62; tags section:
 
@@ -105,7 +105,7 @@ For your tab to display in Teams, you must include the **Microsoft Teams JavaScr
 
 ### Personal.cshtml
 
-Open the **Personal.cshtml** and update the embedded &#60;**script**&#62;tags with `microsoftTeams.initialize();`.
+Open the **Personal.cshtml** and update the embedded &#60;**script**&#62; tags by calling `microsoftTeams.initialize();`.
 
 Make sure to save the updated **Personal.html and your personal tab content page is complete.
 
@@ -121,7 +121,7 @@ ngrok http https://localhost:44325 -host-header="localhost:44325"
 
 -Be sure to keep the command prompt with ngrok running, and to make a note of the URL—you'll need it later.
 
-- Verify that *ngrok* is running and working properly by opening your browser and going to your content page via the ngrok HTTPS URL that was provided your command prompt window.
+- Verify that *ngrok* is running and working properly by opening your browser and going to your content page via the ngrok HTTPS URL that was provided in your command prompt window.
 
 >[!TIP]
 >You need to have both your application in Visual Studio and ngrok running to complete this quickstart. If you need to stop running your application in Visual Studio to work on it **keep ngrok running**. It will continue to listen and will resume routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service it will return a new URL and you'll have to update every place that uses that URL.
@@ -132,14 +132,14 @@ ngrok http https://localhost:44325 -host-header="localhost:44325"
 
 ## Upload your tab to Teams with App Studio
 
->[!Note]
+>[!NOTE]
 > We use App Studio to edit your **manifest.json** file and upload the completed package to Teams. You can also manually edit the **manifest.json** file if you prefer. If you do, be sure to build the solution again to create the **tab.zip** file to upload.
 
 - Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/foo.md).
 
 - Open App studio and select the **Manifest editor** tab.
 
-- Select the *Import an existing app* tile in the Manifest editor to begin updating the app package for your tab. Recall that the source code comes with its own pre-made manifest and the *.csproj file* contains code to create an app package when the application is built. The name of your app package is **tab.zip**. You can search your local machine's file explorer or switch to Visual Studio *Folder View* to find your zip file's location. It should be found here:
+- Select the *Import an existing app* tile in the Manifest editor to begin updating the app package for your tab. Recall that the source code comes with its own pre-made manifest and the *.csproj file* contains code to create an app package when the application is built. The name of your app package is **tab.zip**. You can search your local machine's file explorer or switch to Visual Studio *Folder View* to find your zip folder's location. It should be found here:
 
 ```bash
 /bin/Debug/netcoreapp2.2/tab.zip
@@ -173,7 +173,7 @@ There's a list of steps in the left-hand side of the Manifest editor, and on the
 
 - Complete the *Entity Id* field.
 
-- Complete the **Content URL** field with your ngrok HTTPS URL including the */personalTab* parameter.
+- Complete the *Content URL* field with your *ngrok* HTTPS URL including the */personalTab* parameter.
 
 - Complete the *Website URL* field with your *ngrok* HTTPS URL.
 
@@ -187,7 +187,7 @@ There's a list of steps in the left-hand side of the Manifest editor, and on the
 
 If the *Additional valid domains* field is populated, select (•••) and choose ***Delete***.
 
-- The *Domains from your tabs* should contain your ngrok URL without the HTTPS prefix&mdash;**y8rPrT2b.ngrok.io/**.
+- The *Domains from your tabs* field should contain your ngrok URL without the HTTPS prefix—**y8rPrT2b.ngrok.io/**.
 
 ##### Test and distribute
 

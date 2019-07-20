@@ -19,9 +19,9 @@ Open a command prompt and create a new directory for your tab project. We have p
 git clone https://github.com/OfficeDev/msteams-samples.git
 ```
 
-Once you have the source code, open Visual Studio and select **Open a project or solution**. Navigate to the tab application directory and open the **channelGroupTab.sln** file.
+Once you have the source code, open Visual Studio and select **Open a project or solution**. Navigate to the tab application directory and open **channelGroupTab.sln**.
 
-To build and run your application press **F5** or choose **Start Debugging** from the **Debug** menu. In a browser navigate to the URLs below, to verify the application loaded properly.
+To build and run your application select **F5** or choose **Start Debugging** from the **Debug** menu. In a browser navigate to the URLs below to verify the application loaded properly.
 
 - `http://localhost:44355`
 - `http://localhost:44355/privacy`
