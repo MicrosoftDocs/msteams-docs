@@ -21,7 +21,7 @@ git clone https://github.com/OfficeDev/msteams-samples.git
 
 Once you have the source code, open Visual Studio and select **Open a project or solution**. Navigate to the tab application directory and open **PersonalTab.sln**.
 
-To build and run your application select *F5* or choose *Start Debugging* from the *Debug* menu.In a browser navigate to the URLs below to verify that the application loaded properly:
+To build and run your application select **F5** or choose **Start Debugging** from the **Debug** menu. In a browser navigate to the URLs below to verify the application loaded properly:
 
 - `http://localhost:44325/`
 - `http://localhost:44325/personal`
@@ -32,12 +32,12 @@ To build and run your application select *F5* or choose *Start Debugging* from t
 
 ### Startup.cs
 
-This project was created from an ASP.NET Core 2.2 Web Application empty template with the **Advanced - Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so we the static files middleware is added to the `Configure()` method:
+This project was created from an ASP.NET Core 2.2 Web Application empty template with the **Advanced - Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
         {
-           services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+        services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 public void Configure(IApplicationBuilder app)
         {
@@ -54,7 +54,7 @@ In ASP.NET Core, the web root folder is where the application looks for static f
 
 ASP.NET Core treats files called *Index* as the default/home page for the site. When your browser URL points to the root of the site, **Index.cshtml** will be displayed as the home page for your application.
 
-### App Manifest folder
+### AppManifest folder
 
 This folder contains the following required app package files:
 
@@ -62,7 +62,7 @@ This folder contains the following required app package files:
 - A **transparent outline icon** measuring 32 x 32 pixels.
 - A **manifest.json** file that specifies the attributes of your tab and points to required resources like Tab.cshtml.
 
-These files need to be zipped in an app package for use in uploading your tab to Teams. Microsoft Teams will load the *contentUrl*, specified in your manifest, load it in an IFrame, and render it in your tab.
+These files need to be zipped in an app package for use in uploading your tab to Teams. Microsoft Teams will load the *contentUrl*, specified in your manifest, embed it in an IFrame, and render it in your tab.
 
 ### .csproj
 
@@ -85,28 +85,8 @@ In the Visual Studio Solution Explorer window right-click on the project and sel
     </EmbeddedResource>
   </ItemGroup>
 ```
+
 [!INCLUDE [dotnet-update-personal-app](../../includes/tabs/dotnet-update-personal-app.md)]
-
-### _Layout.cshtml
-
-For your tab to display in Teams, you must include the **Microsoft Teams JavaScript client SDK** and include a call to the Teams SDK—**microsoftTeams.initialize()**—;within your tab page &#60;script&#62; tags. This is how your tab and the Teams app communicate:
-
-- Navigate to the **Shared** folder, open **_Layout.cshtml**, and add the following to the &#60;**head**&#62; tags section:
-
-```html
-`<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>`
-`<script src="https://statics.teams.microsoft.com/sdk/v1.4.3/js/MicrosoftTeams.min.js"></script>`
-```
-
->[!IMPORTANT]
->Don't copy/paste the &#60;script src="..." URLs from this page, they may not represent the latest version. To get the latest version of the SDK markup, always go to:
-**foo.md(SDK)** and [jQuery CDN - Latest Stable Versions](https://code.jquery.com) or [Microsoft jQuery Releases on the CDN.](/aspnet/ajax/cdn/overview#jquery-releases-on-the-cdn)
-
-### Personal.cshtml
-
-Open **PersonalTab.cshtml** and update the embedded &#60;**script**&#62; tags by calling `microsoftTeams.initialize();`.
-
-Make sure to save the updated **Personal.html and your personal tab content page is complete.
 
 [!INCLUDE [dotnet-ngrok-intro](../../includes/tabs/dotnet-ngrok-intro.md)]
 
