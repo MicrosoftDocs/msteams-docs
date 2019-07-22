@@ -107,4 +107,4 @@ Within **Tab.cshtml** the application presents the user with two option buttons 
 
 [!INCLUDE [dotnet-update-app](../../includes/tabs/dotnet-update-app.md)]
 
-[!INCLUDE [dotnet-upload-to-teams](../../includes/tabs/dotnet-upload-to-teams.md)]
+[!INCLUDE [dotnet-upload-to-teams](../../includes/tabs/dotnet-upload-to-teams.md)] -->
