@@ -1,3 +1,5 @@
+
+dontnet-upload-to-teams
 ## Upload your tab to Teams with App Studio
 
 >[!NOTE]

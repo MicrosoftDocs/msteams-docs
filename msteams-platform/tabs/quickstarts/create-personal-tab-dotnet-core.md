@@ -105,7 +105,7 @@ For your tab to display in Teams, you must include the **Microsoft Teams JavaScr
 
 ### Personal.cshtml
 
-Open the **Personal.cshtml** and update the embedded &#60;**script**&#62; tags by calling `microsoftTeams.initialize();`.
+Open **PersonalTab.cshtml** and update the embedded &#60;**script**&#62; tags by calling `microsoftTeams.initialize();`.
 
 Make sure to save the updated **Personal.html and your personal tab content page is complete.
 

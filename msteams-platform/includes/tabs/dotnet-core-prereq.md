@@ -1,3 +1,4 @@
+dotnet-core-prereq-md
 ## Prerequisites
 
 - To complete this quickstart you'll need an Office 365 tenant and a team configured with *Allow uploading custom apps* enabled. To learn more, see [Manage Microsoft Teams settings for your organization](/OfficeDocs-SkypeForBusiness/Teams/enable-features-office-365).
