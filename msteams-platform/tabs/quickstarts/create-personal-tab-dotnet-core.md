@@ -1,25 +1,25 @@
 ---
-title: "Quickstart: Create a Personal tab with ASP.NET Core" 
+title: "Quickstart: Create a Personal Tab with ASP.NET Core" 
 author: laujan 
-description: A quickstart guide to creating a custom personal tab with ASP.NET Core
+description: A quickstart guide to creating a custom personal tab with ASP.NET Core.
 ms.topic: quickstart 
 ms.author: laujan 
 ---
-# Quickstart: Create a custom Personal Tab with ASP.NET Core
+# Quickstart: Create a Custom Personal Tab with ASP.NET Core
 
-In this quickstart we'll walk-through creating a custom personal tab with C# and [ASP.Net Core](AspNetCore.Docs/aspnetcore/index) [Razor Pages](/aspnet/AspNetCore.Docs/aspnetcore/mvc/views/razor).  We'll also use [App Studio for Microsoft Teams](/msteams-platform/get-started/get-started-app-studio.md) to test your tab's Teams integration.
+In this quickstart we'll walk-through creating a custom personal tab with C# and [ASP.Net Core](AspNetCore.Docs/aspnetcore/index) [Razor Pages](/aspnet/AspNetCore.Docs/aspnetcore/mvc/views/razor).  We'll also use [App Studio for Microsoft Teams](/foo.md) to test your tab's Teams integration.
 
 [!INCLUDE [dotnet-core-prereq](../../includes/tabs/dotnet-core-prereq.md)]
 
 ## Get the source code
 
-Open a command prompt and create a new directory for your tab project. We have provided a simple [Personal Tab](OfficeDev/msteams-samples/samples/dotnet/tabs/personalTab) project to get you started.To retrieve the source code you can download the zip folder and extract the files or [clone](https://help.github.com/en/articles/cloning-a-repository) the sample repository into your new directory:
+Open a command prompt and create a new directory for your tab project. We have provided a simple [Personal Tab](OfficeDev/msteams-samples/samples/dotnet/tabs/personalTab) project to get you started. To retrieve the source code you can download the zip folder and extract the files or [clone](https://help.github.com/en/articles/cloning-a-repository) the sample repository into your new directory:
 
 ```bash
 git clone https://github.com/OfficeDev/msteams-samples.git
 ```
 
-Once you have the source code, open Visual Studio and select *Open a project or solution*. Navigate to the tab application directory, and open **personalTab.sln**.
+Once you have the source code, open Visual Studio and select **Open a project or solution**. Navigate to the tab application directory and open **PersonalTab.sln**.
 
 To build and run your application select *F5* or choose *Start Debugging* from the *Debug* menu.In a browser navigate to the URLs below to verify that the application loaded properly:
 
@@ -32,7 +32,7 @@ To build and run your application select *F5* or choose *Start Debugging* from t
 
 ### Startup.cs
 
-This project was created from an ASP.NET Core 2.2 Web Application empty template with the **Advanced - Configure for HTTPS* check box selected at setup. The MVC services are registered by the dependency injection framework's **ConfigureServices()** method. Additionally, the empty template doesn't enable serving static content by default, so we the static files middleware is added to the **Configure()** method:
+This project was created from an ASP.NET Core 2.2 Web Application empty template with the **Advanced - Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so we the static files middleware is added to the `Configure()` method:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -60,7 +60,7 @@ This folder contains the following required app package files:
 
 - A **full color icon** measuring 192 x 192 pixels.
 - A **transparent outline icon** measuring 32 x 32 pixels.
-- A **manifest.json** file that specifies the attributes of your tab and points to required resources like the tab.cshtml page.
+- A **manifest.json** file that specifies the attributes of your tab and points to required resources like Tab.cshtml.
 
 These files need to be zipped in an app package for use in uploading your tab to Teams. Microsoft Teams will load the *contentUrl*, specified in your manifest, load it in an IFrame, and render it in your tab.
 
@@ -85,8 +85,7 @@ In the Visual Studio Solution Explorer window right-click on the project and sel
     </EmbeddedResource>
   </ItemGroup>
 ```
-
-## Update your application
+[!INCLUDE [dotnet-update-personal-app](../../includes/tabs/dotnet-update-personal-app.md)]
 
 ### _Layout.cshtml
 

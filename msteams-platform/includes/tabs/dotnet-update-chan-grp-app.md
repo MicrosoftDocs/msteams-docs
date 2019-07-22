@@ -1,4 +1,3 @@
-dotnet-update-app.md
 ### _Layout.cshtml
 
 For your tab to display in Teams, you must include the **Microsoft Teams JavaScript client SDK** and include a call to `microsoftTeams.initialize()` after your page loads. This is how your tab and the Teams app communicate.

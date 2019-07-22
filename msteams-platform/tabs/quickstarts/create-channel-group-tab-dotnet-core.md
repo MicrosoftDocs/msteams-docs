@@ -19,9 +19,9 @@ Open a command prompt and create a new directory for your tab project. We have p
 git clone https://github.com/OfficeDev/msteams-samples.git
 ```
 
-Once you have the source code, open Visual Studio and select **Open a project or solution**. Navigate to the tab application directory and open **channelGroupTab.sln**.
+Once you have the source code, open Visual Studio and select **Open a project or solution**. Navigate to the tab application directory and open **ChannelGroupTab.sln**.
 
-To build and run your application select **F5** or choose **Start Debugging** from the **Debug** menu. In a browser navigate to the URLs below to verify the application loaded properly.
+To build and run your application select **F5** or choose **Start Debugging** from the **Debug** menu. In a browser navigate to the URLs below to verify the application loaded properly:
 
 - `http://localhost:44355`
 - `http://localhost:44355/privacy`
@@ -69,7 +69,7 @@ These files need to be zipped in an app package for use in uploading your tab to
 
 ### .csproj
 
-In the Visual Studio Solution Explorer window right-click on the project and select **Edit Project File**. At the bottom of the file you'll see the code that creates and updates your zip file when the application builds:
+In the Visual Studio Solution Explorer window right-click on the project and select **Edit Project File**. At the bottom of the file you'll see the code that creates and updates your zip folder when the application builds:
 
 ```xml
 <PropertyGroup>
@@ -97,7 +97,7 @@ In the Visual Studio Solution Explorer window right-click on the project and sel
 ngrok http https://localhost:44355 -host-header="localhost:44355"
 ```
 
-- Ngrok will listen to requests from the internet and will route them to your project when it is running on port 44355.  It should resemble `https://y8rCgT2b.ngrok.io/` where *y8rCgT2b* is replaced by the ngrok alpha-numeric HTTPS URL.
+- Ngrok will listen to requests from the internet and will route them to your application when it is running on port 44355.  It should resemble `https://y8rCgT2b.ngrok.io/` where *y8rCgT2b* is replaced by the ngrok alpha-numeric HTTPS URL.
 
 - Be sure to keep the command prompt with ngrok running, and to make note of the URL—you'll need it later.
 
@@ -105,6 +105,6 @@ ngrok http https://localhost:44355 -host-header="localhost:44355"
 
 Within **Tab.cshtml** the application presents the user with two option buttons for displaying the tab with either a red or gray icon. Choosing the **Select Gray** or **Select Red** button fires `saveGray()` or `saveRed()`, respectively, sets `settings.setValidityState(true)`, and enables the **Save** button on the configuration page. This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed. On save, the parameters of `settings.setSettings` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
 
-[!INCLUDE [dotnet-update-app](../../includes/tabs/dotnet-update-app.md)]
+[!INCLUDE [dotnet-update-app](../../includes/tabs/dotnet-update-chan-grp-app.md)]
 
 [!INCLUDE [dotnet-upload-to-teams](../../includes/tabs/dotnet-upload-to-teams.md)]

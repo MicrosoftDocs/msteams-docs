@@ -1,4 +1,3 @@
-dotnet-ngrok-intro.md
 ## Establish a secure tunnel to your tab
 
 Microsoft Teams is an entirely cloud-based product and requires that your tab content be available from the cloud using HTTPS endpoints. Teams doesn't allow local hosting, therefore, you need to either publish your tab to a public URL, or use a proxy that will expose your local port to an internet-facing URL.
