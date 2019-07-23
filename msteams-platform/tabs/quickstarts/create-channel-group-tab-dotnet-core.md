@@ -99,7 +99,7 @@ ngrok http https://localhost:44355 -host-header="localhost:44355"
 
 - Ngrok will listen to requests from the internet and will route them to your application when it is running on port 44355.  It should resemble `https://y8rCgT2b.ngrok.io/` where *y8rCgT2b* is replaced by the ngrok alpha-numeric HTTPS URL.
 
-- Be sure to keep the command prompt with ngrok running, and to make note of the URL—you'll need it later.
+- Be sure to keep the command prompt with ngrok running and to make note of the URL—you'll need it later.
 
 ## Update your application
 

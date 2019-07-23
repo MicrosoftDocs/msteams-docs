@@ -21,7 +21,7 @@ git clone https://github.com/OfficeDev/msteams-samples.git
 
 Once you have the source code, open Visual Studio and select **Open a project or solution**. Navigate to the tab application directory and open **ChannelGroupTabMVC.sln**.
 
-To build and run your application select *F5* or choose *Start Debugging* from the *Debug* menu. In a browser navigate to the URLs below, and verify that the application loaded properly:
+To build and run your application select **F5** or choose **Start Debugging** from the **Debug** menu. In a browser navigate to the URLs below and verify that the application loaded properly:
 
 - `http://localhost:44360`
 - `http://localhost:44360/privacy`
@@ -57,11 +57,11 @@ This folder contains the following required app package files:
 - A **transparent outline icon** measuring 32 x 32 pixels.
 - A **manifest.json** file that specifies the attributes of your tab and points to required resources like Tab.cshtml.
 
-These files need to be zipped in an app package for use in uploading your tab to Teams. When a user chooses to add or update your tab, Microsoft Teams will load the `configurationUrl` specified in your manifest, load it in an IFrame, and render it in your channel or group chat.
+These files need to be zipped in an app package for use in uploading your tab to Teams. When a user chooses to add or update your tab, Microsoft Teams will load the `configurationUrl` specified in your manifest, embed it in an IFrame, and render it in your tab.
 
 ### .csproj
 
-In the Visual Studio Solution Explorer window right-click on the project and select **Edit Project File**. At the bottom of the file you'll see the code that creates and updates your zip file when the application builds:
+In the Visual Studio Solution Explorer window right-click on the project and select **Edit Project File**. At the bottom of the file you'll see the code that creates and updates your zip folder when the application builds:
 
 ```xml
 <PropertyGroup>
@@ -83,7 +83,7 @@ In the Visual Studio Solution Explorer window right-click on the project and sel
 
 ### Models
 
-*ChannelGroup.cs* presents a Message object and methods that will be called from different Controllers during configuration.
+*ChannelGroup.cs* presents a Message object and methods that will be called from the  Controllers during configuration.
 
 ### Views
 
@@ -105,10 +105,10 @@ The controllers use the ViewBag property to transfer values dynamically to the V
 - Open a command prompt in the root of your project directory and run the following command:
 
 ```bash
-ngrok http https://localhost:44355 -host-header="localhost:44355"
+ngrok http https://localhost:443560 -host-header="localhost:44360"
 ```
 
-- Ngrok will listen to requests from the internet and will route them to your project when it is running on port 44355.  It should resemble `https://y8rCgT2b.ngrok.io/` where *y8rCgT2b* is replaced by the ngrok alpha-numeric HTTPS URL.
+- Ngrok will listen to requests from the internet and will route them to your application when it is running on port 44355.  It should resemble `https://y8rCgT2b.ngrok.io/` where *y8rCgT2b* is replaced by the ngrok alpha-numeric HTTPS URL.
 
 - Be sure to keep the command prompt with ngrok running and to make note of the URL—you'll need it later.
 
