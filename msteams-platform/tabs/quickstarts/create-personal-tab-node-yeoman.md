@@ -1,8 +1,8 @@
 ---
 title: "Quickstart: Create a custom personal tab with Node.js and the Yeoman Generator for Microsoft Teams"
 author: laujan
-description: A quickstart guide to creating a personal tab with the Yeoman generator for Microsoft Teams. 
-ms.topic: quickstart 
+description: A quickstart guide to creating a personal tab with the Yeoman Generator for Microsoft Teams.
+ms.topic: quickstart
 ms.author: laujan
 ---
 # Quickstart: Create a custom personal tab with Node.js and the Yeoman Generator for Microsoft Teams
@@ -10,7 +10,7 @@ ms.author: laujan
 >[!NOTE]
 >This quickstart follows the steps outlined in the [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
 
-In this quickstart we'll walk-through creating a custom personal tab using the [Teams Yeoman generator](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App). To learn more, see the [Project Structure documentation](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) documentation.
+In this quickstart we'll walk-through creating a custom personal tab using the [Teams Yeoman generator](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App). To learn more, see the [Project Structure documentation](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure). We'll also upload the application to Teams and test your tab's integration.
 
 [!INCLUDE [node-js-yeoman-prereq](../../includes/tabs/node-js-yeoman-prereq.md)]**Do you want to create a configurable or static tab?**<br>Use the arrow keys to select static tab.<br>
 
@@ -101,11 +101,11 @@ To view your personal tab, remain in the current browser and add `personal.html`
 
 ## Establish a secure tunnel to your tab
 
-Microsoft Teams is an entirely cloud-based product and requires that your tab be available from the cloud using HTTPS endpoints. Teams doesn't allow local hosting. Therefore, you need to either publish your tab to a public URL or use a proxy that will expose your local port to an internet-facing URL.
+Microsoft Teams is an entirely cloud-based product and requires that your tab be available from the cloud using HTTPS endpoints. Teams doesn't allow local hosting, therefore, you need to either publish your tab to a public URL or use a proxy that will expose your local port to an internet-facing URL.
 
 To test your tab extension, you'll use [ngrok](https://ngrok.com/docs), which is built into this application. Ngrok is a reverse proxy software tool that will create a tunnel to your locally running web server's publicly-available HTTPS endpoints. Your server's web endpoints will be available during the current session on your local machine. When the machine is shut down or goes to sleep the service will no longer be available.
 
-In your command prompt, enter the following:
+In your command prompt, exit localhost and enter the following:
 
 ```bash
 gulp ngrok-serve
@@ -117,11 +117,11 @@ gulp ngrok-serve
 
 ## Upload your application to Teams
 
-- Open Microsoft Teams using the web based version of [Teams](https://teams.microsoft.com) so that you can inspect your JavaScript code with your browser's developer tools.
-- In the **YourTeams** panel select (**&#8226;&#8226;&#8226;**) *More options* next to the team that you're using to test your tab and select *Manage team*. 
-- In the main panel select *Apps* from the tab bar and choose *Upload a custom app* located in the lower right-hand corner of the page.
-- Open your project folder, browse to the `./package` folder, select the zip file in the `./package` folder, right-click, and choose open.
-- Your tab will upload into Microsoft Teams.
+- Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/foo.md).
+- In the *YourTeams* panel select (**&#8226;&#8226;&#8226;**) *More options* next to the team that you're using to test your tab and select *Manage team*.
+- In the main panel select **Apps** from the tab bar and choose **Upload a custom app** located in the lower right-hand corner of the page.
+- Open your project directory, browse to the **./package** folder, select the zip file, right-click, and choose **Open**.
+- Your tab will upload into Teams.
 
 ## View your personal tabs
 
