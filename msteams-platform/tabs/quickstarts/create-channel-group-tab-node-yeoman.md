@@ -1,16 +1,16 @@
 ---
-title: "Quickstart: Create a Custom channel and group Tab with Node.js and the Yeoman generator"
+title: "Quickstart: Create a custom channel and group Tab with Node.js and the Yeoman generator"
 author: laujan
-description: A quickstart guide to creating a channel and group tab with the Teams Yeoman generator.
+description: A quickstart guide to creating a channel and group tab with the Yeoman Generator for Microsoft Teams.
 ms.topic: quickstart
 ms.author: laujan
 ---
-# Quickstart: Create a custom channel and group tab with Node.js and the Teams Yeoman generator
+# Quickstart: Create a custom channel and group tab with Node.js and the Yeoman Generator for Microsoft Teams
 
 >[!NOTE]
->This project follows the steps outlined in the [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
+>This quickstart follows the steps outlined in the [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
 
-In this quickstart we'll walk-through creating a custom channel and group tab using the [Teams App Project Generator - #YoTeams](/OfficeDev/generator-teams). To learn more, see the [Project Structure documentation](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure). We'll also upload the application to Teams and test your tab's integration.
+In this quickstart we'll walk-through creating a custom channel and group tab using the [Teams Yeoman generator](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App). To learn more, see the [Project Structure documentation](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure). We'll also upload the application to Teams and test your tab's integration.
 
 [!INCLUDE [node-js-yeoman-prereq](../../includes/tabs/node-js-yeoman-prereq.md)]**Do you want to create a configurable or static tab?**<br>Use the arrow keys to select configurable tab.<br>**What scopes do you intend to use for your Tab?**<br>You can select a Team and/or a group chat<br>**Do you want this tab to be available in SharePoint Online? (Y/n)** <br> Select **n** unless, in the future, you want to use this app as a [SharePoint Framework web part](/msteams-platform/concepts/tabs/tabs-in-sharepoint).
 
@@ -18,8 +18,6 @@ In this quickstart we'll walk-through creating a custom channel and group tab us
 >The path component **yourDefaultTabNameTab**, referenced in this quickstart, is the value that you entered in the generator for **Default Tab Name** plus the word **Tab**.
 >
 >For example: DefaultTabName: **MyTab** => **/MyTabTab/**
-
-## Update your application for Teams
 
 In your project directory, navigate to the following:
 
@@ -37,7 +35,10 @@ That is where you'll find your tab logic. Locate the **render()** method and add
     </PanelBody>
 ```
 
-Your tab code is complete; now you can build your application.
+Make sure to save the updated file. Your tab code is complete.
+
+## Build and Run Your Application
+
 Open a command prompt in your project directory to complete the next tasks.
 
 [!INCLUDE [node-js-yeoman-gulp-tasks](../../includes/tabs/node-js-yeoman-gulp-tasks.md)]
