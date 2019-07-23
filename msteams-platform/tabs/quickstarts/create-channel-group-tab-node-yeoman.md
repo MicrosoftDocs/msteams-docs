@@ -1,5 +1,5 @@
 ---
-title: "Quickstart: Create a custom channel and group Tab with Node.js and the Yeoman generator"
+title: "Quickstart: Create a custom channel and group Tab with Node.js and the Yeoman generator for Microsoft Teams"
 author: laujan
 description: A quickstart guide to creating a channel and group tab with the Yeoman Generator for Microsoft Teams.
 ms.topic: quickstart
@@ -22,7 +22,7 @@ In this quickstart we'll walk-through creating a custom channel and group tab us
 In your project directory, navigate to the following:
 
 ```bash
-     ./src/app/scripts/**yourDefaultTabNameTab**/**yourDefaultTabNameTab**.tsx
+./src/app/scripts/**yourDefaultTabNameTab**/**yourDefaultTabNameTab**.tsx
 ```
 
 That is where you'll find your tab logic. Locate the **render()** method and add the following **`<`div`>`** tag and content to the top of the **`<`PanelBody`>`** container code:
@@ -43,7 +43,7 @@ Open a command prompt in your project directory to complete the next tasks.
 
 [!INCLUDE [node-js-yeoman-gulp-tasks](../../includes/tabs/node-js-yeoman-gulp-tasks.md)]
 
-To view your tab configuration page, add  **config.html** to the file path—`http://localhost:3007/<yourDefaultAppNameTab>/config.html`. You should see the following:
+To view your tab configuration page, remain in the current browser and add  **config.html** to the file path—`http://localhost:3007/<yourDefaultAppNameTab>/config.html`. You should see the following:
 
 ![configuration page screenshot](/microsoftteams/platform/assets/images/tab-images/configurationPage.PNG)
 

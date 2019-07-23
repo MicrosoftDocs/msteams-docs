@@ -1,6 +1,6 @@
 ---
 title: "Quickstart: Create a custom personal tab with Node.js and the Yeoman Generator for Microsoft Teams"
-author: laujan 
+author: laujan
 description: A quickstart guide to creating a personal tab with the Yeoman generator for Microsoft Teams. 
 ms.topic: quickstart 
 ms.author: laujan
@@ -10,7 +10,7 @@ ms.author: laujan
 >[!NOTE]
 >This quickstart follows the steps outlined in the [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
 
-In this quickstart we'll walk-through creating a custom personal tab using the [Teams Yeoman generator](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App). To learn more, see the [Project Structure documentation](/OfficeDev/generator-teams/wiki/Project-Structure) documentation.
+In this quickstart we'll walk-through creating a custom personal tab using the [Teams Yeoman generator](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App). To learn more, see the [Project Structure documentation](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) documentation.
 
 [!INCLUDE [node-js-yeoman-prereq](../../includes/tabs/node-js-yeoman-prereq.md)]**Do you want to create a configurable or static tab?**<br>Use the arrow keys to select static tab.<br>
 
@@ -95,11 +95,11 @@ Open a command prompt in your project directory to complete the next tasks.
 
 [!INCLUDE [node-js-yeoman-gulp-tasks](../../includes/tabs/node-js-yeoman-gulp-tasks.md)]
 
-To view your personal tab, remain in the current browser and add `personal.html` to the file path: `http://localhost:3007/<yourDefaultAppNameTab>/personal.html` Press enter.<br>
+To view your personal tab, remain in the current browser and add `personal.html` to the file path: `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`
 
 >![personal tab screenshot](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
 
-## Package your application for Microsoft Teams
+## Establish a secure tunnel to your tab
 
 Microsoft Teams is an entirely cloud-based product and requires that your tab be available from the cloud using HTTPS endpoints. Teams doesn't allow local hosting. Therefore, you need to either publish your tab to a public URL or use a proxy that will expose your local port to an internet-facing URL.
 
@@ -115,7 +115,7 @@ gulp ngrok-serve
 > After your tab has been uploaded to Microsoft teams, via *ngrok*, and successfully saved, you can view it in Teams until your tunnel session ends .<br><br>
 **Remember to serve your tab on your hosted website prior to submission to the Teams app store for approval**.
 
-## Upload your tab in Microsoft Teams
+## Upload your application to Teams
 
 - Open Microsoft Teams using the web based version of [Teams](https://teams.microsoft.com) so that you can inspect your JavaScript code with your browser's developer tools.
 - In the **YourTeams** panel select (**&#8226;&#8226;&#8226;**) *More options* next to the team that you're using to test your tab and select *Manage team*. 
