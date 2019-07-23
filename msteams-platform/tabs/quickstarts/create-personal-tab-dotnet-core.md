@@ -52,7 +52,7 @@ In ASP.NET Core, the web root folder is where the application looks for static f
 
 ### Index.cshtml
 
-ASP.NET Core treats files called *Index* as the default/home page for the site. When your browser URL points to the root of the site, **Index.cshtml** will be displayed as the home page for your application.
+ASP.NET Core treats files called *Index* as the default/home page for the site. When your browser URL points to the root of the site, *Index.cshtml* will be displayed as the home page for your application.
 
 ### AppManifest folder
 
@@ -60,7 +60,7 @@ This folder contains the following required app package files:
 
 - A **full color icon** measuring 192 x 192 pixels.
 - A **transparent outline icon** measuring 32 x 32 pixels.
-- A **manifest.json** file that specifies the attributes of your tab and points to required resources like Tab.cshtml.
+- A **manifest.json** file that specifies the attributes of your tab and points to required resources like *PersonalTab.cshtml*.
 
 These files need to be zipped in an app package for use in uploading your tab to Teams. Microsoft Teams will load the *contentUrl*, specified in your manifest, embed it in an IFrame, and render it in your tab.
 
@@ -98,7 +98,7 @@ ngrok http https://localhost:44325 -host-header="localhost:44325"
 
 - Ngrok will listen to requests from the internet and will route them to your application when it is running on port 44325.  It should resemble `https://y8rPrT2b.ngrok.io/` where *y8rPrT2b* is replaced by your ngrok alpha-numeric HTTPS URL.
 
--Be sure to keep the command prompt with ngrok running, and to make a note of the URL—you'll need it later.
+- Be sure to keep the command prompt with ngrok running, and to make a note of the URL—you'll need it later.
 
 - Verify that *ngrok* is running and working properly by opening your browser and going to your content page via the ngrok HTTPS URL that was provided in your command prompt window.
 

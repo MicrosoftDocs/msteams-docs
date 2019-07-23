@@ -1,16 +1,16 @@
 ## Upload your tab to Teams with App Studio
 
 >[!NOTE]
-> We use App Studio to edit your **manifest.json** file and upload the completed package to Teams. You can also manually edit the **manifest.json** file if you prefer. If you do, be sure to build the solution again to create the **tab.zip** file to upload.
+> We use App Studio to edit your **manifest.json** file and upload the completed package to Teams. You can also manually edit **manifest.json** if you prefer. If you do, be sure to build the solution again to create the **Tab.zip** file to upload.
 
 - Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/foo.md).
 
 - Open App studio and select the **Manifest editor** tab.
 
-- Select the *Import an existing app* tile in the Manifest editor to begin updating the app package for your tab. Recall that the source code comes with its own pre-made manifest and the *.csproj file* contains code to create an app package when the application is built. The name of your app package is **tab.zip**. You can search your local machine's file explorer or switch to Visual Studio *Folder View* to find your zip folder's location. It should be found here:
+- Select the *Import an existing app* tile in the Manifest editor to begin updating the app package for your tab. Recall that the source code comes with its own pre-made manifest and the *.csproj file* contains code to create an app package when the application is built. The name of your app package is **Tab.zip**. You can search your local machine's file explorer or switch to Visual Studio *Folder View* to find your zip folder's location. It should be found here:
 
 ```bash
-/bin/Debug/netcoreapp2.2/tab.zip
+/bin/Debug/netcoreapp2.2/Tab.zip
 ```
 
 - Upload **Tab.zip** to App Studio.

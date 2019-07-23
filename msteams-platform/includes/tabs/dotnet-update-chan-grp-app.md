@@ -51,7 +51,7 @@ Your code should now look like the following with **y8rCgT2b** replaced with you
     }
 ```
 
-Make sure to save the updated **Tab.cshtml** and your configuration page code is complete.
+Make sure to save the updated **Tab.cshtml**. Your configuration page code is complete.
 
 ## Build and run your application
 
