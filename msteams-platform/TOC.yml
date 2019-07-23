@@ -217,12 +217,6 @@
               name: 'Create a personal tab'
               href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
     -
-      name: Tutorials
-      items:
-        -
-          name: 'Build Microsoft Teams tab using SharePoint Framework'
-          href: old/get-started/using-web-part-as-ms-teams-tab.md
-    -
       name: Samples
       href: old/samples/code-samples.md
     -
