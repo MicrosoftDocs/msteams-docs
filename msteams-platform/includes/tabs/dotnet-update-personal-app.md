@@ -2,7 +2,7 @@
 
 ### _Layout.cshtml
 
-For your tab to display in Teams, you must include the **Microsoft Teams JavaScript client SDK** and include a call to the Teams SDK—`microsoftTeams.initialize()`—;within your tab page &#60;script&#62; tags. This is how your tab and the Teams app communicate:
+For your tab to display in Teams, you must include the **Microsoft Teams JavaScript client SDK** and include a call to `microsoftTeams.initialize()` after your page loads. This is how your tab and the Teams app communicate:
 
 - Navigate to the **Shared** folder, open **_Layout.cshtml**, and add the following to the &#60;**head**&#62; tags section:
 
