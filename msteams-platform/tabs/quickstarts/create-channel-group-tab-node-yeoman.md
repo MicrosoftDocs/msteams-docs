@@ -5,14 +5,19 @@ description: A quickstart guide to creating a channel and group tab with the Tea
 ms.topic: quickstart
 ms.author: laujan
 ---
-# Quickstart: Create a custom channel and group tab with Node.js and the Teams Yeoman generator 
+# Quickstart: Create a custom channel and group tab with Node.js and the Teams Yeoman generator
 
 >[!NOTE]
 >This project follows the steps outlined in the [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
 
 In this quickstart we'll walk-through creating a custom channel and group tab using the [Teams App Project Generator - #YoTeams](/OfficeDev/generator-teams). To learn more, see the [Project Structure documentation](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure). We'll also upload the application to Teams and test your tab's integration.
 
-[!INCLUDE [node-js-yeoman-prereq](../../includes/tabs/node-js-yeoman-prereq.md)]
+[!INCLUDE [node-js-yeoman-prereq](../../includes/tabs/node-js-yeoman-prereq.md)]**Do you want to create a configurable or static tab?**<br>Use the arrow keys to select configurable tab.<br>**What scopes do you intend to use for your Tab?**<br>You can select a Team and/or a group chat<br>**Do you want this tab to be available in SharePoint Online? (Y/n)** <br> Select **n** unless, in the future, you want to use this app as a [SharePoint Framework web part](/msteams-platform/concepts/tabs/tabs-in-sharepoint).
+
+>[!IMPORTANT]
+>The path component **yourDefaultTabNameTab**, referenced in this quickstart, is the value that you entered in the generator for **Default Tab Name** plus the word **Tab**.
+>
+>For example: DefaultTabName: **MyTab** => **/MyTabTab/**
 
 ## Update your application for Teams
 
@@ -67,4 +72,7 @@ gulp ngrok-serve
 - Follow the directions for adding a tab. Note that there's a custom configuration dialog for your channel/group tab.
 - Select *Save* and your tab will be added to the channel's tab bar.
 
-### Nice work! You just extended Microsoft Teams with a custom channel/group tab
+## Next Steps
+
+- [learn something](~/foo.md)
+- [and something else](~/foo.md)

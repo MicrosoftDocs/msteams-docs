@@ -12,7 +12,12 @@ ms.author: laujan
 
 In this quickstart we'll walk-through creating a custom personal tab using the [Microsoft Teams App Project Generator](/OfficeDev/generator-teams). To learn more, see the [Project Structure documentation](/OfficeDev/generator-teams/wiki/Project-Structure) documentation.
 
-[!INCLUDE [node-js-yeoman-prereq](../../includes/tabs/node-js-yeoman-prereq.md)]
+[!INCLUDE [node-js-yeoman-prereq](../../includes/tabs/node-js-yeoman-prereq.md)]**Do you want to create a configurable or static tab?**<br>Use the arrow keys to select static tab.<br>
+
+>[!IMPORTANT]
+>The path component **yourDefaultTabNameTab**, referenced in this quickstart, is the value that you entered in the generator for **Default Tab Name** plus the word **Tab**.
+>
+>For example: DefaultTabName: **MyTab** => **/MyTabTab/**
 
 ## Create your personal tab
 
@@ -115,4 +120,7 @@ gulp ngrok-serve
 - In the navbar located at the far-left of the Teams App, select (**&#8943;**) *More added apps*. You'll be presented with a list of personal view apps.
 - Select your personal tab from the list to view.
 
-### Nice work! You just extended Microsoft Teams with a custom personal tab.
+## Next Steps
+
+- [learn something](~/foo.md)
+- [and something else](~/foo.md)
