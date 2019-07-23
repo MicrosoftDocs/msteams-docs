@@ -226,4 +226,7 @@ After your tab has been uploaded to Microsoft teams, via ngrok, and successfully
 
 - Select your tab from the list to view.
 
-### Nice work! You just extended Microsoft Teams with a custom tab.
+## Next Steps
+
+- [learn something](~/foo.md)
+- [and something else](~/foo.md)
