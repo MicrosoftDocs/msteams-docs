@@ -17,7 +17,7 @@ The feature is only available in desktop and Android clients after Developer Pre
 
 While the web version of Teams and the desktop version of teams are almost exactly the same, there are some differences, particularly with respect to authentication. Sometimes the only way to figure out what’s going on is to use the DevTools. Here's how to get to them from the Teams desktop client. To use DevTools in the desktop client:
 
-1. Make sure you have enabled [developer dreview](~/resources/dev-preview/developer-preview-intro.md)
+1. Make sure you have enabled [developer preview](~/resources/dev-preview/developer-preview-intro.md)
 1. Open up a tab so you have something to inspect with the DevTools.
 1. Open the DevTools
     * On Windows, you open DevTools via the Microsoft Teams icon in the desktop tray:
@@ -34,7 +34,7 @@ Here’s what a sample tab looks like with the DevTools open and an element sele
 
 You can also enable the DevTools from the Teams Android client. To do so:
 
-1. Make sure you have enabled [developer dreview](~/resources/dev-preview/developer-preview-intro.md)
+1. Make sure you have enabled [developer preview](~/resources/dev-preview/developer-preview-intro.md)
 1. Connect your device to your desktop computer, and setup your Android device for [remote debugging](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/)
 1. In your Chrome browser, open `chrome://inspect/#devices`.
 1. Click **inspect** below the tab you wish to debug, as in the screenshot below.
