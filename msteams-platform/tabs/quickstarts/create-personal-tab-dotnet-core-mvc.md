@@ -1,6 +1,6 @@
 ---
 title: "Quickstart: Create a Personal Tab with ASP. NET Core MVC" 
-author: laujan 
+author: laujan
 description: A quickstart guide to creating a custom personal tab with ASP. NET Core MVC. 
 ms.topic: quickstart 
 ms.author: laujan 
@@ -21,7 +21,7 @@ git clone https://github.com/OfficeDev/msteams-samples.git
 
 Once you have the source code, open Visual Studio and select **Open a project or solution**. Navigate to the tab application directory and open **PersonalTabMVC.sln**.
 
-To build and run your application select **F5** or choose **Start Debugging** from the **Debug** menu. In a browser navigate to the URLs below and verify that the application loaded properly:
+To build and run your application select **F5** or choose **Start Debugging** from the **Debug** menu. In a browser navigate to the URLs below to verify that the application loaded properly:
 
 * `http://localhost:44335` 
 * `http://localhost:44335/privacy` 
@@ -111,7 +111,7 @@ ngrok http https://localhost:44345 -host-header="localhost:44345"
 
 * Ngrok will listen to requests from the internet and will route them to your application when it is running on port 44325.  It should resemble `https://y8rPrT2b.ngrok.io/` where *y8rPrT2b* is replaced by your ngrok alpha-numeric HTTPS URL.
 
--Be sure to keep the command prompt with ngrok running, and to make a note of the URL—you'll need it later.
+- Be sure to keep the command prompt with ngrok running, and to make a note of the URL—you'll need it later.
 
 * Verify that *ngrok* is running and working properly by opening your browser and going to your content page via the ngrok HTTPS URL that was provided in your command prompt window.
 
