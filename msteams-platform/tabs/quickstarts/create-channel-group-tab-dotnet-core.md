@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Create a Channel and Group Tab with ASP.NET Core" 
 author: laujan
-description: A quickstart guide to creating a custom channel and group tab with ASP.NET Core. 
+description: A quickstart guide to creating a custom channel and group tab with ASP.NET Core.
 ms.topic: quickstart 
 ms.author: laujan 
 ---
@@ -108,3 +108,8 @@ Within **Tab.cshtml** the application presents the user with two option buttons 
 [!INCLUDE [dotnet-update-app](../../includes/tabs/dotnet-update-chan-grp-app.md)]
 
 [!INCLUDE [dotnet-upload-to-teams](../../includes/tabs/dotnet-upload-to-teams.md)]
+
+## Next Steps
+
+- [learn something](~/foo.md)
+- [and something else](~/foo.md)

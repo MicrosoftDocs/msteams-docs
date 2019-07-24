@@ -71,8 +71,3 @@ If the *Additional valid domains* field is populated, select (•••) and cho
 - In the final pop-up window select a value for the tab page (either a red or gray icon) and select **Save**.
 
 To view your tab, navigate to the team you installed it on, and select it from the tab bar. The page that you chose during configuration should be displayed.
-
-## Next Steps
-
-- [learn something](~/foo.md)
-- [and something else](~/foo.md)

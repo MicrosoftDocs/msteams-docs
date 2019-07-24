@@ -1,19 +1,19 @@
 ---
 title: "Quickstart: Create a Personal Tab with ASP.NET Core" 
-author: laujan 
+author: laujan
 description: A quickstart guide to creating a custom personal tab with ASP.NET Core.
 ms.topic: quickstart 
 ms.author: laujan 
 ---
 # Quickstart: Create a Custom Personal Tab with ASP.NET Core
 
-In this quickstart we'll walk-through creating a custom personal tab with C# and [ASP.Net Core](AspNetCore.Docs/aspnetcore/index) [Razor Pages](/aspnet/AspNetCore.Docs/aspnetcore/mvc/views/razor).  We'll also use [App Studio for Microsoft Teams](/foo.md) to test your tab's Teams integration.
+In this quickstart we'll walk-through creating a custom personal tab with C# and [ASP.Net Core](AspNetCore.Docs/aspnetcore/index) [Razor Pages](/aspnet/AspNetCore.Docs/aspnetcore/mvc/views/razor). We'll also use [App Studio for Microsoft Teams](/foo.md) to test your tab's Teams integration.
 
 [!INCLUDE [dotnet-core-prereq](../../includes/tabs/dotnet-core-prereq.md)]
 
 ## Get the source code
 
-Open a command prompt and create a new directory for your tab project. We have provided a simple [Personal Tab](OfficeDev/msteams-samples/samples/dotnet/tabs/personalTab) project to get you started. To retrieve the source code you can download the zip folder and extract the files or [clone](https://help.github.com/en/articles/cloning-a-repository) the sample repository into your new directory:
+Open a command prompt and create a new directory for your tab project. We have provided a simple [Personal Tab](OfficeDev/msteams-samples/samples/dotnet/tabs/PersonalTab) project to get you started. To retrieve the source code you can download the zip folder and extract the files or [clone](https://help.github.com/en/articles/cloning-a-repository) the sample repository into your new directory:
 
 ```bash
 git clone https://github.com/OfficeDev/msteams-samples.git
@@ -37,12 +37,12 @@ This project was created from an ASP.NET Core 2.2 Web Application empty template
 ```csharp
 public void ConfigureServices(IServiceCollection services)
         {
-        services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 public void Configure(IApplicationBuilder app)
         {
-        app.UseStaticFiles();
-        app.UseMvc();
+            app.UseStaticFiles();
+            app.UseMvc();
         }
 ```
 
@@ -52,7 +52,7 @@ In ASP.NET Core, the web root folder is where the application looks for static f
 
 ### Index.cshtml
 
-ASP.NET Core treats files called *Index* as the default/home page for the site. When your browser URL points to the root of the site, *Index.cshtml* will be displayed as the home page for your application.
+ASP.NET Core treats files called *Index* as the default/home page for the site. When your browser URL points to the root of the site, **Index.cshtml** will be displayed as the home page for your application.
 
 ### AppManifest folder
 
