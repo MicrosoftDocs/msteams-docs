@@ -25,7 +25,7 @@ In your project directory, navigate to the following:
 ./src/app/scripts/**yourDefaultTabNameTab**/**yourDefaultTabNameTab**.tsx
 ```
 
-That is where you'll find your tab logic. Locate the **render()** method and add the following **`<`div`>`** tag and content to the top of the **`<`PanelBody`>`** container code:
+That is where you'll find your tab logic. Locate the `render()` method and add the following `<div>` tag and content to the top of the `<PanelBody>` container code:
 
 ```html
     <PanelBody>
