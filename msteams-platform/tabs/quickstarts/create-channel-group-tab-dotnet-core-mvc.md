@@ -107,7 +107,7 @@ The controllers use the ViewBag property to transfer values dynamically to the V
 ngrok http https://localhost:443560 -host-header="localhost:44360"
 ```
 
-- Ngrok will listen to requests from the internet and will route them to your application when it is running on port 44355.  It should resemble `https://y8rCgT2b.ngrok.io/` where *y8rCgT2b* is replaced by the ngrok alpha-numeric HTTPS URL.
+- Ngrok will listen to requests from the internet and will route them to your application when it is running on port 44355.  It should resemble `https://y8rCgT2b.ngrok.io/` where *y8rCgT2b* is replaced by your ngrok alpha-numeric HTTPS URL.
 
 - Be sure to keep the command prompt with ngrok running and to make note of the URL—you'll need it later.
 
