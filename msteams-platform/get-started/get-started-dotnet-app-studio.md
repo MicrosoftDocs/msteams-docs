@@ -73,6 +73,9 @@ When the app starts, you will see a browser window open with the root of the app
 
 <a name="HostSample"></a>
 
+[!Note]
+> If you receive an error like `Could not find a part of the path … bin\roslyn\csc.exe`, try updating the package with the command `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r`. See [this question on StackOverflow](https://stackoverflow.com/questions/32780315) for addtional details.
+
 ## Host the sample app
 
 Remember that apps in Microsoft Teams are web applications exposing one or more capabilities. For the Teams platform to load your app, your app must be reachable from the internet. To make your app reachable from the internet, you need to host your app. You can either host it in Microsoft Azure for free or create a tunnel to the local process on your development machine using `ngrok`. When you finish hosting your app make a note of its root URL. It will look something like: `https://yourteamsapp.ngrok.io` or `https://yourteamsapp.azurewebsites.net`.
