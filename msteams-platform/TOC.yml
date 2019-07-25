@@ -11,21 +11,21 @@
 -
   name: Tutorials
   items:
-    - 
-      name: Create tab and bot app using C#
-      href: _old/get-started/get-started-dotnet-app-studio.md
-    - 
-      name: Create tab and bot app using Node
-      href: _old/get-started/get-started-nodejs-app-studio.md
+  - 
+    name: Create tab and bot app using C#
+    href: _old/get-started/get-started-dotnet-app-studio.md
+  - 
+    name: Create tab and bot app using Node
+    href: _old/get-started/get-started-nodejs-app-studio.md
 - 
   name: Samples and templates
   items: 
-    - 
-      name: Sample apps
-      href: _old/samples/code-samples.md
-    - 
-      name: Production-ready app templates
-      href: _old/samples/app-templates.md
+  - 
+    name: Sample apps
+    href: _old/samples/code-samples.md
+  - 
+    name: Production-ready app templates
+    href: _old/samples/app-templates.md
 - 
   name: Concepts
   items:
@@ -59,15 +59,18 @@
     -
       name: 'Build and test your app'
       items:
-        - 
-          name: Define action-based commands
-          href: messaging-extensions/how-to/action-based-commands/define-action-based-command.md
-        - 
-          name: Create and send the task module
-          href: messaging-extensions/how-to/action-based-commands/create-task-module.md
-        - 
-          name: Send a response to the submit action
-          href: messaging-extensions/how-to/action-based-commands/respond-to-task-module-submit.md
+      - 
+        name: Define action-based commands
+        href: messaging-extensions/how-to/define-action-based-command.md
+      - 
+        name: Handle the initial invoke message
+        href: foo.md
+      - 
+        name: Create a task module
+        href: foo.md
+      - 
+        name: Send a response to the submit action
+        href: foo.md
     - 
       name: Search-based commands
       items:
@@ -126,31 +129,34 @@
       name: 'Design your messaging extension'
       items:
         -
-          name: 'Design your messaging extension'
-          href: messaging-extensions/design/messaging-extension.md
+          name: 'somthing something Design'
+          href: foo.md
         -
-          name: 'Design your task module'
-          href: messaging-extensions/design/task-module.md
+          name: 'somethingelse Design'
+          href: foo.md
     -
       name: 'How-to guides'
       expanded: true
       items:
         -
           name: 'Create a messaging extension'
-          href: messaging-extensions/how-to/create-messaging-extension.md
+          href: foo.md
         -
           name: 'Action-based commands'
           items:
-            - 
-              name: Define action-based commands
-              href: messaging-extensions/how-to/action-based-commands/define-action-based-command.md
-            - 
-              name: Create and send the task module
-              href: messaging-extensions/how-to/action-based-commands/create-task-module.md
-            - 
-              name: Send a response to the submit action
-              href: messaging-extensions/how-to/action-based-commands/respond-to-task-module-submit.md
-        -  
+            -
+              name: 'Define action-based commands'
+              href: foo.md
+            -
+              name: 'Handle the initial invoke message'
+              href: foo.md
+            -
+              name: 'Create a task module'
+              href: foo.md
+            -
+              name: 'Send a response to the submit action'
+              href: foo.md
+        -
           name: 'Search-based commands'
           items:
             -
@@ -188,34 +194,28 @@
           items:
             -
               name: 'Create a channel and group tab'
-              href: tabs/quickstarts/create-channel-group-tab-yeoman.md
+              href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
             -
               name: 'Create a personal tab'
-              href: tabs/quickstarts/create-personal-tab-yeoman.md
+              href: tabs/quickstarts/create-personal-tab-node-yeoman.md
         -
           name: 'C#/ASP.NET Core'
           items:
             -
               name: 'Create a channel and group tab'
-              href: tabs/quickstarts/create-channel-group-tab-asp-net-core.md
+              href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
             -
               name: 'Create a personal tab'
-              href: tabs/quickstarts/create-personal-tab-asp-net-core.md
+              href: tabs/quickstarts/create-personal-tab-dotnet-core.md
         -
           name: 'C#/ASP.NET MVC'
           items:
             -
               name: 'Create a channel and group tab'
-              href: tabs/quickstarts/create-channel-group-tab-asp-net-mvc.md
+              href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
             -
               name: 'Create a personal tab'
-              href: tabs/quickstarts/create-personal-tab-asp-net-mvc.md
-    -
-      name: Tutorials
-      items:
-        -
-          name: 'Build Microsoft Teams tab using SharePoint Framework'
-          href: old/get-started/using-web-part-as-ms-teams-tab.md
+              href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
     -
       name: Samples
       href: old/samples/code-samples.md
@@ -233,23 +233,20 @@
       expanded: true
       items:
         -
-          name: 'Create custom tabs'
+          name: 'Add tabs to your app'
+          href: tabs/how-to/create-custom-tabs/add-tab-to-app.md
+        -
+          name: 'Create tab pages'
           items:
             -
-              name: 'Add tabs to your app manifest'
-              href: tabs/how-to/create-custom-tabs/add-tab-to-app-manifest.md
-            -
-              name: 'Create a personal tab'
+              name: 'Create a content page'
               href: tabs/how-to/create-custom-tabs/personal-tab.md
-            -
-              name: 'Create a group or channel tab'
-              href: tabs/how-to/create-custom-tabs/group-channel-tab.md
             -
               name: 'Create a configuration page'
               href: tabs/how-to/create-custom-tabs/configuration-page.md
             -
               name: 'Create a tab removal page'
-              href: tabs/how-to/create-custom-tabs/tab-removal-page.md
+              href: tabs/how-to/create-custom-tabs/removal-page.md
         -
           name: 'Add authentication to your tabs'
           items:
