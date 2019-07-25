@@ -7,13 +7,13 @@ ms.author: laujan
 ---
 # Quickstart: Create a Custom Channel and Group Tab with ASP.NET Core MVC
 
-In this quickstart we'll walk-through creating a custom channel/group tab with C# and [ASP.Net Core MVC](aspnet/core/mvc/overview?view=aspnetcore-2.2). We'll also use [App Studio for Microsoft Teams](/foo.md) to test your tab's Teams integration.
+In this quickstart we'll walk-through creating a custom channel/group tab with C# and [ASP.Net Core MVC](aspnet/core/mvc/overview?view=aspnetcore-2.2). We'll also use [App Studio for Microsoft Teams](/foo.md) to finalize your app manifest and deploy your tab to Teams.
 
 [!INCLUDE [dotnet-core-prereq](../../includes/tabs/dotnet-core-prereq.md)]
 
 ## Get the source code
 
-Open a command prompt and create a new directory for your tab project. We have provided a simple [Channel Group Tab](OfficeDev/msteams-samples/samples/dotnet/tabs/ChannelGroupTabMVC) project to get you started.To retrieve the source code you can download the zip folder and extract the files or [clone](https://help.github.com/articles/cloning-a-repository) the sample repository into your new directory:
+Open a command prompt and create a new directory for your tab project. We have provided a simple [Channel Group Tab](https://github.com/OfficeDev/msteams-samples/samples/dotnet/tabs/ChannelGroupTabMVC) project to get you started. To retrieve the source code you can download the zip folder and extract the files or [clone](https://help.github.com/articles/cloning-a-repository) the sample repository into your new directory:
 
 ```bash
 git clone https://github.com/OfficeDev/msteams-samples.git
@@ -21,7 +21,7 @@ git clone https://github.com/OfficeDev/msteams-samples.git
 
 Once you have the source code, open Visual Studio and select **Open a project or solution**. Navigate to the tab application directory and open **ChannelGroupTabMVC.sln**.
 
-To build and run your application select **F5** or choose **Start Debugging** from the **Debug** menu. In a browser navigate to the URLs below and verify that the application loaded properly:
+To build and run your application press **F5** or choose **Start Debugging** from the **Debug** menu. In a browser, navigate to the URLs below and verify that the application loaded properly:
 
 - `http://localhost:44360`
 - `http://localhost:44360/privacy`
@@ -35,14 +35,14 @@ This project was created from an ASP.NET Core 2.2 Web Application empty template
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-        }
+  {
+    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+  }
 public void Configure(IApplicationBuilder app)
-        {
-            app.UseStaticFiles();
-            app.UseMvc();
-        }
+  {
+    app.UseStaticFiles();
+    app.UseMvc();
+  }
 ```
 
 ### wwwroot folder
@@ -55,9 +55,9 @@ This folder contains the following required app package files:
 
 - A **full color icon** measuring 192 x 192 pixels.
 - A **transparent outline icon** measuring 32 x 32 pixels.
-- A **manifest.json** file that specifies the attributes of your tab and points to required resources like Tab.cshtml.
+- A **manifest.json** file that specifies the attributes of your app.
 
-These files need to be zipped in an app package for use in uploading your tab to Teams. When a user chooses to add or update your tab, Microsoft Teams will load the `configurationUrl` specified in your manifest, embed it in an IFrame, and render it in your tab.
+These files need to be zipped in an app package for use in uploading your tab to Teams.
 
 ### .csproj
 
@@ -83,7 +83,7 @@ In the Visual Studio Solution Explorer window right-click on the project and sel
 
 ### Models
 
-*ChannelGroup.cs* presents a Message object and methods that will be called from the  Controllers during configuration.
+*ChannelGroup.cs* presents a Message object and methods that will be called from the Controllers during configuration.
 
 ### Views
 
@@ -109,7 +109,7 @@ ngrok http https://localhost:443560 -host-header="localhost:44360"
 
 - Ngrok will listen to requests from the internet and will route them to your application when it is running on port 44355.  It should resemble `https://y8rCgT2b.ngrok.io/` where *y8rCgT2b* is replaced by your ngrok alpha-numeric HTTPS URL.
 
-- Be sure to keep the command prompt with ngrok running and to make note of the URL—you'll need it later.
+- Be sure to keep the command prompt with ngrok running and to make note of the URL — you'll need it later.
 
 ## Update your application
 

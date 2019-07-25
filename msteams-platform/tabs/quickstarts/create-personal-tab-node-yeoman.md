@@ -10,14 +10,18 @@ ms.author: laujan
 >[!NOTE]
 >This quickstart follows the steps outlined in the [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
 
-In this quickstart we'll walk-through creating a custom personal tab using the [Teams Yeoman generator](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App). To learn more, see the [Project Structure documentation](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure). We'll also upload the application to Teams and test your tab's integration.
+In this quickstart we'll walk-through creating a custom personal tab using the [Teams Yeoman generator](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App). We'll also upload the application to Team.
 
-[!INCLUDE [node-js-yeoman-prereq](../../includes/tabs/node-js-yeoman-prereq.md)]**Do you want to create a configurable or static tab?**<br>Use the arrow keys to select static tab.<br>
+[!INCLUDE [node-js-yeoman-prereq](../../includes/tabs/node-js-yeoman-prereq.md)]
+
+**Do you want to create a configurable or static tab?**
+
+Use the arrow keys to select static tab.
 
 >[!IMPORTANT]
->The path component **yourDefaultTabNameTab**, referenced in this quickstart, is the value that you entered in the generator for **Default Tab Name** plus the word **Tab**.
+>The path component *yourDefaultTabNameTab*, referenced in this quickstart, is the value that you entered in the generator for *Default Tab Name* plus the word *Tab*.
 >
->For example: DefaultTabName: **MyTab** => **/MyTabTab/**
+>For example: DefaultTabName: *MyTab* => */MyTabTab/*
 
 ## Create your personal tab
 
@@ -43,7 +47,6 @@ To add a personal tab to this application you'll create a content page and updat
             <p>This is your personal tab!</p>
         </body>
 </html>
-
 ```
 
 - Save **personal.html** in your application's **web** folder:
@@ -58,7 +61,7 @@ To add a personal tab to this application you'll create a content page and updat
 ./src/manifest/manifest.json/
 ```
 
-Add the following to the empty **staticTabs** array (**staticTabs":[]** and add the following JSON object:
+Add the following to the empty `staticTabs` array (`staticTabs":[]`) and add the following JSON object:
 
 ```json
 {
@@ -71,7 +74,7 @@ Add the following to the empty **staticTabs** array (**staticTabs":[]** and add 
 
 ```
 
-Remember to update the **"contentURL"** path component **yourDefaultTabNameTab** with your *DefaultTabName* + *Tab*.
+Remember to update the **"contentURL"** path component **yourDefaultTabNameTab** with your actual tab name.
 
 - Save the updated **manifest.json**.
 
@@ -95,7 +98,7 @@ Open a command prompt in your project directory to complete the next tasks.
 
 [!INCLUDE [node-js-yeoman-gulp-tasks](../../includes/tabs/node-js-yeoman-gulp-tasks.md)]
 
-To view your personal tab, remain in the current browser and add **personal.html** to the file path: `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`
+To view your personal tab, go to `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`
 
 >![personal tab screenshot](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
 
@@ -112,20 +115,18 @@ gulp ngrok-serve
 ```
 
 > [!IMPORTANT]
-> After your tab has been uploaded to Microsoft teams, via *ngrok*, and successfully saved, you can view it in Teams until your tunnel session ends .<br><br>
-**Remember to serve your tab on your hosted website prior to submission to the Teams app store for approval**.
+> After your tab has been uploaded to Microsoft teams, via *ngrok*, and successfully saved, you can view it in Teams until your tunnel session ends.
 
 ## Upload your application to Teams
 
 - Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/foo.md).
-- In the *YourTeams* panel select (**&#8226;&#8226;&#8226;**), **More options**, next to the team that you're using to test your tab and choose *Manage team*.
+- In the *YourTeams* panel on the left, select the `...` menu next to the team that you're using to test your tab and choose **Manage team**.
 - In the main panel select **Apps** from the tab bar and choose **Upload a custom app** located in the lower right-hand corner of the page.
 - Open your project directory, browse to the **./package** folder, select the zip folder, right-click, and choose **Open**. Your tab will upload into Teams.
 
 ## View your personal tabs
 
-- In the navbar located at the far-left of the Teams App, select (**&#8943;**) *More added apps*. You'll be presented with a list of personal view apps.
-- Select your personal tab from the list to view.
+In the navbar located at the far-left of the Teams client, select the `...` menu and choose your app from the list.
 
 ## Next Steps
 

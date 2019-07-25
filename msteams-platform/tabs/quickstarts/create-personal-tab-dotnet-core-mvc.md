@@ -7,13 +7,13 @@ ms.author: laujan
 ---
 # Quickstart: Create a Custom Personal Tab with ASP. NET Core MVC
 
-In this quickstart we'll walk-through creating a custom personal tab with C# and [ASP. Net Core MVC](aspnet/core/mvc/overview?view=aspnetcore-2.2). We'll also use [App Studio for Microsoft Teams](/foo.md) to test your tab's Teams integration.
+In this quickstart we'll walk-through creating a custom personal tab with C# and [ASP. Net Core MVC](aspnet/core/mvc/overview?view=aspnetcore-2.2). We'll also use [App Studio for Microsoft Teams](/foo.md) to finalize your app manifest and deploy your tab to Teams.
 
 [! INCLUDE [dotnet-core-prereq](../../includes/tabs/dotnet-core-prereq.md)]
 
 ## Get the source code
 
-Open a command prompt and create a new directory for your tab project. We have provided a simple [Personal Tab](OfficeDev/msteams-samples/samples/dotnet/tabs/PersonalTabMVC) project to get you started. To retrieve the source code you can download the zip folder and extract the files or [clone](https://help.github.com/articles/cloning-a-repository) the sample repository into your new directory:
+Open a command prompt and create a new directory for your tab project. We have provided a simple [Personal Tab](https://github.com/OfficeDev/msteams-samples/samples/dotnet/tabs/PersonalTabMVC) project to get you started. To retrieve the source code you can download the zip folder and extract the files or [clone](https://help.github.com/articles/cloning-a-repository) the sample repository into your new directory:
 
 ``` bash
 git clone https://github.com/OfficeDev/msteams-samples.git
@@ -21,11 +21,11 @@ git clone https://github.com/OfficeDev/msteams-samples.git
 
 Once you have the source code, open Visual Studio and select **Open a project or solution**. Navigate to the tab application directory and open **PersonalTabMVC.sln**.
 
-To build and run your application select **F5** or choose **Start Debugging** from the **Debug** menu. In a browser navigate to the URLs below to verify that the application loaded properly:
+To build and run your application press **F5** or choose **Start Debugging** from the **Debug** menu. In a browser navigate to the URLs below to verify that the application loaded properly:
 
-* `http://localhost:44335` 
-* `http://localhost:44335/privacy` 
-* `http://localhost:44335/tou` 
+* `http://localhost:44335`
+* `http://localhost:44335/privacy`
+* `http://localhost:44335/tou`
 
 ## Review the source code
 
@@ -35,14 +35,14 @@ This project was created from an ASP. NET Core 2.2 Web Application empty templat
 
 ``` csharp
 public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-        }
+  {
+    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+  }
 public void Configure(IApplicationBuilder app)
-        {
-            app.UseStaticFiles();
-            app.UseMvc();
-        }
+  {
+    app.UseStaticFiles();
+    app.UseMvc();
+  }
 ```
 
 ### wwwroot folder
@@ -55,9 +55,9 @@ This folder contains the following required app package files:
 
 * A **full color icon** measuring 192 x 192 pixels.
 * A **transparent outline icon** measuring 32 x 32 pixels.
-* A **manifest.json** file that specifies the attributes of your tab and points to required resources like PersonalTab.cshtml.
+* A **manifest.json** file that specifies the attributes of your app.
 
-These files need to be zipped in an app package for use in uploading your tab to Teams. Microsoft Teams will load the *contentUrl*, specified in your manifest, embed it in an IFrame, and render it in your tab.
+These files need to be zipped in an app package for use in uploading your tab to Teams. Microsoft Teams will load the `contentUrl` specified in your manifest, embed it in an IFrame, and render it in your tab.
 
 ### .csproj
 
@@ -89,7 +89,7 @@ In the Visual Studio Solution Explorer window right-click on the project and sel
 
 #### Home
 
-ASP. NET Core treats files called *Index* as the default/home page for the site. When your browser URL points to the root of the site, **Index.cshtml** will be displayed as the home page for your application.
+ASP. NET Core treats files called *Index* as the default/home page for the site. When your browser URL points to the root of the site, *Index.cshtml* will be displayed as the home page for your application.
 
 #### Shared
 
@@ -111,12 +111,12 @@ ngrok http https://localhost:44345 -host-header="localhost:44345"
 
 * Ngrok will listen to requests from the internet and will route them to your application when it is running on port 44325.  It should resemble `https://y8rPrT2b.ngrok.io/` where *y8rPrT2b* is replaced by your ngrok alpha-numeric HTTPS URL.
 
-- Be sure to keep the command prompt with ngrok running, and to make a note of the URL—you'll need it later.
+* Be sure to keep the command prompt with ngrok running, and to make a note of the URL — you'll need it later.
 
 * Verify that *ngrok* is running and working properly by opening your browser and going to your content page via the ngrok HTTPS URL that was provided in your command prompt window.
 
 > [! TIP]
-> You need to have both your application in Visual Studio and ngrok running to complete this quickstart. If you need to stop running your application in Visual Studio to work on it **keep ngrok running**. It will continue to listen and will resume routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service it will return a new URL and you'll have to update every place that uses that URL.
+> You need to have both your application in Visual Studio and ngrok running to complete this quickstart. If you need to stop running your application in Visual Studio to work on it, **keep ngrok running**. It will continue to listen and will resume routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service it will return a new URL and you'll have to update every place that uses that URL.
 
 ### Run your application
 
@@ -128,4 +128,3 @@ ngrok http https://localhost:44345 -host-header="localhost:44345"
 
 * [learn something](~/foo.md)
 * [and something else](~/foo.md)
-

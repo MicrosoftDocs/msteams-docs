@@ -233,23 +233,20 @@
       expanded: true
       items:
         -
-          name: 'Create custom tabs'
+          name: 'Add tabs to your app'
+          href: tabs/how-to/create-custom-tabs/add-tab-to-app.md
+        -
+          name: 'Create tab pages'
           items:
             -
-              name: 'Add tabs to your app manifest'
-              href: tabs/how-to/create-custom-tabs/add-tab-to-app-manifest.md
-            -
-              name: 'Create a personal tab'
+              name: 'Create a content page'
               href: tabs/how-to/create-custom-tabs/personal-tab.md
-            -
-              name: 'Create a group or channel tab'
-              href: tabs/how-to/create-custom-tabs/group-channel-tab.md
             -
               name: 'Create a configuration page'
               href: tabs/how-to/create-custom-tabs/configuration-page.md
             -
               name: 'Create a tab removal page'
-              href: tabs/how-to/create-custom-tabs/tab-removal-page.md
+              href: tabs/how-to/create-custom-tabs/removal-page.md
         -
           name: 'Add authentication to your tabs'
           items:

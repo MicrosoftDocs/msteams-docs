@@ -36,6 +36,46 @@ yo teams
 
 ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
-**What is your solution name?** <br>This is your project name. You can accept the suggested name by pressing enter.<br>**Where do you want to place the files?** <br> You're currently in your project directory. Press enter.<br>**Title of your Microsoft Teams app project?** <br> This is your app package name and will be used in the app manifest and description. <br>**Your (company) name? (max 32 characters)** <br> Your company name will be used in the app manifest.<br>**Which manifest version would you like to use?** <br>Select v1.5 which is the generator's current general available schema.<br>**Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)** <br>This field isn't required and should only be used if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com). <br>**What do you want to add to your project?** <br> Select ( &ast; ) A Tab.<br>
-**The URL where you will host this solution?** <br>
-By default the generator suggests an Azure Web Sites URL. You'll only be testing your app locally, therefore, a valid URL is not necessary to complete this quickstart.<br>**Would you like to include Test framework and initial tests? (y/N)** <br> Choose **not** to include a test framework for this project. The default is yes; select Enter or enter **n**.<br>**Would you like to use Azure Applications Insights for telemetry? (y/N)** <br> Choose **not** to include [Azure Application Insights](/azure-docs/articles/azure-monitor/app/app-insights-overview.md). The default is no; select Enter or enter **n**.<br>**Default Tab Name (max 16 characters)?** <br> Name your tab. The default tab name will be used throughout your project as a file path component.<br>
+**What is your solution name?**
+
+This is your project name. You can accept the suggested name by pressing enter.
+
+**Where do you want to place the files?**
+
+You're currently in your project directory. Press enter.
+
+**Title of your Microsoft Teams app project?**
+
+This is your app package name and will be used in the app manifest and description.
+
+**Your (company) name? (max 32 characters)**
+
+Your company name will be used in the app manifest.
+
+<br>**Which manifest version would you like to use?**
+
+Select the default schema.
+
+**Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
+
+This field isn't required and should only be used if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
+
+**What do you want to add to your project?**
+
+Select ( &ast; ) A Tab.
+
+**The URL where you will host this solution?**
+
+By default the generator suggests an Azure Web Sites URL. You'll only be testing your app locally, therefore, a valid URL is not necessary to complete this quickstart.
+
+**Would you like to include Test framework and initial tests? (y/N)**
+
+Choose **not** to include a test framework for this project. The default is yes; enter **n**.
+
+**Would you like to use Azure Applications Insights for telemetry? (y/N)**
+
+Choose **not** to include [Azure Application Insights](/azure-docs/articles/azure-monitor/app/app-insights-overview.md). The default is no; enter **n**.
+
+**Default Tab Name (max 16 characters)?**
+
+Name your tab. This tab name will be used throughout your project as a file/URL path component.
