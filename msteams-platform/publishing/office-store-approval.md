@@ -14,6 +14,7 @@ For your Teams app to be approved:
 * Any material that you associate with your experience, such as descriptions and support documentation, must be accurate. Use correct spelling, capitalization, punctuation, and grammar in your descriptions and materials.
 * It must pass all current [AppSource validation policies](https://dev.office.com/officestore/docs/validation-policies) for Teams tabs and bots. Please note that these policies are subject to change.
 * For tabs, it must provide value to users outside of what is possible by simply pinning your website in Teams. This means that, at minimum, it must remove extraneous chrome and disallow navigating outside the configured context. See the [Microsoft Teams Design Guidelines](~/resources/design/overview.md) for more guidance.
+* Your app must be whitelisted by the Teams product group. Please reach out to teamsubm@microsoft.com to work with Teams product group to ensure your app has a great quality & experience. After securing a whitelist, you can upload your app into the Seller Dashboard
 
 When the validation process is complete, you will receive a message to let you know that either your Teams experience is approved or it fails one of the stated policies. You can also follow these steps to check the approval status in the Seller Dashboard:
 
@@ -29,13 +30,18 @@ Failures are explained, with references to the specific policy violations. All f
 
 The information below covers some of the most common reasons apps fail validation. It is not intended to be an exhaustive list of all potential issues with you app. However, if you follow this guidance your likelihood of a first-time pass will be greatly increased.
 
+### Policy 14.15
+
+Your app must be whitelisted by the Teams product group. Please reach out to teamsubm@microsoft.com to work with Teams product group to ensure your app has a great quality & experience. After securing a whitelist, you can upload your app into the Seller Dashboard
+
+
 ### Sign up, Sign in, and Sign out
 
 Apps must provide a clear, simple sign in/out and (when appropriate) sign-up experience. The experience must be reachable across all capabilities in your app.
 
 * If there is an explicit sign-in option provided to the user, there must be a sign-out option too (even if the app is using SSO/Silent Authentication)
 * The sign-out option must sign the user out of only your app's capability, and not from the Teams client.
-* Every scope that has a sign-in must have a sign-out as well. The sign-out option should sign the user out from the same capabilities that the sign-in option signed them into. For example, if the sign-in option signs the user into both a messaging extension and tab, then the sign out option must sign the user out from the message extension and tab (at minimum).
+* Every scope that has a sign-in must have a sign-out as well. The sign-out option should sign the user out from All or at minimum, the same capabilities that  sign-in option signed him into. For example, if the sign-in option signs the user into both a messaging extension and tab, then the sign out option must sign the user out from all capabilities in your app OR at minimum from the message extension and tab.
 
 * Make sure there is always a way to reverse the following (or similar) behaviors:
   * Sign-in => sign-out
@@ -54,11 +60,13 @@ For additional information on authentication see:
 
 ### Test Notes for validation/approval
 
-You must provide at least two login credentials, one admin and one not, so we can validate your app.
+You must provide at least two login credentials, one admin and one not, to validate your app.
 
 * The accounts you provide should have sufficient data pre-populated for verification purposes.
 * For enterprise apps, apps where a subscription is required, or where there is an office 365 tenant/domain dependency for testing you must provide an 3rd account in the same domain that is not already configured to use your app so we can validate the first-run user experience.
 * If your app has any Premium/Upgraded features, an account with the necessary access must be provided to test that experience.
+
+You may choose to upload your Test Notes to Sharepoint. In such cases, please provide a public link to this file.
 
 ### Updating your existing Teams app
 
