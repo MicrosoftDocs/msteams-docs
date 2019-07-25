@@ -11,7 +11,7 @@ At a high level, you'll need to complete the following steps to create a messagi
 
 1. Prepare your development environment
 1. Create and register your bot service
-1. Create and deploy your app service (you can use service like ngrok to [run it locally](~/foo.md))
+1. Create and deploy your app service (while developing you can use service like ngrok to [run it locally](~/foo.md))
 1. Create your app package
 1. Upload your package to Microsoft Teams
 

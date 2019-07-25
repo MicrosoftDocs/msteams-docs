@@ -7,7 +7,7 @@ ms.author: anclear
 ---
 # Define action-based messaging extension commands
 
-Action-based messaging extensions commands allow you present your users with a modal popup (called a task module in Teams) to collect or display information, then process their interaction and send information back to Teams. Before creating your command you'll need to decide:
+Action-based messaging extension commands allow you present your users with a modal popup (called a task module in Teams) to collect or display information, then process their interaction and send information back to Teams. Before creating your command you'll need to decide:
 
 1. Where can the messaging extension can be triggered from?
 1. How will the task module be created?
