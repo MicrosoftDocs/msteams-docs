@@ -1,5 +1,5 @@
 ---
-title: Extend your app with a custom tab
+title: Extend Your App with a Custom Tab
 author: laujan
 description: 
 keywords: teams tabs group channel configurable 
