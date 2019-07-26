@@ -23,6 +23,8 @@ At a high level, the process for submitting your app to AppSource is:
 
 * [Register as a Microsoft app developer](https://developer.microsoft.com/store/register).
 * [Register as a developer in the Seller Dashboard](#register-in-the-seller-dashboard-to-submit-to-appsource).
+* Use the self assessment [Checklist](#https://docs.microsoft.com/en-us/microsoftteams/platform/publishing/office-store-checklist) to ensure your metadata is correct & also refer [this link](#https://aka.ms/Teams-Checklist) for most failed test cases of apps
+* Send your completed app package + [Metadata](#https://docs.microsoft.com/en-us/microsoftteams/platform/publishing/office-store-approval#app-metadata)+[Test Notes](#https://docs.microsoft.com/en-us/microsoftteams/platform/publishing/office-store-approval#test-notes-for-validationapproval) to teamsubm@microsoft.com to initiate your [app validation process](#https://docs.microsoft.com/en-us/microsoftteams/platform/publishing/office-store-approval). This free service will streamline your final submission to AppSource and whitelist your app for Store team
 * Use the Seller Dashboard to [submit your Teams app package](~/publishing/office-store-checklist.md) to AppSource.
 * Monitor the Seller Dashboard to track [approval](~/publishing/office-store-approval.md), and resolve any issues with your app
 
@@ -52,6 +54,10 @@ To start the process, choose the **Continue** button under **Office**.
 
 ![AppSource Seller Dashboard entry point](~/assets/images/submission/sellerdashboardofficeentry.png)
 
+### Microsoft Teams app approval process
+
+To ensure your app works well on Microsoft Teams, in addition to the core AppSource validation that occurs for all submitted apps, your app will go through a Teams-specific approval process. We provide [detailed guidance on this process](~/publishing/office-store-approval.md). You must ensure your app follows our guidance. Multiple review/refactor/submit cycles can greatly delay getting your app into the store.
+
 ### Use the Seller Dashboard to submit to AppSource
 
 > [!IMPORTANT]
@@ -61,9 +67,6 @@ After your account is approved, you can submit your solution to the [Seller Dash
 
 You need to upload a [submission package](~/concepts/apps/apps-package.md) and provide the required metadata for the product listing page, including information such as app logo, description, and screenshots. Please review our [Submission and Manifest Metadata Checklist](~/publishing/office-store-checklist.md) for more information.
 
-### Microsoft Teams app approval process
-
-To ensure your app works well on Microsoft Teams, in addition to the core AppSource validation that occurs for all submitted apps, your app will go through a Teams-specific approval process. We provide [detailed guidance on this process](~/publishing/office-store-approval.md). You must ensure your app follows our guidance. Multiple review/refactor/submit cycles can greatly delay getting your app into the store.
 
 ## Add a download button to your product site
 
@@ -77,6 +80,7 @@ When a user installs your application one of the first things they do is consent
 
 * Adding a new capability to an app such as adding a bot to an tab only app
 * Changing the permissions array in the manifest
+* Make sure to increase your app version for any manifest changes
 
 ## Troubleshooting publishing issues
 
