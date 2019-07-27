@@ -12,11 +12,17 @@ Tabs provide efficient access to designated team information and resources. You 
 
 ## Add a custom tab
 
-Whether you extend your app with a channel/group or personal tab, you will need to present a specified content page. For personal tabs, the content URL is set directly in your app's manifest.json. For channel/group tabs you will create a configuration page which, based upon the user's response parameters, will then set the content URL in the group/channel tab. The configuration page URL is specified in your app's manifest.json.
+### Desktop and web clients
 
-## Remove a custom tab
+Whether you extend your app with a channel/group or personal tab, you'll need to present a specified [content page](foo.md). For personal tabs, the content URL is set directly in your app's [manifest.json](foo.md) (`contentUrl`). For channel/group tabs you'll create a [configuration](foo.md) page which, based upon the user's response parameters, will then set the content URL in the group/channel tab. The configuration page URL is specified in the manifest.json (`configurationUrl`).
 
-You can enable users to modify the settings, rename, or remove group/channel tabs and designate what happens to the content if a tab is removed. Supported removal options can further refine the user experience. Personal tabs cannot be modified but can be uninstalled by the user.
+### Mobile clients
+
+If you want your tab to appear on the Teams mobile clients, you must specify the value of `websiteUrl` in the manifest.json. Personal tabs are currently available in [developer preview](~/resources/dev-preview/developer-preview-intro.md). Full support for tabs on mobile clients will be released soon. To prepare for the update, you should follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md) when creating your tabs.
+
+## Modify or remove a custom tab
+
+You can enable users to modify, reconfigure, or rename a group/channel tab by setting the `canUpdateConfiguration` attribute in the manifest.json to `true`. Supported removal options can further refine the user experience. You can designate what happens to the content when a tab is removed by including a removal options page in your app and setting the URL in the manifest.json (`removeUrl`). Personal tabs can't be modified but can be uninstalled by the user.
 
 ## Learn more
 
