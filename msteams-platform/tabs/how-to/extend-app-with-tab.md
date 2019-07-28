@@ -28,6 +28,8 @@ If you choose to have your channel/group tab appear on Teams mobile clients, the
 
 You can enable users to modify, reconfigure, or rename a group/channel tab by setting the manifest `canUpdateConfiguration` attribute to `true`. Supported removal options can further refine the user experience. You can designate what happens to the content when a tab is removed by including a removal options page in your app and setting the configuration page `microsoftTeams.settings.setSettings()` object's `removeUrl` value (see below). Personal tabs can't be modified but can be uninstalled by the user.
 
+Microsoft Teams Setting Object:
+
 ```javascript
 microsoftTeams.settings.setSettings({
     contentUrl: "add content page URL here",
