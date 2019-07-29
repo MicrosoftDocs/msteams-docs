@@ -34,7 +34,7 @@ Microsoft Teams setSettings() configuration:
 microsoftTeams.settings.setSettings({
     contentUrl: "add content page URL here",
     entityId: "add unique name here",
-    suggestedDisplayName: "add name displayed on tab here",
+    suggestedDisplayName: "add name to display on tab here",
     websiteUrl: "required for mobile clients",
     removeUrl: "add removal page URL here"
 });
