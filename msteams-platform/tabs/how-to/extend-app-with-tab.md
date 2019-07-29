@@ -18,7 +18,7 @@ The [Teams Manifest](platform/schema/manifest-schema) describes how an app integ
 
 ### Desktop and web clients
 
-Whether you extend your app with a channel/group or personal tab, you'll need to present a [content page](foo.md). For personal tabs, the content URL is set directly in your manifest `staticTabs` array's `contentUrl` property and should be the same for all users. For channel/group tabs you'll create a [configuration](foo.md) page which, based upon user supplied parameters, then set the content URL in the group/channel tab. The configuration page URL is specified in the `configurableTabs` array's `configurationUrl` property. You can specify one or more personal tab objects, up to 16, and/or a single channel/group tab object in your app manifest.
+Whether you extend your app with a channel/group or personal tab, you'll need to present a [content page](foo.md). For personal tabs, the content URL is set directly in your manifest `staticTabs` array's `contentUrl` property and should be the same for all users. For channel/group tabs you'll create a [configuration](foo.md) page which, based upon user supplied parameters, sets the content URL in the group/channel tab. The configuration page URL is specified in the `configurableTabs` array's `configurationUrl` property. You can specify one or more personal tab objects, up to 16, and/or a single channel/group tab object in your app manifest.
 
 ### Mobile clients
 
