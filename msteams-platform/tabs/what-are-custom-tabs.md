@@ -55,7 +55,7 @@ Your app can have a maximum of one (1) channel/group tab and up to sixteen (16) 
 
 ## Mobile considerations for tabs
 
-foo.md => insert mobile words here.
+Full support for tabs on mobile clients will be released soon. To prepare for the update, you should follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md) when creating your tabs.
 
 ## Get Started
 
