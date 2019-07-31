@@ -20,11 +20,11 @@ All tab content must meet the requirements outlined in [what are custom tabs](~/
 - A **transparent outline icon** measuring 32 x 32 pixels.
 - A **manifest.json** file that specifies the attributes of your app.
 
-The [Teams Manifest Schema](~/resources/schema/manifest-schema) describes how an app integrates with the Teams client. Your `manifest.json` file will conform to the schema and contain values vital to your custom tab features.
+The [Teams Manifest Schema](~/resources/schema/manifest-schema.md) describes how an app integrates with the Teams client. Your `manifest.json` file will conform to the schema and contain values vital to your custom tab features.
 
 ### Desktop and web clients
 
-Whether you expose your tab within the channel/group or personal scope, you'll need to present an IFramed HTML [content page](foo.md) in your tab. For personal tabs, the content URL is set directly in your manifest by the `contentUrl` property in the `staticTabs` array. Your tab's content will be the same for all users. For channel/group tabs you'll create a [configuration](foo.md) page, based upon variable parameters, to set the content URL in the group/channel tab. The tab content will vary by user. The configuration page URL is specified by the  `configurationUrl` property in the `configurableTabs` array. You can specify one or more personal tab objects, up to 16, and/or a single channel/group tab object in your app manifest.
+Whether you expose your tab within the channel/group or personal scope, you'll need to present an IFramed HTML [content page](foo.md) in your tab. For personal tabs, the content URL is set directly in your manifest by the `contentUrl` property in the `staticTabs` array. Your tab's content will be the same for all users. For channel/group tabs you'll create a [configuration](foo.md) page, based upon variable parameters, to set the content URL in the group/channel tab. Your tab content will vary by user. The configuration page URL is specified by the  `configurationUrl` property in the `configurableTabs` array. You can specify one or more personal tab objects, up to 16, and/or a single channel/group tab object in your app manifest.
 
 ### Mobile clients
 
