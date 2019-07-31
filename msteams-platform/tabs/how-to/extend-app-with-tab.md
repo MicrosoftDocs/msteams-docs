@@ -14,17 +14,17 @@ You can enhance your app experience by serving web content that you host to your
 
 ### Requirements
 
-All tab content must meet the requirements outlined in [what are custom tabs](foo.md). Additionally, you must create an app package that is required for use in uploading your tab to Teams.  The app package is a zip folder containing the following:
+All tab content must meet the requirements outlined in [what are custom tabs](microsoftteams/platform/tabs/what-are-custom-tabs.md#tab-content-requirement). Additionally, you must create an app package—it is required for use in uploading your tab to Teams.  The app package is a zip folder containing the following:
 
 - A **full color icon** measuring 192 x 192 pixels.
 - A **transparent outline icon** measuring 32 x 32 pixels.
-- A **manifest.json** file that specifies the attributes of your app. 
+- A **manifest.json** file that specifies the attributes of your app.
 
-The [Teams Manifest Schema](platform/schema/manifest-schema) describes how an app integrates with the Teams client. Your `manifest.json` file must conform to the schema and will contain values vital to your custom tab features.
+The [Teams Manifest Schema](msteams/platform/resources/schema/manifest-schema) describes how an app integrates with the Teams client. Your `manifest.json` file will conform to the schema and contain values vital to your custom tab features.
 
 ### Desktop and web clients
 
-Whether you expose your tab within the channel/group or personal scope, you'll need to present an iFramed [content page](foo.md) in your tab. For personal tabs, the content URL is set directly in your manifest by the `contentUrl` property in the `staticTabs` array. Your tab's content will be the same for all users. For channel/group tabs you'll create a [configuration](foo.md) page which, based upon parameter variables, sets the content URL in the group/channel tab. The configuration page URL is specified by the  `configurationUrl` property in the `configurableTabs` array. You can specify one or more personal tab objects, up to 16, and/or a single channel/group tab object in your app manifest.
+Whether you expose your tab within the channel/group or personal scope, you'll need to present an IFramed HTML [content page](foo.md) in your tab. For personal tabs, the content URL is set directly in your manifest by the `contentUrl` property in the `staticTabs` array. Your tab's content will be the same for all users. For channel/group tabs you'll create a [configuration](foo.md) page which, based upon variable parameters used to set the content URL in the group/channel tab. The tab content will vary by user. The configuration page URL is specified by the  `configurationUrl` property in the `configurableTabs` array. You can specify one or more personal tab objects, up to 16, and/or a single channel/group tab object in your app manifest.
 
 ### Mobile clients
 
