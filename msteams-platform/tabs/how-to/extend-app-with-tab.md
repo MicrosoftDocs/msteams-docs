@@ -20,7 +20,7 @@ All tab content must meet the requirements outlined in [what are custom tabs](~/
 - A **transparent outline icon** measuring 32 x 32 pixels.
 - A **manifest.json** file that specifies the attributes of your app.
 
-The [Teams Manifest Schema](~/resources/schema/manifest-schema.md) describes how an app integrates with the Teams client. Your `manifest.json` file will conform to the schema and contain values vital to your custom tab features.
+The [Teams Manifest Schema](/resources/schema/manifest-schema.md) describes how an app integrates with the Teams client. Your `manifest.json` file will conform to the schema and contain values vital to your custom tab features.
 
 ### Desktop and web clients
 
