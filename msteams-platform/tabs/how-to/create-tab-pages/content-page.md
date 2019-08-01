@@ -8,17 +8,17 @@ ms.author: laujan
 ---
 # Create a Content Page for Your Custom Tab
 
-A custom tab allows you to enrich user experience by presenting your hosted web content within the Teams platform. See [Extend Your App with a Custom Tab](foo.md). Whether you present your tab within the channel/group or personal scope, it will be an IFramed HTML content page. The difference being in how your tab content is configured for the page. See [tabs-requirements](foo.md).
+A custom tab allows you to enrich user experience by presenting your hosted web content within the Teams platform. See [Extend Your App with a Custom Tab](foo.md). Whether you present your tab within the channel/group or personal scope, it will be an IFramed HTML content page—the difference is how your tab content is configured for the page. See [tabs-requirements](foo.md).
 
 ## Integrate your code with Teams
 
 ### Teams Library
 
-Within your content page, you’ll add a reference to [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) using script tags and a call to `microsoftTeams.initialize()` when the page loads. Additionally, you
+Within your content page, you’ll add a reference to [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) using script tags. In addition, your code will call`microsoftTeams.initialize()` when the page loads.
 
 ### Teams Manifest
 
-Your code is submitted to the Teams platform via a Teams app—a package containing images and a manifest.json file citing your app’s capabilities and referencing your content URL. The app package contains the following required files:
+Your code is submitted to the Teams platform via a Teams app—a package containing two specified images and a `manifest.json` file citing your app’s capabilities and referencing your content URL:
 
 - A **full color icon** measuring 192 x 192 pixels.
 - A **transparent outline icon** measuring 32 x 32 pixels.
@@ -68,18 +68,18 @@ There are several ways to create your app package and upload it to Teams. The fo
 |||
 |- Two required images<br>- A manifest.json with incomplete required fields or in need of further testing<br>|yes|---||Select "Import an existing app"<br>|
 |||
-- Two required images<br> - A manifest.json with incomplete required fields or in need of further testing<br>|no|---||Select "Create a new app"<br>|
+|- Two required images<br> - A manifest.json with incomplete required fields or in need of further testing<br>|no|---||Select "Create a new app"<br>|
 
 ## Accessing additional content
 
 ### Deep links
 
-You can create deep links to entities in Teams. Typically, these are used to create links that navigate to content and information within your tab [showing a deep link to an item within your tab](foo.md)
+You can create deep links to entities in Teams. Typically, these are used to create links that navigate to content and information within your tab. See [showing a deep link to an item within your tab](foo.md)
 
 ### Task Modules
 
 A task modules is essentially a tab inside a popup window.
-• Channel or personal tabs. Using the Microsoft Teams Tabs SDK you can invoke task modules from buttons, links or menus on your tab. See([Using task modules in tabs](foo.md)]
+Using the Microsoft Teams Tabs SDK you can invoke task modules from buttons, links or menus on your tab. See ([Using task modules in tabs](foo.md)]
 
 ### Valid Domains
 
