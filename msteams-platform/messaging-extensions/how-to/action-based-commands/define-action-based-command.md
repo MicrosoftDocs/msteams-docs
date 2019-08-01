@@ -155,17 +155,4 @@ If you are using parameters or an embedded web view with a `taskInfo` object, th
 
 * [Respond to task module submit](~/messaging-extensions/how-to/action-based-commands/respond-to-task-module-submit.md)
 
-## Learn more
-
-Try it out in a quickstart:
-
-* Quickstarts for C#
-  * [Messaging extension with action-based commands](~/foo.md)
-  * [Messaging extension with search-based commands](~/foo.md)
-* Quickstarts for Node.js
-  * [Messaging extension with action-based commands](~/foo.md)
-  * [Messaging extension with search-based commands](~/foo.md)
-
-Learn about authentication in messaging extensions
-
-* [something something authentication](./foo.md)
+[!Includes(~/includes/messaging-extensions/learn-more.md)]

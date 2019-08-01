@@ -250,3 +250,5 @@ let something = `an example in typescript`;
 If you allow your users to send a response back from the task module, you'll need to handle the submit action.
 
 * [Create and respond with a task module](~/messaging-extensions/how-to/action-based-commands/respond-to-task-module-submit.md)
+
+[!Includes(~/includes/messaging-extensions/learn-more.md)]
