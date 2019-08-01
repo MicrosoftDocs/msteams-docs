@@ -8,13 +8,13 @@ ms.author: laujan
 ---
 # Create a Content Page for Your Custom Tab
 
-A custom tab allows you to enrich user experience by presenting your hosted web content within the Teams platform. See [Extend Your App with a Custom Tab](foo.md). Whether you present your tab within the channel/group or personal scope, it will be an IFramed HTML content page—the difference is how your tab content is configured for the page. See [tabs-requirements](foo.md).
+A custom tab allows you to enrich user experience by presenting your hosted web content within the Teams platform. See [Create a Content Page for Your Custom Tab](foo.md). Whether you present your tab within the channel/group or personal scope, it will be an IFramed HTML content page—the difference is how your tab page content is set. See [Requirements for tab pages in Microsoft Teams](foo.md).
 
 ## Integrate your code with Teams
 
 ### Teams Library
 
-Within your content page, you’ll add a reference to [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) using script tags. In addition, your code will call`microsoftTeams.initialize()` when the page loads.
+Within your content page, you’ll add a reference to [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) using script tags. In addition, your code will call `microsoftTeams.initialize()` when the page loads.
 
 ### Teams Manifest
 
@@ -22,7 +22,7 @@ Your code is submitted to the Teams platform via a Teams app—a package contain
 
 - A **full color icon** measuring 192 x 192 pixels.
 - A **transparent outline icon** measuring 32 x 32 pixels.
-- A [Teams Manifest Schema](foo.md) compliant **manifest.json** file specifying your app’s attributes. Your manifest must conform to the schema hosted at <https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json>.
+- A [Reference: Manifest schema for Microsoft Teams](foo.md) compliant `manifest.json` file specifying your app’s attributes. Your manifest must conform to the schema hosted at <https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json>.
 
 #### Personal Tabs
 
@@ -33,15 +33,15 @@ The displayed content for personal tabs is the same for all users and is set dir
     {
       "entityId": "idForPage",
       "name": "Display name for tab",
-      "contentUrl": "https:// yourURL.com.com/content ",
-      "websiteUrl": "https://contoso.com/website",
+      "contentUrl": "https:// yourURL.com/content ",
+      "websiteUrl": "https://yourURL.com/website",
       "scopes": [ "personal" ]
     }
 ```
 
 #### Channel/group content page
 
-For channel/group tabs you'll set the content URL in a configuration page based upon parameter variables provided by the user. See [extend-app-with-tab](foo.md):
+For channel/group tabs you'll set the content URL from a configuration page based upon parameter variables provided by the user. See [Create a Content Page for Your Custom Tab](foo.md):
 
 ```json
 "configurableTabs": [
@@ -74,7 +74,7 @@ There are several ways to create your app package and upload it to Teams. The fo
 
 ### Deep links
 
-You can create deep links to entities in Teams. Typically, these are used to create links that navigate to content and information within your tab. See [showing a deep link to an item within your tab](foo.md)
+You can create deep links to entities in Teams. Typically, these are used to create links that navigate to content and information within your tab. See [Create deep links to content and features in Microsoft Teams](foo.md)
 
 ### Task Modules
 
@@ -83,7 +83,7 @@ Using the Microsoft Teams Tabs SDK you can invoke task modules from buttons, lin
 
 ### Valid Domains
 
-Ensure that the all URL domains used in your tabs are included in the `validDomains` list in your [manifest](~/concepts/apps/apps-package). For more information, see [validDomains](~/resources/schema/manifest-schema#validdomains) in the manifest schema reference.
+Ensure that the all URL domains used in your tabs are included in the `validDomains` array in your [manifest](~/concepts/apps/apps-package). For more information, see [validDomains](~/resources/schema/manifest-schema#validdomains) in the manifest schema reference.
 
 ## Get Started
 
