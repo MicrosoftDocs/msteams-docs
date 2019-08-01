@@ -17,7 +17,7 @@ For additional guidance on designing your messaging extension see: [Designing ef
 
 ## Choose messaging extension invoke locations
 
-The first thing you need to decide is where your messaging extension can be triggered (or more specifically, *invoked* from). Your extension can be invoked from one or more of the following locations:
+The first thing you need to decide is where your messaging extension can be triggered (or more specifically, *invoked* from). By specifying the `context` in your app manifest, your extension can be invoked from one or more of the following locations:
 
 * The buttons at the bottom of the compose message area
 * By @mentioning in the command box
@@ -72,7 +72,7 @@ To manually add your action-based messaging extension command to your app manife
 | `title` | Command name. This value appears in the UI. | Yes | 1.0 |
 | `type` | Must be `action` | No | 1.4 |
 | `fetchTask` | `true` for an adaptive card or embedded web view for your task module, `false` for a static list of parameters or when loading the web view by a `taskInfo` | No | 1.4 |
-| `context` | Optional array of values that defines the context the message action is available in. Possible values are `message`, `compose`, or `commandBox`. Default is `["compose", "commandBox"]`. | No | 1.5 |
+| `context` | Optional array of values that defines where the messaging extension can be invoked from. Possible values are `message`, `compose`, or `commandBox`. Default is `["compose", "commandBox"]`. | No | 1.5 |
 
 If you are using a static list of parameters, you'll add them as well.
 
@@ -84,7 +84,7 @@ If you are using a static list of parameters, you'll add them as well.
 | `parameter.title` | Short user-friendly parameter title or label. | Yes | 1.0 |
 | `parameter.inputType` | Set to the type of input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text` | No | 1.4 |
 
-If you are using an embedded web view, you can optionally add the `taskInfo` object to fetch your web view without calling your bot directly. If you choose to use this option, the behavior is similar to using a static list of parameters in that the first interaction with your bot will be [responding to the task module submit action](~/foo.md).
+If you are using an embedded web view, you can optionally add the `taskInfo` object to fetch your web view without calling your bot directly. If you choose to use this option, the behavior is similar to using a static list of parameters in that the first interaction with your bot will be [responding to the task module submit action](~/messaging-extensions/how-to/action-based-commands/respond-to-task-module-submit.md).
 
 | Property name | Purpose | Required? | Minimum manifest version |
 |---|---|---|---|
