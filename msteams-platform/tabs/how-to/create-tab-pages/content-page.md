@@ -8,67 +8,36 @@ ms.author: laujan
 ---
 # Create a Content Page for Your Custom Tab
 
-A custom tab allows you to enrich user experience by presenting your hosted web content within the Teams platform. See [Create a Content Page for Your Custom Tab](foo.md). Whether you present your tab within the channel/group or personal scope, it will be an IFramed HTML content page—the difference is how your tab page content is set. See [Requirements for tab pages in Microsoft Teams](foo.md).
+A custom tab allows you to enrich user experience by presenting your hosted web content within the Teams platform. See [Create a Content Page for Your Custom Tab](foo.md). A tab allows you to share your content in a easily accessible format. Whether you present your tab within the personal or channel/group scope, it is essentially an HTML page—the difference is how your tab content URL is set. See [What are custom tabs?](foo.md).
+
+## Tab content and style guidelines
+
+The main objective of your tab should be to provide access to meaningful and engaging content that has a practical value and an evident purpose. That does not mean that you should forego style but, you should focus on minimizing clutter by making your tab design clean, navigation intuitive,and content immersive. See [Content and conversations, all at once using tabs](~/resources/design/framework/tabs) and Microsoft Teams app approval process guidance](~/platform/publishing/office-store-approval#tabs)
 
 ## Integrate your code with Teams
 
-### Teams Library
+For your tab to display in Teams, you must include the **Microsoft Teams JavaScript client SDK** and include a call to `microsoftTeams.initialize()` after your page loads. This is how your tab and the Teams client communicate:
 
-Within your content page, you’ll add a reference to [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) using script tags. In addition, your code will call `microsoftTeams.initialize()` when the page loads.
+```html
+<!DOCTYPE html>
+<html>
+<head>
+...
+    <script src= 'https://statics.teams.microsoft.com/sdk/v1.4.3/js/MicrosoftTeams.min.js'></script>
+...
+    <script>
+    microsoftTeams.initialize();
+    </script>
+</head>
 
-### Teams Manifest
-
-Your code is submitted to the Teams platform via a Teams app—a package containing two specified images and a `manifest.json` file citing your app’s capabilities and referencing your content URL:
-
-- A **full color icon** measuring 192 x 192 pixels.
-- A **transparent outline icon** measuring 32 x 32 pixels.
-- A [Reference: Manifest schema for Microsoft Teams](foo.md) compliant `manifest.json` file specifying your app’s attributes. Your manifest must conform to the schema hosted at <https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json>.
-
-#### Personal Tabs
-
-The displayed content for personal tabs is the same for all users and is set directly in your manifest by the `contentUrl` property in the `staticTabs` array:
-
-```json
-"staticTabs": [
-    {
-      "entityId": "idForPage",
-      "name": "Display name for tab",
-      "contentUrl": "https:// yourURL.com/content ",
-      "websiteUrl": "https://yourURL.com/website",
-      "scopes": [ "personal" ]
-    }
-```
-
-#### Channel/group content page
-
-For channel/group tabs you'll set the content URL from a configuration page based upon parameter variables provided by the user. See [Create a Content Page for Your Custom Tab](foo.md):
-
-```json
-"configurableTabs": [
-    {
-      "configurationUrl": "https://yourURL.com/configure",
-      "canUpdateConfiguration": true,
-      "scopes": [ "team", "groupchat" ]
-    }
-```
-
-### Host your content
-
-Your content needs to be available on a hosted URL available from the cloud using HTTPS endpoints. For testing, you can use a proxy, such as [ngrok](https://ngrok.com/), to expose your local port to an internet-facing URL.
-
-## Create and upload your app package to Teams
-
-There are several ways to create your app package and upload it to Teams. The following table outlines the most common scenarios:
-
-|App package contents| Zipped?       | Direct Upload||Use App Studio|
-| ---------------| :-----------------|-----------|---|-------------- |
-|- Two required images<br>- Fully compliant manifest.json<br>|yes |Upload directly to a channel or group chat<br>|or<br>|Select "Import an existing app" to upload the zip folder<br>|
-| | |
-|- Two required images<br>- Fully compliant manifest.json<br>|no|---||<br> Select "Create a new app"<br>|
-|||
-|- Two required images<br>- A manifest.json with incomplete required fields or in need of further testing<br>|yes|---||Select "Import an existing app"<br>|
-|||
-|- Two required images<br> - A manifest.json with incomplete required fields or in need of further testing<br>|no|---||Select "Create a new app"<br>|
+<body>
+    <script>
+...
+    microsoftTeams.initialize();
+    </script>
+...
+</body>
+``
 
 ## Accessing additional content
 
