@@ -47,7 +47,7 @@ The app package is a zip folder containing the following:
 Your `manifest.json` file will contain values vital to your custom tab features and must conform to the [Teams Manifest Schema](/resources/schema/manifest-schema.md).
 
 ## Modify or remove a custom tab
-git 
+
 You can enable users to modify, reconfigure, or rename a group/channel tab by setting your manifest's `canUpdateConfiguration` property to `true`. Supported removal options can further refine the user experience. You can designate what happens to the content when a tab is removed by including a removal options page in your app and setting a value for the `removeUrl` property in the  `setSettings()` configuration (see below). Personal tabs can't be modified but can be uninstalled by the user.
 
 Microsoft Teams setSettings() configuration:
