@@ -68,7 +68,7 @@ The app package is a zip folder containing the following:
 
 1. If you do not have App studio installed in Teams, select **Apps** ![Store App](/microsoftteams/platform/assets/images/tab-images/storeApp.png) at the bottom-left corner of the Teams app, and search for App Studio. Once you find the tile, select it and choose install in the pop-up window dialog box.
 
-1. Open the Microsoft Teams client—using the [web based version](https://teams.microsoft.com) will enable you to inspect your front-end code.
+1. Open the Microsoft Teams client—using the [web based version](https://teams.microsoft.com) will enable you to inspect your front-end code using your browser's [developer tools](~/foo.md).
 
 1. Open App Studio and select the **Manifest editor** tab.
 
@@ -88,7 +88,7 @@ The app package is a zip folder containing the following:
 
 ### Create your app package manually
 
-Teams requires that your manifest is named "manifest.json" and corresponds with the latest version of the [Manifest schema for Microsoft Teams](foo.md) hosted [here](https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json). To create your manifest, complete the values required for all apps and, based upon your tab's scope and capabilities, complete the tab reference values:
+Your manifest must be named "manifest.json" and correspond with the latest version of the [Manifest schema for Microsoft Teams](foo.md) hosted [here](https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json). To create your manifest, complete the values required for all apps and, based upon your tab's scope and capabilities, complete the tab reference values:
 
 #### Personal Tabs
 
@@ -109,7 +109,7 @@ The displayed content for personal tabs is the same for all users and is set dir
 
 #### Channel/group tabs
 
-Channel/group tabs allow users to set the tab content from a configuration page typically based upon URL query string parameters(see [Create a Content Page for Your Custom Tab](foo.md)):
+Channel/group tabs allow users to set the tab content from a configuration page typically based upon URL query string parameters (see [Create a Content Page for Your Tab](foo.md)):
 
 ```json
 ...
