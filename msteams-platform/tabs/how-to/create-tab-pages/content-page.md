@@ -6,13 +6,13 @@ keywords: teams tabs group channel configurable
 ms.topic: conceptual
 ms.author: laujan
 ---
-# Create a Content Page for Your Custom Tab
+# Create a Content Page for Your Tab
 
-A custom tab allows you to enrich user experience by presenting your hosted web content within the Teams platform. See [Create a Content Page for Your Custom Tab](foo.md). A tab allows you to share your content in a easily accessible format. Whether you present your tab within the personal or channel/group scope, it is essentially an HTML page—the difference is how your tab content URL is set. See [What are custom tabs?](foo.md).
+A custom tab allows you to enrich user experience by presenting your hosted web content within the Teams platform. See [Create a Content Page for Your Custom Tab](foo.md). A tab allows you to share your content in an easily accessible format. Whether you present your tab within the personal or channel/group scope, it is essentially an HTML page—the difference is how your tab content URL is set. See [What are custom tabs?](foo.md).
 
 ## Tab content and style guidelines
 
-The main objective of your tab should be to provide access to meaningful and engaging content that has a practical value and an evident purpose. That does not mean that you should forego style but, you should focus on minimizing clutter by making your tab design clean, navigation intuitive,and content immersive. See [Content and conversations, all at once using tabs](~/resources/design/framework/tabs) and Microsoft Teams app approval process guidance](~/platform/publishing/office-store-approval#tabs)
+Your tab's overall objective of should be to provide access to meaningful and engaging content that has a practical value and an evident purpose. That does not mean that you should forego an appealing design but, you should focus on minimizing clutter by making your tab design clean, navigation intuitive, and content immersive. See [Content and conversations, all at once using tabs](~/resources/design/framework/tabs) and Microsoft Teams app approval process guidance](~/platform/publishing/office-store-approval#tabs)
 
 ## Integrate your code with Teams
 
@@ -25,21 +25,20 @@ For your tab to display in Teams, you must include the **Microsoft Teams JavaScr
 ...
     <script src= 'https://statics.teams.microsoft.com/sdk/v1.4.3/js/MicrosoftTeams.min.js'></script>
 ...
-    <script>
-    microsoftTeams.initialize();
-    </script>
 </head>
 
 <body>
-    <script>
 ...
+    <script>
     microsoftTeams.initialize();
     </script>
 ...
 </body>
-``
+```
 
-## Accessing additional content
+>[!IMPORTANT]
+>Don't copy/paste the `<script src="...">` URLs from this page, as they may not represent the latest version. To get the latest version of the SDK markup, always go to:
+[Microsoft Teams JavaScript API (via CDN)](foo.com) or [Microsoft jQuery Releases on the CDN.](/aspnet/ajax/cdn/overview#jquery-releases-on-the-cdn)
 
 ### Deep links
 
