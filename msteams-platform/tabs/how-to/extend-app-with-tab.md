@@ -56,7 +56,7 @@ Your content needs to be available on a hosted URL available from the cloud usin
 
 ## Create your app package and upload to Microsoft Teams
 
-Your app manifest is a `json` file that defines your app’s capabilities and references your content URL.
+Your app manifest is a `JSON` file that defines your tab’s capabilities and references your content URL.
 
 The app package is a zip folder containing the following:
 
@@ -68,27 +68,27 @@ The app package is a zip folder containing the following:
 
 1. If you do not have App studio installed in Teams, select **Apps** ![Store App](/microsoftteams/platform/assets/images/tab-images/storeApp.png) at the bottom-left corner of the Teams app, and search for App Studio. Once you find the tile, select it and choose install in the pop-up window dialog box.
 
-1. Open the Microsoft Teams client. Opening the [web based version](https://teams.microsoft.com) will enable you to inspect your front-end code.
+1. Open the Microsoft Teams client—using the [web based version](https://teams.microsoft.com) will enable you to inspect your front-end code.
 
 1. Open App Studio and select the **Manifest editor** tab.
 
 1. Choose the **Create a new app** tile.
 
-1. Add your app details (see Manifest schema for Microsoft Teams](foo.md) for full description of each fields).
+1. Add your app details (see [Manifest schema for Microsoft Teams](foo.md) for full description of each field).
 
 1. In the capabilities section select **Tabs**.
 
     * For a personal tab, choose *Add a personal tab* and select **Add**. You will be presented with a pop-up dialogue window where you can add your tab details.
 
-    * For a channel/group tab, under *Team Tab* select **Add** and complete the tab details fields in the Team tab pop-up window. Make sure the *can update configuration? Team*, and *Group chat* boxes are checked and select **Save**.
+    * For a channel/group tab, under *Team Tab* select **Add** and complete the tab details fields in the Team tab pop-up window. Make sure the *can update configuration? Team* and *Group chat* boxes are checked and select **Save**.
 
-1. In the *Domains and permissions* section, the *Domains from your tabs* field should contain your host or ngrok URL without the HTTPS prefix.
+1. In the *Domains and permissions* section, the *Domains from your tabs* field should contain your host or reverse proxy URL without the HTTPS prefix.
 
 1. From the **Finish** => **Test and distribute** tab you can **Download** your app package, **Install** the package into a team, or **Submit** to the Teams app store for approval. *If you are using a reverse proxy you will get a warning in the **Description** field on the right. The warning can be ignored while testing your tab*.
 
 ### Create your app package manually
 
-Teams requires that your manifest is named "manifest.json" and corresponds with the latest version of the [Manifest schema for Microsoft Teams](foo.md) hosted at <https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json>. To create your manifest, complete the property values required for all apps and, based upon your tab's scope and capabilities, complete the tab reference values:
+Teams requires that your manifest is named "manifest.json" and corresponds with the latest version of the [Manifest schema for Microsoft Teams](foo.md) hosted [here](https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json). To create your manifest, complete the values required for all apps and, based upon your tab's scope and capabilities, complete the tab reference values:
 
 #### Personal Tabs
 
@@ -142,12 +142,13 @@ Once you have completed your `manifest.json` bundle it in a zip folder along wit
 
 ### View your tab in Teams
 
-* View your personal tab:<br>
-  * In the navbar located at the far-left of the Teams client, select the `...` menu and choose your app from the list.
-* View your channel/group tab:<br>
-  * Return to your team, choose the channel where you would like to display the tab, select ➕ from the tab bar, and choose your tab from the gallery.
-  * Follow the directions for adding a tab. Note that there's a custom configuration dialog for your channel/group tab.
-Select **Save** and your tab will be added to the channel's tab bar.
+1. View your personal tab:
+    * In the navbar located at the far-left of the Teams client, select the `...` menu and choose your app from the list.
+
+1. View your channel/group tab:
+
+    * Return to your team, choose the channel where you would like to display the tab, select ➕ from the tab bar, and choose your tab from the gallery.
+    * Follow the directions for adding a tab. Note that there's a custom configuration dialog for your channel/group tab. Select **Save** and your tab will be added to the channel's tab bar.
 
 ## Modify or remove a tab
 
