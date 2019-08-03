@@ -12,7 +12,7 @@ A custom tab allows you to enrich user experience by presenting your hosted web 
 
 ## Tab content and style guidelines
 
-Your tab's overall objective of should be to provide access to meaningful and engaging content that has a practical value and an evident purpose. That does not mean that you should forego an appealing design but, you should focus on minimizing clutter by making your tab design clean, navigation intuitive, and content immersive. See [Content and conversations, all at once using tabs](~/resources/design/framework/tabs) and Microsoft Teams app approval process guidance](~/platform/publishing/office-store-approval#tabs)
+Your tab's overall objective should be to provide access to meaningful and engaging content that has a practical value and an evident purpose. That does not mean that you should forego a pleasing style but, you should focus on minimizing clutter by making your tab design clean, navigation intuitive, and content immersive. See [Content and conversations, all at once using tabs](~/resources/design/framework/tabs) and [Microsoft Teams app approval process guidance](~/platform/publishing/office-store-approval#tabs)
 
 ## Integrate your code with Teams
 
@@ -47,11 +47,11 @@ You can create deep links to entities in Teams. Typically, these are used to cre
 ### Task Modules
 
 A task modules is essentially a tab inside a popup window.
-Using the Microsoft Teams Tabs SDK you can invoke task modules from buttons, links or menus on your tab. See ([Using task modules in tabs](foo.md)]
+Using the **Microsoft Teams Tabs SDK** you can invoke task modules from buttons, links, or menus on your tab. See ([Using task modules in tabs](foo.md)]
 
 ### Valid Domains
 
-Ensure that the all URL domains used in your tabs are included in the `validDomains` array in your [manifest](~/concepts/apps/apps-package). For more information, see [validDomains](~/resources/schema/manifest-schema#validdomains) in the manifest schema reference.
+Ensure that the all URL domains used in your tabs are included in the `validDomains` array in your [manifest](~/concepts/apps/apps-package). For more information, see [validDomains](~/resources/schema/manifest-schema#validdomains) in the manifest schema reference. However, be mindful that the core functionality of your tab exists within Teams and not outside of Teams.
 
 ## Get Started
 
