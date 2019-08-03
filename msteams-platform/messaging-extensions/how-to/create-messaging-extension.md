@@ -25,7 +25,7 @@ The first thing you'll need to do is prepare your development environment. You'l
 
 Messaging extensions are powered by bots built on the Bot Framework; if you don't already have on you'll need to [create a bot and register it on the Bot Framework](/foo.md). The Microsoft App Id (we'll refer to this as your Bot Id from inside of Teams, to identify it from other App Id's you might be working with) and the messaging endpoints for your bot will be used in your messaging extension to receive and respond to requests. If you're using an existing bot, make sure you [enable the Microsoft Teams channel](/azure/bot-service/bot-service-manage-channels.md?view=azure-bot-service-4.0).
 
-Once you've got your bot service created, if you're starting from a new bot you'll need to create and deploy the app service that powers your bot. Depending on how you chose to create your bot service, you may need to do this manually. For Node.js bots we recommend using the **Teams Yeoman generator**, and for C#/.NET bots starting with the **EchoBot** template in the [Bot Framework Visual Studio Template](https://marketplace.visualstudio.com/items?itemName=BotBuilder.botbuilderv4). For more information see [create a bot](foo.md).
+Once you've got your bot service created, if you're starting from a new bot you'll need to create and deploy the app service that powers your bot. Depending on how you chose to create your bot service, you may need to do this manually. For Node.js bots we recommend using the [Teams Yeoman generator](~/foo.md), and for C#/.NET bots starting with the **EchoBot** template in the [Bot Framework Visual Studio Template](https://marketplace.visualstudio.com/items?itemName=BotBuilder.botbuilderv4). For more information see [create a bot](foo.md).
 
 ## Create your app manifest using App Studio
 
@@ -98,6 +98,20 @@ The example below is a simple messaging extension object in the app manifest wit
 ## Add your invoke message handlers
 
 Configuration complete, it's time to start writing code. When your users trigger your messaging extension you'll need to handle the initial invoke message, collect some information from the user, then process that information and respond appropriately. To do that, you'll first need to decide what kind of commands you want to add to your messaging extension and either [add an action-based commands](~/messaging-extensions/how-to/action-based-commands/define-action-based-command.md) or [add a search-based commands](~/messaging-extensions/how-to/search-based-commands/define-search-based-command.md).
+
+## Identify the user
+
+Every request to your services includes the obfuscated ID of the user that performed the request, as well as the user's display name and Azure Active Directory object ID.
+
+```json
+"from": {
+  "id": "29:1C7dbRrC_5yzN1RGtZIrcWT0xz88KPGP9sxdpVpV8sODlgPHeQE9RqQ02hnpuKzy6zZ-AaZx6swUOMj_Dsdse3TQ4sIaeebbFBF-VgjJy_nY",
+  "name": "John Smythe",
+  "aadObjectId": "cd723fa0-0591-416a-9290-e93ecf3a9b92"
+},
+```
+
+The `id` and `aadObjectId` values are guaranteed to be that of the authenticated Teams user. They can be used as keys to look up credentials or any cached state in your service. In addition, each request contains the Azure Active Directory tenant ID of the user, which can be used to identify the user’s organization. If applicable, the request also contains the team and channel IDs from which the request originated.
 
 ## Next steps
 

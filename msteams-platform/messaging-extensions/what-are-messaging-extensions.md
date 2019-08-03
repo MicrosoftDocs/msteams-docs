@@ -30,7 +30,7 @@ foo.md => need more here on the the activity/invoke message, a bit about the bac
 
 ## Types of messaging extension commands
 
-Messaging extensions commands come in two types, and can be triggered from three different areas. Each command defines the type of interaction, and the location the interaction can be triggered from. For example, with a single message extension you could define commands allowing users to search a SharePoint list, create a list item from a message, and create a new list item from the compose message area.
+Messaging extensions commands come in two types, and can be triggered from three different areas. Each command defines the type of interaction, and the location the interaction can be triggered from. For example, a single message extension you could define multiple commands allowing users to search a SharePoint list from the command box, create a list item from a message, and create a new list item from the compose message area.
 
 * [Action-based messaging extensions commands](./foo.md) allow you present your users with a modal popup to collect or display information, then process their interaction and send information back to Teams. They can be triggered from the compose message area, the command box, or from a message.
 * [Search-based messaging extensions commands](./foo.md) allow your users to search an external system for information (either manually through a search box, or by pasting a link to a monitored domain into the compose message area), then insert the results of the search into a message. They can be triggered from the compose message area or the command box.
