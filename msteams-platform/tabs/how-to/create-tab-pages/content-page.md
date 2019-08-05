@@ -8,7 +8,7 @@ ms.author: laujan
 ---
 # Create a Content Page for Your Tab
 
-A custom tab allows you to enrich user experience by presenting your hosted web content within the Teams platform. See [Create a Content Page for Your Custom Tab](foo.md). A tab allows you to share your content in an easily accessible format. Whether you present your tab within the personal or channel/group scope, it is essentially an HTML page—the difference is how your tab content URL is determined. See [What are custom tabs?](foo.md).
+A custom tab allows you to enrich user experience by presenting your hosted web content within the Teams platform. A tab allows you to share your content in an easily accessible format. Whether you present your tab within the personal or channel/group scope, it is essentially an HTML page—the difference is how your tab content URL is determined. See [What are custom tabs?](foo.md).
 
 ## Tab content and style guidelines
 
