@@ -1,12 +1,12 @@
 ---
-title: Create a Teams app tab
+title: Extend your Teams app with a custom tab
 author: laujan
 description: A guide to building a tab
 keywords: teams tabs group channel configurable 
 ms.topic: conceptual
 ms.author: 
 ---
-# Create a Teams app tab
+# Extend your Teams app with a custom tab
 
 Enhance your app experience by serving web content that you host to your channel, group chat, and personal users via a custom tab. Tabs provide efficient access to designated team information and resources. You'll need to complete the following steps to create a tab:
 
