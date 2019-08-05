@@ -8,7 +8,7 @@ ms.author: laujan
 ---
 # Create a Content Page for Your Tab
 
-A custom tab allows you to enrich user experience by presenting your hosted web content within the Teams platform. See [Create a Content Page for Your Custom Tab](foo.md). A tab allows you to share your content in an easily accessible format. Whether you present your tab within the personal or channel/group scope, it is essentially an HTML page—the difference is how your tab content URL is set. See [What are custom tabs?](foo.md).
+A custom tab allows you to enrich user experience by presenting your hosted web content within the Teams platform. See [Create a Content Page for Your Custom Tab](foo.md). A tab allows you to share your content in an easily accessible format. Whether you present your tab within the personal or channel/group scope, it is essentially an HTML page—the difference is how your tab content URL is determined. See [What are custom tabs?](foo.md).
 
 ## Tab content and style guidelines
 
@@ -16,7 +16,7 @@ Your tab's overall objective should be to provide access to meaningful and engag
 
 ## Integrate your code with Teams
 
-For your tab to display in Teams, you must include the **Microsoft Teams JavaScript client SDK** and include a call to `microsoftTeams.initialize()` after your page loads. This is how your tab and the Teams client communicate:
+For your tab to display in Teams, you must include the **Microsoft Teams JavaScript client SDK** and include a call to `microsoftTeams.initialize()` after your page loads. That is how your tab and the Teams client communicate:
 
 ```html
 <!DOCTYPE html>
@@ -37,8 +37,10 @@ For your tab to display in Teams, you must include the **Microsoft Teams JavaScr
 ```
 
 >[!IMPORTANT]
->Don't copy/paste the `<script src="...">` URLs from this page, as they may not represent the latest version. To get the latest version of the SDK markup, always go to:
+>Don't copy/paste the `<script src="...">` URLs from this page, as it may not represent the latest version. To get the latest version of the SDK markup, always go to:
 [Microsoft Teams JavaScript API (via CDN)](foo.com) or [Microsoft jQuery Releases on the CDN.](/aspnet/ajax/cdn/overview#jquery-releases-on-the-cdn)
+
+## Accessing additional content
 
 ### Deep links
 
