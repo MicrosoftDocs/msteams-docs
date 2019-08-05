@@ -90,7 +90,7 @@ By default, the **Save** button on the configuration dialog box is disabled. Whe
 
 ### Determine the content to display in the tab
 
-Use `microsoftTeams.settings.setSettings({entityId, contentUrl, suggestedTabName, websiteUrl, removeUrl})` to specify the URL of the [content page](~/concepts/tabs/tabs-content.md) Microsoft Teams should host. Things to keep in mind:
+Use `microsoftTeams.settings.setSettings({entityId, contentUrl, suggestedDisplayName, websiteUrl, removeUrl})` to specify the URL of the [content page](~/concepts/tabs/tabs-content.md) Microsoft Teams should host. Things to keep in mind:
 
 * This call can be made at any time the configuration page is displayed, including before or after the user selects the **Save** button (see next section).
 * The `entityId` uniquely identifies the entity that is displayed in the tab.
@@ -100,7 +100,7 @@ Use `microsoftTeams.settings.setSettings({entityId, contentUrl, suggestedTabName
 * The `contentUrl` is a required field that specifies the URL of the content Microsoft Teams should host in the tab.
   * Be sure you have added the `contentUrl` domain to the `validDomains` element in the tab manifest file. For more information, see [Microsoft Teams tab schema](~/resources/schema/manifest-schema.md) and [Redirecting across domains within a Microsoft Teams tab](~/concepts/tabs/cross-domain.md).
 * The other parameters further customize how your tab works in Microsoft Teams:
-  * The optional `suggestedTabName` parameter sets the initial tab name. Users can rename the tab. The default value is the name specified in the manifest.
+  * The optional `suggestedDisplayName` parameter sets the initial tab name. Users can rename the tab. The default value is the name specified in the manifest.
   * The optional `websiteUrl` parameter sets where the user is taken if they choose the **Go to website** button. Typically, this is a link to the same content as displayed on the tab, but within your main web app with its regular chrome and navigation.
   * The optional `removeUrl` parameter sets the URL for your [removal options page](~/concepts/tabs/tabs-update-remove.md#removing-a-tab).
 
