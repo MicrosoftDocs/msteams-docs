@@ -31,7 +31,7 @@ This table shows the types of cards available to you.
 | [Office 365 Connector Card](#office-365-connector-card) | Flexible layout with multiple sections, fields, images and actions. |
 | [Receipt Card](#receipt-card) | Provides a receipt to the user. |
 | [Signin Card](#signin-card) | Enables a bot to request that a user sign in. |
-| [OAuth Card](#oath-card) | Pre-configured authentication flow for various providers. |
+| [OAuth Card](#oauth-card) | Pre-configured authentication flow for various providers. |
 | [Thumbnail Card](#thumbnail-card) | Typically contains a single thumbnail image, some short text, and one or more buttons. |
 | [Card Collections](#card-collections) | Used to return multiple items in a single response |
 
@@ -214,7 +214,7 @@ A customizable card that can contain any combination of text, speech, images, bu
 #### For more information on Adaptive cards
 
 * [Adaptive Cards Overview](https://docs.microsoft.com/adaptive-cards/)
-* [Adaptive card actions in Teams](~/concepts/cards/cards-actions.md#adaptive-card-actions)
+* [Adaptive card actions in Teams](~/concepts/cards/cards-actions.md#adaptive-cards-actions)
 
 ## Hero card
 
