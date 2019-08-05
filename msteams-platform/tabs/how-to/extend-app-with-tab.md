@@ -22,9 +22,13 @@ Enhance your app experience by serving web content that you host to your channel
 
 * If you don't currently have an Office 365 account, you can sign up for a free subscription through the [Office 365 Developer Program](/OfficeDev/office-dev-program-docs/docs/office-365-developer-program). The subscription will remain active as long as you're using it for ongoing development.
 
-## Create your tab content
+## Create your tab
 
-Whether you present your tab within the personal or channel/group scope, it will essentially be an HTML page that you host—the difference is how your tab content URL is set.
+Whether you present your tab within the personal or channel/group scope, it will essentially be an HTML page that you host—the difference is how your tab content URL is set. There are three types of tab pages:
+
+1. Content page, the page displayed in a tab.
+1. Configuration page, the page used to set or update the content page and add it to a channel/group tab.
+1. Remove page, an optional page that is displayed when a channel/group tab is removed.
 
 &#x2705; You must allow your pages to be served in an IFrame, via X-Frame-Options and/or Content-Security-Policy HTTP response headers.
 
