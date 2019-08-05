@@ -167,11 +167,11 @@
   items:
   - name: Publishing your app
     href: ./publishing/apps-publish.md
+  - name: App approval guidance
+    href: ./publishing/office-store-approval.md
   - name: AppSource submission walkthrough
     href: ./publishing/office-store-guidance.md
-  - name: AppSource app approval guidance
-    href: ./publishing/office-store-approval.md
-  - name: AppSource package checklist
+  - name: App package checklist
     href: ./publishing/office-store-checklist.md
   - name: Localizing your app
     href: ./publishing/apps-localization.md

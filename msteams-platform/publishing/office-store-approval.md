@@ -5,7 +5,7 @@ keywords: teams publish store office publishing AppSource
 ---
 # Microsoft Teams app approval process guidance
 
-Teams app approval is a free service provided by AppSource that verifies that your app works as described, contains all appropriate metadata, and provides content that would be valuable to an end user. For rapid approval, follow our [checklist](#checklist-for-rapid-approval).
+Teams app approval is a free service provided by the Microsoft Teams group that verifies that your app works as described, contains all appropriate metadata, and provides content that would be valuable to an end user.
 
 For your Teams app to be approved:
 
@@ -15,17 +15,16 @@ For your Teams app to be approved:
 * It must pass all current [AppSource validation policies](https://dev.office.com/officestore/docs/validation-policies) for Teams tabs and bots. Please note that these policies are subject to change.
 * For tabs, it must provide value to users outside of what is possible by simply pinning your website in Teams. This means that, at minimum, it must remove extraneous chrome and disallow navigating outside the configured context. See the [Microsoft Teams Design Guidelines](~/resources/design/overview.md) for more guidance.
 
-When the validation process is complete, you will receive a message to let you know that either your Teams experience is approved or it fails one of the stated policies. You can also follow these steps to check the approval status in the Seller Dashboard:
+When the validation process is complete, you will receive a message to let you know that either your Teams experience is approved or it fails one of the stated policies.
 
-1. Sign in to the Seller Dashboard.
-2. On the **manage** tab, your submission status appears under the submission name.
-   * If the status is **pending approval**, your submission is still being verified. When it is in this state, you can't update or resubmit it.
-   * If the status is **changes requested**, your submission needs changes before approval. Select your submission; on the summary page, choose **View the add-in report** for details about the required changes.
-   * If the status is **approved**, your submission will be listed in the appropriate marketplaces, typically within 24 hours.
+## Submit your app for approval
 
-Failures are explained, with references to the specific policy violations. All failures must be addressed before resubmission. Be sure to resubmit your app using the tile on the Overview tab. Do not use the *Add a new app* button.
+Once you are ready, submit your app for approval by bundling your app package, [test notes](#test-notes-for-validationapproval), and [app metadata](#app-metadata) and emailing them to `teamsubm@microsoft.com`. Someone will follow up with you to guide you through the rest of the process. Once your app has been approved, you can upload your app to App Source.
 
-## Checklist for rapid approval
+> [!Important]
+> If you submit your app through the Seller Dashboard before receiving approval from the Teams group, your submission will be denied. You **must** be approved before submitting to the store.
+
+## Rapid approval guidance
 
 The information below covers some of the most common reasons apps fail validation. It is not intended to be an exhaustive list of all potential issues with you app. However, if you follow this guidance your likelihood of a first-time pass will be greatly increased.
 
@@ -35,7 +34,7 @@ Apps must provide a clear, simple sign in/out and (when appropriate) sign-up exp
 
 * If there is an explicit sign-in option provided to the user, there must be a sign-out option too (even if the app is using SSO/Silent Authentication)
 * The sign-out option must sign the user out of only your app's capability, and not from the Teams client.
-* Every scope that has a sign-in must have a sign-out as well. The sign-out option should sign the user out from the same capabilities that the sign-in option signed them into. For example, if the sign-in option signs the user into both a messaging extension and tab, then the sign out option must sign the user out from the message extension and tab (at minimum).
+* Every scope that has a sign-in must have a sign-out as well. At a minimum, the sign-out option should sign the user out from the same capabilities that the sign-in option signed them into. For example, if the sign-in option signs the user into both a messaging extension and tab, then the sign out option must sign the user out from the message extension and tab.
 
 * Make sure there is always a way to reverse the following (or similar) behaviors:
   * Sign-in => sign-out
@@ -54,11 +53,12 @@ For additional information on authentication see:
 
 ### Test Notes for validation/approval
 
-You must provide at least two login credentials, one admin and one not, so we can validate your app.
+You must provide at least two login credentials, one admin and one not, so your app can be validated.
 
 * The accounts you provide should have sufficient data pre-populated for verification purposes.
 * For enterprise apps, apps where a subscription is required, or where there is an office 365 tenant/domain dependency for testing you must provide an 3rd account in the same domain that is not already configured to use your app so we can validate the first-run user experience.
 * If your app has any Premium/Upgraded features, an account with the necessary access must be provided to test that experience.
+* You may choose to upload your test notes to SharePoint. In such cases, please provide a public link to the file.
 
 ### Updating your existing Teams app
 
