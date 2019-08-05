@@ -70,3 +70,15 @@ In the [Seller Dashboard](https://sellerdashboard.microsoft.com/Application/Summ
    If you have filled everything in correctly, choose **Submit for approval**. To return later, choose **Save as draft**.
 
 >For more information on the approval process, see [Microsoft Teams app approval process](~/publishing/office-store-approval.md).
+
+## Check the status of your app
+
+You can also follow these steps to check the approval status in the Seller Dashboard:
+
+1. Sign in to the Seller Dashboard.
+2. On the **manage** tab, your submission status appears under the submission name.
+   * If the status is **pending approval**, your submission is still being verified. When it is in this state, you can't update or resubmit it.
+   * If the status is **changes requested**, your submission needs changes before approval. Select your submission; on the summary page, choose **View the add-in report** for details about the required changes.
+   * If the status is **approved**, your submission will be listed in the appropriate marketplaces, typically within 24 hours.
+
+Failures are explained, with references to the specific policy violations. All failures must be addressed before resubmission. Be sure to resubmit your app using the tile on the Overview tab. Do not use the *Add a new app* button.
