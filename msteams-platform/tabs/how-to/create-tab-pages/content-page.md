@@ -49,7 +49,7 @@ You can create deep links to entities in Teams. Typically, these are used to cre
 ### Task Modules
 
 A task modules is essentially a tab inside a popup window.
-Using the **Microsoft Teams Tabs SDK** you can invoke task modules from buttons, links, or menus on your tab. See ([Using task modules in tabs](foo.md)]
+Using the **Microsoft Teams Tabs SDK** you can invoke task modules from buttons, links, or menus on your tab. See ([Using task modules in tabs](foo.md))
 
 ### Valid Domains
 
