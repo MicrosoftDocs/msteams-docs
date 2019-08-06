@@ -205,6 +205,9 @@ MICROSOFT_APP_ID and MICROSOFT_APP_PASSWORD is the ID and password, respectively
 NODE_DEBUG will show you what's happening in your bot in the Visual Studio Code debug console.
 NODE_CONFIG_DIR points to the directory at the root of the repository (by default, when the app is run locally, it looks for it in the src folder).
 
+> [!Note]
+> If you have not stopped npm from earlier in the tutorial, you'll need to run `npm stop` in order for Visual Studio Code to pickup your launch configuration variables correctly.
+
 <a name="ConfigureTheAppTab"></a>
 
 ## Configure the app tab

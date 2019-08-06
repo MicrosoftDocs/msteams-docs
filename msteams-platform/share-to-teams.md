@@ -2,7 +2,6 @@
 title: Share to Teams embedded button
 description: How to add the Share to Teams embedded button on your website
 keywords: Share Teams Share-to-Teams
-ms.date: 06/24/2019
 ---
 # Creating a Share to Teams embedded button
 
@@ -80,11 +79,14 @@ For teachers using the Share to Teams button you'll be given an additional optio
 
 ## Full launcher.js definition
 
-|HTML Attribute|Type|Default|Description|
-|---------|---------|---------|---------|
-|data-href|string|n/a|The href of the content to share.|
-|data-preview|boolean (as string)|true|Whether or not to show a preview of the content to share|
-|data-icon-px-size|number (as string)|32|The size in pixels of the Share to Teams button, maximum 128|
+| Property | HTML attribute | Type | Default | Description |
+| -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
+| href | `data-href` | string | n/a | The href of the content to share. |
+| preview | `data-preview` | boolean (as a string) | `true` | Whether or not to show a preview of the content to share. |
+| iconPxSize | `data-icon-px-size` | number (as a string) | `32` | The size in pixels of the Share-to-Teams button to render. |
+| msgText | `data-msg-text` | string | n/a | Default Text to be inserted before the link in the message compose box (200 character limit) |
+| assignInstr | `data-assign-instr` | string | n/a | Default Text to be inserted in the assignments "Instructions" field (200 character limit) |
+| assignTitle | `data-assign-title` | string | n/a | Default Text to be inserted in the assignments "Title" field (50 character limit) |
 
 ### Methods
 
@@ -93,3 +95,23 @@ For teachers using the Share to Teams button you'll be given an additional optio
 `options` (optional): `{ elements?: HTMLElement[] }`
 
 Renders all share buttons currently on the page. If an optional `options` object is supplied with a list of elements, those elements will be rendered into share buttons.
+
+### Setting default form values
+
+Optionally, you can choose to set default values for the following fields on the Share to Teams form:
+
+* Say something about this (`msgText`)
+* Assignment Instructions (`assignInstr`)
+* Assignment Title (`assignTitle`)
+
+#### Example: Default form values
+
+```html
+<span
+    class="teams-share-button"
+    data-href="https://www.microsoft.com/en-us/education/products/teams"
+    data-msg-text="Default Message"
+    data-assign-title="Default Assignment Title"
+    data-assign-instr="Default Assignment Instructions"
+></span>
+```

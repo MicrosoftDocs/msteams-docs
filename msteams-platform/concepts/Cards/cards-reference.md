@@ -2,7 +2,6 @@
 title: Cards Reference
 description: Describes all the cards and card actions available to bots in Teams
 keywords: bots cards reference
-ms.date: 02/11/2019
 ---
 # Cards Reference
 
@@ -31,6 +30,7 @@ This table shows the types of cards available to you.
 | [Office 365 Connector Card](#office-365-connector-card) | Flexible layout with multiple sections, fields, images and actions. |
 | [Receipt Card](#receipt-card) | Provides a receipt to the user. |
 | [Signin Card](#signin-card) | Enables a bot to request that a user sign in. |
+| [OAuth Card](#oauth-card) | Pre-configured authentication flow for various providers. |
 | [Thumbnail Card](#thumbnail-card) | Typically contains a single thumbnail image, some short text, and one or more buttons. |
 | [Card Collections](#card-collections) | Used to return multiple items in a single response |
 
@@ -213,7 +213,7 @@ A customizable card that can contain any combination of text, speech, images, bu
 #### For more information on Adaptive cards
 
 * [Adaptive Cards Overview](https://docs.microsoft.com/adaptive-cards/)
-* [Adaptive card actions in Teams](~/concepts/cards/cards-actions.md#adaptive-card-actions)
+* [Adaptive card actions in Teams](~/concepts/cards/cards-actions.md#adaptive-cards-actions)
 
 ## Hero card
 
@@ -513,8 +513,37 @@ The *signin action* can be used from any card in Teams, not just the signin card
 
 Bot Framework reference:
 
-* [Signin card Node](https://docs.microsoft.com/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest)
-* [Signin card C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.signincard?view=botbuilder-dotnet-3.0)
+* [Signin card Node](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest)
+* [Signin card C#](/dotnet/api/microsoft.bot.connector.signincard?view=botbuilder-dotnet-3.0)
+
+## OAuth card
+
+OAuth card provides a pre-configured authentication experience for bots and messaging extensions. See the links below for complete details.
+
+There are currently some restrictions to where you can use the OAuthCard. These include:
+
+* The card will not work with guest access.
+* It will not work with Microsoft Teams free.
+* It can only be used for bot authentication.
+* It only works for bots registered in the Azure Bot Service.
+
+### Support for OAuth cards
+
+| Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
+| --- | --- | --- | --- |
+| ✔ | ✔ | ✖ | ✔ |
+|
+
+### For more information on OAuth cards
+
+Teams reference:
+
+* [Using Azure Bot Service for Authentication in Teams](~/concepts/authentication/auth-oauth-card.md)
+
+Bot Framework reference:
+
+* [OAuth Card reference](/dotnet/api/microsoft.bot.schema.oauthcard)
+* [Bot Framework v3 authentication tutorial](/azure/bot-service/bot-builder-tutorial-authentication?view=azure-bot-service-3.0&tabs=aadv1)
 
 ## Thumbnail card
 

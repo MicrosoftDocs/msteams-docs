@@ -73,7 +73,7 @@ When the app starts, you will see a browser window open with the root of the app
 
 <a name="HostSample"></a>
 
-[!Note]
+> [!Note]
 > If you receive an error like `Could not find a part of the path … bin\roslyn\csc.exe`, try updating the package with the command `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r`. See [this question on StackOverflow](https://stackoverflow.com/questions/32780315) for addtional details.
 
 ## Host the sample app
