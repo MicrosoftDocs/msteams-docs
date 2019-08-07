@@ -17,9 +17,7 @@ At a high level, you'll need to complete the following steps to create a messagi
 
 As you're building your messaging extension, you'll regularly be moving between changing your app manifest, and deploying code to your bot's app service. When working with the app manifest, keep in mind that you can either manually manipulate the JSON file, or make changes through App Studio. Either way, you'll need to re-deploy (sideload) your app in Teams when you make a change.
 
-## Prepare your development environment
-
-The first thing you'll need to do is prepare your development environment. You'll need to make sure app sideloading is enabled for the Office 365 organization you want to test your app on. If you need a dedicated development tenant, you can sign up for the [Office 365 developer program](https://developer.microsoft.com/en-us/office/dev-program). For additional information see [Setup your development environment](~/concepts/build-and-test-your-app/foo.md).
+[!include[prepare environment](~/includes/prepare-environment.md)]
 
 ## Create a bot on the Bot Framework
 
@@ -33,7 +31,7 @@ You can use the App Studio app from within the Microsoft Teams client to help cr
 
 1. In the Teams client, open App Studio from the **...** overflow menu on the left navigation rail.
 1. On the **Manifest editor** tab select **Create a new app** (or if you're adding a messaging extension to an existing app, you can import your app package)
-1. Add your app details (see [manifest schema](~/resoureces/foo.md) for full descriptions of each field).
+1. Add your app details (see [manifest schema definition](~/resoureces/foo.md) for full descriptions of each field).
 1. On the **Messaging extensions** tab click the **Setup** button.
 1. You can either create a new bot for your messaging extension to use, or if you've already registered a bot select/add it here.
 1. If necessary, update your bot endpoint address to point to your bot. It should look something like `https://someplace.com/api/messages`.

@@ -8,95 +8,76 @@ ms.author:
 ---
 # Extend your Teams app with a custom tab
 
-Enhance your app experience by serving web content that you host to your channel, group chat, and personal users via a custom tab. Tabs provide efficient access to designated team information and resources. You'll need to complete the following steps to create a tab:
+Custom tabs allow you to serve web content that you host to your channel, group chat, and personal users. At a high level, you'll need to complete the following steps to create a tab:
 
 1. Prepare your development environment.
-1. Create your tab content.
-1. Integrate your code with Teams.
+1. Create your page(s).
 1. Host your app service.
 1. Create your app package and upload to Microsoft Teams.
 
-## Prepare your development environment
+[!include[prepare environment](~/includes/prepare-environment.md)]
 
-* You'll need an Office 365 tenant and a team configured with *Allow uploading custom apps* enabled. To learn more, see [Manage Microsoft Teams settings for your organization](/OfficeDocs-SkypeForBusiness/Teams/enable-features-office-365).
+## Create your page(s)
 
-* If you don't currently have an Office 365 account, you can sign up for a free subscription through the [Office 365 Developer Program](/OfficeDev/office-dev-program-docs/docs/office-365-developer-program). The subscription will remain active as long as you're using it for ongoing development.
+Whether you present your tab within the personal or channel/group scope, it will consist of one or more HTML pages that you host. Tabs with a personal scope consist of a single content page, while tabs with a channel or group scope will require a configuration page that sets the URL of the content page based on user input at the time of installation.
 
-## Create your tab
+There are three types of tab pages. See the corresponding documentation page for full details on creating them.
 
-Whether you present your tab within the personal or channel/group scope, it will essentially be an HTML page that you host—the difference is how your tab content URL is set. There are three types of tab pages:
+1. [Content page](~/tabs/how-to/create-tab-pages/content-page.md), the page displayed in a tab.
+1. [Configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md), the page used to set or update the content page URL, and add it to a channel/group tab.
+1. [Removal page](~/tabs/how-to/create-tab-pages/removal-page.md), an optional page that is displayed when a channel/group tab is removed.
 
-1. Content page, the page displayed in a tab.
-1. Configuration page, the page used to set or update the content page and add it to a channel/group tab.
-1. Remove page, an optional page that is displayed when a channel/group tab is removed.
+### Tab requirements
 
-&#x2705; You must allow your pages to be served in an IFrame, via X-Frame-Options and/or Content-Security-Policy HTTP response headers.
+Regardless of the type of page, you're tab will need to adhere to the following requirements:
 
-* Many standard websites block their pages from loading in an IFrame. However, Teams provides a unique webview option for users to view embedded content within the desktop client.
+* You must allow your pages to be served in an IFrame, via X-Frame-Options and/or Content-Security-Policy HTTP response headers.
 
-&#x2705; Your [authentication](foo.md) logic needs to use a method other than redirect (e.g., use token-based or cookie-based authentication).
+* Typically, as a safeguard against click-jacking, login pages don't render in IFrames. Therefore, your [authentication](foo.md) logic needs to use a method other than redirect (e.g., use token-based or cookie-based authentication).
 
-* Typically, as a safeguard against click-jacking, login pages don't render in IFrames.
+* Browsers adhere to a same-origin policy restriction that prevents a webpage from making requests to a different domain than the one that served a web page. However, you may need to redirect the configuration or content page to a another domain or subdomain. Your cross-domain navigation logic should allow the Teams client to validate the origin against a static validDomains list in the app manifest when loading or communicating with the tab.
 
-&#x2705; Your [cross-domain](foo.md) navigation logic should allow the Teams client to validate the origin against a static validDomains list in the app manifest when loading or communicating with the tab.
+* To create a seamless experience, you should style your tabs based on the Teams client's theme, design, and intent (see [Content and conversations, all at once using tabs](foo.md)). Typically, tabs work best when they're built to address a specific need and focus on a small set of tasks or a subset of data that is relevant to the tab's channel location.
 
-* Browsers adhere to a same-origin policy restriction that prevents a webpage from making requests to a different domain than the one that served a web page. However, you may need to redirect the configuration or content page to a another domain or subdomain.
-
-&#x2705; Style your tabs based on the Teams client's theme, design, and intent (see [Content and conversations, all at once using tabs](foo.md)).
-
-* Tabs work best when they're built to address a specific needs and focus on a small set of tasks or a subset of data that is relevant to the tab's channel location.
-
-## Integrate your code with Teams
-
-&#x2705; Within your content page, add a reference to [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) using script tags.
-
-&#x2705; Following your page load, make a call to `microsoftTeams.initialize()` in the [Teams client SDK](/javascript/api/overview/msteams-client).
-
-* Your script has to include the `microsoftTeams.initialize()` method call for your page to be displayed.
+* Within your content page, add a reference to [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) using script tags. Following your page load, make a call to `microsoftTeams.initialize()`. Your page will not be displayed if you do not.
 
 ## Host your app service
 
-Your content needs to be available on a hosted URL available from the cloud using HTTPS endpoints. For testing, you can use a reverse proxy, such as [ngrok](https://ngrok.com/), to expose your local port to an internet-facing URL.
+Your content needs to be hosted on a publicly available URL available using HTTPS. For testing, you can use a reverse proxy, such as [ngrok](https://ngrok.com/), to expose your local port to an internet-facing URL.
 
-## Create your app package and upload to Microsoft Teams
+## Create your app package with App Studio
 
-Your app manifest is a `JSON` file that defines your tab’s capabilities and references your content URL.
-
-The app package is a zip folder containing the following:
-
-* Your **full color icon** measuring 192 x 192 pixels.
-* Your **transparent outline icon** measuring 32 x 32 pixels.
-* Your **manifest.json** file that specifies the attributes of your app.
-
-### Create your app package with App Studio
-
-1. If you do not have App studio installed in Teams, select **Apps** ![Store App](/microsoftteams/platform/assets/images/tab-images/storeApp.png) at the bottom-left corner of the Teams app, and search for App Studio. Once you find the tile, select it and choose install in the pop-up window dialog box.
+You can use the App Studio app from within the Microsoft Teams client to help create your app manifest. If you do not have App studio installed in Teams, select **Apps** ![Store App](/microsoftteams/platform/assets/images/tab-images/storeApp.png) at the bottom-left corner of the Teams app, and search for App Studio. Once you find the tile, select it and choose install in the pop-up window dialog box.
 
 1. Open the Microsoft Teams client—using the [web based version](https://teams.microsoft.com) will enable you to inspect your front-end code using your browser's [developer tools](~/foo.md).
-
 1. Open App Studio and select the **Manifest editor** tab.
-
 1. Choose the **Create a new app** tile.
-
-1. Add your app details (see [Manifest schema for Microsoft Teams](foo.md) for full description of each field).
-
+1. Add your app details (see the [manifest schema definition](foo.md) for full description of each field).
 1. In the capabilities section select **Tabs**.
-
     * For a personal tab, choose *Add a personal tab* and select **Add**. You will be presented with a pop-up dialogue window where you can add your tab details.
-
     * For a channel/group tab, under *Team Tab* select **Add** and complete the tab details fields in the Team tab pop-up window. Make sure the *can update configuration? Team* and *Group chat* boxes are checked and select **Save**.
-
 1. In the *Domains and permissions* section, the *Domains from your tabs* field should contain your host or reverse proxy URL without the HTTPS prefix.
-
 1. From the **Finish** => **Test and distribute** tab you can **Download** your app package, **Install** the package into a team, or **Submit** to the Teams app store for approval. *If you are using a reverse proxy you will get a warning in the **Description** field on the right. The warning can be ignored while testing your tab*.
 
-### Create your app package manually
+## Create your app package manually
 
-Your manifest must be named "manifest.json" and correspond with the latest version of the [Manifest schema for Microsoft Teams](foo.md) hosted [here](https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json). To create your manifest, complete the values required for all apps and, based upon your tab's scope and capabilities, complete the tab reference values:
+As with bots and messaging extensions, you update the [app manifest](foo.md) of your app to include the tab properties. These properties govern the scopes your tab is available in, the URLs to be used, and various other properties.
 
-#### Personal Tabs
+### Personal Tabs
 
-The displayed content for personal tabs is the same for all users and is set directly in your manifest by the `contentUrl` property in the `staticTabs` array:
+The displayed content for personal tabs is the same for all users and is configured in the `staticTabs` array. You may declare up to sixteen (16) personal tabs in an app.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`entityId`|String|64 characters|✔|A unique identifier for the entity that the tab displays.|
+|`name`|String|128 characters|✔|The display name of the tab in the channel interface.|
+|`contentUrl`|String|2048 characters|✔|The https:// URL that points to the entity UI to be displayed in the Teams canvas.|
+|`websiteUrl`|String|2048 characters||The https:// URL to point at if a user opts to view in a browser.|
+|`scopes`|Array of enum|1|✔|Static tabs support only the `personal` scope, which means it can be provisioned only as part of a personal app.|
+
+#### Simple personal tab manifest example
+
+The example below shows just the `staticTabs` array from an app manifest.
 
 ```json
 ...
@@ -111,9 +92,19 @@ The displayed content for personal tabs is the same for all users and is set dir
 ...
 ```
 
-#### Channel/group tabs
+### Channel/group tabs
 
-Channel/group tabs allow users to set the tab content from a configuration page typically based upon URL query string parameters (see [Create a Content Page for Your Tab](foo.md)):
+Channel/group tabs are added in the `configurableTabs` array. You may declare only one channel/group tab in the `configurableTabs` array.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`configurationUrl`|String|2048 characters|✔|The https:// URL to configuration page.|
+|`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: `true`|
+|`scopes`|Array of enum|1|✔|Configurable tabs support only the `team` and `groupchat` scopes. |
+
+#### Simple channel/group tab manifest example
+
+The example below shows just the `configurableTabs` array from an app manifest.
 
 ```json
 ...
@@ -126,23 +117,21 @@ Channel/group tabs allow users to set the tab content from a configuration page 
 ...
 ```
 
-Once you have completed your `manifest.json` bundle it in a zip folder along with your two required images.
+Once you have completed your `manifest.json` bundle it in a zip folder along with your two required icons. 
 
 ### Upload app package directly to a team
 
 1. Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/foo.md).
-
 1. In the *YourTeams* panel on the left, select the `...` menu next to the team that you're using to test your tab and choose **Manage team**.
-
 1. In the main panel select **Apps** from the tab bar and choose **Upload a custom app** located in the lower right-hand corner of the page.
-
 1. Open your project directory, browse to the **./package** folder, select the app package zip folder and choose **Open**. Your tab will upload into Teams.
 
 > [!NOTE]
-> Using the Teams developer platform, you can can choose your app's level of distribution:
+> You have three levels of distribution available for your app. See [publish your app](foo.md) for complete guidance.
 >
-> * The Teams Store offers apps that any organization using Office 365 can access.
+> * The Teams App Store offers apps that any organization can use.
 > * Your tenant’s Teams App Catalog has apps that are only available to your organization. These are known as line-of-business apps.
+> * Sideloaded apps are available to a single user or team.
 
 ### View your tab in Teams
 
@@ -150,11 +139,10 @@ Once you have completed your `manifest.json` bundle it in a zip folder along wit
     * In the navbar located at the far-left of the Teams client, select the `...` menu and choose your app from the list.
 
 1. View your channel/group tab:
-
     * Return to your team, choose the channel where you would like to display the tab, select ➕ from the tab bar, and choose your tab from the gallery.
     * Follow the directions for adding a tab. Note that there's a custom configuration dialog for your channel/group tab. Select **Save** and your tab will be added to the channel's tab bar.
 
-## Modify or remove a tab
+## Modify or remove a tab **Move this section to configuration pages**
 
 You can enable users to modify, reconfigure, or rename a group/channel tab by setting your manifest's `canUpdateConfiguration` property to `true`. Supported removal options can further refine the user experience. You can designate what happens to the content when a tab is removed by including a removal options page in your app and setting a value for the `removeUrl` property in the  `setSettings()` configuration (see below). Personal tabs can't be modified but can be uninstalled by the user.
 
