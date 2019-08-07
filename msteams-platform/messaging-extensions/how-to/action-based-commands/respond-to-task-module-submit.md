@@ -103,62 +103,168 @@ Your message extension will now need to respond to two new types of interactions
 
 When responding to the `edit` request you should respond with a `task` response with the values populated with the information the user has already submitted. When responding to the `send` request you should send a message to the channel containing the finalized adaptive card. The example below shows how to do this using the [Node.js Teams Bot Builder SDK](https://www.npmjs.com/package/botbuilder-teams).
 
+# [C#/.NET](#tab/dotnet)
+
+```c#
+[BotAuthentication]
+public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
+{
+  MicrosoftAppCredentials.TrustServiceUrl(activity.ServiceUrl, DateTime.MaxValue);
+  ConnectorClient connectorClient = new ConnectorClient(
+      new Uri(activity.ServiceUrl),
+      ConfigurationManager.AppSettings[MicrosoftAppCredentials.MicrosoftAppIdKey],
+      ConfigurationManager.AppSettings[MicrosoftAppCredentials.MicrosoftAppPasswordKey]);
+  connectorClient.SetRetryPolicy(RetryHelpers.DefaultPolicyBuilder.WaitAndRetryAsync(new[] { TimeSpan.FromSeconds(2), TimeSpan.FromSeconds(5), TimeSpan.FromSeconds(10) }));
+
+  if (activity.Type == ActivityTypes.Invoke)
+  {
+    // Initial task module presented to the user
+    if (activity.Name == "composeExtension/fetchTask")
+    {
+      AdaptiveCard card = GetTaskModuleCard();
+
+      string cardJson = card.ToJson();
+
+      //Create the task module response
+      string task = $@"{{
+          'task': {{
+              'type': 'continue',
+              'value': {{
+                  'card': {{
+                      'contentType': 'application/vnd.microsoft.card.adaptive',
+                      'content': {cardJson}
+                      }}
+                  }}
+              }}
+          }}";
+
+      return Request.CreateResponse(HttpStatusCode.OK, JObject.Parse(task));
+      }
+      else if (activity.Name == "composeExtension/submitAction")
+      {
+          dynamic activityValue = JObject.FromObject(activity.Value);
+          string botMessagePreviewAction = activityValue["botMessagePreviewAction"];
+
+          //This is the initial card response sent after the task module is submitted
+          if (botMessagePreviewAction is null)
+          {
+            string text = activityValue.data.cardMessage;
+            AdaptiveCard messagePreviewCard = GetMessagePreviewCard(text);
+            string cardJson = messagePreviewCard.ToJson();
+
+            string cardMessage = $@"{{
+              'composeExtension': {{
+                'type': 'botMessagePreview',
+                'activityPreview': {{
+                    'type': 'message',
+                    'attachments': [{{
+                      'contentType': 'application/vnd.microsoft.card.adaptive',
+                      'content': {cardJson}
+                    }}]
+                }}
+              }}
+            }}";
+
+            JObject res = JObject.Parse(cardMessage);
+            return Request.CreateResponse(HttpStatusCode.OK, res);
+
+          }
+          else
+          {
+            //This is the "send the card to the channel" event
+            if (botMessagePreviewAction.Equals("send"))
+            {
+              string cardJson = JsonConvert.SerializeObject(activityValue.botActivityPreview[0].attachments[0].content);
+
+              AdaptiveCardParseResult cardResult = AdaptiveCard.FromJson(cardJson);
+              AdaptiveCard card = cardResult.Card;
+              Attachment cardAttachment = new Attachment
+              {
+                ContentType = AdaptiveCard.ContentType,
+                Content = card
+              };
+
+              Activity response = activity.CreateReply();
+              response.Attachments.Add(cardAttachment);
+
+              var result = await connectorClient.Conversations.SendToConversationAsync(response);
+            }
+            //This is fired if the user edits the card before sending it
+            else if (botMessagePreviewAction.Equals("edit"))
+            {
+                //do other stuff
+            }
+            else
+            {
+                //oops
+            }
+          }
+        }
+    }
+
+    return Request.CreateResponse(HttpStatusCode.NotImplemented);
+
+}
+```
+
+# [TypeScript/Node.js](#tab/typescript)
+
 ```typescript
 teamChatConnector.onComposeExtensionSubmitAction((
-    event: builder.IEvent,
-    request: teamBuilder.IComposeExtensionActionCommandRequest,
-    callback: (err: Error, result: any, statusCode: number) => void) => {
-        let invokeValue = (<any> event).value;
+  event: builder.IEvent,
+  request: teamBuilder.IComposeExtensionActionCommandRequest,
+  callback: (err: Error, result: any, statusCode: number) => void) => {
+    let invokeValue = (<any> event).value;
 
-        if (invokeValue.botMessagePreviewAction ) {
-            let attachment = invokeValue.botActivityPreview[0].attachments[0];
+    if (invokeValue.botMessagePreviewAction ) {
+      let attachment = invokeValue.botActivityPreview[0].attachments[0];
 
-            if (invokeValue.botMessagePreviewAction === 'send') {
-                let msg = new builder.Message()
-                    .address(event.address)
-                    .addAttachment(attachment);
-                teamChatConnector.send([msg.toMessage()],
-                    (error) => {
-                        if(error){
-                            //TODO: Handle error and callback
-                        }
-                        else {
-                            callback(null, null, 200);
-                        }
-                    }
-                );
+      if (invokeValue.botMessagePreviewAction === 'send') {
+        let msg = new builder.Message()
+          .address(event.address)
+          .addAttachment(attachment);
+        teamChatConnector.send([msg.toMessage()],
+          (error) => {
+            if(error){
+              //TODO: Handle error and callback
             }
+            else {
+              callback(null, null, 200);
+            }
+          }
+        );
+      }
 
-            else if (invokeValue.botMessagePreviewAction === 'edit') {
-              // Create the card and populate with user-inputted information
-              let card = { ... }
+      else if (invokeValue.botMessagePreviewAction === 'edit') {
+        // Create the card and populate with user-inputted information
+        let card = { ... }
 
-              let taskResponse = {
-                task: {
-                  type: "continue",
-                  value: {
-                    title: "Card Preview",
-                    card: {
-                      contentType: 'application/vnd.microsoft.card.adaptive',
-                      content: card
-                    }
-                  }
-                }
+        let taskResponse = {
+          task: {
+            type: "continue",
+            value: {
+              title: "Card Preview",
+              card: {
+                contentType: 'application/vnd.microsoft.card.adaptive',
+                content: card
               }
-              callback(null, taskResponse, 200);
             }
-
-        else {
-            let attachment = {
-                  //create adaptive card
-                };
-            let activity = new builder.Message().addAttachment(attachment).toMessage();
-            let response = teamBuilder.ComposeExtensionResponse.messagePreview()
-                .preview(activity)
-                .toResponse();
-            callback(null, response, 200);
+          }
         }
-    });
+        callback(null, taskResponse, 200);
+      }
+
+    else {
+      let attachment = {
+            //create adaptive card
+          };
+      let activity = new builder.Message().addAttachment(attachment).toMessage();
+      let response = teamBuilder.ComposeExtensionResponse.messagePreview()
+        .preview(activity)
+        .toResponse();
+      callback(null, response, 200);
+    }
+  });
 ```
 
 ## Next Steps
