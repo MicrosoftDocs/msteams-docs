@@ -216,7 +216,7 @@
       items:
         -
           name: 'Add tabs to your app'
-          href: tabs/how-to/create-custom-tabs/add-tab-to-app.md
+          href: tabs/how-to/extend-app-with-tab.md
         -
           name: 'Create tab pages'
           items:
