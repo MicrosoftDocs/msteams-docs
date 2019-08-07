@@ -142,22 +142,6 @@ Once you have completed your `manifest.json` bundle it in a zip folder along wit
     * Return to your team, choose the channel where you would like to display the tab, select ➕ from the tab bar, and choose your tab from the gallery.
     * Follow the directions for adding a tab. Note that there's a custom configuration dialog for your channel/group tab. Select **Save** and your tab will be added to the channel's tab bar.
 
-## Modify or remove a tab **Move this section to configuration pages**
-
-You can enable users to modify, reconfigure, or rename a group/channel tab by setting your manifest's `canUpdateConfiguration` property to `true`. Supported removal options can further refine the user experience. You can designate what happens to the content when a tab is removed by including a removal options page in your app and setting a value for the `removeUrl` property in the  `setSettings()` configuration (see below). Personal tabs can't be modified but can be uninstalled by the user.
-
-Microsoft Teams setSettings() configuration:
-
-```javascript
-microsoftTeams.settings.setSettings({
-    contentUrl: "add content page URL here",
-    entityId: "add unique name here",
-    suggestedDisplayName: "add name to display on tab here",
-    websiteUrl: "required for mobile clients",
-    removeUrl: "add removal page URL here"
-});
-```
-
 ## Learn more
 
 * [Create a content page for your tab](foo.md)
