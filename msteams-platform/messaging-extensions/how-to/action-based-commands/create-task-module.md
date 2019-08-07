@@ -86,7 +86,7 @@ Using this method you service will receive an `Activity` object of type `compose
 }
 ```
 
-## Initial invoke request from message
+## Initial invoke request from a message
 
 When your bot is invoked from a message rather than the compose area or the command bar, the `value` object in the initial request will contain the details of the message your messaging extension was invoked from. An example of this object is below. The `reactions` and `mentions` arrays are optional, and will not be present if there are no reactions or mentions in the original message.
 
@@ -249,9 +249,9 @@ When using an embedded web view, you'll need to respond with a `task` object wit
 
 ## Complete sample using an adaptive card
 
-You can see the [complete sample project on GitHub](~/foo.md).
-
 # [C#/.NET](#tab/dotnet)
+
+You can see the [complete sample project on GitHub](https://github.com/OfficeDev/msteams-samples/tree/master/samples/dotnet/messaging_extensions/messaging_extension_action_with_card).
 
 ```csharp
 [BotAuthentication]
