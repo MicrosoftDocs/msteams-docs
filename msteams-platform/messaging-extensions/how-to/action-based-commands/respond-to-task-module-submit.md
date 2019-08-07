@@ -277,4 +277,4 @@ Deploy your app package
 
 * [Deploy your app package](~/foo.md)
 
-[!Includes(~/includes/messaging-extensions/learn-more.md)]
+[!Includes[messaging extension learn more block](~/includes/messaging-extensions/learn-more.md)]

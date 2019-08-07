@@ -25,7 +25,7 @@ The first thing you need to decide is where your messaging extension can be trig
 
 Invoking your messaging extension from either the compose message area or the command box will immediately present your users with your task module to collect information from them.
 
-If you enable invoking directly from a message, the initial invoke to your bot will include a JSON object containing the message from which it was invoked, which you can process before presenting them with a task module. You must also respond with an adaptive card message from your bot rather than inserting a card into the compose box for your user to send.
+If you enable invoking directly from a message, the initial invoke to your bot will include a JSON object containing the message from which it was invoked, which you can process before presenting them with a task module. You must also [respond with an adaptive card message from your bot](~/messaging-extensions/how-to/action-based-commands/respond-to-task-module-submit.md#bot-response-with-adaptive-card) rather than inserting a card into the compose box for your user to send.
 
 ## Choose how to build your task module
 
@@ -155,4 +155,4 @@ If you are using parameters or an embedded web view with a `taskInfo` object, th
 
 * [Respond to task module submit](~/messaging-extensions/how-to/action-based-commands/respond-to-task-module-submit.md)
 
-[!Includes(~/includes/messaging-extensions/learn-more.md)]
+[!Includes[messaging extension learn more block](~/includes/messaging-extensions/learn-more.md)]
