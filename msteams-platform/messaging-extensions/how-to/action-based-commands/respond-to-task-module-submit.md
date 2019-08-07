@@ -105,7 +105,7 @@ When responding to the `edit` request you should respond with a `task` response 
 
 # [C#/.NET](#tab/dotnet)
 
-```c#
+```csharp
 [BotAuthentication]
 public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 {
