@@ -1,12 +1,12 @@
 ---
-title: Create a content page for your tab
+title: Create a Content Page for Your Custom Tab
 author: laujan
 description: 
 keywords: teams tabs group channel configurable 
 ms.topic: conceptual
 ms.author: laujan
 ---
-# Create a Content Page for Your Tab
+# Create a content page for your tab
 
 A custom tab allows you to enrich user experience by presenting your hosted web content within the Teams platform in an easily accessible format. Whether you present your tab within the personal or channel/group scope, it is essentially an HTML page—the difference is how your tab content URL is determined. See [What are custom tabs?](foo.md).
 
