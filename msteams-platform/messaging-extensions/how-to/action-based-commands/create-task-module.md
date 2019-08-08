@@ -86,6 +86,78 @@ Using this method you service will receive an `Activity` object of type `compose
 }
 ```
 
+## Initial invoke request from a message
+
+When your bot is invoked from a message rather than the compose area or the command bar, the `value` object in the initial request will contain the details of the message your messaging extension was invoked from. An example of this object is below. The `reactions` and `mentions` arrays are optional, and will not be present if there are no reactions or mentions in the original message.
+
+```json
+{
+  "name": "composeExtension/submitAction",
+  "type": "invoke",
+...
+  "value": {
+    "commandId": "setReminder",
+    "commandContext": "message",
+    "messagePayload": {
+      "id": "1111111111",
+      "replyToId": null,
+      "createdDateTime": "2019-02-25T21:29:36.065Z",
+      "lastModifiedDateTime": null,
+      "deleted": false,
+      "subject": "Message subject",
+      "summary": null,
+      "importance": "normal",
+      "locale": "en-us",
+      "body": {
+        "contentType": "html",
+        "content": "this is the message"
+    },
+      "from": {
+        "device": null,
+        "conversation": null,
+        "user": {
+          "userIdentityType": "aadUser",
+          "id": "wxyz12ab8-ab12-cd34-ef56-098abc123876",
+          "displayName": "Jamie Smythe"
+        },
+        "application": null
+      },
+      "reactions": [
+        {
+          "reactionType": "like",
+          "createdDateTime": "2019-02-25T22:40:40.806Z",
+          "user": {
+            "device": null,
+            "conversation": null,
+            "user": {
+              "userIdentityType": "aadUser",
+              "id": "qrst12346-ab12-cd34-ef56-098abc123876",
+              "displayName": "Jim Brown"
+            },
+            "application": null
+          }
+        }
+      ],
+      "mentions": [
+        {
+          "id": 0,
+          "mentionText": "Sarah",
+          "mentioned": {
+            "device": null,
+            "conversation": null,
+            "user": {
+              "userIdentityType": "aadUser",
+              "id": "ab12345678-ab12-cd34-ef56-098abc123876",
+              "displayName": "Sarah"
+            },
+            "application": null
+          }
+        }
+      ]
+    }
+  ...
+  ```
+
 ## Respond to the fetchTask
 
 Your response to the invoke request should be in the form of a `task` object that contains either a `taskInfo` object with the adaptive card or web URL, or a simple string message.
@@ -177,9 +249,9 @@ When using an embedded web view, you'll need to respond with a `task` object wit
 
 ## Complete sample using an adaptive card
 
-You can see the [complete sample project on GitHub](~/foo.md).
-
 # [C#/.NET](#tab/dotnet)
+
+You can see the [complete sample project on GitHub](https://github.com/OfficeDev/msteams-samples/tree/master/samples/dotnet/messaging_extensions/messaging_extension_action_with_card).
 
 ```csharp
 [BotAuthentication]
