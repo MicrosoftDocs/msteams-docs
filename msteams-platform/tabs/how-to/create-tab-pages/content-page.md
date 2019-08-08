@@ -1,5 +1,5 @@
 ---
-title: Create a Content Page for Your Custom Tab
+title: Create a content page for your tab
 author: laujan
 description: 
 keywords: teams tabs group channel configurable 
