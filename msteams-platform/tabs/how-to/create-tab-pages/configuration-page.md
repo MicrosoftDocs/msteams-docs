@@ -8,11 +8,11 @@ ms.author: laujan
 ---
 # Create a Configuration Page for Your Channel or Group Chat Tab
 
-A custom tab is a convenient bookmark for users to access your hosted web content within the Teams platform. Tabs in the channel or group chat scope require a configuration page that is used to add or edit a tab and set the content URL based on user input at the time of installation.
+A custom tab is a convenient bookmark for users to access your hosted web content within the Teams platform. Tabs in the channel or group chat scope require a configuration page that is used to add or edit a tab and set the content URL at the time of installation.
 
 ## Tab requirements
 
-A configuration page contains JavaScript code that is added to your view page(s). Each page must reference the [Microsoft Teams JavaScript client SDK](foo.md) and call `microsoft.initialize()`, conceivably via a shared layout. Additionally, your URLs must be secure HTTPS endpoints and available from the cloud. Microsoft Teams will not display insecure HTTP content. Below is an excerpt from a code sample fully available at [GitHubRepo](foo.md)):
+A configuration page informs the content page how it should render. Your application must reference the [Microsoft Teams JavaScript client SDK](foo.md) and call `microsoft.initialize()`. Additionally, your URLs must be secure HTTPS endpoints and available from the cloud. Microsoft Teams will not display insecure HTTP content. Below is a sample of configuration page code. It is fully available at [GitHubRepo](foo.md)):
 
 ```html
 <head>
@@ -75,77 +75,75 @@ A configuration page contains JavaScript code that is added to your view page(s)
 ...
 ```
 
-Here, the the user is presented with two option buttons, **Select Gray** or  **Select Red** to display the tab with either a red or gray icon. Choosing the *SelectGray* or *SelectRed* button fires `saveGray()` or `saveRed()`, sets `settings.setValidityState(true)`, triggers the `microsoftTeams.settings.registerOnSaveHandler()` event handler, and enables the **Save** button on your uploaded app's configuration page in Teams.This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed. On save, the parameters of `settings.setSettings()` are set as defined by the `Settings` interface (See [Settings interface](~/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest.md) ) for the current instance. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
+Here, the the user is presented with two option buttons, **Select Gray** or **Select Red** to display the tab content with either a red or gray icon. Choosing the *SelectGray* or *SelectRed* button fires `saveGray()` or `saveRed()`, sets `settings.setValidityState(true)`, triggers the `microsoftTeams.settings.registerOnSaveHandler()` event handler, and enables the **Save** button on the uploaded app's configuration page in Teams.This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed. On save, the parameters of `settings.setSettings()` are set, as defined by the `Settings` interface (See [Settings interface](~/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest.md) ) for the current instance. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
 
 >[!NOTE]
 >
->* If a save handler was registered using `microsoftTeams.settings.registerOnSaveHandler()`, the callback must call `saveEvent.notifySuccess().
+>* If a save handler was registered using `microsoftTeams.settings.registerOnSaveHandler()`, the callback must call `saveEvent.notifySuccess()`.
 >* If no save handler was registered, the `saveEvent.notifySuccess()` call is automatically made immediately upon the user selecting the save button. See [Troubleshoot your Microsoft Teams app](foo.md).
 
 ## Get context data for your tab settings
 
+Your tab may require contextual information to display relevant content. The Teams [Context interface](~/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest.md) defines the properties that can be collected for your tab configuration:
+
 You can capture and use the values of context data variables in two ways:
 
-1. Insert URL placeholders in your content URLs.
-The available placeholders are the properties defined in the [Context interface](~/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest.md). Teams updates the placeholders by assigning the true values to the relevant URLs when your code runs. For example, you can set the `contentURL` in the `MicrosoftTeams.settings.setSettings()` as follows:
+1. Insert URL placeholders in your manifest's `configurationURL`.
 
-    ```json
-    ...
-    contentUrl: "https://www.yourWebsite.com/tenant={tid}&group={groupId}&location={locale}"
-    ...
-    ```
+1. Use the [Microsoft Teams JavaScript client SDK](foo.md) `microsoftTeams.getContext(function(context){}` method.
 
-1. Use the [Microsoft Teams JavaScript client SDK](foo.md) and apply the `microsoftTeams.getContext(function(context){}` method that takes a callback function and, when invoked, retrieves the [Context interface](foo.md).
+### Insert placeholders in the `configurationURL`
+
+The available placeholder properties are defined in the [Context interface](~/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest.md). For example, your configuration URL may be as follows:
+
+```json
+"configurationUrl": "https://yourWebsite/config",
+
+```
+
+You can add placeholders formatted in URL query strings format as follows:
+
+```json
+...
+"configurationUrl": "https://yourWebsite/config?team={teamId}&channel={channelId}&{locale}"
+...
+```
+
+After your page is uploaded, the query string placeholders will be updated by Teams with the relevant values and you can include logic in your configuration page to retrieve and use the values. For more information on working with URL query strings see [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) in MDN web docs.
 
 ```html
+<script>
+    microsoftTeams.initialize();
+   const getId = () => {
+        let urlParams = new URLSearchParams(document.location.search.substring(1));
+        let blueTeamId = urlParams.get('team');
+        return blueTeamId
+    }
+</script>
 
- <head>
+```
 
-</head>
+### Invoke getContext() to retrieve context interface property values
 
-    <body>
+The `microsoftTeams.getContext((context) => {}` function and, when invoked, retrieves the [Context interface](~/javascript/api/@microsoft/teams-js//microsoftteams.context?view=msteams-client-js-latest.md). You can add this function to your configuration page to retrieve the context values:
+
+```html
+    <span id="user"></span>
     ...
     <script>
-        microsoftTeams.initialize();
-        let saveGray = () => {
-            microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
-                let url = "https://yourWebsite.com"
-                microsoftTeams.getContext(context) => {
-                    if(context.channelId === "TeamA"){
-                        let teamAUrl = `${url}/gray`;
-                        }
-                   if(context.channelId === "TeamB"){
-                        let teamBUrl = `${url}/red`;
-                    }
-                let entity = `${context.teamId}-${context.channelId}`
-}
-                microsoftTeams.settings.setSettings({
-                    websiteUrl: `${url}`,
-                    contentUrl: `${teamAUrl}`,
-                    entityId: `${entity}`,
-                    suggestedDisplayName: "MyNewTab"
-                });
-                saveEvent.notifySuccess();
-                });
-            });
-        }
-        let saveRed = () => {
-            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-                microsoftTeams.settings.setSettings({
-                    websiteUrl: `${url}`,
-                    contentUrl: `${teamBUrl}`,
-                    entityId: `${entity}`,
-                    suggestedDisplayName: "MyNewTab"
-                });
-                saveEvent.notifySuccess();
-            });
-        }
+    microsoftTeams.getContext((context) =>{
+    let userId = document.getElementById('user');
+    userId.innerHTML = context.userPrincipalName;
+});
     </script>
     ...
 ```
-The above code initializes the Teams Library, sets the **Save** button state in the Teams app based on the field content, registers a function as the Save Handler, and sets the Teams settings for the tab, including the url of the content page and the Entity Id for the tab.
 
-## Modify or remove a tab 
+## Context and Authentication
+
+You may require authentication before allowing a user to configure your tab or your content may be acquired from sources that have their own authentication protocols. See [Authenticate a user in a Microsoft Teams tab](foo.md) The user context information can be used to help construct authentication requests and URLs. See [Microsoft Teams authentication flow for tabs](foo.md).
+
+## Modify or remove a tab
 
 You can enable users to modify, reconfigure, or rename a group/channel tab by setting your manifest's `canUpdateConfiguration` property to `true`. Supported removal options can further refine the user experience. You can designate what happens to the content when a tab is removed by including a removal options page in your app and setting a value for the `removeUrl` property in the  `setSettings()` configuration (see below). Personal tabs can't be modified but can be uninstalled by the user.
 
@@ -165,18 +163,14 @@ microsoftTeams.settings.setSettings({
 });
 ```
 
-## Context and Authentication
-
-Your tab may need to access services such as Twitter, Facebook, and Teams that require authentication and authorization. You can add a button to your configuration or content page to enable users to sign in when needed. See [Authenticate a user in a Microsoft Teams tab](foo.md) and. The user context information can be help construct authentication requests and URLs. See [Microsoft Teams authentication flow for tabs](foo.md).
-
 Ready to get started building? Here are a few guidelines:
 
-#### Node.js
+### Node.js
 
 * [Quickstart: Create a custom personal tab with Node.js and the Yeoman Generator for Microsoft Teams](foo.md)
 * [Quickstart: Create a custom channel and group tab with Node.js and the Yeoman Generator for Microsoft Teams](foo.md)
 
-#### .NET
+### .NET
 
 * [Quickstart: Create a Custom Personal Tab with ASP.NET Core](foo.md)
 * [Quickstart: Create a Custom Personal Tab with ASP. NET Core MVC](foo.md)
