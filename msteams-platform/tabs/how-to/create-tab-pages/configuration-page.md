@@ -6,7 +6,7 @@ keywords: teams tabs group channel configurable
 ms.topic: conceptual
 ms.author: laujan
 ---
-# Create a Configuration Page for Your Channel or Group Chat Tab
+# Create a configuration page for your channel or group chat tab
 
 A custom tab is a convenient bookmark for users to access your hosted web content within the Teams platform. Tabs in the channel or group chat scope require a configuration page that is used to add or edit a tab and set the content URL at the time of installation.
 
