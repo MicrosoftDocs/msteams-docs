@@ -127,13 +127,13 @@ After your page has uploaded, the query string placeholders will be updated by T
         let blueTeamId = urlParams.get('team');
         return blueTeamId
     }
-//For testing you can invoke the following:
+//For testing, you can invoke the following:
 document.write(getId());
 </script>
 
 ```
 
-### Invoke `getContext()` to retrieve context
+### Use `getContext()` to retrieve context
 
 When invoked, the `microsoftTeams.getContext((context) => {}` function retrieves the [Context interface](~/javascript/api/@microsoft/teams-js//microsoftteams.context?view=msteams-client-js-latest.md). You can add this function to your configuration page to retrieve context values:
 
@@ -149,19 +149,21 @@ When invoked, the `microsoftTeams.getContext((context) => {}` function retrieves
     ...
 ```
 
+The `userPrincipalName` will render in the span with the id "user".
+
 ## Context and Authentication
 
 You may require authentication before allowing a user to configure your tab or your content may be acquired from sources that have their own authentication protocols. See [Authenticate a user in a Microsoft Teams tab](foo.md) Context information can be used to help construct authentication requests and URLs. See [Microsoft Teams authentication flow for tabs](foo.md).
 
 ## Modify or remove a tab
 
-You can enable users to modify, reconfigure, or rename a group/channel tab by setting your manifest's `canUpdateConfiguration` property to `true`. Supported removal options can further refine the user experience. You can designate what happens to the content when a tab is removed by including a removal options page in your app and setting a value for the `removeUrl` property in the  `setSettings()` configuration (see below). Personal tabs can't be modified but can be uninstalled by the user.
+Supported removal options can further refine the user experience. You can enable users to modify, reconfigure, or rename a group/channel tab by setting your manifest's `canUpdateConfiguration` property to `true`.  In addition, you can designate what happens to the content when a tab is removed by including a removal options page in your app and setting a value for the `removeUrl` property in the  `setSettings()` configuration (see below). Personal tabs can't be modified but can be uninstalled by the user.
 
 ## Mobile clients
 
 If you choose to have your channel/group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property (see below). Full support for tabs on mobile clients will be released soon. To prepare for the update, you should follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md) when creating your tabs.
 
-Microsoft Teams setSettings() configuration:
+Microsoft Teams setSettings() configuration for removal page and/or mobile clients:
 
 ```javascript
 microsoftTeams.settings.setSettings({
