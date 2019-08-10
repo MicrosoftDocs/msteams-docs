@@ -81,11 +81,11 @@ Here, the user is presented with two option buttons, **Select Gray** or **Select
 1. The `microsoftTeams.settings.registerOnSaveHandler()` event handler is triggered.
 1. The **Save** button on the uploaded app's configuration page in Teams is enabled.
 
-This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed. On save, the parameters of `settings.setSettings()` are set, as defined by the `Settings` interface (See [Settings interface](~/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest.md) ) for the current instance. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
+This code lets Teams know that the configuration requirements have been satisfied and the installation can proceed. On save, the parameters of `settings.setSettings()` are set, as defined by the `Settings` interface, for the current instance (See [Settings interface](~/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest.md) ). Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
 
 >[!NOTE]
 >
->* If a save handler was registered using `microsoftTeams.settings.registerOnSaveHandler()`, the callback must call `saveEvent.notifySuccess()` or `saveEvent.notifyFailure()` to indicate the outcome of the configuration.
+>* If a save handler was registered using `microsoftTeams.settings.registerOnSaveHandler()`, the callback must invoke `saveEvent.notifySuccess()` or `saveEvent.notifyFailure()` to indicate the outcome of the configuration.
 >* If no save handler was registered, the `saveEvent.notifySuccess()` call is automatically made immediately upon the user selecting the **Save** button. See [Troubleshoot your Microsoft Teams app](foo.md).
 
 ## Get context data for your tab settings
