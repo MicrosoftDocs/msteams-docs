@@ -432,6 +432,8 @@ Your message extension will now need to respond to two new types of interactions
 
 When responding to the `edit` request you should respond with a `task` response with the values populated with the information the user has already submitted. When responding to the `send` request you should send a message to the channel containing the finalized adaptive card. 
 
+# [TypeScript/Node.js](#tab/typescript)
+
 The example below shows how to do this using the [Node.js Teams Bot Builder SDK](https://www.npmjs.com/package/botbuilder-teams).
 
 ```typescript
@@ -491,6 +493,10 @@ teamChatConnector.onComposeExtensionSubmitAction((
         }
     });
 ```
+
+# [C#/.NET](#tab/dotnet)
+
+This sample shows this flow using the [Microsoft.Bot.Connector.Teams SDK (v3)](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams).
 
 ```csharp
 public class MessagesController : ApiController
