@@ -1,5 +1,5 @@
 ---
-title: Create a Content Page for Your Custom Tab
+title: Create a Configuration Page for Your Custom Tab
 author: laujan
 description: 
 keywords: teams tabs group channel configurable 
@@ -12,7 +12,7 @@ A custom tab is a convenient bookmark for users to access your hosted web conten
 
 ## Tab requirements
 
-A configuration page informs the content page how it should render. Your application must reference the [Microsoft Teams JavaScript client SDK](foo.md) and call `microsoft.initialize()`. Additionally, your URLs must be secure HTTPS endpoints and available from the cloud. Microsoft Teams will not display insecure HTTP content. Below is a sample of configuration page code. It is fully available at [GitHubRepo](foo.md)):
+A configuration page informs the content page how it should render. Your application must reference the [Microsoft Teams JavaScript client SDK](foo.md) and call `microsoft.initialize()`. Additionally, your URLs must be secure HTTPS endpoints and available from the cloud. Below is a sample of configuration page code. It is fully available at [OurGitHubRepo](foo.md):
 
 ```html
 <head>
@@ -75,11 +75,17 @@ A configuration page informs the content page how it should render. Your applica
 ...
 ```
 
-Here, the the user is presented with two option buttons, **Select Gray** or **Select Red** to display the tab content with either a red or gray icon. Choosing the *SelectGray* or *SelectRed* button fires `saveGray()` or `saveRed()`, sets `settings.setValidityState(true)`, triggers the `microsoftTeams.settings.registerOnSaveHandler()` event handler, and enables the **Save** button on the uploaded app's configuration page in Teams.This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed. On save, the parameters of `settings.setSettings()` are set, as defined by the `Settings` interface (See [Settings interface](~/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest.md) ) for the current instance. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
+Here, the user is presented with two option buttons, **Select Gray** or **Select Red** to display the tab content with either a red or gray icon. Choosing the *SelectGray* or *SelectRed* button fires `saveGray()` or `saveRed()` invokes the following:
+
+1. The `settings.setValidityState(true)` is set to true.
+1. The `microsoftTeams.settings.registerOnSaveHandler()` event handler is triggered.
+1. The **Save** button on the uploaded app's configuration page in Teams is enabled.
+
+This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed. On save, the parameters of `settings.setSettings()` are set, as defined by the `Settings` interface (See [Settings interface](~/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest.md) ) for the current instance. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
 
 >[!NOTE]
 >
->* If a save handler was registered using `microsoftTeams.settings.registerOnSaveHandler()`, the callback must call `saveEvent.notifySuccess()`.
+>* If a save handler was registered using `microsoftTeams.settings.registerOnSaveHandler()`, the callback must call `saveEvent.notifySuccess()` or `saveEvent.notifyFailure()` to apprise Teams on the outcome of the configuration.
 >* If no save handler was registered, the `saveEvent.notifySuccess()` call is automatically made immediately upon the user selecting the save button. See [Troubleshoot your Microsoft Teams app](foo.md).
 
 ## Get context data for your tab settings
