@@ -75,7 +75,7 @@ A configuration page informs the content page how it should render. Your applica
 ...
 ```
 
-Here, the user is presented with two option buttons, **Select Gray** or **Select Red** to display the tab content with either a red or gray icon. Choosing the *SelectGray* or *SelectRed* button fires `saveGray()` or `saveRed()` invokes the following:
+Here, the user is presented with two option buttons, **Select Gray** or **Select Red** to display the tab content with either a red or gray icon. Choosing the relative button fires `saveGray()` or `saveRed()` invokes the following:
 
 1. The `settings.setValidityState(true)` is set to true.
 1. The `microsoftTeams.settings.registerOnSaveHandler()` event handler is triggered.
@@ -85,29 +85,31 @@ This code lets Teams know that you have satisfied the configuration requirements
 
 >[!NOTE]
 >
->* If a save handler was registered using `microsoftTeams.settings.registerOnSaveHandler()`, the callback must call `saveEvent.notifySuccess()` or `saveEvent.notifyFailure()` to apprise Teams on the outcome of the configuration.
->* If no save handler was registered, the `saveEvent.notifySuccess()` call is automatically made immediately upon the user selecting the save button. See [Troubleshoot your Microsoft Teams app](foo.md).
+>* If a save handler was registered using `microsoftTeams.settings.registerOnSaveHandler()`, the callback must call `saveEvent.notifySuccess()` or `saveEvent.notifyFailure()` to indicate the outcome of the configuration.
+>* If no save handler was registered, the `saveEvent.notifySuccess()` call is automatically made immediately upon the user selecting the **Save** button. See [Troubleshoot your Microsoft Teams app](foo.md).
 
 ## Get context data for your tab settings
 
-Your tab may require contextual information to display relevant content. The Teams [Context interface](~/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest.md) defines the properties that can be collected for your tab configuration:
+Your tab may require contextual information to display relevant content. Contextual information can further enhance your tab's appeal by providing a more customized user experience.
 
-You can capture and use the values of context data variables in two ways:
+The Teams [Context interface](~/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest.md) defines the properties that can be used for your tab configuration. You can collect the values of context data variables in two ways:
 
-1. Insert URL placeholders in your manifest's `configurationURL`.
+1. Insert URL query string placeholders in your manifest's `configurationURL`.
 
-1. Use the [Microsoft Teams JavaScript client SDK](foo.md) `microsoftTeams.getContext(function(context){}` method.
+1. Use the [Microsoft Teams JavaScript client SDK](foo.md) `microsoftTeams.getContext((context) =>{}` method.
 
 ### Insert placeholders in the `configurationURL`
 
-The available placeholder properties are defined in the [Context interface](~/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest.md). For example, your configuration URL may be as follows:
+Valid placeholders are defined in the [Context interface](~/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest.md) and added to your base `configurationUrl`. For example:
+
+#### Base Url
 
 ```json
 "configurationUrl": "https://yourWebsite/config",
 
 ```
 
-You can add placeholders formatted in URL query strings format as follows:
+#### Base URL with query strings
 
 ```json
 ...
@@ -115,7 +117,7 @@ You can add placeholders formatted in URL query strings format as follows:
 ...
 ```
 
-After your page is uploaded, the query string placeholders will be updated by Teams with the relevant values and you can include logic in your configuration page to retrieve and use the values. For more information on working with URL query strings see [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) in MDN web docs.
+After your page has uploaded, the query string placeholders will be updated by Teams with the relevant values. You can include logic in your configuration page to retrieve and use those values. For more information on working with URL query strings see [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) in MDN web docs. Here is an example of how to extract a value from your configurationURL:
 
 ```html
 <script>
@@ -125,13 +127,15 @@ After your page is uploaded, the query string placeholders will be updated by Te
         let blueTeamId = urlParams.get('team');
         return blueTeamId
     }
+//For testing you can invoke the following:
+document.write(getId());
 </script>
 
 ```
 
-### Invoke getContext() to retrieve context interface property values
+### Invoke `getContext()` to retrieve context
 
-The `microsoftTeams.getContext((context) => {}` function and, when invoked, retrieves the [Context interface](~/javascript/api/@microsoft/teams-js//microsoftteams.context?view=msteams-client-js-latest.md). You can add this function to your configuration page to retrieve the context values:
+When invoked, the `microsoftTeams.getContext((context) => {}` function retrieves the [Context interface](~/javascript/api/@microsoft/teams-js//microsoftteams.context?view=msteams-client-js-latest.md). You can add this function to your configuration page to retrieve context values:
 
 ```html
     <span id="user"></span>
@@ -147,7 +151,7 @@ The `microsoftTeams.getContext((context) => {}` function and, when invoked, retr
 
 ## Context and Authentication
 
-You may require authentication before allowing a user to configure your tab or your content may be acquired from sources that have their own authentication protocols. See [Authenticate a user in a Microsoft Teams tab](foo.md) The user context information can be used to help construct authentication requests and URLs. See [Microsoft Teams authentication flow for tabs](foo.md).
+You may require authentication before allowing a user to configure your tab or your content may be acquired from sources that have their own authentication protocols. See [Authenticate a user in a Microsoft Teams tab](foo.md) Context information can be used to help construct authentication requests and URLs. See [Microsoft Teams authentication flow for tabs](foo.md).
 
 ## Modify or remove a tab
 
