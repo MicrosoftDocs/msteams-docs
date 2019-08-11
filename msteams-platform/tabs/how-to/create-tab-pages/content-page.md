@@ -42,14 +42,17 @@ For your tab to display in Teams, you must include the **Microsoft Teams JavaScr
 
 ## Accessing additional content
 
+### Using the SDK to interact with Teams
+
+**similar paragraph, with link to the page on this topic**
+
 ### Deep links
 
 You can create deep links to entities in Teams. Typically, these are used to create links that navigate to content and information within your tab. See [Create deep links to content and features in Microsoft Teams](foo.md)
 
 ### Task Modules
 
-A task modules is essentially a tab inside a popup window.
-Using the **Microsoft Teams Tabs SDK** you can invoke task modules from buttons, links, or menus on your tab. See ([Using task modules in tabs](foo.md))
+A task module is a modal popup-like experience that you can trigger from your tab. Typically in a content page you do not want to navigate your user through multiple pages. Instead, you will use task modules to present forms for gathering additional information, displaying the details of an item in a list, or any other time you need to present the user with additional information. The task modules themselves can be additional content pages, or created completely using Adaptive Cards. See [Using task modules in tabs](foo.md) for complete information.
 
 ### Valid Domains
 
@@ -57,7 +60,7 @@ Ensure that the all URL domains used in your tabs are included in the `validDoma
 
 ## Get Started
 
-Ready to get started building? Here are a few guidelines:
+Ready to get started building?
 
 Node.js
 
