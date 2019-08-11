@@ -90,7 +90,7 @@ This code lets Teams know that the configuration requirements have been satisfie
 
 ## Get context data for your tab settings
 
-Your tab may require contextual information to display relevant content. Contextual information can further enhance your tab's appeal by providing a more customized user experience.
+Your tab might require contextual information to display relevant content. Contextual information can further enhance your tab's appeal by providing a more customized user experience.
 
 The Teams [Context interface](~/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest.md) defines the properties that can be used for your tab configuration. You can collect the values of context data variables in two ways:
 
@@ -118,11 +118,11 @@ Valid placeholders can be added to your base `configurationUrl`. For example:
 ...
 ```
 
-After your page has uploaded, the query string placeholders will be updated by Teams with the relevant values. You can include logic in your configuration page to retrieve and use those values. For more information on working with URL query strings see [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) in MDN web docs. Here is an example of how to extract a value from your configurationURL:
+After your page has uploaded, the query string placeholders will be updated by Teams with the relevant values. You can include logic in your configuration page to retrieve and use those values. For more information on working with URL query strings see [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) in MDN web docs. Here is an example of how to extract a value from the above configurationURL property:
 
 ```html
 <script>
-    microsoftTeams.initialize();
+   microsoftTeams.initialize();
    const getId = () => {
         let urlParams = new URLSearchParams(document.location.search.substring(1));
         let blueTeamId = urlParams.get('team');
@@ -155,7 +155,7 @@ When invoked, the `microsoftTeams.getContext((context) => {}` function retrieves
 
 ## Context and Authentication
 
-You may require authentication before allowing a user to configure your tab or your content include sources that have their own authentication protocols. See [Authenticate a user in a Microsoft Teams tab](foo.md) Context information can be used to help construct authentication requests and authorization page URLs. See [Microsoft Teams authentication flow for tabs](foo.md).
+You might require authentication before allowing a user to configure your tab or your content might include sources that have their own authentication protocols. See [Authenticate a user in a Microsoft Teams tab](foo.md) Context information can be used to help construct authentication requests and authorization page URLs. See [Microsoft Teams authentication flow for tabs](foo.md).
 
 ## Modify or remove a tab
 
@@ -163,7 +163,7 @@ Supported removal options can further refine the user experience. You can enable
 
 ## Mobile clients
 
-If you choose to have your channel/group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property (see below). Full support for tabs on mobile clients will be released soon. To prepare for the update, you should follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md) when creating your tabs.
+If you want to have your channel/group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property (see below). Full support for tabs on mobile clients will be released soon. To prepare for the update, you should follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md) when creating your tabs.
 
 Microsoft Teams setSettings() configuration for removal page and/or mobile clients:
 
