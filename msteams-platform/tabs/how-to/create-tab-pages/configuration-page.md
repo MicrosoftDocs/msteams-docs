@@ -12,7 +12,7 @@ A custom tab is a convenient bookmark for users to access your hosted web conten
 
 ## Tab requirements
 
-A configuration page informs the content page how it should render. Your application must reference the [Microsoft Teams JavaScript client SDK](foo.md) and call `microsoft.initialize()`. Additionally, your URLs must be secure HTTPS endpoints and available from the cloud. Below is a sample of configuration page code. It is fully available at [OurGitHubRepo](foo.md):
+A configuration page informs the content page how it should render. Your application must reference the [Microsoft Teams JavaScript client SDK](foo.md) and call `microsoft.initialize()`. Additionally, your URLs must be secure HTTPS endpoints and available from the cloud. Below is a configuration page citation. It is available in full at [OurGitHubRepo](foo.md):
 
 ```html
 <head>
@@ -75,11 +75,11 @@ A configuration page informs the content page how it should render. Your applica
 ...
 ```
 
-Here, the user is presented with two option buttons, **Select Gray** or **Select Red** to display the tab content with either a red or gray icon. Choosing the relative button fires `saveGray()` or `saveRed()` invokes the following:
+Here, the user is presented with two option buttons, **Select Gray** or **Select Red** to display the tab content with either a red or gray icon. Choosing the relative button fires `saveGray()` or `saveRed()` and invokes the following:
 
 1. The `settings.setValidityState(true)` is set to true.
 1. The `microsoftTeams.settings.registerOnSaveHandler()` event handler is triggered.
-1. The **Save** button on the uploaded app's configuration page in Teams is enabled.
+1. The **Save** button on the app's configuration page, uploaded in Teams, is enabled.
 
 This code lets Teams know that the configuration requirements have been satisfied and the installation can proceed. On save, the parameters of `settings.setSettings()` are set, as defined by the `Settings` interface, for the current instance (See [Settings interface](~/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest.md) ). Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
 
@@ -96,17 +96,18 @@ The Teams [Context interface](~/javascript/api/@microsoft/teams-js/microsoftteam
 
 1. Insert URL query string placeholders in your manifest's `configurationURL`.
 
-1. Use the [Microsoft Teams JavaScript client SDK](foo.md) `microsoftTeams.getContext((context) =>{}` method.
+1. Use the [Teams SDK](foo.md) `microsoftTeams.getContext((context) =>{}` method.
 
 ### Insert placeholders in the `configurationURL`
 
-Valid placeholders are defined in the [Context interface](~/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest.md) and added to your base `configurationUrl`. For example:
+Valid placeholders can be added to your base `configurationUrl`. For example:
 
 #### Base Url
 
 ```json
+...
 "configurationUrl": "https://yourWebsite/config",
-
+...
 ```
 
 #### Base URL with query strings
@@ -127,17 +128,20 @@ After your page has uploaded, the query string placeholders will be updated by T
         let blueTeamId = urlParams.get('team');
         return blueTeamId
     }
-//For testing, you can invoke the following:
+//For testing, you can invoke the following to view the pertinent value:
 document.write(getId());
 </script>
 
 ```
 
-### Use `getContext()` to retrieve context
+### Use the `getContext()` method to retrieve context
 
 When invoked, the `microsoftTeams.getContext((context) => {}` function retrieves the [Context interface](~/javascript/api/@microsoft/teams-js//microsoftteams.context?view=msteams-client-js-latest.md). You can add this function to your configuration page to retrieve context values:
 
 ```html
+
+    <!-- `userPrincipalName` will render in the span with the id "user". -->
+
     <span id="user"></span>
     ...
     <script>
@@ -149,15 +153,13 @@ When invoked, the `microsoftTeams.getContext((context) => {}` function retrieves
     ...
 ```
 
-The `userPrincipalName` will render in the span with the id "user".
-
 ## Context and Authentication
 
-You may require authentication before allowing a user to configure your tab or your content may be acquired from sources that have their own authentication protocols. See [Authenticate a user in a Microsoft Teams tab](foo.md) Context information can be used to help construct authentication requests and URLs. See [Microsoft Teams authentication flow for tabs](foo.md).
+You may require authentication before allowing a user to configure your tab or your content include sources that have their own authentication protocols. See [Authenticate a user in a Microsoft Teams tab](foo.md) Context information can be used to help construct authentication requests and authorization page URLs. See [Microsoft Teams authentication flow for tabs](foo.md).
 
 ## Modify or remove a tab
 
-Supported removal options can further refine the user experience. You can enable users to modify, reconfigure, or rename a group/channel tab by setting your manifest's `canUpdateConfiguration` property to `true`.  In addition, you can designate what happens to the content when a tab is removed by including a removal options page in your app and setting a value for the `removeUrl` property in the  `setSettings()` configuration (see below). Personal tabs can't be modified but can be uninstalled by the user.
+Supported removal options can further refine the user experience. You can enable users to modify, reconfigure, or rename a group/channel tab by setting your manifest's `canUpdateConfiguration` property to `true`.  In addition, you can designate what happens to the content when a tab is removed by including a removal options page in your app and setting a value for the `removeUrl` property in the  `setSettings()` configuration (see below). Personal tabs can't be modified but can be uninstalled by the user. For more information, see [Create a removal page for your tab](~/platform/tabs/how-t-/create-tab-pages/removal-page.md).
 
 ## Mobile clients
 
@@ -170,7 +172,7 @@ microsoftTeams.settings.setSettings({
     contentUrl: "add content page URL here",
     entityId: "add unique name here",
     suggestedDisplayName: "add name to display on tab here",
-    websiteUrl: "REQUIRED FOR MOBILE CLIENTS",
+    websiteUrl: "URL REQUIRED FOR MOBILE CLIENTS",
     removeUrl: "ADD REMOVAL PAGE URL HERE"
 });
 ```
