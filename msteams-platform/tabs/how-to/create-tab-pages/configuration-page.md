@@ -81,7 +81,7 @@ Here, the user is presented with two option buttons, **Select Gray** or **Select
 1. The `microsoftTeams.settings.registerOnSaveHandler()` event handler is triggered.
 1. The **Save** button on the app's configuration page, uploaded in Teams, is enabled.
 
-This code lets Teams know that the configuration requirements have been satisfied and the installation can proceed. On save, the parameters of `settings.setSettings()` are set, as defined by the `Settings` interface, for the current instance (See [Settings interface](~/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest.md) ). Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
+This code lets Teams know that the configuration requirements have been satisfied and the installation can proceed. On **Save**, the parameters of `settings.setSettings()` are set, as defined by the `Settings` interface, for the current instance (See [Settings interface](~/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest.md) ). Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
 
 >[!NOTE]
 >
@@ -100,7 +100,7 @@ The Teams [Context interface](~/javascript/api/@microsoft/teams-js/microsoftteam
 
 ### Insert placeholders in the `configurationURL`
 
-Valid placeholders can be added to your base `configurationUrl`. For example:
+Context interface placeholders can be added to your base `configurationUrl`. For example:
 
 #### Base Url
 
@@ -118,7 +118,7 @@ Valid placeholders can be added to your base `configurationUrl`. For example:
 ...
 ```
 
-After your page has uploaded, the query string placeholders will be updated by Teams with the relevant values. You can include logic in your configuration page to retrieve and use those values. For more information on working with URL query strings see [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) in MDN web docs. Here is an example of how to extract a value from the above configurationURL property:
+After your page has uploaded, the query string placeholders will be updated by Teams with the relevant values. You can include logic in your configuration page to retrieve and use those values. For more information on working with URL query strings see [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) in MDN web docs. Here is an example of how to extract a value from the above `configurationURL` property:
 
 ```html
 <script>
@@ -136,7 +136,7 @@ document.write(getId());
 
 ### Use the `getContext()` method to retrieve context
 
-When invoked, the `microsoftTeams.getContext((context) => {}` function retrieves the [Context interface](~/javascript/api/@microsoft/teams-js//microsoftteams.context?view=msteams-client-js-latest.md). You can add this function to your configuration page to retrieve context values:
+When invoked, the `microsoftTeams.getContext((context) => {});` function retrieves the [Context interface](~/javascript/api/@microsoft/teams-js//microsoftteams.context?view=msteams-client-js-latest.md). You can add this function to your configuration page to retrieve context values:
 
 ```html
 
@@ -163,7 +163,7 @@ Supported removal options can further refine the user experience. You can enable
 
 ## Mobile clients
 
-If you want to have your channel/group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property (see below). Full support for tabs on mobile clients will be released soon. To prepare for the update, you should follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md) when creating your tabs.
+If you choose to have your channel/group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property (see below). Full support for tabs on mobile clients will be released soon. To prepare for the update, you should follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md) when creating your tabs.
 
 Microsoft Teams setSettings() configuration for removal page and/or mobile clients:
 
