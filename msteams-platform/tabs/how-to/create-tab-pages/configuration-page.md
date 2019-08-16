@@ -3,7 +3,7 @@ title: Create a Configuration Page for Your Custom Tab
 author: laujan
 description: 
 keywords: teams tabs group channel configurable 
-ms.topic: conceptual
+ms.topic: conceptualF
 ms.author: laujan
 ---
 # Create a configuration page for your channel or group chat tab
@@ -23,7 +23,7 @@ A configuration page informs the content page how it should render. Your applica
     <script>
         microsoftTeams.initialize();
         let saveGray = () => {
-            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
+            microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
                 microsoftTeams.settings.setSettings({
                     websiteUrl: "https://yourWebsite.com",
                     contentUrl: "https://yourWebsite.com/gray",
@@ -34,7 +34,7 @@ A configuration page informs the content page how it should render. Your applica
             });
         }
         let saveRed = () => {
-            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
+            microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
                 microsoftTeams.settings.setSettings({
                     websiteUrl: "https://yourWebsite.com",
                     contentUrl: "https://yourWebsite.com/red",
@@ -134,7 +134,7 @@ document.write(getId());
 
 ```
 
-### Use the `getContext()` method to retrieve context
+### Use the `getContext()` function to retrieve context
 
 When invoked, the `microsoftTeams.getContext((context) => {})` function retrieves the [Context interface](~/javascript/api/@microsoft/teams-js//microsoftteams.context?view=msteams-client-js-latest.md). You can add this function to your configuration page to retrieve context values:
 
