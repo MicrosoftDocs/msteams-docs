@@ -13,19 +13,19 @@ You can further extend and enhance the user experience by supporting removal and
 
 ## Enable your tab to be reconfigured after installation
 
-Your `manifest.json` defines your tab's features and capabilities. The tab instance `canUpdateConfiguration` property takes a Boolean value that indicates whether a user can modify or reconfigure the tab after it is created:
+Your **manifest.json** defines your tab's features and capabilities. The tab instance `canUpdateConfiguration` property takes a Boolean value that indicates whether a user can modify or reconfigure the tab after it is created:
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: `true`|
 
-When your tab is uploaded to a channel or group chat, Teams will add a right-click menu for your tab. The available options are determined by the `canUpdateConfiguration` setting in your **manifest.json**:
+When your tab is uploaded to a channel or group chat, Teams will add a right-click drop-down menu for your tab. The available options are determined by the `canUpdateConfiguration` setting in your **manifest.json**:
 
 | `canUpdateConfiguration`| true   | false | description |
 | ----------------------- | :----: | ----- | ----------- |
-|     Settings            |   √    |       |The **manifest** `configurationUrl` page is reloaded in an IFrame allowing the user to reconfigure the tab.  |
+|     Settings            |   √    |       |The `configurationUrl` page is reloaded in an IFrame allowing the user to reconfigure the tab.  |
 |     Rename              |   √    |   √   | The user can change the tab name as it appears in the tab bar.          |
-|     Remove              |   √    |   √   |  If the  `removeURL` property and value are included in the **configuration page**, the **removal page** is loaded into an IFrame and presented to the user. If a removal page is not included the user is presented with a confirm pop-up window.          |
+|     Remove              |   √    |   √   |  If the  `removeURL` property and value are included in the **configuration page**, the **removal page** is loaded into an IFrame and presented to the user. If a removal page is not included the user is presented with a confirm dialog box.          |
 |||||
 
 ## Create a tab removal page for your application
@@ -34,26 +34,27 @@ The optional removal page is an HTML page that you host and is displayed when th
 
 ### Register a remove handler
 
-Within your removal page logic, optionally you can  execute an event handler when the user removes an existing tab configuration. The `registerOnRemoveHandler((RemoveEvent) => {}` takes in the [`RemoveEvent`](~javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest.md) interface and executes the code in the handler when a user attempts to remove content. It is used to perform cleanup operations such as removing the underlying resource powering the tab content. Only one handler may be registered at a time.
+Optionally, within your removal page logic, you can  invoke the `registerOnRemoveHandler((RemoveEvent) => {}` event handler when the user removes an existing tab configuration. The  method takes in the [`RemoveEvent`](~javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest.md) interface and executes the code in the handler when a user attempts to remove content. It is used to perform cleanup operations such as removing the underlying resource powering the tab content. Only one remove handler can be registered at a time.
 
 The `RemoveEvent` interface describes an object with two methods:
 
-* The `notifySuccess()` function is required and indicates that the removal of the underlying resource succeeded and the content can be removed.
-* The `notifyFailure(string)` function is optional and indicates that removal of the underlying resource failed and the content cannot be removed. The optional string parameter specifies a reason for the failure. If provided, this string is displayed to the user; otherwise a generic error is displayed:
+* The `notifySuccess()` function is required. It indicates that the removal of the underlying resource succeeded and its content can be removed.
+
+* The `notifyFailure(string)` function is optional. It indicates that removal of the underlying resource failed and its content cannot be removed. The optional string parameter specifies a reason for the failure. If provided, this string is displayed to the user; otherwise a generic error is displayed.
 
 #### Use the `getSettings()` function
 
-You can use `getSettings()`to determine the tab content to be removed. The `getSettings((Settings) =>{})` function takes in the [`Settings interface`](~/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest) and provides the valid settings properties that can be retrieved.
+You can use `getSettings()`to designate the tab content to be removed. The `getSettings((Settings) =>{})` function takes in the [`Settings interface`](~/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest) and provides the valid settings property values that can be retrieved.
 
 #### Use the `getContext()` function
 
-The `getContext((Context) =>{})` function takes in the [`Context interface`](~/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) and retrieves the current context in which the frame is running. You can use valid `Context` property values in your removal page logic to determine the content to display in the removal page.
+You can use `getContext()` to retrieves the current context in which the frame is running. The `getContext((Context) =>{})` function takes in the [`Context interface`](~/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) and provides valid `Context` property values that you can use in your removal page logic to determine the content to display in the removal page.
 
-#### Include authentication methods
+#### Include authentication
 
-You might require authentication before allowing a user to delete your tab content. See [Authenticate a user in a Microsoft Teams tab](foo.md) Context information can be used to help construct authentication requests and authorization page URLs. See [Microsoft Teams authentication flow for tabs](foo.md). Make sure that all domains used in your tab pages are listed in the `manifest.json` `validDomains` array.
+You might require authentication before allowing a user to delete the tab content. See [Authenticate a user in a Microsoft Teams tab](foo.md) Context information can be used to help construct authentication requests and authorization page URLs. See [Microsoft Teams authentication flow for tabs](foo.md). Make sure that all domains used in your tab pages are listed in the `manifest.json` `validDomains` array.
 
-Below is a brief sample tab removal code block:
+Below is a sample tab removal code block:
 
 ```html
 <body>
@@ -76,16 +77,14 @@ Below is a brief sample tab removal code block:
 
 ```
 
-When a user selects **Remove** from the tab's drop-down menu, Teams will load the optional `removalUrl` page into an IFrame. Here, the user is presented with a button loaded with the `onClick()` function that calls `microsoftTeams.settings.setValidityState(true)` and enables the **Remove** button located near the bottom of the removal page IFrame.
+When a user selects **Remove** from the tab's drop-down menu, Teams will load the optional `removeUrl` page (designated in your **configuration page**) into an IFrame. Here, the user is presented with a button loaded with the `onClick()` function that calls `microsoftTeams.settings.setValidityState(true)` and enables the **Remove** button located near the bottom of the removal page IFrame.
 
-Following the execution of the remove handler, `removeEvent.notifySuccess()` or `removeEvent.notifyFailure()` notifies Teams of the removal outcome.
+Following the execution of the remove handler, `removeEvent.notifySuccess()` or `removeEvent.notifyFailure()` notifies Teams of the content removal outcome.
 
 >[!NOTE]
 >To ensure that an authorized user's control over a tab is not inhibited, Teams will remove the tab in both success and failure cases.\
 >Teams enables the **Remove** button after 5 seconds, even if your tab hasn't called `setValidityState()`.\
 >When the user selects **Remove** Teams removes the tab after 30 seconds regardless of whether your actions have completed.
-
-
 
 Ready to get started building? Here are a few guidelines:
 
