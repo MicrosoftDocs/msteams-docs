@@ -9,7 +9,7 @@ ms.author:
 
 # Modify or remove a channel group tab
 
-You can further extend and enhance the user experience by supporting removal and modification options in your app. Teams enables users to rename or remove a channel/group tab and you can permit users to reconfigure your tab after installation. Additionally, your tab removal experience can include designating what happens to the content when your tab is removed or giving users post-removal options such as deleting or archiving the content.
+You can extend and enhance the user experience by supporting removal and modification options in your app. Teams enables users to rename or remove a channel/group tab and you can permit users to reconfigure your tab after installation. Additionally, your tab removal experience can include designating what happens to the content when your tab is removed or giving users post-removal options such as deleting or archiving the content.
 
 ## Enable your tab to be reconfigured after installation
 
