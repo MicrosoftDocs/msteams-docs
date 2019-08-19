@@ -1,16 +1,24 @@
 ---
-title: Create a Configuration Page for Your Custom Tab
+title: Create a configuration page
 author: laujan
 description: 
 keywords: teams tabs group channel configurable 
 ms.topic: conceptualF
 ms.author: laujan
 ---
-# Create a configuration page for your channel or group chat tab
+# Create a configuration page
 
-A custom tab is a convenient bookmark for users to access your hosted web content within the Teams platform. Tabs in the channel or group chat scope require a configuration page that is used to add or edit a tab and set the content URL at the time of installation.
+A configuration page is a special type of [content page](content-page.md) that allows your users to configure some aspect of your Teams app. Typically these are used as part of:
 
-## Tab requirements
+* A channel or group chat tab - The configuration page allows you to collect information from your users and set the `contentUrl` of the content page to display.
+* A messaging extension - things
+* A conversational bot - things
+
+## Configuring a channel or group chat tab
+
+2-3 sentences overview on using it in this context
+
+### Tab requirements
 
 A configuration page informs the content page how it should render. Your application must reference the [Microsoft Teams JavaScript client SDK](foo.md) and call `microsoft.initialize()`. Additionally, your URLs must be secure HTTPS endpoints and available from the cloud. Below is a configuration page citation. It is available in full at [OurGitHubRepo](foo.md):
 
@@ -88,7 +96,7 @@ This code lets Teams know that the configuration requirements have been satisfie
 >* If a save handler was registered using `microsoftTeams.settings.registerOnSaveHandler()`, the callback must invoke `saveEvent.notifySuccess()` or `saveEvent.notifyFailure()` to indicate the outcome of the configuration.
 >* If no save handler was registered, the `saveEvent.notifySuccess()` call is automatically made immediately upon the user selecting the **Save** button. See [Troubleshoot your Microsoft Teams app](foo.md).
 
-## Get context data for your tab settings
+### Get context data for your tab settings
 
 Your tab might require contextual information to display relevant content. Contextual information can further enhance your tab's appeal by providing a more customized user experience.
 
@@ -98,11 +106,11 @@ The Teams [Context interface](~/javascript/api/@microsoft/teams-js/microsoftteam
 
 1. Use the [Teams SDK](foo.md) `microsoftTeams.getContext((context) =>{}` method.
 
-### Insert placeholders in the `configurationURL`
+#### Insert placeholders in the `configurationURL`
 
 Context interface placeholders can be added to your base `configurationUrl`. For example:
 
-#### Base Url
+##### Base Url
 
 ```json
 ...
@@ -153,9 +161,17 @@ When invoked, the `microsoftTeams.getContext((context) => {})` function retrieve
     ...
 ```
 
+## Configuring a messaging extension
+
+2-3 sentences, then link to ME docs
+
+## Configuring a bot
+
+2-3 sentences, then link to bot docs
+
 ## Context and Authentication
 
-You might require authentication before allowing a user to configure your tab or your content might include sources that have their own authentication protocols. See [Authenticate a user in a Microsoft Teams tab](foo.md) Context information can be used to help construct authentication requests and authorization page URLs. See [Microsoft Teams authentication flow for tabs](foo.md).
+You might require authentication before allowing a user to configure your app or your content might include sources that have their own authentication protocols. See [Authenticate a user in a Microsoft Teams tab](foo.md) Context information can be used to help construct authentication requests and authorization page URLs. See [Microsoft Teams authentication flow for tabs](foo.md).
 Make sure that all domains used in your tab pages are listed in the `manifest.json` `validDomains` array.
 
 ## Modify or remove a tab
