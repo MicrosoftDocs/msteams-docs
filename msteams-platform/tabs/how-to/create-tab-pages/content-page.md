@@ -44,7 +44,8 @@ For your tab to display in Teams, you must include the **Microsoft Teams JavaScr
 
 ### Using the SDK to interact with Teams
 
-**similar paragraph, with link to the page on this topic**
+The **Teams JavaScript client SDK**  and **Teams JavaScript Library* are part of the [Microsoft Teams developer platform](https://msdn.microsoft.com/microsoft-teams) and provide tools and processes to facilitate Teams application creation. The Teams client SDK is distributed as an npm package and the latest version can be found here:
+<https://www.npmjs.com/package/@microsoft/teams-js>. The source code for the SDK is located at <https://github.com/OfficeDev/microsoft-teams-library-js> and the library reference table is located at <https://foo.md>.
 
 ### Deep links
 
