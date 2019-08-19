@@ -15,13 +15,25 @@ App templates are production-ready apps for Microsoft Teams that are community d
 * **Customizable and extensible:** While all app templates are ready to deploy as they are, we provide the entire code base and deployment scripts so that you can easily customize or extend them to fit your unique needs.
 * **Detailed documentation & support:** All app templates are accompanied by end-to-end documentation on solution architecture, deployment, and configuration steps. The repositories are monitored as well, so please report any issues you encounter by raising an Issue on GitHub.
 
+## Company Communicator
+
+Company Communicator is a custom Teams app that enables corporate teams to create and send messages intended for multiple teams or large number of employees over chat allowing organization to reach employees right where they collaborate. Utilize this template for multiple scenarios such as new initiative announcements, employee onboarding, modern learning and development or organization-wide broadcasts.
+
+The app provides an easy interface for designated users to create, preview, collaborate and send messages.
+
+It provides a foundation to build custom targeted communication capabilities such as custom telemetry on how many users acknowledged or interacted with a message.
+
+[Get in on GitHub here](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
+
+![FAQ Plus gif](~/assets/images/CompanyCommunicatorCompose.png)
+
 ## FAQ Plus
 
 Conversational Q&A bots are an easy way to provide answers to frequently asked questions by users. However, most bots fail to engage with users in meaningful way because there is no human in the loop when the bot fails. FAQ bot is a friendly Q&A bot that brings a human in the loop when it is unable to help. One can ask the bot a question and the bot responds with an answer if it is contained in the knowledge base. If not, the bot allows the user to submit a query which then gets posted in a pre-configured team of experts who are help to provide support by acting upon the notifications from within their team itself.
 
-[Get it on GitHub here](https://github.com/OfficeDev/microsoft-teams-faqplusplus-app/wiki)
+[Get it on GitHub here](https://github.com/OfficeDev/microsoft-teams-faqplusplus-app)
 
-![FAQ Plus git](~/assets/images/FAQPlusEndUser.gif)
+![FAQ Plus gif](~/assets/images/FAQPlusEndUser.gif)
 
 ## List Search
 
