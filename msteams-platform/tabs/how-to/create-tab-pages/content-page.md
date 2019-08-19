@@ -41,7 +41,7 @@ For your page to display in Teams, you must include the [Microsoft Teams JavaScr
 ```
 
 >[!IMPORTANT]
->Don't copy/paste the `<script src="...">` URLs from this page, as it may not represent the latest version. To get the latest version of the SDK markup, always go to:
+>Don't copy/paste the `<script src="...">` URLs from this page, as it might not represent the latest version. To get the latest version of the SDK markup, always go to:
 [Microsoft Teams JavaScript API (via CDN)](foo.com).
 
 ## Accessing additional content
