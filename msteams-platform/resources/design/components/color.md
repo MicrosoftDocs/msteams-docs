@@ -7,7 +7,7 @@ keywords: teams design guidelines reference components color
 
 Using our approved neutral palette for backgrounds, notifications, text, and buttons will help your app feel more at home in Teams. Since Teams has two color themes (light and dark), it’s a good idea to make sure your app looks great in both themes.
 
-### $app-black (#16233A)
+### $app-black (#252423)
 
 Our most commonly-used text color. We use it at five levels of opacity for text. Text should mainly be used at 100%, 74%, 64% opacity since it is accessible. Text at 52% and 36% should be used sparingly since it is not accessible.
 
