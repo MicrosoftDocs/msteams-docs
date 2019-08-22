@@ -1,22 +1,26 @@
 ---
-title: Create a Content Page for Your Custom Tab
+title: Create a content page
 author: laujan
 description: 
-keywords: teams tabs group channel configurable 
+keywords: teams tabs group channel configurable static
 ms.topic: conceptual
-ms.author: laujan
+ms.author: v-laujan
 ---
 # Create a content page for your tab
 
-A custom tab allows you to enrich user experience by presenting your hosted web content within the Teams platform in an easily accessible format. Whether you present your tab within the personal or channel/group scope, it is essentially an HTML page—the difference is how your tab content URL is determined. See [What are custom tabs?](foo.md).
+A content page is a webpage that is rendered within the Teams client. Typically these are part of:
+
+* A personal-scoped custom tab - In this instance the content page is the first page the user encounters.
+* A channel/group custom tab - After the user pins and configures the tab in the appropriate context, the content page is displayed.
+* A task module - You can create a content page and embed it as a webview inside a task module. The page will be rendered inside the modal popup.
 
 ## Tab content and style guidelines
 
-Your tab's overall objective should be to provide access to meaningful and engaging content that has a practical value and an evident purpose. That does not mean that you should forego a pleasing style but, you should focus on minimizing clutter by making your tab design clean, navigation intuitive, and content immersive. See [Content and conversations, all at once using tabs](~/resources/design/framework/tabs) and [Microsoft Teams app approval process guidance](~/platform/publishing/office-store-approval#tabs)
+Your tab's overall objective should be to provide access to meaningful and engaging content that has a practical value and an evident purpose. That does not mean that you should forego a pleasing style, but you should focus on minimizing clutter by making your tab design clean, navigation intuitive, and content immersive. See [Content and conversations, all at once using tabs](~/resources/design/framework/tabs) and [Microsoft Teams app approval process guidance](~/platform/publishing/office-store-approval#tabs)
 
 ## Integrate your code with Teams
 
-For your tab to display in Teams, you must include the **Microsoft Teams JavaScript client SDK** and include a call to `microsoftTeams.initialize()` after your page loads. That is how your tab and the Teams client communicate:
+For your page to display in Teams, you must include the [Microsoft Teams JavaScript client SDK](~/foo.md) and include a call to `microsoftTeams.initialize()` after your page loads. That is how your page and the Teams client communicate:
 
 ```html
 <!DOCTYPE html>
