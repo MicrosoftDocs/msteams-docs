@@ -45,7 +45,17 @@ For your tab to display in Teams, you must include the **Microsoft Teams JavaScr
 ### Using the SDK to interact with Teams
 
 The **Teams JavaScript client SDK**  and **Teams JavaScript Library* are part of the [Microsoft Teams developer platform](https://msdn.microsoft.com/microsoft-teams) and provide tools and processes to facilitate Teams application creation. The Teams client SDK is distributed as an npm package and the latest version can be found here:
-<https://www.npmjs.com/package/@microsoft/teams-js>. The source code for the SDK is located at <https://github.com/OfficeDev/microsoft-teams-library-js> and the library reference table is located at <https://foo.md>.
+<https://www.npmjs.com/package/@microsoft/teams-js>. The source code for the SDK is located at <https://github.com/OfficeDev/microsoft-teams-library-js>. The following table lists the library functions most commonly used with tabs:
+
+| module         | function  | description          |
+| -----          | -----     | -----     | -----    |
+| Teams API     |            |      |
+|                | `function initialize(callback?: () => void): void` | Initializes the library. This must be called before any other SDK calls 
+||`function getContext(callback: (context: Context) => void): void`| Gets the current context via a callback that retrieves the Context object.|
+|| `function registerFullScreenHandler(handler: (isFullScreen: boolean) => void): void` |The handler to invoke when the user toggles full-screen view for a tab.|
+||`function registerChangeSettingsHandler(handler: () => void): void` |The handler to invoke when the tab settings is enabled for reconfiguration|
+|| `function getTabInstances(callback: (tabInfo: TabInformation) => void,tabInstanceParameters?: TabInstanceParameters,): void` |Gets **this** user's tab owned by **this** app. The callback retrieves the TabInstanceParameters object | 
+||`function getMruTabInstances(callback: (tabInfo: TabInformation) => void,tabInstanceParameters?: TabInstanceParameters): void`|Gets the most recently used tabs for **this** user. The callback retrieves the `TabInformation` object; `tabInstanceParameters` is an optional parameter.
 
 ### Deep links
 
