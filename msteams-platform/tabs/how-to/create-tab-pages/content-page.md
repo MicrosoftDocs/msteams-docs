@@ -52,7 +52,7 @@ For your page to display in Teams, you must include the [Microsoft Teams JavaScr
 
 The **Teams JavaScript client SDK**  and **Teams JavaScript Library** are part of the [Microsoft Teams developer platform](https://msdn.microsoft.com/microsoft-teams) and provide tools and processes to facilitate Teams application creation. The Teams client SDK is distributed as an npm package. The latest version can be found here:
 <https://www.npmjs.com/package/@microsoft/teams-js>. The Teams Library is located at <https://github.com/OfficeDev/microsoft-teams-library-js>.
-The following table outlines the Teams Library functions typically used in tabs development:
+The following table outlines the Teams Library functions typically used in tabs development:</br></br>
 
 | Module         | Function  | Description          | Documentation|
 | -----          | -----     | -----     | -----    | -----        |
