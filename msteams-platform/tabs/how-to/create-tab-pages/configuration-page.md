@@ -24,7 +24,7 @@ A configuration page informs the content page how it should render. Your applica
 
 ```html
 <head>
-<script src='https://statics.teams.microsoft.com/sdk/v1.4.3/js/MicrosoftTeams.min.js'></script>
+<script src='https://statics.teams.microsoft.com/sdk/v1.5.0/js/MicrosoftTeams.min.js'></script>
  </head>
     <body>
     ...
