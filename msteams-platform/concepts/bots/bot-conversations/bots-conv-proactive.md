@@ -2,31 +2,68 @@
 title: Proactive messages
 description: Describes bots can start a conversation in Microsoft Teams
 keywords: teams scenarios proactive messaging conversation bot
-ms.date: 05/20/2019
 ---
 # Proactive messaging for bots
 
 A proactive message is a message that is sent by a bot to start a conversation. You may want your bot to start a conversation for a number of reasons, including:
 
-- Welcome messages for personal bot conversations
-- Poll responses
-- External event notifications
+*Welcome messages for personal bot conversations
+*Poll responses
+*External event notifications
 
-Sending a message to start a new conversation thread is different than sending a message in response to an existing conversation: when your bot starts a new a conversation, there is no pre-existing conversation to post the message to.
+Sending a message to start a new conversation thread is different than sending a message in response to an existing conversation: when your bot starts a new a conversation, there is no pre-existing conversation to post the message to. In order to send a proactive message you need to:
 
-When creating proactive messages you **must** call `MicrosoftAppCredentials.TrustServiceUrl`, and pass in the service URL before creating the `ConnectorClient` you will use to send the message. If you do not, your app will receive a `401: Unauthorized` response. See [the sample below](#net-example-from-this-sample).
+1. [Decide what you're going to say](#best-practices-for-proactive-messaging)
+1. [Obtain the user's unique Id and tenant Id](#obtain-necessary-user-information)
+1. [Send the message](#examples)
 
-## Starting personal conversations
+When creating proactive messages you **must** call `MicrosoftAppCredentials.TrustServiceUrl`, and pass in the service URL before creating the `ConnectorClient` you will use to send the message. If you do not, your app will receive a `401: Unauthorized` response. See [the samples below](#net-example-from-this-sample).
 
-Bots can create new conversations with an individual Microsoft Teams user as long as your bot has user information obtained through previous addition in a personal, groupChat or team scope. This information enables your bot to proactively notify them. For instance, if your bot was added to a team, it could query the team roster and send users individual messages in personal chats, or a user could @mention another user to trigger the bot to send that user a direct message.
+## Best practices for proactive messaging
 
-You need the user’s *unique ID* and *tenant ID* to send a proactive message. Typically, these are   obtained from a team context, either by [fetching the team roster](~/concepts/bots/bots-context.md#fetching-the-team-roster) or when a user [interacts with your bot in a channel](~/concepts/bots/bot-conversations/bots-conv-channel.md). For bots that have already been added to the user's personal scope, you might have cached user information via the `conversationUpdate` event (see [Bot or user added to a team](~/concepts/bots/bots-notifications.md#team-member-or-bot-addition)).
+Sending proactive messages to users can be a very effective way to communicate with your users. However, from your user's perspective this message can appear to come to them completely unprompted, and in the case of welcome messages will be the first time they've interacted with your app. As such, it is very important to use this functionality sparingly (don't spam your users), and to provide them with enough information to let them understand why they are being messaged.
 
-You should use this capability sparingly and consider the user experience. Be sure not to spam users and to send only the minimum amount of information and number of messages needed to complete your scenario. As a best practice, we also recommend indicating to the user why he or she is receiving the message. For instance, it may be due to action taken by another user in a common team. Here is an example of this practice from Karma:
+Proactive messages generally fall into one of two categories, welcome messages or notifications.
 
-![Example of providing a reason for a proactive message](~/assets/images/bots/karma-proactive-message.png)
+### Welcome messages
 
-### Example
+When using proactive messaging to send a welcome message to a user you must keep in mind that for most people receiving the message they will have no context for why they are receiving it. This is also the first time they will have interacted with your app; it is your opportunity to create a good first impression. The best welcome messages will include:
+
+* **Why are they receiving this message.** It should be very clear to the user why they are receiving the message. If your bot was installed in a channel and you sent a welcome message to all users, let them know what channel it was installed in and potentially who installed it.
+* **What do you offer.** What can they do with your app? What value can you bring to them?
+* **What should they do next.** Invite them to try out a command, or interact with your app in some way.
+
+### Notification messages
+
+When using proactive messaging to send notifications you need to make sure your users have a clear path to take common actions based on your notification, and a clear understanding of why the notification ocurred. Good notification messages will generally include:
+
+* **What happened.** A clear indication of what happened to cause the notification.
+* **What it happened to.** It should be clear what item/thing was updated to cause the notification.
+* **Who did it.** Who took the action that caused the notification to be sent.
+* **What they can do about it.** Make it easy for your users to take actions based on your notifications.
+* **How they can opt out.** You need to provide a path for users to opt out of additional notifications.
+
+## Obtain necessary user information
+
+Bots can create new conversations with an individual Microsoft Teams user by obtaining the user’s *unique ID* and *tenant ID.* You can obtain these values using one of the following methods:
+
+* By [fetching the team roster](~/concepts/bots/bots-context.md#fetching-the-team-roster) from a channel your app is installed in.
+* By caching them when a user [interacts with your bot in a channel](~/concepts/bots/bot-conversations/bots-conv-channel.md).
+* When a users is [@mentioned in a channel conversation](~/concepts/bots/bot-conversations/bots-conv-channel#-mentions).
+* By caching them when you [receive the `conversationUpdate`](~/concepts/bots/bots-notifications.md#team-member-or-bot-addition) event when your app is installed in a personal scope.
+
+### Proactively install your app using Graph
+
+> [!Note]
+> Proactively installing apps using graph is currently in beta.
+
+Occasionally it may be necessary to proactively message users that have not installed or interacted with your app previously. For example, you want to use the [company communicator](~/samples/app-templates#company-communicator) to send messages to your entire organization. For this scenario you can use the Graph API to proactively install your app for your users, then cache the necessary values from the `conversationUpdate` event your app will receive upon install.
+
+You can only install apps that are in your organizational app catalogue, or the Teams app store.
+
+See [Install apps for users](~/foo.md) in the Graph documentation for complete details. There is also a [sample in .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
+
+## Examples
 
 Be sure that you authenticate and have a bearer token before creating a new conversation using the REST API.
 
