@@ -2,7 +2,6 @@
 title: Get context for your tab
 description: Describes how to get user context to your tabs
 keywords: teams tabs user context
-ms.date: 02/06/2019
 ---
 
 # Get context for your Microsoft Teams tab
@@ -55,7 +54,7 @@ And the signed-in user has the following attributes:
 
 * Their username is 'user@example.com'
 * Their company tenant ID is 'e2653c-etc'
-* They are a member of the Office 365 group with id '00209384-etc' 
+* They are a member of the Office 365 group with id '00209384-etc'
 * The user has set their Teams theme to 'dark'
 
 When they configure your tab, Teams calls this URL:
@@ -87,9 +86,24 @@ The context variable will look like the following example.
     "theme": "The current UI theme: default, dark, contrast",
     "isFullScreen": "Indicates whether the tab is in full-screen mode",
     "userLicenseType": "Indicates the user licence type in the given SKU (for example, student or teacher)",
-    "tenantSKU": "Indicates the SKU category of the tenant (for example, EDU)"
+    "tenantSKU": "Indicates the SKU category of the tenant (for example, EDU)",
+    "channelType": "microsoftTeams.ChannelType.Private | microsoftTeams.ChannelType.Regular"
 }
 ```
+
+## Retrieving context in private channels
+
+> [!Note]
+> Private channels are currently in developer preview.
+
+When your content page is loaded in a private channel, the data you receive from the `getContext` call will be obfuscated to protect the privacy of the channel. The following fields are changed when your content page is in a private channel. If your page makes use of any of the values below, you'll need to check the `channelType` field to determine if your page is loaded in a private channel, and respond appropriately.
+
+* `groupId` - Undefined for private channels
+* `teamId` - Set to the threadId of the private channel
+* `teamName` - Set to the name of the private channel
+* `teamSiteUrl` - Set to the URL of a distinct, unique SharePoint site for the private channel
+* `teamSitePath` - Set to the path of a distinct, unique SharePoint site for the private channel
+* `teamSiteDomain` - Set to the domain of a distinct, unique SharePoint site domain for the private channel
 
 ## Theme change handling
 
