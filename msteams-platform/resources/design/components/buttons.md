@@ -23,7 +23,7 @@ Desktop Client
 [!include[Button states](~/includes/design/buttons-image-states.html)]
 
 Mobile Client
-[!include[Mobile button states](~/includes/design/buttons-mobile-image-states)]
+[!include[Mobile button states](~/includes/design/buttons-mobile-image-states.html)]
 
 Dialog buttons
 [!include[Dialog buttons](~/includes/design/buttons-image-dialog.html)]
