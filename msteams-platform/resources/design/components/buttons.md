@@ -44,11 +44,11 @@ In some cases, you can pair an icon and text to increase emphasis.
 
 ### Miscellaneous buttons
 
-Desktop Client
+Desktop Client<br/>
 Radial buttons, checkboxes, and toggles.
 [!include[Other buttons](~/includes/design/buttons-image-others.html)]
 
-Mobile Client
+Mobile Client<br/>
 Radial buttons, checkboxes, and toggles.
 [!include[Other buttons](~/includes/design/buttons-image-mobile-others.html)]
 
