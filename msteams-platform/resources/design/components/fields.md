@@ -48,3 +48,13 @@ Flyouts are contextual and should be placed above, below, or beside the element 
 
 The header remains in place to give context to the content being scrolled.
 [!include[Flyouts scrolling](~/includes/design/flyouts-image-scrolling.html)]
+
+## Mobile fields and flyout menus
+
+Fields are text-entry boxes that accept input from users. Flyout menus are horizontal pop-up windows that appear from the top pane and can be used to show more detail about an item.
+
+##### List Controls
+
+[!include[](~/includes/design/fields-mobile-image)]
+
+##### Field Controls
