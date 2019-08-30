@@ -50,7 +50,7 @@ Radial buttons, checkboxes, and toggles.
 
 Mobile Client
 Radial buttons, checkboxes, and toggles.
-[!include[Other buttons](~/includes/design/buttons-image-mobile-others)]
+[!include[Other buttons](~/includes/design/buttons-image-mobile-others.html)]
 
 ---
 
