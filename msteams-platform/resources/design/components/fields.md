@@ -55,6 +55,8 @@ Fields are text-entry boxes that accept input from users. Flyout menus are horiz
 
 ### Field Controls
 
+[include[Mobile fields](~/includes/design/fields-mobile-image.html)]
+
 ### Flyout menu list controls
 
-[!include[Flyout menu controls](~/includes/design/flyout-menu-mobile-image.html)]
+[!include[Mobile flyout menu controls](~/includes/design/flyout-menu-mobile-image.html)]
