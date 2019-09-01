@@ -23,7 +23,7 @@ The app provides an easy interface for designated users to create, preview, coll
 
 It provides a foundation to build custom targeted communication capabilities such as custom telemetry on how many users acknowledged or interacted with a message.
 
-[Get in on GitHub here](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
+[Get it on GitHub here](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
 
 ![FAQ Plus gif](~/assets/images/CompanyCommunicatorCompose.png)
 
