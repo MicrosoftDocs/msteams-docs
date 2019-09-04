@@ -5,7 +5,7 @@ keywords: teams design guidelines reference components typography
 ---
 # Typography
 
-Typography should be clear and purposeful. Emphasize important information and avoid using multiple fonts and sizes to reduce confusion. We recommend using sentence case and avoiding the usage of all caps for localization and legibility.
+Typography should be clear and purposeful. It should emphasize important information and, to reduce confusion, avoid using multiple fonts and sizes. For localization and legibility, we recommend using sentence case and avoiding the usage of all caps.
 
 ## Desktop clients
 
@@ -27,4 +27,3 @@ Please use the following type ramp:
   See the Pen <a href='https://codepen.io/msteams/pen/qBWVWjw/'>Microsoft Teams IOS design guidelines  - typography</a> by Bill Bliss
   (<a href='https://codepen.io/msteams'>@msteams</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
-
