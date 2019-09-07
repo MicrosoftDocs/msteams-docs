@@ -10,7 +10,7 @@ Cards used by bots and messaging extensions in Teams support the following activ
 
 | Type | Action |
 | --- | --- |
-| `openUrl` | Opens a URL in the built-in browser. |
+| `openUrl` | Opens a URL in the default browser. |
 | `messageBack` | Sends a message and payload to the bot (from the user who clicked the button or tapped the card) and sends a separate message to the chat stream. |
 | `imBack`| Sends a message to the bot (from the user who clicked the button or tapped the card). This message (from user to bot) is visible to all conversation participants. |
 | `invoke` | Sends a message and payload to the bot (from the user who clicked the button or tapped the card). This message is not visible. |
