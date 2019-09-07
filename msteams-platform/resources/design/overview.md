@@ -46,7 +46,3 @@ The activity feed displays notifications for your users. [Learn more](~/resource
 Messaging extensions are quick and easy shortcuts to key components of your service. [Learn more](~/resources/design/framework/compose-extensions)
 
 <img width="530" src="~/assets/images/get-started/06_homepage_compose-extensions.png" /><br/><br/>
-
-## Ready to get started
-
-The framework page has all the information you need to build for our platform. [Get Started](~/resources/design/framework/basics).
