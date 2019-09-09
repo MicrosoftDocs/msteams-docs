@@ -57,7 +57,7 @@ As always, the project's README file should have more information on specific ne
 | Sample | Description
 |--------|-------------
 | [Outgoing Webhook for C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook) | Illustrates how to create an **Outgoing Webhook** for Microsoft Teams in C#/.NET.
-| [Outgoing Webhook for Node.js](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook) | Illustrates how to create a simple **Outgoing Webhook** for Microsoft Teams in ~50 lines of Node.js code.
+| [Outgoing Webhook for Node.js](https://github.com/OfficeDev/msteams-samples-outgoing-webhook-nodejs) | Illustrates how to create a simple **Outgoing Webhook** for Microsoft Teams in ~50 lines of Node.js code.
 
 ## Connectors
 
