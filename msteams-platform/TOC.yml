@@ -230,22 +230,16 @@
       href: ./resources/design/framework/cards.md
     - name: Command box
       href: ./resources/design/framework/command-box.md
-#    - name: Components
-#      items:
-#      - name: Color
-#        href: ./resources/design/components/color.md
-#      - name: Buttons, links, and controls
-#        href: ./resources/design/components/buttons.md
-#      - name: Fields and flyouts
-#        href: ./resources/design/components/fields.md
-#      - name: Dialogs
-#        href: ./resources/design/components/dialogs.md
-#      - name: Typography
-#        href: ./resources/design/components/typography.md
-#      - name: Themes
-#        href: ./resources/design/components/themes.md
-#    - name: Resources
-#      href: ./resources/design/resources.md
+  - name: Components
+    items:
+    - name: Color
+      href: ./resources/design/components/color.md
+    - name: Buttons, links, and controls
+      href: ./resources/design/components/buttons.md
+    - name: Fields and flyouts
+      href: ./resources/design/components/fields.md
+    - name: Typography
+      href: ./resources/design/components/typography.md
   - name: Best practices and tips
     href: ./resources/best-practices/best-practices.md
     items:
