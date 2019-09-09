@@ -5,7 +5,7 @@ keywords: teams bots cards actions
 ---
 # Card actions
 
-Cards used by bots and messaging extensions in Teams support the following activity ([`CardAction`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards)) types. Note that these actions differ from `potentialActions` for Office 365 Connector cards when used from Connectors.
+Cards used by bots and messaging extensions in Teams support the following activity ([`CardAction`](https://docs.microsoft.com/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards)) types. Note that these actions differ from `potentialActions` for Office 365 Connector cards when used from Connectors.
 
 | Type | Action |
 | --- | --- |
@@ -18,10 +18,10 @@ Cards used by bots and messaging extensions in Teams support the following activ
 > [!NOTE]
 >* Teams does not support `CardAction` types not listed in the preceding table.
 >* Teams does not support the `potentialActions` property.
->* Card actions are different than [suggested actions](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button) in Bot Framework/Azure Bot Service. Suggested actions are not supported in Microsoft Teams: if you want buttons to appear on a Teams bot message, use a card.
+>* Card actions are different than [suggested actions](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button) in Bot Framework/Azure Bot Service. Suggested actions are not supported in Microsoft Teams: if you want buttons to appear on a Teams bot message, use a card.
 >* If you're using a card action as part of a messaging extension, the actions will be not work until the card is submitted to the channel (they will not work while the card is in the compose message box).
 
-Teams also supports [Adaptive Cards actions](~/concepts/cards/cards-actions#adaptive-card-actions), which are only used by Adaptive Cards. These actions are listed in their own section at the end of this reference.
+Teams also supports [Adaptive Cards actions](~/concepts/cards/cards-actions.md#adaptive-card-actions), which are only used by Adaptive Cards. These actions are listed in their own section at the end of this reference.
 
 ## openUrl
 
@@ -211,7 +211,7 @@ The top-level `replyToId` property contains the ID of the message that the card 
 
 ## signin
 
-Initiates an OAuth flow, allowing bots to connect with secure services, as described in more detail here: [Authentication flow in bots](~/concepts/authentication/auth-flow-bot).
+Initiates an OAuth flow, allowing bots to connect with secure services, as described in more detail here: [Authentication flow in bots](~/concepts/authentication/auth-flow-bot.md).
 
 ## Adaptive Cards actions
 
