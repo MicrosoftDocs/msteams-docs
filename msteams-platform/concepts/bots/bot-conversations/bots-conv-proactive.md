@@ -21,7 +21,7 @@ When creating proactive messages you **must** call `MicrosoftAppCredentials.Trus
 
 ## Best practices for proactive messaging
 
-Sending proactive messages to users can be a very effective way to communicate with your users. However, from your user's perspective this message can appear to come to them completely unprompted, and in the case of welcome messages will be the first time they've interacted with your app. As such, it is very important to use this functionality sparingly (don't spam your users), and to provide them with enough information to let them understand why they are being messaged.
+Sending proactive messages to users can be a very effective way to communicate with your users. However, from their perspective this message can appear to come to them completely unprompted, and in the case of welcome messages will be the first time they've interacted with your app. As such, it is very important to use this functionality sparingly (don't spam your users), and to provide them with enough information to let them understand why they are being messaged.
 
 Proactive messages generally fall into one of two categories, welcome messages or notifications.
 
@@ -49,15 +49,15 @@ Bots can create new conversations with an individual Microsoft Teams user by obt
 
 * By [fetching the team roster](~/concepts/bots/bots-context.md#fetching-the-team-roster) from a channel your app is installed in.
 * By caching them when a user [interacts with your bot in a channel](~/concepts/bots/bot-conversations/bots-conv-channel.md).
-* When a users is [@mentioned in a channel conversation](~/concepts/bots/bot-conversations/bots-conv-channel#-mentions).
-* By caching them when you [receive the `conversationUpdate`](~/concepts/bots/bots-notifications.md#team-member-or-bot-addition) event when your app is installed in a personal scope.
+* When a users is [@mentioned in a channel conversation](~/concepts/bots/bot-conversations/bots-conv-channel.md#-mentions) the bot is a part of.
+* By caching them when you [receive the `conversationUpdate`](~/concepts/bots/bots-notifications.md#team-member-or-bot-addition) event when your app is installed in a personal scope, or new members are added to a channel or group chat that
 
 ### Proactively install your app using Graph
 
 > [!Note]
 > Proactively installing apps using graph is currently in beta.
 
-Occasionally it may be necessary to proactively message users that have not installed or interacted with your app previously. For example, you want to use the [company communicator](~/samples/app-templates#company-communicator) to send messages to your entire organization. For this scenario you can use the Graph API to proactively install your app for your users, then cache the necessary values from the `conversationUpdate` event your app will receive upon install.
+Occasionally it may be necessary to proactively message users that have not installed or interacted with your app previously. For example, you want to use the [company communicator](~/samples/app-templates.md#company-communicator) to send messages to your entire organization. For this scenario you can use the Graph API to proactively install your app for your users, then cache the necessary values from the `conversationUpdate` event your app will receive upon install.
 
 You can only install apps that are in your organizational app catalogue, or the Teams app store.
 
