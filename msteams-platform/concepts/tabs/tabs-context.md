@@ -93,7 +93,7 @@ The context variable will look like the following example.
 ## Retrieving context in private channels
 
 > [!Note]
-> Private channels are currently in developer preview.
+> Private channels are currently in private developer preview.
 
 When your content page is loaded in a private channel, the data you receive from the `getContext` call will be obfuscated to protect the privacy of the channel. The following fields are changed when your content page is in a private channel. If your page makes use of any of the values below, you'll need to check the `channelType` field to determine if your page is loaded in a private channel, and respond appropriately.
 
