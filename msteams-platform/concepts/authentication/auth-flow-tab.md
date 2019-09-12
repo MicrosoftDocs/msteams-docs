@@ -2,7 +2,6 @@
 title: Authentication flow for tabs
 description: Describes authentication flow in tabs
 keywords: teams authentication flow tabs
-ms.date: 02/28/2018
 ---
 # Microsoft Teams authentication flow for tabs
 
@@ -42,5 +41,5 @@ For sample code showing the tab authentication process see:
 
 For a detailed implementation walkthrough for tab authentication targeting Azure Active Directory see:
 
-* [Authenticate a user in a Microsoft Teams tab](~/concepts/authentication/auth-tab-AAD)
-* [Silent authentication](~/concepts/authentication/auth-silent-AAD)
+* [Authenticate a user in a Microsoft Teams tab](~/concepts/authentication/auth-tab-AAD.md)
+* [Silent authentication](~/concepts/authentication/auth-silent-AAD.md)
