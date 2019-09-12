@@ -14,6 +14,7 @@ For your Teams app to be approved:
 * Any material that you associate with your experience, such as descriptions and support documentation, must be accurate. Use correct spelling, capitalization, punctuation, and grammar in your descriptions and materials.
 * It must pass all current [AppSource validation policies](https://dev.office.com/officestore/docs/validation-policies) for Teams tabs and bots. Please note that these policies are subject to change.
 * For tabs, it must provide value to users outside of what is possible by simply pinning your website in Teams. This means that, at minimum, it must remove extraneous chrome and disallow navigating outside the configured context. See the [Microsoft Teams Design Guidelines](~/resources/design/overview.md) for more guidance.
+* Your app must function across all Teams clients, including mobile. See [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md).
 
 When the validation process is complete, you will receive a message to let you know that either your Teams experience is approved or it fails one of the stated policies.
 
@@ -43,6 +44,7 @@ Apps must provide a clear, simple sign in/out and (when appropriate) sign-up exp
   * Authorize an account/service => de/un-authorize the account/service
   * Register an account/service => un-register the account/service
 * If your app requires an account or service, you must provide a way for the user to sign-up or request sign-up. An exception can be sought for a sign-up process if you app fits in the "Enterprise" app category.
+* Sign in / sign out functionality must work on mobile clients. Ensure you've upgraded your Teams JavaScript SDK to version 1.4.1 or later.
 
 For additional information on authentication see:
 
@@ -106,6 +108,8 @@ It is highly recommended to have help/FAQ link for your Teams app and to provide
 * For your tab configuration page, be sure to provide "About" links and proper guidance. This page is the first thing the user sees, so ensure that a new user understands what to do.
 * If a response to an action takes more than three seconds, you must provide a loading message or warning.
 * The core functionality of your tab offering must exist within Teams and not outside of Teams.
+* Ensure you are using version 1.4.1 or later of the Teams JavaScript SDK.
+* Your tabs should work well on mobile devices, including authentication and responsive design.
 
 ### Miscellaneous
 
