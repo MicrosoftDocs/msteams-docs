@@ -21,12 +21,14 @@ All tab content, including configuration, content, and tab-removal pages must me
 > Hitting problems? See the [troubleshooting guide](~/troubleshoot/troubleshoot.md).
 >
 > [!TIP]
-> For developers using TypeScript, Microsoft Teams provides a [definition file](https://statics.teams.microsoft.com/sdk/v1.0/types/MicrosoftTeams.d.ts) to enable IntelliSense or similar support from your code editor as well as compile-time type checking as part of your build.
+> For developers using TypeScript, Microsoft Teams provides a [definition file](https://statics.teams.microsoft.com/sdk/v1.2/types/MicrosoftTeams.d.ts) to enable IntelliSense or similar support from your code editor as well as compile-time type checking as part of your build.
 
 ## Tabs on mobile clients
 
 > [!Note]
 > Static tabs on mobile are currently in [developer preview](~/resources/dev-preview/developer-preview-intro.md). Static tabs on a mobile client with developer preview enabled will open their content URL within the Teams client.
+>
+>
 
 Tabs behave differently on the iOS and Android Teams clients than on the Teams desktop or web clients.
 
@@ -37,13 +39,14 @@ What appears in a tab on desktop/web is defined by the value of `contentUrl`: Te
 ### Mobile client behavior
 
 > [!Important]
-> Full support for tabs on mobile clients is coming soon. To prepare for this change you should follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md) when creating your tabs. Personal apps (static tabs) are currently available in [developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> Full support for tabs on mobile clients is coming soon. To prepare for this change you should follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md) when creating your tabs. Personal apps (static tabs) are currently available in [developer preview](~/resources/dev-preview/developer-preview-intro.md). and channel / group chat tabs are available in the `...` overflow menu for the tab.
 >
 > When full support for tabs is released:
 >
 > * All tabs will always be available on mobile
 > * Your `contentUrl` **will be loaded in the mobile Teams client**.
 > * For channel/group tabs, users can still open your tab in a separate browser via your `websiteUrl`, however your `contentUrl` will be loaded first.
+> * If your tab uses authentication, you must upgrade your Teams JavaScript SDK to version 1.4.1 or later, or authentication will fail.
 
 For group and channel (configurable) tabs, the mobile clients only show tabs that have a value for `websiteUrl`. If you want your tab to appear on the Teams mobile clients, you must set the value of `websiteUrl`. Personal (static) tabs are not available on mobile clients.
 
