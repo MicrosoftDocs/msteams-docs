@@ -348,7 +348,7 @@
           name: 'Create an incoming webhook'
           href: foo.md
         -
-          name: 'Create a outgoing webhook'
+          name: 'Create an outgoing webhook'
           href: foo.md
         -
           name: 'Create an O365 Connector'
@@ -388,8 +388,8 @@
           name: 'Create an incoming webhook'
           href: foo.md
         -
-          name: 'Create a outgoing webhook'
-          href: foo.md
+          name: 'Create an outgoing webhook'
+          href: webhooks/Add-outgoing-webhooks-to-Microsoft-Teams.md
         -
           name: 'Create an O365 Connector'
           href: foo.md
