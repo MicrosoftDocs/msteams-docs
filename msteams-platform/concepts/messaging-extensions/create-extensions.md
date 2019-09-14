@@ -2,7 +2,6 @@
 title: Initiate actions with messaging extensions
 description: Create Action-based messaging extensions to allow users to trigger external services
 keywords: teams messaging extensions messaging extensions search
-ms.date: 05/20/2019
 ---
 
 # Initiate actions with messaging extensions
@@ -300,7 +299,65 @@ Just like in the adaptive card flow your service will be send a `fetchTask` even
 }
 ```
 
-The bot can also respond with an auth/config response if the user needs to authenticate or configure the extension before getting the user input.
+### Request to install your conversational bot
+
+If your app also contains a conversational bot, it may be necessary to ensure that your bot is installed in the conversation before loading your task module. This can be useful in situations where you need to get additional context for you task module. For example, you may need to fetch the roster to populate a people picker control, or the list of channels in a team.
+
+To facilitate this flow, when your messaging extension first receives the `composeExtension/fetchTask` invoke check to see if your bot is installed in the current context (you could accomplish this by attempting the get roster call, for example). If your bot is not installed, you return an Adaptive Card with an action that requests the user to install your bot See the example below. Note that this requires the user to have permission to install apps in that location; if they cannot they will be presented with a message asking them to contact their administrator.
+
+Here's an example of the response:
+
+```json
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Looks like you haven't used Disco in this team/chat"
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "Continue",
+      "data": {
+        "msteams": {
+          "justInTimeInstall": true
+        }
+      }
+    }
+  ],
+  "version": "1.0"
+}
+```
+
+Once the user completes the installation, your bot will receive another invoke message with `name = composeExtension/submitAction`, and `value.data.msteams.justInTimeInstall = true`.
+
+Here's an example of the invoke:
+
+```json
+{
+  "value": {
+    "commandId": "giveKudos",
+    "commandContext": "compose",
+    "context": {
+      "theme": "default"
+    },
+    "data": {
+      "msteams": {
+        "justInTimeInstall": true
+      }
+    }
+  },
+  "conversation": {
+    "id": "19:7705841b240044b297123ad7f9c99217@thread.skype"
+  },
+  "name": "composeExtension/submitAction",
+  "imdisplayname": "Bob Smith"
+}
+```
+
+You should respond to this invoke with the same task response you would have responded with if the bot was already installed.
 
 ## Responding to submit
 
