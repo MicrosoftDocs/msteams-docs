@@ -6,7 +6,7 @@ ms.date: 02/28/2018
 ---
 # Silent authentication
 
-> ![Note]
+> [!NOTE]
 > For authentication to work for your tab on mobile clients, you need to ensure you're using at least the 1.4.1 version of the Teams JavaScript SDK.
 
 Silent authentication in Azure Active Directory (Azure AD) is a simplified form of single sign-on (SSO). Its purpose is to minimize the number of times a user needs to enter login credentials while using your app.
