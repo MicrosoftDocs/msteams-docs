@@ -23,11 +23,11 @@ Incoming webhooks are Teams connectors that provide a simple way for an external
 |Scoped Configuration|Incoming webhooks are scoped and configured at the channel level (e.g., outgoing webhooks are scoped and configured at the team level).|
 |Secure resource definitions|Messages are formatted as JSON payloads. This declarative messaging structure prevents the injection of malicious code as there is no code execution on the client.|
 |Actionable messaging support|If you choose to send messages via cards, you must use the **actionable message card** format. Actionable message cards are supported in all Office 365 groups including Teams. Here are links to the [Legacy actionable message card reference](~/outlook/actionable-messages/message-card-reference) and the [Message card playground](https://messagecardplayground.azurewebsites.net).|
-|Independent HTTPS messaging support| Cards are a great way to present information in a clear and consistent way, but *you do not have to use cards to send messages via a Teams connector*. Any tool or framework that can send HTTPS POST requests can send messages to Teams via an incoming webhook. For example, PowerShell has two commands to make HTTPS requests to a RESTful web service: [Invoke-RestMethod](~/powershell/module/microsoft.powershell.utility/invoke-restmethod?view=powershell-6#description) and [Invoke-WebRequest](~/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6#description). *See also* [Training Content: Incoming webhook demo](https://github.com/OfficeDev/TrainingContent/tree/master/Teams/05%20Microsoft%20Teams%20apps%20-%20Advanced%20Techniques/Demos/03-incoming-webhook#create-a-simple-connector-card-message-to-the-webhook).|
+|Independent HTTPS messaging support| Cards are a great way to present information in a clear and consistent way, but *you do not have to use cards to send messages via a Teams connector*. Any tool or framework that can send HTTPS POST requests can send messages to Teams via an incoming webhook. For example, PowerShell has two commands to make HTTPS requests to a RESTful web service: [Invoke-RestMethod](~/powershell/module/microsoft.powershell.utility/invoke-restmethod.md?view=powershell-6#description) and [Invoke-WebRequest](~/powershell/module/microsoft.powershell.utility/invoke-webrequest.md?view=powershell-6#description). *See also* [Training Content: Incoming webhook demo](https://github.com/OfficeDev/TrainingContent/tree/master/Teams/05%20Microsoft%20Teams%20apps%20-%20Advanced%20Techniques/Demos/03-incoming-webhook#create-a-simple-connector-card-message-to-the-webhook).|
 |Markdown support|All text fields in actionable messaging cards support basic Markdown. **Don't use HTML markup in your cards**. HTML is ignored and treated as plain text.|
 
 > [!Note]  
-> Teams bots, messaging extensions, and the Bot Framework support Adaptive Cards, an open cross-card platform framework. Teams connectors do not currently support Adaptive Cards. *See* [Support for Adaptive cards](~/microsoftteams/platform/concepts/cards/cards-reference#support-for-adaptive-cards). However, it is possible to create a [flow](https://flow.microsoft.com/en-us/blog/microsoft-flow-in-microsoft-teams/) that posts adaptive cards to a Teams channel. For more information, *see* [Use adaptive cards in Microsoft Teams](~/flow/create-adaptive-cards-teams) and [Adaptive cards for Microsoft Teams](https://flow.microsoft.com/en-us/blog/adaptive-cards-for-microsoft-teams-microsoft-flow-us-government-now-available/).
+> Teams bots, messaging extensions, and the Bot Framework support Adaptive Cards, an open cross-card platform framework. Teams connectors do not currently support Adaptive Cards. *See* [Support for Adaptive cards](~/microsoftteams/platform/concepts/cards/cards-reference.md#support-for-adaptive-cards). However, it is possible to create a [flow](https://flow.microsoft.com/en-us/blog/microsoft-flow-in-microsoft-teams/) that posts adaptive cards to a Teams channel. For more information, *see* [Use adaptive cards in Microsoft Teams](~/flow/create-adaptive-cards-teams) and [Adaptive cards for Microsoft Teams](https://flow.microsoft.com/en-us/blog/adaptive-cards-for-microsoft-teams-microsoft-flow-us-government-now-available/).
 
 ## Add an incoming webhook to a Teams channel
 
@@ -55,12 +55,12 @@ Incoming webhooks are Teams connectors that provide a simple way for an external
 You have three options for distributing your incoming webhook:
 
 * Set up an incoming webhook directly for your team.
-* Register your webhook as part of your [Teams app package](~/microsoftteams/tenant-apps-catalog-teams) (as a Connector) to have it available solely within Teams.
-* Package and publish your Connector as part of your [AppSource](~/microsoftteams/tenant-apps-catalog-teams) submission if you want it to be available throughout the Office 365 platform.
+* Register your webhook as part of your [Teams app package](~/microsoftteams/tenant-apps-catalog-teams.md) (as a Connector) to have it available solely within Teams.
+* Package and publish your Connector as part of your [AppSource](~/dynamics365/customer-engagement/developer/publish-app-appsource.md) submission if you want it to be available throughout the Office 365 platform.
 
 ## Learn More
 
-[Post an actionable message card to an Office 365 group](~/outlook/actionable-messages/send-via-connectors)
+[Post an actionable message card to an Office 365 group](~/outlook/actionable-messages/send-via-connectors.md)
 
 [Training Content: Teams Demo - Incoming webhook](https://github.com/OfficeDev/TrainingContent/tree/master/Teams/05%20Microsoft%20Teams%20apps%20-%20Advanced%20Techniques/Demos/03-incoming-webhook)
 
