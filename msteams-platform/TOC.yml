@@ -346,10 +346,10 @@
       items:
         -
           name: 'Create an incoming webhook'
-          href: foo.md
+          href: webhooks/Add-incoming-webhooks-to-Microsoft-Teams.md
         -
           name: 'Create an outgoing webhook'
-          href: foo.md
+          href: webhooks/Add-outgoing-webhooks-to-Microsoft-Teams.md
         -
           name: 'Create an O365 Connector'
           href: foo.md
