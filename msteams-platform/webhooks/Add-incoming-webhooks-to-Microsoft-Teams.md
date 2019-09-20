@@ -55,8 +55,8 @@ Incoming webhooks are Teams connectors that provide a simple way for an external
 You have three options for distributing your incoming webhook:
 
 * Set up an incoming webhook directly for your team.
-* Register your webhook as part of your Teams app package (as a Connector) to have it available solely within Teams.
-* Package and publish your Connector as part of your AppSource submission if you want it to be available throughout the Office 365 platform.
+* Register your webhook as part of your [Teams app package](~/microsoftteams/tenant-apps-catalog-teams) (as a Connector) to have it available solely within Teams.
+* Package and publish your Connector as part of your [AppSource](~/microsoftteams/tenant-apps-catalog-teams) submission if you want it to be available throughout the Office 365 platform.
 
 ## Learn More
 
