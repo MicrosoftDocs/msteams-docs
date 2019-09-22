@@ -146,11 +146,11 @@
         - name: 'Create tab pages'
           items:
             - name: 'Create a content page'
-              href: tabs/how-to/create-custom-tabs/personal-tab.md
+              href: tabs/how-to/create-tab-pages/content-page.md
             - name: 'Create a configuration page'
-              href: tabs/how-to/create-custom-tabs/configuration-page.md
+              href: tabs/how-to/create-tab-pages/configuration-page.md
             - name: 'Create a tab removal page'
-              href: tabs/how-to/create-custom-tabs/removal-page.md
+              href: tabs/how-to/create-tab-pages/removal-page.md
         - name: 'Add authentication to your tabs'
           items:
             - name: 'Authentication flow'
