@@ -1,5 +1,3 @@
-- name: 'Microsoft Teams Platform Documentation'
-  href: foo.md
 - name: Overview
   expanded: true
   items:
