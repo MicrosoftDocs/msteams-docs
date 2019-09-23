@@ -33,7 +33,7 @@ For more information on O365 administration settings see [administrator settings
 
 > Note: If you're using an O365 Developer Organization to build your app, these settings should already be configured to allow you to build, upload and test your app.
 
-There are three settings involed in enabling custom apps and custom app uploading:
+There are three settings involved in enabling custom apps and custom app uploading:
 
 * **Org-wide custom app setting** - This setting either enables or disables custom apps for your organization. It needs to be on. 
 * **Team custom app setting** - This setting is for each individual team inside Microsoft Teams. If you want to install your app for a specific team, this will need to be on for that team.
