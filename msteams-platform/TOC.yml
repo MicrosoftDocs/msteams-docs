@@ -228,12 +228,8 @@
       href: foo.md
     - name: Quickstarts
       items:
-        - name: 'Create an incoming webhook'
-          href: foo.md
-        - name: 'Create an outgoing webhook'
-          href: foo.md
-        - name: 'Create an O365 Connector'
-          href: foo.md
+      - name: 'quickstart 1`
+        href: foo.md
     - name: Samples
       href: old/samples/code-samples.md
     - name: 'Design your task module'
@@ -256,11 +252,9 @@
     - name: Quickstarts
       items:
         - name: 'Create an incoming webhook'
-          href: foo.md
+          href: webhooks/Add-incoming-webhooks-to-Microsoft-Teams.md
         - name: 'Create an outgoing webhook'
           href: webhooks/Add-outgoing-webhooks-to-Microsoft-Teams.md
-        - name: 'Create an O365 Connector'
-          href: foo.md
     - name: Samples
       href: old/samples/code-samples.md
     - name: 'Design your webhooks and Connectors'
