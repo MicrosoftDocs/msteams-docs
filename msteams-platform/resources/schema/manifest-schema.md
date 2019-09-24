@@ -167,7 +167,7 @@ The following schema sample shows all extensibility options.
   ],
   "permissions": [
     "identity",
-    "messageTeamMembers",
+    "messageTeamMembers"
   ],
   "validDomains": [
      "contoso.com",

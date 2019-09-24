@@ -39,9 +39,9 @@ Because your tab can be opened on devices with a wide range of screen sizes, it 
 
 For authentication to work on mobile clients, you must upgrade you Teams JS SDK to at least version 1.4.1.
 
-### Low bandwith & intermittent connections
+### Low bandwidth & intermittent connections
 
-Mobile clients regularly need to function with low bandwith and intermittent connections. Your app should handle any timeouts appropriately by providing a contextual message to the user. You should also user progress indicators to provide feedback to your users for any long-running processes.
+Mobile clients regularly need to function with low bandwidth and intermittent connections. Your app should handle any timeouts appropriately by providing a contextual message to the user. You should also user progress indicators to provide feedback to your users for any long-running processes.
 
 ## Design considerations for mobile
 
