@@ -1,3 +1,3 @@
 ## Prepare your development environment
 
-The first thing you'll need to do is prepare your development environment. You'll need to make sure app sideloading is enabled for the Office 365 organization you want to test your app on. If you need a dedicated development tenant, you can sign up for the [Office 365 developer program](https://developer.microsoft.com/en-us/office/dev-program). For additional information see [Setup your development environment](~/concepts/build-and-test-your-app/foo.md).
+The first thing you'll need to do is prepare your development environment. You'll need to make sure custom app uploading is enabled for the Office 365 organization you want to build your app in. If you need a dedicated development tenant, you can sign up for the [Office 365 developer program](https://developer.microsoft.com/en-us/office/dev-program). For additional information see [Setup your development environment](~/concepts/build-and-test-your-app/foo.md).
