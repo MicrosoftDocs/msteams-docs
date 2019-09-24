@@ -228,7 +228,7 @@
       href: foo.md
     - name: Quickstarts
       items:
-      - name: 'quickstart 1`
+      - name: 'quickstart 1'
         href: foo.md
     - name: Samples
       href: old/samples/code-samples.md
