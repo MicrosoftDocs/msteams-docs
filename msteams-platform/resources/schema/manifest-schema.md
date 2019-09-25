@@ -440,6 +440,8 @@ A list of valid domains for websites the app expects to load within the Teams cl
 
 It is **not** necessary to include the domains of identity providers you want to support in your app, however. For example, to authenticate using a Google ID, it's necessary to redirect to accounts.google.com, but you should not include accounts.google.com in `validDomains[]`.
 
+Teams apps that require their own sharepoint URLs to function well, may include {teamsitedomain}.sharepoint.com in their valid domain list.
+
 > [!IMPORTANT]
 > Do not add domains that are outside your control, either directly or via wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid.
 
