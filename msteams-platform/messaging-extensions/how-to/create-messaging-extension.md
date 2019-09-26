@@ -15,7 +15,7 @@ At a high level, you'll need to complete the following steps to create a messagi
 1. Create your app package
 1. Upload your package to Microsoft Teams
 
-As you're building your messaging extension, you'll regularly be moving between changing your app manifest, and deploying code to your bot's app service. When working with the app manifest, keep in mind that you can either manually manipulate the JSON file, or make changes through App Studio. Either way, you'll need to re-deploy (sideload) your app in Teams when you make a change.
+As you're building your messaging extension, you'll regularly be moving between changing your app manifest, and deploying code to your bot's app service. When working with the app manifest, keep in mind that you can either manually manipulate the JSON file, or make changes through App Studio. Either way, you'll need to re-deploy (upload) your app in Teams when you make a change.
 
 [!include[prepare environment](~/includes/prepare-environment.md)]
 
