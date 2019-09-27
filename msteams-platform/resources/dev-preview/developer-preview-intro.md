@@ -18,7 +18,7 @@ You may find it useful to use App Studio to create the non-developer preview por
 
 ## Enable developer preview
 
-Developer preview is enabled on a per-client basis, but the option to turn on developer preview is controlled at the organization level. Turn on the setting for enabling uploading of apps in the admin console of your tenant as described [here](~/get-started/get-started-tenant.md).
+Developer preview is enabled on a per-client basis, but the option to turn on developer preview is controlled at the organization level. To enable the option to turn on developer preview for an individual, you must ensure that they have the ability to upload custom apps. See [setting up your tenant](~/get-started/get-started-tenant.md) for additional information.
 
 Using an app that contains developer preview features may cause clients that have not enabled developer preview to behave unexpectedly. If you do not see an entry for developer preview the most likely reason is your organization is not configured for app uploading.
 
