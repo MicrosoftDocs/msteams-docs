@@ -23,6 +23,7 @@
                 "**/*.png",
                 "**/*.jpg",
                 "**/*.svg",
+                "**/*.gif",
                 "assets/**/*.pdf"
             ],
             "exclude": [

@@ -2,10 +2,19 @@
 title: Create a configuration page for your tab
 description: Describes how to create and use a configuration page in a tab
 keywords: teams tabs configuration
-ms.date: 03/06/2019
 ---
 
 # Create the configuration page for your Microsoft Teams configurable tab
+
+> [!Important]
+> Full support for tabs on mobile clients is coming soon. To prepare for this change you should follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md) when creating your tabs. Personal apps (static tabs) are currently available in [developer preview](~/resources/dev-preview/developer-preview-intro.md). and channel / group chat tabs are available in the `...` overflow menu for the tab.
+>
+> When full support for tabs is released:
+>
+> * All tabs will always be available on mobile
+> * Your `contentUrl` **will be loaded in the mobile Teams client**.
+> * For channel/group tabs, users can still open your tab in a separate browser via your `websiteUrl`, however your `contentUrl` will be loaded first.
+> * If your tab uses authentication, you must upgrade your Teams JavaScript SDK to version 1.4.1 or later, or authentication will fail.
 
 The configuration page is an HTML page that you host. When a user chooses to add or update your tab, Microsoft Teams will load the `configurationUrl` (that you [specify in your manifest](~/concepts/apps/apps-package.md)) within an iframe inside the **Add Tab** dialog.
 
@@ -90,7 +99,7 @@ By default, the **Save** button on the configuration dialog box is disabled. Whe
 
 ### Determine the content to display in the tab
 
-Use `microsoftTeams.settings.setSettings({entityId, contentUrl, suggestedTabName, websiteUrl, removeUrl})` to specify the URL of the [content page](~/concepts/tabs/tabs-content.md) Microsoft Teams should host. Things to keep in mind:
+Use `microsoftTeams.settings.setSettings({entityId, contentUrl, suggestedDisplayName, websiteUrl, removeUrl})` to specify the URL of the [content page](~/concepts/tabs/tabs-content.md) Microsoft Teams should host. Things to keep in mind:
 
 * This call can be made at any time the configuration page is displayed, including before or after the user selects the **Save** button (see next section).
 * The `entityId` uniquely identifies the entity that is displayed in the tab.
@@ -100,7 +109,7 @@ Use `microsoftTeams.settings.setSettings({entityId, contentUrl, suggestedTabName
 * The `contentUrl` is a required field that specifies the URL of the content Microsoft Teams should host in the tab.
   * Be sure you have added the `contentUrl` domain to the `validDomains` element in the tab manifest file. For more information, see [Microsoft Teams tab schema](~/resources/schema/manifest-schema.md) and [Redirecting across domains within a Microsoft Teams tab](~/concepts/tabs/cross-domain.md).
 * The other parameters further customize how your tab works in Microsoft Teams:
-  * The optional `suggestedTabName` parameter sets the initial tab name. Users can rename the tab. The default value is the name specified in the manifest.
+  * The optional `suggestedDisplayName` parameter sets the initial tab name. Users can rename the tab. The default value is the name specified in the manifest.
   * The optional `websiteUrl` parameter sets where the user is taken if they choose the **Go to website** button. Typically, this is a link to the same content as displayed on the tab, but within your main web app with its regular chrome and navigation.
   * The optional `removeUrl` parameter sets the URL for your [removal options page](~/concepts/tabs/tabs-update-remove.md#removing-a-tab).
 

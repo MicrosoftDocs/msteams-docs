@@ -18,7 +18,12 @@ Buttons can have text, an icon, or a combination of text and an icon. To communi
 In dialogs, you should align buttons to the right, starting with the primary action farthest to the right. In cards, buttons are left-aligned.
 
 Button styles in Teams
+
+Desktop Client
 [!include[Button states](~/includes/design/buttons-image-states.html)]
+
+Mobile Client
+[!include[Mobile button states](~/includes/design/buttons-mobile-image-states.html)]
 
 Dialog buttons
 [!include[Dialog buttons](~/includes/design/buttons-image-dialog.html)]
@@ -39,8 +44,13 @@ In some cases, you can pair an icon and text to increase emphasis.
 
 ### Miscellaneous buttons
 
-Radial buttons, checkboxes, and toggles.
+#### Desktop Clients
+Radial buttons, checkboxes, and toggle switches.<br/>
 [!include[Other buttons](~/includes/design/buttons-image-others.html)]
+
+#### Mobile Clients
+Radial buttons, checkboxes, and toggle switches.<br/>
+[!include[Other buttons](~/includes/design/buttons-image-mobile-others.html)]
 
 ---
 

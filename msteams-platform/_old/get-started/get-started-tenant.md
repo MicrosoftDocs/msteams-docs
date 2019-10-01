@@ -2,7 +2,6 @@
 title: Prepare your Office 365 tenant
 description: How to get started with Teams in Office 365
 keywords: Configure Office 365 tenant Teams uploading
-ms.date: 01/02/2018
 ---
 # Prepare your Office 365 tenant
 
@@ -25,17 +24,19 @@ Teams is enabled by default in the versions of Office 365 that support it, howev
 1. [Sign in to Office 365](https://portal.office.com) with your administrator account.
 2. Select the **Admin** tile to go to the Office 365 Admin Center.
 3. From **Settings**, select **Services & add-ins**.
-
-    ![Screenshot of the Settings tab, with 'Services and add-ins' selected](~/assets/images/setup_services.png)
-
 4. From the list of services and add-ins, or apps, select **Microsoft Teams**.
-
-    ![Screenshot of the services listed under Settings, with the Microsoft Teams service selected](~/assets/images/setup_select_teams.png)
-
 5. On the **Microsoft Teams** settings screen, open **Settings by user/license type** and confirm that Microsoft Teams is set to **On**. Select **Save** if necessary.
 
-    ![Screenshot of the services listed under Settings, with Microsoft Teams option switched on](~/assets/images/setup/enableteamsandapps.png)
+For more information on O365 administration settings see [administrator settings](/MicrosoftTeams/enable-features-office-365) in the Teams product documentation.
 
-6. Now is a good time to make sure that apps are enabled in Teams so that you can upload and test the apps that you develop. Make certain that you allow uploading (or sideloading) external apps. Select **Save** at the bottom of the page if necessary.
+## Enable custom Teams apps and turn on custom app uploading
 
-> For more information on O365 administration settings see [administrator settings](https://support.office.com/article/Administrator-settings-for-Microsoft-Teams-3966a3f5-7e0f-4ea9-a402-41888f455ba2) in the Teams product documentation.
+> Note: If you're using an O365 Developer Organization to build your app, these settings should already be configured to allow you to build, upload and test your app.
+
+There are three settings involved in enabling custom apps and custom app uploading:
+
+* **Org-wide custom app setting** - This setting either enables or disables custom apps for your organization. It needs to be on. 
+* **Team custom app setting** - This setting is for each individual team inside Microsoft Teams. If you want to install your app for a specific team, this will need to be on for that team.
+* **User custom app policy** - This set of settings controls the permissions for an individual user. You'll need to enable this for individuals you want to upload custom apps.
+
+For complete information on how these settings interact see [Manage custom app policies and settings in Microsoft Teams](/MicrosoftTeams/teams-custom-app-policies-and-settings).

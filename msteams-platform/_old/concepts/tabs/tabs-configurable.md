@@ -2,10 +2,19 @@
 title: Configurable Tabs
 description: Describes how to get started with configurable tabs in Microsoft Teams
 keywords: get started configurable tabs teams
-ms.date: 11/12/2018
 ---
 
 # Configurable tabs
+
+> [!Important]
+> Full support for tabs on mobile clients is coming soon. To prepare for this change you should follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md) when creating your tabs. Personal apps (static tabs) are currently available in [developer preview](~/resources/dev-preview/developer-preview-intro.md). and channel / group chat tabs are available in the `...` overflow menu for the tab.
+>
+> When full support for tabs is released:
+>
+> * All tabs will always be available on mobile
+> * Your `contentUrl` **will be loaded in the mobile Teams client**.
+> * For channel/group tabs, users can still open your tab in a separate browser via your `websiteUrl`, however your `contentUrl` will be loaded first.
+> * If your tab uses authentication, you must upgrade your Teams JavaScript SDK to version 1.4.1 or later, or authentication will fail.
 
 A *configurable tab* becomes part of a channel and provides a single kind of information to a team.
 
@@ -25,7 +34,7 @@ Configurable tabs are defined in the app manifest, and can have a scope of eithe
 
  To create a configurable tab read these articles:
 
-* [Create the configuration page](~/concepts/tabs/tabs-configuration) For configurable tabs, you must provide a configuration page to present options and gather information so users can customize the content and experience with your tab. This iframed HTML page is displayed when a user first adds the tab to a channel. You can also enable users to [update or remove a tab](~/concepts/tabs/tabs-update-remove) after they add it.
-* [Create the content page](~/concepts/tabs/tabs-content): A content page is an HTML page that you host. Microsoft Teams displays the page in an iframe when the user visits your tab. You can also provide a page for users to specify [what happens to content when they remove a tab](~/concepts/tabs/tabs-update-remove#removing-a-tab).
+* [Create the configuration page](~/concepts/tabs/tabs-configuration.md) For configurable tabs, you must provide a configuration page to present options and gather information so users can customize the content and experience with your tab. This iframed HTML page is displayed when a user first adds the tab to a channel. You can also enable users to [update or remove a tab](~/concepts/tabs/tabs-update-remove.md) after they add it.
+* [Create the content page](~/concepts/tabs/tabs-content.md): A content page is an HTML page that you host. Microsoft Teams displays the page in an iframe when the user visits your tab. You can also provide a page for users to specify [what happens to content when they remove a tab](~/concepts/tabs/tabs-update-remove.md#removing-a-tab).
 
-You can enable users to create and share [deep links to items within your tab](~/concepts/deep-links), such as a link to an individual task within a tab that contains a task list.
+You can enable users to create and share [deep links to items within your tab](~/concepts/deep-links.md), such as a link to an individual task within a tab that contains a task list.

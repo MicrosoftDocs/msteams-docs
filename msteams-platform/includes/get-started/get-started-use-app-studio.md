@@ -113,17 +113,9 @@ Click on *Messaging extensions* under *Capabilities* in the left hand column of 
 
 The sample messaging extension is listed in the right hand pane under *Messaging Extensions*. Click *Delete* again to remove this entry, and then click the *Set up* button following the same steps as you followed for bots. This will display the *Messaging Extension* dialog.
 
-<img  width="450px" title="Adding a messaging extension" src="~/assets/images/get-started/app-studio-manifest-editor-mess-ext-dialog.png"/>
+Select the *Use existing bot* tab, then *Select from one of my existing bots*. In the drop-down menu, select the bot you created in the section above. Add a *Bot name* and click *Save* to close the dialog.
 
-In the *Messaging Extension* dialog, choose the *Existing* tab, then under *Bot ID* choose *Select from one of my existing bots*.
-
-Expand the drop down below *Bot ID* and choose the ID of the bot you created previously. Then choose the *Save* button. This returns you to the main page for *Messaging Extensions*.
-
-In the *Messaging endpoint* section update the *Bot endpoint address* to `https://yourteamsapp.ngrok.io/api/messages` where `yourteamsapp.ngrok.io` should be replaced by the URL that you used above when hosting your app.
-
-You now need to add a *Command* to your messaging extension. Do this by clicking the *Add* button in the *Command* section of *Messaging Extensions*. The *New command* dialog will appear.
-
-<img  width="450px" title="Adding a messaging extension command" src="~/assets/images/get-started/app-studio-manifest-editor-command-dialog.png"/>
+Under the *Command* section, click *Add*. We're adding a search-based command, so choose the *Allow users to query your service...* option.
 
 In the *New command* dialog enter the following values.
 
@@ -139,7 +131,7 @@ Under *Parameter*:
 - *Title*       = Card title
 - *Description* = Card title to use
 
-You are now done with configuring your messaging extension.
+Once you're entered the information, click *Save* to close the dialog.
 
 #### Register your app in Teams
 

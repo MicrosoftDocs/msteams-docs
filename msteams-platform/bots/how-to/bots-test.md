@@ -38,6 +38,9 @@ Complete instructions on the Bot Framework Emulator can be found [here](/azure/b
 
 ### Talk to your bot directly by Id
 
+>[!Important]
+>Talking to your bot by Id is intended for testing purposes only.
+
 You can also initiate a conversation with your bot by using its Id. Two methods for doing so are given below. When a bot has been added through one of these methods it will not be addressable in channel conversations, and you cannot take advantage of other Microsoft Teams app capabilities like tabs or messaging extensions.
 
 1. On the [Bot Dashboard](https://dev.botframework.com/bots) page for your bot, under **Channels**, select **Add to Microsoft Teams**. Microsoft Teams will launch with a personal chat with your bot.

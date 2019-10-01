@@ -14,3 +14,5 @@ msteams-platform/.vs/
 # Dependent repos
 _msteams-samples-hello-world-nodejs/
 _msteams-samples-hello-world-csharp/
+
+desktop.ini

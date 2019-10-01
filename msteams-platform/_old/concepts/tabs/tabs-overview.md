@@ -2,9 +2,18 @@
 title: Add tabs to Microsoft Teams apps
 description: Describes how to get started developing tabs in Microsoft Teams
 keywords: teams tabs development
-ms.date: 11/12/2018
 ---
 # Add tabs to Microsoft Teams apps
+
+> [!Important]
+> Full support for tabs on mobile clients is coming soon. To prepare for this change you should follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md) when creating your tabs. Personal apps (static tabs) are currently available in [developer preview](~/resources/dev-preview/developer-preview-intro.md). and channel / group chat tabs are available in the `...` overflow menu for the tab.
+>
+> When full support for tabs is released:
+>
+> * All tabs will always be available on mobile
+> * Your `contentUrl` **will be loaded in the mobile Teams client**.
+> * For channel/group tabs, users can still open your tab in a separate browser via your `websiteUrl`, however your `contentUrl` will be loaded first.
+> * If your tab uses authentication, you must upgrade your Teams JavaScript SDK to version 1.4.1 or later, or authentication will fail.
 
 Tabs in Microsoft Teams allow you to display rich interactive web content. You can build a Microsoft Teams tab from scratch or adapt your existing web-app experience.
 
@@ -29,7 +38,7 @@ Tabs display web pages, but not all web pages can display properly in a tab.
 
 Pages loaded inside of a custom tab need to:
 
-* Allow themselves to be [iframed](~/concepts/tabs/tabs-content.md) by Teams (via the X-Frame-Options and/or Content-Security-Policy headers). A lot of standard webpages don't allow themselves to be iframed which is why there is the option for users to view Website tab instances inside of a webview within the desktop client. Other tabs don't get this special treatment.
+* Allow themselves to be [iframed](~/concepts/tabs/tabs-content.md) by Teams (via the X-Frame-Options and/or Content-Security-Policy headers). IFrames represent a nested browsing context and are hosted by the parent window (window.parent).A lot of standard webpages don't allow themselves to be iframed which is why there is the option for users to view Website tab instances inside of a webview within the desktop client. Other tabs don't get this special treatment.
 * Handle [authentication](~/concepts/authentication/auth-flow-tab.md) differently (either via a popup or calling us to fetch tokens). Most websites simply redirect to a login provider which typically dead ends tabs which are hosted inside of an iframe. That's because login pages typically don't render in iframes to prevent click-jacking.
 * Handle [cross-domain](~/concepts/tabs/cross-domain.md) navigation differently since the Teams client needs to validate the origin against a static validDomains list in the app manifest when loading or communicating with the tab.
 * Style themselves based on the Teams client's theme.

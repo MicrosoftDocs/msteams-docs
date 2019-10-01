@@ -44,6 +44,8 @@ To make your bot experience Teams-ready:
 > [!NOTE]
 > ## Bots and Microsoft Azure
 > As of December, 2017, the Bot Framework portal is optimized for registering bots in Microsoft Azure. Here are some things to know:
+>
+> * The Microsoft Teams channel for bots registered on Azure is free. Messages sent over the Teams channel will not count towards the consumed messages for the bot.
 > * While it's possible to [create a new Bot Framework bot](https://dev.botframework.com/bots/new) without using Azure, you must use that URL (https://dev.botframework.com/bots/new), which is no longer exposed in the Bot Framework portal.
 > * When you edit the properties of an existing bot in the [list of your bots in Bot Framework](https://dev.botframework.com/bots) such as its "messaging endpoint," which is common when first developing a bot, especially if you use [ngrok](https://ngrok.com), you will see "Migration status" column and a blue "Migrate" button that will take you into the Microsoft Azure portal. Don't click on the "Migrate" button unless that's what you want to do; instead, click on the name of the bot and you can edit its properties:</br>
    ![Edit Bot Properties](~/assets/images/bots/bf-migrate-bot-to-azure.png)

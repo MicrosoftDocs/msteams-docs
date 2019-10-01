@@ -2,7 +2,6 @@
 title: Initiate actions with messaging extensions
 description: Create Action-based messaging extensions to allow users to trigger external services
 keywords: teams messaging extensions messaging extensions search
-ms.date: 05/20/2019
 ---
 
 # Initiate actions with messaging extensions
@@ -300,7 +299,65 @@ Just like in the adaptive card flow your service will be send a `fetchTask` even
 }
 ```
 
-The bot can also respond with an auth/config response if the user needs to authenticate or configure the extension before getting the user input.
+### Request to install your conversational bot
+
+If your app also contains a conversational bot, it may be necessary to ensure that your bot is installed in the conversation before loading your task module. This can be useful in situations where you need to get additional context for you task module. For example, you may need to fetch the roster to populate a people picker control, or the list of channels in a team.
+
+To facilitate this flow, when your messaging extension first receives the `composeExtension/fetchTask` invoke check to see if your bot is installed in the current context (you could accomplish this by attempting the get roster call, for example). If your bot is not installed, you return an Adaptive Card with an action that requests the user to install your bot See the example below. Note that this requires the user to have permission to install apps in that location; if they cannot they will be presented with a message asking them to contact their administrator.
+
+Here's an example of the response:
+
+```json
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Looks like you haven't used Disco in this team/chat"
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "Continue",
+      "data": {
+        "msteams": {
+          "justInTimeInstall": true
+        }
+      }
+    }
+  ],
+  "version": "1.0"
+}
+```
+
+Once the user completes the installation, your bot will receive another invoke message with `name = composeExtension/submitAction`, and `value.data.msteams.justInTimeInstall = true`.
+
+Here's an example of the invoke:
+
+```json
+{
+  "value": {
+    "commandId": "giveKudos",
+    "commandContext": "compose",
+    "context": {
+      "theme": "default"
+    },
+    "data": {
+      "msteams": {
+        "justInTimeInstall": true
+      }
+    }
+  },
+  "conversation": {
+    "id": "19:7705841b240044b297123ad7f9c99217@thread.skype"
+  },
+  "name": "composeExtension/submitAction",
+  "imdisplayname": "Bob Smith"
+}
+```
+
+You should respond to this invoke with the same task response you would have responded with if the bot was already installed.
 
 ## Responding to submit
 
@@ -430,7 +487,11 @@ Your message extension will now need to respond to two new types of interactions
 }
 ```
 
-When responding to the `edit` request you should respond with a `task` response with the values populated with the information the user has already submitted. When responding to the `send` request you should send a message to the channel containing the finalized adaptive card. The example below shows how to do this using the [Node.js Teams Bot Builder SDK](https://www.npmjs.com/package/botbuilder-teams).
+When responding to the `edit` request you should respond with a `task` response with the values populated with the information the user has already submitted. When responding to the `send` request you should send a message to the channel containing the finalized adaptive card. 
+
+# [TypeScript/Node.js](#tab/typescript)
+
+The example below shows how to do this using the [Node.js Teams Bot Builder SDK](https://www.npmjs.com/package/botbuilder-teams).
 
 ```typescript
 teamChatConnector.onComposeExtensionSubmitAction((
@@ -488,4 +549,158 @@ teamChatConnector.onComposeExtensionSubmitAction((
             callback(null, response, 200);
         }
     });
+```
+
+# [C#/.NET](#tab/dotnet)
+
+This sample shows this flow using the [Microsoft.Bot.Connector.Teams SDK (v3)](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams).
+
+```csharp
+public class MessagesController : ApiController
+{
+
+    [BotAuthentication]
+    public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
+    {
+        MicrosoftAppCredentials.TrustServiceUrl(activity.ServiceUrl, DateTime.MaxValue);
+        ConnectorClient connectorClient = new ConnectorClient(
+            new Uri(activity.ServiceUrl),
+            ConfigurationManager.AppSettings[MicrosoftAppCredentials.MicrosoftAppIdKey],
+            ConfigurationManager.AppSettings[MicrosoftAppCredentials.MicrosoftAppPasswordKey]);
+
+        if (activity.Type == ActivityTypes.Invoke)
+        {
+            // Initial task module presented to the user
+            if (activity.Name == "composeExtension/fetchTask")
+            {
+                string task = GetTaskModule();
+
+                return Request.CreateResponse(HttpStatusCode.OK, JObject.Parse(task));
+            }
+            else if (activity.Name == "composeExtension/submitAction")
+            {
+                dynamic activityValue = JObject.FromObject(activity.Value);
+                string botMessagePreviewAction = activityValue["botMessagePreviewAction"];
+
+                //This is the initial card response sent after the task module is submitted
+                if (botMessagePreviewAction is null)
+                {
+                    string text = activityValue.data.cardMessage;
+
+                    AdaptiveCard card = new AdaptiveCard(new AdaptiveSchemaVersion("1.0"));
+                    card.Body.Add(new AdaptiveTextBlock()
+                    {
+                        Text = "This card will be inserted into the conversation by the bot.",
+                        Size = AdaptiveTextSize.Large,
+                        Wrap = true
+                    });
+                    card.Body.Add(new AdaptiveTextBlock()
+                    {
+                        Text = "The text below is what you provided."
+                    });
+                    card.Body.Add(new AdaptiveTextBlock()
+                    {
+                        Text = text,
+                    });
+
+                    string cardJson = card.ToJson();
+
+                    string cardMessage = $@"{{
+                        'composeExtension': {{
+                        'type': 'botMessagePreview',
+                        'activityPreview': {{
+                            'type': 'message',
+                            'attachments': [{{
+                                'contentType': 'application/vnd.microsoft.card.adaptive',
+                                'content': {cardJson}
+                            }}]
+                        }}
+                        }}
+                    }}";
+
+                    JObject res = JObject.Parse(cardMessage);
+                    return Request.CreateResponse(HttpStatusCode.OK, res);
+
+                }
+                else
+                {
+                    //This is the "send the card to the channel" event
+                    if (botMessagePreviewAction.Equals("send"))
+                    {
+                        string cardJson = JsonConvert.SerializeObject(activityValue.botActivityPreview[0].attachments[0].content);
+
+                        AdaptiveCardParseResult cardResult = AdaptiveCard.FromJson(cardJson);
+                        AdaptiveCard card = cardResult.Card;
+                        Attachment cardAttachment = new Attachment
+                        {
+                            ContentType = AdaptiveCard.ContentType,
+                            Content = card
+                        };
+
+
+                        Activity response = activity.CreateReply();
+                        response.Attachments.Add(cardAttachment);
+
+                        var result = await connectorClient.Conversations.SendToConversationAsync(response);
+                    }
+                    //This is fired if the user edits the card before sending it
+                    else if (botMessagePreviewAction.Equals("edit"))
+                    {
+                        string task = GetTaskModule();
+
+                        return Request.CreateResponse(HttpStatusCode.OK, JObject.Parse(task));
+                    }
+                    else
+                    {
+                        return Request.CreateResponse(HttpStatusCode.NotImplemented);
+                    }
+                }
+            }
+        }
+
+        return Request.CreateResponse(HttpStatusCode.NotImplemented);
+
+    }
+
+    private static string GetTaskModule()
+    {
+        AdaptiveCard card = new AdaptiveCard(new AdaptiveSchemaVersion("1.0"));
+        card.Body.Add(new AdaptiveTextBlock()
+        {
+            Text = "Please enter the following information:",
+            Size = AdaptiveTextSize.Large
+        });
+        card.Body.Add(new AdaptiveTextBlock()
+        {
+            Text = "Card Message:"
+        });
+        card.Body.Add(new AdaptiveTextInput()
+        {
+            Id = "cardMessage",
+            Spacing = AdaptiveSpacing.None,
+            Placeholder = "Card message goes here."
+        });
+        card.Actions.Add(new AdaptiveSubmitAction()
+        {
+            Title = "Submit"
+        });
+
+        string cardJson = card.ToJson();
+
+        //Create the task module response
+        string task = $@"{{
+                            'task': {{
+                                'type': 'continue',
+                                'value': {{
+                                    'card': {{
+                                        'contentType': 'application/vnd.microsoft.card.adaptive',
+                                        'content': {cardJson}
+                                        }}
+                                    }}
+                                }}
+                            }}";
+        return task;
+    }
+
+}
 ```

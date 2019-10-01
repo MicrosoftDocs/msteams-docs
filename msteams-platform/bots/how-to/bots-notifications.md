@@ -24,7 +24,7 @@ The following table lists the events that your bot can receive and take action o
 |---|---|---|---|---|
 | `conversationUpdate` |`membersAdded`| `teamMemberAdded`|[Member added to team](#team-member-or-bot-addition)| all |
 | `conversationUpdate` |`membersRemoved`| `teamMemberRemoved`|[Member was removed from team](#team-member-or-bot-removed)| `groupChat` & `team` |
-| `conversationUpdate` | |`teamRenamed`| [Member was renamed](#team-name-updates)| `team` |
+| `conversationUpdate` | |`teamRenamed`| [Team was renamed](#team-name-updates)| `team` |
 | `conversationUpdate` | |`channelCreated`| [A channel was created](#channel-updates)|`team` |
 | `conversationUpdate` | |`channelRenamed`| [A channel was renamed](#channel-updates)|`team` |
 | `conversationUpdate` | |`channelDeleted`| [A channel was deleted](#channel-updates)|`team` |
