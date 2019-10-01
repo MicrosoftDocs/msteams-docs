@@ -7,8 +7,6 @@ keywords: teams design guidelines reference framework basics
 
 Now that you’re thinking about building on the Teams platform, here’s a short tour to help you understand how it works for your app.
 
----
-
 If someone uses your app every day, this is where they will pin it. This area hosts Activity, Chats, Teams, Meetings, Files, and Apps. It’s also the place users will go to change their settings and send us feedback.<br/>
 
 <img width="550" src="~/assets/images/framework/framework_basics_01.png"> <br /><br/>
