@@ -109,9 +109,9 @@
 - name: 'Conversational Bots'
   items:
     - name: 'What are bots in Microsoft Teams?'
-      href: foo.md
+      href: bots/what-are-bots.md
     - name: 'Bot scopes and threaded conversations'
-      href: foo.md
+      href: bots/bot-scopes-and-threaded-conversations.md
     - name: Quickstarts
       items:
         - name: 'Create a personal bot'
@@ -134,41 +134,41 @@
       - name: Conversations
         items:
         - name: Send and receive messages
-          href: bots/how-to/bot-conversations/bots-conv-personal.md
+          href: bots/how-to/conversations/send-and-receive-messages.md
         - name: Channel and group conversations
-          href: bots/how-to/bot-conversations/bots-conv-channel.md
+          href: bots/how-to/conversations/channel-and-group-conversations.md
         - name: Send proactive messages
-          href: bots/how-to/bot-conversations/bots-conv-proactive.md
-        - name: Send and receive files
-          href: bots/how-to/bots-files.md
+          href: bots/how-to/conversations/send-proactive-messages.md
         - name: Add authentication to your Teams bot
-          href: bots/how-to/bot-authentication/auth-bot-aad.md
+          href: bots/how-to/conversations/add-authentication-to-your-teams-bot.md
+        - name: Send and receive files
+          href: bots/how-to/conversations/send-and-receive-files.md
         - name: Subscribe to conversation events
-          href: bots/how-to/bots-notifications.md
+          href: bots/how-to/conversations/subscribe-to-conversation-events.md
         - name: Get Teams context for your bot
-          href: bots/how-to/bots-context.md
+          href: bots/how-to/conversations/get-teams-context.md
         - name: Create a bot commands menu
-          href: bots/how-to/bots-menus.md
+          href: bots/how-to/conversations/create-a-bot-commands-menu.md
       - name: Cards and formatting
         items:
         - name: Format your bot message
-          href: bots/how-to/bots-text-formats.md
-        - name: Add cards and card actions to your bot
-          href: bots/foo.md
+          href: bots/how-to/cards-and-formatting/format-your-bot-messages.md
+        - name: Send cards and card actions
+          href: bots/how-to/cards-and-formatting/send-cards-and-card-actions
       - name: Debug your bot
         items:
         - name: Debug locally with an IDE
-          href: bots/how-to/bots-test.md
+          href: bots/how-to/debug/locally-with-an-ide.md
         - name: Debug with the bot emulator
-          href: bots/foo.md
+          href: bots/how-to/debug/with-the-bot-emulator.md
         - name: Debug with the inspection middleware
-          href: bots/foo.md
+          href: bots/how-to/debug/with-the-inspection-middleware.md
       - name: Combine bots with other Teams app features
         items:
         - name: Use tabs with your bot
-          href: bots/how-to/bots-with-tabs.md
+          href: bots/how-to/combine-with-other-teams-app-features/use-tabs-with-your-bot.md
         - name: Use Task Mdoules with your bot
-          href: bots/foo.md
+          href: bots/how-to/combine-with-other-teams-app-features/use-task-modules-with-your-bot.md
 - name: 'Embedded web experiences with Tabs'
   items:
     - name: 'What are custom tabs?'
