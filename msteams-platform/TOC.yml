@@ -167,13 +167,13 @@
   items:
     - name: 'What are bots in Microsoft Teams?'
       href: foo.md
-    - name: 'Understand v3 versus v4 PH title'
+    - name: 'Bot scope and threaded conversations'
       href: foo.md
     - name: Quickstarts
       items:
         - name: 'Create a personal bot'
           href: foo.md
-        - name: 'Create a channel tab'
+        - name: 'Create a channel bot'
           href: foo.md
     - name: Samples
       href: old/samples/code-samples.md
@@ -186,27 +186,17 @@
     - name: 'How-to guides'
       expanded: true
       items:
-        - name: Create a bot
+        - name: Create a bot for Teams
           href: bots/how-to/bots-create.md
-        - name: Conversations with bots
-          items:
-          - name: Conversation overview
-            href: bots/how-to/bot-conversations/bots-conversations.md
-          - name: Personal conversations
-            href: bots/how-to/bot-conversations/bots-conv-personal.md
-          - name: Channel and group conversations
-            href: bots/how-to/bot-conversations/bots-conv-channel.md
-          - name: Proactive messaging
-            href: bots/how-to/bot-conversations/bots-conv-proactive.md
-        - name: Bot authentication
-          items:
-          - name: Authentication flow for bots
-            href: bots/how-to/bot-authentication/auth-flow-bot.md
-          - name: Azure AD authentication
-            href: bots/how-to/bot-authentication/auth-bot-aad.md
-          - name: Using the Azure Bot Service OAuth card
-            href: bots/how-to/bot-authentication/auth-oauth-card.md
-        - name: Teams context for bots
+        - name: Send and receive messages
+          href: bots/how-to/bot-conversations/bots-conv-personal.md
+        - name: Channel and group conversations
+          href: bots/how-to/bot-conversations/bots-conv-channel.md
+        - name: Sending proactive messages
+          href: bots/how-to/bot-conversations/bots-conv-proactive.md
+        - name: Add authentication to your Teams bot
+          href: bots/how-to/bot-authentication/auth-bot-aad.md
+        - name: Access Teams context for your bot
           href: bots/how-to/bots-context.md
         - name: Create a bot commands menu
           href: bots/how-to/bots-menus.md
