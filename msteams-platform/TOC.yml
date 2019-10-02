@@ -163,7 +163,7 @@
           href: bots/foo.md
         - name: Debug with the inspection middleware
           href: bots/foo.md
-      - name: Combine bots with other app features
+      - name: Combine bots with other Teams app features
         items:
         - name: Use tabs with your bot
           href: bots/how-to/bots-with-tabs.md
