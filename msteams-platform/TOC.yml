@@ -155,7 +155,7 @@
           href: bots/how-to/bots-text-formats.md
         - name: Add cards and card actions to your bot
           href: bots/foo.md
-      - name: Debug
+      - name: Debug your bot
         items:
         - name: Local debugging
           href: bots/how-to/bots-test.md
