@@ -130,7 +130,7 @@
       expanded: true
       items:
       - name: Create a bot for Teams
-        href: bots/how-to/bots-create.md
+        href: bots/how-to/create-a-bot-for-teams.md
       - name: Conversations
         items:
         - name: Send and receive messages
@@ -310,5 +310,7 @@
       href: _old/resources/schema/localization-schema.md
     - name: 'Microsoft Graph APIs'
       href: _old/resources/microsoft-graph.md
+    - name: Bot rate limiting
+      href: foo.md
 - name: Support and feedback
   href: _old/feedback.md
