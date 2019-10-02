@@ -1,7 +1,7 @@
 ---
-title: Bot scopes and threaded conversations
+title: Send and receive files
 author: clearab
-description: Understand how scopes and threaded conversations will affect your bot for Microsoft Teams.
+description: How to send and receive files with your Microsoft Teams bot.
 ms.topic: overview
 ms.author: anclear
 ---
@@ -9,7 +9,10 @@ ms.author: anclear
 
 ## Writing notes
 
- * **Purpose** asdf
- * **Existing teams doc reference** []()
- * **Existing Bot framework doc reference** []()
- * **Code Snippets** []()
+ * **Purpose** Show how to send and receive files
+ * **Existing teams doc reference** 
+   * [https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bots-files](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bots-files)
+ * **Existing Bot framework doc reference**
+   * none?
+ * **Code Snippets** 
+   * [https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/FileUpload](https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/FileUpload)

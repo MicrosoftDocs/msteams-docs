@@ -1,15 +1,31 @@
 ---
-title: Bot scopes and threaded conversations
+title: Subsribe to conversation events
 author: clearab
-description: Understand how scopes and threaded conversations will affect your bot for Microsoft Teams.
+description: How to subscribe to conversation events from your Microsoft Teams bot.
 ms.topic: overview
 ms.author: anclear
 ---
-# Bot scopes and threaded conversations
+# Subsribe to conversation events
 
 ## Writing notes
 
- * **Purpose** asdf
- * **Existing teams doc reference** []()
- * **Existing Bot framework doc reference** []()
- * **Code Snippets** []()
+ * **Purpose** Describes the events your bot can subscribe to, and how to work with them. Includes:
+   * Conversation Update events
+     * channel renamed
+     * channel created
+     * channel deleted
+     * team renamed
+     * member added
+     * member removed
+     * team member added
+     * team member removed
+   * Message reactions
+     * reactions added
+     * reactions removed
+ * **Existing teams doc reference** 
+   * [https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bots-notifications](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bots-notifications)
+ * **Existing Bot framework doc reference** 
+   * [https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-send-welcome-message?view=azure-bot-service-4.0&tabs=csharp](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-send-welcome-message?view=azure-bot-service-4.0&tabs=csharp)
+ * **Code Snippets** 
+   * [https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/ConversationUpdate](https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/ConversationUpdate)
+   * [https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/MessageReaction](https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/MessageReaction)

@@ -141,14 +141,16 @@
           href: bots/how-to/conversations/send-proactive-messages.md
         - name: Add authentication to your Teams bot
           href: bots/how-to/conversations/add-authentication-to-your-teams-bot.md
-        - name: Send and receive files
-          href: bots/how-to/conversations/send-and-receive-files.md
         - name: Subscribe to conversation events
           href: bots/how-to/conversations/subscribe-to-conversation-events.md
         - name: Get Teams context for your bot
           href: bots/how-to/conversations/get-teams-context.md
-        - name: Create a bot commands menu
+        - name: Create a commands menu for your bot
           href: bots/how-to/conversations/create-a-bot-commands-menu.md
+        - name: Update and delete bot messages
+          href: bots/how-to/conversations/update-and-delete-bot-messages.md
+        - name: Send and receive files
+          href: bots/how-to/conversations/send-and-receive-files.md
       - name: Cards and formatting
         items:
         - name: Format your bot message
