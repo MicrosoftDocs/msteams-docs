@@ -163,12 +163,14 @@
           href: bots/how-to/debug/with-the-bot-emulator.md
         - name: Debug with the inspection middleware
           href: bots/how-to/debug/with-the-inspection-middleware.md
-      - name: Combine bots with other Teams app features
+      - name: Combine bots with other features and services
         items:
-        - name: Use tabs with your bot
-          href: bots/how-to/combine-with-other-teams-app-features/use-tabs-with-your-bot.md
-        - name: Use Task Mdoules with your bot
-          href: bots/how-to/combine-with-other-teams-app-features/use-task-modules-with-your-bot.md
+        - name: Use Teams tabs with your bot
+          href: bots/how-to/combine-with-other-features-and-services/use-tabs.md
+        - name: Use Teams Task Modules with your bot
+          href: bots/how-to/combine-with-other-features-and-services/use-task-modules.md
+        - name: Use Microsoft Graph with your bot
+          href: bots/how-to/combine-with-other-features-and-services/use-microsoft-graph.md
 - name: 'Embedded web experiences with Tabs'
   items:
     - name: 'What are custom tabs?'
