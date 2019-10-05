@@ -29,6 +29,8 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 ```
 
+```
+
 ## Receive a message
 
 To receive a simple text message, use the *text* property of the *activity* object.
