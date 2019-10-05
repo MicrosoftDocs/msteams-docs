@@ -13,9 +13,7 @@ Markdown is supported for most text fields, but support may vary by channel.
 
 ## Send a message
 
-To send a simple text message, specify the string you want to send as the activity:
-
-# [C#](#tab/csharp)
+To send a simple text message, specify the string you want to send as the activity.
 
 In the bot's activity handlers, use the turn context object's `SendActivityAsync` method to send a single message response. You can also use the object's `SendActivitiesAsync` method to send multiple responses at once.
 
@@ -27,14 +25,9 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 ```
 
-```
-```
-
 ## Receive a message
 
 To receive a simple text message, use the *text* property of the *activity* object.
-
-# [C#](#tab/csharp)
 
 In the bot's activity handlers, use the following code to receive a message. 
 
@@ -47,9 +40,6 @@ switch (selection)
 {
   // switch statements
 }
-```
-
-```
 ```
 
 ## Additional resources
