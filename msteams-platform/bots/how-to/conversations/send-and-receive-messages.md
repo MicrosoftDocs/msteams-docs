@@ -8,17 +8,15 @@ ms.author: anclear
 # Send and receive messages
 
 <!-- Draft -->
-A bot communicates with users through message activities. Some messages are simply plain text, others contain richer content such as cards or attachments. The bot's turn handler receives messages from the user, and sends responses to the user from there. The **turn context** object provides methods for sending messages back to the user.
+A bot communicates with users through message activities. Some messages are simply plain text, others contain richer content such as cards or attachments. The bot's turn handler receives messages from the user, and sends responses back. The **turn context** object provides methods for sending messages back to the user.
 Markdown is supported for most text fields, but support may vary by channel.
 
 ## Send a message
 
 To send a simple text message, specify the string you want to send as the activity.
-
 In the bot's activity handlers, use the turn context object's `SendActivityAsync` method to send a single message response. You can also use the object's `SendActivitiesAsync` method to send multiple responses at once.
 
-<!-- [!code-csharp[Send message](~/../botbuilder-dotnet/tests/Teams/52.Teams-echo-bot/Bots/TeamsEchoBot.cs?range=45-52&highlight=51)]
--->
+[!code-csharp[Receive message](~/../botbuilder-dotnet/tests/Teams/Roster/Bots/RosterBot.cs?range=23&highlight=23)]
 
 ```cs
 await turnContext.SendActivityAsync(replyActivity, cancellationToken);
@@ -28,11 +26,10 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 ## Receive a message
 
 To receive a simple text message, use the *text* property of the *activity* object.
-
 In the bot's activity handlers, use the following code to receive a message. 
 
-<!-- [!code-csharp[Receive message](~/../botbuilder-dotnet/tests/Teams/52.Teams-echo-bot/Bots/TeamsEchoBot.cs?range=23-43&highlight=23)]
--->
+[!code-csharp[Receive message](~/../botbuilder-dotnet/tests/Teams/Roster/Bots/RosterBot.cs?range=27-46&highlight=27)]
+
 
 ```cs
 var selection = turnContext.Activity.Text;
