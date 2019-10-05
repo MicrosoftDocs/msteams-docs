@@ -19,7 +19,8 @@ To send a simple text message, specify the string you want to send as the activi
 
 In the bot's activity handlers, use the turn context object's `SendActivityAsync` method to send a single message response. You can also use the object's `SendActivitiesAsync` method to send multiple responses at once.
 
-[!code-csharp[Send message](~/../botbuilder-dotnet/tests/Teams/52.Teams-echo-bot/Bots/TeamsEchoBot.cs?range=45-52&highlight=51)]
+<!-- [!code-csharp[Send message](~/../botbuilder-dotnet/tests/Teams/52.Teams-echo-bot/Bots/TeamsEchoBot.cs?range=45-52&highlight=51)]
+-->
 
 ```cs
 await turnContext.SendActivityAsync(replyActivity, cancellationToken);
@@ -33,8 +34,8 @@ To receive a simple text message, use the *text* property of the *activity* obje
 
 In the bot's activity handlers, use the following code to receive a message. 
 
-[!code-csharp[Receive message](~/../botbuilder-dotnet/tests/Teams/52.Teams-echo-bot/Bots/TeamsEchoBot.cs?range=23-43&highlight=23)]
-
+<!-- [!code-csharp[Receive message](~/../botbuilder-dotnet/tests/Teams/52.Teams-echo-bot/Bots/TeamsEchoBot.cs?range=23-43&highlight=23)]
+-->
 
 ```cs
 var selection = turnContext.Activity.Text;
