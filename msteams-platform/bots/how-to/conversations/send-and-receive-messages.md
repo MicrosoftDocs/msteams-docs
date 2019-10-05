@@ -28,7 +28,6 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 ```
 
 ```
-```
 
 ## Receive a message
 
@@ -47,9 +46,6 @@ switch (selection)
 {
   // switch statements
 }
-```
-
-```
 ```
 
 ## Additional resources
