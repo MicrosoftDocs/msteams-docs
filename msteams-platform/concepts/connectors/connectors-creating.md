@@ -87,7 +87,7 @@ The following manifest.json file contains the basic elements needed to test and 
 {
   "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
- 7 "id": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
+  "id": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
   "version": "1.0",
   "packageName": "com.sampleapp",
   "developer": {
