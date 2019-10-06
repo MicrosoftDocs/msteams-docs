@@ -39,7 +39,7 @@ Information on universal links and app links:
 * [Android app links](https://developer.android.com/training/app-links/index.html)
 
 >[!Note]
->For apps published to the public App Store, if you want your channel tab to open inside teams by default, follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md), and reach out to your support rep to request to be whitelisted.
+>For apps published to the public App Store, if you want your channel tab to open inside teams by default, follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md), and reach out to your support rep to request to be added to the allowed list.
 
 ### Personal (static) tabs on mobile
 
