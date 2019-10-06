@@ -14,7 +14,7 @@ Markdown is supported for most text fields, but support may vary by channel.
 ## Send a message
 
 To send a simple text message, specify the string you want to send as the activity.
-In the bot's activity handlers, use the turn context object's `SendActivityAsync` method to send a single message response. You can also use the object's `SendActivitiesAsync` method to send multiple responses at once.
+In the bot's activity handlers, use the turn context object's `SendActivityAsync` method to send a single message response. You can also use the object's `SendActivitiesAsync` method to send multiple responses at once. The following code shows an example.  
 
 <!-- Not working
 [!code-csharp[Send message](~/microsoft/botbuilder-dotnet/blob/master/tests/Teams/Roster/Bots/RosterBot.cs?range=23&highlight=23)]
@@ -27,7 +27,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 ## Receive a message
 
 To receive a simple text message, use the *text* property of the *activity* object.
-In the bot's activity handlers, use the following code to receive a message. 
+In the bot's activity handlers, use code similar to the following: 
 
 <!-- Not working
 [!code-csharp[Receive message](~/microsoft/botbuilder-dotnet/blob/master/tests/Teams/Roster/Bots/RosterBot.cs?range=27-45&highlight=27)]
