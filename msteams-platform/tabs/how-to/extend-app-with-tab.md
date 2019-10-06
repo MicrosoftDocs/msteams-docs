@@ -127,11 +127,11 @@ Once you have completed your `manifest.json` bundle it in a zip folder along wit
 1. Open your project directory, browse to the **./package** folder, select the app package zip folder and choose **Open**. Your tab will upload into Teams.
 
 > [!NOTE]
-> You have three levels of distribution available for your app. See [publish your app](foo.md) for complete guidance.
+> You have three levels of distribution available for your app. *See* [Publish your Microsoft Teams app](../../publishing/apps-publish.md) for complete guidance.
 >
 > * The Teams App Store offers apps that any organization can use.
 > * Your tenant’s Teams App Catalog has apps that are only available to your organization. These are known as line-of-business apps.
-> * Sideloaded apps are available to a single user or team.
+> * Uploaded apps are available to a single user or team.
 
 ### View your tab in Teams
 
