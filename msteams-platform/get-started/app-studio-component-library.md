@@ -64,7 +64,7 @@ class App extends Component {
       // instead of {16} in the block.
       // This library uses the power of CSS to do most of the work for you.
       // Instead of passing themes as a parameter to every UI component,
-      // we set it on a parent HTML element. All HTML elements nested ithin
+      // we set it on a parent HTML element. All HTML elements nested within
       // that parent will inherit these properties.
 
       return (
