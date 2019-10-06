@@ -16,7 +16,7 @@ Markdown is supported for most text fields, but support may vary by channel.
 To send a simple text message, specify the string you want to send as the activity.
 In the bot's activity handlers, use the turn context object's `SendActivityAsync` method to send a single message response. You can also use the object's `SendActivitiesAsync` method to send multiple responses at once.
 
-[!code-csharp[Send message](https://github.com/microsoft/botbuilder-dotnet/blob/master/tests/Teams/Roster/Bots/RosterBot.cs?range=23&highlight=23)]
+[!code-csharp[Send message](/microsoft/botbuilder-dotnet/blob/master/tests/Teams/Roster/Bots/RosterBot.cs?range=23&highlight=23)]
 
 ```cs
 await turnContext.SendActivityAsync(replyActivity, cancellationToken);
@@ -28,7 +28,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 To receive a simple text message, use the *text* property of the *activity* object.
 In the bot's activity handlers, use the following code to receive a message. 
 
-[!code-csharp[Receive message](https://github.com/microsoft/botbuilder-dotnet/blob/master/tests/Teams/Roster/Bots/RosterBot.cs?range=27-45&highlight=27)]
+[!code-csharp[Receive message](/microsoft/botbuilder-dotnet/blob/master/tests/Teams/Roster/Bots/RosterBot.cs?range=27-45&highlight=27)]
 
 
 ```cs
@@ -41,9 +41,9 @@ switch (selection)
 
 ## Additional resources
 
-- Inside the bots - [How bots work](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&tabs=csharp#bot-structure)
-- Conversations and messages in Teams - [Have a conversation with a Microsoft Teams bot](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bot-conversations/bots-conversations)
-- Activity processing in general - [activity processing](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&tabs=csharp#the-activity-processing-stack)
+- Inside the bots - [How bots work](https://docs.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&tabs=csharp)
+- Conversations and messages in Teams - [Have a conversation with a Microsoft Teams bot](../../../_old/concepts/bots/bot-conversations/bots-conversations.md)
+- Activity processing in general - [activity processing](https://docs.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&tabs=csharp#the-activity-processing-stack)
 - Formatting - [message activity section](https://aka.ms/botSpecs-activitySchema#message-activity)
 
 ## Next steps
