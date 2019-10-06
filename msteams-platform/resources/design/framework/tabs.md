@@ -5,7 +5,9 @@ keywords: teams design guidelines reference framework tabs configuration
 ---
 # Content and conversations, all at once using tabs
 
-> [!Important] Tabs on Mobile Clients
+> [!Important]
+> **Tabs on Mobile Clients**
+>
 > Follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md) when creating your tabs. If your tab uses authentication, you must upgrade your Teams JavaScript SDK to version 1.4.1 or later, or authentication will fail.
 >
 > **Personal (static) tabs on mobile:**
