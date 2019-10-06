@@ -25,31 +25,11 @@ All tab content, including configuration, content, and tab-removal pages must me
 
 ## Tabs on mobile clients
 
-Tabs behave differently on the iOS and Android Teams clients than on the Teams desktop or web clients.
+Follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md) when creating your tabs. If your tab uses authentication, you must upgrade your Teams JavaScript SDK to version 1.4.1 or later, or authentication will fail.
 
-### Desktop and web client behavior
+### Channel/group (configurable) tabs on mobile
 
-What appears in a tab on desktop/web is defined by the value of `contentUrl`: Teams displays the contents of `contentUrl` in the tab. (See [Determine the content to display in the tab](~/concepts/tabs/tabs-configuration.md#determine-the-content-to-display-in-the-tab)). If the tab has a value for `websiteUrl`, another icon appears with the others at the upper right of the tab: ![Go to website](~/assets/images/go-to-website-icon.png). When the user clicks on this icon, `websiteUrl` is opened in a new browser tab.
-
-### Mobile client behavior
-
-> [!Note]
-
-> We recommend you to follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md) when creating your tabs.
-> If your tab uses authentication, you must upgrade your Teams JavaScript SDK to version 1.4.1 or later, or authentication will fail.
-
-> [!Important]
-
-> Configurable tab (group and channel) behavior on mobile client:
-> * Configurable tabs are available on mobile devices in production. These tabs show under More Section in a channel/group chat.
-> * Mobile clients only show tabs that have a value for `websiteUrl`. If you want your tab to appear on the Teams mobile clients, you must set the value of `websiteUrl`. 
-> * Default open behavior for such tabs on mobile is to open outside in browser (Open websiteUrl). If you want your channel tab to open inside teams by default, ensure the tab guidelines are met [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md). We can whitelist your tab to open inside by default if it follows the [guidelines](~/resources/design/framework/tabs-mobile.md).
-Please contact us on microsoftteamsdev@microsoft.com
-
-
-> Static tab (Personal app) behavior on mobile client:
-> * Static tabs (personal app) are available in [developer preview](~/resources/dev-preview/developer-preview-intro.md).
-> * While building your static tabs, ensure to follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md)
+Mobile clients only show tabs that have a value for `websiteUrl`. If you want your tab to appear on the Teams mobile clients, you must set the value of `websiteUrl`. When a use launches your tab from a mobile client, it will open in a browser outside of Teams using the `websiteUrl.
 
 If user opens a configurable tab on browser using 'websiteUrl', you can use iOS *universal links* or Android *app links* to deeplink `websiteUrl` in your mobile app if you want to. The OS will also prompt the user to install your app if it is not already installed.
 
@@ -57,3 +37,10 @@ Information on universal links and app links:
 
 * [iOS universal links](https://developer.apple.com/ios/universal-links/)
 * [Android app links](https://developer.android.com/training/app-links/index.html)
+
+>[!Note]
+>For apps published to the public App Store, if you want your channel tab to open inside teams by default, follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md), and reach out to your support rep to request to be added to the allowed list.
+
+### Personal (static) tabs on mobile
+
+Personal (static) tabs are available in [developer preview](~/resources/dev-preview/developer-preview-intro.md) for mobile clients.
