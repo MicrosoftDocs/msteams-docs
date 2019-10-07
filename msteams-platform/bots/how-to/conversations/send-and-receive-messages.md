@@ -26,7 +26,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 ## Receive a message
 
-To receive a text message, use the *Text* property of the **activity** object.
+To receive a text message, use the `Text` property of the `Activity` object.
 In the bot's activity handlers, use the turn context object's `Activity` to read a single message request. The code below shows an example.
 
 <!-- Not working
