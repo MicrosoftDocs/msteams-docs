@@ -7,14 +7,14 @@ ms.author: anclear
 ---
 # Send and receive messages
 
-<!-- Draft -->
-A bot communicates with users through message activities. Some messages are simply plain text, others contain richer content such as cards or attachments. The bot's turn handler receives messages from the user, and sends responses back. The **turn context** object provides methods for sending messages back to the user.
+A bot communicates with users through message activities. Some messages are simply plain text, others contain richer content such as cards or attachments. The bot's turn handler receives requests from the user, and sends responses back as messages. The **turn context** object provides methods for sending messages back to the user.
+
 Markdown is supported for most text fields, but support may vary by channel.
 
 ## Send a message
 
-To send a simple text message, specify the string you want to send as the activity.
-In the bot's activity handlers, use the turn context object's `SendActivityAsync` method to send a single message response. You can also use the object's `SendActivitiesAsync` method to send multiple responses at once. The following code shows an example.  
+To send a text message, specify the string you want to send as the activity.
+In the bot's activity handlers, use the turn context object's `SendActivityAsync` method to send a single message response. You can also use the object's `SendActivitiesAsync` method to send multiple responses at once. The code below shows an example.  
 
 <!-- Not working
 [!code-csharp[Send message](~/microsoft/botbuilder-dotnet/blob/master/tests/Teams/Roster/Bots/RosterBot.cs?range=23&highlight=23)]
@@ -26,8 +26,8 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 ## Receive a message
 
-To receive a simple text message, use the *text* property of the *activity* object.
-In the bot's activity handlers, use code similar to the following: 
+To receive a text message, use the *Text* property of the **activity** object.
+In the bot's activity handlers, use the turn context object's `Activity` to read a single message request. The code below shows an example.
 
 <!-- Not working
 [!code-csharp[Receive message](~/microsoft/botbuilder-dotnet/blob/master/tests/Teams/Roster/Bots/RosterBot.cs?range=27-45&highlight=27)]
@@ -43,10 +43,10 @@ switch (selection)
 
 ## Additional resources
 
-- Inside the bots - [How bots work](https://docs.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&tabs=csharp)
-- Conversations and messages in Teams - [Have a conversation with a Microsoft Teams bot](../../../_old/concepts/bots/bot-conversations/bots-conversations.md)
-- Activity processing in general - [activity processing](https://docs.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&tabs=csharp#the-activity-processing-stack)
-- Formatting - [message activity section](https://aka.ms/botSpecs-activitySchema#message-activity)
+- [How bots work](https://docs.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&tabs=csharp) - Inside the bots 
+- [Have a conversation with a Microsoft Teams bot](../../../_old/concepts/bots/bot-conversations/bots-conversations.md) -  Conversations and messages in Teams
+- [Activity processing](https://docs.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&tabs=csharp#the-activity-processing-stack) - Activity processing in general
+- [Message activity section](https://aka.ms/botSpecs-activitySchema#message-activity) -  Formatting
 
 ## Next steps
 
