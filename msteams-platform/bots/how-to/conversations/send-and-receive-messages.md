@@ -7,7 +7,7 @@ ms.author: anclear
 ---
 # Send and receive messages
  
-<!-- First version --> 
+<!-- First version -->
 
 A bot communicates with users through message activities. Some messages are simply plain text, others contain richer content such as cards or attachments. The bot's turn handler receives requests from the user, and sends responses back as messages. The **turn context** object provides methods for sending messages back to the user.
 
