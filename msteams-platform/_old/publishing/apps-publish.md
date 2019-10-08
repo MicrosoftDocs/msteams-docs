@@ -5,7 +5,7 @@ keywords: teams publish store office publishing AppSource
 ---
 # Publish your Microsoft Teams app
 
-Once you've created your app you have three options for distributing it to your users. The simplest option is to [sideload your app](~/concepts/apps/apps-upload.md) directly for yourself or a team. If you want distribute your app more broadly, Teams provides an in-app gallery for users to find or discover [high-quality Teams apps](~/resources/design/overview.md). To have your solution available in the gallery, you must either:
+Once you've created your app you have three options for distributing it to your users. The simplest option is to [upload your app package](~/concepts/apps/apps-upload.md) directly for yourself or a team. If you want distribute your app more broadly, Teams provides an in-app gallery for users to find or discover [high-quality Teams apps](~/resources/design/overview.md). To have your solution available in the gallery, you must either:
 
 * Publish your app through AppSource
 * Publish your app through the Microsoft Teams Tenant App Catalog

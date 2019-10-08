@@ -139,20 +139,11 @@ Sometimes, you may not want to publish your connector app to the public AppSourc
 
 Once you've uploaded your [app package](/concepts/apps/apps-package.md), to configure and use the connector in a Team it can be installed from the organization's app catalog by following these steps:
 
-1. Open store and navigate to your organization's app catalog page.
-
-![Screenshot of the organization App Catalog with connector app](~/assets/images/connectors/tenant-app-catalog.png)
-
-2. Open the connector app.
-3. Select Team and click Install.
-
-![Screenshot of the Connector App Install Dialog](~/assets/images/connectors/connector-app-install.png)
-
-4. Click on Set Up button for the connector and you will be taken to Connectors dashboard page.
-
-![Screenshot of the Connector App Set Up dialog](~/assets/images/connectors/connector-app-setup.png)
-
-5. The connector will be available in the *Sideloaded* section for that team. You can navigate by scrolling to this section or search for the connector app.
-6. Click on "Configure" and the connector can be configured. From this point, it will be available in connectors list under *Sideloaded* section for this team.
-
-![Screenshot of the Connector dashboard with sideloaded connector highlighted](~/assets/images/connectors/connector-dialog-sideloaded.png)
+1. Select the apps icon from the far left vertical navigation bar.
+1. In the **Apps** window select **Connectors**.
+1. Select the connector that you want to add and a pop-up dialog window will display.
+1. Select the **Add to a team** bar.
+1. In the next dialog window type a team or channel name.
+1. Select the **Set up a connector** bar from the bottom right corner of dialog window.
+1. The connector will be available in the  section &#9679;&#9679;&#9679; => *More options* => *Connectors* => *All* => *Connectors for you team* for that team. You can navigate by scrolling to this section or search for the connector app.
+1. To configure or modify the connector select the **Configure** bar.

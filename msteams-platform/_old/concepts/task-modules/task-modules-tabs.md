@@ -73,7 +73,7 @@ Once you've validated what the user has entered you call the `microsoftTeams.tas
 
 Pass your result as the first parameter. Teams will invoke `submitHandler` where `err` will be `null` and `result` will be the object/string you passed to `submitTask()`. If you do call `submitTask()` with a `result` parameter, you **must** pass an `appId` or an array of `appId` strings: this allows Teams to validate that the app sending the result is the same one which invoked the task module.
 
-### Adaptive card (`TaskInfo.card`)**
+### Adaptive card (`TaskInfo.card`)
 
 If you invoked the task module with a `submitHandler`, when the user presses an `Action.Submit` button the values in the card will be returned as the value of `result`. If the user presses the Esc button or presses the X, `err` will be returned instead. Alternatively, if your app contains a bot in addition to a tab you can simply include the `appId` of the bot as the value of `completionBotId` in the `TaskInfo` object. The Adaptive card body (as filled in by the user) will be sent to the bot via a `task/submit invoke` message when the user presses an `Action.Submit` button. The schema for the object you receive is very similar to [the schema you receive for task/fetch and task/submit messages](~/concepts/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages); the only difference is that the schema of the JSON object is an Adaptive card object as opposed to an object *containing* an Adaptive card object as [when Adaptive cards are used with bots](~/concepts/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages).
 
