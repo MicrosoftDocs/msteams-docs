@@ -42,6 +42,31 @@ When sending notifications, assure that the users have a clear path to take comm
 - **What they can do about it.** Make it easy for the users to take actions based on the notification.
 - **How they can opt out.** You need to provide a path for users to opt out of additional notifications.
 
+## Obtain necessary user information
+
+Bots can create new conversations with an individual Microsoft Teams user by obtaining the user’s *unique ID* and *tenant ID.* You can obtain these values using one of the following methods:
+
+> [!WARNING]
+> Please, verify these links; they point to topics in the _old folder.
+
+- By [fetching the team roster](../../../_old/concepts/bots/bots-context.md#fetching-the-team-roster) from a channel your app is installed in.
+- By caching them when a user [interacts with your bot in a channel](../../../_old/concepts/bots/bot-conversations/bots-conv-channel.md).
+- When a users is [@mentioned in a channel conversation](../../../_old/concepts/bots/bot-conversations/bots-conv-channel.md#-mentions) the bot is a part of.
+- By caching them when you [receive the conversationUpdate](../../../_old/concepts/bots/bots-notifications.md#team-member-or-bot-addition) event when your app is installed in a personal scope, or new members are added to a channel or group chat that
+
+### Proactively install your app using Graph
+
+> [!Note]
+> Proactively installing apps using graph is currently in beta.
+
+Occasionally it may be necessary to proactively message users that have not installed or interacted with your bot previously. For example, you want to use the [company communicator](../../../samples/app-templates.md#company-communicator) to send messages to your entire organization. For this scenario you can use the Graph API to proactively install your bot for your users, then cache the necessary values from the `conversationUpdate` event your app will receive upon install.
+
+You can only install apps that are in your organizational app catalogue, or the Teams app store.
+
+See [Install apps for users](https://docs.microsoft.com/graph/teams-proactive-messaging) in the Graph documentation for complete details. There is also a [sample in .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
+
+
+
 ## Example
 
 The following code snippets belong to a bot sample that could be added to a team, but could also work in group chat (with updated `onMembersAdded` implementations).
@@ -50,7 +75,6 @@ If the user `@mention` the bot and sends a message to it, the bot **proactively*
 Download the complete code example at this location [ProactiveMessages](https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/ProactiveMessages).
 
 ```cs
-
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 
 {
@@ -95,7 +119,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 You can use the adapter to send a proactive message if you already have a conversation reference; put this code into the controller:
 
 ```cs
-    await turnContext.Adapter.ContinueConversationAsync(_appId, turnContext.Activity.GetConversationReference(), BotOnTurn, cancellationToken);
+await turnContext.Adapter.ContinueConversationAsync(_appId, turnContext.Activity.GetConversationReference(), BotOnTurn, cancellationToken);
 ```
 
 To send a proactive message, the adapter requires an app ID for the bot. In a production environment, you can use the bot's app ID. In a local test environment, you can use any GUID. If the bot is not currently assigned an app ID, the notify controller self-generates a placeholder ID to use for the call.
@@ -118,6 +142,15 @@ You'll want to add the above code just prior to the the code that sends the proa
 ```cs
 var proactiveMessage = MessageFactory.Text($"Hello {turnContext.Activity.From.Name}. You sent me a message. This is a proactive responsive message.");
 ```
+
+For more information and a related example code, see Bot Framework SDK [Send proactive notifications to users](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp) article.
+
+
+## Additional resources
+
+- [Send proactive notifications to users](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp) - Bot Framework SDK proactive messages explained
+- [How bots work](https://docs.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&tabs=csharp) - Inside the bots
+- [Have a conversation with a Microsoft Teams bot](../../../_old/concepts/bots/bot-conversations/bots-conversations.md) - Conversations and messages in Teams
 
 
 <!--
