@@ -5,9 +5,9 @@ description: How to send and receive messages with a Microsoft Teams bot
 ms.topic: overview
 ms.author: anclear
 ---
+
 # Send and receive messages
 
-<!-- Draft -->
 A bot communicates with users through message activities. Some messages are simply plain text, others contain richer content such as cards or attachments. The bot's turn handler receives messages from the user, and sends responses back. The **turn context** object provides methods for sending messages back to the user.
 Markdown is supported for most text fields, but support may vary by channel.
 
@@ -21,7 +21,9 @@ In the bot's activity handlers, use the turn context object's `SendActivityAsync
 -->
 
 ```cs
-await turnContext.SendActivityAsync(replyActivity, cancellationToken);
+
+await turnContext.SendActivityAsync($"Welcome!");
+
 ```
 
 ## Receive a message
@@ -34,11 +36,7 @@ In the bot's activity handlers, use the following code to receive a message.
 -->
 
 ```cs
-var selection = turnContext.Activity.Text;
-switch (selection)
-{
-  // switch statements
-}
+var responseMessage = turnContext.Activity.Text;
 ```
 
 ## Additional resources
