@@ -9,6 +9,8 @@ ms.author: anclear
 
 ## Writing notes
 
+<!-- WIP -->
+
  * **Purpose** Explain how to add authentication to your bot.
  * **Existing teams doc reference**
    * [https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/authentication/auth-flow-bot](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/authentication/auth-flow-bot)
