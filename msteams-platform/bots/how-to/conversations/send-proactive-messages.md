@@ -45,10 +45,13 @@ When using proactive messaging to send notifications you need to make sure your 
 ## Example
 
 The following code snippet is part of a bot sample that could be added to a team, but could work in group chat (with updated `onMembersAdded` implementations).
-If the user `@mention` the bot and sends it a message, the bot **proactively** send messages to the user. 
+If the user `@mention` the bot and sends it a message, the bot **proactively** send messages to the user.
 
-- You can use the adapter to send a message if you already have a conversation reference.
-- You can put this code into the controller if you already have a store of conversation references.
+You can use the adapter to send a message if you already have a conversation reference; put this code into the controller:
+
+```cs
+    await turnContext.Adapter.ContinueConversationAsync(_appId, turnContext.Activity.GetConversationReference(), BotOnTurn, cancellationToken);
+```
 
 Download the complete code example from this location [ProactiveMessages](https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/ProactiveMessages).
 
@@ -57,35 +60,22 @@ Download the complete code example from this location [ProactiveMessages](https:
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 
 {
-
     // You can hand roll a connector to manually address a proactive message
-
     var connectorClient = turnContext.TurnState.Get<IConnectorClient>();
-
     var connector = new ConnectorClient(connectorClient.Credentials);
-
     connector.BaseUri = new Uri(turnContext.Activity.ServiceUrl);
 
     var parameters = new ConversationParameters
-
     {
-
         Bot = turnContext.Activity.From,
-
         Members = new ChannelAccount[] { turnContext.Activity.From },
-
         ChannelData = new TeamsChannelData
-
         {
-
             Tenant = new TenantInfo
-
             {
                 Id = turnContext.Activity.Conversation.TenantId,
             },
-
         },
-
     };
 
     var converationReference = await connector.Conversations.CreateConversationAsync(parameters);
@@ -95,19 +85,15 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
     proactiveMessage.From = turnContext.Activity.From;
 
     proactiveMessage.Conversation = new ConversationAccount
-
     {
         Id = converationReference.Id.ToString(),
     };
 
     await connector.Conversations.SendToConversationAsync(proactiveMessage, cancellationToken);
 
-
     // Or you can use the adapter to send a message if you already have a conversation reference. You can put this code into the controller if
     // you already have a store of conversation references. 
-
     await turnContext.Adapter.ContinueConversationAsync(_appId, turnContext.Activity.GetConversationReference(), BotOnTurn, cancellationToken);
-
 }
 
 ```
