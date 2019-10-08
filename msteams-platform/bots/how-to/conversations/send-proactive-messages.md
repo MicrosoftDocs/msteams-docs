@@ -52,6 +52,7 @@ You can use the adapter to send a message if you already have a conversation ref
 ```cs
     await turnContext.Adapter.ContinueConversationAsync(_appId, turnContext.Activity.GetConversationReference(), BotOnTurn, cancellationToken);
 ```
+To send a proactive message, the adapter requires an app ID for the bot. In a production environment, you can use the bot's app ID. In a local test environment, you can use any GUID. If the bot is not currently assigned an app ID, the notify controller self-generates a placeholder ID to use for the call.
 
 Download the complete code example from this location [ProactiveMessages](https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/ProactiveMessages).
 
@@ -96,6 +97,25 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
     await turnContext.Adapter.ContinueConversationAsync(_appId, turnContext.Activity.GetConversationReference(), BotOnTurn, cancellationToken);
 }
 
+```
+
+## Additional information
+
+### Avoiding 401 "Unauthorized" Errors
+
+By default, the BotBuilder SDK adds a `serviceUrl` to the list of trusted host names if the incoming request is authenticated. They are maintained in an in-memory cache. If your bot is restarted, a user awaiting a proactive message cannot receive it unless they have messaged the bot again after it restarted. 
+
+To avoid this, you must manually add the `serviceUrl` to the list of trusted host names by using: 
+
+```csharp 
+MicrosoftAppCredentials.TrustServiceUrl(serviceUrl); 
+``` 
+
+For proactive messaging, `serviceUrl` is the URL of the channel that the recipient of the proactive message is using and can be found in `Activity.ServiceUrl`. 
+You'll want to add the above code just prior to the the code that sends the proactive message. In the above example:
+
+```cs
+var proactiveMessage = MessageFactory.Text($"Hello {turnContext.Activity.From.Name}. You sent me a message. This is a proactive responsive message.");
 ```
 
 
