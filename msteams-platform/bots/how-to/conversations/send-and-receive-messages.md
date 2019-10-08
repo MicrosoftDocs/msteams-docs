@@ -15,7 +15,7 @@ Markdown is supported for most text fields, but support may vary by channel.
 ## Send a message
 
 To send a text message, specify the string you want to send as the activity.
-In the bot's activity handlers, use the turn context object's `SendActivityAsync` method to send a single message response. You can also use the object's `SendActivitiesAsync` method to send multiple responses at once. The code below shows an example.  
+In the bot's activity handlers, use the turn context object's `SendActivityAsync` method to send a single message response. You can also use the object's `SendActivitiesAsync` method to send multiple responses at once.   
 
 ```cs
 
@@ -26,7 +26,7 @@ await turnContext.SendActivityAsync($"Welcome!");
 ## Receive a message
 
 To receive a text message, use the `Text` property of the `Activity` object.
-In the bot's activity handlers, use the turn context object's `Activity` to read a single message request. The code below shows an example.
+In the bot's activity handlers, use the turn context object's `Activity` to read a single message request. 
 
 ```cs
 var responseMessage = turnContext.Activity.Text;
