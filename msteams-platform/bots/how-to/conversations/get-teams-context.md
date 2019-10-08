@@ -8,6 +8,7 @@ ms.author: anclear
 # Get Team's specific context for your bot
 
 ## Writing notes
+<!--WIP -->
 
  * **Purpose** Explain how to use the helper methods to get addtional Team's metadata for your bot. Includes:
    * Get the team/conversation roster
