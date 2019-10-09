@@ -17,7 +17,7 @@ keywords: teams design guidelines reference framework personal apps mobile tabs
 
 Custom tabs can be part of a channel, group chat, or personal app (apps that contain static tabs and/or a one-to-one bot).
 
-Personal apps are available on mobile clients in the App Drawer. They can only be installed from a desktop or web client, and can take up to 24 hours to appear on mobile clients.
+Personal apps are available on mobile clients in the App Drawer. The app can only be installed from a desktop or web client, and can take up to 24 hours to appear on mobile clients.
 
 Group and channel tabs are available on mobile clients as well. The default behavior is currently to use your `websiteUrl` to launch your tab in a browser window. However, they can be loaded on a mobile client by clicking the `...` overflow menu next to the tab and choosing **Open**, which will use your `contentUrl` to load the tab inside the Teams mobile client.
 
