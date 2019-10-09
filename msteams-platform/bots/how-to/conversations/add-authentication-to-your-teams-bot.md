@@ -10,7 +10,7 @@ ms.author: anclear
 > [!WARNING]
 > Work in progress.
 
-This article demonstrates how to use Azure Bot Service v4 SDK authentication, which includes new bot authentication capabilities based on OAuth 2.0,and provides features to make it easier to develop a bot that authenticates users to various identity providers.
+This article demonstrates how to use Azure Bot Service v4 SDK authentication, which includes new bot authentication capabilities based on OAuth 2.0, and provides features to make it easier to develop a bot that authenticates users to various identity providers.
 
 OAuth 2.0 is an open standard for authentication and authorization used by Azure Active Directory and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.
 
@@ -21,7 +21,7 @@ For more information see  [Microsoft Teams authentication flow for bots](../../.
 For more information about how the Azure Bot Service handles authentication, see [User authentication within a conversation](https://docs.microsoft.com/azure/bot-service/bot-builder-concept-authentication?view=azure-bot-service-4.0).
 
 
-## Teamms authentication particularities
+## Teams authentication particularities
 
 Teams behaves slightly differently than other channels, in case of authentication as explained below.
 
@@ -32,42 +32,36 @@ The **Invoke Activity** must be forwarded to the dialog when the **OAuthPrompt**
 #### Bots\DialogBots.cs
 
 ```cs
-// This IBot implementation can run any type of Dialog. The use of type parameterization is to allows multiple different bots
-    // to be run at different endpoints within the same project. This can be achieved by defining distinct Controller types
-    // each with dependency on distinct IBot types, this way ASP Dependency Injection can glue everything together without ambiguity.
-    // The ConversationState is used by the Dialog system. The UserState isn't, however, it might have been used in a Dialog implementation,
-    // and the requirement is that all BotState objects are saved at the end of a turn.
-    public class DialogBot<T> : TeamsActivityHandler where T : Dialog
+public class DialogBot<T> : TeamsActivityHandler where T : Dialog
+{
+    protected readonly BotState ConversationState;
+    protected readonly Dialog Dialog;
+    protected readonly ILogger Logger;
+    protected readonly BotState UserState;
+
+    public DialogBot(ConversationState conversationState, UserState userState, T dialog, ILogger<DialogBot<T>> logger)
     {
-        protected readonly BotState ConversationState;
-        protected readonly Dialog Dialog;
-        protected readonly ILogger Logger;
-        protected readonly BotState UserState;
+        ConversationState = conversationState;
+        UserState = userState;
+        Dialog = dialog;
+        Logger = logger;
+    }
 
-        public DialogBot(ConversationState conversationState, UserState userState, T dialog, ILogger<DialogBot<T>> logger)
-        {
-            ConversationState = conversationState;
-            UserState = userState;
-            Dialog = dialog;
-            Logger = logger;
-        }
+    public override async Task OnTurnAsync(ITurnContext turnContext, CancellationToken cancellationToken = default(CancellationToken))
+    {
+        await base.OnTurnAsync(turnContext, cancellationToken);
 
-        public override async Task OnTurnAsync(ITurnContext turnContext, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            await base.OnTurnAsync(turnContext, cancellationToken);
+        // Save any state changes that might have occured during the turn.
+        await ConversationState.SaveChangesAsync(turnContext, false, cancellationToken);
+        await UserState.SaveChangesAsync(turnContext, false, cancellationToken);
+    }
 
-            // Save any state changes that might have occured during the turn.
-            await ConversationState.SaveChangesAsync(turnContext, false, cancellationToken);
-            await UserState.SaveChangesAsync(turnContext, false, cancellationToken);
-        }
+    protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+    {
+        Logger.LogInformation("Running dialog with Message Activity.");
 
-        protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
-        {
-            Logger.LogInformation("Running dialog with Message Activity.");
-
-            // Run the Dialog with the new message Activity.
-            await Dialog.RunAsync(turnContext, ConversationState.CreateProperty<DialogState>(nameof(DialogState)), cancellationToken);
-        }
+        // Run the Dialog with the new message Activity.
+        await Dialog.RunAsync(turnContext, ConversationState.CreateProperty<DialogState>(nameof(DialogState)), cancellationToken);
     }
 }
 ```
@@ -97,6 +91,12 @@ The sample shown next includes a reusable `TeamsActivityHandler` class which in 
   - This id would have actually been the value returned from a previous Message Activity the bot had sent. 
   - This activity should also be visible through the Activity Feed in Microsoft Teams, documentation for which can be found here [activity-feed](https://docs.microsoft.com/microsoftteams/platform/concepts/activity-feed).
 
+
+// This IBot implementation can run any type of Dialog. The use of type parameterization is to allows multiple different bots
+// to be run at different endpoints within the same project. This can be achieved by defining distinct Controller types
+// each with dependency on distinct IBot types, this way ASP Dependency Injection can glue everything together without ambiguity.
+// The ConversationState is used by the Dialog system. The UserState isn't, however, it might have been used in a Dialog implementation,
+// and the requirement is that all BotState objects are saved at the end of a turn.
 
 
 ## Example
