@@ -7,10 +7,20 @@ ms.author: anclear
 ---
 # Add authentication to your Teams bot
 
-The Azure Bot Service and the v4 SDK include new bot authentication capabilities, providing features to make it easier to develop a bot that authenticates users to various identity providers. 
-Prior to this, your bot needed to include OAuth controllers and login links, store the target client IDs and secrets, and perform user token management. The bot would ask the user sign in on a website, which would then generate a code the user could use to verify their identity.
-Now, as a bot developer, you no longer need to host OAuth controllers or manage the token life-cycle, as all of this is done by the Azure Bot Service.
+> [!WARNING]
+> Work in progress.
+
+The Azure Bot Service and the v4 SDK include new bot authentication capabilities based on OAuth 2.0, providing features to make it easier to develop a bot that authenticates users to various identity providers.
+
+OAuth 2.0 is an open standard for authentication and authorization used by Azure Active Directory and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.
+
+Notice that authentication flow for tabs and bots are different. Tabs are very similar to websites so they can use OAuth 2.0 directly. Bots must do a few things differently, but the core concepts are still apply.
+
+For more information see  [Microsoft Teams authentication flow for bots](../../../_old/concepts/bots/bot-authentication/auth-flow-bot.md).
+
 For more information about how the Azure Bot Service handles authentication, see [User authentication within a conversation](https://docs.microsoft.com/azure/bot-service/bot-builder-concept-authentication?view=azure-bot-service-4.0).
+
+
 
 
 ## References
@@ -18,7 +28,7 @@ For more information about how the Azure Bot Service handles authentication, see
 #### Teams
 ---
  test 
- 
+
 > [!WARNING]
 > The following links to be revised. They are in the _old folder.  
 
