@@ -162,7 +162,7 @@ namespace Microsoft.BotBuilderSamples.Bots
 
 Running this bot, you should get similar results to the following:
 
-![Reply To Channel Bot](./media/ReplyToChannelBot.png)
+![Reply To Channel Bot](Media/ReplyToChannelBot.png)
 
 
 
@@ -177,7 +177,7 @@ Bots in a group or channel respond only when they are mentioned ("@botname") dir
 > You must @Mention the bot directly by name.  While entering @Team or @Channel will generally mention everyone in that scope, it will not result in a message from Teams to your bot.
 
 > [!TIP]
-> Use the RemoveMentionText to remove the bot name (mention text) from the message if needed.
+> Use the RemoveMentionText method to remove the bot name (mention text) from the message if needed.
 
 ### Retrieving mentions
 
