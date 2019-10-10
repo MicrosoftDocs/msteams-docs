@@ -6,15 +6,15 @@ keywords: get started configurable tabs teams
 
 # Configurable tabs
 
-> [!Important]
-> Full support for tabs on mobile clients is coming soon. To prepare for this change you should follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md) when creating your tabs. Personal apps (static tabs) are currently available in [developer preview](~/resources/dev-preview/developer-preview-intro.md). and channel / group chat tabs are available in the `...` overflow menu for the tab.
->
-> When full support for tabs is released:
->
-> * All tabs will always be available on mobile
-> * Your `contentUrl` **will be loaded in the mobile Teams client**.
-> * For channel/group tabs, users can still open your tab in a separate browser via your `websiteUrl`, however your `contentUrl` will be loaded first.
-> * If your tab uses authentication, you must upgrade your Teams JavaScript SDK to version 1.4.1 or later, or authentication will fail.
+> [!Important Note for Mobile Clients]
+> We recommend you to follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md) when creating your tabs.
+> If your tab uses authentication, you must upgrade your Teams JavaScript SDK to version 1.4.1 or later, or authentication will fail.
+
+> Configurable tab (group and channel) behavior on mobile clients:
+> * Configurable tabs are available on mobile devices in production. These tabs show under More Section in a channel/group chat.
+> * Mobile clients only show tabs that have a value for `websiteUrl`. If you want your tab to appear on the Teams mobile clients, you must set the value of `websiteUrl`. 
+> * Default open behavior for such tabs on mobile is to open outside in browser (Open websiteUrl). If you want your channel tab to open inside teams by default, ensure the tab guidelines are met [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md). We can whitelist your tab to open inside by default if it follows the [guidelines](~/resources/design/framework/tabs-mobile.md).
+Please contact us on microsoftteamsdev@microsoft.com
 
 A *configurable tab* becomes part of a channel and provides a single kind of information to a team.
 
