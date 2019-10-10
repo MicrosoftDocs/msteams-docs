@@ -242,6 +242,27 @@ public class MentionsBot : ActivityHandler
 
 ### In Progress
 
+
+```csharp
+        public static void TeamsNotifyUser(this IActivity activity)
+        {
+            var teamsChannelData = activity.ChannelData as TeamsChannelData;
+            if (teamsChannelData == null)
+            {
+                teamsChannelData = new TeamsChannelData();
+                activity.ChannelData = teamsChannelData;
+            }
+
+            teamsChannelData.Notification = new NotificationInfo
+            {
+                Alert = true,
+            };
+```
+
+
+
+
+
 ```csharp
 if (turnContext.Activity.Text == "notify")
 {
