@@ -162,7 +162,7 @@ namespace Microsoft.BotBuilderSamples.Bots
 
 Running this bot, you should get similar results to the following:
 
-![Reply To Channel Bot](media/ReplyToChannelBot.png)
+![Reply To Channel Bot](.\media\ReplyToChannelBot.png)
 
 
 
