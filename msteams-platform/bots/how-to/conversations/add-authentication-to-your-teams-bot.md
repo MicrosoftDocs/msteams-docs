@@ -20,8 +20,45 @@ For more information see  [Microsoft Teams authentication flow for bots](../../.
 
 For more information about how the Azure Bot Service handles authentication, see [User authentication within a conversation](https://docs.microsoft.com/azure/bot-service/bot-builder-concept-authentication?view=azure-bot-service-4.0).
 
+## Create the bot
 
-## Teams authentication particularities
+This section uses the bot sample code you cna download from this location: [teams-auth-bot](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth).
+
+1. In your browser navigate to the [Azure portal][azure-portal].
+1. In the left panel, click **Create a resource**.
+1. In the right panel selection box enter "bot". Select **Bot Channels Registration** card from the search results.
+1. Click **Create**.
+1. You'll be asked to provide the following information: 
+    1. **Name**. Enter tne name for the app registration. For example,  *TeamsBotRegistration*.
+    1. **Subscription**. You can use an existing subscription.
+    1. **Resource Group**. Select *TeamsBotsResourceGroup* you created earlier.
+    1. **Region**. Select *West US 2* or the region closest to you.
+    1. **Pricing Tier**. Make sure that *Standard S1* is selected. This should be the default value.
+    1. **Messaging endpoint**. Leave it blank for now. You will insert the correct value after you have created the bot service app.
+    1. Click **Create**.
+
+### Get Azure app registration credentials
+
+After the registration completes, you must obtain its credentials which you will use in the bot `appsettings.json` or `.env` file. This "connects" the bot with the AAD app registration. To put it differently, the bot is the **App Service** in the **Bot Channels Registration**.
+
+1. In the resource list, click on the *Azure AD app registration* name (link) just created.
+1. In the right panel, in the resource blade, click **Settings**. The resource *Settings* page is displayed.
+1. Double click on the generated **Microsoft App ID**, copy it and save it to a file. You will assign this ID to the `MicrosoftAppId` variable in the `appsettings.json` or `.env` bot file.  
+1. Click the **Manage** button by the *Microsoft App ID*. The *Certificates & secrets* page is displayed.
+1. Click the **New client secret** button.
+1. Add the description, select the expiration time.
+1. Click the **Add** button. This generate a new password. Copy it and save it to a file. You will assign this password to the `MicrosoftAppPassword` variable in the `appsettings.json` or `.env` bot file. 
+
+> [!IMPORTANT]
+> This is the only time you will see this password. If you do not have the full password saved, you will need to repeat the process to create a new password should you need it later.
+
+For more information, see [Register a bot with Azure Bot Service](../bot-service-quickstart-registration.md).
+
+
+### Test the bot via the emulator
+
+
+## Teams authentication peculiarities
 
 Teams behaves slightly differently than other channels, in case of authentication as explained below.
 
@@ -129,6 +166,12 @@ The sample uses the bot authentication capabilities in Azure Bot Service, provid
 ----
 
 - [teams-auth bot](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth)
+
+
+<!-- Footnote-style links -->
+
+[azure-portal]: https://ms.portal.azure.com
+
 
 
 <!--- Ref links 
