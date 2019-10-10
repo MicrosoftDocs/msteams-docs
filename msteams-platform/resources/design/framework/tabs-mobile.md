@@ -6,15 +6,19 @@ keywords: teams design guidelines reference framework personal apps mobile tabs
 # Tabs on mobile
 
 > [!Important]
-> Full support for tabs on mobile clients is coming soon. To prepare for this change you should follow the this guidance when creating your tabs. Personal apps (static tabs) are currently available in [developer preview](~/resources/dev-preview/developer-preview-intro.md). and channel / group chat tabs are available in the `...` overflow menu for the tab.
+> **Tabs on Mobile Clients**
 >
-> When full support for tabs is released:
+> Follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md) when creating your tabs. If your tab uses authentication, you must upgrade your Teams JavaScript SDK to version 1.4.1 or later, or authentication will fail.
 >
-> * All tabs will always be available on mobile
-> * Your `contentUrl` **will be loaded in the mobile Teams client**.
-> * For channel/group tabs, users can still open your tab in a separate browser via your `websiteUrl`, however your `contentUrl` will be loaded first.
-> * If your tab uses authentication, you must upgrade your Teams JavaScript SDK to version 1.4.1 or later, or authentication will fail.
-
+> **Personal (static) tabs on mobile:**
+>
+> * Static tabs (personal app) are available in [developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> * While building your static tabs, ensure to follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md)
+>
+> **Channel/group (configurable) tabs on mobile:**
+>
+> * Mobile clients only show tabs that have a value for `websiteUrl`. If you want your tab to appear on the Teams mobile clients, you must set the value of `websiteUrl`.
+> * Default open behavior on mobile is to open outside in browser using the `websiteUrl`. For apps published to the public App Store, if you want your channel tab to open inside teams by default, follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md), and reach out to your support rep to request to be whitelisted.
 Custom tabs can be part of a channel, group chat, or personal app (apps that contain static tabs and/or a one-to-one bot).
 
 Personal apps are available on mobile clients in the App Drawer. The app can only be installed from a desktop or web client, and can take up to 24 hours to appear on mobile clients.
