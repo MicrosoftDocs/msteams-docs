@@ -5,16 +5,6 @@ keywords: teams tabs development
 ---
 # Add tabs to Microsoft Teams apps
 
-> [!Important]
-> Full support for tabs on mobile clients is coming soon. To prepare for this change you should follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md) when creating your tabs. Personal apps (static tabs) are currently available in [developer preview](~/resources/dev-preview/developer-preview-intro.md). and channel / group chat tabs are available in the `...` overflow menu for the tab.
->
-> When full support for tabs is released:
->
-> * All tabs will always be available on mobile
-> * Your `contentUrl` **will be loaded in the mobile Teams client**.
-> * For channel/group tabs, users can still open your tab in a separate browser via your `websiteUrl`, however your `contentUrl` will be loaded first.
-> * If your tab uses authentication, you must upgrade your Teams JavaScript SDK to version 1.4.1 or later, or authentication will fail.
-
 Tabs in Microsoft Teams allow you to display rich interactive web content. You can build a Microsoft Teams tab from scratch or adapt your existing web-app experience.
 
 ![Example of a tab showing data, alongside a conversation about the tab data](~/assets/images/tab_example.png)
@@ -23,6 +13,24 @@ There are two types of tabs in Teams.
 
 * [*Static tabs*](~/concepts/tabs/tabs-static.md) support an individual user. For example, if your service is a notetaking app, add a tab that holds a user's personal notes. That way, a user can refer to his or her own notes without having to share them with the entire team.
 * [*Configurable tabs*](~/concepts/tabs/tabs-configurable.md) A configurable tab becomes part of a channel and provides a single kind of information to a team. Configurable tabs have a configuration page in addition to a content page.
+
+## Tabs on Mobile Client 
+
+> [!Note]
+> We recommend you to follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md) when creating your tabs.
+> If your tab uses authentication, you must upgrade your Teams JavaScript SDK to version 1.4.1 or later, or authentication will fail.
+
+> [!Important]
+> Configurable tab (group and channel) behavior on mobile client:
+> * Configurable tabs are available on mobile devices in production. These tabs show under More Section in a channel/group chat.
+> * Mobile clients only show tabs that have a value for `websiteUrl`. If you want your tab to appear on the Teams mobile clients, you must set the value of `websiteUrl`. 
+> * Default open behavior for such tabs on mobile is to open outside in browser (Open websiteUrl). If you want your channel tab to open inside teams by default, ensure the tab guidelines are met [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md). We can whitelist your tab to open inside by default if it follows the [guidelines](~/resources/design/framework/tabs-mobile.md).
+Please contact us on microsoftteamsdev@microsoft.com
+
+> Static tab (Personal app) behavior on mobile client:
+> * Static tabs (personal app) are available in [developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> * While building your static tabs, ensure to follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md)
+
 
 ## Tab scope
 
