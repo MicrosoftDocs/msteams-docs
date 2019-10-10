@@ -21,6 +21,17 @@ In the bot's activity handlers, use the turn context object's `SendActivityAsync
 
 await turnContext.SendActivityAsync($"Welcome!");
 
+protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+  foreach (var member in membersAdded)
+  {
+      if (member.Id != turnContext.Activity.Recipient.Id)
+      {
+          await turnContext.SendActivityAsync(MessageFactory.Text($"Hello and welcome!"), cancellationToken);
+      }
+  }
+}
+
 ```
 
 ## Receive a message
@@ -29,7 +40,10 @@ To receive a text message, use the `Text` property of the `Activity` object.
 In the bot's activity handlers, use the turn context object's `Activity` to read a single message request. The code below shows an example.
 
 ```cs
-var responseMessage = turnContext.Activity.Text;
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+  await turnContext.SendActivityAsync(MessageFactory.Text($"Echo: {turnContext.Activity.Text}"), cancellationToken);
+}
 ```
 
 ## Additional resources
