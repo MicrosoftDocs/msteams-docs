@@ -39,15 +39,15 @@ This section uses the bot sample code you cna download from this location: [team
 
 ### Get Azure app registration credentials
 
-After the registration completes, you must obtain its credentials which you will use in the bot `appsettings.json` or `.env` file. This "connects" the bot with the AAD app registration. To put it differently, the bot is the **App Service** in the **Bot Channels Registration**.
+After the resource has been created, you must obtain its credentials which you will use in the bot `appsettings.json` or `.env` file in the code project. 
 
-1. In the resource list, click on the *Azure AD app registration* name (link) just created.
+1. In the resource list, click on the name (link) of the resource just created.
 1. In the right panel, in the resource blade, click **Settings**. The resource *Settings* page is displayed.
 1. Double click on the generated **Microsoft App ID**, copy it and save it to a file. You will assign this ID to the `MicrosoftAppId` variable in the `appsettings.json` or `.env` bot file.  
 1. Click the **Manage** button by the *Microsoft App ID*. The *Certificates & secrets* page is displayed.
 1. Click the **New client secret** button.
 1. Add the description, select the expiration time.
-1. Click the **Add** button. This generate a new password. Copy it and save it to a file. You will assign this password to the `MicrosoftAppPassword` variable in the `appsettings.json` or `.env` bot file. 
+1. Click the **Add** button. This generate a new password. Copy it and save it to a file. 
 
 > [!IMPORTANT]
 > This is the only time you will see this password. If you do not have the full password saved, you will need to repeat the process to create a new password should you need it later.
