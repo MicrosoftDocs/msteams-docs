@@ -7,6 +7,8 @@ ms.author: anclear
 ---
 # Send proactive messages
 
+<!-- Update -->
+
 In some situations, a bot may need to send to the user a message that is not related to the current conversation. These types of messages are called **proactive messages**.
 
 Proactive messages can be useful in a variety of scenarios. These are some examples:  
