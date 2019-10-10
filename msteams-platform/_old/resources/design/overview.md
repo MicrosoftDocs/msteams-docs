@@ -13,7 +13,7 @@ Let's walk you through the kinds of experiences you can build using Microsoft Te
 
 ### Immersive experience
 
-Our platform places content and conversations side by side. [Learn more](~/resources/design/framework/basics.md)
+Our platform places content and conversations side by side. [Learn more](~/resources/design/framework/apps.md)
 
 <img width="530" src="~/assets/images/get-started/01_homepage_immersive-experience.png" /><br/><br/>
 

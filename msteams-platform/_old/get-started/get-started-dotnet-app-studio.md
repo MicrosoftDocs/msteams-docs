@@ -127,7 +127,7 @@ Once you install the app into a team, you will need to configure it to show cont
 
 ### Test your bot in Teams
 
-You can now interact with the bot in Teams. Choose a channel in the team where you registered your app, and type `@your-bot-name`. This is called an **@mention**. Whatever message you send to the bot will be sent back to you as a reply.
+You can now interact with the bot in Teams. Choose a channel in the team where you registered your app, and type `@your-bot-name`. This is called an **\@mention**. Whatever message you send to the bot will be sent back to you as a reply.
 
 <img width="450px" title="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 
