@@ -19,8 +19,6 @@ In the bot's activity handlers, use the turn context object's `SendActivityAsync
 
 ```cs
 
-await turnContext.SendActivityAsync($"Welcome!");
-
 protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 {
   foreach (var member in membersAdded)
