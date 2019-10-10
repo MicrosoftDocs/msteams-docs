@@ -162,13 +162,11 @@ namespace Microsoft.BotBuilderSamples.Bots
 
 Running this bot, you should get similar results to the following:
 
-  ![TokenController.cs](media/ReplyToChannelBot.png)
+![Reply To Channel Bot](media/ReplyToChannelBot.png)
 
 
 
-<HR>
 
-{Microsoft.Bot.Schema.ChannelAccount}
 
 
 ## @ Mentions
@@ -238,11 +236,11 @@ public class MentionsBot : ActivityHandler
 
 
 
+
+
 ## Activity feed notifications
 
-
-   * Creating Activity Feed notifications
-
+### In Progress
 
 ```csharp
 if (turnContext.Activity.Text == "notify")
