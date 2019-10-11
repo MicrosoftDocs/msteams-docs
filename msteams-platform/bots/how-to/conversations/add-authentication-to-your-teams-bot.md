@@ -52,7 +52,7 @@ After the resource has been created, you must obtain its credentials which you w
 > [!IMPORTANT]
 > This is the only time you will see this password. If you do not have the full password saved, you will need to repeat the process to create a new password should you need it later.
 
-For more information, see [Register a bot with Azure Bot Service](../bot-service-quickstart-registration.md).
+For more information, see [Register a bot with Azure Bot Service](https://docs.microsoft.com/azure/bot-service/bot-service-quickstart-registration?view=azure-bot-service-3.0A).
 
 
 ### Test the bot via the emulator
