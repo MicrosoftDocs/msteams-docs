@@ -26,7 +26,7 @@ Proactive messages can be useful in a variety of scenarios. These are some examp
 - Do not send several proactive messages within a short amount of time. Some channels enforce restrictions on how frequently a bot can send messages to the user, and will disable the bot if it violates those restrictions.
 - Ad hoc proactive message is the simplest type of proactive message. The bot simply interjects the message into the conversation whenever it is triggered, regardless if the user is engaged in a separate topic of conversation. The bot will not attempt to change the conversation in any way.
 - To handle notifications more smoothly, consider other ways to integrate the notification into the conversation flow, such as setting a flag in the conversation state or adding the notification to a queue.
-- It is advisable that a bot does not create many conversations at once within a team channel but several 1:1 conversations with various users. (**Verify**)  
+- It is advisable that a bot does not create many conversations at once within a team channel but several 1:1 conversations with various users. (**WARNING: Verify**)  
 
 Proactive messages generally fall into one of the categories described below.
 
@@ -38,7 +38,7 @@ When receiving a welcome message a users do not have context. Also this is the f
 - **What is the offer.** What can they do with your bot? What value it brings?
 - **What should they do next.** Invite them to try out a command, or interact with your bot in some way.
 
-(**Verify**) 
+(**WARNING: Verify**) 
 
 - Can the bot send a 1:1 message if the user add the bot as an app?  
 - Can the bot send a group message when the user adds it to a team channel?
@@ -57,8 +57,7 @@ When sending notifications, assure that the users have a clear path to take comm
 
 Bots can create new conversations with an individual Microsoft Teams user by obtaining the userâ€™s *unique ID* and *tenant ID.* You can obtain these values using one of the following methods:
 
-> [!WARNING]
-> Please, verify these links; they point to topics in the _old folder.
+(**WARNING: Verify**) Please, verify these links; they point to topics in the _old folder.
 
 - By [fetching the team roster](../../../_old/concepts/bots/bots-context.md#fetching-the-team-roster) from a channel your app is installed in.
 - By caching them when a user [interacts with your bot in a channel](../../../_old/concepts/bots/bot-conversations/bots-conv-channel.md).
@@ -75,7 +74,6 @@ Occasionally it may be necessary to proactively message users that have not inst
 You can only install apps that are in your organizational app catalogue, or the Teams app store.
 
 See [Install apps for users](https://docs.microsoft.com/graph/teams-proactive-messaging) in the Graph documentation for complete details. There is also a [sample in .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
-
 
 
 ## Example
