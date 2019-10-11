@@ -9,7 +9,10 @@ ms.author: anclear
 
 <!-- Update -->
 
-In some situations, a bot may need to send to the user a message that is not related to the current conversation. These types of messages are called **proactive messages**.
+A bot may need to send a message to the user that is not an immediate response to an incoming message. These types of messages are called **proactive messages**.  
+
+> [!NOTE]
+> A thread in a Teams' channel is effectively a *separate conversation* from a bot point of view. So if a bot responds to a user in a new thread, this can be considered a proactive message in a new conversation from the bot point of view.
 
 Proactive messages can be useful in a variety of scenarios. These are some examples:  
 
@@ -21,8 +24,9 @@ Proactive messages can be useful in a variety of scenarios. These are some examp
 ### Basic guidelines
 
 - Do not send several proactive messages within a short amount of time. Some channels enforce restrictions on how frequently a bot can send messages to the user, and will disable the bot if it violates those restrictions.
-- Ad hoc proactive message is the simplest type of proactive message. The bot simply interjects the message into the conversation whenever it is triggered, regardless if the user is engaged in a separate topic of conversation, The bot will not attempt to change the conversation in any way.
+- Ad hoc proactive message is the simplest type of proactive message. The bot simply interjects the message into the conversation whenever it is triggered, regardless if the user is engaged in a separate topic of conversation. The bot will not attempt to change the conversation in any way.
 - To handle notifications more smoothly, consider other ways to integrate the notification into the conversation flow, such as setting a flag in the conversation state or adding the notification to a queue.
+- It is advisable that a bot does not create many conversations at once within a team channel but several 1:1 conversations with various users. (**Verify**)  
 
 Proactive messages generally fall into one of the categories described below.
 
@@ -33,6 +37,11 @@ When receiving a welcome message a users do not have context. Also this is the f
 - **Why the users are receiving the message.** It should be very clear to the users why they are receiving the message. If your bot was installed in a channel and you sent a welcome message to all users, let them know what channel it was installed and potentially who installed it.
 - **What is the offer.** What can they do with your bot? What value it brings?
 - **What should they do next.** Invite them to try out a command, or interact with your bot in some way.
+
+(**Verify**) 
+
+- Can the bot send a 1:1 message if the user add the bot as an app?  
+- Can the bot send a group message when the user adds it to a team channel?
 
 ### Notification messages
 
@@ -111,8 +120,10 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
     await connector.Conversations.SendToConversationAsync(proactiveMessage, cancellationToken);
 
-    // Or you can use the adapter to send a message if you already have a conversation reference. You can put this code into the controller if
-    // you already have a store of conversation references. 
+    /* Or you can use the adapter to send a message if you already have a
+     * conversation reference. You can put this code into the controller if
+     *you already have a store of conversation references. 
+     **/
     await turnContext.Adapter.ContinueConversationAsync(_appId, turnContext.Activity.GetConversationReference(), BotOnTurn, cancellationToken);
 }
 
