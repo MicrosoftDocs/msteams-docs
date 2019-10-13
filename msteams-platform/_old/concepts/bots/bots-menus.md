@@ -13,6 +13,10 @@ To aid discovery and to help educate users about your bot’s functionality, you
 
 When a user selects a menu item, the command string is inserted into the text box to aid in user completion of the bot message.
 
+## Bot menu support on Teams mobile app
+> [!NOTE] 
+> Bot menus are not displayed on mobile devices
+
 ## App manifest
 
 To create a bot menu, add a new [`commandLists`](~/resources/schema/manifest-schema.md#botscommandlists) object to your app manifest under the bot section. You can declare individual menus with separate commands for each scope your bot supports (`personal`, `groupChat` or `team`) Each menu supports up to 10 commands.
