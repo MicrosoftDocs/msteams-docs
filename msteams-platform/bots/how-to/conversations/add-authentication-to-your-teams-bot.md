@@ -78,13 +78,6 @@ With the preliminary settings done, let's focus on the creation of the echo bot 
 1. Launch Visual Studio.
 1. From the toolbar select **File->Open->Project/Solution** and open the bot project.
 
-### Test the echo bot using the Bot Framework Emulator
-
-1. In Visual Studio, run the project in *Debug* mode.
-1. Launch the emulator.
-1. Enter the local end point for the bot, usually `http://localhost:3978/api/messages`.
-1. Enter some text messages and verify that the bot echoes them back.
-
 
 ## Deploy the echo bot to Azure
 
@@ -214,7 +207,7 @@ The next step is to register with your bot the Azure AD application that you jus
 
 1. Click **Save**.
 
- ### Test the connection string
+ ### Test the connection
 
 1. Click on the connection entry to open the connection you just created.
 1. Click **Test Connection** at the top of the **Service Provider Connection Setting** pane.
@@ -244,20 +237,20 @@ You can now use this connection name in your bot code to retrieve user tokens.
 
         ```cs
         {
-            "MicrosoftAppId": "e115b97e-664b-4654-bdc3-e03bfd5ecaba",
-            "MicrosoftAppPassword": "uv.CKq]CCeh[oNa@jwMOZWHLaXs2B605",
-            "ConnectionName": "TeamsBotAuthenticationADv1"
+            "MicrosoftAppId": "", // The bot App Id 
+            "MicrosoftAppPassword": "", // The bot client secret
+            "ConnectionName": "" // The name of the Azure AD auth connection
         }
         ```
 
-If you do not know how to get your **Microsoft app ID** and **Microsoft app password** values, you can create a new password [as described here](../bot-service-quickstart-registration.md#get-registration-password)
+If you do not know how to get your **Microsoft app ID** and **Microsoft app password** values, you can create a new password [as described here](https://review.docs.microsoft.com/azure/bot-service/bot-service-quickstart-registration?view=azure-bot-service-3.0&branch=pr-en-us-1722&viewFallbackFrom=azure-bot-service-4.0#get-registration-password)
 
 > [!NOTE]
 > You could now publish this bot code to your Azure subscription (right-click on the project and choose **Publish**), but it is not necessary for this article. You would need to set up a publishing configuration that uses the application and hosting plan that you used when configuration the bot in the Azure Portal.
 
 ## Test the bot using the emulator
 
-If you have not done so already, install the [Bot Framework Emulator](https://aka.ms/bot-framework-emulator-readme). See also [Debug with the emulator](../bot-service-debug-emulator.md).
+If you have not done so already, install the [Bot Framework Emulator](https://aka.ms/bot-framework-emulator-readme). See also [Debug with the emulator](https://review.docs.microsoft.com/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&branch=pr-en-us-1722&tabs=csharp).
 
 In order for the bot sample login to work you must configure the emulator as shown below.
 
@@ -328,6 +321,25 @@ After you have configured the authentication mechanism, you can perform the actu
 
 > [!NOTE]
 > Bot authentication requires use of the Bot Connector Service. The service accesses the bot channels registration information for your bot.
+
+## Test the deployed bot
+
+1. In your browser, navigate to the [Azure portal][azure-portal].
+1. In the left pane, select **All Resources**.
+1. In the right panel find your bot **Azure AD Registration**. 
+1. Click on the resource link. The resource page is displayed.
+1. In the resource blade, click **Test in Web Chat**. The bot starts and displays the predefined greetings. 
+1. Type anything in the chat box. You will be logged in. The following picture shows an example:
+
+    ![teams bots app auth connection string adv1](../../media/teams-bots-auth-login-deployed.PNG). 
+
+1. Click the **Yes** button to display your authentication token. The following picture shows an example:
+
+    ![teams bots app auth connection string adv1](../../media/teams-bots-auth-login-token-deployed.PNG).
+
+1. Enter logout to exit the chat.
+
+    ![teams bots app auth connection string adv1](../../media/teams-bots-auth-login-logout-deployed.PNG).
 
 
 ## Teams authentication peculiarities
