@@ -17,7 +17,7 @@ To access your bot in a channel or group chat, you need to [@mention](#@mention)
 
 A bot should provide information that is both appropriate and relevant to all members in a group or channel. While your bot can certainly provide any information relevant to the experience, keep in mind conversations with it are visible to everyone that is a part of the group or channel and a well designed bot can add value to all users while not inadvertently sharing information that is more appropriate in a one-to-one conversation.
 
-In Microsoft Teams there is no requirement that your bot function in all scopes, it can be work with any combination of the three available scopes (personal, groupchat or channel) and it is up to you to ensure your bot provides user value in the scope(s) you do support. 
+In Microsoft Teams there is no requirement that your bot function in all scopes, it can be work with any combination of the three available scopes (_personal_, _groupchat_ or _channel_) and it is up to you to ensure your bot provides user value in the scope(s) you do support. 
 
 > [!NOTE]
 > For more information on scopes, see [Apps in Microsoft Teams](NEED REFERENCE).
@@ -28,13 +28,13 @@ Developing a bot that works in groups or channels uses much of the same function
 
 For information on how to create messages in channels see [Proactive messaging for bots](send-proactive-messages.md), and specifically [Creating a channel conversation](FOO.md#creating-a-channel-conversation).
 
-<!-- OPEN ISSUE: What about "Reply to Group" (or "Reply to Personal"?)  -->
+___TBD - OPEN ISSUE: What about "Reply to Group" (or "Reply to Personal"?) ___
 
 ## Replying to messages
 
-You respond to messages in a channel by initiating reply chain by passing the Channel Id and any desired message to the `TeamsCreateConversation` method, with additional messages to the reply chain using the `ContinueConversation` method.  The following are the steps you can take to create a basic Teams bot:
+You respond to messages in a channel by initiating reply chain by passing the Channel Id and any desired message to the `TeamsCreateConversation` method, with additional messages to the reply chain using the `ContinueConversation` method. The following are the steps you can take to create a basic Teams bot:
 
-1. Get your bots application ID in the constructor, you will need it to when sending messages to the Teams channel.  The following code demonstrates getting the AppId from your configuration file, which is generally __AppSettings.json__ if using C#.
+1. Get your bots application ID in the constructor, you will need it to when sending messages to the Teams channel. The following code demonstrates getting the AppId from your configuration file, which is generally __AppSettings.json__ if using C#.
 
     ```csharp
       public class ReplyToChannelBot : ActivityHandler
@@ -67,7 +67,7 @@ You respond to messages in a channel by initiating reply chain by passing the Ch
         }
       }
     ```
-3. Now that you have your Teams channel ID you can create your desired message and send it to the channel, creating a reply chain. 
+3. Now that you have your Teams channel ID you can create your desired message and send it to the channel, which creates a reply chain. 
 
     ```csharp
       public class ReplyToChannelBot : ActivityHandler
@@ -117,6 +117,7 @@ You respond to messages in a channel by initiating reply chain by passing the Ch
 
 ### Putting it all together, the ReplyToChannelBot class:
 
+The following C# sample code demonstrates the concepts discussed previously, putting it all together into a bot.
 
 
 ```csharp
@@ -174,14 +175,14 @@ Running this bot, you should get similar results to the following:
 Bots in a group or channel respond only when they are mentioned ("@botname") directly in a message, every message received by a bot when in a group or channel scope will contains it own name in the message text returned (see turnContext.Activity.Text), and you need to ensure your message parsing handles that. In addition, you can write code in your bot to parse out other users mentioned, and then mention those users as part of your response.
 
 > [!NOTE]
-> You must @Mention the bot directly by name.  While entering @Team or @Channel will generally mention everyone in that scope, it will not result in a message from Teams to your bot.
+> You must @Mention the bot directly by name. While entering @Team or @Channel will generally mention everyone in that scope, it will not result in a message from Teams to your bot.
 
 > [!TIP]
 > Use the RemoveMentionText method to remove the bot name (mention text) from the message if needed.
 
 ### Retrieving mentions
 
-When processing a message in your bots message handler, the senders name is passed in with the `turnContext` that is passed in to the OnMessageActivity method. You can find it in the `Name` property of the `From` object that is a property of the `Activity` object that is passed in as a property of the`turnContext`.  
+When processing a message in your bots message handler, the senders name is passed in with the `turnContext` that is passed in to the OnMessageActivity method. You can find it in the `Name` property of the `From` object that is a property of the `Activity` object that is passed in as a property of the`turnContext`. 
 
 To get the senders user name:
 
@@ -194,13 +195,13 @@ The `From` property is a `ChannelAccount` object that contains  the information 
 
 ### Constructing mentions
 
-When responding back to the user that messaged the bot, it is generally a good idea to @Mention them in the response.  To do this, you will need to create a `Mention` object and pass that in your response.  
+When responding back to the user that messaged the bot, it is generally a good idea to @Mention them in the response. To do this, you will need to create a `Mention` object and pass that in your response. 
 
 The `Mention` object has two properties that you will need to set:
 
-1. `Mentioned`: This is a `ChannelAccount` object that contains the user name of the person you are mentioning as well as their ID.  You can get this from the `From` object in the message that the user just sent to you as explained in the previous section.
+1. `Mentioned`: This is a `ChannelAccount` object that contains the user name of the person you are mentioning as well as their ID. You can get this from the `From` object in the message that the user just sent to you as explained in the previous section.
 
-2. `Text`: This is the text that represents the mention, which is the users name embedded in the '<at>' tag.  Since you get the users name from the `From` object as explained in the previous section, this will look like:
+2. `Text`: This is the text that represents the mention, which is the users name embedded in the '<at>' tag. Since you get the users name from the `From` object as explained in the previous section, this will look like:
 
     ```csharp
     Text = $"<at>{turnContext.Activity.From.Name}</at>"
@@ -240,15 +241,15 @@ public class MentionsBot : ActivityHandler
 
 ## Sending notifications
 
- Microsoft Teams notifications alert users about new tasks, mentions and comments related to what they are working on, or need to look at. You can set notifications to trigger when responding by setting the `TeamsChannelData` objects `Notification.Alert` property to true. Whether or not a notification is raised will ultimately depend on the individual users settings, you cannot programmatically override these settings.  The type of notification will be either a banner or both a banner and an email.
+ Microsoft Teams notifications alert users about new tasks, mentions and comments related to what they are working on, or need to look at. You can set notifications to trigger when responding by setting the `TeamsChannelData` objects `Notification.Alert` property to true. Whether or not a notification is raised will ultimately depend on the individual users Teams settings and you cannot programmatically override these settings. The type of notification will be either a banner or both a banner and an email.
 
 >[!TIP]
-> To personalize your Microsoft Teams notifications, click on your profile picture in the upper right-hand part of the Teams UI to access the account settings.  From there you can access “Settings” and then you can click on“Notifications.” The two primary things that can trigger a notification are mentions and messages. 
+> To personalize your Microsoft Teams notifications, click on your profile picture in the upper right-hand part of the Teams UI to access the account settings. From there you can access ___Settings___ and then you can click on ___Notifications___ The two primary things that can trigger a notification are _mentions_ and _messages_. 
 
 > [!IMPORTANT]
-> The following sample code will demonstrate the user sending a command to the bot, and the bot responding based on the command it receives. Each command will demonstrate of to handle some of the most basic actions you will encounter when writing bots for Microsoft Teams.  The valid commands will include: notify, card, random and general. 
+> The following sample code will demonstrate the user sending a command to the bot, and the bot responding based on the command it receives. Each command will demonstrate of to handle some of the most basic actions you will encounter when writing bots for Microsoft Teams. The valid commands will include: notify, card, random and general. 
 
-In order to parse the incoming message so that you can isolate and react to the command sent by the user, you first need to remove the @Mention from the incoming text.  For example, if you send the message "notify" to the bot, the message text that the bot receives will be "<at>BotName</at> notify".  The bot framework makes it easy to parse out the "<at>BotName</at> " with a built in method in the `Activity` class named `RemoveRecipientMention`, which you could call upon entering the OnMessageActivity method.
+In order to parse the incoming message so that you can isolate and react to the command sent by the user, you first need to remove the @Mention from the incoming text. For example, if you send the message "notify" to the bot, the message text that the bot receives will be "<at>BotName</at> notify". The bot framework makes it easy to parse out the "<at>BotName</at> " with a built in method in the `Activity` class named `RemoveRecipientMention`, which you could call upon entering the OnMessageActivity method.
 
 ```csharp
 turnContext.Activity.RemoveRecipientMention();
