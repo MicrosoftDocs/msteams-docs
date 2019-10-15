@@ -7,14 +7,16 @@ ms.author: anclear
 ---
 # Respond to the task module submit action
 
-Once a user completes entering their input your bot will receive a `composeExtension/submitAction` event with the command id and parameter values set. You have the following options for responding to the submit action:
+Once a user completes entering their input your web service will receive a `composeExtension/submitAction` event with the command id and parameter values set. You have the following options for responding.
 
-* No response - You can choose to use the submit action to trigger a process in an external system, and not provide any feedback to the user. This can be useful for long-running processes, and you may choose to provide feedback in another manner (for example, with a [proactive message](~/foo.md))
+* No response - You can choose to use the submit action to trigger a process in an external system, and not provide any feedback to the user. This can be useful for long-running processes, and you may choose to provide feedback in another manner (for example, with a [proactive message](~/foo.md)).
 * [Another task module](#respond-with-a-task-module) - You can respond with an additional task module as part of a multi-step interaction.
 * [Card response](#respond-with-a-card) - You can respond with a card that the user can then interact with and/or insert into a message.
-* [Adaptive Card from bot](#bot-response-with-adaptive-card) - The bot can insert an Adaptive Card directly into the conversation.
+* [Adaptive Card from bot](#bot-response-with-adaptive-card) - Insert an Adaptive Card directly into the conversation.
+* [Request the user authenticate](~/messaging-extensions/how-to/add-authentication.md)
+* [Request the user provide additional configuration](~/messaging-extensions/how-to/add-configuration.md)
 
-The table below shows which types of responses are available based on the invoke context of the messaging extension.
+The table below shows which types of responses are available based on the invoke context of the messaging extension. For authentication or configuration, once the user completes the flow the original invoke will be re-sent to your web service.
 
 |Response Type | compose | command bar | message |
 |--------------|:-------------:|:-------------:|:---------:|
@@ -25,9 +27,13 @@ The table below shows which types of responses are available based on the invoke
 
 ## The submitAction event
 
+# [JSON](#tab/json)
+
 ```json
 i is an example
 ```
+
+---
 
 ## Respond with a card
 
@@ -39,16 +45,21 @@ You can choose to respond to the `submitAction` event with an additional task mo
 
 ## Bot response with Adaptive Card
 
-You can also respond to the submit action by inserting a message with an Adaptive Card into the channel with a bot. Your user will be able to preview the message before submitting it, and potentially edit/interact with it as well. This can be very useful in scenarios where you need to gather information from your users before creating an adaptive card response. The following scenario shows how you can use this flow to configure a poll without including the configuration steps in the channel message.
+>[!Note]
+>This flow requires that you add the `bot` object to your app manifest, and that you have the necessary scope defined for the bot. Use the same Id as your messaging extension for your bot.
+
+You can also respond to the submit action by inserting a message with an Adaptive Card into the channel with a bot. Your user will be able to preview the message before submitting it, and potentially edit/interact with it as well. This can be very useful in scenarios where you need to gather information from your users before creating an adaptive card response. The following scenario shows how the app Polly uses this flow to configure a poll without including the configuration steps in the channel message.
 
 1. The user clicks the messaging extension to trigger the task module.
-1. The user uses the task module to configure the poll.
-1. After submitting the configuration task module the app uses the information provided in the task module to craft an adaptive card and sends it as a `botMessagePreview` response to the client.
-1. The user can then preview the adaptive card message before the bot will inserts it into the channel. If the bot is not already a member of the channel, clicking `Send` will add the bot.
-1. Interacting with the adaptive card will change the message before sending it.
-1. Once the user clicks `Send` the bot will post the message to the channel.
+2. The user uses the task module to configure the poll.
+3. After submitting the task module the app uses the information provided to craft an adaptive card and sends it as a `botMessagePreview` response to the client.
+4. The user can then preview the adaptive card message before the bot will inserts it into the channel. If the app is not already a member of the channel, clicking `Send` will add the it.
+5. Interacting with the adaptive card will change the message before sending it.
+6. Once the user clicks `Send` the bot will post the message to the channel.
 
 To enable this flow your task module should respond as in the example below, which will present the preview message to the user.
+
+# [JSON](#tab/json)
 
 >[!Note]
 >The `activityPreview` must contain a `message` activity with exactly 1 adaptive card attachment.
@@ -70,7 +81,11 @@ To enable this flow your task module should respond as in the example below, whi
 }
 ```
 
+---
+
 Your message extension will now need to respond to two new types of interactions, `value.botMessagePreviewAction = "send"` and `value.botMessagePreviewAction = "edit"`. Below is an example of the `value` object you will need to process:
+
+# [JSON](#tab/json)
 
 ```json
 {
@@ -100,6 +115,8 @@ Your message extension will now need to respond to two new types of interactions
   }
 }
 ```
+
+---
 
 When responding to the `edit` request you should respond with a `task` response with the values populated with the information the user has already submitted. When responding to the `send` request you should send a message to the channel containing the finalized adaptive card. The example below shows how to do this using the [Node.js Teams Bot Builder SDK](https://www.npmjs.com/package/botbuilder-teams).
 
@@ -207,6 +224,8 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 }
 ```
 
+---
+
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
@@ -266,6 +285,8 @@ teamChatConnector.onComposeExtensionSubmitAction((
     }
   });
 ```
+
+---
 
 ## Next Steps
 
