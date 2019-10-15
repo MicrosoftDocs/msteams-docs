@@ -27,6 +27,18 @@ The table below shows which types of responses are available based on the invoke
 
 ## The submitAction event
 
+# [C#/.NET](#tab/dotnet)
+
+```csharp
+csharp
+```
+
+# [TypeScript/Node.js](#tab/typescript)
+
+```typescript
+typescript
+```
+
 # [JSON](#tab/json)
 
 ```json
@@ -59,6 +71,18 @@ You can also respond to the submit action by inserting a message with an Adaptiv
 
 To enable this flow your task module should respond as in the example below, which will present the preview message to the user.
 
+# [C#/.NET](#tab/dotnet)
+
+```csharp
+csharp
+```
+
+# [TypeScript/Node.js](#tab/typescript)
+
+```typescript
+typescript
+```
+
 # [JSON](#tab/json)
 
 >[!Note]
@@ -84,6 +108,18 @@ To enable this flow your task module should respond as in the example below, whi
 * * *
 
 Your message extension will now need to respond to two new types of interactions, `value.botMessagePreviewAction = "send"` and `value.botMessagePreviewAction = "edit"`. Below is an example of the `value` object you will need to process:
+
+# [C#/.NET](#tab/dotnet)
+
+```csharp
+csharp
+```
+
+# [TypeScript/Node.js](#tab/typescript)
+
+```typescript
+typescript
+```
 
 # [JSON](#tab/json)
 
@@ -282,6 +318,12 @@ teamChatConnector.onComposeExtensionSubmitAction((
       callback(null, response, 200);
     }
   });
+```
+
+# [JSON](#tab/json)
+
+```json
+sample
 ```
 
 * * *
