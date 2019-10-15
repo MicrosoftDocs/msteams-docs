@@ -93,19 +93,13 @@
         - name: 'Search-based commands'
           items:
             - name: 'Define search-based commands'
-              href: foo.md
+              href: messaging-extensions/how-to/search-based-commands/define-search-based-command.md
             - name: 'Receive and respond to search queries'
               href: foo.md
-        - name: Authentication
-          items:
-            - name: 'Authentication flow'
-              href: foo.md
-            - name: 'Use Azure AD Authentication'
-              href: foo.md
-            - name: 'Use OAuthCard and the Azure Bot Service'
-              href: foo.md
         - name: 'Add a configuration page'
-          href: foo.md
+          href: messaging-extensions/how-to/add-configuration-page.md
+        - name: 'Add authentication'
+          href: messaging-extensions/how-to/add-authentication.md
 - name: 'Conversational Bots'
   items:
     - name: 'What are bots in Microsoft Teams?'
