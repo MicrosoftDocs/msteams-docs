@@ -331,7 +331,10 @@ After you have configured the authentication mechanism, you can perform the actu
 1. In the resource blade, click **Test in Web Chat**. The bot starts and displays the predefined greetings. 
 1. Type anything in the chat box. You will be logged in. The following picture shows an example:
 
-    ![teams bots app auth connection string adv1](../../media/teams-bots-auth-login-deployed.PNG). 
+    ![teams bots app auth connection string adv1](../../media/teams-bots-auth-login-deployed.PNG).
+
+> [!NOTE]
+> If you problems logging, try to repeat the steps shown in section [Test the connection](#Test-the-connection). This allows you to select the account to use and a related token is issued.
 
 1. Click the **Yes** button to display your authentication token. The following picture shows an example:
 
@@ -340,6 +343,94 @@ After you have configured the authentication mechanism, you can perform the actu
 1. Enter logout to exit the chat.
 
     ![teams bots app auth connection string adv1](../../media/teams-bots-auth-login-logout-deployed.PNG).
+
+## Install the bot in Microsoft Teams
+
+### Testing the bot in Teams
+
+The following steps allow you to do a quick install by using the bot GUID, so you can perform preliminary testing.
+
+> [!WARNING]
+> Adding a bot by GUID, for anything other than testing purposes, is not recommended. 
+> Doing so severely limits the functionality of a bot.
+> Bots in production must be added to Teams as part of an app. See [Create a bot](../../../_old/concepts/bots/bots-create.md) and [Test and debug your Microsoft Teams](../../../_old/concepts/bots/bots-test.md) bot.
+
+1. In your browser, navigate to the [Azure portal][azure-portal].
+1. In the left pane, select **All Resources**.
+1. In the right panel find your bot **Azure AD Registration**. 
+1. Click the **Channels** blade, and then click the **Teams** icon.
+
+    ![teams bots app auth connection string adv1](../../media/teams-bots-auth-connect-to-teams-channel.PNG).
+
+1. Click the **Save** button. 
+1. After adding the Teams channel, go to the Channels page and click the **Get bot embed code**.
+1. Copy the https part of the code that is showing in the Get bot embed code dialog. For example, `https://teams.microsoft.com/l/chat/0/0?users=28:b8a22302e-9303-4e54-b348-343232`.
+1. In the browser, paste this address and then choose the Microsoft Teams app (client or web) that you use to add the bot to Teams. You should be able to see the bot listed as a contact in that chat list. 
+1. Use it to exchange messages with the bot.
+For more information, see [Connect a bot to Teams](https://docs.microsoft.com/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0).
+
+
+### Install and test bot in Teams
+
+1. In your bot project, assure that the `TeamsAppManifest` folder contains the `manifest.json` along with an `outline.png` and `color.png` files. The manifest for the sample code associated with this article, is shown below. 
+
+```json 
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.3",
+  "version": "1.0.0",
+  "id": "",
+  "packageName": "com.teams.auth.bot",
+  "developer": {
+    "name": "TeamsBotAuth",
+    "websiteUrl": "https://www.microsoft.com",
+    "privacyUrl": "https://www.teams.com/privacy",
+    "termsOfUseUrl": "https://www.teams.com/termsofuse"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "name": {
+    "short": "TeamsBotAuth",
+    "full": "Teams Bot Authentication"
+  },
+  "description": {
+    "short": "TeamsBotAuth",
+    "full": "Teams Bot Authentication"
+  },
+  "accentColor": "#FFFFFF",
+  "bots": [
+    {
+      "botId": "",
+      "scopes": [
+        "groupchat",
+        "team"
+      ],
+      "supportsFiles": false,
+      "isNotificationOnly": false
+    }
+  ],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [ "token.botframework.com" ]
+}
+```
+
+1. In file explorer, navigate to the folder `TeamsAppManifest` folder. Edit the `manifest.json` file ed assign the following values:
+    1. To `id` and `botId` assign the **bot App ID** you got at the time of the Azure **Bot Channel Registration**.
+    1. Assure that this values is assigned: `validDomains: [ "token.botframework.com" ]`. For more information, see [Using Azure Bot Service for Authentication in Teams](../../../_old/concepts/bots/bot-authentication/auth-oauth-card.md).
+    1. Select and **zip** the files `manifest.json`, `outline.png`, and `color.png`.
+1. Open **Microsoft Teams**.
+1. In the left panel, bottom left, click the **Apps** icon.
+1. Select **Upload a custom app** on the bottom left.
+1. Navigate to th e`TeamsAppManifest` folder and select the zipped archive.
+1. Click on the three dots in the left panel. Then click **App Studio** icon.
+1. Click the **Manifest editor** tab. You should see the icon of the bot you uploaded. 
+1. You should be able to see the bot listed as a contact in that chat list. 
+1. Use it to exchange messages with the bot.
 
 
 ## Teams authentication peculiarities
