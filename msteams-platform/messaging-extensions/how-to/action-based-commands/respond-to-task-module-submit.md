@@ -33,7 +33,7 @@ The table below shows which types of responses are available based on the invoke
 i is an example
 ```
 
----
+* * *
 
 ## Respond with a card
 
@@ -81,7 +81,7 @@ To enable this flow your task module should respond as in the example below, whi
 }
 ```
 
----
+* * *
 
 Your message extension will now need to respond to two new types of interactions, `value.botMessagePreviewAction = "send"` and `value.botMessagePreviewAction = "edit"`. Below is an example of the `value` object you will need to process:
 
@@ -116,7 +116,7 @@ Your message extension will now need to respond to two new types of interactions
 }
 ```
 
----
+* * *
 
 When responding to the `edit` request you should respond with a `task` response with the values populated with the information the user has already submitted. When responding to the `send` request you should send a message to the channel containing the finalized adaptive card. The example below shows how to do this using the [Node.js Teams Bot Builder SDK](https://www.npmjs.com/package/botbuilder-teams).
 
@@ -224,8 +224,6 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 }
 ```
 
----
-
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
@@ -286,7 +284,7 @@ teamChatConnector.onComposeExtensionSubmitAction((
   });
 ```
 
----
+* * *
 
 ## Next Steps
 
