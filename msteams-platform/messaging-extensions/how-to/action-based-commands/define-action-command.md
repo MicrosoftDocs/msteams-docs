@@ -1,13 +1,13 @@
 ---
-title: Define action-based messaging extension command
+title: Define messaging extension action commands
 author: clearab
 description: An overview of messaging extensions on the Microsoft Teams platform
 ms.topic: conceptual
 ms.author: anclear
 ---
-# Define action-based messaging extension commands
+# Define messaging extension action commands
 
-Action-based messaging extension commands allow you present your users with a modal popup (called a task module in Teams) to collect or display information, then process their interaction and send information back to Teams. Before creating your command you'll need to decide:
+Action commands allow you present your users with a modal popup (called a task module in Teams) to collect or display information, then process their interaction and send information back to Teams. Before creating your command you'll need to decide:
 
 1. Where can the messaging extension can be triggered from?
 1. How will the task module be created?
@@ -19,19 +19,15 @@ For additional guidance on designing your messaging extension see: [Designing ef
 
 The first thing you need to decide is where your messaging extension can be triggered (or more specifically, *invoked* from). By specifying the `context` in your app manifest, your extension can be invoked from one or more of the following locations:
 
-* The buttons at the bottom of the compose message area
-* By @mentioning in the command box
-* Directly from an existing message via the ... overflow menu on a message.
-
-Invoking your messaging extension from either the compose message area or the command box will immediately present your users with your task module to collect information from them.
-
-If you enable invoking directly from a message, the initial invoke to your bot will include a JSON object containing the message from which it was invoked, which you can process before presenting them with a task module. You must also [respond with an adaptive card message from your bot](~/messaging-extensions/how-to/action-based-commands/respond-to-task-module-submit.md#bot-response-with-adaptive-card) rather than inserting a card into the compose box for your user to send.
+* The buttons at the bottom of the compose message area.
+* By @mentioning your app in the command box. Note: You cannot respond with a bot message inserted directly into the conversation if your messaging extension is invoked from the command box.
+* Directly from an existing message via the ... overflow menu on a message. Note: The initial invoke to your bot will include a JSON object containing the message from which it was invoked, which you can process before presenting them with a task module.
 
 ## Choose how to build your task module
 
-In addition to choosing where your command can be invoked from, you must also chose how to create the task module for your users. You have three options for creating the form that is rendered inside the task module:
+In addition to choosing where your command can be invoked from, you must also chose how to populate the form in the task module for your users. You have three options for creating the form that is rendered inside the task module:
 
-* **Static list of parameters** - The simplest option. Using your app manifest you can define a list of parameters (input fields) that Teams will render for you. You cannot control the formatting with this option.
+* **Static list of parameters** - This is the simplest option. You can define a list of parameters (input fields) in your app manifest the Teams client will render. You cannot control the formatting with this option.
 * **Adaptive card** - You can choose to use an adaptive card, which provides greater control over the UI, but still limits you on the available controls and formatting options.
 * **Embedded web view** - If you need complete control over the UI and controls, you can choose to embed a custom web view in the task module.
 
@@ -39,28 +35,28 @@ If you choose to create your task module with a static list of parameters, the f
 
 ## Choose how the final message will be sent
 
-In most cases, your action-based messaging extension command will result in a card inserted into the compose message box that your user can then decide to send into the channel or chat. The message in this case comes from the user, and your bot will not be able to edit or update the card further.
+In most cases, your action command will result in a card inserted into the compose message box. Your user can then decide to send it into the channel or chat. The message in this case comes from the user, and your bot will not be able to edit or update the card further.
 
-However, if your messaging extension is triggered from the compose box or directly from a message, your bot can insert the final response directly into the channel or chat. In this case the adaptive card comes from the bot, the bot will be able to update it, and can the bot can also reply to the conversation thread if needed.
+If your messaging extension is triggered from the compose box or directly from a message, your web service can insert the final response directly into the channel or chat. In this case, the adaptive card comes from the bot, the bot will be able to update it, and can the bot can also reply to the conversation thread if needed. You will need to add the `bot` object to your app manifest using the same Id and defining the appropriate scopes.
 
 ## Add the command to your app manifest
 
-Now that you've decided how users will interact with your action-based messaging extension command, it is time to add it to your app manifest. To do this you'll add a new `composeExtension` object to the top level of your app manifest JSON. You can either do so with the help of App Studio, or manually.
+Now that you've decided how users will interact with your action command, it is time to add it to your app manifest. To do this you'll add a new `composeExtension` object to the top level of your app manifest JSON. You can either do so with the help of App Studio, or manually.
 
 ### Create a command using App Studio
 
 The following steps assume you've already [created a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
 1. From the Microsoft Teams client, open **App Studio** and select the **Manifest Editor** tab.
-1. If you've already created your app package in App Studio, chose it from the list. If not, you can import an existing app package.
-1. Click the **Add** button in the Command section.
-1. Choose **Allow users to trigger actions in external services while inside of Teams**.
-1. If you want to use a static set of parameters to create your task module, select that option. Otherwise, choose to **Fetch a dynamic set of parameters from your bot**.
-1. Add a **Command Id** and a **Title**.
-1. Select where you want your compose extension to be triggered from. Keep in mind that if you choose Message, you must send an adaptive card from your bot as the final response.
-1. If you're using parameters for your task module, add the first one.
-1. Click Save
-1. If you need to add more parameters, click the **Add** button in the **Parameters** section to add them.
+2. If you've already created your app package in App Studio, chose it from the list. If not, you can import an existing app package.
+3. Click the **Add** button in the Command section.
+4. Choose **Allow users to trigger actions in external services while inside of Teams**.
+5. If you want to use a static set of parameters to create your task module, select that option. Otherwise, choose to **Fetch a dynamic set of parameters from your bot**.
+6. Add a **Command Id** and a **Title**.
+7. Select where you want your compose extension to be triggered from.
+8. If you're using parameters for your task module, add the first one.
+9. Click Save
+10. If you need to add more parameters, click the **Add** button in the **Parameters** section to add them.
 
 ### Manually create a command
 
@@ -84,7 +80,7 @@ If you are using a static list of parameters, you'll add them as well.
 | `parameter.title` | Short user-friendly parameter title or label. | Yes | 1.0 |
 | `parameter.inputType` | Set to the type of input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text` | No | 1.4 |
 
-If you are using an embedded web view, you can optionally add the `taskInfo` object to fetch your web view without calling your bot directly. If you choose to use this option, the behavior is similar to using a static list of parameters in that the first interaction with your bot will be [responding to the task module submit action](~/messaging-extensions/how-to/action-based-commands/respond-to-task-module-submit.md).
+If you are using an embedded web view, you can optionally add the `taskInfo` object to fetch your web view without calling your bot directly. If you choose to use this option, the behavior is similar to using a static list of parameters in that the first interaction with your bot will be [responding to the task module submit action](~/messaging-extensions/how-to/action-based-commands/respond-to-task-module-submit.md). If you are using a `taskInfo` object, be sure to also set the `fetchTask` parameter to `false`.
 
 | Property name | Purpose | Required? | Minimum manifest version |
 |---|---|---|---|
@@ -96,7 +92,7 @@ If you are using an embedded web view, you can optionally add the `taskInfo` obj
 
 #### App manifest example
 
-The below is an example of a `composeExtensions` object defining two action-based commands. It is not an example of the complete manifest, for the full app manifest schema see: [App manifest schema](~/foo.md).
+The below is an example of a `composeExtensions` object defining two action commands. It is not an example of the complete manifest, for the full app manifest schema see: [App manifest schema](~/foo.md).
 
 ```json
 ...
@@ -111,6 +107,7 @@ The below is an example of a `composeExtensions` object defining two action-base
         "title": "Create To Do",
         "type": "action",
         "context": ["commandBox", "message", "compose"],
+        "fetchTask": false,
         "parameters": [
           {
             "name": "Name",

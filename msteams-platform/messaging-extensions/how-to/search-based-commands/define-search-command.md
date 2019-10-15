@@ -1,11 +1,11 @@
 ---
-title: Define search-based messaging extension command
+title: Define messaging extension search commands
 author: clearab
-description: Define a search-based messaging extension command.
+description: Define messaging extension search commands for Microsoft Teams apps.
 ms.topic: conceptual
 ms.author: anclear
 ---
-# Define search-based messaging extension commands
+# Define messaging extension search commands
 
 Search-based messaging extension commands allow your users to search external systems and insert the results of that search into a message in the form of a card.
 
