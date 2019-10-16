@@ -36,7 +36,7 @@ For more information about how the Azure Bot Service handles authentication, see
 In this article you will learn:
 
 - How to create a bot which requires authentication. You will use the [cs-auth-sample][teams-auth-bot] sample. The example handles user's login and the authentication token generation.
-- How create Azure resources which allow the bot deployment and association with an identity provider. This provider issues a token based on the user's credentials. The bot can use the token to access resources, such as a mail service for example, which require authentication. For more information see  [Microsoft Teams authentication flow for bots](../../../_old/concepts/bots/bot-authentication/auth-flow-bot.md).
+- How to create Azure resources which allow the bot deployment and association with an identity provider. This provider issues a token based on the user's credentials. The bot can use the token to access resources, such as a mail service for example, which require authentication. For more information see  [Microsoft Teams authentication flow for bots](../../../_old/concepts/bots/bot-authentication/auth-flow-bot.md).
 - How to integrate the bot within Microsoft Teams. Once the bot has been integrated, you can login and exchange messages with it in a chat.
 
 ## Create a resource group
