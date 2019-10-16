@@ -5,6 +5,7 @@ description: How to add OAuth authentication to a bot in Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
 ---
+
 # Add authentication to your Teams bot
 
 > [!WARNING]
@@ -20,9 +21,6 @@ For more information see  [Microsoft Teams authentication flow for bots](../../.
 
 For more information about how the Azure Bot Service handles authentication, see [User authentication within a conversation](https://docs.microsoft.com/azure/bot-service/bot-builder-concept-authentication?view=azure-bot-service-4.0).
 
-
-## Prerequisites
-
 ## Prerequisites
 
 - Knowledge of [bot basics][concept-basics], [managing state][concept-state], the [dialogs library][concept-dialogs], how to [implement sequential conversation flow][simple-dialog].
@@ -35,8 +33,14 @@ For more information about how the Azure Bot Service handles authentication, see
 | **Bot authentication** in [cs-auth-sample][teams-auth-bot] | v4 | OAuthCard support |
 | **Bot authentication MSGraph** in [cs-msgraph-sample][teams-auth-bot] | v4 |  Microsoft Graph API support with OAuth 2 |
 
+## Bot in Azure
 
-## Create a resource group
+---
+
+The resource group and the service plan are not strictly necessary for this authentication topic.
+But their use is a good practice to keep the resources better organized and manageable.
+
+### Create a resource group
 
 You are going to use a resource group to create individual resources for the Bot Framework. For performance, assure that these services are located in the same Azure region.
 
@@ -52,7 +56,7 @@ You are going to use a resource group to create individual resources for the Bot
  > [!TIP]
 > As with the resources you'll create later in this tutorial, it's a good idea to pin this resource group to your dashboard for easy access. If you'd like to pin this resource group, click the pin icon in the upper right of the dashboard.
 
-### Azure app service plan
+### Create a service plan
 
 1. In your browser navigate to the [**Azure portal**][azure-portal].
 1. In the left navigation panel, select **Create a resource**.
@@ -69,9 +73,10 @@ You are going to use a resource group to create individual resources for the Bot
     1. Click **Create**. It may take a few minutes to create the app service plan. The plan will be listed in the resource group. 
 
 
-## Create the bot
+### Create the bot (move it down)
 
-With the preliminary settings done, let's focus on the creation of the echo bot to use in this article. We are going to use the code sample stored in the GitHub repository: [cs-auth-sample][teams-auth-bot].
+With the preliminary settings done, let's focus on the creation of the echo bot to use in this article.
+We are going to use the code sample stored in the GitHub repository: [cs-auth-sample][teams-auth-bot].
 
 1. Clone [cs-auth-sample][teams-auth-bot].
 2. Make a copy of the project or use it directly from the downloaded location.
@@ -79,7 +84,7 @@ With the preliminary settings done, let's focus on the creation of the echo bot 
 1. From the toolbar select **File->Open->Project/Solution** and open the bot project.
 
 
-## Deploy the echo bot to Azure
+### Deploy the echo bot to Azure (move it down)
 
 The following steps allow to create an **Azure App Service** to host the bot.
 
@@ -97,7 +102,7 @@ The following steps allow to create an **Azure App Service** to host the bot.
 
     ![teams-bot-auth-app-service-group](../../media/teams-bot-auth-app-service-group.PNG)
 
-### Create a bot channel registration app
+### Create a channel registration application for the bot
 
 After creating the *Azure App Service* to host your bot, you must create a **Bot Channels Registration** app which is needed for registering the bot with the **Teams** channel.
 
@@ -136,10 +141,9 @@ After creating the *Azure App Service* to host your bot, you must create a **Bot
 
 For more information, see [Register a bot with Azure Bot Service](https://docs.microsoft.com/azure/bot-service/bot-service-quickstart-registration?view=azure-bot-service-3.0A).
 
-## Create and register an Azure AD application
+### Create an Azure AD application
 
-You need an Azure Active Directory application that your bot can use to be authenticated.
-Use these steps to create a new Azure AD application. You can use the v1 or v2 endpoints with the app that you create.
+You need an Azure Active Directory application that can be used for authentication.
 
 > [!TIP]
 > You will need to create and register the Azure AD application in a tenant
@@ -207,7 +211,7 @@ The next step is to register with your bot the Azure AD application that you jus
 
 1. Click **Save**.
 
- ### Test the connection
+### Test the connection
 
 1. Click on the connection entry to open the connection you just created.
 1. Click **Test Connection** at the top of the **Service Provider Connection Setting** pane.
@@ -342,6 +346,7 @@ After you have configured the authentication mechanism, you can perform the actu
 ## Bot in Microsoft Teams
 
 ---
+
 The following sections apply specifically to a bot that requires authentication ad running Teams. 
 
 ### Install and test the bot in Teams
