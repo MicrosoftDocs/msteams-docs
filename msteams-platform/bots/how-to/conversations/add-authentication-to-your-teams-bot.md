@@ -11,15 +11,16 @@ ms.author: anclear
 > [!WARNING]
 > Work in progress.
 
-This article demonstrates how to use Azure Bot Service v4 SDK authentication, which includes new bot authentication capabilities based on OAuth 2.0, and provides features to make it easier to develop a bot that authenticates users to various identity providers.
+You may need bots in Microsoft Teams that can access resources, such as a mail service, which require authentication.
 
-OAuth 2.0 is an open standard for authentication and authorization used by Azure Active Directory and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.
+This article demonstrates how to use Azure Bot Service v4 SDK authentication, which includes bot authentication capabilities based on OAuth 2.0, and provides features that make easier to develop a bot that can use authentication tokens based on the user's credentials. Key in all this is the use of **identity providers**, as we will see later.
+
+OAuth 2.0 is an open standard for authentication and authorization used by Azure Active Directory and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams. See [OAuth 2 Simplified](https://aaronparecki.com/oauth-2-simplified/) for a basic understanding. This is the complete  [OAuth 2.0](https://oauth.net/2/) specification. 
 
 Notice that authentication flow for tabs and bots are different. Tabs are very similar to websites so they can use OAuth 2.0 directly. Bots must do a few things differently, but the core concepts still apply.
 
-For more information see  [Microsoft Teams authentication flow for bots](../../../_old/concepts/bots/bot-authentication/auth-flow-bot.md).
-
 For more information about how the Azure Bot Service handles authentication, see [User authentication within a conversation](https://docs.microsoft.com/azure/bot-service/bot-builder-concept-authentication?view=azure-bot-service-4.0).
+
 
 ## Prerequisites
 
@@ -31,9 +32,15 @@ For more information about how the Azure Bot Service handles authentication, see
 | Sample | BotBuilder version | Demonstrates |
 |:---|:---:|:---|
 | **Bot authentication** in [cs-auth-sample][teams-auth-bot] | v4 | OAuthCard support |
-| **Bot authentication MSGraph** in [cs-msgraph-sample][teams-auth-bot] | v4 |  Microsoft Graph API support with OAuth 2 |
 
-## Bot in Azure
+In this article you will learn:
+
+- How to create a bot which requires authentication. You will use the [cs-auth-sample][teams-auth-bot] sample. The example handles user's login and the authentication token generation.
+- How create Azure resources which allow the bot deployment and association with an identity provider. This provider issues a token based on the user's credentials. The bot can use the token to access resources, such as a mail service for example, which require authentication. For more information see  [Microsoft Teams authentication flow for bots](../../../_old/concepts/bots/bot-authentication/auth-flow-bot.md).
+- How to integrate the bot within Microsoft Teams. Once the bot has been integrated, you can exchange messages with it in a chat. 
+
+
+Bot in Azure
 
 ---
 
