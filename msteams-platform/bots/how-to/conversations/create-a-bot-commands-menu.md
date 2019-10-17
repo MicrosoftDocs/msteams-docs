@@ -14,13 +14,13 @@ Creating a command menu enables you to give your users a list of commands that y
 
 ## Create a command menu for your bot
 
-Command menus are contained in your App Manifest, which can be created in <!--NEED LINK--> [App Studio](https://www.sadanduseless.com/funniest-animals-of-2019/), or edited directly in your source code in the `manifest.json` file in the `TeamsAppManifest` folder. In this section we will demonstrate how to create the command menu in App Studio, followed by the resulting `manifest.json` file so you can choose the approach that best suites your needs.
+Command menus are contained in your app manifest, which can be created in <!--NEED LINK--> [App Studio](https://www.sadanduseless.com/funniest-animals-of-2019/), or edited directly in your source code in the `manifest.json` file in the `TeamsAppManifest` folder. In this section we will demonstrate how to create the command menu in App Studio, then we will show you the resulting `manifest.json` file so you can choose the approach that best suites your needs.
 
 ### Creating a command menu for your bot using App Studio
 
-The instructions here assume that you will be editing an existing app manifest, however the steps of adding a command menu are the same, whether you are creating a new manifest or editing an existing manifest.
+The instructions here assume that you will be editing an existing app manifest. The steps of adding a command menu are the same, whether you are creating a new manifest or editing an existing manifest.
 
-1. Open App Studio by selecting Apps from the lower left-hand side of your Teams window, and entering "App Studio" in the search box. If you do not have App Studio available you can download it, please refer to <!--NEED LINK--> [Installing App Studio](https://docs.microsoft.com/en-us/microsoftteams/platform/get-started/get-started-app-studio#installing-app-studio). 
+1. Open App Studio from the ... overflow menu on the left navigation rail. If you do not have App Studio available you can download it, please refer to <!--NEED LINK--> [Installing App Studio](https://docs.microsoft.com/en-us/microsoftteams/platform/get-started/get-started-app-studio#installing-app-studio). 
 
     ![App Studio](Media/AppStudio.png)
 
@@ -50,7 +50,7 @@ Another valid approach for creating a commend menu is to create it directly in t
 
 3. You can create a different command menu for each scope
 
-#### Manifest excerpt - single menu for both scopes
+#### Manifest example - single menu for both scopes
 
 ```json
 {
@@ -94,14 +94,14 @@ Another valid approach for creating a commend menu is to create it directly in t
 }
 ```
 
-#### Manifest excerpt - single menu for both scopes
+#### Manifest example - single menu for both scopes
 
 ```json
 {
   ...
   "bots":[
     {
-      "botId":"[Microsoft app ID for your bot]",
+      "botId":"<Microsoft app ID for your bot>",
       "scopes": [
         "groupChat",
         "team"
@@ -137,7 +137,7 @@ Another valid approach for creating a commend menu is to create it directly in t
 ```
 
 
-## Handling Menu Commands in your Bot Code
+## Handling menu commands in your bot code
 
 Bots in a group or channel respond only when they are mentioned ("@botname") directly in a message, and as a result every message received by a bot when in a group or channel scope will contains it own name in the message text returned (see `turnContext.Activity.Text`), and you need to ensure your message parsing handles that before handling the command being returned. You can parse out the _@Mention_ portion of the message text using a static method provided with the Microsoft Bot Framework, a method of the `Activity` class named `RemoveRecipientMention`.
 
@@ -148,13 +148,11 @@ turnContext.Activity.RemoveRecipientMention();
 
 
 
-## Command Menu Best Practices
+## Command menu best practices
 
 * Keep it simple: The bot menu is meant to present the key capabilities of your bot.
 * Keep it short: Menu options shouldn’t be extremely long and complex natural language statements - they should be simple commands.
 * Always available: Bot menu actions/commands should be always invokable, regardless of the state of the conversation or the dialog the bot is in.
-
-
 
 
 
@@ -166,7 +164,7 @@ turnContext.Activity.RemoveRecipientMention();
 
  * **Purpose** Explain how to add a bot command menu to your teams bot using your app manifest. Needs to include a note that this doesn't work on the mobile Team's clients.
  * **Existing teams doc reference** 
-   * [https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bots-menus](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bots-menus)
+   * [](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bots-menus)
  * **Existing Bot framework doc reference** 
    * none
  * **Code Snippets**
