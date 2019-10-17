@@ -173,6 +173,8 @@ protected async onTeamsMessagingExtensionSubmitAction(context, action: Messaging
 }
 ```
 
+* * *
+
 ## Respond with another task module
 
 You can choose to respond to the `submitAction` event with an additional task module. This can be useful when you need to collect large amounts of information, or if you need to dynamically change what information you're collecting based on user input. The method for response is the same as [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-based-commands/create-task-module.md).
