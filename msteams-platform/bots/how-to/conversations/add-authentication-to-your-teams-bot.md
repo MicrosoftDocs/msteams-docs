@@ -11,7 +11,7 @@ ms.author: anclear
 > [!WARNING]
 > Work in progress.
 
-There times when you may need to create bots in Microsoft Teams that can access resources, such as a mail service, which require authentication.
+There are times when you may need to create bots in Microsoft Teams that can access resources, such as a mail service, which require authentication.
 
 This article demonstrates how to use Azure Bot Service v4 SDK authentication, based on OAuth 2.0, that makes it easier to develop a bot that can use authentication tokens based on the user's credentials. Key in all this is the use of **identity providers**, as we will see later.
 
