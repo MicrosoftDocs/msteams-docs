@@ -447,14 +447,14 @@ This launches ngrok to listen on the port you specify. In return, it gives you a
 > If you stop and restart ngrok, the URL changes. To use ngrok in your project, and depending on the capabilities you are using, you must replace all URL references. 
 
 
-## Teams bot sample implementation
----
+## Additional information
 
 Teams behaves slightly differently than other channels, in case of authentication as explained below.
 
 ### Handling Invoke Activity
 
-The **Invoke Activity** must be forwarded to the dialog when the **OAuthPrompt** is used. This is done by sub-classing the **ActivityHandler**.
+An **Invoke Activity** is sent to the bot rather than the Event Activity used by other channels.
+This is done by sub-classing the **ActivityHandler**.
 
 #### Bots\DialogBots.cs
 
@@ -495,8 +495,7 @@ public class DialogBot<T> : TeamsActivityHandler where T : Dialog
 
 #### Bots\TeamsBot.cs
 
-An **Invoke Activity** is **sent to the bot** rather than the *Event Activity* as done in other channels. The *Invoke Activity* must be 
-forwarded to the dialog if the **OAuthPrompt** is used. 
+The *Invoke Activity* must be forwarded to the dialog if the **OAuthPrompt** is used. 
 
 ```cs
 protected override async Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
@@ -510,42 +509,48 @@ protected override async Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActiv
 
 ```
 
-<!-- 
+#### TeamsActivityHandler.cs
 
-The sample shown next includes a reusable `TeamsActivityHandler` class which in future could be included in the Bot Framework SDK.
-- The Teams channel is also capable of sending **Message Reaction Activities**. Virtual methods for these are included in the **TeamsActivityHandler**. 
-- A Message Reaction Activity references the original Activity using the `replyToId`. 
-  - This id would have actually been the value returned from a previous Message Activity the bot had sent. 
-  - This activity should also be visible through the Activity Feed in Microsoft Teams, documentation for which can be found here [activity-feed](https://docs.microsoft.com/microsoftteams/platform/concepts/activity-feed).
+The Teams channel is also capable of sending **Message Reaction Activities**. Virtual methods for these are included in the **TeamsActivityHandler**. 
+A **Message Reaction Activity** references the original Activity using the `replyToId`, which is he value returned from a previous *Message Activity* sent bgy the bot. 
+This activity should also be visible through the **Activity Feed** in Microsoft Teams. 
+For more information, ss [activity-feed](https://docs.microsoft.com/microsoftteams/platform/concepts/activity-feed).
+
+```cs
+
+protected virtual Task OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+{
+    switch (turnContext.Activity.Name)
+    {
+        case "signin/verifyState":
+            return OnSigninVerifyStateAsync(turnContext, cancellationToken);
+
+        default:
+            return Task.CompletedTask;
+    }
+}
+
+protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+{
+    return Task.CompletedTask;
+}
+```
 
 
-// This IBot implementation can run any type of Dialog. The use of type parameterization is to allows multiple different bots
-// to be run at different endpoints within the same project. This can be achieved by defining distinct Controller types
-// each with dependency on distinct IBot types, this way ASP Dependency Injection can glue everything together without ambiguity.
-// The ConversationState is used by the Dialog system. The UserState isn't, however, it might have been used in a Dialog implementation,
-// and the requirement is that all BotState objects are saved at the end of a turn.
-
-
-## Example
-
-The sample uses the bot authentication capabilities in Azure Bot Service, providing features to make it easier to develop a bot that authenticates users to various identity providers such as Azure AD (Azure Active Directory), GitHub, Uber, etc. You cna download the code at this location: [teams-auth bot](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth). 
-
--->
-
-## References
+## Further reading
 
 #### Teams
 ---
 
-> [!WARNING]
-> The following links to be revised. They are in the _old folder.  
+(**WARNING**) 
+The following links to be revised. They are in the _old folder.  
 
 - [Microsoft Teams authentication flow for bots](../../../_old/concepts/bots/bot-authentication/auth-flow-bot.md)
 - [Authenticate a user in a Microsoft Teams bot](../../../_old/concepts/bots/bot-authentication/auth-bot-aad.md)
 - [Using Azure Bot Service for Authentication in Teams](../../../_old/concepts/bots/bot-authentication/auth-oauth-card.md)
 
 
-#### Bot framework
+#### Bot Framework
 ----
 
 - [Add authentication to your bot via Azure Bot Service](https://docs.microsoft.com/azure/bot-service/bot-builder-authentication?view=azure-bot-service-4.0&tabs=csharp%2Cbot-oauth)
