@@ -11,47 +11,47 @@ ms.author: anclear
 > [!WARNING]
 > Work in progress.
 
-You may need bots in Microsoft Teams that can access resources, such as a mail service, which require authentication.
+There times when you may need to create bots in Microsoft Teams that can access resources, such as a mail service, which require authentication.
 
-This article demonstrates how to use Azure Bot Service v4 SDK authentication, which includes bot authentication capabilities based on OAuth 2.0, and provides features that make easier to develop a bot that can use authentication tokens based on the user's credentials. Key in all this is the use of **identity providers**, as we will see later.
+This article demonstrates how to use Azure Bot Service v4 SDK authentication, based on OAuth 2.0, that makes it easier to develop a bot that can use authentication tokens based on the user's credentials. Key in all this is the use of **identity providers**, as we will see later.
 
-OAuth 2.0 is an open standard for authentication and authorization used by Azure Active Directory and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams. See [OAuth 2 Simplified](https://aaronparecki.com/oauth-2-simplified/) for a basic understanding. This is the complete  [OAuth 2.0](https://oauth.net/2/) specification. 
+OAuth 2.0 is an open standard for authentication and authorization used by Azure Active Directory and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams. 
 
-Notice that authentication flow for tabs and bots are different. Tabs are very similar to websites so they can use OAuth 2.0 directly. Bots must do a few things differently, but the core concepts still apply.
+See [OAuth 2 Simplified](https://aaronparecki.com/oauth-2-simplified/) for a basic understanding, and [OAuth 2.0](https://oauth.net/2/) for the complete specification.
+
 
 For more information about how the Azure Bot Service handles authentication, see [User authentication within a conversation](https://docs.microsoft.com/azure/bot-service/bot-builder-concept-authentication?view=azure-bot-service-4.0).
 
+In this article you will learn:
+
+- How to create a bot which requires authentication. You will use the [cs-auth-sample][teams-auth-bot] sample. The example handles user's login and the authentication token generation.
+- How to create Azure resources which allow the bot deployment and association with an identity provider. The provider issues a token based on the user's credentials. The bot can use the token to access resources, such as a mail service, which require authentication. For more information see  [Microsoft Teams authentication flow for bots](../../../_old/concepts/bots/bot-authentication/auth-flow-bot.md).
+- How to integrate the bot within Microsoft Teams. Once the bot has been integrated, you can login and exchange messages with it in a chat.
 
 ## Prerequisites
 
 - Knowledge of [bot basics][concept-basics], [managing state][concept-state], the [dialogs library][concept-dialogs], how to [implement sequential conversation flow][simple-dialog].
 - Knowledge of Azure and OAuth 2.0 development.
-- Visual Studio 2017 or later, npm, and git.
-- One of these samples.
+- Visual Studio 2017 or later and git.
+- Azure account. If needed you can create an [Azure free account](https://azure.microsoft.com/en-us/free/).
+- The following sample.
 
-| Sample | BotBuilder version | Demonstrates |
-|:---|:---:|:---|
-| **Bot authentication** in [cs-auth-sample][teams-auth-bot] | v4 | OAuthCard support |
-
-In this article you will learn:
-
-- How to create a bot which requires authentication. You will use the [cs-auth-sample][teams-auth-bot] sample. The example handles user's login and the authentication token generation.
-- How to create Azure resources which allow the bot deployment and association with an identity provider. This provider issues a token based on the user's credentials. The bot can use the token to access resources, such as a mail service for example, which require authentication. For more information see  [Microsoft Teams authentication flow for bots](../../../_old/concepts/bots/bot-authentication/auth-flow-bot.md).
-- How to integrate the bot within Microsoft Teams. Once the bot has been integrated, you can login and exchange messages with it in a chat.
+    | Sample | BotBuilder version | Demonstrates |
+    |:---|:---:|:---|
+    | **Bot authentication** in [cs-auth-sample][teams-auth-bot] | v4 | OAuthCard support |
 
 ## Create a resource group
 
-The resource group and the service plan are not strictly necessary for this authentication article.
-But their use is a good practice to keep the resources better organized and manageable.
+The resource group and the service plan are not strictly necessary for this authentication article. But their use is a good practice to keep the resources better organized and manageable.
 
-You are going to use a resource group to create individual resources for the Bot Framework. For performance, assure that these services are located in the same Azure region.
+You use a resource group to create individual resources for the Bot Framework. For performance, assure that these resources are located in the same Azure region.
 
 1. In your browser navigate to the [Azure portal][azure-portal].
 1. In the left navigation panel, select **Resource groups**.
-1. Click **Add** to add a new resource group. You are prompted to provide some information:
+1. In the upper left of the displayed window, click the **Add** tab to create a new resource group. You are prompted to provide some information:
     1. **Subscription** Use your existing subscription.
-    1. **Name** Enter tne name for the resource group. An example could be  *TeamsBotsResourceGroup*. Remember that the name must be unique.
-    1. From the Region drop-down, select *West US*, or a region close to your services.
+    1. **Resource group** Enter tne name for the resource group. An example could be  *TeamsResourceGroup*. Remember that the name must be unique.
+    1. From the Region drop-down, select *West US*, or a region close to your applications.
     1. Click **Review and create** button. You should see a banner that reads *Validation passed*.
     1. Click the **Create** button. It may take a few minutes to create the resource group.
  
@@ -66,36 +66,35 @@ You are going to use a resource group to create individual resources for the Bot
 1. Click **Create**.
 1. You'll be asked to provide the following information: 
     1. **Subscription**. You can use an existing subscription.
-    1. **Resource Group**. Select *TeamsBotsResourceGroup* you created earlier.
-    1. **Name**. Enter tne name for the service plan. An example could be  An example could be  *TeamsBotsServicePlan*. Remember that the name must be unique.*. Remember that the name must be unique.
-    1. **Operating System**. Select *Windows*.
-    1. **Region**. Select *West US*.
+    1. **Resource Group**. Select the group you created earlier.
+    1. **Name**. Enter tne name for the service plan. An example could be  *TeamsServicePlan*. Remember that the name must be unique.
+    1. **Operating System**. Select *Windows* or the OS that applies to your case.
+    1. **Region**. Select *West US* or a region close to your applications.
     1. **Pricing Tier**. Make sure that *Standard S1* is selected. This should be the default value.
     1. Click **Review and create** button. You should see a banner that reads *Validation passed*.
     1. Click **Create**. It may take a few minutes to create the app service plan. The plan will be listed in the resource group. 
 
+## Create bot channel registration application
 
-## Create a bot channel registration application
-
-After creating the *Azure App Service* to host your bot, you must create a **Bot Channels Registration** app which is needed for registering the bot with the **Teams** channel.
+You must create a **Bot Channels Registration** app which is needed to deploy the bot and for registering the bot with the **Teams** channel.
 
 1. In your browser navigate to the [Azure portal][azure-portal].
 1. In the left navigation panel, select **Create a resource**.
-1. In the right panel selection box enter "bot". And in the drop-down list, select **Bot Channels Registration**. 
+1. In the right panel selection box enter "bot". And in the drop-down list, select **Bot Channels Registration**.
 1. Click the **Create** button.
-1. In the **Bot Service** blade, provide the requested information about your bot. For the *Messaging endpoint* enter the URL of the app service followed by `/api/messages`. For example, `https://teamsbotauth.azurewebsites.net/api/messages`. The following picture shows an example of the registration settings:
+1. In the **Bot Channel Registration** blade, provide the requested information about your bot. 
+1. Leave the **Messaging endpoint** box empty for now, you will enter the required URL after deploying the bot. The following picture shows an example of the registration settings:
 
-    ![bot app channels registration](../../media/teams-bot-auth-app-channels-registration.PNG)
+    ![bot app channels registration](../../media/auth-bot-channels-registration.PNG)
 
 1. Click **Microsoft App ID and password** and then **Create New**.
 1. Click **Create App ID in the App Registration Portal** link.
-1. In the new window, click the **New registration** tab.
-1. Enter the name of the bot application you are registering, we used *TeamsBotAuth* (you need to select your own unique name). 
-1. For the **Supported account types** select *Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)*. 
-1. Click **Register**.
-1. Once completed, Azure displays the *Overview* page for the application.
-1. Copy and save to a file the **Application (client) ID** value. 
-1. In the blade, click **Certificate and secrets**.
+1. In the displayed **App registration** window, click the **New registration** tab in the upper left.
+1. Enter the name of the bot application you are registering, we used *BotTeamsAuth* (you need to select your own unique name). 
+1. For the **Supported account types** select *Accounts in any organizational directory (Any Azure AD directory - Multitenant)*.
+1. Click the **Register** button. Once completed, Azure displays the *Overview* page for the application.
+1. Copy and save to a file the **Application (client) ID** value.
+1. In the lef panel, click **Certificate and secrets**.
     1. Under *Client secrets*, click **New client secret**.
     1. Add a description to identify this secret from others you might need to create for this app.
     1. Set *Expires* to you selection.
@@ -103,98 +102,101 @@ After creating the *Azure App Service* to host your bot, you must create a **Bot
     1. Copy the client secret and save it to a file. 
 1. Go back to the **Bot Channel Registration** window and copy the *App ID* and the *Clinet secret* in the **Microsoft App ID** and **Password** boxes, respectively. 
 1. Click **OK**.
-1. Finally, click **Create**. 
+1. Finally, click **Create**.
 
-    After Azure has created the registration resource it lists it in the related resource group.  
+After Azure has created the registration resource it lists it in the related resource group.  
 
-    ![bot app channels registration group](../../media/teams-bot-auth-app-channels-registration-group.PNG)
+![bot app channels registration group](../../media/auth-bot-channels-registration-group.PNG)
 
 > [!NOTE]
 > The Bot Channels Registration resource will show the **Global** region even though you selected West US. This is expected.
 
 For more information, see [Register a bot with Azure Bot Service](https://docs.microsoft.com/azure/bot-service/bot-service-quickstart-registration?view=azure-bot-service-3.0A).
 
-## Create an identity provider
+## Create identity provider
 
 You need an identity provider that can be used for authentication.
 In this topic you are going to use an Active Directory provider.
 
-1. Open the [Azure Active Directory][azure-aad-blade] panel in the Azure portal.
-    If you are not in the correct tenant, click **Switch directory** to switch to the correct tenant.
-    For instruction on creating a tenant, see [Access the portal and create a tenant](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant).
+1. In your browser navigate to the [Azure portal][azure-portal].
+1. In the left navigation panel, select **Azure Active Directory**. 
     > [!TIP]
     > You will need to create and register this Azure AD resource in a tenant
     > in which you can consent to delegate permissions requested by an application.
+    > For instruction on creating a tenant, see [Access the portal and create a tenant](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant).
 1. In the left panel, click **App registrations**.
-1. In the **App registrations** panel, click **New registration** tab.
-1. Fill in the required fields and create the app registration.
-   1. Name your application.
-   1. Select the **Supported account types** for your application. (Any of these options will work with this sample.)
+1. In the right panel, click the **New registration** tab, in the upper left.
+1. You'll be asked to provide the following information: 
+   1. **Name**. Enter tne name for the application. An example could be  *BotTeaamsIdentity*. Remember that the name must be unique.
+   1. Select the **Supported account types** for your application. Select *Accounts in any organizational directory (Any Azure AD directory - Multitenant*.
    1. For the **Redirect URI**
        1. Select **Web**.
        1. Set the URL to `https://token.botframework.com/.auth/web/redirect`.
 
         The following picture shows an example:
 
-        ![teams bots app auth](../../media/teams-bots-app-auth.PNG)
+        ![teams bots app auth](../../media/auth-bot-identity.PNG)
 
    1. Click **Register**.
 
-      - Once it is created, Azure displays the **Overview** page for the app.
-      - Record the **Application (client) ID** value. You will use this value later as the *Client id* when you register your Azure AD application with your bot.
-      - Also record the **Directory (tenant) ID** value. You will also use this to register this application with your bot.
+1. Once it is created, Azure displays the **Overview** page for the app. Copy and save to a file the following information:
 
-1. In the navigation pane, click **Certificates & secrets** to create a secret for your application.
+    1. The **Application (client) ID** value. You will use this value later as the *Client id* when you register this Azure identity application with your bot.
+    1. The **Directory (tenant) ID** value. You will also use this value later to register this Azure identity application with your bot.
+
+1. In the left panel, click **Certificates & secrets** to create a secret for your application.
 
    1. Under **Client secrets**, click **New client secret**.
-   1. Add a description to identify this secret from others you might need to create for this app, such as `bot login`.
+   1. Add a description to identify this secret from others you might need to create for this app, such as *Bot identity app in Teams*.
    1. Set **Expires** to your selection.
    1. Click **Add**.
    1. Before leaving this page, record the secret. You will use this value later as the _Client secret_ when you register your Azure AD application with your bot.
 
 ### Configure the identity provider and register it with the bot
 
-The next steps is to register with your bot the Azure AD application that you just created.
-
-1. Navigate to your bot's channel registration resource page on the [Azure Portal](http://portal.azure.com/).
+1. In your browser, navigate to the [Azure portal](http://portal.azure.com/).
+1. From the dashboard select your resource group. If you pinned it, it would be easier to find.
+1. Click on your bot channel registration link. 
 1. Click **Settings**.
 1. Under **OAuth Connection Settings** near the bottom of the page, click **Add Setting**.
 1. Fill in the form as follows:
 
-    1. For **Name**, enter a name for your connection. You'll use this name in your bot code.
-    1. For **Service Provider**, select **Azure Active Directory**. Once you select this, the Azure AD-specific fields will be displayed.
-    1. For **Client id**, enter the application (client) ID that you recorded for your Azure AD application in the steps above. 
-    1. For **Client secret**, enter the secret that you recorded for your Azure AD application in the steps above.
-    1. For **Grant Type**, enter `authorization_code`.
-    1. For **Login URL**, enter `https://login.microsoftonline.com`.
-    1.For **Tenant ID**, enter the **directory (tenant) ID** that your recorded earlier for your AAD app or **common** depending on the supported account types selected when you created the ADD app. To decide which value to assign follow these criteria:
+    1. **Name**. Enter a name for the connection. You'll use this name in your bot in the `appsettings.json` file. For example *BotTeamsAuthADv1*. 
+    1. For **Service Provider**. Select **Azure Active Directory**. Once you select this, the Azure AD-specific fields will be displayed.
+    1. **Client id**. Enter the Application (client) ID that you recorded for your Azure identity application in the steps above. 
+    1. **Client secret**. Enter the secret that you recorded for your Azure identity application in the steps above.
+    1. For **Grant Type**. Enter `authorization_code`.
+    1. For **Login URL**. Enter `https://login.microsoftonline.com`.
+    1. For **Tenant ID**, enter the **directory (tenant) ID** that your recorded earlier for your Azure identity app or **common** depending on the supported account types selected when you created the ADD app. To decide which value to assign follow these criteria:
 
-        - When creating the AAD app if you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft AAD directory - Multi tenant)* enter the **tenant ID** you recorded earlier for the AAD app.
+        - When creating the identity app if you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft AAD directory - Multi tenant)* enter the **tenant ID** you recorded earlier for the AAD app.
 
         - However, if you selected *Accounts in any organizational directory (Any AAD directory - Multi tenant and personal Microsoft accounts e.g. Skype, Xbox, Outlook.com)* enter the word **common** instead of a tenant ID. Otherwise, the AAD app will verify through the tenant whose ID was selected and exclude personal MS accounts.
 
-       This will be the tenant associated with the users who can be authenticated.
+        This will be the tenant associated with the users who can be authenticated.
 
-    1. For **Resource URL**, enter `https://graph.microsoft.com/`.
+    1. For **Resource URL**, enter `https://graph.microsoft.com/`. Not used in the current code sample. 
     1. Leave **Scopes** blank.
-     The following picture shows an example:
+    
+        The following picture shows an example:
 
-        ![teams bots app auth connection string adv1](../../media/teams-bots-app-auth-connection-settings-adv1.PNG)
+        ![teams bots app auth connection string adv1](../../media/auth-bot-identity-connection-adv1.PNG)
 
 1. Click **Save**.
 
 ### Test the connection
 
 1. Click on the connection entry to open the connection you just created.
-1. Click **Test Connection** at the top of the **Service Provider Connection Setting** pane.
-1. The first time, this should open a new browser tab listing the permissions your app is requesting and prompt you to accept. The following picture shows an example:
+1. Click **Test Connection** at the top of the **Service Provider Connection Setting** panel.
+1. The first time, this should open a new browser window asking to select an account. Select the one you want to use. 
+1. Next, you will be asked to allow to the identity provider to use your data (credentials) The following picture shows an example:
 
-    ![teams bots app auth connection string adv1](../../media/teams-bots-app-auth-connection-string-test-accept.PNG)
+    ![teams bots app auth connection string adv1](../../media/auth-bot-connection-test-accept.PNG)
 
 1. Click **Accept**.
-1. This should then redirect you to a **Test Connection to \<your-connection-name> Succeeded** page. The following picture shows an example:
+1. This should then redirect you to a **Test Connection to \<your-connection-name> Succeeded** page. Refresh the page if you get an error. The following picture shows an example:
 
-    ![teams bots app auth connection string adv1](../../media/teams-bots-app-auth-connection-string-test-token.PNG)
+    ![teams bots app auth connection string adv1](../../media/auth-bot-connection-test-token.PNG)
 
 This connection name is used by the bot code to retrieve user authentication tokens.
 
