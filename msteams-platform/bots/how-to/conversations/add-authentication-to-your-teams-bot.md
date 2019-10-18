@@ -91,7 +91,7 @@ You must create a **Bot Channels Registration** app which is needed to deploy th
 1. Click **Create App ID in the App Registration Portal** link.
 1. In the displayed **App registration** window, click the **New registration** tab in the upper left.
 1. Enter the name of the bot application you are registering, we used *BotTeamsAuth* (you need to select your own unique name). 
-1. For the **Supported account types** select *Accounts in any organizational directory (Any Azure AD directory - Multitenant)*.
+1. For the **Supported account types** select *Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)*.
 1. Click the **Register** button. Once completed, Azure displays the *Overview* page for the application.
 1. Copy and save to a file the **Application (client) ID** value.
 1. In the lef panel, click **Certificate and secrets**.
@@ -128,15 +128,10 @@ In this topic you are going to use an Active Directory provider.
 1. In the right panel, click the **New registration** tab, in the upper left.
 1. You'll be asked to provide the following information: 
    1. **Name**. Enter tne name for the application. An example could be  *BotTeaamsIdentity*. Remember that the name must be unique.
-   1. Select the **Supported account types** for your application. Select *Accounts in any organizational directory (Any Azure AD directory - Multitenant*.
+   1. Select the **Supported account types** for your application. Select *Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)*.
    1. For the **Redirect URI**
        1. Select **Web**.
        1. Set the URL to `https://token.botframework.com/.auth/web/redirect`.
-
-        The following picture shows an example:
-
-        ![teams bots app auth](../../media/auth-bot-identity.PNG)
-
    1. Click **Register**.
 
 1. Once it is created, Azure displays the **Overview** page for the app. Copy and save to a file the following information:
@@ -152,22 +147,22 @@ In this topic you are going to use an Active Directory provider.
    1. Click **Add**.
    1. Before leaving this page, record the secret. You will use this value later as the _Client secret_ when you register your Azure AD application with your bot.
 
-### Configure the identity provider and register it with the bot
+### Configure the identity provider connection and register it with the bot
 
 1. In your browser, navigate to the [Azure portal](http://portal.azure.com/).
 1. From the dashboard select your resource group. If you pinned it, it would be easier to find.
-1. Click on your bot channel registration link. 
-1. Click **Settings**.
+1. Click on your bot channel registration link.
+1. In blade, click **Settings**.
 1. Under **OAuth Connection Settings** near the bottom of the page, click **Add Setting**.
 1. Fill in the form as follows:
 
     1. **Name**. Enter a name for the connection. You'll use this name in your bot in the `appsettings.json` file. For example *BotTeamsAuthADv1*. 
     1. For **Service Provider**. Select **Azure Active Directory**. Once you select this, the Azure AD-specific fields will be displayed.
-    1. **Client id**. Enter the Application (client) ID that you recorded for your Azure identity application in the steps above. 
-    1. **Client secret**. Enter the secret that you recorded for your Azure identity application in the steps above.
+    1. **Client id**. Enter the Application (client) ID that you recorded for your Azure identity provider app in the steps above. 
+    1. **Client secret**. Enter the secret that you recorded for your Azure identity provider app in the steps above.
     1. For **Grant Type**. Enter `authorization_code`.
     1. For **Login URL**. Enter `https://login.microsoftonline.com`.
-    1. For **Tenant ID**, enter the **directory (tenant) ID** that your recorded earlier for your Azure identity app or **common** depending on the supported account types selected when you created the ADD app. To decide which value to assign follow these criteria:
+    1. For **Tenant ID**, enter the **directory (tenant) ID** that your recorded earlier for your Azure identity app or **common** depending on the supported account type selected when you created the identity provider app. To decide which value to assign follow these criteria:
 
         - When creating the identity app if you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft AAD directory - Multi tenant)* enter the **tenant ID** you recorded earlier for the AAD app.
 
@@ -177,7 +172,7 @@ In this topic you are going to use an Active Directory provider.
 
     1. For **Resource URL**, enter `https://graph.microsoft.com/`. Not used in the current code sample. 
     1. Leave **Scopes** blank.
-    
+
         The following picture shows an example:
 
         ![teams bots app auth connection string adv1](../../media/auth-bot-identity-connection-adv1.PNG)
@@ -238,7 +233,7 @@ Alternatively, wile in Visual Studio, you can follow these steps:
 
 1. Click **Create**.
 1. If the deployment completes successfully, you should see it reflected in Visual Studio. Moreover, a page is displayed in your default browser saying *Your bot is ready!*. The URL will be similar to this: `https://botteamsauth.azurewebsites.net/`. Save it to a file.
-1. In your browser navigate to the [Azure portal][azure-portal].
+1. In your browser, navigate to the [Azure portal][azure-portal].
 1. Check your resource group, the bot should be listed along with the other resources. The following picture shows an example:
 
     ![teams-bot-auth-app-service-group](../../media/auth-bot-app-service-in-group.PNG)
@@ -251,8 +246,6 @@ Alternatively, wile in Visual Studio, you can follow these steps:
 ## Test the bot using the emulator
 
 If you have not done it already, install the [Bot Framework Emulator](https://aka.ms/bot-framework-emulator-readme). See also [Debug with the emulator](https://review.docs.microsoft.com/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&branch=pr-en-us-1722&tabs=csharp).
-
-1. Launch the emulator.
 
 In order for the bot sample login to work you must configure the emulator as shown below.
 
@@ -287,7 +280,7 @@ When you click the login button displayed by the bot, you will be asked to enter
 
 ### Testing
 
-After you have configured the authentication mechanism, you can perform the actual bot sample testing.  
+After you have configured the authentication mechanism, you can perform the actual bot testing.  
 
 1. Run the bot sample locally on your machine, via Visual Studio for example.
 1. Start the emulator.
@@ -300,13 +293,13 @@ After you have configured the authentication mechanism, you can perform the actu
 1. Click the **Sign in** box.
 1. A pop-up dialog is displayed to **Confirm Open URL**. This is to allow the bot's user (you) to be authenticated.  
 1. Click **Confirm**.
-1. If you are asked, select the applicable user's account. 
+1. If you are asked, select the applicable user's account.
 1. Depending which configuration you used for the emulator, you get one of the following:
     1. **Using sign-in verification code**
         1. A window is opened displaying the validation code.
         1. Copy and enter the validation code into the chat box to complete the sign-in.
     1. **Using authentication tokens**.
-        1. You are logged in based on your credentials. 
+        1. You are logged in based on your credentials.
 
  1. The following picture is an example of the bot UI after you have logged in:
 
@@ -324,9 +317,8 @@ After you have configured the authentication mechanism, you can perform the actu
 ## Test the deployed bot
 
 1. In your browser, navigate to the [Azure portal][azure-portal].
-1. In the left pane, select **All Resources**.
-1. In the right panel find your bot **Azure AD Registration**. 
-1. Click on the resource link. The resource page is displayed.
+1. Find your resource group.
+1. Click the resource link. The resource page is displayed.
 1. In the resource blade, click **Test in Web Chat**. The bot starts and displays the predefined greetings. 
 1. Type anything in the chat box. You will be logged in. The following picture shows an example:
 
