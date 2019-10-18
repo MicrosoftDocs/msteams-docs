@@ -32,13 +32,18 @@ Using this method you service will receive an `Activity` object of type `compose
 # [C#/.NET](#tab/dotnet)
 
 ```csharp
-banana
+protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+{
+  //handle fetch task
+}
 ```
 
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-//this is the javascript example.
+protected async handleTeamsMessagingExtensionFetchTask(context: TurnContext, action: MessagingExtensionAction): Promise<MessagingExtensionActionResponse> {
+    //handle the fetch task
+}
 ```
 
 # [JSON](#tab/json)
@@ -109,7 +114,13 @@ When your bot is invoked from a message rather than the compose area or the comm
 # [C#/.NET](#tab/dotnet)
 
 ```csharp
-banana
+protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+{
+  var messageText = action.MessagePayload.Body.Content;
+  var fromId = action.MessagePayload.From.User.Id;
+
+  ...
+}
 ```
 
 # [TypeScript/Node.js](#tab/typescript)
@@ -140,7 +151,7 @@ banana
       "locale": "en-us",
       "body": {
         "contentType": "html",
-        "content": "this is the message"
+        "content": "This is the message the messaging extension was invoked from."
     },
       "from": {
         "device": null,
@@ -192,7 +203,7 @@ banana
 
 ## Respond to the fetchTask
 
-Your response to the invoke request should be in the form of a `task` object that contains either a `taskInfo` object with the adaptive card or web URL, or a simple string message.
+Respond to the invoke request with a `task` object that contains either a `taskInfo` object with the adaptive card or web URL, or a simple string message.
 
 |Property name|Purpose|
 |---|---|
@@ -221,42 +232,51 @@ When using an adaptive card, you'll need to respond with a `task` object with th
 This sample uses the [AdaptiveCards NuGet package](https://www.nuget.org/packages/AdaptiveCards) in addition to the Bot Framework SDK.
 
 ```csharp
-protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
 {
-  var response = new MessagingExtensionActionResponse
+  string placeholder = "Not invoked from message";
+
+  if (action.MessagePayload != null)
   {
-    Task = new TaskModuleContinueResponse
+      var messageText = action.MessagePayload.Body.Content;
+      var fromId = action.MessagePayload.From.User.Id;
+      placeholder = "Invoked from message";
+  }
+
+  var response = new MessagingExtensionActionResponse()
+  {
+    Task = new TaskModuleContinueResponse()
     {
       Value = new TaskModuleTaskInfo()
       {
-        Card = new Attachment
+        Height = "small",
+        Width = "small",
+        Title = "Example task module",
+        Card = new Attachment()
         {
+          ContentType = AdaptiveCard.ContentType,
           Content = new AdaptiveCard("1.0")
           {
             Body = new List<AdaptiveElement>()
             {
-              new AdaptiveTextInput() { Id = "FormField1", Placeholder = "FormField1"},
+              new AdaptiveTextInput() { Id = "FormField1", Placeholder = placeholder},
               new AdaptiveTextInput() { Id = "FormField2", Placeholder = "FormField2"},
               new AdaptiveTextInput() { Id = "FormField3", Placeholder = "FormField3"},
             },
             Actions = new List<AdaptiveAction>()
             {
-              new AdaptiveSubmitAction
+              new AdaptiveSubmitAction()
               {
                 Type = AdaptiveSubmitAction.TypeName,
                 Title = "Submit",
-                Data = new JObject { { "submitLocation", "messagingExtensionFetchTask" } },
               },
-            }
+            },
           },
-          ContentType = AdaptiveCard.ContentType,
         },
-        Height = 450,
-        Width = 500,
-        Title = "Respond with task module"
-      }
-    }
-  }
+      },
+    },
+  };
+  return response;
 }
 ```
 
@@ -270,43 +290,36 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 
 ```json
 {
-  "task": {
-    "type": "continue",
-    "value": {
-      "title": "Task module form",
-      "height": "small",
-      "width": "medium",
-      "card": {
-        "contentType": "application/vnd.microsoft.card.adaptive",
-        "content": {
-          "body": [
-            {
-              "type": "TextBlock",
-              "text": "Please enter the following information:"
-            },
-            {
-              "type": "TextBlock",
-              "text": "Name"
-            },
-            {
-              "type": "Input.Text",
-              "spacing": "None",
-              "placeholder": "Placeholder text"
-            }
-          ],
-          "actions" : [
-            {
-              "type": "Action.Submit",
-              "title": "Submit"
-            }
-          ],
-          "type": "AdaptiveCard",
-          "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-          "version": "1.0"
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
+    {
+      "type": "Input.Text",
+      "placeholder": "FormField1",
+      "id": "FormField1"
+    },
+    {
+      "type": "Input.Text",
+      "placeholder": "FormField2",
+      "id": "FormField2"
+    },
+    {
+      "type": "Input.Text",
+      "placeholder": "FormField3",
+      "id": "FormField3"
+    },
+    {
+      "type": "ActionSet",
+      "actions": [
+        {
+          "type": "Action.Submit",
+          "title": "Action.Submit",
+          "id": "foo"
         }
-      }
+      ]
     }
-  }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
 }
 ```
 
@@ -345,76 +358,6 @@ banana
     }
   }
 }
-```
-
-* * *
-
-## Complete sample using an adaptive card
-
-# [C#/.NET](#tab/dotnet)
-
-You can see the [complete sample project on GitHub](https://github.com/OfficeDev/msteams-samples/tree/master/samples/dotnet/messaging_extensions/messaging_extension_action_with_card).
-
-```csharp
-[BotAuthentication]
-public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
-{
-  if (activity.Type == ActivityTypes.Invoke)
-  {
-    if (activity.Name == "composeExtension/fetchTask")
-    {
-      //Create the adaptive card
-      AdaptiveCard card = new AdaptiveCard(new AdaptiveSchemaVersion("1.0"));
-      card.Body.Add(new AdaptiveTextBlock()
-      {
-        Text = "Please enter the following information:"
-      });
-      card.Body.Add(new AdaptiveTextBlock()
-      {
-        Text = "Name"
-      });
-      card.Body.Add(new AdaptiveTextInput()
-      {
-        Id = "name",
-        Spacing = AdaptiveSpacing.None,
-        Placeholder = "Name goes here"
-      });
-      card.Actions.Add(new AdaptiveSubmitAction()
-      {
-        Title = "Submit"
-      });
-  
-      string cardJson = card.ToJson();
-  
-      //Create the task module response
-      string task = $@"{{
-        'task': {{
-          'type': 'continue',
-          'value': {{
-            'card': {{
-              'contentType': 'application/vnd.microsoft.card.adaptive',
-              'content': {cardJson}
-              }}
-            }}
-          }}
-        }}";
-  
-      return Request.CreateResponse(HttpStatusCode.OK, JObject.Parse(task));
-    }
-  }
-}
-```
-
-# [TypeScript/Node.js](#tab/typescript)
-
-```typescript
-//this is the javascript example.
-```
-
-# [JSON](#tab/json)
-
-```json
-json
 ```
 
 * * *
