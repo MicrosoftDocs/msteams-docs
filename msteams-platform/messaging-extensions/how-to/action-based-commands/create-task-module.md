@@ -411,10 +411,10 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 //this is the javascript example.
 ```
 
-# [TypeScript/Node.js](#tab/typescript)
+# [JSON](#tab/json)
 
-```typescript
-let something = `an example in typescript`;
+```json
+json
 ```
 
 * * *
