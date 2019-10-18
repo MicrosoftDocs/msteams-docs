@@ -40,7 +40,7 @@ In this article you will learn:
     |:---|:---:|:---|
     | **Bot authentication** in [cs-auth-sample][teams-auth-bot] | v4 | OAuthCard support |
 
-## Create a resource group
+## Create the resource group
 
 The resource group and the service plan are not strictly necessary for this authentication article. But their use is a good practice to keep the resources better organized and manageable.
 
@@ -58,7 +58,7 @@ You use a resource group to create individual resources for the Bot Framework. F
  > [!TIP]
 > As with the resources you'll create later in this tutorial, it's a good idea to pin this resource group to your dashboard for easy access. If you'd like to pin this resource group, click the pin icon in the upper right of the dashboard.
 
-## Create a service plan
+## Create the service plan
 
 1. In your browser navigate to the [**Azure portal**][azure-portal].
 1. In the left navigation panel, select **Create a resource**.
@@ -74,7 +74,7 @@ You use a resource group to create individual resources for the Bot Framework. F
     1. Click **Review and create** button. You should see a banner that reads *Validation passed*.
     1. Click **Create**. It may take a few minutes to create the app service plan. The plan will be listed in the resource group. 
 
-## Create bot channel registration application
+## Create the bot channel registration
 
 You must create a **Bot Channels Registration** app which is needed to deploy the bot and for registering the bot with the **Teams** channel.
 
@@ -113,7 +113,7 @@ After Azure has created the registration resource it lists it in the related res
 
 For more information, see [Register a bot with Azure Bot Service](https://docs.microsoft.com/azure/bot-service/bot-service-quickstart-registration?view=azure-bot-service-3.0A).
 
-## Create identity provider
+## Create the identity provider
 
 You need an identity provider that can be used for authentication.
 In this topic you are going to use an Active Directory provider.
@@ -204,27 +204,22 @@ This connection name is used by the bot code to retrieve user authentication tok
 
 With the preliminary settings done, let's focus on the creation of the bot to use in this article.
 
-1. Clone [cs-auth-sample][teams-auth-bot].
-2. Make a copy of the project or use it directly from the downloaded location.
+1. Clone the [cs-auth-sample][teams-auth-bot] sample.
 1. Launch Visual Studio.
 1. From the toolbar select **File->Open->Project/Solution** and open the bot project.
-1. Update **appsettings.json**:
+1. Update **appsettings.json** as follows:
 
-    - Set `ConnectionName` to the name of the authentication connection setting you added to your bot channel registration.
-    - Set `MicrosoftAppId` and `MicrosoftAppPassword` to your bot's app ID and app secret.
-
-      Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) will need to be encoded as `&amp;`.
-      The following is an example:
+    - Set `ConnectionName` to the name of the identity provider connection you added to the bot channel registration. The name we used in this example is *BotTeamsAuthADv1*.
+    - Set `MicrosoftAppId` and `MicrosoftAppPassword` to the values you saved at the time of the bot channel registration.
+    Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) will need to be encoded as `&amp;`.
 
         ```cs
         {
             "MicrosoftAppId": "", // The bot App Id 
             "MicrosoftAppPassword": "", // The bot client secret
-            "ConnectionName": "" // The name of the Azure AD auth connection
+            "ConnectionName": "" // The name of the identity provider connection
         }
         ```
-
-If you do not know how to get your **Microsoft app ID** and **Microsoft app password** values, you can create a new password [as described here](https://review.docs.microsoft.com/azure/bot-service/bot-service-quickstart-registration?view=azure-bot-service-3.0&branch=pr-en-us-1722&viewFallbackFrom=azure-bot-service-4.0#get-registration-password)
 
 ### Deploy the bot to Azure
 
@@ -233,22 +228,31 @@ It is recommended that you use the steps described in this article [Deploy your 
 Alternatively, wile in Visual Studio, you can follow these steps:
 
 1. In Visual Studio, in the *Solution Explorer* right-click on the project name.
-1. In the drop-down menu, select **Publish**. 
-1. In the pop-up wizard, select **App Service** on the left and **Create New** on the right.
-1. Click **Publish**.
+1. In the drop-down menu, select **Publish**.
+1. In the displayed window, click the **New** link.
+1. In the dialog window, select **App Service** on the left and **Create New** on the right.
+1. Click the **Publish** button.
 1. In the next dialog window, enter the required information. The following is an example:
 
-   ![teams-bot-auth-app-service](../../media/teams-bot-auth-app-service.PNG)
+   ![auth-app-service](../../media/auth-bot-app-service.PNG)
 
 1. Click **Create**.
-1. If the deployment completes successfully, you should see it reflected in Visual Studio. Moreover, a page is displayed in your default browser saying *Your bot is ready!*. The URL will be similar to this: `https://teamsbotauth.azurewebsites.net/`. Save it to a file. 
+1. If the deployment completes successfully, you should see it reflected in Visual Studio. Moreover, a page is displayed in your default browser saying *Your bot is ready!*. The URL will be similar to this: `https://botteamsauth.azurewebsites.net/`. Save it to a file.
+1. In your browser navigate to the [Azure portal][azure-portal].
 1. Check your resource group, the bot should be listed along with the other resources. The following picture shows an example:
 
-    ![teams-bot-auth-app-service-group](../../media/teams-bot-auth-app-service-group.PNG)
+    ![teams-bot-auth-app-service-group](../../media/auth-bot-app-service-in-group.PNG)
+
+1. In the resource group, click the bot channel registration name (link).
+1. In the left panel, click **Settings**.
+1. In the **Messaging endpoint** box, enter the URL obtained above followed by `api/messages`. This is an example: `https://botteamsauth.azurewebsites.net/api/messages`.
+1. Click the **Save** button in the upper left.
 
 ## Test the bot using the emulator
 
 If you have not done it already, install the [Bot Framework Emulator](https://aka.ms/bot-framework-emulator-readme). See also [Debug with the emulator](https://review.docs.microsoft.com/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&branch=pr-en-us-1722&tabs=csharp).
+
+1. Launch the emulator.
 
 In order for the bot sample login to work you must configure the emulator as shown below.
 
@@ -389,7 +393,7 @@ The following sections apply specifically to a bot that requires authentication 
 
 1. In file explorer, navigate to the folder `TeamsAppManifest` folder. Edit the `manifest.json` file ed assign the following values:
     1. To `id` and `botId` assign the **bot App ID** you got at the time of the Azure **Bot Channel Registration**.
-    1. Assure that this values is assigned: `validDomains: [ "token.botframework.com" ]`. For more information, see [Using Azure Bot Service for Authentication in Teams](../../../_old/concepts/bots/bot-authentication/auth-oauth-card.md).
+    1. Assign this value: `validDomains: [ "token.botframework.com" ]`. For more information, see [Using Azure Bot Service for Authentication in Teams](../../../_old/concepts/bots/bot-authentication/auth-oauth-card.md).
     1. Select and **zip** the files `manifest.json`, `outline.png`, and `color.png`.
 1. Open **Microsoft Teams**.
 1. In the left panel, bottom left, click the **Apps** icon.
