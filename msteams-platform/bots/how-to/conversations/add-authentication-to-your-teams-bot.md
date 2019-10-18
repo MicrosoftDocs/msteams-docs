@@ -398,7 +398,7 @@ To set up ngrok in preparation for running your Microsoft Teams app locally, per
 1. Run, for example, `> ngrok http 3978 --host-header=localhost:3978`. Replace the port number as needed.
 This launches ngrok to listen on the port you specify. In return, it gives you an externally addressable URL, valid for as long as ngrok is running. The following picture shows an example:
 
-    ![teams bots app auth connection string adv1](../../media/teams-bots-auth-ngrok-start.PNG).
+    ![teams bots app auth connection string adv1](../../media/auth-bot-ngrok-start.PNG).
 
 1. Copy the forwarding https address, in the picture shown is: `https://dea822bf.ngrok.io/`.
 1. Append to it `/api/messages` to obtain `https://dea822bf.ngrok.io/api/messages`. This is the **messages endpoint** for the bot running locally on your machine and reachable over the web in a chat in Microsoft Teams.
