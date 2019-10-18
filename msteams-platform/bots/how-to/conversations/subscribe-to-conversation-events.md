@@ -267,17 +267,28 @@ The `messageReaction` event is sent when a user adds or removes his or her react
 | messageReaction | reactionsAdded   | [Reaction to bot message](#Reaction-to-bot-message)                     | All   |
 | messageReaction | reactionsRemoved | [Reaction removed from bot message](#Reaction-removed-from-bot-message) | All   |
 
-The `ActivityTypes.MessageReaction` event is sent when a user adds or removes his or her reaction to a message which was originally sent by your bot. `replyToId` contains the ID of the specific message.
+The `ActivityTypes.MessageReaction` event is sent when a user adds or removes his or her reaction to a message which was originally sent by your bot. `replyToId` contains the ID of the specific message, and the `Type` is the type of reaction in text format.  The types of reactions include: "angry", "heart", "laugh", "like", "Sad", "surprised".
 
 
 
-### Reaction to Bot Message
+### Reactions to a bot message
 
 
 
 # [C#](#tab/csharp)
 
 
+```csharp
+protected override async Task OnReactionsAddedAsync(IList<MessageReaction> messageReactions, ITurnContext<IMessageReactionActivity> turnContext, CancellationToken cancellationToken)
+{
+    foreach (var reaction in messageReactions)
+    {
+      var newReaction = $"You reacted with '{reaction.Type}' to the following message: '{turnContext.Activity.ReplyToId}'";
+      var replyActivity = MessageFactory.Text(newReaction);
+      var resourceResponse = await turnContext.SendActivityAsync(replyActivity, cancellationToken);
+    }
+}
+```
 
 <!--
 # [JavaScript](#tab/javascript)
@@ -291,13 +302,24 @@ The `ActivityTypes.MessageReaction` event is sent when a user adds or removes hi
 <!----------------------------------------------------------------------------------------------------------->
 <!----------------------------------------------------------------------------------------------------------->
 
-### Reaction Removed from Bot Message
-
+### Reactions removed from bot message
 
 
 
 # [C#](#tab/csharp)
 
+
+```csharp
+protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> messageReactions, ITurnContext<IMessageReactionActivity> turnContext, CancellationToken cancellationToken)
+{
+    foreach (var reaction in messageReactions)
+    {
+      var newReaction = $"You removed the reaction '{reaction.Type}' from the following message: '{turnContext.Activity.ReplyToId}'";
+      var replyActivity = MessageFactory.Text(newReaction);
+      var resourceResponse = await turnContext.SendActivityAsync(replyActivity, cancellationToken);
+    }
+}
+```
 
 
 <!--
@@ -305,22 +327,6 @@ The `ActivityTypes.MessageReaction` event is sent when a user adds or removes hi
 -->
 
 ---
-
-
-#### Reactions
-
-The messageReaction event is sent when a user adds or removes his or her reaction to a message which was originally sent by your bot. replyToId contains the ID of the specific message.
-
-ReplyToId: The exact message being reacted to.
-ReplyToId	"1:1T7Bmlzihf6b9sLNaqwUgQ1u4AxpdNWjIK8Ivgj3fHkU"
-
-"angry"
-"heart"
-"laugh"
-"like"
-"Sad"
-"surprised"
-
 
 
 
