@@ -35,9 +35,9 @@ Using this method you service will receive an `Activity` object of type `compose
 banana
 ```
 
-# [JavaScript/Node.js](#tab/javascript)
+# [TypeScript/Node.js](#tab/typescript)
 
-```javascript
+```typescript
 //this is the javascript example.
 ```
 
@@ -112,9 +112,9 @@ When your bot is invoked from a message rather than the compose area or the comm
 banana
 ```
 
-# [JavaScript/Node.js](#tab/javascript)
+# [TypeScript/Node.js](#tab/typescript)
 
-```javascript
+```typescript
 //this is the javascript example.
 ```
 
@@ -263,7 +263,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-typescript
+//this is the javascript example.
 ```
 
 # [JSON](#tab/json)
@@ -324,9 +324,9 @@ When using an embedded web view, you'll need to respond with a `task` object wit
 banana
 ```
 
-# [JavaScript/Node.js](#tab/javascript)
+# [TypeScript/Node.js](#tab/typescript)
 
-```javascript
+```typescript
 //this is the javascript example.
 ```
 
@@ -405,9 +405,9 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 }
 ```
 
-# [JavaScript/Node.js](#tab/javascript)
+# [TypeScript/Node.js](#tab/typescript)
 
-```javascript
+```typescript
 //this is the javascript example.
 ```
 
