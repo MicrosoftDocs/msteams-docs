@@ -7,7 +7,7 @@ ms.author: anclear
 ---
 # Create and send the task module
 
-If you are not populating your task module with parameters defined in your app manifest, you'll need to create the task module to be presented to your users. You can use either an adaptive card or an embedded web view. This article will guide you through creating fairly simple task modules. See the [documentation for task modules](~/task-modules/what-are-task-modules.md) for the complete documentation on them.
+If you are not populating your task module with parameters defined in your app manifest, you'll need to create the task module to be presented to your users. You can use either an Adaptive Card or an embedded web view. This article will guide you through creating fairly simple task modules. See the [documentation for task modules](~/task-modules/what-are-task-modules.md) for the complete documentation on them.
 
 ## The initial invoke request
 
@@ -28,6 +28,20 @@ Using this method you service will receive an `Activity` object of type `compose
 |`value.context.theme` | The user's client theme, useful for embedded web view formatting. Will be `default`, `contrast` or `dark`. |
 
 ### Example fetchTask request
+
+# [C#/.NET](#tab/dotnet)
+
+```csharp
+banana
+```
+
+# [JavaScript/Node.js](#tab/javascript)
+
+```javascript
+//this is the javascript example.
+```
+
+# [JSON](#tab/json)
 
 ```json
 {
@@ -86,9 +100,25 @@ Using this method you service will receive an `Activity` object of type `compose
 }
 ```
 
+* * *
+
 ## Initial invoke request from a message
 
 When your bot is invoked from a message rather than the compose area or the command bar, the `value` object in the initial request will contain the details of the message your messaging extension was invoked from. An example of this object is below. The `reactions` and `mentions` arrays are optional, and will not be present if there are no reactions or mentions in the original message.
+
+# [C#/.NET](#tab/dotnet)
+
+```csharp
+banana
+```
+
+# [JavaScript/Node.js](#tab/javascript)
+
+```javascript
+//this is the javascript example.
+```
+
+# [JSON](#tab/json)
 
 ```json
 {
@@ -156,7 +186,9 @@ When your bot is invoked from a message rather than the compose area or the comm
       ]
     }
   ...
-  ```
+```
+
+* * *
 
 ## Respond to the fetchTask
 
@@ -286,6 +318,20 @@ When using an embedded web view, you'll need to respond with a `task` object wit
 
 #### Example fetchTask response with an embedded web view
 
+# [C#/.NET](#tab/dotnet)
+
+```csharp
+banana
+```
+
+# [JavaScript/Node.js](#tab/javascript)
+
+```javascript
+//this is the javascript example.
+```
+
+# [JSON](#tab/json)
+
 ```json
 {
   "task": {
@@ -300,6 +346,8 @@ When using an embedded web view, you'll need to respond with a `task` object wit
   }
 }
 ```
+
+* * *
 
 ## Complete sample using an adaptive card
 
@@ -369,7 +417,7 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 let something = `an example in typescript`;
 ```
 
----
+* * *
 
 ## Next steps
 
