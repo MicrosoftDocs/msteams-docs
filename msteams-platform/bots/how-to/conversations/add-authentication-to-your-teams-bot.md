@@ -205,7 +205,10 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 1. Update **appsettings.json** as follows:
 
     - Set `ConnectionName` to the name of the identity provider connection you added to the bot channel registration. The name we used in this example is *BotTeamsAuthADv1*.
-    - Set `MicrosoftAppId` and `MicrosoftAppPassword` to the values you saved at the time of the bot channel registration.
+    - Set `MicrosoftAppId` to the **bot App ID** you saved at the time of the bot channel registration.
+    - Set `MicrosoftAppPassword` to the **customer secret** you saved at the time of the bot channel registration.
+    - Set the `ConnectionName` to the name of the identity provider connection. 
+
     Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) will need to be encoded as `&amp;`.
 
         ```cs
@@ -215,6 +218,8 @@ With the preliminary settings done, let's focus on the creation of the bot to us
             "ConnectionName": "" // The name of the identity provider connection
         }
         ```
+
+1. In the solution explorer, navigate to the `TeamsAppManifest` folder, open the `manifest.json` and set `id` and `botId` to the **bot App ID** you saved at the time of the bot channel registration.
 
 ### Deploy the bot to Azure
 
@@ -293,7 +298,7 @@ After you have configured the authentication mechanism, you can perform the actu
 1. Click the **Sign in** box.
 1. A pop-up dialog is displayed to **Confirm Open URL**. This is to allow the bot's user (you) to be authenticated.  
 1. Click **Confirm**.
-1. If you are asked, select the applicable user's account.
+1. If asked, select the applicable user's account.
 1. Depending which configuration you used for the emulator, you get one of the following:
     1. **Using sign-in verification code**
         1. A window is opened displaying the validation code.
@@ -301,15 +306,15 @@ After you have configured the authentication mechanism, you can perform the actu
     1. **Using authentication tokens**.
         1. You are logged in based on your credentials.
 
- 1. The following picture is an example of the bot UI after you have logged in:
+    The following picture is an example of the bot UI after you have logged in:
 
-    ![teams bots app auth connection string adv1](../../media/teams-bots-auth-login-emulator.PNG) 
+    ![auth bot login emulator](../../media/auth-bot-login-emulator.PNG)
 
-1. If you click the **Would ypu like to view your token?**, you get a response similar to the following:
+1. If you click **Yes** when the bot asks *Would ypu like to view your token?*, you get a response similar to the following:
 
-    ![teams bots app auth connection string adv1](../../media/teams-bots-auth-login-token-emulator.PNG)
+    ![auth bot login emulator token](../../media/auth-bot-login-emulator-token.PNG)
 
-1. Enter **logout** in the chat box to exit. 
+1. Enter **logout** in the input chat box to exit. 
 
 > [!NOTE]
 > Bot authentication requires use of the Bot Connector Service. The service accesses the bot channels registration information for your bot.
@@ -320,71 +325,34 @@ After you have configured the authentication mechanism, you can perform the actu
 1. Find your resource group.
 1. Click the resource link. The resource page is displayed.
 1. In the resource blade, click **Test in Web Chat**. The bot starts and displays the predefined greetings. 
-1. Type anything in the chat box. You will be logged in. The following picture shows an example:
+1. Type anything in the chat box. 
+1. Click the **Sign in** box.
+1. A pop-up dialog is displayed to **Confirm Open URL**. This is to allow the bot's user (you) to be authenticated.  
+1. Click **Confirm**.
+1. If asked, select the applicable user's account.
+    The following picture is an example of the bot UI after you have logged in:
 
-    ![teams bots app auth connection string adv1](../../media/teams-bots-auth-login-deployed.PNG).
+    ![auth bot login deployed](../../media/auth-bot-login-deployed.PNG).
 
 1. Click the **Yes** button to display your authentication token. The following picture shows an example:
 
-    ![teams bots app auth connection string adv1](../../media/teams-bots-auth-login-token-deployed.PNG).
+    ![auth bot login deployed token](../../media/auth-bot-login-deployed-token.PNG).
 
 1. Enter logout to exit the chat.
 
-    ![teams bots app auth connection string adv1](../../media/teams-bots-auth-login-logout-deployed.PNG).
+    ![auth bot deployed logout](../../media/auth-bot-deployed-logout.PNG)
+
+> [!NOTE]
+> If you are having problems to logi, try to test the connection again as described in the previous steps. This could recreate the authentication token.
 
 ## Install and test the bot in Teams
 
 The following sections apply specifically to a bot that requires authentication ad running Teams.
 
-1. In your bot project, assure that the `TeamsAppManifest` folder contains the `manifest.json` along with an `outline.png` and `color.png` files. The manifest for the sample code associated with this article, is shown below. 
+1. In your bot project, assure that the `TeamsAppManifest` folder contains the `manifest.json` along with an `outline.png` and `color.png` files.
 
-```json 
-{
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.3",
-  "version": "1.0.0",
-  "id": "",
-  "packageName": "com.teams.auth.bot",
-  "developer": {
-    "name": "TeamsBotAuth",
-    "websiteUrl": "https://www.microsoft.com",
-    "privacyUrl": "https://www.teams.com/privacy",
-    "termsOfUseUrl": "https://www.teams.com/termsofuse"
-  },
-  "icons": {
-    "color": "color.png",
-    "outline": "outline.png"
-  },
-  "name": {
-    "short": "TeamsBotAuth",
-    "full": "Teams Bot Authentication"
-  },
-  "description": {
-    "short": "TeamsBotAuth",
-    "full": "Teams Bot Authentication"
-  },
-  "accentColor": "#FFFFFF",
-  "bots": [
-    {
-      "botId": "",
-      "scopes": [
-        "groupchat",
-        "team"
-      ],
-      "supportsFiles": false,
-      "isNotificationOnly": false
-    }
-  ],
-  "permissions": [
-    "identity",
-    "messageTeamMembers"
-  ],
-  "validDomains": [ "token.botframework.com" ]
-}
-```
-
-1. In file explorer, navigate to the folder `TeamsAppManifest` folder. Edit the `manifest.json` file ed assign the following values:
-    1. To `id` and `botId` assign the **bot App ID** you got at the time of the Azure **Bot Channel Registration**.
+1. In the solution explorer, navigate to the folder `TeamsAppManifest` folder. Edit the `manifest.json` file ed assign the following values:
+    1. Assure that the **bot App ID** you got at the time of the bot chanel registration is assigned to `id` and `botId`.   
     1. Assign this value: `validDomains: [ "token.botframework.com" ]`. For more information, see [Using Azure Bot Service for Authentication in Teams](../../../_old/concepts/bots/bot-authentication/auth-oauth-card.md).
     1. Select and **zip** the files `manifest.json`, `outline.png`, and `color.png`.
 1. Open **Microsoft Teams**.
@@ -446,6 +414,53 @@ This launches ngrok to listen on the port you specify. In return, it gives you a
 
 
 ## Additional information
+
+### TeamsAppManifest/manifest.json
+
+```json 
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.3",
+  "version": "1.0.0",
+  "id": "",
+  "packageName": "com.teams.auth.bot",
+  "developer": {
+    "name": "TeamsBotAuth",
+    "websiteUrl": "https://www.microsoft.com",
+    "privacyUrl": "https://www.teams.com/privacy",
+    "termsOfUseUrl": "https://www.teams.com/termsofuse"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "name": {
+    "short": "TeamsBotAuth",
+    "full": "Teams Bot Authentication"
+  },
+  "description": {
+    "short": "TeamsBotAuth",
+    "full": "Teams Bot Authentication"
+  },
+  "accentColor": "#FFFFFF",
+  "bots": [
+    {
+      "botId": "",
+      "scopes": [
+        "groupchat",
+        "team"
+      ],
+      "supportsFiles": false,
+      "isNotificationOnly": false
+    }
+  ],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [ "token.botframework.com" ]
+}
+```
 
 Teams behaves slightly differently than other channels, in case of authentication as explained below.
 
