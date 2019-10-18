@@ -7,7 +7,9 @@ ms.author: anclear
 ---
 # Respond to the task module submit action
 
-Once a user completes entering their input your web service will receive a `composeExtension/submitAction` event with the command id and parameter values set. You have the following options for responding.
+Once a user completes entering their input your web service will receive a `composeExtension/submitAction` invoke message with the command id and parameter values set. Your app will have five seconds to respond to the invoke, otherwise the user will receive an "Unable to reach the app" error message, and any reply to that invoke will be ignored by the Teams client.
+
+You have the following options for responding.
 
 * No response - You can choose to use the submit action to trigger a process in an external system, and not provide any feedback to the user. This can be useful for long-running processes, and you may choose to provide feedback in another manner (for example, with a [proactive message](~/foo.md)).
 * [Another task module](#respond-with-a-task-module) - You can respond with an additional task module as part of a multi-step interaction.
@@ -16,7 +18,7 @@ Once a user completes entering their input your web service will receive a `comp
 * [Request the user authenticate](~/messaging-extensions/how-to/add-authentication.md)
 * [Request the user provide additional configuration](~/messaging-extensions/how-to/add-configuration.md)
 
-The table below shows which types of responses are available based on the invoke context of the messaging extension. For authentication or configuration, once the user completes the flow the original invoke will be re-sent to your web service.
+The table below shows which types of responses are available based on the invoke location (`commandContext`) of the messaging extension. For authentication or configuration, once the user completes the flow the original invoke will be re-sent to your web service.
 
 |Response Type | compose | command bar | message |
 |--------------|:-------------:|:-------------:|:---------:|
@@ -25,7 +27,9 @@ The table below shows which types of responses are available based on the invoke
 |Bot with Adaptive Card | x |  | x |
 | No response | x | x | x |
 
-## The submitAction event
+## The submitAction invoke event
+
+Below are examples of receiving the invoke message.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -45,17 +49,24 @@ protected async onTeamsMessagingExtensionSubmitAction(context, action: Messaging
 
 # [JSON](#tab/json)
 
-This is an example of the JSON object you will receive. The `commandContext` parameter indicates where your messaging extension was triggered from.
+This is an example of the JSON object you will receive. The `commandContext` parameter indicates where your messaging extension was triggered from. The `data` object contains the fields on the form as parameters, and the values the user submitted. The JSON object here is shortened to highlight the most relevant fields.
 
 ```json
 {
   "name": "composeExtension/submitAction",
   "imdisplayname": "Bob Smith",
+  "serviceUrl": "https://smba.trafficmanager.net/amer/",
   "value": {
     "commandId": "giveKudos",
     "commandContext": "compose",
     "context": {
       "theme": "default"
+    },
+    "data": {
+      "id": "submitButton",
+      "formField1": "formField1_value",
+      "formField2": "formField2_value",
+      "formField3": "formField3_value"
     }
   },
   "conversation": {
@@ -68,7 +79,7 @@ This is an example of the JSON object you will receive. The `commandContext` par
 
 ## Respond with a card inserted into the compose message area
 
-The most common way to respond to the `composeExtension/fetchtask` request is with a card inserted into the compose message area. The user can then choose to submit the card to the conversation. For more information see [cards and card actions](~/bots/how-to/cards-and-formatting/send-cards-and-card-actions.md).
+The most common way to respond to the `composeExtension/submitAction` request is with a card inserted into the compose message area. The user can then choose to submit the card to the conversation. For more information on using cards see [cards and card actions](~/bots/how-to/cards-and-formatting/send-cards-and-card-actions.md).
 
 # [C#/.NET](#tab/dotnet)
 
@@ -86,9 +97,9 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
     };
     var card = new HeroCard
     {
-        Title = Data["title"],
-        Subtitle = Data["subtitle"],
-        Text = Data["text"],
+        Title = Data["formField1"] as string,
+        Subtitle = Data["formField2"]  as string,
+        Text = Data["formField3"]  as string,
     };
 
     var attachments = new List<MessagingExtensionAttachment>();
@@ -101,6 +112,8 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 
     response.ComposeExtension.Attachments = attachments;
 
+    return response;
+
 }
 ```
 
@@ -111,7 +124,7 @@ protected async onTeamsMessagingExtensionSubmitAction(context, action: Messaging
   const data = action.data;
   let body: MessagingExtensionActionResponse;
 
-  const preview = CardFactory.thumbnailCard('Created Card', `Title was: ${data.title}`);
+  const preview = CardFactory.thumbnailCard('Created Card', `FormField1 was: ${data.formField1}`);
   const heroCard = CardFactory.heroCard('Created Card', `${sharedMessage}Your input: <pre>${data.userText}</pre>`);
   body = {
       composeExtension: {
@@ -130,42 +143,23 @@ protected async onTeamsMessagingExtensionSubmitAction(context, action: Messaging
 ```json
 {
   "composeExtension": {
-    "type": "result",
     "attachmentLayout": "list",
-    "preview": {
-          "contentType": "application/vnd.microsoft.card.thumbnail",
+    "type": "result",
+    "attachments": [
+      {
+        "preview": {
+          "contentType": "application/vnd.microsoft.card.hero",
           "content": {
-            "title": "85069: Create a cool app",
-            "images": [
-              {
-                "url": "https://placekitten.com/200/200"
-              }
-            ]
+            "title": "formField1_value",
+            "subtitle": "formField2_value",
+            "text": "formField3_value"
           }
         },
-    "attachments": [
-      {  
-        "contentType": "application/vnd.microsoft.teams.card.o365connector",
+        "contentType": "application/vnd.microsoft.card.hero",
         "content": {
-          "sections": [
-            {
-              "activityTitle": "[85069]: Create a cool app",
-              "activityImage": "https://placekitten.com/200/200"
-            },
-            {
-              "title": "Details",
-              "facts": [
-                {
-                  "name": "Assigned to:",
-                  "value": "[Larry Brown](mailto:larryb@example.com)"
-                },
-                {
-                  "name": "State:",
-                  "value": "Active"
-                }
-              ]
-            }
-          ]
+          "title": "formField1_value",
+          "subtitle": "formField2_value",
+          "text": "formField3_value"
         }
       }
     ]
@@ -177,7 +171,13 @@ protected async onTeamsMessagingExtensionSubmitAction(context, action: Messaging
 
 ## Respond with another task module
 
-You can choose to respond to the `submitAction` event with an additional task module. This can be useful when you need to collect large amounts of information, or if you need to dynamically change what information you're collecting based on user input. The method for response is the same as [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-based-commands/create-task-module.md).
+You can choose to respond to the `submitAction` event with an additional task module. This can be useful when:
+
+* You need to collect large amounts of information.
+* If you need to dynamically change what information you're collecting based on user input
+* If you need to validate the information submitted by the user and potentially resend the form with an error message if something is wrong. 
+
+The method for response is the same as [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-based-commands/create-task-module.md). If you're using the Bot Framework SDK the same event will trigger for both submit actions. This mean you need to be sure to add logic which determines the correct response.
 
 ## Bot response with Adaptive Card
 
@@ -189,16 +189,53 @@ You can also respond to the submit action by inserting a message with an Adaptiv
 1. The user clicks the messaging extension to trigger the task module.
 2. The user uses the task module to configure the poll.
 3. After submitting the task module the app uses the information provided to craft an adaptive card and sends it as a `botMessagePreview` response to the client.
-4. The user can then preview the adaptive card message before the bot will inserts it into the channel. If the app is not already a member of the channel, clicking `Send` will add the it.
-5. Interacting with the adaptive card will change the message before sending it.
-6. Once the user clicks `Send` the bot will post the message to the channel.
+4. The user can then preview the adaptive card message before the bot inserts it into the channel. If the app is not already a member of the channel, clicking `Send` will add the it.
+   1. The user can also chose to `Edit` the message, which returns them to the original task module.
+5. Interacting with the adaptive card changes the message before sending it.
+6. Once the user clicks `Send` the bot posts the message to the channel.
 
-To enable this flow your task module should respond as in the example below, which will present the preview message to the user.
+### Respond to initial submit action
+
+To enable this flow your task module should respond to the initial `composeExtension/submitAction` message with a preview of the card that the bot will send to the channel. This gives the user the opportunity to verify the card before sending, and also will attempt to install your bot in the conversation if it is not already installed.
 
 # [C#/.NET](#tab/dotnet)
 
 ```csharp
-csharp
+protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionSubmitActionAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+{
+  dynamic Data = JObject.Parse(action.Data.ToString());
+  var response = new MessagingExtensionActionResponse
+  {
+    ComposeExtension = new MessagingExtensionResult
+    {
+      Type = "botMessagePreview",
+      ActivityPreview = MessageFactory.Attachment(new Attachment
+      {
+        Content = new AdaptiveCard("1.0")
+        {
+          Body = new List<AdaptiveElement>()
+          {
+            new AdaptiveTextBlock() { Text = "FormField1 value was:", Size = AdaptiveTextSize.Large },
+            new AdaptiveTextBlock() { Text = Data["FormField1"] as string }
+          },
+          Height = AdaptiveHeight.Auto,
+          Actions = new List<AdaptiveAction>()
+          {
+            new AdaptiveSubmitAction
+            {
+              Type = AdaptiveSubmitAction.TypeName,
+              Title = "Submit",
+              Data = new JObject { { "submitLocation", "messagingExtensionFetchTask" } },
+            },
+          }
+        },
+        ContentType = AdaptiveCard.ContentType
+      }) as Activity
+    }
+  };
+
+  return response;
+}
 ```
 
 # [TypeScript/Node.js](#tab/typescript)
@@ -231,18 +268,35 @@ typescript
 
 * * *
 
-Your message extension will now need to respond to two new types of interactions, `value.botMessagePreviewAction = "send"` and `value.botMessagePreviewAction = "edit"`. Below is an example of the `value` object you will need to process:
+### The botMessagePreview send and edit events
+
+Your message extension will now need to respond to two new varieties of the `composeExtension/submitAction` invoke, where `value.botMessagePreviewAction = "send"`and `value.botMessagePreviewAction = "edit"`.
 
 # [C#/.NET](#tab/dotnet)
 
 ```csharp
-csharp
+protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionBotMessagePreviewEditAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+{
+  //handle the event
+}
+
+protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionBotMessagePreviewSendAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+{
+  //handle the event
+}
+
 ```
 
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-typescript
+protected async onTeamsMessagingExtensionBotMessagePreviewEdit(context: TurnContext, action: MessagingExtensionAction): Promise<MessagingExtensionActionResponse> {
+  //handle the event
+}
+
+protected async onTeamsMessagingExtensionBotMessagePreviewSend(context: TurnContext, action: MessagingExtensionAction): Promise<MessagingExtensionActionResponse> {
+  //handle the event
+}
 ```
 
 # [JSON](#tab/json)
@@ -255,7 +309,7 @@ typescript
   "imdisplayname": "Pranav Smith",
   ...
   "value": {
-    "botMessagePreviewAction": "send" | "edit",
+    "botMessagePreviewAction": "edit | send",
     "botActivityPreview": [
       {
         "type": "message/card",
@@ -278,24 +332,64 @@ typescript
 
 * * *
 
-When responding to the `edit` request you should respond with a `task` response with the values populated with the information the user has already submitted. When responding to the `send` request you should send a message to the channel containing the finalized adaptive card. The example below shows how to do this using the [Node.js Teams Bot Builder SDK](https://www.npmjs.com/package/botbuilder-teams).
+### Respond to botMessagePreview edit
+
+If the user decides to edit the card before sending by clicking the **Edit** button, you will receive a `composeExtension/submitAction` invoke with `value.botMessagePreviewAction = edit`. You should typically respond by returning the task module you sent in response to the initial `composeExtension/fetchTask` invoke that began the interaction. This allows the user to start the process over by re-entering the original information. You should also consider using the information you now have available to pre-populate the task module so the user doesn't have fill out all of the information from scratch.
+
+See [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-based-commands/create-task-module.md).
+
+### Respond to botMessagePreview send
+
+Once the user clicks the **Send** button, you will receive a `composeExtension/submitAction` invoke with `value.botMessagePreviewAction = send`. Your web service will need to create and send a proactive message with the Adaptive Card to the conversation, and also reply to the invoke.
 
 # [C#/.NET](#tab/dotnet)
 
 ```csharp
-asdf
+protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionBotMessagePreviewSendAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+{
+  var activityPreview = action.BotActivityPreview[0];
+  var attachmentContent = activityPreview.Attachments[0].Content;
+  var previewedCard = JsonConvert.DeserializeObject<AdaptiveCard>(attachmentContent.ToString(), new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
+  previewedCard.Version = "1.0";
+
+  var responseActivity = Activity.CreateMessageActivity();
+  Attachment attachment = new Attachment()
+  {
+    ContentType = AdaptiveCard.ContentType,
+    Content = previewedCard
+  };
+  responseActivity.Attachments.Add(attachment);
+  try
+  {
+    // Send to channel where messaging extension invoked.
+    var channelId = turnContext.Activity.TeamsGetChannelId();
+    await turnContext.TeamsCreateConversationAsync(channelId, responseActivity);
+
+  }
+  catch (Exception ex)
+  {
+    // In group chat or personal scope..
+    await turnContext.SendActivityAsync(responseActivity);
+  }
+
+  return new MessagingExtensionActionResponse();
+}
 ```
 
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-asdf
+ protected async onTeamsMessagingExtensionBotMessagePreviewSend(context: TurnContext, action: MessagingExtensionAction): Promise<MessagingExtensionActionResponse> {
+   //stuff
+ }
 ```
 
 # [JSON](#tab/json)
 
+You will receive a new `composeExtension/submitAction` message similar to the one below.
+
 ```json
-sample
+asdf
 ```
 
 * * *

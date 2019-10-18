@@ -184,6 +184,58 @@ When using an adaptive card, you'll need to respond with a `task` object with th
 
 #### Example fetchTask response with an adaptive card
 
+# [C#/.NET](#tab/dotnet)
+
+This sample uses the [AdaptiveCards NuGet package](https://www.nuget.org/packages/AdaptiveCards) in addition to the Bot Framework SDK.
+
+```csharp
+protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+{
+  var response = new MessagingExtensionActionResponse
+  {
+    Task = new TaskModuleContinueResponse
+    {
+      Value = new TaskModuleTaskInfo()
+      {
+        Card = new Attachment
+        {
+          Content = new AdaptiveCard("1.0")
+          {
+            Body = new List<AdaptiveElement>()
+            {
+              new AdaptiveTextInput() { Id = "FormField1", Placeholder = "FormField1"},
+              new AdaptiveTextInput() { Id = "FormField2", Placeholder = "FormField2"},
+              new AdaptiveTextInput() { Id = "FormField3", Placeholder = "FormField3"},
+            },
+            Actions = new List<AdaptiveAction>()
+            {
+              new AdaptiveSubmitAction
+              {
+                Type = AdaptiveSubmitAction.TypeName,
+                Title = "Submit",
+                Data = new JObject { { "submitLocation", "messagingExtensionFetchTask" } },
+              },
+            }
+          },
+          ContentType = AdaptiveCard.ContentType,
+        },
+        Height = 450,
+        Width = 500,
+        Title = "Respond with task module"
+      }
+    }
+  }
+}
+```
+
+# [TypeScript/Node.js](#tab/typescript)
+
+```typescript
+typescript
+```
+
+# [JSON](#tab/json)
+
 ```json
 {
   "task": {
@@ -225,6 +277,8 @@ When using an adaptive card, you'll need to respond with a `task` object with th
   }
 }
 ```
+
+* * *
 
 ### With an embedded web view
 
