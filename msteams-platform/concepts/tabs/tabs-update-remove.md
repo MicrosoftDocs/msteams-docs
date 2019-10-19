@@ -21,6 +21,9 @@ You can enable users to select what happens to content when a tab is removed, by
 > [!NOTE]
 > Supporting removal options can significantly improve the user experience, especially if you expect users to frequently add and remove your tabs. However, there is no guarantee that your page will always be loaded when a tab is removed. For example, it won't happen if the user deletes the entire team or channel in which your tab sits.
 
+> [!NOTE for Mobile Clients]
+>Mobile clients do not provide the option to remove/update an existing tab. Any changes made to a tab from desktop/web client will sync on mobile.
+
 The removal options page is an HTML page that you host. When a user chooses to remove your tab, Microsoft Teams loads the `removeUrl` (that you provided when [configuring a tab](~/concepts/tabs/tabs-configuration.md)) in an iframe inside the **Remove tab** dialog box.
 
 You must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) in your removal options page so that it can communicate with Microsoft Teams. You might also need to use the [supplied context](~/concepts/tabs/tabs-context.md) to help display the correct content in this page.
