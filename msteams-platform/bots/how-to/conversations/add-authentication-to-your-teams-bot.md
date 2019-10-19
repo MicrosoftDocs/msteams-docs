@@ -340,7 +340,7 @@ After you have configured the authentication mechanism, you can perform the actu
     ![auth bot deployed logout](../../media/auth-bot-deployed-logout.PNG)
 
 > [!NOTE]
-> If you are having problems to logi, try to test the connection again as described in the previous steps. This could recreate the authentication token.
+> If you are having problems to login, try to test the connection again as described in the previous steps. This could recreate the authentication token.
 
 ## Preliminary quick testing the bot in Teams
 
@@ -414,8 +414,7 @@ This launches ngrok to listen on the port you specify. In return, it gives you a
     ![teams bots app auth connection string adv1](../../media/auth-bot-teams-ngrok-testing.PNG). 
 
 > [!NOTE]
-> If you stop and restart ngrok, the URL changes. To use ngrok in your project, and depending on the capabilities you are using, you must replace all URL references. 
-
+> If you stop and restart ngrok, the URL changes. To use ngrok in your project, and depending on the capabilities you are using, you must replace all URL references.
 
 ## Additional information
 
