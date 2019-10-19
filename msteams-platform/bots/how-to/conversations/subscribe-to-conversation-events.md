@@ -69,8 +69,6 @@ protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo
 ```
 
 
-
-
 <!--
 # [JavaScript](#tab/javascript)
 -->
@@ -132,7 +130,7 @@ protected override async Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo
 
 ### Team Member Added
 
-The `teamMemberAdded` event is sent to your bot the first time it is added to a team and every time a new user is added to a team that your bot is a member of. It is a good practice to send a welcome message, possibly with information about your bot and how to use it, when a new user is added to a team. You can determine if the new member added was the bot itself or a new user by looking at the `Activity` object of the `turnContext`.  If the `Id` field of the `MembersAdded` object is the same as the `Id` field of the `Recipient` object, then the new member added is the bot, otherwise it is a new user.  The bot's `Id` will generally be: `28:<MicrosoftAppId>`
+The `teamMemberAdded` event is sent to your bot the first time it is added to a team and every time a new user is added to a team that your bot is a member of. 
 
 
 # [C#](#tab/csharp)
@@ -148,12 +146,39 @@ protected override async Task OnTeamsMembersAddedAsync(IList<ChannelAccount> mem
 }
 ```
 
+#### Sending a welcome message to a new team member
+
+It is a good practice to send a welcome message, possibly with information about your bot and how to use it, when a new user is added to a team. There are potentially two ways to determine if the new user added was the bot itself or a new user.  One approach is by looking at the `Activity` object of the `turnContext`.  If the `Id` field of the `MembersAdded` object is the same as the `Id` field of the `Recipient` object, then the new member added is the bot, otherwise it is a new user.  The bot's `Id` will generally be: `28:<MicrosoftAppId>`.
+
+The other way is to see is the new members AadObjectId is null.  Since bots do not have an AadObjectId, it will always be null and since all team members should, you can send a welcome message to all team members by doing this check. Either approach can be used, the later approach is demonstrated below.
+
+```csharp
+var memberId = membersAdded.First().AadObjectId;
+// if memberId is null, then the new member added was a bot (This assumes that all team members have an AadObjectId).
+// if it is not null, the send the new team member a welcome message.
+if (memberId != null)
+{
+    IEnumerable<TeamsChannelAccount> teamsChannelAccounts = await TeamsInfo.GetMembersAsync(turnContext, cancellationToken);
+
+    var newTeamMember =
+        from teamsChannelAccount in teamsChannelAccounts
+        where teamsChannelAccount.AadObjectId.Equals(memberId)
+        select teamsChannelAccount.Name;
+
+    var heroCard = new HeroCard(text: $"{string.Join(' ', membersAdded.Select(member => member.Id))} joined {teamInfo.Name}");
+    await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
+}
+```
 
 <!--
 # [JavaScript](#tab/javascript)
 -->
 
 ---
+
+
+
+
 
 > [!NOTE]
 > If the bot name that you use to @Mention your bot is different from the name given in the message response, that is because the names come from different places. The name of your bot that you @Mention is the value you entered for the _app short name_ in the __App details__ section of the Manifest editor in App Studio:
@@ -358,9 +383,9 @@ protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> mes
      * reactions added
      * reactions removed
  * **Existing teams doc reference** 
-   * [https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bots-notifications](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bots-notifications)
+   * [Handle bot events in Microsoft Teams](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bots-notifications)
  * **Existing Bot framework doc reference** 
-   * [https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-send-welcome-message?view=azure-bot-service-4.0&tabs=csharp](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-send-welcome-message?view=azure-bot-service-4.0&tabs=csharp)
+   * [bot-builder-send-welcome-message](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-send-welcome-message?view=azure-bot-service-4.0&tabs=csharp)
  * **Code Snippets** 
-   * [https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/ConversationUpdate](https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/ConversationUpdate)
-   * [https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/MessageReaction](https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/MessageReaction)
+   * [ConversationUpdate](https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/ConversationUpdate)
+   * [MessageReaction](https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/MessageReaction)
