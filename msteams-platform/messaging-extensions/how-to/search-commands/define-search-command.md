@@ -13,12 +13,12 @@ For additional guidance on designing your messaging extension see: [Designing ef
 
 ## Choose messaging extension invoke locations
 
-The first thing you need to decide is where your search command can be triggered (or more specifically, *invoked* from). Your search command can be invoked from one or both of the following locations:
+The first thing you need to decide is where your search command can be triggered (or more specifically, *invoked*) from. Your search command can be invoked from one or both of the following locations:
 
 * The buttons at the bottom of the compose message area
 * By @mentioning in the command box
 
-You also have to option to invoke your service when a URL is pasted in the compose message area. This functionality, known as **link unfurling**, allows you to subscribe to receive an invoke when URLs containing a particular domain are pasted into the compose message area. Your web service can "unfurl" the URL into a detailed card, providing more information than the standard website preview card. You can even add buttons to allow your users to immediately take action without leaving the Microsoft Teams client.
+When invoked from the compose message area, your user will have the option of sending the results to the conversation. When invoked from the command box, the user can interact with the resulting card, or copy it for use elsewhere.
 
 ## Add the command to your app manifest
 
@@ -50,11 +50,11 @@ To manually add your messaging extension search command to your app manifest, yo
 |`initialRun` | If set to **true**, indicates this command should be executed as soon as the user chooses this command in the UI. | No | 1.0 |
 | `context` | Optional array of values that defines the context the search action is available in. Possible values are `message`, `compose`, or `commandBox`. Default is `["compose", "commandBox"]`. | No | 1.5 |
 
-If you are using a static list of parameters, you'll add them as well.
+You'll also need to add the details of the search parameter, which will define the text visible to your user in the Teams client.
 
 | Property name | Purpose | Required? | Minimum manifest version |
 |---|---|---|---|
-| `parameters` | Static list of parameters for the command. Only use when `fetchTask` is `false` | No | 1.0 |
+| `parameters` | Static list of parameters for the command. | No | 1.0 |
 | `parameter.name` | The name of the parameter. This is sent to your service in the user request. | Yes | 1.0 |
 | `parameter.description` | Describes this parameter’s purposes or example of the value that should be provided. This value appears in the UI. | Yes | 1.0 |
 | `parameter.title` | Short user-friendly parameter title or label. | Yes | 1.0 |

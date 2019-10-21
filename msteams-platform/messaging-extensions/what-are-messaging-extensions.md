@@ -48,9 +48,11 @@ Search commands allow your users to search an external system for information (e
 
 They can be triggered from the compose message area or the command box. Unlike action commands, they cannot be triggered from a message.
 
-You also have to option to invoke your service when a URL is pasted in the compose message area. This functionality, known as **link unfurling**, allows you to subscribe to receive an invoke when URLs containing a particular domain are pasted into the compose message area. Your web service can "unfurl" the URL into a detailed card, providing more information than the standard website preview card. You can even add buttons to allow your users to immediately take action without leaving the Microsoft Teams client.
-
 ![messaging extension search command](~/assets/images/search-extension.png)
+
+### Link unfurling
+
+You also have to option to invoke your service when a URL is pasted in the compose message area. This functionality, known as **link unfurling**, allows you to subscribe to receive an invoke when URLs containing a particular domain are pasted into the compose message area. Your web service can "unfurl" the URL into a detailed card, providing more information than the standard website preview card. You can even add buttons to allow your users to immediately take action without leaving the Microsoft Teams client.
 
 ## Get Started
 

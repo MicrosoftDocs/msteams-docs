@@ -17,7 +17,7 @@ For additional guidance on designing your messaging extension see: [Designing ef
 
 ## Choose action command invoke locations
 
-The first thing you need to decide is where your action command can be triggered (or more specifically, *invoked* from). By specifying the `context` in your app manifest, your command can be invoked from one or more of the following locations:
+The first thing you need to decide is where your action command can be triggered (or more specifically, *invoked*) from. By specifying the `context` in your app manifest, your command can be invoked from one or more of the following locations:
 
 * The buttons at the bottom of the compose message area.
 * By @mentioning your app in the command box. Note: You cannot respond with a bot message inserted directly into the conversation if your messaging extension is invoked from the command box.

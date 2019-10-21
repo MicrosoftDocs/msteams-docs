@@ -7,17 +7,7 @@ ms.author: anclear
 ---
 # Respond to the search command
 
-Next, check whether `initialRun` is set; if so, take appropriate action, such as providing instructions or a list of responses.
-
-The remainder of your handler for `onQuery` prompts the user for information, displays a list of preview cards, and returns the card selected by the user.
-
-## Receive and respond to queries
-
-Every request to your messaging extension is done via an `Activity` object that is posted to your callback URL. The request contains information about the user command, such as ID and parameter values. The request also supplies metadata about the context in which your extension was invoked, including user and tenant ID, along with chat ID or channel and team IDs.
-
-### Receive user requests
-
-When a user performs a query, Microsoft Teams sends your service a standard Bot Framework `Activity` object. Your service should perform its logic for an `Activity` that has `type` set to `invoke` and `name` set to a supported `composeExtension` type, as shown in the following table.
+When enters information into the query box, Microsoft Teams sends your service a standard Bot Framework `Activity` object. Your service should perform its logic for an `Activity` that has `type` set to `invoke` and `name` set to a supported `composeExtension` type, as shown in the following table.
 
 In addition to the standard bot activity properties, the payload contains the following request metadata:
 
