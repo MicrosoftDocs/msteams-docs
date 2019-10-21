@@ -1,7 +1,7 @@
 ---
 title: Respond to the task module submit action
 author: clearab
-description: Describes how to respond to the task module submit action from an action-based messaging extension command
+description: Describes how to respond to the task module submit action from a messaging extension action command
 ms.topic: conceptual
 ms.author: anclear
 ---
@@ -177,7 +177,7 @@ You can choose to respond to the `submitAction` event with an additional task mo
 * If you need to dynamically change what information you're collecting based on user input
 * If you need to validate the information submitted by the user and potentially resend the form with an error message if something is wrong. 
 
-The method for response is the same as [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-based-commands/create-task-module.md). If you're using the Bot Framework SDK the same event will trigger for both submit actions. This mean you need to be sure to add logic which determines the correct response.
+The method for response is the same as [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-commands/create-task-module.md). If you're using the Bot Framework SDK the same event will trigger for both submit actions. This mean you need to be sure to add logic which determines the correct response.
 
 ## Bot response with Adaptive Card
 
@@ -336,7 +336,7 @@ protected async onTeamsMessagingExtensionBotMessagePreviewSend(context: TurnCont
 
 If the user decides to edit the card before sending by clicking the **Edit** button, you will receive a `composeExtension/submitAction` invoke with `value.botMessagePreviewAction = edit`. You should typically respond by returning the task module you sent in response to the initial `composeExtension/fetchTask` invoke that began the interaction. This allows the user to start the process over by re-entering the original information. You should also consider using the information you now have available to pre-populate the task module so the user doesn't have fill out all of the information from scratch.
 
-See [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-based-commands/create-task-module.md).
+See [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-commands/create-task-module.md).
 
 ### Respond to botMessagePreview send
 
@@ -396,9 +396,9 @@ asdf
 
 ## Next Steps
 
-Add a search based command
+Add a search command
 
-* [Define search based commands](~/messaging-extensions/how-to/search-based-commands/define-search-based-command.md)
+* [Define search commands](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 
 Deploy your app package
 

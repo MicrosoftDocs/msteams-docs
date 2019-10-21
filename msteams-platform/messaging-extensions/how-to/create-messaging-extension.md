@@ -114,23 +114,24 @@ The example below is a simple messaging extension object in the app manifest wit
 
 ## Add your invoke message handlers
 
-When your users trigger your messaging extension you'll need to handle the initial invoke message, collect some information from the user, then process that information and respond appropriately. To do that, you'll first need to decide what kind of commands you want to add to your messaging extension and either [add an action-based commands](~/messaging-extensions/how-to/action-based-commands/define-action-based-command.md) or [add a search-based commands](~/messaging-extensions/how-to/search-based-commands/define-search-based-command.md).
+When your users trigger your messaging extension you'll need to handle the initial invoke message, collect some information from the user, then process that information and respond appropriately. To do that, you'll first need to decide what kind of commands you want to add to your messaging extension and either [add an action commands](~/messaging-extensions/how-to/action-commands/define-action-command.md) or [add a search commands](~/messaging-extensions/how-to/search-commands/define-search-command.md).
 
 ## Next steps
 
-* [Create action-based commands](~/messaging-extensions/how-to/action-based-commands/define-action-based-command.md)
-* [Create search-based commands](~/messaging-extensions/how-to/search-based-commands/define-search-based-command.md)
+* [Create action commands](~/messaging-extensions/how-to/action-commands/define-action-command.md)
+* [Create search commands](~/messaging-extensions/how-to/search-commands/define-search-command.md)
+* [Link unfurling](~/messaging-extensions/how-to/link-unfurling.md)
 
 ## Learn more
 
 Try it out in a quickstart:
 
 * Quickstarts for C#
-  * [Messaging extension with action-based commands](~/foo.md)
-  * [Messaging extension with search-based commands](~/foo.md)
+  * [Messaging extension with action commands](~/foo.md)
+  * [Messaging extension with search commands](~/foo.md)
 * Quickstarts for Node.js
-  * [Messaging extension with action-based commands](~/foo.md)
-  * [Messaging extension with search-based commands](~/foo.md)
+  * [Messaging extension with action commands](~/foo.md)
+  * [Messaging extension with search commands](~/foo.md)
 
 Learn more about messaging extensions concepts:
 

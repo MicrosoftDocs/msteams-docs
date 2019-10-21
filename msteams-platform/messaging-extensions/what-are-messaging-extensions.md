@@ -48,16 +48,18 @@ Search commands allow your users to search an external system for information (e
 
 They can be triggered from the compose message area or the command box. Unlike action commands, they cannot be triggered from a message.
 
+You also have to option to invoke your service when a URL is pasted in the compose message area. This functionality, known as **link unfurling**, allows you to subscribe to receive an invoke when URLs containing a particular domain are pasted into the compose message area. Your web service can "unfurl" the URL into a detailed card, providing more information than the standard website preview card. You can even add buttons to allow your users to immediately take action without leaving the Microsoft Teams client.
+
 ![messaging extension search command](~/assets/images/search-extension.png)
 
 ## Get Started
 
 Ready to get started building? Try one of our quickstarts:
 
-* Messaging extensions with action-based commands
+* Messaging extensions with action commands
   * [In C#/.NET](foo.md)
   * [In TypeScript/Node.js](foo.md)
-* Messaging extensions with search-based commands
+* Messaging extensions with search commands
   * [In C#/.NET](foo.md)
   * [In TypeScript/Node.js](foo.md)
 
@@ -66,8 +68,8 @@ Ready to get started building? Try one of our quickstarts:
 Build a messaging extension:
 
 * [Create a messaging extension](./foo.md)
-* [Define action-based messaging extension command](./foo.md)
-* [Define search-based messaging extension command](./foo.md)
+* [Define action messaging extension command](./foo.md)
+* [Define search messaging extension command](./foo.md)
 
 Learn how messaging extensions fit with other Teams app capabilities:
 

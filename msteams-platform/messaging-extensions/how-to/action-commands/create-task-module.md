@@ -1,7 +1,7 @@
 ---
 title: Create and send the task module
 author: clearab
-description: How to handle the initial invoke action and respond with a task module from an action-based messaging extension command
+description: How to handle the initial invoke action and respond with a task module from an action messaging extension command
 ms.topic: conceptual
 ms.author: anclear
 ---
@@ -374,6 +374,6 @@ TODO: need more about how to craft the web content page, how to build the respon
 
 If you allow your users to send a response back from the task module, you'll need to handle the submit action.
 
-* [Create and respond with a task module](~/messaging-extensions/how-to/action-based-commands/respond-to-task-module-submit.md)
+* [Create and respond with a task module](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
 [!Includes(~/includes/messaging-extensions/learn-more.md)]

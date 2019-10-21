@@ -9,15 +9,15 @@ ms.author: anclear
 
 Action commands allow you present your users with a modal popup (called a task module in Teams) to collect or display information, then process their interaction and send information back to Teams. Before creating your command you'll need to decide:
 
-1. Where can the messaging extension can be triggered from?
+1. Where can the action command be triggered from?
 1. How will the task module be created?
 1. Will the final message or card be sent to the channel from a bot, or will the message or card be inserted into the compose message area for the user to submit?
 
 For additional guidance on designing your messaging extension see: [Designing effective messaging extensions](~/foo.md).
 
-## Choose messaging extension invoke locations
+## Choose action command invoke locations
 
-The first thing you need to decide is where your messaging extension can be triggered (or more specifically, *invoked* from). By specifying the `context` in your app manifest, your extension can be invoked from one or more of the following locations:
+The first thing you need to decide is where your action command can be triggered (or more specifically, *invoked* from). By specifying the `context` in your app manifest, your command can be invoked from one or more of the following locations:
 
 * The buttons at the bottom of the compose message area.
 * By @mentioning your app in the command box. Note: You cannot respond with a bot message inserted directly into the conversation if your messaging extension is invoked from the command box.
@@ -53,7 +53,7 @@ The following steps assume you've already [created a messaging extension](~/mess
 4. Choose **Allow users to trigger actions in external services while inside of Teams**.
 5. If you want to use a static set of parameters to create your task module, select that option. Otherwise, choose to **Fetch a dynamic set of parameters from your bot**.
 6. Add a **Command Id** and a **Title**.
-7. Select where you want your compose extension to be triggered from.
+7. Select where you want your action command to be triggered from.
 8. If you're using parameters for your task module, add the first one.
 9. Click Save
 10. If you need to add more parameters, click the **Add** button in the **Parameters** section to add them.
@@ -80,7 +80,7 @@ If you are using a static list of parameters, you'll add them as well.
 | `parameter.title` | Short user-friendly parameter title or label. | Yes | 1.0 |
 | `parameter.inputType` | Set to the type of input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text` | No | 1.4 |
 
-If you are using an embedded web view, you can optionally add the `taskInfo` object to fetch your web view without calling your bot directly. If you choose to use this option, the behavior is similar to using a static list of parameters in that the first interaction with your bot will be [responding to the task module submit action](~/messaging-extensions/how-to/action-based-commands/respond-to-task-module-submit.md). If you are using a `taskInfo` object, be sure to also set the `fetchTask` parameter to `false`.
+If you are using an embedded web view, you can optionally add the `taskInfo` object to fetch your web view without calling your bot directly. If you choose to use this option, the behavior is similar to using a static list of parameters in that the first interaction with your bot will be [responding to the task module submit action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). If you are using a `taskInfo` object, be sure to also set the `fetchTask` parameter to `false`.
 
 | Property name | Purpose | Required? | Minimum manifest version |
 |---|---|---|---|
@@ -146,10 +146,10 @@ The below is an example of a `composeExtensions` object defining two action comm
 
 If you are using either an adaptive card or an embedded web view without a `taskInfo` object, you'll want to:
 
-* [Create and respond with a task module](~/messaging-extensions/how-to/action-based-commands/create-task-module.md)
+* [Create and respond with a task module](~/messaging-extensions/how-to/action-commands/create-task-module.md)
 
 If you are using parameters or an embedded web view with a `taskInfo` object, the next step for you is to:
 
-* [Respond to task module submit](~/messaging-extensions/how-to/action-based-commands/respond-to-task-module-submit.md)
+* [Respond to task module submit](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
 [!Includes[messaging extension learn more block](~/includes/messaging-extensions/learn-more.md)]
