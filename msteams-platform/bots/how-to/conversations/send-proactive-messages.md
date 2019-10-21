@@ -7,22 +7,20 @@ ms.author: anclear
 ---
 # Send proactive messages
 
-In some situations, a bot may need to send to the user a message that is not related to the current conversation. These types of messages are called **proactive messages**.
+<!-- Update -->
+
+A bot may need to send a message to the user that is not an immediate response to an incoming message. These types of messages are called **proactive messages**.  
 
 Proactive messages can be useful in a variety of scenarios. These are some examples:  
 
 - The user previously asked the bot to monitor the price of a product, the bot can alert the user if the price of the product has changed.
 - A bot requires some time to compile a response to the user's question, it may inform the user of the delay and allow the conversation to continue in the meantime.
 
-## Best practices
+## Best practices for proactive messaging
 
-### Basic guidelines
+Sending proactive messages to users can be a very effective way to communicate with your users. However, from their perspective this message can appear to come to them completely unprompted, and in the case of welcome messages will be the first time they've interacted with your app. As such, it is very important to use this functionality sparingly (don't spam your users), and to provide them with enough information to let them understand why they are being messaged.
 
-- Do not send several proactive messages within a short amount of time. Some channels enforce restrictions on how frequently a bot can send messages to the user, and will disable the bot if it violates those restrictions.
-- Ad hoc proactive message is the simplest type of proactive message. The bot simply interjects the message into the conversation whenever it is triggered, regardless if the user is engaged in a separate topic of conversation, The bot will not attempt to change the conversation in any way.
-- To handle notifications more smoothly, consider other ways to integrate the notification into the conversation flow, such as setting a flag in the conversation state or adding the notification to a queue.
-
-Proactive messages generally fall into one of the categories described below.
+Proactive messages generally fall into one of two categories, welcome messages or notifications.
 
 ### Welcome messages
 
@@ -46,8 +44,7 @@ When sending notifications, assure that the users have a clear path to take comm
 
 Bots can create new conversations with an individual Microsoft Teams user by obtaining the userâ€™s *unique ID* and *tenant ID.* You can obtain these values using one of the following methods:
 
-> [!WARNING]
-> Please, verify these links; they point to topics in the _old folder.
+(**WARNING: Verify**) Please, verify these links; they point to topics in the _old folder.
 
 - By [fetching the team roster](../../../_old/concepts/bots/bots-context.md#fetching-the-team-roster) from a channel your app is installed in.
 - By caching them when a user [interacts with your bot in a channel](../../../_old/concepts/bots/bot-conversations/bots-conv-channel.md).
@@ -64,7 +61,6 @@ Occasionally it may be necessary to proactively message users that have not inst
 You can only install apps that are in your organizational app catalogue, or the Teams app store.
 
 See [Install apps for users](https://docs.microsoft.com/graph/teams-proactive-messaging) in the Graph documentation for complete details. There is also a [sample in .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
-
 
 
 ## Example
@@ -109,8 +105,10 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
     await connector.Conversations.SendToConversationAsync(proactiveMessage, cancellationToken);
 
-    // Or you can use the adapter to send a message if you already have a conversation reference. You can put this code into the controller if
-    // you already have a store of conversation references. 
+    /* Or you can use the adapter to send a message if you already have a
+     * conversation reference. You can put this code into the controller if
+     *you already have a store of conversation references. 
+     **/
     await turnContext.Adapter.ContinueConversationAsync(_appId, turnContext.Activity.GetConversationReference(), BotOnTurn, cancellationToken);
 }
 
