@@ -7,7 +7,7 @@ ms.author: anclear
 ---
 # Create and send the task module
 
-If you are not populating your task module with parameters defined in your app manifest, you'll need to create the task module to be presented to your users. You can use either an Adaptive Card or an embedded web view. This article will guide you through creating fairly simple task modules. See the [documentation for task modules](~/task-modules/what-are-task-modules.md) for the complete documentation on them.
+If you are not populating your task module with parameters defined in your app manifest, you'll need to create the task module to be presented to your users. You can use either an Adaptive Card or an embedded web view.
 
 ## The initial invoke request
 
@@ -290,36 +290,44 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 
 ```json
 {
-  "type": "AdaptiveCard",
-  "version": "1.0",
-  "body": [
-    {
-      "type": "Input.Text",
-      "placeholder": "FormField1",
-      "id": "FormField1"
-    },
-    {
-      "type": "Input.Text",
-      "placeholder": "FormField2",
-      "id": "FormField2"
-    },
-    {
-      "type": "Input.Text",
-      "placeholder": "FormField3",
-      "id": "FormField3"
-    },
-    {
-      "type": "ActionSet",
-      "actions": [
-        {
-          "type": "Action.Submit",
-          "title": "Action.Submit",
-          "id": "foo"
-        }
-      ]
+  "task": {
+    "type": "continue",
+    "value": {
+      "card":
+      {
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+          {
+            "type": "Input.Text",
+            "placeholder": "FormField1",
+            "id": "FormField1"
+          },
+          {
+            "type": "Input.Text",
+            "placeholder": "FormField2",
+            "id": "FormField2"
+          },
+          {
+            "type": "Input.Text",
+            "placeholder": "FormField3",
+            "id": "FormField3"
+          },
+          {
+            "type": "ActionSet",
+            "actions": [
+              {
+                "type": "Action.Submit",
+                "title": "Action.Submit",
+                "id": "submitAction"
+              }
+            ]
+          }
+        ],
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+      }
     }
-  ],
-  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+  }
 }
 ```
 
@@ -328,8 +336,6 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 ### With an embedded web view
 
 When using an embedded web view, you'll need to respond with a `task` object with the `value` object containing the URL to the web form you'd like to load. The domains of any URL you want to load must be included in the `validDomains` array in your app's manifest. See the [task module documentation](~/task-modules/what-are-task-modules.md) for complete information on building your embedded web view.
-
-#### Example fetchTask response with an embedded web view
 
 # [C#/.NET](#tab/dotnet)
 
@@ -359,6 +365,8 @@ banana
   }
 }
 ```
+
+TODO: need more about how to craft the web content page, how to build the response payload, and how to submit it back to the messaging extension.
 
 * * *
 

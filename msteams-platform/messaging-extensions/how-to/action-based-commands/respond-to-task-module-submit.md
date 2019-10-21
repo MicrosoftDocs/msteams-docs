@@ -7,13 +7,13 @@ ms.author: anclear
 ---
 # Respond to the task module submit action
 
-Once a user completes entering their input your web service will receive a `composeExtension/submitAction` invoke message with the command id and parameter values set. Your app will have five seconds to respond to the invoke, otherwise the user will receive an "Unable to reach the app" error message, and any reply to that invoke will be ignored by the Teams client.
+Once a user submits the task module, your web service will receive a `composeExtension/submitAction` invoke message with the command id and parameter values set. Your app will have five seconds to respond to the invoke, otherwise the user will receive an "Unable to reach the app" error message, and any reply to the invoke will be ignored by the Teams client.
 
 You have the following options for responding.
 
-* No response - You can choose to use the submit action to trigger a process in an external system, and not provide any feedback to the user. This can be useful for long-running processes, and you may choose to provide feedback in another manner (for example, with a [proactive message](~/foo.md)).
-* [Another task module](#respond-with-a-task-module) - You can respond with an additional task module as part of a multi-step interaction.
-* [Card response](#respond-with-a-card) - You can respond with a card that the user can then interact with and/or insert into a message.
+* No response - You can choose to use the submit action to trigger a process in an external system, and not provide any feedback to the user. This can be useful for long-running processes, and you may choose to provide feedback in another manner (for example, with a [proactive message](~/bots/how-to/conversations/send-proactive-messages.md).
+* [Another task module](#respond-with-another-task-module) - You can respond with an additional task module as part of a multi-step interaction.
+* [Card response](#respond-with-a-card-inserted-into-the-compose-message-area) - You can respond with a card that the user can then interact with and/or insert into a message.
 * [Adaptive Card from bot](#bot-response-with-adaptive-card) - Insert an Adaptive Card directly into the conversation.
 * [Request the user authenticate](~/messaging-extensions/how-to/add-authentication.md)
 * [Request the user provide additional configuration](~/messaging-extensions/how-to/add-configuration.md)
@@ -184,11 +184,11 @@ The method for response is the same as [responding to the initial `fetchTask` ev
 >[!Note]
 >This flow requires that you add the `bot` object to your app manifest, and that you have the necessary scope defined for the bot. Use the same Id as your messaging extension for your bot.
 
-You can also respond to the submit action by inserting a message with an Adaptive Card into the channel with a bot. Your user will be able to preview the message before submitting it, and potentially edit/interact with it as well. This can be very useful in scenarios where you need to gather information from your users before creating an adaptive card response. The following scenario shows how the app Polly uses this flow to configure a poll without including the configuration steps in the channel message.
+You can also respond to the submit action by inserting a message with an Adaptive Card into the channel with a bot. Your user will be able to preview the message before submitting it, and potentially edit/interact with it as well. This can be very useful in scenarios where you need to gather information from your users before creating an adaptive card response, or when you're going to need to update the card after someone interacts with it. The following scenario shows how the app Polly uses this flow to configure a poll without including the configuration steps in the channel conversation.
 
 1. The user clicks the messaging extension to trigger the task module.
-2. The user uses the task module to configure the poll.
-3. After submitting the task module the app uses the information provided to craft an adaptive card and sends it as a `botMessagePreview` response to the client.
+2. The user configures the poll with the task moudule.
+3. After submitting the task module the app uses the information provided to build the poll as an Adaptive Card and sends it as a `botMessagePreview` response to the client.
 4. The user can then preview the adaptive card message before the bot inserts it into the channel. If the app is not already a member of the channel, clicking `Send` will add the it.
    1. The user can also chose to `Edit` the message, which returns them to the original task module.
 5. Interacting with the adaptive card changes the message before sending it.
