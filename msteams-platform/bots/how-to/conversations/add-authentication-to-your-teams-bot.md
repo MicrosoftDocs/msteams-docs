@@ -231,14 +231,14 @@ Alternatively, wile in Visual Studio, you can follow these steps:
 1. Click the **Publish** button.
 1. In the next dialog window, enter the required information. The following is an example:
 
-   ![auth-app-service](../../media/auth-bot-app-service.PNG)
+   ![auth-app-service](../../media/auth-bot-app-service.png)
 
 1. Click **Create**.
 1. If the deployment completes successfully, you should see it reflected in Visual Studio. Moreover, a page is displayed in your default browser saying *Your bot is ready!*. The URL will be similar to this: `https://botteamsauth.azurewebsites.net/`. Save it to a file.
 1. In your browser, navigate to the [Azure portal][azure-portal].
 1. Check your resource group, the bot should be listed along with the other resources. The following picture shows an example:
 
-    ![teams-bot-auth-app-service-group](../../media/auth-bot-app-service-in-group.PNG)
+    ![teams-bot-auth-app-service-group](../../media/auth-bot-app-service-in-group.png)
 
 1. In the resource group, click the bot channel registration name (link).
 1. In the left panel, click **Settings**.
@@ -309,7 +309,7 @@ After you have configured the authentication mechanism, you can perform the actu
 
 1. If you click **Yes** when the bot asks *Would ypu like to view your token?*, you get a response similar to the following:
 
-    ![auth bot login emulator token](../../media/auth-bot-login-emulator-token.PNG)
+    ![auth bot login emulator token](../../media/auth-bot-login-emulator-token.png)
 
 1. Enter **logout** in the input chat box to exit. 
 
@@ -356,7 +356,7 @@ The following steps allow you to do a quick install by using the bot GUID, so yo
 1. In the right panel find your bot **Azure AD Registration**. 
 1. Click the **Channels** blade, and then click the **Teams** icon.
 
-    ![teams bots app auth connection string adv1](../../media/auth-bot-connect-to-teams-channel.PNG).
+    ![auth bot connect to teams channel](../../media/auth-bot-connect-to-teams-channel.png)
 
 1. Click the **Save** button. 
 1. After adding the Teams channel, go to the Channels page and click the **Get bot embed code**.
@@ -379,7 +379,7 @@ For more information, see [Connect a bot to Teams](https://docs.microsoft.com/az
 1. Navigate to the `TeamsAppManifest` folder and upload the zipped manifest.
 The following wizard is displayed:
 
-    ![auth bot deployed logout](../../media/auth-bot-teams-upload.PNG)
+    ![auth bot teams upload](../../media/auth-bot-teams-upload.png)
 
 1. Click the **Add to a team** button.
 1. In the next window, select the team where to use the bot.
@@ -389,7 +389,7 @@ The following wizard is displayed:
 1. Also, you should be able to see the bot listed as a contact in that chat list.
 Use it to exchange messages with the bot.
 
-### Testing the bot locally in Teams 
+### Testing the bot locally in Teams
 
 Microsoft Teams is an entirely cloud-based product, it requires all services it accesses to be available from the cloud using HTTPS endpoints. Therefore, to enable the bot (our sample)to work in Teams, you need to either publish the code to the cloud of your choice, or make a local running instance externally accessible via a **tunneling**. tool. We recommend  [ngrok](https://ngrok.com/download), which creates an externally addressable URL for a port you open locally on your machine. 
 To set up ngrok in preparation for running your Microsoft Teams app locally, perform these steps:
@@ -411,7 +411,7 @@ This launches ngrok to listen on the port you specify. In return, it gives you a
 1. Test the bot while running locally using the Bot Framework portal's **Test Web chat**. Like the emulator, this test doesn't allow you to access Teams-specific functionality.
 1. In the terminal window where `ngrok` is running you can see HTTP traffic between the bot and the web chat client. If you want a more detailed view, in a browser window enter ` http://127.0.0.1:4040` you obtain from the previous terminal window. The following picture shows an example:
  
-    ![teams bots app auth connection string adv1](../../media/auth-bot-teams-ngrok-testing.PNG). 
+    ![auth bot teams ngrok testing](../../media/auth-bot-teams-ngrok-testing.png). 
 
 > [!NOTE]
 > If you stop and restart ngrok, the URL changes. To use ngrok in your project, and depending on the capabilities you are using, you must replace all URL references.
