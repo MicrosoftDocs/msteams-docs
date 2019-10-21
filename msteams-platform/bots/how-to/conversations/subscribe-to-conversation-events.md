@@ -1,5 +1,5 @@
 ---
-title: Subsribe to conversation events
+title: Subscribe to conversation events
 author: WashingtonKayaker
 description: How to subscribe to conversation events from your Microsoft Teams bot.
 ms.topic: overview
@@ -157,6 +157,9 @@ if (memberId != null)
     await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
 }
 ```
+
+> [!Tip]
+> When your bot receives a `membersAdded` event when in a personal scoped chat, the `channelData.team` object will be null. You can use this as a filter to enable a different welcome message depending on scope.
 
 <!--
 # [JavaScript](#tab/javascript)
