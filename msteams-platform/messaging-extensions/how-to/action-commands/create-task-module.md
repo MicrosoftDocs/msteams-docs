@@ -1,13 +1,13 @@
 ---
 title: Create and send the task module
 author: clearab
-description: How to handle the initial invoke action and respond with a task module from an action-based messaging extension command
+description: How to handle the initial invoke action and respond with a task module from an action messaging extension command
 ms.topic: conceptual
 ms.author: anclear
 ---
 # Create and send the task module
 
-If you are not populating your task module with parameters defined in your app manifest, you'll need to create the task module to be presented to your users. You can use either an adaptive card or an embedded web view. This article will guide you through creating fairly simple task modules. See the [documentation for task modules](~/task-modules/what-are-task-modules.md) for the complete documentation on them.
+If you are not populating your task module with parameters defined in your app manifest, you'll need to create the task module to be presented to your users. You can use either an Adaptive Card or an embedded web view.
 
 ## The initial invoke request
 
@@ -28,6 +28,25 @@ Using this method you service will receive an `Activity` object of type `compose
 |`value.context.theme` | The user's client theme, useful for embedded web view formatting. Will be `default`, `contrast` or `dark`. |
 
 ### Example fetchTask request
+
+# [C#/.NET](#tab/dotnet)
+
+```csharp
+protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+{
+  //handle fetch task
+}
+```
+
+# [TypeScript/Node.js](#tab/typescript)
+
+```typescript
+protected async handleTeamsMessagingExtensionFetchTask(context: TurnContext, action: MessagingExtensionAction): Promise<MessagingExtensionActionResponse> {
+    //handle the fetch task
+}
+```
+
+# [JSON](#tab/json)
 
 ```json
 {
@@ -86,9 +105,31 @@ Using this method you service will receive an `Activity` object of type `compose
 }
 ```
 
+* * *
+
 ## Initial invoke request from a message
 
 When your bot is invoked from a message rather than the compose area or the command bar, the `value` object in the initial request will contain the details of the message your messaging extension was invoked from. An example of this object is below. The `reactions` and `mentions` arrays are optional, and will not be present if there are no reactions or mentions in the original message.
+
+# [C#/.NET](#tab/dotnet)
+
+```csharp
+protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+{
+  var messageText = action.MessagePayload.Body.Content;
+  var fromId = action.MessagePayload.From.User.Id;
+
+  ...
+}
+```
+
+# [TypeScript/Node.js](#tab/typescript)
+
+```typescript
+//this is the javascript example.
+```
+
+# [JSON](#tab/json)
 
 ```json
 {
@@ -110,7 +151,7 @@ When your bot is invoked from a message rather than the compose area or the comm
       "locale": "en-us",
       "body": {
         "contentType": "html",
-        "content": "this is the message"
+        "content": "This is the message the messaging extension was invoked from."
     },
       "from": {
         "device": null,
@@ -156,11 +197,13 @@ When your bot is invoked from a message rather than the compose area or the comm
       ]
     }
   ...
-  ```
+```
+
+* * *
 
 ## Respond to the fetchTask
 
-Your response to the invoke request should be in the form of a `task` object that contains either a `taskInfo` object with the adaptive card or web URL, or a simple string message.
+Respond to the invoke request with a `task` object that contains either a `taskInfo` object with the adaptive card or web URL, or a simple string message.
 
 |Property name|Purpose|
 |---|---|
@@ -184,53 +227,129 @@ When using an adaptive card, you'll need to respond with a `task` object with th
 
 #### Example fetchTask response with an adaptive card
 
+# [C#/.NET](#tab/dotnet)
+
+This sample uses the [AdaptiveCards NuGet package](https://www.nuget.org/packages/AdaptiveCards) in addition to the Bot Framework SDK.
+
+```csharp
+protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+{
+  string placeholder = "Not invoked from message";
+
+  if (action.MessagePayload != null)
+  {
+      var messageText = action.MessagePayload.Body.Content;
+      var fromId = action.MessagePayload.From.User.Id;
+      placeholder = "Invoked from message";
+  }
+
+  var response = new MessagingExtensionActionResponse()
+  {
+    Task = new TaskModuleContinueResponse()
+    {
+      Value = new TaskModuleTaskInfo()
+      {
+        Height = "small",
+        Width = "small",
+        Title = "Example task module",
+        Card = new Attachment()
+        {
+          ContentType = AdaptiveCard.ContentType,
+          Content = new AdaptiveCard("1.0")
+          {
+            Body = new List<AdaptiveElement>()
+            {
+              new AdaptiveTextInput() { Id = "FormField1", Placeholder = placeholder},
+              new AdaptiveTextInput() { Id = "FormField2", Placeholder = "FormField2"},
+              new AdaptiveTextInput() { Id = "FormField3", Placeholder = "FormField3"},
+            },
+            Actions = new List<AdaptiveAction>()
+            {
+              new AdaptiveSubmitAction()
+              {
+                Type = AdaptiveSubmitAction.TypeName,
+                Title = "Submit",
+              },
+            },
+          },
+        },
+      },
+    },
+  };
+  return response;
+}
+```
+
+# [TypeScript/Node.js](#tab/typescript)
+
+```typescript
+//this is the javascript example.
+```
+
+# [JSON](#tab/json)
+
 ```json
 {
   "task": {
     "type": "continue",
     "value": {
-      "title": "Task module form",
-      "height": "small",
-      "width": "medium",
-      "card": {
-        "contentType": "application/vnd.microsoft.card.adaptive",
-        "content": {
-          "body": [
-            {
-              "type": "TextBlock",
-              "text": "Please enter the following information:"
-            },
-            {
-              "type": "TextBlock",
-              "text": "Name"
-            },
-            {
-              "type": "Input.Text",
-              "spacing": "None",
-              "placeholder": "Placeholder text"
-            }
-          ],
-          "actions" : [
-            {
-              "type": "Action.Submit",
-              "title": "Submit"
-            }
-          ],
-          "type": "AdaptiveCard",
-          "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-          "version": "1.0"
-        }
+      "card":
+      {
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+          {
+            "type": "Input.Text",
+            "placeholder": "FormField1",
+            "id": "FormField1"
+          },
+          {
+            "type": "Input.Text",
+            "placeholder": "FormField2",
+            "id": "FormField2"
+          },
+          {
+            "type": "Input.Text",
+            "placeholder": "FormField3",
+            "id": "FormField3"
+          },
+          {
+            "type": "ActionSet",
+            "actions": [
+              {
+                "type": "Action.Submit",
+                "title": "Action.Submit",
+                "id": "submitAction"
+              }
+            ]
+          }
+        ],
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
       }
     }
   }
 }
 ```
 
+* * *
+
 ### With an embedded web view
 
 When using an embedded web view, you'll need to respond with a `task` object with the `value` object containing the URL to the web form you'd like to load. The domains of any URL you want to load must be included in the `validDomains` array in your app's manifest. See the [task module documentation](~/task-modules/what-are-task-modules.md) for complete information on building your embedded web view.
 
-#### Example fetchTask response with an embedded web view
+# [C#/.NET](#tab/dotnet)
+
+```csharp
+banana
+```
+
+# [TypeScript/Node.js](#tab/typescript)
+
+```typescript
+//this is the javascript example.
+```
+
+# [JSON](#tab/json)
 
 ```json
 {
@@ -247,80 +366,14 @@ When using an embedded web view, you'll need to respond with a `task` object wit
 }
 ```
 
-## Complete sample using an adaptive card
+TODO: need more about how to craft the web content page, how to build the response payload, and how to submit it back to the messaging extension.
 
-# [C#/.NET](#tab/dotnet)
-
-You can see the [complete sample project on GitHub](https://github.com/OfficeDev/msteams-samples/tree/master/samples/dotnet/messaging_extensions/messaging_extension_action_with_card).
-
-```csharp
-[BotAuthentication]
-public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
-{
-  if (activity.Type == ActivityTypes.Invoke)
-  {
-    if (activity.Name == "composeExtension/fetchTask")
-    {
-      //Create the adaptive card
-      AdaptiveCard card = new AdaptiveCard(new AdaptiveSchemaVersion("1.0"));
-      card.Body.Add(new AdaptiveTextBlock()
-      {
-        Text = "Please enter the following information:"
-      });
-      card.Body.Add(new AdaptiveTextBlock()
-      {
-        Text = "Name"
-      });
-      card.Body.Add(new AdaptiveTextInput()
-      {
-        Id = "name",
-        Spacing = AdaptiveSpacing.None,
-        Placeholder = "Name goes here"
-      });
-      card.Actions.Add(new AdaptiveSubmitAction()
-      {
-        Title = "Submit"
-      });
-  
-      string cardJson = card.ToJson();
-  
-      //Create the task module response
-      string task = $@"{{
-        'task': {{
-          'type': 'continue',
-          'value': {{
-            'card': {{
-              'contentType': 'application/vnd.microsoft.card.adaptive',
-              'content': {cardJson}
-              }}
-            }}
-          }}
-        }}";
-  
-      return Request.CreateResponse(HttpStatusCode.OK, JObject.Parse(task));
-    }
-  }
-}
-```
-
-# [JavaScript/Node.js](#tab/javascript)
-
-```javascript
-//this is the javascript example.
-```
-
-# [TypeScript/Node.js](#tab/typescript)
-
-```typescript
-let something = `an example in typescript`;
-```
-
----
+* * *
 
 ## Next steps
 
 If you allow your users to send a response back from the task module, you'll need to handle the submit action.
 
-* [Create and respond with a task module](~/messaging-extensions/how-to/action-based-commands/respond-to-task-module-submit.md)
+* [Create and respond with a task module](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
 [!Includes(~/includes/messaging-extensions/learn-more.md)]
