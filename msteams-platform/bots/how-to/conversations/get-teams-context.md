@@ -17,25 +17,22 @@ A bot can access additional context about the team or chat, such as user profile
 - Knowledge of [bot basics][concept-basics], [managing state][concept-state], the [dialogs library][concept-dialogs], how to [implement sequential conversation flow][simple-dialog].
 - Visual Studio 2017 or later and git.
 - [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet package.
-- Microsoft Teams account. If needed you can create a [Microsoft Teams account](https://products.office.com/microsoft-teams/group-chat-software).
-- The following sample.
+- Microsoft Teams. If needed you can create a [Microsoft Teams account](https://products.office.com/microsoft-teams/group-chat-software).
+- The following example.
 
     | Sample | BotBuilder version | Demonstrates |
     |:---|:---:|:---|
     | **Teams Bot Roster** in [cs teams bot roster][teams-bot-roster] | v4 | Accessing Teamns information |
 
 
-
 ## Roster bot code example
 
 This section shows to create a bot which you can integrate within Microsoft Teams. The bot allows the user to perform operations such as list team members, get channel information and other details. If the user `@mention` the bot responds with a message based on the request received.  Download teh code at this location: [cs teams bot roster][teams-bot-roster].
 
-![teams bot roster map](Media/teams-bot-roster-map.png)
-
 
 ## Additional information
 
-The following code snippets belong to a roster bot sample described earlier.
+![teams bot roster map](Media/teams-bot-roster-map.png)
 
 ### RosterBot.cs/ShowMembersAsync
 
@@ -67,7 +64,7 @@ private async Task ShowMembersAsync(ITurnContext<IMessageActivity> turnContext, 
 ### RosterBot.cs/ShowMembersAsync
 
 
-
+<!--
 ## Fetching the team roster
 
 Your bot can query for the list of team members and their basic profiles, which includes Teams user IDs and Azure Active Directory (Azure AD) information such as name and objectId. You can use this information to correlate user identities; for example, to check whether a user logged into a tab through Azure AD credentials is a member of the team.
@@ -234,7 +231,7 @@ connector.fetchChannelList(
   }
 );
 ```
-
+-->
 
 <!-- Footnote-style links -->
 
