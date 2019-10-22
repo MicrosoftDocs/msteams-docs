@@ -169,6 +169,8 @@
           href: bots/how-to/combine-with-other-features-and-services/use-task-modules.md
         - name: Use Microsoft Graph with your bot
           href: bots/how-to/combine-with-other-features-and-services/use-microsoft-graph.md
+      - name: Handle bot rate limiting
+        href: bots/how-to/rate-limit.md
 - name: 'Embedded web experiences with Tabs'
   items:
     - name: 'What are custom tabs?'
@@ -276,6 +278,45 @@
           href: foo.md
 - name: Resources
   items:
+    - name: Bots - v3 SDK
+      href: resources/bot-v3/bots-overview.md
+      items:
+      - name: Create a bot
+        href: resources/bot-v3/bots-create.md
+      - name: Conversations
+        href: resources/bot-v3/bot-conversations/bots-conversations.md
+        items:
+        - name: Personal conversations with bots
+          href: resources/bot-v3/bot-conversations/bots-conv-personal.md
+        - name: Channel and group conversations with bots
+          href: resources/bot-v3/bot-conversations/bots-conv-channel.md
+        - name: Starting a conversation
+          href: resources/bot-v3/bot-conversations/bots-conv-proactive.md
+        - name: Message formatting
+          href: resources/bot-v3/bot-conversations/bots-message-format.md
+        - name: Cards and card actions
+          href: resources/bot-v3/bot-conversations/bots-cards.md
+      - name: Bot events
+        href: resources/bot-v3/bots-notifications.md
+      - name: Context for bots
+        href: resources/bot-v3/bots-context.md
+      - name: Sending and receiving files
+        href: resources/bot-v3/bots-files.md
+      - name: Notification only bots
+        href: resources/bot-v3/bots-notification-only.md
+      - name: Bot menus
+        href: resources/bot-v3/bots-menus.md
+      - name: Bots with tabs
+        href: resources/bot-v3/bots-with-tabs.md
+      - name: Test a bot
+        href: resources/bot-v3/bots-test.md
+    - name: Messaging Extensions - v3 SDK
+      href: resources/messaging-extension-v3/messaging-extensions-overview.md
+      items:
+      - name: Search extensions
+        href: resources/messaging-extension-v3/search-extensions.md
+      - name: Action extensions
+        href: resources/messaging-extension-v3/create-extensions.md
     - name: Share-to-Teams
       href: _old/share-to-teams.md
     - name: 'Supported media formats'
