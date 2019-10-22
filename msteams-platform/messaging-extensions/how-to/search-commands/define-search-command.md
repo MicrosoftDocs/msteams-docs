@@ -7,6 +7,8 @@ ms.author: anclear
 ---
 # Define messaging extension search commands
 
+[!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
+
 Messaging extension search commands allow your users to search external systems and insert the results of that search into a message in the form of a card.
 
 For additional guidance on designing your messaging extension see: [Designing effective messaging extensions](~/messaging-extensions/design/messaging-extension.md).

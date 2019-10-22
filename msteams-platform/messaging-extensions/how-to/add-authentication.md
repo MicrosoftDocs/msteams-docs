@@ -1,3 +1,14 @@
+---
+title: Add authentication to your messaging extension
+author: clearab
+description: How to add authentication to a messaging extension
+ms.topic: conceptual
+ms.author: anclear
+---
+# Add a configuration page to your messaging extension
+
+[!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
+
 ## Identify the user
 
 Every request to your services includes the obfuscated ID of the user that performed the request, as well as the user's display name and Azure Active Directory object ID.

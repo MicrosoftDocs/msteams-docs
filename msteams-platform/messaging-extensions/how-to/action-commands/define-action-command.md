@@ -7,6 +7,8 @@ ms.author: anclear
 ---
 # Define messaging extension action commands
 
+[!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
+
 Action commands allow you present your users with a modal popup (called a task module in Teams) to collect or display information, then process their interaction and send information back to Teams. Before creating your command you'll need to decide:
 
 1. Where can the action command be triggered from?

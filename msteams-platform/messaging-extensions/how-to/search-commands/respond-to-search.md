@@ -7,6 +7,8 @@ ms.author: anclear
 ---
 # Respond to the search command
 
+[!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
+
 When enters information into the query box, Microsoft Teams sends your service a standard Bot Framework `Activity` object. Your service should perform its logic for an `Activity` that has `type` set to `invoke` and `name` set to a supported `composeExtension` type, as shown in the following table.
 
 In addition to the standard bot activity properties, the payload contains the following request metadata:

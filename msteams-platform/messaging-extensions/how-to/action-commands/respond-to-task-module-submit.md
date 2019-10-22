@@ -7,6 +7,8 @@ ms.author: anclear
 ---
 # Respond to the task module submit action
 
+[!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
+
 Once a user submits the task module, your web service will receive a `composeExtension/submitAction` invoke message with the command id and parameter values set. Your app will have five seconds to respond to the invoke, otherwise the user will receive an "Unable to reach the app" error message, and any reply to the invoke will be ignored by the Teams client.
 
 You have the following options for responding.

@@ -7,6 +7,8 @@ ms.author: anclear
 ---
 # Create and send the task module
 
+[!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
+
 If you are not populating your task module with parameters defined in your app manifest, you'll need to create the task module to be presented to your users. You can use either an Adaptive Card or an embedded web view.
 
 ## The initial invoke request
