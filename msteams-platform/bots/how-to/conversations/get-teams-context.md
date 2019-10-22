@@ -7,13 +7,66 @@ ms.author: anclear
 ---
 # Get Team's specific context for your bot
 
-> [!WARNING]
-> Preliminary draft.
-
 A bot can access additional context about the team or chat, such as user profile. This information can be used to enrich the bot's functionality and to provide a more personalized experience.
 
 > [!NOTE]
 > These Microsoft Teams&ndash;specific bot APIs are best accessed through our extensions for the Bot Builder SDK. For C#/.NET, download our [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet package. For Node.js development, you can install the [botbuilder-teams](https://www.npmjs.com/package/botbuilder-teams) npm package. Both SDKs target Bot Builder v3.
+
+## Prerequisites
+
+- Knowledge of [bot basics][concept-basics], [managing state][concept-state], the [dialogs library][concept-dialogs], how to [implement sequential conversation flow][simple-dialog].
+- Visual Studio 2017 or later and git.
+- [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet package.
+- Microsoft Teams account. If needed you can create a [Microsoft Teams account](https://products.office.com/microsoft-teams/group-chat-software).
+- The following sample.
+
+    | Sample | BotBuilder version | Demonstrates |
+    |:---|:---:|:---|
+    | **Teams Bot Roster** in [cs teams bot roster][teams-bot-roster] | v4 | Accessing Teamns information |
+
+
+
+## Roster bot code example
+
+This section shows to create a bot which you can integrate within Microsoft Teams. The bot allows the user to perform operations such as list team members, get channel information and other details. If the user `@mention` the bot responds with a message based on the request received.  Download teh code at this location: [cs teams bot roster][teams-bot-roster].
+
+![teams bot roster map](Media/teams-bot-roster-map.png)
+
+
+## Additional information
+
+The following code snippets belong to a roster bot sample described earlier.
+
+### RosterBot.cs/ShowMembersAsync
+
+To list the members that belong to a team, you use the function `GetMembersAsync`.
+The function is contained in the `TeamsRosterClient.cs` class which belongs to the **Microsoft.Bot.Builder** library.  The function in turn calls the `GetChannelData` in the
+`TeamsActivityExtensions.cs` class to obtain team members information.
+The second overloaded `ShowMembersAsync` function, shown below, is responsible for creating a message activity with the requested team members information.  
+
+```cs
+private async Task ShowMembersAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+    await ShowMembersAsync(turnContext, await GetMembersAsync(turnContext, cancellationToken), cancellationToken);
+}
+
+
+ private async Task ShowMembersAsync(ITurnContext<IMessageActivity> turnContext, IEnumerable<TeamsChannelAccount> teamsChannelAccounts, CancellationToken cancellationToken)
+{
+    var replyActivity = MessageFactory.Text($"Total of {teamsChannelAccounts.Count()} members are currently in team");
+    await turnContext.SendActivityAsync(replyActivity);
+
+    var messages = teamsChannelAccounts
+        .Select(teamsChannelAccount => $"{teamsChannelAccount.AadObjectId} --> {teamsChannelAccount.Name} -->  {teamsChannelAccount.UserPrincipalName}");
+
+    await SendInBatchesAsync(turnContext, messages, cancellationToken);
+}
+
+```
+
+### RosterBot.cs/ShowMembersAsync
+
+
 
 ## Fetching the team roster
 
@@ -181,6 +234,13 @@ connector.fetchChannelList(
   }
 );
 ```
+
+
+<!-- Footnote-style links -->
+
+[azure-portal]: https://ms.portal.azure.com
+
+[teams-bot-roster]: https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/Roster
 
 
 <!-- Writing ref 
