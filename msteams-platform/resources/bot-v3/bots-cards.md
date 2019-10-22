@@ -6,6 +6,8 @@ ms.date: 03/29/2018
 ---
 # Cards in bot conversations
 
+[!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
+
 A *card* is a user-interface (UI) container for short or related pieces of information. Cards can have multiple properties and attachments. Teams support cards in bots, connectors and messaging extensions. See [Cards](~/concepts/cards/cards.md) for an overview of what cards are and how Teams uses them.
 
 Bots use cards as part of conversations. See [Bot Conversations](~/concepts/bots/bot-conversations/bots-conversations.md) for the details.

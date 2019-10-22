@@ -3,8 +3,9 @@ title: Initiate actions with messaging extensions
 description: Create Action-based messaging extensions to allow users to trigger external services
 keywords: teams messaging extensions messaging extensions search
 ---
-
 # Initiate actions with messaging extensions
+
+[!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
 
 Action-based messaging extensions allow your users to trigger actions in external services while inside of Teams.
 
