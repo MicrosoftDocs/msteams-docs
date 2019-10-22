@@ -14,7 +14,7 @@ A bot can access additional context about the team or chat, such as user profile
 
 - Knowledge of [bot basics][concept-basics], [managing state][concept-state], the [dialogs library][concept-dialogs], how to [implement sequential conversation flow][simple-dialog].
 - Visual Studio 2017 or later and git.
-- [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet package.
+- [ngrok](https://ngrok.com/download) Ngrok download.
 - Microsoft Teams. If needed you can create a [Microsoft Teams account](https://products.office.com/microsoft-teams/group-chat-software).
 - The following example.
 
@@ -25,8 +25,108 @@ A bot can access additional context about the team or chat, such as user profile
 
 ## Roster bot code example
 
-This section shows how to create a bot which you can use in Microsoft Teams. The bot allows the user to perform operations such as list team members, get channel information and other details. If the user `@mention` the bot, it responds with a message based on the request received.  You can download the code at this location: [cs teams bot roster][teams-bot-roster].
+This section shows how to install the example bot using Microsoft Teams **App Studio** tool. The bot allows the user to perform operations such as list team members, get channel information and other details. If the user `@mention` the bot, the latter responds with a message based on the request received.  You can download the code at this location: [cs teams bot roster][teams-bot-roster].
 
+### Teams Setup
+
+1. In Teams, open **App Studio**. 
+1. Click the **Manifest editor** tab.
+1. In the left panel, click the **Create a new app** button.
+1. In the **Details** section, click the **App details**. 
+1. Enter the following  info:
+    1. **Short name**. For this the example, enter *TeamsRostertBot*.  
+    1. Click the **Generate** button under **App ID**. You get an ID similar to this *772998ff-7fed-4275-b4e3-485cbf312850*. 
+    1. **Package Name**. For this example, enter *com.teams.dev*.
+    1. **Version** Enter *1.0.0*.
+    1. **Short Description**. Enter *Testing simple teams roster bot*.
+    1. **Long Description**. Enter *Testing simple teams roster bot*.
+    1. **Developer name**. Enter your name.
+    1. **Website**. The name of your website. For this example, enter `https://www.microsoft.com*`.
+    1. **Privacy statement** web address.  For this example, enter `https://www.teams.com/privacy`.
+    1. **Terms of use** web address.  For this example, enter `https://www.teams.com/termsofuse`.
+1. In the left panel, in the **Capabilities** section, click the **Bots** link.
+1. Click the **Set up** button. 
+1. In the **New bot** tab, enter the following information:
+    1. **Name**. For this the example, enter *TeamsRostertBot*.
+    1. **Scope**. Check all 3 boxes.
+    1. Click the **Create** button.
+1. Copy the **Bot ID** (string under TeamsEchoBot) and save it to a file. You will need it later in the `appsettings.json` file in the bot project.
+1. Click the **Generate new password** button, copy the password and save it to a file. You will need it later in the `appsettings.json` file in the bot project.
+1. In a terminal window execute the following command: `ngrok http -host-header=rewrite 3978`. The following picture shows an example:
+
+    ![ngrok cmd](Media/ngrok-cmd.png)
+
+1. Copy the **https** forwarding address to a file.
+1. Keep **ngrok** running.  
+1. In the **Messaging endpoint** section in the **Bot endpoint address** enter the ngrok address you saved earlier followed by `/api/messages`. The endpoint value must have a format similar to this: `https://d1dbb0d8.ngrok.io/api/messages`.
+1. Press **Enter** (on your keyboard) to save the address.
+
+### Bot Setup
+
+1. Clone the repository at [botbuilder-dotnet](https://github.com/microsoft/botbuilder-dotnet/tree/josh/echo/tests/Teams).
+1. In Visual Studio, navigate to the `Roster` folder and open the `appsettings.json` file.
+1. To`MicrosoftAppId` assign the  **Bot ID** you saved earlier.
+1. To`MicrosoftAppPassword` assign the  **password** you saved earlier.
+
+    The values should be similar to the following:
+
+    ```json
+    {
+      "MicrosoftAppId": "772998ff-7fed-4275-b4e3-485cbf312850",
+      "MicrosoftAppPassword": "M@XlmJPuYNjFmE:[h2AvMBOzNBuP9=43"
+    }
+    ```
+
+1. **Save** the `appsettings.json` file.
+
+1. Open the file *Properties/launchSettings.json*. Assure that this setting exists: ` "applicationUrl": "http://localhost:3978/"`. Change the address to *3978*, if needed. 
+
+1. Open the file *TeamsAppManifest/manifest.json*. Assign to the `id` and `botId` variables the **Bot ID** value you saved earlier.  
+1. **Save** the `manifest.json` file.
+1. Zip the 3 files contained in the folder. 
+1. Navigate to the `Roster` folder.
+1. Run the project (F5). 
+1. A browser window will open at this local address `localhost:3978/`.
+
+
+## Finish Teams Setup
+
+1. In Teams click **Test and distribute** in the left panel in the **Finish** section.
+1. Click the **Install** button.
+
+    <table>
+    <thead>
+    <tr>
+    <th align="left">To install bot in a personal chat...</th>
+    <th align="left">To install in a group chat...</th>
+    <th align="left">To install in team chat...</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td align="left">1. Click <code>Add</code> button</td>
+    <td align="left">1. Click the down arrow to the right of the <code>Add</code> button <br> 2. Click <code>Add to Chat</code> <br> 3. Search for and select your group chat <br> 4. Click the <code>Set up bot</code> button <br> <strong>Note:</strong> There must be at least 1 message in a group chat for it to be searchable</td>
+    <td align="left">1. Click the down arrow to the right of the <code>Add</code> button <br> 2. Click <code>Add to Team</code> <br> 3. Search for and select your team <br> 4. Click the <code>Set up a bot</code> button</td>
+    </tr>
+    </tbody>
+    </table>
+    <p><strong>Note:</strong> If you send an unsupported string in a group chat or personal chat the bot will respond with an error message. This is because it's missing data that comes with messages that orignates from a team or group chat.</p>
+    <table>
+    <thead>
+    <tr>
+    <th align="left">Supported strings in personal chat</th>
+    <th align="left">Supported strings in group chat</th>
+    <th align="left">supported strings in team chat</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td align="left">N/A</td>
+    <td align="left"><code>show members</code></td>
+    <td align="left"><code>show members</code> <br> <code>show channels</code> <br> <code>show details</code></td>
+    </tr>
+    </tbody>
+    </table>
 
 ## Additional information
 
