@@ -27,7 +27,7 @@ A bot can access additional context about the team or chat, such as user profile
 
 This section shows how to install the example bot using Microsoft Teams **App Studio** tool. The bot allows the user to perform operations such as list team members, get channel information and other details. If the user `@mention` the bot, the latter responds with a message based on the request received.  You can download the code at this location: [cs teams bot roster][teams-bot-roster].
 
-### Teams Setup
+### Teams setup
 
 1. In Teams, open **App Studio**. 
 1. Click the **Manifest editor** tab.
@@ -61,7 +61,7 @@ This section shows how to install the example bot using Microsoft Teams **App St
 1. In the **Messaging endpoint** section in the **Bot endpoint address** enter the ngrok address you saved earlier followed by `/api/messages`. The endpoint value must have a format similar to this: `https://d1dbb0d8.ngrok.io/api/messages`.
 1. Press **Enter** (on your keyboard) to save the address.
 
-### Bot Setup
+### Bot setup
 
 1. Clone the repository at [botbuilder-dotnet](https://github.com/microsoft/botbuilder-dotnet/tree/josh/echo/tests/Teams).
 1. In Visual Studio, navigate to the `Roster` folder and open the `appsettings.json` file.
@@ -89,7 +89,7 @@ This section shows how to install the example bot using Microsoft Teams **App St
 1. A browser window will open at this local address `localhost:3978/`.
 
 
-## Finish Teams Setup
+### Finish Teams setup
 
 1. In Teams click **Test and distribute** in the left panel in the **Finish** section.
 1. Click the **Install** button.
@@ -127,6 +127,20 @@ This section shows how to install the example bot using Microsoft Teams **App St
     </tr>
     </tbody>
     </table>
+
+### Testing the bot 
+
+You should be able now to test the bot. 
+
+1. In Microsoft Teams, you should see the bot you have deployed in the *Chat* list and/or under the *Team* you selected. The following picture is an example.
+
+    ![teams bot roster chat](Media/teams-bot-roster-chat.PNG)
+
+1. To communicate with the bot you need to use `@mention` followed by the name of th bot. 
+For example `@mention TeamsRosterBot`. 
+1. Enter one of the allowed commands. The following example uses `show details` command. 
+
+    ![teams bot roster details](Media/teams-bot-roster-details.png)
 
 ## Additional information
 
