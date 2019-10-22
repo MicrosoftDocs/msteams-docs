@@ -311,12 +311,12 @@
       - name: Test a bot
         href: resources/bot-v3/bots-test.md
     - name: Messaging Extensions - v3 SDK
-      href: resources/messaging-extensions-v3/messaging-extensions-overview.md
+      href: resources/messaging-extension-v3/messaging-extensions-overview.md
       items:
       - name: Search extensions
-        href: resources/messaging-extensions-v3/search-extensions.md
+        href: resources/messaging-extension-v3/search-extensions.md
       - name: Action extensions
-        href: resources/messaging-extensions-v3/create-extensions.md
+        href: resources/messaging-extension-v3/create-extensions.md
     - name: Share-to-Teams
       href: _old/share-to-teams.md
     - name: 'Supported media formats'
