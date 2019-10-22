@@ -9,8 +9,6 @@ ms.author: anclear
 
 A bot can access additional context about the team or chat, such as user profile. This information can be used to enrich the bot's functionality and to provide a more personalized experience.
 
-> [!NOTE]
-> These Microsoft Teams&ndash;specific bot APIs are best accessed through our extensions for the Bot Builder SDK. For C#/.NET, download our [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet package. For Node.js development, you can install the [botbuilder-teams](https://www.npmjs.com/package/botbuilder-teams) npm package. Both SDKs target Bot Builder v3.
 
 ## Prerequisites
 
@@ -20,26 +18,29 @@ A bot can access additional context about the team or chat, such as user profile
 - Microsoft Teams. If needed you can create a [Microsoft Teams account](https://products.office.com/microsoft-teams/group-chat-software).
 - The following example.
 
-    | Sample | BotBuilder version | Demonstrates |
+    | Example | BotBuilder version | Demonstrates |
     |:---|:---:|:---|
     | **Teams Bot Roster** in [cs teams bot roster][teams-bot-roster] | v4 | Accessing Teamns information |
 
 
 ## Roster bot code example
 
-This section shows to create a bot which you can integrate within Microsoft Teams. The bot allows the user to perform operations such as list team members, get channel information and other details. If the user `@mention` the bot responds with a message based on the request received.  Download teh code at this location: [cs teams bot roster][teams-bot-roster].
+This section shows how to create a bot which you can use in Microsoft Teams. The bot allows the user to perform operations such as list team members, get channel information and other details. If the user `@mention` the bot, it responds with a message based on the request received.  You can download the code at this location: [cs teams bot roster][teams-bot-roster].
 
 
 ## Additional information
 
 ![teams bot roster map](Media/teams-bot-roster-map.png)
 
-### RosterBot.cs/ShowMembersAsync
+### List team's members
 
 To list the members that belong to a team, you use the function `GetMembersAsync`.
-The function is contained in the `TeamsRosterClient.cs` class which belongs to the **Microsoft.Bot.Builder** library.  The function in turn calls the `GetChannelData` in the
+The function is contained in the `TeamsRosterClient.cs` class which belongs to the **Microsoft.Bot.Builder** library.  The function calls the `GetChannelData` in the
 `TeamsActivityExtensions.cs` class to obtain team members information.
 The second overloaded `ShowMembersAsync` function, shown below, is responsible for creating a message activity with the requested team members information.  
+
+
+### RosterBot.cs/ShowMembersAsync
 
 ```cs
 private async Task ShowMembersAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -61,177 +62,204 @@ private async Task ShowMembersAsync(ITurnContext<IMessageActivity> turnContext, 
 
 ```
 
-### RosterBot.cs/ShowMembersAsync
+### Get team's details
 
+The following flow shows the main functions used to obtain a team's details.
 
-<!--
-## Fetching the team roster
+1. `ShowDetailsAsync` calls `GetTeamDetailsAsync`  in the `TeamsRosterClient.cs` class which belongs to the **Microsoft.Bot.Builder** library.
+1. `GetTeamDetailsAsync` calls the `FetchTeamDetailsAsync` function in the `TeamsOperationsExtensions.cs` class  which belongs to the **Microsoft.Bot.Connector** library.
+1. `FetchTeamDetailsAsync` calls the `FetchTeamDetailsWithHttpMessagesAsync` function in the class `TeamsOperations.cs` which belongs to the **Microsoft.Bot.Connector** library. 
+1. `FetchTeamDetailsWithHttpMessagesAsync`issues the actual HTTP request to the Microsoft Teams to obtain the team's details.  
 
-Your bot can query for the list of team members and their basic profiles, which includes Teams user IDs and Azure Active Directory (Azure AD) information such as name and objectId. You can use this information to correlate user identities; for example, to check whether a user logged into a tab through Azure AD credentials is a member of the team.
+#### RosterBot.cs/ShowDetailsAsync
 
-### REST API example
+```cs
 
-You can directly issue a GET request on [`/conversations/{teamId}/members/`](https://docs.microsoft.com/bot-framework/rest-api/bot-framework-rest-connector-api-reference#get-conversation-members), using the value of `serviceUrl` as the endpoint.
-
-The `teamId` can be found in the `channeldata` object of the activity payload that your bot receives in the following scenarios:
-* When a user messages or interacts with your bot in a team context (see [Receiving Messages](../../../_old/concepts/bots/bot-conversations/bots-conversations.md#receiving-messages))
-* When a new user or bot is added to a team (see [Bot or user added to a team](../../../_old/concepts/bots/bots-notifications.md#bot-or-user-added-to-a-team))
-
-> [!NOTE]
->* Make sure to use the team id when calling the api
->* The value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value of `serviceUrl`.
-
-```json
-GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members
-
-Response body
-[{
-    "id": "29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc",
-    "objectId": "9d3e08f9-a7ae-43aa-a4d3-de3f319a8a9c",
-    "givenName": "Larry",
-    "surname": "Brown",
-    "email": "Larry.Brown@fabrikam.com",
-    "userPrincipalName": "labrown@fabrikam.com"
-}, {
-    "id": "29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk",
-    "objectId": "76b0b09f-d410-48fd-993e-84da521a597b",
-    "givenName": "John",
-    "surname": "Patterson",
-    "email": "johnp@fabrikam.com",
-    "userPrincipalName": "johnp@fabrikam.com"
-}, {
-    "id": "29:1URzNQM1x1PNMr1D7L5_lFe6qF6gEfAbkdG8_BUxOW2mTKryQqEZtBTqDt10-MghkzjYDuUj4KG6nvg5lFAyjOLiGJ4jzhb99WrnI7XKriCs",
-    "objectId": "6b7b3b2a-2c4b-4175-8582-41c9e685c1b5",
-    "givenName": "Rick",
-    "surname": "Stevens",
-    "email": "Rick.Stevens@fabrikam.com",
-    "userPrincipalName": "rstevens@fabrikam.com"
-}]
-```
-
-### .NET example
-
-Call `GetConversationMembersAsync` using `Team.Id` to return a list of user IDs.
-
-```csharp
-// Fetch the members in the current conversation
-var connector = new ConnectorClient(new Uri(context.Activity.ServiceUrl));
-var teamId = context.Activity.GetChannelData<TeamsChannelData>().Team.Id;
-var members = await connector.Conversations.GetConversationMembersAsync(teamId);
-
-// Concatenate information about all members into a string
-var sb = new StringBuilder();
-foreach (var member in members.AsTeamsChannelAccounts())
+private async Task ShowDetailsAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
-    sb.AppendFormat(
-        "GivenName = {0}, TeamsMemberId = {1}",
-        member.Name, member.Id);
+    var teamDetails = await GetTeamDetailsAsync(turnContext, cancellationToken);
 
-    sb.AppendLine();
-}
+    var replyActivity = MessageFactory.Text($"The team name is {teamDetails.Name}. The team ID is {teamDetails.Id}. The ADDGroupID is {teamDetails.AadGroupId}.");
 
-// Post the member info back into the conversation
-await context.PostAsync($"People in this conversation: {sb.ToString()}");
-```
-
-### Node.js/TypeScript example
-
-The following example uses the [Microsoft Teams extensions for the Bot Builder SDK for Node.js](https://www.npmjs.com/package/botbuilder-teams).
-
-```typescript
-
-[...]
-import * as builder from "botbuilder";
-[...]
-
-var teamId = session.message.sourceEvent.team.id;
-connector.fetchMembers(
-  (<builder.IChatConnectorAddress>session.message.address).serviceUrl,
-  teamId,
-  (err, result) => {
-    if (err) {
-      session.endDialog('There is some error');
-    }
-    else {
-      session.endDialog('%s', JSON.stringify(result));
-    }
-  }
-);
-```
-
-## Fetching user profile or roster in personal or group chat
-
-You can also make the same API call for any personal chat to obtain the profile information of the user chatting with your bot.
-
-The API call and SDK methods are identical to fetching the team roster, as is the response object. The only difference is you pass the `conversationId` instead of the `teamId`.
-
-## Fetching the list of channels in a team
-
-Your bot can query the list of channels in a team.
-
-> [!NOTE]
->
->* The name of the default General channel is returned as `null` to allow for localization.
->* The channel ID for the General channel always matches the team ID.
-
-### REST API example
-
-You can directly issue a GET request on `/teams/{teamId}/conversations/`, using the value of `serviceUrl` as the endpoint.
-
-The only source for `teamId` is a message from the team context - either a message from a user or the message that your bot receives when it is added to a team (see [Bot or user added to a team](../../../_old/concepts/bots/bots-notifications.md#team-member-or-bot-addition)).
-
-> [!NOTE]
-> The value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value of `serviceUrl`.
-
-```json
-GET /v3/teams/19%3A033451497ea84fcc83d17ed7fb08a1b6%40thread.skype/conversations
-
-Response body
-{
-    "conversations": [{
-        "id": "19:033451497ea84fcc83d17ed7fb08a1b6@thread.skype",
-        "name": null
-    }, {
-        "id": "19:cc25e4aae50746ecbb11473bba24c70a@thread.skype",
-        "name": "Materials"
-    }, {
-        "id": "19:b7b84cba410c406ba671dbbf5e0a3519@thread.skype",
-        "name": "Design"
-    }, {
-        "id": "19:fc5db2aed489454e8f8c06829ed6c986@thread.skype",
-        "name": "Marketing"
-    }]
+    await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 }
 ```
 
-#### .NET example
+#### TeamsRosterClient.cs/GetTeamDetailsAsync
 
-The following example uses the `FetchChannelList` call from the [Microsoft Teams extensions for the Bot Builder SDK for .NET](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams):
+```cs
+public async Task<TeamDetails> GetTeamDetailsAsync(ITurnContext turnContext, CancellationToken cancellationToken)
+{
+    if (turnContext == null)
+    {
+        throw new ArgumentNullException(nameof(turnContext));
+    }
 
-```csharp
-ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelList(activity.GetChannelData<TeamsChannelData>().Team.Id);
+    var teamDetails = await _teamsConnectorClient.Teams.FetchTeamDetailsAsync(turnContext.Activity.GetChannelData<TeamsChannelData>().Team.Id, cancellationToken).ConfigureAwait(false);
+    return teamDetails;
+}
 ```
 
-#### Node.js example
+#### TeamsOperationsExtensions.cs/FetchTeamDetailsAsync
 
-The following example uses `fetchChannelList` call from the [Microsoft Teams extensions for the Bot Builder SDK for Node.js](https://www.npmjs.com/package/botbuilder-teams).
-
-```javascript
-var teamId = session.message.sourceEvent.team.id;
-connector.fetchChannelList(
-  (session.message.address).serviceUrl,
-  teamId,
-  (err, result) => {
-    if (err) {
-      session.endDialog('There is an error');
+```cs
+ public static async Task<TeamDetails> FetchTeamDetailsAsync(this ITeamsOperations operations, string teamId, CancellationToken cancellationToken = default(CancellationToken))
+{
+    using (var _result = await operations.FetchTeamDetailsWithHttpMessagesAsync(teamId, null, cancellationToken).ConfigureAwait(false))
+    {
+        return _result.Body;
     }
-    else {
-      session.endDialog('%s', JSON.stringify(result));
-    }
-  }
-);
+}
 ```
--->
+
+#### TeamsOperations.cs/FetchTeamDetailsWithHttpMessagesAsync
+
+```cs
+/// <summary>
+/// Fetches details related to a team
+/// </summary>
+/// <remarks>
+/// Fetch details for a team
+/// </remarks>
+/// <param name='teamId'>
+/// Team Id
+/// </param>
+/// <param name='customHeaders'>
+/// Headers that will be added to request.
+/// </param>
+/// <param name='cancellationToken'>
+/// The cancellation token.
+/// </param>
+/// <exception cref="HttpOperationException">
+/// Thrown when the operation returned an invalid status code
+/// </exception>
+/// <exception cref="SerializationException">
+/// Thrown when unable to deserialize the response
+/// </exception>
+/// <exception cref="ValidationException">
+/// Thrown when a required parameter is null
+/// </exception>
+/// <exception cref="System.ArgumentNullException">
+/// Thrown when a required parameter is null
+/// </exception>
+/// <return>
+/// A response object containing the response body and response headers.
+/// </return>
+public async Task<HttpOperationResponse<TeamDetails>> FetchTeamDetailsWithHttpMessagesAsync(string teamId, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+{
+    if (teamId == null)
+    {
+        throw new ValidationException(ValidationRules.CannotBeNull, "teamId");
+    }
+    // Tracing
+    bool _shouldTrace = ServiceClientTracing.IsEnabled;
+    string _invocationId = null;
+    if (_shouldTrace)
+    {
+        _invocationId = ServiceClientTracing.NextInvocationId.ToString();
+        Dictionary<string, object> tracingParameters = new Dictionary<string, object>();
+        tracingParameters.Add("teamId", teamId);
+        tracingParameters.Add("cancellationToken", cancellationToken);
+        ServiceClientTracing.Enter(_invocationId, this, "FetchTeamDetails", tracingParameters);
+    }
+    // Construct URL
+    var _baseUrl = Client.BaseUri.AbsoluteUri;
+    var _url = new System.Uri(new System.Uri(_baseUrl + (_baseUrl.EndsWith("/") ? "" : "/")), "v3/teams/{teamId}").ToString();
+    _url = _url.Replace("{teamId}", System.Uri.EscapeDataString(teamId));
+    // Create HTTP transport objects
+    var _httpRequest = new HttpRequestMessage();
+    HttpResponseMessage _httpResponse = null;
+    _httpRequest.Method = new HttpMethod("GET");
+    _httpRequest.RequestUri = new System.Uri(_url);
+    // Set Headers
+
+
+    if (customHeaders != null)
+    {
+        foreach(var _header in customHeaders)
+        {
+            if (_httpRequest.Headers.Contains(_header.Key))
+            {
+                _httpRequest.Headers.Remove(_header.Key);
+            }
+            _httpRequest.Headers.TryAddWithoutValidation(_header.Key, _header.Value);
+        }
+    }
+
+    // Serialize Request
+    string _requestContent = null;
+    // Set Credentials
+    if (Client.Credentials != null)
+    {
+        cancellationToken.ThrowIfCancellationRequested();
+        await Client.Credentials.ProcessHttpRequestAsync(_httpRequest, cancellationToken).ConfigureAwait(false);
+    }
+    // Send Request
+    if (_shouldTrace)
+    {
+        ServiceClientTracing.SendRequest(_invocationId, _httpRequest);
+    }
+    cancellationToken.ThrowIfCancellationRequested();
+    _httpResponse = await Client.HttpClient.SendAsync(_httpRequest, cancellationToken).ConfigureAwait(false);
+    if (_shouldTrace)
+    {
+        ServiceClientTracing.ReceiveResponse(_invocationId, _httpResponse);
+    }
+    HttpStatusCode _statusCode = _httpResponse.StatusCode;
+    cancellationToken.ThrowIfCancellationRequested();
+    string _responseContent = null;
+    if ((int)_statusCode != 200)
+    {
+        var ex = new HttpOperationException(string.Format("Operation returned an invalid status code '{0}'", _statusCode));
+        if (_httpResponse.Content != null) {
+            _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
+        }
+        else {
+            _responseContent = string.Empty;
+        }
+        ex.Request = new HttpRequestMessageWrapper(_httpRequest, _requestContent);
+        ex.Response = new HttpResponseMessageWrapper(_httpResponse, _responseContent);
+        if (_shouldTrace)
+        {
+            ServiceClientTracing.Error(_invocationId, ex);
+        }
+        _httpRequest.Dispose();
+        if (_httpResponse != null)
+        {
+            _httpResponse.Dispose();
+        }
+        throw ex;
+    }
+    // Create Result
+    var _result = new HttpOperationResponse<TeamDetails>();
+    _result.Request = _httpRequest;
+    _result.Response = _httpResponse;
+    // Deserialize Response
+    if ((int)_statusCode == 200)
+    {
+        _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
+        try
+        {
+            _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<TeamDetails>(_responseContent, Client.DeserializationSettings);
+        }
+        catch (JsonException ex)
+        {
+            _httpRequest.Dispose();
+            if (_httpResponse != null)
+            {
+                _httpResponse.Dispose();
+            }
+            throw new SerializationException("Unable to deserialize the response.", _responseContent, ex);
+        }
+    }
+    if (_shouldTrace)
+    {
+        ServiceClientTracing.Exit(_invocationId, _result);
+    }
+    return _result;
+}
+
+```
 
 <!-- Footnote-style links -->
 
