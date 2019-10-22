@@ -6,6 +6,8 @@ ms.date: 06/25/2019
 ---
 # Channel and Group chat conversations with a Microsoft Teams bot
 
+[!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
+
 Microsoft Teams allows users to bring bots into their channel or group chat conversations. By adding a bot to a team or chat, all users of the conversation can take advantage of the bot functionality right in the conversation. You can also access Teams-specific functionality within your bot like querying team information and @mentioning users.
 
 Chat in channels and group chats differ from personal chat in that the user needs to @mention the bot. If a bot is used in multiple scopes (personal, groupchat or channel) you will need to detect what scope the bot messages came from, and process them accordingly.

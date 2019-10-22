@@ -6,6 +6,8 @@ ms.date: 03/01/2018
 ---
 # Authenticate a user in a Microsoft Teams bot
 
+[!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
+
 There are many services that you may wish to consume inside your Teams app, and most of those services require authentication and authorization to get access to the service. Services include Facebook, Twitter, and of course Teams. Users of Teams have user profile information stored in Azure Active Directory (Azure AD) using Microsoft Graph. This article will focus on authentication using Azure AD to get access to this information.
 
 OAuth 2.0 is an open standard for authentication used by Azure AD and many other service providers. Understanding OAuth 2.0 is a prerequisite for working with authentication in Teams and Azure AD. The examples below use the OAuth 2.0 Implicit Grant flow with the goal of eventually reading the user's profile information from Azure AD and Microsoft Graph.

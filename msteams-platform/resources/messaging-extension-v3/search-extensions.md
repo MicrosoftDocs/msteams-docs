@@ -4,8 +4,9 @@ description: Describes how to develop search based messaging extensions
 keywords: teams messaging extensions messaging extensions search
 ms.date: 05/20/2019
 ---
-
 # Search with messaging extensions
+
+[!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
 
 Search based messaging extensions allow you to query your service and post that information in the form of a card, right into your message
 

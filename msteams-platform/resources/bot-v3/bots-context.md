@@ -6,6 +6,8 @@ ms.date: 05/20/2019
 ---
 # Get context for your Microsoft Teams bot
 
+[!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
+
 Your bot can access additional context about the team or chat, such as user profile. This information can be used to enrich your bot's functionality and provide a more personalized experience.
 
 > [!NOTE]

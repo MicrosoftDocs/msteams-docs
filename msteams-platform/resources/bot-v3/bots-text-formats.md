@@ -4,8 +4,9 @@ description: Describes text formatting support in bot conversations
 keywords: bots conversations messaging
 ms.date: 03/29/2018
 ---
-
 ## Formatting bot messages
+
+[!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
 You can set the optional [`TextFormat`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) property to control how your message's text content is rendered.
 

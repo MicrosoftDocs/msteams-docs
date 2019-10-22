@@ -5,6 +5,8 @@ keywords: teams scenarios proactive messaging conversation bot
 ---
 # Proactive messaging for bots
 
+[!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
+
 A proactive message is a message that is sent by a bot to start a conversation. You may want your bot to start a conversation for a number of reasons, including:
 
 * Welcome messages for personal bot conversations

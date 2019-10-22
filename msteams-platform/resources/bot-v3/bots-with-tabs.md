@@ -6,6 +6,8 @@ ms.date: 03/15/2018
 ---
 # Combine bots with tabs
 
+[!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
+
 Bots and tabs work well together, and are often combined into a single back-end service. This section describes best practices and common patterns for using tabs and bots together.
 
 ## Associating user identities across bot and tab

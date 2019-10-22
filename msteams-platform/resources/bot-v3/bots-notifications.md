@@ -6,6 +6,8 @@ ms.date: 05/20/2019
 ---
 # Handle bot events in Microsoft Teams
 
+[!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
+
 Microsoft Teams sends notifications to your bot for changes or events that happen in scopes where your bot is active. You can use these events to trigger service logic, such as the following:
 
 * Trigger a welcome message when your bot is added to a team

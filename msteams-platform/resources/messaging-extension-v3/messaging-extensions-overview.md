@@ -6,6 +6,8 @@ ms.date: 08/15/18
 ---
 # Develop messaging extensions for Microsoft Teams
 
+[!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
+
 Messaging extensions are a powerful way for users to engage with your app from Microsoft Teams. With this capability, users can query or post information to and from your service and post that information, in the form of cards, right into a message.
 
 ![Example of messaging extension card](~/assets/images/compose-extensions/ceexample.png)

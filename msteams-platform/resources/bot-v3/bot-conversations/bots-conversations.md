@@ -6,6 +6,8 @@ ms.date: 05/20/2019
 ---
 # Have a conversation with a Microsoft Teams bot
 
+[!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
+
 A conversation is a series of messages sent between your bot and one or more users. There are three kinds of conversations (also called scopes) in Teams:
 
 * `teams` Also called channel conversations, visible to all members of the channel.

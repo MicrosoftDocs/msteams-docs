@@ -6,6 +6,8 @@ ms.date: 03/20/2019
 ---
 # Test and debug your Microsoft Teams bot
 
+[!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
+
 When testing your bot you need to take into consideration both the context(s) you want your bot to run in, as well as any functionality you may have added to your bot that requires data specific to Microsoft Teams. Make sure that the method you chose to test your bot aligns with its functionality.
 
 ## Test by uploading to Teams

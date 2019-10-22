@@ -6,6 +6,8 @@ ms.date: 05/20/2019
 ---
 # Send and receive files through your bot
 
+[!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
+
 There are two ways to send files to and from a bot:
 
 * Using the Microsoft Graph APIs. This method works for bots in all scopes in Teams:
