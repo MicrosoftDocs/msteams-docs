@@ -1,8 +1,8 @@
 ---
-title: The lifecycle of an app built for Microsoft Teams
+title: Extensible points in the Teams Client
 author: clearab
 description: The Teams app lifecycle
 ms.topic: conceptual
 ms.author: anclear
 ---
-# The Teams app lifecycle
+# Extensible points in the Teams Client

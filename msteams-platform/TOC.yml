@@ -18,34 +18,50 @@
 - name: Concepts
   expaned: true
   items:
-    - name: 'Understand Teams app capabilities'
-      href: foo.md
+    - name: 'Extensible points in the Teams Client'
+      href: concepts/understand-teams-app-capabilities.md
     - name: 'Your Teams app lifecycle'
-      href: foo.md
-    - name: 'Plan your app'
+      href: concepts/teams-app-lifecycle.md
+    - name: 'Design your app'
       items:
         - name: 'Understand your use cases'
-          href: foo.md
-        - name: 'Choose the right capabilities'
-          href: foo.md
+          href: concepts/design/understand-use-cases.md
+        - name: 'Map use cases to features'
+          href: concepts/design/map-use-cases.md
         - name: 'Decide how you will distribute your app'
-          href: foo.md
-    - name: 'Design an effective app'
-      items:
-        - name: 'Communicate with users'
-          href: foo.md
-        - name: 'Design engaging and actionable cards'
-          href: foo.md
+          href: concepts/design/distribution-options.md
+        - name: UI Componenents 
+          items:
+          - name: 'Colors'
+            href: concepts/design/components/color.md
+          - name: 'Buttons, links and controls'
+            href: concepts/design/components/buttons.md
+          - name: 'Typography'
+            href: concepts/design/components/typograph.md
+          - name: 'Fields and Flyouts'
+            href: concepts/design/components/fields.md
     - name: 'Build and test your app'
       items:
+      - name: Use App Studio to create your app
+        href: concepts/build-and-test/app-studio-overview.md
+      - name: Prepare your Office 365 tenant
+        href: concepts/build-and-test/prepare-your-o365-tenant.md
       - name: asdf
         href: foo.md
-      - name: asdf
-        href: foo.md
-      - name: asdf
-        href: foo.md
-      - name: asdf
-        href: foo.md
+      - name: Localizing your app
+        href: concepts/build-and-test/apps-localization.md
+    - name: 'Deploy and publish your app'
+      items:
+        - name: Publish your app
+          href: concepts/deploy-and-publish/apps-publish.md
+        - name: AppSource checklist
+          href: concepts/deploy-and-publish/office-store-checklist.md
+        - name: AppSource guidance
+          href: concepts/deploy-and-publish/office-store-guidance.md
+        - name: Localizing your app
+          href: concepts/deploy-and-publish/apps-localization.md
+        - name: Application Certification
+          href: concepts/deploy-and-publish/application-certification.md
     - name: 'Authentication in Teams apps'
       items:
         - name: 'Aunthentication overview'
