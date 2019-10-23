@@ -15,7 +15,7 @@ This article describe how to exchange files with a user that interacts with Team
 
 ## Using the Microsoft Graph APIs
 
-You can post messages with card attachments referencing existing SharePoint files using the Microsoft Graph APIs for [OneDrive and SharePoint](/onedrive/developer/rest-api/). Using the Graph APIs requires obtaining authenticated access, through the standard OAuth 2.0 flow, to:
+You can post messages with card attachments referencing existing SharePoint files using the Microsoft Graph APIs for [OneDrive and SharePoint](https://docs.microsoft.com/onedrive/developer/rest-api/). Using the Graph APIs requires obtaining authenticated access, through the standard OAuth 2.0 flow, to:
 
 - A user's OneDrive folder (for `personal` and `groupchat` files).
 - Or to the files in a team's channels (for `channel` files). This method works in all Teams scopes.
@@ -30,15 +30,15 @@ Your bot can directly send and receive files with users in the `personal` contex
 
 ### Configure your bot to support files
 
-In order to send and receive files in your bot, you have to set the `supportsFiles` property in the manifest to `true`. This property is described in the [bots](~/resources/schema/manifest-schema.md#bots) section of the Manifest reference.
+To send and receive files in your bot, you must set the `supportsFiles` property in the manifest to `true`. This property is described in the [bots](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema#bots
+) section of the Manifest reference.
 
-The definition will look like this: `"supportsFiles": true`. If your bot does not enable `supportsFiles`, the following features will not work.
+The setting looks like this: `"supportsFiles": true`.
 
 ### Receiving files in personal chat
 
-When a user sends a file to your bot, the file is first uploaded to the user's OneDrive for Business storage. Your bot will then receive a message activity notifying you of the user upload. The activity will contain file metadata, such as its name and the content URL. You can directly read from this URL to fetch its binary content.
+When a user sends a file to the bot, the file is first uploaded to the user's OneDrive for Business storage. The bot will then receive a message activity notifying you of the user upload. The activity will contain file metadata, such as its name and the content URL. You can directly read from this URL to fetch its binary content.
 
-### Send and receive files through bot on Teams mobile app
 > [!NOTE] 
 > Sending and receiving files to bots on mobile devices is not supported.
 
@@ -72,8 +72,6 @@ As a best practice, you should acknowledge the file upload by sending back a mes
 
 ### Uploading files to personal chat
 
-Uploading a file to a user involves the following steps:
-
 1. Send a message to the user requesting permission to write the file. This message must contain a `FileConsentCard` attachment with the name of the file to be uploaded.
 2. If the user accepts the file download, your bot will receive an *Invoke* activity with a location URL.
 3. To transfer the file, your bot performs an `HTTP POST` directly into the provided location URL.
@@ -83,7 +81,7 @@ Uploading a file to a user involves the following steps:
 
 This message contains a simple attachment object requesting user permission to upload the file.
 
-![Screenshot of consent card requesting user permission to upload file](~/assets/images/bots/bot-file-consent-card.png)
+![Screenshot of consent card requesting user permission to upload file](../../../assets/images/bots/bot-file-consent-card.png)
 
 ```json
 {
@@ -113,7 +111,7 @@ The following table describes the content properties of the attachment:
 
 #### Invoke activity when the user accepts the file
 
-An invoke activity is sent to your bot if and when the user accepts the file. It contains the OneDrive for Business placeholder URL that your bot can then issue a `PUT` into to transfer the file contents. for information on uploading to the OneDrive URL read this article: [Upload bytes to the upload session](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
+An invoke activity is sent to your bot if and when the user accepts the file. It contains the OneDrive for Business placeholder URL that your bot can then issue a `PUT` into to transfer the file contents. for information on uploading to the OneDrive URL read this article: [Upload bytes to the upload session](https://docs.microsoft.com/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
 
 The following example shows an abridged version of the invoke activity that your bot will receive:
 
@@ -258,14 +256,8 @@ private static Attachment CreateFileConsentAttachment()
 }
 ```
 
-
-
-
-
-## Writing notes
-
-
 <!-- 
+## Writing notes
  * **Purpose** Show how to send and receive files
  * **Existing teams doc reference** 
    * [https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bots-files](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bots-files)
