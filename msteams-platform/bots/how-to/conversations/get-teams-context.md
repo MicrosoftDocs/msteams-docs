@@ -7,6 +7,8 @@ ms.author: anclear
 ---
 # Get Team's specific context for your bot
 
+<!--Include /includes/v4-to-v3-pointer-bots.md -->
+
 A bot can access additional context about the team or chat, such as user profile. This information can be used to enrich the bot's functionality and to provide a more personalized experience.
 
 
@@ -32,10 +34,10 @@ This section shows how to install the example bot using Microsoft Teams **App St
 1. In Teams, open **App Studio**. 
 1. Click the **Manifest editor** tab.
 1. In the left panel, click the **Create a new app** button.
-1. In the **Details** section, click the **App details**. 
-1. Enter the following  info:
+1. In the left panel, under the **Details** section, click **App details**.
+1. Enter the following  information:
     1. **Short name**. For this the example, enter *TeamsRostertBot*.  
-    1. Click the **Generate** button under **App ID**. You get an ID similar to this *772998ff-7fed-4275-b4e3-485cbf312850*. 
+    1. Click the **Generate** button under **App ID**. 
     1. **Package Name**. For this example, enter *com.teams.dev*.
     1. **Version** Enter *1.0.0*.
     1. **Short Description**. Enter *Testing simple teams roster bot*.
@@ -44,9 +46,9 @@ This section shows how to install the example bot using Microsoft Teams **App St
     1. **Website**. The name of your website. For this example, enter `https://www.microsoft.com*`.
     1. **Privacy statement** web address.  For this example, enter `https://www.teams.com/privacy`.
     1. **Terms of use** web address.  For this example, enter `https://www.teams.com/termsofuse`.
-1. In the left panel, in the **Capabilities** section, click the **Bots** link.
-1. Click the **Set up** button. 
-1. In the **New bot** tab, enter the following information:
+1. In the left panel, under the **Capabilities** section, click the **Bots** link.
+1. In the right panel, click the **Set up** button. 
+1. In the displayed wizard, select the **New bot** tab, enter the following information:
     1. **Name**. For this the example, enter *TeamsRostertBot*.
     1. **Scope**. Check all 3 boxes.
     1. Click the **Create** button.
