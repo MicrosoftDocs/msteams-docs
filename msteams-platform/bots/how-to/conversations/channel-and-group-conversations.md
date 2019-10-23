@@ -24,17 +24,22 @@ In Microsoft Teams there is no requirement that your bot function in all scopes,
 
 Developing a bot that works in groups or channels uses much of the same functionality used in personal conversations, with the addition of events and data in the payload that provide Teams group and channel information. The additional fun, as well as key differences in common functionality are described in the following sections.
 
+For more information on design considerations, refer to the [Teams Design Guidelines](https://aka.ms/teams-design-guidelines)
+
 ## Creating messages
 
-For information on how to create messages in channels see [Proactive messaging for bots](send-proactive-messages.md), and specifically [Creating a channel conversation](FOO.md#creating-a-channel-conversation).
+For information on how to create messages in channels see [Proactive messaging for bots](send-proactive-messages.md), and specifically [Creating a channel conversation](send-proactive-messages.md#creating-a-channel-conversation).
 
-___TBD - OPEN ISSUE: What about "Reply to Group" (or "Reply to Personal"?) ___
+## `TBD - OPEN ISSUE: What about "Reply to Group" (or "Reply to Personal"?)` 
 
 ## Replying to messages
 
 You respond to messages in a channel by initiating reply chain by passing the Channel Id and any desired message to the `TeamsCreateConversation` method, with additional messages to the reply chain using the `ContinueConversation` method. The following are the steps you can take to create a basic Teams bot:
 
+# [C#](#tab/csharp)
+
 1. Get your bots application ID in the constructor, you will need it to when sending messages to the Teams channel. The following code demonstrates getting the AppId from your configuration file, which is generally __AppSettings.json__ if using C#.
+
 
     ```csharp
       public class ReplyToChannelBot : ActivityHandler
@@ -50,6 +55,7 @@ You respond to messages in a channel by initiating reply chain by passing the Ch
 
       }
     ```
+
 2. You will also need the ID of the Teams channel your bot is being called from. There is a Teams extension method in the `Activity` class named `TeamsGetChannelId` that you can call to get your channel once the `OnMessageActivity` method is invoked.
 
     ```csharp
@@ -67,6 +73,7 @@ You respond to messages in a channel by initiating reply chain by passing the Ch
         }
       }
     ```
+
 3. Now that you have your Teams channel ID you can create your desired message and send it to the channel, which creates a reply chain. 
 
     ```csharp
@@ -88,6 +95,7 @@ You respond to messages in a channel by initiating reply chain by passing the Ch
           }
       }
     ```
+
 4. You can send additional messages within the reply chain by calling the `ContinueConversation` method.
 
     ```csharp
@@ -113,12 +121,18 @@ You respond to messages in a channel by initiating reply chain by passing the Ch
           }
       }
     ```
+<!--
+# [JavaScript](#tab/javascript)
+-->
 
+---
 
 ### Putting it all together, the ReplyToChannelBot class:
 
 The following C# sample code demonstrates the concepts discussed previously, putting it all together into a bot.
 
+
+# [C#](#tab/csharp)
 
 ```csharp
 using System.Threading;
@@ -161,11 +175,35 @@ namespace Microsoft.BotBuilderSamples.Bots
 }
 ```
 
+<!--
+# [JavaScript](#tab/javascript)
+-->
+
+---
+
 Running this bot, you should get similar results to the following:
 
 ![Reply To Channel Bot](Media/ReplyToChannelBot.png)
 
 
+
+## Best practice: Welcome messages in Teams
+
+When your bot is first added to the group or team, it may be useful to send a welcome message introducing it to all team members. The welcome message should provide a description of the bot’s functionality and benefits. Ideally the message should also include any commands needed to interact with it. To do this, ensure that your bot responds to the `conversationUpdate` event, with the `teamMemberAdded` EventType in the `channelData` object.  Since the `teamMemberAdded` EventType is sent when any new team member is added, not just when the bot is added, so you need to check to determine if the new member added is the bot before sending any welcome message from the bot to the team. See [Sending a welcome message to a new team member](subscribe-to-conversation-events.md#Sending-a-welcome-message-to-a-new-team-member) in the article [Subscribe to conversation events](subscribe-to-conversation-events.md) for more details on sending a welcome message when the bot or a new team member is added. 
+
+You might also want to send a personal message to each member of the team when the bot is added. To do this, you could get the team roster and send each user a direct message.
+
+It is not recommended to send a welcome message in the following situations:
+
+* The team is large (obviously subjective, but for example larger than 100 members). Your bot may be seen as 'spammy' and the person who added it may get complaints unless you clearly communicate your bot's value proposition to everyone who sees the welcome message.
+
+* Your bot is first mentioned in a group or channel (versus being first added to a team)
+
+* A group or channel is renamed
+
+* A team member is added to a group or channel
+
+For more best practices, see our [design guidelines](https://aka.ms/teams-design-guidelines).
 
 
 
@@ -209,6 +247,8 @@ The `Mention` object has two properties that you will need to set:
 
 The following code snippet demonstrates a bot that responds to a message sent to it with "Hello" followed with an @mention of the user that sent the message.
 
+# [C#](#tab/csharp)
+
 ```csharp
 public class MentionsBot : ActivityHandler
 {
@@ -235,8 +275,11 @@ public class MentionsBot : ActivityHandler
 }
 ```
 
+<!--
+# [JavaScript](#tab/javascript)
+-->
 
-
+---
 
 
 ## Sending notifications
@@ -251,12 +294,22 @@ public class MentionsBot : ActivityHandler
 
 In order to parse the incoming message so that you can isolate and react to the command sent by the user, you first need to remove the @Mention from the incoming text. For example, if you send the message "notify" to the bot, the message text that the bot receives will be "<at>BotName</at> notify". The bot framework makes it easy to parse out the "<at>BotName</at> " with a built in method in the `Activity` class named `RemoveRecipientMention`, which you could call upon entering the OnMessageActivity method.
 
+# [C#](#tab/csharp)
+
 ```csharp
 turnContext.Activity.RemoveRecipientMention();
 ```
 
+<!--
+# [JavaScript](#tab/javascript)
+-->
+
+---
+
 Next, you will need to evaluate the message text and respond accordingly, calling `TeamsNotifyUser` for the command that will require sending a notification to the user, responding with a list of valid commands if none are found etc.
 
+
+# [C#](#tab/csharp)
 
 ```csharp
 if (turnContext.Activity.Text == "notify")
@@ -301,10 +354,17 @@ else
 }
 ```
 
+<!--
+# [JavaScript](#tab/javascript)
+-->
+
+---
+
+
 ## Additional Information
 
-* [Overview of teams and channels in Microsoft Teams](https://docs.microsoft.com/en-us/MicrosoftTeams/teams-channels-overview)
-* [Manage notifications in Teams](https://support.office.com/en-us/article/manage-notifications-in-teams-1cc31834-5fe5-412b-8edb-43fecc78413d)
+* [Overview of teams and channels in Microsoft Teams](https://aka.ms/teams-overview-teams-channels)
+* [Manage notifications in Teams](https://aka.ms/support-teams-manage-notifications)
 
 <!--
 
