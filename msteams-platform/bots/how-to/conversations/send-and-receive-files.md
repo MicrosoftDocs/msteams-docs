@@ -5,31 +5,28 @@ description: How to send and receive files with your Microsoft Teams bot.
 ms.topic: overview
 ms.author: anclear
 ---
-# Bot scopes and threaded conversations
+# Send and receive files with a bot
 
 <!-- It was named "Send and receive files through your bot" -->
+This article describe how to exchange files with a user that interacts with Teams using a bot. There are two approaches to choose from:
 
-There are two ways to send files to and from a bot:
-
-* Using the Microsoft Graph APIs. This method works for bots in all scopes in Teams:
-  * `personal`
-  * `channel`
-  * `groupchat`
-* Using the Teams APIs. These only support files in one context:
-  * `personal`
+1. **Microsoft Graph API**s**. It supports all three scopes: `personal`, `channel`, and `groupchat`
+1. **Teams APIs**. It only supports `personal` scope.
 
 ## Using the Microsoft Graph APIs
 
-You can post messages with card attachments referencing existing SharePoint files using the Microsoft Graph APIs for [OneDrive and SharePoint](/onedrive/developer/rest-api/). Using the Graph APIs requires obtaining access to a user's OneDrive folder (for `personal` and `groupchat` files) or the files in a team's channels (for `channel` files) through the standard OAuth 2.0 authorization flow. This method works in all Teams scopes.
+You can post messages with card attachments referencing existing SharePoint files using the Microsoft Graph APIs for [OneDrive and SharePoint](/onedrive/developer/rest-api/). Using the Graph APIs requires obtaining authenticated access, through the standard OAuth 2.0 flow, to:
+
+- A user's OneDrive folder (for `personal` and `groupchat` files).
+- Or to the files in a team's channels (for `channel` files). This method works in all Teams scopes.
 
 ## Using the Teams Bot APIs
 
+Your bot can directly send and receive files with users in the `personal` context, also known as personal chats, using Teams APIs. This lets you implement scenarios such expense reporting, image recognition, file archival, e-signatures, and other scenarios involving direct manipulation of file content. Files shared in Teams typically appear as cards, and allow rich in-app viewing.  The API is provided as part of the **Microsoft Teams Bot Platform**.
+
+
 > [!NOTE]
 > This method works only in the `personal` context. It does not work in the `channel` or `groupchat` context.
-
-Your bot can directly send and receive files with users in the `personal` context, also known as personal chats, using Teams APIs. This lets you implement expense reporting, image recognition, file archival, e-signatures, and other scenarios involving direct manipulation of file content. Files shared in Teams typically appear as cards, and allow rich in-app viewing.
-
-The following sections describe how to do this to send file content as a result of direct user interaction, like sending a message. This API is provided as part of the Microsoft Teams Bot Platform.
 
 ### Configure your bot to support files
 
