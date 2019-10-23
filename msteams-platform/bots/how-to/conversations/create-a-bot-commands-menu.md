@@ -9,7 +9,7 @@ ms.author: anclear
 
 Creating a command menu enables you to give your users a list of commands that your bot is designed to execute, along with simple help text associated with each command that you can use to explain the command. The user can select the command from the list and it is placed in the message, then all they need to do is click __Send__.
 
-![Bot command menu](Media\bot-menu-sample.png)
+![Bot command menu](Media/bot-menu-sample.png)
 
 
 ## Create a command menu for your bot
