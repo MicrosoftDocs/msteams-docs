@@ -5,16 +5,16 @@
       href: overview.md
 - name: Tutorials
   items:
-  - name: Create tab and bot app using C#
-    href: _old/get-started/get-started-dotnet-app-studio.md
-  - name: Create tab and bot app using Node
-    href: _old/get-started/get-started-nodejs-app-studio.md
+  - name: Create an app using C#
+    href: tutorials/get-started-dotnet-app-studio.md
+  - name: Create an app using Node
+    href: tutorials/get-started-nodejs-app-studio.md
 - name: Samples and templates
   items: 
   - name: Sample apps
-    href: _old/samples/code-samples.md
+    href: samples/code-samples.md
   - name: Production-ready app templates
-    href: _old/samples/app-templates.md
+    href: samples/app-templates.md
 - name: Concepts
   expaned: true
   items:
