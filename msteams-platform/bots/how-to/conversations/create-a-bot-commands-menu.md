@@ -157,9 +157,7 @@ turnContext.Activity.RemoveRecipientMention();
 
 
 
-
-
-<!--
+<!-->
 ## Writing notes
 
  * **Purpose** Explain how to add a bot command menu to your teams bot using your app manifest. Needs to include a note that this doesn't work on the mobile Team's clients.
@@ -169,5 +167,4 @@ turnContext.Activity.RemoveRecipientMention();
    * none
  * **Code Snippets**
    * none
-
-   -->
+-->
