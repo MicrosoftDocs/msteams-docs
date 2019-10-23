@@ -5,7 +5,6 @@ description: How to send, receive, and handle messages for a bot in a channel or
 ms.topic: overview
 ms.author: anclear
 ---
- <!-- # Channel and group conversations  -->
 
 # Channel and Group chat conversations with a Microsoft Teams bot
 
@@ -189,7 +188,7 @@ Running this bot, you should get similar results to the following:
 
 ## Best practice: Welcome messages in Teams
 
-When your bot is first added to the group or team, it may be useful to send a welcome message introducing it to all team members. The welcome message should provide a description of the bot’s functionality and benefits. Ideally the message should also include any commands needed to interact with it. To do this, ensure that your bot responds to the `conversationUpdate` event, with the `teamMemberAdded` EventType in the `channelData` object.  Since the `teamMemberAdded` EventType is sent when any new team member is added, not just when the bot is added, so you need to check to determine if the new member added is the bot before sending any welcome message from the bot to the team. See [Sending a welcome message to a new team member](subscribe-to-conversation-events.md#Sending-a-welcome-message-to-a-new-team-member) in the article [Subscribe to conversation events](subscribe-to-conversation-events.md) for more details on sending a welcome message when the bot or a new team member is added. 
+When your bot is first added to the group or team, it may be useful to send a welcome message introducing it to all team members. The welcome message should provide a description of the bot’s functionality and benefits. Ideally the message should also include any commands needed to interact with it. To do this, ensure that your bot responds to the `conversationUpdate` event, with the `teamMemberAdded` EventType in the `channelData` object.  Since the `teamMemberAdded` EventType is sent when any new team member is added, not just when the bot is added, you need to check to determine if the new member added is the bot or a new team member before sending any welcome message from the bot to the team. See [Sending a welcome message to a new team member](subscribe-to-conversation-events.md#Sending-a-welcome-message-to-a-new-team-member) in the article [Subscribe to conversation events](subscribe-to-conversation-events.md) for more details on sending a team wide welcome message when the bot or a new team member is added. 
 
 You might also want to send a personal message to each member of the team when the bot is added. To do this, you could get the team roster and send each user a direct message.
 
@@ -391,7 +390,7 @@ public static void TeamsNotifyUser(this IActivity activity)
 
 
 
-<!-- 
+<!--
 ## Writing notes
 
  * **Purpose** Describe the nuances of using a bot in a channel or group chat. Should include:
@@ -400,12 +399,12 @@ public static void TeamsNotifyUser(this IActivity activity)
    * Parsing and creating `@` mentions (including the need to sometimes strip the bot's mention in the incoming message before processing)
    * Creating Activity Feed notifications
  * **Existing teams doc reference** 
-   * [https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bot-conversations/bots-conv-channel](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bot-conversations/bots-conv-channel)
-   * [https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/activity-feed](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/activity-feed)
+   * [bots-conv-channel](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bot-conversations/bots-conv-channel)
+   * [activity-feed](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/activity-feed)
  * **Existing Bot framework doc reference**
    * none
  * **Code Snippets** 
-   * [https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/ReplyToChannel](https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/ReplyToChannel)
-   * Activity feed notifications: [https://github.com/microsoft/botbuilder-dotnet/blob/5820ffb69beb6ca35114017663de62734f77689c/tests/Teams/Helpers/Bots/HelperBot.cs#L25][https://github.com/microsoft/botbuilder-dotnet/blob/5820ffb69beb6ca35114017663de62734f77689c/tests/Teams/Helpers/Bots/HelperBot.cs#L25]
-   * [https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/Mentions](https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/Mentions)
+   * [ReplyToChannel](https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/ReplyToChannel)
+   * [Activity feed notifications](https://github.com/microsoft/botbuilder-dotnet/blob/5820ffb69beb6ca35114017663de62734f77689c/tests/Teams/Helpers/Bots/HelperBot.cs#L25)
+   * [Mentions](https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/Mentions)
   -->
