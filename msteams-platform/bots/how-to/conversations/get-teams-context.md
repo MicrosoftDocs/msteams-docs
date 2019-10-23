@@ -9,8 +9,7 @@ ms.author: anclear
 
 <!--Include /includes/v4-to-v3-pointer-bots.md -->
 
-A bot can access additional context about the team or chat, such as user profile. This information can be used to enrich the bot's functionality and to provide a more personalized experience.
-
+A bot can access additional context data about the team or chat. This information can be used to enrich the bot's functionality and to provide a more personalized experience.
 
 ## Prerequisites
 
