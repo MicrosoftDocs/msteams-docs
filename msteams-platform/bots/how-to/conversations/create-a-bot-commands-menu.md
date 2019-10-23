@@ -145,9 +145,6 @@ Bots in a group or channel respond only when they are mentioned ("@botname") dir
 turnContext.Activity.RemoveRecipientMention();
 ```
 
-
-
-
 ## Command menu best practices
 
 * Keep it simple: The bot menu is meant to present the key capabilities of your bot.
@@ -157,7 +154,7 @@ turnContext.Activity.RemoveRecipientMention();
 
 
 
-<!-->
+<!--
 ## Writing notes
 
  * **Purpose** Explain how to add a bot command menu to your teams bot using your app manifest. Needs to include a note that this doesn't work on the mobile Team's clients.
