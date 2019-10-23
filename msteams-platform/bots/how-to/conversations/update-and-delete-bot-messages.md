@@ -9,8 +9,6 @@ ms.author: anclear
 
 
 ## Updating messages
-<!-- https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bot-conversations/bots-conversations#updating-messages -->
-
 
 Rather than have your messages be static snapshots of data, your bot can dynamically update messages inline after sending them. You can use dynamic message updates for scenarios such as poll updates, modifying available actions after a button press, or any other asynchronous state change.
 
@@ -38,8 +36,6 @@ foreach (var activityId in _list)
 
 
 ## Deleting messages
-<!-- https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bot-conversations/bots-conversations#deleting-messages -->
-
 
 Messages can be deleted using the bot frameworks DeleteActivity method as shown here.
 
@@ -62,12 +58,18 @@ foreach (var activityId in _list)
 
 
 
+
+<!--
 ## Writing notes
 
- * **Purpose** How to update and delete messages sent from your bot
- * **Existing teams doc reference** 
-   * some of: [bots-conversations](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bot-conversations/bots-conversations)
- * **Existing Bot framework doc reference**
-   * none?
- * **Code Snippets** 
-   * [ActivityUpdateAndDelete](https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/ActivityUpdateAndDelete)
+* **Purpose** How to update and delete messages sent from your bot
+* **Existing teams doc reference** 
+  * some of: [bots-conversations](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bot-conversations/bots-conversations)
+* **Existing Bot framework doc reference**
+  * none?
+* **Code Snippets** 
+  * [Updating messages](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bot-conversations/bots-conversations#updating-messages)
+  * [Deleting messages](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bot-conversations/bots-conversations#deleting-messages)
+-->   
+ 
+
