@@ -42,14 +42,20 @@
             href: concepts/design/components/fields.md
     - name: 'Build and test your app'
       items:
+      - name: Prepare your Office 365 tenant
+        href: concepts/build-and-test/prepare-your-o365-tenant.md      
       - name: Use App Studio to create your app
         href: concepts/build-and-test/app-studio-overview.md
-      - name: Prepare your Office 365 tenant
-        href: concepts/build-and-test/prepare-your-o365-tenant.md
-      - name: asdf
-        href: foo.md
+      - name: Create your app package
+        href: concepts/build-and-test/apps-package.md
+      - name: Test and debug your app
+        href: concepts/build-and-test/debug.md
+      - name: Use deep links for navigation
+        href: concepts/build-and-test/deep-links.md
       - name: Localizing your app
         href: concepts/build-and-test/apps-localization.md
+      - name: Create a Share-to-Teams button for your website
+        href: concepts/build-and-test/share-to-teams.md
     - name: 'Deploy and publish your app'
       items:
         - name: Publish your app

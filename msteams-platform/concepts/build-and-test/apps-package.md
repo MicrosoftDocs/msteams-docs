@@ -2,12 +2,12 @@
 title: Package your app
 description: Learn how to package your app for testing, uploading, and publishing in Microsoft Teams
 keywords: teams apps packaging
-ms.date: 01/22/2018
+ms.topic: conceptual
 ---
 
 # Create an app package for your Microsoft Teams app
 
-App experiences in Teams are defined by their app manifest, and bundled in an app package for use in uploading or AppSource submission. You'll need an app package to test your experience in Teams, via the [upload](~/concepts/apps/apps-upload.md) process.
+Apps in Teams are defined by an app manifest JSON file, and bundled in an app package with their icons. You'll need an app package to upload and install your app in Teams, and to publish to either you Line of Business app catalog or to AppSource.
 
 A Teams app package is a .zip file containing the following:
 
@@ -16,7 +16,7 @@ A Teams app package is a .zip file containing the following:
 
 ## Creating a manifest
 
-*Teams App Studio* is a new tool that can help configure your manifest. It also contains a React control library and configurable samples for cards. See [Getting started with Teams App Studio](~/get-started/get-started-app-studio.md).
+*Teams App Studio* can help configure your manifest. It also contains a React control library and configurable samples for cards. See [App Studio Overview](~/concepts/build-and-test/app-studio-overview.md).
 
 Your manifest file must be named "manifest.json" and be at the top level of the upload package. Note that manifests and packages built previously might support an older version of the schema. For Teams apps and especially AppSource (formerly Office Store) submission, you must use the current [manifest schema](~/resources/schema/manifest-schema.md).
 
@@ -27,15 +27,18 @@ Your manifest file must be named "manifest.json" and be at the top level of the 
 
 ## Icons
 
+> [!Note]
+> If your app contains a bot or messaging extension, the icons used will be the icons uploaded to your bot registration in the Bot Framework.
+
 Microsoft Teams requires two icons for your app experience, to be used within the product. Icons must be included in the package and referenced via relative paths in the manifest. The maximum length of each path is 2048 bytes, and the format of the icon is .png.
 
 ### color
 
-The `color` icon is used throughout Microsoft Teams (in app and tab galleries, bots, flyouts, and so on). This icon should be 192&times;192 pixels. Your icon can be any color (or colors), but the background should be your branded accent color. It should also have a small amount of padding surrounding the icon to accommodate the hexagonal cropping for the bot version of the icon.
+The `color` icon is used throughout Microsoft Teams (in app and tab galleries, bots, flyouts, and so on). This icon should be 192x192 pixels. Your icon can be any color (or colors), but the background should be your branded accent color. It should also have a small amount of padding surrounding the icon to accommodate the hexagonal cropping for the bot version of the icon.
 
 ### outline
 
-The `outline` icon is used in these places: the app bar and messaging extensions the user has marked as a "favorite." This icon must be 32&times;32 pixels. Your outline icon must contain only white and transparency (no other colors). The icon can be white with transparent background or transparent with a white background. The outline icon should not have extra padding surrounding the icon and should be as tightly cropped as possible while still maintaining the 32x32 dimensions. Here are a few good examples:
+The `outline` icon is used in these places: the app bar and messaging extensions the user has marked as a "favorite." This icon must be 32x32 pixels. Your outline icon must contain only white and transparency (no other colors). The icon can be white with transparent background or transparent with a white background. The outline icon should not have extra padding surrounding the icon and should be as tightly cropped as possible while still maintaining the 32x32 dimensions. Here are a few good examples:
 
 ![Sample outline icons](~/assets/images/icons/sample20x20s.png)
 
@@ -56,5 +59,3 @@ Here's how the icons would appear in the UI:
 #### App bar and home screen
 
 ![Sample Contoso icons](~/assets/images/icons/appbarhomescreen.png)
- 
-> Hitting problems? See the [troubleshooting guide](~/troubleshoot/troubleshoot.md).
