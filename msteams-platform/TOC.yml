@@ -58,14 +58,18 @@
         href: concepts/build-and-test/share-to-teams.md
     - name: 'Deploy and publish your app'
       items:
+        - name: Upload your app for a team or user
+          href: concepts/deploy-and-publish/apps-upload.md
         - name: Publish your app
           href: concepts/deploy-and-publish/apps-publish.md
-        - name: AppSource checklist
-          href: concepts/deploy-and-publish/office-store-checklist.md
-        - name: AppSource guidance
-          href: concepts/deploy-and-publish/office-store-guidance.md
-        - name: Application Certification
-          href: concepts/deploy-and-publish/application-certification.md
+        - name: Publishing to AppSource
+          items:
+          - name: AppSource guidance
+            href: concepts/deploy-and-publish/office-store-guidance.md
+          - name: AppSource checklist
+            href: concepts/deploy-and-publish/office-store-checklist.md
+          - name: Application Certification
+            href: concepts/deploy-and-publish/application-certification.md
     - name: 'Authentication in Teams apps'
       items:
         - name: 'Authentication overview'
@@ -249,10 +253,12 @@
           href: tabs/how-to/using-teams-client-sdk.md
         - name: 'Adding your custom tab to SharePoint'
           href: tabs/how-to/tabs-in-sharepoint.md
-- name: 'Task modules'
+- name: 'Task modules and cards'
   items:
     - name: 'What are task modules?'
-      href: task-modules/what-are-task-modules.md
+      href: task-modules-and-cards/what-are-task-modules.md
+    - name: 'What are cards?'
+      href: task-modules-and-cards/what-are-cards.md
     - name: Samples
       href: old/samples/code-samples.md
     - name: 'Design your task module'
