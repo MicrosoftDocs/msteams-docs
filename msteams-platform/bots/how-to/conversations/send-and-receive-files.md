@@ -139,82 +139,106 @@ The following table describes the content properties of the attachment:
 
 ## Example
 
-The following example shows how you can handle file uploads and send file consent requests to the user in the bot's dialog.
+The following example shows how you can handle file uploads and send file consent requests to the user in the bot's dialog. The code snippets shown next, belong to a complete runnable example you can download at this location: [FileUpload](https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/FileUpload).
 
-```csharp
+You can install this bot at any scope. When the user `@mention` the bot will display an upload card. If the user can accept or decline to upload the file. If she accepts, the file will be uploaded to her **OneDrive** storage.
 
-// This sample dialog shows two simple flows:
-// 1) A silly example of receiving a file from the user, processing the key elements,
-//    and then constructing the attachment and sending it back.
-// 2) Creating a new file consent card requesting user permission to upload a file.
-private async Task MessageReceivedAsync(IDialogContext context, IAwaitable<object> result)
+```cs
+
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
-    var replyMessage = context.MakeMessage();
-    Attachment returnCard;
-
-    var message = await result as Activity;
-
-    // Check to see if the user is sending the bot a file.
-    if (message.Attachments != null && message.Attachments.Any())
+    bool messageWithFileDownloadInfo = turnContext.Activity.Attachments?[0].ContentType == FileDownloadInfo.ContentType;
+    if (messageWithFileDownloadInfo)
     {
-        var attachment = message.Attachments.First();
+        var file = turnContext.Activity.Attachments[0];
+        var fileDownload = JObject.FromObject(file.Content).ToObject<FileDownloadInfo>();
 
-        if (attachment.ContentType == FileDownloadInfo.ContentType)
+        string filePath = Path.Combine("Files", file.Name);
+
+        var client = _clientFactory.CreateClient();
+        var response = await client.GetAsync(fileDownload.DownloadUrl);
+        using (var fileStream = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None))
         {
-            FileDownloadInfo downloadInfo = (attachment.Content as JObject).ToObject<FileDownloadInfo>();
-            if (downloadInfo != null)
-            {
-                returnCard = CreateFileInfoAttachment(downloadInfo, attachment.Name, attachment.ContentUrl);
-                replyMessage.Attachments.Add(returnCard);
-            }
+            await response.Content.CopyToAsync(fileStream);
         }
+
+        var reply = ((Activity)turnContext.Activity).CreateReply();
+        reply.TextFormat = "xml";
+        reply.Text = $"Complete downloading <b>{file.Name}</b>";
+        await turnContext.SendActivityAsync(reply, cancellationToken);
     }
     else
     {
-        // Illustrates creating a file consent card.
-        returnCard = CreateFileConsentAttachment();
-        replyMessage.Attachments.Add(returnCard);
+        string filename = "teams-logo.png";
+        string filePath = Path.Combine("Files", filename);
+        long fileSize = new FileInfo(filePath).Length;
+        await SendFileCardAsync(turnContext, filename, fileSize, cancellationToken);
     }
-    await context.PostAsync(replyMessage);
 }
 
-
-private static Attachment CreateFileInfoAttachment(FileDownloadInfo downloadInfo, string name, string contentUrl)
+private async Task SendFileCardAsync(ITurnContext turnContext, string filename, long filesize, CancellationToken cancellationToken)
 {
-    FileInfoCard card = new FileInfoCard()
+    var consentContext = new Dictionary<string, string>
     {
-        FileType = downloadInfo.FileType,
-        UniqueId = downloadInfo.UniqueId
+        { "filename", filename },
     };
 
-    Attachment att = card.ToAttachment();
-    att.ContentUrl = contentUrl;
-    att.Name = name;
-
-    return att;
-}
-
-private static Attachment CreateFileConsentAttachment()
-{
-    JObject acceptContext = new JObject();
-    // Fill in any additional context to be sent back when the user accepts the file.
-
-    JObject declineContext = new JObject();
-    // Fill in any additional context to be sent back when the user declines the file.
-
-    FileConsentCard card = new FileConsentCard()
+    var fileCard = new FileConsentCard
     {
-        AcceptContext = acceptContext,
-        DeclineContext = declineContext,
-        SizeInBytes = 102635,
-        Description = "File description"
+        Description = "This is the file I want to send you",
+        SizeInBytes = filesize,
+        AcceptContext = consentContext,
+        DeclineContext = consentContext,
     };
 
-    Attachment att = card.ToAttachment();
-    att.Name = "Example file";
+    var asAttachment = new Attachment
+    {
+        Content = fileCard,
+        ContentType = FileConsentCard.ContentType,
+        Name = filename,
+    };
 
-    return att;
+    var replyActivity = turnContext.Activity.CreateReply();
+    replyActivity.Attachments = new List<Attachment>() { asAttachment };
+
+    await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 }
+
+protected override async Task OnTeamsFileConsentAcceptAsync(ITurnContext<IInvokeActivity> turnContext, FileConsentCardResponse fileConsentCardResponse, CancellationToken cancellationToken)
+{
+    try
+    {
+        JToken context = JObject.FromObject(fileConsentCardResponse.Context);
+
+        string filePath = Path.Combine("Files", context["filename"].ToString());
+        long fileSize = new FileInfo(filePath).Length;
+        var client = _clientFactory.CreateClient();
+        using (var fileStream = File.OpenRead(filePath))
+        {
+            var fileContent = new StreamContent(fileStream);
+            fileContent.Headers.ContentLength = fileSize;
+            fileContent.Headers.ContentRange = new ContentRangeHeaderValue(0, fileSize - 1, fileSize);
+            await client.PutAsync(fileConsentCardResponse.UploadInfo.UploadUrl, fileContent, cancellationToken);
+        }
+
+        await FileUploadCompletedAsync(turnContext, fileConsentCardResponse, cancellationToken);
+    }
+    catch (Exception e)
+    {
+        await FileUploadFailedAsync(turnContext, e.ToString(), cancellationToken);
+    }
+}
+
+protected override async Task OnTeamsFileConsentDeclineAsync(ITurnContext<IInvokeActivity> turnContext, FileConsentCardResponse fileConsentCardResponse, CancellationToken cancellationToken)
+{
+    JToken context = JObject.FromObject(fileConsentCardResponse.Context);
+
+    var reply = ((Activity)turnContext.Activity).CreateReply();
+    reply.TextFormat = "xml";
+    reply.Text = $"Declined. We won't upload file <b>{context["filename"]}</b>.";
+    await turnContext.SendActivityAsync(reply, cancellationToken);
+}
+
 ```
 
 <!-- 
