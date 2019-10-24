@@ -7,7 +7,7 @@ ms.author: anclear
 ---
 # Update and delete messages sent from your bot
 
-[!INCLUDE [pre-release-label](~/includes/pre-release-label.md)]
+[!INCLUDE [pre-release-label](../../../includes/v4-to-v3-pointer-bots.md)]
 
 ## Updating messages
 
