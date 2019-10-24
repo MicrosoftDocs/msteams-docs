@@ -96,7 +96,7 @@ The following table describes the content properties of the attachment:
 
 As a best practice, you should acknowledge the file upload by sending back a message to the user.
 
-Similarly, if the user declines the file, your bot will receive the following event, with the same overall activity name:
+If the user declines the file, your bot will receive the following event, with the same overall activity name:
 
 ```json
 {
@@ -113,7 +113,7 @@ Similarly, if the user declines the file, your bot will receive the following ev
 
 ### Notifying the user about an uploaded file
 
-After uploading a file to the user's OneDrive, whether you use the mechanism described above or OneDrive user delegated APIs, you should send a confirmation message to the user. This message should contain  a `FileCard` attachment that the user can click on, either to preview it, open it in OneDrive, or download locally. The following is an example. 
+After uploading a file to the user's OneDrive, you should send a confirmation message to the user. This message should contain  a `FileCard` attachment that the user can click on, either to preview it, open it in OneDrive, or download locally. The following is an example. 
 
 ```json
 {
@@ -122,14 +122,15 @@ After uploading a file to the user's OneDrive, whether you use the mechanism des
     "contentUrl": "https://contoso.sharepoint.com/personal/johnadams_contoso_com/Documents/Applications/file_example.txt",
     "name": "file_example.txt",
     "content": {
-      "uniqueId": "1150D938-8870-4044-9F2C-5BBDEBA70C8C",
-      "fileType": "txt",
+      "uniqueId": "<unique ID>",
+      "fileType": "png",
     }
   }]
 }
+
 ```
 
-The following table describes the content properties of the attachment: 
+The following table describes the content properties of the attachment:
 
 | Property | Purpose |
 | --- | --- |
