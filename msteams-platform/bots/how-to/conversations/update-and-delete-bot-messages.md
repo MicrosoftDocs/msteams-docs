@@ -7,6 +7,7 @@ ms.author: anclear
 ---
 # Update and delete messages sent from your bot
 
+[!INCLUDE [pre-release-label](~/includes/pre-release-label.md)]
 
 ## Updating messages
 
