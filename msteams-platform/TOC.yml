@@ -96,8 +96,6 @@
               href: foo.md
             - name: TypeScript/Node.js
               href: foo.md
-    - name: Samples
-      href: old/samples/code-samples.md
     - name: 'Design your messaging extension'
       items:
         - name: 'Design your messaging extension'
@@ -141,8 +139,6 @@
           href: foo.md
         - name: 'Create a channel bot'
           href: foo.md
-    - name: Samples
-      href: old/samples/code-samples.md
     - name: 'Design your bot'
       items:
         - name: 'something somethign Design'
@@ -222,14 +218,12 @@
               href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
             - name: 'Create a personal tab'
               href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-    - name: Samples
-      href: old/samples/code-samples.md
     - name: 'Design your tabs'
       items:
         - name: 'something somethign Design'
           href: foo.md
-        - name: 'somethingelse design'
-          href: foo.md
+        - name: 'Tabs on mobile clients'
+          href: tabs/design/tabs-mobile.md
     - name: 'How-to guides'
       expanded: true
       items:
@@ -261,8 +255,6 @@
       href: task-modules-and-cards/what-are-task-modules.md
     - name: 'What are cards?'
       href: task-modules-and-cards/what-are-cards.md
-    - name: Samples
-      href: old/samples/code-samples.md
     - name: 'Design your task module'
       items:
         - name: 'something somethign Design'
@@ -286,8 +278,6 @@
           href: webhooks/Add-incoming-webhooks-to-Microsoft-Teams.md
         - name: 'Create an outgoing webhook'
           href: webhooks/Add-outgoing-webhooks-to-Microsoft-Teams.md
-    - name: Samples
-      href: old/samples/code-samples.md
     - name: 'Design your webhooks and Connectors'
       items:
         - name: 'something somethign Design'
