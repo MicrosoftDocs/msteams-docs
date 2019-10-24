@@ -7,9 +7,11 @@ ms.author: anclear
 ---
 # What are messaging extensions?
 
-Messaging extensions are an alternative way for your Microsoft Teams users to interact with bots built on the Bot Framework. Unlike conversational bots, users interact with your messaging extensions through buttons and forms, giving you more control over the interaction. They allow you to search, or take action, in an external system from the compose message area, the command box, or directly from a message in Teams. You can then insert the results of that interaction into a message in Microsoft Teams (typically as an adaptive card).
+Messaging extensions allow users to interact with your web service through buttons and forms in the Microsoft Teams client. They can search, or initiate actions, in an external system from the compose message area, the command box, or directly from a message. You can then send the results of that interaction back to the Microsoft Teams client, typically in the form of a richly formatted card.
 
-foo.md => screenshot needed, fullscreen, red box around three areas you can trigger an ME from.
+The screenshot below shows the locations where messaging extensions can be invoked from.
+
+![messaging extension invoke locations](~/assets/images/messaging-extension-invoke-locations.png)
 
 ## What kinds of tasks are they good for?
 
@@ -24,37 +26,42 @@ foo.md => screenshot needed, fullscreen, red box around three areas you can trig
 
 ## How do messaging extensions work?
 
-Your messaging extension is made of a bot and a set of commands that define how your users can interact with it. Using your [app manifest](foo.md), you can only define a single messaging extension in a Teams app, however you can define up to 10 commands. Depending on the type of command, the flow can be slightly different.
+A messaging extension consists of a web service you host and your app manifest which defines where your web service can be invoked from in the Microsoft Teams client. They take advantage of the Bot Framework's messaging schema and secure communication protocol, so you'll also need to register your web service as a bot in the Bot Framework. Although you can create your web service completely by hand, we recommend you take advantage of the [Bot Framework SDK](https://github.com/microsoft/botframework) to make working with the protocol simpler.
 
-foo.md => need more here on the the activity/invoke message, a bit about the back and forth between the ME and the bot
+In the app manifest for your Microsoft Teams app you'll define a single messaging extension with up to ten different commands. Each command defines a type (action or search), and the locations in the client it can be invoked from (compose message area, command bar, and/or message). Once invoked, your web service will receive an HTTPS message with a JSON payload including all the relevant information. You'll respond with a JSON payload, letting the Teams client know what interaction to enable next.
 
 ## Types of messaging extension commands
 
-Messaging extensions commands come in two types, and can be triggered from three different areas. Each command defines the type of interaction, and the location the interaction can be triggered from. For example, a single message extension you could define multiple commands allowing users to search a SharePoint list from the command box, create a list item from a message, and create a new list item from the compose message area.
+The type of messaging extension command defines the UI elements and interaction flows available to your web service. Some interactions, like authentication and configuration, are available for both types of commands.
 
-* [Action-based messaging extensions commands](./foo.md) allow you present your users with a modal popup to collect or display information, then process their interaction and send information back to Teams. They can be triggered from the compose message area, the command box, or from a message.
-* [Search-based messaging extensions commands](./foo.md) allow your users to search an external system for information (either manually through a search box, or by pasting a link to a monitored domain into the compose message area), then insert the results of the search into a message. They can be triggered from the compose message area or the command box.
+### Action commands
 
-### Action-based messaging extension commands
+Action commands allow you present your users with a modal popup to collect or display information. When they submit the form, your web service can respond by inserting a message into the conversation directly, or by inserting a message into the compose message area and allowing the user to submit the message. You can even chain multiple forms together for more complex workflows.
 
-The diagram below outlines the information flow for action-based commands. foo.md => fill this part in with a walkthrough of the diagram
+They can be triggered from the compose message area, the command box, or from a message. When invoked from a message, the initial JSON payload sent to your bot will include the entire message it was invoked from.
 
-foo.md => information flow diagram
+![messaging extension action command task module](~/assets/images/task-module.png)
 
-### Search-based messaging extension commands
+### Search commands
 
-The diagram below outlines the information flow for search-based commands. foo.md => fill this part in with a walkthrough of the diagram
+Search commands allow your users to search an external system for information (either manually through a search box, or by pasting a link to a monitored domain into the compose message area), then insert the results of the search into a message. In the most basic search command flow, the initial invoke message will include the search string the user submitted. You'll respond with a list of cards and card previews. The Teams client will render the card previews in a list for the end user to select from. When the user selects a card, the full-size card will be inserted into the compose message area.
 
-foo.md => information flow diagram
+They can be triggered from the compose message area or the command box. Unlike action commands, they cannot be triggered from a message.
+
+![messaging extension search command](~/assets/images/search-extension.png)
+
+### Link unfurling
+
+You also have to option to invoke your service when a URL is pasted in the compose message area. This functionality, known as **link unfurling**, allows you to subscribe to receive an invoke when URLs containing a particular domain are pasted into the compose message area. Your web service can "unfurl" the URL into a detailed card, providing more information than the standard website preview card. You can even add buttons to allow your users to immediately take action without leaving the Microsoft Teams client.
 
 ## Get Started
 
 Ready to get started building? Try one of our quickstarts:
 
-* Messaging extensions with action-based commands
+* Messaging extensions with action commands
   * [In C#/.NET](foo.md)
   * [In TypeScript/Node.js](foo.md)
-* Messaging extensions with search-based commands
+* Messaging extensions with search commands
   * [In C#/.NET](foo.md)
   * [In TypeScript/Node.js](foo.md)
 
@@ -63,8 +70,8 @@ Ready to get started building? Try one of our quickstarts:
 Build a messaging extension:
 
 * [Create a messaging extension](./foo.md)
-* [Define action-based messaging extension command](./foo.md)
-* [Define search-based messaging extension command](./foo.md)
+* [Define action messaging extension command](./foo.md)
+* [Define search messaging extension command](./foo.md)
 
 Learn how messaging extensions fit with other Teams app capabilities:
 

@@ -5,52 +5,67 @@
       href: overview.md
 - name: Tutorials
   items:
-  - name: Create tab and bot app using C#
-    href: _old/get-started/get-started-dotnet-app-studio.md
-  - name: Create tab and bot app using Node
-    href: _old/get-started/get-started-nodejs-app-studio.md
+  - name: Create an app using C#
+    href: tutorials/get-started-dotnet-app-studio.md
+  - name: Create an app using Node
+    href: tutorials/get-started-nodejs-app-studio.md
 - name: Samples and templates
   items: 
   - name: Sample apps
-    href: _old/samples/code-samples.md
+    href: samples/code-samples.md
   - name: Production-ready app templates
-    href: _old/samples/app-templates.md
+    href: samples/app-templates.md
 - name: Concepts
+  expanded: true
   items:
-    - name: 'Understand Teams app capabilities'
-      href: foo.md
+    - name: 'Extensibility points in the Teams Client'
+      href: concepts/extensibility-points.md
     - name: 'Your Teams app lifecycle'
-      href: foo.md
-    - name: 'Plan your app'
+      href: concepts/teams-app-lifecycle.md
+    - name: 'Design your app'
       items:
         - name: 'Understand your use cases'
-          href: foo.md
-        - name: 'Choose the right capabilities'
-          href: foo.md
+          href: concepts/design/understand-use-cases.md
+        - name: 'Map use cases to features'
+          href: concepts/design/map-use-cases.md
         - name: 'Decide how you will distribute your app'
-          href: foo.md
-    - name: 'Design an effective app'
-      items:
-        - name: 'Communicate with users'
-          href: foo.md
-        - name: 'Design engaging and actionable cards'
-          href: foo.md
+          href: concepts/design/distribution-options.md
+        - name: UI Components 
+          items:
+          - name: 'Colors'
+            href: concepts/design/components/color.md
+          - name: 'Buttons, links and controls'
+            href: concepts/design/components/buttons.md
+          - name: 'Typography'
+            href: concepts/design/components/typography.md
+          - name: 'Fields and Flyouts'
+            href: concepts/design/components/fields.md
     - name: 'Build and test your app'
       items:
+      - name: Use App Studio to create your app
+        href: concepts/build-and-test/app-studio-overview.md
+      - name: Prepare your Office 365 tenant
+        href: concepts/build-and-test/prepare-your-o365-tenant.md
       - name: asdf
         href: foo.md
-      - name: asdf
-        href: foo.md
-      - name: asdf
-        href: foo.md
-      - name: asdf
-        href: foo.md
+      - name: Localizing your app
+        href: concepts/build-and-test/apps-localization.md
+    - name: 'Deploy and publish your app'
+      items:
+        - name: Publish your app
+          href: concepts/deploy-and-publish/apps-publish.md
+        - name: AppSource checklist
+          href: concepts/deploy-and-publish/office-store-checklist.md
+        - name: AppSource guidance
+          href: concepts/deploy-and-publish/office-store-guidance.md
+        - name: Application Certification
+          href: concepts/deploy-and-publish/application-certification.md
     - name: 'Authentication in Teams apps'
       items:
-        - name: 'Aunthentication overview'
-          href: foo.md
+        - name: 'Authentication overview'
+          href: concepts/authentication/authentication.md
         - name: 'Configure identity providers'
-          href: foo.md
+          href: concepts/authentication/configure-identity-provider.md
 - name: 'Task-oriented interactions with Messaging Extensions'
   items:
     - name: 'What are Messaging Extensions?'
@@ -84,28 +99,24 @@
           href: messaging-extensions/how-to/create-messaging-extension.md
         - name: 'Action-based commands'
           items:
-            - name: Define action-based commands
-              href: messaging-extensions/how-to/action-based-commands/define-action-based-command.md
+            - name: Define action commands
+              href: messaging-extensions/how-to/action-commands/define-action-command.md
             - name: Create and send the task module
-              href: messaging-extensions/how-to/action-based-commands/create-task-module.md
+              href: messaging-extensions/how-to/action-commands/create-task-module.md
             - name: Send a response to the submit action
-              href: messaging-extensions/how-to/action-based-commands/respond-to-task-module-submit.md
+              href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
         - name: 'Search-based commands'
           items:
-            - name: 'Define search-based commands'
-              href: foo.md
+            - name: 'Define search commands'
+              href: messaging-extensions/how-to/search-commands/define-search-command.md
             - name: 'Receive and respond to search queries'
-              href: foo.md
-        - name: Authentication
-          items:
-            - name: 'Authentication flow'
-              href: foo.md
-            - name: 'Use Azure AD Authentication'
-              href: foo.md
-            - name: 'Use OAuthCard and the Azure Bot Service'
-              href: foo.md
+              href: messaging-extensions/how-to/search-commands/respond-to-search.md
+        - name: Link unfurling
+          href: messaging-extensions/how-to/link-unfurling.md
         - name: 'Add a configuration page'
-          href: foo.md
+          href: messaging-extensions/how-to/add-configuration-page.md
+        - name: 'Add authentication'
+          href: messaging-extensions/how-to/add-authentication.md
 - name: 'Conversational Bots'
   items:
     - name: 'What are bots in Microsoft Teams?'
@@ -173,6 +184,8 @@
           href: bots/how-to/combine-with-other-features-and-services/use-task-modules.md
         - name: Use Microsoft Graph with your bot
           href: bots/how-to/combine-with-other-features-and-services/use-microsoft-graph.md
+      - name: Handle bot rate limiting
+        href: bots/how-to/rate-limit.md
 - name: 'Embedded web experiences with Tabs'
   items:
     - name: 'What are custom tabs?'
@@ -233,11 +246,7 @@
 - name: 'Task modules'
   items:
     - name: 'What are task modules?'
-      href: foo.md
-    - name: Quickstarts
-      items:
-      - name: 'quickstart 1'
-        href: foo.md
+      href: task-modules/what-are-task-modules.md
     - name: Samples
       href: old/samples/code-samples.md
     - name: 'Design your task module'
@@ -280,6 +289,45 @@
           href: foo.md
 - name: Resources
   items:
+    - name: Bots - v3 SDK
+      href: resources/bot-v3/bots-overview.md
+      items:
+      - name: Create a bot
+        href: resources/bot-v3/bots-create.md
+      - name: Conversations
+        href: resources/bot-v3/bot-conversations/bots-conversations.md
+        items:
+        - name: Personal conversations with bots
+          href: resources/bot-v3/bot-conversations/bots-conv-personal.md
+        - name: Channel and group conversations with bots
+          href: resources/bot-v3/bot-conversations/bots-conv-channel.md
+        - name: Starting a conversation
+          href: resources/bot-v3/bot-conversations/bots-conv-proactive.md
+        - name: Message formatting
+          href: resources/bot-v3/bot-conversations/bots-message-format.md
+        - name: Cards and card actions
+          href: resources/bot-v3/bot-conversations/bots-cards.md
+      - name: Bot events
+        href: resources/bot-v3/bots-notifications.md
+      - name: Context for bots
+        href: resources/bot-v3/bots-context.md
+      - name: Sending and receiving files
+        href: resources/bot-v3/bots-files.md
+      - name: Notification only bots
+        href: resources/bot-v3/bots-notification-only.md
+      - name: Bot menus
+        href: resources/bot-v3/bots-menus.md
+      - name: Bots with tabs
+        href: resources/bot-v3/bots-with-tabs.md
+      - name: Test a bot
+        href: resources/bot-v3/bots-test.md
+    - name: Messaging Extensions - v3 SDK
+      href: resources/messaging-extension-v3/messaging-extensions-overview.md
+      items:
+      - name: Search extensions
+        href: resources/messaging-extension-v3/search-extensions.md
+      - name: Action extensions
+        href: resources/messaging-extension-v3/create-extensions.md
     - name: Share-to-Teams
       href: _old/share-to-teams.md
     - name: 'Supported media formats'
