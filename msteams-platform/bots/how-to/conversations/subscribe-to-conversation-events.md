@@ -35,9 +35,9 @@ The following table shows a list of Teams conversation update events, with links
 | channel created     | channelCreated    | OnTeamsChannelCreatedAsync | [A channel was created](#channel-created) | Team |
 | channel renamed     | channelRenamed    | OnTeamsChannelRenamedAsync | [A channel was renamed](#channel-renamed) | Team |
 | channel deleted     | channelDeleted    | OnTeamsChannelDeletedAsync | [A channel was deleted](#channel-deleted) | Team |
-| team member added   | teamMemberAdded   | OnTeamsMembersAddedAsync   | [A Member added to team](#member-added)   | All |
+| team member added   | teamMemberAdded   | OnTeamsMembersAddedAsync   | [A Member added to team](#Team-Member-Added)   | All |
+| team member removed | teamMemberRemoved | OnTeamsMembersRemovedAsync | [A Member was removed from team](#Team-Member-Removed) | groupChat & team |
 | team renamed        | teamRenamed       | OnTeamsTeamRenamedAsync    | [A Team was renamed](#team-renamed)       | Team |
-| team member removed | teamMemberRemoved | OnTeamsMembersRemovedAsync | [A Member was removed from team](#member-removed) | groupChat & team |
 
 
 
@@ -264,8 +264,8 @@ The `messageReaction` event is sent when a user adds or removes his or her react
 
 | EventType       | Payload object   | Description                                                             | Scope |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [Reaction to bot message](#Reaction-to-bot-message)                     | All   |
-| messageReaction | reactionsRemoved | [Reaction removed from bot message](#Reaction-removed-from-bot-message) | All   |
+| messageReaction | reactionsAdded   | [Reaction to bot message](#Reaction-to-a-bot-message)                   | All   |
+| messageReaction | reactionsRemoved | [Reaction removed from bot message](#Reactions-removed-from-bot-message) | All   |
 
 The `ActivityTypes.MessageReaction` event is sent when a user adds or removes his or her reaction to a message which was originally sent by your bot. `replyToId` contains the ID of the specific message, and the `Type` is the type of reaction in text format.  The types of reactions include: "angry", "heart", "laugh", "like", "Sad", "surprised".
 
