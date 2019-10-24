@@ -30,7 +30,7 @@
           href: concepts/design/map-use-cases.md
         - name: 'Decide how you will distribute your app'
           href: concepts/design/distribution-options.md
-        - name: UI Componenents 
+        - name: UI Components 
           items:
           - name: 'Colors'
             href: concepts/design/components/color.md
