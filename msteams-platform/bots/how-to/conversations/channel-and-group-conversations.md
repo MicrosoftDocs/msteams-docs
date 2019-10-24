@@ -8,6 +8,8 @@ ms.author: anclear
 
 # Channel and Group chat conversations with a Microsoft Teams bot
 
+[!INCLUDE [pre-release-label](~/includes/pre-release-label.md)]
+
 Microsoft Teams enables you to add bots into your channel or group chat conversations, and by so doing that bot becomes another team member and everyone in the conversation can take advantage of its capabilities directly in the conversation. You can also access Teams-specific functionality directly in your bot, which will enable you to do things like querying team information and @mention users.
 
 To access your bot in a channel or group chat, you need to [@mention](#@mention) the bot, otherwise the message will not be sent to the bot. If your bot is used in multiple scopes (personal, groupchat or channel) you will need to detect what scope the bot messages came from, and process them accordingly.
