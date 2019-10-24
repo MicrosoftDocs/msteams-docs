@@ -7,6 +7,8 @@ ms.author: anclear
 ---
 # Subscribe to Conversation Events
 
+[!INCLUDE [pre-release-label](~/includes/pre-release-label.md)]
+
 Microsoft Teams sends notifications to your bot for events that happen in scopes where your bot is active. You can capture these events in your code and take action on them, such as the following:
 
 * Trigger a welcome message when your bot is added to a team
