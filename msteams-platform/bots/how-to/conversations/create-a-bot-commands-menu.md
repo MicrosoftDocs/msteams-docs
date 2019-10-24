@@ -7,20 +7,22 @@ ms.author: anclear
 ---
 # Bot command menus
 
+[!INCLUDE [pre-release-label](../../../includes/v4-to-v3-pointer-bots.md)]
+
 Creating a command menu enables you to give your users a list of commands that your bot is designed to execute, along with simple help text associated with each command that you can use to explain the command. The user can select the command from the list and it is placed in the message, then all they need to do is click __Send__.
 
-![Bot command menu](Media\bot-menu-sample.png)
+![Bot command menu](Media/bot-menu-sample.png)
 
 
 ## Create a command menu for your bot
 
-Command menus are contained in your app manifest, which can be created in <!--NEED LINK--> [App Studio](https://www.sadanduseless.com/funniest-animals-of-2019/), or edited directly in your source code in the `manifest.json` file in the `TeamsAppManifest` folder. In this section we will demonstrate how to create the command menu in App Studio, then we will show you the resulting `manifest.json` file so you can choose the approach that best suites your needs.
+Command menus are contained in your app manifest, which can be created in <!--NEED LINK--> [App Studio](https://docs.microsoft.com/en-us/microsoftteams/platform/get-started/get-started-app-studio#manifest-editor), or edited directly in your source code in the `manifest.json` file in the `TeamsAppManifest` folder. In this section we will demonstrate how to create the command menu in App Studio, then we will show you the resulting `manifest.json` file so you can choose the approach that best suites your needs.
 
 ### Creating a command menu for your bot using App Studio
 
 The instructions here assume that you will be editing an existing app manifest. The steps of adding a command menu are the same, whether you are creating a new manifest or editing an existing manifest.
 
-1. Open App Studio from the ... overflow menu on the left navigation rail. If you do not have App Studio available you can download it, please refer to <!--NEED LINK--> [Installing App Studio](https://docs.microsoft.com/en-us/microsoftteams/platform/get-started/get-started-app-studio#installing-app-studio). 
+1. Open App Studio from the ... overflow menu on the left navigation rail. If you do not have App Studio available you can download it, please refer to [Installing App Studio](https://aka.ms/teams-app-studio#installing-app-studio). 
 
     ![App Studio](Media/AppStudio.png)
 
@@ -145,16 +147,11 @@ Bots in a group or channel respond only when they are mentioned ("@botname") dir
 turnContext.Activity.RemoveRecipientMention();
 ```
 
-
-
-
 ## Command menu best practices
 
 * Keep it simple: The bot menu is meant to present the key capabilities of your bot.
 * Keep it short: Menu options shouldn’t be extremely long and complex natural language statements - they should be simple commands.
-* Always available: Bot menu actions/commands should be always invokable, regardless of the state of the conversation or the dialog the bot is in.
-
-
+* Always available: Bot menu actions/commands should be always invocable, regardless of the state of the conversation or the dialog the bot is in.
 
 
 
@@ -169,5 +166,4 @@ turnContext.Activity.RemoveRecipientMention();
    * none
  * **Code Snippets**
    * none
-
-   -->
+-->
