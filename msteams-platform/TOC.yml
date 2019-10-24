@@ -246,11 +246,7 @@
 - name: 'Task modules'
   items:
     - name: 'What are task modules?'
-      href: foo.md
-    - name: Quickstarts
-      items:
-      - name: 'quickstart 1'
-        href: foo.md
+      href: task-modules/what-are-task-modules.md
     - name: Samples
       href: old/samples/code-samples.md
     - name: 'Design your task module'
