@@ -29,7 +29,7 @@ For more information on design considerations, refer to the [Teams Design Guidel
 
 ## Creating messages
 
-For information on how to create messages in channels see [Proactive messaging for bots](send-proactive-messages.md), and specifically [Creating a channel conversation](send-proactive-messages.md#creating-a-channel-conversation).
+For information on how to create messages in channels see [Proactive messaging for bots](./send-proactive-messages.md), and specifically [Creating a channel conversation](./send-proactive-messages.md#creating-a-channel-conversation).
 
 ## `TBD - OPEN ISSUE: What about "Reply to Group" (or "Reply to Personal"?)` 
 
@@ -190,7 +190,7 @@ Running this bot, you should get similar results to the following:
 
 ## Best practice: Welcome messages in Teams
 
-When your bot is first added to the group or team, it may be useful to send a welcome message introducing it to all team members. The welcome message should provide a description of the bot’s functionality and benefits. Ideally the message should also include any commands needed to interact with it. To do this, ensure that your bot responds to the `conversationUpdate` event, with the `teamMemberAdded` EventType in the `channelData` object.  Since the `teamMemberAdded` EventType is sent when any new team member is added, not just when the bot is added, you need to check to determine if the new member added is the bot or a new team member before sending any welcome message from the bot to the team. See [./Sending a welcome message to a new team member](subscribe-to-conversation-events.md#Sending-a-welcome-message-to-a-new-team-member) in the article [./Subscribe to conversation events](subscribe-to-conversation-events.md) for more details on sending a team wide welcome message when the bot or a new team member is added. 
+When your bot is first added to the group or team, it may be useful to send a welcome message introducing it to all team members. The welcome message should provide a description of the bot’s functionality and benefits. Ideally the message should also include any commands needed to interact with it. To do this, ensure that your bot responds to the `conversationUpdate` event, with the `teamMemberAdded` EventType in the `channelData` object.  Since the `teamMemberAdded` EventType is sent when any new team member is added, not just when the bot is added, you need to check to determine if the new member added is the bot or a new team member before sending any welcome message from the bot to the team. See [Sending a welcome message to a new team member](./subscribe-to-conversation-events.md#Sending-a-welcome-message-to-a-new-team-member) in the article [Subscribe to conversation events](./subscribe-to-conversation-events.md) for more details on sending a team wide welcome message when the bot or a new team member is added. 
 
 You might also want to send a personal message to each member of the team when the bot is added. To do this, you could get the team roster and send each user a direct message.
 
