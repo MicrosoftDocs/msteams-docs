@@ -8,10 +8,17 @@ ms.author: anclear
 # Send and receive files with a bot
 
 <!-- It was named "Send and receive files through your bot" -->
+
+[!INCLUDE [4.6-release-warning](~/includes/v4-to-v3-pointer-bots.md)]
+
+
 This article describe how to exchange files with a user that interacts with Teams using a bot. There are two approaches to choose from:
 
 1. **Microsoft Graph API**s**. It supports all three scopes: `personal`, `channel`, and `groupchat`
 1. **Teams APIs**. It only supports `personal` scope.
+
+> [!NOTE] 
+> Sending and receiving files to bots on mobile devices is not supported.
 
 ## Using the Microsoft Graph APIs
 
@@ -24,7 +31,6 @@ You can post messages with card attachments referencing existing SharePoint file
 
 Your bot can directly send and receive files with users in the `personal` context, also known as personal chats, using Teams APIs. This lets you implement scenarios such expense reporting, image recognition, file archival, e-signatures, and other scenarios involving direct manipulation of file content. Files shared in Teams typically appear as cards, and allow rich in-app viewing.  The API is provided as part of the **Microsoft Teams Bot Platform**.
 
-
 > [!NOTE]
 > This method works only in the `personal` context. It does not work in the `channel` or `groupchat` context.
 
@@ -35,107 +41,59 @@ To send and receive files in your bot, you must set the `supportsFiles` property
 
 The setting looks like this: `"supportsFiles": true`.
 
-### Receiving files in personal chat
+## Invoke activity when the user accepts the file upload
 
-When a user sends a file to the bot, the file is first uploaded to the user's OneDrive for Business storage. The bot will then receive a message activity notifying you of the user upload. The activity will contain file metadata, such as its name and the content URL. You can directly read from this URL to fetch its binary content.
-
-> [!NOTE] 
-> Sending and receiving files to bots on mobile devices is not supported.
-
-#### Message activity with file attachment example
-
-```json
-{
-  "attachments": [{
-    "contentType": "application/vnd.microsoft.teams.file.download.info",
-    "contentUrl": "https://contoso.sharepoint.com/personal/johnadams_contoso_com/Documents/Applications/file_example.txt",
-    "name": "file_example.txt",
-    "content": {
-      "downloadUrl" : "https://download.link",
-      "uniqueId": "1150D938-8870-4044-9F2C-5BBDEBA70C9D",
-      "fileType": "txt",
-      "etag": "123"
-    }
-  }]
-}
-```
-
-The following table describes the content properties of the attachment:
-
-| Property | Purpose |
-| --- | --- |
-| `downloadUrl` | OneDrive URL for fetching the content of the file. You can issue an `HTTP GET` directly from this URL. |
-| `uniqueId` | Unique file ID. This will be the OneDrive drive item ID, in the case of the user sending a file to your bot. |
-| `fileType` | File extension type, such as pdf or docx. |
-
-As a best practice, you should acknowledge the file upload by sending back a message to the user.
-
-### Uploading files to personal chat
+The file is uploaded to the user's **OneDrive** storage after the consent to upload is issued. The bot will receive a message activity which contains file metadata, such as its name and the content URL. Follow these steps:
 
 1. Send a message to the user requesting permission to write the file. This message must contain a `FileConsentCard` attachment with the name of the file to be uploaded.
-2. If the user accepts the file download, your bot will receive an *Invoke* activity with a location URL.
+
+    ![bot files upload permission card](../../../assets/images/bots/bot-file-upload-permission-card.png)
+
+2. If the user accepts the file upload, your bot will receive an *Invoke* activity with a location URL.
 3. To transfer the file, your bot performs an `HTTP POST` directly into the provided location URL.
 4. Optionally, you can remove the original consent card if you do not want to allow the user to accept further uploads of the same file.
-
-#### Message requesting permission to upload
-
-This message contains a simple attachment object requesting user permission to upload the file.
-
-![Screenshot of consent card requesting user permission to upload file](../../../assets/images/bots/bot-file-consent-card.png)
-
-```json
-{
-  "attachments": [{
-    "contentType": "application/vnd.microsoft.teams.card.file.consent",
-    "name": "file_example.txt",
-    "content": {
-      "description": "<Purpose of the file, such as: this is your monthly expense report>",
-      "sizeInBytes": 1029393,
-      "acceptContext": {
-      },
-      "declineContext": {
-      }
-    }
-  }]
-}
-```
-
-The following table describes the content properties of the attachment:
-
-| Property | Purpose |
-| --- | --- |
-| `description` | Description of the file. May be shown to the user to describe its purpose or to summarize its content. |
-| `sizeInBytes` | Provides the user an estimate of the file size and the amount of space it will take in OneDrive. |
-| `acceptContext` | Additional context that will be silently transmitted to your bot when the user accepts the file. |
-| `declineContext` | Additional context that will be silently transmitted to your bot when the user declines the file. |
-
-#### Invoke activity when the user accepts the file
-
-An invoke activity is sent to your bot if and when the user accepts the file. It contains the OneDrive for Business placeholder URL that your bot can then issue a `PUT` into to transfer the file contents. for information on uploading to the OneDrive URL read this article: [Upload bytes to the upload session](https://docs.microsoft.com/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
-
+ 
 The following example shows an abridged version of the invoke activity that your bot will receive:
 
 ```json
 {
-  ...
+    "name": "fileConsent/invoke",
+    "type": "invoke",
+    "timestamp": "2019-10-24T20:22:37.875Z",
+    "localTimestamp": "2019-10-24T13:22:37.875-07:00",
+    "id": "f:8805947989118514037",
 
-  "name": "fileConsent/invoke",
-  "value": {
-    "type": "fileUpload",
-    "action": "accept",
-    "context": {
+    ...
+
+    "value": {
+        "type": "fileUpload",
+        "action": "accept",
+        "context": {
+            "filename": "teams-logo.png"
+        },
+        "uploadInfo": {
+            "contentUrl": "https://contoso.sharepoint.com//personal/<user alias>/Documents/Applications/TeamsFilesBot/teams-logo.png",
+            "name": "teams-logo.png",
+            "uploadUrl": "https://contoso.sharepoint.com//personal/<user alias>/_api/v2.0/drive/items/01FED6KHQXVVCUCI6XVJCZZMU2WMUSA6JS/uploadSession?guid=<GUID>",
+            "uniqueId": "<Unique ID>",
+            "fileType": "png"
+        }
     },
-    "uploadInfo": {
-      "contentUrl": "https://contoso.sharepoint.com/personal/johnadams_contoso_com/Documents/Applications/file_example.txt",
-      "name": "file_example.txt",
-      "uploadUrl": "https://upload.link",
-      "uniqueId": "1150D938-8870-4044-9F2C-5BBDEBA70C8C",
-      "fileType": "txt",
-      "etag": "123"
-    }
-  }
+
+    "locale": "en-US"
 }
+
 ```
+
+The following table describes the content properties of the attachment:
+
+| Property | Purpose |
+| --- | --- |
+| `uploadUrl` | OneDrive URL for uploading the content of the file. |
+| `uniqueId` | Unique file ID. This will be the OneDrive drive item ID. |
+| `fileType` | File extension type, such as pdf or *png**. |
+
+As a best practice, you should acknowledge the file upload by sending back a message to the user.
 
 Similarly, if the user declines the file, your bot will receive the following event, with the same overall activity name:
 
@@ -146,6 +104,7 @@ Similarly, if the user declines the file, your bot will receive the following ev
     "type": "fileUpload",
     "action": "decline",
     "context": {
+      ...
     }
   }
 }
@@ -153,7 +112,7 @@ Similarly, if the user declines the file, your bot will receive the following ev
 
 ### Notifying the user about an uploaded file
 
-After uploading a file to the user's OneDrive, whether you use the mechanism described above or OneDrive user delegated APIs, you should send a confirmation message to the user. This message should contain  a `FileCard` attachment that the user can click on, either to preview it, open it in OneDrive, or download locally.
+After uploading a file to the user's OneDrive, whether you use the mechanism described above or OneDrive user delegated APIs, you should send a confirmation message to the user. This message should contain  a `FileCard` attachment that the user can click on, either to preview it, open it in OneDrive, or download locally. The following is an example. 
 
 ```json
 {
@@ -176,9 +135,10 @@ The following table describes the content properties of the attachment:
 | `uniqueId` | OneDrive/SharePoint drive item ID. |
 | `fileType` | File type, such as pdf or docx. |
 
-### Basic example in C#
 
-The following sample shows how you can handle file uploads and send file consent requests in your bot's dialog.
+## Example
+
+The following example shows how you can handle file uploads and send file consent requests to the user in the bot's dialog.
 
 ```csharp
 
