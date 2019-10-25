@@ -274,8 +274,8 @@ The `messageReaction` event is sent when a user adds or removes his or her react
 
 | EventType       | Payload object   | Description                                                             | Scope |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [Reaction to bot message](#Reaction-to-bot-message)                     | All   |
-| messageReaction | reactionsRemoved | [Reaction removed from bot message](#Reaction-removed-from-bot-message) | All   |
+| messageReaction | reactionsAdded   | [Reaction to bot message](#reactions-to-a-bot-message)                     | All   |
+| messageReaction | reactionsRemoved | [Reaction removed from bot message](#reactions-removed-from-bot-message) | All   |
 
 The `ActivityTypes.MessageReaction` event is sent when a user adds or removes his or her reaction to a message which was originally sent by your bot. `replyToId` contains the ID of the specific message, and the `Type` is the type of reaction in text format.  The types of reactions include: "angry", "heart", "laugh", "like", "Sad", "surprised".
 
