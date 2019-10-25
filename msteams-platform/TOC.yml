@@ -84,13 +84,13 @@
       href: messaging-extensions/what-are-messaging-extensions.md
     - name: Quickstarts
       items:
-        - name: 'With action-based command'
+        - name: 'With action command'
           items:
             - name: 'C#/.NET'
               href: foo.md
             - name: TypeScript/Node.js
               href: foo.md
-        - name: 'With search-based command'
+        - name: 'With search command'
           items:
             - name: 'C#/.NET'
               href: foo.md
