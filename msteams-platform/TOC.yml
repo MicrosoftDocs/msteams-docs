@@ -96,12 +96,6 @@
               href: foo.md
             - name: TypeScript/Node.js
               href: foo.md
-    - name: 'Design your messaging extension'
-      items:
-        - name: 'Design your messaging extension'
-          href: messaging-extensions/design/messaging-extension.md
-        - name: 'Design your task module'
-          href: messaging-extensions/design/task-module.md
     - name: 'How-to guides'
       expanded: true
       items:
