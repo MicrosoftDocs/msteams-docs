@@ -64,11 +64,10 @@ You can only install apps that are in your organizational app catalogue, or the 
 
 See [Install apps for users](https://docs.microsoft.com/graph/teams-proactive-messaging) in the Graph documentation for complete details. There is also a [sample in .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
 
-
 ## Issuing proactive messages
 
 In essence there are two ways to issue proactive messages, in a standalone fashion or in a conversation.
- 
+
 ### Standalone proactive messages
 
 The simplest way to issue a proactive message is standalone. A bot can issue a proactive message via `SendActivityAsync`, as shown below.
@@ -82,47 +81,61 @@ private async Task BotCallback(ITurnContext turnContext, CancellationToken cance
 
 ### Conversation proactive messages
 
-A bot can post into a channel to create a new conversation. This scenario applies when it is important for the bot to preserve conversation state information and refer to it at some later time.
-
-The `teamMemberAdded` event is sent to the bot the first time it is added to a team and again every time a new member is added to that team.
-If the member already exists, the bot sends a welcome message as an introduction to all the team members. The message can provide a description of the bot’s functionality and benefits. Ideally, the message should also include any commands needed to interact with it. 
-
-If the added member does not exists, then a different type of welcome message can be sent to introduce the new person to the team.  The bot also send a personal message directly to the new member with a link to a *new hire guide*, or other useful information. 
-
-There are potentially two ways to determine if the `teamMemberAdded` event fired due to the bot being added to the team, or if a new team member was added.  One approach is by looking at the `Activity` object of the `turnContext`.  If the `Id` field of the `MembersAdded` object is the same as the `Id` field of the `Recipient` object, then the new member added is the bot, otherwise it is the new person added to your team.  The bot's `Id` will generally be: `28:<MicrosoftAppId>`.  The following code sample demonstrates how to accomplish this.
+A bot can post into a channel to create a new conversation as shown in the example below. 
+This scenario applies when it is important for the bot to preserve conversation state information and refer to it at some later time.
 
 ```cs
-protected override async Task OnTeamsMembersAddedAsync(IList<ChannelAccount> membersAdded,
-TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+private async Task MessageAllMembersAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken) 
 {
-    if (membersAdded.First().Id == turnContext.Activity.Recipient.Id)
-    {
-        // Send a message to introduce the bot to the team
-        var heroCard = new HeroCard(text: $"The {turnContext.Activity.Recipient.Name} bot has joined {teamInfo.Name}");
-        await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
-    }
-    else
-    {
-        // Send a message welcoming the new member of the team
-        IEnumerable<TeamsChannelAccount> teamsChannelAccounts = await TeamsInfo.GetMembersAsync(turnContext, cancellationToken);
 
-        foreach (var memberAdded in membersAdded)
-        {
-           var newTeamMember =
-                from teamsChannelAccount in teamsChannelAccounts
-                where teamsChannelAccount.Id.Equals(memberAdded.Id)
-                select teamsChannelAccount.Name;
+  var members = await TeamsInfo.GetMembersAsync(turnContext, cancellationToken);
+  var teamsChannelId = turnContext.Activity.TeamsGetChannelId();
+  var serviceUrl = turnContext.Activity.ServiceUrl;
+  var credentials = new MicrosoftAppCredentials(_appId, _appPassword);
 
-            var heroCard = new HeroCard(text: $"Welcome {newTeamMember.First()}, the newest member of {teamInfo.Name} team.");
-            await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
-        }
-    }
+  ConversationReference conversationReference = null;
+
+  foreach (var teamMember in members)
+  {
+
+    var proactiveMessage = MessageFactory.Text($"Hello {teamMember.Name}. I'm a Teams conversation bot.");
+    var connector = turnContext.TurnState.Get<IConnectorClient>();
+    var conversationParameters = new ConversationParameters
+    {
+      IsGroup = false,
+      Bot = turnContext.Activity.Recipient,
+      Members = new ChannelAccount[] { teamMember },
+      TenantId = turnContext.Activity.Conversation.TenantId,
+    };
+
+    await ((BotFrameworkAdapter)turnContext.Adapter).CreateConversationAsync(
+      teamsChannelId,
+      serviceUrl, 
+      credentials, 
+      conversationParameters, 
+      (t, ct) =>
+      {
+        conversationReference = t.Activity.GetConversationReference();
+        return Task.CompletedTask;
+      }, 
+      cancellationToken);
+
+    await ((BotFrameworkAdapter)turnContext.Adapter).ContinueConversationAsync(
+      _appId,
+      conversationReference,
+      async (t, ct) =>
+      {
+        await t.SendActivityAsync(proactiveMessage, ct);
+      },
+      cancellationToken);
+
+  }
+
+  await turnContext.SendActivityAsync(MessageFactory.Text("All members have been messaged"), cancellationToken);
+
 }
 
 ```
-
-> [!TIP]
-> When your bot receives a `membersAdded` event in a *personal* scoped chat, the `channelData.team` object will be null. You can use this as a filter to enable a different welcome message depending on scope.
 
 ## Additional resources
 
