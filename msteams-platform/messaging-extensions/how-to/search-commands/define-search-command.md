@@ -11,8 +11,6 @@ ms.author: anclear
 
 Messaging extension search commands allow your users to search external systems and insert the results of that search into a message in the form of a card.
 
-For additional guidance on designing your messaging extension see: [Designing effective messaging extensions](~/messaging-extensions/design/messaging-extension.md).
-
 ## Choose messaging extension invoke locations
 
 The first thing you need to decide is where your search command can be triggered (or more specifically, *invoked*) from. Your search command can be invoked from one or both of the following locations:
@@ -95,17 +93,4 @@ The below is an example of a `composeExtensions` object defining a search comman
 
 Now that you've added your search command, you'll need to [handle the search request](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
 
-## Learn more
-
-Try it out in a quickstart:
-
-* Quickstarts for C#
-  * [Messaging extension with action commands](~/foo.md)
-  * [Messaging extension with search commands](~/foo.md)
-* Quickstarts for Node.js
-  * [Messaging extension with action commands](~/foo.md)
-  * [Messaging extension with search commands](~/foo.md)
-
-Learn about authentication in messaging extensions
-
-* [something something authentication](./foo.md)
+[!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]
