@@ -15,7 +15,7 @@ includes\v4-to-v3-pointer-bots.md
 
 This article describe how to exchange files with a user that interacts with Teams using a bot. There are two approaches to choose from:
 
-1. **Microsoft Graph API**s**. It supports all three scopes: `personal`, `channel`, and `groupchat`
+1. **Microsoft Graph APIs**. It supports all three scopes: `personal`, `channel`, and `groupchat`
 1. **Teams APIs**. It only supports `personal` scope.
 
 > [!NOTE] 
