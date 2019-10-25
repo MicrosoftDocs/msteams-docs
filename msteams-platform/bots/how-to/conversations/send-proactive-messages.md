@@ -69,7 +69,7 @@ See [Install apps for users](https://docs.microsoft.com/graph/teams-proactive-me
 
 In essence there are two ways to issue proactive messages, in a standalone fashion or in a conversation.
 
-The simplest way to issue a proactive message is standalone, as shown in the example below. For example, when a user is added a team a bot can issue a proactive message to the added member via a `SendActivityAsync`.  This scenario applies when the bot does not have to preserve conversation state information and refer to it at some a later time.
+The simplest way to issue a proactive message is standalone, as shown in the example below. For example, when a user is added to a team a bot can issue a proactive message to the the dded member via a `SendActivityAsync`.  This scenario applies when the bot does not have to preserve conversation state information and refer to it at some later time.
  
 ```cs 
 protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> membersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -86,7 +86,7 @@ protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount
 }
 ```
 
-A bot can post into a channel to create a new conversation as shown in the example below. This scenario applies when it is important for the bot to preserve conversation state information and refer to it at some a later time.
+A bot can post into a channel to create a new conversation as shown in the example below. This scenario applies when it is important for the bot to preserve conversation state information and refer to it at some later time.
 
 ```cs
 private async Task MessageAllMembersAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
