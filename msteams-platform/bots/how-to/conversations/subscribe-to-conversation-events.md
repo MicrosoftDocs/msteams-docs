@@ -5,7 +5,7 @@ description: How to subscribe to conversation events from your Microsoft Teams b
 ms.topic: overview
 ms.author: anclear
 ---
-# Subscribe to Conversation Events
+# Subscribe to conversation events
 
 Microsoft Teams sends notifications to your bot for events that happen in scopes where your bot is active. You can capture these events in your code and take action on them, such as the following:
 
@@ -15,7 +15,7 @@ Microsoft Teams sends notifications to your bot for events that happen in scopes
 * When a bot message is liked by a user
 
 
-## Conversation Update Events
+## Conversation update events
 
 A bot receives a `conversationUpdate` event when it has been added to a conversation, other members have been added to or removed from a conversation, or conversation metadata has changed.
 
@@ -30,16 +30,16 @@ The following table shows a list of Teams conversation update events, with links
 
 | Action Taken        | EventType         | Method Called              | Description                | Scope |
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-| channel created     | channelCreated    | OnTeamsChannelCreatedAsync | [A channel was created](#channel-created) | Team |
-| channel renamed     | channelRenamed    | OnTeamsChannelRenamedAsync | [A channel was renamed](#channel-renamed) | Team |
-| channel deleted     | channelDeleted    | OnTeamsChannelDeletedAsync | [A channel was deleted](#channel-deleted) | Team |
-| team member added   | teamMemberAdded   | OnTeamsMembersAddedAsync   | [A Member added to team](#member-added)   | All |
+| channel created     | channelCreated    | OnTeamsChannelCreatedAsync | [A channel was created](#channel-created) | Team  |
+| channel renamed     | channelRenamed    | OnTeamsChannelRenamedAsync | [A channel was renamed](#channel-renamed) | Team  |
+| channel deleted     | channelDeleted    | OnTeamsChannelDeletedAsync | [A channel was deleted](#channel-deleted) | Team  |
+| team member added   | teamMemberAdded   | OnTeamsMembersAddedAsync   | [A team member added to team](#team-member-added) | All |
+| team member removed | teamMemberRemoved | OnTeamsMembersRemovedAsync | [A team member was removed from team](#team-member-removed) | groupChat & team |
 | team renamed        | teamRenamed       | OnTeamsTeamRenamedAsync    | [A Team was renamed](#team-renamed)       | Team |
-| team member removed | teamMemberRemoved | OnTeamsMembersRemovedAsync | [A Member was removed from team](#member-removed) | groupChat & team |
 
 
 
-### Channel Updates
+### Channel updates
 
 Your bot is notified when a channel is created, renamed, or deleted in a team where it has been added. Again, the `conversationUpdate` event is received, and a Teams-specific event identifier is sent as part of the channelData.eventType object, where the channel data's `channel.id` is the GUID for the channel, and `channel.name` contains the channel name.
 
@@ -50,11 +50,7 @@ The channel events are as follows:
 * channelDeleted: A user removes a channel
 
 
-<!----------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------->
-
-#### Channel Created
+#### Channel created
 
 # [C#](#tab/csharp)
 
@@ -75,11 +71,8 @@ protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo
 
 ---
 
-<!----------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------->
 
-#### Channel Renamed
+#### Channel renamed
 
 # [C#](#tab/csharp)
 
@@ -98,12 +91,7 @@ protected override async Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo
 
 ---
 
-
-<!----------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------->
-
-#### Channel Deleted
+#### Channel deleted
 
 # [C#](#tab/csharp)
 
@@ -124,11 +112,8 @@ protected override async Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo
 
 ---
 
-<!----------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------->
 
-### Team Member Added
+### Team member added
 
 The `teamMemberAdded` event is sent to your bot the first time it is added to a team and every time a new user is added to a team that your bot is a member of. 
 
@@ -220,12 +205,7 @@ How do you send a welcome message if it is not possible to get the team members 
 -->
 
 
-<!----------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------->
-
-
-### Team Member Removed
+### Team member removed
 
 The `teamMemberRemoved` event is sent to your bot if it is removed from a team and every time any user is removed from a team that your bot is a member of. You can determine if the new member removed was the bot itself or a user by looking at the `Activity` object of the `turnContext`.  If the `Id` field of the `MembersRemoved` object is the same as the `Id` field of the `Recipient` object, then the member removed is the bot, otherwise it is a user.  The bot's `Id` will generally be: `28:<MicrosoftAppId>`
 
@@ -251,13 +231,7 @@ protected override async Task OnTeamsMembersRemovedAsync(IList<ChannelAccount> m
 ---
 
 
-
-<!----------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------->
-
-
-### Team Renamed
+### Team renamed
 
 Your bot is notified when the team it is in has been renamed. It receives a `conversationUpdate` event with eventType.teamRenamed in the channelData object. Please note that there are no notifications for team creation or deletion, because bots exist only as part of teams and have no visibility outside the scope in which they have been added.
 
@@ -294,12 +268,7 @@ What is returned?
 
 
 
-
-<!----------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------->
-
-## Message Reaction Events
+## Message reaction events
 
 The `messageReaction` event is sent when a user adds or removes his or her reaction to a message which was originally sent by your bot. 
 
@@ -337,11 +306,6 @@ protected override async Task OnReactionsAddedAsync(IList<MessageReaction> messa
 
 ---
 
-  
-
-<!----------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------->
 
 ### Reactions removed from bot message
 
@@ -370,18 +334,7 @@ protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> mes
 ---
 
 
-
-<!----------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------->
-
-<!----------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------->
-
-<!----------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------->
+<!-----------------------------------------------------------------------------------------------------------
 
 ## Writing notes
 
@@ -405,3 +358,5 @@ protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> mes
  * **Code Snippets** 
    * [ConversationUpdate](https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/ConversationUpdate)
    * [MessageReaction](https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/MessageReaction)
+   
+--------------------------------------------------------------------------------------------------------->   
