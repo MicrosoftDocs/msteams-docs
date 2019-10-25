@@ -148,33 +148,49 @@ protected override async Task OnTeamsMembersAddedAsync(IList<ChannelAccount> mem
 
 #### Sending a welcome message to a new team member
 
-It is a good practice to send a welcome message, possibly with information about your bot and how to use it, when a new user is added to a team. There are potentially two ways to determine if the new user added was the bot itself or a new user.  One approach is by looking at the `Activity` object of the `turnContext`.  If the `Id` field of the `MembersAdded` object is the same as the `Id` field of the `Recipient` object, then the new member added is the bot, otherwise it is a new user.  The bot's `Id` will generally be: `28:<MicrosoftAppId>`.
+The `teamMemberAdded` event is sent to your bot the first time it is added to a team and again every time a new user is added to that team that your bot is a member of, your code you will need to check to see if the new team member is your bot or not. If it is your bot you can send a welcome message introducing it to all team members. The welcome message can provide a description of the bot’s functionality and benefits. Ideally the message should also include any commands needed to interact with it. 
 
-The other way is to see is the new members AadObjectId is null.  Since bots do not have an AadObjectId, it will always be null and since all team members should, you can send a welcome message to all team members by doing this check. Either approach can be used, the later approach is demonstrated below.
+If the new member added is not the bot then you can send a different type of welcome message introducing the new person to the team.  You can also send a personal message directly to the new team member with a link to your new hire guide, or other useful information. 
+
+There are potentially two ways to determine if the `teamMemberAdded` event fired due to the bot being added to the team, or if a new team member was added.  One approach is by looking at the `Activity` object of the `turnContext`.  If the `Id` field of the `MembersAdded` object is the same as the `Id` field of the `Recipient` object, then the new member added is the bot, otherwise it is the new person added to your team.  The bot's `Id` will generally be: `28:<MicrosoftAppId>`.  The following code sample demonstrates how to accomplish this.
 
 ```csharp
-var memberId = membersAdded.First().AadObjectId;
-// if memberId is null, then the new member added was a bot (This assumes that all team members have an AadObjectId).
-// if it is not null, the send the new team member a welcome message.
-if (memberId != null)
+protected override async Task OnTeamsMembersAddedAsync
+                (IList<ChannelAccount> membersAdded,
+                TeamInfo teamInfo,
+                ITurnContext<IConversationUpdateActivity> turnContext,
+                CancellationToken cancellationToken)
 {
-    IEnumerable<TeamsChannelAccount> teamsChannelAccounts = await TeamsInfo.GetMembersAsync(turnContext, cancellationToken);
+    if (membersAdded.First().Id == turnContext.Activity.Recipient.Id)
+    {
+        // Send a message to introduce the bot to the team
+        var heroCard = new HeroCard(text: $"The {turnContext.Activity.Recipient.Name} bot has joined {teamInfo.Name}");
+        await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
+    }
+    else
+    {
+        // Send a message welcoming the new member of the team
 
-    var newTeamMember =
-        from teamsChannelAccount in teamsChannelAccounts
-        where teamsChannelAccount.AadObjectId.Equals(memberId)
-        select teamsChannelAccount.Name;
+        IEnumerable<TeamsChannelAccount> teamsChannelAccounts = await TeamsInfo.GetMembersAsync(turnContext, cancellationToken);
 
-    var heroCard = new HeroCard(text: $"{string.Join(' ', membersAdded.Select(member => member.Id))} joined {teamInfo.Name}");
-    await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
+        foreach (var memberAdded in membersAdded)
+        {
+            var newTeamMember =
+                from teamsChannelAccount in teamsChannelAccounts
+                where teamsChannelAccount.Id.Equals(memberAdded.Id)
+                select teamsChannelAccount.Name;
+
+            var heroCard = new HeroCard(text: $"Welcome {newTeamMember.First()}, the newest member of {teamInfo.Name} team.");
+            await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
+        }
+    }
 }
 ```
 
-<!--
-# [JavaScript](#tab/javascript)
--->
 
----
+> [!Tip]
+> When your bot receives a `membersAdded` event when in a personal scoped chat, the `channelData.team` object will be null. You can use this as a filter to enable a different welcome message depending on scope.
+
 
 
 
