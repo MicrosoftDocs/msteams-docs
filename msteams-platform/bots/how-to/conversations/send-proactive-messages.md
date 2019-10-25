@@ -65,7 +65,7 @@ You can only install apps that are in your organizational app catalogue, or the 
 See [Install apps for users](https://docs.microsoft.com/graph/teams-proactive-messaging) in the Graph documentation for complete details. There is also a [sample in .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
 
 
-## Example
+## Issuing proactive messages
 
 In essence there are two ways to issue proactive messages, in a standalone fashion or in a conversation.
 
