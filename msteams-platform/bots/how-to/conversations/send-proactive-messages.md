@@ -78,7 +78,6 @@ private async Task BotCallback(ITurnContext turnContext, CancellationToken cance
     await turnContext.SendActivityAsync("Welcome, this is a proactive message.");
 }
 ```
-<!-- Conversation sample -->
 
 ### Conversation proactive messages
 
