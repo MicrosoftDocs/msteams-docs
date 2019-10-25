@@ -241,15 +241,3 @@ protected override async Task OnTeamsFileConsentDeclineAsync(ITurnContext<IInvok
 }
 
 ```
-
-<!-- 
-## Writing notes
- * **Purpose** Show how to send and receive files
- * **Existing teams doc reference** 
-   * [https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bots-files](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bots-files)
- * **Existing Bot framework doc reference**
-   * none?
- * **Code Snippets** 
-   * [https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/FileUpload](https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/FileUpload)
-
--->
