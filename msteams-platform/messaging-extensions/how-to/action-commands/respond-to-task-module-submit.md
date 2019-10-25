@@ -402,8 +402,4 @@ Add a search command
 
 * [Define search commands](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 
-Deploy your app package
-
-* [Deploy your app package](~/foo.md)
-
-[!Includes[messaging extension learn more block](~/includes/messaging-extensions/learn-more.md)]
+[!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]

@@ -154,4 +154,4 @@ If you are using parameters or an embedded web view with a `taskInfo` object, th
 
 * [Respond to task module submit](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
-[!Includes[messaging extension learn more block](~/includes/messaging-extensions/learn-more.md)]
+[!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]

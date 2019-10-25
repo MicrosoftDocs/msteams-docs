@@ -44,7 +44,7 @@ When sending notifications, assure that the users have a clear path to take comm
 
 Bots can create new conversations with an individual Microsoft Teams user by obtaining the userâ€™s *unique ID* and *tenant ID.* You can obtain these values using one of the following methods:
 
-(**WARNING: Verify**) Please, verify these links; they point to topics in the _old folder.
+<!-- WARNING: Verify. Please, verify these links; they point to topics in the _old folder.-->
 
 - By [fetching the team roster](../../../_old/concepts/bots/bots-context.md#fetching-the-team-roster) from a channel your app is installed in.
 - By caching them when a user [interacts with your bot in a channel](../../../_old/concepts/bots/bot-conversations/bots-conv-channel.md).
@@ -62,7 +62,7 @@ You can only install apps that are in your organizational app catalogue, or the 
 
 See [Install apps for users](https://docs.microsoft.com/graph/teams-proactive-messaging) in the Graph documentation for complete details. There is also a [sample in .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
 
-
+<!-- 
 ## Example
 
 The following code snippets belong to a bot sample that could be added to a team, but could also work in group chat (with updated `onMembersAdded` implementations).
@@ -143,6 +143,7 @@ var proactiveMessage = MessageFactory.Text($"Hello {turnContext.Activity.From.Na
 
 For more information and a related example code, see Bot Framework SDK [Send proactive notifications to users](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp) article.
 
+-->
 
 ## Additional resources
 

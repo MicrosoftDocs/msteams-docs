@@ -5,10 +5,6 @@ Try it out in a quickstart:
 * Quickstarts for C#
   * [Messaging extension with action-based commands](~/foo.md)
   * [Messaging extension with search-based commands](~/foo.md)
-* Quickstarts for Node.js
+* Quickstarts for JavaScript
   * [Messaging extension with action-based commands](~/foo.md)
   * [Messaging extension with search-based commands](~/foo.md)
-
-Learn about authentication in messaging extensions
-
-* [something something authentication](./foo.md)

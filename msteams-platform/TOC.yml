@@ -3,6 +3,8 @@
   items:
     - name: 'What are Microsoft Teams apps?'
       href: overview.md
+    - name: What's new?
+      href: whats-new.md
 - name: Tutorials
   items:
   - name: Create an app using C#
@@ -42,24 +44,34 @@
             href: concepts/design/components/fields.md
     - name: 'Build and test your app'
       items:
+      - name: Prepare your Office 365 tenant
+        href: concepts/build-and-test/prepare-your-o365-tenant.md      
       - name: Use App Studio to create your app
         href: concepts/build-and-test/app-studio-overview.md
-      - name: Prepare your Office 365 tenant
-        href: concepts/build-and-test/prepare-your-o365-tenant.md
-      - name: asdf
-        href: foo.md
+      - name: Create your app package
+        href: concepts/build-and-test/apps-package.md
+      - name: Test and debug your app
+        href: concepts/build-and-test/debug.md
+      - name: Use deep links for navigation
+        href: concepts/build-and-test/deep-links.md
       - name: Localizing your app
         href: concepts/build-and-test/apps-localization.md
+      - name: Create a Share-to-Teams button for your website
+        href: concepts/build-and-test/share-to-teams.md
     - name: 'Deploy and publish your app'
       items:
+        - name: Upload your app for a team or user
+          href: concepts/deploy-and-publish/apps-upload.md
         - name: Publish your app
           href: concepts/deploy-and-publish/apps-publish.md
-        - name: AppSource checklist
-          href: concepts/deploy-and-publish/office-store-checklist.md
-        - name: AppSource guidance
-          href: concepts/deploy-and-publish/office-store-guidance.md
-        - name: Application Certification
-          href: concepts/deploy-and-publish/application-certification.md
+        - name: Publishing to AppSource
+          items:
+          - name: AppSource guidance
+            href: concepts/deploy-and-publish/office-store-guidance.md
+          - name: AppSource checklist
+            href: concepts/deploy-and-publish/office-store-checklist.md
+          - name: Application Certification
+            href: concepts/deploy-and-publish/application-certification.md
     - name: 'Authentication in Teams apps'
       items:
         - name: 'Authentication overview'
@@ -72,26 +84,18 @@
       href: messaging-extensions/what-are-messaging-extensions.md
     - name: Quickstarts
       items:
-        - name: 'With action-based command'
+        - name: 'With action command'
           items:
             - name: 'C#/.NET'
               href: foo.md
             - name: TypeScript/Node.js
               href: foo.md
-        - name: 'With search-based command'
+        - name: 'With search command'
           items:
             - name: 'C#/.NET'
               href: foo.md
             - name: TypeScript/Node.js
               href: foo.md
-    - name: Samples
-      href: old/samples/code-samples.md
-    - name: 'Design your messaging extension'
-      items:
-        - name: 'Design your messaging extension'
-          href: messaging-extensions/design/messaging-extension.md
-        - name: 'Design your task module'
-          href: messaging-extensions/design/task-module.md
     - name: 'How-to guides'
       expanded: true
       items:
@@ -129,8 +133,6 @@
           href: foo.md
         - name: 'Create a channel bot'
           href: foo.md
-    - name: Samples
-      href: old/samples/code-samples.md
     - name: 'Design your bot'
       items:
         - name: 'something somethign Design'
@@ -210,14 +212,12 @@
               href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
             - name: 'Create a personal tab'
               href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-    - name: Samples
-      href: old/samples/code-samples.md
     - name: 'Design your tabs'
       items:
         - name: 'something somethign Design'
           href: foo.md
-        - name: 'somethingelse design'
-          href: foo.md
+        - name: 'Tabs on mobile clients'
+          href: tabs/design/tabs-mobile.md
     - name: 'How-to guides'
       expanded: true
       items:
@@ -243,12 +243,12 @@
           href: tabs/how-to/using-teams-client-sdk.md
         - name: 'Adding your custom tab to SharePoint'
           href: tabs/how-to/tabs-in-sharepoint.md
-- name: 'Task modules'
+- name: 'Task modules and cards'
   items:
     - name: 'What are task modules?'
-      href: task-modules/what-are-task-modules.md
-    - name: Samples
-      href: old/samples/code-samples.md
+      href: task-modules-and-cards/what-are-task-modules.md
+    - name: 'What are cards?'
+      href: task-modules-and-cards/what-are-cards.md
     - name: 'Design your task module'
       items:
         - name: 'something somethign Design'
@@ -272,8 +272,6 @@
           href: webhooks/Add-incoming-webhooks-to-Microsoft-Teams.md
         - name: 'Create an outgoing webhook'
           href: webhooks/Add-outgoing-webhooks-to-Microsoft-Teams.md
-    - name: Samples
-      href: old/samples/code-samples.md
     - name: 'Design your webhooks and Connectors'
       items:
         - name: 'something somethign Design'
@@ -328,41 +326,21 @@
         href: resources/messaging-extension-v3/search-extensions.md
       - name: Action extensions
         href: resources/messaging-extension-v3/create-extensions.md
-    - name: Share-to-Teams
-      href: _old/share-to-teams.md
-    - name: 'Supported media formats'
-      href: _old/resources/general/media-formats.md
     - name: 'Public Developer Preview'
-      href: _old/resources/dev-preview/developer-preview-intro.md
       items:
+        - name: 'Developer Preview overview'
+          href: resources/dev-preview/developer-preview-intro.md
         - name: 'Developer preview manifest schema'
-          href: _old/resources/schema/manifest-schema-dev-preview.md
+          href: resources/schema/manifest-schema-dev-preview.md
         - name: 'Features in Developer Preview'
-          href: _old/resources/dev-preview/developer-preview-features.md
+          href: resources/dev-preview/developer-preview-features.md
         - name: 'Using DevTools in the client'
-          href: _old/resources/dev-preview/developer-preview-tools.md
-    - name: 'Design components'
-      href: _old/resources/design/overview.md
-      items:
-        - name: Color
-          href: _old/resources/design/components/color.md
-        - name: 'Buttons, links, and controls'
-          href: _old/resources/design/components/buttons.md
-        - name: 'Fields and flyouts'
-          href: _old/resources/design/components/fields.md
-        - name: Dialogs
-          href: _old/resources/design/components/dialogs.md
-        - name: Typography
-          href: _old/resources/design/components/typography.md
-        - name: Themes
-          href: _old/resources/design/components/themes.md
+          href: resources/dev-preview/developer-preview-tools.md
+    - name: 'Supported media formats for bots'
+      href: resources/media-formats.md
     - name: 'Manifest schema'
-      href: _old/resources/schema/manifest-schema.md
+      href: resources/schema/manifest-schema.md
     - name: 'Localization file JSON schema'
-      href: _old/resources/schema/localization-schema.md
-    - name: 'Microsoft Graph APIs'
-      href: _old/resources/microsoft-graph.md
-    - name: Bot rate limiting
-      href: foo.md
+      href: resources/schema/localization-schema.md
 - name: Support and feedback
-  href: _old/feedback.md
+  href: feedback.md

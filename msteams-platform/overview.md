@@ -36,21 +36,18 @@ A Teams app consists of three major pieces:
 
 When you're ready to share your Microsoft Teams apps, you have three options depending on who your target audience is.
 
-* **[Upload your app directly](/foo.md)** If your app only needs to be shared to your team, or a few individuals in your organization, you can share your app package and upload it directly.
-* **[Publish to your organizational app catalog](/foo.md)** You can share your app with your entire organization through your app catalog.
-* **[Publish to the public app store](/foo.md)** If your app is for everyone, you can publish it to our public app store. Depending on your goals, you might be eligible for marketing and sales assistance.
+* **[Upload your app directly](~/concepts/deploy-and-publish/apps-upload.md)** If your app only needs to be shared to your team, or a few individuals in your organization, you can share your app package and upload it directly.
+* **[Publish to your organizational app catalog](~/concepts/deploy-and-publish/apps-publish.md)** You can share your app with your entire organization through your app catalog.
+* **[Publish to the public app store](~/concepts/deploy-and-publish/apps-publish.md)** If your app is for everyone, you can publish it to our public app store. Depending on your goals, you might be eligible for marketing and sales assistance.
 
 ## Next steps
 
-* Design your Teams app
-* Quickstarts
-* ?
+Learn more about what an app built on the Microsoft Teams platform can do:
 
+* [Extensibility points for your app](~/concepts/design/extensibility-points.md)
+* [The lifecycle of an app built for Teams](~/concepts/design/teams-app-lifecycle.md)
 
-What really needs to be covered in this article:
+Try it out in a tutorial:
 
-1) Apps are pointers to other services
-2) You can add Team-specific information to them
-3) Scope + entry point
-4) Distribution options
-5) next steps
+* [Build a bot and tab app in C#](~/tutorials/get-started-dotnet-app-studio.md)
+* [Build a bot and tab app in JavaScript/Node.js](~/tutorials/get-started-nodejs-app-studio.md)

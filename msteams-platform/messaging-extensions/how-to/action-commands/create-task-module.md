@@ -378,4 +378,4 @@ If you allow your users to send a response back from the task module, you'll nee
 
 * [Create and respond with a task module](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
-[!Includes(~/includes/messaging-extensions/learn-more.md)]
+[!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]
