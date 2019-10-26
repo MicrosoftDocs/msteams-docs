@@ -35,22 +35,32 @@ As always, the project's README file should have more information on specific ne
 |--------|-------------|
 | [Hello World in Microsoft Teams with Node.js](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) | A sample teams app in `Node.js` introducing you to the basic app capabilities.|
 | [Hello World in Microsoft Teams with C#.NET](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) | A sample teams app in `C# .NET` introducing you to the basic app capabilities.|
+| [Get started with the Yeoman generator for Teams](~/tutorials/get-started-yeoman.md) | Create a Teams app from scratch using the Yeoman generator for Microsoft Teams. |
 
 ## Featured
 
 | Sample | Description|
 |--------|-------------|
-| [Complete sample in Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) | This sample shows how to use all the features of the Microsoft Teams platform|
-| [Complete sample in C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) | This project is meant to help a Teams developers in two ways. First, it shows many examples of how an app can integrate into Teams. Second, it gives a set of patterns, templates, and tools that can be used as a starting point for creating a larger, scalable, more enterprise level app to work within Teams.
-| [Line of Business apps in C#/.NET](https://github.com/OfficeDev/msteams-sample-line-of-business-apps-csharp) | This repository contains multiple example Line of Business apps that can be used for either inspiration or as templates to build on top of. |
+| [Yeoman generator](https://github.com/OfficeDev/generator-teams) | Generates a Microsoft Teams app skeleton with tabs, bots, and more based on Node.js and TypeScript. Optionally it adds support for hosting using Express. |
+| [Complete sample in Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) | This sample shows how to use all the features of the Microsoft Teams platform. NOTE: This sample uses the Bot Framework v3 SDK.|
+| [Complete sample in C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) | This sample shows how to use all the features of the Microsoft Teams platform. NOTE: This sample uses the Bot Framework v3 SDK. |
+| [Line of Business apps in C#/.NET](https://github.com/OfficeDev/msteams-sample-line-of-business-apps-csharp) | This repository contains multiple example Line of Business apps that can be used for either inspiration or as templates to build on top of. NOTE: These samples use the Bot Framework v3 SDK.|
 
-## Bots
+## Bots (using the v4 SDK)
 
-| Sample | Description
-|--------|-------------
-| [Sample bot for C#/.NET](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams/tree/master/CSharp/Samples/Microsoft.Bot.Connector.Teams.SampleBot) | This sample bot shows how to use the [Teams extensions for the Bot Builder SDK](~/get-started/code.md#microsoft-teams-extensions-for-the-bot-builder-sdk) in `C#.NET`.
-| [Sample bot for Node.js](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams/tree/master/Node/samples) | This sample bot shows how to use the [Teams extensions for the Bot Builder SDK](~/get-started/code.md#microsoft-teams-extensions-for-the-bot-builder-sdk) in `Node.js`.
-| [Bot Framework v4](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth)| Authentication and basic messaging in Bot Framework v4 in `C#.NET`|
+| Sample | Description | .NET Core | JavaScript |
+|--------|------------- |---|---|
+| Teams Conversation Bot | Messaging and conversation event handling | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)| [View](~/foo.md)|
+| Authentication with OAuthPrompt| Authentication and basic messaging in Bot Framework v4 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth)|[View](~/foo.md)|
+
+## Messaging Extensions (using the v4 SDK)
+
+| Sample | Description | .NET Core | JavaScript |
+|--------|------------- |---|---|
+| Search command | Simple messaging extension with a search command | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)| [View](~/foo.md)|
+| Action command | Simple messaging extension with a action command. Response inserted into the compose message area. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](~/foo.md)|
+| Action command w/bot response | Messaging extension with a action command. Response inserted into the conversation by the bot. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/53.teams-messaging-extensions-action-preview)|[View](~/foo.md)|
+| Search command | messaging extension with a search command and authentication and configuration | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)| [View](~/foo.md)|
 
 ## Outgoing Webhooks
 
@@ -74,9 +84,15 @@ As always, the project's README file should have more information on specific ne
 
 ## Others
 
-| Code | Description
-|------|-------------
-| [Yeoman generator](https://github.com/OfficeDev/generator-teams) | Generates a Microsoft Teams app skeleton with tabs, bots, and more based on Node.js and TypeScript. Optionally it adds support for hosting using Express.
-| ["To-do" list sample tab app](https://github.com/OfficeDev/microsoft-teams-sample-todo) | This Node.js sample shows how easy it is to convert an existing web app into a tab.
-| [Orky](https://github.com/OfficeDev/Orky) | You can use Orky to register your own local bot in Microsoft Teams and execute scripts from ANYWHERE!
-| [Build 2017 Weather](https://github.com/OfficeDev/microsoft-teams-build2017-weather) | Source code for the //build 2017 session to add a weather tab to the skeleton app generated earlier in the session.
+| Code | Description |
+|------|------------- |
+| ["To-do" list sample tab app](https://github.com/OfficeDev/microsoft-teams-sample-todo) | This Node.js sample shows how easy it is to convert an existing web app into a tab. |
+| [Orky](https://github.com/OfficeDev/Orky) | You can use Orky to register your own local bot in Microsoft Teams and execute scripts from ANYWHERE! |
+| [Build 2017 Weather](https://github.com/OfficeDev/microsoft-teams-build2017-weather) | OUTDATED. Source code for the //build 2017 session to add a weather tab to the skeleton app generated earlier in the session. |
+
+### Bot Framework SDK v3 samples
+
+| Sample | Description |
+|--------|------------- |
+| [Sample bot for C#/.NET](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams/tree/master/CSharp/Samples/Microsoft.Bot.Connector.Teams.SampleBot) | This sample bot shows how to use the [Teams extensions for the Bot Builder SDK](~/get-started/code.md#microsoft-teams-extensions-for-the-bot-builder-sdk) in `C#.NET`.
+| [Sample bot for Node.js](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams/tree/master/Node/samples) | This sample bot shows how to use the [Teams extensions for the Bot Builder SDK](~/get-started/code.md#microsoft-teams-extensions-for-the-bot-builder-sdk) in `Node.js`.
