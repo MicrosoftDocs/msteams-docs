@@ -49,7 +49,9 @@ Bots can create new conversations with an individual Microsoft Teams user by obt
 - By [fetching the team roster](../../../_old/concepts/bots/bots-context.md#fetching-the-team-roster) from a channel your app is installed in.
 - By caching them when a user [interacts with your bot in a channel](../../../_old/concepts/bots/bot-conversations/bots-conv-channel.md).
 - When a users is [@mentioned in a channel conversation](../../../_old/concepts/bots/bot-conversations/bots-conv-channel.md#-mentions) the bot is a part of.
-- By caching them when you [receive the conversationUpdate](../../../_old/concepts/bots/bots-notifications.md#team-member-or-bot-addition) event when your app is installed in a personal scope, or new members are added to a channel or group chat that
+- By caching them when you [receive the conversationUpdate](../../../_old/concepts/bots/bots-notifications.md#team-member-or-bot-addition) event when your app is installed in a personal scope, or new members are added to a channel or group chat.
+
+
 
 ### Proactively install your app using Graph
 
@@ -62,105 +64,68 @@ You can only install apps that are in your organizational app catalogue, or the 
 
 See [Install apps for users](https://docs.microsoft.com/graph/teams-proactive-messaging) in the Graph documentation for complete details. There is also a [sample in .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
 
-<!-- 
+
 ## Example
 
-The following code snippets belong to a bot sample that could be added to a team, but could also work in group chat (with updated `onMembersAdded` implementations).
-If the user `@mention` the bot and sends a message to it, the bot **proactively** sends messages to the user.
+In essence there are two ways to issue proactive messages, in a standalone fashion or in a conversation.
 
-Download the complete code example at this location [ProactiveMessages](https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/ProactiveMessages).
+The simplest way to issue a proactive message is standalone, as shown in the example below. For example, when a user is added a team a bot can issue a proactive message to the added member via a `SendActivityAsync`.  This scenario applies when the bot does not have to preserve conversation state information and refer to it at some a later time.
+ 
+```cs 
+protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> membersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+  foreach (var member in membersAdded)
+  {
+      var replyActivity = MessageFactory.Text($"{member.Id} added to the team");
+      replyActivity.ApplyConversationReference(turnContext.Activity.GetConversationReference());
+
+      var channelId = turnContext.Activity.Conversation.Id.Split(";")[0];
+      replyActivity.Conversation.Id = channelId;
+      var resourceResponse = await turnContext.SendActivityAsync(replyActivity, cancellationToken);
+  }
+}
+```
+
+A bot can post into a channel to create a new conversation as shown in the example below. This scenario applies when it is important for the bot to preserve conversation state information and refer to it at some a later time.
 
 ```cs
-protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+private async Task MessageAllMembersAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 
 {
-    // You can hand roll a connector to manually address a proactive message
-    var connectorClient = turnContext.TurnState.Get<IConnectorClient>();
-    var connector = new ConnectorClient(connectorClient.Credentials);
-    connector.BaseUri = new Uri(turnContext.Activity.ServiceUrl);
+    var members = await TeamsInfo.GetMembersAsync(turnContext, cancellationToken);
+    var teamsChannelId = turnContext.Activity.TeamsGetChannelId();
+    var serviceUrl = turnContext.Activity.ServiceUrl;
+    var credentials = new MicrosoftAppCredentials(_appId, _appPassword);
+    ConversationReference conversationReference = null;
 
-    var parameters = new ConversationParameters
+    foreach (var teamMember in members)
     {
-        Bot = turnContext.Activity.From,
-        Members = new ChannelAccount[] { turnContext.Activity.From },
-        ChannelData = new TeamsChannelData
+        var proactiveMessage = MessageFactory.Text($"Hello {teamMember.Name}. I'm a Teams conversation bot.");
+        var connector = turnContext.TurnState.Get<IConnectorClient>();
+
+        var conversationParameters = new ConversationParameters
         {
-            Tenant = new TenantInfo
-            {
-                Id = turnContext.Activity.Conversation.TenantId,
-            },
-        },
-    };
+            IsGroup = false,
+            Bot = turnContext.Activity.Recipient,
+            Members = new ChannelAccount[] { teamMember },
+            TenantId = turnContext.Activity.Conversation.TenantId,
+        };
 
-    var converationReference = await connector.Conversations.CreateConversationAsync(parameters);
+        await ((BotFrameworkAdapter)turnContext.Adapter).CreateConversationAsync(teamsChannelId, serviceUrl, credentials, conversationParameters, (t, ct) => {
+           conversationReference = t.Activity.GetConversationReference();
+           return Task.CompletedTask;}, cancellationToken);
 
-    var proactiveMessage = MessageFactory.Text($"Hello {turnContext.Activity.From.Name}. You sent me a message. This is a proactive responsive message.");
+        await ((BotFrameworkAdapter)turnContext.Adapter).ContinueConversationAsync(_appId, conversationReference, async (t, ct) => {
+          await t.SendActivityAsync(proactiveMessage, ct);}, cancellationToken);
+    }
 
-    proactiveMessage.From = turnContext.Activity.From;
-
-    proactiveMessage.Conversation = new ConversationAccount
-    {
-        Id = converationReference.Id.ToString(),
-    };
-
-    await connector.Conversations.SendToConversationAsync(proactiveMessage, cancellationToken);
-
-    /* Or you can use the adapter to send a message if you already have a
-     * conversation reference. You can put this code into the controller if
-     *you already have a store of conversation references. 
-     **/
-    await turnContext.Adapter.ContinueConversationAsync(_appId, turnContext.Activity.GetConversationReference(), BotOnTurn, cancellationToken);
+    await turnContext.SendActivityAsync(MessageFactory.Text("All members have been messaged"), cancellationToken);
 }
 
 ```
-
-You can use the adapter to send a proactive message if you already have a conversation reference; put this code into the controller:
-
-```cs
-await turnContext.Adapter.ContinueConversationAsync(_appId, turnContext.Activity.GetConversationReference(), BotOnTurn, cancellationToken);
-```
-
-To send a proactive message, the adapter requires an app ID for the bot. In a production environment, you can use the bot's app ID. In a local test environment, you can use any GUID. If the bot is not currently assigned an app ID, the notify controller self-generates a placeholder ID to use for the call.
-
-## Additional information
-
-### Avoiding 401 "Unauthorized" Errors
-
-By default, the BotBuilder SDK adds a `serviceUrl` to the list of trusted host names if the incoming request is authenticated. They are maintained in an in-memory cache. If your bot is restarted, a user awaiting a proactive message cannot receive it unless they have messaged the bot again after it restarted. 
-
-To avoid this, you must manually add the `serviceUrl` to the list of trusted host names by using: 
-
-```csharp 
-MicrosoftAppCredentials.TrustServiceUrl(serviceUrl); 
-``` 
-
-For proactive messaging, `serviceUrl` is the URL of the channel that the recipient of the proactive message is using and can be found in `Activity.ServiceUrl`. 
-You'll want to add the above code just prior to the the code that sends the proactive message. In the above example:
-
-```cs
-var proactiveMessage = MessageFactory.Text($"Hello {turnContext.Activity.From.Name}. You sent me a message. This is a proactive responsive message.");
-```
-
-For more information and a related example code, see Bot Framework SDK [Send proactive notifications to users](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp) article.
-
--->
 
 ## Additional resources
 
 - [Send proactive notifications to users](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp) - Bot Framework SDK proactive messages explained
 - [How bots work](https://docs.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&tabs=csharp) - Inside the bots
 - [Have a conversation with a Microsoft Teams bot](../../../_old/concepts/bots/bot-conversations/bots-conversations.md) - Conversations and messages in Teams
-
-
-<!--
-## Writing notes
-
- * **Purpose** Send proactive messages to 1:1, group chat, and channel. Includes stub pointer to Graph article on how to proactively install your bot.
- * **Existing teams doc reference** 
-   * [https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bot-conversations/bots-conv-proactive](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bot-conversations/bots-conv-proactive)
- * **Existing Bot framework doc reference** 
-   * [https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp)
- * **Code Snippets** 
-   * [https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/ProactiveMessages](https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/ProactiveMessages)
--->
-
