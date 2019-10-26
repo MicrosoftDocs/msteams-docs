@@ -170,6 +170,10 @@
           href: bots/how-to/debug/with-the-bot-emulator.md
         - name: Debug with the inspection middleware
           href: bots/how-to/debug/with-the-inspection-middleware.md
+      - name: Authentication
+        items:
+        - name: Authentication flow in bots
+          href: bots/how-to/authentication/auth-flow-bots.md
       - name: Combine bots with other features and services
         items:
         - name: Use Teams tabs with your bot
@@ -188,6 +192,18 @@
         href: bots/how-to/conversations/create-a-bot-commands-menu.md      
       - name: Handle bot rate limiting
         href: bots/how-to/rate-limit.md
+    - name: Calling and meeting bots
+      items:
+      - name: Calling and meeting bots overview
+        href: bots/calls-and-meetings/calls-meetings-overview.md
+      - name: Real-time media concepts
+        href: bots/calls-and-meetings/real-time-media-concepts.md
+      - name: Registering a calling bot
+        href: bots/calls-and-meetings/registering-calling-bot.md
+      - name: Debugging and local testing
+        href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
+      - name: Application-hosted media
+        href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
 - name: 'Embedded web experiences with Tabs'
   items:
     - name: 'What are custom tabs?'
