@@ -283,13 +283,13 @@
 - name: 'Webhooks and Connectors'
   items:
     - name: 'What are Webhooks and Connectors?'
-      href: foo.md
+      href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
     - name: Quickstarts
       items:
         - name: 'Create an incoming webhook'
-          href: webhooks/Add-incoming-webhooks-to-Microsoft-Teams.md
+          href: webhooks-and-connectors/quickstarts/add-incoming-webhook.md
         - name: 'Create an outgoing webhook'
-          href: webhooks/Add-outgoing-webhooks-to-Microsoft-Teams.md
+          href: webhooks-and-connectors/quickstarts/add-outgoing-webhook.md
     - name: 'Design your webhooks and Connectors'
       items:
         - name: 'something somethign Design'
