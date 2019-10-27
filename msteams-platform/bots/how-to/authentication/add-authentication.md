@@ -59,44 +59,21 @@ You use a resource group to create individual resources for the Bot Framework. F
 1. In the [**Azure portal**][azure-portal], on the left navigation panel, select **Create a resource**.
 1. In the search box, type *App Service Plan*. Select the **App Service Plan** card from the search results.
 1. Click **Create**.
-1. You'll be asked to provide the following information: 
+1. You'll be asked to provide the following information:
     1. **Subscription**. You can use an existing subscription.
     1. **Resource Group**. Select the group you created earlier.
-    1. **Name**. Enter the name for the service plan. An example could be  *TeamsServicePlan*. Remember that the name must be unique, within the group. 
+    1. **Name**. Enter the name for the service plan. An example could be  *TeamsServicePlan*. Remember that the name must be unique, within the group.
     1. **Operating System**. Select *Windows* or the OS that applies to your case.
     1. **Region**. Select *West US* or a region close to your applications.
     1. **Pricing Tier**. Make sure that *Standard S1* is selected. This should be the default value.
     1. Click **Review and create** button. You should see a banner that reads *Validation passed*.
     1. Click **Create**. It may take a few minutes to create the app service plan. The plan will be listed in the resource group. 
 
-## Create the bot channel registration
+## Create the bot channels registration
 
-You must create a **Bot Channels Registration** app which is needed to deploy the bot and for registering the bot with the **Teams** channel.
+The bot channels registration registers your web service as a bot with the Bot Framework, providing you an App Id and secret.
 
-1. In the [Azure portal][azure-portal], on the left navigation panel, select **Create a resource**.
-1. In the right panel selection box enter "bot". And in the drop-down list, select **Bot Channels Registration**.
-1. Click the **Create** button.
-1. In the **Bot Channel Registration** blade, provide the requested information about your bot. 
-1. Leave the **Messaging endpoint** box empty for now, you will enter the required URL after deploying the bot. The following picture shows an example of the registration settings:
-
-    ![bot app channels registration](../../media/auth-bot-channels-registration.PNG)
-
-1. Click **Microsoft App ID and password** and then **Create New**.
-1. Click **Create App ID in the App Registration Portal** link.
-1. In the displayed **App registration** window, click the **New registration** tab in the upper left.
-1. Enter the name of the bot application you are registering, we used *BotTeamsAuth* (you need to select your own unique name). 
-1. For the **Supported account types** select *Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)*.
-1. Click the **Register** button. Once completed, Azure displays the *Overview* page for the application.
-1. Copy and save to a file the **Application (client) ID** value.
-1. In the left panel, click **Certificate and secrets**.
-    1. Under *Client secrets*, click **New client secret**.
-    1. Add a description to identify this secret from others you might need to create for this app.
-    1. Set *Expires* to your selection.
-    1. Click **Add**.
-    1. Copy the client secret and save it to a file. 
-1. Go back to the **Bot Channel Registration** window and copy the *App ID* and the *Client secret* in the **Microsoft App ID** and **Password** boxes, respectively. 
-1. Click **OK**.
-1. Finally, click **Create**.
+[!INCLUDE [bot channels registration steps](~/includes/bots/azure-bot-channels-registration.md)]
 
 After Azure has created the registration resource it lists it in the related resource group.  
 

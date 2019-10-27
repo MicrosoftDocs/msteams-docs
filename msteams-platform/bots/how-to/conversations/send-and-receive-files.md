@@ -7,16 +7,12 @@ ms.author: anclear
 ---
 # Send and receive files with a bot
 
-<!-- It was named "Send and receive files through your bot" -->
-
-[!INCLUDE [4.6-release-warning](~/includes/v4-to-v3-pointer-bots.md)]
-
-includes\v4-to-v3-pointer-bots.md
+[!INCLUDE [v4 to v3 pointer](~/includes/v4-to-v3-pointer-bots.md)]
 
 This article describe how to exchange files with a user that interacts with Teams using a bot. There are two approaches to choose from:
 
-1. **Microsoft Graph APIs**. It supports all three scopes: `personal`, `channel`, and `groupchat`
-1. **Teams APIs**. It only supports `personal` scope.
+1. **Microsoft Graph APIs**, which supports all three scopes: `personal`, `channel`, and `groupchat`
+2. **Teams bot APIs**, which only support the `personal` scope.
 
 > [!NOTE] 
 > Sending and receiving files to bots on mobile devices is not supported.

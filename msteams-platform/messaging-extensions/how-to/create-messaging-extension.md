@@ -23,7 +23,7 @@ As you're building your messaging extension, you'll regularly be moving between 
 
 ## Create your web service
 
-The heart of you messaging extension is your web service. It will define a single route, typically `/api/messages`, to receive all requests on. If you're getting started from scratch, you have a few options to choose from.
+The heart of your messaging extension is your web service. It will define a single route, typically `/api/messages`, to receive all requests on. If you're getting started from scratch, you have a few options to choose from.
 
 * Use one of our [quickstarts](#learn-more) tutorials that will guide you through the creation of your web service.
 * Choose one of the messaging extension samples available in the [Bot Framework sample repository](https://github.com/Microsoft/BotBuilder-Samples) to start from.
@@ -84,7 +84,7 @@ Your messaging extension should declare one or more commands, which define where
 
 #### Simple manifest example
 
-The example below is a simple messaging extension object in the app manifest with a search command. This is not the entire app manifest file, just the part specific to messaging extensions. See [app manifest schema](foo.md) for a complete example).
+The example below is a simple messaging extension object in the app manifest with a search command. This is not the entire app manifest file, just the part specific to messaging extensions. See [app manifest schema](foo.md) for a complete example.
 
 ```json
 ...
