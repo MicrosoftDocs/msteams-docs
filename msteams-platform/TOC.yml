@@ -162,6 +162,8 @@
           href: bots/how-to/conversations/send-proactive-messages.md
         - name: Send and receive files
           href: bots/how-to/conversations/send-and-receive-files.md
+        - name: Subscribe to conversation events
+          href: bots/how-to/conversations/subscribe-to-conversation-events.md
       - name: Cards and formatting
         items:
         - name: Format your bot message
@@ -190,8 +192,6 @@
           href: bots/how-to/combine-with-other-features-and-services/use-task-modules.md
         - name: Use Microsoft Graph with your bot
           href: bots/how-to/combine-with-other-features-and-services/use-microsoft-graph.md
-      - name: Subscribe to conversation events
-        href: bots/how-to/subscribe-to-conversation-events.md
       - name: Update and delete bot messages
         href: bots/how-to/update-and-delete-bot-messages.md
       - name: Add authentication to your Teams bot
@@ -327,8 +327,8 @@
           href: resources/bot-v3/bot-conversations/bots-conv-channel.md
         - name: Starting a conversation
           href: resources/bot-v3/bot-conversations/bots-conv-proactive.md
-        - name: Cards and card actions
-          href: resources/bot-v3/bot-conversations/bots-cards.md
+      - name: Cards and card actions
+        href: resources/bot-v3/bots-cards.md
       - name: Message formatting
         href: resources/bot-v3/bots-message-format.md
       - name: Bot events
