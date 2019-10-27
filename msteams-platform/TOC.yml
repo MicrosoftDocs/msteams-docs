@@ -5,12 +5,14 @@
       href: overview.md
     - name: What's new?
       href: whats-new.md
-- name: Tutorials
+- name: Get Started
   items:
   - name: Create an app using C#
     href: tutorials/get-started-dotnet-app-studio.md
   - name: Create an app using Node
     href: tutorials/get-started-nodejs-app-studio.md
+  - name: Create an app with the Yeoman generator
+    href: tutorials/get-started-yeoman.md
 - name: Samples and templates
   items: 
   - name: Sample apps
