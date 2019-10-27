@@ -17,7 +17,7 @@ Teams, channels and group chats allow multiple people to collaborate. Apps that 
 
 They can be expanded with:
 
-* **[Conversational bots](~/bots/bots/what-are-bots.md)** interacting with members of the conversation through chat, and responding to events (like a new member being added, or a channel being renamed). All conversations with a bot in this context are visible to all members of the channel or group, so you'll need to ensure the conversation is relevant to everyone.
+* **[Conversational bots](~/bots/what-are-bots.md)** interacting with members of the conversation through chat, and responding to events (like a new member being added, or a channel being renamed). All conversations with a bot in this context are visible to all members of the channel or group, so you'll need to ensure the conversation is relevant to everyone.
 
 * **[Configurable Tabs](~/tabs/what-are-tabs.md)** providing a full-screen embedded web experience configured for the channel or group chat it is installed in. All members will interact on the same shared web-app, so a stateless single page app experience is typical.
 
@@ -29,7 +29,7 @@ Personal apps are the portion of your Teams app focusing on interactions with a 
 
 They can contain:
 
-* **[Conversational bots](~/bots/bots/what-are-bots.md)** having a one-to-one conversation with the user. Because this is a private conversation, if your app needs to have a multi-turn conversation with a user, or provide a notification relevant only to a single user, it is typically best to have that interaction in a personal app.
+* **[Conversational bots](~/bots/what-are-bots.md)** having a one-to-one conversation with the user. Because this is a private conversation, if your app needs to have a multi-turn conversation with a user, or provide a notification relevant only to a single user, it is typically best to have that interaction in a personal app.
 
 * **[Personal Tabs](~/tabs/what-are-tabs.md)** providing a full-screen embedded web experience.
 
