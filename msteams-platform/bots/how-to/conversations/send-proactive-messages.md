@@ -7,7 +7,7 @@ ms.author: anclear
 ---
 # Send proactive messages
 
-<!-- Update -->
+[!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
 A bot may need to send a message to the user that is not an immediate response to an incoming message. These types of messages are called **proactive messages**.  
 

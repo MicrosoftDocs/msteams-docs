@@ -7,7 +7,7 @@ ms.author: anclear
 ---
 # Get Team's specific context for your bot
 
-<!--Include /includes/v4-to-v3-pointer-bots.md -->
+[!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
 A bot can access additional context data about the team or chat. This information can be used to enrich the bot's functionality and to provide a more personalized experience.
 
@@ -31,36 +31,36 @@ This section shows how to install the example bot using Microsoft Teams **App St
 ### Teams setup
 
 1. In Teams, open **App Studio**. 
-1. Click the **Manifest editor** tab.
-1. In the left panel, click the **Create a new app** button.
-1. In the left panel, under the **Details** section, click **App details**.
-1. Enter the following  information:
+2. Click the **Manifest editor** tab.
+3. In the left panel, click the **Create a new app** button.
+4. In the left panel, under the **Details** section, click **App details**.
+5. Enter the following  information:
     1. **Short name**. For this the example, enter *TeamsRostertBot*.  
-    1. Click the **Generate** button under **App ID**. 
-    1. **Package Name**. For this example, enter *com.teams.dev*.
-    1. **Version** Enter *1.0.0*.
-    1. **Short Description**. Enter *Testing simple teams roster bot*.
-    1. **Long Description**. Enter *Testing simple teams roster bot*.
-    1. **Developer name**. Enter your name.
-    1. **Website**. The name of your website. For this example, enter `https://www.microsoft.com*`.
-    1. **Privacy statement** web address.  For this example, enter `https://www.teams.com/privacy`.
-    1. **Terms of use** web address.  For this example, enter `https://www.teams.com/termsofuse`.
-1. In the left panel, under the **Capabilities** section, click the **Bots** link.
-1. In the right panel, click the **Set up** button. 
-1. In the displayed wizard, select the **New bot** tab, enter the following information:
+    2. Click the **Generate** button under **App ID**. 
+    3. **Package Name**. For this example, enter *com.teams.dev*.
+    4. **Version** Enter *1.0.0*.
+    5. **Short Description**. Enter *Testing simple teams roster bot*.
+    6. **Long Description**. Enter *Testing simple teams roster bot*.
+    7. **Developer name**. Enter your name.
+    8. **Website**. The name of your website. For this example, enter `https://www.microsoft.com*`.
+    9. **Privacy statement** web address.  For this example, enter `https://www.teams.com/privacy`.
+    10. **Terms of use** web address.  For this example, enter `https://www.teams.com/termsofuse`.
+6. In the left panel, under the **Capabilities** section, click the **Bots** link.
+7. In the right panel, click the **Set up** button. 
+8. In the displayed wizard, select the **New bot** tab, enter the following information:
     1. **Name**. For this the example, enter *TeamsRostertBot*.
-    1. **Scope**. Check all 3 boxes.
-    1. Click the **Create** button.
-1. Copy the **Bot ID** (string under TeamsEchoBot) and save it to a file. You will need it later in the `appsettings.json` file in the bot project.
-1. Click the **Generate new password** button, copy the password and save it to a file. You will need it later in the `appsettings.json` file in the bot project.
-1. In a terminal window execute the following command: `ngrok http -host-header=rewrite 3978`. The following picture shows an example:
+    2. **Scope**. Check all 3 boxes.
+    3. Click the **Create** button.
+9. Copy the **Bot ID** (string under TeamsEchoBot) and save it to a file. You will need it later in the `appsettings.json` file in the bot project.
+10. Click the **Generate new password** button, copy the password and save it to a file. You will need it later in the `appsettings.json` file in the bot project.
+11. In a terminal window execute the following command: `ngrok http -host-header=rewrite 3978`. The following picture shows an example:
 
     ![ngrok cmd](Media/ngrok-cmd.png)
 
-1. Copy the **https** forwarding address to a file.
-1. Keep **ngrok** running.  
-1. In the **Messaging endpoint** section in the **Bot endpoint address** enter the ngrok address you saved earlier followed by `/api/messages`. The endpoint value must have a format similar to this: `https://d1dbb0d8.ngrok.io/api/messages`.
-1. Press **Enter** (on your keyboard) to save the address.
+12. Copy the **https** forwarding address to a file.
+13. Keep **ngrok** running.  
+14. In the **Messaging endpoint** section in the **Bot endpoint address** enter the ngrok address you saved earlier followed by `/api/messages`. The endpoint value must have a format similar to this: `https://d1dbb0d8.ngrok.io/api/messages`.
+15. Press **Enter** (on your keyboard) to save the address.
 
 ### Bot setup
 

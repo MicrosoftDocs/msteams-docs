@@ -8,7 +8,7 @@ ms.author: anclear
 
 # Channel and Group chat conversations with a Microsoft Teams bot
 
-[!INCLUDE [pre-release-label](../../../includes/v4-to-v3-pointer-bots.md)]
+[!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
 Microsoft Teams enables you to add bots into your channel or group chat conversations, and by so doing that bot becomes another team member and everyone in the conversation can take advantage of its capabilities directly in the conversation. You can also access Teams-specific functionality directly in your bot, which will enable you to do things like querying team information and @mention users.
 

@@ -9,7 +9,7 @@ ms.author: anclear
 
 <!-- It was named "Send and receive files through your bot" -->
 
-[!INCLUDE [4.6-release-warning](../../../includes/v4-to-v3-pointer-bots.md)]
+[!INCLUDE [4.6-release-warning](~/includes/v4-to-v3-pointer-bots.md)]
 
 includes\v4-to-v3-pointer-bots.md
 

@@ -7,7 +7,7 @@ ms.author: anclear
 ---
 # Subscribe to conversation events
 
-[!INCLUDE [pre-release-label](../../../includes/v4-to-v3-pointer-bots.md)]
+[!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
 Microsoft Teams sends notifications to your bot for events that happen in scopes where your bot is active. You can capture these events in your code and take action on them, such as the following:
 
