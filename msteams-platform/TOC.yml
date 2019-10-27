@@ -22,7 +22,7 @@
 - name: Concepts
   expanded: true
   items:
-    - name: 'Extensibility points in the Teams Client'
+    - name: 'Extensibility points in the Teams client'
       href: concepts/extensibility-points.md
     - name: 'Your Teams app lifecycle'
       href: concepts/teams-app-lifecycle.md
@@ -46,6 +46,8 @@
             href: concepts/design/components/fields.md
     - name: 'Build and test your app'
       items:
+      - name: Overview of building apps for Microsoft Teams
+        href: concepts/build-and-test/building-an-app.md
       - name: Prepare your Office 365 tenant
         href: concepts/build-and-test/prepare-your-o365-tenant.md      
       - name: Use App Studio to create your app

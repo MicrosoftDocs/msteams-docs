@@ -53,7 +53,7 @@ For example, imagine your app contains a conversational bot that works in both a
 Learn more about what an app built on the Microsoft Teams platform can do:
 
 * [Extensibility points for your app](~/concepts/design/extensibility-points.md)
-* [The lifecycle of an app built for Teams](~/concepts/design/teams-app-lifecycle.md)
+* [Building an app for Teams](~/concepts/build-and-test/building-an-app.md)
 
 Try it out in a tutorial:
 

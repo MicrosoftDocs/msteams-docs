@@ -60,7 +60,7 @@ The capabilities section of the Manifest Editor is where the app's capabilities 
 
 ##### Bots
 
-This section allows you to add a bot to your app. Currently, an app can only have one bot. If you already have a bot registered with Bot Framework, you can add that bot by clicking *Set Up* and supplying the bot’s name, Bot Framework ID, and defining the scopes in which the bot will work.
+This section allows you to add a [conversational bot](~/bots/what-are-bots.md) to your app. If you already have a bot registered with Bot Framework, you can add that bot by clicking *Set Up* and supplying the bot’s name, Bot Framework ID, and defining the scopes in which the bot will work.
 
 If you have not yet registered a bot with the Bot Framework, click *Register* to create a new one. Once you’re done registering your bot, come back to this section of the Manifest Editor to enter its name and Bot Framework ID.
 
@@ -74,7 +74,7 @@ This section allows you to add a connector to your app. If you already have regi
 
 ##### Messaging Extensions
 
-[Messaging extensions](~/concepts/messaging-extensions.md) are a powerful new way for users to engage with your app within Microsoft Teams. Users can query for information from your service and post that information in the form of cards, right into the channel or chat conversation.
+[Messaging extensions](~/messaging-extensions/what-are-messaging-extensions.md) are a powerful way for users to engage with your app within Microsoft Teams. Users can query for information from your service and post that information in the form of cards, right into the channel or chat conversation.
 
 Messaging extensions are powered by Bot Framework bots, so they require a configured bot to operate. If you have the name and Bot Framework ID of the bot you would like to power the messaging extension, enter it. Otherwise, click *Register* to create one and enter the information afterward. Select whether the configuration of a messaging extension can be updated by the user.
 
@@ -100,6 +100,9 @@ If you already have a card that you would like to verify inside Teams, you can p
 
 ### React Control Library
 
+>[!Note]
+> This React control library will be deprecated in the future. Consider using the [Fluent-UI react controls as an alternative](https://microsoft.github.io/fluent-ui-react/) (formerly Stardust UI).
+
 Creating an app that follows the Teams best practices is a great way to give your app a look and feel that fits seamlessly with the Teams client experience. The UI controls that you use are critical to achieving that end. To make it easier to create a consistent UI, App Studio provides several categories of UI controls which follow Teams design principles.
 
 Examples of the controls and corresponding React components are provided and ready to use in building your app.
@@ -118,7 +121,3 @@ Controls include:
 * Tabs
 * Tables
 * Icons
-
-#### Source
-
-The control library is open source. It is found on [GitHub](https://github.com/OfficeDev/msteams-ui-components/tree/develop/msteams-ui-components-react).
