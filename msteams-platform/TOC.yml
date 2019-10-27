@@ -160,8 +160,6 @@
           href: bots/how-to/conversations/channel-and-group-conversations.md
         - name: Send proactive messages
           href: bots/how-to/conversations/send-proactive-messages.md
-        - name: Subscribe to conversation events
-          href: bots/how-to/conversations/subscribe-to-conversation-events.md
         - name: Send and receive files
           href: bots/how-to/conversations/send-and-receive-files.md
       - name: Cards and formatting
@@ -181,7 +179,9 @@
       - name: Authentication
         items:
         - name: Authentication flow in bots
-          href: bots/how-to/authentication/auth-flow-bots.md
+          href: bots/how-to/authentication/auth-flow-bot.md
+        - name: Add authentication to your bot
+          href: bots/how-to/authentication/add-authentication.md
       - name: Combine bots with other features and services
         items:
         - name: Use Teams tabs with your bot
@@ -190,8 +190,10 @@
           href: bots/how-to/combine-with-other-features-and-services/use-task-modules.md
         - name: Use Microsoft Graph with your bot
           href: bots/how-to/combine-with-other-features-and-services/use-microsoft-graph.md
+      - name: Subscribe to conversation events
+        href: bots/how-to/subscribe-to-conversation-events.md
       - name: Update and delete bot messages
-        href: bots/how-to/conversations/update-and-delete-bot-messages.md
+        href: bots/how-to/update-and-delete-bot-messages.md
       - name: Add authentication to your Teams bot
         href: bots/how-to/conversations/add-authentication-to-your-teams-bot.md      
       - name: Get Teams context for your bot
@@ -258,11 +260,11 @@
         - name: 'Add authentication to your tabs'
           items:
           - name: 'Authentication flow'
-            href: tabs/how-to/authentication-in-tabs/authentication-flow-tab.md
+            href: tabs/how-to/authentication/auth-flow-tab.md
           - name: 'Using Azure AD authentication'
-            href: tabs/how-to/authentication-in-tabs/auth-tab-aad.md
+            href: tabs/how-to/authentication/auth-tab-aad.md
           - name: 'Using SSO and silent authentication'
-            href: tabs/how-to/authentication-in-tabs/auth-silent-aad.md
+            href: tabs/how-to/authentication/auth-silent-aad.md
         - name: 'Using the Teams client SDK'
           href: tabs/how-to/using-teams-client-sdk.md
         - name: 'Adding your custom tab to SharePoint'
@@ -325,10 +327,10 @@
           href: resources/bot-v3/bot-conversations/bots-conv-channel.md
         - name: Starting a conversation
           href: resources/bot-v3/bot-conversations/bots-conv-proactive.md
-        - name: Message formatting
-          href: resources/bot-v3/bot-conversations/bots-message-format.md
         - name: Cards and card actions
           href: resources/bot-v3/bot-conversations/bots-cards.md
+      - name: Message formatting
+        href: resources/bot-v3/bots-message-format.md
       - name: Bot events
         href: resources/bot-v3/bots-notifications.md
       - name: Context for bots
