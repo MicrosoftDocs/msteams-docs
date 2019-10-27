@@ -193,13 +193,11 @@
         - name: Use Microsoft Graph with your bot
           href: bots/how-to/combine-with-other-features-and-services/use-microsoft-graph.md
       - name: Update and delete bot messages
-        href: bots/how-to/update-and-delete-bot-messages.md
-      - name: Add authentication to your Teams bot
-        href: bots/how-to/conversations/add-authentication-to-your-teams-bot.md      
+        href: bots/how-to/update-and-delete-bot-messages.md     
       - name: Get Teams context for your bot
-        href: bots/how-to/conversations/get-teams-context.md
+        href: bots/how-to/get-teams-context.md
       - name: Create a commands menu for your bot
-        href: bots/how-to/conversations/create-a-bot-commands-menu.md      
+        href: bots/how-to/create-a-bot-commands-menu.md      
       - name: Handle bot rate limiting
         href: bots/how-to/rate-limit.md
     - name: Calling and meeting bots
@@ -248,7 +246,7 @@
       expanded: true
       items:
         - name: 'Add tabs to your app'
-          href: tabs/how-to/extend-app-with-tab.md
+          href: tabs/how-to/add-tab.md
         - name: 'Create tab pages'
           items:
           - name: 'Create a content page'
