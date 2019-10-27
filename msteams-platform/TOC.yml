@@ -44,6 +44,8 @@
             href: concepts/design/components/typography.md
           - name: 'Fields and Flyouts'
             href: concepts/design/components/fields.md
+        - name: Personal apps
+          href: concepts/design/personal-apps.md
     - name: 'Build and test your app'
       items:
       - name: Prepare your Office 365 tenant
