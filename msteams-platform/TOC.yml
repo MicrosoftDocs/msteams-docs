@@ -141,6 +141,8 @@
           href: foo.md
         - name: 'Create a channel bot'
           href: foo.md
+        - name: Add AAD authentication
+          href: bots/quickstarts/add-aad-auth.md
     - name: 'Design your bot'
       items:
         - name: 'Design overview'
