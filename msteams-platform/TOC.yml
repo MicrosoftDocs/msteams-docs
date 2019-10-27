@@ -86,6 +86,10 @@
   items:
     - name: 'What are Messaging Extensions?'
       href: messaging-extensions/what-are-messaging-extensions.md
+    - name: Design
+      items:
+      - name: Design overview
+        href: messaging-extensions/design/messaging-extensions.md
     - name: Quickstarts
       items:
         - name: 'With action command'
@@ -139,8 +143,8 @@
           href: foo.md
     - name: 'Design your bot'
       items:
-        - name: 'something somethign Design'
-          href: foo.md
+        - name: 'Design overview'
+          href: bots/design/bots.md
         - name: 'somethingelse design'
           href: foo.md
     - name: 'How-to guides'
@@ -234,8 +238,8 @@
               href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
     - name: 'Design your tabs'
       items:
-        - name: 'something somethign Design'
-          href: foo.md
+        - name: 'Design overview'
+          href: tabs/design/tabs.md
         - name: 'Tabs on mobile clients'
           href: tabs/design/tabs-mobile.md
     - name: 'How-to guides'
@@ -271,8 +275,8 @@
       href: task-modules-and-cards/what-are-cards.md
     - name: 'Design your task module'
       items:
-        - name: 'something somethign Design'
-          href: foo.md
+        - name: 'Cards overview'
+          href: task-modules-and-cards/design/cards.md
         - name: 'somethingelse design'
           href: foo.md
     - name: 'How-to guides'
