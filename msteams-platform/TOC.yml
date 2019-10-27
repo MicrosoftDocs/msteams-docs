@@ -169,7 +169,7 @@
         - name: Format your bot message
           href: bots/how-to/cards-and-formatting/format-your-bot-messages.md
         - name: Send cards and card actions
-          href: bots/how-to/cards-and-formatting/send-cards-and-card-actions
+          href: bots/how-to/cards-and-formatting/send-cards-and-card-actions.md
       - name: Debug your bot
         items:
         - name: Debug locally with an IDE
@@ -203,7 +203,7 @@
     - name: Calling and meeting bots
       items:
       - name: Calling and meeting bots overview
-        href: bots/calls-and-meetings/calls-meetings-overview.md
+        href: bots/calls-and-meetings/calls-meetings-bots-overview.md
       - name: Real-time media concepts
         href: bots/calls-and-meetings/real-time-media-concepts.md
       - name: Registering a calling bot
@@ -215,27 +215,27 @@
 - name: 'Embedded web experiences with Tabs'
   items:
     - name: 'What are custom tabs?'
-      href: tabs/what-are-custom-tabs.md
+      href: tabs/what-are-tabs.md
     - name: Quickstarts
       items:
         - name: 'Node.js and React'
           items:
-            - name: 'Create a channel and group tab'
-              href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
-            - name: 'Create a personal tab'
-              href: tabs/quickstarts/create-personal-tab-node-yeoman.md
+          - name: 'Create a channel and group tab'
+            href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
+          - name: 'Create a personal tab'
+            href: tabs/quickstarts/create-personal-tab-node-yeoman.md
         - name: 'C#/ASP.NET Core'
           items:
-            - name: 'Create a channel and group tab'
-              href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
-            - name: 'Create a personal tab'
-              href: tabs/quickstarts/create-personal-tab-dotnet-core.md
+          - name: 'Create a channel and group tab'
+            href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
+          - name: 'Create a personal tab'
+            href: tabs/quickstarts/create-personal-tab-dotnet-core.md
         - name: 'C#/ASP.NET MVC'
           items:
-            - name: 'Create a channel and group tab'
-              href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
-            - name: 'Create a personal tab'
-              href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
+          - name: 'Create a channel and group tab'
+            href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
+          - name: 'Create a personal tab'
+            href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
     - name: 'Design your tabs'
       items:
         - name: 'Design overview'
@@ -249,20 +249,20 @@
           href: tabs/how-to/extend-app-with-tab.md
         - name: 'Create tab pages'
           items:
-            - name: 'Create a content page'
-              href: tabs/how-to/create-tab-pages/content-page.md
-            - name: 'Create a configuration page'
-              href: tabs/how-to/create-tab-pages/configuration-page.md
-            - name: 'Create a tab removal page'
-              href: tabs/how-to/create-tab-pages/removal-page.md
+          - name: 'Create a content page'
+            href: tabs/how-to/create-tab-pages/content-page.md
+          - name: 'Create a configuration page'
+            href: tabs/how-to/create-tab-pages/configuration-page.md
+          - name: 'Create a tab removal page'
+            href: tabs/how-to/create-tab-pages/removal-page.md
         - name: 'Add authentication to your tabs'
           items:
-            - name: 'Authentication flow'
-              href: tabs/how-to/authentication-in-tabs/authentication-flow.md
-            - name: 'Using Azure AD authentication'
-              href: tabs/how-to/authentication-in-tabs/azure-ad.md
-            - name: 'Using SSO and silent authentication'
-              href: tabs/how-to/authentication-in-tabs/sso-and-silent.md
+          - name: 'Authentication flow'
+            href: tabs/how-to/authentication-in-tabs/authentication-flow-tab.md
+          - name: 'Using Azure AD authentication'
+            href: tabs/how-to/authentication-in-tabs/auth-tab-aad.md
+          - name: 'Using SSO and silent authentication'
+            href: tabs/how-to/authentication-in-tabs/auth-silent-aad.md
         - name: 'Using the Teams client SDK'
           href: tabs/how-to/using-teams-client-sdk.md
         - name: 'Adding your custom tab to SharePoint'
