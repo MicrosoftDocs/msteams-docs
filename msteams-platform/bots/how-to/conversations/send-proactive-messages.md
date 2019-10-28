@@ -129,12 +129,6 @@ asdf
 asdf
 ```
 
-# [JSON](#tab/json)
-
-```json
-asdf
-```
-
 * * *
 
 ### For a channel or group chat
@@ -152,12 +146,6 @@ asdf
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-asdf
-```
-
-# [JSON](#tab/json)
-
-```json
 asdf
 ```
 
