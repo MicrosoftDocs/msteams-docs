@@ -59,7 +59,19 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-asdf
+this.onMessage(async (context, next) => {
+    var mention = { mentioned: context.activity.from, text:`<at>${context.activity.from.name}</at>` };
+
+    // Against Teams having a Mention in the Entities but not including that
+    // mention Text in the Activity Text will result in a BadRequest.
+    var replyActivity = MessageFactory.text(`Hello ${mention.text}.`);
+    replyActivity.entities = [ <Mention> mention ];
+
+    await context.sendActivity(replyActivity);
+
+    // By calling next() you ensure that the next BotHandler is run.
+    await next();
+});
 ```
 
 # [JSON](#tab/json)
@@ -138,7 +150,19 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-asdf
+this.onMessage(async (context, next) => {
+    var mention = { mentioned: context.activity.from, text:`<at>${context.activity.from.name}</at>` };
+
+    // Against Teams having a Mention in the Entities but not including that
+    // mention Text in the Activity Text will result in a BadRequest.
+    var replyActivity = MessageFactory.text(`Hello ${mention.text}.`);
+    replyActivity.entities = [ <Mention> mention ];
+
+    await context.sendActivity(replyActivity);
+
+    // By calling next() you ensure that the next BotHandler is run.
+    await next();
+});
 ```
 
 # [JSON](#tab/json)
