@@ -21,7 +21,7 @@ For more information about how the Azure Bot Service handles authentication, see
 In this article you will learn:
 
 - **How to create an authentication-enabled bot**. You will use the [cs-auth-sample][teams-auth-bot] sample. The example handles user's login and the authentication token generation.
-- **How to deploy the bot to Azure and associate it with an identity provider**. The provider issues a token based on the user's credentials. The bot can use the token to access resources, such as a mail service, which require authentication. For more information see  [Microsoft Teams authentication flow for bots](../../../_old/concepts/bots/bot-authentication/auth-flow-bot.md).
+- **How to deploy the bot to Azure and associate it with an identity provider**. The provider issues a token based on the user's credentials. The bot can use the token to access resources, such as a mail service, which require authentication. For more information see  [Microsoft Teams authentication flow for bots](auth-flow-bot.md).
 - **How to integrate the bot within Microsoft Teams**. Once the bot has been integrated, you can login and exchange messages with it in a chat.
 
 ## Prerequisites
@@ -29,7 +29,7 @@ In this article you will learn:
 - Knowledge of [bot basics][concept-basics], [managing state][concept-state], the [dialogs library][concept-dialogs], and how to [implement sequential conversation flow][simple-dialog].
 - Knowledge of Azure and OAuth 2.0 development.
 - Visual Studio 2017 or later and git.
-- Azure account. If needed you can create an [Azure free account](https://azure.microsoft.com/en-us/free/).
+- Azure account. If needed you can create an [Azure free account](https://azure.microsoft.com/free/).
 - The following sample.
 
     | Sample | BotBuilder version | Demonstrates |
@@ -82,7 +82,7 @@ After Azure has created the registration resource it lists it in the related res
 > [!NOTE]
 > The Bot Channels Registration resource will show the **Global** region even though you selected West US. This is expected.
 
-For more information, see [Create a bot for Teams](~/bots/how-to/create-a-bot-form-teams.md).
+For more information, see [Create a bot for Teams](../create-a-bot-for-teams.md).
 
 ## Create the identity provider
 
@@ -119,7 +119,7 @@ In this procedure you will use an Azure Active Directory (AD) provider; other Az
 
 ### Configure the identity provider connection and register it with the bot
 
-1. In the [Azure portal](http://portal.azure.com/), select your resource group from the dashboard.
+1. In the [Azure portal][azure-portal], select your resource group from the dashboard.
 1. Click on your bot channel registration link.
 1. On the blade, click **Settings**.
 1. Under **OAuth Connection Settings** near the bottom of the page, click **Add Setting**.
@@ -340,7 +340,7 @@ For more information, see [Connect a bot to Teams](/azure/bot-service/channel-co
 1. Navigate to the `TeamsAppManifest` folder and upload the zipped manifest.
 The following wizard is displayed:
 
-    ![auth bot teams upload](../../media/auth-bot-teams-upload.png)
+    ![auth bot teams upload](../../../assets/images/authentication/auth-bot-teams-upload.png)
 
 1. Click the **Add to a team** button.
 1. In the next window, select the team where to use the bot.
