@@ -4,7 +4,7 @@
 1. In the **Bot Channel Registration** blade, provide the requested information about your bot.
 1. Leave the **Messaging endpoint** box empty for now, you will enter the required URL after deploying the bot. The following picture shows an example of the registration settings:
 
-    ![bot app channels registration](~/bots/how-to/media/auth-bot-channels-registration.png)
+    ![bot app channels registration](../../assets/images/authentication/auth-bot-channels-registration.png)
 
 1. Click **Microsoft App ID and password** and then **Create New**.
 1. Click **Create App ID in the App Registration Portal** link.
