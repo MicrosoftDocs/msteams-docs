@@ -159,14 +159,14 @@
         items:
         - name: Conversation basics
           href: bots/how-to/conversations/conversation-basics.md
+        - name: Subscribe to conversation events
+          href: bots/how-to/conversations/subscribe-to-conversation-events.md
         - name: Channel and group conversations
           href: bots/how-to/conversations/channel-and-group-conversations.md
         - name: Send proactive messages
           href: bots/how-to/conversations/send-proactive-messages.md
         - name: Send and receive files
           href: bots/how-to/conversations/send-and-receive-files.md
-        - name: Subscribe to conversation events
-          href: bots/how-to/conversations/subscribe-to-conversation-events.md
       - name: Cards and formatting
         items:
         - name: Format your bot message
