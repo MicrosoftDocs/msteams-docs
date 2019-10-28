@@ -20,14 +20,9 @@ Microsoft Teams sends notifications to your bot for events that happen in scopes
 
 A bot receives a `conversationUpdate` event when it has been added to a conversation, other members have been added to or removed from a conversation, or conversation metadata has changed.
 
-The `conversationUpdate` event is sent to your bot when it receives information on membership updates for teams where it has been added. It also receives an update when it has been added for the first time specifically for personal conversations. 
-
-> [!Note]
-> The user information (Id) is unique for your bot and can be cached for future use by your service (such as sending a message to a specific user).
-
+The `conversationUpdate` event is sent to your bot when it receives information on membership updates for teams where it has been added. It also receives an update when it has been added for the first time specifically for personal conversations.
 
 The following table shows a list of Teams conversation update events, with links to more details.
-
 
 | Action Taken        | EventType         | Method Called              | Description                | Scope |
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
@@ -38,21 +33,11 @@ The following table shows a list of Teams conversation update events, with links
 | team member removed | teamMemberRemoved | OnTeamsMembersRemovedAsync | [A Member was removed from team](#Team-Member-Removed) | groupChat & team |
 | team renamed        | teamRenamed       | OnTeamsTeamRenamedAsync    | [A Team was renamed](#team-renamed)       | Team |
 
-### Channel updates
+### Channel created
 
-Your bot is notified when a channel is created, renamed, or deleted in a team where it has been added. Again, the `conversationUpdate` event is received, and a Teams-specific event identifier is sent as part of the channelData.eventType object, where the channel data's `channel.id` is the GUID for the channel, and `channel.name` contains the channel name.
+The channel created event is sent to your bot whenever a new channel is created in a team your bot is installed in.
 
-The channel events are as follows:
-
-* channelCreated: A user adds a new channel to the team
-* channelRenamed: A user renames an existing channel
-* channelDeleted: A user removes a channel
-
-#### Channel created
-
-# [C#](#tab/csharp)
-
-The following code snippet demonstrates handling the `channelCreated` event, which calls the `OnTeamsChannelCreatedAsync` method. You will need to add the `OnTeamsChannelCreatedAsync` method directly to your bot class to handle this event. 
+# [C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -62,17 +47,57 @@ protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo
 }
 ```
 
-<!--
-# [JavaScript](#tab/javascript)
--->
+# [TypeScript/Node.js](#tab/typescript)
 
----
+```typescript
+asdf
+```
 
-#### Channel renamed
+# [JSON](#tab/json)
 
-# [C#](#tab/csharp)
+```json
+{
+    "type": "conversationUpdate",
+    "timestamp": "2017-02-23T19:34:07.478Z",
+    "localTimestamp": "2017-02-23T12:34:07.478-07:00",
+    "id": "f:dd6ec311",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+    "from": {
+        "id": "29:1wR7IdIRIoerMIWbewMi75JA3scaMuxvFon9eRQW2Nix5loMDo0362st2IaRVRirPZBv1WdXT8TIFWWmlQCizZQ"
+    },
+    "conversation": {
+        "isGroup": true,
+        "conversationType": "channel",
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+    },
+    "recipient": {
+        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+        "name": "SongsuggesterBot"
+    },
+    "channelData": {
+        "channel": {
+            "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",
+            "name": "FunDiscussions"
+        },
+        "team": {
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+        },
+        "eventType": "channelCreated",
+        "tenant": {
+            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+    }
+}
+```
 
-The following code snippet demonstrates handling the `channelRenamed` event, which calls the `OnTeamsChannelRenamedAsync` method. You will need to add the `OnTeamsChannelRenamedAsync` method directly to your bot class to handle this event. 
+* * *
+
+### Channel renamed
+
+The channel renamed event is sent to your bot whenever a channel is renamed in a team your bot is installed in.
+
+# [C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -80,18 +105,59 @@ protected override async Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo
     var heroCard = new HeroCard(text: $"{channelInfo.Name} is the new Channel name");
     await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
 }
-```        
-<!--
-# [JavaScript](#tab/javascript)
--->
+```
 
----
+# [TypeScript/Node.js](#tab/typescript)
 
-#### Channel Deleted
+```typescript
+asdf
+```
 
-# [C#](#tab/csharp)
+# [JSON](#tab/json)
 
-The following code snippet demonstrates handling the `channelDeleted` event, which calls the `OnTeamsChannelDeletedAsync` method. You will need to add the `OnTeamsChannelDeletedAsync` method directly to your bot class to handle this event. 
+```json
+{
+    "type": "conversationUpdate",
+    "timestamp": "2017-02-23T19:34:07.478Z",
+    "localTimestamp": "2017-02-23T12:34:07.478-07:00",
+    "id": "f:dd6ec311",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+    "from": {
+        "id": "29:1wR7IdIRIoerMIWbewMi75JA3scaMuxvFon9eRQW2Nix5loMDo0362st2IaRVRirPZBv1WdXT8TIFWWmlQCizZQ"
+    },
+    "conversation": {
+        "isGroup": true,
+        "conversationType": "channel",
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+    },
+    "recipient": {
+        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+        "name": "SongsuggesterBot"
+    },
+    "channelData": {
+        "channel": {
+            "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",
+            "name": "PhotographyUpdates"
+        },
+        "team": {
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+        },
+        "eventType": "channelRenamed",
+        "tenant": {
+            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+    }
+}
+```
+
+* * *
+
+### Channel Deleted
+
+The channel deleted event is sent to your bot whenever a channel is deleted in a team your bot is installed in.
+
+# [C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -101,117 +167,243 @@ protected override async Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo
 }
 ```
 
+# [TypeScript/Node.js](#tab/typescript)
 
-<!--
-# [JavaScript](#tab/javascript)
--->
+```typescript
+asdf
+```
 
----
+# [JSON](#tab/json)
+
+```json
+{
+    "type": "conversationUpdate",
+    "timestamp": "2017-02-23T19:34:07.478Z",
+    "localTimestamp": "2017-02-23T12:34:07.478-07:00",
+    "id": "f:dd6ec311",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+    "from": {
+        "id": "29:1wR7IdIRIoerMIWbewMi75JA3scaMuxvFon9eRQW2Nix5loMDo0362st2IaRVRirPZBv1WdXT8TIFWWmlQCizZQ"
+    },
+    "conversation": {
+        "isGroup": true,
+        "conversationType": "channel",
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+    },
+    "recipient": {
+        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+        "name": "SongsuggesterBot"
+    },
+    "channelData": {
+        "channel": {
+            "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",
+            "name": "PhotographyUpdates"
+        },
+        "team": {
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+        },
+        "eventType": "channelDeleted",
+        "tenant": {
+            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+    }
+}
+```
+
+* * *
 
 ### Team member added
 
-The `teamMemberAdded` event is sent to your bot the first time it is added to a team and every time a new user is added to a team that your bot is a member of. 
+The `teamMemberAdded` event is sent to your bot the first time it is added to a conversation and every time a new user is added to a team or group chat that your bot is installed in. The user information (ID) is unique for your bot and can be cached for future use by your service (such as sending a message to a specific user).
 
-# [C#](#tab/csharp)
-
-The following code snippet demonstrates handling the `teamMemberAdded` event, which calls the `OnTeamsMembersAddedAsync` method. You will need to add the `OnTeamsMembersAddedAsync` method directly to your bot class to handle this event. 
+# [C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsMembersAddedAsync(IList<ChannelAccount> membersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 {
-    var heroCard = new HeroCard(text: $"{string.Join(' ', membersAdded.Select(member => member.Id))} joined {teamInfo.Name}");
-    await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
-}
-```
-
-#### Sending a welcome message to a new team member
-
-The `teamMemberAdded` event is sent to your bot the first time it is added to a team and again every time a new user is added to that team that your bot is a member of, your code you will need to check to see if the new team member is your bot or not. If it is your bot you can send a welcome message introducing it to all team members. The welcome message can provide a description of the bot’s functionality and benefits. Ideally the message should also include any commands needed to interact with it. 
-
-If the new member added is not the bot then you can send a different type of welcome message introducing the new person to the team.  You can also send a personal message directly to the new team member with a link to your new hire guide, or other useful information. 
-
-There are potentially two ways to determine if the `teamMemberAdded` event fired due to the bot being added to the team, or if a new team member was added.  One approach is by looking at the `Activity` object of the `turnContext`.  If the `Id` field of the `MembersAdded` object is the same as the `Id` field of the `Recipient` object, then the new member added is the bot, otherwise it is the new person added to your team.  The bot's `Id` will generally be: `28:<MicrosoftAppId>`.  The following code sample demonstrates how to accomplish this.
-
-```csharp
-protected override async Task OnTeamsMembersAddedAsync
-                (IList<ChannelAccount> membersAdded,
-                TeamInfo teamInfo,
-                ITurnContext<IConversationUpdateActivity> turnContext,
-                CancellationToken cancellationToken)
-{
-    if (membersAdded.First().Id == turnContext.Activity.Recipient.Id)
+    foreach (TeamsChannelAccount member in membersAdded)
     {
-        // Send a message to introduce the bot to the team
-        var heroCard = new HeroCard(text: $"The {turnContext.Activity.Recipient.Name} bot has joined {teamInfo.Name}");
-        await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
-    }
-    else
-    {
-        // Send a message welcoming the new member of the team
-
-        IEnumerable<TeamsChannelAccount> teamsChannelAccounts = await TeamsInfo.GetMembersAsync(turnContext, cancellationToken);
-
-        foreach (var memberAdded in membersAdded)
+        if (member.Id == turnContext.Activity.Recipient.Id)
         {
-            var newTeamMember =
-                from teamsChannelAccount in teamsChannelAccounts
-                where teamsChannelAccount.Id.Equals(memberAdded.Id)
-                select teamsChannelAccount.Name;
-
-            var heroCard = new HeroCard(text: $"Welcome {newTeamMember.First()}, the newest member of {teamInfo.Name} team.");
+            // Send a message to introduce the bot to the team
+            var heroCard = new HeroCard(text: $"The {member.Name} bot has joined {teamInfo.Name}");
+            await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
+        }
+        else
+        {
+            var heroCard = new HeroCard(text: $"{member.Name} joined {teamInfo.Name}");
             await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
         }
     }
 }
 ```
 
-> [!Tip]
-> When your bot receives a `membersAdded` event when in a personal scoped chat, the `channelData.team` object will be null. You can use this as a filter to enable a different welcome message depending on scope.
+# [TypeScript/Node.js](#tab/typescript)
 
-> [!NOTE]
-> If the bot name that you use to @Mention your bot is different from the name given in the message response, that is because the names come from different places. The name of your bot that you @Mention is the value you entered for the _app short name_ in the __App details__ section of the Manifest editor in App Studio:
-> 
-> ![App Short Name](Media/AppStudio-BotName-one.png)
-> 
-> The name you will see associated with the bot's response will be the name you entered in the ___Setup a bot___ dialog that appears in App Studio in the bot capabilities section of the Manifest editor: 
->
-> ![Set up a bot](Media/AppStudio-Setup-a-bot-BotRegistrationName-FullScreen.png)
->
-> However, if you registered your bot using `https://dev.botframework.com/bots/new`, the response will come from the name you entered into the _Display name_ field. 
-> 
-> ![dev.botframework.com](Media/AppStudio-Setup-a-bot-BotRegistrationName-dev-botframework-com.png)
+```typescript
+asdf
+```
+
+# [JSON](#tab/json)
+
+This is the message your bot will receive when the bot is added **to a team**.
+
+```json
+{
+    "membersAdded": [
+        {
+            "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0"
+        }
+    ],
+    "type": "conversationUpdate",
+    "timestamp": "2017-02-23T19:38:35.312Z",
+    "localTimestamp": "2017-02-23T12:38:35.312-07:00",
+    "id": "f:5f85c2ad",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+    "from": {
+        "id": "29:1I9Is_Sx0OIy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA"
+    },
+    "conversation": {
+        "isGroup": true,
+        "conversationType": "channel",
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+    },
+    "recipient": {
+        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+        "name": "SongsuggesterBot"
+    },
+    "channelData": {
+        "team": {
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+        },
+        "eventType": "teamMemberAdded",
+        "tenant": {
+            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+    }
+}
+```
+
+This is the message your bot will receive when the bot is added **to a one-to-one chat*.
+
+```json
+{
+  "membersAdded": [{
+      "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0"
+    },
+    {
+      "id": "29:<userID>",
+      "aadObjectId": "***"
+    }
+  ],
+  "type": "conversationUpdate",
+  "timestamp": "2019-04-23T10:17:44.349Z",
+  "id": "f:5f85c2ad",
+  "channelId": "msteams",
+  "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+  "from": {
+    "id": "29:<USERID>",
+    "aadObjectId": "***"
+  },
+  "conversation": {
+    "conversationType": "personal",
+    "id": "***"
+  },
+  "recipient": {
+    "id": "28:<BOT ID>",
+    "name": "<BOT NAME>"
+  },
+  "channelData": {
+    "tenant": {
+      "id": "<TENANT ID>"
+    }
+  }
+}
+```
+
+
+* * *
 
 ### Team member removed
 
 The `teamMemberRemoved` event is sent to your bot if it is removed from a team and every time any user is removed from a team that your bot is a member of. You can determine if the new member removed was the bot itself or a user by looking at the `Activity` object of the `turnContext`.  If the `Id` field of the `MembersRemoved` object is the same as the `Id` field of the `Recipient` object, then the member removed is the bot, otherwise it is a user.  The bot's `Id` will generally be: `28:<MicrosoftAppId>`
 
-# [C#](#tab/csharp)
-
-The following code snippet demonstrates handling the `teamMemberRemoved` event, which calls the `OnTeamsMembersRemovedAsync` method. You will need to add the `OnTeamsMembersRemovedAsync` method directly to your bot class to handle this event. 
+# [C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsMembersRemovedAsync(IList<ChannelAccount> membersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 {
-    var heroCard = new HeroCard(text: $"{string.Join(' ', membersRemoved.Select(member => member.Id))} removed from {teamInfo.Name}");
-    await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
+    foreach (TeamsChannelAccount member in membersRemoved)
+    {
+        if (member.Id == turnContext.Activity.Recipient.Id)
+        {
+            // The bot was removed
+            // You should clear any cached data you have for this team
+        }
+        else
+        {
+            var heroCard = new HeroCard(text: $"{member.Name} was removed from {teamInfo.Name}");
+            await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
+        }
+    }
 }
 ```
 
+# [TypeScript/Node.js](#tab/typescript)
 
+```typescript
+asdf
+```
 
-<!--
-# [JavaScript](#tab/javascript)
--->
+# [JSON](#tab/json)
 
----
+```json
+{
+    "membersRemoved": [
+        {
+            "id": "29:1_LCi5Up14pAy65yZuaJzG1uIT7ujYhjjSTsUNqjORsZHjLHKiQIBJa4cX2XsAsRoaY7va2w6ZymA9-1VtSY_g"
+        }
+    ],
+    "type": "conversationUpdate",
+    "timestamp": "2017-02-23T19:37:06.96Z",
+    "localTimestamp": "2017-02-23T12:37:06.96-07:00",
+    "id": "f:d8a6a4aa",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+    "from": {
+        "id": "29:1I9Is_Sx0OIy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA"
+    },
+    "conversation": {
+        "isGroup": true,
+        "conversationType": "channel",
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+    },
+    "recipient":
+    {
+        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+        "name": "SongsuggesterBot"
+    },
+    "channelData": {
+        "team": {
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+        },
+        "eventType": "teamMemberRemoved",
+        "tenant": {
+            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+    }
+}
+```
+
+* * *
 
 ### Team renamed
 
-Your bot is notified when the team it is in has been renamed. It receives a `conversationUpdate` event with eventType.teamRenamed in the channelData object. Please note that there are no notifications for team creation or deletion, because bots exist only as part of teams and have no visibility outside the scope in which they have been added.
+Your bot is notified when the team it is in has been renamed. It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object.
 
-# [C#](#tab/csharp)
-
-The following code snippet demonstrates handling the `teamRenamed` event, which calls the `OnTeamsTeamRenamedAsync` method. You will need to aAdd the `OnTeamsTeamRenamedAsync` method directly to your bot class to handle this event. 
+# [C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -221,27 +413,61 @@ protected override async Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnCo
 }
 ```
 
+# [TypeScript/Node.js](#tab/typescript)
 
-<!--
-# [JavaScript](#tab/javascript)
--->
+```typescript
+asdf
+```
 
----
+# [JSON](#tab/json)
+
+```json
+{ 
+    "type": "conversationUpdate",
+    "timestamp": "2017-02-23T19:35:56.825Z",
+    "localTimestamp": "2017-02-23T12:35:56.825-07:00",
+    "id": "f:1406033e",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/", 
+    "from": { 
+        "id": "29:1I9Is_Sx0O-Iy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA"
+    }, 
+    "conversation": {
+        "isGroup": true,
+        "conversationType": "channel",
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+    },
+    "recipient": { 
+        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+        "name": "SongsuggesterLocal"
+    },
+    "channelData": {
+        "team": {
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype",
+            "name": "New Team Name"
+        },
+        "eventType": "teamRenamed",
+        "tenant": { 
+           "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+    }
+}
+```
+
+* * *
 
 ## Message reaction events
 
-The `messageReaction` event is sent when a user adds or removes his or her reaction to a message which was originally sent by your bot. 
+The `messageReaction` event is sent when a user adds or removes reactions to a message which was sent by your bot. The `replyToId` contains the ID of the specific message, and the `Type` is the type of reaction in text format.  The types of reactions include: "angry", "heart", "laugh", "like", "Sad", "surprised". This event does not contain the contents of the original message, so if processing reactions to your messages is important for your bot you'll need to store the messages when you send them.
 
 | EventType       | Payload object   | Description                                                             | Scope |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
 | messageReaction | reactionsAdded   | [Reaction to bot message](#Reaction-to-a-bot-message)                   | All   |
 | messageReaction | reactionsRemoved | [Reaction removed from bot message](#Reactions-removed-from-bot-message) | All   |
 
-The `ActivityTypes.MessageReaction` event is sent when a user adds or removes his or her reaction to a message which was originally sent by your bot. `replyToId` contains the ID of the specific message, and the `Type` is the type of reaction in text format.  The types of reactions include: "angry", "heart", "laugh", "like", "Sad", "surprised".
-
 ### Reactions to a bot message
 
-# [C#](#tab/csharp)
+# [C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnReactionsAddedAsync(IList<MessageReaction> messageReactions, ITurnContext<IMessageReactionActivity> turnContext, CancellationToken cancellationToken)
@@ -255,15 +481,59 @@ protected override async Task OnReactionsAddedAsync(IList<MessageReaction> messa
 }
 ```
 
-<!--
-# [JavaScript](#tab/javascript)
--->
+# [TypeScript/Node.js](#tab/typescript)
 
----
+```typescript
+asdf
+```
+
+# [JSON](#tab/json)
+
+```json
+{
+    "reactionsAdded": [
+        {
+            "type": "like"
+        }
+    ],
+    "type": "messageReaction",
+    "timestamp": "2017-10-16T18:45:41.943Z",
+    "id": "f:9f78d1f3",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+    "from": {
+        "id": "29:1I9Is_Sx0O-Iy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA",
+        "aadObjectId": "c33aafc4-646d-4543-9d4c-abd28e4d2110"
+    },
+    "conversation": {
+        "isGroup": true,
+        "conversationType": "channel",
+        "id": "19:3629591d4b774aa08cb0887902eee7c1@thread.skype"
+    },
+    "recipient": {
+        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+        "name": "SongsuggesterLocal"
+    },
+    "channelData": {
+        "channel": {
+            "id": "19:3629591d4b774aa08cb0887902eee7c1@thread.skype"
+        },
+        "team": {
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+        },
+        "tenant": {
+            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+    },
+    "replyToId": "1:19uJ8TZA1cZcms7-2HLOW3pWRF4nSWEoVnRqc0DPa_kY"
+}
+```
+
+* * *
 
 ### Reactions removed from bot message
 
-# [C#](#tab/csharp)
+# [C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> messageReactions, ITurnContext<IMessageReactionActivity> turnContext, CancellationToken cancellationToken)
@@ -277,8 +547,52 @@ protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> mes
 }
 ```
 
-<!--
-# [JavaScript](#tab/javascript)
--->
+# [TypeScript/Node.js](#tab/typescript)
 
----
+```typescript
+asdf
+```
+
+# [JSON](#tab/json)
+
+```json
+{
+    "reactionsRemoved": [
+        {
+            "type": "like"
+        }
+    ],
+    "type": "messageReaction",
+    "timestamp": "2017-10-16T18:45:41.943Z",
+    "id": "f:9f78d1f3",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+    "from": {
+        "id": "29:1I9Is_Sx0O-Iy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA",
+        "aadObjectId": "c33aafc4-646d-4543-9d4c-abd28e4d2110"
+    },
+    "conversation": {
+        "isGroup": true,
+        "conversationType": "channel",
+        "id": "19:3629591d4b774aa08cb0887902eee7c1@thread.skype"
+    },
+    "recipient": {
+        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+        "name": "SongsuggesterLocal"
+    },
+    "channelData": {
+        "channel": {
+            "id": "19:3629591d4b774aa08cb0887902eee7c1@thread.skype"
+        },
+        "team": {
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+        },
+        "tenant": {
+            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+    },
+    "replyToId": "1:19uJ8TZA1cZcms7-2HLOW3pWRF4nSWEoVnRqc0DPa_kY"
+}
+```
+
+* * *
