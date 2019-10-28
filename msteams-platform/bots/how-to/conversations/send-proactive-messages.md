@@ -9,7 +9,7 @@ ms.author: anclear
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-A bot may need to send a message to the user that is not an immediate response to an incoming message. These types of messages are called **proactive messages**.  
+A bot may need to send a message to a user, channel, or group chat that is not an immediate response to an incoming message. These types of messages are called **proactive messages**. Depending on your scenario, you can either [send a message to an existing conversation](#send-a-message-to-an-existing-conversation), or [create a new conversation or conversation thread](#create-a-new-conversation-or-conversation-thread). Your bot can **only** send proactive messages to conversations or users that it is aware of in some fashion.
 
 Proactive messages can be useful in a variety of scenarios. These are some examples:  
 
@@ -40,38 +40,51 @@ When sending notifications, assure that the users have a clear path to take comm
 - **What they can do about it.** Make it easy for the users to take actions based on the notification.
 - **How they can opt out.** You need to provide a path for users to opt out of additional notifications.
 
-## Obtain necessary user information
+## Send a message to an existing conversation
 
-Bots can create new conversations with an individual Microsoft Teams user by obtaining the userâ€™s *unique ID* and *tenant ID.* You can obtain these values using one of the following methods:
+The simplest form of proactive messaging is sending a message to a conversation that already exists. To enable this flow your bot will need to cache or store the unique conversation IDs that it is aware of from messages and/or events that it receives.
 
-<!-- WARNING: Verify. Please, verify these links; they point to topics in the _old folder.-->
+### Example: Retrieving the conversation ID
 
-- By [fetching the team roster](../../../_old/concepts/bots/bots-context.md#fetching-the-team-roster) from a channel your app is installed in.
-- By caching them when a user [interacts with your bot in a channel](../../../_old/concepts/bots/bot-conversations/bots-conv-channel.md).
-- When a users is [@mentioned in a channel conversation](../../../_old/concepts/bots/bot-conversations/bots-conv-channel.md#-mentions) the bot is a part of.
-- By caching them when you [receive the conversationUpdate](../../../_old/concepts/bots/bots-notifications.md#team-member-or-bot-addition) event when your app is installed in a personal scope, or new members are added to a channel or group chat.
+# [C#/.NET](#tab/dotnet)
 
+```csharp
+asdf
+```
 
+# [TypeScript/Node.js](#tab/typescript)
 
-### Proactively install your app using Graph
+```typescript
+asdf
+```
 
-> [!Note]
-> Proactively installing apps using graph is currently in beta.
+* * *
 
-Occasionally it may be necessary to proactively message users that have not installed or interacted with your bot previously. For example, you want to use the [company communicator](../../../samples/app-templates.md#company-communicator) to send messages to your entire organization. For this scenario you can use the Graph API to proactively install your bot for your users, then cache the necessary values from the `conversationUpdate` event your app will receive upon install.
+### Example: Sending a proactive message with a conversation ID
 
-You can only install apps that are in your organizational app catalogue, or the Teams app store.
+Once you have the correct conversation ID, you can use it to send your message.
 
-See [Install apps for users](https://docs.microsoft.com/graph/teams-proactive-messaging) in the Graph documentation for complete details. There is also a [sample in .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
+# [C#/.NET](#tab/dotnet)
 
+```csharp
+asdf
+```
 
-## Example
+# [TypeScript/Node.js](#tab/typescript)
 
-In essence there are two ways to issue proactive messages, in a standalone fashion or in a conversation.
+```typescript
+asdf
+```
 
-The simplest way to issue a proactive message is standalone, as shown in the example below. For example, when a user is added a team a bot can issue a proactive message to the added member via a `SendActivityAsync`.  This scenario applies when the bot does not have to preserve conversation state information and refer to it at some a later time.
- 
-```cs 
+* * *
+
+### Example: Sending a message in response to an event
+
+If you are sending a message in response to an event message, you can that message contains the necessary information.
+
+# [C#/.NET](#tab/dotnet)
+
+```csharp
 protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> membersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 {
   foreach (var member in membersAdded)
@@ -85,6 +98,46 @@ protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount
   }
 }
 ```
+
+# [TypeScript/Node.js](#tab/typescript)
+
+```typescript
+asdf
+```
+
+* * *
+
+## Create a new conversation or conversation thread
+
+If you need to create a new conversation, or conversation thread, you must obtain the necessary information to do so. You cannot create a new group chat conversation in this fashion, only a new one-to-one chat or add a new conversation thread to an existing channel in a team your bot is installed in. When sending a proactive message to a channel it is possible to just send a message using the channel Id to create a new conversation thread. However, if you do so you will not receive the conversation ID of the thread you just created, and therefore will be unable to post a reply to it.
+
+### For a user
+
+Bots can create new conversations with an individual Microsoft Teams user by obtaining the user's *unique ID* and *tenant ID.* You can obtain these values using one of the following methods:
+
+- By [fetching the team roster](~/bots/how-to/get-teams-context.md#fetching-the-roster) from a team or group chat your app is installed in.
+- By caching them when a user [interacts with your bot](~/bots/how-to/conversations/conversation-basics.md).
+- When a users is [@mentioned in a channel conversation](~/bots/how-to/conversations/channel-and-group-conversations.md) the bot is a part of.
+- By caching them when you [receive the conversationUpdate event](~/bots/how-to/conversations/subscribe-to-conversation-events.md) when your app is installed in a personal scope, or new members are added to a channel or group chat.
+
+### For a channel or group chat
+
+## Proactively install your app using Graph
+
+> [!Note]
+> Proactively installing apps using graph is currently in beta.
+
+Occasionally it may be necessary to proactively message users that have not installed or interacted with your bot previously. For example, you want to use the [company communicator](~/samples/app-templates.md#company-communicator) to send messages to your entire organization. For this scenario you can use the Graph API to proactively install your bot for your users, then cache the necessary values from the `conversationUpdate` event your app will receive upon install.
+
+You can only install apps that are in your organizational app catalogue, or the Teams app store.
+
+See [Install apps for users](/graph/teams-proactive-messaging) in the Graph documentation for complete details. There is also a [sample in .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
+
+## Example
+
+In essence there are two ways to issue proactive messages, in a standalone fashion or in a conversation.
+
+The simplest way to issue a proactive message is standalone, as shown in the example below. For example, when a user is added a team a bot can issue a proactive message to the added member via a `SendActivityAsync`.  This scenario applies when the bot does not have to preserve conversation state information and refer to it at some a later time.
 
 A bot can post into a channel to create a new conversation as shown in the example below. This scenario applies when it is important for the bot to preserve conversation state information and refer to it at some a later time.
 
@@ -124,8 +177,3 @@ private async Task MessageAllMembersAsync(ITurnContext<IMessageActivity> turnCon
 
 ```
 
-## Additional resources
-
-- [Send proactive notifications to users](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp) - Bot Framework SDK proactive messages explained
-- [How bots work](https://docs.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&tabs=csharp) - Inside the bots
-- [Have a conversation with a Microsoft Teams bot](../../../_old/concepts/bots/bot-conversations/bots-conversations.md) - Conversations and messages in Teams

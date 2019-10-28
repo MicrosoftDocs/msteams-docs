@@ -147,7 +147,7 @@ For example `@mention TeamsRosterBot`.
 
 ![teams bot roster map](Media/teams-bot-roster-map.png)
 
-### List team's members
+### Fetching the roster
 
 To list the members that belong to a team, you use the function `GetMembersAsync`.
 The function is contained in the `TeamsRosterClient.cs` class which belongs to the **Microsoft.Bot.Builder** library.  The function calls the `GetChannelData` in the
