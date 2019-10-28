@@ -131,10 +131,10 @@
           href: messaging-extensions/how-to/add-authentication.md
 - name: 'Conversational Bots'
   items:
-    - name: 'What are bots in Microsoft Teams?'
+    - name: What are bots in Microsoft Teams?
       href: bots/what-are-bots.md
-    - name: 'Bot scopes and threaded conversations'
-      href: bots/bot-scopes-and-threaded-conversations.md
+    - name: How bots work
+      href: bots/how-to/bot-basics.md
     - name: Quickstarts
       items:
         - name: 'Create a personal bot'
@@ -154,12 +154,11 @@
       items:
       - name: Create a bot for Teams
         href: bots/how-to/create-a-bot-for-teams.md
-      - name: Bot basics
-        href: /azure/bot-service/bot-builder-basics
+
       - name: Conversations
         items:
-        - name: Send and receive messages
-          href: bots/how-to/conversations/send-and-receive-messages.md
+        - name: Conversation basics
+          href: bots/how-to/conversations/conversation-basics.md
         - name: Channel and group conversations
           href: bots/how-to/conversations/channel-and-group-conversations.md
         - name: Send proactive messages
