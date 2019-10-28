@@ -242,7 +242,18 @@ protected override async Task OnTeamsMembersAddedAsync(IList<ChannelAccount> mem
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-asdf
+this.onTeamsMembersAddedEvent(async (membersAdded: ChannelAccount[], teamInfo: TeamInfo, context: TurnContext, next: () => Promise<void>): Promise<void> => {
+    let newMembers: string = '';
+    console.log(JSON.stringify(membersAdded));
+    membersAdded.forEach((account) => {
+        newMembers += account.id + ' ';
+    });
+    const name = !teamInfo ? 'not in team' : teamInfo.name;
+    const card = CardFactory.heroCard('Account Added', `${newMembers} joined ${name}.`);
+    const message = MessageFactory.attachment(card);
+    await context.sendActivity(message);
+    await next();
+});
 ```
 
 # [JSON](#tab/json)
