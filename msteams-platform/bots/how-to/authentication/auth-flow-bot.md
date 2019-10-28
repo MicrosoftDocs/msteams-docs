@@ -48,4 +48,4 @@ For sample code showing the bot authentication process see:
 
 For detailed implementation walkthroughs for bot authentication targeting Azure Active Directory see:
 
-* [Authenticate a user in a Microsoft Teams bot](~/concepts/authentication/auth-bot-AAD.md)
+* [Add authentication to your Teams bot](add-authentication.md)
