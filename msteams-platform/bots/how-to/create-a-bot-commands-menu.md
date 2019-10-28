@@ -9,6 +9,9 @@ ms.author: anclear
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
+> [!Note]
+> Bot menus will not appear on mobile clients.
+
 Adding a command menu to your bot lets you to give your users a list of commands your bot is designed to execute, along with help text explaining the command. Selecting a command from the list will insert the command string into the compose message box, then all they need to do is click **Send**.
 
 ![Bot command menu](~/bots/how-to/media/bot-menu-sample.png)
