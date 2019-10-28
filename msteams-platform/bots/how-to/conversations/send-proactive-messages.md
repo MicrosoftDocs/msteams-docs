@@ -80,22 +80,17 @@ asdf
 
 ### Example: Sending a message in response to an event
 
-If you are sending a message in response to an event message, you can that message contains the necessary information.
+If you are sending a message in response to an event message, that message contains the necessary information. Messages sent to a team in this fashion will create a new conversation thread in the primary channel (the *General* channel).
 
 # [C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> membersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 {
-  foreach (var member in membersAdded)
-  {
-      var replyActivity = MessageFactory.Text($"{member.Id} added to the team");
-      replyActivity.ApplyConversationReference(turnContext.Activity.GetConversationReference());
-
-      var channelId = turnContext.Activity.Conversation.Id.Split(";")[0];
-      replyActivity.Conversation.Id = channelId;
-      var resourceResponse = await turnContext.SendActivityAsync(replyActivity, cancellationToken);
-  }
+    foreach (var member in membersAdded)
+    {
+        await turnContext.SendActivityAsync(MessageFactory.Text($"Welcome to the team {member.Id}."), cancellationToken);
+    }
 }
 ```
 
@@ -109,7 +104,7 @@ asdf
 
 ## Create a new conversation or conversation thread
 
-If you need to create a new conversation, or conversation thread, you must obtain the necessary information to do so. You cannot create a new group chat conversation in this fashion, only a new one-to-one chat or add a new conversation thread to an existing channel in a team your bot is installed in. When sending a proactive message to a channel it is possible to just send a message using the channel Id to create a new conversation thread. However, if you do so you will not receive the conversation ID of the thread you just created, and therefore will be unable to post a reply to it.
+If you need to create a new conversation, or conversation thread, you must obtain the necessary information to do so. You cannot create a new group chat conversation in this fashion, only a new one-to-one chat or add a new conversation thread to an existing channel in a team your bot is installed in. When sending a proactive message to a channel it is possible to just send a message using the channel ID to create a new conversation thread. However, if you do so you will not receive the conversation ID of the thread you just created, and therefore will be unable to post a reply to it.
 
 ### For a user
 
@@ -120,7 +115,53 @@ Bots can create new conversations with an individual Microsoft Teams user by obt
 - When a users is [@mentioned in a channel conversation](~/bots/how-to/conversations/channel-and-group-conversations.md) the bot is a part of.
 - By caching them when you [receive the conversationUpdate event](~/bots/how-to/conversations/subscribe-to-conversation-events.md) when your app is installed in a personal scope, or new members are added to a channel or group chat.
 
+#### Example: Create a conversation with a user
+
+# [C#/.NET](#tab/dotnet)
+
+```csharp
+asdf
+```
+
+# [TypeScript/Node.js](#tab/typescript)
+
+```typescript
+asdf
+```
+
+# [JSON](#tab/json)
+
+```json
+asdf
+```
+
+* * *
+
 ### For a channel or group chat
+
+A bot can post into a channel to create a new conversation thread as shown in the example below. This scenario applies when it is important for the bot to preserve conversation state information and refer to it at some a later time.
+
+#### Example: Create a new conversation thread in a channel
+
+# [C#/.NET](#tab/dotnet)
+
+```csharp
+asdf
+```
+
+# [TypeScript/Node.js](#tab/typescript)
+
+```typescript
+asdf
+```
+
+# [JSON](#tab/json)
+
+```json
+asdf
+```
+
+* * *
 
 ## Proactively install your app using Graph
 
@@ -133,13 +174,16 @@ You can only install apps that are in your organizational app catalogue, or the 
 
 See [Install apps for users](/graph/teams-proactive-messaging) in the Graph documentation for complete details. There is also a [sample in .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
 
-## Example
+## Learn more
 
-In essence there are two ways to issue proactive messages, in a standalone fashion or in a conversation.
+Your bot has access to additional information about the group chat or team it is installed in. See [get teams context](~/bots/how-to/get-teams-context.md) for additional APIs available for your bot.
 
-The simplest way to issue a proactive message is standalone, as shown in the example below. For example, when a user is added a team a bot can issue a proactive message to the added member via a `SendActivityAsync`.  This scenario applies when the bot does not have to preserve conversation state information and refer to it at some a later time.
+There are also additional events that your bot can subscribe and respond to. See [subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md) to learn how.
 
-A bot can post into a channel to create a new conversation as shown in the example below. This scenario applies when it is important for the bot to preserve conversation state information and refer to it at some a later time.
+[!INCLUDE [sample](~/includes/bots/teams-conversation-bot-sample.md)]
+
+
+
 
 ```cs
 private async Task MessageAllMembersAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -177,3 +221,17 @@ private async Task MessageAllMembersAsync(ITurnContext<IMessageActivity> turnCon
 
 ```
 
+```csharp
+protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> membersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+  foreach (var member in membersAdded)
+  {
+      var replyActivity = MessageFactory.Text($"{member.Id} added to the team");
+      replyActivity.ApplyConversationReference(turnContext.Activity.GetConversationReference());
+
+      var channelId = turnContext.Activity.Conversation.Id.Split(";")[0];
+      replyActivity.Conversation.Id = channelId;
+      var resourceResponse = await turnContext.SendActivityAsync(replyActivity, cancellationToken);
+  }
+}
+```
