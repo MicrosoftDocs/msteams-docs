@@ -258,15 +258,12 @@ protected override async Task OnTeamsMembersAddedAsync(IList<ChannelAccount> mem
 
 ```typescript
 this.onTeamsMembersAddedEvent(async (membersAdded: ChannelAccount[], teamInfo: TeamInfo, context: TurnContext, next: () => Promise<void>): Promise<void> => {
-    let newMembers: string = '';
-    console.log(JSON.stringify(membersAdded));
-    membersAdded.forEach((account) => {
-        newMembers += account.id + ' ';
-    });
-    const name = !teamInfo ? 'not in team' : teamInfo.name;
-    const card = CardFactory.heroCard('Account Added', `${newMembers} joined ${name}.`);
-    const message = MessageFactory.attachment(card);
-    await context.sendActivity(message);
+    for (const member of membersAdded) {
+        var replyActivity = MessageFactory.text(`${member.id} was added to the team.`);
+        replyActivity = TurnContext.applyConversationReference(replyActivity, TurnContext.getConversationReference(context.activity));
+        await context.sendActivity(replyActivity);
+    }
+    // By calling next() you ensure that the next BotHandler is run.
     await next();
 });
 ```
@@ -380,18 +377,15 @@ protected override async Task OnTeamsMembersRemovedAsync(IList<ChannelAccount> m
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-        this.onTeamsMembersRemovedEvent(async (membersRemoved: ChannelAccount[], teamInfo: TeamInfo, context: TurnContext, next: () => Promise<void>): Promise<void> => {
-            let removedMembers: string = '';
-            console.log(JSON.stringify(membersRemoved));
-            membersRemoved.forEach((account) => {
-                removedMembers += account.id + ' ';
-            });
-            const name = !teamInfo ? 'not in team' : teamInfo.name;
-            const card = CardFactory.heroCard('Account Removed', `${removedMembers} removed from ${teamInfo.name}.`);
-            const message = MessageFactory.attachment(card);
-            await context.sendActivity(message);
-            await next();
-        });
+this.onTeamsMembersRemovedEvent(async (membersRemoved: ChannelAccount[], teamInfo: TeamInfo, context: TurnContext, next: () => Promise<void>): Promise<void> => {
+    for (const member of membersRemoved) {
+        var replyActivity = MessageFactory.text(`${member.id} was removed from the team.`);
+        replyActivity = TurnContext.applyConversationReference(replyActivity, TurnContext.getConversationReference(context.activity));
+        await context.sendActivity(replyActivity);
+    }
+    // By calling next() you ensure that the next BotHandler is run.
+    await next();
+});
 ```
 
 # [JSON](#tab/json)
