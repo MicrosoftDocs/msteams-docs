@@ -134,7 +134,7 @@
     - name: What are bots in Microsoft Teams?
       href: bots/what-are-bots.md
     - name: How bots work
-      href: bots/how-to/bot-basics.md
+      href: bots/bot-basics.md
     - name: Quickstarts
       items:
         - name: 'Create a personal bot'
