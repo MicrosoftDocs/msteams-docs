@@ -156,3 +156,5 @@ Response body
 ```
 
 * * *
+
+[!INCLUDE [sample](~/includes/bots/teams-conversation-bot-sample.md)]

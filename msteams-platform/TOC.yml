@@ -154,7 +154,6 @@
       items:
       - name: Create a bot for Teams
         href: bots/how-to/create-a-bot-for-teams.md
-
       - name: Conversations
         items:
         - name: Conversation basics
@@ -200,7 +199,7 @@
       - name: Get Teams context for your bot
         href: bots/how-to/get-teams-context.md
       - name: Create a commands menu for your bot
-        href: bots/how-to/create-a-bot-commands-menu.md      
+        href: bots/how-to/create-a-bot-commands-menu.md     
       - name: Handle bot rate limiting
         href: bots/how-to/rate-limit.md
     - name: Calling and meeting bots
