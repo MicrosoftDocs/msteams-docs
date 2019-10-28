@@ -154,6 +154,8 @@
       items:
       - name: Create a bot for Teams
         href: bots/how-to/create-a-bot-for-teams.md
+      - name: Bot basics
+        href: /azure/bot-service/bot-builder-basics
       - name: Conversations
         items:
         - name: Send and receive messages
