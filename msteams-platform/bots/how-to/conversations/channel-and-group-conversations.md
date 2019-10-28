@@ -232,8 +232,8 @@ asdf
 
 ## Learn more
 
-Your bot has access to additional information about the group chat or team it is installed in. See [get teams context](../bots/how-to/get-teams-context.md) for additional APIs available for your bot.
+Your bot has access to additional information about the group chat or team it is installed in. See [get teams context](../get-teams-context.md) for additional APIs available for your bot.
 
-There are also additional events that your bot can subscribe and respond to. See [subscribe to conversation events](../bots/how-to/conversations/subscribe-to-conversation-events.md) to learn how.
+There are also additional events that your bot can subscribe and respond to. See [subscribe to conversation events](../subscribe-to-conversation-events.md) to learn how.
 
 [!INCLUDE [sample](../includes/bots/teams-conversation-bot-sample.md)]
