@@ -9,7 +9,9 @@ ms.author: anclear
 
 [!INCLUDE [v4 to v3 pointer](~/includes/v4-to-v3-pointer-bots.md)]
 
-This article describe how to exchange files with a user that interacts with Teams using a bot. There are two approaches to choose from:
+This article describe how to exchange files with a user in a one-to-one chat with your bot. You cannot use this functionality to exchange files in a team or group chat.
+
+There are two approaches to choose from:
 
 1. **Microsoft Graph APIs**, which supports all three scopes: `personal`, `channel`, and `groupchat`
 2. **Teams bot APIs**, which only support the `personal` scope.
@@ -133,15 +135,13 @@ The following table describes the content properties of the attachment:
 | `uniqueId` | OneDrive/SharePoint drive item ID. |
 | `fileType` | File type, such as pdf or docx. |
 
-
-## Example
+## Example using the Bot Framework SDK
 
 The following example shows how you can handle file uploads and send file consent requests to the user in the bot's dialog. The code snippets shown next, belong to a complete runnable example you can download at this location: [FileUpload](https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/FileUpload).
 
-You can install this bot at any scope. When the user `@mention` the bot will display an upload card. If the user can accept or decline to upload the file. If she accepts, the file will be uploaded to her **OneDrive** storage.
+# [C#/.NET](#tab/dotnet)
 
-```cs
-
+```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
     bool messageWithFileDownloadInfo = turnContext.Activity.Attachments?[0].ContentType == FileDownloadInfo.ContentType;
@@ -235,5 +235,12 @@ protected override async Task OnTeamsFileConsentDeclineAsync(ITurnContext<IInvok
     reply.Text = $"Declined. We won't upload file <b>{context["filename"]}</b>.";
     await turnContext.SendActivityAsync(reply, cancellationToken);
 }
-
 ```
+
+# [TypeScript/Node.js](#tab/typescript)
+
+```typescript
+asdf
+```
+
+* * *
