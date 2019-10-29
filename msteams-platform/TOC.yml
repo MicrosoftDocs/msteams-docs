@@ -166,12 +166,6 @@
           href: bots/how-to/conversations/send-proactive-messages.md
         - name: Send and receive files
           href: bots/how-to/conversations/send-and-receive-files.md
-      - name: Cards and formatting
-        items:
-        - name: Format your bot message
-          href: bots/how-to/cards-and-formatting/format-your-bot-messages.md
-        - name: Send cards and card actions
-          href: bots/how-to/cards-and-formatting/send-cards-and-card-actions.md
       - name: Debug your bot
         items:
         - name: Debug locally with an IDE
@@ -194,6 +188,8 @@
           href: bots/how-to/combine-with-other-features-and-services/use-task-modules.md
         - name: Use Microsoft Graph with your bot
           href: bots/how-to/combine-with-other-features-and-services/use-microsoft-graph.md
+      - name: Format your bot message
+        href: bots/how-to/cards-and-formatting/format-your-bot-messages.md
       - name: Update and delete bot messages
         href: bots/how-to/update-and-delete-bot-messages.md     
       - name: Get Teams context for your bot
@@ -275,19 +271,22 @@
       href: task-modules-and-cards/what-are-task-modules.md
     - name: 'What are cards?'
       href: task-modules-and-cards/what-are-cards.md
-    - name: 'Design your task module'
+    - name: 'Cards'
       items:
-        - name: 'Cards overview'
-          href: task-modules-and-cards/design/cards.md
-        - name: 'somethingelse design'
-          href: foo.md
-    - name: 'How-to guides'
-      expanded: true
+        - name: Designing effective cards
+          href: task-modules-and-cards/cards/design-effective-cards.md
+        - name: Formatting card text
+          href: task-modules-and-cards/cards/cards-format.md
+        - name: Add and respond to card actions
+          href: task-modules-and-cards/cards/cards-actions.md
+        - name: Cards reference
+          href: task-modules-and-cards/cards/cards-reference.md
+    - name: 'Task modules'
       items:
-        - name: dosoemthign
-          href: foo.md
-        - name: dosomethingelse
-          href: foo.md
+        - name: From a bot
+          href: task-modules-and-cards/task-modules/task-modules-bots.md
+        - name: From a tab
+          href: task-modules-and-cards/task-modules/task-modules-tabs.md
 - name: 'Webhooks and Connectors'
   items:
     - name: 'What are Webhooks and Connectors?'

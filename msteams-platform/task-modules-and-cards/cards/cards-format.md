@@ -14,7 +14,7 @@ Formatting support differs between different card types, and rendering of the ca
 
 ## Card types
 
-There are three types of cards supported in Teams:
+There are three types of cards that support Markdown in Teams:
 
 * **Adaptive Cards**: Markdown is supported in Adaptive Card `Textblock` field, as well as `Fact.Title` and `Fact.Value`. HTML is not supported in adaptive cards.
 * **O365 Connector Cards**: Markdown and limited HTML is supported in Office 365 Connector cards in the text fields.

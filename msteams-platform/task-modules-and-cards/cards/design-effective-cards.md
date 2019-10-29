@@ -1,9 +1,9 @@
 ---
-title: Design Guidelines Reference
-description: Describes the guidelines for creating cards
+title: DDesigning effective cards
+description: Describes the design guidelines for creating cards
 keywords: teams design guidelines reference framework cards adaptable lightweight
 ---
-# Create a lightweight, adaptable card
+# Designing effective cards
 
 Cards are actionable snippets of content that you can add to a conversation through a bot, a connector, or app. Using text, graphics, and buttons, cards allow you to communicate with an audience.
 
