@@ -151,7 +151,7 @@ turnContext.Activity.RemoveRecipientMention();
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-asdf
+Knock yourself out
 ```
 
 * * *
