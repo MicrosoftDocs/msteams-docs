@@ -13,7 +13,7 @@ OAuth 2.0 is an open standard for authentication and authorization used by Azure
 See the GitHub repo [Microsoft Teams Authentication Sample](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
 for an example that demonstrates authentication flow for bots using Node using the [OAuth 2.0 authorization code grant type](https://oauth.net/2/grant-types/authorization-code/).
 
-![Bot authentication sequence diagram](~/assets/images/authentication/bot_auth_sequence_diagram.png)
+![Bot authentication sequence diagram](../../../assets/images/authentication/bot_auth_sequence_diagram.png)
 
 1. The user sends a message to the bot.
 2. The bot determines if the user needs to sign in.
@@ -27,7 +27,7 @@ for an example that demonstrates authentication flow for bots using Node using t
 7. The provider takes the user to the bot's OAuth redirect page, with an authorization code.
 8. The bot redeems the authorization code for an access token, and **provisionally** associates the token with the user that initiated the sign-in flow. Below, we call this a *provisional token*.
     * In the example, the bot associates the value of the `state` parameter with the id of the user that initiated the sign-in process so it can later match it with the `state` value returned by the identity provider. ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/AuthBot.ts#L70-L99))
-    * **IMPORTANT**: The bot stores the token it receives from the identity provider and associates it with a specific user, but it is marked as "pending validation". The provisional token cannot be used yet: it must be further validated: 
+    * **IMPORTANT**: The bot stores the token it receives from the identity provider and associates it with a specific user, but it is marked as "pending validation". The provisional token cannot be used yet: it must be further validated:
       1. **Validate what's received from the identity provider.** The value of the `state` parameter must be confirmed against what was saved earlier. 
       1. **Validate what's received from Teams.** A [two-step authentication](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) validation is performed to ensure that the user who authorized the bot with the identity provider is the same user who is chatting with the bot. This guards against [man-in-the-middle](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) and [phishing](https://en.wikipedia.org/wiki/Phishing) attacks. The bot generates a verification code and stores it, associated with the user. The verification code is sent automatically by Teams as described below in steps 9 and 10. ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/AuthBot.ts#L100-L113))
 9. The OAuth callback renders a page that calls `notifySuccess("<verification code>")`. ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/master/src/views/oauth-callback-success.hbs))
@@ -48,4 +48,4 @@ For sample code showing the bot authentication process see:
 
 For detailed implementation walkthroughs for bot authentication targeting Azure Active Directory see:
 
-* [Authenticate a user in a Microsoft Teams bot](~/concepts/authentication/auth-bot-AAD.md)
+* [Add authentication to your Teams bot](add-authentication.md)
