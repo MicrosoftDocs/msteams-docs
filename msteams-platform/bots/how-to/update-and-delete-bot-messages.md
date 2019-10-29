@@ -30,8 +30,22 @@ foreach (var activityId in _list)
 
 # [TypeScript/Node.js](#tab/typescript)
 
+To update an existing message, pass a new `Activity` object with the existing activity ID to the `updateActivity` method of the `TurnContext` object.
+
+<!--jf: This is a little weird.
+        Also, why a list of activity IDs here? Why not just one?
+        Why would we use the current activity's text as the replacement text for the original activity?
+        Why not simplify the whole snippet to something like (without the for loop):
+const newActivity = MessageFactory.text('Updated text for the original message');
+newActivity.id = originalActivityId;
+await turnContext.updateActivity(newActivity);
+-->
 ```typescript
-Knock yourself out
+for (const activityId in list) {
+    const newActivity = MessageFactory.text(turnContext.activity.text);
+    newActivity.id = activityId;
+    await turnContext.updateActivity(newActivity);
+}
 ```
 
 ---
@@ -40,11 +54,12 @@ Knock yourself out
 
 ## Deleting messages
 
+In the Bot Framework, every message has its own unique activity identifier.
 Messages can be deleted using the bot frameworks DeleteActivity method as shown here.
 
 # [C#/.NET](#tab/dotnet)
 
-In the bot framework, every message has its own unique activity identifier.  To delete that message, pass that activityId to the `DeleteActivityAsync` method of the `turnContext` class.
+To delete that message, pass that activity's ID to the `DeleteActivityAsync` method of the `TurnContext` class.
 
 ```csharp
 foreach (var activityId in _list)
@@ -55,8 +70,12 @@ foreach (var activityId in _list)
 
 # [TypeScript/Node.js](#tab/typescript)
 
+To delete that message, pass that activity's ID to the `deleteActivity` method of the `TurnContext` object.
+
 ```typescript
-Knock yourself out
+for (const activityId in list) {
+    await turnContext.deleteActivity(activityId);
+}
 ```
 
 ---
