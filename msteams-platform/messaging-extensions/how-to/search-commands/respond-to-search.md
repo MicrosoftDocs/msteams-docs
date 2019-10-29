@@ -87,16 +87,16 @@ Your service should respond with the results matching the user query. The respon
 
 We support the following attachment types:
 
-* [Thumbnail card](~/concepts/cards/cards-reference.md#thumbnail-card)
-* [Hero card](~/concepts/cards/cards-reference.md#hero-card)
-* [Office 365 Connector card](~/concepts/cards/cards-reference.md#office-365-connector-card)
-* [Adaptive card](~/concepts/cards/cards-reference.md#adaptive-card)
+* [Thumbnail card](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
+* [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
+* [Office 365 Connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Adaptive Card](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-See [Cards](~/concepts/cards/cards.md) for an overview.
+See [Cards](~/task-modules-and-cards/cards/what-are-cards.md) for an overview.
 
-To learn how to use the thumbnail and hero card types, see [Add cards and card actions](~/concepts/cards-actions.md).
+To learn how to use the thumbnail and hero card types, see [Add cards and card actions](~/task-modules-and-cards/cards-actions.md).
 
-For additional documentation regarding the Office 365 Connector card, see [Using Office 365 Connector cards](~/concepts/cards/cards-reference.md#office-365-connector-card).
+For additional documentation regarding the Office 365 Connector card, see [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
 The result list is displayed in the Microsoft Teams UI with a preview of each item. The preview is generated in one of two ways:
 
