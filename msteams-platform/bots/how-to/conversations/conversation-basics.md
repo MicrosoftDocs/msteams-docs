@@ -65,12 +65,17 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 {
   await turnContext.SendActivityAsync(MessageFactory.Text($"Echo: {turnContext.Activity.Text}"), cancellationToken);
 }
+
 ```
 
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-asdf
+protected async onMessageActivity(context: TurnContext): Promise<void> {
+    await context.sendActivity(`Echo: "${ context.activity.text }"`);
+    await next();
+}
+
 ```
 
 # [JSON](#tab/json)
@@ -133,7 +138,10 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-asdf
+protected async onMessageActivity(context: TurnContext): Promise<void> {
+    await context.sendActivity('Hello and welcome!');
+}
+
 ```
 
 # [JSON](#tab/json)
