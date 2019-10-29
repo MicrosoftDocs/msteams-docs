@@ -5,6 +5,8 @@ description: Add modal popup experiences to collect or display information to yo
 ms.topic: overview
 ms.author: anclear
 ---
+# What are task modules?
+
 Task modules allow you to create modal popup experiences in your Teams application. Inside the popup you can run your own custom HTML/JavaScript code, show an `<iframe>`-based widget such as a YouTube or Microsoft Stream video or display an [Adaptive card](https://docs.microsoft.com/en-us/adaptive-cards/). They are especially useful for initiating and completing tasks or displaying rich information like videos or Power BI dashboards. A popup experience is often more natural for users initiating and completing tasks compared to a tab or a conversation-based bot experience.
 
 Task modules build on the foundation of Microsoft Teams tabs; they are essentially a tab inside a popup window. They use the same SDK, so if you've built a tab you are already 90% of the way to being able to create a task module.
