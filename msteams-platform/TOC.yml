@@ -22,10 +22,10 @@
 - name: Concepts
   expanded: true
   items:
-    - name: 'Extensibility points in the Teams client'
-      href: concepts/extensibility-points.md
     - name: Building apps for Microsoft Teams
       href: concepts/building-an-app.md
+    - name: 'Extensibility points in the Teams client'
+      href: concepts/extensibility-points.md
     - name: 'Design your app'
       items:
         - name: 'Understand your use cases'
@@ -68,14 +68,14 @@
           href: concepts/deploy-and-publish/apps-upload.md
         - name: Publish your app
           href: concepts/deploy-and-publish/apps-publish.md
-        - name: Publishing to AppSource
-          items:
-          - name: AppSource guidance
-            href: concepts/deploy-and-publish/office-store-guidance.md
-          - name: AppSource checklist
-            href: concepts/deploy-and-publish/office-store-checklist.md
-          - name: Application Certification
-            href: concepts/deploy-and-publish/application-certification.md
+        - name: Submit your app to AppSource
+          href: concepts/deploy-and-publish/office-store-guidance.md
+        - name: AppSource approval guidance
+          href: concepts/deploy-and-publish/office-store-approval.md
+        - name: AppSource submission checklist
+          href: concepts/deploy-and-publish/office-store-checklist.md
+        - name: Application Certification program
+          href: concepts/deploy-and-publish/application-certification.md
     - name: 'Authentication in Teams apps'
       items:
         - name: 'Authentication overview'
@@ -298,12 +298,6 @@
           href: webhooks-and-connectors/quickstarts/add-incoming-webhook.md
         - name: 'Create an outgoing webhook'
           href: webhooks-and-connectors/quickstarts/add-outgoing-webhook.md
-    - name: 'Design your webhooks and Connectors'
-      items:
-        - name: 'something somethign Design'
-          href: foo.md
-        - name: 'somethingelse design'
-          href: foo.md
     - name: 'How-to guides'
       expanded: true
       items:

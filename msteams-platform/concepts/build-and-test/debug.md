@@ -17,21 +17,18 @@ For purely local or local Teams testing, you run the experience from your own co
 
 In general we recommend you use multiple manifests and packages to allow you to maintain separation between production and development services. For example, you might choose to register separate development and production bots and create appropriate packages to upload them in your testing environment. We also recommend you upload and test your production package before submitting your app for publishing in our app store, or distributing to customers.
 
-> [!NOTE]
-> None of these testing solutions fully replicates the end-user experience for an app distributed through AppSource, because the app installation process does some of the capability checks, such as scope, during installation.
-
 ## Purely local
 
-Our bot samples are designed to run unmodified within the Bot Emulator. This enables you to test some of the core logic of the bot, see a rough layout of messages, and perform simple tests. Here are the steps:
+> [!NOTE]
+> Running this way does not give you access to Teams app functionality or Teams-specific bot functions like roster calls and other channel-specific functionality. In addition, some capabilities may be allowed by the Bot Framework in the Bot Emulator that might not function when running in Microsoft Teams.
 
-* Run the code by selecting the pre-built "Launch - Emulator" debug configuration for Node.js, or use the default "web.config" values for .NET/C#.
+Your bot can be run within the Bot Emulator. This enables you to test some of the core logic of the bot, see a rough layout of messages, and perform simple tests. Here are the steps:
+
+* Run the code locally
 * Launch the Bot Emulator and set the URL:
   * Node.js: `http://localhost:3978/api/messages`
   * .NET/C#: `http://localhost:3979/api/messages`
 * Leave the Microsoft app ID and Microsoft app password blank, to match the default environment variables.
-
-> [!NOTE]
-> Running this way does not give you access to Teams app functionality or Teams-specific bot functions like roster calls and other channel-specific functionality. In addition, some capabilities may be allowed by the Bot Framework in the Bot Emulator that might not function when running in Microsoft Teams.
 
 ## Locally hosted
 

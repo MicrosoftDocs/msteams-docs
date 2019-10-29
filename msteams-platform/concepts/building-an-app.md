@@ -68,10 +68,6 @@ You have three options for [distributing your Microsoft Teams app](~/concepts/ap
 
 When distributing your app you need to take into consideration not just your desired audience, but the IT policies in place in the organization you want to share your app with. Each organization has complete control over determining which apps will be uploaded to their organizational app catalog, and which apps are available to install from the app store.
 
-## Working with multiple dev/test environments
-
-adsf
-
 ## Get started quickly
 
 Want to get started quickly? Check out one of our getting started tutorials, or a quickstart for a particular platform feature (which can be found in each feature section of the documentation).

@@ -10,9 +10,7 @@ App Studio makes it easy to start creating or integrating your own Microsoft Tea
 
 ## Installing App Studio
 
-App Studio is a Teams app which can be found in the Teams store. See the Store Icon in the left-hand ribbon of Teams, or follow this link for direct download: [App Studio](https://aka.ms/InstallTeamsAppStudio).
-
-![Store icon](~/assets/images/get-started/storeicon.png)
+App Studio is a Teams app which can be found in the Teams store. Follow this link for direct download: [App Studio](https://aka.ms/InstallTeamsAppStudio) (you can also find the app in the app store).
 
 In the store, search for App Studio.
 
