@@ -92,7 +92,7 @@ We support the following attachment types:
 * [Office 365 Connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Adaptive Card](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-See [Cards](~/task-modules-and-cards/cards/what-are-cards.md) for an overview.
+See [What are cards](~/task-modules-and-cards/what-are-cards.md) for an overview.
 
 To learn how to use the thumbnail and hero card types, see [Add cards and card actions](~/task-modules-and-cards/cards-actions.md).
 
