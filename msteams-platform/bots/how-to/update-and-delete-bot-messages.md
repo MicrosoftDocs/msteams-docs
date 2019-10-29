@@ -15,7 +15,7 @@ Rather than have your messages be static snapshots of data, your bot can dynamic
 
 The new message need not match the original in type. For instance, if the original message contained an attachment, the new message can be a simple text message.
 
-# [C#](#tab/csharp)
+# [C#/.NET](#tab/dotnet)
 
 To update an existing message, pass a new `Activity` object with the existing activity ID to the `UpdateActivityAsync` method of the `TurnContext` class.
 
@@ -28,9 +28,11 @@ foreach (var activityId in _list)
 }
 ```
 
-<!--
-# [JavaScript](#tab/javascript)
--->
+# [TypeScript/Node.js](#tab/typescript)
+
+```typescript
+Knock yourself out
+```
 
 ---
 
@@ -40,7 +42,7 @@ foreach (var activityId in _list)
 
 Messages can be deleted using the bot frameworks DeleteActivity method as shown here.
 
-# [C#](#tab/csharp)
+# [C#/.NET](#tab/dotnet)
 
 In the bot framework, every message has its own unique activity identifier.  To delete that message, pass that activityId to the `DeleteActivityAsync` method of the `turnContext` class.
 
@@ -51,9 +53,11 @@ foreach (var activityId in _list)
 }
 ```
 
-<!--
-# [JavaScript](#tab/javascript)
--->
+# [TypeScript/Node.js](#tab/typescript)
+
+```typescript
+Knock yourself out
+```
 
 ---
 
