@@ -7,53 +7,50 @@ ms.author: anclear
 ---
 # What are conversational bots?
 
-> [!IMPORTANT] 
-> THIS NEEDS TO BE UPDATED. The find and replace tag for things that need to be updated is "foo.md". So foo.md me please.
+Conversational bots allow users to interact with your web service through text, interactive cards, and task modules. They are incredibly flexible - a conversational bot can be everything from a few simple commands, to a complex artificial intelligence and natural language processing powered virtual assistants. They can be one aspect of a larger application, or completely stand on their own.
 
-Build and connect intelligent bots to interact with Microsoft Teams users naturally through chat. Or provide a simple commands-based bot, to be used as your "command-line" interface for your broader Teams app experience. You can make a notification-only bot, which can push information relevant to your users directly to them in a channel or direct message. You can even bring your existing Bot Framework-based bot and add Teams-specific support to make your experience shine.
+The gif below shows a user conversing with a bot in a one-to-one chat using both text and interactive cards. Finding the right mix of cards, text, and task modules is key to creating a useful bot. Don't forget, bots are way more than just text!
 
 ![FAQ Plus gif](~/assets/images/FAQPlusEndUser.gif)
 
-> [!TIP]
-> If you are just looking for a way to simply extend your team by integrating with custom tools and services in a secure manner, check out our [outgoing webhook](~/concepts/outgoingwebhook.md) feature. Be aware, though, that outgoing webhooks simply leverage your existing web services - they can't access non-messaging APIs, perform asynchronous posting, or add button actions to cards.
+## What kinds of tasks are they good for?
 
-## What you need to know: Bots
+Bots in Microsoft Teams can be part of a one-to-one conversation, a group chat, or in a channel in a Team. Each scope will provide unique opportunities, and challenges, for your conversational bot.
 
-A bot appears just like any other team member you interact with in a conversation except that it has a hexagonal avatar icon and is always online.
+### In a channel
 
-A bot behaves differently depending on what kind of conversation it is involved in. Bots in Teams support several kinds of conversations (called scopes in the [app manifest](~/resources/schema/manifest-schema.md)).
+Channels contain threaded conversations between multiple people - potentially lots of people (up to two thousand currently). This potentially gives your bot massive reach, but individual interactions need to be concise. Traditional multi-turn interactions probably won't work well. Instead, look to use interactive cards or task modules, or potentially move the conversation to a one-to-one conversation if you need to collect lots of information. Your bot will also only have access to messages where it is @mentioned directly, you cannot retrieve additional messages from the conversation with using Microsoft Graph and elevated organization-level permissions.
 
-* `teams` Also called channel conversations
-* `personal` Conversations between a bot and a single user
-* `groupChat` A conversation between a bot and 2 or more users
+Some scenarios where bots excel in a channel include:
 
-See [Have a conversation with a Microsoft Teams bot](~/concepts/bots/bot-conversations/bots-conversations.md) for more information.
+* **Notifications**, particularly if you provide an interactive card for users to take additional information.
+* **Feedback scenarios** like polls and surveys.
+* Interactions that can be resolved in a **single request/response cycle**, where at the results are useful for multiple members of the conversation.
+* **Social/fun bots** - get an awesome cat image, randomly pick a winner, etc.
 
-With Microsoft Teams apps, you can make the bot the star of your experience, or just a helper. Bots are distributed as part of your broader app package which can include other capabilities such as [tabs](~/concepts/tabs/tabs-overview.md) or [messaging extensions](~/concepts/messaging-extensions/messaging-extensions-overview.md).
+### In a group chat
 
-## Bot APIs
+Group chats are non-threaded conversations between three or more people. They tend to have fewer members than a channel, and are more transient. Similar to a channel, your bot will only have access to messages where it is @mentioned directly.
 
-Microsoft Teams supports most of the [Microsoft Bot Framework](https://dev.botframework.com/). (If you already have a bot that's based on the Bot Framework, you can easily adapt it to work in Microsoft Teams.) We recommend you use either C# or Node.js to take advantage of our [SDKs](/microsoftteams/platform/#pivot=sdk-tools). These packages extend the basic Bot Builder SDK classes and methods:
+Scenarios that work well in a channel will usually work just as well in a group chat.
+
+### In a one-to-one chat
+
+This is the traditional way for a conversational bot to interact with a user. They can enable incredibly diverse workloads. Q&A bots, bots that initiate workflows in other systems, bots that tell jokes and bots that take notes are just a few examples. Just remember to consider if a conversation-based interface is the best way to present your functionality.
+
+## How do bots work?
+
+Bots for Microsoft Teams are build on the [Microsoft Bot Framework](https://dev.botframework.com/). (If you already have a bot that's based on the Bot Framework, you can easily adapt it to work in Microsoft Teams.) We recommend you use either C# or Node.js to take advantage of our [SDKs](/microsoftteams/platform/#pivot=sdk-tools). These packages extend the basic Bot Builder SDK classes and methods:
 
 * Using specialized card types like the Office 365 Connector card
 * Consuming and setting Teams-specific channel data on activities
 * Processing messaging extension requests
 
-The SDK extensions install dependencies, including the Bot Builder SDK.
-
-* **.NET** To use the Microsoft Teams extensions for the Bot Builder SDK for .NET, install the [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet package in your Visual Studio project.
-* **Node.js** To use the Microsoft Teams extensions for the Bot Builder SDK for Node.js, add the [botbuilder-teams](https://www.npmjs.com/package/botbuilder-teams) npm package.
-* **Source code** You can find the full source code for the extensions in the [BotBuilder-MicrosoftTeams](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams) repo on Github.
-
 > [!IMPORTANT]
 > You can develop Teams apps in any other web-programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly, but you must perform all token handling yourself.
 
-*Teams App Studio* helps you create and configure your app manifest, and can create your Bot Framework bot for you. It also contains a React control library and an interactive card builder. See [Getting started with Teams App Studio](~/get-started/get-started-app-studio.md).
+*Teams App Studio* helps you create and configure your app manifest, and can register your web service as a bot on the Bot Framework. It also contains a React control library and an interactive card builder. See [Getting started with Teams App Studio](~/concepts/build-and-test/app-studio-overview.md).
 
-## Outgoing webhooks
+## Webhooks and connectors
 
-Outgoing webhooks allow you to create a simple bot for basic interaction, like kicking off a workflow or other simple commands you may need. Outgoing webhooks live only in the team in which you create them and are intended for simple processes specific to your company's workflow. See [outgoing webhooks](~/concepts/outgoingwebhook.md) for more information.
-
-## Troubleshooting bots
-
-See the [Troubleshooting bots](~/troubleshoot/troubleshoot.md#troubleshooting-bots) topic for more information.
+Webhooks and connectors allow you to create a simple bot for basic interaction, like kicking off a workflow or other simple commands you may need. They live only in the team in which you create them and are intended for simple processes specific to your company's workflow. See [What are webhooks and connectors?](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) for more information.
