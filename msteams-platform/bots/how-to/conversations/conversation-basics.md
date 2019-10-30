@@ -71,7 +71,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-this.onMessage(async (context, next) => {
+protected async onMessage(async (context, next) => {
     await context.sendActivity(`Echo: '${context.activity.text}'`);
 });
 ```
@@ -136,7 +136,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-this.onMessage(async (context, next) => {
+protected async onMessage(async (context, next) => {
     await context.sendActivity('Hello and welcome!');
 });
 ```
