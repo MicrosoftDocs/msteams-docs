@@ -5,6 +5,7 @@ description: How to update and delete messages sent from your Microsoft Teams bo
 ms.topic: overview
 ms.author: anclear
 ---
+
 # Update and delete messages sent from your bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
@@ -15,34 +16,36 @@ Rather than have your messages be static snapshots of data, your bot can dynamic
 
 The new message need not match the original in type. For instance, if the original message contained an attachment, the new message can be a simple text message.
 
-# [C#](#tab/csharp)
+# [C#/.NET](#tab/dotnet)
 
 To update an existing message, pass a new `Activity` object with the existing activity ID to the `UpdateActivityAsync` method of the `TurnContext` class.
 
 ```csharp
-foreach (var activityId in _list)
-{
-    var newActivity = MessageFactory.Text(turnContext.Activity.Text);
-    newActivity.Id = activityId;
-    await turnContext.UpdateActivityAsync(newActivity, cancellationToken);
-}
+var newActivity = MessageFactory.Text("The new text for the activity");
+newActivity.Id = activityId;
+await turnContext.UpdateActivityAsync(newActivity, cancellationToken);
 ```
 
-<!--
-# [JavaScript](#tab/javascript)
--->
+# [TypeScript/Node.js](#tab/typescript)
+
+To update an existing message, pass a new `Activity` object with the existing activity ID to the `updateActivity` method of the `TurnContext` object.
+
+```typescript
+const newActivity = MessageFactory.text('The new text for the activity');
+newActivity.id = activityId;
+await turnContext.updateActivity(newActivity);
+```
 
 ---
 
-
-
 ## Deleting messages
 
+In the Bot Framework, every message has its own unique activity identifier.
 Messages can be deleted using the bot frameworks DeleteActivity method as shown here.
 
-# [C#](#tab/csharp)
+# [C#/.NET](#tab/dotnet)
 
-In the bot framework, every message has its own unique activity identifier.  To delete that message, pass that activityId to the `DeleteActivityAsync` method of the `turnContext` class.
+To delete that message, pass that activity's ID to the `DeleteActivityAsync` method of the `TurnContext` class.
 
 ```csharp
 foreach (var activityId in _list)
@@ -51,9 +54,15 @@ foreach (var activityId in _list)
 }
 ```
 
-<!--
-# [JavaScript](#tab/javascript)
--->
+# [TypeScript/Node.js](#tab/typescript)
+
+To delete that message, pass that activity's ID to the `deleteActivity` method of the `TurnContext` object.
+
+```typescript
+for (const activityId in list) {
+    await turnContext.deleteActivity(activityId);
+}
+```
 
 ---
 
