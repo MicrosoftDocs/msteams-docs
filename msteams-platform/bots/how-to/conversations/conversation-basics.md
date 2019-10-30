@@ -71,11 +71,9 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-protected async onMessageActivity(context: TurnContext): Promise<void> {
-    await context.sendActivity(`Echo: "${ context.activity.text }"`);
-    await next();
-}
-
+this.onMessage(async (context, next) => {
+    await context.sendActivity(`Echo: '${context.activity.text}'`);
+});
 ```
 
 # [JSON](#tab/json)
@@ -138,10 +136,9 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-protected async onMessageActivity(context: TurnContext): Promise<void> {
+this.onMessage(async (context, next) => {
     await context.sendActivity('Hello and welcome!');
-}
-
+});
 ```
 
 # [JSON](#tab/json)
