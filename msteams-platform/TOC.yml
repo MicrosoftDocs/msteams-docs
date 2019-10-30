@@ -189,7 +189,7 @@
         - name: Use Microsoft Graph with your bot
           href: bots/how-to/combine-with-other-features-and-services/use-microsoft-graph.md
       - name: Format your bot message
-        href: bots/how-to/cards-and-formatting/format-your-bot-messages.md
+        href: bots/how-to/format-your-bot-messages.md
       - name: Update and delete bot messages
         href: bots/how-to/update-and-delete-bot-messages.md     
       - name: Get Teams context for your bot

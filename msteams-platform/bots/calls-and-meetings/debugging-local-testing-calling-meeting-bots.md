@@ -7,7 +7,7 @@ ms.date: 11/18/2018
 
 # How to develop calling and online meeting bots on your local PC
 
-In [run and debug your app](~/resources/general/debug.md) we explain how to use [ngrok](https://ngrok.com) to create a tunnel between your local computer and the Internet. In this topic, learn how you can also use ngrok for media and signaling traffic for calls and online meeting bots, using some advanced capabilities of ngrok, allowing to you to use your local PC to develop bots that support calls and online meetings.
+In [run and debug your app](~/concepts/build-and-test/debug.md) we explain how to use [ngrok](https://ngrok.com) to create a tunnel between your local computer and the Internet. In this topic, learn how you can also use ngrok for media and signaling traffic for calls and online meeting bots, using some advanced capabilities of ngrok, allowing to you to use your local PC to develop bots that support calls and online meetings.
 
 Messaging bots use HTTP, but calls and online meeting bots use the lower-level TCP. Ngrok supports TCP tunnels in addition to HTTP tunnels; you'll learn how to do this below.
 
@@ -21,7 +21,7 @@ Create an ngrok configuration file `ngrok.yml` (see [here](https://ngrok.com/doc
 
 ## Setting up signaling
 
-In [the introduction to calls and meetings bots](~/concepts/calls-and-meetings/calls-meetings-bots-overview.md), we discussed call signaling: how bots detect and respond to new calls and events during a call. Call signaling events are sent via HTTP POST to the bot's calling endpoint.
+In [the introduction to calls and meetings bots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md), we discussed call signaling: how bots detect and respond to new calls and events during a call. Call signaling events are sent via HTTP POST to the bot's calling endpoint.
 
 As with the bot's messaging API, in order for the Real-time Media Platform to talk to your bot, your bot must be reachable over the internet. Ngrok makes this simple: add the following lines to your ngrok.yml:
 

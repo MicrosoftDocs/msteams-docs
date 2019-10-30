@@ -2,14 +2,13 @@
 title: Registering a calling and meeting bot for Microsoft Teams
 description: Learn how to register a new audio/video calling bot for Microsoft Teams
 keywords: calling bot audio/video audio video media
-ms.date: 10/26/18
 ---
 # Registering a calling bot for Microsoft Teams
 
 A bot that participates in audio/video calls and online meetings is an ordinary Microsoft Teams bot with a few extra things:
 
 * There's a new version of the Teams app manifest with two extra settings, `supportsCalling` and `supportsVideo`. These settings are included in the Developer Preview version of the Microsoft Teams app manifest.
-* [Microsoft Graph permissions](~/concepts/calls-and-meetings/registering-calling-bot.md#add-microsoft-graph-permissions) must be configured for your bot's Microsoft App ID.
+* [Microsoft Graph permissions](~/bots/calls-and-meetings/registering-calling-bot.md#add-microsoft-graph-permissions) must be configured for your bot's Microsoft App ID.
 * The Microsoft Graph calls and online meetings APIs permissions require tenant admin consent.
 
 Let's discuss the above in more detail.
@@ -29,9 +28,9 @@ If you want your IDE to properly validate the manifest.json schema for your call
 
 ## Creating a new bot or adding calling capabilities to an existing bot
 
-Creating a bot for Microsoft Teams is covered in more detail in the [Create a new bot](~/concepts/bots/bots-create.md) topic, but we'll repeat some of it here:
+Creating a bot for Microsoft Teams is covered in more detail in the [Create a new bot](~/bots/how-to/create-a-bot-for-teams.md) topic, but we'll repeat some of it here:
 
-1. Use this link to create a new bot: `https://dev.botframework.com/bots/new`. If you click on the *Create a bot* button in the Bot Framework portal instead, you will [create your bot in Microsoft Azure](~/concepts/bots/bots-create.md#bots-and-microsoft-azure) instead, for which you'll need an Azure account.
+1. Use this link to create a new bot: `https://dev.botframework.com/bots/new`. If you click on the *Create a bot* button in the Bot Framework portal instead, you will create your bot in Microsoft Azure instead, for which you'll need an Azure account.
 1. Add the Microsoft Teams channel. Click on the "Calling" tab on the Microsoft Teams channel page and click on **Enable calling**, and then update **Webhook (for calling)** with your https URL where you will receive incoming notifications, e.g.`https://contoso.com/teamsapp/api/calling`. Refer to [Configuring Channels](https://docs.microsoft.com/en-us/bot-framework/portal-configure-channels) for more information on how to configure channels.
   ![Configure Microsoft Teams channel information](~/assets/images/calls-and-meetings/configure-msteams-channel.png)
 
