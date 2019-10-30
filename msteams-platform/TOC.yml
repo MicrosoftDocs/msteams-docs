@@ -291,19 +291,17 @@
   items:
     - name: 'What are Webhooks and Connectors?'
       href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
-    - name: Quickstarts
-      items:
-        - name: 'Create an incoming webhook'
-          href: webhooks-and-connectors/quickstarts/add-incoming-webhook.md
-        - name: 'Create an outgoing webhook'
-          href: webhooks-and-connectors/quickstarts/add-outgoing-webhook.md
     - name: 'How-to guides'
       expanded: true
       items:
-        - name: dosoemthign
-          href: foo.md
-        - name: dosomethingelse
-          href: foo.md
+      - name: 'Create an incoming webhook'
+        href: webhooks-and-connectors/how-to/add-incoming-webhook.md
+      - name: 'Create an outgoing webhook'
+        href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
+      - name: Create an O365 Connector
+        href: webhooks-and-connectors/how-to/connectors-creating.md
+      - name: Sending messages to Connectors and Webhooks
+        href: webhooks-and-connectors/how-to/connectors-using.md
 - name: Resources
   items:
     - name: Bots - v3 SDK

@@ -7,7 +7,7 @@ ms.author: laujan
 ---
 # Quickstart: Create a Custom Channel and Group Tab with ASP.NET Core MVC
 
-In this quickstart we'll walk-through creating a custom channel/group tab with C# and [ASP.Net Core MVC](aspnet/core/mvc/overview?view=aspnetcore-2.2). We'll also use [App Studio for Microsoft Teams](/foo.md) to finalize your app manifest and deploy your tab to Teams.
+In this quickstart we'll walk-through creating a custom channel/group tab with C# and ASP.Net Core MVC. We'll also use [App Studio for Microsoft Teams](/foo.md) to finalize your app manifest and deploy your tab to Teams.
 
 [!INCLUDE [dotnet-core-prereq](../../includes/tabs/dotnet-core-prereq.md)]
 
