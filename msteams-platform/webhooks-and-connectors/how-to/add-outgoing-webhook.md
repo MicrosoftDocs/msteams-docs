@@ -82,8 +82,3 @@ You can view outgoing webhook code samples on GitHub:
 ### C\#
 
 [OfficeDev/microsoft-teams-sample-outgoing-webhook](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook)
-
-## Learn More
-
-[Incoming Webhooks](foo.md)
-[Connectors](foo.md)
