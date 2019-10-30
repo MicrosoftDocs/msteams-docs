@@ -40,7 +40,13 @@ This is the traditional way for a conversational bot to interact with a user. Th
 
 ## How do bots work?
 
-Bots for Microsoft Teams are build on the [Microsoft Bot Framework](https://dev.botframework.com/). (If you already have a bot that's based on the Bot Framework, you can easily adapt it to work in Microsoft Teams.) We recommend you use either C# or Node.js to take advantage of our [SDKs](/microsoftteams/platform/#pivot=sdk-tools). These packages extend the basic Bot Builder SDK classes and methods:
+Your bot consists of three pieces:
+
+* A publicly accessible web service that you host.
+* Your bot registration that registers your bot with the Bot Framework.
+* You teams app package that contains your app manifest. This is is what your user's will install and connects the Teams client to your web service (routed through the Bot Service).
+
+Bots for Microsoft Teams are built on the [Microsoft Bot Framework](https://dev.botframework.com/). (If you already have a bot that's based on the Bot Framework, you can easily adapt it to work in Microsoft Teams.) We recommend you use either C# or Node.js to take advantage of our [SDKs](/microsoftteams/platform/#pivot=sdk-tools). These packages extend the basic Bot Builder SDK classes and methods:
 
 * Using specialized card types like the Office 365 Connector card
 * Consuming and setting Teams-specific channel data on activities
@@ -54,3 +60,13 @@ Bots for Microsoft Teams are build on the [Microsoft Bot Framework](https://dev.
 ## Webhooks and connectors
 
 Webhooks and connectors allow you to create a simple bot for basic interaction, like kicking off a workflow or other simple commands you may need. They live only in the team in which you create them and are intended for simple processes specific to your company's workflow. See [What are webhooks and connectors?](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) for more information.
+
+## Get started
+
+* [Teams conversation bot in C#/dotnet](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)
+* [Teams conversation bot in JavaScript](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-conversation-bot)
+
+## Learn more
+
+* [Understanding the basics of bots in Teams](~/bots/bot-basics.md)
+* [Create a bot for Teams](~/bots/how-to/create-a-bot-for-teams.md)
