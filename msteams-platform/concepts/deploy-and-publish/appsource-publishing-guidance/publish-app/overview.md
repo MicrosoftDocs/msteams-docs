@@ -3,4 +3,4 @@ Now that you finished [preparing your app](), follow these steps to submit your 
 
 * Create a seller dashboard profile 
 * [Create a upload package]()
-* Follow this [AppSource Submission Walkthrough] submit your app through seller dashboard
+* Follow this [AppSource Submission Walkthrough]() submit your app through seller dashboard

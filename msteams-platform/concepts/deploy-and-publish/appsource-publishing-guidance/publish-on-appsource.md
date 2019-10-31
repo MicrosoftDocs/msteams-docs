@@ -4,7 +4,6 @@ description: Describes the approval process for getting your app published to th
 keywords: teams publish store office publishing AppSource
 ---
 
-
 # Overview of Microsoft Teams app submission process
 
 1. Develope or Migrate: Develope your app following our design guidelines
