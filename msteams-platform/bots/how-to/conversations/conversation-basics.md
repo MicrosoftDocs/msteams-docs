@@ -17,40 +17,16 @@ A conversation is a series of messages sent between your bot and one or more use
 
 A bot behaves slightly differently depending on what kind of conversation it is involved in:
 
-* [Bots in channel and group chat conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) require the user to @ mention the bot to invoke it in a channel.
+* Bots in channel and group chat conversations require the user to @ mention the bot to invoke it in a channel.
 * Bots in a one-to-one conversation do not require an @ mention. All messages sent by the user will be routed to your bot.
 
-To enable your bot in a particular scope, add that scope to your app manifest. Scopes are defined and discussed further in the [manifest reference](~/resources/schema/manifest-schema.md).
+To enable your bot in a particular scope, add that scope to your [app manifest](~/resources/schema/manifest-schema.md).
 
 ## Activities
 
 Each message is an `Activity` object of type `messageType: message`. When a user sends a message, Teams posts the message to your bot; specifically, it sends a JSON object to your bot's messaging endpoint. Your bot examines the message to determine its type and responds accordingly.
 
-Bots also support event-style messages. See [subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md) for more details.
-
 Basic conversation is handled through the Bot Framework Connector, a single REST API to enable your bot to communicate with Teams and other channels. The Bot Builder SDK provides easy access to this API, additional functionality to manage conversation flow and state, and simple ways to incorporate cognitive services such as natural language processing (NLP).
-
-## Message content
-
-Your bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot.
-
-| Format    | From user to bot | From bot to user | Notes                                                                                   |
-|-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
-| Rich text | ✔                | ✔                |                                                                                         |
-| Pictures  | ✔                | ✔                | Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF are not supported  |
-| Cards     | ✖                | ✔                | See the [Teams Card Reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards |
-| Emojis    | ✖                | ✔                | Teams currently supports emojis via UTF-16 (such as U+1F600 for grinning face)          |
-
-## Picture messages
-
-Pictures are sent by adding attachments to a message. You can find more information on attachments in the [Bot Framework documentation](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0).
-
-Pictures can be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF is not supported.
-
-We recommend that you specify the height and width of each image by using XML. If you use Markdown, the image size defaults to 256×256. For example:
-
-* Use - `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
-* Don't use - `![Duck on a rock](http://aka.ms/Fo983c)`
 
 ## Receive a message
 
@@ -178,6 +154,28 @@ A typical channelData object in an activity sent to your bot contains the follow
     }
 }
 ```
+
+## Message content
+
+Your bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot.
+
+| Format    | From user to bot | From bot to user | Notes                                                                                   |
+|-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
+| Rich text | ✔                | ✔                |                                                                                         |
+| Pictures  | ✔                | ✔                | Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF are not supported  |
+| Cards     | ✖                | ✔                | See the [Teams Card Reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards |
+| Emojis    | ✖                | ✔                | Teams currently supports emojis via UTF-16 (such as U+1F600 for grinning face)          |
+
+## Picture messages
+
+Pictures are sent by adding attachments to a message. You can find more information on attachments in the [Bot Framework documentation](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0).
+
+Pictures can be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF is not supported.
+
+We recommend that you specify the height and width of each image by using XML. If you use Markdown, the image size defaults to 256×256. For example:
+
+* Use - `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
+* Don't use - `![Duck on a rock](http://aka.ms/Fo983c)`
 
 ## Next steps
 

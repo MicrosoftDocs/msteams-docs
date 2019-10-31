@@ -2,7 +2,6 @@
 title: Microsoft Teams code samples
 description: Links and descriptions of sample applications for the Microsoft Teams developer platform
 keywords: Microsoft Teams developer samples
-ms.date: 02/21/2019
 ---
 # Code samples for the Microsoft Teams developer platform
 
@@ -39,19 +38,16 @@ As always, the project's README file should have more information on specific ne
 
 ## Bots (using the v4 SDK)
 
-| Sample | Description | .NET Core | JavaScript |
-|--------|------------- |---|---|
-| Teams Conversation Bot | Messaging and conversation event handling | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)| [View](~/foo.md)|
-| Authentication with OAuthPrompt| Authentication and basic messaging in Bot Framework v4 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth)|[View](~/foo.md)|
+[!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
 ## Messaging Extensions (using the v4 SDK)
 
 | Sample | Description | .NET Core | JavaScript |
 |--------|------------- |---|---|
-| Search command | Simple messaging extension with a search command | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)| [View](~/foo.md)|
-| Action command | Simple messaging extension with a action command. Response inserted into the compose message area. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](~/foo.md)|
-| Action command w/bot response | Messaging extension with a action command. Response inserted into the conversation by the bot. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/53.teams-messaging-extensions-action-preview)|[View](~/foo.md)|
-| Search command | messaging extension with a search command and authentication and configuration | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)| [View](~/foo.md)|
+| Search command | Simple messaging extension with a search command | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+| Action command | Simple messaging extension with a action command. Response inserted into the compose message area. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)|
+| Action command w/bot response | Messaging extension with a action command. Response inserted into the conversation by the bot. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/53.teams-messaging-extensions-action-preview)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/53.teams-messaging-extensions-action-preview)|
+| Search command | messaging extension with a search command and authentication and configuration | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)|
 
 ## Outgoing Webhooks
 

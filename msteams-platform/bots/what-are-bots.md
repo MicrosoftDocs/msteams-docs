@@ -64,7 +64,7 @@ Webhooks and connectors allow you to create a simple bot for basic interaction, 
 ## Get started
 
 * [Teams conversation bot in C#/dotnet](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)
-* [Teams conversation bot in JavaScript](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-conversation-bot)
+* [Teams conversation bot in JavaScript](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)
 
 ## Learn more
 
