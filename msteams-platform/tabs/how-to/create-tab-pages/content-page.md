@@ -12,7 +12,7 @@ A content page is a webpage that is rendered within the Teams client. Typically 
 
 * A personal-scoped custom tab - In this instance the content page is the first page the user encounters.
 * A channel/group custom tab - After the user pins and configures the tab in the appropriate context, the content page is displayed.
-* A [task module](foo.md) - You can create a content page and embed it as a webview inside a task module. The page will be rendered inside the modal popup.
+* A [task module](~/task-modules-and-cards/what-are-task-modules.md) - You can create a content page and embed it as a webview inside a task module. The page will be rendered inside the modal popup.
 
 This article is specific to using content pages as tabs; however the majority of the guidance here would apply regardless of how the content page is presented to the end-user.
 
@@ -58,4 +58,4 @@ A task module is a modal popup-like experience that you can trigger from your ta
 
 ### Valid Domains
 
-Ensure that the all URL domains used in your tabs are included in the `validDomains` array in your [manifest](~/concepts/deploy-and-publish/apps-package.md). For more information, see [validDomains](~/resources/schema/manifest-schema#validdomains) in the manifest schema reference. However, be mindful that the core functionality of your tab exists within Teams and not outside of Teams.
+Ensure that the all URL domains used in your tabs are included in the `validDomains` array in your [manifest](~/concepts/build-and-test/apps-package.md). For more information, see [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the manifest schema reference. However, be mindful that the core functionality of your tab exists within Teams and not outside of Teams.

@@ -53,7 +53,7 @@ Outgoing webhooks allow you to create a simple bot for basic interaction, like k
 
 The following topics will guide you through the process of creating a great bot for Teams.
 
-* [Create a bot](~/resources/bot-v3/bots/bots-create.md): Take advantage of the great tools, documentation, and community provided by the Bot Framework team.
+* [Create a bot](~/resources/bot-v3/bots-create.md): Take advantage of the great tools, documentation, and community provided by the Bot Framework team.
 * [Talk to your bot](~/resources/bot-v3/bot-conversations/bots-conversations.md): Add basic conversation flow and leverage channel-specific functionality. If you develop in .NET or Node.js, use our extensions for the Bot Builder SDK to simplify your work.
 * [Using cards in your bot](~/resources/bot-v3/bots-cards.md) Design cards to communicate and accept user response.
 * [Respond to bot events](~/resources/bot-v3/bots-notifications.md).

@@ -12,13 +12,13 @@ Developer Preview is a public program for developers which provides early access
 
 ## Developer preview app manifest
 
-Many features enabled in developer preview will require alterations to your app manifest JSON file. To do so you'll need to use the [developer preview manifest schema](~/resources/schema/manifest-schema-dev-preview.md) If you use this schema, you will not be able to use [App Studio](~/get-started/get-started-app-studio.md) to make these changes, nor will you be able to use it to upload your app for testing. To upload your app you'll need to click the `More apps` icon on the app bar, then select the `Upload a custom app link`. Using this method you can only upload a zipped version of your app package.
+Many features enabled in developer preview will require alterations to your app manifest JSON file. To do so you'll need to use the [developer preview manifest schema](~/resources/schema/manifest-schema-dev-preview.md) If you use this schema, you will not be able to use [App Studio](~/concepts/build-and-test/app-studio-overview.md) to make these changes, nor will you be able to use it to upload your app for testing. To upload your app you'll need to click the `More apps` icon on the app bar, then select the `Upload a custom app link`. Using this method you can only upload a zipped version of your app package.
 
 You may find it useful to use App Studio to create the non-developer preview portions of your app package, then export that package and manually edit the `manifest.json` file to add the developer preview features you wish to use. Once you've added developer preview features to the `manifest.json` file you will not be able to re-import the package into App Studio.
 
 ## Enable developer preview
 
-Developer preview is enabled on a per-client basis, but the option to turn on developer preview is controlled at the organization level. To enable the option to turn on developer preview for an individual, you must ensure that they have the ability to upload custom apps. See [setting up your tenant](~/get-started/get-started-tenant.md) for additional information.
+Developer preview is enabled on a per-client basis, but the option to turn on developer preview is controlled at the organization level. To enable the option to turn on developer preview for an individual, you must ensure that they have the ability to upload custom apps. See [setting up your tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md) for additional information.
 
 Using an app that contains developer preview features may cause clients that have not enabled developer preview to behave unexpectedly. If you do not see an entry for developer preview the most likely reason is your organization is not configured for app uploading.
 
@@ -26,7 +26,7 @@ Using an app that contains developer preview features may cause clients that hav
 
 To enable the public developer preview on a desktop or web client, you need to do the following:
 
-1. Enabling uploading of apps in the admin console of your tenant as described [here](~/get-started/get-started-tenant.md).
+1. Enabling uploading of apps in the admin console of your tenant as described [here](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 1. Click on your profile (either in the upper right or lower left of the Teams interface) to display the Teams menu.
 1. Select About → Developer preview.
 1. Select **Switch to Developer preview**.
@@ -35,7 +35,7 @@ To enable the public developer preview on a desktop or web client, you need to d
 
 To enable the public developer preview on a mobile client, you need to do the following:
 
-1. Enabling uploading of apps in the admin console of your tenant as described [here](~/get-started/get-started-tenant.md).
+1. Enabling uploading of apps in the admin console of your tenant as described [here](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 1. Open the hamburger menu on the top left, then select **Settings**.
 1. Select **About**.
 1. Click the Developer preview toggle.

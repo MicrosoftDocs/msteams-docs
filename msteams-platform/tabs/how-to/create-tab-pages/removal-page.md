@@ -52,7 +52,7 @@ You can use `getContext()` to retrieves the current context in which the frame i
 
 #### Include authentication
 
-You might require authentication before allowing a user to delete the tab content. Context information can be used to help construct authentication requests and authorization page URLs. See [Microsoft Teams authentication flow for tabs](~/tabs/how-to/authentication/auth-flow-tabs.md). Make sure that all domains used in your tab pages are listed in the `manifest.json` `validDomains` array.
+You might require authentication before allowing a user to delete the tab content. Context information can be used to help construct authentication requests and authorization page URLs. See [Microsoft Teams authentication flow for tabs](~/tabs/how-to/authentication/auth-flow-tab.md). Make sure that all domains used in your tab pages are listed in the `manifest.json` `validDomains` array.
 
 Below is a sample tab removal code block:
 
@@ -85,17 +85,3 @@ Following the execution of the remove handler, `removeEvent.notifySuccess()` or 
 >To ensure that an authorized user's control over a tab is not inhibited, Teams will remove the tab in both success and failure cases.\
 >Teams enables the **Remove** button after 5 seconds, even if your tab hasn't called `setValidityState()`.\
 >When the user selects **Remove** Teams removes the tab after 30 seconds regardless of whether your actions have completed.
-
-Ready to get started building? Here are a few guidelines:
-
-### Node.js
-
-* [Quickstart: Create a custom personal tab with Node.js and the Yeoman Generator for Microsoft Teams](foo.md)
-* [Quickstart: Create a custom channel and group tab with Node.js and the Yeoman Generator for Microsoft Teams](foo.md)
-
-### .NET
-
-* [Quickstart: Create a Custom Personal Tab with ASP.NET Core](foo.md)
-* [Quickstart: Create a Custom Personal Tab with ASP. NET Core MVC](foo.md)
-* [Quickstart: Create a Custom Channel and Group Tab with ASP.NET Core](foo.md)
-* [Quickstart: Create a Custom Channel and Group Tab with ASP.NET Core MVC](foo.md)

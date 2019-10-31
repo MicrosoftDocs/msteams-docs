@@ -106,7 +106,8 @@ To build your solution you use the `gulp build` command. This will transpile you
 To run your app you use the `gulp serve` command. This will build and start a local web server for you to test your app. The command will also rebuild the application whenever you save a file in your project. 
 
 You should now be able to browse to `http://localhost:3007/myFirstAppTab/` to ensure that your tab is rendering. However, not in Microsoft Teams yet.
-![](images/teams-first-app-3.png)
+
+![view your site in a browser](~/assets/yeoman-images/teams-first-app-3.png)
 
 ## Run your app in Microsoft Teams
 
@@ -115,15 +116,15 @@ Microsoft Teams does not allow you to have your app hosted on localhost, so you 
 Good news is that the scaffolded project has this built-in. When you run `gulp ngrok-serve` the ngrok service will be started in the background, with a unqiue and public DNS entry and it will also package the manifest with that unique URL and then do the exact same thing as `gulp serve`.
 
 After running `gulp ngrok-serve`, create a new Microsoft Teams team and when it is created click on the Team name, to go to the teams settings and then select *Apps*. In the lower right corner you should see a link *Upload a custom app*, select it and then browse to your project folder and the subfolder called `package`. Select the zip file in that folder and choose open. Your App is now sideloaded into Microsoft Teams.
-![](~/assets/yeoman-images/teams-first-app-4.png)
+
+![sideloaded app](~/assets/yeoman-images/teams-first-app-4.png)
 
 Go back to the *General* channel and select *+* to add a new Tab. You should see your tab in the list of tabs.
-![](~/assets/yeoman-images/teams-first-app-5.png)
+
+![configure tab](~/assets/yeoman-images/teams-first-app-5.png)
 
 Choose your tab and follow the instructions to add it. Notice that you have a custom configuration dialog, for which you can edit the source. Select *Save* to add your tab to the channel. Once done your tab should be loaded inside Microsoft Teams!
-![](~/assets/yeoman-images/teams-first-app-6.png)
+
+![running tab in teams](~/assets/yeoman-images/teams-first-app-6.png)
 
 **Congrats! You built and deployed your first Microsoft Teams App**
-
-
-**Yo Teams**

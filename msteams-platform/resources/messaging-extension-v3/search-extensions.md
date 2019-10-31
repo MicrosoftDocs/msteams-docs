@@ -14,7 +14,7 @@ Search based messaging extensions allow you to query your service and post that 
 
 The following sections describe how to do this.
 
-[!include[common content for creating extensions](~/resources/messaging-extension-v3/messaging-extensions-common.md)]
+[!include[common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
 
 ### Search type message extensions
 

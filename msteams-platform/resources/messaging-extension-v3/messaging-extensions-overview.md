@@ -2,7 +2,6 @@
 title: Develop messaging extensions
 description: Describes how to get started with messaging extensions in Microsoft Teams
 keywords: teams messaging extensions messaging extensions
-ms.date: 08/15/18
 ---
 # Develop messaging extensions for Microsoft Teams
 

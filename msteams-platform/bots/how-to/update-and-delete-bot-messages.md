@@ -65,21 +65,3 @@ for (const activityId in list) {
 ```
 
 ---
-
-
-
-
-<!--
-## Writing notes
-
-* **Purpose** How to update and delete messages sent from your bot
-* **Existing teams doc reference** 
-  * some of: [bots-conversations](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bot-conversations/bots-conversations)
-* **Existing Bot framework doc reference**
-  * none?
-* **Code Snippets** 
-  * [Updating messages](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bot-conversations/bots-conversations#updating-messages)
-  * [Deleting messages](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/bots/bot-conversations/bots-conversations#deleting-messages)
--->   
- 
-
