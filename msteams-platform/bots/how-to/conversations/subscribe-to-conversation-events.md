@@ -52,11 +52,19 @@ protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo
 <!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
 
 ```typescript
-protected async onTeamsChannelCreatedEvent(async (channelInfo: ChannelInfo, teamInfo: TeamInfo, context: TurnContext, next: () => Promise<void>): Promise<void> => {
-    const card = CardFactory.heroCard('Channel Created', `${channelInfo.name} is the Channel created`);
-    const message = MessageFactory.attachment(card);
-    await context.sendActivity(message);
-})
+
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onTeamsChannelCreatedEvent(async (channelInfo: ChannelInfo, teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+            const card = CardFactory.heroCard('Channel Created', `${channelInfo.name} is the Channel created`);
+            const message = MessageFactory.attachment(card);
+            await turnContext.sendActivity(message);
+            await next();
+        });
+    }
+}
+
 ```
 
 # [JSON](#tab/json)
@@ -116,11 +124,16 @@ protected override async Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-protected async onTeamsChannelRenamedEvent(async (channelInfo: ChannelInfo, teamInfo: TeamInfo, context: TurnContext, next: () => Promise<void>): Promise<void> => {
-    const card = CardFactory.heroCard('Channel Renamed', `${channelInfo.name} is the new Channel name`);
-    const message = MessageFactory.attachment(card);
-    await context.sendActivity(message);
-})
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onTeamsChannelRenamedEvent(async (channelInfo: ChannelInfo, teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+            const card = CardFactory.heroCard('Channel Renamed', `${channelInfo.name} is the new Channel name`);
+            const message = MessageFactory.attachment(card);
+            await turnContext.sendActivity(message);
+            await next();
+        });
+    }
 ```
 
 # [JSON](#tab/json)
@@ -180,11 +193,18 @@ protected override async Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-protected async onTeamsChannelDeletedEvent(async (channelInfo: ChannelInfo, teamInfo: TeamInfo, context: TurnContext, next: () => Promise<void>): Promise<void> => {
-    const card = CardFactory.heroCard('Channel Deleted', `${channelInfo.name} is the Channel deleted`);
-    const message = MessageFactory.attachment(card);
-    await context.sendActivity(message);
-})
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onTeamsChannelDeletedEvent(async (channelInfo: ChannelInfo, teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+            const card = CardFactory.heroCard('Channel Deleted', `${channelInfo.name} is the Channel deleted`);
+            const message = MessageFactory.attachment(card);
+            await turnContext.sendActivity(message);
+            await next();
+        });
+    }
+}
+
 ```
 
 # [JSON](#tab/json)
@@ -256,17 +276,24 @@ protected override async Task OnTeamsMembersAddedAsync(IList<ChannelAccount> mem
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-protected async  onTeamsMembersAddedEvent(async (membersAdded: ChannelAccount[], teamInfo: TeamInfo, context: TurnContext, next: () => Promise<void>): Promise<void> => {
-    let newMembers: string = '';
-    console.log(JSON.stringify(membersAdded));
-    membersAdded.forEach((account) => {
-        newMembers += account.id + ' ';
-    });
-    const name = !teamInfo ? 'not in team' : teamInfo.name;
-    const card = CardFactory.heroCard('Account Added', `${newMembers} joined ${name}.`);
-    const message = MessageFactory.attachment(card);
-    await context.sendActivity(message);
-});
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onTeamsMembersAddedEvent(async (membersAdded: ChannelAccount[], teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+                let newMembers: string = '';
+                console.log(JSON.stringify(membersAdded));
+                membersAdded.forEach((account) => {
+                    newMembers += account.id + ' ';
+                });
+                const name = !teamInfo ? 'not in team' : teamInfo.name;
+                const card = CardFactory.heroCard('Account Added', `${newMembers} joined ${name}.`);
+                const message = MessageFactory.attachment(card);
+                await turnContext.sendActivity(message);
+                await next();
+        });
+    }
+}
+
 ```
 
 # [JSON](#tab/json)
@@ -378,16 +405,25 @@ protected override async Task OnTeamsMembersRemovedAsync(IList<ChannelAccount> m
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-protected async onTeamsMembersRemovedEvent(async (membersRemoved: ChannelAccount[], teamInfo: TeamInfo, context: TurnContext, next: () => Promise<void>): Promise<void> => {
-    let removedMembers: string = '';
-    membersRemoved.forEach((account) => {
-        removedMembers += account.id + ' ';
-    });
-    const name = !teamInfo ? 'not in team' : teamInfo.name;
-    const card = CardFactory.heroCard('Account Removed', `${removedMembers} removed from ${teamInfo.name}.`);
-    const message = MessageFactory.attachment(card);
-    await context.sendActivity(message);
-})
+
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onTeamsMembersRemovedEvent(async (membersRemoved: ChannelAccount[], teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+            let removedMembers: string = '';
+            console.log(JSON.stringify(membersRemoved));
+            membersRemoved.forEach((account) => {
+                removedMembers += account.id + ' ';
+            });
+            const name = !teamInfo ? 'not in team' : teamInfo.name;
+            const card = CardFactory.heroCard('Account Removed', `${removedMembers} removed from ${teamInfo.name}.`);
+            const message = MessageFactory.attachment(card);
+            await turnContext.sendActivity(message);
+            await next();
+        });
+    }
+}
+
 ```
 
 # [JSON](#tab/json)
@@ -449,11 +485,17 @@ protected override async Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnCo
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-protected async onTeamsTeamRenamedEvent(async (teamInfo: TeamInfo, context: TurnContext, next: () => Promise<void>): Promise<void> => {
-    const card = CardFactory.heroCard('Team Renamed', `${teamInfo.name} is the new Team name`);
-    const message = MessageFactory.attachment(card);
-    await context.sendActivity(message);
-})
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onTeamsTeamRenamedEvent(async (teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+            const card = CardFactory.heroCard('Team Renamed', `${teamInfo.name} is the new Team name`);
+            const message = MessageFactory.attachment(card);
+            await turnContext.sendActivity(message);
+            await next();
+        });
+    }
+}
 ```
 
 # [JSON](#tab/json)
@@ -520,9 +562,13 @@ protected override async Task OnReactionsAddedAsync(IList<MessageReaction> messa
 
 # [TypeScript/Node.js](#tab/typescript)
 
-<!-- TBD -->
+<!-- Verify -->
 
 ```typescript
+
+protected async onReactionsAddedActivity(reactionsAdded: MessageReaction[], context: TurnContext): Promise<void> {
+    await this.sendMessageAndLogActivityId(context, `You added '${reactionsAdded[i].type}' regarding '${activity.text}'`);
+}
 
 ```
 
@@ -588,9 +634,12 @@ protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> mes
 
 # [TypeScript/Node.js](#tab/typescript)
 
-<!--TBD -->
+<!-- Verify -->
 
 ```typescript
+protected async onReactionsRemovedActivity(reactionsAdded: MessageReaction[], context: TurnContext): Promise<void> {
+    await this.sendMessageAndLogActivityId(context, `You removed '${reactionsAdded[i].type}' regarding '${activity.text}'`);
+}
 
 ```
 

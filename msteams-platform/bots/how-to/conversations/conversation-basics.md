@@ -70,10 +70,13 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 # [TypeScript/Node.js](#tab/typescript)
 
+<!-- Verify -->
+
 ```typescript
 protected async onMessage(async (context, next) => {
     await context.sendActivity(`Echo: '${context.activity.text}'`);
 });
+
 ```
 
 # [JSON](#tab/json)
@@ -131,17 +134,28 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 {
   await turnContext.SendActivityAsync(MessageFactory.Text($"Hello and welcome!"), cancellationToken);
 }
+
 ```
 
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-protected async onMessage(async (context, next) => {
-    await context.sendActivity('Hello and welcome!');
-});
+
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onMessage(async (context, next) => {
+            await context.sendActivity('Hello and welcome!');
+            await next();
+        });
+    }
+}
 ```
 
 # [JSON](#tab/json)
+
+<!-- Verify -->
+
 ```json
 
 ```
