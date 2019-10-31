@@ -162,8 +162,46 @@ export class MyBot extends TeamsActivityHandler {
 <!-- Verify -->
 
 ```json
-
+{
+    "text": "hi",
+    "textFormat": "plain",
+    "type": "message",
+    "timestamp": "2019-10-31T20:57:27.2347285Z",
+    "localTimestamp": "2019-10-31T13:57:27.2347285-07:00",
+    "id": "1572555447214",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer/",
+    "from": {
+        "id": "29:1Xv-kvy4dKirR0rZfSF_kAVUzotoT1SXuEzkC9XGkuZng8YBw8qyu5uh4128fQRjlGgvEiRLx-0XP4KYMwcgdZw",
+        "name": "Jane Doe",
+        "aadObjectId": "df486eae-88fd-42a5-b45e-c581588186db"
+    },
+    "conversation": {
+        "conversationType": "personal",
+        "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+        "id": "a:1oAmWTVBBe9E0JrpGxauqNyx4CCE_iQf2ZuWon9D42722Fon3wYIpbhgbRChE3wgVS1Gwl9zS1pZy4FSu6-x1vGEq5KBQK-EbBgyPyeP_C-lbLBY3vxnGk9m9D_282jbg"
+    },
+    "recipient": {
+        "id": "28:5baea8d1-d4ea-43a1-b101-882f4c8d9cb4",
+        "name": "Imported Bot"
+    },
+    "entities": [
+        {
+            "locale": "en-US",
+            "country": "US",
+            "platform": "Windows",
+            "type": "clientInfo"
+        }
+    ],
+    "channelData": {
+        "tenant": {
+            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+    },
+    "locale": "en-US"
+}
 ```
+
 * * *
 
 ## Teams channel data
