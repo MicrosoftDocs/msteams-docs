@@ -135,13 +135,5 @@ Try it out in a quickstart:
 
 Learn more about messaging extensions concepts:
 
-* [Understand Teams app capabilities ?](~/concepts/understand-teams-app-capabilities.md)
+* [Understand Teams app capabilities ?](~/concepts/extensibility-points.md)
 * [What are messaging extensions?](~/messaging-extensions/what-are-messaging-extensions.md)
-
-Learn about designing effective messaging extensions:
-
-* [linkToMEDesignArticle](./foo.md)
-
-Learn about authentication in messaging extensions
-
-* [something something authentication](./foo.md)

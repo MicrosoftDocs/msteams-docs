@@ -94,7 +94,7 @@ If you are using an embedded web view, you can optionally add the `taskInfo` obj
 
 #### App manifest example
 
-The below is an example of a `composeExtensions` object defining two action commands. It is not an example of the complete manifest, for the full app manifest schema see: [App manifest schema](~/foo.md).
+The below is an example of a `composeExtensions` object defining two action commands. It is not an example of the complete manifest, for the full app manifest schema see: [App manifest schema](~/resources/schema/manifest-schema.md).
 
 ```json
 ...

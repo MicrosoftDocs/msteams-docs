@@ -69,15 +69,11 @@ Ready to get started building? Try one of our quickstarts:
 
 Build a messaging extension:
 
-* [Create a messaging extension](./foo.md)
-* [Define action messaging extension command](./foo.md)
-* [Define search messaging extension command](./foo.md)
+* [Create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md)
+* [Define action messaging extension command](~/messaging-extensions/how-to/action-commands/create-action-command.md)
+* [Define search messaging extension command](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 
 Learn how messaging extensions fit with other Teams app capabilities:
 
 * [linkToConceptArticle1](./foo.md)
 * [linkToConceptArticle2](./foo.md)
-
-Learn about designing effective messaging extensions:
-
-* [linkToMEDesignArticle](./foo.md)
