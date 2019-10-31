@@ -26,5 +26,5 @@ How would you use messaging extensions? Here are a few possibilities:
 
 There's primarily two kinds of messaging extensions you can create for Teams today. The following topics will guide you through the process of creating them:
 
-* [Search based messaging extensions](~/concepts/messaging-extensions/search-extensions.md): Query your service for information and insert that into a message. Example: Lookup a work item
-* [Action-based messaging extensions](~/concepts/messaging-extensions/create-extensions.md): Collect information from the user and post to a 3rd party service. Example: Create a work item
+* [Search based messaging extensions](~/resources/messaging-extension-v3/search-extensions.md): Query your service for information and insert that into a message. Example: Lookup a work item
+* [Action-based messaging extensions](~/resources/messaging-extension-v3/create-extensions.md): Collect information from the user and post to a 3rd party service. Example: Create a work item

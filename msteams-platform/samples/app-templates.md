@@ -55,7 +55,7 @@ To help alleviate this pain, we are happy to bring to you the List Search app te
 
 ## Custom Stickers
 
-Self-expression is core to a healthy team culture. This app template is a [messaging extension](~/concepts/messaging-extensions/search-extensions.md) that enables your users to use custom stickers and GIFs within Microsoft Teams. This template provides an easy web-based configuration experience where anyone with configuration access can upload the GIFs/stickers/images they want their end-users to have, allowing your entire team to use any set of stickers you chose.
+Self-expression is core to a healthy team culture. This app template is a [messaging extension](~messaging-extensions/what-are-messaging-extensionss.md) that enables your users to use custom stickers and GIFs within Microsoft Teams. This template provides an easy web-based configuration experience where anyone with configuration access can upload the GIFs/stickers/images they want their end-users to have, allowing your entire team to use any set of stickers you chose.
 
 This app also enables easy sharing of images/GIFs/stickers across teams without needing access to SharePoint sites or individual channels as storage and sharing mechanisms. For example, product teams can easily share product images and GIFs to social media, marketing and sales teams programmatically. One can also extend this app by triggering a notification flow to specific teams/individuals when new images/GIFs are made available.
 
@@ -65,7 +65,7 @@ This app also enables easy sharing of images/GIFs/stickers across teams without 
 
 ## Icebreaker
 
-Icebreaker is a [Microsoft Teams bot](~/concepts/bots/bots-overview.md) that helps your team get closer by pairing two random team members up every week to meet. The bot makes scheduling easy by automatically suggesting free times that work for both members. Strengthen personal connections and build a tightly knit community with this app.
+Icebreaker is a [Microsoft Teams bot](~/bots/what-are-bots.md) that helps your team get closer by pairing two random team members up every week to meet. The bot makes scheduling easy by automatically suggesting free times that work for both members. Strengthen personal connections and build a tightly knit community with this app.
 
 In addition to encouraging personal connections across your entire team, the Icebreaker app can help cultivate interest-based communities within your organization. For example, you can use this app for a DevOps interest group to help ideas and best practices organically spread across your organization.
 

@@ -38,7 +38,7 @@ Your bot can send rich text, pictures, and cards. Users can send rich text and p
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Rich text | ✔                | ✔                |                                                                                         |
 | Pictures  | ✔                | ✔                | Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF are not supported  |
-| Cards     | ✖                | ✔                | See the [Teams Card Reference](~/concepts/cards/cards-reference.md) for supported cards |
+| Cards     | ✖                | ✔                | See the [Teams Card Reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards |
 | Emojis    | ✖                | ✔                | Teams currently supports emojis via UTF-16 (such as U+1F600 for grinning face)          |
 
 ## Picture messages
@@ -150,14 +150,14 @@ The `channelData` object is not included in messages in personal conversations s
 
 A typical channelData object in an activity sent to your bot contains the following information:
 
-* `eventType` Teams event type; passed only in cases of [channel modification events](~/bots/bots-notifications.md#channel-updates)
+* `eventType` Teams event type; passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 * `tenant.id` Azure Active Directory tenant ID; passed in all contexts
 * `team` Passed only in channel contexts, not in personal chat.
   * `id` GUID for the channel
-  * `name` Name of the team; passed only in cases of [team rename events](~/concepts/bots/bots-notifications.md#team-name-updates)
+  * `name` Name of the team; passed only in cases of [team rename events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 * `channel` Passed only in channel contexts when the bot is mentioned or for events in channels in teams where the bot has been added
   * `id` GUID for the channel
-  * `name` Channel name; passed only in cases of [channel modification events](~/concepts/bots/bots-notifications.md#channel-updates).
+  * `name` Channel name; passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 * `channelData.teamsTeamId` Deprecated. This property is included only for backwards compatibility.
 * `channelData.teamsChannelId` Deprecated. This property is included only for backwards compatibility.
 
@@ -179,14 +179,7 @@ A typical channelData object in an activity sent to your bot contains the follow
 }
 ```
 
-## Additional resources
-
-* Inside the bots - [How bots work](https://docs.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&tabs=csharp)
-* Conversations and messages in Teams - [Have a conversation with a Microsoft Teams bot](../../../_old/concepts/bots/bot-conversations/bots-conversations.md)
-* Activity processing in general - [activity processing](https://docs.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&tabs=csharp#the-activity-processing-stack)
-* Formatting - [message activity section](https://aka.ms/botSpecs-activitySchema#message-activity)
-
 ## Next steps
 
-* [Sending proactive messages](send-proactive-messages.md)
-* [Subscribe to conversation events](subscribe-to-conversation-events.md)
+* [Sending proactive messages](~/bots/how-to/conversations/send-proactive-messages.md)
+* [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)

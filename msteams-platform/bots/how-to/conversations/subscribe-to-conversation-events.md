@@ -29,8 +29,8 @@ The following table shows a list of Teams conversation update events, with links
 | channel created     | channelCreated    | OnTeamsChannelCreatedAsync | [A channel was created](#channel-created) | Team |
 | channel renamed     | channelRenamed    | OnTeamsChannelRenamedAsync | [A channel was renamed](#channel-renamed) | Team |
 | channel deleted     | channelDeleted    | OnTeamsChannelDeletedAsync | [A channel was deleted](#channel-deleted) | Team |
-| team member added   | teamMemberAdded   | OnTeamsMembersAddedAsync   | [A Member added to team](#Team-Member-Added)   | All |
-| team member removed | teamMemberRemoved | OnTeamsMembersRemovedAsync | [A Member was removed from team](#Team-Member-Removed) | groupChat & team |
+| team members added   | teamMemberAdded   | OnTeamsMembersAddedAsync   | [A Member added to team](#team-members-added)   | All |
+| team members removed | teamMemberRemoved | OnTeamsMembersRemovedAsync | [A Member was removed from team](#team-membesr-removed) | groupChat & team |
 | team renamed        | teamRenamed       | OnTeamsTeamRenamedAsync    | [A Team was renamed](#team-renamed)       | Team |
 
 ### Channel created
@@ -213,7 +213,7 @@ asdf
 
 * * *
 
-### Team member added
+### Team members added
 
 The `teamMemberAdded` event is sent to your bot the first time it is added to a conversation and every time a new user is added to a team or group chat that your bot is installed in. The user information (ID) is unique for your bot and can be cached for future use by your service (such as sending a message to a specific user).
 
@@ -323,10 +323,9 @@ This is the message your bot will receive when the bot is added **to a one-to-on
 }
 ```
 
-
 * * *
 
-### Team member removed
+### Team members removed
 
 The `teamMemberRemoved` event is sent to your bot if it is removed from a team and every time any user is removed from a team that your bot is a member of. You can determine if the new member removed was the bot itself or a user by looking at the `Activity` object of the `turnContext`.  If the `Id` field of the `MembersRemoved` object is the same as the `Id` field of the `Recipient` object, then the member removed is the bot, otherwise it is a user.  The bot's `Id` will generally be: `28:<MicrosoftAppId>`
 
@@ -462,8 +461,8 @@ The `messageReaction` event is sent when a user adds or removes reactions to a m
 
 | EventType       | Payload object   | Description                                                             | Scope |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [Reaction to bot message](#Reaction-to-a-bot-message)                   | All   |
-| messageReaction | reactionsRemoved | [Reaction removed from bot message](#Reactions-removed-from-bot-message) | All   |
+| messageReaction | reactionsAdded   | [Reaction to bot message](#reactions-to-a-bot-message)                   | All   |
+| messageReaction | reactionsRemoved | [Reaction removed from bot message](#reactions-removed-from-bot-message) | All   |
 
 ### Reactions to a bot message
 

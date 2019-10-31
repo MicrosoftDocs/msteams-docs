@@ -48,14 +48,7 @@ Your app may take advantage of multiple extensibility points in the Teams client
 
 For example, imagine your app contains a conversational bot that works in both a personal and team conversations, as well as both a personal tab and a channel tab. When your app is installed, it will be installed in a specific context - if a user installs the app in a team, they have not necessarily installed the personal portion of your app. This can be a bit confusing at first, just remember to never expect that all portions of your app will be installed and configure in any given context.
 
-## Next steps
-
-Learn more about what an app built on the Microsoft Teams platform can do:
-
-* [Extensibility points for your app](~/concepts/design/extensibility-points.md)
-* [Building an app for Teams](~/concepts/build-and-test/building-an-app.md)
-
-Try it out in a tutorial:
+## Get started
 
 * [Build a bot and tab app in C#](~/tutorials/get-started-dotnet-app-studio.md)
 * [Build a bot and tab app in JavaScript/Node.js](~/tutorials/get-started-nodejs-app-studio.md)

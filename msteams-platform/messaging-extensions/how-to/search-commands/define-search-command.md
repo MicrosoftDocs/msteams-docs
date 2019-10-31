@@ -62,7 +62,7 @@ You'll also need to add the details of the search parameter, which will define t
 
 #### App manifest example
 
-The below is an example of a `composeExtensions` object defining a search command. It is not an example of the complete manifest, for the full app manifest schema see: [App manifest schema](~/foo.md).
+The below is an example of a `composeExtensions` object defining a search command. It is not an example of the complete manifest, for the full app manifest schema see: [App manifest schema](~/resources/schema/manifest-schema.md).
 
 ```json
 {

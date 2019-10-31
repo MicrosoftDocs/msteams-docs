@@ -9,11 +9,9 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Once a user submits the task module, your web service will receive a `composeExtension/submitAction` invoke message with the command id and parameter values set. Your app will have five seconds to respond to the invoke, otherwise the user will receive an "Unable to reach the app" error message, and any reply to the invoke will be ignored by the Teams client.
-
 Your web service will receive a `composeExtension/query` invoke message that contains a `value` object with the search parameters. This invoke is triggered:
 
-* As characters entered into the search box.
+* As characters are entered into the search box.
 * If `initialRun` is set to true in your app manifest, you'll receive the invoke message as soon as the search command is invoked. See [default query](#default-query).
 
 The request parameters itself are found in the `value` object in the request, which includes the following properties:
@@ -94,7 +92,7 @@ We support the following attachment types:
 
 See [What are cards](~/task-modules-and-cards/what-are-cards.md) for an overview.
 
-To learn how to use the thumbnail and hero card types, see [Add cards and card actions](~/task-modules-and-cards/cards-actions.md).
+To learn how to use the thumbnail and hero card types, see [Add cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
 
 For additional documentation regarding the Office 365 Connector card, see [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
@@ -319,6 +317,6 @@ Add authentication and/or configuration
 
 Deploy configuration
 
-* [Deploy your app package](~/foo.md)
+* [Deploy your app package](~/concepts/deploy-and-publish/apps-upload.md)
 
 [!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]

@@ -27,13 +27,13 @@ Developing a bot that works in groups or channels uses much of the same function
 
 ### Creating messages
 
-For more information on bots creating messages in channels see [Proactive messaging for bots](~/concepts/bots/bot-conversations/bots-conv-proactive.md), and specifically [Creating a channel conversation](~/concepts/bots/bot-conversations/bots-conv-proactive.md#creating-a-channel-conversation).
+For more information on bots creating messages in channels see [Proactive messaging for bots](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md), and specifically [Creating a channel conversation](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md#creating-a-channel-conversation).
 
 ### Receiving messages
 
-For a bot in a group or channel, in addition to the [regular message schema](https://docs.botframework.com/en-us/core-concepts/reference/#activity), your bot also receives the following properties:
+For a bot in a group or channel, in addition to the [regular message schema](https://docs.botframework.com/core-concepts/reference/#activity), your bot also receives the following properties:
 
-* `channelData` See [Teams channel data](~/concepts/bots/bot-conversations/bots-conversations.md#teams-channel-data). In a group chat, contains information specific to that chat.
+* `channelData` See [Teams channel data](~~/resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data). In a group chat, contains information specific to that chat.
 * `conversation.id` The reply chain ID, consisting of channel ID plus the ID of the first message in the reply chain
 * `conversation.isGroup` Is `true` for bot messages in channels or group chats
 * `conversation.conversationType` Either `groupChat` or `channel`
@@ -49,9 +49,9 @@ In a channel, replying to a message shows as a reply to the initiating reply cha
 
 ### Best practice: Welcome messages in Teams
 
-When your bot is first added to the group or team, it is generally useful to send a welcome message introducing the bot to all users. The welcome message should provide a description of the bot’s functionality and user benefits. Ideally the message should also include commands for the user to interact with the app. To do this, ensure that your bot responds to the `conversationUpdate` message, with the `teamsAddMembers` eventType in the `channelData` object. Be sure that the `memberAdded` ID is the bot's App ID itself, because the same event is sent when a user is added to a team. See [Team member or bot addition](~/concepts/bots/bots-notifications.md#team-member-or-bot-addition) for more details.
+When your bot is first added to the group or team, it is generally useful to send a welcome message introducing the bot to all users. The welcome message should provide a description of the bot’s functionality and user benefits. Ideally the message should also include commands for the user to interact with the app. To do this, ensure that your bot responds to the `conversationUpdate` message, with the `teamsAddMembers` eventType in the `channelData` object. Be sure that the `memberAdded` ID is the bot's App ID itself, because the same event is sent when a user is added to a team. See [Team member or bot addition](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) for more details.
 
-You might also want to send a personal message to each member of the team when the bot is added. To do this, you could [fetch the team roster](~/concepts/bots/bots-context.md#fetching-the-team-roster) and send each user a [direct message](~/concepts/bots/bot-conversations/bots-conv-proactive.md).
+You might also want to send a personal message to each member of the team when the bot is added. To do this, you could [fetch the team roster](~/resources/bot-v3/bots-context.md#fetching-the-team-roster) and send each user a [direct message](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md).
 
 We recommend that your bot *not* send a welcome message in the following situations:
 
@@ -59,8 +59,6 @@ We recommend that your bot *not* send a welcome message in the following situati
 * Your bot is first mentioned in a group or channel (versus being first added to a team)
 * A group or channel is renamed
 * A team member is added to a group or channel
-
-For more best practices, see our [design guidelines](~/resources/design/overview.md).
 
 ## @ Mentions
 
@@ -113,8 +111,6 @@ Your bot can mention other users in messages posted into channels. To do this, y
 
 * Include `<at>@username</at>` in the message text
 * Include the `mention` object inside the entities collection
-
-The [Teams extensions for the Bot Builder SDK](~/get-started/code.md#microsoft-teams-extensions-for-the-bot-builder-sdk) provide functionality to easily implement this.
 
 #### .NET example
 
@@ -196,4 +192,4 @@ session.send(generalMessage);
 
 ## Accessing groupChat or channel scope
 
-Your bot can do more than send and receive messages in groups and teams. For instance, it can also fetch the list of members, including their profile information, as well as the list of channels. See [Get context for your Microsoft Teams bot](~/concepts/bots/bots-context.md) to learn more.
+Your bot can do more than send and receive messages in groups and teams. For instance, it can also fetch the list of members, including their profile information, as well as the list of channels. See [Get context for your Microsoft Teams bot](~/resources/bot-v3/bots-context.md) to learn more.

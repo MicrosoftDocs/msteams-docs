@@ -30,4 +30,4 @@ gulp serve
 
 Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser and view your application's home page:
 
-![home page screenshot](/microsoftteams/platform/assets/images/tab-images/homePage.PNG)
+![home page screenshot](~/assets/images/tab-images/homePage.png)

@@ -14,11 +14,11 @@ OAuth 2.0 is an open standard for authentication used by Azure AD and many other
 
 The authentication flow described in this article is very similar to that of tabs except that tabs can use web based authentication flow, and bots require authentication to be driven from code. The concepts in this article will also be useful when implementing authentication from the mobile platform.
 
-For a general overview of authentication flow for bots see the topic [Authentication flow in bots](~/concepts/authentication/auth-flow-bot).
+For a general overview of authentication flow for bots see the topic [Authentication flow in bots](~/resources/bot-v3/bot-authentication/auth-flow-bot.md).
 
 ## Configuring identity providers
 
-See the topic [Configure identity providers](~/concepts/authentication/auth-configure) for detailed steps on configuring OAuth 2.0 callback redirect URL(s) when using Azure Active Directory as an identity provider.
+See the topic [Configure identity providers](~/concepts/authentication/configure-identity-provider.md) for detailed steps on configuring OAuth 2.0 callback redirect URL(s) when using Azure Active Directory as an identity provider.
 
 ## Initiate authentication flow
 
@@ -55,7 +55,7 @@ Three buttons have been added to the Hero Card: Sign in, Show Profile, and Sign 
 
 Because of the validation that must be performed for security reasons and the support for the mobile versions of Teams, the code isn't shown here, but [here's an example of the code that kicks off the process when the user presses the Sign in button.](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/e84020562d7c8b83f4a357a4a4d91298c5d2989d/src/dialogs/BaseIdentityDialog.ts#L154-L195).
 
-The validation and mobile support are explained in the topic [Authentication flow in bots](~/concepts/authentication/auth-flow-bot).
+The validation and mobile support are explained in the topic [Authentication flow in bots](~/resources/bot-v3/bot-authentication/auth-flow-bot).
 
 Be sure to add the domain of your authentication redirect URL to the [`validDomains`](~/resources/schema/manifest-schema#validdomains) section of the manifest. If you don't, the login popup will not appear.
 

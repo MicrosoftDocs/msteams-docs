@@ -10,13 +10,11 @@ To test your app experience within Microsoft Teams, you need to upload your app 
 > [!NOTE]
 > Uploading an updated package for an existing app with a bot might not show tab changes when viewed through the Conversations window. It's better to access it via the Apps fly-out, or test on a clean test environment.
 
-For bots designed only for personal conversations between a bot and a single user, see [Adding a bot for personal chat only](~/concepts/bots/bots-test.md#talk-to-your-bot-directly-by-id) for an alternate way to access for testing purposes.
-
 ## Create your upload package
 
 For development as well as AppSource (formerly Office Store) submission you must create an uploadable package that contains the information to describe your experience. The package, a .zip file, contains the application manifest and icons that uniquely define your experience.
 
-To create an upload package, see [Create the package for your Microsoft Teams app](~/concepts/apps/apps-package.md).
+To create an upload package, see [Create the package for your Microsoft Teams app](~/concepts/build-and-test/apps-package.md).
 
 With your package created, you can now upload it into a team. Once uploaded it will be available for all users in the selected team, and only the users of that team.
 
@@ -76,7 +74,7 @@ If the app contains tabs, users can pin them to any conversation or team channel
 
 3. Accept the consent prompt.
 
-4. Configure your tab via its [configuration page](~/concepts/tabs/tabs-configuration.md) and choose *Save*.
+4. Configure your tab via its [configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md) and choose *Save*.
 
   ![The Add a tab dialog box, featuring a gallery of available tabs](~/assets/images/tab_gallery.png)
 
@@ -98,7 +96,7 @@ With the app loaded in the team or conversation, users can set up a Connector us
 
 2. Select your Connector from the **Uploaded** section at the bottom.
 
-3. Configure your Connector via its [configuration page](~/concepts/connectors/connectors.md) and choose *Save*.
+3. Configure your Connector via its [configuration page](~/webhooks-and-connectors/how-to/connectors-creating.md) and choose *Save*.
 
   ![The Add a tab dialog box, featuring a gallery of available tabs.](~/assets/images/connector_gallery.png)
 
@@ -119,6 +117,5 @@ If you change manifest information, you must first remove the app and then add t
 
 ## Troubleshooting notes
 
-* If the manifest doesn't load, please double-check that you followed all the instructions in [Create the package](~/concepts/apps/apps-package.md) and validated your manifest against the [schema](~/resources/schema/manifest-schema.md).
+* If the manifest doesn't load, please double-check that you followed all the instructions in [Create the package](~/concepts/build-and-test/apps-package.md) and validated your manifest against the [schema](~/resources/schema/manifest-schema.md).
 
-* Encountering other problems? See [Troubleshoot your Microsoft Teams app](~/troubleshoot/troubleshoot.md).

@@ -18,7 +18,7 @@ You have the following options for responding.
 * [Card response](#respond-with-a-card-inserted-into-the-compose-message-area) - You can respond with a card that the user can then interact with and/or insert into a message.
 * [Adaptive Card from bot](#bot-response-with-adaptive-card) - Insert an Adaptive Card directly into the conversation.
 * [Request the user authenticate](~/messaging-extensions/how-to/add-authentication.md)
-* [Request the user provide additional configuration](~/messaging-extensions/how-to/add-configuration.md)
+* [Request the user provide additional configuration](~/messaging-extensions/how-to/add-configuration-page.md)
 
 The table below shows which types of responses are available based on the invoke location (`commandContext`) of the messaging extension. For authentication or configuration, once the user completes the flow the original invoke will be re-sent to your web service.
 
@@ -81,7 +81,7 @@ This is an example of the JSON object you will receive. The `commandContext` par
 
 ## Respond with a card inserted into the compose message area
 
-The most common way to respond to the `composeExtension/submitAction` request is with a card inserted into the compose message area. The user can then choose to submit the card to the conversation. For more information on using cards see [cards and card actions](~/bots/how-to/cards-and-formatting/send-cards-and-card-actions.md).
+The most common way to respond to the `composeExtension/submitAction` request is with a card inserted into the compose message area. The user can then choose to submit the card to the conversation. For more information on using cards see [cards and card actions](~/task-modules-and-cards/cards/card-actions.md).
 
 # [C#/.NET](#tab/dotnet)
 

@@ -14,7 +14,7 @@ ms.author: anclear
 
 Adding a command menu to your bot lets you to give your users a list of commands your bot is designed to execute, along with help text explaining the command. Selecting a command from the list will insert the command string into the compose message box, then all they need to do is click **Send**.
 
-![Bot command menu](~/bots/how-to/media/bot-menu-sample.png)
+![Bot command menu](~/bots/how-to/conversations/media/bot-menu-sample.png)
 
 ## Create a command menu for your bot
 
@@ -26,7 +26,7 @@ The instructions here assume that you will be editing an existing app manifest. 
 
 1. Open App Studio from the ... overflow menu on the left navigation rail. If you do not have App Studio available you can download it, please refer to [Installing App Studio](https://aka.ms/teams-app-studio#installing-app-studio). 
 
-    ![App Studio](~/bots/how-to/media/AppStudio.png)
+    ![App Studio](~/bots/how-to/conversations/media/AppStudio.png)
 
 2. Once in App Studio, select the **Manifest editor** tab.
 
@@ -34,13 +34,13 @@ The instructions here assume that you will be editing an existing app manifest. 
 
 4. In the right column of the manifest editor view in the **Commands** section, select the **Add** button.
 
-    ![App Studio Command Menu Add button](~/bots/how-to/media/AppStudio-CommandMenu-Add.png)
+    ![App Studio Command Menu Add button](~/bots/how-to/conversations/media/AppStudio-CommandMenu-Add.png)
 
 5. The **New Command** screen appears. Enter the **Command text** that you want to have appear as the menu command, and the **Help text** that you want to have appear directly under the command text in the menu. This should be a brief explanation of the purpose of the command.
 
 6. Next, select the scope(s) that you want this command menu to appear in, then select the **Save** button.
 
-    ![App Studio Command Menu Add button](~/bots/how-to/media/AppStudio-NewCommandMenu.png)
+    ![App Studio Command Menu Add button](~/bots/how-to/conversations/media/AppStudio-NewCommandMenu.png)
 
 ### Creating a command menu for your bot by editing **Manifest.json**
 

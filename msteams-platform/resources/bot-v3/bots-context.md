@@ -22,8 +22,8 @@ Your bot can query for the list of team members and their basic profiles, which 
 You can directly issue a GET request on [`/conversations/{teamId}/members/`](/bot-framework/rest-api/bot-framework-rest-connector-api-reference#get-conversation-members), using the value of `serviceUrl` as the endpoint.
 
 The `teamId` can be found in the `channeldata` object of the activity payload that your bot receives in the following scenarios:
-* When a user messages or interacts with your bot in a team context (see [Receiving Messages](~/concepts/bots/bot-conversations/bots-conversations.md#receiving-messages))
-* When a new user or bot is added to a team (see [Bot or user added to a team](~/concepts/bots/bots-notifications.md#bot-or-user-added-to-a-team))
+* When a user messages or interacts with your bot in a team context (see [Receiving Messages](~/resources/bot-v3/bot-conversations/bots-conversations.md#receiving-messages))
+* When a new user or bot is added to a team (see [Bot or user added to a team](~/resources/bot-v3/bots-notifications.md#bot-or-user-added-to-a-team))
 
 > [!NOTE]
 >* Make sure to use the team id when calling the api
@@ -126,7 +126,7 @@ Your bot can query the list of channels in a team.
 
 You can directly issue a GET request on `/teams/{teamId}/conversations/`, using the value of `serviceUrl` as the endpoint.
 
-The only source for `teamId` is a message from the team context - either a message from a user or the message that your bot receives when it is added to a team (see [Bot or user added to a team](~/concepts/bots/bots-notifications.md#team-member-or-bot-addition)).
+The only source for `teamId` is a message from the team context - either a message from a user or the message that your bot receives when it is added to a team (see [Bot or user added to a team](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)).
 
 > [!NOTE]
 > The value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value of `serviceUrl`.

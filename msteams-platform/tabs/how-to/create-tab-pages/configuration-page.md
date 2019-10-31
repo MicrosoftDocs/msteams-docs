@@ -11,14 +11,10 @@ ms.author: laujan
 A configuration page is a special type of [content page](content-page.md) that allows your users to configure some aspect of your Teams app. Typically these are used as part of:
 
 * A channel or group chat tab - The configuration page allows you to collect information from your users and set the `contentUrl` of the content page to display.
-* A [messaging extension](~/messaging-extensions/how-to/add-configuration-page.md) - things
-* A conversational bot - things
+* A [messaging extension](~/messaging-extensions/what-are-messaging-extensions.md)
+* A [Office 365 Connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)
 
 ## Configuring a channel or group chat tab
-
-2-3 sentences overview on using it in this context
-
-### Tab requirements
 
 A configuration page informs the content page how it should render. Your application must reference the [Microsoft Teams JavaScript client SDK](foo.md) and call `microsoft.initialize()`. Additionally, your URLs must be secure HTTPS endpoints and available from the cloud. Below is a configuration page citation. It is available in full at [OurGitHubRepo](foo.md):
 
@@ -160,14 +156,6 @@ When invoked, the `microsoftTeams.getContext((context) => {})` function retrieve
     </script>
     ...
 ```
-
-## Configuring a messaging extension
-
-2-3 sentences, then link to ME docs
-
-## Configuring a bot
-
-2-3 sentences, then link to bot docs
 
 ## Context and Authentication
 

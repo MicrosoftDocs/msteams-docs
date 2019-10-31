@@ -14,7 +14,7 @@ When testing your bot you need to take into consideration both the context(s) yo
 
 The most comprehensive way to test your bot is by creating an app package and uploading it to Teams. This is the only method to test the full functionality available to your bot, across all scopes.
 
-There are two methods for uploading your app. You can either use [App Studio](~/get-started/get-started-app-studio.md) to help you, or you can manually [create an app package](~/concepts/apps/apps-package.md) and [upload your app](~/concepts/apps/apps-upload.md). If you need to alter your manifest and re-upload your app, you should [delete your bot](#deleting-a-bot-from-teams) before uploading your altered app package.
+There are two methods for uploading your app. You can either use [App Studio](~/concepts/build-and-test/app-studio-overview.md) to help you, or you can manually [create an app package](~/concepts/build-and-test/apps-package.md) and [upload your app](~/concepts/deploy-and-publish/apps-upload.md). If you need to alter your manifest and re-upload your app, you should [delete your bot](#deleting-a-bot-from-teams) before uploading your altered app package.
 
 ## Debug your bot locally
 
@@ -25,8 +25,6 @@ ngrok http <port> -host-header=localhost:<port>
 ```
 
 Use the https endpoint provided by ngrok in your app manifest. If you close your command window and restart you'll get a new URL, and you'll need to update your bot endpoint address to use that one as well.
-
-You can find additional information [here](~/resources/general/debug.md#locally-hosted).
 
 ## Testing your bot without uploading to Teams
 
@@ -84,4 +82,4 @@ To remove your bot completely from Teams, go to your Bot Dashboard and edit the 
 
 ## Removing your bot from AppSource
 
-If you want to remove your bot from your Teams app in AppSource (formerly Office Store), you must remove the bot from your app manifest and resubmit your app for validation. See [Publish your Microsoft Teams app to AppSource](~/publishing/apps-publish.md) for more information.
+If you want to remove your bot from your Teams app in AppSource (formerly Office Store), you must remove the bot from your app manifest and resubmit your app for validation. See [Publish your Microsoft Teams app to AppSource](~/concepts/deploy-and-publish/apps-publish.md) for more information.

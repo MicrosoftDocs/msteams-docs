@@ -8,9 +8,9 @@ ms.date: 05/20/2019
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Microsoft Teams allows users to engage in direct conversations with bots built on the [Microsoft Bot Framework](/azure/bot-service/?view=azure-bot-service-3.0). Users can find bots in the Discover Apps gallery and add them to their Teams experience for personal conversations. Team owners and users with the appropriate permissions can also add bots as team members (see [Interact in a team channel](~/concepts/bots/bot-conversations/bots-conv-channel.md)), which not only makes them available in that team's channels, but for personal chat for all of those users as well.
+Microsoft Teams allows users to engage in direct conversations with bots built on the [Microsoft Bot Framework](/azure/bot-service/?view=azure-bot-service-3.0). Users can find bots in the Discover Apps gallery and add them to their Teams experience for personal conversations. Team owners and users with the appropriate permissions can also add bots as team members (see [Interact in a team channel](~/resources/bot-v3/bot-conversations/bots-conv-channel.md)), which not only makes them available in that team's channels, but for personal chat for all of those users as well.
 
-Personal chat differs from chat in channels in that the user does not need to @mention the bot. If a bot is used in multiple contexts (personal, groupChat or channel) you will need to detect if the bot is in a group chat or channel, and process messages a little differently. See [Interact in a team channel or group chat](~/concepts/bots/bot-conversations/bots-conv-proactive.md) for more details.
+Personal chat differs from chat in channels in that the user does not need to @mention the bot. If a bot is used in multiple contexts (personal, groupChat or channel) you will need to detect if the bot is in a group chat or channel, and process messages a little differently. See [Interact in a team channel or group chat](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) for more details.
 
 ## Designing a great personal bot
 
@@ -20,6 +20,4 @@ Depending on the experience you want to create, the bot might need to work in mu
 
 ## Best practice: Welcome messages in personal conversations
 
-Your bot should [proactively send](~/concepts/bots/bot-conversations/bots-conv-proactive.md) a welcome message to a personal chat the first time (and only the first time) a user initiates a personal chat with your bot. (This recommendation does not apply to first-time contacts in a channel.)
-
-For more best practices, see our [design guidelines](~/resources/design/overview.md).
+Your bot should [proactively send](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) a welcome message to a personal chat the first time (and only the first time) a user initiates a personal chat with your bot. (This recommendation does not apply to first-time contacts in a channel.)

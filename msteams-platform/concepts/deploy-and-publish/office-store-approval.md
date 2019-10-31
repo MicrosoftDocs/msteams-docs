@@ -13,8 +13,8 @@ For your Teams app to be approved:
 * It must be stable and functional.
 * Any material that you associate with your experience, such as descriptions and support documentation, must be accurate. Use correct spelling, capitalization, punctuation, and grammar in your descriptions and materials.
 * It must pass all current [AppSource validation policies](https://dev.office.com/officestore/docs/validation-policies) for Teams tabs and bots. Please note that these policies are subject to change.
-* For tabs, it must provide value to users outside of what is possible by simply pinning your website in Teams. This means that, at minimum, it must remove extraneous chrome and disallow navigating outside the configured context. See the [Microsoft Teams Design Guidelines](~/resources/design/overview.md) for more guidance.
-* Your app must function across all Teams clients, including mobile. See [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md).
+* For tabs, it must provide value to users outside of what is possible by simply pinning your website in Teams. This means that, at minimum, it must remove extraneous chrome and disallow navigating outside the configured context. See the [Microsoft Teams Design Guidelines](~/tabs/design/tabs.md) for more guidance.
+* Your app must function across all Teams clients, including mobile. See [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md).
 
 When the validation process is complete, you will receive a message to let you know that either your Teams experience is approved or it fails one of the stated policies.
 
@@ -103,7 +103,7 @@ It is highly recommended to have help/FAQ link for your Teams app and to provide
 ### Tabs
 
 > [!Important]
-> Full support for tabs on mobile clients is currently in [developer preview](~/resources/dev-preview/developer-preview-intro.md), and will be released soon. To prepare for this change you should follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md) when creating your tabs.
+> Full support for tabs on mobile clients is currently in [developer preview](~/resources/dev-preview/developer-preview-intro.md), and will be released soon. To prepare for this change you should follow the [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md) when creating your tabs.
 
 * For your tab configuration page, be sure to provide "About" links and proper guidance. This page is the first thing the user sees, so ensure that a new user understands what to do.
 * If a response to an action takes more than three seconds, you must provide a loading message or warning.

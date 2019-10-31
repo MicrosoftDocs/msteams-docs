@@ -37,15 +37,6 @@ As always, the project's README file should have more information on specific ne
 | [Hello World in Microsoft Teams with C#.NET](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) | A sample teams app in `C# .NET` introducing you to the basic app capabilities.|
 | [Get started with the Yeoman generator for Teams](~/tutorials/get-started-yeoman.md) | Create a Teams app from scratch using the Yeoman generator for Microsoft Teams. |
 
-## Featured
-
-| Sample | Description|
-|--------|-------------|
-| [Yeoman generator](https://github.com/OfficeDev/generator-teams) | Generates a Microsoft Teams app skeleton with tabs, bots, and more based on Node.js and TypeScript. Optionally it adds support for hosting using Express. |
-| [Complete sample in Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) | This sample shows how to use all the features of the Microsoft Teams platform. NOTE: This sample uses the Bot Framework v3 SDK.|
-| [Complete sample in C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) | This sample shows how to use all the features of the Microsoft Teams platform. NOTE: This sample uses the Bot Framework v3 SDK. |
-| [Line of Business apps in C#/.NET](https://github.com/OfficeDev/msteams-sample-line-of-business-apps-csharp) | This repository contains multiple example Line of Business apps that can be used for either inspiration or as templates to build on top of. NOTE: These samples use the Bot Framework v3 SDK.|
-
 ## Bots (using the v4 SDK)
 
 | Sample | Description | .NET Core | JavaScript |
@@ -86,6 +77,9 @@ As always, the project's README file should have more information on specific ne
 
 | Code | Description |
 |------|------------- |
+| [Complete sample in Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) | This sample shows how to use all the features of the Microsoft Teams platform. NOTE: This sample uses the Bot Framework v3 SDK.|
+| [Complete sample in C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) | This sample shows how to use all the features of the Microsoft Teams platform. NOTE: This sample uses the Bot Framework v3 SDK. |
+| [Line of Business apps in C#/.NET](https://github.com/OfficeDev/msteams-sample-line-of-business-apps-csharp) | This repository contains multiple example Line of Business apps that can be used for either inspiration or as templates to build on top of. NOTE: These samples use the Bot Framework v3 SDK.|
 | ["To-do" list sample tab app](https://github.com/OfficeDev/microsoft-teams-sample-todo) | This Node.js sample shows how easy it is to convert an existing web app into a tab. |
 | [Orky](https://github.com/OfficeDev/Orky) | You can use Orky to register your own local bot in Microsoft Teams and execute scripts from ANYWHERE! |
 | [Build 2017 Weather](https://github.com/OfficeDev/microsoft-teams-build2017-weather) | OUTDATED. Source code for the //build 2017 session to add a weather tab to the skeleton app generated earlier in the session. |

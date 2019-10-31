@@ -25,9 +25,9 @@ A bot behaves differently depending on what kind of conversation it is involved 
 * `personal` Conversations between a bot and a single user
 * `groupChat` A conversation between a bot and 2 or more users
 
-See [Have a conversation with a Microsoft Teams bot](~/concepts/bots/bot-conversations/bots-conversations.md) for more information.
+See [Have a conversation with a Microsoft Teams bot](~/resources/bot-v3/bot-conversations/bots-conversations.md) for more information.
 
-With Microsoft Teams apps, you can make the bot the star of your experience, or just a helper. Bots are distributed as part of your broader app package which can include other capabilities such as [tabs](~/concepts/tabs/tabs-overview.md) or [messaging extensions](~/concepts/messaging-extensions/messaging-extensions-overview.md).
+With Microsoft Teams apps, you can make the bot the star of your experience, or just a helper. Bots are distributed as part of your broader app package which can include other capabilities such as [tabs](~tabs/what-are-tabs.md) or [messaging extensions](~/messaging-extensions/what-are-messaging-extensions.md).
 
 ## Bot APIs
 
@@ -46,30 +46,23 @@ The SDK extensions install dependencies, including the Bot Builder SDK.
 > [!IMPORTANT]
 > You can develop Teams apps in any other web-programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly, but you must perform all token handling yourself.
 
-*Teams App Studio* helps you create and configure your app manifest, and can create your Bot Framework bot for you. It also contains a React control library and an interactive card builder. See [Getting started with Teams App Studio](~/get-started/get-started-app-studio.md).
+*Teams App Studio* helps you create and configure your app manifest, and can create your Bot Framework bot for you. It also contains a React control library and an interactive card builder.
 
 ## Outgoing webhooks
 
-Outgoing webhooks allow you to create a simple bot for basic interaction, like kicking off a workflow or other simple commands you may need. Outgoing webhooks live only in the team in which you create them and are intended for simple processes specific to your company's workflow. See [outgoing webhooks](~/concepts/outgoingwebhook.md) for more information.
-
-## Troubleshooting bots
-
-See the [Troubleshooting bots](~/troubleshoot/troubleshoot.md#troubleshooting-bots) topic for more information.
+Outgoing webhooks allow you to create a simple bot for basic interaction, like kicking off a workflow or other simple commands you may need. Outgoing webhooks live only in the team in which you create them and are intended for simple processes specific to your company's workflow. See [outgoing webhooks](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md) for more information.
 
 ## Build a great Teams bot
 
 The following topics will guide you through the process of creating a great bot for Teams.
 
-* [Get started with apps for Teams](~/get-started/get-started-nodejs-app-studio.md) Create a "hello world" app.
-* [Design a great bot](~/get-started/design.md#designing-a-great-bot): Microsoft Teams is the place for group and team collaboration. Consider what functionality your bot can bring to this collaboration environment, via personal conversations or as part of a channel conversation. A great bot on Teams will also find ways to leverage the unique tabs feature, via a [configurable tab](~/concepts/tabs/tabs-overview.md) or a [static tab](~/concepts/tabs/tabs-static.md).
-* [Create a bot](~/concepts/bots/bots-create.md): Take advantage of the great tools, documentation, and community provided by the Bot Framework team.
-* [Talk to your bot](~/concepts/bots/bot-conversations/bots-conversations.md): Add basic conversation flow and leverage channel-specific functionality. If you develop in .NET or Node.js, use our [extensions for the Bot Builder SDK](~/get-started/code.md#microsoft-teams-extensions-for-the-bot-builder-sdk) to simplify your work.
-* [Using cards in your bot](~/concepts/bots/bot-conversations/bots-cards.md) Design cards to communicate and accept user response.
-* [Respond to bot events](~/concepts/bots/bots-notifications.md).
-* [Notification-only bots](~/concepts/bots/bots-notification-only.md) Using bots to send notifications for your app.
-* [Get context](~/concepts/bots/bots-context.md) Get information about the user.
-* [Bot menus](~/concepts/bots/bots-menus.md) Using menus in bots.
-* [Bots and files](~/concepts/bots/bots-files.md) Sending and receiving files from bots.
-* [Using tabs with bots](~/concepts/bots/bots-with-tabs.md) Making tabs and bots work together.
-* [Test your bot](~/concepts/bots/bots-test.md): Add your bot for personal or team conversations to see it in action.
-* [Publish your bot](~/publishing/apps-publish.md): Create your Teams package, add other capabilities, and submit it to AppSource.
+* [Create a bot](~/resources/bot-v3/bots/bots-create.md): Take advantage of the great tools, documentation, and community provided by the Bot Framework team.
+* [Talk to your bot](~/resources/bot-v3/bots/bot-conversations/bots-conversations.md): Add basic conversation flow and leverage channel-specific functionality. If you develop in .NET or Node.js, use our [extensions for the Bot Builder SDK](~/get-started/code.md#microsoft-teams-extensions-for-the-bot-builder-sdk) to simplify your work.
+* [Using cards in your bot](~/resources/bot-v3/bot-conversations/bots-cards.md) Design cards to communicate and accept user response.
+* [Respond to bot events](~/resources/bot-v3/bots-notifications.md).
+* [Notification-only bots](~/resources/bot-v3/bots-notification-only.md) Using bots to send notifications for your app.
+* [Get context](~/resources/bot-v3/bots-context.md) Get information about the user.
+* [Bot menus](~/resources/bot-v3/bots-menus.md) Using menus in bots.
+* [Bots and files](~/resources/bot-v3/bots-files.md) Sending and receiving files from bots.
+* [Using tabs with bots](~/resources/bot-v3/bots-with-tabs.md) Making tabs and bots work together.
+* [Test your bot](~/resources/bot-v3/bots-test.md): Add your bot for personal or team conversations to see it in action.

@@ -8,7 +8,7 @@ ms.date: 03/29/2018
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-You can set the optional [`TextFormat`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) property to control how your message's text content is rendered.
+You can set the optional [`TextFormat`](https://docs.microsoft.com/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) property to control how your message's text content is rendered.
 
 Microsoft Teams supports the following formatting options:
 
@@ -26,7 +26,7 @@ Currently, the following limitations apply:
 
 * Text-only messages do not support table formatting
 
-For information on formatting in cards see the [Teams Card Reference](~/concepts/cards/cards-reference).
+For information on formatting in cards see the [Teams Card Reference](~/task-modules-and-cards/cards/cards-reference.md).
 
 ### Cross-platform support
 
@@ -55,7 +55,7 @@ Support for text formatting varies by type of message and by platform.
 
 #### Text-only messages
 
-| Style                     | Desktop | iOS | Android | 
+| Style                     | Desktop | iOS | Android |
 | ---                       | :---: | :---: | :---: |
 | bold                      | ✔ | ✔ | ✔ |
 | italic                    | ✔ | ✔ | ✔ |

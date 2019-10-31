@@ -10,8 +10,7 @@ For your tab to display in Teams, you must include the **Microsoft Teams JavaScr
 ```
 
 >[!IMPORTANT]
->Don't copy/paste the `<script src="...">` URLs from this page, as they may not represent the latest version. To get the latest version of the SDK markup, always go to:
-[Microsoft Teams JavaScript API (via CDN)](foo.com) and [jQuery CDN - Latest Stable Versions](https://code.jquery.com) or [Microsoft jQuery Releases on the CDN.](/aspnet/ajax/cdn/overview#jquery-releases-on-the-cdn)
+>Don't copy/paste the `<script src="...">` URLs from this page, as they may not represent the latest version. To get the latest version of the SDK, always go to: [Microsoft Teams JavaScript API](https://www.npmjs.com/package/@microsoft/teams-js.com).
 
 ### Tab.cshtml
 
@@ -65,7 +64,7 @@ Make sure to save the updated **Tab.cshtml**.
 >[!Note]
 > We use App Studio to edit your **manifest.json** file and upload the completed package to Teams. You can also manually edit the **manifest.json** file if you prefer. If you do, be sure to build the solution again to create the **tab.zip** file to upload.
 
-- Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/foo.md).
+- Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
 
 - Open App studio and select the **Manifest editor** tab.
 
@@ -127,8 +126,3 @@ In the *Test and distribute* section:
 - In the final pop-up window select a value for the tab page (either a red or gray icon) and select **Save**.
 
 To view your tab, navigate to the team you installed it on, and select it from the tab bar. The page that you chose during configuration should be displayed.
-
-## Next Steps
-
-- [learn something](~/foo.md)
-- [and something else](~/foo.md)

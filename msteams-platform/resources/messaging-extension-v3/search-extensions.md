@@ -79,7 +79,7 @@ For search based messaging extension set the `type` parameter to `query`. Below 
 
 ### Test via uploading
 
-You can test your messaging extension by uploading your app. See [Uploading your app in a team](~/concepts/apps/apps-upload.md) for details.
+You can test your messaging extension by uploading your app.
 
 To open your messaging extension, navigate to any of your chats or channels. Choose the **More options** (**&#8943;**) button in the compose box, and choose your messaging extension.
 
@@ -138,9 +138,6 @@ The request parameters itself are found in the value object, which includes the 
 | `commandId` | The name of the command invoked by the user, matching one of the commands declared in the app manifest. |
 | `parameters` | Array of parameters. Each parameter object contains the parameter name, along with the parameter value provided by the user. |
 | `queryOptions` | Pagination parameters: <br>`skip`: skip count for this query <br>`count`: number of elements to return |
-
-> [!NOTE]
-> You should authenticate any request to your service. See [Receiving messages](~/concepts/bots/bot-conversations/bots-conversations.md#receiving-messages) for more detailed documentation on receiving messages from the Bot Framework.
 
 #### Request example
 
@@ -249,16 +246,16 @@ Your service should respond with the results matching the user query. The respon
 
 We support the following attachment types:
 
-* [Thumbnail card](~/concepts/cards/cards-reference.md#thumbnail-card)
-* [Hero card](~/concepts/cards/cards-reference.md#hero-card)
-* [Office 365 Connector card](~/concepts/cards/cards-reference.md#office-365-connector-card)
-* [Adaptive card](~/concepts/cards/cards-reference.md#adaptive-card)
+* [Thumbnail card](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
+* [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
+* [Office 365 Connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Adaptive card](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-See [Cards](~/concepts/cards/cards.md) for an overview.
+See [Cards](~/task-modules-and-cards/what-are-cards.md) for an overview.
 
-To learn how to use the thumbnail and hero card types, see [Add cards and card actions](~/concepts/cards-actions.md).
+To learn how to use the thumbnail and hero card types, see [Add cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
 
-For additional documentation regarding the Office 365 Connector card, see [Using Office 365 Connector cards](~/concepts/cards/cards-reference.md#office-365-connector-card).
+For additional documentation regarding the Office 365 Connector card, see [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
 The result list is displayed in the Microsoft Teams UI with a preview of each item. The preview is generated in one of two ways:
 
