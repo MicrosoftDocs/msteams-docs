@@ -59,9 +59,10 @@ foreach (var activityId in _list)
 To delete that message, pass that activity's ID to the `deleteActivity` method of the `TurnContext` object.
 
 ```typescript
-for (const activityId in list) {
-    await turnContext.deleteActivity(activityId);
+for (let i = 0; i < activityIds.length; i++) {
+    await turnContext.deleteActivity(activityIds[i]);
 }
 ```
 
 ---
+

@@ -239,8 +239,75 @@ protected override async Task OnTeamsFileConsentDeclineAsync(ITurnContext<IInvok
 
 # [TypeScript/Node.js](#tab/typescript)
 
-```typescript
-asdf
-```
+<!-- From sample: libraries\botbuilder\tests\teams\fileUpload\src\fileUploadBot.ts-->
 
-* * *
+```typescript
+
+export class FileUploadBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+
+        this.onMessage(async (context, next) => {
+            await this.sendFileCard(context);
+            await next();
+        });
+
+        this.onMembersAdded(async (context, next) => {
+            const membersAdded = context.activity.membersAdded;
+            for (const member of membersAdded) {
+                if (member.id !== context.activity.recipient.id) {
+                    await context.sendActivity('Hello and welcome!');
+                }
+            }
+            await next();
+        });
+    }
+
+    private async sendFileCard(context: TurnContext): Promise<void> {
+        let filename = "file name";
+        let fs = require('fs'); 
+        let path = require('path');
+        let stats = fs.statSync(path.join('files', filename));
+        let fileSizeInBytes = stats['size'];
+
+        let fileContext = {
+            filename: filename
+        };
+
+        let attachment = {
+            content: <FileConsentCard>{
+                description: 'This is the file I want to send you',
+                fileSizeInBytes: fileSizeInBytes,
+                acceptContext: fileContext,
+                declineContext: fileContext
+            },
+            contentType: 'application/vnd.microsoft.teams.card.file.consent',
+            name: filename
+        } as Attachment;
+
+        var replyActivity = this.createReply(context.activity);
+        replyActivity.attachments = [ attachment ];
+        await context.sendActivity(replyActivity);
+    }
+
+    protected async handleTeamsFileConsentAccept(context: TurnContext, fileConsentCardResponse: FileConsentCardResponse): Promise<void> {
+        try {
+            await this.sendFile(fileConsentCardResponse);
+            await this.fileUploadCompleted(context, fileConsentCardResponse);
+        }
+        catch (err) {
+            await this.fileUploadFailed(context, err.toString());
+        }
+    }
+
+    protected async handleTeamsFileConsentDecline(context: TurnContext, fileConsentCardResponse: FileConsentCardResponse): Promise<void> {
+        let reply = this.createReply(context.activity);
+        reply.textFormat = "xml";
+        reply.text = `Declined. We won't upload file <b>${fileConsentCardResponse.context["filename"]}</b>.`;
+        await context.sendActivity(reply);
+    }
+...
+
+}
+
+```

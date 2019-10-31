@@ -44,7 +44,7 @@ The instructions here assume that you will be editing an existing app manifest. 
 
 ### Creating a command menu for your bot by editing **Manifest.json**
 
-Another valid approach for creating a commend menu is to create it directly in the manifest file while developing your bot source code. Here are a few things to keep in mind when using this approach:
+Another valid approach for creating a command menu is to create it directly in the manifest file while developing your bot source code. Here are a few things to keep in mind when using this approach:
 
 1. Each menu supports up to 10 commands.
 
@@ -140,18 +140,22 @@ Another valid approach for creating a commend menu is to create it directly in t
 
 ## Handling menu commands in your bot code
 
-Bots in a group or channel respond only when they are mentioned ("@botname") in a message. As a result every message received by a bot when in a group or channel scope will contains it own name in the message text returned. You need to ensure your message parsing handles that before handling the command being returned. You can parse out the **@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework, a method of the `Activity` class named `RemoveRecipientMention`.
+Bots in a group or channel respond only when they are mentioned ("@botname") in a message. As a result every message received by a bot when in a group or channel scope will contains it own name in the message text returned. You need to ensure your message parsing handles that before handling the command being returned.
 
 # [C#/.NET](#tab/dotnet)
 
+You can parse out the **@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework, a method of the `Activity` class named `RemoveRecipientMention`.
+
 ```csharp
-turnContext.Activity.RemoveRecipientMention();
+var modifiedText = turnContext.Activity.RemoveRecipientMention();
 ```
 
 # [TypeScript/Node.js](#tab/typescript)
 
+You can parse out the **@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework, a method of the `TurnContext` class named `removeMentionText`.
+
 ```typescript
-asdf
+const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnContext.activity.recipient.id);
 ```
 
 * * *
