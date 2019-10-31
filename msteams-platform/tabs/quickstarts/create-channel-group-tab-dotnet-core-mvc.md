@@ -13,10 +13,10 @@ In this quickstart we'll walk-through creating a custom channel/group tab with C
 
 ## Get the source code
 
-Open a command prompt and create a new directory for your tab project. We have provided a simple [Channel Group Tab](https://github.com/OfficeDev/msteams-samples/samples/dotnet/tabs/ChannelGroupTabMVC) project to get you started. To retrieve the source code you can download the zip folder and extract the files or clone the sample repository into your new directory:
+Open a command prompt and create a new directory for your tab project. We have provided a simple [Channel Group Tab](https://github.com/OfficeDev/microsoft-teams-sample-tabs/ChannelGroupTabMVC) project to get you started. To retrieve the source code you can download the zip folder and extract the files or clone the sample repository into your new directory:
 
 ```bash
-git clone https://github.com/OfficeDev/msteams-samples.git
+git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
 
 Once you have the source code, open Visual Studio and select **Open a project or solution**. Navigate to the tab application directory and open **ChannelGroupTabMVC.sln**.

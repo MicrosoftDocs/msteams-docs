@@ -10,6 +10,7 @@ For your tab to display in Teams, you must include the **Microsoft Teams JavaScr
 `<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>`
 `<script src="https://statics.teams.microsoft.com/sdk/v1.5.0/js/MicrosoftTeams.min.js"></script>`
 ```
+
 ### PersonalTab.cshtml
 
 Open **PersonalTab.cshtml** and update the embedded `<script>` tags by calling `microsoftTeams.initialize()`.
