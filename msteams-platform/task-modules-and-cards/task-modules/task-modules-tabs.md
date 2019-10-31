@@ -7,7 +7,7 @@ keywords: task modules teams tabs client sdk
 
 Adding a task module to your tab can greatly simplify your user's experience for any workflows that require data input. Task modules allow you to gather their input in a Teams-aware popup. A good example of this is editing Planner cards; you can use task modules to create a similar experience.
 
-To support the task module feature, two new functions were added to the [Microsoft Teams client SDK](https://docs.microsoft.com/en-us/javascript/api/overview/msteams-client):
+To support the task module feature, two new functions were added to the [Microsoft Teams client SDK](/javascript/api/overview/msteams-client):
 
 ```typescript
 microsoftTeams.tasks.startTask(

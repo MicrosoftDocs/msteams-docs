@@ -37,7 +37,7 @@ With the November release of Teams and SharePoint Framework v. 1.7, developers h
     </a>
 </li>
 <li>
-    <a href="https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab">
+    <a href="https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -74,7 +74,7 @@ The sample app we're using is a Talent Management application. It manages the hi
 ### Benefits of this approach
 
 - Reach SharePoint users with your existing Teams tab
-- Upload your app manifest directly to your SharePoint app catalog. [Teams application packages](~/concepts/deploy-and-publish/apps-package.md) are now supported by SharePoint
+- Upload your app manifest directly to your SharePoint app catalog. [Teams application packages](~/concepts/build-and-test/apps-package.md) are now supported by SharePoint
 - End users configure the tab on a page just like any other SharePoint web part
 - Your tab can access its [context](~/tabs/how-to/access-teams-context.md) just as it can when running inside Teams
 

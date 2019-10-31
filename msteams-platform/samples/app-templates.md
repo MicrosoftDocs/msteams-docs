@@ -55,7 +55,7 @@ To help alleviate this pain, we are happy to bring to you the List Search app te
 
 ## Custom Stickers
 
-Self-expression is core to a healthy team culture. This app template is a [messaging extension](~messaging-extensions/what-are-messaging-extensions.md) that enables your users to use custom stickers and GIFs within Microsoft Teams. This template provides an easy web-based configuration experience where anyone with configuration access can upload the GIFs/stickers/images they want their end-users to have, allowing your entire team to use any set of stickers you chose.
+Self-expression is core to a healthy team culture. This app template is a [messaging extension](~/messaging-extensions/what-are-messaging-extensions.md) that enables your users to use custom stickers and GIFs within Microsoft Teams. This template provides an easy web-based configuration experience where anyone with configuration access can upload the GIFs/stickers/images they want their end-users to have, allowing your entire team to use any set of stickers you chose.
 
 This app also enables easy sharing of images/GIFs/stickers across teams without needing access to SharePoint sites or individual channels as storage and sharing mechanisms. For example, product teams can easily share product images and GIFs to social media, marketing and sales teams programmatically. One can also extend this app by triggering a notification flow to specific teams/individuals when new images/GIFs are made available.
 
