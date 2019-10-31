@@ -41,5 +41,5 @@ For sample code showing the tab authentication process see:
 
 For a detailed implementation walkthrough for tab authentication targeting Azure Active Directory see:
 
-* [Authenticate a user in a Microsoft Teams tab](~/concepts/authentication/auth-tab-AAD.md)
-* [Silent authentication](~/concepts/authentication/auth-silent-AAD.md)
+* [Authenticate a user in a Microsoft Teams tab](~/tabs/how-to/authentication/auth-tab-AAD.md)
+* [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md)

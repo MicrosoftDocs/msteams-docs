@@ -12,9 +12,6 @@ Build and connect intelligent bots to interact with Microsoft Teams users natura
 
 ![Example of a bot assisting a user](~/assets/images/bot_example.png)
 
-> [!TIP]
-> If you are just looking for a way to simply extend your team by integrating with custom tools and services in a secure manner, check out our [outgoing webhook](~/concepts/outgoingwebhook.md) feature. Be aware, though, that outgoing webhooks simply leverage your existing web services - they can't access non-messaging APIs, perform asynchronous posting, or add button actions to cards.
-
 ## What you need to know: Bots
 
 A bot appears just like any other team member you interact with in a conversation except that it has a hexagonal avatar icon and is always online.
@@ -27,7 +24,7 @@ A bot behaves differently depending on what kind of conversation it is involved 
 
 See [Have a conversation with a Microsoft Teams bot](~/resources/bot-v3/bot-conversations/bots-conversations.md) for more information.
 
-With Microsoft Teams apps, you can make the bot the star of your experience, or just a helper. Bots are distributed as part of your broader app package which can include other capabilities such as [tabs](~tabs/what-are-tabs.md) or [messaging extensions](~/messaging-extensions/what-are-messaging-extensions.md).
+With Microsoft Teams apps, you can make the bot the star of your experience, or just a helper. Bots are distributed as part of your broader app package which can include other capabilities such as [tabs](~/tabs/what-are-tabs.md) or [messaging extensions](~/messaging-extensions/what-are-messaging-extensions.md).
 
 ## Bot APIs
 
@@ -57,8 +54,8 @@ Outgoing webhooks allow you to create a simple bot for basic interaction, like k
 The following topics will guide you through the process of creating a great bot for Teams.
 
 * [Create a bot](~/resources/bot-v3/bots/bots-create.md): Take advantage of the great tools, documentation, and community provided by the Bot Framework team.
-* [Talk to your bot](~/resources/bot-v3/bots/bot-conversations/bots-conversations.md): Add basic conversation flow and leverage channel-specific functionality. If you develop in .NET or Node.js, use our [extensions for the Bot Builder SDK](~/get-started/code.md#microsoft-teams-extensions-for-the-bot-builder-sdk) to simplify your work.
-* [Using cards in your bot](~/resources/bot-v3/bot-conversations/bots-cards.md) Design cards to communicate and accept user response.
+* [Talk to your bot](~/resources/bot-v3/bot-conversations/bots-conversations.md): Add basic conversation flow and leverage channel-specific functionality. If you develop in .NET or Node.js, use our extensions for the Bot Builder SDK to simplify your work.
+* [Using cards in your bot](~/resources/bot-v3/bots-cards.md) Design cards to communicate and accept user response.
 * [Respond to bot events](~/resources/bot-v3/bots-notifications.md).
 * [Notification-only bots](~/resources/bot-v3/bots-notification-only.md) Using bots to send notifications for your app.
 * [Get context](~/resources/bot-v3/bots-context.md) Get information about the user.

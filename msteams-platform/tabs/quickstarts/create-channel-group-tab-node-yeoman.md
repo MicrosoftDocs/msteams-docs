@@ -1,18 +1,18 @@
 ---
-title: "Quickstart: Create a custom channel and group Tab with Node.js and the Yeoman Generator for Microsoft Teams"
+title: "Create a custom channel and group Tab with Node.js and the Yeoman Generator for Microsoft Teams"
 author: laujan
 description: A quickstart guide to creating a channel and group tab with the Yeoman Generator for Microsoft Teams.
 ms.topic: quickstart
 ms.author: laujan
 ---
-# Quickstart: Create a custom channel and group tab with Node.js and the Yeoman Generator for Microsoft Teams
+# Create a custom channel and group tab with Node.js and the Yeoman Generator for Microsoft Teams
 
 >[!NOTE]
 >This quickstart follows the steps outlined in the [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
 
 In this quickstart we'll walk-through creating a custom channel and group tab using the [Teams Yeoman generator](https://github.com/OfficeDev/generator-teams/).
 
-[!INCLUDE [node-js-yeoman-prereq](../../includes/tabs/node-js-yeoman-prereq.md)]
+[!INCLUDE [node-js-yeoman-prereq](~/includes/tabs/node-js-yeoman-prereq.md)]
 
 **Do you want to create a configurable or static tab?**
 
@@ -53,11 +53,11 @@ Make sure to save the updated file.
 
 Open a command prompt in your project directory to complete the next tasks.
 
-[!INCLUDE [node-js-yeoman-gulp-tasks](../../includes/tabs/node-js-yeoman-gulp-tasks.md)]
+[!INCLUDE [node-js-yeoman-gulp-tasks](~/includes/tabs/node-js-yeoman-gulp-tasks.md)]
 
 To view your tab configuration page go to `https://localhost:3007/<yourDefaultAppNameTab>/config.html`. You should see the following:
 
-![configuration page screenshot](/microsoftteams/platform/assets/images/tab-images/configurationPage.PNG)
+![configuration page screenshot](~/assets/images/tab-images/configurationPage.png)
 
 ## Establish a secure tunnel to your tab
 
@@ -76,15 +76,10 @@ gulp ngrok-serve
 
 ## Upload your application to Teams
 
-- Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/foo.md).
+- Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
 - In the *YourTeams* panel on the left, select the `...` menu next to the team that you're using to test your tab and choose **Manage team**.
 - In the main panel select **Apps** from the tab bar and choose **Upload a custom app** located in the lower right-hand corner of the page.
 - Open your project directory, browse to the **./package** folder, select the app package zip folder and choose **Open**. Your tab will upload into Teams.
 - Return to your team, choose the channel where you would like to display the tab, select ➕ from the tab bar, and choose your tab from the gallery.
 - Follow the directions for adding a tab. Note that there's a custom configuration dialog for your channel/group tab.
 - Select **Save** and your tab will be added to the channel's tab bar.
-
-## Next Steps
-
-- [learn something](~/foo.md)
-- [and something else](~/foo.md)

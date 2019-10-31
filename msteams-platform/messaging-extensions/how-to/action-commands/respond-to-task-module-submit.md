@@ -81,7 +81,7 @@ This is an example of the JSON object you will receive. The `commandContext` par
 
 ## Respond with a card inserted into the compose message area
 
-The most common way to respond to the `composeExtension/submitAction` request is with a card inserted into the compose message area. The user can then choose to submit the card to the conversation. For more information on using cards see [cards and card actions](~/task-modules-and-cards/cards/card-actions.md).
+The most common way to respond to the `composeExtension/submitAction` request is with a card inserted into the compose message area. The user can then choose to submit the card to the conversation. For more information on using cards see [cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
 
 # [C#/.NET](#tab/dotnet)
 

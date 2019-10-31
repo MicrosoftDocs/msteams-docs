@@ -30,7 +30,7 @@ The following table shows a list of Teams conversation update events, with links
 | channel renamed     | channelRenamed    | OnTeamsChannelRenamedAsync | [A channel was renamed](#channel-renamed) | Team |
 | channel deleted     | channelDeleted    | OnTeamsChannelDeletedAsync | [A channel was deleted](#channel-deleted) | Team |
 | team members added   | teamMemberAdded   | OnTeamsMembersAddedAsync   | [A Member added to team](#team-members-added)   | All |
-| team members removed | teamMemberRemoved | OnTeamsMembersRemovedAsync | [A Member was removed from team](#team-membesr-removed) | groupChat & team |
+| team members removed | teamMemberRemoved | OnTeamsMembersRemovedAsync | [A Member was removed from team](#team-members-removed) | groupChat & team |
 | team renamed        | teamRenamed       | OnTeamsTeamRenamedAsync    | [A Team was renamed](#team-renamed)       | Team |
 
 ### Channel created

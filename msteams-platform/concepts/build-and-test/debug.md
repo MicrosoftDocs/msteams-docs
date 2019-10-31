@@ -49,11 +49,11 @@ To use ngrok in your project, and depending on the capabilities you are using, y
 For example, for bots registered in the Microsoft Bot Framework, update the bot's messaging endpoint to use this new ngrok endpoint. For example, `https://2d1224fb.ngrok.io/api/messages`. You can validate that ngrok is working by testing bot response in the Bot Framework portal's Test chat window. (Again, like the emulator, this test doesn't allow you to access Teams-specific functionality.)
 
 > [!NOTE]
-> To update the messaging endpoint for a bot, you must use the Bot Framework. Click on your bot in [your list of bots in Bot Framework](https://dev.botframework.com/bots). You do not need to migrate your bot to Microsoft Azure. You can also update your messaging endpoint through [App Studio](~/concept/build-and-test/app-studio-overview.md).
+> To update the messaging endpoint for a bot, you must use the Bot Framework. Click on your bot in [your list of bots in Bot Framework](https://dev.botframework.com/bots). You do not need to migrate your bot to Microsoft Azure. You can also update your messaging endpoint through [App Studio](~/concepts/build-and-test/app-studio-overview.md).
 
 ## Cloud-hosted
 
-You can use any externally addressable service to host your development and production code and their HTTPS endpoints. There is no expectation that your capabilities reside on the same service. We do require that all domains being accessed from your Microsoft Teams apps be listed in the [`validDomains`](~/resources/schema/manifest-schema#validdomains) object in the manifest.json file.
+You can use any externally addressable service to host your development and production code and their HTTPS endpoints. There is no expectation that your capabilities reside on the same service. We do require that all domains being accessed from your Microsoft Teams apps be listed in the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) object in the manifest.json file.
 
 > [!NOTE]
 > To ensure a secure environment, be explicit about the exact domain and subdomains you reference, and those domains must be in your control. For example, `*.azurewebsites.net` would not be recommended, but `contoso.azurewebsites.net` would.

@@ -11,7 +11,7 @@ ms.date: 07/09/2018
 
 ### Accessing the DevTools
 
-You can open [DevTools in the Teams client](~/resources/dev-preview/developer-preview-tools.md) for a similar experience as pressing F12 (on Windows) or Command-Option-I (on MacOS) in a browser.
+You can open [DevTools in the Teams client](~/tabs/how-to/developer-tools.md) for a similar experience as pressing F12 (on Windows) or Command-Option-I (on MacOS) in a browser.
 
 ### Blank tab screen
 
@@ -69,7 +69,7 @@ Bots in channels receive messages only when they are explicitly @mentioned, even
 
 ### My bot doesn't understand my commands when in a channel
 
-Because bots in channels only receive messages when they are @mentioned, all messages that your bot receives in a channel include that @mention in the text field. It is a best practice to strip the bot name itself out of all incoming text messages before passing along to your parsing logic. Review [Mentions](~/bots/how-to/bot-conversations/channel-and-group-conversations.md#working-with--mentions) for tips on how to handle this case.
+Because bots in channels only receive messages when they are @mentioned, all messages that your bot receives in a channel include that @mention in the text field. It is a best practice to strip the bot name itself out of all incoming text messages before passing along to your parsing logic. Review [Mentions](~/bots/how-to/conversations/channel-and-group-conversations.md#working-with--mentions) for tips on how to handle this case.
 
 ## Issues with packaging and uploading
 

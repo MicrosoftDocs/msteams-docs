@@ -4,7 +4,7 @@ description: Describes text formatting support in bot conversations
 keywords: bots conversations messaging
 ms.date: 03/29/2018
 ---
-## Formatting bot messages
+# Formatting bot messages
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
@@ -33,21 +33,20 @@ For information on formatting in cards see the [Teams Card Reference](~/task-mod
 To ensure that your formatting works across all platforms supported by Microsoft Teams, be aware that some styles are not currently supported across all platforms.
 
 | Style                     | Text-only messages | Cards (XML only) |
-| ---                       | :---: | :---: |
-| bold                      | ✔ | ✖ |
-| italic                    | ✔ | ✔ |
-| header (levels 1&ndash;3) | ✖ | ✔ |
-| strikethrough             | ✖ | ✔ |
-| horizontal rule           | ✖ | ✖ |
-| unordered list            | ✖ | ✔ |
-| ordered list              | ✖ | ✔ |
-| preformatted text         | ✔ | ✔ |
-| blockquote                | ✔ | ✔ |
-| hyperlink                 | ✔ | ✔ |
-| image link                | ✔ | ✖ |
-
+|---------------------------|--------------------|------------------|
+| bold                      | ✔                  | ✖                |
+| italic                    | ✔                  | ✔                |
+| header (levels 1&ndash;3) | ✖                  | ✔                |
+| strikethrough             | ✖                  | ✔                |
+| horizontal rule           | ✖                  | ✖                |
+| unordered list            | ✖                  | ✔                |
+| ordered list              | ✖                  | ✔                |
+| preformatted text         | ✔                  | ✔                |
+| blockquote                | ✔                  | ✔                |
+| hyperlink                 | ✔                  | ✔                |
+| image link                | ✔                  | ✖                |
 > [!NOTE]
-> Currently, Connector cards support no formatting across all platforms. See [Cards](~/concepts/bots/bots-conversations#cards) in the next section for more detail.
+> Currently, Connector cards support no formatting across all platforms. See [Cards](~/resources/bot-v3/bots-conversations#cards) in the next section for more detail.
 
 ### Support by individual platform
 
@@ -56,18 +55,18 @@ Support for text formatting varies by type of message and by platform.
 #### Text-only messages
 
 | Style                     | Desktop | iOS | Android |
-| ---                       | :---: | :---: | :---: |
-| bold                      | ✔ | ✔ | ✔ |
-| italic                    | ✔ | ✔ | ✔ |
-| header (levels 1&ndash;3) | ✖ | ✖ | ✖ |
-| strikethrough             | ✔ | ✔ | ✖ |
-| horizontal rule           | ✖ | ✖ | ✖ |
-| unordered list            | ✔ | ✖ | ✖ |
-| ordered list              | ✔ | ✖ | ✖ |
-| preformatted text         | ✔ | ✔ | ✔ |
-| blockquote                | ✔ | ✔ | ✔ |
-| hyperlink                 | ✔ | ✔ | ✔ |
-| image link                | ✔ | ✔ | ✔ |
+|---------------------------|---------|-----|---------|
+| bold                      | ✔       | ✔   | ✔       |
+| italic                    | ✔       | ✔   | ✔       |
+| header (levels 1&ndash;3) | ✖       | ✖   | ✖       |
+| strikethrough             | ✔       | ✔   | ✖       |
+| horizontal rule           | ✖       | ✖   | ✖       |
+| unordered list            | ✔       | ✖   | ✖       |
+| ordered list              | ✔       | ✖   | ✖       |
+| preformatted text         | ✔       | ✔   | ✔       |
+| blockquote                | ✔       | ✔   | ✔       |
+| hyperlink                 | ✔       | ✔   | ✔       |
+| image link                | ✔       | ✔   | ✔       |
 
 ### Examples of text formatting
 

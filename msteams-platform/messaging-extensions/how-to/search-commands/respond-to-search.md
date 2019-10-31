@@ -313,7 +313,7 @@ The default query has the same structure as any regular user query, with the `na
 Add authentication and/or configuration
 
 * [Add authentication to a messaging extension](~/messaging-extensions/how-to/add-authentication.md)
-* [Add configuration to a messaging extension](~/messaging-extensions/how-to/add-configuration.md)
+* [Add configuration to a messaging extension](~/messaging-extensions/how-to/add-configuration-page.md)
 
 Deploy configuration
 

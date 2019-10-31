@@ -27,7 +27,7 @@ See the [Bot Framework Documentation](/azure/bot-service/) for additional inform
 
 The heart of your bot is your web service. It will define a single route, typically `/api/messages`, to receive all requests on. If you're getting started from scratch, you have a few options to choose from.
 
-* Use one of our [quickstarts](#learn-more) tutorials that will guide you through the creation of your web service.
+* Use one of our [quickstarts](#next-steps) tutorials that will guide you through the creation of your web service.
 * Start with the Teams conversation bot sample in either [C#/dotnet](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot) or [JavaScript](~/foo.md).
 * If you're using JavaScript, use the [Yeoman generator for Microsoft Teams](https://github.com/OfficeDev/generator-teams) to scaffold your Teams app, including your web service.
 * Create your web service from scratch. You can choose to add the Bot Framework SDK for your language, or you can work directly with the JSON payloads.
@@ -52,7 +52,7 @@ Scenarios when you **must** have your bot registration in Azure (either by creat
 
 ### Using App Studio
 
-*App Studio* is an app in Teams that helps with registering your web service as a bot, and creating an app package that references your bot. It also contains a React control library and configurable samples for cards. See [Getting started with Teams App Studio](~/tutorials/get-started-app-studio.md).
+*App Studio* is an app in Teams that helps with registering your web service as a bot, and creating an app package that references your bot. It also contains a React control library and configurable samples for cards. See [Getting started with Teams App Studio](~/concepts/build-and-test/app-studio-overview.md).
 
 Remember, if you use App Studio to register your web service you'll need to go to https://dev.botframework.com/bots to manage your registration. Some settings (like your messaging endpoint) can be updated in App Studio as well.
 

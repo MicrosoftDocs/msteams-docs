@@ -1,19 +1,19 @@
 ---
-title: "Quickstart: Create a Channel and Group Tab with ASP.NET Core MVC" 
+title: "Create a Channel and Group Tab with ASP.NET Core MVC" 
 author: laujan
 description: A quickstart guide to creating a custom channel and group tab with ASP.NET Core MVC. 
 ms.topic: quickstart 
 ms.author: laujan 
 ---
-# Quickstart: Create a Custom Channel and Group Tab with ASP.NET Core MVC
+# Create a Custom Channel and Group Tab with ASP.NET Core MVC
 
-In this quickstart we'll walk-through creating a custom channel/group tab with C# and ASP.Net Core MVC. We'll also use [App Studio for Microsoft Teams](/foo.md) to finalize your app manifest and deploy your tab to Teams.
+In this quickstart we'll walk-through creating a custom channel/group tab with C# and ASP.Net Core MVC. We'll also use [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest and deploy your tab to Teams.
 
-[!INCLUDE [dotnet-core-prereq](../../includes/tabs/dotnet-core-prereq.md)]
+[!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
 ## Get the source code
 
-Open a command prompt and create a new directory for your tab project. We have provided a simple [Channel Group Tab](https://github.com/OfficeDev/msteams-samples/samples/dotnet/tabs/ChannelGroupTabMVC) project to get you started. To retrieve the source code you can download the zip folder and extract the files or [clone](https://help.github.com/articles/cloning-a-repository) the sample repository into your new directory:
+Open a command prompt and create a new directory for your tab project. We have provided a simple [Channel Group Tab](https://github.com/OfficeDev/msteams-samples/samples/dotnet/tabs/ChannelGroupTabMVC) project to get you started. To retrieve the source code you can download the zip folder and extract the files or clone the sample repository into your new directory:
 
 ```bash
 git clone https://github.com/OfficeDev/msteams-samples.git
@@ -99,7 +99,7 @@ The partial view markup *_Layout.cshtml* contains the application's overall page
 
 The controllers use the ViewBag property to transfer values dynamically to the Views.
 
-[!INCLUDE [dotnet-ngrok-intro](../../includes/tabs/dotnet-ngrok-intro.md)]
+[!INCLUDE [dotnet-ngrok-intro](~/includes/tabs/dotnet-ngrok-intro.md)]
 
 - Open a command prompt in the root of your project directory and run the following command:
 
@@ -115,11 +115,6 @@ ngrok http https://localhost:443560 -host-header="localhost:44360"
 
 Within **Tab.cshtml** the application presents the user with two option buttons for displaying the tab with either a red or gray icon. Choosing the **Select Gray** or **Select Red** button fires `saveGray()` or `saveRed()`, respectively, sets `settings.setValidityState(true)`, and enables the **Save** button on the configuration page. This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed. On save, the parameters of `settings.setSettings` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
 
-[!INCLUDE [dotnet-update-app](../../includes/tabs/dotnet-update-chan-grp-app.md)]
+[!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
 
-[!INCLUDE [dotnet-upload-to-teams](../../includes/tabs/dotnet-upload-to-teams.md)]
-
-## Next Steps
-
-- [learn something](~/foo.md)
-- [and something else](~/foo.md)
+[!INCLUDE [dotnet-upload-to-teams](~/includes/tabs/dotnet-upload-to-teams.md)]

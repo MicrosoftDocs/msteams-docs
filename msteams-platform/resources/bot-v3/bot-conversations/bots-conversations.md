@@ -55,7 +55,7 @@ For more information on the types of bot interaction supported by the Bot Framew
 
 ## Message formatting
 
-You can set the optional [`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet-create-messages?view=azure-bot-service-3.0#customizing-a-message) property of a `message` to control how your message's text content is rendered. See [Message formatting](~/resources/bot-v3/bot-conversations/bots-message-format.md) for a detailed description of supported formatting in bot messages.
+You can set the optional [`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet-create-messages?view=azure-bot-service-3.0#customizing-a-message) property of a `message` to control how your message's text content is rendered. See [Message formatting](~/resources/bot-v3/bots-message-format.md) for a detailed description of supported formatting in bot messages.
 You can set the optional [`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet-create-messages?view=azure-bot-service-3.0#customizing-a-message) property to control how your message's text content is rendered.
 
 For detailed information on how Teams supports text formatting in teams see [Text formatting in bot messages](~/resources/bot-v3/bots-text-formats.md).
@@ -144,7 +144,7 @@ When interacting in a channel, your bot should be smart about taking certain con
 ```
 
 > [!NOTE]
-> The text field for inbound messages sometimes contains mentions. Be sure to properly check and strip those. For more information, see [Mentions](~/concepts/bots/bot-conversations/bots-conv-channel.md#-mentions).
+> The text field for inbound messages sometimes contains mentions. Be sure to properly check and strip those. For more information, see [Mentions](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#-mentions).
 
 ## Teams channel data
 
@@ -269,10 +269,7 @@ function sendCardUpdate(bot, session, originalMessage, address) {
 
 You can create a personal conversation with a user or start a new reply chain in a channel for your team bot. This lets you to message your user or users without having them first initiate contact with your bot. For more information, see the following topics:
 
-* [Starting a personal conversation](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md#starting-personal-conversations)
-* [Creating a channel conversation](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md#creating-a-channel-conversation)
-
-See also [Proactive messaging for bots](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) for more general information on conversations started by bots.
+See [Proactive messaging for bots](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) for more general information on conversations started by bots.
 
 ## Deleting messages
 

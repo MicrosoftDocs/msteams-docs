@@ -7,9 +7,9 @@ ms.author: laujan
 ---
 # Quickstart: Create a Custom Personal Tab with ASP.NET Core
 
-In this quickstart we'll walk-through creating a custom personal tab with C# and [ASP.Net Core](AspNetCore.Docs/aspnetcore/index) [Razor Pages](/aspnet/AspNetCore.Docs/aspnetcore/mvc/views/razor). We'll also use [App Studio for Microsoft Teams](/foo.md) to finalize your app manifest and deploy your tab to Teams.
+In this quickstart we'll walk-through creating a custom personal tab with C# and ASP.Net Core Razor pages. We'll also use [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest and deploy your tab to Teams.
 
-[!INCLUDE [dotnet-core-prereq](../../includes/tabs/dotnet-core-prereq.md)]
+[!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
 ## Get the source code
 
@@ -86,9 +86,9 @@ In the Visual Studio Solution Explorer window right-click on the project and sel
   </ItemGroup>
 ```
 
-[!INCLUDE  [dotnet-update-personal-app](../../includes/tabs/dotnet-update-personal-app.md)]
+[!INCLUDE  [dotnet-update-personal-app](~/includes/tabs/dotnet-update-personal-app.md)]
 
-[!INCLUDE [dotnet-ngrok-intro](../../includes/tabs/dotnet-ngrok-intro.md)]
+[!INCLUDE [dotnet-ngrok-intro](~/includes/tabs/dotnet-ngrok-intro.md)]
 
 - Open a command prompt in the root of your project directory and run the following command:
 
@@ -109,9 +109,4 @@ ngrok http https://localhost:44325 -host-header="localhost:44325"
 
 - In Visual Studio press **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
-[!INCLUDE [dotnet-personal-use-appstudio](../../includes/tabs/dotnet-personal-use-appstudio.md)]
-
-## Next Steps
-
-- [learn something](~/foo.md)
-- [and something else](~/foo.md)
+[!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]

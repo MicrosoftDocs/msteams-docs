@@ -230,7 +230,7 @@ Specifies information about your company. For apps submitted to AppSource (forme
 
 **Optional**
 
-Allows the specification of a default language, as well as pointers to additional language files. See [localization](~/build-and-test/apps-localization.md).
+Allows the specification of a default language, as well as pointers to additional language files. See [localization](~/concepts/build-and-test/apps-localization.md).
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -273,7 +273,7 @@ Ensure that your description accurately describes your experience and provides i
 
 **Required**
 
-Icons used within the Teams app. The icon files must be included as part of the upload package. See [Icons](~/concepts/apps/apps-package.md#icons) for more information.
+Icons used within the Teams app. The icon files must be included as part of the upload package. See [Icons](~/concepts/build-and-test/apps-package.md#icons) for more information.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -338,7 +338,7 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 
 ### bots.commandLists
 
-An optional list of commands that your bot can recommend to users. The object is an array (maximum of 2 elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. See [Bot menus](~/concepts/bots/bots-menus.md) for more information.
+An optional list of commands that your bot can recommend to users. The object is an array (maximum of 2 elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. See [Bot menus](~/bots/how-to/create-a-bot-commands-menu.md) for more information.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -417,7 +417,7 @@ An array of `string` which specifies which permissions the app requests, which l
 * `identity` &emsp; Requires user identity information
 * `messageTeamMembers` &emsp; Requires permission to send direct messages to team members
 
-Changing these permissions when updating your app will cause your users to repeat the consent process the first time they run the updated app. See [Updating your app](~/deploy-and-publish/apps-publish.md#updating-your-app) for more information.
+Changing these permissions when updating your app will cause your users to repeat the consent process the first time they run the updated app. See [Updating your app](~/concepts/deploy-and-publish/apps-publish.md#updating-your-app) for more information.
 
 ## devicePermissions
 

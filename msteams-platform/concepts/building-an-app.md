@@ -22,7 +22,6 @@ The most important step in creating a successful app for Microsoft Teams is choo
 Once you've decided what extensibility points and features your app will take advantage of, you'll want to think through each of those interactions. Depending on the design of your app, you might want to look at:
 
 * [Designing great tabs](~/tabs/design/tabs.md)
-* [Designing messaging extensions](~/messaging-extensions/design/messaging-extensions.md)
 * [Designing useful conversational bots](~/bots/design/bots.md)
 
 ## Prepare your environment

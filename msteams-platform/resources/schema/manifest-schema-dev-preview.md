@@ -235,7 +235,7 @@ Specifies information about your company. For apps submitted to AppSource (forme
 
 **Optional**
 
-Allows the specification of a default language, as well as pointers to additional language files. See [localization](~/publishing/apps-localization.md).
+Allows the specification of a default language, as well as pointers to additional language files. See [localization](~/concepts/build-and-test/apps-localization.md).
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -343,7 +343,7 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 
 ### bots.commandLists
 
-An optional list of commands that your bot can recommend to users. The object is an array (maximum of 2 elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. See [Bot menus](~/concepts/bots/bots-menus.md) for more information.
+An optional list of commands that your bot can recommend to users. The object is an array (maximum of 2 elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. See [Bot menus](~/bots/how-to/create-a-bot-commands-menu.md) for more information.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|

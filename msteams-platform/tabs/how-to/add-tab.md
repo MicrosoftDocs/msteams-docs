@@ -33,11 +33,11 @@ Regardless of the type of page, you're tab will need to adhere to the following 
 
 * You must allow your pages to be served in an IFrame, via X-Frame-Options and/or Content-Security-Policy HTTP response headers.
 
-* Typically, as a safeguard against click-jacking, login pages don't render in IFrames. Therefore, your [authentication](foo.md) logic needs to use a method other than redirect (e.g., use token-based or cookie-based authentication).
+* Typically, as a safeguard against click-jacking, login pages don't render in IFrames. Therefore, your authentication logic needs to use a method other than redirect (e.g., use token-based or cookie-based authentication).
 
 * Browsers adhere to a same-origin policy restriction that prevents a webpage from making requests to a different domain than the one that served a web page. However, you may need to redirect the configuration or content page to a another domain or subdomain. Your cross-domain navigation logic should allow the Teams client to validate the origin against a static validDomains list in the app manifest when loading or communicating with the tab.
 
-* To create a seamless experience, you should style your tabs based on the Teams client's theme, design, and intent (see [Content and conversations, all at once using tabs](foo.md)). Typically, tabs work best when they're built to address a specific need and focus on a small set of tasks or a subset of data that is relevant to the tab's channel location.
+* To create a seamless experience, you should style your tabs based on the Teams client's theme, design, and intent. Typically, tabs work best when they're built to address a specific need and focus on a small set of tasks or a subset of data that is relevant to the tab's channel location.
 
 * Within your content page, add a reference to [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) using script tags. Following your page load, make a call to `microsoftTeams.initialize()`. Your page will not be displayed if you do not.
 
@@ -49,10 +49,10 @@ Your content needs to be hosted on a publicly available URL available using HTTP
 
 You can use the App Studio app from within the Microsoft Teams client to help create your app manifest. If you do not have App studio installed in Teams, select **Apps** ![Store App](/microsoftteams/platform/assets/images/tab-images/storeApp.png) at the bottom-left corner of the Teams app, and search for App Studio. Once you find the tile, select it and choose install in the pop-up window dialog box.
 
-1. Open the Microsoft Teams client—using the [web based version](https://teams.microsoft.com) will enable you to inspect your front-end code using your browser's [developer tools](~/foo.md).
+1. Open the Microsoft Teams client—using the [web based version](https://teams.microsoft.com) will enable you to inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
 1. Open App Studio and select the **Manifest editor** tab.
 1. Choose the **Create a new app** tile.
-1. Add your app details (see the [manifest schema definition](foo.md) for full description of each field).
+1. Add your app details (see the [manifest schema definition](~/resources/schema/manifest-schema.md) for full description of each field).
 1. In the capabilities section select **Tabs**.
     * For a personal tab, choose *Add a personal tab* and select **Add**. You will be presented with a pop-up dialogue window where you can add your tab details.
     * For a channel/group tab, under *Team Tab* select **Add** and complete the tab details fields in the Team tab pop-up window. Make sure the *can update configuration? Team* and *Group chat* boxes are checked and select **Save**.
@@ -61,7 +61,7 @@ You can use the App Studio app from within the Microsoft Teams client to help cr
 
 ## Create your app package manually
 
-As with bots and messaging extensions, you update the [app manifest](foo.md) of your app to include the tab properties. These properties govern the scopes your tab is available in, the URLs to be used, and various other properties.
+As with bots and messaging extensions, you update the [app manifest](~/resources/schema/manifest-schema.md) of your app to include the tab properties. These properties govern the scopes your tab is available in, the URLs to be used, and various other properties.
 
 ### Personal Tabs
 
@@ -117,21 +117,14 @@ The example below shows just the `configurableTabs` array from an app manifest.
 ...
 ```
 
-Once you have completed your `manifest.json` bundle it in a zip folder along with your two required icons. 
+Once you have completed your `manifest.json` bundle it in a zip folder along with your two required icons.
 
 ### Upload app package directly to a team
 
-1. Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/foo.md).
+1. Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
 1. In the *YourTeams* panel on the left, select the `...` menu next to the team that you're using to test your tab and choose **Manage team**.
 1. In the main panel select **Apps** from the tab bar and choose **Upload a custom app** located in the lower right-hand corner of the page.
 1. Open your project directory, browse to the **./package** folder, select the app package zip folder and choose **Open**. Your tab will upload into Teams.
-
-> [!NOTE]
-> You have three levels of distribution available for your app. *See* [Publish your Microsoft Teams app](../../publishing/apps-publish.md) for complete guidance.
->
-> * The Teams App Store offers apps that any organization can use.
-> * Your tenant’s Teams App Catalog has apps that are only available to your organization. These are known as line-of-business apps.
-> * Uploaded apps are available to a single user or team.
 
 ### View your tab in Teams
 
@@ -144,6 +137,6 @@ Once you have completed your `manifest.json` bundle it in a zip folder along wit
 
 ## Learn more
 
-* [Create a content page for your tab](foo.md)
-* [Create a configuration page for your tab](foo.md)
-* [Update or remove a tab](foo.md)
+* [Create a content page for your tab](~/tabs/how-to/create-tab-pages/content-page.md)
+* [Create a configuration page for your tab](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [Update or remove a tab](~/tabs/how-to/create-tab-pages/removal-page.md)

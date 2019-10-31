@@ -13,7 +13,7 @@ You can create links to information and features within the Teams client. Exampl
 
 ## Deep linking to your tab
 
-You can create deep links to entities in Teams. Typically, this is used to create links that navigate to content and information within your tab. For example, if your tab contains a task list team members may create and share links to individual tasks. When clicked, the link navigates to your tab which focuses on the specific item. To implement this, you add a "copy link" action to each item, in whatever way best suits your UI. When the user takes this action, you call `shareDeepLink()` to display a dialog box containing a link that the user can copy to the clipboard. When you make this call, you also pass an ID for your item, which you get back in the [context](~/tabs/how-to/accessing-teams-context.md) when the link is followed and your tab is reloaded.
+You can create deep links to entities in Teams. Typically, this is used to create links that navigate to content and information within your tab. For example, if your tab contains a task list team members may create and share links to individual tasks. When clicked, the link navigates to your tab which focuses on the specific item. To implement this, you add a "copy link" action to each item, in whatever way best suits your UI. When the user takes this action, you call `shareDeepLink()` to display a dialog box containing a link that the user can copy to the clipboard. When you make this call, you also pass an ID for your item, which you get back in the [context](~/tabs/how-to/access-teams-context.md) when the link is followed and your tab is reloaded.
 
 Alternatively, you can also generate deep links programmatically, using the format specified later in this topic. You might want to use these in [bot](~/bots/what-are-bots.md) and [Connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) messages that inform users about changes to your tab, or to items within it.
 
@@ -49,7 +49,7 @@ The query parameters are:
 * `entityLabel` or `subEntityLabel`&emsp;A label for the item in your tab, to use when displaying the deep link; for example, "Task List 123" or "Task 456"
 * `context`&emsp;A JSON object containing the following fields:
   * `subEntityId`&emsp;An ID for the item _within_ the tab; for example, "task456"
-  * `channelId`&emsp;The Microsoft Teams channel ID (available from the tab [context](~/tabs/how-to/accessing-teams-context.md); for example, "19:cbe3683f25094106b826c9cada3afbe0@thread.skype". This property is only available in configurable tabs with a scope of "team". It is not available in static tabs, which have a scope of "personal".
+  * `channelId`&emsp;The Microsoft Teams channel ID (available from the tab [context](~/tabs/how-to/access-teams-context.md); for example, "19:cbe3683f25094106b826c9cada3afbe0@thread.skype". This property is only available in configurable tabs with a scope of "team". It is not available in static tabs, which have a scope of "personal".
 
 Examples:
 

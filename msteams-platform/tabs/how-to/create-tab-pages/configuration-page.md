@@ -16,7 +16,7 @@ A configuration page is a special type of [content page](content-page.md) that a
 
 ## Configuring a channel or group chat tab
 
-A configuration page informs the content page how it should render. Your application must reference the [Microsoft Teams JavaScript client SDK](foo.md) and call `microsoft.initialize()`. Additionally, your URLs must be secure HTTPS endpoints and available from the cloud. Below is a configuration page citation. It is available in full at [OurGitHubRepo](foo.md):
+A configuration page informs the content page how it should render. Your application must reference the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) and call `microsoft.initialize()`. Additionally, your URLs must be secure HTTPS endpoints and available from the cloud. Below is a configuration page example.
 
 ```html
 <head>
@@ -85,22 +85,22 @@ Here, the user is presented with two option buttons, **Select Gray** or **Select
 1. The `microsoftTeams.settings.registerOnSaveHandler()` event handler is triggered.
 1. The **Save** button on the app's configuration page, uploaded in Teams, is enabled.
 
-This code lets Teams know that the configuration requirements have been satisfied and the installation can proceed. On **Save**, the parameters of `settings.setSettings()` are set, as defined by the `Settings` interface, for the current instance (See [Settings interface](~/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest.md) ). Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
+This code lets Teams know that the configuration requirements have been satisfied and the installation can proceed. On **Save**, the parameters of `settings.setSettings()` are set, as defined by the `Settings` interface, for the current instance (See [Settings interface](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest) ). Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
 
 >[!NOTE]
 >
 >* If a save handler was registered using `microsoftTeams.settings.registerOnSaveHandler()`, the callback must invoke `saveEvent.notifySuccess()` or `saveEvent.notifyFailure()` to indicate the outcome of the configuration.
->* If no save handler was registered, the `saveEvent.notifySuccess()` call is automatically made immediately upon the user selecting the **Save** button. See [Troubleshoot your Microsoft Teams app](foo.md).
+>* If no save handler was registered, the `saveEvent.notifySuccess()` call is automatically made immediately upon the user selecting the **Save** button.
 
 ### Get context data for your tab settings
 
 Your tab might require contextual information to display relevant content. Contextual information can further enhance your tab's appeal by providing a more customized user experience.
 
-The Teams [Context interface](~/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest.md) defines the properties that can be used for your tab configuration. You can collect the values of context data variables in two ways:
+The Teams [Context interface](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) defines the properties that can be used for your tab configuration. You can collect the values of context data variables in two ways:
 
 1. Insert URL query string placeholders in your manifest's `configurationURL`.
 
-1. Use the [Teams SDK](foo.md) `microsoftTeams.getContext((context) =>{}` method.
+1. Use the [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) `microsoftTeams.getContext((context) =>{}` method.
 
 #### Insert placeholders in the `configurationURL`
 
@@ -140,7 +140,7 @@ document.write(getId());
 
 ### Use the `getContext()` function to retrieve context
 
-When invoked, the `microsoftTeams.getContext((context) => {})` function retrieves the [Context interface](~/javascript/api/@microsoft/teams-js//microsoftteams.context?view=msteams-client-js-latest.md). You can add this function to your configuration page to retrieve context values:
+When invoked, the `microsoftTeams.getContext((context) => {})` function retrieves the [Context interface](/javascript/api/@microsoft/teams-js//microsoftteams.context?view=msteams-client-js-latest). You can add this function to your configuration page to retrieve context values:
 
 ```html
 
@@ -159,16 +159,16 @@ When invoked, the `microsoftTeams.getContext((context) => {})` function retrieve
 
 ## Context and Authentication
 
-You might require authentication before allowing a user to configure your app or your content might include sources that have their own authentication protocols. See [Authenticate a user in a Microsoft Teams tab](foo.md) Context information can be used to help construct authentication requests and authorization page URLs. See [Microsoft Teams authentication flow for tabs](foo.md).
+You might require authentication before allowing a user to configure your app or your content might include sources that have their own authentication protocols. See [Authenticate a user in a Microsoft Teams tab](~/tabs/how-to/authentication/auth-flow-tab.md) Context information can be used to help construct authentication requests and authorization page URLs.
 Make sure that all domains used in your tab pages are listed in the `manifest.json` `validDomains` array.
 
 ## Modify or remove a tab
 
-Supported removal options can further refine the user experience. You can enable users to modify, reconfigure, or rename a group/channel tab by setting your manifest's `canUpdateConfiguration` property to `true`.  In addition, you can designate what happens to the content when a tab is removed by including a removal options page in your app and setting a value for the `removeUrl` property in the  `setSettings()` configuration (see below). Personal tabs can't be modified but can be uninstalled by the user. For more information, see [Create a removal page for your tab](~/platform/tabs/how-t-/create-tab-pages/removal-page.md).
+Supported removal options can further refine the user experience. You can enable users to modify, reconfigure, or rename a group/channel tab by setting your manifest's `canUpdateConfiguration` property to `true`.  In addition, you can designate what happens to the content when a tab is removed by including a removal options page in your app and setting a value for the `removeUrl` property in the  `setSettings()` configuration (see below). Personal tabs can't be modified but can be uninstalled by the user. For more information, see [Create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
 
 ## Mobile clients
 
-If you choose to have your channel/group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property (see below). Full support for tabs on mobile clients will be released soon. To prepare for the update, you should follow the [guidance for tabs on mobile](~/resources/design/framework/tabs-mobile.md) when creating your tabs.
+If you choose to have your channel/group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property (see below). Full support for tabs on mobile clients will be released soon. To prepare for the update, you should follow the [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md) when creating your tabs.
 
 Microsoft Teams setSettings() configuration for removal page and/or mobile clients:
 
@@ -181,17 +181,3 @@ microsoftTeams.settings.setSettings({
     removeUrl: "ADD REMOVAL PAGE URL HERE"
 });
 ```
-
-Ready to get started building? Here are a few guidelines:
-
-### Node.js
-
-* [Quickstart: Create a custom personal tab with Node.js and the Yeoman Generator for Microsoft Teams](foo.md)
-* [Quickstart: Create a custom channel and group tab with Node.js and the Yeoman Generator for Microsoft Teams](foo.md)
-
-### .NET
-
-* [Quickstart: Create a Custom Personal Tab with ASP.NET Core](foo.md)
-* [Quickstart: Create a Custom Personal Tab with ASP. NET Core MVC](foo.md)
-* [Quickstart: Create a Custom Channel and Group Tab with ASP.NET Core](foo.md)
-* [Quickstart: Create a Custom Channel and Group Tab with ASP.NET Core MVC](foo.md)

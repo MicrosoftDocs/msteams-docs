@@ -14,19 +14,19 @@ OAuth 2.0 is an open standard for authentication used by Azure AD and many other
 
 The code in this article comes from the Teams sample app [Microsoft Teams tab authentication sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). It contains a static tab that requests an access token for Microsoft Graph and shows the current user's basic profile information from Azure AD.
 
-For a general overview of authentication flow for tabs see the topic [Authentication flow in tabs](~/concepts/authentication/auth-flow-tab.md).
+For a general overview of authentication flow for tabs see the topic [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md).
 
 Authentication flow in tabs differs slightly from authentication flow in bots.
 
 ## Configuring identity providers
 
-See the topic [Configure identity providers](~/concepts/authentication/auth-configure.md) for detailed steps on configuring OAuth 2.0 callback redirect URL(s) when using Azure Active Directory as an identity provider.
+See the topic [Configure identity providers](~/concepts/authentication/configure-identity-provider.md) for detailed steps on configuring OAuth 2.0 callback redirect URL(s) when using Azure Active Directory as an identity provider.
 
 ## Initiate authentication flow
 
 Authentication flow should be triggered by a user action. You should not open the authentication pop-up automatically because this is likely to trigger the browser's pop-up blocker as well as confuse the user.
 
-Add a button to your configuration or content page to enable the user to sign in when needed. This can be done in the tab [configuration](~/concepts/tabs/tabs-configuration.md) page or any [content](~/concepts/tabs/tabs-content.md) page.
+Add a button to your configuration or content page to enable the user to sign in when needed. This can be done in the tab [configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) page or any [content](~/tabs/how-to/create-tab-pages/content-page.md) page.
 
 Azure AD, like most identity providers, does not allow its content to be placed in an iframe. This means that you will need to add a pop-up page to host the identity provider. In the following example this page is `/tab-auth/simple-start`. Use the `microsoftTeams.authenticate()` function of the Microsoft Teams client SDK to launch this page when your button is selected.
 
@@ -85,7 +85,7 @@ After the user completes authorization, the user is redirected to the callback p
 
 ### Notes
 
-* See [get user context information](~/concepts/tabs/tabs-context.md) for help building authentication requests and URLs. For example, you can use the user's login name as the `login_hint` value for Azure AD sign-in, which means the user might need to type less. Remember that you should not use this context directly as proof of identity since an attacker could load your page in a malicious browser and provide it with any information they want.
+* See [get user context information](~/tabs/how-to/access-teams-context.md) for help building authentication requests and URLs. For example, you can use the user's login name as the `login_hint` value for Azure AD sign-in, which means the user might need to type less. Remember that you should not use this context directly as proof of identity since an attacker could load your page in a malicious browser and provide it with any information they want.
 * Although the tab context provides useful information regarding the user, don't use this information to authenticate the user whether you get it as URL parameters to your tab content URL or by calling the `microsoftTeams.getContext()` function in the Microsoft Teams client SDK. A malicious actor could invoke your tab content URL with its own parameters, and a web page impersonating Microsoft Teams could load your tab content URL in an iframe and return its own data to the `getContext()` function. You should treat the identity-related information in the tab context simply as hints and validate them before use.
 * The `state` parameter is used to confirm that the service calling the callback URI is the service you called. If the `state` parameter in the callback does not match the parameter you sent during the call the return call is not verified and should be terminated.
 * It is not necessary to include the identity provider's domain in the `validDomains` list in the app's manifest.json file.
@@ -139,9 +139,7 @@ If successful, you can refresh or reload the page and show content relevant to t
 
 Your app can set its own session cookie so that the user need not sign in again when they return to your tab on the current device.
 
-For more information on Single Sign-On (SSO) see the article [Silent authentication](~/concepts/authentication/auth-silent-AAD.md).
-
-For more information on using Azure AD authentication for bots, see [Authentication for bots (Azure AD)](~/concepts/authentication/auth-bot-AAD.md)
+For more information on Single Sign-On (SSO) see the article [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md).
 
 ## Samples
 
