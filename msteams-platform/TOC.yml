@@ -91,15 +91,15 @@
         - name: 'With action command'
           items:
             - name: 'C#/.NET'
-              href: foo.md
+              href: https://github.com/microsoft/BotBuilder-Samples/tree/4.6-Staging/samples/csharp_dotnetcore/51.teams-messaging-extensions-action
             - name: TypeScript/Node.js
-              href: foo.md
+              href: https://github.com/microsoft/BotBuilder-Samples/tree/4.6-Staging/samples/javascript_nodejs/51.teams-messaging-extensions-action
         - name: 'With search command'
           items:
             - name: 'C#/.NET'
-              href: foo.md
+              href: https://github.com/microsoft/BotBuilder-Samples/tree/4.6-Staging/samples/csharp_dotnetcore/50.teams-messaging-extensions-search
             - name: TypeScript/Node.js
-              href: foo.md
+              href: https://github.com/microsoft/BotBuilder-Samples/tree/4.6-Staging/samples/javascript_nodejs/50.teams-messaging-extensions-search
     - name: 'How-to guides'
       expanded: true
       items:
@@ -259,6 +259,8 @@
           href: tabs/how-to/developer-tools.md
         - name: 'Adding your custom tab to SharePoint'
           href: tabs/how-to/tabs-in-sharepoint.md
+        - href: Request device permissions
+          href: tabs/how-to/native-device-permissions.md
 - name: 'Task modules and cards'
   items:
     - name: 'What are task modules?'

@@ -43,7 +43,7 @@ Once you've decided how users are going to interact with your app, its time to b
 * Bot Framework SDK for [messaging extensions](~/messaging-extensions/what-are-messaging-extensions.md) and [conversational bots](~/bots/what-are-bots.md)
 * Teams JavaScript client SDK for [tabs](~/tabs/what-are-tabs.md) and other content pages
 * A [Yeoman generator](~/tutorials/get-started-yeoman.md) for building apps in Node.js
-* A set of open-source controls for your web content pages - [Fluent UI](https://microsoft.github.io/fluent-ui-react/)
+* **Preview** A set of open-source controls for your web content pages - [Fluent UI](https://microsoft.github.io/fluent-ui-react/)
 * Ready-for-production [App Templates](~/samples/app-templates.md)
 * Various [samples](~/samples/code-samples.md) to help you get started
 

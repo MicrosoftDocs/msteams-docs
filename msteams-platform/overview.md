@@ -52,3 +52,8 @@ For example, imagine your app contains a conversational bot that works in both a
 
 * [Build a bot and tab app in C#](~/tutorials/get-started-dotnet-app-studio.md)
 * [Build a bot and tab app in JavaScript/Node.js](~/tutorials/get-started-nodejs-app-studio.md)
+
+## Learn more
+
+* [Extensibility points in the Teams client](~/concepts/extensibility-points.md)
+* [Building apps for Teams](~/concetps/building-an-app.md)

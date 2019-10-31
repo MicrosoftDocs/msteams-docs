@@ -25,11 +25,11 @@ They can be expanded with:
 
 ### Personal apps
 
-Personal apps are the portion of your Teams app focusing on interactions with a single user. The experience is unique to each individual user. This portion of your app can be pinned to the left-navigation rail - enabling one-click access for your users.
+[Personal apps](~/concepts/design/personal-apps.md) are the portion of your Teams app focusing on interactions with a single user. The experience is unique to each individual user. This portion of your app can be pinned to the left-navigation rail - enabling one-click access for your users.
 
 They can contain:
 
-* **[Conversational bots](~/bots/what-are-bots.md)** having a one-to-one conversation with the user. Because this is a private conversation, if your app needs to have a multi-turn conversation with a user, or provide a notification relevant only to a single user, it is typically best to have that interaction in a personal app.
+* **[Conversational bots](~/bots/what-are-bots.md)** having a one-to-one conversation with the user. Because this is a private conversation, if your app needs to have a multi-turn conversation, or provide a notification relevant only to a single user, it is typically best to have that interaction in a personal app.
 
 * **[Personal Tabs](~/tabs/what-are-tabs.md)** providing a full-screen embedded web experience.
 

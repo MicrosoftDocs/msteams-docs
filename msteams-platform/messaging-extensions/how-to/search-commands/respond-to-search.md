@@ -34,8 +34,10 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-protected async onTeamsMessagingExtensionQuery(context, action: MessagingExtensionAction): Promise<MessagingExtensionActionResponse> {
+class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
+    async handleTeamsMessagingExtensionQuery(context, query) {
   //code to handle the query
+    }
 }
 ```
 
@@ -101,7 +103,7 @@ The result list is displayed in the Microsoft Teams UI with a preview of each it
 * Using the `preview` property within the `attachment` object. The `preview` attachment can only be a Hero or Thumbnail card.
 * Extracted from the basic `title`, `text`, and `image` properties of the attachment. These are used only if the `preview` property is not set and these properties are available.
 
-You can display a preview of an Adaptive Card or Office 365 Connector card in the result list simply by setting its preview property; this is not necessary if the results are already hero or thumbnail cards. If you use the preview attachment, it must be either a Hero or Thumbnail card. If no preview property is specified, the preview of the card will fail and nothing will be displayed.
+You can display a preview of an Adaptive Card or Office 365 Connector card in the result list simply by its preview property. This is not necessary if the results are already hero or thumbnail cards. If you use the preview attachment, it must be either a Hero or Thumbnail card. If no preview property is specified, the preview of the card will fail and nothing will be displayed.
 
 ### Response example
 
@@ -142,8 +144,27 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-protected async onTeamsMessagingExtensionSubmitAction(context, action: MessagingExtensionAction): Promise<MessagingExtensionActionResponse> {
-  //code to handle the submit action
+class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
+    async handleTeamsMessagingExtensionQuery(context, query) {
+        const searchQuery = query.parameters[0].value;
+        const response = await axios.get(`http://registry.npmjs.com/-/v1/search?${ querystring.stringify({ text: searchQuery, size: 8 }) }`);
+
+        const attachments = [];
+        response.data.objects.forEach(obj => {
+            const heroCard = CardFactory.heroCard(obj.package.name);
+            const preview = CardFactory.heroCard(obj.package.name);
+            const attachment = { ...heroCard, preview };
+            attachments.push(attachment);
+        });
+
+        return {
+            composeExtension: {
+                type: 'result',
+                attachmentLayout: 'list',
+                attachments: attachments
+            }
+        };
+    }
 }
 ```
 
