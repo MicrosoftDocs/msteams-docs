@@ -44,7 +44,7 @@ The instructions here assume that you will be editing an existing app manifest. 
 
 ### Creating a command menu for your bot by editing **Manifest.json**
 
-Another valid approach for creating a commend menu is to create it directly in the manifest file while developing your bot source code. Here are a few things to keep in mind when using this approach:
+Another valid approach for creating a command menu is to create it directly in the manifest file while developing your bot source code. Here are a few things to keep in mind when using this approach:
 
 1. Each menu supports up to 10 commands.
 
