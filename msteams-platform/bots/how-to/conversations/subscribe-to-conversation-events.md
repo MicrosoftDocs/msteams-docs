@@ -566,8 +566,21 @@ protected override async Task OnReactionsAddedAsync(IList<MessageReaction> messa
 
 ```typescript
 
-protected async onReactionsAddedActivity(reactionsAdded: MessageReaction[], context: TurnContext): Promise<void> {
-    await this.sendMessageAndLogActivityId(context, `You added '${reactionsAdded[i].type}' regarding '${activity.text}'`);
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onReactionsAdded(async (context, next) => {
+           const reactionsAdded = context.activity.reactionsAdded;
+            if (reactionsAdded && reactionsAdded.length > 0) {
+                for (let i = 0; i < reactionsAdded.length; i++) {
+                    const reaction = reactionsAdded[i];
+                    const newReaction = `You reacted with '${reaction.type}' to the following message: '${context.activity.replyToId}'`;
+                    const resourceResponse = context.sendActivity(newReaction);
+                    // Save information about the sent message and its ID (resourceResponse.id).
+                }
+            }
+        });
+    }
 }
 
 ```
@@ -637,10 +650,22 @@ protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> mes
 <!-- Verify -->
 
 ```typescript
-protected async onReactionsRemovedActivity(reactionsAdded: MessageReaction[], context: TurnContext): Promise<void> {
-    await this.sendMessageAndLogActivityId(context, `You removed '${reactionsAdded[i].type}' regarding '${activity.text}'`);
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onReactionsRemoved(async(context,next)=>{
+            const reactionsRemoved = context.activity.reactionsRemoved;
+            if (reactionsRemoved && reactionsRemoved.length > 0) {
+                for (let i = 0; i < reactionsRemoved.length; i++) {
+                    const reaction = reactionsRemoved[i];
+                    const newReaction = `You removed the reaction '${reaction.type}' from the message: '${context.activity.replyToId}'`;
+                    const resourceResponse = context.sendActivity(newReaction);
+                    // Save information about the sent message and its ID (resourceResponse.id).
+                }
+            }
+        });
+    }
 }
-
 ```
 
 # [JSON](#tab/json)

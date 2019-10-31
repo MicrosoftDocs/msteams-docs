@@ -70,12 +70,17 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 # [TypeScript/Node.js](#tab/typescript)
 
-<!-- Verify -->
-
 ```typescript
-protected async onMessage(async (context, next) => {
-    await context.sendActivity(`Echo: '${context.activity.text}'`);
-});
+
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onMessage(async (context, next) => {
+            await context.sendActivity(`Echo: '${context.activity.text}'`);
+            await next();
+        });
+    }
+}
 
 ```
 
