@@ -58,12 +58,12 @@ You also have to option to invoke your service when a URL is pasted in the compo
 
 Ready to get started building? Try one of our quickstarts:
 
-* Messaging extensions with action commands
-  * [In C#/.NET](foo.md)
-  * [In TypeScript/Node.js](foo.md)
-* Messaging extensions with search commands
-  * [In C#/.NET](foo.md)
-  * [In TypeScript/Node.js](foo.md)
+* Quickstarts for C#
+  * [Messaging extension with action-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)
+  * [Messaging extension with search-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)
+* Quickstarts for JavaScript
+  * [Messaging extension with action-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)
+  * [Messaging extension with search-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)
 
 ## Learn more
 
