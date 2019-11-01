@@ -342,7 +342,33 @@ When using an embedded web view, you'll need to respond with a `task` object wit
 # [C#/.NET](#tab/dotnet)
 
 ```csharp
-banana
+protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+{
+  string placeholder = "Not invoked from message";
+
+  if (action.MessagePayload != null)
+  {
+      var messageText = action.MessagePayload.Body.Content;
+      var fromId = action.MessagePayload.From.User.Id;
+      placeholder = "Invoked from message";
+  }
+
+  var response = new MessagingExtensionActionResponse()
+  {
+    Task = new TaskModuleContinueResponse()
+    {
+      Value = new TaskModuleTaskInfo()
+      {
+        Height = "small",
+        Width = "small",
+        Title = "Example task module",
+        Url = "https://contoso.com/msteams/taskmodules/newcustomer,
+        },
+      },
+    },
+  };
+  return response;
+}
 ```
 
 # [TypeScript/Node.js](#tab/typescript)
