@@ -65,4 +65,3 @@ for (let i = 0; i < activityIds.length; i++) {
 ```
 
 ---
-
