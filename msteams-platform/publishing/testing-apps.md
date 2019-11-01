@@ -180,7 +180,7 @@ if ($XmlDocument.Teams.Team.Count -gt 0) {
         # Connect to Microsoft Teams PowerShell
         Connect-MicrosoftTeams -Credential $creds | Out-Null
 
-        Write-Host "Connected to Office365 and configuring your organization with test teams and channels"
+        Write-Host "Connected to Microsoft 365 and configuring your organization with test teams and channels"
 
         # 2. Create the teams as specified in the XML.
         
@@ -231,7 +231,7 @@ if ($XmlDocument.Teams.Team.Count -gt 0) {
         
         # 5. Disconnect from all PowerShell sessions
         
-        Write-Host "Completed execution and disconnecting from Office 365 PowerShell sessions."
+        Write-Host "Completed execution and disconnecting from Microsoft 365 PowerShell sessions."
         Disconnect-MicrosoftTeams
         Disconnect-AzureAD
     }
