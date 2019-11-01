@@ -35,7 +35,7 @@ To enable this setting, you'll need to update the global App Setup Policy in you
 
 For more information see:
 
- - [Manage app setup policies in Microsoft Teams](https://docs.microsoft.com/en-us/microsoftteams/teams-app-setup-policies)
+ - [Manage app setup policies in Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies)
 
 ## Create teams and channels
 
