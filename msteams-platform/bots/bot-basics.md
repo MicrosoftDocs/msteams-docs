@@ -7,9 +7,9 @@ ms.author: anclear
 ---
 # Bot basics
 
-This is an introduction that builds on the article [How bots work](https://aka.ms/how-bots-work) in the core Bot Framework documentation. You may find that article, and the other articles in the Concepts section useful.
+This is an introduction that builds on the article [How bots work](https://aka.ms/how-bots-work) in the core Bot Framework documentation. You may find that article, and the other articles in the "Concepts" section, useful.
 
-The primary differences in bots developed for Microsoft Teams is in how activities are handled. The Microsoft Teams activity handler derives from the Bot Framework's activity handler to route all teams activities before allowing any non-teams specific activities to be handled.
+The primary differences in bots developed for Microsoft Teams is in how activities are handled. The Microsoft Teams activity handler derives from the Bot Framework's activity handler to route all Teams activities before allowing any non-Teams specific activities to be handled.
 
 ## Teams Activity handlers
 

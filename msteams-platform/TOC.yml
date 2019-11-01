@@ -121,8 +121,6 @@
               href: messaging-extensions/how-to/search-commands/respond-to-search.md
         - name: Link unfurling
           href: messaging-extensions/how-to/link-unfurling.md
-        - name: 'Add a configuration page'
-          href: messaging-extensions/how-to/add-configuration-page.md
         - name: 'Add authentication'
           href: messaging-extensions/how-to/add-authentication.md
 - name: 'Conversational Bots'
@@ -162,24 +160,14 @@
         items:
         - name: Debug locally with an IDE
           href: bots/how-to/debug/locally-with-an-ide.md
-        - name: Debug with the bot emulator
-          href: bots/how-to/debug/with-the-bot-emulator.md
         - name: Debug with the inspection middleware
-          href: bots/how-to/debug/with-the-inspection-middleware.md
+          href: /azure/bot-service/bot-service-debug-inspection-middleware
       - name: Authentication
         items:
         - name: Authentication flow in bots
           href: bots/how-to/authentication/auth-flow-bot.md
         - name: Add authentication to your bot
           href: bots/how-to/authentication/add-authentication.md
-      - name: Combine bots with other features and services
-        items:
-        - name: Use Teams tabs with your bot
-          href: bots/how-to/combine-with-other-features-and-services/use-tabs.md
-        - name: Use Teams Task Modules with your bot
-          href: bots/how-to/combine-with-other-features-and-services/use-task-modules.md
-        - name: Use Microsoft Graph with your bot
-          href: bots/how-to/combine-with-other-features-and-services/use-microsoft-graph.md
       - name: Format your bot message
         href: bots/how-to/format-your-bot-messages.md
       - name: Update and delete bot messages

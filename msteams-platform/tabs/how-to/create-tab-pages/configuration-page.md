@@ -21,61 +21,56 @@ A configuration page informs the content page how it should render. Your applica
 ```html
 <head>
 <script src='https://statics.teams.microsoft.com/sdk/v1.5.0/js/MicrosoftTeams.min.js'></script>
- </head>
+</head>
     <body>
-    ...
-    <script>
-        microsoftTeams.initialize();
-        let saveGray = () => {
-            microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
-                microsoftTeams.settings.setSettings({
-                    websiteUrl: "https://yourWebsite.com",
-                    contentUrl: "https://yourWebsite.com/gray",
-                    entityId: "grayIconTab",
-                    suggestedDisplayName: "MyNewTab"
+        <button onclick="(document.getElementById('icon').src = '/images/iconGray.png'); colorClickGray()">Select Gray</button>
+        <img id="icon" src="/images/teamsIcon.png" alt="icon" style="width:100px" />
+        <button onclick="(document.getElementById('icon').src = '/images/iconRed.png'); colorClickRed()">Select Red</button>
+
+        <script>
+            microsoftTeams.initialize();
+            let saveGray = () => {
+                microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
+                    microsoftTeams.settings.setSettings({
+                        websiteUrl: "https://yourWebsite.com",
+                        contentUrl: "https://yourWebsite.com/gray",
+                        entityId: "grayIconTab",
+                        suggestedDisplayName: "MyNewTab"
+                    });
+                    saveEvent.notifySuccess();
                 });
-                saveEvent.notifySuccess();
-            });
-        }
-        let saveRed = () => {
-            microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
-                microsoftTeams.settings.setSettings({
-                    websiteUrl: "https://yourWebsite.com",
-                    contentUrl: "https://yourWebsite.com/red",
-                    entityId: "redIconTab",
-                    suggestedDisplayName: "MyNewTab"
+            }
+            let saveRed = () => {
+                microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
+                    microsoftTeams.settings.setSettings({
+                        websiteUrl: "https://yourWebsite.com",
+                        contentUrl: "https://yourWebsite.com/red",
+                        entityId: "redIconTab",
+                        suggestedDisplayName: "MyNewTab"
+                    });
+                    saveEvent.notifySuccess();
                 });
-                saveEvent.notifySuccess();
-            });
-        }
-    </script>
-    ...
-    <script>
-        let gr = document.getElementById("gray").style;
-        let rd = document.getElementById("red").style;
+            }
 
-        const colorClickGray = () => {
-            gr.display = "block";
-            rd.display = "none";
-            microsoftTeams.settings.setValidityState(true);
-            saveGray()
-        }
+            let gr = document.getElementById("gray").style;
+            let rd = document.getElementById("red").style;
 
-        const colorClickRed = () => {
-            rd.display = "block";
-            gr.display = "none";
-            microsoftTeams.settings.setValidityState(true);
-            saveRed();
-        }
-    </script>
-  ...
-  </body>
+            const colorClickGray = () => {
+                gr.display = "block";
+                rd.display = "none";
+                microsoftTeams.settings.setValidityState(true);
+                saveGray()
+            }
 
-<button onclick="(document.getElementById('icon').src = '/images/iconGray.png'); colorClickGray()">Select Gray</button>
+            const colorClickRed = () => {
+                rd.display = "block";
+                gr.display = "none";
+                microsoftTeams.settings.setValidityState(true);
+                saveRed();
+            }
+        </script>
+    </body>
 
-<img id="icon" src="/images/teamsIcon.png" alt="icon" style="width:100px" />
-
-<button onclick="(document.getElementById('icon').src = '/images/iconRed.png'); colorClickRed()">Select Red</button>
 ...
 ```
 
@@ -149,10 +144,10 @@ When invoked, the `microsoftTeams.getContext((context) => {})` function retrieve
     <span id="user"></span>
     ...
     <script>
-    microsoftTeams.getContext((context) =>{
-    let userId = document.getElementById('user');
-    userId.innerHTML = context.userPrincipalName;
-});
+        microsoftTeams.getContext((context) =>{
+            let userId = document.getElementById('user');
+            userId.innerHTML = context.userPrincipalName;
+        });
     </script>
     ...
 ```

@@ -391,7 +391,32 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 You will receive a new `composeExtension/submitAction` message similar to the one below.
 
 ```json
-asdf
+{
+  "name": "composeExtension/submitAction",
+  "type": "invoke",
+  "conversation": { "id": "19:c366b75791784100b6e8b515fd55b063@thread.skype" },
+  "imdisplayname": "Pranav Smith",
+  ...
+  "value": {
+    "botMessagePreviewAction": "send",
+    "botActivityPreview": [
+      {
+        "type": "message/card",
+        "attachments": [
+          {
+            "content":
+              {
+                "type": "AdaptiveCard",
+                "body": [{<<card payload>>}]
+              },
+            "contentType" : "application/vnd.microsoft.card.adaptive"
+          }
+        ],
+        "context": { "theme": "default" }
+      }
+    ],
+  }
+}
 ```
 
 * * *

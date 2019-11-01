@@ -68,5 +68,5 @@ Webhooks and connectors allow you to create a simple bot for basic interaction, 
 
 ## Learn more
 
-* [Understanding the basics of bots in Teams](~/bots/bot-basics.md)
+* [The basics of bots in Teams](~/bots/bot-basics.md)
 * [Create a bot for Teams](~/bots/how-to/create-a-bot-for-teams.md)

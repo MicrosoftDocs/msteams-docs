@@ -394,8 +394,6 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-TODO: need more about how to craft the web content page, how to build the response payload, and how to submit it back to the messaging extension.
-
 * * *
 
 ## Next steps
