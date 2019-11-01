@@ -56,4 +56,4 @@ For example, imagine your app contains a conversational bot that works in both a
 ## Learn more
 
 * [Extensibility points in the Teams client](~/concepts/extensibility-points.md)
-* [Building apps for Teams](~/concetps/building-an-app.md)
+* [Building apps for Teams](~/concepts/building-an-app.md)

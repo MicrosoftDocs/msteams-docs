@@ -45,8 +45,6 @@ To ensure that your formatting works across all platforms supported by Microsoft
 | blockquote                | ✔                  | ✔                |
 | hyperlink                 | ✔                  | ✔                |
 | image link                | ✔                  | ✖                |
-> [!NOTE]
-> Currently, Connector cards support no formatting across all platforms. See [Cards](~/resources/bot-v3/bots-conversations.md#cards) in the next section for more detail.
 
 ### Support by individual platform
 

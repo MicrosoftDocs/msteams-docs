@@ -261,7 +261,7 @@
           href: tabs/how-to/developer-tools.md
         - name: 'Adding your custom tab to SharePoint'
           href: tabs/how-to/tabs-in-sharepoint.md
-        - href: Request device permissions
+        - name: Request device permissions
           href: tabs/how-to/native-device-permissions.md
 - name: 'Task modules and cards'
   items:
