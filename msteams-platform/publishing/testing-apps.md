@@ -230,6 +230,8 @@ if ($XmlDocument.Teams.Team.Count -gt 0) {
         Clear-Variable -Name creds
         
         # 5. Disconnect from all PowerShell sessions
+        
+        Write-Host "Completed execution and disconnecting from Office 365 PowerShell sessions."
         Disconnect-MicrosoftTeams
         Disconnect-AzureAD
     }
