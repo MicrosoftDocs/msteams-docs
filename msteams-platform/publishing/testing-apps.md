@@ -244,4 +244,7 @@ else {
 
 Open a Windows PowerShell session in Administrator mode.  Run the script that you just saved.  You'll be prompted to provide the credentials - use the Global Administrator credentials you received when you first signed up for your developer subscription.
 
-As it executes, the script will output successful or failed actions.  Note that if you've modified the users in your subscription from what is created in the default content pack, some users may not be added to teams.  Once the script has finished execution, you can login to the Teams client with one of the user accounts and view the newly created teams.
+> [!Note]
+> The script will take several minutes to execute - do not close your PowerShell session.  If you've modified the users in your subscription from what is created in the default content pack, some users may not be added to teams.  As the script executes it will output successful or failed actions.
+
+Once the script has finished execution, you can login to the Teams client with one of the user accounts and view the newly created teams.
