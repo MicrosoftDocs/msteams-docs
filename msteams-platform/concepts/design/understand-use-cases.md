@@ -42,4 +42,4 @@ Above all else, remember that nobody likes spam. Blasting away with personal and
 ## Next steps
 
 * [Map your use cases to functionality](~/concepts/design/map-use-cases.md)
-* [Choose how to distribute your app](~/concepts/design/distribution-options.md)
+* [Choose how to distribute your app](~/concepts/deploy-and-publish/apps-publish.md)
