@@ -44,22 +44,33 @@ You can retrieve all mentions in the message by calling the `GetMentions` functi
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
-  Mention[] mentions = turnContext.Activity.GetMentions();
-  if(mentions != null) {
-    ChannelAccount firstMention = mentions[0].Mentioned;
-    await turnContext.SendActivityAsync(MessageFactory.Text($"Hello {firstMention.Name}"));
-  }
-  else {
-    await turnContext.SendActivityAsync(MessageFactory.Text($"Aw, no one was mentioned."));
-  }
-  
+    Mention[] mentions = turnContext.Activity.GetMentions();
+    if(mentions != null)
+    {
+        ChannelAccount firstMention = mentions[0].Mentioned;
+        await turnContext.SendActivityAsync($"Hello {firstMention.Name}");
+    }
+    else
+    {
+        await turnContext.SendActivityAsync("Aw, no one was mentioned.");
+    }
 }
 ```
 
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-asdf
+this.onMessage(async (turnContext, next) => {
+    const mentions = TurnContext.getMentions(turnContext.activity);
+    if (mentions){
+        const firstMention = mentions[0].mentioned;
+        await turnContext.sendActivity(`Hello ${firstMention.name}.`);
+    } else {
+        await turnContext.sendActivity(`Aw, no one was mentioned.`);
+    }
+
+    await next();
+});
 ```
 
 # [JSON](#tab/json)
@@ -122,23 +133,36 @@ The Bot Framework SDK provides helper methods and objects to make constructing t
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
-  var mention = new Mention
-  {
-    Mentioned = turnContext.Activity.From,
-    Text = $"<at>{turnContext.Activity.From.Name}</at>",
-  };
+    var mention = new Mention
+    {
+        Mentioned = turnContext.Activity.From,
+        Text = $"<at>{turnContext.Activity.From.Name}</at>",
+    };
 
-  var replyActivity = MessageFactory.Text($"Hello {mention.Text}.");
-  replyActivity.Entities = new List<Entity> { mention };
+    var replyActivity = MessageFactory.Text($"Hello {mention.Text}.");
+    replyActivity.Entities = new List<Entity> { mention };
 
-  await turnContext.SendActivityAsync(replyActivity, cancellationToken);
+    await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 }
 ```
 
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-asdf
+this.onMessage(async (turnContext, next) => {
+    const mention = {
+        mentioned: turnContext.activity.from,
+        text: `<at>${turnContext.activity.from.name}</at>`
+    } as Mention;
+
+    const replyActivity = MessageFactory.text(`Hello ${mention.text}`);
+    replyActivity.entities = [mention];
+
+    await turnContext.sendActivity(replyActivity);
+
+    // By calling next() you ensure that the next BotHandler is run.
+    await next();
+});
 ```
 
 # [JSON](#tab/json)
@@ -219,7 +243,15 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-asdf
+this.onMessage(async (turnContext, next) => {
+    const message = MessageFactory.text("You'll get a notification, if you've turned them on.");
+    teamsNotifyUser(turnContext.activity);
+
+    await turnContext.sendActivity(message);
+
+    // By calling next() you ensure that the next BotHandler is run.
+    await next();
+});
 ```
 
 # [JSON](#tab/json)
