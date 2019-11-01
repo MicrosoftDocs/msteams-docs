@@ -19,11 +19,11 @@ This tutorial will help you set up your O365 developer program subscription to m
 
 You will need to join the Office 365 developer program and sign up for a developer subscription, and install the necessary powershell modules.
 
-1. [Join the Office 365 Developer Program](https://docs.microsoft.com/en-us/office/developer-program/office-365-developer-program)
-2. [Set up a Microsoft 365 Developer Subscription](https://docs.microsoft.com/en-us/office/developer-program/office-365-developer-program-get-started)
-3. [Use sample data packs with your Office 365 developer subscription to install the Users content pack](https://docs.microsoft.com/en-us/office/developer-program/install-sample-packs)
+1. [Join the Office 365 Developer Program](https://docs.microsoft.com/office/developer-program/office-365-developer-program)
+2. [Set up a Microsoft 365 Developer Subscription](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started)
+3. [Use sample data packs with your Office 365 developer subscription to install the Users content pack](https://docs.microsoft.com/office/developer-program/install-sample-packs)
 4. [Install the Teams PowerShell module](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)
-5. [Install the Azure AD PowerShell module](https://docs.microsoft.com/en-us/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module)
+5. [Install the Azure AD PowerShell module](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module)
 
 ### Optional step: allow upload of custom apps
 
