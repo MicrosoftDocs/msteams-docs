@@ -36,16 +36,22 @@ Below are examples of receiving the invoke message.
 # [C#/.NET](#tab/dotnet)
 
 ```csharp
-protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionSubmitActionAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken) {
+protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionSubmitActionAsync(
+  ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken) {
   //code to handle the submit action
 }
 ```
 
-# [TypeScript/Node.js](#tab/typescript)
+# [JavaScript/Node.js](#tab/javascript)
 
-```typescript
-protected async onTeamsMessagingExtensionSubmitAction(context, action: MessagingExtensionAction): Promise<MessagingExtensionActionResponse> {
+```javascript
+class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
+  constructor() {
+  handleTeamsMessagingExtensionSubmitAction(context, action) {
+  
   //code to handle the submit action
+    }
+  }
 }
 ```
 
@@ -86,7 +92,8 @@ The most common way to respond to the `composeExtension/submitAction` request is
 # [C#/.NET](#tab/dotnet)
 
 ```csharp
-protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionSubmitActionAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionSubmitActionAsync(
+  ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
 {
     dynamic Data = JObject.Parse(action.Data.ToString());
     var response = new MessagingExtensionActionResponse
@@ -119,24 +126,26 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# [TypeScript/Node.js](#tab/typescript)
+# [JavaScript/Node.js](#tab/javascript)
 
-```typescript
-protected async onTeamsMessagingExtensionSubmitAction(context, action: MessagingExtensionAction): Promise<MessagingExtensionActionResponse> {
-  const data = action.data;
-  let body: MessagingExtensionActionResponse;
+```javascript
+class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
+  handleTeamsMessagingExtensionSubmitAction(context, action) {
+    const data = action.data;
+    const heroCard = CardFactory.heroCard(data.title, data.text);
+    heroCard.content.subtitle = data.subTitle;
+    const attachment = { contentType: heroCard.contentType, content: heroCard.content, preview: heroCard };
 
-  const preview = CardFactory.thumbnailCard('Created Card', `FormField1 was: ${data.formField1}`);
-  const heroCard = CardFactory.heroCard('Created Card', `${sharedMessage}Your input: <pre>${data.userText}</pre>`);
-  body = {
+    return {
       composeExtension: {
-          attachmentLayout: 'list',
-          attachments: [
-              { ...heroCard, preview }
-          ],
-          type: 'result'
+        type: 'result',
+        attachmentLayout: 'list',
+        attachments: [
+          attachment
+        ]
       }
-  };
+    }
+  }
 }
 ```
 
@@ -203,7 +212,8 @@ To enable this flow your task module should respond to the initial `composeExten
 # [C#/.NET](#tab/dotnet)
 
 ```csharp
-protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionSubmitActionAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionSubmitActionAsync(
+  ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
 {
   dynamic Data = JObject.Parse(action.Data.ToString());
   var response = new MessagingExtensionActionResponse
@@ -240,10 +250,43 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# [TypeScript/Node.js](#tab/typescript)
+# [JavaScript/Node.js](#tab/javascript)
 
-```typescript
-typescript
+```javascript
+class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
+  handleTeamsMessagingExtensionSubmitAction(context, action) {
+    const submittedData = action.data;
+    const adaptiveCard = CardFactory.adaptiveCard({
+      actions: [
+        { type: 'Action.Submit', title: 'Submit', data: { submitLocation: 'messagingExtensionSubmit' } }
+      ],
+      body: [
+          { text: 'Adaptive Card from Task Module', type: 'TextBlock', weight: 'bolder' },
+          { text: `${ submittedData.Question }`, type: 'TextBlock', id: 'Question' },
+          { id: 'Answer', placeholder: 'Answer here...', type: 'Input.Text' },
+        {
+          choices: [
+            { title: submittedData.Option1, value: submittedData.Option1 },
+            { title: submittedData.Option2, value: submittedData.Option2 },
+            { title: submittedData.Option3, value: submittedData.Option3 }
+          ],
+          id: 'Choices',
+          isMultiSelect: submittedData.MultiSelect,
+          style: 'expanded',
+          type: 'Input.ChoiceSet'
+        }
+      ],
+      type: 'AdaptiveCard',
+      version: '1.0'
+    });
+    return {
+      composeExtension: {
+        activityPreview: MessageFactory.attachment(adaptiveCard, null, null, InputHints.ExpectingInput),
+        type: 'botMessagePreview'
+      }
+    };
+  }
+}
 ```
 
 # [JSON](#tab/json)
@@ -277,26 +320,32 @@ Your message extension will now need to respond to two new varieties of the `com
 # [C#/.NET](#tab/dotnet)
 
 ```csharp
-protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionBotMessagePreviewEditAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionBotMessagePreviewEditAsync(
+  ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
 {
   //handle the event
 }
 
-protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionBotMessagePreviewSendAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionBotMessagePreviewSendAsync(
+  ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
 {
   //handle the event
 }
 
 ```
 
-# [TypeScript/Node.js](#tab/typescript)
+# [JavaScript/Node.js](#tab/javascript)
 
-```typescript
-protected async onTeamsMessagingExtensionBotMessagePreviewEdit(context: TurnContext, action: MessagingExtensionAction): Promise<MessagingExtensionActionResponse> {
+```javascript
+protected async onTeamsMessagingExtensionBotMessagePreviewEdit(
+  context: TurnContext, action: MessagingExtensionAction): Promise<MessagingExtensionActionResponse> {
+  
   //handle the event
 }
 
-protected async onTeamsMessagingExtensionBotMessagePreviewSend(context: TurnContext, action: MessagingExtensionAction): Promise<MessagingExtensionActionResponse> {
+protected async onTeamsMessagingExtensionBotMessagePreviewSend(
+  context: TurnContext, action: MessagingExtensionAction): Promise<MessagingExtensionActionResponse> {
+  
   //handle the event
 }
 ```
@@ -347,11 +396,14 @@ Once the user clicks the **Send** button, you will receive a `composeExtension/s
 # [C#/.NET](#tab/dotnet)
 
 ```csharp
-protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionBotMessagePreviewSendAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionBotMessagePreviewSendAsync(
+  ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
 {
   var activityPreview = action.BotActivityPreview[0];
   var attachmentContent = activityPreview.Attachments[0].Content;
-  var previewedCard = JsonConvert.DeserializeObject<AdaptiveCard>(attachmentContent.ToString(), new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
+  var previewedCard = JsonConvert.DeserializeObject<AdaptiveCard>(attachmentContent.ToString(),
+          new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
+  
   previewedCard.Version = "1.0";
 
   var responseActivity = Activity.CreateMessageActivity();
@@ -378,12 +430,51 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# [TypeScript/Node.js](#tab/typescript)
+# [JavaScript/Node.js](#tab/javascript)
 
-```typescript
- protected async onTeamsMessagingExtensionBotMessagePreviewSend(context: TurnContext, action: MessagingExtensionAction): Promise<MessagingExtensionActionResponse> {
-   //stuff
- }
+```javascript
+async handleTeamsMessagingExtensionBotMessagePreviewSend(context, action) {
+  // The data has been returned to the bot in the action structure.
+  const activityPreview = action.botActivityPreview[0];
+  const attachmentContent = activityPreview.attachments[0].content;
+  const userText = attachmentContent.body[1].text;
+  const choiceSet = attachmentContent.body[3];
+  
+  const submitData = {
+    MultiSelect: choiceSet.isMultiSelect ? 'true' : 'false',
+    Option1: choiceSet.choices[0].title,
+    Option2: choiceSet.choices[1].title,
+    Option3: choiceSet.choices[2].title,
+    Question: userText
+  };
+
+  const adaptiveCard = CardFactory.adaptiveCard({
+    actions: [
+      { type: 'Action.Submit', title: 'Submit', data: { submitLocation: 'messagingExtensionSubmit' } }
+    ],
+    body: [
+      { text: 'Adaptive Card from Task Module', type: 'TextBlock', weight: 'bolder' },
+      { text: `${ submitData.Question }`, type: 'TextBlock', id: 'Question' },
+      { id: 'Answer', placeholder: 'Answer here...', type: 'Input.Text' },
+      {
+        choices: [
+            { title: submitData.Option1, value: submitData.Option1 },
+            { title: submitData.Option2, value: submitData.Option2 },
+            { title: submitData.Option3, value: submitData.Option3 }
+        ],
+        id: 'Choices',
+        isMultiSelect: submitData.MultiSelect,
+        style: 'expanded',
+        type: 'Input.ChoiceSet'
+      }
+    ],
+    type: 'AdaptiveCard',
+    version: '1.0'
+  });
+  const responseActivity = { type: 'message', attachments: [adaptiveCard] };
+
+  await context.sendActivity(responseActivity);
+}
 ```
 
 # [JSON](#tab/json)
