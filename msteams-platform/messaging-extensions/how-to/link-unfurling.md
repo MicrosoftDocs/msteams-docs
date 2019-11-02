@@ -83,10 +83,27 @@ protected override async Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQue
 }
 ```
 
-# [TypeScript/Node.js](#tab/typescript)
+# [JavaScript/Node.js](#tab/javascript)
 
-```typescript
-asdf
+```javascript
+class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
+  handleTeamsAppBasedLinkQuery(context, query) {
+    const attachment = CardFactory.thumbnailCard('Thumbnail Card',
+      query.url,
+      ['https://raw.githubusercontent.com/microsoft/botframework-sdk/master/icon.png']);
+
+    const result = {
+      attachmentLayout: 'list',
+      type: 'result',
+      attachments: [attachment]
+    };
+
+    const response = {
+      composeExtension: result
+    };
+    return response;
+  }
+}
 ```
 
 # [JSON](#tab/json)

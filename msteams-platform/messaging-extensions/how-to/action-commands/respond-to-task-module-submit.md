@@ -337,17 +337,18 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 # [JavaScript/Node.js](#tab/javascript)
 
 ```javascript
-protected async onTeamsMessagingExtensionBotMessagePreviewEdit(
-  context: TurnContext, action: MessagingExtensionAction): Promise<MessagingExtensionActionResponse> {
+class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
+  handleTeamsMessagingExtensionBotMessagePreviewEdit(context, action) {
+
+    //handle the event
+  }
   
-  //handle the event
+  handleTeamsMessagingExtensionBotMessagePreviewSend(context, action) {
+
+    //handle the event
+  }
 }
 
-protected async onTeamsMessagingExtensionBotMessagePreviewSend(
-  context: TurnContext, action: MessagingExtensionAction): Promise<MessagingExtensionActionResponse> {
-  
-  //handle the event
-}
 ```
 
 # [JSON](#tab/json)
@@ -433,47 +434,49 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 # [JavaScript/Node.js](#tab/javascript)
 
 ```javascript
-async handleTeamsMessagingExtensionBotMessagePreviewSend(context, action) {
-  // The data has been returned to the bot in the action structure.
-  const activityPreview = action.botActivityPreview[0];
-  const attachmentContent = activityPreview.attachments[0].content;
-  const userText = attachmentContent.body[1].text;
-  const choiceSet = attachmentContent.body[3];
-  
-  const submitData = {
-    MultiSelect: choiceSet.isMultiSelect ? 'true' : 'false',
-    Option1: choiceSet.choices[0].title,
-    Option2: choiceSet.choices[1].title,
-    Option3: choiceSet.choices[2].title,
-    Question: userText
-  };
-
-  const adaptiveCard = CardFactory.adaptiveCard({
-    actions: [
-      { type: 'Action.Submit', title: 'Submit', data: { submitLocation: 'messagingExtensionSubmit' } }
-    ],
-    body: [
-      { text: 'Adaptive Card from Task Module', type: 'TextBlock', weight: 'bolder' },
-      { text: `${ submitData.Question }`, type: 'TextBlock', id: 'Question' },
-      { id: 'Answer', placeholder: 'Answer here...', type: 'Input.Text' },
-      {
-        choices: [
-            { title: submitData.Option1, value: submitData.Option1 },
-            { title: submitData.Option2, value: submitData.Option2 },
-            { title: submitData.Option3, value: submitData.Option3 }
+class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
+    async handleTeamsMessagingExtensionBotMessagePreviewSend(context, action) {
+      // The data has been returned to the bot in the action structure.
+      const activityPreview = action.botActivityPreview[0];
+      const attachmentContent = activityPreview.attachments[0].content;
+      const userText = attachmentContent.body[1].text;
+      const choiceSet = attachmentContent.body[3];
+      
+      const submitData = {
+        MultiSelect: choiceSet.isMultiSelect ? 'true' : 'false',
+        Option1: choiceSet.choices[0].title,
+        Option2: choiceSet.choices[1].title,
+        Option3: choiceSet.choices[2].title,
+        Question: userText
+      };
+    
+      const adaptiveCard = CardFactory.adaptiveCard({
+        actions: [
+          { type: 'Action.Submit', title: 'Submit', data: { submitLocation: 'messagingExtensionSubmit' } }
         ],
-        id: 'Choices',
-        isMultiSelect: submitData.MultiSelect,
-        style: 'expanded',
-        type: 'Input.ChoiceSet'
-      }
-    ],
-    type: 'AdaptiveCard',
-    version: '1.0'
-  });
-  const responseActivity = { type: 'message', attachments: [adaptiveCard] };
-
-  await context.sendActivity(responseActivity);
+        body: [
+          { text: 'Adaptive Card from Task Module', type: 'TextBlock', weight: 'bolder' },
+          { text: `${ submitData.Question }`, type: 'TextBlock', id: 'Question' },
+          { id: 'Answer', placeholder: 'Answer here...', type: 'Input.Text' },
+          {
+            choices: [
+                { title: submitData.Option1, value: submitData.Option1 },
+                { title: submitData.Option2, value: submitData.Option2 },
+                { title: submitData.Option3, value: submitData.Option3 }
+            ],
+            id: 'Choices',
+            isMultiSelect: submitData.MultiSelect,
+            style: 'expanded',
+            type: 'Input.ChoiceSet'
+          }
+        ],
+        type: 'AdaptiveCard',
+        version: '1.0'
+      });
+      const responseActivity = { type: 'message', attachments: [adaptiveCard] };
+    
+      await context.sendActivity(responseActivity);
+    }
 }
 ```
 
