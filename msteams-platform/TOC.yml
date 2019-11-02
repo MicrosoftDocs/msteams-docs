@@ -54,6 +54,8 @@
         href: concepts/build-and-test/apps-package.md
       - name: Test and debug your app
         href: concepts/build-and-test/debug.md
+      - name: Add test data to your environment
+        href: concepts/build-and-test/test-data.md
       - name: Use deep links for navigation
         href: concepts/build-and-test/deep-links.md
       - name: Localizing your app
@@ -89,15 +91,15 @@
         - name: 'With action command'
           items:
             - name: 'C#/.NET'
-              href: https://github.com/microsoft/BotBuilder-Samples/tree/4.6-Staging/samples/csharp_dotnetcore/51.teams-messaging-extensions-action
+              href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action
             - name: TypeScript/Node.js
-              href: https://github.com/microsoft/BotBuilder-Samples/tree/4.6-Staging/samples/javascript_nodejs/51.teams-messaging-extensions-action
+              href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action
         - name: 'With search command'
           items:
             - name: 'C#/.NET'
-              href: https://github.com/microsoft/BotBuilder-Samples/tree/4.6-Staging/samples/csharp_dotnetcore/50.teams-messaging-extensions-search
+              href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search
             - name: TypeScript/Node.js
-              href: https://github.com/microsoft/BotBuilder-Samples/tree/4.6-Staging/samples/javascript_nodejs/50.teams-messaging-extensions-search
+              href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search
     - name: 'How-to guides'
       expanded: true
       items:

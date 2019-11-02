@@ -1,29 +1,27 @@
 ---
-title: Testing your apps with your Office 365 developer program subscription
+title: Add test data to your Office 365 test tenant
 description: Set up your Office 365 developer program subscription for successful testing of Microsoft Teams Apps
 keywords: testing apps developer program teams
 ms.date: 11/01/2019
 ---
 
-# Testing your apps with your Office 365 Developer Program Subscription
+# Add test data to your Office 365 test tenant
 
-The [Microsoft Teams](/microsoftteams/) developer platform makes it easy for you to extend Teams and integrate your own applications and services seamlessly into the Teams workspace. These apps can then be distributed to your enterprise or for teams around the world.
-
-This tutorial will help you set up your O365 developer program subscription to make it easy for you to test the apps that you've built.  It will help you:
+Set up your O365 developer program subscription (or other test tenant) to make it easy for you to test the apps that you've built.  It will help you:
 
 - Create new teams and channels in your organization
 
 - Add the users that are created via the User content pack to those teams.
 
-## Before you start this tutorial
+## Before you start
 
-You will need to join the Office 365 developer program and sign up for a developer subscription, and install the necessary powershell modules.
+If you don't already have a test tenant, you will need to join the Office 365 developer program and sign up for a developer subscription. You'll also need to install the necessary powershell modules. For whatever tenant you use you'll need to have global administrator permissions to run the scripts.
 
-1. [Join the Office 365 Developer Program](https://docs.microsoft.com/office/developer-program/office-365-developer-program)
-2. [Set up a Microsoft 365 Developer Subscription](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started)
-3. [Use sample data packs with your Office 365 developer subscription to install the Users content pack](https://docs.microsoft.com/office/developer-program/install-sample-packs)
+1. [Join the Office 365 Developer Program](/office/developer-program/office-365-developer-program)
+2. [Set up a Microsoft 365 Developer Subscription](/office/developer-program/office-365-developer-program-get-started)
+3. [Use sample data packs with your Office 365 developer subscription to install the Users content pack](/office/developer-program/install-sample-packs)
 4. [Install the Teams PowerShell module](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)
-5. [Install the Azure AD PowerShell module](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module)
+5. [Install the Azure AD PowerShell module](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module)
 
 ### Optional step: allow upload of custom apps
 
@@ -35,7 +33,7 @@ To enable this setting, you'll need to update the global App Setup Policy in you
 
 For more information see:
 
- - [Manage app setup policies in Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies)
+ - [Manage app setup policies in Microsoft Teams](/microsoftteams/teams-app-setup-policies)
 
 ## Create teams and channels
 
