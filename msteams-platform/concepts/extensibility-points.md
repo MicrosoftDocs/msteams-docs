@@ -39,7 +39,7 @@ Messages are the heart of collaboration in Teams. With a **[messaging extension 
 
 ## Writing messages
 
-Your app can help users craft more effect messages by enabling them to search, or take action, in an external system, and insert the results in a rich, structured format complete with actionable buttons.
+Your app can help users craft more effective messages by enabling them to search, or take action, in an external system, and insert the results in a rich, structured format complete with actionable buttons.
 
 There are three ways your app can help users create better messages:
 
