@@ -67,9 +67,9 @@ In order for the preview to be displayed you must:
 
 |Value|Meta tag| Open Graph|
 |----|----|----|
-|Title|`<meta name="title" content="Example Page Title">`|`<meta name="og:title" content="Example Page Title">`|
-|Description|`<meta name="description" content="Example Page Description">`|`<meta name="og:description" content="Example Page Description">`|
-|Thumbnail Image| none |`<meta name="og:image" content="http://example.com/image.jpg">`|
+|Title|`<meta name="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
+|Description|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
+|Thumbnail Image| none |`<meta property="og:image" content="http://example.com/image.jpg">`|
 
 ## Share to Teams for Education
 
