@@ -285,7 +285,47 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-//this is the javascript example.
+handleTeamsMessagingExtensionFetchTask(context, action) {
+  const adaptiveCard = CardFactory.adaptiveCard({
+    actions: [{
+      data: { submitLocation: 'messagingExtensionFetchTask'},
+      title: 'Submit',
+      type: 'Action.Submit'
+    }],
+    body: [
+      { text: 'Task Module', type: 'TextBlock', weight: 'bolder'},
+      { type: 'TextBlock', text: 'Enter text for Question:' },
+      { id: 'Question', placeholder: 'Question text here', type: 'Input.Text', value: userText },
+      { type: 'TextBlock', text: 'Options for Question:' },
+      { type: 'TextBlock', text: 'Is Multi-Select:' },
+      {
+        choices: [{ title: 'True', value: 'true' }, { title: 'False', value: 'false' }],
+        id: 'MultiSelect',
+        isMultiSelect: false,
+        style: 'expanded',
+        type: 'Input.ChoiceSet',
+        value: isMultiSelect ? 'true' : 'false'
+      },
+      { id: 'Option1', placeholder: 'Option 1 here', type: 'Input.Text', value: option1 },
+      { id: 'Option2', placeholder: 'Option 2 here', type: 'Input.Text', value: option2 }
+    ],
+    type: 'AdaptiveCard',
+    version: '1.0'
+  });
+
+  return {
+    task: {
+      type: 'continue',
+      value: {
+        card: adaptiveCard,
+        height: 450,
+        title: 'Task Module Fetch Example',
+        url: null,
+        width: 500
+      }
+    }
+  };
+}
 ```
 
 # [JSON](#tab/json)
@@ -374,7 +414,20 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-//this is the javascript example.
+handleTeamsMessagingExtensionFetchTask(context, action) {
+  return {
+    task: {
+      type: 'continue',
+      value: {
+        width: 500,
+        height: 450,
+        title: 'Task Module Fetch Example',
+        url: 'https://contoso.com/msteams/taskmodules/newcustomer',
+        fallbackUrl: 'https://contoso.com/msteams/taskmodules/newcustomer'
+      }
+    }
+  };
+}
 ```
 
 # [JSON](#tab/json)
