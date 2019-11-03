@@ -6,6 +6,8 @@ _site/
 _themes*/
 _repo.*/
 _dependentPackages/
+desktop.ini
+msteams-platform/.vs/
 
 .openpublishing.buildcore.ps1
 
