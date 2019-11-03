@@ -1,8 +1,8 @@
 {
-    "redirections": [ 
+  "redirections": [ 
       {
-         "source_path": "msteams-platform/concepts/authentication.md",
-         "redirect_url": "/microsoftteams/platform/concepts/authentication/authentication"
+          "source_path": "msteams-platform/concepts/authentication.md",
+          "redirect_url": "/microsoftteams/platform/concepts/authentication/authentication"
       },
       {
         "source_path": "msteams-platform/resources/dev-preview/developer-preview.md",
@@ -14,43 +14,43 @@
       },
       {
         "source_path": "msteams-platform/concepts/Cards/cards-actions.md",
-        "redirect_url": "/microsoftteams/task-modules-and-cards/cards/cards-actions"
+        "redirect_url": "/microsoftteams/platform/task-modules-and-cards/cards/cards-actions"
       },
       {
           "source_path": "msteams-platform/concepts/Cards/cards-format.md",
-          "redirect_url": "/microsoftteams/task-modules-and-cards/cards/cards-format"
+          "redirect_url": "/microsoftteams/platform/task-modules-and-cards/cards/cards-format"
       },
       {
           "source_path": "msteams-platform/concepts/Cards/cards-reference.md",
-          "redirect_url": "/microsoftteams/task-modules-and-cards/cards/cards-reference"
+          "redirect_url": "/microsoftteams/platform/task-modules-and-cards/cards/cards-reference"
       },
       {
           "source_path": "msteams-platform/concepts/Cards/cards.md",
-          "redirect_url": "/microsoftteams/task-modules-and-cards/what-are-cards"
+          "redirect_url": "/microsoftteams/platform/task-modules-and-cards/what-are-cards"
       },
       {
           "source_path": "msteams-platform/concepts/activity-feed.md",
-          "redirect_url": "/microsoftteams/bots/how-to/conversations/conversation-basics"
+          "redirect_url": "/microsoftteams/platform/bots/how-to/conversations/conversation-basics"
       },
       {
           "source_path": "msteams-platform/concepts/apps/apps-design.md",
-          "redirect_url": "/microsoftteams/concepts/extensibility-points"
+          "redirect_url": "/microsoftteams/platform/concepts/extensibility-points"
       },
       {
           "source_path": "msteams-platform/concepts/apps/apps-overview.md",
-          "redirect_url": "/microsoftteams/concepts/building-an-app"
+          "redirect_url": "/microsoftteams/platform/concepts/building-an-app"
       },
       {
           "source_path": "msteams-platform/concepts/apps/apps-package.md",
-          "redirect_url": "/microsoftteams/concepts/build-and-test/apps-package"
+          "redirect_url": "/microsoftteams/platform/concepts/build-and-test/apps-package"
       },
       {
           "source_path": "msteams-platform/concepts/apps/apps-update.md",
-          "redirect_url": "/microsoftteams/concepts/build-and-test/apps-package"
+          "redirect_url": "/microsoftteams/platform/concepts/build-and-test/apps-package"
       },
       {
           "source_path": "msteams-platform/concepts/apps/apps-upload.md",
-          "redirect_url": "/microsoftteams/concepts/deploy-and-publish/apps-upload"
+          "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/apps-upload"
       }
     ]
 }
