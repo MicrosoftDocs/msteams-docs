@@ -228,6 +228,80 @@ Your bot can send rich text, pictures, and cards. Users can send rich text and p
 | Cards     | ✖                | ✔                | See the [Teams Card Reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards |
 | Emojis    | ✖                | ✔                | Teams currently supports emojis via UTF-16 (such as U+1F600 for grinning face)          |
 
+## Adding notifications to your message
+
+Notifications alert users about new tasks, mentions and comments related to what they are working on, or need to look at by inserting a notice into their Activity Feed. You can set notifications to trigger from your bot message by setting the `TeamsChannelData` objects `Notification.Alert` property to true. Whether or not a notification is raised will ultimately depend on the individual user's Teams settings and you cannot programmatically override these settings. The type of notification will be either a banner or both a banner and an email.
+
+# [C#/.NET](#tab/dotnet)
+
+```csharp
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+  var message = MessageFactory.Text("You'll get a notification, if you've turned them on.");
+  message.TeamsNotifyUser();
+
+  await turnContext.SendActivityAsync(message);
+}
+```
+
+# [TypeScript/Node.js](#tab/typescript)
+
+```typescript
+this.onMessage(async (turnContext, next) => {
+    const message = MessageFactory.text("You'll get a notification, if you've turned them on.");
+    teamsNotifyUser(turnContext.activity);
+
+    await turnContext.sendActivity(message);
+
+    // By calling next() you ensure that the next BotHandler is run.
+    await next();
+});
+```
+
+# [JSON](#tab/json)
+
+```json
+{
+    "type": "message", 
+    "text": "Hey <at>Pranav Smith</at> check out this message",
+    "timestamp": "2017-10-29T00:51:05.9908157Z",
+    "localTimestamp": "2017-10-28T17:51:05.9908157-07:00",
+    "serviceUrl": "https://skype.botframework.com",
+    "channelId": "msteams",
+    "from": {
+        "id": "28:9e52142b-5e5e-4d7b-bb3e- e82dcf620000",
+        "name": "SchemaTestBot"
+    },
+    "conversation": {
+        "id": "19:aebd0ad4d6ab42c8b9ed19c251c2fc37@thread.skype;messageid=1481567603816"
+    },
+    "recipient": {
+        "id": "8:orgid:6aebbad0-e5a5-424a-834a-20fb051f3c1a",
+        "name": "stlrgload100"
+    },
+    "attachments": [
+        {
+            "contentType": "image/png",
+            "contentUrl": "https://upload.wikimedia.org/wikipedia/en/a/a6/Bender_Rodriguez.png",
+            "name": "Bender_Rodriguez.png"
+        }
+    ],
+    "entities": [
+        {
+            "type":"mention",
+            "mentioned":{
+                "id":"29:08q2j2o3jc09au90eucae",
+                "name":"Pranav Smith"
+            },
+            "text": "<at>@Pranav Smith</at>"
+        }
+    ],
+    "replyToId": "3UP4UTkzUk1zzeyW"
+}
+```
+
+* * *
+
 ## Picture messages
 
 Pictures are sent by adding attachments to a message. You can find more information on attachments in the [Bot Framework documentation](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0).

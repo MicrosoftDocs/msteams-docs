@@ -211,7 +211,7 @@ The `text` field in the object in the `entities` array must *exactly* match a po
 
 * * *
 
-## Sending an message on installation
+## Sending a message on installation
 
 When your bot is first added to the group or team, it may be useful to send a message introducing it. The message should provide a brief description of the bot’s features, and how to use them. You'll want to subscribe to the `conversationUpdate` event, with the `teamMemberAdded` eventType.  Since the event is sent when any new team member is added, you need to check to determine if the new member added is the bot. See [Sending a welcome message to a new team member](~/bots/how-to/conversations/send-proactive-messages.md) for more details.
 
@@ -223,80 +223,6 @@ It is not recommended to send a message in the following situations:
 * Your bot is first mentioned in a group or channel (versus being first added to a team)
 * A group or channel is renamed
 * A team member is added to a group or channel
-
-## Adding notifications to your message
-
-Notifications alert users about new tasks, mentions and comments related to what they are working on, or need to look at. You can set notifications to trigger from your bot message by setting the `TeamsChannelData` objects `Notification.Alert` property to true. Whether or not a notification is raised will ultimately depend on the individual user's Teams settings and you cannot programmatically override these settings. The type of notification will be either a banner or both a banner and an email.
-
-# [C#/.NET](#tab/dotnet)
-
-```csharp
-protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
-{
-  var message = MessageFactory.Text("You'll get a notification, if you've turned them on.");
-  message.TeamsNotifyUser();
-
-  await turnContext.SendActivityAsync(message);
-}
-```
-
-# [TypeScript/Node.js](#tab/typescript)
-
-```typescript
-this.onMessage(async (turnContext, next) => {
-    const message = MessageFactory.text("You'll get a notification, if you've turned them on.");
-    teamsNotifyUser(turnContext.activity);
-
-    await turnContext.sendActivity(message);
-
-    // By calling next() you ensure that the next BotHandler is run.
-    await next();
-});
-```
-
-# [JSON](#tab/json)
-
-```json
-{
-    "type": "message", 
-    "text": "Hey <at>Pranav Smith</at> check out this message",
-    "timestamp": "2017-10-29T00:51:05.9908157Z",
-    "localTimestamp": "2017-10-28T17:51:05.9908157-07:00",
-    "serviceUrl": "https://skype.botframework.com",
-    "channelId": "msteams",
-    "from": {
-        "id": "28:9e52142b-5e5e-4d7b-bb3e- e82dcf620000",
-        "name": "SchemaTestBot"
-    },
-    "conversation": {
-        "id": "19:aebd0ad4d6ab42c8b9ed19c251c2fc37@thread.skype;messageid=1481567603816"
-    },
-    "recipient": {
-        "id": "8:orgid:6aebbad0-e5a5-424a-834a-20fb051f3c1a",
-        "name": "stlrgload100"
-    },
-    "attachments": [
-        {
-            "contentType": "image/png",
-            "contentUrl": "https://upload.wikimedia.org/wikipedia/en/a/a6/Bender_Rodriguez.png",
-            "name": "Bender_Rodriguez.png"
-        }
-    ],
-    "entities": [
-        {
-            "type":"mention",
-            "mentioned":{
-                "id":"29:08q2j2o3jc09au90eucae",
-                "name":"Pranav Smith"
-            },
-            "text": "<at>@Pranav Smith</at>"
-        }
-    ],
-    "replyToId": "3UP4UTkzUk1zzeyW"
-}
-```
-
-* * *
 
 ## Learn more
 
