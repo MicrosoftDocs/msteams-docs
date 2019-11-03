@@ -1,48 +1,59 @@
 ---
-title: Developer platform
-description: Overview page describing the Microsoft Teams developer platform
-keywords: teams overview
-ms.date: 01/24/2018
+title: Microsoft Teams developer platform
+author: clearab
+description: Overview page describing the Microsoft Teams developer platform, and how to get started building apps for Microsoft Teams.
+ms.topic: overview
+ms.author: anclear
+#Customer intent: As a developer, I want to understand why I would want to build a Teams app so that I can solve business problems.
 ---
-# The Microsoft Teams developer platform
+# What are Microsoft Teams apps?
 
-Microsoft Teams is a chat-based workspace in Office 365 that integrates with the apps and services that people use to get work done together. The Microsoft Teams developer platform makes it easy to integrate your own services with Teams, whether you develop custom apps for your enterprise or SaaS applications for teams around the world.
+Microsoft Teams is a collaboration workspace in Office 365 that integrates with apps and services people use to get work done together. The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services to improve productivity, make decisions faster, provide focus (by reducing context switching), and create collaboration around existing content and workflows. Apps built on the Microsoft Teams platform are bridges between the Teams client and your services and workflows; bringing them directly into the context of your collaboration platform.
 
-> [!TIP]
-> Don't have Microsoft Teams? Get a free Office 365 developer subscription or activate Teams for your existing Office 365 account. See [Set up your Office 365 tenant](~/get-started/get-started-tenant).
+## What can Teams apps do?
 
-Using the Teams developer platform, you can create two classes of apps:
+Apps built on the Microsoft Teams platform primarily focus on increasing collaboration and improving productivity. Your app can be something simple, like posting notifications from other systems, or complex multi-faceted applications. Just keep in mind that Teams is a social collaboration platform; the best apps focus on helping people express themselves and work better together.
 
-- Apps that any organization using Office 365 can access via the Teams Store.
-- Apps that you publish to your tenant’s Teams App Catalog that’s only available to your organization. These are known as *line-of-business* apps.
+* **Collaborate on items in external systems.** One of the core scenarios for a custom Teams app is to bring information or items into Teams from some other place, and have a conversation around it. You can push information into Teams, enable your users to search for and pull it on demand, or make it available in an embedded web view.
 
-The key concepts and guidance for developers are applicable to both classes of apps, except you go through a formal submission process to  [publish apps](https://docs.microsoft.com/microsoftteams/platform/publishing/apps-publish#appsource). For information about the benefits of creating apps for your tenant’s Teams App Catalog, see the [Line-of-business apps overview](~/lob-apps-value-prop) page.
+* **Trigger workflows from conversations.** Often conversations result in the need to kick off some workflow or complete some action; take a note about that, review my pull request, convert that to a sales lead, etc. Your Teams app can put access to that workflow right inside of Teams.
 
-## Apps in Microsoft Teams
+* **Notify your team of important events.** Sick of email notifications? Send notifications to Teams instead! Send notifications directly to users, to a channel, to the Activity Feed, or to anyone who subscribes to them.
 
-To extend Microsoft Teams you create a Microsoft Teams app&mdash;a package of capabilities that you host and that can be distributed through Microsoft Teams or installed by individual teams.
+* **Embed functionality from other sites/services.** Sometimes you just need to make your app easier to discover. Embed your existing single-page app, or build something from scratch for Teams.
 
-To learn about Teams apps and all the possibilities they offer, see [Develop apps for Microsoft Teams](~/concepts/apps/apps-overview).
+## How do Teams apps work?
 
-### What you'll find here
+The first thing to know about custom apps for Microsoft Teams (other than how amazing they can be), is that Teams is not a hosting service. Your app package contains metadata about your app (name, icons, etc.), and pointers to the web services you host that power your app. Microsoft Teams provides the distribution mechanism, UI/UX constructs for you to take advantage of, and APIs you can use to augment the information and actions available to your app.
 
-In these topics, you'll find the information you need to bring your content, apps, and services into Microsoft Teams and make them available to your team (or the teams of your customers).
+A Teams app consists of three major pieces:
 
-|   |   |
-| - | - |
-| [**Get Started**](~/get-started/get-started) | Develop, host and upload your first app and understand how apps work in Teams. |
-| [**Concepts**](~/concepts/concepts-overview) | Learn more about creating Teams apps, and find everything you need to know about the entire range of capabilities in Teams: tabs, bots, connectors, messaging extensions, and more. |
-| [**Publishing**](~/publishing/apps-publish) | Want to publish your Teams app in AppSource? Look here for the steps and guidelines. |
-| [**App scenarios**](~/scenarios/lob-scenarios-landing-page) | Go deep into end-to-end scenarios for line-of-business apps. |
-| [**Resources**](~/resources/resource-overview) | Find all those nitty-gritty details you need to build a Teams app, such as a design topic, or a manifest schema reference. |
-| [**Troubleshooting**](~/troubleshoot/troubleshoot) | If your app isn't behaving as expected, check here. |
-| [**FAQ**](~/troubleshoot/faq) | Everyone has them; here are our frequently asked questions. |
-| [**Samples**](~/samples/code-samples) | See how others created Teams apps. |
-| [**Feedback**](~/feedback) | Didn't find what you need? Let us know! |
-| [**SDK Reference**](https://docs.microsoft.com/en-us/javascript/api/overview/msteams-client) | Find specific details about all the elements in the SDK. |
+* **The Microsoft Teams client (web, desktop or mobile)** where users will interact with your app.
+* **Your Teams app package** that creates the app installed by your users, and contains your app's metadata and pointers to your services.
+* **Your service, workflow or website** which perform the necessary logic, data storage and API calls to power your app.
 
----
+It is important to keep in mind that any functionality you expose in a Microsoft Teams app is publicly available over the internet unless you take additional steps to secure it. If you are providing access to confidential or protected information you'll want make sure your services are at a minimum authenticating the endpoint connecting to your app, or [authenticating your users](~/concepts/authentication/authentication.md).
 
-## Submit your questions, bugs, feature requests, and contributions
+## How can you share your Teams app?
 
-We listen to the developer community across [several channels](~/feedback).
+When you're ready to share your Microsoft Teams apps, you have three options depending on who your target audience is.
+
+* **[Upload your app directly](~/concepts/deploy-and-publish/apps-upload.md)** If your app only needs to be shared to your team, or a few individuals in your organization, you can share your app package and upload it directly.
+* **[Publish to your organizational app catalog](~/concepts/deploy-and-publish/apps-publish.md)** You can share your app with your entire organization through your app catalog.
+* **[Publish to the public app store](~/concepts/deploy-and-publish/apps-publish.md)** If your app is for everyone, you can publish it to our public app store. Depending on your goals, you might be eligible for marketing and sales assistance.
+
+### The app you create versus the app your users install
+
+Your app may take advantage of multiple extensibility points in the Teams client, and work in a variety of scopes. Your app package you distribute to users will define all of these as a single entity. However, because all app installations in Microsoft Teams are *context-specific*, the entirety of your app may not always be installed for all users.
+
+For example, imagine your app contains a conversational bot that works in both a personal and team conversations, as well as both a personal tab and a channel tab. When your app is installed, it will be installed in a specific context - if a user installs the app in a team, they have not necessarily installed the personal portion of your app. This can be a bit confusing at first, just remember to never expect that all portions of your app will be installed and configure in any given context.
+
+## Get started
+
+* [Build a bot and tab app in C#](~/tutorials/get-started-dotnet-app-studio.md)
+* [Build a bot and tab app in JavaScript/Node.js](~/tutorials/get-started-nodejs-app-studio.md)
+
+## Learn more
+
+* [Extensibility points in the Teams client](~/concepts/extensibility-points.md)
+* [Building apps for Teams](~/concepts/building-an-app.md)

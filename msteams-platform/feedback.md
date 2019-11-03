@@ -6,8 +6,6 @@ keywords: teams feedback questions issues bugs contributions
 
 # Send feedback about the Microsoft Teams developer platform
 
->Hitting a problem? Have you looked at the [troubleshooting guide](~/troubleshoot/troubleshoot)?
-
 The Microsoft Team product team responds to the developer community across several channels.
 
 - **General questions:** Please send email to [Microsoft Teams developer support](mailto:microsoftteamsdev@microsoft.com).
@@ -23,6 +21,4 @@ The Microsoft Team product team responds to the developer community across sever
 - **Contributions:** We accept pull requests against the Microsoft Teams JavaScript library, documentation, and samples. If you'd like to contribute, please see the contributor's guide in each repo.
 
   * https://github.com/OfficeDev/microsoft-teams-library-js
-  * https://github.com/OfficeDev/msteams-samples-hello-world-csharp
-  * https://github.com/OfficeDev/microsoft-teams-sample-complete-node
   * https://github.com/MicrosoftDocs/msteams-docs
