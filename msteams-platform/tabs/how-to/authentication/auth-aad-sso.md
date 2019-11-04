@@ -57,7 +57,7 @@ Register you application at the registration portal for the Azure AD v1.0 endpoi
     * Choose **Register**
 3.	On the overview page, copy and save the **Application (client) ID**. You’ll need it later when updating your Teams application manifest.
 4.	Select **Expose an API** under **Manage**. Select the **Set** link to generate the Application ID URI in the form of `api://{AppID}`. Insert your fully qualified domain name (with a forward slash "/" appended to the end) between the double forward slashes and the GUID. The entire ID should have the form of: `api://fully-qualified-domain-name.com/{AppID}`
-    * ex: api://subdomain.example.com:6789/c6c1f32b-5e55-4997-881a-753cc1d563b7.
+    * ex: `api://subdomain.example.com:6789/c6c1f32b-5e55-4997-881a-753cc1d563b7`.
 
 > [!NOTE]
 > If you get an error saying that the domain is already owned but you own it, follow the procedure at [Quickstart: Add a custom domain name to Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-custom-domain) to register it, and then repeat this step. (This error can also occur if you are not signed in with credentials of an admin in the Office 365 tenancy).
@@ -74,8 +74,8 @@ Register you application at the registration portal for the Azure AD v1.0 endpoi
     * Note: The domain part of the **Scope name** displayed just below the text field should automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end; for example: 
         * `api://subdomain.example.com:6789/c6c1f32b-5e55-4997-881a-753cc1d563b7/access_as_user`
 10.	In the **Authorized client applications** section, you identify the applications that you want to authorize to your app’s web application. Each of the following IDs needs to be entered:
-    * 1fec8e78-bce4-4aaf-ab1b-5451cc387264 (Teams mobile/desktop application)
-    * 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 (Teams web application)
+    * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Teams mobile/desktop application)
+    * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Teams web application)
 11.	Navigate to **API Permissions**, and make sure to add the follow permissions:
     * User.Read (enabled by default)
     * email
