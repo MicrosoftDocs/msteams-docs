@@ -286,7 +286,7 @@ The list card has been added by Teams to provide functions beyond what the list 
 
 | Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✖ | ✖ |✖ |
+| ✔ | ✖ | ✖ |✔ |
 |
 
 ### Properties of a List card
@@ -628,7 +628,7 @@ The [carousel layout](/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card
 
 | Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔ | ✖ | ✖ | ✔ |
 |
 
 > [!NOTE]
