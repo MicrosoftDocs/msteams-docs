@@ -117,11 +117,12 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 When you call `getAuthToken` - and additional user consent is required (for user-level permissions) - we will show a dialog to the user encouraging them to grant additional consent. 
 
+
 <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
 
 ## Demo code
 
-For now you can visit our test application [Task Meow](https://github.com/ydogandjiev/taskmeow) and use the SSO manifest and checkout the `sso.auth.service.js` file to see how we handle the authentication workflow.
+For now you can visit our test application [Task Meow](https://github.com/ydogandjiev/taskmeow) and use the SSO manifest and checkout the `teams.auth.service.js` and `sso.auth.service.js` file to see how we handle the authentication workflow.
 
 ## Known Limitations
 
