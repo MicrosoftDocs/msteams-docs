@@ -15,7 +15,7 @@ Users sign-in to Microsoft Teams using their work or school (Office 365) account
 
 The following diagram shows how the SSO process works:
 
-![Tab single sign-on SSO diagram](~/assets/images/tabs/tabs-sso-diagram.png)
+<img src="~/assets/images/tabs/tabs-sso-diagram.png" alt="Tab single sign-on SSO diagram" width="75%"/>
 
 1.	In the tab, JavaScript calls getAuthToken(). This tells the Teams application to obtain an authentication token to the tab application.
 2.	If this is the first time the current user has used your tab application, they will be prompted to consent (if consent is required) or asked to handle step-up authentication (such as two-factor authentication).
@@ -117,7 +117,7 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 When you call `getAuthToken` - and additional user consent is required (for user-level permissions) - we will show a dialog to the user encouraging them to grant additional consent. 
 
-![Tab single sign-on SSO dialog prompt](~/assets/images/tabs/tabs-sso-prompt.png)
+<img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
 
 ## Demo code
 
@@ -138,12 +138,12 @@ A simple way of consenting on behalf of an organization (as a tenant admin) is t
 
 #### Asking for additional consent using the Auth API
 
-Another approach for getting additional Graph scopes would be to present a consent dialog using our existing [web-based AAD authentication approach](https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/authentication/auth-tab-aad#navigate-to-the-authorization-page-from-your-popup-page) which involves popping up an AAD consent dialog. There are some notable additions:
+Another approach for getting additional Graph scopes would be to present a consent dialog using our existing [web-based AAD authentication approach](~/tabs/how-to/authentication/auth-tab-aad#navigate-to-the-authorization-page-from-your-popup-page) which involves popping up an AAD consent dialog. There are some notable additions:
 1.	The token retrieved using getAuthToken would need to be exchanged server side using AADs [on-behalf-of flow](https://docs.microsoft.com/en-us/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow) to get access to those additional Graph APIs.
     * Be sure to use the v2 Graph endpoint for this exchange
 2.	If the exchange fails, AAD will return an invalid grant exception. There are usually one of two error messages: `ConsentRequired` or `InteractionRequired`
-3.	When the exchange fails, then you need to ask for additional consent. We recommend showing some UI asking the user to grant additional consent. This UI should include a button that triggers an AAD consent dialog using our [AAD authentication API](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/authentication/auth-silent-aad).
-4.	When asking for additional consent from AAD, you need to include `prompt=consent` in your [query-string-parameter](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/authentication/auth-silent-aad#get-the-user-context) to AAD otherwise AAD will not ask for the additional scopes.
+3.	When the exchange fails, then you need to ask for additional consent. We recommend showing some UI asking the user to grant additional consent. This UI should include a button that triggers an AAD consent dialog using our [AAD authentication API](~/concepts/authentication/auth-silent-aad).
+4.	When asking for additional consent from AAD, you need to include `prompt=consent` in your [query-string-parameter](~/concepts/authentication/auth-silent-aad#get-the-user-context) to AAD otherwise AAD will not ask for the additional scopes.
     * Instead of: 	`?scope={scopes}`
     * Use this:	`?prompt=consent&scope={scopes}`
     * Be sure that `{scopes}` includes all the scopes you are prompting the user for (ex: Mail.Read or User.Read).
@@ -151,4 +151,4 @@ Another approach for getting additional Graph scopes would be to present a conse
 
 ### Non-AAD Authentication
 
-The above-described authentication solution only works for apps and services that support Azure AD as an identity provider. Apps that want to authenticate using non-AAD based services need to continue using the popup-based [web authentication flow](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/authentication).
+The above-described authentication solution only works for apps and services that support Azure AD as an identity provider. Apps that want to authenticate using non-AAD based services need to continue using the popup-based [web authentication flow](~/concepts/authentication).
