@@ -21,7 +21,7 @@ Create an ngrok configuration file `ngrok.yml` (see [here](https://ngrok.com/doc
 
 ## Setting up signaling
 
-In [Calls and online meetings bots](/calls-meetings-bots-overview.md), we discussed call signaling — how bots detect and respond to new calls and events during a call. Call signaling events are sent via HTTP POST to the bot's calling endpoint.
+In [Calls and online meetings bots](calls-meetings-bots-overview.md), we discussed call signaling — how bots detect and respond to new calls and events during a call. Call signaling events are sent via HTTP POST to the bot's calling endpoint.
 
 As with the bot's messaging API, in order for the Real-time Media Platform to talk to your bot, your bot must be reachable over the internet. Ngrok makes this simple — add the following lines to your ngrok.yml:
 

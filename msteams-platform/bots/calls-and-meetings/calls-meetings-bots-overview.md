@@ -33,7 +33,7 @@ Here's more information on how to create and test calls and online meetings bots
 
 * [Graph API reference](https://developer.microsoft.com/graph/docs/api-reference/beta/resources/calls-api-overview)
 * [Sample apps](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
-* [Registering a bot that supports calls and online meetings](/registering-calling-bot.md) and [Microsoft Graph permissions for calls and online meetings bots](/registering-calling-bot.md#add-microsoft-graph-permissions)
-* [How to develop calling and online meeting bots on your local PC](/debugging-local-testing-calling-meeting-bots.md)
-* [More information on real-time media processing](/real-time-media-concepts.md), and [what's needed to support application-hosted media](/requirements-considerations-application-hosted-media-bots.md)
-* [Technical information on handling incoming call notifications](/call-notifications.md)
+* [Registering a bot that supports calls and online meetings](registering-calling-bot.md) and [Microsoft Graph permissions for calls and online meetings bots](/registering-calling-bot.md#add-microsoft-graph-permissions)
+* [How to develop calling and online meeting bots on your local PC](debugging-local-testing-calling-meeting-bots.md)
+* [More information on real-time media processing](real-time-media-concepts.md), and [what's needed to support application-hosted media](/requirements-considerations-application-hosted-media-bots.md)
+* [Technical information on handling incoming call notifications](call-notifications.md)
