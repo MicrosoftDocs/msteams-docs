@@ -7,30 +7,32 @@ ms.date: 11/16/2018
 
 # Requirements and considerations for application-hosted media bots
 
-Not all guidance for developing messaging and IVR calling bots applies equally to building application-hosted media bots. This article describes some of the important requirements and considerations for developing and running an application-hosted media bot.
+Not all guidance for developing messaging and Interactive Voice Response (IVR) bots applies equally to building application-hosted media bots. This article describes some of the important requirements and considerations for developing and running an application-hosted media bot.
 
 > [!NOTE]
 > Because the Microsoft Real-time Media Platform for Bots is in developer preview, the guidance in this article is subject to change.
 
 ## Application-hosted media bot development requires C#/.NET and Windows Server
 
-- An application-hosted media bot requires the `Microsoft.Graph.Communications.Calls.Media` .NET library ([available here](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) to access the audio and video media streams, and the bot must be deployed on a Windows Server machine (or Windows Server guest OS in Azure). Therefore, the bot must be developed in C# and the standard .NET Framework, and deployed in Microsoft Azure. You cannot use C++ or Node.js APIs to access real-time media. .NET Core is not supported for an application-hosted media bot.
+- An application-hosted media bot requires the `Microsoft.Graph.Communications.Calls.Media` .NET library ([available here](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) to access the audio and video media streams, and the bot must be deployed on a Windows Server machine (or Windows Server guest OS in Azure). Therefore, the bot must be developed in C# and the standard .NET Framework, and deployed in Microsoft Azure. You cannot use C++ or Node.js APIs to access real-time media and .NET Core is not supported for an application-hosted media bot.
 
 - An application-hosted media bot can be hosted within one of the following Azure service environments:
-  - Cloud Service
-  - Service Fabric with Virtual Machine Scale Sets (VMSS)
-  - Infrastructure as a Service (IaaS) Virtual Machine (VM)  
-  An application-hosted media bot cannot be deployed as an Azure Web App.
+  - Cloud Service.
+  - Service Fabric with Virtual Machine Scale Sets (VMSS).
+  - Infrastructure as a Service (IaaS) Virtual Machine (VM).  
+  
+- An application-hosted media bot cannot be deployed as an Azure Web App.
+
 - An application-hosted media bot must be running on a recent version of the `Microsoft.Graph.Communications.Calls.Media` .NET library. The bot should use either the newest available version of the [NuGet package](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/), or a version which is not more than three months old. Older versions of the library will be deprecated and may not work after a few months. Keeping the `Microsoft.Graph.Communications.Calls.Media` library up-to-date will ensure the best interoperability between the bot and Microsoft Teams.
 
 ## Real-time media calls stay on the machine where they were created
 
-- A real-time media call is pinned to the virtual machine (VM) instance which accepted or started the call. Media from the Microsoft Teams call or meeting will flow to that VM instance, and media the bot sends back to Microsoft Teams must also originate from that VM.
-- If there are any real-time media calls in progress when the VM is stopped, those calls will be abruptly terminated. If the bot can know of the pending VM shutdown, it can try to "gracefully" end the calls.
+- A real-time media call is pinned to the virtual machine (VM) instance that accepted or started the call. Media from a Microsoft Teams call or meeting will flow to that VM instance, and media the bot sends back to Microsoft Teams must also originate from that VM.
+- If there are any real-time media calls in progress when the VM is stopped, those calls will be abruptly terminated. If the bot has prior knowledge of the pending VM shutdown, it can try to "gracefully" end the calls.
 
-## Application-hosted media bots must be directly accessible on the Internet
+## Application-hosted media bots must be directly accessible on the internet
 
-- Each VM instance hosting an application-hosted media bot in Azure must be directly accessible from the Internet using an instance-level public IP address (ILPIP).
+- Each VM instance hosting an application-hosted media bot in Azure must be directly accessible from the internet using an instance-level public IP address (ILPIP).
   - For obtaining and configuring an ILPIP for an Azure Cloud Service, see [Instance level public IP (Classic) overview](/azure/virtual-network/virtual-networks-instance-level-public-ip).
   - For configuring an ILPIP for a VM Scale Set, see [Public IPv4 per virtual machine](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-networking#public-ipv4-per-virtual-machine).
 - The service hosting an application-hosted media bot must also configure each VM instance with a public-facing port which maps to the specific instance.
