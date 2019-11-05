@@ -7,7 +7,7 @@ ms.date: 11/18/2018
 
 # How to develop calling and online meeting bots on your local PC
 
-In [Run and debug your app](../../concepts/build-and-test/debug.md) we explain how to use [ngrok](https://ngrok.com) to create a tunnel between your local computer and the internet. In this topic, learn how you can also use ngrok and your local PC to develop bots that support media, signaling traffic for calls and online meetings.
+In [Run and debug your app](../../concepts/build-and-test/debug.md) we explain how to use [ngrok](https://ngrok.com) to create a tunnel between your local computer and the internet. In this topic, learn how you can also use ngrok and your local PC to develop bots that support calls and online meetings.
 
 Messaging bots use HTTP, but calls and online meeting bots use the lower-level TCP. Ngrok supports TCP tunnels in addition to HTTP tunnels; you'll learn how, below.
 
@@ -113,6 +113,6 @@ Your bot can now run locally and all the flows work from your localhost.
 
 ## Caveats
 
-- Ngrok free accounts do **NOT** provide end-to-end encryption. The HTTPS data ends at the ngrok URL and the data flows unencrypted from ngrok to `localhost`. If you require end-to-end encryption, consider the the paid ngrok account. See [TLS tunnels](https://ngrok.com/docs#tls) for steps on setting up secure end-to-end tunnels.
+- Ngrok free accounts do **NOT** provide end-to-end encryption. The HTTPS data ends at the ngrok URL and the data flows unencrypted from ngrok to `localhost`. If you require end-to-end encryption, consider a paid ngrok account. See [TLS tunnels](https://ngrok.com/docs#tls) for steps on setting up secure end-to-end tunnels.
 - Because the bot callback URL is dynamic, incoming call scenarios require you to frequently update your ngrok endpoints. One way to fix this is to use a paid ngrok account which provides fixed subdomains to which you can point your bot and the platform.
 - Ngrok tunnels can also be used with [Azure Service Fabric](/azure/service-fabric/service-fabric-overview). For an example of how to do this, see the [HueBot sample app](/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/LocalMediaSamples/HueBot/HueBot).
