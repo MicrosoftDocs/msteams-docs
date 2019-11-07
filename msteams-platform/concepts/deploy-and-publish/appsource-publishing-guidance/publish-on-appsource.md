@@ -4,7 +4,6 @@ description: Describes the approval process for getting your app published to th
 keywords: teams publish store office publishing AppSource
 ---
 
-
 By developing and submitting a Microsoft Teams app, you are subject to the Bot Developer Framework [Terms of Use](https://aka.ms/bf-terms), [Privacy Policy](https://aka.ms/bf-privacy), and [Code of Conduct](https://aka.ms/bf-conduct) for bot, tab, and messaging extension functionality within your app. If your app contains Office 365 Connector functionality, separate terms may also apply as part of your Connector Registration on the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).
 
 # Overview of Microsoft Teams app submission process
