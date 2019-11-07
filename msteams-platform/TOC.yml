@@ -85,11 +85,11 @@
                 - name: "Manifest package checklist"
                   href: concepts/deploy-and-publish/appsource-publishing-guidance/prepare-app/office-store-checklist.md
                 - name: "AppSource submission walkthrough"
-                  href: msteams-platform/concepts/deploy-and-publish/appsource-publishing-guidance/prepare-app/appsource-submission-walkthrough.md
+                  href: concepts/deploy-and-publish/appsource-publishing-guidance/prepare-app/appsource-submission-walkthrough.md
             - name: "After publishing your app"
               items:
                 - name: "What to do after publishing your app"
-                  href:  msteams-platform/concepts/deploy-and-publish/appsource-publishing-guidance/post-publish-app/overview.md
+                  href: concepts/deploy-and-publish/appsource-publishing-guidance/post-publish-app/overview.md
                 - name: "Application Certification program"
                   href: concepts/deploy-and-publish/application-certification.md
     - name: "Authentication in Teams apps"
