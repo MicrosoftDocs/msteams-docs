@@ -70,34 +70,26 @@
           href: concepts/deploy-and-publish/apps-upload-for-team-and-user.md
         - name: "Publish your app on AppSource"
           items:
-            - name: "Understanding AppSourse submission "
+            - name: "AppSourse submission process"
               href: concepts/deploy-and-publish/appsource-publishing-guidance/publish-on-appsource.md
             - name: "Prepare your app"
               items: 
                 - name: "Presubmission checklist"
                   href: concepts/deploy-and-publish/appsource-publishing-guidance/prepare-app/overview.md
-                - name: "App content policy"
-                  href: concepts/deploy-and-publish/appsource-publishing-guidance/prepare-app/app-content-policy.md
                 - name: "App functionality checklist"
-                  href: foo.md
+                  href: msteams-platform\concepts\deploy-and-publish\appsource-publishing-guidance\prepare-app\app-functionality-requirement.md
                 - name: "App detail page checklist"
                   href: concepts/deploy-and-publish/appsource-publishing-guidance/prepare-app/app-detail-page-checklist.md
-                - name: "Office store checklist"
-                  href: concepts/deploy-and-publish/appsource-publishing-guidance/prepare-app/office-store-checklist.md
                 - name: "Frequently failed cases"
                   href: concepts/deploy-and-publish/appsource-publishing-guidance/prepare-app/frequently-failed-cases.md
-            - name: "Publish your app"
-              items: 
-                - name: "Submitting your app to AppSource"
-                  href: concepts/deploy-and-publish/appsource-publishing-guidance/publish-app/overview.md
+                - name: "Manifest package checklist"
+                  href: concepts/deploy-and-publish/appsource-publishing-guidance/prepare-app/office-store-checklist.md
                 - name: "AppSource submission walkthrough"
-                  href: concepts/deploy-and-publish/appsource-publishing-guidance/publish-app/appsource-submission-walkthrough.md
+                  href: msteams-platform\concepts\deploy-and-publish\appsource-publishing-guidance\prepare-app\appsource-submission-walkthrough.md
             - name: "After publishing your app"
               items:
-                - name: "Maintaining and updating your app"
-                  href: foo.md
-                - name: "Expectation for AppSource apps"
-                  href: foo.md
+                - name: "What to do after publishing your app"
+                  href:  msteams-platform\concepts\deploy-and-publish\appsource-publishing-guidance\post-publish-app\overview.md
                 - name: "Application Certification program"
                   href: concepts/deploy-and-publish/application-certification.md
     - name: "Authentication in Teams apps"

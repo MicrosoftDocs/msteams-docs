@@ -23,4 +23,4 @@ Your organization's app catalog contains apps unique to your organization and is
 ## Publish to AppSource
 
 AppSource (formerly known as Office Store) provides a convenient location for you to distribute your Microsoft Teams app, as well as other Office 365 extensibility types such as Office add-ins and SharePoint add-ins. To include your solution in AppSource, you submit it to the Seller Dashboard. You need to create an individual or company account if you have not already done so for other Windows apps or Office extensibility types.
-Follow our [publish to AppSource guideline](msteams-platform\concepts\deploy-and-publish\appsource-publishing-guidance\publish-on-appsource.md) to publish your app. 
+Go through our [AppSource submission process](msteams-platform\concepts\deploy-and-publish\appsource-publishing-guidance\publish-on-appsource.md) to publish your app. 
