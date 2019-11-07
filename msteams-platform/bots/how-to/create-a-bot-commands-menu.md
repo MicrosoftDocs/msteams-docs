@@ -10,23 +10,23 @@ ms.author: anclear
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
 > [!Note]
-> Bot menus will not appear on mobile clients.
+> Bot menus won't appear on mobile clients.
 
-Adding a command menu to your bot lets you to give your users a list of commands your bot is designed to execute, along with help text explaining the command. Selecting a command from the list will insert the command string into the compose message box, then all they need to do is click **Send**.
+Adding a command menu to your bot lets you give your users a list of commands your bot is designed to execute, along with help text explaining the command. Selecting a command from the list will insert the command string into the compose message box, then all users need to do is select **Send**.
 
-![Bot command menu](~/bots/how-to/conversations/media/bot-menu-sample.png)
+![Bot command menu](./conversations/media/bot-menu-sample.png)
 
 ## Create a command menu for your bot
 
-Command menus are defined in your app manifest. You can either use App Studio to help you create them, or add them manually.
+Command menus are defined in your app manifest. You can either use App Studio to help you create them, or add them manually to the Teams manifest.
 
 ### Creating a command menu for your bot using App Studio
 
-The instructions here assume that you will be editing an existing app manifest. The steps of adding a command menu are the same, whether you are creating a new manifest or editing an existing manifest.
+The instructions here assume that you'll be editing an existing app manifest. The steps for adding a command menu are the same, whether you're creating a new manifest or editing an existing one.
 
-1. Open App Studio from the ... overflow menu on the left navigation rail. If you do not have App Studio available you can download it, please refer to [Installing App Studio](https://aka.ms/teams-app-studio#installing-app-studio). 
+1. Open App Studio from the ... overflow menu on the left navigation rail. If you don't have App Studio available you can download it. Please refer to [Installing App Studio](https://aka.ms/teams-app-studio#installing-app-studio).
 
-    ![App Studio](~/bots/how-to/conversations/media/AppStudio.png)
+    ![App Studio](./conversations/media/AppStudio.png)
 
 2. Once in App Studio, select the **Manifest editor** tab.
 
@@ -34,13 +34,13 @@ The instructions here assume that you will be editing an existing app manifest. 
 
 4. In the right column of the manifest editor view in the **Commands** section, select the **Add** button.
 
-    ![App Studio Command Menu Add button](~/bots/how-to/conversations/media/AppStudio-CommandMenu-Add.png)
+    ![App Studio Command Menu Add button](./conversations/media/AppStudio-CommandMenu-Add.png)
 
 5. The **New Command** screen appears. Enter the **Command text** that you want to have appear as the menu command, and the **Help text** that you want to have appear directly under the command text in the menu. This should be a brief explanation of the purpose of the command.
 
-6. Next, select the scope(s) that you want this command menu to appear in, then select the **Save** button.
+6. Next, select the scope(s) where you want this command menu to appear, then select the **Save** button.
 
-    ![App Studio Command Menu Add button](~/bots/how-to/conversations/media/AppStudio-NewCommandMenu.png)
+    ![App Studio Command Menu Add button](./conversations/media/AppStudio-NewCommandMenu.png)
 
 ### Creating a command menu for your bot by editing **Manifest.json**
 
@@ -140,11 +140,11 @@ Another valid approach for creating a command menu is to create it directly in t
 
 ## Handling menu commands in your bot code
 
-Bots in a group or channel respond only when they are mentioned ("@botname") in a message. As a result every message received by a bot when in a group or channel scope will contains it own name in the message text returned. You need to ensure your message parsing handles that before handling the command being returned.
+Bots in a group or channel respond only when they are mentioned ("@botname") in a message. As a result, every message received by a bot when in a group or channel scope will contain its own name in the message text returned. You need to ensure your message parsing handles that before handling the command being returned.
 
 # [C#/.NET](#tab/dotnet)
 
-You can parse out the **@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework, a method of the `Activity` class named `RemoveRecipientMention`.
+You can parse out the **@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework — a method of the `Activity` class named `RemoveRecipientMention`. *See* [ActivityExtensions.RemoveRecipientMention(IMessageActivity) Method](/dotnet/api/microsoft.bot.schema.activityextensions.removerecipientmention?view=botbuilder-dotnet-stable).
 
 ```csharp
 var modifiedText = turnContext.Activity.RemoveRecipientMention();
@@ -152,7 +152,7 @@ var modifiedText = turnContext.Activity.RemoveRecipientMention();
 
 # [TypeScript/Node.js](#tab/typescript)
 
-You can parse out the **@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework, a method of the `TurnContext` class named `removeMentionText`.
+You can parse out the **@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework — a method of the `TurnContext` class named `removeMentionText`. *See* [ActivityExtensions.RemoveMentionText(IMessageActivity, String) Method](/dotnet/api/microsoft.bot.schema.activityextensions.removementiontext?view=botbuilder-dotnet-stable).
 
 ```typescript
 const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnContext.activity.recipient.id);
@@ -162,6 +162,6 @@ const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnCon
 
 ## Command menu best practices
 
-* Keep it simple: The bot menu is meant to present the key capabilities of your bot.
-* Keep it short: Menu options shouldn’t be extremely long and complex natural language statements - they should be simple commands.
-* Always available: Bot menu actions/commands should be always invocable, regardless of the state of the conversation or the dialog the bot is in.
+* **Keep it simple**: The bot menu is meant to present the key capabilities of your bot.
+* **Keep it short**: Menu options shouldn’t be extremely long and complex natural language statements — they should be simple commands.
+* **Keep it invokable**: Bot menu actions/commands should always be available, regardless of the state of the conversation or the dialog the bot is in.
