@@ -152,7 +152,7 @@ var modifiedText = turnContext.Activity.RemoveRecipientMention();
 
 # [TypeScript/Node.js](#tab/typescript)
 
-You can parse out the **@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework — a method of the `TurnContext` class named `removeMentionText`. *See* [ActivityExtensions.RemoveMentionText(IMessageActivity, String) Method](/dotnet/api/microsoft.bot.schema.activityextensions.removementiontext?view=botbuilder-dotnet-stable).
+You can parse out the **@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework — a method of the `TurnContext` class named `removeMentionText`. *See* (~/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest).
 
 ```typescript
 const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnContext.activity.recipient.id);

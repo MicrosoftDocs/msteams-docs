@@ -24,7 +24,7 @@ Microsoft Teams supports a subset of Markdown and XML (HTML) formatting tags.
 Currently, the following limitations apply:
 
 * Text-only messages don't support table formatting.
-* Rich cards support formatting in the text property only, not in the title or subtitle properties. *See* [Add rich card attachments to messages](~/azure/bot-service/rest-api/bot-framework-rest-connector-add-rich-cards?view=azure-bot-service-4.0)
+* Rich cards support formatting in the text property only, not in the title or subtitle properties. *See* [Add rich card attachments to messages](/azure/bot-service/rest-api/bot-framework-rest-connector-add-rich-cards?view=azure-bot-service-4.0)
 * Rich cards don't support Markdown or table formatting.
 
 ## Cross-platform support
