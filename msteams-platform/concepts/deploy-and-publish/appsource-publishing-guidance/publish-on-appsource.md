@@ -4,37 +4,22 @@ description: Describes the approval process for getting your app published to th
 keywords: teams publish store office publishing AppSource
 ---
 
-AppSource (formerly known as Office Store) provides a convenient location for you to distribute your Microsoft Teams app, as well as other Office 365 extensibility types such as Office add-ins and SharePoint add-ins. To include your solution in AppSource, you submit it to the Seller Dashboard. You need to create an individual or company account if you have not already done so for other Windows apps or Office extensibility types.
 
 By developing and submitting a Microsoft Teams app, you are subject to the Bot Developer Framework [Terms of Use](https://aka.ms/bf-terms), [Privacy Policy](https://aka.ms/bf-privacy), and [Code of Conduct](https://aka.ms/bf-conduct) for bot, tab, and messaging extension functionality within your app. If your app contains Office 365 Connector functionality, separate terms may also apply as part of your Connector Registration on the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).
-
 
 # Overview of Microsoft Teams app submission process
 
 > [!IMPORTANT]
 > Registering as a developer can be a time-consuming process. It is best to start this process while you're still developing your app.
 
-1. Develope your app following our [design guidelines]() 
-1. Debug and test: Make sure your app meets all the Test and debug criteria
-2. Prepare your app for submission: Make sure your app passes the [submission checklist]()
-3. Submission prerequisites: Make sure you satisfy all the [submission prerequisites]().
-4. Testing Notes: Include proper [Test Notes for validation](#Test-Notes-for-validation/approval)
-5. Tips: Go through our [tips for submission](Tips-for-successful-app-submission) for a quicker submission process/ 
-6. Validation: [Submit your app in partner center]() 
-7. Update: Make sure your app adhere to our [expectation for Teams App]() 
-
-
 At a high level, the process for submitting your app to AppSource is:
 
-
-### Test Notes for validation/approval
-
-You must provide at least two login credentials, one admin and one not, so your app can be validated.
-
-* The accounts you provide should have sufficient data pre-populated for verification purposes.
-* For enterprise apps, apps where a subscription is required, or where there is an office 365 tenant/domain dependency for testing you must provide an 3rd account in the same domain that is not already configured to use your app so we can validate the first-run user experience.
-* If your app has any Premium/Upgraded features, an account with the necessary access must be provided to test that experience.
-* You may choose to upload your test notes to SharePoint. In such cases, please provide a public link to the file.
+1. Develope your app following our [design guidelines]() 
+1. [Register as a developer]() in both Seller Dashboard and Microsoft 
+2. Prepare your app for submission: Make sure your app passes the [submission checklist]()
+5. Tips and most frequently failed cases: Go through our [tips for submission](Tips-for-successful-app-submission) for a quicker submission process
+6. Submission: [Submit your app in seller dashboard]() 
+7. Post submission: Make sure your app adhere to our [expectation for Teams App]() 
 
 ## Submission prerequisites
 You must register as **both** Microsoft app developer and developer in seller dashboard in order to publish your app. 

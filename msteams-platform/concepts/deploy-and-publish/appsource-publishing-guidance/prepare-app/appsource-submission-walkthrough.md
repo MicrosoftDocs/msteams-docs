@@ -13,7 +13,7 @@ After your app has completed the Microsoft Teams app approval process, you can s
 You need to upload a [submission package](~/concepts/build-and-test/apps-package.md) and provide the required metadata for the product listing page, including information such as app logo, description, and screenshots. Please review our [Submission and Manifest Metadata Checklist](~/concepts/deploy-and-publish/office-store-checklist.md) for more information.
 
 
-### Submitting your Microsoft Teams app in the Seller Dashboard
+## Submitting your Microsoft Teams app in the Seller Dashboard
 
 For a general overview of the Microsoft Teams app submission flow, see [Publish your Microsoft Teams app to AppSource](~/publishing/apps-publish.md).
 

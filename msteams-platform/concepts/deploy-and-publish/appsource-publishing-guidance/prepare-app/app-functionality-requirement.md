@@ -1,7 +1,7 @@
 ---
 title: App functionality requirement  
-description: The checklist to use before publishing your Microsoft Teams app to AppSource
-keywords: teams publish store office publishing checklist
+description: The list of requirement for app and each capability 
+keywords: app functionality requirement checklist submission 
 ---
 
 ## App Level 
