@@ -19,7 +19,6 @@ You'll need to use the web-based authentication flow for [tabs](~/tabs/what-are-
 * [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md) describes how tab authentication works in Teams. This shows a typical web based authentication flow used for tabs.
 * [Azure AD authentication in tabs](~/tabs/how-to/authentication/auth-tab-AAD.md) describes how to connect to Azure Active Directory from within a tab in your app in Teams.
 * [Silent authentication (Azure AD)](~/tabs/how-to/authentication/auth-silent-AAD.md) describes how to reduce sign-in/consent prompts in your app using Azure Active Directory. 
-* [Single sign-on](~/tabs/how-to/authentication/auth-aad-sso) describes how to avoid the sign-in experience entirley. Currently SSO only works for tabs.
 * Web-based authentication in [dotnet/C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) or [JavaScript/Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
 
 ## The OAuthPrompt flow for conversational bots

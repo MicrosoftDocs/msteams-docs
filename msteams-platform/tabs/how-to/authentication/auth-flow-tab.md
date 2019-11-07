@@ -43,4 +43,3 @@ For a detailed implementation walkthrough for tab authentication targeting Azure
 
 * [Authenticate a user in a Microsoft Teams tab](~/tabs/how-to/authentication/auth-tab-AAD.md)
 * [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md)
-* [Single sign-on](~/tabs/how-to/authentication/auth-aad-sso)
