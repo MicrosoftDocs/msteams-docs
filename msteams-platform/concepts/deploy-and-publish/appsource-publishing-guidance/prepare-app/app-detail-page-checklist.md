@@ -1,5 +1,10 @@
-### App metadata
+---
+title: App Content Policy 
+description: Describes what app content must adhere to
+keywords: teams publish store office publishing policy AppSource content
+---
 
+### App metadata
 Make sure your app descriptions and screenshots follow the [AppSource guidance](/office/dev/store/create-effective-office-store-listings).
 
 * Don't use "Teams", "Microsoft", or "app" in your app name.
