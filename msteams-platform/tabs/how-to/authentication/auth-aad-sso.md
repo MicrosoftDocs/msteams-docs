@@ -145,7 +145,7 @@ Another approach for getting additional Graph scopes would be to present a conse
     * Be sure to use the v2 Graph endpoint for this exchange
 2. If the exchange fails, AAD will return an invalid grant exception. There are usually one of two error messages: `ConsentRequired` or `InteractionRequired`
 3. When the exchange fails, then you need to ask for additional consent. We recommend showing some UI asking the user to grant additional consent. This UI should include a button that triggers an AAD consent dialog using our [AAD authentication API](~/concepts/authentication/auth-silent-aad.md).
-4. When asking for additional consent from AAD, you need to include `prompt=consent` in your [query-string-parameter](~/concepts/authentication/auth-silent-aad.md#get-the-user-context) to AAD otherwise AAD will not ask for the additional scopes.
+4. When asking for additional consent from AAD, you need to include `prompt=consent` in your [query-string-parameter](~/tabs/how-to/authentication/auth-silent-aad#get-the-user-context) to AAD otherwise AAD will not ask for the additional scopes.
     * Instead of: `?scope={scopes}`
     * Use this: `?prompt=consent&scope={scopes}`
     * Be sure that `{scopes}` includes all the scopes you are prompting the user for (ex: Mail.Read or User.Read).
