@@ -64,7 +64,17 @@ You can provide additional .json files with translations of all the user facing 
 
 The Teams client will apply the strings in this order: default language strings -> user's language only strings -> user's language + user's region strings.
 
-For example, you provide a default language of 'fr' (French, all regions), and additional language files for 'en' (English, all regions) and 'en-gb' (English, Great Britain). If the user's language is set to 'en-gb', the Teams client will take the 'fr' strings overwrite them with the 'en' strings and finally, overwrite those with the 'en-gb' strings. If the user's language is set to 'en-ca', the Teams client will take the 'fr' strings overwrite them with the 'en' strings but will not apply the 'en-gb' strings. If the user's language is set to 'es-es', the Teams client will take the 'fr' strings and will not override them with any of the language files.
+For example, you provide a default language of 'fr' (French, all regions), and additional language files for 'en' (English, all regions) and 'en-gb' (English, Great Britain). If the user's language is set to 'en-gb':
+
+1. The Teams client will take the 'fr' strings overwrite them with the 'en' strings.
+2. Overwrite those with the 'en-gb' strings.
+
+If the user's language is set to 'en-ca': 
+
+1. The Teams client will take the 'fr' strings overwrite them with the 'en' strings.
+2. Since no 'en-ca' localazation is supplied, the 'en' localizations will be used.
+
+If the user's language is set to 'es-es', the Teams client will take the 'fr' strings and will not override them with any of the language files.
 
 Therefore, it is strongly recommended to provide top-level, language-only translations in your manifest ('en' instead of 'en-us') and only provide region-level overrides for the few strings that need them.
 
