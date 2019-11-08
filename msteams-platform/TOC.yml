@@ -241,8 +241,10 @@
             href: tabs/how-to/authentication/auth-flow-tab.md
           - name: 'Using Azure AD authentication'
             href: tabs/how-to/authentication/auth-tab-aad.md
-          - name: 'Using SSO and silent authentication'
+          - name: 'Using silent authentication'
             href: tabs/how-to/authentication/auth-silent-aad.md
+          - name: 'Using single sign-on authentication'
+            href: tabs/how-to/authentication/auth-aad-sso.md
         - name: 'Using the Teams client SDK'
           href: tabs/how-to/using-teams-client-sdk.md
         - name: Getting additional Teams context

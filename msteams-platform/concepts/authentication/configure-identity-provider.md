@@ -15,7 +15,7 @@ Identity providers supporting OAuth 2.0 will not authenticate requests from unkn
 
 3. In the dropdown menu, make sure **Web** is selected. Update the URL to your authentication endpoint. For the TypeScript/Node.js and C# sample apps on GitHub, the redirect URLs will be similar to this:
 
-    Redirect URLs: https://\<hostname\>/bot-auth/simple-start
+    Redirect URLs: `https://<hostname>/bot-auth/simple-start`
 
 Replace `<hostname>` with your actual host. This might be a dedicated hosting site such as Azure, Glitch, or an ngrok tunnel to localhost on your development machine such as `abcd1234.ngrok.io`. You may not have this information yet if you have not completed or hosted your app (or the sample app mentioned above), but you can always return to this page when that information is known.
 
