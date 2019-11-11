@@ -93,7 +93,7 @@ For more information, check out this handy guide on various retry patterns: [Ret
 ## Per bot per thread limit
 
 >[!NOTE]
->Message splitting at the service level will result in higher than expected requests per second (RPS). If you are concerned about approaching the limits, you should implement the backoff strategy described above. The values provided below are for estimation only.
+>Message splitting at the service level will result in higher than expected requests per second (RPS). If you're concerned about approaching the limits, you should implement the backoff strategy described above. The values provided below are for estimation only.
 
 This limit controls the traffic that a bot is allowed to generate on a single conversation. A conversation here is 1:1 between bot and user, a group-chat, or a channel in a team.
 
