@@ -113,6 +113,8 @@ To include a mention in an Adaptive Card your app needs to include the following
 * `<at>username</at>` in the supported adaptive card elements
 * The `mention` object inside of an `msteams` property in the card content, which includes the Teams user id of the user being mentioned
 
+Note that cards with mentions aren't supported on mobile clients at the moment.
+
 ### Sample Adaptive card with a mention
 ``` json
 {
