@@ -233,8 +233,8 @@ This limit controls the traffic that a connector or an incoming webhook is allow
 | 3600  | 100  | 
 | 7200 | 150  | 
 
-A [retry logic with exponential back-off](https://docs.microsoft.com/en-us/azure/architecture/patterns/retry) like below would mitigate rate limiting for cases where requests are exceeding the limits within a second.
-Please follow [best practices](https://docs.microsoft.com/en-us/microsoftteams/platform/bots/how-to/rate-limit#best-practices) to avoid hitting the rate limits.
+A [retry logic with exponential back-off](https://docs.microsoft.com/azure/architecture/patterns/retry) like below would mitigate rate limiting for cases where requests are exceeding the limits within a second.
+Please follow [best practices](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/rate-limit#best-practices) to avoid hitting the rate limits.
 
 ```csharp
 // Please note that response body needs to be extracted and read 
