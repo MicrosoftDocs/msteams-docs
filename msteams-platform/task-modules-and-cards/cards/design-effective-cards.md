@@ -1,5 +1,5 @@
 ---
-title: DDesigning effective cards
+title: Designing effective cards
 description: Describes the design guidelines for creating cards
 keywords: teams design guidelines reference framework cards adaptable lightweight
 ---
