@@ -233,18 +233,23 @@ This limit controls the traffic that a connector or an incoming webhook is allow
 | 3600  | 100  | 
 | 7200 | 150  | 
 
-
 A [retry logic with exponential back-off](https://docs.microsoft.com/en-us/azure/architecture/patterns/retry) like below would mitigate rate limiting for cases where requests are exceeding the limits within a second.
+Please follow [best practices](https://docs.microsoft.com/en-us/microsoftteams/platform/bots/how-to/rate-limit#best-practices) to avoid hitting the rate limits.
 
 ```csharp
-// sample retry policy using Polly library
 // Please note that response body needs to be extracted and read 
 // as Connectors do not throw 429s
-Policy.HandleResult<Response>(result => result.ResponseBody.Contains("Microsoft Teams endpoint returned HTTP error 429"))
-                .WaitAndRetryAsync(3,  retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))
-                .ExecuteAsync(async () => await incomingWebhookClient.PostContent(body));
-
+try
+{
+    // Perform Connector POST operation     
+    var httpResponseMessage = await _client.PostAsync(IncomingWebhookUrl, new StringContent(content));
+    // Read response content
+    var responseContent = await httpResponseMessage.Content.ReadAsStringAsync();
+    if (responseContent.Contains("Microsoft Teams endpoint returned HTTP error 429")) 
+    {
+        // initiate retry logic
+    }
+}
 ```
  
-
 These limits are in place to reduce spamming a channel by a connector and ensures an optimal experience to your end users.
