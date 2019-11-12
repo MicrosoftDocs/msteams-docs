@@ -62,7 +62,7 @@ See [Card Formatting](~/task-modules-and-cards/cards/cards-format.md) for more i
 ## Adaptive card
 
 > [!NOTE]
-> Only version 1.0 of Adaptive Cards is supported.
+> Only version 1.0 of Adaptive Cards is supported for all users. Version 1.2 is currently available only in Developer Preview
 
 A customizable card that can contain any combination of text, speech, images, buttons, and input fields.
 
