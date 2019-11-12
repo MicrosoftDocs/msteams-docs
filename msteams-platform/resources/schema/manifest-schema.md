@@ -151,15 +151,15 @@ The following schema sample shows all extensibility options.
         "title": "Message Handler",
         "description": "Domains that will create a preview when pasted into the compose box",
         "messageHandlers": [
-	  {
-	    "type" : "link",
-	    "value" : {
-	    "domains" : [
-	      "mysite.someplace.com",
-	      "othersite.someplace.com"
-	      ]
-	    }
-	  }
+          {
+            "type" : "link",
+            "value" : {
+            "domains" : [
+              "mysite.someplace.com",
+              "othersite.someplace.com"
+              ]
+            }
+          }
         ]
       }
     }
@@ -375,6 +375,9 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 |`botId`|String|64|✔|The unique Microsoft app ID for the bot that backs the messaging extension, as registered with the Bot Framework. This may well be the same as the overall App ID.|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a messaging extension can be updated by the user. The default is `false`.|
 |`commands`|Array of object|10|✔|Array of commands the messaging extension supports|
+|`messageHandlers`|Array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`|
+|`messageHandlers.type`|String|||The type of message handler. Must be `"link"`.|
+|`messageHandlers.value.domains`|Array of Strings|||Array of domains that the link message handler can register for.|
 
 ### composeExtensions.commands
 
@@ -396,9 +399,6 @@ Each command item is an object with the following structure:
 |`taskInfo.width`|String|||Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'|
 |`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'|
 |`taskInfo.url`|String|||Initial webview URL|
-|`messageHandlers`|Array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`|
-|`messageHandlers.type`|String|||The type of message handler. Must be `"link"`.|
-|`messageHandlers.value.domains`|Array of Strings|||Array of domains that the link message handler can register for.|
 |`parameters`|Array of object|5|✔|The list of parameters the command takes. Minimum: 1; maximum: 5|
 |`parameter.name`|String|64 characters|✔|The name of the parameter as it appears in the client. This is included in the user request.|
 |`parameter.title`|String|32 characters|✔|User-friendly title for the parameter.|
