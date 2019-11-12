@@ -120,3 +120,10 @@ Graphics are going to scale, so be sure to preview them on all platforms.
 ### Avoid including text in a graphic
 
 Anything that needs to be read by a user should be included in a text field. Once an image is dynamically scaled, any text you add to a graphic may become unintelligible.
+
+### Use mentions if you want the attention of specific users
+
+> [!NOTE]
+> Mention support in cards is currently supported in _Developer Preview_ only.
+
+Mentions are a great way to notify specific users in a Team or group chat. You can include a mention in card in scenarios like, a task thats assigned to a user or giving Kudos to a teammate. Learn how to include mentions in cards in the [card formatting page](~/task-modules-and-cards/cards/cards-format.md). 
