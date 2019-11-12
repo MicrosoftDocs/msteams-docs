@@ -100,6 +100,48 @@ The date and localization features mentioned in this topic are not supported in 
     ]
 }
 ```
+## Mention support within Adaptive cards 
+
+> [!NOTE]
+> Mention support in cards is currently supported in _Developer Preview_ only.
+
+Bots and Messaging extensions can now include mentions within the card content in Text Block and FactSet elements. 
+
+### Constructing mentions
+To include a mention in an Adaptive Card your app needs to include the following elements
+
+* `<at>username</at>` in the supported adaptive card elements
+* The `mention` object inside of an `msteams` property in the card content, which includes the Teams user id of the user being mentioned
+
+### Sample Adaptive card with a mention
+``` json
+{
+  "contentType": "application/vnd.microsoft.card.adaptive",
+  "content": {
+    "type": "AdaptiveCard",
+    "body": [
+      {
+        "type": "TextBlock",
+        "text": "Hi <at>John Doe</at>"
+      }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.0",
+    "msteams": {
+      "entities": [
+        {
+          "type": "mention",
+          "text": "<at>John Doe</at>",
+          "mentioned": {
+            "id": "29:123124124124",
+            "name": "John Doe"
+          }
+        }
+      ]
+    }
+  }
+}
+```
 
 ## HTML formatting for Connector Cards
 
