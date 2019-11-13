@@ -8,6 +8,10 @@ keywords: teams preview developer features
 
 The developer preview includes the following new features:
 
+## Mention support in Adaptive cards
+
+You can now add @ mentions within an Adaptive card body for Bots and Messaging Extension responses. @ mentions in cards follow the same notification logic and rendering as that of a regular message based mentions. Note that card based mentions are only supported in Web and Desktop clients today, with support for rendering in mobile clients coming soon.
+
 ## Adaptive 1.2 Support
 
 Microsoft Teams now supports [Adaptive version 1.2](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0) in Developer Preview. Note that [Media elements](https://adaptivecards.io/explorer/Media.html) aren't supported yet.
