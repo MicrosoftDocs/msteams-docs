@@ -8,9 +8,9 @@ keywords: teams bots rate limiting
 
 As a general principle, your application should limit the number of messages it posts to an individual chat or channel conversation. This ensures an optimal experience that doesn't feel “spammy” to your end users.
 
-To protect Teams and its users, the Microsoft Bot Framework has rate-limits on all endpoints. Apps that go over this limit receive an `HTTP 429 Too Many Requests` error status. All requests are subject to the same rate-limiting policy, including sending messages, channel enumerations, and roster fetches.
+To protect Teams and its users, the Microsoft Teams has rate-limits on all endpoints. Apps that go over this limit receive an `HTTP 429 Too Many Requests` error. All requests are subject to the same rate-limiting policy, including sending messages, channel enumerations, and roster fetches.
 
-Because the exact values of rate limits are subject to change, we recommend your application implement the appropriate backoff behavior when the API returns `HTTP 429 Too Many Requests`.
+Because the exact values of rate limits are subject to change, we recommend your application implement the appropriate back-off behavior when the API returns `HTTP 429 Too Many Requests`.
 
 ## Handling rate limits
 
@@ -41,7 +41,7 @@ Using an exponential backoff with a random jitter (Gaussian distribution) is the
 
 Here is a sample using exponential backoff via the Transient Fault Handling Application Block.
 
-You can perform backoff and retries using a Transient Fault Handling library such as [Polly](https://github.com/App-vNext/Polly). For guidelines on obtaining and installing the NuGet package, see [Installing (Polly) via NuGet](https://github.com/App-vNext/Polly#installing-via-nuget).
+You can perform backoff and retries using [Transient Fault Handling libraries](/previous-versions/msp-n-p/hh680901(v=pandp.50)). For guidelines on obtaining and installing the NuGet package, see [Adding the Transient Fault Handling Application Block to Your Solution](/previous-versions/msp-n-p/hh680891(v=pandp.50)).
 
 ```csharp
 public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectionStrategy
@@ -63,14 +63,14 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
 }
 ```
 
-## Example: backoff
+## Example: Back-off
 
-In addition to detecting rate limits, you can also perform an [exponential backoff](/dotnet/architecture/microservices/implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly).
+In addition to detecting rate limits, you can also perform an exponential back-off.
 
 ```csharp
 /**
 * The first parameter specifies the number of retries before failing the operation.
-* The second parameter specifies the minimum and maximum backoff time respectively.
+* The second parameter specifies the minimum and maximum back-off time respectively.
 * The last parameter is used to add a randomized  +/- 20% delta to avoid numerous clients retrying simultaneously.
 */
 var exponentialBackoffRetryStrategy = new ExponentialBackoff(3, TimeSpan.FromSeconds(2),

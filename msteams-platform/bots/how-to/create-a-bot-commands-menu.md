@@ -18,13 +18,13 @@ Adding a command menu to your bot lets you give your users a list of commands yo
 
 ## Create a command menu for your bot
 
-Command menus are defined in your app manifest. You can either use App Studio to help you create them, or add them manually to the Teams manifest.
+Command menus are defined in your app manifest. You can either use App Studio to help you create them, or add them to your app manifest manually.
 
 ### Creating a command menu for your bot using App Studio
 
 The instructions here assume that you'll be editing an existing app manifest. The steps for adding a command menu are the same, whether you're creating a new manifest or editing an existing one.
 
-1. Open App Studio from the ... overflow menu on the left navigation rail. If you don't have App Studio available you can download it. Please refer to [Installing App Studio](https://aka.ms/teams-app-studio#installing-app-studio).
+1. Open App Studio from the ... overflow menu on the left navigation rail. If you don't have App Studio available you can download it. Please refer to [Installing App Studio](~/concepts/build-and-test/app-studio-overview.md).
 
     ![App Studio](./conversations/media/AppStudio.png)
 
@@ -144,7 +144,7 @@ Bots in a group or channel respond only when they are mentioned ("@botname") in 
 
 # [C#/.NET](#tab/dotnet)
 
-You can parse out the **@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework — a method of the `Activity` class named `RemoveRecipientMention`. *See* [ActivityExtensions.RemoveRecipientMention(IMessageActivity) Method](/dotnet/api/microsoft.bot.schema.activityextensions.removerecipientmention?view=botbuilder-dotnet-stable).
+You can parse out the **@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework — a method of the `Activity` class named `RemoveRecipientMention`.
 
 ```csharp
 var modifiedText = turnContext.Activity.RemoveRecipientMention();
@@ -152,7 +152,7 @@ var modifiedText = turnContext.Activity.RemoveRecipientMention();
 
 # [TypeScript/Node.js](#tab/typescript)
 
-You can parse out the **@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework — a method of the `TurnContext` class named `removeMentionText`. *See* (~/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest).
+You can parse out the **@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework — a method of the `TurnContext` class named `removeMentionText`.
 
 ```typescript
 const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnContext.activity.recipient.id);
@@ -164,4 +164,4 @@ const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnCon
 
 * **Keep it simple**: The bot menu is meant to present the key capabilities of your bot.
 * **Keep it short**: Menu options shouldn’t be extremely long and complex natural language statements — they should be simple commands.
-* **Keep it invokable**: Bot menu actions/commands should always be available, regardless of the state of the conversation or the dialog the bot is in.
+* **Always available**: Bot menu actions/commands should always be available, regardless of the state of the conversation or the dialog the bot is in.
