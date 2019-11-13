@@ -42,12 +42,6 @@ When you're ready to share your Microsoft Teams apps, you have three options dep
 * **[Publish to your organizational app catalog](~/concepts/deploy-and-publish/apps-publish.md)** You can share your app with your entire organization through your app catalog.
 * **[Publish to the public app store](~/concepts/deploy-and-publish/apps-publish.md)** If your app is for everyone, you can publish it to our public app store. Depending on your goals, you might be eligible for marketing and sales assistance.
 
-### The app you create versus the app your users install
-
-Your app may take advantage of multiple extensibility points in the Teams client, and work in a variety of scopes. Your app package you distribute to users will define all of these as a single entity. However, because all app installations in Microsoft Teams are *context-specific*, the entirety of your app may not always be installed for all users.
-
-For example, imagine your app contains a conversational bot that works in both a personal and team conversations, as well as both a personal tab and a channel tab. When your app is installed, it will be installed in a specific context - if a user installs the app in a team, they have not necessarily installed the personal portion of your app. This can be a bit confusing at first, just remember to never expect that all portions of your app will be installed and configure in any given context.
-
 ## Get started
 
 * [Build a bot and tab app in C#](~/tutorials/get-started-dotnet-app-studio.md)

@@ -67,6 +67,12 @@ You have three options for [distributing your Microsoft Teams app](~/concepts/de
 
 When distributing your app you need to take into consideration not just your desired audience, but the IT policies in place in the organization you want to share your app with. Each organization has complete control over determining which apps will be uploaded to their organizational app catalog, and which apps are available to install from the app store.
 
+### The app you create versus the app your users install
+
+Your app may take advantage of multiple extensibility points in the Teams client, and work in a variety of scopes. Your app package you distribute to users will define all of these as a single entity. However, because all app installations in Microsoft Teams are *context-specific*, the entirety of your app may not always be installed for all users.
+
+For example, imagine your app contains a conversational bot that works in both a personal and team conversations, as well as both a personal tab and a channel tab. When your app is installed, it will be installed in a specific context - if a user installs the app in a team, they have not necessarily installed the personal portion of your app. This can be a bit confusing at first, just remember to never expect that all portions of your app will be installed and configure in any given context.
+
 ## Get started quickly
 
 Want to get started quickly? Check out one of our getting started tutorials, or a quickstart for a particular platform feature (which can be found in each feature section of the documentation).

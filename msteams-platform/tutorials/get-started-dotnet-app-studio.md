@@ -13,7 +13,7 @@ To extend Microsoft Teams, you will need to create a Microsoft Teams app. A Micr
 
 This tutorial helps you get started creating a Microsoft Teams app using C# on .NET. You can test the app by loading it into a Team that you have permissions for, or into a test tenant created using the Office Developer Program.
 
-[!include [prepare your environment(~/includes/prepare-environment.md)]
+[!include [prepare your environment](~/includes/prepare-environment.md)]
 
 <a name="GetPrerequisites"></a>
 
