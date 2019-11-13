@@ -96,12 +96,12 @@
           href: concepts/deploy-and-publish/appsource-publishing-guidance/post-publish-app/overview.md
         - name: Application Certification program
           href: concepts/deploy-and-publish/appsource-publishing-guidance/post-publish-app/application-certification.md
-    - name: Authentication in Teams apps
-      items:
-        - name: Authentication overview
-          href: concepts/authentication/authentication.md
-        - name: Configure identity providers
-          href: concepts/authentication/configure-identity-provider.md
+  - name: Authentication in Teams apps
+    items:
+    - name: Authentication overview
+      href: concepts/authentication/authentication.md
+    - name: Configure identity providers
+      href: concepts/authentication/configure-identity-provider.md
 - name: Task-oriented interactions with Messaging Extensions
   items:
     - name: What are Messaging Extensions?
