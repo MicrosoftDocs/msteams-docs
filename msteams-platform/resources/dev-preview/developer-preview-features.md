@@ -8,6 +8,10 @@ keywords: teams preview developer features
 
 The developer preview includes the following new features:
 
+## Adaptive 1.2 Support
+
+Microsoft Teams now supports [Adaptive version 1.2](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0) in Developer Preview. Note that [Media elements](https://adaptivecards.io/explorer/Media.html) aren't supported yet.
+
 ## Tabs Single Sign-On
 
 You can now use [single sign-on (SSO)](~/tabs/how-to/authentication/auth-aad-sso.md) to login and authenticate a user on desktop and mobile using the Teams JavaScript SDK from a web content page. One of the benefits is that a user never has to sign-in; and once they've consented to the app using their profile: they will automatically be signed-in to their tab (including mobile).
