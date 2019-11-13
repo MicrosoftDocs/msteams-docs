@@ -8,7 +8,7 @@ ms.author: anclear
 # Send proactive messages
 
 > [!Note]
-> The code samples in this article make use of the v3 Bot Framework SDK, and v3 Teams Bot Builder SDK extensions. Conceptuall the information applies when using the v4 versions of the SDK, but the code is slightly different.
+> The code samples in this article make use of the v3 Bot Framework SDK, and v3 Teams Bot Builder SDK extensions. Conceptually, the information applies when using the v4 versions of the SDK, but the code is slightly different.
 
 A proactive message is a message that is sent by a bot to start a conversation. You may want your bot to start a conversation for a number of reasons, including:
 
