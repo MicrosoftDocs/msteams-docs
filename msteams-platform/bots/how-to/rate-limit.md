@@ -4,11 +4,11 @@ description: Rate limiting and best practices in Microsoft Teams
 keywords: teams bots rate limiting
 ---
 
-# Optimize your bot: Rate limiting and best practices in Microsoft Teams
+# Optimize your bot: rate limiting and best practices in Microsoft Teams
 
-As a general principle, your application should limit the number of messages it posts into an individual chat or channel conversation. This ensures an optimal experience that does not feel “spammy” to your end users.
+As a general principle, your application should limit the number of messages it posts to an individual chat or channel conversation. This ensures an optimal experience that doesn't feel “spammy” to your end users.
 
-To protect Microsoft Teams, the bot APIs rate-limit incoming requests. Apps that go over this limit receive an `HTTP 429 Too Many Requests` error status. All requests are subject to the same rate-limiting policy, including sending messages, channel enumeration, and roster fetches.
+To protect Teams and its users, the Microsoft Teams has rate-limits on all endpoints. Apps that go over this limit receive an `HTTP 429 Too Many Requests` error. All requests are subject to the same rate-limiting policy, including sending messages, channel enumerations, and roster fetches.
 
 Because the exact values of rate limits are subject to change, we recommend your application implement the appropriate back-off behavior when the API returns `HTTP 429 Too Many Requests`.
 
@@ -19,7 +19,7 @@ When issuing a Bot Builder SDK operation, you can handle `Microsoft.Rest.HttpOpe
 ```csharp
 try
 {
-    // Perform Bot Framework operation 
+    // Perform Bot Framework operation
     // for example, await connector.Conversations.UpdateActivityAsync(reply);
 }
 catch (HttpOperationException ex)
@@ -35,7 +35,7 @@ catch (HttpOperationException ex)
 
 In general, you should take simple precautions to avoid receiving `HTTP 429` responses. For instance, avoid issuing multiple requests to the same personal or channel conversation. Instead, consider batching the API requests.
 
-Using an exponential backoff with a random jitter is the recommended way to handle 429s. This ensures that multiple requests do not introduce collisions on retries. Following are some of the ways you can handle transient errors.
+Using an exponential backoff with a random jitter (Gaussian distribution) is the recommended way to handle 429s. This ensures that multiple requests don't introduce collisions on retries. The following are some of the ways you can handle transient errors:
 
 ## Example: detecting transient exceptions
 
@@ -63,15 +63,15 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
 }
 ```
 
-## Example: backoff
+## Example: Back-off
 
-In addition to detecting rate limits, you can also perform an exponential backoff.
+In addition to detecting rate limits, you can also perform an exponential back-off.
 
 ```csharp
 /**
 * The first parameter specifies the number of retries before failing the operation.
-* The second parameter specifies the minimum and maximum backoff time respectively.
-* The last parameter is used to add a randomized  +/- 20% delta to avoid numerous clients all retrying simultaneously.
+* The second parameter specifies the minimum and maximum back-off time respectively.
+* The last parameter is used to add a randomized  +/- 20% delta to avoid numerous clients retrying simultaneously.
 */
 var exponentialBackoffRetryStrategy = new ExponentialBackoff(3, TimeSpan.FromSeconds(2),
                         TimeSpan.FromSeconds(20), TimeSpan.FromSeconds(1));
@@ -84,18 +84,18 @@ var retryPolicy = new RetryPolicy(new BotSdkTransientExceptionDetectionStrategy(
 await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsync((Activity)reply)).ConfigureAwait(false);
 ```
 
-You can also perform a `System.Action` method execution with the retry policy described above. The library mentioned also allows you to specify a fixed interval or a linear backoff mechanism.
+You can also perform a `System.Action` method execution with the retry policy described above. The open-source Polly library also allows you to specify a fixed interval or a linear backoff mechanism.
 
-We recommend storing the value and strategy in a configuration file to fine tune and tweak values at run time. 
+We recommend storing the value and strategy in a configuration file to fine-tune and tweak values at run time.
 
 For more information, check out this handy guide on various retry patterns: [Retry pattern](/azure/architecture/patterns/retry).
 
 ## Per bot per thread limit
 
->[!Note]
->Message splitting at the service level will result in higher than expected requests per second(RPS). If you are concerned about approaching the limits, you should implement the backoff strategy described above. The values provided below are for estimation only.
+>[!NOTE]
+>Message splitting at the service level will result in higher than expected requests per second (RPS). If you're concerned about approaching the limits, you should implement the backoff strategy described above. The values provided below are for estimation only.
 
-This limit controls the traffic that a bot is allowed to generate on a single conversation. A conversation here is a 1:1 between bot and user, a group-chat, or a channel in a team.
+This limit controls the traffic that a bot is allowed to generate on a single conversation. A conversation here is 1:1 between bot and user, a group-chat, or a channel in a team.
 
 | **Scenario** | **Time-period (sec)** | **Max allowed operations** |
 | --- | --- | --- |
@@ -122,7 +122,7 @@ This limit controls the traffic that a bot is allowed to generate on a single co
 
 ## Per thread limit for all bots
 
-This limit controls the traffic that all bots are allowed to generate across a single conversation. A conversation here is a 1:1 between bot and user, a group-chat, or a channel in a team.
+This limit controls the traffic that all bots are allowed to generate across a single conversation. A conversation here is 1:1 between bot and user, a group-chat, or a channel in a team.
 
 | **Scenario** | **Time-period (sec)** | **Max allowed operations** |
 | --- | --- | --- |
@@ -137,9 +137,9 @@ This limit controls the traffic that all bots are allowed to generate across a s
 | GetThread | 1 | 28 |
 | GetThread | 2 | 32 |
 
-## Bot per datacenter limit
+## Bot per data center limit
 
-This limit controls the traffic that a bot is allowed to generate across all threads in a data-center (across multiple tenants).
+This limit controls the traffic that a bot is allowed to generate across all threads in a data center (across multiple tenants).
 
 |**Time-period (sec)** | **Max allowed operations** |
 | --- | --- |

@@ -12,13 +12,13 @@ ms.author: anclear
 
 ## Updating messages
 
-Rather than have your messages be static snapshots of data, your bot can dynamically update messages inline after sending them. You can use dynamic message updates for scenarios such as poll updates, modifying available actions after a button press, or any other asynchronous state change.
+Rather than have your messages be static snapshots of data, your bot can dynamically update messages after sending them. You can use dynamic message updates for scenarios such as poll updates, modifying available actions after a button press, or any other asynchronous state change.
 
 The new message need not match the original in type. For instance, if the original message contained an attachment, the new message can be a simple text message.
 
 # [C#/.NET](#tab/dotnet)
 
-To update an existing message, pass a new `Activity` object with the existing activity ID to the `UpdateActivityAsync` method of the `TurnContext` class.
+To update an existing message, pass a new `Activity` object with the existing activity ID to the `UpdateActivityAsync` method of the `TurnContext` class. *See* [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable)
 
 ```csharp
 var newActivity = MessageFactory.Text("The new text for the activity");
@@ -28,7 +28,7 @@ await turnContext.UpdateActivityAsync(newActivity, cancellationToken);
 
 # [TypeScript/Node.js](#tab/typescript)
 
-To update an existing message, pass a new `Activity` object with the existing activity ID to the `updateActivity` method of the `TurnContext` object.
+To update an existing message, pass a new `Activity` object with the existing activity ID to the `updateActivity` method of the `TurnContext` object. *See* [updateActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--)
 
 ```typescript
 const newActivity = MessageFactory.text('The new text for the activity');
@@ -41,11 +41,11 @@ await turnContext.updateActivity(newActivity);
 ## Deleting messages
 
 In the Bot Framework, every message has its own unique activity identifier.
-Messages can be deleted using the bot frameworks DeleteActivity method as shown here.
+Messages can be deleted using the Bot Framework's `DeleteActivity` method as shown here.
 
 # [C#/.NET](#tab/dotnet)
 
-To delete that message, pass that activity's ID to the `DeleteActivityAsync` method of the `TurnContext` class.
+To delete that message, pass that activity's ID to the `DeleteActivityAsync` method of the `TurnContext` class. *See* [TurnContext.DeleteActivityAsync Method](/dotnet/api/microsoft.bot.builder.turncontext.deleteactivityasync?view=botbuilder-dotnet-stable)
 
 ```csharp
 foreach (var activityId in _list)
@@ -56,7 +56,7 @@ foreach (var activityId in _list)
 
 # [TypeScript/Node.js](#tab/typescript)
 
-To delete that message, pass that activity's ID to the `deleteActivity` method of the `TurnContext` object.
+To delete that message, pass that activity's ID to the `deleteActivity` method of the `TurnContext` object. *See* [deleteActivity](https://docs.microsoft.com/en-us/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#deleteactivity-string---partial-conversationreference--)
 
 ```typescript
 for (let i = 0; i < activityIds.length; i++) {
