@@ -11,7 +11,7 @@ ms.date: 07/09/2018
 
 ### Accessing the DevTools
 
-You can open [DevTools in the Teams client](~/resources/dev-preview/developer-preview-tools.md) for a similar experience as pressing F12 (on Windows) or Command-Option-I (on MacOS) in a browser.
+You can open [DevTools in the Teams client](~/tabs/how-to/developer-tools.md) for a similar experience as pressing F12 (on Windows) or Command-Option-I (on MacOS) in a browser.
 
 ### Blank tab screen
 
@@ -57,11 +57,11 @@ There is a known issue where updating an existing bot app with a new or updated 
 
 ### Can't add my bot
 
-Apps must be enabled by the Office 365 tenant admin for them to be loaded by end users. Note that in some cases, the Office 365 tenant might have multiple SKUs associated with it, and for bots to work in any, they must be enabled in all SKUs. See [Prepare your Office 365 tenant](~/get-started/get-started-tenant.md) for more information.
+Apps must be enabled by the Office 365 tenant admin for them to be loaded by end users. Note that in some cases, the Office 365 tenant might have multiple SKUs associated with it, and for bots to work in any, they must be enabled in all SKUs. See [Prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md) for more information.
 
 ### Can't add bot as a member of a team
 
-Bots must first be upload into a team before it is accessible within any channel of that team. Please review [Uploading your app in a team](~/concepts/apps/apps-upload.md) for more information on this process.
+Bots must first be upload into a team before it is accessible within any channel of that team. Please review [Uploading your app in a team](~/concepts/deploy-and-publish/apps-upload.md) for more information on this process.
 
 ### My bot doesn't get my message in a channel
 
@@ -69,7 +69,7 @@ Bots in channels receive messages only when they are explicitly @mentioned, even
 
 ### My bot doesn't understand my commands when in a channel
 
-Because bots in channels only receive messages when they are @mentioned, all messages that your bot receives in a channel include that @mention in the text field. It is a best practice to strip the bot name itself out of all incoming text messages before passing along to your parsing logic. Review [Mentions](~/concepts/bots/bot-conversations/bots-conv-channel.md#-mentions) for tips on how to handle this case.
+Because bots in channels only receive messages when they are @mentioned, all messages that your bot receives in a channel include that @mention in the text field. It is a best practice to strip the bot name itself out of all incoming text messages before passing along to your parsing logic. Review [Mentions](~/bots/how-to/conversations/channel-and-group-conversations.md#working-with--mentions) for tips on how to handle this case.
 
 ## Issues with packaging and uploading
 

@@ -17,40 +17,16 @@ A conversation is a series of messages sent between your bot and one or more use
 
 A bot behaves slightly differently depending on what kind of conversation it is involved in:
 
-* [Bots in channel and group chat conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) require the user to @ mention the bot to invoke it in a channel.
+* Bots in channel and group chat conversations require the user to @ mention the bot to invoke it in a channel.
 * Bots in a one-to-one conversation do not require an @ mention. All messages sent by the user will be routed to your bot.
 
-To enable your bot in a particular scope, add that scope to your app manifest. Scopes are defined and discussed further in the [manifest reference](~/resources/schema/manifest-schema.md).
+To enable your bot in a particular scope, add that scope to your [app manifest](~/resources/schema/manifest-schema.md).
 
 ## Activities
 
 Each message is an `Activity` object of type `messageType: message`. When a user sends a message, Teams posts the message to your bot; specifically, it sends a JSON object to your bot's messaging endpoint. Your bot examines the message to determine its type and responds accordingly.
 
-Bots also support event-style messages. See [subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md) for more details.
-
 Basic conversation is handled through the Bot Framework Connector, a single REST API to enable your bot to communicate with Teams and other channels. The Bot Builder SDK provides easy access to this API, additional functionality to manage conversation flow and state, and simple ways to incorporate cognitive services such as natural language processing (NLP).
-
-## Message content
-
-Your bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot.
-
-| Format    | From user to bot | From bot to user | Notes                                                                                   |
-|-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
-| Rich text | ✔                | ✔                |                                                                                         |
-| Pictures  | ✔                | ✔                | Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF are not supported  |
-| Cards     | ✖                | ✔                | See the [Teams Card Reference](~/concepts/cards/cards-reference.md) for supported cards |
-| Emojis    | ✖                | ✔                | Teams currently supports emojis via UTF-16 (such as U+1F600 for grinning face)          |
-
-## Picture messages
-
-Pictures are sent by adding attachments to a message. You can find more information on attachments in the [Bot Framework documentation](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0).
-
-Pictures can be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF is not supported.
-
-We recommend that you specify the height and width of each image by using XML. If you use Markdown, the image size defaults to 256×256. For example:
-
-* Use - `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
-* Don't use - `![Duck on a rock](http://aka.ms/Fo983c)`
 
 ## Receive a message
 
@@ -65,12 +41,23 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 {
   await turnContext.SendActivityAsync(MessageFactory.Text($"Echo: {turnContext.Activity.Text}"), cancellationToken);
 }
+
 ```
 
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-asdf
+
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onMessage(async (context, next) => {
+            await context.sendActivity(`Echo: '${context.activity.text}'`);
+            await next();
+        });
+    }
+}
+
 ```
 
 # [JSON](#tab/json)
@@ -128,18 +115,69 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 {
   await turnContext.SendActivityAsync(MessageFactory.Text($"Hello and welcome!"), cancellationToken);
 }
+
 ```
 
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-asdf
+
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onMessage(async (context, next) => {
+            await context.sendActivity('Hello and welcome!');
+            await next();
+        });
+    }
+}
 ```
 
 # [JSON](#tab/json)
-```json
 
+<!-- Verify -->
+
+```json
+{
+    "text": "hi",
+    "textFormat": "plain",
+    "type": "message",
+    "timestamp": "2019-10-31T20:57:27.2347285Z",
+    "localTimestamp": "2019-10-31T13:57:27.2347285-07:00",
+    "id": "1572555447214",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer/",
+    "from": {
+        "id": "29:1Xv-kvy4dKirR0rZfSF_kAVUzotoT1SXuEzkC9XGkuZng8YBw8qyu5uh4128fQRjlGgvEiRLx-0XP4KYMwcgdZw",
+        "name": "Jane Doe",
+        "aadObjectId": "df486eae-88fd-42a5-b45e-c581588186db"
+    },
+    "conversation": {
+        "conversationType": "personal",
+        "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+        "id": "a:1oAmWTVBBe9E0JrpGxauqNyx4CCE_iQf2ZuWon9D42722Fon3wYIpbhgbRChE3wgVS1Gwl9zS1pZy4FSu6-x1vGEq5KBQK-EbBgyPyeP_C-lbLBY3vxnGk9m9D_282jbg"
+    },
+    "recipient": {
+        "id": "28:5baea8d1-d4ea-43a1-b101-882f4c8d9cb4",
+        "name": "Imported Bot"
+    },
+    "entities": [
+        {
+            "locale": "en-US",
+            "country": "US",
+            "platform": "Windows",
+            "type": "clientInfo"
+        }
+    ],
+    "channelData": {
+        "tenant": {
+            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+    },
+    "locale": "en-US"
+}
 ```
+
 * * *
 
 ## Teams channel data
@@ -150,14 +188,14 @@ The `channelData` object is not included in messages in personal conversations s
 
 A typical channelData object in an activity sent to your bot contains the following information:
 
-* `eventType` Teams event type; passed only in cases of [channel modification events](~/bots/bots-notifications.md#channel-updates)
+* `eventType` Teams event type; passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 * `tenant.id` Azure Active Directory tenant ID; passed in all contexts
 * `team` Passed only in channel contexts, not in personal chat.
   * `id` GUID for the channel
-  * `name` Name of the team; passed only in cases of [team rename events](~/concepts/bots/bots-notifications.md#team-name-updates)
+  * `name` Name of the team; passed only in cases of [team rename events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 * `channel` Passed only in channel contexts when the bot is mentioned or for events in channels in teams where the bot has been added
   * `id` GUID for the channel
-  * `name` Channel name; passed only in cases of [channel modification events](~/concepts/bots/bots-notifications.md#channel-updates).
+  * `name` Channel name; passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 * `channelData.teamsTeamId` Deprecated. This property is included only for backwards compatibility.
 * `channelData.teamsChannelId` Deprecated. This property is included only for backwards compatibility.
 
@@ -179,14 +217,103 @@ A typical channelData object in an activity sent to your bot contains the follow
 }
 ```
 
-## Additional resources
+## Message content
 
-* Inside the bots - [How bots work](https://docs.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&tabs=csharp)
-* Conversations and messages in Teams - [Have a conversation with a Microsoft Teams bot](../../../_old/concepts/bots/bot-conversations/bots-conversations.md)
-* Activity processing in general - [activity processing](https://docs.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&tabs=csharp#the-activity-processing-stack)
-* Formatting - [message activity section](https://aka.ms/botSpecs-activitySchema#message-activity)
+Your bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot.
+
+| Format    | From user to bot | From bot to user | Notes                                                                                   |
+|-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
+| Rich text | ✔                | ✔                |                                                                                         |
+| Pictures  | ✔                | ✔                | Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF are not supported  |
+| Cards     | ✖                | ✔                | See the [Teams Card Reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards |
+| Emojis    | ✖                | ✔                | Teams currently supports emojis via UTF-16 (such as U+1F600 for grinning face)          |
+
+## Adding notifications to your message
+
+Notifications alert users about new tasks, mentions and comments related to what they are working on, or need to look at by inserting a notice into their Activity Feed. You can set notifications to trigger from your bot message by setting the `TeamsChannelData` objects `Notification.Alert` property to true. Whether or not a notification is raised will ultimately depend on the individual user's Teams settings and you cannot programmatically override these settings. The type of notification will be either a banner or both a banner and an email.
+
+# [C#/.NET](#tab/dotnet)
+
+```csharp
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+  var message = MessageFactory.Text("You'll get a notification, if you've turned them on.");
+  message.TeamsNotifyUser();
+
+  await turnContext.SendActivityAsync(message);
+}
+```
+
+# [TypeScript/Node.js](#tab/typescript)
+
+```typescript
+this.onMessage(async (turnContext, next) => {
+    const message = MessageFactory.text("You'll get a notification, if you've turned them on.");
+    teamsNotifyUser(turnContext.activity);
+
+    await turnContext.sendActivity(message);
+
+    // By calling next() you ensure that the next BotHandler is run.
+    await next();
+});
+```
+
+# [JSON](#tab/json)
+
+```json
+{
+    "type": "message", 
+    "text": "Hey <at>Pranav Smith</at> check out this message",
+    "timestamp": "2017-10-29T00:51:05.9908157Z",
+    "localTimestamp": "2017-10-28T17:51:05.9908157-07:00",
+    "serviceUrl": "https://skype.botframework.com",
+    "channelId": "msteams",
+    "from": {
+        "id": "28:9e52142b-5e5e-4d7b-bb3e- e82dcf620000",
+        "name": "SchemaTestBot"
+    },
+    "conversation": {
+        "id": "19:aebd0ad4d6ab42c8b9ed19c251c2fc37@thread.skype;messageid=1481567603816"
+    },
+    "recipient": {
+        "id": "8:orgid:6aebbad0-e5a5-424a-834a-20fb051f3c1a",
+        "name": "stlrgload100"
+    },
+    "attachments": [
+        {
+            "contentType": "image/png",
+            "contentUrl": "https://upload.wikimedia.org/wikipedia/en/a/a6/Bender_Rodriguez.png",
+            "name": "Bender_Rodriguez.png"
+        }
+    ],
+    "entities": [
+        {
+            "type":"mention",
+            "mentioned":{
+                "id":"29:08q2j2o3jc09au90eucae",
+                "name":"Pranav Smith"
+            },
+            "text": "<at>@Pranav Smith</at>"
+        }
+    ],
+    "replyToId": "3UP4UTkzUk1zzeyW"
+}
+```
+
+* * *
+
+## Picture messages
+
+Pictures are sent by adding attachments to a message. You can find more information on attachments in the [Bot Framework documentation](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0).
+
+Pictures can be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF is not supported.
+
+We recommend that you specify the height and width of each image by using XML. If you use Markdown, the image size defaults to 256×256. For example:
+
+* Use - `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
+* Don't use - `![Duck on a rock](http://aka.ms/Fo983c)`
 
 ## Next steps
 
-* [Sending proactive messages](send-proactive-messages.md)
-* [Subscribe to conversation events](subscribe-to-conversation-events.md)
+* [Sending proactive messages](~/bots/how-to/conversations/send-proactive-messages.md)
+* [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)

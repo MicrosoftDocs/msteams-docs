@@ -13,7 +13,7 @@ Action-based messaging extensions allow your users to trigger actions in externa
 
 The following sections describe how to do this.
 
-[!include[Common content for creating extensions](~/resources/messaging-extension-v3/messaging-extensions-common.md)]
+[!include[Common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
 
 ### Action type message extensions
 
@@ -218,7 +218,7 @@ Below is an example of the `value` object containing the message details that wi
 
 ### Test via uploading
 
-You can test your messaging extension by uploading your app. See [Uploading your app in a team](~/concepts/apps/apps-upload.md) for details.
+You can test your messaging extension by uploading your app. See [Uploading your app in a team](~/concepts/deploy-and-publish/apps-upload.md) for details.
 
 To open your messaging extension, navigate to any of your chats or channels. Choose the **More options** (**&#8943;**) button in the compose box, and choose your messaging extension.
 
@@ -236,7 +236,7 @@ When a user chooses a command with static parameters, Teams will generate a form
 
 In this method, your service can define a custom adaptive card to collect the end user input. For this approach, set the `fetchTask` parameter to `true` in the manifest. Note that if you set `fetchTask` to `true` any static parameters defined for the command will be ignored.
 
-In this method your service will receive a `composeExtension/fetchTask` event and needs to respond with an adaptive card based [task module response](~/concepts/task-modules/task-modules-overview.md#the-taskinfo-object). Below is an sample response with an adaptive card:
+In this method your service will receive a `composeExtension/fetchTask` event and needs to respond with an adaptive card based [task module response](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object). Below is an sample response with an adaptive card:
 
 ```json
 {
@@ -287,7 +287,7 @@ The bot can also respond with an auth/config response if the user needs to authe
 
 In this method your service can show an `<iframe>` based widget to show any custom UI and collect user input. For this approach, set the `fetchTask` parameter to `true` in the manifest.
 
-Just like in the adaptive card flow your service will be send a `fetchTask` event and needs to respond with a URL based [task module response](~/concepts/task-modules/task-modules-overview.md#the-taskinfo-object). Below is an sample response with an Adaptive card:
+Just like in the adaptive card flow your service will be send a `fetchTask` event and needs to respond with a URL based [task module response](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object). Below is an sample response with an Adaptive card:
 
 ```json
 {
@@ -372,7 +372,7 @@ This is used when your extension needs to chain dialogs together to get more inf
 
 ### Compose extension auth/config response
 
-This is used when your extension needs to either authenticate or configure in order to continue. See [authentication section](~/concepts/messaging-extensions/search-extensions.md#authentication) in the search section for more details.
+This is used when your extension needs to either authenticate or configure in order to continue. See [authentication section](~/resources/messaging-extension-v3/search-extensions.md#authentication) in the search section for more details.
 
 ### Compose extension result response
 
@@ -426,7 +426,7 @@ This used to insert a card into the compose box as a result of a the command. It
 
 ### Respond with an adaptive card message sent from a bot
 
-You can also respond to the submit action by inserting a message with an [adaptive card](~/concepts/cards/cards.md#adaptive-cards) into the channel with a bot. Your user will be able to preview the message before submitting it, and potentially edit/interact with it as well. This can be very useful in scenarios where you need to gather information from your users before creating an adaptive card response. The following scenario shows how you can use this flow to configure a poll without including the configuration steps in the channel message.
+You can also respond to the submit action by inserting a message with an Adaptive Card into the channel with a bot. Your user will be able to preview the message before submitting it, and potentially edit/interact with it as well. This can be very useful in scenarios where you need to gather information from your users before creating an adaptive card response. The following scenario shows how you can use this flow to configure a poll without including the configuration steps in the channel message.
 
 1. The user clicks the messaging extension to trigger the task module.
 1. The user uses the task module to configure the poll.
@@ -488,7 +488,7 @@ Your message extension will now need to respond to two new types of interactions
 }
 ```
 
-When responding to the `edit` request you should respond with a `task` response with the values populated with the information the user has already submitted. When responding to the `send` request you should send a message to the channel containing the finalized adaptive card. 
+When responding to the `edit` request you should respond with a `task` response with the values populated with the information the user has already submitted. When responding to the `send` request you should send a message to the channel containing the finalized adaptive card.
 
 # [TypeScript/Node.js](#tab/typescript)
 

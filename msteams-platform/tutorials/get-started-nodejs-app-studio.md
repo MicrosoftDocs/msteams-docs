@@ -9,14 +9,9 @@ ms.date: 11/09/2018
 
 The [Microsoft Teams](/microsoftteams/) developer platform makes it easy for you to extend Teams and integrate your own applications and services seamlessly into the Teams workspace. These apps can then be distributed to your enterprise or for teams around the world.
 
-To extend Microsoft Teams, you need to create a Microsoft Teams [app](~/concepts/apps/apps-overview). A Microsoft Teams app is a web application that you host. This app can then be integrated into the user's workspace in Teams.
+To extend Microsoft Teams, you need to create a Microsoft Teams app. A Microsoft Teams app is a web application that you host. This app can then be integrated into the user's workspace in Teams.
 
-## Before you start this tutorial
-
-You will need an Office 365 tenant that has been set up for development, and you will need to configure teams to allow you to upload apps. You can work with your Office 365 administrator to confirm that your tenant is ready, or you can install a private evaluation version of Office 365 that you can manage. For more information see these topics:
-
-- [Prepare your Office 365 tenant](~/get-started/get-started-tenant)
-- [Prepare Microsoft Teams for development](~/get-started/get-started-configure-teams)
+[!include [prepare your environment(~/includes/prepare-environment.md)]
 
 <a name="DownloadAndHost"></a>
 
@@ -123,13 +118,7 @@ At this point, you can open a browser window and navigate to the following URLs 
 
 Remember that apps in Microsoft Teams are web applications exposing one or more capabilities. For the Teams platform to load your app, your app must be reachable from the internet. To make your app reachable from the internet, you need to *host* your app.
 
-#### Host on the web using Azure
-
-You can host your sample app on any web service that you have access to, such as Azure where you can host this app for free. See [Host your Node.js Teams app in Azure](~/get-started/get-started-nodejs-in-azure) for detailed instructions to host this sample. Once your app is hosted, make a note of the URL of the hosted app. Notepad works fine for this purpose. You will need this URL later when you deploy your app to teams.
-
-#### Host locally using *ngrok*
-
-For quick testing you can run the app on your local machine and create a tunnel to it with a web endpoint. [ngrok](https://ngrok.com) is a free tool that lets you do just that. With *ngrok* you can get a web address such as `https://d0ac14a5.ngrok.io` (this URL is just an example). You can [download and install](https://ngrok.com/download) *ngrok* for your environment. Make sure you add it to a location in your `PATH`.
+For local testing you can run the app on your local machine and create a tunnel to it with a web endpoint. [ngrok](https://ngrok.com) is a free tool that lets you do just that. With *ngrok* you can get a web address such as `https://d0ac14a5.ngrok.io` (this URL is just an example). You can [download and install](https://ngrok.com/download) *ngrok* for your environment. Make sure you add it to a location in your `PATH`.
 
 Once you install it, you can open a new terminal window and run the following command to create a tunnel. The sample uses port 3333, so be sure to specify it here.
 
@@ -172,12 +161,6 @@ WEBSITE_NODE_DEFAULT_VERSION=8.9.4
 ```
 
 How you do that differs depending on how you hosted your app. The important thing about using environment variables is that these values are part of your environment - they can be accessed by the code for your app, but they are not exposed to third parties who might examine the files that make up your site.
-
-### Update your app in Azure
-
-If you followed the instructions in [Host your Node Teams app in Azure](~/get-started/get-started-nodejs-in-azure), you might remember the [Configure environment variables](~/get-started/get-started-nodejs-in-azure#configureenvironmentvariables) step. Refer to that section and enter the values you saved to notepad earlier in this walkthrough. These environment variables will be hosted on the server.
-
-### Update your app in ngrok
 
 If you are running the app using ngrok you'll need to set up some local environment variables. There are many ways to do this, but the easiest, if you are using Visual Studio Code, is to add a [launch configuration](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations):
 
@@ -229,7 +212,6 @@ You can now interact with the bot in Teams. Choose a channel in the team where y
 To test your messaging extension, you can click on the three dots below the input box in your conversation view. A menu will pop up with the **'Hello World'** app in it. When you click it, you will see a number of random texts. You can choose any one of them and it will be inserted it into your conversation.
 
 <img width="430px" title="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
-
 
 <img width="430px" title="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
 

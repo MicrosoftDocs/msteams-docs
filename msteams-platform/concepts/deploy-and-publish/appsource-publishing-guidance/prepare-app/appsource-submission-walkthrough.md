@@ -15,7 +15,7 @@ You need to upload a [submission package](~/concepts/build-and-test/apps-package
 
 ## Submitting your Microsoft Teams app in the Seller Dashboard
 
-For a general overview of the Microsoft Teams app submission flow, see [Publish your Microsoft Teams app to AppSource](~/publishing/apps-publish.md).
+For a general overview of the Microsoft Teams app submission flow, see [Publish your Microsoft Teams app to AppSource](~/concepts/deploy-and-publish/apps-publish.md).
 
 In the [Seller Dashboard](https://sellerdashboard.microsoft.com/Application/Summary):
 
@@ -79,7 +79,7 @@ In the [Seller Dashboard](https://sellerdashboard.microsoft.com/Application/Summ
 
    If you have filled everything in correctly, choose **Submit for approval**. To return later, choose **Save as draft**.
 
->For more information on the approval process, see [Microsoft Teams app approval process](~/publishing/office-store-approval.md).
+>For more information on the approval process, see [Microsoft Teams app approval process](~/concepts/deploy-and-publish/office-store-approval.md).
 
 ## Check the status of your app
 

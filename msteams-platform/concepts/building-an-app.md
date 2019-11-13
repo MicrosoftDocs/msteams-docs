@@ -22,7 +22,6 @@ The most important step in creating a successful app for Microsoft Teams is choo
 Once you've decided what extensibility points and features your app will take advantage of, you'll want to think through each of those interactions. Depending on the design of your app, you might want to look at:
 
 * [Designing great tabs](~/tabs/design/tabs.md)
-* [Designing messaging extensions](~/messaging-extensions/design/messaging-extensions.md)
 * [Designing useful conversational bots](~/bots/design/bots.md)
 
 ## Prepare your environment
@@ -44,7 +43,7 @@ Once you've decided how users are going to interact with your app, its time to b
 * Bot Framework SDK for [messaging extensions](~/messaging-extensions/what-are-messaging-extensions.md) and [conversational bots](~/bots/what-are-bots.md)
 * Teams JavaScript client SDK for [tabs](~/tabs/what-are-tabs.md) and other content pages
 * A [Yeoman generator](~/tutorials/get-started-yeoman.md) for building apps in Node.js
-* A set of open-source controls for your web content pages - [Fluent UI](https://microsoft.github.io/fluent-ui-react/)
+* **Preview** A set of open-source controls for your web content pages - [Fluent UI](https://microsoft.github.io/fluent-ui-react/)
 * Ready-for-production [App Templates](~/samples/app-templates.md)
 * Various [samples](~/samples/code-samples.md) to help you get started
 
@@ -58,7 +57,7 @@ When creating your app package you can choose to create it manually, or use App 
 
 ## Distributing your app
 
-You have three options for [distributing your Microsoft Teams app](~/concepts/apps-publish.md), depending on your target audience.
+You have three options for [distributing your Microsoft Teams app](~/concepts/deploy-and-publish/apps-publish.md), depending on your target audience.
 
 * **Share your app package directly.** You can choose to share your app package directly with users. This is particularly useful if you app is directed towards a limited audience (just a couple of teams or individuals), and during development and testing of your app.
   

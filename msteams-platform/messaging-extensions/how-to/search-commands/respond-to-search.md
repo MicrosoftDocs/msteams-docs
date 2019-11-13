@@ -9,11 +9,9 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Once a user submits the task module, your web service will receive a `composeExtension/submitAction` invoke message with the command id and parameter values set. Your app will have five seconds to respond to the invoke, otherwise the user will receive an "Unable to reach the app" error message, and any reply to the invoke will be ignored by the Teams client.
-
 Your web service will receive a `composeExtension/query` invoke message that contains a `value` object with the search parameters. This invoke is triggered:
 
-* As characters entered into the search box.
+* As characters are entered into the search box.
 * If `initialRun` is set to true in your app manifest, you'll receive the invoke message as soon as the search command is invoked. See [default query](#default-query).
 
 The request parameters itself are found in the `value` object in the request, which includes the following properties:
@@ -36,8 +34,10 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-protected async onTeamsMessagingExtensionQuery(context, action: MessagingExtensionAction): Promise<MessagingExtensionActionResponse> {
+class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
+    async handleTeamsMessagingExtensionQuery(context, query) {
   //code to handle the query
+    }
 }
 ```
 
@@ -94,7 +94,7 @@ We support the following attachment types:
 
 See [What are cards](~/task-modules-and-cards/what-are-cards.md) for an overview.
 
-To learn how to use the thumbnail and hero card types, see [Add cards and card actions](~/task-modules-and-cards/cards-actions.md).
+To learn how to use the thumbnail and hero card types, see [Add cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
 
 For additional documentation regarding the Office 365 Connector card, see [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
@@ -103,7 +103,7 @@ The result list is displayed in the Microsoft Teams UI with a preview of each it
 * Using the `preview` property within the `attachment` object. The `preview` attachment can only be a Hero or Thumbnail card.
 * Extracted from the basic `title`, `text`, and `image` properties of the attachment. These are used only if the `preview` property is not set and these properties are available.
 
-You can display a preview of an Adaptive Card or Office 365 Connector card in the result list simply by setting its preview property; this is not necessary if the results are already hero or thumbnail cards. If you use the preview attachment, it must be either a Hero or Thumbnail card. If no preview property is specified, the preview of the card will fail and nothing will be displayed.
+You can display a preview of an Adaptive Card or Office 365 Connector card in the result list simply by its preview property. This is not necessary if the results are already hero or thumbnail cards. If you use the preview attachment, it must be either a Hero or Thumbnail card. If no preview property is specified, the preview of the card will fail and nothing will be displayed.
 
 ### Response example
 
@@ -144,8 +144,27 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-protected async onTeamsMessagingExtensionSubmitAction(context, action: MessagingExtensionAction): Promise<MessagingExtensionActionResponse> {
-  //code to handle the submit action
+class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
+    async handleTeamsMessagingExtensionQuery(context, query) {
+        const searchQuery = query.parameters[0].value;
+        const response = await axios.get(`http://registry.npmjs.com/-/v1/search?${ querystring.stringify({ text: searchQuery, size: 8 }) }`);
+
+        const attachments = [];
+        response.data.objects.forEach(obj => {
+            const heroCard = CardFactory.heroCard(obj.package.name);
+            const preview = CardFactory.heroCard(obj.package.name);
+            const attachment = { ...heroCard, preview };
+            attachments.push(attachment);
+        });
+
+        return {
+            composeExtension: {
+                type: 'result',
+                attachmentLayout: 'list',
+                attachments: attachments
+            }
+        };
+    }
 }
 ```
 
@@ -315,10 +334,10 @@ The default query has the same structure as any regular user query, with the `na
 Add authentication and/or configuration
 
 * [Add authentication to a messaging extension](~/messaging-extensions/how-to/add-authentication.md)
-* [Add configuration to a messaging extension](~/messaging-extensions/how-to/add-configuration.md)
+* [Add configuration to a messaging extension](~/messaging-extensions/how-to/add-configuration-page.md)
 
 Deploy configuration
 
-* [Deploy your app package](~/foo.md)
+* [Deploy your app package](~/concepts/deploy-and-publish/apps-upload.md)
 
 [!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]

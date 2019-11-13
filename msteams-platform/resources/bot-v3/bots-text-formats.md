@@ -4,11 +4,11 @@ description: Describes text formatting support in bot conversations
 keywords: bots conversations messaging
 ms.date: 03/29/2018
 ---
-## Formatting bot messages
+# Formatting bot messages
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-You can set the optional [`TextFormat`](https://docs.microsoft.com/en-us/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) property to control how your message's text content is rendered.
+You can set the optional [`TextFormat`](https://docs.microsoft.com/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) property to control how your message's text content is rendered.
 
 Microsoft Teams supports the following formatting options:
 
@@ -26,28 +26,25 @@ Currently, the following limitations apply:
 
 * Text-only messages do not support table formatting
 
-For information on formatting in cards see the [Teams Card Reference](~/concepts/cards/cards-reference).
+For information on formatting in cards see the [Teams Card Reference](~/task-modules-and-cards/cards/cards-reference.md).
 
 ### Cross-platform support
 
 To ensure that your formatting works across all platforms supported by Microsoft Teams, be aware that some styles are not currently supported across all platforms.
 
 | Style                     | Text-only messages | Cards (XML only) |
-| ---                       | :---: | :---: |
-| bold                      | ✔ | ✖ |
-| italic                    | ✔ | ✔ |
-| header (levels 1&ndash;3) | ✖ | ✔ |
-| strikethrough             | ✖ | ✔ |
-| horizontal rule           | ✖ | ✖ |
-| unordered list            | ✖ | ✔ |
-| ordered list              | ✖ | ✔ |
-| preformatted text         | ✔ | ✔ |
-| blockquote                | ✔ | ✔ |
-| hyperlink                 | ✔ | ✔ |
-| image link                | ✔ | ✖ |
-
-> [!NOTE]
-> Currently, Connector cards support no formatting across all platforms. See [Cards](~/concepts/bots/bots-conversations#cards) in the next section for more detail.
+|---------------------------|--------------------|------------------|
+| bold                      | ✔                  | ✖                |
+| italic                    | ✔                  | ✔                |
+| header (levels 1&ndash;3) | ✖                  | ✔                |
+| strikethrough             | ✖                  | ✔                |
+| horizontal rule           | ✖                  | ✖                |
+| unordered list            | ✖                  | ✔                |
+| ordered list              | ✖                  | ✔                |
+| preformatted text         | ✔                  | ✔                |
+| blockquote                | ✔                  | ✔                |
+| hyperlink                 | ✔                  | ✔                |
+| image link                | ✔                  | ✖                |
 
 ### Support by individual platform
 
@@ -55,19 +52,19 @@ Support for text formatting varies by type of message and by platform.
 
 #### Text-only messages
 
-| Style                     | Desktop | iOS | Android | 
-| ---                       | :---: | :---: | :---: |
-| bold                      | ✔ | ✔ | ✔ |
-| italic                    | ✔ | ✔ | ✔ |
-| header (levels 1&ndash;3) | ✖ | ✖ | ✖ |
-| strikethrough             | ✔ | ✔ | ✖ |
-| horizontal rule           | ✖ | ✖ | ✖ |
-| unordered list            | ✔ | ✖ | ✖ |
-| ordered list              | ✔ | ✖ | ✖ |
-| preformatted text         | ✔ | ✔ | ✔ |
-| blockquote                | ✔ | ✔ | ✔ |
-| hyperlink                 | ✔ | ✔ | ✔ |
-| image link                | ✔ | ✔ | ✔ |
+| Style                     | Desktop | iOS | Android |
+|---------------------------|---------|-----|---------|
+| bold                      | ✔       | ✔   | ✔       |
+| italic                    | ✔       | ✔   | ✔       |
+| header (levels 1&ndash;3) | ✖       | ✖   | ✖       |
+| strikethrough             | ✔       | ✔   | ✖       |
+| horizontal rule           | ✖       | ✖   | ✖       |
+| unordered list            | ✔       | ✖   | ✖       |
+| ordered list              | ✔       | ✖   | ✖       |
+| preformatted text         | ✔       | ✔   | ✔       |
+| blockquote                | ✔       | ✔   | ✔       |
+| hyperlink                 | ✔       | ✔   | ✔       |
+| image link                | ✔       | ✔   | ✔       |
 
 ### Examples of text formatting
 

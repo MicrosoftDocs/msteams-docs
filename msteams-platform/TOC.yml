@@ -32,37 +32,39 @@
           href: concepts/design/understand-use-cases.md
         - name: "Map use cases to features"
           href: concepts/design/map-use-cases.md
-        - name: "Decide how you will distribute your app"
-          href: concepts/design/distribution-options.md
-        - name: UI Components
-          items:
-            - name: "Colors"
-              href: concepts/design/components/color.md
-            - name: "Buttons, links and controls"
-              href: concepts/design/components/buttons.md
-            - name: "Typography"
-              href: concepts/design/components/typography.md
-            - name: "Fields and Flyouts"
-              href: concepts/design/components/fields.md
         - name: Personal apps
           href: concepts/design/personal-apps.md
-    - name: "Build and test your app"
+        - name: UI Components 
+          items:
+          - name: 'Colors'
+            href: concepts/design/components/color.md
+          - name: 'Buttons, links and controls'
+            href: concepts/design/components/buttons.md
+          - name: 'Typography'
+            href: concepts/design/components/typography.md
+          - name: 'Fields and Flyouts'
+            href: concepts/design/components/fields.md
+          - name: Dialogs
+            href: concepts/design/components/dialogs.md
+    - name: 'Build and test your app'
       items:
-        - name: Prepare your Office 365 tenant
-          href: concepts/build-and-test/prepare-your-o365-tenant.md
-        - name: Use App Studio to create your app
-          href: concepts/build-and-test/app-studio-overview.md
-        - name: Create your app package
-          href: concepts/build-and-test/apps-package.md
-        - name: Test and debug your app
-          href: concepts/build-and-test/debug.md
-        - name: Use deep links for navigation
-          href: concepts/build-and-test/deep-links.md
-        - name: Localizing your app
-          href: concepts/build-and-test/apps-localization.md
-        - name: Create a Share-to-Teams button for your website
-          href: concepts/build-and-test/share-to-teams.md
-    - name: "Deploy and publish your app"
+      - name: Prepare your Office 365 tenant
+        href: concepts/build-and-test/prepare-your-o365-tenant.md      
+      - name: Use App Studio to create your app
+        href: concepts/build-and-test/app-studio-overview.md
+      - name: Create your app package
+        href: concepts/build-and-test/apps-package.md
+      - name: Test and debug your app
+        href: concepts/build-and-test/debug.md
+      - name: Add test data to your environment
+        href: concepts/build-and-test/test-data.md
+      - name: Use deep links for navigation
+        href: concepts/build-and-test/deep-links.md
+      - name: Localizing your app
+        href: concepts/build-and-test/apps-localization.md
+      - name: Create a Share-to-Teams button for your website
+        href: concepts/build-and-test/share-to-teams.md
+    - name: 'Deploy and publish your app'
       items:
         - name: "Choose your deployment methods"
           href: concepts/deploy-and-publish/overview.md
@@ -102,25 +104,21 @@
   items:
     - name: "What are Messaging Extensions?"
       href: messaging-extensions/what-are-messaging-extensions.md
-    - name: Design
-      items:
-        - name: Design overview
-          href: messaging-extensions/design/messaging-extensions.md
     - name: Quickstarts
       items:
         - name: "With action command"
           items:
-            - name: "C#/.NET"
-              href: foo.md
+            - name: 'C#/.NET'
+              href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action
             - name: TypeScript/Node.js
-              href: foo.md
-        - name: "With search command"
+              href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action
+        - name: 'With search command'
           items:
-            - name: "C#/.NET"
-              href: foo.md
+            - name: 'C#/.NET'
+              href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search
             - name: TypeScript/Node.js
-              href: foo.md
-    - name: "How-to guides"
+              href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search
+    - name: 'How-to guides'
       expanded: true
       items:
         - name: "Create a messaging extension"
@@ -141,9 +139,7 @@
               href: messaging-extensions/how-to/search-commands/respond-to-search.md
         - name: Link unfurling
           href: messaging-extensions/how-to/link-unfurling.md
-        - name: "Add a configuration page"
-          href: messaging-extensions/how-to/add-configuration-page.md
-        - name: "Add authentication"
+        - name: 'Add authentication'
           href: messaging-extensions/how-to/add-authentication.md
 - name: "Conversational Bots"
   items:
@@ -153,67 +149,53 @@
       href: bots/bot-basics.md
     - name: Quickstarts
       items:
-        - name: "Create a personal bot"
-          href: foo.md
-        - name: "Create a channel bot"
-          href: foo.md
-        - name: Add AAD authentication
-          href: bots/quickstarts/add-aad-auth.md
-    - name: "Design your bot"
+        - name: Teams conversation bot in C#
+          href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot
+        - name: Teams conversation bot in JavaScript
+          href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot
+    - name: 'Design your bot'
       items:
         - name: "Design overview"
           href: bots/design/bots.md
-        - name: "somethingelse design"
-          href: foo.md
-    - name: "How-to guides"
+    - name: 'How-to guides'
       expanded: true
       items:
-        - name: Create a bot for Teams
-          href: bots/how-to/create-a-bot-for-teams.md
-        - name: Conversations
-          items:
-            - name: Conversation basics
-              href: bots/how-to/conversations/conversation-basics.md
-            - name: Subscribe to conversation events
-              href: bots/how-to/conversations/subscribe-to-conversation-events.md
-            - name: Channel and group conversations
-              href: bots/how-to/conversations/channel-and-group-conversations.md
-            - name: Send proactive messages
-              href: bots/how-to/conversations/send-proactive-messages.md
-            - name: Send and receive files
-              href: bots/how-to/conversations/send-and-receive-files.md
-        - name: Debug your bot
-          items:
-            - name: Debug locally with an IDE
-              href: bots/how-to/debug/locally-with-an-ide.md
-            - name: Debug with the bot emulator
-              href: bots/how-to/debug/with-the-bot-emulator.md
-            - name: Debug with the inspection middleware
-              href: bots/how-to/debug/with-the-inspection-middleware.md
-        - name: Authentication
-          items:
-            - name: Authentication flow in bots
-              href: bots/how-to/authentication/auth-flow-bot.md
-            - name: Add authentication to your bot
-              href: bots/how-to/authentication/add-authentication.md
-        - name: Combine bots with other features and services
-          items:
-            - name: Use Teams tabs with your bot
-              href: bots/how-to/combine-with-other-features-and-services/use-tabs.md
-            - name: Use Teams Task Modules with your bot
-              href: bots/how-to/combine-with-other-features-and-services/use-task-modules.md
-            - name: Use Microsoft Graph with your bot
-              href: bots/how-to/combine-with-other-features-and-services/use-microsoft-graph.md
-        - name: Format your bot message
-          href: bots/how-to/cards-and-formatting/format-your-bot-messages.md
-        - name: Update and delete bot messages
-          href: bots/how-to/update-and-delete-bot-messages.md
-        - name: Get Teams context for your bot
-          href: bots/how-to/get-teams-context.md
-        - name: Create a commands menu for your bot
-          href: bots/how-to/create-a-bot-commands-menu.md
-        - name: Handle bot rate limiting
-          href: bots/how-to/rate-limit.md
+      - name: Create a bot for Teams
+        href: bots/how-to/create-a-bot-for-teams.md
+      - name: Conversations
+        items:
+        - name: Conversation basics
+          href: bots/how-to/conversations/conversation-basics.md
+        - name: Subscribe to conversation events
+          href: bots/how-to/conversations/subscribe-to-conversation-events.md
+        - name: Channel and group conversations
+          href: bots/how-to/conversations/channel-and-group-conversations.md
+        - name: Send proactive messages
+          href: bots/how-to/conversations/send-proactive-messages.md
+        - name: Send and receive files
+          href: bots/how-to/conversations/send-and-receive-files.md
+      - name: Debug your bot
+        items:
+        - name: Debug locally with an IDE
+          href: bots/how-to/debug/locally-with-an-ide.md
+        - name: Debug with the inspection middleware
+          href: /azure/bot-service/bot-service-debug-inspection-middleware
+      - name: Authentication
+        items:
+        - name: Authentication flow in bots
+          href: bots/how-to/authentication/auth-flow-bot.md
+        - name: Add authentication to your bot
+          href: bots/how-to/authentication/add-authentication.md
+      - name: Format your bot message
+        href: bots/how-to/format-your-bot-messages.md
+      - name: Update and delete bot messages
+        href: bots/how-to/update-and-delete-bot-messages.md     
+      - name: Get Teams context for your bot
+        href: bots/how-to/get-teams-context.md
+      - name: Create a commands menu for your bot
+        href: bots/how-to/create-a-bot-commands-menu.md     
+      - name: Handle bot rate limiting
+        href: bots/how-to/rate-limit.md
     - name: Calling and meeting bots
       items:
         - name: Calling and meeting bots overview
@@ -279,9 +261,15 @@
               href: tabs/how-to/authentication/auth-silent-aad.md
         - name: "Using the Teams client SDK"
           href: tabs/how-to/using-teams-client-sdk.md
-        - name: "Adding your custom tab to SharePoint"
+        - name: Getting additional Teams context
+          href: tabs/how-to/access-teams-context.md
+        - name: DevTools for Microsoft Teams tabs
+          href: tabs/how-to/developer-tools.md
+        - name: 'Adding your custom tab to SharePoint'
           href: tabs/how-to/tabs-in-sharepoint.md
-- name: "Task modules and cards"
+        - name: Request device permissions
+          href: tabs/how-to/native-device-permissions.md
+- name: 'Task modules and cards'
   items:
     - name: "What are task modules?"
       href: task-modules-and-cards/what-are-task-modules.md
@@ -307,19 +295,17 @@
   items:
     - name: "What are Webhooks and Connectors?"
       href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
-    - name: Quickstarts
-      items:
-        - name: "Create an incoming webhook"
-          href: webhooks-and-connectors/quickstarts/add-incoming-webhook.md
-        - name: "Create an outgoing webhook"
-          href: webhooks-and-connectors/quickstarts/add-outgoing-webhook.md
-    - name: "How-to guides"
+    - name: 'How-to guides'
       expanded: true
       items:
-        - name: dosoemthign
-          href: foo.md
-        - name: dosomethingelse
-          href: foo.md
+      - name: 'Create an incoming webhook'
+        href: webhooks-and-connectors/how-to/add-incoming-webhook.md
+      - name: 'Create an outgoing webhook'
+        href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
+      - name: Create an O365 Connector
+        href: webhooks-and-connectors/how-to/connectors-creating.md
+      - name: Sending messages to Connectors and Webhooks
+        href: webhooks-and-connectors/how-to/connectors-using.md
 - name: Resources
   items:
     - name: Bots - v3 SDK
@@ -369,9 +355,7 @@
           href: resources/schema/manifest-schema-dev-preview.md
         - name: "Features in Developer Preview"
           href: resources/dev-preview/developer-preview-features.md
-        - name: "Using DevTools in the client"
-          href: resources/dev-preview/developer-preview-tools.md
-    - name: "Supported media formats for bots"
+    - name: 'Supported media formats for bots'
       href: resources/media-formats.md
     - name: "Manifest schema"
       href: resources/schema/manifest-schema.md

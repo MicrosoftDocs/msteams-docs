@@ -5,7 +5,7 @@ description: How to add authentication to a messaging extension
 ms.topic: conceptual
 ms.author: anclear
 ---
-# Add a configuration page to your messaging extension
+# Add authentication to your messaging extension
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 

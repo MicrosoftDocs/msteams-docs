@@ -23,7 +23,7 @@ The following metadata is required in your manifest.json file and for AppSource 
 ## Localized content
 
 > [!NOTE]
-> AppSource plans to support localized content for the following metadata. Currently, your app listing will only show in English in AppSource, but will display properly localized in the Teams client. See [localizing your app](~/publishing/apps-localization.md) for more information.
+> AppSource plans to support localized content for the following metadata. Currently, your app listing will only show in English in AppSource, but will display properly localized in the Teams client. See [localizing your app](~/concepts/build-and-test/apps-localization.md) for more information.
 
 |Data|Type|Size|Manifest|Seller Dashboard|Description|
 |---|---|---|---|---|---|
@@ -35,7 +35,7 @@ The following metadata is required in your manifest.json file and for AppSource 
 
 ## Submission extras for bots
 
-Bots in Microsoft Teams must be created using Bot Framework. See [Create a bot](~/concepts/bots/bots-create.md) for instructions. Use a 96x96 color icon for your bot's icon in Bot Framework.
+Bots in Microsoft Teams must be created using Bot Framework. See [Create a bot](~/bots/how-to/create-a-bot-for-teams.md) for instructions. Use a 96x96 color icon for your bot's icon in Bot Framework.
 
 ## Screenshots
 

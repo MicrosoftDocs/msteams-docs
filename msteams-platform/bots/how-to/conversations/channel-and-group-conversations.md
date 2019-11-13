@@ -23,7 +23,7 @@ A bot should provide information that is both appropriate and relevant to all me
 
 ## Creating new conversation threads
 
-When your bot is installed in a team, it can sometimes be necessary to create a new conversation thread rather than replying to an existing one. This is a form of [proactive messaging](~/send-proactive-messages.md#creating-a-channel-conversation).
+When your bot is installed in a team, it can sometimes be necessary to create a new conversation thread rather than replying to an existing one. This is a form of [proactive messaging](~/bots/how-to/conversations/send-proactive-messages.md).
 
 ## Working with @ Mentions
 
@@ -44,22 +44,33 @@ You can retrieve all mentions in the message by calling the `GetMentions` functi
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
-  Mention[] mentions = turnContext.Activity.GetMentions();
-  if(mentions != null) {
-    ChannelAccount firstMention = mentions[0].Mentioned;
-    await turnContext.SendActivityAsync(MessageFactory.Text($"Hello {firstMention.Name}"));
-  }
-  else {
-    await turnContext.SendActivityAsync(MessageFactory.Text($"Aw, no one was mentioned."));
-  }
-  
+    Mention[] mentions = turnContext.Activity.GetMentions();
+    if(mentions != null)
+    {
+        ChannelAccount firstMention = mentions[0].Mentioned;
+        await turnContext.SendActivityAsync($"Hello {firstMention.Name}");
+    }
+    else
+    {
+        await turnContext.SendActivityAsync("Aw, no one was mentioned.");
+    }
 }
 ```
 
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-asdf
+this.onMessage(async (turnContext, next) => {
+    const mentions = TurnContext.getMentions(turnContext.activity);
+    if (mentions){
+        const firstMention = mentions[0].mentioned;
+        await turnContext.sendActivity(`Hello ${firstMention.name}.`);
+    } else {
+        await turnContext.sendActivity(`Aw, no one was mentioned.`);
+    }
+
+    await next();
+});
 ```
 
 # [JSON](#tab/json)
@@ -122,23 +133,36 @@ The Bot Framework SDK provides helper methods and objects to make constructing t
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
-  var mention = new Mention
-  {
-    Mentioned = turnContext.Activity.From,
-    Text = $"<at>{turnContext.Activity.From.Name}</at>",
-  };
+    var mention = new Mention
+    {
+        Mentioned = turnContext.Activity.From,
+        Text = $"<at>{turnContext.Activity.From.Name}</at>",
+    };
 
-  var replyActivity = MessageFactory.Text($"Hello {mention.Text}.");
-  replyActivity.Entities = new List<Entity> { mention };
+    var replyActivity = MessageFactory.Text($"Hello {mention.Text}.");
+    replyActivity.Entities = new List<Entity> { mention };
 
-  await turnContext.SendActivityAsync(replyActivity, cancellationToken);
+    await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 }
 ```
 
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-asdf
+this.onMessage(async (turnContext, next) => {
+    const mention = {
+        mentioned: turnContext.activity.from,
+        text: `<at>${turnContext.activity.from.name}</at>`
+    } as Mention;
+
+    const replyActivity = MessageFactory.text(`Hello ${mention.text}`);
+    replyActivity.entities = [mention];
+
+    await turnContext.sendActivity(replyActivity);
+
+    // By calling next() you ensure that the next BotHandler is run.
+    await next();
+});
 ```
 
 # [JSON](#tab/json)
@@ -187,9 +211,9 @@ The `text` field in the object in the `entities` array must *exactly* match a po
 
 * * *
 
-## Sending an message on installation
+## Sending a message on installation
 
-When your bot is first added to the group or team, it may be useful to send a message introducing it. The message should provide a brief description of the bot’s features, and how to use them. You'll want to subscribe to the `conversationUpdate` event, with the `teamMemberAdded` eventType.  Since the event is sent when any new team member is added, you need to check to determine if the new member added is the bot. See [Sending a welcome message to a new team member](../send-proactive-messages.md#welcome-messages) for more details.
+When your bot is first added to the group or team, it may be useful to send a message introducing it. The message should provide a brief description of the bot’s features, and how to use them. You'll want to subscribe to the `conversationUpdate` event, with the `teamMemberAdded` eventType.  Since the event is sent when any new team member is added, you need to check to determine if the new member added is the bot. See [Sending a welcome message to a new team member](~/bots/how-to/conversations/send-proactive-messages.md) for more details.
 
 You might also want to send a personal message to each member of the team when the bot is added. To do this, you could get the team roster and send each user a direct message.
 
@@ -200,40 +224,10 @@ It is not recommended to send a message in the following situations:
 * A group or channel is renamed
 * A team member is added to a group or channel
 
-## Adding notifications to your message
-
-Notifications alert users about new tasks, mentions and comments related to what they are working on, or need to look at. You can set notifications to trigger from your bot message by setting the `TeamsChannelData` objects `Notification.Alert` property to true. Whether or not a notification is raised will ultimately depend on the individual user's Teams settings and you cannot programmatically override these settings. The type of notification will be either a banner or both a banner and an email.
-
-# [C#/.NET](#tab/dotnet)
-
-```csharp
-protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
-{
-  var message = MessageFactory.Text("You'll get a notification, if you've turned them on.");
-  message.TeamsNotifyUser();
-
-  await turnContext.SendActivityAsync(message);
-}
-```
-
-# [TypeScript/Node.js](#tab/typescript)
-
-```typescript
-asdf
-```
-
-# [JSON](#tab/json)
-
-```json
-asdf
-```
-
-* * *
-
 ## Learn more
 
 Your bot has access to additional information about the group chat or team it is installed in. See [get teams context](~/bots/how-to/get-teams-context.md) for additional APIs available for your bot.
 
 There are also additional events that your bot can subscribe and respond to. See [subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md) to learn how.
 
-[!INCLUDE [sample](~/includes/bots/teams-conversation-bot-sample.md)]
+[!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]

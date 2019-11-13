@@ -12,7 +12,7 @@ ms.author: laujan
 
 In this quickstart we'll walk-through creating a custom personal tab using the [Teams Yeoman generator](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App). We'll also upload the application to Team.
 
-[!INCLUDE [node-js-yeoman-prereq](../../includes/tabs/node-js-yeoman-prereq.md)]
+[!INCLUDE [node-js-yeoman-prereq](~/includes/tabs/node-js-yeoman-prereq.md)]
 
 **Do you want to create a configurable or static tab?**
 
@@ -96,7 +96,7 @@ Remember to update the **"contentURL"** path component **yourDefaultTabNameTab**
 
 Open a command prompt in your project directory to complete the next tasks.
 
-[!INCLUDE [node-js-yeoman-gulp-tasks](../../includes/tabs/node-js-yeoman-gulp-tasks.md)]
+[!INCLUDE [node-js-yeoman-gulp-tasks](~/includes/tabs/node-js-yeoman-gulp-tasks.md)]
 
 To view your personal tab, go to `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`
 
@@ -119,7 +119,7 @@ gulp ngrok-serve
 
 ## Upload your application to Teams
 
-- Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/foo.md).
+- Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
 - In the *YourTeams* panel on the left, select the `...` menu next to the team that you're using to test your tab and choose **Manage team**.
 - In the main panel select **Apps** from the tab bar and choose **Upload a custom app** located in the lower right-hand corner of the page.
 - Open your project directory, browse to the **./package** folder, select the zip folder, right-click, and choose **Open**. Your tab will upload into Teams.
@@ -127,8 +127,3 @@ gulp ngrok-serve
 ## View your personal tabs
 
 In the navbar located at the far-left of the Teams client, select the `...` menu and choose your app from the list.
-
-## Next Steps
-
-- [learn something](~/foo.md)
-- [and something else](~/foo.md)

@@ -30,11 +30,11 @@ When your tab is uploaded to a channel or group chat, Teams will add a right-cli
 
 ## Create a tab removal page for your application
 
-The optional removal page is an HTML page that you host and is displayed when the tab is removed. The removal page URL is designated by the `setSettings()` method within your configuration page. As with all pages in your app, the removal page must comply with [Teams tab requirements](~/platform/tabs/how-to/extend-app-with-tab.md).
+The optional removal page is an HTML page that you host and is displayed when the tab is removed. The removal page URL is designated by the `setSettings()` method within your configuration page. As with all pages in your app, the removal page must comply with [Teams tab requirements](~/tabs/how-to/add-tab.md).
 
 ### Register a remove handler
 
-Optionally, within your removal page logic, you can  invoke the `registerOnRemoveHandler((RemoveEvent) => {}` event handler when the user removes an existing tab configuration. The  method takes in the [`RemoveEvent`](~javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest.md) interface and executes the code in the handler when a user attempts to remove content. It is used to perform cleanup operations such as removing the underlying resource powering the tab content. Only one remove handler can be registered at a time.
+Optionally, within your removal page logic, you can  invoke the `registerOnRemoveHandler((RemoveEvent) => {}` event handler when the user removes an existing tab configuration. The  method takes in the [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest) interface and executes the code in the handler when a user attempts to remove content. It is used to perform cleanup operations such as removing the underlying resource powering the tab content. Only one remove handler can be registered at a time.
 
 The `RemoveEvent` interface describes an object with two methods:
 
@@ -44,15 +44,15 @@ The `RemoveEvent` interface describes an object with two methods:
 
 #### Use the `getSettings()` function
 
-You can use `getSettings()`to designate the tab content to be removed. The `getSettings((Settings) =>{})` function takes in the [`Settings interface`](~/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest) and provides the valid settings property values that can be retrieved.
+You can use `getSettings()`to designate the tab content to be removed. The `getSettings((Settings) =>{})` function takes in the [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest) and provides the valid settings property values that can be retrieved.
 
 #### Use the `getContext()` function
 
-You can use `getContext()` to retrieves the current context in which the frame is running. The `getContext((Context) =>{})` function takes in the [`Context interface`](~/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) and provides valid `Context` property values that you can use in your removal page logic to determine the content to display in the removal page.
+You can use `getContext()` to retrieves the current context in which the frame is running. The `getContext((Context) =>{})` function takes in the [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) and provides valid `Context` property values that you can use in your removal page logic to determine the content to display in the removal page.
 
 #### Include authentication
 
-You might require authentication before allowing a user to delete the tab content. See [Authenticate a user in a Microsoft Teams tab](foo.md) Context information can be used to help construct authentication requests and authorization page URLs. See [Microsoft Teams authentication flow for tabs](foo.md). Make sure that all domains used in your tab pages are listed in the `manifest.json` `validDomains` array.
+You might require authentication before allowing a user to delete the tab content. Context information can be used to help construct authentication requests and authorization page URLs. See [Microsoft Teams authentication flow for tabs](~/tabs/how-to/authentication/auth-flow-tab.md). Make sure that all domains used in your tab pages are listed in the `manifest.json` `validDomains` array.
 
 Below is a sample tab removal code block:
 
@@ -85,17 +85,3 @@ Following the execution of the remove handler, `removeEvent.notifySuccess()` or 
 >To ensure that an authorized user's control over a tab is not inhibited, Teams will remove the tab in both success and failure cases.\
 >Teams enables the **Remove** button after 5 seconds, even if your tab hasn't called `setValidityState()`.\
 >When the user selects **Remove** Teams removes the tab after 30 seconds regardless of whether your actions have completed.
-
-Ready to get started building? Here are a few guidelines:
-
-### Node.js
-
-* [Quickstart: Create a custom personal tab with Node.js and the Yeoman Generator for Microsoft Teams](foo.md)
-* [Quickstart: Create a custom channel and group tab with Node.js and the Yeoman Generator for Microsoft Teams](foo.md)
-
-### .NET
-
-* [Quickstart: Create a Custom Personal Tab with ASP.NET Core](foo.md)
-* [Quickstart: Create a Custom Personal Tab with ASP. NET Core MVC](foo.md)
-* [Quickstart: Create a Custom Channel and Group Tab with ASP.NET Core](foo.md)
-* [Quickstart: Create a Custom Channel and Group Tab with ASP.NET Core MVC](foo.md)

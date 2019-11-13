@@ -9,7 +9,7 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-With link unfurling your app can register to receive an `inovke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` will contain the full URL that was pasted into the compose message area, and you can respond with a card the user can *unfurl*, providing additional information or actions. This works very similarly to a [search command](~/messaging-extensions/how-to/define-search-command.md), with the URL serving as the search term.
+With link unfurling your app can register to receive an `inovke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` will contain the full URL that was pasted into the compose message area, and you can respond with a card the user can *unfurl*, providing additional information or actions. This works very similarly to a [search command](~/messaging-extensions/how-to/search-commands/define-search-command.md), with the URL serving as the search term.
 
 The Azure DevOps messaging extension uses link unfurling to look for URLs pasted into the compose message area pointing to a work item. In the screenshot below, a user has pasted in a URL for a work item in Azure DevOps which the messaging extension has resolved into a card.
 
@@ -83,10 +83,27 @@ protected override async Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQue
 }
 ```
 
-# [TypeScript/Node.js](#tab/typescript)
+# [JavaScript/Node.js](#tab/javascript)
 
-```typescript
-asdf
+```javascript
+class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
+  handleTeamsAppBasedLinkQuery(context, query) {
+    const attachment = CardFactory.thumbnailCard('Thumbnail Card',
+      query.url,
+      ['https://raw.githubusercontent.com/microsoft/botframework-sdk/master/icon.png']);
+
+    const result = {
+      attachmentLayout: 'list',
+      type: 'result',
+      attachments: [attachment]
+    };
+
+    const response = {
+      composeExtension: result
+    };
+    return response;
+  }
+}
 ```
 
 # [JSON](#tab/json)

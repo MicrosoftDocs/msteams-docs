@@ -1,12 +1,12 @@
 ## Add a messaging extension to your app
 
-A messaging extension is a cloud-hosted service that listens to user requests and responds with structured data, such as a [card](~/concepts/cards/cards.md). You integrate your service with Microsoft Teams via Bot Framework `Activity` objects. Our .NET and Node.js [extensions for the Bot Builder SDK](~/get-started/code.md#microsoft-teams-extensions-for-the-bot-builder-sdk) can help you add messaging extension functionality to your app.
+A messaging extension is a cloud-hosted service that listens to user requests and responds with structured data, such as a [card](~/task-modules-and-cards/what-are-cards.md). You integrate your service with Microsoft Teams via Bot Framework `Activity` objects. Our .NET and Node.js extensions for the Bot Builder SDK can help you add messaging extension functionality to your app.
 
 ![Diagram of message flow for messaging extensions](~/assets/images/compose-extensions/ceflow.png)
 
 ### Register in the Bot Framework
 
-If you haven’t done so already, you must first register a bot with the Microsoft Bot Framework. (See [Create a bot](~/concepts/bots/bots-create.md) for instructions.) The Microsoft app ID and callback endpoints for your bot, as defined there, will be used in your messaging extension to receive and respond to user requests. Remember to enable the Microsoft Teams channel for your bot.
+If you haven’t done so already, you must first register a bot with the Microsoft Bot Framework. The Microsoft app ID and callback endpoints for your bot, as defined there, will be used in your messaging extension to receive and respond to user requests. Remember to enable the Microsoft Teams channel for your bot.
 
 Record your bot app ID and app password, you will need to supply the app ID in your app manifest.
 
@@ -45,7 +45,7 @@ In the app manifest, your command item is an object with the following structure
 | `description` | Help text indicating what this command does. This value appears in the UI. | Yes | 1.0 |
 | `type` | Set the type of command. Possible values include `query` and `action`. If not present the default value is set to `query` | No | 1.4 |
 | `initialRun` | Optional parameter, used with `query` commands. If set to **true**, indicates this command should be executed as soon as the user chooses this command in the UI. | No | 1.0 |
-| `fetchTask` | Optional parameter, used with `action` commands. Set to **true** to fetch the adaptive card or web url to display within the [task module](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/task-modules/task-modules-overview). This is used when the inputs to the `action` command is dynamic as opposed to a static set of parameters. Note that the if set to **true** the static parameter list for the command is ignored | No | 1.4 |
+| `fetchTask` | Optional parameter, used with `action` commands. Set to **true** to fetch the adaptive card or web url to display within the [task module](~/task-modules-and-cards/what-are-task-modules.md). This is used when the inputs to the `action` command is dynamic as opposed to a static set of parameters. Note that the if set to **true** the static parameter list for the command is ignored | No | 1.4 |
 | `parameters` | Static list of parameters for the command. | Yes | 1.0 |
 | `parameter.name` | The name of the parameter. This is sent to your service in the user request. | Yes | 1.0 |
 | `parameter.description` | Describes this parameter’s purposes or example of the value that should be provided. This value appears in the UI. | Yes | 1.0 |

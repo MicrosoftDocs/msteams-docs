@@ -21,7 +21,7 @@ Cards used by bots and messaging extensions in Teams support the following activ
 >* Card actions are different than [suggested actions](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button) in Bot Framework/Azure Bot Service. Suggested actions are not supported in Microsoft Teams: if you want buttons to appear on a Teams bot message, use a card.
 >* If you're using a card action as part of a messaging extension, the actions will be not work until the card is submitted to the channel (they will not work while the card is in the compose message box).
 
-Teams also supports [Adaptive Cards actions](~/concepts/cards/cards-actions.md#adaptive-cards-actions), which are only used by Adaptive Cards. These actions are listed in their own section at the end of this reference.
+Teams also supports [Adaptive Cards actions](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions), which are only used by Adaptive Cards. These actions are listed in their own section at the end of this reference.
 
 ## openUrl
 
@@ -132,7 +132,7 @@ The `value` field should contain the text string echoed in the chat and therefor
 
 ## invoke
 
-The `invoke` action is used for invoking [task modules](~/concepts/task-modules/task-modules-bots.md).
+The `invoke` action is used for invoking [task modules](~/task-modules-and-cards/task-modules/task-modules-bots.md).
 
 The `invoke` action contains three properties: `type`, `title`, and `value`. The `value` property can contain a string, a stringified JSON object, or a JSON object.
 
@@ -211,7 +211,7 @@ The top-level `replyToId` property contains the ID of the message that the card 
 
 ## signin
 
-Initiates an OAuth flow, allowing bots to connect with secure services, as described in more detail here: [Authentication flow in bots](~/concepts/authentication/auth-flow-bot.md).
+Initiates an OAuth flow, allowing bots to connect with secure services, as described in more detail here: [Authentication flow in bots](~/bots/how-to/authentication/auth-flow-bot.md).
 
 ## Adaptive Cards actions
 

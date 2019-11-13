@@ -27,8 +27,8 @@ See the [Bot Framework Documentation](/azure/bot-service/) for additional inform
 
 The heart of your bot is your web service. It will define a single route, typically `/api/messages`, to receive all requests on. If you're getting started from scratch, you have a few options to choose from.
 
-* Use one of our [quickstarts](#learn-more) tutorials that will guide you through the creation of your web service.
-* Start with the Teams conversation bot sample in either [C#/dotnet](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot) or [JavaScript](~/foo.md).
+* Use one of our [quickstarts](#next-steps) tutorials that will guide you through the creation of your web service.
+* Start with the Teams conversation bot sample in either [C#/dotnet](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot) or [JavaScript](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot).
 * If you're using JavaScript, use the [Yeoman generator for Microsoft Teams](https://github.com/OfficeDev/generator-teams) to scaffold your Teams app, including your web service.
 * Create your web service from scratch. You can choose to add the Bot Framework SDK for your language, or you can work directly with the JSON payloads.
 
@@ -47,12 +47,12 @@ When you edit the properties of an existing registration that is not registered 
 
 Scenarios when you **must** have your bot registration in Azure (either by creating it in the Azure portal or migrating):
 
-* You want to use the Bot Framework's [OAuthPrompt](~/bots/authentication/auth-flow-bot.md) for authentication.
+* You want to use the Bot Framework's [OAuthPrompt](~/bots/how-to/authentication/auth-flow-bot.md) for authentication.
 * You want to enable additional channels like webchat, Direct Line, or Skype.
 
 ### Using App Studio
 
-*App Studio* is an app in Teams that helps with registering your web service as a bot, and creating an app package that references your bot. It also contains a React control library and configurable samples for cards. See [Getting started with Teams App Studio](~/get-started/get-started-app-studio.md).
+*App Studio* is an app in Teams that helps with registering your web service as a bot, and creating an app package that references your bot. It also contains a React control library and configurable samples for cards. See [Getting started with Teams App Studio](~/concepts/build-and-test/app-studio-overview.md).
 
 Remember, if you use App Studio to register your web service you'll need to go to https://dev.botframework.com/bots to manage your registration. Some settings (like your messaging endpoint) can be updated in App Studio as well.
 
@@ -72,7 +72,7 @@ The Bot Framework portal is optimized for registering bots in Microsoft Azure. H
 
 * The Microsoft Teams channel for bots registered on Azure is **free**. Messages sent over the Teams channel will NOT count towards the consumed messages for the bot.
 * If you register your bot using Microsoft Azure, your bot code does not need to be *hosted* on Microsoft Azure.
-* If you do register a bot using Microsoft Azure portal, you must have a Microsoft Azure account. You can [create one for free](https://azure.microsoft.com/en-us/free/). To verify your identity when you create one, you must provide a credit card, but it won't be charged; it's always free to create and use bots with Microsoft Teams.
+* If you do register a bot using Microsoft Azure portal, you must have a Microsoft Azure account. You can [create one for free](https://azure.microsoft.com/free/). To verify your identity when you create one, you must provide a credit card, but it won't be charged; it's always free to create and use bots with Microsoft Teams.
 
 ## Add your bot to your app manifest
 
@@ -82,7 +82,7 @@ Your [app manifest](~/resources/schema/manifest-schema.md) defines the metadata 
 
 1. In the Teams client, open App Studio from the **...** overflow menu on the left navigation rail. If it isn't already installed, you can do so by searching for it.
 2. On the **Manifest editor** tab select **Create a new app** (or if you're adding a bot to an existing app, you can import your app package)
-3. Add your app details (see [manifest schema definition](~/resources/foo.md) for full descriptions of each field).
+3. Add your app details (see [manifest schema definition](~/resources/schema/manifest-schema.md) for full descriptions of each field).
 4. On the **Bots** tab click the **Setup** button.
 5. You can either create a new web service registration (bot), or if you've already registered one select/add it here.
 6. Select the capabilities and scopes your bot will need.
@@ -95,13 +95,13 @@ As with messaging extensions and tabs, you update the [app-manifest](~/resources
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`botId`|String|64 characters|✔|The unique Microsoft app ID for the bot as registered with the Bot Framework. This may well be the same as the overall [app ID](#id).|
+|`botId`|String|64 characters|✔|The unique Microsoft app ID for the bot as registered with the Bot Framework. This may well be the same as the overall app ID.|
 |`needsChannelSelector`|Boolean|||Describes whether or not the bot utilizes a user hint to add the bot to a specific channel. Default: `false`|
 |`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. Default: `false`|
 |`supportsFiles`|Boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. Default: `false`|
 |`scopes`|Array of enum|3|✔|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupchat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
 
-Optionally, you can define one or more list of commands that your bot can recommend to users. The object is an array (maximum of 2 elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. See [Bot menus](~/concepts/bots/bots-menus.md) for more information.
+Optionally, you can define one or more list of commands that your bot can recommend to users. The object is an array (maximum of 2 elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. See [Bot menus](~/bots/how-to/create-a-bot-commands-menu.md) for more information.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -158,9 +158,7 @@ The example below is a simple bot object, with two command lists defined. This i
 
 If you've been using App Studio, you can install your app from the **Test and distribute** tab of the **Manifest editor**. Alternatively, you can install your app package by clicking the `...` overflow menu from the left navigation rail, clicking **More apps**, then the **Upload a custom app** link.
 
-## Learn more
+## Next steps
 
-[foo](~/foo.md)
-
-* [How bots work](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0)
-* [Designing an effective bot](~/bots/design/bots.md)
+* [Bot conversation basics](~/bots/how-to/conversations/conversation-basics.md)
+* [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)

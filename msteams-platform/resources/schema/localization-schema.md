@@ -7,7 +7,7 @@ ms.date: 05/20/2019
 
 # Reference: Localization file JSON schema
 
-The Microsoft Teams localization file describes language translations that will be served based on the client language settings. Your file must conform to the schema hosted at [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.Localization.schema.json`]( https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.Localization.schema.json). For additional information see [app localization](~/publishing/apps-localization.md).
+The Microsoft Teams localization file describes language translations that will be served based on the client language settings. Your file must conform to the schema hosted at [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.Localization.schema.json`]( https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.Localization.schema.json). For additional information see [app localization](~/concepts/build-and-test/apps-localization.md).
 
 ## Sample
 

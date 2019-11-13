@@ -40,11 +40,13 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# [TypeScript/Node.js](#tab/typescript)
+# [JavaScript/Node.js](#tab/javascript)
 
-```typescript
-protected async handleTeamsMessagingExtensionFetchTask(context: TurnContext, action: MessagingExtensionAction): Promise<MessagingExtensionActionResponse> {
-    //handle the fetch task
+```javascript
+class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
+  handleTeamsMessagingExtensionFetchTask(context, action) {
+    //hand fetch task
+  }
 }
 ```
 
@@ -121,14 +123,20 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
   var messageText = action.MessagePayload.Body.Content;
   var fromId = action.MessagePayload.From.User.Id;
 
-  ...
+  //finish handling the fetchTask
 }
 ```
 
-# [TypeScript/Node.js](#tab/typescript)
+# [JavaScript/Node.js](#tab/javascript)
 
-```typescript
-//this is the javascript example.
+```javascript
+class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
+  handleTeamsMessagingExtensionFetchTask(context, action) {
+    const messageText = action.messagePayload.body.content;
+
+    //finish handling the fetchTask
+  }
+}
 ```
 
 # [JSON](#tab/json)
@@ -282,10 +290,52 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# [TypeScript/Node.js](#tab/typescript)
+# [JavaScript/Node.js](#tab/javascript)
 
-```typescript
-//this is the javascript example.
+```javascript
+class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
+    handleTeamsMessagingExtensionFetchTask(context, action) {
+      const adaptiveCard = CardFactory.adaptiveCard({
+        actions: [{
+          data: { submitLocation: 'messagingExtensionFetchTask'},
+          title: 'Submit',
+          type: 'Action.Submit'
+        }],
+        body: [
+          { text: 'Task Module', type: 'TextBlock', weight: 'bolder'},
+          { type: 'TextBlock', text: 'Enter text for Question:' },
+          { id: 'Question', placeholder: 'Question text here', type: 'Input.Text', value: userText },
+          { type: 'TextBlock', text: 'Options for Question:' },
+          { type: 'TextBlock', text: 'Is Multi-Select:' },
+          {
+            choices: [{ title: 'True', value: 'true' }, { title: 'False', value: 'false' }],
+            id: 'MultiSelect',
+            isMultiSelect: false,
+            style: 'expanded',
+            type: 'Input.ChoiceSet',
+            value: isMultiSelect ? 'true' : 'false'
+          },
+          { id: 'Option1', placeholder: 'Option 1 here', type: 'Input.Text', value: option1 },
+          { id: 'Option2', placeholder: 'Option 2 here', type: 'Input.Text', value: option2 }
+        ],
+        type: 'AdaptiveCard',
+        version: '1.0'
+      });
+
+      return {
+        task: {
+          type: 'continue',
+          value: {
+            card: adaptiveCard,
+            height: 450,
+            title: 'Task Module Fetch Example',
+            url: null,
+            width: 500
+          }
+        }
+      };
+    }
+}
 ```
 
 # [JSON](#tab/json)
@@ -337,18 +387,59 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 
 ### With an embedded web view
 
-When using an embedded web view, you'll need to respond with a `task` object with the `value` object containing the URL to the web form you'd like to load. The domains of any URL you want to load must be included in the `validDomains` array in your app's manifest. See the [task module documentation](~/task-modules/what-are-task-modules.md) for complete information on building your embedded web view.
+When using an embedded web view, you'll need to respond with a `task` object with the `value` object containing the URL to the web form you'd like to load. The domains of any URL you want to load must be included in the `validDomains` array in your app's manifest. See the [task module documentation](~/task-modules-and-cards/what-are-task-modules.md) for complete information on building your embedded web view.
 
 # [C#/.NET](#tab/dotnet)
 
 ```csharp
-banana
+protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+{
+  string placeholder = "Not invoked from message";
+
+  if (action.MessagePayload != null)
+  {
+      var messageText = action.MessagePayload.Body.Content;
+      var fromId = action.MessagePayload.From.User.Id;
+      placeholder = "Invoked from message";
+  }
+
+  var response = new MessagingExtensionActionResponse()
+  {
+    Task = new TaskModuleContinueResponse()
+    {
+      Value = new TaskModuleTaskInfo()
+      {
+        Height = "small",
+        Width = "small",
+        Title = "Example task module",
+        Url = "https://contoso.com/msteams/taskmodules/newcustomer,
+        },
+      },
+    },
+  };
+  return response;
+}
 ```
 
-# [TypeScript/Node.js](#tab/typescript)
+# [JavaScript/Node.js](#tab/javascript)
 
-```typescript
-//this is the javascript example.
+```javascript
+class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
+  handleTeamsMessagingExtensionFetchTask(context, action) {
+    return {
+      task: {
+        type: 'continue',
+        value: {
+          width: 500,
+          height: 450,
+          title: 'Task Module Fetch Example',
+          url: 'https://contoso.com/msteams/taskmodules/newcustomer',
+          fallbackUrl: 'https://contoso.com/msteams/taskmodules/newcustomer'
+        }
+      }
+    };
+  }
+}
 ```
 
 # [JSON](#tab/json)
@@ -367,8 +458,6 @@ banana
   }
 }
 ```
-
-TODO: need more about how to craft the web content page, how to build the response payload, and how to submit it back to the messaging extension.
 
 * * *
 

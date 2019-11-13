@@ -2,7 +2,6 @@
 title: Manifest schema reference
 description: Describes the schema supported by the manifest for Microsoft Teams
 keywords: teams manifest schema
-ms.date: 05/20/2019
 ---
 # Reference: Manifest schema for Microsoft Teams
 
@@ -205,9 +204,7 @@ This version string must follow the [semver](http://semver.org/) standard (MAJOR
 
 **Required** &ndash; Microsoft app ID
 
-The unique Microsoft-generated identifier for this app. If you have registered a bot via the Microsoft Bot Framework, or your tab's web app already signs in with Microsoft, you should already have an ID and should enter it here. Otherwise, you should generate a new ID at the Microsoft Application Registration Portal ([My Applications](https://apps.dev.microsoft.com)), enter it here, and then reuse it when you [add a bot](~/concepts/bots/bots-create.md).
-Note: If you are submitting an update to your existing app, the ID in your manifest must not be modified.
-
+The unique Microsoft-generated identifier for this app. If you have registered a bot via the Microsoft Bot Framework, or your tab's web app already signs in with Microsoft, you should already have an ID and should enter it here. Otherwise, you should generate a new ID at the Microsoft Application Registration Portal ([My Applications](https://apps.dev.microsoft.com)), enter it here, and then reuse it when you add a bot.Note: If you are submitting an update to your existing app in AppSource, the ID in your manifest must not be modified.
 
 ## packageName
 
@@ -233,7 +230,7 @@ Specifies information about your company. For apps submitted to AppSource (forme
 
 **Optional**
 
-Allows the specification of a default language, as well as pointers to additional language files. See [localization](~/publishing/apps-localization.md).
+Allows the specification of a default language, as well as pointers to additional language files. See [localization](~/concepts/build-and-test/apps-localization.md).
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -276,7 +273,7 @@ Ensure that your description accurately describes your experience and provides i
 
 **Required**
 
-Icons used within the Teams app. The icon files must be included as part of the upload package. See [Icons](~/concepts/apps/apps-package.md#icons) for more information.
+Icons used within the Teams app. The icon files must be included as part of the upload package. See [Icons](~/concepts/build-and-test/apps-package.md#icons) for more information.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -341,7 +338,7 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 
 ### bots.commandLists
 
-An optional list of commands that your bot can recommend to users. The object is an array (maximum of 2 elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. See [Bot menus](~/concepts/bots/bots-menus.md) for more information.
+An optional list of commands that your bot can recommend to users. The object is an array (maximum of 2 elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. See [Bot menus](~/bots/how-to/create-a-bot-commands-menu.md) for more information.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -375,7 +372,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 
 |Name| Type | Maximum Size | Required | Description|
 |---|---|---|---|---|
-|`botId`|String|64|✔|The unique Microsoft app ID for the bot that backs the messaging extension, as registered with the Bot Framework. This may well be the same as the overall [app ID](#id).|
+|`botId`|String|64|✔|The unique Microsoft app ID for the bot that backs the messaging extension, as registered with the Bot Framework. This may well be the same as the overall App ID.|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a messaging extension can be updated by the user. The default is `false`.|
 |`commands`|Array of object|10|✔|Array of commands the messaging extension supports|
 
@@ -420,7 +417,7 @@ An array of `string` which specifies which permissions the app requests, which l
 * `identity` &emsp; Requires user identity information
 * `messageTeamMembers` &emsp; Requires permission to send direct messages to team members
 
-Changing these permissions when updating your app will cause your users to repeat the consent process the first time they run the updated app. See [Updating your app](~/publishing/apps-publish.md#updating-your-app) for more information.
+Changing these permissions when updating your app will cause your users to repeat the consent process the first time they run the updated app. See [Updating your app](~/concepts/deploy-and-publish/apps-publish.md#updating-your-app) for more information.
 
 ## devicePermissions
 

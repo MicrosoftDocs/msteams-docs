@@ -1,22 +1,22 @@
 ---
-title: "Quickstart: Create a Personal Tab with ASP. NET Core MVC" 
+title: "Create a Personal Tab with ASP. NET Core MVC" 
 author: laujan
 description: A quickstart guide to creating a custom personal tab with ASP. NET Core MVC. 
 ms.topic: quickstart 
 ms.author: laujan 
 ---
-# Quickstart: Create a Custom Personal Tab with ASP. NET Core MVC
+# Create a Custom Personal Tab with ASP. NET Core MVC
 
-In this quickstart we'll walk-through creating a custom personal tab with C# and [ASP. Net Core MVC](aspnet/core/mvc/overview?view=aspnetcore-2.2). We'll also use [App Studio for Microsoft Teams](/foo.md) to finalize your app manifest and deploy your tab to Teams.
+In this quickstart we'll walk-through creating a custom personal tab with C# and ASP. Net Core MVC. We'll also use [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest and deploy your tab to Teams.
 
-[! INCLUDE [dotnet-core-prereq](../../includes/tabs/dotnet-core-prereq.md)]
+[!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
 ## Get the source code
 
-Open a command prompt and create a new directory for your tab project. We have provided a simple [Personal Tab](https://github.com/OfficeDev/msteams-samples/samples/dotnet/tabs/PersonalTabMVC) project to get you started. To retrieve the source code you can download the zip folder and extract the files or [clone](https://help.github.com/articles/cloning-a-repository) the sample repository into your new directory:
+Open a command prompt and create a new directory for your tab project. We have provided a simple project to get you started. To retrieve the source code you can download the zip folder and extract the files or clone the sample repository into your new directory:
 
 ``` bash
-git clone https://github.com/OfficeDev/msteams-samples.git
+git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
 
 Once you have the source code, open Visual Studio and select **Open a project or solution**. Navigate to the tab application directory and open **PersonalTabMVC.sln**.
@@ -99,9 +99,9 @@ The partial view markup *_Layout.cshtml* contains the application's overall page
 
 The controllers use the ViewBag property to transfer values dynamically to the Views.
 
-[! INCLUDE [dotnet-update-personal-app](../../includes/tabs/dotnet-update-personal-app.md)]
+[!INCLUDE [dotnet-update-personal-app](~/includes/tabs/dotnet-update-personal-app.md)]
 
-[! INCLUDE [dotnet-ngrok-intro](../../includes/tabs/dotnet-ngrok-intro.md)]
+[!INCLUDE [dotnet-ngrok-intro](~/includes/tabs/dotnet-ngrok-intro.md)]
 
 * Open a command prompt in the root of your project directory and run the following command:
 
@@ -122,9 +122,4 @@ ngrok http https://localhost:44345 -host-header="localhost:44345"
 
 * In Visual Studio press **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
-[! INCLUDE [dotnet-personal-use-appstudio](../../includes/tabs/dotnet-personal-use-appstudio.md)]
-
-## Next Steps
-
-* [learn something](~/foo.md)
-* [and something else](~/foo.md)
+[!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]

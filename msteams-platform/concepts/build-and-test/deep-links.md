@@ -2,7 +2,6 @@
 title: Create deep links
 description: Describes deep links and how to use them in your apps
 keywords: teams deep link deeplink
-ms.date: 02/19/2019
 ---
 
 # Create deep links to content and features in Microsoft Teams
@@ -14,9 +13,9 @@ You can create links to information and features within the Teams client. Exampl
 
 ## Deep linking to your tab
 
-You can create deep links to entities in Teams. Typically, this is used to create links that navigate to content and information within your tab. For example, if your tab contains a task list team members may create and share links to individual tasks. When clicked, the link navigates to your tab which focuses on the specific item. To implement this, you add a "copy link" action to each item, in whatever way best suits your UI. When the user takes this action, you call `shareDeepLink()` to display a dialog box containing a link that the user can copy to the clipboard. When you make this call, you also pass an ID for your item, which you get back in the [context](~/concepts/tabs/tabs-context.md) when the link is followed and your tab is reloaded.
+You can create deep links to entities in Teams. Typically, this is used to create links that navigate to content and information within your tab. For example, if your tab contains a task list team members may create and share links to individual tasks. When clicked, the link navigates to your tab which focuses on the specific item. To implement this, you add a "copy link" action to each item, in whatever way best suits your UI. When the user takes this action, you call `shareDeepLink()` to display a dialog box containing a link that the user can copy to the clipboard. When you make this call, you also pass an ID for your item, which you get back in the [context](~/tabs/how-to/access-teams-context.md) when the link is followed and your tab is reloaded.
 
-Alternatively, you can also generate deep links programmatically, using the format specified later in this topic. You might want to use these in [bot](~/concepts/bots/bots-overview.md) and [Connector](~/concepts/connectors/connectors.md) messages that inform users about changes to your tab, or to items within it.
+Alternatively, you can also generate deep links programmatically, using the format specified later in this topic. You might want to use these in [bot](~/bots/what-are-bots.md) and [Connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) messages that inform users about changes to your tab, or to items within it.
 
 > [!NOTE]
 > This is different from the links provided by the **Copy link to tab** menu item, which just generates a deep link that points to this tab.
@@ -45,12 +44,12 @@ Use this format for a deep link that you can use in a bot, Connector, or messagi
 The query parameters are:
 
 * `appId`&emsp;The ID from your manifest; for example, "fe4a8eba-2a31-4737-8e33-e5fae6fee194"
-* `entityId`&emsp;The ID for the item in the tab, which you provided when [configuring the tab](~/concepts/tabs/tabs-configuration.md); for example, "tasklist123"
+* `entityId`&emsp;The ID for the item in the tab, which you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md); for example, "tasklist123"
 * `entityWebUrl` or `subEntityWebUrl`&emsp;An optional field with a fallback URL to use if the client does not support rendering the tab; for example, "https://tasklist.example.com/123" or "https://tasklist.example.com/list123/task456"
 * `entityLabel` or `subEntityLabel`&emsp;A label for the item in your tab, to use when displaying the deep link; for example, "Task List 123" or "Task 456"
 * `context`&emsp;A JSON object containing the following fields:
   * `subEntityId`&emsp;An ID for the item _within_ the tab; for example, "task456"
-  * `channelId`&emsp;The Microsoft Teams channel ID (available from the tab [context](~/concepts/tabs/tabs-context.md)); for example, "19:cbe3683f25094106b826c9cada3afbe0@thread.skype". This property is only available in configurable tabs with a scope of "team". It is not available in static tabs, which have a scope of "personal".
+  * `channelId`&emsp;The Microsoft Teams channel ID (available from the tab [context](~/tabs/how-to/access-teams-context.md); for example, "19:cbe3683f25094106b826c9cada3afbe0@thread.skype". This property is only available in configurable tabs with a scope of "team". It is not available in static tabs, which have a scope of "personal".
 
 Examples:
 

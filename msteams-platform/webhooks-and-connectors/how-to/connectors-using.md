@@ -1,36 +1,14 @@
 ---
-title: Using Office 365 Connectors
+title: Sending messages to Connectors and Webhooks
 description: Describes how to use Office 365 Connectors in Microsoft Teams
 keywords: teams o365 connector
-ms.date: 11/29/2018
 ---
 
-# How to add connectors in Microsoft Teams
+# Sending messages to Connectors and Webhooks
 
-Any user can connect a team to services like Trello, GitHub, Bing News, or Twitter and get notified of the team's activity in that service. From tracking a team's progress in Trello to following important hashtags in Twitter, Office 365 Connectors help your team to stay in sync and get more done.
+To send a message through your Office 365 Connector or incoming webhook, you post a JSON payload to the webhook URL. Typically this payload will be in the form of an [Office 365 Connector Card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
-## Access existing Office 365 Connectors from Microsoft Teams
-
-In Microsoft Teams, choose the **More options** (**&#8943;**) button next to the channel name in the list of channels and then choose **Connectors**.
-
-![Screenshot of the "More options" menu next to the channel name, with the Connectors option selected](~/assets/images/connectors/teams-context-menu.png)
-
-In the list, choose **Add** for the Connector you want to use.
-
-![Screenshot of a dialog box showing a list of available Connectors, with a button for adding each one](~/assets/images/connector_list.png)
-
-For more examples, see [Accessing Office 365 Connectors from Microsoft Teams](/outlook/actionable-messages/#accessing-office-365-connectors-from-microsoft-teams).
-
-## Creating messages through Office 365 Connectors
-
-You have two options for posting messages via Connectors:
-
-- Set up a custom incoming webhook if you want an integration just for your team.
-- Register a Connector and submit it as a Microsoft Teams app if you want others to use it.
-
-Both options involve posting a simple JSON payload to an HTTP webhook to create the Connector message within Microsoft Teams. (For more details, see [Get started with actionable messages in Office 365](/outlook/actionable-messages/get-started).)
-
-You can also use this JSON to create cards containing rich inputs, such as text entry, multi-select, or picking a date and time. The code that generates the card and posts to the incoming webhook API can be running on any hosted service. These cards are defined as part of actionable messages, and are also supported in [cards](~/concepts/cards/cards.md) used in Teams bots and Messaging extensions.
+You can also use this JSON to create cards containing rich inputs, such as text entry, multi-select, or picking a date and time. The code that generates the card and posts to the webhook URL can be running on any hosted service. These cards are defined as part of actionable messages, and are also supported in [cards](~/task-modules-and-cards/what-are-cards.md) used in Teams bots and Messaging extensions.
 
 ### Example Connector message
 
@@ -183,7 +161,7 @@ The following steps use PowerShell. We assume that you have this installed and a
 2. If the POST succeeds, you should see a simple **1** output by `Invoke-RestMethod`.
 3. Check the Microsoft Teams channel associated with the webhook URL. You should see the new card posted to the channel.
 
-- Include two icons, following the instructions in [Icons](~/concepts/apps/apps-package.md#icons).
+- Include two icons, following the instructions in [Icons](~/concepts/build-and-test/apps-package.md#icons).
 - Modify the `icons` portion of the manifest to refer to the file names of the icons instead of URLs.
 
 The following manifest.json file contains the basic elements needed to test and submit your app.
@@ -242,10 +220,3 @@ After you upload the app, open the Connectors list from any channel. Scroll to t
 You can now launch the configuration experience. Be aware that this flow occurs entirely within Microsoft Teams through a pop-up window. Currently, this behavior differs from the configuration experience in Connectors that we created; we are working on unifying the experiences.
 
 To verify that an `HttpPOST` action is working correctly, use your [custom incoming webhook](#setting-up-a-custom-incoming-webhook).
-
-## Publishing your app
-
-> [!NOTE]
-> Currently, we do not support users configuring your Connector externally via the **Connect to Office 365** button. Users must visit Microsoft Teams first to add a Connector.
-
-When your app is ready for submission, follow the process to [publish your app to AppSource](~/publishing/apps-publish.md).

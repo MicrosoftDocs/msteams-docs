@@ -21,15 +21,15 @@ They can be expanded with:
 
 * **[Configurable Tabs](~/tabs/what-are-tabs.md)** providing a full-screen embedded web experience configured for the channel or group chat it is installed in. All members will interact on the same shared web-app, so a stateless single page app experience is typical.
 
-* **[Webhooks and Connectors](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)** enabling external services to post messages to the conversation. You can take advantage of cards and card actions to to create rich, actionable messages. Webhooks provide a simple, unauthenticated, one-way method to post messages to a channel, while Connectors provide a slightly more robust back-and-forth experience.
+* **[Webhooks and Connectors](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)** enabling external services to post messages to the conversation, and your users to send messages to your service. You can take advantage of cards and card actions to to create rich, actionable messages.
 
 ### Personal apps
 
-Personal apps are the portion of your Teams app focusing on interactions with a single user. The experience is unique to each individual user. This portion of your app can be pinned to the left-navigation rail - enabling one-click access for your users.
+[Personal apps](~/concepts/design/personal-apps.md) are the portion of your Teams app focusing on interactions with a single user. The experience is unique to each individual user. This portion of your app can be pinned to the left-navigation rail - enabling one-click access for your users.
 
 They can contain:
 
-* **[Conversational bots](~/bots/what-are-bots.md)** having a one-to-one conversation with the user. Because this is a private conversation, if your app needs to have a multi-turn conversation with a user, or provide a notification relevant only to a single user, it is typically best to have that interaction in a personal app.
+* **[Conversational bots](~/bots/what-are-bots.md)** having a one-to-one conversation with the user. Because this is a private conversation, if your app needs to have a multi-turn conversation, or provide a notification relevant only to a single user, it is typically best to have that interaction in a personal app.
 
 * **[Personal Tabs](~/tabs/what-are-tabs.md)** providing a full-screen embedded web experience.
 
@@ -39,7 +39,7 @@ Messages are the heart of collaboration in Teams. With a **[messaging extension 
 
 ## Writing messages
 
-Your app can help users craft more effect messages by enabling them to search, or take action, in an external system, and insert the results in a rich, structured format complete with actionable buttons.
+Your app can help users craft more effective messages by enabling them to search, or take action, in an external system, and insert the results in a rich, structured format complete with actionable buttons.
 
 There are three ways your app can help users create better messages:
 

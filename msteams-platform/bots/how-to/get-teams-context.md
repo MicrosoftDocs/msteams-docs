@@ -18,16 +18,31 @@ Your bot can query for the list of members and their basic profiles, which inclu
 # [C#/.NET](#tab/dotnet)
 
 ```csharp
-protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+public class MyBot : TeamsActivityHandler
 {
-    IEnumerable<TeamsChannelAccount> members = await TeamsInfo.GetMembersAsync(turnContext, cancellationToken);
+    protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+    {
+        IEnumerable<TeamsChannelAccount> members = await TeamsInfo.GetMembersAsync(turnContext, cancellationToken);
+    }
 }
 ```
 
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-asdf
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+
+        // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
+        this.onMessage(async (turnContext, next) => {
+            const members = await TeamsInfo.getMembers(turnContext);
+
+            // By calling next() you ensure that the next BotHandler is run.
+            await next();
+        });
+    }
+}
 ```
 
 # [JSON](#tab/json)
@@ -54,14 +69,17 @@ When installed in a team, your bot can query for metadata about that team which 
 # [C#/.NET](#tab/dotnet)
 
 ```csharp
-protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+public class MyBot : TeamsActivityHandler
 {
-    TeamDetails teamDetails = await TeamsInfo.GetTeamDetailsAsync(turnContext, turnContext.Activity.TeamsGetTeamInfo().Id, cancellationToken);
-    if (teamDetails != null) {
-        await turnContext.SendActivityAsync($"The groupId is: {teamDetails.AadGroupId}");
-    }
-    else {
-        await turnContext.SendActivityAsync($"Message did not come from a channel in a team.");
+    protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+    {
+        TeamDetails teamDetails = await TeamsInfo.GetTeamDetailsAsync(turnContext, turnContext.Activity.TeamsGetTeamInfo().Id, cancellationToken);
+        if (teamDetails != null) {
+            await turnContext.SendActivityAsync($"The groupId is: {teamDetails.AadGroupId}");
+        }
+        else {
+            await turnContext.SendActivityAsync($"Message did not come from a channel in a team.");
+        }
     }
 }
 ```
@@ -69,7 +87,24 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-asdf
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+
+        // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
+        this.onMessage(async (turnContext, next) => {
+            const teamDetails = await TeamsInfo.getTeamDetails(turnContext);
+            if (teamDetails) {
+                await turnContext.sendActivity(`The group ID is: ${teamDetails.aadGroupId}`);
+            } else {
+                await turnContext.sendActivity('This message did not come from a channel in a team.');
+            }
+
+            // By calling next() you ensure that the next BotHandler is run.
+            await next();
+        });
+    }
+}
 ```
 
 # [JSON](#tab/json)
@@ -118,16 +153,35 @@ Your bot can query the list of channels in a team.
 # [C#/.NET](#tab/dotnet)
 
 ```csharp
-protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+public class MyBot : TeamsActivityHandler
 {
-    IEnumerable<ChannelInfo> channels = await TeamsInfo.GetTeamChannelsAsync(turnContext, turnContext.Activity.TeamsGetTeamInfo().Id, cancellationToken);
+    protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+    {
+        IEnumerable<ChannelInfo> channels = await TeamsInfo.GetTeamChannelsAsync(turnContext, turnContext.Activity.TeamsGetTeamInfo().Id, cancellationToken);
+
+        await turnContext.SendActivityAsync($"The channel count is: {channels.Count()}");
+    }
 }
 ```
 
 # [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
-asdf
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+
+        // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
+        this.onMessage(async (turnContext, next) => {
+            const channels = await TeamsInfo.getTeamChannels(turnContext);
+
+            await turnContext.sendActivity(`The channel count is: ${channels.length}`);
+
+            // By calling next() you ensure that the next BotHandler is run.
+            await next();
+        });
+    }
+}
 ```
 
 # [JSON](#tab/json)
@@ -157,4 +211,4 @@ Response body
 
 * * *
 
-[!INCLUDE [sample](~/includes/bots/teams-conversation-bot-sample.md)]
+[!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]

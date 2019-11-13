@@ -50,12 +50,12 @@ You can use the App Studio app from within the Microsoft Teams client to help cr
 
 1. In the Teams client, open App Studio from the **...** overflow menu on the left navigation rail. If it isn't already installed, you can do so by searching for it.
 2. On the **Manifest editor** tab select **Create a new app** (or if you're adding a messaging extension to an existing app, you can import your app package)
-3. Add your app details (see [manifest schema definition](~/resources/foo.md) for full descriptions of each field).
+3. Add your app details (see [manifest schema definition](~/resources/schema/manifest-schema.md) for full descriptions of each field).
 4. On the **Messaging extensions** tab click the **Setup** button.
 5. You can either create a new web service (bot) for your messaging extension to use, or if you've already registered one select/add it here.
 6. If necessary, update your bot endpoint address to point to your bot. It should look something like `https://someplace.com/api/messages`.
 7. The **Add** button in the **Command** section will guide you through adding commands to your messaging extension. See the [Learn more](#learn-more) section for links to more information on adding commands. Remember you can define up to 10 commands for your messaging extension.
-8. The **Message Handlers** section allows you to add a domain that your messaging will trigger on. See [link unfurling](foo.md) for more information.
+8. The **Message Handlers** section allows you to add a domain that your messaging will trigger on. See [link unfurling](~/messaging-extensions/how-to/link-unfurling.md) for more information.
 
 From the **Finish => Test and distribute** tab you can **Download** your app package (which includes your app manifest as well as your app icons), or **Install** the package.
 
@@ -84,7 +84,7 @@ Your messaging extension should declare one or more commands, which define where
 
 #### Simple manifest example
 
-The example below is a simple messaging extension object in the app manifest with a search command. This is not the entire app manifest file, just the part specific to messaging extensions. See [app manifest schema](foo.md) for a complete example.
+The example below is a simple messaging extension object in the app manifest with a search command. This is not the entire app manifest file, just the part specific to messaging extensions. See [app manifest schema](~/resources/schema/manifest-schema.md) for a complete example.
 
 ```json
 ...
@@ -127,21 +127,13 @@ When your users trigger your messaging extension you'll need to handle the initi
 Try it out in a quickstart:
 
 * Quickstarts for C#
-  * [Messaging extension with action commands](~/foo.md)
-  * [Messaging extension with search commands](~/foo.md)
-* Quickstarts for Node.js
-  * [Messaging extension with action commands](~/foo.md)
-  * [Messaging extension with search commands](~/foo.md)
+  * [Messaging extension with action-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)
+  * [Messaging extension with search-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)
+* Quickstarts for JavaScript
+  * [Messaging extension with action-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)
+  * [Messaging extension with search-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)
 
 Learn more about messaging extensions concepts:
 
-* [Understand Teams app capabilities ?](~/concepts/understand-teams-app-capabilities.md)
+* [Understand Teams app capabilities ?](~/concepts/extensibility-points.md)
 * [What are messaging extensions?](~/messaging-extensions/what-are-messaging-extensions.md)
-
-Learn about designing effective messaging extensions:
-
-* [linkToMEDesignArticle](./foo.md)
-
-Learn about authentication in messaging extensions
-
-* [something something authentication](./foo.md)

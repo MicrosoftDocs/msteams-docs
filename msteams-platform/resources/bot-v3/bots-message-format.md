@@ -68,4 +68,4 @@ Support for text formatting varies by type of message and by platform.
 
 ### Cards
 
-See [Card Formatting](~/concepts/cards/cards-format.md) for support in cards.
+See [Card Formatting](~/task-modules-and-cards/cards/cards-format.md) for support in cards.

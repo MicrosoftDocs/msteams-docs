@@ -15,8 +15,6 @@ Action commands allow you present your users with a modal popup (called a task m
 1. How will the task module be created?
 1. Will the final message or card be sent to the channel from a bot, or will the message or card be inserted into the compose message area for the user to submit?
 
-For additional guidance on designing your messaging extension see: [Designing effective messaging extensions](~/foo.md).
-
 ## Choose action command invoke locations
 
 The first thing you need to decide is where your action command can be triggered (or more specifically, *invoked*) from. By specifying the `context` in your app manifest, your command can be invoked from one or more of the following locations:
@@ -94,7 +92,7 @@ If you are using an embedded web view, you can optionally add the `taskInfo` obj
 
 #### App manifest example
 
-The below is an example of a `composeExtensions` object defining two action commands. It is not an example of the complete manifest, for the full app manifest schema see: [App manifest schema](~/foo.md).
+The below is an example of a `composeExtensions` object defining two action commands. It is not an example of the complete manifest, for the full app manifest schema see: [App manifest schema](~/resources/schema/manifest-schema.md).
 
 ```json
 ...

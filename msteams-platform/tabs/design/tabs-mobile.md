@@ -29,7 +29,7 @@ When you're building an app that includes a tab, you need to consider (and test)
 
 ### Testing on mobile clients
 
-You need to validate that your tab functions properly on mobile devices of various sizes and qualities. For Android devices you can use the [DevTools](~/resources/dev-preview/developer-preview-tools.md) to debug your tab while it is running. We recommend that you test on both high and low performing devices, as well as on a tablet.
+You need to validate that your tab functions properly on mobile devices of various sizes and qualities. For Android devices you can use the [DevTools](~/tabs/how-to/developer-tools.md) to debug your tab while it is running. We recommend that you test on both high and low performing devices, as well as on a tablet.
 
 ### Responsive design
 
