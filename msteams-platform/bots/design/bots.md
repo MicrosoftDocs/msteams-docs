@@ -25,19 +25,19 @@ We support up to six buttons per card. Be concise when writing button text, and 
 
 Graphics are a good way to tell a story, but not all bot conversations require graphics, so use them for maximum impact.
 
-### Respond to users and failing gracefully, like this:
+### Respond to users and failing gracefully
 
-Your bot should also be able to respond to things like 'Hi', 'Help', and 'Thanks' while taking common misspellings and colloquialisms into account.
+Your bot should also be able to respond to things like 'Hi', 'Help', and 'Thanks' while taking common misspellings and colloquialisms into account. For example:
 
-#### Hello
+#### &#x2713; Hello
 
 `Hi` `how are you` `howdy`
 
-#### Help
+#### &#x2713; Help
 
 `What do you do?` `How does this work?` `What the heck?`
 
-#### Thanks
+#### &#x2713; Thanks
 
 `Thank you` `thankyou` `thx`
 
@@ -62,15 +62,15 @@ When brainstorming variants, use a thesaurus and get people from as many differe
 
 #### Make use of telemetry and interviews
 
-Find out what users are saying and what their intent was when querying your bot. This will be an ongoing process as you get users in different locations and types of companies. You can fine tune language recognition and intent mapping with LUIS.
+Find out what users are saying and what was their intent when querying your bot. This will be an ongoing process as you get users in different locations and types of companies. You can fine-tune language recognition and intent mapping with Language Understanding Intelligent Service ([LUIS](/azure/cognitive-services/luis/what-is-luis)).
 
 ### How often should you use your bot to reach out to a user?
 
-#### When a state has changed
+#### &#x2713; When a state has changed
 
 For example, if an assignment is marked as complete, when a bug changes, when new social media is available, or when a poll has been completed.
 
-#### When the timing is right
+#### &#x2713; When the timing is right
 
 Your bot can act like a daily digest, sending a notification to the user or channel at a specific frequency.
 
@@ -82,17 +82,17 @@ Leave the user in control. Provide notification settings that include frequency 
 
 ## Using tabs
 
-Tabs make your bot much more functional. With tabs, you get the following:
+Tabs make your bot much more functional. With tabs, you can achieve the following:
 
-### A place to host standing queries
+### &#x2713; A place to host standing queries
 
-In personal conversations between a bot and a single person, tabs can house user-specific information and lists. They’re also a good place to maintain bot responses to frequently-asked questions (so users don’t need to keep asking).
+In personal conversations between a bot and a single person, tabs can house user-specific information and lists. They’re also a good place to maintain bot responses to frequently-asked questions (FAQs) — so users don’t need to keep asking.
 
-### A place to finish a conversation
+### &#x2713; A place to finish a conversation
 
 You can link to a tab from a card. If your bot provides an answer that requires a few more steps, it can link to a tab to complete the task or flow.
 
-### A place to provide some help
+### &#x2713; A place to provide some help
 
 Add a tab that educates users about how to communicate with your bot. You can provide some context for what it does or FAQs.
 
@@ -105,23 +105,23 @@ Add a tab that educates users about how to communicate with your bot. You can pr
 
 ## Best practices
 
-### Bots aren’t assistants
+### &#x2713; Bots aren’t assistants
 
-Unlike agents (like Cortana), bots act as specialists.
+Unlike agents, e.g., Cortana, bots act as specialists.
 
-### Discourage chit chat
+### &#x2713; Discourage chit chat
 
-Unless your bot is for conversation, find ways to redirect chit chat toward task completion.
+Unless your bot is built for conversation, find ways to redirect chit chat toward task completion.
 
-### Introduce some personality
+### &#x2713; Introduce some personality
 
 Keep your bot personality consistent with the voice of your product. Think of your bot as speaking for your company.
 
-### Maintain tone
+### &#x2713; Maintain tone
 
 Determine whether you want your tone to be friendly and light, “just the facts”, or super quirky.
 
-### Encourage easy task flow
+### &#x2713; Encourage easy task flow
 
 Support multi-turn interactions while still allowing for fully formed questions. Anticipating the next step will help users get through task flows much easier.
 
