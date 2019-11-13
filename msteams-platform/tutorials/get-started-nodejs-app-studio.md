@@ -11,7 +11,7 @@ The [Microsoft Teams](/microsoftteams/) developer platform makes it easy for you
 
 To extend Microsoft Teams, you need to create a Microsoft Teams app. A Microsoft Teams app is a web application that you host. This app can then be integrated into the user's workspace in Teams.
 
-[!include [prepare your environment(~/includes/prepare-environment.md)]
+[!include [prepare your environment](~/includes/prepare-environment.md)]
 
 <a name="DownloadAndHost"></a>
 

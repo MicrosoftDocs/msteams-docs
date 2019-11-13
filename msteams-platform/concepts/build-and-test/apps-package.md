@@ -7,7 +7,7 @@ ms.topic: conceptual
 
 # Create an app package for your Microsoft Teams app
 
-Apps in Teams are defined by an app manifest JSON file, and bundled in an app package with their icons. You'll need an app package to upload and install your app in Teams, and to publish to either you Line of Business app catalog or to AppSource.
+Apps in Teams are defined by an app manifest JSON file, and bundled in an app package with their icons. You'll need an app package to upload and install your app in Teams, and to publish to either your Line of Business app catalog or to AppSource.
 
 A Teams app package is a .zip file containing the following:
 
