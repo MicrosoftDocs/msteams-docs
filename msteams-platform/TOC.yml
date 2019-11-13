@@ -1,7 +1,7 @@
 - name: Overview
   expanded: true
   items:
-    - name: "What are Microsoft Teams apps?"
+    - name: What are Microsoft Teams apps?
       href: overview.md
     - name: What's new?
       href: whats-new.md
@@ -24,13 +24,13 @@
   items:
     - name: Building apps for Microsoft Teams
       href: concepts/building-an-app.md
-    - name: "Extensibility points in the Teams client"
+    - name: Extensibility points in the Teams client
       href: concepts/extensibility-points.md
-    - name: "Design your app"
+    - name: Design your app
       items:
-        - name: "Understand your use cases"
+        - name: Understand your use cases
           href: concepts/design/understand-use-cases.md
-        - name: "Map use cases to features"
+        - name: Map use cases to features
           href: concepts/design/map-use-cases.md
         - name: Personal apps
           href: concepts/design/personal-apps.md
@@ -66,47 +66,47 @@
         href: concepts/build-and-test/share-to-teams.md
     - name: 'Deploy and publish your app'
       items:
-        - name: "Choose your deployment methods"
+        - name: Choose your deployment methods
           href: concepts/deploy-and-publish/overview.md
-        - name: "Upload your app for a team or user"
+        - name: Upload your app for a team or user
           href: concepts/deploy-and-publish/apps-upload-for-team-and-user.md
-        - name: "Publish your app on AppSource"
+        - name: Publish your app on AppSource
           items:
-            - name: "AppSourse submission process"
+            - name: AppSourse submission process
               href: concepts/deploy-and-publish/appsource-publishing-guidance/publish-on-appsource.md
-            - name: "Prepare your app"
+            - name: Prepare your app
               items: 
-                - name: "Presubmission checklist"
+                - name: Presubmission checklist
                   href: concepts/deploy-and-publish/appsource-publishing-guidance/prepare-app/overview.md
-                - name: "App functionality checklist"
+                - name: App functionality checklist
                   href: concepts/deploy-and-publish/appsource-publishing-guidance/prepare-app/app-functionality-requirement.md
-                - name: "App detail page checklist"
+                - name: App detail page checklist
                   href: concepts/deploy-and-publish/appsource-publishing-guidance/prepare-app/app-detail-page-checklist.md
-                - name: "Frequently failed cases"
+                - name: Frequently failed cases
                   href: concepts/deploy-and-publish/appsource-publishing-guidance/prepare-app/frequently-failed-cases.md
-                - name: "Manifest package checklist"
+                - name: Manifest package checklist
                   href: concepts/deploy-and-publish/appsource-publishing-guidance/prepare-app/office-store-checklist.md
-                - name: "AppSource submission walkthrough"
+                - name: AppSource submission walkthrough
                   href: concepts/deploy-and-publish/appsource-publishing-guidance/prepare-app/appsource-submission-walkthrough.md
-            - name: "After publishing your app"
+            - name: After publishing your app
               items:
-                - name: "What to do after publishing your app"
+                - name: What to do after publishing your app
                   href: concepts/deploy-and-publish/appsource-publishing-guidance/post-publish-app/overview.md
-                - name: "Application Certification program"
+                - name: Application Certification program
                   href: concepts/deploy-and-publish/appsource-publishing-guidance/post-publish-app/application-certification.md
-    - name: "Authentication in Teams apps"
+    - name: Authentication in Teams apps
       items:
-        - name: "Authentication overview"
+        - name: Authentication overview
           href: concepts/authentication/authentication.md
-        - name: "Configure identity providers"
+        - name: Configure identity providers
           href: concepts/authentication/configure-identity-provider.md
-- name: "Task-oriented interactions with Messaging Extensions"
+- name: Task-oriented interactions with Messaging Extensions
   items:
-    - name: "What are Messaging Extensions?"
+    - name: What are Messaging Extensions?
       href: messaging-extensions/what-are-messaging-extensions.md
     - name: Quickstarts
       items:
-        - name: "With action command"
+        - name: With action command
           items:
             - name: 'C#/.NET'
               href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action
@@ -121,9 +121,9 @@
     - name: 'How-to guides'
       expanded: true
       items:
-        - name: "Create a messaging extension"
+        - name: Create a messaging extension
           href: messaging-extensions/how-to/create-messaging-extension.md
-        - name: "Action-based commands"
+        - name: Action-based commands
           items:
             - name: Define action commands
               href: messaging-extensions/how-to/action-commands/define-action-command.md
@@ -131,17 +131,17 @@
               href: messaging-extensions/how-to/action-commands/create-task-module.md
             - name: Send a response to the submit action
               href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
-        - name: "Search-based commands"
+        - name: Search-based commands
           items:
-            - name: "Define search commands"
+            - name: Define search commands
               href: messaging-extensions/how-to/search-commands/define-search-command.md
-            - name: "Receive and respond to search queries"
+            - name: Receive and respond to search queries
               href: messaging-extensions/how-to/search-commands/respond-to-search.md
         - name: Link unfurling
           href: messaging-extensions/how-to/link-unfurling.md
         - name: 'Add authentication'
           href: messaging-extensions/how-to/add-authentication.md
-- name: "Conversational Bots"
+- name: Conversational Bots
   items:
     - name: What are bots in Microsoft Teams?
       href: bots/what-are-bots.md
@@ -155,7 +155,7 @@
           href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot
     - name: 'Design your bot'
       items:
-        - name: "Design overview"
+        - name: Design overview
           href: bots/design/bots.md
     - name: 'How-to guides'
       expanded: true
@@ -208,58 +208,58 @@
           href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
         - name: Application-hosted media
           href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-- name: "Embedded web experiences with Tabs"
+- name: Embedded web experiences with Tabs
   items:
-    - name: "What are custom tabs?"
+    - name: What are custom tabs?
       href: tabs/what-are-tabs.md
     - name: Quickstarts
       items:
-        - name: "Node.js and React"
+        - name: Node.js and React
           items:
-            - name: "Create a channel and group tab"
+            - name: Create a channel and group tab
               href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
-            - name: "Create a personal tab"
+            - name: Create a personal tab
               href: tabs/quickstarts/create-personal-tab-node-yeoman.md
-        - name: "C#/ASP.NET Core"
+        - name: C#/ASP.NET Core
           items:
-            - name: "Create a channel and group tab"
+            - name: Create a channel and group tab
               href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
-            - name: "Create a personal tab"
+            - name: Create a personal tab
               href: tabs/quickstarts/create-personal-tab-dotnet-core.md
-        - name: "C#/ASP.NET MVC"
+        - name: C#/ASP.NET MVC
           items:
-            - name: "Create a channel and group tab"
+            - name: Create a channel and group tab
               href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
-            - name: "Create a personal tab"
+            - name: Create a personal tab
               href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-    - name: "Design your tabs"
+    - name: Design your tabs
       items:
-        - name: "Design overview"
+        - name: Design overview
           href: tabs/design/tabs.md
-        - name: "Tabs on mobile clients"
+        - name: Tabs on mobile clients
           href: tabs/design/tabs-mobile.md
-    - name: "How-to guides"
+    - name: How-to guides
       expanded: true
       items:
-        - name: "Add tabs to your app"
+        - name: Add tabs to your app
           href: tabs/how-to/add-tab.md
-        - name: "Create tab pages"
+        - name: Create tab pages
           items:
-            - name: "Create a content page"
+            - name: Create a content page
               href: tabs/how-to/create-tab-pages/content-page.md
-            - name: "Create a configuration page"
+            - name: Create a configuration page
               href: tabs/how-to/create-tab-pages/configuration-page.md
-            - name: "Create a tab removal page"
+            - name: Create a tab removal page
               href: tabs/how-to/create-tab-pages/removal-page.md
-        - name: "Add authentication to your tabs"
+        - name: Add authentication to your tabs
           items:
-            - name: "Authentication flow"
+            - name: Authentication flow
               href: tabs/how-to/authentication/auth-flow-tab.md
-            - name: "Using Azure AD authentication"
+            - name: Using Azure AD authentication
               href: tabs/how-to/authentication/auth-tab-aad.md
-            - name: "Using SSO and silent authentication"
+            - name: Using SSO and silent authentication
               href: tabs/how-to/authentication/auth-silent-aad.md
-        - name: "Using the Teams client SDK"
+        - name: Using the Teams client SDK
           href: tabs/how-to/using-teams-client-sdk.md
         - name: Getting additional Teams context
           href: tabs/how-to/access-teams-context.md
@@ -271,11 +271,11 @@
           href: tabs/how-to/native-device-permissions.md
 - name: 'Task modules and cards'
   items:
-    - name: "What are task modules?"
+    - name: What are task modules?
       href: task-modules-and-cards/what-are-task-modules.md
-    - name: "What are cards?"
+    - name: What are cards?
       href: task-modules-and-cards/what-are-cards.md
-    - name: "Cards"
+    - name: Cards
       items:
         - name: Designing effective cards
           href: task-modules-and-cards/cards/design-effective-cards.md
@@ -285,15 +285,15 @@
           href: task-modules-and-cards/cards/cards-actions.md
         - name: Cards reference
           href: task-modules-and-cards/cards/cards-reference.md
-    - name: "Task modules"
+    - name: Task modules
       items:
         - name: From a bot
           href: task-modules-and-cards/task-modules/task-modules-bots.md
         - name: From a tab
           href: task-modules-and-cards/task-modules/task-modules-tabs.md
-- name: "Webhooks and Connectors"
+- name: Webhooks and Connectors
   items:
-    - name: "What are Webhooks and Connectors?"
+    - name: What are Webhooks and Connectors?
       href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
     - name: 'How-to guides'
       expanded: true
@@ -347,19 +347,19 @@
           href: resources/messaging-extension-v3/search-extensions.md
         - name: Action extensions
           href: resources/messaging-extension-v3/create-extensions.md
-    - name: "Public Developer Preview"
+    - name: Public Developer Preview
       items:
-        - name: "Developer Preview overview"
+        - name: Developer Preview overview
           href: resources/dev-preview/developer-preview-intro.md
-        - name: "Developer preview manifest schema"
+        - name: Developer preview manifest schema
           href: resources/schema/manifest-schema-dev-preview.md
-        - name: "Features in Developer Preview"
+        - name: Features in Developer Preview
           href: resources/dev-preview/developer-preview-features.md
     - name: 'Supported media formats for bots'
       href: resources/media-formats.md
-    - name: "Manifest schema"
+    - name: Manifest schema
       href: resources/schema/manifest-schema.md
-    - name: "Localization file JSON schema"
+    - name: Localization file JSON schema
       href: resources/schema/localization-schema.md
 - name: Support and feedback
   href: feedback.md
