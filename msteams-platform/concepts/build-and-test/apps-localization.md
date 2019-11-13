@@ -54,7 +54,7 @@ You will then want to add the 'localizationInfo' property with the default langu
 {
   ...
   "localizationInfo": {
-    "defaultLanguageTag": "en-us"
+    "defaultLanguageTag": "en"
   }
   ...
 }
@@ -70,15 +70,19 @@ For each additional language you wish to support you'll need to provide a .json 
 {
   ...
   "localizationInfo": {
-    "defaultLanguageTag": "en-us",
+    "defaultLanguageTag": "en",
     "additionalLanguages": [
       {
-        "languageTag": "fr-fr",
-        "file": "fr-fr.json"
+        "languageTag": "en-gb",
+        "file": "en-gb.json"
       },
       {
-        "languageTag": "pl-pl",
-        "file": "pl-pl.json"
+        "languageTag": "fr",
+        "file": "fr.json"
+      },
+      {
+        "languageTag": "pl",
+        "file": "pl.json"
       }
     ]
   }

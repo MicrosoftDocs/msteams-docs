@@ -69,4 +69,4 @@ Not sure where to start? Feeling a bit overwhelmed with the awesome variety of o
 
 ## Putting it all together
 
-That being said, the best apps usually combine multiple features, creating an app that engages users in the right context with the right functionality at the right time. Don't try to force functionality into a place it doesn't belong - just because you've got a good one-to-one conversational bot doesn't mean you should just add it to a team. Different extensibility points are good for different things; play to their strengths your app will shine.
+That being said, the best apps usually combine multiple features, creating an app that engages users in the right context with the right functionality at the right time. Don't try to force functionality into a place it doesn't belong - just because you've got a good one-to-one conversational bot doesn't mean you should just add it to a team. Different extensibility points are good for different things; play to their strengths and your app will shine.

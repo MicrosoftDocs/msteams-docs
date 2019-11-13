@@ -30,7 +30,6 @@ This table shows the types of cards available to you.
 | [Office 365 Connector Card](#office-365-connector-card) | Flexible layout with multiple sections, fields, images and actions. |
 | [Receipt Card](#receipt-card) | Provides a receipt to the user. |
 | [Signin Card](#signin-card) | Enables a bot to request that a user sign in. |
-| [OAuth Card](#oauth-card) | Pre-configured authentication flow for various providers. |
 | [Thumbnail Card](#thumbnail-card) | Typically contains a single thumbnail image, some short text, and one or more buttons. |
 | [Card Collections](#card-collections) | Used to return multiple items in a single response |
 
@@ -62,7 +61,7 @@ See [Card Formatting](~/task-modules-and-cards/cards/cards-format.md) for more i
 ## Adaptive card
 
 > [!NOTE]
-> Only version 1.0 of Adaptive Cards is supported.
+> Only version 1.0 of Adaptive Cards is supported for all users. Version 1.2 is currently available only in Developer Preview
 
 A customizable card that can contain any combination of text, speech, images, buttons, and input fields.
 
@@ -286,7 +285,7 @@ The list card has been added by Teams to provide functions beyond what the list 
 
 | Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✖ | ✖ |✖ |
+| ✔ | ✖ | ✖ |✔ |
 |
 
 ### Properties of a List card
@@ -510,35 +509,6 @@ Bot Framework reference:
 * [Signin card Node](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest)
 * [Signin card C#](/dotnet/api/microsoft.bot.connector.signincard?view=botbuilder-dotnet-3.0)
 
-## OAuth card
-
-OAuth card provides a pre-configured authentication experience for bots and messaging extensions. See the links below for complete details.
-
-There are currently some restrictions to where you can use the OAuthCard. These include:
-
-* The card will not work with guest access.
-* It will not work with Microsoft Teams free.
-* It can only be used for bot authentication.
-* It only works for bots registered in the Azure Bot Service.
-
-### Support for OAuth cards
-
-| Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
-| --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
-|
-
-### For more information on OAuth cards
-
-Teams reference:
-
-* [Using Azure Bot Service for Authentication in Teams](~/bots/how-to/authentication/add-authentication.md)
-
-Bot Framework reference:
-
-* [OAuth Card reference](/dotnet/api/microsoft.bot.schema.oauthcard)
-* [Bot Framework v3 authentication tutorial](/azure/bot-service/bot-builder-tutorial-authentication?view=azure-bot-service-3.0&tabs=aadv1)
-
 ## Thumbnail card
 
 A card that typically contains a single thumbnail image, one or more buttons, and text.
@@ -628,7 +598,7 @@ The [carousel layout](/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card
 
 | Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔ | ✖ | ✖ | ✔ |
 |
 
 > [!NOTE]

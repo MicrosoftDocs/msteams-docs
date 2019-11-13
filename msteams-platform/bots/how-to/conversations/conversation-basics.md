@@ -262,41 +262,30 @@ this.onMessage(async (turnContext, next) => {
 
 ```json
 {
-    "type": "message", 
-    "text": "Hey <at>Pranav Smith</at> check out this message",
-    "timestamp": "2017-10-29T00:51:05.9908157Z",
-    "localTimestamp": "2017-10-28T17:51:05.9908157-07:00",
-    "serviceUrl": "https://skype.botframework.com",
-    "channelId": "msteams",
-    "from": {
-        "id": "28:9e52142b-5e5e-4d7b-bb3e- e82dcf620000",
-        "name": "SchemaTestBot"
-    },
-    "conversation": {
-        "id": "19:aebd0ad4d6ab42c8b9ed19c251c2fc37@thread.skype;messageid=1481567603816"
-    },
-    "recipient": {
-        "id": "8:orgid:6aebbad0-e5a5-424a-834a-20fb051f3c1a",
-        "name": "stlrgload100"
-    },
-    "attachments": [
-        {
-            "contentType": "image/png",
-            "contentUrl": "https://upload.wikimedia.org/wikipedia/en/a/a6/Bender_Rodriguez.png",
-            "name": "Bender_Rodriguez.png"
-        }
-    ],
-    "entities": [
-        {
-            "type":"mention",
-            "mentioned":{
-                "id":"29:08q2j2o3jc09au90eucae",
-                "name":"Pranav Smith"
-            },
-            "text": "<at>@Pranav Smith</at>"
-        }
-    ],
-    "replyToId": "3UP4UTkzUk1zzeyW"
+  "type": "message",
+  "timestamp": "2017-04-24T21:46:00.9663655Z",
+  "localTimestamp": "2017-04-24T14:46:00.9663655-07:00",
+  "serviceUrl": "https://callback.com",
+  "channelId": "msteams",
+  "from": {
+    "id": "28:e4fda94a-4b80-40eb-9bf0-6314491bc793",
+    "name": "The bot"
+  },
+  "conversation": {
+    "id": "a:1pL6i0oY3C0K8oAj8"
+  },
+  "recipient": {
+    "id": "29:1rsVJmSSFMScF0YFyCXpvNWlo",
+    "name": "User"
+  },
+  "text": "John Phillips assigned you a weekly todo",
+  "summary": "Don't forget to meet with Marketing next week",
+  "channelData": {
+    "notification": {
+      "alert": true
+    }
+  },
+  "replyToId": "1493070356924"
 }
 ```
 

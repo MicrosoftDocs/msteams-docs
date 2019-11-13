@@ -13,9 +13,9 @@ There are multiple places where the Microsoft Teams client can be extended to al
 
 ## Teams, channels and group chats
 
-Teams, channels and group chats allow multiple people to collaborate. Apps that extend context make themselves available to all members of the group or conversation, typically focusing on enabling additional collaborative workflows or unlocking new social interactions. Your app will have access to APIs allowing it to get information about the members in the conversation, the channels in a team, and metadata about the team or conversation.
+Teams, channels and group chats allow multiple people to collaborate. Apps in this context make themselves available to all members of the group or conversation, typically focusing on enabling additional collaborative workflows or unlocking new social interactions. Your app will have access to APIs allowing it to get information about the members in the conversation, the channels in a team, and metadata about the team or conversation.
 
-They can be expanded with:
+They can be extended with:
 
 * **[Conversational bots](~/bots/what-are-bots.md)** interacting with members of the conversation through chat, and responding to events (like a new member being added, or a channel being renamed). All conversations with a bot in this context are visible to all members of the channel or group, so you'll need to ensure the conversation is relevant to everyone.
 
@@ -59,7 +59,7 @@ In addition to extensibility points, the Microsoft Teams Platform provides flexi
 
 ### Task modules
 
-[Task modules](~/task-modules-and-cards/what-are-task-modules.md) allow you to create modal popup experiences in your Teams application. Inside the popup you can run your own custom HTML/JavaScript code, show an `<iframe>` widget such as a YouTube or Microsoft Stream video or display an Adaptive card. They are especially useful for initiating and completing tasks or displaying rich information like videos or Power BI dashboards. A popup experience is often more natural for users initiating and completing tasks compared to a tab or a conversation-based bot experience.
+[Task modules](~/task-modules-and-cards/what-are-task-modules.md) allow you to create modal popup experiences in your Teams application. Inside the popup you can run your own custom HTML/JavaScript code, show an `<iframe>` widget such as a YouTube or Microsoft Stream video, or display an Adaptive card. They are especially useful for initiating and completing tasks or displaying rich information like videos or Power BI dashboards. A popup experience is often more natural for users initiating and completing tasks compared to a tab or a conversation-based bot experience.
 
 ### Deep links
 
