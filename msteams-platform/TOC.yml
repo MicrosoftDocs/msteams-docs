@@ -46,64 +46,56 @@
         href: concepts/design/components/fields.md
       - name: Dialogs
         href: concepts/design/components/dialogs.md
-    - name: 'Build and test your app'
+  - name: 'Build and test your app'
+    items:
+    - name: Prepare your Office 365 tenant
+      href: concepts/build-and-test/prepare-your-o365-tenant.md      
+    - name: Use App Studio to create your app
+      href: concepts/build-and-test/app-studio-overview.md
+    - name: Create your app package
+      href: concepts/build-and-test/apps-package.md
+    - name: Test and debug your app
+      href: concepts/build-and-test/debug.md
+    - name: Add test data to your environment
+      href: concepts/build-and-test/test-data.md
+    - name: Use deep links for navigation
+      href: concepts/build-and-test/deep-links.md
+    - name: Localizing your app
+      href: concepts/build-and-test/apps-localization.md
+    - name: Create a Share-to-Teams button for your website
+      href: concepts/build-and-test/share-to-teams.md
+  - name: Deploy and publish your app
+    items:
+    - name: Choose your distribution methods
+      href: concepts/deploy-and-publish/overview.md
+    - name: Upload your app for a team or user
+      href: concepts/deploy-and-publish/apps-upload-for-team-and-user.md
+    - name: Publish to your organization app catalog
+      href: /microsoftteams/tenant-apps-catalog-teams
+    - name: Publish your app on AppSource
       items:
-      - name: Prepare your Office 365 tenant
-        href: concepts/build-and-test/prepare-your-o365-tenant.md      
-      - name: Use App Studio to create your app
-        href: concepts/build-and-test/app-studio-overview.md
-      - name: Create your app package
-        href: concepts/build-and-test/apps-package.md
-      - name: Test and debug your app
-        href: concepts/build-and-test/debug.md
-      - name: Add test data to your environment
-        href: concepts/build-and-test/test-data.md
-      - name: Use deep links for navigation
-        href: concepts/build-and-test/deep-links.md
-      - name: Localizing your app
-        href: concepts/build-and-test/apps-localization.md
-      - name: Create a Share-to-Teams button for your website
-        href: concepts/build-and-test/share-to-teams.md
-    - name: Deploy and publish your app
-      items:
-      - name: Choose your distribution methods
-        href: concepts/deploy-and-publish/overview.md
-      - name: Upload your app for a team or user
-        href: concepts/deploy-and-publish/apps-upload-for-team-and-user.md
-      - name: Publish to your organization app catalog
-        href: /microsoftteams/tenant-apps-catalog-teams
-      - name: Publish your app on AppSource
+      - name: Understanding AppSourse submission 
+        href: concepts/deploy-and-publish/appsource-publishing-guidance/publish-on-appsource.md
+      - name: Prepare your app
+        items: 
+        - name: Presubmission checklist
+          href: concepts/deploy-and-publish/appsource-publishing-guidance/prepare-app/overview.md
+        - name: App functionality checklist
+          href: concepts/deploy-and-publish/appsource-publishing-guidance/prepare-app/app-functionality-requirement.md
+        - name: App detail page checklist
+          href: concepts/deploy-and-publish/appsource-publishing-guidance/prepare-app/app-detail-page-checklist.md
+        - name: Manifest package checklist
+          href: concepts/deploy-and-publish/appsource-publishing-guidance/prepare-app/office-store-checklist.md
+        - name: Frequently failed cases
+          href: concepts/deploy-and-publish/appsource-publishing-guidance/prepare-app/frequently-failed-cases.md
+      - name: Submit your app for approval
+        href: concepts/deploy-and-publish/appsource-publishing-guidance/publish-app/appsource-submission-walkthrough.md
+      - name: "After publishing your app"
         items:
-        - name: Understanding AppSourse submission 
-          href: concepts/deploy-and-publish/appsource-publishing-guidance/publish-on-appsource.md
-        - name: Prepare your app
-          items: 
-          - name: Presubmission checklist
-            href: concepts/deploy-and-publish/appsource-publishing-guidance/prepare-app/overview.md
-          - name: App content policy
-            href: concepts/deploy-and-publish/appsource-publishing-guidance/prepare-app/app-content-policy.md
-          - name: App functionality checklist
-            href: foo.md
-          - name: App detail page checklist
-            href: concepts/deploy-and-publish/appsource-publishing-guidance/prepare-app/app-detail-page-checklist.md
-          - name: Office store checklist
-            href: concepts/deploy-and-publish/appsource-publishing-guidance/prepare-app/office-store-checklist.md
-          - name: Frequently failed cases
-            href: concepts/deploy-and-publish/appsource-publishing-guidance/prepare-app/frequently-failed-cases.md
-        - name: Publish your app
-          items: 
-          - name: Submitting your app to AppSource
-            href: concepts/deploy-and-publish/appsource-publishing-guidance/publish-app/overview.md
-          - name: AppSource submission walkthrough
-            href: concepts/deploy-and-publish/appsource-publishing-guidance/publish-app/appsource-submission-walkthrough.md
-        - name: After publishing your app
-          items:
-          - name: Maintaining and updating your app
-            href: foo.md
-          - name: Expectation for AppSource apps
-            href: foo.md
-          - name: Application Certification program
-            href: concepts/deploy-and-publish/application-certification.md
+        - name: "What to do after publishing your app"
+          href: concepts/deploy-and-publish/appsource-publishing-guidance/post-publish-app/overview.md
+        - name: "Application Certification program"
+          href: concepts/deploy-and-publish/appsource-publishing-guidance/post-publish-app/application-certification.md
     - name: Authentication in Teams apps
       items:
         - name: Authentication overview
