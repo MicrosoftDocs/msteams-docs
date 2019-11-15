@@ -24,7 +24,7 @@ When joined to a Teams meeting, a bot can receive multiple main video streams si
 
 ## Frames and frame rate
 
-A real-time media bot interacts directly with the audio and video modalities of a media session. This means the bot is sending and/or receiving media as a sequence of **frames**, where each frame represents a unit of content. One second of audio may be transmitted as a sequence of 50 frames, with each frame containing 20 milliseconds (ms) (1/50th of a second) of speech content. One second worth of video may be sliced as a sequence of 30 still images, each intended to be viewed for just 33.3ms (1/30th of a second) before the next video frame is displayed. The number of frames transmitted or rendered per second is called the **frame rate**. "30fps" indicates 30 frames per second.
+A real-time media bot interacts directly with the audio and video modalities of a media session. This means the bot is sending and/or receiving media as a sequence of **frames**, where each frame represents a unit of content. One second of audio may be transmitted as a sequence of 50 frames, with each frame containing 20 milliseconds (ms) —1/50th of a second — of speech content. One second worth of video may be sliced as a sequence of 30 still images, each intended to be viewed for just 33.3ms — 1/30th of a second — before the next video frame is displayed. The number of frames transmitted or rendered per second is called the **frame rate**. "30fps" indicates 30 frames per second.
 
 ## Audio format
 

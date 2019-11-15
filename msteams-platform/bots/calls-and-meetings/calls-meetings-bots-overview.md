@@ -8,14 +8,14 @@ keywords: calling calls audio video IVR voice online meetings
 
 With the addition of [Microsoft Graph APIs for calls and online meetings](/graph/api/resources/communications-api-overview?view=graph-rest-beta), Microsoft Teams apps can now interact with users in rich ways using voice and video. These APIs allow you to add new features such as interactive voice response (IVR), call control, and access to real-time audio and/or video streams for calls and meetings, including desktop and app sharing.
 
-To use these Microsoft Graph APIs in a Microsoft Teams app, you create a bot and specify some additional information and permissions which we'll describe elsewhere, but first, it's important to understand a few new concepts, terminology, and conventions:
+To use these Microsoft Graph APIs in a Microsoft Teams app, you create a bot and specify some additional information and permissions which we'll describe elsewhere, but first, it's important to understand a concepts, terminology, and conventions:
 
 * **Audio/video calls.** Calls in Teams can be purely audio or audio+video. For brevity's sake, we don't say "audio/video call" everywhere; we just say "call."
 * **Call types.** Calls are either peer-to-peer (between a person and your bot) or multiparty (your bot and two or more people in a group call).
-  ![Call Types](~/assets/images/calls-and-meetings/call-types.png)
+  ![Call Types](~/assets/images/calls-and-meetings/call-types.png):
   * A user may initiate a peer-to-peer call with your bot or invite your bot into an existing multiparty call (although the latter is not yet enabled in the Microsoft Teams UI).
-  * No Microsoft Graph permissions are necessary for a user to initiate a call with your bot for a peer-to-peer call, but additional permissions are needed for your bot to participate in a multiparty call, or for your bot to initiate a peer-to-peer call with a user.
-  * A call may start as peer-to-peer and escalate to multiparty. Your bot can initiate this escalation by inviting others, provided your bot has the proper permissions. If your bot doesn't have permissions to participate in group calls and one participant adds another person, your bot is dropped from the call.
+  * Microsoft Graph permissions aren't necessary for a user to initiate a peer-to-peer call with your bot, but additional permissions are needed for your bot to participate in a multiparty call, or for your bot to initiate a peer-to-peer call with a user.
+  * A call may start as peer-to-peer and escalate to multiparty. Your bot can initiate this escalation by inviting others, provided your bot has the proper permissions. If your bot doesn't have permissions to participate in group calls and one participant adds another party, your bot is dropped from the call.
 * **Signaling.** There are two types of signals — incoming call and in-call:
   * To receive an incoming call, you specify an endpoint in your bot settings; this endpoint receives a notification when an incoming call arrives. You can answer the call, reject it, or redirect it to somewhere or someone else.
   ![Call Types](~/assets/images/calls-and-meetings/call-handling.png)

@@ -19,18 +19,18 @@ HTTP/1.1 204 No Content
 
 Your bot will receive the notification again, but this time in the Microsoft Graph protocol.
 
-In a future release of the Real-time Media Platform, we will allow you to configure the protocol your application supports to avoid receiving the initial callback in the legacy format.
+In a future release of the Real-time Media Platform, we'll allow you to configure the protocol your application supports to avoid receiving the initial callback in the legacy format.
 
 ## Redirects for region affinity
 
-We'll call your webhook from the data-center hosting the call. The call may start in any data center and doesn't take into account region affinities. The notification will be sent to your deployment depending on the GeoDNS resolution. If your application determines, by inspecting the initial notification payload or otherwise, that it needs to run in a different deployment, the application may reply with:
+You'll call your webhook from the data-center hosting the call. The call may start in any data center and doesn't take into account region affinities. The notification will be sent to your deployment depending on the GeoDNS resolution. If your application determines, by inspecting the initial notification payload or otherwise, that it needs to run in a different deployment, the application may reply with:
 
 ```http
 HTTP/1.1 302 Found
 Location: your-new-location
 ```
 
-You may decide to pick up the call and call the [answer](https://developer.microsoft.com/graph/docs/api-reference/beta/api/call_answer) API. You can specify the `callbackUri` to handle this particular call. This is useful for _stateful_ instances where your call is handled by a particular partition and you want to embed this information in the `callbackUri` for routing to the right instance.
+Enable your bot to answer an incoming call using the [answer](https://developer.microsoft.com/graph/docs/api-reference/beta/api/call_answer) API. You can specify the `callbackUri` to handle this particular call. This is useful for _stateful_ instances where your call is handled by a particular partition and you want to embed this information in the `callbackUri` for routing to the right instance.
 
 ## Authenticating the callback
 

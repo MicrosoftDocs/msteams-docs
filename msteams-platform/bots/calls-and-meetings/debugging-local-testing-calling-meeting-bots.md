@@ -35,12 +35,12 @@ tunnels:
 ## Setting up local media
 
 > [!NOTE]
-> This section is only required for application-hosted media bots and can be skipped if you do not host media yourself.
+> This section is only required for application-hosted media bots and can be skipped if you don't host media yourself.
 
 Application-hosted media uses certificates and TCP tunnels. The following steps are required:
 
 - Ngrok's public TCP endpoints have fixed URLs. They are `0.tcp.ngrok.io`, `1.tcp.ngrok.io`, and so on. You should have a DNS CNAME entry for your service that points to these URLs. In this example, let's say `0.bot.contoso.com` refers to `0.tcp.ngrok.io`, `1.bot.contoso.com` refers to `1.tcp.ngrok.io`, and so on.
-- A SSL certificate is required for your URLs. To make it easy, use a SSL certificate issued to a wild card domain. In this case, it would be `*.bot.contoso.com`. This SSL certificate is validated by the media SDK, so it should match your bot's public url. Note the thumbprint and install it in your machine certificates.
+- A SSL certificate is required for your URLs. To make it easy, use a SSL certificate issued to a wild card domain. In this case, it would be `*.bot.contoso.com`. This SSL certificate is validated by the media SDK, so it should match your bot's public URL. Note the thumbprint and install it in your machine certificates.
 - Now, setup a TCP tunnel to forward the traffic to localhost. Write the following lines into your ngrok.yml:
 
     ```yaml
@@ -71,7 +71,7 @@ Once ngrok is up and running, update the code to use the config you just set up.
 
 #### Update signaling
 
-- In the BotBuilder call, change the `NotificationUrl` to the signaling url provided by ngrok.
+- In the BotBuilder call, change the `NotificationUrl` to the signaling URL provided by ngrok.
 
 ```csharp
 statefulClientBuilder.SetNotificationUrl(
@@ -113,6 +113,6 @@ Your bot can now run locally and all the flows work from your localhost.
 
 ## Caveats
 
-- Ngrok free accounts do **NOT** provide end-to-end encryption. The HTTPS data ends at the ngrok URL and the data flows unencrypted from ngrok to `localhost`. If you require end-to-end encryption, consider a paid ngrok account. See [TLS tunnels](https://ngrok.com/docs#tls) for steps on setting up secure end-to-end tunnels.
+- Ngrok free accounts **don't** provide end-to-end encryption. The HTTPS data ends at the ngrok URL and the data flows unencrypted from ngrok to `localhost`. If you require end-to-end encryption, consider a paid ngrok account. See [TLS tunnels](https://ngrok.com/docs#tls) for steps on setting up secure end-to-end tunnels.
 - Because the bot callback URL is dynamic, incoming call scenarios require you to frequently update your ngrok endpoints. One way to fix this is to use a paid ngrok account which provides fixed subdomains to which you can point your bot and the platform.
 - Ngrok tunnels can also be used with [Azure Service Fabric](/azure/service-fabric/service-fabric-overview). For an example of how to do this, see the [HueBot sample app](/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/LocalMediaSamples/HueBot/HueBot).
