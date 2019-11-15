@@ -25,7 +25,7 @@ We support up to six buttons per card. Be concise when writing button text, and 
 
 Graphics are a good way to tell a story, but not all bot conversations require graphics, so use them for maximum impact.
 
-### Respond to users and failing gracefully
+### Responding to users and failing gracefully
 
 Your bot should also be able to respond to things like 'Hi', 'Help', and 'Thanks' while taking common misspellings and colloquialisms into account. For example:
 
@@ -82,7 +82,7 @@ Leave the user in control. Provide notification settings that include frequency 
 
 ## Using tabs
 
-Tabs make your bot much more functional. With tabs, you can achieve the following:
+Tabs make your bot much more functional. With tabs, you can create the following:
 
 ### &#x2713; A place to host standing queries
 
@@ -109,9 +109,9 @@ Add a tab that educates users about how to communicate with your bot. You can pr
 
 Unlike agents, e.g., Cortana, bots act as specialists.
 
-### &#x2713; Discourage chit chat
+### &#x2713; Discourage chitchat
 
-Unless your bot is built for conversation, find ways to redirect chit chat toward task completion.
+Unless your bot is built for conversation, find ways to redirect chitchat toward task completion.
 
 ### &#x2713; Introduce some personality
 
