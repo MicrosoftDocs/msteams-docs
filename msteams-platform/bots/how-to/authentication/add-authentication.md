@@ -52,7 +52,7 @@ You use a resource group to create individual resources for the Bot Framework. F
     1. Select the **Create** button. It may take a few minutes to create the resource group.
 
  > [!TIP]
-> As with the resources you'll create later in this tutorial, it's a good idea to pin this resource group to your dashboard for easy access. If you'd like to do so, select the pin icon in the upper right of the dashboard.
+> As with the resources you'll create later in this tutorial, it's a good idea to pin this resource group to your dashboard for easy access. If you'd like to do so, select the pin icon &#128204; in the upper right of the dashboard.
 
 ## Create the service plan
 
@@ -72,6 +72,9 @@ You use a resource group to create individual resources for the Bot Framework. F
 ## Create the bot channels registration
 
 The bot channels registration registers your web service as a bot with the Bot Framework, provided you have a Microsoft App Id and App password (client secret).
+
+> [!IMPORTANT]
+> You only need to register your bot if it is not hosted in Azure. If you [created a bot](/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&viewFallbackFrom=azure-bot-service-3.0) through the Azure portal then it is already registered with the service. If you created your bot through the [Bot Framework](https://dev.botframework.com/bots/new) or [AppStudio](../concepts/build-and-test/app-studio-overview) your bot isn't registered in Azure.
 
 [!INCLUDE [bot channels registration steps](~/includes/bots/azure-bot-channels-registration.md)]
 
@@ -134,7 +137,7 @@ In this procedure you'll use an Azure AD provider; other Azure AD supported iden
     1. **Tenant ID**, enter the **Directory (tenant) ID** that you recorded earlier for your Azure identity app or **common** depending on the supported account type selected when you created the identity provider app. To decide which value to assign follow these criteria:
         - When creating the identity app if you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft AAD directory - Multi tenant)* enter the **tenant ID** you recorded earlier for the AAD app.
 
-        - When creating the identity app if you selected *Accounts in any organizational directory (Any AAD directory - Multi tenant and personal Microsoft accounts e.g. Skype, Xbox, Outlook.com)* enter the word **common** instead of a tenant ID. Otherwise, the AAD app will verify through the tenant whose ID was selected and exclude personal Microsoft accounts.
+        - When creating the identity app if you selected *Accounts in any organizational directory (Any AAD directory - Multi tenant and personal Microsoft accounts e.g. Skype, Xbox, Outlook)* enter the word **common** instead of a tenant ID. Otherwise, the AAD app will verify through the tenant whose ID was selected and exclude personal Microsoft accounts.
 
         This will be the tenant associated with the users who can be authenticated.
 
@@ -191,7 +194,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
         }
         ```
 
-1. In the Solution Explorer, navigate to the `TeamsAppManifest` folder, open the `manifest.json` and set `id` and `botId` to the **bot App ID** you saved at the time of the bot channel registration.
+1. In the Solution Explorer, navigate to the `TeamsAppManifest` folder, open `manifest.json` and set `id` and `botId` to the **bot App ID** you saved at the time of the bot channel registration.
 
 ### Deploy the bot to Azure
 
@@ -231,7 +234,7 @@ In order for the bot sample login to work you must configure the Emulator as sho
 If a bot requires authentication, you must configure the Emulator as shown below.
 
 1. Start the Emulator.
-1. In the Emulator, select the gear icon in the bottom left, or the **Emulator Settings** tab in the upper right.
+1. In the Emulator, select the gear icon &#9881; in the bottom left, or the **Emulator Settings** tab in the upper right.
 1. Check the box by **Use version 1.0 authentication tokens**.
 1. Enter the local path to the **ngrok** tool. *See* the Bot Framework Emulator / ngrok tunneling integration [Wiki](https://github.com/Microsoft/BotFramework-Emulator/wiki/Tunneling-(ngrok)). For more tool information, see [ngrok](https://ngrok.com/).
 1. Check the box by **Run ngrok when the Emulator starts up**.
@@ -248,7 +251,7 @@ After you have configured the authentication mechanism, you can perform the actu
 1. Start the Emulator.
 1. Select the **Open bot** button.
 1. In the **Bot URL**, enter the bot's local URL. Usually, `http://localhost:3978/api/messages`.
-1. In the **Microsoft App ID** enter the bot's app ID from the `appsettings.json`.
+1. In the **Microsoft App ID** enter the bot's app ID from `appsettings.json`.
 1. In the **Microsoft App password** enter the bot's app password from the `appsettings.json`.
 1. Select **Connect**.
 1. After the bot is up and running, enter any text to display the sign-in card.
@@ -256,14 +259,14 @@ After you have configured the authentication mechanism, you can perform the actu
 1. A pop-up dialog is displayed to **Confirm Open URL**. This is to allow the bot's user (you) to be authenticated.  
 1. Select **Confirm**.
 1. If asked, select the applicable user's account.
-1. Depending which configuration you used for the emulator, you get one of the following:
+1. Depending which configuration you used for the Emulator, you get one of the following:
     1. **Using sign-in verification code**  
       &#x2713; A window is opened displaying the validation code.  
       &#x2713; Copy and enter the validation code into the chat box to complete the sign-in.
     1. **Using authentication tokens**.  
       &#x2713; You're logged in based on your credentials.
 
-    The following image is an example of the bot UI after you have logged in:
+    The following image is an example of the bot UI after you've logged in:
 
     ![auth bot login emulator](../../../assets/images/authentication/auth-bot-login-emulator.PNG)
 
@@ -305,7 +308,7 @@ and when for these, and just reference that from here, along with the set of ste
 
 > [!NOTE]
 > If you're having problems signing in, try to test the connection again as described in the previous steps. This could recreate the authentication token.
-> With the Bot Framework Web Chat client in Azure, you may need to sign in a of couple times before the authentication is established correctly.
+> With the Bot Framework Web Chat client in Azure, you may need to sign in several times before the authentication is established correctly.
 
 ## Preliminary quick testing the bot in Teams
 
@@ -332,11 +335,11 @@ For more information, see [Connect a bot to Teams](/azure/bot-service/channel-co
 
 ## Install and test the bot in Teams
 
-1. In your bot project, assure that the `TeamsAppManifest` folder contains the `manifest.json` along with an `outline.png` and `color.png` files.
-1. In Solution Explorer, navigate to the `TeamsAppManifest` folder. Edit the `manifest.json` file by assigning the following values:
-    1. Assure that the **bot App ID** you received at the time of the bot channel registration is assigned to `id` and `botId`.
+1. In your bot project, ensure that the `TeamsAppManifest` folder contains the `manifest.json` along with an `outline.png` and `color.png` files.
+1. In Solution Explorer, navigate to the `TeamsAppManifest` folder. Edit `manifest.json` by assigning the following values:
+    1. Ensure that the **bot App ID** you received at the time of the bot channel registration is assigned to `id` and `botId`.
     1. Assign this value: `validDomains: [ "token.botframework.com" ]`.
-1. Select and **zip** the files `manifest.json`, `outline.png`, and `color.png`.
+1. Select and **zip** the `manifest.json`, `outline.png`, and `color.png` files.
 1. Open **Microsoft Teams**.
 1. In the left panel, at the bottom, select the **Apps icon**.
 1. In the right panel, at the bottom, select **Upload a custom app**.
@@ -378,13 +381,13 @@ This launches ngrok to listen on the port you specify. In return, it gives you a
     ![auth bot teams ngrok testing](../../../assets/images/authentication/auth-bot-teams-ngrok-testing.png).
 
 > [!NOTE]
-> If you stop and restart ngrok, the URL changes. To use ngrok in your project, and depending on the capabilities you're using, you must replace all URL references.
+> If you stop and restart ngrok, the URL changes. To use ngrok in your project, and depending on the capabilities you're using, you must update all URL references.
 
 ## Additional information
 
 ### TeamsAppManifest/manifest.json
 
-This manifest contains information needed by Microsoft Teams to be able to connect with the bot.  
+This manifest contains information needed by Microsoft Teams to connect with the bot.  
 
 ```json
 {
