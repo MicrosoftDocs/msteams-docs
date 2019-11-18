@@ -20,9 +20,9 @@ For more information about how the Azure Bot Service handles authentication, see
 
 In this article you'll learn:
 
-- **How to create an authentication-enabled bot**. You'll use [cs-auth-sample][teams-auth-bot]. The sample code handles user logins and the authentication token generator.
-- **How to deploy the bot to Azure and associate it with an identity provider**. The provider issues a token based on the user's credentials. The bot can use the token to access resources, such as a mail service, which require authentication. For more information see  [Microsoft Teams authentication flow for bots](auth-flow-bot.md).
-- **How to integrate the bot within Microsoft Teams**. Once the bot has been integrated, you can login and exchange messages with it in a chat.
+- **How to create an authentication-enabled bot**. You'll use [cs-auth-sample][teams-auth-bot] to handle user sign-in credentials and the authentication token generator.
+- **How to deploy the bot to Azure and associate it with an identity provider**. The provider issues a token based on user sign-in credentials. The bot can use the token to access resources, such as a mail service, which require authentication. For more information see  [Microsoft Teams authentication flow for bots](auth-flow-bot.md).
+- **How to integrate the bot within Microsoft Teams**. Once the bot has been integrated, you can sign in and exchange messages with it in a chat.
 
 ## Prerequisites
 
@@ -38,11 +38,11 @@ In this article you'll learn:
 
 ## Create the resource group
 
-The resource group and the service plan aren't strictly necessary, but they allow you to conveniently release the resources you create. This is a good practice to keep your resources organized and manageable.
+The resource group and the service plan aren't strictly necessary, but they allow you to conveniently release the resources you create. This is good practice for keeping your resources organized and manageable.
 
-You use a resource group to create individual resources for the Bot Framework. For performance, assure that these resources are located in the same Azure region.
+You use a resource group to create individual resources for the Bot Framework. For performance, ensure that these resources are located in the same Azure region.
 
-1. In your browser sign into the [Azure portal][azure-portal].
+1. In your browser, sign into the [**Azure portal**][azure-portal].
 1. In the left navigation panel, select **Resource groups**.
 1. In the upper left of the displayed window, select **Add** tab to create a new resource group. You'll be prompted to provide the following:
     1. **Subscription**. Use your existing subscription.
@@ -89,7 +89,7 @@ For more information, see [Create a bot for Teams](../create-a-bot-for-teams.md)
 You need an identity provider that can be used for authentication.
 In this procedure you'll use an Azure AD provider; other Azure AD supported identity providers can also be used. *See* [Tutorial: Add identity providers to your applications in Azure Active Directory B2C](/azure/active-directory-b2c/tutorial-add-identity-providers).
 
-1. In the [Azure portal][azure-portal], on the left navigation panel, select **Azure Active Directory**.
+1. In the [**Azure portal**][azure-portal], on the left navigation panel, select **Azure Active Directory**.
     > [!TIP]
     > You'll need to create and register this Azure AD resource in a tenant
     > in which you can consent to delegate permissions requested by an application.
@@ -115,11 +115,11 @@ In this procedure you'll use an Azure AD provider; other Azure AD supported iden
    1. Add a description to identify this secret from others you might need to create for this app, such as *Bot identity app in Teams*.
    1. Set **Expires** to your selection.
    1. Select **Add**.
-   1. Before leaving this page, record the secret. You'll use this value later as the _Client secret_ when you register your Azure AD application with your bot.
+   1. Before leaving this page, **record the secret**. You'll use this value later as the _Client secret_ when you register your Azure AD application with your bot.
 
 ### Configure the identity provider connection and register it with the bot
 
-1. In the [Azure portal][azure-portal], select your resource group from the dashboard.
+1. In the [**Azure portal**][azure-portal], select your resource group from the dashboard.
 1. Select your bot channel registration link.
 1. On the resource page, select **Settings**.
 1. Under **OAuth Connection Settings** near the bottom of the page, select **Add Setting**.
@@ -171,9 +171,9 @@ The connection name is used by the bot code to retrieve user authentication toke
 
 With the preliminary settings done, let's focus on the creation of the bot to use in this article.
 
-1. Clone the [cs-auth-sample][teams-auth-bot].
+1. Clone [cs-auth-sample][teams-auth-bot].
 1. Launch Visual Studio.
-1. From the toolbar select **File->Open->Project/Solution** and open the bot project.
+1. From the toolbar select **File -> Open -> Project/Solution** and open the bot project.
 1. Update **appsettings.json** as follows:
 
     - Set `ConnectionName` to the name of the identity provider connection you added to the bot channel registration. The name we used in this example is *BotTeamsAuthADv1*.
@@ -210,7 +210,7 @@ Alternatively, while in Visual Studio, you can follow these steps:
 
 1. Select **Create**.
 1. If the deployment completes successfully, you should see it reflected in Visual Studio. Moreover, a page is displayed in your default browser saying *Your bot is ready!*. The URL will be similar to this: `https://botteamsauth.azurewebsites.net/`. Save it to a file.
-1. In your browser, navigate to the [Azure portal][azure-portal].
+1. In your browser, navigate to the [**Azure portal**][azure-portal].
 1. Check your resource group, the bot should be listed along with the other resources. The following image is an example:
 
     ![teams-bot-auth-app-service-group](../../../assets/images/authentication/auth-bot-app-service-in-group.png)
@@ -222,7 +222,7 @@ Alternatively, while in Visual Studio, you can follow these steps:
 
 ## Test the bot using the Emulator
 
-If you have not done it already, install the [Microsoft Bot Framework Emulator](https://aka.ms/bot-framework-emulator-readme). See also [Debug with the emulator](https://aka.ms/bot-framework-emulator-debug-with-emulator).
+If you haven't done it already, install the [Microsoft Bot Framework Emulator](https://aka.ms/bot-framework-emulator-readme). See also [Debug with the Emulator](https://aka.ms/bot-framework-emulator-debug-with-emulator).
 
 In order for the bot sample login to work you must configure the Emulator as shown below.
 
@@ -257,17 +257,17 @@ After you have configured the authentication mechanism, you can perform the actu
 1. Select **Confirm**.
 1. If asked, select the applicable user's account.
 1. Depending which configuration you used for the emulator, you get one of the following:
-    1. **Using sign-in verification code**
-        1. A window is opened displaying the validation code.
-        1. Copy and enter the validation code into the chat box to complete the sign-in.
-    1. **Using authentication tokens**.
-        1. You're logged in based on your credentials.
+    1. **Using sign-in verification code**  
+      &#x2713; A window is opened displaying the validation code.  
+      &#x2713; Copy and enter the validation code into the chat box to complete the sign-in.
+    1. **Using authentication tokens**.  
+      &#x2713; You're logged in based on your credentials.
 
     The following image is an example of the bot UI after you have logged in:
 
     ![auth bot login emulator](../../../assets/images/authentication/auth-bot-login-emulator.PNG)
 
-1. If you select **Yes** when the bot asks *Would you like to view your token?*, you get a response similar to the following:
+1. If you select **Yes** when the bot asks *Would you like to view your token?*, you'll get a response similar to the following:
 
     ![auth bot login emulator token](../../../assets/images/authentication/auth-bot-login-emulator-token.png)
 
@@ -282,7 +282,7 @@ This releases the user token, and the bot won't be able to act on your behalf un
 <!--There are several testing scenarios here. Ideally, we'd have a separate article on the what, why, 
 and when for these, and just reference that from here, along with the set of steps that exercises the bot code.-->
 
-1. In your browser, navigate to the [Azure portal][azure-portal].
+1. In your browser, navigate to the [**Azure portal**][azure-portal].
 1. Find your resource group.
 1. Select the resource link. The resource page is displayed.
 1. In the resource page, select **Test in Web Chat**. The bot starts and displays the predefined greetings.
@@ -316,7 +316,7 @@ The following steps allow you to do a quick install by using the bot GUID, so yo
 > Doing so severely limits the functionality of a bot.
 > Bots in production must be added to Teams as part of an app. See [Create a bot](~/bots/how-to/create-a-bot-for-teams.md).
 
-1. In your browser, navigate to the [Azure portal][azure-portal].
+1. In your browser, navigate to the [**Azure portal**][azure-portal].
 1. In the left pane, select **All Resources**.
 1. In the right panel find your bot **Azure AD Registration**.
 1. Select the **Channels** page, and then select the **Teams** icon:
@@ -350,24 +350,24 @@ The following wizard is displayed:
 1. Select the **Set up a bot** button.
 1. Select the three dots (&#x25cf;&#x25cf;&#x25cf;) in the left panel. Then select the **App Studio** icon.
 1. Select the **Manifest editor** tab. You should see the icon for the bot you uploaded.
-1. Also, you should be able to see the bot listed as a contact in the chat list.
+1. Also, you should be able to see the bot listed as a contact in the chat list
 that you can use to exchange messages with the bot.
 
 ### Testing the bot locally in Teams
 
-Microsoft Teams is an entirely cloud-based product, it requires all services it accesses to be available from the cloud using HTTPS endpoints. Therefore, to enable the bot (our sample) to work in Teams, you need to either publish the code to the cloud of your choice, or make a local running instance externally accessible via a **tunneling** tool. We recommend  [ngrok](https://ngrok.com/download), which creates an externally addressable URL for a port you open locally on your machine.
+Microsoft Teams is an entirely cloud-based product, it requires all services it accesses to be available from the cloud using HTTPS endpoints. Therefore, to enable the bot (our sample) to work in Teams, you need to either publish the code to the cloud of your choice, or make a locally running instance externally accessible via a **tunneling** tool. We recommend  [ngrok](https://ngrok.com/download), which creates an externally addressable URL for a port you open locally on your machine.
 To set up ngrok in preparation for running your Microsoft Teams app locally, follow these steps:
 
 1. In a terminal window, go the directory where you have `ngrok.exe` installed. We suggest setting the *environment variable* path to point to it.
-1. Run, for example, `> ngrok http 3978 --host-header=localhost:3978`. Replace the port number as needed.
+1. Run, for example, `ngrok http 3978 --host-header=localhost:3978`. Replace the port number as needed.
 This launches ngrok to listen on the port you specify. In return, it gives you an externally addressable URL, valid for as long as ngrok is running. The following image is an example:
 
     ![teams bots app auth connection string adv1](../../../assets/images/authentication/auth-bot-ngrok-start.PNG).
 
 1. Copy the forwarding HTTPS address. It should be similar to the following: `https://dea822bf.ngrok.io/`.
-1. Append to it `/api/messages` to obtain `https://dea822bf.ngrok.io/api/messages`. This is the **messages endpoint** for the bot running locally on your machine and reachable over the web in a chat in Microsoft Teams.
-1. One final step to perform is to update the messages endpoint of the deployed bot. In the example, we deployed the bot in Azure. So let's perform these steps:
-    1. In your browser navigate to the [Azure portal][azure-portal].
+1. Append `/api/messages` to obtain `https://dea822bf.ngrok.io/api/messages`. This is the **messages endpoint** for the bot running locally on your machine and reachable over the web in a chat in Microsoft Teams.
+1. One final step to perform is to update the messages endpoint of the deployed bot. In the example, we deployed the bot in Azure. So **let's perform these steps:
+    1. In your browser navigate to the [**Azure portal**][azure-portal].
     1. Select your **Bot Channel Registration**.
     1. In the left panel, select **Settings**.
     1. In the right panel, in the **Messaging endpoint** box, enter the ngrok URL, in our example, `https://dea822bf.ngrok.io/api/messages`.
