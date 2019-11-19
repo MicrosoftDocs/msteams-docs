@@ -38,7 +38,7 @@ For additional information on authentication see:
 * [Tab authentication sample in Node](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
 * [Tab/bot authentication in C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
 
-### App Content 
+### App content 
 
 * It must not contain inadmissible or offensive material.
 * Any material that you associate with your experience, such as descriptions and support documentation, must be accurate. Use correct spelling, capitalization, punctuation, and grammar in your descriptions and materials.
@@ -66,6 +66,6 @@ For additional information on authentication see:
 * Your bot must include a help command that provides your value proposition along with all your valid commands.
 * For bots, a response to a user command must occur within two seconds. If longer processing is required, you must use a typing indicator.
 
-### Messaging Extensions 
+### Messaging extensions 
 
 * For messaging extensions, a response to a user command must occur within five seconds.

@@ -29,7 +29,7 @@ Once you have completed all of the above requirements, you can start to [submit 
 * Your support URL should not require authentication or login before contacting you for any issues with your app.
 
 
-### Test Notes for validation/approval
+### Test notes for validation/approval
 
 You must provide at least two login credentials, one admin and one not, so your app can be validated.
 
