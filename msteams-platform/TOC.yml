@@ -80,8 +80,6 @@
         items: 
         - name: Presubmission checklist
           href: concepts/deploy-and-publish/appsource-publishing-guidance/prepare-app/overview.md
-        - name: App functionality checklist
-          href: concepts/deploy-and-publish/appsource-publishing-guidance/prepare-app/app-functionality-requirement.md
         - name: App detail page checklist
           href: concepts/deploy-and-publish/appsource-publishing-guidance/prepare-app/app-detail-page-checklist.md
         - name: Manifest package checklist

@@ -4,7 +4,7 @@ description: The list of requirement for app and each capability
 keywords: app functionality requirement checklist submission 
 ---
 
-## App Level 
+## App level 
 * It must not contain inadmissible or offensive material.
 * It must be stable and functional.
 * Any material that you associate with your experience, such as descriptions and support documentation, must be accurate. Use correct spelling, capitalization, punctuation, and grammar in your descriptions and materials.
