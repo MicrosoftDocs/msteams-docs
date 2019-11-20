@@ -293,7 +293,7 @@ To include a `signin` action with an Adaptive Card include the following details
   "data": {
     "msteams": {
         "type": "signin",
-        "value": "https://signin.com",
+        "value": "https://signin.com"
     }
   }
 }
