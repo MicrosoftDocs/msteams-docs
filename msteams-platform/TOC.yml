@@ -70,8 +70,6 @@
       href: concepts/deploy-and-publish/overview.md
     - name: Upload your app for a team or user
       href: concepts/deploy-and-publish/apps-upload-for-team-and-user.md
-    - name: Publish to your organization app catalog
-      href: /microsoftteams/tenant-apps-catalog-teams
     - name: Publish your app on AppSource
       items:
       - name: Understanding AppSourse submission 
