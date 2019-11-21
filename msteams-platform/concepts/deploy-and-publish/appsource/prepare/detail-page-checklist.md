@@ -5,24 +5,10 @@ keywords: teams publish store office publishing policy AppSource content
 ---
 
 # App detail page checklist 
-Make sure your app descriptions and screenshots follows:
-* [AppSource guidance](/office/dev/store/create-effective-office-store-listings) to create an effective detail page
-* [Manifest requirement](#manifest-requirement)
-* [Screenshots requirement](#screenshots-requirement)
+Make sure your app descriptions and screenshots follows our [AppSource guidance for creating an effective store listing](/office/dev/store/create-effective-office-store-listings) and [Screenshots requirement](#screenshots-requirement)
 
 >[!IMPORTANT]
 > Make sure you copy over the description you write in AppScource onto the manifest. Teams will only use the description you provided in the manifest.
-
-## Manifest requirement
-
-* Don't use "Teams", "Microsoft", or "app" in your app name.
-* The developerName in the App Manifest must be same as the Provider Name defined in Seller Dashboard.
-* Make sure the app description, screenshots, text, and promotional images describe only the app and do not contain any additional advertising, promotions or copyrighted brand names.
-* If your product requires an account on your service or another service, list that in the description and ensure there are links to sign up, sign in and sign out.
-* If your product requires additional purchases to function properly, list that in the description.
-* Provide the requisite Terms and Privacy policy links in the manifest and the Seller Dashboard. Verify that the links properly resolve to the correct documentation, ideally Teams specific. For bots, you must provide this same information in the Submission section of the Bot Framework registration page.
-* Ensure that metadata in the manifest roughly matches metadata in the Seller Dashboard (and, for bots, in the Bot Framework registration). Note that your Seller Dashboard entry should contain a more detailed and formatted description for use in the AppSource product page.
-
 
 ## Screenshots requirement
 
