@@ -3,7 +3,17 @@ title: Publishing guidance
 description: Describes the process of publishing your Microsoft Teams app to AppSource
 keywords: teams publish store office publishing
 ---
-# Use the Seller Dashboard to submit your Microsoft Teams app
+# Use the Seller Dashboard to submit to AppSource
+
+> [!IMPORTANT]
+> All information in the package manifest must match the metadata information you enter into the product listing.
+
+After your app has completed the Microsoft Teams app approval process, you can submit your solution to the [Seller Dashboard](https://go.microsoft.com/fwlink/?LinkId=248605). Add an app of type "Teams App" to initiate the submission process. For Teams-specific guidance and a detailed walk through, see [Submitting your Microsoft Teams app in the Seller Dashboard](#Submitting-your-Microsoft-Teams-app-in-the-Seller-Dashboard). For general information about the Seller Dashboard, see [Use the Seller Dashboard to submit your solution to AppSource](/office/dev/store/use-the-seller-dashboard-to-submit-to-the-office-store).
+
+You need to upload a [submission package](~/concepts/build-and-test/apps-package.md) and provide the required metadata for the product listing page, including information such as app logo, description, and screenshots. Please review our [Submission and Manifest Metadata Checklist](~/concepts/deploy-and-publish/office-store-checklist.md) for more information.
+
+
+## Submitting your Microsoft Teams app in the Seller Dashboard
 
 For a general overview of the Microsoft Teams app submission flow, see [Publish your Microsoft Teams app to AppSource](~/concepts/deploy-and-publish/apps-publish.md).
 

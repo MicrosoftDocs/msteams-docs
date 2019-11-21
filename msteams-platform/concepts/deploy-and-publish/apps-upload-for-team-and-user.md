@@ -41,7 +41,7 @@ There are two ways to upload your app to Teams:
 The uploaded package should now be available for use in the team or conversation specified in the consent dialog. If your app does not appear, the most common reason is an error in the manifest, particularly ids for the app, bot and messaging extensions. If the app is not scoped for conversations, that option will not appear.
 
 >[!NOTE]
-Apps in conversations is currently in [Developer Preview](~/resources/dev-preview/developer-preview-intro.md), and the option will not appear if Teams is not running in that mode.
+> Apps in conversations is currently in [Developer Preview](~/resources/dev-preview/developer-preview-intro.md), and the option will not appear if Teams is not running in that mode.
 
 ![Example of bot in list of uploaded bots](~/assets/images/botinlist.jpg)
 
