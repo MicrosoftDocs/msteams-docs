@@ -64,20 +64,34 @@
         href: concepts/build-and-test/apps-localization.md
       - name: Create a Share-to-Teams button for your website
         href: concepts/build-and-test/share-to-teams.md
-    - name: 'Deploy and publish your app'
-      items:
-        - name: Upload your app for a team or user
-          href: concepts/deploy-and-publish/apps-upload.md
-        - name: Publish your app
-          href: concepts/deploy-and-publish/apps-publish.md
-        - name: Submit your app to AppSource
-          href: concepts/deploy-and-publish/office-store-guidance.md
-        - name: AppSource approval guidance
-          href: concepts/deploy-and-publish/office-store-approval.md
-        - name: AppSource submission checklist
-          href: concepts/deploy-and-publish/office-store-checklist.md
-        - name: Application Certification program
-          href: concepts/deploy-and-publish/application-certification.md
+    - name: Deploy and publish your app
+    items:
+      - name: Choose your distribution methods
+        href: concepts/deploy-and-publish/overview.md
+      - name: Upload your app for a team or user
+        href: concepts/deploy-and-publish/apps-upload-for-team-and-user.md
+      - name: Publish your app on AppSource
+        items:
+        - name: Understanding AppSourse submission 
+          href: concepts/deploy-and-publish/appsource/publish.md
+        - name: Prepare your app
+          items: 
+          - name: Presubmission checklist
+            href: concepts/deploy-and-publish/appsource/prepare/overview.md
+          - name: App detail page checklist
+            href: concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md
+          - name: Manifest package checklist
+            href: concepts/deploy-and-publish/appsource/prepare/office-store-checklist.md
+          - name: Frequently failed cases
+            href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
+        - name: Submit your app for approval
+          href: concepts/deploy-and-publish/appsource/appsource-submission-walkthrough.md
+        - name: After publishing your app
+          items:
+          - name: What to do after publishing your app
+            href: concepts/deploy-and-publish/appsource/post-publish/overview.md
+          - name: Application Certification program
+            href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
     - name: 'Authentication in Teams apps'
       items:
         - name: 'Authentication overview'
