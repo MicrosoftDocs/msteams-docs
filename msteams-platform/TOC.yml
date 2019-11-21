@@ -85,7 +85,7 @@
         - name: Frequently failed cases
           href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
       - name: Submit your app for approval
-        href: concepts/deploy-and-publish/appsource/publish-app/appsource-submission-walkthrough.md
+        href: concepts/deploy-and-publish/appsource/appsource-submission-walkthrough.md
       - name: After publishing your app
         items:
         - name: What to do after publishing your app
