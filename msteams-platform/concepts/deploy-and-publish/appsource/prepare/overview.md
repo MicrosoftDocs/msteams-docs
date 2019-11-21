@@ -9,16 +9,16 @@ Teams app approval is a free service provided by the Microsoft Teams group that 
 
 For your Teams app to be approved, your app must meet the following requirements and guidelines:
 * **Distribution method:** Make sure your app is meant for a store. There are [other options](../../overview.md) to distribute your app without publishing. <!-- * **App Functionality**: Your app meets [App Functionality guildeline](app-functionality-requirement.md) to deploy your app without submitting to AppSource. -->
-* **App detail page:** Your app meets [app detail page checklist](detail-page-checklist.md)
-* **Tips and frequently failed cases:** Pay extra attention to these [tips and frequently failed cases](frequently-failed-cases.md) to improve your app submission to approval time.
-* **Manifest:** Your app manifest pacakge pass the [manifest package checklist](office-store-checklist.md) and [manifest checker in App Studio](TODO.md)
+* **App detail page:** Your app meets [App detail page checklist](detail-page-checklist.md)
+* **Tips and frequently failed cases:** Pay extra attention to these [Tips and frequently failed cases](frequently-failed-cases.md) to improve your app submission to approval time.
+* **Manifest:** Your app manifest pacakge pass the [Manifest package checklist](office-store-checklist.md) and [manifest checker in App Studio](TODO.md)
 * **Testing:** You have fully [tested and debugged your app](../../../build-and-test/debug.md).
 * **Validation policies:** It must pass all current [AppSource validation policies](https://dev.office.com/officestore/docs/validation-policies) for Teams tabs and bots. Please note that these policies are subject to change.
 * **Testing notes:** Include proper [test notes for validation](#Test-notes-for-validation/approval)
 * **Privacy policies:** Makes sure your app include proper [privacy policy, terms of use and support URLs](#Privacy-policy-terms-of-use-and-support-urls) 
 
 Once you have completed all of the above requirements, you can start to 
-[submit your app to the store.](../appsource-submission-walkthrough.md)
+[Submit your app to the store.](../appsource-submission-walkthrough.md)
 
 
 ### Privacy policy, terms of use and support URLs

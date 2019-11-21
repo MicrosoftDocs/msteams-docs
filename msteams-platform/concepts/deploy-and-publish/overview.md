@@ -7,9 +7,9 @@ keywords: teams publish store office distribute AppSource sideload upload app
 
 Once you've created your app you have three options for distributing it to your users:
 
-1. [Upload your app directly for yourself or a team](#Upload-your-app-directly-for-yourself-or-a-team)
-2. [Publish to you organization app catalog](#Publish-to-your-organization-app-catalog)
-3. [Publish your app through AppSource](#Publish-to-AppSource)
+1. [Upload your app directly for yourself or a team](#upload-your-app-directly-for-yourself-or-a-team)
+2. [Publish to you organization app catalog](#publish-to-your-organization-app-catalog)
+3. [Publish your app through AppSource](#publish-to-AppSource)
 
 ## Upload your app directly for yourself or a team
 

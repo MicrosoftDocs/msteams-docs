@@ -16,10 +16,10 @@ At a high level, the process for submitting your app to AppSource is:
 
 1. Develope your app following our [design guidelines]() 
 1. [Register as a developer](#Register-as-a-developer) in both Seller Dashboard and Microsoft 
-2. Prepare your app for submission: Make sure your app passes the [submission checklist](prepare\overview.md)
+2. Prepare your app for submission: Make sure your app passes the [Submission checklist](prepare\overview.md)
 5. Go through our [Tips and most frequently failed cases](prepare\frequently-failed-cases.md) for a quicker approval process
-6. Submission: [Submit your app in seller dashboard](prepare\appsource-submission-walkthrough.md) 
-7. Post submission: Check our [guidance for post submission](post-publish\overview.md)
+6. Submission: [Submit your app in seller dashboard](appsource-submission-walkthrough.md) 
+7. Post submission: Check our [Guidance for post submission](post-publish\overview.md)
 
 ## Register as a developer
 You must register as **both** Microsoft app developer and developer in seller dashboard in order to publish your app.
@@ -29,7 +29,7 @@ You must register as **both** Microsoft app developer and developer in seller da
 
 ### Register as a Microsoft app developer
 
-If you have already registered in the Microsoft Store ecosystem, either by distributing a Universal Windows App (UWA) via the Windows Store or an Office or SharePoint add-in via AppSource, you should use this account to distribute your Microsoft Teams app. Otherwise, you must first [register as an app developer](https://developer.microsoft.com/store/register) to create your publisher identity in the Microsoft Store ecosystem. Account registration allows you to secure your company identity and triggers validation checks by the Microsoft Store team to ensure you are who you say you are.
+If you have already registered in the Microsoft Store ecosystem, either by distributing a Universal Windows App (UWA) via the Windows Store or an Office or SharePoint add-in via AppSource, you should use this account to distribute your Microsoft Teams app. Otherwise, you must first [Register as an app developer](https://developer.microsoft.com/store/register) to create your publisher identity in the Microsoft Store ecosystem. Account registration allows you to secure your company identity and triggers validation checks by the Microsoft Store team to ensure you are who you say you are.
 
 Account management in the Microsoft Store ecosystem relies on a [Microsoft account](https://account.microsoft.com/account). This identity will be the main administrator/owner of your AppSource experience. For more information, please review [Opening a developer account](/windows/uwp/publish/opening-a-developer-account) and the [Developer program FAQ](https://developer.microsoft.com/store/register/faq).
 
