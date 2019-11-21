@@ -10,7 +10,7 @@ Teams app approval is a free service provided by the Microsoft Teams group that 
 For your Teams app to be approved, your app must meet the following requirements and guidelines:
 
 * **Distribution method:** Make sure your app is meant for a store. There are [other options](../../overview.md) to distribute your app without publishing. <!-- * **App Functionality**: Your app meets [App Functionality guildeline](app-functionality-requirement.md) to deploy your app without submitting to AppSource. -->
-* **App detail page:** Your app meets [App Detail Page Checklist](app-detail-page-checklist.md)
+* **App detail page:** Your app meets [App Detail Page Checklist](detail-page-checklist.md)
 * **Tips and frequently failed cases:** Pay extra attention to these [Frequently Failed Cases](frequently-failed-cases.md) to improve your app submission to approval time.
 * **Manifest:** Your app manifest pacakge pass the [Manifest Package Checklist](office-store-checklist.md) and [Manifest Checker in App Studio]()
 * **Testing:** You have fully [tested and debugged your app](../../../build-and-test/debug.md).

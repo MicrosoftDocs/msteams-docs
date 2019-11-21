@@ -16,10 +16,10 @@ At a high level, the process for submitting your app to AppSource is:
 
 1. Develope your app following our [design guidelines]() 
 1. [Register as a developer](#Register-as-a-developer) in both Seller Dashboard and Microsoft 
-2. Prepare your app for submission: Make sure your app passes the [submission checklist](prepare-app\overview.md)
-5. Go through our [Tips and most frequently failed cases](prepare-app\frequently-failed-cases.md) for a quicker approval process
-6. Submission: [Submit your app in seller dashboard](prepare-app\appsource-submission-walkthrough.md) 
-7. Post submission: Check our [guidance for post submission](post-publish-app\overview.md)
+2. Prepare your app for submission: Make sure your app passes the [submission checklist](prepare\overview.md)
+5. Go through our [Tips and most frequently failed cases](prepare\frequently-failed-cases.md) for a quicker approval process
+6. Submission: [Submit your app in seller dashboard](prepare\appsource-submission-walkthrough.md) 
+7. Post submission: Check our [guidance for post submission](post-publish\overview.md)
 
 ## Register as a developer
 You must register as **both** Microsoft app developer and developer in seller dashboard in order to publish your app.
