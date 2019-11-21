@@ -1,20 +1,15 @@
 ---
-title: Frequently failed cases 
-description: Describes the most failed policies during app submission 
-keywords: teams publish faq failed frequently cases 
+title: Tips and frequently failed cases 
+description: Describes tips for submission and most failed policies  
+keywords: teams publish faq failed frequently cases tip tips 
 ---
 
-# Frequently failed cases 
+# Tips and frequently failed cases 
 
 The information below covers some of the most common reasons apps fail validation. It is not intended to be an exhaustive list of all potential issues with you app. However, if you follow this guidance your likelihood of a first-time pass will be greatly increased.
 
-### Tips for successful app submission
 
-* Do not make changes to your app while validation is in progress. This will require a complete re-validation of your app.
-* Your app  must not stop responding, end unexpectedly, or contain programming errors. If there is an issue it should fail gracefully with a valid way forward message to user.
-* Your app must not automatically download, install or launch any executable code on the user's environment. Any download should seek an explicit permission from the user.
-
-### Sign up, Sign in, and Sign out
+### Sign up, sign in, and sign out
 
 Apps must provide a clear, simple sign in/out and (when appropriate) sign-up experience. The experience must be reachable across all capabilities in your app.
 
@@ -69,3 +64,9 @@ For additional information on authentication see:
 ### Messaging extensions 
 
 * For messaging extensions, a response to a user command must occur within five seconds.
+
+### Tips for successful app submission
+
+* Do not make changes to your app while validation is in progress. This will require a complete re-validation of your app.
+* Your app  must not stop responding, end unexpectedly, or contain programming errors. If there is an issue it should fail gracefully with a valid way forward message to user.
+* Your app must not automatically download, install or launch any executable code on the user's environment. Any download should seek an explicit permission from the user.
