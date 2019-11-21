@@ -61,7 +61,7 @@ For additional information on authentication see:
 * Your bot must include a help command that provides your value proposition along with all your valid commands.
 * For bots, a response to a user command must occur within two seconds. If longer processing is required, you must use a typing indicator.
 
-### Messaging extensions 
+### Messaging extensions
 
 * For messaging extensions, a response to a user command must occur within five seconds.
 

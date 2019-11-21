@@ -1,9 +1,9 @@
 ---
-title: Publish your app
-description: Describes the process of publishing your app
-keywords: teams publish store office publishing AppSource
+title: Distribute your app
+description: Describes the three options of distributing your app
+keywords: teams publish store office distribute AppSource sideload upload app
 ---
-# Publish your Microsoft Teams app
+# Distribute your Microsoft Teams app
 
 Once you've created your app you have three options for distributing it to your users:
 

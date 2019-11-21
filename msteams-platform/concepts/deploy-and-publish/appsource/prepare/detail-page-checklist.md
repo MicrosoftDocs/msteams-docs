@@ -13,7 +13,7 @@ Make sure your app descriptions and screenshots follows:
 >[!IMPORTANT]
 > Make sure you copy over the description you write in AppScource onto the manifest. Teams will only use the description you provided in the manifest.
 
-### Manifest requirement
+## Manifest requirement
 
 * Don't use "Teams", "Microsoft", or "app" in your app name.
 * The developerName in the App Manifest must be same as the Provider Name defined in Seller Dashboard.
@@ -41,5 +41,6 @@ You can surround your screenshots with a background color and add marketing cont
 
 <img width="800px" title="Freshdesk screenshot" src="~/assets/images/freshdesk.png" />
 See more on the subject here:
+
 
 * [Crafting effective AppSource store images](/office/dev/store/craft-effective-appsource-store-images)
