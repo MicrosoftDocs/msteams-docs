@@ -55,7 +55,7 @@ For additional information on authentication see:
 * Your tabs must provide value to users outside of what is possible by simply pinning your website in Teams. This means that, at minimum, it must remove extraneous chrome and disallow navigating outside the configured context. See the [Microsoft Teams Design Guidelines](~/resources/design/overview.md) for more guidance.
 
 
-------  Policies that are in approval guide but not in  [AppSource validation policies](https://dev.office.com/officestore/docs/validation-policies) ----------------------------------
+## ------  Policies that are in approval guide but not in  [AppSource validation policies](https://dev.office.com/officestore/docs/validation-policies) ----------------------------------
 
 
 * Your bot must include a help command that provides your value proposition along with all your valid commands.
@@ -65,7 +65,8 @@ For additional information on authentication see:
 
 
 
--------------------------------- NEW Policies -------------------------------------------
+## -------------------------------- NEW Policies -------------------------------------------
+
 NOTE: These policies will be linked [AppSource validation policies](https://dev.office.com/officestore/docs/validation-policies) once published
 
 
