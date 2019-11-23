@@ -13,41 +13,40 @@ ms.author: lomeybur
 
  Cookies are text strings, sent from websites, and stored on a computer by the web browser. They are typically used for authentication and personalization, e.g., recalling stateful information, preserving user settings, recording browsing activity, and displaying relevant ads. Cookies are always linked to a particular domain and can be installed by various parties. They are categorized as follows:
 
- |||
+ |Cookie|Scope|
  | ------ | ------ |
- |**First-party cookies**|First-party cookies are created by websites that a user visits and are used to save data such as shopping cart items, login credentials (e.g., authentication cookies), and other analytics.|
- |**Second-party cookies**|Second-party cookies are technically the same as first-party  cookies. The difference is that data is shared with a second party via a data partnership agreement (e.g., [Microsoft Teams analytics and reporting](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference)). |
- |**Third-party cookies**| Third-party cookies are installed by a domain other than the one the user explicitly visited and are mainly used for tracking (e.g. "Like" buttons), ad serving, and live chats.|
+ |**First-party cookie**|A first-party cookie is created by websites that a user visits and is used to save data such as shopping cart items, login credentials (e.g., authentication cookies), and other analytics.|
+ |**Second-party cookie**|A second-party cookies is technically the same as a first-party  cookie. The difference is that data is shared with a second party via a data partnership agreement (e.g., [Microsoft Teams analytics and reporting](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference)). |
+ |**Third-party cookie**|A third-party cookies is installed by a domain other than the one the user explicitly visited and is mainly used for tracking (e.g. "Like" buttons), ad serving, live chats).|
 
 ### Cookies and HTTP requests
 
-Prior to the SameSite restrictions, whenever cookies were stored on the browser, they were attached to *every* HTTP web request and sent to the server by the Set-Cookie HTTP response header. Predictably, that performance had the potential to introduce security vulnerabilities such as Cross-Site Request Forgery (CSRF) attacks. *See* [HTTP cookies](https://developer.mozilla.org/docs/Web/HTTP/Cookies). The SameSite component mitigated that exposure through its implementation and management in the SetCookie header.
+Before the introduction of SameSite restrictions, when cookies were stored on the browser, they were attached to *every* HTTP web request and sent to the server by the Set-Cookie HTTP response header. Predictably, that performance had the potential to introduce security vulnerabilities such as Cross-Site Request Forgery (CSRF) attacks. *See* [HTTP cookies](https://developer.mozilla.org/docs/Web/HTTP/Cookies). The SameSite component mitigated that exposure through its implementation and management in the SetCookie header.
 
-### SameSite attribute: prior release
+### SameSite attribute: initial release
 
 Google Chrome version 51 introduced the SetCookie SameSite specification as an *optional* attribute. Starting with Build 17672, Windows 10 introduced SameSite cookie support for the [Microsoft Edge browser](https://blogs.windows.com/msedgedev/2018/05/17/samesite-cookies-microsoft-edge-internet-explorer/).
 
-Initially, developers could opt out of adding the SameSite cookie attribute to the SetCookie header or they could add it with one of two settings, *Lax* and *Strict*. An unimplemented SameSite attribute was considered the default state.
+Developers could opt out of adding the SameSite cookie attribute to the SetCookie header or they could add it with one of two settings, *Lax* and *Strict*. An unimplemented SameSite attribute was considered the default state.
 
 ## SameSite cookie attribute: 2020 release
 
-Chrome 80, scheduled for release in early 2020, will introduce new cookie values and begin imposing cookie policies by default. Three values can be passed into the updated SameSite attribute: *Strict*, *Lax*, or *None*. Cookies that don't specify the SameSite attribute will default to `SameSite=Lax`.
+Chrome 80, scheduled for release in early 2020, introduces new cookie values and begins imposing cookie policies by default. Three values can be passed into the updated SameSite attribute: *Strict*, *Lax*, or *None*. Cookies that don't specify the SameSite attribute will default to `SameSite=Lax`.
 
 |Setting | Enforcement | Value |Attribute Specification |
 | -------- | ----------- | --------|--------|
-| **Lax**  | Cookies will be sent automatically only in a *first-party* context and with HTTP GET requests. SameSite cookies will be withheld on cross-site sub-requests, such as calls to load images or inline frames, but will be sent when a user navigates to the URL from an external site, e.g., by following a link.| **Default** |`Set-Cookie: key=value; SameSite=Lax`|
-| **Strict** |The browser will only send cookies for SameSite requests (requests originating from the site that set the cookie). If the request originated from a different URL than the URL of the current location, none of the cookies tagged with the Strict attribute will be sent.| Optional |`Set-Cookie: key=value; SameSite=Strict`|
-| **None**  | Cookies will be sent in both SameSite and cross-origin requests; however, the value must be explicitly set to **None** and all browser request **must follow the HTTPS protocol** and include the *Secure* attribute, requiring an encrypted connection. Cookies that don't adhere to that requirement will be **rejected**. <br/><br/>**Both attributes are required together**. If just `None` is specified without `Secure`  or if the HTTPS protocol is not used, the third-party cookie will be rejected.| Optional; HTTPS protocol required |`Set-Cookie: key=value; SameSite=None; Secure` |
+| **Lax**  | Cookies will be sent automatically only in a *first-party* context and with HTTP GET requests. SameSite cookies will be withheld on cross-site sub-requests, such as calls to load images or iFrames, but will be sent when a user navigates to the URL from an external site, e.g., by following a link.| **Default** |`Set-Cookie: key=value; SameSite=Lax`|
+| **Strict** |The browser will only send cookies for SameSite requests (requests originating from the site that set the cookie). If the request originated from a different URL than the URL of the current location, none of the cookies tagged with the `Strict` attribute will be sent.| Optional |`Set-Cookie: key=value; SameSite=Strict`|
+| **None** | Cookies will be sent in both SameSite and cross-origin requests; however, the value must be explicitly set to **None** and all browser request **must follow the HTTPS protocol** and include the *Secure* attribute, requiring an encrypted connection. Cookies that don't adhere to that requirement will be **rejected**. <br/><br/>**Both attributes are required together**. If just `None` is specified without `Secure`  or if the HTTPS protocol is not used, the third-party cookie will be rejected.| Optional, but if set, HTTPS protocol is required. |`Set-Cookie: key=value; SameSite=None; Secure` |
 
 > [!NOTE]
 > The 2020 SameSite feature is backwards compatible. Browsers not supporting the *None* and *Secure* attributes will ignore them and continue as if the attributes were not set or restrict them. *See* [SameSite=None: Known Incompatible Clients](https://www.chromium.org/updates/same-site/incompatible-clients). It's recommended that you set the intended use for your cookies rather than relying on default browser behavior. *See* [Developers: Get Ready for New SameSite=None; Secure Cookie Settings](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
 
-## Teams impact
+## Teams implications and adjustments
 
-1.	Please enable this new feature in Chrome and validate that your tabs, connectors and personal apps continue to work in Teams. 
-2.	If they do not, please make the necessary fixes in time for the Chrome releases mentioned below. 
-3.	Microsoft internal partners can join the following team if they need more information/help on this issue:
-https://teams.microsoft.com/l/team/19%3A08b594cd465e4c0491fb751e823802e2%40thread.skype/conversations?groupId=4d6d04cd-dbf0-43c8-a2ff-f80dd38be034&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47 
+1. Enable the SameSite setting for your cookies and validate that your tabs, connectors and personal apps continue to work in Teams.
+1. If your extensions fail, make the necessary fixes prior to the Chrome 80 release.
+1. Microsoft internal partners can join the following team if they need more information/help with this issue: https://teams.microsoft.com/l/team/19%3A08b594cd465e4c0491fb751e823802e2%40thread.skype/conversations?groupId=4d6d04cd-dbf0-43c8-a2ff-f80dd38be034&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47 
 
 > [!IMPORTANT]
 > `SameSite=None` is not supported by  older versions of Chrome or Safari. This means that you'll have to check the user-agent in order to provide the correct SameSite property. You can find out how this should be implemented in C# [here](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/).
