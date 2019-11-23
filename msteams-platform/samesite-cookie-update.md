@@ -66,7 +66,7 @@ Any cookies used by embedded content will be considered third-party when the sit
 
 With the updated SameSite restrictions, a browser will not add a cookie to an already authenticated web site if the link derives from an external site. You'll need to ensure your authentication cookies are marked for cross-site usage — `SameSite=None; Secure` — or ensure that a fallback is in place.
 
-## Android System WebView
+### Android System WebView
 
 Android WebView is a Chrome system component that allows Android apps to display web content. While the new restrictions will become the default, starting with Chrome 80, they will not be immediately enforced on WebViews. The intent is to apply them in the future. To prepare, Android allows native apps to set cookies directly via the [CookeManagerAPI](https://developer.android.com/reference/android/webkit/CookieManager):
 
