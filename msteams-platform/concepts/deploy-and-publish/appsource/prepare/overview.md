@@ -12,12 +12,12 @@ For your Teams app to be approved, your app must meet the following requirements
 * **App detail page:** Your app meets [App detail page checklist](detail-page-checklist.md)
 * **Tips and frequently failed cases:** Pay extra attention to these [Tips and frequently failed cases](frequently-failed-cases.md) to improve your app submission to approval time.
 * **Manifest:** Your app manifest pacakge pass the [Manifest package checklist](office-store-checklist.md) and [manifest checker in App Studio](TODO.md)
-* **Testing:** You have fully [tested and debugged your app](../../../build-and-test/debug.md).
+* **Testing and debugging:** You have fully [tested and debugged your app](../../../build-and-test/debug.md).
 * **Validation policies:** It must pass all current [AppSource validation policies](https://dev.office.com/officestore/docs/validation-policies) for Teams tabs and bots. Please note that these policies are subject to change.
 * **Testing notes:** Include proper [test notes for validation](#Test-notes-for-validation/approval)
-* **Privacy policies:** Makes sure your app include proper [privacy policy, terms of use and support URLs](#Privacy-policy-terms-of-use-and-support-urls) 
+* **Privacy policies:** Makes sure your app include proper [privacy policy, terms of use and support URLs](#Privacy-policy-terms-of-use-and-support-urls)
 
-Once you have completed all of the above requirements, you can start to 
+Once you have completed all of the above requirements, you can start to
 [Submit your app to the store.](../appsource-submission-walkthrough.md)
 
 
@@ -27,7 +27,6 @@ Once you have completed all of the above requirements, you can start to
 * Privacy policy should cover how you handle user data storage, user data retention, deletion and security controls information.
 * Your privacy policy must have your contact information.
 * Your support URL should not require authentication or login before contacting you for any issues with your app.
-
 
 ### Test notes for validation/approval
 

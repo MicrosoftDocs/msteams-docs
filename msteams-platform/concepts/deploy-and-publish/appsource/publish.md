@@ -14,7 +14,7 @@ By developing and submitting a Microsoft Teams app, you are subject to the Bot D
 
 At a high level, the process for submitting your app to AppSource is:
 
-1. Develope your app following our [design guidelines](../../design/understand-use-cases)
+1. Develope your app following our [design guidelines](../../design/understand-use-cases). Developer each capabilities following our [tab design guideline]() and [bot design guideline]().
 1. [Register as a developer](#Register-as-a-developer) in both Seller Dashboard and Microsoft 
 2. Prepare your app for submission: Make sure your app passes the [Submission checklist](prepare\overview.md)
 5. Go through our [Tips and most frequently failed cases](prepare\frequently-failed-cases.md) for a quicker approval process
