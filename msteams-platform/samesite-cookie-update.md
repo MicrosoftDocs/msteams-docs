@@ -17,7 +17,7 @@ ms.author: lomeybur
  | ------ | ------ |
  |**First-party cookie**|A first-party cookie is created by websites that a user visits and is used to save data such as shopping cart items, login credentials (e.g., authentication cookies), and other analytics.|
  |**Second-party cookie**|A second-party cookies is technically the same as a first-party  cookie. The difference is that data is shared with a second party via a data partnership agreement (e.g., [Microsoft Teams analytics and reporting](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference)). |
- |**Third-party cookie**|A third-party cookies is installed by a domain other than the one the user explicitly visited and is mainly used for tracking (e.g. "Like" buttons), ad serving, live chats).|
+ |**Third-party cookie**|A third-party cookie is installed by a domain other than the one the user explicitly visited and is mainly used for tracking (e.g. "Like" buttons), ad serving, and live chats.|
 
 ### Cookies and HTTP requests
 
@@ -35,35 +35,42 @@ Chrome 80, scheduled for release in early 2020, introduces new cookie values and
 
 |Setting | Enforcement | Value |Attribute Specification |
 | -------- | ----------- | --------|--------|
-| **Lax**  | Cookies will be sent automatically only in a *first-party* context and with HTTP GET requests. SameSite cookies will be withheld on cross-site sub-requests, such as calls to load images or iFrames, but will be sent when a user navigates to the URL from an external site, e.g., by following a link.| **Default** |`Set-Cookie: key=value; SameSite=Lax`|
+| **Lax**  | Cookies will be sent automatically only in a *first-party* context and with HTTP GET requests. SameSite cookies will be withheld on cross-site sub-requests, such as calls to load images or iframes, but will be sent when a user navigates to the URL from an external site, e.g., by following a link.| **Default** |`Set-Cookie: key=value; SameSite=Lax`|
 | **Strict** |The browser will only send cookies for SameSite requests (requests originating from the site that set the cookie). If the request originated from a different URL than the URL of the current location, none of the cookies tagged with the `Strict` attribute will be sent.| Optional |`Set-Cookie: key=value; SameSite=Strict`|
-| **None** | Cookies will be sent in both SameSite and cross-origin requests; however, the value must be explicitly set to **None** and all browser request **must follow the HTTPS protocol** and include the *Secure* attribute, requiring an encrypted connection. Cookies that don't adhere to that requirement will be **rejected**. <br/><br/>**Both attributes are required together**. If just `None` is specified without `Secure`  or if the HTTPS protocol is not used, the third-party cookie will be rejected.| Optional, but if set, HTTPS protocol is required. |`Set-Cookie: key=value; SameSite=None; Secure` |
+| **None** | Cookies will be sent in both SameSite and cross-origin requests; however, the value must be explicitly set to **`None`** and all browser request **must follow the HTTPS protocol** and include the *Secure* attribute, requiring an encrypted connection. Cookies that don't adhere to that requirement will be **rejected**. <br/>**Both attributes are required together**. If just **`None`** is specified without **`Secure`**  or if the HTTPS protocol is not used, the third-party cookie will be rejected.| Optional, but, if set, the HTTPS protocol is required. |`Set-Cookie: key=value; SameSite=None; Secure` |
 
 > [!NOTE]
-> The 2020 SameSite feature is backwards compatible. Browsers not supporting the *None* and *Secure* attributes will ignore them and continue as if the attributes were not set or restrict them. *See* [SameSite=None: Known Incompatible Clients](https://www.chromium.org/updates/same-site/incompatible-clients). It's recommended that you set the intended use for your cookies rather than relying on default browser behavior. *See* [Developers: Get Ready for New SameSite=None; Secure Cookie Settings](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
+> The 2020 SameSite feature is backwards compatible. Browsers not supporting the *None* and *Secure* attributes will ignore them and continue as if the attributes were not set **or** restrict them. *See* [SameSite=None: Known Incompatible Clients](https://www.chromium.org/updates/same-site/incompatible-clients). It's recommended that you set the intended use for your cookies rather than rely on default browser behavior. *See* [Developers: Get Ready for New SameSite=None; Secure Cookie Settings](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
 
 ## Teams implications and adjustments
 
 1. Enable the SameSite setting for your cookies and validate that your tabs, connectors and personal apps continue to work in Teams.
 1. If your extensions fail, make the necessary fixes prior to the Chrome 80 release.
-1. Microsoft internal partners can join the following team if they need more information/help with this issue: https://teams.microsoft.com/l/team/19%3A08b594cd465e4c0491fb751e823802e2%40thread.skype/conversations?groupId=4d6d04cd-dbf0-43c8-a2ff-f80dd38be034&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47 
+1. Microsoft internal partners can join the following team if they need more information or help with this issue: <https://teams.microsoft.com/l/team/19%3A08b594cd465e4c0491fb751e823802e2%40thread.skype/conversations?groupId=4d6d04cd-dbf0-43c8-a2ff-f80dd38be034&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47>.
 
 > [!IMPORTANT]
-> `SameSite=None` is not supported by  older versions of Chrome or Safari. This means that you'll have to check the user-agent in order to provide the correct SameSite property. You can find out how this should be implemented in C# [here](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/).
+> `SameSite=None` is not supported by  older versions of Chrome or Safari. This means that you'll have to check the user-agent in order to provide the correct SameSite property. You can implement this check in [**C#**](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/) and [Node.js](https://web.dev/samesite-cookie-recipes/).
 
 ### Tabs, task modules, and message extensions
 
-Teams tabs use `<iframes>` to embed content that is viewed in a top-level or first-party context. Task modules allow you to create modal popup experiences in your Teams application. Message extensions assist you by inserting content into the chat message you are composing. Messaging extensions enrich the messages with external information. Similar to a tab, a modal window opens inside the current page. Any cookies used by the embedded content will be considered third-party when the site is displayed in the `<iframe>`. In addition, if any remote resources on a page rely on cookies being sent with a request, e.g., `<img>` and `<script>` tags, external fonts, and personalized content, you'll need to ensure those are marked for cross-site usage — `SameSite=None; Secure` — or ensure a fallback is in place.
+* Teams tabs use `<iframes>` to embed content that is viewed in a top-level or first-party context.
+* Task modules allow you to create modal popup experiences in your Teams application.
+* Message extensions assist you by inserting enriched content into the chat message with external information. Similar to a tab, a modal window opens inside the current page. 
+
+Any cookies used by embedded content will be considered third-party when the site is displayed in an `<iframe>`. In addition, if any remote resources on a page rely on cookies being sent with a request, e.g., `<img>` and `<script>` tags, external fonts, and personalized content, you'll need to ensure those are marked for cross-site usage — `SameSite=None; Secure` — or ensure that a fallback is in place.
 
 ### Authentication
 
-You'll need to use the web-based authentication flow for embedded content pages in tabs. A web-based authentication flow can also be used for a configuration page, task module,  messaging extension, or conversational bot (with a conversational bot, you'll need to use a task module). With the updated SameSite restrictions, a browser will not add a cookie to an already authenticated web site, if the link derives from an external site. You'll need to ensure your authentication cookies are marked for cross-site usage — `SameSite=None; Secure` — or ensure a fallback is in place.
+* You'll need to use the web-based authentication flow for embedded content pages in tabs.
+* A web-based authentication flow can also be used for a configuration page, task module,  messaging extension, or conversational bot (with a conversational bot, you'll need to use a task module).
+
+With the updated SameSite restrictions, a browser will not add a cookie to an already authenticated web site if the link derives from an external site. You'll need to ensure your authentication cookies are marked for cross-site usage — `SameSite=None; Secure` — or ensure that a fallback is in place.
 
 ## Android System WebView
 
-Android WebView is a system component powered by Chrome that allows Android apps to display web content. While the new restrictions will become the default starting with Chrome 80, they will not be immediately enforced on WebViews although, the intent is to apply them in the future. To prepare, Android allows native apps to set cookies directly via the [CookeManagerAPI](https://developer.android.com/reference/android/webkit/CookieManager):
+Android WebView is a Chrome system component that allows Android apps to display web content. While the new restrictions will become the default, starting with Chrome 80, they will not be immediately enforced on WebViews. The intent is to apply them in the future. To prepare, Android allows native apps to set cookies directly via the [CookeManagerAPI](https://developer.android.com/reference/android/webkit/CookieManager):
 
-* For cookies that are only needed in a first-party context, you should declare them as `SameSite=Lax` or `SameSite=Strict`, accordingly.
+* For cookies that are only needed in a first-party context, you should declare them as `SameSite=Lax` or `SameSite=Strict`, as appropriate.
 * For cookies needed in a third-party context, you should ensure that they are declared as `SameSite=None; Secure`.
 
 ## Learn more
@@ -76,5 +83,5 @@ Android WebView is a system component powered by Chrome that allows Android apps
 
 [Developers: Get Ready for New SameSite=None; Secure Cookie Settings](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
 
-**OpenId Connect impact**   
+**OpenId Connect impact**
 [Upcoming SameSite Cookie Changes in ASP.NET and ASP.NET Core](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)
