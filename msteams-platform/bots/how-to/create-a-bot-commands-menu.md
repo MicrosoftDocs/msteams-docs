@@ -12,19 +12,19 @@ ms.author: anclear
 > [!Note]
 > Bot menus won't appear on mobile clients.
 
-Adding a command menu to your bot lets you give your users a list of commands your bot is designed to execute, along with help text explaining the command. Selecting a command from the list will insert the command string into the compose message box, then all users need to do is select **Send**.
+Add command menu for your bot allows you to define a set of core commands your bot can always respond to. The list of commands is presented to the user above the compose message area when they are conversing with your bot. Selecting a command from the list will insert the command string into the compose message box, then all users need to do is select **Send**.
 
 ![Bot command menu](./conversations/media/bot-menu-sample.png)
 
 ## Create a command menu for your bot
 
-Command menus are defined in your app manifest. You can either use App Studio to help you create them, or add them manually to the Teams manifest.
+Command menus are defined in your app manifest. You can either use App Studio to help you create them, or add them manually.
 
 ### Creating a command menu for your bot using App Studio
 
 The instructions here assume that you'll be editing an existing app manifest. The steps for adding a command menu are the same, whether you're creating a new manifest or editing an existing one.
 
-1. Open App Studio from the ... overflow menu on the left navigation rail. If you don't have App Studio available you can download it. Please refer to [Installing App Studio](https://aka.ms/teams-app-studio#installing-app-studio).
+1. Open App Studio from the ... overflow menu on the left navigation rail. If you don't have App Studio available you can download it. See [Installing App Studio](https://aka.ms/teams-app-studio#installing-app-studio) for more information on using App Studio.
 
     ![App Studio](./conversations/media/AppStudio.png)
 
@@ -144,17 +144,17 @@ Bots in a group or channel respond only when they are mentioned ("@botname") in 
 
 # [C#/.NET](#tab/dotnet)
 
-You can parse out the **@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework — a method of the `Activity` class named `RemoveRecipientMention`. *See* [ActivityExtensions.RemoveRecipientMention(IMessageActivity) Method](/dotnet/api/microsoft.bot.schema.activityextensions.removerecipientmention?view=botbuilder-dotnet-stable).
+You can parse out the **@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework — a method of the `Activity` class named `RemoveRecipientMention`.
 
 ```csharp
 var modifiedText = turnContext.Activity.RemoveRecipientMention();
 ```
 
-# [TypeScript/Node.js](#tab/typescript)
+# [JavaScript/Node.js](#tab/javascript)
 
-You can parse out the **@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework — a method of the `TurnContext` class named `removeMentionText`. *See* (~/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest).
+You can parse out the **@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework — a method of the `TurnContext` class named `removeMentionText`.
 
-```typescript
+```javascript
 const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnContext.activity.recipient.id);
 ```
 

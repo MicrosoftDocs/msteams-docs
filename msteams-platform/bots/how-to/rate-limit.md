@@ -8,7 +8,7 @@ keywords: teams bots rate limiting
 
 As a general principle, your application should limit the number of messages it posts to an individual chat or channel conversation. This ensures an optimal experience that doesn't feel “spammy” to your end users.
 
-To protect Teams and its users, the Microsoft Bot Framework has rate-limits on all endpoints. Apps that go over this limit receive an `HTTP 429 Too Many Requests` error status. All requests are subject to the same rate-limiting policy, including sending messages, channel enumerations, and roster fetches.
+To protect Microsoft Teams and its users, the bot APIs rate-limit incoming requests. Apps that go over this limit receive an `HTTP 429 Too Many Requests` error status. All requests are subject to the same rate-limiting policy, including sending messages, channel enumerations, and roster fetches.
 
 Because the exact values of rate limits are subject to change, we recommend your application implement the appropriate backoff behavior when the API returns `HTTP 429 Too Many Requests`.
 
@@ -35,13 +35,13 @@ catch (HttpOperationException ex)
 
 In general, you should take simple precautions to avoid receiving `HTTP 429` responses. For instance, avoid issuing multiple requests to the same personal or channel conversation. Instead, consider batching the API requests.
 
-Using an exponential backoff with a random jitter (Gaussian distribution) is the recommended way to handle 429s. This ensures that multiple requests don't introduce collisions on retries. The following are some of the ways you can handle transient errors:
+Using an exponential backoff with a random jitter is the recommended way to handle 429s. This ensures that multiple requests don't introduce collisions on retries.
 
 ## Example: detecting transient exceptions
 
 Here is a sample using exponential backoff via the Transient Fault Handling Application Block.
 
-You can perform backoff and retries using a Transient Fault Handling library such as [Polly](https://github.com/App-vNext/Polly). For guidelines on obtaining and installing the NuGet package, see [Installing (Polly) via NuGet](https://github.com/App-vNext/Polly#installing-via-nuget).
+You can perform backoff and retries using [Transient Fault Handling libraries](/previous-versions/msp-n-p/hh680901(v=pandp.50)). For guidelines on obtaining and installing the NuGet package, see [Adding the Transient Fault Handling Application Block to Your Solution](/previous-versions/msp-n-p/hh680891(v=pandp.50))
 
 ```csharp
 public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectionStrategy
@@ -65,7 +65,7 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
 
 ## Example: backoff
 
-In addition to detecting rate limits, you can also perform an [exponential backoff](/dotnet/architecture/microservices/implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly).
+In addition to detecting rate limits, you can also perform an exponential backoff.
 
 ```csharp
 /**
@@ -84,7 +84,7 @@ var retryPolicy = new RetryPolicy(new BotSdkTransientExceptionDetectionStrategy(
 await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsync((Activity)reply)).ConfigureAwait(false);
 ```
 
-You can also perform a `System.Action` method execution with the retry policy described above. The open-source Polly library also allows you to specify a fixed interval or a linear backoff mechanism.
+You can also perform a `System.Action` method execution with the retry policy described above. The referenced library also allows you to specify a fixed interval or a linear backoff mechanism.
 
 We recommend storing the value and strategy in a configuration file to fine-tune and tweak values at run time.
 

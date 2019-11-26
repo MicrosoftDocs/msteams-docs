@@ -11,13 +11,13 @@ You'll need to complete the following steps to create a conversational bot:
 
 1. Prepare your development environment.
 1. Create your web service.
-1. Register your web service as a bot with [Microsoft Bot Framework](https://dev.botframework.com/).
+1. Register your web service as a bot with Microsoft Bot Framework.
 1. Create your app manifest and your app package.
 1. Upload your package to Microsoft Teams.
 
 Creating your web service, registering your web service, and creating your app package, with the Bot Framework can be done in any order; however, because the three pieces are so intertwined, no matter in which order you do them, you'll need to return to update the others. Your registration needs the messaging endpoint from your deployed web service and your web service needs the ID and password created from your registration. Your app manifest also needs the registration ID to connect Teams to your web service.
 
-As you're building your bot, you'll regularly move between changing your app manifest and deploying code to your web service. When working with the app manifest, keep in mind that you can either manually manipulate the JSON file, or make changes through App Studio. Either way, you'll need to re-deploy (upload) your app in Teams when you make a change to the manifest; however, there's no need to do so when you deploy changes to your web service.
+As you're building your bot, you'll regularly move between changing your app manifest and deploying code to your web service. When working with the app manifest, keep in mind you can either manually manipulate the JSON file, or make changes through App Studio. Either way, you'll need to re-deploy (upload) your app in Teams when you make a change to the manifest; however, there's no need to do so when you deploy changes to your web service.
 
 See the [Bot Framework Documentation](/azure/bot-service/) for additional information on the Bot Framework.
 
@@ -27,9 +27,8 @@ See the [Bot Framework Documentation](/azure/bot-service/) for additional inform
 
 The heart of your bot is your web service. It will define a single route, typically `/api/messages`, on which to receive all requests. To get started, you have a few options to choose from:
 
-* Use one of our quickstarts in either [C#](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot) or [JavaScript](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) that will guide you through the creation of your web service.
 * Start with the Teams conversation bot sample in either [C#/dotnet](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot) or [JavaScript](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot).
-* If you're using JavaScript, use the [Yeoman Generator for Microsoft Teams](https://github.com/OfficeDev/generator-teams) to scaffold your Teams app, including your web service.
+* If you're using JavaScript, use the [Yeoman Generator for Microsoft Teams](https://github.com/OfficeDev/generator-teams) to scaffold your Teams app, including your web service. This is particularly helpful when building a Teams app that contains more than just a conversational bot.
 * Create your web service from scratch. You can choose to add the Bot Framework SDK for your language, or you can work directly with the JSON payloads.
 
 ## Register your web service with the Bot Framework
@@ -45,7 +44,7 @@ You have two options when registering your web service with the Bot Framework. Y
 
 If you do not wish to create your bot registration in Azure, you **must** use either this link - https://dev.botframework.com/bots/new, or App Studio. If you click on the *Create a bot* button in the Bot Framework portal, you will create your bot registration in Microsoft Azure, and will need to provide an Azure subscription. To manage your registration or migrate it to an Azure subscription after creation go to: https://dev.botframework.com/bots.
 
-When you edit the properties of an existing Bot Framework registration, not registered in Azure, you'll see A "Migration status" column and a blue "Migrate" button that will take you to the Microsoft Azure portal. Don't select the "Migrate" button unless that's what you want to do; instead, select the name of the bot and you can edit its properties:
+When you edit the properties of an existing Bot Framework registration not registered in Azure, you'll see A "Migration status" column and a blue "Migrate" button that will take you to the Microsoft Azure portal. Don't select the "Migrate" button unless that's what you want to do. Instead, select the **name** of the bot and you can edit its properties:
 
    ![Edit Bot Properties](~/assets/images/bots/bf-migrate-bot-to-azure.png)
 
@@ -56,7 +55,7 @@ Scenarios when you **must** have your bot registration in Azure (either by creat
 
 #### Using App Studio
 
-*App Studio* is a Teams app that helps with registering your web service as a bot, and creating an app package that references your bot. It also contains a React control library and configurable samples for cards. See [Getting started with Teams App Studio](../../concepts/build-and-test/app-studio-overview.md).
+*App Studio* is a Teams app that helps you build Teams apps, including registering your web service as a bot, creating an app manifest, and your app package. It also contains a React control library and configurable samples for cards. See [Getting started with Teams App Studio](../../concepts/build-and-test/app-studio-overview.md).
 
 Remember, if you use App Studio to register your web service you'll need to go to https://dev.botframework.com/bots to manage your registration. Some settings (like your messaging endpoint) can be updated in App Studio as well.
 
@@ -72,7 +71,7 @@ You can also register your web service by creating a Bot Channels Registration r
 
 [!INCLUDE [bot channels registration steps](~/includes/bots/azure-bot-channels-registration.md)]
 
-The Bot Framework portal is optimized for registering bots in Microsoft Azure. Here are some things to know:
+The [Bot Framework portal](https://dev.botframework.com) is optimized for registering bots in Microsoft Azure. Here are some things to know:
 
 * The Microsoft Teams channel for bots registered on Azure is **free**. Messages sent over the Teams channel will NOT count towards the consumed messages for the bot.
 * If you register your bot using Microsoft Azure, your bot code doesn't need to be *hosted* on Microsoft Azure.
@@ -80,7 +79,7 @@ The Bot Framework portal is optimized for registering bots in Microsoft Azure. H
 
 ## Create your app manifest and package
 
-Your [app manifest](~/resources/schema/manifest-schema.md) defines the metadata for your app, the extension points your app is using, and pointers to the web services empowering those extension points. You can either use App Studio to help you create your app manifest, or create it manually.
+Your [app manifest](~/resources/schema/manifest-schema.md) defines the metadata for your app, the extension points your app is using, and pointers to the web services those extension points connect to. You can either use App Studio to help you create your app manifest, or create it manually.
 
 ### Add using App Studio
 
@@ -161,7 +160,7 @@ The example below is a simple bot object, with two command lists defined. This i
 
 #### Create your app package manually
 
-To create an app package, you need to add your app manifest and (optionally) your app icons to a .zip archive file. See [Create your app package](~/concepts/build-and-test/apps-package.md) for complete details.
+To create an app package, you need to add your app manifest and (optionally) your app icons to a .zip archive file. See [Create your app package](~/concepts/build-and-test/apps-package.md) for complete details. Make sure your .zip archive contains only the necessary files, and has no additional folder structure inside of it.
 
 ## Upload your package to Microsoft Teams
 
