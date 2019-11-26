@@ -20,7 +20,7 @@ For more information about how the Azure Bot Service handles authentication, see
 
 In this article you'll learn:
 
-- **How to create an authentication-enabled bot**. You'll use [cs-auth-sample][teams-auth-bot] to handle user sign-in credentials and the authentication token generator.
+- **How to create an authentication-enabled bot**. You'll use [cs-auth-sample][teams-auth-bot] to handle user sign-in credentials and the generating the authentication token.
 - **How to deploy the bot to Azure and associate it with an identity provider**. The provider issues a token based on user sign-in credentials. The bot can use the token to access resources, such as a mail service, which require authentication. For more information see  [Microsoft Teams authentication flow for bots](auth-flow-bot.md).
 - **How to integrate the bot within Microsoft Teams**. Once the bot has been integrated, you can sign in and exchange messages with it in a chat.
 
@@ -90,7 +90,7 @@ For more information, see [Create a bot for Teams](../create-a-bot-for-teams.md)
 ## Create the identity provider
 
 You need an identity provider that can be used for authentication.
-In this procedure you'll use an Azure AD provider; other Azure AD supported identity providers can also be used. *See* [Tutorial: Add identity providers to your applications in Azure Active Directory B2C](/azure/active-directory-b2c/tutorial-add-identity-providers).
+In this procedure you'll use an Azure AD provider; other Azure AD supported identity providers can also be used.
 
 1. In the [**Azure portal**][azure-portal], on the left navigation panel, select **Azure Active Directory**.
     > [!TIP]
@@ -135,11 +135,10 @@ In this procedure you'll use an Azure AD provider; other Azure AD supported iden
     1. **Grant Type**. Enter `authorization_code`.
     1. **Login URL**. Enter `https://login.microsoftonline.com`.
     1. **Tenant ID**, enter the **Directory (tenant) ID** that you recorded earlier for your Azure identity app or **common** depending on the supported account type selected when you created the identity provider app. To decide which value to assign follow these criteria:
-        - When creating the identity app if you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft AAD directory - Multi tenant)* enter the **tenant ID** you recorded earlier for the AAD app.
 
-        - When creating the identity app if you selected *Accounts in any organizational directory (Any AAD directory - Multi tenant and personal Microsoft accounts e.g. Skype, Xbox, Outlook)* enter the word **common** instead of a tenant ID. Otherwise, the AAD app will verify through the tenant whose ID was selected and exclude personal Microsoft accounts.
+        - If you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft AAD directory - Multi tenant)* enter the **tenant ID** you recorded earlier for the AAD app. This will be the tenant associated with the users who can be authenticated.
 
-        This will be the tenant associated with the users who can be authenticated.
+        - If you selected *Accounts in any organizational directory (Any AAD directory - Multi tenant and personal Microsoft accounts e.g. Skype, Xbox, Outlook)* enter the word **common** instead of a tenant ID. Otherwise, the AAD app will verify through the tenant whose ID was selected and exclude personal Microsoft accounts.
 
     h. For **Resource URL**, enter `https://graph.microsoft.com/`. This is not used in the current code sample.  
     i. Leave **Scopes** blank.
@@ -184,7 +183,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
     - Set `MicrosoftAppPassword` to the **customer secret** you saved at the time of the bot channel registration.
     - Set the `ConnectionName` to the name of the identity provider connection. 
 
-    Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) will need to be encoded as `&amp;`. *See* [XML Character Entities and XAML](/dotnet/framework/xaml-services/xml-character-entities-and-xaml).
+    Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) will need to be encoded as `&amp;`.
 
         ```cs
         {
@@ -309,29 +308,6 @@ and when for these, and just reference that from here, along with the set of ste
 > [!NOTE]
 > If you're having problems signing in, try to test the connection again as described in the previous steps. This could recreate the authentication token.
 > With the Bot Framework Web Chat client in Azure, you may need to sign in several times before the authentication is established correctly.
-
-## Preliminary quick testing the bot in Teams
-
-The following steps allow you to do a quick install by using the bot GUID, so you can perform preliminary testing.
-
-> [!WARNING]
-> Adding a bot by GUID, for anything other than testing purposes, is not recommended.
-> Doing so severely limits the functionality of a bot.
-> Bots in production must be added to Teams as part of an app. See [Create a bot](~/bots/how-to/create-a-bot-for-teams.md).
-
-1. In your browser, navigate to the [**Azure portal**][azure-portal].
-1. In the left pane, select **All Resources**.
-1. In the right panel find your bot **Azure AD Registration**.
-1. Select the **Channels** page, and then select the **Teams** icon:
-
-    ![auth bot connect to teams channel](../../../assets/images/authentication/auth-bot-connect-to-teams-channel.png)
-
-1. Select the **Save** button.
-1. After adding the Teams channel, go to the Channels page and select the **Get bot embed code**.
-1. Copy the HTTPS part of the code that is showing in the **Get bot embed** code dialog. For example, `https://teams.microsoft.com/l/chat/0/0?users=28:b8a22302e-9303-4e54-b348-343232`.
-1. In the browser, paste this address and then choose the Microsoft Teams app (client or web) that you used to add the bot to Teams.
-1. You should be able to see the bot listed as a contact that you can exchange messages with in Teams.
-For more information, see [Connect a bot to Teams](/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0).
 
 ## Install and test the bot in Teams
 
