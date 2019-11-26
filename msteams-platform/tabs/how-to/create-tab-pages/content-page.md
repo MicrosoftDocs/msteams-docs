@@ -29,7 +29,7 @@ For your page to display in Teams, you must include the [Microsoft Teams JavaScr
 <html>
 <head>
 ...
-    <script src= 'https://statics.teams.microsoft.com/sdk/v1.5.0/js/MicrosoftTeams.min.js'></script>
+    <script src= 'https://statics.teams.cdn.office.net/sdk/v1.5.2/js/MicrosoftTeams.min.js'></script>
 ...
 </head>
 
