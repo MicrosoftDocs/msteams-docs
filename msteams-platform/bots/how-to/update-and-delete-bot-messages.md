@@ -56,7 +56,7 @@ foreach (var activityId in _list)
 
 # [TypeScript/Node.js](#tab/typescript)
 
-To delete that message, pass that activity's ID to the `deleteActivity` method of the `TurnContext` object. *See* [deleteActivity](https://docs.microsoft.com/en-us/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#deleteactivity-string---partial-conversationreference--)
+To delete that message, pass that activity's ID to the `deleteActivity` method of the `TurnContext` object. *See* [deleteActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#deleteactivity-string---partial-conversationreference--)
 
 ```typescript
 for (let i = 0; i < activityIds.length; i++) {
