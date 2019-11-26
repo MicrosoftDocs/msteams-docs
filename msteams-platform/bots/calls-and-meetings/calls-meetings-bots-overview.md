@@ -8,7 +8,7 @@ keywords: calling calls audio video IVR voice online meetings
 
 With the addition of [Microsoft Graph APIs for calls and online meetings](/graph/api/resources/communications-api-overview?view=graph-rest-beta), Microsoft Teams apps can now interact with users in rich ways using voice and video. These APIs allow you to add new features such as interactive voice response (IVR), call control, and access to real-time audio and/or video streams for calls and meetings, including desktop and app sharing.
 
-To use these Microsoft Graph APIs in a Microsoft Teams app, you create a bot and specify some additional information and permissions which we'll describe elsewhere, but first, it's important to understand a concepts, terminology, and conventions:
+To use these Microsoft Graph APIs in a Microsoft Teams app, you create a bot and specify some additional information and permissions which we'll describe elsewhere, but first, it's important to understand some core concepts, terminology, and conventions:
 
 * **Audio/video calls.** Calls in Teams can be purely audio or audio+video. For brevity's sake, we don't say "audio/video call" everywhere; we just say "call."
 * **Call types.** Calls are either peer-to-peer (between a person and your bot) or multiparty (your bot and two or more people in a group call).

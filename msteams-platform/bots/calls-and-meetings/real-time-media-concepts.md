@@ -28,7 +28,7 @@ A real-time media bot interacts directly with the audio and video modalities of 
 
 ## Audio format
 
-Each second of audio is represented as 16,000 **frames**, with each sample containing 16-bits of data. A 20ms audio frame contains 320 samples (640 bytes of data).
+Each second of audio is represented as 16,000 **samples**, with each sample containing 16-bits of data. A 20ms audio frame contains 320 samples (640 bytes of data).
 
 ## Video format
 

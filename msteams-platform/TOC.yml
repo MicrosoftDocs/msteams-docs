@@ -182,14 +182,14 @@
         href: bots/how-to/rate-limit.md
     - name: Calling and meeting bots
       items:
-      - name: Incoming call notifications
-        href: bots/calls-and-meetings/call-notification.md
       - name: Calling and meeting bots overview
         href: bots/calls-and-meetings/calls-meetings-bots-overview.md
       - name: Real-time media concepts
         href: bots/calls-and-meetings/real-time-media-concepts.md
       - name: Registering a calling bot
         href: bots/calls-and-meetings/registering-calling-bot.md
+      - name: Incoming call notifications
+        href: bots/calls-and-meetings/call-notification.md
       - name: Debugging and local testing
         href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
       - name: Application-hosted media
