@@ -46,7 +46,7 @@ You use a resource group to create individual resources for the Bot Framework. F
 1. In the left navigation panel, select **Resource groups**.
 1. In the upper left of the displayed window, click the **Add** tab to create a new resource group. You are prompted to provide some information:
     1. **Subscription** Use your existing subscription.
-    1. **Resource group** Enter tne name for the resource group. An example could be  *TeamsResourceGroup*. Remember that the name must be unique.
+    1. **Resource group** Enter the name for the resource group. An example could be  *TeamsResourceGroup*. Remember that the name must be unique.
     1. From the Region drop-down, select *West US*, or a region close to your applications.
     1. Click **Review and create** button. You should see a banner that reads *Validation passed*.
     1. Click the **Create** button. It may take a few minutes to create the resource group.

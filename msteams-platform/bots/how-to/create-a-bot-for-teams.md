@@ -27,7 +27,7 @@ See the [Bot Framework Documentation](/azure/bot-service/) for additional inform
 
 The heart of your bot is your web service. It will define a single route, typically `/api/messages`, on which to receive all requests. To get started, you have a few options to choose from:
 
-* Use one of our [quickstarts](#next-steps) tutorials that will guide you through the creation of your web service.
+* Use one of our quickstarts in either [C#](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot) or [JavaScript](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) that will guide you through the creation of your web service.
 * Start with the Teams conversation bot sample in either [C#/dotnet](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot) or [JavaScript](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot).
 * If you're using JavaScript, use the [Yeoman Generator for Microsoft Teams](https://github.com/OfficeDev/generator-teams) to scaffold your Teams app, including your web service.
 * Create your web service from scratch. You can choose to add the Bot Framework SDK for your language, or you can work directly with the JSON payloads.
@@ -39,7 +39,11 @@ The heart of your bot is your web service. It will define a single route, typica
 
 Registering your web service with the Bot Framework provides a secure communication channel between the Teams client and your web service. The Teams client and your web service never communicate directly. Instead, messages are routed through the Bot Framework Service (Microsoft Teams uses a separate instance of this service that is compliant with Office 365 standards).
 
-If you don't wish to create your bot registration in Azure, you **must** use either this link - <https://dev.botframework.com/bots/new>, or App Studio. If you select the *Create a bot* button in the Bot Framework portal, you'll create your bot registration in Microsoft Azure instead. To manage or migrate your registration after creation go to: <https://dev.botframework.com/bots> and select **My bots**.
+You have two options when registering your web service with the Bot Framework. You can use either [App Studio](#using-app-studio) or the [legacy portal](#in-the-legacy-portal) to register your bot without using an Azure subscription. Or, if you already have an Azure subscription (or don't mind creating one), you can use [the Azure portal](#with-an-azure-subscription) to register your web service.
+
+### Without an Azure subscription
+
+If you do not wish to create your bot registration in Azure, you **must** use either this link - https://dev.botframework.com/bots/new, or App Studio. If you click on the *Create a bot* button in the Bot Framework portal, you will create your bot registration in Microsoft Azure, and will need to provide an Azure subscription. To manage your registration or migrate it to an Azure subscription after creation go to: https://dev.botframework.com/bots.
 
 When you edit the properties of an existing Bot Framework registration, not registered in Azure, you'll see A "Migration status" column and a blue "Migrate" button that will take you to the Microsoft Azure portal. Don't select the "Migrate" button unless that's what you want to do; instead, select the name of the bot and you can edit its properties:
 
@@ -50,19 +54,19 @@ Scenarios when you **must** have your bot registration in Azure (either by creat
 * You want to use the Bot Framework's [OAuthPrompt](./authentication/auth-flow-bot.md) for authentication.
 * You want to enable additional channels like Web Chat, Direct Line, or Skype.
 
-### Register using App Studio
+#### Using App Studio
 
 *App Studio* is a Teams app that helps with registering your web service as a bot, and creating an app package that references your bot. It also contains a React control library and configurable samples for cards. See [Getting started with Teams App Studio](../../concepts/build-and-test/app-studio-overview.md).
 
 Remember, if you use App Studio to register your web service you'll need to go to https://dev.botframework.com/bots to manage your registration. Some settings (like your messaging endpoint) can be updated in App Studio as well.
 
-### In the legacy portal
+#### In the legacy portal
 
 Create your bot registration using this link: https://dev.botframework.com/bots/new. **Be sure to add Microsoft Teams as a channel from the featured channels list after creating your bot.** Feel free to re-use any Microsoft App ID you generated if you've already created your app package/manifest.
 
    ![Bot Framework registration page](~/assets/images/bots/bfregister.png)
 
-### With Azure
+### With an Azure subscription
 
 You can also register your web service by creating a Bot Channels Registration resource in the Azure portal.
 
@@ -74,7 +78,7 @@ The Bot Framework portal is optimized for registering bots in Microsoft Azure. H
 * If you register your bot using Microsoft Azure, your bot code doesn't need to be *hosted* on Microsoft Azure.
 * If you do register a bot using Microsoft Azure portal, you must have a Microsoft Azure account. You can [create one for free](https://azure.microsoft.com/free/). To verify your identity when you create an Azure account, you must provide a credit card, but it won't be charged; it's always free to create and use bots with Microsoft Teams.
 
-## Add your bot to your app manifest
+## Create your app manifest and package
 
 Your [app manifest](~/resources/schema/manifest-schema.md) defines the metadata for your app, the extension points your app is using, and pointers to the web services empowering those extension points. You can either use App Studio to help you create your app manifest, or create it manually.
 
@@ -87,7 +91,8 @@ Your [app manifest](~/resources/schema/manifest-schema.md) defines the metadata 
 5. You can either create a new web service registration (**New bot**), or if you've already registered one, select **Existing bot**.
 6. Select the capabilities and scopes your bot will need.
 7. If necessary, update your bot endpoint address to point to your bot. It should look something like `https://someplace.com/api/messages`.
-8. Optionally, add [bot commands](./create-a-bot-commands-menu.md).
+8. Optionally, add [bot commands](~/bots/how-to/create-a-bot-commands-menu.md).
+9. Optionally, you can download your completed app package from the **Test and distribute** tab.
 
 ### Create it manually
 
@@ -154,9 +159,13 @@ The example below is a simple bot object, with two command lists defined. This i
 ...
 ```
 
-## Install and test your app
+#### Create your app package manually
 
-If you've been using App Studio, you can install your app from the **Test and distribute** tab of the **Manifest editor**. Alternatively, you can install your app package by selecting the `...` overflow menu from the left navigation rail and choosing **More apps** and then the **Upload a custom app** link.
+To create an app package, you need to add your app manifest and (optionally) your app icons to a .zip archive file. See [Create your app package](~/concepts/build-and-test/apps-package.md) for complete details.
+
+## Upload your package to Microsoft Teams
+
+If you've been using App Studio, you can install your app from the **Test and distribute** tab of the **Manifest editor**. Alternatively, you can install your app package by clicking the `...` overflow menu from the left navigation rail, clicking **More apps**, then the **Upload a custom app** link. You can also import an app manifest or app package into App Studio to make additional updates before uploading.
 
 ## Next steps
 
