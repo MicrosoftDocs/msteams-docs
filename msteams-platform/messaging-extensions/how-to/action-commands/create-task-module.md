@@ -412,7 +412,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
         Height = "small",
         Width = "small",
         Title = "Example task module",
-        Url = "https://contoso.com/msteams/taskmodules/newcustomer,
+        Url = "https://contoso.com/msteams/taskmodules/newcustomer",
         },
       },
     },

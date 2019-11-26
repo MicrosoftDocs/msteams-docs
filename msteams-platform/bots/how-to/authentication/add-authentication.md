@@ -51,7 +51,7 @@ You use a resource group to create individual resources for the Bot Framework. F
     1. Select the **Review and create** button. You should see a banner that reads *Validation passed*.
     1. Select the **Create** button. It may take a few minutes to create the resource group.
 
- > [!TIP]
+> [!TIP]
 > As with the resources you'll create later in this tutorial, it's a good idea to pin this resource group to your dashboard for easy access. If you'd like to do so, select the pin icon &#128204; in the upper right of the dashboard.
 
 ## Create the service plan
