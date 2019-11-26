@@ -136,7 +136,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
     var mention = new Mention
     {
         Mentioned = turnContext.Activity.From,
-        Text = $"<at>{turnContext.Activity.From.Name}</at>",
+        Text = $"<at>{XmlConvert.EncodeName(turnContext.Activity.From.Name)}</at>",
     };
 
     var replyActivity = MessageFactory.Text($"Hello {mention.Text}.");
@@ -152,7 +152,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 this.onMessage(async (turnContext, next) => {
     const mention = {
         mentioned: turnContext.activity.from,
-        text: `<at>${turnContext.activity.from.name}</at>`
+        text: `<at>${ new TextEncoder().encode(turnContext.activity.from.name) }</at>`,
     } as Mention;
 
     const replyActivity = MessageFactory.text(`Hello ${mention.text}`);

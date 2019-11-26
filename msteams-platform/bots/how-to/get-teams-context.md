@@ -9,11 +9,11 @@ ms.author: anclear
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-A bot can access additional context data about the team or chat. This information can be used to enrich the bot's functionality and to provide a more personalized experience.
+A bot can access additional context data about a team or chat it is installed in. This information can be used to enrich the bot's functionality and provide a more personalized experience.
 
 ## Fetching the roster or user profile
 
-Your bot can query for the list of members and their basic profiles, which includes Teams user IDs and Azure Active Directory (Azure AD) information such as name and objectId. You can use this information to correlate user identities; for example, to check whether a user logged into a tab through Azure AD credentials is a member of the team. You can also use this call in a one-to-one chat to gain additional information about your user.
+Your bot can query for the list of members and their basic profiles, including Teams user IDs and Azure Active Directory (Azure AD) information such as name and objectId. You can use this information to correlate user identities, e.g., to check whether a user, logged into a tab through Azure AD credentials, is a member of the team. You can also use this call in a one-to-one chat to gain additional information about your user.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -44,9 +44,9 @@ export class MyBot extends TeamsActivityHandler {
     }
 }
 ```
-# [JSON](#tab/json)
 
-You can directly issue a GET request on /v3/conversations/{teamId}/members/, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value of `serviceUrl`.
+# [JSON](#tab/json)
+You can directly issue a GET request on `/v3/conversations/{teamId}/members/`, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value for `serviceUrl`.
 
 ```http
 GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members
@@ -74,15 +74,13 @@ Response body
     "email": "Rick.Stevens@fabrikam.com",
     "userPrincipalName": "rstevens@fabrikam.com"
 }]
-
-
 ```
 
 * * *
 
 ## Get team's details
 
-When installed in a team, your bot can query for metadata about that team which includes the AAD groupId.
+When installed in a team, your bot can query for metadata about that team including the Azure AD groupId.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -124,9 +122,10 @@ export class MyBot extends TeamsActivityHandler {
     }
 }
 ```
+
 # [JSON](#tab/json)
 
-You can directly issue a GET request on /v3/teams/{teamId}, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value of `serviceUrl`.
+You can directly issue a GET request on `/v3/teams/{teamId}`, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value for `serviceUrl`.
 
 ```http
 GET /v3/teams/19:ja0cu120i1jod12j@skype.net
@@ -145,7 +144,7 @@ Response body
 
 Your bot can query the list of channels in a team.
 
-> [!Note]
+> [!NOTE]
 >
 >* The name of the default General channel is returned as `null` to allow for localization.
 >* The channel ID for the General channel always matches the team ID.
@@ -186,7 +185,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-You can directly issue a GET request on /v3/teams/{teamId}/conversations, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value of `serviceUrl`.
+You can directly issue a GET request on `/v3/teams/{teamId}/conversations`, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value for `serviceUrl`.
 
 ```http
 GET /v3/teams/19%3A033451497ea84fcc83d17ed7fb08a1b6%40thread.skype/conversations
