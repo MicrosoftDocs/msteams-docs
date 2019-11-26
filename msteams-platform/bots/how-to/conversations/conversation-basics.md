@@ -248,8 +248,8 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
-    const message = MessageFactory.text("You'll get a notification, if you've turned them on.");
-    teamsNotifyUser(turnContext.activity);
+    let message = MessageFactory.text("You'll get a notification, if you've turned them on.");
+    teamsNotifyUser(message);
 
     await turnContext.sendActivity(message);
 
