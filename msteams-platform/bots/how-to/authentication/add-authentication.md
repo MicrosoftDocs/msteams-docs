@@ -145,7 +145,7 @@ In this procedure you'll use an Azure AD provider; other Azure AD supported iden
 
         The following image is an example:
 
-        ![teams bots app auth connection string adv1](../../../assets/images/authentication/auth-bot-identity-connection-adv1.PNG)
+    ![teams bots app auth connection string adv1](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
 
 1. Select **Save**.
 
@@ -154,18 +154,14 @@ In this procedure you'll use an Azure AD provider; other Azure AD supported iden
 1. Select the connection entry to open the connection you just created.
 1. Select **Test Connection** at the top of the **Service Provider Connection Setting** panel.
 1. The first time you do this will open a new browser window asking you to select an account. Select the one you want to use.
-1. Next, you'll be asked to allow to the identity provider to use your data (credentials).
+1. Next, you'll be asked to allow to the identity provider to use your data (credentials). The following image is an example:
 
- The following image is an example:
-
-    ![teams bots app auth connection string adv1](../../../assets/images/authentication/auth-bot-connection-test-accept.PNG)
+  ![teams bots app auth connection string adv1](../../../assets/images/authentication/auth-bot-connection-test-accept.PNG)
 
 1. Select **Accept**.
-1. This should then redirect you to a **Test Connection to \<your-connection-name> Succeeded** page. Refresh the page if you get an error. 
+1. This should then redirect you to a **Test Connection to \<your-connection-name> Succeeded** page. Refresh the page if you get an error. The following image is an example:
 
-The following image is an example:
-
-    ![teams bots app auth connection string adv1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
+  ![teams bots app auth connection string adv1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
 
 The connection name is used by the bot code to retrieve user authentication tokens.
 
