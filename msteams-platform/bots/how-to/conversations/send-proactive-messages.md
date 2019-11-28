@@ -153,6 +153,27 @@ msg.text('Hello, this is a notification');
 bot.send(msg);
 ```
 
+### Using Python
+
+```python
+async def on_conversation_update_activity(self, turn_context: TurnContext):
+    self._add_conversation_reference(turn_context.activity)
+    return await super().on_conversation_update_activity(turn_context)
+
+def _add_conversation_reference(self, activity: Activity):
+    """
+    This populates the shared Dictionary that holds conversation references. In this sample,
+    this dictionary is used to send a message to members when /api/notify is hit.
+    :param activity:
+    :return:
+    """
+    conversation_reference = TurnContext.get_conversation_reference(activity)
+    self.conversation_references[
+        conversation_reference.user.id
+    ] = conversation_reference
+
+```
+
 ## Creating a channel conversation
 
 Your team-added bot can post into a channel to create a new reply chain. If you're using the Node.js Teams SDK, use `startReplyChain()` which gives you a fully-populated address with the correct activity id and conversation id. If you are using C#, see the example below.
