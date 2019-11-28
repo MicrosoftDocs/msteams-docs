@@ -52,10 +52,10 @@ When using proactive messaging to send notifications you need to make sure your 
 
 Bots can create new conversations with an individual Microsoft Teams user by obtaining the user’s *unique ID* and *tenant ID.* You can obtain these values using one of the following methods:
 
-* By [fetching the team roster](~/bots/how-to/get-teams-context.md#fetching-the-team-roster) from a channel your app is installed in.
-* By caching them when a user [interacts with your bot in a channel](~/bots/how-to/conversations/channel-and-group-conversations.md).
-* When a users is [@mentioned in a channel conversation](~/bots/how-to/conversations/channel-and-group-conversations.md#-mentions) the bot is a part of.
-* By caching them when you [receive the `conversationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#team-member-or-bot-addition) event when your app is installed in a personal scope, or new members are added to a channel or group chat that
+* By [fetching the team roster](../get-teams-context.md#fetching-the-team-roster) from a channel your app is installed in.
+* By caching them when a user [interacts with your bot in a channel](./channel-and-group-conversations.md).
+* When a users is [@mentioned in a channel conversation](./channel-and-group-conversations.md#-mentions) the bot is a part of.
+* By caching them when you [receive the `conversationUpdate`](./subscribe-to-conversation-events.md#team-member-or-bot-addition) event when your app is installed in a personal scope, or new members are added to a channel or group chat that
 
 ### Proactively install your app using Graph
 
