@@ -141,9 +141,7 @@ In this procedure you'll use an Azure AD provider; other Azure AD supported iden
         - If you selected *Accounts in any organizational directory (Any AAD directory - Multi tenant and personal Microsoft accounts e.g. Skype, Xbox, Outlook)* enter the word **common** instead of a tenant ID. Otherwise, the AAD app will verify through the tenant whose ID was selected and exclude personal Microsoft accounts.
 
     h. For **Resource URL**, enter `https://graph.microsoft.com/`. This is not used in the current code sample.  
-    i. Leave **Scopes** blank.
-
-        The following image is an example:
+    i. Leave **Scopes** blank. The following image is an example:
 
     ![teams bots app auth connection string adv1](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
 
@@ -156,7 +154,7 @@ In this procedure you'll use an Azure AD provider; other Azure AD supported iden
 1. The first time you do this will open a new browser window asking you to select an account. Select the one you want to use.
 1. Next, you'll be asked to allow to the identity provider to use your data (credentials). The following image is an example:
 
-  ![teams bots app auth connection string adv1](../../../assets/images/authentication/auth-bot-connection-test-accept.PNG)
+    ![teams bots app auth connection string adv1](../../../assets/images/authentication/auth-bot-connection-test-accept.PNG)
 
 1. Select **Accept**.
 1. This should then redirect you to a **Test Connection to \<your-connection-name> Succeeded** page. Refresh the page if you get an error. The following image is an example:
