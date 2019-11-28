@@ -10,7 +10,7 @@ Make sure your app descriptions and screenshots follows our [AppSource guidance 
 >[!IMPORTANT]
 > Make sure you copy over the description you write in AppScource onto the manifest. Teams will only use the description you provided in the manifest.
 
-## Screenshots requirement
+## Create effective screenshots
 
 The screenshots uploaded on the Seller Dashboard are displayed in both [Microsoft AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) and your app listing in the Teams client to provide a visual preview of your app along with your app description.
 
@@ -27,6 +27,5 @@ You can surround your screenshots with a background color and add marketing cont
 
 <img width="800px" title="Freshdesk screenshot" src="~/assets/images/freshdesk.png" />
 See more on the subject here:
-
 
 * [Crafting effective AppSource store images](/office/dev/store/craft-effective-appsource-store-images)
