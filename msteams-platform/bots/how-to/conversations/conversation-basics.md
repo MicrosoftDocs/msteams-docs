@@ -60,6 +60,12 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
+# [Python](#tab/python)
+
+TBD
+
+---
+
 # [JSON](#tab/json)
 ```json
 {
@@ -132,6 +138,13 @@ export class MyBot extends TeamsActivityHandler {
     }
 }
 ```
+
+# [Python](#tab/python)
+
+TBD
+
+---
+
 
 # [JSON](#tab/json)
 
@@ -257,6 +270,11 @@ this.onMessage(async (turnContext, next) => {
     await next();
 });
 ```
+# [Python](#tab/python)
+
+TBD
+
+---
 
 # [JSON](#tab/json)
 
