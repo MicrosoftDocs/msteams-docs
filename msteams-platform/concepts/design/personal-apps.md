@@ -5,7 +5,22 @@ keywords: teams design guidelines reference framework personal apps
 --- 
 # Personal apps
 
-> [!Important]
+A personal app is an app with a personal scope. As an app developer, you have the option to provide a version of your app that is built for the individual user. In this version, the collection of tabs (and the bot, if you've included one), are designed for the person. This way, you're able to create a one-on-one interaction with your users.
+
+A personal app is where someone can see everything that's theirs, and all the items they've recently viewed in the app. It puts everything in one place.
+
+In the following example, Constoso is a personal app. All your personal apps will appear when you click into the app icon on the left menu bar.
+
+![image of the app overflow menu](~/assets/images/Personal-apps-App-flyout.png)
+
+---
+
+## Guidelines
+
+When you are building out each components, make sure to follow:
+* [Design guideline for bots](~/bots/design/bots.md)
+* [Design guideline for tab](~/tabs/design/tabs.md) 
+> [!IMPORTANT]
 > Full support for tabs on mobile clients is coming soon. To prepare for this change you should follow the [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md) when creating your tabs. Personal apps (static tabs) are currently available in [developer preview](~/resources/dev-preview/developer-preview-intro.md).
 >
 > When full support for tabs is released:
@@ -14,15 +29,6 @@ keywords: teams design guidelines reference framework personal apps
 > * Your `contentUrl` **will be loaded in the mobile Teams client**.
 > * For channel/group tabs, users can still open your tab in a separate browser via your `websiteUrl`, however your `contentUrl` will be loaded first.
 
-A personal app is an app with a personal scope. As an app developer, you have the option to provide a version of your app that is built for the individual user. In this version, the collection of tabs (and the bot, if you've included one), are designed for the person. This way, you're able to create a one-on-one interaction with your users.
-
-A personal app is where someone can see everything that's theirs, and all the items they've recently viewed in the app. It puts everything in one place.
-
-![image of the app overflow menu](~/assets/images/Personal-apps-App-flyout.png)
-
----
-
-## Guidelines
 
 A personal app typically contains the following tabs:
 
