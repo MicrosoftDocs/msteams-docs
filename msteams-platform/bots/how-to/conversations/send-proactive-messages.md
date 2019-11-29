@@ -156,21 +156,11 @@ bot.send(msg);
 ### Using Python
 
 ```python
-async def on_conversation_update_activity(self, turn_context: TurnContext):
-    self._add_conversation_reference(turn_context.activity)
-    return await super().on_conversation_update_activity(turn_context)
-
-def _add_conversation_reference(self, activity: Activity):
-    """
-    This populates the shared Dictionary that holds conversation references. In this sample,
-    this dictionary is used to send a message to members when /api/notify is hit.
-    :param activity:
-    :return:
-    """
-    conversation_reference = TurnContext.get_conversation_reference(activity)
-    self.conversation_references[
-        conversation_reference.user.id
-    ] = conversation_reference
+async def _send_proactive_message():
+  for conversation_reference in CONVERSATION_REFERENCES.values():
+    return await ADAPTER.continue_conversation(APP_ID, conversation_reference,
+      lambda turn_context: turn_context.send_activity("proactive hello")
+    )
 
 ```
 
