@@ -419,6 +419,8 @@ This is done by sub-classing the **ActivityHandler**.
 
 #### Bots\DialogBots.cs
 
+# [C#/.NET](#tab/dotnet)
+
 ```csharp
 public class DialogBot<T> : TeamsActivityHandler where T : Dialog
 {
@@ -491,6 +493,13 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
     return Task.CompletedTask;
 }
 ```
+
+# [Python](#tab/python)
+
+TBD
+
+---
+
 
 ## Further reading
 
