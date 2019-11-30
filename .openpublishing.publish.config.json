@@ -46,8 +46,7 @@
             "path_to_root": "_msteams-samples-hello-world-csharp",
             "url": "https://github.com/OfficeDev/msteams-samples-hello-world-csharp",
             "branch": "master"
-        }
-
+        },
         {
             "path_to_root":"botbuilder-python",
             "url":"https://github.com/microsoft/BotBuilder-Samples",
