@@ -47,6 +47,13 @@
             "url": "https://github.com/OfficeDev/msteams-samples-hello-world-csharp",
             "branch": "master"
         }
+
+        {
+            "path_to_root":"botbuilder-python",
+            "url":"https://github.com/microsoft/BotBuilder-Samples",
+            "branch":"trboehrer-move-samples",
+            "branch_mapping":{}
+         }
     ],
     "dependent_packages": [{
         "path_to_root": "_dependentPackages/CommonPlugins",
