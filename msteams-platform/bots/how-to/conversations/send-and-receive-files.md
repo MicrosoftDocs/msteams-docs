@@ -336,13 +336,13 @@ class FileUploadBot(TeamsActivityHandler) {
     }
 
     private async sendFileCard(context: TurnContext): Promise<void> {
-        let filename = "file name";
-        let fs = require('fs'); 
-        let path = require('path');
-        let stats = fs.statSync(path.join('files', filename));
-        let fileSizeInBytes = stats['size'];
+        filename = "file name";
+        fs = require('fs'); 
+        path = require('path');
+        stats = fs.statSync(path.join('files', filename));
+        fileSizeInBytes = stats['size'];
 
-        let fileContext = {
+        fileContext = {
             filename: filename
         };
 
