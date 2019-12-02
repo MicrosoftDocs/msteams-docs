@@ -311,3 +311,11 @@ export class FileUploadBot extends TeamsActivityHandler {
 }
 
 ```
+
+# [Python](#tab/python)
+
+```python
+TBD
+```
+
+---
