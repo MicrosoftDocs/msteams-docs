@@ -10,6 +10,9 @@ ms.topic: overview
 
 Tabs are Teams-aware webpages embedded in Microsoft Teams. They can be added as part of a channel inside a team, a group chat or as a personal app for an individual user. As part of your app you can add custom tabs to embed your own web content in Teams, and using the [Teams JavaScript client SDK](/javascript/api/overview/msteams-client), add Teams-specific functionality to your web content.
 
+> [!NOTE]
+> Chrome 80, scheduled for release in early 2020, introduces new cookie values and imposes cookie policies by default. It's recommended that you set the intended use for your cookies rather than rely on default browser behavior. *See* [SameSite cookie attribute (2020 update)](../resources/samesite-cookie-update.md).
+
 There are two types of tabs available in Teams - channel/group and personal. A channel/group tab delivers content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content. Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left navigation bar for easy access.
 
 ## Tabs user scenarios
