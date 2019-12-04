@@ -18,7 +18,7 @@ The information below covers some of the most common reasons apps fail validatio
 * Help And Support:It is highly recommended to have help/FAQ link for your Teams app and to provide this link in first-run user experience. For all personal apps we recommend you provide your help page as a personal tab for better user experience.
 
 ## Frequently failed policies 
-### Policy 11.2 -- Sign up, sign in, and sign out
+### Policy 11.2: Sign up, sign in, and sign out
 
 Description: Apps must provide a clear, simple sign in/out and (when appropriate) sign-up experience. The experience must be reachable across all capabilities in your app.
 
@@ -43,7 +43,7 @@ For additional information on authentication see:
 * [Tab/bot authentication in C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
 
 
-### Policy 14.5 -- Microsoft Teams apps must respond in a reasonable timeframe.
+### Policy 14.5: Microsoft Teams apps must respond in a reasonable timeframe.
 * 14.5.1 : For tabs, if a response to an action takes more than three seconds, you must provide a loading message or warning.
 * 14.5.2: For bots, a response to a user command must occur within two seconds. If longer processing is required, you must use a typing indicator.
 * 14.5.3: For compose extensions, a response to a user command must occur within five seconds.
@@ -53,17 +53,11 @@ For additional information on authentication see:
 ### Policy 14.15: Your app cannot impede the customer experience within Microsoft Teams
 * The core functionality of your tab offering must exist within Teams and not outside of Teams.
 * Your tabs must provide value to users outside of what is possible by simply pinning your website in Teams. This means that, at minimum, it must remove extraneous chrome and disallow navigating outside the configured context. See the [Microsoft Teams Design Guidelines](~/resources/design/overview.md) for more guidance.
-
-
-## ------  Policies that are in approval guide but not in  [AppSource validation policies](https://dev.office.com/officestore/docs/validation-policies) ----------------------------------
-
-
+* Policy: Tab should not display superfluous/unnecessary UI (aka: UI Chrome). The tab must ideally link to a specific web-view of your website
+* Bots must be responsive and fail gracefully. Bots must respond to any commands entered by the user and provide a way forward for the user and should not dead-end the user
 * Your bot must include a help command that provides your value proposition along with all your valid commands.
-* For your tab configuration page, be sure to provide "About" links and proper guidance. This page is the first thing the user sees, so ensure that a new user understands what to do.
 * Your bot should respond to invalid commands with help content. For example "I'm sorry, I don't understand. Type "help" for more information."
 * Be sure that your bot provides appropriate responses when mentioned (@*botname*) in a channel and in personal conversations as needed. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](~/resources/schema/manifest-schema.md#bots).)
-
-
 
 ## -------------------------------- NEW Policies -------------------------------------------
 
@@ -79,8 +73,6 @@ NOTE: These policies will be linked [AppSource validation policies](https://dev.
 
 **Description:** Your bot should provide a "welcome message" outlining its value for the user along with the valid commands.
 
-### Policy: Tab should not display superfluous/unnecessary UI (aka: UI Chrome)
-
 ### Policy: Tab configuration UI should not dead-end the experience and always provide a way for a user to continue
 
-### Policy: Bots must have commands or can analysis user input
+### Policy: For your tab configuration page, be sure to provide "About" links and proper guidance. This page is the first thing the user sees, so ensure that a new user understands what to do.
