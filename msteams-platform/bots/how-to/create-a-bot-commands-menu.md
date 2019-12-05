@@ -158,6 +158,17 @@ You can parse out the **@Mention** portion of the message text using a static me
 const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnContext.activity.recipient.id);
 ```
 
+# [Python](#tab/python)
+
+
+You can parse out the **@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework — a method of the `<add class name here>` class named `<add method name here>`
+
+```python
+
+add code here
+
+```
+
 * * *
 
 ## Command menu best practices
