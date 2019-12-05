@@ -317,32 +317,34 @@ export class FileUploadBot extends TeamsActivityHandler {
 <!-- Verify -->
 
 ```python
+# [Python](#tab/python)
+
 class FileUploadBot(TeamsActivityHandler) {
     constructor() {
-        super();
+        super()
 
-        this.onMessage(async (context, next) => {
-            await this.sendFileCard(context);
-            await next();
+        self.onMessage(async (context, next) => {
+            await this.send_file_card(context)
+            await next()
         });
 
-        this.onMembersAdded(async (context, next) => {
+        self.on_members_added(async (context, next) => {
             const membersAdded = context.activity.membersAdded;
             for (const member of membersAdded) {
                 if (member.id !== context.activity.recipient.id) {
-                    await context.sendActivity('Hello and welcome!');
+                    await context.send_activity('Hello and welcome!')
                 }
             }
-            await next();
+            await next()
         });
     }
 
-    private async sendFileCard(context: TurnContext): Promise<void> {
-        filename = "file name";
-        fs = require('fs'); 
-        path = require('path');
+    async def send_file_card(turn_context: TurnContext): Promise<void> {
+        filename = "file name"
+        fs = require('fs')
+        path = require('path')
         stats = fs.statSync(path.join('files', filename));
-        fileSizeInBytes = stats['size'];
+        fileSizeInBytes = stats['size']
 
         fileContext = {
             filename: filename
@@ -359,29 +361,28 @@ class FileUploadBot(TeamsActivityHandler) {
             name: filename
         } as Attachment;
 
-        var replyActivity = this.createReply(context.activity);
-        replyActivity.attachments = [ attachment ];
-        await context.sendActivity(replyActivity);
+        reply_activity = this.createReply(context.activity)
+        reply_activity.attachments = [ attachment ]
+        await context.send_activity(reply_activity)
     }
 
-    protected async handleTeamsFileConsentAccept(context: TurnContext, fileConsentCardResponse: FileConsentCardResponse): Promise<void> {
+    async def handle_teams_file_consent_accept(turn_context: TurnContext, fileConsentCardResponse: FileConsentCardResponse): Promise<void> {
         try {
-            await this.sendFile(fileConsentCardResponse);
-            await this.fileUploadCompleted(context, fileConsentCardResponse);
+            await self.send_file(fileConsentCardResponse)
+            await self.file_upload_completed(context, fileConsentCardResponse)
         }
         catch (err) {
-            await this.fileUploadFailed(context, err.toString());
+            await self.file_upload_failed(context, err.toString())
         }
     }
 
-    protected async handleTeamsFileConsentDecline(context: TurnContext, fileConsentCardResponse: FileConsentCardResponse): Promise<void> {
+    async def handle_teams_file_consent_decline(turn_context: TurnContext, fileConsentCardResponse: FileConsentCardResponse): Promise<void> {
         let reply = this.createReply(context.activity);
-        reply.textFormat = "xml";
+        reply.textFormat = "xml"
         f"Echo: {turn_context.activity.text}")
-        reply.text = f"Declined. We won't upload file <b>${fileConsentCardResponse.context["filename"]}</b>";
-        await context.sendActivity(reply);
+        reply.text = f"Declined. We won't upload file <b>${fileConsentCardResponse.context["filename"]}</b>"
+        await context.send_activity(reply)
     }
-
 ```
 
 ---
