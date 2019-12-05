@@ -115,6 +115,19 @@ this.onMessage(async (turnContext, next) => {
 }
 ```
 
+# [Python](#tab/python)
+
+```python
+@staticmethod
+def get_mentions(activity: Activity) -> List[Mention]:
+    result: List[Mention] = []
+    if activity.entities is not None:
+        for entity in activity.entities:
+            if entity.type.lower() == "mention":
+                    result.append(entity)
+     return result
+```
+
 * * *
 
 ### Adding mentions to your messages
