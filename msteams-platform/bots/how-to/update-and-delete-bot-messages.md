@@ -66,15 +66,6 @@ foreach (var activityId in _list)
 }
 ```
 
-# [Python](#tab/python)
-
-To delete that message, pass that activity's ID to the `delete_activity` method of the `TurnContext` object. See [delete_activity](link to Python API ref docs).
-
-```python
-for each activity_id in _list:
-    await TurnContext.delete_activity(activity_id)
-```
-
 # [TypeScript/Node.js](#tab/typescript)
 
 To delete that message, pass that activity's ID to the `deleteActivity` method of the `TurnContext` object. *See* [deleteActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#deleteactivity-string---partial-conversationreference--)
@@ -83,6 +74,15 @@ To delete that message, pass that activity's ID to the `deleteActivity` method o
 for (let i = 0; i < activityIds.length; i++) {
     await turnContext.deleteActivity(activityIds[i]);
 }
+```
+
+# [Python](#tab/python)
+
+To delete that message, pass that activity's ID to the `delete_activity` method of the `TurnContext` object. See [delete_activity](link to Python API ref docs).
+
+```python
+for each activity_id in _list:
+    await TurnContext.delete_activity(activity_id)
 ```
 
 ---
