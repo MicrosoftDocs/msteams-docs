@@ -307,7 +307,7 @@ The list card has been added by Teams to provide functions beyond what the list 
     "items": [
       {
         "type": "file",
-        "id": "https://contoso.sharepoint.com/teams/new/Shared%20Documents/Report.xslx",
+        "id": "https://contoso.sharepoint.com/teams/new/Shared%20Documents/Report.xlsx",
         "title": "Report",
         "subtitle": "teams > new > design",
         "tap": {

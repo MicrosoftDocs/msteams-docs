@@ -33,6 +33,10 @@
           "redirect_url": "/microsoftteams/platform/task-modules-and-cards/what-are-task-modules"
       },
       {
+        "source_path": "msteams-platform/concepts/deploy-and-publish/office-store-guidance.md",
+        "redirect_url": "/office/dev/store/use-partner-center-to-submit-to-appsource"
+      },
+      {
           "source_path": "msteams-platform/concepts/Cards/cards.md",
           "redirect_url": "/microsoftteams/platform/task-modules-and-cards/what-are-cards"
       },

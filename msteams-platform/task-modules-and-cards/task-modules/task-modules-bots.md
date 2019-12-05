@@ -89,15 +89,17 @@ private async onInvoke(event: builder.IEvent, cb: (err: Error, body: any, status
         case "task/fetch": {
             if (invokeValue !== undefined && invokeValue.data.taskModule === "customform") { // for Technical Preview, was invokeValue.taskModule
                 // Return the specified task module response to the bot
-                let fetchTemplate: any = "task": {
-                    "type": "continue",
-                    "value": {
-                        "title": "Custom Form",
-                        "height": 510,
-                        "width": 430,
-                        "fallbackUrl": "https://contoso.com/teamsapp/customform",
-                        "url": "https://contoso.com/teamsapp/customform",
-                    },
+                let fetchTemplate: any = {
+                    "task": {
+                        "type": "continue",
+                        "value": {
+                            "title": "Custom Form",
+                            "height": 510,
+                            "width": 430,
+                            "fallbackUrl": "https://contoso.com/teamsapp/customform",
+                            "url": "https://contoso.com/teamsapp/customform",
+                        }
+                    }
                 };
                 cb(null, fetchTemplate, 200);
             };
@@ -118,17 +120,19 @@ private async onInvoke(event: builder.IEvent, cb: (err: Error, body: any, status
                     "version": "1.0"
                 };
                 // Return the specified task module response to the bot
-                let fetchTemplate: any = "task": {
-                    "type": "continue",
-                    "value": {
-                        "title": "Ninja Cat",
-                        "height": "small",
-                        "width": "small",
-                        "card": {
-                            contentType: "application/vnd.microsoft.card.adaptive",
-                            content: adaptiveCard,
+                let fetchTemplate: any = {
+                    "task": {
+                        "type": "continue",
+                        "value": {
+                            "title": "Ninja Cat",
+                            "height": "small",
+                            "width": "small",
+                            "card": {
+                                contentType: "application/vnd.microsoft.card.adaptive",
+                                content: adaptiveCard,
+                            }
                         }
-                    },
+                    }
                 };
                 cb(null, fetchTemplate, 200);
             };
@@ -137,9 +141,11 @@ private async onInvoke(event: builder.IEvent, cb: (err: Error, body: any, status
         case "task/submit": {
             if (invokeValue.data !== undefined) {
                 // It's a valid task module response
-                let submitResponse: any = "task": {
-                    "type": "message",
-                    "value": "Task complete!",
+                let submitResponse: any = {
+                    "task": {
+                        "type": "message",
+                        "value": "Task complete!",
+                    }
                 };
                 cb(null, fetchTemplates.submitMessageResponse, 200)
             }
