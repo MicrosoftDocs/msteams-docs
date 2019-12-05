@@ -20,14 +20,11 @@ When the validation process is complete, you will receive a message to let you k
 
 ## Submit your app for approval
 
-Once you are ready, submit your app for approval by bundling your app package, [test notes](#test-notes-for-validationapproval), and [app metadata](#app-metadata) and emailing them to `teamsubm@microsoft.com`. Someone will follow up with you to guide you through the rest of the process. Once your app has been approved, you can upload your app to App Source.
-
-> [!Important]
-> If you submit your app through the Seller Dashboard before receiving approval from the Teams group, your submission will be denied. You **must** be approved before submitting to the store.
+Once you are ready, submit your app for approval through [Partner Center](/dev/store/use-partner-center-to-submit-to-appsource).
 
 ## Rapid approval guidance
 
-The information below covers some of the most common reasons apps fail validation. It is not intended to be an exhaustive list of all potential issues with you app. However, if you follow this guidance your likelihood of a first-time pass will be greatly increased.
+The information below covers some of the most common reasons apps fail validation. It is not intended to be an exhaustive list of all potential issues with you app. However, if you follow this guidance your likelihood of a first-time pass will be greatly increased. Additional guidance can be found on the [Partner Center site](/dev/store/use-partner-center-to-submit-to-appsource).
 
 ### Sign up, Sign in, and Sign out
 
@@ -73,12 +70,12 @@ You must provide at least two login credentials, one admin and one not, so your 
 Make sure your app descriptions and screenshots follow the [AppSource guidance](/office/dev/store/create-effective-office-store-listings).
 
 * Don't use "Teams", "Microsoft", or "app" in your app name.
-* The developerName in the App Manifest must be same as the Provider Name defined in Seller Dashboard.
+* The developerName in the App Manifest must be same as the Provider Name.
 * Make sure the app description, screenshots, text, and promotional images describe only the app and do not contain any additional advertising, promotions or copyrighted brand names.
 * If your product requires an account on your service or another service, list that in the description and ensure there are links to sign up, sign in and sign out.
 * If your product requires additional purchases to function properly, list that in the description.
-* Provide the requisite Terms and Privacy policy links in the manifest and the Seller Dashboard. Verify that the links properly resolve to the correct documentation, ideally Teams specific. For bots, you must provide this same information in the Submission section of the Bot Framework registration page.
-* Ensure that metadata in the manifest roughly matches metadata in the Seller Dashboard (and, for bots, in the Bot Framework registration). Note that your Seller Dashboard entry should contain a more detailed and formatted description for use in the AppSource product page.
+* Provide the requisite Terms and Privacy policy links. Verify that the links properly resolve to the correct documentation, ideally Teams specific. For bots, you must provide this same information in the Submission section of the Bot Framework registration page.
+* Ensure that metadata in the manifest roughly matches metadata in Partner Center (and, for bots, in the Bot Framework registration). Note that your Partner Center entry should contain a more detailed and formatted description for use in the AppSource product page.
 
 ### Help and configuration pages
 

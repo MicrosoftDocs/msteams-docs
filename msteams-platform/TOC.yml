@@ -70,8 +70,6 @@
           href: concepts/deploy-and-publish/apps-upload.md
         - name: Publish your app
           href: concepts/deploy-and-publish/apps-publish.md
-        - name: Submit your app to AppSource
-          href: concepts/deploy-and-publish/office-store-guidance.md
         - name: AppSource approval guidance
           href: concepts/deploy-and-publish/office-store-approval.md
         - name: AppSource submission checklist
