@@ -7,9 +7,7 @@ keywords: teams design guidelines reference framework personal apps
 
 A personal app is an app with a personal scope. As an app developer, you have the option to provide a version of your app that is built for the individual user. In this version, the collection of tabs (and the bot, if you've included one), are designed for the person. This way, you're able to create a one-on-one interaction with your users.
 
-A personal app is where someone can see everything that's theirs, and all the items they've recently viewed in the app. It puts everything in one place.
-
-In the following example, Constoso is a personal app. All your personal apps will appear when you click into the app icon on the left menu bar.
+A personal app is where someone can see everything that's theirs, and all the items they've recently viewed in the app. It puts everything in one place. In the following screenshot, Contoso is a personal app in the personal app flyout.
 
 ![image of the app overflow menu](~/assets/images/Personal-apps-App-flyout.png)
 
