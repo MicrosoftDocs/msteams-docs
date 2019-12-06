@@ -43,3 +43,9 @@ Above all else, remember that nobody likes spam. Blasting away with personal and
 
 * [Map your use cases to functionality](~/concepts/design/map-use-cases.md)
 * [Choose how to distribute your app](~/concepts/deploy-and-publish/apps-publish.md)
+
+## Learn More
+
+* [Design effective tabs](~/tabs/design/tabs.md)
+* [Create amazing bots](~/bots/design/bots.md)
+

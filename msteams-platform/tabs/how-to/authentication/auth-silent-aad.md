@@ -8,7 +8,7 @@ keywords: teams authentication SSO silent AAD
 > [!NOTE]
 > For authentication to work for your tab on mobile clients, you need to ensure you're using at least the 1.4.1 version of the Teams JavaScript SDK.
 
-Silent authentication in Azure Active Directory (Azure AD) minimizes the number of times a user needs to enter their login credentials by silently refreshing the authentication token. (For proper SSO support, view our [SSO Documentation](~/tabs/how-to/authentication/auth-aad-sso.md))
+Silent authentication in Azure Active Directory (Azure AD) minimizes the number of times a user needs to enter their login credentials by silently refreshing the authentication token. (For true single sign-on support, view our [SSO Documentation](~/tabs/how-to/authentication/auth-aad-sso.md))
 
 If you want to keep your code completely client-side, you can use the [Azure Active Directory Authentication Library](/azure/active-directory/develop/active-directory-authentication-libraries) for JavaScript to attempt to acquire an Azure AD access token silently. This means that the user may never see a popup dialog if they have signed in recently.
 
@@ -60,7 +60,7 @@ if (loginHint) {
 
 ### Authenticate
 
-If ADAL has an unexpired token cached for the user, use that. Otherwise, attempt to get a token silently. Call `_renewIdToken(callback)` for an id token, or `_renewToken(resource, callback)` for an access token. ADAL.js will call your callback function with the requested token, or an error if authentication fails.
+If ADAL has an unexpired token cached for the user, use that. Otherwise, attempt to get a token silently by calling `acquireToken(resource, callback)`. ADAL.js will call your callback function with the requested token, or an error if authentication fails.
 
 If you get an error in the callback function, show a login button and fall back to an explicit login.
 
@@ -75,24 +75,22 @@ if (user) {
     }
 }
 
-// Get the id token (which is the access token for resource = clientId)
-let token = authContext.getCachedToken(config.clientId);
-if (token) {
-    showProfileInformation(token);
-} else {
-    // No token, or token is expired
-    authContext._renewIdToken(function (err, idToken) {
-        if (err) {
-            console.log("Renewal failed: " + err);
-            // Failed to get the token silently; show the login button
-            showLoginButton();
-            // You could attempt to launch the login popup here, but in browsers this could be blocked by
-            // a popup blocker, in which case the login attempt will fail with the reason FailedToOpenWindow.
-        } else {
-            showProfileInformation(idToken);
+// In this example we are getting an id token (which ADAL.js returns if we ask for resource = clientId)
+authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenType) {
+    if (token) {
+        // Make sure ADAL gave us an id token
+        if (tokenType !== authContext.CONSTANTS.ID_TOKEN) {
+            token = authContext.getCachedToken(config.clientId);
         }
-    });
-}
+        showProfileInformation(idToken);
+    } else {
+        console.log("Renewal failed: " + err);
+        // Failed to get the token silently; show the login button
+        showLoginButton();
+        // You could attempt to launch the login popup here, but in browsers this could be blocked by
+        // a popup blocker, in which case the login attempt will fail with the reason FailedToOpenWindow.
+    }
+});
 ```
 
 ### Process the return value
@@ -103,11 +101,13 @@ Check that we have a valid user and call `microsoftTeams.authentication.notifySu
 
 ```javascript
 if (authContext.isCallback(window.location.hash)) {
-  authContext.handleWindowCallback(window.location.hash);
-  if (authContext.getCachedUser()) {
-      microsoftTeams.authentication.notifySuccess();
-  } else {
-      microsoftTeams.authentication.notifyFailure(authContext.getLoginError());
-  }
+    authContext.handleWindowCallback(window.location.hash);
+    if (window.parent === window) {
+        if (authContext.getCachedUser()) {
+            microsoftTeams.authentication.notifySuccess();
+        } else {
+            microsoftTeams.authentication.notifyFailure(authContext.getLoginError());
+        }
+    }
 }
 ```
