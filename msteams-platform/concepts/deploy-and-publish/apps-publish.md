@@ -21,7 +21,7 @@ Your organization's app catalog contains apps unique to your organization and is
 
 At a high level, the process for submitting your app to AppSource is:
 
-* [Register as a Microsoft app developer](https://developer.microsoft.com/store/register).
+* [Register as a Microsoft app developer](/office/dev/store/open-a-developer-account).
 * Validate your app by following our [app guidance](~/concepts/deploy-and-publish/office-store-approval.md) and [app package checklist](~/concepts/deploy-and-publish/office-store-checklist.md).
 * Submit your package to App Source through [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource).
 * Monitor your Partner Center dashboard to track [approval](~/concepts/deploy-and-publish/office-store-approval.md).
