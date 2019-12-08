@@ -18,7 +18,7 @@ The information below covers some of the most common reasons apps fail validatio
 * Help And Support:It is highly recommended to have help/FAQ link for your Teams app and to provide this link in first-run user experience. For all personal apps we recommend you provide your help page as a personal tab for better user experience.
 
 ## Frequently failed policies 
-### Policy 11.2 -- Sign up, sign in, and sign out
+### Policy 11.2: Sign up, sign in, and sign out
 
 Description: Apps must provide a clear, simple sign in/out and (when appropriate) sign-up experience. The experience must be reachable across all capabilities in your app.
 
@@ -43,44 +43,58 @@ For additional information on authentication see:
 * [Tab/bot authentication in C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
 
 
-### Policy 14.5 -- Microsoft Teams apps must respond in a reasonable timeframe.
+### Policy 14.5: Microsoft Teams apps must respond in a reasonable timeframe.
 * 14.5.1 : For tabs, if a response to an action takes more than three seconds, you must provide a loading message or warning.
 * 14.5.2: For bots, a response to a user command must occur within two seconds. If longer processing is required, you must use a typing indicator.
 * 14.5.3: For compose extensions, a response to a user command must occur within five seconds.
 > [!TIP]
 > Make sure you include the loading indicator when the app is taking too long.
 
-### Policy 14.15: Your app cannot impede the customer experience within Microsoft Teams
-* The core functionality of your tab offering must exist within Teams and not outside of Teams.
-* Your tabs must provide value to users outside of what is possible by simply pinning your website in Teams. This means that, at minimum, it must remove extraneous chrome and disallow navigating outside the configured context. See the [Microsoft Teams Design Guidelines](~/resources/design/overview.md) for more guidance.
 
-
-## ------  Policies that are in approval guide but not in  [AppSource validation policies](https://dev.office.com/officestore/docs/validation-policies) ----------------------------------
-
-
-* Your bot must include a help command that provides your value proposition along with all your valid commands.
 * For your tab configuration page, be sure to provide "About" links and proper guidance. This page is the first thing the user sees, so ensure that a new user understands what to do.
-* Your bot should respond to invalid commands with help content. For example "I'm sorry, I don't understand. Type "help" for more information."
-* Be sure that your bot provides appropriate responses when mentioned (@*botname*) in a channel and in personal conversations as needed. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](~/resources/schema/manifest-schema.md#bots).)
 
+### Policy 14.6 br: Bot must send welcome messages on the first launch
 
+Welcome messages are the best way to set the tone. This is the first interaction user has with the bot. A good welcome message can encourage the user to keep exploring the app while a bad one will confuse use and users might lose interests if they can’t see the value of the app immediately.
+##### Personal Scope
+On the first launch of bot, user should get a welcome message from the bot even before signing in. Couple tips to think about when designing your welcome message:
 
-## -------------------------------- NEW Policies -------------------------------------------
+**Make the message concise and informative:**
+You users might have very different experiences and knowledge about your app. They might have used your app on another platform or might know nothing about your app. You want to tailor your message to all audience and in a couple sentences explain what your bot does and ways to interact with it. You should also explain the value of the app and how the users will benefit from using it. 
 
-NOTE: These policies will be linked [AppSource validation policies](https://dev.office.com/officestore/docs/validation-policies) once published
+**Make your message actionable:** Think about what's the first thing you want the users to do after installing your app. Is there any cool command they should try? Is there another onboarding experience they should know about? Do they need to sign in? You can add actions on an adaptive card or provide specific examples such as “Try asking….”, “This is what I can do…”.
 
-
-
-### Policy: Must allow users to sign in and sign up for the app
-
-### Policy: Bot must send welcome messages when on the first launch
+##### Team Scope
+Things are a little bit different when the bot is first added to a channel. Normally, you shouldnt send a 1:1 message to everyone on the team bot should send a welcome message in the channel. In addition to having a concise and informative introduction, the bot should also introduce what it does and any configurations the bot installer set (if applicable). For example, it's good the let the channel know if the bot will do a daily digest or if the bot repost every item added in the shiproom.
 
 ### Policy: Must enable silent authentication in single capability
 
 **Description:** Your bot should provide a "welcome message" outlining its value for the user along with the valid commands.
 
-### Policy: Tab should not display superfluous/unnecessary UI (aka: UI Chrome)
+### Policy 14.15: Content in a tab should not have superfluous/unnecessary UI (aka: UI Chrome) or layered navigation
+Tabs should provide focused content and avoid UI elements that are not related to this content. In general, this usually refers to unnecessary nested/layered navigation, unrelated or irrelevant UI next to the content, or any links that take the user to content not related to the tab’s content.
+
+If there are multiple view options, consider having a tab config menu for the user to choose from. For example, instead of embedding a menu inside the tab, Wide Ideas put the menu in the configuration page so the actual tab view are clean and focused.
 
 ### Policy: Tab configuration UI should not dead-end the experience and always provide a way for a user to continue
 
-### Policy: Bots must have commands or can analysis user input
+When configuring a tab, a user should never be “stuck” if they can’t find the content they are looking for. They should always have an option for a user to find or create content to pin.
+
+A user should always be able to finish the configuration experience, even if they can’t immediately find the content they’re looking for. The configuration experience should provide options to the user to find their content or pin a URL or create new content if it doesn’t exist. The user shouldn’t have to leave the configuration experience to create content and then come back to Teams to pin it.
+
+Good examples: OneNote, SharePoint & Planner
+
+
+### Policy 14.6bc: Bots must respond to any command
+Your bot should never dead end user. Here are some tips to help your bot more intelligently respond to users. 
+
+**Use command list:** Analysize user input or predict users intnetion is hard. Instead of letting user guess what your bot can do, provide users with a list of commands your bot can understand. 
+
+**Include a help command:** Users are most likely to type "Help" when they are lost or when your bot didn't respond what they are expecting.
+
+**Include a help command or guidance when your bot is lost:** When you can't understand the user input, provide user with something they could do instead.
+
+* Your bot should respond to invalid commands with help content. For example "I'm sorry, I don't understand. Type "help" for more information."
+* Your bot must include a help command that provides your value proposition along with all your valid commands.
+
+**Think through both scope:** Be sure that your bot provides appropriate responses when mentioned (@*botname*) in a channel and in personal conversations as needed. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](~/resources/schema/manifest-schema.md#bots).)
