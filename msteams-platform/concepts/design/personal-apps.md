@@ -16,7 +16,7 @@ keywords: teams design guidelines reference framework personal apps
 
 A personal app is an app with a personal scope. As an app developer, you have the option to provide a version of your app that is built for the individual user. In this version, the collection of tabs (and the bot, if you've included one), are designed for the person. This way, you're able to create a one-on-one interaction with your users.
 
-A personal app is where someone can see everything that's theirs, and all the items they've recently viewed in the app. It puts everything in one place.
+A personal app is where someone can see everything that's theirs, and all the items they've recently viewed in the app. It puts everything in one place. In the following screenshot, Contoso is a personal app in the personal app flyout.
 
 ![image of the app overflow menu](~/assets/images/Personal-apps-App-flyout.png)
 
@@ -28,7 +28,7 @@ A personal app typically contains the following tabs:
 
 ### Your tab
 
-This is where your users will see all their stuff. It's their personal space. The tab can be arranged as a list, a grid, columns, or a single canvas...whatever works best for your application.
+This is where your users will see all their stuff. It's their personal space. The tab can be arranged as a list, a grid, columns, or a single canvas...whatever works best for your application. For additional information on designing effective tabs see: [Tabs design(~/tabs/design/tabs.md).
 
 Since this tab can show items from multiple channels, each item should display its own team, channel, and tab so the user can easily see where it originated.
 
@@ -48,7 +48,7 @@ This is a list of all your tabs in the person's organization (the ones they have
 
 A bot isn't required, but it's a great way to communicate directly and privately with your users. Notification is one of the most important functions of a personal app, and what better way to notify than with direct communication?
 
-Bots deliver messages in the form of cards, which can provide specific information (like an alert that new content is available) or broad updates (like a daily to-do list).
+Bots deliver messages in the form of cards, which can provide specific information (like an alert that new content is available) or broad updates (like a daily to-do list). For additional information on designing effective bots see: [Bot design(~/bots/design/bots.md).
 
 ![Bot greeting](~/assets/images/Personal-apps-Bot.png)
 
@@ -59,8 +59,6 @@ Help content enables users to discover the nuances of your app. Add a **Settings
 ### About
 
 Include an **About** tab to provide information like version number, capabilities, privacy, and permissions links.
-
----
 
 ## Best practices
 
