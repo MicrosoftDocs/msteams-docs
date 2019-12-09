@@ -226,9 +226,6 @@ Specifies information about your company. For apps submitted to AppSource (forme
 |`termsOfUseUrl`|2048 characters|✔|The https:// URL to the developer's terms of use.|
 |`mpnId`|10 characters|✔|**Optional** The Microsoft Partner Network ID that identifies the partner organization building the app.|
 
-## PrivacyURL
-Guidance on PrivacyURL can be found [here](https://docs.microsoft.com/en-us/microsoftteams/platform)
-
 ## localizationInfo
 
 **Optional**
