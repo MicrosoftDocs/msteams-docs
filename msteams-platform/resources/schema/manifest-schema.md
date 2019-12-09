@@ -446,6 +446,8 @@ Teams apps that require their own sharepoint URLs to function well, may include 
 
 The object is an array with all elements of the type `string`.
 
+## PrivacyURL
+Guidance on PrivacyURL can be found [here](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/office-store-approval#privacy-policy-terms-of-use-and-support-urls)
 ## webApplicationInfo
 
 **Optional**
