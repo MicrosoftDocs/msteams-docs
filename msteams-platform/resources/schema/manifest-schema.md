@@ -211,7 +211,7 @@ A unique identifier for this app in reverse domain notation; for example, com.ex
 
 **Required**
 
-Specifies information about your company. For apps submitted to AppSource (formerly Office Store), these values must match the information in your AppSource entry.
+Specifies information about your company. For apps submitted to AppSource (formerly Office Store), these values must match the information in your AppSource entry. See our [publishing guidelines](~/concepts/deploy-and-publish/office-store-approval.md#privacy-policy-terms-of-use-and-support-urls) for additional information.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
