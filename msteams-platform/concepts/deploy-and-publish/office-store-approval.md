@@ -87,7 +87,9 @@ It is highly recommended to have help/FAQ link for your Teams app and to provide
 * Privacy policy should cover how you handle user data storage, user data retention, deletion and security controls information.
 * Your privacy policy must have your contact information.
 * Your support URL should not require authentication or login before contacting you for any issues with your app.
-* Privacy policy must cover - 1) The user data collected, 2) How the collected data is stored and used 3) How the data is protected.
+* Privacy policy must cover - 1) The user data collected, 2) How the data is stored and used 3) How the data is protected and security controls 4) How the data is deleted
+* Privacy policy must have a contact information for the users to contact you
+
 
 ### Bots and messaging extensions
 
