@@ -66,7 +66,6 @@
         href: concepts/build-and-test/share-to-teams.md
     - name: 'Deploy and publish your app'
       items:
-<<<<<<< HEAD
       - name: Choose your distribution methods
         href: concepts/deploy-and-publish/overview.md
       - name: Upload your app for a team or user
@@ -93,18 +92,6 @@
             href: concepts/deploy-and-publish/appsource/post-publish/overview.md
           - name: Application Certification program
             href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
-=======
-        - name: Upload your app for a team or user
-          href: concepts/deploy-and-publish/apps-upload.md
-        - name: Publish your app
-          href: concepts/deploy-and-publish/apps-publish.md
-        - name: AppSource approval guidance
-          href: concepts/deploy-and-publish/office-store-approval.md
-        - name: AppSource submission checklist
-          href: concepts/deploy-and-publish/office-store-checklist.md
-        - name: Application Certification program
-          href: concepts/deploy-and-publish/application-certification.md
->>>>>>> c73cc41822f1fe6592b22917b32e5808f576fa03
     - name: 'Authentication in Teams apps'
       items:
         - name: 'Authentication overview'
