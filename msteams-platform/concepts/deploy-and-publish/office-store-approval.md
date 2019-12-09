@@ -90,7 +90,6 @@ It is highly recommended to have help/FAQ link for your Teams app and to provide
 * Privacy policy must cover - 1) The user data collected, 2) How the data is stored and used 3) How the data is protected and security controls 4) How the data is deleted
 * Privacy policy must have a contact information for the users to contact you
 
-
 ### Bots and messaging extensions
 
 * Be sure that your bot provides appropriate responses when mentioned (@*botname*) in a channel and in personal conversations as needed. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](~/resources/schema/manifest-schema.md#bots).)
