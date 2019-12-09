@@ -60,30 +60,31 @@ Welcome messages are the best way to set the tone. This is the first interaction
 On the first launch of bot, user should get a welcome message from the bot even before signing in. Couple tips to think about when designing your welcome message:
 
 **Make the message concise and informative:**
-You users might have very different experiences and knowledge about your app. They might have used your app on another platform or might know nothing about your app. You want to tailor your message to all audience and in a couple sentences explain what your bot does and ways to interact with it. You should also explain the value of the app and how the users will benefit from using it. 
+You users might have very different experiences and knowledge about your app. They might have used your app on another platform or might know nothing about your app. You want to tailor your message to all audience and in a couple sentences explain what your bot does and ways to interact with it. You should also explain the value of the app and how the users will benefit from using it.
+![Cafe and Dinning bot](~/assets/images/faq/cafe-bot.png)
 
 **Make your message actionable:** Think about what's the first thing you want the users to do after installing your app. Is there any cool command they should try? Is there another onboarding experience they should know about? Do they need to sign in? You can add actions on an adaptive card or provide specific examples such as “Try asking….”, “This is what I can do…”.
 
 ##### Team Scope
 Things are a little bit different when the bot is first added to a channel. Normally, you shouldnt send a 1:1 message to everyone on the team bot should send a welcome message in the channel. In addition to having a concise and informative introduction, the bot should also introduce what it does and any configurations the bot installer set (if applicable). For example, it's good the let the channel know if the bot will do a daily digest or if the bot repost every item added in the shiproom.
 
-### Policy: Must enable silent authentication in single capability
-
-**Description:** Your bot should provide a "welcome message" outlining its value for the user along with the valid commands.
-
 ### Policy 14.15: Content in a tab should not have superfluous/unnecessary UI (aka: UI Chrome) or layered navigation
-Tabs should provide focused content and avoid UI elements that are not related to this content. In general, this usually refers to unnecessary nested/layered navigation, unrelated or irrelevant UI next to the content, or any links that take the user to content not related to the tab’s content.
-
+Tabs should provide focused content and avoid UI elements that are not related to this content. In general, this usually refers to unnecessary nested/layered navigation, unrelated or irrelevant UI next to the content, or any links that take the user to content not related to the tab’s content. For example, Sharepoint stripped off the navigation menus and only showcased the main content in the tab. 
+![SharePoint web view](~/assets/images/faq/web-sp.png)
+![SharePoint tab view](~/assets/images/faq/tab-sp.png)
 If there are multiple view options, consider having a tab config menu for the user to choose from. For example, instead of embedding a menu inside the tab, Wide Ideas put the menu in the configuration page so the actual tab view are clean and focused.
+
+![Wide idea configuration page](~/assets/images/faq/wideidea.png)
 
 ### Policy: Tab configuration UI should not dead-end the experience and always provide a way for a user to continue
 
-When configuring a tab, a user should never be “stuck” if they can’t find the content they are looking for. They should always have an option for a user to find or create content to pin.
+When configuring a tab, a user should never be “stuck” if they can’t find the content they are looking for. A user should always be able to finish the configuration experience, even if they can’t immediately find the content they’re looking for. The configuration experience should provide options to the user to find their content or pin a URL or create new content if it doesn’t exist. The user shouldn’t have to leave the configuration experience to create content and then come back to Teams to pin it.
 
-A user should always be able to finish the configuration experience, even if they can’t immediately find the content they’re looking for. The configuration experience should provide options to the user to find their content or pin a URL or create new content if it doesn’t exist. The user shouldn’t have to leave the configuration experience to create content and then come back to Teams to pin it.
+![OneNote allows users to paste a OneNote link in case notes can not be found](~/assets/images/faq/tab-onenote-config.png)
 
-Good examples: OneNote, SharePoint & Planner
+![Users can always create new plan on planner in case there no existing ones](~/assets/images/faq/tab-planner-config.png)
 
+![SharePoint also allows user to directly paste a SharePoint link](~/assets/images/faq/tab-sp-config.png)
 
 ### Policy 14.6bc: Bots must respond to any command
 Your bot should never dead end user. Here are some tips to help your bot more intelligently respond to users. 
