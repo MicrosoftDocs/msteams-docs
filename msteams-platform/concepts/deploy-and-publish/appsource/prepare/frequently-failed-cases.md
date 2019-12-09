@@ -69,9 +69,11 @@ You users might have very different experiences and knowledge about your app. Th
 Things are a little bit different when the bot is first added to a channel. Normally, you shouldnt send a 1:1 message to everyone on the team bot should send a welcome message in the channel. In addition to having a concise and informative introduction, the bot should also introduce what it does and any configurations the bot installer set (if applicable). For example, it's good the let the channel know if the bot will do a daily digest or if the bot repost every item added in the shiproom.
 
 ### Policy 14.15: Content in a tab should not have superfluous/unnecessary UI (aka: UI Chrome) or layered navigation
-Tabs should provide focused content and avoid UI elements that are not related to this content. In general, this usually refers to unnecessary nested/layered navigation, unrelated or irrelevant UI next to the content, or any links that take the user to content not related to the tab’s content. For example, Sharepoint stripped off the navigation menus and only showcased the main content in the tab. 
+Tabs should provide focused content and avoid UI elements that are not related to this content. In general, this usually refers to unnecessary nested/layered navigation, unrelated or irrelevant UI next to the content, or any links that take the user to content not related to the tab’s content. For example, Sharepoint stripped off the navigation menus and only showcased the main content in the tab.
+
 ![SharePoint web view](~/assets/images/faq/web-sp.png)
 ![SharePoint tab view](~/assets/images/faq/tab-sp.png)
+
 If there are multiple view options, consider having a tab config menu for the user to choose from. For example, instead of embedding a menu inside the tab, Wide Ideas put the menu in the configuration page so the actual tab view are clean and focused.
 
 ![Wide idea configuration page](~/assets/images/faq/wideidea.png)
