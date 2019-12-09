@@ -144,24 +144,19 @@ The following schema sample shows all extensibility options.
               "inputType" : "text"
             }
           ]
-        },
+        }
       ],
-      {
-        "id": "exampleMessageHandler",
-        "title": "Message Handler",
-        "description": "Domains that will create a preview when pasted into the compose box",
-        "messageHandlers": [
-          {
-            "type" : "link",
-            "value" : {
+      "messageHandlers": [
+        {
+          "type" : "link",
+          "value" : {
             "domains" : [
               "mysite.someplace.com",
               "othersite.someplace.com"
-              ]
-            }
+            ]
           }
-        ]
-      }
+        }
+      ]
     }
   ],
   "permissions": [
