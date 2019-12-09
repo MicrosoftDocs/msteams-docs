@@ -216,7 +216,7 @@ A unique identifier for this app in reverse domain notation; for example, com.ex
 
 **Required**
 
-Specifies information about your company. For apps submitted to AppSource (formerly Office Store), these values must match the information in your AppSource entry.
+Specifies information about your company. For apps submitted to AppSource (formerly Office Store), these values must match the information in your AppSource entry. See our [publishing guidelines](~/concepts/deploy-and-publish/office-store-approval.md#privacy-policy-terms-of-use-and-support-urls) for additional information.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -225,6 +225,9 @@ Specifies information about your company. For apps submitted to AppSource (forme
 |`privacyUrl`|2048 characters|✔|The https:// URL to the developer's privacy policy.|
 |`termsOfUseUrl`|2048 characters|✔|The https:// URL to the developer's terms of use.|
 |`mpnId`|10 characters|✔|**Optional** The Microsoft Partner Network ID that identifies the partner organization building the app.|
+
+## PrivacyURL
+Guidance on PrivacyURL can be found [here](https://docs.microsoft.com/en-us/microsoftteams/platform)
 
 ## localizationInfo
 
@@ -446,8 +449,6 @@ Teams apps that require their own sharepoint URLs to function well, may include 
 
 The object is an array with all elements of the type `string`.
 
-## PrivacyURL
-Guidance on PrivacyURL can be found [here](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/office-store-approval#privacy-policy-terms-of-use-and-support-urls)
 ## webApplicationInfo
 
 **Optional**
