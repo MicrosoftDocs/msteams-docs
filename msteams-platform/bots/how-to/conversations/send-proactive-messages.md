@@ -177,6 +177,7 @@ Alternatively, you can use the REST API and issue a POST request to [`/conversat
 
 The following code snippet is from [this sample](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs).
 
+
 ```csharp
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Connector;
@@ -223,17 +224,34 @@ namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
 
 # [JavaScript](#tab/javascript)
 
-This example uses the [botbuilder-teams](https://www.npmjs.com/package/botbuilder-teams) npm package.
+This example uses the [botbuilder-teams](https://www.npmjs.com/package/botbuilder-teams) npm package. 
+The following code snippet is from [teamsConversationBot.js](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js).
 
-[!code-javascript[messageAllMembersAsync](~/../botbuilder-samples/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js?range=115-134&highlight=5, 11-13)]
+[!code-javascript[messageAllMembersAsync](~/../botbuilder-samples/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js?range=115-134&highlight=5,13-15)]
 
-[!code-javascript[age step](~/../botbuilder-samples/samples/javascript_nodejs/05.multi-turn-prompt/dialogs/userProfileDialog.js?range=94-105&highlight=5)]
 
 # [Python](#tab/python)
 
 ```python
 
-Code here.
+async def _message_all_members(self, turn_context: TurnContext):
+    team_members = await TeamsInfo.get_members(turn_context)
+
+    for member in team_members:
+        proactive_message = MessageFactory.text(f"Hello {member.name}. I'm a Teams conversation bot.")
+
+        async def get_ref(tc1):
+            ref2 = TurnContext.get_conversation_reference(tc1.activity)
+            return await tc1.adapter.continue_conversation(self._app_id, ref2, send_message)
+
+        async def send_message(tc2: TurnContext):
+            return tc2
+
+        ref = TurnContext.get_conversation_reference(turn_context.activity)
+        result = await turn_context.adapter.create_conversation(ref, get_ref)
+        await result.send_activity(proactive_message)
+  
+    await turn_context.send_activity(MessageFactory.text("All messages have been sent"))
 
 ```
 
