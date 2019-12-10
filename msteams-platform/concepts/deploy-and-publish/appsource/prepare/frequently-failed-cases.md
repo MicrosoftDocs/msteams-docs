@@ -52,16 +52,17 @@ For additional information on authentication see:
 
 
 ### Policy 14.15: Bots must respond to any command and must not dead-end the user
-Your bot should never dead end user. Here are some tips to help your bot more intelligently respond to users. 
+Your bot should always be responsive. Here are some tips to help your bot more intelligently respond to users. 
 
-**Use command list:** Analysize user input or predict users intnetion is hard. Instead of letting user guess what your bot can do, provide users with a list of commands your bot can understand. 
+**Use command list:** Analysis user input or predict user's intentions is hard. Instead of letting user guess what your bot can do, provide users with a list of commands your bot can understand.
 
-**Include a help command:** Users are most likely to type "Help" when they are lost or when your bot didn't respond what they are expecting.
+![Flow command list](~/assets/images/faq/flow-bot.png)
 
-**Include a help command or guidance when your bot is lost:** When you can't understand the user input, provide user with something they could do instead.
+**Include a help command:** Users are most likely to type "Help" when they are lost or when your bot didn't respond with what they are expecting. Include a help command that provides your value proposition along with all your valid commands.
 
-* Your bot should respond to invalid commands with help content. For example "I'm sorry, I don't understand. Type "help" for more information."
-* Your bot must include a help command that provides your value proposition along with all your valid commands.
+![Flow help command](~/assets/images/faq/flow-help.png)
+
+**Include help content or guidance when your bot is lost:** When you can't understand the user input, provide user with something they could do instead. For example "I'm sorry, I don't understand. Type "help" for more information." Don't respond with an error message or simply "I don't understand". Use this chance to teach your users.
 
 **Think through both scope:** Be sure that your bot provides appropriate responses when mentioned (@*botname*) in a channel and in personal conversations as needed. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](~/resources/schema/manifest-schema.md#bots).)
 
