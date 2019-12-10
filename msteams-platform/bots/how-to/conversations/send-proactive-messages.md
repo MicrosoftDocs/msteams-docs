@@ -225,8 +225,9 @@ namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
 
 This example uses the [botbuilder-teams](https://www.npmjs.com/package/botbuilder-teams) npm package.
 
-[!code-javascript[messageAllMembersAsync](~/../botbuilder-samples/samples/javascript_nodejs/57.teams-conversation-bot\bots/teamsConversationBot.js?range=115-134&highlight=5, 11-13)]
+[!code-javascript[messageAllMembersAsync](~/../botbuilder-samples/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js?range=115-134&highlight=5, 11-13)]
 
+[!code-javascript[age step](~/../botbuilder-samples/samples/javascript_nodejs/05.multi-turn-prompt/dialogs/userProfileDialog.js?range=94-105&highlight=5)]
 
 # [Python](#tab/python)
 
