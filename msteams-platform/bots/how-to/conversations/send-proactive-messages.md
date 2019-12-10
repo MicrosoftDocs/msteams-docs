@@ -172,9 +172,10 @@ Your team-added bot can post into a channel to create a new reply chain. If you'
 
 Alternatively, you can use the REST API and issue a POST request to [`/conversations`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) resource.
 
-### .NET example (from [this sample](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs))
 
 # [C#/.NET](#tab/dotnet)
+
+The following code snippet is from [this sample](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs).
 
 ```csharp
 using Microsoft.Bot.Builder.Dialogs;
@@ -224,11 +225,8 @@ namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
 
 This example uses the [botbuilder-teams](https://www.npmjs.com/package/botbuilder-teams) npm package.
 
-```javascript
+[!code-javascript[messageAllMembersAsync](~/../botbuilder-samples/samples/javascript_nodejs/57.teams-conversation-bot\bots/teamsConversationBot.js?range=115-134&highlight=5, 11-13)]
 
-Code here.
-
-``` 
 
 # [Python](#tab/python)
 
@@ -238,4 +236,4 @@ Code here.
 
 ```
 
---- 
+---
