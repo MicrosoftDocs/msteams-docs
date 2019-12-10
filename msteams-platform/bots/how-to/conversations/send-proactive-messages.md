@@ -102,7 +102,7 @@ You must supply the user ID and the tenant ID. If the call succeeds, the API ret
 
 This ID is the personal chat's unique conversation ID. Please store this value and reuse it for future interactions with the user.
 
-### Using .NET
+# [C#/.NET](#tab/dotnet)
 
 This example uses the [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet package.
 
@@ -125,7 +125,7 @@ Activity newActivity = new Activity()
 await client.Conversations.SendToConversationAsync(newActivity, response.Id);
 ```
 
-### Using Node.js
+# [JavaScript](#tab/javascript)
 
 This example uses the [botbuilder-teams](https://www.npmjs.com/package/botbuilder-teams) npm package.
 
@@ -153,7 +153,7 @@ msg.text('Hello, this is a notification');
 bot.send(msg);
 ```
 
-### Using Python
+# [Python](#tab/python)
 
 ```python
 async def _send_proactive_message():
@@ -173,6 +173,8 @@ Your team-added bot can post into a channel to create a new reply chain. If you'
 Alternatively, you can use the REST API and issue a POST request to [`/conversations`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) resource.
 
 ### .NET example (from [this sample](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs))
+
+# [C#/.NET](#tab/dotnet)
 
 ```csharp
 using Microsoft.Bot.Builder.Dialogs;
@@ -218,10 +220,12 @@ namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
 }
 ```
 
-### Python
+# [Python](#tab/python)
 
 ```python
 
 Code here.
 
 ```
+
+--- 
