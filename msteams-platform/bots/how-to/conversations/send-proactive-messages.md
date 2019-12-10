@@ -220,6 +220,16 @@ namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
 }
 ```
 
+# [JavaScript](#tab/javascript)
+
+This example uses the [botbuilder-teams](https://www.npmjs.com/package/botbuilder-teams) npm package.
+
+```javascript
+
+Code here.
+
+``` 
+
 # [Python](#tab/python)
 
 ```python
