@@ -8,7 +8,7 @@ keywords: teams publish faq failed frequently cases tip tips
 
 The information below covers some of the most common reasons apps fail validation. It is not intended to be an exhaustive list of all potential issues with you app. However, if you follow this guidance your likelihood of a first-time pass will be greatly increased. See the extensive list of policies here: [AppSource validation policies](https://dev.office.com/officestore/docs/validation-policies). Pay extra attention to section 14 -- policies that are specific to Microsoft Teams app
 
-### Tips for successful app submission
+## Tips for successful app submission
 
 * Ensure you are using version 1.4.1 or later of the Teams JavaScript SDK.
 * Do not make changes to your app while validation is in progress. This will require a complete re-validation of your app.
@@ -51,9 +51,22 @@ For additional information on authentication see:
 > Make sure you include the loading indicator when the app is taking too long.
 
 
-* For your tab configuration page, be sure to provide "About" links and proper guidance. This page is the first thing the user sees, so ensure that a new user understands what to do.
+### Policy 14.15: Bots must respond to any command and must not dead-end the user
+Your bot should never dead end user. Here are some tips to help your bot more intelligently respond to users. 
 
-### Policy 14.6 br: Bot must send welcome messages on the first launch
+**Use command list:** Analysize user input or predict users intnetion is hard. Instead of letting user guess what your bot can do, provide users with a list of commands your bot can understand. 
+
+**Include a help command:** Users are most likely to type "Help" when they are lost or when your bot didn't respond what they are expecting.
+
+**Include a help command or guidance when your bot is lost:** When you can't understand the user input, provide user with something they could do instead.
+
+* Your bot should respond to invalid commands with help content. For example "I'm sorry, I don't understand. Type "help" for more information."
+* Your bot must include a help command that provides your value proposition along with all your valid commands.
+
+**Think through both scope:** Be sure that your bot provides appropriate responses when mentioned (@*botname*) in a channel and in personal conversations as needed. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](~/resources/schema/manifest-schema.md#bots).)
+
+
+### Policy 14.15: Bot must send welcome messages on the first launch
 
 Welcome messages are the best way to set the tone. This is the first interaction user has with the bot. A good welcome message can encourage the user to keep exploring the app while a bad one will confuse use and users might lose interests if they can’t see the value of the app immediately.
 ##### Personal Scope
@@ -78,7 +91,7 @@ If there are multiple view options, consider having a tab config menu for the us
 
 ![Wide idea configuration page](~/assets/images/faq/wideidea.png)
 
-### Policy: Tab configuration UI should not dead-end the experience and always provide a way for a user to continue
+### Policy 14.15: Tab configuration UI should not dead-end the experience and always provide a way for a user to continue
 
 When configuring a tab, a user should never be “stuck” if they can’t find the content they are looking for. A user should always be able to finish the configuration experience, even if they can’t immediately find the content they’re looking for. The configuration experience should provide options to the user to find their content or pin a URL or create new content if it doesn’t exist. The user shouldn’t have to leave the configuration experience to create content and then come back to Teams to pin it.
 
@@ -87,17 +100,3 @@ When configuring a tab, a user should never be “stuck” if they can’t find 
 ![Users can always create new plan on planner in case there no existing ones](~/assets/images/faq/tab-planner-config.png)
 
 ![SharePoint also allows user to directly paste a SharePoint link](~/assets/images/faq/tab-sp-config.png)
-
-### Policy 14.6bc: Bots must respond to any command
-Your bot should never dead end user. Here are some tips to help your bot more intelligently respond to users. 
-
-**Use command list:** Analysize user input or predict users intnetion is hard. Instead of letting user guess what your bot can do, provide users with a list of commands your bot can understand. 
-
-**Include a help command:** Users are most likely to type "Help" when they are lost or when your bot didn't respond what they are expecting.
-
-**Include a help command or guidance when your bot is lost:** When you can't understand the user input, provide user with something they could do instead.
-
-* Your bot should respond to invalid commands with help content. For example "I'm sorry, I don't understand. Type "help" for more information."
-* Your bot must include a help command that provides your value proposition along with all your valid commands.
-
-**Think through both scope:** Be sure that your bot provides appropriate responses when mentioned (@*botname*) in a channel and in personal conversations as needed. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](~/resources/schema/manifest-schema.md#bots).)
