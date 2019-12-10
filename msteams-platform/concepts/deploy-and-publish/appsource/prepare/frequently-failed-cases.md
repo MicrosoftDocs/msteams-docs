@@ -77,6 +77,7 @@ Your bot should always be responsive. Here are some tips to help your bot more i
 ### Policy 14.15.i: Bot must send welcome messages on the first launch
 
 Welcome messages are the best way to set the tone. This is the first interaction user has with the bot. A good welcome message can encourage the user to keep exploring the app while a bad one will confuse use and users might lose interests if they can’t see the value of the app immediately.
+
 ##### Personal Scope
 On the first launch of bot, user should get a welcome message from the bot even before signing in. Couple tips to think about when designing your welcome message:
 
@@ -87,7 +88,7 @@ You users might have very different experiences and knowledge about your app. Th
 **Make your message actionable:** Think about what's the first thing you want the users to do after installing your app. Is there any cool command they should try? Is there another onboarding experience they should know about? Do they need to sign in? You can add actions on an adaptive card or provide specific examples such as “Try asking….”, “This is what I can do…”.
 
 ##### Team Scope
-Things are a little bit different when the bot is first added to a channel. Normally, you shouldnt send a 1:1 message to everyone on the team bot should send a welcome message in the channel. In addition to having a concise and informative introduction, the bot should also introduce what it does and any configurations the bot installer set (if applicable). For example, it's good the let the channel know if the bot will do a daily digest or if the bot repost every item added in the shiproom.
+Things are a little bit different when the bot is first added to a channel. Normally, you shouldnt send a 1:1 message to everyone on the team bot should send a welcome message in the channel. In addition to having a concise and informative introduction, the bot should also introduce what it does and any configurations the bot installer set (if applicable). For example, it's good the let the channel know if the bot will do a daily digest at 3pm or if the bot posts every item added in the shiproom.
 
 ### Policy 14.15.j: Tab configuration UI should not dead-end the experience and always provide a way for a user to continue
 
