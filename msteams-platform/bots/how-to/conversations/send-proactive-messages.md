@@ -164,6 +164,8 @@ async def _send_proactive_message():
 
 ```
 
+---
+
 ## Creating a channel conversation
 
 Your team-added bot can post into a channel to create a new reply chain. If you're using the Node.js Teams SDK, use `startReplyChain()` which gives you a fully-populated address with the correct activity id and conversation id. If you are using C#, see the example below.
@@ -214,4 +216,12 @@ namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
         }
     }
 }
+```
+
+### Python
+
+```python
+
+Code here.
+
 ```
