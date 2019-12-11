@@ -9,6 +9,27 @@ Make sure your app descriptions and screenshots follows our [AppSource guidance 
 >[!IMPORTANT]
 > Make sure you copy over the description you write in AppScource onto the manifest. Teams will only use the description you provided in the manifest.
 
+:::row:::
+   :::column span="1":::
+**App name**
+
+Your app’s short name is displayed here. Your app’s name plays a critical role in how users discover it on the App Store. 
+Dos: 
+   * Choose a simple, memorable name that hints at what your app does. 
+   * Be distinctive
+Don’t:
+   * use generic terms or names that are similar to existing app names.
+   * use "Teams", "Microsoft", or "app" in your app name.
+   :::column-end:::
+   :::column span="1":::
+      **This is a single-span column with a Smurf in it.**
+    ![brainy](~/assets/images/faq/polly-bot.png)
+   :::column-end:::
+    :::column span="1":::
+      **This is a single-span column with a Smurf in it.**
+    ![brainy](~/assets/images/faq/polly-bot.png)
+   :::column-end:::
+:::row-end:::
 ## Create effective screenshots
 
 The screenshots uploaded on the Seller Dashboard are displayed in both [Microsoft AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) and your app listing in the Teams client to provide a visual preview of your app along with your app description.
