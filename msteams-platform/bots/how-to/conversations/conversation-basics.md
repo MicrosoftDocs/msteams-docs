@@ -62,6 +62,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [Python](#tab/python)
 
+<!-- Verify -->
 ```python
 
 async def on_message_activity(self, turn_context: TurnContext):
@@ -145,6 +146,8 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [Python](#tab/python)
+
+<!-- Verify -->
 
 ```python
 
@@ -286,6 +289,8 @@ this.onMessage(async (turnContext, next) => {
 ```
 
 # [Python](#tab/python)
+
+<!-- Verify -->
 
 ```python
 
