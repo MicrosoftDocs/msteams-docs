@@ -15,6 +15,16 @@ You might want to enrich your tab with features that require access native devic
 
 ![Device Permissions settings screen](~/assets/images/tabs/device-permissions.png)
 
+> [!IMPORTANT]
+> Full support for tabs on mobile clients is coming soon. To prepare for this change you should follow the [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md) when creating your tabs. Personal apps (static tabs) are currently available in [developer preview](~/resources/dev-preview/developer-preview-intro.md).
+>
+> When full support for tabs is released:
+>
+> * All tabs will always be available on mobile
+> * Your `contentUrl` **will be loaded in the mobile Teams client**.
+> * For channel/group tabs, users can still open your tab in a separate browser via your `websiteUrl`, however your `contentUrl` will be loaded first.  
+> * User permissions for native device functionality on mobile platforms will be configured in your app's **app manifest** (Android) or **Info.plist** (iOS) file.
+
 ## Device permissions
 
 Accessing a user’s device permissions allows you to build much richer experiences, for example:
