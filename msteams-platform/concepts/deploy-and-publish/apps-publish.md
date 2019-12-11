@@ -22,9 +22,8 @@ Your organization's app catalog contains apps unique to your organization and is
 At a high level, the process for submitting your app to AppSource is:
 
 * [Register as a Microsoft app developer](/office/dev/store/open-a-developer-account).
-* Validate your app by following our [app guidance](~/concepts/deploy-and-publish/office-store-approval.md) and [app package checklist](~/concepts/deploy-and-publish/office-store-checklist.md).
-* Submit your package to App Source through [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource).
-* Monitor your Partner Center dashboard to track [approval](~/concepts/deploy-and-publish/office-store-approval.md).
+* Follow our guidance to [Submit your app to AppSource](~/concepts/deploy-and-publish/appsource/publish.md)
+* Upload your package to App Source through [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource) and monitor your Partner Center dashboard to track approval. 
 
 AppSource (formerly known as Office Store) provides a convenient location for you to distribute your Microsoft Teams app, as well as other Office 365 extensibility types such as Office add-ins and SharePoint add-ins. To include your solution in AppSource, you submit it through Partner Center. You need to create an individual or company account if you have not already done so for other Windows apps or Office extensibility types.
 
@@ -53,7 +52,7 @@ To ensure your app works well on Microsoft Teams, in addition to the core AppSou
 
 After you've validated your app against our [approval guidance](~/concepts/deploy-and-publish/office-store-approval.md), you can submit your solution through [Partner Center](/dev/store/use-partner-center-to-submit-to-appsource).
 
-You'll need to upload a [submission package](~/concepts/build-and-test/apps-package.md) and provide the required metadata for the product listing page, including information such as app logo, description, and screenshots. Please review our [Submission and Manifest Metadata Checklist](~/concepts/deploy-and-publish/office-store-checklist.md) for more information about your submission package.
+You'll need to upload a [submission package](~/concepts/build-and-test/apps-package.md) and provide the required metadata for the product listing page, including information such as app logo, description, and screenshots. Please review our [Submission and Manifest Metadata Checklist](~/concepts/deploy-and-publish/appsource/prepare/office-store-checklist.md) for more information about your submission package.
 
 ## Add a download button to your product site
 
@@ -68,3 +67,7 @@ When a user installs your application one of the first things they do is consent
 * Adding a new capability to an app such as adding a bot to an tab only app.
 * Changing the permissions array in the manifest.
 * Increment your app version number in your manifest.
+
+## Next Steps
+* [Publish Apps to your organization's app catalog](/microsoftteams/tenant-apps-catalog-teams).
+* [Submit your app to AppSource](~/concepts/deploy-and-publish/appsource/publish.md)

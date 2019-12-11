@@ -69,7 +69,7 @@
       - name: Choose your distribution methods
         href: concepts/deploy-and-publish/overview.md
       - name: Upload your app for a team or user
-        href: concepts/deploy-and-publish/apps-upload-for-team-and-user.md
+        href: concepts/deploy-and-publish/apps-upload.md
       - name: Publish your app on AppSource
         items:
         - name: Understanding AppSourse submission 
