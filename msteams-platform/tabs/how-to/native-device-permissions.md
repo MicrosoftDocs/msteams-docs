@@ -23,7 +23,6 @@ You might want to enrich your tab with features that require access native devic
 > * All tabs will always be available on mobile
 > * Your `contentUrl` **will be loaded in the mobile Teams client**.
 > * For channel/group tabs, users can still open your tab in a separate browser via your `websiteUrl`, however your `contentUrl` will be loaded first.  
-> * User permissions for native device functionality on mobile platforms will be configured in your app's **app manifest** (Android) or **Info.plist** (iOS) file.
 
 ## Device permissions
 
