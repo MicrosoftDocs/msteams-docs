@@ -3,7 +3,7 @@ title: Microsoft Teams app approval process guidance
 description: Describes the approval process for getting your app published to the Microsoft Teams app store
 keywords: teams publish store office publishing AppSource
 ---
-# AppSource submission process
+# Submit your app to AppSource
 
 By developing and submitting a Microsoft Teams app, you are subject to the Bot Developer Framework [Terms of Use](https://aka.ms/bf-terms), [Privacy Policy](https://aka.ms/bf-privacy), and [Code of Conduct](https://aka.ms/bf-conduct) for bot, tab, and messaging extension functionality within your app. If your app contains Office 365 Connector functionality, separate terms may also apply as part of your Connector Registration on the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).
 
@@ -14,18 +14,17 @@ By developing and submitting a Microsoft Teams app, you are subject to the Bot D
 
 At a high level, the process for submitting your app to AppSource is:
 
-1. Develope your app following our [design guidelines](../../design/understand-use-cases). Developer each capabilities following our [tab design guideline]() and [bot design guideline]().
-1. [Register as a developer](#Register-as-a-developer) in both Seller Dashboard and Microsoft 
-2. Prepare your app for submission: Make sure your app passes the [Submission checklist](prepare\overview.md)
-5. Go through our [Tips and most frequently failed cases](prepare\frequently-failed-cases.md) for a quicker approval process
-6. Submit your package to App Source through [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource).
-7. Monitor your Partner Center dashboard to track [approval](~/concepts/deploy-and-publish/office-store-approval.md).
-8. Post submission: Check our guidance for [Maintaining and supporting your published app](post-publish\overview.md)
+1. Develope your app following our [design guidelines](~/concepts/design/understand-use-cases.md). Developer each capabilities following our [tab design guideline](~/tabs/design/tabs.md) and [bot design guideline](~/bots/design/bots.md).
+2. [Register as a developer](#register-as-a-developer) in both Seller Dashboard and Microsoft. 
+3. Prepare your app for submission: Make sure your app passes the [Submission checklist](~/concepts/deploy-and-publish/appsource/prepare/overview.md)
+4. Go through our [Tips and most frequently failed cases](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md) for a quicker approval process.
+5. Submit your package to App Source through [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource) and monitor your Partner Center dashboard to track approval. 
+6. Post submission: Check our guidance for [Maintaining and supporting your published app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md).
 
 ## Register as a developer
 You must register as **both** Microsoft app developer and developer in seller dashboard in order to publish your app.
 
-* [Register as a Microsoft app developer](#register-as-a-Microsoft-app-developer).
+* [Register as a Microsoft app developer](#register-as-a-microsoft-app-developer).
 * [Register as a developer in the Seller Dashboard](#register-in-the-seller-dashboard-to-submit-to-appsource).
 
 ### Register as a Microsoft app developer
@@ -49,4 +48,3 @@ If you already submitted other product types to AppSource, this additional regis
 To start the process, choose the **Continue** button under **Office**.
 
 ![AppSource Seller Dashboard entry point](~/assets/images/submission/sellerdashboardofficeentry.png)
-
