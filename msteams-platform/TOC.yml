@@ -71,7 +71,7 @@
       - name: Upload your app for a team or user
         href: concepts/deploy-and-publish/apps-upload.md
       - name: Publish your app to your organization
-        href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/msteams-platform/toc.yml&bc=/MicrosoftTeams/breadcrumb/toc.yml
+        href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.yml&bc=/MicrosoftTeams/breadcrumb/toc.yml
       - name: Publish your app on AppSource
         items:
         - name: Understanding AppSourse submission 
