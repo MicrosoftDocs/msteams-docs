@@ -5,7 +5,7 @@ keywords: teams publish store office publishing policy AppSource content
 ---
 # Build a great app detail page 
 
-Your detail page is users' first impressions of your app. Every element of your detail page can be used to convey your app's vision and drives downloads. Think through how you want to showcase your app in the limited space. Here are some tips and tricks to help you engage your users before they even install your app. 
+Your detail page is users' first impressions of your app. Every element of your detail page can be used to convey your app's vision and drives downloads. Think through how you want to showcase your app in the limited space. Here are some tips and tricks to help you engage your users before they even install your app.
 
 > [!NNOTE] 
 > Make sure your app descriptions also follow our [AppSource guidance for creating an effective store listing](/office/dev/store/create-effective-office-store-listings)
@@ -21,13 +21,23 @@ Your app’s short name is displayed here. Your app’s name plays a critical ro
 **Don'ts:**
 * use generic terms or names that are similar to existing app names.
 * use "Teams", "Microsoft", or "app" in your app name.
+![App name store view](~/assets/images/store-detail-page/AppName-02.png)
+Here's a view in AppStudio:
+![App name appstudio view](~/assets/images/store-detail-page/AppName-01.png)
 
 ### Icon 
 Your app icon is the one of the first elements users see. It should catch people’s eyes when scrolling through app store. Make sure it makes a good first impression that also communicates your brand’s image and purpose. 
 AppSource has more tips on [creating a consistent visual identity](/office/dev/store/create-effective-office-store-listings#create-a-consistent-visual-identity) 
 
+![App name store view](~/assets/images/store-detail-page/AppName-02.png)
+Here's a view in AppStudio:
+![App name appstudio view](~/assets/images/store-detail-page/AppName-01.png)
+
 ### Transparent Outline
-The transparent outline icon is used in the compose extension and left rail. Make sure they are simple and recognizable. 
+The transparent outline icon is used in the compose extension and left rail. Make sure they are simple and recognizable.
+![App name store view](~/assets/images/store-detail-page/AppName-02.png)
+Here's a view in AppStudio:
+![App name appstudio view](~/assets/images/store-detail-page/AppName-01.png)
 
 ### Short description
 Short description is a summary of your app in a concise phrase.
@@ -39,10 +49,15 @@ You want it to be original, engaging, and directed at your target audience. Desc
 **Don’ts:**
 * Repeat the title.
 * Use jargon or specialized terminology; don't assume that users know what they're looking for.
-
+![App name store view](~/assets/images/store-detail-page/AppName-02.png)
+Here's a view in AppStudio:
+![App name appstudio view](~/assets/images/store-detail-page/AppName-01.png)
 ### Long description
-Provide an engaging description that highlights the main features, the problems it solves, and the target audience for your solution. Attract your audience with the first sentence of your description by communicating your app’s unique features. It must be under 4000 characters Most users read between 300 and 500 words. 
+Provide an engaging description that highlights the main features, the problems it solves, and the target audience for your solution. Attract your audience with the first sentence of your description by communicating your app’s unique features. It must be under 4000 characters Most users read between 300 and 500 words.
 
+![App name store view](~/assets/images/store-detail-page/AppName-02.png)
+Here's a view in AppStudio:
+![App name appstudio view](~/assets/images/store-detail-page/AppName-01.png)
 **Do's:** 
 * Use Teams simple mark up to spice up your descriptions
 * List features to aid readers scanning your description.
