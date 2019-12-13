@@ -32,6 +32,7 @@ AppSource has more tips on [creating a consistent visual identity](/office/dev/s
 
 ## Outline icon
 This is used in the compose extension and left navigation menu. Make sure it's simple and recognizable.
+
 ![App icon outline store view](~/assets/images/store-detail-page/AppIconOutline-02.png)
 ![App icon outline appstudio view](~/assets/images/store-detail-page/AppIconOutline-01.png)
 
@@ -47,7 +48,9 @@ This is a concise summary of your app. You want it to be original, engaging, and
 * Don't use jargon or specialized terminology — you can't assume that users know what to look for.
 
 ![Short Description store view](~/assets/images/store-detail-page/ShortDescription-02.png)
-Here's a view in AppStudio:
+
+Here's a view in [App Studio](https://aka.ms/InstallTeamsAppStudio):
+
 ![Short Description  appstudio view](~/assets/images/store-detail-page/ShortDescription-01.png)
 
 ## Long description
@@ -57,7 +60,7 @@ This provides an engaging narrative highlighting your solution's main features, 
 > Make sure you copy the description you wrote in your AppScource entry to your manifest — the values must match. Teams will only use the description you provide in the manifest.
 
 **Do's:** 
-* [Use Markdown formatting](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) to spice up your descriptions.  
+* [Use Markdown formatting](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) to spice up your description.  
 * List features to aid readers scanning your description.
 * Use active voice and speak to users directly.
 * Use bullet points to list out your features.
@@ -68,7 +71,7 @@ This provides an engaging narrative highlighting your solution's main features, 
 
 ![App long description store view](~/assets/images/store-detail-page/LongDescription-02.png)
 
-Here's a view in AppStudio:
+Here's a view in [App Studio](https://aka.ms/InstallTeamsAppStudio):
 
 ![App long description appstudio view](~/assets/images/store-detail-page/LongDescription-01.png)
 
@@ -98,6 +101,6 @@ If an image is worth a thousand words, then a video is worth a thousand images.
 Videos are the most effective way to communicate the benefits of using your app. It will be placed in front of all your screenshots in the app details page. Make sure you talk about how your app works, what can be achieved with it, the benefits of using it, and who it is for. Remember to keep your presentation short and sweet: somewhere between 30-90 seconds.
 
 ## Learn more
-[Checklist for app submission](./deploy-and-publish/office-store-checklist.md).
-[Create an app package for your Microsoft Teams app](./build-and-test/apps-package.md).
+[Checklist for app submission](./deploy-and-publish/office-store-checklist.md).  
+[Create an app package for your Microsoft Teams app](./build-and-test/apps-package.md).  
 [Use the Seller Dashboard to submit your solution to AppSource](/office/dev/store/use-the-seller-dashboard-to-submit-to-the-office-store).
