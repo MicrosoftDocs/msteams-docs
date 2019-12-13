@@ -82,8 +82,8 @@
             href: concepts/deploy-and-publish/appsource/prepare/overview.md
           - name: App detail page checklist
             href: concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md
-          - name: Manifest package checklist
-            href: concepts/deploy-and-publish/appsource/prepare/office-store-checklist.md
+          - name: App manifest checklist
+            href: concepts/deploy-and-publish/appsource/prepare/app-manifest-checklist.md
           - name: Frequently failed cases
             href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
         - name: After publishing your app

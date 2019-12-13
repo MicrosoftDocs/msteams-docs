@@ -1,14 +1,14 @@
 ---
-title: Publishing checklist
-description: The checklist to use before publishing your Microsoft Teams app to AppSource
+title: App manifest checklist
+description: The checklist for your app manifest for publishing your Microsoft Teams app to AppSource
 keywords: teams publish store office publishing checklist
 ---
-# Manifest package checklist
+# App manifest checklist
 
-Follow the following tips and requirement to build a great manifest package.
+Your app manifest needs to conform to the guidelines outlined below.
 
 >[!Tip]
-> Use app studio to have your manifest built for you. After including all the metadata and icons,use our manifest checker in App Studio to test your package before submitting.
+> Use App Studio to help you build your app manifest. It will validate most of the requirements below for you, and display any error or warnings on the **Test and Distribute** tab.
 
 ## Tips
 
