@@ -222,6 +222,21 @@ The `text` field in the object in the `entities` array must *exactly* match a po
 }
 ```
 
+# [Python](#tab/python)
+
+```python
+async def _mention_activity(self, turn_context: TurnContext):
+        mention = Mention(
+            mentioned=turn_context.activity.from_property,
+            text=f"<at>{turn_context.activity.from_property.name}</at>",
+            type="mention"
+        )
+
+        reply_activity = MessageFactory.text(f"Hello {mention.text}")
+        reply_activity.entities = [Mention().deserialize(mention.serialize())]
+        await turn_context.send_activity(reply_activity)
+```
+
 * * *
 
 ## Sending a message on installation
