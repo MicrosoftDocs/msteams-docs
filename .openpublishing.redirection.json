@@ -493,7 +493,7 @@
         "redirect_url": "/microsoftteams/platform/deploye-and-publish/post-publish/application-certification"
       },
       {
-        "source_path": "msteams-platform/concepts/deploy-and-publish/apps-publish.ms",
+        "source_path": "msteams-platform/concepts/deploy-and-publish/apps-publish.md",
         "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish"
       }
   ]
