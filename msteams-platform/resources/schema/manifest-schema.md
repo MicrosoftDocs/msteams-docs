@@ -412,7 +412,7 @@ An array of `string` which specifies which permissions the app requests, which l
 * `identity` &emsp; Requires user identity information
 * `messageTeamMembers` &emsp; Requires permission to send direct messages to team members
 
-Changing these permissions when updating your app will cause your users to repeat the consent process the first time they run the updated app. See [Updating your app](~/concepts/deploy-and-publish/appsouce/post-publish/overview.md) for more information.
+Changing these permissions when updating your app will cause your users to repeat the consent process the first time they run the updated app. See [Updating your app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md) for more information.
 
 ## devicePermissions
 
