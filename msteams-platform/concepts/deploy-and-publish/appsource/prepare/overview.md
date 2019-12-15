@@ -12,11 +12,11 @@ For your Teams app to be approved, your app must meet the following requirements
 * **Distribution method:** Make sure your app is meant for a store. There are [other options](../../overview.md) to distribute your app without publishing to AppSource.
 * **App detail page:** Your app meets [App detail page checklist](detail-page-checklist.md)
 * **Tips and frequently failed cases:** Pay extra attention to these [Tips and frequently failed cases](frequently-failed-cases.md) to improve your app submission to approval time.
-* **App manifest:** Check your app manifest against the [App manifest checklist](office-store-checklist.md) and manifest checker in App Studio
+* **App manifest:** Check your app manifest against the [App manifest checklist](app-manifest-checklist.md) and manifest checker in App Studio
 * **Testing and debugging:** You have fully [tested and debugged your app](../../../build-and-test/debug.md).
 * **Validation policies:** It must pass all current [AppSource validation policies](https://dev.office.com/officestore/docs/validation-policies) for Teams tabs and bots. Please note that these policies are subject to change.
-* **Testing notes:** Include proper [test notes for validation](#test-notes-for-validation)
-* **Privacy policies:** Makes sure your app include proper [privacy policy, terms of use and support URLs](#privacy-policy-terms-of-use-and-support-urls)
+* **Testing notes:** Include [test notes for validation](#test-notes-for-validation)
+* **Privacy policies:** Ensure your [privacy policy, terms of use and support URLs](#privacy-policy-terms-of-use-and-support-urls) follow our guidelines.
 
 Once you have completed all of the above requirements, you can submit your package to App Source through [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource).
 
