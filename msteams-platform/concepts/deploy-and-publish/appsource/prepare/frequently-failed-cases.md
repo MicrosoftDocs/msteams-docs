@@ -3,10 +3,9 @@ title: Tips and frequently failed cases
 description: Describes tips for submission and most failed policies  
 keywords: teams publish faq failed frequently cases tip tips 
 ---
-
 # Tips and frequently failed cases 
 
-The information below covers some of the most common reasons apps fail validation. It is not intended to be an exhaustive list of all potential issues with you app. However, if you follow this guidance your likelihood of a first-time pass will be greatly increased. See the extensive list of policies here: [AppSource validation policies](https://dev.office.com/officestore/docs/validation-policies). Pay extra attention to section 14 -- policies that are specific to Microsoft Teams app
+This article covers some of the most common reasons apps fail validation. It is not intended to be an exhaustive list of all potential issues with you app. However, if you follow this guidance the likelihood of a first-time pass will be greatly increased. See the extensive list of policies here: [AppSource validation policies](https://dev.office.com/officestore/docs/validation-policies). The policies in Section 14 of the overall AppSource validation policies are specific to Microsoft Teams apps.
 
 ## Tips for successful app submission
 
@@ -17,8 +16,7 @@ The information below covers some of the most common reasons apps fail validatio
 * Any material that you associate with your experience, such as descriptions and support documentation, must be accurate. Use correct spelling, capitalization, punctuation, and grammar in your descriptions and materials.
 * Help And Support:It is highly recommended to have help/FAQ link for your Teams app and to provide this link in first-run user experience. For all personal apps we recommend you provide your help page as a personal tab for better user experience.
 
-## Frequently failed policies 
-### Policy 11.2: Sign up, sign in, and sign out
+## Policy 11.2: Sign up, sign in, and sign out
 
 Description: Apps must provide a clear, simple sign in/out and (when appropriate) sign-up experience. The experience must be reachable across all capabilities in your app.
 
@@ -42,14 +40,17 @@ For additional information on authentication see:
 * [Tab authentication sample in Node](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
 * [Tab/bot authentication in C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
 
-### Policy 14.5: Microsoft Teams apps must respond in a reasonable timeframe.
+## Policy 14.5: Microsoft Teams apps must respond in a reasonable timeframe.
+
 * 14.5.1 : For tabs, if a response to an action takes more than three seconds, you must provide a loading message or warning.
 * 14.5.2: For bots, a response to a user command must occur within two seconds. If longer processing is required, you must use a typing indicator.
 * 14.5.3: For compose extensions, a response to a user command must occur within five seconds.
+
 > [!TIP]
 > Make sure you include the loading indicator when the app is taking too long.
 
-### Policy 14.15.3: Content in a tab should not have superfluous/unnecessary UI (aka: UI Chrome) or layered navigation
+## Policy 14.15.3: Content in a tab should not have superfluous/unnecessary UI (aka: UI Chrome) or layered navigation
+
 Tabs should provide focused content and avoid UI elements that are not related to this content. In general, this usually refers to unnecessary nested/layered navigation, unrelated or irrelevant UI next to the content, or any links that take the user to content not related to the tab’s content. For example, Sharepoint stripped off the navigation menus and only showcased the main content in the tab.
 
 ![SharePoint web view](~/assets/images/faq/web-sp.png)
@@ -59,8 +60,9 @@ If there are multiple view options, consider having a tab config menu for the us
 
 ![Wide idea configuration page](~/assets/images/faq/wideidea.png)
 
-### Policy 14.15.7: Bots must respond to any command and must not dead-end the user
-Your bot should always be responsive. Here are some tips to help your bot more intelligently respond to users. 
+## Policy 14.15.7: Bots must respond to any command and must not dead-end the user
+
+Your bot should always be responsive. Here are some tips to help your bot more intelligently respond to users.
 
 **Use command list:** Analysis user input or predict user's intentions is hard. Instead of letting user guess what your bot can do, provide users with a list of commands your bot can understand.
 
@@ -74,11 +76,12 @@ Your bot should always be responsive. Here are some tips to help your bot more i
 
 **Think through both scope:** Be sure that your bot provides appropriate responses when mentioned (@*botname*) in a channel and in personal conversations as needed. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](~/resources/schema/manifest-schema.md#bots).)
 
-### Policy 14.15.9: Bot must send welcome messages on the first launch
+## Policy 14.15.9: Bot must send welcome messages on the first launch
 
 Welcome messages are the best way to set the tone. This is the first interaction user has with the bot. A good welcome message can encourage the user to keep exploring the app while a bad one will confuse use and users might lose interests if they can’t see the value of the app immediately.
 
-##### Personal Scope
+### Personal Scope
+
 On the first launch of bot, user should get a welcome message from the bot even before signing in. Couple tips to think about when designing your welcome message:
 
 **Make the message concise and informative:**
@@ -87,10 +90,11 @@ You users might have very different experiences and knowledge about your app. Th
 
 **Make your message actionable:** Think about what's the first thing you want the users to do after installing your app. Is there any cool command they should try? Is there another onboarding experience they should know about? Do they need to sign in? You can add actions on an adaptive card or provide specific examples such as “Try asking….”, “This is what I can do…”.
 
-##### Team Scope
+### Team Scope
+
 Things are a little bit different when the bot is first added to a channel. Normally, you shouldnt send a 1:1 message to everyone on the team bot should send a welcome message in the channel. In addition to having a concise and informative introduction, the bot should also introduce what it does and any configurations the bot installer set (if applicable). For example, it's good the let the channel know if the bot will do a daily digest at 3pm or if the bot posts every item added in the shiproom.
 
-### Policy 14.15.10: Tab configuration UI should not dead-end the experience and always provide a way for a user to continue
+## Policy 14.15.10: Tab configuration UI should not dead-end the experience and always provide a way for a user to continue
 
 When configuring a tab, a user should never be “stuck” if they can’t find the content they are looking for. A user should always be able to finish the configuration experience, even if they can’t immediately find the content they’re looking for. The configuration experience should provide options to the user to find their content or pin a URL or create new content if it doesn’t exist. The user shouldn’t have to leave the configuration experience to create content and then come back to Teams to pin it.
 

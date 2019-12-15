@@ -5,9 +5,7 @@ keywords: teams publish store office publishing checklist submission prepare
 ---
 # Prepare for AppSource submission  
 
-Teams app approval is a free service provided by the Microsoft Teams group that verifies that your app works as described, contains all appropriate metadata, and provides content that would be valuable to an end user.
-
-For your Teams app to be approved, your app must meet the following requirements and guidelines:
+To be listed on AppSource, your app must go through an approval process. This is a free service provided by the Microsoft Teams group that verifies that your app works as described, contains all appropriate metadata, and provides content that would be valuable to an end user. To help you achieve rapid approval, ensure your app meets the following requirements and guidelines:
 
 * **Distribution method:** Make sure your app is meant for a store. There are [other options](../../overview.md) to distribute your app without publishing to AppSource.
 * **App detail page:** Your app meets [App detail page checklist](detail-page-checklist.md)

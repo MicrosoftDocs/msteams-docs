@@ -5,15 +5,13 @@ keywords: teams publish store office publishing AppSource
 ---
 # Submit your app to AppSource
 
-TODO: Need some kind of introductory couple of sentences here.
+Publish your app on AppSource to make it available to your end users in the Teams app catalog and on the web. At a high level, the process for submitting your app to AppSource is:
 
-At a high level, the process for submitting your app to AppSource is:
-
-1. Develope your app following our [design guidelines](~/concepts/design/understand-use-cases.md). Developer each capabilities following our [tab design guideline](~/tabs/design/tabs.md) and [bot design guideline](~/bots/design/bots.md).
-2. [Register as a developer](#register-as-a-developer) in both Seller Dashboard and Microsoft. 
+1. Develop your app following our [design guidelines](~/concepts/design/understand-use-cases.md). Tabs should follow our [tab design guidelines](~/tabs/design/tabs.md) and your bot should follow the [bot design guidelines](~/bots/design/bots.md).
+2. [Register as a developer](#register-as-a-developer) with Microsoft.
 3. Prepare your app for submission: Make sure your app passes the [Submission checklist](~/concepts/deploy-and-publish/appsource/prepare/overview.md)
 4. Go through our [Tips and most frequently failed cases](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md) for a quicker approval process.
-5. Submit your package to App Source through [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource) and monitor your Partner Center dashboard to track approval. 
+5. Submit your package to App Source through [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource) and monitor your Partner Center dashboard to track approval.
 6. Post submission: Check our guidance for [Maintaining and supporting your published app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md).
 
 ## Register as a developer
@@ -29,10 +27,7 @@ If you have already registered in the Microsoft Store ecosystem, either by distr
 
 Account management in the Microsoft Store ecosystem relies on a [Microsoft account](https://account.microsoft.com/account). This identity will be the main administrator/owner of your AppSource experience. For more information, please review [Opening a developer account](/windows/uwp/publish/opening-a-developer-account) and the [Developer program FAQ](https://developer.microsoft.com/store/register/faq).
 
-#### Account suggestions
-
 * Create a Microsoft account specifically for your developer/AppSource account. Keep this account and password confidential, and share it only with your release team.
-* Use a Microsoft account, not an Azure AD account. Although you might have leveraged the Windows Store Azure Active Directory (Azure AD) support for Windows Store account management, the AppSource Seller Dashboard requires you to use a Microsoft account, not an Azure AD account.
 * If you've developed with a trial developer Office 365 account, do not use this account for your AppSource identity. Create a separate Microsoft account instead.
 
 ### Register in the Seller Dashboard to submit to AppSource

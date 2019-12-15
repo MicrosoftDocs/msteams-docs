@@ -4,7 +4,7 @@ description: Describes what app detail page must have
 keywords: teams publish store office publishing policy AppSource content
 ---
 # App detail page checklist 
-Make sure your app descriptions and screenshots follows our [AppSource guidance for creating an effective store listing](/office/dev/store/create-effective-office-store-listings) and [Screenshots requirement](#create-effective-screenshots)
+Make sure your app descriptions and screenshots follows our [AppSource guidance for creating an effective store listing](/office/dev/store/create-effective-office-store-listings) and [Screenshots requirement](#create-effective-screenshots).
 
 >[!IMPORTANT]
 > Make sure you copy over the description you write in AppScource onto the manifest. Teams will only use the description you provided in the manifest.
