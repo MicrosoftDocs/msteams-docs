@@ -211,7 +211,7 @@ A unique identifier for this app in reverse domain notation; for example, com.ex
 
 **Required**
 
-Specifies information about your company. For apps submitted to AppSource (formerly Office Store), these values must match the information in your AppSource entry. See our [publishing guidelines](~/concepts/deploy-and-publish/office-store-approval.md#privacy-policy-terms-of-use-and-support-urls) for additional information.
+Specifies information about your company. For apps submitted to AppSource (formerly Office Store), these values must match the information in your AppSource entry. See our [publishing guidelines](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md) for additional information.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -412,7 +412,7 @@ An array of `string` which specifies which permissions the app requests, which l
 * `identity` &emsp; Requires user identity information
 * `messageTeamMembers` &emsp; Requires permission to send direct messages to team members
 
-Changing these permissions when updating your app will cause your users to repeat the consent process the first time they run the updated app. See [Updating your app](~/concepts/deploy-and-publish/apps-publish.md#updating-your-app) for more information.
+Changing these permissions when updating your app will cause your users to repeat the consent process the first time they run the updated app. See [Updating your app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md) for more information.
 
 ## devicePermissions
 

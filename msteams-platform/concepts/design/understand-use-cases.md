@@ -19,7 +19,7 @@ Every good app has a core problem (or need) it is trying to solve - before you s
 
 Sometimes this can be  obvious - "My team's monitoring system needs to send alerts somewhere, we need to be able to discuss them really quickly, and none of us want to check our email." Sometimes your target audience can grow over time - "Our sister team is really jealous of our alerting system, and now they want in on the action." Understanding who your users are will help you identify the right distribution model, but more importantly will help you identify *how they use Teams*. Are they primarily front-line workers on mobile clients? Do you expect a lot of guest users to need access to your app? Do they use teams and channels, or primarily group chats? How technically sophisticated are they? Will you need a thorough on-boarding experience, or will a few pointers do?
 
-Sometimes the answer is "We want to solve this problem for all Team's users everywhere." If that's the case for you you'll want to spend some time understanding [what it takes to get published to AppSource](~/concepts/deploy-and-publish/apps-publish.md#publish-to-appsource).
+Sometimes the answer is "We want to solve this problem for all Team's users everywhere." If that's the case for you you'll want to spend some time understanding [what it takes to get published to AppSource](~/concepts/deploy-and-publish/appsource/prepare/overview.md).
 
 ## Do you need authentication?
 

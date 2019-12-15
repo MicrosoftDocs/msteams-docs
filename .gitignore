@@ -8,6 +8,7 @@ _repo.*/
 _dependentPackages/
 desktop.ini
 msteams-platform/.vs/
+.vs/
 
 .openpublishing.buildcore.ps1
 

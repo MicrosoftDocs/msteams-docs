@@ -29,12 +29,6 @@ See the [Bot Framework Documentation](/azure/bot-service/?view=azure-bot-service
 
 4. Deploy the bot to a cloud service, such as [Microsoft Azure](https://azure.microsoft.com/). Alternatively, run your app locally and use a tunneling service such [ngrok](https://ngrok.com) to expose an https:// endpoint for your bot, such as `https://45az0eb1.ngrok.io/api/messages`.
 
-To make your bot experience Teams-ready:
-
-1. [Create an uploadable app package](~/concepts/build-and-test/apps-package.md) and [upload it to a team](~/concepts/deploy-and-publish/apps-upload.md) to test it in action.
-2. Add [tabs](~/tabs/what-are-tabs.md) or other capabilities to make your experience shine in Teams.
-3. [Submit your final app package](~/concepts/deploy-and-publish/apps-publish.md#publish-to-appsource) for publication in AppSource (formerly known as Office Store) or publish it for your organization by uploading it to your [Tenant App Catalog](~/concepts/deploy-and-publish/apps-publish.md#publish-to-your-organization-app-catalog).
-
 > [!NOTE]
 > ## Bots and Microsoft Azure
 > As of December, 2017, the Bot Framework portal is optimized for registering bots in Microsoft Azure. Here are some things to know:
