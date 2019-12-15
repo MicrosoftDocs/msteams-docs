@@ -52,7 +52,7 @@ To ensure your app works well on Microsoft Teams, in addition to the core AppSou
 
 After you've validated your app against our [approval guidance](~/concepts/deploy-and-publish/office-store-approval.md), you can submit your solution through [Partner Center](/dev/store/use-partner-center-to-submit-to-appsource).
 
-You'll need to upload a [submission package](~/concepts/build-and-test/apps-package.md) and provide the required metadata for the product listing page, including information such as app logo, description, and screenshots. Please review our [Submission and Manifest Metadata Checklist](~/concepts/deploy-and-publish/appsource/prepare/office-store-checklist.md) for more information about your submission package.
+You'll need to upload a [submission package](~/concepts/build-and-test/apps-package.md) and provide the required metadata for the product listing page, including information such as app logo, description, and screenshots. Please review our [Submission and Manifest Metadata Checklist](~/concepts/deploy-and-publish/appsource/prepare/app-manifest-checklist.md) for more information about your submission package.
 
 ## Add a download button to your product site
 
