@@ -483,6 +483,18 @@
       {
           "source_path": "msteams-platform/share-to-teams.md",
           "redirect_url": "/microsoftteams/platform/concepts/build-and-test/share-to-teams"
+      },
+      {
+        "source_path": "msteams-platform/concepts/deploy-and-publish/office-store-approval.md",
+        "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases"
+      },
+      {
+        "source_path": "msteams-platform/concepts/deploy-and-publish/applicacation-certification.md",
+        "redirect_url": "/microsoftteams/platform/deploye-and-publish/post-publish/application-certification"
+      },
+      {
+        "source_path": "msteams-platform/concepts/deploy-and-publish/apps-publish.md",
+        "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish"
       }
   ]
 }
