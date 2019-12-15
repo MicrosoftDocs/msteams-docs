@@ -51,7 +51,7 @@ For additional information on authentication see:
 
 ## Policy 14.15.3: Content in a tab should not have superfluous/unnecessary UI (aka: UI Chrome) or layered navigation
 
-Tabs should provide focused content and avoid UI elements that are not related to this content. In general, this usually refers to unnecessary nested/layered navigation, unrelated or irrelevant UI next to the content, or any links that take the user to content not related to the tab’s content. For example, Sharepoint stripped off the navigation menus and only showcased the main content in the tab.
+Tabs should provide focused content and avoid UI elements that are not related to this content. In general, this usually refers to unnecessary nested/layered navigation, unrelated or irrelevant UI next to the content, or any links that take the user to content not related to the tab’s content. For example, SharePoint stripped off the navigation menus and only showcased the main content in the tab.
 
 ![SharePoint web view](~/assets/images/faq/web-sp.png)
 ![SharePoint tab view](~/assets/images/faq/tab-sp.png)
@@ -92,11 +92,11 @@ You users might have very different experiences and knowledge about your app. Th
 
 ### Team Scope
 
-Things are a little bit different when the bot is first added to a channel. Normally, you shouldnt send a 1:1 message to everyone on the team bot should send a welcome message in the channel. In addition to having a concise and informative introduction, the bot should also introduce what it does and any configurations the bot installer set (if applicable). For example, it's good the let the channel know if the bot will do a daily digest at 3pm or if the bot posts every item added in the shiproom.
+Things are a little bit different when the bot is first added to a channel. Normally, you shouldn't send a 1:1 message to everyone on the team, but the bot may send a welcome message in the channel.
 
 ## Policy 14.15.10: Tab configuration UI should not dead-end the experience and always provide a way for a user to continue
 
-When configuring a tab, a user should never be “stuck” if they can’t find the content they are looking for. A user should always be able to finish the configuration experience, even if they can’t immediately find the content they’re looking for. The configuration experience should provide options to the user to find their content or pin a URL or create new content if it doesn’t exist. The user shouldn’t have to leave the configuration experience to create content and then come back to Teams to pin it.
+A user should always be able to finish the configuration experience, even if they can’t immediately find the content they’re looking for. The configuration experience should provide options to the user to find their content or pin a URL or create new content if it doesn’t exist. The user shouldn’t have to leave the configuration experience to create content and then come back to Teams to pin it.
 
 ![OneNote allows users to paste a OneNote link in case notes can not be found](~/assets/images/faq/tab-onenote-config.png)
 
