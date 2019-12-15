@@ -30,7 +30,7 @@ To use these Microsoft Graph APIs in a Microsoft Teams app, you create a bot and
 
 Here's more information on how to create and test calls and online meetings bots:
 
-* [Graph API reference](https://developer.microsoft.com/graph/docs/api-reference/beta/resources/calls-api-overview)
+* [Graph API reference](/graph/api/resources/communications-api-overview?view=graph-rest-beta)
 * [Sample apps](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
 * [Registering a bot that supports calls and online meetings](./registering-calling-bot.md) and [Microsoft Graph permissions for calls and online meetings bots](/registering-calling-bot.md#add-microsoft-graph-permissions)
 * [How to develop calling and online meeting bots on your local PC](./debugging-local-testing-calling-meeting-bots.md)
