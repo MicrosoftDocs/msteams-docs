@@ -173,10 +173,12 @@ The connection name is used by the bot code to retrieve user authentication toke
 
 With the preliminary settings done, let's focus on the creation of the bot to use in this article.
 
+# [C#/.NET](#tab/dotnet)
+
 1. Clone [cs-auth-sample][teams-auth-bot].
 1. Launch Visual Studio.
 1. From the toolbar select **File -> Open -> Project/Solution** and open the bot project.
-1. Update **appsettings.json** as follows:
+1. In C# Update **appsettings.json** as follows:
 
     - Set `ConnectionName` to the name of the identity provider connection you added to the bot channel registration. The name we used in this example is *BotTeamsAuthADv1*.
     - Set `MicrosoftAppId` to the **bot App ID** you saved at the time of the bot channel registration.
@@ -192,8 +194,26 @@ With the preliminary settings done, let's focus on the creation of the bot to us
             "ConnectionName": "" // The name of the identity provider connection
         }
         ```
-
 1. In the Solution Explorer, navigate to the `TeamsAppManifest` folder, open `manifest.json` and set `id` and `botId` to the **bot App ID** you saved at the time of the bot channel registration.
+
+
+# [Python](#tab/python)
+
+1. Clone the sample [**Teams bot authentication**][teams-auth-bot] from the github repository.
+1. Update **config.py**:
+
+    - Set `ConnectionName` to the name of the OAuth connection setting you added to your bot.
+    - Set `MicrosoftAppId` and `MicrosoftAppPassword` to your bot's app ID and app secret.
+
+      Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) will need to be encoded as `&amp;`.
+
+        ```python
+        APP_ID = os.environ.get("MicrosoftAppId", "")
+        APP_PASSWORD = os.environ.get("MicrosoftAppPassword", "")
+        CONNECTION_NAME = os.environ.get("ConnectionName", "")
+        ```
+
+---
 
 ### Deploy the bot to Azure
 
