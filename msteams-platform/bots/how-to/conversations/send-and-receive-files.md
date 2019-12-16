@@ -312,15 +312,11 @@ export class FileUploadBot extends TeamsActivityHandler {
 
 ```
 
-# [Python](#tab/python)
-
-# [Python](#tab/python)
-
 <!-- Python samples verify -->
 
-```python
 # [Python](#tab/python)
 
+```python
 class FileUploadBot(TeamsActivityHandler) {
     constructor() {
         super()
