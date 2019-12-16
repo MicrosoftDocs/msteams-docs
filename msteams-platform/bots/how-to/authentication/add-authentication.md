@@ -35,6 +35,7 @@ In this article you'll learn:
     | Sample | BotBuilder version | Demonstrates |
     |:---|:---:|:---|
     | **Bot authentication** in [cs-auth-sample][teams-auth-bot] | v4 | OAuthCard support |
+    | **Bot authentication** in [python-auth-sample][teams-auth-bot-py] | v4 | OAuthCard support |
 
 ## Create the resource group
 
@@ -198,7 +199,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
 # [Python](#tab/python)
 
-1. Clone the sample [*Teams bot authentication*][teams-auth-bot] from the github repository.
+1. Clone the sample [Teams bot authentication][teams-auth-bot-py from the github repository.
 1. Update **config.py**:
 
     - Set `ConnectionName` to the name of the OAuth connection setting you added to your bot.
@@ -686,7 +687,9 @@ async def _interrupt(self, inner_dc: DialogContext):
 [concept-dialogs]: https://docs.microsoft.com/azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0
 [simple-dialog]: https://docs.microsoft.com/azure/bot-service/bot-builder-dialog-manage-conversation-flow?view=azure-bot-service-4.0
 
-[teams-auth-bot]: https://github.com/microsoft/botbuilder-python/tree/master/samples
+[teams-auth-bot]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth
+
+[teams-auth-bot-py]: https://github.com/microsoft/botbuilder-python/tree/master/samples
 
 [azure-aad-blade]: https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview
 [aad-registration-blade]: https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredAppsPreview
