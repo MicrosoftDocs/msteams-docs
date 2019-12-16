@@ -316,7 +316,7 @@ export class FileUploadBot extends TeamsActivityHandler {
 
 # [Python](#tab/python)
 
-<!-- Verify -->
+<!-- Python samples verify -->
 
 ```python
 # [Python](#tab/python)
