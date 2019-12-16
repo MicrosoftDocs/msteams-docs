@@ -515,7 +515,7 @@ self.add_dialog(
     )
 )
 ```
-<!-- Python -->
+<!-- Python Snippets -->
 Within a dialog step, use `begin_dialog` to start the OAuth prompt, which asks the user to sign in.
 
 - If the user is already signed in, this will generate a token response event, without prompting the user.
