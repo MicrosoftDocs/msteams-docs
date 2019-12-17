@@ -317,70 +317,168 @@ export class FileUploadBot extends TeamsActivityHandler {
 # [Python](#tab/python)
 
 ```python
-class FileUploadBot(TeamsActivityHandler) {
-    constructor() {
-        super()
+class TeamsFileUploadBot(TeamsActivityHandler):
+    async def on_message_activity(self, turn_context: TurnContext):
+        message_with_file_download = (
+            False
+            if not turn_context.activity.attachments
+            else turn_context.activity.attachments[0].content_type == ContentType.FILE_DOWNLOAD_INFO
+        )
 
-        self.onMessage(async (context, next) => {
-            await this.send_file_card(context)
-            await next()
-        });
+        if message_with_file_download:
+            # Save an uploaded file locally
+            file = turn_context.activity.attachments[0]
+            file_download = FileDownloadInfo.deserialize(file.content)
+            file_path = "files/" + file.name
 
-        self.on_members_added(async (context, next) => {
-            const membersAdded = context.activity.membersAdded;
-            for (const member of membersAdded) {
-                if (member.id !== context.activity.recipient.id) {
-                    await context.send_activity('Hello and welcome!')
-                }
-            }
-            await next()
-        });
-    }
+            response = requests.get(file_download.download_url, allow_redirects=True)
+            open(file_path, "wb").write(response.content)
 
-    async def send_file_card(turn_context: TurnContext): Promise<void> {
-        filename = "file name"
-        fs = require('fs')
-        path = require('path')
-        stats = fs.statSync(path.join('files', filename));
-        fileSizeInBytes = stats['size']
+            reply = self._create_reply(
+                turn_context.activity, f"Complete downloading <b>{file.name}</b>", "xml"
+            )
+            await turn_context.send_activity(reply)
+        else:
+            # Attempt to upload a file to Teams.  This will display a confirmation to
+            # the user (Accept/Decline card).  If they accept, on_teams_file_consent_accept
+            # will be called, otherwise on_teams_file_consent_decline.
+            filename = "teams-logo.png"
+            file_path = "files/" + filename
+            file_size = os.path.getsize(file_path)
+            await self._send_file_card(turn_context, filename, file_size)
 
-        fileContext = {
-            filename: filename
-        };
+    async def _send_file_card(
+            self, turn_context: TurnContext, filename: str, file_size: int
+    ):
+        """
+        Send a FileConsentCard to get permission from the user to upload a file.
+        """
 
-        let attachment = {
-            content: <FileConsentCard>{
-                description: 'This is the file I want to send you',
-                fileSizeInBytes: fileSizeInBytes,
-                acceptContext: fileContext,
-                declineContext: fileContext
-            },
-            contentType: 'application/vnd.microsoft.teams.card.file.consent',
-            name: filename
-        } as Attachment;
+        consent_context = {"filename": filename}
 
-        reply_activity = this.createReply(context.activity)
-        reply_activity.attachments = [ attachment ]
-        await context.send_activity(reply_activity)
-    }
+        file_card = FileConsentCard(
+            description="This is the file I want to send you",
+            size_in_bytes=file_size,
+            accept_context=consent_context,
+            decline_context=consent_context
+        )
 
-    async def handle_teams_file_consent_accept(turn_context: TurnContext, fileConsentCardResponse: FileConsentCardResponse): Promise<void> {
-        try {
-            await self.send_file(fileConsentCardResponse)
-            await self.file_upload_completed(context, fileConsentCardResponse)
+        as_attachment = Attachment(
+            content=file_card.serialize(), content_type=ContentType.FILE_CONSENT_CARD, name=filename
+        )
+
+        reply_activity = self._create_reply(turn_context.activity)
+        reply_activity.attachments = [as_attachment]
+        await turn_context.send_activity(reply_activity)
+
+    async def on_teams_file_consent_accept(
+            self,
+            turn_context: TurnContext,
+            file_consent_card_response: FileConsentCardResponse
+    ):
+        """
+        The user accepted the file upload request.  Do the actual upload now.
+        """
+
+        file_path = "files/" + file_consent_card_response.context["filename"]
+        file_size = os.path.getsize(file_path)
+
+        headers = {
+            "Content-Length": f"\"{file_size}\"",
+            "Content-Range": f"bytes 0-{file_size-1}/{file_size}"
         }
-        catch (err) {
-            await self.file_upload_failed(context, err.toString())
-        }
-    }
+        response = requests.put(
+            file_consent_card_response.upload_info.upload_url, open(file_path, "rb"), headers=headers
+        )
 
-    async def handle_teams_file_consent_decline(turn_context: TurnContext, fileConsentCardResponse: FileConsentCardResponse): Promise<void> {
-        let reply = this.createReply(context.activity);
-        reply.textFormat = "xml"
-        f"Echo: {turn_context.activity.text}")
-        reply.text = f"Declined. We won't upload file <b>${fileConsentCardResponse.context["filename"]}</b>"
-        await context.send_activity(reply)
-    }
+        if response.status_code != 200:
+            await self._file_upload_failed(turn_context, "Unable to upload file.")
+        else:
+            await self._file_upload_complete(turn_context, file_consent_card_response)
+
+    async def on_teams_file_consent_decline(
+            self,
+            turn_context: TurnContext,
+            file_consent_card_response: FileConsentCardResponse
+    ):
+        """
+        The user declined the file upload.
+        """
+
+        context = file_consent_card_response.context
+
+        reply = self._create_reply(
+            turn_context.activity,
+            f"Declined. We won't upload file <b>{context['filename']}</b>.",
+            "xml"
+        )
+        await turn_context.send_activity(reply)
+
+    async def _file_upload_complete(
+            self,
+            turn_context: TurnContext,
+            file_consent_card_response: FileConsentCardResponse
+    ):
+        """
+        The file was uploaded, so display a FileInfoCard so the user can view the
+        file in Teams.
+        """
+
+        name = file_consent_card_response.upload_info.name
+
+        download_card = FileInfoCard(
+            unique_id=file_consent_card_response.upload_info.unique_id,
+            file_type=file_consent_card_response.upload_info.file_type
+        )
+
+        as_attachment = Attachment(
+            content=download_card.serialize(),
+            content_type=ContentType.FILE_INFO_CARD,
+            name=name,
+            content_url=file_consent_card_response.upload_info.content_url
+        )
+
+        reply = self._create_reply(
+            turn_context.activity,
+            f"<b>File uploaded.</b> Your file <b>{name}</b> is ready to download",
+            "xml"
+        )
+        reply.attachments = [as_attachment]
+
+        await turn_context.send_activity(reply)
+
+    async def _file_upload_failed(self, turn_context: TurnContext, error: str):
+        reply = self._create_reply(
+            turn_context.activity,
+            f"<b>File upload failed.</b> Error: <pre>{error}</pre>",
+            "xml"
+        )
+        await turn_context.send_activity(reply)
+
+    def _create_reply(self, activity, text=None, text_format=None):
+        return Activity(
+            type=ActivityTypes.message,
+            timestamp=datetime.utcnow(),
+            from_property=ChannelAccount(
+                id=activity.recipient.id, name=activity.recipient.name
+            ),
+            recipient=ChannelAccount(
+                id=activity.from_property.id, name=activity.from_property.name
+            ),
+            reply_to_id=activity.id,
+            service_url=activity.service_url,
+            channel_id=activity.channel_id,
+            conversation=ConversationAccount(
+                is_group=activity.conversation.is_group,
+                id=activity.conversation.id,
+                name=activity.conversation.name,
+            ),
+            text=text or "",
+            text_format=text_format or None,
+            locale=activity.locale,
+        )
+
+
 ```
 
 ---
