@@ -10,9 +10,9 @@ ms.author: anclear
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-By adding the `teams` or `groupchat` scope to your bot, it can be available to be installed in a team or group chat. This allows all members of the conversation to interact with you bot. Once installed, it will also have access to metadata about the conversation like the list of conversation members, and when installed in a team details about that team and the full list of channels.
+By adding the `teams` or `groupchat` scope to your bot, it can be available to be installed in a team or group chat. This allows all members of the conversation to interact with your bot. Once installed, it will also have access to metadata about the conversation like the list of conversation members, and when installed in a team details about that team and the full list of channels.
 
-Bots in a group or channel only receive messages when they are mentioned ("@botname"), they do not receive any other messages send to the conversation.
+Bots in a group or channel only receive messages when they are mentioned ("@botname"), they do not receive any other messages sent to the conversation.
 
 > [!NOTE]
 > The bot must be @mentioned directly. Your bot will not receive a message when the team or channel is mentioned, or when someone replies to a message from your bot without @mentioning it.
