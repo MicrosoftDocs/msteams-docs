@@ -188,6 +188,8 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
     Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) will need to be encoded as `&amp;`.
 
+     [!code-json[appsettings](~/../botbuilder-samples/samples/csharp_dotnetcore/46.teams-auth/appsettings.json?range=1-5)]
+
         ```cs
         {
             "MicrosoftAppId": "", // The bot App Id 
@@ -513,6 +515,8 @@ This is done by sub-classing the **ActivityHandler**.
 
 # [C#/.NET](#tab/dotnet)
 
+[!code-csharp[ActivityHandler](~/../botbuilder-samples/samples/csharp_dotnetcore/46.teams-auth/bots/DialogBot.cs?range=19-51)]
+
 ```csharp
 public class DialogBot<T> : TeamsActivityHandler where T : Dialog
 {
@@ -550,7 +554,9 @@ public class DialogBot<T> : TeamsActivityHandler where T : Dialog
 
 #### Bots\TeamsBot.cs
 
-The *Invoke Activity* must be forwarded to the dialog if the **OAuthPrompt** is used. 
+The *Invoke Activity* must be forwarded to the dialog if the **OAuthPrompt** is used.
+
+[!code-csharp[ActivityHandler](~/../botbuilder-samples/samples/csharp_dotnetcore/46.teams-auth/bots/TeamsBot.cs?range=34-42)]
 
 ```csharp
 protected override async Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
