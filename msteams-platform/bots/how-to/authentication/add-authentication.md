@@ -551,18 +551,6 @@ The *Invoke Activity* must be forwarded to the dialog if the **OAuthPrompt** is 
 
 [!code-csharp[ActivityHandler](~/../botbuilder-samples/samples/csharp_dotnetcore/46.teams-auth/Bots/TeamsBot.cs?range=34-42)]
 
-```csharp
-protected override async Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
-{
-    Logger.LogInformation("Running dialog with signin/verifystate from an Invoke Activity.");
-
-    // OAuth Prompt needs to see the Invoke Activity in order to complete the login process.
-    // Run the Dialog with the new Invoke Activity.
-    await Dialog.RunAsync(turnContext, ConversationState.CreateProperty<DialogState>(nameof(DialogState)), cancellationToken);
-}
-
-```
-
 #### TeamsActivityHandler.cs
 
 ```csharp
