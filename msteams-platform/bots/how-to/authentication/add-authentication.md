@@ -207,11 +207,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
       Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) will need to be encoded as `&amp;`.
 
-        ```python
-        APP_ID = os.environ.get("MicrosoftAppId", "")
-        APP_PASSWORD = os.environ.get("MicrosoftAppPassword", "")
-        CONNECTION_NAME = os.environ.get("ConnectionName", "")
-        ```
+      [!code-python[config](~/../botbuilder-python/samples/python/46.teams-auth/config.py?range=14-16)]
 
 ---
 
@@ -598,20 +594,7 @@ Add an OAuth prompt to **MainDialog** in its constructor. Here, the value for th
 
 [!code-python[Add OAuthPrompt](~/../botbuilder-python/samples/python/46.teams-auth/dialogs/main_dialog.py?range=34-44)]
 
-```python
-self.add_dialog(
-    WaterfallDialog(
-        "WFDialog",
-        [
-            self.prompt_step,
-            self.login_step,
-            self.display_token_phase1,
-            self.display_token_phase2,
-        ],
-    )
-)
-```
-<!-- Python Snippets -->
+
 Within a dialog step, use `begin_dialog` to start the OAuth prompt, which asks the user to sign in.
 
 - If the user is already signed in, this will generate a token response event, without prompting the user.
@@ -619,28 +602,9 @@ Within a dialog step, use `begin_dialog` to start the OAuth prompt, which asks t
 
 [!code-python[Add OAuthPrompt](~/../botbuilder-python/samples/python/46.teams-auth/dialogs/main_dialog.py?range=48-49)]
 
-```python
-return await step_context.begin_dialog(OAuthPrompt.__name__)
-```
-
 Within the following dialog step, check for the presence of a token in the result from the previous step. If it is not null, the user successfully signed in.
 
 [!code-python[Add OAuthPrompt](~/../botbuilder-python/samples/python/46.teams-auth/dialogs/main_dialog.py?range=54-65)]
-
-```python
-if step_context.result:
-    await step_context.context.send_activity("You are now logged in.")
-    return await step_context.prompt(
-        ConfirmPrompt.__name__,
-        PromptOptions(
-            prompt=MessageFactory.text("Would you like to view your token?")
-        ),
-    )
-
-await step_context.context.send_activity(
-    "Login was not successful please try again."
-)
-```
 
 **bots/auth_bot.py**
 
@@ -648,29 +612,10 @@ await step_context.context.send_activity(
 
 [!code-python[on_token_response_event](~/../botbuilder-python/samples/python/46.teams-auth/bots/teams_bot.py?range=38-45)] 
 
-```python
-async def on_token_response_event(self, turn_context: TurnContext):
-    # Run the Dialog with the new Token Response Event Activity.
-    await DialogHelper.run_dialog(
-        self.dialog,
-        turn_context,
-        self.conversation_state.create_property("DialogState"),
-    )
-```
 
 **dialogs/logout_dialog.py**
 
 [!code-python[allow logout](~/../botbuilder-python/samples/python/46.teams-auth/dialogs/logout_dialog.py?range=29-36&highlight=6)]
-
-```python
-async def _interrupt(self, inner_dc: DialogContext):
-    if inner_dc.context.activity.type == ActivityTypes.message:
-        text = inner_dc.context.activity.text.lower()
-        if text == "logout":
-            bot_adapter: BotFrameworkAdapter = inner_dc.context.adapter
-            await bot_adapter.sign_out_user(inner_dc.context, self.connection_name)
-            return await inner_dc.cancel_all_dialogs()
-```
 
 ---
 
