@@ -596,7 +596,7 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 
 Add an OAuth prompt to **MainDialog** in its constructor. Here, the value for the connection name was retrieved from the **config.py** file.
 
-<!-- [!code-python[Add OAuthPrompt](~/../botbuilder-python/samples/python/18.bot-authentication/dialogs/main_dialog.py?range=34-44)]-->
+[!code-python[Add OAuthPrompt](~/../botbuilder-python/samples/python/46.teams-auth/dialogs/main_dialog.py?range=34-44)]
 
 ```python
 self.add_dialog(
@@ -617,7 +617,7 @@ Within a dialog step, use `begin_dialog` to start the OAuth prompt, which asks t
 - If the user is already signed in, this will generate a token response event, without prompting the user.
 - Otherwise, this will prompt the user to sign in. The Azure Bot Service sends the token response event after the user attempts to sign in.
 
-<!-- [!code-python[Add OAuthPrompt](~/../botbuilder-python/samples/python/18.bot-authentication/dialogs/main_dialog.py?range=49)]-->
+[!code-python[Add OAuthPrompt](~/../botbuilder-python/samples/python/46.teams-auth/dialogs/main_dialog.py?range=48-49)]
 
 ```python
 return await step_context.begin_dialog(OAuthPrompt.__name__)
@@ -625,7 +625,7 @@ return await step_context.begin_dialog(OAuthPrompt.__name__)
 
 Within the following dialog step, check for the presence of a token in the result from the previous step. If it is not null, the user successfully signed in.
 
-<!-- [!code-python[Add OAuthPrompt](~/../botbuilder-python/samples/python/18.bot-authentication/dialogs/main_dialog.py?range=54-65)]-->
+[!code-python[Add OAuthPrompt](~/../botbuilder-python/samples/python/46.teams-auth/dialogs/main_dialog.py?range=54-65)]
 
 ```python
 if step_context.result:
@@ -646,7 +646,7 @@ await step_context.context.send_activity(
 
 **AuthBot** explicitly handles token response event activities. Here, we continue the active dialog, which allows the OAuth prompt to process the event and retrieve the token.
 
-<!-- [!code-python[on_token_response_event](~/../botbuilder-python/samples/python/18.bot-authentication/bots/auth_bot.py?range=38-44)] -->
+[!code-python[on_token_response_event](~/../botbuilder-python/samples/python/46.teams-auth/bots/teams_bot.py?range=38-45)] 
 
 ```python
 async def on_token_response_event(self, turn_context: TurnContext):
@@ -660,7 +660,7 @@ async def on_token_response_event(self, turn_context: TurnContext):
 
 **dialogs/logout_dialog.py**
 
-<!-- [!code-python[allow logout](~/../botbuilder-python/samples/python/18.bot-authentication/dialogs/logout_dialog.py?range=23-29&highlight=6)]-->
+[!code-python[allow logout](~/../botbuilder-python/samples/python/46.teams-auth/dialogs/logout_dialog.py?range=29-36&highlight=6)]
 
 ```python
 async def _interrupt(self, inner_dc: DialogContext):
@@ -689,7 +689,7 @@ async def _interrupt(self, inner_dc: DialogContext):
 
 [teams-auth-bot]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth
 
-[teams-auth-bot-py]: https://github.com/microsoft/botbuilder-python/tree/master/samples
+[teams-auth-bot-py]: https://github.com/microsoft/BotBuilder-Samples/tree/trboehrer-move-samples/samples/python/46.teams-auth
 
 [azure-aad-blade]: https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview
 [aad-registration-blade]: https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredAppsPreview
