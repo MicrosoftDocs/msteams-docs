@@ -510,41 +510,6 @@ This is done by sub-classing the **ActivityHandler**.
 
 [!code-csharp[ActivityHandler](~/../botbuilder-samples/samples/csharp_dotnetcore/46.teams-auth/Bots/DialogBot.cs?range=19-51)]
 
-```csharp
-public class DialogBot<T> : TeamsActivityHandler where T : Dialog
-{
-    protected readonly BotState ConversationState;
-    protected readonly Dialog Dialog;
-    protected readonly ILogger Logger;
-    protected readonly BotState UserState;
-
-    public DialogBot(ConversationState conversationState, UserState userState, T dialog, ILogger<DialogBot<T>> logger)
-    {
-        ConversationState = conversationState;
-        UserState = userState;
-        Dialog = dialog;
-        Logger = logger;
-    }
-
-    public override async Task OnTurnAsync(ITurnContext turnContext, CancellationToken cancellationToken = default(CancellationToken))
-    {
-        await base.OnTurnAsync(turnContext, cancellationToken);
-
-        // Save any state changes that might have occured during the turn.
-        await ConversationState.SaveChangesAsync(turnContext, false, cancellationToken);
-        await UserState.SaveChangesAsync(turnContext, false, cancellationToken);
-    }
-
-    protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
-    {
-        Logger.LogInformation("Running dialog with Message Activity.");
-
-        // Run the Dialog with the new message Activity.
-        await Dialog.RunAsync(turnContext, ConversationState.CreateProperty<DialogState>(nameof(DialogState)), cancellationToken);
-    }
-}
-```
-
 #### Bots\TeamsBot.cs
 
 The *Invoke Activity* must be forwarded to the dialog if the **OAuthPrompt** is used.
