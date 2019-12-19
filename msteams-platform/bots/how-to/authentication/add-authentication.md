@@ -190,14 +190,6 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
      [!code-json[appsettings](~/../botbuilder-samples/samples/csharp_dotnetcore/46.teams-auth/appsettings.json?range=1-5)]
 
-  
-        ```cs
-        {
-            "MicrosoftAppId": "", // The bot App Id 
-            "MicrosoftAppPassword": "", // The bot client secret
-            "ConnectionName": "" // The name of the identity provider connection
-        }
-        ```
 1. In the Solution Explorer, navigate to the `TeamsAppManifest` folder, open `manifest.json` and set `id` and `botId` to the **bot App ID** you saved at the time of the bot channel registration.
 
 # [Python](#tab/python)
