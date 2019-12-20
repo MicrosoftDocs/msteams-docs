@@ -79,13 +79,10 @@ Response body
 # [Python](#tab/python)
 
 ```python
-async def _message_all_members(self, turn_context: TurnContext):
-       team_members = await TeamsInfo.get_members(turn_context)
-
-       for member in team_members:
-           conversation_reference = TurnContext.get_conversation_reference(
-               turn_context.activity
-            )
+async def _show_members(
+    self, turn_context: TurnContext
+):
+    members = await TeamsInfo.get_team_members(turn_context)
 ```
 
 * * *
@@ -152,6 +149,12 @@ Response body
 
 # [Python](#tab/python)
 
+```python
+async def _show_details(self, turn_context: TurnContext):
+	team_details = await TeamsInfo.get_team_details(turn_context)
+	reply = MessageFactory.text(f"The team name is {team_details.name}. The team ID is {team_details.id}. The AADGroupID is {team_details.aad_group_id}.")
+	await turn_context.send_activity(reply)
+```
 
 * * *
 
@@ -226,7 +229,14 @@ Response body
 
 # [Python](#tab/python)
 
-
+```python
+async def _show_channels(
+    self, turn_context: TurnContext
+):
+    channels = await TeamsInfo.get_team_channels(turn_context)
+    reply = MessageFactory.text(f"Total of {len(channels)} channels are currently in team")
+    await turn_context.send_activity(reply)
+```
 
 * * *
 
