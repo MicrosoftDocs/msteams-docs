@@ -76,6 +76,18 @@ Response body
 }]
 ```
 
+# [Python](#tab/python)
+
+```python
+async def _message_all_members(self, turn_context: TurnContext):
+       team_members = await TeamsInfo.get_members(turn_context)
+
+       for member in team_members:
+           conversation_reference = TurnContext.get_conversation_reference(
+               turn_context.activity
+            )
+```
+
 * * *
 
 ## Get team's details
@@ -137,6 +149,9 @@ Response body
     "aadGroupId": "02ce3874-dd86-41ba-bddc-013f34019978"
 }
 ```
+
+# [Python](#tab/python)
+
 
 * * *
 
@@ -207,6 +222,11 @@ Response body
     }]
 }
 ```
+
+
+# [Python](#tab/python)
+
+
 
 * * *
 
