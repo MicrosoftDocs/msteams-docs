@@ -36,6 +36,18 @@ newActivity.id = activityId;
 await turnContext.updateActivity(newActivity);
 ```
 
+# [Python](#tab/python)
+
+To update an existing message, pass a new `Activity` object with the existing activity ID to the `update_activity` method of the `TurnContext` class. See [TurnContextClass](link to Python API ref docs).
+
+```python
+
+new_activity = MessageFactory.text("The new text for the activity")
+new_activity.id = activity_id
+update_result = await context.update_activity(new_activity)
+
+```
+
 ---
 
 ## Deleting messages
@@ -64,4 +76,14 @@ for (let i = 0; i < activityIds.length; i++) {
 }
 ```
 
+# [Python](#tab/python)
+
+To delete that message, pass that activity's ID to the `delete_activity` method of the `TurnContext` object. See [delete_activity](link to Python API ref docs).
+
+```python
+for each activity_id in _list:
+    await TurnContext.delete_activity(activity_id)
+```
+
 ---
+
