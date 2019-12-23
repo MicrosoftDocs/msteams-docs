@@ -76,6 +76,15 @@ Response body
 }]
 ```
 
+# [Python](#tab/python)
+
+```python
+async def _show_members(
+    self, turn_context: TurnContext
+):
+    members = await TeamsInfo.get_team_members(turn_context)
+```
+
 * * *
 
 ## Get team's details
@@ -136,6 +145,15 @@ Response body
     "name": "The Team Name",
     "aadGroupId": "02ce3874-dd86-41ba-bddc-013f34019978"
 }
+```
+
+# [Python](#tab/python)
+
+```python
+async def _show_details(self, turn_context: TurnContext):
+	team_details = await TeamsInfo.get_team_details(turn_context)
+	reply = MessageFactory.text(f"The team name is {team_details.name}. The team ID is {team_details.id}. The AADGroupID is {team_details.aad_group_id}.")
+	await turn_context.send_activity(reply)
 ```
 
 * * *
@@ -206,6 +224,18 @@ Response body
         "name": "Marketing"
     }]
 }
+```
+
+
+# [Python](#tab/python)
+
+```python
+async def _show_channels(
+    self, turn_context: TurnContext
+):
+    channels = await TeamsInfo.get_team_channels(turn_context)
+    reply = MessageFactory.text(f"Total of {len(channels)} channels are currently in team")
+    await turn_context.send_activity(reply)
 ```
 
 * * *
