@@ -115,6 +115,19 @@ this.onMessage(async (turnContext, next) => {
 }
 ```
 
+# [Python](#tab/python)
+
+```python
+@staticmethod
+def get_mentions(activity: Activity) -> List[Mention]:
+    result: List[Mention] = []
+    if activity.entities is not None:
+        for entity in activity.entities:
+            if entity.type.lower() == "mention":
+                    result.append(entity)
+     return result
+```
+
 * * *
 
 ### Adding mentions to your messages
@@ -207,6 +220,21 @@ The `text` field in the object in the `entities` array must *exactly* match a po
     ],
     "replyToId": "3UP4UTkzUk1zzeyW"
 }
+```
+
+# [Python](#tab/python)
+
+```python
+async def _mention_activity(self, turn_context: TurnContext):
+        mention = Mention(
+            mentioned=turn_context.activity.from_property,
+            text=f"<at>{turn_context.activity.from_property.name}</at>",
+            type="mention"
+        )
+
+        reply_activity = MessageFactory.text(f"Hello {mention.text}")
+        reply_activity.entities = [Mention().deserialize(mention.serialize())]
+        await turn_context.send_activity(reply_activity)
 ```
 
 * * *
