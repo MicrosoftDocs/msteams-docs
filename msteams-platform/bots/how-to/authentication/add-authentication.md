@@ -584,7 +584,7 @@ Within the following dialog step, check for the presence of a token in the resul
 
 [teams-auth-bot]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth
 
-[teams-auth-bot-py]: https://github.com/microsoft/BotBuilder-Samples/tree/trboehrer-move-samples/samples/python/46.teams-auth
+[teams-auth-bot-py]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/46.teams-auth
 
 [azure-aad-blade]: https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview
 [aad-registration-blade]: https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredAppsPreview
