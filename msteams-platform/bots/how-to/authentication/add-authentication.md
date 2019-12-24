@@ -544,7 +544,7 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 
 Add an OAuth prompt to **MainDialog** in its constructor. Here, the value for the connection name was retrieved from the **config.py** file.
 
-[!code-python[Add OAuthPrompt](~/../botbuilder-python/samples/python/46.teams-auth/dialogs/main_dialog.py?range=34-44)]
+[!code-python[Add OAuthPrompt](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/main_dialog.py?range=34-44)]
 
 
 Within a dialog step, use `begin_dialog` to start the OAuth prompt, which asks the user to sign in.
@@ -552,22 +552,22 @@ Within a dialog step, use `begin_dialog` to start the OAuth prompt, which asks t
 - If the user is already signed in, this will generate a token response event, without prompting the user.
 - Otherwise, this will prompt the user to sign in. The Azure Bot Service sends the token response event after the user attempts to sign in.
 
-[!code-python[Add OAuthPrompt](~/../botbuilder-python/samples/python/46.teams-auth/dialogs/main_dialog.py?range=48-49)]
+[!code-python[Add OAuthPrompt](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/main_dialog.py?range=48-49)]
 
 Within the following dialog step, check for the presence of a token in the result from the previous step. If it is not null, the user successfully signed in.
 
-[!code-python[Add OAuthPrompt](~/../botbuilder-python/samples/python/46.teams-auth/dialogs/main_dialog.py?range=54-65)]
+[!code-python[Add OAuthPrompt](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/main_dialog.py?range=54-65)]
 
 **bots/auth_bot.py**
 
 **AuthBot** explicitly handles token response event activities. Here, we continue the active dialog, which allows the OAuth prompt to process the event and retrieve the token.
 
-[!code-python[on_token_response_event](~/../botbuilder-python/samples/python/46.teams-auth/bots/teams_bot.py?range=38-45)] 
+[!code-python[on_token_response_event](~/../botbuilder-samples/samples/python/46.teams-auth/bots/teams_bot.py?range=38-45)] 
 
 
 **dialogs/logout_dialog.py**
 
-[!code-python[allow logout](~/../botbuilder-python/samples/python/46.teams-auth/dialogs/logout_dialog.py?range=29-36&highlight=6)]
+[!code-python[allow logout](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/logout_dialog.py?range=29-36&highlight=6)]
 
 ---
 
