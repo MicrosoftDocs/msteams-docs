@@ -52,12 +52,6 @@
             "url":"https://github.com/Microsoft/BotBuilder-Samples",
             "branch":"master",
             "branch_mapping":{}
-         },   
-        {
-            "path_to_root":"botbuilder-python",
-            "url":"https://github.com/microsoft/BotBuilder-Samples",
-            "branch":"trboehrer-move-samples",
-            "branch_mapping":{}
          }
     ],
     "dependent_packages": [{
