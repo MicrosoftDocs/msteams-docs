@@ -504,13 +504,13 @@ With authentication Teams behaves slightly different than other channels, as exp
 An **Invoke Activity** is sent to the bot rather than the Event Activity used by other channels.
 This is done by sub-classing the **ActivityHandler**.
 
-#### Bots\DialogBots.cs
+**Bots/DialogBot.cs**
 
 # [C#/.NET](#tab/dotnet)
 
 [!code-csharp[ActivityHandler](~/../botbuilder-samples/samples/csharp_dotnetcore/46.teams-auth/Bots/DialogBot.cs?range=19-51)]
 
-#### Bots\TeamsBot.cs
+**Bots/TeamsBot.cs**
 
 The *Invoke Activity* must be forwarded to the dialog if the **OAuthPrompt** is used.
 
@@ -540,12 +540,17 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 
 # [Python](#tab/python)
 
+**bots/dialog_bot.py**
+
+[!code-python[ActivityHandler](~/../botbuilder-samples/samples/python/46.teams-auth/bots/dialog_bot.py?range=10-42)]
+
+**bots/teams_bot.py**
+
+**AuthBot** explicitly handles token response event activities. Here, we continue the active dialog, which allows the OAuth prompt to process the event and retrieve the token.
+
+[!code-python[on_token_response_event](~/../botbuilder-samples/samples/python/46.teams-auth/bots/teams_bot.py?range=38-45)] 
+
 **dialogs/main_dialog.py**
-
-Add an OAuth prompt to **MainDialog** in its constructor. Here, the value for the connection name was retrieved from the **config.py** file.
-
-[!code-python[Add OAuthPrompt](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/main_dialog.py?range=34-44)]
-
 
 Within a dialog step, use `begin_dialog` to start the OAuth prompt, which asks the user to sign in.
 
@@ -557,13 +562,6 @@ Within a dialog step, use `begin_dialog` to start the OAuth prompt, which asks t
 Within the following dialog step, check for the presence of a token in the result from the previous step. If it is not null, the user successfully signed in.
 
 [!code-python[Add OAuthPrompt](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/main_dialog.py?range=54-65)]
-
-**bots/auth_bot.py**
-
-**AuthBot** explicitly handles token response event activities. Here, we continue the active dialog, which allows the OAuth prompt to process the event and retrieve the token.
-
-[!code-python[on_token_response_event](~/../botbuilder-samples/samples/python/46.teams-auth/bots/teams_bot.py?range=38-45)] 
-
 
 **dialogs/logout_dialog.py**
 
