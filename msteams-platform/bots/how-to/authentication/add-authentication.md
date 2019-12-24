@@ -202,7 +202,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
       Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) will need to be encoded as `&amp;`.
 
-      [!code-python[config](~/../botbuilder-python/samples/python/46.teams-auth/config.py?range=14-16)]
+      [!code-python[config](~/../botbuilder-samples/samples/python/46.teams-auth/config.py?range=14-16)]
 
 ---
 
