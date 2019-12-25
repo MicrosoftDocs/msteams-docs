@@ -75,7 +75,7 @@ Here's a view in [App Studio](https://aka.ms/InstallTeamsAppStudio):
 
 ![App long description appstudio view](~/assets/images/store-detail-page/LongDescription-01.png)
 
-### Screenshots 
+## Screenshots 
 The screenshots uploaded on the [Seller Dashboard](https://sellerdashboard.microsoft.com/Registration) are displayed in both [Microsoft AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) and your app listing in the Teams client. They provide a visual preview of your app along with your app description.
 You can provide one to five screenshots formatted as .png, .jpg, or .gif files. Screenshots should be 1366 x 768 pixels with a maximum size of 1024 KB.
 
@@ -95,7 +95,7 @@ You can provide one to five screenshots formatted as .png, .jpg, or .gif files. 
 
 For more best practices, *see*: [Crafting effective AppSource store images](/office/dev/store/craft-effective-appsource-store-images)
 
-### Videos:
+## Videos:
 
 If an image is worth a thousand words, then a video is worth a thousand images.
 Videos are the most effective way to communicate the benefits of using your app. It will be placed in front of all your screenshots in the app details page. Make sure you talk about how your app works, what can be achieved with it, the benefits of using it, and who it is for. Remember to keep your presentation short and sweet: somewhere between 30-90 seconds.
