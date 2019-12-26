@@ -414,18 +414,8 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
     Content = previewedCard
   };
   responseActivity.Attachments.Add(attachment);
-  try
-  {
-    // Send to channel where messaging extension invoked.
-    var channelId = turnContext.Activity.TeamsGetChannelId();
-    await turnContext.TeamsCreateConversationAsync(channelId, responseActivity);
-
-  }
-  catch (Exception ex)
-  {
-    // In group chat or personal scope..
-    await turnContext.SendActivityAsync(responseActivity);
-  }
+  
+  await turnContext.SendActivityAsync(responseActivity);
 
   return new MessagingExtensionActionResponse();
 }

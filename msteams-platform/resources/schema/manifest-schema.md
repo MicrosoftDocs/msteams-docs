@@ -219,7 +219,7 @@ Specifies information about your company. For apps submitted to AppSource (forme
 |`websiteUrl`|2048 characters|✔|The https:// URL to the developer's website. This link should take users to your company or product-specific landing page.|
 |`privacyUrl`|2048 characters|✔|The https:// URL to the developer's privacy policy.|
 |`termsOfUseUrl`|2048 characters|✔|The https:// URL to the developer's terms of use.|
-|`mpnId`|10 characters|✔|**Optional** The Microsoft Partner Network ID that identifies the partner organization building the app.|
+|`mpnId`|10 characters| |**Optional** The Microsoft Partner Network ID that identifies the partner organization building the app.|
 
 ## localizationInfo
 

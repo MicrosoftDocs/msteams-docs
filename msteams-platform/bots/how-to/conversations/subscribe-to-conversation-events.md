@@ -105,6 +105,19 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
+# [Python](#tab/python)
+
+```python
+async def on_teams_channel_created_activity(
+	self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
+):
+	return await turn_context.send_activity(
+		MessageFactory.text(
+			f"The new channel is {channel_info.name}. The channel id is {channel_info.id}"
+		)
+	)
+```
+
 * * *
 
 ### Channel renamed
@@ -172,6 +185,17 @@ export class MyBot extends TeamsActivityHandler {
         }
     }
 }
+```
+
+# [Python](#tab/python)
+
+```python
+async def on_teams_channel_renamed_activity(
+	self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
+):
+	return await turn_context.send_activity(
+		MessageFactory.text(f"The new channel name is {channel_info.name}")
+	)
 ```
 
 * * *
@@ -243,6 +267,17 @@ export class MyBot extends TeamsActivityHandler {
         }
     }
 }
+```
+
+# [Python](#tab/python)
+
+```python
+async def on_teams_channel_deleted_activity(
+	self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
+):
+	return await turn_context.send_activity(
+		MessageFactory.text(f"The deleted channel is {channel_info.name}")
+	)
 ```
 
 * * *
@@ -374,6 +409,19 @@ This is the message your bot will receive when the bot is added **to a one-to-on
 }
 ```
 
+# [Python](#tab/python)
+
+```python
+async def on_teams_members_added_activity(
+	self, teams_members_added: [TeamsChannelAccount], turn_context: TurnContext
+):
+	for member in teams_members_added:
+		await turn_context.send_activity(
+			MessageFactory.text(f"Welcome your new team member {member.id}")
+		)
+	return
+```
+
 * * *
 
 ### Team members removed
@@ -465,6 +513,20 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
+
+# [Python](#tab/python)
+
+```python
+async def on_teams_members_removed_activity(
+	self, teams_members_removed: [TeamsChannelAccount], turn_context: TurnContext
+):
+	for member in teams_members_removed:
+		await turn_context.send_activity(
+			MessageFactory.text(f"Say goodbye to your team member {member.id}")
+		)
+	return
+```
+
 * * *
 
 ### Team renamed
@@ -530,6 +592,18 @@ export class MyBot extends TeamsActivityHandler {
         }
     }
 }
+```
+
+
+# [Python](#tab/python)
+
+```python
+async def on_teams_team_renamed_activity(
+	self, team_info: TeamInfo, turn_context: TurnContext
+):
+	return await turn_context.send_activity(
+		MessageFactory.text(f"The new team name is {team_info.name}")
+	)
 ```
 
 * * *
@@ -626,6 +700,27 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
+# [Python](#tab/python)
+
+```python
+async def on_reactions_added(
+	self, message_reactions: List[MessageReaction], turn_context: TurnContext
+):
+	for reaction in message_reactions:
+		activity = await self._log.find(turn_context.activity.reply_to_id)
+		if not activity:
+			await self._send_message_and_log_activity_id(
+				turn_context,
+				f"Activity {turn_context.activity.reply_to_id} not found in log",
+			)
+		else:
+			await self._send_message_and_log_activity_id(
+				turn_context,
+				f"You added '{reaction.type}' regarding '{activity.text}'",
+			)
+	return
+```
+
 * * *
 
 ### Reactions removed from bot message
@@ -707,6 +802,27 @@ export class MyBot extends TeamsActivityHandler {
     },
     "replyToId": "1:19uJ8TZA1cZcms7-2HLOW3pWRF4nSWEoVnRqc0DPa_kY"
 }
+```
+
+# [Python](#tab/python)
+
+```python
+async def on_reactions_removed(
+	self, message_reactions: List[MessageReaction], turn_context: TurnContext
+):
+	for reaction in message_reactions:
+		activity = await self._log.find(turn_context.activity.reply_to_id)
+		if not activity:
+			await self._send_message_and_log_activity_id(
+				turn_context,
+				f"Activity {turn_context.activity.reply_to_id} not found in log",
+			)
+		else:
+			await self._send_message_and_log_activity_id(
+				turn_context,
+				f"You removed '{reaction.type}' regarding '{activity.text}'",
+			)
+	return
 ```
 
 * * *
