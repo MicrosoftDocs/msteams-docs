@@ -112,7 +112,7 @@ The `value` property can be either a serialized JSON string or a JSON object.
          "id":"bec8e231-67ad-484e-87f4-3e5438390a77"
       }
    },
-    "replyToId": "1:19uJ8TZA1cZcms7-2HLOW3pWRF4nSWEoVnRqc0DPa_kY"
+        "replyToId": "1575667808184",
 }
 ```
 
@@ -205,7 +205,7 @@ The top-level `replyToId` property contains the ID of the message that the card 
             "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
         }
     },
-    "replyToId": "1:19uJ8TZA1cZcms7-2HLOW3pWRF4nSWEoVnRqc0DPa_kY"
+    "replyToId": "1575667808184"
 }
 ```
 
