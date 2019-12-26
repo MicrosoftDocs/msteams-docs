@@ -229,30 +229,8 @@ The following code snippet is from [teamsConversationBot.js](https://github.com/
 
 [!code-javascript[messageAllMembersAsync](~/../botbuilder-samples/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js?range=115-134&highlight=5,13-15)]
 
-
 # [Python](#tab/python)
 
-```python
-
-async def _message_all_members(self, turn_context: TurnContext):
-    team_members = await TeamsInfo.get_members(turn_context)
-
-    for member in team_members:
-        proactive_message = MessageFactory.text(f"Hello {member.name}. I'm a Teams conversation bot.")
-
-        async def get_ref(tc1):
-            ref2 = TurnContext.get_conversation_reference(tc1.activity)
-            return await tc1.adapter.continue_conversation(self._app_id, ref2, send_message)
-
-        async def send_message(tc2: TurnContext):
-            return tc2
-
-        ref = TurnContext.get_conversation_reference(turn_context.activity)
-        result = await turn_context.adapter.create_conversation(ref, get_ref)
-        await result.send_activity(proactive_message)
-  
-    await turn_context.send_activity(MessageFactory.text("All messages have been sent"))
-
-```
+[!code-python[message-all-members](~/../botbuilder-samples/samples/javascript_nodejs/57.teams-conversation-bot/bots/teams_conversation_bot.py?range=101-135)]
 
 ---
