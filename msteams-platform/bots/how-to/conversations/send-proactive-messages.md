@@ -22,7 +22,7 @@ Sending a message to start a new conversation thread is different than sending a
 1. [Obtain the user's unique Id and tenant Id](#obtain-necessary-user-information)
 1. [Send the message](#examples)
 
-When creating proactive messages you **must** call `MicrosoftAppCredentials.TrustServiceUrl`, and pass in the service URL before creating the `ConnectorClient` you will use to send the message. If you do not, your app will receive a `401: Unauthorized` response. See [the samples below](#net-example-from-this-sample).
+When creating proactive messages you **must** call `MicrosoftAppCredentials.TrustServiceUrl`, and pass in the service URL before creating the `ConnectorClient` you will use to send the message. If you do not, your app will receive a `401: Unauthorized` response. 
 
 ## Best practices for proactive messaging
 
