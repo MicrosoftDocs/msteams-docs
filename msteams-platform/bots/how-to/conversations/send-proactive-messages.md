@@ -170,8 +170,7 @@ async def _send_proactive_message():
 
 Your team-added bot can post into a channel to create a new reply chain. If you're using the Node.js Teams SDK, use `startReplyChain()` which gives you a fully-populated address with the correct activity id and conversation id. If you are using C#, see the example below.
 
-Alternatively, you can use the REST API and issue a POST request to [`/conversations`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) resource.
-
+Alternatively, you can use the REST API and issue a POST request to [`/conversations`](https://docs.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) resource.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -227,10 +226,10 @@ namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
 This example uses the [botbuilder-teams](https://www.npmjs.com/package/botbuilder-teams) npm package. 
 The following code snippet is from [teamsConversationBot.js](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js).
 
-[!code-javascript[messageAllMembersAsync](~/../botbuilder-samples/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js?range=115-134&highlight=5,13-15)]
+[!code-javascript[messageAllMembersAsync](~/../botbuilder-samples/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js?range=115-134&highlight=13-15)]
 
 # [Python](#tab/python)
 
-[!code-python[message-all-members](~/../botbuilder-samples/samples/javascript_nodejs/57.teams-conversation-bot/bots/teams_conversation_bot.py?range=101-135)]
+[!code-python[message-all-members](~/../botbuilder-samples/samples/python/57.teams-conversation-bot/bots/teams_conversation_bot.py?range=101-135)]
 
 ---
