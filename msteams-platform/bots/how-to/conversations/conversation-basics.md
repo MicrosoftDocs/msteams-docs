@@ -290,19 +290,14 @@ this.onMessage(async (turnContext, next) => {
 
 # [Python](#tab/python)
 
-<!-- Verify -->
-
 ```python
 
 async def on_message_activity(self, turn_context: TurnContext):
-    mention_data = {"mentioned": turn_context.activity.from_property,
-    "text": f"<at>{turn_context.activity.from_property.name}</at>", "type": "mention"}
+    message = MessageFactory.text("You'll get a notification, if you've turned them on.")
+    teams_notify_user(message)
 
-    mention_object = Mention(**mention_data)
-    reply_activity = MessageFactory.text(f"Hello {mention_object.text}")
-    reply_activity.entities = [mention_object]
+    await turn_context.send_activity(message)
 
-    await turn_context.send_activity(reply_activity)
 ```
 
 ---
