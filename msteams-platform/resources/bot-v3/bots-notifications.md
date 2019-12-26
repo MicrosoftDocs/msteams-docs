@@ -382,7 +382,7 @@ The `messageReaction` event is sent when a user adds or removes his or her react
             "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
         }
     },
-    "replyToId": "1:19uJ8TZA1cZcms7-2HLOW3pWRF4nSWEoVnRqc0DPa_kY"
+    "replyToId": "1575667808184"
 }
 ```
 
@@ -424,6 +424,6 @@ The `messageReaction` event is sent when a user adds or removes his or her react
             "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
         }
     },
-    "replyToId": "1:19uJ8TZA1cZcms7-2HLOW3pWRF4nSWEoVnRqc0DPa_kY"
+    "replyToId": "1575667808184"
 }
 ```
