@@ -14,6 +14,8 @@ Because the exact values of rate limits are subject to change, we recommend your
 
 ## Handling rate limits
 
+# [C#/.NET](#tab/dotnet) 
+
 When issuing a Bot Builder SDK operation, you can handle `Microsoft.Rest.HttpOperationException` and check for the status code.
 
 ```csharp
@@ -31,6 +33,20 @@ catch (HttpOperationException ex)
 }
 ```
 
+# [Python](#tab/python)
+
+```python
+ try:
+        response = await ADAPTER.process_activity(activity, auth_header, BOT.on_turn)
+        if response:
+            return json_response(data=response.body, status=response.status)
+        return Response(status=201)
+    except Exception as exception:
+        raise exception
+```
+
+---
+
 ## Best practices
 
 In general, you should take simple precautions to avoid receiving `HTTP 429` responses. For instance, avoid issuing multiple requests to the same personal or channel conversation. Instead, consider batching the API requests.
@@ -40,6 +56,8 @@ Using an exponential backoff with a random jitter is the recommended way to hand
 ## Example: detecting transient exceptions
 
 Here is a sample using exponential backoff via the Transient Fault Handling Application Block.
+
+# [C#/.NET](#tab/dotnet) 
 
 You can perform backoff and retries using [Transient Fault Handling libraries](/previous-versions/msp-n-p/hh680901(v=pandp.50)). For guidelines on obtaining and installing the NuGet package, see [Adding the Transient Fault Handling Application Block to Your Solution](/previous-versions/msp-n-p/hh680891(v=pandp.50))
 
@@ -63,9 +81,19 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
 }
 ```
 
+# [Python](#tab/python)
+
+```python
+TBD
+```
+
+---
+
 ## Example: backoff
 
 In addition to detecting rate limits, you can also perform an exponential backoff.
+
+# [C#/.NET](#tab/dotnet) 
 
 ```csharp
 /**
@@ -89,6 +117,14 @@ You can also perform a `System.Action` method execution with the retry policy de
 We recommend storing the value and strategy in a configuration file to fine-tune and tweak values at run time.
 
 For more information, check out this handy guide on various retry patterns: [Retry pattern](/azure/architecture/patterns/retry).
+
+# [Python](#tab/python)
+
+```python
+TBD
+```
+
+---
 
 ## Per bot per thread limit
 
