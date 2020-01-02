@@ -194,7 +194,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
 # [Python](#tab/python)
 
-1. Clone the sample [Teams bot authentication][teams-auth-bot-py from the github repository.
+1. Clone the sample [Teams bot authentication][teams-auth-bot-py] from the github repository.
 1. Update **config.py**:
 
     - Set `ConnectionName` to the name of the OAuth connection setting you added to your bot.
@@ -376,8 +376,6 @@ This launches ngrok to listen on the port you specify. In return, it gives you a
 
 This manifest contains information needed by Microsoft Teams to connect with the bot.  
 
-# [C#/.NET](#tab/dotnet)
-
 ```json
 {
   "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json",
@@ -423,81 +421,7 @@ This manifest contains information needed by Microsoft Teams to connect with the
 }
 ```
 
-# [Python](#tab/python)
-
-```json
-{
-    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.5",
-    "version": "1.0.0",
-    "id": "",
-    "packageName": "com.teams.sample.teamsconversationbot",
-    "developer": {
-      "name": "Doc Mike",
-      "websiteUrl": "https://www.microsoft.com",
-      "privacyUrl": "https://www.teams.com/privacy",
-      "termsOfUseUrl": "https://www.teams.com/termsofuser"
-    },
-    "icons": {
-      "outline": "outline.png",
-      "color": "color.png"
-    },
-    "name": {
-      "short": "TeamsConversationBot",
-      "full": "TeamsConversationBot"
-    },
-    "description": {
-      "short": "TeamsConversationBot",
-      "full": "TeamsConversationBot"
-    },
-    "accentColor": "#FFFFFF",
-    "bots": [
-      {
-        "botId": "",
-        "scopes": [
-          "personal",
-          "groupchat",
-          "team"
-        ],
-        "supportsFiles": false,
-        "isNotificationOnly": false,
-        "commandLists": [
-          {
-            "scopes": [
-              "personal",
-              "groupchat",
-              "team"
-            ],
-            "commands": [
-              {
-                "title": "MentionMe",
-                "description": "Sends message with @mention of the sender"
-              },
-              {
-                "title": "Show Welcome",
-                "description": "Shows the welcome card"
-              },
-              {
-                "title": "MessageAllMembers",
-                "description": "Send 1 to 1 message to all members of the current conversation"
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "permissions": [
-      "identity",
-      "messageTeamMembers"
-    ],
-    "validDomains": []
-  }
-
-```
-
----
-
-With authentication Teams behaves slightly different than other channels, as explained below.
+With authentication, Teams behaves slightly differently than other channels, as explained below.
 
 ### Handling Invoke Activity
 
