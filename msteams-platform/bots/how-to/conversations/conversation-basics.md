@@ -114,7 +114,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 }
 ```
 
-* * *
+---
 
 ## Send a message
 
@@ -162,7 +162,6 @@ async def on_members_added_activity(
 
 ---
 
-
 # [JSON](#tab/json)
 
 <!-- Verify -->
@@ -208,7 +207,7 @@ async def on_members_added_activity(
 }
 ```
 
-* * *
+---
 
 ## Teams channel data
 
@@ -333,7 +332,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 }
 ```
 
-* * *
+---
 
 ## Picture messages
 
