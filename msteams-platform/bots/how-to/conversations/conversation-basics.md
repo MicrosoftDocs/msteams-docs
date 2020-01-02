@@ -70,9 +70,8 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ```
 
----
-
 # [JSON](#tab/json)
+
 ```json
 {
     "type": "message",
@@ -160,11 +159,7 @@ async def on_members_added_activity(
 
 ```
 
----
-
 # [JSON](#tab/json)
-
-<!-- Verify -->
 
 ```json
 {
@@ -298,8 +293,6 @@ async def on_message_activity(self, turn_context: TurnContext):
     await turn_context.send_activity(message)
 
 ```
-
----
 
 # [JSON](#tab/json)
 
