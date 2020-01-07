@@ -103,4 +103,4 @@ Videos are the most effective way to communicate the benefits of using your app.
 ## Learn more
 [Checklist for app submission](~/concepts/deploy-and-publish/appsource/publish.md).  
 [Create an app package for your Microsoft Teams app](~/concepts/build-and-test/apps-package.md).  
-[Use the Seller Dashboard to submit your solution to AppSource](/office/dev/store/use-the-seller-dashboard-to-submit-to-the-office-store).
+[Use Partner Center to submit your solution to AppSource](/office/dev/store/use-partner-center-to-submit-to-appsource)
