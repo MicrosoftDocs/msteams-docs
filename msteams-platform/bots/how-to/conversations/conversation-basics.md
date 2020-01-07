@@ -60,7 +60,18 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
+# [Python](#tab/python)
+
+<!-- Verify -->
+```python
+
+async def on_message_activity(self, turn_context: TurnContext):
+    return await turn_context.send_activity(MessageFactory.text(f"Echo: {turn_context.activity.text}"))
+
+```
+
 # [JSON](#tab/json)
+
 ```json
 {
     "type": "message",
@@ -102,7 +113,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-* * *
+---
 
 ## Send a message
 
@@ -133,9 +144,22 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# [JSON](#tab/json)
+# [Python](#tab/python)
 
 <!-- Verify -->
+
+```python
+
+async def on_members_added_activity(
+    self, members_added: [ChannelAccount], turn_context: TurnContext
+):
+    for member in teams_members_added:
+        await turn_context.send_activity(f"Welcome your new team member {member.id}")
+    return
+
+```
+
+# [JSON](#tab/json)
 
 ```json
 {
@@ -178,7 +202,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-* * *
+---
 
 ## Teams channel data
 
@@ -258,6 +282,18 @@ this.onMessage(async (turnContext, next) => {
 });
 ```
 
+# [Python](#tab/python)
+
+```python
+
+async def on_message_activity(self, turn_context: TurnContext):
+    message = MessageFactory.text("You'll get a notification, if you've turned them on.")
+    teams_notify_user(message)
+
+    await turn_context.send_activity(message)
+
+```
+
 # [JSON](#tab/json)
 
 ```json
@@ -289,7 +325,7 @@ this.onMessage(async (turnContext, next) => {
 }
 ```
 
-* * *
+---
 
 ## Picture messages
 
