@@ -151,6 +151,8 @@
           href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot
         - name: Teams conversation bot in JavaScript
           href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot
+        - name: Teams conversation bot in Python
+          href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/57.teams-conversation-bot
     - name: 'Design your bot'
       items:
         - name: 'Design overview'
