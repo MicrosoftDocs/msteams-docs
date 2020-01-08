@@ -116,5 +116,5 @@ If an image is worth a thousand words, then a video is worth a thousand images. 
 ## Learn more
 
 [Checklist for app submission](~/concepts/deploy-and-publish/appsource/publish.md).  
-[Create an app package for your Microsoft Teams app](.~/concepts/build-and-test/apps-package.md).  
+[Create an app package for your Microsoft Teams app](~/concepts/build-and-test/apps-package.md).  
 [Use Partner Center to submit your solution to AppSource](/office/dev/store/use-partner-center-to-submit-to-appsource).
