@@ -6,14 +6,14 @@ keywords: teams publish store office publishing policy AppSource content
 
 # Build a great app details page
 
-The details page is your users' first impression of your app. Each element of your details page can be used to convey your vision and drive downloads — consider how you want to showcase your app in a limited space. Here are some tips and tricks to help you engage your users before they even install your app.
+The details page is the first impression of your app. Each element of your details page can be used to convey your vision and drive downloads — consider how you want to showcase your app in a limited space. Here are some tips and tricks to help you engage your users before they even install your app.
 
 > [!NOTE]
 > Make sure your app information follows our [AppSource guidance for creating an effective store listing](/office/dev/store/create-effective-office-store-listings).
 
 ## App name
 
-An app’s name plays a critical role in how users discover it in the App Store. Your app’s short name will be displayed on the details page.
+An app’s name plays a critical role in how users discover it in AppSource. Your app’s short name will be displayed on the details page.
 
 **Do's:**
 
