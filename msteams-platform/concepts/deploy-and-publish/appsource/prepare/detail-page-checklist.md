@@ -13,7 +13,7 @@ The details page is the first impression of your app. Each element of your detai
 
 ## App name
 
-An app’s name plays a critical role in how users discover it in AppSource. Your app’s short name will be displayed on the details page.
+An app’s name plays a critical role in how users discover it in AppSource app store. Your app’s short name will be displayed on the details page.
 
 **Do's:**
 
