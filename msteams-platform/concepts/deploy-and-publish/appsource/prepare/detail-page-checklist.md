@@ -6,7 +6,7 @@ keywords: teams publish store office publishing policy AppSource content
 
 # Build a great app details page
 
-The details page is your users' first impressions of your app. Each element of your details page can be used to convey your vision and drive downloads — consider how you want to showcase your app in a limited space. Here are some tips and tricks to help you engage your users before they even install your app.
+The details page is your users' first impression of your app. Each element of your details page can be used to convey your vision and drive downloads — consider how you want to showcase your app in a limited space. Here are some tips and tricks to help you engage your users before they even install your app.
 
 > [!NOTE]
 > Make sure your app information follows our [AppSource guidance for creating an effective store listing](/office/dev/store/create-effective-office-store-listings).
@@ -63,14 +63,14 @@ Here's a view in [App Studio](https://aka.ms/InstallTeamsAppStudio):
 
 ## Long description
 
-This provides an engaging narrative highlighting your solution's main features, the problems it solves, and its target audience. Draw in your audience with the first sentence by communicating your app’s unique features. Your description must be under 4000 characters. Most users only read between 300 and 500 words.
+This provides an engaging narrative highlighting your solution's main features, the problems it solves, and its target audience. Draw in your audience with the first sentence by communicating your app’s unique features. Your description must be under 4000 characters. Note that most users will only read between 300 and 500 words.
 
 >[!IMPORTANT]
-> Make sure you copy the description you wrote in your AppSource entry to your manifest — the values must match. Teams will only use the description you provide in the manifest.
+> Make sure to precisely copy the descriptions you wrote in your AppSource entry to your manifest — the values must match. Teams will only use the descriptions you provide in the manifest.
 
 **Do's:**
 
-* [Use Markdown formatting](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) to spice up your description.  
+* Use [Markdown formatting](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) to illuminate your description.  
 * List features to aid readers scanning your description.
 * Use active voice and speak to users directly.
 * Use bullet points to list out your features.
@@ -111,8 +111,7 @@ For more best practices, *see*: [Crafting effective AppSource store images](/off
 
 ## Videos
 
-If an image is worth a thousand words, then a video is worth a thousand images.
-Videos are the most effective way to communicate the benefits of using your app. It will be placed in front of all your screenshots in the app details page. Make sure you talk about how your app works, what can be achieved with it, the benefits of using it, and who it is for. Remember to keep your presentation short and sweet: somewhere between 30-90 seconds.
+If an image is worth a thousand words, then a video is worth a thousand images. Videos are the most effective way to communicate the benefits of using your app. It will be placed in front of all your screenshots in the app details page. Make sure you talk about how your app works, what can be achieved with it, the benefits of using it, and who it is for. Remember to keep your presentation short and sweet — somewhere between 30-90 seconds.
 
 ## Learn more
 
