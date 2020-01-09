@@ -15,5 +15,6 @@ Publish your app on AppSource to make it available to your end users in the Team
 6. Post submission: Check our guidance for [Maintaining and supporting your published app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md).
 
 Please follow the instructions provided [here](https://docs.microsoft.com/en-us/office/dev/store/open-a-developer-account) to open a developer account in Partner Center.
+We do have dedicated support team for the Office Store program, you can open a [support ticket] (https://support.microsoft.com/en-us/supportforbusiness/productselection?sapId=48734891-ee9a-5d77-bf29-82bf8d8111ff) if you have issues with registration, it’ll get routed appropriately. 
 
 By developing and submitting a Microsoft Teams app that contains a bot, you are subject to the Bot Developer Framework [Terms of Use](https://aka.ms/bf-terms), [Privacy Policy](https://aka.ms/bf-privacy), and [Code of Conduct](https://aka.ms/bf-conduct). If your app contains Office 365 Connector functionality, separate terms may also apply as part of your Connector Registration on the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).
