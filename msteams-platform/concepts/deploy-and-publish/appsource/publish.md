@@ -5,16 +5,23 @@ keywords: teams publish store office publishing AppSource
 ---
 # Submit your app to AppSource
 
-Publish your app on AppSource to make it available to your end users in the Teams app catalog and on the web. At a high level, the process for submitting your app to AppSource is:
+## Teams app submission
 
-1. Develop your app following our [design guidelines](~/concepts/design/understand-use-cases.md). Tabs should follow our [tab design guidelines](~/tabs/design/tabs.md) and your bot should follow the [bot design guidelines](~/bots/design/bots.md).
-2. [Register as a developer](#register-as-a-developer) with Microsoft.
-3. Prepare your app for submission: Make sure your app passes the [Submission checklist](~/concepts/deploy-and-publish/appsource/prepare/overview.md)
-4. Go through our [Tips and most frequently failed cases](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md) for a quicker approval process.
-5. Submit your package to App Source through [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource) and monitor your Partner Center dashboard to track approval.
-6. Post submission: Check our guidance for [Maintaining and supporting your published app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md).
+Publishing  your app to [AppSource](appsource.microsoft.com) makes it available in the Teams app catalog and on the web. At a high level, the process for submitting your app to AppSource is:
 
-Please follow the instructions provided [here](https://docs.microsoft.com/en-us/office/dev/store/open-a-developer-account) to open a developer account in Partner Center.
-We do have dedicated support team for the Office Store program, you can open a [support ticket](https://support.microsoft.com/en-us/supportforbusiness/productselection?sapId=48734891-ee9a-5d77-bf29-82bf8d8111ff) if you have issues with registration, it’ll get routed appropriately. 
+1. Develop your app following our [design guidelines](~/concepts/design/understand-use-cases.md). Tabs should follow our [tab design guidelines](~/tabs/design/tabs.md). Bots should follow the [bot design guidelines](~/bots/design/bots.md).
+1. [Set up a developer account](/office/dev/store/open-a-developer-account) in [Partner Center](support.microsoft.com/help/4499930/partner-center-overview).
+1. Prepare your app for submission by following our [submission checklist](~/concepts/deploy-and-publish/appsource/prepare/overview.md).
+1. Review our [tips for a successful app submission](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md).
+1. Submit your package to [AppSource through Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource).
+1. Track the approval process on your Partner Center dashboard. *See* [Partner Center Overview](https://support.microsoft.com/help/4499930/partner-center-overview).
+1. Post submission — review our guidance for [Maintaining and supporting your published app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md).
 
-By developing and submitting a Microsoft Teams app that contains a bot, you are subject to the Bot Developer Framework [Terms of Use](https://aka.ms/bf-terms), [Privacy Policy](https://aka.ms/bf-privacy), and [Code of Conduct](https://aka.ms/bf-conduct). If your app contains Office 365 Connector functionality, separate terms may also apply as part of your Connector Registration on the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).
+>[!NOTE]
+>
+> * If your Teams app contains a bot, you must comply with the Bot Developer Framework [Code of Conduct](https://aka.ms/bf-conduct).
+> * If your app contains an Office 365 Connector, additional terms may apply. *See* [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard) and [App Developer Agreement](sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm).
+
+## Learn More
+
+[Validation policies for Microsoft Teams apps submitted to AppSource (version 2.2)](/office/dev/store/validation-policies#14-microsoft-teams-apps)
