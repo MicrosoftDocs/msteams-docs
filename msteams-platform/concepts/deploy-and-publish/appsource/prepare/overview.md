@@ -20,10 +20,10 @@ Once you have completed all of the above requirements, you can submit your packa
 
 ## Privacy policy, terms of use and support URLs
 
-* The privacy policy can be specific to your app/add-in or can be an overall privacy policy for all the services from a developer. There should be no broken links and no beta or staging URLs. If you use a generic privacy policy, it must reference "Services/Applications/Platforms" which will also cover your Teams app, and not just your "Website".
+* The privacy policy can be specific to your app and/or add-in or can be an overall privacy policy for all the services from a developer. There should be no broken links and no beta or staging URLs. If you use a generic privacy policy, it must reference "Services/Applications/Platforms" which will also cover your Teams app, and not just your "Website".
 * Privacy policy should cover how you handle user data storage, user data retention, deletion and security controls information.
 * Your privacy policy must have your contact information.
-* The Terms of use should describe your app/add-in offering appropriately.
+* The terms of use statement should describe your app and/or add-in offering appropriately.
 * Your support URL should not require authentication or login before contacting you for any issues with your app.
 
 ## Test notes for validation
