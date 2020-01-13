@@ -74,7 +74,7 @@
         href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json
       - name: Publish your app on AppSource
         items:
-        - name: Understanding AppSourse submission 
+        - name: Understanding AppSource submission 
           href: concepts/deploy-and-publish/appsource/publish.md
         - name: Prepare your app
           items: 
