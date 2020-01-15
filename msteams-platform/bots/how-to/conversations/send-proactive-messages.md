@@ -40,7 +40,7 @@ When using proactive messaging to send a welcome message to a user you must keep
 
 ### Notification messages
 
-When using proactive messaging to send notifications you need to make sure your users have a clear path to take common actions based on your notification, and a clear understanding of why the notification ocurred. Good notification messages will generally include:
+When using proactive messaging to send notifications you need to make sure your users have a clear path to take common actions based on your notification, and a clear understanding of why the notification occurred. Good notification messages will generally include:
 
 * **What happened.** A clear indication of what happened to cause the notification.
 * **What it happened to.** It should be clear what item/thing was updated to cause the notification.
