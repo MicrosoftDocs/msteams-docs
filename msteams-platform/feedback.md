@@ -8,7 +8,7 @@ keywords: teams feedback questions issues bugs contributions
 
 The Microsoft Team product team responds to the developer community across several channels.
 
-- **General questions:** Please send email to [Microsoft Teams developer support](mailto:microsoftteamsdev@microsoft.com).
+- **General questions about the Microsoft Teams developer platform:** Please send email to [Microsoft Teams developer support](mailto:microsoftteamsdev@microsoft.com). This email address is _not_ intended for comments or suggestions on non-platform-related features of Microsoft Teams. Furthermore, while we read all the email sent to this address, we do not reply to every one.
 
 - **Programming questions:** We listen and respond on [Stack Overflow](http://stackoverflow.com/questions/tagged/microsoft-teams). Follow the [guidance](http://stackoverflow.com/tour) about what makes a good question on Stack Overflow. Tag your question with `microsoft-teams` so that our team and the Microsoft Teams developer community can spot your question.
 
