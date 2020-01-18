@@ -13,7 +13,7 @@ Once you've created your app there are three options for distributing it:
 
 ## Upload your app directly
 
-This is the easiest way to test and use your app. If you are the team owner and/or [uploading custom apps is enabled](/microsoftteams/admin-settings), you can [directly upload (or sideload)](./apps-upload.md) the app and start using it right away. However, if you want to share the app with others, you'll have to send them your app package and ask them to upload it themselves. 
+This is the easiest way to test and use your app. If you are the team owner and/or [uploading custom apps is enabled](/microsoftteams/admin-settings), you can [directly upload (or sideload)](./apps-upload.md) the app and start using it right away. However, if you want to share the app with others, you'll have to send them your app package and ask them to upload it independently. 
 
 If you want to distribute your app more broadly,Teams provides an in-app gallery for users to find or discover high-quality Teams apps. To have your solution available in the gallery, you must either [publish to your organization's app catalog](#publish-to-your-organizations-app-catalog) or [publish to AppSource](./appsource/publish.md) 
 
