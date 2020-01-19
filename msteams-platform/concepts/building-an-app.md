@@ -59,7 +59,7 @@ When creating your app package you can choose to create it manually, or use App 
 
 You have three options for [distributing your Microsoft Teams app](~/concepts/deploy-and-publish/apps-publish.md), depending on your target audience.
 
-* **Share your app package directly.** You can choose to share your app package directly with users. This is particularly useful if you app is directed towards a limited audience (just a couple of teams or individuals), and during development and testing of your app.
+* **Share your app package directly.** You can choose to share your app package directly with users. This is particularly useful if your app is directed towards a limited audience (just a couple of teams or individuals), and during development and testing of your app.
   
 * **Publish your app to your organizational app catalog.** If your app is applicable to a specific organization (or if you've customized your app to meet an organization's specific needs), a tenant administrator can upload your app to the organization's app catalog. This makes your app available for anyone in the organization to install (but does not automatically install it).
   
