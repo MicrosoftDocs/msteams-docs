@@ -5,7 +5,7 @@ keywords: teams publish faq failed frequently cases tip tips
 ---
 # Tips and frequently failed cases 
 
-This article covers some of the most common reasons apps fail validation. It is not intended to be an exhaustive list of all potential issues with you app. However, if you follow this guidance the likelihood of a first-time pass will be greatly increased. See the extensive list of policies here: [AppSource validation policies](https://dev.office.com/officestore/docs/validation-policies). The policies in Section 14 of the overall AppSource validation policies are specific to Microsoft Teams apps.
+This article covers some of the most common reasons apps fail validation. It is not intended to be an exhaustive list of all potential issues with your app. However, if you follow this guidance the likelihood of a first-time pass will be greatly increased. See the extensive list of policies here: [AppSource validation policies](https://dev.office.com/officestore/docs/validation-policies). The policies in Section 14 of the overall AppSource validation policies are specific to Microsoft Teams apps.
 
 ## Tips for successful app submission
 
@@ -30,7 +30,7 @@ Description: Apps must provide a clear, simple sign in/out and (when appropriate
   * Connect an account/service => disconnect the account/service
   * Authorize an account/service => de/un-authorize the account/service
   * Register an account/service => un-register the account/service
-* If your app requires an account or service, you must provide a way for the user to sign-up or request sign-up. An exception can be sought for a sign-up process if you app fits in the "Enterprise" app category.
+* If your app requires an account or service, you must provide a way for the user to sign-up or request sign-up. An exception can be sought for a sign-up process if your app fits in the "Enterprise" app category.
 * Sign in / sign out functionality must work on mobile clients. Ensure you've upgraded your Teams JavaScript SDK to version 1.4.1 or later.
 
 For additional information on authentication see:
