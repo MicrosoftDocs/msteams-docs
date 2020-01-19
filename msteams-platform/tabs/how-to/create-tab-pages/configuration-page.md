@@ -20,7 +20,7 @@ A configuration page informs the content page how it should render. Your applica
 
 ```html
 <head>
-<script src='https://statics.teams.cdn.office.net/sdk/v1.5.2/js/MicrosoftTeams.min.js'></script>
+<script src='https://statics.teams.cdn.office.net/sdk/v1.6/js/MicrosoftTeams.min.js'></script>
 </head>
     <body>
         <button onclick="(document.getElementById('icon').src = '/images/iconGray.png'); colorClickGray()">Select Gray</button>
