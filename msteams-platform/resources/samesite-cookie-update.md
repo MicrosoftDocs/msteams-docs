@@ -41,12 +41,16 @@ Chrome 80, scheduled for release in February 2020, introduces new cookie values 
 
 > [!IMPORTANT]
 > Currently, `SameSite=None`  is not supported by the [**Teams desktop client**](/aspnet/core/security/samesite?view=aspnetcore-3.1#test-with-electron) or older versions of Chrome or Safari. *See* [Known Incompatible Clients]( https://www.chromium.org/updates/same-site/incompatible-clients).
->However, there are two workaround solutions:
+>However, there are two **workaround solutions**:
 >
 >1. Check the user-agent in order to provide the correct SameSite property. You can implement the user-agent check in [**C#**](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/) and [**Node.js**](https://web.dev/samesite-cookie-recipes/).
 >2. Set your cookie attributes using both the new and old models. *See* [Handling incompatible clients](https://web.dev/samesite-cookie-recipes/#handling-incompatible-clients)<br><br>
+>**If your app is running in the Teams desktop client, and you set the SameSite attribute to `SameSite cookie=None` , your app will not work as expected.**
 
 ## Teams implications and adjustments
+
+>[!WARNING]
+>**Applications running in the Teams desktop client are incompatible with the `SameSite cookie=None`  attribute, and  they will not work as expected.** Please see the **workaround solutions**, above.
 
 1. Enable the relevant SameSite setting for your cookies and validate that your apps and extensions continue to work in Teams.
 1. If your apps or extensions fail, make the necessary fixes prior to the Chrome 80 release.
@@ -69,11 +73,11 @@ Any cookies used by embedded content will be considered third-party when the sit
 * A web-based authentication flow can also be used for a configuration page, task module, or messaging extension.
 * You can use  a web-based authentication flow for a conversational bot you'll need to use a task module.
 
-Pursuant to the updated SameSite restrictions, a browser won't add a cookie to an already authenticated web site if the link derives from an external site. You'll need to ensure your authentication cookies are marked for cross-site usage — `SameSite=None; Secure` — or ensure that a fallback is in place.
+Pursuant to the updated SameSite restrictions, a browser will not add a cookie to an already authenticated web site if the link derives from an external site. You'll need to ensure your authentication cookies are marked for cross-site usage — `SameSite=None; Secure` — or ensure that a fallback is in place.
 
 ### Android System WebView
 
-Android WebView is a Chrome system component that allows Android apps to display web content. While the new restrictions will become the default, starting with Chrome 80, they won't be immediately enforced on WebViews. They will be applied in the future. To prepare, Android allows native apps to set cookies directly via the [CookeManagerAPI](https://developer.android.com/reference/android/webkit/CookieManager):
+Android WebView is a Chrome system component that allows Android apps to display web content. While the new restrictions will become the default, starting with Chrome 80, they will not be immediately enforced on WebViews. They will be applied in the future. To prepare, Android allows native apps to set cookies directly via the [CookeManager API](https://developer.android.com/reference/android/webkit/CookieManager):
 
 * For cookies that are only needed in a first-party context, you should declare them as `SameSite=Lax` or `SameSite=Strict`, as appropriate.
 * For cookies needed in a third-party context, you should ensure that they are declared as `SameSite=None; Secure`.
