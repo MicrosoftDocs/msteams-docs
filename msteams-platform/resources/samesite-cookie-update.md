@@ -49,7 +49,7 @@ Chrome 80, scheduled for release in February 2020, introduces new cookie values 
 >2. Set your cookie attributes using both the new and old models. *See* [Handling incompatible clients](https://web.dev/samesite-cookie-recipes/#handling-incompatible-clients)<br><br>
 >**If your app is running in the Teams desktop client, and you set the SameSite attribute to `SameSite=None` , your app will not work as expected.**
 
-Using either approach will ensure that your application continues to work properly when the Teams desktop client is  upgraded to a `SameSite=None`   compatible version of chromium.
+Using either approach will ensure that your application continues to work properly when the Teams desktop client is upgraded to a `SameSite=None`   compatible version of  Chromium.
 
 ## Teams implications and adjustments
 
