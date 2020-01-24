@@ -39,6 +39,8 @@ Chrome 80, scheduled for release in February 2020, introduces new cookie values 
 | **Strict** |The browser will only send cookies for first-party context requests (requests originating from the site that set the cookie). If the request originated from a different URL than that of the current location, none of the cookies tagged with the `Strict` attribute will be sent.| Optional |`Set-Cookie: key=value; SameSite=Strict`|
 | **None** | Cookies will be sent in both first-party context and cross-origin requests; however, the value must be explicitly set to **`None`** and all browser requests **must follow the HTTPS protocol** and include the **`Secure`** attribute which requires an encrypted connection. Cookies that don't adhere to that requirement will be **rejected**. <br/>**Both attributes are required together**. If just **`None`** is specified without **`Secure`**  or if the HTTPS protocol is not used, the third-party cookie will be rejected.| Optional, but, if set, the HTTPS protocol is required. |`Set-Cookie: key=value; SameSite=None; Secure` |
 
+## Handling incompatible clients
+
 > [!IMPORTANT]
 > Currently, `SameSite=None`  is not supported by the [**Teams desktop client**](/aspnet/core/security/samesite?view=aspnetcore-3.1#test-with-electron) or older versions of Chrome or Safari. *See* [Known Incompatible Clients]( https://www.chromium.org/updates/same-site/incompatible-clients).
 >However, there are two **workaround solutions**:
@@ -46,6 +48,8 @@ Chrome 80, scheduled for release in February 2020, introduces new cookie values 
 >1. Check the user-agent in order to provide the correct SameSite property. You can implement the user-agent check in [**C#**](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/) and [**Node.js**](https://web.dev/samesite-cookie-recipes/).
 >2. Set your cookie attributes using both the new and old models. *See* [Handling incompatible clients](https://web.dev/samesite-cookie-recipes/#handling-incompatible-clients)<br><br>
 >**If your app is running in the Teams desktop client, and you set the SameSite attribute to `SameSite=None` , your app will not work as expected.**
+
+Using either approach will ensure that your application continues to work properly when the Teams desktop client is upgraded to a `SameSite=None`   compatible version of  Chromium.
 
 ## Teams implications and adjustments
 
@@ -57,7 +61,7 @@ Chrome 80, scheduled for release in February 2020, introduces new cookie values 
 1. Microsoft internal partners can join the following team if they need more information or help with this issue: <https://teams.microsoft.com/l/team/19%3A08b594cd465e4c0491fb751e823802e2%40thread.skype/conversations?groupId=4d6d04cd-dbf0-43c8-a2ff-f80dd38be034&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47>.
 
 > [!NOTE]
-> For best practice, it's recommended that you always set the sameSite attributes to reflect the intended use for your cookies — don't rely on default browser behavior. *See* [Developers: Get Ready for New SameSite=None; Secure Cookie Settings](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html).
+> For best practice, it's recommended that you always set SameSite attributes to reflect the intended use for your cookies — don't rely on default browser behavior. *See* [Developers: Get Ready for New SameSite=None; Secure Cookie Settings](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html).
 
 ### Tabs, task modules, and message extensions
 
