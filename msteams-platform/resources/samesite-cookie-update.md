@@ -45,12 +45,12 @@ Chrome 80, scheduled for release in February 2020, introduces new cookie values 
 >
 >1. Check the user-agent in order to provide the correct SameSite property. You can implement the user-agent check in [**C#**](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/) and [**Node.js**](https://web.dev/samesite-cookie-recipes/).
 >2. Set your cookie attributes using both the new and old models. *See* [Handling incompatible clients](https://web.dev/samesite-cookie-recipes/#handling-incompatible-clients)<br><br>
->**If your app is running in the Teams desktop client, and you set the SameSite attribute to `SameSite cookie=None` , your app will not work as expected.**
+>**If your app is running in the Teams desktop client, and you set the SameSite attribute to `SameSite=None` , your app will not work as expected.**
 
 ## Teams implications and adjustments
 
 >[!WARNING]
->**Applications running in the Teams desktop client are incompatible with the `SameSite cookie=None`  attribute, and  they will not work as expected.** Please see the **workaround solutions**, above.
+>**Applications running in the Teams desktop client are incompatible with the `SameSite=None`  attribute, and  they will not work as expected.** Please see the **workaround solutions**, above.
 
 1. Enable the relevant SameSite setting for your cookies and validate that your apps and extensions continue to work in Teams.
 1. If your apps or extensions fail, make the necessary fixes prior to the Chrome 80 release.
