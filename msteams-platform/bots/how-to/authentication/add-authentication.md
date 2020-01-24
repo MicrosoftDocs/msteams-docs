@@ -372,8 +372,8 @@ This manifest contains information needed by Microsoft Teams to connect with the
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.3",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.5",
   "version": "1.0.0",
   "id": "",
   "packageName": "com.teams.auth.bot",
