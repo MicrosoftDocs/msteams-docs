@@ -17,7 +17,7 @@ Microsoft Teams will also be available to customers who purchased E4 prior to it
 
 ## Just need a development environment?
 
-If you don't currently have an Office 365 account, you can sign up for the [Office 365 Developer program](https://dev.office.com/devprogram) to get a *free* 90 days (can be renewed for as long as you're using it for development activity) Office 365 Developer Tenant. This account can only be used for testing purposes. See more information on [setting up your test accounts](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec?ui=en-US&rs=en-US&ad=US).
+If you don't currently have an Office 365 account, you can sign up for the [Office 365 Developer program](https://dev.office.com/devprogram) to get a *free* 90 days (can be renewed for as long as you're using it for development activity) Office 365 Developer Tenant. If you have a Visual Studio Enterprise or Professional subscription, sign up using your [Visual Studio benefits](https://aka.ms/MyVisualStudioBenefits) to get a developer account that automatically renews regardless of development activiy. This account can only be used for testing purposes. See more information on [setting up your test accounts](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec?ui=en-US&rs=en-US&ad=US).
 
 ## Enable Microsoft Teams for your organization
 
