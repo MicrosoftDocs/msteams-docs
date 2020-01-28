@@ -15,7 +15,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 | 11/5/2019 | Single sign-on using the Teams JavaScript SDK in a web content page is in developer preview | [Single sign-on](~/tabs/how-to/authentication/auth-aad-sso.md) |
 | 10/31/2019 | Conversational bots and messaging extension documentation updated to reflect the 4.6 Bot Framework SDK. Documentation for the v3 SDK is available in the Resources section. | All bot and messaging extension documentation. |
 | 10/31/2019 | New documentation structure, and major article refactoring. Please report any dead links or 404's by creating a GitHub Issue | All of them! |
-| 9/13/2019 | Request bot is installed from action-based messaging extension | [Initiate actions with messaging extensions](~/concepts/messaging-extensions/create-extensions.md#request-to-install-your-conversational-bot)
+| 9/13/2019 | Request bot is installed from action-based messaging extension | [Initiate actions with messaging extensions](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
 | 8/28/2019 | Support for private channels in tabs and Connectors | [Get context for your tab](~/concepts/tabs/tabs-context.md#retrieving-context-in-private-channels) |
 | 06/20/2019 | Share an external website, from an external website, into a Teams channel | [Share to Teams](~/share-to-teams.md) |
 | 05/25/2019 | Respond with bot message from task module | [Respond with bot message from task module](~/concepts/messaging-extensions/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot) |
