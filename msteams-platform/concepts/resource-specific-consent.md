@@ -5,7 +5,7 @@ keywords: RSC resource specific consent
 ---
 # Resource specific consent in Teams
 
-Resource-specific consent (RSC) in Microsoft Teams allows team owners to grant consent to apps to access their team's data and replaces the need for a global admin to approve the app with [tenant-wide admin permissions](~/azure/active-directory/manage-apps/grant-admin-consent).
+Resource-specific consent (RSC) in Microsoft Teams allows team owners to grant consent to apps to access their team's data and replaces the need for a global admin to approve the app with [tenant-wide admin permissions](https://docs.microsoft.com/azure/active-directory/manage-apps/grant-admin-consent).
 These accesses include the ability to create, rename and delete channels, read channel messages, create tabs, and add or remove members from a team. This article provides the step by step guide to configure RSC in your Teams app.
 
 ![Consent screen.](../../assets/images/rsc/rsc-consentscreen.png)
@@ -72,7 +72,7 @@ string token = response.Deserialize<TokenResponse>().access_token;
   
 #### 5. Make a Graph call 
 
-You can now make a REST call similar to a non RSC call or use the SDK. See [Microsoft Graph](https://developer.microsoft.com/en-us/graph) and [Use the Microsoft Graph API to work with Microsoft Teams](~/graph/api/resources/teams-api-overview?view=graph-rest-beta) for more details. 
+You can now make a REST call similar to a non RSC call or use the SDK. See [Microsoft Graph](https://developer.microsoft.com/graph) and [Use the Microsoft Graph API to work with Microsoft Teams](https://docs.microsoft.com/graph/use-the-api) for more details. 
 
 ##  RSC Guidelines
 
