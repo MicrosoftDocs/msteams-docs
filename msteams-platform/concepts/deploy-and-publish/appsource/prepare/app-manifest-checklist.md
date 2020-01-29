@@ -19,7 +19,7 @@ Your app manifest needs to conform to the guidelines outlined below.
 * If your product requires additional purchases to function properly, list that in the description.
 * Provide the requisite Terms and Privacy policy links in the manifest and the Partner Center or Seller Dashboard. Verify that the links properly resolve to the correct documentation, ideally Teams specific. For bots, you must provide this same information in the Submission section of the Bot Framework registration page.
 * Ensure that metadata in the manifest exactly matches metadata in the Partner Center (and, for bots, in the Bot Framework registration). Note that your Partner Center entry may contain a more detailed and formatted description for use in the AppSource product page.
-* Ensure the app title used in your manifest matches exactly with the App title entered in Partner Center submission. Please refer to [this link](https://docs.microsoft.com/office/dev/store/create-effective-office-store-listings#use-a-consistent-add-in-name) for details
+* Ensure the app title used in your manifest is an **exact match** with the App title entered in Partner Center submission. *See* [Create effective listings in Microsoft AppSource and within Office — Use a consistent add-in name ](https://docs.microsoft.com/office/dev/store/create-effective-office-store-listings#use-a-consistent-add-in-name).
 
 ## Metadata requirement
 
