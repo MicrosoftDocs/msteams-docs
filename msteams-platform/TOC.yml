@@ -99,7 +99,7 @@
         - name: 'Configure identity providers'
           href: concepts/authentication/configure-identity-provider.md
     - name: 'Resource specific consent in Teams'
-      href: concepts/authentication/resource-specific-consent.md
+      href: 
 - name: 'Task-oriented interactions with Messaging Extensions'
   items:
     - name: 'What are Messaging Extensions?'
