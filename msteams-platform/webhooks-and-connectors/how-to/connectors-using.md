@@ -234,7 +234,7 @@ This limit controls the traffic that a connector or an incoming webhook is allow
 | 3600  | 100  | 
 | 7200 | 150  | 
 
-A [retry logic with exponential back-off](/azure/architecture/patterns/retry) like below would mitigate rate limiting for cases where requests are exceeding the limits within a second. Please follow [best practices](~bots/how-to/rate-limit#best-practices.md) to avoid hitting the rate limits.
+A [retry logic with exponential back-off](/azure/architecture/patterns/retry) like below would mitigate rate limiting for cases where requests are exceeding the limits within a second. Please follow [best practices](../../bots/how-to/rate-limit.md#best-practices) to avoid hitting the rate limits.
 
 ```csharp
 // Please note that response body needs to be extracted and read 
