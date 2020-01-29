@@ -37,7 +37,7 @@ This table shows the types of cards available to you.
 
 ### Inline card images
 
-Your card can contain an inline image by including a link to your publically available image. For performance purposes we highly recommend you host your image on a public content-delivery network (CDN).
+Your card can contain an inline image by including a link to your publicly available image. For performance purposes we highly recommend you host your image on a public content-delivery network (CDN).
 
 Images are scaled up or down in size while maintaining the aspect ratio to cover the image area, and then cropped from center to achieve the appropriate aspect ratio for the card.
 
