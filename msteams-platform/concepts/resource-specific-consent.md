@@ -8,7 +8,7 @@ keywords: RSC resource specific consent
 Resource-specific consent (RSC) in Microsoft Teams allows team owners to grant consent to apps to access their team's data and replaces the need for a global admin to approve the app with [tenant-wide admin permissions](https://docs.microsoft.com/azure/active-directory/manage-apps/grant-admin-consent).
 These accesses include the ability to create, rename and delete channels, read channel messages, create tabs, and add or remove members from a team. This article provides the step by step guide to configure RSC in your Teams app.
 
-![Consent screen.](../../assets/images/rsc/rsc-consentscreen.png)
+![Consent screen.](../assets/images/rsc/rsc-consentscreen.png)
 
 ## Prerequisites (Admin)
 
@@ -30,14 +30,14 @@ The basic steps required to configure a service and get a token from the Microso
 
 #### 1. Register a new application in Azure AD
 
-[Register](~/graph/auth-register-app-v2) a new application in the [Azure Active Directory- App Registration portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) to get an AAD app ID. If your AAD app supports [single sign-on (SSO) for tabs](~/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso), then use the same AAD app ID for configuring RSC.
+[Register](https://docs.microsoft.com/graph/auth-register-app-v2) a new application in the [Azure Active Directory- App Registration portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) to get an AAD app ID. If your AAD app supports [single sign-on (SSO) for tabs](../tabs/how-to/authentication/auth-aad-sso.md), then use the same AAD app ID for configuring RSC.
 
 #### 2. Validate permissions
 * If you are configuring RSC with a newly registered app (with default permissions): Follow step 3. 
 * If you are configuring RSC with an existing app (with additional permissions): Check the permissions in the `API Permissions` section of the app registration portal in Azure AD, and confirm if RSC related permissions are configured here. If so, they should be deleted from here and are supposed to be configured in the Teams app manifest as mentioned in step 3.
 
 #### 3. Update your Teams app manifest to link to your AAD app ID
-Add a [webApplicationInfo](~/microsoftteams/platform/resources/schema/manifest-schema#webapplicationinfo) section to the manifest that includes two properties - `id` is the AAD app ID, and `applicationPermissions` are the RSC permissions (scopes) your app requires.
+Add a [webApplicationInfo](../resources/schema/manifest-schema.md#webapplicationinfo) section to the manifest that includes two properties - `id` is the AAD app ID, and `applicationPermissions` are the RSC permissions (scopes) your app requires.
 
 > **Note**: If your app needs non RSC permissions, you can continue to use them as always, but they do not go in the manifest. 
 
@@ -56,11 +56,11 @@ Add a [webApplicationInfo](~/microsoftteams/platform/resources/schema/manifest-s
   ... 
 } 
 ```
-Refer to the list of available Graph permissions for RSC in [Teams permissions](~/graph/permissions-reference.md) section.
+Refer to the list of available Graph permissions for RSC in [Teams permissions](https://docs.microsoft.com/graph/permissions-reference) section.
 
 #### 4. Get an access token 
 
-Before you make a REST call to the Graph, you need to [get an access token](~/graph/auth-v2-service) for the application permissions similar to getting an application permission token for non-RSC use.
+Before you make a REST call to the Graph, you need to [get an access token](https://docs.microsoft.com/graph/auth-register-app-v2) for the application permissions similar to getting an application permission token for non-RSC use.
   
 ```
 string response = await HttpHelpers.POST( 
