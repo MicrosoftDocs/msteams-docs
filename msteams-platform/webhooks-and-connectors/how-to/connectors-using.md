@@ -174,7 +174,7 @@ The following manifest.json file contains the basic elements needed to test and 
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "id": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
   "version": "1.0",
@@ -234,7 +234,7 @@ This limit controls the traffic that a connector or an incoming webhook is allow
 | 3600  | 100  | 
 | 7200 | 150  | 
 
-A [retry logic with exponential back-off](/azure/architecture/patterns/retry) like below would mitigate rate limiting for cases where requests are exceeding the limits within a second. Please follow [best practices](~bots/how-to/rate-limit#best-practices.md) to avoid hitting the rate limits.
+A [retry logic with exponential back-off](/azure/architecture/patterns/retry) like below would mitigate rate limiting for cases where requests are exceeding the limits within a second. Please follow [best practices](../../bots/how-to/rate-limit.md#best-practices) to avoid hitting the rate limits.
 
 ```csharp
 // Please note that response body needs to be extracted and read 

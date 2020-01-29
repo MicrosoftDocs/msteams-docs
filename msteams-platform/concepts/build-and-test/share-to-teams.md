@@ -109,7 +109,7 @@ Optionally, you can choose to set default values for the following fields on the
 ```html
 <span
     class="teams-share-button"
-    data-href="https://www.microsoft.com/en-us/education/products/teams"
+    data-href="https://www.microsoft.com/education/products/teams"
     data-msg-text="Default Message"
     data-assign-title="Default Assignment Title"
     data-assign-instr="Default Assignment Instructions"
