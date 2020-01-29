@@ -6,7 +6,7 @@ keywords: teams publish store office publishing checklist
 # App manifest checklist
 
 >[!IMPORTANT]
->We're migrating management of Office solutions from Seller Dashboard to Partner Center. For details, see [Moving from Seller Dashboard to Partner Center](https://developer.microsoft.com/office/blogs/moving-management-of-solutions-from-seller-dashboard-to-partner-center/) and read the [FAQ](partner-center-faq.md).
+>We're migrating management of Office solutions from Seller Dashboard to Partner Center. For details, see [Moving from Seller Dashboard to Partner Center](https://developer.microsoft.com/office/blogs/moving-management-of-solutions-from-seller-dashboard-to-partner-center/) and read the [FAQ](https://docs.microsoft.com/office/dev/store/partner-center-faq).
 
 Your app manifest needs to conform to the guidelines outlined below.
 
