@@ -13,7 +13,7 @@ Your app manifest needs to conform to the guidelines outlined below.
 ## Tips
 
 * Don't use "Teams", "Microsoft", or "app" in your app name.
-* The developerName in the App Manifest must be same as the Provider Name defined in Partner Center.
+* The `developerName` in the App Manifest must be same as the Provider Name defined in Partner Center.
 * Make sure the app description, screenshots, text, and promotional images describe only the app and do not contain any additional advertising, promotions or copyrighted brand names.
 * If your product requires an account on your service or another service, list that in the description and ensure there are links to sign up, sign in and sign out.
 * If your product requires additional purchases to function properly, list that in the description.
