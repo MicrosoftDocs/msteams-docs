@@ -20,7 +20,7 @@ This article addresses some of the common reasons submitted apps fail validation
 
 Apps must provide a clear, simple sign in, sign out, and, when appropriate, sign-up experience. The experience must be reachable across all capabilities in your app.
 
-* If there is an explicit sign-in option provided to the user, there must be a corresponding sign-out option (even if the app is using SSO/[silent authentication](tabs/how-to/authentication/auth-silent-aad.md)).
+* If there is an explicit sign-in option provided to the user, there must be a corresponding sign-out option (even if the app is using SSO/[silent authentication](~/tabs/how-to/authentication/auth-silent-aad.md)).
 * The sign-out option must only sign the user out of your app's capability and not out of the Teams client.
 * At a minimum, the sign-out option must sign the user out of the same capabilities accessed with the sign-in option. For example, if the sign-in option includes both a messaging extension and tab, then the sign-out option must include both the messaging extension and tab.
 
