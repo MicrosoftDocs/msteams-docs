@@ -18,11 +18,11 @@ This article addresses some of the common reasons submitted apps fail validation
 
 ## Tips for sign up, sign in, and sign out flows
 
-Apps must provide a clear, simple sign in sign out and, when appropriate, sign-up experience. The experience must be reachable across all capabilities in your app.
+Apps must provide a clear, simple sign in, sign out, and, when appropriate, sign-up experience. The experience must be reachable across all capabilities in your app.
 
 * If there is an explicit sign-in option provided to the user, there must be a corresponding sign-out option (even if the app is using SSO/[silent authentication](tabs/how-to/authentication/auth-silent-aad.md)).
-* The sign-out option must only sign the user out of your app's capability and not from the Teams client.
-* At a minimum, the sign-out option must sign the user out from the same capabilities accessed with the sign-in option. For example, if the sign-in option includes both a messaging extension and tab, then the sign-out option must include both the message extension and tab.
+* The sign-out option must only sign the user out of your app's capability and not out of the Teams client.
+* At a minimum, the sign-out option must sign the user out of the same capabilities accessed with the sign-in option. For example, if the sign-in option includes both a messaging extension and tab, then the sign-out option must include both the messaging extension and tab.
 
 * Make sure there is always a way to reverse the following (or similar) behaviors:
   * Sign-in => sign-out.
@@ -76,11 +76,11 @@ Your bot should always be responsive to any command and not dead-end the user. H
 
 ![Flow command list](~/assets/images/faq/flow-bot.png)
 
-* Include a help command. Users will most likely to type "Help" when they are lost or when your bot didn't respond as expected. Include a help command that describes how your app's value will be experienced along with all valid commands.
+* Include a help command. Users are likely to type "Help" when they are lost or when your bot doesn't respond as expected. Include a help command that describes how your app's value will be experienced along with all valid commands.
 
 ![Flow help command](~/assets/images/faq/flow-help.png)
 
-* Include help content or guidance when your bot is lost. When your bot can't understand the user input, it should suggest an alternative action. For example, *"I'm sorry, I don't understand. Type "help" for more information."* Don't respond with an error message or simply *"I don't understand"*. Use this chance to teach your users.
+* Include help content or guidance when your bot is lost. When your bot can't understand the user input, it should suggest an alternative action. For example, *"I'm sorry, I don't understand. Type "help" for more information."* Don't respond with an error message or simply, *"I don't understand"*. Use this chance to teach your users.
 
 * Send welcome messages on the first launch. Welcome messages are the best way to set your bot's tone. This is the first interaction a user has with the bot. A good welcome message can encourage the user to keep exploring the app. If the welcome or introductory message is confusing or unclear, users won't see the value of the app immediately and lose interests.
 
