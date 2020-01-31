@@ -5,9 +5,9 @@ keywords: teams publish faq failed frequently cases tip tips
 ---
 # Tips for avoiding a failed Teams app submission 
 
-This article addresses some of the common reasons submitted apps fail validation. While it's not intended to be an exhaustive list of all potential issues with your app, following this guide will increase the likelihood of a first-time pass for your app submission. 
+This article addresses some of the common reasons submitted apps fail validation. While it's not intended to be an exhaustive list of all potential issues with your app, following this guide will increase the likelihood that your app submission will pass the first time. 
 
-## General tips for avoiding frequent failures
+## General tips for avoiding submission failures
 
 * Ensure you are using version 1.4.1 or later of the [Microsoft Teams SDK](https://www.npmjs.com/package/@microsoft/teams-js).
 * Don't make changes to your app while the validation process is in progress. Doing so will require a complete revalidation of your app.
@@ -18,18 +18,18 @@ This article addresses some of the common reasons submitted apps fail validation
 
 ## Tips for sign up, sign in, and sign out flows
 
-Apps must provide a clear, simple sign in/out and, when appropriate, sign-up experience. The experience must be reachable across all capabilities in your app.
+Apps must provide a clear, simple sign in sign out and, when appropriate, sign-up experience. The experience must be reachable across all capabilities in your app.
 
-* If there is an explicit sign-in option provided to the user, there must be a corresponding sign-out option (even if the app is using SSO/Silent Authentication).
+* If there is an explicit sign-in option provided to the user, there must be a corresponding sign-out option (even if the app is using SSO/[silent authentication](tabs/how-to/authentication/auth-silent-aad.md)).
 * The sign-out option must only sign the user out of your app's capability and not from the Teams client.
-* At a minimum, the sign-out option must sign the user out from the same capabilities accessed with the sign-in option. For example, if the sign-in option includes both a messaging extension and tab, then the sign-out option must encompass both the message extension and tab.
+* At a minimum, the sign-out option must sign the user out from the same capabilities accessed with the sign-in option. For example, if the sign-in option includes both a messaging extension and tab, then the sign-out option must include both the message extension and tab.
 
 * Make sure there is always a way to reverse the following (or similar) behaviors:
   * Sign-in => sign-out.
   * Link an account/service => unlink an account/service.
-  * Connect an account/service => disconnect the account/service.
+  * Connect an account/service => disconnect an account/service.
   * Authorize an account/service => unauthorize/deny an account/service.
-  * Register an account/service => unregister/remove the account/service.
+  * Register an account/service => unregister/remove an account/service.
 * If your app requires an account or service, you must provide a way for the user to sign up or to create a sign-up request. An exception may be granted if your app is an Enterprise application.
 * Sign in/sign out functionality must work on mobile clients. Ensure you're using the [Microsoft Teams SDK](https://www.npmjs.com/package/@microsoft/teams-js) version 1.4.1 or later.
 
@@ -76,13 +76,13 @@ Your bot should always be responsive to any command and not dead-end the user. H
 
 ![Flow command list](~/assets/images/faq/flow-bot.png)
 
-* Include a help command.* Users are most likely to type "Help" when they are lost or when your bot didn't respond as expected. Include a help command that describes how your apps value will be experienced along with all valid commands.
+* Include a help command. Users will most likely to type "Help" when they are lost or when your bot didn't respond as expected. Include a help command that describes how your app's value will be experienced along with all valid commands.
 
 ![Flow help command](~/assets/images/faq/flow-help.png)
 
-* Include help content or guidance when your bot is lost. When your bot can't understand the user's input, it should suggest an alternative action. For example, *"I'm sorry, I don't understand. Type "help" for more information."* Don't respond with an error message or simply "I don't understand". Use this chance to teach your users.
+* Include help content or guidance when your bot is lost. When your bot can't understand the user input, it should suggest an alternative action. For example, *"I'm sorry, I don't understand. Type "help" for more information."* Don't respond with an error message or simply *"I don't understand"*. Use this chance to teach your users.
 
-* Send welcome messages on the first launch. Welcome messages are the best way to set your bot's tone. This is the first interaction user has with the bot. A good welcome message can encourage the user to keep exploring the app. If the welcome or introductory message is confusing or unclear, users won't immediately see the value of the app immediately and lose interests.
+* Send welcome messages on the first launch. Welcome messages are the best way to set your bot's tone. This is the first interaction a user has with the bot. A good welcome message can encourage the user to keep exploring the app. If the welcome or introductory message is confusing or unclear, users won't see the value of the app immediately and lose interests.
 
 * Think through all scopes. Be sure that your bot provides appropriate responses when mentioned (`@*botname*`) in a channel and in personal conversations. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](~/resources/schema/manifest-schema.md#bots).)
 
@@ -90,10 +90,10 @@ Your bot should always be responsive to any command and not dead-end the user. H
 
 On the first launch of bot, user should get a welcome message from the bot even before signing in. Here are a few considerations when designing your welcome message:
 
-* Make the message concise and informative. Most likely, your users will have very different experiences with and knowledge of your app. They might have used your app on another platform or know nothing about your app. You want to tailor your message to all audiences and in a couple sentences explain what your bot does and the ways to interact with it. You should also explain the value of the app and how the users will benefit from using it.
+* Make the message concise and informative. Most likely, users' experiences with and knowledge of your app will vary. They might have used your app on another platform or know nothing about your app. You want to tailor your message to all audiences and in a couple sentences explain what your bot does and the ways to interact with it. You should also explain the value of the app and how the users will benefit from using it.
 ![Cafe and Dinning bot](~/assets/images/faq/cafe-bot.png)
 
-* Make your message actionable. Think about the first thing you want users to do after installing your app. Is there a cool command they should try? Is there another onboarding experience they should know about? Do they need to sign in? You can add actions on an adaptive card or provide specific examples such as “Try asking….”, “This is what I can do…”.
+* Make your message actionable. Think about the first thing you want users to do after installing your app. Is there a cool command they should try? Is there another onboarding experience they should know about? Do they need to sign in? You can add actions on an adaptive card or provide specific examples such as *“Try asking….”*, *“This is what I can do…”*.
 
 ### Tips for bots in a team scope
 
@@ -101,5 +101,5 @@ Things are a little bit different when the bot is first added to a channel. Norm
 
 ## Learn More
 
-[Commercial marketplace certification policies ](/legal/marketplace/certification-policies) provide an extensive list of app policies. The policies in *Section 1140* are specific to Microsoft Teams apps.
+[Commercial marketplace certification policies ](/legal/marketplace/certification-policies) provides an extensive list of app policies. The policies in *Section 1140* are specific to Microsoft Teams apps.
 
