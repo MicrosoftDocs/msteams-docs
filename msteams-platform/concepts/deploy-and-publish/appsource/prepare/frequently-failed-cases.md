@@ -3,13 +3,9 @@ title: Tips and frequently failed cases
 description: Describes tips for submission and most failed policies  
 keywords: teams publish faq failed frequently cases tip tips 
 ---
-# Tips for avoiding a failed Teams app submission 
+# Tips for avoiding a failed Teams app submission
 
-<<<<<<< HEAD
-This article addresses some of the common reasons submitted apps fail validation. While it's not intended to be an exhaustive list of all potential issues with your app, following this guide will increase the likelihood that your app submission will pass the first time. 
-=======
-This article covers some of the most common reasons apps fail validation. It is not intended to be an exhaustive list of all potential issues with your app. However, if you follow this guidance the likelihood of a first-time pass will be greatly increased. See the extensive list of policies here: [AppSource validation policies](https://dev.office.com/officestore/docs/validation-policies). The policies in Section 14 of the overall AppSource validation policies are specific to Microsoft Teams apps.
->>>>>>> master
+This article addresses some of the common reasons submitted apps fail validation. While it's not intended to be an exhaustive list of all potential issues with your app, following this guide will increase the likelihood that your app submission will pass the first time.
 
 ## General tips for avoiding submission failures
 
@@ -53,7 +49,7 @@ For additional information on authentication see:
 > [!TIP]
 > Make sure your app displays a loading indicator when it is taking longer than expected to respond.
 
-## Tips for tab content 
+## Tips for tab content
 
 * Tabs should provide focused content and avoid UI elements that are needless. In general, this usually refers to unnecessary nested/layered navigation, an extraneous or irrelevant UI next to the content, or any links that take the user to unrelated content. For example, here is a tab view that omits navigation menus and only showcases the main content:
 
@@ -106,4 +102,3 @@ Things are a little bit different when the bot is first added to a channel. Norm
 ## Learn More
 
 [Commercial marketplace certification policies](/legal/marketplace/certification-policies) provides an extensive list of app policies. The policies in *Section 1140* are specific to Microsoft Teams apps.
-
