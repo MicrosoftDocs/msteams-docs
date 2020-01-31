@@ -20,9 +20,9 @@ This article addresses some of the common reasons submitted apps fail validation
 
 Apps must provide a clear, simple sign in/out and, when appropriate, sign-up experience. The experience must be reachable across all capabilities in your app.
 
-* If there is an explicit sign-in option provided to the user, there must be a sign-out option as well (even if the app is using SSO/Silent Authentication).
+* If there is an explicit sign-in option provided to the user, there must be a corresponding sign-out option (even if the app is using SSO/Silent Authentication).
 * The sign-out option must only sign the user out of your app's capability and not from the Teams client.
-* Every scope that has a sign-in must have a sign-out as well. At a minimum, the sign-out option must sign the user out from the same capabilities accessed with the sign-in option. For example, if the sign-in option signs the user into both a messaging extension and tab, then the sign-out option must sign the user out from both the message extension and tab.
+* At a minimum, the sign-out option must sign the user out from the same capabilities accessed with the sign-in option. For example, if the sign-in option includes both a messaging extension and tab, then the sign-out option must encompass both the message extension and tab.
 
 * Make sure there is always a way to reverse the following (or similar) behaviors:
   * Sign-in => sign-out.
@@ -51,7 +51,7 @@ For additional information on authentication see:
 
 ## Tips for tab content 
 
-* Tabs should provide focused content and avoid UI elements that are superfluous. In general, this usually refers to unnecessary nested/layered navigation, an extraneous or irrelevant UI next to the content, or any links that take the user to unrelated content. A tab view that omits navigation menus and only showcases the main content is a good example:
+* Tabs should provide focused content and avoid UI elements that are needless. In general, this usually refers to unnecessary nested/layered navigation, an extraneous or irrelevant UI next to the content, or any links that take the user to unrelated content. For example, here is a tab view that omits navigation menus and only showcases the main content:
 
 ![SharePoint web view](~/assets/images/faq/web-sp.png)
 ![SharePoint tab view](~/assets/images/faq/tab-sp.png)
