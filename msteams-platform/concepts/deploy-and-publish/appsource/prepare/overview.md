@@ -29,7 +29,6 @@ Privacy policy guidelines:
 * It must include your contact information.
 * It should not contain broken links, beta URLs, or staging URLs. 
 
-
 ### Terms of use
 
 Your terms of use statement should be specific and applicable to your app and/or add-in offering.
