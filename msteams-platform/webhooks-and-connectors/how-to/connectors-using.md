@@ -225,7 +225,7 @@ To verify that an `HttpPOST` action is working correctly, use your [custom incom
 
 ## Rate limiting for Connectors
 
-Rate limiting controls the number of concurrent calls that a connector or incoming webhook is allowed to generate on a channel. Requests made by your webhook or connector will be throttled when the rate limit threshhold is exceeded:
+Rate limiting controls the number of concurrent calls that a connector or incoming webhook is allowed to generate on a channel. Requests made by your webhook or connector will be throttled when the rate limit threshhold is exceeded. The length of time for the throttling behavior is directly correlated to the exceeded request rate parameters. For example, if a connector or webhook exceeds 100 message requests in 3600 seconds, the connector will be throttled for the next 3600 seconds:
 
 | Time-period (sec)  | Max allowed message requests  |
 |---|---|
