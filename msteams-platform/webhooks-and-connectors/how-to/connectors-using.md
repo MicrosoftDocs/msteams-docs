@@ -231,7 +231,7 @@ Rate limiting controls the number of concurrent calls that a connector or incomi
 |---|---|
 | 1   | 4  |  
 | 30   | 60  |  
-| 3600  | 100  | 
+| 3600 (1 hour)  | 100  | 
 | 7200 | 150  | 
 | 86400 (1 day) | 1800  | 
 
