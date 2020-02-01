@@ -48,5 +48,3 @@ Above all else, remember that nobody likes spam. Blasting away with personal and
 
 * [Design effective tabs](~/tabs/design/tabs.md)
 * [Create amazing bots](~/bots/design/bots.md)
-
-
