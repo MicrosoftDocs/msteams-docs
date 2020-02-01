@@ -100,14 +100,16 @@ The date and localization features mentioned in this topic are not supported in 
     ]
 }
 ```
+
 ## Mention support within Adaptive cards 
 
 > [!NOTE]
-> Mention support in cards is currently supported in [Developer Preview](~/resources/dev-preview/developer-preview-intro) only.
+> Mention support in cards is currently supported in [Developer Preview](~/resources/dev-preview/developer-preview-intro.md) only.
 
 Bots and Messaging extensions can now include mentions within the card content in Text Block and FactSet elements. 
 
 ### Constructing mentions
+
 To include a mention in an Adaptive Card your app needs to include the following elements
 
 * `<at>username</at>` in the supported adaptive card elements
@@ -116,6 +118,7 @@ To include a mention in an Adaptive Card your app needs to include the following
 Note that cards with mentions aren't supported on mobile clients at the moment.
 
 ### Sample Adaptive card with a mention
+
 ``` json
 {
   "contentType": "application/vnd.microsoft.card.adaptive",
