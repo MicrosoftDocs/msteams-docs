@@ -89,7 +89,7 @@ Scrum status bot is a simple scrum assistant bot that will enable users to run a
 
 ![Scrum Status Bot](https://raw.githubusercontent.com/wiki/OfficeDev/microsoft-teams-app-scrumstatus/images/StartScrum.jpg)
 
-## Crowdsourcer
+## Crowdsourcer bot
 
 Crowdsourcer is a [Microsoft Teams bot](../bots/what-are-bots.md) that gives teams queried information provided collaboratively by group members. It is a great way to answer frequently asked questions while enabling participants to actively engage in and contribute to a fun and beneficial information resource.
 
@@ -97,12 +97,28 @@ Crowdsourcer is a [Microsoft Teams bot](../bots/what-are-bots.md) that gives tea
 
 ![Crowdsource end-user interaction](../assets/images/crowdsourcer.png)
 
-## Expert Finder
+## Expert Finder bot
 
 Expert Finder is a [Microsoft Teams bot](../bots/what-are-bots.md) that identifies specific organization members based on their skills, interests, and education attributes. Members find experts within an organization  that match a keyword search of Azure Active Directory user profiles.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-expertfinder)
 
-![Expert Finder search results example](../assets/images/expert-finder.png)
+![Expert Finder search results demo](../assets/images/expert-finder.png)
+
+## Book-a-room bot
+
+Book-a-room is a [Microsoft Teams bot](../bots/what-are-bots.md) that lets users quickly find and reserve a meeting room within a default 30 minute time window. The Book-a-room bot scopes to personal or 1:1 conversations.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom)
+
+![Book-a-room demo](../assets/images/book-a-room.png)
+
+## Attendance app
+
+The attendance app is designed to record presence in typical settings such as learning and training environments. Users can mark or edit attendance for up to 30 days in the past and view summarized attendance reports for the entire group or individual attendees.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-attendance)
+
+![Attendance app demo](../assets/images/attendance-app.png)
 
 Have an idea for an app template you'd like to see? [Please let us know](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
