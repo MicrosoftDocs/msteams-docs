@@ -73,7 +73,7 @@ This app also enables easy sharing of images/GIFs/stickers across teams without 
 
 ## Icebreaker
 
-Icebreaker is a [Microsoft Teams bot](~/bots/what-are-bots.md) that helps your team get closer by pairing two random team members up every week to meet. The bot makes scheduling easy by automatically suggesting free times that work for both members. Strengthen personal connections and build a tightly knit community with this app.
+Icebreaker is a [Microsoft Teams bot](../bots/what-are-bots.md) that helps your team get closer by pairing two random team members up every week to meet. The bot makes scheduling easy by automatically suggesting free times that work for both members. Strengthen personal connections and build a tightly knit community with this app.
 
 In addition to encouraging personal connections across your entire team, the Icebreaker app can help cultivate interest-based communities within your organization. For example, you can use this app for a DevOps interest group to help ideas and best practices organically spread across your organization.
 
@@ -88,5 +88,13 @@ Scrum status bot is a simple scrum assistant bot that will enable users to run a
 [Git it on GitHub here](https://github.com/OfficeDev/microsoft-teams-app-scrumstatus/)
 
 ![Scrum Status Bot](https://raw.githubusercontent.com/wiki/OfficeDev/microsoft-teams-app-scrumstatus/images/StartScrum.jpg)
+
+## Crowdsourcer
+
+Crowdsourcer is a [Microsoft Teams bot](../bots/what-are-bots.md) that gives teams queried information provided collaboratively by group members. It is a great way to answer frequently asked questions while enabling participants to actively engage in and contribute to a fun and beneficial information resource.
+
+[Get it on Github here](https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app)
+
+![Crowdsource end-user interaction](../assets/images/crowdsourcer.png)
 
 Have an idea for an app template you'd like to see? Please let us know [here](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
