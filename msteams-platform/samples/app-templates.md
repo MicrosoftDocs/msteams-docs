@@ -91,7 +91,7 @@ Scrum status bot is a simple scrum assistant bot that will enable users to run a
 
 ## Crowdsourcer bot
 
-Crowdsourcer is a [Microsoft Teams bot](../bots/what-are-bots.md) that gives teams queried information sourced collaboratively by group members. It's a great way to answer frequently asked questions while enabling participants to actively engage in and contribute to a fun and beneficial information resource.
+Crowdsourcer is a [Microsoft Teams bot](../bots/what-are-bots.md) that gives teams queried information sourced collaboratively from group members. It's a great way to answer frequently asked questions while enabling participants to actively engage in and contribute to a fun and helpful information resource.
 
 [Get it on Github](https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app)
 
@@ -107,7 +107,7 @@ Expert Finder is a [Microsoft Teams bot](../bots/what-are-bots.md) that identifi
 
 ## Book-a-room bot
 
-Book-a-room is a [Microsoft Teams bot](../bots/what-are-bots.md) that lets users quickly find and reserve a meeting room within the current and a default 30-minute time frame as well as 60- and 90-minute windows. The Book-a-room bot scopes to personal or 1:1 conversations.
+Book-a-room is a [Microsoft Teams bot](../bots/what-are-bots.md) that lets users quickly find and reserve a meeting room for 30 (default), 60, or 90 minutes starting from the current  time. The Book-a-room bot scopes to personal or 1:1 conversations.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom)
 
@@ -115,7 +115,7 @@ Book-a-room is a [Microsoft Teams bot](../bots/what-are-bots.md) that lets users
 
 ## Attendance app
 
-The attendance app is a [Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/embed-teams-appdesigned) tab that can be pinned in a team. It is designed to record presence typically in settings such as learning and training environments. Users can mark or edit attendance for up to 30 days in the past and view summarized attendance reports for an entire group or individual attendees.
+The attendance app is a [Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/embed-teams-appdesigned) tab that can be pinned in a team. It is designed to record presence, typically in settings such as learning and training environments. Users can mark or edit attendance for up to 30 days in the past and view summarized attendance reports for an entire group or individual attendees.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-attendance)
 
