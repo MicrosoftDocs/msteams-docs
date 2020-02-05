@@ -107,7 +107,7 @@ Expert Finder is a [Microsoft Teams bot](../bots/what-are-bots.md) that identifi
 
 ## Book-a-room bot
 
-Book-a-room is a [Microsoft Teams bot](../bots/what-are-bots.md) that lets users quickly find and reserve a meeting room within the current and a default 30-minute time frame (default) as well as 60- and 90-minute The Book-a-room bot scopes to personal or 1:1 conversations.
+Book-a-room is a [Microsoft Teams bot](../bots/what-are-bots.md) that lets users quickly find and reserve a meeting room within the current and a default 30-minute time frame as well as 60- and 90-minute windows. The Book-a-room bot scopes to personal or 1:1 conversations.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom)
 
