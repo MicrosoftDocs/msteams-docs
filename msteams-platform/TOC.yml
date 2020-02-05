@@ -79,7 +79,7 @@
         - name: Prepare your app
           items: 
           - name: Presubmission checklist
-            href: concepts/deploy-and-publish/appsource/prepare/overview.md
+            href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
           - name: App detail page checklist
             href: concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md
           - name: App manifest checklist
@@ -336,7 +336,7 @@
         href: resources/bot-v3/bots-context.md
       - name: Sending and receiving files
         href: resources/bot-v3/bots-files.md
-      - name: Notification only bots
+      - name: Notification-only bots
         href: resources/bot-v3/bots-notification-only.md
       - name: Bot menus
         href: resources/bot-v3/bots-menus.md

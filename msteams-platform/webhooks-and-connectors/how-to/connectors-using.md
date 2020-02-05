@@ -225,14 +225,15 @@ To verify that an `HttpPOST` action is working correctly, use your [custom incom
 
 ## Rate limiting for Connectors
 
-This limit controls the traffic that a connector or an incoming webhook is allowed to generate on a channel.
+This limit controls the traffic that a connector or an incoming webhook is allowed to generate on a channel. Requests made by your webhook or connector will be throttled when the rate limit threshhold is exceeded. The length of time for the throttling behavior is directly correlated to the exceeded request rate parameters. For example, if a connector or webhook exceeds 100 message requests in 3600 seconds, the connector will be throttled for the next 3600 seconds:
 
 | Time-period (sec)  | Max allowed message requests  |
 |---|---|
 | 1   | 4  |  
 | 30   | 60  |  
-| 3600  | 100  | 
+| 3600 (1 hour)  | 100  | 
 | 7200 | 150  | 
+| 86400 (1 day) | 1800  | 
 
 A [retry logic with exponential back-off](/azure/architecture/patterns/retry) like below would mitigate rate limiting for cases where requests are exceeding the limits within a second. Please follow [best practices](../../bots/how-to/rate-limit.md#best-practices) to avoid hitting the rate limits.
 
