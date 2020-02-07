@@ -17,20 +17,21 @@ Microsoft Teams will also be available to customers who purchased E4 prior to it
 
 ## Just need a development environment?
 
-If you don't currently have an Office 365 account, you can sign up for the [Office 365 Developer program](https://dev.office.com/devprogram) to get a *free* 90 days (can be renewed for as long as you're using it for development activity) Office 365 Developer Tenant. If you have a Visual Studio Enterprise or Professional subscription, sign up using your [Visual Studio benefits](https://aka.ms/MyVisualStudioBenefits) to get a developer account that automatically renews regardless of development activiy. This account can only be used for testing purposes. See more information on [setting up your test accounts](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec?ui=en-US&rs=en-US&ad=US).
+If you don't currently have an Office 365 account, you can sign up for an [Office 365 Developer program](https://dev.office.com/devprogram) developer tenant. It is *free* for 90 days and can be renewed as long as you're using it for development activity. If you have a Visual Studio Enterprise or Professional subscription, use your [Visual Studio benefits](https://aka.ms/MyVisualStudioBenefits) to get a developer account that automatically renews regardless of development activity. This account can only be used for testing purposes. See more information on [setting up your test accounts](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started).
 
 ## Enable Microsoft Teams for your organization
 
-If Microsoft Teams is not yet enabled for your organization, you'll need to do that first. Take a look at our detailed guidance for [enabling Teams for your organization](/microsoftteams/how-to-roll-out-teams).
+If Microsoft Teams is not yet enabled for your organization, you'll need to do that first. Take a look at our detailed guidance for [enabling Teams for your organization](microsoftteams/enable-features-office-365).
 
 ## Enable custom Teams apps and turn on custom app uploading
 
-> Note: If you're using an O365 Developer Organization to build your app, these settings should already be configured to allow you to build, upload and test your app.
+> [!Note] 
+> If you're using an O365 Developer Organization to build your app, these settings should already be configured to allow you to build, upload, and test your app.
 
-There are three settings involved in enabling custom apps and custom app uploading:
+There are three settings relevant to enabling custom apps and custom app uploading:
 
-* **Org-wide custom app setting** - This setting either enables or disables custom apps for your organization. It needs to be on. 
-* **Team custom app setting** - This setting is for each individual team inside Microsoft Teams. If you want to install your app for a specific team, this will need to be on for that team.
-* **User custom app policy** - This set of settings controls the permissions for an individual user. You'll need to enable this for individuals you want to upload custom apps.
+* **Org-wide custom app setting**: **On** — This setting enables or disables custom apps for your organization. It needs to be on. 
+* **Team custom app setting**: **On** — This setting applies to each individual team inside Microsoft Teams. If you want to install your app for a specific team, this will need to be on for that team.
+* **User custom app policy** — This set of settings controls the permissions for an individual user. You'll need to enable this for individuals you want to upload custom apps.
 
-For complete information on how these settings interact see [Manage custom app policies and settings in Microsoft Teams](/MicrosoftTeams/teams-custom-app-policies-and-settings).
+For complete information on how these settings interact, *see* [Manage custom app policies and settings in Microsoft Teams](/microsoftteams/teams-custom-app-policies-and-settings) and [Manage app setup policies in Microsoft Teams](/microsoftteams/teams-app-setup-policies).
