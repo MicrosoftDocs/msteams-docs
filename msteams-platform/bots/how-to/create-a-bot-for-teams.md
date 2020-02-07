@@ -3,6 +3,7 @@ title: Create a bot for Microsoft Teams
 author: clearab
 description: How to create a bot for Microsoft Teams.
 ms.topic: conceptual
+localization_priority: Priority
 ms.author: anclear
 ---
 # Create a bot for Microsoft Teams

@@ -33,7 +33,7 @@ The `value` field must contain a full and properly formed URL.
 {
     "type": "openUrl",
     "title": "Tabs in Teams",
-    "value": "https://msdn.microsoft.com/en-us/microsoft-teams/tabs"
+    "value": "https://msdn.microsoft.com/microsoft-teams/tabs"
 }
 ```
 

@@ -5,7 +5,7 @@ keywords: Configure Office 365 tenant Teams uploading
 ---
 # Prepare your Office 365 tenant
 
-To develop apps for Microsoft Teams, you need to be an [Office 365 customer with one of the following plans](https://products.office.com/en-us/business/compare-more-office-365-for-business-plans).
+To develop apps for Microsoft Teams, you need to be an [Office 365 customer with one of the following plans](https://products.office.com/business/compare-more-office-365-for-business-plans).
 
 * Business Essentials
 * Business Premium
@@ -17,7 +17,7 @@ Microsoft Teams will also be available to customers who purchased E4 prior to it
 
 ## Just need a development environment?
 
-If you don't currently have an Office 365 account, you can sign up for the [Office 365 Developer program](https://dev.office.com/devprogram) to get a *free* 90 days (can be renewed for as long as you're using it for development activity) Office 365 Developer Tenant. This account can only be used for testing purposes. See more information on [setting up your test accounts](https://support.office.com/en-us/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec?ui=en-US&rs=en-US&ad=US).
+If you don't currently have an Office 365 account, you can sign up for the [Office 365 Developer program](https://dev.office.com/devprogram) to get a *free* 90 days (can be renewed for as long as you're using it for development activity) Office 365 Developer Tenant. This account can only be used for testing purposes. See more information on [setting up your test accounts](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec?ui=en-US&rs=en-US&ad=US).
 
 ## Enable Microsoft Teams for your organization
 
