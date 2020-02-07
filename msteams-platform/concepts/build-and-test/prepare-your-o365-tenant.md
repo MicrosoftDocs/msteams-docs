@@ -21,7 +21,7 @@ If you don't currently have an Office 365 account, you can sign up for an [Offic
 
 ## Enable Microsoft Teams for your organization
 
-If Microsoft Teams is not yet enabled for your organization, you'll need to do that first. Take a look at our detailed guidance for [enabling Teams for your organization](microsoftteams/enable-features-office-365).
+If Microsoft Teams is not yet enabled for your organization, you'll need to do that first. Take a look at our detailed guidance for [enabling Teams for your organization](https://docs.microsoft.com/microsoftteams/enable-features-office-365).
 
 ## Enable custom Teams apps and turn on custom app uploading
 
@@ -34,4 +34,4 @@ There are three settings relevant to enabling custom apps and custom app uploadi
 * **Team custom app setting**: **On** — This setting applies to each individual team inside Microsoft Teams. If you want to install your app for a specific team, this will need to be on for that team.
 * **User custom app policy** — This set of settings controls the permissions for an individual user. You'll need to enable this for individuals you want to upload custom apps.
 
-For complete information on how these settings interact, *see* [Manage custom app policies and settings in Microsoft Teams](/microsoftteams/teams-custom-app-policies-and-settings) and [Manage app setup policies in Microsoft Teams](/microsoftteams/teams-app-setup-policies).
+For complete information on how these settings interact, *see* [Manage custom app policies and settings in Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings) and [Manage app setup policies in Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies).
