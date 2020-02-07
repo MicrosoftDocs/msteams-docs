@@ -1,3 +1,9 @@
+---
+title: Resource specific consent in Teams
+description: Describes resource specific consent in Teams and how to make advantage of it.
+keywords: teams authorization OAuth SSO AAD rsc
+---
+# Resource specific consent in Teams
 Resource-specific consent (RSC) in Microsoft Teams allows team owners to grant consent to an app to access their team's data and replaces the need for a global admin to approve the app with [tenant-wide admin permissions](/azure/active-directory/manage-apps/grant-admin-consent).
 These permissions include the ability to create, rename and delete channels, read channel messages, create tabs, and add or remove members from a team. This article provides a step-by-step guide to configure RSC in your Teams app.
 > [!Note]
