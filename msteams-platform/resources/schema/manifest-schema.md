@@ -315,6 +315,9 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 |`websiteUrl`|String|2048 characters||The https:// URL to point at if a user opts to view in a browser.|
 |`scopes`|Array of enum|1|✔|Currently, static tabs support only the `personal` scope, which means it can be provisioned only as part of the personal experience.|
 
+>> [!TIP]
+>> Your tabs might require contextual information to display relevant content. *See* [Get context for your Microsoft Teams tab](../../tabs/how-to/access-teams-context.md).
+
 ## bots
 
 **Optional**
