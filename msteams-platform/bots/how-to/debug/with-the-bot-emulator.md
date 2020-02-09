@@ -10,6 +10,6 @@ ms.author: anclear
 ## Writing notes
 
  * **Purpose** asdf
- * **Existing teams doc reference** []()
- * **Existing Bot framework doc reference** []()
+ * **Existing Teams doc reference** []()
+ * **Existing Bot Framework doc reference** []()
  * **Code Snippets** []()
