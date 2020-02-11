@@ -9,16 +9,21 @@ These permissions include the ability to create, rename and delete channels, rea
 > [!Note]
 > To provide consent to your app, the team owner must firstly install the Teams app. Webpages running outside Teams can make RSC Graph calls only after the corresponding Teams app has been installed.
 
-![Consent screen.](/assets/images/rsc/rsc-consentscreen.md)
+> [!Note]
+> When you make an RSC API call, Graph doesn't know on behalf of which user (if any) you are doing the work. Hence, you should be aware of the use cases such as creating a channel or removing a tab, as you are calling Application permissions rather than delegated permissions.
 
-## Admin Settings
 
-As an admin, you can control whether team owners in your organization can grant team-specific consent (enabled by default) through [settings](https://review.docs.microsoft.com/en-us/MicrosoftTeams/resource-specific-consent?branch=v-lanac-rsc) that you configure in the Azure Active Directory (Azure AD) PowerShell module or the Azure portal and the Microsoft Teams admin center.
+![Consent screen](~/assets/images/rsc/rsc-consentscreen.md)
+<!--![Consent screen.](../../assets/images/rsc/rsc-consentscreen.md)-->
 
+## Check admin settings
+
+<!--As an admin, you can control whether team owners in your organization can grant team-specific consent (enabled by default) through [settings](https://review.docs.microsoft.com/en-us/MicrosoftTeams/resource-specific-consent?branch=v-lanac-rsc) that you configure in the Azure Active Directory (Azure AD) PowerShell module or the Azure portal and the Microsoft Teams admin center.-->
+Before you configure RSC for your AAD app, ensure these [settings](https://review.docs.microsoft.com/en-us/MicrosoftTeams/resource-specific-consent?branch=v-lanac-rsc) are enabled by your tenant administrator.
 
 > **Important**: Changing any of these settings doesn't affect data access for apps that were already granted consent. 
 
-## Configure Teams App to support RSC (Developer)
+## Configure Teams app to support RSC (Developer)
 
 The basic steps required to configure a service and get a token from the Microsoft identity platform endpoint that your service can use to call Microsoft Graph under its own identity are:
 
@@ -61,13 +66,12 @@ Add a [webApplicationInfo](/microsoftteams/platform/resources/schema/manifest-sc
   ... 
 } 
 ```
-<!Refer to the list of available Graph permissions for RSC in [Teams permissions](../graph/permissions-reference?context=graph%2Fapi%2Fbeta&view=graph-rest-beta.md#Teams permissions)section.>
+RSC permissions are the ones that end with .Group suffix. For e.g. TeamSettings.Read.Group, ChannelSettings.Read.Group. 
 Refer to the list of available Graph permissions for RSC in <a href="https://docs.microsoft.com/en-us/graph/permissions-reference?context=graph%2Fapi%2Fbeta&view=graph-rest-beta">Teams permissions</a> section.
-When you make an RSC API call, Graph doesn't know on behalf of which user (if any) you are doing the work. Hence, you should be aware of the use cases such as creating a channel or removing a tab, as you are calling Application permissions rather than delegated permissions.
 
 #### 4. Get an access token 
 
-Before you make a REST call to the Graph, you need to [get an access token](/graph/auth-v2-service) for the application permissions similar to getting an application permission token for non-RSC use.
+Before you make a REST call to the Graph, you need to [get an access token](/graph/api/resources/teams-api-overview?view=graph-rest-beta) for the application permissions similar to getting an application permission token for non-RSC use.
 You specify the pre-configured permissions by passing `https://graph.microsoft.com/.default` as the value for the `scope` parameter in the token request. See the `scope` parameter description in the token request below for details.
 
 ### Token request
@@ -84,31 +88,17 @@ grant_type=client_credentials
 
 ```
 
-| Parameter     | Condition | Description 
-|:--------------|:----------|:------------
-| tenant        | Required | The directory tenant that you want to request permission from. This can be in GUID or a friendly name format.
-| client_id     | Required | The Application ID that the [Azure app registration portal](https://go.microsoft.com/fwlink/?linkid=2083908) assigned when you registered your app.
-| scope         | Required | The value passed for the `scope` parameter in this request should be the resource identifier (Application ID URI) of the resource you want, affixed with the `.default` suffix. For the Microsoft Graph, the value is `https://graph.microsoft.com/.default`. This value informs the Microsoft identity platform endpoint that of all the application permissions you have configured for your app, it should issue a token for the ones associated with the resource you want to use.
-| client_secret | Required | The Application Secret that you generated for your app in the app registration portal.
-| grant_type    | Required | Must be `client credentials`.
-
 #### Token response
 
 A successful response looks like this:
 
 ```JSON
 {
-  "token_type": "Bearer",
-  "expires_in": 3599,
-  "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik1uQ19WWmNBVGZNNXBP..."
+  "token_type": "{token_type}",
+  "expires_in": {seconds},
+  "access_token": "{access_token}"
 }
 ```
-
-| Parameter     | Description
-|:--------------|:------------
-| access token | The requested access token. Your app can use this token in calls to Microsoft Graph.
-| token type    | Indicates the token type value. The only type that Azure AD supports is `bearer`.
-| expires in   | How long the access token is valid (in seconds).
 
   
 #### 5. Make a Graph call 
