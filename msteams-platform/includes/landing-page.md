@@ -1,3 +1,12 @@
+---
+title: Microsoft Teams developer platform
+author: clearab/laujan
+description: Add a short description.
+layout: LandingPage
+ms.topic: landing-page
+localization_priority: Priority
+ms.author: anclear/lajanuar
+---
 <div id="main" class="v2">
     <div class="container">
         <h1>Microsoft Teams Developer Platform</h1>
