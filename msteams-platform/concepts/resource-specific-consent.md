@@ -14,7 +14,7 @@ These permissions include the ability to create, rename and delete channels, rea
 
 
 <!--![Consent screen](~/assets/images/rsc/rsc-consentscreen.md)-->
-![Consent screen.](/msteams-platform/assets/images/rsc/rsc-consentscreen.md)
+![Consent screen.](/msteams-docs/msteams-platform/assets/images/rsc/rsc-consentscreen.md)
 
 ## Check admin settings
 
@@ -72,7 +72,7 @@ For example, Your AAD app may need Mail.Read permission, but this is not an RSC 
 
 #### 4. Get an access token 
 
-Before you make a REST call to the Graph, you need to [get an access token](~/graph/api/resources/teams-api-overview?view=graph-rest-beta) for the application permissions similar to getting an application permission token for non-RSC use.
+Before you make a REST call to the Graph, you need to [get an access token](/graph/auth-register-app-v2) for the application permissions similar to getting an application permission token for non-RSC use.
 You specify the pre-configured permissions by passing `https://graph.microsoft.com/.default` as the value for the `scope` parameter in the token request. See the `scope` parameter description in the token request below for details.
 
 ### Token request
