@@ -2,6 +2,7 @@
 title: Resource specific consent in Teams
 description: Describes resource specific consent in Teams and how to make advantage of it.
 keywords: teams authorization OAuth SSO AAD rsc
+author: v-romad
 ---
 # Resource specific consent in Teams
 Resource-specific consent (RSC) in Microsoft Teams allows team owners to grant consent to an app to access their team's data and replaces the need for a global admin to approve the app with [tenant-wide admin permissions](/azure/active-directory/manage-apps/grant-admin-consent).
@@ -9,8 +10,8 @@ These permissions include the ability to create, rename and delete channels, rea
 > [!Note]
 > To provide consent to your app, the team owner must firstly install the Teams app. Webpages running outside Teams can make RSC Graph calls only after the corresponding Teams app has been installed.
 
-> [!Note]
-> When you make an RSC API call, Graph doesn't know on behalf of which user (if any) you are doing the work. Hence, you should be aware of the use cases such as creating a channel or removing a tab, as you are calling Application permissions rather than delegated permissions.
+> [!Important]
+> When you make an RSC API call, Graph doesn't know on behalf of which user (if any) you are performing the action. Hence, you should be aware of the use cases (e.g. creating a channel or removing a tab), as you are calling application permissions rather than delegated permissions.
 
 
 <!--![Consent screen](~/assets/images/rsc/rsc-consentscreen.md)-->
@@ -65,18 +66,17 @@ RSC permissions are the ones that end with .Group suffix. For e.g. TeamSettings.
 Refer to the list of available Graph permissions for RSC in <a href="https://docs.microsoft.com/en-us/graph/permissions-reference?context=graph%2Fapi%2Fbeta&view=graph-rest-beta">Teams permissions</a> section.
 
 #### 3. Add non-RSC permissions
-To configure non-RSC permissions (if any), navigate to the 'API permissions' section in the app registration portal to add the permissions like part of any normal app registration process.
+To configure non-RSC permissions (if any), navigate to the 'API permissions' section in the app registration portal to add the permissions as part of any app registration process.
 
 E.g. Graph permissions are not always about Teams data.
 For example, Your AAD app may need Mail.Read permission, but this is not an RSC scenario because it is not about team data, and team owners cannot give consent to other's mailboxes. APIs for Files, SharePoint, OneNote, Planner, and Calendar within a team do not support RSC yet.
 
 #### 4. Get an access token 
 
-Before you make a REST call to the Graph, you need to [get an access token](/graph/auth-register-app-v2) for the application permissions similar to getting an application permission token for non-RSC use.
+Before you make a REST call to the Graph, you need to [get an access token](/graph/auth-v2-service?context=graph%2Fapi%2Fbeta&view=graph-rest-beta#4-get-an-access-token) for the application permissions similar to getting an application permission token for non-RSC use.
 You specify the pre-configured permissions by passing `https://graph.microsoft.com/.default` as the value for the `scope` parameter in the token request. See the `scope` parameter description in the token request below for details.
 
-### Token request
-
+##### Token request
 ```
 POST https://login.microsoftonline.com/{tenant}/oauth2/v2.0/token
 Host: login.microsoftonline.com
@@ -86,13 +86,10 @@ grant_type=client_credentials
 &client_id={appId}
 &client_secret={appSecret}
 &scope=https%3A%2F%2Fgraph.microsoft.com%2F.default
-
 ```
 
-#### Token response
-
+##### Token response
 A successful response looks like this:
-
 ```JSON
 {
   "token_type": "{token_type}",
@@ -100,8 +97,7 @@ A successful response looks like this:
   "access_token": "{access_token}"
 }
 ```
-
-  
+ 
 #### 5. Make a Graph call 
 
 You can now make a REST call like a non-RSC call or use the SDK. See [Microsoft Graph](https://developer.microsoft.com/en-us/graph) and [Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview?view=graph-rest-beta) for more details. 
