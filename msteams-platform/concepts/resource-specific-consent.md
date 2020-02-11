@@ -13,8 +13,8 @@ These permissions include the ability to create, rename and delete channels, rea
 > When you make an RSC API call, Graph doesn't know on behalf of which user (if any) you are doing the work. Hence, you should be aware of the use cases such as creating a channel or removing a tab, as you are calling Application permissions rather than delegated permissions.
 
 
-![Consent screen](~/assets/images/rsc/rsc-consentscreen.md)
-<!--![Consent screen.](../../assets/images/rsc/rsc-consentscreen.md)-->
+<!--![Consent screen](~/assets/images/rsc/rsc-consentscreen.md)-->
+![Consent screen.](/msteams-platform/assets/images/rsc/rsc-consentscreen.md)
 
 ## Check admin settings
 
@@ -40,13 +40,8 @@ The basic steps required to configure a service and get a token from the Microso
 >[!Note]
 >It is not a good idea to have multiple Teams apps link to the same AAD app ID. Team AAD app ID must be unique – if anyone tries to install and link multiple Teams app to the same AAD app ID, the installation will fail.
 
-#### 2. Check permissions configured in the 'API Permissions' section
-RSC permissions are only configured in the app manifest file. However, we need to check permissions in the 'API permissions' section in the app registration portal. Navigate to the 'API Permissions' section to check for any RSC and non-RSC permissions. If your app is newly registered, it may not have any additional permissions configured. Hence you can proceed further to step 3 to configure RSC permissions in the app manifest file. On the other side, if your app is an existing app, it may have additional permissions configured. In this case, ensure there are no RSC permissions configured here as we will configure them in the app manifest file as part of step 3. You can retain the non-RSC permissions like part of any normal app registration process.
 
-E.g. Graph permissions are not always about Teams data.
-For example, Your AAD app may need Mail.Read permission, but this is not an RSC scenario because it is not about team data, and team owners cannot give consent to other's mailboxes. APIs for Files, SharePoint, OneNote, Planner, and Calendar within a team do not support RSC yet.
-
-#### 3. Update your Teams app manifest to link to your AAD app ID
+#### 2. Add RSC permissions
 Add a [webApplicationInfo](/microsoftteams/platform/resources/schema/manifest-schema#webapplicationinfo) section to the manifest that includes two properties - `id` is the AAD app ID, and `applicationPermissions` are the RSC permissions (scopes) your app requires.
 
 > **Note**: If your app needs non-RSC permissions, you can continue to use them as always, but they do not go in the manifest. 
@@ -69,9 +64,15 @@ Add a [webApplicationInfo](/microsoftteams/platform/resources/schema/manifest-sc
 RSC permissions are the ones that end with .Group suffix. For e.g. TeamSettings.Read.Group, ChannelSettings.Read.Group. 
 Refer to the list of available Graph permissions for RSC in <a href="https://docs.microsoft.com/en-us/graph/permissions-reference?context=graph%2Fapi%2Fbeta&view=graph-rest-beta">Teams permissions</a> section.
 
+#### 3. Add non-RSC permissions
+To configure non-RSC permissions (if any), navigate to the 'API permissions' section in the app registration portal to add the permissions like part of any normal app registration process.
+
+E.g. Graph permissions are not always about Teams data.
+For example, Your AAD app may need Mail.Read permission, but this is not an RSC scenario because it is not about team data, and team owners cannot give consent to other's mailboxes. APIs for Files, SharePoint, OneNote, Planner, and Calendar within a team do not support RSC yet.
+
 #### 4. Get an access token 
 
-Before you make a REST call to the Graph, you need to [get an access token](/graph/api/resources/teams-api-overview?view=graph-rest-beta) for the application permissions similar to getting an application permission token for non-RSC use.
+Before you make a REST call to the Graph, you need to [get an access token](~/graph/api/resources/teams-api-overview?view=graph-rest-beta) for the application permissions similar to getting an application permission token for non-RSC use.
 You specify the pre-configured permissions by passing `https://graph.microsoft.com/.default` as the value for the `scope` parameter in the token request. See the `scope` parameter description in the token request below for details.
 
 ### Token request
