@@ -6,4 +6,4 @@ description: Contains documentation for developers to enable them to build great
 localization_priority: Priority
 author: clearab
 ---
-[!include[Content](~/includes/landing-page.html)]
+[!include[Content](~/includes/landing-page.md)]
