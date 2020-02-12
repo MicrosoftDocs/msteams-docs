@@ -49,6 +49,16 @@ Find a way to facilitate conversation around a tab. This ensures that conversati
 
 Make sure you’re granting access to the right people at the right time. Keeping your sign-in process simple will avoid creating barriers to contribution and collaboration.
 
+### Responsiveness to window sizing
+Teams can be used in window sizes as small as 720px so making sure that a tab is usable in a small window is as important as usability at very high resolutions.
+
+### Flat navigation 
+We ask developers not to add their entire portal to a tab. Keeping the navigation relatively flat helps maintain a simpler conversational model. In other words, the conversation is about a list of things such as triaged work items, or a single thing, like a spec. 
+Because of the problems that it creates in conjunction with the threaded conversation that comes with the tab, navigation needs to be kept to a minimum. Navigation should be one of the following:
+* Open a Task module such as an individual work item or entity. This precludes chat entirely and is the best option to keep chat specifically about the tab and not the sub-entities or editing experiences.
+* Open a pseudo dialog in the i-frame. If this is used with a screened background we recommend using the lighter color rather than the dark. $app-gray-10 at 30% transparency works well
+* Open a browser page. 
+
 ### Personality
 
 Your tab canvas presents a good opportunity to brand your experience. Incorporate your own logos, colors, and layouts to communicate personality.
@@ -111,3 +121,10 @@ Whenever possible, cards and bots should deep link to richer data in a hosted ta
 ### Naming
 
 In many cases, the name of your app may make a great tab name. But consider naming your tabs according to the functionality they provide.
+
+## Notifications for tabs
+There are two modes for notifications of tab content changes. 
+* Using the app api to notify users of changes. This message will show up in the user’s activity feed and deep link to the tab 
+* Using a bot. This method is preferred especially if the Tab thread is targeted. The result will be that the tab’s threaded conversation will be moved into view as recently active. This method also allows for some sophistication in how the notification is sent. 
+    * Sending the message to the Tab thread increases awareness of activity to all users without explicitly notifying everyone. This is awareness without noise.
+    * In addition, @mentioning specific users in the same notification will place a notification in their feed, deep linking them to the tab thread directly. 
