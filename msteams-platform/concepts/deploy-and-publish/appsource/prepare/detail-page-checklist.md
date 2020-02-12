@@ -36,7 +36,7 @@ This is one of the first elements that users see. It should be attractive and ey
 
 ## Outline icon
 
-This is used in messaging extensions marked as a favorite by the user and the left navigation menu. Make sure it's simple and recognizable.
+This is used in messaging extensions marked as a favorite by the user and the left navigation menu. Make sure it's simple and recognizable. Your outline icon must contain only white and transparency (no other colors). For required specifications, *see* [Create an app package for your Microsoft Teams app - Icons](../../../build-and-test/apps-package.md#icons).
 
 ![App icon outline store view](~/assets/images/store-detail-page/AppIconOutline-02.png)
 ![App icon outline appstudio view](~/assets/images/store-detail-page/AppIconOutline-01.png)
