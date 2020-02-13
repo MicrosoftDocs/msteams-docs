@@ -12,20 +12,16 @@ These permissions include the ability to create, rename and delete channels, rea
 > [!Important]
 > When you make an RSC API call, Graph doesn't know on behalf of which user (if any) you are performing the action. Hence, you should be aware of the use cases (e.g. creating a channel or removing a tab), as you are calling application permissions rather than delegated permissions.
 
-
-<!--![Consent screen](~/assets/images/rsc/rsc-consentscreen.md)-->
 ![Consent screen.](/msteams-docs/msteams-platform/assets/images/rsc/rsc-consentscreen.md)
 
 ## Check admin settings
 
-<!--As an admin, you can control whether team owners in your organization can grant team-specific consent (enabled by default) through [settings](https://review.docs.microsoft.com/en-us/MicrosoftTeams/resource-specific-consent?branch=v-lanac-rsc) that you configure in the Azure Active Directory (Azure AD) PowerShell module or the Azure portal and the Microsoft Teams admin center.-->
 Before you configure RSC for your AAD app, ensure these [settings](https://review.docs.microsoft.com/en-us/MicrosoftTeams/resource-specific-consent?branch=v-lanac-rsc) are enabled by your tenant administrator.
 
 > **Important**: Changing any of these settings doesn't affect data access for apps that were already granted consent. 
 
 ## Configure Teams app to support RSC (Developer)
 
-<!-- The basic steps required to configure a service and get a token from the Microsoft identity platform endpoint that your service can use to call Microsoft Graph under its own identity are:-->
 Here are the steps required to configure RSC for your Microsoft Teams app:
 
 1. Register your application in Azure AD.
