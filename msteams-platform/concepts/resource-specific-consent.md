@@ -25,7 +25,8 @@ Before you configure RSC for your AAD app, ensure these [settings](https://revie
 
 ## Configure Teams app to support RSC (Developer)
 
-The basic steps required to configure a service and get a token from the Microsoft identity platform endpoint that your service can use to call Microsoft Graph under its own identity are:
+<!-- The basic steps required to configure a service and get a token from the Microsoft identity platform endpoint that your service can use to call Microsoft Graph under its own identity are:-->
+Here are the steps required to configure RSC for your Microsoft Teams app:
 
 1. Register your application in Azure AD.
 2. Check permissions configured in the 'API Permissions' section.
