@@ -38,6 +38,24 @@ Scenarios that work well in a channel will usually work just as well in a group 
 
 This is the traditional way for a conversational bot to interact with a user. They can enable incredibly diverse workloads. Q&A bots, bots that initiate workflows in other systems, bots that tell jokes, and bots that take notes are just a few examples. Just remember to consider whether a conversation-based interface is the best way to present your functionality.
 
+## When to NOT use bots?
+### Multi-turn experiences in chat
+Not only are they tedious and a slower way to get a task completed, it also requires the developer to maintain state. To exit this state a user must either time-out or type “Cancel”
+
+USER: 	schedule a meeting with Michael
+BOT: 	I’ve found 200 Michaels, please include a first and last name
+USER: 	schedule a meeting with Michael Forney
+BOT:	OK, what time would you like to meet with Michael K. Forney
+USER: 	1:00pm
+BOT: 	1:00pm on which day?
+Etc...
+
+### Too many commands
+In the same way a restaurant with a 10-page menu is doomed to mediocracy, a bot that supports too many commands and especially a broad range of commands is doomed to failure. Since there are only 6 commands visible in the bot menu today anything more than that are unlikely to be used with any frequency. Bots that go deep into a specific area rather than try to be a broad assistant will work better. 
+
+### Response contains large unranked results
+Bot responses are best suited for short, quick interactions, not sifting though long lists looking for an answer.
+
 ## How do bots work?
 
 Your bot consists of three pieces:
