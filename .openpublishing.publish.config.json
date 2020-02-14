@@ -2,7 +2,7 @@
     "docsets_to_publish": [{
         "customized_tasks": {
             "docset_prebuild": [
-                "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
+                
             ]
         },
         "docset_name": "msteams-platform",
