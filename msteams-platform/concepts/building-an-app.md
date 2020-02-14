@@ -82,3 +82,4 @@ Getting started tutorials:
 * [Build a bot and tab app in C#](~/tutorials/get-started-dotnet-app-studio.md)
 * [Build a bot and tab app in JavaScript/Node.js](~/tutorials/get-started-nodejs-app-studio.md)
 * [Create an app with the Yeoman generator](~/tutorials/get-started-yeoman.md)
+
