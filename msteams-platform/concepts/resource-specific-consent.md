@@ -20,7 +20,7 @@ Before you configure RSC for your AAD app, ensure these [settings](https://revie
 
 > **Important**: Changing any of these settings doesn't affect data access for apps that were already granted consent. 
 
-## Configure Teams app to support RSC (Developer)
+## Configure Teams app to support RSC
 
 Here are the steps required to configure RSC for your Microsoft Teams app:
 
