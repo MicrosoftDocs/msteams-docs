@@ -42,16 +42,16 @@ This is the traditional way for a conversational bot to interact with a user. Th
 ### Multi-turn experiences in chat
 Not only are they tedious and a slower way to get a task completed, it also requires the developer to maintain state. To exit this state a user must either time-out or type “Cancel”
 
-USER: 	schedule a meeting with Michael
+USER: 	schedule a meeting with Megan
 BOT: 	I’ve found 200 Michaels, please include a first and last name
-USER: 	schedule a meeting with Michael Forney
-BOT:	OK, what time would you like to meet with Michael K. Forney
+USER: 	schedule a meeting with Megan Bowen
+BOT:	OK, what time would you like to meet with Megan Bowen
 USER: 	1:00pm
 BOT: 	1:00pm on which day?
 Etc...
 
 ### Too many commands
-In the same way a restaurant with a 10-page menu is doomed to mediocracy, a bot that supports too many commands and especially a broad range of commands is doomed to failure. Since there are only 6 commands visible in the bot menu today anything more than that are unlikely to be used with any frequency. Bots that go deep into a specific area rather than try to be a broad assistant will work better. 
+In the same way a restaurant with a 10-page menu is doomed to mediocrity, a bot that supports too many commands and especially a broad range of commands is doomed to failure. Since there are only 6 commands visible in the bot menu today anything more than that is unlikely to be used with any frequency. Bots that go deep into a specific area rather than try to be a broad assistant will work better. 
 
 ### Response contains large unranked results
 Bot responses are best suited for short, quick interactions, not sifting though long lists looking for an answer.
