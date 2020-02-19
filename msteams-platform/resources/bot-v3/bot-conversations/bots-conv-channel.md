@@ -130,8 +130,6 @@ await client.Conversations.ReplyToActivityAsync(replyActivity);
 
 #### Node.js example
 
-This sample uses the [botbuilder-teams](https://www.npmjs.com/package/botbuilder-teams) npm package.
-
 ```javascript
 // User to mention
 var toMention: builder.IIdentity = {
@@ -193,3 +191,5 @@ session.send(generalMessage);
 ## Accessing groupChat or channel scope
 
 Your bot can do more than send and receive messages in groups and teams. For instance, it can also fetch the list of members, including their profile information, as well as the list of channels. See [Get context for your Microsoft Teams bot](~/resources/bot-v3/bots-context.md) to learn more.
+
+*See also* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).

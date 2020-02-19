@@ -594,8 +594,6 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 
 ### Node.js
 
-The [Teams extensions](https://www.npmjs.com/package/botbuilder-teams) for the Bot Builder SDK for Node.js provide helper objects and methods to simplify receiving, processing, and responding to messaging extension requests.
-
 #### Example code in Node.js
 
 ```javascript
@@ -651,3 +649,4 @@ class App {
 const app = new App();
 app.run();
 ```
+*See also* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
