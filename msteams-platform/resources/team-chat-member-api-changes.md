@@ -6,7 +6,7 @@ keywords: bot framework apis team members roster
 ms.topic: reference
 ms.author: ojchoudh
 ---
-#Changes to Teams Bot APIs for Fetching Team/Chat Members
+# Changes to Teams Bot APIs for Fetching Team/Chat Members
 
 Currently, bot developers who want to retrieve information for one or more members of a chat or team use the Microsoft Teams bot APIs TeamsInfo.GetMembersAsync (for C#) or TeamsInfo.getMembers (for TypeScript/Node.js) APIs [(documented here)](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetching-the-roster-or-user-profile). These APIs have several shortcomings today:
 
