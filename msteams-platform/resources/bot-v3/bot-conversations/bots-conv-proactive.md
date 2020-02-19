@@ -124,8 +124,6 @@ await client.Conversations.SendToConversationAsync(newActivity, response.Id);
 
 ### Using Node.js
 
-This example uses the [botbuilder-teams](https://www.npmjs.com/package/botbuilder-teams) npm package.
-
 ```javascript
 var address =
 {
@@ -149,6 +147,8 @@ var msg = new builder.Message().address(address);
 msg.text('Hello, this is a notification');
 bot.send(msg);
 ```
+
+*See also* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
 
 ## Creating a channel conversation
 
