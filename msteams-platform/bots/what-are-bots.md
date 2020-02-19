@@ -43,7 +43,7 @@ This is the traditional way for a conversational bot to interact with a user. Th
 Not only are they tedious and a slower way to get a task completed, it also requires the developer to maintain state. To exit this state a user must either time-out or type “Cancel”
 
 USER: 	schedule a meeting with Megan
-BOT: 	I’ve found 200 Michaels, please include a first and last name
+BOT: 	I’ve found 200 Megan, please include a first and last name
 USER: 	schedule a meeting with Megan Bowen
 BOT:	OK, what time would you like to meet with Megan Bowen
 USER: 	1:00pm
