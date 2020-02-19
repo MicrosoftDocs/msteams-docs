@@ -48,7 +48,7 @@ This is a list of all your tabs in the person's organization (the ones they have
 
 A bot isn't required, but it's a great way to communicate directly and privately with your users. Notification is one of the most important functions of a personal app, and what better way to notify than with direct communication?
 
-Bots deliver messages in the form of cards, which can provide specific information (like an alert that new content is available) or broad updates (like a daily to-do list). For additional information on designing effective bots see: [Bot design(~/bots/design/bots.md).
+Bots deliver messages in the form of cards, which can provide specific information (like an alert that new content is available) or broad updates (like a daily to-do list). For additional information on designing effective bots see: [Bot design](~/bots/design/bots.md).
 
 ![Bot greeting](~/assets/images/Personal-apps-Bot.png)
 
