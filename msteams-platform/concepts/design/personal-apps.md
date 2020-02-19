@@ -28,7 +28,7 @@ A personal app typically contains the following tabs:
 
 ### Your tab
 
-This is where your users will see all their stuff. It's their personal space. The tab can be arranged as a list, a grid, columns, or a single canvas...whatever works best for your application. For additional information on designing effective tabs see: [Tabs design(~/tabs/design/tabs.md).
+This is where your users will see all their stuff. It's their personal space. The tab can be arranged as a list, a grid, columns, or a single canvas...whatever works best for your application. For additional information on designing effective tabs see: [Tabs design](~/tabs/design/tabs.md).
 
 Since this tab can show items from multiple channels, each item should display its own team, channel, and tab so the user can easily see where it originated.
 
