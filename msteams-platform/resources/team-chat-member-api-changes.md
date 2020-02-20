@@ -43,7 +43,7 @@ Here’s a sample JSON representation of what’s returned by these APIs today. 
 ```
 
 ## API Changes
-Consequently, we are announcing the following changes:
+Here are the API changes we plan to make:
 
 * We are creating a new paged API for retrieving profile information for members of a chat/team. Preliminary documentation for the C# function [`GetConversationPagedMembers`](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.conversationsextensions.getconversationpagedmembersasync?view=botbuilder-dotnet-stable) in the Bot Framework 4.x SDK is available [now](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.conversationsextensions.getconversationpagedmembersasync?view=botbuilder-dotnet-stable); documentation for the TypeScript/Node.js version is forthcoming. This API will also be available in Bot Framework 3.x.
 * We are creating a new API for retrieving the profile information for a single user. We will document this new API in March 2020, but we can provide a few details: it will take the ID of the team/chat and a [UPN](https://docs.microsoft.com/windows/win32/ad/naming-properties#userprincipalname) (`userPrincipalName` above), Azure Active Directory Object ID (`objectId` above), or the Teams user ID (`id` above) as parameters and return the profile information for that user. Note: this API is currently available, but the documentation isn't finished, and the schema of the JSON object it returns will change slightly in the near future: we are changing `objectId` to `aadObjectId` to match what it's called in the `Activity` object of a Bot Framework message.
