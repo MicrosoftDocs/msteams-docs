@@ -342,6 +342,8 @@
         href: resources/bot-v3/bots-menus.md
       - name: Bots with tabs
         href: resources/bot-v3/bots-with-tabs.md
+      - name: Formatting bot messages
+        href: resources/bot-v3/bots-text-formats.md  
       - name: Test a bot
         href: resources/bot-v3/bots-test.md
     - name: Messaging Extensions - v3 SDK

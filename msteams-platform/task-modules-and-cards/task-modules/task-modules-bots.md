@@ -71,8 +71,6 @@ This section defines the schema of what your bot receives when it receives a `ta
 
 ## Example: Receiving and responding to task/fetch and task/submit invoke messages - Node.js
 
-Dealing with `invoke` messages in Bot Framework can be a little tricky because there's no formal support for them in the Bot Framework SDK. To make it easier, Teams has created `onInvoke()` helper functions in the [botbuilder-teams npm package (for Node.js)](https://www.npmjs.com/package/botbuilder-teams). This example below shows how to do it:
-
 > [!NOTE]
 > The sample code below was modified between Technical Preview and final release of this feature: the schema of the `task/fetch` request changed to follow what was [documented in the previous section](#payload-of-taskfetch-and-tasksubmit-messages). That is, the documentation was correct but the implementation was not. See the `// for Technical Preview [...]` comments below for what changed.
 
@@ -153,6 +151,8 @@ private async onInvoke(event: builder.IEvent, cb: (err: Error, body: any, status
     }
 }
 ```
+
+*See also*, [Microsoft Teams task module sample code — nodejs](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs/blob/master/src/TeamsBot.ts) and  [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
 
 ## Example: Receiving and responding to task/fetch and task/submit invoke messages - C#
 
