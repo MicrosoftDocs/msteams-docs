@@ -89,7 +89,7 @@ Your bot should always be responsive to any command and not dead-end the user. H
 
 * **Think through all scopes**. Be sure that your bot provides appropriate responses when mentioned (`@*botname*`) in a channel and in personal conversations. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](~/resources/schema/manifest-schema.md#bots).)
 
-##  Policy 14.15.9 — bots **must** send a welcome message on first launch
+## Policy 14.15.9 — bots must send a welcome message on first launch
 
 A welcome message is the best way to set tone and it's the first interaction a user has with your bot. A good welcome message can encourage the user to keep exploring the app. If the welcome or introductory message is confusing or unclear, users won't immediately see the value of your app and lose interests.
 
