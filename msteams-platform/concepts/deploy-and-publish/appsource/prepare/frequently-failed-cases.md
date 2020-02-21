@@ -3,7 +3,7 @@ title: Tips and frequently failed cases
 description: Describes tips for submission and most failed policies  
 keywords: teams publish faq failed frequently cases tip tips 
 ---
-# Tips for successful app submissions
+# Tips for a successful app submission
 
 This article addresses common reasons submitted apps fail validation. While it's not intended to be an exhaustive list of all potential issues with your app, following this guide will increase the likelihood that your app submission will pass the first time. *See* [Commercial marketplace certification policies](/legal/marketplace/certification-policies) for an extensive list of validation policies.
 
