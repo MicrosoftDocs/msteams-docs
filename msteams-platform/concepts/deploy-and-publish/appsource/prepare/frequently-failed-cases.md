@@ -3,23 +3,27 @@ title: Tips and frequently failed cases
 description: Describes tips for submission and most failed policies  
 keywords: teams publish faq failed frequently cases tip tips 
 ---
-# Tips for a successful app submission
+# Tips for successful app submissions
 
-This article addresses common reasons submitted apps fail validation. While it's not intended to be an exhaustive list of all potential issues with your app, following this guide will increase the likelihood that your app submission will pass the first time. *See* [Commercial marketplace certification policies](/legal/marketplace/certification-policies) for an extensive list of policies.
+This article addresses common reasons submitted apps fail validation. While it's not intended to be an exhaustive list of all potential issues with your app, following this guide will increase the likelihood that your app submission will pass the first time. *See* [Commercial marketplace certification policies](/legal/marketplace/certification-policies) for an extensive list of validation policies.
 
 >[!NOTE]
->**[Section 1140](/legal/marketplace/certification-policies#1140-teams)** is specific to Microsoft Teams apps and **[sub-section 1140.4](https://docs.microsoft.com/legal/marketplace/certification-policies#11404-functionality)** addresses functionality requirements for Teams apps.
+>**[Section 1140](/legal/marketplace/certification-policies#1140-teams)** is specific to Microsoft Teams and **[sub-section 1140.4](https://docs.microsoft.com/legal/marketplace/certification-policies#11404-functionality)** addresses functionality requirements for Teams apps.
 
-### General validation policies
+## Validation guidelines
+
+### &#9989; General considerations
+
+*See also* [Section 100 — General](/legal/marketplace/certification-policies#100-general)
 
 * Ensure you are using version 1.4.1 or later of the [Microsoft Teams SDK](https://www.npmjs.com/package/@microsoft/teams-js).
 * Don't make changes to your app while the validation process is in progress. Doing so will require a complete revalidation of your app.
-* Your app  must not stop responding, end unexpectedly, or contain programming errors. If an issue is encountered, your app should fail gracefully with a valid-way-forward message to the user.
-* Your app must not automatically download, install, or launch any executable code in the user environment. Any download should seek explicit permission from the user.
+* Your app  must not stop responding, end unexpectedly, or contain programming errors. If an issue is encountered, your app should fail gracefully and provide a valid-way-forward message to the user.
+* Your app must not automatically download, install, or launch any executable code in the user environment. All downloads should seek explicit permission from the user.
 * Any material that you associate with your experience, such as descriptions and support documentation, must be accurate. Use correct spelling, capitalization, punctuation, and grammar in your descriptions and materials.
 * Provide help and support information. It's highly recommended that your app include a help/FAQ link for the first-run user experience. For all personal apps, we recommend providing your help page as a personal tab for a better user experience.
 
-### Apps and add-ins that depend on external accounts or services must provide a clear and simple sign in/sign out and sign-up experience.
+### &#9989; Apps and add-ins that depend on external accounts or services must provide a clear and simple sign in/sign out and sign-up experience.
 
 *See also* [Section 1100.5 — Customer control](/legal/marketplace/certification-policies#11005-customer-control)
 
@@ -44,7 +48,7 @@ For additional information on authentication see:
 * [Tab authentication sample in Node](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
 * [Tab/bot authentication in C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
 
-### Response times must be reasonable
+### &#9989; Response times must be reasonable
 
 * If a response to an action takes more than three seconds, you must provide a loading message or warning.
 * A response to a user command must occur within two seconds. If longer processing is required, your app must display a typing indicator.
@@ -53,7 +57,7 @@ For additional information on authentication see:
 > [!TIP]
 > Make sure your app displays a loading indicator when it is taking longer than expected to respond.
 
-### Content in a tab should not have excessive chrome or layered navigation
+### &#9989; Content in a tab should not have excessive chrome or layered navigation
 
 * Tabs should provide focused content and avoid needless UI elements. In general, this usually refers to unnecessary nested/layered navigation, an extraneous or irrelevant UI next to the content, or any links that take the user to unrelated content. For example, here is a tab view that omits navigation menus and only showcases the main content:
 
@@ -64,7 +68,7 @@ For additional information on authentication see:
 
 ![Wide idea configuration page](~/assets/images/faq/wideidea.png)
 
-### Tab configuration must happen in the configuration screen, which must clearly explain the value of the experience and how to configure.
+### &#9989; Tab configuration must happen in the configuration screen, which must clearly explain the value of the experience and how to configure.
 
 * The configurable tab UI should not dead-end the user experience and always provide a way for users to continue.
 * A user should always be able to finish the configuration experience, even if they can’t immediately find the content they’re looking for. 
@@ -77,9 +81,9 @@ For additional information on authentication see:
 
 ![SharePoint also allows user to directly paste a SharePoint link](~/assets/images/faq/tab-sp-config.png)
 
-## Bots must be responsive and fail gracefully.
+### &#9989; Bots must always be responsive and fail gracefully
 
-Your bot should always be responsive to any command and not dead-end the user. Here are some tips to help your bot intelligently respond to users:
+Your bot should be responsive to any command and not dead-end the user. Here are some tips to help your bot intelligently respond to users:
 
 * **Use command lists**. Analyzing user input or predicting user intent is hard. Instead of letting users guess what your bot can do, provide a list of commands your bot understands.
 
@@ -93,7 +97,7 @@ Your bot should always be responsive to any command and not dead-end the user. H
 
 * **Think through all scopes**. Be sure that your bot provides appropriate responses when mentioned (`@*botname*`) in a channel and in personal conversations. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](~/resources/schema/manifest-schema.md#bots).)
 
-### Bots must send a welcome message on first launch that includes a help command and provides the value proposition and all valid commands
+### &#9989; Bots must send a welcome message on first launch that includes a help command and provides the value proposition and all valid commands
 
 Welcome messages are the best way to set your bot's tone. This is the first interaction a user has with the bot. A good welcome message can encourage the user to keep exploring the app. If the welcome or introductory message is confusing or unclear, users won't see the value of the app immediately and lose interests.
 
