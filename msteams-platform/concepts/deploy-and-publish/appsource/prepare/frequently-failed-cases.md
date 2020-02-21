@@ -19,7 +19,7 @@ This article addresses common reasons submitted apps fail validation. While it's
 * Any material that you associate with your experience, such as descriptions and support documentation, must be accurate. Use correct spelling, capitalization, punctuation, and grammar in your descriptions and materials.
 * Provide help and support information. It's highly recommended that your app include a help/FAQ link for the first-run user experience. For all personal apps, we recommend providing your help page as a personal tab for a better user experience.
 
-## sign up, sign in, and sign out flows
+## Sign up, sign in, and sign out flows
 
 Apps that depend on external accounts or services must provide a clear, simple sign in, sign out, and, when appropriate, sign-up experience. The experience must be reachable across all capabilities in your app.
 
