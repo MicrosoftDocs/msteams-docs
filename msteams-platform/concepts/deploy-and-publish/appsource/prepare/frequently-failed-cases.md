@@ -23,11 +23,11 @@ This article addresses common reasons submitted apps fail validation. While it's
 * Any material that you associate with your experience, such as descriptions and support documentation, must be accurate. Use correct spelling, capitalization, punctuation, and grammar in your descriptions and materials.
 * Provide help and support information. It's highly recommended that your app include a help/FAQ link for the first-run user experience. For all personal apps, we recommend providing your help page as a personal tab for a better user experience.
 
-### &#9989; Apps and add-ins that depend on external accounts or services must provide a clear and simple sign in/sign out and sign-up experience.
+### &#9989;  Provide a clear and simple sign in/sign out and sign-up experience
 
 *See also* [Section 1100.5 — Customer control](/legal/marketplace/certification-policies#11005-customer-control)
 
-* The sign in/sign out and sign-up experience. must be reachable across all capabilities in your app.
+* If your app or add-in depends on external accounts or services, the sign in/sign out and sign-up experience must be apparent and reachable across all capabilities in your app.
 * If there is an explicit sign-in option provided to the user, there must be a corresponding sign-out option (even if the app is using SSO/[silent authentication](~/tabs/how-to/authentication/auth-silent-aad.md)).
 * The sign-out option must only sign the user out of your app's capability and not out of the Teams client.
 * At a minimum, the sign-out option must sign the user out of the same capabilities accessed with the sign-in option. For example, if the sign-in option includes both a messaging extension and tab, then the sign-out option must include both the messaging extension and tab.
@@ -36,8 +36,8 @@ This article addresses common reasons submitted apps fail validation. While it's
   * Sign-in => sign-out.
   * Link an account/service => unlink an account/service.
   * Connect an account/service => disconnect an account/service.
-  * Authorize an account/service => unauthorize/deny an account/service.
-  * Register an account/service => unregister/remove an account/service.
+  * Authorize an account/service => deauthorize/deny an account/service.
+  * Register an account/service => unregister/unsubscribe an account/service.
 * If your app requires an account or service, you must provide a way for the user to sign up or to create a sign-up request. An exception may be granted if your app is an Enterprise application.
 * Sign in/sign out functionality must work on mobile clients. Ensure you're using the [Microsoft Teams SDK](https://www.npmjs.com/package/@microsoft/teams-js) version 1.4.1 or later.
 
@@ -50,16 +50,16 @@ For additional information on authentication see:
 
 ### &#9989; Response times must be reasonable
 
-* If a response to an action takes more than three seconds, you must provide a loading message or warning.
-* A response to a user command must occur within two seconds. If longer processing is required, your app must display a typing indicator.
-* A response to a user command must occur within five seconds.
+* **Tabs**. If a response to an action takes more than three seconds, you must provide a loading message or warning.
+* **Bots**. A response to a user command must occur within two seconds. If longer processing is required, your app must display a typing indicator.
+* **Compose extensions**. A response to a user command must occur within five seconds.
 
 > [!TIP]
-> Make sure your app displays a loading indicator when it is taking longer than expected to respond.
+> Make sure your app displays a loading indicator or some form of warning when your app is taking longer than expected to respond.
 
-### &#9989; Content in a tab should not have excessive chrome or layered navigation
+### &#9989; Tab content should not have excessive chrome or layered navigation
 
-* Tabs should provide focused content and avoid needless UI elements. In general, this usually refers to unnecessary nested/layered navigation, an extraneous or irrelevant UI next to the content, or any links that take the user to unrelated content. For example, here is a tab view that omits navigation menus and only showcases the main content:
+* Tabs should provide focused content and avoid needless UI elements. In general, this usually refers to unnecessary nested/layered navigation, an extraneous or irrelevant UI next to the content, or any links that take the user to unrelated content. For example, below is a tab view that omits navigation menus and only showcases the main content:
 
 ![SharePoint web view](~/assets/images/faq/web-sp.png)
 ![SharePoint tab view](~/assets/images/faq/tab-sp.png)
@@ -68,11 +68,12 @@ For additional information on authentication see:
 
 ![Wide idea configuration page](~/assets/images/faq/wideidea.png)
 
-### &#9989; Tab configuration must happen in the configuration screen, which must clearly explain the value of the experience and how to configure.
+### &#9989; Tab configuration must happen in the configuration screen
 
-* The configurable tab UI should not dead-end the user experience and always provide a way for users to continue.
-* A user should always be able to finish the configuration experience, even if they can’t immediately find the content they’re looking for. 
-* The configuration experience should provide options for the user to find their content, pin a URL, or create new content if it doesn’t exist. 
+* The configuration screen should clearly explain the value of the experience and how to configure the tab.
+* The configuration process should not dead-end the user experience and always provide a way for users to continue.
+* A user should always be able to finish the configuration experience, even if they can’t immediately find the content they’re looking for.
+* The configuration experience should provide options for the user to find their content, pin a URL, or create new content if it doesn’t exist.
 * The user shouldn’t have to leave the configuration experience to create content and then come back to Teams to pin it.
 
 ![OneNote allows users to paste a OneNote link in case notes can not be found](~/assets/images/faq/tab-onenote-config.png)
@@ -97,9 +98,13 @@ Your bot should be responsive to any command and not dead-end the user. Here are
 
 * **Think through all scopes**. Be sure that your bot provides appropriate responses when mentioned (`@*botname*`) in a channel and in personal conversations. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](~/resources/schema/manifest-schema.md#bots).)
 
-### &#9989; Bots must send a welcome message on first launch that includes a help command and provides the value proposition and all valid commands
+### &#9989; Bots must send a welcome message on first launch
 
-Welcome messages are the best way to set your bot's tone. This is the first interaction a user has with the bot. A good welcome message can encourage the user to keep exploring the app. If the welcome or introductory message is confusing or unclear, users won't see the value of the app immediately and lose interests.
+Welcome messages are the best way to set your bot's tone. This is the first interaction a user has with the bot. A good welcome message can encourage the user to keep exploring the app. If the welcome or introductory message is confusing or unclear, users won't see the value of the app immediately and lose interests. The welcome message must include the following:
+
+* A help command.
+* The value proposition
+* All valid commands.
 
 Here are a few considerations when designing your welcome message:
 
