@@ -1,7 +1,7 @@
 ---
 title: Tips and frequently failed cases 
 description: Describes tips for submission and most failed policies 
-author: laujan/ Emilyyc
+author: laujan
 ms.author: lajanuar
 ms.topic: how to
 ---
