@@ -1,7 +1,9 @@
 ---
 title: Tips and frequently failed cases 
-description: Describes tips for submission and most failed policies  
-keywords: teams publish faq failed frequently cases tip tips 
+description: Describes tips for submission and most failed policies 
+author: laujan/ Emilyyc
+ms.author: lajanuar
+ms.topic: how to
 ---
 # Tips for a successful app submission
 
