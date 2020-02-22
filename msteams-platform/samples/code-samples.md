@@ -1,0 +1,88 @@
+---
+title: Microsoft Teams code samples
+description: Links and descriptions of sample applications for the Microsoft Teams developer platform
+keywords: Microsoft Teams developer samples
+---
+# Code samples for the Microsoft Teams developer platform
+
+Here you will find a list of code samples that demonstrate various capabilities of the Microsoft Teams development platform and how to build apps to leverage those features.
+
+## Getting samples
+
+To download our samples from GitHub:
+
+1. Select one of the projects listed below and open the project in GitHub.
+2. Choose the **Clone or download** button and copy the URL
+3. Open a command prompt in the parent directory into which you want to install the sample project
+4. Run `git clone <pasted url>`
+
+### For .NET/C# samples
+
+Each of our .NET samples includes a Visual Studio solution file that can build the solution fully, including restoring the NuGet packages.
+
+### For Node.js samples
+
+We provide a packages.json file that lists all required packages for a sample. Simply run `npm install` from the command line in your Node.js project directory to install the required packages. You're now ready to open the project in Visual Studio Code and start experimenting.
+
+### For other samples
+
+As always, the project's README file should have more information on specific needs for specific samples.
+
+## Get Started
+
+| Sample | Description|
+|--------|-------------|
+| [Hello World in Microsoft Teams with Node.js](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) | A sample teams app in `Node.js` introducing you to the basic app capabilities.|
+| [Hello World in Microsoft Teams with C#.NET](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) | A sample teams app in `C# .NET` introducing you to the basic app capabilities.|
+| [Get started with the Yeoman generator for Teams](~/tutorials/get-started-yeoman.md) | Create a Teams app from scratch using the Yeoman generator for Microsoft Teams. |
+
+## Bots (using the v4 SDK)
+
+[!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
+
+## Messaging Extensions (using the v4 SDK)
+
+| Sample | Description | .NET Core | JavaScript |
+|--------|------------- |---|---|
+| Search command | Simple messaging extension with a search command | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+| Action command | Simple messaging extension with a action command. Response inserted into the compose message area. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)|
+| Action command w/bot response | Messaging extension with a action command. Response inserted into the conversation by the bot. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/53.teams-messaging-extensions-action-preview)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/53.teams-messaging-extensions-action-preview)|
+| Search command | messaging extension with a search command and authentication and configuration | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)|
+
+## Outgoing Webhooks
+
+| Sample | Description
+|--------|-------------
+| [Outgoing Webhook for C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook) | Illustrates how to create an **Outgoing Webhook** for Microsoft Teams in C#/.NET.
+| [Outgoing Webhook for Node.js](https://github.com/OfficeDev/msteams-samples-outgoing-webhook-nodejs) | Illustrates how to create a simple **Outgoing Webhook** for Microsoft Teams in ~50 lines of Node.js code.
+
+## Connectors
+
+| Sample | Description
+|--------|-------------
+| [Sample connector for Node.js](https://github.com/OfficeDev/microsoft-teams-sample-connector-nodejs) | This sample, written in Node.js, showcases how to build a connector for Microsoft Teams using GitHub as an example to generate connector notifications.
+| [Sample connector for C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-connector-csharp) | This sample, written in C#, showcases how to build a connector for Microsoft Teams using a sample task list app as an example to generate connector notifications.
+
+## Graph API
+
+| Sample | Description
+|--------|-------------
+| [Microsoft Graph API Samples](https://github.com/OfficeDev/microsoft-teams-sample-graph) | These samples demonstrate using Microsoft Graph API calls to perform tasks such as querying teams and channels from a web service running outside Microsoft Teams.
+
+## Others
+
+| Code | Description |
+|------|------------- |
+| [Complete sample in Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) | This sample shows how to use all the features of the Microsoft Teams platform. NOTE: This sample uses the Bot Framework v3 SDK.|
+| [Complete sample in C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) | This sample shows how to use all the features of the Microsoft Teams platform. NOTE: This sample uses the Bot Framework v3 SDK. |
+| [Line of Business apps in C#/.NET](https://github.com/OfficeDev/msteams-sample-line-of-business-apps-csharp) | This repository contains multiple example Line of Business apps that can be used for either inspiration or as templates to build on top of. NOTE: These samples use the Bot Framework v3 SDK.|
+| ["To-do" list sample tab app](https://github.com/OfficeDev/microsoft-teams-sample-todo) | This Node.js sample shows how easy it is to convert an existing web app into a tab. |
+| [Orky](https://github.com/OfficeDev/Orky) | You can use Orky to register your own local bot in Microsoft Teams and execute scripts from ANYWHERE! |
+| [Build 2017 Weather](https://github.com/OfficeDev/microsoft-teams-build2017-weather) | OUTDATED. Source code for the //build 2017 session to add a weather tab to the skeleton app generated earlier in the session. |
+
+### Bot Framework SDK v3 samples
+
+| Sample | Description |
+|--------|------------- |
+| [Sample bot for C#/.NET](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams/tree/master/CSharp/Samples/Microsoft.Bot.Connector.Teams.SampleBot) | Bot Framework v3 samples|
+| [Sample bot for Node.js](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams/tree/master/Node/samples) | Bot Framework v3 samples |

@@ -1,0 +1,60 @@
+{
+    "build": {
+        "content": [{
+            "files": [
+                "**/*.md",
+                "**/*.yml"
+            ],
+            "exclude": [
+                "**/obj/**",
+                "**/includes/**",
+                "**/_themes/**",
+                "**/_themes.pdf/**",
+                "**/_dependentPackages/**",
+                "**/_msteams-samples-*/**",
+                "README.md",
+                "LICENSE",
+                "LICENSE-CODE",
+                "ThirdPartyNotices"
+            ]
+        }],
+        "resource": [{
+            "files": [
+                "**/*.png",
+                "**/*.jpg",
+                "**/*.svg",
+                "**/*.gif",
+                "assets/**/*.pdf"
+            ],
+            "exclude": [
+                "**/obj/**",
+                "**/includes/**"
+            ]
+        }],
+        "overwrite": [],
+        "externalReference": [],
+        "globalMetadata": {
+            "uhfHeaderId": "MSDocsHeader-MicrosoftTeams",
+            "breadcrumb_path": "/microsoftteams/platform/breadcrumb/TOC.json",
+            "extendBreadcrumb": true,
+            "manager": "billbl",
+            "author": "laujan",
+            "ms.suite": "office365",
+            "ms.prod": "msteams",
+            "ms.author": "lajanuar",
+            "searchScope": ["Teams"],
+            "feedback_system": "GitHub",
+            "feedback_github_repo": "MicrosoftDocs/msteams-docs",
+            "feedback_product_url": "https://microsoftteams.uservoice.com/forums/555103-public",
+            "titleSuffix": "Teams"
+        },
+        "fileMetadata": {
+            "feedback_system": {
+                "docs-ref-autogen/**/*": "None",
+                "resources/status/**/*": "None"
+            }
+        },
+        "template": [],
+        "dest": "msteams-platform"
+    }
+}

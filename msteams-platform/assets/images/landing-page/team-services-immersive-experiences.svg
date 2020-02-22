@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 140">
+  <defs>
+    <style>
+      .cls-1, .cls-13, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-13, .cls-4 {
+        stroke: #556a8a;
+      }
+
+      .cls-1, .cls-4 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-1, .cls-13, .cls-4, .cls-6, .cls-8 {
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        fill: #2bc7f4;
+      }
+
+      .cls-12, .cls-4, .cls-6, .cls-8 {
+        fill: none;
+      }
+
+      .cls-5 {
+        fill: #e5e5e5;
+      }
+
+      .cls-6 {
+        stroke: #868787;
+      }
+
+      .cls-13, .cls-6, .cls-8 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-7 {
+        fill: #5558af;
+      }
+
+      .cls-8 {
+        stroke: #8b9908;
+      }
+
+      .cls-9 {
+        fill: #556a8a;
+      }
+
+      .cls-10 {
+        fill: #999bcd;
+      }
+
+      .cls-11 {
+        fill: #7779bd;
+      }
+    </style>
+  </defs>
+  <title>team-services-immersive-experiences</title>
+  <g id="ICONS">
+    <g>
+      <rect class="cls-1" x="134" y="26" width="124" height="97"/>
+      <path class="cls-2" d="M196,121a13.75,13.75,0,0,0-9-4H145V20h43c7,0,8,10,8,10s1-10,8-10h43v97H205a13.75,13.75,0,0,0-9,4"/>
+      <rect class="cls-3" x="195" y="27" width="2" height="93.32"/>
+      <path class="cls-4" d="M196,121a13.75,13.75,0,0,0-9-4H145V20h43c7,0,8,10,8,10s1-10,8-10h43v97H205a13.75,13.75,0,0,0-9,4"/>
+      <rect class="cls-5" x="146" y="21" width="15" height="95"/>
+      <rect class="cls-5" x="231" y="21" width="15" height="95"/>
+    </g>
+    <g>
+      <line class="cls-6" x1="212" y1="74" x2="238" y2="74"/>
+      <circle class="cls-7" cx="205" cy="74" r="2"/>
+    </g>
+    <g>
+      <line class="cls-6" x1="212" y1="88" x2="238" y2="88"/>
+      <circle class="cls-7" cx="205" cy="88" r="2"/>
+    </g>
+    <g>
+      <line class="cls-6" x1="212" y1="102" x2="238" y2="102"/>
+      <circle class="cls-7" cx="205" cy="102" r="2"/>
+    </g>
+    <g>
+      <line class="cls-6" x1="161" y1="74" x2="187" y2="74"/>
+      <circle class="cls-7" cx="154" cy="74" r="2"/>
+    </g>
+    <g>
+      <line class="cls-6" x1="161" y1="88" x2="187" y2="88"/>
+      <circle class="cls-7" cx="154" cy="88" r="2"/>
+    </g>
+    <g>
+      <line class="cls-6" x1="161" y1="102" x2="187" y2="102"/>
+      <line class="cls-6" x1="161" y1="46" x2="187" y2="46"/>
+      <line class="cls-6" x1="161" y1="60" x2="187" y2="60"/>
+      <circle class="cls-7" cx="154" cy="102" r="2"/>
+    </g>
+    <polyline class="cls-8" points="206 48 216 58 236 32"/>
+    <g>
+      <path class="cls-2" d="M145,67.63a27.65,27.65,0,1,1,19.54-8.1A27.45,27.45,0,0,1,145,67.63Z"/>
+      <path class="cls-5" d="M125.38,20a27.41,27.41,0,0,1,38.77,38.77Z"/>
+      <path class="cls-9" d="M145,13.91a26.11,26.11,0,1,1-18.44,7.64A25.92,25.92,0,0,1,145,13.91h0m0-2a28.11,28.11,0,1,0,19.86,8.23A28,28,0,0,0,145,11.91Z"/>
+      <polygon class="cls-10" points="128.34 23.34 139.87 45.13 161.66 56.66 147.72 36.38 128.34 23.34"/>
+      <polygon class="cls-11" points="128.34 23.34 161.66 56.66 150.13 34.87 128.34 23.34"/>
+      <rect class="cls-12" x="116" y="11" width="58" height="58"/>
+      <line class="cls-13" x1="145" y1="16.44" x2="145" y2="22.78"/>
+      <line class="cls-13" x1="145" y1="57.22" x2="145" y2="63.56"/>
+      <line class="cls-13" x1="121.44" y1="39.09" x2="127.78" y2="39.09"/>
+      <line class="cls-13" x1="162.22" y1="39.09" x2="168.56" y2="39.09"/>
+      <circle class="cls-2" cx="145" cy="40" r="2.72"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+log/
+obj/
+_site/
+.optemp/
+.vscode/
+_themes*/
+_repo.*/
+_dependentPackages/
+desktop.ini
+msteams-platform/.vs/
+.vs/
+
+.openpublishing.buildcore.ps1
+
+# Dependent repos
+_msteams-samples-hello-world-nodejs/
+_msteams-samples-hello-world-csharp/
+
+desktop.ini
