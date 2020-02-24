@@ -1,4 +1,3 @@
----
 - name: Overview
   expanded: true
   items:
@@ -211,9 +210,7 @@
         href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
       - name: Application-hosted media
         href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-...        
-<h1>Embedded web experiences with Tabs</h1>
----
+- name: '<b>Embedded web experiences with Tabs</b>'
   items:
     - name: 'What are custom tabs?'
       href: tabs/what-are-tabs.md
