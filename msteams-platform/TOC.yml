@@ -212,7 +212,7 @@
       - name: Application-hosted media
         href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
 ...        
-<strong>Embedded web experiences with Tabs*</strong>
+<h1>Embedded web experiences with Tabs</h1>
 ---
   items:
     - name: 'What are custom tabs?'
