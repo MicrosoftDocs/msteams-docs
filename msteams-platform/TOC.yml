@@ -210,8 +210,7 @@
         href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
       - name: Application-hosted media
         href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-- name:  |
-   <b>Embedded web experiences with Tabs</b>
+- name: "u2713"
   items:
     - name: 'What are custom tabs?'
       href: tabs/what-are-tabs.md
