@@ -369,7 +369,7 @@
       href: resources/schema/manifest-schema.md
     - name: 'Localization file JSON schema'
       href: resources/schema/localization-schema.md
-    - name: 'Microsoft Teams contributor guide'
+    - name: 'Teams contributor guide'
       href: resources/teams-contributor-reference.md
 - name: Support and feedback
   href: feedback.md
