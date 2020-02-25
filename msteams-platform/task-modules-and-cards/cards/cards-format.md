@@ -12,7 +12,7 @@ Cards support formatting in the text property only, not in the title or subtitle
 
 Formatting support differs between different card types, and rendering of the card can differ slightly between the desktop and the mobile Teams clients, as well as Teams in the desktop browser.
 
-Your card can contain an inline image by adding a link to your publicly available image. Images must not exceed 1024×1024 pixels and 1 MB and can be formatted in  PNG, JPEG, or GIF.  Animated GIF is not officially supported. *See* [Cards reference](./cards-reference.md)
+You can include an inline image with any Teams card. Images an be formatted as  .png, .jpg, or .gif files and must not exceed 1024 ×1024 px and 1 MB. Animated GIF is not officially supported. *See* [Cards reference](./cards-reference.md#inline-card-images)
 
 ## Formatting cards with Markdown
 
