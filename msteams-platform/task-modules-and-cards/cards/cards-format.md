@@ -12,11 +12,9 @@ Cards support formatting in the text property only, not in the title or subtitle
 
 Formatting support differs between different card types, and rendering of the card can differ slightly between the desktop and the mobile Teams clients, as well as Teams in the desktop browser.
 
-## Inline card images
-
 Your card can contain an inline image by adding a link to your publicly available image. Images must not exceed 1024×1024 pixels and 1 MB and can be formatted in  PNG, JPEG, or GIF.  Animated GIF is not officially supported. *See* [Cards reference](./cards-reference.md)
 
-## Markdown formatting for cards
+## Formatting cards with Markdown
 
 There are two card types that support Markdown in Teams:
 
@@ -24,7 +22,7 @@ There are two card types that support Markdown in Teams:
 > * **Adaptive Cards**: Markdown is supported in Adaptive Card `Textblock` field, as well as `Fact.Title` and `Fact.Value`. HTML is not supported in adaptive cards.
 > * **O365 Connector Cards**: Markdown and limited HTML is supported in Office 365 Connector cards in the text fields.
 
-# [Markdown formatting for Adaptive Cards](#tab/adaptive)
+# **[Markdown formatting: Adaptive Cards](#tab/adaptive)**
 
  The supported styles for `Textblock`, `Fact.Title` and `Fact.Value` are:
 
@@ -44,7 +42,8 @@ The following Markdown tags are not supported:
 * Preformatted text
 * Blockquotes
 
-Adaptive cards do not support any HTML formatting.
+> [!IMPORTANT]
+> Adaptive cards do not support any HTML formatting.
 
 ### Newlines for Adaptive Cards
 
@@ -110,7 +109,7 @@ The date and localization features mentioned in this topic are not supported in 
 > [!NOTE]
 > Mention support in cards is currently supported in [Developer Preview](../../resources/dev-preview/developer-preview-intro.md) only.
 
-Bots and Messaging extensions can now include mentions within the card content in Text Block and FactSet elements. 
+Bots and Messaging extensions can now include mentions within the card content in Text Block and FactSet elements.
 
 ### Constructing mentions
 
@@ -152,9 +151,9 @@ Note that cards with mentions aren't supported on mobile clients at the moment.
 }
 ```
 
-# [Markdown formatting for Connector Cards](#tab/connector)
+# **[Markdown formatting: O365 Connector Cards](#tab/connector)**
 
-Connector cards support limited Markdown and HTML formatting. HTML is described in the last section.
+Connector cards support limited Markdown and HTML formatting. HTML support is described in the last section.
 
 | Style | Example | Markdown |
 | --- | --- | --- |
@@ -175,11 +174,11 @@ In connector cards, newlines are rendered for `\n\n`, but not for `\n` or `\r`.
 
 On the desktop, Markdown formatting for connector cards looks like this:
 
-![HTML formatting for connector cards in the Desktop client](/assets/images/cards/connector-desktop-markdown-combined.png)
+![Markdown formatting for connector cards in the Desktop client](/assets/images/cards/connector-desktop-markdown-combined.png)
 
 On iOS, Markdown formatting for connector cards looks like this:
 
-![HTML formatting for connector cards in the iOS client](/assets/images/cards/connector-iphone-markdown-combined-80.png)
+![Markdown formatting for connector cards in the iOS client](/assets/images/cards/connector-iphone-markdown-combined-80.png)
 
 Issues:
 
@@ -188,7 +187,7 @@ Issues:
 
 On Android, Markdown formatting for connector cards looks like this:
 
-![HTML formatting for connector cards in the Android client](/assets/images/cards/connector-android-markdown-combined.png)
+![Markdown formatting for connector cards in the Android client](/assets/images/cards/connector-android-markdown-combined.png)
 
 ### Formatting example for Markdown Connector Cards
 
@@ -239,9 +238,9 @@ On Android, Markdown formatting for connector cards looks like this:
 
 ---
 
-## HTML formatting
+## Formatting cards with HTML
 
-# [HTML formatting for Connector Cards](#tab/connector)
+# **[HTML formatting: O365 Connector Cards](#tab/connector)**
 
 Connector cards support limited Markdown and HTML formatting. Markdown is described in the next section.
 
@@ -329,7 +328,7 @@ On Android, HTML formatting looks like this:
 
 ```
 
-# [HTML Formatting for hero and thumbnail cards ](#tab/simple)
+# **[HTML Formatting: hero and thumbnail cards ](#tab/simple)**
 
 HTML tags are supported for simple cards such as the hero and thumbnail card. Markdown is not supported.
 
