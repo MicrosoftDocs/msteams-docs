@@ -22,7 +22,7 @@ There are two card types that support Markdown in Teams:
 > * **Adaptive Cards**: Markdown is supported in Adaptive Card `Textblock` field, as well as `Fact.Title` and `Fact.Value`. HTML is not supported in adaptive cards.
 > * **O365 Connector Cards**: Markdown and limited HTML is supported in Office 365 Connector cards in the text fields.
 
-# **[Markdown formatting: Adaptive Cards](#tab/adaptive)**
+# [**Markdown formatting: Adaptive Cards**](#tab/adaptive)
 
  The supported styles for `Textblock`, `Fact.Title` and `Fact.Value` are:
 
@@ -151,7 +151,7 @@ Note that cards with mentions aren't supported on mobile clients at the moment.
 }
 ```
 
-# **[Markdown formatting: O365 Connector Cards](#tab/connector)**
+# [**Markdown formatting: O365 Connector Cards**](#tab/connector)
 
 Connector cards support limited Markdown and HTML formatting. HTML support is described in the last section.
 
@@ -240,7 +240,7 @@ On Android, Markdown formatting for connector cards looks like this:
 
 ## Formatting cards with HTML
 
-# **[HTML formatting: O365 Connector Cards](#tab/connector)**
+# [**HTML formatting: O365 Connector Cards**](#tab/connector)
 
 Connector cards support limited Markdown and HTML formatting. Markdown is described in the next section.
 
@@ -328,7 +328,7 @@ On Android, HTML formatting looks like this:
 
 ```
 
-# **[HTML Formatting: hero and thumbnail cards ](#tab/simple)**
+# [**HTML Formatting: hero and thumbnail cards**](#tab/simple)
 
 HTML tags are supported for simple cards such as the hero and thumbnail card. Markdown is not supported.
 
