@@ -51,7 +51,7 @@ For more information on  hyperlinks and file paths, please *see* [Use links in d
 
 ## Code Samples and Snippets
 
-Code samples can play an important role in helping developers use APIs and SDKs. Well-presented code samples can impart how things work more clearly than descriptive text and instructional information alone. Your code samples should be accurate, concise and easily read. Code that is easy to read will also be easy to understand, debug, maintain, and extend.*See* [How to include code in docs](/contribute/code-in-docs). For readability tips, please *see*[Cutting Edge : Source Code Readability Tips](archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips) from our archives.
+Code samples can play an important role in helping developers use APIs and SDKs. Well-presented code samples can impart how things work more clearly than descriptive text and instructional information alone. Your code samples should be accurate, concise and easily read. Code that is easy to read will also be easy to understand, debug, maintain, and extend.*See* [How to include code in docs](/contribute/code-in-docs). For readability tips, please *see*[Cutting Edge : Source Code Readability Tips](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips) from our archives.
 
 > [!div class="nextstepaction"]
 > [Get Docs updates and  the latest announcements](/teamblog)
