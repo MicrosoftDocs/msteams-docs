@@ -14,14 +14,13 @@ Formatting support differs between different card types, and rendering of the ca
 
 ## Card types
 
-There are card types that support Markdown in Teams:
+There are two card types that support Markdown in Teams:
 
 > [!div class="checklist"]
 > * **Adaptive Cards**: Markdown is supported in Adaptive Card `Textblock` field, as well as `Fact.Title` and `Fact.Value`. HTML is not supported in adaptive cards.
 > * **O365 Connector Cards**: Markdown and limited HTML is supported in Office 365 Connector cards in the text fields.
 
-
-## Markdown formatting for Adaptive Cards
+## [Markdown formatting for Adaptive Cards](#tab/adaptive)
 
  The supported styles for `Textblock`, `Fact.Title` and `Fact.Value` are:
 
@@ -149,7 +148,7 @@ Note that cards with mentions aren't supported on mobile clients at the moment.
 }
 ```
 
-## HTML formatting for Connector Cards
+## [HTML formatting for Connector Cards](#tab/connector)
 
 Connector cards support limited markdown and HTML formatting. Markdown is described in the next section.
 
@@ -322,7 +321,7 @@ On Android, markdown formatting for connector cards looks like this:
 
 ```
 
-## HTML Formatting for simple cards
+## [HTML Formatting for simple cards](#tab/simple)
 
 These HTML tags are supported for simple cards such as the hero and thumbnail card. Markdown is not supported.
 
