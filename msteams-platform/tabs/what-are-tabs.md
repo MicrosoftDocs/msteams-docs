@@ -3,27 +3,30 @@ title: What are custom tabs in Microsoft Teams?
 author: laujan
 description: An overview of custom tabs on the Microsoft Teams platform
 ms.topic: overview
-ms.author: v-laujan
+ms.author: lajanuar
 ms.topic: overview
 ---
 # What are Microsoft Teams custom tabs?
 
-Tabs are Teams-aware webpages embedded in Microsoft Teams. They are simply i-frames that point to domains declared in the app manifest. They can be added as part of a channel inside a team, a group chat or as a personal app for an individual user. As part of your app you can add custom tabs to embed your own web content in Teams, and using the [Teams JavaScript client SDK](/javascript/api/overview/msteams-client), add Teams-specific functionality to your web content.
+Tabs are Teams-aware webpages embedded in Microsoft Teams. They are simple iframes that point to domains declared in the app manifest and can be added as part of a channel inside a team, a group chat, or as a personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams and add Teams-specific functionality to your web content. *See* [Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
 
 > [!NOTE]
 > Chrome 80, scheduled for release in early 2020, introduces new cookie values and imposes cookie policies by default. It's recommended that you set the intended use for your cookies rather than rely on default browser behavior. *See* [SameSite cookie attribute (2020 update)](../resources/samesite-cookie-update.md).
 
 There are two types of tabs available in Teams - channel/group and personal. A channel/group tab delivers content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content. Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left navigation bar for easy access.
 
-## Hidden benefits of tabs:
-* Awareness of the entire roster of the team 
-* If a tab is added and the app also has a bot, the bot is added to the team as well
-* AAD ID of the current user
-* Locale information for the user to indicate language e.g. “en-us”
-* SSO if supported 
-* Ability to use bots or app notifications to deep link to the tab or to a sub-entity within the service. E.g. an individual work item
-* The ability to open a Task module from links within a tab.
-* Reusing SharePoint web parts in Teams tabs
+## Lesser known tab features
+
+> [!div class="checklist"]
+>
+> * Awareness of a team's  entire roster.
+> * If a tab is added to an app that also has a bot, the bot is added to the team as well.
+> * Awareness of AAD ID of the current user.
+> * Locale awareness for the user to indicate language, i.e., `en-us`. 
+> * SSO capability, if supported.
+> * Ability to use bots or app notifications to deep link to the tab or to a sub-entity within the service. e.g., an individual work item.
+> * The ability to open a Task module from links within a tab.
+> * Reuse of SharePoint web parts within the tab.
 
 ## Tabs user scenarios
 
