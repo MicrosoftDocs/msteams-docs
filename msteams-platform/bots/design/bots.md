@@ -30,8 +30,8 @@ It is critical that bots introduce themselves and what they can do for users. Th
 #### Welcome messages
 Welcome messages are the best way to set the tone. The bot states what it does and some common ways to interact with it. Use specific examples “Try asking ….” In a bullet list. Whenever possible these suggestions should work as a “canned” response. In addition, it is critical for these examples and any tours work without requiring users to sign in.
 #### Tours
-* Take a tour – Include this on welcome messages and responses for user input equivalent to “help”. This is the most effective way to let users learn about what a bot can do. Carousels in 1:1 experiences are an excellent way to tell this story and including buttons with “Try it” for examples of the kinds of results possible is encouraged. This is also a great place to talk about the App’s other features and include screenshots of messaging extensions and Teams tabs as well. 
-* Welcome messages should also be used in Teams or group scenarios. Tours here should open in a task module so as not to add more card noise to the ongoing conversations between users.
+Take a tour – Include this on welcome messages and responses for user input equivalent to “help”. This is the most effective way to let users learn about what a bot can do. Carousels in 1:1 experiences are an excellent way to tell this story and including buttons with “Try it” for examples of the kinds of results possible is encouraged. This is also a great place to talk about the App’s other features and include screenshots of messaging extensions and Teams tabs as well. 
+Welcome messages should also be used in Teams or group scenarios. Tours here should open in a task module so as not to add more card noise to the ongoing conversations between users.
 
 
 ### Responding to users and failing gracefully
