@@ -34,9 +34,6 @@ Tabs work best when they’re built to address a specific need. Focus on a small
 
 Avoid creating multiple panels in a tab, adding layers of navigation, or requiring users to scroll both vertically and horizontally in one tab. In other words, try not to have tabs in your tab.
 
-> [!TIP]
-> Avoid creating multiple panels in a tab, adding layers of navigation, or requiring users to scroll both vertically and horizontally in one tab.
-
 ### Integration
 
 Find ways to notify users about tab activity by posting cards to a conversation, for example.
