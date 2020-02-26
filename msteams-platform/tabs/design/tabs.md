@@ -8,7 +8,7 @@ keywords: teams design guidelines reference framework tabs configuration
 > [!Important]
 > **Tabs on Mobile Clients**
 >
-> Follow the [guidance for tabs on mobile](./tabs/design/tabs-mobile.md) when creating your tabs. If your tab uses authentication, you must upgrade your Teams JavaScript SDK to version 1.4.1 or later, or authentication will fail.
+> Follow the [guidance for tabs on mobile](./tabs-mobile.md) when creating your tabs. If your tab uses authentication, you must upgrade your Teams JavaScript SDK to version 1.4.1 or later, or authentication will fail.
 >
 > **Personal (static) tabs on mobile:**
 >
@@ -83,13 +83,13 @@ Incorporating your own colors and layouts twill also aid in communicating person
 
 ## Tab layouts
 
-[!INCLUDE [Tab layouts](/includes/design/tab-layouts.html)]
+[!INCLUDE [Tab layouts](../../includes/design/tab-layouts.html)]
 
 ---
 
 ## Types of tabs
 
-[!INCLUDE [Tab types](/includes/design/tab-types.html)]
+[!INCLUDE [Tab types](../../includes/design/tab-types.html)]
 
 ---
 
