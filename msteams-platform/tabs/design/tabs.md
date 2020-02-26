@@ -100,7 +100,7 @@ Incorporating your own colors and layouts twill also aid in communicating person
 
 The dimensions of the tab configuration page:
 
-![Sizes for configuration tabs](/assets/images/tabs/config-dialog-Contoso2.png)
+<img width="450px" title="Sizes for configuration tabs" src="~/assets/images/tabs/config-dialog-Contoso2.png" />
 
 ### Guidelines for tab configuration page format
 
