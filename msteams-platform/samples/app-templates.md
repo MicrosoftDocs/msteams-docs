@@ -51,8 +51,10 @@ Conversational Q&A bots are an easy way to provide answers to frequently asked q
 > &#x2714; Track the revision history of Q&As.
 >
 > &#x2714; Configure an answer with additional details to display as an [adaptive card](/task-modules-and-cards/cards/cards-reference#adaptive-card).
-
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
+>
+>[**Get it on GitHub**](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
+>
+>
 
 ![FAQ Plus gif](~/assets/images/FAQPlusEndUser.gif)
 
