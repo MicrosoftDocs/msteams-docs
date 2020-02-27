@@ -42,7 +42,7 @@ Conversational Q&A bots are an easy way to provide answers to frequently asked q
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-faqplusplus-app)
 
 > [!NOTE]
-> The 2020 release of **FAQ Plus, Version 2** introduces improved Q&A resolutions by enabling the team of experts to complete the following:
+> The 2020 release of **FAQ Plus, Version 2** supports improved Q&A resolutions by enabling the team of experts to complete the following:
 >
 > &#x2714; Add new Q&As directly to the knowledge base using message extensions.
 >
