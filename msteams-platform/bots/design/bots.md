@@ -26,13 +26,18 @@ We support up to six buttons per card. Be concise when writing button text, and 
 Graphics are a good way to tell a story, but not all bot conversations require graphics, so use them for maximum impact.
 
 ### Onboarding users
-It is critical that bots introduce themselves and what they can do for users. This “value exchange” helps users understand what to do with the bot, where the limitations may lie, and most importantly helps users tolerate interacting with a machine that won’t be as intuitive as a real person, and giving permission to user data in exchange for real value the service provides.
-#### Welcome messages
-Welcome messages are the best way to set the tone. The bot states what it does and some common ways to interact with it. Use specific examples “Try asking ….” In a bullet list. Whenever possible these suggestions should work as a “canned” response. In addition, it is critical for these examples and any tours work without requiring users to sign in.
-#### Tours
-Take a tour – Include this on welcome messages and responses for user input equivalent to “help”. This is the most effective way to let users learn about what a bot can do. Carousels in 1:1 experiences are an excellent way to tell this story and including buttons with “Try it” for examples of the kinds of results possible is encouraged. This is also a great place to talk about the App’s other features and include screenshots of messaging extensions and Teams tabs as well. 
-Welcome messages should also be used in Teams or group scenarios. Tours here should open in a task module so as not to add more card noise to the ongoing conversations between users.
 
+It is critical that bots introduce themselves and convey what they can do for users. This “value exchange” helps users understand what to do with the bot, where the limitations may lie, and, most importantly, helps users tolerate the interaction with a machine that won’t be as intuitive as a real person . Additionally, it grants permission to user data in exchange for the real value the service provides.
+
+#### Welcome messages
+
+Welcome messages are the best way to set your bot's tone an should also be used in personal and team or group scenarios. The message states what the bot does and some common ways to interact with it. Use specific capability examples like,  “*Try asking ….*” in a bulleted list. Whenever possible, these suggestions should return stored responses. It's critical that the capability examples work without requiring users to sign in.
+
+#### Tours
+
+Include a "Take a tour" attribute on welcome messages and responses to a user input equivalent to “help”. This is the most effective way to let users learn about what a bot can do. Carousels in 1:1 experiences are an excellent way to tell this story and including “Try it” buttons that link to  example of possible responses is encouraged. Tours are also great places to talk about an app’s other features. For example, you can include screenshots of messaging extensions and Teams tabs.  Users should not have to sign in to access and use a tour.
+
+When tours are used in team or group scenarios, they should open in a task module so as not to add more card noise to the ongoing conversations between users.
 
 ### Responding to users and failing gracefully
 
