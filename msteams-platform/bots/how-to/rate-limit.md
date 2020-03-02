@@ -41,7 +41,7 @@ Using an exponential backoff with a random jitter is the recommended way to hand
 
 Here is a sample using exponential backoff via the Transient Fault Handling Application Block.
 
-You can perform backoff and retries using [Transient Fault Handling](previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29). For guidelines on obtaining and installing the NuGet package, see [Adding the Transient Fault Handling Application Block to Your Solution](previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN)). *See also* [Transient fault handling](azure/architecture/best-practices/transient-faults).
+You can perform backoff and retries using [Transient Fault Handling](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29). For guidelines on obtaining and installing the NuGet package, see [Adding the Transient Fault Handling Application Block to Your Solution](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN)). *See also* [Transient fault handling](/azure/architecture/best-practices/transient-faults).
 
 ```csharp
 public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectionStrategy
@@ -91,7 +91,7 @@ You can also perform a `System.Action` method execution with the retry policy de
 
 We recommend storing the value and strategy in a configuration file to fine-tune and tweak values at run time.
 
-For more information, check out this handy guide on various retry patterns: [Retry pattern](azure/architecture/patterns/retry).
+For more information, check out this handy guide on various retry patterns: [Retry pattern](/azure/architecture/patterns/retry).
 
 ## Per bot per thread limit
 
