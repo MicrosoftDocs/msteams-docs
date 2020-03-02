@@ -37,7 +37,7 @@ The [contributors guide](/contribute) offers direction for creating, publishing,
 
 * **[Writing developer content](/style-guide/developer-content/)**. Teams-specific content is aimed at a developer audience with a fundamental understanding of programming concepts and processes. It is important that you provide clear, technically-accurate information in a compelling manner while maintaining Microsoft's tone and style.
 
-* **[Writing step-by-step instructions](/style-guide/procedures-instructions/writing-step-by-step-instructions)**. Applied and interactive experiences are a great way for developers to learn about Microsoft products and technologies. Presenting complex or simple procedures in a progressive format is natural and user-friendly. 
+* **[Writing step-by-step instructions](/style-guide/procedures-instructions/writing-step-by-step-instructions)**. Applied and interactive experiences are a great way for developers to learn about Microsoft products and technologies. Presenting complex or simple procedures in a progressive format is natural and user-friendly.
 
 ## MarkDown reference
 
@@ -45,9 +45,20 @@ The [contributors guide](/contribute) offers direction for creating, publishing,
 
 ## File Paths
 
-Setting a valid file path for hyperlinks in your documentation can be a challenge, especially when using relative paths and creating links to other docsets.  Your doc wil not build properly on GitHub if the file path is incorrect or invalid.
+Setting a valid file path for hyperlinks in your documentation can be a challenge, especially when using relative paths and creating links to other docsets.  Your build won't succeed on GitHub if the file path is incorrect or invalid.
 
 For more information on  hyperlinks and file paths, please *see* [Use links in documentation](/contribute/how-to-write-links).
+
+>[!IMPORTANT]
+> To reference an article that is *part of* the Teams platform docset:<br>
+> &emsp;&#x2714; Use a relative path without a leading forward slash.<br>
+> &emsp;&#x2714; Include the Markdown file extension.<br>
+>Ex:  **parent directory/directory/path-to-article.md** —> `[Building an app for Microsoft Teams](../concepts/building-an-app.md)` <br><br>
+> To reference a Microsoft Docs library (<https://docs.microsoft.com/>) article that *isn't part of* the Teams platform docset:<br>
+> &emsp;&#x2714; Use a relative path that begins with a forward slash.<br>
+> &emsp;&#x2714; Don't include the file extension. <br> 
+> Ex:  **/docset/address-to-file-location** —> `[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`
+>
 
 ## Code Samples and Snippets
 
