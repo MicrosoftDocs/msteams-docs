@@ -53,11 +53,11 @@ For more information on  hyperlinks and file paths, please *see* [Use links in d
 > Reference an article that is *part of* the Teams platform docset:<br>
 > &emsp;&#x2714; Use a relative path without a leading forward slash.<br>
 > &emsp;&#x2714; Include the Markdown file extension.<br>
->&emsp;&#x2714; **parent directory/directory/path-to-article.md** —> `[Building an app for Microsoft Teams](../concepts/building-an-app.md)`. <br><br>
+>&emsp;&#x2714; **parent directory/directory/path-to-article.md** —> `[Building an app for Microsoft Teams](../concepts/building-an-app.md)` <br><br>
 > Reference a Microsoft Docs library (<https://docs.microsoft.com/>) article *not part of* the Teams platform docset:<br>
 > &emsp;&#x2714; Use a relative path that begins with a forward slash.<br>
 > &emsp;&#x2714; Don't include the file extension. <br> 
-> &emsp;&#x2714; **/{docset}{address-to-file-location}** —> `[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`
+> &emsp;&#x2714; **/docset/address-to-file-location** —> `[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`
 >
 
 ## Code Samples and Snippets
