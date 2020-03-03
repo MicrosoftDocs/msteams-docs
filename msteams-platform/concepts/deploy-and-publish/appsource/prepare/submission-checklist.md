@@ -45,3 +45,11 @@ You must provide at least two login credentials, one admin and one not, so your 
 * For enterprise apps, apps where a subscription is required, or where there is an office 365 tenant/domain dependency for testing you must provide an 3rd account in the same domain that is not already configured to use your app so we can validate the first-run user experience.
 * If your app has any Premium/Upgraded features, an account with the necessary access must be provided to test that experience.
 * You may choose to upload your test notes to SharePoint. In such cases, please provide a public link to the file.
+* Please look to include the following in Test Notes:
+* Test Accounts: If your app only allows licensed accounts or whitelisting from backend. Note: If there is any team/group chat scope allowed in your app, we will need two test accounts on same tenant to validate team collaboration scenario
+* Integration steps: If there is any pre-configuration required to use the app by tenant admin,  include the steps  or provide us the configured admin and non-admin accounts for validation. Note: You can create a [free Office 365 Subscription](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdeveloper.microsoft.com%2Foffice%2Fdev-program&data=02%7C01%7Cteamsubm%40microsoft.com%7Cc2578a8c4d96436f250708d747f5e456%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637056993751185410&sdata=L1MTMZVCElD7Cf6FmLR0VQrFVqj%2Fwbf%2F5lGpe%2BDqmWU%3D&reserved=0) under the Office 365 Developer Program with a validity of one year.
+* Notes about the app features within Teams: Details of all the capabilities the app offers with in Teams and steps for testing the feature.
+* Video showing the app functionality (Optional): Optional video recording of the product for us to understand the functionality of the app.
+
+
+
