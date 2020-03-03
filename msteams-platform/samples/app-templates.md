@@ -130,10 +130,17 @@ Book-a-room is a [Microsoft Teams bot](../bots/what-are-bots.md) that lets users
 
 ## Attendance app
 
-The attendance app is a [Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/embed-teams-appdesigned) tab that can be pinned in a team. It is designed to record presence, typically in settings such as learning and training environments. Users can mark or edit attendance for up to 30 days in the past and view summarized attendance reports for an entire group or individual attendees.
+The attendance app is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) tab that can be pinned in a team. It is designed to record presence, typically in settings such as learning and training environments. Users can mark or edit attendance for up to 30 days in the past and view summarized attendance reports for an entire group or individual attendees.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-attendance)
 
 ![Attendance app demo](../assets/images/attendance-app.png)
 
+## Associate Insights app
+
+Associate insights is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) template that empowers firstline workers to directly capture and submit customer opinion, sentiment, and perception. Firstline workers are often the first company representative to engage with customers in a one-to-one point-of contact. The collected data can be shared and used collaboratively by business teams, e.g., via a Power BI Teams tab, for product improvement and enhancing the customer experience.
+
+[Get ii on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-associateinsight)
+
+![Teams view of app generated insights](../assets/images/associate-insights-app.png)
 Have an idea for an app template you'd like to see? [Please let us know](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
