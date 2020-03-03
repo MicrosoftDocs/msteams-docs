@@ -17,7 +17,7 @@ App templates are production-ready apps for Microsoft Teams that are community d
 
 ## Celebrations
 
-Celebrations is a Teams app that helps team members celebrate each others’ birthdays, anniversaries, and other recurring events. It remembers special occasions of all the team members and sends a friendly message in all the teams selected at the time of event creation, to make the team members feel special on their day.
+Celebrations is a Teams app that helps team members celebrate each others' birthdays, anniversaries, and other recurring events. It remembers special occasions of all the team members and sends a friendly message in all the teams selected at the time of event creation, to make the team members feel special on their day.
 
 The app provides an easy interface for all the team members to personally add and view their events and also allows the user to select the teams in which the events gets shared.
 
@@ -140,7 +140,8 @@ The attendance app is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-ap
 
 Associate insights is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) template that empowers firstline workers to directly capture and submit customer opinion, sentiment, and perception. Firstline workers are often the first company representative to engage with customers in a one-to-one point-of contact. The collected data can be shared and used collaboratively by business teams, e.g., via a Power BI Teams tab, for product improvement and enhancing the customer experience.
 
-[Get ii on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-associateinsight)
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-associateinsights)
 
 ![Teams view of app generated insights](../assets/images/associate-insights-app.png)
+
 Have an idea for an app template you'd like to see? [Please let us know](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
