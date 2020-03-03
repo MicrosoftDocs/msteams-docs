@@ -143,11 +143,11 @@ Associate insights is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-ap
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-associateinsights)
 
 :::row:::
-  :::column span="":::
+  :::column span="2":::
     ![Feedback view of app generated insights](../assets/images/associate-insights-app.png)  <br>
 :::column-end:::
-:::column span="":::
-    ![Power BI view of app generated insights](../assets/images/associate-insights-app2.png)png)
+:::column span="2":::
+    ![Power BI view of app generated insights](../assets/images/associate-insights-app2.png)
 :::column-end:::
 :::row-end:::
 
