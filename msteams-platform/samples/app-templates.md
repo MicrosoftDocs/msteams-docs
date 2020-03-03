@@ -33,7 +33,7 @@ It provides a foundation to build custom targeted communication capabilities suc
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
 
-![FAQ Plus gif](~/assets/images/CompanyCommunicatorCompose.png)
+![FAQ Plus gif](../assets/images/CompanyCommunicatorCompose.png)
 
 ## FAQ Plus
 
@@ -56,7 +56,7 @@ Conversational Q&A bots are an easy way to provide answers to frequently asked q
 >
 >
 
-![FAQ Plus gif](~/assets/images/FAQPlusEndUser.gif)
+![FAQ Plus gif](../assets/images/FAQPlusEndUser.gif)
 
 ## HR Support
 
@@ -64,7 +64,7 @@ HR Support bot is a friendly Q&A bot that brings a support professional/expert f
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-hrsupport-app)
 
-![HR Support](~/assets/images/expert-user.png)
+![HR Support](../assets/images/expert-user.png)
 
 ## List Search
 
@@ -74,7 +74,7 @@ To help alleviate this pain, we are happy to bring to you the List Search app te
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
-![List Search app](~/assets/images/list-search-template.png)
+![List Search app](../assets/images/list-search-template.png)
 
 ## Custom Stickers
 
@@ -84,7 +84,7 @@ This app also enables easy sharing of images/GIFs/stickers across teams without 
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-stickers-app)
 
-![Stickers app](~/assets/images/stickers.png)
+![Stickers app](../assets/images/stickers.png)
 
 ## Icebreaker
 
@@ -94,7 +94,7 @@ In addition to encouraging personal connections across your entire team, the Ice
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-icebreaker-app)
 
-![Icebreaker app](~/assets/images/icebreaker.png)
+![Icebreaker app](../assets/images/icebreaker.png)
 
 ## Scrum Status Bot
 
@@ -110,7 +110,7 @@ Crowdsourcer is a [Microsoft Teams bot](../bots/what-are-bots.md) that gives tea
 
 [Get it on Github](https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app)
 
-![Crowdsource end-user interaction](../assets/images/crowdsourcer.png)
+![Crowdsource end-user interaction](/assets/images/crowdsourcer.png)
 
 ## Expert Finder bot
 
@@ -142,6 +142,13 @@ Associate insights is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-ap
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-associateinsights)
 
-![Teams view of app generated insights](../assets/images/associate-insights-app.png)
+:::row:::
+  :::column span="":::
+    ![Feedback view of app generated insights](../assets/images/associate-insights-app.png)  <br>
+:::column-end:::
+:::column span="":::
+    ![Power BI view of app generated insights](../assets/images/associate-insights-app2.png)png)
+:::column-end:::
+:::row-end:::
 
 Have an idea for an app template you'd like to see? [Please let us know](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
