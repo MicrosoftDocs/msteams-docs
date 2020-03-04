@@ -624,7 +624,7 @@ ms.author: anclear/lajanuar
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Crowdsourcer bot</h3>
-                                                    <p>Help your team acquire queried information sourced collaboratively from team members.</p>
+                                                    <p>Help your team acquire queried information sourced collaboratively from organization members.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -643,7 +643,7 @@ ms.author: anclear/lajanuar
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Expert Finder bot</h3>
-                                                    <p>Help your team find experts within the organization based on skills, interests, and education attributes.</p>
+                                                    <p>Help your team find internal experts based on skills, interests, and education.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -700,7 +700,7 @@ ms.author: anclear/lajanuar
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Associate Insights</h3>
-                                                    <p>Empower firstline workers to capture customer feedback..</p>
+                                                    <p>Empower firstline workers to capture customer feedback.</p>
                                                 </div>
                                             </div>
                                         </div>
