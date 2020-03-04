@@ -10,7 +10,7 @@ ms.author: anclear/lajanuar
 <div id="main" class="v2">
     <div class="container">
         <h1>Microsoft Teams Developer Platform</h1>
-        <ul 'lass="pivots">
+        <ul class="pivots">
             <li>
                 <a href="#get-started">Get Started</a>
                 <ul id="get-started" class="cardsF panelContent singlePanelContent" style="display:flex!important;">
