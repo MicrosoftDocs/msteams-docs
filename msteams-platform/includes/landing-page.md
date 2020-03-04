@@ -604,7 +604,7 @@ ms.author: anclear/lajanuar
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Scrum Status Bot</h3>
+                                                    <h3>Scrum Status bot</h3>
                                                     <p>Enable your team to run asynchronous scrum meetings and share updates.</p>
                                                 </div>
                                             </div>
