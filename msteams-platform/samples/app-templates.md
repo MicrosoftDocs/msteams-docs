@@ -96,11 +96,11 @@ In addition to encouraging personal connections across your entire team, the Ice
 
 ![Icebreaker app](../assets/images/icebreaker.png)
 
-## Scrum Status Bot
+## Scrum Status bot
 
 Scrum status bot is a simple scrum assistant bot that will enable users to run asynchronous stand-up meetings and provide and easy way for the users to share their daily updates. It is designed to work in Teams group chats and all the members can contribute to the scrum. One can start and end a scrum and can view the updates made by others in a running scrum.
 
-[Git it on GitHub](https://github.com/OfficeDev/microsoft-teams-app-scrumstatus/)
+[Git it on GitHub](https://github.com/OfficeDev/microsoft-teams-app-scrumstatus)
 
 ![Scrum Status Bot](https://raw.githubusercontent.com/wiki/OfficeDev/microsoft-teams-app-scrumstatus/images/StartScrum.jpg)
 
