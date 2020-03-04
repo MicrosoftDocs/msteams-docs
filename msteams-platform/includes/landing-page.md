@@ -10,7 +10,7 @@ ms.author: anclear/lajanuar
 <div id="main" class="v2">
     <div class="container">
         <h1>Microsoft Teams Developer Platform</h1>
-        <ul class="pivots">
+        <ul 'lass="pivots">
             <li>
                 <a href="#get-started">Get Started</a>
                 <ul id="get-started" class="cardsF panelContent singlePanelContent" style="display:flex!important;">
@@ -491,7 +491,7 @@ ms.author: anclear/lajanuar
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Celebrations</h3>
-                                                    <p>Help team members celebrate each others’ birthdays, anniversaries, and other recurring events</p>
+                                                    <p>Help team members celebrate each others' birthdays, anniversaries, and other recurring events</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -537,6 +537,25 @@ ms.author: anclear/lajanuar
                                 </a>
                             </li>                             
                             <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-list-search-app">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/biztalk-developer-documentation-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>SharePoint List Search</h3>
+                                                    <p>Search a SharePoint list and insert an item into Teams as an adaptive card</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                             <li>
                                 <a href="https://github.com/OfficeDev/microsoft-teams-stickers-app">
                                     <div class="cardSize">
                                         <div class="cardPadding">
@@ -556,25 +575,6 @@ ms.author: anclear/lajanuar
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/OfficeDev/microsoft-teams-list-search-app">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/media/illustrations/biztalk-developer-documentation-1.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>SharePoint List Search</h3>
-                                                    <p>Search a SharePoint list and insert an item into Teams as an adaptive card</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="https://github.com/OfficeDev/microsoft-teams-icebreaker-app">
                                     <div class="cardSize">
                                         <div class="cardPadding">
@@ -587,6 +587,120 @@ ms.author: anclear/lajanuar
                                                 <div class="cardText">
                                                     <h3>Icebreaker</h3>
                                                     <p>Help your team get closer by pairing random team members for a weekly meetup</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-app-scrumstatus">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/team-services-agile-scrum.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Scrum Status Bot</h3>
+                                                    <p>Enable your team to run asynchronous scrum meetings and share updates.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                             <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/teams-voice-deployment.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Crowdsourcer bot</h3>
+                                                    <p>Help your team acquire queried information sourced collaboratively from team members.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-expertfinder">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/biztalk-get-started-scenarios.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Expert Finder bot</h3>
+                                                    <p>Help your team find experts within the organization based on skills, interests, and education attributes.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-bookaroom">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/biztalk-developer-documentation-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Book-a-room bot</h3>
+                                                    <p>Help your team quickly find and reserve a meeting room.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-attendance">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/bcs-partner-advanced-management-add-user-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Attendance</h3>
+                                                    <p>Help your team record attendance and generate summarized reports.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-associateinsights">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/virtualization-hperv-server-community.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Associate Insights</h3>
+                                                    <p>Empower firstline workers to capture customer feedback..</p>
                                                 </div>
                                             </div>
                                         </div>
