@@ -17,7 +17,7 @@ App templates are production-ready apps for Microsoft Teams that are community d
 
 ## Celebrations
 
-Celebrations is a Teams app that helps team members celebrate each others’ birthdays, anniversaries, and other recurring events. It remembers special occasions of all the team members and sends a friendly message in all the teams selected at the time of event creation, to make the team members feel special on their day.
+Celebrations is a Teams app that helps team members celebrate each others' birthdays, anniversaries, and other recurring events. It remembers special occasions of all the team members and sends a friendly message in all the teams selected at the time of event creation, to make the team members feel special on their day.
 
 The app provides an easy interface for all the team members to personally add and view their events and also allows the user to select the teams in which the events gets shared.
 
@@ -33,7 +33,7 @@ It provides a foundation to build custom targeted communication capabilities suc
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
 
-![FAQ Plus gif](~/assets/images/CompanyCommunicatorCompose.png)
+![FAQ Plus gif](../assets/images/CompanyCommunicatorCompose.png)
 
 ## FAQ Plus
 
@@ -56,7 +56,7 @@ Conversational Q&A bots are an easy way to provide answers to frequently asked q
 >
 >
 
-![FAQ Plus gif](~/assets/images/FAQPlusEndUser.gif)
+![FAQ Plus gif](../assets/images/FAQPlusEndUser.gif)
 
 ## HR Support
 
@@ -64,7 +64,7 @@ HR Support bot is a friendly Q&A bot that brings a support professional/expert f
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-hrsupport-app)
 
-![HR Support](~/assets/images/expert-user.png)
+![HR Support](../assets/images/expert-user.png)
 
 ## List Search
 
@@ -74,7 +74,7 @@ To help alleviate this pain, we are happy to bring to you the List Search app te
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
-![List Search app](~/assets/images/list-search-template.png)
+![List Search app](../assets/images/list-search-template.png)
 
 ## Custom Stickers
 
@@ -84,7 +84,7 @@ This app also enables easy sharing of images/GIFs/stickers across teams without 
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-stickers-app)
 
-![Stickers app](~/assets/images/stickers.png)
+![Stickers app](../assets/images/stickers.png)
 
 ## Icebreaker
 
@@ -94,13 +94,13 @@ In addition to encouraging personal connections across your entire team, the Ice
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-icebreaker-app)
 
-![Icebreaker app](~/assets/images/icebreaker.png)
+![Icebreaker app](../assets/images/icebreaker.png)
 
-## Scrum Status Bot
+## Scrum Status bot
 
 Scrum status bot is a simple scrum assistant bot that will enable users to run asynchronous stand-up meetings and provide and easy way for the users to share their daily updates. It is designed to work in Teams group chats and all the members can contribute to the scrum. One can start and end a scrum and can view the updates made by others in a running scrum.
 
-[Git it on GitHub](https://github.com/OfficeDev/microsoft-teams-app-scrumstatus/)
+[Git it on GitHub](https://github.com/OfficeDev/microsoft-teams-app-scrumstatus)
 
 ![Scrum Status Bot](https://raw.githubusercontent.com/wiki/OfficeDev/microsoft-teams-app-scrumstatus/images/StartScrum.jpg)
 
@@ -110,7 +110,7 @@ Crowdsourcer is a [Microsoft Teams bot](../bots/what-are-bots.md) that gives tea
 
 [Get it on Github](https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app)
 
-![Crowdsource end-user interaction](../assets/images/crowdsourcer.png)
+![Crowdsource end-user interaction](/assets/images/crowdsourcer.png)
 
 ## Expert Finder bot
 
@@ -130,10 +130,27 @@ Book-a-room is a [Microsoft Teams bot](../bots/what-are-bots.md) that lets users
 
 ## Attendance app
 
-The attendance app is a [Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/embed-teams-appdesigned) tab that can be pinned in a team. It is designed to record presence, typically in settings such as learning and training environments. Users can mark or edit attendance for up to 30 days in the past and view summarized attendance reports for an entire group or individual attendees.
+The attendance app is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) tab that can be pinned in a team. It is designed to record presence, typically in settings such as learning and training environments. Users can mark or edit attendance for up to 30 days in the past and view summarized attendance reports for an entire group or individual attendees.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-attendance)
 
 ![Attendance app demo](../assets/images/attendance-app.png)
+
+## Associate Insights app
+
+Associate insights is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) template that empowers firstline workers to directly capture and submit customer opinion, sentiment, and perception. Firstline workers are often the first company representative to engage with customers in a one-to-one point-of contact. The collected data can be shared and used collaboratively by business teams, e.g., via a Power BI Teams tab, for product improvement and enhancing the customer experience.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-associateinsights)
+
+:::row:::
+  :::column span="2":::
+    ![Feedback view of app generated insights](../assets/images/associate-insights-app.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Power BI view of app generated insights](../assets/images/associate-insights-app2.png)
+:::column-end:::
+:::row-end:::
 
 Have an idea for an app template you'd like to see? [Please let us know](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
