@@ -110,7 +110,7 @@ Crowdsourcer is a [Microsoft Teams bot](../bots/what-are-bots.md) that gives tea
 
 [Get it on Github](https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app)
 
-![Crowdsource end-user interaction](/assets/images/crowdsourcer.png)
+![Crowdsource end-user interaction](../assets/images/crowdsourcer.png)
 
 ## Expert Finder bot
 
