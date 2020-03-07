@@ -13,7 +13,7 @@ The details page is the first impression of your app. Each element of your detai
 
 ## App name
 
-An app’s name plays a critical role in how users discover it in AppSource app store. Your app’s short name will be displayed on the details page.
+An app's name plays a critical role in how users discover it in AppSource app store. Your app's short name will be displayed on the details page.
 
 **Do's:**
 
@@ -29,7 +29,7 @@ An app’s name plays a critical role in how users discover it in AppSource app 
 
 ## Color icon
 
-This is one of the first elements that users see. It should be attractive and eye-catching when scrolling through the app store. Be sure it makes a good first impression and also communicates your brand’s image and purpose. AppSource has more tips on [creating a consistent visual identity](/office/dev/store/create-effective-office-store-listings#create-a-consistent-visual-identity).
+This is one of the first elements that users see. It should be attractive and eye-catching when scrolling through the app store. Be sure it makes a good first impression and also communicates your brand's image and purpose. AppSource has more tips on [creating a consistent visual identity](/office/dev/store/create-effective-office-store-listings#create-a-consistent-visual-identity).
 
 ![App icon store view](~/assets/images/store-detail-page/AppIcon-02.png)
 ![App icon appstudio view](~/assets/images/store-detail-page/AppIcon-01.png)
@@ -50,7 +50,7 @@ This is a concise summary of your app. You want it to be original, engaging, and
 * Put the most important information first.
 * Include keywords that customers are likely to search for.
 
-**Don’ts:**
+**Don'ts:**
 
 * Don't repeat the title.
 * Don't use jargon or specialized terminology — you can't assume that users know what to look for.
@@ -63,7 +63,7 @@ Here's a view in [App Studio](https://aka.ms/InstallTeamsAppStudio):
 
 ## Long description
 
-This provides an engaging narrative highlighting your solution's main features, the problems it solves, and its target audience. Draw in your audience with the first sentence by communicating your app’s unique features. Your description must be under 4000 characters. Note that most users will only read between 300 and 500 words.
+This provides an engaging narrative highlighting your solution's main features, the problems it solves, and its target audience. Draw in your audience with the first sentence by communicating your app's unique features. Your description must be under 4000 characters. Note that most users will only read between 300 and 500 words.
 
 >[!IMPORTANT]
 > Make sure to precisely copy the descriptions you wrote in your AppSource entry to your manifest — the values must match. Teams will only use the descriptions you provide in the manifest.
@@ -76,7 +76,21 @@ This provides an engaging narrative highlighting your solution's main features, 
 * Use bullet points to list out your features.
 * Include a help or support link so your users know how to reach you if they have questions.
 
-**Don’ts:**
+>[!NOTE]
+>Teams supports the following Markdown syntax:  
+> **Links**. `[title](url/address/here)`.  
+>**Images**.`![alt text](url/address/here)`.  
+> **Bold**. `**bold text**`   `__bold text__`.  
+> **Italics**. `*italicized text*`  `_italicized text`.  
+>**[Ordered Lists](https://www.markdownguide.org/basic-syntax/#ordered-lists)**<br>
+>`1. first`  <br>` 1. second `  <br>`1.third`<br>
+>**[Unordered List](https://www.markdownguide.org/basic-syntax/#unordered-lists)**<br>
+` - short` <br>`- bulleted` <br>`- list`<br>
+>**Newline**. `Place two empty spaces or a backslash \`  \
+`at the end of a line.`<br>
+ >**Escape.** Use an inline backslash to escape special characters.. `\*asterisk`.
+
+**Don'ts:**
 
 * Don't put too many keywords in your description — it's distracting and won't help your app's discoverability.
 
