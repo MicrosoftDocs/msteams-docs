@@ -19,6 +19,8 @@
     href: samples/code-samples.md
   - name: Production-ready app templates
     href: samples/app-templates.md
+  - name: Production-ready Shifts Connectors
+    href: samples/teams-shifts-wfm-connector  
 - name: Concepts
   expanded: true
   items:
