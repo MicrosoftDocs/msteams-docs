@@ -22,8 +22,8 @@ Example: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd
 
 * Do not use the *Add a new app* button to resubmit your app. Use the tile for your app on the Overview tab instead.
 * The appId in the updated manifest should be the same as in the current manifest, with an incremented version number.
-* Increment your version number in your manifest if you make any changes in your manifest in this submission
-* Your update submission will still undergo review and validation
+* Increment your version number in the manifest if you make any manifest changes to your submission.
+* Updated submissions are required to undergo a new review and validation process.
 
 
 ### When does updating your app trigger the user consent flow?
@@ -32,4 +32,4 @@ When a user installs your application one of the first things they do is consent
 
 * Adding a new capability to an app such as adding a bot to an tab only app.
 * Changing the permissions array in the manifest.
-* Increment your app version number in your manifest.
+* Incrementing your app version number in your manifest.
