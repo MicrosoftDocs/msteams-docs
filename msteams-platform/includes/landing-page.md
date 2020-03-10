@@ -471,7 +471,7 @@ ms.author: anclear/lajanuar
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Company Communicator</h3>
+                                                    <h3>Company Communicator app</h3>
                                                     <p>Enables corporate teams to create and send messages to employees over chat</p>
                                                 </div>
                                             </div>
@@ -490,7 +490,7 @@ ms.author: anclear/lajanuar
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Celebrations</h3>
+                                                    <h3>Celebrations app</h3>
                                                     <p>Help team members celebrate each others' birthdays, anniversaries, and other recurring events</p>
                                                 </div>
                                             </div>
@@ -509,7 +509,7 @@ ms.author: anclear/lajanuar
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>FAQ Plus</h3>
+                                                    <h3>FAQ Plus bot</h3>
                                                     <p>FAQ bot is a Q&A bot that brings a human in the loop when it is unable to help</p>
                                                 </div>
                                             </div>
@@ -528,7 +528,7 @@ ms.author: anclear/lajanuar
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>HR Support</h3>
+                                                    <h3>HR Support bot</h3>
                                                     <p>A HRy Q&A bot that brings the HR team in the loop when it is unable to help</p>
                                                 </div>
                                             </div>
@@ -547,7 +547,7 @@ ms.author: anclear/lajanuar
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>SharePoint List Search</h3>
+                                                    <h3>SharePoint List Search app</h3>
                                                     <p>Search a SharePoint list and insert an item into Teams as an adaptive card</p>
                                                 </div>
                                             </div>
@@ -566,7 +566,7 @@ ms.author: anclear/lajanuar
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Custom Stickers</h3>
+                                                    <h3>Custom Stickers app</h3>
                                                     <p>Add custom stickers for your team or org</p>
                                                 </div>
                                             </div>
@@ -585,7 +585,7 @@ ms.author: anclear/lajanuar
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Icebreaker</h3>
+                                                    <h3>Icebreaker bot</h3>
                                                     <p>Help your team get closer by pairing random team members for a weekly meetup</p>
                                                 </div>
                                             </div>
@@ -680,7 +680,7 @@ ms.author: anclear/lajanuar
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Attendance</h3>
+                                                    <h3>Attendance app</h3>
                                                     <p>Help your team record attendance and generate summarized reports.</p>
                                                 </div>
                                             </div>
@@ -699,8 +699,27 @@ ms.author: anclear/lajanuar
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Associate Insights</h3>
+                                                    <h3>Associate Insights app</h3>
                                                     <p>Empower firstline workers to capture customer feedback.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-incentives">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/team-services-get-started-account-manager.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Incentives app</h3>
+                                                    <p>Manage and track incentivized participation in activities and events.</p>
                                                 </div>
                                             </div>
                                         </div>
