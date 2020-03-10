@@ -131,7 +131,7 @@ Invoking a bot in a channel can be accomplished by `@mention`. Bot dialog should
 
 While the users in a team can be known to the service, the actual user roles cannot. This means that, for example, in an education scenario involving bullying, parent and student contact information wouldn't be shared in a team setting. Instead the bot’s message might be,“Two bullying incidents occurred today" along with a button to show details.
 
-Launching details in a web page, or a task module can prompt for user credentials or query against an index for user roles paired with AAD accounts to verify the user. Since both of these options are a private view of the data there can be no data leakage. If the same data were sent in a 1:1 chat between a user and the bot the data is only visible to the user in that context and is therefore safe to fully display in the bot message. Taking users from a channel to a 1:1 chat should be avoided however as that forced navigation is highly disruptive.
+Launching details in a web page, or a task module can prompt for user credentials or query against an index for user roles paired with AAD accounts. In both of these options the data is in a private view scope and there will be no data leakage. If the same data is sent in a one-to-one chat between a user and the bot, the data is only visible to the user in that context and is, therefore safe, to fully display in the bot message. Taking users from a channel to a one-to-one chat should be avoided however as that forced navigation is highly disruptive.
 
 ### Sending cards as a response to interactions
 
