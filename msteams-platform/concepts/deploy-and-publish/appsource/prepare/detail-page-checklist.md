@@ -25,21 +25,21 @@ An app's name plays a critical role in how users discover it in AppSource app st
 * Don't use generic terms or names that are similar to existing app names.
 * Don't use "Teams", "Microsoft", or "app" in your app name.
 ![App name store view](~/assets/images/store-detail-page/AppName-02.png)
-![App name appstudio view](~/assets/images/store-detail-page/AppName-01.png)
+![App name App Studio view](~/assets/images/store-detail-page/AppName-01.png)
 
 ## Color icon
 
 This is one of the first elements that users see. It should be attractive and eye-catching when scrolling through the app store. Be sure it makes a good first impression and also communicates your brand's image and purpose. AppSource has more tips on [creating a consistent visual identity](/office/dev/store/create-effective-office-store-listings#create-a-consistent-visual-identity).
 
 ![App icon store view](~/assets/images/store-detail-page/AppIcon-02.png)
-![App icon appstudio view](~/assets/images/store-detail-page/AppIcon-01.png)
+![App icon App Studio view](~/assets/images/store-detail-page/AppIcon-01.png)
 
 ## Outline icon
 
 This is used in messaging extensions marked as a favorite by the user and the left navigation menu. Make sure it's simple and recognizable. Your outline icon must contain only white and transparency (no other colors). For required specifications, *see* [Create an app package for your Microsoft Teams app - Icons](../../../build-and-test/apps-package.md#icons).
 
 ![App icon outline store view](~/assets/images/store-detail-page/AppIconOutline-02.png)
-![App icon outline appstudio view](~/assets/images/store-detail-page/AppIconOutline-01.png)
+![App icon outline App Studio view](~/assets/images/store-detail-page/AppIconOutline-01.png)
 
 ## Short description
 
@@ -59,7 +59,7 @@ This is a concise summary of your app. You want it to be original, engaging, and
 
 Here's a view in [App Studio](https://aka.ms/InstallTeamsAppStudio):
 
-![Short Description  appstudio view](~/assets/images/store-detail-page/ShortDescription-01.png)
+![Short Description App Studio view](~/assets/images/store-detail-page/ShortDescription-01.png)
 
 ## Long description
 
@@ -75,6 +75,8 @@ This provides an engaging narrative highlighting your solution's main features, 
 * Use active voice and speak to users directly.
 * Use bullet points to list out your features.
 * Include a help or support link so your users know how to reach you if they have questions.
+* Make sure you call out any limitations or constraints for better user guidance.
+
 
 >[!NOTE]
 >Teams supports the following Markdown syntax:  
@@ -98,11 +100,11 @@ This provides an engaging narrative highlighting your solution's main features, 
 
 Here's a view in [App Studio](https://aka.ms/InstallTeamsAppStudio):
 
-![App long description appstudio view](~/assets/images/store-detail-page/LongDescription-01.png)
+![App long description App Studio view](~/assets/images/store-detail-page/LongDescription-01.png)
 
 ## Screenshots
 
-The screenshots uploaded on the [Seller Dashboard](https://sellerdashboard.microsoft.com/Registration) are displayed in both [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) and your app listing in the Teams client. They provide a visual preview of your app along with your app description.
+The screenshots uploaded on the [Partner Center](https://partner.microsoft.com) are displayed in both [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) and your app listing in the Teams client. They provide a visual preview of your app along with your app description.
 You can provide one to five screenshots formatted as .png, .jpg, or .gif files. Screenshots should be 1366 x 768 pixels with a maximum size of 1024 KB.
 
 **Do's:**
