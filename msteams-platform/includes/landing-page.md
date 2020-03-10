@@ -416,7 +416,7 @@ ms.author: lajanuar
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Kronos-to-Shifts connector</h3>
-                                                    <p>Provide seamless integration from Kronos WFM system to Teams Shifts.</p>
+                                                    <p>Provide seamless integration from the Kronos WFM system to Teams Shifts.</p>
                                                 </div>
                                             </div>
                                         </div>
