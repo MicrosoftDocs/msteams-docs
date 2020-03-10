@@ -203,7 +203,7 @@ ms.author: lajanuar
                                         </div>
                                     </div>
                                 </a>
-                            </li>                             
+                            </li>  
                             <li>
                                 <a href="https://github.com/OfficeDev/microsoft-teams-list-search-app">
                                     <div class="cardSize">
@@ -397,12 +397,31 @@ ms.author: lajanuar
                         </ul>
                     </li>
                     <li>
-                        <a href="#connectors">Connectors</a>
+                        <a href="#connectors">Shifts Connectors</a>
                         <ul id="connectors" class="cardsC">
                             <li>
                                 <div class="container intro" style="margin-top:-20px;">
                                     <h2>Ready-to-use Shifts connectors</h2>
                                 </div>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/Microsoft-Teams-Shifts-WFM-Connectors/tree/master/Kronos-Shifts-Connector">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/biztalk-get-started-scenarios.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Kronos-to-Shifts connector</h3>
+                                                    <p>Provide a seamless integration from Kronos WFM system to Teams Shifts.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
                             </li>
                         </ul>
                     </li>
