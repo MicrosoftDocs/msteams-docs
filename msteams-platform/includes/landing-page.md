@@ -736,12 +736,37 @@ ms.author: lajanuar
                                 </div>
                             </li>
                             <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage">
-                                                    <img alt="" src="https://docs.microsoft.com/media/common/i_config-tools.svg">
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-incentives">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/team-services-get-started-account-manager.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Incentives app</h3>
+                                                    <p>Manage and track incentivized participation in activities and events.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/microsoftteams/platform/moodleinstructions">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/ms365enterprise-partner-resource-training-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Moodle to Teams Integration</h3>
+                                                    <p>Connect your Moodle Server to Microsoft Teams</p>
                                                 </div>
                                             </div>
                                             <div class="cardText">
