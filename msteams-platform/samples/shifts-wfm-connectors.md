@@ -27,7 +27,7 @@ Each connector provides detailed guidance for deployment and integration to your
 
 ## Kronos-to-Teams Shifts connector
 
-The integration between Kronos and Teams Shifts allows firstline workers to use the Teams Shifts app to view/manage their schedules and shift times, and use all the other rich collaboration features provided in Teams right from their mobile device or desktop without having to switch context to another app. With the open-source code, you can now integrate Kronos Workforce Central Version 8.1 with Teams Shifts (desktop/mobile Teams app) for the following Firstline worker and manager scenarios:
+The integration between Kronos and Teams Shifts allows firstline workers to use the Teams Shifts app to view/manage their schedules and shift times, and use all the other rich collaboration features provided in Teams right from their mobile device or desktop without having to switch context to another app. With the open-source code, you can now integrate Kronos Workforce Central Version 8.1 with Teams Shifts (desktop/mobile Teams app) for the following firstline worker and manager scenarios:
 
 1. View schedule.
 
