@@ -31,7 +31,7 @@ The integration between Kronos and Teams Shifts allows firstline workers to�
 
 1. View schedule.
 
-1. Publish open shifts.
+1. Publish and request open shifts.
 
 1. Swap shifts.
 
