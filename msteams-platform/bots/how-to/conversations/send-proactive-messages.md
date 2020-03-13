@@ -50,7 +50,7 @@ When using proactive messaging to send notifications you need to make sure your 
 
 ## Obtain necessary user information
 
-Bots can create new conversations with an individual Microsoft Teams user by obtaining the user’s *unique ID* and *tenant ID.* You can obtain these values using one of the following methods:
+Bots can create new conversations with an individual Microsoft Teams user by obtaining the user's *unique ID* and *tenant ID.* You can obtain these values using one of the following methods:
 
 * By [fetching the team roster](../get-teams-context.md#fetching-the-roster-or-user-profile) from a channel your app is installed in.
 * By caching them when a user [interacts with your bot in a channel](./channel-and-group-conversations.md).
@@ -62,7 +62,7 @@ Bots can create new conversations with an individual Microsoft Teams user by obt
 > [!Note]
 > Proactively installing apps using graph is currently in beta.
 
-Occasionally it may be necessary to proactively message users that have not installed or interacted with your app previously. For example, you want to use the [company communicator](~/samples/app-templates.md#company-communicator) to send messages to your entire organization. For this scenario you can use the Graph API to proactively install your app for your users, then cache the necessary values from the `conversationUpdate` event your app will receive upon install.
+Occasionally it may be necessary to proactively message users that have not installed or interacted with your app previously. For example, you want to use the [company communicator](~/samples/app-templates.md#company-communicator-app) to send messages to your entire organization. For this scenario you can use the Graph API to proactively install your app for your users, then cache the necessary values from the `conversationUpdate` event your app will receive upon install.
 
 You can only install apps that are in your organizational app catalogue, or the Teams app store.
 

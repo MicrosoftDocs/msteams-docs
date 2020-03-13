@@ -8,14 +8,14 @@ keywords: Microsoft Teams templates samples demo
 
 App templates are production-ready apps for Microsoft Teams that are community driven, open-source, and available on GitHub. Each contains detailed instructions for deploying and installing that app for your organization, providing a ready-to-use app that you can install and begin using immediately. The complete source code is available as well, so you can explore it in detail, or fork the code and alter it to meet your specific needs.
 
-## Key benefits of using app templates
+## Key benefits
 
 * **Plug and play experience:** All app templates include deployments scripts that will allow you to host all necessary services in Microsoft Azure. No coding is required to deploy the apps.
 * **Production-ready code:** The app templates conform to recommended best practices around security and infrastructure, and all community submitted changes to them are reviewed to ensure continued conformance.
 * **Customizable and extensible:** While all app templates are ready to deploy as they are, we provide the entire code base and deployment scripts so that you can easily customize or extend them to fit your unique needs.
 * **Detailed documentation & support:** All app templates are accompanied by end-to-end documentation on solution architecture, deployment, and configuration steps. The repositories are monitored as well, so please report any issues you encounter by raising an Issue on GitHub.
 
-## Celebrations
+## Celebrations app
 
 Celebrations is a Teams app that helps team members celebrate each others' birthdays, anniversaries, and other recurring events. It remembers special occasions of all the team members and sends a friendly message in all the teams selected at the time of event creation, to make the team members feel special on their day.
 
@@ -23,7 +23,7 @@ The app provides an easy interface for all the team members to personally add an
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-celebrations-app)
 
-## Company Communicator
+## Company Communicator app
 
 The Company Communicator app enables corporate teams to create and send messages intended for multiple teams or large number of employees over chat allowing organization to reach employees right where they collaborate. Utilize this template for multiple scenarios such as new initiative announcements, employee onboarding, modern learning and development or organization-wide broadcasts.
 
@@ -35,7 +35,7 @@ It provides a foundation to build custom targeted communication capabilities suc
 
 ![FAQ Plus gif](../assets/images/CompanyCommunicatorCompose.png)
 
-## FAQ Plus
+## FAQ Plus bot
 
 Conversational Q&A bots are an easy way to provide answers to frequently asked questions by users. However, most bots fail to engage with users in meaningful way because there is no human in the loop when the bot fails. FAQ bot is a friendly Q&A bot that brings a human in the loop when it is unable to help. One can ask the bot a question and the bot responds with an answer if it is contained in the knowledge base. If not, the bot allows the user to submit a query which then gets posted in a pre-configured team of experts who are help to provide support by acting upon the notifications from within their team itself.
 
@@ -66,7 +66,7 @@ HR Support bot is a friendly Q&A bot that brings a support professional/expert f
 
 ![HR Support](../assets/images/expert-user.png)
 
-## List Search app
+## SharePoint List Search app
 
 Collaboration in Microsoft Teams quite often references information contained within items in a SharePoint list. Simply pasting a link to the item in question forces everyone to switch context away from the conversation, find the needed information, then return to Teams to continue the conversation. As the conversation continues typically people will have to switch back to the reference item multiple times to verify new comments and refresh their memories of the information contained within the item. This context switching creates a barrier to smooth collaboration, and is a recipe for things falling through the cracks.
 
@@ -162,4 +162,3 @@ Incentives is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) templ
 ![Incentives app demo](../assets/images/incentives-app.png)
 
 Have an idea for an app template you'd like to see? [Please let us know](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
-
