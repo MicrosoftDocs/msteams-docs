@@ -41,17 +41,5 @@ The integration between Kronos and Teams Shifts allows firstline workers to�
 
 [Get it on GitHub]( https://aka.ms/KronosShiftsConnector)
 
-:::row:::
-  :::column span="2":::
-**Open shifts view in Kronos**
-
-    ![Open shifts in Kronos](../assets/images/kronos-open-shifts.png)  
-:::column-end:::
-:::row-end:::
-:::row:::
-:::column span="2":::
-**Open shifts view in Teams**
-
-    ![Open shifts in Teams](../assets/images/teams-open-shifts-view.png)
-:::column-end:::
-:::row-end:::
+**Open shifts view in Teams**  
+![Open shifts in Teams](../assets/images/teams-open-shifts-view.png)
