@@ -45,7 +45,7 @@ This article addresses common reasons submitted apps fail validation. While it's
 
 For additional information on authentication see:
 
-* [Authentication documentation](/concepts/authentication/authentication.md)
+* [Authentication documentation](../../../authentication/authentication.md)
 * [Bot authentication sample in Node](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
 * [Tab authentication sample in Node](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
 * [Tab/bot authentication in C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
