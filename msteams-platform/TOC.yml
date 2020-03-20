@@ -94,13 +94,13 @@
             href: concepts/deploy-and-publish/appsource/post-publish/overview.md
           - name: Application Certification program
             href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
-    - name: 'Authentication in Teams apps'
+    - name: 'Authentication flows in your apps'
       items:
         - name: 'Authentication overview'
           href: concepts/authentication/authentication.md
         - name: 'Configure identity providers'
           href: concepts/authentication/configure-identity-provider.md
-- name: 'Task-oriented interactions with Messaging Extensions'
+- name: 'Messaging Extensions'
   items:
     - name: 'What are Messaging Extensions?'
       href: messaging-extensions/what-are-messaging-extensions.md
@@ -214,7 +214,7 @@
         href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
       - name: Application-hosted media
         href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-- name: 'Embedded web experiences with Tabs'
+- name: 'Tabs'
   items:
     - name: 'What are custom tabs?'
       href: tabs/what-are-tabs.md
@@ -299,9 +299,9 @@
           href: task-modules-and-cards/task-modules/task-modules-bots.md
         - name: From a tab
           href: task-modules-and-cards/task-modules/task-modules-tabs.md
-- name: 'Webhooks and Connectors'
+- name: 'Webhooks and connectors'
   items:
-    - name: 'What are Webhooks and Connectors?'
+    - name: 'What are Webhooks and connectors?'
       href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
     - name: 'How-to guides'
       expanded: true
@@ -312,7 +312,7 @@
         href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
       - name: Create an O365 Connector
         href: webhooks-and-connectors/how-to/connectors-creating.md
-      - name: Sending messages to Connectors and Webhooks
+      - name: Sending messages to connectors and webhooks
         href: webhooks-and-connectors/how-to/connectors-using.md
 - name: Resources
   items:
