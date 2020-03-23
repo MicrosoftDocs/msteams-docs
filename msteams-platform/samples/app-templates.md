@@ -163,7 +163,7 @@ Incentives is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) templ
 
 ## Group Activities bot
 
-Group Activities is a [Microsoft Teams bot](../bots/what-are-bots.md) that makes it easy for team owners to efficiently create activity groups and manage the collaboration's workflow within the context of Microsoft Teams. Activity authors will be enabled to create activities, randomly distribute team members in groups, and optionally have the bot send reminders until activities are complete.
+Group Activities is a [Microsoft Teams bot](../bots/what-are-bots.md) that makes it easy for team owners to efficiently create activity groups and manage the collaboration's workflow within the context of Microsoft Teams. Activity authors are enabled to create activities, randomly distribute team members in groups, and optionally have the bot send reminders until activities are complete.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-groupactivities)
 
