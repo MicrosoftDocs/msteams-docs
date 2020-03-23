@@ -167,7 +167,7 @@ Group Activities is a [Microsoft Teams bot](../bots/what-are-bots.md) that makes
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-groupactivities)
 
-::row:::
+:::row:::
   :::column span="2":::
     ![Group activity creation form](../assets/images/group-activities-1.png)  
 :::column-end:::
@@ -184,7 +184,7 @@ Open Badges is a Microsoft Teams app that empowers individuals to earn digital l
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-openbadges)
 
-::row:::
+:::row:::
   :::column span="2":::
     ![Image of available badges](../assets/images/open-badges-1.png)  
 :::column-end:::
