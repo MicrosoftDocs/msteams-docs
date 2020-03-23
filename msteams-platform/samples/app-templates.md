@@ -180,7 +180,7 @@ Group Activities is a [Microsoft Teams bot](../bots/what-are-bots.md) that makes
 
 ## Open Badges app
 
-Open Badges is a Microsoft Teams app that empowers individuals to earn digital learning credential badges within the Teams context and share them anywhere. Using capabilities from the third-party digital badge issuing authority, [Badgr](https://badgr.org/), awarded badges are recorded in a recipient's Badgr profile and available for them to build and share a rich picture of their lifetime learning journey.
+Open Badges is a Microsoft Teams app that empowers individuals to earn digital learning credential badges within the Teams context and share them anywhere. Using capabilities from the third-party digital badge issuing authority, [Badgr](https://badgr.org/), awarded badges are recorded in a recipient's Badgr profile and available to build and share a rich picture of lifetime learning journeys.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-openbadges)
 
