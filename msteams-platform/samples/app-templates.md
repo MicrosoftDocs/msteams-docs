@@ -191,7 +191,7 @@ Open Badges is a Microsoft Teams app that enables individuals to earn digital le
 :::row-end:::
 :::row:::
 :::column span="2":::
-    ![Individual's awarded badges view](../assets/images/group-activities-2.png)
+    ![Individual's awarded badges view](../assets/images/open-badges-2.png)
 :::column-end:::
 :::row-end:::
 
