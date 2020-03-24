@@ -872,10 +872,10 @@ ms.author: lajanuar
                                             <div class="cardText">
                                                 <h3>Microsoft Graph SDKs</h3>
                                                 <p>
-                                                    <a href="https://docs.microsoft.com/en-us/graph/sdks/sdks-overview">Graph SDKs Overview</a>
+                                                    <a href="https://docs.microsoft.com/graph/sdks/sdks-overview">Graph SDKs Overview</a>
                                                 </p>
                                                 <p>
-                                                    <a href="https://docs.microsoft.com/en-us/graph/sdks/sdk-installation">Install Graph SDKs</a>
+                                                    <a href="https://docs.microsoft.com/graph/sdks/sdk-installation">Install Graph SDKs</a>
                                                 </p>
                                             </div>
                                         </div>
