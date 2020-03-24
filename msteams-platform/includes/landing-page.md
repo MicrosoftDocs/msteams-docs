@@ -860,6 +860,28 @@ ms.author: lajanuar
                                     </div>
                                 </div>
                             </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="assets/icons/graph-icon-1.png" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Microsoft Graph SDKs</h3>
+                                                <p>
+                                                    <a href="https://docs.microsoft.com/en-us/graph/sdks/sdks-overview">Graph SDKs Overview</a>
+                                                </p>
+                                                <p>
+                                                    <a href="https://docs.microsoft.com/en-us/graph/sdks/sdk-installation">Install Graph SDKs</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
                             <li class="fullSpan">
                                 <div class="container" style="margin-top:-20px">
                                     <h2>Tools &amp; Extensions</h2>
