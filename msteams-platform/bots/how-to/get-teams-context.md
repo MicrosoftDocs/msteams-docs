@@ -62,7 +62,17 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
+# [Python](#tab/python)
+
+```python
+async def _show_members(
+    self, turn_context: TurnContext
+):
+    members = await TeamsInfo.get_team_members(turn_context)
+```
+
 # [JSON](#tab/json)
+
 You can directly issue a GET request on `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}`, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value for `serviceUrl`.
 
 ```http
@@ -132,7 +142,17 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
+# [Python](#tab/python)
+
+```python
+async def _show_members(
+    self, turn_context: TurnContext
+):
+    member = TeamsInfo.get_member(turn_context, turn_context.activity.from_property.id)
+```
+
 # [JSON](#tab/json)
+
 You can directly issue a GET request on `/v3/conversations/{conversationId}/members/{userId}`, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value for `serviceUrl`.
 
 ```http
@@ -147,15 +167,6 @@ Response body
     "email": "Larry.Brown@fabrikam.com",
     "userPrincipalName": "labrown@fabrikam.com"
 }
-```
-
-# [Python](#tab/python)
-
-```python
-async def _show_members(
-    self, turn_context: TurnContext
-):
-    members = await TeamsInfo.get_team_members(turn_context)
 ```
 
 * * *
@@ -205,6 +216,15 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
+# [Python](#tab/python)
+
+```python
+async def _show_details(self, turn_context: TurnContext):
+	team_details = await TeamsInfo.get_team_details(turn_context)
+	reply = MessageFactory.text(f"The team name is {team_details.name}. The team ID is {team_details.id}. The AADGroupID is {team_details.aad_group_id}.")
+	await turn_context.send_activity(reply)
+```
+
 # [JSON](#tab/json)
 
 You can directly issue a GET request on `/v3/teams/{teamId}`, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value for `serviceUrl`.
@@ -218,15 +238,6 @@ Response body
     "name": "The Team Name",
     "aadGroupId": "02ce3874-dd86-41ba-bddc-013f34019978"
 }
-```
-
-# [Python](#tab/python)
-
-```python
-async def _show_details(self, turn_context: TurnContext):
-	team_details = await TeamsInfo.get_team_details(turn_context)
-	reply = MessageFactory.text(f"The team name is {team_details.name}. The team ID is {team_details.id}. The AADGroupID is {team_details.aad_group_id}.")
-	await turn_context.send_activity(reply)
 ```
 
 * * *
@@ -274,6 +285,17 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
+# [Python](#tab/python)
+
+```python
+async def _show_channels(
+    self, turn_context: TurnContext
+):
+    channels = await TeamsInfo.get_team_channels(turn_context)
+    reply = MessageFactory.text(f"Total of {len(channels)} channels are currently in team")
+    await turn_context.send_activity(reply)
+```
+
 # [JSON](#tab/json)
 
 You can directly issue a GET request on `/v3/teams/{teamId}/conversations`, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value for `serviceUrl`.
@@ -297,18 +319,6 @@ Response body
         "name": "Marketing"
     }]
 }
-```
-
-
-# [Python](#tab/python)
-
-```python
-async def _show_channels(
-    self, turn_context: TurnContext
-):
-    channels = await TeamsInfo.get_team_channels(turn_context)
-    reply = MessageFactory.text(f"Total of {len(channels)} channels are currently in team")
-    await turn_context.send_activity(reply)
 ```
 
 * * *
