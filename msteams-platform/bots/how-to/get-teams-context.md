@@ -13,7 +13,7 @@ A bot can access additional context data about a team or chat it is installed in
 
 ## Fetching the roster or user profile
 
-Your bot can query for the list of members and their basic profiles, including Teams user IDs and Azure Active Directory (Azure AD) information such as name and objectId. You can use this information to correlate user identities, e.g., to check whether a user, logged into a tab through Azure AD credentials, is a member of the team. You can also use this call in a one-to-one chat to gain additional information about your user.
+Your bot can query for the list of members and their basic profiles, including Teams user IDs and Azure Active Directory (Azure AD) information such as name and objectId. You can use this information to correlate user identities, e.g., to check whether a user, logged into a tab through Azure AD credentials, is a member of the team. The sample code below uses the paged endpoint for retrieving the roster. Although you may still use the non-paged version, it will be unreliable in large teams and should not be used. See [this article](~/resources/team-chat-member-api-changes.md) for additional information.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -22,7 +22,16 @@ public class MyBot : TeamsActivityHandler
 {
     protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
     {
-        IEnumerable<TeamsChannelAccount> members = await TeamsInfo.GetMembersAsync(turnContext, cancellationToken);
+        var members = new List<TeamsChannelAccount>();
+        string continuationToken = null;
+
+        do
+        {
+            var currentPage = await TeamsInfo.GetPagedMembersAsync(turnContext, 100, continuationToken, cancellationToken);
+            continuationToken = currentPage.ContinuationToken;
+            members = members.Concat(currentPage.Members).ToList();
+        }
+        while (continuationToken != null);
     }
 }
 ```
@@ -36,7 +45,15 @@ export class MyBot extends TeamsActivityHandler {
 
         // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
         this.onMessage(async (turnContext, next) => {
-            const members = await TeamsInfo.getMembers(turnContext);
+            var continuationToken;
+            var members = [];
+
+            do {
+                var pagedMembers = await TeamsInfo.getPagedMembers(context, 100, continuationToken);
+                continuationToken = pagedMembers.continuationToken;
+                members.push(...pagedMembers.members);
+            }
+            while(continuationToken !== undefined)
 
             // By calling next() you ensure that the next BotHandler is run.
             await next();
@@ -46,34 +63,90 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [JSON](#tab/json)
-You can directly issue a GET request on `/v3/conversations/{teamId}/members/`, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value for `serviceUrl`.
+You can directly issue a GET request on `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}`, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value for `serviceUrl`.
 
 ```http
-GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members
+GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/pagedmembers?pageSize=100&continuationToken=asdfasdfalkdsjfalksjdf
 
 Response body
-[{
+{
+    "continuationToken": "asdfqwerueiqpiewr",
+    "members":
+        [{
+            "id": "29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc",
+            "objectId": "9d3e08f9-a7ae-43aa-a4d3-de3f319a8a9c",
+            "givenName": "Larry",
+            "surname": "Brown",
+            "email": "Larry.Brown@fabrikam.com",
+            "userPrincipalName": "labrown@fabrikam.com"
+        }, {
+            "id": "29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk",
+            "objectId": "76b0b09f-d410-48fd-993e-84da521a597b",
+            "givenName": "John",
+            "surname": "Patterson",
+            "email": "johnp@fabrikam.com",
+            "userPrincipalName": "johnp@fabrikam.com"
+        }, {
+            "id": "29:1URzNQM1x1PNMr1D7L5_lFe6qF6gEfAbkdG8_BUxOW2mTKryQqEZtBTqDt10-MghkzjYDuUj4KG6nvg5lFAyjOLiGJ4jzhb99WrnI7XKriCs",
+            "objectId": "6b7b3b2a-2c4b-4175-8582-41c9e685c1b5",
+            "givenName": "Rick",
+            "surname": "Stevens",
+            "email": "Rick.Stevens@fabrikam.com",
+            "userPrincipalName": "rstevens@fabrikam.com"
+        }]
+}
+```
+
+* * *
+
+## Get single member details
+
+You can also retrieve the details of a particular user using their Teams user Id, UPN, or AAD Object Id.
+
+# [C#/.NET](#tab/dotnet)
+
+```csharp
+public class MyBot : TeamsActivityHandler
+{
+    protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+    {
+        var member = await TeamsInfo.GetMemberAsync(turnContext, turnContext.Activity.From.Id, cancellationToken);
+    }
+}
+```
+
+# [TypeScript/Node.js](#tab/typescript)
+
+```typescript
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+
+        // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
+        const member = await TeamsInfo.getMember(context, encodeURI('someone@somecompany.com'));
+
+        // By calling next() you ensure that the next BotHandler is run.
+        await next();
+        });
+    }
+}
+```
+
+# [JSON](#tab/json)
+You can directly issue a GET request on `/v3/conversations/{conversationId}/members/{userId}`, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value for `serviceUrl`.
+
+```http
+GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/labrown@fabrikam.com"
+
+Response body
+{
     "id": "29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc",
     "objectId": "9d3e08f9-a7ae-43aa-a4d3-de3f319a8a9c",
     "givenName": "Larry",
     "surname": "Brown",
     "email": "Larry.Brown@fabrikam.com",
     "userPrincipalName": "labrown@fabrikam.com"
-}, {
-    "id": "29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk",
-    "objectId": "76b0b09f-d410-48fd-993e-84da521a597b",
-    "givenName": "John",
-    "surname": "Patterson",
-    "email": "johnp@fabrikam.com",
-    "userPrincipalName": "johnp@fabrikam.com"
-}, {
-    "id": "29:1URzNQM1x1PNMr1D7L5_lFe6qF6gEfAbkdG8_BUxOW2mTKryQqEZtBTqDt10-MghkzjYDuUj4KG6nvg5lFAyjOLiGJ4jzhb99WrnI7XKriCs",
-    "objectId": "6b7b3b2a-2c4b-4175-8582-41c9e685c1b5",
-    "givenName": "Rick",
-    "surname": "Stevens",
-    "email": "Rick.Stevens@fabrikam.com",
-    "userPrincipalName": "rstevens@fabrikam.com"
-}]
+}
 ```
 
 * * *
