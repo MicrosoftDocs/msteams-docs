@@ -161,23 +161,6 @@ Incentives is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) templ
 
 ![Incentives app demo](../assets/images/incentives-app.png)
 
-## Group Activities app
-
-Group Activities is a Microsoft Teams app that makes it easy for team owners to efficiently create activity groups and manage a collaboration's workflow within the context of Microsoft Teams. Activity authors are enabled to create activities, randomly distribute team members in groups, and optionally have the bot send reminders until activities are complete.
-
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-groupactivities)
-
-:::row:::
-  :::column span="2":::
-    ![Group activity creation form](../assets/images/group-activities-1.png)  
-:::column-end:::
-:::row-end:::
-:::row:::
-:::column span="2":::
-    ![Group activity summary message in a channel](../assets/images/group-activities-2.png)
-:::column-end:::
-:::row-end:::
-
 ## Open Badges app
 
 Open Badges is a Microsoft Teams app that enables individuals to earn digital learning credential badges within the Teams context and share them everywhere. Using capabilities from the third-party digital badge issuing authority, [Badgr](https://badgr.org/), awarded badges are recorded in a recipient's Badgr profile and available to build and share a rich picture of lifetime learning journeys.
@@ -191,7 +174,7 @@ Open Badges is a Microsoft Teams app that enables individuals to earn digital le
 :::row-end:::
 :::row:::
 :::column span="2":::
-    ![Individual's awarded badges view](../assets/images/open-badges-2.png)
+    ![Awarded badges view](../assets/images/open-badges-2.png)
 :::column-end:::
 :::row-end:::
 
