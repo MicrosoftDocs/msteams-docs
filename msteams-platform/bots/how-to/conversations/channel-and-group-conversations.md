@@ -10,9 +10,9 @@ ms.author: anclear
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-By adding the `teams` or `groupchat` scope to your bot, it can be available to be installed in a team or group chat. This allows all members of the conversation to interact with you bot. Once installed, it will also have access to metadata about the conversation like the list of conversation members, and when installed in a team details about that team and the full list of channels.
+By adding the `teams` or `groupchat` scope to your bot, it can be available to be installed in a team or group chat. This allows all members of the conversation to interact with your bot. Once installed, it will also have access to metadata about the conversation like the list of conversation members, and when installed in a team details about that team and the full list of channels.
 
-Bots in a group or channel only receive messages when they are mentioned ("@botname"), they do not receive any other messages send to the conversation.
+Bots in a group or channel only receive messages when they are mentioned ("@botname"), they do not receive any other messages sent to the conversation.
 
 > [!NOTE]
 > The bot must be @mentioned directly. Your bot will not receive a message when the team or channel is mentioned, or when someone replies to a message from your bot without @mentioning it.
@@ -115,6 +115,19 @@ this.onMessage(async (turnContext, next) => {
 }
 ```
 
+# [Python](#tab/python)
+
+```python
+@staticmethod
+def get_mentions(activity: Activity) -> List[Mention]:
+    result: List[Mention] = []
+    if activity.entities is not None:
+        for entity in activity.entities:
+            if entity.type.lower() == "mention":
+                    result.append(entity)
+     return result
+```
+
 * * *
 
 ### Adding mentions to your messages
@@ -207,6 +220,21 @@ The `text` field in the object in the `entities` array must *exactly* match a po
     ],
     "replyToId": "3UP4UTkzUk1zzeyW"
 }
+```
+
+# [Python](#tab/python)
+
+```python
+async def _mention_activity(self, turn_context: TurnContext):
+        mention = Mention(
+            mentioned=turn_context.activity.from_property,
+            text=f"<at>{turn_context.activity.from_property.name}</at>",
+            type="mention"
+        )
+
+        reply_activity = MessageFactory.text(f"Hello {mention.text}")
+        reply_activity.entities = [Mention().deserialize(mention.serialize())]
+        await turn_context.send_activity(reply_activity)
 ```
 
 * * *

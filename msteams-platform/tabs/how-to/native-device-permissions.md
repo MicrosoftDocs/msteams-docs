@@ -101,3 +101,7 @@ Notification.requestPermission(function(result) { /* ... */ });
 ```
 
 ![Tabs device permissions prompt](~/assets/images/tabs/device-permissions-prompt.png)
+
+## Permission behavior across login sessions
+
+Native device permissions are stored per login session. This means that if you log into another instance of Teams (ex: on another computer), your device permissions from your previous sessions will not be available. Instead, you will need to re-consent to device permissions for the new login sessoin. This also means, if you log out of Teams (or switch tenants inside of Teams), your device permissions will be deleted for that previous login session. Please keep this in mind when developing native device permissions: the native capabilities you consent to are only for your _current_ login sessoin.

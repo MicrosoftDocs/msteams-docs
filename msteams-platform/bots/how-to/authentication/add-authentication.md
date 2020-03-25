@@ -35,6 +35,7 @@ In this article you'll learn:
     | Sample | BotBuilder version | Demonstrates |
     |:---|:---:|:---|
     | **Bot authentication** in [cs-auth-sample][teams-auth-bot] | v4 | OAuthCard support |
+    | **Bot authentication** in [python-auth-sample][teams-auth-bot-py] | v4 | OAuthCard support |
 
 ## Create the resource group
 
@@ -167,10 +168,12 @@ The connection name is used by the bot code to retrieve user authentication toke
 
 With the preliminary settings done, let's focus on the creation of the bot to use in this article.
 
+# [C#/.NET](#tab/dotnet)
+
 1. Clone [cs-auth-sample][teams-auth-bot].
 1. Launch Visual Studio.
 1. From the toolbar select **File -> Open -> Project/Solution** and open the bot project.
-1. Update **appsettings.json** as follows:
+1. In C# Update **appsettings.json** as follows:
 
     - Set `ConnectionName` to the name of the identity provider connection you added to the bot channel registration. The name we used in this example is *BotTeamsAuthADv1*.
     - Set `MicrosoftAppId` to the **bot App ID** you saved at the time of the bot channel registration.
@@ -179,15 +182,23 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
     Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) will need to be encoded as `&amp;`.
 
-        ```cs
-        {
-            "MicrosoftAppId": "", // The bot App Id 
-            "MicrosoftAppPassword": "", // The bot client secret
-            "ConnectionName": "" // The name of the identity provider connection
-        }
-        ```
+     [!code-json[appsettings](~/../botbuilder-samples/samples/csharp_dotnetcore/46.teams-auth/appsettings.json?range=1-5)]
 
 1. In the Solution Explorer, navigate to the `TeamsAppManifest` folder, open `manifest.json` and set `id` and `botId` to the **bot App ID** you saved at the time of the bot channel registration.
+
+# [Python](#tab/python)
+
+1. Clone the sample [Teams bot authentication][teams-auth-bot-py] from the github repository.
+1. Update **config.py**:
+
+    - Set `ConnectionName` to the name of the OAuth connection setting you added to your bot.
+    - Set `MicrosoftAppId` and `MicrosoftAppPassword` to your bot's app ID and app secret.
+
+      Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) will need to be encoded as `&amp;`.
+
+      [!code-python[config](~/../botbuilder-samples/samples/python/46.teams-auth/config.py?range=14-16)]
+
+---
 
 ### Deploy the bot to Azure
 
@@ -361,8 +372,8 @@ This manifest contains information needed by Microsoft Teams to connect with the
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.3",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.5",
   "version": "1.0.0",
   "id": "",
   "packageName": "com.teams.auth.bot",
@@ -404,65 +415,24 @@ This manifest contains information needed by Microsoft Teams to connect with the
 }
 ```
 
-With authentication Teams behaves slightly different than other channels, as explained below.
+With authentication, Teams behaves slightly differently than other channels, as explained below.
 
 ### Handling Invoke Activity
 
 An **Invoke Activity** is sent to the bot rather than the Event Activity used by other channels.
 This is done by sub-classing the **ActivityHandler**.
 
-#### Bots\DialogBots.cs
+**Bots/DialogBot.cs**
 
-```csharp
-public class DialogBot<T> : TeamsActivityHandler where T : Dialog
-{
-    protected readonly BotState ConversationState;
-    protected readonly Dialog Dialog;
-    protected readonly ILogger Logger;
-    protected readonly BotState UserState;
+# [C#/.NET](#tab/dotnet)
 
-    public DialogBot(ConversationState conversationState, UserState userState, T dialog, ILogger<DialogBot<T>> logger)
-    {
-        ConversationState = conversationState;
-        UserState = userState;
-        Dialog = dialog;
-        Logger = logger;
-    }
+[!code-csharp[ActivityHandler](~/../botbuilder-samples/samples/csharp_dotnetcore/46.teams-auth/Bots/DialogBot.cs?range=19-51)]
 
-    public override async Task OnTurnAsync(ITurnContext turnContext, CancellationToken cancellationToken = default(CancellationToken))
-    {
-        await base.OnTurnAsync(turnContext, cancellationToken);
+**Bots/TeamsBot.cs**
 
-        // Save any state changes that might have occured during the turn.
-        await ConversationState.SaveChangesAsync(turnContext, false, cancellationToken);
-        await UserState.SaveChangesAsync(turnContext, false, cancellationToken);
-    }
+The *Invoke Activity* must be forwarded to the dialog if the **OAuthPrompt** is used.
 
-    protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
-    {
-        Logger.LogInformation("Running dialog with Message Activity.");
-
-        // Run the Dialog with the new message Activity.
-        await Dialog.RunAsync(turnContext, ConversationState.CreateProperty<DialogState>(nameof(DialogState)), cancellationToken);
-    }
-}
-```
-
-#### Bots\TeamsBot.cs
-
-The *Invoke Activity* must be forwarded to the dialog if the **OAuthPrompt** is used. 
-
-```csharp
-protected override async Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
-{
-    Logger.LogInformation("Running dialog with signin/verifystate from an Invoke Activity.");
-
-    // OAuth Prompt needs to see the Invoke Activity in order to complete the login process.
-    // Run the Dialog with the new Invoke Activity.
-    await Dialog.RunAsync(turnContext, ConversationState.CreateProperty<DialogState>(nameof(DialogState)), cancellationToken);
-}
-
-```
+[!code-csharp[ActivityHandler](~/../botbuilder-samples/samples/csharp_dotnetcore/46.teams-auth/Bots/TeamsBot.cs?range=34-42)]
 
 #### TeamsActivityHandler.cs
 
@@ -486,6 +456,37 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 }
 ```
 
+# [Python](#tab/python)
+
+**bots/dialog_bot.py**
+
+[!code-python[ActivityHandler](~/../botbuilder-samples/samples/python/46.teams-auth/bots/dialog_bot.py?range=10-42)]
+
+**bots/teams_bot.py**
+
+The *Invoke Activity* must be forwarded to the dialog if the **OAuthPrompt** is used.
+
+[!code-python[on_token_response_event](~/../botbuilder-samples/samples/python/46.teams-auth/bots/teams_bot.py?range=38-45)] 
+
+**dialogs/main_dialog.py**
+
+Within a dialog step, use `begin_dialog` to start the OAuth prompt, which asks the user to sign in.
+
+- If the user is already signed in, this will generate a token response event, without prompting the user.
+- Otherwise, this will prompt the user to sign in. The Azure Bot Service sends the token response event after the user attempts to sign in.
+
+[!code-python[Add OAuthPrompt](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/main_dialog.py?range=48-49)]
+
+Within the following dialog step, check for the presence of a token in the result from the previous step. If it is not null, the user successfully signed in.
+
+[!code-python[Add OAuthPrompt](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/main_dialog.py?range=54-65)]
+
+**dialogs/logout_dialog.py**
+
+[!code-python[allow logout](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/logout_dialog.py?range=29-36&highlight=6)]
+
+---
+
 ## Further reading
 
 - [Add authentication to your bot via Azure Bot Service](https://aka.ms/azure-bot-add-authentication)
@@ -500,6 +501,8 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 [simple-dialog]: https://docs.microsoft.com/azure/bot-service/bot-builder-dialog-manage-conversation-flow?view=azure-bot-service-4.0
 
 [teams-auth-bot]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth
+
+[teams-auth-bot-py]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/46.teams-auth
 
 [azure-aad-blade]: https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview
 [aad-registration-blade]: https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredAppsPreview

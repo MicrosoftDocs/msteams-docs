@@ -2,7 +2,7 @@
 title: Search with messaging extensions
 description: Describes how to develop search based messaging extensions
 keywords: teams messaging extensions messaging extensions search
-ms.date: 05/20/2019
+ms.date: 07/20/2019
 ---
 # Search with messaging extensions
 
@@ -24,7 +24,7 @@ For search based messaging extension set the `type` parameter to `query`. Below 
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
@@ -129,7 +129,7 @@ In addition to the standard bot activity properties, the payload contains the fo
 |`channelData.tenant.id`| Azure Active Directory tenant ID. |
 |`channelData.channel.id`| Channel ID (if the request was made in a channel). |
 |`channelData.team.id`| Team ID (if the request was made in a channel). |
-|`clientInfo` entity | Additional metadata about the client, such as locale/language and type of client. |
+|`clientInfo`|Optional metadata about the client software used to send a user's message. The entity can contain two properties:<br>The `country` field contains the user's detected location.<br>The `platform` field describes the messaging client platform. <br>For additional information, please *see* [Non-IRI entity types — clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).|
 
 The request parameters itself are found in the value object, which includes the following properties:
 
@@ -177,11 +177,9 @@ The request parameters itself are found in the value object, which includes the 
   },
   "entities": [
     {
-      "locale": "en-US",
+    "type": "clientInfo",
       "country": "US",
-      "platform": "Windows",
-      "timezone": "America/Los_Angeles",
-      "type": "clientInfo"
+      "platform": "Windows"
     }
   ]
 }
@@ -518,10 +516,10 @@ At this point, the window closes and control is passed to the Teams client. The 
     "timestamp": "2017-04-26T05:18:25.629Z",
     "localTimestamp": "2017-04-25T22:18:25.629-07:00",
     "entities": [{
-        "locale": "en-US",
+        "type": "clientInfo",
         "country": "US",
         "platform": "Web",
-        "type": "clientInfo"
+        
     }],
     "text": "",
     "attachments": [],
@@ -596,8 +594,6 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 
 ### Node.js
 
-The [Teams extensions](https://www.npmjs.com/package/botbuilder-teams) for the Bot Builder SDK for Node.js provide helper objects and methods to simplify receiving, processing, and responding to messaging extension requests.
-
 #### Example code in Node.js
 
 ```javascript
@@ -653,3 +649,4 @@ class App {
 const app = new App();
 app.run();
 ```
+*See also* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).

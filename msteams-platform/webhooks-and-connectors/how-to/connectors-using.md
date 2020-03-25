@@ -1,16 +1,17 @@
 ---
 title: Sending messages to Connectors and Webhooks
 description: Describes how to use Office 365 Connectors in Microsoft Teams
+localization_priority: Priority
 keywords: teams o365 connector
 ---
 
-# Sending messages to Connectors and Webhooks
+# Sending messages to connectors and webhooks
 
 To send a message through your Office 365 Connector or incoming webhook, you post a JSON payload to the webhook URL. Typically this payload will be in the form of an [Office 365 Connector Card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
 You can also use this JSON to create cards containing rich inputs, such as text entry, multi-select, or picking a date and time. The code that generates the card and posts to the webhook URL can be running on any hosted service. These cards are defined as part of actionable messages, and are also supported in [cards](~/task-modules-and-cards/what-are-cards.md) used in Teams bots and Messaging extensions.
 
-### Example Connector message
+### Example connector message
 
 ```json
 {
@@ -169,11 +170,11 @@ The following manifest.json file contains the basic elements needed to test and 
 > [!NOTE]
 > Replace `id` and `connectorId` in the following example with the GUID of your Connector.
 
-#### Example manifest.json with Connector
+#### Example manifest.json with connector
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "id": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
   "version": "1.0",
@@ -209,7 +210,7 @@ The following manifest.json file contains the basic elements needed to test and 
 }
 ```
 
-## Testing your Connector
+## Testing your connector
 
 To test your Connector, upload it to a team as you would with any other app. You can create a .zip package using the manifest file from the Connectors Developer Dashboard (modified as directed in the preceding section) and the two icon files.
 
@@ -221,19 +222,23 @@ You can now launch the configuration experience. Be aware that this flow occurs 
 
 To verify that an `HttpPOST` action is working correctly, use your [custom incoming webhook](#setting-up-a-custom-incoming-webhook).
 
+## Rate limiting for connectors
 
-## Rate limiting for Connectors
+Application rate limits control the traffic that a connector or an incoming webhook is allowed to generate on a channel. Teams tracks requests via a fixed-rate window and incremental counter measured in seconds.  If too many requests are made, the client connection will be throttled until the window refreshes, i.e., for the duration of the fixed rate.
 
-This limit controls the traffic that a connector or an incoming webhook is allowed to generate on a channel.
+### **Transactions per second thresholds**
 
-| Time-period (sec)  | Max allowed message requests  |
+| Time (seconds)  | Maximum allowed requests  |
 |---|---|
 | 1   | 4  |  
 | 30   | 60  |  
-| 3600  | 100  | 
-| 7200 | 150  | 
+| 3600   | 100  |
+| 7200 | 150  |
+| 86400  | 1800  |
 
-A [retry logic with exponential back-off](/azure/architecture/patterns/retry) like below would mitigate rate limiting for cases where requests are exceeding the limits within a second. Please follow [best practices](~bots/how-to/rate-limit#best-practices.md) to avoid hitting the rate limits.
+*See also* [Office 365 Connectors — Microsoft Teams](https://docs.microsoft.com/connectors/teams/)
+
+A [retry logic with exponential back-off](/azure/architecture/patterns/retry) like below would mitigate rate limiting for cases where requests are exceeding the limits within a second. Please follow [best practices](../../bots/how-to/rate-limit.md#best-practices) to avoid hitting the rate limits.
 
 ```csharp
 // Please note that response body needs to be extracted and read 

@@ -3,6 +3,7 @@ title: Create a bot for Microsoft Teams
 author: clearab
 description: How to create a bot for Microsoft Teams.
 ms.topic: conceptual
+localization_priority: Priority
 ms.author: anclear
 ---
 # Create a bot for Microsoft Teams
@@ -55,9 +56,9 @@ Scenarios when you **must** have your bot registration in Azure (either by creat
 
 #### Using App Studio
 
-*App Studio* is a Teams app that helps you build Teams apps, including registering your web service as a bot, creating an app manifest, and your app package. It also contains a React control library and configurable samples for cards. See [Getting started with Teams App Studio](../../concepts/build-and-test/app-studio-overview.md).
+*App Studio* is a Teams application that helps you build Teams apps, including registering your web service as a bot, creating an app manifest and your app package, and updating settings and configurations. It also contains a React control library and configurable samples for cards. See [Getting started with Teams App Studio](../../concepts/build-and-test/app-studio-overview.md).
 
-Remember, if you use App Studio to register your web service you'll need to go to https://dev.botframework.com/bots to manage your registration. Some settings (like your messaging endpoint) can be updated in App Studio as well.
+Remember, if you use App Studio to register your web service you'll need to go to https://dev.botframework.com/bots to manage your registration.
 
 #### In the legacy portal
 

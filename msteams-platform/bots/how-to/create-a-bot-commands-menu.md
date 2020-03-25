@@ -144,7 +144,7 @@ Bots in a group or channel respond only when they are mentioned ("@botname") in 
 
 # [C#/.NET](#tab/dotnet)
 
-You can parse out the **@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework — a method of the `Activity` class named `RemoveRecipientMention`.
+You can parse out the **\@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework — a method of the `Activity` class named `RemoveRecipientMention`.
 
 ```csharp
 var modifiedText = turnContext.Activity.RemoveRecipientMention();
@@ -152,10 +152,19 @@ var modifiedText = turnContext.Activity.RemoveRecipientMention();
 
 # [JavaScript/Node.js](#tab/javascript)
 
-You can parse out the **@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework — a method of the `TurnContext` class named `removeMentionText`.
+You can parse out the **\@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework — a method of the `TurnContext` class named `removeMentionText`.
 
 ```javascript
 const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnContext.activity.recipient.id);
+```
+
+# [Python](#tab/python)
+
+
+You can parse out the **@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework — a method of the `TurnContext` class named `remove_recipient_mention`.
+
+```python
+modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 ```
 
 * * *

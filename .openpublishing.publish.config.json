@@ -2,7 +2,7 @@
     "docsets_to_publish": [{
         "customized_tasks": {
             "docset_prebuild": [
-                "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
+             "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"	
             ]
         },
         "docset_name": "msteams-platform",
@@ -21,7 +21,7 @@
         "template_folder": "_themes"
     }],
     "JoinTOCPlugin": [{
-        "ConceptualTOC": "/msteams-platform/toc.yml",
+        "ConceptualTOC": "/msteams-platform/TOC.yml",
         "ReferenceTOCUrl": "/javascript/api/msteams-client-docs-ref-typescript/toc.json?view=msteams-client-js-latest"
     }],
     "notification_subscribers": [],
@@ -46,7 +46,13 @@
             "path_to_root": "_msteams-samples-hello-world-csharp",
             "url": "https://github.com/OfficeDev/msteams-samples-hello-world-csharp",
             "branch": "master"
-        }
+        },
+        {
+            "path_to_root":"botbuilder-samples",
+            "url":"https://github.com/Microsoft/BotBuilder-Samples",
+            "branch":"master",
+            "branch_mapping":{}
+         }
     ],
     "dependent_packages": [{
         "path_to_root": "_dependentPackages/CommonPlugins",

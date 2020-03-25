@@ -11,7 +11,7 @@ ms.date: 05/20/2019
 Your bot can access additional context about the team or chat, such as user profile. This information can be used to enrich your bot's functionality and provide a more personalized experience.
 
 > [!NOTE]
-> These Microsoft Teams&ndash;specific bot APIs are best accessed through our extensions for the Bot Builder SDK. For C#/.NET, download our [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet package. For Node.js development, you can install the [botbuilder-teams](https://www.npmjs.com/package/botbuilder-teams) npm package. Both SDKs target Bot Builder v3.
+> These Microsoft Teams&ndash;specific bot APIs are best accessed through our extensions for the Bot Builder SDK. For C#/.NET, download our [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet package. For Node.js development, the BotBuilder for Microsoft Teams functionality has been incorporated into the [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) as of v4.6.
 
 ## Fetching the team roster
 
@@ -84,8 +84,6 @@ await context.PostAsync($"People in this conversation: {sb.ToString()}");
 
 ### Node.js/TypeScript example
 
-The following example uses the [Microsoft Teams extensions for the Bot Builder SDK for Node.js](https://www.npmjs.com/package/botbuilder-teams).
-
 ```typescript
 
 [...]
@@ -106,6 +104,8 @@ connector.fetchMembers(
   }
 );
 ```
+
+*See also* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
 
 ## Fetching user profile or roster in personal or group chat
 

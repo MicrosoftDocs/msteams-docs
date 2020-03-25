@@ -127,7 +127,7 @@ To install the bot, you'll first need to register it on the [Microsoft Identity 
 
 1. Return to the plugin administration page (Site administration > Plugins > Microsoft Office 365 Integration) and select the **Teams Settings** tab.
 1. Click the **Microsoft Application Registration Portal** link and login with your Microsoft Id.
-1. Enter a name for you app (Eg. MoodleBot) and click the **Create** button.
+1. Enter a name for your app (Eg. MoodleBot) and click the **Create** button.
 1. Copy the **Application Id** and paste it into the **Bot Application ID** field on the **Team Settings** page.
 1. Click the **Generate New Password** button. Copy the generated password and and paste it into the **Bot Application Password** field on the **Team Settings** page.
 1. Scroll to the bottom of the form and click **Save Changes**.

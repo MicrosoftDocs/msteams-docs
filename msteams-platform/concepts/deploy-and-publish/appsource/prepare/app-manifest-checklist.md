@@ -5,6 +5,9 @@ keywords: teams publish store office publishing checklist
 ---
 # App manifest checklist
 
+>[!IMPORTANT]
+>We're migrating management of Office solutions from Seller Dashboard to Partner Center. For details, see [Moving from Seller Dashboard to Partner Center](https://developer.microsoft.com/office/blogs/moving-management-of-solutions-from-seller-dashboard-to-partner-center/) and read the [FAQ](https://docs.microsoft.com/office/dev/store/partner-center-faq).
+
 Your app manifest needs to conform to the guidelines outlined below.
 
 >[!Tip]
@@ -13,12 +16,13 @@ Your app manifest needs to conform to the guidelines outlined below.
 ## Tips
 
 * Don't use "Teams", "Microsoft", or "app" in your app name.
-* The developerName in the App Manifest must be same as the Provider Name defined in Seller Dashboard.
+* The developerName in your manifest must be same as the Provider Name defined in Partner Center.
 * Make sure the app description, screenshots, text, and promotional images describe only the app and do not contain any additional advertising, promotions or copyrighted brand names.
 * If your product requires an account on your service or another service, list that in the description and ensure there are links to sign up, sign in and sign out.
 * If your product requires additional purchases to function properly, list that in the description.
-* Provide the requisite Terms and Privacy policy links in the manifest and the Seller Dashboard. Verify that the links properly resolve to the correct documentation, ideally Teams specific. For bots, you must provide this same information in the Submission section of the Bot Framework registration page.
-* Ensure that metadata in the manifest roughly matches metadata in the Seller Dashboard (and, for bots, in the Bot Framework registration). Note that your Seller Dashboard entry should contain a more detailed and formatted description for use in the AppSource product page.
+* Provide the requisite Terms and Privacy policy links in the manifest and the Partner Center or Dashboard. Verify that the links properly resolve to the correct documentation, ideally Teams specific. For bots, you must provide this same information in the Submission section of the Bot Framework registration page.
+* Ensure that metadata in the manifest exactly matches metadata in the Partner Center (and, for bots, in the Bot Framework registration). Note that your Partner Center entry may contain a more detailed and formatted description for use in the AppSource product page.
+* Ensure the app title used in your manifest is an **exact match** with the App title entered in Partner Center submission. *See* [Create effective listings in Microsoft AppSource and within Office — Use a consistent add-in name ](https://docs.microsoft.com/office/dev/store/create-effective-office-store-listings#use-a-consistent-add-in-name).
 
 ## Metadata requirement
 

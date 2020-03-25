@@ -46,4 +46,4 @@ Use the same menu item under About → Developer preview, and click on it to tur
 
 ## Features available in developer preview
 
-For a full list of the features currently enabled in developer preview see: [Features in the public developer preview](~/resources/dev-preview/developer-preview-features.md).
+For a full list of the features currently enabled in developer preview see: [Features in the public developer preview](../../resources/dev-preview/developer-preview-features.md).

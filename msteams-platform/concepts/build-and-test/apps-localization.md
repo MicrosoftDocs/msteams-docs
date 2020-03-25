@@ -34,13 +34,13 @@ The images you upload with the English language will be the ones used in AppSour
 
 ## Localizing the strings in your app manifest
 
-You must use the Microsoft Teams app schema v1.5+ to properly localize your app. You can do this by setting the `$schema` attribute in your manifest.json file to 'https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json' and updating the 'manifestVersion' property to '1.5'.
+You must use the Microsoft Teams app schema v1.5+ to properly localize your app. You can do this by setting the `$schema` attribute in your manifest.json file to 'https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json' and updating the 'manifestVersion' property to '1.5'.
 
 ### Example manifest.json change
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   ...
 }
@@ -60,7 +60,7 @@ You will then want to add the 'localizationInfo' property with the default langu
 }
 ```
 
-You can provide additional .json files with translations of all the user facing strings in your manifest. These files must adhere to the [Localization file JSON schema](~/resources/schema/localization-schema.md) and they must be added to the 'localizationInfo' property of your manifest. Each file correlates to a language tag which the Teams client uses to choose the appropriate strings. The language tag takes the form of <language>-<region> but it is recommended to omit the <region> portion to target all regions that support the desired language.
+You can provide additional .json files with translations of all the user facing strings in your manifest. These files must adhere to the [Localization file JSON schema](../../resources/schema/localization-schema.md) and they must be added to the 'localizationInfo' property of your manifest. Each file correlates to a language tag which the Teams client uses to choose the appropriate strings. The language tag takes the form of <language>-<region> but it is recommended to omit the <region> portion to target all regions that support the desired language.
 
 The Teams client will apply the strings in this order: default language strings -> user's language only strings -> user's language + user's region strings.
 
@@ -108,7 +108,7 @@ Therefore, it is strongly recommended to provide top-level, language-only transl
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.Localization.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.Localization.schema.json",
   "name.short": "Le App",
   "name.full": "App pour Microsoft Teams",
   "description.short": "Créez d'excellentes applications pour Microsoft Teams avec App.",

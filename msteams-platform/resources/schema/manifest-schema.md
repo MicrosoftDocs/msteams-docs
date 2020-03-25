@@ -5,7 +5,7 @@ keywords: teams manifest schema
 ---
 # Reference: Manifest schema for Microsoft Teams
 
-The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json). Previous versions 1.0-1.4 are also supported (using "v1.x" in the URL).
+The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json). Previous versions 1.0-1.4 are also supported (using "v1.x" in the URL).
 
 The following schema sample shows all extensibility options.
 
@@ -13,7 +13,7 @@ The following schema sample shows all extensibility options.
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%",
@@ -219,7 +219,7 @@ Specifies information about your company. For apps submitted to AppSource (forme
 |`websiteUrl`|2048 characters|✔|The https:// URL to the developer's website. This link should take users to your company or product-specific landing page.|
 |`privacyUrl`|2048 characters|✔|The https:// URL to the developer's privacy policy.|
 |`termsOfUseUrl`|2048 characters|✔|The https:// URL to the developer's terms of use.|
-|`mpnId`|10 characters|✔|**Optional** The Microsoft Partner Network ID that identifies the partner organization building the app.|
+|`mpnId`|10 characters| |**Optional** The Microsoft Partner Network ID that identifies the partner organization building the app.|
 
 ## localizationInfo
 
@@ -314,6 +314,9 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 |`contentUrl`|String|2048 characters|✔|The https:// URL that points to the entity UI to be displayed in the Teams canvas.|
 |`websiteUrl`|String|2048 characters||The https:// URL to point at if a user opts to view in a browser.|
 |`scopes`|Array of enum|1|✔|Currently, static tabs support only the `personal` scope, which means it can be provisioned only as part of the personal experience.|
+
+> [!NOTE]
+> If your tabs require context-dependent information to display relevant content or for initiating an authentication flow, *see* [Get context for your Microsoft Teams tab](../../tabs/how-to/access-teams-context.md).
 
 ## bots
 

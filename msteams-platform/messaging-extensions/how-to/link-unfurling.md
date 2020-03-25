@@ -9,7 +9,7 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-With link unfurling your app can register to receive an `inovke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` will contain the full URL that was pasted into the compose message area, and you can respond with a card the user can *unfurl*, providing additional information or actions. This works very similarly to a [search command](~/messaging-extensions/how-to/search-commands/define-search-command.md), with the URL serving as the search term.
+With link unfurling your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` will contain the full URL that was pasted into the compose message area, and you can respond with a card the user can *unfurl*, providing additional information or actions. This works very similarly to a [search command](~/messaging-extensions/how-to/search-commands/define-search-command.md), with the URL serving as the search term.
 
 The Azure DevOps messaging extension uses link unfurling to look for URLs pasted into the compose message area pointing to a work item. In the screenshot below, a user has pasted in a URL for a work item in Azure DevOps which the messaging extension has resolved into a card.
 
@@ -69,14 +69,14 @@ See [What are cards](~/task-modules-and-cards/what-are-cards.md) for an overview
 protected override async Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQueryAsync(ITurnContext<IInvokeActivity> turnContext, AppBasedLinkQuery query, CancellationToken cancellationToken)
 {
     //You'll use the query.link value to search your service and create a card response
-    var heroCard = new ThumbnailCard
+    var card = new HeroCard
     {
-        Title = "Thumbnail Card",
+        Title = "Hero Card",
         Text = query.Url,
         Images = new List<CardImage> { new CardImage("https://raw.githubusercontent.com/microsoft/botframework-sdk/master/icon.png") },
     };
 
-    var attachments = new MessagingExtensionAttachment(HeroCard.ContentType, null, heroCard);
+    var attachments = new MessagingExtensionAttachment(HeroCard.ContentType, null, card);
     var result = new MessagingExtensionResult(AttachmentLayoutTypes.List, "result", new[] { attachments }, null, "test unfurl");
 
     return new MessagingExtensionResponse(result);

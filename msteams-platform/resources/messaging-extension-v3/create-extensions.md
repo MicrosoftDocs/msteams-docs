@@ -23,7 +23,7 @@ To initiate actions from a  messaging extension set the `type` parameter to `act
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
@@ -492,8 +492,6 @@ When responding to the `edit` request you should respond with a `task` response 
 
 # [TypeScript/Node.js](#tab/typescript)
 
-The example below shows how to do this using the [Node.js Teams Bot Builder SDK](https://www.npmjs.com/package/botbuilder-teams).
-
 ```typescript
 teamChatConnector.onComposeExtensionSubmitAction((
     event: builder.IEvent,
@@ -551,6 +549,8 @@ teamChatConnector.onComposeExtensionSubmitAction((
         }
     });
 ```
+
+*See also* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
 
 # [C#/.NET](#tab/dotnet)
 
