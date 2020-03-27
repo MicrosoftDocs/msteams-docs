@@ -348,7 +348,7 @@ ms.author: lajanuar
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Attendance</h3>
+                                                    <h3>Attendance app</h3>
                                                     <p>Help your team record attendance and generate summarized reports.</p>
                                                 </div>
                                             </div>
@@ -367,7 +367,7 @@ ms.author: lajanuar
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Associate Insights</h3>
+                                                    <h3>Associate Insights app</h3>
                                                     <p>Empower firstline workers to capture customer feedback.</p>
                                                 </div>
                                             </div>
@@ -388,6 +388,44 @@ ms.author: lajanuar
                                                 <div class="cardText">
                                                     <h3>Incentives app</h3>
                                                     <p>Manage and track incentivized participation in activities and events.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-openbadges">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/dynamics-gdpr-center.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Open Badges app</h3>
+                                                    <p>Award and track digital learning credential badges.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-groupactivities">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/team-services-agile-customize.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Group Activities app</h3>
+                                                    <p>Quickly create and manage activity groups and collaboration workflows.</p>
                                                 </div>
                                             </div>
                                         </div>
