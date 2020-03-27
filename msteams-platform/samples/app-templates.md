@@ -180,7 +180,7 @@ Open Badges is a Microsoft Teams app that enables individuals to earn digital le
 
 ## Group Activities app
 
-Group Activities is a Microsoft Teams app that makes it easy for team owners to quickly create activity groups and manage a collaboration's workflow within the context of Microsoft Teams. Activity authors are enabled to create activities, randomly distribute team members in groups, and optionally have the bot send reminders until activities are complete.
+Group Activities is a Microsoft Teams app that makes it easy for team owners to quickly create activity groups and manage collaboration workflows within the context of Microsoft Teams. Activity authors are enabled to create activities, randomly distribute team members in groups, and optionally have the bot send reminders until activities are complete.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-groupactivities)
 
