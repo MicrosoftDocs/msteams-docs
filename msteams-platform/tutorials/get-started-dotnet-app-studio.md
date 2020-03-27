@@ -2,6 +2,8 @@
 title: Get started with C#/.NET
 description: Get started building great apps in Microsoft Teams using C#/.NET
 keywords: getting started .net c# csharp
+ms.custom: scenarios:getting-started; languages:ASP.NET,C#
+ms.topic: tutorial
 ms.date: 11/09/2018
 ---
 
