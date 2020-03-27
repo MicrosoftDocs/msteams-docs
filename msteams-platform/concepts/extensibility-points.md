@@ -17,11 +17,11 @@ Teams, channels and group chats allow multiple people to collaborate. Apps in th
 
 They can be extended with:
 
-* **[Conversational bots](~/bots/what-are-bots.md)** interacting with members of the conversation through chat, and responding to events (like a new member being added, or a channel being renamed). All conversations with a bot in this context are visible to all members of the channel or group, so you'll need to ensure the conversation is relevant to everyone.
+* [**Conversational bots**](~/bots/what-are-bots.md) interacting with members of the conversation through chat, and responding to events (like a new member being added, or a channel being renamed). All conversations with a bot in this context are visible to all members of the channel or group, so you'll need to ensure the conversation is relevant to everyone.
 
-* **[Configurable Tabs](~/tabs/what-are-tabs.md)** providing a full-screen embedded web experience configured for the channel or group chat it is installed in. All members will interact on the same shared web-app, so a stateless single page app experience is typical.
+* [**Configurable Tabs**](~/tabs/what-are-tabs.md) providing a full-screen embedded web experience configured for the channel or group chat it is installed in. All members will interact on the same shared web-app, so a stateless single page app experience is typical.
 
-* **[Webhooks and Connectors](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)** enabling external services to post messages to the conversation, and your users to send messages to your service. You can take advantage of cards and card actions to to create rich, actionable messages.
+* [**Webhooks and Connectors**](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) enabling external services to post messages to the conversation, and your users to send messages to your service. You can take advantage of cards and card actions to to create rich, actionable messages.
 
 ### Personal apps
 
@@ -29,13 +29,13 @@ They can be extended with:
 
 They can contain:
 
-* **[Conversational bots](~/bots/what-are-bots.md)** having a one-to-one conversation with the user. Because this is a private conversation, if your app needs to have a multi-turn conversation, or provide a notification relevant only to a single user, it is typically best to have that interaction in a personal app.
+* [**Conversational bots**](~/bots/what-are-bots.md) having a one-to-one conversation with the user. Because this is a private conversation, if your app needs to have a multi-turn conversation, or provide a notification relevant only to a single user, it is typically best to have that interaction in a personal app.
 
-* **[Personal Tabs](~/tabs/what-are-tabs.md)** providing a full-screen embedded web experience.
+* [**Personal Tabs**](~/tabs/what-are-tabs.md)providing a full-screen embedded web experience.
 
 ## Messages
 
-Messages are the heart of collaboration in Teams. With a **[messaging extension action command](~/messaging-extensions/what-are-messaging-extensions.md)**, your app can allow users to invoke your app's API from a message, sending the contents of the message to your app for processing or action. Your app can respond by presenting a form (a task module) to the user to collect more information, sending a reply to the original message, or sending a message directly to the user.
+Messages are the heart of collaboration in Teams. With a [**messaging extension action command**](~/messaging-extensions/what-are-messaging-extensions.md), your app can allow users to invoke your app's API from a message, sending the contents of the message to your app for processing or action. Your app can respond by presenting a form (a task module) to the user to collect more information, sending a reply to the original message, or sending a message directly to the user.
 
 ## Writing messages
 
@@ -43,11 +43,11 @@ Your app can help users craft more effective messages by enabling them to search
 
 There are three ways your app can help users create better messages:
 
-* **[Messaging Extension - search commands](~/messaging-extensions/what-are-messaging-extensions.md)** allowing them to quickly search an external system, preview the results of that search, then insert the result into the chat as a rich card.
+* [**Messaging Extension - search commands**](~/messaging-extensions/what-are-messaging-extensions.md) allowing them to quickly search an external system, preview the results of that search, then insert the result into the chat as a rich card.
 
-* **[Messaging Extension - link unfurling](~/messaging-extensions/what-are-messaging-extensions.md)** allows your app to monitor web domains you're interested in. When a URL containing that domain is pasted into the compose message box, your app's API will be invoked, allowing you to add a rich card to the message with additional information about the item being linked to.
+* [**Messaging Extension - link unfurling**](~/messaging-extensions/what-are-messaging-extensions.md) allows your app to monitor web domains you're interested in. When a URL containing that domain is pasted into the compose message box, your app's API will be invoked, allowing you to add a rich card to the message with additional information about the item being linked to.
 
-* **[Messaging Extension - action commands](~/messaging-extensions/what-are-messaging-extensions.md)** present your user with a modal form (a task module), submit the results of the form to your app, then either insert a message into the conversation directly, or create part of a message the user can edit before sending to the conversation.
+* [**Messaging Extension - action commands**](~/messaging-extensions/what-are-messaging-extensions.md) present your user with a modal form (a task module), submit the results of the form to your app, then either insert a message into the conversation directly, or create part of a message the user can edit before sending to the conversation.
 
 ## User Interface (UI) elements
 

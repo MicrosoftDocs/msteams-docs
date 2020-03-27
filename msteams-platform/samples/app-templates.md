@@ -178,6 +178,21 @@ Group Activities is a Microsoft Teams app that makes it easy for team owners to 
 :::column-end:::
 :::row-end:::
 
+## Open Badges app
 
+Open Badges is a Microsoft Teams app that enables individuals to earn digital learning credential badges within the Teams context and share them everywhere. Using capabilities from the third-party digital badge issuing authority, [Badgr](https://badgr.org/), awarded badges are recorded in a recipient's Badgr profile and available to build and share a rich picture of lifetime learning journeys.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-openbadges)
+
+:::row:::
+  :::column span="2":::
+    ![Image of available badges](../assets/images/open-badges-1.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Awarded badges view](../assets/images/open-badges-2.png)
+:::column-end:::
+:::row-end:::
 
 Have an idea for an app template you'd like to see? [Please let us know](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
