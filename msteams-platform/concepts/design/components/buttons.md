@@ -22,8 +22,39 @@ Button styles in Teams
 Desktop Client
 [!include[Button states](~/includes/design/buttons-image-states.html)]
 
+| Desktop Client Button Colors | Hex Values |  |  |
+| ------- | ------------------ |:-----:| ----|
+|**<p style="color:#6264a7">Primary</p>**||||
+| |***Background***| ***Text***| ***Border***|
+|Rest|#6264a7 | #fff| |
+|Hover|#464775 | #fff|
+|Down|#edebe9| #c8c6c4|
+|Focus| |  | Inset color #fff|
+**<p style="color:#6264a7">Secondary</p>**||||
+|   |***Background***| ***Text***| ***Border***|
+|Rest| #fff| #000| #484644
+|Hover| $c8c6c4| #000 | |
+|Down|#484644| |
+|Disabled|| |
+|Focus|| |
+
 Mobile Client
 [!include[Mobile button states](~/includes/design/buttons-mobile-image-states.html)]
+
+| Mobile Client Buttons | Hex Value |
+| ------- | ------------------ |
+| **Primary**| |
+|Rest| |
+|Hover||
+|Down||
+|Disabled||
+|Focus||
+|**Secondary**||
+|Rest| |
+|Hover||
+|Down||
+|Disabled||
+|Focus||
 
 Dialog buttons
 [!include[Dialog buttons](~/includes/design/buttons-image-dialog.html)]
