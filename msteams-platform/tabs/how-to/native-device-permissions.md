@@ -16,9 +16,10 @@ You might want to enrich your tab with features that require access native devic
 ![Device Permissions settings screen](~/assets/images/tabs/device-permissions.png)
 
 > [!IMPORTANT]
-> Native device functionality is currently not supported for tabs on mobile clients but full support is coming soon. 
 >
->Also, we are experiencing an issue with the Geolocation API on desktop that we are working to fix. 
+> Native device functionality is currently not supported for tabs on mobile clients.
+>
+> The geolocation API is currently not fully supported on all desktop clients.
 
 ## Device permissions
 
