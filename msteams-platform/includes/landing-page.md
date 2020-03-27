@@ -395,25 +395,6 @@ ms.author: lajanuar
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-groupactivities">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/media/illustrations/team-services-agile-customize.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Group Activities app</h3>
-                                                    <p>Quickly create and manage activity groups and collaboration workflow.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="https://github.com/OfficeDev/microsoft-teams-apps-openbadges">
                                     <div class="cardSize">
                                         <div class="cardPadding">
@@ -426,6 +407,25 @@ ms.author: lajanuar
                                                 <div class="cardText">
                                                     <h3>Open Badges app</h3>
                                                     <p>Award and track digital learning credential badges.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-groupactivities">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/team-services-agile-customize.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Group Activities app</h3>
+                                                    <p>Quickly create and manage activity groups and collaboration workflows.</p>
                                                 </div>
                                             </div>
                                         </div>
