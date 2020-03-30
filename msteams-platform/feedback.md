@@ -8,7 +8,7 @@ keywords: teams feedback questions issues bugs contributions
 
 The Microsoft Team product team responds to the developer community across several channels.
 
-- **Non programming questions**: GitHub msteams-docs issue list is our main hub for any bugs, API request, general questions, feedbacks and any non-programming questions. We regularly monitor the issue list and provide prompt response. You can open an issue [here](https://github.com/MicrosoftDocs/msteams-docs/issues). 
+- **Non programming questions**: GitHub msteams-docs issue list is our main hub for any bugs, API request, general questions, feedbacks and any non-programming questions. We regularly monitor the issue list and provide prompt response. You can [open an issue here](https://github.com/MicrosoftDocs/msteams-docs/issues). 
 
 - **Programming questions:** We listen and respond on [Stack Overflow](http://stackoverflow.com/questions/tagged/microsoft-teams). Follow the [guidance](http://stackoverflow.com/tour) about what makes a good question on Stack Overflow. Tag your question with `microsoft-teams` so that our team and the Microsoft Teams developer community can spot your question.
 
