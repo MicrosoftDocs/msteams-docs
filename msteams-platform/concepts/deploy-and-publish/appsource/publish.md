@@ -25,3 +25,53 @@ Publishing  your app to [AppSource](https://appsource.microsoft.com) makes it av
 ## Learn More
 
 [Validation policies for Microsoft Teams apps submitted to AppSource (version 2.2)](/office/dev/store/validation-policies#14-microsoft-teams-apps)
+
+## FAQs for Teams app Partner Account Issues 
+### How do I create a Partner Center account? 
+
+For submitting your Teams add-in to AppSource and Teams store, you should have a Partner Center account. Follow [these steps](https://docs.microsoft.com/en-us/office/dev/store/open-a-developer-account#create-your-developer-account) to create one. 
+
+### How do I fill the phone number in Contact Info section?
+The phone number has three parts - Country code, Area code and the actual number. If any section is empty, please fill ‘0’
+
+### I get an error message “My account is not Publish eligible” when I try to submit my add-in through Partner Center. 
+This will be the case when your account verification status is not “Authorized”. You can check your Account verification status in ‘Account settings’ by clicking on the ‘gear icon’ on top right of the page header shell.Now go to  Developer Settings >> Account settings (Left menu under ‘Account’)
+If the "Verification Status" is not “Authorized” , please see below questions for the varios error states that may be encountered during Verification.
+
+### My account “Verification status” has been struck at “Email Verification”. How do I proceed further?
+Please look out for an email from “maccount@microsoft.com” with the subject “Action needed: Verify your email account with Microsoft” asking you to complete the Email verification. The verification email will be sent to the email ID updated in your Account Settings page.
+
+### I have not received email verification to the email id used in login to Partner Center. What can be done?
+Please try the below steps if you do not see a verification email:
+Check the junk/spam folder. 
+Clear browser cache, go to your Partner Center account dashboard and click resend. Try to resend with different browsers too.
+You can work with your IT department and verify if the emails are blocked by the email server.You can adjust server’s spam filter to allow all emails from maccount@microsoft.com
+
+### How long does “Employee Verification” usually take?
+If all the details are provided correct, “Employee Verification” completes in 1 to 2 hours.
+
+### I have tried all the recommendations above. How do I still get support for my Account related issues? 
+Open a ticket via https://aka.ms/officestoresupport. Please leave the first two boxes as default and on the third box select the appropriate drop-down for the issue.
+
+### I cannot find Office Store program in my Partner Center Account?
+Please open a ticket via https://aka.ms/officestoresupport. Please leave the first two boxes as default and on the third box select the appropriate drop-down for the issue.
+
+### I have already reached out to the Support - is there any way I can expedite my case? 
+The support tickets raised will be resolved within a week’s time. Please look for the updates which will be sent to the email id provided while raising the support ticket.
+
+### I have already created a support ticket and haven’t got any update since last 7 days. Who can I contact to get additional help?
+Please send an email to ‘teamsubm@microsoft.com’ with the below details -  
+* Subject: “Partner Center Account Issue for App_Name” (App name to be specified)
+* Include in the email the following:
+* Support Ticket #:
+* Your Seller ID:
+* Screen shot of the issue: 
+
+
+
+
+
+
+
+
+
