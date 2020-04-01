@@ -20,7 +20,7 @@ For more information about how the Azure Bot Service handles authentication, see
 
 In this article you'll learn:
 
-- **How to create an authentication-enabled bot**. You'll use [cs-auth-sample][teams-auth-bot] to handle user sign-in credentials and the generating the authentication token.
+- **How to create an authentication-enabled bot**. You'll use [cs-auth-sample][teams-auth-bot-cs] to handle user sign-in credentials and the generating the authentication token.
 - **How to deploy the bot to Azure and associate it with an identity provider**. The provider issues a token based on user sign-in credentials. The bot can use the token to access resources, such as a mail service, which require authentication. For more information see  [Microsoft Teams authentication flow for bots](auth-flow-bot.md).
 - **How to integrate the bot within Microsoft Teams**. Once the bot has been integrated, you can sign in and exchange messages with it in a chat.
 
@@ -34,8 +34,9 @@ In this article you'll learn:
 
     | Sample | BotBuilder version | Demonstrates |
     |:---|:---:|:---|
-    | **Bot authentication** in [cs-auth-sample][teams-auth-bot] | v4 | OAuthCard support |
-    | **Bot authentication** in [python-auth-sample][teams-auth-bot-py] | v4 | OAuthCard support |
+    | **Bot authentication** in [cs-auth-sample][teams-auth-bot-cs] | v4 | OAuthCard support |
+    | **Bot authentication** in [js-auth-sample][teams-auth-bot-js] | v4| OAuthCard support  |
+    | **Bot authentication** in [py-auth-sample][teams-auth-bot-py] | v4 | OAuthCard support |
 
 ## Create the resource group
 
@@ -170,7 +171,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
 # [C#/.NET](#tab/dotnet)
 
-1. Clone [cs-auth-sample][teams-auth-bot].
+1. Clone [cs-auth-sample][teams-auth-bot-cs].
 1. Launch Visual Studio.
 1. From the toolbar select **File -> Open -> Project/Solution** and open the bot project.
 1. In C# Update **appsettings.json** as follows:
@@ -500,9 +501,11 @@ Within the following dialog step, check for the presence of a token in the resul
 [concept-dialogs]: https://docs.microsoft.com/azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0
 [simple-dialog]: https://docs.microsoft.com/azure/bot-service/bot-builder-dialog-manage-conversation-flow?view=azure-bot-service-4.0
 
-[teams-auth-bot]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth
+[teams-auth-bot-cs]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth
 
 [teams-auth-bot-py]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/46.teams-auth
+
+[teams-auth-bot-js]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth
 
 [azure-aad-blade]: https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview
 [aad-registration-blade]: https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredAppsPreview
