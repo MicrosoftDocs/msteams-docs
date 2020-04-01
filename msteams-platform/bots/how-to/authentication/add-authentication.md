@@ -179,7 +179,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
     - Set `ConnectionName` to the name of the identity provider connection you added to the bot channel registration. The name we used in this example is *BotTeamsAuthADv1*.
     - Set `MicrosoftAppId` to the **bot App ID** you saved at the time of the bot channel registration.
     - Set `MicrosoftAppPassword` to the **customer secret** you saved at the time of the bot channel registration.
-    - Set the `ConnectionName` to the name of the identity provider connection. 
+    - Set the `ConnectionName` to the name of the identity provider connection.
 
     Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) will need to be encoded as `&amp;`.
 
@@ -187,9 +187,28 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
 1. In the Solution Explorer, navigate to the `TeamsAppManifest` folder, open `manifest.json` and set `id` and `botId` to the **bot App ID** you saved at the time of the bot channel registration.
 
+# [JS/Node.js](#tab/node-js)
+
+1. Clone [node-auth-sample][teams-auth-bot-js].
+1. In a console, navigate to the project: </br></br>
+`cd samples/javascript_nodejs/46.teams`  
+1. Install modules</br></br>
+`npm install`
+1. Update **.env** as follows:
+
+    - Set `MicrosoftAppId` to the **bot App ID** you saved at the time of the bot channel registration.
+    - Set `MicrosoftAppPassword` to the **customer secret** you saved at the time of the bot channel registration.
+    - Set the `connectionName` to the name of the identity provider connection.
+
+    Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) will need to be encoded as `&amp;`.
+
+     [!code-javascript[settings](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/.env)]
+
+1. Navigate to the `teamsAppManifest` folder, open `manifest.json` and set `id`  to your **Microsoft App ID** and `botId` to the **bot App ID** you saved at the time of the bot channel registration.
+
 # [Python](#tab/python)
 
-1. Clone the sample [Teams bot authentication][teams-auth-bot-py] from the github repository.
+1. Clone [py-auth-sample][teams-auth-bot-py] from the github repository.
 1. Update **config.py**:
 
     - Set `ConnectionName` to the name of the OAuth connection setting you added to your bot.
