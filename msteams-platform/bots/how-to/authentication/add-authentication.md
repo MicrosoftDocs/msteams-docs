@@ -187,7 +187,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
 1. In the Solution Explorer, navigate to the `TeamsAppManifest` folder, open `manifest.json` and set `id` and `botId` to the **bot App ID** you saved at the time of the bot channel registration.
 
-# [JS/Node.js](#tab/node-js)
+# [JavaScript](#tab/node-js)
 
 1. Clone [node-auth-sample][teams-auth-bot-js].
 1. In a console, navigate to the project: </br></br>
