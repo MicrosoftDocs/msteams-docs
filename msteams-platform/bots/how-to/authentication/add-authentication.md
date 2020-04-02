@@ -444,7 +444,7 @@ This is done by sub-classing the **ActivityHandler**.
 
 **Bots/DialogBot.cs**
 
-# [C#/.NET](#tab/dotnet)
+# [C#/.NET](#tab/dotnet-sample)
 
 [!code-csharp[ActivityHandler](~/../botbuilder-samples/samples/csharp_dotnetcore/46.teams-auth/Bots/DialogBot.cs?range=19-51)]
 
@@ -476,7 +476,7 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 }
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python-sample)
 
 **bots/dialog_bot.py**
 
