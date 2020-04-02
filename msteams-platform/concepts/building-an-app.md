@@ -26,7 +26,7 @@ Once you've decided what extensibility points and features your app will take ad
 
 ## Prepare your environment
 
-You need to make sure you have an environment where you can upload and test your Teams app. If you don't already have an O365 subscription with Teams enabled and the ability to upload apps to it you can [sign up for the O365 developer program](https://dev.office.com/devprogram) which will give you access to a free Office 365 subscription for development purposes.
+You need to make sure you have an environment where you can upload and test your Teams app. If you don't already have an O365 subscription with Teams enabled and the ability to upload apps to it you can [sign up for the O365 developer program](https://developer.microsoft.com/microsoft-365/dev-program) which will give you access to a free Office 365 subscription for development purposes.
 
 See [prepare your O365 environment](~/concepts/build-and-test/prepare-your-o365-tenant.md) for additional information.
 

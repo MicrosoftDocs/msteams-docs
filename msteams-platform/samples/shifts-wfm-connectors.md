@@ -9,11 +9,11 @@ ms.author: lajanuar
 
 # Microsoft Teams Shifts WFM connectors  
 
-## Teams Shifts workforce management connectors (WFM) for firstline workers 
+## Workforce management connectors (WFM) for firstline workers 
 
-Teams Shifts WFM connectors are production-ready, open-source, community-driven integrations that offer a seamless experience and quick process for the digital transformation of firstline workers with Teams Shifts. 
+Teams Shifts WFM connectors are production-ready, open-source, and community-driven integrations that offer a seamless experience and quick process for the digital transformation of firstline workers with Teams Shifts. 
 
-Each connector provides detailed guidance for deployment and integration to your organization and the complete source code is available in our GitHub repo where it can be explored in detail and/or forked and tailored to meet your specific needs.
+Each connector provides detailed guidance for deployment and integration to your organization. The complete source code is available in our GitHub repo where it can be explored in detail and/or forked and tailored to meet your specific needs.
 
 ## Key benefits: Teams Shifts WFM connectors
 
@@ -25,9 +25,14 @@ Each connector provides detailed guidance for deployment and integration to your
 
 * **Detailed documentation & support.**  All Shifts WFM connectors are accompanied by end-to-end documentation for solution architecture, deployment, and configuration steps. The connector repositories are monitored, so please report any issues, challenges or difficulties you encounter through the repo's GitHub Issues tracker.
 
+* **Seamless integration.** The integration between WFM solutions and Teams Shifts allows firstline workers to use the Teams Shifts app to view/manage their schedules and shift times, and use all the other rich collaboration features provided in Teams right from their mobile device or desktop without having to switch context to another app.
+
+**Open shifts view in Teams**  
+![Open shifts in Teams](../assets/images/teams-open-shifts-view.png)
+
 ## Kronos-to-Teams Shifts connector
 
-The integration between Kronos and Teams Shifts allows firstline workers to use the Teams Shifts app to view/manage their schedules and shift times, and use all the other rich collaboration features provided in Teams right from their mobile device or desktop without having to switch context to another app. With the open-source code, you can now integrate Kronos Workforce Central Version 8.1 with Teams Shifts (desktop/mobile Teams app) for the following firstline worker and manager scenarios:
+With open-source code, you can integrate Kronos Workforce Central Version 8.1 and above, with Teams Shifts (desktop/mobile Teams app) for the following firstline worker and manager scenarios:
 
 1. View schedule.
 
@@ -41,5 +46,14 @@ The integration between Kronos and Teams Shifts allows firstline workers to�
 
 [Get it on GitHub]( https://aka.ms/KronosShiftsConnector)
 
-**Open shifts view in Teams**  
-![Open shifts in Teams](../assets/images/teams-open-shifts-view.png)
+## JDA-to-Teams Shifts connector
+
+With open-source code, you can integrate JDA (BlueYonder) Version 17.2 and above, with Teams Shifts (desktop/mobile Teams app) for the following firstline worker and manager scenarios:
+
+1. Publish shifts and schedule groups in JDA and view in Teams.
+
+1. Enable rich scheduling scenarios, including requesting shift swaps and time off.
+
+1. Set  user availability using the [Microsoft Graph API for Shifts](/graph/api/resources/shift?view=graph-rest-beta) .
+
+[Get it on GitHub](https://aka.ms/JDAShiftsConnector)</br></br>

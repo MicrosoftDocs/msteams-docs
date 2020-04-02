@@ -198,7 +198,7 @@ The method for response is the same as [responding to the initial `fetchTask` ev
 You can also respond to the submit action by inserting a message with an Adaptive Card into the channel with a bot. Your user will be able to preview the message before submitting it, and potentially edit/interact with it as well. This can be very useful in scenarios where you need to gather information from your users before creating an adaptive card response, or when you're going to need to update the card after someone interacts with it. The following scenario shows how the app Polly uses this flow to configure a poll without including the configuration steps in the channel conversation.
 
 1. The user clicks the messaging extension to trigger the task module.
-2. The user configures the poll with the task moudule.
+2. The user configures the poll with the task module.
 3. After submitting the task module the app uses the information provided to build the poll as an Adaptive Card and sends it as a `botMessagePreview` response to the client.
 4. The user can then preview the adaptive card message before the bot inserts it into the channel. If the app is not already a member of the channel, clicking `Send` will add the it.
    1. The user can also chose to `Edit` the message, which returns them to the original task module.
