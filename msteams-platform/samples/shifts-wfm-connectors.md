@@ -9,11 +9,11 @@ ms.author: lajanuar
 
 # Microsoft Teams Shifts WFM connectors  
 
-## Teams Shifts workforce management connectors (WFM) for firstline workers 
+## Workforce management connectors (WFM) for firstline workers 
 
-Teams Shifts WFM connectors are production-ready, open-source, community-driven integrations that offer a seamless experience and quick process for the digital transformation of firstline workers with Teams Shifts. 
+Teams Shifts WFM connectors are production-ready, open-source, and community-driven integrations that offer a seamless experience and quick process for the digital transformation of firstline workers with Teams Shifts. 
 
-Each connector provides detailed guidance for deployment and integration to your organization and the complete source code is available in our GitHub repo where it can be explored in detail and/or forked and tailored to meet your specific needs.
+Each connector provides detailed guidance for deployment and integration to your organization. The complete source code is available in our GitHub repo where it can be explored in detail and/or forked and tailored to meet your specific needs.
 
 ## Key benefits: Teams Shifts WFM connectors
 
@@ -52,10 +52,8 @@ With open-source code, you can integrate JDA (BlueYonder) Version 17.2 and above
 
 1. Publish shifts and schedule groups in JDA and view in Teams.
 
-1. Enable other rich scheduling scenarios, including requesting shift swaps and time off.
+1. Enable rich scheduling scenarios, including requesting shift swaps and time off.
 
-1. Set  user availability using the Shifts Graph API.
+1. Set  user availability using the [Microsoft Graph API for Shifts](/graph/api/resources/shift?view=graph-rest-beta) .
 
-[Get it on GitHub](https://aka.ms/JDAShiftsConnector)
-
-Have an idea for a Teams Shifts connector that you'd like to see? [Please let us know.](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR6dYpsPb291Ii4qBPp71dM9UM0E0SDRZRjM1TFQ2MEVVWUhTTVlXQjJYNS4u)
+[Get it on GitHub](https://aka.ms/JDAShiftsConnector)</br></br>

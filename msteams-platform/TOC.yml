@@ -15,12 +15,12 @@
     href: tutorials/get-started-yeoman.md
 - name: Samples and templates
   items: 
-  - name: Sample apps
-    href: samples/code-samples.md
   - name: Production-ready app templates
     href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
-    href: samples/shifts-wfm-connectors.md  
+    href: samples/shifts-wfm-connectors.md 
+  - name: Sample apps
+    href: samples/code-samples.md 
 - name: Concepts
   expanded: true
   items:
