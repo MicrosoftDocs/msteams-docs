@@ -72,7 +72,7 @@ For example, you provide a default language of 'fr' (French, all regions), and a
 If the user's language is set to 'en-ca': 
 
 1. The Teams client will take the 'fr' strings overwrite them with the 'en' strings.
-2. Since no 'en-ca' localazation is supplied, the 'en' localizations will be used.
+2. Since no 'en-ca' localization is supplied, the 'en' localizations will be used.
 
 If the user's language is set to 'es-es', the Teams client will take the 'fr' strings and will not override them with any of the language files.
 
