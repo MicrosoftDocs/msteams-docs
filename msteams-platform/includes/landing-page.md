@@ -480,6 +480,25 @@ ms.author: lajanuar
                                     </div>
                                 </a>
                             </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/Microsoft-Teams-Shifts-WFM-Connectors/tree/master/JDA_v17.2-Shifts-Connector">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/biztalk-get-started-scenarios.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>JDA-to-Shifts connector</h3>
+                                                    <p>Provide seamless integration from the JDA (BlueYonder) WFM system to Teams Shifts.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li>
