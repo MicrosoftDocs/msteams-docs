@@ -86,7 +86,7 @@ A bot that supports excessive commands, especially a broad range of commands, wi
 
 ### Maintaining a large retrieval knowledge base with unranked responses
 
-Bots are best suited for short, quick interactions, not sifting though long lists looking for an answer.
+Bots are best suited for short, quick interactions, not sifting through long lists looking for an answer.
 
 ## Get started
 
