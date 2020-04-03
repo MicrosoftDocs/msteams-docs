@@ -3,7 +3,7 @@ title: Add authentication to your Teams bot
 author: clearab
 description: How to add OAuth authentication to a bot in Microsoft Teams.
 ms.topic: overview
-ms.author: anclear
+ms.author: lajanuar
 ---
 
 # Add authentication to your Teams bot
@@ -194,7 +194,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 `cd samples/javascript_nodejs/46.teams`  
 1. Install modules</br></br>
 `npm install`
-1. Update **.env** as follows:
+1. Update the **.env** configuration as follows:
 
     - Set `MicrosoftAppId` to the **bot App ID** you saved at the time of the bot channel registration.
     - Set `MicrosoftAppPassword` to the **customer secret** you saved at the time of the bot channel registration.
@@ -204,7 +204,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
      [!code-javascript[settings](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/.env)]
 
-1. Navigate to the `teamsAppManifest` folder, open `manifest.json` and set `id`  to your **Microsoft App ID** and `botId` to the **bot App ID** you saved at the time of the bot channel registration.
+1. In the `teamsAppManifest` folder, open `manifest.json` and set `id`  to your **Microsoft App ID** and `botId` to the **bot App ID** you saved at the time of the bot channel registration.
 
 # [Python](#tab/python)
 
@@ -442,9 +442,9 @@ With authentication, Teams behaves slightly differently than other channels, as 
 An **Invoke Activity** is sent to the bot rather than the Event Activity used by other channels.
 This is done by sub-classing the **ActivityHandler**.
 
-**Bots/DialogBot.cs**
-
 # [C#/.NET](#tab/dotnet-sample)
+
+**Bots/DialogBot.cs**
 
 [!code-csharp[ActivityHandler](~/../botbuilder-samples/samples/csharp_dotnetcore/46.teams-auth/Bots/DialogBot.cs?range=19-51)]
 
@@ -476,6 +476,35 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 }
 ```
 
+# [JavaScript](#tab/node-js-dialog-sample)
+
+**bots/dialogBot.js**
+
+[!code-javascript[ActivityHandler](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/bots/dialogBot.js?range=4-46)]
+
+**bots/teamsBot.js**
+
+The *Invoke Activity* must be forwarded to the dialog if the **OAuthPrompt** is used.
+
+[!code-javascript[ActivityHandler](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/bots/teamsBot.js?range=4-33)]
+
+**dialogs/mainDialog.js**
+
+Within a dialog step, use `beginDialog` to start the OAuth prompt, which asks the user to sign in.
+
+- If the user is already signed in, this will generate a token response event, without prompting the user.
+- Otherwise, this will prompt the user to sign in. The Azure Bot Service sends the token response event after the user attempts to sign in.
+
+[!code-javascript[AddOAuthPrompt](~/../botbuilder-sample/samples/javascript_nodejs/46.teams-auth/dialogs/mainDialog.js?range=50-52)]
+
+Within the following dialog step, check for the presence of a token in the result from the previous step. If it is not null, the user successfully signed in.
+
+[!code-javascript[AddOAuthPrompt](~/../botbuilder-sample/samples/javascript_nodejs/46.teams-auth/dialogs/mainDialog.js?range=50-64)]
+
+**bots/logoutDialog.js**
+
+[!code-javascript[allow-logout]~/../botbuilder-sample/samples/javascript_nodejs/46.teams-auth/dialogs/logoutDialog.js?range=31-42]
+
 # [Python](#tab/python-sample)
 
 **bots/dialog_bot.py**
@@ -499,7 +528,7 @@ Within a dialog step, use `begin_dialog` to start the OAuth prompt, which asks t
 
 Within the following dialog step, check for the presence of a token in the result from the previous step. If it is not null, the user successfully signed in.
 
-[!code-python[Add OAuthPrompt](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/main_dialog.py?range=54-65)]
+[!code-python[Add OAuthPrompt](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/main_dialog.py?range=51-61)]
 
 **dialogs/logout_dialog.py**
 
