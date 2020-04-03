@@ -495,11 +495,11 @@ Within a dialog step, use `beginDialog` to start the OAuth prompt, which asks th
 - If the user is already signed in, this will generate a token response event, without prompting the user.
 - Otherwise, this will prompt the user to sign in. The Azure Bot Service sends the token response event after the user attempts to sign in.
 
-[!code-javascript[AddOAuthPrompt](~/../botbuilder-sample/samples/javascript_nodejs/46.teams-auth/dialogs/mainDialog.js?range=50-52)]
+[!code-javascript[AddOAuthPrompt](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/dialogs/mainDialog.js?range=50-52)]
 
 Within the following dialog step, check for the presence of a token in the result from the previous step. If it is not null, the user successfully signed in.
 
-[!code-javascript[AddOAuthPrompt](~/../botbuilder-sample/samples/javascript_nodejs/46.teams-auth/dialogs/mainDialog.js?range=50-64)]
+[!code-javascript[AddOAuthPrompt](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/dialogs/mainDialog.js?range=50-64)]
 
 **bots/logoutDialog.js**
 
