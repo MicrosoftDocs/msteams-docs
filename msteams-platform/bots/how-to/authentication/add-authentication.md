@@ -503,7 +503,7 @@ Within the following dialog step, check for the presence of a token in the resul
 
 **bots/logoutDialog.js**
 
-[!code-javascript[allow-logout](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/dialogs/logoutDialog.js?range=31-42&highlight=37)]
+[!code-javascript[allow-logout](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/dialogs/logoutDialog.js?range=31-42&highlight=7)]
 
 # [Python](#tab/python-sample)
 
@@ -515,7 +515,7 @@ Within the following dialog step, check for the presence of a token in the resul
 
 The *Invoke Activity* must be forwarded to the dialog if the **OAuthPrompt** is used.
 
-[!code-python[on_token_response_event](~/../botbuilder-samples/samples/python/46.teams-auth/bots/teams_bot.py?range=38-45)] 
+[!code-python[on_token_response_event](~/../botbuilder-samples/samples/python/46.teams-auth/bots/teams_bot.py?range=38-45)]
 
 **dialogs/main_dialog.py**
 
