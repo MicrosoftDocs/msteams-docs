@@ -536,9 +536,8 @@ Within the following dialog step, check for the presence of a token in the resul
 
 ---
 
-## Further reading
-
-- [Add authentication to your bot via Azure Bot Service](https://aka.ms/azure-bot-add-authentication)
+> [!div class="nextstepaction"]
+> [Learn about adding adding authentication via Azure Bot Service](https://aka.ms/azure-bot-add-authentication)
 
 <!-- Footnote-style links -->
 
