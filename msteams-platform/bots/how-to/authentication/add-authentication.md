@@ -503,7 +503,7 @@ Within the following dialog step, check for the presence of a token in the resul
 
 **bots/logoutDialog.js**
 
-[!code-javascript[allow-logout](~/../botbuilder-sample/samples/javascript_nodejs/46.teams-auth/dialogs/logoutDialog.js?range=31-42)]
+[!code-javascript[allow-logout](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/dialogs/logoutDialog.js?range=31-42)]
 
 # [Python](#tab/python-sample)
 
