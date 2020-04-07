@@ -11,7 +11,7 @@ Once you've created your app there are three options for distributing it:
 2. [Publish your app to your organization's app catalog](#publish-to-your-organizations-app-catalog).
 3. [Publish your app through AppSource](#publish-to-appsource).
 
-## Enterprise environments
+## Enterprise organizations
 
 ### Upload your app directly
 
@@ -27,16 +27,16 @@ Your organization's app catalog contains apps unique to your organization and is
 
 AppSource (formerly known as Office Store) provides a convenient location for you to distribute your Microsoft Teams app, as well as other Office 365 extensibility types such as Office add-ins and SharePoint add-ins. Follow our guidelines to [submit your app to AppSource](./appsource/publish.md).
 
-## Government Community Cloud (GCC) environments
+## Government Community Cloud (GCC) organizations
 
-### Uploading an internal line of business application (LOB) to Teams
+### Uploading an LOB app to Teams
 
-LOB applications are not controlled or owned by Microsoft, therefore, as a GCC tenant administrator, you'll decide whether to upload a custom LOB app to your tenant environment and whether to  publish it to your tenant app catalog. To do so, you must ensure that all endpoints are compliant with your organization's GCC requirements. Additionally, if the app solution includes a bot or message extension, you'll need to complete the Bot Framework configuration as follows:
+LOB applications aren't controlled or owned by Microsoft, therefore, as a GCC tenant administrator, you'll decide whether to upload a custom LOB app to your tenant environment and whether to  publish it to your tenant app catalog. To do so, you must ensure that all endpoints are compliant with your organization's GCC requirements. Additionally, if the app solution includes a bot or message extension, you'll need to complete the Bot Framework configuration as follows:
 
 1. Navigate to the **Connect to channels** page.
 1. Under **Add a featured channel**, select **Teams** and navigate to the **Configure MSTeams** page (*see* below).
-1. Under *Messaging* select the *Microsoft Teams for Government Customers* radio button.
-1. In the lower left corner of the page, select *Save*.  
+1. Under **Messaging** select the **Microsoft Teams for Government Customers** radio button.
+1. In the lower left corner of the page, select **Save**.  
 
 ![Teams messaging configuration page](../../assets/images/gcc-configure.png)
 
