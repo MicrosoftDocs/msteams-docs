@@ -41,5 +41,5 @@ LOB applications aren't controlled or owned by Microsoft, therefore, as a GCC te
 ![Teams messaging configuration page](../../assets/images/gcc-configure.png)
 
 > [!NOTE]
-> The GCC uploading instructions apply only to custom/LOB apps. Compliant Microsoft Apps are enabled in the GCC environment by default in Teams. Third-party apps are disabled at the tenant level and are managed via your organization's app permission policies.
+> The GCC uploading instructions, presented above, are applicable to Teams custom/LOB apps. Compliant Microsoft apps are enabled in the GCC environment by default in Teams. Third-party apps are disabled at the tenant level and are managed via your organization's app permission policies.
 </br></br>
