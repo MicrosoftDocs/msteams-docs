@@ -29,17 +29,17 @@ AppSource (formerly known as Office Store) provides a convenient location for yo
 
 ## Government Community Cloud (GCC) organizations
 
-### Uploading LOB apps to Teams
+### Upload your LOB app directly to Teams
 
 LOB applications aren't controlled or owned by Microsoft, therefore, as a GCC tenant administrator, you'll decide whether to upload a custom LOB app to your tenant environment and whether to  publish it to your tenant app catalog. To do so, you must ensure that all endpoints are compliant with your organization's GCC requirements. Additionally, if the app solution includes a bot or message extension, you'll need to complete the [Bot Framework](https://dev.botframework.com/) registration as follows:
 
-1. Navigate to the **Connect to channels** page.
-1. Under **Add a featured channel**, select **Teams**, and navigate to the **Configure MSTeams** page (*see* below).
+1. On the **Connect to channels** page, under **Add a featured channel**, select **Teams**.
+1. Navigate to the **Configure MSTeams** page (*see* below).
 1. Under **Messaging** select the **Microsoft Teams for Government Customers** radio button.
 1. In the lower left corner of the page, select **Save**.  
 
 ![Teams messaging configuration page](../../assets/images/gcc-configure.png)
 
 > [!NOTE]
-> The GCC uploading instructions, presented above, are applicable to Teams LOB apps. Compliant Microsoft apps are enabled in the GCC environment by default in Teams. Third-party apps are disabled at the tenant level and are managed via your organization's [app permission policies](/microsoftteams/teams-app-permission-policies).
+> The uploading instructions for GCC environments, presented above, are applicable to Teams LOB apps. Compliant Microsoft apps are enabled in the GCC environment by default in Teams. All third-party apps, available from [AppSource](https://appsource.microsoft.com), are GCC compliant and managed via your organization's [app permission policies](/microsoftteams/teams-app-permission-policies).
 </br></br>
