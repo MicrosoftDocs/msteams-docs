@@ -15,9 +15,9 @@ Once you've created your app there are three options for distributing it:
 
 ### Upload your app directly
 
-This is the easiest way to test and use your app. If you are the team owner and/or [uploading custom apps is enabled](/microsoftteams/admin-settings), you can [directly upload (or sideload)](./apps-upload.md) the app and start using it right away. However, if you want to share the app with others, you'll have to send them your app package and ask them to upload it independently. 
+This is the easiest way to test and use your app. If you are the team owner and/or [uploading custom apps is enabled](/microsoftteams/admin-settings), you can [directly upload (or sideload)](./apps-upload.md) the app and start using it right away. However, if you want to share the app with others, you'll have to send them your app package and ask them to upload it independently.
 
-If you want to distribute your app more broadly,Teams provides an in-app gallery for users to find or discover high-quality Teams apps. To have your solution available in the gallery, you must either [publish to your organization's app catalog](#publish-to-your-organizations-app-catalog) or [publish to AppSource](./appsource/publish.md) 
+If you want to distribute your app more broadly,Teams provides an in-app gallery for users to find or discover high-quality Teams apps. To have your solution available in the gallery, you must either [publish to your organization's app catalog](#publish-to-your-organizations-app-catalog) or [publish to AppSource](./appsource/publish.md).
 
 ### Publish to your organization's app catalog
 
@@ -46,10 +46,10 @@ AppSource (formerly known as Office Store) provides a convenient location for yo
 > [!NOTE]
 >
 > * The uploading instructions for GCC environments, presented above, applies to Teams LOB apps. </br>
-> * Compliant Microsoft apps are enabled in the GCC environment by default in Teams.
+> * Compliant Microsoft apps are enabled in the GCC environment, by default, in Teams.
 > * Third-party apps are disabled at the tenant level and should be managed via your organization's [app permission policies](/microsoftteams/teams-app-permission-policies). Make certain that you review all third-party apps to ensure that they align with your organization's policies and procedures.
 
 > [!TIP]
 >
-> Microsoft 365 developer partners provide security, data handling, and compliance details for their third-party Teams apps through the Microsoft 365 App Certification program. For more information, *see* [Microsoft 365 App Certification Program](/microsoft-365-app-certification/overview) and [Microsoft Teams App Certification](/microsoftteams/platform/concepts/deploy-and-publish/appsource/post-publish/application-certification).
+> Microsoft 365 developer partners provide security, data handling, and compliance details for their third-party Teams apps through the [Microsoft 365 App Certification Program](/microsoft-365-app-certification/overview). *See also* [Microsoft Teams App Certification](/microsoftteams/platform/concepts/deploy-and-publish/appsource/post-publish/application-certification).
 </br></br>
