@@ -51,10 +51,12 @@ You can work with your IT department and verify if the emails are blocked by the
 If all the details are provided correct, “Employee Verification” completes in 1 to 2 hours.
 
 ### I have tried all the recommendations above. How do I still get support for my Account related issues? 
-Open a ticket via https://aka.ms/officestoresupport. Please leave the first two boxes as default and on the third box select the appropriate drop-down for the issue.
+Visit the link https://aka.ms/marketplacepublishersupport to see if the provided solutions or related documents are helpful to self-serve after searching/selecting the issue topic. If the provided solutions or documents are not helpful to resolve the issue, then please proceed to file the support ticket by clicking on the "Sign in to partner Center to provide issue details" in the ‘Next step’ section. 
+Tip: You can search for the issue topic in the search box (or) Click on “Browse Topics” below the search box to drill down further. If looking for Account Verification Issue then select "All programs" as a category, and "Account, Onboarding, Access" as the topic and then select the appropriate subtopic and click on “Review Solutions” under ‘Next Step’ section.
 
 ### I cannot find Office Store program in my Partner Center Account?
-Please open a ticket via https://aka.ms/officestoresupport. Please leave the first two boxes as default and on the third box select the appropriate drop-down for the issue.
+Visit the link https://aka.ms/marketplacepublishersupport to see if the provided solutions or related documents are helpful to self-serve after searching/selecting the issue topic. If the provided solutions or documents are not helpful to resolve the issue, then please proceed to file the support ticket by clicking on the "Sign in to partner Center to provide issue details" in the ‘Next step’ section. 
+Tip: You can search for the issue topic in the search box (or) Click on “Browse Topics” below the search box to drill down further. If looking for Account Verification Issue then select "All programs" as a category, and "Account, Onboarding, Access" as the topic and then select the appropriate subtopic and click on “Review Solutions” under ‘Next Step’ section.
 
 ### I have already reached out to the Support - is there any way I can expedite my case? 
 The support tickets raised will be resolved within a week’s time. Please look for the updates which will be sent to the email id provided while raising the support ticket.
