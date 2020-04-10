@@ -30,7 +30,7 @@ Desktop Client
 |Hover|#464775 | #fff|
 |Down|#edebe9| #c8c6c4|
 |Focus| |  | Inset color #fff|
-**<p style="color:#6264a7">Secondary</p>**||||
+|**<p style="color:#6264a7">Secondary</p>**||||
 |   |***Background***| ***Text***| ***Border***|
 |Rest| #fff| #000| #484644
 |Hover| $c8c6c4| #000 | |
@@ -41,20 +41,20 @@ Desktop Client
 Mobile Client
 [!include[Mobile button states](~/includes/design/buttons-mobile-image-states.html)]
 
-| Mobile Client Buttons | Hex Value |
-| ------- | ------------------ |
-| **Primary**| |
-|Rest| |
-|Hover||
-|Down||
-|Disabled||
-|Focus||
-|**Secondary**||
-|Rest| |
-|Hover||
-|Down||
-|Disabled||
-|Focus||
+| Mobile Client Buttons | Hex Value |  |  |
+| ------- | ------------------ | ------------- | ------------- |
+|**<p style="color:#6264a7">Primary</p>**||||
+| |***Background***| ***Text***| ***Border***|
+Rest|#6264a7 | #fff| |
+|Pressed|#33344a| #fff|  |
+|Disabled| #edebe9| ##c8c6c4| |
+|Icon|#6264a7 | #fff| |
+|**<p style="color:#6264a7">Secondary</p>**||||
+| |***Background***| ***Text***| ***Border***|
+|Rest| #fff| #6264a7 | #464775 |
+Pressed| #e1dfdd| #252423 | #c8c6c4 |
+|Disabled|#edebe9 | #c8c6c4 |
+|Icon| #fff | #edebe9 | #c8c6c4|
 
 Dialog buttons
 [!include[Dialog buttons](~/includes/design/buttons-image-dialog.html)]
