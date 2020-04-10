@@ -35,8 +35,8 @@ Desktop Client
 |Rest| #fff| #000| #484644
 |Hover| $c8c6c4| #000 | |
 |Down|#484644| |
-|Disabled|| |
-|Focus|| |
+|Disabled| #fff|#c8c6c4| #edebe9|
+|Focus| #979593|#484644 | #252423|
 
 Mobile Client
 [!include[Mobile button states](~/includes/design/buttons-mobile-image-states.html)]
