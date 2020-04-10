@@ -195,4 +195,12 @@ Group Activities is a Microsoft Teams app that makes it easy for team owners to 
 :::column-end:::
 :::row-end:::
 
+## Quick Responses app
+
+Quick Responses is a Microsoft Teams app that delivers a robust solution for effectively answering users' commonly asked questions (FAQs). Instead of answering each query manually and  continuously repeating information, the app will build a library of responses for an interactive user experience via Teams [messaging extensions](../messaging-extensions/what-are-messaging-extensions.md).
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-quickresponses)
+
+![Sample view of responses](../assets/images/quick-responses.png)
+
 Have an idea for an app template you'd like to see? [Please let us know](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
