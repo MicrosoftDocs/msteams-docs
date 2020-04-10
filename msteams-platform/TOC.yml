@@ -143,7 +143,7 @@
           href: messaging-extensions/how-to/add-authentication.md
         - name: 'Add a configuration page'
           href: messaging-extensions/how-to/add-configuration-page.md
-- name: 'Conversational Bots'
+- name: 'Bots'
   items:
     - name: What are bots in Microsoft Teams?
       href: bots/what-are-bots.md
