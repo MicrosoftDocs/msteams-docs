@@ -71,7 +71,7 @@ If all the details are provided correctly, employment verification completes in 
 
 Support tickets will be resolved within a week's time. Please look for the updates which will be sent to the email provided when the support ticket was raised.
 
-## I've created a support ticket and haven't received an update within the last 7 days. Where can I get additional help?
+## I've created a support ticket, it has been 7 business days, and I haven't received an update. Where can I get additional help?
 
 Please send an email to **<teamsubm@microsoft.com>** with the following details:
 
