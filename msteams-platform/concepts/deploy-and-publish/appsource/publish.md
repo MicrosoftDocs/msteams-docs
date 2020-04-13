@@ -35,7 +35,7 @@ There are two ways to create a Partner Center account:
 
 The phone number has three parts — country code, area code, and the telephone number. If any section is not applicable, please enter the number `0`.
 
-## Why do I get an  error message stating, "This account is not publish eligible" when I try to submit my add-in through Partner Center?
+## Why do I get the error message, "This account is not publish eligible," when I try to submit my add-in through Partner Center?
 
 You will receive the above error message when your [account verification status](/partner-center/verification-responses) is pending. You can check your account verification status in the Partner Center [dashboard](https://partner.microsoft.com/dashboard) by selecting the **Settings** option (the gear icon) in the upper-right corner of the page header shell and choosing **Developer settings** => **Account**  => **Account settings** . During the account verification process the status of each required step —  email ownership, employment verification, and business verification — will be displayed. Once the verification process has been successfully completed, the verification status of your enrollment on the profile page will change from "pending" to "authorized," and the process steps will no longer be displayed. *See below*, for resolving possible verification issues.
 
@@ -58,7 +58,7 @@ Visit the [Partner help and support page](https://aka.ms/marketplacepublishersup
 Please try the following:
 
 1. Check your junk/spam folder.
-1. Clear the browser cache, and then go to your Partner Center account dashboard and select  the **Resend verification email** link to have the verification email resent to your email address.
+1. Clear the browser cache, go to your Partner Center account dashboard, and select  the **Resend verification email** link to have the verification email resent to your email address.
 1. Try accessing the  **Resend verification email** link  from a different browser.
 1. Work with your IT department to ensure that the verification emails are not blocked by the email server.
 1. Adjust your server's spam filter to allow/whitelist all emails from **maccount@microsoft.<span></span>com**.
@@ -75,7 +75,7 @@ Support tickets will be resolved within a week's time. Please look for the updat
 
 Please send an email to **<teamsubm@microsoft.com>** with the following details:
 
-1. **Subject Line**. "Partner Center Account Issue for <App_Name>" (Specify the name of your app).
+1. **Subject Line**. *Partner Center Account Issue for <App_Name>* (specify the name of your app).
 2. **Email body:**
     * Support ticket number:
     * Your seller ID:
