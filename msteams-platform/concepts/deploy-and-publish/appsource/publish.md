@@ -29,7 +29,7 @@ Publishing  your app to [AppSource](https://appsource.microsoft.com) makes it av
 There are two ways to create a Partner Center account:
 
 * If you're new to Partner center and don't have an account  within the Microsoft network, [create an account using the Partner Center enrollment page](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
-* If you're already enrolled in the Partner Network, [create an account directly in Partner Center using an existing enrollment](/office/dev/store/)
+* If you're already enrolled in the Partner Network, [create an account directly in Partner Center using an existing enrollment](/office/dev/store/).
 
 ## How do I add my phone number to the contact info section?
 
@@ -41,7 +41,7 @@ You will receive the above error message when your [account verification status]
 
 ## How I do get further support for my account related issues?
 
-Visit the [Partner help and support page](https://aka.ms/marketplacepublishersupport) and search for helpful solutions for documentation related to your issue. If the provided self-serve solutions or documents are not helpful in resolving your issue, please file a support ticket by selecting **Provide issue details** under the **Next step** section. You can search for your issue topic in the search box or select **Browse Topics** below the search box to drill down further.
+Visit the [Partner help and support page](https://aka.ms/marketplacepublishersupport) and search for helpful solutions for documentation related to your issue. If the provided self-serve solutions or documents are not helpful in resolving your issue, please file a support ticket by selecting **Provide issue details** under the **Next step** section. You can search for your issue topic in the search box or select **Browse Topics**, below the search box, to drill down further.
 
 > [!TIP]
 > If you're looking for help with an **account verification**  Issue:
@@ -61,9 +61,9 @@ Please try the following:
 1. Clear the browser cache, and then go to your Partner Center account dashboard and select  the **Resend verification email** link to have the verification email resent to your email address.
 1. Try accessing the  **Resend verification email** link  from a different browser.
 1. Work with your IT department to ensure that the verification emails are not blocked by the email server.
-1. Adjust your server's spam filter to allow/whitelist all emails from maccount@microsoft.com.
+1. Adjust your server's spam filter to allow/whitelist all emails from **maccount@microsoft.<span></span>com**.
 
-## How long does employment verification process usually take?
+## How long does the employment verification process usually take?
 
 If all the details are provided correctly, employment verification completes in 1 to 2 hours.
 
@@ -73,7 +73,7 @@ Support tickets will be resolved within a week's time. Please look for the updat
 
 ## I've created a support ticket and haven't received an update within the last 7 days. Where can I get additional help?
 
-Please send an email to **teamsubm@microsoft.com** with the following details:
+Please send an email to **<teamsubm@microsoft.com>** with the following details:
 
 1. **Subject Line**. "Partner Center Account Issue for <App_Name>" (Specify the name of your app).
 2. **Email body:**
