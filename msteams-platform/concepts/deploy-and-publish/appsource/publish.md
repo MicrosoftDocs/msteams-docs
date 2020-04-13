@@ -39,46 +39,46 @@ The phone number has three parts — country code, area code, and the telephone 
 
 You will receive the above error message when your [account verification status](/partner-center/verification-responses) is pending. You can check your account verification status in the Partner Center [dashboard](https://partner.microsoft.com/dashboard) by selecting the **Settings** option (the gear icon) in the upper-right corner of the page header shell and choosing **Developer settings** => **Account**  => **Account settings** . During the account verification process the status of each required step —  email ownership, employment verification, and business verification — will be displayed. Once the verification process has been successfully completed, the verification status of your enrollment on the profile page will change from "pending" to "authorized," and the process steps will no longer be displayed. *See below*, for resolving possible verification issues.
 
-### My email ownership verification status has been "pending" for longer than one business day.  How do I proceed further?
+### How do get further support for my Account related issues?
 
-Please look out for an email from "maccount
-@microsoft.com" with the subject "Action needed: Verify your email account with Microsoft" asking you to complete the Email verification. The verification email will be sent to the email ID updated in your Account Settings page. To ensure that the email is received, be sure to flag email from Microsoft.com as a "safe" domain, and check your email folders.
+Visit the [Partner help and support page](https://aka.ms/marketplacepublishersupport) and search for helpful solutions or related documents for your issue. If the provided self-serve solutions or documents are not helpful to resolve your issue, then please file a support ticket by **Provide issue details** under the **Next step** section. You can search for your issue topic in the search box select or, below the search box, select **Browse Topics**  to drill down further.
 
-### I checked my email folders and I have not received the verification email . What can be done?
+> [!TIP]
+> If you're looking for help with an **account verification**  Issue:
+>
+>1. Below the search box, select **Browse Topics**.
+>1. Select **All programs** from the **Category** drop-down menu.
+> 1. Select **Account, Onboarding, Access** from the **Topic** drop-down menu.
+>1. **Select an option** from the **Subtopic** drop down menu.
+>1. For further assistance. select **Provide issue details** under  the **Next Step** section.
 
-Please try the following steps:
+### I checked my email folders and I have not received the verification email . What are my next steps?
 
-* Check the junk/spam folder. 
-* Clear the browser cache, and then go to your Partner Center account dashboard and select " "Resend verification email" link for Microsoft to resend the email to you. 
-* Try to accessing the resend link  with a different browser.
-* Work with your IT department to ensure that the verification emails are not blocked by the email server.
-* Adjust server's spam filter to allow (whitelist) all emails from maccount@microsoft.com.
+Please try the following:
+
+1. Check your junk/spam folder. 
+1. Clear the browser cache, and then go to your Partner Center account dashboard and select  the **Resend verification email** link to have the verification email resent to your email address.
+1. Try accessing the  **Resend verification email** link  from a different browser.
+1. Work with your IT department to ensure that the verification emails are not blocked by the email server.
+1. Adjust your server's spam filter to allow/whitelist all emails from maccount@microsoft.com.
 
 ### How long does employment verification usually take?
 
 If all the details are provided correct, employment verification completes in 1 to 2 hours.
 
-### I have tried all the above recommendations above. How do I get further support for my account related issues? 
+### I've reached out to Support, is there a way to expedite my case? 
 
-Open a ticket via https://aka.ms/marketplacepublishersupport. Please leave the first two boxes as default and on the third box select the appropriate drop-down for the issue.
+The support tickets raised will be resolved within a week's time. Please look for the updates which will be sent to the email provided when the support ticket was raised.
 
-### I cannot find Office Store program in my Partner Center Account?
+### I've created a support ticket and haven't received an update within the last 7 days. Whom can I contact to get additional help?
 
-Please open a ticket via https://aka.ms/officestoresupport. Please leave the first two boxes as default and on the third box select the appropriate drop-down for the issue.
+Please send an email to **teamsubm@microsoft.com** with the following details:
 
-### I have already reached out to the Support - is there any way I can expedite my case? 
-
-The support tickets raised will be resolved within a week's time. Please look for the updates which will be sent to the email id provided while raising the support ticket.
-
-### I have already created a support ticket and haven't got any update since last 7 days. Who can I contact to get additional help?
-
-Please send an email to 'teamsubm@microsoft.com' with the below details -  
-
-* Subject: "Partner Center Account Issue for App_Name" (App name to be specified)
-* Include in the email the following:
-* Support Ticket #:
-* Your Seller ID:
-* Screen shot of the issue: 
+1. **Subject Line**. "Partner Center Account Issue for <App_Name>" ((Specify your app's name).
+2. **Email body:**
+    * Support ticket number:
+    * Your seller ID:
+    * screen shot of the issue.
 
 > [!div class="nextstepaction"]
 > [Learn more about app validation policies for Microsoft Teams](/office/dev/store/validation-policies#14-microsoft-teams-apps)
