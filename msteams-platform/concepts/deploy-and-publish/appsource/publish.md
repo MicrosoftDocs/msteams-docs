@@ -37,7 +37,15 @@ The phone number has three parts — country code, area code, and the telephone 
 
 ## Why do I get the message, "This account is not publish eligible," when I try to submit my add-in through Partner Center?
 
-You will receive the above error message when your [account verification status](/partner-center/verification-responses) is pending. You can check your account verification status in the Partner Center [dashboard](https://partner.microsoft.com/dashboard) by selecting the **Settings** option (the gear icon) in the upper-right corner of the page header shell and choosing **Developer settings** => **Account**  => **Account settings** . During the account verification process the status of each required step —  email ownership, employment verification, and business verification — will be displayed. Once the verification process has been successfully completed, the verification status of your enrollment on the profile page will change from "pending" to "authorized," and the process steps will no longer be displayed. *See below*, for resolving possible verification issues.
+You will receive the above error message when your [account verification status](/partner-center/verification-responses) is pending. You can check your account verification status in the Partner Center [dashboard](https://partner.microsoft.com/dashboard) by selecting the **Settings** option (the gear icon) in the upper-right corner of the page header shell and choosing **Developer settings** => **Account**  => **Account settings** .
+
+![Partner Center account settings page](../../../assets/images/partner-center-accts-page.png)
+
+![Partner Center verification status](../../../assets/images/partner-center-verification-status.png)
+
+During the account verification process the status of each required step —  email ownership, employment verification, and business verification — will be displayed. Once the verification process has been successfully completed, the verification status of your enrollment on the profile page will change from "pending" to "authorized," and the process steps will no longer be displayed.
+
+![Partner Center verification error](../../../assets/images/partner-center-acct-verification-error.png)
 
 ## How I do get further support for my account related issues?
 
