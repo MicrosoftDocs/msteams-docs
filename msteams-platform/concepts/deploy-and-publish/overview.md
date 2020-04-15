@@ -31,7 +31,7 @@ AppSource (formerly known as Office Store) provides a convenient location for yo
 
 ### Upload your LOB app directly to Teams
 
- As a GCC tenant administrator, you'll decide whether to upload a custom LOB app to your tenant environment and whether to  publish it to your tenant app catalog. Microsoft doesn't own or control your LOB applications, therefore, you must ensure that all endpoints are compliant with your organization's GCC requirements. Additionally, if the app solution includes a bot or message extension, you'll need to complete the [Bot Framework](https://dev.botframework.com/) registration as follows:
+ As a GCC tenant administrator, you'll decide whether to upload a custom LOB app to your tenant environment and whether to  publish it to your tenant app catalog. Microsoft doesn't own or control your LOB applications, therefore, you must ensure that all endpoints are compliant with your organization's requirements. Additionally, if the app solution includes a bot or message extension, you'll need to complete the [Bot Framework](https://dev.botframework.com/) registration as follows:
 
 1. On the **Connect to channels** page, under **Add a featured channel**, select **Teams**.
 1. Navigate to the **Configure MSTeams** page (*see* below).
