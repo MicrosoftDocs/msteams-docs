@@ -228,12 +228,12 @@ Incident Reporter is a [Microsoft Teams bot](../bots/what-are-bots.md)  that opt
 
 :::row:::
   :::column span="2":::
-    ![Incident reporter group scope view](../assets/images/incident-reporter-01.jpg )  
+    ![Incident reporter group scope view](../assets/images/incident-reporter-02.jpg )  
 :::column-end:::
 :::row-end:::
 :::row:::
 :::column span="2":::
-    ![Incident reporter personal scope viewl](../assets/images/incident-reporter-02.png)
+    ![Incident reporter personal scope viewl](../assets/images/incident-reporter-01.png)
 :::column-end:::
 :::row-end:::
 
