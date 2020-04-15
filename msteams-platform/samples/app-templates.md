@@ -211,7 +211,7 @@ Remote Support is a [Microsoft Teams bot](../bots/what-are-bots.md) that provide
 
 :::row:::
   :::column span="2":::
-    ![Request support form](../assets/images/remote-support-request-form.jpg)  
+    ![Request support form](../assets/images/remote-support-request-form.png)  
 :::column-end:::
 :::row-end:::
 :::row:::
