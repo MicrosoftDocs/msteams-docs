@@ -205,7 +205,7 @@ Quick Responses is a Microsoft Teams app that delivers a robust solution for eff
 
 ## Remote Support bot
 
-Remote Support is a [Microsoft Teams bot](../bots/what-are-bots.md) that provides an efficient centralized interface between support requesters throughout your organization and the internal support team.  End-users can submit, edit, or withdraw requests for support and the support team can respond, manage, and update requests all within the Teams platform.
+Remote Support is a [Microsoft Teams bot](../bots/what-are-bots.md) that provides a focused interface between support requesters throughout your organization and the internal support team.  End-users can submit, edit, or withdraw requests for support and the support team can respond, manage, and update requests all within the Teams platform.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-remotesupport)
 
