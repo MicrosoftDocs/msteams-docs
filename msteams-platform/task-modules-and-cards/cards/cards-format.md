@@ -55,15 +55,15 @@ Formatting is slightly different between the desktop and the mobile versions of 
 
 On the desktop, Adaptive Card Markdown formatting appears like this in both web browsers and in the Teams client application:
 
-![Adaptive Card Markdown formatting in the desktop client](/assets/images/cards/Adaptive-markdown-desktop-client.png)
+![Adaptive Card Markdown formatting in the desktop client](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
 
 On iOS, Adaptive Card Markdown formatting appears like this:
 
-![Adaptive Card Markdown formatting in iOS](/assets/images/cards/Adaptive-markdown-iOS-75.png)
+![Adaptive Card Markdown formatting in iOS](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
 
 On Android, Adaptive Card Markdown formatting appears like this:
 
-![Adaptive Card Markdown formatting in Android](/assets/images/cards/Adaptive-markdown-Android.png)
+![Adaptive Card Markdown formatting in Android](../../assets/images/cards/Adaptive-markdown-Android.png)
 
 ### More information on Adaptive Cards
 
@@ -174,11 +174,11 @@ In connector cards, newlines are rendered for `\n\n`, but not for `\n` or `\r`.
 
 On the desktop, Markdown formatting for connector cards looks like this:
 
-![Markdown formatting for connector cards in the Desktop client](/assets/images/cards/connector-desktop-markdown-combined.png)
+![Markdown formatting for connector cards in the Desktop client](../../assets/images/cards/connector-desktop-markdown-combined.png)
 
 On iOS, Markdown formatting for connector cards looks like this:
 
-![Markdown formatting for connector cards in the iOS client](/assets/images/cards/connector-iphone-markdown-combined-80.png)
+![Markdown formatting for connector cards in the iOS client](../../assets/images/cards/connector-iphone-markdown-combined-80.png)
 
 Issues:
 
@@ -187,7 +187,7 @@ Issues:
 
 On Android, Markdown formatting for connector cards looks like this:
 
-![Markdown formatting for connector cards in the Android client](/assets/images/cards/connector-android-markdown-combined.png)
+![Markdown formatting for connector cards in the Android client](../../assets/images/cards/connector-android-markdown-combined.png)
 
 ### Formatting example for Markdown Connector Cards
 
@@ -263,11 +263,11 @@ In connector cards, newlines are rendered in HTML using the `<p>` tag.
 
 On the desktop, HTML formatting for connector cards looks like this:
 
-![HTML formatting for connector cards in the Desktop client](/assets/images/cards/Connector-desktop-html-combined.png)
+![HTML formatting for connector cards in the Desktop client](../../assets/images/cards/Connector-desktop-html-combined.png)
 
 On iOS, HTML formatting looks like this:
 
-![HTML formatting for connector cards  in the iOS client](/assets/images/cards/connector-iphone-html-combined-80.png)
+![HTML formatting for connector cards  in the iOS client](../../assets/images/cards/connector-iphone-html-combined-80.png)
 
 Issues:
 
@@ -276,7 +276,7 @@ Issues:
 
 On Android, HTML formatting looks like this:
 
-![HTML formatting for connector cards in the Android client](/assets/images/cards/connector-android-html-combined.png)
+![HTML formatting for connector cards in the Android client](../../assets/images/cards/connector-android-html-combined.png)
 
 ### Formatting sample for HTML Connector Cards
 
@@ -351,11 +351,11 @@ Because of resolution differences between the desktop and mobile platform, forma
 
 On the desktop, HTML formatting appears like this:
 
-![HTML formatting in the Desktop client](/assets/images/cards/card-formatting-xml-desktop-v2.png)
+![HTML formatting in the Desktop client](../../assets/images/cards/card-formatting-xml-desktop-v2.png)
 
 On iOS, HTML formatting appears like this:
 
-![HTML formatting in the iOS client](/assets/images/cards/card-formatting-xml-mobile-v2.png)
+![HTML formatting in the iOS client](../../assets/images/cards/card-formatting-xml-mobile-v2.png)
 
 Issues:
 
@@ -363,7 +363,7 @@ Issues:
 
 On Android, HTML formatting appears like this:
 
-![HTML formatting in the Android client](/assets/images/cards/card-formatting-xml-android-60.png)
+![HTML formatting in the Android client](../../assets/images/cards/card-formatting-xml-android-60.png)
 
 Character formatting like bold and italic display correctly on Android.
 
