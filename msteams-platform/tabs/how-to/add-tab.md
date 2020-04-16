@@ -32,7 +32,9 @@ There are three types of tab pages. See the corresponding documentation page for
 Regardless of the type of page, you're tab will need to adhere to the following requirements:
 
 * You must allow your pages to be served in an IFrame, via X-Frame-Options and/or Content-Security-Policy HTTP response headers.
-
+  * Set header: `Content-Security-Policy: frame-ancestors teams.microsoft.com *.teams.microsoft.com *.skype.com`		
+  * For Internet Explorer 11 compatibility, set `X-Content-Security-Policy` as well.	
+  * Alternatively, set header `X-Frame-Options: ALLOW-FROM https://teams.microsoft.com/`. This header is deprecated but still respected by most browsers.
 * Typically, as a safeguard against click-jacking, login pages don't render in IFrames. Therefore, your authentication logic needs to use a method other than redirect (e.g., use token-based or cookie-based authentication).
 
 > [!NOTE]
