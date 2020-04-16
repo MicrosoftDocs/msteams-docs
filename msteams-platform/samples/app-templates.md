@@ -203,4 +203,38 @@ Quick Responses is a Microsoft Teams app that delivers a robust solution for eff
 
 ![Sample view of responses](../assets/images/quick-responses.png)
 
+## Remote Support bot
+
+Remote Support is a [Microsoft Teams bot](../bots/what-are-bots.md) that provides a focused interface between support requesters throughout your organization and the internal support team.  End-users can submit, edit, or withdraw requests for support and the support team can respond, manage, and update requests all within the Teams platform.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-remotesupport)
+
+:::row:::
+  :::column span="2":::
+    ![Request support form](../assets/images/remote-support-request-form.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Request support details](../assets/images/remote-support-request-details.jpg)
+:::column-end:::
+:::row-end:::
+
+## Incident Reporter bot
+
+Incident Reporter is a [Microsoft Teams bot](../bots/what-are-bots.md)  that optimizes the management of incidents in your organization. The bot facilitates automated incident data collection, customized incident reports, relevant stakeholder notifications, and end-to-end incident tracking.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-incidentreport)
+
+:::row:::
+  :::column span="2":::
+    ![Incident reporter group scope view](../assets/images/incident-reporter-02.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Incident reporter personal scope view](../assets/images/incident-reporter-01.jpg)
+:::column-end:::
+:::row-end:::
+
 Have an idea for an app template you'd like to see? [Please let us know](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
