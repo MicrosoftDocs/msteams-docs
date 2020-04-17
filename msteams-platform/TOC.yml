@@ -19,7 +19,7 @@
   items: 
   - name: Production-ready app templates
     href: samples/app-templates.md
-  - name: Production-ready Shifts Connectors
+  - name: Production-ready Shifts connectors
     href: samples/shifts-wfm-connectors.md 
 - name: Concepts
   expanded: true
