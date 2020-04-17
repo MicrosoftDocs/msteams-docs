@@ -7,9 +7,9 @@ keywords: Microsoft Teams developer samples
 
 Here you will find a list of tutorials and code samples that demonstrate how you can extend the Teams developer platform capabilities by creating custom apps.
 
-## Getting started with learning modules
+## Getting started with Microsoft Learn
 
-| Capability| Learning Module|
+| Capability| Learn module|
 |--------|-------------|
 | Tabs  — embedded web experiences  |  [Create embedded web experiences with tabs for Microsoft Teams](https://docs.microsoft.com/learn/modules/embedded-web-experiences/) |
 | Webhooks and connectors  |  [Connect web services to Microsoft Teams with webhooks and Office 365 Connectors](https://docs.microsoft.com/learn/modules/msteams-webhooks-connectors/) |
