@@ -1,6 +1,6 @@
-1. In the [Azure portal][azure-portal], on the left navigation panel, select **Create a resource**.
-1. In the right panel selection box enter "bot". And in the drop-down list, select **Bot Channels Registration**.
-1. Click the **Create** button.
+1. In the [Azure portal](https://ms.portal.azure.com/#home), under Azure services, select **Create a resource**.
+1. In the search box enter "bot". And in the drop-down list, select **Bot Channels Registration**.
+1. Select the **Create** button.
 1. In the **Bot Channel Registration** blade, provide the requested information about your bot.
 1. Leave the **Messaging endpoint** box empty for now, you will enter the required URL after deploying the bot. The following picture shows an example of the registration settings:
 

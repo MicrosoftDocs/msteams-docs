@@ -12,7 +12,7 @@ To be listed on AppSource, your app must go through an approval process. This is
 * **Tips and frequently failed cases:** Pay extra attention to these [Tips and frequently failed cases](frequently-failed-cases.md) to improve your app submission to approval time.
 * **App manifest:** Check your app manifest against the [App manifest checklist](app-manifest-checklist.md) and manifest checker in App Studio
 * **Testing and debugging:** You have fully [tested and debugged your app](../../../build-and-test/debug.md).
-* **Validation policies:** It must pass all current [AppSource validation policies](https://dev.office.com/officestore/docs/validation-policies) for Teams tabs and bots. Please note that these policies are subject to change.
+* **Validation policies:** It must pass all current [AppSource validation policies](https://docs.microsoft.com/legal/marketplace/certification-policies) for Teams tabs and bots. Please note that these policies are subject to change.
 * **Testing notes:** Include [test notes for validation](#test-notes-for-validation)
 * **Privacy policies:** Ensure your [privacy policy, terms of use and support URLs](#privacy-policy-terms-of-use-and-support-urls) follow our guidelines.
 
