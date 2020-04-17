@@ -3,11 +3,21 @@ title: Microsoft Teams code samples
 description: Links and descriptions of sample applications for the Microsoft Teams developer platform
 keywords: Microsoft Teams developer samples
 ---
-# Code samples for the Microsoft Teams developer platform
+# Tutorials and code samples for the Microsoft Teams developer platform
 
-Here you will find a list of code samples that demonstrate various capabilities of the Microsoft Teams development platform and how to build apps to leverage those features.
+Here you will find a list of tutorials and code samples that demonstrate how you can extend the Teams developer platform capabilities by creating custom apps.
 
-## Getting samples
+## Getting started with learning modules
+
+| Capability| Learning Module|
+|--------|-------------|
+| Tabs  — embedded web experiences  |  [Create embedded web experiences with tabs for Microsoft Teams](https://docs.microsoft.com/learn/modules/embedded-web-experiences/) |
+| Webhooks and connectors  |  [Connect web services to Microsoft Teams with webhooks and Office 365 Connectors](https://docs.microsoft.com/learn/modules/msteams-webhooks-connectors/) |
+|Messaging extensions  | [Task-oriented interactions in Microsoft Teams with messaging extensions](https://docs.microsoft.com/learn/modules/msteams-messaging-extensions/)  |
+| Task modules |  [Collect input in Microsoft Teams with Task Modules](https://docs.microsoft.com/learn/modules/msteams-task-modules/) |
+| Conversational bots  | [Create interactive conversational bots for Microsoft Teams](https://docs.microsoft.com/learn/modules/msteams-conversation-bots/)  |
+
+## Getting started with code samples
 
 To download our samples from GitHub:
 
@@ -27,14 +37,6 @@ We provide a packages.json file that lists all required packages for a sample. S
 ### For other samples
 
 As always, the project's README file should have more information on specific needs for specific samples.
-
-## Get Started
-
-| Sample | Description|
-|--------|-------------|
-| [Hello World in Microsoft Teams with Node.js](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) | A sample teams app in `Node.js` introducing you to the basic app capabilities.|
-| [Hello World in Microsoft Teams with C#.NET](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) | A sample teams app in `C# .NET` introducing you to the basic app capabilities.|
-| [Get started with the Yeoman generator for Teams](~/tutorials/get-started-yeoman.md) | Create a Teams app from scratch using the Yeoman generator for Microsoft Teams. |
 
 ## Bots (using the v4 SDK)
 
@@ -68,17 +70,6 @@ As always, the project's README file should have more information on specific ne
 | Sample | Description
 |--------|-------------
 | [Microsoft Graph API Samples](https://github.com/OfficeDev/microsoft-teams-sample-graph) | These samples demonstrate using Microsoft Graph API calls to perform tasks such as querying teams and channels from a web service running outside Microsoft Teams.
-
-## Others
-
-| Code | Description |
-|------|------------- |
-| [Complete sample in Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) | This sample shows how to use all the features of the Microsoft Teams platform. NOTE: This sample uses the Bot Framework v3 SDK.|
-| [Complete sample in C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) | This sample shows how to use all the features of the Microsoft Teams platform. NOTE: This sample uses the Bot Framework v3 SDK. |
-| [Line of Business apps in C#/.NET](https://github.com/OfficeDev/msteams-sample-line-of-business-apps-csharp) | This repository contains multiple example Line of Business apps that can be used for either inspiration or as templates to build on top of. NOTE: These samples use the Bot Framework v3 SDK.|
-| ["To-do" list sample tab app](https://github.com/OfficeDev/microsoft-teams-sample-todo) | This Node.js sample shows how easy it is to convert an existing web app into a tab. |
-| [Orky](https://github.com/OfficeDev/Orky) | You can use Orky to register your own local bot in Microsoft Teams and execute scripts from ANYWHERE! |
-| [Build 2017 Weather](https://github.com/OfficeDev/microsoft-teams-build2017-weather) | OUTDATED. Source code for the //build 2017 session to add a weather tab to the skeleton app generated earlier in the session. |
 
 ### Bot Framework SDK v3 samples
 
