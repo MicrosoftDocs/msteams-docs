@@ -1,12 +1,14 @@
 ---
-title: Support and Feedback 
-description: Microsoft Teams developer support and feedback 
+title: Microsoft Teams developer support and feedback
+description: The Microsoft Teams product team responds to the developer community across several feedback and support channels.
 keywords: teams feedback developer questions issues contact support request bugs contributions 
 ---
 
-# Microsoft Teams developer support and feedback  
+# Microsoft Teams developer support and feedback
 
-The Microsoft Team product team responds to the developer community across several channels.
+The Microsoft Teams product team responds to the developer community across several feedback and support channels.
+
+## Support and feedback channels
 
 - **General questions about the Microsoft Teams developer platform:** Please send email to [Microsoft Teams developer support](mailto:microsoftteamsdev@microsoft.com). This email address is _not_ intended for comments or suggestions on non-platform-related features of Microsoft Teams. Furthermore, while we read all the email sent to this address, we do not reply to every one.
 
