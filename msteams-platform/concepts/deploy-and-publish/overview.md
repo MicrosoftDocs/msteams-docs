@@ -39,7 +39,7 @@ AppSource (formerly known as Office Store) provides a convenient location for yo
 1. In the lower left corner of the page, select **Save**.  
 
 >[!IMPORTANT]
-> If you're uploading your LOB app to a GCC environment, you cannot use the Teams commercial configuration. You must select the **Microsoft Teams for Government Customers** radio button for a GCC compliant configuration.
+> You cannot use the Teams commercial configuration to upload/sideload your LOB or custom app to a GCC environment,  You must select the **Microsoft Teams for Government Customers** radio button for a GCC compliant configuration.
 
 ![Teams messaging configuration page](../../assets/images/gcc-configure.png)
 
