@@ -70,7 +70,7 @@ Create your bot registration using this link: https://dev.botframework.com/bots/
 
 You can also register your web service by creating a Bot Channels Registration resource in the Azure portal.
 
-[!INCLUDE [bot channels registration steps](~/includes/bots/azure-bot-channels-registration.md)]
+1. 
 
 The [Bot Framework portal](https://dev.botframework.com) is optimized for registering bots in Microsoft Azure. Here are some things to know:
 
