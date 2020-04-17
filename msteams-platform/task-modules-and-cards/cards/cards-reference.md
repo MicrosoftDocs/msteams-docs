@@ -60,10 +60,7 @@ See [Card Formatting](~/task-modules-and-cards/cards/cards-format.md) for more i
 
 ## Adaptive card
 
-> [!NOTE]
-> Only version 1.0 of Adaptive Cards is supported for all users. Version 1.2 is currently available only in Developer Preview
-
-A customizable card that can contain any combination of text, speech, images, buttons, and input fields.
+A customizable card that can contain any combination of text, speech, images, buttons, and input fields. *See* [Adaptive Cards v1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0).
 
 ### Support for Adaptive cards
 
