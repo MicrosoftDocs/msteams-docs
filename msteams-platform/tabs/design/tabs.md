@@ -36,7 +36,7 @@ Avoid creating multiple panels in a tab, adding layers of navigation, or requiri
 
 ### Integration
 
-Find ways to notify users about tab activity by posting [adaptive cards](../../task-modules-and-cards/what-are-card.mds#adaptive-cards) to a conversation.
+Find ways to notify users about tab activity by posting [adaptive cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards) to a conversation.
 
 ### Conversational
 
