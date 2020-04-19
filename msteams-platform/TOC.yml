@@ -141,11 +141,6 @@
           href: messaging-extensions/how-to/link-unfurling.md
         - name: 'Add authentication'
           href: messaging-extensions/how-to/add-authentication.md
-    - name:  'Design'
-      items:
-        - name: 'Messaging extension design guidelines'     
-        - href: messaging-extensions/design/messaging-extension-design.md
-- name: 'Conversational Bots'
         - name: 'Add a configuration page'
           href: messaging-extensions/how-to/add-configuration-page.md
 - name: 'Bots'
