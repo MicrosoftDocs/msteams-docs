@@ -25,27 +25,43 @@ We support up to six buttons per card. Be concise when writing button text, and 
 
 Graphics are a good way to tell a story, but not all bot conversations require graphics, so use them for maximum impact.
 
+### Onboarding users
+
+It is critical that bots introduce themselves and convey what they can do to users. This *value exchange* helps users understand what to do with the bot, where the limitations may lie, and, most importantly, helps users tolerate the interaction with a machine that won’t be as intuitive as a real person . Additionally, it grants permission to user data in exchange for the real value the service provides.
+
+#### Welcome messages
+
+Welcome messages are the best way to set your bot's tone and should be used in personal and team or group scenarios. The message states what the bot does and some common ways to interact with it. Use specific capability examples like,  “*Try asking ….*” in a bulleted list. Whenever possible, these suggestions should return stored responses. It's critical that the capability examples work without requiring users to sign in.
+
+#### Tours
+
+Include a *Take a tour* attribute with welcome messages and responses to user input equivalent to “*help*”. This is the most effective way to let users learn what a bot can do. Carousels in one-to-one experiences are an excellent way to tell this story and including *Try it* buttons linking to  examples of possible responses is encouraged. Tours are also great places to talk about an app’s other features. For example, you can include screenshots of messaging extensions and Teams tabs.  Users shouldn't have to sign in to access and use a tour.
+
+When tours are used in team or group scenarios, they should open in a task module so as not to add more card noise to the ongoing conversations between users.
+
 ### Responding to users and failing gracefully
 
-Your bot should also be able to respond to things like 'Hi', 'Help', and 'Thanks' while taking common misspellings and colloquialisms into account. For example:
+Your bot should also be able to respond to things like "*Hi*", "*Help*", and "*Thanks*" while taking common misspellings and colloquialisms into account. For example:
 
 #### &#x2713; Hello
 
-`Hi` `how are you` `howdy`
+`"Hi"`  `"How are you"`  `"Howdy"`
 
 #### &#x2713; Help
 
-`What do you do?` `How does this work?` `What the heck?`
+`"What do you do?"`  `"How does this work?"`  `"What the heck?"`
 
 #### &#x2713; Thanks
 
-`Thank you` `thankyou` `thx`
+`"Thank you"`  `"Thankyou"`  `"Thx"`
 
 Your bot should be able to handle the following types of queries and inputs:
 
-* **Recognized questions**: These are the “best case scenario” questions you’d anticipate from users.
-* **Recognized non-questions**: Queries about unsupported functionality, random pieces of information, or when someone wants to curse at your bot.
-* **Unrecognized questions**: Unintelligible inputs (i.e., gibberish).
+> [!div class="checklist"]
+>
+> * **Recognized questions**. These are the “best case scenario” questions you would expect from users.
+> * **Recognized non-questions**. Queries about unsupported functionality and/or random, unrelated , or profane entries.
+> * **Unrecognized questions**: Input or entries that are unintelligible, meaningless, or nonsense.
 
 Examples of bot personality and response types:
 
@@ -86,11 +102,15 @@ Tabs make your bot much more functional. With tabs, you can create the following
 
 ### &#x2713; A place to host standing queries
 
-In personal conversations between a bot and a single person, tabs can house user-specific information and lists. They’re also a good place to maintain bot responses to frequently-asked questions (FAQs) — so users don’t need to keep asking.
+In personal conversations between a bot and a single person, tabs can contain user-specific information and lists. They’re also a good place to maintain bot responses to frequently-asked questions (FAQs) — so users don’t need to keep asking.
 
 ### &#x2713; A place to finish a conversation
 
-You can link to a tab from a card. If your bot provides an answer that requires a few more steps, it can link to a tab to complete the task or flow.
+You can link to a tab from a card. If your bot provides an answer that requires a few more steps, it can link to a tab to complete the task or flow. For instance, in response to, "How do I format my iPhone?", a good response might be a card which outlines the first few steps and has a button for *Show more* that then takes the user to the bot’s *Help* tab and deep links to the specific instructions.
+
+### &#x2713; A place to host a settings page
+
+Bots should have some user control. For many bots it is allowed through a chat interface; however, it's hard to remember those settings. A settings tab can display users settings, allow users to change them all at once, and may also be a good hand-off point for more complex bot custom behaviors.
 
 ### &#x2713; A place to provide some help
 
@@ -99,13 +119,27 @@ Add a tab that educates users about how to communicate with your bot. You can pr
 ![Providing help](~/assets/images/framework/framework_bots_tbot-help.png)
 
 > [!TIP]
-> Embedding parts of your site in a tab will help someone maintain the context of a conversation as they use your service. It removes the need to launch your service in a browser and switch back and forth between apps.
+> Embedding parts of your site in a tab will help users maintain the context of a conversation as they use your service. It removes the need to launch your service in a browser and switch back and forth between apps.
 
 ---
 
-## Best practices
+## Bots in channels
 
-### &#x2713; Bots aren’t assistants
+Invoking a bot in a channel can be accomplished by `@mention`. Bot dialog should be unique in channels and groups vs. one-to-one scenarios and it's generally a good idea to consider separate approaches. This is especially true in the following cases:
+
+### Sensitive data sent by a bot
+
+While the users in a team can be known to the service, the actual user roles cannot. This means that, for example, in an education scenario involving bullying, parent and student contact information wouldn't be shared in a team setting. Instead the bot’s message might be,“Two bullying incidents occurred today" along with a button to show details.
+
+Launching details in a web page, or a task module can prompt for user credentials or query against an index for user roles paired with AAD accounts. In both of these options the data is in a private view scope and there will be no data leakage. If the same data is sent in a one-to-one chat between a user and the bot, the data is only visible to the user in that context and is, therefore safe, to fully display in the bot message. Taking users from a channel to a one-to-one chat should be avoided however as that forced navigation is highly disruptive.
+
+### Sending cards as a response to interactions
+
+While sending a carousel card in response to *Take a tour* in a one-to-one chat is perfectly acceptable, the same pattern could yield tens or hundreds of *tour carousels* in an active channel with lots of users. To avoid this, secondary cards should be hosted in a task module. This pattern keeps users in context with the channel, keeps the channel clean of excessive bot responses, and can optionally consider different user roles when the *tour* is shown.
+
+## Useful tips
+
+### &#x2713; Remember, bots aren’t assistants
 
 Unlike agents, e.g., Cortana, bots act as specialists.
 

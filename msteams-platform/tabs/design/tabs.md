@@ -8,7 +8,7 @@ keywords: teams design guidelines reference framework tabs configuration
 > [!Important]
 > **Tabs on Mobile Clients**
 >
-> Follow the [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md) when creating your tabs. If your tab uses authentication, you must upgrade your Teams JavaScript SDK to version 1.4.1 or later, or authentication will fail.
+> Follow the [guidance for tabs on mobile](./tabs-mobile.md) when creating your tabs. If your tab uses authentication, you must upgrade your Teams JavaScript SDK to version 1.4.1 or later, or authentication will fail.
 >
 > **Personal (static) tabs on mobile:**
 >
@@ -34,12 +34,9 @@ Tabs work best when they’re built to address a specific need. Focus on a small
 
 Avoid creating multiple panels in a tab, adding layers of navigation, or requiring users to scroll both vertically and horizontally in one tab. In other words, try not to have tabs in your tab.
 
-> [!TIP]
-> Avoid creating multiple panels in a tab, adding layers of navigation, or requiring users to scroll both vertically and horizontally in one tab.
-
 ### Integration
 
-Find ways to notify users about tab activity by posting cards to a conversation, for example.
+Find ways to notify users about tab activity by posting [adaptive cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards) to a conversation.
 
 ### Conversational
 
@@ -49,35 +46,53 @@ Find a way to facilitate conversation around a tab. This ensures that conversati
 
 Make sure you’re granting access to the right people at the right time. Keeping your sign-in process simple will avoid creating barriers to contribution and collaboration.
 
+### Responsiveness to window sizing
+
+Teams can be used in window sizes as small as 720px, so making sure that a tab is usable in a small window is just as important as usability at very high resolutions.
+
+### Flat navigation
+
+We ask developers not to add their entire portal to a tab. Keeping the navigation relatively flat helps maintain a simpler conversational model. In other words, the conversation is about a list of things, such as triaged work items, or a single thing, like a spec.
+
+There are inherent navigational challenges with deep navigation hierarchy, within threaded conversations. For the best user experience, your tab navigation should be kept to a minimum and be designed as follows:
+
+> [!div class="checklist"]
+>
+> * **Opens a task module such as an individual work item or entity**. This precludes chat entirely and is the best option to keep chat specifically about the tab and not the sub-entities or editing experiences.
+>* **Opens a pseudo dialog in an iframe**. If used with a screened background we recommend using the lighter color rather than the dark. The `app-gray-10 at 30%` transparency works well.
+>* **Opens a browser page**.
+
 ### Personality
 
-Your tab canvas presents a good opportunity to brand your experience. Incorporate your own logos, colors, and layouts to communicate personality.
+Your tab canvas presents a great opportunity to brand your experience. Your logo is an important part of your identity and connection with your users., so be sure to include it:
 
-Your logo is an important part of your identity and a connection with your users. So be sure to include it.
+> [!div class="checklist"]
+>
+>* Place your logo in the left or right corner or along the bottom edge
+> * Keep your logo small and unobtrusive
 
-* Place your logo in the left or right corner or along the bottom edge
-* Keep your logo small and unobtrusive
+Incorporating your own colors and layouts twill also aid in communicating personality.
 
 > [!TIP]
-> Please work with our visual style so your service feels like a part of Teams.
+> Please work with our visual style so your service feels like a part of Teams. *See*, for example [Teams Colors](/concepts/design/components/typography.md
 
 ---
 
 ## Tab layouts
 
-[!include[Tab layouts](~/includes/design/tab-layouts.html)]
+[!INCLUDE [Tab layouts](../../includes/design/tab-layouts.html)]
 
 ---
 
 ## Types of tabs
 
-[!include[Tab types](~/includes/design/tab-types.html)]
+[!INCLUDE [Tab types](../../includes/design/tab-types.html)]
 
 ---
 
 ## Configuration page height
 
->[!NOTE]
+>[!IMPORTANT]
 >In September 2018, the height for the tab [configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md) was increased while the width remained unchanged. If your app is designed for the older size your tab configuration page will have a great deal of vertical whitespace. Legacy store apps exempted from this change will need to contact Microsoft after updating to accommodate the new dimensions.
 
 The dimensions of the tab configuration page:
@@ -110,4 +125,15 @@ Whenever possible, cards and bots should deep link to richer data in a hosted ta
 
 ### Naming
 
-In many cases, the name of your app may make a great tab name. But consider naming your tabs according to the functionality they provide.
+In many cases, the name of your app will make a great tab name. But, also consider naming your tabs according to the functionality they provide.
+
+## Notifications for tabs
+
+There are two modes of notification for tab content changes:
+
+> [!div class="checklist"]
+>
+> * **Use the app api to notify users of changes**. This message will show up in the user’s activity feed and deep link to the tab. *See*  [Create deep links to content and features in Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest)
+> * **Use a bot**. This method is preferred especially if the Tab thread is targeted. The result will be that the tab’s threaded conversation will be moved into view as recently active. This method also allows for some sophistication in how the notification is sent.
+
+  Sending a message to a tab thread increases the awareness of activity to all users without explicitly notifying everyone. This is awareness without noise. In addition, when you `@mention`  specific users the same notification will be placed in their feed, deep linking them to the tab thread directly.

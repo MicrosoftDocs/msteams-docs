@@ -76,7 +76,7 @@ microsoftTeams.getContext(function (context) {
         login_hint: context.loginHint,
     };
 
-    let authorizeEndpoint = "https://login.microsoftonline.com/" + context.tid + "/oauth2/authorize?" + toQueryString(queryParams);
+    let authorizeEndpoint = "https://login.microsoftonline.com/" + context.tid + "/oauth2/v2.0/authorize?" + toQueryString(queryParams);
     window.location.assign(authorizeEndpoint);
 });
 ```
