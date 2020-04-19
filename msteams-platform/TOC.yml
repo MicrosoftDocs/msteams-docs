@@ -139,6 +139,10 @@
           href: messaging-extensions/how-to/link-unfurling.md
         - name: 'Add authentication'
           href: messaging-extensions/how-to/add-authentication.md
+    - name:  'Design'
+      items:
+        - name: 'Messaging extension design guidelines'     
+        - href: messaging-extensions/design/messaging-extension-design.md
 - name: 'Conversational Bots'
   items:
     - name: What are bots in Microsoft Teams?
