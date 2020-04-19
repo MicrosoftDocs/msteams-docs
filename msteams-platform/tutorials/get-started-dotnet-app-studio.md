@@ -2,6 +2,8 @@
 title: Get started with C#/.NET
 description: Get started building great apps in Microsoft Teams using C#/.NET
 keywords: getting started .net c# csharp
+ms.custom: scenarios:getting-started; languages:ASP.NET,C#
+ms.topic: tutorial
 ms.date: 11/09/2018
 ---
 
@@ -22,7 +24,7 @@ This tutorial helps you get started creating a Microsoft Teams app using C# on .
 To complete this tutorial, you need to get the following tools:
 
 - [Install Git](https://git-scm.com/downloads)
-- [Install Visual Studio 2017](https://www.visualstudio.com/downloads/). You can install the free community edition.
+- [Install Visual Studio](https://www.visualstudio.com/downloads/). You can install the free community edition.
 
 If you see an option to add `git` to the PATH during installation, choose to do so. It will be handy.
 
@@ -36,7 +38,7 @@ git version 2.17.1.windows.2
 
 ```
 
-Make sure to launch Visual Studio 2017 and install any updates if shown.
+Make sure to launch the latest version of Visual Studio and install any updates if shown.
 
 You can continue to use this terminal window to run the commands that follow in this tutorial.
 

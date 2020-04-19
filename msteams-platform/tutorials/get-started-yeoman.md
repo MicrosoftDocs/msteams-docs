@@ -2,6 +2,8 @@
 title: Get started with the Yeoman generator for Microsoft Teams
 description: Get started building great apps with the Yeoman generator for Microsoft Teams
 keywords: getting started node.js nodejs yeoman
+ms.topic: tutorial
+ms.custom: scenarios:getting-started
 ---
 
 # Build your First Microsoft Teams App
