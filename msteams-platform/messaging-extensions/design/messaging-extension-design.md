@@ -2,6 +2,8 @@
 title: Design guidelines for messaging extensions
 description: Describes the guidelines for creating messaging extensions
 keywords: teams design guidelines reference messaging extensions tips best practice
+author: EmilyyC
+ms.author: qinch
 ---
 
 # Start sharing with powerful messaging extensions
