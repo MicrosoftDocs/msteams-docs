@@ -80,7 +80,7 @@
           href: concepts/deploy-and-publish/appsource/publish.md
         - name: Prepare your app
           items: 
-          - name: Presubmission checklist
+          - name: Pre-submission checklist
             href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
           - name: App detail page checklist
             href: concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md
@@ -104,6 +104,10 @@
   items:
     - name: 'What are Messaging Extensions?'
       href: messaging-extensions/what-are-messaging-extensions.md
+    - name: Design
+      items:
+      -  name: 'Messaging extensions design guidelines'
+         href: messaging-extensions/design/messaging-extension-design.md  
     - name: Quickstarts
       items:
         - name: 'With action command'
