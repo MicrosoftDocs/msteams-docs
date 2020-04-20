@@ -102,7 +102,7 @@ This limit controls the traffic that a bot is allowed to generate on a single co
 
 | **Scenario** | **Time-period (sec)** | **Max allowed operations** |
 | --- | --- | --- |
-|| 1 | 7 |
+| Send to Conversation | 1 | 7 |
 | Send to Conversation | 2 | 8 |
 | Send to Conversation | 30 | 60 |
 | Send to Conversation | 3600 | 1800 |
