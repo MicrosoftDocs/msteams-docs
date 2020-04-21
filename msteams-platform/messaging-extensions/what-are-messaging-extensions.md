@@ -36,7 +36,7 @@ The type of messaging extension command defines the UI elements and interaction 
 
 ### Action commands
 
-Action commands allow you present your users with a modal popup to collect or display information. When they submit the form, your web service can respond by inserting a message into the conversation directly, or by inserting a message into the compose message area and allowing the user to submit the message. You can even chain multiple forms together for more complex workflows.
+Action commands allow you to present your users with a modal popup to collect or display information. When they submit the form, your web service can respond by inserting a message into the conversation directly, or by inserting a message into the compose message area and allowing the user to submit the message. You can even chain multiple forms together for more complex workflows.
 
 They can be triggered from the compose message area, the command box, or from a message. When invoked from a message, the initial JSON payload sent to your bot will include the entire message it was invoked from.
 
