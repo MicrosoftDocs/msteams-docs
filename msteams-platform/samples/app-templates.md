@@ -249,7 +249,7 @@ Request-a-team is a Microsoft Teams app that optimizes new team creation for you
 :::row:::
 :::column span="2":::
     ![Request-a-team wizard page view](../assets/images/request-a-team-two.jpg)
-::column-end:::
+:::column-end:::
 :::row-end:::
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-requestateam)
