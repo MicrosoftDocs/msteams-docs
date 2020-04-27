@@ -239,7 +239,7 @@ Incident Reporter is a [Microsoft Teams bot](../bots/what-are-bots.md)  that opt
 
 ## Request-a-team app
 
-Request-a-team is a Microsoft Teams app that optimizes new team creation for your enterprise organization. The app integrates a wizard-guided request form, an embedded approval process, a request status dashboard, and, upon approval, automated team builds, all within a Teams platform channel.
+Request-a-team is a Microsoft Teams app that optimizes new team creation for your enterprise organization. The app integrates a wizard-guided request form, an embedded approval process, a request status dashboard, and, upon approval, an automated team build, all within a Teams platform channel.
 
 :::row:::
   :::column span="2":::
