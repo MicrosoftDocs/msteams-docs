@@ -17,9 +17,6 @@ Publishing  your app to [AppSource](https://appsource.microsoft.com) makes it av
 1. Track the approval process on your Partner Center dashboard. *See* [Partner Center Overview](https://support.microsoft.com/help/4499930/partner-center-overview).
 1. Post submission — review our guidance for [Maintaining and supporting your published app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md).
 
-> [!div class="nextstepaction"]
-> [Learn more about app validation policies for Microsoft Teams](https://docs.microsoft.com/en-us/legal/marketplace/certification-policies)
-
 >[!NOTE]
 >
 > * If your Teams app contains a bot, you must comply with the Bot Developer Framework [Code of Conduct](https://aka.ms/bf-conduct).
@@ -92,3 +89,5 @@ Please send an email to **<teamsubm@microsoft.com>** with the following details:
     * Your seller ID:
     * A screen shot of the issue.
 
+> [!div class="nextstepaction"]
+> [Learn more about app validation policies for Microsoft Teams](https://docs.microsoft.com/en-us/legal/marketplace/certification-policies)
