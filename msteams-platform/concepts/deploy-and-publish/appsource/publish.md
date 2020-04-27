@@ -90,4 +90,4 @@ Please send an email to **<teamsubm@microsoft.com>** with the following details:
     * A screen shot of the issue.
 
 > [!div class="nextstepaction"]
-> [Learn more about app validation policies for Microsoft Teams](https://docs.microsoft.com/en-us/legal/marketplace/certification-policies)
+> [Learn more about app validation policies for Microsoft Teams](https://docs.microsoft.com/legal/marketplace/certification-policies)
