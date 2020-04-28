@@ -19,8 +19,8 @@ Publishing  your app to [AppSource](https://appsource.microsoft.com) makes it av
 
 >[!NOTE]
 >
->*If your Teams app contains a bot, you must comply with the Bot Developer Framework [Code of Conduct](https://aka.ms/bf-conduct).
->*If your app contains an Office 365 Connector, additional terms may apply. *See* [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard) and [App Developer Agreement](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm).
+>- If your Teams app contains a bot, you must comply with the Bot Developer Framework [Code of Conduct](https://aka.ms/bf-conduct).
+>- If your app contains an Office 365 Connector, additional terms may apply. *See* [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard) and [App Developer Agreement](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm).
 
 ## FAQs — Teams apps and Partner accounts
 
@@ -28,16 +28,16 @@ Publishing  your app to [AppSource](https://appsource.microsoft.com) makes it av
 
 There are two ways to create a Partner Center account:
 
-* If you're new to Partner center and don't have an account  within the Microsoft network, [create an account using the Partner Center enrollment page](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
-* If you're already enrolled in the Partner Network, [create an account directly in Partner Center using an existing enrollment](/office/dev/store/).
+- If you're new to Partner center and don't have an account  within the Microsoft network, [create an account using the Partner Center enrollment page](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
+- If you're already enrolled in the Partner Network, [create an account directly in Partner Center using an existing enrollment](/office/dev/store/).
 
 ## How do I add my phone number to the contact info section?
 
-The phone number has three parts — country code, area code, and the telephone number. If there is no area code, then leave the second box empty, and complete the third box.
+The phone number has three parts — country code, area code, and the telephone number. If your phone number doesn't include an area code, then leave the second box empty, and complete the third box.
 
 ## What if I cannot find my Office Store account in Partner Center?
 
-Please open a ticket a [Partner support ticket](https://partner.microsoft.com/en-US/support/v2/?stage=1) and select the following from the drop-down menus:
+Please open a [Partner support ticket](https://partner.microsoft.com/en-US/support/v2/?stage=1) and select the following from the drop-down menus:
 
 | Menu | Option |
 | -------   | -------  |
@@ -49,15 +49,15 @@ Please open a ticket a [Partner support ticket](https://partner.microsoft.com/en
 
 ## How do I manage my Account settings and Partner profile in Partner Center?
 
-Please visit our [Manage account settings and profile info page](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info) for guidance in managing your Partner center account Settings.
+Please visit our [Manage account settings and profile info](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info) page for guidance on managing your Partner center account Settings.
 
 ## How do I manage my Office Store Account?
 
-Please visit our  [Manage your Office Store account in Partner Center](/office/dev/store/manage-account-settings-and-profile) for guidance in managing your Office Store account through Partner Center.
+Please visit our  [Manage your Office Store account in Partner Center](/office/dev/store/manage-account-settings-and-profile) for guidance on managing your Office Store account through Partner Center.
 
-## Why do I get the message, "This account is not publish eligible," when I try to submit my add-in through Partner Center?
+## Why do I receive the message, "This account is not publish eligible," when I try to submit my add-in through Partner Center?
 
-You will receive the above error message when your [account verification status](/partner-center/verification-responses) is pending. You can check your account verification status in the Partner Center [dashboard](https://partner.microsoft.com/dashboard) by selecting the **Settings** option (the gear icon) in the upper-right corner of the page header shell and choosing **Developer settings** => **Account**  => **Account settings** .
+You'll receive the above error message when your [account verification status](/partner-center/verification-responses) is pending. You can check your account verification status in the Partner Center [dashboard](https://partner.microsoft.com/dashboard) by selecting the **Settings** option (the gear icon) in the upper-right corner of the page header shell and choosing **Developer settings** => **Account**  => **Account settings** .
 
 ![Partner Center account settings page](../../../assets/images/partner-center-accts-page.png)
 
@@ -67,7 +67,7 @@ During the account verification process the status of each required step —  em
 
 ![Partner Center verification error](../../../assets/images/partner-center-acct-verification-error.png)
 
-## My account *Verification status* has not advanced beyond *Email Ownership*. How should I proceed?
+## My account Verification status has not advanced beyond Email Ownership. How should I proceed?
 
 During the **Email Ownership** verification process, a verification email is sent to the primary contact email address. Please check your primary contact inbox for an email  from **maccount@<span>microsoft</span>.com** with the subject  line *Action needed: Verify your email account with Microsoft*, requesting that you complete the email verification process. The verification email will be sent to the email address listed  in your Account Settings page in Partner Center.
 
