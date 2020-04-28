@@ -33,7 +33,7 @@ There are two ways to create a Partner Center account:
 
 ## How do I add my phone number to the contact info section?
 
-The phone number has three parts — country code, area code, and the telephone number. If there is no area code, then leave the second box empty and complete the third box.
+The phone number has three parts — country code, area code, and the telephone number. If there is no area code, then leave the second box empty, and complete the third box.
 
 ## What if I cannot find my Office Store account in Partner Center?
 
@@ -53,7 +53,7 @@ Please visit our [Manage account settings and profile info page](/windows/uwp/pu
 
 ## How do I manage my Office Store Account?
 
-Please visit our  [Manage your Office Store account in Partner Center] (/office/dev/store/manage-account-settings-and-profile) for guidance in managing your Office Store account through Partner Center.
+Please visit our  [Manage your Office Store account in Partner Center](/office/dev/store/manage-account-settings-and-profile) for guidance in managing your Office Store account through Partner Center.
 
 ## Why do I get the message, "This account is not publish eligible," when I try to submit my add-in through Partner Center?
 
@@ -67,9 +67,9 @@ During the account verification process the status of each required step —  em
 
 ![Partner Center verification error](../../../assets/images/partner-center-acct-verification-error.png)
 
-## My account `Verification Status`  has not advanced beyond `Email Ownership`. How should I proceed?
+## My account *Verification status* has not advanced beyond *Email Ownership*. How should I proceed?
 
-During the `Email Ownership` verification process a verification email is sent to the primary contact email address. Please check your primary contact inbox for an email  from **maccount@<span>microsoft</span>.com** with the subject  line `Action needed: Verify your email account with Microsoft` asking you to complete the email verification process. The verification email will be sent to the email address listed  in your Account Settings page in Partner Center.
+During the **Email Ownership** verification process, a verification email is sent to the primary contact email address. Please check your primary contact inbox for an email  from **maccount@<span>microsoft</span>.com** with the subject  line *Action needed: Verify your email account with Microsoft*, requesting that you complete the email verification process. The verification email will be sent to the email address listed  in your Account Settings page in Partner Center.
 
 > [!NOTE]
  >The email verification link is only valid for 7 days. You can request that we resend the email to you by visiting your Partner profile page and selecting the **Resend verification email** link. To ensure that the email is received, whitelist email from Microsoft.com as a safe domain, and check your junk email folders.
@@ -96,7 +96,7 @@ If all the submitted details are correct, employment verification completes in 1
 
 Business Verification takes 1 to 2 business days to complete, provided that all required documents have been submitted.
 
-## I've already reached out to the support team; can my ticket be expedited?
+## If I've already reached out to the support team, will my ticket be expedited?
 
 Support tickets will be resolved within a week's time. Please look for the updates which will be sent to the email provided when the support ticket was raised.
 
@@ -110,7 +110,6 @@ Please send an email to **<teamsubm@microsoft.com>** with the following details:
     * Your seller ID:
     * A screen shot of the issue (if possible):
 
->
 >
 > [!div class="nextstepaction"]
 > [Learn more about app validation policies for Microsoft Teams](https://docs.microsoft.com/legal/marketplace/certification-policies)
