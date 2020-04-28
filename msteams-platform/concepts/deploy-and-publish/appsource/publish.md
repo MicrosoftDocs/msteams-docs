@@ -35,7 +35,7 @@ There are two ways to create a Partner Center account:
 
 The phone number has three parts — country code, area code, and the telephone number. If there is no area code, then leave the second box empty and complete the third box.
 
-## What if I cannot find the Office Store program in my Partner Center Account?
+## What if I cannot find my Office Store account in Partner Center?
 
 Please open a ticket a [Partner support ticket](https://partner.microsoft.com/en-US/support/v2/?stage=1) and select the following from the drop-down menus:
 
@@ -49,7 +49,7 @@ Please open a ticket a [Partner support ticket](https://partner.microsoft.com/en
 
 ## How do I manage my Account settings and Partner profile in Partner Center?
 
-Please visit our [Manage account settings and profile info page] (/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info) for guidance in managing your Partner center account Settings.
+Please visit our [Manage account settings and profile info page](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info) for guidance in managing your Partner center account Settings.
 
 ## How do I manage my Office Store Account?
 
@@ -67,16 +67,16 @@ During the account verification process the status of each required step —  em
 
 ![Partner Center verification error](../../../assets/images/partner-center-acct-verification-error.png)
 
-## My account **Verification status** remains at **Email Ownership** and has not advanced. How should I proceed?
+## My account `Verification Status`  has not advanced beyond `Email Ownership`. How should I proceed?
 
-During the Email Ownership verification process a verification email is sent to the primary contact email address. Please check your primary contact email inbox for and email  from **maccount@microsoft.com** with the subject  line**Action needed: Verify your email account with Microsoft** asking you to complete the email verification process. The verification email will be sent to the email address listed  in your Account Settings page in Partner Center.
+During the `Email Ownership` verification process a verification email is sent to the primary contact email address. Please check your primary contact inbox for an email  from **maccount@<span>microsoft</span>.com** with the subject  line `Action needed: Verify your email account with Microsoft` asking you to complete the email verification process. The verification email will be sent to the email address listed  in your Account Settings page in Partner Center.
 
-> [!Note]
+> [!NOTE]
  >The email verification link is only valid for 7 days. You can request that we resend the email to you by visiting your Partner profile page and selecting the **Resend verification email** link. To ensure that the email is received, whitelist email from Microsoft.com as a safe domain, and check your junk email folders.
 
 ## How I do get further support for my account related issues?
 
-Please visit our [Support for the Commercial Marketplace program in Partner Center] (/azure/marketplace/partner-center-portal/support) page for guidance and steps to create a support ticket.
+Please visit our [Support for the Commercial Marketplace program in Partner Center](/azure/marketplace/partner-center-portal/support) page for guidance and steps to create a support ticket.
 
 ## I've checked my mail folders and haven't received the verification email. What  should I do next?
 
@@ -90,7 +90,7 @@ Please try the following:
 
 ## How long does the employment verification process usually take?
 
-If all the details are provided correctly, employment verification completes in 1 to 2 hours.
+If all the submitted details are correct, employment verification completes in 1 to 2 hours.
 
 ## How long does the “Business Verification” process usually take?
 
