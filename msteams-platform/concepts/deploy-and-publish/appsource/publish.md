@@ -22,7 +22,7 @@ Publishing  your app to [AppSource](https://appsource.microsoft.com) makes it av
 > * If your Teams app contains a bot, you must comply with the Bot Developer Framework [Code of Conduct](https://aka.ms/bf-conduct).
 > * If your app contains an Office 365 Connector, additional terms may apply. *See* [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard) and [App Developer Agreement](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm).
 
-## **FAQs — Teams apps and Partner accounts**
+## FAQs — Teams apps and Partner accounts
 
 ## How do I create a Partner Center account?
 
@@ -90,4 +90,4 @@ Please send an email to **<teamsubm@microsoft.com>** with the following details:
     * A screen shot of the issue.
 
 > [!div class="nextstepaction"]
-> [Learn more about app validation policies for Microsoft Teams](/office/dev/store/validation-policies#14-microsoft-teams-apps)
+> [Learn more about app validation policies for Microsoft Teams](https://docs.microsoft.com/legal/marketplace/certification-policies)

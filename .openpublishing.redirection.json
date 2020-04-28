@@ -489,10 +489,6 @@
         "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases"
       },
       {
-        "source_path": "msteams-platform/concepts/deploy-and-publish/applicacation-certification.md",
-        "redirect_url": "/microsoftteams/platform/deploye-and-publish/post-publish/application-certification"
-      },
-      {
         "source_path": "msteams-platform/concepts/deploy-and-publish/apps-publish.md",
         "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish"
       },
@@ -503,6 +499,10 @@
       {
         "source_path": "msteams-platform/scenarios/lob-pmo-scenario.md",
         "redirect_url": "/microsoftteams/platform/concepts/extensibility-points"
+      },
+      {
+        "source_path": "msteams-platform/samples/code-samples.md",
+        "redirect_url": "/microsoftteams/platform/tutorials/code-samples"
       }
   ]
 }

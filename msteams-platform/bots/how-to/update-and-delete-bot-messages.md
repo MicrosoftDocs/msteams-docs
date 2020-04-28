@@ -78,7 +78,7 @@ for (let i = 0; i < activityIds.length; i++) {
 
 # [Python](#tab/python)
 
-To delete that message, pass that activity's ID to the `delete_activity` method of the `TurnContext` object. See [delete_activity](link to Python API ref docs).
+To delete that message, pass that activity's ID to the `delete_activity` method of the `TurnContext` object. See [activity-update-and-delete](https://github.com/microsoft/botbuilder-python/blob/c04ecacb22c1f4b43a671fe2f1e4782218391975/tests/teams/scenarios/activity-update-and-delete/bots/activity_update_and_delete_bot.py).
 
 ```python
 for each activity_id in _list:

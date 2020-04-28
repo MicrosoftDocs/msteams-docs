@@ -13,6 +13,10 @@ The way buttons are styled helps communicate what kind of action they trigger. W
 
 Buttons can have text, an icon, or a combination of text and an icon. To communicate different levels in a hierarchy, we designed primary and secondary buttons within each category.
 
+### Fluent Design System
+
+Fluent UI provides guidance for web and desktop component states, styling, and accessibility. Buttons on the Teams platform can be formatted to show different levels of emphasis. *See*  [Fluent UI button colors](https://fluentsite.z22.web.core.windows.net/components/button/definition?showCode=false&showRtl=false&showTransparent=false&showVariables=true#types-emphasis) for HTML and CSS hexadecimal color values.
+
 ### Text buttons
 
 In dialogs, you should align buttons to the right, starting with the primary action farthest to the right. In cards, buttons are left-aligned.

@@ -5,7 +5,7 @@
       href: overview.md
     - name: What's new?
       href: whats-new.md
-- name: Get Started
+- name: Tutorials and code samples
   items:
   - name: Create an app using C#
     href: tutorials/get-started-dotnet-app-studio.md
@@ -13,14 +13,14 @@
     href: tutorials/get-started-nodejs-app-studio.md
   - name: Create an app with the Yeoman generator
     href: tutorials/get-started-yeoman.md
-- name: Samples and templates
+  - name: Extend the Teams client with custom apps
+    href: tutorials/code-samples.md   
+- name: App templates and integrations
   items: 
   - name: Production-ready app templates
     href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
     href: samples/shifts-wfm-connectors.md 
-  - name: Sample apps
-    href: samples/code-samples.md 
 - name: Concepts
   expanded: true
   items:
@@ -80,7 +80,7 @@
           href: concepts/deploy-and-publish/appsource/publish.md
         - name: Prepare your app
           items: 
-          - name: Presubmission checklist
+          - name: Pre-submission checklist
             href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
           - name: App detail page checklist
             href: concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md
@@ -104,6 +104,10 @@
   items:
     - name: 'What are Messaging Extensions?'
       href: messaging-extensions/what-are-messaging-extensions.md
+    - name: Design
+      items:
+      -  name: 'Messaging extensions design guidelines'
+         href: messaging-extensions/design/messaging-extension-design.md  
     - name: Quickstarts
       items:
         - name: 'With action command'
