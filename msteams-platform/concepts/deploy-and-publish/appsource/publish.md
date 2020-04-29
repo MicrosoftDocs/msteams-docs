@@ -31,7 +31,7 @@ There are two ways to create a Partner Center account:
 - If you're new to Partner center and don't have an account  within the Microsoft network, [create an account using the Partner Center enrollment page](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
 - If you're already enrolled in the Partner Network, [create an account directly in Partner Center using an existing enrollment](/office/dev/store/).
 
-## How do I add my phone number to the contact info section?
+## How do I add my phone number to the Partner profile contact section?
 
 The phone number has three parts — country code, area code, and the telephone number. If your phone number doesn't include an area code, then leave the second box empty, and complete the third box.
 
@@ -63,7 +63,7 @@ You'll receive the above error message when your [account verification status](/
 
 ![Partner Center verification status](../../../assets/images/partner-center-verification-status.png)
 
-During the account verification process the status of each required step —  email ownership, employment verification, and business verification — will be displayed. Once the verification process has been successfully completed, the verification status of your enrollment on the profile page will change from "pending" to "authorized," and the process steps will no longer be displayed.
+During the account verification process the status of each required step —  Email Ownership, Employment Verification, and Business Verification — will be displayed. Once the verification process has been successfully completed, the verification status of your enrollment on the profile page will change from "pending" to "authorized," and the process steps will no longer be displayed.
 
 ![Partner Center verification error](../../../assets/images/partner-center-acct-verification-error.png)
 
@@ -72,7 +72,7 @@ During the account verification process the status of each required step —  em
 During the **Email Ownership** verification process, a verification email is sent to the primary contact email address. Please check your primary contact inbox for an email  from **maccount@<span>microsoft</span>.com** with the subject  line *Action needed: Verify your email account with Microsoft*, requesting that you complete the email verification process. The verification email will be sent to the email address listed  in your Account Settings page in Partner Center.
 
 > [!NOTE]
- >The email verification link is only valid for 7 days. You can request that we resend the email to you by visiting your Partner profile page and selecting the **Resend verification email** link. To ensure that the email is received, whitelist email from Microsoft.com as a safe domain, and check your junk email folders.
+ >The email verification link is only valid for 7 days. You can request that we resend the email to you by visiting your Partner profile page and selecting the **Resend verification email** link. To ensure that the email is received, whitelist email from microsoft.com as a safe domain, and check your junk email folders.
 
 ## How I do get further support for my account related issues?
 
