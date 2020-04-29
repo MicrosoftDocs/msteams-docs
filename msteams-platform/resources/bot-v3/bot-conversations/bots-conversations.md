@@ -213,15 +213,16 @@ The new message need not match the original in type. For instance, if the origin
 
 ### REST API
 
-To issue a message update, simply perform a PUT request against the `/v3/conversations/<conversationId>/activities/<activityId>/` endpoint using a given activity ID. To complete this scenario, you should cache the activity ID returned by the original POST call.
+You can develop Teams apps in any other web-programming technology and call the Bot Connector service [REST APIs](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0) directly, but you must perform all token handling yourself. To update an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint. To complete this scenario, you should cache the activity ID returned by the original POST call.
 
-```json
-PUT /v3/conversations/19%3Aja0cu120i1jod12j%40skype.net/activities/012ujdo0128
-{
-    "type": "message",
-    "text": "This message has been updated"
-}
+```http
+PUT /v3/conversations/{conversationId}/activities/{activityId}
 ```
+
+| | |
+|----|----|
+| **Request body** | An [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object) object |
+| **Returns** | A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object) object |
 
 ### .NET example
 
@@ -345,3 +346,16 @@ bot.dialog('BotDeleteMessage', function (session: builder.Session) {
   });
 })
 ```
+
+### REST API
+
+You can develop Teams apps and call the Bot Connector service [REST APIs](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0) directly. To delete an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint.
+
+```http
+DELETE /v3/conversations/{conversationId}/activities/{activityId}
+```
+
+| | |
+|----|----|
+| **Request body** | n/a |
+| **Returns** | An HTTP Status code that indicates the outcome of the operation. Nothing is specified in the body of the response. |

@@ -48,6 +48,19 @@ update_result = await context.update_activity(new_activity)
 
 ```
 
+# [REST API](#tab/rest)
+
+You can develop Teams apps in any other web-programming technology and call the Bot Connector service [REST APIs](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0) directly, but you must perform all token handling yourself. To update an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint. To complete this scenario, you should cache the activity ID returned by the original POST call.
+
+```http
+PUT /v3/conversations/{conversationId}/activities/{activityId}
+```
+
+| | |
+|----|----|
+| **Request body** | An [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object) object |
+| **Returns** | A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object) object |
+
 ---
 
 ## Deleting messages
@@ -85,5 +98,17 @@ for each activity_id in _list:
     await TurnContext.delete_activity(activity_id)
 ```
 
----
+# [REST API](#tab/rest)
 
+You can develop Teams apps in any other web-programming technology and call the Bot Connector service [REST APIs](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0) directly, but you must perform all token handling yourself. To delete an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint.
+
+```http
+DELETE /v3/conversations/{conversationId}/activities/{activityId}
+```
+
+| | |
+|----|----|
+| **Request body** | n/a |
+| **Returns** | An HTTP Status code that indicates the outcome of the operation. Nothing is specified in the body of the response. |
+
+---
