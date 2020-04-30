@@ -49,7 +49,7 @@ update_result = await context.update_activity(new_activity)
 ```
 
 >[!NOTE]
->You can develop Teams apps in any web-programming technology and directly call the [**Bot Connector service REST APIs**](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0). If you do so, you'll need to implement [**Authentication**](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0) security procedures with your API requests.
+>You can develop Teams apps in any web-programming technology and directly call the [**Bot Connector service REST APIs**](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0). To do so, you'll need to implement [**Authentication**](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0) security procedures with your API requests.
 
 # [REST API](#tab/rest)
 
