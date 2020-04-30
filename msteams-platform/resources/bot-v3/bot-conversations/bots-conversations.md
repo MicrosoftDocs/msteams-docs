@@ -71,7 +71,7 @@ Pictures can be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animate
 We recommend that you specify the height and width of each image by using XML. If you use Markdown, the image size defaults to 256×256. For example:
 
 * Use `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
-* Don't use `![Duck on a rock](http://aka.ms/Fo983c)`
+* Don't use `![Duck on a rock](http://aka.ms/Fo983c)`
 
 ## Receiving messages
 
