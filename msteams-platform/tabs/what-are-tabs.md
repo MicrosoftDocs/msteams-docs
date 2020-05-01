@@ -19,7 +19,6 @@ There are two types of tabs available in Teams - channel/group and personal. A c
 
 > [!div class="checklist"]
 >
-> * Awareness of a team's  entire roster.
 > * If a tab is added to an app that also has a bot, the bot is added to the team as well.
 > * Awareness of AAD ID of the current user.
 > * Locale awareness for the user to indicate language, i.e., `en-us`. 
