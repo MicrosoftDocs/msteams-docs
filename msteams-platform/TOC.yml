@@ -281,7 +281,7 @@
           href: tabs/how-to/tabs-in-sharepoint.md
         - name: Request device permissions
           href: tabs/how-to/native-device-permissions.md
-- name: 'Task modules and cards'
+- name: 'Task modules and cards — enriched messages and notifications'
   items:
     - name: 'What are task modules?'
       href: task-modules-and-cards/what-are-task-modules.md
@@ -303,7 +303,7 @@
           href: task-modules-and-cards/task-modules/task-modules-bots.md
         - name: From a tab
           href: task-modules-and-cards/task-modules/task-modules-tabs.md
-- name: 'Webhooks and connectors'
+- name: 'Webhooks and connectors — automated messages and notifications'
   items:
     - name: 'What are Webhooks and connectors?'
       href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
