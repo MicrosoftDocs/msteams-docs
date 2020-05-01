@@ -118,7 +118,7 @@ The following schema sample shows all extensibility options.
           "title": "Example Command",
           "description": "Command Description; e.g., Search on the web",
           "initialRun": true,
-          "type" : "search",
+          "type" : "query",
           "context" : ["compose", "commandBox"],
           "parameters": [
             {
