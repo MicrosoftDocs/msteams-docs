@@ -100,7 +100,7 @@
           href: concepts/authentication/authentication.md
         - name: 'Configure identity providers'
           href: concepts/authentication/configure-identity-provider.md
-- name: 'Messaging Extensions'
+- name: 'Messaging Extensions — task-oriented interactions'
   items:
     - name: 'What are Messaging Extensions?'
       href: messaging-extensions/what-are-messaging-extensions.md
@@ -147,7 +147,7 @@
           href: messaging-extensions/how-to/add-authentication.md
         - name: 'Add a configuration page'
           href: messaging-extensions/how-to/add-configuration-page.md
-- name: 'Bots'
+- name: 'Bots — conversation-based interactions'
   items:
     - name: What are bots in Microsoft Teams?
       href: bots/what-are-bots.md
@@ -218,7 +218,7 @@
         href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
       - name: Application-hosted media
         href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-- name: 'Tabs'
+- name: 'Tabs — embedded web experiences'
   items:
     - name: 'What are custom tabs?'
       href: tabs/what-are-tabs.md
