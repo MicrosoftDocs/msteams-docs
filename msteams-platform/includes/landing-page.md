@@ -34,11 +34,15 @@ ms.author: lajanuar
                                         <p><a class="barLink" style="font-size: 0.95rem"
                                                 href="/microsoftteams/platform/overview">Building apps on the Microsoft Teams Platform</a></p>
                                         <p><a class="barLink" style="font-size: 0.95rem"
-                                                href="/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions">Messaging Extensions — task oriented interactions</a></p>
-                                        <p><a class="barLink" style="font-size: 0.95rem"
                                                 href="/microsoftteams/platform/tabs/what-are-tabs">Tabs — embedded web experiences</a></p>
                                         <p><a class="barLink" style="font-size: 0.95rem"
                                                 href="/microsoftteams/platform/bots/what-are-bots">Bots — conversation-based interactions</a></p>
+                                        <p><a class="barLink" style="font-size: 0.95rem"
+                                                href="/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions">Messaging Extensions — task oriented interactions</a></p>
+                                         <p><a class="barLink" style="font-size: 0.95rem"
+                                                href="/microsoftteams/platform/task-modules-and-cards/what-are-task-modules">Task modules and cards — rich messaging and notifications</a></p>
+                                        <p><a class="barLink" style="font-size: 0.95rem"
+                                                href="/microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors">Webhooks and connectors — programmed messaging and notifications</a></p>
                                         <p><a class="barLink" style="font-size: 0.95rem"
                                                 href="/graph/teams-concept-overview">Microsoft Teams + Graph</a></p>
                                         <p><a class="barLink" style="font-size: 0.95rem"
