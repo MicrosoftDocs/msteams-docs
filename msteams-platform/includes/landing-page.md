@@ -33,7 +33,7 @@ ms.author: lajanuar
                                         <hr />
                                         <p><a class="barLink" style="font-size: 0.95rem"
                                               href="/microsoftteams/platform/overview">Building apps on the Microsoft Teams Platform</a></p>
-                                        <p ><img src="../assets/icons/bot-icon.png" alt="bot icon"><a class="barLink" style="font-size: 0.95rem"
+                                        <p ><img src="/microsoftteams/platform/assets/icons/bot-icon.png" alt="bot icon"><a class="barLink" style="font-size: 0.95rem"
                                                 href="/microsoftteams/platform/tabs/what-are-tabs">Tabs — embedded web experiences</a></p>
                                         <p><a class="barLink" style="font-size: 0.95rem"
                                                 href="/microsoftteams/platform/bots/what-are-bots">Bots — conversation-based interactions</a></p>
