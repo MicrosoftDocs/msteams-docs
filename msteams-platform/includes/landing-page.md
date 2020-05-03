@@ -42,11 +42,11 @@ ms.author: lajanuar
                                          <p><a class="barLink" style="font-size: 0.95rem"
                                                 href="/microsoftteams/platform/task-modules-and-cards/what-are-task-modules"><img src="/microsoftteams/platform/assets/icons/task-module-icon.png" alt="task module icon">Task modules and cards — rich messaging and notifications</a></p>
                                         <p><a class="barLink" style="font-size: 0.95rem"
-                                                href="/microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors"><img src="/microsoftteams/platform/assets/icons/wehooks-connectors-icon.png" alt="webhooks connectors icon">Webhooks and connectors — programmed messaging and notifications</a></p>
+                                                href="/microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors"><img src="/microsoftteams/platform/assets/icons/webhooks-connectors-icon.png" alt="webhooks connectors icon">Webhooks and connectors — programmed messaging and notifications</a></p>
                                         <p><a class="barLink" style="font-size: 0.95rem"
-                                                href="/graph/teams-concept-overview">Microsoft Teams + Graph</a></p>
+                                                href="/graph/teams-concept-overview"><img src="/microsoftteams/platform/assets/icons/graph-small-icon.png" alt="graph icon">Microsoft Teams + Graph</a></p>
                                         <p><a class="barLink" style="font-size: 0.95rem"
-                                                href="/MicrosoftTeams/Microsoft-Teams">Microsoft Teams administration</a></p>
+                                                href="/MicrosoftTeams/Microsoft-Teams"><img src="/microsoftteams/platform/assets/icons/teams-admin-icon.png" alt="teams admin icon">Microsoft Teams administration</a></p>
                                     </div>
                                 </div>
                             </div>
