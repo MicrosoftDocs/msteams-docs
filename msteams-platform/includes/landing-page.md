@@ -34,19 +34,19 @@ ms.author: lajanuar
                                         <p><a class="barLink" style="font-size: 0.95rem"
                                               href="/microsoftteams/platform/overview">Building apps on the Microsoft Teams Platform</a></p>
                                         <p ><a class="barLink" style="font-size: 0.95rem"
-                                                href="/microsoftteams/platform/tabs/what-are-tabs"><img src="/microsoftteams/platform/assets/icons/tab-icon.png" alt="tab icon">Tabs — embedded web experiences</a></p>
+                                                href="/microsoftteams/platform/tabs/what-are-tabs"><img src="/microsoftteams/platform/assets/icons/tab-icon-2.svg" height="16" width="16" alt="tab icon">Tabs — embedded web experiences</a></p>
                                         <p><a class="barLink" style="font-size: 0.95rem"
-                                                href="/microsoftteams/platform/bots/what-are-bots"><img src="/microsoftteams/platform/assets/icons/bot-icon.png" alt="bot icon">Bots — conversation-based interactions</a></p>
+                                                href="/microsoftteams/platform/bots/what-are-bots"><img src="/microsoftteams/platform/assets/icons/bot-icon-2.svg" height="16" width="16"  alt="bot icon">Bots — conversation-based interactions</a></p>
                                         <p><a class="barLink" style="font-size: 0.95rem"
-                                                href="/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions"><img src="/microsoftteams/platform/assets/icons/messaging-icon.png" alt="messaging icon">Messaging Extensions — task oriented interactions</a></p>
+                                                href="/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions"><img src="/microsoftteams/platform/assets/icons/messaging-icon-2.svg" height="16" width="16" alt="messaging icon">Messaging Extensions — task oriented interactions</a></p>
                                          <p><a class="barLink" style="font-size: 0.95rem"
-                                                href="/microsoftteams/platform/task-modules-and-cards/what-are-task-modules"><img src="/microsoftteams/platform/assets/icons/task-module-icon.png" alt="task module icon">Task modules and cards — rich messaging and notifications</a></p>
+                                                href="/microsoftteams/platform/task-modules-and-cards/what-are-task-modules"><img src="https://docs.microsoft.com/media/common/i_queries.svg" height="16" width="16" alt="task module icon">Task modules and cards — rich messaging and notifications</a></p>
                                         <p><a class="barLink" style="font-size: 0.95rem"
-                                                href="/microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors"><img src="/microsoftteams/platform/assets/icons/webhooks-connectors-icon.png" alt="webhooks connectors icon">Webhooks and connectors — programmed messaging and notifications</a></p>
+                                                href="/microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors"><img src="https://docs.microsoft.com/media/common/i_service-hooks.svg" height="16" width="16" alt="webhooks connectors icon">Webhooks and connectors — programmed messaging and notifications</a></p>
                                         <p><a class="barLink" style="font-size: 0.95rem"
-                                                href="/graph/teams-concept-overview"><img src="/microsoftteams/platform/assets/icons/graph-small-icon.png" alt="graph icon">Microsoft Teams + Graph</a></p>
+                                                href="/graph/teams-concept-overview"><img src="/microsoftteams/platform/assets/icons/graph-icon-1.svg" height="16" width="16" alt="graph icon">Microsoft Teams + Graph</a></p>
                                         <p><a class="barLink" style="font-size: 0.95rem"
-                                                href="/MicrosoftTeams/Microsoft-Teams"><img src="/microsoftteams/platform/assets/icons/teams-admin-icon.png" alt="teams admin icon">Microsoft Teams administration</a></p>
+                                                href="/MicrosoftTeams/Microsoft-Teams"><img src="https://docs.microsoft.com/media/common/i_identity-protection.svg" height="16" width="16" alt="teams admin icon">Microsoft Teams administration</a></p>
                                     </div>
                                 </div>
                             </div>
