@@ -44,9 +44,9 @@ ms.author: lajanuar
                                         <p><a class="barLink" style="font-size: 0.95rem"
                                                 href="/microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors"><img src="https://docs.microsoft.com/media/common/i_service-hooks.svg" height="16" width="16" alt="webhooks connectors icon">Webhooks and connectors — programmed messaging and notifications</a></p>
                                         <p><a class="barLink" style="font-size: 0.95rem"
-                                                href="/graph/teams-concept-overview"><img src="/microsoftteams/platform/assets/icons/graph-icon-1.svg" height="16" width="16" alt="graph icon">Microsoft Teams + Graph</a></p>
+                                                href="https://docs.microsoft.com/graph/teams-concept-overview"><img src="/microsoftteams/platform/assets/icons/graph-icon-1.svg" height="16" width="16" alt="graph icon">Microsoft Teams + Graph</a></p>
                                         <p><a class="barLink" style="font-size: 0.95rem"
-                                                href="/MicrosoftTeams/Microsoft-Teams"><img src="https://docs.microsoft.com/media/common/i_identity-protection.svg" height="16" width="16" alt="teams admin icon">Microsoft Teams administration</a></p>
+                                                href="https://docs.microsoft.com/microsoftteams/"><img src="https://docs.microsoft.com/media/common/i_identity-protection.svg" height="16" width="16" alt="teams admin icon">Microsoft Teams administration</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -430,6 +430,82 @@ ms.author: lajanuar
                                                 <div class="cardText">
                                                     <h3>Group Activities app</h3>
                                                     <p>Quickly create and manage activity groups and collaboration workflows.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-quickresponses">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/teams-troubleshoot.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Quick Responses app</h3>
+                                                    <p>Effectively answer users' commonly asked questions and build a dynamic library of responses.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-remotesupport">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/bcs-partner-advanced-management-technical-support-4.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Remote Support bot</h3>
+                                                    <p>Provide a focused interface between requesters throughout your organization and the internal support team.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-incidentreport">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/system-center-service-manager.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Incident Reporter bot</h3>
+                                                    <p>Optimize the management of incidents within your organization.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-requestateam">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com//media/illustrations/teams-fast-track.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Request-a-team app</h3>
+                                                    <p>Enhance your organization's new team creation flow .</p>
                                                 </div>
                                             </div>
                                         </div>
