@@ -122,7 +122,7 @@ ms.author: lajanuar
                 </ul>
             </li>
             <li>
-                <a href="#samples-demos-templates">Samples &amp; Templates</a>
+                <a href="#samples-demos-templates">Templates, Integrations &amp; Samples</a>
                 <ul id="samples-demos-templates">
                     <li>
                         <a href="#templates">App Templates</a>
