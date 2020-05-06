@@ -100,53 +100,69 @@
           href: concepts/authentication/authentication.md
         - name: 'Configure identity providers'
           href: concepts/authentication/configure-identity-provider.md
-- name: 'Messaging Extensions — task-oriented interactions'
+- name: 'Tabs — embedded web experiences'
   items:
-    - name: 'What are Messaging Extensions?'
-      href: messaging-extensions/what-are-messaging-extensions.md
-    - name: Design
-      items:
-      -  name: 'Messaging extensions design guidelines'
-         href: messaging-extensions/design/messaging-extension-design.md  
+    - name: 'What are custom tabs?'
+      href: tabs/what-are-tabs.md
     - name: Quickstarts
       items:
-        - name: 'With action command'
+        - name: 'Node.js and React'
           items:
-            - name: 'C#/.NET'
-              href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action
-            - name: TypeScript/Node.js
-              href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action
-        - name: 'With search command'
+          - name: 'Create a channel and group tab'
+            href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
+          - name: 'Create a personal tab'
+            href: tabs/quickstarts/create-personal-tab-node-yeoman.md
+        - name: 'C#/ASP.NET Core'
           items:
-            - name: 'C#/.NET'
-              href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search
-            - name: TypeScript/Node.js
-              href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search
+          - name: 'Create a channel and group tab'
+            href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
+          - name: 'Create a personal tab'
+            href: tabs/quickstarts/create-personal-tab-dotnet-core.md
+        - name: 'C#/ASP.NET MVC'
+          items:
+          - name: 'Create a channel and group tab'
+            href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
+          - name: 'Create a personal tab'
+            href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
+    - name: 'Design your tabs'
+      items:
+        - name: 'Design overview'
+          href: tabs/design/tabs.md
+        - name: 'Tabs on mobile clients'
+          href: tabs/design/tabs-mobile.md
     - name: 'How-to guides'
       expanded: true
       items:
-        - name: 'Create a messaging extension'
-          href: messaging-extensions/how-to/create-messaging-extension.md
-        - name: 'Action-based commands'
+        - name: 'Add tabs to your app'
+          href: tabs/how-to/add-tab.md
+        - name: 'Create tab pages'
           items:
-            - name: Define action commands
-              href: messaging-extensions/how-to/action-commands/define-action-command.md
-            - name: Create and send the task module
-              href: messaging-extensions/how-to/action-commands/create-task-module.md
-            - name: Send a response to the submit action
-              href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
-        - name: 'Search-based commands'
+          - name: 'Create a content page'
+            href: tabs/how-to/create-tab-pages/content-page.md
+          - name: 'Create a configuration page'
+            href: tabs/how-to/create-tab-pages/configuration-page.md
+          - name: 'Create a tab removal page'
+            href: tabs/how-to/create-tab-pages/removal-page.md
+        - name: 'Add authentication to your tabs'
           items:
-            - name: 'Define search commands'
-              href: messaging-extensions/how-to/search-commands/define-search-command.md
-            - name: 'Receive and respond to search queries'
-              href: messaging-extensions/how-to/search-commands/respond-to-search.md
-        - name: Link unfurling
-          href: messaging-extensions/how-to/link-unfurling.md
-        - name: 'Add authentication'
-          href: messaging-extensions/how-to/add-authentication.md
-        - name: 'Add a configuration page'
-          href: messaging-extensions/how-to/add-configuration-page.md
+          - name: 'Authentication flow'
+            href: tabs/how-to/authentication/auth-flow-tab.md
+          - name: 'Using Azure AD authentication'
+            href: tabs/how-to/authentication/auth-tab-aad.md
+          - name: 'Using silent authentication'
+            href: tabs/how-to/authentication/auth-silent-aad.md
+          - name: 'Using single sign-on authentication'
+            href: tabs/how-to/authentication/auth-aad-sso.md
+        - name: 'Using the Teams client SDK'
+          href: tabs/how-to/using-teams-client-sdk.md
+        - name: Getting additional Teams context
+          href: tabs/how-to/access-teams-context.md
+        - name: DevTools for Microsoft Teams tabs
+          href: tabs/how-to/developer-tools.md
+        - name: 'Adding your custom tab to SharePoint'
+          href: tabs/how-to/tabs-in-sharepoint.md
+        - name: Request device permissions
+          href: tabs/how-to/native-device-permissions.md          
 - name: 'Bots — conversation-based interactions'
   items:
     - name: What are bots in Microsoft Teams?
@@ -218,70 +234,54 @@
         href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
       - name: Application-hosted media
         href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-- name: 'Tabs — embedded web experiences'
+- name: 'Messaging Extensions — task-oriented interactions'
   items:
-    - name: 'What are custom tabs?'
-      href: tabs/what-are-tabs.md
+    - name: 'What are Messaging Extensions?'
+      href: messaging-extensions/what-are-messaging-extensions.md
+    - name: Design
+      items:
+      -  name: 'Messaging extensions design guidelines'
+         href: messaging-extensions/design/messaging-extension-design.md  
     - name: Quickstarts
       items:
-        - name: 'Node.js and React'
+        - name: 'With action command'
           items:
-          - name: 'Create a channel and group tab'
-            href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
-          - name: 'Create a personal tab'
-            href: tabs/quickstarts/create-personal-tab-node-yeoman.md
-        - name: 'C#/ASP.NET Core'
+            - name: 'C#/.NET'
+              href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action
+            - name: TypeScript/Node.js
+              href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action
+        - name: 'With search command'
           items:
-          - name: 'Create a channel and group tab'
-            href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
-          - name: 'Create a personal tab'
-            href: tabs/quickstarts/create-personal-tab-dotnet-core.md
-        - name: 'C#/ASP.NET MVC'
-          items:
-          - name: 'Create a channel and group tab'
-            href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
-          - name: 'Create a personal tab'
-            href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-    - name: 'Design your tabs'
-      items:
-        - name: 'Design overview'
-          href: tabs/design/tabs.md
-        - name: 'Tabs on mobile clients'
-          href: tabs/design/tabs-mobile.md
+            - name: 'C#/.NET'
+              href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search
+            - name: TypeScript/Node.js
+              href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search
     - name: 'How-to guides'
       expanded: true
       items:
-        - name: 'Add tabs to your app'
-          href: tabs/how-to/add-tab.md
-        - name: 'Create tab pages'
+        - name: 'Create a messaging extension'
+          href: messaging-extensions/how-to/create-messaging-extension.md
+        - name: 'Action-based commands'
           items:
-          - name: 'Create a content page'
-            href: tabs/how-to/create-tab-pages/content-page.md
-          - name: 'Create a configuration page'
-            href: tabs/how-to/create-tab-pages/configuration-page.md
-          - name: 'Create a tab removal page'
-            href: tabs/how-to/create-tab-pages/removal-page.md
-        - name: 'Add authentication to your tabs'
+            - name: Define action commands
+              href: messaging-extensions/how-to/action-commands/define-action-command.md
+            - name: Create and send the task module
+              href: messaging-extensions/how-to/action-commands/create-task-module.md
+            - name: Send a response to the submit action
+              href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
+        - name: 'Search-based commands'
           items:
-          - name: 'Authentication flow'
-            href: tabs/how-to/authentication/auth-flow-tab.md
-          - name: 'Using Azure AD authentication'
-            href: tabs/how-to/authentication/auth-tab-aad.md
-          - name: 'Using silent authentication'
-            href: tabs/how-to/authentication/auth-silent-aad.md
-          - name: 'Using single sign-on authentication'
-            href: tabs/how-to/authentication/auth-aad-sso.md
-        - name: 'Using the Teams client SDK'
-          href: tabs/how-to/using-teams-client-sdk.md
-        - name: Getting additional Teams context
-          href: tabs/how-to/access-teams-context.md
-        - name: DevTools for Microsoft Teams tabs
-          href: tabs/how-to/developer-tools.md
-        - name: 'Adding your custom tab to SharePoint'
-          href: tabs/how-to/tabs-in-sharepoint.md
-        - name: Request device permissions
-          href: tabs/how-to/native-device-permissions.md
-- name: 'Task modules and cards — enriched messages and notifications'
+            - name: 'Define search commands'
+              href: messaging-extensions/how-to/search-commands/define-search-command.md
+            - name: 'Receive and respond to search queries'
+              href: messaging-extensions/how-to/search-commands/respond-to-search.md
+        - name: Link unfurling
+          href: messaging-extensions/how-to/link-unfurling.md
+        - name: 'Add authentication'
+          href: messaging-extensions/how-to/add-authentication.md
+        - name: 'Add a configuration page'
+          href: messaging-extensions/how-to/add-configuration-page.md        
+- name: 'Task modules and cards — rich messaging and notifications'
   items:
     - name: 'What are task modules?'
       href: task-modules-and-cards/what-are-task-modules.md
@@ -303,7 +303,7 @@
           href: task-modules-and-cards/task-modules/task-modules-bots.md
         - name: From a tab
           href: task-modules-and-cards/task-modules/task-modules-tabs.md
-- name: 'Webhooks and connectors — automated messages and notifications'
+- name: 'Webhooks and connectors — programmed messaging and notifications'
   items:
     - name: 'What are Webhooks and connectors?'
       href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
