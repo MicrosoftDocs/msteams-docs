@@ -21,7 +21,7 @@ Completing app certification is voluntary, but highly encouraged. Just let us kn
 
 ### For existing store apps
 
-If you already have an app in the app store and you'd like to join the program you can contact us by filling out [this form](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR3oKPRKv815GlRdzCCYPJGZUOUgzSUtFNU8yOFpYR0oyWElHVkxHODhQUyQlQCN0PWcu). Someone from our team will follow up with you to get the process started.
+If you already have an app in the app store and you'd like to join the program you can contact us by filling out [this form](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR3oKPRKv815GlRdzCCYPJGZUMzlXMVVIRkhXQUVXT0paQVQ0UUdRWEZSSCQlQCN0PWcu). Someone from our team will follow up with you to get the process started.
 
 ### For new or updated store apps
 

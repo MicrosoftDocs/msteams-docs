@@ -2,6 +2,8 @@
 title: Get started with the Yeoman generator for Microsoft Teams
 description: Get started building great apps with the Yeoman generator for Microsoft Teams
 keywords: getting started node.js nodejs yeoman
+ms.topic: tutorial
+ms.custom: scenarios:getting-started
 ---
 
 # Build your First Microsoft Teams App
@@ -113,7 +115,7 @@ You should now be able to browse to `http://localhost:3007/myFirstAppTab/` to en
 
 Microsoft Teams does not allow you to have your app hosted on localhost, so you need to either publish it to a public URL or use a proxy such as ngrok.
 
-Good news is that the scaffolded project has this built-in. When you run `gulp ngrok-serve` the ngrok service will be started in the background, with a unqiue and public DNS entry and it will also package the manifest with that unique URL and then do the exact same thing as `gulp serve`.
+Good news is that the scaffolded project has this built-in. When you run `gulp ngrok-serve` the ngrok service will be started in the background, with a unique and public DNS entry and it will also package the manifest with that unique URL and then do the exact same thing as `gulp serve`.
 
 After running `gulp ngrok-serve`, create a new Microsoft Teams team and when it is created click on the Team name, to go to the teams settings and then select *Apps*. In the lower right corner you should see a link *Upload a custom app*, select it and then browse to your project folder and the subfolder called `package`. Select the zip file in that folder and choose open. Your App is now sideloaded into Microsoft Teams.
 

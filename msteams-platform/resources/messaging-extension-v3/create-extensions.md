@@ -492,8 +492,6 @@ When responding to the `edit` request you should respond with a `task` response 
 
 # [TypeScript/Node.js](#tab/typescript)
 
-The example below shows how to do this using the [Node.js Teams Bot Builder SDK](https://www.npmjs.com/package/botbuilder-teams).
-
 ```typescript
 teamChatConnector.onComposeExtensionSubmitAction((
     event: builder.IEvent,
@@ -551,6 +549,8 @@ teamChatConnector.onComposeExtensionSubmitAction((
         }
     });
 ```
+
+*See also* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
 
 # [C#/.NET](#tab/dotnet)
 

@@ -60,7 +60,7 @@ You will then want to add the 'localizationInfo' property with the default langu
 }
 ```
 
-You can provide additional .json files with translations of all the user facing strings in your manifest. These files must adhere to the [Localization file JSON schema](~/resources/schema/localization-schema.md) and they must be added to the 'localizationInfo' property of your manifest. Each file correlates to a language tag which the Teams client uses to choose the appropriate strings. The language tag takes the form of <language>-<region> but it is recommended to omit the <region> portion to target all regions that support the desired language.
+You can provide additional .json files with translations of all the user facing strings in your manifest. These files must adhere to the [Localization file JSON schema](../../resources/schema/localization-schema.md) and they must be added to the 'localizationInfo' property of your manifest. Each file correlates to a language tag which the Teams client uses to choose the appropriate strings. The language tag takes the form of <language>-<region> but it is recommended to omit the <region> portion to target all regions that support the desired language.
 
 The Teams client will apply the strings in this order: default language strings -> user's language only strings -> user's language + user's region strings.
 
@@ -72,7 +72,7 @@ For example, you provide a default language of 'fr' (French, all regions), and a
 If the user's language is set to 'en-ca': 
 
 1. The Teams client will take the 'fr' strings overwrite them with the 'en' strings.
-2. Since no 'en-ca' localazation is supplied, the 'en' localizations will be used.
+2. Since no 'en-ca' localization is supplied, the 'en' localizations will be used.
 
 If the user's language is set to 'es-es', the Teams client will take the 'fr' strings and will not override them with any of the language files.
 

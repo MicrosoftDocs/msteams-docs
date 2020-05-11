@@ -16,13 +16,10 @@ You might want to enrich your tab with features that require access native devic
 ![Device Permissions settings screen](~/assets/images/tabs/device-permissions.png)
 
 > [!IMPORTANT]
-> Native device functionality is currently not supported for tabs on mobile clients but full support is coming soon. To prepare for this change you should follow the [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md) when creating your tabs. Personal apps (static tabs) are currently available in [developer preview](~/resources/dev-preview/developer-preview-intro.md).
 >
-> When full support for tabs is released:
+> Native device functionality is currently not supported for tabs on mobile clients.
 >
-> * All tabs will always be available on mobile
-> * Your `contentUrl` **will be loaded in the mobile Teams client**.
-> * For channel/group tabs, users can still open your tab in a separate browser via your `websiteUrl`, however your `contentUrl` will be loaded first.  
+> The geolocation API is currently not fully supported on all desktop clients.
 
 ## Device permissions
 
@@ -101,3 +98,7 @@ Notification.requestPermission(function(result) { /* ... */ });
 ```
 
 ![Tabs device permissions prompt](~/assets/images/tabs/device-permissions-prompt.png)
+
+## Permission behavior across login sessions
+
+Native device permissions are stored per login session. This means that if you log into another instance of Teams (ex: on another computer), your device permissions from your previous sessions will not be available. Instead, you will need to re-consent to device permissions for the new login session. This also means, if you log out of Teams (or switch tenants inside of Teams), your device permissions will be deleted for that previous login session. Please keep this in mind when developing native device permissions: the native capabilities you consent to are only for your _current_ login session.
