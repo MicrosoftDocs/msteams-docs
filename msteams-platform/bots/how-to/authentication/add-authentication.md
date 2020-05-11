@@ -80,10 +80,6 @@ The bot channels registration registers your web service as a bot with the Bot F
 
 [!INCLUDE [bot channels registration steps](~/includes/bots/azure-bot-channels-registration.md)]
 
-After Azure has created the registration resource it will be included in the resource group list.  
-
-![bot app channels registration group](../../../assets/images/authentication/auth-bot-channels-registration-group.PNG)
-
 > [!NOTE]
 > The Bot Channels Registration resource will show the **Global** region even if you selected West US. This is expected.
 
