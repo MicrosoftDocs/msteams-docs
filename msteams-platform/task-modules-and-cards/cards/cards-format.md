@@ -43,7 +43,7 @@ The following Markdown tags are not supported:
 * Blockquotes
 
 > [!IMPORTANT]
-> Adaptive cards do not support any HTML formatting.
+> Adaptive cards do not support HTML formatting.
 
 ### Newlines for Adaptive Cards
 
@@ -104,12 +104,14 @@ The date and localization features mentioned in this topic are not supported in 
 }
 ```
 
-### Mention support within Adaptive cards
+### Mention support within Adaptive cards v1.2
+
+Card based mentions are supported in Web, Desktop and mobile clients. You can add @ mentions within an adaptive card body for bots and messaging extension responses.  To add @ mentions in cards, follow the same notification logic and rendering as that of message based [mentions in channel and group chat conversations](../../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions ).
+
+Bots and messaging extensions can include mentions within the card content in [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) and [FactSet](https://adaptivecards.io/explorer/FactSet.html) elements.
 
 > [!NOTE]
-> Mention support in cards is currently supported in [Developer Preview](../../resources/dev-preview/developer-preview-intro.md) only.
-
-Bots and Messaging extensions can now include mentions within the card content in Text Block and FactSet elements.
+>[Media elements](https://adaptivecards.io/explorer/Media.html) are currently not supported in Adaptive cards v1.2 on the Teams platform.
 
 ### Constructing mentions
 
@@ -117,8 +119,6 @@ To include a mention in an Adaptive Card your app needs to include the following
 
 * `<at>username</at>` in the supported adaptive card elements
 * The `mention` object inside of an `msteams` property in the card content, which includes the Teams user id of the user being mentioned
-
-Note that cards with mentions aren't supported on mobile clients at the moment.
 
 ### Sample Adaptive card with a mention
 

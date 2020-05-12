@@ -25,7 +25,7 @@ A bot should provide information that is both appropriate and relevant to all me
 
 When your bot is installed in a team, it can sometimes be necessary to create a new conversation thread rather than replying to an existing one. This is a form of [proactive messaging](~/bots/how-to/conversations/send-proactive-messages.md).
 
-## Working with @ Mentions
+## Working with mentions
 
 Every message to your bot from a group or channel will contain an @mention with its own name in the message text, so you'll need to ensure your message parsing handles that. Your bot can also retrieve other users mentioned in a message, and add mentions to any messages it sends.
 
