@@ -8,15 +8,11 @@ keywords: teams preview developer features
 
 The developer preview includes the following new features:
 
-## Mention support in Adaptive cards
+## Adaptive cards v1.2 support
 
-You can now add @ mentions within an Adaptive card body for Bots and Messaging Extension responses. @ mentions in cards follow the same notification logic and rendering as that of a regular message based mentions. Note that card based mentions are only supported in Web and Desktop clients today, with support for rendering in mobile clients coming soon.
+Support for [Adaptive cards v1.2](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0) in Teams is now available to the general public. However, [Media elements](https://adaptivecards.io/explorer/Media.html) are currently not supported in Adaptive cards v1.2 on the Teams platform.
 
-## Adaptive 1.2 Support
-
-Microsoft Teams now supports [Adaptive version 1.2](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0) in Developer Preview. Note that [Media elements](https://adaptivecards.io/explorer/Media.html) aren't supported yet.
-
-## Tabs Single Sign-On
+## Tabs single sign-on (SSO)
 
 You can now use [single sign-on (SSO)](~/tabs/how-to/authentication/auth-aad-sso.md) to login and authenticate a user on desktop and mobile using the Teams JavaScript SDK from a web content page. One of the benefits is that a user never has to sign-in; and once they've consented to the app using their profile: they will automatically be signed-in to their tab (including mobile).
 

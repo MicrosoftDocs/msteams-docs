@@ -110,7 +110,7 @@ Visual Studio has built-in support for app deployment to different providers, in
 
 The sample app requires the following environment variables to be set to the values you made a note of earlier.
 
-Open up the web.config file and find the *appSettings* section. Update the *MicrosoftAppId* value with your Bot ID that you saved earlier. Update the *MicrosoftAppPassword* with the Bot password you saved earlier.
+Open up the appsettings.json file. Update the *MicrosoftAppId* value with your Bot ID that you saved earlier. Update the *MicrosoftAppPassword* with the Bot password you saved earlier.
 
 <img width="560px" src="~/assets/images/get-started/get-started-net-azure-add-keys.png" title="setting the keys"/>
 
