@@ -14,7 +14,7 @@ To test your app experience within Microsoft Teams, you need to upload your app 
 
 For development as well as AppSource (formerly Office Store) submission you must create an uploadable package that contains the information to describe your experience. The package, a .zip file, contains the application manifest and icons that uniquely define your experience.
 
-To create an upload package, see [Create the package for your Microsoft Teams app](~/concepts/build-and-test/apps-package.md).
+To create an upload package, see [Create the package for your Microsoft Teams app](../build-and-test/apps-package.md).
 
 With your package created, you can now upload it into a team. Once uploaded it will be available for all users in the selected team, and only the users of that team.
 
@@ -34,16 +34,16 @@ There are two ways to upload your app to Teams:
 
 1. In the lower left corner of Teams, choose the Store icon. On the Store page, choose "Upload a custom app".
 
-   ![View team](~/assets/images/store-upload-a-custom-app.png)
+   ![View team](../../assets/images/store-upload-a-custom-app.png)
 
 2. In the *Open* dialog, navigate to the package you want to upload and choose *Open*.
 
 The uploaded package should now be available for use in the team or conversation specified in the consent dialog. If your app does not appear, the most common reason is an error in the manifest, particularly ids for the app, bot and messaging extensions. If the app is not scoped for conversations, that option will not appear.
 
 >[!NOTE]
-> Apps in conversations is currently in [Developer Preview](~/resources/dev-preview/developer-preview-intro.md), and the option will not appear if Teams is not running in that mode.
+> Apps in conversations is currently in [Developer Preview](../../resources/dev-preview/developer-preview-intro.md), and the option will not appear if Teams is not running in that mode.
 
-![Example of bot in list of uploaded bots](~/assets/images/botinlist.jpg)
+![Example of bot in list of uploaded bots](../../assets/images/botinlist.jpg)
 
 ## Upload your package into a team using the Apps tab
 
@@ -54,13 +54,13 @@ The uploaded package should now be available for use in the team or conversation
 
 2. Select the Apps tab, and then choose *Upload a custom app* on the lower right.
 
-   ![Upload entry point](~/assets/images/uploadACustomApp.png)
+   ![Upload entry point](../../assets/images/UploadACustomApp.png)
 
 3. Browse to and select your .zip package from your computer.
 
 4. After a brief pause you will see your uploaded app in the list.
 
-   ![Example of bot in list of uploaded bots](~/assets/images/botinlist.jpg)
+   ![Example of bot in list of uploaded bots](../../assets/images/botinlist.jpg)
 
 If your app does not load, the most common reason is an error in the manifest, particularly ids for the app, bot and messaging extensions.
 
@@ -74,9 +74,9 @@ If the app contains tabs, users can pin them to any conversation or team channel
 
 3. Accept the consent prompt.
 
-4. Configure your tab via its [configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md) and choose *Save*.
+4. Configure your tab via its [configuration page](../../tabs/how-to/create-tab-pages/configuration-page.md) and choose *Save*.
 
-  ![The Add a tab dialog box, featuring a gallery of available tabs](~/assets/images/tab_gallery.png)
+  ![The Add a tab dialog box, featuring a gallery of available tabs](../../assets/images/tab_gallery.png)
 
 ## Accessing your uploaded bot
 
@@ -96,15 +96,15 @@ With the app loaded in the team or conversation, users can set up a Connector us
 
 2. Select your Connector from the **Uploaded** section at the bottom.
 
-3. Configure your Connector via its [configuration page](~/webhooks-and-connectors/how-to/connectors-creating.md) and choose *Save*.
+3. Configure your Connector via its [configuration page](../../webhooks-and-connectors/how-to/connectors-creating.md) and choose *Save*.
 
-  ![The Add a tab dialog box, featuring a gallery of available tabs.](~/assets/images/connector_gallery.png)
+  ![The Add a tab dialog box, featuring a gallery of available tabs.](../../assets/images/connector_gallery.png)
 
 ## Accessing your uploaded messaging extension
 
 An uploaded app with a messaging extension automatically appears in the *More options* (*&#8943;*) menu in the compose box.
 
-![Messaging extensions](~/assets/images/compose-extensions/cesampleapp.png)
+![Messaging extensions](../../assets/images/compose-extensions/cesampleapp.png)
 
 ## Removing or updating your app
 
@@ -117,5 +117,5 @@ If you change manifest information, you must first remove the app and then add t
 
 ## Troubleshooting notes
 
-* If the manifest doesn't load, please double-check that you followed all the instructions in [Create the package](~/concepts/build-and-test/apps-package.md) and validated your manifest against the [schema](~/resources/schema/manifest-schema.md).
+* If the manifest doesn't load, please double-check that you followed all the instructions in [Create the package](../../concepts/build-and-test/apps-package.md) and validated your manifest against the [schema](../../resources/schema/manifest-schema.md).
 
