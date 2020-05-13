@@ -39,8 +39,8 @@ It is important to keep in mind that any functionality you expose in a Microsoft
 When you're ready to share your Microsoft Teams apps, you have three options depending on who your target audience is.
 
 * **[Upload your app directly](concepts/deploy-and-publish/apps-upload.md)** If your app only needs to be shared to your team, or a few individuals in your organization, you can share your app package and upload it directly.
-* **[Publish to your organizational app catalog](concepts/deploy-and-publish/apps-publish.md)** You can share your app with your entire organization through your app catalog.
-* **[Publish to the public app store](concepts/deploy-and-publish/apps-publish.md)** If your app is for everyone, you can publish it to our public app store. Depending on your goals, you might be eligible for marketing and sales assistance.
+* **[Publish to your organizational app catalog](concepts/deploy-and-publish/apps-upload.md)** You can share your app with your entire organization through your app catalog.
+* **[Publish to the public app store](concepts/deploy-and-publish/apps-upload.md)** If your app is for everyone, you can publish it to our public app store. Depending on your goals, you might be eligible for marketing and sales assistance.
 
 ## Get started
 
