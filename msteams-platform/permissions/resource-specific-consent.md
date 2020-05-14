@@ -39,7 +39,7 @@ The Microsoft Teams and Graph API integration enables developers to use API endp
 >[!NOTE]
 >Resource Specific Permissions are only available to Teams apps installed on the Teams client and are currently not part of Azure AD.
 
-## Ensure that the Tenant admin has configured [group owner consent](azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-to-apps-accessing-group-data) settings in Azure Active Directory (Azure AD)
+## Ensure that the Tenant admin has configured [group owner consent](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-to-apps-accessing-group-data) settings in Azure Active Directory (Azure AD)
 
 - **Disable or enable group owner consent from the Azure portal**  
 
@@ -77,7 +77,7 @@ Navigate to the **Home** => **App registrations** page and select your RSC app. 
 - The  **Client secret/password** or a public/private key pair (**Certificate**). This is not required for native apps.
 - A **Redirect URI** (or reply URL) for your app to receive responses from Azure AD.
 
-## Update your Teams [app manifest](sharepoint/dev/spfx/web-parts/guidance/creating-team-manifest-manually-for-webpart#create-a-microsoft-teams-app-manifest)
+## Update your Teams [app manifest](/sharepoint/dev/spfx/web-parts/guidance/creating-team-manifest-manually-for-webpart#create-a-microsoft-teams-app-manifest)
 
 Add a [webApplicationInfo](../resources/schema/manifest-schema#webapplicationinfo.md) key to your app manifest and provide your app's Azure application ID, resource (any string), and permissions:
 
@@ -140,12 +140,12 @@ Add a [webApplicationInfo](../resources/schema/manifest-schema#webapplicationinf
 Once you've created your app there are two options for publishing within your Teams organization:
 
 1. [Upload your app directly](../concepts/deploy-and-publish/overview#upload-your-app-directly.md) to a specific team.
-2. [Publish your app to your organization's app catalog](concepts/deploy-and-publish/overview#publish-to-your-organizations-app-catalog.md) and then install in specific teams.
+2. [Publish your app to your organization's app catalog](../concepts/deploy-and-publish/overview#publish-to-your-organizations-app-catalog.md) and then install in specific teams.
 
 ## Ensure RSC permissions have been added to your app definition
 
 >[!IMPORTANT]
-Graph RSC API calls are not attributed to a user. Calls are made with app permissions not user delegated permissions. Thus, the app may be allowed to perform actions that the user cannot,  such as creating a channel or deleting a tab. You should review the team owner's intent for your use case prior to making RSC API calls. *See* [Microsoft Teams API overview](graph/teams-concept-overview).
+Graph RSC API calls are not attributed to a user. Calls are made with app permissions not user delegated permissions. Thus, the app may be allowed to perform actions that the user cannot,  such as creating a channel or deleting a tab. You should review the team owner's intent for your use case prior to making RSC API calls. *See* [Microsoft Teams API overview](/graph/teams-concept-overview).
 
 Once the app has been installed to a team, you can use [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer)  to view the permissions that have been granted to the app in a team:
 
