@@ -5,15 +5,13 @@ localization_priority:  Normal
 author: laujan
 ms.author: lajanuar
 ms.topic: Overview
-keywords: teams authorization OAuth SSO AAD rsc
+keywords: teams authorization OAuth SSO AAD rsc Graph
 ---
 # Resource specific consent (RSC) — Microsoft Teams Graph API
 
-When the Teams and Graph API integration was first introduced it enabled developers to use API endpoints to manage your teams' lifecycles using a broad (non-granular) permissions model that required a global admin's approval.
+The Microsoft Teams and Graph API integration enables developers to use API endpoints to manage team lifecycles within their organizations. When originally introduced, the permissions model was non-granular, nearly global, and required a global admin's approval. The resource specific consent (RSC) permissions model enables team owners to grant consent for an application to access and/or modify a team's data. The new granular Teams-specific RSC permissions define what an application can do within a specific team:
 
 ![team lifecycle](../assets/images/team-lifecycle.svg)
-
-The resource specific consent (RSC) permissions model enables team owners to grant consent for an application to access and/or modify team data. As part of the RSC implementation new more granular Teams-specific permissions have been created to define what an application can do:
 
 |Application Permission| Action |
 | ----- | ----- |
@@ -41,9 +39,7 @@ The resource specific consent (RSC) permissions model enables team owners to gra
 >[!NOTE]
 >Resource Specific Permissions are only available to Teams apps installed on the Teams client and are currently not part of Azure AD.
 
-## Steps for configuring RSC in a tenant
-
-### 1. Ensure that the Tenant admin has configured [group owner consent](azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-to-apps-accessing-group-data) settings in Azure Active Directory (Azure AD)
+## Ensure that the Tenant admin has configured [group owner consent](azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-to-apps-accessing-group-data) settings in Azure Active Directory (Azure AD)
 
 - **Disable or enable group owner consent from the Azure portal**  
 
@@ -60,19 +56,19 @@ The resource specific consent (RSC) permissions model enables team owners to gra
 
  - **Disable or enable group owner consent using PowerShell**. Please follow the steps outlined in our [Configure group owner consent using PowerShell](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-using-powershell) documentation.
 
-### 2. [Register your app using the Azure portal](/graph/auth-register-app-v2)
+## [Register your app using the Azure portal](/graph/auth-register-app-v2)
 
 >[!WARNING]
 >Do not register multiple Teams app to the same Azure AD app id. The app id must be unique for each app. Attempts to install multiple apps to the same app id will fail.
 
-### 3. Check the API permissions in Azure portal
+## Check API permissions in the Azure portal
 
 Navigate to the **Home** => **App registrations** page and select your RSC app. Choose **API permissions** from the left nav bar and examine the list of configured permissions for your app. If you app will only make RSC Graph calls, delete all the permission on that page. If you app will also make non-RSC calls keep those permssions as needed.
 
 >[!IMPORTANT]
 >The Azure portal cannot be used to request RSC permissions. RSC permissions are currently exclusive to Teams applications installed in the Teams client and are declared in the app manifest (JSON) file.
 
-### 4. [Get an access token from the Microsoft Identity platform](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token)
+## [Get an access token from the Microsoft Identity platform](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token)
 
 >[!NOTE]
 >Before your app can get a token from the Microsoft identity platform, it must be registered in the Azure portal. You'll need to have the following values from the registration process:
@@ -81,9 +77,12 @@ Navigate to the **Home** => **App registrations** page and select your RSC app. 
 - The  **Client secret/password** or a public/private key pair (**Certificate**). This is not required for native apps.
 - A **Redirect URI** (or reply URL) for your app to receive responses from Azure AD.
 
-### 5. Update your Teams [app manifest](sharepoint/dev/spfx/web-parts/guidance/creating-team-manifest-manually-for-webpart#create-a-microsoft-teams-app-manifest) to link to your Azure application ID.
+## Update your Teams [app manifest](sharepoint/dev/spfx/web-parts/guidance/creating-team-manifest-manually-for-webpart#create-a-microsoft-teams-app-manifest)
 
-Add a [webApplicationInfo](../resources/schema/manifest-schema#webapplicationinfo.md) key to your app manifest and provide your app's Azure application ID, resource URL for acquiring an auth token, and permissions:
+Add a [webApplicationInfo](../resources/schema/manifest-schema#webapplicationinfo.md) key to your app manifest and provide your app's Azure application ID, resource (any string), and permissions:
+
+>[!NOTE]
+>The RSC permissions do not use the webApplicationInfo `resource` value; however, the value should be completed with "`https://` + "any string". *See* the example, below.
 
 ```json
 "webApplicationInfo": {
@@ -136,35 +135,32 @@ Add a [webApplicationInfo](../resources/schema/manifest-schema#webapplicationinf
 >[!NOTE]
 >Non-RSC permissions are stored in the Azure portal. Do not add them to the app manifest.
 
-### 6.  Install your app in Teams
+## Install your app in Teams
 
 Once you've created your app there are two options for publishing within your Teams organization:
 
 1. [Upload your app directly](../concepts/deploy-and-publish/overview#upload-your-app-directly.md) to a specific team.
 2. [Publish your app to your organization's app catalog](concepts/deploy-and-publish/overview#publish-to-your-organizations-app-catalog.md) and then install in specific teams.
 
-###  7. Test the RSC permissions for your app
+## Ensure RSC permissions have been added to your app definition
 
 >[!IMPORTANT]
 Graph RSC API calls are not attributed to a user. Calls are made with app permissions not user delegated permissions. Thus, the app may be allowed to perform actions that the user cannot,  such as creating a channel or deleting a tab. You should review the team owner's intent for your use case prior to making RSC API calls. *See* [Microsoft Teams API overview](graph/teams-concept-overview).
 
 Once the app has been installed to a team, you can use [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer)  to view the permissions that have been granted to the app in a team:
 
-1. Get the team's groupId from the Teams client.
-1. From the far left nav bar select **Teams**.
-1. Select the team where the app is installed from the dropdown menu.
-1. Select the **More options** icon (&#8943;)
-1. Select **Get link to team** 
-1. Copy and paste to a convenient location and you save the **groupId** value from the string.
-1. Log into **Graph Explorer**
- 1. Make a GET call to the following endpoint: `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants`. The clientAppId field in the response will map to the appId specified in the Teams Appmanifest
+> [!div class="checklist"]
+>
+>- Get the team's groupId from the Teams client.
+> - In the Teams client, select **Teams** from the far left nav bar .
+> - Select the team where the app is installed from the dropdown menu.
+> - Select the **More options** icon (&#8943;)
+> - Select **Get link to team** 
+> - Copy and save the **groupId** value from the string.
+> - Log into **Graph Explorer**
+> - Make a GET call to the following endpoint: `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants`. The clientAppId field in the response will map to the appId specified in the Teams Appmanifest
 
  ![Graph explorer response to GET call.](../assets/images/graph-permissions.png)
 
-To test whether the list of RSC granular permissions have been successfully added, use the [Test-RSC Postman collection]() JSON file in  [Postman](https://www.postman.com/), to make a Graph API call. Update the following fields in the Postman collection file:
-
-- AppId
-- AppSecret
-- teamGroupId
-
-Execute the entire collection. The permissions specified in the app manifest should succeed while the rest should fail with a 403. Cross-check the list of successes and failures to confirm that the behavior is as expected. Please add specific API calls for delete and read scenarios.
+ > [!div class="nextstepaction"]
+> [Test resource specific consent permissions in Teams](./testing-resource-specific-consent.md)
