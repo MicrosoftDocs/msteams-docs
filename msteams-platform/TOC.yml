@@ -318,6 +318,14 @@
         href: webhooks-and-connectors/how-to/connectors-creating.md
       - name: Sending messages to connectors and webhooks
         href: webhooks-and-connectors/how-to/connectors-using.md
+- name: 'Graph API permissions'
+  items:
+    - name: 'Resource specific consent (RSC)'
+      href: graph-permissions/resource-specific-consent.md
+    - name: 'Test resource specific consent permissions' 
+      href: graph-permissions/resource-specific-consent.md
+    - name: 'Test resource specific consent permissions' 
+      href: graph-permissions/resource-specific-consent.md        
 - name: Resources
   items:
     - name: Bots - v3 SDK
