@@ -79,7 +79,7 @@ Navigate to the **Home** => **App registrations** page and select your RSC app. 
 
 ## Update your Teams [app manifest](/sharepoint/dev/spfx/web-parts/guidance/creating-team-manifest-manually-for-webpart#create-a-microsoft-teams-app-manifest)
 
-Add a [webApplicationInfo](../resources/schema/manifest-schema#webapplicationinfo.md) key to your app manifest and provide your app's Azure application ID, resource (any string), and permissions:
+Add a [webApplicationInfo](../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest and provide your app's Azure application ID, resource (any string), and permissions:
 
 >[!NOTE]
 >The RSC permissions do not use the webApplicationInfo `resource` value; however, the value should be completed with "`https://` + "any string". *See* the example, below.
@@ -139,8 +139,8 @@ Add a [webApplicationInfo](../resources/schema/manifest-schema#webapplicationinf
 
 Once you've created your app there are two options for publishing within your Teams organization:
 
-1. [Upload your app directly](../concepts/deploy-and-publish/overview#upload-your-app-directly.md) to a specific team.
-2. [Publish your app to your organization's app catalog](../concepts/deploy-and-publish/overview#publish-to-your-organizations-app-catalog.md) and then install in specific teams.
+1. [Upload your app directly](../concepts/deploy-and-publish/overview.md#upload-your-app-directly) to a specific team.
+2. [Publish your app to your organization's app catalog](../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog) and then install in specific teams.
 
 ## Ensure RSC permissions have been added to your app definition
 
