@@ -86,58 +86,85 @@ Navigate to the **Home** => **App registrations** page and select your RSC app. 
 Add a [webApplicationInfo](../resources/schema/manifest-schema#webapplicationinfo.md) key to your app manifest and provide your app's Azure application ID, resource URL for acquiring an auth token, and permissions:
 
 ```json
-"webApplicationInfo": { 
+"webApplicationInfo": {
 
-        "id": "8ab552d6-7db1-4b65-9d87-8931b3d5b081", 
+        "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX", 
 
-"resource": "https://AkjRscBasedStoreApp", 
+"resource": "https://RscBasedStoreApp",
 
-        "applicationPermissions": [ 
+        "applicationPermissions": [
 
-    "TeamSettings.Read.Group", 
+    "TeamSettings.Read.Group",
 
-   "ChannelMessage.Read.Group", 
+   "ChannelMessage.Read.Group",
 
-  "TeamSettings.Edit.Group", 
+  "TeamSettings.Edit.Group",
 
-  "ChannelSettings.Edit.Group", 
+  "ChannelSettings.Edit.Group",
 
-  "Channel.Create.Group", 
+  "Channel.Create.Group",
 
-  "Channel.Delete.Group", 
+  "Channel.Delete.Group",
 
-  "TeamsApp.Read.Group", 
+  "TeamsApp.Read.Group",
 
-  "TeamsTab.Read.Group", 
+  "TeamsTab.Read.Group",
 
-  "TeamsTab.Create.Group", 
+  "TeamsTab.Create.Group",
 
-  "TeamsTab.Edit.Group", 
+  "TeamsTab.Edit.Group",
 
-  "TeamsTab.Delete.Group", 
+  "TeamsTab.Delete.Group",
 
-  "Member.Read.Group", 
+  "Member.Read.Group",
 
-  "Member.ReadWrite.Group", 
+  "Member.ReadWrite.Group",
 
-  "File.Read.Group", 
+  "File.Read.Group",
 
-  "File.Create.Group", 
+  "File.Create.Group",
 
-  "File.Edit.Group", 
+  "File.Edit.Group",
 
-  "File.Delete.Group" 
+  "File.Delete.Group"
 
-        ] 
+        ]
 
-    } 
+    }
 ```
 
 >[!NOTE]
 >Non-RSC permissions are stored in the Azure portal. Do not add them to the app manifest.
 
-### **6. Make a Graph REST API call
+### 6.  Install your app in Teams
+
+Once you've created your app there are two options for publishing within your Teams organization:
+
+1. [Upload your app directly](../concepts/deploy-and-publish/overview#upload-your-app-directly.md) to a specific team.
+2. [Publish your app to your organization's app catalog](concepts/deploy-and-publish/overview#publish-to-your-organizations-app-catalog.md) and then install in specific teams.
+
+###  7. Test the RSC permissions for your app
 
 >[!IMPORTANT]
 Graph RSC API calls are not attributed to a user. Calls are made with app permissions not user delegated permissions. Thus, the app may be allowed to perform actions that the user cannot,  such as creating a channel or deleting a tab. You should review the team owner's intent for your use case prior to making RSC API calls. *See* [Microsoft Teams API overview](graph/teams-concept-overview).
 
+Once the app has been installed to a team, you can use [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer)  to view the permissions that have been granted to the app in a team:
+
+1. Get the team's groupId from the Teams client.
+1. From the far left nav bar select **Teams**.
+1. Select the team where the app is installed from the dropdown menu.
+1. Select the **More options** icon (&#8943;)
+1. Select **Get link to team** 
+1. Copy and paste to a convenient location and you save the **groupId** value from the string.
+1. Log into **Graph Explorer**
+ 1. Make a GET call to the following endpoint: `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants`. The clientAppId field in the response will map to the appId specified in the Teams Appmanifest
+
+ ![Graph explorer response to GET call.](../assets/images/graph-permissions.png)
+
+To test whether the list of RSC granular permissions have been successfully added, use the [Test-RSC Postman collection]() JSON file in  [Postman](https://www.postman.com/), to make a Graph API call. Update the following fields in the Postman collection file:
+
+- AppId
+- AppSecret
+- teamGroupId
+
+Execute the entire collection. The permissions specified in the app manifest should succeed while the rest should fail with a 403. Cross-check the list of successes and failures to confirm that the behavior is as expected. Please add specific API calls for delete and read scenarios.
