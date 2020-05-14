@@ -323,9 +323,7 @@
     - name: 'Resource specific consent (RSC)'
       href: graph-permissions/resource-specific-consent.md
     - name: 'Test resource specific consent permissions' 
-      href: graph-permissions/resource-specific-consent.md
-    - name: 'Test resource specific consent permissions' 
-      href: graph-permissions/resource-specific-consent.md        
+      href: graph-permissions/test-resource-specific-consent.md        
 - name: Resources
   items:
     - name: Bots - v3 SDK

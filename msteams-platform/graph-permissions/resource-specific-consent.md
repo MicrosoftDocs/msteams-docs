@@ -163,4 +163,4 @@ Once the app has been installed to a team, you can use [Graph Explorer](https://
  ![Graph explorer response to GET call.](../assets/images/graph-permissions.png)
 
  > [!div class="nextstepaction"]
-> [Test resource specific consent permissions in Teams](./testing-resource-specific-consent.md)
+> [Test resource specific consent permissions in Teams](./test-resource-specific-consent.md)
