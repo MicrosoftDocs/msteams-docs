@@ -37,7 +37,7 @@ Resource specific consent (RSC) is a Microsoft Teams and Graph API integration t
 
 The steps for enabling RSC in your application are as follows:
 
-1. [Configure group owner consent settings in the Azure Active Directory portal](#configure-group-owner-consent-settings-in-the-Azure-AD-portal).
+1. [Configure group owner consent settings in the Azure Active Directory portal](#configure-group-owner-consent-settings-in-the-azure-ad-portal).
 1. [Register your app in the Azure Active Directory portal](#register-your-app-in-the-azure-ad-portal).
 1. [Review your app API permissions in the Azure AD portal](#review-your-app-api-permissions-in-the-azure-ad-portal)
 1. [Obtain an access token from the Microsoft Identity platform](#obtain-an-access-token-from-the-microsoft-identity-platform).
