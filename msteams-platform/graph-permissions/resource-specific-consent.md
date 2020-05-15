@@ -77,14 +77,11 @@ The Azure Active Directory portal provides a central platform for you to registe
 Navigate to the **Home** => **App registrations** page and select your RSC app. Choose **API permissions** from the left nav bar and examine the list of configured permissions for your app. If your app will only make RSC Graph calls, delete all the permission on that page. If your app will also make non-RSC calls, keep those permissions as needed.
 
 >[!IMPORTANT]
->The Azure portal cannot be used to request RSC permissions. RSC permissions are currently exclusive to Teams applications installed in the Teams client and are declared in the app manifest (JSON) file.
+>The Azure AD portal cannot be used to request RSC permissions. RSC permissions are currently exclusive to Teams applications installed in the Teams client and are declared in the app manifest (JSON) file.
 
 ## Obtain an access token from the Microsoft identity platform
 
 To make Graph API calls, you must obtain an access token for your app from the identity platform. Before your app can get a token from the Microsoft identity platform, it must be registered in the Azure AD portal. The access token contains information about your app and the permissions it has for the resources and APIs available through Microsoft Graph.
-
->[!NOTE]
->Before your app can get a token from the Microsoft identity platform, it must be registered in the Azure portal. Your app is integrated with the Microsoft identity platform by registering it with an Azure Active Directory tenant.
 
 You'll need to have the following values from the Azure AD registration process to retrieve an access token from the identity platform:
 
@@ -96,8 +93,15 @@ You'll need to have the following values from the Azure AD registration process 
 
 ## Update your Teams app manifest
 
-Add a [webApplicationInfo](../resources/schema/manifest-schema.md#webapplicationinfo) key to your [app manifest](/sharepoint/dev/spfx/web-parts/guidance/creating-team-manifest-manually-for-webpart#create-a-microsoft-teams-app-manifest) and provide your app's Azure application ID, resource (any string), and permissions:
+The RSC permissions are declared in you app manifest (JSON) file.  Add a [webApplicationInfo](../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
 
+> [!div class="checklist"]
+>
+> - **id**  — your Azure AD app id. *See* [Register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
+> - **resource**  — any string, This field has no operation in RSC, but must be added and have a value; any string will do .*See* the note in  [Update your Teams app manifest](resource-specific-consent.md#update-your-teams-app-manifest)
+> - **application permissions** — RSC permissions for  your app. *See* [Resource Specific Permissions](resource-specific-consent.md#resource-specific-permissions).
+
+>
 >[!NOTE]
 >
 > - The RSC permissions do not use the webApplicationInfo **resource** value; however, the value should be completed with **https://** + "any string" to avoid an error response.  
