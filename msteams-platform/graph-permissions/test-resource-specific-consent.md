@@ -68,7 +68,7 @@ In your app manifest only include the RSC permissions that you want your app to 
 
 ## Test added RSC permissions using Postman
 
-To check whether the RSC permissions are being honored by the API request payload, you'll need to download the [Test RSC Postman Collection JSON](test-rsc-postman-collection.json) file and update the following values:
+To check whether the RSC permissions are being honored by the API request payload, you'll need to copy the [RSC JSON test file](test-rsc-json-file.md) file into your local environment and update the following values:
 
 1. `azureADAppId`  — your app's Azure AD app id.
 1. `azureADAppSecret`  — your Azure AD app secret (password)

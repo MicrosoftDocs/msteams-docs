@@ -1,3 +1,16 @@
+---
+title: Testing resource specific consent in Teams
+description: Details testing resource specific consent in Teams using Postman
+localization_priority:  Normal
+author: laujan
+ms.author: lajanuar
+ms.topic: How-to
+keywords: teams authorization OAuth SSO AAD rsc Postman Graph
+---
+
+# Test RSC Postman collection JSON
+
+```json
 {
 	"info": {
 		"_postman_id": "57dc5f09-d719-4d48-a50d-6b09053cc7a7",
@@ -628,3 +641,4 @@
 	],
 	"protocolProfileBehavior": {}
 }
+```
