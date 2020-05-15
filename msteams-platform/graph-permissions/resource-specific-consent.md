@@ -9,7 +9,7 @@ keywords: teams authorization OAuth SSO AAD rsc Graph
 ---
 # Resource specific consent (RSC) — Microsoft Teams Graph API
 
-Microsoft Teams and Graph API integration enables developers to use API endpoints to manage team life cycles within their organizations. When originally introduced, the permissions model was non-granular and required the approval of a global admin. The resource specific consent (RSC) permissions model enables *team owners* to grant consent for an application to access and/or modify a team's data. The granular, Teams-specific, RSC permissions define what an application can do within a specific team:
+Microsoft Teams and Graph API integration enables you to use API endpoints to manage team life cycles within their organizations. When originally introduced, the permissions model was non-granular and required the approval of a global admin. The resource specific consent (RSC) permissions model enables *team owners* to grant consent for an application to access and/or modify a team's data. The granular, Teams-specific, RSC permissions define what an application can do within a specific team:
 
 ![team lifecycle](../assets/images/team-lifecycle.svg)
 </br></br>
@@ -88,7 +88,7 @@ Navigate to the **Home** => **App registrations** page and select your RSC app. 
 Add a [webApplicationInfo](../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest and provide your app's Azure application ID, resource (any string), and permissions:
 
 >[!NOTE]
->The RSC permissions do not use the webApplicationInfo `resource` value; however, the value should be completed with "`https://` + "any string". *See* the example, below to avoid an error response.
+>The RSC permissions do not use the webApplicationInfo **resource** value; however, the value should be completed with **https://** + "any string". *See* the example, below to avoid an error response.
 
 ```json
 "webApplicationInfo": {
@@ -151,20 +151,20 @@ Once you've created your app there are two options for publishing within your Te
 ## Ensure RSC permissions have been added to your app definition
 
 >[!IMPORTANT]
->Graph RSC API calls are not attributed to a user. Calls are made with app permissions not user delegated permissions. Thus, the app may be allowed to perform actions that the user cannot, such as creating a channel or deleting a tab. You should review the team owner's intent for your use case prior to making RSC API calls. *See* [Microsoft Teams API overview](/graph/teams-concept-overview).
+>Graph RSC API calls are not attributed to a user. Calls are made with app permissions, not user delegated permissions. Thus, the app may be allowed to perform actions that the user cannot, such as creating a channel or deleting a tab. You should review the team owner's intent for your use case prior to making RSC API calls. *See* [Microsoft Teams API overview](/graph/teams-concept-overview).
 
 Once the app has been installed to a team, you can use [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer)  to view the permissions that have been granted to the app in a team:
 
 > [!div class="checklist"]
 >
->- Get the team's groupId from the Teams client.
+>- Get the team's **groupId** from the Teams client.
 > - In the Teams client, select **Teams** from the far left nav bar.
-> - Select the team where the app is installed from the dropdown menu.
-> - Select the **More options** icon (&#8943;)
-> - Select **Get link to team** 
+> - Select the team where the app is installed from the drop-down menu.
+> - Select the **More options** icon (&#8943;).
+> - Select **Get link to team**.
 > - Copy and save the **groupId** value from the string.
-> - Log into **Graph Explorer**
-> - Make a **GET** call to the following endpoint: `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants`. The clientAppId field in the response will map to the appId specified in the Teams app manifest
+> - Log into **Graph Explorer**.
+> - Make a **GET** call to the following endpoint: `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants`. The clientAppId field in the response will map to the appId specified in the Teams app manifest.
 
  ![Graph explorer response to GET call.](../assets/images/graph-permissions.png)
 
