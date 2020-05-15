@@ -74,7 +74,7 @@ Navigate to the **Home** => **App registrations** page and select your RSC app. 
 >[!IMPORTANT]
 >The Azure portal cannot be used to request RSC permissions. RSC permissions are currently exclusive to Teams applications installed in the Teams client and are declared in the app manifest (JSON) file.
 
-## 3.  [Get an access token from the Microsoft Identity platform](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token)
+## 4.  [Get an access token from the Microsoft Identity platform](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token)
 
 >[!NOTE]
 >Before your app can get a token from the Microsoft identity platform, it must be registered in the Azure portal. You'll need to have the following values from the Azure AD registration process:
@@ -83,7 +83,7 @@ Navigate to the **Home** => **App registrations** page and select your RSC app. 
 - The  **Client secret/password** or a public/private key pair (**Certificate**). This is not required for native apps.
 - A **Redirect URI** (or reply URL) for your app to receive responses from Azure AD.
 
-## 4. Update your Teams [app manifest](/sharepoint/dev/spfx/web-parts/guidance/creating-team-manifest-manually-for-webpart#create-a-microsoft-teams-app-manifest)
+## 5. Update your Teams [app manifest](/sharepoint/dev/spfx/web-parts/guidance/creating-team-manifest-manually-for-webpart#create-a-microsoft-teams-app-manifest)
 
 Add a [webApplicationInfo](../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest and provide your app's Azure application ID, resource (any string), and permissions:
 
@@ -141,7 +141,7 @@ Add a [webApplicationInfo](../resources/schema/manifest-schema.md#webapplication
 >[!NOTE]
 >Non-RSC permissions are stored in the Azure portal. Do not add them to the app manifest.
 
-## 5. Install your app in Teams
+## 6. Install your app in Teams
 
 Once you've created your app there are two options for publishing within your Teams organization:
 
