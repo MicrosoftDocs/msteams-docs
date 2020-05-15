@@ -38,8 +38,8 @@ Resource specific consent (RSC) is a Microsoft Teams and Graph API integration t
 The steps for enabling RSC in your application are as follows:
 
 1. [Configure group owner consent settings in the Azure Active Directory portal](#configure-group-owner-consent-settings-in-the-azure-ad-portal).
-1. [Register your app in the Azure Active Directory portal](#register-your-app-in-the-azure-ad-portal).
-1. [Review your app API permissions in the Azure AD portal](#review-your-app-api-permissions-in-the-azure-ad-portal)
+1. [Register your app with Microsoft identity platform via the Azure AD portal](#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
+1. [Review your application permissions in the Azure AD portal](#review-your-application-permissions-in-the-azure-ad-portal)
 1. [Obtain an access token from the Microsoft Identity platform](#obtain-an-access-token-from-the-microsoft-identity-platform).
 1. [Update your Teams app manifest](#update-your-teams-app-manifest).
 1. [Install your app directly in Teams](#install-your-app-directly-in-teams).
@@ -47,13 +47,13 @@ The steps for enabling RSC in your application are as follows:
 
 ## Configure group owner consent settings in the Azure AD portal
 
-You can enable or disable  [group owner consent](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-to-apps-accessing-group-data) directly within the Azure portal as follows:
+You can enable or disable  [group owner consent](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-to-apps-accessing-group-data) directly within the Azure portal:
 
 > [!div class="checklist"]
 >
 >- Sign in to the [Azure portal](https://portal.azure.com) as a [Global Administrator/Company Administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles.md#global-administrator--company-administrator).  
  > - Select **Azure Active Directory** =>**Enterprise applications** =>**User settings**.
-> - Enable, disable, or limit user consent with the control labeled **Users can consent to apps accessing company data for the groups they own** (This capability is enabled by default)
+> - Enable, disable, or limit user consent with the control labeled **Users can consent to apps accessing company data for the groups they own** (This capability is enabled by default).
 
 ![azure rsc configuration](../assets/images/azure-rsc-configuration.svg)
 
@@ -65,14 +65,14 @@ You can enable or disable  [group owner consent](/azure/active-directory/manage-
 
 To enable or disable group owner consent within the Azure portal using PowerShell, follow the steps outlined in [Configure group owner consent using PowerShell](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-using-powershell).
 
-## Register your app in the Azure AD portal
+## Register your app with Microsoft identity platform via the Azure AD portal
 
-Your app must be registered in the Azure AD portal so that it can be integrated with the Microsoft identity platform and call Graph APIs. *See* [Register an application with the Microsoft identity platform](/graph/auth-register-app-v2)
+The Azure Active Directory portal provides a central platform for you to register and configure your apps. Your app must be registered in the Azure AD portal to integrate with the Microsoft identity platform and call Graph APIs. *See* [Register an application with the Microsoft identity platform](/graph/auth-register-app-v2).
 
 >[!WARNING]
 >Do not register multiple Teams apps to the same Azure AD app id. The app id must be unique for each app. Attempts to install multiple apps to the same app id will fail.
 
-## Review your app API permissions in the Azure AD portal
+## Review your application permissions in the Azure AD portal
 
 Navigate to the **Home** => **App registrations** page and select your RSC app. Choose **API permissions** from the left nav bar and examine the list of configured permissions for your app. If your app will only make RSC Graph calls, delete all the permission on that page. If your app will also make non-RSC calls, keep those permissions as needed.
 
@@ -81,7 +81,7 @@ Navigate to the **Home** => **App registrations** page and select your RSC app. 
 
 ## Obtain an access token from the Microsoft identity platform
 
-To make Graph API calls, you must obtain an access token for your app from the identity platform. The access token contains information about your app and the permissions it has for the resources and APIs available through Microsoft Graph.
+To make Graph API calls, you must obtain an access token for your app from the identity platform. Before your app can get a token from the Microsoft identity platform, it must be registered in the Azure AD portal. The access token contains information about your app and the permissions it has for the resources and APIs available through Microsoft Graph.
 
 >[!NOTE]
 >Before your app can get a token from the Microsoft identity platform, it must be registered in the Azure portal. Your app is integrated with the Microsoft identity platform by registering it with an Azure Active Directory tenant.
