@@ -13,7 +13,7 @@ keywords: teams authorization OAuth SSO AAD rsc Postman Graph
 Resource specific consent (RSC) is a Microsoft Teams and Graph API integration that enables you to use API endpoints to manage specific team life cycles within your organization. Please *see*  [Resource specific consent (RSC) — Microsoft Teams Graph API](./resource-specific-consent.md). 
 
 > [!NOTE]
->To test the RSC permissions, your Teams app manifest file must include the **webApplicationInfo** key populated with the **id** (your [Azure AD app id](././resource-specific-consent.md#register-your-app-using-the-azure-portal)), **resource** (any string), and the **application permissions** for  your app.  *See* [Update your Teams app manifest](./resource-specific-consent.md#update-your-teams-app-manifest).
+>To test the RSC permissions, your Teams app manifest file must include the **webApplicationInfo** key populated with the **id** (your [Azure AD app id](resource-specific-consent.md#register-your-app-using-the-azure-portal)), **resource** (any string), and the **application permissions** for  your app.  *See* [Update your Teams app manifest](resource-specific-consent.md#update-your-teams-app-manifest).
 
 ```json
 "webApplicationInfo": {
@@ -66,7 +66,7 @@ Resource specific consent (RSC) is a Microsoft Teams and Graph API integration t
 >[!IMPORTANT]
 >In your app manifest, only include the RSC permissions that you want your app to have.
 
-## Test added RSC permissions using the [Postman](https://www.postman.com/downloads/) app
+## Test added RSC permissions using the Postman app
 
 
 To check whether the RSC permissions are being honored by the API request payload, you'll need to copy the [RSC JSON test code](test-rsc-json-file.md) into your local environment and update the following values:
@@ -87,7 +87,7 @@ To check whether the RSC permissions are being honored by the API request payloa
 
 > [!div class="checklist"]
 >
-> * Open the Postman app.
+> * Open the [Postman](https://www.postman.com) app.
 > * Select **File** => **Import** => **Import file** to upload the updated JSON file from your environment.  
 > * Select the **Collections** tab. 
 > * Select the chevron (>) next to the **Test RSC** to expand the details view and see the API requests.
@@ -102,7 +102,7 @@ Execute the entire permissions collection for each API call. The permissions tha
 > [!div class="checklist"]
 >
 > * Uninstall the app from the specific team.
-> * Follow the steps above for [Test added RSC permissions using Postman](#test-added-rsc-permissions-using-postman).
+> * Follow the steps above for [Test added RSC permissions using Postman](#test-added-rsc-permissions-using-the-postman-app).
 > * Check all of the response status codes to confirm that the specific API calls that succeeded have failed with an HTTP 403 status code.
 
 > [!div class="nextstepaction"]
