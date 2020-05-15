@@ -9,7 +9,7 @@ keywords: teams authorization OAuth SSO AAD rsc Graph
 ---
 # Resource specific consent (RSC) — Microsoft Teams Graph API
 
-Microsoft Teams and Graph API integration enables developers to use API endpoints to manage team life cycles within their organizations. When originally introduced, the permissions model was non-granular and required the approval of a global admin. The resource specific consent (RSC) permissions model enables *team owners* to grant consent for an application to access and/or modify a team's data. The granular,Teams-specific, RSC permissions define what an application can do within a specific team:
+Microsoft Teams and Graph API integration enables developers to use API endpoints to manage team life cycles within their organizations. When originally introduced, the permissions model was non-granular and required the approval of a global admin. The resource specific consent (RSC) permissions model enables *team owners* to grant consent for an application to access and/or modify a team's data. The granular, Teams-specific, RSC permissions define what an application can do within a specific team:
 
 ![team lifecycle](../assets/images/team-lifecycle.svg)
 </br></br>
@@ -38,7 +38,7 @@ Microsoft Teams and Graph API integration enables developers to use API endpoint
 |File.Delete.Group|Delete a specified file in this team.|
 
 >[!NOTE]
->Resource Specific Permissions are only available to Teams apps installed on the Teams client and are currently not part of Azure AD.
+>Resource specific permissions are only available to Teams apps installed on the Teams client and are currently not part of Azure AD.
 
 ### **Enabling RSC in your application** 
 
@@ -54,22 +54,22 @@ Microsoft Teams and Graph API integration enables developers to use API endpoint
 
 ![azure rsc configuration](../assets/images/azure-rsc-configuration.svg)
 
-| value | Description|
+| Value | Description|
 |--- | --- |
 |Yes | Enable group-specific consent for all group owners.|
 |No |Disable group-specific consent for all users.| 
 |Limited | Enable group-specific consent for members of a selected group.|
 
-- **Disable or enable group owner consent using PowerShell**. Please follow the steps outlined in  [Configure group owner consent using PowerShell](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-using-powershell) documentation.
+- **Disable or enable group owner consent using PowerShell**. Please follow the steps outlined in  the [Configure group owner consent using PowerShell](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-using-powershell) documentation.
 
 ## 2.  [Register your app using the Azure portal](/graph/auth-register-app-v2)
 
 >[!WARNING]
->Do not register multiple Teams app to the same Azure AD app id. The app id must be unique for each app. Attempts to install multiple apps to the same app id will fail.
+>Do not register multiple Teams apps to the same Azure AD app id. The app id must be unique for each app. Attempts to install multiple apps to the same app id will fail.
 
 ## 3. Check API permissions in the Azure portal
 
-Navigate to the **Home** => **App registrations** page and select your RSC app. Choose **API permissions** from the left nav bar and examine the list of configured permissions for your app. If you app will only make RSC Graph calls, delete all the permission on that page. If your app will also make non-RSC calls keep those permssions as needed.
+Navigate to the **Home** => **App registrations** page and select your RSC app. Choose **API permissions** from the left nav bar and examine the list of configured permissions for your app. If your app will only make RSC Graph calls, delete all the permission on that page. If your app will also make non-RSC calls, keep those permissions as needed.
 
 >[!IMPORTANT]
 >The Azure portal cannot be used to request RSC permissions. RSC permissions are currently exclusive to Teams applications installed in the Teams client and are declared in the app manifest (JSON) file.
