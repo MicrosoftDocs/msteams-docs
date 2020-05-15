@@ -10,7 +10,7 @@ keywords: teams authorization OAuth SSO AAD rsc Postman Graph
 
 # Test resource specific consent permissions  in Teams
 
-Resource specific consent (RSC) is a Microsoft Teams and Graph API integration that enables you to use API endpoints to manage specific team life cycles within your organization. Please *see*  [Resource specific consent (RSC) — Microsoft Teams Graph API](./resource-specific-consent.md). 
+Resource specific consent (RSC) is a Microsoft Teams and Graph API integration that enables your app to use API endpoints to manage specific teams within an organization. Please *see*  [Resource specific consent (RSC) — Microsoft Teams Graph API](./resource-specific-consent.md).
 
 > [!NOTE]
 >To test the RSC permissions, your Teams app manifest file must include the **webApplicationInfo** key populated with the **id** (your [Azure AD app id](resource-specific-consent.md#2--register-your-app-using-the-azure-portal)), **resource** (any string), and the **application permissions** for  your app.  *See* [Update your Teams app manifest](resource-specific-consent.md#5-update-your-teams-app-manifest).
@@ -49,15 +49,7 @@ Resource specific consent (RSC) is a Microsoft Teams and Graph API integration t
   "Member.Read.Group",
 
   "Member.ReadWrite.Group",
-
-  "File.Read.Group",
-
-  "File.Create.Group",
-
-  "File.Edit.Group",
-
-  "File.Delete.Group"
-
+  
         ]
 
     }
