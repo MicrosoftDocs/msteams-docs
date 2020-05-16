@@ -52,7 +52,7 @@ Resource specific consent (RSC) is a Microsoft Teams and Graph API integration t
 
   "Member.Read.Group",
 
-  "Member.ReadWrite.Group",
+  "Owner.Read.Group",
 
         ]
 
