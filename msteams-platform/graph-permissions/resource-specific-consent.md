@@ -101,15 +101,13 @@ The RSC permissions are declared in you app manifest (JSON) file.  Add a [webApp
 > [!div class="checklist"]
 >
 > - **id**  — your Azure AD app id. *See* [Register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
-> - **resource**  — any string, This field has no operation in RSC, but must be added and have a value; any string will do .*See* the note in  [Update your Teams app manifest](resource-specific-consent.md#update-your-teams-app-manifest)
+> - **resource**  — any string. This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.
 > - **application permissions** — RSC permissions for  your app. *See* [Resource Specific Permissions](resource-specific-consent.md#resource-specific-permissions).
 
 >
->[!NOTE]
+>[!IMPORTANT]
+> Non-RSC permissions are stored in the Azure portal. Do not add them to the app manifest.
 >
-> - The RSC permissions do not use the webApplicationInfo **resource** value; however, the value should be completed with **https://** + "any string" to avoid an error response.  
->
-> - Non-RSC permissions are stored in the Azure portal. Do not add them to the app manifest.
 
 ```json
 "webApplicationInfo": {
