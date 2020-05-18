@@ -44,7 +44,7 @@ If you are the team owner and/or [uploading custom apps is enabled](/microsoftte
 3. **Add your bot details**. For a full descriptions of each field see [manifest schema definition](../../resources/schema/manifest-schema.md). Be sure to complete all required fields.
 4. **Set up your bot**. Navigate to the **Bots** tab => select **Setup** button => select **Existing bot** => enter your bot name.
 5. **Add your App Id**. Navigate to **Connect to a different bot id** and paste in the **App Id** you copied earlier. Under scope, select **Personal** and then select **Save**.
-6. **Add valid domains for your bot**  This step is only required if you bot requires te user to sign in. Navigate to **Domains and permissions** in the **Valid Domains** filed in put the following:
+6. **Add valid domains for your bot**  This step is only required if you bot requires the user to sign in. Navigate to **Domains and permissions** in the **Valid Domains** filed in put the following:
 
 ```bash
 token.botframework.com
