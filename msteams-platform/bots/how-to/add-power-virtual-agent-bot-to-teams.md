@@ -8,7 +8,7 @@ ms.author: lajanuar
 
 # Integrate your Power Virtual Agent chatbot with Microsoft Teams
 
-Power Virtual Agents empowers every member of your team to create rich conversational chatbots that easily integrate with the Teams platform. Your IT administrators, business analysts, domain specialists, and skilled app developers can design, develop and publish intelligent virtual agents for Teams without having to setup a development environment, create a web service, or directly register with the Bot Framework.  
+Power Virtual Agents empowers every member of your team to create rich, conversational chatbots that easily integrate with the Teams platform. Your IT administrators, business analysts, domain specialists, and skilled app developers can design, develop and publish intelligent virtual agents for Teams without having to setup a development environment, create a web service, or directly register with the Bot Framework.  
 *See* [Create a chatbot for Teams with Microsoft Power Virtual Agents](../what-are-bots.md).
 
 
@@ -22,7 +22,7 @@ Power Virtual Agents empowers every member of your team to create rich conversat
 
 ![channels in power virtual agent portal](../../assets/images/pva-channels.png)
 
-2.  Once the Teams channel has been successfully added to your chatbot, an **App Id** will be available in the dialog box. Copy and save the App Id. — uou will need it to create an app package for Teams.
+2. Once the Teams channel has been successfully added to your chatbot, an **App Id** will be available in the dialog box. Copy and save the App Id. — you will need it later to create an app package for Teams.
 
 ## Add your bot to Teams using App Studio
 
@@ -40,9 +40,9 @@ App Studio is a Teams app that you can install from the Teams store. It simplifi
 1. Add your app details (see [manifest schema definition](../../resources/schema/manifest-schema.md) for a full descriptions of each field).
 1. On the **Bots** tab select the **Setup** button.
 1. Select **Existing bot** and enter the bot name.
-1. Select **Connect to a different bot id** and paste the **App ID** you copied earlier. Under Scope, select **Personal** and then select **Save**.
+1. Select **Connect to a different bot id** and paste the **App ID** you copied earlier. Under scope, select **Personal** and then select **Save**.
 1. Select the **Test and distribute** tab and choose **Install** to add your bot directly to your Teams instance. Optionally, you can download your completed app package to share with Team users.
-1. That completes the setup process for adding your Power Virtual Agents chat bot to Teams. For more details, *see* [Add bot to Microsoft Teams](/power-virtual-agents/publication-add-bot-to-microsoft-teams).
+1. The setup process for adding your Power Virtual Agents chat bot to Teams is complete. For more details, *see* [Add bot to Microsoft Teams](/power-virtual-agents/publication-add-bot-to-microsoft-teams).
 
 > [!div class="nextstepaction"]
 > [Learn more about publishing your Power Virtual Agents bot to channels](/power-virtual-agents/publication-fundamentals-publish-channels)
