@@ -13,7 +13,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 | -------- | --------- | ------------------ |
 | 03/24/2020 | Added support for retrieving a single member of a conversation, and additional support for retrieving paged members. | [Get Teams context for your bot](~/bots/how-to/get-teams-context.md)
 | 12/26/2019 | The `replyToId` parameter in payloads sent to a bot is no longer encrypted, allowing you to use this value to construct deeplinks to these messages. Message payloads include the encrypted values in the parameter `legacy.replyToId`.  |
-| 11/5/2019 | Single sign-on using the Teams JavaScript SDK in a web content page is in developer preview | [Single sign-on](~/tabs/how-to/authentication/auth-aad-sso.md) |
+| 11/5/2019 | Single sign-on using the Teams JavaScript SDK in a web content page is in developer preview | [Single sign-on](tabs/how-to/authentication/auth-aad-sso.md) |
 | 10/31/2019 | Conversational bots and messaging extension documentation updated to reflect the 4.6 Bot Framework SDK. Documentation for the v3 SDK is available in the Resources section. | All bot and messaging extension documentation. |
 | 10/31/2019 | New documentation structure, and major article refactoring. Please report any dead links or 404's by creating a GitHub Issue | All of them! |
 | 9/13/2019 | Request bot is installed from action-based messaging extension | [Initiate actions with messaging extensions](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
@@ -63,4 +63,4 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 ## Submit your questions, bugs, feature requests, and contributions
 
-We listen to the developer community across [several channels](~/feedback.md).
+We listen to the developer community across [several channels](feedback.md).
