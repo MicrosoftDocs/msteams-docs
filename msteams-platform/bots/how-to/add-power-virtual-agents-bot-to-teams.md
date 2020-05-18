@@ -44,14 +44,14 @@ If [uploading custom apps is enabled](/microsoftteams/admin-settings) in your Te
 3. **Add your bot details**. For a full descriptions of each field see [manifest schema definition](../../resources/schema/manifest-schema.md). Be sure to complete all required fields.
 4. **Set up your bot**. Navigate to the **Bots** tab => select the **Setup** button => select **Existing bot** => enter your bot name.
 5. **Add your App Id**. Navigate to **Connect to a different bot id** and paste in the **App Id** you copied earlier. Under scope, select **Personal** and then select **Save**.
-6. **Add valid domains for your bot**  This step is only required if your bot requires the user to sign in. Navigate to **Domains and permissions** in the **Valid Domains** filed in put the following:
+6. **Add valid domains for your bot**.  This step is only required if your bot requires the user to sign in. Navigate to **Domains and permissions**. In the **Valid Domains** field input the following:
 
 ```bash
 token.botframework.com
 ```
 
-7.  **Test and distribute your bot**. Choose the **Test and distribute** tab and choose **Install** to add your bot directly to your Teams instance. Optionally, you can download your completed app package to share with Teams users.
-8. **Start a chat**. The setup process for adding your Power Virtual Agents chat bot to Teams is complete. You can now start a conversation with your bot in a chat or a specific Teams channel.
+7.  **Test and distribute your bot**. Choose the **Test and distribute** tab and choose **Install** to add your bot directly to your Teams instance. Optionally, you can download your completed app package to share with Teams users or provide it to your admin to make your bot available in the tenant app catalog.
+8. **Start a chat**. The setup process for adding your Power Virtual Agents chat bot to Teams is complete. You can now start a conversation with your bot in a personal chat.
 
 > [!div class="nextstepaction"]
 > [Learn more about publishing your Power Virtual Agents bot](/power-virtual-agents/publication-fundamentals-publish-channels)
