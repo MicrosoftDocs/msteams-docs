@@ -47,7 +47,7 @@ If you are the team owner and/or [uploading custom apps is enabled](/microsoftte
 6. **Add valid domains for your bot**  This step is only required if you bot requires te user to sign in. Navigate to **Domains and permissions** in the **Valid Domains** filed in put the following:
 
 ```bash
-token.botbramework.com
+token.botframework.com
 ```
 
 7.  **Test and distribute your bot**. Choose the **Test and distribute** tab and choose **Install** to add your bot directly to your Teams instance. Optionally, you can download your completed app package to share with Team users.
