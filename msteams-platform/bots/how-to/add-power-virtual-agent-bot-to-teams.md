@@ -11,7 +11,6 @@ ms.author: lajanuar
 Power Virtual Agents empowers every member of your team to create rich, conversational chatbots that easily integrate with the Teams platform. Your IT administrators, business analysts, domain specialists, and skilled app developers can design, develop and publish intelligent virtual agents for Teams without having to setup a development environment, create a web service, or directly register with the Bot Framework.  
 *See* [Create a chatbot for Teams with Microsoft Power Virtual Agents](../what-are-bots.md).
 
-
 > [!NOTE]
 > By adding the bot to Microsoft Teams, some of data, such as bot content and end-user chat content, will be shared with Microsoft Teams (meaning that your data will flow outside of your [organization’s compliance and geographic or regional boundaries](/power-virtual-agents/data-location)). <br/>
 > For more information, see the [Security and compliance in Microsoft Teams](/MicrosoftTeams/security-compliance-overview).
@@ -32,11 +31,11 @@ App Studio is a Teams app that you can install from the Teams store. It simplifi
 >
 <img  width="450px" title="Finding App Studio in the Store" src="../../assets/images/get-started/app-studio-store.png"/>
 
-2. Select the **App studio** tile and choose **Install** in the pop-up dialog box.
+2. Select the **App Studio** tile and choose **Install** in the pop-up dialog box.
 >
 <img  width="450px" title="Installing App Studio" src="../../assets/images/get-started/app-studio-install.png"/>
 
-3. Once App Studio is installed select **Manifest editor**  => **Create a new app** .
+3. Once App Studio is installed, select **Manifest editor**  => **Create a new app**.
 1. Add your app details (see [manifest schema definition](../../resources/schema/manifest-schema.md) for a full descriptions of each field).
 1. On the **Bots** tab select the **Setup** button.
 1. Select **Existing bot** and enter the bot name.
