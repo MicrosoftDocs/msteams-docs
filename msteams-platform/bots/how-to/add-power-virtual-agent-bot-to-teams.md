@@ -16,13 +16,13 @@ ms.author: lajanuar
 
 ## Add the Teams bot channel to your chatbot in the Power Virtual Agents portal
 
-1. **Publish the latest bot content**.  After you have created a chatbot in the [Power Virtual Agents portal](https://powervirtualagents.microsoft.com), you need to publish your bot at least once in the  before Teams users can interact with it. See [Publish the latest bot content](/power-virtual-agents/publication-fundamentals-publish-channels#publish-the-latest-bot-content).
+1. **Publish the latest bot content**.  After you have created a chatbot in the [Power Virtual Agents portal](https://powervirtualagents.microsoft.com), you need to publish your bot at least once before Teams users can interact with it. See [Publish the latest bot content](/power-virtual-agents/publication-fundamentals-publish-channels#publish-the-latest-bot-content).
 
-you can configure a Teams channel to connect with the Teams platform.
-
-![channels in power virtual agents portal](../../assets/images/pva-channels.png)
+![publish in power virtual agents portal](../../assets/images/pva-publish.png)
 
 2. **Configure the Teams channel**. After publishing your bot, you can add the Teams channel to make the bot reachable to Teams users.
+
+![channels in power virtual agents portal](../../assets/images/pva-channels.png)
 
 3. **Generate an App Id for your chatbot**  When the Teams channel has been successfully added to your chatbot, an **App Id** will be appear in the dialog box. The app Id is a unique Microsoft generated identifier for your bot.  Copy and save the App Id — you will need it later to create an app package for Teams.
 
