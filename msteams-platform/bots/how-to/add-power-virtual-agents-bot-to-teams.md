@@ -42,7 +42,7 @@ If [uploading custom apps is enabled](/microsoftteams/admin-settings) in your Te
 
 2. **Create the Teams app manifest in App Studio**.  Bots in Teams are defined by an app manifest (JSON) file that provides basic information about your bot and its capabilities. In App Studio select **Manifest editor**  => **Create a new app**.
 3. **Add your bot details**. For a full descriptions of each field see [manifest schema definition](../../resources/schema/manifest-schema.md). Be sure to complete all required fields.
-4. **Set up your bot**. Navigate to the **Bots** tab => select **Setup** button => select **Existing bot** => enter your bot name.
+4. **Set up your bot**. Navigate to the **Bots** tab => select the **Setup** button => select **Existing bot** => enter your bot name.
 5. **Add your App Id**. Navigate to **Connect to a different bot id** and paste in the **App Id** you copied earlier. Under scope, select **Personal** and then select **Save**.
 6. **Add valid domains for your bot**  This step is only required if your bot requires the user to sign in. Navigate to **Domains and permissions** in the **Valid Domains** filed in put the following:
 
@@ -54,4 +54,4 @@ token.botframework.com
 8. **Start a chat**. The setup process for adding your Power Virtual Agents chat bot to Teams is complete. You can now start a conversation with your bot in a chat or a specific Teams channel.
 
 > [!div class="nextstepaction"]
-> [Learn more about publishing your Power Virtual Agents bot to channels](/power-virtual-agents/publication-fundamentals-publish-channels)
+> [Learn more about publishing your Power Virtual Agents bot](/power-virtual-agents/publication-fundamentals-publish-channels)
