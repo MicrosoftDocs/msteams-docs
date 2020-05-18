@@ -14,7 +14,7 @@ Power Virtual Agents empowers every member of your team to create rich conversat
 
 > [!NOTE]
 > By adding the bot to Microsoft Teams, some of data, such as bot content and end-user chat content, will be shared with Microsoft Teams (meaning that your data will flow outside of your [organization’s compliance and geographic or regional boundaries](data-location.md)). <br/>
-> For more information, see the [Security and complicance in Microsoft Teams](/MicrosoftTeams/security-compliance-overview).
+> For more information, see the [Security and compliance in Microsoft Teams](/MicrosoftTeams/security-compliance-overview).
 
 ## Create a Teams channel in the Power Virtual Agent portal
 
@@ -45,4 +45,4 @@ App Studio is a Teams app that you can install from the Teams store. It simplifi
 1. That completes the setup process for adding your Power Virtual Agents chat bot to Teams. For more details, *see* [Add bot to Microsoft Teams](/power-virtual-agents/publication-add-bot-to-microsoft-teams).
 
 > [!div class="nextstepaction"]
-> [Learn more about publishing your Power Virtual Agents bot](/power-virtual-agents/publication-fundamentals-publish-channels)
+> [Learn more about publishing your Power Virtual Agents bot to channels](/power-virtual-agents/publication-fundamentals-publish-channels)
