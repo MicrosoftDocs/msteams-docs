@@ -24,15 +24,15 @@ ms.author: lajanuar
 
 ![channels in power virtual agents portal](../../assets/images/pva-channels.png)
 
-3. **Generate an App Id for your chatbot**  When the Teams channel has been successfully added to your chatbot, an **App Id** will be appear in the dialog box. The app Id is a unique Microsoft generated identifier for your bot.  Copy and save the App Id — you will need it later to create an app package for Teams.
+3. **Generate an App Id for your chatbot**  When the Teams channel has been successfully added to your chatbot, an **App Id** will be generated in the dialog box. The App Id is a unique Microsoft generated identifier for your bot.  Copy and save the App Id — you will need it later to create an app package for Teams.
 
 ## Add your bot to Teams using App Studio
 
-If [uploading custom apps is enabled](/microsoftteams/admin-settings) in your Teams instance, you can use Teams App Studio to directly upload the app and start using it right away. If you want to share the app, you can request your admin make your bot available in the tenant app catalog or you can send others your app package and ask them to upload it independently.
+If [uploading custom apps is enabled](/microsoftteams/admin-settings) in your Teams instance, you can use Teams App Studio to directly upload your chatbot and start using it right away. If you want to share your chatbot, you can request that your admin make your bot available in the tenant app catalog or you can send others your app package and ask them to upload it independently.
 
-1. **Install App Studio in Teams**. App Studio is a Teams app that you can install from the Teams store that simplifies the creation and registration of your bot in Teams: 
+1. **Install App Studio in Teams**. App Studio is a Teams app you can install from the Teams store that simplifies the creation and registration of your bot in Teams: 
 
-  * Select the app store icon from the bottom of the left nav bar in your Teams instance, and search for App Studio.
+  * Select the app store icon from the bottom of the left nav bar in your Teams instance, and search for **App Studio**.
 >
 &emsp;&emsp; <img  width="450px" title="Finding App Studio in the Store" src="../../assets/images/get-started/app-studio-store.png"/>    
 
@@ -40,11 +40,11 @@ If [uploading custom apps is enabled](/microsoftteams/admin-settings) in your Te
 >
 &emsp;&emsp; <img  width="450px" title="Installing App Studio" src="../../assets/images/get-started/app-studio-install.png"/>
 
-2. **Create the Teams app manifest in App Studio**.  Bots in Teams are defined by an app manifest (JSON) file that provides basic information about your bot and its capabilities. In App Studio select **Manifest editor**  => **Create a new app**.
+2. **Create the Teams app manifest in App Studio**.  Bots in Teams are defined by an app manifest (JSON) file that provides basic information about your bot and its capabilities. In **App Studio** select **Manifest editor**  => **Create a new app**.
 3. **Add your bot details**. For a full descriptions of each field see [manifest schema definition](../../resources/schema/manifest-schema.md). Be sure to complete all required fields.
-4. **Set up your bot**. Navigate to the **Bots** tab => select the **Setup** button => select **Existing bot** => enter your bot name.
+4. **Set up your bot**. Navigate to the **Bots** tab, select the **Setup** button, choose **Existing bot**, and enter your bot name.
 5. **Add your App Id**. Navigate to **Connect to a different bot id** and paste in the **App Id** you copied earlier. Under scope, select **Personal** and then select **Save**.
-6. **Add valid domains for your bot**.  This step is only required if your bot requires the user to sign in. Navigate to **Domains and permissions**. In the **Valid Domains** field input the following:
+6. **Add valid domains for your bot**.  This step is only required if your bot requires the user to sign in. Navigate to **Domains and permissions** and  in the **Valid Domains** field input the following:
 
 ```bash
 token.botframework.com
