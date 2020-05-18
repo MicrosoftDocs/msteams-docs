@@ -1,12 +1,12 @@
 ---
-title: Add Power Virtual Agent chatbot to Teams
+title: Add Power Virtual Agents chatbot to Teams
 author: laujan
-description: integrating a Power Virtual Agent chatbot in the Teams platform
+description: integrating a Power Virtual Agenst chatbot in the Teams platform
 ms.topic: how-to
 ms.author: lajanuar
 ---
 
-# Integrate your Power Virtual Agent chatbot with Microsoft Teams
+# Integrate your Power Virtual Agents chatbot with Microsoft Teams
 
 Power Virtual Agents empowers every member of your team to create rich, conversational chatbots that easily integrate with the Teams platform. Your IT administrators, business analysts, domain specialists, and skilled app developers can design, develop and publish intelligent virtual agents for Teams without having to setup a development environment, create a web service, or directly register with the Bot Framework.  
 *See* [Create a chatbot for Teams with Microsoft Power Virtual Agents](../what-are-bots.md).
@@ -16,11 +16,11 @@ Power Virtual Agents empowers every member of your team to create rich, conversa
 > By adding the bot to Microsoft Teams, some of data, such as bot content and end-user chat content, will be shared with Microsoft Teams (meaning that your data will flow outside of your [organization’s compliance and geographic or regional boundaries](/power-virtual-agents/data-location)). <br/>
 > For more information, see the [Security and compliance in Microsoft Teams](/MicrosoftTeams/security-compliance-overview).
 
-## Create a Teams channel in the Power Virtual Agent portal
+## Create a Teams channel in the Power Virtual Agents portal
 
-1. After you have created a chatbot in the [Power Virtual Agent portal](https://powervirtualagents.microsoft.com), you can configure a Teams channel to connect with the Teams platform.
+1. After you have created a chatbot in the [Power Virtual Agents portal](https://powervirtualagents.microsoft.com), you can configure a Teams channel to connect with the Teams platform.
 
-![channels in power virtual agent portal](../../assets/images/pva-channels.png)
+![channels in power virtual agents portal](../../assets/images/pva-channels.png)
 
 2. Once the Teams channel has been successfully added to your chatbot, an **App Id** will be available in the dialog box. Copy and save the App Id. — you will need it later to create an app package for Teams.
 
