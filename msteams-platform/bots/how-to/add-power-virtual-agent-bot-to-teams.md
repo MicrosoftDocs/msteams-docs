@@ -35,12 +35,14 @@ App Studio is a Teams app that you can install from the Teams store. It simplifi
 <img  width="450px" title="Installing App Studio" src="../../assets/images/get-started/app-studio-install.png"/>
 
 3. Once App Studio is installed, select **Manifest editor**  => **Create a new app**.
-1. Add your app details (see [manifest schema definition](../../resources/schema/manifest-schema.md) for a full descriptions of each field).
-1. On the **Bots** tab select the **Setup** button.
+1. Add your app details (see [manifest schema definition](../../resources/schema/manifest-schema.md) for a full descriptions of each field). Be sure to complete all required fields.
+1. Navigate to the **Bots** tab and select the **Setup** button.
 1. Select **Existing bot** and enter the bot name.
 1. Select **Connect to a different bot id** and paste the **App ID** you copied earlier. Under scope, select **Personal** and then select **Save**.
 1. Select the **Test and distribute** tab and choose **Install** to add your bot directly to your Teams instance. Optionally, you can download your completed app package to share with Team users.
-1. The setup process for adding your Power Virtual Agents chat bot to Teams is complete. For more details, *see* [Add bot to Microsoft Teams](/power-virtual-agents/publication-add-bot-to-microsoft-teams).
+1. The setup process for adding your Power Virtual Agents chat bot to Teams is complete. You can now start a conversation with your bot in a chat or a specific Teams channel.
+
+For more details, *see* [Add bot to Microsoft Teams](/power-virtual-agents/publication-add-bot-to-microsoft-teams).
 
 > [!div class="nextstepaction"]
 > [Learn more about publishing your Power Virtual Agents bot to channels](/power-virtual-agents/publication-fundamentals-publish-channels)
