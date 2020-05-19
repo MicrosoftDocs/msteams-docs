@@ -13,7 +13,13 @@ The GIF below shows a user conversing with a bot in a one-to-one chat using both
 
 ![FAQ Plus gif](~/assets/images/FAQPlusEndUser.gif)
 
-## How bots work
+## Build  a bot for Teams with the Microsoft Bot Framework
+
+The Microsoft Bot Framework](https://dev.botframework.com/) is a rich SDK for building bots using C#, Java, Python, and JavaScript. If you already have a bot that's based on the Bot Framework, you can easily adapt it to work in Microsoft Teams. We recommend you use either C# or Node.js to take advantage of our [SDKs](/microsoftteams/platform/#pivot=sdk-tools). These packages extend the basic Bot Builder SDK classes and methods as follows:
+
+* Use specialized card types like the Office 365 Connector card.
+* Consume and set Teams-specific channel data on activities.
+* Process messaging extension requests.
 
 Your Teams bot consists of three elements:
 
@@ -21,17 +27,15 @@ Your Teams bot consists of three elements:
 * Your bot registration with the Bot Framework.
 * Your Teams app package with your app manifest. This is what your users will install and connects the Teams client to your web service, routed through the Bot Service.
 
-Bots for Microsoft Teams are built on the [Microsoft Bot Framework](https://dev.botframework.com/). If you already have a bot that's based on the Bot Framework, you can easily adapt it to work in Microsoft Teams. We recommend you use either C# or Node.js to take advantage of our [SDKs](/microsoftteams/platform/#pivot=sdk-tools). These packages extend the basic Bot Builder SDK classes and methods as follows:
-
-* Use specialized card types like the Office 365 Connector card.
-* Consume and set Teams-specific channel data on activities.
-* Process messaging extension requests.
-
 > [!IMPORTANT]
 > You can develop Teams apps in any web-programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly, but you must perform all token handling yourself.
 
 > [!TIP]
 > Teams App Studio* helps you create and configure your app manifest, and can register your web service as a bot on the Bot Framework. It also contains a React control library and an interactive card builder. *See* [Getting started with Teams App Studio](~/concepts/build-and-test/app-studio-overview.md).
+
+## Create a chatbot for Teams with Microsoft Power Virtual Agents
+
+[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) is a chatbot service, built on the Microsoft Power platform and Bot Framework.  The Power Virtual Agent development process uses a guided, no-code, graphical interface approach to empower every member of your team to easily create and maintain an intelligent virtual agent.  Once you have completed creating your chatbot in the [Power Virtual Agents portal](https://powervirtualagents.microsoft.com), you can easily [integrate your Power Virtual Agents chatbot with Teams](how-to/add-power-virtual-agents-bot-to-teams.md). To get started creating your Power Virtual Agents chatbot, *see* the [Power Virtual Agents documentation](https://docs.microsoft.com/power-virtual-agents/).
 
 ## Webhooks and connectors
 
