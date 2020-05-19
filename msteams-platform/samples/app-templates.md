@@ -254,4 +254,19 @@ Request-a-team is a Microsoft Teams app that optimizes new team creation for you
 :::column-end:::
 :::row-end:::
 
+## Scrums for Channels bot
+
+Scrums for Channels is a [Microsoft Teams bot](../bots/what-are-bots.md) assistant that enables users to schedule and drive agile framework meetings in Microsoft Teams channels. The bot is great for remote teams and teams comprised of members from varied geographical locations and time zones to share daily updates and ensure participation in scrum stand-up meetings.
+
+:::row:::
+  :::column span="2":::
+    ![Request-a-team start page view](../assets/images/scrum-for-channels-settings.png)
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Request-a-team wizard page view](../assets/images/scrum-for-channels-status.png)
+:::column-end:::
+:::row-end:::
+
 Have an idea for an app template you'd like to see? [Please let us know](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
