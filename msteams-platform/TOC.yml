@@ -187,7 +187,7 @@
       - name: Build a bot for Teams
         href: bots/how-to/create-a-bot-for-teams.md
       - name:  Integrate your Power Virtual Agent chatbot with Teams
-        href: bots/how-to/add-power-virtual-agent-bot-to-teams.md
+        href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
       - name: Conversations
         items:
         - name: Conversation basics
