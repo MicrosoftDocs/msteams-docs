@@ -41,7 +41,7 @@ Register you application at the registration portal for the Azure AD v1.0 endpoi
 > [!NOTE]
 > There are some important restrictions you should be aware of:
 >
-> * We only support user-level Graph API permissions (ie: email, profile, offline_access, openid. If you need access to other Graph scopes, read our recommended workaround at the end of this documentation.
+> * We only support user-level Graph API permissions (i.e.: email, profile, offline_access, openid). If you need access to other Graph scopes, read our recommended workaround at the end of this documentation.
 > * It's important that your application's domain name be registered with your Azure AD application. This must be the same domain name that your application runs on when requesting an authentication token in Teams and also when specifying the resource property in your Teams manifest (more details in the next section).
 > * We do not currently support multiple domains per app
 > * We also do not support applications that use the `azurewebsites.net` domain since this domain is too common and may be a security risk
