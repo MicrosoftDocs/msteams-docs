@@ -1,0 +1,329 @@
+### YamlMime:Hub
+
+title: Microsoft Teams Platform documentation # < 60 chars
+summary: Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services to improve existing content and workflows. # < 160 chars
+# brand: aspnet | azure | dotnet | dynamics | m365 | ms-graph | office | power-bi | power-platform | sql | sql-server | vs | visual-studio | windows | xamarin
+brand: m365
+
+metadata:
+  title: Microsoft Teams Platform documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services to improve existing content and workflows. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: msteams #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: hub-page # Required
+  ms.collection: collection # Optional; Remove if no collection is used.
+  author: laujan #Required; your GitHub user alias, with correct capitalization.
+  ms.author: lajanuar #Required; microsoft alias of author; optional team alias.
+  ms.date: 05/22/2020 #Required; mm/dd/yyyy format.
+
+# conceptualContent section (optional)
+conceptualContent:
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+  title: Get Started # < 60 chars (optional)
+  summary: Get started building apps on the Microsoft Teams Platform. # < 160 chars (optional)
+  items:
+    # Card
+    - title: Overview
+      links:
+        - url: /microsoftteams/platform/overview
+          itemType: concept
+          text: Microsoft Teams apps
+        - url: /microsoftteams/platform/tabs/what-are-tabs
+          itemType: concept
+          text: Tabs — embedded web experiences
+        - url: /microsoftteams/platform/bots/what-are-bots
+          itemType: concept
+          text: Bots — conversation-based interactions
+        - url: /microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
+          itemType: concept
+          text: Messaging Extensions — task oriented interactions
+        - url: /microsoftteams/platform/task-modules-and-cards/what-are-task-modules
+          itemType: concept
+          text: Task modules and cards — rich messaging and notifications
+        - url: /microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors
+          itemType: concept
+          text: Webhooks and connectors — programmed messaging and notifications
+        - url: /graph/teams-concept-overview
+          itemType: concept
+          text: Microsoft Teams + Graph
+      # footerLink (optional)
+      footerLink:
+        url: /microsoftteam
+        text: Microsoft Teams administration
+
+    # Card
+    - title: Build your first app
+      links:
+        - url: /microsoftteams/platform/tutorials/get-started-nodejs-app-studio
+          itemType: get-started
+          text: Get started with Node.js
+        - url: /microsoftteams/platform/tutorials/get-started-dotnet-app-studio
+          itemType: get-started
+          text: Getting started with .NET/C#
+            
+    # Card
+    - title: Connect us
+      links:
+        - url: https://developer.microsoft.com/microsoft-teams/blogs/
+          itemType: overview
+          text: Microsoft Teams developer blog
+        - url: https://aka.ms/microsoftteamscommunitycall
+          itemType: overview
+          text: Microsoft Teams Community Calls
+        - url: /microsoftteams/platform/feedback
+          itemType: overview
+          text: Feedback & support
+          
+    # Card
+    - title: Training & Guided Learning
+      links:
+        - url: /learn/modules/intro-microsoft-teams-apps
+          itemType: learn
+          text: Introduction to building apps for Teams
+        - url: /learn/modules/embedded-web-experiences
+          itemType: learn
+          text: Create embedded web experiences with Tabs
+        - url: https://www.youtube.com/c/MicrosoftTeamsPlatform
+          itemType: video
+          text: App developer training videos  (on YouTube)
+
+# tools section (optional)
+tools:
+  title: SDKs & Tools # < 60 chars (optional)
+  summary: sectionsummary # < 160 chars (optional)
+  items:
+    # Card
+    - title: JavaScript SDK for Tabs
+      # imageSrc should be square in ratio with no whitespace
+      imageSrc: ./assets/icons/logo_js.png
+      url: /javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest
+    # Card
+    - title: Node.js Bot Framework SDK for bots and messaging extensions
+      imageSrc: ./assets/icons/logo_nodejs.png
+      url: https://github.com/Microsoft/botbuilder-js
+    # Card
+    - title: .NET Bot Framework SDK for bots and messaging extensions
+      imageSrc: ./assets/icons/logo_net.png
+      url: https://github.com/Microsoft/botbuilder-dotnet/
+    # Card
+    - title: Microsoft Graph SDKs
+      imageSrc: ./assets/icons/graph-icon-1.png
+      url: https://docs.microsoft.com/graph/sdks/sdks-overview
+    # Card
+    - title: Microsoft Teams App Studio
+      imageSrc: ./assets/icons/AppStudioIcon.png
+      url: /microsoftteams/platform/concepts/build-and-test/app-studio-overview
+    # Card
+    - title: Yeoman Generator for Microsoft Teams
+      imageSrc: ./assets/icons/724px-Yeoman.svg.png
+      url: https://github.com/OfficeDev/generator-teams
+
+# additionalContent section (optional)
+# Card with summary style
+additionalContent:
+  # Supports up to 3 sections
+  sections:
+    - title: App Templates # < 60 chars (optional)
+      items:
+        # Card
+        - title: Company Communicator app
+          summary: Enables corporate teams to create and send messages to employees over chat.
+          url: https://github.com/OfficeDev/microsoft-teams-company-communicator-app
+        # Card
+        - title: Celebrations app
+          summary: Help team members celebrate each others' birthdays, anniversaries, and other recurring events.
+          url: https://github.com/OfficeDev/microsoft-teams-celebrations-app
+        # Card
+        - title: SharePoint List Search app
+          summary: Search a SharePoint list and insert an item into Teams as an adaptive card.
+          url: https://github.com/OfficeDev/microsoft-teams-list-search-app
+        # Card
+        - title: Custom Stickers app
+          summary: Add custom stickers for your team or organization.
+          url: https://github.com/OfficeDev/microsoft-teams-stickers-app
+        # Card
+        - title: Attendance app
+          summary: Help your team record attendance and generate summarized reports.
+          url: https://github.com/OfficeDev/microsoft-teams-apps-attendance
+        # Card
+        - title: Associate Insights app
+          summary: Empower firstline workers to capture customer feedback.
+          url: https://github.com/OfficeDev/microsoft-teams-apps-associateinsights
+        # Card
+        - title: Incentives app
+          summary: Manage and track incentivized participation in activities and events.
+          url: https://github.com/OfficeDev/microsoft-teams-apps-incentives
+        # Card
+        - title: Open Badges app
+          summary: Award and track digital learning credential badges.
+          url: https://github.com/OfficeDev/microsoft-teams-apps-openbadges
+        # Card
+        - title: Group Activities app
+          summary: Quickly create and manage activity groups and collaboration workflows.
+          url: https://github.com/OfficeDev/microsoft-teams-apps-groupactivities
+        # Card
+        - title: Quick Responses app
+          summary: Effectively answer users' commonly asked questions and build a dynamic library of responses.
+          url: https://github.com/OfficeDev/microsoft-teams-apps-quickresponses
+  sections:
+    - title: Bot Templates # < 60 chars (optional)
+      items:
+        # Card
+        - title: FAQ Plus bot
+          summary: FAQ bot is a Q&A bot that brings a human in the loop when it is unable to help.
+          url: https://github.com/OfficeDev/microsoft-teams-faqplusplus-app
+        # Card
+        - title: HR Support bot
+          summary: A HR Q&A bot that brings the HR team in the loop when it is unable to help.
+          url: https://github.com/OfficeDev/microsoft-teams-hrsupport-app
+        # Card
+        - title: Icebreaker bot
+          summary: Help your team get closer by pairing random team members for a weekly meetup.
+          url: https://github.com/OfficeDev/microsoft-teams-icebreaker-app
+        # Card
+        - title: Scrum Status bot
+          summary: Enable your team to run asynchronous scrum meetings and share updates.
+          url: https://github.com/OfficeDev/microsoft-teams-app-scrumstatus
+        # Card
+        - title: Crowdsourcer bot
+          summary: Help your team acquire queried information sourced collaboratively from organization members.
+          url: https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app
+        # Card
+        - title: Expert Finder bot
+          summary: Help your team find internal experts based on skills, interests, and education.
+          url: https://github.com/OfficeDev/microsoft-teams-apps-expertfinder
+        # Card
+        - title: Book-a-room bot
+          summary: Help your team quickly find and reserve a meeting room.
+          url: https://github.com/OfficeDev/microsoft-teams-apps-bookaroom
+        # Card
+        - title: Remote Support bot
+          summary: Provide a focused interface between requesters throughout your organization and the internal support team.
+          url: https://github.com/OfficeDev/microsoft-teams-apps-remotesupport
+        # Card
+        - title: Incident Reporter bot
+          summary: Optimize the management of incidents within your organization.
+          url: https://github.com/OfficeDev/microsoft-teams-apps-incidentreport
+  sections:
+    - title: Shifts Connectors # < 60 chars (optional)
+      items:
+        # Card
+        - title: Kronos-to-Shifts connector
+          summary: Provide seamless integration from the Kronos WFM system to Teams Shifts.
+          url: https://github.com/OfficeDev/Microsoft-Teams-Shifts-WFM-Connectors/tree/master/Kronos-Shifts-Connector
+        # Card
+        - title: JDA-to-Shifts connector
+          summary: Provide seamless integration from the JDA (BlueYonder) WFM system to Teams Shifts.
+          url: https://github.com/OfficeDev/Microsoft-Teams-Shifts-WFM-Connectors/tree/master/JDA_v17.2-Shifts-Connector        
+
+# additionalContent section (optional)
+# Card with links style
+additionalContent:
+  # Supports up to 3 sections
+  sections:
+    - title: Samples # < 60 chars (optional)
+      items:
+        # Card
+        - title: Hello World, a simple app with a tab and a bot
+          links:
+            - text: C#/.NET version
+              url: https://github.com/OfficeDev/msteams-samples-hello-world-csharp
+            - text: Node.js version
+              url: https://github.com/OfficeDev/msteams-samples-hello-world-nodejs
+        # Card
+        - title: Teams conversation bot, a bot that demonstrates typical conversation events
+          links:
+            - text: C#/.NET version
+              url: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot
+            - text: JavaScript/Node.js version
+              url: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot
+        # Card
+        - title: Messaging Extensions - Action command, a messaging extension with an action command
+          links:
+            - text: C#/.NET version
+              url: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action
+            - text: Node.js version
+              url: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action
+        # Card
+        - title: Messaging Extensions - Search command, a messaging extension with a search command
+          links:
+            - text: C#/.NET version
+              url: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config
+            - text: Node.js version
+              url: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config
+        # Card
+        - title: Office 365 Connector, an MVC app using a connector to push cards to Microsoft Teams
+          links:
+            - text: C#/.NET version
+              url: https://github.com/OfficeDev/microsoft-teams-sample-connector-csharp
+            - text: Node.js version
+              url: https://github.com/OfficeDev/microsoft-teams-sample-connector-nodejs
+        # Card
+        - title: Authentication, demonstrating patterns for handling various authentication scenarios.
+          links:
+            - text: Node.js version
+              url: https://github.com/OfficeDev/microsoft-teams-sample-auth-node
+            - text: Bot Framework v4 - C#/.NET
+              url: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth
+        # Card
+        - title: Graph + Teams, combining Microsoft Teams and Graph
+          links:
+            - text: C#/.NET version
+              url: https://github.com/microsoftgraph/csharp-teams-sample-graph/tree/master/source
+            - text: Node.js version
+              url: https://github.com/microsoftgraph/csharp-teams-sample-graph/tree/master/Node
+        # Card
+        - title: Outgoing Webhook, an MVC app that can return sample cards to an outgoing webhook
+          links:
+            - text: C#/.NET version
+              url: https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook
+  sections:
+    - title: Demo Apps # < 60 chars (optional)
+      items:
+        # Card
+        - title: The Everything App, a complex app demonstrating almost all available Teams app functionality
+          links:
+            - text: C#/.NET version
+              url: https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp
+            - text: Node.js version
+              url: https://github.com/OfficeDev/microsoft-teams-sample-complete-node            
+        # Card
+        - title: Teams conversation bot, examples of organizational communications and notifications
+          links:
+            - text: C#/.NET version
+              url: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot
+            - text: JavaScript/Node.js version
+              url: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot
+        # Card
+        - title: Airline Scenario, a collection of five complex .NET/C# bots demonstrating everyday airline operations
+          links:
+            - text: Fleet Info Bot
+              url: https://github.com/OfficeDev/msteams-sample-line-of-business-apps-csharp/tree/master/Airline/FleetInfoBot
+            - text: Flight Info Bot
+              url: https://github.com/OfficeDev/msteams-sample-line-of-business-apps-csharp/tree/master/Airline/FlightInfo
+            - text: Baggage Info Bot
+              url: https://github.com/OfficeDev/msteams-sample-line-of-business-apps-csharp/tree/master/Airline/BaggageInfo
+            - text: Flight Team Creation
+              url: https://github.com/OfficeDev/msteams-sample-line-of-business-apps-csharp/tree/master/Airline/FlightTeamCreation
+            - text: Passenger Info Bot
+              url: https://github.com/OfficeDev/msteams-sample-line-of-business-apps-csharp/tree/master/Airline/PassengerInfo
+            - text: Node.js version
+              url: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action
+        # Card
+        - title: General Line of Business, apps demonstrating combining platform features to solve business problems
+          links:
+            - text: ToDo App
+              url: https://github.com/OfficeDev/microsoft-teams-sample-todo
+            - text: Polling Bot
+              url: https://github.com/OfficeDev/msteams-sample-line-of-business-apps-csharp/tree/master/Cross%20Vertical/PollingBot
+            - text: Inventory Management
+              url: https://github.com/OfficeDev/msteams-sample-line-of-business-apps-csharp/tree/master/Manufacturing
+        # Card
+        - title: Human Resources, requesting and approving employee time off
+          links:
+            - text: Employee Leave App
+              url: https://github.com/OfficeDev/msteams-sample-line-of-business-apps-csharp/tree/master/Professional%20Services
+        # Card
+        - title: Information Technology, administering Teams from a Teams app
+          links:
+            - text: Teams Admin Bot
+              url: https://github.com/OfficeDev/msteams-sample-adminbot-csharp
