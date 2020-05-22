@@ -116,7 +116,7 @@ tools:
 # Card with links style
 additionalContent:
   # Supports up to 3 sections
-   sections:
+  sections:
     - title: Templates # < 60 chars (optional)
       items:
         # Card
@@ -192,7 +192,6 @@ additionalContent:
             - text: JDA-to-Shifts connector
               url: https://github.com/OfficeDev/Microsoft-Teams-Shifts-WFM-Connectors/tree/master/JDA_v17.2-Shifts-Connector
               note: Provide seamless integration from the JDA (BlueYonder) WFM system to Teams Shifts.
-
   sections:
     - title: Samples # < 60 chars (optional)
       items:
