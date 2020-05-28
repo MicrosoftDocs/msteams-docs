@@ -11,7 +11,7 @@ Personal apps are available on mobile clients in the App Drawer. The app can onl
 
 Group and channel tabs are available on mobile clients as well. The default behavior is currently to use your `websiteUrl` to launch your tab in a browser window. However, they can be loaded on a mobile client by clicking the `...` overflow menu next to the tab and choosing **Open**, which will use your `contentUrl` to load the tab inside the Teams mobile client.
 
-![mobile app drawer](../../assets/images/personal-app-mobile.jpg)
+![mobile app drawer](../../assets/images/personal-app-mobile.png)
 
 ## Developer considerations for mobile support
 
