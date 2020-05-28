@@ -6,9 +6,9 @@ keywords: teams design guidelines reference framework personal apps
 # Personal apps
 
 > [!NOTE]
-> Full support for tabs on mobile clients is supported in Teams. You should follow the [guidance for tabs on mobile](../../tabs/design/tabs-mobile.md) when creating your tabs for mobile platforms.
+> Full support for tabs on mobile clients is supported in Teams. You should follow the [guidance for tabs on mobile](../../tabs/design/tabs-mobile.md) when creating tabs for mobile platforms.
 
-A personal app is a Teams app with a personal scope that focuses on interactions with a single user. As an app developer, you have the option to provide a version of your app that is built for an individual user. It can be a [conversational bot](../../bots/what-are-bots.md) that engages in a one-to-one conversation with a user or a [personal tab](../../tabs/what-are-tabs.md) embedded web experience. Personal apps enable users to view their select content in one place. In the following screenshot, Contoso is a personal app in the personal app flyout.
+A personal app is a Teams application with a personal scope.  As an app developer, you have the option to provide a version of your app that focuses on interactions with a single user. It can be a [conversational bot](../../bots/what-are-bots.md) to engage in one-to-one conversations with a user or a [personal tab](../../tabs/what-are-tabs.md) providing an embedded web experience. Personal apps enable users to view their select content in one place. In the following screenshot, Contoso is a personal app in the personal app flyout.
 
 ![image of the app overflow menu](~/assets/images/Personal-apps-App-flyout.png)
 
