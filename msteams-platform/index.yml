@@ -19,12 +19,9 @@ metadata:
 highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
    items:
-    - title: Overview of Microsoft Teams applications
+    - title: Microsoft Teams applications
       itemType: overview
       url:  /microsoftteams/platform/overview
-    - title: What's new
-      itemType: overview
-      url:  /microsoftteams/platform/whats-new 
     - title:  Tabs — embedded web experiences
       itemType:  overview
       url:   /microsoftteams/platform/tabs/what-are-tabs
@@ -39,7 +36,10 @@ highlightedContent:
       url:  /microsoftteams/platform/task-modules-and-cards/what-are-task-modules  
     - title: Webhooks and connectors — programmed messaging and notifications
       itemType: overview
-      url:  /microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors                  
+      url:  /microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors 
+    - title: What's new
+      itemType: whats-new
+      url:  /microsoftteams/platform/whats-new                  
 
 conceptualContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
@@ -67,22 +67,22 @@ conceptualContent:
       links:
         - url: /learn/modules/intro-microsoft-teams-apps
           itemType: learn
-          text: Introduction to building apps for Teams
+          text: Building apps for Teams — introduction
         - url: /learn/modules/embedded-web-experiences
           itemType: learn
-          text: Create embedded web experiences with Tabs
+          text: Tabs — create embedded web experiences 
         - url:  /learn/modules/msteams-conversation-bots/
           itemType: learn
-          text: Create interactive conversational bots for Teams
+          text: Bots — create conversational interactions
         - url: /learn/modules/msteams-messaging-extensions/
           itemType: learn
-          text: Create task-oriented interactions in Teams with messaging extensions
+          text: messaging extensions — create task-oriented interactions 
         - url: /learn/modules/msteams-task-modules/
           itemType: learn
-          text: Collect input in Teams with task modules 
+          text: Task modules — collect input and gather information
         - url: /learn/modules/msteams-webhooks-connectors/
           itemType: learn
-          text: Connect web services to Teams with webhooks and Office 365 connectors    
+          text: Webhooks and Office 365 connectors — connect web services to channels and teams
 
 
     # Card
@@ -110,79 +110,53 @@ conceptualContent:
         - url: /microsoftteams/platform/feedback
           itemType: overview
           text: Feedback & support
-          
-    
 
-# tools section (optional)
-tools:
-  title: SDKs & Tools # < 60 chars (optional)
-  items:
-    # Card
-    - title: JavaScript SDK for Tabs
-      # imageSrc should be square in ratio with no whitespace
-      imageSrc: ./assets/icons/logo_js.png
-      url: /javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest
-    # Card
-    - title: Node.js Bot Framework SDK for bots and messaging extensions
-      imageSrc: ./assets/icons/logo_nodejs.png
-      url: https://github.com/Microsoft/botbuilder-js
-    # Card
-    - title: .NET Bot Framework SDK for bots and messaging extensions
-      imageSrc: ./assets/icons/logo_net.png
-      url: https://github.com/Microsoft/botbuilder-dotnet/
-    # Card
-    - title: Microsoft Graph SDKs
-      imageSrc: ./assets/icons/graph-icon-1.png
-      url: https://docs.microsoft.com/graph/sdks/sdks-overview
-    # Card
-    - title: Microsoft Teams App Studio
-      imageSrc: ./assets/icons/AppStudioIcon.png
-      url: /microsoftteams/platform/concepts/build-and-test/app-studio-overview
-    # Card
-    - title: Yeoman Generator for Microsoft Teams
-      imageSrc: ./assets/icons/Yeoman.png
-      url: https://github.com/OfficeDev/generator-teams
- 
-# additionalContent section (optional)
-# Card with links style
-additionalContent:
-  # Supports up to 3 sections
-  sections:
-    - title: Templates # < 60 chars (optional)
-      items:
+# productDirectory section (optional)
+productDirectory:
+      title: App Templates # < 60 chars (optional)
+      summary: Ready-to-use applications
+       items:
         # Card
-        - title: App Templates
-          links:
-            - text: Company Communicator app 
-              url: https://github.com/OfficeDev/microsoft-teams-company-communicator-app
-              note: Enables corporate teams to create and send messages to employees over chat.
-            - text: Celebrations app 
-              url: https://github.com/OfficeDev/microsoft-teams-celebrations-app
-              note: Help team members celebrate each others' birthdays, anniversaries, and other recurring events.
-            - text: SharePoint List Search app 
-              url: https://github.com/OfficeDev/microsoft-teams-list-search-app
-              note: Search a SharePoint list and insert an item into Teams as an adaptive card.
-            - text: Custom Stickers app 
-              url: https://github.com/OfficeDev/microsoft-teams-stickers-app
-              note: Add custom stickers for your team or organization.
-            - text: Attendance app 
-              url: https://github.com/OfficeDev/microsoft-teams-apps-attendance
-              note: Help your team record attendance and generate summarized reports.
-            - text: Associate Insights app 
-              url: https://github.com/OfficeDev/microsoft-teams-apps-associateinsights
-              note: Empower firstline workers to capture customer feedback.
-            - text: Incentives app 
-              url: https://github.com/OfficeDev/microsoft-teams-apps-incentives
-              note: Manage and track incentivized participation in activities and events.
-            - text: Open Badges app 
-              url: https://github.com/OfficeDev/microsoft-teams-apps-openbadges
-              note: Award and track digital learning credential badges.
-            - text: Group Activities app
-              url: https://github.com/OfficeDev/microsoft-teams-apps-groupactivities
-              note: Quickly create and manage activity groups and collaboration workflows.
-            - text: Quick Responses app
-              url: https://github.com/OfficeDev/microsoft-teams-apps-quickresponses
-              note: Effectively answer users' commonly asked questions and build a dynamic library of responses.
+          - title: Company Communicator
+             imageSrc:  https://docs.microsoft.com/media/common/i_whats-new.svg  
+             url: https://github.com/OfficeDev/microsoft-teams-company-communicator-app
+             text: Enable corporate teams to create and send messages to employees over chat.
+          - title: Celebrations
+             imageSrc: https://docs.microsoft.com/media/illustrations/team-services-agile-customize.svg  
+            url: https://github.com/OfficeDev/microsoft-teams-celebrations-app
+            text: Facilitate the celebration of team members' birthdays, anniversaries, and other recurring events.
+          - title: SharePoint List Search
+             imageSrc: https://docs.microsoft.com/media/illustrations/biztalk-developer-documentation-1.svg  
+            url: https://github.com/OfficeDev/microsoft-teams-list-search-app
+            text: Search a SharePoint list and insert an item into Teams as an adaptive card.
+          - title: Custom Stickers
+             imageSrc:  https://docs.microsoft.com/media/illustrations/bcs-partner-advanced-management-settings-8.svg 
+            url: https://github.com/OfficeDev/microsoft-teams-stickers-app
+            text: Add custom stickers for your team or organization.
+          - title: Attendance
+            imageSrc: https://docs.microsoft.com/media/illustrations/bcs-partner-advanced-management-add-user-1.svg  
+            url: https://github.com/OfficeDev/microsoft-teams-apps-attendance
+            text: Enable your team to record attendance and generate summarized reports.
+          - title: Associate Insights
+            imageSrc: https://docs.microsoft.com/media/illustrations/virtualization-hperv-server-community.svg   
+            url: https://github.com/OfficeDev/microsoft-teams-apps-associateinsights
+            text: Empower firstline workers to capture customer feedback.
+          - title: Incentives
+            imageSrc: https://docs.microsoft.com/media/illustrations/team-services-get-started-account-manager.svg  
+            url: https://github.com/OfficeDev/microsoft-teams-apps-incentives
+            text: Manage and track incentivized participation in activities and events.
+          - title: Open Badges
+            imageSrc: https://docs.microsoft.com/media/illustrations/dynamics-gdpr-center.svg  
+            url: https://github.com/OfficeDev/microsoft-teams-apps-openbadges
+            text: Track digital learning and award credential badges.
+          - title: Group Activities
+            imageSrc: https://docs.microsoft.com/media/illustrations/team-services-agile-customize.svg 
+            url: https://github.com/OfficeDev/microsoft-teams-apps-groupactivities
+            text: Quickly create and manage activity groups and collaboration workflows.
+          - title: Quick Responses 
+            imageSrc:  https://docs.microsoft.com/media/illustrations/teams-troubleshoot.svg
+            url: https://github.com/OfficeDev/microsoft-teams-apps-quickresponses
+            text: Effectively answer users' commonly asked questions and build a dynamic library of responses.
 
         # Card
         - title: Bot Templates
@@ -222,7 +196,39 @@ additionalContent:
               note: Provide seamless integration from the Kronos WFM system to Teams Shifts.
             - text: JDA-to-Shifts connector
               url: https://github.com/OfficeDev/Microsoft-Teams-Shifts-WFM-Connectors/tree/master/JDA_v17.2-Shifts-Connector
-              note: Provide seamless integration from the JDA (BlueYonder) WFM system to Teams Shifts.
+              note: Provide seamless integration from the JDA (BlueYonder) WFM system to Teams Shifts.          
+
+# tools section (optional)
+tools:
+  title: SDKs & Tools # < 60 chars (optional)
+  items:
+    # Card
+    - title: JavaScript SDK for Tabs
+      # imageSrc should be square in ratio with no whitespace
+      imageSrc: ./assets/icons/logo_js.png
+      url: /javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest
+    # Card
+    - title: Node.js Bot Framework SDK for bots and messaging extensions
+      imageSrc: ./assets/icons/logo_nodejs.png
+      url: https://github.com/Microsoft/botbuilder-js
+    # Card
+    - title: .NET Bot Framework SDK for bots and messaging extensions
+      imageSrc: ./assets/icons/logo_net.png
+      url: https://github.com/Microsoft/botbuilder-dotnet/
+    # Card
+    - title: Microsoft Graph SDKs
+      imageSrc: ./assets/icons/graph-icon-1.png
+      url: https://docs.microsoft.com/graph/sdks/sdks-overview
+    # Card
+    - title: Microsoft Teams App Studio
+      imageSrc: ./assets/icons/AppStudioIcon.png
+      url: /microsoftteams/platform/concepts/build-and-test/app-studio-overview
+    # Card
+    - title: Yeoman Generator for Microsoft Teams
+      imageSrc: ./assets/icons/Yeoman.png
+      url: https://github.com/OfficeDev/generator-teams
+ 
+
     - title: Samples # < 60 chars (optional)
       items:
         # Card
