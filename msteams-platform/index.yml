@@ -41,10 +41,9 @@ highlightedContent:
       itemType: overview
       url:  /microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors                  
 
-# conceptualContent section (optional)
+conceptualContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
-  items:
-    # Card
+   items:
     - title: Explore
       links:
         - url: /microsoftteams/platform/concepts/building-an-app
@@ -98,7 +97,7 @@ highlightedContent:
         - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
           itemType: how-to-guide
           text: Integrate your Power Virtual Agents chatbot with Teams  
-           
+
     # Card
     - title: Connect
       links:
