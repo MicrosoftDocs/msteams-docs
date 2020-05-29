@@ -115,7 +115,7 @@ conceptualContent:
 productDirectory:
       title: App Templates # < 60 chars (optional)
       summary: Ready-to-use applications
-       items:
+      items:
         # Card
           - title: Company Communicator
              imageSrc:  https://docs.microsoft.com/media/common/i_whats-new.svg  
