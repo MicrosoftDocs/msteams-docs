@@ -126,7 +126,7 @@ productDirectory:
      - title: Request-a-team template
        imageSrc: https://docs.microsoft.com/media/common/i_build.svg
        url: https://github.com/OfficeDev/microsoft-teams-apps-requestateam
-        summary: Enhance your organization's new team creation flow.
+       summary: Enhance your organization's new team creation flow.
 
 # conceptualContent section
 conceptualContent:
