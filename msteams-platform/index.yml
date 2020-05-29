@@ -83,11 +83,11 @@ productDirectory:
         imageSrc: https://docs.microsoft.com/media/common/i_data-collection.svg
         url: https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app
         summary:  Provide answers to team queries from collaboratively sourced information.
-       - title: Expert Finder template
+      - title: Expert Finder template
          imageSrc: https://docs.microsoft.com/media/common/i_account-management.svg
          url: https://github.com/OfficeDev/microsoft-teams-apps-expertfinder
          summary:  Enable your team to identify internal experts based on skills, interests, and education.
-       - title: Book-a-room template
+      - title: Book-a-room template
          imageSrc: https://docs.microsoft.com/media/common/i_code-performance.svg
          url: https://github.com/OfficeDev/microsoft-teams-apps-bookaroom
          summary:  Help your team quickly find and reserve a meeting room.
