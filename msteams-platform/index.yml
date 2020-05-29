@@ -41,9 +41,12 @@ highlightedContent:
       itemType: whats-new
       url:  /microsoftteams/platform/whats-new                  
 
+# conceptualContent section
 conceptualContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+   title: Getting Started
    items:
+   # Card
     - title: Explore
       links:
         - url: /microsoftteams/platform/concepts/building-an-app
@@ -61,7 +64,6 @@ conceptualContent:
         - url: /graph/teams-concept-overview
           itemType: concept
           text: Microsoft Teams + Graph
-
     # Card
     - title: Learn
       links:
@@ -83,8 +85,6 @@ conceptualContent:
         - url: /learn/modules/msteams-webhooks-connectors/
           itemType: learn
           text: Webhooks and Office 365 connectors — connect web services to channels and teams
-
-
     # Card
     - title: Develop
       links:
@@ -97,7 +97,6 @@ conceptualContent:
         - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
           itemType: how-to-guide
           text: Integrate your Power Virtual Agents chatbot with Teams  
-
     # Card
     - title: Connect
       links:
