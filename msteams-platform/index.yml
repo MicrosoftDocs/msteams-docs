@@ -197,4 +197,34 @@ conceptualContent:
           itemType: overview
           text: Feedback & support
 
+# tools section
+tools:
+  title: SDKs & Tools # < 60 chars (optional)
+  items:
+    # Card
+    - title: JavaScript SDK for Tabs
+      # imageSrc should be square in ratio with no whitespace
+      imageSrc: ./assets/icons/logo_js.png
+      url: /javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest
+    # Card
+    - title: Node.js Bot Framework SDK for bots and messaging extensions
+      imageSrc: ./assets/icons/logo_nodejs.png
+      url: https://github.com/Microsoft/botbuilder-js
+    # Card
+    - title: .NET Bot Framework SDK for bots and messaging extensions
+      imageSrc: ./assets/icons/logo_net.png
+      url: https://github.com/Microsoft/botbuilder-dotnet/
+    # Card
+    - title: Microsoft Graph SDKs
+      imageSrc: ./assets/icons/graph-icon-1.png
+      url: https://docs.microsoft.com/graph/sdks/sdks-overview
+    # Card
+    - title: Microsoft Teams App Studio
+      imageSrc: ./assets/icons/AppStudioIcon.png
+      url: /microsoftteams/platform/concepts/build-and-test/app-studio-overview
+    # Card
+    - title: Yeoman Generator for Microsoft Teams
+      imageSrc: ./assets/icons/Yeoman.png
+      url: https://github.com/OfficeDev/generator-teams          
+
 
