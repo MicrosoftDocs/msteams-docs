@@ -43,8 +43,8 @@ highlightedContent:
 
 # productDirectory section (optional)
 productDirectory:
-    title: App Templates and Shifts Connectors # < 60 chars (optional)
-    summary: Ready-to-use applications and integrations
+    title: App Templates  # < 60 chars (optional)
+    summary: Ready-to-use applications 
     items:
       # Card
       - title: Company Communicator template
@@ -84,13 +84,13 @@ productDirectory:
         url: https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app
         summary:  Provide answers to team queries from collaboratively sourced information.
        - title: Expert Finder template
-        imageSrc: https://docs.microsoft.com/media/common/i_account-management.svg
-        url: https://github.com/OfficeDev/microsoft-teams-apps-expertfinder
-        summary:  Enable your team to identify internal experts based on skills, interests, and education.
+         imageSrc: https://docs.microsoft.com/media/common/i_account-management.svg
+         url: https://github.com/OfficeDev/microsoft-teams-apps-expertfinder
+         summary:  Enable your team to identify internal experts based on skills, interests, and education.
        - title: Book-a-room template
-        imageSrc: https://docs.microsoft.com/media/common/i_code-performance.svg
-        url: https://github.com/OfficeDev/microsoft-teams-apps-bookaroom
-        summary:  Help your team quickly find and reserve a meeting room.
+         imageSrc: https://docs.microsoft.com/media/common/i_code-performance.svg
+         url: https://github.com/OfficeDev/microsoft-teams-apps-bookaroom
+         summary:  Help your team quickly find and reserve a meeting room.
       - title: Attendance template
         imageSrc: https://docs.microsoft.com/media/common/i_guidelines.svg
         url: https://github.com/OfficeDev/microsoft-teams-apps-attendance
@@ -196,3 +196,5 @@ conceptualContent:
         - url: /microsoftteams/platform/feedback
           itemType: overview
           text: Feedback & support
+
+
