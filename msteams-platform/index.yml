@@ -2,7 +2,7 @@
 
 title: Microsoft Teams developer documentation # < 60 chars
 # brand: aspnet | azure | dotnet | dynamics | m365 | ms-graph | office | power-bi | power-platform | sql | sql-server | vs | visual-studio | windows | xamarin
-brand: m365
+brand: teams
 
 metadata:
   title: Microsoft Teams Platform developer documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
@@ -226,20 +226,5 @@ tools:
     - title: Yeoman Generator for Microsoft Teams
       imageSrc: ./assets/icons/Yeoman.png
       url: https://github.com/OfficeDev/generator-teams 
-
-# productDirectory section (optional)
-productDirectory:
-    title: App Templates  # < 60 chars (optional)
-    summary: Ready-to-use applications 
-    items:
-      # Card
-      - title: Company Communicator template
-        imageSrc:  https://docs.microsoft.com/media/common/i_whats-new.svg  
-        url: https://github.com/OfficeDev/microsoft-teams-company-communicator-app
-        summary: Enable corporate teams to create and send messages to employees over chat.
-      - title: Celebrations template
-        imageSrc: https://docs.microsoft.com/media/common/i_free-trial.svg
-        url: https://github.com/OfficeDev/microsoft-teams-celebrations-app
-        summary: Facilitate the celebration of team members' birthdays, anniversaries, and other recurring events.               
 
 
