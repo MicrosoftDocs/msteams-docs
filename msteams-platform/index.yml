@@ -123,7 +123,7 @@ productDirectory:
         imageSrc: https://docs.microsoft.com/media/common/i_alert.svg
         url: https://github.com/OfficeDev/microsoft-teams-apps-incidentreport 
         summary: Optimize the management of incidents within your organization. 
-     - title: "Request-a-team template"
+     - title: Request A Team template
        imageSrc: https://docs.microsoft.com/media/common/i_build.svg
        url: https://github.com/OfficeDev/microsoft-teams-apps-requestateam
        summary: Enhance your organization's new team creation flow.
