@@ -77,7 +77,7 @@ conceptualContent:
         - url: /learn/modules/msteams-messaging-extensions/
           itemType: learn
           text: Create task-oriented interactions in Teams with messaging extensions
-        - url: learn/modules/msteams-task-modules/
+        - url: /learn/modules/msteams-task-modules/
           itemType: learn
           text: Collect input in Teams with task modules 
         - url: /learn/modules/msteams-webhooks-connectors/
