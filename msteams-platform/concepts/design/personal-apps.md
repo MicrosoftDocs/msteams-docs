@@ -5,18 +5,10 @@ keywords: teams design guidelines reference framework personal apps
 --- 
 # Personal apps
 
-> [!Important]
-> Full support for tabs on mobile clients is coming soon. To prepare for this change you should follow the [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md) when creating your tabs. Personal apps (static tabs) are currently available in [developer preview](~/resources/dev-preview/developer-preview-intro.md).
->
-> When full support for tabs is released:
->
-> * All tabs will always be available on mobile
-> * Your `contentUrl` **will be loaded in the mobile Teams client**.
-> * For channel/group tabs, users can still open your tab in a separate browser via your `websiteUrl`, however your `contentUrl` will be loaded first.
+> [!NOTE]
+> Full support for tabs on mobile clients is supported in Teams. You should follow the [guidance for tabs on mobile](../../tabs/design/tabs-mobile.md) when creating tabs for mobile platforms.
 
-A personal app is an app with a personal scope. As an app developer, you have the option to provide a version of your app that is built for the individual user. In this version, the collection of tabs (and the bot, if you've included one), are designed for the person. This way, you're able to create a one-on-one interaction with your users.
-
-A personal app is where someone can see everything that's theirs, and all the items they've recently viewed in the app. It puts everything in one place. In the following screenshot, Contoso is a personal app in the personal app flyout.
+A personal app is a Teams application with a personal scope.  As an app developer, you have the option to provide a version of your app that focuses on interactions with a single user. It can be a [conversational bot](../../bots/what-are-bots.md) to engage in one-to-one conversations with a user or a [personal tab](../../tabs/what-are-tabs.md) providing an embedded web experience. Personal apps enable users to view their select content in one place. In the following screenshot, Contoso is a personal app in the personal app flyout.
 
 ![image of the app overflow menu](~/assets/images/Personal-apps-App-flyout.png)
 
