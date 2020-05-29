@@ -113,90 +113,50 @@ conceptualContent:
 
 # productDirectory section (optional)
 productDirectory:
-      title: App Templates # < 60 chars (optional)
-      summary: Ready-to-use applications
-      items:
-        # Card
-          - title: Company Communicator
-            imageSrc:  https://docs.microsoft.com/media/common/i_whats-new.svg  
-            url: https://github.com/OfficeDev/microsoft-teams-company-communicator-app
-            text: Enable corporate teams to create and send messages to employees over chat.
-          - title: Celebrations
-            imageSrc: https://docs.microsoft.com/media/illustrations/team-services-agile-customize.svg  
-            url: https://github.com/OfficeDev/microsoft-teams-celebrations-app
-            text: Facilitate the celebration of team members' birthdays, anniversaries, and other recurring events.
-          - title: SharePoint List Search
-            imageSrc: https://docs.microsoft.com/media/illustrations/biztalk-developer-documentation-1.svg  
-            url: https://github.com/OfficeDev/microsoft-teams-list-search-app
-            text: Search a SharePoint list and insert an item into Teams as an adaptive card.
-          - title: Custom Stickers
-            imageSrc:  https://docs.microsoft.com/media/illustrations/bcs-partner-advanced-management-settings-8.svg 
-            url: https://github.com/OfficeDev/microsoft-teams-stickers-app
-            text: Add custom stickers for your team or organization.
-          - title: Attendance
-            imageSrc: https://docs.microsoft.com/media/illustrations/bcs-partner-advanced-management-add-user-1.svg  
-            url: https://github.com/OfficeDev/microsoft-teams-apps-attendance
-            text: Enable your team to record attendance and generate summarized reports.
-          - title: Associate Insights
-            imageSrc: https://docs.microsoft.com/media/illustrations/virtualization-hperv-server-community.svg   
-            url: https://github.com/OfficeDev/microsoft-teams-apps-associateinsights
-            text: Empower firstline workers to capture customer feedback.
-          - title: Incentives
-            imageSrc: https://docs.microsoft.com/media/illustrations/team-services-get-started-account-manager.svg  
-            url: https://github.com/OfficeDev/microsoft-teams-apps-incentives
-            text: Manage and track incentivized participation in activities and events.
-          - title: Open Badges
-            imageSrc: https://docs.microsoft.com/media/illustrations/dynamics-gdpr-center.svg  
-            url: https://github.com/OfficeDev/microsoft-teams-apps-openbadges
-            text: Track digital learning and award credential badges.
-          - title: Group Activities
-            imageSrc: https://docs.microsoft.com/media/illustrations/team-services-agile-customize.svg 
-            url: https://github.com/OfficeDev/microsoft-teams-apps-groupactivities
-            text: Quickly create and manage activity groups and collaboration workflows.
-          - title: Quick Responses 
-            imageSrc:  https://docs.microsoft.com/media/illustrations/teams-troubleshoot.svg
-            url: https://github.com/OfficeDev/microsoft-teams-apps-quickresponses
-            text: Effectively answer users' commonly asked questions and build a dynamic library of responses.
-
-        # Card
-        - title: Bot Templates
-          links:
-            - text: FAQ Plus bot
-              url: https://github.com/OfficeDev/microsoft-teams-faqplusplus-app
-              note: FAQ bot is a Q&A bot that brings a human in the loop when it is unable to help.
-            - text: HR Support bot
-              url: https://github.com/OfficeDev/microsoft-teams-hrsupport-app
-              note: A HR Q&A bot that brings the HR team in the loop when it is unable to help.
-            - text: Icebreaker bot
-              url: https://github.com/OfficeDev/microsoft-teams-icebreaker-app
-              note: Help your team get closer by pairing random team members for a weekly meetup.
-            - text: Scrum Status bot
-              url: https://github.com/OfficeDev/microsoft-teams-app-scrumstatus
-              note: Enable your team to run asynchronous scrum meetings and share updates.
-            - text: Crowdsourcer bot
-              url: https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app
-              note: Help your team acquire queried information sourced collaboratively from organization members.
-            - text: Expert Finder bot
-              url: https://github.com/OfficeDev/microsoft-teams-apps-expertfinder
-              note: Help your team find internal experts based on skills, interests, and education.
-            - text: Book-a-room bot
-              url: https://github.com/OfficeDev/microsoft-teams-apps-bookaroom
-              note: Help your team quickly find and reserve a meeting room.
-            - text: Remote Support bot
-              url: https://github.com/OfficeDev/microsoft-teams-apps-remotesupport
-              note: Provide a focused interface between requesters throughout your organization and the internal support team.
-            - text: Incident Reporter bot
-              url: https://github.com/OfficeDev/microsoft-teams-apps-incidentreport  
-              note: Optimize the management of incidents within your organization.
-        # Card
-        - title: Shifts Connectors
-          links:      
-            - text: Kronos-to-Shifts connector
-              url: https://github.com/OfficeDev/Microsoft-Teams-Shifts-WFM-Connectors/tree/master/Kronos-Shifts-Connector
-              note: Provide seamless integration from the Kronos WFM system to Teams Shifts.
-            - text: JDA-to-Shifts connector
-              url: https://github.com/OfficeDev/Microsoft-Teams-Shifts-WFM-Connectors/tree/master/JDA_v17.2-Shifts-Connector
-              note: Provide seamless integration from the JDA (BlueYonder) WFM system to Teams Shifts.          
+    title: App Templates # < 60 chars (optional)
+    summary: Ready-to-use applications
+    items:
+      # Card
+      - title: Company Communicator
+        imageSrc:  https://docs.microsoft.com/media/common/i_whats-new.svg  
+        url: https://github.com/OfficeDev/microsoft-teams-company-communicator-app
+        text: Enable corporate teams to create and send messages to employees over chat.
+      - title: Celebrations
+        imageSrc: https://docs.microsoft.com/media/illustrations/team-services-agile-customize.svg  
+        url: https://github.com/OfficeDev/microsoft-teams-celebrations-app
+        text: Facilitate the celebration of team members' birthdays, anniversaries, and other recurring events.
+      - title: SharePoint List Search
+        imageSrc: https://docs.microsoft.com/media/illustrations/biztalk-developer-documentation-1.svg  
+        url: https://github.com/OfficeDev/microsoft-teams-list-search-app
+        text: Search a SharePoint list and insert an item into Teams as an adaptive card.
+      - title: Custom Stickers
+        imageSrc:  https://docs.microsoft.com/media/illustrations/bcs-partner-advanced-management-settings-8.svg 
+        url: https://github.com/OfficeDev/microsoft-teams-stickers-app
+        text: Add custom stickers for your team or organization.
+      - title: Attendance
+        imageSrc: https://docs.microsoft.com/media/illustrations/bcs-partner-advanced-management-add-user-1.svg  
+        url: https://github.com/OfficeDev/microsoft-teams-apps-attendance
+        text: Enable your team to record attendance and generate summarized reports.
+      - title: Associate Insights
+        imageSrc: https://docs.microsoft.com/media/illustrations/virtualization-hperv-server-community.svg   
+        url: https://github.com/OfficeDev/microsoft-teams-apps-associateinsights
+        text: Empower firstline workers to capture customer feedback.
+      - title: Incentives
+        imageSrc: https://docs.microsoft.com/media/illustrations/team-services-get-started-account-manager.svg  
+        url: https://github.com/OfficeDev/microsoft-teams-apps-incentives
+        text: Manage and track incentivized participation in activities and events.
+      - title: Open Badges
+        imageSrc: https://docs.microsoft.com/media/illustrations/dynamics-gdpr-center.svg  
+        url: https://github.com/OfficeDev/microsoft-teams-apps-openbadges
+        text: Track digital learning and award credential badges.
+      - title: Group Activities
+        imageSrc: https://docs.microsoft.com/media/illustrations/team-services-agile-customize.svg 
+        url: https://github.com/OfficeDev/microsoft-teams-apps-groupactivities
+        text: Quickly create and manage activity groups and collaboration workflows.
+      - title: Quick Responses 
+        imageSrc:  https://docs.microsoft.com/media/illustrations/teams-troubleshoot.svg
+        url: https://github.com/OfficeDev/microsoft-teams-apps-quickresponses
+        text: Effectively answer users' commonly asked questions and build a dynamic library of responses.
 
 # tools section (optional)
 tools:
