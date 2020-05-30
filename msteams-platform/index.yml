@@ -53,6 +53,8 @@ productDirectory:
         summary: Company Communicator — Enable corporate teams to create and send messages to employees over chat.
         url: https://github.com/OfficeDev/microsoft-teams-celebrations-app
         summary: Celebrations — Facilitate the celebration of team members' birthdays, anniversaries, and other recurring events.
+        url: https://github.com/OfficeDev/microsoft-teams-celebrations-app
+        summary: Facilitate the celebration of team members' birthdays, anniversaries, and other recurring events.
       - title: Celebrations template
         imageSrc: https://docs.microsoft.com/media/common/i_free-trial.svg
         url: https://github.com/OfficeDev/microsoft-teams-celebrations-app
