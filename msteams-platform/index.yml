@@ -43,10 +43,7 @@ highlightedContent:
     - title: Shifts Connectors — workforce management integrations
       itemType: deploy
       url:  /microsoftteams/platform/samples/shifts-wfm-connectors
-    - title: What's new
-      itemType: whats-new
-      url:  /microsoftteams/platform/whats-new 
-
+   
 # conceptualContent section
 conceptualContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
@@ -66,10 +63,14 @@ conceptualContent:
           text: Understand your use cases
         - url:  /microsoftteams/platform/concepts/design/map-use-cases
           itemType: concept
-          text: Map you use cases to Teams client capabilities
+          text: Map your use cases to Teams client capabilities
+        - url:  /microsoftteams/platform/whats-new 
+          itemType: whats-new
+          title: What's new
         - url: /graph/teams-concept-overview
           itemType: concept
           text: Microsoft Teams + Graph
+      
     # Card
     - title: Learn
       links:
