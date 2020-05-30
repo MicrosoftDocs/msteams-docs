@@ -46,7 +46,7 @@ highlightedContent:
 additionalContent:
   # Supports up to 3 sections
   sections:
-    - title: App Templates A — D  # < 60 chars (optional)
+    - title: Section 1  # < 60 chars (optional)
       summary: Ready-to-use applications 
       items:
         # Card1
@@ -98,7 +98,7 @@ additionalContent:
           url: https://github.com/OfficeDev/microsoft-teams-apps-attendance
           summary: Enable your team to record attendance and generate summarized reports.
   sections:
-    - title: App Templates  # < 60 chars (optional)
+    - title: Section 2  # < 60 chars (optional)
       summary: Ready-to-use applications 
       items:
         # Card13        
