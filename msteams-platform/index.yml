@@ -109,7 +109,7 @@ additionalContent:
         - title: Incentives
           url: https://github.com/OfficeDev/microsoft-teams-apps-incentives
           summary: Manage and track incentivized participation in activities and events.
-       # Card15
+        # Card15
         - title: Open Badges
           url: https://github.com/OfficeDev/microsoft-teams-apps-openbadges
           summary: Track digital learning and award credential badges.
@@ -117,7 +117,7 @@ additionalContent:
         - title: Group Activities
           url: https://github.com/OfficeDev/microsoft-teams-apps-groupactivities
           summary: Quickly create and manage activity groups and collaboration workflows.
-       # Card17
+        # Card17
         - title: Quick Responses
           url: https://github.com/OfficeDev/microsoft-teams-apps-quickresponses
           summary: Effectively answer users' commonly asked questions and build a dynamic library of responses.
