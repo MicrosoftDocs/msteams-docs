@@ -51,62 +51,50 @@ additionalContent:
       items:
         # Card1
         - title: Company Communicator
-          imageSrc:  https://docs.microsoft.com/media/common/i_whats-new.svg  
           url: https://github.com/OfficeDev/microsoft-teams-company-communicator-app
           summary: Enable corporate teams to create and send messages to employees over chat.
         # Card2  
-        - title: Celebrations 
-          imageSrc: https://docs.microsoft.com/media/common/i_free-trial.svg
+        - title: Celebrations
           url: https://github.com/OfficeDev/microsoft-teams-celebrations-app
           summary: Facilitate the celebration of team members' birthdays, anniversaries, and other recurring events.
         # Card3
-        - title: FAQ Plus 
-          imageSrc: https://docs.microsoft.com/media/common/i_library.svg
+        - title: FAQ Plus
           url: https://github.com/OfficeDev/microsoft-teams-faqplusplus-app
           summary: Enhance your team's productivity with a question and answer bot.
         # Card4
-        - title: HR Support 
-          imageSrc: https://docs.microsoft.com/media/common/i_form.svg 
+        - title: HR Support
           url: https://github.com/OfficeDev/microsoft-teams-faqplusplus-app
           summary: Enhance your team's productivity with a question and answer bot.  
         # Card5
-        - title: SharePoint List Search
-          imageSrc: https://docs.microsoft.com/media/common/i_article.svg  
+        - title: SharePoint List Search 
           url: https://github.com/OfficeDev/microsoft-teams-list-search-app
           summary: Search a SharePoint list and insert an item into Teams as an adaptive card.
         # Card6
         - title: Custom Stickers
-          imageSrc:  https://docs.microsoft.com/media/common/i_article.svg
           url: https://github.com/OfficeDev/microsoft-teams-stickers-app
           summary: Add custom stickers for your team or organization.
         # Card7
-        - title: Icebreaker 
-          imageSrc: https://docs.microsoft.com/media/common/i_multi-connect.svg 
+        - title: Icebreaker
           url: https://github.com/OfficeDev/microsoft-teams-icebreaker-app
           summary:  Promote collaboration by randomly pairing team members for a weekly meetup.
         # Card8
-        - title: Scrum Status 
-          imageSrc: https://docs.microsoft.com/media/common/i_kaban.svg
+        - title: Scrum Status
           url: https://github.com/OfficeDev/microsoft-teams-app-scrumstatus
           summary:  Enable your team to run asynchronous scrum meetings and share updates.
         # Card9
-        - title: Crowd Sourcer 
-          imageSrc: https://docs.microsoft.com/media/common/i_data-collection.svg
+        - title: Crowd Sourcer
           url: https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app
           summary:  Provide answers to team queries from collaboratively sourced information.
         # Card10
         - title: Expert Finder
-          imageSrc: https://docs.microsoft.com/media/common/i_account-management.svg
           url: https://github.com/OfficeDev/microsoft-teams-apps-expertfinder
           summary:  Enable your team to identify internal experts based on skills, interests, and education.
         # Card11
-        - title: "Book-a-Room" 
-          imageSrc: https://docs.microsoft.com/media/common/i_code-performance.svg
+        - title: "Book-a-Room"
           url: https://github.com/OfficeDev/microsoft-teams-apps-bookaroom
           summary:  Help your team quickly find and reserve a meeting room.
         # Card12
         - title: Attendance
-          imageSrc: https://docs.microsoft.com/media/common/i_guidelines.svg
           url: https://github.com/OfficeDev/microsoft-teams-apps-attendance
           summary: Enable your team to record attendance and generate summarized reports.
   sections:
@@ -114,43 +102,35 @@ additionalContent:
       summary: Ready-to-use applications 
       items:
         # Card13        
-        - title: Associate Insights 
-          imageSrc: https://docs.microsoft.com/media/common/i_investigate.svg
+        - title: Associate Insights
           url: https://github.com/OfficeDev/microsoft-teams-apps-associateinsights
           summary: Empower firstline workers to capture customer feedback.
         # Card14  
-        - title: Incentives 
-          imageSrc: https://docs.microsoft.com/media/common/i_advanced.svg
+        - title: Incentives
           url: https://github.com/OfficeDev/microsoft-teams-apps-incentives
           summary: Manage and track incentivized participation in activities and events.
        # Card15
-        - title: Open Badges 
-          imageSrc: https://docs.microsoft.com/media/common/i_code-quality.svg
+        - title: Open Badges
           url: https://github.com/OfficeDev/microsoft-teams-apps-openbadges
           summary: Track digital learning and award credential badges.
         # Card16
-        - title: Group Activities 
-          imageSrc: https://docs.microsoft.com/media/common/i_configure-teams.svg
+        - title: Group Activities
           url: https://github.com/OfficeDev/microsoft-teams-apps-groupactivities
           summary: Quickly create and manage activity groups and collaboration workflows.
        # Card17
         - title: Quick Responses
-          imageSrc:  https://docs.microsoft.com/media/common/i_event.svg
           url: https://github.com/OfficeDev/microsoft-teams-apps-quickresponses
           summary: Effectively answer users' commonly asked questions and build a dynamic library of responses.
         # Card18
-        - title: Remote Support 
-          imageSrc: https://docs.microsoft.com/media/common/i_benefits.svg
+        - title: Remote Support
           url: https://github.com/OfficeDev/microsoft-teams-apps-remotesupport
           summary: Provide a focused interface with the internal support team.  
         # Card19
-        - title: Incident Reporter 
-          imageSrc: https://docs.microsoft.com/media/common/i_alert.svg
+        - title: Incident Reporter
           url: https://github.com/OfficeDev/microsoft-teams-apps-incidentreport 
           summary: Optimize the management of incidents within your organization. 
         # Card20
         - title: "Request-a-Team"
-          imageSrc: https://docs.microsoft.com/media/common/i_build.svg
           url: https://github.com/OfficeDev/microsoft-teams-apps-requestateam
           summary: Enhance your organization's new team creation flow.
 
