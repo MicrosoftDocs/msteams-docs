@@ -54,29 +54,29 @@ conceptualContent:
       links:
         - url: /microsoftteams/platform/concepts/building-an-app
           itemType: concept
-          text: Building an app for Microsoft Teams
+          text: Build a Microsoft Teams app
         - url: /microsoftteams/platform/concepts/extensibility-points
           itemType: concept
           text: Capability points in Microsoft Teams
         - url: /microsoftteams/platform/concepts/design/understand-use-cases
           itemType: concept
-          text: Understand your use cases
+          text: Understand Microsoft Teams use cases
         - url:  /microsoftteams/platform/concepts/design/map-use-cases
           itemType: concept
-          text: Map your use cases to Teams client capabilities
+          text: Map use cases to Microsoft Teams capabilities
+        - url: /graph/teams-concept-overview
+          itemType: concept
+          text: Microsoft Teams + Microsoft Graph API
         - url:  /microsoftteams/platform/whats-new 
           itemType: whats-new
           text: What's new
-        - url: /graph/teams-concept-overview
-          itemType: concept
-          text: Microsoft Teams + Graph
       
     # Card
     - title: Learn
       links:
         - url: /learn/modules/intro-microsoft-teams-apps
           itemType: learn
-          text: Building apps for Teams — introduction
+          text: Build apps for Microsoft Teams — introduction
         - url: /learn/modules/embedded-web-experiences
           itemType: learn
           text: Tabs — create embedded web experiences 
@@ -85,7 +85,7 @@ conceptualContent:
           text: Bots — create conversational interactions
         - url: /learn/modules/msteams-messaging-extensions/
           itemType: learn
-          text: messaging extensions — create task-oriented interactions 
+          text: Messaging extensions — create task-oriented interactions 
         - url: /learn/modules/msteams-task-modules/
           itemType: learn
           text: Task modules — collect input and gather information
@@ -117,102 +117,6 @@ conceptualContent:
           itemType: overview
           text: Feedback & support                       
 
-# additionalContent (optional)
-# Card with summary style
-additionalContent:
-  # Supports up to 3 sections
-  sections:
-  # section one
-    - title: App Templates # < 60 chars (optional)
-      summary: Ready-to-use applications 
-      items:
-        # Card1
-        - title: Associate Insights
-          url: https://github.com/OfficeDev/microsoft-teams-apps-associateinsights
-          summary: Empower firstline workers to capture customer feedback.
-        # Card2
-        - title: Attendance
-          url: https://github.com/OfficeDev/microsoft-teams-apps-attendance
-          summary: Enable your team to record attendance and generate summarized reports.
-        # Card3
-        - title: "Book-a-Room"
-          url: https://github.com/OfficeDev/microsoft-teams-apps-bookaroom
-          summary:  Help your team quickly find and reserve a meeting room.
-        # Card4
-        - title: Celebrations
-          url: https://github.com/OfficeDev/microsoft-teams-celebrations-app
-          summary: Facilitate the celebration of team members' birthdays, anniversaries, and other recurring events.
-        # Card5
-        - title: Company Communicator  
-          url: https://github.com/OfficeDev/microsoft-teams-company-communicator-app
-          summary: Enable corporate teams to create and send messages to employees over chat.
-        # Card6
-        - title: Crowd Sourcer
-          url: https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app
-          summary:  Provide answers to team queries from collaboratively sourced information.
-        # Card7
-        - title: Custom Stickers
-          url: https://github.com/OfficeDev/microsoft-teams-stickers-app
-          summary: Add custom stickers for your team or organization.
-        # Card8
-        - title: Expert Finder
-          url: https://github.com/OfficeDev/microsoft-teams-apps-expertfinder
-          summary:  Enable your team to identify internal experts based on skills, interests, and education.
-        # Card9
-        - title: FAQ Plus
-          url: https://github.com/OfficeDev/microsoft-teams-faqplusplus-app
-          summary: Enhance your team's productivity with a question and answer bot.
-        # Card10
-        - title: Group Activities
-          url: https://github.com/OfficeDev/microsoft-teams-apps-groupactivities
-          summary: Quickly create and manage activity groups and collaboration workflows.
-        # Card11
-        - title: HR Support
-          url: https://github.com/OfficeDev/microsoft-teams-faqplusplus-app
-          summary: Enhance your team's productivity with a question and answer bot.  
-        # Card12
-        - title: Icebreaker
-          url: https://github.com/OfficeDev/microsoft-teams-icebreaker-app
-          summary:  Promote collaboration by randomly pairing team members for a weekly meetup.
-    # section two
-    - title: App Templates   # < 60 chars (optional)
-      summary: Ready-to-use applications 
-      items:     
-        # Card1  
-        - title: Incentives
-          url: https://github.com/OfficeDev/microsoft-teams-apps-incentives
-          summary: Manage and track incentivized participation in activities and events.
-        # Card2
-        - title: Incident Reporter
-          url: https://github.com/OfficeDev/microsoft-teams-apps-incidentreport 
-          summary: Optimize the management of incidents within your organization. 
-        # Card3
-        - title: Open Badges
-          url: https://github.com/OfficeDev/microsoft-teams-apps-openbadges
-          summary: Track digital learning and award credential badges.
-        # Card4
-        - title: Quick Responses
-          url: https://github.com/OfficeDev/microsoft-teams-apps-quickresponses
-          summary: Effectively answer users' commonly asked questions and build a dynamic library of responses.
-        # Card5
-        - title: Remote Support
-          url: https://github.com/OfficeDev/microsoft-teams-apps-remotesupport
-          summary: Provide a focused interface with the internal support team.  
-        # Card6
-        - title: "Request-a-Team"
-          url: https://github.com/OfficeDev/microsoft-teams-apps-requestateam
-          summary: Enhance your organization's new team creation flow.
-        # Card7
-        - title: Scrum Status
-          url: https://github.com/OfficeDev/microsoft-teams-app-scrumstatus
-          summary:  Enable your team to run asynchronous scrum meetings and share updates.
-        # Card8
-        - title: SharePoint List Search 
-          url: https://github.com/OfficeDev/microsoft-teams-list-search-app
-          summary: Search a SharePoint list and insert an item into Teams as an adaptive card.
-
-
-
 # tools section
 tools:
   title: SDKs & Tools # < 60 chars (optional)
@@ -242,5 +146,100 @@ tools:
     - title: Yeoman Generator for Microsoft Teams
       imageSrc: ./assets/icons/Yeoman.png
       url: https://github.com/OfficeDev/generator-teams 
+# additionalContent (optional)
+# Card with summary style
+additionalContent:
+  # Supports up to 3 sections
+  sections:
+  # section one
+    - title: App Templates # < 60 chars (optional)
+      summary: Ready-to-use applications 
+      items:
+        # Card1
+        - title: Associate Insights
+          url: https://github.com/OfficeDev/microsoft-teams-apps-associateinsights
+          summary: Empower firstline workers to capture customer feedback.
+        # Card2
+        - title: Attendance
+          url: https://github.com/OfficeDev/microsoft-teams-apps-attendance
+          summary: Enable your team to record attendance and generate summarized reports.
+        # Card3
+        - title: "Book-a-Room"
+          url: https://github.com/OfficeDev/microsoft-teams-apps-bookaroom
+          summary:  Help your team quickly find and reserve a meeting room.
+        # Card4
+        - title: Celebrations
+          url: https://github.com/OfficeDev/microsoft-teams-celebrations-app
+          summary: Facilitate the celebration of birthdays, anniversaries, and other recurring events.
+        # Card5
+        - title: Company Communicator  
+          url: https://github.com/OfficeDev/microsoft-teams-company-communicator-app
+          summary: Enable corporate teams to create and send chat messages to employees.
+        # Card6
+        - title: Crowd Sourcer
+          url: https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app
+          summary:  Provide answers to team queries from collaboratively sourced information.
+        # Card7
+        - title: Custom Stickers
+          url: https://github.com/OfficeDev/microsoft-teams-stickers-app
+          summary: Add custom stickers within your team or organization.
+        # Card8
+        - title: Expert Finder
+          url: https://github.com/OfficeDev/microsoft-teams-apps-expertfinder
+          summary:  Enable your team to identify internal experts based on skills, interests, and education.
+        # Card9
+        - title: FAQ Plus
+          url: https://github.com/OfficeDev/microsoft-teams-faqplusplus-app
+          summary: Enhance your team's productivity with a question and answer bot.
+        # Card10
+        - title: Group Activities
+          url: https://github.com/OfficeDev/microsoft-teams-apps-groupactivities
+          summary: Quickly create and manage activity groups and collaboration workflows.
+        # Card11
+        - title: HR Support
+          url: https://github.com/OfficeDev/microsoft-teams-faqplusplus-app
+          summary: Provide HR support with a question and answer bot.  
+        # Card12
+        - title: Icebreaker
+          url: https://github.com/OfficeDev/microsoft-teams-icebreaker-app
+          summary:  Promote collaboration by randomly pairing team members for weekly meetups.
+    # section two
+    - title: App Templates   # < 60 chars (optional)
+      summary: Ready-to-use applications 
+      items:     
+        # Card1  
+        - title: Incentives
+          url: https://github.com/OfficeDev/microsoft-teams-apps-incentives
+          summary: Manage and track incentivized participation in activities and events.
+        # Card2
+        - title: Incident Reporter
+          url: https://github.com/OfficeDev/microsoft-teams-apps-incidentreport 
+          summary: Optimize the management of incidents within your organization. 
+        # Card3
+        - title: Open Badges
+          url: https://github.com/OfficeDev/microsoft-teams-apps-openbadges
+          summary: Track digital learning and award credential badges.
+        # Card4
+        - title: Quick Responses
+          url: https://github.com/OfficeDev/microsoft-teams-apps-quickresponses
+          summary: Effectively answer commonly asked questions and build a dynamic library of responses.
+        # Card5
+        - title: Remote Support
+          url: https://github.com/OfficeDev/microsoft-teams-apps-remotesupport
+          summary: Provide a focused interface with an internal support team.  
+        # Card6
+        - title: "Request-a-Team"
+          url: https://github.com/OfficeDev/microsoft-teams-apps-requestateam
+          summary: Enhance your organization's new team creation flow.
+        # Card7
+        - title: Scrum Status
+          url: https://github.com/OfficeDev/microsoft-teams-app-scrumstatus
+          summary:  Enable your team to run asynchronous scrum meetings and share updates.
+        # Card8
+        - title: SharePoint List Search 
+          url: https://github.com/OfficeDev/microsoft-teams-list-search-app
+          summary: Search a SharePoint list and insert an item as an adaptive card in Teams.
+
+
 
 
