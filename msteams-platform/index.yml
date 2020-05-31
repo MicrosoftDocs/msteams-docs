@@ -37,12 +37,12 @@ highlightedContent:
     - title: Webhooks and connectors — programmed messaging and notifications
       itemType: overview
       url:  /microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors 
-    - title: App Templates — production-ready applications
-      itemType: deploy
-      url:  /microsoftteams/platform/samples/app-templates
     - title: Shifts Connectors — workforce management integrations
       itemType: deploy
       url:  /microsoftteams/platform/samples/shifts-wfm-connectors
+    - title: App Templates — production-ready applications
+      itemType: deploy
+      url:  /microsoftteams/platform/samples/app-templates
    
 # conceptualContent section
 conceptualContent:
