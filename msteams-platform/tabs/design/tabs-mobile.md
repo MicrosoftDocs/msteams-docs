@@ -5,23 +5,13 @@ keywords: teams design guidelines reference framework personal apps mobile tabs
 ---
 # Tabs on mobile
 
-> [!Important]
-> Full support for tabs on mobile clients is coming soon. To prepare for this change you should follow the this guidance when creating your tabs. Personal apps (static tabs) are currently available in [developer preview](~/resources/dev-preview/developer-preview-intro.md). and channel / group chat tabs are available in the `...` overflow menu for the tab.
->
-> When full support for tabs is released:
->
-> * All tabs will always be available on mobile
-> * Your `contentUrl` **will be loaded in the mobile Teams client**.
-> * For channel/group tabs, users can still open your tab in a separate browser via your `websiteUrl`, however your `contentUrl` will be loaded first.
-> * If your tab uses authentication, you must upgrade your Teams JavaScript SDK to version 1.4.1 or later, or authentication will fail.
-
 Custom tabs can be part of a channel, group chat, or personal app (apps that contain static tabs and/or a one-to-one bot).
 
 Personal apps are available on mobile clients in the App Drawer. The app can only be installed from a desktop or web client, and can take up to 24 hours to appear on mobile clients.
 
 Group and channel tabs are available on mobile clients as well. The default behavior is currently to use your `websiteUrl` to launch your tab in a browser window. However, they can be loaded on a mobile client by clicking the `...` overflow menu next to the tab and choosing **Open**, which will use your `contentUrl` to load the tab inside the Teams mobile client.
 
-![mobile app drawer](~/assets/images/app-drawer.png)
+![mobile app drawer](../../assets/images/personal-app-mobile.png)
 
 ## Developer considerations for mobile support
 

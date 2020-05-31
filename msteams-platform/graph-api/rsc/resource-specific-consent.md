@@ -1,20 +1,20 @@
 ---
-title: Resource specific consent in Teams
-description: Describes resource specific consent in Teams and how to make advantage of it.
+title: Resource-specific consent in Teams
+description: Describes resource-specific consent in Teams and how to make advantage of it.
 localization_priority:  Normal
 author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams authorization OAuth SSO AAD rsc Graph
 ---
-# Resource specific consent (RSC) — Developer Preview
+# Resource-specific consent (RSC) — Developer Preview
 
 >[!NOTE]
->The resource specific consent permissions are only available in desktop and Android clients after Developer Preview has been enabled. See [How do I enable Developer Preview](../resources/dev-preview/developer-preview-intro.md) for more information.
+>The resource-specific consent permissions are only available in desktop and Android clients after Developer Preview has been enabled. See [How do I enable Developer Preview](../../resources/dev-preview/developer-preview-intro.md) for more information.
 
-Resource specific consent (RSC) is a Microsoft Teams and Graph API integration that enables your app to use API endpoints to manage specific teams within an organization. The resource specific consent (RSC) permissions model enables *team owners* to grant consent for an application to access and/or modify a team's data. The granular, Teams-specific, RSC permissions define what an application can do within a specific team:
+Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration that enables your app to use API endpoints to manage specific teams within an organization. The resource-specific consent (RSC) permissions model enables *team owners* to grant consent for an application to access and/or modify a team's data. The granular, Teams-specific, RSC permissions define what an application can do within a specific team:
 
-## Resource specific permissions
+## Resource-specific permissions
 
 |Application permission| Action |
 | ----- | ----- |
@@ -34,9 +34,9 @@ Resource specific consent (RSC) is a Microsoft Teams and Graph API integration t
 |Owner.Read.Group|Get this team's owners.​|
 
 >[!NOTE]
->Resource specific permissions are only available to Teams apps installed on the Teams client and are currently not part of the Azure Active Directory portal.
+>Resource-specific permissions are only available to Teams apps installed on the Teams client and are currently not part of the Azure Active Directory portal.
 
-## Enabling resource specific consent in your application
+## Enabling resource-specific consent in your application
 
 The steps for enabling RSC in your application are as follows:
 
@@ -58,7 +58,7 @@ You can enable or disable  [group owner consent](/azure/active-directory/manage-
  > - Select **Azure Active Directory** =>**Enterprise applications** =>**User settings**.
 > - Enable, disable, or limit user consent with the control labeled **Users can consent to apps accessing company data for the groups they own** (This capability is enabled by default).
 
-![azure rsc configuration](../assets/images/azure-rsc-configuration.svg)
+![azure rsc configuration](../../assets/images/azure-rsc-configuration.svg)
 
 | Value | Description|
 |--- | --- |
@@ -96,13 +96,13 @@ You'll need to have the following values from the Azure AD registration process 
 
 ## Update your Teams app manifest
 
-The RSC permissions are declared in you app manifest (JSON) file.  Add a [webApplicationInfo](../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
+The RSC permissions are declared in you app manifest (JSON) file.  Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
 
 > [!div class="checklist"]
 >
 > - **id**  — your Azure AD app id. *See* [Register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
 > - **resource**  — any string. This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.
-> - **application permissions** — RSC permissions for  your app. *See* [Resource Specific Permissions](resource-specific-consent.md#resource-specific-permissions).
+> - **application permissions** — RSC permissions for  your app. *See* [Resource-specific Permissions](resource-specific-consent.md#resource-specific-permissions).
 
 >
 >[!IMPORTANT]
@@ -151,7 +151,7 @@ The RSC permissions are declared in you app manifest (JSON) file.  Add a [webApp
 
 ## Install your app directly in Teams
 
-Once you've created your app you can [upload your app package](../concepts/deploy-and-publish/apps-upload.md#upload-your-package-into-a-team-using-the-apps-tab) directly to a specific team.  To do so, the **Upload custom apps** policy setting must be enabled as part of the custom app setup policies. *See* [Custom app policy settings](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).
+Once you've created your app you can [upload your app package](../../concepts/deploy-and-publish/apps-upload.md#upload-your-package-into-a-team-using-the-apps-tab) directly to a specific team.  To do so, the **Upload custom apps** policy setting must be enabled as part of the custom app setup policies. *See* [Custom app policy settings](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).
 
 ## Check your app for added RSC permissions
 
@@ -171,7 +171,7 @@ Once the app has been installed to a team, you can use [Graph Explorer](https://
 > - Log into **Graph Explorer**.
 > - Make a **GET** call to the following endpoint: `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants`. The clientAppId field in the response will map to the appId specified in the Teams app manifest.
 
- ![Graph explorer response to GET call.](../assets/images/graph-permissions.png)
+ ![Graph explorer response to GET call.](../../assets/images/graph-permissions.png)
 
  > [!div class="nextstepaction"]
-> [Test resource specific consent permissions in Teams](./test-resource-specific-consent.md)
+> [Test resource-specific consent permissions in Teams](test-resource-specific-consent.md)
