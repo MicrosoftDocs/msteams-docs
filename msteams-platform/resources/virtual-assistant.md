@@ -13,13 +13,14 @@ A Virtual Assistant comprises:
 - Virtual Assistant core: The [Virtual Assistant core template](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template) is the basic building block that brings together the virtual assistant capabilities and the Microsoft technologies required to build a Virtual Assistant including Bot Framework SDK, LUIS, QnA Maker, skills registration, linked accounts, etc.
 - Skills: Common assistant scenarios are provided as reusable conversational [skills](https://microsoft.github.io/botframework-solutions/overview/skills). Individual skills can be plugged into a Virtual Assistant solution to enable multiple scenarios. Skills include LUIS models, Dialogs and Integration code and delivered in source code form enabling you to customize and extend as required.
 
-TODO: Insert image here
+![Virtual Assistant overview](~/assets/images/bots/virtual-assistant/overview.png)
 
 Text message activities are routed to associated skills by the Virtual Assistant core using [dispatch](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-tutorial-dispatch?view=azure-bot-service-4.0&tabs=cs) model. Individual skills register their LUIS models with Virtual Assistant so that dispatch model builds intelligence to understand skill intents. This enables the Virtual Assistant to quickly identify which LUIS model should handle a given utterance and activities are dispatched to the corresponding skill associated with it.
 
 ## When to use a Virtual Assistant
 
 Consider a large organization that has multiple business workflows related to employee self-service across business functions. To enable employees to complete these workflows, an employee may be required to go to different portals. In the context of digital transformation, this would manifest itself in the form of multiple apps or bots that an employee needs to install/access for completing business workflows. These apps may be built separately by each business function or may be consolidated under a digital employee experiences team.
+
 For example, an organization may have an HR helpdesk, IT self-service, and leave management as separate bots surfaced to users via Microsoft Teams. These apps will need to be made discoverable for end users via tenant app catalog, app setup policies, and more. For each app developed within the organization the central employee experience team will focus on adoption and change management individually. An alternate approach could be to leverage Virtual Assistants and surface multiple app scenarios within a single interface.
 
 An organization should consider building a Virtual Assistant when:
@@ -28,7 +29,7 @@ An organization should consider building a Virtual Assistant when:
 - Already developed apps are customizable and owned by the organization to be able to convert these into skills for a Virtual Assistant
 - Central employee experiences team is able to influence customizations to existing apps and provide necessary guidance for plugging existing apps as skills in Virtual Assistant experience
 
-TODO: Insert image here
+![Central team maintains the assistant, and business function teams contribute skills](~/assets/images/bots/virtual-assistant/business-functions.png)
 
 ## How to make your Virtual Assistant ready for Microsoft Teams
 
@@ -36,7 +37,7 @@ Microsoft has published a [Visual Studio template](https://marketplace.visualstu
 
 [Extend Virtual Assistant to Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/)
 
-TODO: Insert image here
+![High-level diagram of a Virtual Assistant solution](~/assets/images/bots/virtual-assistant/high-level-diagram.png)
 
 ### Handling adaptive cards
 In order to dispatch requests correctly, Virtual Assistants need to identify the correct LUIS model and the corresponding skill associated with it.
@@ -120,7 +121,7 @@ Here is a code snippet for extracting `skillId` from card action data. We implem
 
 Virtual Assistants can also handle interruptions in case a user tries to invoke another skill while a different skill is currently active. To handle this request the Virtual Assistant core prompts the users with a confirmation message to switch skills if the user utterance intent matches with a different skill than the skill which is currently active.
 
-TODO: Insert image
+![Confirmation prompt when switching to a new skill](~/assets/images/bots/virtual-assistant/switch-skills-prompt.png)
 
 Bot Framework has introduced [SwitchSkillDialog](https://github.com/microsoft/botframework-solutions/blob/6d40fa8ae05f96b0c5e0464e01361a9e1deb696c/sdk/csharp/libraries/microsoft.bot.solutions/Skills/Dialogs/SwitchSkillDialog.cs) to power this flow. `SwitchSkillDialog` saves user's current activity and prompts the user to confirm if they want to switch skills. Based on user's choice, an activity derived from saved activity is forwarded to the right skill and the flow is continued from there. While deriving an activity from saved activity, the value field is not copied which is used to store skill information if given activity is a card action based activity. 
 
@@ -341,7 +342,9 @@ Some messaging extension activities do not include the command ID: for example, 
 
 ## Example: Converting the Book a Meeting app template to a Virtual Assistant skill
 
-TODO: Add
+![Virtual Assistant with a "book a room" skill](~/assets/images/bots/virtual-assistant/book-a-room-skill.png)
+
+TODO: Nehal to provide the text here
 
 ## Known limitations
 
