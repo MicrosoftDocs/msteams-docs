@@ -167,6 +167,8 @@ To create an app package, you need to add your app manifest and (optionally) you
 
 If you've been using App Studio, you can install your app from the **Test and distribute** tab of the **Manifest editor**. Alternatively, you can install your app package by clicking the `...` overflow menu from the left navigation rail, clicking **More apps**, then the **Upload a custom app** link. You can also import an app manifest or app package into App Studio to make additional updates before uploading.
 
+In order to install your app with either method, you need to have [permission to install a custom app](https://docs.microsoft.com/en-us/microsoftteams/teams-custom-app-policies-and-settings).
+
 ## Next steps
 
 * [Bot conversation basics](./conversations/conversation-basics.md)
