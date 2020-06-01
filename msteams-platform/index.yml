@@ -152,7 +152,7 @@ additionalContent:
   # Supports up to 3 sections
   sections:
   # section one
-    - title: App Templates # < 60 chars (optional)
+    - title: App Templates A - H # < 60 chars (optional)
       summary: Ready-to-use applications 
       items:
         # Card1
@@ -200,42 +200,43 @@ additionalContent:
           url: https://github.com/OfficeDev/microsoft-teams-faqplusplus-app
           summary: Provide HR support with a question and answer bot.  
         # Card12
-        - title: Icebreaker
-          url: https://github.com/OfficeDev/microsoft-teams-icebreaker-app
-          summary:  Promote collaboration by randomly pairing team members for weekly meetups.
     # section two
-    - title: App Templates   # < 60 chars (optional)
+    - title: App Templates I - Z   # < 60 chars (optional)
       summary: Ready-to-use applications 
       items:     
         # Card1  
+        - title: Icebreaker
+          url: https://github.com/OfficeDev/microsoft-teams-icebreaker-app
+          summary:  Promote collaboration by randomly pairing team members for weekly meetups.
+        # Card2
         - title: Incentives
           url: https://github.com/OfficeDev/microsoft-teams-apps-incentives
           summary: Manage and track incentivized participation in activities and events.
-        # Card2
+        # Card3
         - title: Incident Reporter
           url: https://github.com/OfficeDev/microsoft-teams-apps-incidentreport 
           summary: Optimize the management of incidents within your organization. 
-        # Card3
+        # Card4
         - title: Open Badges
           url: https://github.com/OfficeDev/microsoft-teams-apps-openbadges
           summary: Track digital learning and award credential badges.
-        # Card4
+        # Card5
         - title: Quick Responses
           url: https://github.com/OfficeDev/microsoft-teams-apps-quickresponses
           summary: Effectively answer commonly asked questions and build a dynamic library of responses.
-        # Card5
+        # Card6
         - title: Remote Support
           url: https://github.com/OfficeDev/microsoft-teams-apps-remotesupport
           summary: Provide a focused interface with an internal support team.  
-        # Card6
+        # Card7
         - title: "Request-a-Team"
           url: https://github.com/OfficeDev/microsoft-teams-apps-requestateam
           summary: Enhance your organization's new team creation flow.
-        # Card7
+        # Card8
         - title: Scrum Status
           url: https://github.com/OfficeDev/microsoft-teams-app-scrumstatus
           summary:  Enable your team to run asynchronous scrum meetings and share updates.
-        # Card8
+        # Card9
         - title: SharePoint List Search 
           url: https://github.com/OfficeDev/microsoft-teams-list-search-app
           summary: Search a SharePoint list and insert an item as an adaptive card in Teams.
