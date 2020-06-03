@@ -1,0 +1,37 @@
+productDirectory:
+  # Supports up to 3 sections
+  sections:
+    - title: App Templates  # < 60 chars (optional)
+      summary: Ready-to-use applications
+      items:
+        # Card1
+        - title: Company Communicator
+          imageSrc:  https://docs.microsoft.com/media/common/i_whats-new.svg
+          links:
+            - url: https://github.com/OfficeDev/microsoft-teams-company-communicator-app
+              text: Enable corporate teams to create and send messages to employees over chat.
+        # Card2
+        - title: Celebrations
+          imageSrc: https://docs.microsoft.com/media/common/i_free-trial.svg
+          links:
+            - url: https://github.com/OfficeDev/microsoft-teams-celebrations-app
+              text: Facilitate the celebration of team members' birthdays, anniversaries, and other recurring events.
+        # Card3
+        - title: FAQ Plus
+          imageSrc: https://docs.microsoft.com/media/common/i_library.svg
+          links:
+            - url: https://github.com/OfficeDev/microsoft-teams-faqplusplus-app
+              text: Enhance your team's productivity with a question and answer bot.
+        # Card4
+        - title: HR Support
+          imageSrc: https://docs.microsoft.com/media/common/i_form.svg
+          links:
+            - url: https://github.com/OfficeDev/microsoft-teams-faqplusplus-app
+              text: Enhance your team's productivity with a question and answer bot.
+        # Card5
+        - title: SharePoint List Search
+          imageSrc: https://docs.microsoft.com/media/common/i_article.svg
+          links:
+            - url: https://github.com/OfficeDev/microsoft-teams-list-search-app
+              text: Search a SharePoint list and insert an item into Teams as an adaptive card.
+        
