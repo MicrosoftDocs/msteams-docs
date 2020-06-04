@@ -58,7 +58,7 @@ The steps for enabling activity feed notifications in your application are as fo
 
 To grant tenant-wide admin consent to an app listed in **Enterprise applications**:
 
-1. Sign in to the [Azure portal](https://portal.azure.com) as a [Global Administrator](../users-groups-roles/directory-assign-admin-roles.md#global-administrator--company-administrator), an [Application Administrator](../users-groups-roles/directory-assign-admin-roles.md#application-administrator), or a [Cloud Application Administrator](../users-groups-roles/directory-assign-admin-roles.md#cloud-application-administrator).
+1. Sign in to the [Azure portal](https://portal.azure.com) as a [Global Administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions), an [Application Administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#application-administrator), or a [Cloud Application Administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#cloud-application-administrator).
 2. Select **Azure Active Directory**  -> **Enterprise applications**.
 3. Select the application to which you want to grant tenant-wide admin consent.
 4. Select **Permissions** -> **Grant admin consent**.
@@ -67,12 +67,19 @@ To grant tenant-wide admin consent to an app listed in **Enterprise applications
 
 To grant tenant-wide admin consent from **App registrations**:
 
-1. Sign in to the [Azure portal](https://portal.azure.com) as a [Global Administrator](../users-groups-roles/directory-assign-admin-roles.md#global-administrator--company-administrator), an [Application Administrator](../users-groups-roles/directory-assign-admin-roles.md#application-administrator), or a [Cloud Application Administrator](../users-groups-roles/directory-assign-admin-roles.md#cloud-application-administrator).
+1. Sign in to the [Azure portal](https://portal.azure.com) as a [Global Administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions), an [Application Administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#application-administrator), or a [Cloud Application Administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#cloud-application-administrator).
 2. Select **Azure Active Directory** -> **App registrations**.
 3. Select the application to which you want to grant tenant-wide admin consent.
 4. Select **API permissions** -> **Grant admin consent**.
 5. Carefully review the permissions the application requires.
 6. If you agree with the permissions the application requires, grant consent. If not, click **Cancel** or close the window.
+
+## Register your app with Microsoft identity platform via the Azure AD portal
+
+The Azure Active Directory portal provides a central platform for you to register and configure your apps. Your app must be registered in the Azure AD portal to integrate with the Microsoft identity platform and call Graph APIs. *See* [Register an application with the Microsoft identity platform](/graph/auth-register-app-v2).
+
+>[!WARNING]
+>Do not register multiple Teams apps to the same Azure AD app id. The app id must be unique for each app. Attempts to install multiple apps to the same app id will fail.
 
 ## Obtain an access token from the Microsoft identity platform
 
@@ -162,5 +169,3 @@ Once you've created your app you can [upload your app package](../../concepts/de
 
 </br>
 
-> [!div class="nextstepaction"]
-> [Test activity feed notifications in Teams](tbd)
