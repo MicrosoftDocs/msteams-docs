@@ -84,7 +84,7 @@ Navigate to the **Home** => **App registrations** page and select your RSC app. 
 
 ## Obtain an access token from the Microsoft identity platform
 
-To make Graph API calls, you must obtain an access token for your app from the identity platform. Before your app can get a token from the Microsoft identity platform, it must be registered in the Azure AD portal. The access token contains information about your app and the permissions it has for the resources and APIs available through Microsoft Graph.
+To make Graph API calls, you must obtain an access token for your app from the identity platform. Before your app can get a token from the Microsoft identity platform, it must be [registered in the Azure AD portal](#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal). The access token contains information about your app and the permissions it has for the resources and APIs available through Microsoft Graph.
 
 You'll need to have the following values from the Azure AD registration process to retrieve an access token from the identity platform:
 
