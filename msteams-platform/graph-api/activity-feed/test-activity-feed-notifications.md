@@ -10,14 +10,14 @@ keywords: teams authorization OAuth SSO AAD activity feed notification Postman G
 
 # Test activity feed notification in Teams
 
-The Activity feed API is a Microsoft Teams and Microsoft Graph integration that enables your app to use API endpoints to send activity feed notifications to  Teams users. Activity feed notifications can range from identifying tasks requiring a user's attention, to actions taken by others that affect the user or a set of users.
+The activity feed API is a Microsoft Teams and Microsoft Graph integration that enables your app to use API endpoints to send activity feed notifications to Teams users. Activity feed notifications can range from identifying tasks requiring a user's attention, to actions taken by others that affect the user or a set of users.
 
 > [!NOTE]
->To test activity feed notifications, your Teams app manifest file must include **webApplicationInfo** and activities keys. *See*, [Update your Teams app manifest](feed-notifications.md#update-your-teams-app-manifest).
+>To test activity feed notifications, your Teams app manifest file must include **webApplicationInfo** and **activities** keys. *See*, [Update your Teams app manifest](feed-notifications.md#update-your-teams-app-manifest).
 
 ## Test activity feed notifications using the Postman app
 
-To check whether the activity feed notifications are being honored by the API request payload, you'll need to copy the [Activity feed notification test code](test-activity-feed-json-file.md) into your local environment and update the following values:
+To check whether the activity feed notifications are being honored by the API request, you'll need to copy the [Activity feed notification test code](test-activity-feed-json-file.md) into your local environment and update the following values:
 
 1. `client_id`  — your app's Azure AD app id.
 1. `client_secret`  — your Azure AD app secret (password)
@@ -31,16 +31,16 @@ To check whether the activity feed notifications are being honored by the API re
 > * Select **Get link to team**.
 > * Copy and save the **tenantId** value from the string:
 
-![find tenant ID in Teams](../../assets/images/find-tenant-id.png)
+&emsp;&emsp; ![find tenant ID in Teams](../../assets/images/find-tenant-id.png)
 
 ### Using Postman
 
 > [!div class="checklist"]
 >
 > * Open the [Postman](https://www.postman.com) app.
-> * Select **File** => **Import** => **Upload Files** to upload the JSON file from your environment.  
+> * Select **File** -> **Import** -> **Upload Files** to upload the JSON file from your environment.  
 > * Select the **Collections** tab.
-> * Select the chevron (>) next to the **Activity Feed** to expand the details view and see the API requests.
+> * Select the chevron (>) next to **Activity Feed** to expand the details view and see the API requests.
 
 Execute the entire collection for each API call. Check all of the response status codes to confirm that the activity feed notification behavior in your app meets expectations.
 

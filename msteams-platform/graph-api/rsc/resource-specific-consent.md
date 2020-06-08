@@ -73,7 +73,7 @@ To enable or disable group owner consent within the Azure portal using PowerShel
 The Azure Active Directory portal provides a central platform for you to register and configure your apps. Your app must be registered in the Azure AD portal to integrate with the Microsoft identity platform and call Graph APIs. *See* [Register an application with the Microsoft identity platform](/graph/auth-register-app-v2).
 
 >[!WARNING]
->Do not register multiple Teams apps to the same Azure AD app id. The app id must be unique for each app. Attempts to install multiple apps to the same app id will fail.
+>Do not register multiple Teams apps to the same Azure AD app id. The app id must be unique for each app.
 
 ## Review your application permissions in the Azure AD portal
 
