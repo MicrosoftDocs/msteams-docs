@@ -54,7 +54,7 @@ Register you application at the registration portal for the Azure AD endpoint. T
     * Leave **Redirect URI** empty
     * Choose **Register**
 3. On the overview page, copy and save the **Application (client) ID**. You’ll need it later when updating your Teams application manifest.
-4. Select **Expose an API** under **Manage**. Select the **Set** link to generate the Application ID URI in the form of `api://{AppID}`. Insert your fully qualified domain name (with a forward slash "/" appended to the end) between the double forward slashes and the GUID.² The entire ID should have the form of: `api://fully-qualified-domain-name.com/{AppID}`
+4. Select **Expose an API** under **Manage**. Select the **Set** link to generate the Application ID URI in the form of `api://{AppID}`. Insert your fully qualified domain name (with a forward slash "/" appended to the end) between the double forward slashes and the GUID. The entire ID should have the form of: `api://fully-qualified-domain-name.com/{AppID}` ²
     * ex: `api://subdomain.example.com/c6c1f32b-5e55-4997-881a-753cc1d563b7`.
 5. Select the **Add a scope** button. In the panel that opens, enter `access_as_user` as the **Scope name**.
 6. Set **Who can consent?** to `Admins and users`
@@ -99,7 +99,7 @@ Add new properties to your Microsoft Teams manifest:
 
 Notes:
 
-* The resource for an AAD app will usually just be the root of its site URL and the appID (e.g. `api://subdomain.example.com/6789/c6c1f32b-5e55-4997-881a-753cc1d563b7`). We also use this value to ensure your request is coming from the same domain. Therefor make sure that your `contentURL` for your tab uses the same domains as your resource property.
+* The resource for an AAD app will usually just be the root of its site URL and the appID (e.g. `api://subdomain.example.com/c6c1f32b-5e55-4997-881a-753cc1d563b7`). We also use this value to ensure your request is coming from the same domain. Therefor make sure that your `contentURL` for your tab uses the same domains as your resource property.
 * You need to be using manifest version 1.5 or higher for these fields to be used.
 
 ### 3. Get an authentication token from your client-side code
