@@ -10,7 +10,7 @@ keywords: teams publish store office publishing AppSource
 Publishing  your app to [AppSource](https://appsource.microsoft.com) makes it available in the Teams app catalog and on the web. At a high level, the process for submitting your app to AppSource is:
 
 1. Develop your app following our [design guidelines](~/concepts/design/understand-use-cases.md). Tabs should follow our [tab design guidelines](~/tabs/design/tabs.md). Bots should follow the [bot design guidelines](~/bots/design/bots.md).
-1. Ensure your app meets app [validation policies](https://docs.microsoft.com/en-us/legal/marketplace/certification-policies) for Microsoft Teams
+1. Ensure your app meets the app [validation policies](/legal/marketplace/certification-policies) for Microsoft Teams.
 1. [Set up a developer account](/office/dev/store/open-a-developer-account) in [Partner Center](https://support.microsoft.com/help/4499930/partner-center-overview).
 1. Prepare your app for submission by following our [submission checklist](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md).
 1. Review our [tips for a successful app submission](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md).
@@ -42,9 +42,9 @@ Please open a [Partner support ticket](https://partner.microsoft.com/en-US/suppo
 | Topic | General Marketplace Help and How-to questions |
 | Subtopic| Office add-in |
 
-## How do I get support for my Partner Center issues?
-Visit the link https://aka.ms/marketplacepublishersupport to search for your issue topic and get guidance. If the provided guidance is not helpful, then please proceed to file a support ticket. 
- [How to open a Partner Center support ticket](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket).
+## Where can I get support for my Partner Center issues?
+
+Please visit our [publishers support page](https://aka.ms/marketplacepublishersupport) to search for your issue topic and find guidance. If the provided guidance is not helpful, [open a Partner Center support ticket](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket).
 
 ## How do I manage my Office Store Account?
 
@@ -56,7 +56,7 @@ The phone number has three parts — country code, area code, and the telephone 
 
 ## How do I manage my Account settings and Partner profile in Partner Center?
 
-Please visit our [Manage account settings and profile info](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info) page for guidance on managing your Partner center account Settings.
+Please visit our [Manage account settings and profile info](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info) page for guidance on managing your Partner center account settings.
 
 ## Why do I receive the message, "This account is not publish eligible," when I try to submit my add-in through Partner Center?
 
@@ -99,12 +99,13 @@ If all the submitted details are correct, employment verification completes in 1
 
 Business Verification takes 1 to 2 business days to complete, provided that all required documents have been submitted.
 
-## If I've already reached out to the support team, will my ticket be expedited?
+## If I reach out to the support team, will my ticket be expedited?
 
 Support tickets will be resolved within a week's time. Please look for the updates which will be sent to the email provided when the support ticket was raised.
 
-## My issue is not listed here - Is there any other pages I can refer for Partner Center issues?
-Please refer this [documentation](https://docs.microsoft.com/azure/marketplace/) for more help.
+## My issue is not listed here.  Are there other pages I can reference for Partner Center issues?
+
+Please refer to our [commercial marketplace documentation](/azure/marketplace/) for more help.
 
 ## I've created a support ticket, it has been 7 business days, and I haven't received an update. Where can I get additional help?
 
@@ -118,4 +119,4 @@ Please send an email to **<teamsubm@microsoft.com>** with the following details:
 
 >
 > [!div class="nextstepaction"]
-> [Learn more about app validation policies for Microsoft Teams](https://docs.microsoft.com/legal/marketplace/certification-policies)
+> [Learn more about app validation policies for Microsoft Teams](/legal/marketplace/certification-policies)
