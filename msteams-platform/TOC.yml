@@ -322,12 +322,22 @@
         href: webhooks-and-connectors/how-to/connectors-using.md
 - name: 'Teams Graph REST APIs'
   items:
-    - name: 'Resource specific consent (RSC)'
-      href: graph-api/rsc/resource-specific-consent.md
-    - name: 'Test resource specific consent permissions' 
-      href: graph-api/rsc/test-resource-specific-consent.md 
-    - name: 'RSC JSON test file' 
-      href: graph-api/rsc/test-rsc-json-file.md         
+    - name: 'Resource-Specific Consent'
+      items:
+      - name: 'Resource specific consent (RSC)'
+        href: graph-api/rsc/resource-specific-consent.md
+      - name: 'Test resource specific consent permissions' 
+        href: graph-api/rsc/test-resource-specific-consent.md 
+      - name: 'RSC JSON test file' 
+        href: graph-api/rsc/test-rsc-json-file.md
+    - name: 'Activity feed notifications'
+      items:
+      - name: 'Activity feed notifications'
+        href: graph-api/activity-feed/feed-notifications.md
+      - name: 'Test activity feed notifications' 
+        href: graph-api/activity-feed/test-activity-feed-notifications.md 
+      - name: 'Activity feed notifications JSON test file' 
+        href: graph-api/activity-feed/test-activity-feed-json-file.md             
 - name: Resources
   items:
     - name: Bots - v3 SDK

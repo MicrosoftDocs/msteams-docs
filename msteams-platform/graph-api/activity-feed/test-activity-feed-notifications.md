@@ -19,17 +19,19 @@ The Activity feed API is a Microsoft Teams and Microsoft Graph integration that 
 
 To check whether the activity feed notifications are being honored by the API request payload, you'll need to copy the [Activity feed notification test code](test-activity-feed-json-file.md) into your local environment and update the following values:
 
-1. `azureADAppId`  — your app's Azure AD app id.
-1. `azureADAppSecret`  — your Azure AD app secret (password)
-1. `tenantId` — you can get the team group id from the Teams client as follows:
+1. `client_id`  — your app's Azure AD app id.
+1. `client_secret`  — your Azure AD app secret (password)
+1. `tenantId` — you can get the unique identifier tenant id from the Teams client as follows:
 
 > [!div class="checklist"]
 >
 > * In the Teams client, select **Teams** from the far left nav bar .
 > * Select the team where the app is installed from the dropdown menu.
-> * Select the **More options** icon (&#8943;)
-> * Select **Get link to team** 
-> * Copy and save the **groupId** value from the string.
+> * Select the **More options** icon (&#8943;).
+> * Select **Get link to team**.
+> * Copy and save the **tenantId** value from the string:
+
+![find tenant ID in Teams](../../assets/images/find-tenant-id.png)
 
 ### Using Postman
 
