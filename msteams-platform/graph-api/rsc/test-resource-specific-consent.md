@@ -87,7 +87,7 @@ To check whether the RSC permissions are being honored by the API request payloa
 > * Select the **Collections** tab. 
 > * Select the chevron (>) next to the **Test RSC** to expand the details view and see the API requests.
 
-Execute the entire permissions collection for each API call. The permissions that you specified in your app manifest should succeed, while those not specified should fail with an HTTP 403 status code. Check all of the response status codes to confirm that the behavior of the RSC permissions in your app meet expectations.
+Execute the entire permissions collection for each API call. The permissions that you specified in your app manifest should succeed, while those not specified should fail with an HTTP 403 status code. Check all of the response status codes to confirm that the behavior of the RSC permissions in your app meets expectations.
 
 >[!NOTE]
 >To test specific DELETE and READ API calls, please add those instance scenarios to the JSON file.

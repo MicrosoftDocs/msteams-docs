@@ -12,7 +12,7 @@ keywords: teams notifications feed activity Graph
 >[!NOTE]
 >Microsoft Teams Graph API activity feed notifications are currently available in desktop and Android clients after Developer Preview has been enabled. See [How do I enable Developer Preview](../../resources/dev-preview/developer-preview-intro.md) for more information.
 
-The Activity feed API is a Microsoft Teams and Microsoft Graph integration that enables your app to use API endpoints to notify  users of events ranging from tasks requiring a user's attention, to actions taken by others that affect the user or a set of users.
+The activity feed is an essential feature of the Microsoft Teams experience. It is the central place to notify team members of relevant activities and events within a team or chat.  The Activity feed API is a Microsoft Teams and Microsoft Graph integration that enables your app to use API endpoints to send activity feed notifications to  Teams users. Activity feed notifications can range from identifying tasks requiring a user's attention, to actions taken by others that affect the user or a set of users.
 
 ## Activity feed senders and recipients
 
@@ -22,57 +22,32 @@ There are two core concepts for sending notifications:
 
 - **Application context**: These notifications are sent directly by the application to users.
 
-There are three core notification recipient types:
+Currently, there is one type of notification recipient:
 
 - **User**: An individual Teams user.
-
-- **Chat members**: All members in a chat conversation.
-
-- **Channel members**: All members of a team/channel.
 
 > [!NOTE]
 > The Teams Activity Feed notification context is on a per user basis. Although an event may impact an entire team or members of a chat, activity feed notifications, triggered by that event, are sent to individual recipients (users).
 
 ## Activity feed actions
 
-|Notification type| Description|URI binding parameter|
+|Notification type| URI binding parameter| Description |
 |------------------|-----------------|----------------|-------------|
-|sendActivityNotification| POST a notification to the activity feed of a user. | Azure Active Directory user ID |
-||Sample request| **POST** ht<span>tps://graph.microsoft.com/beta/teams/{userId}/sendActivityNotification |
-|sendActivityNotification| POST a notification to the activity feed of one or more users in a chat. |chatId |
+|sendActivityNotification| Azure Active Directory **userId**| POST a notification to the activity feed of a user. |
+||Sample request| **POST** ht<span>tps://graph.microsoft.com/beta/users/{userId}/teamwork/sendActivityNotification |
+|sendActivityNotification| **chatId** | POST a notification to the activity feed of one or more users in a chat. |
 ||Sample request| **POST** ht<span>tps://graph.microsoft.com/beta/chats/{chatId}/sendActivityNotification
-|sendActivityNotification| POST a notification to the activity feed of one or more users in a team|teamId|
-||Sample request| **POST** ht<span>tps://graph.microsoft.com/beta/teams/{teamId}/channels/channelId/sendActivityNotification
+|sendActivityNotification| **teamId** | POST a notification to the activity feed of one or more users in a team|
+||Sample request| **POST** ht<span>tps://graph.microsoft.com/beta/teams/{teamId}/sendActivityNotification
 
 ## Enabling activity feed notifications
 
 The steps for enabling activity feed notifications in your application are as follows:
 
-1. [Enable tenant-wide admin consent for your application](/azure/active-directory/manage-apps/grant-admin-consent#grant-admin-consent-from-the-azure-portal) in the Azure Active Directory portal
 1. [Register your app with Microsoft identity platform via the Azure AD portal](../rsc/resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
 1. [Obtain an access token from the Microsoft Identity platform](#obtain-an-access-token-from-the-microsoft-identity-platform).
 1. [Update your Teams app manifest](#update-your-teams-app-manifest).
 1. [Install your app directly in Teams](#install-your-app-directly-in-teams).
-
-## Enable tenant-wide admin consent for your application
-
-To grant tenant-wide admin consent to an app listed in **Enterprise applications**:
-
-1. Sign in to the [Azure portal](https://portal.azure.com) as a [Global Administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions), an [Application Administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#application-administrator), or a [Cloud Application Administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#cloud-application-administrator).
-2. Select **Azure Active Directory**  -> **Enterprise applications**.
-3. Select the application to which you want to grant tenant-wide admin consent.
-4. Select **Permissions** -> **Grant admin consent**.
-5. Carefully review the permissions the application requires.
-6. If you agree with the permissions the application requires, grant consent. If not, click **Cancel** or close the window.
-
-To grant tenant-wide admin consent from **App registrations**:
-
-1. Sign in to the [Azure portal](https://portal.azure.com) as a [Global Administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions), an [Application Administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#application-administrator), or a [Cloud Application Administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#cloud-application-administrator).
-2. Select **Azure Active Directory** -> **App registrations**.
-3. Select the application to which you want to grant tenant-wide admin consent.
-4. Select **API permissions** -> **Grant admin consent**.
-5. Carefully review the permissions the application requires.
-6. If you agree with the permissions the application requires, grant consent. If not, click **Cancel** or close the window.
 
 ## Register your app with Microsoft identity platform via the Azure AD portal
 
@@ -154,18 +129,13 @@ You'll need to have the following values from the Azure AD registration process 
 
 | Property | Type | Required | Description |
 |-----|------|------|-----|
-|**topic**|teamworkActivityTopic | ✔ | represents what is being referenced in the feed item|
-|**activityType** | string | ✔| Represents the type of activity and must be declared in the [Teams App Manifest](../../resources/schema/manifest-schema.md)|
-|**recipient** | teamworkNotificationRecipient |  ✔ | The intended receiver. A recipient must be a Teams user with the ability to post notifications to everyone in a team, channel, and chat.|
-| **from** | string | |Displays a hint if the sender is different than the caller on the Graph token.|
-| **chainId** | long | | Enables the developer to override a previous notification. If not included, a new notifcation will be posted.|
-| **previewText** | itemBody | | Preview text displayed to the user as part an activity feed item. |
-| **teamsAppId** | long | | Creates a pointer to this specific Teams app.|
-| **templateParameters** | collection\<keyvaluepair\>| |Parameter values declared in the [Teams App Manifest](../../resources/schema/manifest-schema.md) |
+|**topic**|teamworkActivityTopic | Yes | Represents what is being referenced in the feed item. **The topic must be a either a graph resource or a custom text.**|
+|**activityType** | string | Yes| Represents the type of activity and must be declared in the [Teams App Manifest](../../resources/schema/manifest-schema.md)|
+|**recipient** | teamworkNotificationRecipient |Yes |URI dependent.  |  This property should not be included when using the  `users/userID/teamwork/sendActivityNotification` endpoint. In all other cases, recipient is the intended receiver and must be a Teams user with the ability to post notifications to everyone in a team, channel, and chat. |
+| **chainId** | long | No| Enables the developer to override a previous notification. If not included, a new notifcation will be posted.|
+| **previewText** | itemBody | No | Preview text displayed to the user as part an activity feed item. |
+| **templateParameters** | collection\<keyvaluepair\>| No |Parameter values declared in the [Teams App Manifest](../../resources/schema/manifest-schema.md) |
 
-## Install your app directly in Teams
-
-Once you've created your app you can [upload your app package](../../concepts/deploy-and-publish/apps-upload.md#upload-your-package-into-a-team-using-the-apps-tab) directly to a specific team.  To do so, the **Upload custom apps** policy setting must be enabled as part of the custom app setup policies. *See* [Custom app policy settings](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings)
-
+> [!div class="nextstepaction"] 
+> [Test activity feed notifications in Teams](test-activity-feed-notifications.md)
 </br>
-
