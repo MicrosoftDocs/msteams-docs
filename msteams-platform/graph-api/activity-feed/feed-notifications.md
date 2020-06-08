@@ -47,7 +47,6 @@ The steps for enabling activity feed notifications in your application are as fo
 1. [Register your app with Microsoft identity platform via the Azure AD portal](../rsc/resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
 1. [Obtain an access token from the Microsoft Identity platform](#obtain-an-access-token-from-the-microsoft-identity-platform).
 1. [Update your Teams app manifest](#update-your-teams-app-manifest).
-1. [Install your app directly in Teams](#install-your-app-directly-in-teams).
 
 ## Register your app with Microsoft identity platform via the Azure AD portal
 
