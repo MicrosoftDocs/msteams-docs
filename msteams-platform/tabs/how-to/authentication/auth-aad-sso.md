@@ -6,7 +6,7 @@ keywords: teams authentication SSO AAD
 
 # Single Sign-On
 
-Users sign-in to Microsoft Teams using their work or school (Office 365) account and you can take advantage of this by using single sign-on (SSO) to authorize the user to your Microsoft Teams tab. That means if a user consents to use your app on desktop, they won’t have to consent again on mobile and will be automatically logged in. 
+Users sign-in to Microsoft Teams using their work, school or Microsoft account (Office 365, Outlook, etc) and you can take advantage of this by using single sign-on to authorize the user to your Microsoft Teams tab (or task module) on desktop or mobile. That means if a user consents to use your app, they won’t have to consent again on any device and will be automatically logged in. In addition, we prefetch your access token to improve performance and load times.
 
 ## How SSO works at runtime
 
@@ -116,7 +116,9 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 When you call `getAuthToken` - and additional user consent is required (for user-level permissions) - we will show a dialog to the user encouraging them to grant additional consent. 
 
-<img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
+<p>
+    <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
+</p>
 
 ## Demo code
 
@@ -140,7 +142,7 @@ A simple way of consenting on behalf of an organization (as a tenant admin) is t
 
 Another approach for getting additional Graph scopes would be to present a consent dialog using our existing [web-based AAD authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page) which involves popping up an AAD consent dialog. There are some notable additions:
 
-1. The token retrieved using getAuthToken would need to be exchanged server side using AADs [on-behalf-of flow](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow) to get access to those additional Graph APIs.
+1. The token retrieved using getAuthToken would need to be exchanged server side using AADs [on-behalf-of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to get access to those additional Graph APIs.
     * Be sure to use the v2 Graph endpoint for this exchange
 2. If the exchange fails, AAD will return an invalid grant exception. There are usually one of two error messages: `ConsentRequired` or `InteractionRequired`
 3. When the exchange fails, then you need to ask for additional consent. We recommend showing some UI asking the user to grant additional consent. This UI should include a button that triggers an AAD consent dialog using our [AAD authentication API](~/concepts/authentication/auth-silent-aad.md).
