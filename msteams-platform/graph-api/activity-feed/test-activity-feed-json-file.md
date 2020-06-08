@@ -1,14 +1,14 @@
 ---
 title: Testing activity feed notifications in Teams
-description: JSON  test file resource-specific consent in Teams using Postman
+description: JSON  test file activity feed notifications in Teams using Postman
 localization_priority:  Normal
 author: laujan
 ms.author: lajanuar
 ms.topic: How-to
-keywords: teams authorization OAuth SSO AAD rsc Postman Graph json
+keywords: teams activity feed notifications Postman Graph json
 ---
 
-# Test RSC Postman collection JSON
+# Test activity feed notifications Postman collection JSON
 
 >[!NOTE]
 > Depending on the user you want to send notification **from** and the **target user/recipient** you may have to update those parameter in the payload.
@@ -16,21 +16,21 @@ keywords: teams authorization OAuth SSO AAD rsc Postman Graph json
 ```json
 {
 	"info": {
-		"_postman_id": "cc85275b-fa1b-48c2-ac00-8bafe945146c",
-		"name": "Activity Feed Demonstrations",
+		"_postman_id": "30f23435-b1b0-4a8a-a121-95b21eb8ad76",
+		"name": "Activity Feed",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "User Context",
+			"name": "Authentication",
 			"item": [
 				{
-					"name": "Authenticate",
+					"name": "Authenticate in User Context",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
-								"id": "2e6527fc-b97d-4ac2-a412-3aad93d338ee",
+								"id": "109e4090-9583-4758-89dd-d6f4110cc515",
 								"exec": [
 									"pm.test(\"Status Code 200\", () => {",
 									"    // Need to validate the request succeeded. ",
@@ -47,7 +47,7 @@ keywords: teams authorization OAuth SSO AAD rsc Postman Graph json
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "16050487-fbb3-4a3b-b471-cb6ebc746579",
+								"id": "07539d78-265a-4315-9b7a-6265ba2f5cd5",
 								"exec": [
 									""
 								],
@@ -75,7 +75,7 @@ keywords: teams authorization OAuth SSO AAD rsc Postman Graph json
 								},
 								{
 									"key": "username",
-									"value": "AlexW@M365x347208.OnMicrosoft.com",
+									"value": "PattiF@M365x347208.OnMicrosoft.com",
 									"type": "text"
 								},
 								{
@@ -85,17 +85,17 @@ keywords: teams authorization OAuth SSO AAD rsc Postman Graph json
 								},
 								{
 									"key": "client_id",
-									"value": "f97677f9-8607-476e-9759-8c45b2832b59",
+									"value": "73ee2834-38aa-4077-b4c9-e8e1c36f7e40",
 									"type": "text"
 								},
 								{
 									"key": "client_secret",
-									"value": "3RQa7TYXTU9ezMEu/O4x8pSNtkpM8tpW8m3foVjPVSc=",
+									"value": "]0ES5E7Sf]J7:fPg[xVr3oKoGjft]D5-",
 									"type": "text"
 								},
 								{
 									"key": "scope",
-									"value": "https://canary.graph.microsoft.com/.default",
+									"value": "https://graph.microsoft.com/.default",
 									"type": "text"
 								}
 							]
@@ -120,251 +120,12 @@ keywords: teams authorization OAuth SSO AAD rsc Postman Graph json
 					"response": []
 				},
 				{
-					"name": "Send Custom Notification to User",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer {{graph_access_token}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"about\": \"https://graph.microsoft.com/beta/teams/e5a548cb-e5a4-4e54-8da1-ec0e944d9c11\",\r\n    \"activityType\": \"taskCreated\",\r\n    \"previewText\": \"New Task Created\",\r\n    \"onClickWebUrl\": \"https://teams.microsoft.com/l/channel/19%3Abdbb89ee4acb46ee9f704057c12163a3%40thread.skype/General?groupId=e5a548cb-e5a4-4e54-8da1-ec0e944d9c11\",\r\n    \"recipient\": {\r\n        \"@odata.type\": \"microsoft.graph.aadUserNotificationAudience\",\r\n        \"userId\": \"2725adbe-59ac-4b1a-8096-b47bd244eb09\"\r\n    },\r\n    \"templateParameters\": [\r\n    \t{\r\n\t\t\t\"name\": \"taskId\",\r\n\t\t\t\"value\": \"Task 12321\"\r\n\t\t}\r\n    ],\r\n    \"teamsAppId\": \"a1c8b1ca-3270-4007-9699-a8956baf73e8\"\r\n}\r\n"
-						},
-						"url": {
-							"raw": "https://canary.graph.microsoft.com/testprodbetatestTeamsGraphSvcDev/teamwork/generateActivityNotification",
-							"protocol": "https",
-							"host": [
-								"canary",
-								"graph",
-								"microsoft",
-								"com"
-							],
-							"path": [
-								"testprodbetatestTeamsGraphSvcDev",
-								"teamwork",
-								"generateActivityNotification"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Send Custom Notification to Team",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"type": "text",
-								"value": "application/json"
-							},
-							{
-								"key": "Authorization",
-								"type": "text",
-								"value": "Bearer {{graph_access_token}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"about\": \"https://graph.microsoft.com/beta/teams/e5a548cb-e5a4-4e54-8da1-ec0e944d9c11\",\r\n    \"activityType\": \"taskCreated\",\r\n    \"previewText\": \"New Team Task Created\",\r\n    \"onClickWebUrl\": \"https://teams.microsoft.com/l/channel/19%3Abdbb89ee4acb46ee9f704057c12163a3%40thread.skype/General?groupId=e5a548cb-e5a4-4e54-8da1-ec0e944d9c11\",\r\n    \"recipient\": {\r\n        \"@odata.type\": \"microsoft.graph.teamMembersNotificationAudience\",\r\n        \"teamId\": \"e5a548cb-e5a4-4e54-8da1-ec0e944d9c11\"\r\n    },\r\n    \"templateParameters\": [\r\n    \t{\r\n\t\t\t\"name\": \"taskId\",\r\n\t\t\t\"value\": \"Task 12322\"\r\n\t\t}\r\n    ],\r\n    \"teamsAppId\": \"a1c8b1ca-3270-4007-9699-a8956baf73e8\"\r\n}\r\n"
-						},
-						"url": {
-							"raw": "https://canary.graph.microsoft.com/testprodbetatestTeamsGraphSvcDev/teamwork/generateActivityNotification",
-							"protocol": "https",
-							"host": [
-								"canary",
-								"graph",
-								"microsoft",
-								"com"
-							],
-							"path": [
-								"testprodbetatestTeamsGraphSvcDev",
-								"teamwork",
-								"generateActivityNotification"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Send Custom Notification to Channel",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"type": "text",
-								"value": "application/json"
-							},
-							{
-								"key": "Authorization",
-								"type": "text",
-								"value": "Bearer {{graph_access_token}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"about\": \"https://graph.microsoft.com/beta/teams/e5a548cb-e5a4-4e54-8da1-ec0e944d9c11\",\r\n    \"activityType\": \"taskCreated\",\r\n    \"previewText\": \"New Team Task Created\",\r\n    \"onClickWebUrl\": \"https://teams.microsoft.com/l/channel/19%3Abdbb89ee4acb46ee9f704057c12163a3%40thread.skype/General?groupId=e5a548cb-e5a4-4e54-8da1-ec0e944d9c11\",\r\n    \"recipient\": {\r\n        \"@odata.type\": \"microsoft.graph.channelMembersNotificationAudience\",\r\n        \"teamId\": \"e5a548cb-e5a4-4e54-8da1-ec0e944d9c11\",\r\n        \"channelId\": \"19:61ecf6b8014c455d98ad7d2d29140c8a@thread.skype\"\r\n    },\r\n    \"templateParameters\": [\r\n    \t{\r\n\t\t\t\"name\": \"taskId\",\r\n\t\t\t\"value\": \"Task 12323\"\r\n\t\t}\r\n    ],\r\n    \"teamsAppId\": \"a1c8b1ca-3270-4007-9699-a8956baf73e8\"\r\n}\r\n"
-						},
-						"url": {
-							"raw": "https://canary.graph.microsoft.com/testprodbetatestTeamsGraphSvcDev/teamwork/generateActivityNotification",
-							"protocol": "https",
-							"host": [
-								"canary",
-								"graph",
-								"microsoft",
-								"com"
-							],
-							"path": [
-								"testprodbetatestTeamsGraphSvcDev",
-								"teamwork",
-								"generateActivityNotification"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Send Mention to User",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"type": "text",
-								"value": "application/json"
-							},
-							{
-								"key": "Authorization",
-								"type": "text",
-								"value": "Bearer {{graph_access_token}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"about\": \"https://graph.microsoft.com/beta/teams/e5a548cb-e5a4-4e54-8da1-ec0e944d9c11\",\r\n    \"activityType\": \"userMention\",\r\n    \"previewText\": \"User Mention\",\r\n    \"onClickWebUrl\": \"https://teams.microsoft.com/l/channel/19%3Abdbb89ee4acb46ee9f704057c12163a3%40thread.skype/General?groupId=e5a548cb-e5a4-4e54-8da1-ec0e944d9c11\",\r\n    \"recipient\": {\r\n        \"@odata.type\": \"microsoft.graph.aadUserNotificationAudience\",\r\n        \"userId\": \"2725adbe-59ac-4b1a-8096-b47bd244eb09\"\r\n    },\r\n    \"templateParameters\": [],\r\n    \"teamsAppId\": \"a1c8b1ca-3270-4007-9699-a8956baf73e8\",\r\n    \"aggregationId\": 2\r\n}\r\n"
-						},
-						"url": {
-							"raw": "https://canary.graph.microsoft.com/testprodbetatestTeamsGraphSvcDev/teamwork/generateActivityNotification",
-							"protocol": "https",
-							"host": [
-								"canary",
-								"graph",
-								"microsoft",
-								"com"
-							],
-							"path": [
-								"testprodbetatestTeamsGraphSvcDev",
-								"teamwork",
-								"generateActivityNotification"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Send Mention to Team",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"type": "text",
-								"value": "application/json"
-							},
-							{
-								"key": "Authorization",
-								"type": "text",
-								"value": "Bearer {{graph_access_token}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"about\": \"https://graph.microsoft.com/beta/teams/e5a548cb-e5a4-4e54-8da1-ec0e944d9c11\",\r\n    \"activityType\": \"teamMention\",\r\n    \"previewText\": \"Team Mention\",\r\n    \"onClickWebUrl\": \"https://teams.microsoft.com/l/channel/19%3Abdbb89ee4acb46ee9f704057c12163a3%40thread.skype/General?groupId=e5a548cb-e5a4-4e54-8da1-ec0e944d9c11\",\r\n    \"recipient\": {\r\n        \"@odata.type\": \"microsoft.graph.teamMembersNotificationAudience\",\r\n        \"teamId\": \"e5a548cb-e5a4-4e54-8da1-ec0e944d9c11\"\r\n    },\r\n    \"templateParameters\": [],\r\n    \"teamsAppId\": \"a1c8b1ca-3270-4007-9699-a8956baf73e8\",\r\n    \"aggregationId\": 3\r\n}\r\n"
-						},
-						"url": {
-							"raw": "https://canary.graph.microsoft.com/testprodbetatestTeamsGraphSvcDev/teamwork/generateActivityNotification",
-							"protocol": "https",
-							"host": [
-								"canary",
-								"graph",
-								"microsoft",
-								"com"
-							],
-							"path": [
-								"testprodbetatestTeamsGraphSvcDev",
-								"teamwork",
-								"generateActivityNotification"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Send Mention to Channel",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"type": "text",
-								"value": "application/json"
-							},
-							{
-								"key": "Authorization",
-								"type": "text",
-								"value": "Bearer {{graph_access_token}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"about\": \"https://graph.microsoft.com/beta/teams/e5a548cb-e5a4-4e54-8da1-ec0e944d9c11/channels/19:61ecf6b8014c455d98ad7d2d29140c8a@thread.skype\",\r\n    \"activityType\": \"channelMention\",\r\n    \"previewText\": \"Channel Mention\",\r\n    \"onClickWebUrl\": \"https://teams.microsoft.com/l/channel/19%3A61ecf6b8014c455d98ad7d2d29140c8a%40thread.skype/Internal%2520Channel?groupId=e5a548cb-e5a4-4e54-8da1-ec0e944d9c11&tenantId=60bcdb18-3e8b-4c8d-8e03-c9bd0a442378\",\r\n    \"recipient\": {\r\n        \"@odata.type\": \"microsoft.graph.channelMembersNotificationAudience\",\r\n        \"teamId\": \"e5a548cb-e5a4-4e54-8da1-ec0e944d9c11\",\r\n        \"channelId\": \"19:61ecf6b8014c455d98ad7d2d29140c8a@thread.skype\"\r\n    },\r\n    \"templateParameters\": [],\r\n    \"teamsAppId\": \"a1c8b1ca-3270-4007-9699-a8956baf73e8\",\r\n    \"aggregationId\": 4\r\n}\r\n"
-						},
-						"url": {
-							"raw": "https://canary.graph.microsoft.com/testprodbetatestTeamsGraphSvcDev/teamwork/generateActivityNotification",
-							"protocol": "https",
-							"host": [
-								"canary",
-								"graph",
-								"microsoft",
-								"com"
-							],
-							"path": [
-								"testprodbetatestTeamsGraphSvcDev",
-								"teamwork",
-								"generateActivityNotification"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "App Context Copy",
-			"item": [
-				{
-					"name": "Authenticate",
+					"name": "Authenticate in App Context",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
-								"id": "2e6527fc-b97d-4ac2-a412-3aad93d338ee",
+								"id": "3edbf764-64d2-40b2-acc4-dd23c7667642",
 								"exec": [
 									"pm.test(\"Status Code 200\", () => {",
 									"    // Need to validate the request succeeded. ",
@@ -381,7 +142,7 @@ keywords: teams authorization OAuth SSO AAD rsc Postman Graph json
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "16050487-fbb3-4a3b-b471-cb6ebc746579",
+								"id": "0176efaf-4dc6-4f93-b6b1-468c571998f8",
 								"exec": [
 									""
 								],
@@ -409,17 +170,17 @@ keywords: teams authorization OAuth SSO AAD rsc Postman Graph json
 								},
 								{
 									"key": "client_id",
-									"value": "f97677f9-8607-476e-9759-8c45b2832b59",
+									"value": "73ee2834-38aa-4077-b4c9-e8e1c36f7e40",
 									"type": "text"
 								},
 								{
 									"key": "client_secret",
-									"value": "3RQa7TYXTU9ezMEu/O4x8pSNtkpM8tpW8m3foVjPVSc=",
+									"value": "]0ES5E7Sf]J7:fPg[xVr3oKoGjft]D5-",
 									"type": "text"
 								},
 								{
 									"key": "scope",
-									"value": "https://canary.graph.microsoft.com/.default",
+									"value": "https://graph.microsoft.com/.default",
 									"type": "text"
 								}
 							]
@@ -442,9 +203,15 @@ keywords: teams authorization OAuth SSO AAD rsc Postman Graph json
 						"description": "Authenticate with AAD"
 					},
 					"response": []
-				},
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Requests",
+			"item": [
 				{
-					"name": "Send Custom Notification to User",
+					"name": "Send Notification about a Team to a User",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -462,99 +229,293 @@ keywords: teams authorization OAuth SSO AAD rsc Postman Graph json
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"about\": \"https://graph.microsoft.com/beta/teams/e5a548cb-e5a4-4e54-8da1-ec0e944d9c11\",\r\n    \"activityType\": \"taskCreated\",\r\n    \"previewText\": \"New Task Created\",\r\n    \"onClickWebUrl\": \"https://teams.microsoft.com/l/channel/19%3Abdbb89ee4acb46ee9f704057c12163a3%40thread.skype/General?groupId=e5a548cb-e5a4-4e54-8da1-ec0e944d9c11\",\r\n    \"recipient\": {\r\n        \"@odata.type\": \"microsoft.graph.aadUserNotificationAudience\",\r\n        \"userId\": \"2725adbe-59ac-4b1a-8096-b47bd244eb09\"\r\n    },\r\n    \"templateParameters\": [\r\n    \t{\r\n\t\t\t\"name\": \"taskId\",\r\n\t\t\t\"value\": \"Task 12321\"\r\n\t\t}\r\n    ],\r\n    \"teamsAppId\": \"a1c8b1ca-3270-4007-9699-a8956baf73e8\"\r\n}\r\n"
+							"raw": "{\r\n    \"topic\": {\r\n        \"source\": \"entityUrl\",\r\n        \"value\": \"https://graph.microsoft.com/teams/416d30d8-484e-4951-9775-f92ca643c91d\"\r\n    },\r\n    \"activityType\": \"taskCreated\",\r\n    \"previewText\": {\r\n    \t\"content\": \"Task Assigned\"\r\n    },\r\n    \"recipient\": {\r\n        \"@odata.type\": \"microsoft.graph.aadUserNotificationRecipient\",\r\n        \"userId\": \"4e485ac3-9c7f-48fa-8711-50b4a47b5722\"\r\n    },\r\n    \"templateParameters\": [\r\n    \t{\r\n\t\t\t\"name\": \"taskId\",\r\n\t\t\t\"value\": \"Task 12322\"\r\n\t\t}\r\n    ]\r\n}"
 						},
 						"url": {
-							"raw": "https://canary.graph.microsoft.com/testprodbetatestTeamsGraphSvcDev/teamwork/generateActivityNotification",
+							"raw": "https://graph.microsoft.com/beta/teams/416d30d8-484e-4951-9775-f92ca643c91d/sendActivityNotification",
 							"protocol": "https",
 							"host": [
-								"canary",
 								"graph",
 								"microsoft",
 								"com"
 							],
 							"path": [
-								"testprodbetatestTeamsGraphSvcDev",
-								"teamwork",
-								"generateActivityNotification"
+								"beta",
+								"teams",
+								"416d30d8-484e-4951-9775-f92ca643c91d",
+								"sendActivityNotification"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Send Custom Notification to Team",
+					"name": "Send Notification about a Channel to a User",
 					"request": {
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"name": "Content-Type",
-								"type": "text",
-								"value": "application/json"
+								"value": "application/json",
+								"type": "text"
 							},
 							{
 								"key": "Authorization",
-								"type": "text",
-								"value": "Bearer {{graph_access_token}}"
+								"value": "Bearer {{graph_access_token}}",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"about\": \"https://graph.microsoft.com/beta/teams/e5a548cb-e5a4-4e54-8da1-ec0e944d9c11\",\r\n    \"activityType\": \"taskCreated\",\r\n    \"previewText\": \"New Team Task Created\",\r\n    \"onClickWebUrl\": \"https://teams.microsoft.com/l/channel/19%3Abdbb89ee4acb46ee9f704057c12163a3%40thread.skype/General?groupId=e5a548cb-e5a4-4e54-8da1-ec0e944d9c11\",\r\n    \"recipient\": {\r\n        \"@odata.type\": \"microsoft.graph.teamMembersNotificationAudience\",\r\n        \"teamId\": \"e5a548cb-e5a4-4e54-8da1-ec0e944d9c11\"\r\n    },\r\n    \"templateParameters\": [\r\n    \t{\r\n\t\t\t\"name\": \"taskId\",\r\n\t\t\t\"value\": \"Task 12322\"\r\n\t\t}\r\n    ],\r\n    \"teamsAppId\": \"a1c8b1ca-3270-4007-9699-a8956baf73e8\"\r\n}\r\n"
+							"raw": "{\r\n    \"topic\": {\r\n        \"source\": \"entityUrl\",\r\n        \"value\": \"https://graph.microsoft.com/teams/416d30d8-484e-4951-9775-f92ca643c91d/channels/19:5afb25f3d5054f53814733ef39d951f3@thread.tacv2\"\r\n    },\r\n    \"activityType\": \"taskCreated\",\r\n    \"previewText\": {\r\n    \t\"content\": \"Task Assigned\"\r\n    },\r\n    \"recipient\": {\r\n        \"@odata.type\": \"microsoft.graph.aadUserNotificationRecipient\",\r\n        \"userId\": \"4e485ac3-9c7f-48fa-8711-50b4a47b5722\"\r\n    },\r\n    \"templateParameters\": [\r\n    \t{\r\n\t\t\t\"name\": \"taskId\",\r\n\t\t\t\"value\": \"Task 12322\"\r\n\t\t}\r\n    ]\r\n}"
 						},
 						"url": {
-							"raw": "https://canary.graph.microsoft.com/testprodbetatestTeamsGraphSvcDev/teamwork/generateActivityNotification",
+							"raw": "https://graph.microsoft.com/beta/teams/416d30d8-484e-4951-9775-f92ca643c91d/sendActivityNotification",
 							"protocol": "https",
 							"host": [
-								"canary",
 								"graph",
 								"microsoft",
 								"com"
 							],
 							"path": [
-								"testprodbetatestTeamsGraphSvcDev",
-								"teamwork",
-								"generateActivityNotification"
+								"beta",
+								"teams",
+								"416d30d8-484e-4951-9775-f92ca643c91d",
+								"sendActivityNotification"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Send Custom Notification to Channel",
+					"name": "Send Notification about a Channel Tab to a User",
 					"request": {
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"name": "Content-Type",
-								"type": "text",
-								"value": "application/json"
+								"value": "application/json",
+								"type": "text"
 							},
 							{
 								"key": "Authorization",
-								"type": "text",
-								"value": "Bearer {{graph_access_token}}"
+								"value": "Bearer {{graph_access_token}}",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"about\": \"https://graph.microsoft.com/beta/teams/e5a548cb-e5a4-4e54-8da1-ec0e944d9c11\",\r\n    \"activityType\": \"taskCreated\",\r\n    \"previewText\": \"New Team Task Created\",\r\n    \"onClickWebUrl\": \"https://teams.microsoft.com/l/channel/19%3Abdbb89ee4acb46ee9f704057c12163a3%40thread.skype/General?groupId=e5a548cb-e5a4-4e54-8da1-ec0e944d9c11\",\r\n    \"recipient\": {\r\n        \"@odata.type\": \"microsoft.graph.channelMembersNotificationAudience\",\r\n        \"teamId\": \"e5a548cb-e5a4-4e54-8da1-ec0e944d9c11\",\r\n        \"channelId\": \"19:61ecf6b8014c455d98ad7d2d29140c8a@thread.skype\"\r\n    },\r\n    \"templateParameters\": [\r\n    \t{\r\n\t\t\t\"name\": \"taskId\",\r\n\t\t\t\"value\": \"Task 12323\"\r\n\t\t}\r\n    ],\r\n    \"teamsAppId\": \"a1c8b1ca-3270-4007-9699-a8956baf73e8\"\r\n}\r\n"
+							"raw": "{\r\n    \"topic\": {\r\n        \"source\": \"entityUrl\",\r\n        \"value\": \"https://graph.microsoft.com/teams/416d30d8-484e-4951-9775-f92ca643c91d/channels/19:5afb25f3d5054f53814733ef39d951f3@thread.tacv2/tabs/f835f30b-1fcb-4c37-a353-ac7855d3936c\"\r\n    },\r\n    \"activityType\": \"taskCreated\",\r\n    \"previewText\": {\r\n    \t\"content\": \"Task Assigned\"\r\n    },\r\n    \"recipient\": {\r\n        \"@odata.type\": \"microsoft.graph.aadUserNotificationRecipient\",\r\n        \"userId\": \"4e485ac3-9c7f-48fa-8711-50b4a47b5722\"\r\n    },\r\n    \"templateParameters\": [\r\n    \t{\r\n\t\t\t\"name\": \"taskId\",\r\n\t\t\t\"value\": \"Task 12322\"\r\n\t\t}\r\n    ]\r\n}"
 						},
 						"url": {
-							"raw": "https://canary.graph.microsoft.com/testprodbetatestTeamsGraphSvcDev/teamwork/generateActivityNotification",
+							"raw": "https://graph.microsoft.com/beta/teams/416d30d8-484e-4951-9775-f92ca643c91d/sendActivityNotification",
 							"protocol": "https",
 							"host": [
-								"canary",
 								"graph",
 								"microsoft",
 								"com"
 							],
 							"path": [
-								"testprodbetatestTeamsGraphSvcDev",
+								"beta",
+								"teams",
+								"416d30d8-484e-4951-9775-f92ca643c91d",
+								"sendActivityNotification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Notification about a Channel Message to a User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{graph_access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"topic\": {\r\n        \"source\": \"entityUrl\",\r\n        \"value\": \"https://graph.microsoft.com/teams/416d30d8-484e-4951-9775-f92ca643c91d/channels/19:5afb25f3d5054f53814733ef39d951f3@thread.tacv2/messages/1584741801947\"\r\n    },\r\n    \"activityType\": \"taskCreated\",\r\n    \"previewText\": {\r\n    \t\"content\": \"Task Assigned\"\r\n    },\r\n    \"recipient\": {\r\n        \"@odata.type\": \"microsoft.graph.aadUserNotificationRecipient\",\r\n        \"userId\": \"4e485ac3-9c7f-48fa-8711-50b4a47b5722\"\r\n    },\r\n    \"templateParameters\": [\r\n    \t{\r\n\t\t\t\"name\": \"taskId\",\r\n\t\t\t\"value\": \"Task 12322\"\r\n\t\t}\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "https://graph.microsoft.com/beta/teams/416d30d8-484e-4951-9775-f92ca643c91d/sendActivityNotification",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"microsoft",
+								"com"
+							],
+							"path": [
+								"beta",
+								"teams",
+								"416d30d8-484e-4951-9775-f92ca643c91d",
+								"sendActivityNotification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Notification about a Chat to a User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{graph_access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"topic\": {\r\n        \"source\": \"entityUrl\",\r\n        \"value\": \"https://graph.microsoft.com/chats/19:4e485ac3-9c7f-48fa-8711-50b4a47b5722_8e4d61a1-60d5-4f11-8887-c0b09b5e0f7e@unq.gbl.spaces\"\r\n    },\r\n    \"activityType\": \"taskCreated\",\r\n    \"previewText\": {\r\n    \t\"content\": \"Task Assigned\"\r\n    },\r\n    \"recipient\": {\r\n        \"@odata.type\": \"microsoft.graph.aadUserNotificationRecipient\",\r\n        \"userId\": \"4e485ac3-9c7f-48fa-8711-50b4a47b5722\"\r\n    },\r\n    \"templateParameters\": [\r\n    \t{\r\n\t\t\t\"name\": \"taskId\",\r\n\t\t\t\"value\": \"Task 12322\"\r\n\t\t}\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "https://graph.microsoft.com/beta/chats/19:4e485ac3-9c7f-48fa-8711-50b4a47b5722_8e4d61a1-60d5-4f11-8887-c0b09b5e0f7e@unq.gbl.spaces/sendActivityNotification",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"microsoft",
+								"com"
+							],
+							"path": [
+								"beta",
+								"chats",
+								"19:4e485ac3-9c7f-48fa-8711-50b4a47b5722_8e4d61a1-60d5-4f11-8887-c0b09b5e0f7e@unq.gbl.spaces",
+								"sendActivityNotification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Notification about a Chat Message to a User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{graph_access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"topic\": {\r\n        \"source\": \"entityUrl\",\r\n        \"value\": \"https://graph.microsoft.com/chats/19:4e485ac3-9c7f-48fa-8711-50b4a47b5722_8e4d61a1-60d5-4f11-8887-c0b09b5e0f7e@unq.gbl.spaces/messages/1584662866715\"\r\n    },\r\n    \"activityType\": \"taskCreated\",\r\n    \"previewText\": {\r\n    \t\"content\": \"Task Assigned\"\r\n    },\r\n    \"recipient\": {\r\n        \"@odata.type\": \"microsoft.graph.aadUserNotificationRecipient\",\r\n        \"userId\": \"4e485ac3-9c7f-48fa-8711-50b4a47b5722\"\r\n    },\r\n    \"templateParameters\": [\r\n    \t{\r\n\t\t\t\"name\": \"taskId\",\r\n\t\t\t\"value\": \"Task 12322\"\r\n\t\t}\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "https://graph.microsoft.com/beta/chats/19:4e485ac3-9c7f-48fa-8711-50b4a47b5722_8e4d61a1-60d5-4f11-8887-c0b09b5e0f7e@unq.gbl.spaces/sendActivityNotification",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"microsoft",
+								"com"
+							],
+							"path": [
+								"beta",
+								"chats",
+								"19:4e485ac3-9c7f-48fa-8711-50b4a47b5722_8e4d61a1-60d5-4f11-8887-c0b09b5e0f7e@unq.gbl.spaces",
+								"sendActivityNotification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send a Custom Notification to a User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{graph_access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"topic\": {\r\n        \"source\": \"text\",\r\n        \"value\": \"Just some custom text.\",\r\n        \"webUrl\": \"https://teams.microsoft.com/l/team/19%3A2fb10ab94fab4b048063e3e3951787a2%40thread.tacv2/conversations?groupId=416d30d8-484e-4951-9775-f92ca643c91d&tenantId=60bcdb18-3e8b-4c8d-8e03-c9bd0a442378\"\r\n    },\r\n    \"activityType\": \"taskCreated\",\r\n    \"previewText\": {\r\n    \t\"content\": \"Task Assigned\"\r\n    },\r\n    \"recipient\": {\r\n        \"@odata.type\": \"microsoft.graph.aadUserNotificationRecipient\",\r\n        \"userId\": \"4e485ac3-9c7f-48fa-8711-50b4a47b5722\"\r\n    },\r\n    \"templateParameters\": [\r\n    \t{\r\n\t\t\t\"name\": \"taskId\",\r\n\t\t\t\"value\": \"Task 12322\"\r\n\t\t}\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "https://graph.microsoft.com/beta/teams/416d30d8-484e-4951-9775-f92ca643c91d/sendActivityNotification",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"microsoft",
+								"com"
+							],
+							"path": [
+								"beta",
+								"teams",
+								"416d30d8-484e-4951-9775-f92ca643c91d",
+								"sendActivityNotification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Notification about a Personal App to a User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{graph_access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"topic\": {\r\n        \"source\": \"entityUrl\",\r\n        \"value\": \"https://graph.microsoft.com/beta/users/9aa87a7a-a2f4-4803-92e5-08c887b7d740/teamwork/installedApps/2bc14f92-d8ec-4843-84e2-d95e6f33c1c9\"\r\n    },\r\n    \"activityType\": \"taskCreated\",\r\n    \"previewText\": {\r\n    \t\"content\": \"Task Assigned\"\r\n    },\r\n    \"templateParameters\": [\r\n    \t{\r\n\t\t\t\"name\": \"taskId\",\r\n\t\t\t\"value\": \"Task 12322\"\r\n\t\t}\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://graph.microsoft.com/beta/users/9aa87a7a-a2f4-4803-92e5-08c887b7d740/teamwork/sendActivityNotification",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"microsoft",
+								"com"
+							],
+							"path": [
+								"beta",
+								"users",
+								"9aa87a7a-a2f4-4803-92e5-08c887b7d740",
 								"teamwork",
-								"generateActivityNotification"
+								"sendActivityNotification"
 							]
 						}
 					},
@@ -579,21 +540,21 @@ keywords: teams authorization OAuth SSO AAD rsc Postman Graph json
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"about\": \"https://graph.microsoft.com/beta/teams/e5a548cb-e5a4-4e54-8da1-ec0e944d9c11\",\r\n    \"activityType\": \"userMention\",\r\n    \"previewText\": \"User Mention\",\r\n    \"onClickWebUrl\": \"https://teams.microsoft.com/l/channel/19%3Abdbb89ee4acb46ee9f704057c12163a3%40thread.skype/General?groupId=e5a548cb-e5a4-4e54-8da1-ec0e944d9c11\",\r\n    \"recipient\": {\r\n        \"@odata.type\": \"microsoft.graph.aadUserNotificationAudience\",\r\n        \"userId\": \"2725adbe-59ac-4b1a-8096-b47bd244eb09\"\r\n    },\r\n    \"templateParameters\": [],\r\n    \"teamsAppId\": \"a1c8b1ca-3270-4007-9699-a8956baf73e8\",\r\n    \"aggregationId\": 2\r\n}\r\n"
+							"raw": "{\r\n    \"topic\": {\r\n        \"source\": \"entityUrl\",\r\n        \"value\": \"https://graph.microsoft.com/teams/416d30d8-484e-4951-9775-f92ca643c91d\"\r\n    },\r\n    \"activityType\": \"userMention\",\r\n    \"previewText\": {\r\n    \t\"content\": \"User Mention\"\r\n    },\r\n    \"recipient\": {\r\n        \"@odata.type\": \"microsoft.graph.aadUserNotificationRecipient\",\r\n        \"userId\": \"4e485ac3-9c7f-48fa-8711-50b4a47b5722\"\r\n    },\r\n    \"templateParameters\": []\r\n}"
 						},
 						"url": {
-							"raw": "https://canary.graph.microsoft.com/testprodbetatestTeamsGraphSvcDev/teamwork/generateActivityNotification",
+							"raw": "https://graph.microsoft.com/beta/teams/416d30d8-484e-4951-9775-f92ca643c91d/sendActivityNotification",
 							"protocol": "https",
 							"host": [
-								"canary",
 								"graph",
 								"microsoft",
 								"com"
 							],
 							"path": [
-								"testprodbetatestTeamsGraphSvcDev",
-								"teamwork",
-								"generateActivityNotification"
+								"beta",
+								"teams",
+								"416d30d8-484e-4951-9775-f92ca643c91d",
+								"sendActivityNotification"
 							]
 						}
 					},
@@ -618,21 +579,21 @@ keywords: teams authorization OAuth SSO AAD rsc Postman Graph json
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"about\": \"https://graph.microsoft.com/beta/teams/e5a548cb-e5a4-4e54-8da1-ec0e944d9c11\",\r\n    \"activityType\": \"teamMention\",\r\n    \"previewText\": \"Team Mention\",\r\n    \"onClickWebUrl\": \"https://teams.microsoft.com/l/channel/19%3Abdbb89ee4acb46ee9f704057c12163a3%40thread.skype/General?groupId=e5a548cb-e5a4-4e54-8da1-ec0e944d9c11\",\r\n    \"recipient\": {\r\n        \"@odata.type\": \"microsoft.graph.teamMembersNotificationAudience\",\r\n        \"teamId\": \"e5a548cb-e5a4-4e54-8da1-ec0e944d9c11\"\r\n    },\r\n    \"templateParameters\": [],\r\n    \"teamsAppId\": \"a1c8b1ca-3270-4007-9699-a8956baf73e8\",\r\n    \"aggregationId\": 3\r\n}\r\n"
+							"raw": "{\r\n    \"topic\": {\r\n        \"source\": \"entityUrl\",\r\n        \"value\": \"https://graph.microsoft.com/teams/416d30d8-484e-4951-9775-f92ca643c91d\"\r\n    },\r\n    \"activityType\": \"teamMention\",\r\n    \"previewText\": {\r\n    \t\"content\": \"Team Mention\"\r\n    },\r\n    \"recipient\": {\r\n        \"@odata.type\": \"microsoft.graph.aadUserNotificationRecipient\",\r\n        \"userId\": \"4e485ac3-9c7f-48fa-8711-50b4a47b5722\"\r\n    },\r\n    \"templateParameters\": []\r\n}"
 						},
 						"url": {
-							"raw": "https://canary.graph.microsoft.com/testprodbetatestTeamsGraphSvcDev/teamwork/generateActivityNotification",
+							"raw": "https://graph.microsoft.com/beta/teams/416d30d8-484e-4951-9775-f92ca643c91d/sendActivityNotification",
 							"protocol": "https",
 							"host": [
-								"canary",
 								"graph",
 								"microsoft",
 								"com"
 							],
 							"path": [
-								"testprodbetatestTeamsGraphSvcDev",
-								"teamwork",
-								"generateActivityNotification"
+								"beta",
+								"teams",
+								"416d30d8-484e-4951-9775-f92ca643c91d",
+								"sendActivityNotification"
 							]
 						}
 					},
@@ -657,32 +618,33 @@ keywords: teams authorization OAuth SSO AAD rsc Postman Graph json
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"about\": \"https://graph.microsoft.com/beta/teams/e5a548cb-e5a4-4e54-8da1-ec0e944d9c11/channels/19:61ecf6b8014c455d98ad7d2d29140c8a@thread.skype\",\r\n    \"activityType\": \"channelMention\",\r\n    \"previewText\": \"Channel Mention\",\r\n    \"onClickWebUrl\": \"https://teams.microsoft.com/l/channel/19%3A61ecf6b8014c455d98ad7d2d29140c8a%40thread.skype/Internal%2520Channel?groupId=e5a548cb-e5a4-4e54-8da1-ec0e944d9c11&tenantId=60bcdb18-3e8b-4c8d-8e03-c9bd0a442378\",\r\n    \"recipient\": {\r\n        \"@odata.type\": \"microsoft.graph.channelMembersNotificationAudience\",\r\n        \"teamId\": \"e5a548cb-e5a4-4e54-8da1-ec0e944d9c11\",\r\n        \"channelId\": \"19:61ecf6b8014c455d98ad7d2d29140c8a@thread.skype\"\r\n    },\r\n    \"templateParameters\": [],\r\n    \"teamsAppId\": \"a1c8b1ca-3270-4007-9699-a8956baf73e8\",\r\n    \"aggregationId\": 4\r\n}\r\n"
+							"raw": "{\r\n    \"topic\": {\r\n        \"source\": \"entityUrl\",\r\n        \"value\": \"https://graph.microsoft.com/teams/416d30d8-484e-4951-9775-f92ca643c91d/channels/19:5afb25f3d5054f53814733ef39d951f3@thread.tacv2\"\r\n    },\r\n    \"activityType\": \"channelMention\",\r\n    \"previewText\": {\r\n    \t\"content\": \"Channel Mention\"\r\n    },\r\n    \"recipient\": {\r\n        \"@odata.type\": \"microsoft.graph.aadUserNotificationRecipient\",\r\n        \"userId\": \"4e485ac3-9c7f-48fa-8711-50b4a47b5722\"\r\n    },\r\n    \"templateParameters\": []\r\n}"
 						},
 						"url": {
-							"raw": "https://canary.graph.microsoft.com/testprodbetatestTeamsGraphSvcDev/teamwork/generateActivityNotification",
+							"raw": "https://graph.microsoft.com/beta/teams/416d30d8-484e-4951-9775-f92ca643c91d/sendActivityNotification",
 							"protocol": "https",
 							"host": [
-								"canary",
 								"graph",
 								"microsoft",
 								"com"
 							],
 							"path": [
-								"testprodbetatestTeamsGraphSvcDev",
-								"teamwork",
-								"generateActivityNotification"
+								"beta",
+								"teams",
+								"416d30d8-484e-4951-9775-f92ca643c91d",
+								"sendActivityNotification"
 							]
 						}
 					},
 					"response": []
 				}
 			],
+			"description": "Use the User Context or App Context Authentication calls as appropriate.",
 			"event": [
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "9363fcd3-abd5-47ef-b879-663cc8608a1d",
+						"id": "2d98339b-8f99-4dbf-9b4d-2091b9097ddd",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -692,15 +654,17 @@ keywords: teams authorization OAuth SSO AAD rsc Postman Graph json
 				{
 					"listen": "test",
 					"script": {
-						"id": "466dcf2d-9f83-4f37-bd5c-5bf3c24e4d86",
+						"id": "ed1eb74e-39ea-46d9-8148-a71acb8ded04",
 						"type": "text/javascript",
 						"exec": [
 							""
 						]
 					}
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		}
-	]
+	],
+	"protocolProfileBehavior": {}
 }
 ```

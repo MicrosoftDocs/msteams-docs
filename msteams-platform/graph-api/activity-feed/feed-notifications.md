@@ -44,7 +44,7 @@ Currently, there is one type of notification recipient:
 
 The steps for enabling activity feed notifications in your application are as follows:
 
-1. [Register your app with Microsoft identity platform via the Azure AD portal](../rsc/resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
+1. [Register your app with Microsoft identity platform via the Azure AD portal](#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
 1. [Obtain an access token from the Microsoft Identity platform](#obtain-an-access-token-from-the-microsoft-identity-platform).
 1. [Update your Teams app manifest](#update-your-teams-app-manifest).
 
@@ -84,7 +84,10 @@ You'll need to have the following values from the Azure AD registration process 
 &emsp;&emsp; &#8226;  **templateText**
 
 ```json
-"webApplicationInfo": {
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
+  "webApplicationInfo": {
     "id": "73ee2834-38aa-4077-b4c9-e8e1c36f7e40",
     "resource": "https://AkjStoreApp"
   },
@@ -121,7 +124,8 @@ You'll need to have the following values from the Azure AD registration process 
         "templateText": "The Creator created task {taskId} for you"
       }
     ]
-  },
+  }
+}
 ```
 
 ## Activity feed notification payload properties

@@ -1,6 +1,6 @@
 ---
-title: Testing resource-specific consent in Teams
-description: Details testing resource-specific consent in Teams using Postman
+title: Testing activity feed notifications in Teams
+description: Details testing activity feed notifications in Teams using Postman
 localization_priority:  Normal
 author: laujan
 ms.author: lajanuar
@@ -15,53 +15,13 @@ The Activity feed API is a Microsoft Teams and Microsoft Graph integration that 
 > [!NOTE]
 >To test activity feed notifications, your Teams app manifest file must include **webApplicationInfo** and activities keys. *See*, [Update your Teams app manifest](feed-notifications.md#update-your-teams-app-manifest).
 
-```json
-"webApplicationInfo": {
-
-        "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX", 
-
-"resource": "https://AnyString",
-
-        "applicationPermissions": [
-
-    "TeamSettings.Read.Group",
-
-   "ChannelMessage.Read.Group",
-
-  "TeamSettings.Edit.Group",
-
-  "ChannelSettings.Edit.Group",
-
-  "Channel.Create.Group",
-
-  "Channel.Delete.Group",
-
-  "TeamsApp.Read.Group",
-
-  "TeamsTab.Read.Group",
-
-  "TeamsTab.Create.Group",
-
-  "TeamsTab.Edit.Group",
-
-  "TeamsTab.Delete.Group",
-
-  "Member.Read.Group",
-
-  "Owner.Read.Group",
-
-        ]
-
-    }
-```
-
 ## Test activity feed notifications using the Postman app
 
 To check whether the activity feed notifications are being honored by the API request payload, you'll need to copy the [Activity feed notification test code](test-activity-feed-json-file.md) into your local environment and update the following values:
 
 1. `azureADAppId`  — your app's Azure AD app id.
 1. `azureADAppSecret`  — your Azure AD app secret (password)
-1. `teamGroupId` — you can get the team group id from the Teams client as follows:
+1. `tenantId` — you can get the team group id from the Teams client as follows:
 
 > [!div class="checklist"]
 >
@@ -76,12 +36,12 @@ To check whether the activity feed notifications are being honored by the API re
 > [!div class="checklist"]
 >
 > * Open the [Postman](https://www.postman.com) app.
-> * Select **File** => **Import** => **Import file** to upload the JSON file from your environment.  
+> * Select **File** => **Import** => **Upload Files** to upload the JSON file from your environment.  
 > * Select the **Collections** tab.
-> * Select the chevron (>) next to the **Test RSC** to expand the details view and see the API requests.
+> * Select the chevron (>) next to the **Activity Feed** to expand the details view and see the API requests.
 
 Execute the entire collection for each API call. Check all of the response status codes to confirm that the activity feed notification behavior in your app meets expectations.
 
 ## Install your app directly in Teams
 
-Once you've created your app you can [upload your app package](../../concepts/deploy-and-publish/apps-upload.md#upload-your-package-into-a-team-using-the-apps-tab) directly to a specific team, one-to-one chat, or group chat.   To do so, the **Upload custom apps** policy setting must be enabled as part of the custom app setup policies. *See* [Custom app policy settings](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings)
+Once you've created and tested your app, you can [upload your app package](../../concepts/deploy-and-publish/apps-upload.md#upload-your-package-into-a-team-using-the-apps-tab) directly to a specific team, one-to-one chat, or group chat.   To do so, the **Upload custom apps** policy setting must be enabled as part of the custom app setup policies. *See* [Custom app policy settings](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).

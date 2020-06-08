@@ -83,7 +83,7 @@ To check whether the RSC permissions are being honored by the API request payloa
 > [!div class="checklist"]
 >
 > * Open the [Postman](https://www.postman.com) app.
-> * Select **File** => **Import** => **Import file** to upload the updated JSON file from your environment.  
+> * Select **File** => **Import** => **Upload Files** to upload the updated JSON file from your environment.  
 > * Select the **Collections** tab. 
 > * Select the chevron (>) next to the **Test RSC** to expand the details view and see the API requests.
 
