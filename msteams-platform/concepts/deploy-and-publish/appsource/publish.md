@@ -10,7 +10,8 @@ keywords: teams publish store office publishing AppSource
 Publishing  your app to [AppSource](https://appsource.microsoft.com) makes it available in the Teams app catalog and on the web. At a high level, the process for submitting your app to AppSource is:
 
 1. Develop your app following our [design guidelines](~/concepts/design/understand-use-cases.md). Tabs should follow our [tab design guidelines](~/tabs/design/tabs.md). Bots should follow the [bot design guidelines](~/bots/design/bots.md).
-1. [Set up a developer account](/office/dev/store/open-a-developer-account) in [Partner Center](https://support.microsoft.com/help/4499930/partner-center-overview).
+1. Ensure your app meets the app [validation policies](/legal/marketplace/certification-policies) for Microsoft Teams.
+1. [Set up a developer account](/office/dev/store/open-a-developer-account) in [Partner Center](https://support.microsoft.com/help/4499930/partner-center-overview). *See also* [How do I create a Partner Center account](#how-do-i-create-a-partner-center-account) in the FAQ section, below.
 1. Prepare your app for submission by following our [submission checklist](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md).
 1. Review our [tips for a successful app submission](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md).
 1. Submit your package to [AppSource through Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource).
@@ -22,22 +23,18 @@ Publishing  your app to [AppSource](https://appsource.microsoft.com) makes it av
 >- If your Teams app contains a bot, you must comply with the Bot Developer Framework [Code of Conduct](https://aka.ms/bf-conduct).
 >- If your app contains an Office 365 Connector, additional terms may apply. *See* [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard) and [App Developer Agreement](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm).
 
-## FAQs — Teams apps and Partner accounts
+## FAQs — Teams apps and partner accounts
 
 ## How do I create a Partner Center account?
 
 There are two ways to create a Partner Center account:
 
-- If you're new to Partner center and don't have an account  within the Microsoft network, [create an account using the Partner Center enrollment page](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
+- If you're new to Partner Center and don't have an account  within the Microsoft network, [create an account using the Partner Center enrollment page](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
 - If you're already enrolled in the Partner Network, [create an account directly in Partner Center using an existing enrollment](/office/dev/store/).
-
-## How do I add my phone number to the Partner profile contact section?
-
-The phone number has three parts — country code, area code, and the telephone number. If your phone number doesn't include an area code, then leave the second box empty, and complete the third box.
 
 ## What if I cannot find my Office Store account in Partner Center?
 
-Please open a [Partner support ticket](https://partner.microsoft.com/en-US/support/v2/?stage=1) and select the following from the drop-down menus:
+Please open a [Partner Center support ticket](https://partner.microsoft.com/en-US/support/v2/?stage=1) and select the following from the drop-down menus:
 
 | Menu | Option |
 | -------   | -------  |
@@ -45,15 +42,21 @@ Please open a [Partner support ticket](https://partner.microsoft.com/en-US/suppo
 | Topic | General Marketplace Help and How-to questions |
 | Subtopic| Office add-in |
 
-*See also* [How to open a Partner Center support ticket](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket).
+## Where can I get support for my Partner Center issues?
 
-## How do I manage my Account settings and Partner profile in Partner Center?
+Please visit our [publishers support page](https://aka.ms/marketplacepublishersupport) to search for your issue topic and find guidance. If the provided guidance is not helpful, [open a Partner Center support ticket](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket).
 
-Please visit our [Manage account settings and profile info](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info) page for guidance on managing your Partner center account Settings.
-
-## How do I manage my Office Store Account?
+## How do I manage my Office Store account?
 
 Please visit our  [Manage your Office Store account in Partner Center](/office/dev/store/manage-account-settings-and-profile) for guidance on managing your Office Store account through Partner Center.
+
+## How do I add my phone number to the partner profile contact section?
+
+The phone number has three parts — country code, area code, and the telephone number. If your phone number doesn't include an area code, then leave the second box empty, and complete the third box.
+
+## How do I manage my account settings and partner profile in Partner Center?
+
+Please visit our [Manage account settings and profile info](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info) page for guidance on managing your Partner Center account settings.
 
 ## Why do I receive the message, "This account is not publish eligible," when I try to submit my add-in through Partner Center?
 
@@ -69,10 +72,10 @@ During the account verification process the status of each required step —  Em
 
 ## My account Verification status has not advanced beyond Email Ownership. How should I proceed?
 
-During the **Email Ownership** verification process, a verification email is sent to the primary contact email address. Please check your primary contact inbox for an email  from **maccount@<span>microsoft</span>.com** with the subject  line *Action needed: Verify your email account with Microsoft*, requesting that you complete the email verification process. The verification email will be sent to the email address listed  in your Account Settings page in Partner Center.
+During the **Email Ownership** verification process, a verification email is sent to the primary contact email address. Please check your primary contact inbox for an email  from **maccount@<span>microsoft</span>.com** with the subject  line *Action needed: Verify your email account with Microsoft*, requesting that you complete the email verification process. The verification email will be sent to the email address listed  in your account settings page in Partner Center.
 
 > [!NOTE]
- >The email verification link is only valid for 7 days. You can request that we resend the email to you by visiting your Partner profile page and selecting the **Resend verification email** link. To ensure that the email is received, whitelist email from microsoft.com as a safe domain, and check your junk email folders.
+ >The email verification link is only valid for 7 days. You can request that we resend the email to you by visiting your partner profile page and selecting the **Resend verification email** link. To ensure that the email is received, whitelist email from microsoft.com as a safe domain, and check your junk email folders.
 
 ## How I do get further support for my account related issues?
 
@@ -96,9 +99,13 @@ If all the submitted details are correct, employment verification completes in 1
 
 Business Verification takes 1 to 2 business days to complete, provided that all required documents have been submitted.
 
-## If I've already reached out to the support team, will my ticket be expedited?
+## If I reach out to the support team, will my ticket be expedited?
 
 Support tickets will be resolved within a week's time. Please look for the updates which will be sent to the email provided when the support ticket was raised.
+
+## My issue is not listed here.  Are there other pages I can reference for Partner Center issues?
+
+Please refer to our [commercial marketplace documentation](/azure/marketplace/) for more help.
 
 ## I've created a support ticket, it has been 7 business days, and I haven't received an update. Where can I get additional help?
 
@@ -112,4 +119,4 @@ Please send an email to **<teamsubm@microsoft.com>** with the following details:
 
 >
 > [!div class="nextstepaction"]
-> [Learn more about app validation policies for Microsoft Teams](https://docs.microsoft.com/legal/marketplace/certification-policies)
+> [Learn more about app validation policies for Microsoft Teams](/legal/marketplace/certification-policies)
