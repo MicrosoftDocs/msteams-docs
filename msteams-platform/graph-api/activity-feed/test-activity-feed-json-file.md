@@ -457,7 +457,7 @@ keywords: teams activity feed notifications Postman Graph json
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"topic\": {\r\n        \"source\": \"text\",\r\n        \"value\": \"Just some custom text.\",\r\n        \"webUrl\": \"https://teams.microsoft.com/l/team/19%3A2fb10ab94fab4b048063e3e3951787a2%40thread.tacv2/conversations?groupId=416d30d8-484e-4951-9775-f92ca643c91d&tenantId=60bcdb18-3e8b-4c8d-8e03-c9bd0a442378\"\r\n    },\r\n    \"activityType\": \"taskCreated\",\r\n    \"previewText\": {\r\n    \t\"content\": \"Task Assigned\"\r\n    },\r\n    \"recipient\": {\r\n        \"@odata.type\": \"microsoft.graph.aadUserNotificationRecipient\",\r\n        \"userId\": \"4e485ac3-9c7f-48fa-8711-50b4a47b5722\"\r\n    },\r\n    \"templateParameters\": [\r\n    \t{\r\n\t\t\t\"name\": \"taskId\",\r\n\t\t\t\"value\": \"Task 12322\"\r\n\t\t}\r\n    ]\r\n}"
+							"raw": "{\r\n    \"topic\": {\r\n        \"source\": \"text\",\r\n        \"value\": \"Just some custom text.\",\r\n        \"webUrl\": \"https://teams.microsoft.com/l/team/19%3A2fb10ab94fab4b048063e3e3951787a2%40thread.tacv2/conversations?groupId=416d30d8-484e-4951-9775-f92ca643c91d\"\r\n    },\r\n    \"activityType\": \"taskCreated\",\r\n    \"previewText\": {\r\n    \t\"content\": \"Task Assigned\"\r\n    },\r\n    \"recipient\": {\r\n        \"@odata.type\": \"microsoft.graph.aadUserNotificationRecipient\",\r\n        \"userId\": \"4e485ac3-9c7f-48fa-8711-50b4a47b5722\"\r\n    },\r\n    \"templateParameters\": [\r\n    \t{\r\n\t\t\t\"name\": \"taskId\",\r\n\t\t\t\"value\": \"Task 12322\"\r\n\t\t}\r\n    ]\r\n}"
 						},
 						"url": {
 							"raw": "https://graph.microsoft.com/beta/teams/416d30d8-484e-4951-9775-f92ca643c91d/sendActivityNotification",

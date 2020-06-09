@@ -13,37 +13,39 @@ keywords: teams authorization OAuth SSO AAD activity feed notification Postman G
 The activity feed API is a Microsoft Teams and Microsoft Graph integration that enables your app to use API endpoints to send activity feed notifications to Teams users. Activity feed notifications can range from identifying tasks requiring a user's attention, to actions taken by others that affect the user or a set of users.
 
 > [!NOTE]
->To test activity feed notifications, your Teams app manifest file must include **webApplicationInfo** and **activities** keys. *See*, [Update your Teams app manifest](feed-notifications.md#update-your-teams-app-manifest).
+>To test activity feed notifications:
+> 1. Your Teams app manifest file must include **webApplicationInfo** and **activities** keys. *See*, [Update your Teams app manifest](feed-notifications.md#update-your-teams-app-manifest).
+>2. The **Upload custom apps** policy setting must be enabled as part of the custom app setup policies. *See* [Custom app policy settings](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings). <br/>
+> <br/>
+
 
 ## Test activity feed notifications using the Postman app
 
-To check whether the activity feed notifications are being honored by the API request, you'll need to copy the [Activity feed notification test code](test-activity-feed-json-file.md) into your local environment and update the following values:
+> [!div class="checklist"]
+> * Copy the [Activity feed notification test code](test-activity-feed-json-file.md) into your local environment and update the following values:
 
 1. `client_id`  — your app's Azure AD app id.
 1. `client_secret`  — your Azure AD app secret (password)
 1. `tenantId` — you can get the unique identifier tenant id from the Teams client as follows:
 
-> [!div class="checklist"]
->
-> * In the Teams client, select **Teams** from the far left nav bar .
-> * Select the team where the app is installed from the dropdown menu.
-> * Select the **More options** icon (&#8943;).
-> * Select **Get link to team**.
-> * Copy and save the **tenantId** value from the string:
+* In the Teams client, select **Teams** from the far left nav bar .
+* Select the team where the app is installed from the dropdown menu.
+* Select the **More options** icon (&#8943;).
+* Select **Get link to team**.
+* Copy and save the **tenantId** value from the string.
 
-&emsp;&emsp; ![find tenant ID in Teams](../../assets/images/find-tenant-id.png)
-
-### Using Postman
+>[!NOTE]
+> You may need to replace other parameters as appropriate such as `username`, `password`, etc.
 
 > [!div class="checklist"]
->
-> * Open the [Postman](https://www.postman.com) app.
-> * Select **File** -> **Import** -> **Upload Files** to upload the JSON file from your environment.  
-> * Select the **Collections** tab.
-> * Select the chevron (>) next to **Activity Feed** to expand the details view and see the API requests.
+>* [Prepare your Office 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).  
+>* [Upload your app package](../../concepts/deploy-and-publish/apps-upload.md#upload-your-package-into-a-team-using-the-apps-tab) directly to a specific team, one-to-one chat, or group chat.
+> * Open the [Postman](https://www.postman.com) app:
 
-Execute the entire collection for each API call. Check all of the response status codes to confirm that the activity feed notification behavior in your app meets expectations.
+* Select **File** -> **Import** -> **Upload Files** to upload the JSON file from your environment.  
+* Select the **Collections** tab.
+* Select the chevron (>) next to **Activity Feed** to expand the details view and see the API requests.
+* Select the authentication request.
+* Select an API.
 
-## Install your app directly in Teams
-
-Once you've created and tested your app, you can [upload your app package](../../concepts/deploy-and-publish/apps-upload.md#upload-your-package-into-a-team-using-the-apps-tab) directly to a specific team, one-to-one chat, or group chat.   To do so, the **Upload custom apps** policy setting must be enabled as part of the custom app setup policies. *See* [Custom app policy settings](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).
+ Check the response status codes to confirm that the activity feed notification behavior in your app meets expectations.
