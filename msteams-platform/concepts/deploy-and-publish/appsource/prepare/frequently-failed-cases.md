@@ -67,7 +67,7 @@ For additional information on authentication see:
 ![SharePoint web view](~/assets/images/faq/web-sp.png)
 ![SharePoint tab view](~/assets/images/faq/tab-sp.png)
 
-* 	Tabs must not include complex navigation and should be light in nature.
+* Tabs should be light in nature and not include complex navigation .
 * If there are multiple view options, consider having a tab config menu for the user to choose from. For example, instead of embedding a menu inside the tab, put the menu in the configuration page so the actual tab view is clean and focused.
 
 ![Wide idea configuration page](~/assets/images/faq/wideidea.png)
@@ -75,12 +75,12 @@ For additional information on authentication see:
 ### &#9989; Tab configuration must happen in the configuration screen
 
 * The configuration screen should clearly explain the value of the experience and how to configure the tab.
-* The configuration process should not dead-end the user experience and always provide a way for users to continue. For example, do not show an empty board after the user has configured the tab
-* Tab configuration should complete in the Tab UI itsef and no further action need to be done by the user including login to your website. For example, after the user has finished configuration and loaded your tab, do not show a Sign in box. This Sign in process must be part of the configuration process itself.
-* Do not show your entire webpage within the sign-in configuration pop up.
+* The configuration process should always provide a way for users to continue not dead-end the user experience. For example, do not show an empty board after the user has configured the tab
+* The user sign-in process must be part of the configuration process and should complete in the Tab UI. After the user has completed configuration and loaded your tab, no further action should be required.
+* Don't show your entire webpage within the sign-in configuration pop-up window.
 * A user should always be able to finish the configuration experience, even if they can’t immediately find the content they’re looking for.
 * The configuration experience should provide options for the user to find their content, pin a URL, or create new content if it doesn’t exist.
-* The user shouldn’t have to leave the configuration experience to create content and then come back to Teams to pin it.
+* The configuration experience must remain within the Teams context. The user shouldn’t have to leave the configuration experience to create content and then return to Teams to pin it.
 * Use the available viewport area efficiently. Do not waste it on using huge logos inside the configuration pop up
 
 ![OneNote allows users to paste a OneNote link in case notes can not be found](~/assets/images/faq/tab-onenote-config.png)
@@ -104,24 +104,25 @@ Your bot should be responsive to any command and not dead-end the user. Here are
 * **Include help content or guidance when your bot is lost**. When your bot can't understand the user input, it should suggest an alternative action. For example, *"I'm sorry, I don't understand. Type "help" for more information."* Don't respond with an error message or simply, *"I don't understand"*. Use this chance to teach your users.
 
 * **Use adaptive cards and task modules to make your bot response clear and actionable**
-Adaptive cards with buttons invoking task modules make the bot easy to interact. These cards and buttons are easier to use in a mobile device as opposed to your user typing the commands
+[Adaptive cards with buttons invoking task modules](/task-modules-and-cards/task-modules/task-modules-bots) enhance the bot user experience. These cards and buttons are easier to use in a mobile device as opposed to your user typing the commands
 
 * **Think through all scopes**. Be sure that your bot provides appropriate responses when mentioned (`@*botname*`) in a channel and in personal conversations. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](~/resources/schema/manifest-schema.md#bots).)
 
 ### &#9989; Bots must send a welcome message on first launch
 
-Welcome messages are the best way to set your bot's tone. This is the first interaction a user has with the bot. A good welcome message can encourage the user to keep exploring the app. If the welcome or introductory message is confusing or unclear, users won't see the value of the app immediately and lose interests. The welcome message must ideally include the following:
+Welcome messages are the best way to set your bot's tone. This is the first interaction a user has with the bot. A good welcome message can encourage the user to keep exploring the app. If the welcome or introductory message is confusing or unclear, users won't see the value of the app immediately and lose interests. 
 
-*	Welcome message in a channel must say Who added the bot 
-*	Must have the value proposition 
-*	Must provide a way forward guidance for using the bot 
-*	Must be easy to read - preferably use Card with actionable buttons.
-*	Welcome message with a card with a Welcome tour button loading a Task module would be ideal 
-*	Must not be texty and long 
-*	Welcome message must only be one ping (and not two or more simultaneous pings) 
-*	Welcome message in personal chat may be shown only to the user who configured the app  
-*	Bot must never send a personal chat to every member in the Team 
-*	Bot must never send Welcome message more than once (example: Sending the same welcome message over regular intervals of time is not allowed) and is spamming
+#### Welcome message requirements
+
+* Identify who added the bot to a channel.
+* Include a value proposition.
+* Provide way forward guidance for using the bot.
+* Easy to read  text and dialogue — preferably a card with an actionable welcome tour button that loads a task module.
+* Simple, straightforward text; not wordy.
+* Invoked with one ping (and not two or more simultaneous pings).
+* In personal chat the welcome message must only be shown to the user who configured the app.  
+* Never send a personal chat to every member in the Team 
+* Never send Welcome message more than once (example: Sending the same welcome message over regular intervals of time is not allowed) and is spamming
 
 Spamming cases that must be avoided:
 *	Channel message by bot: Do not spam users by creating separate new chat posts, but a single thread post with replies in the same thread.
