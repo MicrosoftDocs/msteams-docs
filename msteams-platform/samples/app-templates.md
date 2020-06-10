@@ -241,7 +241,7 @@ Request-a-team is a Microsoft Teams app that optimizes new team creation for you
 ## Scrums for Channels &#9734;
 
 > [!NOTE]
-> For scrum meeting support in group chats, please see our [Scrums for Group Chat](#scrums-for-group-chat-&#9734;) app template.
+> For scrum meeting support in group chats, please see our [Scrums for Group Chat](#scrums-for-group-chat-) app template.
 
 Scrums for Channels is a Microsoft Teams app template that enables users to schedule and drive agile framework meetings in Teams channels. The app is great for remote teams and teams comprised of members from varied geographical locations and time zones to share daily updates and ensure participation in scrum stand-up meetings.
 
