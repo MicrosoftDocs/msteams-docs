@@ -6,7 +6,7 @@ keywords: Microsoft Teams templates samples demo
 
 # App Templates for Microsoft Teams
 
-&#9734; Indicates a newly released app template.
+**&#9734; Indicates a newly released app template.**
 
 App templates are production-ready apps for Microsoft Teams that are community driven, open-source, and available on GitHub. Each contains detailed instructions for deploying and installing that app for your organization, providing a ready-to-use app that you can install and begin using immediately. The complete source code is available as well, so you can explore it in detail, or fork the code and alter it to meet your specific needs.
 
@@ -241,7 +241,7 @@ Request-a-team is a Microsoft Teams app that optimizes new team creation for you
 ## Scrums for Channels &#9734;
 
 > [!NOTE]
-> For scrum meeting support in group chats, please see our new [Scrums for Group Chat](#scrums-for-group-chat-&#9734;) app template.
+> For scrum meeting support in group chats, please see our [Scrums for Group Chat](#scrums-for-group-chat-&#9734;) app template.
 
 Scrums for Channels is a Microsoft Teams app template that enables users to schedule and drive agile framework meetings in Teams channels. The app is great for remote teams and teams comprised of members from varied geographical locations and time zones to share daily updates and ensure participation in scrum stand-up meetings.
 
@@ -259,6 +259,9 @@ Scrums for Channels is a Microsoft Teams app template that enables users to sche
 :::row-end:::
 
 ## Scrums for Group Chat &#9734;
+
+> [!NOTE]
+> Scrums Status has been updated and is now the Scrums for Group Chat app template.
 
 Scrums for Group Chat is a supportive scrum assistant that enables group chat members to run asynchronous stand-up meetings and easily share their daily updates. It allows all members of the group chat to contribute to the scrum and view the updates made by others in the running scrum.
 
