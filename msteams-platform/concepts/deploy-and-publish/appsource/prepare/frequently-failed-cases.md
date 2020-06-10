@@ -127,7 +127,7 @@ Welcome messages are the best way to set your bot's tone. This is the first inte
 #### Avoid welcome message spamming
 
 * **Channel message by bot**. Don't spam users by creating separate new chat posts. Create a single thread post with replies in the same thread.
-* **Personal chat by bot**. Don't send multiple messages.Send one message with complete information.
+* **Personal chat by bot**. Don't send multiple messages. Send one message with complete information.
 
 #### Notification-only bot welcome messages
 
