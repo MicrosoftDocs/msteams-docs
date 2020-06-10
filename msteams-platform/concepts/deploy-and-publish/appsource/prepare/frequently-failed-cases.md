@@ -122,7 +122,7 @@ Welcome messages are the best way to set your bot's tone. This is the first inte
 * Invoke the welcome message  with one ping, not two or more simultaneous pings.
 * In personal chat the welcome message must only be shown to the user who configured the app.  
 * Never send a personal chat to every member in the team.
-* Never send the welcome message more than once. Repeating the same welcome message over regular intervals is not allowed and is considered spamming
+* Never send the welcome message more than once. Repeating the same welcome message over regular intervals is not allowed and is considered spamming.
 
 #### Avoid welcome message spamming
 
@@ -135,7 +135,7 @@ Notification-only bots must send a welcome message that includes a message conve
 
 #### Welcome messages in the personal scope
 
-* **Make your message concise and informative**.  Most likely, users' experiences with and knowledge of your app will vary. They might have used your app on another platform or know nothing about your app. You want to tailor your message to all audiences and in a couple sentences explain what your bot does and the ways to interact with it. You should also explain the value of the app and how the users will benefit from using it.
+* **Make your message concise and informative**.  Most likely, users experience with and knowledge of your app will vary. A user may have used your app on another platform or know nothing about your app. You want to tailor your message to all audiences and in a couple sentences explain what your bot does and the ways to interact with it. You should also explain the value of the app and how the users will benefit from using it.
 ![Cafe and Dinning bot](~/assets/images/faq/cafe-bot.png)
 
 * **Make your message actionable**. Think about the first thing you want users to do after installing your app. Is there a cool command they should try? Is there another onboarding experience they should know about? Do they need to sign in? You can add actions on an adaptive card or provide specific examples such as *“Try asking….”*, *“This is what I can do…”*.
