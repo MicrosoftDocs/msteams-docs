@@ -63,4 +63,4 @@ TODO: @Emily
 
 ## Publish your app
 
-TODO: @Joey
+From the *Publish* page you can submit your app to your organization's custom app store. Your IT admin will review these submissions. You can return to the *Publish* page to check on your submission status and learn if your app was approved or rejected by your IT admin. This is also where you'll come to submit updates to your app or cancel any currently active submissions.
