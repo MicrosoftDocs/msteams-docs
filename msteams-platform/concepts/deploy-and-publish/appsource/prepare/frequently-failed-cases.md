@@ -64,7 +64,7 @@ For additional information on authentication see:
 
 * Tabs should provide focused content and avoid needless UI elements. In general, this usually refers to unnecessary nested/layered navigation, an extraneous or irrelevant UI next to the content, or any links that take the user to unrelated content. For example, below is a tab view that omits navigation menus and only showcases the main content:
 
-![SharePoint web view](~/assets/images/faq/web-sp.png)
+![SharePoint web view](~/assets/images/faq/web-sp.png)  
 ![SharePoint tab view](~/assets/images/faq/tab-sp.png)
 
 * Tabs should be light in nature and not include complex navigation .
@@ -110,38 +110,37 @@ Your bot should be responsive to any command and not dead-end the user. Here are
 
 ### &#9989; Bots must send a welcome message on first launch
 
-Welcome messages are the best way to set your bot's tone. This is the first interaction a user has with the bot. A good welcome message can encourage the user to keep exploring the app. If the welcome or introductory message is confusing or unclear, users won't see the value of the app immediately and lose interests. 
+Welcome messages are the best way to set your bot's tone. This is the first interaction a user has with the bot. A good welcome message can encourage the user to keep exploring the app. If the welcome or introductory message is confusing or unclear, users won't see the value of the app immediately and lose interests.
 
-#### Welcome message requirements
+### Welcome message requirements
 
 * Identify who added the bot to a channel.
 * Include a value proposition.
 * Provide way forward guidance for using the bot.
-* Easy to read  text and dialogue — preferably a card with an actionable welcome tour button that loads a task module.
-* Simple, straightforward text; not wordy.
-* Invoked with one ping (and not two or more simultaneous pings).
+* Present  easy to read  text and straightforward dialogue — preferably a card with an actionable welcome tour button that loads a task module.
+* Keep it simple, avoid wordy/chatty dialogue.
+* Invoke the welcome message  with one ping, not two or more simultaneous pings.
 * In personal chat the welcome message must only be shown to the user who configured the app.  
-* Never send a personal chat to every member in the Team 
-* Never send Welcome message more than once (example: Sending the same welcome message over regular intervals of time is not allowed) and is spamming
+* Never send a personal chat to every member in the team.
+* Never send the welcome message more than once. Repeating the same welcome message over regular intervals is not allowed and is considered spamming
 
-Spamming cases that must be avoided:
-*	Channel message by bot: Do not spam users by creating separate new chat posts, but a single thread post with replies in the same thread.
-* Personal chat by bot: Do not send multiple messages but one message with all the information.
+#### Avoid welcome message spamming
 
-Notification Only Bots:
-*	Notification only bot must send a welcome message 
-*	Must also include any message conveying "I am a notification only bot and will not be able to reply to your chats" 
+* **Channel message by bot**. Don't spam users by creating separate new chat posts. Create a single thread post with replies in the same thread.
+* **Personal chat by bot**. Don't send multiple messages.Send one message with complete information.
 
-Here are a few considerations when designing your welcome message:
+#### Notification-only bot welcome messages
 
-#### Personal Scope
+Notification-only bots must send a welcome message that includes a message conveying, *"I am a notification-only bot and will not be able to reply to your chats"*.
 
-* **Make your message concise and informative**. Most likely, users' experiences with and knowledge of your app will vary. They might have used your app on another platform or know nothing about your app. You want to tailor your message to all audiences and in a couple sentences explain what your bot does and the ways to interact with it. You should also explain the value of the app and how the users will benefit from using it.
+#### Welcome messages in the personal scope
+
+* **Make your message concise and informative**.  Most likely, users' experiences with and knowledge of your app will vary. They might have used your app on another platform or know nothing about your app. You want to tailor your message to all audiences and in a couple sentences explain what your bot does and the ways to interact with it. You should also explain the value of the app and how the users will benefit from using it.
 ![Cafe and Dinning bot](~/assets/images/faq/cafe-bot.png)
 
 * **Make your message actionable**. Think about the first thing you want users to do after installing your app. Is there a cool command they should try? Is there another onboarding experience they should know about? Do they need to sign in? You can add actions on an adaptive card or provide specific examples such as *“Try asking….”*, *“This is what I can do…”*.
 
-#### Team scope
+#### Welcome messages in the team/channel  scope
 
 Things are a little bit different when the bot is first added to a channel. Normally, you shouldn't send a 1:1 message to everyone on the team, but the bot can send a welcome message in the channel.
 
