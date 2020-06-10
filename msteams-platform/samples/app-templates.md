@@ -6,11 +6,11 @@ keywords: Microsoft Teams templates samples demo
 
 # App Templates for Microsoft Teams
 
-**&#9734; Indicates a newly released app template.**
-
 App templates are production-ready apps for Microsoft Teams that are community driven, open-source, and available on GitHub. Each contains detailed instructions for deploying and installing that app for your organization, providing a ready-to-use app that you can install and begin using immediately. The complete source code is available as well, so you can explore it in detail, or fork the code and alter it to meet your specific needs.
 
-## Key benefits
+**&#9734; Indicates newly released app templates.**
+
+### Key benefits
 
 * **Plug and play experience:** All app templates include deployments scripts that will allow you to host all necessary services in Microsoft Azure. No coding is required to deploy the apps.
 * **Production-ready code:** The app templates conform to recommended best practices around security and infrastructure, and all community submitted changes to them are reviewed to ensure continued conformance.
@@ -98,6 +98,8 @@ Expert Finder is a [Microsoft Teams bot](../bots/what-are-bots.md) that identifi
 
 ## FAQ Plus
 
+Conversational Q&A bots are an easy way to provide answers to frequently asked questions by users. However, most bots fail to engage with users in meaningful way because there is no human in the loop when the bot fails. FAQ bot is a friendly Q&A bot that brings a human in the loop when it is unable to help. One can ask the bot a question and the bot responds with an answer if it is contained in the knowledge base. If not, the bot allows the user to submit a query which then gets posted in a pre-configured team of experts who are help to provide support by acting upon the notifications from within their team itself.
+
 > [!NOTE]
 > The 2020 release of **FAQ Plus, Version 2** supports improved Q&A resolutions by enabling the team of experts to complete the following:
 >
@@ -109,13 +111,7 @@ Expert Finder is a [Microsoft Teams bot](../bots/what-are-bots.md) that identifi
 >
 > &#x2714; Configure an answer with additional details to display as an [adaptive card](/task-modules-and-cards/cards/cards-reference#adaptive-card).
 >
->[**Get v2020 on GitHub**](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
->
->
-
-Conversational Q&A bots are an easy way to provide answers to frequently asked questions by users. However, most bots fail to engage with users in meaningful way because there is no human in the loop when the bot fails. FAQ bot is a friendly Q&A bot that brings a human in the loop when it is unable to help. One can ask the bot a question and the bot responds with an answer if it is contained in the knowledge base. If not, the bot allows the user to submit a query which then gets posted in a pre-configured team of experts who are help to provide support by acting upon the notifications from within their team itself.
-
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-faqplusplus-app)
+[**Get it on GitHub**](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
 
 ![FAQ Plus gif](../assets/images/FAQPlusEndUser.gif)
 
@@ -240,12 +236,12 @@ Request-a-team is a Microsoft Teams app that optimizes new team creation for you
 
 ## Scrums for Channels &#9734;
 
-> [!NOTE]
-> For scrum meeting support in group chats, please see our [Scrums for Group Chat](#scrums-for-group-chat-) app template.
-
 Scrums for Channels is a Microsoft Teams app template that enables users to schedule and drive agile framework meetings in Teams channels. The app is great for remote teams and teams comprised of members from varied geographical locations and time zones to share daily updates and ensure participation in scrum stand-up meetings.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-scrumsforchannels)
+
+> [!NOTE]
+> To conduct scrum meetings in a group chat, please see our [Scrums for Group Chat](#scrums-for-group-chat-) app template.
 
 :::row:::
   :::column span="2":::
@@ -261,7 +257,7 @@ Scrums for Channels is a Microsoft Teams app template that enables users to sche
 ## Scrums for Group Chat &#9734;
 
 > [!NOTE]
-> Scrums Status has been updated and is now the Scrums for Group Chat app template.
+> Scrums Status has been updated and is now Scrums for Group Chat app template.
 
 Scrums for Group Chat is a supportive scrum assistant that enables group chat members to run asynchronous stand-up meetings and easily share their daily updates. It allows all members of the group chat to contribute to the scrum and view the updates made by others in the running scrum.
 
