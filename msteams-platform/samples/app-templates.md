@@ -257,7 +257,7 @@ Scrums for Channels is a Microsoft Teams app template that enables users to sche
 ## Scrums for Group Chat &#9734;
 
 > [!NOTE]
-> Scrums Status has been updated and is now Scrums for Group Chat app template.
+> The Scrums Status app template has been updated and is now Scrums for Group Chat.
 
 Scrums for Group Chat is a supportive scrum assistant that enables group chat members to run asynchronous stand-up meetings and easily share their daily updates. It allows all members of the group chat to contribute to the scrum and view the updates made by others in the running scrum.
 
