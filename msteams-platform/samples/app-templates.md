@@ -261,7 +261,7 @@ Scrums for Channels is a scrum assistant app that enables users to schedule and 
 
 Scrums for Group Chat is a supportive scrum assistant that enables group chat members to run asynchronous stand-up meetings and easily share their daily updates. It allows all members of the group chat to contribute to the scrum and view the updates made by others in the running scrum.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-app-scrumstatus)
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-scrumsforgroupchat)
 
 ![Scrums for Group Chat demo](https://raw.githubusercontent.com/wiki/OfficeDev/microsoft-teams-app-scrumstatus/images/StartScrum.jpg)
 
