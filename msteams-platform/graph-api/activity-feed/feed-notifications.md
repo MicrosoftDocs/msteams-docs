@@ -71,6 +71,7 @@ You'll need to have the following values from the Azure AD registration process 
 
 > [!div class="checklist"]
 > [!div class="checklist"]
+>
 > - Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:  
 &emsp;&emsp; &#8226; **id**  — your Azure AD app id.  
 &emsp;&emsp; &#8226;  **resource** — the resource url for the app.
@@ -128,16 +129,9 @@ You'll need to have the following values from the Azure AD registration process 
 }
 ```
 
-## Activity feed notification payload properties
+## Call the Microsoft Graph API
 
-| Property | Type | Required | Description |
-|-----|------|------|-----|
-|**topic**|teamworkActivityTopic | Yes | Represents what is being referenced in the feed item. **The topic must be a either a graph resource or a custom text.**|
-|**activityType** | string | Yes| Represents the type of activity and must be declared in the [Teams App Manifest](../../resources/schema/manifest-schema.md)|
-|**recipient** | teamworkNotificationRecipient |Yes, but URI dependent.  |  This property should not be included when using the  `users/userID/teamwork/sendActivityNotification` endpoint. In all other cases, recipient is the intended receiver and must be a Teams user with the ability to post notifications to everyone in a team, channel, and chat. |
-| **chainId** | long | No| Enables the developer to override a previous notification. If not included, a new notifcation will be posted.|
-| **previewText** | itemBody | No | Preview text displayed to the user as part of an activity feed item. |
-| **templateParameters** | collection\<keyvaluepair\>| No |Parameter values declared in the [Teams App Manifest](../../resources/schema/manifest-schema.md) |
+See the [SendActivityNotification](graph/api/team-sendactivitynotification?view=graph-rest-beta&tabs=http) documentation on the Microsoft Graph platform.
 
 > [!div class="nextstepaction"] 
 > [Next: Test your activity feed notifications in Teams](test-activity-feed-notifications.md)
