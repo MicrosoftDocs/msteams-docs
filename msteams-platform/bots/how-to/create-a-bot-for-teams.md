@@ -165,6 +165,9 @@ To create an app package, you need to add your app manifest and (optionally) you
 
 ## Upload your package to Microsoft Teams
 
+> [!NOTE]
+> To successfully upload your bot, your tenant admin must first [allow uploading](/microsoftteams/manage-apps#manage-org-wide-app-settings) third-party or custom apps in Teams.
+
 If you've been using App Studio, you can install your app from the **Test and distribute** tab of the **Manifest editor**. Alternatively, you can install your app package by clicking the `...` overflow menu from the left navigation rail, clicking **More apps**, then the **Upload a custom app** link. You can also import an app manifest or app package into App Studio to make additional updates before uploading.
 
 ## Next steps
