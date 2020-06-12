@@ -59,7 +59,8 @@ Press the *Run* button on the activity bar, then press the *Run* button.
 
 ## Validate your app
 
-TODO: @Emily
+The validation page allows you to check you app package before submission to AppSource. Simply upload the manifest package and the validation tool will check your app against all manifest related test cases. For each failed tests, the description provides a documentation link to help you fix the error. For the tests that are hard to automate, the "Preliminary checklist" offers 7 of the most commonly failed test cases as well as link to a complete submission checklist.
+
 
 ## Publish your app
 
