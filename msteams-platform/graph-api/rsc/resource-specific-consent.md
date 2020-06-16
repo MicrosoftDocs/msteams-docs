@@ -111,42 +111,24 @@ The RSC permissions are declared in you app manifest (JSON) file.  Add a [webApp
 
 ```json
 "webApplicationInfo": {
-
-        "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX", 
-
-"resource": "https://RscBasedStoreApp",
-
-        "applicationPermissions": [
-
-    "TeamSettings.Read.Group",
-
-   "ChannelMessage.Read.Group",
-
-  "TeamSettings.Edit.Group",
-
-  "ChannelSettings.Edit.Group",
-
-  "Channel.Create.Group",
-
-  "Channel.Delete.Group",
-
-  "TeamsApp.Read.Group",
-
-  "TeamsTab.Read.Group",
-
-  "TeamsTab.Create.Group",
-
-  "TeamsTab.Edit.Group",
-
-  "TeamsTab.Delete.Group",
-
-  "Member.Read.Group",
-
-  "Owner.Read.Group"
-
-        ]
-
-    }
+    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource": "https://RscBasedStoreApp",
+    "applicationPermissions": [
+      "TeamSettings.Read.Group",
+      "ChannelMessage.Read.Group",
+      "TeamSettings.Edit.Group",
+      "ChannelSettings.Edit.Group",
+      "Channel.Create.Group",
+      "Channel.Delete.Group",
+      "TeamsApp.Read.Group",
+      "TeamsTab.Read.Group",
+      "TeamsTab.Create.Group",
+      "TeamsTab.Edit.Group",
+      "TeamsTab.Delete.Group",
+      "Member.Read.Group",
+      "Owner.Read.Group"
+    ]
+  }
 ```
 
 ## Install your app directly in Teams
