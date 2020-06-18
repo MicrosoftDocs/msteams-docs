@@ -10,8 +10,7 @@
   items:
   - name: Guiding principles
     href: tbd.md
-  - name: Designing tabs
-    expanded: true
+  - name: Tabs
     items:
       - name: What's a tab?
         href: tbd.md
@@ -20,6 +19,118 @@
       - name: Designing a layout
         href: tbd.md
       - name: Designing cards and task modules for tabs
+        href: tbd.md
+      - name: Designing an onboarding experience
+        href: tbd.md
+      - name: Real-world examples
+        href: tbd.md
+      - name: Ready to build?
+        href: tbd.md
+  - name: Messaging extensions
+    items:
+      - name: What's a messaging extension?
+        href: tbd.md
+      - name: Best practices
+        href: tbd.md
+      - name: Designing an onboarding experience
+        href: tbd.md
+      - name: Designing for search commands
+        href: tbd.md
+      - name: Designing for action commands
+        href: tbd.md
+      - name: Designing for unfurled links
+        href: tbd.md
+      - name: Designing cards and task modules for messaging extensions
+        href: tbd.md
+      - name: Real-world examples
+        href: tbd.md
+      - name: Ready to build?
+        href: tbd.md
+  - name: Connectors
+    items:
+      - name: What's a connector?
+        href: tbd.md
+      - name: Best practices
+        href: tbd.md
+      - name: Designing for unfurled links
+        href: tbd.md
+      - name: Designing cards and task modules for connectors
+        href: tbd.md
+      - name: Real-world examples
+        href: tbd.md
+      - name: Ready to build?
+        href: tbd.md
+  - name: Bots
+    items:
+      - name: What's a bot?
+        href: tbd.md
+      - name: Best practices
+        href: tbd.md
+      - name: Designing bot introductions
+        href: tbd.md
+      - name: Designing bot prompts
+        href: tbd.md
+      - name: Designing bot responses
+        href: tbd.md
+      - name: Designing bot notifications
+        href: tbd.md
+      - name: Designing cards and task modules for bots
+        href: tbd.md
+      - name: Real-world examples
+        href: tbd.md
+      - name: Ready to build?
+        href: tbd.md
+  - name: Cards
+    items:
+      - name: What's a card?
+        href: tbd.md
+      - name: Best practices
+        href: tbd.md
+      - name: Designing for Adaptive Cards
+        href: tbd.md
+      - name: Designing for card collections
+        href: tbd.md
+      - name: Real-world examples
+        href: tbd.md
+      - name: Ready to build?
+        href: tbd.md
+  - name: Task modules
+    items:
+      - name: What's a task module?
+        href: tbd.md
+      - name: Best practices
+        href: tbd.md
+      - name: Designing task modules using Adaptive Cards
+        href: tbd.md
+      - name: Designing task modules using a webpage
+        href: tbd.md
+      - name: Real-world examples
+        href: tbd.md
+      - name: Ready to build?
+        href: tbd.md
+  - name: Voice and video features
+    items:
+      - name: Overview
+        href: tbd.md
+  - name: Device features
+    items:
+      - name: Overview
+        href: tbd.md
+  - name: Other considerations
+    items:
+      - name: Other considerations
+        href: tbd.md
+  - name: Resources
+    items:
+      - name: Standard Teams platform components
+        href: tbd.md
+      - name: Fluent UI components
+        href: tbd.md
+      - name: Adaptive Cards
+        href: tbd.md
+      - name: Supported web technologies
+        href: tbd.md
+      - name: Templates and examples
         href: tbd.md
 - name: Tutorials and code samples
   items:
