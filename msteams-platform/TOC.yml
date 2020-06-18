@@ -22,7 +22,7 @@
   - name: Production-ready Shifts Connectors
     href: samples/shifts-wfm-connectors.md 
 - name:  Teams Toolkit extension 
-  href: toolkit/vsc-overview.md
+  href: toolkit/vs-code-overview.md
 - name: Concepts
   expanded: true
   items:
