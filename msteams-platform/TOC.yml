@@ -13,9 +13,13 @@
   - name: Designing tabs
     expanded: true
     items:
-      - name: What is a tab?
+      - name: What's a tab?
         href: tbd.md
       - name: Best practices
+        href: tbd.md
+      - name: Designing a layout
+        href: tbd.md
+      - name: Designing cards and task modules for tabs
         href: tbd.md
 - name: Tutorials and code samples
   items:
