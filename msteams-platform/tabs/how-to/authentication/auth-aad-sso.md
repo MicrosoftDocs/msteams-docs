@@ -25,7 +25,7 @@ The following diagram shows how the SSO process works:
 6. JavaScript in the tab application can parse the token and extract the information it needs, such as the user's email address.
     * Note: This token is only valid for consenting to a limited set of user-level APIs (ie: email, profile, offline_access and openid)  and not for further Graph scopes (such as User.Read or Mail.Read). See our section at the end of this document for suggested workarounds if you require additional Graph scopes.
 
-The SSO API will also work in [Task Modules](../task-modules-and-cards/what-are-task-modules.md) that embed web content.
+The SSO API will also work in [Task Modules](../../../task-modules-and-cards/what-are-task-modules.md) that embed web content.
 
 ## Develop an SSO Microsoft Teams tab
 
