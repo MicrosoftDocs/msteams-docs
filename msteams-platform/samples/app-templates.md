@@ -275,4 +275,21 @@ To help alleviate this pain, we are happy to bring to you the List Search app te
 
 ![List Search app](../assets/images/list-search-template.png)
 
+## Visitor Management &#9734;
+
+Visitor management enables your organization and employees to easily and efficiently manage on-site visitor processes. The app enables employees to easily create and follow visitor requests by submitting visitor details, centrally track a request status through the visitor dashboard, and receive real-time notifications when a visitor arrives on premise.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-app-visitormanagement)
+
+:::row:::
+  :::column span="2":::
+    ![Create a request view](../assets/visitor-management-create-request.png)
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Visitor arrival notification](../assets/images/visitor-management-notify-host.png)
+:::column-end:::
+:::row-end:::
+
 Have an idea for an app template you'd like to see? [Please let us know](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
