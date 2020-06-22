@@ -288,7 +288,7 @@ Workplace Awards app template provides a positive framework to foster employee r
 :::row-end:::
 :::row:::
 :::column span="2":::
-    ![Workplace awards list tab](../assets/images/workplace-awards-nominate.png)
+    ![Workplace awards list tab](../assets/images/workplace-awards-champion-tab.png)
 :::column-end:::
 :::row-end:::
 
