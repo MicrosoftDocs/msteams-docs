@@ -277,7 +277,7 @@ To help alleviate this pain, we are happy to bring to you the List Search app te
 
 ## Visitor Management &#9734;
 
-Visitor management enables your organization and employees to easily and efficiently manage the on-site visitor process. The app enables employees to easily create and follow visitor requests by submitting visitor details, centrally track a request status through the visitor dashboard, and receive real-time notifications when a visitor arrives on premise.
+Visitor Management enables your organization and employees to easily and efficiently manage the on-site visitor process. The app enables employees to easily create and follow visitor requests by submitting visitor details, centrally track a request status through the visitor dashboard, and receive real-time notifications when a visitor arrives on premise.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-app-visitormanagement)
 
