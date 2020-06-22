@@ -10,7 +10,7 @@ After your app is approved and listed in the public app catalog, you can increas
 
 ## Application Certificate
 
-The [Microsoft 365 App Compliance Program](./application-certification.md), is a three tier approach to app security and compliance. Each tier builds upon the next – offering a layered program to meet your customer’s needs. You can learn more about the security and compliance posture of Teams apps by visiting the [compliance page](https://docs.microsoft.com/en-us/microsoft-365-app-certification/teams/teams-apps).
+The [Microsoft 365 App Compliance Program](./application-certification.md), is a three tier approach to app security and compliance. Each tier builds upon the next – offering a layered program to meet your customer’s needs. You can learn more about the security and compliance posture of Teams apps by visiting the [compliance page](https://docs.microsoft.com/microsoft-365-app-certification/teams/teams-apps).
 
 ## Add a download button to your product site
 
