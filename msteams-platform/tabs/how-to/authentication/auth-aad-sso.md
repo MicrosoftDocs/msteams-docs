@@ -1,15 +1,15 @@
 ---
 title: Single Sign-On
 description: Describes single sign-on (SSO)
-keywords: teams authentication SSO AAD
+keywords: teams authentication SSO AAD single sign-on api
 ---
 
-# Single Sign-On
+# Single Sign-On (SSO)
 
 > [!NOTE]
-> The Single Sign-on API is generally available on web and desktop. Mobile support is coming soon. In the meantime, we recommend gracefully falling back to our [classic authentication API](auth-flow-tab.md) on mobile.
+> The Single Sign-on (SSO) API is generally available on web and desktop. Mobile support is coming soon. In the meantime, we recommend gracefully falling back to our [classic authentication API](auth-flow-tab.md) on mobile.
 
-Users sign-in to Microsoft Teams using their work, school or Microsoft account (Office 365, Outlook, etc) and you can take advantage of this by using single sign-on to authorize the user to your Microsoft Teams tab (or task module) on desktop or mobile. That means if a user consents to use your app, they won’t have to consent again on any device and will be automatically logged in. In addition, we prefetch your access token to improve performance and load times.
+Users sign in to Microsoft Teams using their work, school or Microsoft account (Office 365, Outlook, etc). You can take advantage of this by using a single sign-on to authorize your Microsoft Teams tab (or task module) on desktop or mobile user. That means if a user consents to use your app, they won’t have to consent again on another device — they will be automatically logged in. In addition, we prefetch your access token to improve performance and load times.
 
 ## How SSO works at runtime
 
@@ -17,7 +17,7 @@ The following diagram shows how the SSO process works:
 
 <img src="~/assets/images/tabs/tabs-sso-diagram.png" alt="Tab single sign-on SSO diagram" width="75%"/>
 
-1. In the tab, JavaScript calls getAuthToken(). This tells the Teams application to obtain an authentication token for the tab application.
+1. In the tab, JavaScript calls `getAuthToken()`. This tells the Teams application to obtain an authentication token for the tab application.
 2. If this is the first time the current user has used your tab application, they will be prompted to consent (if consent is required) or asked to handle step-up authentication (such as two-factor authentication).
 3. The Microsoft Teams application requests the tab application token from the Azure AD endpoint for the current user.
 4. Azure AD sends the tab application token to the Teams application.
@@ -25,7 +25,7 @@ The following diagram shows how the SSO process works:
 6. JavaScript in the tab application can parse the token and extract the information it needs, such as the user's email address.
     * Note: This token is only valid for consenting to a limited set of user-level APIs (ie: email, profile, offline_access and openid)  and not for further Graph scopes (such as User.Read or Mail.Read). See our section at the end of this document for suggested workarounds if you require additional Graph scopes.
 
-The SSO APIs will also work in [Task Modules](~/task-modules-and-cards/what-are-task-modules.md) that embed web content.
+The SSO API will also work in [Task Modules](../../task-modules-and-cards/what-are-task-modules.md) that embed web content.
 
 ## Develop an SSO Microsoft Teams tab
 
@@ -33,20 +33,20 @@ This section describes the tasks involved in creating an Microsoft Teams tab tha
 
 ### 1. Create your AAD application in Azure
 
-Register you application at the registration portal for the Azure AD endpoint. This is a 5–10 minute process that includes the following tasks:
+Register your application at the registration portal for the Azure AD endpoint. This is a 5–10 minute process that includes the following tasks:
 
-1. Getting your AAD application ID
+1. Getting your AAD application ID.
 2. Specifyig the permissions that your application needs for the AAD endpoint (and optionally to Microsoft Graph). 
-3. Granting the Microsoft Teams desktop, web and mobile application to trust to your application
-4. Preauthorizing the Microsoft Teams application to your app with the default scope name of `access_as_user`.
+3. Granting the Microsoft Teams desktop, web, and mobile application to trust to your app.
+4. Pre-authorizing the Microsoft Teams application for your app with the default scope name of `access_as_user`.
 
 > [!NOTE]
 > There are some important restrictions you should be aware of:
 >
-> * We only support user-level Graph API permissions, i.e., email, profile, offline_access, openid. If you need access to other Graph scopes (such as User.Read or Mail.Read), read our recommended workaround at the end of this documentation.
+> * We only support user-level Graph API permissions, i.e., email, profile, offline_access, OpenId. If you need access to other Graph scopes (such as User.Read or Mail.Read), read our recommended workaround at the end of this documentation.
 > * It's important that your application's domain name is the same as the domain name you're registering with your Azure AD application. (More details in the next section).
 > * We do not currently support multiple domains per app
-> * We also do not support applications that use the `azurewebsites.net` domain since this domain is too common and may be a security risk. We are actively looking to remove this restriction.
+> * We do not support applications that use the `azurewebsites.net` domain since this domain is too common and may be a security risk. We are actively looking to remove this restriction.
 
 #### Steps
 
