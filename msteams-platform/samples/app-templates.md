@@ -277,7 +277,7 @@ To help alleviate this pain, we are happy to bring to you the List Search app te
 
 ## Workplace Awards &#9734;
 
-Workplace Awards app template provides a positive framework to foster employee recognition and encourage the culture of employee appreciation in the modern workplace. The app enables you to setup and manage an employee rewards and recognition (R&R) program where your employees can easily nominate and endorse colleagues and your R&R leader can view submitted nominations, grant awards and announce recipients, all within the Teams environment.
+Workplace Awards is a Teams app template that provides a positive framework to foster recognition and encourage the culture of employee appreciation in the modern workplace. The app enables you to setup and manage an employee rewards and recognition (R&R) program where employees can easily nominate and endorse colleagues and your R&R leader can view submitted nominations, grant awards, and announce recipients.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-workplaceawards)
 
