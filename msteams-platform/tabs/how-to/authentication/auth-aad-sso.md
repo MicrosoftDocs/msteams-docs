@@ -25,7 +25,7 @@ The following diagram shows how the SSO process works:
 6. JavaScript in the tab application can parse the token and extract the information it needs, such as the user's email address.
     * Note: This token is only valid for consenting to a limited set of user-level APIs (ie: email, profile, offline_access and openid)  and not for further Graph scopes (such as User.Read or Mail.Read). See our section at the end of this document for suggested workarounds if you require additional Graph scopes.
 
-The SSO API will also work in [Task Modules](../../task-modules-and-cards/what-are-task-modules.md) that embed web content.
+The SSO API will also work in [Task Modules](../task-modules-and-cards/what-are-task-modules.md) that embed web content.
 
 ## Develop an SSO Microsoft Teams tab
 
@@ -68,7 +68,7 @@ Register your application at the registration portal for the Azure AD endpoint. 
     * **User consent description:** Enable Teams to call this app’s APIs with the same rights that you have
 8. Ensure that **State** is set to **Enabled**
 9. Select **Add scope**
-    * The domain part of the **Scope name** displayed just below the text field should automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end; for example: 
+    * The domain part of the **Scope name** displayed just below the text field should automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end:
         * `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`
 10. In the **Authorized client applications** section, you identify the applications that you want to authorize to your app’s web application. Each of the following IDs needs to be entered:
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Teams mobile/desktop application)
@@ -77,13 +77,13 @@ Register your application at the registration portal for the Azure AD endpoint. 
     * User.Read (enabled by default)
     * email
     * offline_access
-    * openid
+    * OpenId
     * profile
 
 > [!NOTE]
-> * ¹ If your AAD app is registered in the _same_ tenant that you're making an authentication request from in Teams, then the user will not be asked to consent and instead will be granted an access token right away. Users only need to consent to these permissions if the AAD app is registered in a different tenant.
-> * ² If you get an error saying that the domain is already owned but you own it, follow the procedure at [Quickstart: Add a custom domain name to Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain) to register it, and then repeat this step. (This error can also occur if you are not signed in with credentials of an admin in the Office 365 tenancy).
-
+>
+> * ¹ If your AAD app is registered in the _same_ tenant where you're making an authentication request in Teams, the user won't be asked to consent and will be granted an access token right away. Users only need to consent to these permissions if the AAD app is registered in a different tenant.
+> * ² If you get an error stating that the domain is already owned and you are the owner, follow the procedure at [Quickstart: Add a custom domain name to Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain) to register the domain, and then repeat step 4, above. (This error can also occur if you aren't signed in with Admin credentials in the Office 365 tenancy).
 
 ### 2. Update your Microsoft Teams application manifest
 
