@@ -283,7 +283,7 @@ Visitor management enables your organization and employees to easily and efficie
 
 :::row:::
   :::column span="2":::
-    ![Create a request view](../assets/visitor-management-create-request.png)
+    ![Create a request view](../assets/images/visitor-management-create-request.png)
 :::column-end:::
 :::row-end:::
 :::row:::
