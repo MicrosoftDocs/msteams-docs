@@ -8,6 +8,8 @@ ms.author: anclear
 ---
 # What are Microsoft Teams apps?
 
+Microsoft Teams apps let you bring your favorite apps, services, and sites right to where people are talking and collaborating.
+
 Microsoft Teams is a collaboration workspace in Office 365 that integrates with apps and services people use to get work done together. The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services to improve productivity, make decisions faster, provide focus (by reducing context switching), and create collaboration around existing content and workflows. Apps built on the Microsoft Teams platform are bridges between the Teams client and your services and workflows; bringing them directly into the context of your collaboration platform.
 
 :::image type="content" source="/assets/images/service-technology-image-description.png" alt-text="Alt text describes the content of the image.":::
@@ -88,52 +90,51 @@ People can use your app with one or all of the following Teams capabilities (dep
 ## Get started
 
 :::row:::
-   :::column span="1":::
-      
+   :::column span="":::
+
       <div align="center">
-      ![insert_art_filename](media/markdown-reference/document.png)
-      </div>
 
-      <div align="center"><b>In a hurry?</b></div>
+      :::image type="content" source="<folderPath>" alt-text="<alt text>":::
+      
+        <b>In a hurry?</b>
 
-      <div align="center">New to Teams but no time to deep dive? Learn quickly by creating a simple app.
+        New to Teams but no time to deep dive? Learn quickly by creating a simple app.
 
-      > [!div class="nextstepaction"]
-      > [Build an app in 5 minutes](code-in-docs.md)
+        > [!div class="nextstepaction"]
+        > [Build an app in 5 minutes](code-in-docs.md)
 
       </div>
 
    :::column-end:::
 
-   :::column span="1":::
-      
+   :::column span="":::
+
       <div align="center">
-      ![insert_art_filename](media/markdown-reference/document.png)
+
+      :::image type="content" source="<folderPath>" alt-text="<alt text>":::
+      
+        <b>Step by step</b>
+
+        Walk through how to plan, design, build, and deploy your app.
+
+        > [!div class="nextstepaction"]
+        > [Start planning your app](code-in-docs.md)
+
       </div>
-
-      <div align="center"><b>Step by step</b></div>
-
-      <div align="center">We'll walk you through how to plan, design, build, and deploy an awesome app.
-
-      > [!div class="nextstepaction"]
-      > [Start planning your app](code-in-docs.md)
-
-      </div>
-
    :::column-end:::
 
-   :::column span="1":::
-      
+   :::column span="":::
+
       <div align="center">
-      ![insert_art_filename](media/markdown-reference/document.png)
-      </div>
 
-      <div align="center"><b>No code, no worries</b></div>
+      :::image type="content" source="<folderPath>" alt-text="<alt text>":::
+      
+        <b>No code, no worries</b>
 
-      <div align="center">Turn your favorite custom Power or other Microsoft app into a Teams app.
+        Turn your favorite custom Power or other Microsoft app into a Teams app.
 
-      > [!div class="nextstepaction"]
-      > [Import your app](code-in-docs.md)
+        > [!div class="nextstepaction"]
+        > [Import your app into Teams](code-in-docs.md)
 
       </div>
    :::column-end:::
