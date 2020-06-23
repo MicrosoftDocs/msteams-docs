@@ -93,12 +93,12 @@ People can use your app with one or all of the following Teams capabilities (dep
 
       <div align="center"><b>In a hurry?</b></div>
 
-      <p style="text-align: center;">New to Teams but no time to deep dive? Learn quickly by creating a simple app.
+      <div align="center">New to Teams but no time to deep dive? Learn quickly by creating a simple app.
 
       > [!div class="nextstepaction"]
       > [Build an app in 5 minutes](code-in-docs.md)
 
-      </p>
+      </div>
 
    :::column-end:::
 
@@ -106,14 +106,14 @@ People can use your app with one or all of the following Teams capabilities (dep
       
       ![insert_art_filename](media/markdown-reference/document.png)
 
-      <p style="text-align: center;"><b>Step by step</b></p>
+      <div align="center"><b>Step by step</b></div>
 
-      <p style="text-align: center;">We'll walk you through how to plan, design, build, and deploy an awesome app.
+      <div align="center">We'll walk you through how to plan, design, build, and deploy an awesome app.
 
       > [!div class="nextstepaction"]
       > [Start planning your app](code-in-docs.md)
 
-      </p>
+      </div>
 
    :::column-end:::
 
@@ -121,14 +121,14 @@ People can use your app with one or all of the following Teams capabilities (dep
       
       ![insert_art_filename](media/markdown-reference/document.png)
 
-      <p style="text-align: center;"><b>No code, no worries</b></p>
+      <div align="center"><b>No code, no worries</b></div>
 
-      <p style="text-align: center;">Turn your favorite custom Power or other Microsoft app into a Teams app.
+      <div align="center">Turn your favorite custom Power or other Microsoft app into a Teams app.
 
       > [!div class="nextstepaction"]
       > [Import your app](code-in-docs.md)
 
-      </p>
+      </div>
    :::column-end:::
 :::row-end:::
 
@@ -140,10 +140,10 @@ Lorem ipsum dolor sit amet
 
 Links to primary steps during the app creation process.
 
-* Planning your app
-* Designing your app
-* Building your app
-* Deploying your app
+1. Planning your app
+1. Designing your app
+1. Building your app
+1. Deploying your app
 
 ### Helpful links
 
