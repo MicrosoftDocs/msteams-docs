@@ -9,7 +9,7 @@ keywords: teams authentication SSO AAD single sign-on api
 > [!NOTE]
 > The Single Sign-on (SSO) API is generally available on web and desktop. Mobile support is coming soon. In the meantime, we recommend gracefully falling back to our [classic authentication API](auth-flow-tab.md) on mobile.
 
-Users sign in to Microsoft Teams using their work, school or Microsoft account (Office 365, Outlook, etc). You can take advantage of this by using a single sign-on to authorize your Microsoft Teams tab (or task module) on desktop or mobile user. That means if a user consents to use your app, they won’t have to consent again on another device — they will be automatically logged in. In addition, we prefetch your access token to improve performance and load times.
+Users sign in to Microsoft Teams via their work, school, or Microsoft account (Office 365, Outlook, etc). You can take advantage of this by allowing a single sign-on to authorize your Microsoft Teams tab (or task module) on desktop or mobile clients. Thus, if a user consents to use your app, they won’t have to consent again on another device — they will be automatically logged in. In addition, we prefetch your access token to improve performance and load times.
 
 ## How SSO works at runtime
 
@@ -17,36 +17,38 @@ The following diagram shows how the SSO process works:
 
 <img src="~/assets/images/tabs/tabs-sso-diagram.png" alt="Tab single sign-on SSO diagram" width="75%"/>
 
-1. In the tab, JavaScript calls `getAuthToken()`. This tells the Teams application to obtain an authentication token for the tab application.
+1. In the tab, JavaScript calls `getAuthToken()`. This tells Teams to obtain an authentication token for the tab application.
 2. If this is the first time the current user has used your tab application, they will be prompted to consent (if consent is required) or asked to handle step-up authentication (such as two-factor authentication).
-3. The Microsoft Teams application requests the tab application token from the Azure AD endpoint for the current user.
+3. Teams requests the tab application token from the Azure AD endpoint for the current user.
 4. Azure AD sends the tab application token to the Teams application.
-5. The Microsoft Teams application sends the tab application token to the tab as part of the result object returned by the getAuthToken() call.
-6. JavaScript in the tab application can parse the token and extract the information it needs, such as the user's email address.
-    * Note: This token is only valid for consenting to a limited set of user-level APIs (ie: email, profile, offline_access and OpenId)  and not for further Graph scopes (such as User.Read or Mail.Read). See our section at the end of this document for suggested workarounds if you require additional Graph scopes.
+5. Teams sends the tab application token to the tab as part of the result object returned by the `getAuthToken()` call.
+6. JavaScript in the tab application will parse the token and extract the information it needs, such as the user's email address.
 
-The SSO API will also work in [Task Modules](../task-modules-and-cards/what-are-task-modules.md) that embed web content.
+> [!NOTE]
+> The `getAuthToken()`  is only valid for consenting to a limited set of user-level APIs (ie: email, profile, offline_access and OpenId)  and not for further Microsoft Graph scopes (such as User.Read or Mail.Read). See our section at the end of this document for suggested workarounds if you require [additional Graph scopes](#apps-that-require-additional-graph-scopes).
+
+The SSO API will also work in [Task Modules](../../../task-modules-and-cards/what-are-task-modules.md) that embed web content.
 
 ## Develop an SSO Microsoft Teams tab
 
 This section describes the tasks involved in creating an Microsoft Teams tab that use SSO. These tasks are described here in a language- and framework-agnostic way.
 
-### 1. Create your AAD application in Azure
+### 1. Create your Azure Active Directory (Azure AD) application
 
-Register your application at the registration portal for the Azure AD endpoint. This is a 5–10 minute process that includes the following tasks:
+Register your application in the[ Azure AD portal](https://azure.microsoft.com/features/azure-portal/). This is a 5–10 minute process that includes the following tasks:
 
-1. Getting your AAD application ID.
-2. Specifyig the permissions that your application needs for the AAD endpoint (and optionally to Microsoft Graph). 
-3. Granting the Microsoft Teams desktop, web, and mobile application to trust to your app.
-4. Pre-authorizing the Microsoft Teams application for your app with the default scope name of `access_as_user`.
+1. Get your [Azure AD Application ID](azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
+2. Specify the permissions that your application needs for the Azure AD endpoint (and, optionally, to Microsoft Graph).
+3. [Grant permissions](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) for Teams desktop, web, and mobile applications.
+4. Pre-authorize Teams by selecting the **Add a scope** button and in the panel that opens, enter `access_as_user` as the **Scope name**.
 
 > [!NOTE]
 > There are some important restrictions you should be aware of:
 >
-> * We only support user-level Graph API permissions, i.e., email, profile, offline_access, OpenId. If you need access to other Graph scopes (such as User.Read or Mail.Read), read our recommended workaround at the end of this documentation.
-> * It's important that your application's domain name is the same as the domain name you're registering with your Azure AD application. (More details in the next section).
-> * We do not currently support multiple domains per app
-> * We do not support applications that use the `azurewebsites.net` domain since this domain is too common and may be a security risk. We are actively looking to remove this restriction.
+> * We only support user-level Microsoft Graph API permissions, i.e., email, profile, offline_access, OpenId. If you need access to other Microsoft Graph scopes (such as `User.Read` or `Mail.Read`), see our [recommended workaround](#apps-that-require-additional-graph-scopes) at the end of this documentation.
+> * It's important that your application's domain name is the same as the domain name you're registering for your Azure AD application. (More details in the next section).
+> * We don't currently support multiple domains per app.
+> * We don't support applications that use the `azurewebsites.net` domain since this domain is too common and may be a security risk. However, we are actively seeking to remove this restriction.
 
 #### Steps
 
@@ -82,16 +84,18 @@ Register your application at the registration portal for the Azure AD endpoint. 
 
 > [!NOTE]
 >
-> * ¹ If your AAD app is registered in the _same_ tenant where you're making an authentication request in Teams, the user won't be asked to consent and will be granted an access token right away. Users only need to consent to these permissions if the AAD app is registered in a different tenant.
+> * ¹ If your Azure AD app is registered in the _same_ tenant where you're making an authentication request in Teams, the user won't be asked to consent and will be granted an access token right away. Users only need to consent to these permissions if the Azure AD app is registered in a different tenant.
 > * ² If you get an error stating that the domain is already owned and you are the owner, follow the procedure at [Quickstart: Add a custom domain name to Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain) to register the domain, and then repeat step 4, above. (This error can also occur if you aren't signed in with Admin credentials in the Office 365 tenancy).
 
 ### 2. Update your Microsoft Teams application manifest
 
 Add new properties to your Microsoft Teams manifest:
 
-* **WebApplicationInfo** - The parent of the following elements.
-* **id** - The client ID of the application. This is an application ID that you obtained as part of registering the application with Azure AD.
-* **resource** - The domain and subdomain of your application. This is the same URI (including the `api://` protocol) that you registered when creating your `scope` in step #4 above. You shouldn't include the `access_as_user` path in your resource. The domain part of this URI should match the domain, including any subdomains, used in the URLs of your Teams application manifest.
+* **WebApplicationInfo** - The parent of the following elements:
+
+> [!div class="checklist"]
+> * **id** - The client ID of the application. This is an application ID that you obtained as part of registering the application with Azure AD.
+>* **resource** - The domain and subdomain of your application. This is the same URI (including the `api://` protocol) that you registered when creating your `scope` in step #4 above. You shouldn't include the `access_as_user` path in your resource. The domain part of this URI should match the domain, including any subdomains, used in the URLs of your Teams application manifest.
 
 ```json
 "webApplicationInfo": {
@@ -100,10 +104,10 @@ Add new properties to your Microsoft Teams manifest:
 }
 ```
 
-Notes:
-
-* The resource for an AAD app will usually just be the root of its site URL and the appID (e.g. `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`). We also use this value to ensure your request is coming from the same domain. Therefore make sure that your `contentURL` for your tab uses the same domains as your resource property.
-* You need to be using manifest version 1.5 or higher for these fields to be used.
+> [!NOTE]
+>
+>* The resource for an AAD app will usually just be the root of its site URL and the appID (e.g. `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`). We also use this value to ensure your request is coming from the same domain. Therefore, make sure that the `contentURL` for your tab uses the same domains as your resource property.
+>* You need to use manifest version 1.5 or higher for the `webApplicationInfo`  field to be valid.
 
 ### 3. Get an authentication token from your client-side code
 
@@ -133,7 +137,7 @@ The README explains how to set up your development environment and how to config
 
 ### Apps that require additional Graph Scopes
 
-Our current implementation for SSO only grants consent for user-level permissions (email, profile, offline_access, OpenId) but not for other APIs (such as User.Read or Mail.Read). If your app needs further Graph scopes, there are some workarounds to enable this.
+Our current implementation for SSO only grants consent for user-level permissions (email, profile, offline_access, OpenId) but not for other APIs (such as User.Read or Mail.Read). If your app needs further Microsoft Graph scopes, here are some enabling workarounds:
 
 #### Tenant Admin Consent
 
