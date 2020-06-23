@@ -91,9 +91,9 @@ People can use your app with one or all of the following Teams capabilities (dep
    :::column span="1":::
       ![insert_art_filename](media/markdown-reference/document.png)
 
-      <p style="text-align: center;"><b>In a hurry?</b></p>
+      <div align="center"><b>In a hurry?</b></div>
 
-      <p style="text-align: center;">New to Teams but don't have time for a deep dive? Get some ideas by creating a simple app.
+      <p style="text-align: center;">New to Teams but no time to deep dive? Learn quickly by creating a simple app.
 
       > [!div class="nextstepaction"]
       > [Build an app in 5 minutes](code-in-docs.md)
