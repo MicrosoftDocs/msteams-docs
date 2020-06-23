@@ -1,7 +1,7 @@
 ---
 title: Microsoft Teams developer platform
 author: clearab
-description: Overview page describing the Microsoft Teams developer platform, and how to get started building apps for Microsoft Teams.
+description: Overview of how developers can extend and customize Microsoft Teams features using the Teams platform.
 ms.topic: overview
 ms.author: anclear
 #Customer intent: As a developer, I want to understand why I would want to build a Teams app so that I can solve business problems.
@@ -10,44 +10,145 @@ ms.author: anclear
 
 Microsoft Teams is a collaboration workspace in Office 365 that integrates with apps and services people use to get work done together. The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services to improve productivity, make decisions faster, provide focus (by reducing context switching), and create collaboration around existing content and workflows. Apps built on the Microsoft Teams platform are bridges between the Teams client and your services and workflows; bringing them directly into the context of your collaboration platform.
 
+:::image type="content" source="/assets/images/service-technology-image-description.png" alt-text="Alt text describes the content of the image.":::
+
 ## What can Teams apps do?
 
-Apps built on the Microsoft Teams platform primarily focus on increasing collaboration and improving productivity. Your app can be something simple, like posting notifications from other systems, or complex multi-faceted applications. Just keep in mind that Teams is a social collaboration platform; the best apps focus on helping people express themselves and work better together.
+Microsoft Teams apps primarily focus on increasing collaboration and improving productivity. Your app can be something simple, like posting notifications from an external source, or a complex multi-faceted tool. Just remember that Teams is a social collaboration platform; the best apps help people express themselves and work better together.
 
-* **Collaborate on items in external systems.** One of the core scenarios for a custom Teams app is to bring information or items into Teams from some other place, and have a conversation around it. You can push information into Teams, enable your users to search for and pull it on demand, or make it available in an embedded web view.
+* **Collaborate on everything in the same place**: A core benefit of Teams apps is pulling information somewhere outside Teams into a conversation. For example, your app can push notifications into chats, allow people to search for data in another app, or share content in a way that's easily digestible.
 
-* **Trigger workflows from conversations.** Often conversations result in the need to kick off some workflow or complete some action; take a note about that, review my pull request, convert that to a sales lead, etc. Your Teams app can put access to that workflow right inside of Teams.
+* **More talk, more action**: Conversations often result in the need to take action (create an order, review my code, etc.). Your app can kick off these kinds of workflows right inside Teams.
 
-* **Notify your team of important events.** Sick of email notifications? Send notifications to Teams instead! Send notifications directly to users, to a channel, to the Activity Feed, or to anyone who subscribes to them.
+* **Notify others of important events**: Sick of sending reminders through email? Send notifications in Teams instead! Send notifications directly to users, a channel, the Activity Feed, or to anyone who subscribes to them.
 
-* **Embed functionality from other sites/services.** Sometimes you just need to make your app easier to discover. Embed your existing single-page app, or build something from scratch for Teams.
+* **Embed other sites and services**: Sometimes you just need to make things easier to find. Simply display your existing single-page app or webpage in Teams.
 
-## How do Teams apps work?
+## How do people use Teams apps?
 
-The first thing to know about custom apps for Microsoft Teams (other than how amazing they can be), is that Teams is not a hosting service. Your app package contains metadata about your app (name, icons, etc.), and pointers to the web services you host that power your app. Microsoft Teams provides the distribution mechanism, UI/UX constructs for you to take advantage of, and APIs you can use to augment the information and actions available to your app.
+People can use your app with one or all of the following Teams capabilities (depending on how complex your app is).
 
-A Teams app consists of three major pieces:
+:::row:::
+   :::column span="1":::
+      **Tabs**
 
-* **The Microsoft Teams client (web, desktop or mobile)** where users will interact with your app.
-* **Your Teams app package** that creates the app installed by your users, and contains your app's metadata and pointers to your services.
-* **Your service, workflow or website** which perform the necessary logic, data storage and API calls to power your app.
+      Some text about tabs
 
-It is important to keep in mind that any functionality you expose in a Microsoft Teams app is publicly available over the internet unless you take additional steps to secure it. If you are providing access to confidential or protected information you'll want make sure your services are at a minimum authenticating the endpoint connecting to your app, or [authenticating your users](concepts/authentication/authentication.md).
+      ***What are tabs used for?***
 
-## How can you share your Teams app?
+      * Lorem ipsum dolor sit amet
+      * Lorem ipsum dolor sit amet
+      * Lorem ipsum dolor sit amet
 
-When you're ready to share your Microsoft Teams apps, you have three options depending on who your target audience is.
+   :::column-end:::
+   :::column span="1":::
 
-* **[Upload your app directly](concepts/deploy-and-publish/apps-upload.md)** If your app only needs to be shared to your team, or a few individuals in your organization, you can share your app package and upload it directly.
-* **[Publish to your organizational app catalog](concepts/deploy-and-publish/apps-upload.md)** You can share your app with your entire organization through your app catalog.
-* **[Publish to the public app store](concepts/deploy-and-publish/apps-upload.md)** If your app is for everyone, you can publish it to our public app store. Depending on your goals, you might be eligible for marketing and sales assistance.
+      ![insert_art_filename](media/markdown-reference/document.png)
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="1":::
+      **Messaging extensions**
+
+      Some text about MEs
+
+      ***What are messaging extensions used for?***
+
+      * Lorem ipsum dolor sit amet
+      * Lorem ipsum dolor sit amet
+      * Lorem ipsum dolor sit amet
+
+   :::column-end:::
+   :::column span="1":::
+
+      ![insert_art_filename](media/markdown-reference/document.png)
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="1":::
+      **Bots**
+
+      Some text about bots
+
+      ***What are bots used for?***
+
+      * Lorem ipsum dolor sit amet
+      * Lorem ipsum dolor sit amet
+      * Lorem ipsum dolor sit amet
+
+   :::column-end:::
+   :::column span="1":::
+
+      ![insert_art_filename](media/markdown-reference/document.png)
+   :::column-end:::
+:::row-end:::
 
 ## Get started
 
-* [Build a bot and tab app in C#](tutorials/get-started-dotnet-app-studio.md)
-* [Build a bot and tab app in JavaScript/Node.js](tutorials/get-started-nodejs-app-studio.md)
+:::row:::
+   :::column span="1":::
+      ![insert_art_filename](media/markdown-reference/document.png)
 
-## Learn more
+      <p style="text-align: center;"><b>In a hurry?</b></p>
 
-* [Extensibility points in the Teams client](concepts/extensibility-points.md)
-* [Building apps for Teams](concepts/building-an-app.md)
+      <p style="text-align: center;">New to Teams but don't have time for a deep dive? Get some ideas by creating a simple app.
+
+      > [!div class="nextstepaction"]
+      > [Build an app in 5 minutes](code-in-docs.md)
+
+      </p>
+
+   :::column-end:::
+
+   :::column span="1":::
+      
+      ![insert_art_filename](media/markdown-reference/document.png)
+
+      <p style="text-align: center;"><b>Step by step</b></p>
+
+      <p style="text-align: center;">We'll walk you through how to plan, design, build, and deploy an awesome app.
+
+      > [!div class="nextstepaction"]
+      > [Start planning your app](code-in-docs.md)
+
+      </p>
+
+   :::column-end:::
+
+   :::column span="1":::
+      
+      ![insert_art_filename](media/markdown-reference/document.png)
+
+      <p style="text-align: center;"><b>No code, no worries</b></p>
+
+      <p style="text-align: center;">Turn your favorite custom Power or other Microsoft app into a Teams app.
+
+      > [!div class="nextstepaction"]
+      > [Import your app](code-in-docs.md)
+
+      </p>
+   :::column-end:::
+:::row-end:::
+
+## Resources
+
+Lorem ipsum dolor sit amet
+
+### Next steps
+
+Links to primary steps during the app creation process.
+
+* Planning your app
+* Designing your app
+* Building your app
+* Deploying your app
+
+### Helpful links
+
+Links to related tools and resources.
+
+* Fluent UI
+* TBD
+* TBD
