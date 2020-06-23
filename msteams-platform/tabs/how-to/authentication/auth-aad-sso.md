@@ -37,7 +37,7 @@ This section describes the tasks involved in creating an Microsoft Teams tab tha
 
 Register your application in the[ Azure AD portal](https://azure.microsoft.com/features/azure-portal/). This is a 5–10 minute process that includes the following tasks:
 
-1. Get your [Azure AD Application ID](azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
+1. Get your [Azure AD Application ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
 2. Specify the permissions that your application needs for the Azure AD endpoint (and, optionally, to Microsoft Graph).
 3. [Grant permissions](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) for Teams desktop, web, and mobile applications.
 4. Pre-authorize Teams by selecting the **Add a scope** button and in the panel that opens, enter `access_as_user` as the **Scope name**.
