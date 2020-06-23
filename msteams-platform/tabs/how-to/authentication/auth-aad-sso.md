@@ -23,9 +23,9 @@ The following diagram shows how the SSO process works:
 4. Azure AD sends the tab application token to the Teams application.
 5. The Microsoft Teams application sends the tab application token to the tab as part of the result object returned by the getAuthToken() call.
 6. JavaScript in the tab application can parse the token and extract the information it needs, such as the user's email address.
-    * Note: This token is only valid for consenting to a limited set of user-level APIs (ie: email, profile, offline_access and openid)  and not for further Graph scopes (such as User.Read or Mail.Read). See our section at the end of this document for suggested workarounds if you require additional Graph scopes.
+    * Note: This token is only valid for consenting to a limited set of user-level APIs (ie: email, profile, offline_access and OpenId)  and not for further Graph scopes (such as User.Read or Mail.Read). See our section at the end of this document for suggested workarounds if you require additional Graph scopes.
 
-The SSO API will also work in [Task Modules](../../../task-modules-and-cards/what-are-task-modules.md) that embed web content.
+The SSO API will also work in [Task Modules](../task-modules-and-cards/what-are-task-modules.md) that embed web content.
 
 ## Develop an SSO Microsoft Teams tab
 
@@ -133,7 +133,7 @@ The README explains how to set up your development environment and how to config
 
 ### Apps that require additional Graph Scopes
 
-Our current implementation for SSO only grants consent for user-level permissions (email, profile, offline_access, openid) but not for other APIs (such as User.Read or Mail.Read). If your app needs further Graph scopes, there are some workarounds to enable this.
+Our current implementation for SSO only grants consent for user-level permissions (email, profile, offline_access, OpenId) but not for other APIs (such as User.Read or Mail.Read). If your app needs further Graph scopes, there are some workarounds to enable this.
 
 #### Tenant Admin Consent
 
