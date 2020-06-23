@@ -89,7 +89,10 @@ People can use your app with one or all of the following Teams capabilities (dep
 
 :::row:::
    :::column span="1":::
+      
+      <div align="center">
       ![insert_art_filename](media/markdown-reference/document.png)
+      </div>
 
       <div align="center"><b>In a hurry?</b></div>
 
@@ -104,7 +107,9 @@ People can use your app with one or all of the following Teams capabilities (dep
 
    :::column span="1":::
       
+      <div align="center">
       ![insert_art_filename](media/markdown-reference/document.png)
+      </div>
 
       <div align="center"><b>Step by step</b></div>
 
@@ -119,7 +124,9 @@ People can use your app with one or all of the following Teams capabilities (dep
 
    :::column span="1":::
       
+      <div align="center">
       ![insert_art_filename](media/markdown-reference/document.png)
+      </div>
 
       <div align="center"><b>No code, no worries</b></div>
 
