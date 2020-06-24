@@ -92,7 +92,7 @@ Apps are for personal or team-wide use. People discover and use apps through a s
 
       <div align="center">
 
-      :::image type="content" source="" alt-text="<alt text>":::
+      :::image type="content" source="<folderPath>" alt-text="<alt text>":::
       
         <b>In a hurry?</b>
 
