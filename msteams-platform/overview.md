@@ -8,17 +8,17 @@ ms.author: anclear
 ---
 # What are Microsoft Teams apps?
 
-Microsoft Teams apps make it even easier to work together and get things done. With the Teams platform, you can bring your favorite tools, services, and workflows right where everyone is collaborating.
+With the Microsoft Teams platform, you can create apps that bring key information, favorite tools, and trusted processes to where people increasingly gather and work.
 
-:::image type="content" source="/assets/images/service-technology-image-description.png" alt-text="Alt text describes the content of the image.":::
+:::image type="content" source="assets/images/service-technology-image-description.png" alt-text="Alt text describes the content of the image.":::
 
-## What can Teams apps do?
+## What exactly can Teams apps do?
 
-Microsoft Teams apps primarily focus on increasing collaboration and improving productivity. Your app can be something simple, like posting notifications from an external source, or a complex multi-faceted tool. Just remember that Teams is a social collaboration platform; the best apps help people express themselves and work better together.
+A Microsoft Teams app can be simple (post notifications in a channel) or complex (a patient care system). When planning your app, remember that Teams is a collaboration hub. The best Teams apps help people express themselves and work better together.
 
-* **Collaborate on everything in the same place**: A core benefit of Teams apps is pulling information somewhere outside Teams into a conversation. For example, your app can push notifications into chats, allow people to search for data in another app, or share content in a way that's easily digestible.
+* **Collaborate on everything in the same place**: A core benefit of Teams apps is pulling information somewhere outside Teams into a conversation. For example, your app can help people retrieve data in another tool or share rich, easily digestible content without ever leaving Teams.
 
-* **More talk, more action**: Conversations often result in the need to take action (create an order, review my code, etc.). Your app can kick off these kinds of workflows right inside Teams.
+* **More talk, more action**: Conversations often result in the need to do something (create an order, review my code, etc.). Your app can kick off these kinds of workflows right inside Teams.
 
 * **Notify others of important events**: Sick of sending reminders through email? Send notifications in Teams instead! Send notifications directly to users, a channel, the Activity Feed, or to anyone who subscribes to them.
 
@@ -26,7 +26,7 @@ Microsoft Teams apps primarily focus on increasing collaboration and improving p
 
 ## How do people use Teams apps?
 
-People can use your app with one or all of the following Teams capabilities (depending on how complex your app is).
+Apps are for personal or team-wide use. People discover and use apps through a set of Teams capabilities, including tabs, messaging extensions, and bots. You can build your app with one or all of these capabilities.
 
 :::row:::
    :::column span="1":::
@@ -92,7 +92,7 @@ People can use your app with one or all of the following Teams capabilities (dep
 
       <div align="center">
 
-      :::image type="content" source="<folderPath>" alt-text="<alt text>":::
+      :::image type="content" source="" alt-text="<alt text>":::
       
         <b>In a hurry?</b>
 
@@ -109,16 +109,17 @@ People can use your app with one or all of the following Teams capabilities (dep
 
       <div align="center">
 
-      :::image type="content" source="<folderPath>" alt-text="<alt text>":::
+        :::image type="content" source="<folderPath>" alt-text="<alt text>":::
       
         <b>Step by step</b>
 
         Walk through how to plan, design, build, and deploy your app.
 
         > [!div class="nextstepaction"]
-        > [Start planning your app](code-in-docs.md)
+        > [Start planning your app](planning-your-app-overview.md)
 
       </div>
+
    :::column-end:::
 
    :::column span="":::
