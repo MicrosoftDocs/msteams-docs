@@ -78,7 +78,7 @@ Contact Group Lookup provides a convenient and useful approach to creating, acce
 
 :::row:::
 :::column span="2":::
-    ![Contact Group Lookup pinned favorites view](../assets/images/contact-group-lookup-chat.png)  
+    ![Contact Group Lookup pinned favorites view](../assets/images/contact-group-lookup-favorites.png)  
 :::column-end:::
 :::row-end:::
 :::row:::
