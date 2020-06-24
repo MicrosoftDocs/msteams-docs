@@ -415,6 +415,20 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
   };
   responseActivity.Attachments.Add(attachment);
   
+  // Attribute the message to the user on whose behalf the bot is posting
+  responseActivity.ChannelData = new {
+    OnBehalfOf = new []
+    {
+      new
+      {
+        ItemId = 0,
+        MentionType = "person",
+        Mri = turnContext.Activity.From.Id,
+        DisplayName = turnContext.Activity.From.Name
+      }  
+    }
+  };
+  
   await turnContext.SendActivityAsync(responseActivity);
 
   return new MessagingExtensionActionResponse();
@@ -463,7 +477,11 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
         type: 'AdaptiveCard',
         version: '1.0'
       });
-      const responseActivity = { type: 'message', attachments: [adaptiveCard] };
+      const responseActivity = { type: 'message', attachments: [adaptiveCard], channelData: {
+          onBehalfOf: [
+              { itemId: 0, mentionType: 'person', mri: context.activity.from.id, displayname: context.activity.from.name }
+          ]
+      }};
     
       await context.sendActivity(responseActivity);
     }
