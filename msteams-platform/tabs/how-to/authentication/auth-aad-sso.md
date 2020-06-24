@@ -25,7 +25,7 @@ The following diagram shows how the SSO process works:
 6. The token will be parsed in the tab application, via JavaScript, to extract the needed information, such as the user's email address.
 
 > [!NOTE]
-> The `getAuthToken()` is only valid for consenting to a limited set of user-level APIs — email, profile, offline_access and OpenId — and not for further Microsoft Graph scopes such as `User.Read` or `Mail.Read`. See our section at the end of this document for suggested workarounds if you require [additional Graph scopes](#apps-that-require-additional-graph-scopes).
+> The `getAuthToken()` is only valid for consenting to a limited set of user-level APIs — email, profile, offline_access and OpenId — and not for further Microsoft Graph scopes such as `User.Read` or `Mail.Read`. See our section at the end of this document for suggested workarounds if you require [additional Graph scopes](#apps-that-require-additional-microsoft-graph-scopes).
 
 The SSO API will also work in [Task Modules](../../../task-modules-and-cards/what-are-task-modules.md) that embed web content.
 
@@ -45,7 +45,7 @@ Register your application in the[Azure AD portal](https://azure.microsoft.com/fe
 > [!NOTE]
 > There are some important restrictions you should be aware of:
 >
-> * We only support user-level Microsoft Graph API permissions, i.e., email, profile, offline_access, OpenId. If you need access to other Microsoft Graph scopes (such as `User.Read` or `Mail.Read`), see our [recommended workaround](#apps-that-require-additional-graph-scopes) at the end of this documentation.
+> * We only support user-level Microsoft Graph API permissions, i.e., email, profile, offline_access, OpenId. If you need access to other Microsoft Graph scopes (such as `User.Read` or `Mail.Read`), see our [recommended workaround](#apps-that-require-additional-microsoft-graph-scopes) at the end of this documentation.
 > * It's important that your application's domain name is the same as the domain name you've registering for your Azure AD application.
 > * We don't currently support multiple domains per app.
 > * We don't support applications that use the `azurewebsites.net` domain because it is too common and may be a security risk. However, we're actively seeking to remove this restriction.
