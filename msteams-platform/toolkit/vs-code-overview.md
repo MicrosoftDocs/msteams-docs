@@ -78,9 +78,6 @@ Refer to the **Build Your App* content in your project homepage for detailed ins
 1. Select **Run** icon to display the **Run and Debug** view.
 1. You can also use the keyboard shortcut `Ctrl+Shift+D`.
 
-> [!NOTE]
- > You need version {X} of the Teams client installed on your machine for this to work. If you are running an older verison of Teams, refer to the instructions in this article: [Upload an app package to Microsoft Teams](https://aka.ms/teams-toolkit-uploadapp)
-
 ## Validate your app
 
 The **Validate** page allows you to check your app package before submitting your app to AppSource. Simply upload the manifest package and the validation tool will check your app against all manifest related test cases. For each failed tests, the description provides a documentation link to help you fix the error. For the tests that are hard to automate, the **Preliminary checklist** details 7 of the most common failed test cases as well as link to a complete submission checklist.
