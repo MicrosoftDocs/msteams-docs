@@ -10,7 +10,7 @@ ms.author: anclear
 
 Microsoft Teams apps make it even easier to work together and get things done. With the Teams platform, you can bring your favorite tools, services, and workflows right where everyone is collaborating.
 
-:::image type="content" source="/assets/images/service-technology-image-description.png" alt-text="Alt text describes the content of the image.":::
+<image type="content" source="/assets/images/service-technology-image-description.png" alt-text="Alt text describes the content of the image.">
 
 ## What can Teams apps do?
 
