@@ -32,12 +32,12 @@ Apps are for personal or team-wide use. People discover and use apps through a s
    :::column span="1":::
       **Tabs**
 
-      Tabs are canvases to display ...
+      Tabs provide a dedicated, full-screen web experience for important and complex information.
 
-      ***What are tabs used for?***
+      ***What are examples of tabs?***
 
-      * Lorem ipsum dolor sit amet
-      * Lorem ipsum dolor sit amet
+      * Display your company's internal support page.
+      * 
       * Lorem ipsum dolor sit amet
 
    :::column-end:::
@@ -51,11 +51,11 @@ Apps are for personal or team-wide use. People discover and use apps through a s
    :::column span="1":::
       **Messaging extensions**
 
-      Some text about MEs
+      Messaging extensions offer shortcuts for sharing rich and interactive content in a conversation.
 
-      ***What are messaging extensions used for?***
+      ***What are examples of messaging extensions?***
 
-      * Lorem ipsum dolor sit amet
+      * Book a meeting and automatically notify the chat.
       * Lorem ipsum dolor sit amet
       * Lorem ipsum dolor sit amet
 
@@ -70,9 +70,9 @@ Apps are for personal or team-wide use. People discover and use apps through a s
    :::column span="1":::
       **Bots**
 
-      Some text about bots
+      Bots answer questions and help save time by performing tasks for individuals and people in a chat or channel.
 
-      ***What are bots used for?***
+      ***What are examples of bots?***
 
       * Lorem ipsum dolor sit amet
       * Lorem ipsum dolor sit amet
@@ -113,7 +113,7 @@ Apps are for personal or team-wide use. People discover and use apps through a s
       
         <b>Step by step</b>
 
-        Walk through how to plan, design, build, and deploy your app.
+        Walk through how to plan, design, build, and deploy your Teams app.
 
         > [!div class="nextstepaction"]
         > [Start planning your app](planning-your-app-overview.md)
