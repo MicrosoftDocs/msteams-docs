@@ -72,7 +72,7 @@ It provides a foundation to build custom targeted communication capabilities suc
 
 ## Contact Group Lookup &#9734;
 
-The Contact Group Lookup app template provides a convenient and useful approach to creating, accessing, and managing your organization's communication groups (also termed distribution lists.) within the Teams platform. Users can quickly view and chat with group members, view members' status in Teams, and create a  group chat with their contact group.
+Contact Group Lookup provides a convenient and useful approach to creating, accessing, and managing your organization's communication groups and distribution lists. Users are enabled to quickly view and chat with group members, view members' status in Teams, and create a  group chat with their contact group all within the Teams platform.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-app-contactgrouplookup)
 
