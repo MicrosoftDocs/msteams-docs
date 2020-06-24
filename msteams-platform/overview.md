@@ -51,7 +51,7 @@ Apps are for personal or team-wide use. People discover and use apps through a s
    :::column span="1":::
       **Messaging extensions**
 
-      Messaging extensions offer shortcuts for sharing rich and interactive content in a conversation.
+      Messaging extensions are shortcuts for sharing rich and interactive content in a conversation.
 
       ***What are examples of messaging extensions?***
 
