@@ -20,43 +20,25 @@ Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration t
 > - **application permissions** — RSC permissions for  your app, *see* [Resource-specific Permissions](resource-specific-consent.md#resource-specific-permissions).
 
 ```json
-"webApplicationInfo": {
-
-        "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX", 
-
-"resource": "https://AnyString",
-
-        "applicationPermissions": [
-
-    "TeamSettings.Read.Group",
-
-   "ChannelMessage.Read.Group",
-
-  "TeamSettings.Edit.Group",
-
-  "ChannelSettings.Edit.Group",
-
-  "Channel.Create.Group",
-
-  "Channel.Delete.Group",
-
-  "TeamsApp.Read.Group",
-
-  "TeamsTab.Read.Group",
-
-  "TeamsTab.Create.Group",
-
-  "TeamsTab.Edit.Group",
-
-  "TeamsTab.Delete.Group",
-
-  "Member.Read.Group",
-
-  "Owner.Read.Group",
-
-        ]
-
-    }
+"webApplicationInfo":{
+      "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+      "resource":"https://AnyString",
+      "applicationPermissions":[
+         "TeamSettings.Read.Group",
+         "ChannelMessage.Read.Group",
+         "TeamSettings.Edit.Group",
+         "ChannelSettings.Edit.Group",
+         "Channel.Create.Group",
+         "Channel.Delete.Group",
+         "TeamsApp.Read.Group",
+         "TeamsTab.Read.Group",
+         "TeamsTab.Create.Group",
+         "TeamsTab.Edit.Group",
+         "TeamsTab.Delete.Group",
+         "Member.Read.Group",
+         "Owner.Read.Group"
+      ]
+   }
 ```
 
 >[!IMPORTANT]

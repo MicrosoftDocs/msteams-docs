@@ -25,11 +25,19 @@ Example: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd
 * Increment your version number in the manifest if you make any manifest changes to your submission.
 * Updated submissions are required to undergo a new review and validation process.
 
+## App updates and the user consent flow
 
-### When does updating your app trigger the user consent flow?
+When a user installs your application one of the first things they do is consent to give the app permission to access the services and information that the app needs to do its job. In most cases, after you complete an app update the new version will automatically appear for end users. However, there are some updates to the [Teams app manifest](../../../../resources/schema/manifest-schema.md) that require user acceptance to complete and can re-trigger this consent behavior:
 
-When a user installs your application one of the first things they do is consent to give the app permission to access the services and information that the app needs to do its job. When you update your app, that can re-trigger this consent behavior, particularly if you have made one or more of the following changes:
-
-* Adding a new capability to an app such as adding a bot to an tab only app.
-* Changing the permissions array in the manifest.
-* Incrementing your app version number in your manifest.
+ >[!div class="checklist"]
+>
+> * A bot was added or removed.
+> * An existing bot's unique `botId` value changed.
+> * An existing bot's `isNotificationOnly` boolean value changed.
+> * An existing bot's `supportsFiles` boolean value changed.
+> * A messaging extension (`composeExtensions`) was added or removed.
+> * A new connector was added.
+> * A new static/personal tab was added.
+> * A new configurable group/channel tab was added.
+> * The `webApplicationInfo` values changed.
+>
