@@ -32,7 +32,7 @@ Apps are for personal or team-wide use. People discover and use apps through a s
    :::column span="1":::
       **Tabs**
 
-      Tabs ...
+      Tabs are canvases to display ...
 
       ***What are tabs used for?***
 
