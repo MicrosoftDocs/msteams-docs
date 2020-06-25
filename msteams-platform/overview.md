@@ -8,37 +8,39 @@ ms.author: anclear
 ---
 # What are Microsoft Teams apps?
 
-With the Microsoft Teams platform, you can create apps that bring key information, favorite tools, and trusted processes to where people increasingly gather and work.
+With the Microsoft Teams platform, you can create apps that bring key information, favorite tools, and trusted processes where people increasingly gather and work.
 
 :::image type="content" source="assets/images/service-technology-image-description.png" alt-text="Alt text describes the content of the image.":::
 
 ## What exactly can Teams apps do?
 
-A Microsoft Teams app can be simple (post notifications in a channel) or complex (a patient care system). When planning your app, remember that Teams is a collaboration hub. The best Teams apps help people express themselves and work better together.
+Apps let you integrate Teams with features and functionality in other apps and services. You also can create standalone apps that simply extend what Teams already does.
+
+Some apps are simple (send coworkers notifications), while others are complex (view patient records). When planning your app, remember that Teams is a collaboration hub. The best Teams apps help people express themselves and work better together.
 
 * **Collaborate on everything in the same place**: A core benefit of Teams apps is pulling information somewhere outside Teams into a conversation. For example, your app can help people retrieve data in another tool or share rich, easily digestible content without ever leaving Teams.
 
 * **More talk, more action**: Conversations often result in the need to do something (create an order, review my code, etc.). Your app can kick off these kinds of workflows right inside Teams.
 
-* **Notify others of important events**: Sick of sending reminders through email? Send notifications in Teams instead! Send notifications directly to users, a channel, the Activity Feed, or to anyone who subscribes to them.
+* **Notify others of important events**: Sick of sending reminders through email? Send notifications in Teams instead! Send notifications to users, a channel, the Activity Feed, or to anyone who subscribes to them.
 
-* **Embed other sites and services**: Sometimes you just need to make things easier to find. Simply display your existing single-page app or webpage in Teams.
+* **Embed other sites and services**: Sometimes you just need to make things easier to find. Display your existing single-page app or webpage in Teams.
 
 ## How do people use Teams apps?
 
-Apps are for personal or team-wide use. People discover and use apps through a set of Teams capabilities, including tabs, messaging extensions, and bots. You can build your app with one or all of these capabilities.
+Apps can be used by individuals, a small group, or an entire organization. People discover and use apps through a set of standard Teams capabilities, including tabs, messaging extensions, and bots. Build your app with one or all of these capabilities.
 
 :::row:::
    :::column span="1":::
       **Tabs**
 
-      Tabs provide a dedicated, full-screen web experience for important and complex information.
+      Tabs are a dedicated, full-screen web experience for static and dynamic information.
 
-      ***What are examples of tabs?***
+      ***Examples of tabs***
 
-      * Display your company's internal support page.
-      * 
-      * Lorem ipsum dolor sit amet
+      * Display your company's internal homepage.
+      * View dashboards from another app or service.
+      * Provide a form commonly used by your team.
 
    :::column-end:::
    :::column span="1":::
@@ -51,14 +53,14 @@ Apps are for personal or team-wide use. People discover and use apps through a s
    :::column span="1":::
       **Messaging extensions**
 
-      Messaging extensions are shortcuts for sharing rich and interactive content in a conversation.
+      Messaging extensions are shortcuts for sharing rich, interactive content and completing tasks in a conversation.
 
-      ***What are examples of messaging extensions?***
+      ***Examples of messaging extensions***
 
-      * Book a meeting and automatically notify the chat.
-      * Lorem ipsum dolor sit amet
-      * Lorem ipsum dolor sit amet
-
+      * Book a meeting with everyone in a chat.
+      * Search for a customer order and share with a peer.
+      * Share custom GIFs and stickers.
+      
    :::column-end:::
    :::column span="1":::
 
@@ -70,13 +72,13 @@ Apps are for personal or team-wide use. People discover and use apps through a s
    :::column span="1":::
       **Bots**
 
-      Bots answer questions and help save time by performing tasks for individuals and people in a chat or channel.
+      Bots answer questions and save time by performing tasks for individuals and people in a chat or channel.
 
-      ***What are examples of bots?***
+      ***Examples of bots***
 
-      * Lorem ipsum dolor sit amet
-      * Lorem ipsum dolor sit amet
-      * Lorem ipsum dolor sit amet
+      * Connect people with IT support.
+      * Answer common questions (FAQs).
+      * Gather user feedback and project status.
 
    :::column-end:::
    :::column span="1":::
@@ -139,22 +141,18 @@ Apps are for personal or team-wide use. People discover and use apps through a s
    :::column-end:::
 :::row-end:::
 
-## Resources
+## Next steps
 
-Lorem ipsum dolor sit amet
-
-### Next steps
-
-Links to primary steps during the app creation process.
+Get help at any point while creating your app.
 
 1. Planning your app
 1. Designing your app
 1. Building your app
 1. Deploying your app
 
-### Helpful links
+## Resources
 
-Links to related tools and resources.
+Check out the following resources and tools for developing your app.
 
 * Fluent UI
 * TBD
