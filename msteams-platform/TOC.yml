@@ -21,8 +21,8 @@
     href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
     href: samples/shifts-wfm-connectors.md 
-- name:  Microsoft Teams Toolkit extensions
-  items:
+  - name:  Microsoft Teams Toolkit extensions
+    items:
     - name: Teams Toolkit extension for Visual Studio Code
       href: toolkit/vs-code-overview.md
 - name: Concepts
