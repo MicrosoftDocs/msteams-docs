@@ -34,7 +34,7 @@ Apps can be used by individuals, a small group, or an entire organization. Peopl
    :::column span="1":::
       **Tabs**
 
-      Tabs are a dedicated, full-screen web experience for static and dynamic information.
+      Tabs are dedicated, full-screen web experiences for static and dynamic information.
 
       ***Examples of tabs***
 
