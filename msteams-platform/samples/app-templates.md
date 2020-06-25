@@ -126,7 +126,7 @@ Conversational Q&A bots are an easy way to provide answers to frequently asked q
 >
 > &#x2714; Track the revision history of Q&As.
 >
-> &#x2714; Configure an answer with additional details to display as an [adaptive card](/task-modules-and-cards/cards/cards-reference#adaptive-card).
+> &#x2714; Configure an answer with additional details to display as an [adaptive card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card).
 >
 [**Get it on GitHub**](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
 
@@ -291,5 +291,22 @@ To help alleviate this pain, we are happy to bring to you the List Search app te
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
 ![List Search app](../assets/images/list-search-template.png)
+
+## Workplace Awards &#9734;
+
+Workplace Awards is a Teams app template that provides a positive framework to foster recognition and encourage the culture of employee appreciation in the modern workplace. The app enables you to setup and manage an employee rewards and recognition (R&R) program where employees can easily nominate and endorse colleagues and your R&R leader can view submitted nominations, grant awards, and announce recipients.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-workplaceawards)
+
+:::row:::
+  :::column span="2":::
+    ![Workplace awards nomination card ](../assets/images/workplace-awards-nominate.png)
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Workplace awards list tab](../assets/images/workplace-awards-champion-tab.png)
+:::column-end:::
+:::row-end:::
 
 Have an idea for an app template you'd like to see? [Please let us know](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
