@@ -43,7 +43,7 @@ Apps are for personal or team-wide use. People discover and use apps through a s
    :::column-end:::
    :::column span="1":::
 
-      ![insert_art_filename](media/markdown-reference/document.png)
+      ![insert_art_filename](assets/images/service-technology-image-description.png)
    :::column-end:::
 :::row-end:::
 
@@ -62,7 +62,7 @@ Apps are for personal or team-wide use. People discover and use apps through a s
    :::column-end:::
    :::column span="1":::
 
-      ![insert_art_filename](media/markdown-reference/document.png)
+      ![insert_art_filename](assets/images/service-technology-image-description.png)
    :::column-end:::
 :::row-end:::
 
@@ -81,7 +81,7 @@ Apps are for personal or team-wide use. People discover and use apps through a s
    :::column-end:::
    :::column span="1":::
 
-      ![insert_art_filename](media/markdown-reference/document.png)
+      ![insert_art_filename](assets/images/service-technology-image-description.png)
    :::column-end:::
 :::row-end:::
 
@@ -92,7 +92,7 @@ Apps are for personal or team-wide use. People discover and use apps through a s
 
       <div align="center">
 
-      :::image type="content" source="<folderPath>" alt-text="<alt text>":::
+      :::image type="content" source="assets/images/service-technology-image-description.png" alt-text="<alt text>":::
       
         <b>In a hurry?</b>
 
@@ -109,7 +109,7 @@ Apps are for personal or team-wide use. People discover and use apps through a s
 
       <div align="center">
 
-        :::image type="content" source="<folderPath>" alt-text="<alt text>":::
+        :::image type="content" source="assets/images/service-technology-image-description.png" alt-text="<alt text>":::
       
         <b>Step by step</b>
 
@@ -126,7 +126,7 @@ Apps are for personal or team-wide use. People discover and use apps through a s
 
       <div align="center">
 
-      :::image type="content" source="<folderPath>" alt-text="<alt text>":::
+      :::image type="content" source="assets/images/service-technology-image-description.png" alt-text="<alt text>":::
       
         <b>No code, no worries</b>
 
