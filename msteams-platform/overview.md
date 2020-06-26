@@ -14,7 +14,7 @@ Apps are how you integrate Teams with features and functionality in other apps a
 
 :::image type="content" source="assets/images/overview-collab.png" alt-text="Alt text describes the content of the image.":::
 
-## How do Teams apps work?
+## What can Teams apps do?
 
 People discover and use Teams apps through a set of capabilities, including tabs, messaging extensions, and bots, among others. Your app can use one or a combination of Teams capabilities.
 
