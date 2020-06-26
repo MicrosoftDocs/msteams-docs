@@ -8,7 +8,7 @@ keywords: teams feedback developer questions issues contact support request bugs
 
 The Microsoft Teams product team responds to the developer community across several feedback and support channels.
 
-## Support and feedback channels
+## Platform Support and feedback channels
 
 - **General questions about the Microsoft Teams developer platform:** Please send email to [Microsoft Teams developer support](mailto:microsoftteamsdev@microsoft.com). This email address is _not_ intended for comments or suggestions on non-platform-related features of Microsoft Teams. Furthermore, while we read all the email sent to this address, we do not reply to every one.
 
@@ -24,3 +24,8 @@ The Microsoft Teams product team responds to the developer community across seve
 
   * https://github.com/OfficeDev/microsoft-teams-library-js
   * https://github.com/MicrosoftDocs/msteams-docs
+
+## Product Support channels
+- **Microsoft Teams product issues/failures:** Please reach out to [Microsoft 365 Product Support](https://docs.microsoft.com/en-us/microsoft-365/admin/contact-support-for-business-products?view=o365-worldwide&tabs=online).
+
+- **General questions about Microsoft Teams:** Please post your question on [Microsoft Teams Community](https://answers.microsoft.com/en-us/msteams/forum).
