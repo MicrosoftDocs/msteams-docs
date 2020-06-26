@@ -8,7 +8,7 @@ keywords: teams post publish update certificate
 
 After your app is approved and listed in the public app catalog, you can increase your reach by completing the Microsoft 365 App Compliance Program or by adding a download button on your website.
 
-## Application Certificate
+## M365 Certified
 
 The [Microsoft 365 App Compliance Program](./application-certification.md), is a three tier approach to app security and compliance. Each tier builds upon the next – offering a layered program to meet your customer’s needs. You can learn more about the security and compliance posture of Teams apps by visiting the [compliance page](https://docs.microsoft.com/microsoft-365-app-certification/teams/teams-apps).
 
