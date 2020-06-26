@@ -27,18 +27,18 @@ Each tier in the Microsoft 365 App Compliance Program gives a different level of
 -	Added confidence in the security and compliance measures of your application
 
 ## Qualifying application types 
-Publisher Verification applies to apps which: 
+### Publisher Verification applies to apps which: 
 - Using [OAuth 2.0 and OpenID Connect](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-protocols) to sign users in and request access to data using service-side APIs such as [Microsoft Graph](https://developer.microsoft.com/graph/). 
 - Registered in Azure AD as multi-tenant. 
 
-Publisher Attestation
+### Publisher Attestation
 -	Teams
 -	Word
 -	Excel
 -	PowerPoint
 -	Outlook
 
-M365 Certification
+### M365 Certification
 -	Teams
 -	Coming soon: will offer same application type coverage as Publisher Attestation
 
