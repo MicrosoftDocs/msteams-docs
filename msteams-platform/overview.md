@@ -8,11 +8,11 @@ ms.author: anclear
 ---
 # What are Microsoft Teams apps?
 
-Microsoft Teams apps bring key information, favorite tools, and trusted processes to where people increasingly gather and work.
+Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather and work.
 
-Apps are how you integrate Teams with features and functionality in other apps and services. You also can create standalone apps that simply extend what Teams already does to fit your needs.
+Apps are how you integrate Teams with your favorite features and functionality in other apps and services. You also can create standalone apps that simply extend what Teams already does to fit your needs.
 
-:::image type="content" source="assets/images/overview-collab.png" alt-text="Alt text describes the content of the image.":::
+:::image type="content" source="assets/images/overview-placeholder.png" alt-text="Alt text describes the content of the image.":::
 
 ## What can Teams apps do?
 
@@ -24,7 +24,7 @@ Some apps are simple (send notifications), while others are complex (view patien
    :::column span="1":::
    :::column-end:::
    :::column span="1":::
-      ![alt_text](assets/images/overview-tabs.png)
+      ![alt_text](assets/images/overview-placeholder.png)
    :::column-end:::
    :::column span="1":::
    :::column-end:::
@@ -38,7 +38,7 @@ Sometimes you just need to make things easier to find. Display an important webp
    :::column span="1":::
    :::column-end:::
    :::column span="1":::
-      ![alt_text](assets\images\overview-content.png)
+      ![alt_text](assets\images\overview-placeholder.png)
    :::column-end:::
    :::column span="1":::
    :::column-end:::
@@ -52,7 +52,7 @@ A core benefit of Teams apps is pulling information somewhere outside Teams into
    :::column span="1":::
    :::column-end:::
    :::column span="1":::
-      ![alt_text](assets/images/overview-apps.png)
+      ![alt_text](assets/images/overview-placeholder.png)
    :::column-end:::
    :::column span="1":::
    :::column-end:::
@@ -66,7 +66,7 @@ Conversations often result in the need to do something (create an order, review 
    :::column span="1":::
    :::column-end:::
    :::column span="1":::
-      ![alt_text](assets/images/overview-messaging.png)
+      ![alt_text](assets/images/overview-placeholder.png)
    :::column-end:::
    :::column span="1":::
    :::column-end:::
@@ -74,7 +74,21 @@ Conversations often result in the need to do something (create an order, review 
 
 ### Reminders people notice
 
-Sick of sending reminders through email? Do it through Teams instead! Send notifications to individuals, a channel, the Activity Feed, or anyone who subscribes to them with [connectors](webhooks-and-connectors/how-to).
+Sick of sending reminders through email? Do it through Teams instead! Send notifications to individuals, a channel, the Activity Feed, or anyone who subscribes to them with [connectors](webhooks-and-connectors/what-are-webhooks-and-connectors.md).
+
+:::row:::
+   :::column span="1":::
+   :::column-end:::
+   :::column span="1":::
+      ![alt_text](assets/images/overview-placeholder.png)
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
+:::row-end:::
+
+### Automated management  
+
+With the [Microsoft Graph API for Teams](graph-api/rsc/resource-specific-consent.md), you can automatically create teams and channels, deploy apps, and more.
 
 ## Get started
 
@@ -83,7 +97,7 @@ Sick of sending reminders through email? Do it through Teams instead! Send notif
 
       <div align="center">
 
-      :::image type="content" source="assets/images/service-technology-image-description.png" alt-text="<alt text>":::
+      :::image type="content" source="assets/images/overview-placeholder.png" alt-text="<alt text>":::
       
         <b>Off and running</b>
 
@@ -100,7 +114,7 @@ Sick of sending reminders through email? Do it through Teams instead! Send notif
 
       <div align="center">
 
-        :::image type="content" source="assets/images/service-technology-image-description.png" alt-text="<alt text>":::
+        :::image type="content" source="assets/images/overview-placeholder.png" alt-text="<alt text>":::
       
         <b>Take it slow</b>
 
@@ -117,7 +131,7 @@ Sick of sending reminders through email? Do it through Teams instead! Send notif
 
       <div align="center">
 
-      :::image type="content" source="assets/images/service-technology-image-description.png" alt-text="<alt text>":::
+      :::image type="content" source="assets/images/overview-placeholder.png" alt-text="<alt text>":::
       
         <b>No code, no worries</b>
 
