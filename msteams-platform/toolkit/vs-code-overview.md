@@ -71,6 +71,34 @@ Modifying your the **app details** page or updating the **manifest**, or **.env*
 
 Refer to the **Build Your App* content in your project homepage for detailed instructions for packaging and testing your app. In general, you need to install your app's server, get it running, then setup a tunneling solution so that Teams can access content running from localhost.
 
+## Add a trusted certificate for localhost
+
+If you wish to debug your app on localhost using https, you will need to add a certificate for localhost to `Trusted Root Certification Authorities` catalog. You only need to complete this step once.
+
+<details>
+  <summary>Create and install a trusted certificate</summary>
+
+* Acquire the SSL certificate:
+  * Open the Chrome Developer Tools window (`ctrl + shift + i` / `cmd + option + i`).
+  * Click on the `Security` tab
+  * Click on `View certificate` and you’ll have the option to download the certificate — either by dragging it to your desktop in OS X, or by clicking on the `Details` tab in Windows and clicking `Copy to File…`
+  
+* Install the certificate on **Windows**
+  * Choose the `DER encoded binary X.509 (.CER)` option (the first one) and save it.
+  * Double click on the certificate and install it.
+  * Choose `Local Machine`
+  * Select `Place all certificates in the following store`
+  * Choose `Trusted Root Certification Authorities`
+  * Confirm your installation
+  
+* Install the certificate **Mac OS X**
+  * On OS X, open the Keychain Access utility and select `System` from the menu on the left. Click the lock icon to enable changes.
+  * Click the plus button near the bottom to add a new certificate, and select the `localhost.cer` file you dragged to the desktop. Click `Always Trust` in the dialog that appears.
+  * After adding the certificate to the system keychain, double-click the certificate and expand the `Trust` section of the certificate details. Select `Always Trust` for every option.
+
+*NOTE:* If you are still experiecning certificate warning issues in your browser, reboot your machine and try again.
+</details>
+
 ## Run your app in Teams
 
 1. Navigate to the activity bar on the left side of the Visual Studio Code window.
