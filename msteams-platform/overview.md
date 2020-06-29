@@ -86,7 +86,7 @@ Sick of sending reminders through email? Do it through Teams instead! Send notif
    :::column-end:::
 :::row-end:::
 
-### Automate management  
+### Automate Teams management  
 
 With the [Microsoft Graph API for Teams](graph-api/rsc/resource-specific-consent.md), you can automatically create teams and channels, deploy apps, and more.
 
@@ -118,7 +118,7 @@ With the [Microsoft Graph API for Teams](graph-api/rsc/resource-specific-consent
       
         <b>Take it slow</b>
 
-        Walk through how to plan, design, build, and deploy a production-ready app.
+        Walk through how to plan, design, build, and deploy a Teams app from scratch.
 
         > [!div class="nextstepaction"]
         > [Start planning your app](planning-your-app-overview.md)
@@ -133,12 +133,12 @@ With the [Microsoft Graph API for Teams](graph-api/rsc/resource-specific-consent
 
       :::image type="content" source="assets/images/overview-placeholder.png" alt-text="<alt text>":::
       
-        <b>No code, no worries</b>
+        <b>Go with what works</b>
 
-        Turn your favorite custom Power or other Microsoft app into a Teams app.
+        Bring your favorite web app into Teams for a more seamless user experience.
 
         > [!div class="nextstepaction"]
-        > [Import your existing app](code-in-docs.md)
+        > [Integrate an existing app](code-in-docs.md)
 
       </div>
    :::column-end:::
@@ -146,12 +146,13 @@ With the [Microsoft Graph API for Teams](graph-api/rsc/resource-specific-consent
 
 ## Next steps
 
-Get help at any point of the app creation process.
+Get help at any point during app development.
 
-1. [Planning your app](https://www.microsoft.com)
-1. [Designing your app](https://www.microsoft.com)
-1. [Building your app](https://www.microsoft.com)
-1. [Deploying your app](https://www.microsoft.com)
+* [Planning your app](https://www.microsoft.com)
+* [Designing your app](https://www.microsoft.com)
+* [Building your app](https://www.microsoft.com)
+* [Importing your Power App or other Microsoft business app](https://www.microsoft.com)
+* [Deploying your app](https://www.microsoft.com)
 
 ## Resources
 
