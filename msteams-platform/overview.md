@@ -58,7 +58,7 @@ A core benefit of Teams apps is pulling information somewhere outside Teams into
    :::column-end:::
 :::row-end:::
 
-### More talk, more action
+### Talk leads to action
 
 Conversations often result in the need to do something (create an order, review my code, etc.). A [bot](bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.
 
@@ -72,7 +72,7 @@ Conversations often result in the need to do something (create an order, review 
    :::column-end:::
 :::row-end:::
 
-### Reminders people notice
+### Send reminders people notice
 
 Sick of sending reminders through email? Do it through Teams instead! Send notifications to individuals, a channel, the Activity Feed, or anyone who subscribes to them with [connectors](webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
@@ -86,7 +86,7 @@ Sick of sending reminders through email? Do it through Teams instead! Send notif
    :::column-end:::
 :::row-end:::
 
-### Automated management  
+### Automate management  
 
 With the [Microsoft Graph API for Teams](graph-api/rsc/resource-specific-consent.md), you can automatically create teams and channels, deploy apps, and more.
 
