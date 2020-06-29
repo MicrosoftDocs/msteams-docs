@@ -7,7 +7,8 @@ keywords: teams authentication SSO AAD single sign-on api
 # Single Sign-On (SSO)
 
 > [!NOTE]
-> The Single Sign-on (SSO) API is generally available on web and desktop. Mobile will be available soon. In the meantime, we recommend gracefully falling back to our [classic authentication API](auth-flow-tab.md) on mobile.
+> * The Single Sign-on (SSO) API is generally available on web and desktop. Mobile will be available soon. In the meantime, we recommend gracefully falling back to our [classic authentication API](auth-flow-tab.md) on mobile.
+> * Visit our sample application: [MSTeams Tabs SSO Sample - Nodejs](https://github.com/OfficeDev/msteams-tabs-sso-sample-nodejs)
 
 Users sign in to Microsoft Teams via their work, school, or Microsoft accounts (Office 365, Outlook, etc). You can take advantage of this by allowing a single sign-on to authorize your Microsoft Teams tab (or task module) on desktop or mobile clients. Thus, if a user consents to use your app, they won’t have to consent again on another device — they will signed in be automatically. In addition, we prefetch your access token to improve performance and load times.
 
