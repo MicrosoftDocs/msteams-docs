@@ -134,10 +134,10 @@
         href: graph-api/rsc/test-resource-specific-consent.md 
       - name: 'RSC JSON test file' 
         href: graph-api/rsc/test-rsc-json-file.md    
-      - name: 'Localization file JSON schema'
-        href: resources/schema/localization-schema.md
-      - name: 'Teams contributor guide'
-        href: resources/teams-contributor-reference.md
+    - name: 'Localization file JSON schema'
+      href: resources/schema/localization-schema.md
+    - name: 'Teams contributor guide'
+      href: resources/teams-contributor-reference.md
 - name: Support and feedback
   href: feedback.md
 - name: Tutorials and code samples
