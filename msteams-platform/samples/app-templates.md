@@ -282,6 +282,14 @@ Scrums for Group Chat is a supportive scrum assistant that enables group chat me
 
 ![Scrums for Group Chat demo](https://raw.githubusercontent.com/wiki/OfficeDev/microsoft-teams-app-scrumstatus/images/StartScrum.jpg)
 
+## Share Now &#9734;
+
+The Share Now app promotes the cordial exchange of information between colleagues by enabling your users to easily share content within the Teams environment. Users engage the app to share items of interest with team members, discover new shared content, set preferences, and bookmark favorites for later reading.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-sharenow)
+
+![Select content view](../assets/images/share-now-suggested-content.png)
+
 ## SharePoint List Search
 
 Collaboration in Microsoft Teams quite often references information contained within items in a SharePoint list. Simply pasting a link to the item in question forces everyone to switch context away from the conversation, find the needed information, then return to Teams to continue the conversation. As the conversation continues typically people will have to switch back to the reference item multiple times to verify new comments and refresh their memories of the information contained within the item. This context switching creates a barrier to smooth collaboration, and is a recipe for things falling through the cracks.
