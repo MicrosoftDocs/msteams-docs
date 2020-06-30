@@ -134,7 +134,7 @@ Conversational Q&A bots are an easy way to provide answers to frequently asked q
 
 ## Goal Tracker &#9734;
 
-The Goal Tracker app is a comprehensive solution to support establishing goals, observing progress, and acknowledging success within the Teams setting. The app enables users to set, track, and update professional, personal, and team objectives. Additionally, users receive timely reminders and status updates to achieve milestones and stay on track.
+The Goal Tracker app is a comprehensive solution to support establishing goals, observing progress, and acknowledging success within the Teams setting. The app enables users to set, track, and update professional, personal, and team objectives. Additionally, users receive timely reminders and status updates to remain focused and stay on track.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-app-goaltracker)
 
