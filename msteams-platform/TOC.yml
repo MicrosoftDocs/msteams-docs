@@ -151,7 +151,6 @@
   - name: Extend the Teams client with custom apps
     href: tutorials/code-samples.md   
 - name: Concepts
-  expanded: true
   items:
     - name: Building apps for Microsoft Teams
       href: concepts/building-an-app.md
