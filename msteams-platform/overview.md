@@ -145,13 +145,12 @@ With the [Microsoft Graph API for Teams](graph-api/rsc/resource-specific-consent
 :::row-end:::
 
 ## Next steps
+Don't want to write code for the Teams app? Try [importing your Power App or other Microsoft business app](https://www.microsoft.com)
 
 Get help at any point during app development.
-
 * [Planning your app](https://www.microsoft.com)
 * [Designing your app](https://www.microsoft.com)
 * [Building your app](https://www.microsoft.com)
-* [Importing your Power App or other Microsoft business app](https://www.microsoft.com)
 * [Deploying your app](https://www.microsoft.com)
 
 ## Resources
