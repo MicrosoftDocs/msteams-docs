@@ -10,7 +10,7 @@ keywords: teams apps meetings user role organizer tenant guest
 
 Meetings are key to productivity in Teams. They enable collaboration, partnership, informed communication, and shared feedback in an inclusive and active forum. As a developer, you can create [configurable tab applications](../tabs/what-are-tabs.md#how-do-tabs-work) to enhance and enrich a Teams meeting experience. Meeting users can access apps, via the tab gallery, to enable relevant scenarios such as pre-staging a Kanban board, launching an in-meeting actionable notification, or creating a post-meeting poll. Your meeting app can deliver a user experience for each stage of the meeting lifecycle based upon attendee status.
 
-Teams’ meeting app extensibility centers on three concepts: 
+Teams’ meeting app extensibility centers on three concepts:
 
 1. Meeting lifecycle — before, during, and after a meeting.
 2. Participant roles — organizer, presenter, or attendee in a meeting.
@@ -71,9 +71,11 @@ API interfaces
 
 |API | Description | Source |Response|
 | -----| ------------| --------|-----------|
-|**getParticipant**| Fetch participant information by meetingId and participantId| Graph| meetingRole — user type — in-tenant, guest, federated, or anonymous|
+|**getParticipant**| Fetch meeting participant roles| Graph| meetingRole — organizer, presenter, or attendee.
 |**getMeeting**| Fetch meeting metadata | Bot SDK and Graph| scheduledTime, startTime, endTime, subject|
-|**getMeetingRoster**| Fetch meeting participant roles — organizer, presenter, attendee|
+|**getMeetingParticipants**|  — organizer, presenter, attendee|
 
 > [!NOTE]
 > If you are building experiences based on roles, those experiences could be surfaced to any user type since these user types can have any role in a meeting. Furthermore, it is important to consider the security, auth, and identity management for guest, federated, and anonymous user types.  
+
+
