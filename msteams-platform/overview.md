@@ -32,7 +32,7 @@ Some apps are simple (send notifications), while others are complex (view patien
 
 ### Make your information more accessible
 
-Sometimes you just need to make things easier to find. Display an important webpage in a [tab](tabs/design/tabs.md), which provides a full-screen web experience for static and dynamic information in Teams.
+Sometimes you just need to make things easier to find. Display an important webpage in a [tab](tabs/what-are-tabs.md), which provides a full-screen web experience for static and dynamic information in Teams.
 
 :::row:::
    :::column span="1":::
@@ -104,7 +104,7 @@ With the [Microsoft Graph API for Teams](graph-api/rsc/resource-specific-consent
         Get to know your way around the platform by creating a basic Teams app.
 
         > [!div class="nextstepaction"]
-        > [Build your first app now](code-in-docs.md)
+        > [Build your first app now](build-your-first-app/create-app-manifest.md)
 
       </div>
 
@@ -121,7 +121,7 @@ With the [Microsoft Graph API for Teams](graph-api/rsc/resource-specific-consent
         Walk through how to plan, design, build, and deploy a Teams app from scratch.
 
         > [!div class="nextstepaction"]
-        > [Start planning your app](planning-your-app-overview.md)
+        > [Start planning your app](planning-your-app/planning-overview.md)
 
       </div>
 
@@ -138,7 +138,7 @@ With the [Microsoft Graph API for Teams](graph-api/rsc/resource-specific-consent
         Bring your favorite web app into Teams for a more seamless user experience.
 
         > [!div class="nextstepaction"]
-        > [Integrate an existing app](code-in-docs.md)
+        > [Integrate an existing app](samples/integrating-web-apps.md)
 
       </div>
    :::column-end:::
@@ -148,17 +148,17 @@ With the [Microsoft Graph API for Teams](graph-api/rsc/resource-specific-consent
 
 Get help at any point during app development.
 
-1. [Planning your app](https://www.microsoft.com)
-1. [Designing your app](https://www.microsoft.com)
-1. [Building your app](https://www.microsoft.com)
-1. [Deploying your app](https://www.microsoft.com)
+1. [Planning your app](planning-your-app/planning-overview.md)
+1. [Designing your app](designing-your-app/designing-overview.md)
+1. [Building your app](concepts/build-and-test/prepare-your-o365-tenant.md)
+1. [Deploying your app](concepts/deploy-and-publish/overview.md)
 
-Did you know you can also create a Teams app without writing code? Try [importing your Power App or other Microsoft business app](https://www.microsoft.com)
+Did you know you can also create a Teams app without writing code? Try [importing your Power App or other Microsoft business app](samples/importing-custom-microsoft-apps.md)
 
 ## Resources
 
 Already familiar with developing Teams apps? See the following resources and tools.
 
-* [Fluent UI page](https://www.microsoft.com)
+* [Fluent UI (link isn't final)](https://fluentsite.z22.web.core.windows.net/)
 * [TBD link](https://www.microsoft.com)
 * [TBD link](https://www.microsoft.com)
