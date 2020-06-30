@@ -69,14 +69,18 @@ Modifying your the **app details** page or updating the **manifest**, or **.env*
 
 ## Install and run your app locally
 
-Refer to the **Build Your App* content in your project homepage for detailed instructions for packaging and testing your app. In general, you need to install your app's server, get it running, then setup a tunneling solution so that Teams can access content running from localhost.
+Refer to the **Build and Run* content in your project homepage for detailed instructions for packaging and testing your app. In general, you need to install your app's server, get it running, then setup a tunneling solution so that Teams can access content running from localhost.
 
 ## Add a trusted certificate for localhost
 
-If you wish to debug your app on localhost using https, you will need to add a certificate for localhost to `Trusted Root Certification Authorities` catalog. You only need to complete this step once.
+If you wish to debug your tab based app on localhost using https, you will need to add a certificate for localhost to `Trusted Root Certification Authorities` catalog. You only need to complete this step once per machine.
 
 <details>
   <summary>Create and install a trusted certificate</summary>
+
+* Build and run your app
+  * Follow the instuctions in the **Build and Run** section of your project Readme so that it's being served from https://localhost:3000/tab. Generally, this will involve executing `npm install` then `npm start`
+  * Navigate to https://localhost:3000/tab from Google Chrome
 
 * Acquire the SSL certificate:
   * Open the Chrome Developer Tools window (`ctrl + shift + i` / `cmd + option + i`).
