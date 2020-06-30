@@ -126,10 +126,18 @@
       href:  resources/team-chat-member-api-changes.md 
     - name: 'Manifest schema'
       href: resources/schema/manifest-schema.md
-    - name: 'Localization file JSON schema'
-      href: resources/schema/localization-schema.md
-    - name: 'Teams contributor guide'
-      href: resources/teams-contributor-reference.md
+    - name: 'Teams Graph REST APIs'
+      items:
+      - name: 'Resource specific consent (RSC)'
+        href: graph-api/rsc/resource-specific-consent.md
+      - name: 'Test resource specific consent permissions' 
+        href: graph-api/rsc/test-resource-specific-consent.md 
+      - name: 'RSC JSON test file' 
+        href: graph-api/rsc/test-rsc-json-file.md    
+      - name: 'Localization file JSON schema'
+        href: resources/schema/localization-schema.md
+      - name: 'Teams contributor guide'
+        href: resources/teams-contributor-reference.md
 - name: Support and feedback
   href: feedback.md
 - name: Tutorials and code samples
@@ -436,12 +444,4 @@
       - name: Create an O365 Connector
         href: webhooks-and-connectors/how-to/connectors-creating.md
       - name: Sending messages to connectors and webhooks
-        href: webhooks-and-connectors/how-to/connectors-using.md
-- name: 'Teams Graph REST APIs'
-  items:
-    - name: 'Resource specific consent (RSC)'
-      href: graph-api/rsc/resource-specific-consent.md
-    - name: 'Test resource specific consent permissions' 
-      href: graph-api/rsc/test-resource-specific-consent.md 
-    - name: 'RSC JSON test file' 
-      href: graph-api/rsc/test-rsc-json-file.md         
+        href: webhooks-and-connectors/how-to/connectors-using.md     
