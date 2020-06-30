@@ -275,7 +275,7 @@ To help alleviate this pain, we are happy to bring to you the List Search app te
 
 ![List Search app](../assets/images/list-search-template.png)
 
-## Visitor Management &#9734;
+## Visitor Management &#9734; 
 
 The Visitor Management app enables your organization and employees to easily and efficiently manage the on-site visitor process, directly from Microsoft Teams. The app enables employees to create visitor requests, centrally track a request status through the visitor dashboard, and receive real-time notifications when a visitor arrives.
 
