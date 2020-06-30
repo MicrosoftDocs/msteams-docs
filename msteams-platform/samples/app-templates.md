@@ -284,7 +284,7 @@ Scrums for Group Chat is a supportive scrum assistant that enables group chat me
 
 ## Share Now &#9734;
 
-The Share Now app promotes the cordial exchange of information between colleagues by enabling your users to easily share content within the Teams environment. Users engage the app to share items of interest with team members, discover new shared content, set preferences, and bookmark favorites for later reading.
+The Share Now app promotes the positive exchange of information between colleagues by enabling your users to easily share content within the Teams environment. Users engage the app to share items of interest with team members, discover new shared content, set preferences, and bookmark favorites for later reading.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-sharenow)
 
