@@ -26,6 +26,6 @@ The Microsoft Teams product team responds to the developer community across seve
   * https://github.com/MicrosoftDocs/msteams-docs
 
 ## Product Support channels
-- **Microsoft Teams product issues/failures:** Please reach out to [Microsoft 365 Product Support](https://docs.microsoft.com/en-us/microsoft-365/admin/contact-support-for-business-products?view=o365-worldwide&tabs=online).
+- **Microsoft Teams product issues/failures:** Tenant Admin can reach out to [Microsoft 365 Product Support](https://docs.microsoft.com/en-us/microsoft-365/admin/contact-support-for-business-products?view=o365-worldwide&tabs=online).
 
 - **General questions about Microsoft Teams:** Please post your question on [Microsoft Teams Community](https://answers.microsoft.com/en-us/msteams/forum).
