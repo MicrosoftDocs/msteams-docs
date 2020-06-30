@@ -132,6 +132,23 @@ Conversational Q&A bots are an easy way to provide answers to frequently asked q
 
 ![FAQ Plus gif](../assets/images/FAQPlusEndUser.gif)
 
+## Goal Tracker &#9734;
+
+The Goal Tracker app is a comprehensive solution to support establishing goals, observing progress, and acknowledging success within the Teams setting. The app enables users to set, track, and update professional, personal, and team objectives. Additionally, users receive timely reminders and status updates to achieve milestones and stay on track.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-app-goaltracker)
+
+:::row:::
+  :::column span="2":::
+    ![Set goals](../assets/images/goal-tracker-set-goals-view.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![View set goals](../assets/images/goal-tracker-your-goals-view.png)
+:::column-end:::
+:::row-end:::
+
 ## Group Activities
 
 Group Activities is a Microsoft Teams app that makes it easy for team owners to quickly create activity groups and manage collaboration workflows within the context of Microsoft Teams. Activity authors are enabled to create activities, randomly distribute team members in groups, and optionally have the bot send reminders until activities are complete.
