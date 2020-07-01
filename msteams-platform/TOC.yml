@@ -13,13 +13,13 @@
     href: build-your-first-app/run-your-app.md
   - name: Tutorials and code samples
     items:
-    - name: Create an app using C#
+    - name: Get started with C#
       href: tutorials/get-started-dotnet-app-studio.md
-    - name: Create an app using Node
+    - name: Get started with Node.js
       href: tutorials/get-started-nodejs-app-studio.md
-    - name: Create an app with the Yeoman generator
+    - name: Get started with the Yeoman generator
       href: tutorials/get-started-yeoman.md
-    - name: Extend the Teams client with custom apps
+    - name: More tutorials and code samples
       href: tutorials/code-samples.md   
 - name: Capabilities
   items:
@@ -69,10 +69,230 @@
     href: designing-your-app/designing-other-considerations.md
   - name: Resources
     href: designing-your-app/designing-resources.md
-- name: Developing your app
+- name: Building your app
   items:
   - name: Prepare your Office 365 tenant
-    href: concepts/build-and-test/prepare-your-o365-tenant.md   
+    href: concepts/build-and-test/prepare-your-o365-tenant.md
+  - name: Tabs — embedded web experiences
+    items:
+    - name: What are custom tabs?
+      href: tabs/what-are-tabs.md
+    - name: Quickstarts
+      items:
+        - name: 'Node.js and React'
+          items:
+          - name: 'Create a channel and group tab'
+            href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
+          - name: 'Create a personal tab'
+            href: tabs/quickstarts/create-personal-tab-node-yeoman.md
+        - name: 'C#/ASP.NET Core'
+          items:
+          - name: 'Create a channel and group tab'
+            href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
+          - name: 'Create a personal tab'
+            href: tabs/quickstarts/create-personal-tab-dotnet-core.md
+        - name: 'C#/ASP.NET MVC'
+          items:
+          - name: 'Create a channel and group tab'
+            href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
+          - name: 'Create a personal tab'
+            href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
+    - name: 'Design your tabs'
+      items:
+        - name: 'Design overview'
+          href: tabs/design/tabs.md
+        - name: 'Tabs on mobile clients'
+          href: tabs/design/tabs-mobile.md
+    - name: 'How-to guides'
+      expanded: true
+      items:
+        - name: 'Add tabs to your app'
+          href: tabs/how-to/add-tab.md
+        - name: 'Create tab pages'
+          items:
+          - name: 'Create a content page'
+            href: tabs/how-to/create-tab-pages/content-page.md
+          - name: 'Create a configuration page'
+            href: tabs/how-to/create-tab-pages/configuration-page.md
+          - name: 'Create a tab removal page'
+            href: tabs/how-to/create-tab-pages/removal-page.md
+        - name: 'Add authentication to your tabs'
+          items:
+          - name: 'Authentication flow'
+            href: tabs/how-to/authentication/auth-flow-tab.md
+          - name: 'Using Azure AD authentication'
+            href: tabs/how-to/authentication/auth-tab-aad.md
+          - name: 'Using silent authentication'
+            href: tabs/how-to/authentication/auth-silent-aad.md
+          - name: 'Using single sign-on authentication'
+            href: tabs/how-to/authentication/auth-aad-sso.md
+        - name: 'Using the Teams client SDK'
+          href: tabs/how-to/using-teams-client-sdk.md
+        - name: Getting additional Teams context
+          href: tabs/how-to/access-teams-context.md
+        - name: DevTools for Microsoft Teams tabs
+          href: tabs/how-to/developer-tools.md
+        - name: 'Adding your custom tab to SharePoint'
+          href: tabs/how-to/tabs-in-sharepoint.md
+        - name: Request device permissions
+          href: tabs/how-to/native-device-permissions.md
+  - name: Messaging extensions — task-oriented interactions
+    items:
+    - name: 'What are Messaging Extensions?'
+      href: messaging-extensions/what-are-messaging-extensions.md
+    - name: Design
+      items:
+      -  name: 'Messaging extensions design guidelines'
+         href: messaging-extensions/design/messaging-extension-design.md  
+    - name: Quickstarts
+      items:
+        - name: 'With action command'
+          items:
+            - name: 'C#/.NET'
+              href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action
+            - name: TypeScript/Node.js
+              href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action
+        - name: 'With search command'
+          items:
+            - name: 'C#/.NET'
+              href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search
+            - name: TypeScript/Node.js
+              href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search
+    - name: 'How-to guides'
+      expanded: true
+      items:
+        - name: 'Create a messaging extension'
+          href: messaging-extensions/how-to/create-messaging-extension.md
+        - name: 'Action-based commands'
+          items:
+            - name: Define action commands
+              href: messaging-extensions/how-to/action-commands/define-action-command.md
+            - name: Create and send the task module
+              href: messaging-extensions/how-to/action-commands/create-task-module.md
+            - name: Send a response to the submit action
+              href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
+        - name: 'Search-based commands'
+          items:
+            - name: 'Define search commands'
+              href: messaging-extensions/how-to/search-commands/define-search-command.md
+            - name: 'Receive and respond to search queries'
+              href: messaging-extensions/how-to/search-commands/respond-to-search.md
+        - name: Link unfurling
+          href: messaging-extensions/how-to/link-unfurling.md
+        - name: 'Add authentication'
+          href: messaging-extensions/how-to/add-authentication.md
+        - name: 'Add a configuration page'
+          href: messaging-extensions/how-to/add-configuration-page.md
+  - name: Bots — conversation-based interactions
+    items:
+    - name: What are bots in Microsoft Teams?
+      href: bots/what-are-bots.md
+    - name: How bots work
+      href: bots/bot-basics.md
+    - name: Quickstarts
+      items:
+        - name: Teams conversation bot in C#
+          href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot
+        - name: Teams conversation bot in JavaScript
+          href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot
+        - name: Teams conversation bot in Python
+          href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/57.teams-conversation-bot
+    - name: 'Design your bot'
+      items:
+        - name: 'Design overview'
+          href: bots/design/bots.md
+    - name: 'How-to guides'
+      expanded: true
+      items:
+      - name: Build a bot for Teams
+        href: bots/how-to/create-a-bot-for-teams.md
+      - name: Integrate your Power Virtual Agent chatbot with Teams
+        href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
+      - name: Conversations
+        items:
+        - name: Conversation basics
+          href: bots/how-to/conversations/conversation-basics.md
+        - name: Subscribe to conversation events
+          href: bots/how-to/conversations/subscribe-to-conversation-events.md
+        - name: Channel and group conversations
+          href: bots/how-to/conversations/channel-and-group-conversations.md
+        - name: Send proactive messages
+          href: bots/how-to/conversations/send-proactive-messages.md
+        - name: Send and receive files
+          href: bots/how-to/conversations/send-and-receive-files.md
+      - name: Debug your bot
+        items:
+        - name: Debug locally with an IDE
+          href: bots/how-to/debug/locally-with-an-ide.md
+        - name: Debug with the inspection middleware
+          href: /azure/bot-service/bot-service-debug-inspection-middleware
+      - name: Authentication
+        items:
+        - name: Authentication flow in bots
+          href: bots/how-to/authentication/auth-flow-bot.md
+        - name: Add authentication to your bot
+          href: bots/how-to/authentication/add-authentication.md
+      - name: Format your bot message
+        href: bots/how-to/format-your-bot-messages.md
+      - name: Update and delete bot messages
+        href: bots/how-to/update-and-delete-bot-messages.md     
+      - name: Get Teams context for your bot
+        href: bots/how-to/get-teams-context.md
+      - name: Create a commands menu for your bot
+        href: bots/how-to/create-a-bot-commands-menu.md     
+      - name: Handle bot rate limiting
+        href: bots/how-to/rate-limit.md
+    - name: Calling and meeting bots
+      items:
+      - name: Calling and meeting bots overview
+        href: bots/calls-and-meetings/calls-meetings-bots-overview.md
+      - name: Real-time media concepts
+        href: bots/calls-and-meetings/real-time-media-concepts.md
+      - name: Registering a calling bot
+        href: bots/calls-and-meetings/registering-calling-bot.md
+      - name: Incoming call notifications
+        href: bots/calls-and-meetings/call-notifications.md
+      - name: Debugging and local testing
+        href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
+      - name: Application-hosted media
+        href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
+  - name: Connectors — programmed messaging and notifications
+    items:
+    - name: 'What are Webhooks and connectors?'
+      href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
+    - name: 'How-to guides'
+      expanded: true
+      items:
+      - name: 'Create an incoming webhook'
+        href: webhooks-and-connectors/how-to/add-incoming-webhook.md
+      - name: 'Create an outgoing webhook'
+        href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
+      - name: Create an O365 Connector
+        href: webhooks-and-connectors/how-to/connectors-creating.md
+      - name: Sending messages to connectors and webhooks
+        href: webhooks-and-connectors/how-to/connectors-using.md     
+  - name: Task modules and cards — rich messaging and notifications
+    items:
+    - name: What are task modules?
+      href: task-modules-and-cards/what-are-task-modules.md
+    - name: What are cards?
+      href: task-modules-and-cards/what-are-cards.md
+    - name: Cards
+      items:
+        - name: Designing effective cards
+          href: task-modules-and-cards/cards/design-effective-cards.md
+        - name: Formatting card text
+          href: task-modules-and-cards/cards/cards-format.md
+        - name: Add and respond to card actions
+          href: task-modules-and-cards/cards/cards-actions.md
+        - name: Cards reference
+          href: task-modules-and-cards/cards/cards-reference.md
+    - name: Task modules
+      items:
+        - name: From a bot
+          href: task-modules-and-cards/task-modules/task-modules-bots.md
+        - name: From a tab
+          href: task-modules-and-cards/task-modules/task-modules-tabs.md
 - name: Deploying your app
   items:
   - name: Choose your distribution methods
@@ -196,7 +416,7 @@
             href: concepts/design/components/fields.md
           - name: Dialogs
             href: concepts/design/components/dialogs.md
-    - name: 'Build and test your app'
+    - name: Build and test your app
       items:
       - name: Prepare your Office 365 tenant
         href: concepts/build-and-test/prepare-your-o365-tenant.md      
@@ -214,229 +434,9 @@
         href: concepts/build-and-test/apps-localization.md
       - name: Create a Share-to-Teams button for your website
         href: concepts/build-and-test/share-to-teams.md
-    - name: 'Authentication flows in your apps'
+    - name: Adding authentication
       items:
-        - name: 'Authentication overview'
+        - name: Authentication overview
           href: concepts/authentication/authentication.md
-        - name: 'Configure identity providers'
+        - name: Configure identity providers
           href: concepts/authentication/configure-identity-provider.md
-- name: 'Tabs — embedded web experiences'
-  items:
-    - name: 'What are custom tabs?'
-      href: tabs/what-are-tabs.md
-    - name: Quickstarts
-      items:
-        - name: 'Node.js and React'
-          items:
-          - name: 'Create a channel and group tab'
-            href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
-          - name: 'Create a personal tab'
-            href: tabs/quickstarts/create-personal-tab-node-yeoman.md
-        - name: 'C#/ASP.NET Core'
-          items:
-          - name: 'Create a channel and group tab'
-            href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
-          - name: 'Create a personal tab'
-            href: tabs/quickstarts/create-personal-tab-dotnet-core.md
-        - name: 'C#/ASP.NET MVC'
-          items:
-          - name: 'Create a channel and group tab'
-            href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
-          - name: 'Create a personal tab'
-            href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-    - name: 'Design your tabs'
-      items:
-        - name: 'Design overview'
-          href: tabs/design/tabs.md
-        - name: 'Tabs on mobile clients'
-          href: tabs/design/tabs-mobile.md
-    - name: 'How-to guides'
-      expanded: true
-      items:
-        - name: 'Add tabs to your app'
-          href: tabs/how-to/add-tab.md
-        - name: 'Create tab pages'
-          items:
-          - name: 'Create a content page'
-            href: tabs/how-to/create-tab-pages/content-page.md
-          - name: 'Create a configuration page'
-            href: tabs/how-to/create-tab-pages/configuration-page.md
-          - name: 'Create a tab removal page'
-            href: tabs/how-to/create-tab-pages/removal-page.md
-        - name: 'Add authentication to your tabs'
-          items:
-          - name: 'Authentication flow'
-            href: tabs/how-to/authentication/auth-flow-tab.md
-          - name: 'Using Azure AD authentication'
-            href: tabs/how-to/authentication/auth-tab-aad.md
-          - name: 'Using silent authentication'
-            href: tabs/how-to/authentication/auth-silent-aad.md
-          - name: 'Using single sign-on authentication'
-            href: tabs/how-to/authentication/auth-aad-sso.md
-        - name: 'Using the Teams client SDK'
-          href: tabs/how-to/using-teams-client-sdk.md
-        - name: Getting additional Teams context
-          href: tabs/how-to/access-teams-context.md
-        - name: DevTools for Microsoft Teams tabs
-          href: tabs/how-to/developer-tools.md
-        - name: 'Adding your custom tab to SharePoint'
-          href: tabs/how-to/tabs-in-sharepoint.md
-        - name: Request device permissions
-          href: tabs/how-to/native-device-permissions.md          
-- name: 'Bots — conversation-based interactions'
-  items:
-    - name: What are bots in Microsoft Teams?
-      href: bots/what-are-bots.md
-    - name: How bots work
-      href: bots/bot-basics.md
-    - name: Quickstarts
-      items:
-        - name: Teams conversation bot in C#
-          href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot
-        - name: Teams conversation bot in JavaScript
-          href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot
-        - name: Teams conversation bot in Python
-          href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/57.teams-conversation-bot
-    - name: 'Design your bot'
-      items:
-        - name: 'Design overview'
-          href: bots/design/bots.md
-    - name: 'How-to guides'
-      expanded: true
-      items:
-      - name: Build a bot for Teams
-        href: bots/how-to/create-a-bot-for-teams.md
-      - name: Integrate your Power Virtual Agent chatbot with Teams
-        href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
-      - name: Conversations
-        items:
-        - name: Conversation basics
-          href: bots/how-to/conversations/conversation-basics.md
-        - name: Subscribe to conversation events
-          href: bots/how-to/conversations/subscribe-to-conversation-events.md
-        - name: Channel and group conversations
-          href: bots/how-to/conversations/channel-and-group-conversations.md
-        - name: Send proactive messages
-          href: bots/how-to/conversations/send-proactive-messages.md
-        - name: Send and receive files
-          href: bots/how-to/conversations/send-and-receive-files.md
-      - name: Debug your bot
-        items:
-        - name: Debug locally with an IDE
-          href: bots/how-to/debug/locally-with-an-ide.md
-        - name: Debug with the inspection middleware
-          href: /azure/bot-service/bot-service-debug-inspection-middleware
-      - name: Authentication
-        items:
-        - name: Authentication flow in bots
-          href: bots/how-to/authentication/auth-flow-bot.md
-        - name: Add authentication to your bot
-          href: bots/how-to/authentication/add-authentication.md
-      - name: Format your bot message
-        href: bots/how-to/format-your-bot-messages.md
-      - name: Update and delete bot messages
-        href: bots/how-to/update-and-delete-bot-messages.md     
-      - name: Get Teams context for your bot
-        href: bots/how-to/get-teams-context.md
-      - name: Create a commands menu for your bot
-        href: bots/how-to/create-a-bot-commands-menu.md     
-      - name: Handle bot rate limiting
-        href: bots/how-to/rate-limit.md
-    - name: Calling and meeting bots
-      items:
-      - name: Calling and meeting bots overview
-        href: bots/calls-and-meetings/calls-meetings-bots-overview.md
-      - name: Real-time media concepts
-        href: bots/calls-and-meetings/real-time-media-concepts.md
-      - name: Registering a calling bot
-        href: bots/calls-and-meetings/registering-calling-bot.md
-      - name: Incoming call notifications
-        href: bots/calls-and-meetings/call-notifications.md
-      - name: Debugging and local testing
-        href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
-      - name: Application-hosted media
-        href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-- name: 'Messaging Extensions — task-oriented interactions'
-  items:
-    - name: 'What are Messaging Extensions?'
-      href: messaging-extensions/what-are-messaging-extensions.md
-    - name: Design
-      items:
-      -  name: 'Messaging extensions design guidelines'
-         href: messaging-extensions/design/messaging-extension-design.md  
-    - name: Quickstarts
-      items:
-        - name: 'With action command'
-          items:
-            - name: 'C#/.NET'
-              href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action
-            - name: TypeScript/Node.js
-              href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action
-        - name: 'With search command'
-          items:
-            - name: 'C#/.NET'
-              href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search
-            - name: TypeScript/Node.js
-              href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search
-    - name: 'How-to guides'
-      expanded: true
-      items:
-        - name: 'Create a messaging extension'
-          href: messaging-extensions/how-to/create-messaging-extension.md
-        - name: 'Action-based commands'
-          items:
-            - name: Define action commands
-              href: messaging-extensions/how-to/action-commands/define-action-command.md
-            - name: Create and send the task module
-              href: messaging-extensions/how-to/action-commands/create-task-module.md
-            - name: Send a response to the submit action
-              href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
-        - name: 'Search-based commands'
-          items:
-            - name: 'Define search commands'
-              href: messaging-extensions/how-to/search-commands/define-search-command.md
-            - name: 'Receive and respond to search queries'
-              href: messaging-extensions/how-to/search-commands/respond-to-search.md
-        - name: Link unfurling
-          href: messaging-extensions/how-to/link-unfurling.md
-        - name: 'Add authentication'
-          href: messaging-extensions/how-to/add-authentication.md
-        - name: 'Add a configuration page'
-          href: messaging-extensions/how-to/add-configuration-page.md        
-- name: 'Task modules and cards — rich messaging and notifications'
-  items:
-    - name: 'What are task modules?'
-      href: task-modules-and-cards/what-are-task-modules.md
-    - name: 'What are cards?'
-      href: task-modules-and-cards/what-are-cards.md
-    - name: 'Cards'
-      items:
-        - name: Designing effective cards
-          href: task-modules-and-cards/cards/design-effective-cards.md
-        - name: Formatting card text
-          href: task-modules-and-cards/cards/cards-format.md
-        - name: Add and respond to card actions
-          href: task-modules-and-cards/cards/cards-actions.md
-        - name: Cards reference
-          href: task-modules-and-cards/cards/cards-reference.md
-    - name: 'Task modules'
-      items:
-        - name: From a bot
-          href: task-modules-and-cards/task-modules/task-modules-bots.md
-        - name: From a tab
-          href: task-modules-and-cards/task-modules/task-modules-tabs.md
-- name: 'Webhooks and connectors — programmed messaging and notifications'
-  items:
-    - name: 'What are Webhooks and connectors?'
-      href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
-    - name: 'How-to guides'
-      expanded: true
-      items:
-      - name: 'Create an incoming webhook'
-        href: webhooks-and-connectors/how-to/add-incoming-webhook.md
-      - name: 'Create an outgoing webhook'
-        href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
-      - name: Create an O365 Connector
-        href: webhooks-and-connectors/how-to/connectors-creating.md
-      - name: Sending messages to connectors and webhooks
-        href: webhooks-and-connectors/how-to/connectors-using.md     
