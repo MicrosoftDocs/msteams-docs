@@ -320,7 +320,7 @@ To help alleviate this pain, we are happy to bring to you the List Search app te
 
 ## Staff Check-ins &#9734;
 
-Staff Check-ins is a Power Apps based app that enables oversight communication between your business and field personnel. Staff can easily provide time-critical information and status updates on either a scheduled or ad-hoc basis directly from Teams. The app supports real-time location, photos, and notes as well as reminder notifications and automated workflows.
+Staff Check-ins is a [Power Apps](/powerapps/powerapps-overview) supported app that enables oversight communication between your business and field personnel. Staff can easily provide time-critical information and status updates on either a scheduled or ad-hoc basis directly from Teams. The app supports real-time location, photos, and notes as well as reminder notifications and automated workflows.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-staffcheckins)
 
