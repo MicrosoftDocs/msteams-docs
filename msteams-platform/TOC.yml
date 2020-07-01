@@ -11,6 +11,16 @@
     href: build-your-first-app/create-app-manifest.md
   - name: Run your app
     href: build-your-first-app/run-your-app.md
+  - name: Tutorials and code samples
+    items:
+    - name: Create an app using C#
+      href: tutorials/get-started-dotnet-app-studio.md
+    - name: Create an app using Node
+      href: tutorials/get-started-nodejs-app-studio.md
+    - name: Create an app with the Yeoman generator
+      href: tutorials/get-started-yeoman.md
+    - name: Extend the Teams client with custom apps
+      href: tutorials/code-samples.md   
 - name: Capabilities
   items:
   - name: Tabs
@@ -164,16 +174,6 @@
       href: resources/teams-contributor-reference.md
 - name: Support and feedback
   href: feedback.md
-- name: Tutorials and code samples
-  items:
-  - name: Create an app using C#
-    href: tutorials/get-started-dotnet-app-studio.md
-  - name: Create an app using Node
-    href: tutorials/get-started-nodejs-app-studio.md
-  - name: Create an app with the Yeoman generator
-    href: tutorials/get-started-yeoman.md
-  - name: Extend the Teams client with custom apps
-    href: tutorials/code-samples.md   
 - name: Concepts
   items:
     - name: Building apps for Microsoft Teams
