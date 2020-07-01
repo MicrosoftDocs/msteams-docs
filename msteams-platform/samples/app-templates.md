@@ -132,6 +132,23 @@ Conversational Q&A bots are an easy way to provide answers to frequently asked q
 
 ![FAQ Plus gif](../assets/images/FAQPlusEndUser.gif)
 
+## Goal Tracker &#9734;
+
+The Goal Tracker app is a comprehensive solution for your organization to support establishing goals, observing progress, and acknowledging success within Microsoft Teams. The app enables users to set, track, and update objectives on a professional, personal, and team level. Team members also receive timely reminders and status updates to remain focused and stay on track.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-app-goaltracker)
+
+:::row:::
+  :::column span="2":::
+    ![Set goals](../assets/images/goal-tracker-set-goals-view.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![View set goals](../assets/images/goal-tracker-your-goals-view.png)
+:::column-end:::
+:::row-end:::
+
 ## Group Activities
 
 Group Activities is a Microsoft Teams app that makes it easy for team owners to quickly create activity groups and manage collaboration workflows within the context of Microsoft Teams. Activity authors are enabled to create activities, randomly distribute team members in groups, and optionally have the bot send reminders until activities are complete.
@@ -299,6 +316,23 @@ To help alleviate this pain, we are happy to bring to you the List Search app te
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
 ![List Search app](../assets/images/list-search-template.png)
+
+## Visitor Management &#9734;
+
+The Visitor Management app enables your organization and employees to easily and efficiently manage the on-site visitor process, directly from Microsoft Teams. The app enables employees to create visitor requests, centrally track a request status through the visitor dashboard, and receive real-time notifications when a visitor arrives.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-app-visitormanagement)
+
+:::row:::
+  :::column span="2":::
+    ![Create a request view](../assets/images/visitor-management-create-request.png)
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Visitor arrival notification](../assets/images/visitor-management-notify-host.png)
+:::column-end:::
+:::row-end:::
 
 ## Workplace Awards &#9734;
 
