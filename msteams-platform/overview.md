@@ -16,7 +16,7 @@ Apps are how you integrate Teams with your favorite features and functionality i
 
 ## What can Teams apps do?
 
-People discover and use Teams apps through a set of capabilities, including tabs, bots, and messaging extensions, among others. Your app can have one or a combination of Teams capabilities. Apps can also be tailored for personal, one-on-one interactions and group activities.
+People discover and use Teams apps through a set of capabilities, including tabs, messaging extensions, bots, and connectors. Your app can have one or a combination of Teams capabilities. You can specify your app's scope for only personal workspaces or expand it to group chats and team activities.
 
 Some apps are simple (send notifications), while others are complex (view patient records). When planning your app, remember that Teams is a collaboration hub. The best Teams apps help people express themselves and work better together.
 
@@ -30,7 +30,7 @@ Some apps are simple (send notifications), while others are complex (view patien
    :::column-end:::
 :::row-end:::
 
-### Make your information more accessible
+### Get information more conveniently
 
 Sometimes you just need to make things easier to find. Display an important webpage in a [tab](tabs/what-are-tabs.md), which provides a full-screen web experience for static and dynamic information in Teams.
 
@@ -58,7 +58,7 @@ A core benefit of Teams apps is pulling information somewhere outside Teams into
    :::column-end:::
 :::row-end:::
 
-### Talk leads to action
+### Turn words into actions
 
 Conversations often result in the need to do something (create an order, review my code, etc.). A [bot](bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.
 
@@ -86,9 +86,9 @@ Sick of sending reminders through email? Do it through Teams instead! Send notif
    :::column-end:::
 :::row-end:::
 
-### Automate Teams management  
+### Automate and manage activity
 
-With the [Microsoft Graph API for Teams](graph-api/rsc/resource-specific-consent.md), you can automatically create teams and channels, deploy apps, and more.
+The [Microsoft Graph API for Teams](graph-api/rsc/resource-specific-consent.md) gives your apps increased power and flexibility. For example, an app can build teams automatically based on some user input. Admin apps can help with a variety of management tasks, including governance, security, usage data, and sentiment analysis.
 
 ## Get started
 
@@ -135,10 +135,10 @@ With the [Microsoft Graph API for Teams](graph-api/rsc/resource-specific-consent
       
         <b>Go with what works</b>
 
-        Bring your favorite web app into Teams for a more seamless user experience.
+        Bring your favorite web apps and services into Teams for a seamless user experience.
 
         > [!div class="nextstepaction"]
-        > [Integrate an existing app](samples/integrating-web-apps.md)
+        > [Integrate an app or service](samples/integrating-web-apps.md)
 
       </div>
    :::column-end:::
@@ -153,7 +153,7 @@ Get help at any point during app development.
 1. [Building your app](concepts/build-and-test/prepare-your-o365-tenant.md)
 1. [Deploying your app](concepts/deploy-and-publish/overview.md)
 
-Did you know you can also create a Teams app without writing code? Try [importing your Power App or other Microsoft business app](samples/importing-custom-microsoft-apps.md)
+Did you know you can also create a Teams app without writing code? Try [importing your Power App or other Microsoft business app](samples/importing-custom-microsoft-apps.md).
 
 ## Resources
 
