@@ -9,7 +9,7 @@ ms.date: 05/06/2019
 
 Building a secure and trustworthy app ecosystem is a top priority for Microsoft. Several investments aim to ensure that apps available in the Microsoft store are valid, safe and secure. 
 
-  ![3 Tier Approach to App Compliance](msteams-docs/msteams-platform/assets/images/3TierImage.png) 
+  ![3 Tier Approach to App Compliance](../../../../assets/images/3TierImage.png) 
 
 -	[Publisher Verification](https://docs.microsoft.com/en-us/azure/active-directory/develop/publisher-verification-overview)  –  allows developers with a verified [Microsoft Partner Network](https://partner.microsoft.com/en-us/membership) (MPN) account to associate an organizational identity with their apps registered through the [Microsoft identity platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/).
 -	[Publisher Attestation](https://docs.microsoft.com/en-us/microsoft-365-app-certification/docs/enterprise-app-attestation-guide) – developers complete a self-assessment of their organization’s security, compliance, and data handling practices. This information is made available for IT Admins to review. 
