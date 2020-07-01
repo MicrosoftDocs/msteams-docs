@@ -67,6 +67,30 @@
   items:
   - name: Choose your distribution methods
     href: concepts/deploy-and-publish/overview.md
+  - name: Upload your app for a team or user
+    href: concepts/deploy-and-publish/apps-upload.md
+  - name: Publish your app to your organization
+    href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json
+  - name: Publish your app on AppSource
+    items:
+    - name: Understanding AppSource submission 
+      href: concepts/deploy-and-publish/appsource/publish.md
+    - name: Prepare your app
+      items: 
+      - name: Pre-submission checklist
+        href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
+      - name: App detail page checklist
+        href: concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md
+      - name: App manifest checklist
+        href: concepts/deploy-and-publish/appsource/prepare/app-manifest-checklist.md
+      - name: Frequently failed cases
+        href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
+      - name: After publishing your app
+        items:
+        - name: What to do after publishing your app
+          href: concepts/deploy-and-publish/appsource/post-publish/overview.md
+        - name: Application Certification program
+          href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
 - name: Reference and resources
   items:
     - name: Bots - v3 SDK
@@ -190,34 +214,6 @@
         href: concepts/build-and-test/apps-localization.md
       - name: Create a Share-to-Teams button for your website
         href: concepts/build-and-test/share-to-teams.md
-    - name: 'Deploy and publish your app'
-      items:
-      - name: Choose your distribution methods
-        href: concepts/deploy-and-publish/overview.md
-      - name: Upload your app for a team or user
-        href: concepts/deploy-and-publish/apps-upload.md
-      - name: Publish your app to your organization
-        href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json
-      - name: Publish your app on AppSource
-        items:
-        - name: Understanding AppSource submission 
-          href: concepts/deploy-and-publish/appsource/publish.md
-        - name: Prepare your app
-          items: 
-          - name: Pre-submission checklist
-            href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
-          - name: App detail page checklist
-            href: concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md
-          - name: App manifest checklist
-            href: concepts/deploy-and-publish/appsource/prepare/app-manifest-checklist.md
-          - name: Frequently failed cases
-            href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
-        - name: After publishing your app
-          items:
-          - name: What to do after publishing your app
-            href: concepts/deploy-and-publish/appsource/post-publish/overview.md
-          - name: Application Certification program
-            href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
     - name: 'Authentication flows in your apps'
       items:
         - name: 'Authentication overview'

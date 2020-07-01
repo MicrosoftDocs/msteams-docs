@@ -153,7 +153,7 @@ Get help at any point during app development.
 1. [Building your app](concepts/build-and-test/prepare-your-o365-tenant.md)
 1. [Deploying your app](concepts/deploy-and-publish/overview.md)
 
-Did you know you can also create a Teams app without writing code? Try [importing your Power App or other Microsoft business app](samples/importing-custom-microsoft-apps.md).
+Did you know you can also create a Teams app without writing code? Try [importing your Power App or other custom Microsoft business app](samples/importing-custom-microsoft-apps.md).
 
 ## Resources
 
