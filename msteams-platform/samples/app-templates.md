@@ -317,6 +317,23 @@ To help alleviate this pain, we are happy to bring to you the List Search app te
 
 ![List Search app](../assets/images/list-search-template.png)
 
+## Visitor Management &#9734;
+
+The Visitor Management app enables your organization and employees to easily and efficiently manage the on-site visitor process, directly from Microsoft Teams. The app enables employees to create visitor requests, centrally track a request status through the visitor dashboard, and receive real-time notifications when a visitor arrives.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-app-visitormanagement)
+
+:::row:::
+  :::column span="2":::
+    ![Create a request view](../assets/images/visitor-management-create-request.png)
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Visitor arrival notification](../assets/images/visitor-management-notify-host.png)
+:::column-end:::
+:::row-end:::
+
 ## Workplace Awards &#9734;
 
 Workplace Awards is a Teams app template that provides a positive framework to foster recognition and encourage the culture of employee appreciation in the modern workplace. The app enables you to setup and manage an employee rewards and recognition (R&R) program where employees can easily nominate and endorse colleagues and your R&R leader can view submitted nominations, grant awards, and announce recipients.
