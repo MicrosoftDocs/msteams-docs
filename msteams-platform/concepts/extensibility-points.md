@@ -31,7 +31,7 @@ They can contain:
 
 * [**Conversational bots**](~/bots/what-are-bots.md) having a one-to-one conversation with the user. Because this is a private conversation, if your app needs to have a multi-turn conversation, or provide a notification relevant only to a single user, it is typically best to have that interaction in a personal app.
 
-* [**Personal Tabs**](~/tabs/what-are-tabs.md)providing a full-screen embedded web experience.
+* [**Personal Tabs**](~/tabs/what-are-tabs.md) providing a full-screen embedded web experience.
 
 ## Messages
 
