@@ -8,7 +8,7 @@ ms.topic: overview
 ---
 # Create a SaaS offer for your Teams app
 
-Including a Software as a Service (SaaS) subscription with your app solution enables users to easily connect to and use your cloud-based app and allows you to enhance the user experience by delivering automated upgrades/updates and increased access across platforms. Microsoft Teams apps are free to install in the Teams environment but some may require users to purchase a SaaS subscription to experience the app's full functionality and/or scope. SaaS subscriptions can be purchased from a cloud service provider or you can create and offer a SaaS subscription for your Teams app directly through Partner Center or the Commercial Marketplace via the [Azure SaaS fulfillment APIs](azure/marketplace/partner-center-portal/pc-saas-fulfillment-apis).
+Adding a Software as a Service (SaaS) subscription to your app solution enables users to easily connect to and use your cloud-based app and allows you to enhance the user experience by delivering automated upgrades/updates and increased access across platforms. Microsoft Teams apps are free to install in the Teams environment, but some may require users to purchase a SaaS subscription to experience the app's full functionality and/or scope. SaaS subscriptions can be purchased from a cloud service provider or you can create a SaaS subscription for your Teams app directly through Partner Center or the Commercial Marketplace via the [Azure SaaS fulfillment APIs](azure/marketplace/partner-center-portal/pc-saas-fulfillment-apis).
 
 ## Getting started with SaaS
 
