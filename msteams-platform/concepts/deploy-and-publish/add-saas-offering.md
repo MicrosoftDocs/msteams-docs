@@ -14,14 +14,14 @@ Adding a Software as a Service (SaaS) subscription to your app solution enables 
 
 | Topic | Description| Link |
 |------|-------------|------|
-|**Creating a new SaaS offer**|How to create and configure a new SAAS offer in the [Azure Marketplace or Microsoft AppSource](https://azure.microsoft.com/overview/commercial-marketplace/)| [Documentation](azure/marketplace/partner-center-portal/create-new-saas-offer)|
-|**Register a SaaS application** | How to register a SaaS application using the Microsoft Azure portal and how to get publisher's access token (Azure Active Directory access token)| [Documentation](azure/marketplace/partner-center-portal/pc-saas-registration)|
-|**SaaS offer creation checklist for developers**| Details and guidance for the SaaS offer creation process in Partner Center| [Documentation](azure/marketplace/partner-center-portal/offer-creation-checklist)|
-|**Commercial marketplace offer best practices** |Insights for creating effective SaaS offers.|[Documentation](azure/marketplace/gtm-offer-listing-best-practices)|
-|**Microsoft SaaS fulfillment API (V2)** | Explore the APIs that enable developers create SaaS offers in Microsoft AppSource and Azure Marketplace| [Documentation](azure/marketplace/partner-center-portal/pc-saas-fulfillment-api-v2) |
+|**Creating a new SaaS offer**|How to create and configure a new SAAS offer in the [Azure Marketplace or Microsoft AppSource](https://azure.microsoft.com/overview/commercial-marketplace/)| [Documentation](/azure/marketplace/partner-center-portal/create-new-saas-offer)|
+|**Register a SaaS application** | How to register a SaaS application using the Microsoft Azure portal and how to get publisher's access token (Azure Active Directory access token)| [Documentation](/azure/marketplace/partner-center-portal/pc-saas-registration)|
+|**SaaS offer creation checklist for developers**| Details and guidance for the SaaS offer creation process in Partner Center| [Documentation](/azure/marketplace/partner-center-portal/offer-creation-checklist)|
+|**Commercial marketplace offer best practices** |Insights for creating effective SaaS offers.|[Documentation](/azure/marketplace/gtm-offer-listing-best-practices)|
+|**Microsoft SaaS fulfillment API (V2)** | Explore the APIs that enable developers create SaaS offers in Microsoft AppSource and Azure Marketplace| [Documentation](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-api-v2) |
 |**Implementing the SaaS fulfillment SDK**| Get SaaS implementation code on GitHub | [Get it on GitHub](https://github.com/Azure/Microsoft-commercial-marketplace-transactable-SaaS-offer-SDK/blob/master/docs/Installation-Instructions.md) |
 |**SaaS offering sample code**| View code samples and the SDK for creating a SaaS offering| [Get it on GitHub](https://github.com/Azure/Microsoft-commercial-marketplace-transactable-SaaS-offer-SDK/blob/master/README.md)|
-| **FAQ: SaaS API** | Answers to common end-user experience queries| [Documentation](azure/marketplace/partner-center-portal/saas-fulfillment-apis-faq) |
+| **FAQ: SaaS API** | Answers to common end-user experience queries| [Documentation](/azure/marketplace/partner-center-portal/saas-fulfillment-apis-faq) |
 
 > [!div class="nextstepaction"]
 > [Learn more about building your SaaS app business](https://azure.microsoft.com/overview/saas-partner-resources/)
