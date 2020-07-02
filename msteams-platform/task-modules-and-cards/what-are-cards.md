@@ -3,13 +3,13 @@ title: Introducing cards
 description: Describes cards and how they are used in bots, connectors and messaging extensions
 keywords: connectors bots cards messaging
 ---
-# Cards
+# What are cards?
 
-A *card* is a user-interface (UI) container for short or related pieces of information. Cards can have multiple properties and attachments. Cards can include buttons which can trigger [Card actions](~/task-modules-and-cards/cards/cards-actions.md).
+A *card* is a UI container for short or related pieces of information. Cards can have multiple properties and attachments. Cards can include buttons which can trigger [Card actions](~/task-modules-and-cards/cards/cards-actions.md).
 
-## Adaptive cards
+## Adaptive Cards
 
-[Adaptive cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) are a new cross product specification for cards in Microsoft products including Bots, Cortana, Outlook, and Windows. They are the recommended card type for new Teams development. For general information from the Adaptive cards team see [Adaptive Cards Overview](/adaptive-cards). You can use adaptive cards anywhere you can use existing Hero cards, Office365 cards, and Thumbnail cards.
+[Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) are a new cross product specification for cards in Microsoft products including Bots, Cortana, Outlook, and Windows. They are the recommended card type for new Teams development. For general information from the Adaptive Cards team see [Adaptive Cards Overview](/adaptive-cards). You can use Adaptive Cards anywhere you can use existing Hero cards, Office365 cards, and Thumbnail cards.
 
 In addition to Adaptive Cards, Teams supports two other types of cards:
 

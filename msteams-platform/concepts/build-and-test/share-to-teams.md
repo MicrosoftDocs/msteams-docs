@@ -1,9 +1,9 @@
 ---
-title: Share to Teams embedded button
+title: Adding a Share to Teams button to your website
 description: How to add the Share to Teams embedded button on your website
 keywords: Share Teams Share-to-Teams
 ---
-# Creating a Share to Teams embedded button
+# Adding a Share to Teams button to your website
 
 >[!NOTE]
 > * Only the desktop versions of Edge and Chrome are supported.

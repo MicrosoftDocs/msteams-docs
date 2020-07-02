@@ -21,7 +21,7 @@
       href: tutorials/get-started-yeoman.md
     - name: More tutorials and code samples
       href: tutorials/code-samples.md   
-- name: Capabilities
+- name: Understanding app capabilities
   items:
   - name: Tabs
     href: tabs/what-are-tabs.md
@@ -41,18 +41,24 @@
     href: samples/integrating-web-apps.md
   - name: Importing custom Microsoft apps
     href: samples/importing-custom-microsoft-apps.md
+  - name: Adding a Share to Teams button to your site
+    href: concepts/build-and-test/share-to-teams.md
 - name: Planning your app
   items:
   - name: Get started
     href: planning-your-app/planning-overview.md
-  - name: Understand your use cases
+  - name: Know your use cases
     href: concepts/design/understand-use-cases.md
+  - name: Understand Teams extension points
+    href: concepts/extensibility-points.md
   - name: Map use cases to features
     href: concepts/design/map-use-cases.md
 - name: Designing your app
   items:
   - name: Get started
     href: designing-your-app/designing-overview.md
+  - name: Personal apps
+    href: concepts/design/personal-apps.md
   - name: Tabs
     href: designing-your-app/designing-tabs.md
   - name: Messaging extensions
@@ -61,22 +67,50 @@
     href: designing-your-app/designing-connectors.md
   - name: Bots
     href: designing-your-app/designing-bots.md
-  - name: Cards
-    href: designing-your-app/designing-cards.md
-  - name: Task modules
-    href: designing-your-app/designing-task-modules.md
+  - name: Interfaces
+    items:
+    - name: Cards
+      href: designing-your-app/designing-cards.md
+      items:
+      - name: Designing effective cards
+        href: task-modules-and-cards/cards/design-effective-cards.md
+    - name: Task modules
+      href: designing-your-app/designing-task-modules.md
+  - name: UI components 
+    items:
+    - name: Colors
+      href: concepts/design/components/color.md
+    - name: Buttons, links and controls
+      href: concepts/design/components/buttons.md
+    - name: Typography
+      href: concepts/design/components/typography.md
+    - name: Fields and flyouts
+      href: concepts/design/components/fields.md
+    - name: Dialogs
+      href: concepts/design/components/dialogs.md
   - name: Other considerations
     href: designing-your-app/designing-other-considerations.md
   - name: Resources
     href: designing-your-app/designing-resources.md
 - name: Building your app
   items:
+  - name: Building apps for Teams
+    href: concepts/building-an-app.md
+  - name: Adding authentication
+    items:
+    - name: Overview
+      href: concepts/authentication/authentication.md
+    - name: Configuring identity providers
+      href: concepts/authentication/configure-identity-provider.md
   - name: Prepare your Office 365 tenant
     href: concepts/build-and-test/prepare-your-o365-tenant.md
+  - name: Creating your app package
+    href: concepts/build-and-test/apps-package.md
+    items:
+    - name: Create your app with App Studio
+      href: concepts/build-and-test/app-studio-overview.md
   - name: Tabs — embedded web experiences
     items:
-    - name: What are custom tabs?
-      href: tabs/what-are-tabs.md
     - name: Quickstarts
       items:
         - name: 'Node.js and React'
@@ -138,8 +172,6 @@
           href: tabs/how-to/native-device-permissions.md
   - name: Messaging extensions — task-oriented interactions
     items:
-    - name: 'What are Messaging Extensions?'
-      href: messaging-extensions/what-are-messaging-extensions.md
     - name: Design
       items:
       -  name: 'Messaging extensions design guidelines'
@@ -185,8 +217,6 @@
           href: messaging-extensions/how-to/add-configuration-page.md
   - name: Bots — conversation-based interactions
     items:
-    - name: What are bots in Microsoft Teams?
-      href: bots/what-are-bots.md
     - name: How bots work
       href: bots/bot-basics.md
     - name: Quickstarts
@@ -258,9 +288,7 @@
         href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
   - name: Connectors — programmed messaging and notifications
     items:
-    - name: 'What are Webhooks and connectors?'
-      href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
-    - name: 'How-to guides'
+    - name: How-to guides
       expanded: true
       items:
       - name: 'Create an incoming webhook'
@@ -271,16 +299,12 @@
         href: webhooks-and-connectors/how-to/connectors-creating.md
       - name: Sending messages to connectors and webhooks
         href: webhooks-and-connectors/how-to/connectors-using.md     
-  - name: Task modules and cards — rich messaging and notifications
+  - name: Interfaces
     items:
-    - name: What are task modules?
-      href: task-modules-and-cards/what-are-task-modules.md
-    - name: What are cards?
-      href: task-modules-and-cards/what-are-cards.md
     - name: Cards
       items:
-        - name: Designing effective cards
-          href: task-modules-and-cards/cards/design-effective-cards.md
+        - name: What are cards?
+          href: task-modules-and-cards/what-are-cards.md
         - name: Formatting card text
           href: task-modules-and-cards/cards/cards-format.md
         - name: Add and respond to card actions
@@ -289,10 +313,22 @@
           href: task-modules-and-cards/cards/cards-reference.md
     - name: Task modules
       items:
+        - name: What are task modules?
+          href: task-modules-and-cards/what-are-task-modules.md
         - name: From a bot
           href: task-modules-and-cards/task-modules/task-modules-bots.md
         - name: From a tab
           href: task-modules-and-cards/task-modules/task-modules-tabs.md
+  - name: Creating deep links
+    href: concepts/build-and-test/deep-links.md
+  - name: Localizing your app
+    href: concepts/build-and-test/apps-localization.md
+  - name: Testing your app
+    items:
+    - name: Debugging your app
+      href: concepts/build-and-test/debug.md
+    - name: Using sample data
+      href: concepts/build-and-test/test-data.md
 - name: Deploying your app
   items:
   - name: Choose your distribution methods
@@ -394,49 +430,3 @@
       href: resources/teams-contributor-reference.md
 - name: Support and feedback
   href: feedback.md
-- name: Concepts
-  items:
-    - name: Building apps for Microsoft Teams
-      href: concepts/building-an-app.md
-    - name: 'Extensibility points in the Teams client'
-      href: concepts/extensibility-points.md
-    - name: 'Design your app'
-      items:
-        - name: Personal apps
-          href: concepts/design/personal-apps.md
-        - name: UI Components 
-          items:
-          - name: 'Colors'
-            href: concepts/design/components/color.md
-          - name: 'Buttons, links and controls'
-            href: concepts/design/components/buttons.md
-          - name: 'Typography'
-            href: concepts/design/components/typography.md
-          - name: 'Fields and Flyouts'
-            href: concepts/design/components/fields.md
-          - name: Dialogs
-            href: concepts/design/components/dialogs.md
-    - name: Build and test your app
-      items:
-      - name: Prepare your Office 365 tenant
-        href: concepts/build-and-test/prepare-your-o365-tenant.md      
-      - name: Use App Studio to create your app
-        href: concepts/build-and-test/app-studio-overview.md
-      - name: Create your app package
-        href: concepts/build-and-test/apps-package.md
-      - name: Test and debug your app
-        href: concepts/build-and-test/debug.md
-      - name: Add test data to your environment
-        href: concepts/build-and-test/test-data.md
-      - name: Use deep links for navigation
-        href: concepts/build-and-test/deep-links.md
-      - name: Localizing your app
-        href: concepts/build-and-test/apps-localization.md
-      - name: Create a Share-to-Teams button for your website
-        href: concepts/build-and-test/share-to-teams.md
-    - name: Adding authentication
-      items:
-        - name: Authentication overview
-          href: concepts/authentication/authentication.md
-        - name: Configure identity providers
-          href: concepts/authentication/configure-identity-provider.md

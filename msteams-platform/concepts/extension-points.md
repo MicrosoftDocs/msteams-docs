@@ -1,17 +1,19 @@
 ---
-title: Extensible points in the Teams client
+title: Understand Teams extension points
 author: clearab
-description: Understand the extensibility points available to your app in the Microsoft Teams client.
+description: Understand the extension points available to your app in the Microsoft Teams client.
 ms.topic: conceptual
 ms.author: anclear
 ---
-# Extensible points in the Teams client
+# Understand Teams extension points
 
-An app built on the Microsoft Teams Platform  extends the Microsoft Teams client (web, mobile, and desktop) with web services you host. The Teams Platform provides a rich and flexible set of extensibility points, UI constructs, and APIs for you to take advantage of while building your app. Your app can be as simple as embedding your existing website within a tab for your team, or a fully featured, multi-faceted app engaging your users across the entire breadth of the Teams client. You may choose to integrate an existing app, or create a new experience built entirely for Teams.
+An app built on the Microsoft Teams Platform extends the Teams client (web, mobile, and desktop) with web services you host. The Teams Platform provides you a rich and flexible set of extension points (also known as capabilities), UI elements, and APIs to take advantage of while building your app.
 
-There are multiple places where the Microsoft Teams client can be extended to allow users to interact with your app. Depending on your scenario you may choose to focus on a single extension point (like a personal conversational bot), or combine multiple extension points.
+Your app can be as simple as embedding your existing website within a tab for your team, or a fully featured, multi-faceted app engaging your users across the entire breadth of the Teams client. You may choose to integrate an existing app, or create a new experience built entirely for Teams.
 
-## Teams, channels and group chats
+There are multiple places where you can extend the Microsoft Teams client to allow users to interact with your app. Depending on your scenario you may choose to focus on a single extension point (like a personal conversational bot), or combine multiple extension points.
+
+## Teams, channels, and group chats
 
 Teams, channels and group chats allow multiple people to collaborate. Apps in this context make themselves available to all members of the group or conversation, typically focusing on enabling additional collaborative workflows or unlocking new social interactions. Your app will have access to APIs allowing it to get information about the members in the conversation, the channels in a team, and metadata about the team or conversation.
 
@@ -53,7 +55,7 @@ There are three ways your app can help users create better messages:
 
 In addition to extensibility points, the Microsoft Teams Platform provides flexible UI elements for apps to take advantage of. These elements allow you to create rich experiences that feel native to the Teams client.
 
-### Cards & card actions
+### Cards and card actions
 
 [Cards](~/task-modules-and-cards/what-are-cards.md) are user-interface containers defined by schematized JSON, that can contain multiple properties and attachments. They can contain formatted text, media, controls (like drop-down boxes and radio buttons), and buttons that trigger card actions. Card actions can send payloads to your app's API, open a link, initiate authentication flows, or send messages to conversations. The Microsoft Teams Platform supports multiple types of cards including Adaptive Cards, Hero Cards, Thumbnail Cards and more. They can be combined into Card Collections and displayed in a list or carousel.
 
