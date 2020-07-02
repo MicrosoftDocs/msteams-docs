@@ -159,7 +159,7 @@ Did you know you can also create a Teams app without writing code? Try [importin
 
 Already familiar with developing Teams apps? See the following resources and tools.
 
-* [Fluent UI (link isn't final)](https://fluentsite.z22.web.core.windows.net/)
 * [Adding a Share to Teams button to your website](concepts/build-and-test/share-to-teams.md)
+* [Fluent UI (link isn't final)](https://fluentsite.z22.web.core.windows.net/)
 * [TBD link](https://www.microsoft.com)
 * [TBD link](https://www.microsoft.com)
