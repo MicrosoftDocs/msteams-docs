@@ -21,7 +21,7 @@
         "template_folder": "_themes"
     }],
     "JoinTOCPlugin": [{
-        "ConceptualTOC": "/msteams-platform/TOC.yml",
+        "ConceptualTOC": "msteams-platform/TOC.yml",
         "ReferenceTOCUrl": "/javascript/api/msteams-client-docs-ref-typescript/toc.json?view=msteams-client-js-latest"
     }],
     "notification_subscribers": [],
