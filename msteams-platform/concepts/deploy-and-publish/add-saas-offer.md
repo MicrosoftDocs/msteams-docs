@@ -8,7 +8,7 @@ ms.topic: overview
 ---
 # Create a SaaS offer for your Teams app
 
-Adding a Software as a Service (SaaS) monetization offer to your app solution enables you to easily deliver your cloud-based app to users and enhance the user experience by providing automated upgrades and increased access across platforms. Microsoft Teams apps are free to install in the Teams environment, but some may require users to purchase a SaaS subscription to experience the app's full functionality and scope. SaaS subscriptions can be purchased from a cloud service provider or you can create a SaaS subscription for your Teams app directly through Partner Center or the Commercial Marketplace.
+Adding a Software as a Service (SaaS) offer to your app solution enables you to easily deliver your cloud-based app and enhance the user experience by providing automated upgrades and increased access across platforms. Microsoft Teams apps are free to install in the Teams environment, but some may require users to purchase a SaaS subscription to experience the app's full functionality and scope. SaaS subscriptions can be purchased from a cloud service provider or you can create a monetized SaaS subscription for your Teams app directly through Partner Center or the Commercial Marketplace.
 
 ## Getting started with SaaS offers
 
