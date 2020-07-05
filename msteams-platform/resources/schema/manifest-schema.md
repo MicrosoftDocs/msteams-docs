@@ -259,19 +259,19 @@ The schema defines the following properties:
 
 ## $schema
 
-*Optional, but recommended* — String
+*Optional, but recommended* — string
 
 The https:// URL referencing the JSON Schema for the manifest.
 
 ## manifestVersion
 
-**Required** — String
+**Required** — string
 
 The version of the manifest schema this manifest is using. It should be "1.5".
 
 ## version
 
-**Required** — String
+**Required** — string
 
 The version of the specific app. If you update something in your manifest, the version must be incremented as well. This way, when the new manifest is installed, it will overwrite the existing one and the user will get the new functionality. If this app was submitted to the store, the new manifest will have to be re-submitted and re-validated. Then, users of this app will get the new updated manifest automatically in a few hours, after it is approved.
 
@@ -325,11 +325,11 @@ Ensure that your description accurately describes your experience and provides i
 
 ## packageName
 
-**Optional** — String
+**Optional** — string
 
 A unique identifier for this app in reverse domain notation; for example, com.example.myapp. Maximum length: 64 characters.
 
-## localizationInfo 
+## localizationInfo
 
 **Optional** — object
 
@@ -356,12 +356,12 @@ Icons used within the Teams app. The icon files must be included as part of the 
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
-|`outline`|2048 characters|✔|A relative file path to a transparent 32x32 PNG outline icon.|
-|`color`|2048 characters|✔|A relative file path to a full color 192x192 PNG icon.|
+|`outline`|32 x 32 pixels|✔|A relative file path to a transparent 32x32 PNG outline icon.|
+|`color`|192 x 192 pixels|✔|A relative file path to a full color 192x192 PNG icon.|
 
 ## accentColor
 
-**Optional** — String
+**Optional** — HTML Hex color code
 
 A color to use in conjunction with and as a background for your outline icons.
 
@@ -371,33 +371,31 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 **Optional** — array
 
-Used when your app experience has a team channel tab experience that requires extra configuration before it is added. Configurable tabs are supported only in the teams scope, and currently only one tab per app is supported.
-
-The object is an array with all elements of the type `object`. This block is required only for solutions that provide a configurable channel tab solution.
+Used when your app experience has a team channel tab experience that requires extra configuration before it is added. Configurable tabs are supported only in the teams scope (not personal), and currently only **one** tab per app is supported.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`configurationUrl`|String|2048 characters|✔|The https:// URL to use when configuring the tab.|
-|`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: **true**.|
-|`scopes`|Array of enum|1|✔|Currently, configurable tabs support only the `team` and `groupchat` scopes. |
-|`sharePointPreviewImage`|String|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
-|`supportedSharePointHosts`|Array of enum|1||Defines how your tab will be made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart` |
+|`configurationUrl`|string|2048 characters|✔|The https:// URL to use when configuring the tab.|
+|`scopes`|array of enum|1|✔|Currently, configurable tabs support only the `team` and `groupchat` scopes. |
+|`canUpdateConfiguration`|boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: **true**.|
+|`sharePointPreviewImage`|string|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
+|`supportedSharePointHosts`|array of enum|1||Defines how your tab will be made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart` |
 
 ## staticTabs
 
-**Optional** —array
+**Optional** — array
 
 Defines a set of tabs that can be "pinned" by default, without the user adding them manually. Static tabs declared in `personal` scope are always pinned to the app's personal experience. Static tabs declared in the `team` scope are currently not supported.
 
-The object is an array (maximum of 16 elements) with all elements of the type `object`. This block is required only for solutions that provide a static tab solution.
+This item is an array (maximum of 16 elements) with all elements of the type `object`. This block is required only for solutions that provide a static tab solution.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`entityId`|String|64 characters|✔|A unique identifier for the entity that the tab displays.|
-|`name`|String|128 characters|✔|The display name of the tab in the channel interface.|
-|`contentUrl`|String|2048 characters|✔|The https:// URL that points to the entity UI to be displayed in the Teams canvas.|
-|`websiteUrl`|String|2048 characters||The https:// URL to point at if a user opts to view in a browser.|
-|`scopes`|Array of enum|1|✔|Currently, static tabs support only the `personal` scope, which means it can be provisioned only as part of the personal experience.|
+|`entityId`|string|64 characters|✔|A unique identifier for the entity that the tab displays.|
+|`name`|string|128 characters|✔|The display name of the tab in the channel interface.|
+|`contentUrl`|string|2048 characters|✔|The https:// URL that points to the entity UI to be displayed in the Teams canvas.|
+|`websiteUrl`|string|2048 characters||The https:// URL to point at if a user opts to view in a browser.|
+|`scopes`|array of enum|1|✔|Currently, static tabs support only the `personal` scope, which means it can be provisioned only as part of the personal experience.|
 
 > [!NOTE]
 > If your tabs require context-dependent information to display relevant content or for initiating an authentication flow, *see* [Get context for your Microsoft Teams tab](../../tabs/how-to/access-teams-context.md).
@@ -408,15 +406,15 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 
 Defines a bot solution, along with optional information such as default command properties.
 
-The object is an array (maximum of only 1 element&mdash;currently only one bot is allowed per app) with all elements of the type `object`. This block is required only for solutions that provide a bot experience.
+The item is an array (maximum of only 1 element&mdash;currently only one bot is allowed per app) with all elements of the type `object`. This block is required only for solutions that provide a bot experience.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`botId`|String|64 characters|✔|The unique Microsoft app ID for the bot as registered with the Bot Framework. This may well be the same as the overall [app ID](#id).|
-|`needsChannelSelector`|Boolean|||Describes whether or not the bot utilizes a user hint to add the bot to a specific channel. Default: **`false`**|
-|`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. Default: `**false**`|
-|`supportsFiles`|Boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. Default: **`false`**|
-|`scopes`|Array of enum|3|✔|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupchat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
+|`botId`|string|64 characters|✔|The unique Microsoft app ID for the bot as registered with the Bot Framework. This may well be the same as the overall [app ID](#id).|
+|`scopes`|array of enum|3|✔|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupchat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
+|`needsChannelSelector`|boolean|||Describes whether or not the bot utilizes a user hint to add the bot to a specific channel. Default: **`false`**|
+|`isNotificationOnly`|boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. Default: `**false**`|
+|`supportsFiles`|boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. Default: **`false`**|
 
 ### bots.commandLists
 
@@ -426,6 +424,13 @@ An optional list of commands that your bot can recommend to users. The object is
 |---|---|---|---|---|
 |`items.scopes`|array of enum|3|✔|Specifies the scope for which the command list is valid. Options are `team`, `personal`, and `groupchat`.|
 |`items.commands`|array of objects|10|✔|An array of commands the bot supports:<br>`title`: the bot command name (string, 32)<br>`description`: a simple description or example of the command syntax and its argument (string, 128)|
+
+### bots.commandLists.commands
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|title|string|12|✔|The bot command name|
+|description|string|128 characters|✔|A simple text description or an example of the command syntax and its arguments.|
 
 ## connectors
 
@@ -437,9 +442,9 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`configurationUrl`|String|2048 characters|✔|The https:// URL to use when configuring the connector.|
-|`connectorId`|String|64 characters|✔|A unique identifier for the Connector that matches its ID in the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).|
-|`scopes`|Array of enum|1|✔|Specifies whether the Connector offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). Currently, only the `team` scope is supported.|
+|`configurationUrl`|string|2048 characters|✔|The https:// URL to use when configuring the connector.|
+|`scopes`|array of enum|1|✔|Specifies whether the Connector offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). Currently, only the `team` scope is supported.|
+|`connectorId`|string|64 characters|✔|A unique identifier for the Connector that matches its ID in the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).|
 
 ## composeExtensions
 
@@ -450,16 +455,16 @@ Defines a messaging extension for the app.
 > [!NOTE]
 > The name of the feature was changed from "compose extension" to "messaging extension" in November, 2017, but the manifest name remains the same so that existing extensions continue to function.
 
-The object is an array (maximum of 1 element) with all elements of type `object`. This block is required only for solutions that provide a messaging extension.
+The item is an array (maximum of 1 element) with all elements of type `object`. This block is required only for solutions that provide a messaging extension.
 
 |Name| Type | Maximum Size | Required | Description|
 |---|---|---|---|---|
-|`botId`|String|64|✔|The unique Microsoft app ID for the bot that backs the messaging extension, as registered with the Bot Framework. This may well be the same as the overall App ID.|
-|`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a messaging extension can be updated by the user. Default: **false**.|
-|`commands`|Array of object|10|✔|Array of commands the messaging extension supports|
-|`messageHandlers`|Array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`|
-|`messageHandlers.type`|String|||The type of message handler. Must be `"link"`.|
-|`messageHandlers.value.domains`|Array of Strings|||Array of domains that the link message handler can register for.|
+|`botId`|string|64|✔|The unique Microsoft app ID for the bot that backs the messaging extension, as registered with the Bot Framework. This may well be the same as the overall App ID.|
+|`commands`|array of objects|10|✔|array of commands the messaging extension supports|
+|`canUpdateConfiguration`|boolean|||A value indicating whether the configuration of a messaging extension can be updated by the user. Default: **false**.|
+|`messageHandlers`|array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`|
+|`messageHandlers.type`|string|||The type of message handler. Must be `"link"`.|
+|`messageHandlers.value.domains`|array of Strings|||array of domains that the link message handler can register for.|
 
 ### composeExtensions.commands
 
@@ -469,26 +474,27 @@ Each command item is an object with the following structure:
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|String|64 characters|✔|The ID for the command|
-|`type`|String|64 characters||Type of the command. One of `query` or `action`. Default: **query**.`|
-|`title`|String|32 characters|✔|The user-friendly command name|
-|`description`|String|128 characters||The description that appears to users to indicate the purpose of this command|
-|`initialRun`|Boolean|||A Boolean value that indicates whether the command should be run initially with no parameters. Default: **false**|
-|`context`|Array of Strings|3||Defines where the message extension can be invoked from. Any combination of`compose`,`commandBox`,`message` . Default is `["compose", "commandBox"]`|
-|`fetchTask`|Boolean|||A boolean value that indicates if it should fetch the task module dynamically|
-|`taskInfo`|Object|||Specify the task module to preload when using a messaging extension command|
-|`taskInfo.title`|String|64||Initial dialog title|
-|`taskInfo.width`|String|||Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'|
-|`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'|
-|`taskInfo.url`|String|||Initial webview URL|
-|`parameters`|Array of object|5|✔|The list of parameters the command takes. Minimum: 1; maximum: 5|
-|`parameter.name`|String|64 characters|✔|The name of the parameter as it appears in the client. This is included in the user request.|
-|`parameter.title`|String|32 characters|✔|User-friendly title for the parameter.|
-|`parameter.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
-|`parameter.inputType`|String|128 characters||Defines the type of control displayed on a task module for`fetchTask: true` . One of `text, textarea, number, date, time, toggle, choiceset`|
-|`parameter.choices`|Array of Objects|10||The choice options for the`choiceset`. Use only when`parameter.inputType` is `choiceset`|
-|`parameter.choices.title`|String|128||Title of the choice|
-|`parameter.choices.value`|String|512||Value of the choice|
+|`id`|string|64 characters|✔|The ID for the command|
+|`title`|string|32 characters|✔|The user-friendly command name|
+|`type`|string|64 characters||Type of the command. One of `query` or `action`. Default: **query**.`|
+|`description`|string|128 characters||The description that appears to users to indicate the purpose of this command|
+|`initialRun`|boolean|||A boolean value that indicates whether the command should be run initially with no parameters. Default: **false**|
+|`context`|array of Strings|3||Defines where the message extension can be invoked from. Any combination of`compose`,`commandBox`,`message` . Default is `["compose", "commandBox"]`|
+|`fetchTask`|boolean|||A boolean value that indicates if it should fetch the task module dynamically|
+|`taskInfo`|object|||Specify the task module to pre-load when using a messaging extension command|
+|`taskInfo.title`|string|64||Initial dialog title|
+|`taskInfo.width`|string|||Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'|
+|`taskInfo.height`|string|||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'|
+|`taskInfo.url`|string|||Initial webview URL|
+|`parameters`|array of object|5|✔|The list of parameters the command takes. Minimum: 1; maximum: 5|
+|`parameters.name`|string|64 characters|✔|The name of the parameter as it appears in the client. This is included in the user request.|
+|`parameters.title`|string|32 characters|✔|User-friendly title for the parameter.|
+|`parameters.description`|string|128 characters||User-friendly string that describes this parameter’s purpose.|
+|`parameters.value`|string|512 characters||Initial value for the parameter.|
+|`parameters.inputType`|string|128 characters||Defines the type of control displayed on a task module for`fetchTask: true` . One of `text, textarea, number, date, time, toggle, choiceset`|
+|`parameters.choices`|array of objects|10||The choice options for the`choiceset`. Use only when`parameter.inputType` is `choiceset`|
+|`parameters.choices.title`|string|128|✔|Title of the choice|
+|`parameters.choices.value`|string|512|✔|Value of the choice|
 
 ## permissions
 
@@ -530,45 +536,45 @@ The object is an array with all elements of the type `string`.
 
 ## webApplicationInfo
 
-**Optional**
+**Optional** — object
 
 Specify your AAD App ID and Graph information to help users seamlessly sign into your AAD app.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|String|36 characters|✔|AAD application id of the app. This id must be a GUID.|
-|`resource`|String|2048 characters||Resource url of app for acquiring auth token for SSO.|
-|`applicationPermissions`|Array of Strings|128 characters||Specify granular [resource specific consent](../../graph-api/rsc/resource-specific-consent.md#resource-specific-) permissions. |
+|`id`|string|36 characters|✔|AAD application id of the app. This id must be a GUID.|
+|`resource`|string|2048 characters||Resource url of app for acquiring auth token for SSO.|
+|`applicationPermissions`|array of strings|128 characters||Specify granular [resource specific consent](../../graph-api/rsc/resource-specific-consent.md#resource-specific-) permissions. |
 
 ## showLoadingIndicator
 
-**Optional** — Boolean
+**Optional** — boolean
 
 Indicate where or not to show the loading indicator when an app/tab is loading. Default: **false**.
 
 ## isFullScreen
 
- **Optional** — Boolean
+ **Optional** — boolean
 
-Indicate where a personal app is rendered with or withour a tab-header bar. Default: **false**.
+Indicate where a personal app is rendered with or without a tab-header bar. Default: **false**.
 
 ## activities
 
-**Optional**
+**Optional** — object
 
-Define the properties your app will use to post to the user activity feed.
+Define the properties your app will use to post to a user activity feed.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`activityTypes`|Array of Objects|128 items| | Specify the types of activities that your app can post to a users activity feed.|
+|`activityTypes`|array of Objects|128 items| | Specify the types of activities that your app can post to a users activity feed.|
 
 ### activities.activityTypes
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`type`|String|32 characters|✔|*see below*|
-|`description`|String|128 characters|✔|*see below*|
-|`templateText`|String|128 characters|✔|Ex: "{actor} created task {taskId} for you"|
+|`type`|string|32 characters|✔|The notification type. *See below*.|
+|`description`|string|128 characters|✔|A brief description of the notification. *See below*.|
+|`templateText`|string|128 characters|✔|Ex: "{actor} created task {taskId} for you"|
 
 ```json
 {
@@ -613,5 +619,7 @@ Define the properties your app will use to post to the user activity feed.
    }
 }
 ```
+
+***
 >
 >
