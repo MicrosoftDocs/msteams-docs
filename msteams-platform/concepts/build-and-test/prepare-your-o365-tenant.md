@@ -1,9 +1,9 @@
 ---
-title: Prepare your Office 365 tenant
-description: How to get started with Teams in Office 365
-keywords: Configure Office 365 tenant Teams uploading
+title: Prepare your Teams development environment
+description: How to set up your environment to developi Teams apps
+keywords: Configure Office 365 tenant Teams uploading environment development
 ---
-# Prepare your Office 365 tenant
+# Prepare your development environment
 
 If you are an Office 365 subscriber, you can develop apps for Microsoft Teams with one of the following [plans](https://products.office.com/business/compare-more-office-365-for-business-plans):
 

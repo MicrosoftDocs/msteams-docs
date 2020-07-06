@@ -3,11 +3,11 @@ title: Microsoft Teams app approval process guidance
 description: Describes the approval process for getting your app published to the Microsoft Teams app store
 keywords: teams publish store office publishing AppSource
 ---
-# Submit your app to AppSource
+# Understanding the AppSource submission process
 
 ## Teams app submission
 
-Publishing  your app to [AppSource](https://appsource.microsoft.com) makes it available in the Teams app catalog and on the web. At a high level, the process for submitting your app to AppSource is:
+Publishing  your app to [Microsoft AppSource](https://appsource.microsoft.com) makes it available in the Teams app catalog and on the web. At a high level, the process for submitting your app to AppSource is:
 
 1. Develop your app following our [design guidelines](~/concepts/design/understand-use-cases.md). Tabs should follow our [tab design guidelines](~/tabs/design/tabs.md). Bots should follow the [bot design guidelines](~/bots/design/bots.md).
 1. Ensure your app meets the app [validation policies](/legal/marketplace/certification-policies) for Microsoft Teams.

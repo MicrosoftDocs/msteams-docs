@@ -80,7 +80,7 @@
     items:
     - name: Colors
       href: concepts/design/components/color.md
-    - name: Buttons, links and controls
+    - name: Buttons, links, and controls
       href: concepts/design/components/buttons.md
     - name: Typography
       href: concepts/design/components/typography.md
@@ -102,13 +102,12 @@
       href: concepts/authentication/authentication.md
     - name: Configuring identity providers
       href: concepts/authentication/configure-identity-provider.md
-  - name: Prepare your Office 365 tenant
+  - name: Prepare your development environment
     href: concepts/build-and-test/prepare-your-o365-tenant.md
   - name: Creating your app package
     href: concepts/build-and-test/apps-package.md
-    items:
-    - name: Create your app with App Studio
-      href: concepts/build-and-test/app-studio-overview.md
+  - name: Creating your app with App Studio
+    href: concepts/build-and-test/app-studio-overview.md
   - name: Tabs — embedded web experiences
     items:
     - name: Quickstarts
@@ -337,11 +336,11 @@
     href: concepts/deploy-and-publish/apps-upload.md
   - name: Publish your app to your organization
     href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json
-  - name: Publish your app on AppSource
+  - name: Publishing your app on AppSource
     items:
-    - name: Understanding AppSource submission 
+    - name: Understanding the submission process
       href: concepts/deploy-and-publish/appsource/publish.md
-    - name: Prepare your app
+    - name: Submitting your app
       items: 
       - name: Pre-submission checklist
         href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
@@ -351,12 +350,10 @@
         href: concepts/deploy-and-publish/appsource/prepare/app-manifest-checklist.md
       - name: Frequently failed cases
         href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
-      - name: After publishing your app
-        items:
-        - name: What to do after publishing your app
-          href: concepts/deploy-and-publish/appsource/post-publish/overview.md
-        - name: Application Certification program
-          href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
+    - name: Maintaining and supporting published apps
+      href: concepts/deploy-and-publish/appsource/post-publish/overview.md
+    - name: Getting your app Teams certified
+      href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
 - name: Reference and resources
   items:
     - name: Bots - v3 SDK
