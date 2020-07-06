@@ -555,6 +555,6 @@ You can also leverage existing skills from [Bot Framework Solutions repository](
 - **Messaging extensions**.:
   - Currently, a Virtual Assistant can support a maximum of ten commands for messaging extensions.
   - Configuration of message extensions is not scoped to individual commands but for the entire extension itself. This limits configuration for each individual skill through Virtual Assistant.
-  - Messaging extensions command IDs have a maximum length of [64 characters](../resources/schema/manifest-schema#composeextensions) and 37 characters will be used for embedding skill information. Thus, updated constraints for command ID are limited to 27 characters.
+  - Messaging extensions command IDs have a maximum length of [64 characters](../resources/schema/manifest-schema.md#composeextensions) and 37 characters will be used for embedding skill information. Thus, updated constraints for command ID are limited to 27 characters.
 >
 >
