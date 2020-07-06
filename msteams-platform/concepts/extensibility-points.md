@@ -1,11 +1,11 @@
 ---
-title: Understand Teams extension points
+title: Understanding Teams extension points
 author: clearab
 description: Understand the extension points available to your app in the Microsoft Teams client.
 ms.topic: conceptual
 ms.author: anclear
 ---
-# Understand Teams extension points
+# Understanding Teams extension points
 
 An app built on the Microsoft Teams Platform extends the Teams client (web, mobile, and desktop) with web services you host. The Teams Platform provides you a rich and flexible set of extension points (also known as capabilities), UI elements, and APIs to take advantage of while building your app.
 
