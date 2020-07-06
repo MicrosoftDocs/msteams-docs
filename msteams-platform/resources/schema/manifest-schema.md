@@ -235,8 +235,8 @@ The following schema sample shows all extensibility options.
       "Member.ReadWrite.Group",
       "Owner.ReadWrite.Group"
     ],
-    "showLoadingIndicator": false
   },
+  "showLoadingIndicator": false,
   "isFullScreen": false,
   "activities": {
     "activityTypes": [
