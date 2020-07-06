@@ -49,9 +49,9 @@
     href: planning-your-app/planning-overview.md
   - name: Know your use cases
     href: concepts/design/understand-use-cases.md
-  - name: Understand Teams extension points
+  - name: Understanding Teams extension points
     href: concepts/extensibility-points.md
-  - name: Map use cases to features
+  - name: Map use cases to app capabilities
     href: concepts/design/map-use-cases.md
 - name: Designing your app
   items:
