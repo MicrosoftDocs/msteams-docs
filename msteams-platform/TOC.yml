@@ -31,18 +31,18 @@
     href: webhooks-and-connectors/what-are-webhooks-and-connectors.md 
   - name: Bots
     href: bots/what-are-bots.md 
-- name: Templates and integrations
+- name: Integrations and templates
   items: 
-  - name: Production-ready app templates
-    href: samples/app-templates.md
-  - name: Production-ready shifts connectors
-    href: samples/shifts-wfm-connectors.md
   - name: Integrating web apps
     href: samples/integrating-web-apps.md
   - name: Importing custom Microsoft apps
     href: samples/importing-custom-microsoft-apps.md
   - name: Adding a Share to Teams button to your site
     href: concepts/build-and-test/share-to-teams.md
+  - name: Production-ready app templates
+    href: samples/app-templates.md
+  - name: Production-ready shifts connectors
+    href: samples/shifts-wfm-connectors.md
 - name: Planning your app
   items:
   - name: Get started
