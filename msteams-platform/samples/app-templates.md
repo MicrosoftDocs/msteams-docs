@@ -155,7 +155,7 @@ The Great Ideas app supports, promotes, and empowers constant innovation and cre
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-greatideas)
 
-::row:::
+:::row:::
   :::column span="2":::
     ![View submitted ideas](../assets/images/great-ideas-all-view.png)  
 :::column-end:::
