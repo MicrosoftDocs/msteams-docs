@@ -166,6 +166,23 @@ Group Activities is a Microsoft Teams app that makes it easy for team owners to 
 :::column-end:::
 :::row-end:::
 
+## Grow Your Skills &#9734;
+
+The Grow Your Skills app supports professional growth and development by enabling employees to contribute to supplemental projects for your organization while simultaneously learning and enhancing skills and competencies. Employees use the app, supported by the Microsoft Teams app interface,  to locate opportunities that meet their interests, enjoy meaningful collaboration with peers, and acquire new levels of expertise and capabilities.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-growyourskills)
+
+:::row:::
+  :::column span="2":::
+    ![Presentation of skills available view](../assets/images/grow-your-skills-all-projects.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Viewer's acquired skills view](../assets/images/grow-your-skills-acquired-skills-view.png)
+:::column-end:::
+:::row-end:::
+
 ## HR Support
 
 HR Support bot is a friendly Q&A bot that brings a support professional/expert from the HR team in the loop when it is unable to help. One can ask the bot a question and the bot responds with an answer if it is contained in the knowledge base. If not, the bot allows the user to submit a query which then gets posted in a pre-configured team of experts who are help to provide support by acting upon the notifications from within their team itself. Additionally, the bot suggests links to recommended HR policies/questions by searching for pre-configured tags in the question. These tiles can also be found in the associated tab as a quick reference. HR Support works well for light weight QnA and to provide quick support when launching new projects/initiatives in the organization.
