@@ -174,7 +174,7 @@ The Grow Your Skills app supports professional growth and development by enablin
 
 :::row:::
   :::column span="2":::
-    ![Presentation of skills available view](../assets/images/grow-your-skills-all-projects.png)  
+    ![Presentation of skills available view](../assets/images/grow-your-skills-all-projects-view.png)  
 :::column-end:::
 :::row-end:::
 :::row:::
