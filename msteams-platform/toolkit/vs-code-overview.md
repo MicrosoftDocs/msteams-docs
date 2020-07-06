@@ -104,6 +104,8 @@ If you wish to debug your tab based app on localhost using https, you will need 
 </details>
 
 ## Run your app in Teams
+- Prerequisites:
+  - [Enable Teams developer preview mode](https://aka.ms/teams-toolkit-enable-devpreview)
 
 1. Navigate to the activity bar on the left side of the Visual Studio Code window.
 1. Select the **Run** icon to display the **Run and Debug** view.
