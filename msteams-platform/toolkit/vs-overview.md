@@ -17,7 +17,7 @@ The Microsoft Teams Toolkit for Visual Studio is available for download from the
 - [Set up a new project](#set-up-a-new-teams-project)
 - [Configure your app](#configure-your-app)
 - [Package your app](#package-your-app)
-- [Run your app in Teams](#run-your-app-in-teams)
+- [Run your app in Teams](#install-and-run-your-app-locally)
 - [Validate your app](#validate-your-app)
 - [Publish your app](#publish-your-app-to-teams)
 
