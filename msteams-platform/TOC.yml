@@ -15,12 +15,16 @@
     href: tutorials/get-started-yeoman.md
   - name: Extend the Teams client with custom apps
     href: tutorials/code-samples.md   
-- name: App templates and integrations
+- name: Templates and integrations
   items: 
   - name: Production-ready app templates
     href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
     href: samples/shifts-wfm-connectors.md 
+  - name:  Microsoft Teams Toolkit extension
+    items:
+    - name: Teams Toolkit extension for Visual Studio Code
+      href: toolkit/visual-studio-code-overview.md
 - name: Concepts
   expanded: true
   items:
