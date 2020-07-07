@@ -15,7 +15,7 @@ Tabs let you embed web-based content in Teams. They are simple iframes that poin
 
 There are two types of tabs in Teams: channel/group and personal tabs. A channel/group tab delivers content to channels and group chats and are a great way to create collaborative spaces around dedicated web-based content. Personal tabs, along with personally-scoped bots, are part of personal apps and are for interactions with a single user. They can be pinned to the left navigation bar for easy access.
 
-## Tabs user scenarios
+## User scenarios
 
 **Scenario:** Bring an existing web-based resource inside Teams. \
 **Example:** You create a personal tab in your Teams app that presents an informational corporate website to users.

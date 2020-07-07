@@ -13,7 +13,7 @@ Finding the right mix of cards, text, and task modules is key to creating a usef
 
 ![FAQ Plus gif](~/assets/images/FAQPlusEndUser.gif)
 
-## Where bots work best
+## User scenarios
 
 Bots in Microsoft Teams can be part of a one-to-one conversation, a group chat, or a channel in a Team. Each scope will provide unique opportunities, and challenges, for your conversational bot.
 
