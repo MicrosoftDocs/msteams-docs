@@ -25,6 +25,10 @@
     href: samples/virtual-assistant.md
   - name: Integrate Power Virtual Agents chatbot with Teams
     href: bots/how-to/add-power-virtual-agents-bot-to-teams.md   
+  - name:  Microsoft Teams Toolkit extension
+    items:
+    - name: Teams Toolkit extension for Visual Studio Code
+      href: toolkit/visual-studio-code-overview.md
 - name: Concepts
   expanded: true
   items:

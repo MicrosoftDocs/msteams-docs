@@ -106,7 +106,7 @@ In personal conversations between a bot and a single person, tabs can contain us
 
 ### &#x2713; A place to finish a conversation
 
-You can link to a tab from a card. If your bot provides an answer that requires a few more steps, it can link to a tab to complete the task or flow. For instance, in response to, "How do I format my iPhone?", a good response might be a card which outlines the first few steps and has a button for *Show more* that then takes the user to the bot’s *Help* tab and deep links to the specific instructions.
+You can link to a tab from a card. If your bot provides an answer that requires a few more steps, it can link to a tab to complete the task or flow. For instance, in response to, "How do I format my iPhone?", a good response might be a card which outlines the first few steps and has a button for *Show more* that then takes the user to the bot's *Help* tab and deep links to the specific instructions.
 
 ### &#x2713; A place to host a settings page
 
@@ -129,7 +129,7 @@ Invoking a bot in a channel can be accomplished by `@mention`. Bot dialog should
 
 ### Sensitive data sent by a bot
 
-While the users in a team can be known to the service, the actual user roles cannot. This means that, for example, in an education scenario involving bullying, parent and student contact information wouldn't be shared in a team setting. Instead the bot’s message might be,“Two bullying incidents occurred today" along with a button to show details.
+While the users in a team can be known to the service, the actual user roles cannot. This means that, for example, in an education scenario involving bullying, parent and student contact information wouldn't be shared in a team setting. Instead the bot's message might be,"Two bullying incidents occurred today" along with a button to show details.
 
 Launching details in a web page, or a task module can prompt for user credentials or query against an index for user roles paired with AAD accounts. In both of these options the data is in a private view scope and there will be no data leakage. If the same data is sent in a one-to-one chat between a user and the bot, the data is only visible to the user in that context and is, therefore safe, to fully display in the bot message. Taking users from a channel to a one-to-one chat should be avoided however as that forced navigation is highly disruptive.
 

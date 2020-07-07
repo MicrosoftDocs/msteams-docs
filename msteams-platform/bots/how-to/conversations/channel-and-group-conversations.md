@@ -241,7 +241,7 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 ## Sending a message on installation
 
-When your bot is first added to the group or team, it may be useful to send a message introducing it. The message should provide a brief description of the bot’s features, and how to use them. You'll want to subscribe to the `conversationUpdate` event, with the `teamMemberAdded` eventType.  Since the event is sent when any new team member is added, you need to check to determine if the new member added is the bot. See [Sending a welcome message to a new team member](~/bots/how-to/conversations/send-proactive-messages.md) for more details.
+When your bot is first added to the group or team, it may be useful to send a message introducing it. The message should provide a brief description of the bot's features, and how to use them. You'll want to subscribe to the `conversationUpdate` event, with the `teamMemberAdded` eventType.  Since the event is sent when any new team member is added, you need to check to determine if the new member added is the bot. See [Sending a welcome message to a new team member](~/bots/how-to/conversations/send-proactive-messages.md) for more details.
 
 You might also want to send a personal message to each member of the team when the bot is added. To do this, you could get the team roster and send each user a direct message.
 
