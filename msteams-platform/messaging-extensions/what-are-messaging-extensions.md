@@ -7,13 +7,13 @@ ms.author: anclear
 ---
 # What are messaging extensions?
 
-Messaging extensions allow users to interact with your web service through buttons and forms in the Microsoft Teams client. They can search, or initiate actions, in an external system from the compose message area, the command box, or directly from a message. You can then send the results of that interaction back to the Microsoft Teams client, typically in the form of a richly formatted card.
+Messaging extensions allow users to interact with your web service through buttons and forms in the Microsoft Teams client. They can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. You can then send the results of that interaction back to the Microsoft Teams client, typically in the form of a richly formatted card.
 
 The screenshot below shows the locations where messaging extensions can be invoked from.
 
 ![messaging extension invoke locations](~/assets/images/messaging-extension-invoke-locations.png)
 
-## What kinds of tasks are they good for?
+## User scenarios
 
 **Scenario:** I need some external system to do something and I want the result of the action to be sent back to my conversation.\
 **Example:** Reserve a resource and let the channel know what day/time you reserved it for.
@@ -30,7 +30,7 @@ A messaging extension consists of a web service you host and your app manifest w
 
 In the app manifest for your Microsoft Teams app you'll define a single messaging extension with up to ten different commands. Each command defines a type (action or search), and the locations in the client it can be invoked from (compose message area, command bar, and/or message). Once invoked, your web service will receive an HTTPS message with a JSON payload including all the relevant information. You'll respond with a JSON payload, letting the Teams client know what interaction to enable next.
 
-## Types of messaging extension commands
+## Types of messaging extensions
 
 The type of messaging extension command defines the UI elements and interaction flows available to your web service. Some interactions, like authentication and configuration, are available for both types of commands.
 
@@ -52,9 +52,9 @@ They can be triggered from the compose message area or the command box. Unlike a
 
 ### Link unfurling
 
-You also have to option to invoke your service when a URL is pasted in the compose message area. This functionality, known as **link unfurling**, allows you to subscribe to receive an invoke when URLs containing a particular domain are pasted into the compose message area. Your web service can "unfurl" the URL into a detailed card, providing more information than the standard website preview card. You can even add buttons to allow your users to immediately take action without leaving the Microsoft Teams client.
+You also can invoke your service when a URL is pasted in the compose message area. This functionality, known as **link unfurling**, allows you to subscribe to receive an invoke when URLs containing a particular domain are pasted into the compose message area. Your web service can "unfurl" the URL into a detailed card, providing more information than the standard website preview card. You can even add buttons so users can take action without leaving Teams.
 
-## Get Started
+## Get started
 
 Ready to get started building? Try one of our quickstarts:
 
@@ -66,8 +66,6 @@ Ready to get started building? Try one of our quickstarts:
   * [Messaging extension with search-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)
 
 ## Learn more
-
-Build a messaging extension:
 
 * [Create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md)
 * [Define action messaging extension command](~/messaging-extensions/how-to/action-commands/define-action-command.md)

@@ -5,13 +5,13 @@ description: Decide how to distribute your app
 ms.topic: conceptual
 ms.author: anclear
 ---
-# Map your use cases to teams app capabilities
+# Map your use cases to Teams app capabilities
 
-If you haven't already, make sure you've [considered your use cases](~/concepts/design/map-use-cases.md) carefully. You should also have a good understanding of the [extensibility points and UI elements](~/concepts/extensibility-points.md) available for your app. Once you've figured out *what* your trying to solve, and *who* you're solving it for, it is time to start thinking about *how*.
+If you haven't already, [consider your app's use cases](~/concepts/design/map-use-cases.md) carefully. You should also have a good understanding of [how to extend Teams](~/concepts/extensibility-points.md) using supported capabilities and UI elements. Once you've figured out *what* your trying to solve, and *who* you're solving it for, it's time to start thinking about *how*.
 
 Below you'll find some common scenarios, and a selection of extensibility points and UI elements that work well with them. It isn't intended to be an exhaustive list, just to help you think through some of the possibilities available to you and the Teams platform.
 
-## Create, share and collaborate on items in an external system
+## Create, share, and collaborate on items in an external system
 
 App for Microsoft Teams are a great way to interact with your data, and there are a variety of integration points to choose from.
 
@@ -59,9 +59,9 @@ A collaboration platform is inherently a social platform. Let your creative side
 
 * All of them - Send jokes, give kudos, get some memes, toss out some emoji's or whatever else strikes your fancy.
 
-## Anything you can do in a Single Page App (SPA)
+## Anything you can do in a single-page app
 
-Tabs are embedded web pages. Pretty much anything you can do in a SPA, you can do in a tab in Teams. Just be sure to pay attention to scope - group and channel tabs are for shared experiences, personal tabs are for ... personal experiences. The team's list of stuff goes on the channel tab, the list of your stuff goes in the personal tab.
+Tabs are embedded web pages. Pretty much anything you can do in a single-page app, you can do in a tab in Teams. Just be sure to pay attention to scope—group and channel tabs are for shared experiences, personal tabs are for ... personal experiences. The team's list of stuff goes on the channel tab, the list of your stuff goes in the personal tab.
 
 ## Start small
 
