@@ -36,7 +36,7 @@ To dispatch requests properly, your Virtual Assistant needs to identify the corr
 
 We have resolved this by embedding skill information in the card action payload. Every skill should embed `skillId` in the  `value` field of card actions. This is the best way to ensure that each card action activity carries the relevant skill information and Virtual Assistant can utilize this information for dispatching.
 
-Below is a card action data sample. **By providing `skillId` in the constructor we ensure that skill information is always present in card actions.**
+Below is a card action data sample. By providing `skillId` in the constructor we ensure that skill information is always present in card actions.
 
 ```csharp
     public class CardActionData
@@ -60,7 +60,7 @@ Below is a card action data sample. **By providing `skillId` in the constructor 
     };
 ```
 
-**Next, we introduce `SkillCardActionData` class in the Virtual Assistant template to extract `skillId` from the card action payload.**
+Next, we introduce `SkillCardActionData` class in the Virtual Assistant template to extract `skillId` from the card action payload.
 
 ```csharp
     // Skill Card action data should contain skillId parameter
@@ -75,7 +75,7 @@ Below is a card action data sample. **By providing `skillId` in the constructor 
     }
 ```
 
-Below is a **code snippet to extract  `skillId` from card action data**. We implemented it as an  extension method in the [Activity](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md) class.
+Below is a code snippet to extract  `skillId` from card action data. We implemented it as an  extension method in the [Activity](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md) class.
 
 ```csharp
     public static class ActivityExtensions
@@ -169,7 +169,7 @@ Below is a code snippet for `OnTeamsTaskModuleFetchAsync` and `OnTeamsTaskModule
         try
         {
             string skillId = (turnContext.Activity as Activity).GetSkillId();
-            var skill = _skillsConfig.Skills.Where(s => s.Value.AppId == skillId).FirstOrDefault().Value;
+            var skill = _skillsConfig.Skills.Where(s => s.Value.AppId == skillId).First().Value;
 
             // Forward request to correct skill
             var invokeResponse = await _skillHttpClient.PostActivityAsync(this._appId, skill, _skillsConfig.SkillHostEndpoint, turnContext.Activity as Activity, cancellationToken);
@@ -191,7 +191,7 @@ Below is a code snippet for `OnTeamsTaskModuleFetchAsync` and `OnTeamsTaskModule
         try
         {
             string skillId = (turnContext.Activity as Activity).GetSkillId();
-            var skill = _skillsConfig.Skills.Where(s => s.Value.AppId == skillId).FirstOrDefault().Value;
+            var skill = _skillsConfig.Skills.Where(s => s.Value.AppId == skillId).First().Value;
 
             // Forward request to correct skill
             var invokeResponse = await _skillHttpClient.PostActivityAsync(this._appId, skill, _skillsConfig.SkillHostEndpoint, turnContext.Activity as Activity, cancellationToken).ConfigureAwait(false);
@@ -219,7 +219,7 @@ Skills should handle activities in multiple scopes (1:1 chat, group chat, and ch
 The following  processing functions have been added to Virtual Assistant core:
 
 - Virtual Assistant can be invoked without any text message from a group chat or channel.
-- Articulations are cleaned (i.e.,  remove @mentions) prior to it being sent to the dispatch module so that the dispatch output is unaffected.
+- Articulations are cleaned (i.e.,  remove the necessary @mention of the bot) before sending the message to the dispatch module.
 
 ```csharp
     if (innerDc.Context.Activity.Conversation?.IsGroup == true)
@@ -283,7 +283,7 @@ Once the commands are invoked by a user, the Virtual Assistant can identify an a
     private async Task<MessagingExtensionActionResponse> ForwardMessagingExtensionActionCommandActivityToSkill(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
     {
         var skillId = ExtractSkillIdFromMessagingExtensionActionCommand(turnContext, action);
-        var skill = _skillsConfig.Skills.Where(s => s.Value.AppId == skillId).FirstOrDefault().Value;
+        var skill = _skillsConfig.Skills.Where(s => s.Value.AppId == skillId).First().Value;
         var invokeResponse = await _skillHttpClient.PostActivityAsync(this._appId, skill, _skillsConfig.SkillHostEndpoint, turnContext.Activity as Activity, cancellationToken).ConfigureAwait(false);
 
         return invokeResponse.GetMessagingExtensionActionResponse();
@@ -311,7 +311,7 @@ Some messaging extension activities do not include the command ID. For example, 
     protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionSelectItemAsync(ITurnContext<IInvokeActivity> turnContext, JObject query, CancellationToken cancellationToken)
     {
         var data = JsonConvert.DeserializeObject<SkillCardActionData>(query.ToString());
-        var skill = _skillsConfig.Skills.Where(s => s.Value.AppId == data.SkillId).FirstOrDefault().Value;
+        var skill = _skillsConfig.Skills.Where(s => s.Value.AppId == data.SkillId).First().Value;
         var invokeResponse = await _skillHttpClient.PostActivityAsync(this._appId, skill, _skillsConfig.SkillHostEndpoint, turnContext.Activity as Activity, cancellationToken).ConfigureAwait(false);
 
         return invokeResponse.GetMessagingExtensionResponse();
@@ -494,7 +494,7 @@ Update botskills command as follows to modify `languages` parameter:
 botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<path to luisFolder>" --languages "en-us, your_language_culture" --cs
 ```
 
-Virtual Assistant uses `SetLocaleMiddleware` to identify current locale and invoke corresponding dispatch model. (Bot framework activity has locale field which is used by this middleware.) We recommend to use the same for your skill as well. Book-a-room bot does not use this middleware and instead gets locale from Bot framework activity's [clientInfo entity](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo). This will be deprecated soon.
+Virtual Assistant uses `SetLocaleMiddleware` to identify current locale and invoke corresponding dispatch model. (Bot framework activity has locale field which is used by this middleware.) We recommend to use the same for your skill as well. Book-a-room bot does not use this middleware and instead gets locale from Bot framework activity's [clientInfo entity](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).
 
 ### Claim validation
 
@@ -554,7 +554,7 @@ You can also leverage existing skills from [Bot Framework Solutions repository](
 - **Card refresh**. Card refreshes is not yet supported Virtual Assistant.
 - **Messaging extensions**.:
   - Currently, a Virtual Assistant can support a maximum of ten commands for messaging extensions.
-  - Configuration of message extensions is not scoped to individual commands but for the entire extension itself. This limits configuration for each individual skill through Virtual Assistant.
+  - Configuration of messaging extensions is not scoped to individual commands but for the entire extension itself. This limits configuration for each individual skill through Virtual Assistant.
   - Messaging extensions command IDs have a maximum length of [64 characters](../resources/schema/manifest-schema.md#composeextensions) and 37 characters will be used for embedding skill information. Thus, updated constraints for command ID are limited to 27 characters.
 >
 >
