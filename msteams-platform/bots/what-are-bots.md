@@ -99,8 +99,5 @@ Bots are best suited for short, quick interactions, not sifting through long lis
 
 ## Learn more
 
-> [!div class="nextstepaction"]
-> [The basics of bots in Teams](~/bots/bot-basics.md)
-
-> [!div class="nextstepaction"]
-> [Create a bot for Teams](~/bots/how-to/create-a-bot-for-teams.md)
+* [The basics of bots in Teams](~/bots/bot-basics.md)
+* [Create a bot for Teams](~/bots/how-to/create-a-bot-for-teams.md)

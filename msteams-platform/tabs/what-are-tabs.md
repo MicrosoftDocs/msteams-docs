@@ -6,7 +6,7 @@ ms.topic: overview
 ms.author: lajanuar
 ms.topic: overview
 ---
-# What are tabs in Microsoft Teams?
+# What are tabs?
 
 Tabs let you embed web-based content in Teams. They are simple iframes that point to domains declared in your app manifest and can be part of a team channel, group chat, or personal app. *See* [Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
 
