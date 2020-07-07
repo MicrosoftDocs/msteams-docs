@@ -38,15 +38,13 @@ You can have a maximum of one channel/group tab and up to 16 personal tabs per a
 
 ## Lesser-known tab features
 
-> [!div class="checklist"]
->
-> * If a tab is added to an app that also has a bot, the bot is also added to the team.
-> * Awareness of the current user's Azure Active Directory ID.
-> * Locale awareness for the user to indicate language (for example, `en-us`).
-> * SSO capability, if supported.
-> * Ability to use bots or app notifications to deep link to the tab or to a sub-entity within the service (for example, an individual work item).
-> * The ability to open a Task module from links within a tab.
-> * Reuse SharePoint web parts in the tab.
+* If a tab is added to an app that also has a bot, the bot is also added to the team.
+* Awareness of the current user's Azure Active Directory ID.
+* Locale awareness for the user to indicate language (for example, `en-us`).
+* SSO capability, if supported.
+* Ability to use bots or app notifications to deep link to the tab or to a sub-entity within the service (for example, an individual work item).
+* The ability to open a Task module from links within a tab.
+* Reuse SharePoint web parts in the tab.
 
 ## Tabs on mobile
 

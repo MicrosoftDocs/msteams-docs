@@ -99,7 +99,7 @@ The [Microsoft Graph API for Teams](graph-api/rsc/resource-specific-consent.md) 
 
       :::image type="content" source="assets/images/overview-placeholder.png" alt-text="<alt text>":::
       
-        <b>Off and running</b>
+        <h3>Off and running</h3>
 
         Get to know your way around the platform by creating a basic Teams app.
 
@@ -116,7 +116,7 @@ The [Microsoft Graph API for Teams](graph-api/rsc/resource-specific-consent.md) 
 
         :::image type="content" source="assets/images/overview-placeholder.png" alt-text="<alt text>":::
       
-        <b>Take it slow</b>
+        <h3>Take it slow</h3>
 
         Walk through how to plan, design, build, and deploy a Teams app from scratch.
 
@@ -133,7 +133,7 @@ The [Microsoft Graph API for Teams](graph-api/rsc/resource-specific-consent.md) 
 
       :::image type="content" source="assets/images/overview-placeholder.png" alt-text="<alt text>":::
       
-        <b>Go with what works</b>
+        <h3>Go with what works</h3>
 
         Bring your favorite web apps and services into Teams for a seamless user experience.
 

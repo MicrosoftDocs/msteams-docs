@@ -15,7 +15,7 @@ Finding the right mix of cards, text, and task modules is key to creating a usef
 
 ## User scenarios
 
-Bots in Microsoft Teams can be part of a one-to-one conversation, a group chat, or a channel in a Team. Each scope will provide unique opportunities, and challenges, for your conversational bot.
+Bots in Microsoft Teams can be part of a channel, group chat, or one-on-one chat. Each scope will provide unique opportunities, and challenges, for your conversational bot.
 
 ### In a channel
 
@@ -34,7 +34,7 @@ Group chats are non-threaded conversations between three or more people. They te
 
 Scenarios that work well in a channel will usually work just as well in a group chat.
 
-### In a one-to-one chat
+### In a one-on-one chat
 
 This is the traditional way for a conversational bot to interact with a user. They can enable incredibly diverse workloads. Q&A bots, bots that initiate workflows in other systems, bots that tell jokes, and bots that take notes are just a few examples. Just remember to consider whether a conversation-based interface is the best way to present your functionality.
 
@@ -46,17 +46,17 @@ The [Microsoft Bot Framework](https://dev.botframework.com/) is a rich SDK for b
 * Consume and set Teams-specific channel data on activities.
 * Process messaging extension requests.
 
+> [!IMPORTANT]
+> You can develop Teams apps in any web programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly, but you must perform all token handling yourself.
+
 Your Teams bot consists of three elements:
 
 * A publicly accessible web service that you host.
 * Your bot registration with the Bot Framework.
 * Your Teams app package with your app manifest. This is what your users will install and connects the Teams client to your web service, routed through the Bot Service.
 
-> [!IMPORTANT]
-> You can develop Teams apps in any web-programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly, but you must perform all token handling yourself.
-
 > [!TIP]
-> Teams App Studio* helps you create and configure your app manifest, and can register your web service as a bot on the Bot Framework. It also contains a React control library and an interactive card builder. *See* [Getting started with Teams App Studio](~/concepts/build-and-test/app-studio-overview.md).
+> Teams App Studio* helps you create and configure your app manifest and can register your web service as a bot on the Bot Framework. It also contains a React control library and an interactive card builder. *See* [Getting started with Teams App Studio](~/concepts/build-and-test/app-studio-overview.md).
 
 ## Building a Teams bot with Microsoft Power Virtual Agents
 
