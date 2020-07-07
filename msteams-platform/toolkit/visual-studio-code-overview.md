@@ -86,7 +86,7 @@ If you wish to debug your tab based app on localhost using https, you will need 
   * Open the Chrome Developer Tools window (`ctrl + shift + i` / `cmd + option + i`).
   * Click on the `Security` tab
   * Click on `View certificate` and you’ll have the option to download the certificate — either by dragging it to your desktop in OS X, or by clicking on the `Details` tab in Windows and clicking `Copy to File…`
-  * Name the file {something}.cer and save it to a folder that doesn't require admin consent to perform a write action
+  * Name the file <*anything*>.cer and save it to a folder that doesn't require admin consent to perform a write action.
   
 * Install the certificate on **Windows**
   * Choose the `DER encoded binary X.509 (.CER)` option (the first one) and save it.
