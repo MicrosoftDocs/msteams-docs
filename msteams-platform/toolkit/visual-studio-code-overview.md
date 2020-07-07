@@ -100,7 +100,7 @@ If you wish to debug your tab based app on localhost using https, you will need 
   * Click the plus button near the bottom to add a new certificate, and select the `localhost.cer` file you dragged to the desktop. Click `Always Trust` in the dialog that appears.
   * After adding the certificate to the system keychain, double-click the certificate and expand the `Trust` section of the certificate details. Select `Always Trust` for every option.
 
-*NOTE:* If you are still experiecning certificate warning issues in your browser, reboot your machine and try again.
+*IMPORTANT:* Goto https://localhost:3000/tab. If the site is still not trusted, reboot your machine. Localhost should not be trusted.
 </details>
 
 ## Run your app in Teams
