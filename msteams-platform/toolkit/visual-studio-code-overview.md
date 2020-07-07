@@ -73,10 +73,11 @@ Refer to the **Build and Run* content in your project homepage for detailed inst
 
 ## Add a trusted certificate for localhost
 
-If you wish to debug your tab based app on localhost using https, you will need to add a certificate for localhost to `Trusted Root Certification Authorities` catalog. You only need to complete this step once per machine.
+If you wish to debug your tab based app on localhost using https, you will need to add a certificate for localhost to `Trusted Root Certification Authorities` catalog. You only need to complete this step once per machine.</br></br>
 
+**Create and install a trusted certificate:**
 <details>
-  <summary>Create and install a trusted certificate</summary>
+  <summary>Expand here</summary>
 
 * Build and run your app
   * Follow the instuctions in the **Build and Run** section of your project Readme so that it's being served from https://localhost:3000/tab. Generally, this will involve executing `npm install` then `npm start`
