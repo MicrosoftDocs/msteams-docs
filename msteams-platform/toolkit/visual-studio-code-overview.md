@@ -73,10 +73,11 @@ Refer to the **Build and Run* content in your project homepage for detailed inst
 
 ## Add a trusted certificate for localhost
 
-If you wish to debug your tab based app on localhost using https, you will need to add a certificate for localhost to `Trusted Root Certification Authorities` catalog. You only need to complete this step once per machine.
+If you wish to debug your tab based app on localhost using https, you will need to add a certificate for localhost to `Trusted Root Certification Authorities` catalog. You only need to complete this step once per machine.</br></br>
 
+**Create and install a trusted certificate:**
 <details>
-  <summary>Create and install a trusted certificate</summary>
+  <summary>Expand here</summary>
 
 * Build and run your app
   * Follow the instuctions in the **Build and Run** section of your project Readme so that it's being served from https://localhost:3000/tab. Generally, this will involve executing `npm install` then `npm start`
@@ -86,6 +87,7 @@ If you wish to debug your tab based app on localhost using https, you will need 
   * Open the Chrome Developer Tools window (`ctrl + shift + i` / `cmd + option + i`).
   * Click on the `Security` tab
   * Click on `View certificate` and you’ll have the option to download the certificate — either by dragging it to your desktop in OS X, or by clicking on the `Details` tab in Windows and clicking `Copy to File…`
+  * Name the file <*anything*>.cer and save it to a folder that doesn't require admin consent to perform a write action.
   
 * Install the certificate on **Windows**
   * Choose the `DER encoded binary X.509 (.CER)` option (the first one) and save it.
@@ -100,7 +102,8 @@ If you wish to debug your tab based app on localhost using https, you will need 
   * Click the plus button near the bottom to add a new certificate, and select the `localhost.cer` file you dragged to the desktop. Click `Always Trust` in the dialog that appears.
   * After adding the certificate to the system keychain, double-click the certificate and expand the `Trust` section of the certificate details. Select `Always Trust` for every option.
 
-*NOTE:* If you are still experiecning certificate warning issues in your browser, reboot your machine and try again.
+> [!IMPORTANT]
+> If you receive a security certificate warning, navigate to https://localhost:3000/tab. If the site is still not trusted, reboot your machine and localhost should be accepted as trusted.
 </details>
 
 ## Run your app in Teams
