@@ -23,6 +23,8 @@
       href: tutorials/code-samples.md   
 - name: Understanding app capabilities
   items:
+  - name: Overview
+    href: concepts/capabilities-overview.md
   - name: Tabs
     href: tabs/what-are-tabs.md
   - name: Messaging extensions

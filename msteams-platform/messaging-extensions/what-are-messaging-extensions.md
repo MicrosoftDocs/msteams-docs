@@ -58,15 +58,20 @@ You also can invoke your service when a URL is pasted in the compose message are
 
 Ready to get started building? Try one of our quickstarts:
 
-* **C#**
-  * [Messaging extension with action-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)
-  * [Messaging extension with search-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)
-* **JavaScript**
-  * [Messaging extension with action-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)
-  * [Messaging extension with search-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)
+### C#
+* [Messaging extension with action-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)
+* [Messaging extension with search-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)
+
+### JavaScript
+* [Messaging extension with action-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)
+* [Messaging extension with search-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)
 
 ## Learn more
 
 * [Create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md)
 * [Define action messaging extension command](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 * [Define search messaging extension command](~/messaging-extensions/how-to/search-commands/define-search-command.md)
+* [Planning your app](planning-your-app/planning-overview.md)
+* [Designing your app](designing-your-app/designing-overview.md)
+* [Building your app](concepts/build-and-test/prepare-your-o365-tenant.md)
+* [Deploying your app](concepts/deploy-and-publish/overview.md)

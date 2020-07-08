@@ -50,9 +50,9 @@ You can have a maximum of one channel/group tab and up to 16 personal tabs per a
 
 If you choose to have your channel/group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property (see below). Personal tabs are currently available in [developer preview](~/resources/dev-preview/developer-preview-intro.md). Full support for tabs on mobile clients will be released soon. To prepare for the update, you should follow the [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md) when creating your tabs.
 
-## Get started
+## Learn more
 
-* Link to planning
-* Link to designing
-* Link to building
-* Link to deploying
+* [Planning your app](planning-your-app/planning-overview.md)
+* [Designing your app](designing-your-app/designing-overview.md)
+* [Building your app](concepts/build-and-test/prepare-your-o365-tenant.md)
+* [Deploying your app](concepts/deploy-and-publish/overview.md)
