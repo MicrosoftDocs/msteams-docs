@@ -151,7 +151,7 @@ The Goal Tracker app is a comprehensive solution for your organization to suppor
 
 ## Great Ideas &#9734;
 
-The Great Ideas app supports, promotes, and empowers constant innovation and creativity within your organization. The app enables your employees to share ideas for colleague and leadership review, discover new submissions, spotlight contributions for peer consideration, and cast their vote for the best proposals while using the Microsoft Teams platform.
+The Great Ideas app supports and empowers innovation and creativity within your organization. The app enables your employees to share ideas with colleagues and leadership, discover new submissions, spotlight contributions for peer consideration, and cast their vote for the best proposals within Microsoft Teams.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-greatideas)
 
