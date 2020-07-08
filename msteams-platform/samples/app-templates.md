@@ -168,7 +168,7 @@ Group Activities is a Microsoft Teams app that makes it easy for team owners to 
 
 ## Grow Your Skills &#9734;
 
-The Grow Your Skills app supports professional growth and development by enabling employees to contribute to supplemental projects for your organization while simultaneously learning and enhancing skills and competencies. Employees use the app, supported by the Microsoft Teams app interface,  to locate opportunities that meet their interests, enjoy meaningful collaboration with peers, and acquire new levels of expertise and capabilities.
+The Grow Your Skills app supports professional growth and development by enabling employees to contribute to supplemental projects for your organization while simultaneously learning new skills. Employees can use the app to locate opportunities that meet their interests, enjoy meaningful collaboration with peers, and acquire new levels of expertise and capabilities, all within the Teams environment.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-growyourskills)
 
