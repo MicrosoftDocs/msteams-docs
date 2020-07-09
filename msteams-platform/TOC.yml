@@ -48,7 +48,7 @@
 - name: Planning your app
   items:
   - name: Get started
-    href: planning-your-app/planning-overview.md
+    href: concepts/extensibility-points.md
   - name: Understanding your use cases
     href: concepts/design/understand-use-cases.md
   - name: Mapping use cases to app capabilities
