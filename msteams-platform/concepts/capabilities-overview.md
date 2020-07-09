@@ -32,4 +32,4 @@ Choosing the right combination of capabilities and UI conventions, controls, and
 
 ## Learn more
 
-* [Start planning your app](../planning-your-app/planning-overview.md)
+* [Start planning your app](../concepts/extensibility-points.md)
