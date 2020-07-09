@@ -317,6 +317,14 @@ To help alleviate this pain, we are happy to bring to you the List Search app te
 
 ![List Search app](../assets/images/list-search-template.png)
 
+## Staff Check-ins &#9734;
+
+Staff Check-ins is an app, based on [Power Apps](/powerapps/powerapps-overview), that enables oversight communication between your business and field personnel. Staff can easily provide time-critical information and status updates on either a scheduled or ad-hoc basis directly from Teams. The app supports real-time location, photos, and notes as well as reminder notifications and automated workflows.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-staffcheckins)
+
+![Create check-in view](../assets/images/staff-check-ins-create.png)
+
 ## Visitor Management &#9734;
 
 The Visitor Management app enables your organization and employees to easily and efficiently manage the on-site visitor process, directly from Microsoft Teams. The app enables employees to create visitor requests, centrally track a request status through the visitor dashboard, and receive real-time notifications when a visitor arrives.
