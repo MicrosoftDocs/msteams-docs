@@ -149,6 +149,23 @@ The Goal Tracker app is a comprehensive solution for your organization to suppor
 :::column-end:::
 :::row-end:::
 
+## Great Ideas &#9734;
+
+The Great Ideas app supports and empowers innovation and creativity within your organization. The app enables your employees to share ideas with colleagues and leadership, discover new submissions, spotlight contributions for peer consideration, and cast their vote for the best proposals within Microsoft Teams.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-greatideas)
+
+:::row:::
+  :::column span="2":::
+    ![View submitted ideas](../assets/images/great-ideas-all-view.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![View ideas](../assets/images/great-ideas-digest-view.png)
+:::column-end:::
+:::row-end:::
+
 ## Group Activities
 
 Group Activities is a Microsoft Teams app that makes it easy for team owners to quickly create activity groups and manage collaboration workflows within the context of Microsoft Teams. Activity authors are enabled to create activities, randomly distribute team members in groups, and optionally have the bot send reminders until activities are complete.
