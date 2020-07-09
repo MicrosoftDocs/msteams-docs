@@ -523,9 +523,50 @@ You will receive a new `composeExtension/submitAction` message similar to the on
 
 * * *
 ### User attribution for bots messages 
-In scenarios where a bot sends messages on behalf of a user, . This feature allows you to send messages on behalf of a user who is sending the message.
+In scenarios bots where a bots sends messages on behalf of a user, attributing the message to that user can help with engagement and showcase a more natural interaction flow. This feature allows you to send messages on behalf of a user who is initiating the message.
 
-In the screenshots below, the left side is the card how a message sent by a bot looks like without this feature. On the right is how the message sender looks like with user attribution.
+In the screenshots below, the left side is a card message sent by a bot without user attribution and on the right is how the message looks with user attribution.
+
+To use user attribution in teams, you need to add one `OnBehalfOf` mention entity to `ChannelData` in your `Activity` payload that is sent to Teams.
+
+# [C#/.NET](#tab/dotnet)
+```csharp
+    OnBehalfOf = new []
+    {
+      new
+      {
+        ItemId = 0,
+        MentionType = "person",
+        Mri = turnContext.Activity.From.Id,
+        DisplayName = turnContext.Activity.From.Name
+      }  
+    }
+
+```
+
+# [JSON](#tab/json)
+```json
+{
+    "text": "Hello World!",
+    "ChannelData": {       
+        "OnBehalfOf": [{
+            "itemid": 0,
+            "mentionType": "person",
+            "mri": "29:orgid:89e6508d-6c0f-4ffe-9f6a-b58416d965ae",
+            "displayName": "Sowrabh N R S"
+        }]
+    }
+}
+```
+Here is a description of all the entities in the `OnBehalfOf`is of Array: 
+## Details of  `OnBehalfOf` entity schema
+|Field|Type|Description|
+|:---|:---|:---|
+|`itemId`|Integer|Should be 0|
+|`mentionType`|String|Should be "person"|
+|`mri`|String|MRI of the person on behalf of who the message is sent. Message sender name would appear as "<user> via <bot name>".|
+|`displayName`|String|Name of the person. Used as fallback in case name resolution is unavailable|
+  
 
 ## Next Steps
 
