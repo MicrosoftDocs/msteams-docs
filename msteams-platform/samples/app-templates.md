@@ -149,6 +149,23 @@ The Goal Tracker app is a comprehensive solution for your organization to suppor
 :::column-end:::
 :::row-end:::
 
+## Great Ideas &#9734;
+
+The Great Ideas app supports and empowers innovation and creativity within your organization. The app enables your employees to share ideas with colleagues and leadership, discover new submissions, spotlight contributions for peer consideration, and cast their vote for the best proposals within Microsoft Teams.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-greatideas)
+
+:::row:::
+  :::column span="2":::
+    ![View submitted ideas](../assets/images/great-ideas-all-view.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![View ideas](../assets/images/great-ideas-digest-view.png)
+:::column-end:::
+:::row-end:::
+
 ## Group Activities
 
 Group Activities is a Microsoft Teams app that makes it easy for team owners to quickly create activity groups and manage collaboration workflows within the context of Microsoft Teams. Activity authors are enabled to create activities, randomly distribute team members in groups, and optionally have the bot send reminders until activities are complete.
@@ -163,6 +180,23 @@ Group Activities is a Microsoft Teams app that makes it easy for team owners to 
 :::row:::
 :::column span="2":::
     ![Group activity notification message in a channel](../assets/images/group-activities-2.png)
+:::column-end:::
+:::row-end:::
+
+## Grow Your Skills &#9734;
+
+The Grow Your Skills app supports professional growth and development by enabling employees to contribute to supplemental projects for your organization while simultaneously learning new skills. Employees can use the app to locate opportunities that meet their interests, enjoy meaningful collaboration with peers, and acquire new levels of expertise and capabilities, all within the Teams environment.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-growyourskills)
+
+:::row:::
+  :::column span="2":::
+    ![Available projects view](../assets/images/grow-your-skills-all-projects-view.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Viewer's acquired skills view](../assets/images/grow-your-skills-acquired-skills-view.png)
 :::column-end:::
 :::row-end:::
 
@@ -316,6 +350,14 @@ To help alleviate this pain, we are happy to bring to you the List Search app te
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
 ![List Search app](../assets/images/list-search-template.png)
+
+## Staff Check-ins &#9734;
+
+Staff Check-ins is an app, based on [Power Apps](/powerapps/powerapps-overview), that enables oversight communication between your business and field personnel. Staff can easily provide time-critical information and status updates on either a scheduled or ad-hoc basis directly from Teams. The app supports real-time location, photos, and notes as well as reminder notifications and automated workflows.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-staffcheckins)
+
+![Create check-in view](../assets/images/staff-check-ins-create.png)
 
 ## Visitor Management &#9734;
 

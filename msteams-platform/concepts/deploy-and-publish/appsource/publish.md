@@ -1,7 +1,7 @@
 ---
 title: Microsoft Teams app approval process guidance
 description: Describes the approval process for getting your app published to the Microsoft Teams app store
-keywords: teams publish store office publishing AppSource
+keywords: teams publish store office publishing publish AppSource partner center account verification
 ---
 # Submit your app to AppSource
 
