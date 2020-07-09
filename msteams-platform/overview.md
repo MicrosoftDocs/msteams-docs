@@ -104,7 +104,7 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
         Get to know your way around the platform by creating a basic Teams app.
 
         > [!div class="nextstepaction"]
-        > [Build your first app now](build-your-first-app/create-app-manifest.md)
+        > [Build your first app now](build-your-first-app/build-and-run.md)
 
       </div>
 

@@ -7,20 +7,22 @@
       href: whats-new.md
 - name: Build your first app
   items:
-  - name: Create an app manifest
-    href: build-your-first-app/create-app-manifest.md
-  - name: Run your app
-    href: build-your-first-app/run-your-app.md
-  - name: Tutorials and code samples
-    items:
-    - name: Get started with C#
-      href: tutorials/get-started-dotnet-app-studio.md
-    - name: Get started with Node.js
-      href: tutorials/get-started-nodejs-app-studio.md
-    - name: Get started with the Yeoman generator
-      href: tutorials/get-started-yeoman.md
-    - name: More tutorials and code samples
-      href: tutorials/code-samples.md   
+  - name: Build and run your first app
+    href: build-your-first-app/build-and-run.md
+  - name: Build a real-world app
+    items: 
+    - name: Overview
+      href: build-your-first-app/build-real-world-app.md
+    - name: Understanding the app package
+      href: build-your-first-app/understanding-app-package.md
+    - name: Add a tab
+      href: build-your-first-app/add-tab.md
+    - name: Add a connector
+      href: build-your-first-app/add-connector.md
+    - name: Add a messaging extension
+      href: build-your-first-app/add-messaging-extension.md
+    - name: Add a bot
+      href: build-your-first-app/add-bot.md
 - name: Understanding app capabilities
   items:
   - name: Overview
@@ -59,10 +61,8 @@
     href: planning-your-app/teams-ui-conventions.md
 - name: Designing your app
   items:
-  - name: Get started
+  - name: Getting started
     href: designing-your-app/designing-overview.md
-  - name: Personal apps
-    href: concepts/design/personal-apps.md
   - name: Tabs
     items:
     - name: Tabs
@@ -85,7 +85,9 @@
       href: designing-your-app/designing-bots.md
     - name: Design guidelines (existing)
       href: bots/design/bots.md
-  - name: Interfaces
+  - name: Personal apps
+    href: concepts/design/personal-apps.md
+  - name: UI conventions
     items:
     - name: Cards
       href: designing-your-app/designing-cards.md
@@ -332,7 +334,7 @@
       href: concepts/build-and-test/debug.md
     - name: Using sample data
       href: concepts/build-and-test/test-data.md
-- name: Deploying your app
+- name: Publishing your app
   items:
   - name: Choose your distribution methods
     href: concepts/deploy-and-publish/overview.md
@@ -360,6 +362,16 @@
       href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
 - name: Reference and resources
   items:
+    - name: More tutorials and code samples
+      items:
+      - name: Get started with C#
+        href: tutorials/get-started-dotnet-app-studio.md
+      - name: Get started with Node.js
+        href: tutorials/get-started-nodejs-app-studio.md
+      - name: Get started with the Yeoman generator
+        href: tutorials/get-started-yeoman.md
+      - name: More tutorials and code samples
+        href: tutorials/code-samples.md   
     - name: Bots - v3 SDK
       href: resources/bot-v3/bots-overview.md
       items:
