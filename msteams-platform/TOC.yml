@@ -33,7 +33,7 @@
     href: webhooks-and-connectors/what-are-webhooks-and-connectors.md 
   - name: Bots
     href: bots/what-are-bots.md 
-- name: Integrations and templates
+- name: App integrations and templates
   items: 
   - name: Integrating web apps
     href: samples/integrating-web-apps.md
@@ -49,12 +49,14 @@
   items:
   - name: Get started
     href: planning-your-app/planning-overview.md
-  - name: Know your use cases
+  - name: Understanding your use cases
     href: concepts/design/understand-use-cases.md
-  - name: Understanding Teams extension points
-    href: concepts/extensibility-points.md
-  - name: Map use cases to app capabilities
+  - name: Mapping use cases to app capabilities
     href: concepts/design/map-use-cases.md
+  - name: Determining your app contexts
+    href: planning-your-app/app-contexts.md
+  - name: Getting to know Teams UI conventions
+    href: planning-your-app/teams-ui-conventions.md
 - name: Designing your app
   items:
   - name: Get started
@@ -62,13 +64,27 @@
   - name: Personal apps
     href: concepts/design/personal-apps.md
   - name: Tabs
-    href: designing-your-app/designing-tabs.md
+    items:
+    - name: Tabs
+      href: designing-your-app/designing-tabs.md
+    - name: Design guidelines (existing)
+      href: tabs/design/tabs.md
+    - name: Tabs on mobile clients
+      href: tabs/design/tabs-mobile.md
   - name: Messaging extensions
-    href: designing-your-app/designing-messaging-extensions.md
+    items:
+    - name: Messaging extensions
+      href: designing-your-app/designing-messaging-extensions.md
+    - name: Design guidelines (existing)
+      href: messaging-extensions/design/messaging-extension-design.md  
   - name: Connectors
     href: designing-your-app/designing-connectors.md
   - name: Bots
-    href: designing-your-app/designing-bots.md
+    items:
+    - name: Bots
+      href: designing-your-app/designing-bots.md
+    - name: Design guidelines (existing)
+      href: bots/design/bots.md
   - name: Interfaces
     items:
     - name: Cards
@@ -132,12 +148,6 @@
             href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
           - name: 'Create a personal tab'
             href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-    - name: 'Design your tabs'
-      items:
-        - name: 'Design overview'
-          href: tabs/design/tabs.md
-        - name: 'Tabs on mobile clients'
-          href: tabs/design/tabs-mobile.md
     - name: 'How-to guides'
       expanded: true
       items:
@@ -173,10 +183,6 @@
           href: tabs/how-to/native-device-permissions.md
   - name: Messaging extensions — task-oriented interactions
     items:
-    - name: Design
-      items:
-      -  name: 'Messaging extensions design guidelines'
-         href: messaging-extensions/design/messaging-extension-design.md  
     - name: Quickstarts
       items:
         - name: 'With action command'
@@ -228,10 +234,6 @@
           href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot
         - name: Teams conversation bot in Python
           href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/57.teams-conversation-bot
-    - name: 'Design your bot'
-      items:
-        - name: 'Design overview'
-          href: bots/design/bots.md
     - name: 'How-to guides'
       expanded: true
       items:
@@ -300,7 +302,7 @@
         href: webhooks-and-connectors/how-to/connectors-creating.md
       - name: Sending messages to connectors and webhooks
         href: webhooks-and-connectors/how-to/connectors-using.md     
-  - name: Interfaces
+  - name: Common interfaces
     items:
     - name: Cards
       items:

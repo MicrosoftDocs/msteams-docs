@@ -7,19 +7,29 @@ ms.author: heath-hamilton
 ---
 # Understanding Teams app capabilities
 
-*Capabilities* are the extension points for building apps on the Microsoft Teams platform. Every Teams app is unique: Some may only have one capability (such as a connector), while others may have a few to serve a variety of use cases. Your app could display data in a central location (tab) and present that same information through a conversational interface (bot).
+*Capabilities* are the extension points for building apps on the Microsoft Teams platform.
+
+There are multiple ways to extend the Teams client, so every app is unique: Some only have one capability (such as a connector), while others have a few to give users options. For instance, your app could display data in a central location (tab) and present that same information through a conversational interface (bot).
 
 Your Teams app can have one or all of the following core capabilities:
 
-* Tabs
-* Messaging extensions
-* Connectors
-* Bots
+* [Tabs](../tabs/what-are-tabs.md)
+* [Messaging extensions](../messaging-extensions/what-are-messaging-extensions.md)
+* [Connectors](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)
+* [Bots](../bots/what-are-bots.md)
 
-## Doing what's best for you
-
-As you familiarize yourself with Teams app development, you'll begin to understand you can build different capabilities to do similar things. For example, if your app requires user input, you could embed a web form in a tab using an `<iframe>`. You could also do something similar in a tab using a task module, which is a common Teams-themed interface. Choosing the right combination of capabilities, interfaces, and controls for your app comes down to [knowing your target audience's use cases](../concepts/design/understand-use-cases.md) and then successfully [mapping those use cases to Teams capabilities](../concepts/design/map-use-cases.md).
+Your app can also can take advantage of advanced capabilities, such as the [Microsoft Graph REST API](../graph-api/rsc/resource-specific-consent.md).
 
 See the following illustration to get an idea which capabilities would provide the features you want in your app.
 
 :::image type="content" source="../assets/images/capabilities-overview.png" alt-text="Mind map illustrating what Teams app capabilities are.":::
+
+## Doing what's best for your users
+
+As you familiarize yourself with Teams app development, you'll begin to understand its subtleties. There's more than one way to build certain features (such as collecting user input). For example, you could embed a web-based form in a tab using an `<iframe>`. You could also do this in a tab using a task module, a common Teams interface, for a more native experience your users may prefer.
+
+Choosing the right combination of capabilities and UI conventions, controls, and elements comes down to first [understanding your audience's use cases](../concepts/design/understand-use-cases.md).
+
+## Learn more
+
+* [Start planning your app](../planning-your-app/planning-overview.md)
