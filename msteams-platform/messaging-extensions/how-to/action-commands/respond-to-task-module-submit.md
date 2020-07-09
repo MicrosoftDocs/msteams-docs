@@ -525,7 +525,9 @@ You will receive a new `composeExtension/submitAction` message similar to the on
 ### User attribution for bots messages 
 In scenarios bots where a bots sends messages on behalf of a user, attributing the message to that user can help with engagement and showcase a more natural interaction flow. This feature allows you to send messages on behalf of a user who is initiating the message.
 
-In the screenshots below, the left side is a card message sent by a bot without user attribution and on the right is how the message looks with user attribution.
+In the image below, the left side is a card message sent by a bot without user attribution and on the right is how the message looks with user attribution.
+
+![Screenshot](msteams-docs/msteams-platform/assets/images/messaging-extension/user-attribution-bots.png)
 
 To use user attribution in teams, you need to add the `OnBehalfOf` mention entity to `ChannelData` in your `Activity` payload that is sent to Teams.
 
