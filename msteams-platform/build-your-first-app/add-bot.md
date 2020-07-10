@@ -22,4 +22,4 @@ Some text.
 ## Learn more
 
 > [!div class="nextstepaction"]
-> [Understanding Teams app capabilities](../concepts/extensibility-points.md)
+> [Understanding Teams app capabilities](../concepts/capabilities-overview.md)

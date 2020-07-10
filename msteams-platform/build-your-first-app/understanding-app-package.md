@@ -3,7 +3,7 @@ title: Understanding the app package
 author: heath-hamilton
 description: Understanding what's in a Microsoft Teams app package.
 ---
-# Understanding the app package
+# Understanding the Teams app package
 
 Some text.
 
