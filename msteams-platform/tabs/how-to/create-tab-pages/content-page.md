@@ -62,7 +62,7 @@ Ensure that the all URL domains used in your tabs are included in the `validDoma
 
 ## Showing a native loading indicator
 
-Starting with manifest v1.7, you can provide a native loading indicator for your web content on desktop. You need to implement the following APIs wherever your web content is loaded in Teams to hide the loading indicator (ie: tab content, tab config dialog, tab remove dialog, task module, etc).
+Starting with manifest v1.7, you can provide a native loading indicator for your web content on desktop. You need to implement the following APIs wherever your web content is loaded in Teams to hide the loading indicator (tab content, tab config dialog, tab remove dialog, task module, etc).
 
 1. To show the loading indicator, add `"showLoadingIndicator": true` in your manifest. Teams will always show a loading indicator when your app begins loading.
 2. Remember to call `microsoftTeams.initialize();`. 
@@ -71,7 +71,7 @@ Starting with manifest v1.7, you can provide a native loading indicator for your
 5. If your application fails to load, you can call `microsoftTeams.appInitialization.notifyFailure(reason);` to let us know there was an error. We will then show an error screen to the user.
 
 ``` JSON
-/* List of failure reason */
+/* List of failure reasons */
 export const enum FailedReason {
     AuthFailed = "AuthFailed",
     Timeout = "Timeout",
