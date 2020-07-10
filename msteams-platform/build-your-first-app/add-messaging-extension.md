@@ -7,7 +7,7 @@ description: Learn how to build a messaging extension in your first Microsoft Te
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
 
-:::image type="content" source="../assets/images/overview-placeholder.png" alt-text="Alt text describes the content of the image.":::
+:::image type="content" source="../assets/images/overview-messaging.png" alt-text="Alt text describes the content of the image.":::
 
 ## What you'll learn
 
