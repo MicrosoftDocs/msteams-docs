@@ -523,15 +523,17 @@ You will receive a new `composeExtension/submitAction` message similar to the on
 
 * * *
 ### User attribution for bots messages 
-In scenarios bots where a bots sends messages on behalf of a user, attributing the message to that user can help with engagement and showcase a more natural interaction flow. This feature allows you to send messages on behalf of a user who is initiating the message.
 
-In the image below, the left side is a card message sent by a bot without user attribution and on the right is how the message looks with user attribution.
+In scenarios where a bot sends messages on behalf of a user, attributing the message to that user can help with engagement and showcase a more natural interaction flow. This feature allows you to send messages on behalf of the user who is initiating the message.
 
-![Screenshot](~/msteams-platform/assets/images/messaging-extension/user-attribution-bots.png)
+In the image below, on the left is a card message sent by a bot *without* user attribution and on the right is a card sent by a bot *with* user attribution.
+
+![Screenshot](../../../assets/images/messaging-extension/user-attribution-bots.png)
 
 To use user attribution in teams, you need to add the `OnBehalfOf` mention entity to `ChannelData` in your `Activity` payload that is sent to Teams.
 
 # [C#/.NET](#tab/dotnet)
+
 ```csharp
     OnBehalfOf = new []
     {
@@ -547,10 +549,11 @@ To use user attribution in teams, you need to add the `OnBehalfOf` mention entit
 ```
 
 # [JSON](#tab/json)
+
 ```json
 {
     "text": "Hello World!",
-    "ChannelData": {       
+    "ChannelData": {
         "OnBehalfOf": [{
             "itemid": 0,
             "mentionType": "person",
@@ -560,16 +563,18 @@ To use user attribution in teams, you need to add the `OnBehalfOf` mention entit
     }
 }
 ```
+
 * * *
 
-Here is a description of all the entities in the `OnBehalfOf`is of Array: 
+Below is a description of the entities in the `OnBehalfOf` of Array: 
+
 #### Details of  `OnBehalfOf` entity schema
 |Field|Type|Description|
 |:---|:---|:---|
 |`itemId`|Integer|Should be 0|
 |`mentionType`|String|Should be "person"|
-|`mri`|String|MRI of the person on behalf of who the message is sent. Message sender name would appear as "<user> via <bot name>".|
-|`displayName`|String|Name of the person. Used as fallback in case name resolution is unavailable|
+|`mri`|String|Message resource identifier​ (MRI) of the person on whose behalf the message is sent. Message sender name would appear as "\<user\> via \<bot name\>".|
+|`displayName`|String|Name of the person. Used as fallback in case name resolution is unavailable.|
   
 ## Next Steps
 
