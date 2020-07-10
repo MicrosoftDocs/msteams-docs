@@ -12,7 +12,7 @@
   - name: Build a real-world app
     items: 
     - name: Overview
-      href: build-your-first-app/build-real-world-app.md
+      href: build-your-first-app/building-real-world-app.md
     - name: Understanding the app package
       href: build-your-first-app/understanding-app-package.md
     - name: Add a tab

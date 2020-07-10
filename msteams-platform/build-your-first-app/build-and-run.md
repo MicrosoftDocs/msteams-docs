@@ -43,4 +43,4 @@ With Visual Studio Codespaces, you can start building in your browser without se
 Congratulations! You've created basic Teams app. To add some features to it, follow the tutorial for building a real-world app.
 
 > [!div class="nextstepaction"]
-> [Build a real-world app](../build-your-first-app/build-and-run.md)
+> [Build a real-world app](../build-your-first-app/building-real-world-app.md)
