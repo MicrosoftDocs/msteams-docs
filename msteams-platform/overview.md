@@ -81,7 +81,7 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 
       <div align="center">
 
-      :::image type="content" source="assets/images/overview-placeholder.png" alt-text="<alt text>":::
+      :::image type="content" source="assets/images/overview-cta-build.png" alt-text="<alt text>" border="false":::
       
         <h3>Off and running</h3>
 
@@ -98,7 +98,7 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 
       <div align="center">
 
-        :::image type="content" source="assets/images/overview-placeholder.png" alt-text="<alt text>":::
+        :::image type="content" source="assets/images/overview-cta-plan.png" alt-text="<alt text>" border="false":::
       
         <h3>Take it slow</h3>
 
@@ -115,7 +115,7 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 
       <div align="center">
 
-      :::image type="content" source="assets/images/overview-placeholder.png" alt-text="<alt text>":::
+      :::image type="content" source="assets/images/overview-cta-integrate.png" alt-text="<alt text>" border="false":::
       
         <h3>Go with what works</h3>
 
