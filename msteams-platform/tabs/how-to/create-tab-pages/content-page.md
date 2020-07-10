@@ -62,15 +62,15 @@ Ensure that the all URL domains used in your tabs are included in the `validDoma
 
 ## Showing a native loading indicator
 
-Starting with manifest v1.7, you can provide a native loading indicator for your web content on desktop. You need to implement the following APIs wherever your web content is loaded in Teams to hide the loading indicator (tab content, tab config dialog, tab remove dialog, task module, etc).
+Starting with [manifest schema v1.7](../../../resources/schema/manifest-schema.md), you can provide a [native loading indicator](../../../resources/schema/manifest-schema.md#showloadingindicator) wherever your web content is loaded in Teams, e.g., [tab content page](#integrate-your-code-with-teams), [configuration page](configuration-page.md), [removal page](removal-page.md) and [task modules in tabs](../../../task-modules-and-cards/task-modules-tabs.md).
 
-1. To show the loading indicator, add `"showLoadingIndicator": true` in your manifest. Teams will always show a loading indicator when your app begins loading.
-2. Remember to call `microsoftTeams.initialize();`. 
-3. (This is an optional API) If you're ready to print to the screen and wish to lazy load the rest of your application's content, you can manually hide the loading indicator by you calling `microsoftTeams.appInitialization.notifyAppLoaded();`
-4. (This is a mandatory API) Finally, you should call `microsoftTeams.appInitialization.notifySuccess()` to notify Teams that your app has successfully loaded. We will then hide the loading indicator if applicable. If you don't call `notifySuccess` within 30 seconds, we will assume your app timed out and show an error screen with a retry option.
-5. If your application fails to load, you can call `microsoftTeams.appInitialization.notifyFailure(reason);` to let us know there was an error. We will then show an error screen to the user.
+1. To show the loading indicator, add `"showLoadingIndicator": true` to your manifest. 
+2. Remember to call `microsoftTeams.initialize();`.
+3. **Optional**. If you're ready to print to the screen and wish to lazy load the rest of your application's content, you can manually hide the loading indicator by calling `microsoftTeams.appInitialization.notifyAppLoaded();`
+4. **Mandatory**. Finally, call `microsoftTeams.appInitialization.notifySuccess()` to notify Teams that your app has successfully loaded. Teams will then hide the loading indicator if applicable. If  `notifySuccess`  is not called within 30 seconds, it will be assumed that your app timed out and an error screen with a retry option will appear.
+5. If your application fails to load, you can call `microsoftTeams.appInitialization.notifyFailure(reason);` to let Teams know there was an error. An error screen will then be shown to the user:
 
-``` JSON
+```json
 /* List of failure reasons */
 export const enum FailedReason {
     AuthFailed = "AuthFailed",
@@ -78,3 +78,4 @@ export const enum FailedReason {
     Other = "Other"
 }
 ```
+>
