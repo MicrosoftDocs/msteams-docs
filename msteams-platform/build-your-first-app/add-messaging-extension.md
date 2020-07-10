@@ -3,26 +3,28 @@ title: Add a messaging extension to your first Teams app
 author: heath-hamilton
 description: Learn how to build a messaging extension in your first Microsoft Teams app.
 ---
-# Add a messaging extension to your first Teams app
+# Build a messaging extension for your first Teams app
 
-Some text.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+
+:::image type="content" source="../assets/images/overview-placeholder.png" alt-text="Alt text describes the content of the image.":::
 
 ## What you'll learn
 
-Some text.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
 
 ## Build a search-based messaging extension
 
-Some text.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
 
 ## Looking at the scaffolding
 
-Some text.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Add a bot to your app](../build-your-first-app/add-bot.md)
+> [Build a bot for your app](../build-your-first-app/add-bot.md)
 
 ## Learn more
 

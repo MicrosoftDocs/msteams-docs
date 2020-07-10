@@ -15,13 +15,13 @@
       href: build-your-first-app/building-real-world-app.md
     - name: Understanding the app package
       href: build-your-first-app/understanding-app-package.md
-    - name: Add a tab
+    - name: Create a tab
       href: build-your-first-app/add-tab.md
-    - name: Add a connector
+    - name: Create a connector
       href: build-your-first-app/add-connector.md
-    - name: Add a messaging extension
+    - name: Create a messaging extension
       href: build-your-first-app/add-messaging-extension.md
-    - name: Add a bot
+    - name: Create a bot
       href: build-your-first-app/add-bot.md
 - name: Understanding app capabilities
   items:

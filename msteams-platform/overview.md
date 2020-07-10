@@ -22,9 +22,7 @@ Some apps are simple (send notifications), while others are complex (view patien
 
 :::row:::
    :::column span="1":::
-   :::column-end:::
-   :::column span="1":::
-      ![alt_text](assets/images/overview-placeholder.png)
+      ![alt_text](assets/images/overview-tabs.png)
    :::column-end:::
    :::column span="1":::
    :::column-end:::
@@ -36,9 +34,7 @@ Sometimes you just need to make things easier to find. Display an important webp
 
 :::row:::
    :::column span="1":::
-   :::column-end:::
-   :::column span="1":::
-      ![alt_text](assets\images\overview-placeholder.png)
+      ![alt_text](assets\images\overview-messaging.png)
    :::column-end:::
    :::column span="1":::
    :::column-end:::
@@ -50,9 +46,7 @@ A core benefit of Teams apps is pulling information somewhere outside Teams into
 
 :::row:::
    :::column span="1":::
-   :::column-end:::
-   :::column span="1":::
-      ![alt_text](assets/images/overview-placeholder.png)
+      ![alt_text](assets/images/overview-bots.png)
    :::column-end:::
    :::column span="1":::
    :::column-end:::
@@ -64,9 +58,7 @@ Conversations often result in the need to do something (create an order, review 
 
 :::row:::
    :::column span="1":::
-   :::column-end:::
-   :::column span="1":::
-      ![alt_text](assets/images/overview-placeholder.png)
+      ![alt_text](assets/images/overview-connectors.png)
    :::column-end:::
    :::column span="1":::
    :::column-end:::
@@ -76,15 +68,7 @@ Conversations often result in the need to do something (create an order, review 
 
 Sick of sending reminders through email? Do it through Teams instead! Send notifications to individuals, a channel, the Activity Feed, or anyone who subscribes to them with [connectors](webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
-:::row:::
-   :::column span="1":::
-   :::column-end:::
-   :::column span="1":::
-      ![alt_text](assets/images/overview-placeholder.png)
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="assets/images/overview-graph.png" alt-text="Alt text describes the content of the image.":::
 
 ### Automate and manage activity
 

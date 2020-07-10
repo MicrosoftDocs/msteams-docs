@@ -7,9 +7,11 @@ description: Run your first Microsoft Teams app.
 
 You can jump right into Microsoft Teams platform development by quickly building and running a "Hello, world!" app.
 
-## Launch Visual Studio Codespaces
+## Start building in your browser
 
-With Visual Studio Codespaces, you can start building in your browser without setting up an environment or installing dependencies.
+You can start building right away with Visual Studio Codespaces, which takes care of setting up an environment for you.
+
+:::image type="content" source="../assets/images/vs-codespace-intro.png" alt-text="<alt text>":::
 
 :::row:::
    :::column span="":::
@@ -26,21 +28,31 @@ With Visual Studio Codespaces, you can start building in your browser without se
    :::column-end:::
 :::row-end:::
 
-## Create your app
+## Choose the capabilities you want in your app
 
-1. First step.
-1. Second step.
-1. etc.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+
+:::image type="content" source="../assets/images/vs-codespace-add-capabilities.png" alt-text="<alt text>":::
+
+## Finish initial app setup
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
 
 ## Run your app
 
-1. First step.
-1. Second step.
-1. etc.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+
+:::image type="content" source="../assets/images/vs-codespace-run-app.png" alt-text="<alt text>":::
+
+## Continue building on your desktop
+
+Teams supports up to 10 minutes of the Codespace time. Once that time runs out, you must set up a desktop experience to continue building.
+
+:::image type="content" source="../assets/images/vs-codespace-desktop.png" alt-text="<alt text>":::
 
 ## Next step
 
-Congratulations! You've created basic Teams app. To add some features to it, follow the tutorial for building a real-world app.
+Congratulations! You have a functional Teams app. Add features to it by following the tutorial for building a real-world app.
 
 > [!div class="nextstepaction"]
 > [Build a real-world app](../build-your-first-app/building-real-world-app.md)
