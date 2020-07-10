@@ -533,7 +533,7 @@ In the image below, on the left is a card message sent by a bot *without* user a
 
 To use user attribution in teams, you need to add the `OnBehalfOf` mention entity to `ChannelData` in your `Activity` payload that is sent to Teams.
 
-# [C#/.NET](#tab/dotnet)
+# [C#/.NET](#tab/dotnet-1)
 
 ```csharp
     OnBehalfOf = new []
@@ -549,7 +549,7 @@ To use user attribution in teams, you need to add the `OnBehalfOf` mention entit
 
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json-1)
 
 ```json
 {
