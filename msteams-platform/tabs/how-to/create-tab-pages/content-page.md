@@ -67,7 +67,7 @@ Starting with manifest v1.7, you can provide a native loading indicator for your
 1. To show the loading indicator, add `"showLoadingIndicator": true` in your manifest. Teams will always show a loading indicator when your app begins loading.
 2. Remember to call `microsoftTeams.initialize();`. 
 3. (This is an optional API) If you're ready to print to the screen and wish to lazy load the rest of your application's content, you can manually hide the loading indicator by you calling `microsoftTeams.appInitialization.notifyAppLoaded();`
-4. (This is a mandatory API) Finally, you should call `microsoftTeams.appInitialization.notifySuccess()` to notify Teams that your app has successfully loaded. We will then hide the loading indicator if applicable.
+4. (This is a mandatory API) Finally, you should call `microsoftTeams.appInitialization.notifySuccess()` to notify Teams that your app has successfully loaded. We will then hide the loading indicator if applicable. If you don't call `notifySuccess` within 30 seconds, we will assume your app timed out and show an error screen with a retry option.
 5. If your application fails to load, you can call `microsoftTeams.appInitialization.notifyFailure(reason);` to let us know there was an error. We will then show an error screen to the user.
 
 ``` JSON
