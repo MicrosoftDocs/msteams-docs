@@ -569,7 +569,7 @@ Here is a description of all the entities in the `OnBehalfOf`is of Array:
 |`mri`|String|MRI of the person on behalf of who the message is sent. Message sender name would appear as "<user> via <bot name>".|
 |`displayName`|String|Name of the person. Used as fallback in case name resolution is unavailable|
   
-
+* * *
 ## Next Steps
 
 Add a search command
