@@ -527,7 +527,7 @@ In scenarios bots where a bots sends messages on behalf of a user, attributing t
 
 In the image below, the left side is a card message sent by a bot without user attribution and on the right is how the message looks with user attribution.
 
-![Screenshot](msteams-docs/msteams-platform/assets/images/messaging-extension/user-attribution-bots.png)
+![Screenshot](~/msteams-platform/assets/images/messaging-extension/user-attribution-bots.png)
 
 To use user attribution in teams, you need to add the `OnBehalfOf` mention entity to `ChannelData` in your `Activity` payload that is sent to Teams.
 
