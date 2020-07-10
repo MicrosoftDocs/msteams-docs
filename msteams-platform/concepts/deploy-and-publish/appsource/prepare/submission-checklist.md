@@ -12,11 +12,25 @@ To be listed on AppSource, your app must go through an approval process. This is
 * **Tips and frequently failed cases:** Pay extra attention to these [Tips and frequently failed cases](frequently-failed-cases.md) to improve your app submission to approval time.
 * **App manifest:** Check your app manifest against the [App manifest checklist](app-manifest-checklist.md) and manifest checker in App Studio
 * **Testing and debugging:** You have fully [tested and debugged your app](../../../build-and-test/debug.md).
-* **Validation policies:** It must pass all current [AppSource validation policies](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams) for Teams tabs and bots. Please note that these policies are subject to change.
+* **Validation policies:** It must pass all current [AppSource validation policies](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams).  Check your app again our validation tool. It can be found on [this website](https://dev.teams.microsoft.com/appvalidation.html), [Teams toolkit](TODO) and in app studio.  Please note that these policies are subject to change.
 * **Testing notes:** Include [test notes for validation](#test-notes-for-validation)
 * **Privacy policies:** Ensure your [privacy policy, terms of use and support URLs](#privacy-policy-terms-of-use-and-support-urls) follow our guidelines.
 
 Once you have completed all of the above requirements, you can submit your package to App Source through [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource).
+
+## Validation Tool 
+The validation tool consists a validator that allow you to Make sure you don't fail any of the test cases before you submit your app to Partner Center. Partner Center has the same set of test and will block your submission if there is any error.
+
+### Teams app validator 
+The Validate page allows you to check your app package before submitting your app to AppSource. Simply upload the manifest package and the validation tool will check your app against all manifest related test cases. For each failed tests, the description provides a documentation link to help you fix the error.
+
+TODO: Picture 
+
+### Preliminary checklist
+For the tests that are hard to automate, the Preliminary checklist details 7 of the most common failed test cases as well as link to a complete submission checklist.
+You can find this tool 
+
+TODO: picture
 
 ## Privacy policy, terms of use and support URLs
 
