@@ -30,7 +30,7 @@ Webhooks are a great way for Teams to integrate with external apps. A webhook is
 
 Your service will receive messages in the standard Azure bot service messaging schema. The Bot Framework connector is a RESTful service that enables your service to process the interchange of JSON formatted messages via HTTPS protocols as documented in the [Azure Bot Service API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference). Alternatively, you can follow the [Microsoft Bot Framework SDK] to process and parse messages. *See also*  [About Azure Bot Service](/azure/bot-service/bot-service-overview-introduction?view=azure-bot-service-4.0).
 
-Outgoing webhooks are scoped to the `team` level and are visible to all members of the team. Just like a bot, users ae required to **\@mention** the name of the outgoing webhook to invoke it in the channel.
+Outgoing webhooks are scoped to the `team` level and are visible to all members of the team. Just like a bot, users are required to **\@mention** the name of the outgoing webhook to invoke it in the channel.
 
 ### 2. Create a method to verify the outgoing webhook HMAC token
 
