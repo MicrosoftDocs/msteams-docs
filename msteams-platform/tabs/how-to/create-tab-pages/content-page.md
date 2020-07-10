@@ -59,3 +59,22 @@ A task module is a modal popup-like experience that you can trigger from your ta
 ### Valid Domains
 
 Ensure that the all URL domains used in your tabs are included in the `validDomains` array in your [manifest](~/concepts/build-and-test/apps-package.md). For more information, see [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the manifest schema reference. However, be mindful that the core functionality of your tab exists within Teams and not outside of Teams.
+
+## Showing a native loading indicator
+
+Starting with manifest v1.7, you can provide a native loading indicator for your web content on desktop. You need to implement the following APIs wherever your web content is loaded in Teams to hide the loading indicator (ie: tab content, tab config dialog, tab remove dialog, task module, etc).
+
+1. To show the loading indicator, add `"showLoadingIndicator": true` in your manifest. Teams will always show a loading indicator when your app begins loading.
+2. Remember to call `microsoftTeams.initialize();`. 
+3. (This is an optional API) If you're ready to print to the screen and wish to lazy load the rest of your application's content, you can manually hide the loading indicator by you calling `microsoftTeams.appInitialization.notifyAppLoaded();`
+4. (This is a mandatory API) Finally, you should call `microsoftTeams.appInitialization.notifySuccess()` to notify Teams that your app has successfully loaded. We will then hide the loading indicator if applicable.
+5. If your application fails to load, you can call `microsoftTeams.appInitialization.notifyFailure(reason);` to let us know there was an error. We will then show an error screen to the user.
+
+``` JSON
+/* List of failure reason */
+export const enum FailedReason {
+    AuthFailed = "AuthFailed",
+    Timeout = "Timeout",
+    Other = "Other"
+}
+```
