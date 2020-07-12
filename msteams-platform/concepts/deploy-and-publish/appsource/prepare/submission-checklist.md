@@ -8,29 +8,28 @@ keywords: teams publish store office publishing checklist submission prepare
 To be listed on AppSource, your app must go through an approval process. This is a free service provided by the Microsoft Teams group that verifies that your app works as described, contains all appropriate metadata, and provides content that would be valuable to an end user. To help you achieve rapid approval, ensure your app meets the following requirements and guidelines:
 
 * **Distribution method:** Make sure your app is meant for a store. There are [other options](../../overview.md) to distribute your app without publishing to AppSource.
+* **Validation policies:** It must pass all current [AppSource validation policies](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams). Check your app against the [validation tool](#validation-tool) before submission. Please note that these policies are subject to change.
 * **App detail page:** Your app meets [App detail page checklist](detail-page-checklist.md)
 * **Tips and frequently failed cases:** Pay extra attention to these [Tips and frequently failed cases](frequently-failed-cases.md) to improve your app submission to approval time.
-* **App manifest:** Check your app manifest against the [App manifest checklist](app-manifest-checklist.md) and manifest checker in App Studio
+* **App manifest:** Check your app manifest against the [App manifest checklist](app-manifest-checklist.md).
 * **Testing and debugging:** You have fully [tested and debugged your app](../../../build-and-test/debug.md).
-* **Validation policies:** It must pass all current [AppSource validation policies](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams).  Check your app again our validation tool. It can be found on [this website](https://dev.teams.microsoft.com/appvalidation.html), [Teams toolkit](TODO) and in app studio.  Please note that these policies are subject to change.
 * **Testing notes:** Include [test notes for validation](#test-notes-for-validation)
 * **Privacy policies:** Ensure your [privacy policy, terms of use and support URLs](#privacy-policy-terms-of-use-and-support-urls) follow our guidelines.
 
 Once you have completed all of the above requirements, you can submit your package to App Source through [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource).
 
 ## Validation Tool 
-The validation tool consists a validator that allow you to Make sure you don't fail any of the test cases before you submit your app to Partner Center. Partner Center has the same set of test and will block your submission if there is any error.
+The validation tool consists a validator and a submission checklist. The tool can be found on [this website](https://dev.teams.microsoft.com/appvalidation.html), [Teams toolkit](/toolkit/visual-studio-code-overview.md) and in [App Studio](/concepts/build-and-test/app-studio-overview.md).These test cases will also be run during your submission to AppSource, so it's crucial to pass all the test cases before your submission.
 
 ### Teams app validator 
-The Validate page allows you to check your app package before submitting your app to AppSource. Simply upload the manifest package and the validation tool will check your app against all manifest related test cases. For each failed tests, the description provides a documentation link to help you fix the error.
+The Validate page allows you to check your app package before submitting your app to AppSource.Simply upload the manifest package and the validation tool will check your app against all manifest related test cases. For each failed tests, the description provides a documentation link to help you fix the error.
 
-TODO: Picture 
+<img width="450px" title="New configuration tab" src="~/assets/images/validation-tool/validator.png" />
 
 ### Preliminary checklist
 For the tests that are hard to automate, the Preliminary checklist details 7 of the most common failed test cases as well as link to a complete submission checklist.
-You can find this tool 
 
-TODO: picture
+<img width="450px" title="New configuration tab" src="~/assets/images/validation-tool/preliminary-checklist.png" />
 
 ## Privacy policy, terms of use and support URLs
 
