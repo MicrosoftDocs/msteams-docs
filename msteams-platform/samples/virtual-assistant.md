@@ -551,7 +551,7 @@ You can also leverage existing skills from [Bot Framework Solutions repository](
 ## Virtual Assistant known limitations
 
 - **EndOfConversation**. A skill should send an `endOfConversation` activity when it finishes a conversation. basis this activity, a Virtual Assistant ends context with that particular skill and gets back into Virtual Assistant's (root) context. For Book-a-room bot, there is no clear state where conversation can be ended. Hence we have not sent `endOfConversation` from Book-a-room bot and when user wants to go back to root context they can simply do that by `start over` command.
-- **Card refresh**. Card refreshes is not yet supported Virtual Assistant.
+- **Card refresh**. Card refreshes is not yet supported through Virtual Assistant.
 - **Messaging extensions**.:
   - Currently, a Virtual Assistant can support a maximum of ten commands for messaging extensions.
   - Configuration of messaging extensions is not scoped to individual commands but for the entire extension itself. This limits configuration for each individual skill through Virtual Assistant.
