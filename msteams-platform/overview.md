@@ -14,6 +14,8 @@ Apps are how you integrate Teams with your favorite features and functionality i
 
 <div align="center">
 
+<br>
+
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4AUyE]
 
 </div>
