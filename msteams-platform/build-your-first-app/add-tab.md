@@ -3,7 +3,7 @@ title: Add a tab to your first Teams app
 author: heath-hamilton
 description: Learn how to build a tab in your first Microsoft Teams app.
 ---
-# Build a tab for your first Teams app
+# Create a tab for your first Teams app
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
 
