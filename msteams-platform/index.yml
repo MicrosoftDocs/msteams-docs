@@ -17,7 +17,7 @@ metadata:
 highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
    items: 
-    - title: Microsoft Teams applications 🌻
+    - title: New to Microsoft Teams? Start here 🚀
       itemType: get-started
       url:  /microsoftteams/platform/overview
     - title:  Tabs — embedded web experiences
