@@ -72,13 +72,13 @@ The Home app authentication flow is based on user profile information stored in 
 The Teams [Single Sign-on API](../tabs/how-to/authentication/auth-aad-sso.md) is currently supported in Teams Developer Preview and will be available to the general public soon.
 
 > [!div class="nextstepaction"]
-> [Learn more about authentication for Microsoft Tabs and SSO in Teams](https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/authentication/auth-flow-tab.md)
+> [Learn more about authentication for Microsoft Tabs and SSO in Teams](../tabs/how-to/authentication/auth-flow-tab.md)
 
 ## Add capabilities
 
 1. Home app is an ASP.NET Core MVC application.
-1. **Access employee shifts** using [Microsoft Teams Shifts Graph API integration](https://docs.microsoft.com/en-us/graph/api/schedule-list-shifts?view=graph-rest-1.0&tabs=http).
-1. **Display employee tasks** using [Microsoft Planner Tasks Graph API integration](https://docs.microsoft.com/en-us/graph/api/planneruser-list-tasks?view=graph-rest-1.0&tabs=http).
+1. **Access employee shifts** using [Microsoft Teams Shifts Graph API integration](/graph/api/schedule-list-shifts?view=graph-rest-1.0&tabs=http).
+1. **Display employee tasks** using [Microsoft Planner Tasks Graph API integration](/graph/api/planneruser-list-tasks?view=graph-rest-1.0&tabs=http).
 1. **Customize Home** to create a tailored experience. For example:
 
     * The announcement feature of Home can be integrated with the Teams  [Company Communicator](../samples/app-templates.md#company-communicator) app template to share your company information and notifications within the Home app.
