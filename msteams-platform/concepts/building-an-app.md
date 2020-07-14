@@ -7,7 +7,7 @@ ms.author: anclear
 ---
 # Building an app for Microsoft Teams
 
-> [!NOTE] 🚀
+> [!NOTE] 
 > Looking to get started quickly? You can build Teams apps with the [Microsoft Teams Toolkit and Visual Studio Code](../toolkit/visual-studio-code-overview.md).
 
 Creating and distributing an app built on the Microsoft Teams Platform involves deciding what to build, building your web services, creating an app package, and distributing that package to your target end users. It will be up to an organization's administrators to decide who can access and install your app, and it will be up to your users to install your app in any particular context.
