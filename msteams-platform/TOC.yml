@@ -13,7 +13,7 @@
     href: tutorials/get-started-nodejs-app-studio.md
   - name: Create an app with the Yeoman generator
     href: tutorials/get-started-yeoman.md
-  - name: Extend the Teams client with custom apps
+  - name: Learn more about custom apps for Teams
     href: tutorials/code-samples.md   
 - name: Templates and integrations
   items: 
