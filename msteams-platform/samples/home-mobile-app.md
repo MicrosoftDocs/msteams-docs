@@ -85,7 +85,7 @@ The Teams [Single Sign-on API](../tabs/how-to/authentication/auth-aad-sso.md) is
     * [Create Power Apps](/learn/modules/get-started-with-powerapps/5-powerapps-create-first) and deeplink to your Home app.
     * Build a [SharePoint Framework](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/sharepoint-and-teams-better-together/ba-p/189593) app in Teams and deeplink features such as [News](https://support.microsoft.com/office/add-team-site-news-in-a-teams-channel-743607c0-9510-414b-8aab-1ae9ef5d3f49) to your Home app.
 
-1. **Retrieve a list of team members in the same shift** by using the Microsoft Graph List Members API. 
+1. **Retrieve a list of team members in the same shift** by using the Microsoft Graph List Members API.
 1. **Enhance the user chat experience** by creating deep links to private chats within the Home app.
 1. **[Call  Microsoft Graph photo API](/graph/api/profilephoto-get?view=graph-rest-1.0)** to display a team member’s user profile picture.  
 1. **Get user profile information** using the [Microsoft Graph Get User API](/graph/api/user-get?view=graph-rest-1.0&tabs=http).
@@ -96,7 +96,52 @@ The Teams [Single Sign-on API](../tabs/how-to/authentication/auth-aad-sso.md) is
 
 Apps in Teams are defined by an app manifest JSON file that is  bundled with required icons into an [app package](../concepts/build-and-test/apps-package.md) . You'll need an app package to upload and install your app in Teams, and to publish to either your organization's catalog or to [AppSource](https://appsource.microsoft.com).
 
-![Home app manifest](../assets/images/home-app-manifest.png)
+```json
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.7",
+  "version": "1.1.1",
+  "id": "e197a778-9520-4019-9894-7adac76d5397",
+  "packageName": "com.contoso.helloworld",
+  "developer": {
+    "name": "Microsoft",
+    "websiteUrl": "https://www.microsoft.com",
+    "privacyUrl": "https://www.microsoft.com/privacy",
+    "termsOfUseUrl": "https://www.microsoft.com/termsofuse",
+    "mpnId": "{your mpnID}"
+  },
+  "name": {
+    "short": "HOME App",
+    "full": "HOME App"
+  },
+  "description": {
+    "short": "HOME app",
+    "full": "The HOME app is a personal-branded landing experience that is pinned to the Teams mobile app, allowing your organization to provide consolidated information and the functionality of important first-party and line-of-business apps to firstline worker employees."
+  },
+  "icons": {
+    "outline": "outline.png",
+    "color": "color.png"
+  },
+  "accentColor": "#60A18E",
+  "staticTabs": [
+    {
+      "entityId": "Home",
+      "name": "Home",
+      "contentUrl": "{url}",
+      "scopes": [ "personal" ]
+    },
+    {
+      "entityId": "Learning",
+      "name": "Learning",
+      "contentUrl": "{url}",
+      "scopes": [ "personal" ]
+    }
+  ],
+  "permissions": ["identity", "messageTeamMembers"],
+  "validDomains": [""]
+  
+}
+```
 
 ### Register your Home app with Azure AD
 
