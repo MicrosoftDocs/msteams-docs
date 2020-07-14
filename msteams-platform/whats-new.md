@@ -11,6 +11,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+| 07/01/2020 |Get started building apps with the Teams Visual Studio Code Toolkit.|[Build apps with the Microsoft Teams Toolkit and Visual Studio Code](toolkit/visual-studio-code-overview.md) |
 | 05/20/2020 | Resource-specific consent permissions using Microsoft Graph APIs is in developer preview. |[Resource-specific consent (RSC) — Developer Preview](graph-api/rsc/resource-specific-consent.md) |
 | 03/24/2020 | Added support for retrieving a single member of a conversation, and additional support for retrieving paged members. | [Get Teams context for your bot](~/bots/how-to/get-teams-context.md)
 | 12/26/2019 | The `replyToId` parameter in payloads sent to a bot is no longer encrypted, allowing you to use this value to construct deeplinks to these messages. Message payloads include the encrypted values in the parameter. `legacy.replyToId`.  |
