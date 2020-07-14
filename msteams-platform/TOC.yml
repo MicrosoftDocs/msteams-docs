@@ -23,18 +23,6 @@
       href: build-your-first-app/add-messaging-extension.md
     - name: Create a bot app
       href: build-your-first-app/add-bot.md
-- name: Understanding app capabilities
-  items:
-  - name: Overview
-    href: concepts/capabilities-overview.md
-  - name: Tabs
-    href: tabs/what-are-tabs.md
-  - name: Messaging extensions
-    href: messaging-extensions/what-are-messaging-extensions.md
-  - name: Connectors
-    href: webhooks-and-connectors/what-are-webhooks-and-connectors.md 
-  - name: Bots
-    href: bots/what-are-bots.md 
 - name: App integrations and templates
   items: 
   - name: Integrating web apps
@@ -47,6 +35,18 @@
     href: samples/app-templates.md
   - name: Production-ready shifts connectors
     href: samples/shifts-wfm-connectors.md
+- name: Understanding app capabilities
+  items:
+  - name: Overview
+    href: concepts/capabilities-overview.md
+  - name: Tabs
+    href: tabs/what-are-tabs.md
+  - name: Messaging extensions
+    href: messaging-extensions/what-are-messaging-extensions.md
+  - name: Connectors
+    href: webhooks-and-connectors/what-are-webhooks-and-connectors.md 
+  - name: Bots
+    href: bots/what-are-bots.md 
 - name: Planning your app
   items:
   - name: Get started
