@@ -72,7 +72,7 @@ Conversations often result in the need to do something (create an order, review 
 
 ### Send reminders people notice
 
-Sick of sending reminders through email? Do it through Teams instead! Send notifications to individuals, a channel, the Activity Feed, or anyone who subscribes to them with [connectors](webhooks-and-connectors/what-are-webhooks-and-connectors.md).
+Sick of sending reminders through email? Do it through Teams instead! Send notifications to channels and the Activity feed with [connectors](webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
 :::image type="content" source="assets/images/overview-graph.png" alt-text="Alt text describes the content of the image.":::
 
