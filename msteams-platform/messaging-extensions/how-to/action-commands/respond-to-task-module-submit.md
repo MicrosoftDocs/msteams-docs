@@ -525,7 +525,7 @@ You will receive a new `composeExtension/submitAction` message similar to the on
 
 ### User attribution for bots messages 
 
-In scenarios where a bot sends messages on behalf of a user, attributing the message to that user can help with engagement and showcase a more natural interaction flow. This feature allows you to send messages on behalf of the user who is initiating the message.
+In scenarios where a bot sends messages on behalf of a user, attributing the message to that user can help with engagement and showcase a more natural interaction flow. This feature allows you to attribute a message from your bot to a user on whose behalf it was sent.
 
 In the image below, on the left is a card message sent by a bot *without* user attribution and on the right is a card sent by a bot *with* user attribution.
 
