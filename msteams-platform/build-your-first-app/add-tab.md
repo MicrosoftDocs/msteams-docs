@@ -17,6 +17,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
 
+### Add the personal tab in your manifest 
+
+If you already picked personal tab in the toolkit, this part is filled out for you. If not, simply add in the below to indicate that you have a personal app in your app. We will go over what each of these field means 
+
+### Looking at the scaffolding
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+
 ### Code sample
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
@@ -28,6 +36,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ## Build a channel tab
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+
+### Add the channel tab in your manifest 
+
+If you already picked personal tab in the toolkit, this part is filled out for you. If not, simply add in the below to indicate that you have a personal app in your app. We will go over what each of these field means 
 
 ### Looking at the scaffolding
 
