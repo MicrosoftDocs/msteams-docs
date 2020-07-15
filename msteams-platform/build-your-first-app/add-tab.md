@@ -17,31 +17,31 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
 
-### Add the personal tab in your manifest 
+### Create a webpage for your personal tab
 
-If you already picked personal tab in the toolkit, this part is filled out for you. If not, simply add in the below to indicate that you have a personal app in your app. We will go over what each of these field means 
+Copy the following HTML and save it as `my-personal-tab.html` to the `<folder-location>`.
 
-### Looking at the scaffolding
+### Update the app manifest with personal tab details
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+If you already picked personal tab in the toolkit, this part is filled out for you. If not, simply add in the below to indicate that you have a personal app in your app. We will go over what each of these field means.
 
-### Code sample
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
-
-### Finished product
+### Understanding the personal tab scaffolding
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+
+### See the finished product
+
+Upload your app to Teams.
 
 ## Build a channel tab
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
 
-### Add the channel tab in your manifest 
+### Update the app manifest with channel tab details
 
-If you already picked personal tab in the toolkit, this part is filled out for you. If not, simply add in the below to indicate that you have a personal app in your app. We will go over what each of these field means 
+If you already picked personal tab in the toolkit, this part is filled out for you. If not, simply add in the below to indicate that you have a personal app in your app. We will go over what each of these field means
 
-### Looking at the scaffolding
+### Understanding the channel tab scaffolding
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
 

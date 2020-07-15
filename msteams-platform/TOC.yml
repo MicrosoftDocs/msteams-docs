@@ -6,6 +6,7 @@
     - name: What's new?
       href: whats-new.md
 - name: Build your first app
+  expanded: true
   items:
   - name: Build and run your first app
     href: build-your-first-app/build-and-run.md
@@ -13,8 +14,6 @@
     items: 
     - name: Overview
       href: build-your-first-app/building-real-world-app.md
-    - name: Understanding the app package
-      href: build-your-first-app/understanding-app-package.md
     - name: Create a tab app
       href: build-your-first-app/add-tab.md
     - name: Create a connector app
@@ -23,18 +22,6 @@
       href: build-your-first-app/add-messaging-extension.md
     - name: Create a bot app
       href: build-your-first-app/add-bot.md
-- name: App integrations and templates
-  items: 
-  - name: Integrating web apps
-    href: samples/integrating-web-apps.md
-  - name: Importing custom Microsoft apps
-    href: samples/importing-custom-microsoft-apps.md
-  - name: Adding a Share to Teams button to your site
-    href: concepts/build-and-test/share-to-teams.md
-  - name: Production-ready app templates
-    href: samples/app-templates.md
-  - name: Production-ready shifts connectors
-    href: samples/shifts-wfm-connectors.md
 - name: Understanding app capabilities
   items:
   - name: Overview
@@ -47,6 +34,18 @@
     href: webhooks-and-connectors/what-are-webhooks-and-connectors.md 
   - name: Bots
     href: bots/what-are-bots.md 
+- name: App integrations and templates
+  items: 
+  - name: Integrating web apps
+    href: samples/integrating-web-apps.md
+  - name: Importing custom Microsoft apps
+    href: samples/importing-custom-microsoft-apps.md
+  - name: Adding a Share to Teams button to your site
+    href: concepts/build-and-test/share-to-teams.md
+  - name: Production-ready app templates
+    href: samples/app-templates.md
+  - name: Production-ready shifts connectors
+    href: samples/shifts-wfm-connectors.md
 - name: Planning your app
   items:
   - name: Get started

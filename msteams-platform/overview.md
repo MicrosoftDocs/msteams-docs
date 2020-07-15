@@ -104,6 +104,22 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 
       <div align="center">
 
+      :::image type="content" source="assets/images/overview-cta-integrate.png" alt-text="<alt text>" border="false":::
+      
+        <h3>Go with what works</h3>
+
+        Bring your favorite web apps and services into Teams for a seamless user experience.
+
+        > [!div class="nextstepaction"]
+        > [Integrate an app or service](samples/integrating-web-apps.md)
+
+      </div>
+   :::column-end:::
+
+   :::column span="":::
+
+      <div align="center">
+
         :::image type="content" source="assets/images/overview-cta-plan.png" alt-text="<alt text>" border="false":::
       
         <h3>Take it slow</h3>
@@ -115,22 +131,6 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 
       </div>
 
-   :::column-end:::
-
-   :::column span="":::
-
-      <div align="center">
-
-      :::image type="content" source="assets/images/overview-cta-integrate.png" alt-text="<alt text>" border="false":::
-      
-        <h3>Go with what works</h3>
-
-        Bring your favorite web apps and services into Teams for a seamless user experience.
-
-        > [!div class="nextstepaction"]
-        > [Integrate an app or service](samples/integrating-web-apps.md)
-
-      </div>
    :::column-end:::
 :::row-end:::
 
