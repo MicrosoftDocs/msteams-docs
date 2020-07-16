@@ -100,13 +100,13 @@ The app manifest is a JSON schema that defines ...
 
 ## Continue building on your desktop
 
-Teams supports up to 10 minutes of the Codespace time. Once that time runs out, you must set up a desktop experience to continue building.
+Teams supports up to 10 minutes of the Visual Studio Codespace time. Once that time runs out, you must set up a desktop experience to continue building.
 
 :::image type="content" source="../assets/images/vs-codespace-desktop.png" alt-text="<alt text>":::
 
 ## Next step
 
-Congratulations! You have a functional Teams app. Add to it by following any of our real-world app tutorials.
+Congratulations! You have a basic functional Teams app. Learn how to add features to it with our real-world app tutorials.
 
 > [!div class="nextstepaction"]
-> [Build a real-world app](../build-your-first-app/building-real-world-app.md)
+> [Building a real-world Teams app](../build-your-first-app/building-real-world-app.md)

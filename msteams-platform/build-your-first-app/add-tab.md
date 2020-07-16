@@ -13,6 +13,10 @@ Tabs are a simple way to surface your data in Teams.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
 
+## Before you begin
+
+You need a running "Hello, World!" Teams app to get started. If you don't have one, see [build and run your first app](../build-your-first-app/build-and-run.md).
+
 ## Build a personal tab
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
@@ -31,7 +35,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ### See the finished product
 
-Upload your app to Teams.
+Upload and view your app in Teams.
 
 ## Build a channel tab
 
@@ -45,7 +49,11 @@ If you already picked personal tab in the toolkit, this part is filled out for y
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
 
-## Next step
+### See the finished product
+
+Upload and view your app in Teams.
+
+## Keep going
 
 > [!div class="nextstepaction"]
 > [Build a connector for your app](../build-your-first-app/add-connector.md)
