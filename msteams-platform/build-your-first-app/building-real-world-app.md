@@ -3,7 +3,7 @@ title: Building a real-world Teams app
 author: heath-hamilton
 description: Tutorial for building a real-world Microsoft Teams app
 ---
-# Building a real-world Teams app
+# Build a real-world Teams app
 
 Our real-world Teams app tutorials expand on [your "Hello, World!" app](../build-your-first-app/build-and-run.md) by walking you through how to create an app people will use.
 
