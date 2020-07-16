@@ -36,7 +36,7 @@ Upload and view your app in Teams.
 ## Keep going
 
 > [!div class="nextstepaction"]
-> [Build a bot for your app](../build-your-first-app/add-bot.md)
+> [Create a bot for your app](../build-your-first-app/add-bot.md)
 
 ## Learn more
 

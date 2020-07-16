@@ -21,15 +21,15 @@ You need a running "Hello, World!" Teams app to get started. If you don't have o
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
 
-### Create a webpage for your personal tab
+### Create a webpage for your tab
 
 Copy the following HTML and save it as `my-personal-tab.html` to the `<folder-location>`.
 
-### Update the app manifest with personal tab details
+### Update the app manifest
 
 If you already picked personal tab in the toolkit, this part is filled out for you. If not, simply add in the below to indicate that you have a personal app in your app. We will go over what each of these field means.
 
-### Understanding the personal tab scaffolding
+### Understanding the app scaffolding
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
 
@@ -41,11 +41,11 @@ Upload and view your app in Teams.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
 
-### Update the app manifest with channel tab details
+### Update the app manifest
 
 If you already picked personal tab in the toolkit, this part is filled out for you. If not, simply add in the below to indicate that you have a personal app in your app. We will go over what each of these field means
 
-### Understanding the channel tab scaffolding
+### Understanding the app scaffolding
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
 
@@ -56,7 +56,7 @@ Upload and view your app in Teams.
 ## Keep going
 
 > [!div class="nextstepaction"]
-> [Build a connector for your app](../build-your-first-app/add-connector.md)
+> [Create a connector for your app](../build-your-first-app/add-connector.md)
 
 ## Learn more
 

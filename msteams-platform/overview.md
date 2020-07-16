@@ -10,7 +10,7 @@ ms.author: anclear
 
 Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather and work.
 
-Apps are how you integrate Teams with your favorite features and functionality in other apps and services. You also can create standalone apps that simply extend what Teams already does to fit your needs.
+Apps are how you extend Teams to fit your needs. You can create something brand new for Teams or simply integrate features in your favorite apps and services.
 
 <div align="center">
 
@@ -22,13 +22,13 @@ Apps are how you integrate Teams with your favorite features and functionality i
 
 ## What can Teams apps do?
 
-People discover and use Teams apps through a set of capabilities that include tabs, messaging extensions, bots, and connectors. Your app can have one or a combination of Teams capabilities. You can specify your app's scope for only personal workspaces or expand it to group chats and team activities.
+People discover and use Teams apps through a set of core capabilities that include tabs, messaging extensions, bots, and connectors. Your app can use one or a combination of capabilities. You can specify your app's scope for only personal workspaces or expand it to group chats and team channel activities.
 
 Some apps are simple (send notifications), while others are complex (view patient records). When planning your app, remember that Teams is a collaboration hub. The best Teams apps help people express themselves and work better together.
 
 :::row:::
    :::column span="1":::
-      ![alt_text](assets/images/overview-tabs.png)
+      ![Conceptual representation of what tabs look like in the Teams client.](assets/images/overview-tabs.png)
    :::column-end:::
    :::column span="1":::
    :::column-end:::
@@ -40,7 +40,7 @@ Sometimes you just need to make things easier to find. Display an important webp
 
 :::row:::
    :::column span="1":::
-      ![alt_text](assets\images\overview-messaging.png)
+      ![Conceptual representation of what messaging extensions look like in the Teams client.](assets\images\overview-messaging.png)
    :::column-end:::
    :::column span="1":::
    :::column-end:::
@@ -48,11 +48,11 @@ Sometimes you just need to make things easier to find. Display an important webp
 
 ### Collaborate on everything in one place
 
-A core benefit of Teams apps is pulling information somewhere outside Teams into a conversation. For example, an app that uses [messaging extensions](messaging-extensions/what-are-messaging-extensions.md) allows people to share rich, easily digestible content from an essential tool or system without leaving the Teams chat.
+A core benefit of Teams apps is pulling information somewhere outside Teams into a conversation. For example, an app that uses [messaging extensions](messaging-extensions/what-are-messaging-extensions.md) allows people to share rich, easily digestible content from an essential tool or system without leaving the chat.
 
 :::row:::
    :::column span="1":::
-      ![alt_text](assets/images/overview-bots.png)
+      ![Conceptual representation of what bots look like in the Teams client.](assets/images/overview-bots.png)
    :::column-end:::
    :::column span="1":::
    :::column-end:::
@@ -64,7 +64,7 @@ Conversations often result in the need to do something (create an order, review 
 
 :::row:::
    :::column span="1":::
-      ![alt_text](assets/images/overview-connectors.png)
+      ![Conceptual representation of what connectors look like in the Teams client.](assets/images/overview-connectors.png)
    :::column-end:::
    :::column span="1":::
    :::column-end:::
@@ -74,7 +74,7 @@ Conversations often result in the need to do something (create an order, review 
 
 Sick of sending reminders through email? Do it through Teams instead! Send notifications to channels and the Activity feed with [connectors](webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
-:::image type="content" source="assets/images/overview-graph.png" alt-text="Alt text describes the content of the image." border="false":::
+:::image type="content" source="assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph REST API for Teams." border="false":::
 
 ### Automate and manage activity
 
