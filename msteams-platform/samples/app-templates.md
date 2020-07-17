@@ -106,6 +106,14 @@ This app also enables easy sharing of images/GIFs/stickers across teams without 
 
 ![Stickers app](../assets/images/stickers.png)
 
+## E-Prescriptions &#9734;
+
+E-Prescriptions makes virtual medical visits easier for patients and health-care providers. Created using the Microsoft Power Platform, providers can use the app to generate and email prescriptions directly to patients.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-eprescription)
+
+:::image type="content" source="../assets/images/e-prescriptions-app-template.png" alt-text="Screenshot of the E-Prescriptions app. Shows how a health-care provider can select a generate button to order a prescription for a patient.":::
+
 ## Expert Finder
 
 Expert Finder is a [Microsoft Teams bot](../bots/what-are-bots.md) that identifies specific organization members based on their skills, interests, and education attributes. Members find experts within an organization  that match a keyword search of Azure Active Directory user profiles.
