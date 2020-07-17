@@ -12,13 +12,9 @@ Microsoft Teams apps bring key information, common tools, and trusted processes 
 
 Apps are how you extend Teams to fit your needs. You can create something brand new for Teams or simply integrate features in your favorite apps and services.
 
-<div align="center">
-
 <br>
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4AUyE]
-
-</div>
 
 ## What can Teams apps do?
 
