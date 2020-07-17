@@ -8,7 +8,7 @@ ms.author: anclear
 ---
 # What are Microsoft Teams apps?
 
-Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather and work.
+Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work.
 
 Apps are how you extend Teams to fit your needs. You can create something brand new for Teams or simply integrate features in your favorite apps and services.
 
@@ -72,11 +72,11 @@ Conversations often result in the need to do something (create an order, review 
 
 ### Send reminders people notice
 
-Sick of sending reminders through email? Do it through Teams instead! Send notifications to channels and the Activity feed with [connectors](webhooks-and-connectors/what-are-webhooks-and-connectors.md).
+Sick of sending reminders through email? Do it through Teams instead! With [connectors](webhooks-and-connectors/what-are-webhooks-and-connectors.md), you can create webhooks for sending notifications to channels and the Activity feed.
 
 :::image type="content" source="assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph REST API for Teams." border="false":::
 
-### Automate and manage activity
+### Automate and manage user activities and admin processes
 
 The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent.md) gives your apps increased power and flexibility. For example, an app can build teams automatically based on some user input. Admin apps, meanwhile, can help with a variety of management tasks, including governance, security, usage data, and sentiment analysis.
 
