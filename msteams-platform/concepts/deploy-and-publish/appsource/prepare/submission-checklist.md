@@ -22,14 +22,14 @@ Once you have completed all of the above requirements, you can submit your packa
 The validation tool consists a validator and a submission checklist. The tool can be found on [this website](https://dev.teams.microsoft.com/appvalidation.html), [Teams toolkit](/toolkit/visual-studio-code-overview.md) and in [App Studio](/concepts/build-and-test/app-studio-overview.md).These test cases will also be run during your submission to AppSource, so it's crucial to pass all the test cases before your submission.
 
 ### Teams app validator 
-The Validate page allows you to check your app package before submitting your app to AppSource.Simply upload the manifest package and the validation tool will check your app against all manifest related test cases. For each failed tests, the description provides a documentation link to help you fix the error.
+The Validate page allows you to check your app package before submitting your app to AppSource. Simply upload the manifest package and the validation tool will check your app against all manifest related test cases. For each failed tests, the description provides a documentation link to help you fix the error.
 
-<img width="450px" title="New configuration tab" src="~/assets/images/validation-tool/validator.png" />
+<img width="450px" title="Validation tool" src="~/assets/images/validation-tool/validator.png" />
 
 ### Preliminary checklist
 For the tests that are hard to automate, the Preliminary checklist details 7 of the most common failed test cases as well as link to a complete submission checklist.
 
-<img width="450px" title="New configuration tab" src="~/assets/images/validation-tool/preliminary-checklist.png" />
+<img width="450px" title="Preliminary checklist" src="~/assets/images/validation-tool/preliminary-checklist.png" />
 
 ## Privacy policy, terms of use and support URLs
 
