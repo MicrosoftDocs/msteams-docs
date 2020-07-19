@@ -59,3 +59,27 @@ A task module is a modal popup-like experience that you can trigger from your ta
 ### Valid Domains
 
 Ensure that the all URL domains used in your tabs are included in the `validDomains` array in your [manifest](~/concepts/build-and-test/apps-package.md). For more information, see [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the manifest schema reference. However, be mindful that the core functionality of your tab exists within Teams and not outside of Teams.
+
+## Showing a native loading indicator
+
+Starting with [manifest schema v1.7](../../../resources/schema/manifest-schema.md), you can provide a [native loading indicator](../../../resources/schema/manifest-schema.md#showloadingindicator) wherever your web content is loaded in Teams, e.g., [tab content page](#integrate-your-code-with-teams), [configuration page](configuration-page.md), [removal page](removal-page.md) and [task modules in tabs](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
+
+> [!NOTE]
+> If you indicate  `"showLoadingIndicator : true`  in your app manifest, then all tab configuration, content, and removal pages and all iframe-based task modules must follow the mandatory protocol, below:
+
+1. To show the loading indicator, add `"showLoadingIndicator": true` to your manifest. 
+2. Remember to call `microsoftTeams.initialize();`.
+3. **Optional**. If you're ready to print to the screen and wish to lazy load the rest of your application's content, you can manually hide the loading indicator by calling `microsoftTeams.appInitialization.notifyAppLoaded();`
+4. **Mandatory**. Finally, call `microsoftTeams.appInitialization.notifySuccess()` to notify Teams that your app has successfully loaded. Teams will then hide the loading indicator if applicable. If  `notifySuccess`  is not called within 30 seconds, it will be assumed that your app timed out and an error screen with a retry option will appear.
+5. If your application fails to load, you can call `microsoftTeams.appInitialization.notifyFailure(reason);` to let Teams know there was an error. An error screen will then be shown to the user:
+
+```typescript
+``
+/* List of failure reasons */
+export const enum FailedReason {
+    AuthFailed = "AuthFailed",
+    Timeout = "Timeout",
+    Other = "Other"
+}
+```
+>

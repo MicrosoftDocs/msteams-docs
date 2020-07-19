@@ -445,7 +445,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
       const attachmentContent = activityPreview.attachments[0].content;
       const userText = attachmentContent.body[1].text;
       const choiceSet = attachmentContent.body[3];
-      
+
       const submitData = {
         MultiSelect: choiceSet.isMultiSelect ? 'true' : 'false',
         Option1: choiceSet.choices[0].title,
@@ -453,7 +453,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
         Option3: choiceSet.choices[2].title,
         Question: userText
       };
-    
+
       const adaptiveCard = CardFactory.adaptiveCard({
         actions: [
           { type: 'Action.Submit', title: 'Submit', data: { submitLocation: 'messagingExtensionSubmit' } }
@@ -482,7 +482,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
               { itemId: 0, mentionType: 'person', mri: context.activity.from.id, displayname: context.activity.from.name }
           ]
       }};
-    
+
       await context.sendActivity(responseActivity);
     }
 }
@@ -523,6 +523,61 @@ You will receive a new `composeExtension/submitAction` message similar to the on
 
 * * *
 
+### User attribution for bots messages 
+
+In scenarios where a bot sends messages on behalf of a user, attributing the message to that user can help with engagement and showcase a more natural interaction flow. This feature allows you to attribute a message from your bot to a user on whose behalf it was sent.
+
+In the image below, on the left is a card message sent by a bot *without* user attribution and on the right is a card sent by a bot *with* user attribution.
+
+![Screenshot](../../../assets/images/messaging-extension/user-attribution-bots.png)
+
+To use user attribution in teams, you need to add the `OnBehalfOf` mention entity to `ChannelData` in your `Activity` payload that is sent to Teams.
+
+# [C#/.NET](#tab/dotnet-1)
+
+```csharp
+    OnBehalfOf = new []
+    {
+      new
+      {
+        ItemId = 0,
+        MentionType = "person",
+        Mri = turnContext.Activity.From.Id,
+        DisplayName = turnContext.Activity.From.Name
+      }  
+    }
+
+```
+
+# [JSON](#tab/json-1)
+
+```json
+{
+    "text": "Hello World!",
+    "ChannelData": {
+        "OnBehalfOf": [{
+            "itemid": 0,
+            "mentionType": "person",
+            "mri": "29:orgid:89e6508d-6c0f-4ffe-9f6a-b58416d965ae",
+            "displayName": "Sowrabh N R S"
+        }]
+    }
+}
+```
+
+* * *
+
+Below is a description of the entities in the `OnBehalfOf` of Array:
+
+#### Details of  `OnBehalfOf` entity schema
+
+|Field|Type|Description|
+|:---|:---|:---|
+|`itemId`|Integer|Should be 0|
+|`mentionType`|String|Should be "person"|
+|`mri`|String|Message resource identifier​ (MRI) of the person on whose behalf the message is sent. Message sender name would appear as "\<user\> via \<bot name\>".|
+|`displayName`|String|Name of the person. Used as fallback in case name resolution is unavailable.|
+  
 ## Next Steps
 
 Add a search command

@@ -42,4 +42,4 @@ Don't just display text to users. Have something they can interact with and perf
 
 ### Keep users in the app context
 
-If a card is not enough and you need to provide a link for more information, consider opening a tab instead of opening a browser for a better user experience. *See* [Extend you Teams app wit a custom tab](../../tabs/how-to/add-tab.md)
+If a card is not enough and you need to provide a link for more information, consider opening a tab instead of opening a browser for a better user experience. *See* [Extend your Teams app with a custom tab](../../tabs/how-to/add-tab.md)
