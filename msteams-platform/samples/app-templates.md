@@ -108,7 +108,7 @@ This app also enables easy sharing of images/GIFs/stickers across teams without 
 
 ## E-Prescriptions &#9734;
 
-E-Prescriptions makes virtual medical visits easier for patients and health-care providers. Created using the Microsoft Power Platform, providers can use this app in Microsoft Teams to generate and email prescriptions directly to patients.
+E-Prescriptions is a Power App template that enhances the telemedicine and virtual care landscape by automating the process of issuing e-prescriptions to patients. Medical professionals can quickly review appointments, generate e-prescriptions, and send emails with e-prescription attachments to patients directly within the Teams platform.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-eprescription)
 
