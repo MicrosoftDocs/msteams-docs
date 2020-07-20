@@ -37,7 +37,7 @@ To manage permissions in desktop, navigate to Settings > Permissions
 ![Device Permissions settings screen](~/assets/images/tabs/device-permissions.png)
 
 To manage permissiosn in mobile, navigate to Settings > App permissions > [App name]
-![Device Permissions settings screen](~/assets/images/tabs/device-permissions.png)
+![Device Permissions settings screen](~/assets/images/tabs/mobile-device-permissions.png)
 
 ## Properties
 
