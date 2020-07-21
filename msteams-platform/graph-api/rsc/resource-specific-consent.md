@@ -36,7 +36,7 @@ Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration t
 >[!NOTE]
 >Resource-specific permissions are only available to Teams apps installed on the Teams client and are currently not part of the Azure Active Directory portal.
 
-## Enabling resource-specific consent in your application
+## Enable resource-specific consent in your application
 
 The steps for enabling RSC in your application are as follows:
 
