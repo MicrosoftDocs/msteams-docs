@@ -32,7 +32,10 @@ Microsoft Graph [teamsAppInstallationresource type](/graph/api/resources/teamsap
 |`TeamsAppInstallation.ReadWriteSelfForTeam.All`|Allows a Teams app to read, install, upgrade, and uninstall itself in any **team**, without a prior sign in or use.|
 
 >[!NOTE]
-> Your bot must have _application permissions_ rather than _user delegated permissions_ because the installation is not for yourself but for other users.  An Azure AD tenant administrator must [explicitly grant permissions to an application](/graph/security-authorization#grant-permissions-to-an-application). After an application is granted permissions, _all_ members of the Azure AD tenant will gain the granted permissions.
+>
+> * Your bot must have _application permissions_ not _user delegated permissions_ because the installation is not for yourself but for others.
+>
+> * An Azure AD tenant administrator must [explicitly grant permissions to an application](/graph/security-authorization#grant-permissions-to-an-application). After an application is granted permissions, _all_ members of the Azure AD tenant will gain the granted permissions.
 
 ## Enable proactive app installation and messaging
 
