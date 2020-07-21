@@ -72,7 +72,7 @@ Sick of sending reminders through email? Do it through Teams instead! With [conn
 
 :::image type="content" source="assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph REST API for Teams." border="false":::
 
-### Automate and manage user activities and admin processes
+### Manage user activities and admin processes
 
 The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent.md) gives your apps increased power and flexibility. For example, an app can build teams automatically based on some user input. Admin apps, meanwhile, can help with a variety of management tasks, including governance, security, usage data, and sentiment analysis.
 
