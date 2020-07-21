@@ -7,7 +7,7 @@ ms.author: lajanuar
 ms.topic: Overview
 keywords: teams proactive messaging chat installation Graph
 ---
-# Use Microsoft Graph to enable proactive bot installation and messaging in Teams (Private Preview)
+# Enable proactive bot installation and messaging in Teams with Microsoft Graph(Private Preview)
 
 >[!NOTE]
 > Microsoft Graph private preview permissions may not achieve general availability status and currently should not be used in production.
