@@ -40,7 +40,7 @@ Microsoft Graph [teamsAppInstallationresource type](/graph/api/resources/teamsap
 ## Enable proactive app installation and messaging
 
  > [!IMPORTANT]
-> Microsoft Graph will only install apps published in your organization's [app catalog](../../concepts/deploy-and-publish/overview#publish-to-your-organizations-app-catalog) or [AppSource](https://appsource.microsoft.com/).
+> Microsoft Graph will only install apps published in your organization's [app catalog](../../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog) or [AppSource](https://appsource.microsoft.com/).
 
 ### ✔ Determine whether your bot is currently installed for all intended users
 
@@ -73,7 +73,7 @@ POST /users/{user-id}/teamwork/installedApps
 
 Once your bot has been added to for a user or team and has acquired the necessary user  information, it can [Send proactive messsages](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp)
 >[!TIP]
-> The production-ready [Company Communicator](../..//samples/app-templates#company-communicator) app template enables broadcast messaging, is a good foundation for building your proactive bot application.
+> The production-ready [Company Communicator](../..//samples/app-templates.md#company-communicator) app template enables broadcast messaging, is a good foundation for building your proactive bot application.
 >>
 > [!div class="nextstepaction"]
 > [View Teams proactive messaging code samples](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
