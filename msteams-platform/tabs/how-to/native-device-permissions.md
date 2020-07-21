@@ -8,18 +8,17 @@ keywords: teams tabs development
 
 You might want to enrich your tab with features that require access native device functionality like:
 
-* Camera
-* Microphone
-* Location
-* Notifications
+> [!div class="checklist"]
+> * Camera
+> * Microphone
+> * Location
+> * Notifications
 
 > [!IMPORTANT]
 >
-> Mobile client supports only camera and location through native device capabilities but on all app constructs including tabs. It supports camera to capture only images through [captureImage](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-) API.
->
-> The geolocation API is currently not fully supported on all desktop clients.
-
-
+> * Teams mobile client currently supports `camera` and `location`  only through native device capabilities and is available on all app constructs including tabs. </br>
+> * Support for `camera` image capture is enabled by the [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-). 
+> * The **geolocation API** is currently not fully supported on all desktop clients.
 
 ## Device permissions
 
@@ -33,10 +32,20 @@ While access to these features are standard in most modern web browsers, you nee
 
 ## Manage permissions
 
-To manage permissions in desktop, navigate to Settings > Permissions
+# [Desktop](#tab/desktop)
+
+1. Open Teams,.
+1. Navigate to the upper right corner and select your profile icon.
+1. Select **Settings** -> **Permissions** from the drop-down menu.
+
 ![Device Permissions settings screen](~/assets/images/tabs/device-permissions.png)
 
-To manage permissions in mobile, navigate to Settings > App permissions > [App name]
+# [Mobile](#tab/mobile)
+
+
+1. Open Teams 
+1. Navigate to the upper left corner of the screen and select the menu icon in the
+1. navigate to Settings > App permissions > [App name]
 ![Device Permissions settings screen](../../assets/images/tabs/device-permissions.png)
 
 ## Properties
