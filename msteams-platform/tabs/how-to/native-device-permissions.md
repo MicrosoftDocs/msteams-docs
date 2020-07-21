@@ -15,7 +15,7 @@ You might want to enrich your tab with features that require access native devic
 
 > [!IMPORTANT]
 >
-> Mobile client supports only camera and location through native device capabilities but on all app constructs including tabs. It supports camera to capture only images through [captureImage](https://docs.microsoft.com/en-us/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-) API.
+> Mobile client supports only camera and location through native device capabilities but on all app constructs including tabs. It supports camera to capture only images through [captureImage](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-) API.
 >
 > The geolocation API is currently not fully supported on all desktop clients.
 
@@ -36,8 +36,8 @@ While access to these features are standard in most modern web browsers, you nee
 To manage permissions in desktop, navigate to Settings > Permissions
 ![Device Permissions settings screen](~/assets/images/tabs/device-permissions.png)
 
-To manage permissiosn in mobile, navigate to Settings > App permissions > [App name]
-![Device Permissions settings screen](~/assets/images/tabs/mobile-device-permissions.png)
+To manage permissions in mobile, navigate to Settings > App permissions > [App name]
+![Device Permissions settings screen](../../assets/images/tabs/device-permissions.png)
 
 ## Properties
 
