@@ -79,7 +79,9 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 ## Get started
 
 :::row:::
-   :::column span="":::
+    :::column span="":::
+    :::column-end:::
+    :::column span="":::
 
       <div align="center">
 
@@ -94,8 +96,12 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 
       </div>
 
-   :::column-end:::
+    :::column-end:::
+    :::column span="":::
+    :::column-end:::
+:::row-end:::
 
+:::row:::
    :::column span="":::
 
       <div align="center">
@@ -110,6 +116,12 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
         > [Integrate an app or service](samples/integrating-web-apps.md)
 
       </div>
+
+   :::column-end:::
+
+   :::column span="":::
+
+
    :::column-end:::
 
    :::column span="":::
