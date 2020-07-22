@@ -108,9 +108,9 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 
       :::image type="content" source="assets/images/overview-cta-integrate.png" alt-text="<alt text>" border="false":::
       
-        <h3>Bring it together</h3>
+        <h3>Best of both worlds</h3>
 
-        Incorporate your favorite web apps and services into Teams for a seamless user experience.
+        Bring your favorite web apps and services into Teams for a seamless user experience.
 
         > [!div class="nextstepaction"]
         > [Integrate an app or service](samples/integrating-web-apps.md)
@@ -130,9 +130,9 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 
         :::image type="content" source="assets/images/overview-cta-plan.png" alt-text="<alt text>" border="false":::
       
-        <h3>Take your time</h3>
+        <h3>Develop like a pro</h3>
 
-        Walk through how to plan, design, build, and publish a Teams app from scratch.
+        Walk through how to plan, design, build, and publish a great Teams app.
 
         > [!div class="nextstepaction"]
         > [Start planning your app](planning-your-app/planning-overview.md)
