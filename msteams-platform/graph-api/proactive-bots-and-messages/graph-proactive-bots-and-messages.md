@@ -111,7 +111,7 @@ The **id** property of the result is the `chatId`.
 
 Once your bot has been added to for a user or team and has acquired the necessary user  information, it can [send proactive messages](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp)
 
-# [C#/.NET](tab/csharp)
+# [C#/.NET](#tab/csharp)
 
 The following code snippet is from the [Microsoft Bot Framework Samples for C#.](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/16.proactive-messages)
 
