@@ -68,13 +68,13 @@ Conversations often result in the need to do something (create an order, review 
 
 ### Send reminders people notice
 
-Sick of sending reminders through email? Do it through Teams instead! With [connectors](webhooks-and-connectors/what-are-webhooks-and-connectors.md), you can create webhooks for sending notifications to channels and the Activity feed.
+Sick of sending reminders through email? Do it through Teams instead! With [connectors](webhooks-and-connectors/what-are-webhooks-and-connectors.md), you can use incoming webhooks to send notifications to channels that also display in a user's Activity feed.
 
 :::image type="content" source="assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph REST API for Teams." border="false":::
 
-### Manage user activities and admin processes
+### Utilize Teams data
 
-The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent.md) gives your apps increased power and flexibility. For example, an app can build teams automatically based on some user input. Admin apps, meanwhile, can help with a variety of management tasks, including governance, security, usage data, and sentiment analysis.
+The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent.md) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app.
 
 ## Get started
 
@@ -102,9 +102,9 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 
       :::image type="content" source="assets/images/overview-cta-integrate.png" alt-text="<alt text>" border="false":::
       
-        <h3>Go with what works</h3>
+        <h3>Bring it together</h3>
 
-        Bring your favorite web apps and services into Teams for a seamless user experience.
+        Incorporate your favorite web apps and services into Teams for a seamless user experience.
 
         > [!div class="nextstepaction"]
         > [Integrate an app or service](samples/integrating-web-apps.md)
@@ -118,7 +118,7 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 
         :::image type="content" source="assets/images/overview-cta-plan.png" alt-text="<alt text>" border="false":::
       
-        <h3>Take it slow</h3>
+        <h3>Take your time</h3>
 
         Walk through how to plan, design, build, and publish a Teams app from scratch.
 
@@ -132,7 +132,7 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 
 ## Next steps
 
-Get help at any point during app development.
+Get help at any point while creating your Teams app.
 
 1. [Planning your app](planning-your-app/planning-overview.md)
 1. [Designing your app](designing-your-app/designing-overview.md)
