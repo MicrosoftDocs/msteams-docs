@@ -22,84 +22,37 @@ People discover and use Teams apps through a set of core capabilities that inclu
 
 Some apps are simple (send notifications), while others are complex (view patient records). When planning your app, remember that Teams is a collaboration hub. The best Teams apps help people express themselves and work better together.
 
-:::row:::
-   :::column span="1":::
-      ![Conceptual representation of what tabs look like in the Teams client.](assets/images/overview-tabs.png)
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
-:::row-end:::
-
 ### Get information more conveniently
+
+:::image type="content" source="assets/images/overview-tabs.png" alt-text="Conceptual representation of what tabs look like in the Teams client." border="false":::
 
 Sometimes you just need to make things easier to find. Display an important webpage in a [tab](tabs/what-are-tabs.md), which provides a full-screen web experience for static and dynamic content in Teams.
 
-:::row:::
-   :::column span="1":::
-      ![Conceptual representation of what messaging extensions look like in the Teams client.](assets\images\overview-messaging.png)
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
-:::row-end:::
-
 ### Collaborate on everything in one place
+
+:::image type="content" source="assets\images\overview-messaging.png" alt-text="Conceptual representation of what messaging extensions look like in the Teams client." border="false":::
 
 A core benefit of Teams apps is pulling information somewhere outside Teams into a conversation. For example, an app that uses [messaging extensions](messaging-extensions/what-are-messaging-extensions.md) allows people to share rich, easily digestible content from an essential tool or system without leaving the chat.
 
-:::row:::
-   :::column span="1":::
-      ![Conceptual representation of what bots look like in the Teams client.](assets/images/overview-bots.png)
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
-:::row-end:::
-
 ### Turn words into actions
+
+:::image type="content" source="assets/images/overview-bots.png" alt-text="Conceptual representation of what bots look like in the Teams client." border="false":::
 
 Conversations often result in the need to do something (create an order, review my code, etc.). A [bot](bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.
 
-:::row:::
-   :::column span="1":::
-      ![Conceptual representation of what connectors look like in the Teams client.](assets/images/overview-connectors.png)
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
-:::row-end:::
-
 ### Send reminders people notice
+
+:::image type="content" source="assets/images/overview-connectors.png" alt-text="Conceptual representation of what connectors look like in the Teams client." border="false":::
 
 Sick of sending reminders through email? Do it through Teams instead! With [connectors](webhooks-and-connectors/what-are-webhooks-and-connectors.md), you can use incoming webhooks to send notifications to channels that also display in a user's Activity feed.
 
-:::image type="content" source="assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph REST API for Teams." border="false":::
-
 ### Utilize Teams data
+
+:::image type="content" source="assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph REST API for Teams." border="false":::
 
 The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent.md) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app.
 
 ## Get started
-
-:::row:::
-    :::column span="":::
-    :::column-end:::
-    :::column span="":::
-
-      <div align="center">
-
-      :::image type="content" source="assets/images/overview-cta-build.png" alt-text="<alt text>" border="false":::
-      
-        <h3>Off and running</h3>
-
-        Get to know your way around the platform by creating a basic Teams app.
-
-        > [!div class="nextstepaction"]
-        > [Build your first app now](build-your-first-app/build-and-run.md)
-
-      </div>
-
-    :::column-end:::
-    :::column span="":::
-    :::column-end:::
-:::row-end:::
 
 :::row:::
    :::column span="":::
@@ -121,6 +74,18 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 
    :::column span="":::
 
+      <div align="center">
+
+      :::image type="content" source="assets/images/overview-cta-build.png" alt-text="<alt text>" border="false":::
+      
+        <h3>Off and running</h3>
+
+        Get to know your way around the platform by creating a basic Teams app.
+
+        > [!div class="nextstepaction"]
+        > [Build your first app now](build-your-first-app/build-and-run.md)
+
+      </div>
 
    :::column-end:::
 
