@@ -6,9 +6,12 @@ ms.topic: tutorial
 ---
 # Create a tab for your first Teams app
 
-The tab capability is a simple way to surface content in your app by essentially embedding a webpage in Teams.
+Tabs are a simple way to surface content in your app by essentially embedding a webpage in Teams.
 
-There are two types of tabs:
+You can build two types of tabs:
+
+* **Personal tab**: Display the same content in the same place for every user.
+* **Channel tab**: Allow users in a channel or group chat to 
 
 :::image type="content" source="../assets/images/overview-tabs.png" alt-text="Alt text describes the content of the image.":::
 
@@ -16,7 +19,7 @@ There are two types of tabs:
 
 You need a running "Hello, World!" Teams app to get started. If you don't have one, see [build and run your first app](../build-your-first-app/build-and-run.md).
 
-#### [Personal app](#tab/personal app)
+#### [Personal app](#tab/personal-app)
 
 ## Build a personal tab
 
@@ -48,7 +51,7 @@ Upload and view your app in Teams.
 
 Links to related advanced capabilities and features.
 
-#### [Channel app](#tab/channel tab)
+#### [Channel app](#tab/channel-tab)
 
 ## Build a channel tab
 
@@ -66,9 +69,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Upload and view your app in Teams.
 
+---
+
 ## Build another feature
 
 > [!div class="nextstepaction"]
 > [Create a connector for your app](../build-your-first-app/add-connector.md)
-
----
