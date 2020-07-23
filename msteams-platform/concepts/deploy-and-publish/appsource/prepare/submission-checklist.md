@@ -18,29 +18,41 @@ To be listed on AppSource, your app must go through an approval process. This is
 
 Once you have completed all of the above requirements, you can submit your package to App Source through [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource).
 
-## Validation Tool 
-The validation tool consists a validator and a submission checklist. The tool can be found on [this website](https://dev.teams.microsoft.com/appvalidation.html), [Teams toolkit](/toolkit/visual-studio-code-overview.md) and in [App Studio](/concepts/build-and-test/app-studio-overview.md).These test cases will also be run during your submission to AppSource, so it's crucial to pass all the test cases before your submission.
+## Teams App Validation Tool
 
-### Teams app validator 
-The Validate page allows you to check your app package before submitting your app to AppSource. Simply upload the manifest package and the validation tool will check your app against all manifest related test cases. For each failed tests, the description provides a documentation link to help you fix the error.
+The app validation tool consists of an [app validator](#teams-app-validator) and a [preliminary checklist](#preliminary-checklist). The tool replicates the same test cases used by [AppSource](/office/dev/store/submit-to-appsource-via-partner-center) to evaluate your app submission, thus  it's crucial to pass all the test cases prior to submitting your solution to AppSource for approval.The tool can be found in several areas within the Teams platform:
 
-![Validation tool](~/assets/images/validation-tool/validator.png)
+> [!div class="checklist"]
+>
+> * [**App Validator homepage**](https://dev.teams.microsoft.com/appvalidation.html)
+> * [**Teams Visual Studio Code toolkit**](/toolkit/visual-studio-code-overview.md)
+> * [**App Studio**](/concepts/build-and-test/app-studio-overview.md)
+
+### Teams app validator
+
+The **Validate** page allows you to check your app package before submission to AppSource. Simply upload your app package and the validation tool will check your app against all manifest-related test cases. For each failed test, the description provides a documentation link to help you fix the error.
+
+![Validation tool](../../../../assets/images/validation-tool/validator.png)
 
 ### Preliminary checklist
-For the tests that are hard to automate, the preliminary checklist surface the 7 of the most common failed test cases.
 
-![Preliminary checklist](~/assets/images/validation-tool/preliminary-checklist.png)
+For test scenarios that are difficult to automate, the preliminary checklist surfaces seven of the most commonly failed test cases.
+
+![Preliminary checklist](../../../../assets/images/validation-tool/preliminary-checklist.png)
 
 ## Privacy policy, terms of use and support URLs
 
 ### Privacy policy
 
 Privacy policy guidelines:
-* The privacy policy can be either specific to your app and/or add-in or an overall policy for all of your services. 
-* If you use a generic privacy policy, it must reference "Services/Applications/Platforms" to cover your Teams app as well as your website. 
-* It must include how you handle user data storage, user data retention, deletion, and security controls information.
-* It must include your contact information.
-* It should not contain broken links, beta URLs, or staging URLs. 
+
+> [!div class="checklist"]
+>
+> * The privacy policy can be specific to your app and/or an overall policy for all of your services.
+> * If you use a generic privacy policy, it must reference "services", "applications", and "platforms" to include your Teams app as well as your website.
+> * It must include how you handle user data storage, user data retention, deletion, and security controls.
+> * It must include your contact information.
+> * It should not contain broken links, beta URLs, or staging URLs.
 
 ### Terms of use
 
