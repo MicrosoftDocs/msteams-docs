@@ -9,6 +9,7 @@ keywords: teams tabs development
 You might want to enrich your tab with features that require access native device functionality like:
 
 > [!div class="checklist"]
+>
 > * Camera
 > * Microphone
 > * Location
@@ -16,7 +17,7 @@ You might want to enrich your tab with features that require access native devic
 
 > [!IMPORTANT]
 >
-> * Teams mobile client currently supports `camera` and `location`  only through native device capabilities and is available on all app constructs including tabs. </br>
+> * Currently, Teams mobile client only supports `camera` and `location`  through native device capabilities and is available on all app constructs including tabs. </br>
 > * Support for `camera` image capture is enabled by the [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-). 
 > * The **geolocation API** is currently not fully supported on all desktop clients.
 
@@ -34,19 +35,23 @@ While access to these features are standard in most modern web browsers, you nee
 
 # [Desktop](#tab/desktop)
 
-1. Open Teams,.
-1. Navigate to the upper right corner and select your profile icon.
+1. Open Teams.
+1. In the upper right corner of the window, select your profile icon.
 1. Select **Settings** -> **Permissions** from the drop-down menu.
+1. Choose your desired settings.
 
-![Device Permissions settings screen](~/assets/images/tabs/device-permissions.png)
+![Device permissions desktop settings screen](../../assets/images/tabs/device-permissions.png)
 
 # [Mobile](#tab/mobile)
 
+1. Open Teams.
+1. In the upper left corner of the screen, select the &#9776; menu icon.
+1. Select **Settings** -> **Devices**.
+1. Choose your desired settings.
 
-1. Open Teams 
-1. Navigate to the upper left corner of the screen and select the menu icon in the
-1. navigate to Settings > App permissions > [App name]
-![Device Permissions settings screen](../../assets/images/tabs/device-permissions.png)
+![Device permissions mobile settings screen](../../assets/images/tabs/mobile-device-permissions-screen.png)
+
+---
 
 ## Properties
 
