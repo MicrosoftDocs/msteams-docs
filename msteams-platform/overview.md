@@ -74,7 +74,7 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 
    :::column span="":::
 
-      <div align="center">
+      <div align="center" style="background-color: #D3D3D3;">
 
       :::image type="content" source="assets/images/overview-cta-build.png" alt-text="<alt text>" border="false":::
       
