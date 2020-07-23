@@ -74,7 +74,7 @@ GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$exp
 
 The `{teamsAppId}` is the `id` from your Teams app manifest, noted earlier — it may not be the same as your `appid` for Microsoft Graph calls or your `botId`.
 
-The request will return an empty array if the app is not installed, or an array with a single [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-beta) if it is already installed.
+This request will return an empty array if the app is not installed, or an array with a single [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-beta) if it is already installed.
 
 ### ✔ Install your app
 
@@ -89,7 +89,7 @@ POST /users/{user-id}/teamwork/installedApps
 }
 ```
 
-If the user has Microsoft Teams running, they may see the app installation right away or  a  restart may be necessary to see the installed app.
+If the user has Microsoft Teams running, they may see the app installation immediately or  a  restart may be necessary to see the installed app.
 
 ### ✔ Retrieve the conversation **chatId**
 
