@@ -6,21 +6,27 @@ ms.topic: tutorial
 ---
 # Create a tab for your first Teams app
 
-Tabs are a simple way to surface content by essentially embedded a webpage in Teams.
+The tab capability is a simple way to surface content in your app by essentially embedding a webpage in Teams.
+
+There are two types of tabs:
 
 :::image type="content" source="../assets/images/overview-tabs.png" alt-text="Alt text describes the content of the image.":::
-
-## What you'll learn
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
 
 ## Before you begin
 
 You need a running "Hello, World!" Teams app to get started. If you don't have one, see [build and run your first app](../build-your-first-app/build-and-run.md).
 
+#### [Personal app](#tab/personal app)
+
 ## Build a personal tab
 
-A personal tab 
+With personal tabs, you deliver the same web-based content to every user who installs your app.
+
+### What you'll learn
+
+* App scaffolding and manifest properties relevant to personal tabs
+* Making your app aware when the Teams theme changes
+* Authenticating users with SSO
 
 ### Create content for your tab
 
@@ -38,6 +44,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Upload and view your app in Teams.
 
+## Learn more
+
+Links to related advanced capabilities and features.
+
+#### [Channel app](#tab/channel tab)
+
 ## Build a channel tab
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
@@ -54,11 +66,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Upload and view your app in Teams.
 
-## Keep going
+## Build another feature
 
 > [!div class="nextstepaction"]
 > [Create a connector for your app](../build-your-first-app/add-connector.md)
 
-## Learn more
-
-Links to related advanced capabilities and features.
+---
