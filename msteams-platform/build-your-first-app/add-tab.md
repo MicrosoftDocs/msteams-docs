@@ -2,10 +2,11 @@
 title: Add a tab to your first Teams app
 author: heath-hamilton
 description: Learn how to build a tab in your first Microsoft Teams app.
+ms.topic: tutorial
 ---
 # Create a tab for your first Teams app
 
-Tabs are a simple way to surface your data in Teams.
+Tabs are a simple way to surface content by essentially embedded a webpage in Teams.
 
 :::image type="content" source="../assets/images/overview-tabs.png" alt-text="Alt text describes the content of the image.":::
 
@@ -19,9 +20,9 @@ You need a running "Hello, World!" Teams app to get started. If you don't have o
 
 ## Build a personal tab
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+A personal tab 
 
-### Create a webpage for your tab
+### Create content for your tab
 
 Copy the following HTML and save it as `my-personal-tab.html` to the `<folder-location>`.
 
