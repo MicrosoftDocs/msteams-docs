@@ -109,7 +109,7 @@ The **id** property of the response is the `chatId`.
 
 ### ✔ Send proactive messages
 
-Once your bot has been added for a user or team and has acquired the necessary user  information, it can [send proactive messages](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp)
+Once your bot has been added for a user or team and has acquired the necessary user  information, it can begin to [send proactive messages](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp).
 
 # [C# / .NET](#tab/csharp)
 
