@@ -19,7 +19,7 @@ You can build two types of tabs:
 
 You need a running "Hello, World!" Teams app to get started. If you don't have one, see [build and run your first app](../build-your-first-app/build-and-run.md).
 
-#### [Personal app](#tab/personal-app)
+#### [Personal tab](#tab/personal-app)
 
 ## Build a personal tab
 
@@ -51,7 +51,7 @@ Upload and view your app in Teams.
 
 Links to related advanced capabilities and features.
 
-#### [Channel app](#tab/channel-tab)
+#### [Channel tab](#tab/channel-tab)
 
 ## Build a channel tab
 
