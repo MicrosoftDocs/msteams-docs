@@ -19,7 +19,7 @@ You can build two types of tabs:
 
 You need a running "Hello, World!" Teams app to get started. If you don't have one, see [build and run your first app](../build-your-first-app/build-and-run.md).
 
-#### [Personal tab](#tab/personal-app)
+#### [Build a personal tab](#tab/personal-app)
 
 ## Build a personal tab
 
@@ -96,6 +96,8 @@ Go to the `src/components` directory and open `Tab.js`. Locate the `render()` fu
 
 Save your changes to see the new tab content display in Teams.
 
+:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-page.png" alt-text="<alt text>":::
+
 ### Update the tab theme
 
 Good apps feel native to Teams, so it's important your tab adapts to the Teams theme your users select: default (light), dark, or high contrast. With the [Teams JavaScript client SDK](/javascript/api/overview/msteams-client), you can make your app aware of theme changes using the `context` interface's `theme` property.
@@ -126,25 +128,21 @@ Insert the statement within the `.getContext` call (see snippet for exact locati
   [NEED DEV HELP]
 ```
 
+When a user changes the Teams theme, your tab's theme will be in sync.
+
 ### Provide SSO authentication
 
-Some text. 
+Some text.
 
 Print person's name in a screenshot
-
-### See the finished product
-
-In the Teams client, select your app to see the personal tab you created.
-
-[INSERT IMAGE]
 
 ## Learn more
 
 * [Embed content from an existing web app or webpage](../tabs/how-to/add-tab#tab-requirements): We showed you how to create new content for a personal tab, but you can also load content from an external URL.
-* [Create a seamless experience for your tab](): See the recommended guidelines for designing Teams tabs.
-* [Build for tabs on mobile](): Learn about other considerations for using tabs on a smartphone or tablet.
+* [Create a seamless experience for your tab](../tabs/design/tabs.md): See the recommended guidelines for designing Teams tabs.
+* [Build for tabs on mobile](../tabs/design/tabs-mobile.md): Understand how to develop tabs for smartphones and tablets.
 
-#### [Channel tab](#tab/channel-tab)
+#### [Build a channel tab](#tab/channel-tab)
 
 ## Build a channel tab
 
