@@ -10,8 +10,8 @@ Tabs are a simple way to surface content in your app by essentially embedding a 
 
 You can build two types of tabs:
 
-* **Personal tab**: Display the same content in the same place for every user.
-* **Channel tab**: Allow users in a channel or group chat to 
+* **Personal tab**: Displays the same content in the same place for each user.
+* **Channel tab**: Displays content based on how a user configured the tab for a channel or group chat.
 
 :::image type="content" source="../assets/images/overview-tabs.png" alt-text="Alt text describes the content of the image.":::
 
@@ -23,33 +23,52 @@ You need a running "Hello, World!" Teams app to get started. If you don't have o
 
 ## Build a personal tab
 
-With personal tabs, you deliver the same web-based content to every user who installs your app.
+In this tutorial, you'll build a personal tab that provides a list of important contacts for an organization.
 
 ### What you'll learn
 
-* App scaffolding and manifest properties relevant to personal tabs
-* Making your app aware when the Teams theme changes
+* App manifest properties and scaffolding relevant to personal tabs
+* How to make your app aware when a user changes the theme in Teams
 * Authenticating users with SSO
 
-### Create content for your tab
+### Understanding the app scaffolding and manifest
 
-Copy the following HTML and save it as `my-personal-tab.html` to the `<folder-location>`.
+Some text
 
-### Update the app manifest
+### Create your tab content
 
-If you already picked personal tab in the toolkit, this part is filled out for you. If not, simply add in the below to indicate that you have a personal app in your app. We will go over what each of these field means.
+Copy the following HTML.
 
-### Understanding the app scaffolding
+```html
+    SOME TEXT
+```
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+Open your `Tab.js` file and paste the HTML where you see `<NEW_HTML_CONTENT>'.
+
+```Javascript
+    Some text
+```
+
+### Update the tab theme
+
+Good apps feel native to Teams, so it's important your tab matches the Teams theme your users select: default (light), dark, or high contrast.
+
+1. In `Tab.js`, go to the ... FIND CALL IN SDK
+
+### Provide SSO authentication
+
+Some text. 
+
+Print person's name in a screenshot
 
 ### See the finished product
 
-Upload and view your app in Teams.
+view your app in Teams.
 
 ## Learn more
 
-Links to related advanced capabilities and features.
+* [Embed content from an existing web app or webpage](https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/add-tab#tab-requirements): We showed you how to create new content for a personal tab, but you can also load content from an external URL.
+* [Create a seamless experience for your tab](): See the recommended guidelines for designing Teams tabs.
 
 #### [Channel tab](#tab/channel-tab)
 
