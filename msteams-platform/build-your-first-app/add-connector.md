@@ -1,9 +1,9 @@
 ---
-title: Add a connector to your first Teams app
+title: Create a connector for Teams
 author: heath-hamilton
 description: Learn how to build a connector in your first Microsoft Teams app.
 ---
-# Create a connector for your first Teams app
+# Create a connector for Teams
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
 
@@ -33,11 +33,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Upload and view your app in Teams.
 
-## Keep going
-
-> [!div class="nextstepaction"]
-> [Create a messaging extension for your app](../build-your-first-app/add-messaging-extension.md)
-
 ## Learn more
 
 Links to related advanced capabilities and features.
+
+> [!div class="nextstepaction"]
+> [Keep going: Create a messaging extension](../build-your-first-app/add-messaging-extension.md)

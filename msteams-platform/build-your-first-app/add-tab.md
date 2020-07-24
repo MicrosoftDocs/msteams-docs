@@ -1,10 +1,10 @@
 ---
-title: Add a tab to your first Teams app
+title: Create a tab for Teams
 author: heath-hamilton
 description: Learn how to build a tab in your first Microsoft Teams app.
 ms.topic: tutorial
 ---
-# Create a tab for your first Teams app
+# Create a tab for Teams
 
 Tabs are a simple way to surface content in your app by essentially embedding a webpage in Teams.
 
@@ -32,6 +32,7 @@ In this tutorial, you'll build a personal tab that provides a list of important 
 > * App manifest properties and scaffolding relevant to personal tabs
 > * Changing your tab's color theme based on user preference
 > * Authenticating tab users with SSO
+> * Retrieving user profiles with Microsoft Graph
 
 ### What you need to know about the app manifest and scaffolding
 
@@ -39,7 +40,7 @@ Much of the personal tab app scaffolding and manifest was set up automatically w
 
 #### App manifest
 
-The following snippet from the app manifest (the `manifest.json` file in your project `.publish` directory) shows the JSON objects and default values that are relevant to personal tabs. For personal tabs, the `"scopes"` key only needs a `"personal"` value.
+The following snippet from the app manifest (the `manifest.json` file in your project `.publish` directory) shows the JSON properties and default values that are relevant to personal tabs. For personal tabs, you only need to specify a `"personal"` value for the `"scopes"` property.
 
 ```json
     "staticTabs": [
@@ -130,9 +131,9 @@ Insert the statement within the `.getContext` call (see snippet for exact locati
 
 When a user changes the Teams theme, your tab's theme will be in sync.
 
-### Provide SSO authentication
+### Set up SSO authentication
 
-Some text.
+If you only want authorized users viewing your tab, you can set up single sign-on (SSO) through Azure Active Directory (AD).
 
 Print person's name in a screenshot
 
@@ -163,4 +164,4 @@ Upload and view your app in Teams.
 ---
 
 > [!div class="nextstepaction"]
-> [Keep going: Create a connector for your app](../build-your-first-app/add-connector.md)
+> [Keep going: Create a connector](../build-your-first-app/add-connector.md)
