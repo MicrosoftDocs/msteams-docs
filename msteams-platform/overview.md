@@ -111,9 +111,9 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 
 Get help at any point while creating your Teams app.
 
-1. [Planning your app](planning-your-app/planning-overview.md)
+1. [Planning your app](concepts/extensibility-points.md)
 1. [Designing your app](designing-your-app/designing-overview.md)
-1. [Building your app](concepts/build-and-test/prepare-your-o365-tenant.md)
+1. [Building your app](concepts/building-an-app.md)
 1. [Publishing your app](concepts/deploy-and-publish/overview.md)
 
 Did you know you can also create a Teams app without writing code? Try [importing your Power App or other custom Microsoft business app](samples/importing-custom-microsoft-apps.md).
