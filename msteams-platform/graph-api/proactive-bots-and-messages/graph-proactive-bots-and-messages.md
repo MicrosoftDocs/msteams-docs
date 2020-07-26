@@ -53,7 +53,7 @@ To use these permissions, you must add a [webApplicationInfo](../../resources/sc
 ## Enable proactive app installation and messaging
 
  > [!IMPORTANT]
-> Microsoft Graph will only install apps published in your organization's [app catalog](../../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog) or [AppSource](https://appsource.microsoft.com/).
+> Microsoft Graph will only install apps published in your organization's [app catalog](../../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog), i.e., the tenant app catalog.
 
 ### ✔ [Create](../../bots/how-to/create-a-bot-for-teams.md) and [Publish](../../concepts/deploy-and-publish/overview.md) your [proactive messaging bot](../../concepts/bots/bot-conversations/bots-conv-proactive.md) for Teams
 
@@ -62,6 +62,34 @@ When creating your app, make sure that you note the `id`  you use in your applic
 >[!TIP]
 > The production-ready [**Company Communicator**](../..//samples/app-templates.md#company-communicator) app template enables broadcast messaging and is a good foundation for building your proactive bot application.
 
+### ✔ Get the `teamsAppId` for your app
+
+You can retrieve the  `teamsAppId`   from your organizations app catalog.  
+
+**Microsoft Graph page reference.** [teamsApp resource type](/graph/api/resources/teamsapp?view=graph-rest-1.0)
+
+**HTTP GET** request:
+
+```http
+GET /appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
+```
+
+The request will return a teamsCatalogApp object. The returned object's `id`  is the app's catalog generated app ID and is different from the id that you provided in your Teams app manifest:
+
+```json
+{
+  "value": [
+    {
+      "id": "b1c5353a-7aca-41b3-830f-27d5218fe0e5",
+      "externalId": "f31b1263-ba99-435a-a679-911d24850d7c",
+      "name": "Test App",
+      "version": "1.0.1",
+      "distributionMethod": "Organization"
+    }
+  ]
+}
+```
+
 ### ✔ Determine whether your bot is currently installed for a message recipient
 
 **Microsoft Graph page reference:** [List apps installed for user](/graph/api/user-list-teamsappinstallation?view=graph-rest-beta&tabs=http)
@@ -69,10 +97,8 @@ When creating your app, make sure that you note the `id`  you use in your applic
 **HTTP GET** request:
 
 ```http
-GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsAppDefinition&$filter=teamsAppDefinition/teamsAppId eq '{teamsAppid}'
+GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsAppDefinition&$filter=teamsAppDefinition/teamsAppId eq '{teamsAppId}'
 ```
-
-The `{teamsAppId}` is the `id` from your Teams app manifest, noted earlier — it may not be the same as your `appid` for Microsoft Graph calls or your `botId`.
 
 This request will return an empty array if the app is not installed, or an array with a single [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-beta) if it is already installed.
 
