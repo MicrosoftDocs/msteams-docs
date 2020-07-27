@@ -154,6 +154,14 @@ Once the app has been installed to a team, you can use [Graph Explorer](https://
 > - Make a **GET** call to the following endpoint: `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants`. The clientAppId field in the response will map to the appId specified in the Teams app manifest.
 
  ![Graph explorer response to GET call.](../../assets/images/graph-permissions.png)
+ 
+## Test resource-specific consent
+ 
+> [!div class="nextstepaction"]
+> [**Test resource-specific consent permissions in Teams**](test-resource-specific-consent.md)
+ 
+## Related topic for Teams administrators
 
- > [!div class="nextstepaction"]
-> [Test resource-specific consent permissions in Teams](test-resource-specific-consent.md)
+> [!div class="nextstepaction"]
+> [**Resource-specific consent in Microsoft Teams for admins**](/MicrosoftTeams/resource-specific-consent)
+> 
