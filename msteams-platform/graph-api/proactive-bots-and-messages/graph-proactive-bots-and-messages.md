@@ -299,10 +299,10 @@ module.exports.ProactiveBot = ProactiveBot;
 ## Related topic for Teams administrators
 >
 > [!div class="nextstepaction"]
-> [**Manage app setup policies in Microsoft Teams**](MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
+> [**Manage app setup policies in Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
 
 ## View additional code samples
 >
 > [!div class="nextstepaction"]
-> [Teams proactive messaging code samples](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
+> [**Teams proactive messaging code samples**](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
 >
