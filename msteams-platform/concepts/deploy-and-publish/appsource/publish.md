@@ -34,7 +34,7 @@ There are two ways to create a Partner Center account:
 
 ## What if I cannot find my Office Store account in Partner Center?
 
-Please open a [Partner Center support ticket](https://partner.microsoft.com/en-US/support/v2/?stage=1) and select the following from the drop-down menus:
+Please open a [Partner Center support ticket](https://partner.microsoft.com/support/v2/?stage=1) and select the following from the drop-down menus:
 
 | Menu | Option |
 | -------   | -------  |

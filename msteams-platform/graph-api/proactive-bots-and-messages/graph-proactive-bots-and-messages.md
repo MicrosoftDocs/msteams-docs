@@ -57,7 +57,7 @@ To use these permissions, you must add a [webApplicationInfo](../../resources/sc
 
 ### ✔ Create and publish your proactive messaging bot for Teams
 
-To get started, you will need a [bot for teams](../../bots/how-to/create-a-bot-for-teams.md) with [proactive messaging](../../concepts/bots/bot-conversations/bots-conv-proactive.md) capabilities and  [published](../../concepts/deploy-and-publish/overview.md) in your organization's [app catalog](../../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog) or in [AppSource](https://appsource.microsoft.com/).
+To get started, you will need a [bot for Teams](../../bots/how-to/create-a-bot-for-teams.md) with [proactive messaging](../../concepts/bots/bot-conversations/bots-conv-proactive.md) capabilities and  [published](../../concepts/deploy-and-publish/overview.md) in your organization's [app catalog](../../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog) or in [AppSource](https://appsource.microsoft.com/).
 
 >[!TIP]
 > The production-ready [**Company Communicator**](../..//samples/app-templates.md#company-communicator) app template enables broadcast messaging and is a good foundation for building your proactive bot application.
@@ -76,7 +76,7 @@ You will need the `teamsAppId`  for the next steps.
 GET /appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
 ```
 
-The request will return a `teamsApp`  object. The returned object's `id`  is the app's catalog generated app ID and is different from the id that you provided in your Teams app manifest:
+The request will return a `teamsApp`  object. The returned object's `id`  is the app's catalog generated app ID and is different from the "id:" that you provided in your Teams app manifest:
 
 ```json
 {
@@ -106,7 +106,7 @@ GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$exp
 
 **Microsoft Graph page reference:** [List apps in team](/graph/api/teamsappinstallation-list?view=graph-rest-beta&tabs=http)
 
-**HTTP GET request:
+**HTTP GET** request:
 
 ```http
 GET teams/{team-id}/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{manifestId}'
@@ -150,7 +150,7 @@ The `chatId` can also be retrieved as follows:
 
 **Microsoft Graph reference:** [Get chat](/graph/api/chat-get?view=graph-rest-beta&tabs=http)
 
-1. If you do not know the `{installation-id}` for your app, you can fetch it with the following: 
+1. You will need your app's  `{installation-id}`. If you don't have it, use the following:
 
 **HTTP GET** request:
 
@@ -158,7 +158,7 @@ The `chatId` can also be retrieved as follows:
 GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
 ```
 
-2. The following will return the `chatId`:
+2. Make the following request to fetch the `chatId`:
 
 **HTTP GET** request (permission — `Chat.Read`):
 
@@ -168,10 +168,9 @@ GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$exp
 
 The **id** property of the response is the `chatId`.
 
->[!NOTE]
-> Alternately, you can retrieve the `chatId`  with the request to follow but it will require the broader `Chat.Read.All` permission:
-
-**HTTP GET** request (permission — `Chat.Read.All` ):
+Alternately, you can retrieve the `chatId`  with the request below, but it will require the broader `Chat.Read.All` permission:
+>
+> **HTTP GET** request (permission — `Chat.Read.All` ):
 
 ```http
 GET https://graph.microsoft.com/beta/users/{user-id}/chats?$filter=installedApps/any(a:a/teamsApp/id eq '{teamsAppId}')
@@ -297,7 +296,7 @@ module.exports.ProactiveBot = ProactiveBot;
 ```
 ---
 
-## Related topic for Teams admins
+## Related topic for Teams administrators
 >
 > [!div class="nextstepaction"]
 > [**Manage app setup policies in Microsoft Teams**](MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
