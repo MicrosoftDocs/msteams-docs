@@ -29,7 +29,7 @@ Before your bot can proactively message a user, it needs to be installed either 
 
 ## Permissions
 
-Microsoft Graph [teamsAppInstallation resource type](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0) permissions allow you to manage your app's installation lifecycle for all user (personal ) or team (group) scopes within the Microsoft Teams platform:
+Microsoft Graph [teamsAppInstallation resource type](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0) permissions allow you to manage your app's installation lifecycle for all user (personal) or team (channel) scopes within the Microsoft Teams platform:
 
 |Application permission | Description|
 |------------------|---------------------|
@@ -160,7 +160,7 @@ GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$exp
 
 2. Make the following request to fetch the `chatId`:
 
-**HTTP GET** request (permission — `Chat.Read`):
+**HTTP GET** request (permission — `TeamsAppInstallation.ReadWriteSelfForUser.All` ):  
 
 ```http
  GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps/{installation-id}/chat
