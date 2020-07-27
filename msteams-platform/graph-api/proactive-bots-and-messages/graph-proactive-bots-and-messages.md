@@ -160,7 +160,7 @@ GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$exp
 
 2. Make the following request to fetch the `chatId`:
 
-**HTTP GET** request (permission — `TeamsAppInstallation.ReadWriteSelfForUser.All` ):  
+**HTTP GET** request (permission — `TeamsAppInstallation.ReadWriteSelfForUser.All`):  
 
 ```http
  GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps/{installation-id}/chat
@@ -169,8 +169,8 @@ GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$exp
 The **id** property of the response is the `chatId`.
 
 Alternately, you can retrieve the `chatId`  with the request below, but it will require the broader `Chat.Read.All` permission:
->
-> **HTTP GET** request (permission — `Chat.Read.All` ):
+
+**HTTP GET** request (permission — `Chat.Read.All`):
 
 ```http
 GET https://graph.microsoft.com/beta/users/{user-id}/chats?$filter=installedApps/any(a:a/teamsApp/id eq '{teamsAppId}')
