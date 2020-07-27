@@ -111,7 +111,7 @@ GET teams/{team-id}/installedApps?$expand=teamsApp&$filter=teamsApp/externalId e
 ```
 
 >[!TIP]
-> You can filter on on any of the fields of the [**teamsApp**](/graph/api/resources/teamsapp?view=graph-rest-1.0) object to narrow the list of results.
+> You can filter on any of the fields of the [**teamsApp**](/graph/api/resources/teamsapp?view=graph-rest-1.0) object to narrow the list of results.
 
 ### ✔ Determine whether your bot is currently installed for a message recipient
 
@@ -123,7 +123,7 @@ GET teams/{team-id}/installedApps?$expand=teamsApp&$filter=teamsApp/externalId e
 GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
 ```
 
-This request will return an empty array if the app is not installed, or an array with a single [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-beta) object if it is already installed.
+This request will return an empty array if the app is not installed, or an array with a single [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-beta) object if it has been installed.
 
 ### ✔ Install your app
 
