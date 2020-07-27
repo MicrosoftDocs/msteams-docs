@@ -69,6 +69,8 @@ A customizable card that can contain any combination of text, speech, images, bu
 | ✔ | ✔ | ✖ | ✔ |
 |
 
+Please note that media elements are currently not supported in Adaptive cards v1.2 on the Teams platform.
+
 ### Example Adaptive card
 
 ![Example of a adaptive card card](~/assets/images/cards/adaptivecard.png)
