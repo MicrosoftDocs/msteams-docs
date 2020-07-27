@@ -53,7 +53,7 @@ To use these permissions, you must add a [webApplicationInfo](../../resources/sc
 ## Enable proactive app installation and messaging
 
  > [!IMPORTANT]
-> Microsoft Graph will only install apps published in your organization's [app catalog](../../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog), i.e., the tenant app catalog.
+>Microsoft Graph will only install apps published within your organization's [app catalog](../../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog) or in [AppSource](https://appsource.microsoft.com/).
 
 ### ✔ [Create](../../bots/how-to/create-a-bot-for-teams.md) and [Publish](../../concepts/deploy-and-publish/overview.md) your [proactive messaging bot](../../concepts/bots/bot-conversations/bots-conv-proactive.md) for Teams
 
@@ -62,9 +62,11 @@ To use these permissions, you must add a [webApplicationInfo](../../resources/sc
 
 ### ✔ Get the `teamsAppId` for your app
 
-You will need the   `teamsAppId`   for the next steps. It can be retrieved from your organization's app catalog.  
+You will need the `teamsAppId`  for the next steps.
 
-**Microsoft Graph page reference.** [teamsApp resource type](/graph/api/resources/teamsapp?view=graph-rest-1.0)
+1. The `teamsAppId` can be retrieved from your organization's app catalog:
+
+**Microsoft Graph page reference:** [teamsApp resource type](/graph/api/resources/teamsapp?view=graph-rest-1.0)
 
 **HTTP GET** request:
 
@@ -72,7 +74,7 @@ You will need the   `teamsAppId`   for the next steps. It can be retrieved from 
 GET /appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
 ```
 
-The request will return a `teamsCatalogApp`  object. The returned object's `id`  is the app's catalog generated app ID and is different from the id that you provided in your Teams app manifest:
+The request will return a `teamsApp`  object. The returned object's `id`  is the app's catalog generated app ID and is different from the id that you provided in your Teams app manifest:
 
 ```json
 {
@@ -88,6 +90,29 @@ The request will return a `teamsCatalogApp`  object. The returned object's `id` 
 }
 ```
 
+2. If your app has already been uploaded/sideloaded for a user in the personal scope, you can retrieve the `teamsAppId` as follows:
+
+**Microsoft Graph page reference:** [List apps installed for user](/graph/api/user-list-teamsappinstallation?view=graph-rest-beta&tabs=http)
+
+**HTTP GET** request:
+
+```http
+GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
+```
+
+3. If your app has already been uploaded/sideloaded for a channel in the group scope, you can retrieve the `teamsAppId` as follows:
+
+**Microsoft Graph page reference:** [List apps in team](/graph/api/teamsappinstallation-list?view=graph-rest-beta&tabs=http)
+
+**HTTP GET request:
+
+```http
+GET teams/{team-id}/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{manifestId}'
+```
+
+>[!TIP]
+> You can filter on on any of the fields of the [**teamsApp**](/graph/api/resources/teamsapp?view=graph-rest-1.0) object to narrow the list of results.
+
 ### ✔ Determine whether your bot is currently installed for a message recipient
 
 **Microsoft Graph page reference:** [List apps installed for user](/graph/api/user-list-teamsappinstallation?view=graph-rest-beta&tabs=http)
@@ -95,7 +120,7 @@ The request will return a `teamsCatalogApp`  object. The returned object's `id` 
 **HTTP GET** request:
 
 ```http
-GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsAppDefinition&$filter=teamsAppDefinition/teamsAppId eq '{teamsAppId}'
+GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
 ```
 
 This request will return an empty array if the app is not installed, or an array with a single [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-beta) object if it is already installed.
@@ -113,7 +138,7 @@ POST /users/{user-id}/teamwork/installedApps
 }
 ```
 
-If the user has Microsoft Teams running, they may see the app install immediately. Alternatively, a restart may be necessary to see the installed app.
+If the user has Microsoft Teams running, they may see the app install immediately. Alternatively,  a  restart may be necessary to see the installed app.
 
 ### ✔ Retrieve the conversation **chatId**
 
@@ -123,13 +148,32 @@ The `chatId` can also be retrieved as follows:
 
 **Microsoft Graph reference:** [Get chat](/graph/api/chat-get?view=graph-rest-beta&tabs=http)
 
+1. If you do not know the `{installation-id}` for your app, you can fetch it with the following: 
+
 **HTTP GET** request:
 
 ```http
- GET https://graph.microsoft.com/beta/users/{user-id}/chats?$filter=installedApps/any(a:a/teamsApp/id eq '{teamsAppId}')
+GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
 ```
 
-If the call is successful, the method will return a chat object. The **id** property of the object is the `chatId`.
+2. The following will return the `chatId`:
+
+**HTTP GET** request (permission — `Chat.Read`):
+
+```http
+ GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps/{installation-id}/chat
+```
+
+The **id** property of the response is the `chatId`.
+
+>[!NOTE]
+> Alternately, you can retrieve the `chatId`  with the request to follow but it will require the broader `Chat.Read.All` permission:
+
+**HTTP GET** request (permission — `Chat.Read.All` ):
+
+```http
+GET https://graph.microsoft.com/beta/users/{user-id}/chats?$filter=installedApps/any(a:a/teamsApp/id eq '{teamsAppId}')
+```
 
 ### ✔ Send proactive messages
 
@@ -249,8 +293,15 @@ class ProactiveBot extends ActivityHandler {
 module.exports.ProactiveBot = ProactiveBot;
 
 ```
-
 ---
+
+## Related topic for Teams admins
 >
 > [!div class="nextstepaction"]
-> [View additional Teams proactive messaging code samples](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
+> [**Manage app setup policies in Microsoft Teams**](MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
+
+## View additional code samples
+>
+> [!div class="nextstepaction"]
+> [Teams proactive messaging code samples](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
+>
