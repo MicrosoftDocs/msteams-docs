@@ -25,7 +25,7 @@ Proactive messages are initiated by bots to start conversations with a users. Th
 
 ## Proactive app installation in Teams
 
-Before your bot can proactively message a user, it needs to be installed either as a personal app, or in a team where the user is a member. At times,  you may need to proactively message users that have _not_ installed or previously interacted with your app. For instance, the need to message vital information to everyone in your organization. For that scenario you can use the Microsoft Graph API to proactively install your bot for your users.
+Before your bot can proactively message a user, it needs to be installed either as a personal app, or in a team where the user is a member. At times,  you may need to proactively message users that have _not_ installed or previously interacted with your app. For instance, the need to message vital information to everyone in your organization. For such scenarios, you can use the Microsoft Graph API to proactively install your bot for your users.
 
 ## Permissions
 
@@ -33,15 +33,15 @@ Microsoft Graph [teamsAppInstallation resource type](/graph/api/resources/teamsa
 
 |Application permission | Description|
 |------------------|---------------------|
-|`TeamsAppInstallation.ReadWriteSelfForUser.All`|Allows a Teams app to read, install, upgrade, and uninstall itself to any **user**, without a prior sign in or use.|
-|`TeamsAppInstallation.ReadWriteSelfForTeam.All`|Allows a Teams app to read, install, upgrade, and uninstall itself in any **team**, without a prior sign in or use.|
+|`TeamsAppInstallation.ReadWriteSelfForUser.All`|Allows a Teams app to read, install, upgrade, and uninstall itself for any **user**, without prior sign in or use.|
+|`TeamsAppInstallation.ReadWriteSelfForTeam.All`|Allows a Teams app to read, install, upgrade, and uninstall itself in any **team**, without prior sign in or use.|
 
 To use these permissions, you must add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
 > [!div class="checklist"]
 > [!div class="checklist"]
 >
 > * **id**  — your Azure AD app id.
-> * **resource** — the resource url for the app.
+> * **resource** — the resource URL for the app.
 >
 
 >[!NOTE]
@@ -57,14 +57,12 @@ To use these permissions, you must add a [webApplicationInfo](../../resources/sc
 
 ### ✔ [Create](../../bots/how-to/create-a-bot-for-teams.md) and [Publish](../../concepts/deploy-and-publish/overview.md) your [proactive messaging bot](../../concepts/bots/bot-conversations/bots-conv-proactive.md) for Teams
 
-When creating your app, make sure that you note the `id`  you use in your application manifest; you'll need it for the installation process.
-
 >[!TIP]
 > The production-ready [**Company Communicator**](../..//samples/app-templates.md#company-communicator) app template enables broadcast messaging and is a good foundation for building your proactive bot application.
 
 ### ✔ Get the `teamsAppId` for your app
 
-You can retrieve the  `teamsAppId`   from your organizations app catalog.  
+You will need the   `teamsAppId`   for the next steps. It can be retrieved from your organization's app catalog.  
 
 **Microsoft Graph page reference.** [teamsApp resource type](/graph/api/resources/teamsapp?view=graph-rest-1.0)
 
@@ -74,7 +72,7 @@ You can retrieve the  `teamsAppId`   from your organizations app catalog.
 GET /appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
 ```
 
-The request will return a teamsCatalogApp object. The returned object's `id`  is the app's catalog generated app ID and is different from the id that you provided in your Teams app manifest:
+The request will return a `teamsCatalogApp`  object. The returned object's `id`  is the app's catalog generated app ID and is different from the id that you provided in your Teams app manifest:
 
 ```json
 {
@@ -100,7 +98,7 @@ The request will return a teamsCatalogApp object. The returned object's `id`  is
 GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsAppDefinition&$filter=teamsAppDefinition/teamsAppId eq '{teamsAppId}'
 ```
 
-This request will return an empty array if the app is not installed, or an array with a single [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-beta) if it is already installed.
+This request will return an empty array if the app is not installed, or an array with a single [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-beta) object if it is already installed.
 
 ### ✔ Install your app
 
@@ -111,27 +109,27 @@ This request will return an empty array if the app is not installed, or an array
 ```http
 POST /users/{user-id}/teamwork/installedApps
 {
-   "teamsApp@odata.bind" : "https://graph.microsoft.com/beta/appCatalogs/teamsApps/{teamsAppid}"
+   "teamsApp@odata.bind" : "https://graph.microsoft.com/beta/appCatalogs/teamsApps/{teamsAppId}"
 }
 ```
 
-If the user has Microsoft Teams running, they may see the app installation immediately or  a  restart may be necessary to see the installed app.
+If the user has Microsoft Teams running, they may see the app install immediately. Alternatively, a restart may be necessary to see the installed app.
 
 ### ✔ Retrieve the conversation **chatId**
 
 When your app is installed for the user, the bot will receive a `conversationUpdate` [event notification](../../resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) that will contain the necessary information to send the proactive message.
 
-The `chatId` can also be retrieved with the following:
+The `chatId` can also be retrieved as follows:
 
 **Microsoft Graph reference:** [Get chat](/graph/api/chat-get?view=graph-rest-beta&tabs=http)
 
 **HTTP GET** request:
 
 ```http
- GET https://graph.microsoft.com/beta/users/{user-id}/chats?$filter=installedApps/any(a:a/teamsApp/id eq '{teamsAppid}')
+ GET https://graph.microsoft.com/beta/users/{user-id}/chats?$filter=installedApps/any(a:a/teamsApp/id eq '{teamsAppId}')
 ```
 
-The **id** property of the response is the `chatId`.
+If the call is successful, the method will return a chat object. The **id** property of the object is the `chatId`.
 
 ### ✔ Send proactive messages
 
@@ -251,6 +249,7 @@ class ProactiveBot extends ActivityHandler {
 module.exports.ProactiveBot = ProactiveBot;
 
 ```
+
 ---
 >
 > [!div class="nextstepaction"]
