@@ -64,19 +64,19 @@ To get started, you will need a [bot for Teams](../../bots/how-to/create-a-bot-f
 
 ### ✔ Get the `teamsAppId` for your app
 
-You will need the `teamsAppId`  for the next steps.
+**1.** You will need the `teamsAppId`  for the next steps.
 
-1. The `teamsAppId` can be retrieved from your organization's app catalog:
+The `teamsAppId` can be retrieved from your organization's app catalog:
 
-&emsp;&emsp; **Microsoft Graph page reference:** [teamsApp resource type](/graph/api/resources/teamsapp?view=graph-rest-1.0)
+**Microsoft Graph page reference:** [teamsApp resource type](/graph/api/resources/teamsapp?view=graph-rest-1.0)
 
-&emsp;&emsp;**HTTP GET** request:
+**HTTP GET** request:
 
 ```http
 GET https://graph.microsoft.com/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
 ```
 
-&emsp;&emsp;The request will return a `teamsApp`  object. The returned object's `id`  is the app's catalog generated app id and is different from the "id:" that you provided in your Teams app manifest:
+The request will return a `teamsApp`  object. The returned object's `id`  is the app's catalog generated app id and is different from the "id:" that you provided in your Teams app manifest:
 
 ```json
 {
@@ -92,21 +92,21 @@ GET https://graph.microsoft.com/appCatalogs/teamsApps?$filter=externalId eq '{Id
 }
 ```
 
-2. If your app has already been uploaded/sideloaded for a user in the personal scope, you can retrieve the `teamsAppId` as follows:
+**2.**  If your app has already been uploaded/sideloaded for a user in the personal scope, you can retrieve the `teamsAppId` as follows:
 
-&emsp;&emsp;**Microsoft Graph page reference:** [List apps installed for user](/graph/api/user-list-teamsappinstallation?view=graph-rest-beta&tabs=http)
+**Microsoft Graph page reference:** [List apps installed for user](/graph/api/user-list-teamsappinstallation?view=graph-rest-beta&tabs=http)
 
-&emsp;&emsp;**HTTP GET** request:
+**HTTP GET** request:
 
 ```http
 GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
 ```
 
-3. If your app has already been uploaded/sideloaded for a channel in the team scope, you can retrieve the `teamsAppId` as follows:
+**3.** If your app has already been uploaded/sideloaded for a channel in the team scope, you can retrieve the `teamsAppId` as follows:
 
-&emsp;&emsp;**Microsoft Graph page reference:** [List apps in team](/graph/api/teamsappinstallation-list?view=graph-rest-beta&tabs=http)
+**Microsoft Graph page reference:** [List apps in team](/graph/api/teamsappinstallation-list?view=graph-rest-beta&tabs=http)
 
-&emsp;&emsp;**HTTP GET** request:
+**HTTP GET** request:
 
 ```http
 GET https://graph.microsoft.com/beta/teams/{team-id}/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{manifestId}'
@@ -117,9 +117,9 @@ GET https://graph.microsoft.com/beta/teams/{team-id}/installedApps?$expand=teams
 
 ### ✔ Determine whether your bot is currently installed for a message recipient
 
-&emsp;&emsp;**Microsoft Graph page reference:** [List apps installed for user](/graph/api/user-list-teamsappinstallation?view=graph-rest-beta&tabs=http)
+**Microsoft Graph page reference:** [List apps installed for user](/graph/api/user-list-teamsappinstallation?view=graph-rest-beta&tabs=http)
 
-&emsp;&emsp;**HTTP GET** request:
+**HTTP GET** request:
 
 ```http
 GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
@@ -129,9 +129,9 @@ This request will return an empty array if the app is not installed, or an array
 
 ### ✔ Install your app
 
-&emsp;&emsp;**Microsoft Graph reference:** [Install app for user](/graph/api/user-add-teamsappinstallation?view=graph-rest-beta&tabs=http)
+**Microsoft Graph reference:** [Install app for user](/graph/api/user-add-teamsappinstallation?view=graph-rest-beta&tabs=http)
 
-&emsp;&emsp;**HTTP POST** request:
+**HTTP POST** request:
 
 ```http
 POST https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps
@@ -148,31 +148,31 @@ When your app is installed for the user, the bot will receive a `conversationUpd
 
 The `chatId` can also be retrieved as follows:
 
-&emsp;&emsp;**Microsoft Graph reference:** [Get chat](/graph/api/chat-get?view=graph-rest-beta&tabs=http)
+**Microsoft Graph reference:** [Get chat](/graph/api/chat-get?view=graph-rest-beta&tabs=http)
 
-1. You will need your app's `{teamsAppInstallationId}` If you don't have it, use the following:
+**1.** You will need your app's `{teamsAppInstallationId}` If you don't have it, use the following:
 
-&emsp;&emsp;**HTTP GET** request:
+**HTTP GET** request:
 
 ```http
 GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
 ```
 
-&emsp;&emsp;The **id** property of the response is the `teamsAppInstallationId`.
+The **id** property of the response is the `teamsAppInstallationId`.
 
-2. Make the following request to fetch the `chatId`:
+**2.** Make the following request to fetch the `chatId`:
 
-&emsp;&emsp;**HTTP GET** request (permission — `TeamsAppInstallation.ReadWriteSelfForUser.All`):  
+**HTTP GET** request (permission — `TeamsAppInstallation.ReadWriteSelfForUser.All`):  
 
 ```http
  GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
 ```
 
-&emsp;&emsp;The **id** property of the response is the `chatId`.
+The **id** property of the response is the `chatId`.
 
-&emsp;&emsp;Alternately, you can retrieve the `chatId`  with the request below, but it will require the broader `Chat.Read.All` permission:
+Alternately, you can retrieve the `chatId`  with the request below, but it will require the broader `Chat.Read.All` permission:
 
-&emsp;&emsp;**HTTP GET** request (permission — `Chat.Read.All`):
+**HTTP GET** request (permission — `Chat.Read.All`):
 
 ```http
 GET https://graph.microsoft.com/beta/users/{user-id}/chats?$filter=installedApps/any(a:a/teamsApp/id eq '{teamsAppId}')
