@@ -102,7 +102,7 @@ The request will return a `teamsApp`  object. The returned object's `id`  is the
 GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
 ```
 
-3. If your app has already been uploaded/sideloaded for a channel in the group scope, you can retrieve the `teamsAppId` as follows:
+3. If your app has already been uploaded/sideloaded for a channel in the team scope, you can retrieve the `teamsAppId` as follows:
 
 **Microsoft Graph page reference:** [List apps in team](/graph/api/teamsappinstallation-list?view=graph-rest-beta&tabs=http)
 
@@ -150,7 +150,7 @@ The `chatId` can also be retrieved as follows:
 
 **Microsoft Graph reference:** [Get chat](/graph/api/chat-get?view=graph-rest-beta&tabs=http)
 
-1. You will need your app's  `{installation-id}`. If you don't have it, use the following:
+1. You will need your app's `teamsAppInstallationId` If you don't have it, use the following:
 
 **HTTP GET** request:
 
@@ -163,10 +163,10 @@ GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$exp
 **HTTP GET** request (permission — `TeamsAppInstallation.ReadWriteSelfForUser.All`):  
 
 ```http
- GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps/{installation-id}/chat
+ GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
 ```
 
-The **id** property of the response is the `chatId`.
+The **id** property of the response is the `teamsAppInstallationId`.
 
 Alternately, you can retrieve the `chatId`  with the request below, but it will require the broader `Chat.Read.All` permission:
 
