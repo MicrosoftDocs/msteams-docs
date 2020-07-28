@@ -76,7 +76,7 @@ You will need the `teamsAppId`  for the next steps.
 GET /appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
 ```
 
-The request will return a `teamsApp`  object. The returned object's `id`  is the app's catalog generated app ID and is different from the "id:" that you provided in your Teams app manifest:
+The request will return a `teamsApp`  object. The returned object's `id`  is the app's catalog generated app Id and is different from the "id:" that you provided in your Teams app manifest:
 
 ```json
 {
