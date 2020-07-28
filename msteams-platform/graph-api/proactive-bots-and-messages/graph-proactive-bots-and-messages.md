@@ -73,7 +73,7 @@ You will need the `teamsAppId`  for the next steps.
 &emsp;&emsp;**HTTP GET** request:
 
 ```http
-GET /appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
+GET https://graph.microsoft.com/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
 ```
 
 &emsp;&emsp;The request will return a `teamsApp`  object. The returned object's `id`  is the app's catalog generated app id and is different from the "id:" that you provided in your Teams app manifest:
