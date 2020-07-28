@@ -158,6 +158,8 @@ The `chatId` can also be retrieved as follows:
 GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
 ```
 
+The **id** property of the response is the `teamsAppInstallationId`.
+
 2. Make the following request to fetch the `chatId`:
 
 **HTTP GET** request (permission — `TeamsAppInstallation.ReadWriteSelfForUser.All`):  
@@ -166,7 +168,7 @@ GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$exp
  GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
 ```
 
-The **id** property of the response is the `teamsAppInstallationId`.
+The **id** property of the response is the `chatId`.
 
 Alternately, you can retrieve the `chatId`  with the request below, but it will require the broader `Chat.Read.All` permission:
 
