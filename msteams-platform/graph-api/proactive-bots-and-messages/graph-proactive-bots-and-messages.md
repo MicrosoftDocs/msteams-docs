@@ -150,7 +150,7 @@ The `chatId` can also be retrieved as follows:
 
 **Microsoft Graph reference:** [Get chat](/graph/api/chat-get?view=graph-rest-beta&tabs=http)
 
-1. You will need your app's `teamsAppInstallationId` If you don't have it, use the following:
+1. You will need your app's `{teamsAppInstallationId}` If you don't have it, use the following:
 
 **HTTP GET** request:
 
