@@ -81,7 +81,7 @@ If you wish to debug your tab based app on localhost using https, you will need 
 
 * Build and run your app
   * Follow the instuctions in the **Build and Run** section of your project Readme so that it's being served from https://localhost:3000/tab. Generally, this will involve executing `npm install` then `npm start`
-  * Navigate to https://localhost:3000/tab from Google Chrome
+  * Navigate to https://localhost:3000/tab from Google Chrome or Edge Chromium.
 
 * Acquire the SSL certificate:
   * Open the Chrome Developer Tools window (`ctrl + shift + i` / `cmd + option + i`).
