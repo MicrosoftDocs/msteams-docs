@@ -27,7 +27,7 @@ People in your organization have trouble finding basic contact information for i
 > * App manifest properties and scaffolding relevant to personal tabs
 > * Changing your tab's color theme based on user preference
 
-## What you need to know about the app manifest and scaffolding
+## Relevant pieces of app manifest and scaffolding
 
 Much of the personal tab app scaffolding and manifest is set up automatically when you create your project with the Teams Toolkit. Let's look at the key components for building a personal tab.
 
