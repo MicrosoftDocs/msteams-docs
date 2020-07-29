@@ -14,8 +14,10 @@
     items: 
     - name: Overview
       href: build-your-first-app/building-real-world-app.md
-    - name: Create a tab app
-      href: build-your-first-app/add-tab.md
+    - name: Create a personal tab app
+      href: build-your-first-app/add-personal-tab.md
+    - name: Create a channel tab app
+      href: build-your-first-app/add-channel-tab.md
     - name: Create a connector app
       href: build-your-first-app/add-connector.md
     - name: Create a messaging extension app
