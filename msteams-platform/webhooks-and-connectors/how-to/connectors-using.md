@@ -261,7 +261,7 @@ The flow for sending [adaptive cards](../../task-modules-and-cards/cards/cards-r
 
 **3.** Test your adaptive card with Postman
 
-You can test your adaptive card using [Postman](postman.com) to send a POST request to the URL that you created when you setup your incoming webhook. Paste your JSON file in the body of the request and view your card message in Teams.
+You can test your adaptive card using [Postman](postman.com) to send a POST request to the URL that you created when you setup your incoming webhook. Paste your JSON file in the body of the request and view your adaptive card message in Teams.
 
 >[!TIP]
 > You can use adaptive card code [Samples and Templates](https://adaptivecards.io/samples) for the body of your test Post request.
