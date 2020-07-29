@@ -95,7 +95,7 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 
         :::image type="content" source="assets/images/overview-cta-plan.png" alt-text="<alt text>" border="false":::
       
-        <h3>Develop like a pro</h3>
+        <h3>Trust the process</h3>
 
         Walk through how to plan, design, build, and publish a great Teams app.
 
