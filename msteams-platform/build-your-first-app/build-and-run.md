@@ -5,11 +5,19 @@ description: Run your first Microsoft Teams app.
 ---
 # Build and run your first Microsoft Teams app
 
-You can jump right into Microsoft Teams platform development by quickly building and running a "Hello, world!" app.
+You can jump right into Microsoft Teams platform development by quickly building and running a "Hello, world!" app. This section shows you how to create and run a personal tab with Visual Studio Code. It will also describes some important file within the project.
 
-## Start building in your browser
+Before we start, let's make sure you have an account to run your Teams app on. If you already have a Teams account, you are good to go. If not you can [obtain one through M365 Developer Program]()
+We will show you two ways to use visual studio code to create Teams app. Feel free to use either one. The result is exactly the same.
+1. Using Visual Studio Codespace. -- The easiest way to get started if you have an Azure subscription account. You can start coding in your browser right away with all environment set up for you. 
+1. Using Visual Studio Code Desktop -- The classic way of creating project. No subscription needed.
 
-You can start building right away with Visual Studio Codespaces, which takes care of setting up an environment for you.
+## Start building in your browser with Visual Studio Codepace
+
+### What you will need
+* Azure Account 
+
+After you have the account set up, simply click on the below button to get started.
 
 :::image type="content" source="../assets/images/vs-codespace-intro.png" alt-text="<alt text>":::
 
@@ -28,25 +36,38 @@ You can start building right away with Visual Studio Codespaces, which takes car
    :::column-end:::
 :::row-end:::
 
-## Choose the capabilities you want in your app
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
-
+We will choose tab --> personal tab.
 :::image type="content" source="../assets/images/vs-codespace-add-capabilities.png" alt-text="<alt text>":::
 
-## Finish initial app setup
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+## The classic way of building with Visual Studio 
+Follow these steps to create your new Teams project
+1. Install the latest version of [Visual Studio Code]()
+1. Go to extension and search for Microsoft Teams Toolkit 
+:::image type="content" source="../assets/images/app-up-and-running/VSC-home.png" alt-text="<alt text>":::
+1. Install the toolkit and create a new Teams project 
+1. We will be building a personal tab so select tab and then personal tab
+:::image type="content" source="../assets/images/app-up-and-running/choose-tab.png" alt-text="<alt text>":::
+1. You should see this read me popping up and we are ready to [run your app]() 
 
 ## Run your app
+Following the readme. Simply use "npm install" and "npm start" to build your app. 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+Now that you have the tab created, simply press F5 and your app should launch in Teams. 
 
+Now your app is up and running. Let's look at some essential files and [understand what's in the code]()
+
+<details>
+  <summary>That didn't work? Click here</summary>
+Not to worry, we can also run your app by sideloading your app
+</details>
 :::image type="content" source="../assets/images/vs-codespace-run-app.png" alt-text="<alt text>":::
 
-## Understanding what's in the app package
+Now you have an personal tab running in Teams 
+This page is live which means you can navigate to tabs.js and modify any string. You should see the text change accordingly. 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+## Understanding what's in the the code
+
+Now that you have your first app up and running. Let's look at some the essential files that's in this template.
 
 ### App manifest
 
@@ -98,15 +119,10 @@ The app manifest is a JSON schema that defines ...
 }
 ```
 
-## Continue building on your desktop
-
-Teams supports up to 10 minutes of the Visual Studio Codespace time. Once that time runs out, you must set up a desktop experience to continue building.
-
-:::image type="content" source="../assets/images/vs-codespace-desktop.png" alt-text="<alt text>":::
 
 ## Next step
 
-Congratulations! You have a basic functional Teams app. Learn how to add features to it with our real-world app tutorials.
+Congratulations! You have a basic functional Teams app and you also understands what goes in it. Learn how to add features to it with our real-world app tutorials.
 
 > [!div class="nextstepaction"]
 > [Building a real-world Teams app](../build-your-first-app/building-real-world-app.md)
