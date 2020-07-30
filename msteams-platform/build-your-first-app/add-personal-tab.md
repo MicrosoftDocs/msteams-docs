@@ -114,7 +114,7 @@ In your `Tab.js` file, there's a `microsoftTeams.getContext()` call that provide
 
 ### Create a theme change handler
 
-With the `context` properties in hand, your app has a solid understanding of what's happening around it in Teams. But the app still doesn't know its appearance should reflect whatever `theme` a user configures. For example, if you set your theme to **Dark**, your tab's background doesn't match—this is not a recommended Teams user experience.
+With the `context` properties in hand, your app has a solid understanding of what's happening around it in Teams. But the app still doesn't know its appearance should reflect whatever `theme` a user configures. For example, if you set your theme to **Dark**, your tab's background doesn't match, and that's not a recommended user experience for Teams.
 
 You need a handler so that your app's state changes with the theme. Insert the following theme change handler immediately after the `microsoftTeams.getContext()` call.
 
@@ -128,7 +128,7 @@ You need a handler so that your app's state changes with the theme. Insert the f
 
 ### Match theme styles
 
-With your theme change handler in place, you need some code that responds to those changes. There's a lot you could do here, but for this exercise, let's just make sure your tab's colors align with the current Teams theme.
+Your theme change handler is in place, but you need some code that responds to those changes. There's a lot you could do here; for now, let's just make sure your tab's colors align with the Teams theme.
 
 > [!NOTE]
 > The following example just shows one way you might apply styles to your tab. Use the code as is, expand on it, or write your own.
@@ -139,7 +139,7 @@ Store the state provided by the theme change handler in `isTheme`.
   const isTheme = this.state.theme
 ```
 
-Provide some conditional logic to render your tab's styles based on the current theme. The following example shows a basic way to do this by 1) checking the current theme in `isTheme`, 2) creating a `newTheme` object with CSS properties relevant to the theme, and 3) applying the CSS to your tab content's root HTML element (`<div>`).
+Provide some conditional logic to render your tab's styles based on the current theme. The following example shows a basic way to do this by 1) checking the current theme in `isTheme`, 2) creating a `newTheme` object with CSS properties relevant to the current theme, and 3) applying the CSS to your tab content's root HTML element (`<div>`).
 
 ```Javascript
   let newTheme
@@ -170,7 +170,7 @@ Congratulations! You have a Teams app with a personal tab that makes it easier t
 * [Authenticate tab users with SSO](../tabs/how-to/authentication/auth-aad-sso.md): If you only want authorized users viewing your tab, set up single sign-on (SSO) through Azure Active Directory (AD).
 * [Embed content from an existing web app or webpage](../tabs/how-to/add-tab#tab-requirements): We showed you how to create new content for a personal tab, but you can also load content from an external URL.
 * [Create a seamless experience for your tab](../tabs/design/tabs.md): See the recommended guidelines for designing Teams tabs.
-* [Build for tabs on mobile](../tabs/design/tabs-mobile.md): Understand how to develop tabs for smartphones and tablets.
+* [Build tabs for mobile](../tabs/design/tabs-mobile.md): Understand how to develop tabs for smartphones and tablets.
 
 > [!div class="nextstepaction"]
 > [Keep going: Create a channel tab](../build-your-first-app/add-channel-tab.md)
