@@ -144,7 +144,7 @@ Provide some conditional logic to render your tab's styles based on the current 
 ```Javascript
   let newTheme
 
-  if (isTheme == "default") {
+  if (isTheme === "default") {
     newTheme = {
       backgroundColor: "#EEF1F5",
       color: "#16233A"

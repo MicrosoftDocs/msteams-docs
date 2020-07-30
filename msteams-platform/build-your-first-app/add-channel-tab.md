@@ -32,17 +32,19 @@ COMPLETE.
 
 Much of the personal tab app scaffolding and manifest was set up automatically when you created your project with the Teams Toolkit. Let's look at the components you'll work with in this tutorial.
 
-### App manifest UPDATE
+### Update the app manifest
 
-The following snippet from the app manifest (the `manifest.json` file in your project `.publish` directory) shows the JSON properties and default values that are relevant to personal tabs. For personal tabs, you only need to specify a `"personal"` value for the `"scopes"` property.
+The following snippet ... .
 
 ```json
-    "staticTabs": [
+    "configurableTabs": [
         {
-            "entityId": "index",
-            "name": "Personal Tab",
-            "contentUrl": "{baseUrl0}/tab",
-            "scopes": [ "personal" ]
+            "configurationUrl": "{baseUrl0}/config",
+            "canUpdateConfiguration": true,
+            "scopes": [
+                "team",
+                "groupchat"
+            ]
         }
     ],
 ```
