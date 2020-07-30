@@ -2,7 +2,8 @@
 title: Build apps with the Microsoft Teams Toolkit and Visual Studio
 description: Get started building great custom apps directly within Visual Studio with the Microsoft Teams Toolkit
 keywords: teams visual studio toolkit
-ms.date: 06/30/2020
+ms.topic: overview
+product: office-teams
 ---
 # Build apps with the Microsoft Teams Toolkit and Visual Studio
 
@@ -10,7 +11,7 @@ The Microsoft Teams Toolkit enables you to create custom Teams apps directly wit
 
 ## Installing the Teams Toolkit
 
-The Microsoft Teams Toolkit for Visual Studio is available for download from the [Visual Studio Marketplace](https://aka.ms/teams-toolkit) or directly as an extension within Visual Studio.
+The Microsoft Teams Toolkit for Visual Studio is available for download from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.vsteamstemplate) or directly from the Extensions menu within Visual Studio.
 
 ## Using the toolkit
 
@@ -23,9 +24,14 @@ The Microsoft Teams Toolkit for Visual Studio is available for download from the
 
 ## Set up a new Teams project
 
-1. Create a new project and select the Microsoft Terams Toolkit template.
-1. You will arrive at the **Add capabilities** screen configure the properties for your new app.
-1. Select the **Finish** button to complete the configuration process.
+1. Select **Create a new project**.
+1. Choose **Microsoft Teams App** and select **Next**.
+1. You will arrive at the **Configure your new project** screen where you can choose the *Project name*, *Location*, and *Solution name*. 
+1. Check the box labeled **Place solution and project in the same directory**.
+1. A pop-up window labeled **Add Capabilities** will allow you to choose one or more capabilities for your project setup.
+1. Select the **Next** button to complete the configuration process.
+1. A pop-up window labeled **Add Capabilities** will allow you to choose the properties for each selected capability.
+1. Select **Finish** and you will  land on the **Microsoft Teams Toolkit** landing page.
 
 ## Configure your app
 
@@ -37,19 +43,28 @@ At its core, the Teams app embraces three components:
 
   > [!div class="checklist"]
   >
-  > - The manifest.json 
+  > - The manifest.json
   > - A [color icon](../resources/schema/manifest-schema.md#icons) for your app to display in the public or organization app catalog
  > - An [outline icon](../resources/schema/manifest-schema.md#icons) for display on the Teams activity bar.
 
 When an app is installed, the Teams client parses the manifest file to determine needed information like the name of your app and the URL where the services are located.
 
-1. To configure your app, navigate to the **Microsoft Teams Toolkit** extension window.
-1. Select **Edit app package** to view the **App details** page.
+> [!NOTE]
+>If you haven't done so already, you will need to sign in to your Microsoft 365  or account to continue with the development process.
+>
+> If you don't have a Microsoft 365 account, you can sign up for a [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) subscription. It's *free* for 90 days and will continually renew as long as you're using it for development activity. If you have a Visual Studio *Enterprise* or *Professional* subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits), active for the life of your Visual Studio subscription. *See* [Set up a Microsoft 365 developer subscription](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started).
+>
+
+### Configuration steps
+
+1. To configure your app, on the **Microsoft Teams Toolkit** landing page, select **Edit app package** .
+1. From the **My Environments** drop-down menu, select **development**.
+1. You will land on the **App details** page where you can edit your app's property fields.
 1. Editing the fields in the App details page updates the contents of the manifest.json file that will ultimately ship as part of the app package. [Learn more](https://aka.ms/teams-toolkit-manifest)
 
 ## Package your app
 
-Modifying your the **app details** page or updating the **manifest**, or **.env** files in your app's  **.publish** folder will automatically generate your **Development.zip** file. You'll need to include [two icons](../concepts/build-and-test/apps-package.md#icons) in that same folder.
+Modifying the **app details** page or updating the **manifest**, or **.env** files in your app's  **.publish** folder will automatically generate your **Development.zip** file. You'll need to include [two icons](../concepts/build-and-test/apps-package.md#icons) in that same folder.
 
 ## Install and run your app locally
 
