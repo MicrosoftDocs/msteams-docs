@@ -98,7 +98,7 @@ Good apps feel native to Teams, so it's important your tab blends with the Teams
 
 ### Get context about the Teams client
 
-In your `Tab.js` file, there's a `microsoftTeams.getContext()` call that provides some [`context`](https://docs.microsoft.com/en-us/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) about, among other details, the configured client theme. Thanks to the app scaffolding, you can use this code as is to get the context and use its related data in your app.
+In your `Tab.js` file, there's a `microsoftTeams.getContext()` call that provides some [`context`](https://docs.microsoft.com/en-us/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) about, among other details, the configured client theme. Thanks to the app scaffolding, you can use this code as is to access the `context` interface and its properties.
 
 ```Javascript
   componentDidMount(){
