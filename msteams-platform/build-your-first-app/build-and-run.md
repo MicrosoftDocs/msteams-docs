@@ -14,13 +14,8 @@ You can jump right into Microsoft Teams platform development by quickly building
   <summary>Not sure if your account allow you to sideload an app? Click here.</summary>
 Click on AppStore on the bottom left corner and you should see "Upload a custom app" if sideloading is turned on. 
 <image src="../assets/images/app-up-and-running/upload-custom-app.png">
-If sideloading is not turned on for your tenant, please get a Microsoft 365 developer account and turn on sideloading by following these steps: 
 
-1.  Login to [Microsoft Teams admin center](https://admin.teams.microsoft.com/dashboard) with the admin credential  
-1.  Go to **Teams apps** --> **Setup Policies** --> **Global(Org-wide default)**  <image src="../assets/images/app-up-and-running/permission-policy.png">
-1. Toggle **upload custom apps** to on
-1. That's it, your test tenant now allow custom app sideloading 
-Note: This process can take up to 24 hours for sideloading to show up. At the meantime you can use Sideload for your tenant as an alternative 
+If sideloading is not turned on for your tenant, please get a Microsoft 365 developer account and turn on sideloading by following [these steps](/concepts/build-and-test/prepare-your-o365-tenant#Enable-custom-Teams-apps-and-turn-on-custom-app-uploading) 
 </details>
 
 
@@ -42,7 +37,7 @@ Follow these steps to create your new Teams project:
 <image src="../assets/images/app-up-and-running/tab-running.png" alt-text="<alt text>">
 
 Now you have an personal tab running in Teams 
-This page is live which means you can navigate to tabs.js and modify any string. You should see the text change accordingly. 
+This page is live which means you can navigate to **src/components/tabs.js** and modify the sting inside \<h1> and \<h3> . You should see the text change in your app accordingly.
 
 ## Understanding what's in the the code
 
