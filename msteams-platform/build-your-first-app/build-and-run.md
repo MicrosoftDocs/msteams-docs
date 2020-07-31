@@ -19,7 +19,7 @@ If sideloading is not turned on for your tenant, please get a Microsoft 365 deve
 </details>
 
 
-## Building with Visual Studio Code
+## Build with Visual Studio Code
 Follow these steps to create your new Teams project:
 1. Install the latest version of [Visual Studio Code](https://code.visualstudio.com/download)
 1. Create a workspace/folder for your project in your local environment.
@@ -39,7 +39,7 @@ Follow these steps to create your new Teams project:
 Now you have an personal tab running in Teams 
 This page is live which means you can navigate to **src/components/tabs.js** and modify the sting inside \<h1> and \<h3> . You should see the text change in your app accordingly.
 
-## Understanding what's in the the code
+## Understand what's in the the code
 
 Now that you have your first app up and running. Let's look at some the essential files that's in this template.
 
