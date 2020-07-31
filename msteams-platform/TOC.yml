@@ -14,8 +14,10 @@
     items: 
     - name: Overview
       href: build-your-first-app/building-real-world-app.md
-    - name: Create a tab app
-      href: build-your-first-app/add-tab.md
+    - name: Create a personal tab app
+      href: build-your-first-app/add-personal-tab.md
+    - name: Create a channel tab app
+      href: build-your-first-app/add-channel-tab.md
     - name: Create a connector app
       href: build-your-first-app/add-connector.md
     - name: Create a messaging extension app
@@ -64,26 +66,16 @@
     href: designing-your-app/designing-overview.md
   - name: Tabs
     items:
-    - name: Tabs
-      href: designing-your-app/designing-tabs.md
-    - name: Design guidelines (existing)
+    - name: Desktop
       href: tabs/design/tabs.md
-    - name: Tabs on mobile clients
+    - name: Mobile
       href: tabs/design/tabs-mobile.md
   - name: Messaging extensions
-    items:
-    - name: Messaging extensions
-      href: designing-your-app/designing-messaging-extensions.md
-    - name: Design guidelines (existing)
-      href: messaging-extensions/design/messaging-extension-design.md  
+    href: messaging-extensions/design/messaging-extension-design.md
   - name: Connectors
     href: designing-your-app/designing-connectors.md
   - name: Bots
-    items:
-    - name: Bots
-      href: designing-your-app/designing-bots.md
-    - name: Design guidelines (existing)
-      href: bots/design/bots.md
+    href: bots/design/bots.md
   - name: Personal apps
     href: concepts/design/personal-apps.md
   - name: UI conventions
@@ -107,10 +99,6 @@
       href: concepts/design/components/fields.md
     - name: Dialogs
       href: concepts/design/components/dialogs.md
-  - name: Other considerations
-    href: designing-your-app/designing-other-considerations.md
-  - name: Resources
-    href: designing-your-app/designing-resources.md
 - name: Building your app
   items:
   - name: Building apps for Teams

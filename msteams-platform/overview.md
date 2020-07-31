@@ -22,59 +22,35 @@ People discover and use Teams apps through a set of core capabilities that inclu
 
 Some apps are simple (send notifications), while others are complex (view patient records). When planning your app, remember that Teams is a collaboration hub. The best Teams apps help people express themselves and work better together.
 
-:::row:::
-   :::column span="1":::
-      ![Conceptual representation of what tabs look like in the Teams client.](assets/images/overview-tabs.png)
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
-:::row-end:::
-
 ### Get information more conveniently
 
 Sometimes you just need to make things easier to find. Display an important webpage in a [tab](tabs/what-are-tabs.md), which provides a full-screen web experience for static and dynamic content in Teams.
 
-:::row:::
-   :::column span="1":::
-      ![Conceptual representation of what messaging extensions look like in the Teams client.](assets\images\overview-messaging.png)
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="assets/images/overview-tabs.png" alt-text="Conceptual representation of what tabs look like in the Teams client." border="false":::
 
 ### Collaborate on everything in one place
 
 A core benefit of Teams apps is pulling information somewhere outside Teams into a conversation. For example, an app that uses [messaging extensions](messaging-extensions/what-are-messaging-extensions.md) allows people to share rich, easily digestible content from an essential tool or system without leaving the chat.
 
-:::row:::
-   :::column span="1":::
-      ![Conceptual representation of what bots look like in the Teams client.](assets/images/overview-bots.png)
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="assets\images\overview-messaging.png" alt-text="Conceptual representation of what messaging extensions look like in the Teams client." border="false":::
 
 ### Turn words into actions
 
 Conversations often result in the need to do something (create an order, review my code, etc.). A [bot](bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.
 
-:::row:::
-   :::column span="1":::
-      ![Conceptual representation of what connectors look like in the Teams client.](assets/images/overview-connectors.png)
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="assets/images/overview-bots.png" alt-text="Conceptual representation of what bots look like in the Teams client." border="false":::
 
 ### Send reminders people notice
 
-Sick of sending reminders through email? Do it through Teams instead! With [connectors](webhooks-and-connectors/what-are-webhooks-and-connectors.md), you can create webhooks for sending notifications to channels and the Activity feed.
+Sick of sending reminders through email? Do it through Teams instead! With [connectors](webhooks-and-connectors/what-are-webhooks-and-connectors.md), you can use incoming webhooks to send notifications to channels that also display in a user's Activity feed.
+
+:::image type="content" source="assets/images/overview-connectors.png" alt-text="Conceptual representation of what connectors look like in the Teams client." border="false":::
+
+### Utilize Teams data
+
+The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent.md) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app.
 
 :::image type="content" source="assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph REST API for Teams." border="false":::
-
-### Automate and manage user activities and admin processes
-
-The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent.md) gives your apps increased power and flexibility. For example, an app can build teams automatically based on some user input. Admin apps, meanwhile, can help with a variety of management tasks, including governance, security, usage data, and sentiment analysis.
 
 ## Get started
 
@@ -82,6 +58,23 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
    :::column span="":::
 
       <div align="center">
+
+      :::image type="content" source="assets/images/overview-cta-integrate.png" alt-text="<alt text>" border="false":::
+      
+        <h3>Best of both worlds</h3>
+
+        Bring your favorite web apps and services into Teams for a seamless user experience.
+
+        > [!div class="nextstepaction"]
+        > [Integrate an app or service](samples/integrating-web-apps.md)
+
+      </div>
+
+   :::column-end:::
+
+   :::column span="":::
+
+      <div align="center" style="background-color: #D3D3D3;">
 
       :::image type="content" source="assets/images/overview-cta-build.png" alt-text="<alt text>" border="false":::
       
@@ -100,27 +93,11 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 
       <div align="center">
 
-      :::image type="content" source="assets/images/overview-cta-integrate.png" alt-text="<alt text>" border="false":::
-      
-        <h3>Go with what works</h3>
-
-        Bring your favorite web apps and services into Teams for a seamless user experience.
-
-        > [!div class="nextstepaction"]
-        > [Integrate an app or service](samples/integrating-web-apps.md)
-
-      </div>
-   :::column-end:::
-
-   :::column span="":::
-
-      <div align="center">
-
         :::image type="content" source="assets/images/overview-cta-plan.png" alt-text="<alt text>" border="false":::
       
-        <h3>Take it slow</h3>
+        <h3>Trust the process</h3>
 
-        Walk through how to plan, design, build, and publish a Teams app from scratch.
+        Walk through how to plan, design, build, and publish a great Teams app.
 
         > [!div class="nextstepaction"]
         > [Start planning your app](planning-your-app/planning-overview.md)
@@ -132,11 +109,11 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 
 ## Next steps
 
-Get help at any point during app development.
+Get help at any point while creating your Teams app.
 
-1. [Planning your app](planning-your-app/planning-overview.md)
+1. [Planning your app](concepts/extensibility-points.md)
 1. [Designing your app](designing-your-app/designing-overview.md)
-1. [Building your app](concepts/build-and-test/prepare-your-o365-tenant.md)
+1. [Building your app](concepts/building-an-app.md)
 1. [Publishing your app](concepts/deploy-and-publish/overview.md)
 
 Did you know you can also create a Teams app without writing code? Try [importing your Power App or other custom Microsoft business app](samples/importing-custom-microsoft-apps.md).
@@ -146,6 +123,4 @@ Did you know you can also create a Teams app without writing code? Try [importin
 Already familiar with developing Teams apps? See the following resources and tools.
 
 * [Adding a Share to Teams button to your website](concepts/build-and-test/share-to-teams.md)
-* [Fluent UI (link isn't final)](https://fluentsite.z22.web.core.windows.net/)
-* [TBD link](https://www.microsoft.com)
-* [TBD link](https://www.microsoft.com)
+* [Fluent UI](https://fluentsite.z22.web.core.windows.net/)

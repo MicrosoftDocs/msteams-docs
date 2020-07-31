@@ -52,7 +52,7 @@ If you choose to have your channel/group tab appear on Teams mobile clients, the
 
 ## Learn more
 
-* [Planning your app](planning-your-app/planning-overview.md)
-* [Designing your app](designing-your-app/designing-overview.md)
-* [Building your app](concepts/build-and-test/prepare-your-o365-tenant.md)
-* [Deploying your app](concepts/deploy-and-publish/overview.md)
+* [Planning your app](../concepts/extensibility-points.md)
+* [Designing your app](../designing-your-app/designing-overview.md)
+* [Building your app](../concepts/building-an-app.md)
+* [Deploying your app](../concepts/deploy-and-publish/overview.md)

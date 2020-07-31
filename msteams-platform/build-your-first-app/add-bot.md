@@ -1,9 +1,9 @@
 ---
-title: Add a bot to your first Teams app
+title: Create a bot for Teams
 author: heath-hamilton
 description: Learn how to build a bot in your first Microsoft Teams app.
 ---
-# Create a bot for your first Teams app
+# Create a bot for Teams
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
 
@@ -33,7 +33,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Upload and view your app in Teams.
 
-## Keep going
-
 > [!div class="nextstepaction"]
-> [Understanding Teams app capabilities](../concepts/capabilities-overview.md)
+> [Keep going: Understand Teams app capabilities](../concepts/capabilities-overview.md)
