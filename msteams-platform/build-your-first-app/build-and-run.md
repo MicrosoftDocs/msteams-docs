@@ -7,19 +7,17 @@ description: Run your first Microsoft Teams app.
 
 You can jump right into Microsoft Teams platform development by quickly building and running a "Hello, world!" app. This section shows you how to create and run a personal tab with Visual Studio Code. It will also describes some important file within the project.
 
-Before we start, let's make sure you have an account to run your Teams app on. If you already have a Teams account, you are good to go. If not you can [obtain one through M365 Developer Program]()
 We will show you two ways to use visual studio code to create Teams app. Feel free to use either one. The result is exactly the same.
-1. Using Visual Studio Codespace. -- The easiest way to get started if you have an Azure subscription account. You can start coding in your browser right away with all environment set up for you. 
-1. Using Visual Studio Code Desktop -- The classic way of creating project. No subscription needed.
+1. [Using Visual Studio Codespace](#Start-building-in-your-browser-with-Visual-Studio-Codepace) -- The easiest way to get started if you have an Azure subscription account. You can start coding in your browser right away with all environment set up for you. 
+1. [Using Visual Studio Code Desktop](#Building-with-Visual-Studio-Code) -- The classic way of creating project. No subscription needed.
 
 ## Start building in your browser with Visual Studio Codepace
 
 ### What you will need
-* Azure Account 
+* Azure Account or a GitHub Account 
+* Teams Account. If you don't have a Teams account you can obtian a test teant obtain one through [M365 Developer Program]()
 
-After you have the account set up, simply click on the below button to get started.
-
-:::image type="content" source="../assets/images/vs-codespace-intro.png" alt-text="<alt text>":::
+After you have the account set up, simply click on the below button to get started. 
 
 :::row:::
    :::column span="":::
@@ -36,17 +34,21 @@ After you have the account set up, simply click on the below button to get start
    :::column-end:::
 :::row-end:::
 
-We will choose tab --> personal tab.
+We will choose tab and then personal tab.
+
 :::image type="content" source="../assets/images/vs-codespace-add-capabilities.png" alt-text="<alt text>":::
 
-## The classic way of building with Visual Studio 
+
+:::image type="content" source="../assets/images/vs-codespace-intro.png" alt-text="<alt text>":::
+
+## Building with Visual Studio Code
 Follow these steps to create your new Teams project
 1. Install the latest version of [Visual Studio Code]()
-1. Go to extension and search for Microsoft Teams Toolkit 
+1. Go to extension and search for Microsoft Teams Toolkit
 :::image type="content" source="../assets/images/app-up-and-running/VSC-home.png" alt-text="<alt text>":::
-1. Install the toolkit and create a new Teams project 
-1. We will be building a personal tab so select tab and then personal tab
-:::image type="content" source="../assets/images/app-up-and-running/choose-tab.png" alt-text="<alt text>":::
+1. Install the toolkit and create a new Teams project  
+1. We will be building a personal tab so select tab and then personal tab  
+<image src="../assets/images/app-up-and-running/choose-tab.png" alt-text="<alt text>">
 1. You should see this read me popping up and we are ready to [run your app]() 
 
 ## Run your app
@@ -60,7 +62,8 @@ Now your app is up and running. Let's look at some essential files and [understa
   <summary>That didn't work? Click here</summary>
 Not to worry, we can also run your app by sideloading your app
 </details>
-:::image type="content" source="../assets/images/vs-codespace-run-app.png" alt-text="<alt text>":::
+
+<image src="../assets/images/app-up-and-running/tab-ruuning.png">
 
 Now you have an personal tab running in Teams 
 This page is live which means you can navigate to tabs.js and modify any string. You should see the text change accordingly. 
