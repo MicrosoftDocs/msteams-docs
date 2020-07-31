@@ -7,63 +7,39 @@ description: Run your first Microsoft Teams app.
 
 You can jump right into Microsoft Teams platform development by quickly building and running a "Hello, world!" app. This section shows you how to create and run a personal tab with Visual Studio Code. It will also describes some important file within the project.
 
-We will show you two ways to use visual studio code to create Teams app. Feel free to use either one. The result is exactly the same.
-1. [Using Visual Studio Codespace](#Start-building-in-your-browser-with-Visual-Studio-Codepace) -- The easiest way to get started if you have an Azure subscription account. You can start coding in your browser right away with all environment set up for you. 
-1. [Using Visual Studio Code Desktop](#Building-with-Visual-Studio-Code) -- The classic way of creating project. No subscription needed.
-
-## Start building in your browser with Visual Studio Codepace
-
-### What you will need
-* Azure Account or a GitHub Account 
-* Teams Account. If you don't have a Teams account you can obtian a test teant obtain one through [M365 Developer Program]()
-
-After you have the account set up, simply click on the below button to get started. 
-
-:::row:::
-   :::column span="":::
-   :::column-end:::
-
-   :::column span="":::
-
-     > [!div class="nextstepaction"]
-     > [Open Visual Studio Codespaces](https://aka.ms/vso-login)
-
-   :::column-end:::
-
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
-
-We will choose tab and then personal tab.
-
-:::image type="content" source="../assets/images/vs-codespace-add-capabilities.png" alt-text="<alt text>":::
-
-
-:::image type="content" source="../assets/images/vs-codespace-intro.png" alt-text="<alt text>":::
-
-## Building with Visual Studio Code
-Follow these steps to create your new Teams project
-1. Install the latest version of [Visual Studio Code]()
-1. Go to extension and search for Microsoft Teams Toolkit
-:::image type="content" source="../assets/images/app-up-and-running/VSC-home.png" alt-text="<alt text>":::
-1. Install the toolkit and create a new Teams project  
-1. We will be building a personal tab so select tab and then personal tab  
-<image src="../assets/images/app-up-and-running/choose-tab.png" alt-text="<alt text>">
-1. You should see this read me popping up and we are ready to [run your app]() 
-
-## Run your app
-Following the readme. Simply use "npm install" and "npm start" to build your app. 
-
-Now that you have the tab created, simply press F5 and your app should launch in Teams. 
-
-Now your app is up and running. Let's look at some essential files and [understand what's in the code]()
-
+## Pre requisites 
+1. [Microsoft 365 developer account](/concepts/build-and-test/prepare-your-o365-tenant) or Teams account that allows you to sideload an app 
+1. [Enable Teams developer preview mode](/resources/dev-preview/developer-preview-intro#enable-developer-preview)
 <details>
-  <summary>That didn't work? Click here</summary>
-Not to worry, we can also run your app by sideloading your app
+  <summary>Not sure if your account allow you to sideload an app? Click here.</summary>
+Click on AppStore on the bottom left corner and you should see "Upload a custom app" if sideloading is turned on. 
+<image src="../assets/images/app-up-and-running/upload-custom-app.png">
+If sideloading is not turned on for your tenant, please get a Microsoft 365 developer account and turn on sideloading by following these steps: 
+
+1.  Login to [Microsoft Teams admin center](https://admin.teams.microsoft.com/dashboard) with the admin credential  
+1.  Go to **Teams apps** --> **Setup Policies** --> **Global(Org-wide default)**  <image src="../assets/images/app-up-and-running/permission-policy.png">
+1. Toggle **upload custom apps** to on
+1. That's it, your test tenant now allow custom app sideloading 
+Note: This process can take up to 24 hours for sideloading to show up. At the meantime you can use Sideload for your tenant as an alternative 
 </details>
 
-<image src="../assets/images/app-up-and-running/tab-ruuning.png">
+
+## Building with Visual Studio Code
+Follow these steps to create your new Teams project:
+1. Install the latest version of [Visual Studio Code](https://code.visualstudio.com/download)
+1. Create a workspace/folder for your project in your local environment.
+1. In Visual Studio Code, select the Teams icon ![Teams icon](../assets/icons/favicon-16x16.png) from the activity bar on the left side of the window.
+1. Select **Open the Microsoft Teams Toolkit** from the command menu.
+1. Select **Create a new Teams app** from the command menu.
+1. When prompted, enter the name of the workspace . This will be used as both the name of the folder where your project will reside, and the default name of your app.
+1. Press **Enter** and you will arrive at the **Add capabilities** screen configure the properties for your new app.
+1. Select **Tab** and then **Personal tab**
+<image src="../assets/images/app-up-and-running/choose-tab.png" alt-text="<alt text>">
+1. Select the **Finish** button to complete the configuration process.
+1. You should see a README popping up and we are ready to run your app
+1. Following the readme instruction to build and run your apps locally and then deploy to Teams
+1.  You should see your app up and running in the Teams Client 
+<image src="../assets/images/app-up-and-running/tab-running.png" alt-text="<alt text>">
 
 Now you have an personal tab running in Teams 
 This page is live which means you can navigate to tabs.js and modify any string. You should see the text change accordingly. 
@@ -73,7 +49,6 @@ This page is live which means you can navigate to tabs.js and modify any string.
 Now that you have your first app up and running. Let's look at some the essential files that's in this template.
 
 ### App manifest
-
 The app manifest is a JSON schema that defines ...
 
 ```json
