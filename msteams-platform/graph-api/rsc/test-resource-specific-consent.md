@@ -24,19 +24,20 @@ Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration t
       "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
       "resource":"https://AnyString",
       "applicationPermissions":[
-         "TeamSettings.Read.Group",
-         "ChannelMessage.Read.Group",
-         "TeamSettings.Edit.Group",
-         "ChannelSettings.Edit.Group",
          "Channel.Create.Group",
          "Channel.Delete.Group",
+         "ChannelMessage.Read.Group",
+         "ChannelSettings.Read.Group",
+         "ChannelSettings.Edit.Group",
+         "Member.Read.Group",
+         "Owner.Read.Group",
          "TeamsApp.Read.Group",
          "TeamsTab.Read.Group",
          "TeamsTab.Create.Group",
          "TeamsTab.Edit.Group",
          "TeamsTab.Delete.Group",
-         "Member.Read.Group",
-         "Owner.Read.Group"
+         "TeamSettings.Read.Group",
+         "TeamSettings.Edit.Group"
       ]
    }
 ```
@@ -50,6 +51,7 @@ To check whether the RSC permissions are being honored by the API request payloa
 
 1. `azureADAppId`  — your app's Azure AD app id.
 1. `azureADAppSecret`  — your Azure AD app secret (password)
+1. `token_scope`  — the scope is required to get a token - set the value to https://graph.microsoft.com/.default
 1. `teamGroupId` — you can get the team group id from the Teams client as follows:
 
 > [!div class="checklist"]
