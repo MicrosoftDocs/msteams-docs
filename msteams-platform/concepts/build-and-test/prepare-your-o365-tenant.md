@@ -25,13 +25,12 @@ If Microsoft Teams has not been enabled for your organization, you'll need to do
 
 ## Enable custom Teams apps and turn on custom app uploading
 
-> [!Note] 
-> If you're using the Office 365 developer platform to build your app, these settings should already be configured to allow you to build, upload, and test your app.
-
-There are three settings relevant to enabling custom apps and custom app uploading:
-
-* **Org-wide custom app setting** => **Allow interaction with custom apps** => **On** — This setting enables or disables custom apps for your organization. It needs to be on. 
-* **Team custom app setting** => **Allow members to upload custom apps** => **On/Off** — This setting applies to each individual team inside Microsoft Teams. If you want to install your app for a specific team, this will need to be on for that team.
-* **User custom app policy** => **User can upload custom apps** => **On/Off** — This setting controls the permissions for an individual user. You'll need to enable this for individuals that are allowed to upload custom apps.
+To turn on custom app sideloading for your developer tenant, please follow the following steps 
+1.  Login to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with the admin credential  
+1.  Click **Show All** --> **Teams** 
+1.  Go to **Teams apps** --> **Setup Policies** --> **Global(Org-wide default)**  
+1. Toggle **upload custom apps** to on
+1. That's it, your test tenant now allow custom app sideloading 
+Note: This process can take up to 24 hours for sideloading to show up. At the meantime you can use Sideload for your tenant as an alternative 
 
 For complete information on how these settings interact, *see* [Manage custom app policies and settings in Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings) and [Manage app setup policies in Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies).
