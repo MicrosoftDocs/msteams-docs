@@ -101,7 +101,7 @@ When you install a tab for personal use, the display name is the `name` property
 
 This may be fine depending on what you call your app, but you may want to provide a name that makes more sense in the context of group collaboration (for example, **Team Contacts**).
 
-In `TabConfig.js`, go back to `microsoftTeams.settings.setSettings`. Add the `suggestedDisplayName` property with the tab name you want to display by default (as shown). Use the provided name or create your own. Remember, you're allowing users to change the name if they want.
+In `TabConfig.js`, go back to `microsoftTeams.settings.setSettings`. Add the `suggestedDisplayName` property with the tab name you want to display by default (as shown). Use the provided name or create your own. Remember, in the manifest you're allowing users to change the name if they want.
 
 ```javascript
     microsoftTeams.settings.setSettings({
@@ -114,7 +114,7 @@ In `TabConfig.js`, go back to `microsoftTeams.settings.setSettings`. Add the `su
 
 To see what your configuration page looks like, you must install your app in a channel or chat.
 
-1. Find a channel or chat you can use for testing and select **Add a tab +**.
+1. Find a channel or chat you can use for testing and select **Add a tab** :::image type="icon" source="../assets/icons/add-icon.png":::.
 1. On the **Add a tab** page, choose your app from the list.
 
 :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="Example screenshot of a channel tab with static content.":::
