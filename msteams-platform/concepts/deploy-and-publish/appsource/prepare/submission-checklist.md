@@ -83,6 +83,3 @@ Please include the following:
 * **Notes regarding the app features in Teams**: Detail all of the capabilities the app offers within Teams and steps for testing each feature.
 
 * **Video showing the app functionality (Optional)**: You can provide a video recording of the product for us to fully understand the functionality of the app.
-
-
-
