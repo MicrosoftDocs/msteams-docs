@@ -14,7 +14,7 @@ keywords: teams proactive messaging chat installation Graph
 
 ## Proactive messaging in Teams
 
-Proactive messages are initiated by bots to start conversations with a users. They serve many purposes including sending welcome messages, conducting surveys or polls, and broadcasting organization-wide notifications.  Proactive messages in Teams can be delivered as either **ad-hoc** or **dialog-based** conversations:
+Proactive messages are initiated by bots to start conversations with a user. They serve many purposes including sending welcome messages, conducting surveys or polls, and broadcasting organization-wide notifications.  Proactive messages in Teams can be delivered as either **ad-hoc** or **dialog-based** conversations:
 
 |Message Type | Description |
 |----------------|-------------- |
@@ -150,7 +150,7 @@ The `chatId` can also be retrieved as follows:
 
 **Microsoft Graph reference:** [Get chat](/graph/api/chat-get?view=graph-rest-beta&tabs=http)
 
-**1.** You will need your app's `{teamsAppInstallationId}` If you don't have it, use the following:
+**1.** You will need your app's `{teamsAppInstallationId}`. If you don't have it, use the following:
 
 **HTTP GET** request:
 
