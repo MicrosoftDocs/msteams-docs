@@ -34,7 +34,7 @@ Much of the personal tab app scaffolding and manifest is set up automatically wh
 
 ### App manifest
 
-The following snippet from the app manifest (the `manifest.json` file in your project's `.publish` directory) shows `staticTabs`, which includes properties and default values relevant to personal tabs.
+The following snippet from the app manifest (the `manifest.json` file in your project's `.publish` directory) shows [`staticTabs`](../resources/schema/manifest-schema.md#staticTabs), which includes properties and default values relevant to personal tabs.
 
 ```json
     "staticTabs": [
@@ -51,8 +51,6 @@ The following snippet from the app manifest (the `manifest.json` file in your pr
 * `name`: The tab's display name (for example, "My Contacts").
 * `contentUrl`: The host URL the tab content page (must be HTTPS).
 * `scopes`: Specifies the tab is for personal use only.
-
-See the [manifest schema reference](../resources/schema/manifest-schema.md#staticTabs) for more information.
 
 ### App scaffolding
 
