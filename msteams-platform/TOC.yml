@@ -8,22 +8,18 @@
 - name: Build your first app
   expanded: true
   items:
-  - name: Build and run your first app
+  - name: Overview
+    href: build-your-first-app/building-real-world-app.md
+  - name: Create and run your first app
     href: build-your-first-app/build-and-run.md
-  - name: Build a real-world app
-    items: 
-    - name: Overview
-      href: build-your-first-app/building-real-world-app.md
-    - name: Create a personal tab app
-      href: build-your-first-app/add-personal-tab.md
-    - name: Create a channel tab app
-      href: build-your-first-app/add-channel-tab.md
-    - name: Create a connector app
-      href: build-your-first-app/add-connector.md
-    - name: Create a messaging extension app
-      href: build-your-first-app/add-messaging-extension.md
-    - name: Create a bot app
-      href: build-your-first-app/add-bot.md
+  - name: Build a personal tab
+    href: build-your-first-app/add-personal-tab.md
+  - name: Build a channel tab
+    href: build-your-first-app/add-channel-tab.md
+  - name: Build a bot
+    href: build-your-first-app/add-bot.md
+  - name: Build a messaging extension
+    href: build-your-first-app/add-messaging-extension.md
 - name: Understanding app capabilities
   items:
   - name: Overview
@@ -48,7 +44,7 @@
     href: samples/app-templates.md
   - name: Production-ready shifts connectors
     href: samples/shifts-wfm-connectors.md
-- name: Planning your app
+- name: Plan your app
   items:
   - name: Get started
     href: concepts/extensibility-points.md
@@ -60,7 +56,7 @@
     href: planning-your-app/app-contexts.md
   - name: Getting to know Teams UI conventions
     href: planning-your-app/teams-ui-conventions.md
-- name: Designing your app
+- name: Design your app
   items:
   - name: Getting started
     href: designing-your-app/designing-overview.md
@@ -99,7 +95,7 @@
       href: concepts/design/components/fields.md
     - name: Dialogs
       href: concepts/design/components/dialogs.md
-- name: Building your app
+- name: Build your app
   items:
   - name: Building apps for Teams
     href: concepts/building-an-app.md
