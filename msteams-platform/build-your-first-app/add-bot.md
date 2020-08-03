@@ -9,6 +9,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 :::image type="content" source="../assets/images/overview-bots.png" alt-text="Alt text describes the content of the image.":::
 
+## Your assignment
+
+Need a more proactive way to get in touch with the help desk (i.e., not just static tab)
+
 ## What you'll learn
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.

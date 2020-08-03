@@ -18,7 +18,7 @@ Apps are how you extend Teams to fit your needs. You can create something brand 
 
 ## What can Teams apps do?
 
-People discover and use Teams apps through a set of core capabilities that include tabs, messaging extensions, bots, and connectors. Your app can use one or a combination of capabilities. You can specify your app's scope for only personal workspaces or expand it to group chats and team channel activities.
+People discover and use Teams apps through a set of core capabilities that include tabs, messaging extensions, bots, and connectors. Your app can use one or a combination of capabilities. You can specify your app's scope for only personal workspaces or expand it to chats and team channel activities.
 
 Some apps are simple (send notifications), while others are complex (view patient records). When planning your app, remember that Teams is a collaboration hub. The best Teams apps help people express themselves and work better together.
 
@@ -106,15 +106,6 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 
    :::column-end:::
 :::row-end:::
-
-## Next steps
-
-Get help at any point while creating your Teams app.
-
-1. [Planning your app](concepts/extensibility-points.md)
-1. [Designing your app](designing-your-app/designing-overview.md)
-1. [Building your app](concepts/building-an-app.md)
-1. [Publishing your app](concepts/deploy-and-publish/overview.md)
 
 Did you know you can also create a Teams app without writing code? Try [importing your Power App or other custom Microsoft business app](samples/importing-custom-microsoft-apps.md).
 

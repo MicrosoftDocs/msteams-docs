@@ -6,35 +6,37 @@ ms.topic: tutorial
 ---
 # Create a channel tab for Teams
 
-Tabs are a simple way to surface content in your app by essentially embedding a webpage in Teams.
-
-You can build two types of tabs. In this tutorial, you'll build a basic *channel tab*, which displays content based on how it's configured for a channel or group chat.
+In this tutorial, you'll build a basic *channel tab*, a full-screen content page for a team channel or chat. Unlike a personal tab, users can configure some aspects of a channel tab (for example, rename the tab so it's meaningful to their channel).
 
 :::image type="content" source="../assets/images/overview-tabs.png" alt-text="Conceptual image of a tab in Teams.":::
 
 ## Before you begin
 
-* You need a running "Hello, World!" Teams app to get started. If you don't have one, see [build and run your first app](../build-your-first-app/build-and-run.md).
-* This tutorial expands on [creating a personal tab](../build-your-first-app/add-personal-tab.md). Please complete that lesson before starting this one.
+* You need a running "Hello, World!" app to get started. If you don't have one, see [build and run your Teams first app](../build-your-first-app/build-and-run.md).
+* If you haven't [created a personal tab](../build-your-first-app/add-personal-tab.md) for your app, do that tutorial before starting this one.
 
 ## Your assignment
 
-COMPLETE.
+In the previous tutorial, you created a tab app that helps colleagues quickly find important contact information without leaving Teams. That's great! However, since the tab was scoped only for personal use, each user must install the app and adoption is lower than you hoped. In other words, too many coworkers still don't have a convenient way to get in touch with the help desk.
 
-## What you'll learn UPDATE
+Help increase your app's exposure by adding the channel tab capability to it. This removes the burden of requiring everyone to install the app. Instead, one user can install the tab for an entire group in a channel or chat.
+
+## What you'll learn
 
 > [!div class="checklist"]
 >
-> * App manifest properties and scaffolding relevant to channel tabs
-> * Allowing users to set up an additional tab for their channel or group chat
+> * Identify the app manifest and scaffolding components relevant to channel tabs
+> * Create content for a tab's configuration page
+> * Allow tab to be configured and installed
+> * Provide a suggested tab name
 
-## What you need to know about the app manifest and scaffolding UPDATE
+## Identify relevant app manifest and scaffolding components
 
-Much of the personal tab app scaffolding and manifest was set up automatically when you created your project with the Teams Toolkit. Let's look at the components you'll work with in this tutorial.
+Much of the channel tab app scaffolding and manifest is set up automatically when you create your project with the Teams Toolkit. Let's look at the main components for building a channel tab.
 
-### Update the app manifest
+### App manifest
 
-The following snippet ... .
+The following snippet from the app manifest shows `configurableTabs`, which includes the properties and default values relevant to channel tabs.
 
 ```json
     "configurableTabs": [
@@ -49,34 +51,86 @@ The following snippet ... .
     ],
 ```
 
-### App scaffolding UPDATE
+* `configurationUrl`: The host URL for your tab configuration page (must be HTTPS).
+* `canUpdateConfiguration`: If set to `true`, users can change tab settings, rename the tab, or remove it from a channel or chat.
+* `scopes`: Specifies if users can install the app in channels (`team`) and chats (`groupchat`). At least one value is required.
 
-The app scaffolding provides the components for rendering your tab in Teams. There's a lot you can play with, but for this exercise we'll only focus on the following:
+See the [manifest schema reference](../resources/schema/manifest-schema.md#configurabletabs) for more information.
 
-* `Tab.js` file in the `src/components` directory of your project
-* Microsoft Teams JavaScript client SDK, which comes pre-loaded in your project's front-end components
+### App scaffolding
 
-## Create your tab content UPDATE
+The app scaffolding provides a `TabConfig.js` file, located in the `src/components` directory of your project, for rendering your tab's configuration page (more on this soon).
 
-Write a list of important contacts in your organization. You can use the following snippet as is or update it with information that's relevant to you.
+## Create content for your tab's configuration page
 
-```html
+Every channel tab has a configuration page, a modal with at least one setup option that displays when installing the app. The configuration page by default asks users if they want to notify the channel or chat when the tab is installed.
 
+Add some content to your configuration page. Go to your project's `src/components` directory, open `TabConfig.js`, and insert some content inside `return()` (as shown).
+
+```javascript
+    return (
+        <div>
+          <h1>Add My Contoso Contacts</h1>
+          <div>
+            Select <b>Save</b> to add our organization's important contacts to this workspace.
+          </div>
+        </div>
+    );
+```
+ 
+> [!TIP]
+> At minimum, provide some brief information about your app on this page since this may be the first time users are learning about it. You also could include custom configuration options or an [authentication workflow](../tabs/how-to/authentication/auth-aad-sso.md), which is common on tab configuration pages.
+
+## Allow tab to be configured and installed
+
+For users to successfully configure and install the channel tab, you must add the host URL you set up when [creating and running your first app](../build-your-first-app/build-and-run.md) to the configuration page component.
+
+Go to `TabConfig.js` and locate `microsoftTeams.settings.setSettings`. For `"contentUrl"`, replace the `localhost:3000` part of the URL with the domain where you're hosting the tab content (as shown).
+
+```javascript
+    microsoftTeams.settings.setSettings({
+      "contentUrl": "https://<MY_HOST_DOMAIN>/tab"
+    });
 ```
 
-Go to the `src/components` directory and open `Tab.js`. Locate the `render()` function and paste your HTML inside `return()` (see below).
+Also, make sure that `microsoftTeams.settings.setValidityState(true);`. It is by default, but if set to `false`, the **Save** button is disabled on the configuration page.
 
-```Javascript
+## Provide a suggested tab name
 
+When you install a tab for personal use, the display name is the `name` property in the `staticTabs` portion of of the app manifest (for example, **My Contacts**). When you install a channel tab, by default the app name displays (for example, **first-app**).
+
+This may be fine depending on what you call your app, but you may want to provide a name that makes more sense in the context of group collaboration (for example, **Team Contacts**).
+
+In `TabConfig.js`, go back to `microsoftTeams.settings.setSettings`. Add the `suggestedDisplayName` property with the tab name you want to display by default (as shown). Use the provided name or create your own. Remember, you're allowing users to change the name if they want.
+
+```javascript
+    microsoftTeams.settings.setSettings({
+      "contentUrl": "https://<MY_HOST_DOMAIN>/tab",
+      "suggestedDisplayName": "Team Contacts"
+    });
 ```
 
-Save your changes to see the new tab content display in Teams.
+## View the configuration page
+
+To see what your configuration page looks like, you must install your app in a channel or chat.
+
+1. Find a channel or chat you can use for testing and select **Add a tab +**.
+1. On the **Add a tab** page, choose your app from the list.
+
+:::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="Example screenshot of a channel tab with static content.":::
+
+Once installed, you see the same content page you created for your personal tab.
+
+## Well done
+
+Congratulations! You have a Teams app with a channel tab for displaying content in channels and chats.
 
 ## Learn more
 
+* [Authenticate tab users with SSO](../tabs/how-to/authentication/auth-aad-sso.md): If you only want authorized users viewing your tab, set up single sign-on (SSO) through Azure Active Directory (AD).
 * [Embed content from an existing web app or webpage](../tabs/how-to/add-tab#tab-requirements): We showed you how to create new content for a personal tab, but you can also load content from an external URL.
 * [Create a seamless experience for your tab](../tabs/design/tabs.md): See the recommended guidelines for designing Teams tabs.
-* [Build for tabs on mobile](../tabs/design/tabs-mobile.md): Understand how to develop tabs for smartphones and tablets.
+* [Build tabs for mobile](../tabs/design/tabs-mobile.md): Understand how to develop tabs for smartphones and tablets.
 
 > [!div class="nextstepaction"]
-> [Keep going: Create a connector](../build-your-first-app/add-connector.md)
+> [Keep going: Create a messaging extension](../build-your-first-app/add-messaging-extension.md)
