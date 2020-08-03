@@ -44,9 +44,17 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 :::image type="content" source="../assets/images/vs-codespace-run-app.png" alt-text="<alt text>":::
 
-## Understanding what's in the app package
+## Understanding what's beneath the surface
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+1. Microsoft Teams SDK
+
+1. The initializer
+
+1. The app manifest
+
+### Microsoft Teams SDK
+
+### Initializer
 
 ### App manifest
 
