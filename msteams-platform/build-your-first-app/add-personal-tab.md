@@ -8,7 +8,7 @@ ms.topic: tutorial
 
 Tabs are a simple way to surface content in your app by essentially embedding a webpage in Teams.
 
-There are two types of tabs in Teams. In this tutorial, you'll build basic a *personal tab*, which is a full-screen content page for individual users. (Personal tabs are the closest thing to a traditional website experience in Teams.)
+There are two types of tabs in Teams. In this tutorial, you'll build basic a *personal tab*, a full-screen content page for individual users. (Personal tabs are the closest thing to a traditional website experience in Teams.)
 
 :::image type="content" source="../assets/images/overview-tabs.png" alt-text="Conceptual image of a tab in Teams.":::
 
@@ -110,7 +110,7 @@ Save your changes. Go to your app's tab in Teams to view the new content.
 
 Good apps feel native to Teams, so it's important your tab blends with the Teams theme your users prefer: default (light), dark, or high contrast. As you might have noticed in the last screenshot, your tab still has a light background when the client's using the dark theme. This is not a recommended user experience.
 
-The [Teams JavaScript client SDK](/javascript/api/overview/msteams-client) can make your app aware of and react to theme changes in the client. Let's walk through how to do this.
+The [Teams JavaScript client SDK](https://docs.microsoft.com/en-us/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest) can make your app aware of and react to theme changes in the client. Let's walk through how to do this.
 
 ### Get context about the Teams client
 

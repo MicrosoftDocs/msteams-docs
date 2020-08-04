@@ -8,8 +8,9 @@ description: Run your first Microsoft Teams app.
 You can jump right into Microsoft Teams platform development by quickly building and running a "Hello, world!" app. This section shows you how to create and run a personal tab with Visual Studio Code. It will also describes some important file within the project.
 
 ## Get prerequisites
-1. [Microsoft 365 developer account](../concepts/build-and-test/prepare-your-o365-tenant) or Teams account that allows you to sideload an app 
-1. [Enable Teams developer preview mode](../resources/dev-preview/developer-preview-intro#enable-developer-preview)
+
+1. Set up a [Microsoft 365 developer account](../concepts/build-and-test/prepare-your-o365-tenant) or Teams account that allows you to upload a custom app.
+1. [Enable Teams developer preview mode](../resources/dev-preview/developer-preview-intro#enable-developer-preview).
 <details>
   <summary>Not sure if your account allow you to sideload an app? Click here.</summary>
 Click on AppStore on the bottom left corner and you should see "Upload a custom app" if sideloading is turned on.
@@ -20,25 +21,21 @@ If sideloading is not turned on for your tenant, please get a Microsoft 365 deve
 
 ## Build with Visual Studio Code
 
-Follow these steps to create your new Teams project:
+Follow these steps to set up your first Teams app project using Visual Studio Code.
 
 1. Install the latest version of [Visual Studio Code](https://code.visualstudio.com/download).
 1. Create a workspace/folder for your project in your local environment.
-1. In Visual Studio Code, select the Teams icon ![Teams icon](../assets/icons/favicon-16x16.png) from the activity bar on the left side of the window.
-1. Select **Open the Microsoft Teams Toolkit** from the command menu.
+1. In Visual Studio Code, select the Teams icon ![Teams icon](../assets/icons/favicon-16x16.png) from the activity bar on the left.
 1. Select **Create a new Teams app** from the command menu.
-1. When prompted, enter the name of the workspace. This serves as both the name of the folder where your project resides and the default name of your app.
-1. On the **Add capabilities** screen, select **Tab** and **Next**.
-1. **Personal tab**
+1. When prompted, enter a name for your app. This is the default name for your app and also the name of the project directory on your machine.
+1. On the **Add capabilities** screen, select **Tab** then **Next**.
 <image src="../assets/images/app-up-and-running/choose-tab.png" alt-text="<alt text>">
-1. Select the **Finish** button to complete the configuration process.
+1. Check the **Personal tab** and **Group or Teams channel** options and select **Finish** to configure your project. Once complete, you have the app scaffolding components for building personal and channel tabs.
 1. Follow the `README.md` instructions in your project to build and run your app locally and deploy to Teams.
 1. You should see your app up and running in the Teams client.
 <image src="../assets/images/app-up-and-running/tab-running.png" alt-text="<alt text>">
 
 Now you have a personal tab running in Teams.
-
-This page is live which means you can navigate to **src/components/tabs.js** and modify the sting inside \<h1> and \<h3> . You should see the text change in your app accordingly.
 
 ## Understand what's in the the code
 
