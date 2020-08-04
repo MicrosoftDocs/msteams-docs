@@ -30,7 +30,7 @@ Sometimes you just need to make things easier to find. Display an important webp
 
 ### Share links without switching context
 
-Pull information into a conversation and never leave Teams. For example, [messaging extensions](messaging-extensions/what-are-messaging-extensions.md) allow people to share rich, easily digestible content from an external system using the message compose box.
+Pull information into a conversation and never leave Teams. For example, with [messaging extensions](messaging-extensions/what-are-messaging-extensions.md) you can share rich, easily digestible content from an external system using the message compose box.
 
 :::image type="content" source="assets\images\overview-messaging.png" alt-text="Conceptual representation of what messaging extensions look like in the Teams client." border="false":::
 
