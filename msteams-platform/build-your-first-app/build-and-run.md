@@ -32,12 +32,11 @@ Follow these steps to create your new Teams project:
 1. **Personal tab**
 <image src="../assets/images/app-up-and-running/choose-tab.png" alt-text="<alt text>">
 1. Select the **Finish** button to complete the configuration process.
-1. You should see a README popping up and we are ready to run your app
-1. Following the readme instruction to build and run your apps locally and then deploy to Teams
-1.  You should see your app up and running in the Teams Client 
+1. Follow the `README.md` instructions in your project to build and run your app locally and deploy to Teams.
+1. You should see your app up and running in the Teams client.
 <image src="../assets/images/app-up-and-running/tab-running.png" alt-text="<alt text>">
 
-Now you have an personal tab running in Teams.
+Now you have a personal tab running in Teams.
 
 This page is live which means you can navigate to **src/components/tabs.js** and modify the sting inside \<h1> and \<h3> . You should see the text change in your app accordingly.
 
