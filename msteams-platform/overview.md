@@ -42,9 +42,7 @@ Conversations often result in the need to do something (create an order, review 
 
 ### Communicate with apps and services using text messages
 
-Incoming webhooks are a simple way to automatically send notifications from another app to a channel or chat. With outgoing webhooks, users can send a message with an @mention of your web service.
-
-Sick of sending reminders through email? Do it through Teams instead! With [connectors](webhooks-and-connectors/what-are-webhooks-and-connectors.md), you can use incoming webhooks to send notifications to channels and chats.
+[Incoming webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send notifications from another app to a Teams channel or chat. With [outgoing webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), you can send a message to your web service with an @mention.
 
 :::image type="content" source="assets/images/overview-connectors.png" alt-text="Conceptual representation of what connectors look like in the Teams client." border="false":::
 

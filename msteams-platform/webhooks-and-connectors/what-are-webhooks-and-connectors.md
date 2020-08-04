@@ -1,13 +1,13 @@
 ---
-title: What are connectors?
+title: What are webhooks and connectors?
 author: clearab
 description: Understand how webhooks and connectors can connect your web services to the Teams client.
 ms.topic: overview
 ms.author: anclear
 ---
-# What are connectors?
+# What are webhooks and connectors?
 
-Connectors (and webhooks) are a simple way to connect your web services to teams and teams and channels in Microsoft Teams.
+Webhooks and connectors are a simple way to connect your web services to teams and teams and channels in Microsoft Teams.
 
 Connectors allow users to subscribe to receive notifications and messages from your web services. They expose an HTTPS endpoint for your service to post messages to - typically in the form of cards.
 
