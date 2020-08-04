@@ -16,7 +16,7 @@
     href: build-your-first-app/add-personal-tab.md
   - name: Build a channel tab
     href: build-your-first-app/add-channel-tab.md
-- name: Understanding app capabilities
+- name: Understand app capabilities
   items:
   - name: Overview
     href: concepts/capabilities-overview.md
@@ -270,7 +270,7 @@
         href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
       - name: Application-hosted media
         href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-  - name: Connectors — programmed messaging and notifications
+  - name: Webhooks and connectors — programmed messaging and notifications
     items:
     - name: How-to guides
       expanded: true
@@ -313,7 +313,7 @@
       href: concepts/build-and-test/debug.md
     - name: Using sample data
       href: concepts/build-and-test/test-data.md
-- name: Publishing your app
+- name: Publish your app
   items:
   - name: Choose your distribution methods
     href: concepts/deploy-and-publish/overview.md
