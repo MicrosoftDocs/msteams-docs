@@ -42,11 +42,39 @@ Follow these steps to create your new Teams project:
 Now you have an personal tab running in Teams 
 This page is live which means you can navigate to **src/components/tabs.js** and modify the sting inside \<h1> and \<h3> . You should see the text change in your app accordingly.
 
-## Understand what's in the the code
+## Take a deeper look
 
-Now that you have your first app up and running. Let's look at some the essential files that's in this template.
+Now that you have your first app up and running. Let's examine some the essential files that's in the Toolkit template.
 
-### App manifest
+### The app manifest
+
+The app manifest file specifies the your app's attributes and points to required the resources for your solution. The manifest has a number of fields and properties that you can surface to create an amazing app experience. Most are optional, but there are a few that are required for **all** Teams apps :
+
+
+|Data|Type|Size|Manifest location|Toolkit file name|
+|---|---|:---:|:---:|-----|
+|**schema version|URL|`
+|**color logo**|.png|192&times;192 pixels|`icon.color`|.publish/**color.png**|
+|**outline logo**|.png|32&times;32 pixels|``icon.outline`|.publish/**outline.png**|
+
+✔ In addition, your **app manifest** file must include the following :
+|Data|Type|Size|Manifest reference|Toolkit file location|
+|---|---|:---:|:---:|-----|
+|Privacy link|URL| 2048 characters| `developer.privacyUrl`|src/components/**Privacy.js**|
+|Terms of use|URL|2048 characters|`developer.termsOfUseUrl`|src/components/**TermsOfUse.js** |
+---
+✔ An app package .zip file containing the following:  
+
+|Data|Type|Size|Manifest location|Toolkit file name|
+|---|---|:---:|:---:|-----|
+| **app manifest**|.json| — | — |.publish/**manifest.json**|
+|**color logo**|.png|192&times;192 pixels|`icon.color`|.publish/**color.png**|
+|**outline logo**|.png|32&times;32 pixels|``icon.outline`|.publish/**outline.png**|
+
+### App.js
+
+### Tab.js
+### TabConfig,js
 
 The app manifest is a JSON schema that defines ...
 
