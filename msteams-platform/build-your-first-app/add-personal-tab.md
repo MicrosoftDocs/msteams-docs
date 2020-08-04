@@ -188,5 +188,7 @@ Congratulations! You have a Teams app with a personal tab that makes it easier t
 * [Create a seamless experience for your tab](../tabs/design/tabs.md): See the recommended guidelines for designing Teams tabs.
 * [Build tabs for mobile](../tabs/design/tabs-mobile.md): Understand how to develop tabs for smartphones and tablets.
 
+## Next step
+
 > [!div class="nextstepaction"]
-> [Keep going: Create a channel tab](../build-your-first-app/add-channel-tab.md)
+> [Create a channel tab](../build-your-first-app/add-channel-tab.md)

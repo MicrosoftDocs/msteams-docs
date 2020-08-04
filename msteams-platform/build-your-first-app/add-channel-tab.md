@@ -129,6 +129,3 @@ Congratulations! You have a Teams app with a channel tab for displaying content 
 * [Embed content from an existing web app or webpage](../tabs/how-to/add-tab#tab-requirements): We showed you how to create new content for a personal tab, but you can also load content from an external URL.
 * [Create a seamless experience for your tab](../tabs/design/tabs.md): See the recommended guidelines for designing Teams tabs.
 * [Build tabs for mobile](../tabs/design/tabs-mobile.md): Understand how to develop tabs for smartphones and tablets.
-
-> [!div class="nextstepaction"]
-> [Keep going: Create a messaging extension](../build-your-first-app/add-messaging-extension.md)

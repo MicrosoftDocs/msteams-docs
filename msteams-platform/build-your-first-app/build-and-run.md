@@ -7,12 +7,12 @@ description: Run your first Microsoft Teams app.
 
 You can jump right into Microsoft Teams platform development by quickly building and running a "Hello, world!" app. This section shows you how to create and run a personal tab with Visual Studio Code. It will also describes some important file within the project.
 
-## Pre requisites 
-1. [Microsoft 365 developer account](/concepts/build-and-test/prepare-your-o365-tenant) or Teams account that allows you to sideload an app 
-1. [Enable Teams developer preview mode](/resources/dev-preview/developer-preview-intro#enable-developer-preview)
+## Get prerequisites
+1. [Microsoft 365 developer account](../concepts/build-and-test/prepare-your-o365-tenant) or Teams account that allows you to sideload an app 
+1. [Enable Teams developer preview mode](../resources/dev-preview/developer-preview-intro#enable-developer-preview)
 <details>
   <summary>Not sure if your account allow you to sideload an app? Click here.</summary>
-Click on AppStore on the bottom left corner and you should see "Upload a custom app" if sideloading is turned on. 
+Click on AppStore on the bottom left corner and you should see "Upload a custom app" if sideloading is turned on.
 <image src="../assets/images/app-up-and-running/upload-custom-app.png">
 
 If sideloading is not turned on for your tenant, please get a Microsoft 365 developer account and turn on sideloading by following [these steps](/concepts/build-and-test/prepare-your-o365-tenant#Enable-custom-Teams-apps-and-turn-on-custom-app-uploading) 
@@ -27,9 +27,9 @@ Follow these steps to create your new Teams project:
 1. In Visual Studio Code, select the Teams icon ![Teams icon](../assets/icons/favicon-16x16.png) from the activity bar on the left side of the window.
 1. Select **Open the Microsoft Teams Toolkit** from the command menu.
 1. Select **Create a new Teams app** from the command menu.
-1. When prompted, enter the name of the workspace . This will be used as both the name of the folder where your project will reside, and the default name of your app.
-1. Press **Enter** and you will arrive at the **Add capabilities** screen configure the properties for your new app.
-1. Select **Tab** and then **Personal tab**
+1. When prompted, enter the name of the workspace. This serves as both the name of the folder where your project resides and the default name of your app.
+1. On the **Add capabilities** screen, select **Tab** and **Next**.
+1. **Personal tab**
 <image src="../assets/images/app-up-and-running/choose-tab.png" alt-text="<alt text>">
 1. Select the **Finish** button to complete the configuration process.
 1. You should see a README popping up and we are ready to run your app
