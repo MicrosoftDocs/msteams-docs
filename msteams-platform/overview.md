@@ -18,7 +18,7 @@ Apps are how you extend Teams to fit your needs. You can create something brand 
 
 ## What can Teams apps do?
 
-People discover and use Teams apps through a set of [core capabilities](../concepts/capabilities-overview.md). Your app can have one or more of these capabilities. You also can define your app's scope for personal workspaces only or expand it to chats and team channel activities.
+People discover and use Teams apps through a set of [core capabilities](concepts/capabilities-overview.md). Your app can have one or more of these capabilities. You also can define your app's scope for personal workspaces only or expand it to chats and team channel activities.
 
 Some apps are simple (send notifications), while others are complex (view patient records). When planning your app, remember that Teams is a collaboration hub. The best Teams apps help people express themselves and work better together.
 
@@ -114,4 +114,4 @@ Did you know you can also create a Teams app without writing code? Try [importin
 Already familiar with developing Teams apps? See the following resources and tools.
 
 * [Adding a Share to Teams button to your website](concepts/build-and-test/share-to-teams.md)
-* [Fluent UI](https://fluentsite.z22.web.core.windows.net/)
+* [Fluent Design System](https://fluentsite.z22.web.core.windows.net/)
