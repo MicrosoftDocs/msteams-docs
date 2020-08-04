@@ -18,7 +18,7 @@ Apps are how you extend Teams to fit your needs. You can create something brand 
 
 ## What can Teams apps do?
 
-People discover and use Teams apps through a set of core capabilities that include tabs, messaging extensions, bots, and connectors. Your app can use one or a combination of capabilities. You can specify your app's scope for only personal workspaces or expand it to chats and team channel activities.
+People discover and use Teams apps through a set of [core capabilities](../concepts/extensibility-points.md). Your app can have one or more of these capabilities. You also can define your app's scope for personal workspaces only or expand it to chats and team channel activities.
 
 Some apps are simple (send notifications), while others are complex (view patient records). When planning your app, remember that Teams is a collaboration hub. The best Teams apps help people express themselves and work better together.
 
@@ -28,9 +28,9 @@ Sometimes you just need to make things easier to find. Display an important webp
 
 :::image type="content" source="assets/images/overview-tabs.png" alt-text="Conceptual representation of what tabs look like in the Teams client." border="false":::
 
-### Collaborate on everything in one place
+### Collaborate on everything in the same place
 
-A core benefit of Teams apps is pulling information somewhere outside Teams into a conversation. For example, an app that uses [messaging extensions](messaging-extensions/what-are-messaging-extensions.md) allows people to share rich, easily digestible content from an essential tool or system without leaving the chat.
+A primary benefit of Teams apps is pulling information somewhere outside Teams into a conversation. For example, an app that uses [messaging extensions](messaging-extensions/what-are-messaging-extensions.md) allows people to share rich, easily digestible content from an essential tool or system without leaving the chat.
 
 :::image type="content" source="assets\images\overview-messaging.png" alt-text="Conceptual representation of what messaging extensions look like in the Teams client." border="false":::
 
@@ -40,9 +40,11 @@ Conversations often result in the need to do something (create an order, review 
 
 :::image type="content" source="assets/images/overview-bots.png" alt-text="Conceptual representation of what bots look like in the Teams client." border="false":::
 
-### Send reminders people notice
+### Communicate with apps and services using text messages
 
-Sick of sending reminders through email? Do it through Teams instead! With [connectors](webhooks-and-connectors/what-are-webhooks-and-connectors.md), you can use incoming webhooks to send notifications to channels that also display in a user's Activity feed.
+Incoming webhooks are a simple way to automatically send notifications from another app to a channel or chat. With outgoing webhooks, users can send a message with an @mention of your web service.
+
+Sick of sending reminders through email? Do it through Teams instead! With [connectors](webhooks-and-connectors/what-are-webhooks-and-connectors.md), you can use incoming webhooks to send notifications to channels and chats.
 
 :::image type="content" source="assets/images/overview-connectors.png" alt-text="Conceptual representation of what connectors look like in the Teams client." border="false":::
 

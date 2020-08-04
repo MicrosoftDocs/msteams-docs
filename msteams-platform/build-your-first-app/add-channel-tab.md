@@ -36,7 +36,7 @@ Much of the channel tab app scaffolding and manifest is set up automatically whe
 
 ### App manifest
 
-The following snippet from the app manifest shows `configurableTabs`, which includes the properties and default values relevant to channel tabs.
+The following snippet from the app manifest shows [`configurableTabs`](../resources/schema/manifest-schema.md#configurabletabs), which includes the properties and default values relevant to channel tabs.
 
 ```json
     "configurableTabs": [
@@ -54,8 +54,6 @@ The following snippet from the app manifest shows `configurableTabs`, which incl
 * `configurationUrl`: The host URL for your tab configuration page (must be HTTPS).
 * `canUpdateConfiguration`: If set to `true`, users can change tab settings, rename the tab, or remove it from a channel or chat.
 * `scopes`: Specifies if users can install the app in channels (`team`) and chats (`groupchat`). At least one value is required.
-
-See the [manifest schema reference](../resources/schema/manifest-schema.md#configurabletabs) for more information.
 
 ### App scaffolding
 
@@ -119,7 +117,7 @@ To see what your configuration page looks like, you must install your app in a c
 
 :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="Example screenshot of a channel tab with static content.":::
 
-Once installed, you see the same content page you created for your personal tab.
+Once installed, the content page displays (it's the same content you created for your personal tab).
 
 ## Well done
 

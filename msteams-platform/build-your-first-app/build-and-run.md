@@ -18,9 +18,10 @@ Click on AppStore on the bottom left corner and you should see "Upload a custom 
 If sideloading is not turned on for your tenant, please get a Microsoft 365 developer account and turn on sideloading by following [these steps](/concepts/build-and-test/prepare-your-o365-tenant#Enable-custom-Teams-apps-and-turn-on-custom-app-uploading) 
 </details>
 
-
 ## Build with Visual Studio Code
+
 Follow these steps to create your new Teams project:
+
 1. Install the latest version of [Visual Studio Code](https://code.visualstudio.com/download)
 1. Create a workspace/folder for your project in your local environment.
 1. In Visual Studio Code, select the Teams icon ![Teams icon](../assets/icons/favicon-16x16.png) from the activity bar on the left side of the window.
@@ -36,7 +37,8 @@ Follow these steps to create your new Teams project:
 1.  You should see your app up and running in the Teams Client 
 <image src="../assets/images/app-up-and-running/tab-running.png" alt-text="<alt text>">
 
-Now you have an personal tab running in Teams 
+Now you have an personal tab running in Teams.
+
 This page is live which means you can navigate to **src/components/tabs.js** and modify the sting inside \<h1> and \<h3> . You should see the text change in your app accordingly.
 
 ## Understand what's in the the code
@@ -92,10 +94,9 @@ The app manifest is a JSON schema that defines ...
 }
 ```
 
-
 ## Next step
 
 Congratulations! You have a basic functional Teams app and you also understands what goes in it. Learn how to add features to it with our real-world app tutorials.
 
 > [!div class="nextstepaction"]
-> [Building a real-world Teams app](../build-your-first-app/building-real-world-app.md)
+> [Create a personal tab](../build-your-first-app/add-personal-tab.md)

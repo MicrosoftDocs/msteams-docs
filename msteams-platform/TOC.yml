@@ -16,10 +16,6 @@
     href: build-your-first-app/add-personal-tab.md
   - name: Build a channel tab
     href: build-your-first-app/add-channel-tab.md
-  - name: Build a bot
-    href: build-your-first-app/add-bot.md
-  - name: Build a messaging extension
-    href: build-your-first-app/add-messaging-extension.md
 - name: Understanding app capabilities
   items:
   - name: Overview

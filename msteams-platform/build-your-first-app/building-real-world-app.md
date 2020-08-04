@@ -5,7 +5,7 @@ description: Tutorial for building a real-world Microsoft Teams app
 ---
 # Build a real-world Teams app
 
-Our real-world Teams app tutorials expand on [your "Hello, World!" app](../build-your-first-app/build-and-run.md) by walking you through how to create an app people will use.
+Follow our tutorials to get some experience building the types of Teams apps people use every day.
 
 :::image type="content" source="../assets/images/overview-placeholder.png" alt-text="Alt text describes the content of the image.":::
 
@@ -13,7 +13,7 @@ Our real-world Teams app tutorials expand on [your "Hello, World!" app](../build
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-### How to choose capabilities based on user scenarios 
+### How to choose capabilities based on user scenarios
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
@@ -57,13 +57,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-## Continue your journey
+## Get started
 
-Expand on your "Hello, World!" app with any of our tutorials.
-
-* [Build a tab bot](../build-your-first-app/add-tab.md)
-* [Build a connector app](../build-your-first-app/add-connector.md)
-* [Build a messaging extension app](../build-your-first-app/add-messaging-extension.md)
-* [Build a bot app](../build-your-first-app/add-bot.md)
-
-:::image type="content" source="../assets/images/build-real-world-app-journey.png" alt-text="Building a real-world Teams app." border="false":::
+> [!div class="nextstepaction"]
+> [Create a and run your first app](../build-your-first-app/build-and-run.md)
