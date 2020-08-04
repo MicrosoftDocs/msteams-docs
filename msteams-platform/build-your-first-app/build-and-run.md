@@ -22,7 +22,7 @@ If sideloading is not turned on for your tenant, please get a Microsoft 365 deve
 
 Follow these steps to create your new Teams project:
 
-1. Install the latest version of [Visual Studio Code](https://code.visualstudio.com/download)
+1. Install the latest version of [Visual Studio Code](https://code.visualstudio.com/download).
 1. Create a workspace/folder for your project in your local environment.
 1. In Visual Studio Code, select the Teams icon ![Teams icon](../assets/icons/favicon-16x16.png) from the activity bar on the left side of the window.
 1. Select **Open the Microsoft Teams Toolkit** from the command menu.

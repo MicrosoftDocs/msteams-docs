@@ -1,11 +1,11 @@
 ---
-title: Getting started with planning your Teams app
+title: Start planning your Microsoft Teams app
 author: heath-hamilton
 description: Understand how to plan your Teams app.
 ms.topic: conceptual
 ms.author: heath-hamilton
 ---
-# Getting started with planning your Microsoft Teams app
+# Start planning your Microsoft Teams app
 
 The Microsoft Teams platform provides a flexible set of capabilities, UI components, and APIs to build your app.
 

@@ -60,4 +60,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ## Get started
 
 > [!div class="nextstepaction"]
-> [Create a and run your first app](../build-your-first-app/build-and-run.md)
+> [Create and run your first app](../build-your-first-app/build-and-run.md)
