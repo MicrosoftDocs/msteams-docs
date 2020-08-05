@@ -77,5 +77,3 @@ API interfaces
 
 > [!NOTE]
 > If you are building experiences based on roles, those experiences could be surfaced to any user type since these user types can have any role in a meeting. Furthermore, it is important to consider the security, auth, and identity management for guest, federated, and anonymous user types.  
-
-
