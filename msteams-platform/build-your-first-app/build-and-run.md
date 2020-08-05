@@ -95,7 +95,7 @@ The manifest file — **.publish/manifest.json**  — is the starting point for 
 
 ## The app package
 
-The app package — **.publish/Development.zip** — is a _.zip_ file consisting of your app manifest and icons.  You'll need the app package to upload and [install your app](../concepts/deploy-and-publish/overview.md#upload-your-app-directly) in Teams locally and to [publish in your organization's app catalog](../concepts/deploy-and-publish/overview#publish-to-your-organizations-app-catalog) or [AppSource](../concepts/deploy-and-publish/appsource/publish). Here are the components of the app package in detail:
+The app package — **.publish/Development.zip** — is a _.zip_ file consisting of your app manifest and icons.  You'll need the app package to upload and [install your app](../concepts/deploy-and-publish/overview.md#upload-your-app-directly) in Teams locally and to [publish in your organization's app catalog](../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog) or [AppSource](../concepts/deploy-and-publish/appsource/publish.md). Here are the components of the app package in detail:
 
 |Data|Type|Size|Manifest location|Toolkit file name|
 |---|---|:---:|:---:|-----|
