@@ -46,7 +46,7 @@ Follow the `README.md` instructions in your project to build, run, and view your
 
 Your app running in the Teams client should look like the following screenshot.
 
-:::image type="content" source="../assets/images/app-up-and-running/tab-running.png" alt-text="Example screenshot of Teams "Hello, World!" app running in the Teams client.":::
+:::image type="content" source="../assets/images/app-up-and-running/personal-tab.PNG" alt-text="Alt text here.":::
 
 ## The app manifest
 
