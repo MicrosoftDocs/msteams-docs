@@ -5,42 +5,48 @@ description: Run your first Microsoft Teams app.
 ---
 # Build and run your first Microsoft Teams app
 
-You can jump right into Microsoft Teams platform development by quickly building and running a "Hello, world!" app. Learn how to 
+You can jump right into developing on the Microsoft Teams platform by quickly building and running a "Hello, world!" app.
 
-## Get prerequisites
+## Set up your development environment
 
-1. Set up a [Microsoft 365 developer account](../concepts/build-and-test/prepare-your-o365-tenant) or Teams account that allows you to upload a custom app.
-1. [Enable Teams developer preview mode](../resources/dev-preview/developer-preview-intro#enable-developer-preview).
-<details>
-  <summary>Not sure if your account allow you to sideload an app? Click here.</summary>
-Click on AppStore on the bottom left corner and you should see "Upload a custom app" if sideloading is turned on.
-<image src="../assets/images/app-up-and-running/upload-custom-app.png">
+To build apps for Teams, you need a Microsoft 365 developer subscription (which may be included in your current Office 365 plan). You also must be able to sideload apps in the Teams client.
 
-If sideloading is not turned on for your tenant, please get a Microsoft 365 developer account and turn on sideloading by following [these steps](/concepts/build-and-test/prepare-your-o365-tenant#Enable-custom-Teams-apps-and-turn-on-custom-app-uploading) 
-</details>
+1. Register for a [Microsoft 365 developer subscription](../concepts/build-and-test/prepare-your-o365-tenant).
+1. [Enable Teams developer preview mode](../resources/dev-preview/developer-preview-intro#enable-developer-preview) for access to the latest Teams developer features.
+1. Verify if you can sideload apps in Teams:
+    1. In the Teams client, select **Apps**.
+    1. Look for an option to **Upload a custom app**.
 
-## Set up a project with Visual Studio Code
+If you don't see this option, contact your Teams admin to enable [sideloading for you](../concepts/build-and-test/prepare-your-o365-tenant#Enable-custom-Teams-apps-and-turn-on-custom-app-uploading).
 
-Follow these steps to set up your first Teams app project using Visual Studio Code.
+## Install your development tools
+
+You can build Teams apps with your preferred tools, but here we'll show you how to get started quickly with Visual Studio Code and the Microsoft Teams Toolkit.
 
 1. Install the latest version of [Visual Studio Code](https://code.visualstudio.com/download).
-1. Create a workspace/folder for your project in your local environment.
-1. In Visual Studio Code, select the Teams icon ![Teams icon](../assets/icons/favicon-16x16.png) from the activity bar on the left.
-1. Select **Create a new Teams app** from the command menu.
-1. When prompted, enter a name for your app. This is the default name for your app and also the name of the project directory on your machine.
+1. In Visual Studio Code, select **Extensions** :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: on the left Activity Bar and install the **Microsoft Teams Toolkit**.
+
+## Create an app project
+
+The Microsoft Teams Toolkit can help you set up your first app project.
+
+1. In Visual Studio Code, open the toolkit by selecting the Teams icon :::image type="icon" source="../assets/icons/favicon-16x16.png"::: on the left Activity Bar.
+1. Select **Create a new Teams app**.
+1. When prompted, enter a name for your app. This is the default name for your app and also the name of the project directory on your local machine.
 1. On the **Add capabilities** screen, select **Tab** then **Next**.
-<image src="../assets/images/app-up-and-running/choose-tab.png" alt-text="<alt text>">
-1. Check the **Personal tab** and **Group or Teams channel** options and select **Finish** to configure your project. Once complete, you have the app scaffolding components for building personal and channel tabs.
+1. Check the **Personal tab** and **Group or Teams channel** options and select **Finish** to configure your project.
 
-## Build and run your app
+:::image type="content" source="../assets/images/get-started/toolkit-add-tabs.png" alt-text="Example screenshot of using the Teams Toolkit to set up a project with personal and channel tab scaffolding.":::
 
-While you eventually will host your Teams app in the cloud, but for now you'll 
+Once complete, you have the app scaffolding components for building personal and channel tabs.
 
-1. Follow the `README.md` instructions in your project to build and run your app locally and deploy to Teams.
-1. You should see your app up and running in the Teams client.
-<image src="../assets/images/app-up-and-running/tab-running.png" alt-text="<alt text>">
+## Run your app
 
-Now you have a personal tab running in Teams.
+Follow the `README.md` instructions in your project to build, run, and view your app to Teams.
+
+This is what your app looks like running in the Teams client.
+
+:::image type="content" source="../assets/images/app-up-and-running/tab-running.png" alt-text="Example screenshot of Teams "Hello, World!" app running in the Teams client.":::
 
 ## Understand what's in the the code
 
