@@ -54,60 +54,33 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 
 ## Get started
 
-:::row:::
-   :::column span="":::
+### Off and running
 
-      <div align="center">
+Get to know your way around the platform by creating a basic Teams app.
 
-      :::image type="content" source="assets/images/overview-cta-integrate.png" alt-text="<alt text>" border="false":::
-      
-        <h3>Best of both worlds</h3>
+> [!div class="nextstepaction"]
+> [Build your first app now](build-your-first-app/building-real-world-app.md)
 
-        Bring your favorite web apps and services into Teams for a seamless user experience.
+### Best of both worlds
 
-        > [!div class="nextstepaction"]
-        > [Integrate an app or service](samples/integrating-web-apps.md)
+Bring your favorite web apps and services into Teams for a seamless user experience.
 
-      </div>
+> [!div class="nextstepaction"]
+> [Integrate an app or service](samples/integrating-web-apps.md)
 
-   :::column-end:::
+### Trust the process
 
-   :::column span="":::
+Walk through how to plan, design, build, and publish a great Teams app.
 
-      <div align="center" style="background-color: #D3D3D3;">
+> [!div class="nextstepaction"]
+> [Start planning your app](concepts/extensibility-points.md)
 
-      :::image type="content" source="assets/images/overview-cta-build.png" alt-text="<alt text>" border="false":::
-      
-        <h3>Off and running</h3>
+### No code, no worries
 
-        Get to know your way around the platform by creating a basic Teams app.
+Did you know you can use Power Platform apps within Teams?
 
-        > [!div class="nextstepaction"]
-        > [Build your first app now](build-your-first-app/building-real-world-app.md)
-
-      </div>
-
-   :::column-end:::
-
-   :::column span="":::
-
-      <div align="center">
-
-        :::image type="content" source="assets/images/overview-cta-plan.png" alt-text="<alt text>" border="false":::
-      
-        <h3>Trust the process</h3>
-
-        Walk through how to plan, design, build, and publish a great Teams app.
-
-        > [!div class="nextstepaction"]
-        > [Start planning your app](concepts/extensibility-points.md)
-
-      </div>
-
-   :::column-end:::
-:::row-end:::
-
-Did you know you can also create a Teams app without writing code? Try [importing your Power App or other custom Microsoft business app](samples/importing-custom-microsoft-apps.md).
+> [!div class="nextstepaction"]
+> [Import a Power Platform app](samples/importing-custom-microsoft-apps.md)
 
 ## Resources
 

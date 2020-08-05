@@ -5,7 +5,7 @@ description: Run your first Microsoft Teams app.
 ---
 # Build and run your first Microsoft Teams app
 
-You can jump right into Microsoft Teams platform development by quickly building and running a "Hello, world!" app. This section shows you how to create and run a personal tab with Visual Studio Code. It will also describes some important file within the project.
+You can jump right into Microsoft Teams platform development by quickly building and running a "Hello, world!" app. Learn how to 
 
 ## Get prerequisites
 
@@ -19,7 +19,7 @@ Click on AppStore on the bottom left corner and you should see "Upload a custom 
 If sideloading is not turned on for your tenant, please get a Microsoft 365 developer account and turn on sideloading by following [these steps](/concepts/build-and-test/prepare-your-o365-tenant#Enable-custom-Teams-apps-and-turn-on-custom-app-uploading) 
 </details>
 
-## Build with Visual Studio Code
+## Set up a project with Visual Studio Code
 
 Follow these steps to set up your first Teams app project using Visual Studio Code.
 
@@ -31,6 +31,11 @@ Follow these steps to set up your first Teams app project using Visual Studio Co
 1. On the **Add capabilities** screen, select **Tab** then **Next**.
 <image src="../assets/images/app-up-and-running/choose-tab.png" alt-text="<alt text>">
 1. Check the **Personal tab** and **Group or Teams channel** options and select **Finish** to configure your project. Once complete, you have the app scaffolding components for building personal and channel tabs.
+
+## Build and run your app
+
+While you eventually will host your Teams app in the cloud, but for now you'll 
+
 1. Follow the `README.md` instructions in your project to build and run your app locally and deploy to Teams.
 1. You should see your app up and running in the Teams client.
 <image src="../assets/images/app-up-and-running/tab-running.png" alt-text="<alt text>">
