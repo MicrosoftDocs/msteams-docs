@@ -54,28 +54,28 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 
 ## Get started
 
-### Off and running
+#### Off and running
 
 Get to know your way around the platform by creating a basic Teams app.
 
 > [!div class="nextstepaction"]
 > [Build your first app now](build-your-first-app/building-real-world-app.md)
 
-### Best of both worlds
+#### Best of both worlds
 
 Bring your favorite web apps and services into Teams for a seamless user experience.
 
 > [!div class="nextstepaction"]
 > [Integrate an app or service](samples/integrating-web-apps.md)
 
-### Trust the process
+#### Trust the process
 
 Walk through how to plan, design, build, and publish a great Teams app.
 
 > [!div class="nextstepaction"]
 > [Start planning your app](concepts/extensibility-points.md)
 
-### No code, no worries
+#### No code, no worries
 
 Did you know you can use Power Platform apps within Teams?
 
