@@ -5,7 +5,7 @@ description: Run your first Microsoft Teams app.
 ---
 # Build and run your first Microsoft Teams app
 
-You can jump right into Microsoft Teams platform development by quickly building and running a "Hello, world!" app. Learn how to 
+You can jump right into Microsoft Teams platform development by quickly building and running a "Hello, world!" app:
 
 ## Prerequisites
 
@@ -50,15 +50,15 @@ Follow these steps to set up your first Teams app project using Visual Studio Co
 
 <image src="../assets/images/app-up-and-running/tab-running.png" alt-text="<alt text>">
 
-Now you have a personal tab running in Teams.
+---
 
-## Let's take a deeper look
+### Let's take a deeper look
 
-Now that you have your first app up and running. Let's examine the essential files found in the Toolkit template.
+Now that you have your first app up and running in Teams. Let's examine the essential files found in the Toolkit template and understand the role of each in the overall application.
 
-### The app manifest
+## The app manifest
 
-The app manifest file specifies the your app's attributes and points to required the resources for your solution. The manifest has a number of fields and properties that you can surface to create an amazing app experience. Here are the sections of the app manifest that integrate personal/static tabs and group/configurable tabs with Teams:
+The manifest file — **.publish/manifest.json**  — is the starting point for any Teams app project. It specifies  your app's attributes and points to required resources for your solution. The manifest has a number of fields and properties that you can surface to create an amazing app experience. There are two sections of the app manifest that integrate personal/static and channel/configurable tabs with Teams:
 
 ### Personal tab
 
@@ -76,7 +76,7 @@ The app manifest file specifies the your app's attributes and points to required
   ]
 ```
 
-### Configurable tab
+### Channel tab
 
 ```json
 "configurableTabs": [
@@ -93,7 +93,9 @@ The app manifest file specifies the your app's attributes and points to required
   ]
 ```
 
-The app manifest file is also a major component of the Teams app package:
+## The app package
+
+The app package — **.publish/Development.zip** — is a _.zip_ file consisting of your app manifest and icons.  You'll need the app package to upload and [install your app](../concepts/deploy-and-publish/overview.md#upload-your-app-directly) in Teams locally and to [publish in your organization's app catalog](../concepts/deploy-and-publish/overview#publish-to-your-organizations-app-catalog) or [AppSource](../concepts/deploy-and-publish/appsource/publish). Here are the components of the app package in detail:
 
 |Data|Type|Size|Manifest location|Toolkit file name|
 |---|---|:---:|:---:|-----|
@@ -103,36 +105,44 @@ The app manifest file is also a major component of the Teams app package:
 
 ### App.js
 
-The app.js file — src/components/app.js — handles the initialization and routing of your app and most importantly, reaches out to the Microsoft Teams SDK. This critical call establishes communication between your app and Teams:
+The app.js file — **src/components/app.js** — handles the initialization and routing of your app and, most importantly, calls the Microsoft Teams SDK to establish integral communication between your app and Teams:
 
 ```javascript
 microsoftTeams.initialize(window);
 ```
 
-The `MicrosoftTeams.(initialize)`  function must be called before any other [Teams SDK API](../tabs/how-to/using-teams-client-sdk.md) calls. A tab in Microsoft Teams displays the specified web app within an **iframe** in the Microsoft Teams client. This call must be made after the iframe has loaded successfully.
+The `MicrosoftTeams.(initialize)`  function must be called before any other [Teams SDK API](../tabs/how-to/using-teams-client-sdk.md) calls. Unlike a webpage that is loaded into a browser, Microsoft Teams tabs always display content within an **iframe** in the Teams client. Thus it is important to note that `MicrosoftTeams.(initialize)`   must be made _after_ the iframe has loaded successfully.
 
 ### Tab.js
 
 The Tab.js file — **src/components/Tab.js** — renders the main tab content
- for your app in the personal scope. For instance, your tab might require contextual information to display relevant content such as basic information about the user, team, or company. You can retrieve context information by calling the Microsoft Teams SDK `microsoftTeams.getContext(function(context) { /* ... */ })`.
+ for your app in the personal scope. Your tab may require contextual information to display relevant content such as basic information about the user, team, or company. You can retrieve context information by calling the Microsoft Teams SDK `microsoftTeams.getContext(function(context)` function:
+
+```javascript
+ microsoftTeams.getContext((context, error) => {
+      this.setState({
+        context: context
+      });
+  }
+```
 
 ### TabConfig,js
 
-The TabConfig.js file — **src/components/TabConfig.js** — renders the content for your channel tab and displays a configuration experience for the user when the tab is added to a channel. You can use the configuration page defined in the manifest to collect any configuration information the web app might need to customize the information shown in the tab. Similar to a personal tab, the content displayed in a channel tab is displayed in an **iframe**. 
+The TabConfig.js file — **src/components/TabConfig.js** — renders the content for your channel tab and displays a configuration experience for users when the tab is added to a channel. You can use the configuration page defined in the app manifest to collect any configuration information your app may need to customize the information shown in the tab. Similar to a personal tab, the content displayed in a channel tab is displayed in an **iframe**.
 
-The URL loaded in the iframe is defined by the contentUrl property that's specified on the configuration page:
+The URL loaded in the iframe is defined by the `contentUrl` property that's specified on the configuration page:
 
 ```javascript
 microsoftTeams.settings.setSettings({"contentUrl": "https://localhost:3000/tab"})
 ```
 
-The [setValidityState](/javascript/api/@microsoft/teams-js/microsoftteams.settings?view=msteams-client-js-latest#setvaliditystate-boolean-) must be set to true so that your users can save the settings that they want in your tab:
+Finally, the [`setValidityState`](/javascript/api/@microsoft/teams-js/microsoftteams.settings?view=msteams-client-js-latest#setvaliditystate-boolean-) boolean must be set to true so that your users can save their chosen settings in your tab:
 
 ```javascript
 microsoftTeams.settings.setValidityState(true);
 ```
 
-🎉 Congratulations! You have a basic functional Teams app and you also understands what goes in it. Learn how to add features to it with our real-world app tutorials.
+🎉 Congratulations! You have a basic functioning Teams app and you also understands some of its components. Learn how to add features to it with our real-world app tutorials.
 
 ## Next step
 
