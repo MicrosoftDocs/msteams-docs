@@ -83,6 +83,21 @@ Register your application in the[Azure AD portal](https://azure.microsoft.com/fe
     * OpenId
     * profile
 
+13. Navigate to **Authentication**
+
+    If any app hasn't been pre-consented by an IT admin, a user will have to provide consent the first time they use an app.
+
+    Set a redirect URI:
+    * Select "Add a platform"
+    * Select "web"
+    * Enter the redirect URI for your app. This will be the page that a successfull implicit grant flow will redirect the user.
+
+    Enable implicit grant by checking the following boxes:
+    * ID Token
+    * Access Token
+    
+    
+
 > [!NOTE]
 >
 > * ¹ If your Azure AD app is registered in the _same_ tenant where you're making an authentication request in Teams, the user won't be asked to consent and will be granted an access token right away. Users only need to consent to these permissions if the Azure AD app is registered in a different tenant.
