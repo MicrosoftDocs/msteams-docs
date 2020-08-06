@@ -5,7 +5,10 @@ description: Run your first Microsoft Teams app.
 ---
 # Build and run your first Microsoft Teams app
 
-You can jump right into developing on the Microsoft Teams platform by quickly building and running a "Hello, world!" app.
+You can jump right into developing on the Microsoft Teams platform by quickly building and running a basic app.
+
+> [!NOTE]
+> It's helpful to have working knowledge of JavaScript (specifically React) when following these tutorials.
 
 ## Set up your development environment
 
@@ -48,95 +51,39 @@ Your app running in the Teams client should look like the following screenshot.
 
 :::image type="content" source="../assets/images/app-up-and-running/tab-running.png" alt-text="Screenshot showing an example Hello, World! app in Teams.":::
 
-## The app manifest
+## Important app project files
 
-The manifest file — **.publish/manifest.json**  — is the starting point for any Teams app project. It specifies your app's attributes and points to required resources for your solution. The manifest has a number of fields and properties that you can surface to create an amazing app experience. There are two sections of the app manifest that integrate personal/static and channel/configurable tabs with Teams:
+With your app project and scaffolding set up, take some time to understand some of the key files Teams app developers work with.
 
-### Personal tab
+### App manifest (`manifest.json`)
 
-```json
-"staticTabs": [
-    {
-      "entityId": "unique Id for the page entity",
-      "scopes": [
-        "personal"
-      ],
-      "name": "Display name of tab",
-      "contentUrl": "https://contoso.com/content (displayed in Teams canvas)",
-      "websiteUrl": "https://contoso.com/content (displayed in web browser"
-    }
-  ]
-```
+Located in the `.publish` directory, the app manifest is the starting point for any app project. The manifest defines your app's fundamental attributes and points to required resources.
 
-### Channel tab
+In the following tutorials, you'll focus on the sections of the app manifest for building personal and channel tabs.
 
-```json
-"configurableTabs": [
-    {
-      "configurationUrl": "https://contoso.com/teamstab/configure",
-      "scopes": [
-        "team",
-        "groupchat"
-      ],
-      "canUpdateConfiguration": true,
-      "sharePointPreviewImage": "Relative path to a tab preview image for use in SharePoint — 1024px X 768",
-      "supportedSharePointHosts": "Define how your tab wil be made available in SharePoint (full page or web part)"
-    }
-  ]
-```
+### Package (`Development.zip`)
 
-## The app package
+Also located in the `.publish` directory, you need the app package to [sideload your app](../concepts/deploy-and-publish/overview.md#upload-your-app-directly) in Teams. It's also used when [publishing to your organization's app catalog](../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog) or [AppSource](../concepts/deploy-and-publish/appsource/publish.md).
 
-The app package — **.publish/Development.zip** — is a _.zip_ file consisting of your app manifest and icons.  You'll need the app package to upload and [install your app](../concepts/deploy-and-publish/overview.md#upload-your-app-directly) in Teams locally and to [publish in your organization's app catalog](../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog) or [AppSource](../concepts/deploy-and-publish/appsource/publish.md). Here are the components of the app package in detail:
+Here are some details about the app package files:
 
-|Data|Type|Size|Manifest location|Toolkit file name|
+|Name|Type|Size|Manifest location|Toolkit filename|
 |---|---|:---:|:---:|-----|
-|✔ **app manifest**|.json| — | — |.publish/**manifest.json**|
-|✔**color logo**|.png|192&times;192 pixels|`icon.color`|.publish/**color.png**|
-|✔**outline logo**|.png|32&times;32 pixels|``icon.outline`|.publish/**outline.png**|
+|**App manifest**|`.json`| — | — |`.publish/manifest.json`|
+|**Color logo**|`.png`|192&times;192 pixels|`icon.color`|`.publish/color.png`|
+|**Outline logo**|`.png`|32&times;32 pixels|`icon.outline`|`.publish/outline.png`|
 
-### App.js
+### Scaffolding (`src`)
 
-The app.js file — **src/components/app.js** — handles the initialization and routing of your app and, most importantly, calls the Microsoft Teams SDK to establish integral communication between your app and Teams:
+The toolkit automatically creates scaffolding for you in the `src` directory based on the capabilities you added during setup.
 
-```javascript
-microsoftTeams.initialize(window);
-```
+Some files are created no matter what kind of app you have, though. For example, the `App.js` file in the `src/components` directory is important because it handles the initialization and routing of your app. Most importantly, it calls the [Microsoft Teams SDK](../tabs/how-to/using-teams-client-sdk.md) to establish communication between your app and Teams.
 
-The `MicrosoftTeams.(initialize)`  function must be called before any other [Teams SDK API](../tabs/how-to/using-teams-client-sdk.md) calls. Unlike a webpage that is loaded into a browser, Microsoft Teams tabs always display content within an **iframe** in the Teams client. Thus it is important to note that `MicrosoftTeams.(initialize)`   must be made _after_ the iframe has loaded successfully.
-
-### Tab.js
-
-The Tab.js file — **src/components/Tab.js** — renders the main tab content
- for your app in the personal scope. Your tab may require contextual information to display relevant content such as basic information about the user, team, or company. You can retrieve context information by calling the Microsoft Teams SDK `microsoftTeams.getContext(function(context)` function:
-
-```javascript
- microsoftTeams.getContext((context, error) => {
-      this.setState({
-        context: context
-      });
-  }
-```
-
-### TabConfig,js
-
-The TabConfig.js file — **src/components/TabConfig.js** — renders the content for your channel tab and displays a configuration experience for users when the tab is added to a channel. You can use the configuration page defined in the app manifest to collect any configuration information your app may need to customize the information shown in the tab. Similar to a personal tab, the content displayed in a channel tab is displayed in an **iframe**.
-
-The URL loaded in the iframe is defined by the `contentUrl` property that's specified on the configuration page:
-
-```javascript
-microsoftTeams.settings.setSettings({"contentUrl": "https://localhost:3000/tab"})
-```
-
-Finally, the [`setValidityState`](/javascript/api/@microsoft/teams-js/microsoftteams.settings?view=msteams-client-js-latest#setvaliditystate-boolean-) boolean must be set to true so that your users can save their chosen settings in your tab:
-
-```javascript
-microsoftTeams.settings.setValidityState(true);
-```
-
-🎉 Congratulations! You have a basic functioning Teams app and you also understand some of its components. Learn how to add features to it with our real-world app tutorials.
+You can learn more about scaffolding in the tutorials for creating personal and channel tabs.
 
 ## Next step
+
+🎉 Congratulations! You have a running Teams app. Learn how to add real-world features to it.
 
 > [!div class="nextstepaction"]
 > [Create a personal tab](../build-your-first-app/add-personal-tab.md)
