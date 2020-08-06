@@ -7,23 +7,23 @@ ms.topic: overview
 
 # Build apps with the Microsoft Teams Toolkit and Visual Studio
 
-The Microsoft Teams Toolkit enables you to create custom Teams apps directly within the Visual Studio environment. The toolkit guides you through the process and provides everything you need to build, debug, and launch your Teams app.
+The Microsoft Teams Toolkit enables you to create custom Teams apps directly within the Visual Studio integrated development environment (IDE). The Microsoft Teams toolkit guides you through the process and provides everything you need to build, debug, and launch your Teams app.
 
 ## Prerequisites
 
 1. [Enable developer preview](../resources/dev-preview/developer-preview-intro.md#enable-developer-preview)
 
-1. Make sure that the **<span>ASP.NE</span>T and web development module** has been added to Visual Studio. You can check by following the steps in [Modify Visual Studio by adding or removing workloads and component](/visualstudio/install/modify-visual-studio?view=vs-2019) documentation.
+1. Make sure that the **<span>ASP.NE</span>T and web development module** has been added to your Visual Studio instance. You can check by following the steps in the [Modify Visual Studio by adding or removing workloads and component](/visualstudio/install/modify-visual-studio?view=vs-2019) documentation.
 
 ![visual studio asp.net module](../assets/images/visual-studio-web-dev-module.png)
 
-3. If you would like to deploy your app from Visual Studio, you'll need to have IIS (Internet Information Services) installed in your development environment. Visual Studio does not include IIS and it isn't included in the default Windows 10, Windows 8, or Windows 7 configuration. You can download the latest version from the [Microsoft download center](https://www.microsoft.com/download/details.aspx?id=48264.)
+3. If you would like test your app by deploy it from Visual Studio, you'll need to have IIS (Internet Information Services) installed in your development environment. Visual Studio does not include IIS and it isn't included in the default Windows 10, Windows 8, or Windows 7 configuration; however, you can download the latest version from the [Microsoft download center](https://www.microsoft.com/download/details.aspx?id=48264.)
 
 ![IIS download page view](../assets/images/iis.png)
 
 ## Install the Teams Toolkit
 
-The Microsoft Teams Toolkit for Visual Studio is available for download from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.vsteamstemplate) or directly from the Extensions menu within Visual Studio.
+The Microsoft Teams Toolkit for Visual Studio is available for download from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.vsteamstemplate) or directly from the **Extensions** menu within Visual Studio.
 
 ## Using the toolkit
 
@@ -38,7 +38,7 @@ The Microsoft Teams Toolkit for Visual Studio is available for download from the
 
 1. Select **Create a new project**.
 1. Choose **Microsoft Teams App** and select **Next**.
-1. You will arrive at the **Configure your new project** screen where you can choose the *Project name*, *Location*, and *Solution name*. 
+1. You will arrive at the **Configure your new project** screen where you can choose the **Project name**, **Location**, and **Solution name**.
 1. Check the box labeled **Place solution and project in the same directory**.
 1. A pop-up window labeled **Add Capabilities** will allow you to choose one or more capabilities for your project setup.
 1. Select the **Next** button to complete the configuration process.
