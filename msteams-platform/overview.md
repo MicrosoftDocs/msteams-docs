@@ -102,6 +102,9 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
    :::column-end:::
 :::row-end:::
 
+:::row:::
+   :::column span="2":::
+
 ### No code, no worries
 
    Did you know you can use Power Platform apps within Teams?
