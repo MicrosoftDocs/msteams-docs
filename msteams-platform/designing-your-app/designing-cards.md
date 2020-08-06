@@ -43,7 +43,7 @@ Example: Buttons are at the bottom.
 
 Provide descriptions + example scenarios/screenshots (e.g., thumbnails, hero, sign in, Graph cards?).
 
-(Use what you can from these topics: https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-reference.)
+(Use what you can from these topics: https://docs.microsoft.com/microsoftteams/platform/task-modules-and-cards/cards/cards-reference.)
 
 ## Card collections
 
