@@ -15,6 +15,7 @@ Use your current Teams acount:
     1. In the Teams client, select **Apps**.
     1. Look for an option to **Upload a custom app**.
 1. if you have this option, you are good to go. If not, get a developer test account. 
+
 Get a developer test account  
 1. Register for a [Microsoft 365 developer subscription](../concepts/build-and-test/prepare-your-o365-tenant.md).
 1. [Enable custom app sideloading](../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) for your test account. 
