@@ -50,9 +50,9 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 
 ## Get started
 
-<div align="center">
-Quickly familiarize yourself with building for Teams by creating a simple "Hello, World!" app and adding a couple commonly used capabilities.
+Quickly familiarize yourself with building for Teams by creating a simple app and adding a couple commonly used capabilities.
 
+<div align="center">
 > [!div class="nextstepaction"]
 > [Build your first app now](build-your-first-app/building-real-world-app.md)
 </div>
@@ -60,7 +60,7 @@ Quickly familiarize yourself with building for Teams by creating a simple "Hello
 :::row:::
    :::column span="2":::
 
-**Bring it all together**
+### Bring it all together
 
    Simplify processes and workflows for users by blending your organization's favorite web apps, services, and systems with Teams collaborative features.
 
@@ -76,7 +76,7 @@ Quickly familiarize yourself with building for Teams by creating a simple "Hello
 :::row:::
    :::column span="2":::
 
-**Trust the process**
+### Trust the process
 
    Understand the entire Teams platform development process to effectively plan, design, build, and publish an app for your organization or anyone.
 
@@ -92,7 +92,7 @@ Quickly familiarize yourself with building for Teams by creating a simple "Hello
 :::row:::
    :::column span="2":::
 
-**No code, no worries**
+### No code, no worries
 
    You don't need to be a programmer to build a great app. Create a Teams app with little to no code using the Microsoft Power Platform.
 
