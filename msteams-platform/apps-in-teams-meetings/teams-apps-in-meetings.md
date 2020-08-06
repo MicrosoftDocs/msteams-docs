@@ -4,7 +4,7 @@ author: laujan
 description: overview of apps in Teams meetings based on participant and user role
 ms.topic: overview
 ms.author: lajanuar
-keywords: teams apps meetings user participant role api 
+keywords: teams apps meetings user participant role api  
 ---
 # Add apps to Teams meetings
 
