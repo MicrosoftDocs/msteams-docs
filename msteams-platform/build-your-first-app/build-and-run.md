@@ -17,7 +17,7 @@ To build apps for Teams, you need a Microsoft 365 developer subscription (which 
     1. In the Teams client, select **Apps**.
     1. Look for an option to **Upload a custom app**.
 
-If you don't see this option, contact your Teams admin to [enable sideloading for you](../concepts/build-and-test/prepare-your-o365-tenant.md#Enable-custom-Teams-apps-and-turn-on-custom-app-uploading).
+If you don't see this option, contact your Teams admin to [enable sideloading for you](../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 
 ## Install your development tools
 
