@@ -27,12 +27,17 @@ If Microsoft Teams has not been enabled for your organization, you'll need to do
 
 Turn on custom app sideloading for your developer tenant as follows:
 
-1.  Login to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credential.  
-1.  Select **Show All** --> **Teams**. 
+1. Login to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credential. 
+
+2. Select **Show All** --> **Teams**. 
+
 ![image of the app overflow menu](~/assets/images/prepare-test-tenant/admin-center.png)
-1.  Navigate to **Teams apps** --> **Setup Policies** --> **Global(Org-wide default)**  
+
+3. Navigate to **Teams apps** --> **Setup Policies** --> **Global(Org-wide default)**  
+
 ![image of the app overflow menu](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
-1. Toggle **upload custom apps** to the **on** position.
+
+4. Toggle **upload custom apps** to the **on** position.
 
 That's it! Your test tenant will now allow custom app sideloading.
 
