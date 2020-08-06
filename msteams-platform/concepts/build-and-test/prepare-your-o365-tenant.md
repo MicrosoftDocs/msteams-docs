@@ -42,7 +42,7 @@ Turn on custom app sideloading for your developer tenant as follows:
 That's it! Your test tenant will now allow custom app sideloading.
 
 > [!Note] 
-> It can take up to 24 hours before sideloading is enabled. In the interim, you can use **upload for \<your tenant>** to test your app.
+> It can take up to 24 hours before sideloading is enabled. During interim, you can use **upload for \<your tenant>** to test your app.
 
 ![image of the app overflow menu](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
 
