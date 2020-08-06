@@ -9,7 +9,19 @@ ms.topic: overview
 
 The Microsoft Teams Toolkit enables you to create custom Teams apps directly within the Visual Studio environment. The toolkit guides you through the process and provides everything you need to build, debug, and launch your Teams app.
 
-## Installing the Teams Toolkit
+## Prerequisite
+
+1. [Enable developer preview](../resources/dev-preview/developer-preview-intro.md#enable-developer-preview)
+
+1. Make sure that the **<span>ASP.NE</span>T and web development module** has been added to Visual Studio. You can check by following the steps in [Modify Visual Studio by adding or removing workloads and component](/visualstudio/install/modify-visual-studio?view=vs-2019) documentation.
+
+![visual studio asp.net module](../assets/images/visual-studio-web-dev-module.png)
+
+3. If you would like to deploy your app from Visual Studio, you'll need to have IIS (Internet Information Services) installed in your development environment. Visual Studio does not include IIS and it isn't included in the default Windows 10, Windows 8, or Windows 7 configuration. You can download the latest version from the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=48264.)
+
+![IIS download page view](../assets/images/iis.png)
+
+## Install the Teams Toolkit
 
 The Microsoft Teams Toolkit for Visual Studio is available for download from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.vsteamstemplate) or directly from the Extensions menu within Visual Studio.
 
@@ -64,11 +76,17 @@ When an app is installed, the Teams client parses the manifest file to determine
 
 ## Package your app
 
-Modifying the **app details** page or updating the **manifest**, or **.env** files in your app's  **.publish** folder will automatically generate your **Development.zip** file. You'll need to include [two icons](../concepts/build-and-test/apps-package.md#icons) in that same folder.
+Modifying the **app details** page or updating the **manifest**, or **.env** files in your app's  **.publish** folder will automatically generate your **Development.zip** file. The Development.zip file includes three required files — the **manifest.json** and [two icon files](../concepts/build-and-test/apps-package.md#icons).
 
 ## Install and run your app locally
 
-From the *Solutions Configurations* dropdown menu, select *Deploy*. Press the *ISS Express + Teams* button. Teams will launch and the app installation dialogue should appear in the Teams client.
+1. From the **Solution Configurations** dropdown menu, select **Deploy**.
+
+![Solution configurations menu](../assets/images/solution-configurations.png)
+
+2. Select the **ISS Express + Teams** button.
+
+1. Teams will launch and the app installation dialogue should appear in the Teams client.
 
 ## Validate your app
 
@@ -76,7 +94,12 @@ The **Validate** page allows you to check your app package before submitting you
 
 ## Publish your app to Teams
 
-On your project home page, you can upload your app to a team, submit your app to your company custom app store for users in your organization, or submit your app to App Source for all Teams users. Your IT admin will review these submissions. You can return to the *Publish* page to check on your submission status and learn if your app was approved or rejected by your IT admin. This is also where you'll come to submit updates to your app or cancel any currently active submissions.
+✔ On your project home page, you can upload your app to a team, submit your app to your company custom app store for users in your organization, or submit your app to App Source for all Teams users.
+
+✔ Your IT admin will review these submissions.
+
+✔  You can return to the **Publish** page to check on your submission status and learn if your app was approved or rejected by your IT admin. This is also where you'll come to submit updates to your app or cancel any currently active submissions.
 
 > [!div class="nextstepaction"]
 > [Next step: Maintaining and supporting your published app](../concepts/deploy-and-publish/appsource/post-publish/overview.md)
+>
