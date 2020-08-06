@@ -68,7 +68,7 @@ The **side-panel** and **stage** surfaces (specified in the app manifest) provid
 
 ✔Refer to the Tab SDK section to use the **userContext** API to route requests accordingly.
 
-✔ Refer to the [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab).
+✔ Refer to the [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md).
 
 #### **stage**
 
@@ -76,7 +76,7 @@ The **side-panel** and **stage** surfaces (specified in the app manifest) provid
 
 ✔ In the meeting, the app will be available in the Share Tray (similar to Whiteboard).
 
-✔ Refer to the [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab).
+✔ Refer to the [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md).
 
 ### Post-meeting
 
@@ -99,4 +99,4 @@ The post-meeting and pre-meeting configurations are equivalent.
 ## Learn more
 
  > [!div class="nextstepaction"]
-> [Get tips on designing tabs for Teams](tabs/design/tabs.md)
+> [Get tips on designing tabs for Teams](../tabs/design/tabs.md)
