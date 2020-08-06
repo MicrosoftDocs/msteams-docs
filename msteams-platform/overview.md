@@ -54,9 +54,23 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 
 ## Get started
 
+:::row:::
+   :::column span="2":::
+   #### Off and running
+
+   Get to know your way around the platform by creating a basic Teams app and adding a couple features. Lorem ipsum Lorem ipsumLorem ipsumLorem ipsum
+
+   > [!div class="nextstepaction"]
+   > [Build your first app now](build-your-first-app/building-real-world-app.md)
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
 #### Off and running
 
-Get to know your way around the platform by creating a basic Teams app.
+Get to know your way around the platform by creating a basic Teams app and adding a couple features.
 
 > [!div class="nextstepaction"]
 > [Build your first app now](build-your-first-app/building-real-world-app.md)
