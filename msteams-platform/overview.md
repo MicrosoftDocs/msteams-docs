@@ -6,7 +6,7 @@ ms.topic: overview
 ms.author: anclear
 #Customer intent: As a developer, I want to understand why I would want to build a Teams app so that I can solve business problems.
 ---
-# What are Microsoft Teams apps?
+# Building for Microsoft Teams
 
 Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work.
 
