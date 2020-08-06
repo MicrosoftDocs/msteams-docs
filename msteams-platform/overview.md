@@ -52,7 +52,9 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 
 :::image type="content" source="assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph REST API for Teams." border="false":::
 
+<div align="center">
 ## Get started
+</div>
 
 :::row:::
    :::column span="2":::
