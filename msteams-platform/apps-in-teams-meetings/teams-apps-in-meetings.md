@@ -23,14 +23,14 @@ Teams’ meeting app extensibility centers on three concepts:
 > [!IMPORTANT]
 > As with all tab applications, Your app will need to follow the Teams [SSO authentication flow](../tabs/how-to/authentication/auth-aad-sso.md) for tabs.
 
-### **Pre-meeting**
+### Pre-meeting
 
 | Meeting app experience |Scope|
 | -------| ----------------------------|
 |Permissioned users can add apps a meeting via the tab gallery in two ways: |For your configurable tab app to be available as part of the meeting chat/pre-meeting experience it must be scoped to the group-chat level.|
 |&#9679; Via the **Details** tab on the Teams scheduling form:</br> </br>![Teams scheduling form](../assets/images/apps-in-meetings/teams-meeting-scheduling-form.png) </br>&#9679;  Via the meeting **Chat** tab in an existing meeting:</br> </br>![Chat in a meeting tab](../assets/images/apps-in-meetings/chat-in-meeting.png) </br>&#8199; </br>Tab apps will be accessible in meetings **Details** and **Chats** pages using a plus icon (➕) button.|
 
-### **In meeting**
+### In-meeting
 
 | Meeting app experience |Scope|
 | -------| ----------------------------|
@@ -46,7 +46,7 @@ The figure below depicts an in-meeting actionable notification for users.
 
 ![In-meeting-notification](../assets/images/apps-in-meetings/in-meeting-notification.png)
 
-### **Post meeting**
+### Post-meeting
 
 | Meeting app experience |Scope|
 | -------| ----------------------------|
@@ -67,7 +67,7 @@ For message extension scenario's please see **Message extensions in meetings** i
 
 ### Participant roles
 
-You can design your app with participant specific authorization. For example, only an organizer can create a poll. Although default participant settings are determined by an organization's IT administrator, a meeting organizer may want to change them for a specific meeting. Organizers can make these changes on the Meeting options web page.
+You can design your app with participant-specific authorization. For example, only an organizer and/or presenter can create a poll in meetings. Although default participant settings are determined by an organization's IT administrator, a meeting organizer may want to change the settings for a specific meeting. Organizers can make these changes on the Meeting options web page.
 
 1. **Organizer**. The organizer schedules a meeting, sets the meeting options, assigns meeting roles, and starts the meeting. Only users with a M365 account (possessing a Teams license) can be organizers and control attendee permissions.
 1. **Presenter**. Presenters have nearly the same capabilities as organizer; however, a presenter cannot remove an organizer from the session or modify meeting options for the session. By default, participants joining a meeting have the presenter role.
