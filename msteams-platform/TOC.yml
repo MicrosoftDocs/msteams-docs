@@ -34,7 +34,7 @@
     - name: Teams apps in meetings
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
     - name:  Create apps for teams meetings
-      href: apps-in-meetings/create-apps-for-teams-meetings.md    
+      href: apps-in-teams-meetings/create-apps-for-teams-meetings.md    
 - name: Concepts
   expanded: true
   items:
