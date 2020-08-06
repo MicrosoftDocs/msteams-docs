@@ -92,9 +92,9 @@ Register your application in the[Azure AD portal](https://azure.microsoft.com/fe
     * Select **web**.
     * Enter the **redirect URI** for your app. This will be the page where a successful implicit grant flow will redirect the user.
 
-    Enable implicit grant by checking the following boxes:
-    ✔ ID Token
-    ✔ Access Token
+    Enable implicit grant by checking the following boxes:  
+    ✔ ID Token  
+    ✔ Access Token  
     
     
 
