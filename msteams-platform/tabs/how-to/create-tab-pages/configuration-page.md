@@ -70,7 +70,6 @@ A configuration page informs the content page how it should render. Your applica
             }
         </script>
     </body>
-
 ...
 ```
 
@@ -130,7 +129,6 @@ After your page has uploaded, the query string placeholders will be updated by T
 //For testing, you can invoke the following to view the pertinent value:
 document.write(getId());
 </script>
-
 ```
 
 ### Use the `getContext()` function to retrieve context
@@ -138,18 +136,17 @@ document.write(getId());
 When invoked, the `microsoftTeams.getContext((context) => {})` function retrieves the [Context interface](/javascript/api/@microsoft/teams-js//microsoftteams.context?view=msteams-client-js-latest). You can add this function to your configuration page to retrieve context values:
 
 ```html
+<!-- `userPrincipalName` will render in the span with the id "user". -->
 
-    <!-- `userPrincipalName` will render in the span with the id "user". -->
-
-    <span id="user"></span>
-    ...
-    <script>
-        microsoftTeams.getContext((context) =>{
-            let userId = document.getElementById('user');
-            userId.innerHTML = context.userPrincipalName;
-        });
-    </script>
-    ...
+<span id="user"></span>
+...
+<script>
+    microsoftTeams.getContext((context) =>{
+        let userId = document.getElementById('user');
+        userId.innerHTML = context.userPrincipalName;
+    });
+</script>
+...
 ```
 
 ## Context and Authentication

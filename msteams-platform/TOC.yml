@@ -13,9 +13,9 @@
     href: tutorials/get-started-nodejs-app-studio.md
   - name: Create an app with the Yeoman generator
     href: tutorials/get-started-yeoman.md
-  - name: Extend the Teams client with custom apps
+  - name: Learn more about custom apps for Teams
     href: tutorials/code-samples.md   
-- name: App templates and integrations
+- name: Templates and integrations
   items: 
   - name: Production-ready app templates
     href: samples/app-templates.md
@@ -27,6 +27,14 @@
       href: apps-in-meetings/teams-apps-in-meetings.md
     - name:  Create apps for teams meetings
       href: apps-in-meetings/create-apps-for-teams-meetings.md
+  - name: Create a Virtual Assistant for Teams
+    href: samples/virtual-assistant.md
+  - name: Integrate Power Virtual Agents chatbot with Teams
+    href: bots/how-to/add-power-virtual-agents-bot-to-teams.md   
+  - name:  Microsoft Teams Toolkit extension
+    items:
+    - name: Teams Toolkit extension for Visual Studio Code
+      href: toolkit/visual-studio-code-overview.md
 - name: Concepts
   expanded: true
   items:
@@ -328,12 +336,18 @@
         href: webhooks-and-connectors/how-to/connectors-using.md
 - name: 'Teams Graph REST APIs'
   items:
-    - name: 'Resource specific consent (RSC)'
-      href: graph-api/rsc/resource-specific-consent.md
-    - name: 'Test resource specific consent permissions' 
-      href: graph-api/rsc/test-resource-specific-consent.md 
-    - name: 'RSC JSON test file' 
-      href: graph-api/rsc/test-rsc-json-file.md         
+    - name: Resource Specific consent
+      items:
+        - name: 'Enable resource specific consent (RSC)'
+          href: graph-api/rsc/resource-specific-consent.md
+        - name: 'Test resource specific consent permissions' 
+          href: graph-api/rsc/test-resource-specific-consent.md 
+        - name: 'RSC JSON test file' 
+          href: graph-api/rsc/test-rsc-json-file.md 
+    - name: Proactive bots and proactive messages
+      items:
+        - name: 'Enable proactive bot installation and proactive messaging' 
+          href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md            
 - name: Resources
   items:
     - name: Bots - v3 SDK
