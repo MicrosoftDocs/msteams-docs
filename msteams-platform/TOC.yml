@@ -21,6 +21,12 @@
     href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
     href: samples/shifts-wfm-connectors.md 
+- name: Apps in meetings
+  items:
+  - name: Teams apps in meetings
+    href: apps-in-meetings/teams-apps-in-meetings.md
+  - name:  Create apps for teams meetings
+    href: apps-in-meetings/create-apps-for-teams-meetings.md
 - name: Concepts
   expanded: true
   items:

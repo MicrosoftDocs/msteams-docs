@@ -1,14 +1,14 @@
 ---
-title: Create an in-meeting Teams app
+title: Create apps for teams meetings
 author: laujan
 description: create apps for teams meetings 
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: teams apps meetings user participant role api 
 ---
-# Create in-meeting Teams apps
+# Create apps for Teams meetings
 
-## In-meeting app API reference
+## Meeting apps API reference
 
 |API|Description|Request|
 |---|---|----|
