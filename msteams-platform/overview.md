@@ -53,8 +53,10 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 Quickly familiarize yourself with building for Teams by creating a simple app and adding a couple commonly used capabilities.
 
 <div align="center">
+
 > [!div class="nextstepaction"]
 > [Build your first app now](build-your-first-app/building-real-world-app.md)
+
 </div>
 
 :::row:::
