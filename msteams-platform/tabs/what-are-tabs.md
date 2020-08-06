@@ -4,7 +4,6 @@ author: laujan
 description: An overview of custom tabs on the Microsoft Teams platform
 ms.topic: overview
 ms.author: lajanuar
-ms.topic: overview
 ---
 # What are Microsoft Teams custom tabs?
 
@@ -50,4 +49,4 @@ You can have a maximum of one (1) channel/group tab and up to sixteen (16) perso
 
 ## Mobile clients
 
-If you choose to have your channel/group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property (see below). Personal tabs are currently available in [developer preview](~/resources/dev-preview/developer-preview-intro.md). Full support for tabs on mobile clients will be released soon. To prepare for the update, you should follow the [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md) when creating your tabs.
+If you choose to have your channel/group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property. Personal tabs are currently available in [developer preview](~/resources/dev-preview/developer-preview-intro.md). Full support for tabs on mobile clients will be released soon. To prepare for the update, you should follow the [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md) when creating your tabs.
