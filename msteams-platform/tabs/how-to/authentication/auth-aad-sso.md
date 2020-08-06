@@ -85,16 +85,16 @@ Register your application in the[Azure AD portal](https://azure.microsoft.com/fe
 
 13. Navigate to **Authentication**
 
-    If any app hasn't been pre-consented by an IT admin, a user will have to provide consent the first time they use an app.
+    If an app hasn't been granted IT admin consent, users will have to provide consent the first time they use an app.
 
     Set a redirect URI:
-    * Select "Add a platform"
-    * Select "web"
-    * Enter the redirect URI for your app. This will be the page that a successfull implicit grant flow will redirect the user.
+    * Select **Add a platform**.
+    * Select **web**.
+    * Enter the **redirect URI** for your app. This will be the page where a successful implicit grant flow will redirect the user.
 
     Enable implicit grant by checking the following boxes:
-    * ID Token
-    * Access Token
+    ✔ ID Token
+    ✔ Access Token
     
     
 
