@@ -15,9 +15,10 @@ The change log lists changes to the Microsoft Teams platform and this document s
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
 | 07/22/2020 |Mobile device capability updates.|[Request device permissions for your Microsoft Teams tab](~/tabs/how-to/native-device-permissions.md) |
+|07/20/2020|Teams App Validation Tool for AppSource submissions.|[Teams App Validation Tool](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool)
 |07/15/2020|Create a virtual assistant for Teams|[Virtual Assistant for Microsoft Teams](samples/virtual-assistant.md)|
 |07/14/2020|Surfacing a native loading indicator documentation|[Showing a native loading indicator](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
-| 07/01/2020 |Get started building Teams apps with the Visual Studio Code Toolkit.|[Build apps with the Microsoft Teams Toolkit and Visual Studio Code](toolkit/visual-studio-code-overview.md) |
+|07/01/2020|Get started building Teams apps with the Visual Studio Code Toolkit.|[Build apps with the Microsoft Teams Toolkit and Visual Studio Code](toolkit/visual-studio-code-overview.md) |
 |07/01/2020|Single sign-on for tabs GA for Teams web and desktop clients|[Single Sign-On (SSO)](tabs/how-to/authentication/auth-aad-sso.md)|
 |06/05/2020| Manifest Schema updated to version 1.7| [Reference: Manifest schema for Microsoft Teams](resources/schema/manifest-schema.md)|
 | 05/20/2020 | Resource-specific consent permissions using Microsoft Graph APIs is in developer preview. |[Resource-specific consent (RSC) — Developer Preview](graph-api/rsc/resource-specific-consent.md) |

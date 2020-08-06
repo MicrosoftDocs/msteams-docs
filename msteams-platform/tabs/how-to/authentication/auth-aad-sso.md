@@ -6,9 +6,6 @@ keywords: teams authentication SSO AAD single sign-on api
 
 # Single Sign-On (SSO)
 
-> [!NOTE]
-> * The Single Sign-on (SSO) API is generally available on web and desktop. Mobile will be available soon. In the meantime, we recommend gracefully falling back to our [classic authentication API](auth-flow-tab.md) on mobile.
-
 Users sign in to Microsoft Teams via their work, school, or Microsoft accounts (Office 365, Outlook, etc). You can take advantage of this by allowing a single sign-on to authorize your Microsoft Teams tab (or task module) on desktop or mobile clients. Thus, if a user consents to use your app, they won’t have to consent again on another device — they will signed in be automatically. In addition, we prefetch your access token to improve performance and load times.
 
 ## How SSO works at runtime
@@ -82,6 +79,21 @@ Register your application in the[Azure AD portal](https://azure.microsoft.com/fe
     * offline_access
     * OpenId
     * profile
+
+13. Navigate to **Authentication**
+
+    If an app hasn't been granted IT admin consent, users will have to provide consent the first time they use an app.
+
+    Set a redirect URI:
+    * Select **Add a platform**.
+    * Select **web**.
+    * Enter the **redirect URI** for your app. This will be the page where a successful implicit grant flow will redirect the user.
+
+    Enable implicit grant by checking the following boxes:  
+    ✔ ID Token  
+    ✔ Access Token  
+    
+    
 
 > [!NOTE]
 >
