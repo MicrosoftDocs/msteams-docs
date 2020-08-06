@@ -56,45 +56,64 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 
 :::row:::
    :::column span="2":::
-   #### Off and running
 
-   Get to know your way around the platform by creating a basic Teams app and adding a couple features. Lorem ipsum Lorem ipsumLorem ipsumLorem ipsum
+### Off and running
+
+   Quickly familiarize yourself with the platform by creating a simple "Hello, World!" Teams app and adding a couple features.
 
    > [!div class="nextstepaction"]
    > [Build your first app now](build-your-first-app/building-real-world-app.md)
+
    :::column-end:::
    :::column span="":::
 
    :::column-end:::
 :::row-end:::
 
-#### Off and running
+:::row:::
+   :::column span="2":::
 
-Get to know your way around the platform by creating a basic Teams app and adding a couple features.
+### Best of both worlds
 
-> [!div class="nextstepaction"]
-> [Build your first app now](build-your-first-app/building-real-world-app.md)
+   Bring your favorite third-party web apps and services into Teams for a seamless user experience.
 
-#### Best of both worlds
+   > [!div class="nextstepaction"]
+   > [Integrate an app or service](samples/integrating-web-apps.md)
 
-Bring your favorite web apps and services into Teams for a seamless user experience.
+   :::column-end:::
+   :::column span="":::
 
-> [!div class="nextstepaction"]
-> [Integrate an app or service](samples/integrating-web-apps.md)
+   :::column-end:::
+:::row-end:::
 
-#### Trust the process
+:::row:::
+   :::column span="2":::
 
-Walk through how to plan, design, build, and publish a great Teams app.
+### Trust the process
 
-> [!div class="nextstepaction"]
-> [Start planning your app](concepts/extensibility-points.md)
+   Understand the entire Teams platform development process, from planning, designing, building, to publishing an app.
 
-#### No code, no worries
+   > [!div class="nextstepaction"]
+   > [Start planning your app](concepts/extensibility-points.md)
 
-Did you know you can use Power Platform apps within Teams?
+   :::column-end:::
+   :::column span="":::
 
-> [!div class="nextstepaction"]
-> [Import a Power Platform app](samples/importing-custom-microsoft-apps.md)
+   :::column-end:::
+:::row-end:::
+
+### No code, no worries
+
+   Did you know you can use Power Platform apps within Teams?
+
+   > [!div class="nextstepaction"]
+   > [Import a Power Platform app](samples/importing-custom-microsoft-apps.md)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
 
 ## Resources
 
