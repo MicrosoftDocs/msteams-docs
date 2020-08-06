@@ -50,21 +50,12 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 
 ## Get started
 
-:::row:::
-   :::column span="2":::
+<div align="center">
+Quickly familiarize yourself with building for Teams by creating a simple "Hello, World!" app and adding a couple commonly used capabilities.
 
-**Off and running**
-
-   Quickly familiarize yourself with building for Teams by creating a simple "Hello, World!" app and adding a couple commonly used capabilities.
-
-   > [!div class="nextstepaction"]
-   > [Build your first app now](build-your-first-app/building-real-world-app.md)
-
-   :::column-end:::
-   :::column span="":::
-
-   :::column-end:::
-:::row-end:::
+> [!div class="nextstepaction"]
+> [Build your first app now](build-your-first-app/building-real-world-app.md)
+</div>
 
 :::row:::
    :::column span="2":::
