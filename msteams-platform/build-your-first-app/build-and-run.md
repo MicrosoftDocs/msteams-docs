@@ -12,17 +12,14 @@ You can jump right into developing on the Microsoft Teams platform by quickly bu
 
 ## Set up your development environment
 
-To build apps for Teams, you need a Teams account that enables sideload. You can either use your own Teams account or get a test tenant from Microsoft 365 developer subscription. 
+To build apps for Teams, you need a Teams account that allows sideloading. Your account may already provide this. If not, get a test tenant by registering for a Microsoft 365 developer subscription.
 
-Use your current Teams acount: 
 1. Verify if you can sideload apps in Teams:
     1. In the Teams client, select **Apps**.
     1. Look for an option to **Upload a custom app**.
-1. if you have this option, you are good to go. If not, get a developer test account. 
-
-Get a developer test account  
-1. Register for a [Microsoft 365 developer subscription](../concepts/build-and-test/prepare-your-o365-tenant.md).
-1. [Enable custom app sideloading](../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) for your test account. 
+1. If you have this option, you can start building. If not, do the following:
+    1. Register for a [Microsoft 365 developer subscription](../concepts/build-and-test/prepare-your-o365-tenant.md).
+    1. [Enable custom app sideloading](../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) for your test account.
 
 ## Install your development tools
 
@@ -85,7 +82,7 @@ You can learn more about scaffolding in the tutorials for creating personal and 
 
 ## Next step
 
-🎉 Congratulations! You have a running Teams app. Learn how to add real-world features to it.
+🎉 Congratulations! You have a running Teams app. Select the following button to learn how to add a real-world feature to it.
 
 > [!div class="nextstepaction"]
 > [Create a personal tab](../build-your-first-app/add-personal-tab.md)

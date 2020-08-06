@@ -14,7 +14,7 @@ Apps are how you extend Teams to fit your needs. You can create something brand 
 
 ## What can Teams apps do?
 
-People discover and use Teams apps through a set of [capabilities](concepts/capabilities-overview.md). Your app can have one or more of these capabilities. You also can define your app's scope for personal workspaces only or expand it to chats and team channel activities.
+People discover and use Teams apps through a set of platform [capabilities](concepts/capabilities-overview.md).
 
 Some apps are simple (send notifications), while others are complex (view patient records). When planning your app, remember that Teams is a collaboration hub. The best Teams apps help people express themselves and work better together.
 

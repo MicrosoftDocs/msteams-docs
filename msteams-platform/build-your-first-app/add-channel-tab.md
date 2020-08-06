@@ -12,7 +12,7 @@ In this tutorial, you'll build a basic *channel tab*, a full-screen content page
 
 ## Before you begin
 
-* You need a running "Hello, World!" app to get started. If you don't have one, see [build and run your Teams first app](../build-your-first-app/build-and-run.md).
+* You need a basic running app to get started. If you don't have one, see [build and run your Teams first app](../build-your-first-app/build-and-run.md).
 * If you haven't [created a personal tab](../build-your-first-app/add-personal-tab.md) for your app, do that tutorial before starting this one.
 
 ## Your assignment
