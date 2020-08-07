@@ -10,7 +10,8 @@ You can jump right into developing on the Microsoft Teams platform by quickly bu
 > [!NOTE]
 > It's helpful to have working knowledge of JavaScript (specifically React) when following these tutorials.
 
-## Set up your development environment
+
+## Get your development account
 
 To build apps for Teams, you need a Teams account that allows sideloading. Your account may already provide this. If not, get a test tenant by registering for a Microsoft 365 developer subscription.
 
@@ -21,12 +22,15 @@ To build apps for Teams, you need a Teams account that allows sideloading. Your 
     1. Register for a [Microsoft 365 developer subscription](../concepts/build-and-test/prepare-your-o365-tenant.md).
     1. [Enable custom app sideloading](../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) for your test account.
 
-## Install your development tools
+## Set up your development environment
 
 You can build Teams apps with your preferred tools, but here we'll show you how to get started quickly with Visual Studio Code and the Microsoft Teams Toolkit.
 
 1. Install the latest version of [Visual Studio Code](https://code.visualstudio.com/download).
 1. In Visual Studio Code, select **Extensions** :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: on the left Activity Bar and install the **Microsoft Teams Toolkit**.
+1. Install [NodeJS](https://nodejs.org/en/)
+1. Install [Ngrok](https://ngrok.com/download) 
+
 
 ## Create an app project
 
@@ -44,7 +48,7 @@ Once complete, you have the app scaffolding components for building personal and
 
 ## Run your app
 
-Follow the `README.md` instructions in your project to build, run, and deploy your app to Teams.
+Follow the `README.md` instructions in your project to build, run, and deploy your app to Teams. In general, you need to install your app's server, get it running, then setup a tunneling solution so that Teams can access content running from localhost. The last step is to Upload the `Development.zip` from the `.publish folder` to Teams following the instructions in [upload an app package to Microsoft Teams](../concepts/deploy-and-publish/apps-upload)
 
 Your app running in the Teams client should look like the following screenshot.
 

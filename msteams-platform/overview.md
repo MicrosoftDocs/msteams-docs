@@ -44,7 +44,7 @@ Conversations often result in the need to do something (create an order, review 
 
 ### Utilize Teams data
 
-The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent.md) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app.
+The [Microsoft Graph REST API for Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app.
 
 :::image type="content" source="assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph REST API for Teams." border="false":::
 
