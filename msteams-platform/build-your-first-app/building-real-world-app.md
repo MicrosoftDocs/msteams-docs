@@ -24,22 +24,21 @@ You will start with creating and running a "Hello, World" tab app.  You will the
 
 ## Teams fundamental 
 Before you start, here are two things you should understand about Teams apps.
-### Teams app provides multiple entry points 
-Teams apps are made up of one or more platform capabilities: tabs, bots, message extensions and connectors. An app can contain any combination of these capabilities. For this tutorial, you will build an app with just tabs but you can add on bot and message extension as you like. Teams app also have many UI elements such as cards, task module and deep link.
+#### Teams app provides multiple entry points
 
-### Teams does not host your app
+Teams apps are made up of one or more [platform capabilities](../concepts/capabilities-overview.md): [tabs](../tabs/what-are-tabs.md), [bots](../bots/what-are-bots.md ), [message extensions](../messaging-extensions/what-are-messaging-extensions.md) and [connectors](../webhooks-and-connectors/what-are-webhooks-and-connectors.md). An app can contain any combination of these capabilities. For this tutorial, you will build an app with just tabs but you can add on bot and message extension as you like. Teams app also have many UI elements such as cards, task module and deep link.
+#### Teams does not host your app
 
 A Teams app consists of three major pieces:
 
 1. The Microsoft Teams client (web, desktop or mobile) where users will interact with your app.
-
 1. Your service, workflow or website which perform the necessary logic, data storage and API calls to power your app.
-1.  Your Teams app package that creates the app installed by your users, and contains your app's metadata (name, icons, etc.) and pointers to your services.  
+1.  Your Teams app package that creates the app installed by your users, and contains your app's metadata (name, icons, etc.) and pointers to your services.
 
 When an app is installed, the Teams client parses the manifest file to determine needed information like the name of your app and the URL where the services are located.
 
-That's all for now, let's get started!
-## Next step
 
+## Next step
+That's all for now, let's get started!
 > [!div class="nextstepaction"]
 > [Build and run your first app](../build-your-first-app/build-and-run.md)
