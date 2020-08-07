@@ -25,13 +25,25 @@ If Microsoft Teams has not been enabled for your organization, you'll need to do
 
 ## Enable custom Teams apps and turn on custom app uploading
 
+Turn on custom app sideloading for your developer tenant as follows:
+
+1. Login to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credential. 
+
+2. Select **Show All** --> **Teams**. 
+
+![image of the app overflow menu](~/assets/images/prepare-test-tenant/admin-center.png)
+
+3. Navigate to **Teams apps** --> **Setup Policies** --> **Global(Org-wide default)**  
+
+![image of the app overflow menu](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
+
+4. Toggle **upload custom apps** to the **on** position.
+
+That's it! Your test tenant will now allow custom app sideloading.
+
 > [!Note] 
-> If you're using the Office 365 developer platform to build your app, these settings should already be configured to allow you to build, upload, and test your app.
+> It can take up to 24 hours before sideloading is enabled. During interim, you can use **upload for \<your tenant>** to test your app.
 
-There are three settings relevant to enabling custom apps and custom app uploading:
+![image of the app overflow menu](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
 
-* **Org-wide custom app setting** => **Allow interaction with custom apps** => **On** — This setting enables or disables custom apps for your organization. It needs to be on. 
-* **Team custom app setting** => **Allow members to upload custom apps** => **On/Off** — This setting applies to each individual team inside Microsoft Teams. If you want to install your app for a specific team, this will need to be on for that team.
-* **User custom app policy** => **User can upload custom apps** => **On/Off** — This setting controls the permissions for an individual user. You'll need to enable this for individuals that are allowed to upload custom apps.
-
-For complete information on how these settings interact, *see* [Manage custom app policies and settings in Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings) and [Manage app setup policies in Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies).
+For complete information on how these settings interact, *See*, [Manage custom app policies and settings in Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings) and [Manage app setup policies in Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies).
