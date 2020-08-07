@@ -16,7 +16,7 @@ Apps are how you extend Teams to fit your needs. You can create something brand 
 <div>
   <div style="position:relative;padding-top:56.25%;">
     <iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE4AUyE" frameborder="0" allowfullscreen
-      style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+      style="position:absolute;top:0;left:0;width:100%;"></iframe>
   </div>
 </div>
 ## What can Teams apps do?
