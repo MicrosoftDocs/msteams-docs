@@ -10,8 +10,6 @@ Tabs are a simple way to surface content in your app by essentially embedding a 
 
 There are two types of tabs in Teams. In this tutorial, you'll build basic a *personal tab*, a full-screen content page for individual users. (Personal tabs are the closest thing to a traditional website experience in Teams.)
 
-:::image type="content" source="../assets/images/overview-tabs.png" alt-text="Conceptual image of a tab in Teams.":::
-
 ## Before you begin
 
 You need a basic running app to get started. If you don't have one, see [build and run your first Teams app](../build-your-first-app/build-and-run.md).
