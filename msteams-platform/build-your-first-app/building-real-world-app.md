@@ -26,7 +26,7 @@ You will start with creating and running a "Hello, World" tab app.  You will the
 Before you start, here are two things you should understand about Teams apps.
 #### Teams app provides multiple entry points
 
-Teams apps are made up of one or more [platform capabilities](../concepts/capabilities-overview.md): [tabs](../tabs/what-are-tabs.md), [bots](../bots/what-are-bots.md ), [message extensions](../messaging-extensions/what-are-messaging-extensions.md) and [connectors](../webhooks-and-connectors/what-are-webhooks-and-connectors.md). An app can contain any combination of these capabilities. For this tutorial, you will build an app with just tabs but you can add on bot and message extension as you like. Teams app also have many UI elements such as cards, task module and deep link.
+Teams apps are made up of one or more [platform capabilities](../concepts/capabilities-overview.md): [tabs](../tabs/what-are-tabs.md), [bots](../bots/what-are-bots.md ), [message extensions](../messaging-extensions/what-are-messaging-extensions.md) and [connectors](../webhooks-and-connectors/what-are-webhooks-and-connectors.md). An app can contain any combination of these capabilities. For this tutorial, you will build an app with just tabs but you can add on bot and message extension as you like. Teams app also have many [UI elements](../planning-your-app/teams-ui-conventions.md) such as cards, task module and deep link.
 #### Teams does not host your app
 
 A Teams app consists of three major pieces:

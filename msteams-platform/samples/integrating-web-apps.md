@@ -5,4 +5,4 @@ description: Understand the steps needed to integrate your web app with Microsof
 ---
 # Integrating web apps
 
-Some text.
+Coming soon...
