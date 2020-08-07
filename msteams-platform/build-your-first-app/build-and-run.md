@@ -56,7 +56,7 @@ With your app project and scaffolding set up, take some time to understand some 
 
 ### App manifest (`manifest.json`)
 
-Located in the `.publish` directory, the app manifest is the starting point for any app project. The manifest defines your app's fundamental attributes and points to required resources.
+Located in the `.publish` directory, the app manifest is the starting point for any app project. The manifest defines your app's fundamental attributes and points to required resources. When you install an app, Teams parses the manifest to understand how to render your app in the client.
 
 In the following tutorials, you'll focus on the sections of the app manifest for building personal and channel tabs.
 
