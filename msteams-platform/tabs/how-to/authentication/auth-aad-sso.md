@@ -59,6 +59,8 @@ Register your application in the[Azure AD portal](https://azure.microsoft.com/fe
 4. Under **Manage**, select **Expose an API**. 
 5. Select the **Set** link to generate the Application ID URI in the form of `api://{AppID}`. Insert your fully qualified domain name (with a forward slash "/" appended to the end) between the double forward slashes and the GUID. The entire ID should have the form of: `api://fully-qualified-domain-name.com/{AppID}` ²
     * ex: `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`.
+    
+    The fully qualified domain name is the human readable domain name from which your app is served. If you are using a tunneling service such as ngrok, you will need to update     this value whenever your ngrok subdomain changes. 
 6. Select the **Add a scope** button. In the panel that opens, enter `access_as_user` as the **Scope name**.
 7. Set **Who can consent?** to `Admins and users`
 8. Fill in the fields for configuring the admin and user consent prompts with values that are appropriate for the `access_as_user` scope:
@@ -67,13 +69,13 @@ Register your application in the[Azure AD portal](https://azure.microsoft.com/fe
     * **User consent title**: Teams can access the user profile and make requests on the user's behalf.
     * **User consent description:** Enable Teams to call this app’s APIs with the same rights as the user.
 9. Ensure that **State** is set to **Enabled**
-10. Select **Add scope**
+10. Select the **Add scope** button to save 
     * The domain part of the **Scope name** displayed just below the text field should automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end:
         * `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`
-11. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. Each of the following IDs needs to be entered:
+11. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. Select *Add a client application*. Enter each of the following client IDs and select the authorized scope you created in the previous step:
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Teams mobile/desktop application)
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Teams web application)
-12. Navigate to **API Permissions**, and make sure to add the follow permissions:
+12. Navigate to **API Permissions**. Select *Add a permission* > *Microsoft Graph* > *Delegated permissions*, then add the following permissions:
     * User.Read (enabled by default)
     * email
     * offline_access
@@ -87,13 +89,13 @@ Register your application in the[Azure AD portal](https://azure.microsoft.com/fe
     Set a redirect URI:
     * Select **Add a platform**.
     * Select **web**.
-    * Enter the **redirect URI** for your app. This will be the page where a successful implicit grant flow will redirect the user.
+    * Enter the **redirect URI** for your app. This will be the page where a successful implicit grant flow will redirect the user. This will be same fully qualified domain name that you entered in step 5 followed by the API route where a authentication response should be sent. If you are following any of the Teams samples, this will be: `https://subdomain.example.com/auth-end`
 
-    Enable implicit grant by checking the following boxes:  
+    Next, enable implicit grant by checking the following boxes:  
     ✔ ID Token  
     ✔ Access Token  
     
-    
+Congratulations! You have completed the app registration prerequsities to proceed with your tab SSO app.     
 
 > [!NOTE]
 >
