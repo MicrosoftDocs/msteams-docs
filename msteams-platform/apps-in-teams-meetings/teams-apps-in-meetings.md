@@ -1,12 +1,15 @@
 ---
-title: Apps to Teams meetings
+title: Apps to Teams meetings 
 author: laujan
 description: overview of apps in Teams meetings based on participant and user role
 ms.topic: overview
 ms.author: lajanuar
 keywords: teams apps meetings user participant role api  
 ---
-# Add apps to Teams meetings
+# Add apps to Teams meetings (Preview)
+
+>[!IMPORTANT]
+> Features included in Microsoft Teams preview are provided for early-access, testing, and feedback purposes onl. They may undergo changes before becoming available in the public release and should not be used in production applications.
 
 Meetings are key to productivity in Teams. They enable collaboration, partnership, informed communication, and shared feedback in an inclusive and active forum. As a developer, you can create [configurable tab](../tabs/what-are-tabs.md#how-do-tabs-work), [bot](../bots/what-are-bots.md), and [message extension](../messaging-extensions/what-are-messaging-extensions.md) applications to enhance and enrich a Teams meeting experience. Meeting users can access apps, via the tab gallery, to enable relevant scenarios such as pre-staging a Kanban board, launching an in-meeting actionable notification, or creating a post-meeting poll. Your meeting app can deliver a user experience for each stage of the meeting lifecycle based upon attendee status.
 
@@ -16,29 +19,44 @@ Teams’ meeting app extensibility centers on three concepts:
 ✔ **Participant role** — meeting organizer, presenter, or attendee.  
 ✔ **User type** — in-tenant, guest, federated, or anonymous Teams user.
 
-## Meeting lifecycle scenarios
+<!-- markdownlint-disable MD001 -->
+### Meeting lifecycle scenarios
 
-### Tabs
+## Tabs
 
 > [!IMPORTANT]
 > As with all tab applications, Your app will need to follow the Teams [SSO authentication flow](../tabs/how-to/authentication/auth-aad-sso.md) for tabs.
 
-### Pre-meeting
+### Pre-meeting app experience
 
-| Meeting app experience |Scope|
-| -------| ----------------------------|
-|Permissioned users can add apps a meeting via the tab gallery in two ways: |For your configurable tab app to be available as part of the meeting chat/pre-meeting experience it must be scoped to the group-chat level.|
-|&#9679; Via the **Details** tab on the Teams scheduling form:</br> </br>![Teams scheduling form](../assets/images/apps-in-meetings/teams-meeting-scheduling-form.png) </br>&#9679;  Via the meeting **Chat** tab in an existing meeting:</br> </br>![Chat in a meeting tab](../assets/images/apps-in-meetings/chat-in-meeting.png) </br>&#8199; </br>Tab apps will be accessible in meetings **Details** and **Chats** pages using a plus icon (➕) button.|
+✔ Permissioned users can add apps a meeting via the tab gallery in two ways:   
 
-### In-meeting
+&emsp;&emsp;&#9679; Via the **Details** tab on the Teams scheduling form:
 
-| Meeting app experience |Scope|
-| -------| ----------------------------|
-|Meeting apps will be hosted in the top upper bar of the chat window and as in-meeting tab experience via the right pane.| When users add a tab to a meeting through the tab gallery, apps that are **during meeting** experiences will be surfaced.|
-|Permissioned users can add apps while in the meeting.||
-|For an app to be visible in a meeting, Teams will expose two new surfaces: </br>&#9679; **Side panel** : If the app specifies in the manifest that it’s tab is optimized for side pane and it should be shown there. </br> &#9679; **Stage** (whiteboard): In Microsoft Teams, coworkers can use the Whiteboard app to collaborate in real time in a Teams meeting. <br/>&emsp;To share the Whiteboard during the meeting:</br>&emsp;**1.** During the meeting, go to the meeting controls, select Share, and then select Microsoft Whiteboard under the Whiteboard category. The board will open directly in Teams, and any content you configured before the meeting will load.</br>&emsp;**2.** If need to use advanced Whiteboard tools, select Open in app.</br></br>&#9679; An in-meeting app can also be part of a Share Tray experience subject to specified design guidelines: </br></br> ![Share tray in meeting](../assets/images/apps-in-meetings/share-tray-in-meeting.png)
+![Teams scheduling form](../assets/images/apps-in-meetings/teams-meeting-scheduling-form.png)   
 
-When loaded in the context of a meeting, apps will be able to leverage the Teams Client SDK to access the meetingId, userMri, and frameContext so they can appropriately render the experience. 
+&emsp;&emsp;&#9679;  Via the meeting **Chat** tab in an existing meeting:</br> </br>![Chat in a meeting tab](../assets/images/apps-in-meetings/chat-in-meeting.png) </br>&#8199;  
+
+✔ Tab apps are accessible in meetings **Details** and **Chats** pages using a plus icon (➕) button.|
+
+### In-meeting app experience
+
+✔ Meeting apps will be hosted in the top upper bar of the chat window and as in-meeting tab experience via the right pane.| When users add a tab to a meeting through the tab gallery, apps that are **during meeting** experiences will be surfaced.
+
+✔ Permissioned users can add apps while in the meeting.
+
+✔ When loaded in the context of a meeting, apps will be able to leverage the Teams Client SDK to access the `meetingId`, `userMri`, and f`rameContext` to appropriately render the experience.
+
+✔ For an app to be visible in a meeting, Teams will expose two new surfaces: 
+
+&emsp;&emsp;&#9679; **Side panel** : If the app specifies in the manifest that it’s tab is optimized for side pane and it can be shown there or it can also be part of a Share Tray experience subject to specified design guidelines:
+
+ ![Share tray in meeting](../assets/images/apps-in-meetings/share-tray-in-meeting.png)
+
+&emsp;&emsp;&#9679; **Stage** (Whiteboard): In Microsoft Teams, coworkers can use the Microsoft Whiteboard app to collaborate in real time in a Teams meeting.
+
+>[!TIP]
+> **Share Whiteboard during a meeting**:</br>&emsp;**1.** During the meeting, go to the meeting controls, select **Share**, and then select **Microsoft Whiteboard** under the Whiteboard category. The board will open directly in Teams, and any content you configured before the meeting will load.</br>&emsp;**2.** If need to use advanced Whiteboard tools, select **Open in app**.
 
 ![in-meeting experience](../assets/images/apps-in-meetings/in-meeting-experience.png)
 
@@ -46,12 +64,9 @@ The figure below depicts an in-meeting actionable notification for users.
 
 ![In-meeting-notification](../assets/images/apps-in-meetings/in-meeting-notification.png)
 
-### Post-meeting
+### Post-meeting app experience
 
-| Meeting app experience |Scope|
-| -------| ----------------------------|
-| As with the pre-meeting scenario, your app must be available in the group-chat scope to be available within the post-meeting surface.| This post-meeting app scenario is similar to the current post-meeting experience with the added benefit of having tabs exist within the surface. Additionally, the meeting **Details* page provides a central place for continued access to apps and other related materials after the meeting has ended. |
-||As with the pre-meeting scenario, permissioned users can add apps via the tab gallery to a meeting:</br>&#9679; Via the **Details** tab on the Teams scheduling form:</br>&#9679;  Via the meeting **Chat** tab in an existing meeting.
+The post-meeting app scenario is similar to the current post-meeting experience with the added benefit of having tabs exist within the surface. Permissioned users can add apps via the tab gallery to a meeting via the **Details** tab on the Teams scheduling form and via the meeting **Chat** tab in an existing meeting.
 
 ### Bots
 
@@ -88,7 +103,7 @@ You can access the  **Meeting options** page as follows:
 ### User types
 
 > [!NOTE]
-> User types can join meetings and assume one of the participant roles described above.
+> User types can join meetings and assume one of the participant roles described above. The User type is not exposed as part of the **getParticipantRole** API
 
 1. **In-tenant**. These users belong to the organization and have credentials in Azure Active Directory for the tenant. They are usually full-time, onsite or remote employees.
 1. **Guest**. A guest is a participant from another organization who has been invited to access Teams or other resources in your organization's tenant. Guests are added to your organization’s Active Directory and can be given nearly all the same Teams capabilities as a native team member with full access to team chats, meetings, and files. _See_ [Guess access in Microsoft Teams](/microsoftteams/guest-access)

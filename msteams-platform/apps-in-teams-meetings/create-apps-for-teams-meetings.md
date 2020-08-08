@@ -10,15 +10,128 @@ keywords: teams apps meetings user participant role api
 
 ## Meeting apps API reference
 
-|API|Description|Request|
-|---|---|----|
-|**GetParticipant**|This API allows a bot to fetch a participant information by meeting id and participant id.|**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |
-|**GetMeeting**|Get the meeting’s metadata which includes but not limited to: </br>&#9679; Scheduled time </br>&#9679; Start time (if the meeting is started) </br>&#9679; End time (if the meeting is ended) </br>&#9679; Subject|**GET** _**/v1/meetings/{meetingId}**_|
-|**GetMeetingParticipants**|Retrieve meeting participants by roster type: </br>&#9679; Invited </br>&#9679;Accepted </br>&#9679; Joined|**GET** __**/v1/meetings/{meetingId}/participants?rosterType={filter type} _**_|
-|**GetMeetingNotes**|Get the meeting’s notes metadata information.|**GET** _**/v1/meetings/{meetingId}/notes**_|
-|**GetMeetingTranscript**| Get the meeting’s transcript metadata information.|**GET** _**/v1/meetings/{meetingId}/transcript **_|
-|**NotificationSignal** |Meeting signals will be delivered using the following existing conversation notification API (for user-bot chat). This API allows developers to signal based on end-user action to show-case an in-meeting notification bubble.|Bot SDK|
-|**GetUserContext**| Get contextual information to display relevant content in a Teams tab.| Teams client SDK|
+|API|Description|Request|Source|
+|---|---|----|---|
+|**GetParticipant**|This API allows a bot to fetch a participant information by meeting id and participant id.|**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Graph|
+|**NotificationSignal** |Meeting signals will be delivered using the following existing conversation notification API (for user-bot chat). This API allows developers to signal based on end-user action to show-case an in-meeting notification bubble.|**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
+|**GetUserContext**| Get contextual information to display relevant content in a Teams tab. |_**microsoftTeams.getContext( ( ) => {  /*...*/ } )**_|Microsoft Teams client SDK|
+
+### GetParticipant API
+
+#### Request
+
+```http
+GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
+```
+
+### Query parameters
+
+**meetingId**. The meeting identifier is required.  
+**participantId**. The participant identifier is required.  
+**tenantId**. Tenant id of the participant. Required for tenant user.
+
+### Response Payload
+<!-- markdownlint-disable MD036 -->
+
+**Example 1**
+
+```json
+{
+    "meetingRole":"<meeting role>",
+    "conversation":
+        {
+            "id": "<conversation id>"
+        }
+}
+```
+
+**meetingRole** can be *organizer*, *presenter*, or *attendee*.
+
+**Example 2**
+
+```json
+{
+    "meetingRole": "Attendee",
+    "conversation": {
+        "isGroup": true,
+        "id": "sample" }
+}
+```
+
+### Response Codes
+
+**200**: participant information successfully retrieved  
+**401**: invalid token  
+**403**: the app is not allowed to get participant information. There can be many reasons: app disabled by tenant admin, blocked during live site mitigation, etc.  
+**404**: the meeting doesn't exist or participant can’t be found  
+
+<!-- markdownlint-disable MD024 -->
+### NotificationSignal API
+
+#### Request
+
+```http
+POST /v3/conversations/{conversationId}/activities
+```
+
+### Query parameters
+
+**conversationId**: The conversation identifier. Required
+
+### Request Payload
+
+```json
+{
+"channelData": {
+    "notification": {
+        "alertMeeting": true,
+
+        "externalResourceUrl: "https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>      &width=<TaskInfo.width> &title=<TaskInfo.title> ”
+                      }
+                 }
+            }
+```
+
+**Example 1 Node.js**
+
+```nodejs
+const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive card instead
+        replyActivity.channelData = {
+            notification: {
+                alertInMeeting: true,
+                externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url> &height=<TaskInfo.height>      &width=<TaskInfo.width> &title=<TaskInfo.title>’
+            }
+        };
+        await context.sendActivity(replyActivity);
+```
+
+**Example 2 C#**
+
+```csharp
+var replyActivity = MessageFactory.text('Hi'); // this could be an adaptive card insteadreplyActivity.ChannelData = new TeamsChannelData{
+    Notification: new NotificationInfo(alertInMeeting: true, externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url> &height=<TaskInfo.height>      &width=<TaskInfo.width> &title=<TaskInfo.title>’
+};
+await context.sendActivity(replyActivity);
+```
+
+### Response Codes
+
+**201**: activity with signal is successfully sent
+**401**: invalid token
+**403**: the app is not allowed to send the signal. In this case, the payload should contain more detail error message. There can be many reasons: app disabled by tenant admin, blocked during live site mitigation, etc.
+**404**: the meeting chat doesn't exist
+
+### GetUserContext
+
+Please refer to our [Get context for your Teams tab](../tabs/how-to/access-teams-context#getting-context-by-using-the-microsoft-teams-javascript-library) documentation for guidance on identifying and  retrieving contextual information for your tab content. As part of meetings extensibility, new values have been added for the request payload:
+
+1. **meetingId**: used by a tab when running in the meeting context.   
+
+1. **tenantId - tid**: Azure AD tenant ID of the current user.  
+
+1. **ParticipantId** - userObjectId: The Azure AD object id of the current user, in the current tenant"
+
+
 
 ## Enable your app for Teams meetings
 
@@ -99,4 +212,4 @@ The post-meeting and pre-meeting configurations are equivalent.
 ## Learn more
 
  > [!div class="nextstepaction"]
-> [Get tips on designing tabs for Teams](../tabs/design/tabs.md)
+> [Tips for designing your Teams tab](../tabs/design/tabs.md)
