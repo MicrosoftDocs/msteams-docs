@@ -12,30 +12,23 @@ Microsoft Teams apps bring key information, common tools, and trusted processes 
 
 Apps are how you extend Teams to fit your needs. You can create something brand new for Teams or simply integrate features in your favorite apps and services.
 
-only embedding video 
-<iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE4AUyE" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
+Trying different height 
+<iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE4AUyE" width="640" height="540" allowFullScreen="true" frameBorder="0"></iframe>
 <br>
-<iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE4AUyE" width="100%" height="320" allowFullScreen="true" frameBorder="0"></iframe>
+<iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE4AUyE" width="100%" height="auto" allowFullScreen="true" frameBorder="0"></iframe>
 <br>
 
-yellow box: 
-<div><div style="background-color: yellow; height="320";width="100%"></div></div>
 
 <br>
 2nd try -- iframe in div
+  <div style="position:relative;padding-top:56.25%;width="100%"">
+    <iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE4AUyE" frameborder="0" allowfullscreen
+      style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+  </div>
 
-<div style="margin:0px;padding:0px;overflow:hidden">
-    <iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE4AUyE" frameborder="0" style="overflow:hidden;height:100%;width:100%"></iframe>
-</div>
 
 3rd try 
-
-<div>
-  <div style="position:relative;padding-top:56.25%;background-color: yellow;">
-    <iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE4AUyE" frameborder="0" allowfullscreen
-      style="position:absolute;top:0;left:0;width:100%;"></iframe>
-  </div>
-</div>
+![](https://www.microsoft.com/en-us/videoplayer/embed/RE4AUyE){width="100%"}
 ## What can Teams apps do?
 
 People discover and use Teams apps through a set of platform [capabilities](concepts/capabilities-overview.md).
