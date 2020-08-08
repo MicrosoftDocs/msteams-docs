@@ -123,7 +123,7 @@ await context.sendActivity(replyActivity);
 
 ### GetUserContext
 
-Please refer to our [Get context for your Teams tab](../tabs/how-to/access-teams-context#getting-context-by-using-the-microsoft-teams-javascript-library) documentation for guidance on identifying and  retrieving contextual information for your tab content. As part of meetings extensibility, new values have been added for the request payload:
+Please refer to our [Get context for your Teams tab](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library) documentation for guidance on identifying and  retrieving contextual information for your tab content. As part of meetings extensibility, new values have been added for the request payload:
 
 1. **meetingId**: used by a tab when running in the meeting context.   
 
