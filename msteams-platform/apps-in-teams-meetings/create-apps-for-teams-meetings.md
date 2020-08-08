@@ -8,6 +8,9 @@ keywords: teams apps meetings user participant role api
 ---
 # Create apps for Teams meetings
 
+>[!IMPORTANT]
+> Features included in Microsoft Teams preview are provided for early-access, testing, and feedback purposes only. They may undergo changes before becoming available in the public release and should not be used in production applications.
+
 ## Meeting apps API reference
 
 |API|Description|Request|Source|
@@ -24,13 +27,13 @@ keywords: teams apps meetings user participant role api
 GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 ```
 
-### Query parameters
+#### Query parameters
 
 **meetingId**. The meeting identifier is required.  
 **participantId**. The participant identifier is required.  
 **tenantId**. Tenant id of the participant. Required for tenant user.
 
-### Response Payload
+#### Response Payload
 <!-- markdownlint-disable MD036 -->
 
 **Example 1**
@@ -58,12 +61,12 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 }
 ```
 
-### Response Codes
+#### Response Codes
 
 **200**: participant information successfully retrieved  
 **401**: invalid token  
-**403**: the app is not allowed to get participant information. There can be many reasons: app disabled by tenant admin, blocked during live site mitigation, etc.  
-**404**: the meeting doesn't exist or participant can’t be found  
+**403**: the app is not allowed to get participant information. There can be many reasons: app disabled by tenant admin, blocked during live site mitigation, etc.    
+**404**: the meeting doesn't exist or participant can’t be found    
 
 <!-- markdownlint-disable MD024 -->
 ### NotificationSignal API
@@ -74,11 +77,13 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 POST /v3/conversations/{conversationId}/activities
 ```
 
-### Query parameters
+#### Query parameters
 
 **conversationId**: The conversation identifier. Required
 
-### Request Payload
+#### Request Payload
+
+**Example 1**
 
 ```json
 {
@@ -92,7 +97,7 @@ POST /v3/conversations/{conversationId}/activities
             }
 ```
 
-**Example 1 Node.js**
+**Example 2**
 
 ```nodejs
 const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive card instead
@@ -105,7 +110,7 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
         await context.sendActivity(replyActivity);
 ```
 
-**Example 2 C#**
+**Example 3**
 
 ```csharp
 var replyActivity = MessageFactory.text('Hi'); // this could be an adaptive card insteadreplyActivity.ChannelData = new TeamsChannelData{
@@ -114,30 +119,28 @@ var replyActivity = MessageFactory.text('Hi'); // this could be an adaptive card
 await context.sendActivity(replyActivity);
 ```
 
-### Response Codes
+#### Response Codes
 
-**201**: activity with signal is successfully sent
-**401**: invalid token
-**403**: the app is not allowed to send the signal. In this case, the payload should contain more detail error message. There can be many reasons: app disabled by tenant admin, blocked during live site mitigation, etc.
-**404**: the meeting chat doesn't exist
+**201**: activity with signal is successfully sent  
+**401**: invalid token  
+**403**: the app is not allowed to send the signal. In this case, the payload should contain more detail error message. There can be many reasons: app disabled by tenant admin, blocked during live site mitigation, etc.  
+**404**: meeting chat doesn't exist  
 
-### GetUserContext
+#### GetUserContext
 
 Please refer to our [Get context for your Teams tab](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library) documentation for guidance on identifying and  retrieving contextual information for your tab content. As part of meetings extensibility, new values have been added for the request payload:
 
-1. **meetingId**: used by a tab when running in the meeting context.   
+1. **meetingId**: used by a tab when running in the meeting context. 
 
 1. **tenantId - tid**: Azure AD tenant ID of the current user.  
 
 1. **ParticipantId** - userObjectId: The Azure AD object id of the current user, in the current tenant"
 
-
-
 ## Enable your app for Teams meetings
 
 ### Update your app manifest
 
-The meetings app capabilities are declared in your app manifest via the **configurableTabs** -> **meetingSurfaces** array. The array accepts two optional configuration — **sidePanel** (he right pane in-meeting experience for the app) or **stage**. the **sidePanel** is t and “stage” (rendered in the main shared view of the meeting (as with Whiteboard and InVision today).  
+The meetings app capabilities are declared in your app manifest via the **configurableTabs** -> **meetingSurfaces** array. The array accepts two optional configuration — **sidePanel** (he right panel in-meeting experience for the app) or **stage**. the **sidePanel** is t and “stage” (rendered in the main shared view of the meeting (as with Whiteboard and InVision today).  
 
 ```json
 "configurableTabs": [
@@ -177,7 +180,7 @@ The **side-panel** and **stage** surfaces (specified in the app manifest) provid
 
 ✔ In your app manifest add **sidePanel** to the **meetingSurfaces** array as described above.
 
-✔ In the meeting, the app will be rendered in a 320&times;320 px right pane. Your tab must be optimized for this.
+✔ In the meeting, the app will be rendered in a 320&times;320 px right panel. Your tab must be optimized for this.
 
 ✔Refer to the Tab SDK section to use the **userContext** API to route requests accordingly.
 

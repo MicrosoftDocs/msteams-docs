@@ -9,7 +9,7 @@ keywords: teams apps meetings user participant role api
 # Add apps to Teams meetings (Preview)
 
 >[!IMPORTANT]
-> Features included in Microsoft Teams preview are provided for early-access, testing, and feedback purposes onl. They may undergo changes before becoming available in the public release and should not be used in production applications.
+> Features included in Microsoft Teams preview are provided for early-access, testing, and feedback purposes only. They may undergo changes before becoming available in the public release and should not be used in production applications.
 
 Meetings are key to productivity in Teams. They enable collaboration, partnership, informed communication, and shared feedback in an inclusive and active forum. As a developer, you can create [configurable tab](../tabs/what-are-tabs.md#how-do-tabs-work), [bot](../bots/what-are-bots.md), and [message extension](../messaging-extensions/what-are-messaging-extensions.md) applications to enhance and enrich a Teams meeting experience. Meeting users can access apps, via the tab gallery, to enable relevant scenarios such as pre-staging a Kanban board, launching an in-meeting actionable notification, or creating a post-meeting poll. Your meeting app can deliver a user experience for each stage of the meeting lifecycle based upon attendee status.
 
@@ -29,11 +29,11 @@ Teams’ meeting app extensibility centers on three concepts:
 
 ### Pre-meeting app experience
 
-✔ Permissioned users can add apps a meeting via the tab gallery in two ways:   
+✔ Permissioned users can add apps a meeting via the tab gallery in two ways:
 
 &emsp;&emsp;&#9679; Via the **Details** tab on the Teams scheduling form:
 
-![Teams scheduling form](../assets/images/apps-in-meetings/teams-meeting-scheduling-form.png)   
+![Teams scheduling form](../assets/images/apps-in-meetings/teams-meeting-scheduling-form.png) 
 
 &emsp;&emsp;&#9679;  Via the meeting **Chat** tab in an existing meeting:</br> </br>![Chat in a meeting tab](../assets/images/apps-in-meetings/chat-in-meeting.png) </br>&#8199;  
 
@@ -41,7 +41,7 @@ Teams’ meeting app extensibility centers on three concepts:
 
 ### In-meeting app experience
 
-✔ Meeting apps will be hosted in the top upper bar of the chat window and as in-meeting tab experience via the right pane.| When users add a tab to a meeting through the tab gallery, apps that are **during meeting** experiences will be surfaced.
+✔ Meeting apps will be hosted in the top upper bar of the chat window and as in-meeting tab experience via the right panel. When users add a tab to a meeting through the tab gallery, apps that are **during meeting** experiences will be surfaced.
 
 ✔ Permissioned users can add apps while in the meeting.
 
@@ -49,7 +49,7 @@ Teams’ meeting app extensibility centers on three concepts:
 
 ✔ For an app to be visible in a meeting, Teams will expose two new surfaces: 
 
-&emsp;&emsp;&#9679; **Side panel** : If the app specifies in the manifest that it’s tab is optimized for side pane and it can be shown there or it can also be part of a Share Tray experience subject to specified design guidelines:
+&emsp;&emsp;&#9679; **Side panel** : If the app manifest specifies that the tab is optimized for side panel, it will be displayed there or it can also be part of a share tray experience, subject to specified design guidelines:
 
  ![Share tray in meeting](../assets/images/apps-in-meetings/share-tray-in-meeting.png)
 
@@ -58,15 +58,17 @@ Teams’ meeting app extensibility centers on three concepts:
 >[!TIP]
 > **Share Whiteboard during a meeting**:</br>&emsp;**1.** During the meeting, go to the meeting controls, select **Share**, and then select **Microsoft Whiteboard** under the Whiteboard category. The board will open directly in Teams, and any content you configured before the meeting will load.</br>&emsp;**2.** If need to use advanced Whiteboard tools, select **Open in app**.
 
+**The image below depicts an in-meeting experience.**
+
 ![in-meeting experience](../assets/images/apps-in-meetings/in-meeting-experience.png)
 
-The figure below depicts an in-meeting actionable notification for users.  
+**The image below depicts an in-meeting actionable notification for users.**
 
 ![In-meeting-notification](../assets/images/apps-in-meetings/in-meeting-notification.png)
 
 ### Post-meeting app experience
 
-The post-meeting app scenario is similar to the current post-meeting experience with the added benefit of having tabs exist within the surface. Permissioned users can add apps via the tab gallery to a meeting via the **Details** tab on the Teams scheduling form and via the meeting **Chat** tab in an existing meeting.
+The post-meeting app scenario is similar to the current post-meeting experience with the added benefit of having tabs exist within the surface. Permissioned users can add apps from the tab gallery to a meeting via the **Details** tab on the Teams scheduling form and the meeting **Chat** tab in an existing meeting.
 
 ### Bots
 
@@ -82,7 +84,7 @@ For message extension scenario's please see **Message extensions in meetings** i
 
 ### Participant roles
 
-You can design your app with participant-specific authorization. For example, only an organizer and/or presenter can create a poll in meetings. Although default participant settings are determined by an organization's IT administrator, a meeting organizer may want to change the settings for a specific meeting. Organizers can make these changes on the Meeting options web page.
+You can design your app with participant-specific authorization. For example, perhaps only an organizer and/or presenter can create a poll in meetings. Although default participant settings are determined by an organization's IT administrator, a meeting organizer may want to change the settings for a specific meeting. Organizers can make these changes on the Meeting options web page.
 
 1. **Organizer**. The organizer schedules a meeting, sets the meeting options, assigns meeting roles, and starts the meeting. Only users with a M365 account (possessing a Teams license) can be organizers and control attendee permissions.
 1. **Presenter**. Presenters have nearly the same capabilities as organizer; however, a presenter cannot remove an organizer from the session or modify meeting options for the session. By default, participants joining a meeting have the presenter role.
@@ -103,7 +105,7 @@ You can access the  **Meeting options** page as follows:
 ### User types
 
 > [!NOTE]
-> User types can join meetings and assume one of the participant roles described above. The User type is not exposed as part of the **getParticipantRole** API
+> User types can join meetings and assume one of the participant roles described above. The User type is not exposed as part of the **getParticipantRole** API.
 
 1. **In-tenant**. These users belong to the organization and have credentials in Azure Active Directory for the tenant. They are usually full-time, onsite or remote employees.
 1. **Guest**. A guest is a participant from another organization who has been invited to access Teams or other resources in your organization's tenant. Guests are added to your organization’s Active Directory and can be given nearly all the same Teams capabilities as a native team member with full access to team chats, meetings, and files. _See_ [Guess access in Microsoft Teams](/microsoftteams/guest-access)
