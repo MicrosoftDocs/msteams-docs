@@ -14,23 +14,11 @@ Apps are how you extend Teams to fit your needs. You can create something brand 
 
 Trying different height
 <br>
-<iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE4AUyE" width="640" height="540" allowFullScreen="true" frameBorder="0"></iframe>
+<iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE4AUyE" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
 <br>
-<iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE4AUyE" width="100%" height="auto" allowFullScreen="true" frameBorder="0"></iframe>
+<iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE4AUyE" width="100%" height="320" allowFullScreen="true" frameBorder="0"></iframe>
 <br>
-
-
-<br>
-2nd try -- iframe in div
-  <div style="position:relative;padding-top:56.25%;width="100%"">
-    <iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE4AUyE" frameborder="0" allowfullscreen
-      style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-  </div>
-
-
-3rd try 
-<br>
-![](https://www.microsoft.com/en-us/videoplayer/embed/RE4AUyE){width="100%"}
+<iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE1XVQS" width="1280" height="640" allowFullScreen="true" frameBorder="0"></iframe>
 ## What can Teams apps do?
 
 People discover and use Teams apps through a set of platform [capabilities](concepts/capabilities-overview.md).
