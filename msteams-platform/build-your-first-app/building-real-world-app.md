@@ -21,9 +21,9 @@ You'll start with creating and running a "Hello, World!" tab app. You'll then cr
 
 ## Teams app fundamentals
 
-Before you begin the tutorials, you need to know the following about Teams building apps.
+Before you begin the tutorials, you should know the following about building apps for Teams.
 
-### Teams apps provide multiple capabilities
+### Apps can have multiple capabilities
 
 Teams apps are made up of one or more [platform capabilities](../concepts/capabilities-overview.md), including [tabs](../tabs/what-are-tabs.md), [bots](../bots/what-are-bots.md ), [messaging extensions](../messaging-extensions/what-are-messaging-extensions.md), and [webhooks and connectors](../webhooks-and-connectors/what-are-webhooks-and-connectors.md). Teams apps also have many [UI conventions and elements](../planning-your-app/teams-ui-conventions.md), such as cards, task modules, and deep linking, you can use to build the best possible user experience.
 

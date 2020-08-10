@@ -10,10 +10,9 @@ You can jump right into developing on the Microsoft Teams platform by quickly bu
 > [!NOTE]
 > It's helpful to have working knowledge of JavaScript (specifically React) when following these tutorials.
 
+## Set up your development account
 
-## Get your development account
-
-To build apps for Teams, you need a Teams account that allows sideloading. Your account may already provide this. If not, get a test tenant by registering for a Microsoft 365 developer subscription.
+To build apps for Teams, you need a Teams account that allows sideloading (your account may already provide this). If it doesn't, register for a Microsoft 365 developer subscription so you can get a test tenant.
 
 1. Verify if you can sideload apps in Teams:
     1. In the Teams client, select **Apps**.
@@ -22,15 +21,14 @@ To build apps for Teams, you need a Teams account that allows sideloading. Your 
     1. Register for a [Microsoft 365 developer subscription](../concepts/build-and-test/prepare-your-o365-tenant.md).
     1. [Enable custom app sideloading](../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) for your test account.
 
-## Set up your development environment
+## Get your development tools
 
-You can build Teams apps with your preferred tools, but here we'll show you how to get started quickly with Visual Studio Code and the Microsoft Teams Toolkit.
+You can build Teams apps with your preferred tools, but here's what you need to get started quickly with Visual Studio Code and the Microsoft Teams Toolkit.
 
 1. Install the latest version of [Visual Studio Code](https://code.visualstudio.com/download).
 1. In Visual Studio Code, select **Extensions** :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: on the left Activity Bar and install the **Microsoft Teams Toolkit**.
-1. Install [NodeJS](https://nodejs.org/en/)
-1. Install [Ngrok](https://ngrok.com/download) 
-
+1. Install [Node.js](https://nodejs.org/en/).
+1. Install [ngrok](https://ngrok.com/download).
 
 ## Create an app project
 
@@ -40,17 +38,21 @@ The Microsoft Teams Toolkit can help you set up your first app project.
 1. Select **Create a new Teams app**.
 1. When prompted, enter a name for your app. This is the default name for your app and also the name of the project directory on your local machine.
 1. On the **Add capabilities** screen, select **Tab** then **Next**.
-1. Check the **Personal tab** and **Group or Teams channel** options and select **Finish** to configure your project.
+1. Check the **Personal tab** option and select **Finish** to configure your project.
 
 :::image type="content" source="../assets/images/get-started/toolkit-add-tabs.png" alt-text="Example screenshot of using the Teams Toolkit to set up a project with personal and channel tab scaffolding.":::
 
-Once complete, you have the app scaffolding components for building personal and channel tabs.
+Once complete, you have the app scaffolding components for building a personal tab.
 
 ## Run your app
 
-Follow the `README.md` instructions in your project to build, run, and deploy your app to Teams. In general, you need to install your app's server, get it running, then setup a tunneling solution so that Teams can access content running from localhost. The last step is to Upload the `Development.zip` from the `.publish folder` to Teams following the instructions in [upload an app package to Microsoft Teams](../concepts/deploy-and-publish/apps-upload)
+Follow the `README.md` in your project to build, run, and deploy your app to Teams. In general, these instructions help you do the following:
 
-Your app running in the Teams client should look like the following screenshot.
+* Host your app on `localhost`
+* Set up a secure tunnel so that Teams can access your app.
+* Sideload your app in the Teams client using the `Development.zip` in the `.publish` folder. (See [upload an app package to Microsoft Teams](../concepts/deploy-and-publish/apps-upload)).
+
+Once you sideload your app, it should look like this in the Teams client.
 
 :::image type="content" source="../assets/images/app-up-and-running/tab-running.png" alt-text="Screenshot showing an example Hello, World! app in Teams.":::
 

@@ -116,5 +116,5 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 
 Already familiar with developing Teams apps? See the following resources and tools.
 
-* [Adding a Share to Teams button to your website](concepts/build-and-test/share-to-teams.md)
-* [Fluent Design System](https://fluentsite.z22.web.core.windows.net/)
+* [Add a Share to Teams button to your website](concepts/build-and-test/share-to-teams.md)
+* [Fluent UI Design System](https://fluentsite.z22.web.core.windows.net/)
