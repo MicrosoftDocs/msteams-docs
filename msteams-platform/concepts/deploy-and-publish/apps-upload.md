@@ -32,7 +32,7 @@ There are two ways to upload your app to Teams:
 
 ## Upload your package into a team or conversation using the Store
 
-1. In the lower left corner of Teams, choose the Store icon. On the Store page, choose "Upload a custom app".
+1. In the lower left corner of Teams, choose the Store icon. On the Store page, choose **Upload a custom app**.
 
    ![View team](../../assets/images/store-upload-a-custom-app.png)
 

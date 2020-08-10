@@ -61,9 +61,9 @@ The app scaffolding provides the components for rendering your tab in Teams. The
 
 Compile a list of important contacts in your organization. Copy and update the following snippet with information that's relevant to you or, for the sake of time, use the code as is.
 
-```html
+```jsx
   <div>
-    <h1>Important Contacts for {userName}</h1>
+    <h1>Important Contacts</h1>
       <ul>
         <li>Help Desk: <a href="mailto:support@company.com">support@company.com</a></li>
         <li>Human Resources: <a href="mailto:hr@company.com">hr@company.com</a></li>
@@ -81,7 +81,7 @@ Go to the `src/components` directory and open `Tab.js`. Locate the `render()` fu
 
       return (
       <div>
-        <h1>Important Contacts for {userName}</h1>
+        <h1>Important Contacts</h1>
           <ul>
             <li>Help Desk: <a href="mailto:support@company.com">support@company.com</a></li>
             <li>Human Resources: <a href="mailto:hr@company.com">hr@company.com</a></li>
@@ -92,7 +92,7 @@ Go to the `src/components` directory and open `Tab.js`. Locate the `render()` fu
   }
 ```
 
-Add the following rule to `App.css` so the email links are easier to read in each theme.
+Add the following rule to `App.css` so the email links are easier to read no matter which theme is used.
 
 ```css
   a {
