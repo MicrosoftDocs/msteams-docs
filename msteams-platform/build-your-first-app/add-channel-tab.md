@@ -36,7 +36,7 @@ Much of the channel tab app scaffolding and manifest is set up automatically whe
 
 The following snippet from the app manifest shows [`configurableTabs`](../resources/schema/manifest-schema.md#configurabletabs), which includes the properties and default values relevant to channel tabs.
 
-```json
+```JSON
     "configurableTabs": [
         {
             "configurationUrl": "{baseUrl0}/config",
@@ -61,7 +61,7 @@ The app scaffolding provides a `TabConfig.js` file, located in the `src/componen
 
 Open your app manifest (`manifest.json`) and set the following properties in [`staticTabs`](../resources/schema/manifest-schema.md#statictabs), which defines your tab's content page.
 
-```json
+```JSON
     "staticTabs": [
         {
             "entityId": "index",
@@ -74,7 +74,7 @@ Open your app manifest (`manifest.json`) and set the following properties in [`s
 
 Copy and update the following snippet with information that's relevant to your organization or, for the sake of time, use the code as is.
 
-```jsx
+```JSX
   <div>
     <h1>Important Contacts</h1>
       <ul>
@@ -87,7 +87,7 @@ Copy and update the following snippet with information that's relevant to your o
 
 Go to the `src/components` directory and open `Tab.js`. Locate the `render()` function and paste your content inside `return()` (as shown).
 
-```Javascript
+```JavaScript
   render() {
 
       let userName = Object.keys(this.state.context).length > 0 ? this.state.context['upn'] : "";
@@ -107,7 +107,7 @@ Go to the `src/components` directory and open `Tab.js`. Locate the `render()` fu
 
 Add the following rule to `App.css` so the email links are easier to read no matter which theme is used.
 
-```css
+```CSS
   a {
     color: inherit;
   }
@@ -119,7 +119,7 @@ Every channel tab has a configuration page, a modal with at least one setup opti
 
 Add some content to your configuration page. Go to your project's `src/components` directory, open `TabConfig.js`, and insert some content inside `return()` (as shown).
 
-```javascript
+```JavaScript
     return (
         <div>
           <h1>Add My Contoso Contacts</h1>
@@ -139,7 +139,7 @@ For users to successfully configure and install the channel tab, you must add th
 
 Go to `TabConfig.js` and locate `microsoftTeams.settings.setSettings`. For `"contentUrl"`, replace the `localhost:3000` part of the URL with the domain where you're hosting the tab content (as shown).
 
-```javascript
+```JavaScript
     microsoftTeams.settings.setSettings({
       "contentUrl": "https://<MY_HOST_DOMAIN>/tab"
     });
@@ -155,7 +155,7 @@ This may be fine depending on what you call your app, but you may want to provid
 
 In `TabConfig.js`, go back to `microsoftTeams.settings.setSettings`. Add the `suggestedDisplayName` property with the tab name you want to display by default (as shown). Use the provided name or create your own. Remember, in the manifest you're allowing users to change the name if they want.
 
-```javascript
+```JavaScript
     microsoftTeams.settings.setSettings({
       "contentUrl": "https://<MY_HOST_DOMAIN>/tab",
       "suggestedDisplayName": "Team Contacts"

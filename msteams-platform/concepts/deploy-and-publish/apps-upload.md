@@ -88,9 +88,9 @@ To test direct chats with your bot, you can either access it via the App home, @
 
 When you add your bot to a conversation To test direct chats with your bot, you can @mention it in a conversation, or search for it in the **New Chat** window.
 
-## Accessing your uploaded Connector
+## Accessing your uploaded connector
 
-With the app loaded in the team or conversation, users can set up a Connector using the standard Connectors gallery flow:
+With the app loaded in the team or conversation, users can set up a Connector using the standard connectors gallery flow:
 
 1. Go to a channel in the team. Choose *More options* (*&#8943;*) and choose *Connectors*.
 
@@ -118,4 +118,3 @@ If you change manifest information, you must first remove the app and then add t
 ## Troubleshooting notes
 
 * If the manifest doesn't load, please double-check that you followed all the instructions in [Create the package](../../concepts/build-and-test/apps-package.md) and validated your manifest against the [schema](../../resources/schema/manifest-schema.md).
-

@@ -34,7 +34,7 @@ Much of the personal tab app scaffolding and manifest is set up automatically wh
 
 The following snippet from the app manifest (the `manifest.json` file in your project's `.publish` directory) shows [`staticTabs`](../resources/schema/manifest-schema.md#statictabs), which includes properties and default values relevant to personal tabs.
 
-```json
+```JSON
     "staticTabs": [
         {
             "entityId": "index",
@@ -61,7 +61,7 @@ The app scaffolding provides the components for rendering your tab in Teams. The
 
 Compile a list of important contacts in your organization. Copy and update the following snippet with information that's relevant to you or, for the sake of time, use the code as is.
 
-```jsx
+```JSX
   <div>
     <h1>Important Contacts</h1>
       <ul>
@@ -74,7 +74,7 @@ Compile a list of important contacts in your organization. Copy and update the f
 
 Go to the `src/components` directory and open `Tab.js`. Locate the `render()` function and paste your content inside `return()` (as shown).
 
-```Javascript
+```JavaScript
   render() {
 
       let userName = Object.keys(this.state.context).length > 0 ? this.state.context['upn'] : "";
@@ -94,7 +94,7 @@ Go to the `src/components` directory and open `Tab.js`. Locate the `render()` fu
 
 Add the following rule to `App.css` so the email links are easier to read no matter which theme is used.
 
-```css
+```CSS
   a {
     color: inherit;
   }
@@ -114,7 +114,7 @@ The [Teams JavaScript client SDK](https://docs.microsoft.com/javascript/api/@mic
 
 In your `Tab.js` file, there's a `microsoftTeams.getContext()` call that provides some [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) about, among other details, the configured client theme. Thanks to the app scaffolding, use this code as is to access the `context` interface and its properties.
 
-```Javascript
+```JavaScript
   componentDidMount(){
     // Get the user context from Teams and set it in the state
     microsoftTeams.getContext((context, error) => {
@@ -132,7 +132,7 @@ With the `context` properties in hand, your app has a solid understanding of wha
 
 You need a handler so that your app's state changes with the theme. Insert the following theme change handler immediately after the `microsoftTeams.getContext()` call.
 
-```Javascript
+```JavaScript
   microsoftTeams.registerOnThemeChangeHandler(theme => {
     if (theme !== this.state.theme) {
       this.setState({ theme });  
@@ -149,13 +149,13 @@ Your theme change handler is in place, but you need some code that responds to t
 
 Store the state provided by the theme change handler in `isTheme`.
 
-```Javascript
+```JavaScript
   const isTheme = this.state.theme
 ```
 
 Provide some conditional logic to render your tab's styles based on the current theme. The following example shows a basic way to do this by 1) checking the current theme in `isTheme`, 2) creating a `newTheme` object with CSS properties relevant to the current theme, and 3) applying the CSS to your tab content's root HTML element (`<div>`).
 
-```Javascript
+```JavaScript
   let newTheme
 
   if (isTheme === "default") {
