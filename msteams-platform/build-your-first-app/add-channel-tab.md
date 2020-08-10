@@ -169,13 +169,11 @@ To see your channel tab's configuration and content pages, you must install it i
 1. In the Teams client, select **Apps**.
 1. Select **Upload a custom app** and choose your app's `Development.zip`.
 1. Choose **Add to a team** or **Add to a chat** and locate a channel or chat you can use for testing.
-1. Select **Set up a tab**.
-
-The configuration page displays.
+1. Select **Set up a tab**. The configuration page displays.
 
 :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="Example screenshot of a channel tab with static content.":::
 
-Once configured, the tab content displays.
+Once you select **Save** to configure the tab, the content displays.
 
 ## Well done
 
