@@ -175,6 +175,8 @@ To see your channel tab's configuration and content pages, you must install it i
 
 Once you select **Save** to configure the tab, the content displays.
 
+:::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content-installed.png" alt-text="Example screenshot of a channel tab with static content.":::
+
 ## Well done
 
 Congratulations! You have a Teams app with a channel tab for displaying content in channels and chats.
