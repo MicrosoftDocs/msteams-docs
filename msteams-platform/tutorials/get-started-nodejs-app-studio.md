@@ -49,7 +49,8 @@ $ npm -v
 5.5.1
 
 $ gulp -v
-CLI version 4.0.2
+CLI version 2.3.0
+Local version 4.0.2
 ```
 
 You may have a different version of these applications. This should not be a problem, except for gulp. For gulp you'll need to use version 4.0.0 or later.
