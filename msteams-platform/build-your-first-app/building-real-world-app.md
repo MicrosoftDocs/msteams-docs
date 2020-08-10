@@ -9,7 +9,7 @@ In **Build your first app**, you learn how to create a basic Teams app through t
 
 You'll start with creating and running a "Hello, World!" tab app. You'll then create some simple UI and learn how to get useful context with the Microsoft Teams Javascript SDK.
 
-## What you will learn
+## What you'll learn
 
 > [!div class="checklist"]
   >
@@ -29,7 +29,7 @@ Teams apps are made up of one or more [platform capabilities](../concepts/capabi
 
 For these tutorials, you'll build only tabs but can add a bot or other capability to your app as you like.
 
-### Teams does not host your app
+### Teams doesn't host your app
 
 A Teams app consists of three major pieces:
 

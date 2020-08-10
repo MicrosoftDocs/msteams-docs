@@ -89,4 +89,4 @@ You can learn more about scaffolding in the tutorials for creating personal and 
 🎉 Congratulations! You have a running Teams app. Select the following button to learn how to add a real-world feature to it.
 
 > [!div class="nextstepaction"]
-> [Create a personal tab](../build-your-first-app/add-personal-tab.md)
+> [Build a personal tab](../build-your-first-app/add-personal-tab.md)

@@ -1,8 +1,8 @@
 ---
-title: Importing custom Microsoft apps with Teams
+title: Importing custom Power Platform apps in Teams
 author: heath-hamilton
-description: Understand the steps needed to import Microsoft apps created with low-code solutions, such as Power Apps.
+description: Understand the steps needed to import Microsoft apps created with no-code or low-code solutions, such as Power Apps.
 ---
-# Importing custom Microsoft apps
+# Importing Power Platform apps
 
 Coming soon...

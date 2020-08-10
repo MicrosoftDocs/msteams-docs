@@ -189,4 +189,4 @@ Congratulations! You have a Teams app with a personal tab that makes it easier t
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Create a channel tab](../build-your-first-app/add-channel-tab.md)
+> [Build a channel tab](../build-your-first-app/add-channel-tab.md)
