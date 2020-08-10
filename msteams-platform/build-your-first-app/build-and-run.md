@@ -28,7 +28,7 @@ You can build Teams apps with your preferred tools, but here's what you need to 
 1. Install the latest version of [Visual Studio Code](https://code.visualstudio.com/download).
 1. In Visual Studio Code, select **Extensions** :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: on the left Activity Bar and install the **Microsoft Teams Toolkit**.
 1. Install [Node.js](https://nodejs.org/en/).
-1. Install [ngrok](https://ngrok.com/download).
+1. Microsoft Teams is an entirely cloud-based product, it requires all services it accesses to be available publicly using HTTPS endpoints. Install [ngrok](https://ngrok.com/download) to make your local instance accessible externally.
 
 ## Create an app project
 
