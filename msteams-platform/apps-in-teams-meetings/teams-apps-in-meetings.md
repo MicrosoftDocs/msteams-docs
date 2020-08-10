@@ -49,14 +49,11 @@ Teams’ meeting app extensibility centers on three concepts:
 
 ✔ For an app to be visible in a meeting, Teams will expose two new surfaces: 
 
-&emsp;&emsp;&#9679; **Side panel** : If the app manifest specifies that the tab is optimized for side panel, it will be displayed there or it can also be part of a share tray experience, subject to specified design guidelines:
+&emsp;&emsp;&#9679; **Side panel** : If your _app manifest_ specifies that your tab is [optimized for side panel](create-apps-for-teams-meetings.md#in-meeting), it will be displayed there or it can also be part of a share tray experience, subject to specified design guidelines:
 
  ![Share tray in meeting](../assets/images/apps-in-meetings/share-tray-in-meeting.png)
 
-&emsp;&emsp;&#9679; **Stage** (Whiteboard): In Microsoft Teams, coworkers can use the Microsoft Whiteboard app to collaborate in real time in a Teams meeting.
-
->[!TIP]
-> **Share Whiteboard during a meeting**:</br>&emsp;**1.** During the meeting, go to the meeting controls, select **Share**, and then select **Microsoft Whiteboard** under the Whiteboard category. The board will open directly in Teams, and any content you configured before the meeting will load.</br>&emsp;**2.** If need to use advanced Whiteboard tools, select **Open in app**.
+&emsp;&emsp;&#9679; **Stage**: If your _app manifest_ specifies that your tab is [optimized for stage](create-apps-for-teams-meetings.md#in-meeting), it will be available as part of the share tray experience. Each participant will have a separate instance of the app, fostering  a real-time collaboration experience similar to the [Microsoft Whiteboard](https://support.microsoft.com/en-us/office/use-whiteboard-in-microsoft-teams-7a6e7218-e9dc-4ccc-89aa-b1a0bb9c31ee?ui=en-us&rs=en-us&ad=us) app experience in a Teams meeting.
 
 **The image below depicts an in-meeting experience.**
 
