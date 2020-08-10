@@ -48,16 +48,21 @@ The [Microsoft Graph REST API for Teams](graph-api/rsc/resource-specific-consent
 
 :::image type="content" source="assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph REST API for Teams." border="false":::
 
-## Get started
+:::row:::
+   :::column span="2":::
 
-Quickly familiarize yourself with building for Teams by creating a simple app and adding a couple commonly used capabilities.
+## Start building
 
-<div align="center">
+   Quickly familiarize yourself with building for Teams by creating a simple app and adding a couple commonly used capabilities.
 
-> [!div class="nextstepaction"]
-> [Build your first app now](build-your-first-app/building-real-world-app.md)
+   > [!div class="nextstepaction"]
+   > [Build your first app now](build-your-first-app/building-real-world-app.md)
 
-</div>
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
 
 :::row:::
    :::column span="2":::
