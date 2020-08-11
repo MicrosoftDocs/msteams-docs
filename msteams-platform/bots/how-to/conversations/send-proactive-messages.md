@@ -26,14 +26,14 @@ At a high level the steps you'll need to complete to send a proactive message ar
 1. [Get the conversation ID](#get-the-conversation-id) to send the message to.
 1. [Send the message](#send-the-message).
 
-The code snippets in the [example](#example) section below are for creating a one-to-one conversation, see the [references](#references) section for links to complete working samples for both one-to-once conversations and group/channels.
+The code snippets in the [examples](#examples) section below are for creating a one-to-one conversation, see the [references](#references) section for links to complete working samples for both one-to-once conversations and group/channels.
 
 ## Get the user ID or team/channel ID
 
 If you need to create a new conversation or conversation thread in a channel you'll first need the right ID to create the conversation in. You can receive/retrieve this ID in multiple ways:
 
-1. When your app is installed in any particular context, you'll receive a [`onMembersAdded` Activity](~/bots/how-to/conversation/subscribe-to-conversation-events.md).
-1. When a new user is added to a context your app is installed in, you'll also receive a [`onMembersAdded` Activity](~/bots/how-to/conversation/subscribe-to-conversation-events.md).
+1. When your app is installed in any particular context, you'll receive a [`onMembersAdded` Activity](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+1. When a new user is added to a context your app is installed in, you'll also receive a [`onMembersAdded` Activity](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 1. You can retrieve the [list of channels](~/bots/how-to/get-teams-context.md) in a team your app is installed in.
 1. You can retrieve the [list of members](~/bots/how-to/get-teams-context.md) of a team your app is installed in.
 1. Every Activity your bot receives will contain the necessary information.
@@ -89,7 +89,7 @@ You can only install apps that are in your organizational app catalogue, or the 
 
 See [Install apps for users](/graph/teams-proactive-messaging) in the Graph documentation for complete details. There is also a [sample in .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
 
-## Example
+## Examples
 
 # [C#/.NET](#tab/dotnet)
 
@@ -245,7 +245,7 @@ You must supply the user ID and the tenant ID. If the call succeeds, the API ret
 
 The official proactive messaging samples are listed below.
 
-|    | Sample Name           | Description                                                                      | .NET    | JavaScript   | Python  |
+|  No.  | Sample Name           | Description                                                                      | .NET    | JavaScript   | Python  |
 |:--:|:----------------------|:---------------------------------------------------------------------------------|:--------|:-------------|:--------|
 |57|Teams Conversation Basics  | Demonstrates basics of conversations in Teams, including sending one-to-one proactive messages.|[.NET&nbsp;Core](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [Python](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot)|
 |58|Start new thread in a channel     | Demonstrates creating a new thread in a channel. |[.NET&nbsp;Core](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
