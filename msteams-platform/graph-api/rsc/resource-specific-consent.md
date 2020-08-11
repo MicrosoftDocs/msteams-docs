@@ -10,7 +10,6 @@ keywords: teams authorization OAuth SSO AAD rsc Graph
 # Resource-specific consent (RSC) — Developer Preview
 
 >[!NOTE]
-
 >The resource-specific consent permissions are available in desktop and web clients after Developer Preview has been enabled. See [How do I enable Developer Preview](../../resources/dev-preview/developer-preview-intro.md) for more information.
 
 Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration that enables your app to use API endpoints to manage specific teams within an organization. The resource-specific consent (RSC) permissions model enables *team owners* to grant consent for an application to access and/or modify a team's data. The granular, Teams-specific, RSC permissions define what an application can do within a specific team:
@@ -97,7 +96,7 @@ You'll need to have the following values from the Azure AD registration process 
 
 ## Update your Teams app manifest
 
-The RSC permissions are declared in you app manifest (JSON) file.  Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
+The RSC permissions are declared in your app manifest (JSON) file.  Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
 
 > [!div class="checklist"]
 >
@@ -153,8 +152,7 @@ Once the app has been installed to a team, you can use [Graph Explorer](https://
 > - Copy and save the **groupId** value from the string.
 > - Log into **Graph Explorer**.
 > - Make a **GET** call to the following endpoint: `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants`. The clientAppId field in the response will map to the appId specified in the Teams app manifest.
-
- ![Graph explorer response to GET call.](../../assets/images/graph-permissions.png)
+  ![Graph explorer response to GET call.](../../assets/images/graph-permissions.png)
  
 ## Test resource-specific consent
  
