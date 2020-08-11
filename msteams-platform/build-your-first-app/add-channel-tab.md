@@ -179,7 +179,7 @@ Once you select **Save** to configure the tab, the content displays.
 
 ## Well done
 
-Congratulations! You have a Teams app with a channel tab for displaying content in channels and chats.
+Congratulations! You have a Teams app with a channel tab for displaying useful content in channels and chats.
 
 ## Learn more
 
