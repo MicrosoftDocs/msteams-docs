@@ -13,7 +13,7 @@ Users sign in to Microsoft Teams via their work, school, or Microsoft accounts (
 >
 > ✔Teams for Android (1416/1.0.0.2020073101 and later)
 >
-> ✔Teams for iOS (_Version_: 2.0.15 _Build_: 1.077.2020062609 (general) _Calling version_: 2020.20.01.1 and later)  
+> ✔Teams for iOS (_Version_: 2.0.18 and later)  
 >
 > For the best experience with Teams, please use the latest version of iOS and Android.
 
@@ -21,6 +21,7 @@ Users sign in to Microsoft Teams via their work, school, or Microsoft accounts (
 
 The following diagram shows how the SSO process works:
 
+<!-- markdownlint-disable MD033 -->
 <img src="~/assets/images/tabs/tabs-sso-diagram.png" alt="Tab single sign-on SSO diagram" width="75%"/>
 
 1. In the tab, a JavaScript call is made to `getAuthToken()`. This tells Teams to obtain an authentication token for the tab application.
