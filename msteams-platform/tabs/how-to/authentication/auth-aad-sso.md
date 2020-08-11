@@ -42,7 +42,7 @@ This section describes the tasks involved in creating a Teams tab that uses SSO.
 
 ### 1. Create your Azure Active Directory (Azure AD) application
 
-Register your application in the[Azure AD portal](https://azure.microsoft.com/features/azure-portal/). This is a 5–10 minute process that includes the following tasks:
+#### Registering your application in the[Azure AD portal](https://azure.microsoft.com/features/azure-portal/) overview:
 
 1. Get your [Azure AD Application ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
 2. Specify the permissions that your application needs for the Azure AD endpoint and, optionally, Microsoft Graph.
@@ -57,7 +57,7 @@ Register your application in the[Azure AD portal](https://azure.microsoft.com/fe
 > * We don't currently support multiple domains per app.
 > * We don't support applications that use the `azurewebsites.net` domain because it is too common and may be a security risk. However, we're actively seeking to remove this restriction.
 
-#### Steps
+#### Registering your app through the Azure Active Directory portal in-depth:
 
 1. Register a new application in the [Azure Active Directory – App Registrations](https://go.microsoft.com/fwlink/?linkid=2083908) portal.
 2. Select **New Registration** and on the *register an application page*, set following values:
