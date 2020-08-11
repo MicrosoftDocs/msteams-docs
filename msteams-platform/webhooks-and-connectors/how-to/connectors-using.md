@@ -219,13 +219,12 @@ The following manifest.json file contains the basic elements needed to test and 
 ## Send adaptive cards using an incoming webhook
 
 > [!NOTE]
-> Adaptive cards are supported in incoming webhooks as part of the [public developer preview program](../../resources/dev-preview/developer-preview-intro.md). Public previews are available for early-access and feedback. Although the release is stable and has undergone extensive testing, it is not intended for use in production.
 >
-> ✔ Within the developer preview, all native adaptive card schema elements, except `Action.Submit`, are fully supported.
+> ✔ All native adaptive card schema elements, except `Action.Submit`, are fully supported.
 >
 > ✔ The supported Actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), and [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
 
-The flow for sending [adaptive cards](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card) via an incoming webhook is as follows:
+### The flow for sending [adaptive cards](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card) via an incoming webhook is as follows:
 
 **1.** [Setup a custom webhook](#setting-up-a-custom-incoming-webhook) in Teams.</br></br>
 **2.** Create your adaptive card JSON file:
@@ -261,7 +260,7 @@ The flow for sending [adaptive cards](../../task-modules-and-cards/cards/cards-r
 
 **3.** Test your adaptive card with Postman
 
-You can test your adaptive card using [Postman](https://www.postman.com/) to send a POST request to the URL that you created when you setup your incoming webhook. Paste your JSON file in the body of the request and view your adaptive card message in Teams.
+You can test your adaptive card using [Postman](https://www.postman.com) to send a POST request to the URL that you created when you setup your incoming webhook. Paste your JSON file in the body of the request and view your adaptive card message in Teams.
 
 >[!TIP]
 > You can use adaptive card code [Samples and Templates](https://adaptivecards.io/samples) for the body of your test Post request.
