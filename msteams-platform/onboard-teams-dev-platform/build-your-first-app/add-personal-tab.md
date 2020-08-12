@@ -102,7 +102,7 @@ Add the following rule to `App.css` so the email links are easier to read no mat
 
 Save your changes. Go to your app's tab in Teams to view the new content.
 
-:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-content.png" alt-text="Example screenshot of a personal tab with static content.":::
+![Example screenshot of a personal tab with static content](../doc-links/images/personal-tab-tutorial-content.png)
 
 ## Update the tab theme
 
@@ -173,7 +173,7 @@ Provide some conditional logic to render your tab's styles based on the current 
 
 Check your tab in Teams. The appearance should closely match the dark theme.
 
-:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-updated-theme.png" alt-text="Example screenshot of a personal tab with static content.":::
+![Example screenshot of a personal tab with static content](../doc-links/images/personal-tab-tutorial-updated-theme.png)
 
 ## Well done
 
