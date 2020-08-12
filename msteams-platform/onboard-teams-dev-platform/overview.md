@@ -30,7 +30,7 @@ Pull information into a conversation and never leave Teams. For example, with [m
 
 ![Conceptual representation of what messaging extensions look like in the Teams client](doc-links\images\overview-messaging.png)
 
-### Turn words into actions   
+### Turn words into actions
 
 Conversations often result in the need to do something (create an order, review my code, etc.). A [bot](doc-links/what-are-bots.md) can kick off these kinds of workflows right inside Teams.
 
@@ -46,7 +46,7 @@ Conversations often result in the need to do something (create an order, review 
 
 The [Microsoft Graph REST API for Teams](https://docs.microsoft.com/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app.
 
-!["Conceptual representation of the Microsoft Graph REST API for Teams](assets/images/overview-graph.png)
+!["Conceptual representation of the Microsoft Graph REST API for Teams](doc-links/images/overview-graph.png)
   
 ## Start building
 
