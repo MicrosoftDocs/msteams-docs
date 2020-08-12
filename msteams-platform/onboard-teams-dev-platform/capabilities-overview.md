@@ -22,7 +22,7 @@ Your app can also can take advantage of advanced capabilities, such as the [Micr
 
 See the following illustration to get an idea which capabilities would provide the features you want in your app.
 
-![Mind map illustrating what Teams app capabilities are](../doc-links/images/capabilities-overview.png)
+![Mind map illustrating what Teams app capabilities are](doc-links/images/capabilities-overview.png)
 
 ## Doing what's best for your users
 
