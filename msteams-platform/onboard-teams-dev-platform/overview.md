@@ -14,7 +14,7 @@ Apps are how you extend Teams to fit your needs. You can create something brand 
 
 ## What can Teams apps do?
 
-People discover and use Teams apps through a set of platform [capabilities](doc-links/capabilities-overview.md).
+People discover and use Teams apps through a set of platform [capabilities](capabilities-overview.md).
 
 Some apps are simple (send notifications), while others are complex (view patient records). When planning your app, remember that Teams is a collaboration hub. The best Teams apps help people express themselves and work better together.
 
@@ -53,7 +53,7 @@ The [Microsoft Graph REST API for Teams](https://docs.microsoft.com/graph/teams-
    Quickly familiarize yourself with building for Teams by creating a simple app and adding a couple commonly used capabilities.
 
    > [!div class="nextstepaction"]
-   > [Build your first app now](doc-links/building-real-world-app.md)
+   > [Build your first app now](build-your-first-app/build-real-world-app.md)
 
 ### Bring it all together
 
@@ -83,4 +83,3 @@ The [Microsoft Graph REST API for Teams](https://docs.microsoft.com/graph/teams-
 * [Fluent UI Design System](https://fluentsite.z22.web.core.windows.net/)
 * [Microsoft Teams JavaScript client SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest)
 * [Bot Framework SDK for JavaScript](https://github.com/Microsoft/botbuilder-js) and [Bot Framework SDK for .NET](https://github.com/Microsoft/botbuilder-dotnet/)
-* [Publish your app to an organization or AppSource](doc-links/overview.md)

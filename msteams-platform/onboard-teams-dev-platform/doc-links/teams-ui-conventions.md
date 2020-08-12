@@ -35,4 +35,4 @@ For example, your conversational bot could send a message to a channel with a de
 
 ## Next steps
 
-* [Designing your app](../designing-your-app/designing-overview.md)
+* [Designing your app](../../tabs/design/tabs.md)

@@ -67,7 +67,7 @@ In the following tutorials, you'll focus on the sections of the app manifest for
 
 ### Package (`Development.zip`)
 
-Also located in the `.publish` directory, you need the app package to [sideload your app](../doc-links/overview.md#upload-your-app-directly) in Teams. It's also used when [publishing to your organization's app catalog](../doc-links/overview.md#publish-to-your-organizations-app-catalog) or [AppSource](../../concepts/deploy-and-publish/appsource/publish.md).
+Also located in the `.publish` directory, you need the app package to [sideload your app](../overview.md#upload-your-app-directly) in Teams. It's also used when [publishing to your organization's app catalog](../overview.md#publish-to-your-organizations-app-catalog) or [AppSource](../../concepts/deploy-and-publish/appsource/publish.md).
 
 Here are some details about the app package files:
 

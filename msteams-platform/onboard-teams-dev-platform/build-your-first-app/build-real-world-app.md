@@ -42,4 +42,4 @@ A Teams app consists of three major pieces:
 That's all for now, let's get started!
 
 > [!div class="nextstepaction"]
-> [Build and run your first app](../doc-links/build-and-run.md)
+> [Build and run your first app](build-and-run-with-toolkit.md)
