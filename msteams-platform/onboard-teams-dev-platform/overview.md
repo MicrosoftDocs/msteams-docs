@@ -55,30 +55,12 @@ The [Microsoft Graph REST API for Teams](https://docs.microsoft.com/graph/teams-
    > [!div class="nextstepaction"]
    > [Build your first app now](doc-links/building-real-world-app.md)
 
-   :::column-end:::
-   :::column span="":::
-
-   :::column-end:::
-:::row-end:::
-
-:::row:::
-   :::column span="2":::
-
 ### Bring it all together
 
    Simplify processes and workflows for users by blending your organization's favorite web apps, services, and systems with Teams collaborative features.
 
    > [!div class="nextstepaction"]
    > [Integrate an existing app](doc-links/integrating-web-apps.md)
-
-   :::column-end:::
-   :::column span="":::
-
-   :::column-end:::
-:::row-end:::
-
-:::row:::
-   :::column span="2":::
 
 ### Trust the process
 
@@ -87,27 +69,12 @@ The [Microsoft Graph REST API for Teams](https://docs.microsoft.com/graph/teams-
    > [!div class="nextstepaction"]
    > [Start planning your app](doc-links/extensibility-points.md)
 
-   :::column-end:::
-   :::column span="":::
-
-   :::column-end:::
-:::row-end:::
-
-:::row:::
-   :::column span="2":::
-
 ### No code, no worries
 
    You don't need to be a programmer to build a great app. Create a Teams app with little to no code using the Microsoft Power Platform.
 
    > [!div class="nextstepaction"]
    > [Import a Power Platform app](doc-links/importing-custom-microsoft-apps.md)
-
-   :::column-end:::
-   :::column span="":::
-
-   :::column-end:::
-:::row-end:::
 
 ## Resources
 
