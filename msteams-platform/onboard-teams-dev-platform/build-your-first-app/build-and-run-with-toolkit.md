@@ -39,7 +39,7 @@ The Microsoft Teams Toolkit can help you set up your first app project.
 1. On the **Add capabilities** screen, select **Tab** then **Next**.
 1. Check the **Personal tab** option and select **Finish** to configure your project.
 
-![toolkit add tabs view](toolkit-add-tabs.PNG)
+![toolkit add tabs view](../doc-links/images/toolkit-add-tabs.PNG)
 
 Once complete, you have the app scaffolding components for building a personal tab.
 
