@@ -48,7 +48,7 @@ Once complete, you have the app scaffolding components for building a personal t
 Follow the `README.md` in your project to build, run, and deploy your app to Teams. In general, these instructions help you do the following:
 
 * Host your app on `localhost`.
-* [Set up a secure tunnel with ngrok](../doc-links/debug.md##locally-hosted) so that Teams can access your app. (Install [ngrok](https://ngrok.com/download).)
+* [Set up a secure tunnel with ngrok](../doc-links/debug.md#locally-hosted) so that Teams can access your app. (Install [ngrok](https://ngrok.com/download).)
 * [Sideload your app](../doc-links/apps-upload.md) in the Teams client using the `Development.zip` in the `.publish` folder.
 
 Once you sideload your app, it should look like this in the Teams client.
@@ -67,7 +67,7 @@ In the following tutorials, you'll focus on the sections of the app manifest for
 
 ### Package (`Development.zip`)
 
-Also located in the `.publish` directory, you need the app package to [sideload your app](../doc-links/overview.md#upload-your-app-directly) in Teams. It's also used when [publishing to your organization's app catalog](../doc-linksoverview.md#publish-to-your-organizations-app-catalog) or [AppSource](../concepts/deploy-and-publish/appsource/publish.md).
+Also located in the `.publish` directory, you need the app package to [sideload your app](../doc-links/overview.md#upload-your-app-directly) in Teams. It's also used when [publishing to your organization's app catalog](../doc-links/overview.md#publish-to-your-organizations-app-catalog) or [AppSource](../../concepts/deploy-and-publish/appsource/publish.md).
 
 Here are some details about the app package files:
 
