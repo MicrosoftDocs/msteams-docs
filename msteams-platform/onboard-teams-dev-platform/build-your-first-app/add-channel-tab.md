@@ -10,7 +10,7 @@ In this tutorial, you'll build a basic *channel tab*, a full-screen content page
 
 ## Before you begin
 
-You need a basic running app to get started. If you don't have one, follow the instructions at [build and run your Teams first app](../build-your-first-app/build-and-run.md). When you create your app project, choose only the **Group or Teams channel tab** option.
+You need a basic running app to get started. If you don't have one, follow the instructions at [build and run your Teams first app](build-and-run-with-toolkit.md). When you create your app project, choose only the **Group or Teams channel tab** option.
 
 ## Your assignment
 
@@ -34,7 +34,7 @@ Much of the channel tab app scaffolding and manifest is set up automatically whe
 
 ### App manifest
 
-The following snippet from the app manifest shows [`configurableTabs`](../resources/schema/manifest-schema.md#configurabletabs), which includes the properties and default values relevant to channel tabs.
+The following snippet from the app manifest shows [`configurableTabs`](../../resources/schema/manifest-schema.md#configurabletabs), which includes the properties and default values relevant to channel tabs.
 
 ```JSON
     "configurableTabs": [
@@ -59,7 +59,7 @@ The app scaffolding provides a `TabConfig.js` file, located in the `src/componen
 
 ## Create your tab content
 
-Open your app manifest (`manifest.json`) and set the following properties in [`staticTabs`](../resources/schema/manifest-schema.md#statictabs), which defines your tab's content page.
+Open your app manifest (`manifest.json`) and set the following properties in [`staticTabs`](../../resources/schema/manifest-schema.md#statictabs), which defines your tab's content page.
 
 ```JSON
     "staticTabs": [
@@ -131,11 +131,11 @@ Add some content to your configuration page. Go to your project's `src/component
 ```
  
 > [!TIP]
-> At minimum, provide some brief information about your app on this page since this may be the first time users are learning about it. You also could include custom configuration options or an [authentication workflow](../tabs/how-to/authentication/auth-aad-sso.md), which is common on tab configuration pages.
+> At minimum, provide some brief information about your app on this page since this may be the first time users are learning about it. You also could include custom configuration options or an [authentication workflow](../../tabs/how-to/authentication/auth-aad-sso.md), which is common on tab configuration pages.
 
 ## Allow the tab to be configured and installed
 
-For users to successfully configure and install the channel tab, you must add the host URL you set up when [creating and running your first app](../build-your-first-app/build-and-run.md) to the configuration page component.
+For users to successfully configure and install the channel tab, you must add the host URL you set up when [creating and running your first app](build-and-run-with-toolkit.md) to the configuration page component.
 
 Go to `TabConfig.js` and locate `microsoftTeams.settings.setSettings`. For `"contentUrl"`, replace the `localhost:3000` part of the URL with the domain where you're hosting the tab content (as shown).
 
@@ -183,7 +183,7 @@ Congratulations! You have a Teams app with a channel tab for displaying useful c
 
 ## Learn more
 
-* [Authenticate tab users with SSO](../tabs/how-to/authentication/auth-aad-sso.md): If you only want authorized users viewing your tab, set up single sign-on (SSO) through Azure Active Directory (AD).
-* [Embed content from an existing web app or webpage](../tabs/how-to/add-tab.md#tab-requirements): We showed you how to create new content for a personal tab, but you can also load content from an external URL.
-* [Create a seamless experience for your tab](../tabs/design/tabs.md): See the recommended guidelines for designing Teams tabs.
-* [Build tabs for mobile](../tabs/design/tabs-mobile.md): Understand how to develop tabs for smartphones and tablets.
+* [Authenticate tab users with SSO](../../tabs/how-to/authentication/auth-aad-sso.md): If you only want authorized users viewing your tab, set up single sign-on (SSO) through Azure Active Directory (AD).
+* [Embed content from an existing web app or webpage](../../tabs/how-to/add-tab.md#tab-requirements): We showed you how to create new content for a personal tab, but you can also load content from an external URL.
+* [Create a seamless experience for your tab](../../tabs/design/tabs.md): See the recommended guidelines for designing Teams tabs.
+* [Build tabs for mobile](../../tabs/design/tabs-mobile.md): Understand how to develop tabs for smartphones and tablets.
