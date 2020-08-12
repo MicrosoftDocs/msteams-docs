@@ -60,7 +60,7 @@ Your Teams bot consists of three elements:
 
 ## Building a Teams bot with Microsoft Power Virtual Agents
 
-[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) is a service built on the Microsoft Power platform and Bot Framework. The Power Virtual Agent development process uses a guided, no-code, graphical interface approach to empower every member of your team to easily create and maintain an intelligent virtual agent. Once you have completed creating your chatbot in the [Power Virtual Agents portal](https://powervirtualagents.microsoft.com), you can easily [integrate your Power Virtual Agents chatbot with Teams](how-to/add-power-virtual-agents-bot-to-teams.md). To get started creating your Power Virtual Agents chatbot, *see* the [Power Virtual Agents documentation](https://docs.microsoft.com/power-virtual-agents/).
+[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) is a service built on the Microsoft Power platform and Bot Framework. The Power Virtual Agent development process uses a guided, no-code, graphical interface approach to empower every member of your team to easily create and maintain an intelligent virtual agent. Once you have completed creating your chatbot in the [Power Virtual Agents portal](https://powervirtualagents.microsoft.com), you can easily [integrate your Power Virtual Agents chatbot with Teams](../../how-to/add-power-virtual-agents-bot-to-teams.md). To get started creating your Power Virtual Agents chatbot, *see* the [Power Virtual Agents documentation](https://docs.microsoft.com/power-virtual-agents/).
 
 ## Connectors and bots
 
@@ -101,7 +101,7 @@ Bots are best suited for short, quick interactions, not sifting through long lis
 
 * [The basics of bots in Teams](~/bots/bot-basics.md)
 * [Create a bot for Teams](~/bots/how-to/create-a-bot-for-teams.md)
-* [Planning your app](../concepts/extensibility-points.md)
-* [Designing your app](../designing-your-app/designing-overview.md)
-* [Building your app](../concepts/building-an-app.md)
-* [Publishing your app](../concepts/deploy-and-publish/overview.md)
+* [Planning your app](../../concepts/extensibility-points.md)
+* [Designing your app]../(../designing-your-app/designing-overview.md)
+* [Building your app](../../concepts/building-an-app.md)
+* [Publishing your app](../../concepts/deploy-and-publish/overview.md)

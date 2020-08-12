@@ -14,7 +14,7 @@ To test your app experience within Microsoft Teams, you need to upload your app 
 
 For development as well as AppSource (formerly Office Store) submission you must create an uploadable package that contains the information to describe your experience. The package, a .zip file, contains the application manifest and icons that uniquely define your experience.
 
-To create an upload package, see [Create the package for your Microsoft Teams app](../build-and-test/apps-package.md).
+To create an upload package, see [Create the package for your Microsoft Teams app](../../concepts/build-and-test/apps-package.md).
 
 With your package created, you can now upload it into a team. Once uploaded it will be available for all users in the selected team, and only the users of that team.
 

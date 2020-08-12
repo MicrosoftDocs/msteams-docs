@@ -4,14 +4,13 @@ author: laujan
 description: An overview of custom tabs on the Microsoft Teams platform
 ms.topic: overview
 ms.author: lajanuar
-ms.topic: overview
 ---
 # What are tabs?
 
 Tabs let you embed web-based content in Teams. They are simple iframes that point to domains declared in your app manifest and can be part of a team channel, group chat, or personal app. *See* [Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
 
 > [!NOTE]
-> Chrome 80 introduces new cookie values and imposes cookie policies by default. It's recommended that you set the intended use for your cookies rather than rely on default browser behavior. *See* [SameSite cookie attribute (2020 update)](../resources/samesite-cookie-update.md).
+> Chrome 80 introduces new cookie values and imposes cookie policies by default. It's recommended that you set the intended use for your cookies rather than rely on default browser behavior. *See* [SameSite cookie attribute (2020 update)](../../resources/samesite-cookie-update.md).
 
 There are two types of tabs in Teams: channel/group and personal tabs. A channel/group tab delivers content to channels and group chats and are a great way to create collaborative spaces around dedicated web-based content. Personal tabs, along with personally-scoped bots, are part of personal apps and are for interactions with a single user. They can be pinned to the left navigation bar for easy access.
 
@@ -52,7 +51,7 @@ If you choose to have your channel/group tab appear on Teams mobile clients, the
 
 ## Learn more
 
-* [Planning your app](../concepts/extensibility-points.md)
-* [Designing your app](../designing-your-app/designing-overview.md)
-* [Building your app](../concepts/building-an-app.md)
-* [Deploying your app](../concepts/deploy-and-publish/overview.md)
+* [Planning your app](../../concepts/extensibility-points.md)
+* [Designing your app](../../designing-your-app/designing-overview.md)
+* [Building your app](../../concepts/building-an-app.md)
+* [Deploying your app](../../concepts/deploy-and-publish/overview.md)

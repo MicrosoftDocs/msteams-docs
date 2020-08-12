@@ -62,13 +62,13 @@ Please visit our [Manage account settings and profile info](/windows/uwp/publish
 
 You'll receive the above error message when your [account verification status](/partner-center/verification-responses) is pending. You can check your account verification status in the Partner Center [dashboard](https://partner.microsoft.com/dashboard) by selecting the **Settings** option (the gear icon) in the upper-right corner of the page header shell and choosing **Developer settings** => **Account**  => **Account settings** .
 
-![Partner Center account settings page](../../../assets/images/partner-center-accts-page.png)
+![Partner Center account settings page](../../assets/images/partner-center-accts-page.png)
 
-![Partner Center verification status](../../../assets/images/partner-center-verification-status.png)
+![Partner Center verification status](../../assets/images/partner-center-verification-status.png)
 
 During the account verification process the status of each required step —  Email Ownership, Employment Verification, and Business Verification — will be displayed. Once the verification process has been successfully completed, the verification status of your enrollment on the profile page will change from "pending" to "authorized," and the process steps will no longer be displayed.
 
-![Partner Center verification error](../../../assets/images/partner-center-acct-verification-error.png)
+![Partner Center verification error](../../assets/images/partner-center-acct-verification-error.png)
 
 ## My account Verification status has not advanced beyond Email Ownership. How should I proceed?
 

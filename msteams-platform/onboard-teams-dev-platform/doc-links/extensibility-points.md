@@ -17,7 +17,7 @@ Follow these guidelines to help you plan a successful app:
 
 > [!div class="checklist"]
 >
-> * [Understanding your use cases](../concepts/design/understand-use-cases.md)
-> * [Mapping use cases to app capabilities](../concepts/design/map-use-cases.md)
-> * [Determining your app contexts](../planning-your-app/app-contexts.md)
-> * [Getting to know Teams UI conventions](../planning-your-app/teams-ui-conventions.md)
+> * [Understanding your use cases](../../concepts/design/understand-use-cases.md)
+> * [Mapping use cases to app capabilities](../../concepts/design/map-use-cases.md)
+> * [Determining your app contexts](../../planning-your-app/app-contexts.md)
+> * [Getting to know Teams UI conventions](../../planning-your-app/teams-ui-conventions.md)
