@@ -25,7 +25,7 @@ Before you begin the tutorials, you should know the following about building app
 
 ### Apps can have multiple capabilities
 
-Teams apps are made up of one or more [platform capabilities]../doc-links/capabilities-overview.md), including [tabs](../doc-links/what-are-tabs.md), [bots](../bots/what-are-bots.md ), [messaging extensions](../doc-links/what-are-messaging-extensions.md), and [webhooks and connectors](../doc-links/what-are-webhooks-and-connectors.md). Teams apps also have many [UI conventions and elements](../doc-links/teams-ui-conventions.md), such as cards, task modules, and deep linking, you can use to build the best possible user experience.
+Teams apps are made up of one or more [platform capabilities](../concepts/capabilities-overview.md), including [tabs](../tabs/what-are-tabs.md), [bots](../bots/what-are-bots.md ), [messaging extensions](../messaging-extensions/what-are-messaging-extensions.md), and [webhooks and connectors](../webhooks-and-connectors/what-are-webhooks-and-connectors.md). Teams apps also have many [UI conventions and elements](../planning-your-app/teams-ui-conventions.md), such as cards, task modules, and deep linking, you can use to build the best possible user experience.
 
 For these tutorials, you'll build only tabs but can add a bot or other capability to your app as you like.
 
@@ -42,4 +42,4 @@ A Teams app consists of three major pieces:
 That's all for now, let's get started!
 
 > [!div class="nextstepaction"]
-> [Build and run your first app](../doc-links/build-and-run.md)
+> [Build and run your first app](../build-your-first-app/build-and-run.md)
