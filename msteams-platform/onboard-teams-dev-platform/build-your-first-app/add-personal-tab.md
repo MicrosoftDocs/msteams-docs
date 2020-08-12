@@ -12,7 +12,7 @@ There are two types of tabs in Teams. In this tutorial, you'll build basic a *pe
 
 ## Before you begin
 
-You need a basic running app to get started. If you don't have one, see [build and run your first Teams app](../build-your-first-app/build-and-run.md).
+You need a basic running app to get started. If you don't have one, see [build and run your first Teams app](build-and-run-with-toolkit.md).
 
 ## Your assignment
 
@@ -32,7 +32,7 @@ Much of the personal tab app scaffolding and manifest is set up automatically wh
 
 ### App manifest
 
-The following snippet from the app manifest (the `manifest.json` file in your project's `.publish` directory) shows [`staticTabs`](../resources/schema/manifest-schema.md#statictabs), which includes properties and default values relevant to personal tabs.
+The following snippet from the app manifest (the `manifest.json` file in your project's `.publish` directory) shows [`staticTabs`](../../resources/schema/manifest-schema.md#statictabs), which includes properties and default values relevant to personal tabs.
 
 ```JSON
     "staticTabs": [
@@ -188,7 +188,7 @@ You know how to build a tab for personal use. Let's look at what it takes to bui
 
 ## Learn more
 
-* [Authenticate tab users with SSO](../tabs/how-to/authentication/auth-aad-sso.md): If you only want authorized users viewing your tab, set up single sign-on (SSO) through Azure Active Directory (AD).
-* [Embed content from an existing web app or webpage](../tabs/how-to/add-tab.md#tab-requirements): We showed you how to create new content for a personal tab, but you can also load content from an external URL.
-* [Create a seamless experience for your tab](../tabs/design/tabs.md): See the recommended guidelines for designing Teams tabs.
-* [Build tabs for mobile](../tabs/design/tabs-mobile.md): Understand how to develop tabs for smartphones and tablets.
+* [Authenticate tab users with SSO](../../tabs/how-to/authentication/auth-aad-sso.md): If you only want authorized users viewing your tab, set up single sign-on (SSO) through Azure Active Directory (AD).
+* [Embed content from an existing web app or webpage](../../tabs/how-to/add-tab.md#tab-requirements): We showed you how to create new content for a personal tab, but you can also load content from an external URL.
+* [Create a seamless experience for your tab](../../tabs/design/tabs.md): See the recommended guidelines for designing Teams tabs.
+* [Build tabs for mobile](../../tabs/design/tabs-mobile.md): Understand how to develop tabs for smartphones and tablets.
