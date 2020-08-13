@@ -6,6 +6,4 @@ ms.topic: conceptual
 ms.author: lajanuar
 ---
 
-# Testing HTML in MarkDown Two
-
 [!INCLUDE [first test page](html-Two.html)]
