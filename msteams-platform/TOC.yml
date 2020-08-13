@@ -1,5 +1,5 @@
 - name: Overview
-  expanded: true
+  expanded: true 
   items:
     - name: 'What are Microsoft Teams apps?'
       href: overview.md
