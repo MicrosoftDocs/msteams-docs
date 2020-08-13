@@ -29,12 +29,15 @@
     items:
     - name: Teams Toolkit extension for Visual Studio Code
       href: toolkit/visual-studio-code-overview.md
+ add-apps-in-meetings
 - name: Apps in meetings
   items:
    - name: Teams apps in meetings
      href: apps-in-teams-meetings/teams-apps-in-meetings.md
    - name:  Create apps for teams meetings
      href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
+    - name: Teams Toolkit extension for Visual Studio
+      href: toolkit/visual-studio-overview.md  
 - name: Concepts
   expanded: true
   items:
