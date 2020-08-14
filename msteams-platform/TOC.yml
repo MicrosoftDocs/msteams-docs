@@ -24,10 +24,10 @@
     href: tabs/what-are-tabs.md
   - name: Messaging extensions
     href: messaging-extensions/what-are-messaging-extensions.md
-  - name: Webhooks and connectors
-    href: webhooks-and-connectors/what-are-webhooks-and-connectors.md 
   - name: Bots
     href: bots/what-are-bots.md 
+  - name: Webhooks and connectors
+    href: webhooks-and-connectors/what-are-webhooks-and-connectors.md 
 - name: App integrations and templates
   items: 
   - name: Integrating web apps

@@ -15,10 +15,10 @@ Your Teams app can have one or all of the following core capabilities:
 
 * [Tabs](../tabs/what-are-tabs.md)
 * [Messaging extensions](../messaging-extensions/what-are-messaging-extensions.md)
-* [Webhooks and connectors](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)
 * [Bots](../bots/what-are-bots.md)
+* [Webhooks and connectors](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)
 
-Your app can also can take advantage of advanced capabilities, such as the [Microsoft Graph REST API](../graph-api/rsc/resource-specific-consent.md).
+Your app can also can take advantage of advanced capabilities, such as the [Microsoft Graph REST API for Teams](https://docs.microsoft.com/graph/teams-concept-overview).
 
 See the following illustration to get an idea which capabilities would provide the features you want in your app.
 
@@ -28,8 +28,9 @@ See the following illustration to get an idea which capabilities would provide t
 
 As you familiarize yourself with Teams app development, you'll begin to understand its subtleties. There's more than one way to build certain features (such as collecting user input). For example, you could embed a web-based form in a tab using an `<iframe>`. You could also do this in a tab using a task module, a Teams UI convention, for a more native experience your users may prefer.
 
-Choosing the right combination of capabilities and UI conventions, controls, and elements comes down to first [understanding your audience's use cases](../concepts/design/understand-use-cases.md).
+Choosing the right capabilities and design comes down to first [understanding your audience's use cases](../concepts/design/understand-use-cases.md).
 
-## Learn more
+## Related
 
-* [Start planning your app](../concepts/extensibility-points.md)
+* [Planning your app](../concepts/extensibility-points.md)
+* [Designing your app](../designing-your-app/designing-overview.md)

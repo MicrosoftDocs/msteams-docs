@@ -24,19 +24,19 @@ Sometimes you just need to make things easier to find. Display an important webp
 
 :::image type="content" source="assets/images/overview-tabs.png" alt-text="Conceptual representation of what tabs look like in the Teams client." border="false":::
 
-### Share links without switching context
+### Make it easier to multitask
 
-Pull information into a conversation and never leave Teams. For example, with [messaging extensions](messaging-extensions/what-are-messaging-extensions.md) you can share rich, easily digestible content from an external system using the message compose box.
+With [messaging extensions](messaging-extensions/what-are-messaging-extensions.md), you can quickly share external information in a conversation. You also can act on a message, such as creating a help ticket based on the content of a channel post.
 
 :::image type="content" source="assets\images\overview-messaging.png" alt-text="Conceptual representation of what messaging extensions look like in the Teams client." border="false":::
 
 ### Turn words into actions
 
-Conversations often result in the need to do something (create an order, review my code, etc.). A [bot](bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.
+Conversations often result in the need to do something (generate an order, review my code, etc.). A [bot](bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.
 
 :::image type="content" source="assets/images/overview-bots.png" alt-text="Conceptual representation of what bots look like in the Teams client." border="false":::
 
-### Communicate with external apps and services
+### Stay connected to external apps and services
 
 [Incoming webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send alerts from another app to a Teams channel or chat. With [outgoing webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), you can send a message to your web service with an @mention.
 
@@ -44,7 +44,7 @@ Conversations often result in the need to do something (create an order, review 
 
 ### Utilize Teams data
 
-The [Microsoft Graph REST API for Teams](https://docs.microsoft.com/en-us/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app.
+The [Microsoft Graph REST API for Teams](https://docs.microsoft.com/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app.
 
 :::image type="content" source="assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph REST API for Teams." border="false":::
 
