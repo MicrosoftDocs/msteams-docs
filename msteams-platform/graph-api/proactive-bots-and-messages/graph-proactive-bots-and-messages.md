@@ -10,7 +10,7 @@ keywords: teams proactive messaging chat installation Graph
 # Enable proactive bot installation and proactive messaging in Teams with Microsoft Graph (Public Preview)
 
 >[!IMPORTANT]
-> Microsoft Graph public previews are available for early-access and feedback. Although this release has undergone extensive testing, it is not intended for use in production.
+> Microsoft Graph and Microsoft Teams public previews are available for early-access and feedback. Although this release has undergone extensive testing, it is not intended for use in production.
 
 ## Proactive messaging in Teams
 
