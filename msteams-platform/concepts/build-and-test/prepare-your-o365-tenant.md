@@ -33,6 +33,9 @@ Turn on custom app sideloading for your developer tenant as follows:
 
 ![image of the app overflow menu](~/assets/images/prepare-test-tenant/admin-center.png)
 
+> [!Note] 
+> It can take up to 24 hours before "Teams" option to show up. During interim, you can login to Teams with your admin account and use **upload for \<your tenant>** to test your app.
+
 3. Navigate to **Teams apps** --> **Setup Policies** --> **Global(Org-wide default)**  
 
 ![image of the app overflow menu](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
