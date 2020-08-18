@@ -10,7 +10,7 @@ ms.author: anclear
 
 Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work.
 
-Apps are how you extend Teams to fit your needs. You can create something brand new for Teams or simply integrate features in your favorite apps and services.
+Apps are how you extend Teams to fit your needs. Create something brand new for Teams or integrate an existing app.
 
 ## What can Teams apps do?
 
@@ -48,10 +48,14 @@ The [Microsoft Graph REST API for Teams](https://docs.microsoft.com/graph/teams-
 
 :::image type="content" source="assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph REST API for Teams." border="false":::
 
+## Get started
+
+Jump right in with our first app tutorials, find out how to integrate and import existing apps, or take your time to learn about the Teams app development lifecycle.
+
 :::row:::
    :::column span="2":::
 
-## Start building
+### Start building
 
    Quickly familiarize yourself with building for Teams by creating a simple app and adding a couple commonly used capabilities.
 
@@ -67,9 +71,9 @@ The [Microsoft Graph REST API for Teams](https://docs.microsoft.com/graph/teams-
 :::row:::
    :::column span="2":::
 
-### Bring it all together
+### Integrate with Teams
 
-   Simplify processes and workflows for users by blending your organization's favorite web apps, services, and systems with Teams collaborative features.
+   Blend the features users love about an existing web app, service, or system with the collaborative features of Teams.
 
    > [!div class="nextstepaction"]
    > [Integrate an existing app](samples/integrating-web-apps.md)
@@ -83,12 +87,12 @@ The [Microsoft Graph REST API for Teams](https://docs.microsoft.com/graph/teams-
 :::row:::
    :::column span="2":::
 
-### Trust the process
+### No code, no worries
 
-   Understand the entire Teams platform development process to effectively plan, design, build, and publish an app for your organization or anyone.
+   You don't need to be a programmer to build a great Teams app. Create an app with little to no code using the Microsoft Power Platform.
 
    > [!div class="nextstepaction"]
-   > [Start planning your app](concepts/extensibility-points.md)
+   > [Import a Power Platform app](samples/importing-custom-microsoft-apps.md)
 
    :::column-end:::
    :::column span="":::
@@ -99,12 +103,12 @@ The [Microsoft Graph REST API for Teams](https://docs.microsoft.com/graph/teams-
 :::row:::
    :::column span="2":::
 
-### No code, no worries
+### Trust the process
 
-   You don't need to be a programmer to build a great app. Create a Teams app with little to no code using the Microsoft Power Platform.
+   Learn the entire Teams platform development process to effectively plan, design, build, and publish an app for your organization or anyone.
 
    > [!div class="nextstepaction"]
-   > [Import a Power Platform app](samples/importing-custom-microsoft-apps.md)
+   > [Start planning your app](concepts/extensibility-points.md)
 
    :::column-end:::
    :::column span="":::
