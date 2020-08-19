@@ -22,7 +22,7 @@ At a high level, the import process consists of the following:
 1. [Create a Team with a back-in-time timestamp](#create-a-team)
 1. [Create a Channel with a back-in-time timestamp](#create-a-channel)  
 1. [Import external messages](#import-messages)
-1. [Complete the team and channel migration process](#complete-migration-process)
+1. [Complete the team and channel migration process](#conclude-migration-mode)
 
 ## Necessary requirements
 
@@ -273,7 +273,6 @@ HTTP/1.1 200 OK
     "reactions": []
 }
 ```
-
 
 ## Conclude migration mode
 
