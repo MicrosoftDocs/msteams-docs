@@ -7,7 +7,7 @@ description: Understand the steps needed to integrate your web app with Microsof
 
 The following guidelines can help you integrate successfully with Teams no matter what kind of app you have:
 
-* Established as a standalone product
+* Established, standalone product
 * Geared towards collaboration platforms
 * For internal use (for example, a SharePoint page)
 
