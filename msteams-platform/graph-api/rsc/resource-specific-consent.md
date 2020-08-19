@@ -7,10 +7,10 @@ ms.author: lajanuar
 ms.topic: Overview
 keywords: teams authorization OAuth SSO AAD rsc Graph
 ---
-# Resource-specific consent (RSC) — Developer Preview
+# Resource-specific consent (RSC)
 
->[!NOTE]
->The resource-specific consent permissions are available in desktop and web clients after Developer Preview has been enabled. See [How do I enable Developer Preview](../../resources/dev-preview/developer-preview-intro.md) for more information.
+>[!IMPORTANT]
+> These APIs are accessible in the https://graph.microsoft.com/beta endpoint.  The [beta version](/graph/versioning-and-support#beta-version) endpoint includes APIs that are currently in preview and are not yet generally available. The APIs in the beta endpoint are subject to change and we don't recommend that you use them in your production apps. 
 
 Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration that enables your app to use API endpoints to manage specific teams within an organization. The resource-specific consent (RSC) permissions model enables *team owners* to grant consent for an application to access and/or modify a team's data. The granular, Teams-specific, RSC permissions define what an application can do within a specific team:
 
@@ -21,14 +21,14 @@ Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration t
 |TeamSettings.Read.Group | Get the settings for this team.|
 |TeamSettings.Edit.Group|Update the settings for this team.|
 |ChannelSettings.Read.Group|Get the channel names, channel descriptions, and channel settings for this team​.|
-|ChannelSettings.Edit.Group|Update the channel names, channel descriptions, and channel settings for this team.​|
+|ChannelSettings.ReadWrite.Group|Update the channel names, channel descriptions, and channel settings for this team.​|
 |Channel.Create.Group|Create channels in this team.​|
 |Channel.Delete.Group|Delete channels in this team.​|
 |ChannelMessage.Read.Group |Get this team's channel messages.​|
 |TeamsApp.Read.Group|Get a list of this team's installed apps.|
 |TeamsTab.Read.Group|Get a list of this team's tabs.|
 |TeamsTab.Create.Group|Create tabs in this team.​|
-|TeamsTab.Edit.Group|Update this team's tabs.​|
+|TeamsTab.ReadWrite.Group|Update this team's tabs.​|
 |TeamsTab.Delete.Group|Delete this team's tabs.​|
 |Member.Read.Group|Get this team's members.​|
 |Owner.Read.Group|Get this team's owners.​|
@@ -117,13 +117,13 @@ The RSC permissions are declared in your app manifest (JSON) file.  Add a [webAp
       "TeamSettings.Read.Group",
       "ChannelMessage.Read.Group",
       "TeamSettings.Edit.Group",
-      "ChannelSettings.Edit.Group",
+      "ChannelSettings.ReadWrite.Group",
       "Channel.Create.Group",
       "Channel.Delete.Group",
       "TeamsApp.Read.Group",
       "TeamsTab.Read.Group",
       "TeamsTab.Create.Group",
-      "TeamsTab.Edit.Group",
+      "TeamsTab.ReadWrite.Group",
       "TeamsTab.Delete.Group",
       "Member.Read.Group",
       "Owner.Read.Group"
