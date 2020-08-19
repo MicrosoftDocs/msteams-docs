@@ -13,7 +13,7 @@ keywords: teams slack import messages api graph microsoft migrate migration post
 >[!IMPORTANT]
 > Microsoft Graph and Microsoft Teams public previews are available for early-access and feedback. Although this release has undergone extensive testing, it is not intended for use in production.
 
-With Microsoft Graph, you can migrate users' existing messaging history and data from an external system into a Teams channel. By enabling the recreation of a third-party platform messaging hierarchy inside Teams users can continue their communications in a seamless manner and proceed without interruption.
+With Microsoft Graph, you can migrate users' existing messaging history and data from an external system into a Teams channel. By enabling the recreation of a third-party platform messaging hierarchy inside Teams, users can continue their communications in a seamless manner and proceed without interruption.
 
 ## Import overview
 
@@ -22,7 +22,7 @@ At a high level, the import process consists of the following:
 1. [Create a Team with a back-in-time timestamp](#create-a-team)
 1. [Create a Channel with a back-in-time timestamp](#create-a-channel)  
 1. [Import external messages](#import-messages)
-1. [Complete the team and channel migration process](#conclude-migration-mode)
+1. [Complete the team and channel migration process](#cease-migration-mode)
 
 ## Necessary requirements
 
@@ -39,7 +39,7 @@ At a high level, the import process consists of the following:
 ✔ Ensure that an Office 365 Tenant exists for the import data. For more information on setting up an Office 365 tenancy for Teams, *see*, [Prepare your Office 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).  
 ✔ Make sure that the new Team member are in Azure Active Directory (AAD).  For more information *see* [Add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to Azure Active Directory.
 
-## Create a team
+## Step One: Create a team
 
 Since existing data is being migrated, maintaining the original message timestamps and preventing messaging activity during the migration process are key to recreating the user's existing message flow in Teams. This is achieved as follows:
 
@@ -87,7 +87,7 @@ Content-Location: /teams/{teamId}
 * createdDateTime`  set for future.
 * `createdDateTime`  correctly specified but `teamCreationMode`  instance attribute  is missing or set to invalid value.
 
-## Create a channel
+## Step Two: Create a channel
 
 Creating a channel for the imported messages is similar to the create team scenario: 
 
@@ -133,7 +133,7 @@ Content-Location: /teams/{teamId}/channels/{channelId}
 * createdDateTime`  set for future.
 * `createdDateTime`  correctly specified but `channelCreationMode`  instance attribute  is missing or set to invalid value.
 
-## Import messages
+## Step Three: Import messages
 
 After the team and channel have been created, you can begin sending messages to the channel as a user with the specified timestamp:
 
@@ -274,7 +274,7 @@ HTTP/1.1 200 OK
 }
 ```
 
-## Conclude migration mode
+## Step Four: Cease migration mode
 
 Once the message migration process has completed, both the team and channel are taken out of migration mode using the  `completeMigration`  method. This step opens the team and channel resources for general use by team members. The action is bound to the `team` instance.
 
