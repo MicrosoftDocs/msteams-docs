@@ -48,7 +48,7 @@
     href: concepts/design/understand-use-cases.md
   - name: Mapping use cases to Teams capabilities
     href: concepts/design/map-use-cases.md
-  - name: Determining your app scope
+  - name: Determining your app's scope
     href: planning-your-app/app-scope.md
   - name: Getting to know Teams UI conventions
     href: planning-your-app/teams-ui-conventions.md
