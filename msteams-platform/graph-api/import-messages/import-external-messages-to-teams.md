@@ -315,7 +315,7 @@ HTTP/1.1 204 NoContent
 
 ##### &#11200; Throttling: Messages import at scale @ 5 RPS per app per channel.
 
-##### &#11200; If you need to make a correction to the migration results, you need to delete the Team (manually through the Teams UI or by using the Microsoft Graph [Delete Group](/graph/api/group-delete?view=graph-rest-beta&tabs=http) API)
+##### &#11200; If you need to make a correction to the migration results, you need to delete the Team (manually through the Teams UI or by using the Microsoft Graph [Delete Group](/graph/api/group-delete?view=graph-rest-beta&tabs=http) API) and repeat the steps to create the team and channel and re-migrate the messages.
 
 ##### &#11200; Import content current scope
 
