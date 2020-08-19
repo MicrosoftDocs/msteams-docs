@@ -1,9 +1,9 @@
 ---
-title: Determining your Teams app contexts
+title: Determining your Teams app scope
 author: heath-hamilton
 description: In planning your Teams app, you must decide if the app will be used in collaborative spaces, personal spaces, or both.
 ---
-# Determining your app contexts
+# Determining your app scope
 
 People use Teams apps in collaborative and personal spaces. How your app behaves can differ if someone is using it with others or just one-on-one.
 
