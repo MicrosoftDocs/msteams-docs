@@ -72,7 +72,7 @@ Content-Location: /teams/{teamId}
 
 Creating a channel for the imported messages is similar to the team scenario: 
 
-✔ [Create a new channel](graph/api/channel-post?view=graph-rest-beta&tabs=http) with a creation timestamp from the past.  
+✔ [Create a new channel](/graph/api/channel-post?view=graph-rest-beta&tabs=http) with a creation timestamp from the past.  
 
 ✔ Place the new channel in `migration mode`, a special state that bars users from most chat activities within the channel such as posting and reading messages until the migration process is complete.  Include the `channelCreationMode` instance attribute with the `migration` value in the POST request to explicitly identify the new team as being created for migration.  
 
