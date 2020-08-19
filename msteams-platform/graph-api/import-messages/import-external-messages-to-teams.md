@@ -47,15 +47,15 @@ Since existing data is being migrated, maintaining the original message timestam
 
 1. Place the new team in `migration mode`, a special state that bars users from most activities within the team until the migration process is complete. Include the `teamCreationMode` instance attribute with the `migration` value in the POST request to explicitly identify the new team as being created for migration.  
 
-<!-- markdownlint-disable MD024 -->
+<!-- markdownlint-disable MD001 -->
 
-### Permissions
+#### Permissions
 
 |ScopeName|DisplayName|Description|Type|Admin Consent?|Entities/APIs covered|
 |-|-|-|-|-|-|
 |`Teamwork.Migrate.All`|Manage migration to Microsoft Teams|Creating, managing resources for migration to Microsoft Teams|**Application-only**|**Yes**|`POST /teams`|
 
-### Request (create a team in migration state)
+#### Request (create a team in migration state)
 
 ```http
 POST https://graph.microsoft.com/beta/teams
@@ -70,7 +70,7 @@ Content-Type: application/json
 }
 ```
 
-### Response
+#### Response
 
 ```http
 HTTP/1.1 202 Accepted
@@ -78,7 +78,7 @@ Location: /teams/{teamId}/operations/{operationId}
 Content-Location: /teams/{teamId}
 ```
 
-### Error messages
+#### Error messages
 
 ```http
 400 Bad Request
@@ -94,14 +94,14 @@ Creating a channel for the imported messages is similar to the create team scena
 1. [Create a new channel](/graph/api/channel-post?view=graph-rest-beta&tabs=http) with an antecedent timestamp using the channel resource `createdDateTime` property.
 
 1. Place the new channel in `migration mode`, a special state that bars users from most chat activities within the channel until the migration process is complete.  Include the `channelCreationMode` instance attribute with the `migration` value in the POST request to explicitly identify the new team as being created for migration.  
-
-### Permissions
+<!-- markdownlint-disable MD024 -->
+#### Permissions
 
 |ScopeName|DisplayName|Description|Type|Admin Consent?|Entities/APIs covered|
 |-|-|-|-|-|-|
 |`Teamwork.Migrate.All`|Manage migration to Microsoft Teams|Creating, managing resources for migration to Microsoft Teams|**Application-only**|**Yes**|`POST /teams`|
 
-### Request (create a channel in migration state)
+#### Request (create a channel in migration state)
 
 ```http
 POST https://graph.microsoft.com/beta/teams/{id}/channels
@@ -116,7 +116,7 @@ Content-Type: application/json
 }
 ```
 
-### Response
+#### Response
 
 ```http
 HTTP/1.1 202 Accepted
@@ -124,7 +124,7 @@ Location: /teams/{teamId}/channels/{channelId}/operations/{operationId}
 Content-Location: /teams/{teamId}/channels/{channelId}
 ```
 
-### Error message
+#### Error message
 
 ```http
 400 Bad Request
@@ -137,7 +137,7 @@ Content-Location: /teams/{teamId}/channels/{channelId}
 
 After the team and channel have been created, you can begin sending messages to the channel as a user with the specified timestamp:
 
-### Request (POST message that is text-only)
+#### Request (POST message that is text-only)
 
 ```http
 POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
@@ -173,7 +173,7 @@ POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
 }
 ```
 
-### Response
+#### Response
 
 ```http
 HTTP/1.1 200 OK
@@ -212,7 +212,7 @@ HTTP/1.1 200 OK
 }
 ```
 
-### Request (POST a message with inline `image)
+#### Request (POST a message with inline `image)
 
 > **Note**: There are no special permission scopes in this scenario since the request is part of chatMessage; scopes for chatMessage apply here as well.
 
@@ -234,7 +234,7 @@ POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
 }
 ```
 
-### Response
+#### Response
 
 ```http
 HTTP/1.1 200 OK
@@ -278,7 +278,7 @@ HTTP/1.1 200 OK
 
 Once the message migration process has completed, both the team and channel are taken out of migration mode using the  `completeMigration`  method. This step opens the team and channel resources for general use by team members. The action is bound to the `team` instance.
 
-### Request (end team migration mode)
+#### Request (end team migration mode)
 
 ```http
 POST https://graph.microsoft.com/beta/teams/teamId/completeMigration
@@ -286,7 +286,7 @@ POST https://graph.microsoft.com/beta/teams/teamId/completeMigration
 HTTP/1.1 204 NoContent
 ```
 
-### Request (end channel migration mode)
+#### Request (end channel migration mode)
 
 ```http
 POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/completeMigration
@@ -294,7 +294,7 @@ POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/completeMi
 HTTP/1.1 204 NoContent
 ```
 
-### Error response
+#### Error response
 
 ```http
 400 Bad Request
