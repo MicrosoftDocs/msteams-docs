@@ -21,7 +21,7 @@ If you don't currently have an Office 365 account, you can sign up for a [Micros
 
 ## Enable Microsoft Teams for your organization 
 
-If Microsoft Teams has not been enabled for your organization, you'll need to do that first. Take a look at our detailed guidance for [enabling Teams for your organization](https://docs.microsoft.com/microsoftteams/enable-features-office-365).
+If Microsoft Teams has not been enabled for your organization, you'll need to do that first. Take a look at our detailed guidance for [enabling Teams for your organization](/microsoftteams/enable-features-office-365).
 
 ## Enable custom Teams apps and turn on custom app uploading
 
