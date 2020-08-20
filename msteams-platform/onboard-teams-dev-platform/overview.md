@@ -79,7 +79,6 @@ The [Microsoft Graph REST API for Teams](https://docs.microsoft.com/graph/teams-
 ## Resources
 
 * [Add a Share to Teams button to your website](doc-links/share-to-teams.md)
-* [Design your app using recommended guidelines](doc-links/designing-overview.md)
 * [Fluent UI Design System](https://fluentsite.z22.web.core.windows.net/)
 * [Microsoft Teams JavaScript client SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest)
 * [Bot Framework SDK for JavaScript](https://github.com/Microsoft/botbuilder-js) and [Bot Framework SDK for .NET](https://github.com/Microsoft/botbuilder-dotnet/)
