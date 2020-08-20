@@ -343,7 +343,11 @@
     - name: Proactive bots and proactive messages
       items:
         - name: 'Enable proactive bot installation and proactive messaging' 
-          href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md            
+          href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
+    - name: Import messages
+      items:
+        - name: 'Import third-party platform messages to Teams using Microsoft Graph' 
+          href: graph-api/import-messages/import-external-messages-to-teams.md
 - name: Resources
   items:
     - name: Bots - v3 SDK

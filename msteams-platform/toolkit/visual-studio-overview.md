@@ -17,7 +17,7 @@ The Microsoft Teams Toolkit enables you to create custom Teams apps directly wit
 
 ![visual studio asp.net module](../assets/images/visual-studio-web-dev-module.png)
 
-3. If you would like test your app by deploy it from Visual Studio, you'll need to have IIS (Internet Information Services) installed in your development environment. Visual Studio does not include IIS and it isn't included in the default Windows 10, Windows 8, or Windows 7 configuration; however, you can download the latest version from the [Microsoft download center](https://www.microsoft.com/download/details.aspx?id=48264.)
+3. If you would like test your app by deploy it from Visual Studio, you'll need to have IIS (Internet Information Services) installed in your development environment. Visual Studio does not include IIS and it isn't included in the default Windows 10, Windows 8, or Windows 7 configuration; however, you can download the latest version from the [Microsoft download center](https://www.microsoft.com/download/details.aspx?id=48264).
 
 ![IIS download page view](../assets/images/iis.png)
 
