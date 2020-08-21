@@ -148,7 +148,7 @@ msg.text('Hello, this is a notification');
 bot.send(msg);
 ```
 
-*See also* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+*See also* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/main/README.md).
 
 ## Creating a channel conversation
 

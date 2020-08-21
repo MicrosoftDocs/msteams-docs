@@ -184,7 +184,7 @@ Once your bot has been added for a user or team and has acquired the necessary u
 
 # [C# / .NET](#tab/csharp)
 
-The following code snippet is from the [Microsoft Bot Framework Samples for C#.](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/16.proactive-messages)
+The following code snippet is from the [Microsoft Bot Framework Samples for C#.](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/16.proactive-messages)
 
 ```csharp
 using System.Collections.Concurrent;
@@ -247,7 +247,7 @@ namespace Microsoft.BotBuilderSamples
 
 # [JavaScript](#tab/javascript)
 
-The following code snippet is from the [Microsoft Bot Framework Samples for JavaScript](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/16.proactive-messages).
+The following code snippet is from the [Microsoft Bot Framework Samples for JavaScript](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/16.proactive-messages).
 
 ```javascript
 const { ActivityHandler, TurnContext } = require('botbuilder');

@@ -649,4 +649,4 @@ class App {
 const app = new App();
 app.run();
 ```
-*See also* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+*See also* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/main/README.md).

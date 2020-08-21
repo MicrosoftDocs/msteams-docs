@@ -105,7 +105,7 @@ connector.fetchMembers(
 );
 ```
 
-*See also* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+*See also* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/main/README.md).
 
 ## Fetching user profile or roster in personal or group chat
 

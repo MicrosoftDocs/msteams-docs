@@ -29,7 +29,7 @@ For more information on using the OAuthPrompt see:
 
 * [Bot authentication flow overview](~/bots/how-to/authentication/auth-flow-bot.md) describes how authentication works within a bot in your app in Teams. This shows a non-web based authentication flow used for bots on all versions of Teams (web, desktop app, and mobile apps)
 * [Bot authentication](~/bots/how-to/authentication/add-authentication.md)
-* Bot authentication (v3 SDK) sample in [dotnet/C#](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) or [JavaScript/Node.js](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth)
+* Bot authentication (v3 SDK) sample in [dotnet/C#](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth) or [JavaScript/Node.js](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/46.teams-auth)
 
 ## Configure your identity provider
 

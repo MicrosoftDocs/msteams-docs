@@ -132,7 +132,7 @@ await client.Conversations.SendToConversationAsync(newActivity, response.Id);
 
 # [JavaScript](#tab/javascript)
 
-*See also* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+*See also* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/main/README.md).
 
 ```javascript
 var address =
@@ -227,7 +227,7 @@ namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
 
 # [JavaScript](#tab/javascript)
 
-The following code snippet is from [teamsConversationBot.js](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js).
+The following code snippet is from [teamsConversationBot.js](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js).
 
 [!code-javascript[messageAllMembersAsync](~/../botbuilder-samples/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js?range=115-134&highlight=13-15)]
 

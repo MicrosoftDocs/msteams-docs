@@ -550,7 +550,7 @@ teamChatConnector.onComposeExtensionSubmitAction((
     });
 ```
 
-*See also* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+*See also* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/main/README.md).
 
 # [C#/.NET](#tab/dotnet)
 
