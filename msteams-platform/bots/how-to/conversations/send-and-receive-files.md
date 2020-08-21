@@ -137,7 +137,7 @@ The following table describes the content properties of the attachment:
 
 ## Example using the Bot Framework SDK
 
-The following example shows how you can handle file uploads and send file consent requests to the user in the bot's dialog. The code snippets shown next, belong to a complete runnable example you can download at this location: [FileUpload](https://github.com/microsoft/botbuilder-dotnet/tree/master/tests/Teams/FileUpload).
+The following example shows how you can handle file uploads and send file consent requests to the user in the bot's dialog. The code snippets shown next, belong to a complete runnable example you can download at this location: [FileUpload](https://github.com/microsoft/botbuilder-dotnet/tree/main/tests/Teams/FileUpload).
 
 # [C#/.NET](#tab/dotnet)
 
