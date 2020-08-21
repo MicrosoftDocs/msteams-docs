@@ -89,7 +89,7 @@ POST /v3/conversations/{conversationId}/activities
 {
 "channelData": {
     "notification": {
-        "alertMeeting": true,
+        "alertInMeeting": true,
 
         "externalResourceUrl: "https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>      &width=<TaskInfo.width> &title=<TaskInfo.title> ”
                       }
