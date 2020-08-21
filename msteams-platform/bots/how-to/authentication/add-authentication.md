@@ -179,7 +179,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
     Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) will need to be encoded as `&amp;`.
 
-     [!code-json[appsettings](~/../botbuilder-samples/samples/csharp_dotnetcore/46.teams-auth/appsettings.json?range=1-5)]
+     [!code-json[appsettings](~/../BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth/appsettings.json?range=1-5)]
 
 1. In the Solution Explorer, navigate to the `TeamsAppManifest` folder, open `manifest.json` and set `id` and `botId` to the **bot App ID** you saved at the time of the bot channel registration.
 
@@ -198,7 +198,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
     Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) will need to be encoded as `&amp;`.
 
-     [!code-javascript[settings](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/.env)]
+     [!code-javascript[settings](~/../BotBuilder-Samples/tree/main/samples/javascript_nodejs/46.teams-auth/.env)]
 
 1. In the `teamsAppManifest` folder, open `manifest.json` and set `id`  to your **Microsoft App ID** and `botId` to the **bot App ID** you saved at the time of the bot channel registration.
 
@@ -212,7 +212,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
       Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) will need to be encoded as `&amp;`.
 
-      [!code-python[config](~/../botbuilder-samples/samples/python/46.teams-auth/config.py?range=14-16)]
+      [!code-python[config](~/../BotBuilder-Samples/tree/main/samples/python/46.teams-auth/config.py?range=14-16)]
 
 ---
 
@@ -442,13 +442,13 @@ This is done by sub-classing the **ActivityHandler**.
 
 **Bots/DialogBot.cs**
 
-[!code-csharp[ActivityHandler](~/../botbuilder-samples/samples/csharp_dotnetcore/46.teams-auth/Bots/DialogBot.cs?range=19-51)]
+[!code-csharp[ActivityHandler](~/../BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth/Bots/DialogBot.cs?range=19-51)]
 
 **Bots/TeamsBot.cs**
 
 The *Invoke Activity* must be forwarded to the dialog if the **OAuthPrompt** is used.
 
-[!code-csharp[ActivityHandler](~/../botbuilder-samples/samples/csharp_dotnetcore/46.teams-auth/Bots/TeamsBot.cs?range=34-42)]
+[!code-csharp[ActivityHandler](~/../BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth/Bots/TeamsBot.cs?range=34-42)]
 
 #### TeamsActivityHandler.cs
 
@@ -476,13 +476,13 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 
 **bots/dialogBot.js**
 
-[!code-javascript[ActivityHandler](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/bots/dialogBot.js?range=4-46)]
+[!code-javascript[ActivityHandler](~/../BotBuilder-Samples/tree/main/samples/javascript_nodejs/46.teams-auth/bots/dialogBot.js?range=4-46)]
 
 **bots/teamsBot.js**
 
 The *Invoke Activity* must be forwarded to the dialog if the **OAuthPrompt** is used.
 
-[!code-javascript[ActivityHandler](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/bots/teamsBot.js?range=4-33)]
+[!code-javascript[ActivityHandler](~/../BotBuilder-Samples/tree/main/samples/javascript_nodejs/46.teams-auth/bots/teamsBot.js?range=4-33)]
 
 **dialogs/mainDialog.js**
 
@@ -491,27 +491,27 @@ Within a dialog step, use `beginDialog` to start the OAuth prompt, which asks th
 - If the user is already signed in, this will generate a token response event, without prompting the user.
 - Otherwise, this will prompt the user to sign in. The Azure Bot Service sends the token response event after the user attempts to sign in.
 
-[!code-javascript[AddOAuthPrompt](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/dialogs/mainDialog.js?range=50-52)]
+[!code-javascript[AddOAuthPrompt](~/../BotBuilder-Samples/tree/main/samples/javascript_nodejs/46.teams-auth/dialogs/mainDialog.js?range=50-52)]
 
 Within the following dialog step, check for the presence of a token in the result from the previous step. If it is not null, the user successfully signed in.
 
-[!code-javascript[AddOAuthPrompt](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/dialogs/mainDialog.js?range=50-64)]
+[!code-javascript[AddOAuthPrompt](~/../BotBuilder-Samples/tree/main/samples/javascript_nodejs/46.teams-auth/dialogs/mainDialog.js?range=50-64)]
 
 **bots/logoutDialog.js**
 
-[!code-javascript[allow-logout](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/dialogs/logoutDialog.js?range=31-42&highlight=7)]
+[!code-javascript[allow-logout](~/../BotBuilder-Samples/tree/main/samples/javascript_nodejs/46.teams-auth/dialogs/logoutDialog.js?range=31-42&highlight=7)]
 
 # [Python](#tab/python-sample)
 
 **bots/dialog_bot.py**
 
-[!code-python[ActivityHandler](~/../botbuilder-samples/samples/python/46.teams-auth/bots/dialog_bot.py?range=10-42)]
+[!code-python[ActivityHandler](~/../BotBuilder-Samples/tree/main/samples/python/46.teams-auth/bots/dialog_bot.py?range=10-42)]
 
 **bots/teams_bot.py**
 
 The *Invoke Activity* must be forwarded to the dialog if the **OAuthPrompt** is used.
 
-[!code-python[on_token_response_event](~/../botbuilder-samples/samples/python/46.teams-auth/bots/teams_bot.py?range=38-45)]
+[!code-python[on_token_response_event](~/../BotBuilder-Samples/tree/main/samples/python/46.teams-auth/bots/teams_bot.py?range=38-45)]
 
 **dialogs/main_dialog.py**
 
@@ -520,15 +520,15 @@ Within a dialog step, use `begin_dialog` to start the OAuth prompt, which asks t
 - If the user is already signed in, this will generate a token response event, without prompting the user.
 - Otherwise, this will prompt the user to sign in. The Azure Bot Service sends the token response event after the user attempts to sign in.
 
-[!code-python[Add OAuthPrompt](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/main_dialog.py?range=48-49)]
+[!code-python[Add OAuthPrompt](~/../BotBuilder-Samples/tree/main/samples/python/46.teams-auth/dialogs/main_dialog.py?range=48-49)]
 
 Within the following dialog step, check for the presence of a token in the result from the previous step. If it is not null, the user successfully signed in.
 
-[!code-python[Add OAuthPrompt](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/main_dialog.py?range=51-61)]
+[!code-python[Add OAuthPrompt](~/../BotBuilder-Samples/tree/main/samples/python/46.teams-auth/dialogs/main_dialog.py?range=51-61)]
 
 **dialogs/logout_dialog.py**
 
-[!code-python[allow logout](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/logout_dialog.py?range=29-36&highlight=6)]
+[!code-python[allow logout](~/../BotBuilder-Samples/tree/main/samples/python/46.teams-auth/dialogs/logout_dialog.py?range=29-36&highlight=6)]
 
 ---
 

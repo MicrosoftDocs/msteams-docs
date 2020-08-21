@@ -229,10 +229,10 @@ namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
 
 The following code snippet is from [teamsConversationBot.js](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js).
 
-[!code-javascript[messageAllMembersAsync](~/../botbuilder-samples/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js?range=115-134&highlight=13-15)]
+[!code-javascript[messageAllMembersAsync](~/../BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js?range=115-134&highlight=13-15)]
 
 # [Python](#tab/python)
 
-[!code-python[message-all-members](~/../botbuilder-samples/samples/python/57.teams-conversation-bot/bots/teams_conversation_bot.py?range=101-135)]
+[!code-python[message-all-members](~/../BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot/bots/teams_conversation_bot.py?range=101-135)]
 
 ---
