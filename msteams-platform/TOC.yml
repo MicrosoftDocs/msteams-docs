@@ -1,7 +1,7 @@
 - name: Overview
   expanded: true
   items:
-    - name: 'What are Microsoft Teams apps?'
+    - name: Building for Microsoft Teams
       href: overview.md
     - name: What's new?
       href: whats-new.md
