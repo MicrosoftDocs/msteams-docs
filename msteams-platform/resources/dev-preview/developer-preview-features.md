@@ -1,16 +1,12 @@
 ---
 title: Features in the Public Developer Preview
-description: Describes the features in the Public Developer Preview of Microsoft Teams
+description: Details the features in the Microsoft Teams Public Developer Preview
 keywords: teams preview developer features
 ---
 
 # Features in the Public Developer Preview for Microsoft Teams
 
 The developer preview includes the following new features:
-
-## Adaptive cards v1.2 support
-
-Support for [Adaptive cards v1.2](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0) in Teams is now available to the general public. However, [Media elements](https://adaptivecards.io/explorer/Media.html) are currently not supported in Adaptive cards v1.2 on the Teams platform.
 
 ## Tabs single sign-on (SSO)
 
@@ -23,3 +19,19 @@ Our developer preview is available in manifest versions 1.5 and greater. Our cur
 With the addition of [Microsoft Graph APIs for calls and online meetings](/graph/api/resources/communications-api-overview?view=graph-rest-beta), Microsoft Teams apps can now interact with users in rich ways using voice and video. These APIs allow you to add new app features such as interactive voice response (IVR), call control, and access to real-time audio and/or video streams for calls and meetings, including desktop and app sharing.
 
 We've added a new section on how to create and develop calls and online meetings bots, starting with the [overview](~/bots/calls-and-meetings/calls-meetings-bots-overview.md).
+
+## Image enlarge support
+
+It is now possible for bots to indicate which images shared in Adaptive Cards in Teams are allowed to be enlarged. This is useful for scenarios like sharing detailed step-by-step visual guides via bots which might be hard to read for users otherwise. To make an image expandable, just flag it `allowExpand: true` as shown below.
+
+```json
+    {
+      "type": "Image",
+      "url": "https://picsum.photos/200/200?image=110",
+      "msTeams": {
+        "allowExpand": true
+      }
+    }
+```
+This will cause Teams web/desktop client to render an element on hover over the image to allow the user to expand the image.
+
