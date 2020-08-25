@@ -15,7 +15,7 @@ You'll start with creating and running a "Hello, World!" tab app. You'll then cr
   >
   > - **Get up and running quickly with the Teams Toolkit**: The Microsoft Teams Toolkit for Visual Studio Code takes care of creating your app project and scaffolding so you can have a running app in minutes.
   > - **Define your app with the manifest**: The manifest is a blueprint where you specify the capabilities and services your Teams app uses.
-  > - **Scope your audience**: You can build a Teams app for personal use or collaboration. In the tutorials, you'll learn how build a tab for individual users or a group of people in a channel or chat.
+  > - **Scope your audience**: You can build a Teams app for personal use, collaboration, or bother. In these tutorials, you'll learn how build a tab for individual users or a group of people in a channel or chat.
   > - **Utilize Teams SDK to get context**: Learn how to use the Microsoft Teams JavaScript SDK to perform theme change or set up configuration experience  
   > - **Expand on your app**: Throughout the tutorials, we link to related topics you're probably interested in (some of which include authentication and design guidelines).
 

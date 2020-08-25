@@ -3,60 +3,90 @@ title: Integrating web apps with Microsoft Teams
 author: heath-hamilton
 description: Understand the steps needed to integrate your web app with Microsoft Teams
 ---
-# Integrating web apps with Teams
+# Integrating existing apps with Teams
 
-The following guidelines can help you integrate successfully with Teams no matter what kind of app you have:
+These guidelines can help you efficiently integrate the following types of apps with Teams:
 
-* Established, standalone product
-* Geared towards collaboration platforms
-* For internal use (for example, a SharePoint page)
+* Standalone web apps
+* Collaboration platform apps
+* SharePoint pages
 
-## Plan your app
+## Do initial planning
 
-Integrating an app as it is will likely feel foreign or awkward to the Teams experience. Do these first:
+Integrating an app as is likely will feel foreign, awkward, or broken to the Teams experience. Make sure you first:
 
-1. Understand your use cases.
-1. Map use cases to Teams capabilities
-1. Determine your app contexts
+1. [Map your app's use cases to Teams capabilities](../concepts/design/map-use-cases.md).
+1. [Determine your app's scope](../planning-your-app/app-scope.md). Is it for personal use, collaboration, or both?
+
+## Aim towards multitenancy
+
+If you don't already do this, consider the SaaS model for your app. Hosting a multitenant app makes your product scalable and simplifies the Teams app manifest and app distribution.
+
+## Review your APIs
+
+Migrating an app into Teams doesn't mean the APIs sufficiently when running from within Teams. Identity mapping, deep link support, and Microsoft Graph API integration might drive the need for API updates and should be considered when estimating a migration.
+
+## Consider authentication
+
+Like all of Microsoft 365, Teams uses Azure Active Directory (AD) as an identity provider. If your app uses a different identity provider, you must either go through an identity mapping exercise or federate with Azure AD.
+
+Teams has SSO mechanisms with Azure AD for third-party apps and guidance for doing authentication flows to other identity providers using standards such as OAuth and Open ID Connect (OIDC).
 
 ## Consider a subset of functionality
 
 If you haven't integrated your app with a collaboration platform like Teams, you may be unfamiliar with what makes the best 
 
-## Reuse UI components
-
-If migrating a web app that was built in a modular way, try to re-use those modules wherever possible. By sharing components, you can accelerate your development and reduce maintenance headaches down the road. For example, a bug fix won't require changes in two places.
-
 ## Follow design guidelines
 
-* Limit navigation: Embedding web content into a tab with little design updates is likely to lead to poor UX. For example, tabs are in themselves a top navigation, so any subnavigation needs to be carefully considered and navigation within a tab should be minimized.
-* Use familiar iconography: Your application will not feel native to Microsoft Teams if it uses different  iconography. Consider the Fluent UI icons for actions or navigation within your app and Teams.
-* Consider themes: Good Teams apps feel like a native part of teams, so matching the user's theme in your app is important. This means supporting 3 different sets of styles (default, dark, and high-contrast). Themes are primarily a consideration in tab development, but message-based extensibility have their own themeing considerations.
+* **Limit navigation**: Embedding web content into a tab with little design updates is likely to lead to poor UX. For example, tabs are in themselves a top navigation, so any subnavigation needs to be carefully considered and navigation within a tab should be minimized.
+* **Use familiar iconography**: Your application will not feel native to Microsoft Teams if it uses different  iconography. Consider the Fluent UI icons for actions or navigation within your app and Teams.
+* **Consider themes**: Good Teams apps feel like a native part of teams, so matching the user's theme in your app is important. This means supporting three different sets of styles (default, dark, and high-contrast). Themes are primarily a consideration in tab development, but messaging extensions have their own theming considerations.
 
-## Adapt to the context within Teams
+[See the complete Teams design guidelines](../designing-your-app/designing-overview.md)
 
-Teams provides rich contextual information to both chatbots, messaging extensions, and tabs. Information includes the group/channel/user details from where the application is running as well as additional application context such as theme, contextual parameters, and much more. e.g., JS SDK
+## Reuse UI components
 
-## Think about notifications
+If you built your app in a modular way, try reusing those components wherever possible. This can accelerate your development and reduce maintenance issues. For example, fixing a bug won't require changes in two places.
 
-Consider the long-term vision of the application when architecting a notification approach. If there is probability of multi-threaded conversations, a chatbot will likely be a more flexible choice than connectors/webhooks.
+## Understand context in Teams
+
+Teams provides rich, contextual information to bots, messaging extensions, and tabs. This can include details about who's using the app, which chats and channels the app is running, and the theme (light, dark, or high contrast) a user configures. For example, the [Teams JavaScript client SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest) can make your tab aware of and react to theme changes.
+
+## Be smart about notifications
+
+Consider the long-term vision of the app when considering notifications. If you think your app will have multi-threaded conversations, a bot might be the more flexible capability to build than webhooks.
+
+## Maximize deep links
+
+Almost everything in Teams can be linked to directly with a deep link. Your app should maximize use of these, including deep linking from messages and tabs and providing deep links users can share to navigate directly to a tab with additional context.
+
+## Capture new user details
+
+If your app includes a bot, your app should listen for new members added and store their details. This includes a proprietary Teams identifier that's required to send proactive messages to that user. It also saves you an additional call to the Microsoft Graph APO and user consent for querying team membership.
+
+### Use SharePoint for file and data storage
+
+When you create a team, a SharePoint site collection is provisioned to support file and data storage for that team. Your application can and should leverage this site collection if interacting with files. It can also be used to store raw data in SharePoint Lists and Excel.
 
 ## Plan for localization
 
-Delivering a Teams app that supports multiple languages takes additional planning. Locale is available as contextual information to most Teams extensions, but translations and planning are also necessary in the application manifest.
+Delivering a Teams app that supports multiple languages takes additional planning. Locale is available as contextual information to most Teams extensions, but translations and planning are also necessary in the app manifest.
 
-## Review existing APIs
+## Standalone web app considerations
 
-Migrating an existing application into Teams does not mean the existing APIs that support that application sufficiently when running from within Teams. Identity mapping, deep-link support, and Graph integration might drive the need for API updates that should be considered when estimating a migration.
+Some text.
 
-## Aim towards multitenancy
+## Collaboration app consideations
 
-If you have offered the application in a SaaS model, then you are likely familiar with the additional challenges and considerations of hosting a multi-tenant application. If SaaS and multi-tenancy is new to you, consider this approach as it provides economies of scale and simplifies the Teams application manifest and distribution.
+If you've already created an app for a collaboration platform such as Slack ...
 
-## Listen for added members
+### Plan your Teams app
 
-If your app includes a chatbot, you should listen for members added and store the user details of users. This includes a teams proprietary identifier that is required to send proactive messages to that user. It also saves you an additional API call to the Microsoft Graph and user consent for querying team membership.
+If you want to create a Teams app that's similar to your Slack app, you must understand how 
 
-## Use SharePoint for file and data storage
+1. Map your app's use cases to Teams capabilities
+1. Determine your app contexts
 
-When you create a team, a SharePoint site collection is provisioned to support file and data storage for that team. Your application can and should leverage this site collection if interacting with files, but it can also be used to store raw data in SharePoint Lists or Excel.
+## SharePoint page considerations
+
+xxx
