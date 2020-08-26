@@ -6,7 +6,7 @@ ms.date: 08/26/2020
 ms.topic: conceptual
 title: Integrating a web app with Microsoft Teams
 ---
-# Integrating a web app with Teams
+# Integrating web apps with Teams
 
 Do you have an existing web app you think would fit naturally with Teams' social and collaborative features? Follow these guidelines to understand how to integrate these types of apps:
 
@@ -109,7 +109,7 @@ Teams provides rich, contextual information to bots, messaging extensions, and t
 
 Consider the long-term vision of the app when considering notifications. If you think your app will have multi-threaded conversation, a bot might be the more flexible capability to use than webhooks.
 
-## Maximize the use of deep links
+## Maximize deep linking
 
 ***Integration scenarios**: Standalone apps, collaboration platform apps, SharePoint*
 
