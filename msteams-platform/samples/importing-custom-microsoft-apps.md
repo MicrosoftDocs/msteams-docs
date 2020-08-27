@@ -1,8 +1,10 @@
 ---
-title: Importing custom Power Platform apps in Teams
-author: heath-hamilton
-description: Understand the steps needed to import Microsoft apps created with no-code or low-code solutions, such as Power Apps.
+title: Low code solutions for Microsoft Teams
+author: laujan
+description: Detail the available Microsoft low code solutions for Teams
+ms.author: lajanuar
+ms.topic: overview
 ---
-# Importing Power Platform apps
+# Microsoft low-code application development solutions for Microsoft Teams
 
-Coming soon...
+Microsoft Teams is both extensible and customizable meaning you can build custom applications for Teams to meet the distinct needs of your users. Low-code development platforms allow citizen developers to quickly build custom apps and professional developers to accelerate app development and deployment.
