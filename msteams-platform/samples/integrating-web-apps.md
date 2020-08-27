@@ -69,7 +69,7 @@ If you don't already do this, consider the Software-as-a-Service (SaaS) model fo
 
 ***Integration scenarios**: Standalone apps, collaboration apps*
 
-It isn't guaranteed your app's existing APIs will work the same when running in Teams. Identity mapping, deep-link support, and Microsoft Graph API integration might require API updates and should be considered when estimating an integration.
+It isn't guaranteed your app's existing APIs will work the same when running in Teams. [Identity mapping](..concepts/authentication/configure-identity-provider.md), [deep-link support](../concepts/build-and-test/deep-links.md), and [incorporating Microsoft Graph](https://docs.microsoft.com/en-us/graph/teams-concept-overview) might require API updates and should be considered when estimating your integration.
 
 ## Think about authentication
 
@@ -80,6 +80,8 @@ Like the rest of of Microsoft 365, Teams uses Azure Active Directory (AD) as an 
 Teams has single sign-on (SSO) mechanisms with Azure AD for third-party apps and guidance for authentication flows to other identity providers using standards such as OAuth and Open ID Connect (OIDC).
 
 For SharePoint pages, you can only use SSO and can't add another Azure AD ID if you want SSO to work for another app (since the ID is the SharePoint app).
+
+Learn more about [authentication in Teams](../concepts/authentication/authentication.md).
 
 ## Follow Teams app design guidelines
 
@@ -97,6 +99,12 @@ In general, your app should feel natural to the Teams user experience.
 
 If you built your app in a modular way, try reusing those components if possible to accelerate development and reduce maintenance issues (fixing a bug won't require changes in two places). For example, you can build Teams tabs content however you like as long as the content can display in an `<iframe>`.
 
+## Plan for localization
+
+***Integration scenarios**: Standalone apps, collaboration apps*
+
+Publishing a [Teams app that supports multiple languages](../concepts/build-and-test/apps-localization.md) takes additional development time. While in most cases locale is included as contextual app information, you must configure the app manifest and account for translation work.
+
 ## Understand context in Teams
 
 ***Integration scenarios**: Standalone apps, collaboration apps*
@@ -107,28 +115,22 @@ Teams provides rich, contextual information to bots, messaging extensions, and t
 
 ***Integration scenarios**: Standalone apps, collaboration apps*
 
-Consider the long-term vision of the app when considering notifications. If you think your app will have multi-threaded conversation, a bot might be the more flexible capability to use than webhooks.
+Consider the long-term vision of the app when considering notifications. If you think your app will have multi-threaded conversation, a [conversational bot](../bots/what-are-bots.md) might be the more flexible capability than webhooks.
 
 ## Maximize deep linking
 
 ***Integration scenarios**: Standalone apps, collaboration apps, SharePoint*
 
-Almost everything in Teams can be linked to directly with a deep link. Your app should maximize use of these, including linking to and from specific messages and tab content.
+Almost everything in Teams can be linked to directly with a [deep link](../concepts/build-and-test/deep-links.md). Your app should maximize use of these, including linking to and from specific messages and tab content.
 
-## Capture new user details
+## Know when new users are added to conversations
 
 ***Integration scenarios**: Standalone apps, collaboration apps, SharePoint*
 
-If your app includes a bot, your app should listen for new members added and store their details. This includes a proprietary Teams identifier that's required to send proactive messages to that user. It also saves you an additional Graph API call and getting user consent for querying team membership.
+If your app includes a bot, your app can [listen for when new members](../bots/how-to/conversations/conversation-basics.md) are added and store their details. For example, your bot can send a welcome message when a user joins a channel. Doing this requires a proprietary Teams identifier for sending proactive messages to a user. It also saves you an additional Graph API call and getting user consent for querying team membership.
 
 ## Use SharePoint for file and data storage
 
 ***Integration scenarios:** Standalone apps, collaboration apps, SharePoint pages*
 
-When you create a team, a SharePoint site collection is also provisioned to support file and data storage for that team. Your app can and should leverage this site collection if interacting with files. It can also be used to store raw data in SharePoint Lists and Excel.
-
-## Plan for localization
-
-***Integration scenarios**: Standalone apps, collaboration apps*
-
-Publishing a Teams app that supports multiple languages takes additional development time. While in most cases locale is included as contextual app information, you must configure the app manifest and account for translation work.
+When a team is created, a [SharePoint site collection](https://docs.microsoft.com/en-us/microsoftteams/sharepoint-onedrive-interact) is also provisioned to support file and data storage for that team. Your app can and should leverage this feature if it interacts with files. You can also use the site collection to store raw data in SharePoint Lists and Excel.
