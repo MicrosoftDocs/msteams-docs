@@ -50,12 +50,10 @@ Before you begin any technical work, do some planning for your Teams app:
 
 ***Integration scenarios**: SharePoint*
 
-You can integrate an existing SharePoint page as a Teams tab. Remember the following:
+You can integrate an existing [SharePoint page](https://docs.microsoft.com/MicrosoftTeams/teams-standalone-static-tabs-using-spo-sites) as a Teams tab. Remember the following:
 
 * It must be a *modern* SharePoint Online page
 * Only personal tabs are supported (no channel tab integration)
-
-See the [full instructions](https://docs.microsoft.com/MicrosoftTeams/teams-standalone-static-tabs-using-spo-sites).
 
 Alternatively, you can build a Teams tab [using the SharePoint Framework](https://docs.microsoft.com/sharepoint/dev/spfx/integrate-with-teams-introduction).
 
