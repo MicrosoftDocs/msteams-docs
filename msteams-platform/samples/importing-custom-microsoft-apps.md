@@ -26,10 +26,10 @@ https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the
 
 allowing citizen developers to start building apps and professional developers to accelerate app development and deployment.
 
-a.	Embed an app in Teams: https://review.docs.microsoft.com/en-us/microsoftteams/platform/bots/what-are-bots?branch=master#create-a-chatbot-for-teams-with-microsoft-power-virtual-agents
-b.	https://docs.microsoft.com/en-us/power-platform/admin/embed-app-teams
-c.	https://powerapps.microsoft.com/en-us/blog/deeply-integrate-your-apps-in-microsoft-teams-with-context-variables/?ranMID=24542&ranEAID=je6NUbpObpQ&ranSiteID=je6NUbpObpQ-s.9iQrRjeATtE3gEpSyNHA&epi=je6NUbpObpQ-s.9iQrRjeATtE3gEpSyNHA&irgwc=1&OCID=AID2000142_aff_7593_1243925&tduid=%28ir__cbq3xbvsfskftxcakk0sohzibn2xiublu9gxxnsv00%29%287593%29%281243925%29%28je6NUbpObpQ-s.9iQrRjeATtE3gEpSyNHA%29%28%29&irclickid=_cbq3xbvsfskftxcakk0sohzibn2xiublu9gxxnsv00
-d.	POWER APPS: Used to build powerful mobile apps for internal use by the organization How to: https://devblogs.microsoft.com/premier-developer/integration-power-apps-to-microsoft-teams/
+a.	Embed an app in Teams: https://review.docs.microsoft.com/en-us/microsoftteams/platform/bots/what-are-bots?branch=master#create-a-chatbot-for-teams-with-microsoft-power-virtual-agents  
+b.	https://docs.microsoft.com/en-us/power-platform/admin/embed-app-teams  
+c.	https://powerapps.microsoft.com/en-us/blog/deeply-integrate-your-apps-in-microsoft-teams-with-context-variables/?ranMID=24542&ranEAID=je6NUbpObpQ&ranSiteID=je6NUbpObpQ-s.9iQrRjeATtE3gEpSyNHA&epi=je6NUbpObpQ-s.9iQrRjeATtE3gEpSyNHA&irgwc=1&OCID=AID2000142_aff_7593_1243925&tduid=%28ir__cbq3xbvsfskftxcakk0sohzibn2xiublu9gxxnsv00%29%287593%29%281243925%29%28je6NUbpObpQ-s.9iQrRjeATtE3gEpSyNHA%29%28%29&irclickid=_cbq3xbvsfskftxcakk0sohzibn2xiublu9gxxnsv00  
+d.	POWER APPS: Used to build powerful mobile apps for internal use by the organization How to: https://devblogs.microsoft.com/premier-developer/integration-power-apps-to-microsoft-teams/  
 Low-code data platform for Teams Project Oakdale: https://powerapps.microsoft.com/en-us/blog/introducing-project-oakdale-a-new-low-code-data-platform-for-microsoft-teams/
 POWER AUTOMATE: https://flow.microsoft.com/en-us/connectors/shared_teams/microsoft-teams/
 POWER BI:  is the self-service business analytics tool provided by Microsoft.  Power BI app for Teams will provide a more streamlined experience for accessing Power BI reports in Teams
