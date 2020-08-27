@@ -2,6 +2,9 @@
 title: Determining your Teams app's scope
 author: heath-hamilton
 description: In planning your Teams app, you must decide if the app will be used in collaborative spaces, personal spaces, or both.
+ms.author: heath-hamilton
+ms.date: 08/26/2020
+ms.topic: conceptual
 ---
 # Determining your app's scope
 
@@ -17,7 +20,7 @@ Here's how Teams app capabilities are commonly used in collaborative contexts:
 
 * [**Tabs**](~/tabs/what-are-tabs.md) provide a full-screen embedded web experience configured for the team, channel, or group chat. All members interact with the same web-based content, so a stateless single page app experience is typical.
 
-* [**Connectors**](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) allow an external service to post messages into a conversation and users to send messages to a service.
+* [**Webhooks and connectors**](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) allow an external service to post messages into a conversation and users to send messages to a service.
 
 * [**Messaging extensions**](~/messaging-extensions/what-are-messaging-extensions.md) are shortcuts that help people craft rich and interactive messages. Messages are the heart of collaboration in Teams. With messaging extensions, users can craft more effective messages by sharing complex content in a card, initiating workflows, or requesting input from others in the conversation.
 
