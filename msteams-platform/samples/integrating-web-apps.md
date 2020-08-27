@@ -24,14 +24,14 @@ Your Teams app can include features users want and might expect when collaborati
 
 |Common app features   |Teams platform capabilities   |
 |----------|-----------|
-|Embedded webpage, homepage, or WebView  |Tabs  |
-|Share shortcuts and extensions  |Messaging extensions  |
-|Action shortcuts and extensions  |Messaging extensions  |
-|Chatbots  |Bots |
-|Channel notifications  |Bots<br/>Incoming webhooks<br/>Office 365 Connectors  |
-|Message external services  |Bots<br/>Outgoing webhooks  |
-|Modals  |Task modules  |
-|Content-rich cards  |Adaptive Cards  |
+|Embedded webpage, homepage, or WebView  |[Tabs](../tabs/what-are-tabs.md)  |
+|Share shortcuts and extensions  |[Messaging extensions](../messaging-extensions/what-are-messaging-extensions.md)  |
+|Action shortcuts and extensions  |[Messaging extensions](../messaging-extensions/what-are-messaging-extensions.md)  |
+|Chatbots  |[Bots](../bots/what-are-bots.md) |
+|Channel notifications  |[Bots](../bots/what-are-bots.md)<br/>[Incoming webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)<br/>[Office 365 Connectors](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
+|Message external services  |[Bots](../bots/what-are-bots.md)<br/>[Outgoing webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
+|Modals  |[Task modules](../task-modules-and-cards/what-are-task-modules.md)  |
+|Content-rich cards  |[Adaptive Cards](../task-modules-and-cards/what-are-cards.md)  |
 
 Learn more about [Teams app concepts and capabilities](../concepts/capabilities-overview.md).
 
@@ -55,9 +55,9 @@ You can integrate an existing SharePoint page as a Teams tab. Remember the follo
 * It must be a *modern* SharePoint Online page
 * Only personal tabs are supported (no channel tab integration)
 
-See the [full instructions](https://docs.microsoft.com/en-us/MicrosoftTeams/teams-standalone-static-tabs-using-spo-sites).
+See the [full instructions](https://docs.microsoft.com/MicrosoftTeams/teams-standalone-static-tabs-using-spo-sites).
 
-Alternatively, you can build a Teams tab [using the SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/integrate-with-teams-introduction).
+Alternatively, you can build a Teams tab [using the SharePoint Framework](https://docs.microsoft.com/sharepoint/dev/spfx/integrate-with-teams-introduction).
 
 ## Aim towards multitenancy
 
@@ -69,7 +69,7 @@ If you don't already do this, consider the Software-as-a-Service (SaaS) model fo
 
 ***Integration scenarios**: Standalone apps, collaboration apps*
 
-It isn't guaranteed your app's existing APIs will work the same when running in Teams. [Identity mapping](..concepts/authentication/configure-identity-provider.md), [deep-link support](../concepts/build-and-test/deep-links.md), and [incorporating Microsoft Graph](https://docs.microsoft.com/en-us/graph/teams-concept-overview) might require API updates and should be considered when estimating your integration.
+It isn't guaranteed your app's existing APIs will work the same when running in Teams. [Identity mapping](../concepts/authentication/configure-identity-provider.md), [deep-link support](../concepts/build-and-test/deep-links.md), and [incorporating Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview) might require API updates and should be considered when estimating your integration.
 
 ## Think about authentication
 
@@ -133,4 +133,4 @@ If your app includes a bot, your app can [listen for when new members](../bots/h
 
 ***Integration scenarios:** Standalone apps, collaboration apps, SharePoint pages*
 
-When a team is created, a [SharePoint site collection](https://docs.microsoft.com/en-us/microsoftteams/sharepoint-onedrive-interact) is also provisioned to support file and data storage for that team. Your app can and should leverage this feature if it interacts with files. You can also use the site collection to store raw data in SharePoint Lists and Excel.
+When a team is created, a [SharePoint site collection](https://docs.microsoft.com/microsoftteams/sharepoint-onedrive-interact) is also provisioned to support file and data storage for that team. Your app can and should leverage this feature if it interacts with files. You can also use the site collection to store raw data in SharePoint Lists and Excel.
