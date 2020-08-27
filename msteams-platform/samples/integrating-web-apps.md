@@ -8,17 +8,17 @@ title: Integrating a web app with Microsoft Teams
 ---
 # Integrating web apps with Teams
 
-Do you have an existing web app you think would fit naturally with Teams' social and collaborative features? Follow these guidelines to understand how to integrate these types of apps:
+Do you have an existing web app you think would fit naturally with Teams' social and collaborative features? These guidelines can help you understand how to integrate the following types of apps:
 
-* Standalone apps
-* Collaboration platform apps
-* SharePoint
+* **Standalone apps**: Could be a single-page app or large, complex app you want people to use some aspects of in Teams.
+* **Collaboration apps**: An app already built for the social and collaborative features inherent to Teams.
+* **SharePoint**: SharePoint pages, such as your organization's intranet portal, which you can surface in Teams.
 
 For each guideline, you can see if it's applicable to your integration scenario.
 
 ## Get to know Teams platform capabilities
 
-***Integration scenarios**: Standalone apps, collaboration platform apps, SharePoint*
+***Integration scenarios**: Standalone apps, collaboration apps, SharePoint*
 
 Your Teams app can include features users want and might expect when collaborating, but you may be unfamiliar with Teams development terminology.
 
@@ -61,19 +61,19 @@ Alternatively, you can build a Teams tab [using the SharePoint Framework](https:
 
 ## Aim towards multitenancy
 
-***Integration scenarios**: Standalone apps, collaboration platform apps, SharePoint*
+***Integration scenarios**: Standalone apps, collaboration apps, SharePoint*
 
 If you don't already do this, consider the Software-as-a-Service (SaaS) model for your app. Hosting a multitenant app makes your product scalable and simplifies app distribution.
 
 ## Review your APIs
 
-***Integration scenarios**: Standalone apps, collaboration platform apps*
+***Integration scenarios**: Standalone apps, collaboration apps*
 
 It isn't guaranteed your app's existing APIs will work the same when running in Teams. Identity mapping, deep-link support, and Microsoft Graph API integration might require API updates and should be considered when estimating an integration.
 
 ## Think about authentication
 
-***Integration scenarios**: Standalone apps, collaboration platform apps, SharePoint*
+***Integration scenarios**: Standalone apps, collaboration apps, SharePoint*
 
 Like the rest of of Microsoft 365, Teams uses Azure Active Directory (AD) as an identity provider. If your app uses a different identity provider, you must either do an identity mapping exercise or federate with Azure AD.
 
@@ -83,7 +83,7 @@ For SharePoint pages, you can only use SSO and can't add another Azure AD ID if 
 
 ## Follow Teams app design guidelines
 
-***Integration scenarios**: Standalone apps, collaboration platform apps*
+***Integration scenarios**: Standalone apps, collaboration apps*
 
 In general, your app should feel natural to the Teams user experience.
 
@@ -93,42 +93,42 @@ In general, your app should feel natural to the Teams user experience.
 
 ## Reuse UI components
 
-***Integration scenarios**: Standalone apps, collaboration platform apps, SharePoint*
+***Integration scenarios**: Standalone apps, collaboration apps, SharePoint*
 
 If you built your app in a modular way, try reusing those components if possible to accelerate development and reduce maintenance issues (fixing a bug won't require changes in two places). For example, you can build Teams tabs content however you like as long as the content can display in an `<iframe>`.
 
 ## Understand context in Teams
 
-***Integration scenarios**: Standalone apps, collaboration platform apps*
+***Integration scenarios**: Standalone apps, collaboration apps*
 
 Teams provides rich, contextual information to bots, messaging extensions, and tabs. This can include details about who's using the app, which chats and channels the app is running, and the theme (light, dark, or high contrast) a user configures. For example, the [Teams JavaScript client SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest) can make your tab aware of and react to theme changes.
 
 ## Be smart about notifications
 
-***Integration scenarios**: Standalone apps, collaboration platform apps*
+***Integration scenarios**: Standalone apps, collaboration apps*
 
 Consider the long-term vision of the app when considering notifications. If you think your app will have multi-threaded conversation, a bot might be the more flexible capability to use than webhooks.
 
 ## Maximize deep linking
 
-***Integration scenarios**: Standalone apps, collaboration platform apps, SharePoint*
+***Integration scenarios**: Standalone apps, collaboration apps, SharePoint*
 
 Almost everything in Teams can be linked to directly with a deep link. Your app should maximize use of these, including linking to and from specific messages and tab content.
 
 ## Capture new user details
 
-***Integration scenarios**: Standalone apps, collaboration platform apps, SharePoint*
+***Integration scenarios**: Standalone apps, collaboration apps, SharePoint*
 
 If your app includes a bot, your app should listen for new members added and store their details. This includes a proprietary Teams identifier that's required to send proactive messages to that user. It also saves you an additional Graph API call and getting user consent for querying team membership.
 
 ## Use SharePoint for file and data storage
 
-***Integration scenarios:** Standalone apps, collaboration platform apps, SharePoint pages*
+***Integration scenarios:** Standalone apps, collaboration apps, SharePoint pages*
 
 When you create a team, a SharePoint site collection is also provisioned to support file and data storage for that team. Your app can and should leverage this site collection if interacting with files. It can also be used to store raw data in SharePoint Lists and Excel.
 
 ## Plan for localization
 
-***Integration scenarios**: Standalone apps, collaboration platform apps*
+***Integration scenarios**: Standalone apps, collaboration apps*
 
 Publishing a Teams app that supports multiple languages takes additional development time. While in most cases locale is included as contextual app information, you must configure the app manifest and account for translation work.
