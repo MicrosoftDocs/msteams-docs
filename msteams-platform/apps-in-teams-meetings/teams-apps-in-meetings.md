@@ -61,7 +61,7 @@ Teams’ meeting app extensibility centers on three concepts:
 
 **The image below depicts an in-meeting actionable notification for users.**
 
-![In-meeting-notification](../assets/images/apps-in-meetings/in-meeting-notification.png)
+![In-meeting-notification view](../assets/images/apps-in-meetings/in-meeting-notification.png)
 
 ### Post-meeting app experience
 
