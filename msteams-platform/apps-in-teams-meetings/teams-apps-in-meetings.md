@@ -29,7 +29,7 @@ Teams’ meeting app extensibility centers on three concepts:
 
 ### Pre-meeting app experience
 
-✔ Permissioned users can add apps a meeting via the tab gallery in two ways:
+✔ Permissioned users can add apps to a meeting via the tab gallery in two ways:
 
 &emsp;&emsp;&#9679; Via the **Details** tab on the Teams scheduling form:
 
@@ -45,7 +45,7 @@ Teams’ meeting app extensibility centers on three concepts:
 
 ✔ Permissioned users can add apps while in the meeting.
 
-✔ When loaded in the context of a meeting, apps will be able to leverage the Teams Client SDK to access the `meetingId`, `userMri`, and f`rameContext` to appropriately render the experience.
+✔ When loaded in the context of a meeting, apps will be able to leverage the Teams Client SDK to access the `meetingId`, `userMri`, and `frameContext` to appropriately render the experience.
 
 ✔ For an app to be visible in a meeting, Teams will expose two new surfaces: 
 
@@ -61,7 +61,7 @@ Teams’ meeting app extensibility centers on three concepts:
 
 **The image below depicts an in-meeting actionable notification for users.**
 
-![In-meeting-notification](../assets/images/apps-in-meetings/in-meeting-notification.png)
+![In-meeting-notification view](../assets/images/apps-in-meetings/in-meeting-notification.png)
 
 ### Post-meeting app experience
 
