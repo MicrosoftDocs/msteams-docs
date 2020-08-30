@@ -9,9 +9,9 @@ ms.topic: overview
 
 Microsoft Teams is both extensible and customizable meaning you can build custom applications for Teams to meet the distinct needs of your users. Low-code development platforms allow citizen developers to quickly build custom apps and professional developers to accelerate app development and deployment. Low-code is an intuitive software development approach that requires little to no coding in order to build applications and processes. Users with little or no coding knowledge or software development experience can create applications with minimal or no additional code required. Most platforms consist of a visual interface, connectors to back-end services, and a built in app lifecycle manager to build, debug, deploy and maintain applications. Microsoft has several innovative possibilities for quickly building great Teams-compatible apps with low-code attributes:
 
-1. [Microsoft Power Platform](/power-platform) integrations including [Virtual assistant for Teams](virtual-assistant.md) and [Power Virtual Agents for Teams ](add-power-virtual-agents-bot-to-teams.md)
+1. [Microsoft Power Platform](/power-platform) integrations including [Virtual assistant for Teams](virtual-assistant.md) and [Power Virtual Agents for Teams ](../bots/how-to/add-power-virtual-agents-bot-to-teams.md)
 1. [Teams app templates](app-templates.md)
-1. Teams Toolkit for [Visual Studio Toolkit Code](visual-studio-code-overview.md) and [Visual Studio](visual-studio-overview.md)
+1. Teams Toolkit for [Visual Studio Toolkit Code](../toolkit/visual-studio-code-overview.md) and [Visual Studio](../toolkit/visual-studio-overview.md)
 
 ## Teams and Power Platform
 
@@ -21,11 +21,11 @@ The Power Platform enables you to build solutions, automate processes, analyze d
 
 ### Power BI &plus; Teams &equals; key reports
 
-You can [collaborate in Teams with Power BI](power-bi/collaborate-share/service-collaborate-microsoft-teams) and [embed interactive reports in Teams channels and chats](power-bi/collaborate-share/service-embed-report-microsoft-teams). The [Power BI tab for Microsoft Teams](https://powerbi.microsoft.com/en-us/blog/announcing-new-power-bi-tab-for-microsoft-teams/) adds support for reports in the Teams workspace:
+You can [collaborate in Teams with Power BI](/power-bi/collaborate-share/service-collaborate-microsoft-teams) and [embed interactive reports in Teams channels and chats](/power-bi/collaborate-share/service-embed-report-microsoft-teams). The [Power BI tab for Microsoft Teams](https://powerbi.microsoft.com/en-us/blog/announcing-new-power-bi-tab-for-microsoft-teams/) adds support for reports in the Teams workspace:
 
-1. Create an app in [workspaces](power-bi/collaborate-share/service-create-the-new-workspaces) 
-1. [Create a template app in Power BI](connect-data/service-template-apps-create)  
-1. [Publish your app in Power BI](power-bi/collaborate-share/service-create-distribute-apps)
+1. Create an app in [workspaces](/power-bi/collaborate-share/service-create-the-new-workspaces) 
+1. [Create a template app in Power BI](/connect-data/service-template-apps-create)  
+1. [Publish your app in Power BI](/power-bi/collaborate-share/service-create-distribute-apps)
 
 #### Power BI Learn modules
 
@@ -37,11 +37,11 @@ You can [collaborate in Teams with Power BI](power-bi/collaborate-share/service-
 
 ### Power Automate &plus;  Teams &equals; automated workflows
 
-With the [Power Automate app in Teams](power-automate/flows-teams), you can [create flows to automate repetitive work tasks](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) without leaving Teams
+With the [Power Automate app in Teams](/power-automate/flows-teams), you can [create flows to automate repetitive work tasks](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) without leaving Teams
 
-[Get started with Power Automate](power-automate/getting-started)
-[Trigger a flow from any message in Microsoft Teams](power-automate/trigger-flow-teams-message)
-[Use adaptive cards within Power Automate](power-automate/create-adaptive-cards)
+[Get started with Power Automate](/power-automate/getting-started)
+[Trigger a flow from any message in Microsoft Teams](/power-automate/trigger-flow-teams-message)
+[Use adaptive cards within Power Automate](/power-automate/create-adaptive-cards)
 
 #### Power Automate Learn modules
 
@@ -53,8 +53,8 @@ With the [Power Automate app in Teams](power-automate/flows-teams), you can [cre
 
 ### Power Apps &plus; Teams &equals; rapid solutions
 
-Using [Power Apps](owerapps/powerapps-overview), you can quickly build custom business apps that connect to your business data and are tailored to your business needs.
-[Embed an app in Microsoft Teams](power-platform/admin/embed-app-teams). Power Apps [apps](powerapps/maker/) provide an intuitive canvas environment to create an app using the drag-and-drop method to add elements to your application
+Using [Power Apps](/powerapps/powerapps-overview), you can quickly build custom business apps that connect to your business data and are tailored to your business needs.
+[Embed an app in Microsoft Teams](/power-platform/admin/embed-app-teams). Power Apps [apps](/powerapps/maker/) provide an intuitive canvas environment to create an app using the drag-and-drop method to add elements to your application
 
 ### Power Apps Learn modules
 
@@ -70,7 +70,7 @@ allowing citizen developers to start building apps and professional developers t
 
 #### Power Virtual Agents Learn modules
 
-[Power Virtual Agents for App Makers and Developers](s/learn/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)
+[Power Virtual Agents for App Makers and Developers](/learn/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)
 
 #### Project Oakdale
 
