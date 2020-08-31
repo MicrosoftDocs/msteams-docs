@@ -61,7 +61,6 @@ The Teams Toolkit for Visual Studio and Visual Studio Code is an extension that 
 
 :::image type="content" source="../assets/images/power-platform-and-teams/blogs-and-resources.png" alt-text="install and configure illustration":::
 
-
 ### ✔ Teams Shift Connectors
 
 [Teams Shifts Work Force Management connectors](../samples/shifts-wfm-connectors.md) are production-ready, open-source, and community-driven integrations that offer a seamless experience and quick process for the digital transformation of firstline workers with Teams Shifts. Each connector provides detailed guidance for deployment and integration to your organization. The complete source code is available in our GitHub repo where it can be explored in detail and/or forked and tailored to meet your specific needs.
