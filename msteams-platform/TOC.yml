@@ -18,6 +18,7 @@
     href: build-your-first-app/add-channel-tab.md
 - name: Understand app capabilities
   items:
+
   - name: Overview
     href: concepts/capabilities-overview.md
   - name: Tabs
@@ -29,6 +30,7 @@
   - name: Webhooks and connectors
     href: webhooks-and-connectors/what-are-webhooks-and-connectors.md 
 - name: App integrations and templates
+
   items: 
   - name: Integrating web apps
     href: samples/integrating-web-apps.md
@@ -210,9 +212,9 @@
     - name: Quickstarts
       items:
         - name: Teams conversation bot in C#
-          href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot
+          href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot
         - name: Teams conversation bot in JavaScript
-          href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot
+          href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot
         - name: Teams conversation bot in Python
           href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/57.teams-conversation-bot
     - name: 'How-to guides'

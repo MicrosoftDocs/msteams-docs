@@ -27,7 +27,7 @@ Graphics are a good way to tell a story, but not all bot conversations require g
 
 ### Onboarding users
 
-It is critical that bots introduce themselves and convey what they can do to users. This *value exchange* helps users understand what to do with the bot, where the limitations may lie, and, most importantly, helps users tolerate the interaction with a machine that won’t be as intuitive as a real person . Additionally, it grants permission to user data in exchange for the real value the service provides.
+It is critical that bots introduce themselves and convey what they can do for users. This *value exchange* helps users understand what to do with the bot, where the limitations may lie, and, most importantly, helps users tolerate the interaction with a machine that won’t be as intuitive as a real person . Additionally, it grants permission to user data in exchange for the real value the service provides.
 
 #### Welcome messages
 

@@ -216,6 +216,55 @@ The following manifest.json file contains the basic elements needed to test and 
 }
 ```
 
+## Send adaptive cards using an incoming webhook
+
+> [!NOTE]
+>
+> ✔ All native adaptive card schema elements, except `Action.Submit`, are fully supported.
+>
+> ✔ The supported Actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), and [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
+
+### The flow for sending [adaptive cards](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card) via an incoming webhook is as follows:
+
+**1.** [Setup a custom webhook](#setting-up-a-custom-incoming-webhook) in Teams.</br></br>
+**2.** Create your adaptive card JSON file:
+
+```json
+{
+   "type":"message",
+   "attachments":[
+      {
+         "contentType":"application/vnd.microsoft.card.adaptive",
+         "contentUrl":null,
+         "content":{
+            "$schema":"http://adaptivecards.io/schemas/adaptive-card.json",
+            "type":"AdaptiveCard",
+            "version":"1.2",
+            "body":[
+               {
+                  "For Samples and Templates, see":"https://adaptivecards.io/samples"
+               }
+            ]
+         }
+      }
+   ]
+}
+```
+
+> [!div class="checklist"]
+>
+> - The `"type"` field must be `"message"`.
+> - The `"attachments"` array contains a set of card objects.
+> - The `"contentType"` field must be set to adaptive card type.
+> - The `"content"` object is the card formatted in JSON.
+
+**3.** Test your adaptive card with Postman
+
+You can test your adaptive card using [Postman](https://www.postman.com) to send a POST request to the URL that you created when you setup your incoming webhook. Paste your JSON file in the body of the request and view your adaptive card message in Teams.
+
+>[!TIP]
+> You can use adaptive card code [Samples and Templates](https://adaptivecards.io/samples) for the body of your test Post request.
+
 ## Testing your connector
 
 To test your Connector, upload it to a team as you would with any other app. You can create a .zip package using the manifest file from the Connectors Developer Dashboard (modified as directed in the preceding section) and the two icon files.

@@ -74,7 +74,7 @@ Your tab canvas presents a great opportunity to brand your experience. Your logo
 Incorporating your own colors and layouts twill also aid in communicating personality.
 
 > [!TIP]
-> Please work with our visual style so your service feels like a part of Teams. *See*, for example [Teams Colors](/concepts/design/components/typography.md
+> Please work with our visual style so your service feels like a part of Teams. *See*, for example [Teams Colors](../../concepts/design/components/color.md)
 
 ---
 
