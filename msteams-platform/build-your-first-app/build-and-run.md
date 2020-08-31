@@ -17,6 +17,7 @@ To build apps for Teams, you need a Teams account that allows sideloading (your 
 1. Verify if you can sideload apps in Teams:
     1. In the Teams client, select **Apps**.
     1. Look for an option to **Upload a custom app**.
+:::image type="content" source="../assets/images/app-up-and-running/upload-custom-app-closeup.png" alt-text="Image of the custom app upload link in the Teams client.":::
 1. If you have this option, you can start building. If not, do the following:
     1. Register for a [Microsoft 365 developer subscription](../concepts/build-and-test/prepare-your-o365-tenant.md).
     1. [Enable custom app sideloading](../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) for your test account.
@@ -48,7 +49,7 @@ Once complete, you have the app scaffolding components for building a personal t
 Follow the `README.md` in your project to build, run, and deploy your app to Teams. In general, these instructions help you do the following:
 
 * Host your app on `localhost`.
-* [Set up a secure tunnel with ngrok](../concepts/build-and-test/debug.md##locally-hosted) so that Teams can access your app. (Install [ngrok]](https://ngrok.com/download).)
+* [Set up a secure tunnel with ngrok](../concepts/build-and-test/debug.md##locally-hosted) so that Teams can access your app.
 * [Sideload your app](../concepts/deploy-and-publish/apps-upload) in the Teams client using the `Development.zip` in the `.publish` folder.
 
 Once you sideload your app, it should look like this in the Teams client.
