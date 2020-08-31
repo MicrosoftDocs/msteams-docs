@@ -1,8 +1,10 @@
 ---
-title: Create a channel tab for Teams
 author: heath-hamilton
 description: Learn how to build a channel tab in your first Microsoft Teams app.
+ms.author: heath-hamilton
+ms.date: 08/31/2020
 ms.topic: tutorial
+title: Create a channel tab for Teams
 ---
 # Create a channel tab for Teams
 
