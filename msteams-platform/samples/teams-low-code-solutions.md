@@ -59,7 +59,7 @@ The Teams Toolkit for Visual Studio and Visual Studio Code is an extension that 
 
 ## Additional Resources
 
-:::image type="content" source="../assets/images/power-platform-and-teams/blogs-and-resources.png" alt-text="install and configure illustration":::
+:::image type="content" source="../assets/images/power-platform-and-teams/blogs-and-resources.png" alt-text="blogs and resources illustration":::
 
 ### ✔ Teams Shift Connectors
 
@@ -67,7 +67,7 @@ The Teams Toolkit for Visual Studio and Visual Studio Code is an extension that 
 
 ### ✔ Power Platform Learn modules
 
-|        |
+|Topic|
 |-----|
 |**Power BI**|
 |[Power BI for App Makers](/learn/browse/?expanded=power-platform&products=power-bi&roles=maker)|
