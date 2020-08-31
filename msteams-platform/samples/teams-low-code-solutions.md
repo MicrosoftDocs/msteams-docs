@@ -13,7 +13,7 @@ Low code platforms provide an intuitive approach to software development and req
 
 1. [Microsoft Power Platform](#teams-and-microsoft-power-platform)
 1. [Microsoft Teams app templates](#teams-app-templates)
-1. MicrosoftTeams Toolkit extensions (#teams-toolkit)
+1. [MicrosoftTeams Toolkit extensions](#teams-toolkit)
 
 ## Teams and Microsoft Power Platform
 
