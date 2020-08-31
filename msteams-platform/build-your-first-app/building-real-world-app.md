@@ -37,7 +37,6 @@ A Teams app consists of three major pieces:
 1. Your app, service, workflow, or website that performs the necessary logic, data storage, and API calls to power your app.
 1. Your app package, which you use to install the app in Teams. It contains app metadata (name, icons, etc.) and pointers to your services. 
 
-
 ## Prerequisites
 
 ### Set up your development account
