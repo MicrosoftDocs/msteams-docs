@@ -17,8 +17,8 @@ To build apps for Teams, you need a Teams account that allows sideloading (your 
 1. Verify if you can sideload apps in Teams:
     1. In the Teams client, select **Apps**.
     1. Look for an option to **Upload a custom app**.
-:::image type="content" source="../assets/images/app-up-and-running/upload-custom-app-closeup.png" alt-text="Image of the custom app upload link in the Teams client.":::
-1. If you have this option, you can start building. If not, do the following:
+:::image type="content" source="../assets/images/app-up-and-running/upload-custom-app-closeup.png" alt-text="Image of the custom app upload link in the Teams client..":::
+2. If you have this option, you can start building. If not, do the following:
     1. Register for a [Microsoft 365 developer subscription](../concepts/build-and-test/prepare-your-o365-tenant.md).
     1. [Enable custom app sideloading](../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) for your test account.
 
@@ -39,7 +39,6 @@ The Microsoft Teams Toolkit can help you set up your first app project.
 1. When prompted, enter a name for your app. This is the default name for your app and also the name of the project directory on your local machine.
 1. On the **Add capabilities** screen, select **Tab** then **Next**.
 1. Check the **Personal tab** option and select **Finish** to configure your project.
-
 :::image type="content" source="../assets/images/get-started/toolkit-add-tabs.png" alt-text="Example screenshot of using the Teams Toolkit to set up a project with personal tab scaffolding.":::
 
 Once complete, you have the app scaffolding components for building a personal tab.
