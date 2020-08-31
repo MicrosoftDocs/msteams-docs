@@ -24,7 +24,7 @@ Your Teams app can include features users want and might expect when collaborati
 
 |Common app features   |Teams platform capabilities   |
 |----------|-----------|
-|Embedded webpage, homepage, or WebView  |[Tabs](../tabs/what-are-tabs.md)  |
+|Embedded webpage, homepage, or webview  |[Tabs](../tabs/what-are-tabs.md)  |
 |Share shortcuts and extensions  |[Messaging extensions](../messaging-extensions/what-are-messaging-extensions.md)  |
 |Action shortcuts and extensions  |[Messaging extensions](../messaging-extensions/what-are-messaging-extensions.md)  |
 |Chatbots  |[Bots](../bots/what-are-bots.md) |
