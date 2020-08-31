@@ -35,7 +35,7 @@
   - name: Integrating web apps
     href: samples/integrating-web-apps.md
   - name: Low code solutions for Teams custom apps
-    href: samples/importing-custom-microsoft-apps.md
+    href: samples/teams-low-code-solutions.md
   - name: Adding a Share to Teams button to your site
     href: concepts/build-and-test/share-to-teams.md
   - name: Production-ready app templates
