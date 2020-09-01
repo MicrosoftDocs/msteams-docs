@@ -8,9 +8,17 @@ ms.topic: tutorial
 ---
 # Create a bot for Teams
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+In this tutorial, you'll build a basic *bot*, a full-screen content page for a team channel or chat.
 
-:::image type="content" source="../assets/images/overview-bots.png" alt-text="Alt text describes the content of the image.":::
+## Before you begin
+
+You need a basic running app to get started. If you don't have one, follow the instructions at [build and run your Teams first app](../build-your-first-app/build-and-run.md). 
+
+You need a Microsoft account (why???)
+
+1. When you create your app project, choose the **Bot** option.
+1. Select **Create a new bot** and **Login** to sign in with your Microsoft account.
+1. Enter a name for your bot and select **Create**.
 
 ## Your assignment
 
@@ -18,21 +26,19 @@ Need a more proactive way to get in touch with the help desk (i.e., not just sta
 
 ## What you'll learn
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+> [!div class="checklist"]
+>
+> * xxxxx
 
-## Before you begin
-
-You need a running "Hello, World!" Teams app to get started. If you don't have one, see [build and run your first app](../build-your-first-app/build-and-run.md).
-
-## Build a bot
+## Identify relevant app manifest and scaffolding components
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
 
-### Update the app manifest
+### App manifest
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
 
-### Understanding the app scaffolding
+### App scaffolding
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
 
