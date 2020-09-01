@@ -210,20 +210,6 @@ The **side-panel** and **stage** surfaces (specified in the app manifest) provid
 
 The post-meeting and pre-meeting configurations are equivalent.
 
-## Examples
-
-1. A user initiates the action on the Tab to create a Poll.
-
-1. The app calls the Teams SDK **getContext** API to retrieve the following:
-    - meetingId
-    - frameContext
-
-  ![GetContext example](../assets/images/apps-in-meetings/code-sample-one.png)
-
-1. The app calls the **getParticipantRole** API and validates if the user has permissions to create a poll.
-
-1. The app sends an activity to the chat using the **conversationId** to post the Poll to the chat.
-
 ## Learn more
 
  > [!div class="nextstepaction"]
