@@ -7,27 +7,52 @@ keywords: teams publish store office publishing checklist submission prepare
 
 To be listed on AppSource, your app must go through an approval process. This is a free service provided by the Microsoft Teams group that verifies that your app works as described, contains all appropriate metadata, and provides content that would be valuable to an end user. To help you achieve rapid approval, ensure your app meets the following requirements and guidelines:
 
-* **Distribution method:** Make sure your app is meant for a store. There are [other options](../../overview.md) to distribute your app without publishing to AppSource.
-* **App detail page:** Your app meets [App detail page checklist](detail-page-checklist.md)
-* **Tips and frequently failed cases:** Pay extra attention to these [Tips and frequently failed cases](frequently-failed-cases.md) to improve your app submission to approval time.
-* **App manifest:** Check your app manifest against the [App manifest checklist](app-manifest-checklist.md) and manifest checker in App Studio
-* **Testing and debugging:** You have fully [tested and debugged your app](../../../build-and-test/debug.md).
-* **Validation policies:** It must pass all current [AppSource validation policies](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams) for Teams tabs and bots. Please note that these policies are subject to change.
-* **Testing notes:** Include [test notes for validation](#test-notes-for-validation)
+* **Distribution method:** Make sure your app is meant for publication on a store platform. There are [other options](../../overview.md) to distribute your app without publishing to AppSource.
+* **Validation policies:** Your app must pass all current [AppSource validation policies](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams). Check your app against the [validation tool](#teams-app-validation-tool) before submission. Please note that these policies are subject to change.
+* **App detail page:** Your app must align with the  [App detail page checklist](detail-page-checklist.md).
+* **Tips and frequently failed cases:** Pay extra attention to the listed [Tips and frequently failed cases](frequently-failed-cases.md)  to improve your app submission and approval time.
+* **App manifest:** Check your app manifest against the [App manifest checklist](app-manifest-checklist.md).
+* **Testing and debugging:** Make certain that you have fully [tested and debugged your app](../../../build-and-test/debug.md).
+* **Testing notes:** Include your [test notes for validation](#test-notes-for-validation)
 * **Privacy policies:** Ensure your [privacy policy, terms of use and support URLs](#privacy-policy-terms-of-use-and-support-urls) follow our guidelines.
 
-Once you have completed all of the above requirements, you can submit your package to App Source through [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource).
+Once you have completed all of the above requirements, submit your package to AppSource through [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource).
+
+## Teams App Validation Tool
+
+The app validation tool consists of an [app validator](#teams-app-validator) and a [preliminary checklist](#preliminary-checklist). The tool replicates the same test cases used by [AppSource](/office/dev/store/submit-to-appsource-via-partner-center) to evaluate your app submission. Therefore,  it's crucial to pass all the test cases prior to submitting your solution to AppSource for approval.The tool can be found in several areas within the Teams platform:
+
+> [!div class="checklist"]
+>
+> * [**App Validator homepage**](https://dev.teams.microsoft.com/appvalidation.html)
+> * [**Teams Visual Studio Code toolkit**](/toolkit/visual-studio-code-overview.md)
+> * [**App Studio**](/concepts/build-and-test/app-studio-overview.md)
+
+### Teams app validator
+
+The **Validate** page allows you to check your app package before submission to AppSource. Simply upload your app package and the validation tool will check your app against all manifest-related test cases. For each failed test, the description provides a documentation link to help you fix the error.
+
+![Validation tool](../../../../assets/images/validation-tool/validator.png)
+
+### Preliminary checklist
+
+For test scenarios that are difficult to automate, the preliminary checklist surfaces seven of the most commonly failed test cases.
+
+![Preliminary checklist](../../../../assets/images/validation-tool/preliminary-checklist.png)
 
 ## Privacy policy, terms of use and support URLs
 
 ### Privacy policy
 
 Privacy policy guidelines:
-* The privacy policy can be either specific to your app and/or add-in or an overall policy for all of your services. 
-* If you use a generic privacy policy, it must reference "Services/Applications/Platforms" to cover your Teams app as well as your website. 
-* It must include how you handle user data storage, user data retention, deletion, and security controls information.
-* It must include your contact information.
-* It should not contain broken links, beta URLs, or staging URLs. 
+
+> [!div class="checklist"]
+>
+> * The privacy policy can be specific to your app and/or an overall policy for all of your services.
+> * If you use a generic privacy policy, it must reference "services", "applications", and "platforms" to include your Teams app as well as your website.
+> * It must include how you handle user data storage, user data retention, deletion, and security controls.
+> * It must include your contact information.
+> * It should not contain broken links, beta URLs, or staging URLs.
 
 ### Terms of use
 
@@ -58,6 +83,3 @@ Please include the following:
 * **Notes regarding the app features in Teams**: Detail all of the capabilities the app offers within Teams and steps for testing each feature.
 
 * **Video showing the app functionality (Optional)**: You can provide a video recording of the product for us to fully understand the functionality of the app.
-
-
-

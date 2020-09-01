@@ -35,7 +35,43 @@ A Teams app consists of three major pieces:
 
 1. The Microsoft Teams client (web, desktop, or mobile) where users interact with your app.
 1. Your app, service, workflow, or website that performs the necessary logic, data storage, and API calls to power your app.
-1. Your app package, which you use to install the app in Teams. It contains app metadata (name, icons, etc.) and pointers to your services.
+1. Your app package, which you use to install the app in Teams. It contains app metadata (name, icons, etc.) and pointers to your services. 
+
+## Prerequisites
+
+### Set up your development account
+
+To build apps for Teams, you need a Teams account that allows sideloading (your account may already provide this).
+1. If you have a Teams account, verify if you can sideload apps in Teams:
+    1. In the Teams client, select **Apps**.
+    1. Look for an option to **Upload a custom app**.
+:::image type="content" source="../assets/images/build-your-first-app/sideload-option.png" alt-text="sideload option view":::
+
+<!-- markdownlint-disable MD033 -->
+<details>
+
+  <summary>Don't see "upload a custom app" or don't have a Teams account? Click here.</summary>
+Do the following to acuqire an account that allows custom app sideloading:
+
+1. Join [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program) to get a test account. This will only take 2 minutes.
+1. Go through the questionnaire and click on "set up E5 subscription"
+:::image type="content" source="../assets/images/build-your-first-app/dev-program-setup.png" alt-text="dev program setup view":::
+1. Set your account and passowrd when you finish you should see this. 
+:::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="dev program subscription view":::
+1. Use the admininistrator email address and the password you just set up to log into Teams
+1. Verify you now have the upload a custom app option
+
+</details>
+
+### Get your development tools
+
+You can build Teams apps with your preferred tools, but here's what you need to get started quickly with Visual Studio Code and the Microsoft Teams Toolkit.
+
+1. Install the latest version of [Visual Studio Code](https://code.visualstudio.com/download). Earlier versions might not work with the toolkit.
+1. In Visual Studio Code, select **Extensions** :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: on the left Activity Bar and install the **Microsoft Teams Toolkit**.
+:::image type="content" source="../assets/images/build-your-first-app/VSC-install-toolkit.png" alt-text="install toolkit view":::
+1. Install [Node.js](https://nodejs.org/en/).
+1. Install [ngrok](https://ngrok.com/download). We will use this to [set up a secure tunnel](../concepts/build-and-test/debug.md##locally-hosted) so that Teams can access your app.
 
 ## Next step
 

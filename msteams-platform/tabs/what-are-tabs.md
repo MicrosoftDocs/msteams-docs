@@ -4,7 +4,6 @@ author: laujan
 description: An overview of custom tabs on the Microsoft Teams platform
 ms.topic: overview
 ms.author: lajanuar
-ms.topic: overview
 ---
 # What are tabs?
 

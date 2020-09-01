@@ -111,7 +111,8 @@ Card based mentions are supported in Web, Desktop and mobile clients. You can ad
 Bots and messaging extensions can include mentions within the card content in [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) and [FactSet](https://adaptivecards.io/explorer/FactSet.html) elements.
 
 > [!NOTE]
->[Media elements](https://adaptivecards.io/explorer/Media.html) are currently not supported in Adaptive cards v1.2 on the Teams platform.
+> * [Media elements](https://adaptivecards.io/explorer/Media.html) are currently not supported in Adaptive cards v1.2 on the Teams platform.
+> * Channel & Team mentions are not supported in bot messages.
 
 ### Constructing mentions
 

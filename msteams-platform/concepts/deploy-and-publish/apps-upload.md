@@ -94,7 +94,7 @@ With the app loaded in the team or conversation, users can set up a Connector us
 
 1. Go to a channel in the team. Choose *More options* (*&#8943;*) and choose *Connectors*.
 
-2. Select your Connector from the **Uploaded** section at the bottom.
+2. Select your Connector from the **Sideloaded** section at the bottom.
 
 3. Configure your Connector via its [configuration page](../../webhooks-and-connectors/how-to/connectors-creating.md) and choose *Save*.
 

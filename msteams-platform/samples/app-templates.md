@@ -1,6 +1,7 @@
 ---
 title: Microsoft Teams app templates
 description: Links and descriptions of app templates for the Microsoft Teams platform
+ms.topic: reference
 keywords: Microsoft Teams templates samples demo
 ---
 
@@ -70,6 +71,23 @@ It provides a foundation to build custom targeted communication capabilities suc
 
 ![FAQ Plus gif](../assets/images/CompanyCommunicatorCompose.png)
 
+## Contact Group Lookup &#9734;
+
+The Contact Group Lookup app provides a convenient and useful approach to creating, accessing, and managing your organization's contact groups (formerly known as distribution lists or communication groups). Users can quickly view and chat with group members, view member status, and create a group chat with selected members in the contact group, all within the Teams environment.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-app-contactgrouplookup)
+
+:::row:::
+:::column span="2":::
+    ![Contact Group Lookup pinned favorites view](../assets/images/contact-group-lookup-favorites.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Contact Group Lookup start chat demo](../assets/images/contact-group-lookup-chat.png)
+:::column-end:::
+:::row-end:::
+
 ## CrowdSourcer
 
 CrowdSourcer is a [Microsoft Teams bot](../bots/what-are-bots.md) that gives teams queried information sourced collaboratively from group members. It's a great way to answer frequently asked questions while enabling participants to actively engage in and contribute to a fun and helpful information resource.
@@ -88,6 +106,23 @@ This app also enables easy sharing of images/GIFs/stickers across teams without 
 
 ![Stickers app](../assets/images/stickers.png)
 
+## E-Prescriptions &#9734; 
+
+E-Prescriptions is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app)-based app that enhances telemedicine and virtual care by automating the process of issuing e-prescriptions to patients. Medical professionals can quickly review appointments, generate e-prescriptions, and send emails with e-prescription attachments to patients directly within the Teams platform.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-eprescription) 
+
+:::row:::
+:::column span="2":::
+    ![Screenshot of the E-Prescriptions app. Shows how a health-care provider can select a generate button to order a prescription for a patient.](../assets/images/e-prescriptions-app-template.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Screenshot of the E-Prescriptions app. Shows how admins can manage the health-care providers who use the app.](../assets/images/e-prescriptions-app-template-admin.png)
+:::column-end:::
+:::row-end:::
+
 ## Expert Finder
 
 Expert Finder is a [Microsoft Teams bot](../bots/what-are-bots.md) that identifies specific organization members based on their skills, interests, and education attributes. Members find experts within an organization  that match a keyword search of Azure Active Directory user profiles.
@@ -96,7 +131,7 @@ Expert Finder is a [Microsoft Teams bot](../bots/what-are-bots.md) that identifi
 
 ![Expert Finder search results demo](../assets/images/expert-finder.png)
 
-## FAQ Plus 
+## FAQ Plus
 
 Conversational Q&A bots are an easy way to provide answers to frequently asked questions by users. However, most bots fail to engage with users in meaningful way because there is no human in the loop when the bot fails. FAQ bot is a friendly Q&A bot that brings a human in the loop when it is unable to help. One can ask the bot a question and the bot responds with an answer if it is contained in the knowledge base. If not, the bot allows the user to submit a query which then gets posted to a pre-configured team of experts who help to provide support by acting upon the notifications from within the team itself.
 
@@ -109,11 +144,45 @@ Conversational Q&A bots are an easy way to provide answers to frequently asked q
 >
 > &#x2714; Track the revision history of Q&As.
 >
-> &#x2714; Configure an answer with additional details to display as an [adaptive card](/task-modules-and-cards/cards/cards-reference#adaptive-card).
+> &#x2714; Configure an answer with additional details to display as an [adaptive card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card).
 >
 [**Get it on GitHub**](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
 
 ![FAQ Plus gif](../assets/images/FAQPlusEndUser.gif)
+
+## Goal Tracker &#9734;
+
+The Goal Tracker app is a comprehensive solution for your organization to support establishing goals, observing progress, and acknowledging success within Microsoft Teams. The app enables users to set, track, and update objectives on a professional, personal, and team level. Team members also receive timely reminders and status updates to remain focused and stay on track.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-app-goaltracker)
+
+:::row:::
+  :::column span="2":::
+    ![Set goals](../assets/images/goal-tracker-set-goals-view.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![View set goals](../assets/images/goal-tracker-your-goals-view.png)
+:::column-end:::
+:::row-end:::
+
+## Great Ideas &#9734;
+
+The Great Ideas app supports and empowers innovation and creativity within your organization. The app enables your employees to share ideas with colleagues and leadership, discover new submissions, spotlight contributions for peer consideration, and cast their vote for the best proposals within Microsoft Teams.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-greatideas)
+
+:::row:::
+  :::column span="2":::
+    ![View submitted ideas](../assets/images/great-ideas-all-view.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![View ideas](../assets/images/great-ideas-digest-view.png)
+:::column-end:::
+:::row-end:::
 
 ## Group Activities
 
@@ -129,6 +198,23 @@ Group Activities is a Microsoft Teams app that makes it easy for team owners to 
 :::row:::
 :::column span="2":::
     ![Group activity notification message in a channel](../assets/images/group-activities-2.png)
+:::column-end:::
+:::row-end:::
+
+## Grow Your Skills &#9734;
+
+The Grow Your Skills app supports professional growth and development by enabling employees to contribute to supplemental projects for your organization while simultaneously learning new skills. Employees can use the app to locate opportunities that meet their interests, enjoy meaningful collaboration with peers, and acquire new levels of expertise and capabilities, all within the Teams environment.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-growyourskills)
+
+:::row:::
+  :::column span="2":::
+    ![Available projects view](../assets/images/grow-your-skills-all-projects-view.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Viewer's acquired skills view](../assets/images/grow-your-skills-acquired-skills-view.png)
 :::column-end:::
 :::row-end:::
 
@@ -265,6 +351,14 @@ Scrums for Group Chat is a supportive scrum assistant that enables group chat me
 
 ![Scrums for Group Chat demo](https://raw.githubusercontent.com/wiki/OfficeDev/microsoft-teams-app-scrumstatus/images/StartScrum.jpg)
 
+## Share Now &#9734;
+
+The Share Now app promotes the positive exchange of information between colleagues by enabling your users to easily share content within the Teams environment. Users engage the app to share items of interest with team members, discover new shared content, set preferences, and bookmark favorites for later reading.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-sharenow)
+
+![Select content view](../assets/images/share-now-suggested-content.png)
+
 ## SharePoint List Search
 
 Collaboration in Microsoft Teams quite often references information contained within items in a SharePoint list. Simply pasting a link to the item in question forces everyone to switch context away from the conversation, find the needed information, then return to Teams to continue the conversation. As the conversation continues typically people will have to switch back to the reference item multiple times to verify new comments and refresh their memories of the information contained within the item. This context switching creates a barrier to smooth collaboration, and is a recipe for things falling through the cracks.
@@ -274,5 +368,47 @@ To help alleviate this pain, we are happy to bring to you the List Search app te
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
 ![List Search app](../assets/images/list-search-template.png)
+
+## Staff Check-ins &#9734;
+
+Staff Check-ins is a [Power Apps](/powerapps/powerapps-overview)-based app that enables oversight communication between your business and field personnel. Staff can easily provide time-critical information and status updates on either a scheduled or ad-hoc basis directly from Teams. The app supports real-time location, photos, and notes as well as reminder notifications and automated workflows.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-staffcheckins)
+
+![Create check-in view](../assets/images/staff-check-ins-create.png)
+
+## Visitor Management &#9734;
+
+The Visitor Management app enables your organization and employees to easily and efficiently manage the on-site visitor process, directly from Microsoft Teams. The app enables employees to create visitor requests, centrally track a request status through the visitor dashboard, and receive real-time notifications when a visitor arrives.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-app-visitormanagement)
+
+:::row:::
+  :::column span="2":::
+    ![Create a request view](../assets/images/visitor-management-create-request.png)
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Visitor arrival notification](../assets/images/visitor-management-notify-host.png)
+:::column-end:::
+:::row-end:::
+
+## Workplace Awards &#9734;
+
+Workplace Awards is a Teams app template that provides a positive framework to foster recognition and encourage the culture of employee appreciation in the modern workplace. The app enables you to setup and manage an employee rewards and recognition (R&R) program where employees can easily nominate and endorse colleagues and your R&R leader can view submitted nominations, grant awards, and announce recipients.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-workplaceawards)
+
+:::row:::
+  :::column span="2":::
+    ![Workplace awards nomination card ](../assets/images/workplace-awards-nominate.png)
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Workplace awards list tab](../assets/images/workplace-awards-champion-tab.png)
+:::column-end:::
+:::row-end:::
 
 Have an idea for an app template you'd like to see? [Please let us know](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).

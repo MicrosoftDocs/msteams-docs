@@ -119,7 +119,7 @@ Jump right in with our first app tutorials, find out how to integrate and import
    You don't need to be a programmer to build a great Teams app. Create an app with little to no code using the Microsoft Power Platform.
 
    > [!div class="nextstepaction"]
-   > [Import a Power Platform app](samples/importing-custom-microsoft-apps.md)
+   > [Low code solutions for Teams apps](samples/teams-low-code-solutions.md)
 
    :::column-end:::
    :::column span="":::

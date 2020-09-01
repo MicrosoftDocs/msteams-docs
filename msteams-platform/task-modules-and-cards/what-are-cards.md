@@ -24,6 +24,15 @@ Teams uses cards in three different places:
 * Bots
 * Messaging extensions
 
+## Adaptive cards and incoming webhooks
+
+> [!NOTE]
+> Adaptive cards are supported in incoming webhooks as part of the [public developer preview program](../resources/dev-preview/developer-preview-intro.md). Public previews are available for early-access and feedback. Although the release is stable and has undergone extensive testing, it is not intended for use in production.
+>
+> ✔ Within the developer preview, all native adaptive card schema elements, except `Action.Submit`, are fully supported.
+>
+> ✔ The supported Actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), and [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
+
 ## Cards in Connectors
 
 Cards were first defined as part of Outlook and Office 365, and are used as part of Office 365 Connectors. Like many Office 365 applications, Teams supports Connectors. You can learn more about Connectors in [Office 365 Connectors for Microsoft Teams](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md), and find the specification for cards in connectors in [Actionable message card reference](/outlook/actionable-messages/card-reference).
