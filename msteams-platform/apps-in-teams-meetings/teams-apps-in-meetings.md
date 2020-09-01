@@ -6,7 +6,7 @@ ms.topic: overview
 ms.author: lajanuar
 keywords: teams apps meetings user participant role api  
 ---
-# Add apps to Teams meetings (Preview)
+# Apps in Teams meetings (Preview)
 
 >[!IMPORTANT]
 > Features included in Microsoft Teams preview are provided for early-access, testing, and feedback purposes only. They may undergo changes before becoming available in the public release and should not be used in production applications.
@@ -29,11 +29,19 @@ Teams’ meeting app extensibility centers on three concepts:
 
 ### Pre-meeting app experience
 
+**Pre-meeting experience:**
+
+![pre-meeting experience](../assets/images/apps-in-meetings/PreMeeting.png)
+
+**Pre-meeting tab:**
+
+![pre-meeting tab view](../assets/images/apps-in-meetings/PreMeetingTab.png)
+
 ✔ Permissioned users can add apps to a meeting via the tab gallery in two ways:
 
 &emsp;&emsp;&#9679; Via the **Details** tab on the Teams scheduling form:
 
-![Teams scheduling form](../assets/images/apps-in-meetings/teams-meeting-scheduling-form.png) 
+![Teams scheduling form](../assets/images/apps-in-meetings/teams-meeting-scheduling-form.png)
 
 &emsp;&emsp;&#9679;  Via the meeting **Chat** tab in an existing meeting:</br> </br>![Chat in a meeting tab](../assets/images/apps-in-meetings/chat-in-meeting.png) </br>&#8199;  
 
@@ -55,15 +63,21 @@ Teams’ meeting app extensibility centers on three concepts:
 
 &emsp;&emsp;&#9679; **Stage**: If your _app manifest_ specifies that your tab is [optimized for stage](create-apps-for-teams-meetings.md#in-meeting), it will be available as part of the share tray experience. Each participant will have a separate instance of the app, fostering  a real-time collaboration experience similar to the [Microsoft Whiteboard](https://support.microsoft.com/en-us/office/use-whiteboard-in-microsoft-teams-7a6e7218-e9dc-4ccc-89aa-b1a0bb9c31ee?ui=en-us&rs=en-us&ad=us) app experience in a Teams meeting.
 
-**The image below depicts an in-meeting experience.**
+**In-meeting experience:**
 
 ![in-meeting experience](../assets/images/apps-in-meetings/in-meeting-experience.png)
 
-**The image below depicts an in-meeting actionable notification for users.**
-
 ![In-meeting-notification view](../assets/images/apps-in-meetings/in-meeting-notification.png)
 
+**In-meeting actionable notification for users:**
+
+![notification view](../assets/images/apps-in-meetings/notification.png)
+
 ### Post-meeting app experience
+
+**Post-meeting experience:**
+
+![post meeting view](../assets/images/apps-in-meetings/PostMeeting.png)
 
 The post-meeting app scenario is similar to the current post-meeting experience with the added benefit of having tabs exist within the surface. Permissioned users can add apps from the tab gallery to a meeting via the **Details** tab on the Teams scheduling form and the meeting **Chat** tab in an existing meeting.
 
