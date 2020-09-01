@@ -124,7 +124,7 @@ Once a meeting begins, Teams participants can interact directly with your messag
 
 1. **Metadata**. When your messaging extension is invoked it can identify the user and tenant from `userId` and `tenantId`. The `meetingId` can be found as part of the `channelData` object. Your app can use the `userId` and `meetingId`  for the `GetParticipant` API request to retrieve user roles.
 
-1. **Command type**. If your message extension uses [action-based commands](../../messaging-extensions/what-are-messaging-extensions.md#action-commands), it should follow tabs [Single Sign-On](../../tabs/how-to/authentication/auth-aad-sso) authentication. 
+1. **Command type**. If your message extension uses [action-based commands](../../messaging-extensions/what-are-messaging-extensions.md#action-commands), it should follow tabs [Single Sign-On](../../tabs/how-to/authentication/auth-aad-sso.md) authentication. 
 
 1. **User experience**. You should determine the intended the end-user experience for messaging extensions invoked during a meeting chat.
 
