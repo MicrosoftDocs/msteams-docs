@@ -62,7 +62,8 @@ In the interest of time, you'll build and run your app locally. Production-level
 1. In a terminal, go to the root directory of your project and run `npm install`.
 1. Run `npm start`. Once complete, there's a **Compiled successfully!** message in the terminal.
 1. Open a browser and go to `https://localhost:3000` to view a blank webpage called **Microsoft Teams Tab**. (Don't worry that you can't see any content on the page.)
-:::image type="content" source="../assets/images/build-your-first-app/local-host-tab.png" alt-text="Viewing the app in a browser.":::
+
+    :::image type="content" source="../assets/images/build-your-first-app/local-host-tab.png" alt-text="Viewing the app in a browser.":::
 
 ## Set up a tunnel between Teams and your app
 
@@ -99,20 +100,26 @@ Expand on the personal tab you just created or build another type of Teams app.
 :::row:::
    :::column span="":::
 <div align="center">
+
 > [!div class="nextstepaction"]
 > [Add to your personal tab](../build-your-first-app/add-personal-tab.md)
+
 </div>
    :::column-end:::
    :::column span="":::
 <div align="center">
+
 > [!div class="nextstepaction"]
 > [Build a channel tab](../build-your-first-app/add-channel-tab.md)
+
 </div>
    :::column-end:::
    :::column span="":::
 <div align="center">
+
 > [!div class="nextstepaction"]
 > [Build a bot](../build-your-first-app/add-bot.md)
+
 </div>
    :::column-end:::
 :::row-end:::
