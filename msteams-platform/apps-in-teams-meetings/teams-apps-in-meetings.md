@@ -83,11 +83,11 @@ The post-meeting app scenario is similar to the current post-meeting experience 
 
 ### Bots
 
-For bot implementation, please see our [Bots in Teams meetings](../bots/how-to/create-a-bot-for-teams.md) documentation.
+For bot implementation, please see our [Bots in Teams meetings](../bots/how-to/create-a-bot-for-teams.md#bots-in-teams-meetings) documentation.
 
 ### Messaging Extensions
 
-For messaging extension implementation, please see our [Messaging extensions in Teams meetings](../messaging-extensions/how-to/create-messaging-extension.md)documentation.
+For messaging extension implementation, please see our [Messaging extensions in Teams meetings](../messaging-extensions/how-to/create-messaging-extension.md#messaging-extensions-in-teams-meetings) documentation.
 
 ## Participant roles and user types in a meeting
 
