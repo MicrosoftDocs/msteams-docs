@@ -53,7 +53,7 @@ Some apps are simple (send notifications), while others are complex (view patien
 
 ### Webhooks
 
-**Communicate with external apps**: [Incoming webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send notifications from another app to a Teams channel. With [outgoing webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), you can message your web service with an @mention.
+**Communicate with external apps**: [Incoming webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send notifications from another app to a Teams channel. With [outgoing webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), message your web service with an @mention.
 
 :::image type="content" source="assets/images/overview-connectors.png" alt-text="Conceptual representation of what connectors look like in the Teams client." border="false":::
 
@@ -114,12 +114,12 @@ Jump right in with our first app tutorials, find out how to integrate and import
 :::row:::
    :::column span="2":::
 
-### No code, no worries
+### A little code goes a long way
 
-   You don't need to be a programmer to build a great Teams app. Create an app with little to no code using the Microsoft Power Platform.
+   You don't need to be an expert programmer to build a great Teams app. Create an app using one of several low-code solutions.
 
    > [!div class="nextstepaction"]
-   > [Low code solutions for Teams apps](samples/teams-low-code-solutions.md)
+   > [Create a low-code app](samples/teams-low-code-solutions.md)
 
    :::column-end:::
    :::column span="":::

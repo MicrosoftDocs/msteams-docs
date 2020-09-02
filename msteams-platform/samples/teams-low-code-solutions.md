@@ -7,13 +7,13 @@ ms.topic: overview
 ---
 # Create low-code custom apps for Microsoft Teams
 
-[Microsoft Teams](/microsoftteams/platform) is both extensible and adaptive. This means that you have the freedom to build custom applications for Teams that meet the distinct needs of your users. Although you can create apps from scratch, with today's demand for speedy solutions, a low-code option  may be just what you need to build elegant apps within a compressed time frame.
+[Microsoft Teams](/microsoftteams/platform) is both extensible and adaptive. This means that you have the freedom to build custom applications for Teams that meet the distinct needs of your users. Although you can create apps from scratch, with today's demand for speedy solutions, a low-code option may be just what you need to build elegant apps within a compressed time frame.
 
-Low code platforms provide an intuitive approach to software development and require little or no coding to build applications and processes.  Citizen developers are enabled to easily build custom apps and professional developers can accelerate the app development and deployment process exponentially. Most low-code platforms consist of a visual interface, connectors to back-end services, and a built in app lifecycle management system to build, debug, deploy and maintain applications. Microsoft provides several innovative gateways to rapidly build great Teams-compatible apps using low-code attributes:
+Low code platforms provide an intuitive approach to software development and require little or no coding to build applications and processes. Citizen developers are enabled to easily build custom apps and professional developers can accelerate the app development and deployment process exponentially. Most low-code platforms consist of a visual interface, connectors to back-end services, and a built in app lifecycle management system to build, debug, deploy and maintain applications. Microsoft provides several innovative gateways to rapidly build great Teams-compatible apps using low-code attributes:
 
 1. [Microsoft Power Platform](#teams-and-microsoft-power-platform)
 1. [Microsoft Teams app templates](#teams-app-templates)
-1. [MicrosoftTeams Toolkit extensions](#teams-toolkit)
+1. [Microsoft Teams Toolkit extensions](#teams-toolkit)
 
 ## Teams and Microsoft Power Platform
 
@@ -23,7 +23,7 @@ Power Platform(/power-platform) combines four robust Microsoft technologies in o
 
 ### ✔ Teams and Power BI
 
-The [Power BI tab for Microsoft Teams](https://powerbi.microsoft.com/blog/announcing-new-power-bi-tab-for-microsoft-teams/) adds support for reports in the Teams workspace and allows users to [share interactive Power BI content](/power-bi/collaborate-share/service-embed-report-microsoft-teams) and [collaborating with others inTeams](/power-bi/collaborate-share/service-collaborate-microsoft-teams) channels and chats. You can create packaged [Power BI app](/power-bi/collaborate-share/service-create-distribute-apps) content from scratch and distribute as an app or you can [Create a template app in Power BI](/connect-data/service-template-apps-create) .
+The [Power BI tab for Microsoft Teams](https://powerbi.microsoft.com/blog/announcing-new-power-bi-tab-for-microsoft-teams/) adds support for reports in the Teams workspace and allows users to [share interactive Power BI content](/power-bi/collaborate-share/service-embed-report-microsoft-teams) and [collaborating with others inTeams](/power-bi/collaborate-share/service-collaborate-microsoft-teams) channels and chats. You can create packaged [Power BI app](/power-bi/collaborate-share/service-create-distribute-apps) content from scratch and distribute as an app or you can [Create a template app in Power BI](/connect-data/service-template-apps-create).
 
 ### ✔ Teams and Power Apps
 
@@ -84,7 +84,7 @@ The Teams Toolkit for Visual Studio and Visual Studio Code is an extension that 
 ### ✔ Project Oakdale (preview)
 
 [Project Oakdale](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180
-) is a new low-code data platform for coming soon to Microsoft Teams. It will will allow developers to create Teams Power Platform solutions directly within Teams. *See* our [Teams Blog Microsoft Project Oakdale page](https://powerapps.microsoft.com/blog/introducing-project-oakdale-a-new-low-code-data-platform-for-microsoft-teams) for more information.
+) is a new low-code data platform for coming soon to Microsoft Teams. It will allow developers to create Teams Power Platform solutions directly within Teams. *See* our [Teams Blog Microsoft Project Oakdale page](https://powerapps.microsoft.com/blog/introducing-project-oakdale-a-new-low-code-data-platform-for-microsoft-teams) for more information.
 
 ### ✔ Microsoft Blog insights
 
@@ -95,4 +95,3 @@ The Teams Toolkit for Visual Studio and Visual Studio Code is an extension that 
 [Teams is shaping the future of work with low code features to enhance your digital workspace](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180)
 
 [Introducing the Microsoft Teams and Power Apps whitepaper](https://aka.ms/PowerAppsTeams_whitepaper)
-L
