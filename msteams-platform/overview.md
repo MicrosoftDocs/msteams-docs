@@ -116,7 +116,7 @@ Jump right in with our first app tutorials, find out how to integrate and import
 
 ### A little code goes a long way
 
-   You don't need to be an expert programmer to build a great Teams app. Create an app using one of several low-code solutions.
+   You don't need to be an expert programmer to build a great Teams app. Build an app using one of several low-code solutions.
 
    > [!div class="nextstepaction"]
    > [Create a low-code app](samples/teams-low-code-solutions.md)
