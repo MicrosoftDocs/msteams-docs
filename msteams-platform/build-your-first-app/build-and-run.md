@@ -97,29 +97,11 @@ With your app running and accessible via HTTPS, you're ready to upload it to Tea
 
 Expand on the personal tab you just created or build another type of Teams app.
 
-:::row:::
-   :::column span="":::
-<div align="center">
-
 > [!div class="nextstepaction"]
 > [Add to your personal tab](../build-your-first-app/add-personal-tab.md)
-
-</div>
-   :::column-end:::
-   :::column span="":::
-<div align="center">
 
 > [!div class="nextstepaction"]
 > [Build a channel tab](../build-your-first-app/add-channel-tab.md)
 
-</div>
-   :::column-end:::
-   :::column span="":::
-<div align="center">
-
 > [!div class="nextstepaction"]
 > [Build a bot](../build-your-first-app/add-bot.md)
-
-</div>
-   :::column-end:::
-:::row-end:::
