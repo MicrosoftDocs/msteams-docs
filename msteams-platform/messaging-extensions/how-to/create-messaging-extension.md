@@ -116,7 +116,7 @@ The example below is a simple messaging extension object in the app manifest wit
 
 When your users trigger your messaging extension you'll need to handle the initial invoke message, collect some information from the user, then process that information and respond appropriately. To do that, you'll first need to decide what kind of commands you want to add to your messaging extension and either [add an action commands](~/messaging-extensions/how-to/action-commands/define-action-command.md) or [add a search commands](~/messaging-extensions/how-to/search-commands/define-search-command.md).
 
-## Messaging extensions in Teams meeting
+## Messaging extensions in Teams meetings
 
 Once a meeting begins, Teams participants can interact directly with your messaging extension during a live call. Consider the following when building your in-meeting messaging extension:
 
