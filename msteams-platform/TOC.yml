@@ -8,7 +8,7 @@
 - name: Build your first app
   expanded: true
   items:
-  - name: Overview
+  - name: Overview and prerequisites
     href: build-your-first-app/building-real-world-app.md
   - name: Build and run your first app
     href: build-your-first-app/build-and-run.md
@@ -16,9 +16,10 @@
     href: build-your-first-app/add-personal-tab.md
   - name: Build a channel tab
     href: build-your-first-app/add-channel-tab.md
+  - name: Build a bot
+    href: build-your-first-app/add-bot.md
 - name: Understand app capabilities
   items:
-
   - name: Overview
     href: concepts/capabilities-overview.md
   - name: Tabs
@@ -30,7 +31,6 @@
   - name: Webhooks and connectors
     href: webhooks-and-connectors/what-are-webhooks-and-connectors.md 
 - name: App integrations and templates
-
   items: 
   - name: Integrating web apps
     href: samples/integrating-web-apps.md

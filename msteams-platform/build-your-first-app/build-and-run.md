@@ -12,27 +12,22 @@ You can jump right into developing on the Microsoft Teams platform by quickly bu
 
 ## Create an app project
 
-The Microsoft Teams Toolkit can help you set up your first app project.
+Use the Microsoft Teams Toolkit in Visual Studio Code to quickly set up your first app project.
 
-1. In Visual Studio Code, click on extension icon on the left Activity Bar and then search for "Microsoft Teams Toolkit". Install the toolkit
-:::image type="content" source="../assets/images/build-your-first-app/VSC-install-toolkit.png" alt-text="install toolkit image":::
-1. Select **Create a new Teams app**.
-1. When prompted, enter a name for your app. This is the default name for your app and also the name of the project directory on your local machine.
+1. In Visual Studio Code, select the **Microsoft Teams** icon on the left Activity Bar and choose **Create a new Teams app**.
 :::image type="content" source="../assets/images/build-your-first-app/create-teams-app.png" alt-text="create teams app image":::
+1. Enter the name for your Teams app. (This is the default name for your app and also the name of the app project directory on your local machine.)
 1. On the **Add capabilities** screen, select **Tab** then **Next**.
-1. Check the **Personal tab** option and select **Finish** to configure your project.
-:::image type="content" source="../assets/images/build-your-first-app/personal-tab.png" alt-text="Example screenshot of using the Teams Toolkit to set up a project with personal tab scaffolding.":::
+:::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="create teams app image":::
+1. Check the **Personal tab** option and select **Finish** at the bottom of the screen to configure your project.
 
-Once complete, you have the app scaffolding components for building a personal tab.
+## Understand important app project files
 
+Once the toolkit sets up your project, you have the components to build a basic Teams app. The project directories and files display in the Explorer area of Visual Studio Code.
 
-## Important app project files
+:::image type="content" source="../assets/images/build-your-first-app/app-project-files.png" alt-text="App project files in Visual Studio Code.":::
 
-After the toolkit completes the scaffold, you should see a page like below.  
-The toolkit panel in the middle has many useful tools to allow you edit, publish and validate your app. See more about the toolkit [here](../toolkit/visual-studio-code-overview).  
-On the left is the code scaffold. It has the basic hello world app code to get your app running. Let's take some time to understand some of the key files Teams app developers work with.
-
-:::image type="content" source="../assets/images/build-your-first-app/tab-readme.png" alt-text="tab readme image":::
+Let's take time to understand some of the key files Teams app developers work with.
 
 ### App manifest (`manifest.json`)
 
@@ -40,9 +35,15 @@ Located in the `.publish` directory, the app manifest is the starting point for 
 
 In the following tutorials, you'll focus on the sections of the app manifest for building personal and channel tabs.
 
-### Package (`Development.zip`)
+### App scaffolding (`src`)
 
-Also located in the `.publish` directory, you need the app package to [sideload your app](../concepts/deploy-and-publish/overview.md#upload-your-app-directly) in Teams. It's also used when [publishing to your organization's app catalog](../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog) or [AppSource](../concepts/deploy-and-publish/appsource/publish.md).
+The toolkit automatically creates scaffolding for you in the `src` directory based on the capabilities you added during setup.
+
+If you create a tab during setup, for example, the `App.js` file in the `src/components` directory is important because it handles the initialization and routing of your app. It calls the [Microsoft Teams SDK](../tabs/how-to/using-teams-client-sdk.md) to establish communication between your app and Teams.
+
+### App package (`Development.zip`)
+
+Located in the `.publish` directory, you need the app package to [sideload your app](../concepts/deploy-and-publish/overview.md#upload-your-app-directly) in Teams. The package is also used when [publishing to your organization's app catalog](../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog) or [AppSource](../concepts/deploy-and-publish/appsource/publish.md).
 
 Here are some details about the app package files:
 
@@ -52,37 +53,60 @@ Here are some details about the app package files:
 |**Color logo**|`.png`|192&times;192 pixels|`icon.color`|`.publish/color.png`|
 |**Outline logo**|`.png`|32&times;32 pixels|`icon.outline`|`.publish/outline.png`|
 
-### Scaffolding (`src`)
+## Run your app
 
-The toolkit automatically creates scaffolding for you in the `src` directory based on the capabilities you added during setup.
+In the interest of time, you'll build and run your app locally. Production-level Teams apps are hosted in the cloud.
 
-Some files are created no matter what kind of app you have, though. For example, the `App.js` file in the `src/components` directory is important because it handles the initialization and routing of your app. Most importantly, it calls the [Microsoft Teams SDK](../tabs/how-to/using-teams-client-sdk.md) to establish communication between your app and Teams.
+(This information is also available in the toolkit `README`.)
 
-You can learn more about scaffolding in the tutorials for creating personal and channel tabs.
+1. In a terminal, go to the root directory of your project and run `npm install`.
+1. Run `npm start`. Once complete, there's a **Compiled successfully!** message in the terminal.
+1. Open a browser and go to `https://localhost:3000` to view a blank webpage called **Microsoft Teams Tab**. (Don't worry that you can't see any content on the page.)
+:::image type="content" source="../assets/images/build-your-first-app/local-host-tab.png" alt-text="Viewing the app in a browser.":::
 
-## Run your app   
-Now let's get your app running. Follow the below steps to get your app running in Teams client. You can also follow the `README` in the toolkit. The information is pasted here for your convenience. 
+## Set up a tunnel between Teams and your app
 
-1. Run `npm install` in the project directory. This steps can take couple minutes 
-1. Run `npm start`. When this finishes, you should see a instance is running on localhost 3000
-:::image type="content" source="../assets/images/build-your-first-app/npm-start.png" alt-text="npm start image":::
-1. Now we have the hello world app running locally, We need to make it globally available so Teams can access it. We will use ngrok to do that. Install [ngrok](https://ngrok.com/download) if you haven't installed it in the previous step.  
-1. Open a new terminal and run the command `ngrok http 3000`. This creates two globally available ngrok website that points to our localhost 3000. We will be using the second fowarding url since Teams only accept https
+Your app is up and running on your local web server. To run your app in Teams, you must make your `localhost` accessible through HTTPS.
+
+Install [ngrok](https://ngrok.com/download) if you haven't already. The tool creates two globally available URLs that point to your local web server (`http://localhost:3000`). You need the forwarding URL that begins with `HTTPS`.
+
+1. Open a new terminal and run `ngrok http 3000`.
 :::image type="content" source="../assets/images/build-your-first-app/ngrok-running.png" alt-text="ngrok running image":::
-1. Copy your ngrok url (eg,  https://85528b2b3ba5.ngrok.io). Go to `.publish` > `development.env` and find the line `baseUrl0=http://localhost:3000`. Replace the baseUrl0 with your ngrok url. (eg. `baseUrl0=https://85528b2b3ba5.ngrok.io`) 
-1. Save the change and your `development.zip` in `.publish` will be automatically updated with this new information. Now we are ready to upload this package into Teams. Use the [validation tool](../concepts/deploy-and-publish/appsource/prepare/submission-checklist#teams-app-validation-tool) in the toolkit panel to make sure your package is good to go. Yellow warning is okay just make sure there is no red errors. 
-:::image type="content" source="../assets/images/build-your-first-app/validate.png" alt-text="build your first app image":::
-1. Go to Teams and log in with the account that allows you to sideload. Click on Upload a custom app. Select `Development.zip` in the `.publish` folder.
-:::image type="content" source="../assets/images/build-your-first-app/upload-custom-app-closeup.png" alt-text="upload custom app image":::
-1. If the package is good to go you should see an install dialog. You need to click on the app if you are using an admin account.
+1. Copy the HTTPS URL (for example, *<https://85528b2b3ba5.ngrok.io>*).
+1. In your `.publish` directory, open `Development.env`. 
+1. Replace the `baseUrl0` value with the copied URL. (For example, change `baseUrl0=http://localhost:3000` to `baseUrl0=https://85528b2b3ba5.ngrok.io`.)
+
+## Sideload your app in Teams
+
+With your app running and accessible via HTTPS, you're ready to upload it to Teams.
+
+> [!TIP]
+> Before trying to sideload your app, check for issues using the [toolkit's validation feature](../concepts/deploy-and-publish/appsource/prepare/submission-checklist#teams-app-validation-tool). You must fix red errors to successfully sideload your app.
+
+1. Log in to the Teams client with your account that allows app sideloading. (If you aren't sure what that means, see more about [Teams development accounts](../build-your-first-app/building-real-world-app.md).)
+1. Select **Apps**, then choose **Upload a custom app**. 
+1. Go to your app project `.publish` folder and select `Development.zip`. An install modal displays.
 :::image type="content" source="../assets/images/build-your-first-app/add-teams-app.png" alt-text="add teams app":::
-1. Once you click "add", you should see your persoanl tab running
+1. Select **Add** to install your app.
 :::image type="content" source="../assets/images/build-your-first-app/tab-running.png" alt-text="Screenshot showing an example Hello, World! app in Teams.":::
 
+🎉 Congratulations! You have a running Teams app.
 
 ## Next step
 
-🎉 Congratulations! You have a running Teams app. Select the following button to learn how to add a real-world feature to it.
+Learn how to get started with other types of Teams apps.
 
+:::row:::
+   :::column span="":::
 > [!div class="nextstepaction"]
-> [Build a personal tab](../build-your-first-app/add-personal-tab.md)
+> [Expand on your personal tab](../build-your-first-app/add-personal-tab.md)
+   :::column-end:::
+   :::column span="":::
+> [!div class="nextstepaction"]
+> [Build a channel tab](../build-your-first-app/add-channel-tab.md)
+   :::column-end:::
+   :::column span="":::
+> [!div class="nextstepaction"]
+> [Build a bot](../build-your-first-app/add-bot.md)
+   :::column-end:::
+:::row-end:::

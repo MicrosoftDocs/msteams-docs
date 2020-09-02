@@ -25,7 +25,7 @@ The app validation tool consists of an [app validator](#teams-app-validator) and
 > [!div class="checklist"]
 >
 > * [**App Validator homepage**](https://dev.teams.microsoft.com/appvalidation.html)
-> * [**Teams Visual Studio Code toolkit**](/toolkit/visual-studio-code-overview.md)
+> * [**Microsoft Teams Toolkit for Visual Studio Code**](/toolkit/visual-studio-code-overview.md)
 > * [**App Studio**](/concepts/build-and-test/app-studio-overview.md)
 
 ### Teams app validator
