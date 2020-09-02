@@ -84,7 +84,7 @@ Jump right in with our first app tutorials, find out how to integrate and import
 
 ### Start building
 
-   Quickly familiarize yourself with building for Teams by creating a simple app and adding a couple commonly used capabilities.
+   Quickly familiarize yourself with building for Teams by creating a simple app and adding some commonly used capabilities.
 
    > [!div class="nextstepaction"]
    > [Build your first app now](build-your-first-app/building-real-world-app.md)
