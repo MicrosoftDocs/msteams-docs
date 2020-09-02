@@ -172,7 +172,7 @@ If you've been using App Studio, you can install your app from the **Test and di
 
 ## Bots in Teams meetings
 
-Teams supports bot invocation during meetings. When the bot receives the invoke message, it can identify the user and tenant from `userId` and `tenantId`. The `meetingId` can be found as part of the `channelData` object. Your bot can use the `userId` and `meetingId`  for the `GetParticipant` API request to retrieve user roles.
+Teams supports bot invocation during meetings. When your bot receives the invoke message, it can identify the user and tenant from `userId` and `tenantId`. The `meetingId` can be found as part of the `channelData` object. Your bot can use the `userId` and `meetingId`  for the `GetParticipant` API request to retrieve user roles.
 
 ## Next steps
 
