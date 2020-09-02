@@ -8,7 +8,7 @@ ms.topic: quickstart
 ---
 # Build and run your first Microsoft Teams app
 
-You can jump right into developing on the Microsoft Teams platform by quickly building and running a basic app.
+You can jump right into developing on the Microsoft Teams platform by quickly building and running a basic app. In this lesson, you'll create a simple personal tab.
 
 ## Create an app project
 
@@ -83,30 +83,36 @@ With your app running and accessible via HTTPS, you're ready to upload it to Tea
 > [!TIP]
 > Before trying to sideload your app, check for issues using the [toolkit's validation feature](../concepts/deploy-and-publish/appsource/prepare/submission-checklist#teams-app-validation-tool). You must fix red errors to successfully sideload your app.
 
-1. Log in to the Teams client with your account that allows app sideloading. (If you aren't sure what that means, see more about [Teams development accounts](../build-your-first-app/building-real-world-app.md).)
+1. Log in to the Teams client with your account that allows app sideloading. (If you aren't sure what that means, see more about [Teams development accounts](../build-your-first-app/building-real-world-app.md#set-up-your-development-account).)
 1. Select **Apps**, then choose **Upload a custom app**. 
 1. Go to your app project `.publish` folder and select `Development.zip`. An install modal displays.
 :::image type="content" source="../assets/images/build-your-first-app/add-teams-app.png" alt-text="add teams app":::
 1. Select **Add** to install your app.
 :::image type="content" source="../assets/images/build-your-first-app/tab-running.png" alt-text="Screenshot showing an example Hello, World! app in Teams.":::
 
-🎉 Congratulations! You have a running Teams app.
+🎉 Congratulations! Your app (personal tab) is running in Teams.
 
 ## Next step
 
-Learn how to get started with other types of Teams apps.
+Expand on the personal tab you just created or build another type of Teams app.
 
 :::row:::
    :::column span="":::
+<div align="center">
 > [!div class="nextstepaction"]
-> [Expand on your personal tab](../build-your-first-app/add-personal-tab.md)
+> [Add to your personal tab](../build-your-first-app/add-personal-tab.md)
+</div>
    :::column-end:::
    :::column span="":::
+<div align="center">
 > [!div class="nextstepaction"]
 > [Build a channel tab](../build-your-first-app/add-channel-tab.md)
+</div>
    :::column-end:::
    :::column span="":::
+<div align="center">
 > [!div class="nextstepaction"]
 > [Build a bot](../build-your-first-app/add-bot.md)
+</div>
    :::column-end:::
 :::row-end:::
