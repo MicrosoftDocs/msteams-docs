@@ -76,7 +76,7 @@ Teams displays app content only through HTTPS connections. Since you'll host you
 1. Install [Node.js](https://nodejs.org/en/).
 1. Install the latest version of [Visual Studio Code](https://code.visualstudio.com/download). (Earlier versions might not work with the toolkit.)
 1. In Visual Studio Code, select **Extensions** :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: on the left Activity Bar and install the **Microsoft Teams Toolkit**.
-    :::image type="content" source="../assets/images/build-your-first-app/VSC-install-toolkit.png" alt-text="install toolkit view":::
+    :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="install toolkit view":::
 1. Install [ngrok](https://ngrok.com/download).
 
 ## Next step
