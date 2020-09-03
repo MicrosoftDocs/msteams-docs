@@ -29,9 +29,9 @@ AppSource (formerly known as Office Store) provides a convenient location for yo
 
 ## Government Community Cloud (GCC) organizations
 
-### Upload your LOB app directly to Teams
+### Upload your custom app directly to Teams
 
- As a GCC tenant administrator, you'll decide whether to upload a custom LOB app to your tenant environment and whether to  publish it to your tenant app catalog. Microsoft doesn't own or control your LOB applications, therefore, you must ensure that all endpoints are compliant with your organization's requirements. Additionally, if the app solution includes a bot or message extension, you'll need to complete the [Bot Framework](https://dev.botframework.com/) registration as follows:
+ As a GCC tenant administrator, you'll decide whether to upload a custom app to your tenant environment and whether to  publish it to your tenant app catalog. Microsoft doesn't own or control your custom applications, therefore, you must ensure that all endpoints are compliant with your organization's requirements. Additionally, if the app solution includes a bot or message extension, you'll need to complete the [Bot Framework](https://dev.botframework.com/) registration as follows:
 
 1. On the **Connect to channels** page, under **Add a featured channel**, select **Teams**.
 1. Navigate to the **Configure MSTeams** page (*see* below).
@@ -39,13 +39,13 @@ AppSource (formerly known as Office Store) provides a convenient location for yo
 1. In the lower left corner of the page, select **Save**.  
 
 >[!IMPORTANT]
-> You cannot use the Teams commercial configuration to upload/sideload your LOB or custom app to a GCC environment,  You must select the **Microsoft Teams for Government Customers** radio button for a GCC compliant configuration.
+> You cannot use the Teams commercial configuration to upload/sideload your custom app to a GCC environment,  You must select the **Microsoft Teams for Government Customers** radio button for a GCC compliant configuration.
 
 ![Teams messaging configuration page](../../assets/images/gcc-configure.png)
 
 > [!NOTE]
 >
-> * The uploading instructions for GCC environments, presented above, applies to Teams LOB apps. </br>
+> * The uploading instructions for GCC environments, presented above, applies to Teams custom apps. </br>
 > * Compliant Microsoft apps are enabled in the GCC environment, by default, in Teams.
 > * Third-party apps are disabled at the tenant level and should be managed via your organization's [app permission policies](/microsoftteams/teams-app-permission-policies). Make certain that you review all third-party apps to ensure that they align with your organization's policies and procedures.
 
