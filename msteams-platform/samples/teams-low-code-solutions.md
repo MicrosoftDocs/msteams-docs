@@ -13,7 +13,6 @@ Low code platforms provide an intuitive approach to software development and req
 
 1. [Microsoft Power Platform](#teams-and-microsoft-power-platform)
 1. [Microsoft Teams app templates](#teams-app-templates)
-1. [Microsoft Teams Toolkit extensions](#teams-toolkit)
 
 ## Teams and Microsoft Power Platform
 
@@ -50,12 +49,6 @@ With the [Power Automate app in Teams](/power-automate/flows-teams), you can [cr
 ### ✔ Virtual Assistant for Teams
 
 Virtual Assistant is a Microsoft open-source template that enables you to create a robust conversational solution while maintaining full control of user experience, organizational branding, and necessary data. You can configure your virtual assistant for [integration into the Teams environment](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro). 
-
-## Teams Toolkit
-
-:::image type="content" source="../assets/images/power-platform-and-teams/toolkit-integration-install-configure.png" alt-text="install and configure illustration":::
-
-The Teams Toolkit for Visual Studio and Visual Studio Code is an extension that make it easy for you to develop, debug, and deploy Teams applications. guide you through the entire process of building, debugging, and launching your Teams app directly within the [Visual Studio Code](../toolkit/visual-studio-code-overview.md) or [Visual Studio](../toolkit/visual-studio-overview.md) environments.
 
 ## Additional Resources
 
