@@ -10,7 +10,7 @@ ms.topic: quickstart
 
 You can jump right into developing on the Microsoft Teams platform by quickly building and running a basic personal tab.
 
-## Create an app project
+## Create your app project
 
 Use the Microsoft Teams Toolkit in Visual Studio Code to set up your first app project.
 
@@ -59,7 +59,7 @@ In the interest of time, you'll build and run your app locally. Production-level
 
 1. In a terminal, go to the root directory of your app project and run `npm install`.
 1. Run `npm start`. Once complete, there's a **Compiled successfully!** message in the terminal.
-1. Open a browser and go to `https://localhost:3000` to view a blank webpage called **Microsoft Teams Tab**. (Don't worry that you can't see any content on the page.)
+1. Open a browser and go to `https://localhost:3000` to view a blank webpage called **Microsoft Teams Tab**. (Don't worry that you can't see any content on the page.)<br/>
    :::image type="content" source="../assets/images/build-your-first-app/local-host-tab.png" alt-text="Viewing the app in a browser.":::
 
 ## Set up a secure tunnel to your app
@@ -69,7 +69,7 @@ Your app is up and running on your local web server. To run your app in Teams, y
 Install [ngrok](https://ngrok.com/download) if you haven't already. When you run this tool, you create two globally available URLs that point to your local web server (`http://localhost:3000`). You need the forwarding URL that begins with `HTTPS`.
 
 1. Open a new terminal and run `ngrok http 3000`.
-1. Copy the HTTPS URL (see the following example).
+1. Copy the HTTPS URL you're provided (see the following example).
 :::image type="content" source="../assets/images/build-your-first-app/ngrok-running.png" alt-text="ngrok running image":::
 1. In your `.publish` directory, open `Development.env`.
 1. Replace the `baseUrl0` value with the copied URL. (For example, change `baseUrl0=http://localhost:3000` to `baseUrl0=https://85528b2b3ba5.ngrok.io`.)
@@ -96,9 +96,7 @@ Expand on the personal tab you just created or build another type of Teams app.
 
 > [!div class="nextstepaction"]
 > [Add to your personal tab](../build-your-first-app/add-personal-tab.md)
-
 > [!div class="nextstepaction"]
 > [Build a channel tab](../build-your-first-app/add-channel-tab.md)
-
 > [!div class="nextstepaction"]
 > [Build a bot](../build-your-first-app/add-bot.md)

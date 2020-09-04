@@ -183,6 +183,13 @@ Once you select **Save** to configure the tab, the content displays.
 
 Congratulations! You have a Teams app with a channel tab for displaying useful content in channels and chats.
 
+## Next step
+
+You know how to build a tab for collaboration. Want to try building a different kind of Teams app?
+
+> [!div class="nextstepaction"]
+> [Build a bot](../build-your-first-app/add-bot.md)
+
 ## Learn more
 
 * [Authenticate tab users with SSO](../tabs/how-to/authentication/auth-aad-sso.md): If you only want authorized users viewing your tab, set up single sign-on (SSO) through Azure Active Directory (AD).
