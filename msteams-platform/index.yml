@@ -119,7 +119,7 @@ conceptualContent:
       links:
         - url: /microsoftteams/platform/feedback
           itemType: overview
-          text: Microsoft Teams Community Response & Feedback
+          text: Microsoft Teams Developer Community and response
 
 # tools section
 tools:
