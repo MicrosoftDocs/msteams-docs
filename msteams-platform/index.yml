@@ -114,9 +114,12 @@ conceptualContent:
         - url: https://aka.ms/microsoftteamscommunitycall
           itemType: overview
           text: Microsoft Teams Community Calls
+    # Card
+    - title: Community Help
+      links:
         - url: /microsoftteams/platform/feedback
           itemType: overview
-          text: Microsoft Teams Community Support & Feedback
+          text: Microsoft Teams Community Response & Feedback
 
 # tools section
 tools:
