@@ -32,7 +32,7 @@ You can make this information easier to find by building a channel tab, which wi
 
 ## Identify relevant app manifest and scaffolding components
 
-Much of the channel tab app scaffolding and manifest is set up automatically when you create your project with the Teams Toolkit. Let's look at the main components for building a channel tab.
+Much of the app manifest and scaffolding are set up automatically when you create your project with the Teams Toolkit. Let's look at the main components for building a channel tab.
 
 ### App manifest
 
@@ -183,16 +183,16 @@ Once you select **Save** to configure the tab, the content displays.
 
 Congratulations! You have a Teams app with a channel tab for displaying useful content in channels and chats.
 
-## Next step
-
-You know how to build a tab for collaboration. Want to try building a different kind of Teams app?
-
-> [!div class="nextstepaction"]
-> [Build a bot](../build-your-first-app/add-bot.md)
-
 ## Learn more
 
 * [Authenticate tab users with SSO](../tabs/how-to/authentication/auth-aad-sso.md): If you only want authorized users viewing your tab, set up single sign-on (SSO) through Azure Active Directory (AD).
 * [Embed content from an existing web app or webpage](../tabs/how-to/add-tab.md#tab-requirements): We showed you how to create new content for a personal tab, but you can also load content from an external URL.
 * [Create a seamless experience for your tab](../tabs/design/tabs.md): See the recommended guidelines for designing Teams tabs.
 * [Build tabs for mobile](../tabs/design/tabs-mobile.md): Understand how to develop tabs for smartphones and tablets.
+
+## Next lesson
+
+You know how to build a tab for collaboration. Want to try building a different kind of Teams app?
+
+> [!div class="nextstepaction"]
+> [Build a bot](../build-your-first-app/add-bot.md)

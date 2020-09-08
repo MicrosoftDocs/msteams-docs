@@ -74,6 +74,8 @@ Install [ngrok](https://ngrok.com/download) if you haven't already. When you run
 1. In your `.publish` directory, open `Development.env`.
 1. Replace the `baseUrl0` value with the copied URL. (For example, change `baseUrl0=http://localhost:3000` to `baseUrl0=https://85528b2b3ba5.ngrok.io`.)
 
+Your app manifest now points to where you're hosting the app.
+
 ## Sideload your app in Teams
 
 With your app running and accessible via HTTPS, you're ready to upload it to Teams.
