@@ -39,7 +39,7 @@ Learn more about [Teams app concepts and capabilities](../concepts/capabilities-
 
 ***Integration scenarios**: Standalone apps*
 
-Integrating all features of an existing application into Teams often leads to a forced or unnatural user experience, particularly in larger apps. Consider starting with the most impactful features and those that will integrate more naturally into Teams. Remember, you can always allow users to launch the main app and access its full set of features.
+Integrating all features of an existing application into Teams often leads to a forced or unnatural user experience, particularly in larger apps. Consider starting with the most impactful features and those that will integrate more naturally with Teams. Remember, you can always allow users to launch the main app and access its full set of features.
 
 Before you begin any technical work, do some planning for your Teams app:
 
@@ -53,7 +53,7 @@ Before you begin any technical work, do some planning for your Teams app:
 You can integrate an existing [SharePoint page](https://docs.microsoft.com/MicrosoftTeams/teams-standalone-static-tabs-using-spo-sites) as a Teams tab. Remember the following:
 
 * It must be a *modern* SharePoint Online page
-* Only personal tabs are supported (you can't integrate your page in a channel tab)
+* Only personal tabs are supported (you can't integrate your page as a channel tab)
 
 Alternatively, you can build a Teams tab [using the SharePoint Framework](https://docs.microsoft.com/sharepoint/dev/spfx/integrate-with-teams-introduction).
 
@@ -83,11 +83,11 @@ For SharePoint pages, you can only use SSO and can't add another Azure AD ID if 
 
 Learn more about [authentication in Teams](../concepts/authentication/authentication.md).
 
-## Follow Teams app design guidelines
+## Follow Teams design guidelines
 
 ***Integration scenarios**: Standalone apps, collaboration apps*
 
-In general, your app should feel natural in Teams. You might think migrating existing app content to a Teams tab is sufficient, but we strongly recommend your app follows our [design guidelines](../designing-your-app/designing-overview.md). For more detailed information, see the [Fluent Design System](https://fluentsite.z22.web.core.windows.net/).
+In general, your app should feel natural in Teams. You might think migrating existing app content to a Teams tab is sufficient, but we strongly recommend your app follows our [design guidelines](../designing-your-app/designing-overview.md). See also: [Fluent Design System](https://fluentsite.z22.web.core.windows.net/).
 
 ## Maximize deep linking
 
@@ -99,9 +99,9 @@ Almost everything in Teams can be linked to directly with a [deep link](../conce
 
 ***Integration scenarios**: Standalone apps, collaboration apps, SharePoint*
 
-Consider long term the types of messages your Teams app might send. If you think your app will ever have a multi-threaded conversation, a [bot](../bots/what-are-bots.md) might offer more flexibility than a webhook.
+Consider the types of messages your Teams app might send now and in the long term. If you think your app will ever have a multi-threaded conversation, a [bot](../bots/what-are-bots.md) might offer more flexibility than a [webhook]()../webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
-Bots also allow you to send *proactive messages* to individual users or channels. These are unprompted messages triggered by an outside event instead of a message sent to a bot. (For example, your bot can send a welcome message when it's installed or a new user joins a channel.) Sending proactive messages requires Teams-specific identifiers that aren't available through the Microsoft Graph API—you can capture this information by [fetching roster or user profile data](../tabs/how-to/get-teams-context.md#fetching-the-roster-or-user-profile) while also [subscribing to conversation events](../bots/how-to/conversations/subscribe-to-conversation-events.md). These identifiers can also save you from making additional Graph API calls and requiring user consent for querying team membership.
+Bots also allow you to send *proactive messages* to individual users or channels. These are unprompted messages triggered by an outside event and not a message sent to a bot. (For example, your bot can send a welcome message when it's installed or a new user joins a channel.) Sending proactive messages requires Teams-specific identifiers that aren't available through the Microsoft Graph API—you can capture this information by [fetching roster or user profile data](../bots/how-to/get-teams-context.md#fetching-the-roster-or-user-profile) while also [subscribing to conversation events](../bots/how-to/conversations/subscribe-to-conversation-events.md). These identifiers can also save you from making additional Graph API calls and requiring user consent for querying team membership.
 
 Be careful not to spam users with excessive messages. If the Teams capability supports it, consider letting users configure notification settings for your app (for example, "Don't send me unprompted messages.").
 
