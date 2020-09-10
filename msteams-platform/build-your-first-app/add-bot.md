@@ -12,15 +12,16 @@ You'll build a basic *bot* in this tutorial. Bots act as an intermediary between
 
 ## Your assignment
 
-Your workplace has been using Teams tabs to surface important contact information. For example, colleagues have quick access to the help desk phone number. But instead of calling, what if people could contact the help desk using a chatbot? Your boss has asked you to look at how quickly you can get a basic conversational bot up and running in Teams.
+Your workplace has been using Teams tabs to surface important contact information. For example, colleagues have quick access to the help desk phone number. But instead of calling, what if people could contact the help desk using a chatbot? Your boss asks you to look at how quickly you can get a basic conversational bot up and running in Teams.
 
 ## What you'll learn
 
 > [!div class="checklist"]
 >
 > * Identify the app manifest and scaffolding components relevant to bots
-> * Register your bot with the Microsoft Bot Framework
-> * Create a bot command
+> * Host your bot locally
+> * Configure your bot for Teams
+> * Sideload and test your bot
 
 ## Before you begin
 
@@ -31,7 +32,7 @@ If you haven't yet, set up your Microsoft 365 development [account](building-rea
 Use the Microsoft Teams Toolkit in Visual Studio Code to set up the app project for your bot.
 
 > [!TIP]
-> If you've never created a Teams app project, you might find the instructions in build and run your first app more comprehensive.
+> If you haven't created a Teams app project before, you might find it helpful to follow [these instructions](../build-your-first-app/build-and-run.md), which explain projects in more detail.
 
 1. In Visual Studio Code, select **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: on the left Activity Bar and choose **Create a new Teams app**.
 1. When you create your app project, choose the **Bot** option and select **Next**.
@@ -81,13 +82,13 @@ For now, let's just focus on the following required properties. (See the full li
 
 * `botId`: The ID of the bot you created setting up your project.
 * `scopes`: Specifies if your bot is available in `personal`, `groupchat`, or `team` (i.e., channel) contexts.
-* `commands`: Options for available commands users can send to you bot.
+* `commands`: Available commands users can send to your bot.
 * `title`: A bot command name users see.
-* `description`: A short description or example of the syntax and arguments to help users understand what the command does.
+* `description`: A short description or example of the syntax and arguments to help users understand what a command does.
 
 ### App scaffolding
 
-The app scaffolding provides a `botActivityHandler.js` file, located in the root directory of your project, for handling how your bot processes activities in Teams (for example, sending and receiving messages).
+The app scaffolding provides a `botActivityHandler.js` file, located in the root directory of your project, for handling how your bot processes activities in Teams (for example, how the bot responds to specific messages).
 
 ## Set up a secure tunnel to your app
 
@@ -102,48 +103,72 @@ Your app manifest now points to where you're hosting the bot.
 
 ## Configuring your bot
 
-To use a bot in Teams, you must register it with the Microsoft Azure Bot Service. Lucky for you, the toolkit already did this when you created this app project.
+To use a bot in Teams, you must register it with the Microsoft Azure Bot Service. Lucky for you, this is done automatically when you create an app project using the Teams Toolkit.
 
-### Update the messaging endpoint
+### Add the bot endpoint address
 
-xxx
+You must specify an endpoint URL to receive and process user messages (i.e., requests) sent to the bot. Typically, the URL looks like `https://HOST_URL/api/messages`. You can configure this quickly in the Teams Toolkit.
 
-### Verify your bot is connected to Teams
+1. In Visual Studio Code, select **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: on the left Activity Bar and choose **Open Microsoft Teams Toolkit**.
+1. Go to **Bot management > Existing bot registrations** and select your registered bot.
+1. In the **Bot endpoint address** field, enter the local web server where you're hosting the bot and append `/api/messages` to it.
 
-xxx
+    :::image type="content" source="../assets/images/build-your-first-app/bot-config-endpoint-url.png" alt-text="Illustration showing where you can configure the bot endpoint URL in the Teams Toolkit.":::
 
-## Add some personality to your bot
-
-Update and create bot commands.
+Your bot will be able to respond to messages in Teams.
 
 ## Run your app
 
-npm stuff
+You've set up a URL to host your bot and configured it to handle messages. It's time to get your bot up and running.
 
-    Bot/ME service listening at http://localhost:3978
+1. In a terminal, go to the root directory of your app project and run `npm install`.
+1. Run `npm start`.
 
-## Sideload your app in Teams
+If successful, you see a message like the following that indicates your bot is listening for activity at your `localhost`:
 
-xxx
+`Bot/ME service listening at http://localhost:3978`
 
-## Greet your bot
+## Sideload your bot in Teams
 
-Install, say Hello
+With your bot running, you can install it in Teams.
+
+> [!TIP]
+> If you haven't sideloaded a Teams app before and run into issues, follow the [instructions for getting started with sideloading](../build-your-first-app/build-and-run.md#sideload-your-app-in-teams).
+
+1. Log in to the Teams client with your account that allows app sideloading.
+1. Select **Apps**, then choose **Upload a custom app**.
+1. Go to your app project `.publish` folder and select `Development.zip`.
+1. In the install modal, select **Add** to install your app.
+
+## Test your bot
+
+Now for the fun part: Let's say "Hello" to your bot in a one-on-one chat.
+
+1. In Teams, select **More** :::image type="icon" source="../assets/icons/teams-client-more.png"::: on the left side.
+1. Locate and select the bot you just sideloaded.
+    :::image type="content" source="../assets/images/build-your-first-app/bot-teams-access.png" alt-text="Illustration showing where you access your bot in Teams.":::
+1. In the compose box, enter `Hello` and send.
+
+Your bot replies with a, "Hi (your name)". Here's what the exchange should look like.
+
+:::image type="content" source="../assets/images/build-your-first-app/contoso-chatbot.gif" alt-text="A GIF showing a user say 'Hello' to a Teams bot and getting a response back.":::
+
+> [!NOTE]
+> If you make code changes after testing your bot—for example, you update `botActivityHandler.js`—you must run `npm start` again to see those changes reflected in Teams.
 
 ## Well done
 
-Congratulations! You have a Teams bot that can communicate with users in channels, chats, and one-on-one.
+Congratulations! You have a basic Teams bot that can communicate with users in channels, chats, and one-on-one.
+
+## Troubleshooting: Verify your bot is connected to Teams
+
+If your bot isn't working correctly, make sure it's [connected to the Azure Bot Service's Teams *channel*](https://docs.microsoft.com/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0).
+
+It's important to understand that this isn't the same as a channel in Teams. In this case, a channel is how the Azure Bot Service connects your bot to Teams or another [supported Microsoft or third-party communications app](https://docs.microsoft.com/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0).
 
 ## Learn more
 
+* [See what else Teams bots can do with one of our samples](https://github.com/microsoft/BotBuilder-Samples#teams-samples)
 * [Bot conversation basics](../bots/how-to/conversations/conversation-basics.md)
-* [Teams bot samples](https://github.com/microsoft/BotBuilder-Samples#teams-samples)
 * [Bot authentication in Team](../bots/how-to/authentication/auth-flow-bot.md)
 * [Microsoft Bot Framework](https://dev.botframework.com/)
-
-## Next lesson
-
-Try creating a simple messaging extension, which also uses the Bot Framework.
-
-> [!div class="nextstepaction"]
-> [Build a messaging extension](add-messaging-extension.md)
