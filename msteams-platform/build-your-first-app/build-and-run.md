@@ -16,7 +16,7 @@ Use the Microsoft Teams Toolkit in Visual Studio Code to set up your first app p
 
 1. In Visual Studio Code, select **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: on the left Activity Bar and choose **Create a new Teams app**.
 :::image type="content" source="../assets/images/build-your-first-app/create-teams-app.png" alt-text="create teams app image":::
-1. Enter the name for your Teams app. (This is the default name for your app and also the name of the app project directory on your local machine.)
+1. Enter a name for your Teams app. (This is the default name for your app and also the name of the app project directory on your local machine.)
 1. On the **Add capabilities** screen, select **Tab** then **Next**.
 :::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="create teams app image":::
 1. Check the **Personal tab** option and select **Finish** at the bottom of the screen to configure your project.
