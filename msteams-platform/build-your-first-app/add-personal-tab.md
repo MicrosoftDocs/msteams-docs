@@ -12,7 +12,7 @@ There are two types of tabs in Teams. In this tutorial, you'll build basic a *pe
 
 ## Before you begin
 
-You need a basic running app to get started. If you don't have one, see [build and run your first Teams app](../build-your-first-app/build-and-run.md).
+You need a basic running personal tab to get started. If you don't have one, see [build and run your first Teams app](../build-your-first-app/build-and-run.md).
 
 ## Your assignment
 
