@@ -154,7 +154,7 @@ Now for the fun part: Let's say "Hello" to your bot in a one-on-one chat.
    :::image type="content" source="../assets/images/build-your-first-app/bot-teams-access.png" alt-text="Illustration showing where you access your bot in Teams.":::
 1. In the compose box, send a `Hello` message.
 
-Your bot replies with the following message.
+Your bot replies with something like the following message.
 
 :::image type="content" source="../assets/images/build-your-first-app/contoso-chatbot.png" alt-text="A screenshot showing a user say 'Hello' to a Teams bot and getting a response back.":::
 
