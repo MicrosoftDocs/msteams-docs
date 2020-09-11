@@ -12,7 +12,7 @@ There are two types of tabs in Teams. In this tutorial, you'll build basic a *pe
 
 ## Before you begin
 
-You need a basic running app to get started. If you don't have one, see [build and run your first Teams app](build-and-run-with-toolkit.md).
+You need a basic running personal tab to get started. If you don't have one, see [build and run your first Teams app](../build-your-first-app/build-and-run.md).
 
 ## Your assignment
 
@@ -23,12 +23,12 @@ People in your organization have trouble finding basic contact information for i
 > [!div class="checklist"]
 >
 > * Identify the app manifest properties and scaffolding relevant to personal tabs
-> * Create content for your tab
-> * Update your tab's color theme based on user preference
+> * Create tab content
+> * Update a tab's color theme based on user preference
 
-## Identify relevant app manifest and scaffolding components
+## Identify relevant app project components
 
-Much of the personal tab app scaffolding and manifest is set up automatically when you create your project with the Teams Toolkit. Let's look at the main components for building a personal tab.
+Much of the app manifest and scaffolding are set up automatically when you create your project with the Teams Toolkit. Let's look at the main components for building a personal tab.
 
 ### App manifest
 
@@ -102,7 +102,7 @@ Add the following rule to `App.css` so the email links are easier to read no mat
 
 Save your changes. Go to your app's tab in Teams to view the new content.
 
-![Example screenshot of a personal tab with static content](../doc-links/images/personal-tab-tutorial-content.png)
+:::image type="content" source="../doc-links/images/personal-tab-tutorial-content.png" alt-text="Example screenshot of a personal tab with static content.":::
 
 ## Update the tab theme
 
@@ -173,23 +173,22 @@ Provide some conditional logic to render your tab's styles based on the current 
 
 Check your tab in Teams. The appearance should closely match the dark theme.
 
-![Example screenshot of a personal tab with static content](../doc-links/images/personal-tab-tutorial-updated-theme.png)
+:::image type="content" source="../doc-links/images/personal-tab-tutorial-updated-theme.png" alt-text="Example screenshot of a personal tab with static content.":::
 
 ## Well done
 
 Congratulations! You have a Teams app with a personal tab that makes it easier to find important contacts in your organization.
-
-## Next step
-
-You know how to build a tab for personal use. Let's look at what it takes to build a tab for team channels and chats.
-
-> [!div class="nextstepaction"]
-> [Build a channel tab](add-channel-tab.md)
 
 ## Learn more
 
 * [Authenticate tab users with SSO](../../tabs/how-to/authentication/auth-aad-sso.md): If you only want authorized users viewing your tab, set up single sign-on (SSO) through Azure Active Directory (AD).
 * [Embed content from an existing web app or webpage](../../tabs/how-to/add-tab.md#tab-requirements): We showed you how to create new content for a personal tab, but you can also load content from an external URL.
 * [Create a seamless experience for your tab](../../tabs/design/tabs.md): See the recommended guidelines for designing Teams tabs.
-* [Build tabs for mobile](../../tabs/design/tabs-mobile.md): Understand how to develop tabs for smartphones and tablets.
+* [Build tabs for mobile](../../tabs/design/tabs-mobile.md): Understand how to develop tabs for phones and tablets.
 
+## Next lesson
+
+You know how to build a tab for personal use. Let's look at what it takes to build a tab for team channels and chats.
+
+> [!div class="nextstepaction"]
+> [Build a channel tab](../build-your-first-app/add-channel-tab.md)

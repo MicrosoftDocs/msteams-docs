@@ -1,8 +1,10 @@
 ---
-title: Create a channel tab for Teams
 author: heath-hamilton
 description: Learn how to build a channel tab in your first Microsoft Teams app.
+ms.author: heath-hamilton
+ms.date: 08/31/2020
 ms.topic: tutorial
+title: Create a channel tab for Teams
 ---
 # Create a channel tab for Teams
 
@@ -10,7 +12,7 @@ In this tutorial, you'll build a basic *channel tab*, a full-screen content page
 
 ## Before you begin
 
-You need a basic running app to get started. If you don't have one, follow the instructions at [build and run your Teams first app](build-and-run-with-toolkit.md). When you create your app project, choose only the **Group or Teams channel tab** option.
+You need a basic running app to get started. If you don't have one, follow the [build and run your Teams first app instructions](../build-your-first-app/build-and-run.md). When you create your app project, choose only the **Group or Teams channel tab** option.
 
 ## Your assignment
 
@@ -22,15 +24,15 @@ You can make this information easier to find by building a channel tab, which wi
 
 > [!div class="checklist"]
 >
-> * Identify the app manifest and scaffolding components relevant to channel tabs
-> * Create content for your tab
+> * Identify the app manifest properties and scaffolding relevant to channel tabs
+> * Create tab content
 > * Create content for a tab's configuration page
-> * Allow the tab to be configured and installed
+> * Allow a tab to be configured and installed
 > * Provide a suggested tab name
 
-## Identify relevant app manifest and scaffolding components
+## Identify relevant app project components
 
-Much of the channel tab app scaffolding and manifest is set up automatically when you create your project with the Teams Toolkit. Let's look at the main components for building a channel tab.
+Much of the app manifest and scaffolding are set up automatically when you create your project with the Teams Toolkit. Let's look at the main components for building a channel tab.
 
 ### App manifest
 
@@ -135,7 +137,7 @@ Add some content to your configuration page. Go to your project's `src/component
 
 ## Allow the tab to be configured and installed
 
-For users to successfully configure and install the channel tab, you must add the host URL you set up when [creating and running your first app](build-and-run-with-toolkit.md) to the configuration page component.
+For users to successfully configure and install the channel tab, you must add the host URL you set up when [creating and running your first app](../build-your-first-app/build-and-run.md) to the configuration page component.
 
 Go to `TabConfig.js` and locate `microsoftTeams.settings.setSettings`. For `"contentUrl"`, replace the `localhost:3000` part of the URL with the domain where you're hosting the tab content (as shown).
 
@@ -171,11 +173,11 @@ To see your channel tab's configuration and content pages, you must install it i
 1. Choose **Add to a team** or **Add to a chat** and locate a channel or chat you can use for testing.
 1. Select **Set up a tab**. The configuration page displays.
 
-:::image type="content" source="../doc-links/images/channel-tab-tutorial-content.png" alt-text="Example screenshot of a channel tab configuration page":::
+:::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="Example screenshot of a channel tab with static content.":::
 
 Once you select **Save** to configure the tab, the content displays.
 
-![Example screenshot of a channel tab with static content](../doc-links/images/channel-tab-tutorial-content-installed.png)
+:::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content-installed.png" alt-text="Example screenshot of a channel tab with static content.":::
 
 ## Well done
 
@@ -186,4 +188,11 @@ Congratulations! You have a Teams app with a channel tab for displaying useful c
 * [Authenticate tab users with SSO](../../tabs/how-to/authentication/auth-aad-sso.md): If you only want authorized users viewing your tab, set up single sign-on (SSO) through Azure Active Directory (AD).
 * [Embed content from an existing web app or webpage](../../tabs/how-to/add-tab.md#tab-requirements): We showed you how to create new content for a personal tab, but you can also load content from an external URL.
 * [Create a seamless experience for your tab](../../tabs/design/tabs.md): See the recommended guidelines for designing Teams tabs.
-* [Build tabs for mobile](../../tabs/design/tabs-mobile.md): Understand how to develop tabs for smartphones and tablets.
+* [Build tabs for mobile](../../tabs/design/tabs-mobile.md): Understand how to develop tabs for phones and tablets.
+
+## Next lesson
+
+You know how to build a tab for collaboration. Want to try building a different kind of Teams app?
+
+> [!div class="nextstepaction"]
+> [Build a bot](../build-your-first-app/add-bot.md)
