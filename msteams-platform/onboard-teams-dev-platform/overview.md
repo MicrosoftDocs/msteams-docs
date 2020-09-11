@@ -34,7 +34,7 @@ Some apps are simple (send notifications), while others are complex (view patien
 
 **Make it easier to multitask**: With [messaging extensions](../messaging-extensions/what-are-messaging-extensions.md), you can quickly share external information in a conversation. You also can act on a message, such as creating a help ticket based on the content of a channel post.
 
-:::image type="content" source="doc-links/images/images/overview-messaging.png" alt-text="Conceptual representation of what messaging extensions look like in the Teams client." border="false":::
+:::image type="content" source="doc-links/images/overview-messaging.png" alt-text="Conceptual representation of what messaging extensions look like in the Teams client." border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -103,7 +103,7 @@ Jump right in with our first app tutorials, find out how to integrate and import
    Blend the features users love about an existing web app, service, or system with the collaborative features of Teams.
 
    > [!div class="nextstepaction"]
-   > [Integrate an existing app](samples/integrating-web-apps.md)
+   > [Integrate an existing app](migrating-web-apps.md)
 
    :::column-end:::
    :::column span="":::
@@ -119,7 +119,7 @@ Jump right in with our first app tutorials, find out how to integrate and import
    You don't need to be an expert programmer to build a great Teams app. Try one of several low-code solutions.
 
    > [!div class="nextstepaction"]
-   > [Create a low-code app](samples/teams-low-code-solutions.md)
+   > [Create a low-code app](low-code-solutions.md)
 
    :::column-end:::
    :::column span="":::

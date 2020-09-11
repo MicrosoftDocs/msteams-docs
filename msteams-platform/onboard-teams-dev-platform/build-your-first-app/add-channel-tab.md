@@ -173,11 +173,11 @@ To see your channel tab's configuration and content pages, you must install it i
 1. Choose **Add to a team** or **Add to a chat** and locate a channel or chat you can use for testing.
 1. Select **Set up a tab**. The configuration page displays.
 
-:::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="Example screenshot of a channel tab with static content.":::
+:::image type="content" source="../doc-links/images/channel-tab-tutorial-content.png" alt-text="Example screenshot of a channel tab with static content.":::
 
 Once you select **Save** to configure the tab, the content displays.
 
-:::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content-installed.png" alt-text="Example screenshot of a channel tab with static content.":::
+:::image type="content" source="../doc-links/images/channel-tab-tutorial-content-installed.png" alt-text="Example screenshot of a channel tab with static content.":::
 
 ## Well done
 
