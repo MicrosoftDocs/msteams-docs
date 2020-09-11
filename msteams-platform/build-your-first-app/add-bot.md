@@ -41,7 +41,8 @@ The Microsoft Teams Toolkit helps you set up the following components for your a
 1. In Visual Studio Code, select **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: on the left Activity Bar and choose **Create a new Teams app**.
 1. Enter a name for your Teams app. (This is the default name for your app and also the name of the app project directory on your local machine.)
 1. On the **Add capabilities** screen, select **Bot** then **Next**.
-1. Select **Create a new Bot** and **Login** to sign in with your Microsoft 365 development account.
+1. Select **Create a new Bot** and **Login** to sign in with your Microsoft 365 development account.<br/>
+:::image type="content" source="../assets/images/build-your-first-app/vsc-create-bot.png" alt-text="Illustration showing how, in the Teams Toolkit, to log in to your Microsoft 365 account to create a new bot.":::
 1. (Optional) Enter a custom name for your bot and select **Create**. (Remember, this is the name for your bot and not the name of the Teams app you already specified.)
 1. Select **Finish** at the bottom of the screen to configure your project.
 
