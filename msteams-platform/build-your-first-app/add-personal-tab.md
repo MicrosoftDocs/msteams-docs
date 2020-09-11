@@ -23,10 +23,10 @@ People in your organization have trouble finding basic contact information for i
 > [!div class="checklist"]
 >
 > * Identify the app manifest properties and scaffolding relevant to personal tabs
-> * Create content for your tab
-> * Update your tab's color theme based on user preference
+> * Create tab content
+> * Update a tab's color theme based on user preference
 
-## Identify relevant app manifest and scaffolding components
+## Identify relevant app project components
 
 Much of the app manifest and scaffolding are set up automatically when you create your project with the Teams Toolkit. Let's look at the main components for building a personal tab.
 
@@ -184,7 +184,7 @@ Congratulations! You have a Teams app with a personal tab that makes it easier t
 * [Authenticate tab users with SSO](../tabs/how-to/authentication/auth-aad-sso.md): If you only want authorized users viewing your tab, set up single sign-on (SSO) through Azure Active Directory (AD).
 * [Embed content from an existing web app or webpage](../tabs/how-to/add-tab.md#tab-requirements): We showed you how to create new content for a personal tab, but you can also load content from an external URL.
 * [Create a seamless experience for your tab](../tabs/design/tabs.md): See the recommended guidelines for designing Teams tabs.
-* [Build tabs for mobile](../tabs/design/tabs-mobile.md): Understand how to develop tabs for smartphones and tablets.
+* [Build tabs for mobile](../tabs/design/tabs-mobile.md): Understand how to develop tabs for phones and tablets.
 
 ## Next lesson
 

@@ -6,7 +6,7 @@ description: Overview and prerequisites for building your first Microsoft Teams 
 ---
 # Get started building your first Teams app
 
-In the **Build your first app** lessons, you create basic Teams apps. These tutorials walk through how to build a simple, real-world Teams app while introducing you to common tools, fundamental concepts, and some more advanced features.
+In the **build your first app** lessons, you create basic Teams apps. Each tutorial walks through how to build a simple, real-world Teams app while introducing you to common tools, fundamental concepts, and some more advanced features.
 
 ## What you'll learn
 
@@ -17,7 +17,7 @@ Here's an idea of what you'll know after going through the lessons.
   > * **Get up and running quickly with the Teams Toolkit**: The Microsoft Teams Toolkit for Visual Studio Code takes care of creating your app project and scaffolding so you can have a running app in minutes.
   > * **Define your app with the manifest**: The app manifest is where you specify the capabilities and services your Teams app uses.
   > * **Scope your app's audience**: Build a Teams app for personal use, collaboration, or both.
-  > * **Use the Teams SDK**: Customize your app (for example, change its color scheme to match the Teams theme) with help from the Microsoft Teams JavaScript SDK.
+  > * **Get experience with frameworks**: Customize your app (for example, change its color scheme to match the Teams theme) with help from the Teams JavaScript SDK. Also, learn about common tools for creating and managing bots.
   > * **Expand on your app**: Throughout the lessons, you'll find related topics you're probably interested in (such as authentication and design guidelines).
 
 ## Teams app fundamentals

@@ -21,7 +21,7 @@ Use the Microsoft Teams Toolkit in Visual Studio Code to set up your first app p
 :::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="create teams app image":::
 1. Check the **Personal tab** option and select **Finish** at the bottom of the screen to configure your project.
 
-## Understand important app project files
+## Understand important app project components
 
 Once the toolkit configures your project, you have the components to build a basic personal tab for Teams. The project directories and files display in the Explorer area of Visual Studio Code.
 

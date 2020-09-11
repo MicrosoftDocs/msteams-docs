@@ -12,7 +12,7 @@ In this tutorial, you'll build a basic *channel tab*, a full-screen content page
 
 ## Before you begin
 
-You need a basic running app to get started. If you don't have one, follow the instructions at [build and run your Teams first app](../build-your-first-app/build-and-run.md). When you create your app project, choose only the **Group or Teams channel tab** option.
+You need a basic running app to get started. If you don't have one, follow the [build and run your Teams first app instructions](../build-your-first-app/build-and-run.md). When you create your app project, choose only the **Group or Teams channel tab** option.
 
 ## Your assignment
 
@@ -24,13 +24,13 @@ You can make this information easier to find by building a channel tab, which wi
 
 > [!div class="checklist"]
 >
-> * Identify the app manifest and scaffolding components relevant to channel tabs
-> * Create content for your tab
+> * Identify the app manifest properties and scaffolding relevant to channel tabs
+> * Create tab content
 > * Create content for a tab's configuration page
-> * Allow the tab to be configured and installed
+> * Allow a tab to be configured and installed
 > * Provide a suggested tab name
 
-## Identify relevant app manifest and scaffolding components
+## Identify relevant app project components
 
 Much of the app manifest and scaffolding are set up automatically when you create your project with the Teams Toolkit. Let's look at the main components for building a channel tab.
 
@@ -188,7 +188,7 @@ Congratulations! You have a Teams app with a channel tab for displaying useful c
 * [Authenticate tab users with SSO](../tabs/how-to/authentication/auth-aad-sso.md): If you only want authorized users viewing your tab, set up single sign-on (SSO) through Azure Active Directory (AD).
 * [Embed content from an existing web app or webpage](../tabs/how-to/add-tab.md#tab-requirements): We showed you how to create new content for a personal tab, but you can also load content from an external URL.
 * [Create a seamless experience for your tab](../tabs/design/tabs.md): See the recommended guidelines for designing Teams tabs.
-* [Build tabs for mobile](../tabs/design/tabs-mobile.md): Understand how to develop tabs for smartphones and tablets.
+* [Build tabs for mobile](../tabs/design/tabs-mobile.md): Understand how to develop tabs for phones and tablets.
 
 ## Next lesson
 
