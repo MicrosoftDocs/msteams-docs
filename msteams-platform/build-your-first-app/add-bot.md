@@ -151,7 +151,7 @@ Now for the fun part: Let's say "Hello" to your bot in a one-on-one chat.
 
 1. In Teams, select **More** :::image type="icon" source="../assets/icons/teams-client-more.png"::: on the left side.
 1. Locate and select the bot you just sideloaded.
-:::image type="content" source="../assets/images/build-your-first-app/bot-teams-access.png" alt-text="Illustration showing where you access your bot in Teams.":::
+    :::image type="content" source="../assets/images/build-your-first-app/bot-teams-access.png" alt-text="Illustration showing where you access your bot in Teams.":::
 1. In the compose box, send a `Hello` message.
 
 Your bot replies with the following message.
