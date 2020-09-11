@@ -1,7 +1,7 @@
 ---
 title: Get started building your first Teams app
 author: heath-hamilton
-ms.author: heath-hamilton
+ms.author: la.januari
 description: Overview and prerequisites for building your first Microsoft Teams app
 ---
 # Get started building your first Teams app
@@ -71,7 +71,7 @@ You can get a free Teams test account that allows app sideloading by joining the
 
 You can build Teams apps with your preferred tools, but these lessons show how you can get started quickly with the Microsoft Teams Toolkit for Visual Studio Code.
 
-Teams displays app content only through HTTPS connections. Since you'll host your first app locally, you'll learn how to use [ngrok to set up a secure tunnel](../doc-links/debug.md##locally-hosted) between Teams and your app.
+Teams displays app content only through HTTPS connections. Since you'll host your first app locally, you'll learn how to use [ngrok to set up a secure tunnel](../doc-links/debug.md#locally-hosted) between Teams and your app.
 
 1. Install [Node.js](https://nodejs.org/en/).
 1. Install the latest version of [Visual Studio Code](https://code.visualstudio.com/download). (Earlier versions might not work with the toolkit.)

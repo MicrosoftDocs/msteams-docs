@@ -3,8 +3,8 @@ title: Create a configuration page
 author: laujan
 description: 
 keywords: teams tabs group channel configurable 
-ms.topic: conceptualF
-ms.author: laujan
+ms.topic: conceptual
+ms.author: la.januari
 ---
 # Create a configuration page
 

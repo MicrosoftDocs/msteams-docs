@@ -2,7 +2,7 @@
 title: Create a bot for Teams
 author: heath-hamilton
 description: Learn how to build a bot in your first Microsoft Teams app.
-ms.author: heath-hamilton
+ms.author: la.januari
 ms.date: 08/31/2020
 ms.topic: tutorial
 ---

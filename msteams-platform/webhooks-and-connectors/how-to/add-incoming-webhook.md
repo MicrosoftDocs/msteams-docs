@@ -4,7 +4,7 @@ author: laujan
 description: 
 keywords: teams tabs outgoing webhook*
 ms.topic: conceptual
-ms.author: laujan
+ms.author: la.januari
 ---
 # Post external requests to Teams with incoming webhooks
 
