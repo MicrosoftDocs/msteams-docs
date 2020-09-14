@@ -1,9 +1,9 @@
 ---
 title: Create a bot for Teams
 author: heath-hamilton
-description: Learn how to build a bot in your first Microsoft Teams app.
-ms.author: heath-hamilton
-ms.date: 08/31/2020
+description: Learn how to build a bot for your first Microsoft Teams app.
+ms.author: lajanuar
+ms.date: 09/22/2020
 ms.topic: tutorial
 ---
 # Create a bot for Teams
@@ -55,33 +55,33 @@ Much of the app manifest and scaffolding are set up automatically when you creat
 The following snippet from the app manifest (the `manifest.json` file in your project's `.publish` directory) shows the properties and default values relevant to bots.
 
 ```JSON
-    "bots": [
-        {
-            "botId": "{botId0}",
-            "scopes": [
-                "personal",
-                "groupchat",
-                "team"
-            ],
-            "supportsFiles": false,
-            "isNotificationOnly": false,
-            "commandLists": [
-                {
-                    "scopes": [
-                        "personal",
-                        "groupchat",
-                        "team"
-                    ],
-                    "commands": [
-                        {
-                            "title": "Hello",
-                            "description": "Sends a hello message and @mention the sender"
-                        }
-                    ]
-                }
-            ]
-        }
-    ],
+"bots": [
+    {
+        "botId": "{botId0}",
+        "scopes": [
+            "personal",
+            "groupchat",
+            "team"
+        ],
+        "supportsFiles": false,
+        "isNotificationOnly": false,
+        "commandLists": [
+            {
+                "scopes": [
+                    "personal",
+                    "groupchat",
+                    "team"
+                ],
+                "commands": [
+                    {
+                        "title": "Hello",
+                        "description": "Sends a hello message and @mention the sender"
+                    }
+                ]
+            }
+        ]
+    }
+],
 ```
 
 For now, let's just focus on the following required properties. (See the full list of supported [`bots`](../resources/schema/manifest-schema.md#bots) properties.)

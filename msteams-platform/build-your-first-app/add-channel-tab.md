@@ -1,8 +1,8 @@
 ---
 author: heath-hamilton
-description: Learn how to build a channel tab in your first Microsoft Teams app.
-ms.author: heath-hamilton
-ms.date: 08/31/2020
+description: Learn how to build a channel tab for your first Microsoft Teams app.
+ms.author: lajanuar
+ms.date: 09/22/2020
 ms.topic: tutorial
 title: Create a channel tab for Teams
 ---
@@ -39,16 +39,16 @@ Much of the app manifest and scaffolding are set up automatically when you creat
 The following snippet from the app manifest shows [`configurableTabs`](../resources/schema/manifest-schema.md#configurabletabs), which includes the properties and default values relevant to channel tabs.
 
 ```JSON
-    "configurableTabs": [
-        {
-            "configurationUrl": "{baseUrl0}/config",
-            "canUpdateConfiguration": true,
-            "scopes": [
-                "team",
-                "groupchat"
-            ]
-        }
-    ],
+"configurableTabs": [
+    {
+        "configurationUrl": "{baseUrl0}/config",
+        "canUpdateConfiguration": true,
+        "scopes": [
+            "team",
+            "groupchat"
+        ]
+    }
+],
 ```
 
 * `configurationUrl`: The host URL for your tab configuration page (must be HTTPS).
@@ -64,55 +64,55 @@ The app scaffolding provides a `TabConfig.js` file, located in the `src/componen
 Open your app manifest (`manifest.json`) and set the following properties in [`staticTabs`](../resources/schema/manifest-schema.md#statictabs), which defines your tab's content page.
 
 ```JSON
-    "staticTabs": [
-        {
-            "entityId": "index",
-            "name": "My Contacts",
-            "contentUrl": "{baseUrl0}/tab",
-            "scopes": [ "personal" ]
-        }
-    ],
+"staticTabs": [
+    {
+        "entityId": "index",
+        "name": "My Contacts",
+        "contentUrl": "{baseUrl0}/tab",
+        "scopes": [ "personal" ]
+    }
+],
 ```
 
 Copy and update the following snippet with information that's relevant to your organization or, for the sake of time, use the code as is.
 
 ```JSX
-  <div>
-    <h1>Important Contacts</h1>
-      <ul>
-        <li>Help Desk: <a href="mailto:support@company.com">support@company.com</a></li>
-        <li>Human Resources: <a href="mailto:hr@company.com">hr@company.com</a></li>
-        <li>Facilities: <a href="mailto:facilities@company.com">facilities@company.com</a></li>
-      </ul>
-  </div>
+<div>
+  <h1>Important Contacts</h1>
+    <ul>
+      <li>Help Desk: <a href="mailto:support@company.com">support@company.com</a></li>
+      <li>Human Resources: <a href="mailto:hr@company.com">hr@company.com</a></li>
+      <li>Facilities: <a href="mailto:facilities@company.com">facilities@company.com</a></li>
+    </ul>
+</div>
 ```
 
 Go to the `src/components` directory and open `Tab.js`. Locate the `render()` function and paste your content inside `return()` (as shown).
 
 ```JavaScript
-  render() {
+render() {
 
-      let userName = Object.keys(this.state.context).length > 0 ? this.state.context['upn'] : "";
+    let userName = Object.keys(this.state.context).length > 0 ? this.state.context['upn'] : "";
 
-      return (
-      <div>
-        <h1>Important Contacts</h1>
-          <ul>
-            <li>Help Desk: <a href="mailto:support@company.com">support@company.com</a></li>
-            <li>Human Resources: <a href="mailto:hr@company.com">hr@company.com</a></li>
-            <li>Facilities: <a href="mailto:facilities@company.com">facilities@company.com</a></li>
-          </ul>
-      </div>
-      );
-  }
+    return (
+    <div>
+      <h1>Important Contacts</h1>
+        <ul>
+          <li>Help Desk: <a href="mailto:support@company.com">support@company.com</a></li>
+          <li>Human Resources: <a href="mailto:hr@company.com">hr@company.com</a></li>
+          <li>Facilities: <a href="mailto:facilities@company.com">facilities@company.com</a></li>
+        </ul>
+    </div>
+    );
+}
 ```
 
 Add the following rule to `App.css` so the email links are easier to read no matter which theme is used.
 
 ```CSS
-  a {
-    color: inherit;
-  }
+a {
+  color: inherit;
+}
 ```
 
 ## Create your tab configuration page
@@ -122,14 +122,14 @@ Every channel tab has a configuration page, a modal with at least one setup opti
 Add some content to your configuration page. Go to your project's `src/components` directory, open `TabConfig.js`, and insert some content inside `return()` (as shown).
 
 ```JavaScript
-    return (
-        <div>
-          <h1>Add My Contoso Contacts</h1>
-          <div>
-            Select <b>Save</b> to add our organization's important contacts to this workspace.
-          </div>
-        </div>
-    );
+return (
+    <div>
+      <h1>Add My Contoso Contacts</h1>
+      <div>
+        Select <b>Save</b> to add our organization's important contacts to this workspace.
+      </div>
+    </div>
+);
 ```
  
 > [!TIP]
