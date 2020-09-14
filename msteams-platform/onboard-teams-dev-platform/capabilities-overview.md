@@ -1,9 +1,9 @@
 ---
 title: Understanding Teams app capabilities
 author: heath-hamilton
-description: 
+description: overview of Teams capabilities and extension points
 ms.topic: overview
-ms.author: heath-hamilton
+ms.author: v-heha
 ---
 # Understanding Teams app capabilities
 
