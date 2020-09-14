@@ -1,7 +1,7 @@
 ---
-title: What are custom tabs in Microsoft Teams?
+title: What are custom tabs in Teams?
 author: laujan
-description: An overview of custom tabs on the Microsoft Teams platform
+description: An overview of custom tabs in Microsoft Teams 
 ms.topic: overview
 ms.author: lajanuar
 ---
