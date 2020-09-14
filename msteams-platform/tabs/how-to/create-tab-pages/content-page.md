@@ -4,7 +4,7 @@ author: laujan
 description: 
 keywords: teams tabs group channel configurable static
 ms.topic: conceptual
-ms.author: la.januari
+ms.author: lajanuar
 ---
 # Create a content page for your tab
 

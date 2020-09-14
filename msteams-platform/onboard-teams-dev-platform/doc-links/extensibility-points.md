@@ -3,7 +3,7 @@ title: Start planning your Microsoft Teams app
 author: heath-hamilton
 description: Understand how to plan your Teams app.
 ms.topic: conceptual
-ms.author: la.januari
+ms.author: lajanuar
 ---
 # Start planning your Microsoft Teams app
 

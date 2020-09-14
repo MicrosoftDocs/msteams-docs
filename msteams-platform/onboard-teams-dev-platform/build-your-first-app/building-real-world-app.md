@@ -1,7 +1,7 @@
 ---
 title: Get started building your first Teams app
 author: heath-hamilton
-ms.author: la.januari
+ms.author: lajanuar
 description: Overview and prerequisites for building your first Microsoft Teams app
 ---
 # Get started building your first Teams app

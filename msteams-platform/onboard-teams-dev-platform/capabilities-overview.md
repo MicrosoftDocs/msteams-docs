@@ -2,7 +2,7 @@
 title: Understanding Teams app capabilities
 author: heath-hamilton
 ms.topic: overview
-ms.author: la.januari
+ms.author: lajanuar
 ---
 # Understanding Teams app capabilities
 

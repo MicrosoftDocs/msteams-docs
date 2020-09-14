@@ -3,7 +3,7 @@ title: "Quickstart: Create a custom personal tab with Node.js and the Yeoman Gen
 author: laujan
 description: A quickstart guide to creating a personal tab with the Yeoman Generator for Microsoft Teams.
 ms.topic: quickstart
-ms.author: la.januari
+ms.author: lajanuar
 ---
 # Quickstart: Create a custom personal tab with Node.js and the Yeoman Generator for Microsoft Teams
 

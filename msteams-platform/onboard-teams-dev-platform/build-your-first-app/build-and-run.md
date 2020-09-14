@@ -1,7 +1,7 @@
 ---
 title: Build and run your first Teams app
 author: heath-hamilton
-ms.author: la.januari
+ms.author: lajanuar
 description: Run your first Microsoft Teams app.
 ms.date: 08/31/2020
 ms.topic: quickstart
