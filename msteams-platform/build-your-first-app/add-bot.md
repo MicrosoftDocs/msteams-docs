@@ -19,8 +19,8 @@ Your workplace has been using [tabs](../build-your-first-app/add-personal-tab.md
 > [!div class="checklist"]
 >
 > * Create an app project and bot using the Microsoft Teams Toolkit for Visual Studio Code
-> * Identify the app manifest properties and some of the scaffolding relevant to bots
-> * Host your app locally
+> * Identify some of the app manifest properties and scaffolding relevant to bots
+> * Host an app locally
 > * Configure a bot for Teams
 > * Sideload and test a bot in Teams
 

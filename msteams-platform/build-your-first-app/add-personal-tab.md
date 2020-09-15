@@ -24,7 +24,7 @@ People in your organization have trouble finding basic contact information for i
 
 > [!div class="checklist"]
 >
-> * Identify the app manifest properties and scaffolding relevant to personal tabs
+> * Identify some of the app manifest properties and scaffolding relevant to personal tabs
 > * Create tab content
 > * Update a tab's color theme based on user preference
 

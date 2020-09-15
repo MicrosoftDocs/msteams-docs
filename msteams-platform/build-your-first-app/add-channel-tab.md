@@ -24,7 +24,7 @@ You can make this information easier to find by building a channel tab, which wi
 
 > [!div class="checklist"]
 >
-> * Identify the app manifest properties and scaffolding relevant to channel tabs
+> * Identify some of the app manifest properties and scaffolding relevant to channel tabs
 > * Create tab content
 > * Create content for a tab's configuration page
 > * Allow a tab to be configured and installed
