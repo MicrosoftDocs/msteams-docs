@@ -6,7 +6,7 @@ keywords: teams design guidelines reference framework personal apps mobile tabs
 # Tabs on mobile
 
 > [!NOTE]
-> If you choose to have your channel/group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property (see below). Personal tabs are currently available in [developer preview](~/resources/dev-preview/developer-preview-intro.md). Full support for tabs on mobile clients will be released soon. To prepare for the update, you should follow the presented here when creating your tabs.
+> If you choose to have your channel/group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property (see below).
 
 Custom tabs can be part of a channel, group chat, or personal app (apps that contain static tabs and/or a one-to-one bot).
 
@@ -86,7 +86,7 @@ Using our approved neutral palette for backgrounds, notifications, text, and but
 
 The way buttons are styled helps communicate what kind of action they trigger. We maintain a wide range of buttons that are formatted to show different levels of emphasis. Buttons can have text, an icon, or a combination of text and an icon. To communicate different levels in a hierarchy, we designed primary and secondary buttons within each category.
 
-![buttons](~/assets/images/buttons.png)
+![buttons image](~/assets/images/buttons.png)
 
 ![selection controls](~/assets/images/selection-controls.png)
 
