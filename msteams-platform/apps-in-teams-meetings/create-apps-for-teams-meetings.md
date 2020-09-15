@@ -152,24 +152,39 @@ Please refer to our [Get context for your Teams tab](../tabs/how-to/access-teams
 
 ### Update your app manifest
 
-The meetings app capabilities are declared in your app manifest via the **configurableTabs** -> **meetingSurfaces** array. The array accepts two optional configuration — **sidePanel** (he right panel in-meeting experience for the app) or **stage**. the **sidePanel** is t and “stage” (rendered in the main shared view of the meeting (as with Whiteboard and InVision today).  
+The meetings app capabilities are declared in your app manifest via the **configurableTabs** -> **scopes** and **context** arrays. *Scope* defines to whom and *context* defines where your app will be available.
 
 ```json
 "configurableTabs": [
     {
       "configurationUrl": "https://contoso.com/teamstab/configure",
       "canUpdateConfiguration": true,
-      "meetingSurfaces": [
-        "sidePanel",
-        "stage"
-      ],
       "scopes": [
         "team",
         "groupchat"
-      ]
+      ],
+      "context":[
+        "personalTab",
+        "channelTab",
+        "privateChatTab",
+        "meetingChatTab",
+        "meetingDetailsTab",
+        "meetingSidePanel"
+     ]
     }
   ]
 ```
+
+### Context property
+
+The tab `context` and `scopes` properties work in harmony to allow you to determine where you want your app to appear. While tabs in the `personal` scope can only have one context, i.e., `personalTab`,  `team` or `groupchat` scoped tabs can have more than one context. The possible values for the context property are as follows:
+
+* **personalTab**: a tab in the header of an app launched from the user’s app bar.
+* **channelTab**: a tab in the header of a team channel.
+* **privateChatTab**: a tab in the header of a group chat between a set of users not in the context of a team or meeting.
+* **meetingChatTab**: a tab in the header of a group chat between a set of users in the context of a scheduled meeting.
+* **meetingDetailsTab**: a tab in the header of the meeting details view of the calendar.
+* **meetingSidePanel**: an in-meeting panel opened via the unified bar (u-bar).
 
 ## Configure your app for meeting scenarios
 
@@ -186,7 +201,7 @@ Users with organizer and/or presenter roles can add tabs using the plus ➕ butt
 
 ### In-meeting
 
-The **side-panel** and **stage** surfaces (specified in the app manifest) provide the surfaces for app access and interaction.
+The **side-panel** (specified in the app manifest) provides the surface for app access and interaction.
 
 #### **side-panel**
 
@@ -198,19 +213,21 @@ The **side-panel** and **stage** surfaces (specified in the app manifest) provid
 
 ✔ Refer to the [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md).
 
-#### **stage**
+#### **in-meeting notification**
 
-✔ In your app manifest add **stage** to the **meetingSurfaces** array as described above.
-
-✔ In the meeting, the app will be available in the Share Tray (similar to Whiteboard).
+✔ Review the [tab design guideline](https://review.docs.microsoft.com/microsoftteams/platform/designing-your-app/designing-meeting-notification-modal?branch=restructure-design-topics-ia)
 
 ✔ Refer to the [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md).
+
+✔ Use the [notification](/graph/api/resources/projectrome-notification?view=graph-rest-beta) API to signal that a bubble notification needs to be triggered.
+
+✔ As part of the notification request payload, include the URL where the content to be showcased is hosted.
 
 ### Post-meeting
 
 The post-meeting and pre-meeting configurations are equivalent.
 
-## Learn more
+## Meeting app sample
 
  > [!div class="nextstepaction"]
-> [Tips for designing your Teams tab](../tabs/design/tabs.md)
+> [Meeting token generator app](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token)

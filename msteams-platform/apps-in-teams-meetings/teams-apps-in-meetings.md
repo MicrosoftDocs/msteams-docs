@@ -39,11 +39,9 @@ Teams’ meeting app extensibility centers on three concepts:
 
 ✔ Permissioned users can add apps to a meeting via the tab gallery in two ways:
 
-&emsp;&emsp;&#9679; Via the **Details** tab on the Teams scheduling form:
+&emsp;&emsp;&#9679; Via the **Details** tab on the Teams scheduling form.
 
-![Teams scheduling form](../assets/images/apps-in-meetings/teams-meeting-scheduling-form.png)
-
-&emsp;&emsp;&#9679;  Via the meeting **Chat** tab in an existing meeting:</br> </br>![Chat in a meeting tab](../assets/images/apps-in-meetings/chat-in-meeting.png) </br>&#8199;  
+&emsp;&emsp;&#9679;  Via the meeting **Chat** tab in an existing meeting.</br> </br>
 
 ✔ Tab apps are accessible in meetings **Details** and **Chats** pages using a plus icon (➕) button.|
 
@@ -55,13 +53,11 @@ Teams’ meeting app extensibility centers on three concepts:
 
 ✔ When loaded in the context of a meeting, apps will be able to leverage the Teams Client SDK to access the `meetingId`, `userMri`, and `frameContext` to appropriately render the experience.
 
-✔ For an app to be visible in a meeting, Teams will expose two new surfaces: 
+✔ For an app can be visible in a Teams meeting in two areas:
 
-&emsp;&emsp;&#9679; **Side panel** : If your _app manifest_ specifies that your tab is [optimized for side panel](create-apps-for-teams-meetings.md#in-meeting), it will be displayed there or it can also be part of a share tray experience, subject to specified design guidelines:
+&emsp;&emsp;&#9679; **Side panel** : If your _app manifest_ specifies that your tab is [optimized for side panel](create-apps-for-teams-meetings.md#in-meeting), it will be displayed there or it can also be part of a share tray experience, subject to specified design guidelines.
 
- ![Share tray in meeting](../assets/images/apps-in-meetings/share-tray-in-meeting.png)
-
-&emsp;&emsp;&#9679; **Stage**: If your _app manifest_ specifies that your tab is [optimized for stage](create-apps-for-teams-meetings.md#in-meeting), it will be available as part of the share tray experience. Each participant will have a separate instance of the app, fostering  a real-time collaboration experience similar to the [Microsoft Whiteboard](https://support.microsoft.com/en-us/office/use-whiteboard-in-microsoft-teams-7a6e7218-e9dc-4ccc-89aa-b1a0bb9c31ee?ui=en-us&rs=en-us&ad=us) app experience in a Teams meeting.
+&emsp;&emsp;&#9679; **In-meeting notifications**.
 
 **In-meeting experience:**
 
