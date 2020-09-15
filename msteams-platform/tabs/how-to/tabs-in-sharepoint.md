@@ -24,7 +24,7 @@ With the November release of Teams and SharePoint Framework v. 1.7, developers h
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage bgdAccent1">
-                            <img src="~/assets/images/tabs/tabs-in-sharepoint/image084.png" />
+                            <img src="~/assets/images/tabs/tabs-in-sharepoint/image084.png" alt="tab-in-sharepoint view"/>
                         </div>
                     </div>
                     <div class="cardText">
@@ -43,7 +43,7 @@ With the November release of Teams and SharePoint Framework v. 1.7, developers h
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage bgdAccent1">
-                            <img src="~/assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png" />
+                            <img src="~/assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png" alt="web-part-exposed-as-a-tab" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -90,29 +90,29 @@ Upload and deploy your Teams app package to your SharePoint App Catalog by visit
 
 When prompted, enable "Make this solution available to all sites in the organization":
 
-![](~/assets/images/tabs/tabs-in-sharepoint/image065.png)
+![Tabs in Sharepoint view](~/assets/images/tabs/tabs-in-sharepoint/image065.png)
 
 In your site, create a new page by clicking in the gear button at the upper right and then "Add a page":
 
-![](~/assets/images/tabs/tabs-in-sharepoint/image066.png)
+![Sharepoint view](~/assets/images/tabs/tabs-in-sharepoint/image066.png)
 
 You'll see the SharePoint Pages authoring experience. Name your page "My Teams Tab".
 
 Open the web part toolbox by pressing the + button, and select your Teams Tab (named "Contoso HR"). Web parts are sorted alphabetically; if it's a long list, you can use the search bar to find it. This will create a web part in the canvas that contains your Teams tab:
 
-![](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
+![Tab view](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
 
 Press the "Publish" button when you are finished editing.
 
 You may want to click "Add page to navigation" to have a quick reference to your page in the left navigation bar:
 
-![](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
+![Tab in Sharepoint image](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
 
 ## Step 3: Explore App Pages in SharePoint
 
 Once your page is published, you can explore [turning your Teams app into a more complete experience inside SharePoint](/sharepoint/dev/spfx/web-parts/single-part-app-pages). This converts the current page into an App Page, showing the normal SharePoint page layout with a full-page experience for the Teams tab:
 
-![](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
+![Image of Tabs in Sharepoint](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
 
 ## More information
 

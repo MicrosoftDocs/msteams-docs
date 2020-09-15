@@ -1,6 +1,7 @@
 ---
 title: Understanding Teams app capabilities
 author: heath-hamilton
+description: Overview of Teams platform capabilities, which are the extension points for building Teams apps.
 ms.topic: overview
 ms.author: lajanuar
 ---

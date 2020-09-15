@@ -1,7 +1,7 @@
 ---
 title: Create a content page
 author: laujan
-description: 
+description: how to create a content page
 keywords: teams tabs group channel configurable static
 ms.topic: conceptual
 ms.author: lajanuar
