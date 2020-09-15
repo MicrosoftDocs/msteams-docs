@@ -20,7 +20,7 @@ Your workplace has been using [tabs](../build-your-first-app/add-personal-tab.md
 >
 > * Create an app project and bot using the Microsoft Teams Toolkit for Visual Studio Code
 > * Identify the app manifest properties and some of the scaffolding relevant to bots
-> * Host a bot locally
+> * Host your app locally
 > * Configure a bot for Teams
 > * Sideload and test a bot in Teams
 
@@ -28,12 +28,12 @@ Your workplace has been using [tabs](../build-your-first-app/add-personal-tab.md
 
 If you haven't yet, set up your Microsoft 365 development [account](building-real-world-app.md#set-up-your-development-account) and [Teams app tools](building-real-world-app.md#install-your-development-tools).
 
-## Create your app project and bot
+## Create your app project
 
 The Microsoft Teams Toolkit helps you set up the following components for your app:
 
-* **App project**: Includes the app manifest and scaffolding relevant to bots
-* **Bot**: Configures a new bot and registers it with the Microsoft Azure Bot Service
+* **App manifest and scaffolding** relevant to bots
+* **Bot** that's automatically registered with the Microsoft Azure Bot Service
 
 > [!TIP]
 > If you haven't created a Teams app project before, you might find it helpful to follow [these instructions](../build-your-first-app/build-and-run.md) that explain projects in more detail.
@@ -89,7 +89,7 @@ For now, let's just focus on the following required properties. (See the full li
 * `botId`: The ID of the bot you created setting up your project. (Stored in `{botId0}`, you can find the actual ID in `Development.env`.)
 * `scopes`: Specifies if your bot is available in `personal`, `groupchat`, or `team` (i.e., channel) contexts.
 * `commands`: Available commands users can send to your bot.
-* `title`: A bot command name users see in the Teams client.
+* `title`: Bot command name that displays in the Teams client.
 * `description`: A short description or example of the syntax and arguments to help users understand what a bot command does.
 
 ### App scaffolding
@@ -117,7 +117,7 @@ You must specify an endpoint URL to receive and process user messages (i.e., req
 
 1. In Visual Studio Code, select **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: on the left Activity Bar and choose **Open Microsoft Teams Toolkit**.
 1. Go to **Bot management > Existing bot registrations** and select the bot you created during setup.
-1. In the **Bot endpoint address** field, enter the local web server where you're hosting the bot and append `/api/messages` to it.
+1. In the **Bot endpoint address** field, enter the local web server where you're hosting the bot (`baseUrl10` value) and append `/api/messages` to it.
 
     :::image type="content" source="../assets/images/build-your-first-app/bot-config-endpoint-url.png" alt-text="Illustration showing where you can configure the bot endpoint URL in the Teams Toolkit.":::
 

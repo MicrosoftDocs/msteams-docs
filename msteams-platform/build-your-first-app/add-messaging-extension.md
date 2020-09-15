@@ -8,7 +8,7 @@ ms.topic: tutorial
 ---
 # Create a messaging extension for Teams
 
-You'll build a basic *messaging extension* app in this tutorial. Specifically, a search-based messaging extension, which is a shortcut for inserting external content in a Teams message.
+You'll build a basic *messaging extension* app in this tutorial. Specifically, a search-based messaging extension, which is a shortcut for inserting external content (typically a card) in a Teams message.
 
 ## Your assignment
 
@@ -20,7 +20,7 @@ Your organization's help desk communicates with users through Teams, but the tic
 >
 > * Create an app project and bot using the Microsoft Teams Toolkit for Visual Studio Code
 > * Identify the app manifest properties and some of the scaffolding relevant to bots
-> * Host a bot locally
+> * Host your app locally
 > * Configure a bot for Teams
 > * Sideload and test a bot in Teams
 
@@ -28,12 +28,12 @@ Your organization's help desk communicates with users through Teams, but the tic
 
 If you haven't yet, set up your Microsoft 365 development [account](building-real-world-app.md#set-up-your-development-account) and [Teams app tools](building-real-world-app.md#install-your-development-tools).
 
-## Create your app project and bot
+## Create your app project
 
 The Microsoft Teams Toolkit helps you set up the following components for your messaging extension app:
 
-* **App project**: Includes the app manifest and scaffolding relevant to bots
-* **Bot**: Configures a new bot and registers it with the Microsoft Azure Bot Service
+* **App manifest and scaffolding** relevant to messaging extensions
+* **Bot** that's automatically registered with the Microsoft Azure Bot Service
 
 > [!TIP]
 > If you haven't created a Teams app project before, you might find it helpful to follow [these instructions](../build-your-first-app/build-and-run.md) that explain projects in more detail.
@@ -55,7 +55,7 @@ Much of the app manifest and scaffolding are set up automatically when you creat
 
 ### App manifest
 
-The following snippet from the app manifest (the `manifest.json` file in your project's `.publish` directory) shows the properties and default values relevant to bots.
+The following snippet from the app manifest (the `manifest.json` file in your project's `.publish` directory) shows the properties and default values relevant to messaging extensions.
 
 ```JSON
 "composeExtensions": [
@@ -86,13 +86,19 @@ The following snippet from the app manifest (the `manifest.json` file in your pr
 ],
 ```
 
-For now, let's just focus on the following required properties. (See the full list of supported [`bots`](../resources/schema/manifest-schema.md#bots) properties.)
+Let's understand what some of the properties are for. (See the full list of supported [`composeExtensions`](../resources/schema/manifest-schema.md#composeextensions) properties.)
 
 * `botId`: The ID of the bot you created setting up your project. (Stored in `{botId0}`, you can find the actual ID in `Development.env`.)
-* `scopes`: Specifies if your bot is available in `personal`, `groupchat`, or `team` (i.e., channel) contexts.
-* `commands`: Available commands users can send to your bot.
-* `title`: A bot command name users see in the Teams client.
-* `description`: A short description or example of the syntax and arguments to help users understand what a bot command does.
+* `canUpdateConfiguration`: Indicates whether users can configure the messaging extension.
+* `commands`: Available commands for the messaging extension.
+* `id`: Identifier for the messaging extension commands.
+* `context`: Defines where users can invoke the messaging extension.
+* `description`: Help text indicating what the command does.
+* `title`: User-friendly name for the messaging extension that displays in the Teams client.
+* `parameters`: Number of parameters a command takes (minimum of one and maximum of five).
+* `parameters.name`: Parameter name that displays in the Teams client. This is included in the user request to your service.
+* `parameters.title`: User-friendly name for the parameter that displays in the Teams client.
+* `parameters.description`: Describes the parameter's purpose or provides an example of a provided example.
 
 ### App scaffolding
 
@@ -100,18 +106,20 @@ The app scaffolding provides a `botActivityHandler.js` file, located in the root
 
 ## Set up a secure tunnel to your app
 
-For testing purposes, let's host your bot on a local web server (port 3978).
+For testing purposes, let's host your messaging extension on a local web server (port 3978).
 
 1. In a terminal, run `ngrok http -host-header=rewrite 3978`.
 1. Copy the HTTPS URL in the output since Teams requires HTTPS connections.
 1. In your `.publish` directory, open `Development.env`.
 1. Replace the `baseUrl0` value with the copied URL. (For example, change `baseUrl0=http://localhost:3000` to `baseUrl0=https://85528b2b3ca5.ngrok.io`.)
 
-Your app manifest is pointing to where you're hosting the bot.
+Your app manifest is pointing to where you're hosting the bot used by the messaging extension.
 
-## Configuring your bot
+## Configuring your messaging extension
 
-To use a bot in Teams, you must register it with the Azure Bot Service. Lucky for you, this is done automatically when you set up your app using the Teams Toolkit.
+Messaging extensions rely on bots to send and process user requests from Teams to your external service.
+
+The bot must be registered with the Azure Bot Service. This is done automatically when you set up your app using the Teams Toolkit.
 
 ### Add the bot endpoint address
 
@@ -119,15 +127,13 @@ You must specify an endpoint URL to receive and process user messages (i.e., req
 
 1. In Visual Studio Code, select **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: on the left Activity Bar and choose **Open Microsoft Teams Toolkit**.
 1. Go to **Bot management > Existing bot registrations** and select the bot you created during setup.
-1. In the **Bot endpoint address** field, enter the local web server where you're hosting the bot and append `/api/messages` to it.
+1. In the **Bot endpoint address** field, enter the local web server where you're hosting the bot (`baseUrl10` value) and append `/api/messages` to it.
 
-    :::image type="content" source="../assets/images/build-your-first-app/bot-config-endpoint-url.png" alt-text="Illustration showing where you can configure the bot endpoint URL in the Teams Toolkit.":::
-
-Your bot will be able to respond to messages in Teams.
+Your bot will be able to handle queries in your messaging extension.
 
 ## Run your app
 
-You've set up a URL to host your bot and configured it to handle messages. It's time to get your bot up and running.
+You've set up a URL to host your bot and configured it to handle search queries. It's time to get your bot up and running.
 
 1. In a terminal, go to the root directory of your app project and run `npm install`.
 1. Run `npm start`.
