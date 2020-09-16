@@ -219,7 +219,7 @@ The **side-panel** (specified in the app manifest) provides the surface for app 
 
 ✔ Refer to the [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md).
 
-✔ Use the [notification](/graph/api/resources/projectrome-notification?view=graph-rest-beta) API to signal that a bubble notification needs to be triggered.
+✔ Use the [notification](/graph/api/resources/projectrome-notification?view=graph-rest-beta&preserve-view=true) API to signal that a bubble notification needs to be triggered.
 
 ✔ As part of the notification request payload, include the URL where the content to be showcased is hosted.
 
