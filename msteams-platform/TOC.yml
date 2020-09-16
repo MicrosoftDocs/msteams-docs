@@ -332,6 +332,8 @@
         href: webhooks-and-connectors/how-to/connectors-using.md
 - name: 'Teams Graph REST APIs'
   items:
+    - name: 'Authentication and authorization basics for Microsoft Graph'
+      href: /graph/auth/auth-concepts
     - name: Resource Specific consent
       items:
         - name: 'Enable resource specific consent (RSC)'
