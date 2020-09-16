@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.author: lajanuar
 keywords: teams apps meetings user participant role api 
 ---
-# Create apps for Teams meetings
+# Create apps for Teams meetings (Preview)
 
 >[!IMPORTANT]
 > Features included in Microsoft Teams preview are provided for early-access, testing, and feedback purposes only. They may undergo changes before becoming available in the public release and should not be used in production applications.
@@ -213,15 +213,18 @@ The **side-panel** (specified in the app manifest) provides the surface for app 
 
 ✔ Refer to the [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md).
 
-#### **in-meeting notification**
+#### **in-meeting dialog**
 
-✔ Review the [tab design guideline](https://review.docs.microsoft.com/microsoftteams/platform/designing-your-app/designing-meeting-notification-modal?branch=restructure-design-topics-ia)
+✔ Review the [in-meeting dialog design guidelines](https://review.docs.microsoft.com/en-us/microsoftteams/platform/designing-your-app/designing-in-meeting-dialog?branch=restructure-design-topics-ia)
 
 ✔ Refer to the [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md).
 
 ✔ Use the [notification](/graph/api/resources/projectrome-notification?view=graph-rest-beta) API to signal that a bubble notification needs to be triggered.
 
 ✔ As part of the notification request payload, include the URL where the content to be showcased is hosted.
+
+> [!NOTE]
+> These notifications are persistent in nature. You must invoke the [**submitTask()**](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) function to auto-dismiss after a user takes an action in the web-view. This is a requirement for app submission. *See also*, [Teams SDK: tasks module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---).
 
 ### Post-meeting
 
