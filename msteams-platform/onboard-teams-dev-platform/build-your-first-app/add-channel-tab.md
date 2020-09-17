@@ -177,7 +177,7 @@ To see your channel tab's configuration and content pages, you must install it i
 
 Once you select **Save** to configure the tab, the content displays.
 
-:::image type="content" source="../doc-links/images/channel-tab-tutorial-content-installed.png" alt-text="Example screenshot of a channel tab with static content.":::
+:::image type="content" source="../doc-links/images/channel-tab-tutorial-content-installed.png" alt-text="Example screenshot of channel tab with static content.":::
 
 ## Well done
 
