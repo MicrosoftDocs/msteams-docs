@@ -26,7 +26,7 @@ Your workplace has been using [tabs](../build-your-first-app/add-personal-tab.md
 
 ## Before you begin
 
-If you haven't yet, set up your Microsoft 365 development [account](building-real-world-app.md#set-up-your-development-account) and [Teams app tools](building-real-world-app.md#install-your-development-tools).
+If you haven't yet, make sure you [get the prerequisits](./building-real-world-app.md#get-prerequisites)
 
 ## Create your app project
 

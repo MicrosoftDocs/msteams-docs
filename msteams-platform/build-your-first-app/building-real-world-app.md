@@ -80,9 +80,18 @@ Teams displays app content only through HTTPS connections. Since you'll host you
     :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="install toolkit view":::
 1. Install [ngrok](https://ngrok.com/download).
 
-## Next step
+## About the tutorials 
+All the tutorials in this section are independent and you can start from anywhere you want. If you can't choose, follow our beginner friendly path to build a tab first.
+:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="skill tree":::
 
+
+## Next step
 Once you set up your account and environment, you can start building.
 
 > [!div class="nextstepaction"]
-> [Build and run your first app](../build-your-first-app/build-and-run.md)
+> [Build and run your personal tab](../build-your-first-app/build-and-run.md)
+
+
+Or you can choose to
+* [Build a bot](../build-your-first-app/add-bot.md)
+* [Build a Messaging Extension](../build-your-first-app/add-messaging-extension.md)
