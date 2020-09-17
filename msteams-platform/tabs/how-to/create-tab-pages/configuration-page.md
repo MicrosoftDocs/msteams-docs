@@ -1,10 +1,10 @@
 ---
 title: Create a configuration page
 author: laujan
-description: 
+description: how to create a configuration page
 keywords: teams tabs group channel configurable 
 ms.topic: conceptualF
-ms.author: laujan
+ms.author: lajanuar
 ---
 # Create a configuration page
 

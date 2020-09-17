@@ -10,14 +10,9 @@ keywords: teams design guidelines reference framework tabs configuration
 >
 > Follow the [guidance for tabs on mobile](./tabs-mobile.md) when creating your tabs. If your tab uses authentication, you must upgrade your Teams JavaScript SDK to version 1.4.1 or later, or authentication will fail.
 >
-> **Personal (static) tabs on mobile:**
->
-> * Static tabs (personal app) are available in [developer preview](~/resources/dev-preview/developer-preview-intro.md).
-> * While building your static tabs, ensure to follow the [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md)
->
 > **Channel/group (configurable) tabs on mobile:**
 >
-> * Mobile clients only show tabs that have a value for `websiteUrl`. If you want your tab to appear on the Teams mobile clients, you must set the value of `websiteUrl`.
+> * Mobile clients only show configurable tabs that have a value for `websiteUrl`. If you want your tab to appear on the Teams mobile clients, you must set the value of `websiteUrl`.
 > * Default open behavior on mobile is to open outside in browser using the `websiteUrl`. For apps published to the public App Store, if you want your channel tab to open inside teams by default, follow the [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md), and reach out to your support rep to request to be whitelisted.
 
 Tabs are canvases that you can use to share content, hold conversations, and host third-party services, all within a team’s organic workflow. When you build a tab in Microsoft Teams, it puts your web app front and center where it’s easily accessible from key conversations.
@@ -97,7 +92,9 @@ Incorporating your own colors and layouts twill also aid in communicating person
 
 The dimensions of the tab configuration page:
 
-<img width="450px" title="Sizes for configuration tabs" src="~/assets/images/tabs/config-dialog-Contoso2.png" />
+
+<img width="450px" title="Sizes for configuration tabs" src="~/assets/images/tabs/config-dialog-Contoso2.png" alt="sizes for config tabs" />
+
 
 ### Guidelines for tab configuration page format
 
@@ -111,7 +108,7 @@ The dimensions of the tab configuration page:
 
 When properly sized, your tab configuration page should look similar to this:
 
-<img width="450px" title="New configuration tab" src="~/assets/images/tabs/config-dialog-Contoso.png" />
+<img width="450px" title="New configuration tab" src="~/assets/images/tabs/config-dialog-Contoso.png" alt="new config tab"/>
 
 ## Best practices
 
@@ -133,7 +130,7 @@ There are two modes of notification for tab content changes:
 
 > [!div class="checklist"]
 >
-> * **Use the app api to notify users of changes**. This message will show up in the user’s activity feed and deep link to the tab. *See*  [Create deep links to content and features in Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest)
+> * **Use the app api to notify users of changes**. This message will show up in the user’s activity feed and deep link to the tab. *See*  [Create deep links to content and features in Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
 > * **Use a bot**. This method is preferred especially if the Tab thread is targeted. The result will be that the tab’s threaded conversation will be moved into view as recently active. This method also allows for some sophistication in how the notification is sent.
 
   Sending a message to a tab thread increases the awareness of activity to all users without explicitly notifying everyone. This is awareness without noise. In addition, when you `@mention`  specific users the same notification will be placed in their feed, deep linking them to the tab thread directly.

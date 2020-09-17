@@ -3,7 +3,7 @@ title: "Create a Personal Tab with ASP. NET Core MVC"
 author: laujan
 description: A quickstart guide to creating a custom personal tab with ASP. NET Core MVC. 
 ms.topic: quickstart 
-ms.author: laujan 
+ms.author: lajanuar
 ---
 # Create a Custom Personal Tab with ASP. NET Core MVC
 

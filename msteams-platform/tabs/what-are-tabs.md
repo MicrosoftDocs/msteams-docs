@@ -1,7 +1,7 @@
 ---
-title: What are custom tabs in Microsoft Teams?
+title: What are custom tabs in Teams?
 author: laujan
-description: An overview of custom tabs on the Microsoft Teams platform
+description: An overview of custom tabs on the Teams platform
 ms.topic: overview
 ms.author: lajanuar
 ---
@@ -55,3 +55,6 @@ If you choose to have your channel/group tab appear on Teams mobile clients, the
 * [Designing your app](../designing-your-app/designing-overview.md)
 * [Building your app](../concepts/building-an-app.md)
 * [Deploying your app](../concepts/deploy-and-publish/overview.md)
+
+If you choose to have your channel/group tab/personal tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property. To ensure optimal user experience, you should follow the [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md) when creating your tabs.
+
