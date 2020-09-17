@@ -1,5 +1,5 @@
 ---
-title: Build and run your first Teams app
+title: Build and run first Teams app
 author: heath-hamilton
 ms.author: lajanuar
 description: Run your first Microsoft Teams app.
@@ -18,7 +18,7 @@ Use the Microsoft Teams Toolkit in Visual Studio Code to set up your first app p
 :::image type="content" source="../doc-links/images/create-teams-app.png" alt-text="create teams app image":::
 1. Enter a name for your Teams app. (This is the default name for your app and also the name of the app project directory on your local machine.)
 1. On the **Add capabilities** screen, select **Tab** then **Next**.
-:::image type="content" source="../doc-links/images/choose-tab.png" alt-text="create teams app image":::
+:::image type="content" source="../doc-links/images/choose-tab.png" alt-text="create teams app image view":::
 1. Check the **Personal tab** option and select **Finish** at the bottom of the screen to configure your project.
 
 ## Understand important app project components
