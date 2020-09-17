@@ -21,7 +21,7 @@ keywords: teams apps meetings user participant role api
 
 1. Some meeting APIs, such as `GetParticipant` will require a [bot registration and bot app ID](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) to generate auth tokens.
 
-1. Adherence to the [Teams tab design guidelines](../tabs/design/tabs.md) is a best practice for tabs.
+1. Developers must adhere to general [Teams tab design guidelines](../tabs/design/tabs.md) for pre- and post-meeting scenarios as well as the [in-meeting dialog guidelines](https://review.docs.microsoft.com/microsoftteams/platform/designing-your-app/designing-in-meeting-dialog?branch=restructure-design-topics-ia) for in-meeting dialog triggered during a Teams meeting.
 
 ## Meeting apps API reference
 
@@ -166,7 +166,6 @@ The meetings app capabilities are declared in your app manifest via the **config
         "groupchat"
       ],
       "context":[
-        "personalTab",
         "channelTab",
         "privateChatTab",
         "meetingChatTab",
@@ -181,7 +180,6 @@ The meetings app capabilities are declared in your app manifest via the **config
 
 The tab `context` and `scopes` properties work in harmony to allow you to determine where you want your app to appear. While tabs in the `personal` scope can only have one context, i.e., `personalTab`,  `team` or `groupchat` scoped tabs can have more than one context. The possible values for the context property are as follows:
 
-* **personalTab**: a tab in the header of an app launched from the user’s app bar.
 * **channelTab**: a tab in the header of a team channel.
 * **privateChatTab**: a tab in the header of a group chat between a set of users not in the context of a team or meeting.
 * **meetingChatTab**: a tab in the header of a group chat between a set of users in the context of a scheduled meeting.
