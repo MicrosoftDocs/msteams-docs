@@ -21,7 +21,7 @@ They can be extended with:
 
 * [**Configurable Tabs**](~/tabs/what-are-tabs.md) providing a full-screen embedded web experience configured for the channel or group chat it is installed in. All members will interact on the same shared web-app, so a stateless single page app experience is typical.
 
-* [**Webhooks and Connectors**](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) enabling external services to post messages to the conversation, and your users to send messages to your service. You can take advantage of cards and card actions to to create rich, actionable messages.
+* [**Webhooks and Connectors**](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) enabling external services to post messages to the conversation, and your users to send messages to your service. You can take advantage of cards and card actions to create rich, actionable messages.
 
 ### Personal apps
 
