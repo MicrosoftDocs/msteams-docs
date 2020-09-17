@@ -104,17 +104,17 @@ Add the following rule to `App.css` so the email links are easier to read no mat
 
 Save your changes. Go to your app's tab in Teams to view the new content.
 
-:::image type="content" source="../doc-links/images/personal-tab-tutorial-content.png" alt-text="Example screenshot of a personal tab with static content.":::
+:::image type="content" source="../doc-links/images/personal-tab-tutorial-content.png" alt-text="Example screenshot of personal tab with static content.":::
 
 ## Update the tab theme
 
 Good apps feel native to Teams, so it's important your tab blends with the Teams theme your users prefer: default (light), dark, or high contrast. As you might have noticed in the last screenshot, your tab still has a light background when the client's using the dark theme. This is not a recommended user experience.
 
-The [Teams JavaScript client SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest) can make your app aware of and react to theme changes in the client. Let's walk through how to do this.
+The [Teams JavaScript client SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true) can make your app aware of and react to theme changes in the client. Let's walk through how to do this.
 
 ### Get context about the Teams client
 
-In your `Tab.js` file, there's a `microsoftTeams.getContext()` call that provides some [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) about, among other details, the configured client theme. Thanks to the app scaffolding, use this code as is to access the `context` interface and its properties.
+In your `Tab.js` file, there's a `microsoftTeams.getContext()` call that provides some [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) about, among other details, the configured client theme. Thanks to the app scaffolding, use this code as is to access the `context` interface and its properties.
 
 ```JavaScript
   componentDidMount(){
