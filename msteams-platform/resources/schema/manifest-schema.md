@@ -550,7 +550,10 @@ Specify your AAD App ID and Graph information to help users seamlessly sign into
 
 **Optional** — boolean
 
-Indicate where or not to show the loading indicator when an app/tab is loading. Default: **false**.
+Indicate whether or not to show the loading indicator when an app/tab is loading. Default: **false**.
+>[!NOTE]
+>If you set "showLoadingIndicator : true" in your app manifest, then for the page to load correctly, you must modify the content pages of your tabs and task modules as per the protocol described in [Show a native loading indicator](https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/create-tab-pages/content-page#show-a-native-loading-indicator) document.
+
 
 ## isFullScreen
 
