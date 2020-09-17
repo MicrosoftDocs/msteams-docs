@@ -11,7 +11,7 @@ keywords: teams apps meetings user participant role api
 >[!IMPORTANT]
 > Features included in Microsoft Teams preview are provided for early-access, testing, and feedback purposes only. They may undergo changes before becoming available in the public release and should not be used in production applications.
 
-Meetings are key to productivity in Teams. They enable collaboration, partnership, informed communication, and shared feedback in an inclusive and active forum. As a developer, you can create [configurable tab](../tabs/what-are-tabs.md#how-do-tabs-work), [bot](../bots/what-are-bots.md), and [message extension](../messaging-extensions/what-are-messaging-extensions.md) applications to enhance and enrich a Teams meeting experience. Meeting users can access apps, via the tab gallery, to enable relevant scenarios such as pre-staging a Kanban board, launching an in-meeting actionable notification, or creating a post-meeting poll. Your meeting app can deliver a user experience for each stage of the meeting lifecycle based upon attendee status.
+Meetings are key to productivity in Teams. They enable collaboration, partnership, informed communication, and shared feedback in an inclusive and active forum. As a developer, you can create [configurable tab](../tabs/what-are-tabs.md#how-do-tabs-work), [bot](../bots/what-are-bots.md), and [message extension](../messaging-extensions/what-are-messaging-extensions.md) applications to enhance and enrich a Teams meeting experience. Meeting users can access apps, via the tab gallery, to enable relevant scenarios such as pre-staging a Kanban board, launching an in-meeting actionable dialog, or creating a post-meeting poll. Your meeting app can deliver a user experience for each stage of the meeting lifecycle based upon attendee status.
 
 Teams’ meeting app extensibility centers on three concepts:
 
@@ -47,6 +47,8 @@ Teams’ meeting app extensibility centers on three concepts:
 
 ### In-meeting app experience
 
+✔ Use the in-meeting dialog to showcase actionable content for meeting participants. *See* [Create Apps for Teams meetings](create-apps-for-teams-meetings.md).
+
 ✔ Meeting apps will be hosted in the top upper bar of the chat window and as in-meeting tab experience via the right panel. When users add a tab to a meeting through the tab gallery, apps that are **during meeting** experiences will be surfaced.
 
 ✔ Permissioned users can add apps while in the meeting.
@@ -55,19 +57,20 @@ Teams’ meeting app extensibility centers on three concepts:
 
 ✔ For an app can be visible in a Teams meeting in two areas:
 
-&emsp;&emsp;&#9679; **Side panel** : If your _app manifest_ specifies that your tab is [optimized for side panel](create-apps-for-teams-meetings.md#in-meeting), it will be displayed there or it can also be part of a share tray experience, subject to specified design guidelines.
+&emsp;&emsp;&#9679; **Side panel**. </br>
+> **NOTE**: If your _app manifest_ specifies that your tab is [optimized for side panel](create-apps-for-teams-meetings.md#in-meeting), that is where it will be displayed. I can also be part of a share-tray experience, subject to specified design guidelines.
 
-&emsp;&emsp;&#9679; **In-meeting notifications**.
+&emsp;&emsp;&#9679; **In-meeting dialog**.
 
 **In-meeting experience:**
 
 ![in-meeting experience](../assets/images/apps-in-meetings/in-meeting-experience.png)
 
-![In-meeting-notification view](../assets/images/apps-in-meetings/in-meeting-notification.png)
+![In-meeting-dialog view](../assets/images/apps-in-meetings/in-meeting-dialog.png)
 
-**In-meeting actionable notification for users:**
+**In-meeting actionable dialog for users:**
 
-![notification view](../assets/images/apps-in-meetings/notification.png)
+![dialog view](../assets/images/apps-in-meetings/in-meeting-dialog.png)
 
 ### Post-meeting app experience
 
@@ -105,9 +108,7 @@ You can access the  **Meeting options** page as follows:
 
 &#11200; In a meeting invitation, select **Meeting options**.
 
-&#11200; During a meeting, select Show participants ![show participants icon](../assets/images/apps-in-meetings/show-participants.png) in the meeting controls. Then, above the list of participants, choose **Manage permissions** ![Manage permissions icon](../assets/images/apps-in-meetings/manage-permissions.jpg).
-
-![Join a Teams meeting screen](../assets/images/apps-in-meetings/join-a-meeting.png)
+&#11200; During a meeting, select **Show participants** ![show participants icon](../assets/images/apps-in-meetings/show-participants.png) in the meeting controls. Then, above the list of participants, choose **Manage permissions**.
 
 ### User types
 
