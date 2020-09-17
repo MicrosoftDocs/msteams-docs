@@ -17,7 +17,7 @@ keywords: teams apps meetings user participant role api
 
 1. For your app to function in the meeting lifecycle, it must support configurable tabs in the [groupchat scope](../resources/schema/manifest-schema.md#configurabletabs). *See* [Extend your Teams app with a custom tab](../tabs/how-to/add-tab.md). Supporting the `groupchat` scope will enable your app in [pre-meeting](teams-apps-in-meetings.md#pre-meeting-app-experience) and [post-meeting](teams-apps-in-meetings.md#post-meeting-app-experience) chats.
 
-1. Meeting API URL parameters may require `meetingId`, `userId`, and the `[tenantId`](/onedrive/find-your-office-365-tenant-id) These are available as part of the Teams Client SDK. Additionally, reliable information for user ID and tenant ID can be retrieved when the Tab uses SSO authentication.
+1. Meeting API URL parameters may require `meetingId`, `userId`, and the [tenantId](/onedrive/find-your-office-365-tenant-id) These are available as part of the Teams Client SDK and bot activity. Additionally, reliable information for user ID and tenant ID can be retrieved when the Tab uses SSO authentication.
 
 1. Some meeting APIs, such as `GetParticipant` will require a [bot registration and bot app ID](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) to generate auth tokens.
 
@@ -36,14 +36,16 @@ keywords: teams apps meetings user participant role api
 #### Request
 
 ```http
-GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
+GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 ```
+
+*See* the [Bot Framework API reference](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0). 
 
 #### Query parameters
 
 **meetingId**. The meeting identifier is required.  
 **participantId**. The participant identifier is required.  
-**tenantId**. Tenant id of the participant. Required for tenant user.
+**tenantId**. [Tenant id](/onedrive/find-your-office-365-tenant-id) of the participant. Required for tenant user.
 
 #### Response Payload
 <!-- markdownlint-disable MD036 -->
@@ -209,9 +211,9 @@ The **side-panel** (specified in the app manifest) provides the surface for app 
 
 ✔ In the meeting, the app will be rendered in an in-meeting tab that is 320px in width. Your tab must be optimized for this.
 
-✔Refer to the Tab SDK section to use the **userContext** API to route requests accordingly.
+✔Refer to the [Teams SDK](../tabs/how-to/access-teams-context.md#user-context) to use the **userContext** API to route requests accordingly. 
 
-✔ Refer to the [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md).
+✔ Refer to the [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md). Authentication flow for tabs is very similar to the auth flow for websites. Thus, tabs can use OAuth 2.0 directly. *See also*, [Microsoft identity platform and OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
 #### **in-meeting dialog**
 
