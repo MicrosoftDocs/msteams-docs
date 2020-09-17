@@ -70,7 +70,7 @@ Teams’ meeting app extensibility centers on three concepts:
 
 **In-meeting actionable dialog for users:**
 
-![dialog view](../assets/images/apps-in-meetings/in-meeting-dialog.png)
+![dialog view](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
 
 ### Post-meeting app experience
 
