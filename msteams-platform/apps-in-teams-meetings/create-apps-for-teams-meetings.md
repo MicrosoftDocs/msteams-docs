@@ -207,7 +207,7 @@ The **side-panel** (specified in the app manifest) provides the surface for app 
 
 ✔ In your app manifest add **sidePanel** to the **meetingSurfaces** array as described above.
 
-✔ In the meeting, the app will be rendered in a right panel that is 320px in width. Your tab must be optimized for this.
+✔ In the meeting, the app will be rendered in an in-meeting tab that is 320px in width. Your tab must be optimized for this.
 
 ✔Refer to the Tab SDK section to use the **userContext** API to route requests accordingly.
 
@@ -215,7 +215,7 @@ The **side-panel** (specified in the app manifest) provides the surface for app 
 
 #### **in-meeting dialog**
 
-✔ Review the [in-meeting dialog design guidelines](https://review.docs.microsoft.com/en-us/microsoftteams/platform/designing-your-app/designing-in-meeting-dialog?branch=restructure-design-topics-ia)
+✔ You must adhere to the [in-meeting dialog design guidelines](https://review.docs.microsoft.com/en-us/microsoftteams/platform/designing-your-app/designing-in-meeting-dialog?branch=restructure-design-topics-ia).
 
 ✔ Refer to the [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md).
 

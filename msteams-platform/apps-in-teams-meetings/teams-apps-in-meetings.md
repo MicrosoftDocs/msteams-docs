@@ -49,7 +49,7 @@ Teams’ meeting app extensibility centers on three concepts:
 
 ✔ Use the in-meeting dialog to showcase actionable content for meeting participants. *See* [Create Apps for Teams meetings](create-apps-for-teams-meetings.md).
 
-✔ Meeting apps will be hosted in the top upper bar of the chat window and as in-meeting tab experience via the right panel. When users add a tab to a meeting through the tab gallery, apps that are **during meeting** experiences will be surfaced.
+✔ Meeting apps will be hosted in the top upper bar of the chat window and as in-meeting tab experience via the in-meeting tab. When users add a tab to a meeting through the tab gallery, apps that are **during meeting** experiences will be surfaced.
 
 ✔ Permissioned users can add apps while in the meeting.
 
