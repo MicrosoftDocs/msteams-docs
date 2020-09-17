@@ -1,5 +1,5 @@
 ---
-title: Microsoft Teams developer platform
+title: Microsoft Teams developers platform
 author: clearab
 description: Overview of how developers can extend and customize Microsoft Teams features using the Teams platform.
 ms.topic: overview
@@ -147,6 +147,6 @@ Jump right in with our first app tutorials, find out how to integrate and import
 
 * [Add a Share to Teams button to your website](../concepts/build-and-test/share-to-teams.md)
 * [Fluent Design System](https://fluentsite.z22.web.core.windows.net/)
-* [Microsoft Teams JavaScript SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest)
+* [Microsoft Teams JavaScript SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
 * [Bot Framework SDK for JavaScript](https://github.com/Microsoft/botbuilder-js) and [Bot Framework SDK for .NET](https://github.com/Microsoft/botbuilder-dotnet/)
 * [Publish your app to an organization or AppSource](../concepts/deploy-and-publish/overview.md)
