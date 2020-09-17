@@ -1,5 +1,5 @@
 ---
-title: Teams developer platform
+title: Microsoft Teams developers platform
 author: clearab
 description: Overview of how developers can extend and customize Microsoft Teams features using the Teams platform.
 ms.topic: overview
@@ -10,75 +10,143 @@ ms.author: anclear
 
 Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work.
 
-Apps are how you extend Teams to fit your needs. You can create something brand new for Teams or simply integrate features in your favorite apps and services.
+Apps are how you extend Teams to fit your needs. Create something brand new for Teams or integrate an existing app.
 
-## What can Teams apps do?
+## What are Teams apps?
 
 People discover and use Teams apps through a set of platform [capabilities](capabilities-overview.md).
 
 Some apps are simple (send notifications), while others are complex (view patient records). When planning your app, remember that Teams is a collaboration hub. The best Teams apps help people express themselves and work better together.
 
-### Get information more conveniently
+:::row:::
+   :::column span="":::
 
-Sometimes you just need to make things easier to find. Display an important webpage in a [tab](doc-links/what-are-tabs.md), which provides a full-screen web experience for static and dynamic content in Teams.
+### Tabs
 
-![Conceptual representation of what tabs look like in the Teams client.](doc-links/images/overview-tabs.png)
+**Get information more conveniently**: Sometimes you just need to make things easier to find. Display an important webpage in a [tab](../tabs/what-are-tabs.md), which provides a full-screen web experience for static and dynamic content in Teams.
 
-### Share links without switching context
+:::image type="content" source="doc-links/images/overview-tabs.png" alt-text="Conceptual representation of what tabs look like in the Teams client." border="false":::
 
-Pull information into a conversation and never leave Teams. For example, with [messaging extensions](doc-links/what-are-messaging-extensions.md) you can share rich, easily digestible content from an external system using the message compose box.
+   :::column-end:::
+   :::column span="":::
 
-![Conceptual representation of what messaging extensions look like in the Teams client](doc-links\images\overview-messaging.png)
+### Messaging extensions
 
-### Turn words into actions
+**Make it easier to multitask**: With [messaging extensions](../messaging-extensions/what-are-messaging-extensions.md), you can quickly share external information in a conversation. You also can act on a message, such as creating a help ticket based on the content of a channel post.
 
-Conversations often result in the need to do something (create an order, review my code, etc.). A [bot](doc-links/what-are-bots.md) can kick off these kinds of workflows right inside Teams.
+:::image type="content" source="doc-links/images/overview-messaging.png" alt-text="Conceptual representation of what messaging extensions look like in the Teams client." border="false":::
 
-![Conceptual representation of what bots look like in the Teams client](doc-links/images/overview-bots.png)
+   :::column-end:::
+:::row-end:::
 
-### Communicate with external apps and services
+:::row:::
+   :::column span="":::
 
-[Incoming webhooks](doc-links/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send alerts from another app to a Teams channel or chat. With [outgoing webhooks](doc-links/what-are-webhooks-and-connectors.md#outgoing-webhooks), you can send a message to your web service with an @mention.
+### Bots
 
-![Conceptual representation of what connectors look like in the Teams client.](doc-links/images/overview-connectors.png)
+**Turn words into actions**: Conversations often result in the need to do something (generate an order, review my code, check ticket status, etc.). A [bot](../bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.
 
-### Utilize Teams data
+:::image type="content" source="doc-links/images/overview-bots.png" alt-text="Conceptual representation of what bots look like in the Teams client." border="false":::
 
-The [Microsoft Graph REST API for Teams](https://docs.microsoft.com/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app.
+   :::column-end:::
+   :::column span="":::
 
-!["Conceptual representation of the Microsoft Graph REST API for Teams](doc-links/images/overview-graph.png)
-  
-## Start building
+### Webhooks
 
-   Quickly familiarize yourself with building for Teams by creating a simple app and adding a couple commonly used capabilities.
+**Communicate with external apps**: [Incoming webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send notifications from another app to a Teams channel. With [outgoing webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), message your web service with an @mention.
+
+:::image type="content" source="doc-links/images/overview-connectors.png" alt-text="Conceptual representation of what connectors look like in the Teams client." border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+
+### Microsoft Graph for Teams
+
+**Utilize Teams data**: The [Microsoft Graph REST API for Teams](https://docs.microsoft.com/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app.
+
+:::image type="content" source="doc-links/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph REST API for Teams." border="false":::
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+## Get started
+
+Jump right in with our first app tutorials, find out how to integrate and import existing apps, or take your time to learn about the Teams app development lifecycle.
+
+:::row:::
+   :::column span="2":::
+
+### Start building
+
+   Quickly familiarize yourself with building for Teams by creating a simple app and adding some commonly used capabilities.
 
    > [!div class="nextstepaction"]
-   > [Build your first app now](build-your-first-app/build-real-world-app.md)
+   > [Build your first app now](build-your-first-app/building-real-world-app.md)
 
-### Bring it all together
+   :::column-end:::
+   :::column span="":::
 
-   Simplify processes and workflows for users by blending your organization's favorite web apps, services, and systems with Teams collaborative features.
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="2":::
+
+### Integrate with Teams
+
+   Blend the features users love about an existing web app, service, or system with the collaborative features of Teams.
 
    > [!div class="nextstepaction"]
-   > [Integrate an existing app](doc-links/integrating-web-apps.md)
+   > [Integrate an existing app](migrating-web-apps.md)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="2":::
+
+### A little code goes a long way
+
+   You don't need to be an expert programmer to build a great Teams app. Try one of several low-code solutions.
+
+   > [!div class="nextstepaction"]
+   > [Create a low-code app](low-code-solutions.md)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="2":::
 
 ### Trust the process
 
-   Understand the entire Teams platform development process to effectively plan, design, build, and publish an app for your organization or anyone.
+   Learn the entire Teams platform development process to effectively plan, design, build, and publish an app for your organization or anyone.
 
    > [!div class="nextstepaction"]
-   > [Start planning your app](doc-links/extensibility-points.md)
+   > [Start planning your app](../concepts/extensibility-points.md)
 
-### No code, no worries
+   :::column-end:::
+   :::column span="":::
 
-   You don't need to be a programmer to build a great app. Create a Teams app with little to no code using the Microsoft Power Platform.
-
-   > [!div class="nextstepaction"]
-   > [Import a Power Platform app](doc-links/importing-custom-microsoft-apps.md)
+   :::column-end:::
+:::row-end:::
 
 ## Resources
 
-* [Add a Share to Teams button to your website](doc-links/share-to-teams.md)
-* [Fluent UI Design System](https://fluentsite.z22.web.core.windows.net/)
-* [Microsoft Teams JavaScript client SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest)
+* [Add a Share to Teams button to your website](../concepts/build-and-test/share-to-teams.md)
+* [Fluent Design System](https://fluentsite.z22.web.core.windows.net/)
+* [Microsoft Teams JavaScript SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
 * [Bot Framework SDK for JavaScript](https://github.com/Microsoft/botbuilder-js) and [Bot Framework SDK for .NET](https://github.com/Microsoft/botbuilder-dotnet/)
+* [Publish your app to an organization or AppSource](../concepts/deploy-and-publish/overview.md)
