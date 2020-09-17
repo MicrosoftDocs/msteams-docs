@@ -13,13 +13,13 @@ The in-meeting tab is a canvas for augmenting collaboration during meetings. Bas
 
 People might use the in-meeting tab to:
 
-* Submit detailed feedback (for example, evaluate a job candidate)
+* Provide detailed feedback (for example, evaluate a job candidate)
 * Quickly create a poll, survey, or task item for the meeting participants
 * Display notes relevant to the meeting (for example, information about a sales lead)
 
 ## Example
 
-The following example shows the in-meeting tab displaying survey app content during a meeting.
+The following example shows the in-meeting tab displaying survey app content.
 
 :::image type="content" source="../assets/images/calls-and-meetings/in-meeting-tab-organizer-view.png" alt-text="Example shows what the meeting in-meeting tab might look like from a meeting organizer's perspective.":::
 
@@ -98,7 +98,7 @@ In-meeting tab layouts should be able to scale to various sizes. Consider how th
 
 #### Before the meeting
 
-Make sure your tab layout can adapt to a right or left layout for different languages and that controls move to the right locations. (This layout could also apply to after the meeting.)
+Make sure your tab layout can adapt to a right or left layout for different languages and that controls move to the correct locations. (Pre-meeting layouts can also apply to post-meeting layouts.)
 
    :::column-end:::
    :::column span="":::
@@ -220,7 +220,7 @@ For information on accessibility, see <a href="https://www.figma.com/file/QjjWsZ
 
 ## Validate your design
 
-If you plan to publish your app to AppSource, you should understand what design issues commonly cause apps to fail during submission.
+If you plan to publish your app to AppSource, you should understand the design issues that commonly cause apps to fail during submission.
 
 > [!div class="nextstepaction"]
 > [Check design validation guidelines](../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines)

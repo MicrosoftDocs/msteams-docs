@@ -11,7 +11,7 @@ In-meeting dialogs display on the Teams meeting stage. They require a user's att
 
 ## Use cases
 
-In-meeting dialogs are triggered by a user. You might create one of these dialogs so users can:
+In-meeting dialogs are triggered by a user (such as the meeting organizer) who might want participants to:
 
 * Provide brief feedback
 * Take a short survey or poll
@@ -40,9 +40,9 @@ The following example shows what the in-meeting dialog might look like from a me
 
 ### Sizing
 
-In-meeting dialogs can vary in size to account for different use cases. Always maintain padding and component sizes.
+In-meeting dialogs can vary in size to account for different use cases, but you must always maintain padding and component sizes.
 
-* **Height**: The height of the dialog is determined by the content in the webview. Vertical scroll takes over for content that exceeds the maximum height (defined by you).
+* **Height**: The height of the dialog is determined by the content in the webview. Vertical scroll takes over for content that exceeds the maximum height you specify.
 * **Width**: The width of the webview is an absolute value within the range you specify.
 
 :::image type="content" source="../assets/images/calls-and-meetings/in-meeting-dialog-sizing.png" alt-text="Illustration showing the possible dimensions of an in-meeting dialog. Height: The height of the dialog is determined by the content in the webview. Vertical scroll takes over for content that exceeds the maximum height (defined by you). Min: None. Max: 400 pixels (320 pixels webview). Width: The width of the webview is an absolute value within the range you specify. Min.: 288 pixels (256 pixels webview). Max: 468 pixels (436 pixels webview)." border="false":::
@@ -59,7 +59,7 @@ In-meeting dialogs are aligned in the center of the meeting stage. They can’t 
 
 ### Aggregation
 
-Only one dialog displays at a time, stack ranking from last to most recent sent at the bottom. Once a dialog is resolved or dismissed, the next one take its place.
+Only one dialog displays at a time, stack ranking from last to most recent sent to the bottom. Once a dialog is resolved or dismissed, the next one take its place.
 
 <a href="https://www.figma.com/file/QjjWsZYpNqwjRc3OXTgBpp/Principles-and-guidelines?node-id=2292%3A17985" target="_blank">See an example (Figma)</a>
 
@@ -144,7 +144,7 @@ In-meeting dialogs shouldn't require users to navigate through content.
 
 #### Do: Limit number of interactions
 
-Remove unnecessary content that doesn't help users accomplish something quickly. If you need complex interactions, we strongly recommend displaying your content using a single column in the in-meeting tab instead.
+Remove unnecessary content that doesn't help users accomplish something quickly. If you need complex interactions, we strongly recommend displaying your content using a single column on the in-meeting tab instead.
 
    :::column-end:::
    :::column span="":::
@@ -230,7 +230,7 @@ For information on accessibility, see <a href="https://www.figma.com/file/QjjWsZ
 
 ## Validate your design
 
-If you plan to publish your app to AppSource, you should understand what design issues commonly cause apps to fail during submission.
+If you plan to publish your app to AppSource, you should understand the design issues that commonly cause apps to fail during submission.
 
 > [!div class="nextstepaction"]
 > [Check design validation guidelines](../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines)
