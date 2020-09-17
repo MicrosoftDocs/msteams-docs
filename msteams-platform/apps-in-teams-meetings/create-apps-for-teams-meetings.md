@@ -209,7 +209,7 @@ The **side-panel** (specified in the app manifest) provides the surface for app 
 
 ✔ In your app manifest add **sidePanel** to the **meetingSurfaces** array as described above.
 
-✔ In the meeting, the app will be rendered in an in-meeting tab that is 320px in width. Your tab must be optimized for this.
+✔ In the meeting as well as in all scenarios, the app will be rendered in an in-meeting tab that is 320px in width. Your tab must be optimized for this. *See*, [FrameContext interface](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)
 
 ✔Refer to the [Teams SDK](../tabs/how-to/access-teams-context.md#user-context) to use the **userContext** API to route requests accordingly. 
 
