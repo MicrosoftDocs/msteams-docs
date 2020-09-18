@@ -9,7 +9,7 @@
   expanded: true
   items:
   - name: Overview and prerequisites
-    href: build-your-first-app/building-real-world-app.md
+    href: build-your-first-app/build-first-app-overview.md
   - name: Build a "Hello, World!" app
     href: build-your-first-app/build-and-run.md
   - name: Build a personal tab
