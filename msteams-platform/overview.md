@@ -88,7 +88,7 @@ Jump right in with our first app tutorials, find out how to integrate and import
    Quickly familiarize yourself with building for Teams by creating a simple app and adding some commonly used capabilities.
 
    > [!div class="nextstepaction"]
-   > [Build your first app now](build-your-first-app/building-real-world-app.md)
+   > [Build your first app now](build-your-first-app/build-first-app-overview.md)
 
    :::column-end:::
    :::column span="":::
@@ -130,19 +130,6 @@ Jump right in with our first app tutorials, find out how to integrate and import
 
 :::row:::
    :::column span="2":::
-
-### Trust the process
-
-   Learn the entire Teams platform development process to effectively plan, design, build, and publish an app for your organization or anyone.
-
-   > [!div class="nextstepaction"]
-   > [Start planning your app](concepts/extensibility-points.md)
-
-   :::column-end:::
-   :::column span="":::
-
-   :::column-end:::
-:::row-end:::
 
 ## Resources
 

@@ -46,6 +46,7 @@ The Microsoft Teams Toolkit helps you set up the following components for your m
 1. On the **Configure messaging extension** screen, do the following:
     1. Choose only the **Search-based** option for the type of messaging extension.
     1. Select **Create a new Bot** and **Login** to sign in with your Microsoft 365 development account.
+    1. Once your bot is created, copy and paste the bot ID and password (you need this a little later).
     1. (Optional) Enter a custom name for your bot and select **Create**. (Remember, this is the name for your bot and not the name of the Teams app you already specified.)
     1. Select **Yes** for the link unfurling option.</br>
 :::image type="content" source="../assets/images/build-your-first-app/choose-me-search.png" alt-text="Illustration showing how, in the Teams Toolkit, to log in to your Microsoft 365 account to create a new bot.":::
@@ -54,8 +55,6 @@ The Microsoft Teams Toolkit helps you set up the following components for your m
 ## Identify relevant app project components
 
 Much of the app manifest and scaffolding are set up automatically when you create your project with the Teams Toolkit.
-
-
 
 ### App manifest
 
@@ -107,6 +106,8 @@ Let's understand some of the properties the toolkit created for you. (See the fu
 
 The app scaffolding provides a `botActivityHandler.js` file, located in the root directory of your project, for handling how your bot processes activities in Teams (for example, how the bot responds to specific messages such as "Hello").
 
+The `.env` file, also in the root directory, stores the ID and password of your messaging extension's bot.
+
 ## Set up a secure tunnel to your app
 
 For testing purposes, let's host your messaging extension on a local web server (port 3978).
@@ -123,6 +124,10 @@ Your app manifest is pointing to where you're hosting the bot used by the messag
 Messaging extensions rely on bots to send and process user requests from Teams to your external service.
 
 The bot must be registered with the Azure Bot Service. This is done automatically when you set up your app using the Teams Toolkit.
+
+### Specify your bot ID and password
+
+zzz
 
 ### Add the bot endpoint address
 
