@@ -30,7 +30,7 @@
     - name: Teams Toolkit extension for Visual Studio Code
       href: toolkit/visual-studio-code-overview.md
     - name: Teams Toolkit extension for Visual Studio
-      href: toolkit/visual-studio-overview.md  
+      href: toolkit/visual-studio-overview.md
 - name: Concepts
   expanded: true
   items:
@@ -246,7 +246,7 @@
         href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
       - name: Application-hosted media
         href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-- name: 'Messaging Extensions — task-oriented interactions'
+- name: 'Messaging extensions — task-oriented interactions'
   items:
     - name: 'What are Messaging Extensions?'
       href: messaging-extensions/what-are-messaging-extensions.md
@@ -330,6 +330,14 @@
         href: webhooks-and-connectors/how-to/connectors-creating.md
       - name: Sending messages to connectors and webhooks
         href: webhooks-and-connectors/how-to/connectors-using.md
+- name: Apps in meetings
+  items:
+  - name: Design your app
+    items:
+    - name: In-meeting dialog
+      href: apps-in-teams-meetings/designing-in-meeting-dialog.md
+    - name: In-meeting tab
+      href: apps-in-teams-meetings/designing-in-meeting-tab.md
 - name: 'Teams Graph REST APIs'
   items:
     - name: Resource Specific consent
