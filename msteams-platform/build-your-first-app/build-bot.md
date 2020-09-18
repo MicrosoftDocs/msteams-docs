@@ -26,7 +26,7 @@ Your workplace has been using [tabs](../build-your-first-app/add-personal-tab.md
 
 ## Before you begin
 
-If you haven't yet, make sure you [understand and install the Teams development prerequisites](building-real-world-app.md#get-prerequisites).
+If you haven't yet, make sure you [understand and install the Teams development prerequisites](build-first-app-overview.md#get-prerequisites).
 
 ## Create your app project
 
