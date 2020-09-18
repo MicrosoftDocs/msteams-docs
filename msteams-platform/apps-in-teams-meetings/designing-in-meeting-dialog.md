@@ -24,9 +24,9 @@ The following example shows what the in-meeting dialog might look like from a me
 
 :::image type="content" source="../assets/images/calls-and-meetings/in-meeting-dialog-participant-view.png" alt-text="Example shows what the in-meeting dialog might look like from a meeting participant's perspective.":::
 
-<a href="https://www.figma.com/file/QjjWsZYpNqwjRc3OXTgBpp/Principles-and-guidelines?node-id=208%3A9816" target="_blank">See the full scenario (Figma)</a>
+<a href="https://www.figma.com/community/file/888593778835180533" target="_blank">See the full scenario (Figma)</a>
 
-<a href="https://www.figma.com/file/QjjWsZYpNqwjRc3OXTgBpp/Principles-and-guidelines?node-id=2292%3A14353" target="_blank">See other example use cases (Figma)</a>
+<a href="https://www.figma.com/community/file/888593778835180533" target="_blank">See other example use cases (Figma)</a>
 
 ## Anatomy
 
@@ -49,7 +49,7 @@ In-meeting dialogs can vary in size to account for different use cases, but you 
 
 ## Behavior
 
-See general in-meeting dialog behavior, such as rest, loading, and more, in <a href="https://www.figma.com/file/QjjWsZYpNqwjRc3OXTgBpp/Principles-and-guidelines?node-id=2292%3A17985" target="_blank">Figma</a>.
+See general in-meeting dialog behavior, such as rest, loading, and more, in <a href="https://www.figma.com/community/file/888593778835180533" target="_blank">Figma</a>.
 
 ### Position
 
@@ -61,7 +61,7 @@ In-meeting dialogs are aligned in the center of the meeting stage. They can’t 
 
 Only one dialog displays at a time, stack ranking from last to most recent sent to the bottom. Once a dialog is resolved or dismissed, the next one take its place.
 
-<a href="https://www.figma.com/file/QjjWsZYpNqwjRc3OXTgBpp/Principles-and-guidelines?node-id=2292%3A17985" target="_blank">See an example (Figma)</a>
+<a href="https://www.figma.com/community/file/888593778835180533" target="_blank">See an example (Figma)</a>
 
 ### Scrolling
 
@@ -80,25 +80,25 @@ Unlike similar components, in-meeting dialogs are dismissed once a user selects 
 
 ## Components
 
-In-meeting dialogs are built primarily with the following UI components (which are based on the <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent Design System</a>).
+In-meeting dialogs are built primarily with the following <a href="https://www.figma.com/community/file/888593778835180533" target="_blank">UI components (Figma)</a>, which are based on the <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent Design System</a>.
 
 Component | Guidelines | Example
  - | - | -
-<a href="https://www.figma.com/file/QjjWsZYpNqwjRc3OXTgBpp/Principles-and-guidelines?node-id=214%3A10089" target="_blank">Button</a> | Primary and secondary buttons can be medium or small | Send a response
-<a href="https://www.figma.com/file/QjjWsZYpNqwjRc3OXTgBpp/Principles-and-guidelines?node-id=214%3A10102" target="_blank">Input</a> | Field for brief user input. Label text can include an icon  | Enter feedback
-<a href="https://www.figma.com/file/QjjWsZYpNqwjRc3OXTgBpp/Principles-and-guidelines?node-id=214%3A10115" target="_blank">Dropdown</a> | Select one or more options from a list. Can include search and multi-selection features | Choose a language
-<a href="https://www.figma.com/file/QjjWsZYpNqwjRc3OXTgBpp/Principles-and-guidelines?node-id=214%3A10128" target="_blank">Selection controls</a> | Use checkboxes for multiple choices or radio buttons and toggles for single choices. For more detailed selections, use a slider | Vote in a poll
-<a href="https://www.figma.com/file/QjjWsZYpNqwjRc3OXTgBpp/Principles-and-guidelines?node-id=214%3A10141" target="_blank">Alerts</a> | Whether displaying an urgent message, error state, or warning, the message should be short and won't interrupt the user's current task | Display issue when submitting a response
+Button | Primary and secondary buttons can be medium or small | Send a response
+Input | Field for brief user input. Label text can include an icon  | Enter feedback
+Dropdown | Select one or more options from a list. Can include search and multi-selection features | Choose a language
+Selection controls | Use checkboxes for multiple choices or radio buttons and toggles for single choices. For more detailed selections, use a slider | Vote in a poll
+Alerts | Whether displaying an urgent message, error state, or warning, the message should be short and won't interrupt the user's current task | Display issue when submitting a response
 
 ## Theming
 
 ### Colors
 
-Use the <a href="https://www.figma.com/file/QjjWsZYpNqwjRc3OXTgBpp/Principles-and-guidelines?node-id=257%3A15283" target="_blank">recommended color scheme (Figma)</a> for backgrounds, foregrounds, and conveying states.
+Use the <a href="https://www.figma.com/community/file/888593778835180533" target="_blank">recommended color scheme (Figma)</a> for backgrounds, foregrounds, and conveying states.
 
 ### Typography
 
-Use the <a href="https://www.figma.com/file/QjjWsZYpNqwjRc3OXTgBpp/Principles-and-guidelines?node-id=257%3A15283" target="_blank">recommended font sizes and weights (Figma)</a> for titles, body text, and metadata text.
+Use the <a href="https://www.figma.com/community/file/888593778835180533" target="_blank">recommended font sizes and weights (Figma)</a> for titles, body text, and metadata text.
 
 ## Best practices
 
@@ -222,11 +222,11 @@ This deviates from the standard Teams pattern for control placement in a dialog 
 
 ## Accessibility
 
-For information on accessibility, see <a href="https://www.figma.com/file/QjjWsZYpNqwjRc3OXTgBpp/Principles-and-guidelines?node-id=2292%3A15397" target="_blank">Figma</a>.
+For information on accessibility, see <a href="https://www.figma.com/community/file/888593778835180533" target="_blank">Figma</a>.
 
 ## Resources
 
-* <a href="https://www.figma.com/file/QjjWsZYpNqwjRc3OXTgBpp/Principles-and-guidelines?node-id=254%3A35598" target="_blank">Teams meeting extensions Figma file</a>
+* <a href="https://www.figma.com/community/file/888593778835180533" target="_blank">Microsoft Teams meeting extensions Figma file</a>
 
 ## Validate your design
 

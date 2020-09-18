@@ -23,9 +23,9 @@ The following example shows the in-meeting tab displaying survey app content.
 
 :::image type="content" source="../assets/images/calls-and-meetings/in-meeting-tab-organizer-view.png" alt-text="Example shows what the meeting in-meeting tab might look like from a meeting organizer's perspective.":::
 
-<a href="https://www.figma.com/file/QjjWsZYpNqwjRc3OXTgBpp/Principles-and-guidelines?node-id=208%3A9816" target="_blank">See the full scenario (Figma)</a>
+<a href="https://www.figma.com/community/file/888593778835180533" target="_blank">See the full scenario (Figma)</a>
 
-<a href="https://www.figma.com/file/QjjWsZYpNqwjRc3OXTgBpp/Principles-and-guidelines?node-id=2418%3A14319" target="_blank">See other example use cases (Figma)</a>
+<a href="https://www.figma.com/community/file/888593778835180533" target="_blank">See other example use cases (Figma)</a>
 
 ## Anatomy
 
@@ -66,25 +66,25 @@ For scenarios with navigation layers or heavy content, we recommend allowing use
 
 ## Components
 
-In-meeting tabs are built primarily with the following UI components (which are based on the <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent Design System</a>).
+In-meeting tabs are built primarily with the following <a href="https://www.figma.com/community/file/888593778835180533" target="_blank">UI components (Figma)</a>, which are based on the <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent Design System</a>.
 
 Component | Guidelines | Example
  - | - | -
-<a href="https://www.figma.com/file/QjjWsZYpNqwjRc3OXTgBpp/Principles-and-guidelines?node-id=214%3A10089" target="_blank">Button</a> | Primary and secondary buttons can be medium or small | Send a response
-<a href="https://www.figma.com/file/QjjWsZYpNqwjRc3OXTgBpp/Principles-and-guidelines?node-id=214%3A10102" target="_blank">Input</a> | Field for brief user input. Label text can include an icon  | Enter feedback
-<a href="https://www.figma.com/file/QjjWsZYpNqwjRc3OXTgBpp/Principles-and-guidelines?node-id=214%3A10115" target="_blank">Dropdown</a> | Select one or more options from a list. Can include search and multi-selection features | Choose a language
-<a href="https://www.figma.com/file/QjjWsZYpNqwjRc3OXTgBpp/Principles-and-guidelines?node-id=214%3A10128" target="_blank">Selection controls</a> | Use checkboxes for multiple choices or radio buttons and toggles for single choices. For more detailed selections, use a slider | Vote in a poll
-<a href="https://www.figma.com/file/QjjWsZYpNqwjRc3OXTgBpp/Principles-and-guidelines?node-id=214%3A10141" target="_blank">Alerts</a> | Whether displaying an urgent message, error state, or warning, the message should be short and won't interrupt the user's current task | Display issue when submitting a response
+Button | Primary and secondary buttons can be medium or small | Send a response
+Input | Field for brief user input. Label text can include an icon  | Enter feedback
+Dropdown | Select one or more options from a list. Can include search and multi-selection features | Choose a language
+Selection controls | Use checkboxes for multiple choices or radio buttons and toggles for single choices. For more detailed selections, use a slider | Vote in a poll
+Alerts | Whether displaying an urgent message, error state, or warning, the message should be short and won't interrupt the user's current task | Display issue when submitting a response
 
 ## Theming
 
 ### Colors
 
-Use the <a href="https://www.figma.com/file/QjjWsZYpNqwjRc3OXTgBpp/Principles-and-guidelines?node-id=257%3A15283" target="_blank">recommended color scheme (Figma)</a> for backgrounds, foregrounds, and conveying states.
+Use the <a href="https://www.figma.com/community/file/888593778835180533" target="_blank">recommended color scheme (Figma)</a> for backgrounds, foregrounds, and conveying states.
 
 ### Typography
 
-Use the <a href="https://www.figma.com/file/QjjWsZYpNqwjRc3OXTgBpp/Principles-and-guidelines?node-id=257%3A15283" target="_blank">recommended font sizes and weights (Figma)</a> for titles, body text, and metadata text.
+Use the <a href="https://www.figma.com/community/file/888593778835180533" target="_blank">recommended font sizes and weights (Figma)</a> for titles, body text, and metadata text.
 
 ## Best practices
 
