@@ -76,7 +76,7 @@ You use a resource group to create individual resources for the Bot Framework. F
 The bot channels registration registers your web service as a bot with the Bot Framework, provided you have a Microsoft App Id and App password (client secret).
 
 > [!IMPORTANT]
-> You only need to register your bot if it is not hosted in Azure. If you [created a bot](/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&viewFallbackFrom=azure-bot-service-3.0) through the Azure portal then it is already registered with the service. If you created your bot through the [Bot Framework](https://dev.botframework.com/bots/new) or [AppStudio](~/concepts/build-and-test/app-studio-overview.md) your bot isn't registered in Azure.
+> You only need to register your bot if it is not hosted in Azure. If you [created a bot](/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&viewFallbackFrom=azure-bot-service-3.0&preserve-view=true) through the Azure portal then it is already registered with the service. If you created your bot through the [Bot Framework](https://dev.botframework.com/bots/new) or [AppStudio](~/concepts/build-and-test/app-studio-overview.md) your bot isn't registered in Azure.
 
 [!INCLUDE [bot channels registration steps](~/includes/bots/azure-bot-channels-registration.md)]
 
@@ -120,7 +120,7 @@ In this procedure you'll use an Azure AD provider; other Azure AD supported iden
 
 ### Configure the identity provider connection and register it with the bot
 
-Note-there are two options for Service Providers here-Azure AD V1 and Azure AD V2.  The differences between the two providers are summarized [here](https://docs.microsoft.com/en-us/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison), but in general, V2 provides more flexibility with respect to changing bot permissions.  Graph API permissions are listed in the scopes field, and as new ones are added, bots will allow users to consent to the new permissions on the next sign in.  For V1, the bot consent must be deleted by the user for new permissions to be prompted in the OAuth dialog. 
+Note-there are two options for Service Providers here-Azure AD V1 and Azure AD V2.  The differences between the two providers are summarized [here](https://docs.microsoft.com/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison), but in general, V2 provides more flexibility with respect to changing bot permissions.  Graph API permissions are listed in the scopes field, and as new ones are added, bots will allow users to consent to the new permissions on the next sign in.  For V1, the bot consent must be deleted by the user for new permissions to be prompted in the OAuth dialog. 
 
 #### Azure AD V1
 
@@ -145,7 +145,7 @@ Note-there are two options for Service Providers here-Azure AD V1 and Azure AD V
     h. For **Resource URL**, enter `https://graph.microsoft.com/`. This is not used in the current code sample.  
     i. Leave **Scopes** blank. The following image is an example:
 
-    ![teams bots app auth connection string adv1](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
+    ![teams bots app auth connection string adv1 view](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
 
 1. Select **Save**.
 
@@ -179,12 +179,12 @@ Note-there are two options for Service Providers here-Azure AD V1 and Azure AD V
 1. The first time you do this will open a new browser window asking you to select an account. Select the one you want to use.
 1. Next, you'll be asked to allow to the identity provider to use your data (credentials). The following image is an example:
 
-    ![teams bots app auth connection string adv1](../../../assets/images/authentication/auth-bot-connection-test-accept.PNG)
+    ![teams bot auth connection string adv1](../../../assets/images/authentication/auth-bot-connection-test-accept.PNG)
 
 1. Select **Accept**.
 1. This should then redirect you to a **Test Connection to \<your-connection-name> Succeeded** page. Refresh the page if you get an error. The following image is an example:
 
-  ![teams bots app auth connection string adv1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
+  ![teams bots app auth connection str adv1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
 
 The connection name is used by the bot code to retrieve user authentication tokens.
 
@@ -389,7 +389,7 @@ To set up ngrok in preparation for running your Microsoft Teams app locally, fol
 1. Run, for example, `ngrok http 3978 --host-header=localhost:3978`. Replace the port number as needed.
 This launches ngrok to listen on the port you specify. In return, it gives you an externally addressable URL, valid for as long as ngrok is running. The following image is an example:
 
-    ![teams bots app auth connection string adv1](../../../assets/images/authentication/auth-bot-ngrok-start.PNG).
+    ![teams bot app auth connection string adv1](../../../assets/images/authentication/auth-bot-ngrok-start.PNG).
 
 1. Copy the forwarding HTTPS address. It should be similar to the following: `https://dea822bf.ngrok.io/`.
 1. Append `/api/messages` to obtain `https://dea822bf.ngrok.io/api/messages`. This is the **messages endpoint** for the bot running locally on your machine and reachable over the web in a chat in Microsoft Teams.

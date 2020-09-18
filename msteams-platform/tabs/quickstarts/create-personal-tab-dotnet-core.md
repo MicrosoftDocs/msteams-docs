@@ -1,9 +1,10 @@
 ---
-title: "Create a Personal Tab with ASP.NET Core" 
+title: Create a Personal Tab with ASP.NET Core
 author: laujan
 description: A quickstart guide to creating a custom personal tab with ASP.NET Core.
-ms.topic: quickstart 
+ms.topic: quickstart
 ms.author: lajanuar
+---
 # Create a Custom Personal Tab with ASP.NET Core
 
 In this quickstart we'll walk-through creating a custom personal tab with C# and ASP.Net Core Razor pages. We'll also use [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest and deploy your tab to Teams.

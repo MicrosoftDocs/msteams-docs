@@ -21,7 +21,7 @@ keywords: teams apps meetings user participant role api
 
 1. Some meeting APIs, such as `GetParticipant` will require a [bot registration and bot app ID](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) to generate auth tokens.
 
-1. Developers must adhere to general [Teams tab design guidelines](../tabs/design/tabs.md) for pre- and post-meeting scenarios as well as the [in-meeting dialog guidelines](https://review.docs.microsoft.com/microsoftteams/platform/designing-your-app/designing-in-meeting-dialog?branch=restructure-design-topics-ia) for in-meeting dialog triggered during a Teams meeting.
+1. Developers must adhere to general [Teams tab design guidelines](../tabs/design/tabs.md) for pre- and post-meeting scenarios as well as the [in-meeting dialog guidelines](designing-in-meeting-dialog.md) for in-meeting dialog triggered during a Teams meeting.
 
 ## Meeting apps API reference
 
@@ -81,9 +81,9 @@ GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 
 #### Response Codes
 
+**403**: the app is not allowed to get participant information. This will be the most common error response and is triggered when the app is not installed in the meeting such as when the app is disabled by tenant admin or blocked during live site mitigation.
 **200**: participant information successfully retrieved  
 **401**: invalid token  
-**403**: the app is not allowed to get participant information. There can be many reasons: app disabled by tenant admin, blocked during live site mitigation, etc.
 **404**: the meeting doesn't exist or participant can’t be found.
 
 <!-- markdownlint-disable MD024 -->
@@ -101,7 +101,7 @@ POST /v3/conversations/{conversationId}/activities
 
 #### Request Payload
 
-**Example 1**
+**JSON Example**
 
 ```json
 {
@@ -134,6 +134,9 @@ POST /v3/conversations/{conversationId}/activities
 
 ```
 
+> [!IMPORTANT]
+> The URL in the content bubble (taskInfo URL) must be included in the [valid domains](../resources/schema/manifest-schema#validdomains) list included in the Teams app manifest.
+
 #### Response Codes
 
 **201**: activity with signal is successfully sent  
@@ -143,9 +146,9 @@ POST /v3/conversations/{conversationId}/activities
 
 #### GetUserContext
 
-Please refer to our [Get context for your Teams tab](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library) documentation for guidance on identifying and  retrieving contextual information for your tab content. As part of meetings extensibility, a new value has been added for the request payload:
+Please refer to our [Get context for your Teams tab](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library) documentation for guidance on identifying and  retrieving contextual information for your tab content. As part of meetings extensibility, a new value has been added for the response payload:
 
-1. **meetingId**: used by a tab when running in the meeting context.
+✔ **meetingId**: used by a tab when running in the meeting context.
 
 ## Enable your app for Teams meetings
 
@@ -190,15 +193,15 @@ The tab `context` and `scopes` properties work in harmony to allow you to determ
 
 ### Pre-meeting
 
-Users with organizer and/or presenter roles can add tabs using the plus ➕ button in the meeting **Chat** and meeting **details** pages.
+Users with organizer and/or presenter roles can add tabs using the plus ➕ button in the meeting **Chat** and meeting **details** pages. Bots and messaging extensions can be added via the ellipses/overflow menu &#x25CF;&#x25CF;&#x25CF; located beneath the compose message area in the chat.
 
-✔ Once the user identity is confirmed, via Tabs SSO, the app can use **userObjectId** and **meetingId** provided from the TeamsSDK to retrieve the user role via GetParticipant API.
+✔ The user identity *must* be confirmed via [Tabs SSO](../tabs/how-to/authentication/auth-aad-sso.md). Following this authentication, the app can retrieve the user role via the GetParticipant API.
 
  ✔ Based on the user role, the app will now have the capability to present role specific experiences. For example, a polling app can allow only organizers and presenters to create a new poll.
 
-### In-meeting
+> **NOTE**: Role assignments can be changed while a meeting is in progress.  *See* [Roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019). 
 
-The **side-panel** (specified in the app manifest) provides the surface for app access and interaction.
+### In-meeting
 
 #### **side-panel**
 

@@ -6,7 +6,6 @@ keywords: teams tabs group channel configurable remove delete
 ms.topic: conceptual
 ms.author: lajanuar
 ---
-
 # Modify or remove a channel group tab
 
 You can extend and enhance the user experience by supporting removal and modification options in your app. Teams enables users to rename or remove a channel/group tab and you can permit users to reconfigure your tab after installation. Additionally, your tab removal experience can include designating what happens to the content when your tab is removed or giving users post-removal options such as deleting or archiving the content.
@@ -34,7 +33,7 @@ The optional removal page is an HTML page that you host and is displayed when th
 
 ### Register a remove handler
 
-Optionally, within your removal page logic, you can  invoke the `registerOnRemoveHandler((RemoveEvent) => {}` event handler when the user removes an existing tab configuration. The  method takes in the [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest) interface and executes the code in the handler when a user attempts to remove content. It is used to perform cleanup operations such as removing the underlying resource powering the tab content. Only one remove handler can be registered at a time.
+Optionally, within your removal page logic, you can  invoke the `registerOnRemoveHandler((RemoveEvent) => {}` event handler when the user removes an existing tab configuration. The  method takes in the [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest&preserve-view=true) interface and executes the code in the handler when a user attempts to remove content. It is used to perform cleanup operations such as removing the underlying resource powering the tab content. Only one remove handler can be registered at a time.
 
 The `RemoveEvent` interface describes an object with two methods:
 
@@ -44,11 +43,11 @@ The `RemoveEvent` interface describes an object with two methods:
 
 #### Use the `getSettings()` function
 
-You can use `getSettings()`to designate the tab content to be removed. The `getSettings((Settings) =>{})` function takes in the [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest) and provides the valid settings property values that can be retrieved.
+You can use `getSettings()`to designate the tab content to be removed. The `getSettings((Settings) =>{})` function takes in the [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) and provides the valid settings property values that can be retrieved.
 
 #### Use the `getContext()` function
 
-You can use `getContext()` to retrieves the current context in which the frame is running. The `getContext((Context) =>{})` function takes in the [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) and provides valid `Context` property values that you can use in your removal page logic to determine the content to display in the removal page.
+You can use `getContext()` to retrieves the current context in which the frame is running. The `getContext((Context) =>{})` function takes in the [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) and provides valid `Context` property values that you can use in your removal page logic to determine the content to display in the removal page.
 
 #### Include authentication
 
