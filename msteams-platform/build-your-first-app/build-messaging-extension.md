@@ -206,7 +206,7 @@ It's important to understand that this isn't the same as a channel in Teams. In 
 
 ## Learn more
 
-* [Include a link unfurling feature](../messaging-extensions/how-to/search-commands/link-unfurling.md)
+* [Include a link unfurling feature](../messaging-extensions/how-to/link-unfurling.md)
 * [Add authentication](../messaging-extensions/how-to/add-authentication.md)
 * [Create an action-based messaging extension](../messaging-extensions/how-to/action-commands/define-action-command.md)
 * [Microsoft Bot Framework](https://dev.botframework.com/)
