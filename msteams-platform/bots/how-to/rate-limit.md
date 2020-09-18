@@ -135,13 +135,3 @@ This limit controls the traffic that all bots are allowed to generate across a s
 | Get Conversation Members| 2 | 32 |
 | Get Conversations | 1 | 28 |
 | Get Conversations | 2 | 32 |
-
-## Bot per data center limit
-
-This limit controls the traffic that a bot is allowed to generate across all threads in a data center (across multiple tenants).
-
-|**Time-period (sec)** | **Max allowed operations** |
-| --- | --- |
-| 1 | 20 |
-| 1800 | 8000 |
-| 3600 | 15000 |

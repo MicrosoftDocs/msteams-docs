@@ -8,10 +8,20 @@ keywords: teams authentication SSO AAD single sign-on api
 
 Users sign in to Microsoft Teams via their work, school, or Microsoft accounts (Office 365, Outlook, etc). You can take advantage of this by allowing a single sign-on to authorize your Microsoft Teams tab (or task module) on desktop or mobile clients. Thus, if a user consents to use your app, they won’t have to consent again on another device — they will signed in be automatically. In addition, we prefetch your access token to improve performance and load times.
 
+>[!NOTE]
+> **Teams mobile client versions supporting SSO**  
+>
+> ✔Teams for Android (1416/1.0.0.2020073101 and later)
+>
+> ✔Teams for iOS (_Version_: 2.0.18 and later)  
+>
+> For the best experience with Teams, please use the latest version of iOS and Android.
+
 ## How SSO works at runtime
 
 The following diagram shows how the SSO process works:
 
+<!-- markdownlint-disable MD033 -->
 <img src="~/assets/images/tabs/tabs-sso-diagram.png" alt="Tab single sign-on SSO diagram" width="75%"/>
 
 1. In the tab, a JavaScript call is made to `getAuthToken()`. This tells Teams to obtain an authentication token for the tab application.
@@ -32,7 +42,7 @@ This section describes the tasks involved in creating a Teams tab that uses SSO.
 
 ### 1. Create your Azure Active Directory (Azure AD) application
 
-Register your application in the[Azure AD portal](https://azure.microsoft.com/features/azure-portal/). This is a 5–10 minute process that includes the following tasks:
+#### Registering your application in the[Azure AD portal](https://azure.microsoft.com/features/azure-portal/) overview:
 
 1. Get your [Azure AD Application ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
 2. Specify the permissions that your application needs for the Azure AD endpoint and, optionally, Microsoft Graph.
@@ -47,7 +57,7 @@ Register your application in the[Azure AD portal](https://azure.microsoft.com/fe
 > * We don't currently support multiple domains per app.
 > * We don't support applications that use the `azurewebsites.net` domain because it is too common and may be a security risk. However, we're actively seeking to remove this restriction.
 
-#### Steps
+#### Registering your app through the Azure Active Directory portal in-depth:
 
 1. Register a new application in the [Azure Active Directory – App Registrations](https://go.microsoft.com/fwlink/?linkid=2083908) portal.
 2. Select **New Registration** and on the *register an application page*, set following values:
@@ -59,6 +69,8 @@ Register your application in the[Azure AD portal](https://azure.microsoft.com/fe
 4. Under **Manage**, select **Expose an API**. 
 5. Select the **Set** link to generate the Application ID URI in the form of `api://{AppID}`. Insert your fully qualified domain name (with a forward slash "/" appended to the end) between the double forward slashes and the GUID. The entire ID should have the form of: `api://fully-qualified-domain-name.com/{AppID}` ²
     * ex: `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`.
+    
+    The fully qualified domain name is the human readable domain name from which your app is served. If you are using a tunneling service such as ngrok, you will need to update     this value whenever your ngrok subdomain changes. 
 6. Select the **Add a scope** button. In the panel that opens, enter `access_as_user` as the **Scope name**.
 7. Set **Who can consent?** to `Admins and users`
 8. Fill in the fields for configuring the admin and user consent prompts with values that are appropriate for the `access_as_user` scope:
@@ -67,13 +79,13 @@ Register your application in the[Azure AD portal](https://azure.microsoft.com/fe
     * **User consent title**: Teams can access the user profile and make requests on the user's behalf.
     * **User consent description:** Enable Teams to call this app’s APIs with the same rights as the user.
 9. Ensure that **State** is set to **Enabled**
-10. Select **Add scope**
+10. Select the **Add scope** button to save 
     * The domain part of the **Scope name** displayed just below the text field should automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end:
         * `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`
-11. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. Each of the following IDs needs to be entered:
+11. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. Select *Add a client application*. Enter each of the following client IDs and select the authorized scope you created in the previous step:
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Teams mobile/desktop application)
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Teams web application)
-12. Navigate to **API Permissions**, and make sure to add the follow permissions:
+12. Navigate to **API Permissions**. Select *Add a permission* > *Microsoft Graph* > *Delegated permissions*, then add the following permissions:
     * User.Read (enabled by default)
     * email
     * offline_access
@@ -87,13 +99,13 @@ Register your application in the[Azure AD portal](https://azure.microsoft.com/fe
     Set a redirect URI:
     * Select **Add a platform**.
     * Select **web**.
-    * Enter the **redirect URI** for your app. This will be the page where a successful implicit grant flow will redirect the user.
+    * Enter the **redirect URI** for your app. This will be the page where a successful implicit grant flow will redirect the user. This will be same fully qualified domain name that you entered in step 5 followed by the API route where a authentication response should be sent. If you are following any of the Teams samples, this will be: `https://subdomain.example.com/auth-end`
 
-    Enable implicit grant by checking the following boxes:  
+    Next, enable implicit grant by checking the following boxes:  
     ✔ ID Token  
     ✔ Access Token  
     
-    
+Congratulations! You have completed the app registration prerequsities to proceed with your tab SSO app.     
 
 > [!NOTE]
 >

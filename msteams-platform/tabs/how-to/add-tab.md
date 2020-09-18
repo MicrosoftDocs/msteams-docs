@@ -4,7 +4,7 @@ author: laujan
 description: A guide to building a tab
 keywords: teams tabs group channel configurable 
 ms.topic: conceptual
-ms.author: 
+ms.author: lajanuar
 ---
 # Extend your Teams app with a custom tab
 

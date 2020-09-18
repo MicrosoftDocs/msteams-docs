@@ -3,7 +3,7 @@ title: "Create a Channel and Group Tab with ASP.NET Core MVC"
 author: laujan
 description: A quickstart guide to creating a custom channel and group tab with ASP.NET Core MVC. 
 ms.topic: quickstart 
-ms.author: laujan 
+ms.author: lajanuar
 ---
 # Create a Custom Channel and Group Tab with ASP.NET Core MVC
 
