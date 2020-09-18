@@ -12,7 +12,7 @@ You'll build a basic *bot* app in this tutorial. A bot acts as an intermediary b
 
 ## Your assignment
 
-Your workplace has been using [tabs](../build-your-first-app/add-personal-tab.md) to surface important contact information in Teams. For example, colleagues have quick access to the help desk phone number. But instead of calling, what if people could contact the help desk using a chatbot? Your boss asks you to look at how quickly you can get a basic conversational bot up and running in Teams.
+Your workplace has been using [tabs](../build-your-first-app/build-personal-tab.md) to surface important contact information in Teams. For example, colleagues have quick access to the help desk phone number. But instead of calling, what if people could contact the help desk using a chatbot? Your boss asks you to look at how quickly you can get a basic conversational bot up and running in Teams.
 
 ## What you'll learn
 
