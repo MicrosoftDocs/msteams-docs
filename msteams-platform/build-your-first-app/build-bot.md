@@ -26,7 +26,7 @@ Your workplace has been using [tabs](../build-your-first-app/add-personal-tab.md
 
 ## Before you begin
 
-If you haven't yet, make sure you [get the prerequisits](./building-real-world-app.md#get-prerequisites)
+If you haven't yet, make sure you [understand and install the Teams development prerequisites](building-real-world-app.md#get-prerequisites).
 
 ## Create your app project
 
@@ -118,7 +118,7 @@ To use a bot in Teams, you must register it with the Azure Bot Service. Lucky fo
 
 When your bot is registered with the Azure Bot Service, it's assigned an ID and password that your Teams app must know about.
 
-1. Locate the bot ID and password you saved during toolkit setup.
+1. Locate the bot ID and password you stored during toolkit setup.
 1. In your root directory, open the `.env` file.
 1. Add your bot ID and password to `BotId` and `BotPassword`, respectively.
 
@@ -162,7 +162,7 @@ With your bot running, you can install it in Teams.
 Now for the fun part: Let's say "Hello" to your bot in a one-on-one chat.
 
 1. In Teams, select **More** :::image type="icon" source="../assets/icons/teams-client-more.png"::: on the left side.
-1. Locate and select the bot you just sideloaded.<br/>
+1. Locate and choose the bot you just sideloaded.<br/>
    :::image type="content" source="../assets/images/build-your-first-app/bot-teams-access.png" alt-text="Illustration showing where you access your bot in Teams.":::
 1. In the compose box, send a `Hello` message.
 

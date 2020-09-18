@@ -10,11 +10,11 @@ ms.topic: tutorial
 
 There are two types of Teams *messaging extensions*: Search commands and action commands.
 
-In this lesson, you'll create a *search command*, a shortcut for finding external content and sharing it in Teams. Users can access search commands from the [Teams compose or command box](../messaging-extensions/what-are-messaging-extensions.md).
+In this lesson, you'll create a *search command* (also known as a *search-based messaging extension*), which is a shortcut for finding external content and sharing it in Teams. Users can access search commands from the [Teams compose or command box](../messaging-extensions/what-are-messaging-extensions.md).
 
 ## Your assignment
 
-Your organization's help desk communicates with users through Teams, but the tickets reside in a separate system. This means support staff must constantly go back and forth between apps. You'll investigate how to reduce this much context switching by creating a simple search-based messaging extension in Teams.
+Your organization's help desk communicates with users through Teams, but the tickets reside in a separate system. This means support staff must constantly go back and forth between apps. You'll investigate how you might reduce this much context switching by creating a simple search-based messaging extension for Teams.
 
 ## What you'll learn
 
@@ -23,16 +23,16 @@ Your organization's help desk communicates with users through Teams, but the tic
 > * Create an app project and messaging extension bot using the Microsoft Teams Toolkit for Visual Studio Code
 > * Identify the app manifest properties and some of the scaffolding relevant to messaging extensions
 > * Host an app locally
-> * Configure a bot for your messaging extension
+> * Configure the bot for your messaging extension
 > * Sideload and test a messaging extension in Teams
 
 ## Before you begin
 
-If you haven't yet, set up your Microsoft 365 development [account](building-real-world-app.md#set-up-your-development-account) and [Teams app tools](building-real-world-app.md#install-your-development-tools).
+If you haven't yet, make sure you [understand and install the Teams development prerequisites](building-real-world-app.md#get-prerequisites).
 
 ## Create your app project
 
-The Microsoft Teams Toolkit helps you set up the following components for your messaging extension app:
+The Microsoft Teams Toolkit helps you set up the following components for your messaging extension:
 
 * **App manifest and scaffolding** relevant to messaging extensions
 * **Bot** for your messaging extension that's automatically registered with the Microsoft Azure Bot Service
@@ -47,8 +47,8 @@ The Microsoft Teams Toolkit helps you set up the following components for your m
     1. Choose only the **Search-based** option for the type of messaging extension.
     1. Select **Create a new Bot** and **Login** to sign in with your Microsoft 365 development account.
     1. Store your bot ID and password (you need this a little later).
-    1. (Optional) Enter a custom name for your bot and select **Create**. (Remember, this is the name for your bot and not the name of the Teams app you already specified.)
-    1. Select **Yes** for the link unfurling option.</br>
+    1. (Optional) Enter a custom name for your bot and select **Create**. (This is not the name of the Teams app you already specified.)
+    1. For now, select **No** for the link unfurling option.</br>
 :::image type="content" source="../assets/images/build-your-first-app/choose-me-search.png" alt-text="Illustration showing how, in the Teams Toolkit, to log in to your Microsoft 365 account to create a new bot.":::
 1. Select **Finish** at the bottom of the screen to configure your project.
 
@@ -92,21 +92,17 @@ The following snippet from the app manifest (the `manifest.json` file in your pr
 Let's understand some of the properties the toolkit created for you. (See the full list of supported [`composeExtensions`](../resources/schema/manifest-schema.md#composeextensions) properties.)
 
 * `botId`: The ID of the bot you created setting up your project. (Stored in `{botId0}`, you can find the actual ID in `Development.env`.)
-* `commands`: Available commands for the messaging extension. The toolkit provides you one by default.
-* `id`: Command identifier for the command.
-* `context`: Defines where users can invoke the messaging extension.
-* `description`: UI help text indicating what the command does or how to get started.
-* `title`: User-friendly name for the command.
-* `parameters`: Number of parameters a command accepts (minimum of one and maximum of five).
-* `parameters.name`: Parameter name that's included in requests to your messaging extension service.
-* `parameters.title`: User-friendly name for the parameter.
+* `commands`: Available commands for the messaging extension. The toolkit provided you scaffolding for a search command.
+* `context`: Where users can invoke the messaging extension. In this case, you can launch the messaging extension from the Teams compose or command box.
+* `description`: UI help text indicating what the command does or how to use it.
+* `parameters`: Includes all parameters a command accepts (you must have at least one and can have up to five).
 * `parameters.description`: UI help text describing the parameter's purpose or example input.
 
 ### App scaffolding
 
-The app scaffolding provides a `botActivityHandler.js` file, located in the root directory of your project, for handling how your bot processes activities in Teams (for example, how the bot responds to specific messages such as "Hello").
+The app scaffolding includes a `.env` file, located in the root directory of your project, which stores the ID and password of your messaging extension's bot.
 
-The `.env` file, also in the root directory, stores the ID and password of your messaging extension's bot.
+Also in the root directory, there's a `botActivityHandler.js` file for handling how your messaging extension (or technically, the [messaging extension's bot](#configuring-the-bot-for-your-messaging-extension)) responds to search queries in Teams.
 
 ## Set up a secure tunnel to your app
 
@@ -123,19 +119,19 @@ Your app manifest is pointing to where you're hosting the bot used by the messag
 
 Messaging extensions rely on bots to send and process user requests from Teams to your hosted service.
 
-The bot must be registered with the Azure Bot Service, which is done automatically when you set up your app using the Teams Toolkit.
+The bot must be registered with the Azure Bot Service, which was done when you set up your app using the Teams Toolkit.
 
 ### Specify your bot ID and password
 
 When your bot is registered with the Azure Bot Service, it's assigned an ID and password that your Teams app must know about.
 
-1. Locate the bot ID and password you saved during toolkit setup.
+1. Locate the bot ID and password you stored during toolkit setup.
 1. In your root directory, open the `.env` file.
-1. Add your bot ID and password to `BotId` and `BotPassword`, respectively.
+1. Set your bot ID and password to the `BotId` and `BotPassword` properties, respectively.
 
 ### Add the bot endpoint address
 
-You must specify an endpoint URL to receive and process user messages (i.e., requests) sent to the bot. Typically, the URL looks like `https://HOST_URL/api/messages`. You can configure this quickly in the Teams Toolkit.
+You must specify a bot endpoint URL to receive and process search queries in your messaging extension. Typically, the URL looks like `https://HOST_URL/api/messages`. You can configure this quickly in the Teams Toolkit.
 
 1. In Visual Studio Code, select **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: on the left Activity Bar and choose **Open Microsoft Teams Toolkit**.
 1. Go to **Bot management > Existing bot registrations** and select the bot you created during setup.
@@ -145,7 +141,7 @@ Your bot will be able to handle queries in your messaging extension.
 
 ## Run your app
 
-You've set up a URL to host your messaging extension and ... . It's time to get your app up and running.
+You've set up a URL to host your messaging extension and configured it to handle searches. It's time to get your app up and running.
 
 1. In a terminal, go to the root directory of your app project and run `npm install`.
 1. Run `npm start`.
@@ -156,7 +152,7 @@ If successful, you see something like the following message indicating your mess
 
 ## Sideload your bot in Teams
 
-With your bot running, you can install it in Teams.
+With your messaging extension running, you can install it in Teams.
 
 > [!TIP]
 > If you haven't sideloaded a Teams app before and run into issues, follow these [instructions](../build-your-first-app/build-and-run.md#sideload-your-app-in-teams).
@@ -166,25 +162,28 @@ With your bot running, you can install it in Teams.
 1. Go to your app project `.publish` folder and select `Development.zip`.
 1. In the install modal, select **Add** to install your app.
 
-## Test your bot
+## Test your messaging extension
 
-Now for the fun part: Let's say "Hello" to your bot in a one-on-one chat.
+Learn how messaging extensions work in a Teams chat.
 
-1. In Teams, select **More** :::image type="icon" source="../assets/icons/teams-client-more.png"::: on the left side.
-1. Locate and select the bot you just sideloaded.<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/bot-teams-access.png" alt-text="Illustration showing where you access your bot in Teams.":::
-1. In the compose box, send a `Hello` message.
-
-Your bot replies with something like the following message.
-
-:::image type="content" source="../assets/images/build-your-first-app/contoso-chatbot.png" alt-text="A screenshot showing a user say 'Hello' to a Teams bot and getting a response back.":::
+1. Start a new chat. In the compose box, and select **More** :::image type="icon" source="../assets/icons/teams-client-more.png"::: and choose the messaging extension app you just sideloaded.<br/>
+   :::image type="content" source="../assets/images/build-your-first-app/me-teams-access.png" alt-text="Illustration showing where you access a messaging extension in Teams.":::
+1. Try searching for something (for example, "Tickets"). If your app is working, you'll see sample search results (you can add your own later).<br/>
+   :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="A screenshot showing a user trying a search-based messaging extension from the Teams compose box.":::
 
 > [!NOTE]
-> If you make code changes after testing your bot—for example, you update `botActivityHandler.js`—you must run your app again to see those changes reflected in Teams.
+> If you make code changes after testing your messaging extension—for example, you update `botActivityHandler.js`—you must run your app again to see those changes reflected in Teams.
 
 ## Well done
 
-Congratulations! You have a basic Teams messaging extension that can search for external content in the compose or command box.
+Congratulations! You have a basic Teams messaging extension that's set up to search for external content in the compose or command box.
+
+## Next steps
+
+See the following pages to continue and build a fully featured messaging extension:
+
+1. [Define search commands](../messaging-extensions/how-to/search-commands/define-search-command.md) that are relevant to your service.
+1. Configure your service to [respond to users' searches](../messaging-extensions/how-to/search-commands/respond-to-search.md).
 
 ## Troubleshooting
 
@@ -201,14 +200,13 @@ This could be an authentication issue. Follow these steps to finish setting up y
 
 ### Bot isn't connected to Teams
 
-If you installed your app but it isn't working, make sure the messaging extenion's bot is [connected to the Azure Bot Service's Teams *channel*](https://docs.microsoft.com/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0).
+If you installed your app but it isn't working, make sure the messaging extension's bot is [connected to the Azure Bot Service's Teams *channel*](https://docs.microsoft.com/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0).
 
 It's important to understand that this isn't the same as a channel in Teams. In this case, a channel is how the Azure Bot Service connects your bot to Teams or another [supported Microsoft or third-party communications app](https://docs.microsoft.com/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0).
 
 ## Learn more
 
-* [Receive and respond to search commands](../messaging-extensions/how-to/search-commands/respond-to-search.md)
-* Link unfurling
-* Authentication
-* Action-based commands
+* [Include a link unfurling feature](../messaging-extensions/how-to/search-commands/link-unfurling.md)
+* [Add authentication](../messaging-extensions/how-to/add-authentication.md)
+* [Create an action-based messaging extension](../messaging-extensions/how-to/action-commands/define-action-command.md)
 * [Microsoft Bot Framework](https://dev.botframework.com/)
