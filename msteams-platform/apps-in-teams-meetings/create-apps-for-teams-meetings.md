@@ -57,15 +57,16 @@ GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 
 ```json
 {
-    "meetingRole":"<meeting role>",
+    "meetingRole":"Presenter",
     "conversation":
         {
-            "id": "<conversation id>"
+            "isGroup": true,
+            "id": "19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
         }
 }
 ```
 
-**meetingRole** can be *organizer*, *presenter*, or *attendee*.
+**meetingRole** can be *Organizer*, *Presenter*, or *Attendee*.
 
 **Example 2**
 
@@ -74,7 +75,7 @@ GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
     "meetingRole": "Attendee",
     "conversation": {
         "isGroup": true,
-        "id": "sample" }
+        "id": "19:meeting_OWIyYWVhZWMtM2ExMi00ZTc2LTg0OGEtYWNhMTM4MmZlZTNj@thread.v2" }
 }
 ```
 
@@ -82,8 +83,8 @@ GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 
 **200**: participant information successfully retrieved  
 **401**: invalid token  
-**403**: the app is not allowed to get participant information. There can be many reasons: app disabled by tenant admin, blocked during live site mitigation, etc.    
-**404**: the meeting doesn't exist or participant can’t be found    
+**403**: the app is not allowed to get participant information. There can be many reasons: app disabled by tenant admin, blocked during live site mitigation, etc.
+**404**: the meeting doesn't exist or participant can’t be found.
 
 <!-- markdownlint-disable MD024 -->
 ### NotificationSignal API
@@ -104,36 +105,33 @@ POST /v3/conversations/{conversationId}/activities
 
 ```json
 {
-"channelData": {
-    "notification": {
-        "alertInMeeting": true,
+      "type": "message",
+      "timestamp": "2017-04-24T21:46:00.9663655Z",
+      "localTimestamp": "2017-04-24T14:46:00.9663655-07:00",
+      "serviceUrl": "https://callback.com",
+      "channelId": "msteams",
+      "from": {
+        "id": "28:e4fda94a-4b80-40eb-9bf0-6314491bc793",
+        "name": "The bot"
+      },
+      "conversation": {
+        "id": "a:1pL6i0oY3C0K8oAj8"
+      },
+      "recipient": {
+        "id": "29:1rsVJmSSFMScF0YFyCXpvNWlo",
+        "name": "User"
+      },
+      "text": "John Phillips assigned you a weekly todo",
+      "summary": "Don't forget to meet with Marketing next week",
+    "channelData": {
+        "notification": {
+            "alertInMeeting": true,
+            "":"https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width> &title=<TaskInfo.title>"
+                    }
+            },
+    "replyToId": "1493070356924"
+    }
 
-        "externalResourceUrl: "https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>      &width=<TaskInfo.width> &title=<TaskInfo.title> ”
-                      }
-                 }
-            }
-```
-
-**Example 2**
-
-```nodejs
-const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive card instead
-        replyActivity.channelData = {
-            notification: {
-                alertInMeeting: true,
-                externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url> &height=<TaskInfo.height>      &width=<TaskInfo.width> &title=<TaskInfo.title>’
-            }
-        };
-        await context.sendActivity(replyActivity);
-```
-
-**Example 3**
-
-```csharp
-var replyActivity = MessageFactory.text('Hi'); // this could be an adaptive card insteadreplyActivity.ChannelData = new TeamsChannelData{
-    Notification: new NotificationInfo(alertInMeeting: true, externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url> &height=<TaskInfo.height>      &width=<TaskInfo.width> &title=<TaskInfo.title>’
-};
-await context.sendActivity(replyActivity);
 ```
 
 #### Response Codes
@@ -145,13 +143,9 @@ await context.sendActivity(replyActivity);
 
 #### GetUserContext
 
-Please refer to our [Get context for your Teams tab](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library) documentation for guidance on identifying and  retrieving contextual information for your tab content. As part of meetings extensibility, new values have been added for the request payload:
+Please refer to our [Get context for your Teams tab](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library) documentation for guidance on identifying and  retrieving contextual information for your tab content. As part of meetings extensibility, a new value has been added for the request payload:
 
-1. **meetingId**: used by a tab when running in the meeting context. 
-
-1. **tenantId - tid**: Azure AD tenant ID of the current user.  
-
-1. **ParticipantId** - userObjectId: The Azure AD object id of the current user, in the current tenant"
+1. **meetingId**: used by a tab when running in the meeting context.
 
 ## Enable your app for Teams meetings
 
@@ -218,7 +212,7 @@ The **side-panel** (specified in the app manifest) provides the surface for app 
 
 #### **in-meeting dialog**
 
-✔ You must adhere to the [in-meeting dialog design guidelines](https://review.docs.microsoft.com/microsoftteams/platform/designing-your-app/designing-in-meeting-dialog?branch=restructure-design-topics-ia).
+✔ You must adhere to the [in-meeting dialog design guidelines](designing-in-meeting-dialog.md).
 
 ✔ Refer to the [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md).
 
