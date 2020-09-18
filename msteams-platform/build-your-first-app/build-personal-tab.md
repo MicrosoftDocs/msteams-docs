@@ -193,4 +193,4 @@ Congratulations! You have a Teams app with a personal tab that makes it easier t
 You know how to build a tab for personal use. Let's look at what it takes to build a tab for team channels and chats.
 
 > [!div class="nextstepaction"]
-> [Build a channel tab](../build-your-first-app/add-channel-tab.md)
+> [Build a channel tab](../build-your-first-app/build-channel-tab.md)

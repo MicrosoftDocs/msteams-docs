@@ -43,7 +43,7 @@ The Microsoft Teams Toolkit helps you set up the following components for your a
 1. On the **Add capabilities** screen, select **Bot** then **Next**.
 1. Select **Create a new Bot** and **Login** to sign in with your Microsoft 365 development account.<br/>
 :::image type="content" source="../assets/images/build-your-first-app/vsc-create-bot.png" alt-text="Illustration showing how, in the Teams Toolkit, to log in to your Microsoft 365 account to create a new bot.":::
-1. Once your bot is created, copy and paste the bot ID and password (you need this a little later).
+1. Store your bot ID and password (you need this a little later).
 1. (Optional) Enter a custom name for your bot and select **Create**. (Remember, this is the name for your bot and not the name of the Teams app you already specified.)
 1. Select **Finish** at the bottom of the screen to configure your project.
 
@@ -116,7 +116,11 @@ To use a bot in Teams, you must register it with the Azure Bot Service. Lucky fo
 
 ### Specify your bot ID and password
 
-xxx
+When your bot is registered with the Azure Bot Service, it's assigned an ID and password that your Teams app must know about.
+
+1. Locate the bot ID and password you saved during toolkit setup.
+1. In your root directory, open the `.env` file.
+1. Add your bot ID and password to `BotId` and `BotPassword`, respectively.
 
 ### Add the bot endpoint address
 

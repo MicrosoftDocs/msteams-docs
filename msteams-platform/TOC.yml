@@ -10,14 +10,16 @@
   items:
   - name: Overview and prerequisites
     href: build-your-first-app/building-real-world-app.md
-  - name: Build and run your first app
+  - name: Build a "Hello, World!" app
     href: build-your-first-app/build-and-run.md
   - name: Build a personal tab
-    href: build-your-first-app/add-personal-tab.md
+    href: build-your-first-app/build-personal-tab.md
   - name: Build a channel tab
-    href: build-your-first-app/add-channel-tab.md
+    href: build-your-first-app/build-channel-tab.md
   - name: Build a bot
-    href: build-your-first-app/add-bot.md
+    href: build-your-first-app/build-bot.md
+  - name: Build a messaging extension
+    href: build-your-first-app/build-messaging-extension.md
 - name: Understand app capabilities
   items:
   - name: Overview

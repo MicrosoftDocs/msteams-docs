@@ -94,4 +94,4 @@ Once you set up your account and environment, you can start building.
 
 Or you can choose to
 * [Build a bot](../build-your-first-app/add-bot.md)
-* [Build a Messaging Extension](../build-your-first-app/add-messaging-extension.md)
+* [Build a Messaging Extension](../build-your-first-app/build-messaging-extension.md)
