@@ -210,11 +210,11 @@ Dialogs, such as task modules, in the already narrow in-meeting tab might wrap a
 
 ## Accessibility
 
-For information on accessibility, see <a href="https://www.figma.com/file/QjjWsZYpNqwjRc3OXTgBpp/Principles-and-guidelines?node-id=1263%3A16" target="_blank">Figma</a>.
+For information on accessibility, see <a href="https://www.figma.com/community/file/888593778835180533" target="_blank">Figma</a>.
 
 ## Resources
 
-* <a href="https://www.figma.com/file/QjjWsZYpNqwjRc3OXTgBpp/Principles-and-guidelines?node-id=254%3A35598" target="_blank">Teams meeting extensions Figma file</a>
+* <a href="https://www.figma.com/community/file/888593778835180533" target="_blank">Microsoft Teams meeting extensions Figma file</a>
 * [Tabs design guidelines](../tabs/design/tabs.md)
 * [Tabs design guidelines for mobile](../tabs/design/tabs-mobile.md)
 
