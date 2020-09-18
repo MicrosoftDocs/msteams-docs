@@ -30,7 +30,7 @@ The following example shows what the in-meeting dialog might look like from a me
 
 ## Anatomy
 
-:::image type="content" source="../assets/images/calls-and-meetings/in-meeting-dialog-anatomy.png" alt-text="Illustration showing the UI anatomy of an in-meeting dialog." border="false":::
+:::image type="content" source="../assets/images/calls-and-meetings/in-meeting-dialog-anatomy.png" alt-text="UI anatomy of an in-meeting dialog view." border="false":::
 
 1. **App icon**
 1. **App name**
