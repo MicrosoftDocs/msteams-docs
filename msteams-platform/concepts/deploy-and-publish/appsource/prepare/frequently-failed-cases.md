@@ -108,19 +108,20 @@ Your bot should be responsive to any command and not dead-end the user. Here are
 
 * **Think through all scopes**. Be sure that your bot provides appropriate responses when mentioned (`@*botname*`) in a channel and in personal conversations. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](~/resources/schema/manifest-schema.md#bots).)
 
-### &#9989; Bots must send a welcome message on first launch
+### &#9989; Personal bots must send a welcome message on first launch
 
-Welcome messages are the best way to set your bot's tone. This is the first interaction a user has with the bot. A good welcome message can encourage the user to keep exploring the app. If the welcome or introductory message is confusing or unclear, users won't see the value of the app immediately and lose interests.
+Welcome messages are the best way to set your Personal/chat bot's tone. This is the first interaction a user has with the bot. A good welcome message can encourage the user to keep exploring the app. If the welcome or introductory message is confusing or unclear, users won't see the value of the app immediately and lose interests.
+Note: Welcome message is optional for a channel bot.
 
 ### Welcome message requirements
 
-* Identify who added the bot to a channel.
-* Include a value proposition.
+* Include a value proposition with welcome tour.
 * Provide way forward guidance for using the bot.
 * Present  easy to read  text and straightforward dialogue — preferably a card with an actionable welcome tour button that loads a task module.
 * Keep it simple, avoid wordy/chatty dialogue.
+* Include adaptive cards and buttons to make the welcome message more usable.
 * Invoke the welcome message  with one ping, not two or more simultaneous pings.
-* In personal chat the welcome message must only be shown to the user who configured the app.  
+* Welcome message must only be shown to the user who configured the app preferably in a 1:1 personal chat.
 * Never send a personal chat to every member in the team.
 * Never send the welcome message more than once. Repeating the same welcome message over regular intervals is not allowed and is considered spamming.
 
