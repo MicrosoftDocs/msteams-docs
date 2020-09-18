@@ -33,8 +33,6 @@ Your Teams app can include features users want and might expect when collaborati
 |Modals  |[Task modules](../task-modules-and-cards/what-are-task-modules.md)  |
 |Content-rich cards  |[Adaptive Cards](../task-modules-and-cards/what-are-cards.md)  |
 
-Learn more about [Teams app concepts and capabilities](../concepts/capabilities-overview.md).
-
 ## Determine a subset of functionality
 
 ***Integration scenarios**: Standalone apps*
@@ -87,7 +85,7 @@ Learn more about [authentication in Teams](../concepts/authentication/authentica
 
 ***Integration scenarios**: Standalone apps, collaboration apps*
 
-In general, your app should feel natural in Teams. You might think migrating existing app content to a Teams tab is sufficient, but we strongly recommend your app follows our [design guidelines](../designing-your-app/designing-overview.md). See also: [Fluent Design System](https://fluentsite.z22.web.core.windows.net/).
+In general, your app should feel natural in Teams. You might think migrating existing app content to a Teams tab is sufficient, but we strongly recommend your app follows [Teams design guidelines](../concepts/design/understand-use-cases.md). See also: [Fluent Design System](https://fluentsite.z22.web.core.windows.net/).
 
 ## Maximize deep linking
 
@@ -99,9 +97,11 @@ Almost everything in Teams can be linked to directly with a [deep link](../conce
 
 ***Integration scenarios**: Standalone apps, collaboration apps, SharePoint*
 
-Consider the types of messages your Teams app might send now and in the long term. If you think your app will ever have a multi-threaded conversation, a [bot](../bots/what-are-bots.md) might offer more flexibility than a [webhook]()../webhooks-and-connectors/what-are-webhooks-and-connectors.md).
+Consider the types of messages your Teams app might send now and in the long term. If you think your app will ever have a multi-threaded conversation, a [bot](../bots/what-are-bots.md) might offer more flexibility than a [webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
-Bots also allow you to send *proactive messages* to individual users or channels. These are unprompted messages triggered by an outside event and not a message sent to a bot. (For example, your bot can send a welcome message when it's installed or a new user joins a channel.) Sending proactive messages requires Teams-specific identifiers that aren't available through the Microsoft Graph API—you can capture this information by [fetching roster or user profile data](../bots/how-to/get-teams-context.md#fetching-the-roster-or-user-profile) while also [subscribing to conversation events](../bots/how-to/conversations/subscribe-to-conversation-events.md). These identifiers can also save you from making additional Graph API calls and requiring user consent for querying team membership.
+Bots also allow you to send *proactive messages* to individual users or channels. These are unprompted messages triggered by an outside event and not a message sent to a bot. (For example, your bot can send a welcome message when it's installed or a new user joins a channel.) 
+
+Sending proactive messages requires Teams-specific identifiers—you can capture this information by [fetching roster or user profile data](../bots/how-to/get-teams-context.md#fetching-the-roster-or-user-profile), [subscribing to conversation events](../bots/how-to/conversations/subscribe-to-conversation-events.md), or using [Microsoft Graph](https://docs.microsoft.com/graph/teams-proactive-messaging).
 
 Be careful not to spam users with excessive messages. If the Teams capability supports it, consider letting users configure notification settings for your app (for example, "Don't send me unprompted messages.").
 
