@@ -129,21 +129,6 @@ POST /v3/conversations/{conversationId}/activities
 ```json
 {
       "type": "message",
-      "timestamp": "2017-04-24T21:46:00.9663655Z",
-      "localTimestamp": "2017-04-24T14:46:00.9663655-07:00",
-      "serviceUrl": "https://callback.com",
-      "channelId": "msteams",
-      "from": {
-        "id": "28:e4fda94a-4b80-40eb-9bf0-6314491bc793",
-        "name": "The bot"
-      },
-      "conversation": {
-        "id": "a:1pL6i0oY3C0K8oAj8"
-      },
-      "recipient": {
-        "id": "29:1rsVJmSSFMScF0YFyCXpvNWlo",
-        "name": "User"
-      },
       "text": "John Phillips assigned you a weekly todo",
       "summary": "Don't forget to meet with Marketing next week",
     "channelData": {
@@ -176,7 +161,7 @@ await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 * * *
 
 > [!IMPORTANT]
-> The URL in the content bubble (taskInfo URL) must be included in the [valid domains](../resources/schema/manifest-schema#validdomains) list included in the Teams app manifest.
+> The URL in the content bubble (taskInfo URL) must be included in the [valid domains](../resources/schema/manifest-schema.md#validdomains) list included in the Teams app manifest.
 
 #### Response Codes
 
@@ -260,7 +245,7 @@ Users with organizer and/or presenter roles add tabs to a meeting using the plus
 
 ✔ Refer to the [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md).
 
-✔ Use the [notification](/graph/api/resources/notifications-api-overview?view=graph-rest-beta) API to signal that a bubble notification needs to be triggered.
+✔ Use the [notification](/graph/api/resources/notifications-api-overview?view=graph-rest-beta&preserve-view=true) API to signal that a bubble notification needs to be triggered.
 
 ✔ As part of the notification request payload, include the URL where the content to be showcased is hosted.
 
