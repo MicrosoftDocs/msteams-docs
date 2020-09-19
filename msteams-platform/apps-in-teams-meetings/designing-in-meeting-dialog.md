@@ -5,7 +5,7 @@ description: Guidance and best practices for designing an in-meeting dialog for 
 ms.author: lajanuar
 ms.topic: conceptual
 ---
-# Designing an in-meeting dialog
+# Design an in-meeting dialog
 
 In-meeting dialogs display on the Teams meeting stage. They require a user's attention, confirmation, or interaction but are subtle and don't interrupt the meeting.
 

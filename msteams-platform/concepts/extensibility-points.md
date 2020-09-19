@@ -1,5 +1,5 @@
 ---
-title: Start planning your Microsoft Teams app
+title: Plan your Microsoft Teams app
 author: heath-hamilton
 description: How to plan your Teams app.
 ms.topic: conceptual

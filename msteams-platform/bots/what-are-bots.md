@@ -1,7 +1,7 @@
 ---
 title: What are bots in Microsoft Teams? 
 author: clearab
-description: An overview of bots in Microsoft Teams.
+description: Overview of bots in Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
 ---
