@@ -34,7 +34,7 @@ keywords: teams apps meetings user participant role api
 ### GetParticipant API
 
 > [!NOTE]
-> Teams does not currently support large distribution lists or large meetings for the `GetParticipant` API.
+> Teams does not currently support large distribution lists or large meetings for the `GetParticipant` API. Support for the Bot Framework SDK is coming soon.
 
 #### Request
 
