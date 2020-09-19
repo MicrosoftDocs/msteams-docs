@@ -82,7 +82,7 @@ Teams displays app content only through HTTPS connections. Since you'll host you
 
 ## About the tutorials
 
-The Teams **build your first app** lessons are independent and you can start from anywhere you want. If you're not sure where to go, follow our beginner friendly path and build a "Hello, World!" app.
+You can start with any of the Teams **build your first app** lessons. If you're not sure where to go first, follow our beginner friendly path and build a "Hello, World!" app.
 
 :::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Skill tree showing learning paths for Teams build your first app tutorials." border="false":::
 
