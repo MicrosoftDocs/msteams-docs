@@ -44,6 +44,29 @@ GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 
 *See* the [Bot Framework API reference](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true).
 
+<!-- markdownlint-disable MD025 -->
+
+# [C # /.NET](#tab/dotnet)
+
+```csharp
+string meetingId = "meetingid?";
+string participantId = "participantidhere";
+var connectorClient = turnContext.TurnState.Get<IConnectorClient>();
+var creds = connectorClient.Credentials as AppCredentials;
+var bearerToken = await creds.GetTokenAsync().ConfigureAwait(false);
+var request = new HttpRequestMessage();
+request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
+request.Method = new HttpMethod("GET");
+request.RequestUri = new System.Uri(Path.Combine(connectorClient.BaseUri.OriginalString, $"/meetings/{meetingId}/participants/{participantId}"));
+HttpResponseMessage response = await (connectorClient as ServiceClient<ConnectorClient>).HttpClient.SendAsync(request, cancellationToken).ConfigureAwait(false);
+if (response.StatusCode == System.Net.HttpStatusCode.OK)
+{
+    var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+    var theObject = Rest.Serialization.SafeJsonConvert.DeserializeObject<WhateverObjectIsReturned>(content, connectorClient.DeserializationSettings);
+```
+
+<!-- markdownlint-disable MD001 -->
+
 #### Query parameters
 
 **meetingId**. The meeting identifier is required.  
@@ -101,7 +124,7 @@ POST /v3/conversations/{conversationId}/activities
 
 #### Request Payload
 
-**JSON Example**
+# [JSON](#tab/json)
 
 ```json
 {
@@ -132,6 +155,22 @@ POST /v3/conversations/{conversationId}/activities
     "replyToId": "1493070356924"
     }
 
+```
+
+# [C#/.NET](#tab/dotnet)
+
+```csharp
+Activity activity = MessageFactory.Text("This is a meeting signal test");
+MeetingNotification notification = new MeetingNotification
+{
+    AlertInMeeting = true,
+    ExternalResourceUrl = contentUrl
+};
+activity.ChannelData = new TeamsChannelData
+{
+    Notification = notification
+};
+await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```
 
 > [!IMPORTANT]
@@ -193,7 +232,7 @@ The tab `context` and `scopes` properties work in harmony to allow you to determ
 
 ### Pre-meeting
 
-Users with organizer and/or presenter roles can add tabs using the plus ➕ button in the meeting **Chat** and meeting **details** pages. Bots and messaging extensions can be added via the ellipses/overflow menu &#x25CF;&#x25CF;&#x25CF; located beneath the compose message area in the chat.
+Users with organizer and/or presenter roles add tabs to a meeting using the plus ➕ button in the meeting **Chat** and meeting **details** pages. Messaging extensions are added to via the ellipses/overflow menu &#x25CF;&#x25CF;&#x25CF; located beneath the compose message area in the chat. Bots are added to a meeting chat using the "**@**" key and selecting **Get bots**.
 
 ✔ The user identity *must* be confirmed via [Tabs SSO](../tabs/how-to/authentication/auth-aad-sso.md). Following this authentication, the app can retrieve the user role via the GetParticipant API.
 
@@ -219,7 +258,7 @@ Users with organizer and/or presenter roles can add tabs using the plus ➕ butt
 
 ✔ Refer to the [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md).
 
-✔ Use the [notification](/graph/api/resources/projectrome-notification?view=graph-rest-beta&preserve-view=true) API to signal that a bubble notification needs to be triggered.
+✔ Use the [notification](/graph/api/resources/notifications-api-overview?view=graph-rest-beta) API to signal that a bubble notification needs to be triggered.
 
 ✔ As part of the notification request payload, include the URL where the content to be showcased is hosted.
 
