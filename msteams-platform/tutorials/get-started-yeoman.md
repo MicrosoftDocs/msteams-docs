@@ -21,7 +21,7 @@ You need to install the following on your machine before starting to use the Tea
 
 ### Install Node
 
-You need to have NodeJS installed on your machine. You should use the latest [LTS version](https://nodejs.org/dist/latest-v8.x/).
+You need to have NodeJS installed on your machine. You should use the latest [LTS version](https://nodejs.org/en/download/).
 
 ### Install a code editor
 
