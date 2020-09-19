@@ -1,14 +1,14 @@
 ---
-title: Build and run your first Teams app
+title: Build and run a "Hello, World!" Teams app
 author: heath-hamilton
-description: Build and run your first Microsoft Teams app.
+description: Build and run your first Microsoft Teams app, a personal tab that displays "Hello, World!"
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: quickstart
 ---
-# Build and run your first Microsoft Teams app
+# Build a "Hello, World!" Teams app
 
-You can jump right into developing on the Microsoft Teams platform by quickly building and running a basic personal tab.
+You can jump right into Microsoft Teams platform development by building a personal tab that displays "Hello, World!"
 
 ## Create your app project
 
@@ -27,7 +27,7 @@ Once the toolkit configures your project, you have the components to build a bas
 
 :::image type="content" source="../assets/images/build-your-first-app/app-project-files.png" alt-text="App project files in Visual Studio Code.":::
 
-Let's take time to understand some of the key files Teams app developers work with.
+Let's take a moment to understand some of the key files Teams app developers work with.
 
 ### App manifest (`manifest.json`)
 
@@ -53,7 +53,7 @@ Here are some details about the app package files:
 
 ## Run your app
 
-In the interest of time, you'll build and run your app locally. Production-level Teams apps are hosted in the cloud.
+In the interest of time, you'll build and run your app locally.
 
 (This information is also available in the toolkit `README`.)
 
@@ -81,7 +81,7 @@ Your app manifest now points to where you're hosting the app.
 With your app running and accessible via HTTPS, you're ready to upload it to Teams.
 
 > [!TIP]
-> Before sideloading your app, check for issues using the [toolkit's validation feature](../concepts/deploy-and-publish/appsource/prepare/submission-checklist#teams-app-validation-tool). Errors must be fixed to successfully sideload the app.
+> Before sideloading your app, check for issues using the [toolkit's validation feature](../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool). Errors must be fixed to successfully sideload the app.
 
 1. Log in to the Teams client with your account that allows app sideloading. (If you aren't sure you have that, learn about getting a [Teams development account](../build-your-first-app/building-real-world-app.md#set-up-your-development-account).)
 1. Select **Apps**, then choose **Upload a custom app**.
@@ -101,4 +101,4 @@ Expand on the personal tab you just created or build another type of Teams app.
 > [!div class="nextstepaction"]
 > [Build a channel tab](../build-your-first-app/build-channel-tab.md)
 > [!div class="nextstepaction"]
-> [Build a bot](../build-your-first-app/built-bot.md)
+> [Build a bot](../build-your-first-app/build-bot.md)

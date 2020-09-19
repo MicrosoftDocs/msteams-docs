@@ -72,26 +72,28 @@ You can get a free Teams test account that allows app sideloading by joining the
 
 You can build Teams apps with your preferred tools, but these lessons show how you can get started quickly with the Microsoft Teams Toolkit for Visual Studio Code.
 
-Teams displays app content only through HTTPS connections. Since you'll host your first app locally, you'll learn how to use [ngrok to set up a secure tunnel](../concepts/build-and-test/debug.md##locally-hosted) between Teams and your app.
+Teams displays app content only through HTTPS connections. Since you'll host your first app locally to save time, you'll learn how to use [ngrok to set up a secure tunnel](../concepts/build-and-test/debug.md#locally-hosted) between Teams and your app. (Production-level Teams apps are hosted in the cloud.)
 
 1. Install [Node.js](https://nodejs.org/en/).
 1. Install [ngrok](https://ngrok.com/download).
 1. Install the latest version of [Visual Studio Code](https://code.visualstudio.com/download). (Earlier versions might not work with the toolkit.)
 1. In Visual Studio Code, select **Extensions** :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: on the left Activity Bar and install the **Microsoft Teams Toolkit**.
-    :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="install toolkit view":::
+    :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="Install toolkit view.":::
 
-## About the tutorials 
-All the tutorials in this section are independent and you can start from anywhere you want. If you can't choose, follow our beginner friendly path to build a tab first.
-:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="skill tree":::
+## About the tutorials
 
+The Teams **build your first app** lessons are independent and you can start from anywhere you want. If you're not sure where to go, follow our beginner friendly path and build a "Hello, World!" app.
+
+:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Skill tree showing learning paths for Teams build your first app tutorials.":::
 
 ## Next step
+
 Once you set up your account and environment, you can start building.
 
 > [!div class="nextstepaction"]
-> [Build and run your personal tab](../build-your-first-app/build-and-run.md)
+> [Build a "Hello, World!" app](../build-your-first-app/build-and-run.md)
 
+Or you can choose to:
 
-Or you can choose to
 * [Build a bot](../build-your-first-app/add-bot.md)
-* [Build a Messaging Extension](../build-your-first-app/build-messaging-extension.md)
+* [Build a messaging extension](../build-your-first-app/build-messaging-extension.md)
