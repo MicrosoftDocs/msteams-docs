@@ -65,7 +65,7 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
     var theObject = Rest.Serialization.SafeJsonConvert.DeserializeObject<WhateverObjectIsReturned>(content, connectorClient.DeserializationSettings);
 ```
 
----
+* * *
 <!-- markdownlint-disable MD001 -->
 
 #### Query parameters
@@ -174,7 +174,7 @@ activity.ChannelData = new TeamsChannelData
 await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```
 
----
+* * *
 
 > [!IMPORTANT]
 > The URL in the content bubble (taskInfo URL) must be included in the [valid domains](../resources/schema/manifest-schema#validdomains) list included in the Teams app manifest.
