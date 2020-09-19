@@ -42,7 +42,7 @@
     href: concepts/build-and-test/share-to-teams.md
   - name: Production-ready app templates
     href: samples/app-templates.md
-  - name: Production-ready shifts connectors
+  - name: Production-ready Shifts connectors
     href: samples/shifts-wfm-connectors.md
 - name: Plan your app
   items:
