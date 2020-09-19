@@ -1,12 +1,12 @@
 ---
-title: Create a bot for Teams
+title: Build a Teams bot
 author: heath-hamilton
 description: Learn how to build a bot for your first Microsoft Teams app.
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
 ---
-# Create a bot for Teams
+# Build a Teams bot
 
 You'll build a basic *bot* app in this tutorial. A bot acts as an intermediary between Teams users and your web service. People can chat with a bot to quickly get information or initiate workflows and tasks performed by your service.
 

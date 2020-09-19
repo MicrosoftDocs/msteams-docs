@@ -1,12 +1,12 @@
 ---
-title: Create a personal tab for Teams
+title: Build a Teams personal tab
 author: heath-hamilton
 description: Learn how to build a personal tab for your first Microsoft Teams app.
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
 ---
-# Create a personal tab for Teams
+# Build a Teams personal tab
 
 Tabs are a simple way to surface content in your app by essentially embedding a webpage in Teams.
 

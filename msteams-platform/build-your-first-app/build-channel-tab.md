@@ -4,9 +4,9 @@ description: Learn how to build a channel tab for your first Microsoft Teams app
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-title: Create a channel tab for Teams
+title: Build a Teams channel tab
 ---
-# Create a channel tab for Teams
+# Build a Teams channel tab
 
 In this tutorial, you'll build a basic *channel tab*, a full-screen content page for a team channel or chat. Unlike a personal tab, users can configure some aspects of a channel tab (for example, rename the tab so it's meaningful to their channel).
 
