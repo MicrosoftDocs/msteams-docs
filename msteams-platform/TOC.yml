@@ -1,7 +1,7 @@
 - name: Overview
   expanded: true
   items:
-    - name: Building for Microsoft Teams
+    - name: Build for Microsoft Teams
       href: overview.md
     - name: What's new?
       href: whats-new.md
@@ -34,11 +34,11 @@
     href: webhooks-and-connectors/what-are-webhooks-and-connectors.md 
 - name: App integrations and templates
   items: 
-  - name: Integrating web apps
+  - name: Integrate web apps
     href: samples/integrating-web-apps.md
   - name: Low code solutions for Teams custom apps
     href: samples/teams-low-code-solutions.md
-  - name: Adding a Share to Teams button to your site
+  - name: Add a Share to Teams button to your site
     href: concepts/build-and-test/share-to-teams.md
   - name: Production-ready app templates
     href: samples/app-templates.md
@@ -48,17 +48,17 @@
   items:
   - name: Get started
     href: concepts/extensibility-points.md
-  - name: Understanding your use cases
+  - name: Understand your use cases
     href: concepts/design/understand-use-cases.md
-  - name: Mapping use cases to Teams capabilities
+  - name: Map use cases to Teams capabilities
     href: concepts/design/map-use-cases.md
-  - name: Determining your app's scope
+  - name: Determine your app's scope
     href: planning-your-app/app-scope.md
-  - name: Getting to know Teams UI conventions
+  - name: Get to know Teams UI conventions
     href: planning-your-app/teams-ui-conventions.md
 - name: Design your app
   items:
-  - name: Getting started
+  - name: Get started
     href: designing-your-app/designing-overview.md
   - name: Tabs
     items:
@@ -79,7 +79,7 @@
     - name: Cards
       href: designing-your-app/designing-cards.md
       items:
-      - name: Designing effective cards
+      - name: Design effective cards
         href: task-modules-and-cards/cards/design-effective-cards.md
     - name: Task modules
       href: designing-your-app/designing-task-modules.md
@@ -97,19 +97,19 @@
       href: concepts/design/components/dialogs.md
 - name: Build your app
   items:
-  - name: Building apps for Teams
+  - name: Build apps for Teams
     href: concepts/building-an-app.md
-  - name: Adding authentication
+  - name: Add authentication
     items:
     - name: Overview
       href: concepts/authentication/authentication.md
-    - name: Configuring identity providers
+    - name: Configure identity providers
       href: concepts/authentication/configure-identity-provider.md
   - name: Prepare your development environment
     href: concepts/build-and-test/prepare-your-o365-tenant.md
-  - name: Creating your app package
+  - name: Create your app package
     href: concepts/build-and-test/apps-package.md
-  - name: Creating your app with App Studio
+  - name: Create your app with App Studio
     href: concepts/build-and-test/app-studio-overview.md
   - name: Tabs — embedded web experiences
     items:
@@ -150,19 +150,19 @@
           items:
           - name: 'Authentication flow'
             href: tabs/how-to/authentication/auth-flow-tab.md
-          - name: 'Using Azure AD authentication'
+          - name: 'Use Azure AD authentication'
             href: tabs/how-to/authentication/auth-tab-aad.md
-          - name: 'Using silent authentication'
+          - name: 'Use silent authentication'
             href: tabs/how-to/authentication/auth-silent-aad.md
-          - name: 'Using single sign-on authentication'
+          - name: 'Use single sign-on authentication'
             href: tabs/how-to/authentication/auth-aad-sso.md
-        - name: 'Using the Teams client SDK'
+        - name: 'Use the Teams client SDK'
           href: tabs/how-to/using-teams-client-sdk.md
-        - name: Getting additional Teams context
+        - name: Get additional Teams context
           href: tabs/how-to/access-teams-context.md
         - name: DevTools for Microsoft Teams tabs
           href: tabs/how-to/developer-tools.md
-        - name: 'Adding your custom tab to SharePoint'
+        - name: 'Add your custom tab to SharePoint'
           href: tabs/how-to/tabs-in-sharepoint.md
         - name: Request device permissions
           href: tabs/how-to/native-device-permissions.md
@@ -266,7 +266,7 @@
         href: bots/calls-and-meetings/calls-meetings-bots-overview.md
       - name: Real-time media concepts
         href: bots/calls-and-meetings/real-time-media-concepts.md
-      - name: Registering a calling bot
+      - name: Register a calling bot
         href: bots/calls-and-meetings/registering-calling-bot.md
       - name: Incoming call notifications
         href: bots/calls-and-meetings/call-notifications.md
@@ -285,7 +285,7 @@
         href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
       - name: Create an O365 Connector
         href: webhooks-and-connectors/how-to/connectors-creating.md
-      - name: Sending messages to connectors and webhooks
+      - name: Send messages to connectors and webhooks
         href: webhooks-and-connectors/how-to/connectors-using.md     
   - name: Common interfaces
     items:
@@ -293,7 +293,7 @@
       items:
         - name: What are cards?
           href: task-modules-and-cards/what-are-cards.md
-        - name: Formatting card text
+        - name: Format card text
           href: task-modules-and-cards/cards/cards-format.md
         - name: Add and respond to card actions
           href: task-modules-and-cards/cards/cards-actions.md
@@ -307,13 +307,13 @@
           href: task-modules-and-cards/task-modules/task-modules-bots.md
         - name: From a tab
           href: task-modules-and-cards/task-modules/task-modules-tabs.md
-  - name: Creating deep links
+  - name: Create deep links
     href: concepts/build-and-test/deep-links.md
   - name: Localizing your app
     href: concepts/build-and-test/apps-localization.md
-  - name: Testing your app
+  - name: Test your app
     items:
-    - name: Debugging your app
+    - name: Debug your app
       href: concepts/build-and-test/debug.md
     - name: Using sample data
       href: concepts/build-and-test/test-data.md
@@ -325,11 +325,11 @@
     href: concepts/deploy-and-publish/apps-upload.md
   - name: Publish your app to your organization
     href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json
-  - name: Publishing your app on AppSource
+  - name: Publishi your app on AppSource
     items:
-    - name: Understanding the submission process
+    - name: Understand the submission process
       href: concepts/deploy-and-publish/appsource/publish.md
-    - name: Submitting your app
+    - name: Submit your app
       items: 
       - name: Pre-submission checklist
         href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
@@ -341,7 +341,7 @@
         href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
     - name: Maintaining and supporting published apps
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
-    - name: Getting your app Teams certified
+    - name: Get your app Teams certified
       href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
 - name: Reference and resources
   items:
@@ -377,7 +377,7 @@
         href: resources/bot-v3/bots-notifications.md
       - name: Context for bots
         href: resources/bot-v3/bots-context.md
-      - name: Sending and receiving files
+      - name: Send and receive files
         href: resources/bot-v3/bots-files.md
       - name: Notification-only bots
         href: resources/bot-v3/bots-notification-only.md
@@ -385,7 +385,7 @@
         href: resources/bot-v3/bots-menus.md
       - name: Bots with tabs
         href: resources/bot-v3/bots-with-tabs.md
-      - name: Formatting bot messages
+      - name: Format bot messages
         href: resources/bot-v3/bots-text-formats.md  
       - name: Test a bot
         href: resources/bot-v3/bots-test.md
