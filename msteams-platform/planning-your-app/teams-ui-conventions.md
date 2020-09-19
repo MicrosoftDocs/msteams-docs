@@ -1,9 +1,9 @@
 ---
-title: Determining your Teams app contexts
+title: Determine your Teams app contexts
 author: heath-hamilton
-description: In planning your Teams app, you must decide if the app will be used in collaborative spaces, personal spaces, or both.
+description: Plan your Teams app; decide if the app will be used in collaborative and/or personal spaces
 ---
-# Getting to know Teams UI conventions
+# Get to know Teams UI conventions
 
 Apps typically exhibit one or more standard Teams UI conventions. Building out your app's capabilities using these conventions leads to rich experiences that feel native to Teams users.
 

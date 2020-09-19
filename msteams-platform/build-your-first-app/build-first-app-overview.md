@@ -1,11 +1,11 @@
 ---
-title: Get started building your first Teams app
+title: Get started building first Teams app
 author: heath-hamilton
-description: Overview and prerequisites for building your first Microsoft Teams app
+description: Overview and prerequisites for building first Microsoft Teams app
 ms.author: lajanuar
 ms.date: 09/22/2020
 ---
-# Get started building your first Teams app
+# Get started:  build your first Teams app
 
 In the **build your first app** lessons, you create basic Teams apps. Each tutorial walks through how to build a simple, real-world Teams app while introducing you to common tools, fundamental concepts, and some more advanced features.
 

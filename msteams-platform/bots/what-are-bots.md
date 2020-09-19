@@ -1,11 +1,11 @@
 ---
-title: What are bots?
+title: What are bots in Microsoft Teams? 
 author: clearab
 description: An overview of bots in Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
 ---
-# What are bots?
+# What are bots in Microsoft Teams? 
 
 Bots allow users to interact with your web service through text, interactive cards, and task modules. They're incredibly flexible — you can scope bots to handle a few simple commands or virtual assistants powered by artificial intelligence and natural language processing. They can be one aspect of a larger application or completely standalone.
 

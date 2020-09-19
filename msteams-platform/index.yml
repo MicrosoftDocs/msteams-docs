@@ -40,7 +40,7 @@ highlightedContent:
       url:  /graph/teams-concept-overview
     - title:  Low-code apps, bots, flows, and reports using Microsoft Power Platform
       itemType: overview
-      url:  
+      url:  /microsoftteams/platform/samples/teams-low-code-solutions/
    
 # conceptualContent section
 conceptualContent:

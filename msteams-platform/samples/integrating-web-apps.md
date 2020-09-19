@@ -1,12 +1,12 @@
 ---
 author: heath-hamilton
-description: Best practices for integrating an existing web app with Microsoft Teams
-ms.author: heath-hamilton
+description: Best practices for integrating existing web apps with Microsoft Teams
+ms.author: v-heha
 ms.date: 08/26/2020
 ms.topic: conceptual
-title: Integrating a web app with Microsoft Teams
+title: Integrate a web app with Microsoft Teams
 ---
-# Integrating web apps with Teams
+# Integrate web apps with Teams
 
 Do you have a web app you think would fit naturally with Teams' social and collaborative features? These guidelines can help you understand how to integrate the following types of apps:
 

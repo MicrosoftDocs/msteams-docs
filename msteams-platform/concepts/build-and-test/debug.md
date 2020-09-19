@@ -1,11 +1,11 @@
 ---
-title: Debugging your Teams app
-description: Describes the steps to be taken to run and debug Microsoft Teams apps
+title: Debug your Teams app
+description: How to run and debug your Microsoft Teams apps
 keywords: teams run debug apps
 ms.topic: conceptual
 ---
 
-# Debugging your Teams app
+# Debug your Teams app
 
 Microsoft Teams apps can contain one or more capabilities, and the ways to run or even host them may be different. When it comes to debugging, in general, we have the following ways to run your Microsoft Teams app:
 

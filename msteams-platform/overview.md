@@ -1,5 +1,5 @@
 ---
-title: Building for the Microsoft Teams developer platform
+title: Build apps for the Microsoft Teams developer platform
 author: heath-hamilton
 description: Overview of how developers can extend and customize Microsoft Teams features with custom Teams apps.
 ms.topic: overview
@@ -7,7 +7,7 @@ ms.author: lajanuar
 ms.date: 09/22/2020
 #Customer intent: As a developer, I want to understand why I would want to build a Teams app so that I can solve business problems.
 ---
-# Building for Microsoft Teams
+# Build apps for Microsoft Teams
 
 Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work.
 
@@ -136,6 +136,6 @@ Jump right in with our first app tutorials, find out how to integrate and import
 * [Add a Share to Teams button to your website](concepts/build-and-test/share-to-teams.md)
 * [Design your app using recommended guidelines](designing-your-app/designing-overview.md)
 * [Fluent Design System](https://fluentsite.z22.web.core.windows.net/)
-* [Microsoft Teams JavaScript client SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest)
+* [Microsoft Teams JavaScript client SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
 * [Bot Framework SDK for JavaScript](https://github.com/Microsoft/botbuilder-js) and [Bot Framework SDK for .NET](https://github.com/Microsoft/botbuilder-dotnet/)
 * [Publish your app to an organization or AppSource](concepts/deploy-and-publish/overview.md)

@@ -1,9 +1,10 @@
 ---
-title: Prepare your Teams development environment
-description: How to set up your environment to developi Teams apps
+title: Prepare your development environment
+description: How to set up your environment for Teams app development
 keywords: Configure Office 365 tenant Teams uploading environment development
+ms.author: lajanuar
 ---
-# Prepare your development environment
+# Prepare your Microsoft Teams development environment
 
 If you are an Office 365 subscriber, you can develop apps for Microsoft Teams with one of the following [plans](https://products.office.com/business/compare-more-office-365-for-business-plans):
 
@@ -31,11 +32,11 @@ Turn on custom app sideloading for your developer tenant as follows:
 
 2. Select **Show All** --> **Teams**. 
 
-![image of the app overflow menu](~/assets/images/prepare-test-tenant/admin-center.png)
+![image of app overflow menu](~/assets/images/prepare-test-tenant/admin-center.png)
 
 3. Navigate to **Teams apps** --> **Setup Policies** --> **Global(Org-wide default)**  
 
-![image of the app overflow menu](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
+![app overflow menu view](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
 
 4. Toggle **upload custom apps** to the **on** position.
 
@@ -44,6 +45,6 @@ That's it! Your test tenant will now allow custom app sideloading.
 > [!Note] 
 > It can take up to 24 hours before sideloading is enabled. During interim, you can use **upload for \<your tenant>** to test your app.
 
-![image of the app overflow menu](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
+![app overflow menu](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
 
 For complete information on how these settings interact, *See*, [Manage custom app policies and settings in Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings) and [Manage app setup policies in Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies).

@@ -1,11 +1,11 @@
 ---
-title: What are messaging extensions?
+title: What are messaging extensions in Teams?
 author: clearab
-description: An overview of messaging extensions on the Microsoft Teams platform
+description: Overview of messaging extensions in Microsoft Teams
 ms.topic: overview
 ms.author: anclear
 ---
-# What are messaging extensions?
+# What are messaging extensions in Microsoft Teams?
 
 Messaging extensions allow users to interact with your web service through buttons and forms in the Microsoft Teams client. They can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. You can then send the results of that interaction back to the Microsoft Teams client, typically in the form of a richly formatted card.
 

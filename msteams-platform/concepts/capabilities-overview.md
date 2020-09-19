@@ -1,11 +1,11 @@
 ---
-title: Understanding Teams app capabilities
+title: Understanding Teams apps and capabilities
 author: heath-hamilton
-description: 
+description: Teams app capabilities explained
 ms.topic: overview
-ms.author: heath-hamilton
+ms.author: v-heha
 ---
-# Understanding Teams app capabilities
+# Understanding Teams apps and capabilities
 
 *Capabilities* are the extension points for building apps on the Microsoft Teams platform.
 

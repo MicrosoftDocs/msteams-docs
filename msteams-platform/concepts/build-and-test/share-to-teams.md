@@ -1,17 +1,18 @@
 ---
-title: Adding a Share to Teams button to your website
-description: How to add the Share to Teams embedded button on your website
+title: Add a Share-to-Teams button to your website
+description: How to add the Share-to-Teams button to your website
 keywords: Share Teams Share-to-Teams
 ---
-# Adding a Share to Teams button to your website
+# Add a Share-to-Teams button to your website
 
 >[!NOTE]
+>
 > * Only the desktop versions of Edge and Chrome are supported.
 > * Use of Freemium or guest accounts is not supported.
 
 Third-party websites can use the launcher script to embed Share to Teams buttons on their webpages which will launch the Share to Teams experience in a popup window when clicked. This will allow you to share a link directly to any person or Microsoft Teams channel without switching context.
 
-![Share to Teams popup](~/assets/images/share-to-teams-popup.png)
+![Share to Teams pop-up](~/assets/images/share-to-teams-popup.png)
 
 ## How to embed a Share to Teams button
 
@@ -75,7 +76,7 @@ In order for the preview to be displayed you must:
 
 For teachers using the Share to Teams button you'll be given an additional option to `Create an Assignment`. This enables you to quickly create an assignment in the chosen Team based on the shared link.
 
-![Share to Teams popup](~/assets/images/share-to-teams-popup-edu.png)
+![Share to Teams pop-up view](~/assets/images/share-to-teams-popup-edu.png)
 
 ## Full launcher.js definition
 
