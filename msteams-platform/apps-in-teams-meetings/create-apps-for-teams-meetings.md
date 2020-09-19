@@ -46,8 +46,7 @@ GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 
 <!-- markdownlint-disable MD025 -->
 
-# [C # /.NET](#tab/dotnet)
-
+**C# Example**
 ```csharp
 string meetingId = "meetingid?";
 string participantId = "participantidhere";
