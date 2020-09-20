@@ -14,7 +14,13 @@ Personal apps are available on mobile clients in the App Drawer. The app can onl
 
 Group and channel tabs are available on mobile clients as well. The default behavior is currently to use your `websiteUrl` to launch your tab in a browser window. However, they can be loaded on a mobile client by clicking the `...` overflow menu next to the tab and choosing **Open**, which will use your `contentUrl` to load the tab inside the Teams mobile client.
 
-![mobile app drawer](../../assets/images/personal-app-mobile.png)
+## Example
+
+The following illustrations show how you access a tab on mobile and what it looks like when open.
+
+:::image type="content" source="../../assets/images/tabs/mobile-app-drawer.png" alt-text="Illustration showing the Teams mobile app drawer." border="false":::
+
+:::image type="content" source="../../assets/images/tabs/mobile-tab.png" alt-text="Illustration showing a Teams mobile tab." border="false":::
 
 ## Developer considerations for mobile support
 
@@ -32,7 +38,7 @@ Because your tab can be opened on devices with a wide range of screen sizes, it 
 
 For authentication to work on mobile clients, you must upgrade you Teams JS SDK to at least version 1.4.1.
 
-### Low bandwidth & intermittent connections
+### Low bandwidth and intermittent connections
 
 Mobile clients regularly need to function with low bandwidth and intermittent connections. Your app should handle any timeouts appropriately by providing a contextual message to the user. You should also user progress indicators to provide feedback to your users for any long-running processes.
 
@@ -46,27 +52,27 @@ Choosing the correct layout for your tab is important. You should consider the k
 
 #### Single canvas
 
-This is one large area where work gets done. The Wiki app follows this pattern. If you have an app that doesn’t separate content into smaller components this would be a good fit.
+This is one large area where work gets done. The Teams Wiki app follows this pattern. If you have an app that doesn’t separate content into smaller components this would be a good fit.
 
-![single canvas layout](~/assets/images/mobile-single-canvas.png)
+:::image type="content" source="../../assets/images/tabs/mobile-tab-single-canvas.png" alt-text="Illustration showing a Teams mobile single canvas tab." border="false":::
 
 #### List
 
 Lists are great for sorting and filtering large quantities of data and are great at keeping the most important things at the top. It is helpful to use sortable columns. Actions can be added to each list item under the ellipsis menu.
 
-![list layout](~/assets/images/mobile-list.png)
+:::image type="content" source="../../assets/images/tabs/mobile-tab-list.png" alt-text="Illustration showing a Teams mobile list tab." border="false":::
 
 #### Grid
 
 Grids are useful for showing elements which are highly visual. It helps to include a filter or search control at the top.
 
-![grid layout](~/assets/images/mobile-grid.png)
+:::image type="content" source="../../assets/images/tabs/mobile-tab-grid.png" alt-text="Illustration showing a Teams mobile tab with a grid layout." border="false":::
 
 ### Tabs with bots on mobile
 
-The below is an example personal app that contains two static tabs and a bot.
+The following example is a personal app that has tabs and a bot.
 
-![tabs and bots on mobile](~/assets/images/mobile-tab-with-bot.png)
+:::image type="content" source="../../assets/images/tabs/mobile-tab-with-bot.png" alt-text="Illustration showing how mobile Teams app that has tabs and a bot." border="false":::
 
 ### UI Components
 
@@ -76,36 +82,36 @@ Using our approved neutral palette for backgrounds, notifications, text, and but
 
 ##### Light color
 
-![light color palette](~/assets/images/light-color.png)
+![light color palette](../../assets/images/light-color.png)
 
 ##### Dark color
 
-![dark color palette](~/assets/images/dark-color.png)
+![dark color palette](../../assets/images/dark-color.png)
 
 #### Buttons and controls
 
 The way buttons are styled helps communicate what kind of action they trigger. We maintain a wide range of buttons that are formatted to show different levels of emphasis. Buttons can have text, an icon, or a combination of text and an icon. To communicate different levels in a hierarchy, we designed primary and secondary buttons within each category.
 
-![buttons image](~/assets/images/buttons.png)
+![buttons image](../../assets/images/buttons.png)
 
-![selection controls](~/assets/images/selection-controls.png)
+![selection controls](../../assets/images/selection-controls.png)
 
-![chiclets and pills](~/assets/images/chiclets-and-pills.png)
+![chiclets and pills](../../assets/images/chiclets-and-pills.png)
 
 #### Typography
 
 Typography should be clear and purposeful. Emphasize important information and avoid using multiple fonts and sizes to reduce confusion. We recommend using sentence case and avoiding the usage of all caps for localization and legibility.
 
-![mobile typograph](~/assets/images/mobile-typography.png)
+![mobile typograph](../../assets/images/mobile-typography.png)
 
-#### Fields and Flyouts
+#### Fields and flyouts
 
-Fields are areas where users can input text. Flyouts are more lightweight than dialogs, and appear from the top pane.
+Fields are areas where users can input text. Flyouts are more lightweight than dialogs and appear from the top pane.
 
 ##### List controls
 
-![mobile list controls](~/assets/images/mobile-list-controls.png)
+![mobile list controls](../../assets/images/mobile-list-controls.png)
 
 ##### Field controls
 
-![mobile field controls](~/assets/images/mobile-field-controls.png)
+![mobile field controls](../../assets/images/mobile-field-controls.png)
