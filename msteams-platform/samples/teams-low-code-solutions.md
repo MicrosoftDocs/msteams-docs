@@ -16,27 +16,29 @@ Low code platforms provide an intuitive approach to software development and req
 
 ## Teams and Microsoft Power Platform
 
-Power Platform(/power-platform) combines four robust Microsoft technologies in one powerful application platform. Power BI, Power Apps, Power Automate (formerly Microsoft Flow) and Power Virtual Agents empower you to build solutions, automate processes, analyze data,  and create virtual agents within a unified and integrated environment:
+Microsoft Power Platform(/power-platform) combines four robust Microsoft technologies in one powerful application platform. Power BI, Power Apps, Power Automate (formerly Microsoft Flow) and Power Virtual Agents empower you to build solutions, automate processes, analyze data,  and create virtual agents within a unified and integrated environment:
 
-:::image type="content" source="../assets/images/power-platform-and-teams/power-platform.png" alt-text="Power platform services":::
+:::image type="content" source="../assets/images/power-platform-and-teams/ms-power-platform.png" alt-text="Power platform services":::
 
 ### ✔ Teams and Power BI
 
-The [Power BI tab for Microsoft Teams](https://powerbi.microsoft.com/blog/announcing-new-power-bi-tab-for-microsoft-teams/) adds support for reports in the Teams workspace and allows users to [share interactive Power BI content](/power-bi/collaborate-share/service-embed-report-microsoft-teams) and [collaborating with others inTeams](/power-bi/collaborate-share/service-collaborate-microsoft-teams) channels and chats. You can create packaged [Power BI app](/power-bi/collaborate-share/service-create-distribute-apps) content from scratch and distribute as an app or you can [Create a template app in Power BI](/connect-data/service-template-apps-create).
+The [Power BI tab for Microsoft Teams](https://powerbi.microsoft.com/blog/announcing-new-power-bi-tab-for-microsoft-teams/) adds support for reports in the Teams workspace and allows users to [share interactive Power BI content](/power-bi/collaborate-share/service-embed-report-microsoft-teams) and [collaborating with others inTeams](/power-bi/collaborate-share/service-collaborate-microsoft-teams) channels and chats. You can create packaged [Power BI app](/power-bi/collaborate-share/service-create-distribute-apps) content from scratch and distribute as an app or you can [Create a template app in Power BI](/connect-data/service-template-apps-create). Additionally, use the new Power BI app in Teams to bring your entire basic Power BI service experience into Teams.
 
 ### ✔ Teams and Power Apps
 
-With [Power Apps](/powerapps/powerapps-overview), you can build business apps that connect to your business data and are tailored to your organization's  needs.  Power Apps enables a wide range of app scenarios to solve business challenges via [canvas apps](/powerapps/maker/#canvas-apps) and [modal-driven apps](/powerapps/maker/#model-driven-apps). Once your app is built, it can be exported from the Power Apps maker portal and [embedded in Microsoft Teams](/power-platform/admin/embed-app-teams).
+With [Power Apps](/powerapps/powerapps-overview), you can build business apps that connect to your business data and are tailored to your organization's  needs.  Power Apps enables a wide range of app scenarios to solve business challenges via [canvas apps](/powerapps/maker/#canvas-apps). Once your app is built, it can be exported from the Power Apps maker portal and [embedded in Microsoft Teams](/power-platform/admin/embed-app-teams).
 
-For more on customizing Teams with Power Apps. *see*, [Microsoft Teams and Power Apps whitepaper](https://aka.ms/PowerAppsTeams_whitepaper).
+The new Power Apps app in Teams provides an integrated experience for app makers to create and edit apps and workflows within Teams and quickly publish and share them for anyone on the team to use without having to switch between multiple apps and services.
 
 ### ✔ Teams and Power Automate
 
-With the [Power Automate app in Teams](/power-automate/flows-teams), you can [create flows to automate repetitive work tasks](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) directly within the Teams environment. Additionally, you can [trigger a flow from any message in Microsoft Teams](/power-automate/trigger-flow-teams-message) and [use adaptive cards within Power Automate](/power-automate/create-adaptive-cards).
+With the [Power Automate app in Teams](/power-automate/flows-teams), you can [create flows to automate repetitive work tasks](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) directly within the Teams environment. You can [trigger a flow from any message in Microsoft Teams](/power-automate/trigger-flow-teams-message) and [use adaptive cards within Power Automate](/power-automate/create-adaptive-cards). . Additionally, you can build flows to customize and add further value to Microsoft Teams from within the new Power Apps app in Teams.
 
 ### ✔ Teams and Power Virtual Agents
 
 [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) is a no-code, guided graphical interface solution, built on the Microsoft Power Platform and the Bot Framework, that empowers every member of your team to create and maintain rich, conversational chatbots that easily integrate with the Teams platform. All content authored in Power Virtual Agents renders naturally in Teams and Power Virtual Agents bots engage with users in the Teams native chat canvas. You can [integrate your Power Virtual Agents chatbot](/power-virtual-agents/publication-add-bot-to-microsoft-teams) to Teams via the [Power Virtual Agents portal](https://powervirtualagents.microsoft.com)
+
+With the new Power Virtual Agents app in Teams, you can create, manage, and publish conversational chatbots easily from within Teams and share your bots with other people in your organization so they can chat and have their questions answered.
 
 ## Teams app templates
 
@@ -86,5 +88,3 @@ Virtual Assistant is a Microsoft open-source template that enables you to create
 [Announcing Power Platform and Teams updates to help customers adapt to remote work](https://cloudblogs.microsoft.com/powerplatform/2020/05/19/announcing-power-platform-and-teams-updates-to-help-customers-adapt-to-remote-work/)
 
 [Teams is shaping the future of work with low code features to enhance your digital workspace](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180)
-
-[Introducing the Microsoft Teams and Power Apps whitepaper](https://aka.ms/PowerAppsTeams_whitepaper)
