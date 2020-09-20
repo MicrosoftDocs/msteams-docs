@@ -16,15 +16,15 @@ Teams, channels, and group chats are collaboration spaces. Apps in these context
 
 Here's how Teams app capabilities are commonly used in collaborative contexts:
 
-* [**Bots**](~/bots/what-are-bots.md) interact with members of the conversation through chat and responding to events (like adding a new member or renaming a channel). Conversations with a bot in these contexts are visible to all members of the team, channel, or group, so bot conversations should be relevant to everyone.
-
 * [**Tabs**](~/tabs/what-are-tabs.md) provide a full-screen embedded web experience configured for the team, channel, or group chat. All members interact with the same web-based content, so a stateless single page app experience is typical.
-
-* [**Webhooks and connectors**](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) allow an external service to post messages into a conversation and users to send messages to a service.
 
 * [**Messaging extensions**](~/messaging-extensions/what-are-messaging-extensions.md) are shortcuts that help people craft rich and interactive messages. Messages are the heart of collaboration in Teams. With messaging extensions, users can craft more effective messages by sharing complex content in a card, initiating workflows, or requesting input from others in the conversation.
 
-* [**Microsoft Graph REST API**](../graph-api/rsc/resource-specific-consent.md) for getting data about teams, channels, and group chats to help automate and manage Teams processes.
+* [**Bots**](~/bots/what-are-bots.md) interact with members of the conversation through chat and responding to events (like adding a new member or renaming a channel). Conversations with a bot in these contexts are visible to all members of the team, channel, or group, so bot conversations should be relevant to everyone.
+
+* [**Webhooks and connectors**](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) allow an external service to post messages into a conversation and users to send messages to a service.
+
+* [**Microsoft Graph REST API**](https://docs.microsoft.com/graph/teams-concept-overview) for getting data about teams, channels, and group chats to help automate and manage Teams processes.
 
 ## Personal apps
 

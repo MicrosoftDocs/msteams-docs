@@ -1,15 +1,16 @@
 ---
-title: Understanding Teams apps and capabilities
+title: Understanding Teams platform capabilities
 author: heath-hamilton
 description: Teams app capabilities explained
-ms.topic: overview
-ms.author: v-heha
+ms.topic: conceptual
+ms.author: lajanuar
+ms.date: 09/22/2020
 ---
 # Understanding Teams apps and capabilities
 
 *Capabilities* are the extension points for building apps on the Microsoft Teams platform.
 
-There are multiple ways to extend the Teams client, so every app is unique: Some only have one capability (such as a webhook), while others have a few to give users options. For instance, your app could display data in a central location (tab) and present that same information through a conversational interface (bot).
+There are multiple ways to extend Teams, so every app is unique: Some only have one capability (such as a webhook), while others have a few to give users options. For instance, your app could display data in a central location (tab) and present that same information through a conversational interface (bot).
 
 Your Teams app can have one or all of the following core capabilities:
 
@@ -29,8 +30,3 @@ See the following illustration to get an idea which capabilities would provide t
 As you familiarize yourself with Teams app development, you'll begin to understand its subtleties. There's more than one way to build certain features (such as collecting user input). For example, you could embed a web-based form in a tab using an `<iframe>`. You could also do this in a tab using a task module, a Teams UI convention, for a more native experience your users may prefer.
 
 Choosing the right capabilities and design comes down to first [understanding your audience's use cases](../concepts/design/understand-use-cases.md).
-
-## Related
-
-* [Planning your app](../concepts/extensibility-points.md)
-* [Designing your app](../designing-your-app/designing-overview.md)

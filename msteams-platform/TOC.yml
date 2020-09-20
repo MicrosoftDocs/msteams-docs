@@ -46,7 +46,7 @@
     href: samples/shifts-wfm-connectors.md
 - name: Plan your app
   items:
-  - name: Get started
+  - name: Entry points for Teams clients
     href: concepts/extensibility-points.md
   - name: Understand your use cases
     href: concepts/design/understand-use-cases.md
