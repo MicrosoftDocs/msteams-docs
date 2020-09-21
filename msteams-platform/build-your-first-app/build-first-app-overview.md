@@ -28,7 +28,7 @@ Before you begin the tutorials, you should know the following about building app
 
 ### Apps can have multiple capabilities
 
-Teams apps are made up of one or more [platform capabilities](../concepts/capabilities-overview.md). You can display these capabilities using a number of Teams-specific [UI components and conventions](../planning-your-app/teams-ui-conventions.md), such as cards and task modules.
+Teams apps are made up of one or more [platform capabilities](../concepts/capabilities-overview.md). You can display these capabilities using a number of Teams-specific [UI components and conventions](../concepts/extensibility-points.md#ui-components), such as cards and task modules.
 
 ### Teams doesn't host your app
 
