@@ -187,6 +187,7 @@ Congratulations! You have a Teams app with a personal tab that makes it easier t
 * [Embed content from an existing web app or webpage](../tabs/how-to/add-tab.md#tab-requirements): We showed you how to create new content for a personal tab, but you can also load content from an external URL.
 * [Create a seamless experience for your tab](../tabs/design/tabs.md): See the recommended guidelines for designing Teams tabs.
 * [Build tabs for mobile](../tabs/design/tabs-mobile.md): Understand how to develop tabs for phones and tablets.
+* [Integrate with the Microsoft Graph API](https://docs.microsoft.com/graph/teams-concept-overview)
 * [Create a tab without the toolkit](../tabs/how-to/add-tab.md)
 
 ## Next lesson

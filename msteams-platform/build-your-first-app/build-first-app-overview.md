@@ -8,7 +8,7 @@ ms.topic: quickstart
 ---
 # Building your first Teams app overview
 
-In the **build your first app** lessons, you create basic Teams apps. Each tutorial walks through how to build a simple, real-world Teams app while introducing you to common tools, fundamental concepts, and some more advanced features.
+In the **build your first app** lessons, you create basic Teams apps. Each tutorial walks through how to build a simple, real-world Teams app while introducing you to common tools, fundamental concepts, and more advanced features.
 
 ## What you'll learn
 
@@ -19,16 +19,16 @@ Here's an idea of what you'll know after going through the lessons.
   > * **Get up and running quickly with the Teams Toolkit**: The Microsoft Teams Toolkit for Visual Studio Code takes care of creating your app project and scaffolding so you can have a running app in minutes.
   > * **Define your app with the manifest**: The app manifest is where you specify the capabilities and services your Teams app uses.
   > * **Scope your app's audience**: Build a Teams app for personal use, collaboration, or both.
-  > * **Get experience with frameworks**: Customize your app (for example, change its color scheme to match the Teams theme) with help from the Teams JavaScript SDK. Also, learn about common tools for creating and managing bots.
+  > * **Get experience with Teams frameworks**: Customize your app (for example, change its color scheme to match the Teams theme) with help from the Teams JavaScript SDK. Also, learn about common tools for creating and managing bots.
   > * **Expand on your app**: Throughout the lessons, you'll find related topics you're probably interested in (such as authentication and design guidelines).
 
 ## Teams app fundamentals
 
 Before you begin the tutorials, you should know the following about building apps for Teams.
 
-### Apps can have multiple capabilities
+### Apps can have multiple capabilities and entry points
 
-Teams apps are made up of one or more [platform capabilities](../concepts/capabilities-overview.md). You can display these capabilities using a number of Teams-specific [UI components and conventions](../concepts/extensibility-points.md#ui-components), such as cards and task modules.
+Teams apps are made up of one or more [platform capabilities](../concepts/capabilities-overview.md) and [entry points](concepts/extensibility-points.md). You can present your app using a number of Teams-specific [UI components and conventions](../concepts/extensibility-points.md#ui-components), such as cards and task modules.
 
 ### Teams doesn't host your app
 
@@ -91,12 +91,12 @@ You can start with any of the Teams **build your first app** lessons. If you're 
 
 Once you set up your account and environment, you can start building.
 
-### Beginners
+### Beginner friendly tutorial
 
 > [!div class="nextstepaction"]
 > [Build a "Hello, World!" app](../build-your-first-app/build-and-run.md)
 
-### More advanced
+### Other tutorials
 
 > [!div class="nextstepaction"]
 > [Build a bot](../build-your-first-app/build-bot.md)

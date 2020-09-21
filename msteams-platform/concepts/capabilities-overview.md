@@ -19,7 +19,7 @@ Your Teams app can have one or all of the following core capabilities:
 * [Bots](../bots/what-are-bots.md)
 * [Webhooks and connectors](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)
 
-Your app can also can take advantage of advanced capabilities, such as the [Microsoft Graph REST API for Teams](https://docs.microsoft.com/graph/teams-concept-overview).
+Your app can also can take advantage of advanced capabilities, such as the [Microsoft Graph API for Teams](https://docs.microsoft.com/graph/teams-concept-overview).
 
 See the following illustration to get an idea which capabilities would provide the features you want in your app.
 

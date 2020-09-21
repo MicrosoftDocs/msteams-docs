@@ -171,9 +171,6 @@ Learn how messaging extensions work in a Teams chat.
 1. Try searching for something (for example, "Tickets"). If your app is working, you'll see sample search results (you can add your own later).<br/>
    :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="A screenshot showing how a search-based messaging extension is used in the Teams compose box.":::
 
-> [!NOTE]
-> If you make code changes after testing your messaging extension—for example, you update `botActivityHandler.js`—you must run your app again to see those changes reflected in Teams.
-
 ## Well done
 
 Congratulations! You have a basic Teams messaging extension that's set up to search for external content in the compose or command box.

@@ -32,9 +32,9 @@
     href: tutorials/code-samples.md   
 - name: Integrations and templates
   items:
-  - name: Integrating web apps
+  - name: Integrate web apps
     href: samples/integrating-web-apps.md
-  - name: Low-code app solutions
+  - name: Create low-code apps
     href: samples/teams-low-code-solutions.md
   - name: Production-ready app templates
     href: samples/app-templates.md

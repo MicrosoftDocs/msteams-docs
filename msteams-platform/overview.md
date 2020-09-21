@@ -66,9 +66,9 @@ Some apps are simple (send notifications), while others are complex (manage pati
 
 ### Microsoft Graph for Teams
 
-**Utilize Teams data**: The [Microsoft Graph REST API for Teams](https://docs.microsoft.com/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app.
+**Utilize Teams data**: The [Microsoft Graph API for Teams](https://docs.microsoft.com/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app.
 
-:::image type="content" source="assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph REST API for Teams." border="false":::
+:::image type="content" source="assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph API for Teams." border="false":::
 
    :::column-end:::
    :::column span="":::
@@ -78,7 +78,7 @@ Some apps are simple (send notifications), while others are complex (manage pati
 
 ## Get started
 
-Jump right in with our first app tutorials, find out how to integrate and import existing apps, or take your time to learn about the Teams app development lifecycle.
+Jump right in with our first app tutorials or find out how to integrate and import existing apps.
 
 :::row:::
    :::column span="2":::
