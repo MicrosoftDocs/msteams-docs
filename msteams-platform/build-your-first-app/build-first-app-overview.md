@@ -4,6 +4,7 @@ author: heath-hamilton
 description: Overview and prerequisites for building first Microsoft Teams app
 ms.author: lajanuar
 ms.date: 09/22/2020
+ms.topic: quickstart
 ---
 # Building your first Teams app overview
 
@@ -49,7 +50,7 @@ You need a Teams account that allows custom app sideloading. (Your account may a
     1. In the Teams client, select **Apps**.
     1. Look for an option to **Upload a custom app**.
 
-    :::image type="content" source="../assets/images/build-your-first-app/upload-custom-app-closeup.png" alt-text="sideload option view":::
+    :::image type="content" source="../assets/images/build-your-first-app/upload-custom-app-closeup.png" alt-text="Illustration showing where in Teams you can upload a custom app.":::
 
 <!-- markdownlint-disable MD033 -->
 <details>
@@ -59,10 +60,10 @@ You need a Teams account that allows custom app sideloading. (Your account may a
 You can get a free Teams test account that allows app sideloading by joining the Microsoft 365 developer program. (The registration process takes approximately two minutes.)
 
 1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
-1. Select **Join Now** and follow the onscreen instructions. 
+1. Select **Join Now** and follow the onscreen instructions.
 1. When you get to the welcome screen, select **Set up E5 subscription**.
 1. Set up your administrator account. Once you finish, you should see a screen like this.
-:::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="dev program subscription view":::
+:::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Example of what you see after signing up for the Microsoft 365 developer program.":::
 1. Log in to Teams using the administrator account you just set up.
 1. Verify if you now have the **Upload a custom app** option.
 
@@ -78,22 +79,26 @@ Teams displays app content only through HTTPS connections. Since you'll host you
 1. Install [ngrok](https://ngrok.com/download).
 1. Install the latest version of [Visual Studio Code](https://code.visualstudio.com/download). (Earlier versions might not work with the toolkit.)
 1. In Visual Studio Code, select **Extensions** :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: on the left Activity Bar and install the **Microsoft Teams Toolkit**.
-    :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="Install toolkit view.":::
+    :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="Illustration showing where in Visual Studio Code you can install the Microsoft Teams Toolkit extension.":::
 
 ## About the tutorials
 
 You can start with any of the Teams **build your first app** lessons. If you're not sure where to go first, follow our beginner friendly path and build a "Hello, World!" app.
 
-:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Skill tree showing learning paths for Teams build your first app tutorials." border="false":::
+:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Skill tree showing learning paths for the Teams 'build your first app' tutorials." border="false":::
 
 ## Next step
 
 Once you set up your account and environment, you can start building.
 
+### Beginners
+
 > [!div class="nextstepaction"]
 > [Build a "Hello, World!" app](../build-your-first-app/build-and-run.md)
 
-Or you can choose to:
+### More advanced
 
-* [Build a bot](../build-your-first-app/add-bot.md)
-* [Build a messaging extension](../build-your-first-app/build-messaging-extension.md)
+> [!div class="nextstepaction"]
+> [Build a bot](../build-your-first-app/add-bot.md)
+> [!div class="nextstepaction"]
+> [Build a messaging extension](../build-your-first-app/build-messaging-extension.md)

@@ -15,17 +15,17 @@ You can jump right into Microsoft Teams platform development by building a perso
 Use the Microsoft Teams Toolkit in Visual Studio Code to set up your first app project.
 
 1. In Visual Studio Code, select **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: on the left Activity Bar and choose **Create a new Teams app**.
-:::image type="content" source="../assets/images/build-your-first-app/create-teams-app.png" alt-text="create app image":::
+:::image type="content" source="../assets/images/build-your-first-app/create-teams-app.png" alt-text="Screenshot showing how to create a new app with the Visual Studio Code Teams Toolkit.":::
 1. Enter a name for your Teams app. (This is the default name for your app and also the name of the app project directory on your local machine.)
 1. On the **Add capabilities** screen, select **Tab** then **Next**.
-:::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="create teams app image":::
+:::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="Screenshot showing how to configure your app project with the Visual Studio Code Teams Toolkit.":::
 1. Check the **Personal tab** option and select **Finish** at the bottom of the screen to configure your project.
 
 ## Understand important app project components
 
 Once the toolkit configures your project, you have the components to build a basic personal tab for Teams. The project directories and files display in the Explorer area of Visual Studio Code.
 
-:::image type="content" source="../assets/images/build-your-first-app/app-project-files.png" alt-text="App project files in Visual Studio Code.":::
+:::image type="content" source="../assets/images/build-your-first-app/app-project-files.png" alt-text="Screenshot showing app project files for a personal tab in Visual Studio Code.":::
 
 Let's take a moment to understand some of the key files Teams app developers work with.
 
@@ -60,7 +60,7 @@ In the interest of time, you'll build and run your app locally.
 1. In a terminal, go to the root directory of your app project and run `npm install`.
 1. Run `npm start`. Once complete, there's a **Compiled successfully!** message in the terminal.
 1. Open a browser and go to `https://localhost:3000` to view a blank webpage called **Microsoft Teams Tab**. (Don't worry that you can't see any content on the page.)<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/local-host-tab.png" alt-text="Viewing the app in a browser.":::
+   :::image type="content" source="../assets/images/build-your-first-app/local-host-tab.png" alt-text="Screenshot showing what it looks like to view your running app in a browser.":::
 
 ## Set up a secure tunnel to your app
 
@@ -70,7 +70,7 @@ Install [ngrok](https://ngrok.com/download) if you haven't already. When you run
 
 1. Open a new terminal and run `ngrok http 3000`.
 1. Copy the HTTPS URL you're provided (see the following example).
-:::image type="content" source="../assets/images/build-your-first-app/ngrok-running.png" alt-text="ngrok running image":::
+:::image type="content" source="../assets/images/build-your-first-app/ngrok-running.png" alt-text="Screenshot showing a terminal with ngrok running.":::
 1. In your `.publish` directory, open `Development.env`.
 1. Replace the `baseUrl0` value with the copied URL. (For example, change `baseUrl0=http://localhost:3000` to `baseUrl0=https://85528b2b3ba5.ngrok.io`.)
 
@@ -85,10 +85,10 @@ With your app running and accessible via HTTPS, you're ready to upload it to Tea
 
 1. Log in to the Teams client with your account that allows app sideloading. (If you aren't sure you have that, learn about getting a [Teams development account](../build-your-first-app/building-real-world-app.md#set-up-your-development-account).)
 1. Select **Apps**, then choose **Upload a custom app**.
-1. Go to your app project `.publish` folder and select `Development.zip`. An install modal displays.
-:::image type="content" source="../assets/images/build-your-first-app/add-teams-app.png" alt-text="add teams app":::
+1. Go to your app project `.publish` folder and select `Development.zip`. An installation modal displays.
+:::image type="content" source="../assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot showing an example of a Teams app installation modal.":::
 1. Select **Add** to install your app.
-:::image type="content" source="../assets/images/build-your-first-app/tab-running.png" alt-text="Screenshot showing an example Hello, World! app in Teams.":::
+:::image type="content" source="../assets/images/build-your-first-app/tab-running.png" alt-text="Screenshot showing an example 'Hello, World!' personal tab app running in Teams.":::
 
 🎉 Congratulations! Your app is running in Teams.
 

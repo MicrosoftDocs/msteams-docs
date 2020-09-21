@@ -10,7 +10,7 @@ ms.date: 09/22/2020
 
 The Teams platform provides a flexible set of entry points where people can discover and use your app. Your app can be as simple as embedding an existing website in a personal tab or a multi-faceted app that users interact with across several entry points.
 
-The most successful apps feel native to Teams, so it's important to carefully plan where in Teams your app will be used.
+The most successful apps feel native to Teams, so it's important to carefully plan your app's entry points.
 
 ## Teams, channels, and group chats
 

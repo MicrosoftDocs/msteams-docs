@@ -172,7 +172,7 @@ To see your channel tab's configuration and content pages, you must install it i
 1. Select **Upload a custom app** and choose your app's `Development.zip`.
 1. Choose **Add to a team** or **Add to a chat** and locate a channel or chat you can use for testing.
 1. Select **Set up a tab**. The configuration page displays.<br/>
-   :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="Screenshot of a channel tab with static content.":::
+   :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="Screenshot of a channel tab configuration page.":::
 1. Select **Save** to configure the tab. The content displays.<br/>
    :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content-installed.png" alt-text="Screenshot of a channel tab with static content view.":::
 

@@ -168,7 +168,7 @@ Now for the fun part: Let's say "Hello" to your bot in a one-on-one chat.
 
 Your bot replies with something like the following message.
 
-:::image type="content" source="../assets/images/build-your-first-app/contoso-chatbot.png" alt-text="A screenshot showing a user say 'Hello' to a Teams bot and getting a response back.":::
+:::image type="content" source="../assets/images/build-your-first-app/contoso-chatbot.png" alt-text="A screenshot showing a user say 'Hello' to a Teams bot and getting a response.":::
 
 > [!NOTE]
 > If you make code changes after testing your bot—for example, you update `botActivityHandler.js`—you must run your app again to see those changes reflected in Teams.

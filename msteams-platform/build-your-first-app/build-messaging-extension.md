@@ -8,7 +8,7 @@ ms.topic: tutorial
 ---
 # Build a Teams messaging extension
 
-There are two types of Teams *messaging extensions*: Search commands and action commands.
+There are two types of Teams *messaging extensions*: [Search commands](../messaging-extensions/how-to/action-commands/define-search-command.md) and [action commands](../messaging-extensions/how-to/action-commands/define-action-command.md).
 
 In this lesson, you'll create a *search command* (also known as a *search-based messaging extension*), which is a shortcut for finding external content and sharing it in Teams. Users can access search commands from the [Teams compose or command box](../messaging-extensions/what-are-messaging-extensions.md).
 
@@ -49,7 +49,7 @@ The Microsoft Teams Toolkit helps you set up the following components for your m
     1. Store your bot ID and password (you need this a little later).
     1. (Optional) Enter a custom name for your bot and select **Create**. (This is not the name of the Teams app you already specified.)
     1. For now, select **No** for the link unfurling option.</br>
-:::image type="content" source="../assets/images/build-your-first-app/choose-me-search.png" alt-text="Illustration showing how, in the Teams Toolkit, to log in to your Microsoft 365 account to create a new bot.":::
+:::image type="content" source="../assets/images/build-your-first-app/choose-me-search.png" alt-text="Illustration showing how, in the Teams Toolkit, to log in to your Microsoft 365 account to create a new bot for your messaging extension.":::
 1. Select **Finish** at the bottom of the screen to configure your project.
 
 ## Identify relevant app project components
@@ -167,9 +167,9 @@ With your messaging extension running, you can install it in Teams.
 Learn how messaging extensions work in a Teams chat.
 
 1. Start a new chat. In the compose box, and select **More** :::image type="icon" source="../assets/icons/teams-client-more.png"::: and choose the messaging extension app you just sideloaded.<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/me-teams-access.png" alt-text="Illustration showing where you access a messaging extension in Teams.":::
+   :::image type="content" source="../assets/images/build-your-first-app/me-teams-access.png" alt-text="Illustration showing how you can access a search-based messaging extension in the Teams compose box.":::
 1. Try searching for something (for example, "Tickets"). If your app is working, you'll see sample search results (you can add your own later).<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="A screenshot showing a user trying a search-based messaging extension from the Teams compose box.":::
+   :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="A screenshot showing how a search-based messaging extension is used in the Teams compose box.":::
 
 > [!NOTE]
 > If you make code changes after testing your messaging extension—for example, you update `botActivityHandler.js`—you must run your app again to see those changes reflected in Teams.
