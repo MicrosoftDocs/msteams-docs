@@ -505,20 +505,20 @@
         "redirect_url": "/microsoftteams/platform/tutorials/code-samples"
       },
       {
-      "source_path": "msteams-platform/graph-permissions/resource-specific-consent.md",
-     "redirect_url": "/microsoftteams/platform/graph-api/rsc/resource-specific-consent"
-    },
-    {
-     "source_path": "msteams-platform/graph-permissions/test-resource-specific-consent.md",
-     "redirect_url": "/microsoftteams/platform/graph-api/rsc/test-resource-specific-consent"
-    },
-    {
-     "source_path": "msteams-platform/graph-permissions/test-rsc-json-file.md",
-     "redirect_url": "/microsoftteams/platform/graph-api/rsc/test-rsc-json-file"
-    },
-    {
-     "source_path": "msteams-platform/concepts/building-an-app.md",
-     "redirect_url": "/microsoftteams/platform/overview"
-    }
+        "source_path": "msteams-platform/graph-permissions/resource-specific-consent.md",
+        "redirect_url": "/microsoftteams/platform/graph-api/rsc/resource-specific-consent"
+      },
+      {
+        "source_path": "msteams-platform/graph-permissions/test-resource-specific-consent.md",
+        "redirect_url": "/microsoftteams/platform/graph-api/rsc/test-resource-specific-consent"
+      },
+      {
+        "source_path": "msteams-platform/graph-permissions/test-rsc-json-file.md",
+        "redirect_url": "/microsoftteams/platform/graph-api/rsc/test-rsc-json-file"
+      },
+      {
+        "source_path": "msteams-platform/concepts/building-an-app.md",
+        "redirect_url": "/microsoftteams/platform/overview"
+      }
   ]
 }

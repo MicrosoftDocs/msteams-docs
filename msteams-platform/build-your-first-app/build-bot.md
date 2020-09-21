@@ -202,3 +202,4 @@ It's important to understand that this isn't the same as a channel in Teams. In 
 * [Bot conversation basics](../bots/how-to/conversations/conversation-basics.md)
 * [Bot authentication in Teams](../bots/how-to/authentication/auth-flow-bot.md)
 * [Microsoft Bot Framework](https://dev.botframework.com/)
+* [Create a bot without the toolkit](../bots/how-to/create-a-bot-for-teams.md)

@@ -1,7 +1,7 @@
 ---
 title: Create a bot for Microsoft Teams
 author: clearab
-description: How to create a bot for Microsoft Teams.
+description: How to create a bot for Microsoft Teams using App Studio, Yeoman Generator, and other tools.
 ms.topic: conceptual
 localization_priority: Priority
 ms.author: anclear
