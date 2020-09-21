@@ -1,10 +1,25 @@
 - name: Overview
   expanded: true
   items:
-    - name: 'What are Microsoft Teams apps?'
+    - name: Building apps for Microsoft Teams
       href: overview.md
     - name: What's new?
       href: whats-new.md
+- name: Build your first app
+  expanded: true
+  items:
+  - name: Overview and prerequisites
+    href: build-your-first-app/build-first-app-overview.md
+  - name: Build a "Hello, World!" app
+    href: build-your-first-app/build-and-run.md
+  - name: Build a personal tab
+    href: build-your-first-app/build-personal-tab.md
+  - name: Build a channel tab
+    href: build-your-first-app/build-channel-tab.md
+  - name: Build a bot
+    href: build-your-first-app/build-bot.md
+  - name: Build a messaging extension
+    href: build-your-first-app/build-messaging-extension.md
 - name: Tutorials and code samples
   items:
   - name: Create an app using C#
@@ -15,8 +30,12 @@
     href: tutorials/get-started-yeoman.md
   - name: Learn more about custom apps for Teams
     href: tutorials/code-samples.md   
-- name: Templates and integrations
-  items: 
+- name: Integrations and templates
+  items:
+  - name: Integrating web apps
+    href: samples/integrating-web-apps.md
+  - name: Low-code app solutions
+    href: samples/teams-low-code-solutions.md
   - name: Production-ready app templates
     href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
@@ -25,7 +44,7 @@
     href: samples/virtual-assistant.md
   - name: Integrate Power Virtual Agents chatbot with Teams
     href: bots/how-to/add-power-virtual-agents-bot-to-teams.md   
-  - name:  Microsoft Teams Toolkit extension
+  - name: Microsoft Teams Toolkit extension
     items:
     - name: Teams Toolkit extension for Visual Studio Code
       href: toolkit/visual-studio-code-overview.md
@@ -34,9 +53,9 @@
 - name: Concepts
   expanded: true
   items:
-    - name: Building apps for Microsoft Teams
-      href: concepts/building-an-app.md
-    - name: 'Extensibility points in the Teams client'
+    - name: App capabilities
+      href: concepts/capabilities-overview.md
+    - name: App entry points
       href: concepts/extensibility-points.md
     - name: 'Design your app'
       items:

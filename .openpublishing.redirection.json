@@ -515,6 +515,10 @@
     {
      "source_path": "msteams-platform/graph-permissions/test-rsc-json-file.md",
      "redirect_url": "/microsoftteams/platform/graph-api/rsc/test-rsc-json-file"
-     }
+    },
+    {
+     "source_path": "msteams-platform/concepts/building-an-app.md",
+     "redirect_url": "/microsoftteams/platform/overview"
+    }
   ]
 }
