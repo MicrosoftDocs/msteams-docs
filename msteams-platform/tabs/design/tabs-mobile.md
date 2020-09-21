@@ -62,7 +62,7 @@ The following example is a personal app that has tabs and a bot.
 
 :::image type="content" source="../../assets/images/tabs/mobile-tab-with-bot.png" alt-text="Illustration showing how mobile Teams app that has tabs and a bot." border="false":::
 
-## UI Components
+## UI components
 
 ### Color palettes
 
