@@ -15,7 +15,7 @@ Apps are how you extend Teams to fit your needs. Create something brand new for 
 
 ## What are Teams apps?
 
-Teams apps have one or more platform [capabilities](concepts/capabilities-overview.md) that you can provide at multiple [entry points](concepts/extensibility-points.md). For example, people can chat with your app's *bot* (capability) in a *channel* (entry point).
+Teams apps have one or more platform [capabilities](concepts/capabilities-overview.md) that can be available at multiple [entry points](concepts/extensibility-points.md). For example, people can chat with your app's *bot* (capability) in a *channel* (entry point).
 
 Some apps are simple (send notifications), while others are complex (manage patient records). When planning your app, remember that Teams is a collaboration hub. The best Teams apps help people express themselves and work better together.
 
