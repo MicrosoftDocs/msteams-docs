@@ -32,7 +32,7 @@ The new Power Apps app in Teams provides an integrated experience for app makers
 
 ### ✔ Teams and Power Automate
 
-With the [Power Automate app in Teams](/power-automate/flows-teams), you can [create flows to automate repetitive work tasks](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) directly within the Teams environment. You can [trigger a flow from any message in Microsoft Teams](/power-automate/trigger-flow-teams-message) and [use adaptive cards within Power Automate](/power-automate/create-adaptive-cards). . Additionally, you can build flows to customize and add further value to Microsoft Teams from within the new Power Apps app in Teams.
+With the [Power Automate app in Teams](/power-automate/flows-teams), you can [create flows to automate repetitive work tasks](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) directly within the Teams environment. You can [trigger a flow from any message in Microsoft Teams](/power-automate/trigger-flow-teams-message) and [use adaptive cards within Power Automate](/power-automate/create-adaptive-cards). Additionally, you can build flows to customize and add further value to Microsoft Teams from within the new Power Apps app in Teams.
 
 ### ✔ Teams and Power Virtual Agents
 
