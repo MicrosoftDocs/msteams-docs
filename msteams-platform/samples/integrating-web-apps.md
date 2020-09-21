@@ -42,7 +42,7 @@ Integrating all features of an existing application into Teams often leads to a 
 Before you begin any technical work, do some planning for your Teams app:
 
 1. [Map your app's use cases to Teams platform capabilities](../concepts/design/map-use-cases.md).
-1. [Determine your app's scope](../planning-your-app/app-scope.md). Is it for personal use, collaboration, or both?
+1. [Determine your app's entry points](../concepts/extensibility-points.md). Is it for personal use, collaboration, or both?
 
 ## Understand SharePoint requirements and options
 

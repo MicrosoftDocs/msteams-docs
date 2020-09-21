@@ -158,7 +158,7 @@
       },
       {
           "source_path": "msteams-platform/concepts/apps/apps-overview.md",
-          "redirect_url": "/microsoftteams/platform/concepts/building-an-app"
+          "redirect_url": "/microsoftteams/platform/overview"
       },
       {
           "source_path": "msteams-platform/concepts/deep-links.md",
@@ -294,7 +294,7 @@
       },
       {
           "source_path": "msteams-platform/get-started/code.md",
-          "redirect_url": "/microsoftteams/platform/concepts/building-an-app"
+          "redirect_url": "/microsoftteams/platform/overview"
       },
       {
           "source_path": "msteams-platform/get-started/design.md",
@@ -338,7 +338,7 @@
       },
       {
           "source_path": "msteams-platform/get-started/get-started.md",
-          "redirect_url": "/microsoftteams/platform/concepts/building-an-app"
+          "redirect_url": "/microsoftteams/platform/overview"
       },
       {
           "source_path": "msteams-platform/get-started/obsolete-get-started-dotnet.md",
@@ -382,7 +382,7 @@
       },
       {
           "source_path": "msteams-platform/resources/best-practices/best-practices.md",
-          "redirect_url": "/microsoftteams/platform/concepts/building-an-app"
+          "redirect_url": "/microsoftteams/platform/overview"
       },
       {
           "source_path": "msteams-platform/resources/design/components/buttons.md",

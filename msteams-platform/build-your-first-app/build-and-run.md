@@ -83,7 +83,7 @@ With your app running and accessible via HTTPS, you're ready to upload it to Tea
 > [!TIP]
 > Before sideloading your app, check for issues using the [toolkit's validation feature](../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool). Errors must be fixed to successfully sideload the app.
 
-1. Log in to the Teams client with your account that allows app sideloading. (If you aren't sure you have that, learn about getting a [Teams development account](../build-your-first-app/building-real-world-app.md#set-up-your-development-account).)
+1. Log in to the Teams client with your account that allows app sideloading. (If you aren't sure you have that, learn about getting a [Teams development account](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account).)
 1. Select **Apps**, then choose **Upload a custom app**.
 1. Go to your app project `.publish` folder and select `Development.zip`. An installation modal displays.
 :::image type="content" source="../assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot showing an example of a Teams app installation modal.":::

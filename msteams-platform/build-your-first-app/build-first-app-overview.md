@@ -99,6 +99,6 @@ Once you set up your account and environment, you can start building.
 ### More advanced
 
 > [!div class="nextstepaction"]
-> [Build a bot](../build-your-first-app/add-bot.md)
+> [Build a bot](../build-your-first-app/build-bot.md)
 > [!div class="nextstepaction"]
 > [Build a messaging extension](../build-your-first-app/build-messaging-extension.md)
