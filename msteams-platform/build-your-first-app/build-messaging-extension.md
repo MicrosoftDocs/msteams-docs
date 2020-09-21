@@ -150,7 +150,7 @@ If successful, you see something like the following message indicating your mess
 
 `Bot/ME service listening at http://localhost:3978`
 
-## Sideload your bot in Teams
+## Sideload your messaging extension in Teams
 
 With your messaging extension running, you can install it in Teams.
 
