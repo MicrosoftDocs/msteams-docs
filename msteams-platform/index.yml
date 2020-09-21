@@ -26,7 +26,7 @@ highlightedContent:
     - title:  Bots — conversation-based interactions
       itemType:  overview
       url:  /microsoftteams/platform/bots/what-are-bots
-    - title:  Messaging Extensions — task oriented interactions
+    - title:  Messaging extensions — task oriented interactions
       itemType: overview
       url:  /microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
     - title: Task modules and cards — rich messaging and notifications
@@ -38,9 +38,6 @@ highlightedContent:
     - title:  Microsoft Teams and Microsoft Graph API
       itemType: overview
       url:  /graph/teams-concept-overview
-    - title:  Low-code apps, bots, flows, and reports using Microsoft Power Platform
-      itemType: overview
-      url:  
    
 # conceptualContent section
 conceptualContent:
