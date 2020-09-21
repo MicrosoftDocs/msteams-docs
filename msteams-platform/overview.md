@@ -15,9 +15,9 @@ Apps are how you extend Teams to fit your needs. Create something brand new for 
 
 ## What are Teams apps?
 
-People discover and use Teams apps through a set of platform [capabilities](concepts/capabilities-overview.md).
+Teams apps have one or more platform [capabilities](concepts/capabilities-overview.md) that you can provide at multiple [entry points](concepts/extensibility-points.md). For example, people can chat with your app's *bot* (capability) in a *channel* (entry point).
 
-Some apps are simple (send notifications), while others are complex (view patient records). When planning your app, remember that Teams is a collaboration hub. The best Teams apps help people express themselves and work better together.
+Some apps are simple (send notifications), while others are complex (manage patient records). When planning your app, remember that Teams is a collaboration hub. The best Teams apps help people express themselves and work better together.
 
 :::row:::
    :::column span="":::
@@ -134,7 +134,6 @@ Jump right in with our first app tutorials, find out how to integrate and import
 ## Resources
 
 * [Add a Share to Teams button to your website](concepts/build-and-test/share-to-teams.md)
-* [Design your app using recommended guidelines](designing-your-app/designing-overview.md)
 * [Fluent Design System](https://fluentsite.z22.web.core.windows.net/)
 * [Microsoft Teams JavaScript client SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
 * [Bot Framework SDK for JavaScript](https://github.com/Microsoft/botbuilder-js) and [Bot Framework SDK for .NET](https://github.com/Microsoft/botbuilder-dotnet/)

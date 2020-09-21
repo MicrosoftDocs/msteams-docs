@@ -8,15 +8,13 @@ ms.date: 09/22/2020
 ---
 # Entry points for Teams apps
 
-The Teams platform provides a flexible set of capabilities, UI components, and APIs to build your app.
+The Teams platform provides a flexible set of entry points where people can discover and use your app. Your app can be as simple as embedding an existing website in a personal tab or a multi-faceted app that users interact with across several entry points.
 
-Your app can be as simple as embedding an existing website in a tab or a multi-faceted app that users interact with across Teams. You can create a new experience entirely for Teams or integrate another app your users already like.
-
-Whatever your approach, remember that the most successful apps feel native to Teams. While you can start building right away, providing a seamless experience that engages users typically requires careful planning.
+The most successful apps feel native to Teams, so it's important to carefully plan where in Teams your app will be used.
 
 ## Teams, channels, and group chats
 
-Teams, channels, and group chats are collaboration spaces. Apps in these contexts are available to all members and typically focus on additional workflows or unlocking new social interactions.
+Teams, channels, and group chats are collaboration spaces. Apps that use these entry points are available to all members and typically focus on additional workflows or unlocking new social interactions.
 
 Here's how Teams app capabilities are commonly used in collaborative contexts:
 
