@@ -149,10 +149,10 @@ POST /v3/conversations/{conversationId}/activities
     "channelData": {
     "notification": {
     "alert": true,
-    "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width= &title=<TaskInfo.title>"
+    "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<TaskInfo.title>"
     }
 },
-"replyToId": "1493070356924"
+    "replyToId": "1493070356924"
     }
 ```
 
@@ -175,8 +175,6 @@ await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 # [JavaScript](#tab/javascript)
 
 ```javascript
-[2:57 PM] Rajesh Rangarajan
-    
 
 add the JS tab and use this: 
 
@@ -184,7 +182,7 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
         replyActivity.channelData = {​​
             notification: {​​
                 alertInMeeting: true,
-                externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url> &height=<TaskInfo.height>      &width=<TaskInfo.width> &title=<TaskInfo.title>’
+                externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url> &height=<TaskInfo.height>&width=<TaskInfo.width> &title=<TaskInfo.title>’
             }​​
         }​​;
         await context.sendActivity(replyActivity);
