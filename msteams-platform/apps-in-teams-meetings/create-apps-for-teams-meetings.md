@@ -93,8 +93,7 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 ```json
 {
     "meetingRole":"Presenter",
-    "conversation":
-        {
+    "conversation":{
             "isGroup": true,
             "id": "19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
         }
@@ -110,7 +109,8 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
     "meetingRole": "Attendee",
     "conversation": {
         "isGroup": true,
-        "id": "19:meeting_OWIyYWVhZWMtM2ExMi00ZTc2LTg0OGEtYWNhMTM4MmZlZTNj@thread.v2" }
+        "id": "19:meeting_OWIyYWVhZWMtM2ExMi00ZTc2LTg0OGEtYWNhMTM4MmZlZTNj@thread.v2"
+        }
 }
 ```
 
@@ -163,7 +163,7 @@ Activity activity = MessageFactory.Text("This is a meeting signal test");
 MeetingNotification notification = new MeetingNotification
 {
     AlertInMeeting = true,
-    ExternalResourceUrl = contentUrl
+    ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<TaskInfo.title>"
 };
 activity.ChannelData = new TeamsChannelData
 {
@@ -180,7 +180,7 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
         replyActivity.channelData = {​​
             notification: {​​
                 alertInMeeting: true,
-                externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width> &title=<TaskInfo.title>’
+                externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>’
             }​​
         }​​;
         await context.sendActivity(replyActivity);
