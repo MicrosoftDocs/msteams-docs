@@ -17,7 +17,7 @@ keywords: teams apps meetings user participant role api
 
 1. For your app to function in the meeting lifecycle as a tab, it must support configurable tabs in the [groupchat scope](../resources/schema/manifest-schema.md#configurabletabs). *See* [Extend your Teams app with a custom tab](../tabs/how-to/add-tab.md). Supporting the `groupchat` scope will enable your app in [pre-meeting](teams-apps-in-meetings.md#pre-meeting-app-experience) and [post-meeting](teams-apps-in-meetings.md#post-meeting-app-experience) chats.
 
-1. Meeting API URL parameters may require `meetingId`, `userId`, and the [tenantId](/onedrive/find-your-office-365-tenant-id) These are available as part of the Teams Client SDK and bot activity. Additionally, reliable information for user ID and tenant ID can be retrieved when the Tab uses SSO authentication.
+1. Meeting API URL parameters may require `meetingId`, `userId`, and the [tenantId](/onedrive/find-your-office-365-tenant-id) These are available as part of the Teams Client SDK and bot activity. Additionally, reliable information for user ID and tenant ID can be retrieved using [Tab SSO authentication]((../tabs/how-to/authentication/auth-aad-sso.md)).
 
 1. Some meeting APIs, such as `GetParticipant` will require a [bot registration and bot app ID](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) to generate auth tokens.
 
@@ -27,14 +27,25 @@ keywords: teams apps meetings user participant role api
 
 |API|Description|Request|Source|
 |---|---|----|---|
+|**GetUserContext**| Get contextual information to display relevant content in a Teams tab. |_**microsoftTeams.getContext( ( ) => {  /*...*/ } )**_|Microsoft Teams client SDK|
 |**GetParticipant**|This API allows a bot to fetch a participant information by meeting id and participant id.|**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
 |**NotificationSignal** |Meeting signals will be delivered using the following existing conversation notification API (for user-bot chat). This API allows developers to signal based on end-user action to show-case an in-meeting dialog bubble.|**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
-|**GetUserContext**| Get contextual information to display relevant content in a Teams tab. |_**microsoftTeams.getContext( ( ) => {  /*...*/ } )**_|Microsoft Teams client SDK|
+
+### GetUserContext
+
+Please refer to our [Get context for your Teams tab](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library) documentation for guidance on identifying and  retrieving contextual information for your tab content. As part of meetings extensibility, a new value has been added for the response payload:
+
+✔ **meetingId**: used by a tab when running in the meeting context.
 
 ### GetParticipant API
 
 > [!NOTE]
-> Teams does not currently support large distribution lists or large meetings for the `GetParticipant` API. Support for the Bot Framework SDK is coming soon.
+>
+> * Do not cache participant roles since the meeting organizer can change a role at any point in time.
+>
+> * Teams does not currently support large distribution lists or roster sizes of more than 350 participants for the `GetParticipant` API.
+>
+> * Support for the Bot Framework SDK is coming soon.
 
 #### Request
 
@@ -47,6 +58,7 @@ GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 <!-- markdownlint-disable MD025 -->
 
 **C# Example**
+
 ```csharp
 string meetingId = "meetingid?";
 string participantId = "participantidhere";
@@ -104,13 +116,16 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 #### Response Codes
 
-**403**: the app is not allowed to get participant information. This will be the most common error response and is triggered when the app is not installed in the meeting such as when the app is disabled by tenant admin or blocked during live site mitigation.
+**403**: the app is not allowed to get participant information. This will be the most common error response and is triggered when the app is not installed in the meeting such as when the app is disabled by tenant admin or blocked during live site mitigation.  
 **200**: participant information successfully retrieved  
 **401**: invalid token  
 **404**: the meeting doesn't exist or participant can’t be found.
 
 <!-- markdownlint-disable MD024 -->
 ### NotificationSignal API
+
+> [!NOTE]
+> When an in-meeting dialog is invoked, the same content will also be presented as a chat message.
 
 #### Request
 
@@ -128,18 +143,17 @@ POST /v3/conversations/{conversationId}/activities
 
 ```json
 {
-      "type": "message",
-      "text": "John Phillips assigned you a weekly todo",
-      "summary": "Don't forget to meet with Marketing next week",
+    "type": "message",
+    "text": "John Phillips assigned you a weekly todo",
+    "summary": "Don't forget to meet with Marketing next week",
     "channelData": {
-        "notification": {
-            "alertInMeeting": true,
-            "":"https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width> &title=<TaskInfo.title>"
-                    }
-            },
-    "replyToId": "1493070356924"
+    "notification": {
+    "alert": true,
+    "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width= &title=<TaskInfo.title>"
     }
-
+},
+"replyToId": "1493070356924"
+    }
 ```
 
 # [C#/.NET](#tab/dotnet)
@@ -158,6 +172,24 @@ activity.ChannelData = new TeamsChannelData
 await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```
 
+# [JavaScript](#tab/javascript)
+
+```javascript
+[2:57 PM] Rajesh Rangarajan
+    
+
+add the JS tab and use this: 
+
+const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive card instead
+        replyActivity.channelData = {​​
+            notification: {​​
+                alertInMeeting: true,
+                externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url> &height=<TaskInfo.height>      &width=<TaskInfo.width> &title=<TaskInfo.title>’
+            }​​
+        }​​;
+        await context.sendActivity(replyActivity);
+```
+
 * * *
 
 > [!IMPORTANT]
@@ -169,12 +201,6 @@ await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 **401**: invalid token  
 **403**: the app is not allowed to send the signal. In this case, the payload should contain more detail error message. There can be many reasons: app disabled by tenant admin, blocked during live site mitigation, etc.  
 **404**: meeting chat doesn't exist  
-
-#### GetUserContext
-
-Please refer to our [Get context for your Teams tab](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library) documentation for guidance on identifying and  retrieving contextual information for your tab content. As part of meetings extensibility, a new value has been added for the response payload:
-
-✔ **meetingId**: used by a tab when running in the meeting context.
 
 ## Enable your app for Teams meetings
 
