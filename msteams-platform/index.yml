@@ -38,9 +38,6 @@ highlightedContent:
     - title:  Microsoft Teams and Microsoft Graph API
       itemType: overview
       url:  /graph/teams-concept-overview
-    - title:  Low-code apps, bots, flows, and reports using Microsoft Power Platform
-      itemType: overview
-      url:  
    
 # conceptualContent section
 conceptualContent:
