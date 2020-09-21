@@ -176,8 +176,6 @@ await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 
 ```javascript
 
-add the JS tab and use this: 
-
 const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive card instead
         replyActivity.channelData = {​​
             notification: {​​
