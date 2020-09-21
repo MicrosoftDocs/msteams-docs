@@ -37,8 +37,10 @@
      href: apps-in-teams-meetings/teams-apps-in-meetings.md
    - name:  Create apps for teams meetings
      href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
-   - name:  Designing an in-meeting dialog
+   - name:  Design an in-meeting dialog
      href: apps-in-teams-meetings/designing-in-meeting-dialog.md
+   - name:  Design an in-meeting tab
+     href: apps-in-teams-meetings/designing-in-meeting-tab.md  
 - name: Concepts
   expanded: true
   items:
