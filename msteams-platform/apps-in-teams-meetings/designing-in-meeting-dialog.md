@@ -1,11 +1,11 @@
 ---
-title: Designing a Microsoft Teams in-meeting dialog
+title: Design a Microsoft Teams in-meeting dialog
 author: heath-hamilton
 description: Guidance and best practices for designing an in-meeting dialog for Microsoft Teams.
 ms.author: lajanuar
 ms.topic: conceptual
 ---
-# Designing an in-meeting dialog
+# Design an in-meeting dialog
 
 In-meeting dialogs display on the Teams meeting stage. They require a user's attention, confirmation, or interaction but are subtle and don't interrupt the meeting.
 
