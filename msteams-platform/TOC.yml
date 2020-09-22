@@ -1,7 +1,7 @@
 - name: Overview
   expanded: true
   items:
-    - name: Building apps for Microsoft Teams
+    - name: Build apps for Microsoft Teams
       href: overview.md
     - name: What's new?
       href: whats-new.md
@@ -176,19 +176,19 @@
           items:
           - name: 'Authentication flow'
             href: tabs/how-to/authentication/auth-flow-tab.md
-          - name: 'Using Azure AD authentication'
+          - name: 'Use Azure AD authentication'
             href: tabs/how-to/authentication/auth-tab-aad.md
-          - name: 'Using silent authentication'
+          - name: 'Use silent authentication'
             href: tabs/how-to/authentication/auth-silent-aad.md
-          - name: 'Using single sign-on authentication'
+          - name: 'Use single sign-on authentication'
             href: tabs/how-to/authentication/auth-aad-sso.md
-        - name: 'Using the Teams client SDK'
+        - name: 'Use the Teams client SDK'
           href: tabs/how-to/using-teams-client-sdk.md
-        - name: Getting additional Teams context
+        - name: Get additional Teams context
           href: tabs/how-to/access-teams-context.md
         - name: DevTools for Microsoft Teams tabs
           href: tabs/how-to/developer-tools.md
-        - name: 'Adding your custom tab to SharePoint'
+        - name: 'Add your custom tab to SharePoint'
           href: tabs/how-to/tabs-in-sharepoint.md
         - name: Request device permissions
           href: tabs/how-to/native-device-permissions.md          
@@ -257,7 +257,7 @@
         href: bots/calls-and-meetings/calls-meetings-bots-overview.md
       - name: Real-time media concepts
         href: bots/calls-and-meetings/real-time-media-concepts.md
-      - name: Registering a calling bot
+      - name: Register a calling bot
         href: bots/calls-and-meetings/registering-calling-bot.md
       - name: Incoming call notifications
         href: bots/calls-and-meetings/call-notifications.md
@@ -320,9 +320,9 @@
       href: task-modules-and-cards/what-are-cards.md
     - name: 'Cards'
       items:
-        - name: Designing effective cards
+        - name: Design effective cards
           href: task-modules-and-cards/cards/design-effective-cards.md
-        - name: Formatting card text
+        - name: Format card text
           href: task-modules-and-cards/cards/cards-format.md
         - name: Add and respond to card actions
           href: task-modules-and-cards/cards/cards-actions.md
@@ -347,7 +347,7 @@
         href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
       - name: Create an O365 Connector
         href: webhooks-and-connectors/how-to/connectors-creating.md
-      - name: Sending messages to connectors and webhooks
+      - name: Send messages to connectors and webhooks
         href: webhooks-and-connectors/how-to/connectors-using.md
 - name: Apps in meetings
   items:
@@ -399,7 +399,7 @@
         href: resources/bot-v3/bots-notifications.md
       - name: Context for bots
         href: resources/bot-v3/bots-context.md
-      - name: Sending and receiving files
+      - name: Send and receiving files
         href: resources/bot-v3/bots-files.md
       - name: Notification-only bots
         href: resources/bot-v3/bots-notification-only.md
@@ -407,7 +407,7 @@
         href: resources/bot-v3/bots-menus.md
       - name: Bots with tabs
         href: resources/bot-v3/bots-with-tabs.md
-      - name: Formatting bot messages
+      - name: Format bot messages
         href: resources/bot-v3/bots-text-formats.md  
       - name: Test a bot
         href: resources/bot-v3/bots-test.md
