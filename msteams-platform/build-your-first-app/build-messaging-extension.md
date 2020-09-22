@@ -102,7 +102,7 @@ Let's understand some of the properties the toolkit created for you. (See the fu
 
 The app scaffolding includes a `.env` file, located in the root directory of your project, which stores the ID and password of your messaging extension's bot.
 
-Also in the root directory, there's a `botActivityHandler.js` file for handling how your messaging extension (or technically, the [messaging extension's bot](#configuring-the-bot-for-your-messaging-extension)) responds to search queries in Teams.
+Also in the root directory, there's a `botActivityHandler.js` file for handling how your messaging extension (or technically, the [messaging extension's bot](#4-configure-the-bot-for-your-messaging-extension)) responds to search queries in Teams.
 
 ## 3. Set up a secure tunnel to your app
 
@@ -115,7 +115,7 @@ For testing purposes, let's host your messaging extension on a local web server 
 
 Your app manifest is pointing to where you're hosting the bot used by the messaging extension.
 
-## 4. Configuring the bot for your messaging extension
+## 4. Configure the bot for your messaging extension
 
 Messaging extensions rely on bots to send and process user requests from Teams to your hosted service.
 
@@ -155,7 +155,7 @@ If successful, you see something like the following message indicating your mess
 With your messaging extension running, you can install it in Teams.
 
 > [!TIP]
-> If you haven't sideloaded a Teams app before and run into issues, follow these [instructions](../build-your-first-app/build-and-run.md#sideload-your-app-in-teams).
+> If you haven't sideloaded a Teams app before and run into issues, follow these [instructions](../build-your-first-app/build-and-run.md#5-sideload-your-app-in-teams).
 
 1. Log in to the Teams client with your account that allows app sideloading.
 1. Select **Apps**, then choose **Upload a custom app**.

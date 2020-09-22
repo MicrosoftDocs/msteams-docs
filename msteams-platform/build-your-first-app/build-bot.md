@@ -110,7 +110,7 @@ For testing purposes, let's host your bot on a local web server (port 3978).
 
 Your app manifest is pointing to where you're hosting the bot.
 
-## 4. Configuring your bot
+## 4. Configure your bot
 
 To use a bot in Teams, you must register it with the Azure Bot Service. Lucky for you, this is done automatically when you set up your app using the Teams Toolkit.
 
@@ -150,7 +150,7 @@ If successful, you see something like the following message indicating your bot 
 With your bot running, you can install it in Teams.
 
 > [!TIP]
-> If you haven't sideloaded a Teams app before and run into issues, follow these [instructions](../build-your-first-app/build-and-run.md#sideload-your-app-in-teams).
+> If you haven't sideloaded a Teams app before and run into issues, follow these [instructions](../build-your-first-app/build-and-run.md#5-sideload-your-app-in-teams).
 
 1. Log in to the Teams client with your account that allows app sideloading.
 1. Select **Apps**, then choose **Upload a custom app**.

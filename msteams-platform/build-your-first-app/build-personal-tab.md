@@ -59,7 +59,7 @@ The app scaffolding provides the components for rendering your tab in Teams. The
 * `Tab.js` file in the `src/components` directory of your project
 * Microsoft Teams JavaScript client SDK, which comes pre-loaded in your project's front-end components
 
-## 2. Create your tab content
+## 2. Customize your tab content page
 
 Compile a list of important contacts in your organization. Copy and update the following snippet with information that's relevant to you or, for the sake of time, use the code as is.
 
