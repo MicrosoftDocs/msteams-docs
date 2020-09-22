@@ -1,10 +1,25 @@
 - name: Overview
-  expanded: true
+  expanded: true 
   items:
-    - name: 'What are Microsoft Teams apps?'
+    - name: Build apps for Microsoft Teams
       href: overview.md
     - name: What's new?
       href: whats-new.md
+- name: Build your first app
+  expanded: true
+  items:
+  - name: Overview and prerequisites
+    href: build-your-first-app/build-first-app-overview.md
+  - name: Build a "Hello, World!" app
+    href: build-your-first-app/build-and-run.md
+  - name: Build a personal tab
+    href: build-your-first-app/build-personal-tab.md
+  - name: Build a channel tab
+    href: build-your-first-app/build-channel-tab.md
+  - name: Build a bot
+    href: build-your-first-app/build-bot.md
+  - name: Build a messaging extension
+    href: build-your-first-app/build-messaging-extension.md
 - name: Tutorials and code samples
   items:
   - name: Create an app using C#
@@ -15,8 +30,12 @@
     href: tutorials/get-started-yeoman.md
   - name: Learn more about custom apps for Teams
     href: tutorials/code-samples.md   
-- name: Templates and integrations
-  items: 
+- name: Integrations and templates
+  items:
+  - name: Integrate web apps
+    href: samples/integrating-web-apps.md
+  - name: Create low-code apps
+    href: samples/teams-low-code-solutions.md
   - name: Production-ready app templates
     href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
@@ -25,18 +44,28 @@
     href: samples/virtual-assistant.md
   - name: Integrate Power Virtual Agents chatbot with Teams
     href: bots/how-to/add-power-virtual-agents-bot-to-teams.md   
-  - name:  Microsoft Teams Toolkit extension
+  - name: Microsoft Teams Toolkit extension
     items:
     - name: Teams Toolkit extension for Visual Studio Code
       href: toolkit/visual-studio-code-overview.md
     - name: Teams Toolkit extension for Visual Studio
-      href: toolkit/visual-studio-overview.md  
+      href: toolkit/visual-studio-overview.md    
+- name: Apps in meetings
+  items:
+   - name: Teams apps in meetings
+     href: apps-in-teams-meetings/teams-apps-in-meetings.md
+   - name:  Create apps for teams meetings
+     href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
+   - name:  Design an in-meeting dialog
+     href: apps-in-teams-meetings/designing-in-meeting-dialog.md
+   - name:  Design an in-meeting tab
+     href: apps-in-teams-meetings/designing-in-meeting-tab.md  
 - name: Concepts
   expanded: true
   items:
-    - name: Building apps for Microsoft Teams
-      href: concepts/building-an-app.md
-    - name: 'Extensibility points in the Teams client'
+    - name: App capabilities
+      href: concepts/capabilities-overview.md
+    - name: App entry points
       href: concepts/extensibility-points.md
     - name: 'Design your app'
       items:
@@ -157,19 +186,19 @@
           items:
           - name: 'Authentication flow'
             href: tabs/how-to/authentication/auth-flow-tab.md
-          - name: 'Using Azure AD authentication'
+          - name: 'Use Azure AD authentication'
             href: tabs/how-to/authentication/auth-tab-aad.md
-          - name: 'Using silent authentication'
+          - name: 'Use silent authentication'
             href: tabs/how-to/authentication/auth-silent-aad.md
-          - name: 'Using single sign-on authentication'
+          - name: 'Use single sign-on authentication'
             href: tabs/how-to/authentication/auth-aad-sso.md
-        - name: 'Using the Teams client SDK'
+        - name: 'Use the Teams client SDK'
           href: tabs/how-to/using-teams-client-sdk.md
-        - name: Getting additional Teams context
+        - name: Get additional Teams context
           href: tabs/how-to/access-teams-context.md
         - name: DevTools for Microsoft Teams tabs
           href: tabs/how-to/developer-tools.md
-        - name: 'Adding your custom tab to SharePoint'
+        - name: 'Add your custom tab to SharePoint'
           href: tabs/how-to/tabs-in-sharepoint.md
         - name: Request device permissions
           href: tabs/how-to/native-device-permissions.md          
@@ -238,7 +267,7 @@
         href: bots/calls-and-meetings/calls-meetings-bots-overview.md
       - name: Real-time media concepts
         href: bots/calls-and-meetings/real-time-media-concepts.md
-      - name: Registering a calling bot
+      - name: Register a calling bot
         href: bots/calls-and-meetings/registering-calling-bot.md
       - name: Incoming call notifications
         href: bots/calls-and-meetings/call-notifications.md
@@ -246,7 +275,7 @@
         href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
       - name: Application-hosted media
         href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-- name: 'Messaging Extensions — task-oriented interactions'
+- name: 'Messaging extensions — task-oriented interactions'
   items:
     - name: 'What are Messaging Extensions?'
       href: messaging-extensions/what-are-messaging-extensions.md
@@ -301,9 +330,9 @@
       href: task-modules-and-cards/what-are-cards.md
     - name: 'Cards'
       items:
-        - name: Designing effective cards
+        - name: Design effective cards
           href: task-modules-and-cards/cards/design-effective-cards.md
-        - name: Formatting card text
+        - name: Format card text
           href: task-modules-and-cards/cards/cards-format.md
         - name: Add and respond to card actions
           href: task-modules-and-cards/cards/cards-actions.md
@@ -328,8 +357,16 @@
         href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
       - name: Create an O365 Connector
         href: webhooks-and-connectors/how-to/connectors-creating.md
-      - name: Sending messages to connectors and webhooks
+      - name: Send messages to connectors and webhooks
         href: webhooks-and-connectors/how-to/connectors-using.md
+- name: Apps in meetings
+  items:
+  - name: Design your app
+    items:
+    - name: In-meeting dialog
+      href: apps-in-teams-meetings/designing-in-meeting-dialog.md
+    - name: In-meeting tab
+      href: apps-in-teams-meetings/designing-in-meeting-tab.md
 - name: 'Teams Graph REST APIs'
   items:
     - name: Resource Specific consent
@@ -372,7 +409,7 @@
         href: resources/bot-v3/bots-notifications.md
       - name: Context for bots
         href: resources/bot-v3/bots-context.md
-      - name: Sending and receiving files
+      - name: Send and receiving files
         href: resources/bot-v3/bots-files.md
       - name: Notification-only bots
         href: resources/bot-v3/bots-notification-only.md
@@ -380,7 +417,7 @@
         href: resources/bot-v3/bots-menus.md
       - name: Bots with tabs
         href: resources/bot-v3/bots-with-tabs.md
-      - name: Formatting bot messages
+      - name: Format bot messages
         href: resources/bot-v3/bots-text-formats.md  
       - name: Test a bot
         href: resources/bot-v3/bots-test.md

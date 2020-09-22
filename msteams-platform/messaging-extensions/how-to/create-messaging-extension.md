@@ -32,7 +32,7 @@ The heart of your messaging extension is your web service. It will define a sing
 
 ## Register your web service with the Bot Framework
 
-Messaging extensions take advantage of the Bot Framework's messaging schema and secure communication protocol; if you don't already have one you'll need to register your web service on the Bot Framework. The Microsoft App Id (we'll refer to this as your Bot Id from inside of Teams, to identify it from other App Id's you might be working with) and the messaging endpoint your register with the Bot Framework will be used in your messaging extension to receive and respond to requests. If you're using an existing registration, make sure you [enable the Microsoft Teams channel](/azure/bot-service/bot-service-manage-channels.md?view=azure-bot-service-4.0).
+Messaging extensions take advantage of the Bot Framework's messaging schema and secure communication protocol; if you don't already have one you'll need to register your web service on the Bot Framework. The Microsoft App Id (we'll refer to this as your Bot Id from inside of Teams, to identify it from other App Id's you might be working with) and the messaging endpoint your register with the Bot Framework will be used in your messaging extension to receive and respond to requests. If you're using an existing registration, make sure you [enable the Microsoft Teams channel](/azure/bot-service/bot-service-manage-channels.md?view=azure-bot-service-4.0&preserve-view=true).
 
 If you follow one of the quickstarts or start from one of the available samples you'll be guided through registering your web service. If you want to manually register your service you have three options to do so. If you choose to register without using an Azure subscription you will not be able to take advantage of the simplified OAuth authentication flow provided by the Bot Framework. You will be able to migrate your registration to Azure after creation.
 
@@ -115,6 +115,18 @@ The example below is a simple messaging extension object in the app manifest wit
 ## Add your invoke message handlers
 
 When your users trigger your messaging extension you'll need to handle the initial invoke message, collect some information from the user, then process that information and respond appropriately. To do that, you'll first need to decide what kind of commands you want to add to your messaging extension and either [add an action commands](~/messaging-extensions/how-to/action-commands/define-action-command.md) or [add a search commands](~/messaging-extensions/how-to/search-commands/define-search-command.md).
+
+## Messaging extensions in Teams meetings
+
+Once a meeting begins, Teams participants can interact directly with your messaging extension during a live call. Consider the following when building your in-meeting messaging extension:
+
+1. **Location**. Your messaging extension can be invoked from the compose message area, the command box, or @mentioned in the meeting chat.
+
+1. **Metadata**. When your messaging extension is invoked it can identify the user and tenant from `userId` and `tenantId`. The `meetingId` can be found as part of the `channelData` object. Your app can use the `userId` and `meetingId`  for the `GetParticipant` API request to retrieve user roles.
+
+1. **Command type**. If your message extension uses [action-based commands](../../messaging-extensions/what-are-messaging-extensions.md#action-commands), it should follow tabs [Single Sign-On](../../tabs/how-to/authentication/auth-aad-sso.md) authentication. 
+
+1. **User experience**. You should determine the intended the end-user experience for messaging extensions invoked during a meeting chat.
 
 ## Next steps
 
