@@ -361,6 +361,13 @@
         href: webhooks-and-connectors/how-to/connectors-creating.md
       - name: Send messages to connectors and webhooks
         href: webhooks-and-connectors/how-to/connectors-using.md
+- name: Apps in meetings
+  items:
+  - name: Design your app
+    items: In-meeting dialog
+    href: apps-in-teams-meetings/designing-in-meeting-dialog.md
+  - name: In-meeting tab
+    href: apps-in-teams-meetings/designing-in-meeting-tab.md    
 - name: 'Teams Graph REST APIs'
   items:
     - name: Resource Specific consent
