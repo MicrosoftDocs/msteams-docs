@@ -110,7 +110,7 @@ Your bot should be responsive to any command and not dead-end the user. Here are
 
 ### &#9989; Personal bots must send a welcome message on first launch
 
-Welcome messages are the best way to set the tone for your personal/chat bot. This is the first interaction a user has with the bot. A good welcome message can encourage the user to keep exploring the app. If the welcome or introductory message is confusing or unclear, users won't see the value of the app immediately and lose interests.
+A welcome messages is the best way to set the tone for your personal/chat bot. This is the first interaction a user has with the bot. A good welcome message can encourage the user to keep exploring the app. If the welcome or introductory message is confusing or unclear, users won't see the value of the app immediately and lose interests.
 
 > [!Note]
 > A welcome message is optional for a channel bot.
