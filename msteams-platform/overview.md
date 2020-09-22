@@ -1,5 +1,5 @@
 ---
-title: Building apps for the Microsoft Teams platform
+title: Build apps for the Microsoft Teams platform
 author: heath-hamilton
 description: Overview of how developers can extend and customize Microsoft Teams features with custom apps.
 ms.topic: overview
@@ -7,7 +7,7 @@ ms.author: lajanuar
 ms.date: 09/22/2020
 #Customer intent: As a developer, I want to understand why I would want to build a Teams app so that I can solve business problems.
 ---
-# Building apps for Microsoft Teams
+# Build apps for Microsoft Teams
 
 Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work.
 
