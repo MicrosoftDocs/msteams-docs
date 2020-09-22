@@ -56,7 +56,7 @@ Teams’ meeting app extensibility centers on three concepts:
 ✔ For an app can be visible in a Teams meeting in two areas:
 
 &emsp;&emsp;&#9679; **Side panel**. </br>
-> **NOTE**: If your _app manifest_ specifies that your tab is [optimized for side panel](create-apps-for-teams-meetings.md#in-meeting), that is where it will be displayed. I can also be part of a share-tray experience, subject to specified design guidelines.
+> **NOTE**: If your _app manifest_ specifies that your tab is [optimized for side panel](create-apps-for-teams-meetings.md#in-meeting), that is where it will be displayed. It can also be part of a share-tray experience, subject to specified design guidelines.
 
 &emsp;&emsp;&#9679; **In-meeting dialog**. Use the in-meeting dialog to showcase actionable content for meeting participants. *See* [Create Apps for Teams meetings](create-apps-for-teams-meetings.md).
 
