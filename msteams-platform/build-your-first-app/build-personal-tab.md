@@ -28,7 +28,7 @@ People in your organization have trouble finding basic contact information for i
 > * Create tab content
 > * Update a tab's color theme based on user preference
 
-## Identify relevant app project components
+## 1. Identify relevant app project components
 
 Much of the app manifest and scaffolding are set up automatically when you create your project with the Teams Toolkit. Let's look at the main components for building a personal tab.
 
@@ -59,7 +59,7 @@ The app scaffolding provides the components for rendering your tab in Teams. The
 * `Tab.js` file in the `src/components` directory of your project
 * Microsoft Teams JavaScript client SDK, which comes pre-loaded in your project's front-end components
 
-## Create your tab content
+## 2. Create your tab content
 
 Compile a list of important contacts in your organization. Copy and update the following snippet with information that's relevant to you or, for the sake of time, use the code as is.
 
@@ -106,7 +106,7 @@ Save your changes. Go to your app's tab in Teams to view the new content.
 
 :::image type="content" source="../assets/images/tabs/personal-tab-tutorial-content.png" alt-text="Screenshot of a personal tab with static content.":::
 
-## Update the tab theme
+## 3. Update the tab theme
 
 Good apps feel native to Teams, so it's important your tab blends with the Teams theme your users prefer: default (light), dark, or high contrast. As you might have noticed in the last screenshot, your tab still has a light background when the client's using the dark theme. This is not a recommended user experience.
 

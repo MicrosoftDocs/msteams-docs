@@ -30,7 +30,7 @@ Your organization's help desk communicates with users through Teams, but the tic
 
 If you haven't yet, make sure you [understand and install the Teams development prerequisites](build-first-app-overview.md#get-prerequisites).
 
-## Create your app project
+## 1. Create your app project
 
 The Microsoft Teams Toolkit helps you set up the following components for your messaging extension:
 
@@ -52,7 +52,7 @@ The Microsoft Teams Toolkit helps you set up the following components for your m
 :::image type="content" source="../assets/images/build-your-first-app/choose-me-search.png" alt-text="Illustration showing how, in the Teams Toolkit, to log in to your Microsoft 365 account to create a new bot for your messaging extension.":::
 1. Select **Finish** at the bottom of the screen to configure your project.
 
-## Identify relevant app project components
+## 2. Identify relevant app project components
 
 Much of the app manifest and scaffolding are set up automatically when you create your project with the Teams Toolkit.
 
@@ -104,7 +104,7 @@ The app scaffolding includes a `.env` file, located in the root directory of you
 
 Also in the root directory, there's a `botActivityHandler.js` file for handling how your messaging extension (or technically, the [messaging extension's bot](#configuring-the-bot-for-your-messaging-extension)) responds to search queries in Teams.
 
-## Set up a secure tunnel to your app
+## 3. Set up a secure tunnel to your app
 
 For testing purposes, let's host your messaging extension on a local web server (port 3978).
 
@@ -115,7 +115,7 @@ For testing purposes, let's host your messaging extension on a local web server 
 
 Your app manifest is pointing to where you're hosting the bot used by the messaging extension.
 
-## Configuring the bot for your messaging extension
+## 4. Configuring the bot for your messaging extension
 
 Messaging extensions rely on bots to send and process user requests from Teams to your hosted service.
 
@@ -139,7 +139,7 @@ You must specify a bot endpoint URL to receive and process search queries in you
 
 Your bot will be able to handle queries in your messaging extension.
 
-## Run your app
+## 5. Run your app
 
 You've set up a URL to host your messaging extension and configured it to handle searches. It's time to get your app up and running.
 
@@ -150,7 +150,7 @@ If successful, you see something like the following message indicating your mess
 
 `Bot/ME service listening at http://localhost:3978`
 
-## Sideload your messaging extension in Teams
+## 6. Sideload your messaging extension in Teams
 
 With your messaging extension running, you can install it in Teams.
 
@@ -162,7 +162,7 @@ With your messaging extension running, you can install it in Teams.
 1. Go to your app project `.publish` folder and select `Development.zip`.
 1. In the install modal, select **Add** to install your app.
 
-## Test your messaging extension
+## 7. Test your messaging extension
 
 Learn how messaging extensions work in a Teams chat.
 

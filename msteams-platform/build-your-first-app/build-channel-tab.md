@@ -30,7 +30,8 @@ You can make this information easier to find by building a channel tab, which wi
 > * Allow a tab to be configured and installed
 > * Provide a suggested tab name
 
-## Identify relevant app project components
+
+## 1. Identify relevant app project components
 
 Much of the app manifest and scaffolding are set up automatically when you create your project with the Teams Toolkit. Let's look at the main components for building a channel tab.
 
@@ -59,7 +60,7 @@ The following snippet from the app manifest shows [`configurableTabs`](../resour
 
 The app scaffolding provides a `TabConfig.js` file, located in the `src/components` directory of your project, for rendering your tab's configuration page (more on this soon).
 
-## Create your tab content
+## 2. Create your tab content
 
 Open the app manifest (`manifest.json`) in the `.publish` directory and set the following properties in [`staticTabs`](../resources/schema/manifest-schema.md#statictabs), which defines your tab's content page.
 
@@ -115,7 +116,7 @@ a {
 }
 ```
 
-## Create your tab configuration page
+## 3. Create your tab configuration page
 
 Every channel tab has a configuration page, a modal with at least one setup option that displays when installing the app. The configuration page by default asks users if they want to notify the channel or chat when the tab is installed.
 
@@ -135,7 +136,7 @@ return (
 > [!TIP]
 > At minimum, provide some brief information about your app on this page since this may be the first time users are learning about it. You also could include custom configuration options or an [authentication workflow](../tabs/how-to/authentication/auth-aad-sso.md), which is common on tab configuration pages.
 
-## Allow the tab to be configured and installed
+## 4. Allow the tab to be configured and installed
 
 For users to successfully configure and install the channel tab, you must add the host URL you set up when [creating and running your first app](../build-your-first-app/build-and-run.md) to the configuration page component.
 
@@ -149,7 +150,7 @@ microsoftTeams.settings.setSettings({
 
 Also, make sure that `microsoftTeams.settings.setValidityState(true);`. It is by default, but if set to `false`, the **Save** button is disabled on the configuration page.
 
-## Provide a suggested tab name
+## 5. Provide a suggested tab name
 
 When you install a tab for personal use, the display name is the `name` property in the `staticTabs` portion of of the app manifest (for example, **My Contacts**). When you install a channel tab, by default the app name displays (for example, **first-app**).
 
@@ -164,7 +165,7 @@ microsoftTeams.settings.setSettings({
 });
 ```
 
-## View the channel tab
+## 6. View the channel tab
 
 To see your channel tab's configuration and content pages, you must install it in a channel or chat.
 
