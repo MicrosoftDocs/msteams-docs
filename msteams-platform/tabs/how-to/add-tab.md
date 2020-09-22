@@ -1,7 +1,7 @@
 ---
 title: Extend your Teams app with a custom tab
 author: laujan
-description: A guide to building a tab
+description: How to create a tab for Microsoft Teams using App Studio or manually.
 keywords: teams tabs group channel configurable 
 ms.topic: conceptual
 ms.author: lajanuar

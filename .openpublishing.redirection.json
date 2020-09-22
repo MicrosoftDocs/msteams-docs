@@ -1,6 +1,10 @@
 {
   "redirections": [
       {
+          "source_path": "msteams-platform/concepts/building-an-app.md",
+          "redirect_url": "/microsoftteams/platform/overview"
+      },
+      {
         "source_path": "msteams-platform/resources/dev-preview/developer-preview.md",
         "redirect_url": "/microsoftteams/platform/resources/dev-preview/developer-preview-intro"
       },
