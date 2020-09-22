@@ -14,7 +14,7 @@
     href: build-your-first-app/build-and-run.md
   - name: Build a personal tab
     href: build-your-first-app/build-personal-tab.md
-  - name: Build a channel and group tab
+  - name: Build a channel tab
     href: build-your-first-app/build-channel-tab.md
   - name: Build a bot
     href: build-your-first-app/build-bot.md
@@ -56,10 +56,10 @@
      href: apps-in-teams-meetings/teams-apps-in-meetings.md
    - name:  Create apps for teams meetings
      href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
-   - name: In-meeting dialog
+   - name:  Design an in-meeting dialog
      href: apps-in-teams-meetings/designing-in-meeting-dialog.md
-   - name: 'In-meeting tab
-     href: apps-in-teams-meetings/designing-in-meeting-tab.md 
+   - name:  Design an in-meeting tab
+     href: apps-in-teams-meetings/designing-in-meeting-tab.md  
 - name: Concepts
   expanded: true
   items:
@@ -75,7 +75,7 @@
           href: concepts/design/map-use-cases.md
         - name: Personal apps
           href: concepts/design/personal-apps.md
-        - name: UI Components
+        - name: UI Components 
           items:
           - name: 'Colors'
             href: concepts/design/components/color.md
@@ -359,6 +359,14 @@
         href: webhooks-and-connectors/how-to/connectors-creating.md
       - name: Send messages to connectors and webhooks
         href: webhooks-and-connectors/how-to/connectors-using.md
+- name: Apps in meetings
+  items:
+  - name: Design your app
+    items:
+    - name: In-meeting dialog
+      href: apps-in-teams-meetings/designing-in-meeting-dialog.md
+    - name: In-meeting tab
+      href: apps-in-teams-meetings/designing-in-meeting-tab.md
 - name: 'Teams Graph REST APIs'
   items:
     - name: Resource Specific consent
