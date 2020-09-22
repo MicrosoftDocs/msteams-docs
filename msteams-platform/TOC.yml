@@ -75,7 +75,7 @@
           href: concepts/design/map-use-cases.md
         - name: Personal apps
           href: concepts/design/personal-apps.md
-        - name: UI Components 
+        - name: UI Components
           items:
           - name: 'Colors'
             href: concepts/design/components/color.md
