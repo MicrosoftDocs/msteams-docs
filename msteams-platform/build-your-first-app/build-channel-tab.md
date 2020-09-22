@@ -1,18 +1,14 @@
 ---
 author: heath-hamilton
-description: Learn how to build a channel tab for your first Microsoft Teams app.
+description: Learn how to build a channel and group tab for your first Microsoft Teams app.
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-title: Build a Teams channel tab
+title: Build a Teams channel and group tab
 ---
-# Build a Teams channel tab
+# Build a Teams channel and group tab
 
-In this tutorial, you'll build a basic *channel tab*, a full-screen content page for a team channel or chat. Unlike a personal tab, users can configure some aspects of a channel tab (for example, rename the tab so it's meaningful to their channel).
-
-## Before you begin
-
-You need a basic running app to get started. If you don't have one, follow the [build and run your Teams first app instructions](../build-your-first-app/build-and-run.md). When you create your app project, choose only the **Group or Teams channel tab** option.
+In this tutorial, you'll build a basic *channel tab*, which can also be used as a *group tab*. It is a full-screen content page for a team channel or chat. Unlike a personal tab, users can configure some aspects of a channel tab (for example, rename the tab so it's meaningful to their channel).
 
 ## Your assignment
 
@@ -30,8 +26,26 @@ You can make this information easier to find by building a channel tab, which wi
 > * Allow a tab to be configured and installed
 > * Provide a suggested tab name
 
+## Before you begin
 
-## 1. Identify relevant app project components
+You need a basic running app to get started. If you don't have one, follow the [build and run your Teams first app instructions](../build-your-first-app/build-and-run.md). When you create your app project, choose only the **Group or Teams channel tab** option.
+
+## 1. Create your app project
+
+The Microsoft Teams Toolkit helps you set up the following components for your app:
+
+* **App manifest and scaffolding** relevant to group and channel tabs
+* **Group/Channel tab** with basic hello world code and configuration page
+
+> [!TIP]
+> If you haven't created a Teams app project before, you might find it helpful to follow [these instructions](../build-your-first-app/build-and-run.md) that explain projects in more detail.
+
+1. In Visual Studio Code, select **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: on the left Activity Bar and choose **Create a new Teams app**.
+1. Enter a name for your Teams app. (This is the default name for your app and also the name of the app project directory on your local machine.)
+1. On the **Add capabilities** screen, select **Tab** then **Group or Teams channel tab**
+1. Select **Finish** at the bottom of the screen to configure your project.  
+
+## 2. Identify relevant app project components
 
 Much of the app manifest and scaffolding are set up automatically when you create your project with the Teams Toolkit. Let's look at the main components for building a channel tab.
 
@@ -60,7 +74,7 @@ The following snippet from the app manifest shows [`configurableTabs`](../resour
 
 The app scaffolding provides a `TabConfig.js` file, located in the `src/components` directory of your project, for rendering your tab's configuration page (more on this soon).
 
-## 2. Create your tab content
+## 3. Create your tab content
 
 Open the app manifest (`manifest.json`) in the `.publish` directory and set the following properties in [`staticTabs`](../resources/schema/manifest-schema.md#statictabs), which defines your tab's content page.
 
@@ -116,7 +130,7 @@ a {
 }
 ```
 
-## 3. Create your tab configuration page
+## 4. Create your tab configuration page
 
 Every channel tab has a configuration page, a modal with at least one setup option that displays when installing the app. The configuration page by default asks users if they want to notify the channel or chat when the tab is installed.
 
@@ -136,7 +150,7 @@ return (
 > [!TIP]
 > At minimum, provide some brief information about your app on this page since this may be the first time users are learning about it. You also could include custom configuration options or an [authentication workflow](../tabs/how-to/authentication/auth-aad-sso.md), which is common on tab configuration pages.
 
-## 4. Allow the tab to be configured and installed
+## 5. Allow the tab to be configured and installed
 
 For users to successfully configure and install the channel tab, you must add the host URL you set up when [creating and running your first app](../build-your-first-app/build-and-run.md) to the configuration page component.
 
@@ -150,7 +164,7 @@ microsoftTeams.settings.setSettings({
 
 Also, make sure that `microsoftTeams.settings.setValidityState(true);`. It is by default, but if set to `false`, the **Save** button is disabled on the configuration page.
 
-## 5. Provide a suggested tab name
+## 6. Provide a suggested tab name
 
 When you install a tab for personal use, the display name is the `name` property in the `staticTabs` portion of of the app manifest (for example, **My Contacts**). When you install a channel tab, by default the app name displays (for example, **first-app**).
 
@@ -165,7 +179,7 @@ microsoftTeams.settings.setSettings({
 });
 ```
 
-## 6. View the channel tab
+## 7. View the channel and group tab
 
 To see your channel tab's configuration and content pages, you must install it in a channel or chat.
 
