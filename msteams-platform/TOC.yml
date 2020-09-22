@@ -14,7 +14,7 @@
     href: build-your-first-app/build-and-run.md
   - name: Build a personal tab
     href: build-your-first-app/build-personal-tab.md
-  - name: Build a channel tab
+  - name: Build a channel and group tab
     href: build-your-first-app/build-channel-tab.md
   - name: Build a bot
     href: build-your-first-app/build-bot.md
