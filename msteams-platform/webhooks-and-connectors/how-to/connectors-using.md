@@ -149,7 +149,7 @@ The following steps use [cURL](https://curl.haxx.se/). We assume that you have t
 
    ```bash
    // on Windows
-   curl.exe -H 'Content-Type: application/json' -d '{"text": "Hello World"}' <YOUR WEBHOOK URL>
+   curl.exe -H "Content-Type:application/json" -d "{'text':'Hello World'}" <YOUR WEBHOOK URL>
    ```
 
 2. If the POST succeeds, you should see a simple **1** output by `curl`.
