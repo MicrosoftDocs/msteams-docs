@@ -110,18 +110,20 @@ Your bot should be responsive to any command and not dead-end the user. Here are
 
 ### &#9989; Personal bots must send a welcome message on first launch
 
-Welcome messages are the best way to set your Personal/chat bot's tone. This is the first interaction a user has with the bot. A good welcome message can encourage the user to keep exploring the app. If the welcome or introductory message is confusing or unclear, users won't see the value of the app immediately and lose interests.
-Note: Welcome message is optional for a channel bot.
+Welcome messages are the best way to set the tone for your personal/chat bot. This is the first interaction a user has with the bot. A good welcome message can encourage the user to keep exploring the app. If the welcome or introductory message is confusing or unclear, users won't see the value of the app immediately and lose interests.
+
+> [!Note]
+> A welcome message is optional for a channel bot.
 
 ### Welcome message requirements
 
-* Include a value proposition with welcome tour.
-* Provide way forward guidance for using the bot.
-* Present  easy to read  text and straightforward dialogue — preferably a card with an actionable welcome tour button that loads a task module.
+* Include a value proposition with the welcome tour.
+* Provide way-forward guidance for using the bot.
+* Present easy-to-read text and straightforward dialogue — preferably a card with an actionable welcome tour button that loads a task module.
 * Keep it simple, avoid wordy/chatty dialogue.
 * Include adaptive cards and buttons to make the welcome message more usable.
 * Invoke the welcome message  with one ping, not two or more simultaneous pings.
-* Welcome message must only be shown to the user who configured the app preferably in a 1:1 personal chat.
+* A welcome message must only be shown to the user who configured the app, preferably in a 1:1 personal chat.
 * Never send a personal chat to every member in the team.
 * Never send the welcome message more than once. Repeating the same welcome message over regular intervals is not allowed and is considered spamming.
 
