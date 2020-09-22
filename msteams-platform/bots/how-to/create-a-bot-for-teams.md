@@ -170,6 +170,10 @@ To create an app package, you need to add your app manifest and (optionally) you
 
 If you've been using App Studio, you can install your app from the **Test and distribute** tab of the **Manifest editor**. Alternatively, you can install your app package by clicking the `...` overflow menu from the left navigation rail, clicking **More apps**, then the **Upload a custom app** link. You can also import an app manifest or app package into App Studio to make additional updates before uploading.
 
+## Bots in Teams meetings
+
+Teams supports bot invocation during meetings. When your bot receives the invoke message, it can identify the user and tenant from `userId` and `tenantId`. The `meetingId` can be found as part of the `channelData` object. Your bot can use the `userId` and `meetingId`  for the `GetParticipant` API request to retrieve user roles.
+
 ## Next steps
 
 * [Bot conversation basics](./conversations/conversation-basics.md)
