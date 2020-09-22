@@ -59,9 +59,9 @@
    - name: Design your meeting app
      items:
      - name: In-meeting dialog
-       href: apps-in-teams-meetings/designing-in-meeting-dialog.md
+       href: apps-in-teams-meetings/design-your-meeting-app/designing-in-meeting-dialog.md
      - name: In-meeting tab
-       href: apps-in-teams-meetings/designing-in-meeting-tab.md 
+       href: apps-in-teams-meetings/design-your-meeting-app/designing-in-meeting-tab.md 
 - name: Concepts
   expanded: true
   items:
