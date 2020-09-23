@@ -16,7 +16,7 @@ The details page is the first impression of your app. Each element of your detai
 *  An app's name plays a critical role in how users discover it in the AppSource app store. Your app's short name will be displayed on the details page.
 * The app name should reflect your app without any reference to Microsoft or Microsoft productsNote: If your app is an official partnership with Microsoft, then the name of the 3rd party app needs to go first i.e. Salesforce Connector for Microsoft Teams.
 * Use these resources for guidance:
-    * Online naming resource: [App name](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist#app-name)
+    * Online naming resource: [App name](https://docs.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist#app-name)
     * Trademark guidance: [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)
 
 **Do's:**
