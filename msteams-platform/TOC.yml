@@ -49,17 +49,7 @@
     - name: Teams Toolkit extension for Visual Studio Code
       href: toolkit/visual-studio-code-overview.md
     - name: Teams Toolkit extension for Visual Studio
-      href: toolkit/visual-studio-overview.md    
-- name: Apps in meetings
-  items:
-   - name: Teams apps in meetings
-     href: apps-in-teams-meetings/teams-apps-in-meetings.md
-   - name:  Create apps for teams meetings
-     href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
-   - name:  Design an in-meeting dialog
-     href: apps-in-teams-meetings/designing-in-meeting-dialog.md
-   - name:  Design an in-meeting tab
-     href: apps-in-teams-meetings/designing-in-meeting-tab.md  
+      href: toolkit/visual-studio-overview.md
 - name: Concepts
   expanded: true
   items:
@@ -361,12 +351,16 @@
         href: webhooks-and-connectors/how-to/connectors-using.md
 - name: Apps in meetings
   items:
-  - name: Design your app
+  - name: Teams apps in meetings
+    href: apps-in-teams-meetings/teams-apps-in-meetings.md
+  - name: Create apps for Teams meetings
+    href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
+  - name: Design your in-meeting app
     items:
     - name: In-meeting dialog
-      href: apps-in-teams-meetings/designing-in-meeting-dialog.md
+      href: apps-in-teams-meetings/design/designing-in-meeting-dialog.md
     - name: In-meeting tab
-      href: apps-in-teams-meetings/designing-in-meeting-tab.md
+      href: apps-in-teams-meetings/design/designing-in-meeting-tab.md
 - name: 'Teams Graph REST APIs'
   items:
     - name: Resource Specific consent

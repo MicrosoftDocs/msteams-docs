@@ -28,7 +28,7 @@ Your workplace has been using [tabs](../build-your-first-app/build-personal-tab.
 
 If you haven't yet, make sure you [understand and install the Teams development prerequisites](build-first-app-overview.md#get-prerequisites).
 
-## Create your app project
+## 1. Create your app project
 
 The Microsoft Teams Toolkit helps you set up the following components for your app:
 
@@ -47,7 +47,7 @@ The Microsoft Teams Toolkit helps you set up the following components for your a
 1. (Optional) Enter a custom name for your bot and select **Create**. (Remember, this is the name for your bot and not the name of the Teams app you already specified.)
 1. Select **Finish** at the bottom of the screen to configure your project.
 
-## Identify relevant app project components
+## 2. Identify relevant app project components
 
 Much of the app manifest and scaffolding are set up automatically when you create your project with the Teams Toolkit. Let's look at the main components for building a bot.
 
@@ -99,7 +99,7 @@ The app scaffolding provides a `botActivityHandler.js` file, located in the root
 
 The `.env` file, also in the root directory, stores your bot ID and password.
 
-## Set up a secure tunnel to your app
+## 3. Set up a secure tunnel to your app
 
 For testing purposes, let's host your bot on a local web server (port 3978).
 
@@ -110,7 +110,7 @@ For testing purposes, let's host your bot on a local web server (port 3978).
 
 Your app manifest is pointing to where you're hosting the bot.
 
-## Configuring your bot
+## 4. Configure your bot
 
 To use a bot in Teams, you must register it with the Azure Bot Service. Lucky for you, this is done automatically when you set up your app using the Teams Toolkit.
 
@@ -134,7 +134,7 @@ You must specify an endpoint URL to receive and process user messages (i.e., req
 
 Your bot will be able to respond to messages in Teams.
 
-## Run your app
+## 5. Run your app
 
 You've set up a URL to host your bot and configured it to handle messages. It's time to get your bot up and running.
 
@@ -145,19 +145,19 @@ If successful, you see something like the following message indicating your bot 
 
 `Bot/ME service listening at http://localhost:3978`
 
-## Sideload your bot in Teams
+## 6. Sideload your bot in Teams
 
 With your bot running, you can install it in Teams.
 
 > [!TIP]
-> If you haven't sideloaded a Teams app before and run into issues, follow these [instructions](../build-your-first-app/build-and-run.md#sideload-your-app-in-teams).
+> If you haven't sideloaded a Teams app before and run into issues, follow these [instructions](../build-your-first-app/build-and-run.md#5-sideload-your-app-in-teams).
 
 1. Log in to the Teams client with your account that allows app sideloading.
 1. Select **Apps**, then choose **Upload a custom app**.
 1. Go to your app project `.publish` folder and select `Development.zip`.
 1. In the install modal, select **Add** to install your app.
 
-## Test your bot
+## 7. Test your bot
 
 Now for the fun part: Let's say "Hello" to your bot in a one-on-one chat.
 

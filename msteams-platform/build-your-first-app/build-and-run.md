@@ -10,7 +10,7 @@ ms.topic: quickstart
 
 You can jump right into Microsoft Teams platform development by building a personal tab that displays "Hello, World!"
 
-## Create your app project
+## 1. Create your app project
 
 Use the Microsoft Teams Toolkit in Visual Studio Code to set up your first app project.
 
@@ -21,7 +21,7 @@ Use the Microsoft Teams Toolkit in Visual Studio Code to set up your first app p
 :::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="Screenshot showing how to configure your app project with the Visual Studio Code Teams Toolkit.":::
 1. Check the **Personal tab** option and select **Finish** at the bottom of the screen to configure your project.
 
-## Understand important app project components
+## 2. Understand important app project components
 
 Once the toolkit configures your project, you have the components to build a basic personal tab for Teams. The project directories and files display in the Explorer area of Visual Studio Code.
 
@@ -51,7 +51,7 @@ Here are some details about the app package files:
 |**Color logo**|`.png`|192&times;192 pixels|`icon.color`|`.publish/color.png`|
 |**Outline logo**|`.png`|32&times;32 pixels|`icon.outline`|`.publish/outline.png`|
 
-## Run your app
+## 3. Run your app
 
 In the interest of time, you'll build and run your app locally.
 
@@ -62,7 +62,7 @@ In the interest of time, you'll build and run your app locally.
 1. Open a browser and go to `https://localhost:3000` to view a blank webpage called **Microsoft Teams Tab**. (Don't worry that you can't see any content on the page.)<br/>
    :::image type="content" source="../assets/images/build-your-first-app/local-host-tab.png" alt-text="Screenshot showing what it looks like to view your running app in a browser.":::
 
-## Set up a secure tunnel to your app
+## 4. Set up a secure tunnel to your app
 
 Your app is up and running on your local web server. To run your app in Teams, you must make your `localhost` accessible through HTTPS.
 
@@ -76,7 +76,7 @@ Install [ngrok](https://ngrok.com/download) if you haven't already. When you run
 
 Your app manifest now points to where you're hosting the app.
 
-## Sideload your app in Teams
+## 5. Sideload your app in Teams
 
 With your app running and accessible via HTTPS, you're ready to upload it to Teams.
 
