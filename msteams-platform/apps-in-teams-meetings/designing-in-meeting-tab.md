@@ -1,11 +1,11 @@
 ---
-title: Designing a Microsoft Teams in-meeting tab
+title: Design a Microsoft Teams in-meeting tab
 author: heath-hamilton
 description: Guidance and best practices for designing the in-meeting tab for Microsoft Teams.
 ms.author: lajanuar
 ms.topic: conceptual
 ---
-# Designing an in-meeting tab
+# Design an in-meeting tab
 
 The in-meeting tab is a canvas for augmenting collaboration during meetings. Based on the Teams tab capability, attendees can see and interact with app content in a dedicated space outside the meeting stage through shared or role-based views.
 

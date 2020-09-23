@@ -29,10 +29,10 @@ public class MyBot : TeamsActivityHandler
         {
             var currentPage = await TeamsInfo.GetPagedMembersAsync(turnContext, 100, continuationToken, cancellationToken);
             continuationToken = currentPage.ContinuationToken;
-            members = members.Concat(currentPage.Members).ToList();
-        }
-        while (continuationToken != null);
-    }
+            members.AddRange(currentPage.Members);
+         }
+         while (continuationToken != null);
+     }
 }
 ```
 

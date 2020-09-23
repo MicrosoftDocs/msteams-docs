@@ -142,6 +142,9 @@ Your app can set its own session cookie so that the user need not sign in again 
 > [!NOTE]
 > Chrome 80, scheduled for release in early 2020, introduces new cookie values and imposes cookie policies by default. It's recommended that you set the intended use for your cookies rather than rely on default browser behavior. *See* [SameSite cookie attribute (2020 update)](../../../resources/samesite-cookie-update.md).
 
+>[!NOTE]
+>To get the correct token for Microsoft Teams Free and guest users, it is important that the apps use tenant specific endpoint https://login.microsoftonline.com/**{tenantId}**. You can get tenantId from the bot message or tab context. If the apps use https://login.microsoftonline.com/common, the users will get incorrect tokens and will log on to the "home" tenant instead of the tenant that they are currently signed into.
+
 For more information on Single Sign-On (SSO) see the article [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md).
 
 ## Samples
