@@ -22,7 +22,7 @@ In-meeting dialogs are triggered by a user (such as the meeting organizer) who m
 
 The following example shows what the in-meeting dialog might look like from a meeting participant's perspective. As you can see, the content and task are lightweight.
 
-:::image type="content" source="../assets/images/calls-and-meetings/in-meeting-dialog-participant-view.png" alt-text="Example shows what the in-meeting dialog might look like from a meeting participant's perspective.":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-participant-view.png" alt-text="Example shows what the in-meeting dialog might look like from a meeting participant's perspective.":::
 
 <a href="https://www.figma.com/community/file/888593778835180533" target="_blank">See the full scenario (Figma)</a>
 
@@ -30,7 +30,7 @@ The following example shows what the in-meeting dialog might look like from a me
 
 ## Anatomy
 
-:::image type="content" source="../assets/images/calls-and-meetings/in-meeting-dialog-anatomy.png" alt-text="UI anatomy of an in-meeting dialog view." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-anatomy.png" alt-text="UI anatomy of an in-meeting dialog view." border="false":::
 
 1. **App icon**
 1. **App name**
@@ -45,7 +45,7 @@ In-meeting dialogs can vary in size to account for different use cases, but you 
 * **Height**: The height of the dialog is determined by the content in the webview. Vertical scroll takes over for content that exceeds the maximum height you specify.
 * **Width**: The width of the webview is an absolute value within the range you specify.
 
-:::image type="content" source="../assets/images/calls-and-meetings/in-meeting-dialog-sizing.png" alt-text="Illustration showing the possible dimensions of an in-meeting dialog. Height: The height of the dialog is determined by the content in the webview. Vertical scroll takes over for content that exceeds the maximum height (defined by you). Min: None. Max: 400 pixels (320 pixels webview). Width: The width of the webview is an absolute value within the range you specify. Min.: 288 pixels (256 pixels webview). Max: 468 pixels (436 pixels webview)." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-sizing.png" alt-text="Illustration showing the possible dimensions of an in-meeting dialog. Height: The height of the dialog is determined by the content in the webview. Vertical scroll takes over for content that exceeds the maximum height (defined by you). Min: None. Max: 400 pixels (320 pixels webview). Width: The width of the webview is an absolute value within the range you specify. Min.: 288 pixels (256 pixels webview). Max: 468 pixels (436 pixels webview)." border="false":::
 
 ## Behavior
 
@@ -55,7 +55,7 @@ See general in-meeting dialog behavior, such as rest, loading, and more, in <a h
 
 In-meeting dialogs are aligned in the center of the meeting stage. They can’t be dragged and work within the framework of Teams system-level notifications.
 
-:::image type="content" source="../assets/images/calls-and-meetings/in-meeting-dialog-position.png" alt-text="Illustration showing the UI anatomy of an in-meeting dialog." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-position.png" alt-text="Illustration showing the UI anatomy of an in-meeting dialog." border="false":::
 
 ### Aggregation
 
@@ -70,7 +70,7 @@ Scrolling occurs in the webview portion of an in-meeting dialog. Remember the fo
 * You should only be able to scroll vertically.
 * You can only see the content you've scrolled to (nothing above or below).
 
-:::image type="content" source="../assets/images/calls-and-meetings/in-meeting-dialog-scroll.png" alt-text="Illustration showing how scrolling the webview content in the in-meeting dialog works." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-scroll.png" alt-text="Illustration showing how scrolling the webview content in the in-meeting dialog works." border="false":::
 
 ### Buttons
 
@@ -108,7 +108,7 @@ While in-meeting dialogs can make calls more effective, they also can derail cal
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../assets/images/calls-and-meetings/in-meeting-dialog-steps-do.png" alt-text="Illustration showing how to limit in-meeting dialog content to a single screen so users can focus on the meeting." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-steps-do.png" alt-text="Illustration showing how to limit in-meeting dialog content to a single screen so users can focus on the meeting." border="false":::
 
 #### Do: Keep it contained
 
@@ -116,7 +116,7 @@ Limit in-meeting dialog content to a single screen so users can focus on the mee
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../assets/images/calls-and-meetings/in-meeting-dialog-steps-dont.png" alt-text="Illustration showing how in-meeting dialogs shouldn't require users to navigate through content." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-steps-dont.png" alt-text="Illustration showing how in-meeting dialogs shouldn't require users to navigate through content." border="false":::
 
 #### Don't: Include multiple steps
 
@@ -129,18 +129,18 @@ In-meeting dialogs shouldn't require users to navigate through content.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../assets/images/calls-and-meetings/in-meeting-dialog-interactions-do.png" alt-text="Illustration showing why you should remove unnecessary content that doesn't help users accomplish something quickly." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-interactions-do.png" alt-text="Illustration showing why you should remove unnecessary content that doesn't help users accomplish something quickly." border="false":::
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../assets/images/calls-and-meetings/in-meeting-dialog-interactions-dont.png" alt-text="Another illustration showing why you should remove unnecessary content that doesn't help users accomplish something quickly." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-interactions-dont.png" alt-text="Another illustration showing why you should remove unnecessary content that doesn't help users accomplish something quickly." border="false":::
 
    :::column-end:::
 :::row-end:::
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../assets/images/calls-and-meetings/in-meeting-dialog-tab-do.png" alt-text="Illustration showing that, if you need complex interactions, it's recommended you use a single column on the meeting right pane instead." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-tab-do.png" alt-text="Illustration showing that, if you need complex interactions, it's recommended you use a single column on the meeting right pane instead." border="false":::
 
 #### Do: Limit number of interactions
 
@@ -148,7 +148,7 @@ Remove unnecessary content that doesn't help users accomplish something quickly.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../assets/images/calls-and-meetings/in-meeting-dialog-tab-dont.png" alt-text="Illustration showing that too many interactions in the in-meeting dialog distracts from the meeting." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-tab-dont.png" alt-text="Illustration showing that too many interactions in the in-meeting dialog distracts from the meeting." border="false":::
 
 #### Don't: Introduce unnecessary elements
 
@@ -161,7 +161,7 @@ You may be able to design a single in-meeting dialog with multiple interactions,
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../assets/images/calls-and-meetings/in-meeting-dialog-layout-do.png" alt-text="Illustration showing an ideal layout for in-meeting dialogs." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-layout-do.png" alt-text="Illustration showing an ideal layout for in-meeting dialogs." border="false":::
 
 #### Do: Use single-column layouts
 
@@ -169,7 +169,7 @@ Since the dialogs are at the center of the meeting stage, task completion should
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../assets/images/calls-and-meetings/in-meeting-dialog-layout-dont.png" alt-text="Illustration showing layout for in-meeting dialogs that isn't recommended." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-layout-dont.png" alt-text="Illustration showing layout for in-meeting dialogs that isn't recommended." border="false":::
 
 #### Don't: Clutter the space
 
@@ -182,7 +182,7 @@ Dense or overly structured content can be distracting and overwhelming, especial
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../assets/images/calls-and-meetings/in-meeting-dialog-size-do.png" alt-text="Illustration showing how the in-meeting dialog size should always be the same." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-size-do.png" alt-text="Illustration showing how the in-meeting dialog size should always be the same." border="false":::
 
 #### Do: Keep it consistent
 
@@ -190,7 +190,7 @@ This is important because in-meeting dialogs always display in the same location
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../assets/images/calls-and-meetings/in-meeting-dialog-size-dont.png" alt-text="Illustration showing how you shouldn't use different dialog sizes." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-size-dont.png" alt-text="Illustration showing how you shouldn't use different dialog sizes." border="false":::
 
 #### Don't: Always fit to the content
 
@@ -203,7 +203,7 @@ You may be trying to avoid horizontal scrolling, but multiple in-meeting dialog 
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../assets/images/calls-and-meetings/in-meeting-dialog-controls-do.png" alt-text="Illustration showing where to place buttons on the in-meeting dialog." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-controls-do.png" alt-text="Illustration showing where to place buttons on the in-meeting dialog." border="false":::
 
 #### Do: Right align the primary action
 
@@ -211,7 +211,7 @@ We recommend positioning the most visually heavy action to the right-most locati
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../assets/images/calls-and-meetings/in-meeting-dialog-controls-dont.png" alt-text="Illustration showing where not to place buttons on the in-meeting dialog." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-controls-dont.png" alt-text="Illustration showing where not to place buttons on the in-meeting dialog." border="false":::
 
 #### Don't: Left or center align actions
 
@@ -233,4 +233,4 @@ For information on accessibility, see <a href="https://www.figma.com/community/f
 If you plan to publish your app to AppSource, you should understand the design issues that commonly cause apps to fail during submission.
 
 > [!div class="nextstepaction"]
-> [Check design validation guidelines](../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines)
+> [Check design validation guidelines](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines)
