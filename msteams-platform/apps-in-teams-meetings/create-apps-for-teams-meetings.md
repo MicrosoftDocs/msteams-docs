@@ -21,7 +21,7 @@ keywords: teams apps meetings user participant role api
 
 1. Some meeting APIs, such as `GetParticipant` will require a [bot registration and bot app ID](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) to generate auth tokens.
 
-1. Developers must adhere to general [Teams tab design guidelines](../tabs/design/tabs.md) for pre- and post-meeting scenarios as well as the [in-meeting dialog guidelines](designing-in-meeting-dialog.md) for in-meeting dialog triggered during a Teams meeting.
+1. Developers must adhere to general [Teams tab design guidelines](../tabs/design/tabs.md) for pre- and post-meeting scenarios as well as the [in-meeting dialog guidelines](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md) for in-meeting dialog triggered during a Teams meeting.
 
 ## Meeting apps API reference
 
@@ -263,7 +263,7 @@ Users with organizer and/or presenter roles add tabs to a meeting using the plus
 
 #### **in-meeting dialog**
 
-✔ You must adhere to the [in-meeting dialog design guidelines](designing-in-meeting-dialog.md).
+✔ You must adhere to the [in-meeting dialog design guidelines](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md).
 
 ✔ Refer to the [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md).
 
