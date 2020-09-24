@@ -4,10 +4,9 @@ description: The Microsoft Teams product team responds to the developer communit
 keywords: teams feedback developer questions issues contact support request bugs contributions 
 ---
 
-# Microsoft Teams developer support and feedback
+# Microsoft Teams Developer Community channels
 
 The Microsoft Teams product team responds to the developer community across several feedback and support channels.
-Platform Support and feedback channels => Microsoft Teams Developer Community channels.
 
 
 |            <strong>Support type</strong>            |               <strong>Contact</strong>                                                                                  |
