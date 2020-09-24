@@ -4,15 +4,15 @@ App Studio is a Teams app that you can install from the Teams store. It simplifi
 
 To install App Studio in Teams, click on the app store icon at the bottom of the left hand bar, and search for App Studio.
 
-<img  width="450px" title="Finding App Studio in the Store" src="~/assets/images/get-started/app-studio-store.png"/>
+<img  width="450px" title="Finding App Studio in the Store" src="~/assets/images/get-started/searchforAppStudio.png"/>
 
 Once you find the tile for App Studio, click on it and choose *install* in the dialog that pops up.
 
-<img  width="450px" title="Installing App Studio" src="~/assets/images/get-started/app-studio-install.png"/>
+<img  width="450px" title="Installing App Studio" src="~/assets/images/get-started/InstallingAppStudio.png"/>
 
 Once App Studio is installed click on the Manifest editor tab to begin creating the app package for your Teams app.
 
-<img  width="450px" title="App Studio" src="~/assets/images/get-started/app-studio.png"/>
+<img  width="450px" title="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
 The sample comes with its own pre-made manifest, and is designed to build an app package when the project is built. On .NET this is done in Visual Studio, and on Node JS this is done by typing `gulp` at the command line in the root directory of the project.
 
@@ -32,15 +32,15 @@ The name of the generated app package is *helloworldapp.zip*. You can search for
 
 In the next part of this walkthrough you are going to modify this app package by selecting the *Import an existing app* tile in the Manifest Editor.
 
-<img  width="450px" title="Importing an app" src="~/assets/images/get-started/app-studio-import.png"/>
+<img  width="450px" title="Importing an app" src="~/assets/images/get-started/Importinganapp.png"/>
 
 Once the app package has been imported App Studio should look like this:
 
-<img  width="450px" title="Importing an app" src="~/assets/images/get-started/app-studio-imported-app.png"/>
+<img  width="450px" title="Importing an app" src="~/assets/images/get-started/Importinganapp2.png"/>
 
 Click on the tile for your newly imported app, *Hello World*.
 
-<img  width="450px" title="Importing an app" src="~/assets/images/get-started/app-studio-manifest-editor.png"/>
+<img  width="450px" title="Importing an app" src="~/assets/images/get-started/HelloWorldappdetails.png"/>
 
 There is a list of steps in the left-hand side of the Manifest editor, and on the right a list of properties that need to be filled in for each of those steps. Since you started with a sample app, much of the information is already filled out. The next steps will walk you through changing the parts that still need to be updated.
 
@@ -60,7 +60,7 @@ Tabs are among the simplest elements to add to a Teams app. The sample app alrea
 
 Your app can only have one Team tab.
 
-<img  width="450px" title="Adding a Teams tab" src="~/assets/images/get-started/app-studio-manifest-editor-tabs.png"/>
+<img  width="450px" title="Adding a Teams tab" src="~/assets/images/get-started/TeamTab.png"/>
 
 In this sample, the Team tab is where your configuration page goes. Click on the *...* symbol at the end of the entry and choose *Edit* from the drop-down. Change the URL to `https://yourteamsapp.ngrok.io/configure` where `yourteamsapp.ngrok.io` should be replaced by the URL that you used above when hosting your app.
 
@@ -70,7 +70,7 @@ Your app can have up to 16 tabs, including the team tab.
 
 Personal tabs are represented differently from the team tab. You should see *Hello Tab* already listed in the personal tabs list. At the moment it has a placeholder value `com.contoso.helloworld.hellotab`. Click on the *...* symbol at the end of the entry and choose *Edit* from the drop-down. The following dialog will appear.
 
-<img  width="450px" title="Adding a personal tab dialog" src="~/assets/images/get-started/app-studio-manifest-editor-p-tabs-dialog.png"/>
+<img  width="450px" title="Adding a personal tab dialog" src="~/assets/images/get-started/PersonalTab.png"/>
 
 There are two fields that you need to update with your app URL.
 
@@ -83,7 +83,7 @@ Where `yourteamsapp.ngrok.io` should be replaced by the URL that you used above 
 
 Bots are the most common way to add functionality to your app. The hello world sample already has a bot as part of the sample, but it has not been registered with Microsoft yet.
 
-<img  width="450px" title="Adding a bot" src="~/assets/images/get-started/app-studio-manifest-editor-bots.png"/>
+<img  width="450px" title="Adding a bot" src="~/assets/images/get-started/Bots.png"/>
 
 The bot that was imported from the sample does not have an App ID associated with it yet. You will have to create a new bot so that App Studio can create a new App ID and register it with Microsoft. Note that this is the App ID for the bot, which is different from the App ID that we created for the app in a earlier step. Each bot in an app requires its own App ID.
 
@@ -91,7 +91,7 @@ Click the *delete* button next to the *Imported bot* in the bot list.
 
 Now there are no bots left to show. Click *Setup*. This will display the *Set up a bot* dialog.
 
-<img  width="450px" title="Adding a bot dialog" src="~/assets/images/get-started/app-studio-manifest-editor-bots-setup-dialog.png"/>
+<img  width="450px" title="Adding a bot dialog" src="~/assets/images/get-started/Setupbot.png"/>
 
 Add a bot name such as `Contoso bot`, and click both the buttons under *scope*.
 
@@ -109,7 +109,7 @@ Messaging extensions let users ask for information from your service and post th
 
 Click on *Messaging extensions* under *Capabilities* in the left hand column of App Studio to begin configuring the messaging extension.
 
-<img  width="450px" title="Adding a messaging extension" src="~/assets/images/get-started/app-studio-manifest-editor-mess-ext.png"/>
+<img  width="450px" title="Adding a messaging extension" src="~/assets/images/get-started/Messagingextensions.png"/>
 
 The sample messaging extension is listed in the right hand pane under *Messaging Extensions*. Click *Delete* again to remove this entry, and then click the *Set up* button following the same steps as you followed for bots. This will display the *Messaging Extension* dialog.
 
@@ -139,7 +139,7 @@ You have now completed entering the details of your app, but two steps remain. F
 
 Click on the *Test and distribute* item under *Finish* in the left hand column of App Studio.
 
-<img  width="450px" title="Testing your app" src="~/assets/images/get-started/app-studio-manifest-editor-test.png"/>
+<img  width="450px" title="Testing your app" src="~/assets/images/get-started/Testanddistribute.png"/>
 
 In order to upload your app to Teams, click the *Install* button under *Test and Distribute*.
 
@@ -151,4 +151,4 @@ Click the *Install* button at the bottom of the dialog.
 
 This finishes the App Studio portion of this walkthrough. You should now see your app running in Teams, however the bot and the messaging extension will not work until you update the hosted applications environment to know what the App IDs and passwords are.
 
-<img  width="450px" title="The finished app" src="~/assets/images/get-started/app-studio-finished-app.png"/>
+<img  width="450px" title="The finished app" src="~/assets/images/get-started/Finishedhelloworld.png"/>
