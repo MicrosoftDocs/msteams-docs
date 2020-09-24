@@ -150,7 +150,7 @@ Conversational Q&A bots are an easy way to provide answers to frequently asked q
 
 ![FAQ Plus gif](../assets/images/FAQPlusEndUser.gif)
 
-## Goal Tracker &#9734;
+## Goal Tracker
 
 The Goal Tracker app is a comprehensive solution for your organization to support establishing goals, observing progress, and acknowledging success within Microsoft Teams. The app enables users to set, track, and update objectives on a professional, personal, and team level. Team members also receive timely reminders and status updates to remain focused and stay on track.
 
@@ -167,7 +167,7 @@ The Goal Tracker app is a comprehensive solution for your organization to suppor
 :::column-end:::
 :::row-end:::
 
-## Great Ideas &#9734;
+## Great Ideas
 
 The Great Ideas app supports and empowers innovation and creativity within your organization. The app enables your employees to share ideas with colleagues and leadership, discover new submissions, spotlight contributions for peer consideration, and cast their vote for the best proposals within Microsoft Teams.
 
@@ -201,7 +201,7 @@ Group Activities is a Microsoft Teams app that makes it easy for team owners to 
 :::column-end:::
 :::row-end:::
 
-## Grow Your Skills &#9734;
+## Grow Your Skills
 
 The Grow Your Skills app supports professional growth and development by enabling employees to contribute to supplemental projects for your organization while simultaneously learning new skills. Employees can use the app to locate opportunities that meet their interests, enjoy meaningful collaboration with peers, and acquire new levels of expertise and capabilities, all within the Teams environment.
 
@@ -244,7 +244,7 @@ Incentives is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) templ
 
 ![Incentives app demo](../assets/images/incentives-app.png)
 
-## Incident Reporter &#9734;
+## Incident Reporter 
 
 Incident Reporter is a [Microsoft Teams bot](../bots/what-are-bots.md)  that optimizes the management of incidents in your organization. The bot facilitates automated incident data collection, customized incident reports, relevant stakeholder notifications, and end-to-end incident tracking.
 
@@ -303,7 +303,7 @@ Remote Support is a [Microsoft Teams bot](../bots/what-are-bots.md) that provide
 :::column-end:::
 :::row-end:::
 
-## Request-a-team &#9734;
+## Request-a-team
 
 Request-a-team is a Microsoft Teams app that optimizes new team creation for your enterprise organization. The app supports standardization and best practices when creating new team instances through the integration of a wizard-guided request form, an embedded approval process, a request status dashboard, and automated team builds.
 
@@ -320,7 +320,7 @@ Request-a-team is a Microsoft Teams app that optimizes new team creation for you
 :::column-end:::
 :::row-end:::
 
-## Scrums for Channels &#9734;
+## Scrums for Channels
 
 Scrums for Channels is a scrum assistant app that enables users to schedule and run scrums in channels within Microsoft Teams. The app is great for remote teams and teams comprised of members from varied geographical locations and time zones to share daily updates and ensure participation in scrum stand-up meetings.
 
@@ -340,7 +340,7 @@ Scrums for Channels is a scrum assistant app that enables users to schedule and 
 :::column-end:::
 :::row-end:::
 
-## Scrums for Group Chat &#9734;
+## Scrums for Group Chat
 
 > [!NOTE]
 > The Scrums Status app template has been updated and is now Scrums for Group Chat.
@@ -369,7 +369,7 @@ To help alleviate this pain, we are happy to bring to you the List Search app te
 
 ![List Search app](../assets/images/list-search-template.png)
 
-## Staff Check-ins &#9734;
+## Staff Check-ins
 
 Staff Check-ins is a [Power Apps](/powerapps/powerapps-overview)-based app that enables oversight communication between your business and field personnel. Staff can easily provide time-critical information and status updates on either a scheduled or ad-hoc basis directly from Teams. The app supports real-time location, photos, and notes as well as reminder notifications and automated workflows.
 
