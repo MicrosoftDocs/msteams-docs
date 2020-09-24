@@ -81,7 +81,7 @@ It provides a foundation to build custom targeted communication capabilities suc
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
 
-![FAQ Plus gif](../assets/images/CompanyCommunicatorCompose.png)
+![jCompany Communicator compose box view](../assets/images/CompanyCommunicatorCompose.png)
 
 ## Contact Group Lookup &#9734;
 
@@ -339,7 +339,7 @@ Scrums for Channels is a scrum assistant app that enables users to schedule and 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-scrumsforchannels)
 
 > [!NOTE]
-> To conduct scrum meetings in a group chat, please see our [Scrums for Group Chat](#scrums-for-group-chat-) app template.
+> To conduct scrum meetings in a group chat, please see our [Scrums for Group Chat](#scrums-for-group-chat) app template.
 
 :::row:::
   :::column span="2":::
