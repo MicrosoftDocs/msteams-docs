@@ -18,9 +18,21 @@ App templates are production-ready apps for Microsoft Teams that are community d
 * **Customizable and extensible:** While all app templates are ready to deploy as they are, we provide the entire code base and deployment scripts so that you can easily customize or extend them to fit your unique needs.
 * **Detailed documentation & support:** All app templates are accompanied by end-to-end documentation on solution architecture, deployment, and configuration steps. The repositories are monitored as well, so please report any issues you encounter by raising an Issue on GitHub.
 
+## Ask Away
+
+Ask Away is a [Microsoft Teams bot](../bots/what-are-bots.md) that enables users to remotely orchestrate Q&A (Question and Answer) sessions within the Teams platform. Using the Ask Away bot, team members can submit questions and up-vote question shared by colleagues allowing session host to easily gather top-of-mind questions prior to the event and, because the bot runs in Teams, it can also be used to conduct real-time sessions.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-askaway)
+
+:::row:::
+  :::column span="2":::
+    ![View of the leaderboard pop-up dialog for users to vote on questions](../assets/images/ask-away-app.png)  
+:::column-end:::
+:::row-end:::
+
 ## Associate Insights
 
-Associate insights is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) template that empowers firstline workers to directly capture and submit customer opinion, sentiment, and perception. Firstline workers are often the first company representative to engage with customers in a one-to-one point-of contact. The collected data can be shared and used collaboratively by business teams, e.g., via a Power BI Teams tab, for product improvement and enhancing the customer experience.
+Associate Insights is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) template that empowers firstline workers to directly capture and submit customer opinion, sentiment, and perception. Firstline workers are often the first company representative to engage with customers in a one-to-one point-of contact. The collected data can be shared and used collaboratively by business teams, e.g., via a Power BI Teams tab, for product improvement and enhancing the customer experience.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-associateinsights)
 
@@ -37,7 +49,7 @@ Associate insights is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-ap
 
 ## Attendance
 
-The attendance app is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) tab that can be pinned in a team. It is designed to record presence, typically in settings such as learning and training environments. Users can mark or edit attendance for up to 30 days in the past and view summarized attendance reports for an entire group or individual attendees.
+The Attendance app is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) tab that can be pinned in a team. It is designed to record presence, typically in settings such as learning and training environments. Users can mark or edit attendance for up to 30 days in the past and view summarized attendance reports for an entire group or individual attendees.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-attendance)
 
