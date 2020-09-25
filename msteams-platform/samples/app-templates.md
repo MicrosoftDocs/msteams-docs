@@ -20,7 +20,7 @@ App templates are production-ready apps for Microsoft Teams that are community d
 
 ## Ask Away
 
-Ask Away is a [Microsoft Teams bot](../bots/what-are-bots.md) that enables users to conduct Q&A (Question and Answer) sessions within the Teams. Using the Ask Away bot, team members can submit queries and up-vote questions shared by colleagues allowing Q&A hosts to easily gather top-of-mind questions within a channel or chat. The bot can be used to conduct a real-time Q&A session in a Teams meeting and allows attendees to submit questions live via chat.
+Ask Away is a [Microsoft Teams bot](../bots/what-are-bots.md) that enables users to conduct Q&A (Question and Answer) sessions within Teams. Using the Ask Away bot, team members can submit queries and up-vote questions shared by colleagues allowing Q&A hosts to easily gather top-of-mind questions within a channel or chat. The bot can be used to conduct a real-time Q&A session in a Teams meeting and allows attendees to submit questions live via chat.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-askaway)
 
