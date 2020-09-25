@@ -294,7 +294,7 @@ The list card has been added by Teams to provide functions beyond what the list 
 | --- | --- | --- |
 | title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
 | items | Array of list items  ||
-| buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6. Does not render on mobile. |
+| buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6. <br/>**NOTE**: Buttons do not render on the mobile platform; however, buttons are supported on the mobile platform.|
 |
 
 ### Example List card
