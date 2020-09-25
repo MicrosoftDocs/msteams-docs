@@ -275,7 +275,7 @@ A card that typically contains a single large image, one or more buttons and tex
 Bot Framework reference:
 
 * [Hero card Node](https://docs.microsoft.com/javascript/api/botframework-schema/herocard)
-* [Hero card C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.herocard?view=botbuilder-dotnet-3.0)
+* [Hero card C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.herocard?view=botbuilder-dotnet-3.0&preserve-view=true)
 
 ## List card
 
@@ -486,8 +486,8 @@ A card that enables a bot to provide a receipt to the user. It typically contain
 
 Bot Framework reference:
 
-* [Receipt card Node](https://docs.microsoft.com/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest)
-* [Receipt card C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.receiptcard?view=botbuilder-dotnet-3.0)
+* [Receipt card Node](https://docs.microsoft.com/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
+* [Receipt card C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.receiptcard?view=botbuilder-dotnet-3.0&preserve-view=true)
 
 ## Signin card
 
@@ -506,8 +506,8 @@ The *signin action* can be used from any card in Teams, not just the signin card
 
 Bot Framework reference:
 
-* [Signin card Node](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest)
-* [Signin card C#](/dotnet/api/microsoft.bot.connector.signincard?view=botbuilder-dotnet-3.0)
+* [Signin card Node](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
+* [Signin card C#](/dotnet/api/microsoft.bot.connector.signincard?view=botbuilder-dotnet-3.0&preserve-view=true)
 
 ## Thumbnail card
 
@@ -581,8 +581,8 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 
 Bot Framework reference:
 
-* [Thumbnail card Node](https://docs.microsoft.com/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest)
-* [Thumbnail card C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.thumbnailcard?view=botbuilder-dotnet-3.0)
+* [Thumbnail card Node](https://docs.microsoft.com/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest&preserve-view=true)
+* [Thumbnail card C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.thumbnailcard?view=botbuilder-dotnet-3.0&preserve-view=true)
 
 ## Card collections
 
@@ -592,7 +592,7 @@ Card collections are provided by the Bot Framework: `builder.AttachmentLayout.ca
 
 ## Carousel collection
 
-The [carousel layout](/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card-attachments?view=azure-bot-service-3.0) shows a carousel of cards, optionally with associated action buttons.
+The [carousel layout](/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card-attachments?view=azure-bot-service-3.0&preserve-view=true) shows a carousel of cards, optionally with associated action buttons.
 
 ### Support for Carousel collections
 
