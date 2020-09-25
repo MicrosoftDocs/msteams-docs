@@ -123,4 +123,4 @@ You can access the  **Meeting options** page as follows:
 ## Next Steps
 
 > [!div class="nextstepaction"]
-> [Enable apps in Teams meetings](apps-in-teams-meetings/enable-apps-in-meetings.md)
+> [Enable apps in Teams meetings](apps-in-teams-meetings/create-apps-for-teams-meetings.md)
