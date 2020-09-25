@@ -21,7 +21,7 @@ keywords: teams apps meetings user participant role api
 
 1. Some meeting APIs, such as `GetParticipant` will require a [bot registration and bot app ID](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) to generate auth tokens.
 
-1. Developers must adhere to general [Teams tab design guidelines](../tabs/design/tabs.md) for pre- and post-meeting scenarios as well as during meetings (see [in-meeting dialog](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md) and [in-meeting tab](../apps-in-teams-meetings/design/designing-in-meeting-tab.md) design guidlines).
+1. Developers must adhere to general [Teams tab design guidelines](../tabs/design/tabs.md) for pre- and post-meeting scenarios as well as during meetings (see [in-meeting dialog](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md) and [in-meeting tab](../apps-in-teams-meetings/design/designing-in-meeting-tab.md) design guidelines).
 
 ## Meeting apps API reference
 
@@ -92,11 +92,11 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 ```json
 {
-    "meetingRole":"Presenter",
-    "conversation":{
-            "isGroup": true,
-            "id": "19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
-        }
+   "meetingRole":"Presenter",
+   "conversation":{
+      "isGroup":true,
+      "id":"19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
+   }
 }
 ```
 
@@ -106,11 +106,11 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 ```json
 {
-    "meetingRole": "Attendee",
-    "conversation": {
-        "isGroup": true,
-        "id": "19:meeting_OWIyYWVhZWMtM2ExMi00ZTc2LTg0OGEtYWNhMTM4MmZlZTNj@thread.v2"
-        }
+   "meetingRole":"Attendee",
+   "conversation":{
+      "isGroup":true,
+      "id":"19:meeting_OWIyYWVhZWMtM2ExMi00ZTc2LTg0OGEtYWNhMTM4MmZlZTNj@thread.v2"
+   }
 }
 ```
 
@@ -143,17 +143,17 @@ POST /v3/conversations/{conversationId}/activities
 
 ```json
 {
-    "type": "message",
-    "text": "John Phillips assigned you a weekly todo",
-    "summary": "Don't forget to meet with Marketing next week",
-    "channelData": {
-    "notification": {
-    "alert": true,
-    "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<TaskInfo.title>"
-    }
-},
-    "replyToId": "1493070356924"
-    }
+   "type":"message",
+   "text":"John Phillips assigned you a weekly todo",
+   "summary":"Don't forget to meet with Marketing next week",
+   "channelData":{
+      "notification":{
+         "alert":true,
+         "externalResourceUrl":"https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<TaskInfo.title>"
+      }
+   },
+   "replyToId":"1493070356924"
+}
 ```
 
 # [C#/.NET](#tab/dotnet)
