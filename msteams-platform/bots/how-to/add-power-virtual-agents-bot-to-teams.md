@@ -34,7 +34,7 @@ If [uploading custom apps is enabled](/microsoftteams/admin-settings) in your Te
 
   * Select the app store icon from the bottom of the left nav bar in your Teams instance, and search for **App Studio**.
 >
-&emsp;&emsp; <img  width="450px" src="../assets/images/get-started/app-studio-store.png" title="Finding App Studio in the Store"/>    
+&emsp;&emsp; :::image type="content" <img  width="450px" src="../assets/images/get-started/app-studio-store.png" title="Finding App Studio in the Store"/> alt-text="Finding App Studio in the Store":::   
 
   * Select the **App Studio** tile and choose **Install** in the pop-up dialog box.
 >
