@@ -153,11 +153,11 @@
             href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
           - name: 'Create a personal tab'
             href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-    - name: 'Design your tabs'
+    - name: Design your tabs
       items:
-        - name: 'Design overview'
+        - name: Design overview
           href: tabs/design/tabs.md
-        - name: 'Tabs on mobile clients'
+        - name: Tabs on mobile
           href: tabs/design/tabs-mobile.md
     - name: 'How-to guides'
       expanded: true
