@@ -76,7 +76,7 @@ During the account verification process the status of each required step —  Em
 During the **Email Ownership** verification process, a verification email is sent to the primary contact email address. Please check your primary contact inbox for an email  from **maccount@<span>microsoft</span>.com** with the subject  line *Action needed: Verify your email account with Microsoft*, requesting that you complete the email verification process. The verification email will be sent to the email address listed  in your account settings page in Partner Center.
 
 > [!NOTE]
- >The email verification link is only valid for 7 days. You can request that we resend the email to you by visiting your partner profile page and selecting the **Resend verification email** link. To ensure that the email is received, whitelist email from microsoft.com as a safe domain, and check your junk email folders.
+ >The email verification link is only valid for 7 days. You can request that we resend the email to you by visiting your partner profile page and selecting the **Resend verification email** link. To ensure that the email is received, safelist email from microsoft.com as a secure domain, and check your junk email folders.
 
 ## How I do get further support for my account related issues?
 
@@ -90,7 +90,7 @@ Please try the following:
 1. Clear the browser cache, go to your Partner Center account dashboard, and select  the **Resend verification email** link to have the verification email resent to your email address.
 1. Try accessing the  **Resend verification email** link  from a different browser.
 1. Work with your IT department to ensure that the verification emails are not blocked by the email server.
-1. Adjust your server's spam filter to allow/whitelist all emails from **maccount@microsoft.<span></span>com**.
+1. Adjust your server's spam filter to allow/safelist all emails from **maccount@microsoft.<span></span>com**.
 
 ## How long does the employment verification process usually take?
 
