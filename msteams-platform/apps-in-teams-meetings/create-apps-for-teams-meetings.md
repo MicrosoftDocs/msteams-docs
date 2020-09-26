@@ -148,7 +148,7 @@ POST /v3/conversations/{conversationId}/activities
     "summary": "Don't forget to meet with Marketing next week",
     "channelData": {
     "notification": {
-    "alert": true,
+    "alertInMeeting": true,
     "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<TaskInfo.title>"
     }
 },
@@ -226,7 +226,7 @@ The meetings app capabilities are declared in your app manifest via the **config
 
 ### Context property
 
-The tab `context` and `scopes` properties work in harmony to allow you to determine where you want your app to appear. While tabs in the `personal` scope can only have one context, i.e., `personalTab`,  `team` or `groupchat` scoped tabs can have more than one context. The possible values for the context property are as follows:
+The tab `context` and `scopes` properties work in harmony to allow you to determine where you want your app to appear. Tabs in the `team` or `groupchat` scope can have more than one context. The possible values for the context property are as follows:
 
 * **channelTab**: a tab in the header of a team channel.
 * **privateChatTab**: a tab in the header of a group chat between a set of users not in the context of a team or meeting.
@@ -251,9 +251,9 @@ Users with organizer and/or presenter roles add tabs to a meeting using the plus
 
 ### In-meeting
 
-#### **side-panel**
+#### **sidePanel**
 
-✔ In your app manifest add **sidePanel** to the **meetingSurfaces** array as described above.
+✔ In your app manifest add **sidePanel** to the **context** array as described above.
 
 ✔ In the meeting as well as in all scenarios, the app will be rendered in an in-meeting tab that is 320px in width. Your tab must be optimized for this. *See*, [FrameContext interface](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)
 
