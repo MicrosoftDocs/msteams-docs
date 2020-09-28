@@ -43,7 +43,9 @@ At a high level, the import process consists of the following:
 
 Since existing data is being migrated, maintaining the original message timestamps and preventing messaging activity during the migration process are key to recreating the user's existing message flow in Teams. This is achieved as follows:
 
-1. [Create a new team](/graph/api/team-post?view=graph-rest-beta&tabs=http) with a back-in-time timestamp using the team resource  `createdDateTime`  property.  
+1. [Create a new team](/graph/api/team-post?view=graph-rest-beta&tabs=http) with a back-in-time timestamp using the team resource  `createdDateTime`  property. 
+
+> **NOTE**:  The `createdDateTime` field will only be populated for instances of a team or channel that are migrated.
 
 1. Place the new team in `migration mode`, a special state that bars users from most activities within the team until the migration process is complete. Include the `teamCreationMode` instance attribute with the `migration` value in the POST request to explicitly identify the new team as being created for migration.  
 
@@ -319,12 +321,13 @@ You can add a member to a team [using the Teams UI](https://support.microsoft.co
 #### Request (add member)
 
 ```http
-POST https://graph.microsoft.com/beta/groups/{id}/members/$ref
+POST https://graph.microsoft.com/beta/teams/{id}/members
 Content-type: application/json
 Content-length: 30
-
 {
-  "@odata.id": "https://graph.microsoft.com/beta/directoryObjects/{id}"
+"@odata.type": "#microsoft.graph.aadUserConversationMember",
+"roles": [],
+"user@odata.bind": "https://graph.microsoft.com/beta/users/{user-id}"
 }
 ```
 
