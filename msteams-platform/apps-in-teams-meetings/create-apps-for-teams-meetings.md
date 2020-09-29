@@ -205,7 +205,7 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
 The meetings app capabilities are declared in your app manifest via the **configurableTabs** -> **scopes** and **context** arrays. *Scope* defines to whom and *context* defines where your app will be available.
 
 > [!NOTE]
-> Please use [Developer Preview manifest schema](~/resources/dev-preview/manifest-schema-dev-preview.md) to try this in your app manifest.
+> Please use [Developer Preview manifest schema](~/resources/schema/manifest-schema-dev-preview.md) to try this in your app manifest.
 
 ```json
 "configurableTabs": [
