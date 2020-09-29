@@ -278,7 +278,7 @@ Users with organizer and/or presenter roles add tabs to a meeting using the plus
 
 The post-meeting and pre-meeting configurations are equivalent.
 
-## Meeting app sample
+## Meeting app sample 
 
  > [!div class="nextstepaction"]
 > [Meeting token generator app](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token)
