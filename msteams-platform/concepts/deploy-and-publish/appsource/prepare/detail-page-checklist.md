@@ -103,7 +103,7 @@ Here's a view in [App Studio](https://aka.ms/InstallTeamsAppStudio):
 
 > [!div class="checklist"]
 >
->* This provides an engaging narrative highlighting your solution's main features, the problems it solves, and the target audience. Draw in your audience with the first sentence by communicating your app's unique features. Your description must be under 4000 characters. Note that most users will only read between 300 and 500 words.
+>* This provides an engaging narrative highlighting your solution's main features, the problems it solves, and the target audience. Draw in your audience with the first sentence by communicating your app's unique features. Your description must be under 4000 characters; most users will only read between 300 and 500 words.
 >* What is allowed?
 
 * `<your_app>`  "works with Microsoft Teams"
@@ -118,7 +118,7 @@ Here's a view in [App Studio](https://aka.ms/InstallTeamsAppStudio):
 * "…developed for…"
 * "…designed for…"
 
-> Note: The above terms also apply to the use of Microsoft 365. Office 365 is now called Microsoft 365. Please update your app descriptions to reflect this.
+> **Note**: The above terms also apply to the use of Microsoft 365. Office 365 is now called Microsoft 365. Please update your app descriptions to reflect this.
 
 >[!IMPORTANT]
 > Make sure to precisely copy the descriptions you wrote in your AppSource entry to your app manifest — the values must match. Microsoft Teams will only use the descriptions you provide in the app manifest.
@@ -201,7 +201,7 @@ For more best practices, *see*: [Crafting effective AppSource store images](/off
 
 ## Videos
 
-If an image is worth a thousand words, then a video is worth a thousand images. Videos are the most effective way to communicate the benefits of using your app. It will be placed in front of all your screenshots on the app details page. Make sure you talk about:
+If an image is worth a thousand words, then a video is worth a thousand images. Videos are the most effective way to communicate the benefits of using your app. It will be placed in front of all your screenshots on the app details page. Make sure you mention the following:
 
 * How your app works.
 * What can be achieved with your app.
