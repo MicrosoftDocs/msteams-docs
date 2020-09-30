@@ -9,9 +9,6 @@ ms.author: lajanuar
 
 # Adding a Microsoft Teams tab in SharePoint as an SPFx web part
 
-> [!IMPORTANT]
-> This feature is currently in preview and is subject to change. It is not supported for use in production environments. Your feedback and input around this capability is welcome using the [SharePoint Dev Docs issue list](https://github.com/SharePoint/sp-dev-docs/issues).
-
 ## Rich integration between Teams and SharePoint
 
 With the November release of Teams and SharePoint Framework v. 1.7, developers have two powerful capabilities:
