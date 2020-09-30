@@ -70,7 +70,7 @@ Building Access is a Microsoft [Power Platform](https://powerapps.microsoft.com/
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-buildingaccess)
 
 :::row:::
-   :::column span="2":::
+   :::column span="":::
      ![Building Access reservation card](../assets/images/building-access-reservation.png)
    :::column-end:::
    :::column span="":::
