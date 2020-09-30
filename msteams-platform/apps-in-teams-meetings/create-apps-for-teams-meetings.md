@@ -6,10 +6,10 @@ ms.topic: conceptual
 ms.author: lajanuar
 keywords: teams apps meetings user participant role api 
 ---
-# Create apps for Teams meetings (Preview)
+# Create apps for Teams meetings (Release Preview)
 
 >[!IMPORTANT]
-> Features included in Microsoft Teams preview are provided for early-access, testing, and feedback purposes only. They may undergo changes before becoming available in the public release and should not be used in production applications.
+> Features highlighted in Microsoft Teams Release Preview are provided for early insight and feedback purposes only. They may undergo changes before they can be enabled.
 
 ## Prerequisites and considerations
 
@@ -21,7 +21,7 @@ keywords: teams apps meetings user participant role api
 
 1. Some meeting APIs, such as `GetParticipant` will require a [bot registration and bot app ID](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) to generate auth tokens.
 
-1. Developers must adhere to general [Teams tab design guidelines](../tabs/design/tabs.md) for pre- and post-meeting scenarios as well as the [in-meeting dialog guidelines](designing-in-meeting-dialog.md) for in-meeting dialog triggered during a Teams meeting.
+1. Developers must adhere to general [Teams tab design guidelines](../tabs/design/tabs.md) for pre- and post-meeting scenarios as well as the [in-meeting dialog guidelines](design/designing-in-meeting-dialog.md) for in-meeting dialog triggered during a Teams meeting.
 
 ## Meeting apps API reference
 
@@ -106,11 +106,11 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 ```json
 {
-    "meetingRole": "Attendee",
-    "conversation": {
-        "isGroup": true,
-        "id": "19:meeting_OWIyYWVhZWMtM2ExMi00ZTc2LTg0OGEtYWNhMTM4MmZlZTNj@thread.v2"
-        }
+   "meetingRole":"Presenter",
+   "conversation":{
+      "isGroup":true,
+      "id":"19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
+   }
 }
 ```
 
@@ -266,7 +266,7 @@ Users with organizer and/or presenter roles add tabs to a meeting using the plus
 
 #### **in-meeting dialog**
 
-✔ You must adhere to the [in-meeting dialog design guidelines](designing-in-meeting-dialog.md).
+✔ You must adhere to the [in-meeting dialog design guidelines](design/designing-in-meeting-dialog.md).
 
 ✔ Refer to the [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md).
 
@@ -275,7 +275,10 @@ Users with organizer and/or presenter roles add tabs to a meeting using the plus
 ✔ As part of the notification request payload, include the URL where the content to be showcased is hosted.
 
 > [!NOTE]
-> These notifications are persistent in nature. You must invoke the [**submitTask()**](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) function to auto-dismiss after a user takes an action in the web-view. This is a requirement for app submission. *See also*, [Teams SDK: task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
+>
+> * These notifications are persistent in nature. You must invoke the [**submitTask()**](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) function to auto-dismiss after a user takes an action in the web-view. This is a requirement for app submission. *See also*, [Teams SDK: task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
+>
+> * If you want your app to support anonymous users, your initial invoke request payload must rely on the `from.id`  (ID of the user) request metadata in the `from` object, not the `from.aadObjectId` (Azure Active Directory ID of the user) request metadata. *See* [Using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [Create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ### Post-meeting
 
