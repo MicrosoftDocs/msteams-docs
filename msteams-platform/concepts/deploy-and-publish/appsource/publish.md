@@ -24,7 +24,7 @@ Publishing  your app to [AppSource](https://appsource.microsoft.com) makes it av
 >- If your app contains an Office 365 Connector, additional terms may apply. *See* [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard) and [App Developer Agreement](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm).
 >- To make your app available for GCC users and avoid duplicate app listings in the store, the auth process/flow should identify and route the user to the specified/expected content URL for GCC users.
 
-## FAQs — Teams apps and partner accounts
+## FAQs — Teams apps and Partner account verification process in Partner Center
 
 ## How do I create a Partner Center account?
 
@@ -43,11 +43,11 @@ Please open a [Partner Center support ticket](https://partner.microsoft.com/supp
 | Topic | General Marketplace Help and How-to questions |
 | Subtopic| Office add-in |
 
-## Where can I get support for my Partner Center issues?
+## Where can I get support for my Partner Center account issues?
 
 Please visit our [publishers support page](https://aka.ms/marketplacepublishersupport) to search for your issue topic and find guidance. If the provided guidance is not helpful, [open a Partner Center support ticket](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket).
 
-## How do I manage my Office Store account?
+## How do I manage my Office Store account in Partner Center?
 
 Please visit our  [Manage your Office Store account in Partner Center](/office/dev/store/manage-account-settings-and-profile) for guidance on managing your Office Store account through Partner Center.
 
@@ -71,12 +71,12 @@ During the account verification process the status of each required step —  Em
 
 ![Partner Center verification error](../../../assets/images/partner-center-acct-verification-error.png)
 
-## My account Verification status has not advanced beyond Email Ownership. How should I proceed?
+## My account Verification status has not advanced beyond Email Ownership in Partner Center. How should I proceed?
 
 During the **Email Ownership** verification process, a verification email is sent to the primary contact email address. Please check your primary contact inbox for an email  from **maccount@<span>microsoft</span>.com** with the subject  line *Action needed: Verify your email account with Microsoft*, requesting that you complete the email verification process. The verification email will be sent to the email address listed  in your account settings page in Partner Center.
 
 > [!NOTE]
- >The email verification link is only valid for 7 days. You can request that we resend the email to you by visiting your partner profile page and selecting the **Resend verification email** link. To ensure that the email is received, whitelist email from microsoft.com as a safe domain, and check your junk email folders.
+ >The email verification link is only valid for 7 days. You can request that we resend the email to you by visiting your partner profile page and selecting the **Resend verification email** link. To ensure that the email is received, safelist email from microsoft.com as a secure domain, and check your junk email folders.
 
 ## How I do get further support for my account related issues?
 
@@ -90,7 +90,7 @@ Please try the following:
 1. Clear the browser cache, go to your Partner Center account dashboard, and select  the **Resend verification email** link to have the verification email resent to your email address.
 1. Try accessing the  **Resend verification email** link  from a different browser.
 1. Work with your IT department to ensure that the verification emails are not blocked by the email server.
-1. Adjust your server's spam filter to allow/whitelist all emails from **maccount@microsoft.<span></span>com**.
+1. Adjust your server's spam filter to allow/safelist all emails from **maccount@microsoft.<span></span>com**.
 
 ## How long does the employment verification process usually take?
 
