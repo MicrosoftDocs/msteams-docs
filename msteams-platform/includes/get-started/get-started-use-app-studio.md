@@ -32,15 +32,15 @@ The name of the generated app package is *helloworldapp.zip*. You can search for
 
 In the next part of this walkthrough you are going to modify this app package by selecting the *Import an existing app* tile in the Manifest Editor.
 
-<img  width="450px" alt="Importing an app" src="~/assets/images/get-started/Importinganapp.png"/>
+<img  width="450px" alt="Importing an existing app" src="~/assets/images/get-started/Importinganapp.png"/>
 
 Once the app package has been imported App Studio should look like this:
 
-<img  width="450px" alt="Importing an app" src="~/assets/images/get-started/Importinganapp2.png"/>
+<img  width="450px" alt="Importing the app package" src="~/assets/images/get-started/Importinganapp2.png"/>
 
 Click on the tile for your newly imported app, *Hello World*.
 
-<img  width="450px" alt="Importing an app" src="~/assets/images/get-started/HelloWorldappdetails.png"/>
+<img  width="450px" alt="Newly imported app view" src="~/assets/images/get-started/HelloWorldappdetails.png"/>
 
 There is a list of steps in the left-hand side of the Manifest editor, and on the right a list of properties that need to be filled in for each of those steps. Since you started with a sample app, much of the information is already filled out. The next steps will walk you through changing the parts that still need to be updated.
 
