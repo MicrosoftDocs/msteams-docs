@@ -63,6 +63,21 @@ Book-a-room is a [Microsoft Teams bot](../bots/what-are-bots.md) that lets users
 
 ![Book-a-room demo](../assets/images/book-a-room.png)
 
+## Building Access &#9734;
+
+Building Access is a Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)-based app that supports the administration of building occupancy thresholds and social distancing norms by enabling facilities directors to manage, track, and report employee on-site presence. The app, built using Microsoft [Power Apps](/powerapps/powerapps-overview), and [Power Automate](/power-automate/getting-started), deeply integrates with Microsoft Teams and enables organizations to determine building readiness, establish eligibility criteria for on-site access, and gather insights for future planning.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-buildingaccess)
+
+:::row:::
+   :::column span="":::
+     ![Building Access reservation card](../assets/images/building-access-reservation.png)
+   :::column-end:::
+   :::column span="":::
+      ![Building Access key view](../assets/images/building-access-access-key.png)
+   :::column-end:::
+:::row-end:::
+
 ## Celebrations
 
 Celebrations is a Teams app that helps team members celebrate each others' birthdays, anniversaries, and other recurring events. It remembers special occasions of all the team members and sends a friendly message in all the teams selected at the time of event creation, to make the team members feel special on their day.
