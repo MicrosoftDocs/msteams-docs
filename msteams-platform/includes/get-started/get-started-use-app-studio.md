@@ -4,7 +4,7 @@ App Studio is a Teams app that you can install from the Teams store. It simplifi
 
 To install App Studio in Teams, click on the app store icon at the bottom of the left hand bar, and search for App Studio.
 
-<img  width="450px" title="Finding App Studio in the Store" src="~/assets/images/get-started/searchforAppStudio.png"/>
+<img  width="450px" alt="Finding App Studio in the Store View" src="~/assets/images/get-started/searchforAppStudio.png"/>
 
 Once you find the tile for App Studio, click on it and choose *install* in the dialog that pops up.
 
@@ -143,7 +143,7 @@ Click on the *Test and distribute* item under *Finish* in the left hand column o
 
 In order to upload your app to Teams, click the *Install* button under *Test and Distribute*.
 
-<img  width="450px" title="Adding a messaging extension dialog" src="~/assets/images/get-started/app-studio-manifest-editor-test-dialog.png"/>
+<img  width="450px" title="Adding a messaging extension dialog" src="~/assets/images/get-started/InstallingHelloWorld.png"/>
 
 Click on the *Search* box in the *Add to a team* section and select a team to add the sample app to. Usually you will want to set up a special team for testing.
 
