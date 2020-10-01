@@ -59,8 +59,8 @@ Here's how the icons would appear in the UI:
 
 #### Flyout
 
-![Sample Contoso icons](~/assets/images/icons/flyout.png)
+![Sample Contoso flyout](~/assets/images/icons/flyout.png)
 
 #### App bar and home screen
 
-![Sample Contoso icons](~/assets/images/icons/appbarhomescreen.png)
+![Sample Contoso app bar homescreen](~/assets/images/icons/appbarhomescreen.png)
