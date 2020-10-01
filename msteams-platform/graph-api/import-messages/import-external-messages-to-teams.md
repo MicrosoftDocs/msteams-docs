@@ -43,7 +43,7 @@ At a high level, the import process consists of the following:
 
 Since existing data is being migrated, maintaining the original message timestamps and preventing messaging activity during the migration process are key to recreating the user's existing message flow in Teams. This is achieved as follows:
 
-1. [Create a new team](/graph/api/team-post?view=graph-rest-beta&tabs=http) with a back-in-time timestamp using the team resource  `createdDateTime`  property. 
+1. [Create a new team](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) with a back-in-time timestamp using the team resource  `createdDateTime`  property. 
 
 > **NOTE**:  The `createdDateTime` field will only be populated for instances of a team or channel that are migrated.
 
@@ -68,9 +68,12 @@ Content-Type: application/json
   "template@odata.bind": "https://graph.microsoft.com/beta/teamsTemplates('standard')",
   "displayName": "My Sample Team",
   "description": "My Sample Team’s Description"
-  "createdDateTime": "2020-03-14T11:22:17.067Z"
+  "createdDateTime": "2020-03-14T11:22:17.043B"
 }
 ```
+
+> [!NOTE]
+> createDateTime must be unique across messages in the same thread. 
 
 #### Response
 
@@ -91,9 +94,9 @@ Content-Location: /teams/{teamId}
 
 ## Step Two: Create a channel
 
-Creating a channel for the imported messages is similar to the create team scenario: 
+Creating a channel for the imported messages is similar to the create team scenario:
 
-1. [Create a new channel](/graph/api/channel-post?view=graph-rest-beta&tabs=http) with a back-in-time timestamp using the channel resource `createdDateTime` property.
+1. [Create a new channel](/graph/api/channel-post?view=graph-rest-beta&tabs=http&preserve-view=true) with a back-in-time timestamp using the channel resource `createdDateTime` property.
 
 1. Place the new channel in `migration mode`, a special state that bars users from most chat activities within the channel until the migration process is complete.  Include the `channelCreationMode` instance attribute with the `migration` value in the POST request to explicitly identify the new team as being created for migration.  
 <!-- markdownlint-disable MD024 -->
@@ -114,7 +117,7 @@ Content-Type: application/json
   "displayName": "Architecture Discussion",
   "description": "This channel is where we debate all future architecture plans",
   "membershipType": "standard",
-  "createdDateTime": "2020-03-14T11:22:17.067Z"
+  "createdDateTime": "2020-03-14T11:22:17.047Y"
 }
 ```
 
@@ -137,7 +140,7 @@ Content-Location: /teams/{teamId}/channels/{channelId}
 
 ## Step Three: Import messages
 
-After the team and channel have been created, you can begin sending back-in-time messages using the `createdDateTime`  and `from`  keys in the request body.
+After the team and channel have been created, you can begin sending back-in-time messages using the `createdDateTime`  and `from`  keys in the request body. **NOTE**: messages imported with `createdDateTime` earlier than the message thread `createdDateTime` is not supported.
 
 #### Request (POST message that is text-only)
 
@@ -186,7 +189,7 @@ HTTP/1.1 200 OK
     "replyToId": null,
     "etag": "id-value",
     "messageType": "message",
-    "createdDateTime": "2019-02-04T19:58:15.511Z",
+    "createdDateTime": "2019-02-04T19:58:15.98T",
     "lastModifiedDateTime": null,
     "deleted": false,
     "subject": null,
@@ -312,11 +315,11 @@ HTTP/1.1 204 NoContent
 400 Bad Request
 ```
 
-* Action called on a `team` or `channel` that is not in `migrationMode`.
+* Action called on a `team` or `channel` that is not in `migrationMode` or the action is called on a channel that belongs to a team still in migration mode.
 
 ## Step Five: Add team members
 
-You can add a member to a team [using the Teams UI](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) or Microsoft Graph [Add member](/graph/api/group-post-members?view=graph-rest-beta&tabs=http) API:
+You can add a member to a team [using the Teams UI](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) or Microsoft Graph [Add member](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true) API:
 
 #### Request (add member)
 
@@ -342,7 +345,7 @@ HTTP/1.1 204 No Content
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD026 -->
 
-* You can import messages from users who are not in Teams.
+* You can import messages from users who are not in Teams. **NOTE**: Messages imported for users not present in the tenant will not be searchable in theTeams client or compliance portals during Public Preview.
 
 * Once the `completeMigration` request is made, you cannot import further messages into the team.
 
