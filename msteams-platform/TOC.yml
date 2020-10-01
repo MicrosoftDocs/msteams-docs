@@ -328,6 +328,8 @@
     items:
     - name: Understanding AppSource submission 
       href: concepts/deploy-and-publish/appsource/publish.md
+    - name: Pre-submission checklist
+      href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
     - name: App detail page checklist
       href: concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md
     - name: App manifest checklist
