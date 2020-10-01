@@ -34,11 +34,12 @@ If [uploading custom apps is enabled](/microsoftteams/admin-settings) in your Te
 
   * Select the app store icon from the bottom of the left nav bar in your Teams instance, and search for **App Studio**.
 >
-&emsp;&emsp; <img  width="450px" title="Finding App Studio in the Store" src="../../assets/images/get-started/app-studio-store.png" alt="app in studio store view"/>    
+
+&emsp;&emsp; <img  width="450px" alt="Finding App Studio in the Store" src="/msteams-docs/msteams-platform/assets/images/get-started/app-studio-store.png"/>   
 
   * Select the **App Studio** tile and choose **Install** in the pop-up dialog box.
 >
-&emsp;&emsp; <img  width="450px" title="Installing App Studio" src="../../assets/images/get-started/app-studio-install.png" alt="install app studio view"/>
+&emsp;&emsp; <img  width="450px" alt="Installing App Studio" src="../../assets/images/get-started/app-studio-install.png"/>
 
 2. **Create the Teams app manifest in App Studio**.  Bots in Teams are defined by an app manifest (JSON) file that provides basic information about your bot and its capabilities. In **App Studio** select **Manifest editor**  => **Create a new app**.
 3. **Add your bot details**. For a full descriptions of each field see [manifest schema definition](../../resources/schema/manifest-schema.md). Be sure to complete all required fields.
