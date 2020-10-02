@@ -1,6 +1,6 @@
 ---
 title: Features in the Public Developer Preview
-description: Describes the features in the Public Developer Preview of Microsoft Teams
+description: Details the features in the Microsoft Teams Public Developer Preview
 keywords: teams preview developer features
 ---
 

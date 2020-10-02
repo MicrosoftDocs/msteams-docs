@@ -18,9 +18,21 @@ App templates are production-ready apps for Microsoft Teams that are community d
 * **Customizable and extensible:** While all app templates are ready to deploy as they are, we provide the entire code base and deployment scripts so that you can easily customize or extend them to fit your unique needs.
 * **Detailed documentation & support:** All app templates are accompanied by end-to-end documentation on solution architecture, deployment, and configuration steps. The repositories are monitored as well, so please report any issues you encounter by raising an Issue on GitHub.
 
+## Ask Away &#9734;
+
+Ask Away is a [Microsoft Teams bot](../bots/what-are-bots.md) that enables users to conduct Q&A (Question and Answer) sessions within Teams. Using the Ask Away bot, team members can submit and up-vote questions shared by colleagues allowing Q&A hosts to easily gather top-of-mind questions within a channel or chat. The bot can be used to conduct a real-time Q&A session in a Teams meeting and allows attendees to submit questions live via chat.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-askaway)
+
+:::row:::
+  :::column span="2":::
+    ![View of the leaderboard pop-up dialog for users to vote on questions](../assets/images/ask-away-app.png)  
+:::column-end:::
+:::row-end:::
+
 ## Associate Insights
 
-Associate insights is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) template that empowers firstline workers to directly capture and submit customer opinion, sentiment, and perception. Firstline workers are often the first company representative to engage with customers in a one-to-one point-of contact. The collected data can be shared and used collaboratively by business teams, e.g., via a Power BI Teams tab, for product improvement and enhancing the customer experience.
+Associate Insights is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) template that empowers firstline workers to directly capture and submit customer opinion, sentiment, and perception. Firstline workers are often the first company representative to engage with customers in a one-to-one point-of contact. The collected data can be shared and used collaboratively by business teams, e.g., via a Power BI Teams tab, for product improvement and enhancing the customer experience.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-associateinsights)
 
@@ -37,7 +49,7 @@ Associate insights is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-ap
 
 ## Attendance
 
-The attendance app is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) tab that can be pinned in a team. It is designed to record presence, typically in settings such as learning and training environments. Users can mark or edit attendance for up to 30 days in the past and view summarized attendance reports for an entire group or individual attendees.
+The Attendance app is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) tab that can be pinned in a team. It is designed to record presence, typically in settings such as learning and training environments. Users can mark or edit attendance for up to 30 days in the past and view summarized attendance reports for an entire group or individual attendees.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-attendance)
 
@@ -50,6 +62,21 @@ Book-a-room is a [Microsoft Teams bot](../bots/what-are-bots.md) that lets users
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom)
 
 ![Book-a-room demo](../assets/images/book-a-room.png)
+
+## Building Access &#9734;
+
+Building Access is a Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)-based app that supports the administration of building occupancy thresholds and social distancing norms by enabling facilities directors to manage, track, and report employee on-site presence. The app, built using Microsoft [Power Apps](/powerapps/powerapps-overview), and [Power Automate](/power-automate/getting-started), deeply integrates with Microsoft Teams and enables organizations to determine building readiness, establish eligibility criteria for on-site access, and gather insights for future planning.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-buildingaccess)
+
+:::row:::
+   :::column span="":::
+     ![Building Access reservation card](../assets/images/building-access-reservation.png)
+   :::column-end:::
+   :::column span="":::
+      ![Building Access key view](../assets/images/building-access-access-key.png)
+   :::column-end:::
+:::row-end:::
 
 ## Celebrations
 
@@ -69,7 +96,7 @@ It provides a foundation to build custom targeted communication capabilities suc
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
 
-![FAQ Plus gif](../assets/images/CompanyCommunicatorCompose.png)
+![jCompany Communicator compose box view](../assets/images/CompanyCommunicatorCompose.png)
 
 ## Contact Group Lookup &#9734;
 
@@ -150,7 +177,7 @@ Conversational Q&A bots are an easy way to provide answers to frequently asked q
 
 ![FAQ Plus gif](../assets/images/FAQPlusEndUser.gif)
 
-## Goal Tracker &#9734;
+## Goal Tracker
 
 The Goal Tracker app is a comprehensive solution for your organization to support establishing goals, observing progress, and acknowledging success within Microsoft Teams. The app enables users to set, track, and update objectives on a professional, personal, and team level. Team members also receive timely reminders and status updates to remain focused and stay on track.
 
@@ -167,7 +194,7 @@ The Goal Tracker app is a comprehensive solution for your organization to suppor
 :::column-end:::
 :::row-end:::
 
-## Great Ideas &#9734;
+## Great Ideas
 
 The Great Ideas app supports and empowers innovation and creativity within your organization. The app enables your employees to share ideas with colleagues and leadership, discover new submissions, spotlight contributions for peer consideration, and cast their vote for the best proposals within Microsoft Teams.
 
@@ -201,7 +228,7 @@ Group Activities is a Microsoft Teams app that makes it easy for team owners to 
 :::column-end:::
 :::row-end:::
 
-## Grow Your Skills &#9734;
+## Grow Your Skills
 
 The Grow Your Skills app supports professional growth and development by enabling employees to contribute to supplemental projects for your organization while simultaneously learning new skills. Employees can use the app to locate opportunities that meet their interests, enjoy meaningful collaboration with peers, and acquire new levels of expertise and capabilities, all within the Teams environment.
 
@@ -244,7 +271,7 @@ Incentives is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) templ
 
 ![Incentives app demo](../assets/images/incentives-app.png)
 
-## Incident Reporter &#9734;
+## Incident Reporter 
 
 Incident Reporter is a [Microsoft Teams bot](../bots/what-are-bots.md)  that optimizes the management of incidents in your organization. The bot facilitates automated incident data collection, customized incident reports, relevant stakeholder notifications, and end-to-end incident tracking.
 
@@ -286,7 +313,7 @@ Quick Responses is a Microsoft Teams app that delivers a robust solution for eff
 
 ![Sample view of responses](../assets/images/quick-responses.png)
 
-## Remote Support &#9734;
+## Remote Support
 
 Remote Support is a [Microsoft Teams bot](../bots/what-are-bots.md) that provides a focused interface between support requesters throughout your organization and the internal support team.  End-users can submit, edit, or withdraw requests for support and the support team can respond, manage, and update requests all within the Teams platform.
 
@@ -303,7 +330,7 @@ Remote Support is a [Microsoft Teams bot](../bots/what-are-bots.md) that provide
 :::column-end:::
 :::row-end:::
 
-## Request-a-team &#9734;
+## Request-a-team
 
 Request-a-team is a Microsoft Teams app that optimizes new team creation for your enterprise organization. The app supports standardization and best practices when creating new team instances through the integration of a wizard-guided request form, an embedded approval process, a request status dashboard, and automated team builds.
 
@@ -320,14 +347,14 @@ Request-a-team is a Microsoft Teams app that optimizes new team creation for you
 :::column-end:::
 :::row-end:::
 
-## Scrums for Channels &#9734;
+## Scrums for Channels
 
 Scrums for Channels is a scrum assistant app that enables users to schedule and run scrums in channels within Microsoft Teams. The app is great for remote teams and teams comprised of members from varied geographical locations and time zones to share daily updates and ensure participation in scrum stand-up meetings.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-scrumsforchannels)
 
 > [!NOTE]
-> To conduct scrum meetings in a group chat, please see our [Scrums for Group Chat](#scrums-for-group-chat-) app template.
+> To conduct scrum meetings in a group chat, please see our [Scrums for Group Chat](#scrums-for-group-chat) app template.
 
 :::row:::
   :::column span="2":::
@@ -340,7 +367,7 @@ Scrums for Channels is a scrum assistant app that enables users to schedule and 
 :::column-end:::
 :::row-end:::
 
-## Scrums for Group Chat &#9734;
+## Scrums for Group Chat
 
 > [!NOTE]
 > The Scrums Status app template has been updated and is now Scrums for Group Chat.
@@ -369,7 +396,7 @@ To help alleviate this pain, we are happy to bring to you the List Search app te
 
 ![List Search app](../assets/images/list-search-template.png)
 
-## Staff Check-ins &#9734;
+## Staff Check-ins
 
 Staff Check-ins is a [Power Apps](/powerapps/powerapps-overview)-based app that enables oversight communication between your business and field personnel. Staff can easily provide time-critical information and status updates on either a scheduled or ad-hoc basis directly from Teams. The app supports real-time location, photos, and notes as well as reminder notifications and automated workflows.
 
