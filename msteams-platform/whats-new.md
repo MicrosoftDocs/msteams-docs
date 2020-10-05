@@ -14,6 +14,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+|10/05/2020| Manifest Schema updated to version 1.8| [Reference: Manifest schema for Microsoft Teams](resources/schema/manifest-schema.md)|
 |09/22/2020|New "Get Started with Teams" guidance|[Build your first Teams app overview](build-your-first-app/build-first-app-overview.md)|
 |9/18/2020|Support for in-meeting Teams apps (Release Preview)|[Create apps for Teams meetings](apps-in-teams-meetings/create-apps-for-teams-meetings.md) and [Apps in Teams meetings](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |8/19/2020|Import Teams messages with Microsoft Graph|[Import third-party platform messages to Teams using Microsoft Graph](graph-api/import-messages/import-external-messages-to-teams.md)
