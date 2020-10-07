@@ -104,7 +104,7 @@ Visual Studio has built-in support for app deployment to different providers, in
 
 <img width="530px" src="~/assets/images/get-started/publishtoazure1.png" title="Visual Studio"/>
 
-[!include[Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
+[!include [Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
 
 ## Update the credentials for your hosted app
 
