@@ -1,7 +1,7 @@
 ---
 title: Build a great app details page
 description: Describes requirements for app details page
-keywords: teams publish store office publishing policy AppSource content
+keywords: teams publish store office publishing policy AppSource content Metadata screenshot logo description app name icons short description
 ---
 
 # Build a great app details page
