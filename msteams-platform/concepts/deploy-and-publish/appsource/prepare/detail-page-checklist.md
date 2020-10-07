@@ -1,7 +1,7 @@
 ---
 title: Build a great app details page
 description: Describes requirements for app details page
-keywords: teams publish store office publishing policy AppSource content
+keywords: teams publish store office publishing policy AppSource content app manifest metadata app name description icon
 ---
 
 # Build a great app details page
@@ -86,7 +86,7 @@ This is a concise summary of your app. You want it to be original, engaging, and
 **Don'ts:**
 
 * Don't repeat the title.
-* Don't abbreviate Microsoft to "MS".
+* Don't abbreviate Microsoft to "MS" or "MSFT".
 * Don't use jargon or specialized terminology — you can't assume that users know what to look for.
 * Avoid unnecessary reference to Microsoft product names unless absolutely necessary.
 * Don't indicate or imply that the app is an offering from Microsoft.
