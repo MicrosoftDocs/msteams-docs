@@ -102,7 +102,7 @@ Microsoft Azure lets you host your .NET application on a free tier using shared 
 
 Visual Studio has built-in support for app deployment to different providers, including Azure.
 
-<img width="530px" src="~/assets/images/get-started/publishtoazure1.png" title="Visual Studio"/>
+<img width="530px" alt="Visual Studio" src="~/assets/images/get-started/publishtoazure1.png"/>
 
 [!include [Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
 
