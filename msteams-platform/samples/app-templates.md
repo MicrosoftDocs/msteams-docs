@@ -86,6 +86,18 @@ The app provides an easy interface for all the team members to personally add an
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-celebrations-app)
 
+## Checklist &#9734;
+
+Checklist is a custom [Microsoft Teams message extension](../messaging-extensions/what-are-messaging-extensions.md) app that enables you to collaborate with your team by creating a shared checklist in a chat or channel. Checklist app is supported across all platforms – Teams desktop, browser, iOS, and Android clients. It is ready for deployment as part of your existing Microsoft 365 subscription.  
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-checklist-app )
+
+:::row:::
+:::column span="2":::
+    ![Create a checklist in Teams view](../assets/images/checklist-app-template-compose-view)  
+:::column-end:::
+:::row-end:::
+
 ## Company Communicator
 
 The Company Communicator app enables corporate teams to create and send messages intended for multiple teams or large number of employees over chat allowing organization to reach employees right where they collaborate. Utilize this template for multiple scenarios such as new initiative announcements, employee onboarding, modern learning and development or organization-wide broadcasts.
@@ -271,7 +283,7 @@ Incentives is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) templ
 
 ![Incentives app demo](../assets/images/incentives-app.png)
 
-## Incident Reporter 
+## Incident Reporter
 
 Incident Reporter is a [Microsoft Teams bot](../bots/what-are-bots.md)  that optimizes the management of incidents in your organization. The bot facilitates automated incident data collection, customized incident reports, relevant stakeholder notifications, and end-to-end incident tracking.
 
@@ -302,6 +314,18 @@ Open Badges is a Microsoft Teams app that enables individuals to earn digital le
 :::row:::
 :::column span="2":::
     ![Awarded badges view](../assets/images/open-badges-2.png)
+:::column-end:::
+:::row-end:::
+
+## Poll &#9734;
+
+Poll is a custom [Teams message extension](../messaging-extensions/what-are-messaging-extensions.md) app that enables users to quickly create and send polls in a chat or a channel to know their team’s opinion. Poll app is supported across all platforms – Teams desktop, browser, iOS, and Android clients. It is ready for deployment as part of your existing Microsoft 365 subscription.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-poll-app)
+
+:::row:::
+  :::column span="1":::
+    ![Poll](../assets/images/poll-app-template-compose-view.gif)  
 :::column-end:::
 :::row-end:::
 
@@ -403,6 +427,18 @@ Staff Check-ins is a [Power Apps](/powerapps/powerapps-overview)-based app that 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-staffcheckins)
 
 ![Create check-in view](../assets/images/staff-check-ins-create.png)
+
+## Survey &#9734;
+
+Survey is a custom [Microsoft Teams message extension](../messaging-extensions/what-are-messaging-extensions.md) app that enables users to create a survey in a chat or a channel to ask a series of questions and get actionable insights. Use Survey for – Registrations, Enrollments, Feedback, Testimonials, Lead Capture, Reporting, Complaints and Evaluations. Survey app is supported across all platforms – Teams desktop, browser, iOS, and Android clients. It is ready for deployment as part of your existing Microsoft 365 subscription.  
+
+[Get it on GitHub](https://github.com/OfficeDev/Microsoft-Teams-Survey-app)
+
+::row:::
+  :::column span="2":::
+    ![Create survey in Teams view](../assets/images/survey-app-template-compose-view.gif)
+:::column-end:::
+:::row-end:::
 
 ## Visitor Management &#9734;
 
