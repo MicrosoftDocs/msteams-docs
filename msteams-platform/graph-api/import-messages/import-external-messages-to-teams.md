@@ -31,8 +31,8 @@ At a high level, the import process consists of the following:
 
 ✔ Review the third-party data to decide what will be migrated.  
 ✔ Extract the selected data from the third-party chat system.  
+✔ Map the third-party chat structure to the Teams structure.  
 ✔ Convert import data into format needed for migration.  
-✔ Map the third-party chat structure to the Teams structure.
 
 ### Set up your Office 365 tenant
 
@@ -43,11 +43,9 @@ At a high level, the import process consists of the following:
 
 Since existing data is being migrated, maintaining the original message timestamps and preventing messaging activity during the migration process are key to recreating the user's existing message flow in Teams. This is achieved as follows:
 
-1. [Create a new team](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) with a back-in-time timestamp using the team resource  `createdDateTime`  property. 
+> [Create a new team](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) with a back-in-time timestamp using the team resource  `createdDateTime`  property. Place the new team in `migration mode`, a special state that bars users from most activities within the team until the migration process is complete. Include the `teamCreationMode` instance attribute with the `migration` value in the POST request to explicitly identify the new team as being created for migration.  
 
-> **NOTE**:  The `createdDateTime` field will only be populated for instances of a team or channel that are migrated.
-
-1. Place the new team in `migration mode`, a special state that bars users from most activities within the team until the migration process is complete. Include the `teamCreationMode` instance attribute with the `migration` value in the POST request to explicitly identify the new team as being created for migration.  
+> **NOTE**:  The `createdDateTime` field will only be populated for instances of a team or channel that have been migrated.
 
 <!-- markdownlint-disable MD001 -->
 
@@ -68,12 +66,9 @@ Content-Type: application/json
   "template@odata.bind": "https://graph.microsoft.com/beta/teamsTemplates('standard')",
   "displayName": "My Sample Team",
   "description": "My Sample Team’s Description"
-  "createdDateTime": "2020-03-14T11:22:17.043B"
+  "createdDateTime": "2020-03-14T11:22:17.043Z"
 }
 ```
-
-> [!NOTE]
-> createDateTime must be unique across messages in the same thread. 
 
 #### Response
 
@@ -89,16 +84,13 @@ Content-Location: /teams/{teamId}
 400 Bad Request
 ```
 
-* `createdDateTime`  set for future.
-* `createdDateTime`  correctly specified, but `teamCreationMode`  instance attribute  is missing or set to invalid value.
+***See*** **[HTTP 400 client request errors](#http-400-client-request-errors), listed below.**
 
 ## Step Two: Create a channel
 
 Creating a channel for the imported messages is similar to the create team scenario:
 
-1. [Create a new channel](/graph/api/channel-post?view=graph-rest-beta&tabs=http&preserve-view=true) with a back-in-time timestamp using the channel resource `createdDateTime` property.
-
-1. Place the new channel in `migration mode`, a special state that bars users from most chat activities within the channel until the migration process is complete.  Include the `channelCreationMode` instance attribute with the `migration` value in the POST request to explicitly identify the new team as being created for migration.  
+> [Create a new channel](/graph/api/channel-post?view=graph-rest-beta&tabs=http&preserve-view=true) with a back-in-time timestamp using the channel resource `createdDateTime` property. Place the new channel in `migration mode`, a special state that bars users from most chat activities within the channel until the migration process is complete.  Include the `channelCreationMode` instance attribute with the `migration` value in the POST request to explicitly identify the new team as being created for migration.  
 <!-- markdownlint-disable MD024 -->
 #### Permissions
 
@@ -117,7 +109,7 @@ Content-Type: application/json
   "displayName": "Architecture Discussion",
   "description": "This channel is where we debate all future architecture plans",
   "membershipType": "standard",
-  "createdDateTime": "2020-03-14T11:22:17.047Y"
+  "createdDateTime": "2020-03-14T11:22:17.047Z"
 }
 ```
 
@@ -135,12 +127,14 @@ Content-Location: /teams/{teamId}/channels/{channelId}
 400 Bad Request
 ```
 
-* `createdDateTime`  set for future.
-* `createdDateTime`  correctly specified but `channelCreationMode`  instance attribute  is missing or set to invalid value.
+***See*** **[HTTP 400 client request errors](#http-400-client-request-errors), listed below.**
 
 ## Step Three: Import messages
 
 After the team and channel have been created, you can begin sending back-in-time messages using the `createdDateTime`  and `from`  keys in the request body. **NOTE**: messages imported with `createdDateTime` earlier than the message thread `createdDateTime` is not supported.
+
+> [!NOTE]
+> createdDateTime must be unique across messages in the same thread.
 
 #### Request (POST message that is text-only)
 
@@ -216,6 +210,14 @@ HTTP/1.1 200 OK
     "reactions": []
 }
 ```
+
+#### Error messages
+
+```http
+400 Bad Request
+```
+
+***See*** **[HTTP 400 client request errors](#http-400-client-request-errors), listed below.**
 
 #### Request (POST a message with inline `image)
 
@@ -315,7 +317,7 @@ HTTP/1.1 204 NoContent
 400 Bad Request
 ```
 
-* Action called on a `team` or `channel` that is not in `migrationMode` or the action is called on a channel that belongs to a team still in migration mode.
+***See*** **[HTTP 400 client request errors](#http-400-client-request-errors), listed below.**
 
 ## Step Five: Add team members
 
@@ -340,12 +342,35 @@ Content-length: 30
 HTTP/1.1 204 No Content
 ```
 
+## HTTP 400 client request errors
+
+* The request is null.
+* The request exceeds the allowed rate and was throttled.
+* The body content is missing in the request.
+* The `chatMessageId` is set in the request.
+* Reactions are set in the request.
+* The `webURL` is set in the request.
+* The number of messages == 0 or < 1.
+* The message doesn't have an `imDisplayName`.
+* The message doesn't have a `clientMessageId` .
+* The message sender doesn't have a valid `GUID` as `OID`.
+* The message sent time == default(`dateTimeOffset`) or is in the future.
+* The `messageType` is invalid.
+* `Teamwork.Migrate.All` role is missing in the token.
+* The specified user Id in the request payload is not present in the tenant.
+* User identifier or display name is missing in the incoming request.
+* `createdDateTime`  set for future in the incoming payload.
+* `createdDateTime`  correctly specified, but `teamCreationMode`  instance attribute  is missing or set to invalid value.
+* `createdDateTime`  set for future.
+* `createdDateTime`  correctly specified but `channelCreationMode`  instance attribute  is missing or set to invalid value.
+* Action called on a `team` or `channel` that is not in `migrationMode` or the action is called on a channel that belongs to a team still in migration mode.
+
 ## Tips and additional information
 
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD026 -->
 
-* You can import messages from users who are not in Teams. **NOTE**: Messages imported for users not present in the tenant will not be searchable in theTeams client or compliance portals during Public Preview.
+* You can import messages from users who are not in Teams. **NOTE**: Messages imported for users not present in the tenant will not be searchable in the Teams client or compliance portals during Public Preview.
 
 * Once the `completeMigration` request is made, you cannot import further messages into the team.
 
