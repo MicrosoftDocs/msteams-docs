@@ -112,7 +112,7 @@ The sample app requires the following environment variables to be set to the val
 
 Open up the appsettings.json file. Update the *MicrosoftAppId* value with your Bot ID that you saved earlier. Update the *MicrosoftAppPassword* with the Bot password you saved earlier.
 
-<img width="560px" src="~/assets/images/get-started/get-started-net-azure-add-keys.png" title="setting the keys"/>
+<img width="560px" alt="Setting the keys" src="~/assets/images/get-started/get-started-net-azure-add-keys.png"/>
 
 Once these changes are made, rebuild the app. If you are using ngrok, run the app locally, and if you are hosting in Azure redeploy the app.
 
@@ -120,22 +120,22 @@ Once these changes are made, rebuild the app. If you are using ngrok, run the ap
 
 Once you install the app into a team, you will need to configure it to show content. Go to a channel in the team where you installed the sample app and click on the **'+'** button to add a new tab. You can then choose `Hello World` from the **Add a tab** list. You will then be presented with a configuration dialog. This dialog will let you choose which tab to display in this channel. Once you select the tab and click on `Save` then you can see the `Hello World` tab loaded with the tab you chose.
 
-<img width="530px" src="~/assets/images/samples-hello-world-tab-configure.png" title="Screenshot of configure" />
+<img width="530px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png" />
 
 ### Test your bot in Teams
 
 You can now interact with the bot in Teams. Choose a channel in the team where you registered your app, and type `@your-bot-name`. This is called an **\@mention**. Whatever message you send to the bot will be sent back to you as a reply.
 
-<img width="450px" title="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
+<img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 
 ### Test your messaging extension
 
 To test your messaging extension, you can click on the three dots below the input box in your conversation view. A menu will pop up with the **'Hello World'** app in it. When you click it, you will see a bunch of random texts showing up. You can choose any one of them and it will be inserted it into your conversation.
 
-<img width="530px" title="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
+<img width="530px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
 
-<img width="530px" title="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
+<img width="530px" alt="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
 
 Choose one of the random texts, and you will see a card formatted and ready to send with your own message at the bottom.
 
-<img width="530px" title="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
+<img width="530px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
