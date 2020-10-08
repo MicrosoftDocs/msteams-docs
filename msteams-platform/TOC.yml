@@ -32,8 +32,6 @@
     href: tutorials/get-started-yeoman.md
   - name: Tab quickstarts
     items:
-    - name: Create a tab with App Studio
-      href: tabs/how-to/add-tab.md
     - name: Personal tab with Node.js/React
       href: tabs/quickstarts/create-personal-tab-node-yeoman.md
     - name: Personal tab with C#/ASP.NET Core
@@ -48,8 +46,6 @@
       href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
   - name: Bot quickstarts
     items:
-    - name: Build a bot for Teams
-      href: bots/how-to/create-a-bot-for-teams.md
     - name: Chatbot with C# (GitHub)
       href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot
     - name: Chatbot with JavaScript (GitHub)
@@ -172,8 +168,6 @@
       href: tabs/how-to/developer-tools.md
   - name: Messaging extensions
     items:
-    - name: Create a messaging extension
-      href: messaging-extensions/how-to/create-messaging-extension.md 
     - name: Define action commands
       href: messaging-extensions/how-to/action-commands/define-action-command.md
     - name: Create task module for action commands

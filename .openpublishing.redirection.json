@@ -519,6 +519,18 @@
     {
      "source_path": "msteams-platform/graph-permissions/test-rsc-json-file.md",
      "redirect_url": "/microsoftteams/platform/graph-api/rsc/test-rsc-json-file"
-     }
+    },
+    {
+     "source_path": "msteams-platform/build-your-first-app/build-personal-tab.md",
+     "redirect_url": "/microsoftteams/platform/tabs/how-to/add-tab"
+    },
+    {
+     "source_path": "msteams-platform/build-your-first-app/build-bot.md",
+     "redirect_url": "/microsoftteams/platform/bots/how-to/create-a-bot-for-teams"
+    },
+    {
+     "source_path": "msteams-platform/build-your-first-app/build-messaging-extension.md",
+     "redirect_url": "/microsoftteams/platform/messaging-extensions/how-to/create-messaging-extension"
+    }
   ]
 }
