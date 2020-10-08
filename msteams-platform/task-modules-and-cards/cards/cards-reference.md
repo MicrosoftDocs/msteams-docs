@@ -229,8 +229,8 @@ A card that typically contains a single large image, one or more buttons and tex
 
 | Property | Type  | Description |
 | --- | --- | --- |
-| title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
-| subtitle | Rich text | Subtitle of the card. Maximum 2 lines; formatting not currently supported |
+| title | Rich text | Title of the card. Maximum 2 lines. |
+| subtitle | Rich text | Subtitle of the card. Maximum 2 lines.|
 | text | Rich text | Text appears just below the subtitle; see [Card formatting](~/task-modules-and-cards/cards/cards-format.md) for formatting options |
 | images | Array of images | Image displayed at top of card. Aspect ratio 16:9 |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
@@ -292,10 +292,9 @@ The list card has been added by Teams to provide functions beyond what the list 
 
 | Property | Type  | Description |
 | --- | --- | --- |
-| title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
+| title | Rich text | Title of the card. Maximum 2 lines.|
 | items | Array of list items  ||
-| buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6. <br/>**NOTE**: Buttons do not render on the mobile platform; however, buttons are supported on the mobile platform.|
-|
+| buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6. |
 
 ### Example List card
 
@@ -368,8 +367,8 @@ The Office 365 Connector card provides a flexible layout with multiple sections,
 
 | Property | Type  | Description |
 | --- | --- | --- |
-| title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
-| summary | Rich text | Summary of the card. Maximum 2 lines; formatting not currently supported |
+| title | Rich text | Title of the card. Maximum 2 lines. |
+| summary | Rich text | Summary of the card. Maximum 2 lines. |
 | text | Rich text | Text appears just below the subtitle; see [Card formatting](~/task-modules-and-cards/cards/cards-format.md) for formatting options |
 | themeColor | HEX string | color that overrides the accentColor provided from the application manifest |
 
@@ -526,8 +525,8 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 
 | Property | Type  | Description |
 | --- | --- | --- |
-| title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
-| subtitle | Rich text | Subtitle of the card. Maximum 2 lines; formatting not currently supported |
+| title | Rich text | Title of the card. Maximum 2 lines.|
+| subtitle | Rich text | Subtitle of the card. Maximum 2 lines.|
 | text | Rich text | Text appears just below the subtitle; see [Card formatting](~/task-modules-and-cards/cards/cards-format.md) for formatting options |
 | images | Array of images | Image displayed at top of card. Aspect ratio 1:1 (square) |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
