@@ -88,7 +88,7 @@ The app provides an easy interface for all the team members to personally add an
 
 ## Checklist &#9734;
 
-Checklist is a custom Microsoft Teams [message extension](../messaging-extensions/what-are-messaging-extensions.md) app that enables you to collaborate with your team by creating a shared checklist in a chat or channel. Checklist app is supported across all Teams platform clients —  desktop, browser, iOS, and Android — and is ready for deployment as part of your Microsoft 365 subscription.  
+Checklist is a custom Microsoft Teams [messaging extension](../messaging-extensions/what-are-messaging-extensions.md) app that enables you to collaborate with your team by creating a shared checklist in a chat or channel. Checklist app is supported across all Teams platform clients —  desktop, browser, iOS, and Android — and is ready for deployment as part of your Microsoft 365 subscription.  
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-checklist-app )
 
@@ -319,7 +319,7 @@ Open Badges is a Microsoft Teams app that enables individuals to earn digital le
 
 ## Poll &#9734;
 
-Poll is a custom Microsoft Teams [message extension](../messaging-extensions/what-are-messaging-extensions.md) app that enables you to quickly create and send polls in a chat or a channel to gather team opinions and preferences. Poll app is supported across all Teams platform clients — desktop, browser, iOS, and Android  — and is ready for deployment as part of your Microsoft 365 subscription.
+Poll is a custom Microsoft Teams [messaging extension](../messaging-extensions/what-are-messaging-extensions.md) app that enables you to quickly create and send polls in a chat or a channel to gather team opinions and preferences. Poll app is supported across all Teams platform clients — desktop, browser, iOS, and Android  — and is ready for deployment as part of your Microsoft 365 subscription.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-poll-app)
 
@@ -430,7 +430,7 @@ Staff Check-ins is a [Power Apps](/powerapps/powerapps-overview)-based app that 
 
 ## Survey &#9734;
 
-Survey is a custom Microsoft Teams [message extension](../messaging-extensions/what-are-messaging-extensions.md) app that enables you to create a survey in a chat or a channel to gather data and gain actionable insight.  The Survey app is supported across all Teams platform clients — desktop, browser, iOS, and Android — and is ready for deployment as part of your Microsoft 365 subscription.  
+Survey is a custom Microsoft Teams [messaging extension](../messaging-extensions/what-are-messaging-extensions.md) app that enables you to create a survey in a chat or a channel to gather data and gain actionable insight.  The Survey app is supported across all Teams platform clients — desktop, browser, iOS, and Android — and is ready for deployment as part of your Microsoft 365 subscription.  
 
 [Get it on GitHub](https://github.com/OfficeDev/Microsoft-Teams-Survey-app)
 
