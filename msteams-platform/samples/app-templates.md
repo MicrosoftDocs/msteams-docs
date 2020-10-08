@@ -94,7 +94,7 @@ Checklist is a custom [Microsoft Teams message extension](../messaging-extension
 
 :::row:::
 :::column span="2":::
-    ![Create a checklist in Teams view](../assets/images/checklist-app-template-compose-view)  
+    ![Create a checklist in Teams view](../assets/images/checklist-app-template-compose-view.gif)  
 :::column-end:::
 :::row-end:::
 
