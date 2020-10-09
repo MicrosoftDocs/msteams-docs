@@ -84,7 +84,8 @@ Content-Location: /teams/{teamId}
 400 Bad Request
 ```
 
-***See*** **[HTTP 400 client request errors](#http-400-client-request-errors), listed below.**
+* `createdDateTime`  set for future.
+* `createdDateTime`  correctly specified, but `teamCreationMode`  instance attribute  is missing or set to invalid value.
 
 ## Step Two: Create a channel
 
@@ -117,9 +118,19 @@ Content-Type: application/json
 
 ```http
 HTTP/1.1 202 Accepted
-Location: /teams/{teamId}/channels/{channelId}/operations/{operationId}
-Content-Location: /teams/{teamId}/channels/{channelId}
-```
+
+{
+   "@odata.context":"https://canary.graph.microsoft.com/testprodbetateamsgraphsvcncus/$metadata#teams('9cc6d6ab-07d8-4d14-bc2b-7db8995d6d23')/channels/$entity",
+   "id":"19:e90f6814ce674072a4126206e7de485e@thread.tacv2",
+   "createdDateTime":null,
+   "displayName":"Architecture Discussion",
+   "description":"This channel is where we debate all future architecture plans",
+   "isFavoriteByDefault":null,
+   "email":null,
+   "webUrl":null,
+   "membershipType":null,
+   "moderationSettings":null
+}
 
 #### Error message
 
@@ -127,7 +138,8 @@ Content-Location: /teams/{teamId}/channels/{channelId}
 400 Bad Request
 ```
 
-***See*** **[HTTP 400 client request errors](#http-400-client-request-errors), listed below.**
+* `createdDateTime`  set for future.
+* `createdDateTime`  correctly specified but `channelCreationMode`  instance attribute  is missing or set to invalid value.
 
 ## Step Three: Import messages
 
@@ -142,33 +154,18 @@ After the team and channel have been created, you can begin sending back-in-time
 POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
 
 {
-    "replyToId": null,
-    "messageType": "message",
-    "createdDateTime": "2019-02-04T19:58:15.511Z",
-    "lastModifiedDateTime": null,
-    "deleted": false,
-    "subject": null,
-    "summary": null,
-    "importance": "normal",
-    "locale": "en-us",
-    "policyViolation": null,
-    "from": {
-        "application": null,
-        "device": null,
-        "conversation": null,
-        "user": {
-            "id": "id-value",
-            "displayName": "Joh Doe",
-            "userIdentityType": "aadUser"
-        }
-    },
-    "body": {
-        "contentType": "html",
-        "content": "Hello World"
-    },
-    "attachments": [],
-    "mentions": [],
-    "reactions": []
+   "createdDateTime":"2019-02-04T19:58:15.511Z",
+   "from":{
+      "user":{
+         "id":"id-value",
+         "displayName":"Joh Doe",
+         "userIdentityType":"aadUser"
+      }
+   },
+   "body":{
+      "contentType":"html",
+      "content":"Hello World"
+   }
 }
 ```
 
@@ -178,36 +175,39 @@ POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
 HTTP/1.1 200 OK
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#teams('teamId')/channels('channelId')/messages/$entity",
-    "id": "id-value",
-    "replyToId": null,
-    "etag": "id-value",
-    "messageType": "message",
-    "createdDateTime": "2019-02-04T19:58:15.98T",
-    "lastModifiedDateTime": null,
-    "deleted": false,
-    "subject": null,
-    "summary": null,
-    "importance": "normal",
-    "locale": "en-us",
-    "policyViolation": null,
-    "from": {
-        "application": null,
-        "device": null,
-        "conversation": null,
-        "user": {
-            "id": "id-value",
-            "displayName": "Joh Doe",
-            "userIdentityType": "aadUser"
-        }
-    },
-    "body": {
-        "contentType": "html",
-        "content": "Hello World"
-    },
-    "attachments": [],
-    "mentions": [],
-    "reactions": []
+   "@odata.context":"https://graph.microsoft.com/beta/$metadata#teams('teamId')/channels('channelId')/messages/$entity",
+   "id":"id-value",
+   "replyToId":null,
+   "etag":"id-value",
+   "messageType":"message",
+   "createdDateTime":"2019-02-04T19:58:15.58Z",
+   "lastModifiedDateTime":null,
+   "deleted":false,
+   "subject":null,
+   "summary":null,
+   "importance":"normal",
+   "locale":"en-us",
+   "policyViolation":null,
+   "from":{
+      "application":null,
+      "device":null,
+      "conversation":null,
+      "user":{
+         "id":"id-value",
+         "displayName":"Joh Doe",
+         "userIdentityType":"aadUser"
+      }
+   },
+   "body":{
+      "contentType":"html",
+      "content":"Hello World"
+   },
+   "attachments":[
+   ],
+   "mentions":[
+   ],
+   "reactions":[
+   ]
 }
 ```
 
@@ -317,7 +317,7 @@ HTTP/1.1 204 NoContent
 400 Bad Request
 ```
 
-***See*** **[HTTP 400 client request errors](#http-400-client-request-errors), listed below.**
+* Action called on a `team` or `channel` that is not in `migrationMode`.
 
 ## Step Five: Add team members
 
@@ -341,29 +341,6 @@ Content-length: 30
 ```http
 HTTP/1.1 204 No Content
 ```
-
-## HTTP 400 client request errors
-
-* The request is null.
-* The request exceeds the allowed rate and was throttled.
-* The body content is missing in the request.
-* The `chatMessageId` is set in the request.
-* Reactions are set in the request.
-* The `webURL` is set in the request.
-* The number of messages == 0 or < 1.
-* The message doesn't have an `imDisplayName`.
-* The message doesn't have a `clientMessageId` .
-* The message sender doesn't have a valid `GUID` as `OID`.
-* The message sent time == default(`dateTimeOffset`) or is in the future.
-* The `messageType` is invalid.
-* `Teamwork.Migrate.All` role is missing in the token.
-* The specified user Id in the request payload is not present in the tenant.
-* User identifier or display name is missing in the incoming request.
-* `createdDateTime`  set for future in the incoming payload.
-* `createdDateTime`  correctly specified, but `teamCreationMode`  instance attribute  is missing or set to invalid value.
-* `createdDateTime`  set for future.
-* `createdDateTime`  correctly specified but `channelCreationMode`  instance attribute  is missing or set to invalid value.
-* Action called on a `team` or `channel` that is not in `migrationMode` or the action is called on a channel that belongs to a team still in migration mode.
 
 ## Tips and additional information
 
