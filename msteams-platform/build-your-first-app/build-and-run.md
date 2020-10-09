@@ -1,12 +1,12 @@
 ---
-title: Build and run a "Hello, World!" Teams app
+title: Get started - Build and run your first app
 author: heath-hamilton
-description: Build and run your first Microsoft Teams app, a personal tab that displays "Hello, World!"
+description: Use the Microsoft Teams Toolkit to quickly create a Microsoft Teams app that displays a "Hello, World!" message.
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: quickstart
 ---
-# Build a "Hello, World!" Teams app
+# Build and run your first Microsoft Teams app
 
 You can jump right into Microsoft Teams platform development by building a personal tab that displays "Hello, World!"
 

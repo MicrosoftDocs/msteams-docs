@@ -10,7 +10,7 @@
   items:
   - name: Overview and prerequisites
     href: build-your-first-app/build-first-app-overview.md
-  - name: Build a "Hello, World!" app
+  - name: Build your first app
     href: build-your-first-app/build-and-run.md
   - name: Build a personal tab
     href: build-your-first-app/build-personal-tab.md
@@ -164,7 +164,7 @@
     - name: 'How-to guides'
       expanded: true
       items:
-        - name: 'Add tabs to your app'
+        - name: Create a tab using App Studio or manually
           href: tabs/how-to/add-tab.md
         - name: 'Create tab pages'
           items:
@@ -217,7 +217,7 @@
       items:
       - name: Build a bot for Teams
         href: bots/how-to/create-a-bot-for-teams.md
-      - name:  Integrate your Power Virtual Agent chatbot with Teams
+      - name: Integrate your Power Virtual Agent chatbot with Teams
         href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
       - name: Conversations
         items:
