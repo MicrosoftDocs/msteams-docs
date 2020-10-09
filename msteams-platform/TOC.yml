@@ -10,7 +10,7 @@
   items:
   - name: Overview and prerequisites
     href: build-your-first-app/build-first-app-overview.md
-  - name: Build your first app
+  - name: Build a "Hello, World!" app
     href: build-your-first-app/build-and-run.md
   - name: Build a personal tab
     href: build-your-first-app/build-personal-tab.md

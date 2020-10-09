@@ -9,7 +9,7 @@ ms.author: lajanuar
 # Create a tab using App Studio or manually
 
 > [!TIP]
-> Looking for a faster way to get started? Create a [personal](../../build-your-first-app/build-personal-tab.md) or [channel or group](../../build-your-first-app/build-channel-tab.md) tab using the Microsoft Teams Toolkit.
+> Looking for a faster way to get started? Create a [personal](../../build-your-first-app/build-personal-tab.md) or [channel and group](../../build-your-first-app/build-channel-tab.md) tab using the Microsoft Teams Toolkit.
 
 Tabs allow you to serve web content that you host to your channel, group chat, and personal users. At a high level, you'll need to complete the following steps to create a tab:
 
