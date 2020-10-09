@@ -1,5 +1,5 @@
 ---
-title: Getting started | Building your first app
+title: Getting started - Building your first app
 author: heath-hamilton
 description: Get a quick overview of Microsoft Teams app development and set up your environment.
 ms.author: lajanuar
