@@ -528,7 +528,7 @@
       {
         "source_path": "msteams-platform/build-your-first-app/build-bot.md",
         "redirect_url": "/microsoftteams/platform/bots/how-to/create-a-bot-for-teams",
-        "redirect_document_id": true
+        "redirect_document_id": false
       },
       {
         "source_path": "msteams-platform/build-your-first-app/build-messaging-extension.md",
