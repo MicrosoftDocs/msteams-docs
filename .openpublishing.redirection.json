@@ -521,8 +521,8 @@
         "redirect_url": "/microsoftteams/platform/graph-api/rsc/test-rsc-json-file"
       },
       {
-        "source_path": "msteams-platform/build-your-first-app/build-personal-tab.md",
-        "redirect_url": "/microsoftteams/platform/tabs/how-to/add-tab"
+        "source_path": "msteams-platform/tabs/how-to/add-tab.md",
+        "redirect_url": "/microsoftteams/platform/build-your-first-app/build-personal-tab"
       },
       {
         "source_path": "msteams-platform/bots/how-to/create-a-bot-for-teams.md",

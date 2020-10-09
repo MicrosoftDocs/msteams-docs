@@ -40,6 +40,6 @@ Don't just display text to users. Have something they can interact with and perf
 
 <img width="450px" title="New configuration tab" src="../../assets/images/messaging-extension/action-on-card.png" />
 
-### Keep users in the app context
+### Keep users within Teams
 
-If a card is not enough and you need to provide a link for more information, consider opening a tab instead of opening a browser for a better user experience. *See* [Extend your Teams app with a custom tab](../../tabs/how-to/add-tab.md)
+If a card doesn't provide enough space for your content, consider launching a [tab](../tabs/what-are-tabs.md) and not a browser for a better user experience.

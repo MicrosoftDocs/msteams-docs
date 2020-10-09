@@ -29,7 +29,7 @@ When your tab is uploaded to a channel or group chat, Teams will add a right-cli
 
 ## Create a tab removal page for your application
 
-The optional removal page is an HTML page that you host and is displayed when the tab is removed. The removal page URL is designated by the `setSettings()` method within your configuration page. As with all pages in your app, the removal page must comply with [Teams tab requirements](~/tabs/how-to/add-tab.md).
+The optional removal page is an HTML page that you host and is displayed when the tab is removed. The removal page URL is designated by the `setSettings()` method within your configuration page. As with all pages in your app, the removal page must comply with [Teams tab requirements](../tabs/how-to/tab-requirements.md).
 
 ### Register a remove handler
 
