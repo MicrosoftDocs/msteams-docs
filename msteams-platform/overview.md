@@ -76,14 +76,10 @@ Some apps are simple (send notifications), while others are complex (manage pati
    :::column-end:::
 :::row-end:::
 
-## Get started
-
-Jump right in with our first app tutorials or find out how to integrate and import existing apps.
-
 :::row:::
    :::column span="2":::
 
-### Start building
+## Start building
 
    Quickly familiarize yourself with building for Teams by creating a simple app and adding some commonly used capabilities.
 
@@ -99,7 +95,7 @@ Jump right in with our first app tutorials or find out how to integrate and impo
 :::row:::
    :::column span="2":::
 
-### Integrate with Teams
+## Integrate with Teams
 
    Blend the features users love about an existing web app, service, or system with the collaborative features of Teams.
 
@@ -115,7 +111,7 @@ Jump right in with our first app tutorials or find out how to integrate and impo
 :::row:::
    :::column span="2":::
 
-### A little code goes a long way
+## A little code goes a long way
 
    You don't need to be an expert programmer to build a great Teams app. Try one of several low-code solutions.
 
