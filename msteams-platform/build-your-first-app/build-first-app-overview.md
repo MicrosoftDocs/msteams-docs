@@ -8,7 +8,7 @@ ms.topic: quickstart
 ---
 # Getting started with building your first Teams app
 
-In the **getting started** lessons, you learn how to create basic Teams apps. Each tutorial walks through how to build a simple, real-world Teams app while introducing you to common tools, fundamental concepts, and more advanced features.
+In the **get started** lessons, you learn how to create basic Teams apps. Each tutorial walks through how to build a simple, real-world Teams app while introducing you to common tools, fundamental concepts, and more advanced features.
 
 ## What you'll learn
 
@@ -83,9 +83,9 @@ Teams displays app content only through HTTPS connections. Since you'll host you
 
 ## About the tutorials
 
-You can start with any of the Teams **getting started** lessons. If you're not sure where to go first, follow our beginner friendly path and build a "Hello, World!" app.
+You can start with any of the Teams **get started** lessons. If you're not sure where to go first, follow our beginner friendly path and build a "Hello, World!" app.
 
-:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Skill tree showing learning paths for the Teams 'getting started' lessons." border="false":::
+:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Skill tree showing learning paths for the Teams 'get started' lessons." border="false":::
 
 ## Next step
 
