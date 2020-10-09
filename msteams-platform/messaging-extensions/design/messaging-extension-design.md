@@ -42,4 +42,4 @@ Don't just display text to users. Have something they can interact with and perf
 
 ### Keep users within Teams
 
-If a card doesn't provide enough space for your content, consider launching a [tab](../tabs/what-are-tabs.md) and not a browser for a better user experience.
+If a card doesn't provide enough space for your content, consider launching a [tab](../../tabs/what-are-tabs.md) and not a browser for a better user experience.
