@@ -215,7 +215,7 @@
     - name: 'How-to guides'
       expanded: true
       items:
-      - name: Build a bot for Teams
+      - name: Create a bot using App Studio or manually
         href: bots/how-to/create-a-bot-for-teams.md
       - name: Integrate your Power Virtual Agent chatbot with Teams
         href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
@@ -292,7 +292,7 @@
     - name: 'How-to guides'
       expanded: true
       items:
-        - name: 'Create a messaging extension'
+        - name: Create a messaging extension using App Studio or manually
           href: messaging-extensions/how-to/create-messaging-extension.md
         - name: 'Action-based commands'
           items:

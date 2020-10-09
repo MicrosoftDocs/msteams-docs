@@ -1,5 +1,5 @@
 ---
-title: Create apps for teams meetings
+title: Create apps for meetings
 author: laujan
 description: create apps for teams meetings 
 ms.topic: conceptual

@@ -1,9 +1,9 @@
 ---
 title: Get started - Build your first app overview and prerequisites
 author: heath-hamilton
-description: Learn how to quickly get started with Microsoft Teams app development and set up your environment.
+description: Learn how to get started with Microsoft Teams app development and set up your environment.
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: quickstart
 ---
 # Build your first Microsoft Teams app overview
