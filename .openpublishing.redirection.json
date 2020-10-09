@@ -222,8 +222,7 @@
       },
       {
           "source_path": "msteams-platform/concepts/bots/bots-create.md",
-          "redirect_url": "/microsoftteams/platform/bots/how-to/create-a-bot-for-teams",
-          "redirect_document_id": false
+          "redirect_url": "/microsoftteams/platform/bots/how-to/create-a-bot-for-teams"
       },
       {
           "source_path": "msteams-platform/concepts/bots/bots-menus.md",
@@ -526,13 +525,12 @@
         "redirect_url": "/microsoftteams/platform/tabs/how-to/add-tab"
       },
       {
-        "source_path": "msteams-platform/build-your-first-app/build-bot.md",
-        "redirect_url": "/microsoftteams/platform/bots/how-to/create-a-bot-for-teams",
-        "redirect_document_id": false
+        "source_path": "msteams-platform/bots/how-to/create-a-bot-for-teams.md",
+        "redirect_url": "/microsoftteams/platform/build-your-first-app/build-bot"
       },
       {
-        "source_path": "msteams-platform/build-your-first-app/build-messaging-extension.md",
-        "redirect_url": "/microsoftteams/platform/messaging-extensions/how-to/create-messaging-extension"
+        "source_path": "msteams-platform/messaging-extensions/how-to/create-messaging-extension.md",
+        "redirect_url": "/microsoftteams/platform/build-your-first-app/build-messaging-extension"
       }
   ]
 }
