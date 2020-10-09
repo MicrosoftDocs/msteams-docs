@@ -434,7 +434,7 @@ Survey is a custom Microsoft Teams [messaging extension](../messaging-extensions
 
 [Get it on GitHub](https://github.com/OfficeDev/Microsoft-Teams-Survey-app)
 
-::row:::
+:::row:::
   :::column span="2":::
     ![Create survey in Teams view](../assets/images/survey-app-template-compose-view.gif)
 :::column-end:::
