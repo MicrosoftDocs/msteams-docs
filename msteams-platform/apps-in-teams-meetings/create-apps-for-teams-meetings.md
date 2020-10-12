@@ -207,7 +207,9 @@ await context.sendActivity(replyActivity);
 The meetings app capabilities are declared in your app manifest via the **configurableTabs** -> **scopes** and **context** arrays. *Scope* defines to whom and *context* defines where your app will be available.
 
 > [!NOTE]
-> Please use [Developer Preview manifest schema](../resources/schema/manifest-schema-dev-preview.md) to try this in your app manifest.
+> * Please use [Developer Preview manifest schema](../resources/schema/manifest-schema-dev-preview.md) to try this in your app manifest.
+> * Mobile Platform currently only support Manifest Schema 1.6
+> * Mobile Platform supports Tabs only in Pre and Post Meeting Surfaces. The In-meeting experiences (in-meeting dialog and tab) on mobile will be available soon
 
 ```json
 "configurableTabs": [
