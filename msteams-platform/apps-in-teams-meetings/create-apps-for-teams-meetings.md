@@ -179,12 +179,12 @@ await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```javascript
 
 const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive card instead
-        replyActivity.channelData = {​​
-            notification: {​​
+        replyActivity.channelData = {
+            notification: {
                 alertInMeeting: true,
                 externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID’
-            }​​
-        }​​;
+            }
+        };
         await context.sendActivity(replyActivity);
 ```
 
