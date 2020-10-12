@@ -137,3 +137,59 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
                 return e.CreateInvokeResponse();
             }
         }
+
+The turnContext.activity.value is of type [TokenExchangeInvokeRequest](https://docs.microsoft.com/en-us/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable) and contains the token that can be further used by the developer. We recommend to store securely the tokens for performance reasons and refresh them.
+
+###### *SSO with Bot framework token store auth connection support*.
+
+Requirements: BF SDK version >= 4.9.4
+Bot framework is abstracting all the sign in flow and token storage through the oAuthPrompt. To setup SSO flow with bot framework, please follow the next steps.
+
+###### Update the azure portal with the oauth connection
+
+1. In the Azure Portal, navigate back to the Bot Channels Registration.
+
+2. Switch to the "Settings" blade and click "Add Setting" under the OAuth Connection Settings section.
+
+<img src="~/assets/images/bots/bots- VuSSOBotHandle2-Settings.png" alt="VuSSOBotHandle2" width="75%"/>
+
+3. Fill out the Connection Setting form:
+
+  * Enter a name for your new Connection setting. This will be the name that gets referenced inside the settings of your bot service code in step 5.
+  * In the Service Provider dropdown, select Azure Active Directory V2.
+  * Enter in the client id and client secret for your AAD application.
+  * For the Token Exchange URL use the scope value defined in the previous step of your AAD application. The presence of Token Exchange URL is indicating to the SDK that this AAD application was configured for SSO.
+  * Specify "common" as the Tenant ID.
+  * Add all the scopes configured when specifying permissions to downstream APIs for your AAD application (using the client id and client secret provided token store will exchange the token for you for a graph token with the defined permissions).
+  * Click "Save".
+
+  <img src="~/assets/images/bots/bots- VuSSOBotConnection -settings.png" alt="VuSSOBotConnection Setting" width="75%"/>
+
+###### Update the auth sample
+
+Start with the teams auth sample from [here](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth)
+
+1. Update the TeamsBot to include the following. To handle the deduping of the incoming request please see the sample “b” below:
+
+   protected override async Task OnSignInInvokeAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+        {
+            await Dialog.RunAsync(turnContext, ConversationState.CreateProperty<DialogState>(nameof(DialogState)), cancellationToken);
+        }
+    protected override async Task OnTokenResponseEventAsync(ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+        {
+            await Dialog.RunAsync(turnContext, ConversationState.CreateProperty<DialogState>(nameof(DialogState)), cancellationToken);
+        }
+  
+2. Update the appsettings.json to include the bot id, password and the connection name defined at the previous step.
+3. Update the manifest as defined in the section 2.2 and ensure that "token.botframework.com" is in the valid domains section.
+4. Zip the manifest with the profile images and install in Teams.
+
+###### Code samples
+
+a. C# sample using the BF SDK: (https://microsoft-my.sharepoint-df.com/:u:/p/vul/ETZQfeTViDlCv-frjgTIincB7dvk2HOnma1TLvcoeGGIxg?e=uPq62c)
+
+b. C# sample using the BF SDK which is using the storage to dedup the token request: (https://microsoft.sharepoint.com/:u:/t/ExtensibilityandFundamentals/Ea36rUGiN1BGt1RiLOb-mY8BGMF8NwPtronYGym0sCGOTw?e=4bB682)
+
+c. C# sample which is not using the BF SDK token store: (https://microsoft-my.sharepoint-df.com/:u:/p/tac/EceKDXrkMn5AuGbh6iGid8ABKEVQ6hkxArxK1y7-M8OVPw)
+
+d. Javascript sample: (https://github.com/ydogandjiev/taskmeow).
