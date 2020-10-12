@@ -5,7 +5,7 @@ localization_priority:  Normal
 author: laujan 
 ms.author: lajanuar
 ms.topic: Overview
-keywords: teams slack import messages api graph microsoft migrate migration post
+keywords: teams import messages api graph microsoft migrate migration post
 ---
 
 # Import third-party platform messages to Teams using Microsoft Graph
