@@ -164,7 +164,7 @@
     - name: 'How-to guides'
       expanded: true
       items:
-        - name: Create a tab using App Studio or manually
+        - name: Create a tab for Teams
           href: tabs/how-to/add-tab.md
         - name: 'Create tab pages'
           items:
@@ -215,7 +215,7 @@
     - name: 'How-to guides'
       expanded: true
       items:
-      - name: Create a bot using App Studio or manually
+      - name: Create a bot for Teams
         href: bots/how-to/create-a-bot-for-teams.md
       - name: Integrate your Power Virtual Agent chatbot with Teams
         href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
@@ -292,7 +292,7 @@
     - name: 'How-to guides'
       expanded: true
       items:
-        - name: Create a messaging extension using App Studio or manually
+        - name: Create a messaging extension for Teams
           href: messaging-extensions/how-to/create-messaging-extension.md
         - name: 'Action-based commands'
           items:
