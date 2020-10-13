@@ -1,7 +1,7 @@
 ---
 title: Create a bot using App Studio or manually
 author: clearab
-description: Learn how to create a Teams bot using App Studio or manually.
+description: Learn how to create a Teams bot
 ms.topic: conceptual
 localization_priority: Priority
 ms.author: anclear
