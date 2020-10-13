@@ -74,6 +74,7 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 {
     var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
     var theObject = Rest.Serialization.SafeJsonConvert.DeserializeObject<WhateverObjectIsReturned>(content, connectorClient.DeserializationSettings);
+}
 ```
 
 * * *
@@ -88,21 +89,9 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 #### Response Payload
 <!-- markdownlint-disable MD036 -->
 
-**Example 1**
-
-```json
-{
-    "meetingRole":"Presenter",
-    "conversation":{
-            "isGroup": true,
-            "id": "19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
-        }
-}
-```
-
 **meetingRole** can be *Organizer*, *Presenter*, or *Attendee*.
 
-**Example 2**
+**Example 1**
 
 ```json
 {
