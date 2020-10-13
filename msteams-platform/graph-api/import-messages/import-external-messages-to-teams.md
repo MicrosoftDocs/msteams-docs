@@ -212,7 +212,7 @@ HTTP/1.1 200 OK
 }
 ```
 
-#### Request (POST a message with inline `image)
+#### Request (POST a message with inline image)
 
 > **Note**: There are no special permission scopes in this scenario since the request is part of chatMessage; scopes for chatMessage apply here as well.
 
