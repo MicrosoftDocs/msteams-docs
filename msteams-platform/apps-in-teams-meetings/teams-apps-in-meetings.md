@@ -6,10 +6,10 @@ ms.topic: overview
 ms.author: lajanuar
 keywords: teams apps meetings user participant role api  
 ---
-# Apps in Teams meetings (Release Preview)
+# Apps in Teams meetings (Developer Preview)
 
 >[!IMPORTANT]
-> Features highlighted in Microsoft Teams Release Preview are provided for early insight and feedback purposes only. They may undergo changes before they can be enabled.
+> Features included in Microsoft Teams Developer Preview are provided for early-access, testing, and feedback purposes only. They may undergo changes before becoming available in the public release and should not be used in production applications.
 
 Meetings are key to productivity in Teams. They enable collaboration, partnership, informed communication, and shared feedback in an inclusive and active forum. As a developer, you can create [configurable tab](../tabs/what-are-tabs.md#how-do-tabs-work), [bot](../bots/what-are-bots.md), and [message extension](../messaging-extensions/what-are-messaging-extensions.md) applications to enhance and enrich a Teams meeting experience. Meeting users can access apps, via the tab gallery, to enable relevant scenarios such as pre-staging a Kanban board, launching an in-meeting actionable dialog, or creating a post-meeting poll. Your meeting app can deliver a user experience for each stage of the meeting lifecycle based upon attendee status.
 
