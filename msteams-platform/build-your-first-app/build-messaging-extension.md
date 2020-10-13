@@ -1,12 +1,12 @@
 ---
-title: Build a Teams messaging extension
+title: Get started - Build a messaging extension
 author: heath-hamilton
-description: Learn how to build a messaging extension for your first Microsoft Teams app.
+description: Quickly create a Microsoft Teams messaging extension using the Microsoft Teams Toolkit.
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
 ---
-# Build a Teams messaging extension
+# Build a messaging extension for Microsoft Teams
 
 There are two types of Teams *messaging extensions*: [Search commands](../messaging-extensions/how-to/search-commands/define-search-command.md) and [action commands](../messaging-extensions/how-to/action-commands/define-action-command.md).
 

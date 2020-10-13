@@ -1,7 +1,7 @@
 ---
-title: Design a Microsoft Teams in-meeting tab
+title: Design an in-meeting tab
 author: heath-hamilton
-description: Guidance and best practices for designing the in-meeting tab for Microsoft Teams.
+description: Learn how to effectively design an in-meeting tab for Microsoft Teams.
 ms.author: lajanuar
 ms.topic: conceptual
 ---
