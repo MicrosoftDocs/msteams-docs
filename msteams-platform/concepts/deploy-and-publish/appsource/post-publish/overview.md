@@ -22,7 +22,7 @@ Example: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd
 
 * Do not use the *Add a new app* button to resubmit your app. Use the tile for your app on the Overview tab instead.
 * The appId in the updated manifest should be the same as in the current manifest, with an incremented version number.
-* Increment your version number in the manifest if you make any manifest changes to your submission including app name or any metadata in the manifest.
+* Increment your version number in the manifest if you make any changes to your submission including app name or any metadata in the manifest.
 * Updated submissions are required to undergo a new review and validation process.
 
 ## App updates and the user consent flow
