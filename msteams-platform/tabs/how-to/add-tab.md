@@ -6,7 +6,7 @@ keywords: teams tabs group channel configurable
 ms.topic: conceptual
 ms.author: lajanuar
 ---
-# Create a tab using App Studio or manually
+# Create a tab for Microsoft Teams
 
 > [!TIP]
 > Looking for a faster way to get started? Create a [personal](../../build-your-first-app/build-personal-tab.md) or [channel and group](../../build-your-first-app/build-channel-tab.md) tab using the Microsoft Teams Toolkit.
