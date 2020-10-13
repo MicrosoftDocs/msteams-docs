@@ -6,10 +6,10 @@ ms.topic: conceptual
 ms.author: lajanuar
 keywords: teams apps meetings user participant role api 
 ---
-# Create apps for Teams meetings (Release Preview)
+# Create apps for Teams meetings (Developer Preview)
 
 >[!IMPORTANT]
-> Features highlighted in Microsoft Teams Release Preview are provided for early insight and feedback purposes only. They may undergo changes before they can be enabled.
+> Features included in Microsoft Teams Developer Preview are provided for early-access, testing, and feedback purposes only. They may undergo changes before becoming available in the public release and should not be used in production applications.
 
 ## Prerequisites and considerations
 
