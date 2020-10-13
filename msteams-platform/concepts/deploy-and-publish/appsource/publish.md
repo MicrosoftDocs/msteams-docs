@@ -72,10 +72,10 @@ During the account verification process the status of each required step —  Em
 ![Partner Center verification error](../../../assets/images/partner-center-acct-verification-error.png)
 
 ## What is verified in Partner Center account verification process and how to respond?
-There are three verifications done - Email Ownership, Employment and Business. Please see the details of [What is verified and how to respond](/partner-center/verification-responses#what-is-verified-and-how-to-respond)
-If you are the primary contact (Global admin or Account admin), we recommend you go to your Partner Profile to monitor verification status and track progress.
+There are three verification areas - Email Ownership, Employment and Business. Please see the details of [What is verified and how to respond](/partner-center/verification-responses#what-is-verified-and-how-to-respond)
+If you are the primary contact (Global admin or Account admin), we recommend that you go to your Partner Profile to monitor verification status and track progress.
 
-Once the verification process is complete, the verification status of your enrollment on the profile page will change from "pending" to "authorized," and the process steps with status displayed on that page will disappear. The primary contact will receive an email from Microsoft within a few business days after the verification is completed.
+Once the verification process is complete, the verification status of your enrollment on the profile page will change from *pending* to *authorized* and the process steps with status, displayed on that page, will disappear. The primary contact will receive an email from Microsoft within a few business days after the verification is completed.
 
 ## My account Verification status has not advanced beyond Email Ownership in Partner Center. How should I proceed?
 
