@@ -162,7 +162,7 @@ Bot framework is abstracting all the sign in flow and token storage through the 
   * For the Token Exchange URL, use the scope value defined in the previous step of your AAD application. The presence of the Token Exchange URL is indicating to the SDK that this AAD application is configured for SSO.
   * Specify "common" as the Tenant ID.
   * Add all the scopes configured when specifying permissions to downstream APIs for your AAD application (using the client id and client secret provided token store will exchange the token for you for a graph token with the defined permissions).
-  * Click "Save".
+  * Select "Save".
 
   <img src="~/assets/images/bots/bots- VuSSOBotConnection -settings.png" alt="VuSSOBotConnection Setting" width="75%"/>
 
