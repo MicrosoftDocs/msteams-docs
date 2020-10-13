@@ -6,10 +6,10 @@ ms.topic: conceptual
 ms.author: lajanuar
 keywords: teams apps meetings user participant role api 
 ---
-# Create apps for Teams meetings (Release Preview)
+# Create apps for Teams meetings (Developer Preview)
 
 >[!IMPORTANT]
-> Features highlighted in Microsoft Teams Release Preview are provided for early insight and feedback purposes only. They may undergo changes before they can be enabled.
+> Features included in Microsoft Teams Developer Preview are provided for early-access, testing, and feedback purposes only. They may undergo changes before becoming available in the public release and should not be used in production applications.
 
 ## Prerequisites and considerations
 
@@ -74,6 +74,7 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 {
     var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
     var theObject = Rest.Serialization.SafeJsonConvert.DeserializeObject<WhateverObjectIsReturned>(content, connectorClient.DeserializationSettings);
+}
 ```
 
 * * *
@@ -88,32 +89,34 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 #### Response Payload
 <!-- markdownlint-disable MD036 -->
 
+**meetingRole** can be *Organizer*, *Presenter*, or *Attendee*.
+
 **Example 1**
 
 ```json
 {
-    "meetingRole":"Presenter",
-    "conversation":{
-            "isGroup": true,
-            "id": "19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
-        }
+  "user":
+  {
+      "id": "29:1JKiJGPAX9TTxtGxhVo0wLx_zwzo-gG8Z-X03306vBwi9p-xMTEbDXsT6KH7-0kkTS8cD-2zkrsoV6f5WJ6_aYw",
+      "aadObjectId": "6aebbad0-e5a5-424a-834a-20fb051f3c1a",
+      "name": "Allan Deyoung",
+      "givenName": "Allan",
+      "surname": "Deyoung",
+      "email": "Allan.Deyoung@microsoft.com",
+      "userPrincipalName": "Allan.Deyoung@microsoft.com",
+      "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+  },
+  "meeting":
+  {
+      "role ": "Presenter",
+      "inMeeting":true
+  },
+  "conversation":
+  {
+      "id": "<conversation id>"
+  }
 }
 ```
-
-**meetingRole** can be *Organizer*, *Presenter*, or *Attendee*.
-
-**Example 2**
-
-```json
-{
-   "meetingRole":"Presenter",
-   "conversation":{
-      "isGroup":true,
-      "id":"19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
-   }
-}
-```
-
 #### Response Codes
 
 **403**: the app is not allowed to get participant information. This will be the most common error response and is triggered when the app is not installed in the meeting such as when the app is disabled by tenant admin or blocked during live site mitigation.  
@@ -137,6 +140,8 @@ POST /v3/conversations/{conversationId}/activities
 
 **conversationId**: The conversation identifier. Required
 
+**completionBotId**: This is the Bot ID. Optional
+
 #### Request Payload
 
 # [JSON](#tab/json)
@@ -147,13 +152,13 @@ POST /v3/conversations/{conversationId}/activities
     "text": "John Phillips assigned you a weekly todo",
     "summary": "Don't forget to meet with Marketing next week",
     "channelData": {
-    "notification": {
-    "alertInMeeting": true,
-    "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<TaskInfo.title>"
-    }
-},
+        "notification": {
+            "alertInMeeting": true,
+            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID"
+        }
+    },
     "replyToId": "1493070356924"
-    }
+}
 ```
 
 # [C#/.NET](#tab/dotnet)
@@ -161,14 +166,14 @@ POST /v3/conversations/{conversationId}/activities
 ```csharp
 Activity activity = MessageFactory.Text("This is a meeting signal test");
 MeetingNotification notification = new MeetingNotification
-{
+  {
     AlertInMeeting = true,
-    ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<TaskInfo.title>"
-};
+    ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID"
+  };
 activity.ChannelData = new TeamsChannelData
-{
+  {
     Notification = notification
-};
+  };
 await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```
 
@@ -177,13 +182,13 @@ await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```javascript
 
 const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive card instead
-        replyActivity.channelData = {​​
-            notification: {​​
+        replyActivity.channelData = {
+            notification: {
                 alertInMeeting: true,
-                externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>’
-            }​​
-        }​​;
-        await context.sendActivity(replyActivity);
+                externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID’
+            }
+        };
+await context.sendActivity(replyActivity);
 ```
 
 * * *
@@ -205,7 +210,9 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
 The meetings app capabilities are declared in your app manifest via the **configurableTabs** -> **scopes** and **context** arrays. *Scope* defines to whom and *context* defines where your app will be available.
 
 > [!NOTE]
-> Please use [Developer Preview manifest schema](../resources/schema/manifest-schema-dev-preview.md) to try this in your app manifest.
+> * Please use [Developer Preview manifest schema](../resources/schema/manifest-schema-dev-preview.md) to try this in your app manifest.
+> * Mobile Platform currently only support Manifest Schema 1.6
+> * Mobile Platform supports Tabs only in Pre and Post Meeting Surfaces. The In-meeting experiences (in-meeting dialog and tab) on mobile will be available soon
 
 ```json
 "configurableTabs": [
