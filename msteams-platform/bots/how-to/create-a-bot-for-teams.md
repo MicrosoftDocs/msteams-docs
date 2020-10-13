@@ -1,12 +1,12 @@
 ---
-title: Create a bot using App Studio or manually
+title: Create a bot for teams
 author: clearab
 description: Learn how to create a Teams bot
 ms.topic: conceptual
 localization_priority: Priority
 ms.author: anclear
 ---
-# Create a bot using App Studio or manually
+# Create a bot for Microsoft Teams
 
 > [!TIP]
 > Looking for a faster way to get started? Create a [bot](../../build-your-first-app/build-bot.md) using the Microsoft Teams Toolkit.
