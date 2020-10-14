@@ -217,8 +217,6 @@ HTTP/1.1 200 OK
 400 Bad Request
 ```
 
-***See*** **[HTTP 400 client request errors](#http-400-client-request-errors), listed below.**
-
 #### Request (POST a message with inline `image)
 
 > **Note**: There are no special permission scopes in this scenario since the request is part of chatMessage; scopes for chatMessage apply here as well.
