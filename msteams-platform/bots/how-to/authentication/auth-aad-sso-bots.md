@@ -87,11 +87,11 @@ If this is the first time the user is using your application and the user consen
 
 <img src="~/assets/images/bots/bots-consent-dialogbox.png" alt="Consent dialog box" width="75%"/>
 
-If the bot defined a sign-in button, the sign in flow for bots will be triggered similarly to how the sign-in works from a card button in a message stream. It is up to the developer to decide which permissions to ask the user to consent. This approach is recommended if you need a token with permissions beyond openId, for example, if you want to exchange the token for some graph resources.
+If the bot defined a sign-in button, the sign-in flow for bots will be triggered similarly to how the sign-in works from a card button in a message stream. It is up to the developer to decide which permissions to ask the user to consent. This approach is recommended if you need a token with permissions beyond openId, for example, if you want to exchange the token for some graph resources.
 
-If the bot is not providing a sign in button on the card, it triggers user consent for a minimal set of permissions. This token is useful for basic authentication and getting the user email address.
+If the bot is not providing a sign-in button on the card, it triggers user consent for a minimal set of permissions. This token is useful for basic authentication and getting the user email address.
 
-**C# token request without a sign in button**:
+**C# token request without a sign-in button**:
 
 var attachment = new Attachment
             {
@@ -140,7 +140,7 @@ The turnContext.activity.value is of type [TokenExchangeInvokeRequest](https://d
 ###### *SSO with Bot framework token store auth connection support*.
 
 Requirements: BF SDK version >= 4.9.4
-Bot framework is abstracting all the sign in flow and token storage through the oAuthPrompt. To setup SSO flow with bot framework, please follow the next steps.
+Bot framework is abstracting all the sign-in flow and token storage through the oAuthPrompt. To setup SSO flow with bot framework, please follow the next steps.
 
 ###### Update the azure portal with the oauth connection
 
