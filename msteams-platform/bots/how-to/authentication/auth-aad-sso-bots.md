@@ -1,5 +1,5 @@
 ---
-title: Single Sign-On support for bots
+title: Support Single Sign-On for bots - Phase 1 (1:1 chats)
 description: Describes how to get a user token. Currently, a bot developer can use a sign in card or the azure bot service with the OAuth card support.
 keywords: token, user token, SSO support for bots
 ---
@@ -83,7 +83,7 @@ The request to get the token is a normal post message request (using the existin
 
 <img src="~/assets/images/bots/bots-sample-payload.png" alt="Sample payload" width="75%"/>
 
-If this is the first time the user is using your application and the user consent is required, the user will be shown a dialog to continue with the consent experience similar to the one below. When the user selects Continue, two different things occur depending on whether the bot is defined or not and a sign-in button on the OAuth card.
+If this is the first time the user is using your application and the user consent is required, the user will be shown a dialog to continue with the consent experience similar to the one below. When the user selects **Continue**, two different things occur depending on whether the bot is defined or not and a sign-in button on the OAuth card.
 
 <img src="~/assets/images/bots/bots-consent-dialogbox.png" alt="Consent dialog box" width="75%"/>
 
@@ -146,19 +146,19 @@ Bot framework is abstracting all the sign-in flow and token storage through the 
 
 1. In the Azure Portal, navigate back to the Bot Channels Registration.
 
-2. Switch to the "Settings" blade and click "Add Setting" under the OAuth Connection Settings section.
+2. Switch to the **Settings** blade and choose **Add Setting** under the OAuth Connection Settings section.
 
 <img src="~/assets/images/bots/bots- VuSSOBotHandle2-Settings.png" alt="VuSSOBotHandle2" width="75%"/>
 
-3. Fill out the Connection Setting form:
+3. Fill up the **Connection Setting** form:
 
-  * Enter a name for your new Connection Setting. This will be the name that gets referenced inside the settings of your bot service code in step 5.
-  * In the Service Provider dropdown, select Azure Active Directory V2.
+  * Enter a name for your new Connection Setting. This will be the name that gets referenced inside the settings of your bot service code in **step 5**.
+  * In the Service Provider dropdown, select **Azure Active Directory V2**.
   * Enter the client credentials for the AAD application.
   * For the Token Exchange URL, use the scope value defined in the previous step of your AAD application. The presence of the Token Exchange URL is indicating to the SDK that this AAD application is configured for SSO.
-  * Specify "common" as the Tenant ID.
+  * Specify "common" as the **Tenant ID**.
   * Add all the scopes configured when specifying permissions to downstream APIs for your AAD application. With the client id and client secret provided, token store will exchange the token for a graph token with defined permissions for you.
-  * Select "Save".
+  * Select **Save**.
 
   <img src="~/assets/images/bots/bots- VuSSOBotConnection -settings.png" alt="VuSSOBotConnection Setting" width="75%"/>
 
