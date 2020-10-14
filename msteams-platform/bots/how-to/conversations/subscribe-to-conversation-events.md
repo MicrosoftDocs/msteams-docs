@@ -428,7 +428,7 @@ async def on_teams_members_added_activity(
 
 The `teamMemberRemoved` event is sent to your bot if it is removed from a team and every time any user is removed from a team that your bot is a member of. You can determine if the new member removed was the bot itself or a user by looking at the `Activity` object of the `turnContext`.  If the `Id` field of the `MembersRemoved` object is the same as the `Id` field of the `Recipient` object, then the member removed is the bot, otherwise it is a user.  The bot's `Id` will generally be: `28:<MicrosoftAppId>`
 
-[!Note] When a user is removed from a tenant, `membersRemoved converstaionUpdate` event is triggered.
+[!Note] When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
 
 # [C#/.NET](#tab/dotnet)
 

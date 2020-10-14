@@ -1,8 +1,9 @@
 ---
 title: Microsoft Teams app approval submission process guidance
 description: Describes the submission approval process for getting your app published to the Microsoft Teams app store
-keywords: teams publish store office publishing publish AppSource partner center account verification
+keywords: teams publish store office publishing publish AppSource partner center account verification apps account not publish eligible 
 ---
+
 # Submit your app to AppSource
 
 ## Teams app submission
@@ -70,6 +71,12 @@ You'll receive the above error message when your [account verification status](/
 During the account verification process the status of each required step —  Email Ownership, Employment Verification, and Business Verification — will be displayed. Once the verification process has been successfully completed, the verification status of your enrollment on the profile page will change from "pending" to "authorized," and the process steps will no longer be displayed.
 
 ![Partner Center verification error](../../../assets/images/partner-center-acct-verification-error.png)
+
+## What is verified in Partner Center account verification process and how to respond?
+There are three verification areas - Email Ownership, Employment and Business. Please see the details of [What is verified and how to respond](/partner-center/verification-responses#what-is-verified-and-how-to-respond)
+If you are the primary contact (Global admin or Account admin), we recommend that you go to your Partner Profile to monitor verification status and track progress.
+
+Once the verification process is complete, the verification status of your enrollment on the profile page will change from *pending* to *authorized* and the process steps with status, displayed on that page, will disappear. The primary contact will receive an email from Microsoft within a few business days after the verification is completed.
 
 ## My account Verification status has not advanced beyond Email Ownership in Partner Center. How should I proceed?
 

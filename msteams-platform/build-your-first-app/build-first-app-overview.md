@@ -1,12 +1,12 @@
 ---
-title: Get started building first Teams app
+title: Get started - Build your first app overview and prerequisites
 author: heath-hamilton
-description: Overview and prerequisites for building first Microsoft Teams app
+description: Learn how to get started with Microsoft Teams app development and set up your environment.
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: quickstart
 ---
-# Build your first Teams app overview
+# Build your first Microsoft Teams app overview
 
 In the **build your first app** lessons, you create basic Teams apps. Each tutorial walks through how to build a simple, real-world Teams app while introducing you to common tools, fundamental concepts, and more advanced features.
 
@@ -79,6 +79,7 @@ Teams displays app content only through HTTPS connections. Since you'll host you
 1. Install [ngrok](https://ngrok.com/download).
 1. Install the latest version of [Visual Studio Code](https://code.visualstudio.com/download). (Earlier versions might not work with the toolkit.)
 1. In Visual Studio Code, select **Extensions** :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: on the left Activity Bar and install the **Microsoft Teams Toolkit**.
+
     :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="Illustration showing where in Visual Studio Code you can install the Microsoft Teams Toolkit extension.":::
 
 ## About the tutorials

@@ -1,12 +1,12 @@
 ---
+title: Get started - Build a channel and group tab
 author: heath-hamilton
-description: Learn how to build a channel and group tab for your first Microsoft Teams app.
+description: Quickly create a Microsoft Teams channel and group tab using the Microsoft Teams Toolkit.
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
-title: Build a Teams channel and group tab
 ---
-# Build a Teams channel and group tab
+# Build a channel and group tab for Microsoft Teams
 
 In this tutorial, you'll build a basic *channel tab* (also known as a *group tab*), which is a full-screen page for a team channel or chat. Unlike a personal tab, users can configure some aspects of this kind of tab (for example, rename the tab so it's meaningful to their channel).
 
