@@ -148,7 +148,7 @@ Try it out in a quickstart:
   * [Messaging extension with action-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)
   * [Messaging extension with search-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)
 
-Learn more about messaging extensions concepts:
+Learn more about Teams development concepts:
 
-* [Understand Teams app capabilities ?](~/concepts/extensibility-points.md)
+* [Understand Teams app capabilities](../concepts/capabilities-overview.md)
 * [What are messaging extensions?](~/messaging-extensions/what-are-messaging-extensions.md)
