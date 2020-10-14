@@ -93,6 +93,8 @@ If the bot is not providing a sign-in button on the card, it triggers user conse
 
 **C# token request without a sign-in button**:
 
+```
+
 var attachment = new Attachment
             {
                 Content = new OAuthCard
@@ -106,9 +108,11 @@ var attachment = new Attachment
             };
             var activity = MessageFactory.Attachment(attachment);
 
-            // NOTE: This activity needs to be sent in the 1:1 conversation between the bot and the user. If the bot supports group and channel scope, this code should be updated to send the request to the 1:1 chat. 
+            // NOTE: This activity needs to be sent in the 1:1 conversation between the bot and the user. 
+            // If the bot supports group and channel scope, this code should be updated to send the request to the 1:1 chat. 
    
    await turnContext.SendActivityAsync(activity, cancellationToken);
+```
 
 * ###### Receiving the token
 
