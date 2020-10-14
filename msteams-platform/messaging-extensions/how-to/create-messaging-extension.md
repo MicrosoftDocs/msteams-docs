@@ -150,5 +150,5 @@ Try it out in a quickstart:
 
 Learn more about Teams development concepts:
 
-* [Understand Teams app capabilities](../concepts/capabilities-overview.md)
+* [Understand Teams app capabilities](../../concepts/capabilities-overview.md)
 * [What are messaging extensions?](~/messaging-extensions/what-are-messaging-extensions.md)
