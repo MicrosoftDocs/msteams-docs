@@ -1,11 +1,11 @@
 ---
-title: Create a messaging extension for teams
+title: Create a messaging extension using App Studio
 author: clearab
-description: Learn how to create a Teams messaging extension
+description: Learn how to create a Microsoft Teams messaging extension using App Studio.
 ms.topic: conceptual
 ms.author: anclear
 ---
-# Create a messaging extension for Microsoft Teams
+# Create a messaging extension using App Studio
 
 > [!TIP]
 > Looking for a faster way to get started? Create a [messaging extension](../../build-your-first-app/build-messaging-extension.md) using the Microsoft Teams Toolkit.
