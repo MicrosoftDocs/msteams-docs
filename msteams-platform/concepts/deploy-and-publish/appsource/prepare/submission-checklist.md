@@ -76,7 +76,7 @@ Please include the following:
 
 * You may choose to upload your test notes to SharePoint. If so, please provide a public link to the file.
 
-* **Test Accounts**. A test account is required if your app only allows licensed accounts or whitelisting from the backend. Also, if there is a team/group chat scope allowed in your app,  two test accounts in the same tenant are required to validate the team collaboration scenario.
+* **Test Accounts**. A test account is required if your app only allows licensed accounts or safelisting from the backend. Also, if there is a team/group chat scope allowed in your app,  two test accounts in the same tenant are required to validate the team collaboration scenario.
 
 * **Integration steps**. If pre-configuration by a tenant admin is required to use the app, include the steps and/or provide configured admin and non-admin accounts for validation. Note: you can sign up for an [Office 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) subscription. It's *free* for 90 days and will continually renew as long as you're using it for development activity.
 
