@@ -106,7 +106,9 @@ var attachment = new Attachment
             };
             var activity = MessageFactory.Attachment(attachment);
 
-            [!NOTE]: This activity needs to be sent in the 1:1 conversation between the bot and the user. If the bot supports group and channel scope, this code should be updated to send the request to the 1:1 chat. await turnContext.SendActivityAsync(activity, cancellationToken);
+            // NOTE: This activity needs to be sent in the 1:1 conversation between the bot and the user. If the bot supports group and channel scope, this code should be updated to send the request to the 1:1 chat. 
+   
+   await turnContext.SendActivityAsync(activity, cancellationToken);
 
 * ###### Receiving the token
 
@@ -144,7 +146,7 @@ Bot framework is abstracting all the sign-in flow and token storage through the 
 
 ###### Update the azure portal with the oauth connection
 
-1. In the Azure Portal, navigate back to the Bot Channels Registration.
+1. In the Azure Portal, navigate back to the **Bot Channels Registration**.
 
 2. Switch to the **Settings** blade and choose **Add Setting** under the OAuth Connection Settings section.
 
