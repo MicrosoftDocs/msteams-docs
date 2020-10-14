@@ -82,9 +82,11 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 #### Query parameters
 
-**meetingId**. The meeting identifier is required.  
-**participantId**. The participant identifier is required.  
-**tenantId**. [Tenant id](/onedrive/find-your-office-365-tenant-id) of the participant. Required for tenant user.
+|Value|Type|Required|Description|
+|---|---|----|---|
+|**meetingId**| string | Yes | The meeting identifier is available via Bot Invoke and Teams Client SDK.|
+|**participantId**| string | Yes | This field is the User ID and it is available in Tab SSO, Bot Invoke, and Teams Client SDK. Tab SSO is highly recommended|
+|**tenantId**| string | Yes | This required for tenant users. It is available in Tab SSO, Bot Invoke, and Teams Client SDK. Tab SSO is highly recommended|
 
 #### Response Payload
 <!-- markdownlint-disable MD036 -->
