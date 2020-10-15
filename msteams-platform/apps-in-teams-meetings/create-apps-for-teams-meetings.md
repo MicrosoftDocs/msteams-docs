@@ -82,9 +82,11 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 #### Query parameters
 
-**meetingId**. The meeting identifier is required.  
-**participantId**. The participant identifier is required.  
-**tenantId**. [Tenant id](/onedrive/find-your-office-365-tenant-id) of the participant. Required for tenant user.
+|Value|Type|Required|Description|
+|---|---|----|---|
+|**meetingId**| string | Yes | The meeting identifier is available via Bot Invoke and Teams Client SDK.|
+|**participantId**| string | Yes | This field is the User ID and it is available in Tab SSO, Bot Invoke, and Teams Client SDK. Tab SSO is highly recommended|
+|**tenantId**| string | Yes | This required for tenant users. It is available in Tab SSO, Bot Invoke, and Teams Client SDK. Tab SSO is highly recommended|
 
 #### Response Payload
 <!-- markdownlint-disable MD036 -->
@@ -138,9 +140,10 @@ POST /v3/conversations/{conversationId}/activities
 
 #### Query parameters
 
-**conversationId**: The conversation identifier. Required
-
-**completionBotId**: This is the Bot ID. Optional
+|Value|Type|Required|Description|
+|---|---|----|---|
+|**conversationId**| string | Yes | The convdersation identifier is available as part of bot invoke |
+|**completionBotId**| string | No | This field is the Bot ID that is declared in the manifest. The bot will receive a result object |
 
 #### Request Payload
 
@@ -182,12 +185,12 @@ await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```javascript
 
 const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive card instead
-        replyActivity.channelData = {
-            notification: {
-                alertInMeeting: true,
-                externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID’
-            }
-        };
+replyActivity.channelData = {
+    notification: {
+        alertInMeeting: true,
+        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID’
+    }
+};
 await context.sendActivity(replyActivity);
 ```
 
