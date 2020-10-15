@@ -129,7 +129,7 @@ Once a meeting begins, Teams participants can interact directly with your messag
 
 1. **Command type**. If your message extension uses [action-based commands](../../messaging-extensions/what-are-messaging-extensions.md#action-commands), it should follow tabs [single sign-on](../../tabs/how-to/authentication/auth-aad-sso.md) authentication.
 
-1. **User experience**. You should determine the intended the end-user experience for messaging extensions invoked during a meeting chat.
+1. **User experience**. You messaging extension should look and behave the same as it would outside a meeting.
 
 ## Next steps
 
