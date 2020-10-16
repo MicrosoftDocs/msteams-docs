@@ -334,7 +334,7 @@
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
     - name: Application Certification program
       href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
-- name: Tools and SDKs
+- name: SDKs and tools
   items:
   - name: Teams Toolkit for Visual Studio Code
     href: toolkit/visual-studio-code-overview.md
