@@ -12,19 +12,19 @@ Users can get a user token by following any one of the methods listed below:
 
 * **Sign in card**: The bot developer sends a sign-in card to the user with a sign-in URL. Teams client opens the URL in a popup window where the user can sign in and consent to the bot. See [Microsoft Teams authentication flow for bots](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/authentication/auth-flow-bot) for information on adding authentication to your bot.
 
->[!NOTE]
+>**[!NOTE]**
 > The bot developer is in charge of managing the exchange of the auth code for a user access token and storing it.
 
 ![Bot authentication sequence diagram](../../../assets/images/authentication/bot_auth_sequence_diagram.png)
 
 * **Register the Azure Active Directory (AAD)** application in the bot connection settings in the portal. When the bot requires a token and if the Bot Framework (BF) does not have a token in storage, it creates a sign-in card and sends it to the user. Select the sign-in button to access and give consent to the bot. See [Using Azure Bot Service for Authentication in Teams]( https://docs.microsoft.com/microsoftteams/platform/bots/how-to/authentication/add-authentication?tabs=dotnet%2Cdotnet-sample) for information on adding authentication to your bot.
 
->[!NOTE]
+>**[!NOTE]**
 > The AAD redirect URL is the Token Service endpoint here. When the Token Service receives the authorization code, it will exchange it using the stored bot app key and secret key for a User Access Token. Tokens are stored in the Secure Token store and returned to the bot for subsequent requests until it expires.
 
 <img src="~/assets/images/bots/botframework-service-diagram.png" alt="Bot framework service diagram" width="75%"/>
 
->[!Limitations]
+>**[!Limitations]**
 > With both these approaches, even if the application is a 1st party app or tenant approved application, the user still needs to sign in. Moreover, if BF is not refreshing the tokens from the store, then the user will need to sign in.
 
 ## Single Sign-On (SSO) support for bots
@@ -39,7 +39,7 @@ The following diagram shows how the SSO process works for bots. The flow is very
 
 1. The bot sends a message with an OAuth card that contains the tokenExchangeResource property. It tells Teams to obtain an authentication token for the bot application. The user receives messages at all the active endpoints of the user.
 
->[!NOTE]
+>**[!NOTE]**
 > A user can have more than one active endpoint at a time.
 
 2. If this is the first time the current user has used your bot application, there will be a request prompt to consent (if consent is required) or to handle step-up authentication (such as two-factor authentication).
@@ -49,18 +49,19 @@ The following diagram shows how the SSO process works for bots. The flow is very
 4. Azure AD sends the bot application token to the Teams application.
 
 5. Microsoft Teams sends the token to the bot as part of the value object returned by the invoke activity with the name sign-in/tokenExchange.
-[!NOTE]: The token is received from every active endpoint of the user.
+
+**[!NOTE]** The token is received from every active endpoint of the user.
   
 6. The token will be parsed in the bot application to extract the needed information, such as the user's email address.
   
 ### 2. Develop an SSO Microsoft Teams bot
   
-The SSO support is currently requiring the app to be installed in personal scope. To develop an SSO Microsoft Teams bot, a developer needs to:
+The SSO support currently requires the app to be installed in personal scope. To develop an SSO Microsoft Teams bot, a developer needs to:
 1. Create the azure active directory application.
 2. Update the Microsoft Teams application manifest.
 3. Make the bot code changes to request/receive the bot token.
 
-[!NOTE]: The first two steps are similar to the [tab SSO](https://docs.microsoft.com/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso) flow.
+**[!NOTE]** The first two steps are similar to the [tab SSO](https://docs.microsoft.com/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso) flow.
 
 #### Create the azure active directory application
 
@@ -116,7 +117,7 @@ var attachment = new Attachment
 
 * ###### Receiving the token
 
-The response with the token is sent through an invoke activity, with the same schema as others invoke activities the bots receive today. The only difference is the invoke name, “sign-in/tokenExchange” and the value field, which will contain the “id” ( a string) of the initial request to get the token and the “token” field ( a string value including the token). Please note that if the user has multiple active endpoints you might receive multiple responses for a given request. It is up to the bot developer to dedup the responses with the token.
+The response with the token is sent through an invoke activity, with the same schema as others invoke activities the bots receive today. The only difference is the invoke name, “sign-in/tokenExchange” and the value field, which will contain the “id” ( a string) of the initial request to get the token and the “token” field ( a string value including the token). Please note that you might receive multiple responses for a given request if the user has multiple active endpoints. It is up to the bot developer to dedup the responses with the token.
 
 <img src="~/assets/images/bots/bots-signintokenExchange-diagram.png" alt="signin/tokenExchange" width="75%"/>
 
