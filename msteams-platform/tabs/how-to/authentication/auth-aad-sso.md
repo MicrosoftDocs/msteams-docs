@@ -105,7 +105,7 @@ This section describes the tasks involved in creating a Teams tab that uses SSO.
     ✔ ID Token  
     ✔ Access Token  
     
-Congratulations! You have completed the app registration prerequsities to proceed with your tab SSO app.     
+Congratulations! You have completed the app registration prerequisites to proceed with your tab SSO app.     
 
 > [!NOTE]
 >
