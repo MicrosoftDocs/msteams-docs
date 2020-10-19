@@ -65,7 +65,9 @@ The SSO support currently requires the app to be installed in personal scope. To
 
 #### Create the azure active directory application
 
-This step is similar to the [tab SSO](https://docs.microsoft.com/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso) flow. Please follow [Create the azure active directory application]( https://docs.microsoft.com/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso#1-create-your-azure-active-directory-azure-ad-application) to create the aad application. At step 5 in the instructions, if you are building only a bot, set the Application ID URI to api://botid-{YourBotId}, if you are using a bot and a tab, set the Application ID URI to api://fully-qualified-domain-name.com/botid-{YourBotId}.
+This step is similar to the [tab SSO](https://docs.microsoft.com/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso) flow. Please follow [Create the azure active directory application]( https://docs.microsoft.com/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso#1-create-your-azure-active-directory-azure-ad-application) to create the aad application. At step 5 in the instructions;
+ * if you are building only a bot, set the Application ID URI to api://botid-{YourBotId}, 
+ * if you are using a bot and a tab, set the Application ID URI to api://fully-qualified-domain-name.com/botid-{YourBotId}.
 
 Example: api://subdomain.example.com/botid-00000000-0000-0000-0000-000000000000.
 
@@ -80,7 +82,7 @@ To get the bot SSO flow working, you could use the bot framework oAuthPrompt or 
 
 * ###### Requesting the token
 
-The request to get the token is a normal post message request (using the existing message schema) which includes in the attachments an OAuth card. The schema for the OAuth card is defined [here]( https://docs.microsoft.com/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable) and it is very similar to a sign-in card. Teams will treat this request as a silent token acquisition if the TokenExchangeResource property is populated on the card. For Teams channel we honor only the Id property, which uniquely identifies a token request.
+The request to get the token is a normal post message request (using the existing message schema). It includes in the attachments of an OAuth card. The schema for the OAuth card is defined [here]( https://docs.microsoft.com/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable) and it is very similar to a sign-in card. Teams will treat this request as a silent token acquisition if the TokenExchangeResource property is populated on the card. For Teams channel we honor only the Id property, which uniquely identifies a token request.
 
 <img src="~/assets/images/bots/bots-sample-payload.png" alt="Sample payload" width="75%"/>
 
@@ -95,7 +97,6 @@ If the bot is not providing a sign-in button on the card, it triggers user conse
 **C# token request without a sign-in button**:
 
 ```
-
 var attachment = new Attachment
             {
                 Content = new OAuthCard
@@ -117,12 +118,13 @@ var attachment = new Attachment
 
 * ###### Receiving the token
 
-The response with the token is sent through an invoke activity, with the same schema as others invoke activities the bots receive today. The only difference is the invoke name, “sign-in/tokenExchange” and the value field, which will contain the “id” ( a string) of the initial request to get the token and the “token” field ( a string value including the token). Please note that you might receive multiple responses for a given request if the user has multiple active endpoints. It is up to the bot developer to dedup the responses with the token.
+The response with the token is sent through an invoke activity with the same schema as others invoke activities the bots receive today. The only difference is the invoke name, **sign-in/tokenExchange** and the **value** field which will contain the **ID** (a string) of the initial request to get the token and the **token** field (a string value including the token). Please note that you might receive multiple responses for a given request if the user has multiple active endpoints. It is up to the bot developer to dedup the responses with the token.
 
 <img src="~/assets/images/bots/bots-signintokenExchange-diagram.png" alt="signin/tokenExchange" width="75%"/>
 
 **C# code to respond to handle the invoke activity**:
-protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+protected override async Task<InvokeResponse> OnInvokeActivity
+  (ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
         {
             try
             {
