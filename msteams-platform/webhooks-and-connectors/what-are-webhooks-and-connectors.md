@@ -23,7 +23,7 @@ Connectors allow users to subscribe to receive notifications and messages from y
 
 ### Incoming webhooks
 
-Incoming webhooks are a the simplest type of connector. For any channel in team (if they are enabled for that team) you can choose to expose an HTTPS endpoint that will accept correctly formatted JSON and insert messages into that channel. They are a quick and easy way to connect a channel to your service, and are best used for scenarios that are unique to a particular team. For example, you could create an incoming webhook in your DevOps channel and configure your build, deployment and monitoring services to send alerts.
+Incoming webhooks are the simplest type of connector. For any channel in team (if they are enabled for that team) you can choose to expose an HTTPS endpoint that will accept correctly formatted JSON and insert messages into that channel. They are a quick and easy way to connect a channel to your service, and are best used for scenarios that are unique to a particular team. For example, you could create an incoming webhook in your DevOps channel and configure your build, deployment and monitoring services to send alerts.
 
 See [Create an incoming webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md).
 
