@@ -214,8 +214,6 @@ The meetings app capabilities are declared in your app manifest via the **config
 
 > [!NOTE]
 > * Please use [Developer Preview manifest schema](../resources/schema/manifest-schema-dev-preview.md) to try this in your app manifest.
-> * Mobile Platform currently only support Manifest Schema 1.6
-> * Mobile Platform supports Tabs only in Pre and Post Meeting Surfaces. The In-meeting experiences (in-meeting dialog and tab) on mobile will be available soon
 
 ```json
 "configurableTabs": [
@@ -247,10 +245,15 @@ The tab `context` and `scopes` properties work in harmony to allow you to determ
 * **meetingDetailsTab**: a tab in the header of the meeting details view of the calendar.
 * **meetingSidePanel**: an in-meeting panel opened via the unified bar (u-bar).
 
+> [!NOTE]
+> "Context" property is currently not supported and thus will be ignored on mobile clients
+
 ## Configure your app for meeting scenarios
 
 > [!NOTE]
-> For your app to be visible in the tab gallery it needs to **support configurable tabs** and the **group chat scope**.
+> * For your app to be visible in the tab gallery it needs to **support configurable tabs** and the **group chat scope**.
+>
+> * Mobile clients support Tabs only in Pre and Post Meeting Surfaces. The In-meeting experiences (in-meeting dialog and panel) on mobile will be available soon. Follow the [guidance for tabs on mobile](../tabs/design/tabs-mobile.md) when creating your tabs for mobile. 
 
 ### Pre-meeting
 
