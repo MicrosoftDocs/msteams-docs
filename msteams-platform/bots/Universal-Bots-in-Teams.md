@@ -66,17 +66,7 @@ Of the top-level attributes of the invoke message, the only ones that matter are
 |Attribute | Specification |
 |:--------------------|:----------------|
 |name | adaptiveCard/action |
-|value | A copy of the Action payload is shown below: |
-```
-"value": 
-{
-  "action": {
-    "type": "Action.Execute",
-    "id": "<id>",
-    "verb": "<verb>",
-    "data": { … }
-}
-``` 
+|value | A copy of the Action payload is shown below: <br /> ``` <br /> "value": <br /> { <br />   "action": { <br />     "type": "Action.Execute", <br />     "id": "<id>", <br />     "verb": "<verb>", <br />     "data": { … } <br /> } <br /> ``` |
 
 ## Host/Service Integration Conventions
 
