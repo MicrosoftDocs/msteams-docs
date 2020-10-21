@@ -131,6 +131,7 @@ HTTP/1.1 202 Accepted
    "membershipType":null,
    "moderationSettings":null
 }
+```
 
 #### Error message
 
