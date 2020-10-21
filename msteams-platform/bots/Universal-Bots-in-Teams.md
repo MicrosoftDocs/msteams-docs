@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 Currently, Adaptive Cards are available across multiple platforms in multiple products (“hosts” in Adaptive Card parlance), but action buttons are product-specific. Except for `Action.OpenUrl`, a button action for one product won’t work in another. Outlook uses `Action.Http` but relies on a product-specific validation process for trusting specific https:// domains. Microsoft Teams uses `Action.Submit` but depends on a Teams-specific `data.msteams:` object schema. Cortana does something different too.
 
-To solve this problem, in summer 2019, David Claux led the launch of a cross-product group (spec [here](https://microsoft.sharepoint-df.com/:w:/r/teams/AdaptiveAppFrameworkv-team/_layouts/15/guestaccess.aspx?e=897HmS&wdLOR=c01AB79F5-B0C8-4B57-82B9-036E574DAB42&share=EVkBNIFHGzdOndgBQvPvGAYBaTMEMGd8vAA8vPBu6cKICA)), and the Bot Framework/SMBA API/protocol/schema, app registration, and service infrastructure was used, specifically focused on using the `invoke` activity.
+To solve this problem, in summer 2019, David Claux led the launch of a cross-product group (Specification [here](https://microsoft.sharepoint-df.com/:w:/r/teams/AdaptiveAppFrameworkv-team/_layouts/15/guestaccess.aspx?e=897HmS&wdLOR=c01AB79F5-B0C8-4B57-82B9-036E574DAB42&share=EVkBNIFHGzdOndgBQvPvGAYBaTMEMGd8vAA8vPBu6cKICA)), and the Bot Framework/SMBA API/protocol/schema, app registration, and service infrastructure was used, specifically focused on using the `invoke` activity.
 
 Here’s how it will work:
 
@@ -24,7 +24,7 @@ Here’s how it will work:
 
 ## Adaptive Action Schema
 
-The [spec]( https://microsoft.sharepoint-df.com/:w:/t/AdaptiveAppFrameworkv-team/EVkBNIFHGzdOndgBQvPvGAYBaTMEMGd8vAA8vPBu6cKICA?e=897HmS) describes the schema for the new action as such:
+The [Specification]( https://microsoft.sharepoint-df.com/:w:/t/AdaptiveAppFrameworkv-team/EVkBNIFHGzdOndgBQvPvGAYBaTMEMGd8vAA8vPBu6cKICA?e=897HmS) describes the schema for the new action as such:
 
 ```
 { 
@@ -38,7 +38,7 @@ The [spec]( https://microsoft.sharepoint-df.com/:w:/t/AdaptiveAppFrameworkv-team
 
 ## Invoke Schema
 
-In the [spec]( https://microsoft.sharepoint-df.com/:w:/t/AdaptiveAppFrameworkv-team/EVkBNIFHGzdOndgBQvPvGAYBaTMEMGd8vAA8vPBu6cKICA?e=897HmS), what gets sent over the wire to the bot is specified in the "Channel-to-Bot wire protocol" section. In this section, I'll describe the salient points for what it will look like in Teams since we are heavy users of the `invoke` activity message. 
+In the [Specification]( https://microsoft.sharepoint-df.com/:w:/t/AdaptiveAppFrameworkv-team/EVkBNIFHGzdOndgBQvPvGAYBaTMEMGd8vAA8vPBu6cKICA?e=897HmS), what gets sent over the wire to the bot is specified in the "Channel-to-Bot wire protocol" section. In this section, I'll describe the salient points for what it will look like in Teams since we are heavy users of the `invoke` activity message. 
 
 In [Appendix A – Full Invoke Activity Schema Example](#appendix-a-full-invoke-activity-schema-example), there's a fully-fleshed-out version from Teams captured recently, but here's an excerpt:
 
@@ -103,7 +103,7 @@ We need to standardize how a host implements this behavior if a bot wants to wor
 
 ## Card Auto-Refresh and Card Localization
 
-In the [spec]( https://microsoft.sharepoint-df.com/:w:/t/AdaptiveAppFrameworkv-team/EVkBNIFHGzdOndgBQvPvGAYBaTMEMGd8vAA8vPBu6cKICA?e=897HmS), there's a section called "Automatic card refresh" that proposes a new top-level property in the Adaptive Card schema that looks like this:
+In the [Specification]( https://microsoft.sharepoint-df.com/:w:/t/AdaptiveAppFrameworkv-team/EVkBNIFHGzdOndgBQvPvGAYBaTMEMGd8vAA8vPBu6cKICA?e=897HmS), there's a section called "Automatic card refresh" that proposes a new top-level property in the Adaptive Card schema that looks like this:
 
 ```
 “autoRefresh”: {
