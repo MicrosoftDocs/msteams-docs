@@ -17,7 +17,7 @@ Here’s how it will work:
 
 1. There is a new Adaptive Card Action, `Action.Invoke`.
 2. There is a new invoke type `(name), adaptiveCard/action`.
-3. When the user presses an `Action.Invoke` button, the Adaptive Card host client sends a message to whatever subsystem handles `Action.Invoke` requests for the host.  See [Client-Service Protocol]( #host-service-integration-conventions).
+3. When the user presses an `Action.Invoke` button, the Adaptive Card host client sends a message to whatever subsystem handles `Action.Invoke` requests for the host.  See [Client-Service Protocol](#host-service-integration-conventions).
 4. That subsystem generates a Bot Framework `invoke` activity message appropriate for the Bot Framework channel/Direct Line plugin  and does an HTTP POST of that message to the bot.
 5. In the body of the response to the HTTP POST, the bot returns an Adaptive Card with a specific schema.
 6. The host updates the Adaptive Card JSON of the card body and also updates the message.
@@ -68,7 +68,8 @@ Of the top-level attributes of the invoke message, the only ones that matter are
 |name | adaptiveCard/action |
 |value | A copy of the Action payload is shown below: |
 ```
-"value": {
+"value": 
+{
   "action": {
     "type": "Action.Execute",
     "id": "<id>",
