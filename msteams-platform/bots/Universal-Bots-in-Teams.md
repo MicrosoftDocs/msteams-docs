@@ -98,8 +98,7 @@ We need to standardize how a host implements this behavior if a bot wants to wor
 
 <img width="530px" alt="Client-Service Sequence Diagram" src="~/assets/images/bots/ClientServiceSequence.png"/>
 
-> [!NOTE]
-> This sequence diagram does not currently illustrate `autoRefresh` behavior.
+> **Note:** This sequence diagram does not currently illustrate `autoRefresh` behavior.
 [Link](https://www.lucidchart.com/invitations/accept/c4b6a614-53dc-4681-bd29-6900d17a1c4c)
 
 ## Card Auto-Refresh and Card Localization
