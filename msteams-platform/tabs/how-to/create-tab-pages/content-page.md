@@ -46,7 +46,7 @@ For your page to display in Teams, you must include the [Microsoft Teams JavaScr
 
 ### Using the SDK to interact with Teams
 
-The [Teams client JavaScript SDK](~/tabs/how-to/using-teams-client-sdk.md) provides many additional functions you may find useful while developer your content page.
+The [Teams client JavaScript SDK](~/tabs/how-to/using-teams-client-sdk.md) provides many additional functions you may find useful while developing your content page.
 
 ### Deep links
 
