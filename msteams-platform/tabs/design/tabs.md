@@ -1,7 +1,7 @@
 ---
 title: Design guidelines for tabs
 description: Describes the guidelines for creating tabs for content and collaboration
-keywords: teams design guidelines reference framework tabs configuration
+keywords: teams design guidelines reference framework tabs configuration channel tab static tab simple tab design Teams tab 
 ---
 # Content and conversations, all at once using tabs
 
