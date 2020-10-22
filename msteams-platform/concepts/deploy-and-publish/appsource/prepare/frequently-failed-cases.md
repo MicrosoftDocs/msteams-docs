@@ -68,7 +68,7 @@ For additional information on authentication see:
 ![SharePoint web view](~/assets/images/faq/web-sp.png)  
 ![SharePoint tab view](~/assets/images/faq/tab-sp.png)
 
-* Tabs should be light in nature and not include complex navigation .
+* Tabs should be light in nature and not include complex navigation.
 * Tabs must not present an app bar with icons in the left rail that conflict with the main Teams navigation.
 * Tabs that have complex editing capabilities within the app should open the editor view in multi-windows rather than in the tab.
 * If there are multiple view options, consider having a tab config menu for the user to choose from. For example, instead of embedding a menu inside the tab, put the menu in the configuration page so the actual tab view is clean and focused.
