@@ -129,10 +129,6 @@ You'll need to have the following values from the Azure AD registration process 
 }
 ```
 
-## Call the Microsoft Graph API
-
-See the [SendActivityNotification](/graph/api/team-sendactivitynotification?view=graph-rest-beta&tabs=http) documentation on the Microsoft Graph platform.
-
 > [!div class="nextstepaction"] 
 > [Next: Test your activity feed notifications in Teams](test-activity-feed-notifications.md)
 </br>

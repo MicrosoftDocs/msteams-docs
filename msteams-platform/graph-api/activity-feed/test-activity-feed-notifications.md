@@ -14,14 +14,15 @@ The activity feed API is a Microsoft Teams and Microsoft Graph integration that 
 
 > [!NOTE]
 >To test activity feed notifications:
+>
 > 1. Your Teams app manifest file must include **webApplicationInfo** and **activities** keys. *See*, [Update your Teams app manifest](feed-notifications.md#update-your-teams-app-manifest).
 >2. The **Upload custom apps** policy setting must be enabled as part of the custom app setup policies. *See* [Custom app policy settings](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings). <br/>
 > <br/>
 
-
 ## Test activity feed notifications using the Postman app
 
 > [!div class="checklist"]
+>
 > * Copy the [Activity feed notification test code](test-activity-feed-json-file.md) into your local environment and update the following values:
 
 1. `client_id`  — your app's Azure AD app id.
@@ -38,8 +39,9 @@ The activity feed API is a Microsoft Teams and Microsoft Graph integration that 
 > You may need to replace other parameters as appropriate such as `username`, `password`, `chatId`,  etc.
 
 > [!div class="checklist"]
+>
 >* [Prepare your Office 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).  
->* [Upload your app package](../../concepts/deploy-and-publish/apps-upload.md#upload-your-package-into-a-team-using-the-apps-tab) directly to a specific team, one-to-one chat, or group chat.
+>* [Upload your app package](../../concepts/deploy-and-publish/apps-upload.md#upload-your-package-into-a-team-using-the-apps-tab) directly to a specific team, one-to-one chat, or group chat using the `Apps` tab or by selecting click the `More apps` icon on the left-rail app bar and choosing the `Upload a custom app link`.
 > * Open the [Postman](https://www.postman.com) app:
 
 * Select **File** -> **Import** -> **Upload Files** to upload the JSON file from your environment.  
