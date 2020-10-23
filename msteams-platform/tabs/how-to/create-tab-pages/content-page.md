@@ -22,7 +22,7 @@ Your tab's overall objective should be to provide access to meaningful and engag
 
 ## Integrate your code with Teams
 
-For your page to display in Teams, you must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) and include a call to `microsoftTeams.initialize()` after your page loads. That is how your page and the Teams client communicate:
+For your page to display in Teams, you must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latestadd &preserve-view=true) and include a call to `microsoftTeams.initialize()` after your page loads. That is how your page and the Teams client communicate:
 
 ```html
 <!DOCTYPE html>
