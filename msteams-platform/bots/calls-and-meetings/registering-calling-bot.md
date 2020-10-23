@@ -3,7 +3,7 @@ title: Registering a calling and meeting bot for Microsoft Teams
 description: Learn how to register a new audio/video calling bot for Microsoft Teams
 keywords: calling bot audio/video audio video media
 ---
-# Registering a calling bot for Microsoft Teams
+# Register a calling bot for Microsoft Teams
 
 A bot that participates in audio/video calls and online meetings is an ordinary Microsoft Teams bot with a few extra features:
 
@@ -60,7 +60,7 @@ Microsoft Graph exposes granular permissions controlling the access that apps ha
 
 ### Assigning permissions
 
-You must configure the application permissions for your bot in advance. We recommend using the [Microsoft App Registration Portal](https://apps.dev.microsoft.com/) as described [here](/graph/docs/concepts/auth_register_app_v2) because that's where your bot was configured; however, you can still use the [Azure portal](https://aka.ms/aadapplist) if you prefer to use the [Azure AD V1 endpoint](/azure/active-directory/develop/azure-ad-endpoint-comparison).
+You must configure the application permissions for your bot in advance. We recommend using the [Microsoft App Registration Portal](https://apps.dev.microsoft.com/) as described [here](/graph/auth_register_app_v2) because that's where your bot was configured; however, you can still use the [Azure portal](https://aka.ms/aadapplist) if you prefer to use the [Azure AD V1 endpoint](/azure/active-directory/develop/azure-ad-endpoint-comparison).
 
 ### Getting tenant administrator consent
 

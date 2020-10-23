@@ -1,44 +1,50 @@
 ---
 title: App Certification
-description: Describes the self-assessment program from store apps
+description: Describes the Microsoft 365 App Compliance program from store apps
 keywords: teams compliance appsource store app certification partner center
 ms.date: 05/06/2019
 ---
 
-# Microsoft Teams App Certification
+# Microsoft 365 App Compliance 
 
-The Microsoft Teams app certification program, is a pilot program that allows you to complete a voluntary self-assessment of your app's security, data handling and compliance practices. The information you provide will be processed and presented to your potential customers so they can better evaluate your app before enabling it for their organization. As part of the [app submission process](~/concepts/deploy-and-publish/apps-publish.md) you'll have the option to complete the assessment, which will then be compiled and presented to Microsoft Teams administrators.
+Building a secure and trustworthy app ecosystem is a top priority for Microsoft. Several investments aim to ensure that apps available in the Microsoft store are valid, safe and secure. 
 
-![Microsoft Teams App Certification](~/assets/images/self-assessment.png)
+  ![3 Tier Approach to App Compliance](../../../../assets/images/Three_Tiers.png) 
+
+-	[Publisher Verification](https://docs.microsoft.com/azure/active-directory/develop/publisher-verification-overview)  –  allows developers with a verified [Microsoft Partner Network](https://partner.microsoft.com/membership) (MPN) account to associate an organizational identity with their apps registered through the [Microsoft identity platform](https://docs.microsoft.com/azure/active-directory/develop/).
+-	[Publisher Attestation](https://docs.microsoft.com/microsoft-365-app-certification/docs/enterprise-app-attestation-guide) – developers complete a self-assessment of their organization’s security, compliance, and data handling practices. This information is made available for IT Admins to review. 
+-	[M365 Certification](https://docs.microsoft.com/microsoft-365-app-certification/docs/enterprise-app-certification-guide) – Microsoft employs a third-party assessor to review and validate the security and compliance standards for the organization. This is our highest level of certification and it gives assurance IT Admins that the application and organization that receives it operates in ways that promote safe usage and storage of data.
+
 
 ## Program benefits
 
-Once you've completed the assessment your responses will be compiled and a page for your app will be created on [this site](https://aka.ms/AppCertification). Instead of responding to requests for information individually, you'll be able to point your customers here for complete information on your app's data handling, security and compliance practices. Microsoft Teams administrators are encouraged to use this catalogue to discover new apps that will be easier for them to assess and onboard into their organizations.
+Each tier in the Microsoft 365 App Compliance Program gives a different level of assurance to your customers. By completing the Publisher Verification you are assuring your customers that your company is the publisher of your app. The Publisher Attestation reduces the need to go back and forth with your customers about your app’s security practices. We publish your responses to common questions about security and compliance in one location in a consistent format for customers to review. The final tier is the Microsoft 365 Certification. Upon completion your customers will know that you follow secure data handling and security practices. Other benefits of the compliance program include:
+-	Free – Microsoft is currently covering this cost
+-	Earn a badge in AppSource and on [Compliance Dev Docs](https://docs.microsoft.com/microsoft-365-app-certification/teams/teams-apps)
+-	Differentiation from other apps in the store
+-	Reduced time to app adoption for your customers
+-	Reduce the amount of time you spend filling out RFPs
+-	Added confidence in the security and compliance measures of your application
 
-## How to join the program
+## Qualifying application types 
+### Publisher Verification applies to apps which: 
+- Using [OAuth 2.0 and OpenID Connect](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-protocols) to sign users in and request access to data using service-side APIs such as [Microsoft Graph](https://developer.microsoft.com/graph/). 
+- Registered in Azure AD as multi-tenant. 
 
-Completing app certification is voluntary, but highly encouraged. Just let us know you're interested and we'll guide you through the process.
+### Publisher Attestation
+-	Teams
+-	Word
+-	Excel
+-	PowerPoint
+-	Outlook
+- Coming Soon: SharePoint
 
-### For existing store apps
+### Microsoft 365 Certification
+-	Teams
+-	Coming soon: will offer same application type coverage as Publisher Attestation
 
-If you already have an app in the app store and you'd like to join the program you can contact us by filling out [this form](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR3oKPRKv815GlRdzCCYPJGZUMzlXMVVIRkhXQUVXT0paQVQ0UUdRWEZSSCQlQCN0PWcu). Someone from our team will follow up with you to get the process started.
+## How to start the program
 
-### For new or updated store apps
+Completing the Microsoft 365 App Compliance Program is voluntary, but highly encouraged. You can join the program no matter where if you are a newly added application or if you’ve been in the store for years. 
 
-For newly submitted apps, or update submissions to existing apps, you'll be asked to participate during the approval process. While this is not required, and will not block the approval of your app, we highly suggest that you take the time to fill out the assessment.
-
-### Information you'll need to provide
-
-When you're completing the assessment, you'll need the following types of information.
-
-#### General
-
-Basic information about your app like licensing details and contact information.
-
-#### Data Handling
-
-Information about what data your app is collecting, why you're collecting that information, and if the administrator has any control over the collected information. Examples include data accessed through Microsoft Graph, any bot capabilities, and any telemetry you're collecting.
-
-#### Security & Compliance
-
-Information related to security and compliance of the entire app (not just your Teams app, but the underlying services as well). The information is stored in Microsoft Cloud App Security catalog. For more information see [this page](/cloud-app-security/attest-your-app).
+The first step is to complete the [Publisher Verification](https://docs.microsoft.com/azure/active-directory/develop/publisher-verification-overview). The next step is to complete the [Publisher Attestation](https://docs.microsoft.com/microsoft-365-app-certification/docs/attestation). Once you complete the Publisher Attestation, we will reach out to you with the next steps to begin the Microsoft 365 Certification.

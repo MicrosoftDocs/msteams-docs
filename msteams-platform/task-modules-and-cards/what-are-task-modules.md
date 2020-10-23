@@ -48,7 +48,7 @@ Task modules can be invoked from tabs, bots or deep links and what appears in on
 
 ## The TaskInfo object
 
-The `TaskInfo` object contains the metadata for a task module. The object definition is below. You **must** define either `url` (for en embedded iFrame) or `card` (for an Adaptive Card).
+The `TaskInfo` object contains the metadata for a task module. The object definition is below. You **must** define either `url` (for an embedded iFrame) or `card` (for an Adaptive Card).
 
 | Attribute | Type | Description |
 | --- | --- | --- |

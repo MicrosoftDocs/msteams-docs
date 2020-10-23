@@ -1,14 +1,17 @@
 ---
-title: Extend your Teams app with a custom tab
+title: Create a tab using App Studio
 author: laujan
-description: A guide to building a tab
+description: Learn how to create a Microsoft Teams tab using App Studio.
 keywords: teams tabs group channel configurable 
 ms.topic: conceptual
-ms.author: 
+ms.author: lajanuar
 ---
-# Extend your Teams app with a custom tab
+# Create a tab using App Studio
 
-Custom tabs allow you to serve web content that you host to your channel, group chat, and personal users. At a high level, you'll need to complete the following steps to create a tab:
+> [!TIP]
+> Looking for a faster way to get started? Create a [personal](../../build-your-first-app/build-personal-tab.md) or [channel and group](../../build-your-first-app/build-channel-tab.md) tab using the Microsoft Teams Toolkit.
+
+Tabs allow you to serve web content that you host to your channel, group chat, and personal users. At a high level, you'll need to complete the following steps to create a tab:
 
 1. Prepare your development environment.
 1. Create your page(s).

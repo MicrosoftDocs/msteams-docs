@@ -1,75 +1,85 @@
 {
-    "docsets_to_publish": [{
-        "customized_tasks": {
-            "docset_prebuild": [
-             "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"	
-            ]
-        },
-        "docset_name": "msteams-platform",
-        "build_source_folder": "msteams-platform",
-        "build_output_subfolder": "msteams-platform",
-        "locale": "en-us",
-        "monikers": [],
-        "moniker_ranges": [],
-        "open_to_public_contributors": true,
-        "type_mapping": {
-            "Conceptual": "Content",
-            "ManagedReference": "Content",
-            "RestApi": "Content"
-        },
-        "build_entry_point": "docs",
-        "template_folder": "_themes"
-    }],
-    "JoinTOCPlugin": [{
-        "ConceptualTOC": "/msteams-platform/TOC.yml",
-        "ReferenceTOCUrl": "/javascript/api/msteams-client-docs-ref-typescript/toc.json?view=msteams-client-js-latest"
-    }],
-    "notification_subscribers": [],
-    "branches_to_filter": [],
-    "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/msteams-docs",
-    "git_repository_branch_open_to_public_contributors": "master",    
-    "skip_source_output_uploading": false,
-    "need_preview_pull_request": true,
-    "contribution_branch_mappings": {},
-    "dependent_repositories": [{
-            "path_to_root": "_themes",
-            "url": "https://github.com/Microsoft/templates.docs.msft",
-            "branch": "master",
-            "branch_mapping": {}
-        },
-        {
-            "path_to_root": "_msteams-samples-hello-world-nodejs",
-            "url": "https://github.com/OfficeDev/msteams-samples-hello-world-nodejs",
-            "branch": "master"
-        },
-        {
-            "path_to_root": "_msteams-samples-hello-world-csharp",
-            "url": "https://github.com/OfficeDev/msteams-samples-hello-world-csharp",
-            "branch": "master"
-        },
-        {
-            "path_to_root":"botbuilder-samples",
-            "url":"https://github.com/Microsoft/BotBuilder-Samples",
-            "branch":"master",
-            "branch_mapping":{}
-         }
-    ],
-    "dependent_packages": [{
-        "path_to_root": "_dependentPackages/CommonPlugins",
-        "target_framework": "net45",
-        "version": "latest",
-        "id": "Microsoft.OpenPublishing.CommonPlugins",
-        "nuget_feed": "https://www.myget.org/F/op/api/v2"
-    }],
-    "branch_target_mapping": {
-        "live": [
-            "Publish",
-            "Pdf"
-        ],
-        "master": [
-            "Publish",
-            "Pdf"
+  "docsets_to_publish": [
+    {
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
         ]
+      },
+      "docset_name": "msteams-platform",
+      "build_source_folder": "msteams-platform",
+      "build_output_subfolder": "msteams-platform",
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
+    }
+  ],
+  "JoinTOCPlugin": [
+    {
+      "ConceptualTOC": "msteams-platform/TOC.yml",
+      "ReferenceTOCUrl": "/javascript/api/msteams-client-docs-ref-typescript/toc.json?view=msteams-client-js-latest"
+    }
+  ],
+  "notification_subscribers": [],
+  "branches_to_filter": [],
+  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/msteams-docs",
+  "git_repository_branch_open_to_public_contributors": "master",
+  "skip_source_output_uploading": false,
+  "need_preview_pull_request": true,
+  "contribution_branch_mappings": {},
+  "dependent_repositories": [
+    {
+      "path_to_root": "_themes",
+      "url": "https://github.com/Microsoft/templates.docs.msft",
+      "branch": "master",
+      "branch_mapping": {}
     },
-    "need_generate_pdf_url_template": false
+    {
+      "path_to_root": "_msteams-samples-hello-world-nodejs",
+      "url": "https://github.com/OfficeDev/msteams-samples-hello-world-nodejs",
+      "branch": "master"
+    },
+    {
+      "path_to_root": "_msteams-samples-hello-world-csharp",
+      "url": "https://github.com/OfficeDev/msteams-samples-hello-world-csharp",
+      "branch": "master"
+    },
+    {
+      "path_to_root": "botbuilder-samples",
+      "url": "https://github.com/Microsoft/BotBuilder-Samples",
+      "branch": "main",
+      "branch_mapping": {}
+    }
+  ],
+  "dependent_packages": [
+    {
+      "path_to_root": "_dependentPackages/CommonPlugins",
+      "target_framework": "net45",
+      "version": "latest",
+      "id": "Microsoft.OpenPublishing.CommonPlugins",
+      "nuget_feed": "https://www.myget.org/F/op/api/v2"
+    }
+  ],
+  "branch_target_mapping": {
+    "live": [
+      "Publish",
+      "Pdf"
+    ],
+    "master": [
+      "Publish",
+      "Pdf"
+    ]
+  },
+  "need_generate_pdf_url_template": false,
+  "docs_build_engine": {
+    "name": "docfx_v3"
+  }
 }

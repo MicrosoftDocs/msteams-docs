@@ -144,12 +144,12 @@ The following steps use [cURL](https://curl.haxx.se/). We assume that you have t
 
    ```bash
    // on macOS or Linux
-   curl -H 'Content-Type: application/json' -d '{\"text\": \"Hello World\"}' <YOUR WEBHOOK URL>
+   curl -H 'Content-Type: application/json' -d '{"text": "Hello World"}' <YOUR WEBHOOK URL>
    ```
 
    ```bash
    // on Windows
-   curl.exe -H 'Content-Type: application/json' -d '{\"text\": \"Hello World\"}' <YOUR WEBHOOK URL>
+   curl.exe -H "Content-Type:application/json" -d "{'text':'Hello World'}" <YOUR WEBHOOK URL>
    ```
 
 2. If the POST succeeds, you should see a simple **1** output by `curl`.
@@ -180,7 +180,7 @@ The following manifest.json file contains the basic elements needed to test and 
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "id": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
   "version": "1.0",
@@ -215,6 +215,56 @@ The following manifest.json file contains the basic elements needed to test and 
   "needsIdentity": "true"
 }
 ```
+
+## Send adaptive cards using an incoming webhook
+
+> [!NOTE]
+>
+> ✔ All native adaptive card schema elements, except `Action.Submit`, are fully supported.
+>
+> ✔ The supported Actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), and [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
+
+### The flow for sending [adaptive cards](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card) via an incoming webhook is as follows:
+
+**1.** [Setup a custom webhook](#setting-up-a-custom-incoming-webhook) in Teams.</br></br>
+**2.** Create your adaptive card JSON file:
+
+```json
+{
+   "type":"message",
+   "attachments":[
+      {
+         "contentType":"application/vnd.microsoft.card.adaptive",
+         "contentUrl":null,
+         "content":{
+            "$schema":"http://adaptivecards.io/schemas/adaptive-card.json",
+            "type":"AdaptiveCard",
+            "version":"1.2",
+            "body":[
+                {
+                "type": "TextBlock",
+                "text": "For Samples and Templates, see https://adaptivecards.io/samples](https://adaptivecards.io/samples)",
+                }
+            ]
+         }
+      }
+   ]
+}
+```
+
+> [!div class="checklist"]
+>
+> - The `"type"` field must be `"message"`.
+> - The `"attachments"` array contains a set of card objects.
+> - The `"contentType"` field must be set to adaptive card type.
+> - The `"content"` object is the card formatted in JSON.
+
+**3.** Test your adaptive card with Postman
+
+You can test your adaptive card using [Postman](https://www.postman.com) to send a POST request to the URL that you created when you setup your incoming webhook. Paste your JSON file in the body of the request and view your adaptive card message in Teams.
+
+>[!TIP]
+> You can use adaptive card code [Samples and Templates](https://adaptivecards.io/samples) for the body of your test Post request.
 
 ## Testing your connector
 

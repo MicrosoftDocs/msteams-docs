@@ -6,7 +6,7 @@ ms.topic: how-to
 ms.author: lajanuar
 ---
 
-# Integrate your Power Virtual Agents chatbot with Microsoft Teams
+# Integrate a Power Virtual Agents chatbot with Microsoft Teams
 
 [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) is a no-code, guided graphical interface solution that empowers every member of your team to create rich, conversational chatbots that easily integrate with the Teams platform. All content authored in Power Virtual Agents renders naturally in Teams and Power Virtual Agents bots engage with users in the Teams native chat canvas. Your IT administrators, business analysts, domain specialists, and skilled app developers can design, develop and publish intelligent virtual agents for Teams without having to setup a development environment, create a web service, or directly register with the Bot Framework.  *See* [Create a chatbot for Teams with Microsoft Power Virtual Agents](../what-are-bots.md#create-a-chatbot-for-teams-with-microsoft-power-virtual-agents).
 
@@ -34,11 +34,12 @@ If [uploading custom apps is enabled](/microsoftteams/admin-settings) in your Te
 
   * Select the app store icon from the bottom of the left nav bar in your Teams instance, and search for **App Studio**.
 >
-&emsp;&emsp; <img  width="450px" title="Finding App Studio in the Store" src="../../assets/images/get-started/app-studio-store.png"/>    
+
+&emsp;&emsp; <img  width="450px" alt="Finding App Studio in the Store" src="/msteams-docs/msteams-platform/assets/images/get-started/app-studio-store.png"/>   
 
   * Select the **App Studio** tile and choose **Install** in the pop-up dialog box.
 >
-&emsp;&emsp; <img  width="450px" title="Installing App Studio" src="../../assets/images/get-started/app-studio-install.png"/>
+&emsp;&emsp; <img  width="450px" alt="Installing App Studio" src="../../assets/images/get-started/app-studio-install.png"/>
 
 2. **Create the Teams app manifest in App Studio**.  Bots in Teams are defined by an app manifest (JSON) file that provides basic information about your bot and its capabilities. In **App Studio** select **Manifest editor**  => **Create a new app**.
 3. **Add your bot details**. For a full descriptions of each field see [manifest schema definition](../../resources/schema/manifest-schema.md). Be sure to complete all required fields.
