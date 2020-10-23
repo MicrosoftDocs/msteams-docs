@@ -56,20 +56,20 @@ To check whether the RSC permissions are being honored by the API request, you'l
 
 > [!div class="checklist"]
 >
-> * In the Teams client, select **Teams** from the far left nav bar .
-> * Select the team where the app is installed from the dropdown menu.
-> * Select the **More options** icon (&#8943;)
-> * Select **Get link to team** 
-> * Copy and save the **groupId** value from the string.
+> - In the Teams client, select **Teams** from the far left nav bar .
+> - Select the team where the app is installed from the dropdown menu.
+> - Select the **More options** icon (&#8943;)
+> - Select **Get link to team** 
+> - Copy and save the **groupId** value from the string.
 
 ### Using Postman
 
 > [!div class="checklist"]
 >
-> * Open the [Postman](https://www.postman.com) app.
-> * Select **File** => **Import** => **Upload Files** to upload the updated JSON file from your environment.  
-> * Select the **Collections** tab. 
-> * Select the chevron (>) next to **Test RSC** to expand the details view and see the API requests.
+> - Open the [Postman](https://www.postman.com) app.
+> - Select **File** => **Import** => **Upload Files** to upload the updated JSON file from your environment.  
+> - Select the **Collections** tab.
+> - Select the chevron (>) next to **Test RSC** to expand the details view and see the API requests.
 
 Execute the entire permissions collection for each API call. The permissions that you specified in your app manifest should succeed, while those not specified should fail with an HTTP 403 status code. Check all of the response status codes to confirm that the behavior of the RSC permissions in your app meets expectations.
 
@@ -80,10 +80,10 @@ Execute the entire permissions collection for each API call. The permissions tha
 
 > [!div class="checklist"]
 >
-> * Uninstall the app from the specific team.
-> * Follow the steps above for [Test added RSC permissions using Postman](#test-added-rsc-permissions-using-the-postman-app).
-> * Check all of the response status codes to confirm that the specific API calls that succeeded have failed with an HTTP 403 status code.
+> - Uninstall the app from the specific team.
+> - Follow the steps above for [Test added RSC permissions using Postman](#test-added-rsc-permissions-using-the-postman-app).
+> - Check all of the response status codes to confirm that the specific API calls that succeeded have failed with an HTTP 403 status code.
 
 > [!div class="nextstepaction"]
 >
-> [Learn more about the Graph API and Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0)
+> [Learn more about the Graph API and Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true )

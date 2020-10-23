@@ -1,5 +1,5 @@
 ---
-title: Testing activity feed notifications in Teams
+title: Test activity feed notifications in Teams
 description: Details testing activity feed notifications in Teams using Postman
 localization_priority:  Normal
 author: laujan

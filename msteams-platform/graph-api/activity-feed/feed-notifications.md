@@ -65,7 +65,7 @@ You'll need to have the following values from the Azure AD registration process 
 - The  **Client secret/password** or a public/private key pair (**Certificate**). This is not required for native apps.
 - A **Redirect URI** (or reply URL) for your app to receive responses from Azure AD.
 
- *See* [Get access on behalf of a user](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token) and [Get access without a user](/graph/auth-v2-service).
+ *See* [Get access on behalf of a user](/graph/auth-v2-user?view=graph-rest-1.0&preserve-view=true #3-get-a-token) and [Get access without a user](/graph/auth-v2-service).
 
 ## Update your Teams app manifest
 
