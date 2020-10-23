@@ -363,7 +363,7 @@
       href: apps-in-teams-meetings/design/designing-in-meeting-dialog.md
     - name: In-meeting tab
       href: apps-in-teams-meetings/design/designing-in-meeting-tab.md
-- name: 'Teams Graph REST APIs'
+- name: 'Microsoft Graph REST API integration'
   items:
     - name: Resource Specific consent
       items:
