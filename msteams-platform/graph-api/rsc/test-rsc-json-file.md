@@ -1,6 +1,6 @@
 ---
-title: Testing resource-specific consent in Teams
-description: Details testing resource-specific consent in Teams using Postman
+title: Test resource-specific consent in Teams
+description: How to test resource-specific consent in Teams using Postman
 localization_priority:  Normal
 author: laujan
 ms.author: lajanuar
@@ -391,7 +391,7 @@ keywords: teams authorization OAuth SSO AAD rsc Postman Graph
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"displayName\": \"ChannelCreatedThruRsc\",\r\n  \"description\": \"This channel was ceated using RSC\",\r\n  \"membershipType\": \"standard\"\r\n}",
+					"raw": "{\r\n  \"displayName\": \"ChannelCreatedThruRsc\",\r\n  \"description\": \"This channel was created using RSC\",\r\n  \"membershipType\": \"standard\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
