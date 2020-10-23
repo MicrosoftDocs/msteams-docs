@@ -34,9 +34,11 @@ There are two ways to upload your app to Teams:
 
 1. In the lower left corner of Teams, choose the Store icon. On the Store page, choose "Upload a custom app".
 
-   ![View team](../../assets/images/store-upload-a-custom-app.png)
+  ![View team](../../assets/images/store-upload-a-custom-app2.png)
 
 2. In the *Open* dialog, navigate to the package you want to upload and choose *Open*.
+
+   ![Add menu](../../assets/images/NewappAddmenudropdown.png)
 
 The uploaded package should now be available for use in the team or conversation specified in the consent dialog. If your app does not appear, the most common reason is an error in the manifest, particularly ids for the app, bot and messaging extensions. If the app is not scoped for conversations, that option will not appear.
 
@@ -94,7 +96,7 @@ With the app loaded in the team or conversation, users can set up a Connector us
 
 1. Go to a channel in the team. Choose *More options* (*&#8943;*) and choose *Connectors*.
 
-2. Select your Connector from the **Uploaded** section at the bottom.
+2. Select your Connector from the **Sideloaded** section at the bottom.
 
 3. Configure your Connector via its [configuration page](../../webhooks-and-connectors/how-to/connectors-creating.md) and choose *Save*.
 

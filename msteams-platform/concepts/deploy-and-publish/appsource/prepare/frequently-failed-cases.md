@@ -4,6 +4,7 @@ description: Describes tips for submission and most failed policies
 author: laujan
 ms.author: lajanuar
 ms.topic: how to
+keywords: Teams apps validation most failed test cases rapid approval appsource publish
 ---
 # Tips for a successful app submission
 
@@ -64,9 +65,12 @@ For additional information on authentication see:
 
 * Tabs should provide focused content and avoid needless UI elements. In general, this usually refers to unnecessary nested/layered navigation, an extraneous or irrelevant UI next to the content, or any links that take the user to unrelated content. For example, below is a tab view that omits navigation menus and only showcases the main content:
 
-![SharePoint web view](~/assets/images/faq/web-sp.png)
+![SharePoint web view](~/assets/images/faq/web-sp.png)  
 ![SharePoint tab view](~/assets/images/faq/tab-sp.png)
 
+* Tabs should be light in nature and not include complex navigation.
+* Tabs must not present an app bar with icons in the left rail that conflict with the main Teams navigation.
+* Tabs that have complex editing capabilities within the app should open the editor view in multi-windows rather than in the tab.
 * If there are multiple view options, consider having a tab config menu for the user to choose from. For example, instead of embedding a menu inside the tab, put the menu in the configuration page so the actual tab view is clean and focused.
 
 ![Wide idea configuration page](~/assets/images/faq/wideidea.png)
@@ -74,10 +78,13 @@ For additional information on authentication see:
 ### &#9989; Tab configuration must happen in the configuration screen
 
 * The configuration screen should clearly explain the value of the experience and how to configure the tab.
-* The configuration process should not dead-end the user experience and always provide a way for users to continue.
+* The configuration process should always provide a way for users to continue not dead-end the user experience. For example, do not show an empty board after the user has configured the tab
+* The user sign-in process must be part of the configuration process and should complete in the Tab UI. After the user has completed configuration and loaded your tab, no further action should be required.
+* Don't show your entire webpage within the sign-in configuration pop-up window.
 * A user should always be able to finish the configuration experience, even if they can’t immediately find the content they’re looking for.
 * The configuration experience should provide options for the user to find their content, pin a URL, or create new content if it doesn’t exist.
-* The user shouldn’t have to leave the configuration experience to create content and then come back to Teams to pin it.
+* The configuration experience must remain within the Teams context. The user shouldn’t have to leave the configuration experience to create content and then return to Teams to pin it.
+* Use the available viewport area efficiently. Do not waste it on using huge logos inside the configuration pop up
 
 ![OneNote allows users to paste a OneNote link in case notes can not be found](~/assets/images/faq/tab-onenote-config.png)
 
@@ -99,26 +106,47 @@ Your bot should be responsive to any command and not dead-end the user. Here are
 
 * **Include help content or guidance when your bot is lost**. When your bot can't understand the user input, it should suggest an alternative action. For example, *"I'm sorry, I don't understand. Type "help" for more information."* Don't respond with an error message or simply, *"I don't understand"*. Use this chance to teach your users.
 
+* **Use adaptive cards and task modules to make your bot response clear and actionable**
+[Adaptive cards with buttons invoking task modules](/task-modules-and-cards/task-modules/task-modules-bots) enhance the bot user experience. These cards and buttons are easier to use in a mobile device as opposed to your user typing the commands
+
 * **Think through all scopes**. Be sure that your bot provides appropriate responses when mentioned (`@*botname*`) in a channel and in personal conversations. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](~/resources/schema/manifest-schema.md#bots).)
 
-### &#9989; Bots must send a welcome message on first launch
+### &#9989; Personal bots must send a welcome message on first launch
 
-Welcome messages are the best way to set your bot's tone. This is the first interaction a user has with the bot. A good welcome message can encourage the user to keep exploring the app. If the welcome or introductory message is confusing or unclear, users won't see the value of the app immediately and lose interests. The welcome message must include the following:
+A welcome messages is the best way to set the tone for your personal/chat bot. This is the first interaction a user has with the bot. A good welcome message can encourage the user to keep exploring the app. If the welcome or introductory message is confusing or unclear, users won't see the value of the app immediately and lose interests.
 
-* A help command.
-* The value proposition
-* All valid commands.
+> [!Note]
+> A welcome message is optional for a channel bot.
 
-Here are a few considerations when designing your welcome message:
+### Welcome message requirements
 
-#### Personal Scope
+* Include a value proposition with the welcome tour.
+* Provide way-forward guidance for using the bot.
+* Present easy-to-read text and straightforward dialogue — preferably a card with an actionable welcome tour button that loads a task module.
+* Keep it simple, avoid wordy/chatty dialogue.
+* Include adaptive cards and buttons to make the welcome message more usable.
+* Invoke the welcome message  with one ping, not two or more simultaneous pings.
+* A welcome message must only be shown to the user who configured the app, preferably in a 1:1 personal chat.
+* Never send a personal chat to every member in the team.
+* Never send the welcome message more than once. Repeating the same welcome message over regular intervals is not allowed and is considered spamming.
 
-* **Make your message concise and informative**. Most likely, users' experiences with and knowledge of your app will vary. They might have used your app on another platform or know nothing about your app. You want to tailor your message to all audiences and in a couple sentences explain what your bot does and the ways to interact with it. You should also explain the value of the app and how the users will benefit from using it.
+#### Avoid welcome message spamming
+
+* **Channel message by bot**. Don't spam users by creating separate new chat posts. Create a single thread post with replies in the same thread.
+* **Personal chat by bot**. Don't send multiple messages. Send one message with complete information.
+
+#### Notification-only bot welcome messages
+
+Notification-only bots must send a welcome message that includes a message conveying, *"I am a notification-only bot and will not be able to reply to your chats"*.
+
+#### Welcome messages in the personal scope
+
+* **Make your message concise and informative**.  Most likely, user experience with and knowledge of your app will vary. A user may have used your app on another platform or know nothing about your app. You want to tailor your message to all audiences and in a couple sentences explain what your bot does and the ways to interact with it. You should also explain the value of the app and how the users will benefit from using it.
 ![Cafe and Dinning bot](~/assets/images/faq/cafe-bot.png)
 
 * **Make your message actionable**. Think about the first thing you want users to do after installing your app. Is there a cool command they should try? Is there another onboarding experience they should know about? Do they need to sign in? You can add actions on an adaptive card or provide specific examples such as *“Try asking….”*, *“This is what I can do…”*.
 
-#### Team scope
+#### Welcome messages in the team/channel  scope
 
 Things are a little bit different when the bot is first added to a channel. Normally, you shouldn't send a 1:1 message to everyone on the team, but the bot can send a welcome message in the channel.
 

@@ -1,74 +1,65 @@
 ---
-title: Extensible points in the Teams client
-author: clearab
-description: Understand the extensibility points available to your app in the Microsoft Teams client.
+title: Entry points for Teams apps
+author: heath-hamilton
+description: Describes how and where people use your app in Teams.
 ms.topic: conceptual
-ms.author: anclear
+ms.author: lajanuar
+ms.date: 09/22/2020
 ---
-# Extensible points in the Teams client
+# Entry points for Teams apps
 
-An app built on the Microsoft Teams Platform  extends the Microsoft Teams client (web, mobile, and desktop) with web services you host. The Teams Platform provides a rich and flexible set of extensibility points, UI constructs, and APIs for you to take advantage of while building your app. Your app can be as simple as embedding your existing website within a tab for your team, or a fully featured, multi-faceted app engaging your users across the entire breadth of the Teams client. You may choose to integrate an existing app, or create a new experience built entirely for Teams.
+The Teams platform provides a flexible set of entry points where people can discover and use your app. Your app can be as simple as embedding an existing website in a personal tab or a multi-faceted app that users interact with across several entry points.
 
-There are multiple places where the Microsoft Teams client can be extended to allow users to interact with your app. Depending on your scenario you may choose to focus on a single extension point (like a personal conversational bot), or combine multiple extension points.
+The most successful apps feel native to Teams, so it's important to carefully plan your app's entry points.
 
-## Teams, channels and group chats
+## Teams, channels, and group chats
 
-Teams, channels and group chats allow multiple people to collaborate. Apps in this context make themselves available to all members of the group or conversation, typically focusing on enabling additional collaborative workflows or unlocking new social interactions. Your app will have access to APIs allowing it to get information about the members in the conversation, the channels in a team, and metadata about the team or conversation.
+Teams, channels, and group chats are collaboration spaces. Apps that use these entry points are available to all members and typically focus on additional workflows or unlocking new social interactions.
 
-They can be extended with:
+Here's how Teams app capabilities are commonly used in collaborative contexts:
 
-* [**Conversational bots**](~/bots/what-are-bots.md) interacting with members of the conversation through chat, and responding to events (like a new member being added, or a channel being renamed). All conversations with a bot in this context are visible to all members of the channel or group, so you'll need to ensure the conversation is relevant to everyone.
+* [**Tabs**](~/tabs/what-are-tabs.md) provide a full-screen embedded web experience configured for the team, channel, or group chat. All members interact with the same web-based content, so a stateless single page app experience is typical.
 
-* [**Configurable Tabs**](~/tabs/what-are-tabs.md) providing a full-screen embedded web experience configured for the channel or group chat it is installed in. All members will interact on the same shared web-app, so a stateless single page app experience is typical.
+* [**Messaging extensions**](~/messaging-extensions/what-are-messaging-extensions.md) are shortcuts for inserting external content into a conversation or taking action on messages without leaving Teams. Link unfurling provides rich content when sharing content from a common URL.
 
-* [**Webhooks and Connectors**](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) enabling external services to post messages to the conversation, and your users to send messages to your service. You can take advantage of cards and card actions to to create rich, actionable messages.
+* [**Bots**](~/bots/what-are-bots.md) interact with members of the conversation through chat and responding to events (like adding a new member or renaming a channel). Conversations with a bot in these contexts are visible to all members of the team, channel, or group, so bot conversations should be relevant to everyone.
 
-### Personal apps
+* [**Webhooks and connectors**](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) allow an external service to post messages into a conversation and users to send messages to a service.
 
-[Personal apps](~/concepts/design/personal-apps.md) are the portion of your Teams app focusing on interactions with a single user. The experience is unique to each individual user. This portion of your app can be pinned to the left-navigation rail - enabling one-click access for your users.
+* [**Microsoft Graph REST API**](https://docs.microsoft.com/graph/teams-concept-overview) for getting data about teams, channels, and group chats to help automate and manage Teams processes.
 
-They can contain:
+## Personal apps
 
-* [**Conversational bots**](~/bots/what-are-bots.md) having a one-to-one conversation with the user. Because this is a private conversation, if your app needs to have a multi-turn conversation, or provide a notification relevant only to a single user, it is typically best to have that interaction in a personal app.
+[Personal apps](~/concepts/design/personal-apps.md) focus on interactions with a single user. The experience in this context is unique to each user. Users can pin personal apps to the left navigation rail for quick access.
 
-* [**Personal Tabs**](~/tabs/what-are-tabs.md)providing a full-screen embedded web experience.
+Here's how Teams capabilities are commonly used in personal contexts:
 
-## Messages
+* [**Bots**](~/bots/what-are-bots.md) have one-on-one conversations with a user. Bots that require multi-turn conversations or provide notifications relevant only to a specific user are best suited in personal contexts.
 
-Messages are the heart of collaboration in Teams. With a [**messaging extension action command**](~/messaging-extensions/what-are-messaging-extensions.md), your app can allow users to invoke your app's API from a message, sending the contents of the message to your app for processing or action. Your app can respond by presenting a form (a task module) to the user to collect more information, sending a reply to the original message, or sending a message directly to the user.
+* [**Tabs**](~/tabs/what-are-tabs.md) provide a full-screen embedded web experience that's meaningful to individual users.
 
-## Writing messages
+## UI components
 
-Your app can help users craft more effective messages by enabling them to search, or take action, in an external system, and insert the results in a rich, structured format complete with actionable buttons.
+Apps typically exhibit one or more standard Teams UI components. Building out your app using these components leads to rich experiences that feel native to Teams users.
 
-There are three ways your app can help users create better messages:
+### Cards
 
-* [**Messaging Extension - search commands**](~/messaging-extensions/what-are-messaging-extensions.md) allowing them to quickly search an external system, preview the results of that search, then insert the result into the chat as a rich card.
+[Cards](~/task-modules-and-cards/what-are-cards.md) are UI containers defined by JSON that can contain formatted text, media, controls (like dropdowns and radio buttons) and buttons that trigger an action.
 
-* [**Messaging Extension - link unfurling**](~/messaging-extensions/what-are-messaging-extensions.md) allows your app to monitor web domains you're interested in. When a URL containing that domain is pasted into the compose message box, your app's API will be invoked, allowing you to add a rich card to the message with additional information about the item being linked to.
-
-* [**Messaging Extension - action commands**](~/messaging-extensions/what-are-messaging-extensions.md) present your user with a modal form (a task module), submit the results of the form to your app, then either insert a message into the conversation directly, or create part of a message the user can edit before sending to the conversation.
-
-## User Interface (UI) elements
-
-In addition to extensibility points, the Microsoft Teams Platform provides flexible UI elements for apps to take advantage of. These elements allow you to create rich experiences that feel native to the Teams client.
-
-### Cards & card actions
-
-[Cards](~/task-modules-and-cards/what-are-cards.md) are user-interface containers defined by schematized JSON, that can contain multiple properties and attachments. They can contain formatted text, media, controls (like drop-down boxes and radio buttons), and buttons that trigger card actions. Card actions can send payloads to your app's API, open a link, initiate authentication flows, or send messages to conversations. The Microsoft Teams Platform supports multiple types of cards including Adaptive Cards, Hero Cards, Thumbnail Cards and more. They can be combined into Card Collections and displayed in a list or carousel.
+Card actions can send payloads to your app's API, open a link, initiate authentication flows, or send messages to conversations. The Teams platform supports multiple cards, including Adaptive Cards, hero cards, thumbnail cards, and more. You can combine card collections and display in a list or carousel.
 
 ### Task modules
 
-[Task modules](~/task-modules-and-cards/what-are-task-modules.md) allow you to create modal popup experiences in your Teams application. Inside the popup you can run your own custom HTML/JavaScript code, show an `<iframe>` widget such as a YouTube or Microsoft Stream video, or display an Adaptive card. They are especially useful for initiating and completing tasks or displaying rich information like videos or Power BI dashboards. A popup experience is often more natural for users initiating and completing tasks compared to a tab or a conversation-based bot experience.
+[Task modules](~/task-modules-and-cards/what-are-task-modules.md) provide modal experiences in Teams. They are especially useful for initiating workflows, collecting user input, or displaying rich information such as videos or Power BI dashboards. In task modules, you can run custom front-end code, display an `<iframe>` widget, or show an Adaptive Card.
+
+When considering how you want to build your app, remember that modals are natural for users to enter information or complete tasks compared to a tab or a conversation-based bot experience.
 
 ### Deep links
 
-Your app can create [URL deep links](~/concepts/build-and-test/deep-links.md) to help navigate your user through your app, and the Teams client. You can create a deeplink for most entities within Teams, and some (like a new meeting request) allow you to pre-populate information using query strings in the URL. For example, your conversational bot could send a message to a channel with a deeplink to a task module that results in a card being sent as a one-to-one message to a user, that in turn contains a deeplink to create a new meeting with a specific user at a certain date/time. Use deep links to connect across the various extension points available to your app, keeping your user in the correct context at all times.
+Your app can create [URL deep links](~/concepts/build-and-test/deep-links.md) to help navigate your user through your app, and the Teams client. You can create a deep link for most entities within Teams, and some (like a new meeting request) allow you to pre-populate information using query strings in the URL.
 
-### Web content pages
+For example, your conversational bot could send a message to a channel with a deep link to a task module that results in a card being sent as a one-to-one message to a user, that in turn contains a deep link to create a new meeting with a specific user at a certain date/time. Use deep links to connect across the various extension points available to your app, keeping your user in the correct context at all times.
 
-A [web content page](~/tabs/how-to/create-tab-pages/content-page.md) is a webpage you host that can be embedded in a tab or a task module. To enable your webpage to be embedded in a Microsoft Teams client it must:
+### Web-based content
 
-* Be hosted on an HTTPS.
-* Be able to be embedded in an `<iframe>` by the Teams client.
-* Include the Microsoft Teams JavaScript client SDK, and invoke the SDK's `initialize()` method on page load.
+[Web-based content](~/tabs/how-to/create-tab-pages/content-page.md) is a webpage you host that can be embedded in a tab or task module.

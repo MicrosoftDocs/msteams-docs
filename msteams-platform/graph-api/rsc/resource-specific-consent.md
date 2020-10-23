@@ -7,10 +7,10 @@ ms.author: lajanuar
 ms.topic: Overview
 keywords: teams authorization OAuth SSO AAD rsc Graph
 ---
-# Resource-specific consent (RSC) — Developer Preview
+# Resource-specific consent (RSC)
 
->[!NOTE]
->The resource-specific consent permissions are currently available in desktop and Android clients after Developer Preview has been enabled. See [How do I enable Developer Preview](../../resources/dev-preview/developer-preview-intro.md) for more information.
+>[!IMPORTANT]
+> These APIs are accessible in the https://graph.microsoft.com/beta endpoint.  The [beta version](/graph/versioning-and-support#beta-version) endpoint includes APIs that are currently in preview and are not yet generally available. The APIs in the beta endpoint are subject to change and we don't recommend that you use them in your production apps. 
 
 Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API integration that enables your app to use API endpoints to manage specific teams within an organization. The resource-specific consent (RSC) permissions model enables *team owners* to grant consent for an application to access and/or modify a team's data. The granular, Teams-specific, RSC permissions define what an application can do within a specific team:
 
@@ -21,14 +21,14 @@ Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API int
 |TeamSettings.Read.Group | Get the settings for this team.|
 |TeamSettings.Edit.Group|Update the settings for this team.|
 |ChannelSettings.Read.Group|Get the channel names, channel descriptions, and channel settings for this team​.|
-|ChannelSettings.Edit.Group|Update the channel names, channel descriptions, and channel settings for this team.​|
+|ChannelSettings.ReadWrite.Group|Update the channel names, channel descriptions, and channel settings for this team.​|
 |Channel.Create.Group|Create channels in this team.​|
 |Channel.Delete.Group|Delete channels in this team.​|
 |ChannelMessage.Read.Group |Get this team's channel messages.​|
 |TeamsApp.Read.Group|Get a list of this team's installed apps.|
 |TeamsTab.Read.Group|Get a list of this team's tabs.|
 |TeamsTab.Create.Group|Create tabs in this team.​|
-|TeamsTab.Edit.Group|Update this team's tabs.​|
+|TeamsTab.ReadWrite.Group|Update this team's tabs.​|
 |TeamsTab.Delete.Group|Delete this team's tabs.​|
 |Member.Read.Group|Get this team's members.​|
 |Owner.Read.Group|Get this team's owners.​|
@@ -36,7 +36,7 @@ Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API int
 >[!NOTE]
 >Resource-specific permissions are only available to Teams apps installed on the Teams client and are currently not part of the Azure Active Directory portal.
 
-## Enabling resource-specific consent in your application
+## Enable resource-specific consent in your application
 
 The steps for enabling RSC in your application are as follows:
 
@@ -96,7 +96,7 @@ You'll need to have the following values from the Azure AD registration process 
 
 ## Update your Teams app manifest
 
-The RSC permissions are declared in you app manifest (JSON) file.  Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
+The RSC permissions are declared in your app manifest (JSON) file.  Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
 
 > [!div class="checklist"]
 >
@@ -111,42 +111,24 @@ The RSC permissions are declared in you app manifest (JSON) file.  Add a [webApp
 
 ```json
 "webApplicationInfo": {
-
-        "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX", 
-
-"resource": "https://RscBasedStoreApp",
-
-        "applicationPermissions": [
-
-    "TeamSettings.Read.Group",
-
-   "ChannelMessage.Read.Group",
-
-  "TeamSettings.Edit.Group",
-
-  "ChannelSettings.Edit.Group",
-
-  "Channel.Create.Group",
-
-  "Channel.Delete.Group",
-
-  "TeamsApp.Read.Group",
-
-  "TeamsTab.Read.Group",
-
-  "TeamsTab.Create.Group",
-
-  "TeamsTab.Edit.Group",
-
-  "TeamsTab.Delete.Group",
-
-  "Member.Read.Group",
-
-  "Owner.Read.Group"
-
-        ]
-
-    }
+    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource": "https://RscBasedStoreApp",
+    "applicationPermissions": [
+      "TeamSettings.Read.Group",
+      "ChannelMessage.Read.Group",
+      "TeamSettings.Edit.Group",
+      "ChannelSettings.ReadWrite.Group",
+      "Channel.Create.Group",
+      "Channel.Delete.Group",
+      "TeamsApp.Read.Group",
+      "TeamsTab.Read.Group",
+      "TeamsTab.Create.Group",
+      "TeamsTab.ReadWrite.Group",
+      "TeamsTab.Delete.Group",
+      "Member.Read.Group",
+      "Owner.Read.Group"
+    ]
+  }
 ```
 
 ## Install your app directly in Teams
@@ -170,8 +152,15 @@ Once the app has been installed to a team, you can use [Graph Explorer](https://
 > - Copy and save the **groupId** value from the string.
 > - Log into **Graph Explorer**.
 > - Make a **GET** call to the following endpoint: `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants`. The clientAppId field in the response will map to the appId specified in the Teams app manifest.
+  ![Graph explorer response to GET call.](../../assets/images/graph-permissions.png)
+ 
+## Test resource-specific consent
+ 
+> [!div class="nextstepaction"]
+> [**Test resource-specific consent permissions in Teams**](test-resource-specific-consent.md)
+ 
+## Related topic for Teams administrators
 
- ![Graph explorer response to GET call.](../../assets/images/graph-permissions.png)
-
- > [!div class="nextstepaction"]
-> [Test resource-specific consent permissions in Teams](test-resource-specific-consent.md)
+> [!div class="nextstepaction"]
+> [**Resource-specific consent in Microsoft Teams for admins**](/MicrosoftTeams/resource-specific-consent)
+> 

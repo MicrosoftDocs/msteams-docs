@@ -1,10 +1,10 @@
 ---
 title: Create a configuration page
 author: laujan
-description: 
+description: how to create a configuration page
 keywords: teams tabs group channel configurable 
-ms.topic: conceptualF
-ms.author: laujan
+ms.topic: conceptual
+ms.author: lajanuar
 ---
 # Create a configuration page
 
@@ -16,7 +16,7 @@ A configuration page is a special type of [content page](content-page.md) that a
 
 ## Configuring a channel or group chat tab
 
-A configuration page informs the content page how it should render. Your application must reference the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) and call `microsoft.initialize()`. Additionally, your URLs must be secure HTTPS endpoints and available from the cloud. Below is a configuration page example.
+A configuration page informs the content page how it should render. Your application must reference the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) and call `microsoft.initialize()`. Additionally, your URLs must be secure HTTPS endpoints and available from the cloud. Below is a configuration page example.
 
 ```html
 <head>
@@ -70,7 +70,6 @@ A configuration page informs the content page how it should render. Your applica
             }
         </script>
     </body>
-
 ...
 ```
 
@@ -80,7 +79,7 @@ Here, the user is presented with two option buttons, **Select Gray** or **Select
 1. The `microsoftTeams.settings.registerOnSaveHandler()` event handler is triggered.
 1. The **Save** button on the app's configuration page, uploaded in Teams, is enabled.
 
-This code lets Teams know that the configuration requirements have been satisfied and the installation can proceed. On **Save**, the parameters of `settings.setSettings()` are set, as defined by the `Settings` interface, for the current instance (See [Settings interface](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest) ). Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
+This code lets Teams know that the configuration requirements have been satisfied and the installation can proceed. On **Save**, the parameters of `settings.setSettings()` are set, as defined by the `Settings` interface, for the current instance (See [Settings interface](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) ). Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
 
 >[!NOTE]
 >
@@ -91,11 +90,11 @@ This code lets Teams know that the configuration requirements have been satisfie
 
 Your tab might require contextual information to display relevant content. Contextual information can further enhance your tab's appeal by providing a more customized user experience.
 
-The Teams [Context interface](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) defines the properties that can be used for your tab configuration. You can collect the values of context data variables in two ways:
+The Teams [Context interface](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) defines the properties that can be used for your tab configuration. You can collect the values of context data variables in two ways:
 
 1. Insert URL query string placeholders in your manifest's `configurationURL`.
 
-1. Use the [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) `microsoftTeams.getContext((context) =>{}` method.
+1. Use the [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) `microsoftTeams.getContext((context) =>{}` method.
 
 #### Insert placeholders in the `configurationURL`
 
@@ -130,26 +129,24 @@ After your page has uploaded, the query string placeholders will be updated by T
 //For testing, you can invoke the following to view the pertinent value:
 document.write(getId());
 </script>
-
 ```
 
 ### Use the `getContext()` function to retrieve context
 
-When invoked, the `microsoftTeams.getContext((context) => {})` function retrieves the [Context interface](/javascript/api/@microsoft/teams-js//microsoftteams.context?view=msteams-client-js-latest). You can add this function to your configuration page to retrieve context values:
+When invoked, the `microsoftTeams.getContext((context) => {})` function retrieves the [Context interface](/javascript/api/@microsoft/teams-js//microsoftteams.context?view=msteams-client-js-latest&preserve-view=true). You can add this function to your configuration page to retrieve context values:
 
 ```html
+<!-- `userPrincipalName` will render in the span with the id "user". -->
 
-    <!-- `userPrincipalName` will render in the span with the id "user". -->
-
-    <span id="user"></span>
-    ...
-    <script>
-        microsoftTeams.getContext((context) =>{
-            let userId = document.getElementById('user');
-            userId.innerHTML = context.userPrincipalName;
-        });
-    </script>
-    ...
+<span id="user"></span>
+...
+<script>
+    microsoftTeams.getContext((context) =>{
+        let userId = document.getElementById('user');
+        userId.innerHTML = context.userPrincipalName;
+    });
+</script>
+...
 ```
 
 ## Context and Authentication

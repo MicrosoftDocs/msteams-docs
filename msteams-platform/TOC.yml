@@ -1,10 +1,25 @@
 - name: Overview
-  expanded: true
+  expanded: true 
   items:
-    - name: 'What are Microsoft Teams apps?'
+    - name: Build apps for Microsoft Teams
       href: overview.md
     - name: What's new?
       href: whats-new.md
+- name: Build your first app
+  expanded: true
+  items:
+  - name: Overview and prerequisites
+    href: build-your-first-app/build-first-app-overview.md
+  - name: Build a "Hello, World!" app
+    href: build-your-first-app/build-and-run.md
+  - name: Build a personal tab
+    href: build-your-first-app/build-personal-tab.md
+  - name: Build a channel tab
+    href: build-your-first-app/build-channel-tab.md
+  - name: Build a bot
+    href: build-your-first-app/build-bot.md
+  - name: Build a messaging extension
+    href: build-your-first-app/build-messaging-extension.md
 - name: Tutorials and code samples
   items:
   - name: Create an app using C#
@@ -13,20 +28,34 @@
     href: tutorials/get-started-nodejs-app-studio.md
   - name: Create an app with the Yeoman generator
     href: tutorials/get-started-yeoman.md
-  - name: Extend the Teams client with custom apps
+  - name: Learn more about custom apps for Teams
     href: tutorials/code-samples.md   
-- name: App templates and integrations
-  items: 
+- name: Integrations and templates
+  items:
+  - name: Integrate web apps
+    href: samples/integrating-web-apps.md
+  - name: Create low-code apps
+    href: samples/teams-low-code-solutions.md
   - name: Production-ready app templates
     href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
     href: samples/shifts-wfm-connectors.md 
+  - name: Create a Virtual Assistant for Teams
+    href: samples/virtual-assistant.md
+  - name: Integrate Power Virtual Agents chatbot with Teams
+    href: bots/how-to/add-power-virtual-agents-bot-to-teams.md   
+  - name: Microsoft Teams Toolkit extension
+    items:
+    - name: Teams Toolkit extension for Visual Studio Code
+      href: toolkit/visual-studio-code-overview.md
+    - name: Teams Toolkit extension for Visual Studio
+      href: toolkit/visual-studio-overview.md
 - name: Concepts
   expanded: true
   items:
-    - name: Building apps for Microsoft Teams
-      href: concepts/building-an-app.md
-    - name: 'Extensibility points in the Teams client'
+    - name: App capabilities
+      href: concepts/capabilities-overview.md
+    - name: App entry points
       href: concepts/extensibility-points.md
     - name: 'Design your app'
       items:
@@ -74,6 +103,8 @@
         href: concepts/deploy-and-publish/apps-upload.md
       - name: Publish your app to your organization
         href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json
+      - name: Create a SaaS offer for your Teams app
+        href: concepts/deploy-and-publish/add-saas-offer.md  
       - name: Publish your app on AppSource
         items:
         - name: Understanding AppSource submission 
@@ -124,16 +155,16 @@
             href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
           - name: 'Create a personal tab'
             href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-    - name: 'Design your tabs'
+    - name: Design your tabs
       items:
-        - name: 'Design overview'
+        - name: Design overview
           href: tabs/design/tabs.md
-        - name: 'Tabs on mobile clients'
+        - name: Tabs on mobile
           href: tabs/design/tabs-mobile.md
     - name: 'How-to guides'
       expanded: true
       items:
-        - name: 'Add tabs to your app'
+        - name: Create a tab using App Studio
           href: tabs/how-to/add-tab.md
         - name: 'Create tab pages'
           items:
@@ -147,19 +178,19 @@
           items:
           - name: 'Authentication flow'
             href: tabs/how-to/authentication/auth-flow-tab.md
-          - name: 'Using Azure AD authentication'
+          - name: 'Use Azure AD authentication'
             href: tabs/how-to/authentication/auth-tab-aad.md
-          - name: 'Using silent authentication'
+          - name: 'Use silent authentication'
             href: tabs/how-to/authentication/auth-silent-aad.md
-          - name: 'Using single sign-on authentication'
+          - name: 'Use single sign-on authentication'
             href: tabs/how-to/authentication/auth-aad-sso.md
-        - name: 'Using the Teams client SDK'
+        - name: 'Use the Teams client SDK'
           href: tabs/how-to/using-teams-client-sdk.md
-        - name: Getting additional Teams context
+        - name: Get additional Teams context
           href: tabs/how-to/access-teams-context.md
         - name: DevTools for Microsoft Teams tabs
           href: tabs/how-to/developer-tools.md
-        - name: 'Adding your custom tab to SharePoint'
+        - name: 'Add your custom tab to SharePoint'
           href: tabs/how-to/tabs-in-sharepoint.md
         - name: Request device permissions
           href: tabs/how-to/native-device-permissions.md          
@@ -172,11 +203,11 @@
     - name: Quickstarts
       items:
         - name: Teams conversation bot in C#
-          href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot
+          href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot
         - name: Teams conversation bot in JavaScript
-          href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot
+          href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot
         - name: Teams conversation bot in Python
-          href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/57.teams-conversation-bot
+          href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot
     - name: 'Design your bot'
       items:
         - name: 'Design overview'
@@ -184,9 +215,9 @@
     - name: 'How-to guides'
       expanded: true
       items:
-      - name: Build a bot for Teams
+      - name: Create a bot using App Studio
         href: bots/how-to/create-a-bot-for-teams.md
-      - name:  Integrate your Power Virtual Agent chatbot with Teams
+      - name: Integrate your Power Virtual Agent chatbot with Teams
         href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
       - name: Conversations
         items:
@@ -228,7 +259,7 @@
         href: bots/calls-and-meetings/calls-meetings-bots-overview.md
       - name: Real-time media concepts
         href: bots/calls-and-meetings/real-time-media-concepts.md
-      - name: Registering a calling bot
+      - name: Register a calling bot
         href: bots/calls-and-meetings/registering-calling-bot.md
       - name: Incoming call notifications
         href: bots/calls-and-meetings/call-notifications.md
@@ -236,7 +267,7 @@
         href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
       - name: Application-hosted media
         href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-- name: 'Messaging Extensions — task-oriented interactions'
+- name: 'Messaging extensions — task-oriented interactions'
   items:
     - name: 'What are Messaging Extensions?'
       href: messaging-extensions/what-are-messaging-extensions.md
@@ -249,19 +280,19 @@
         - name: 'With action command'
           items:
             - name: 'C#/.NET'
-              href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action
+              href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action
             - name: TypeScript/Node.js
-              href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action
+              href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action
         - name: 'With search command'
           items:
             - name: 'C#/.NET'
-              href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search
+              href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search
             - name: TypeScript/Node.js
-              href: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search
+              href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search
     - name: 'How-to guides'
       expanded: true
       items:
-        - name: 'Create a messaging extension'
+        - name: Create a messaging extension using App Studio
           href: messaging-extensions/how-to/create-messaging-extension.md
         - name: 'Action-based commands'
           items:
@@ -291,9 +322,9 @@
       href: task-modules-and-cards/what-are-cards.md
     - name: 'Cards'
       items:
-        - name: Designing effective cards
+        - name: Design effective cards
           href: task-modules-and-cards/cards/design-effective-cards.md
-        - name: Formatting card text
+        - name: Format card text
           href: task-modules-and-cards/cards/cards-format.md
         - name: Add and respond to card actions
           href: task-modules-and-cards/cards/cards-actions.md
@@ -318,18 +349,30 @@
         href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
       - name: Create an O365 Connector
         href: webhooks-and-connectors/how-to/connectors-creating.md
-      - name: Sending messages to connectors and webhooks
+      - name: Send messages to connectors and webhooks
         href: webhooks-and-connectors/how-to/connectors-using.md
-- name: 'Teams Graph REST APIs'
+- name: Apps in meetings
   items:
-    - name: 'Resource-Specific Consent'
+  - name: Teams apps in meetings
+    href: apps-in-teams-meetings/teams-apps-in-meetings.md
+  - name: Create apps for Teams meetings
+    href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
+  - name: Design your in-meeting app
+    items:
+    - name: In-meeting dialog
+      href: apps-in-teams-meetings/design/designing-in-meeting-dialog.md
+    - name: In-meeting tab
+      href: apps-in-teams-meetings/design/designing-in-meeting-tab.md
+- name: 'Microsoft Graph REST API integration'
+  items:
+    - name: Resource Specific consent
       items:
-      - name: 'Resource specific consent (RSC)'
-        href: graph-api/rsc/resource-specific-consent.md
-      - name: 'Test resource specific consent permissions' 
-        href: graph-api/rsc/test-resource-specific-consent.md 
-      - name: 'RSC JSON test file' 
-        href: graph-api/rsc/test-rsc-json-file.md
+        - name: 'Enable resource specific consent (RSC)'
+          href: graph-api/rsc/resource-specific-consent.md
+        - name: 'Test resource specific consent permissions' 
+          href: graph-api/rsc/test-resource-specific-consent.md 
+        - name: 'RSC JSON test file' 
+          href: graph-api/rsc/test-rsc-json-file.md
     - name: 'Activity feed notifications'
       items:
       - name: 'Activity feed notifications'
@@ -337,7 +380,15 @@
       - name: 'Test activity feed notifications' 
         href: graph-api/activity-feed/test-activity-feed-notifications.md 
       - name: 'Activity feed notifications JSON test file' 
-        href: graph-api/activity-feed/test-activity-feed-json-file.md             
+        href: graph-api/activity-feed/test-activity-feed-json-file.md         
+    - name: Proactive bots and proactive messages
+      items:
+        - name: 'Enable proactive bot installation and proactive messaging' 
+          href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
+    - name: Import messages
+      items:
+        - name: 'Import third-party platform messages to Teams using Microsoft Graph' 
+          href: graph-api/import-messages/import-external-messages-to-teams.md
 - name: Resources
   items:
     - name: Bots - v3 SDK
@@ -362,7 +413,7 @@
         href: resources/bot-v3/bots-notifications.md
       - name: Context for bots
         href: resources/bot-v3/bots-context.md
-      - name: Sending and receiving files
+      - name: Send and receiving files
         href: resources/bot-v3/bots-files.md
       - name: Notification-only bots
         href: resources/bot-v3/bots-notification-only.md
@@ -370,7 +421,7 @@
         href: resources/bot-v3/bots-menus.md
       - name: Bots with tabs
         href: resources/bot-v3/bots-with-tabs.md
-      - name: Formatting bot messages
+      - name: Format bot messages
         href: resources/bot-v3/bots-text-formats.md  
       - name: Test a bot
         href: resources/bot-v3/bots-test.md

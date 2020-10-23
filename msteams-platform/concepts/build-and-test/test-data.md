@@ -15,7 +15,7 @@ Set up your O365 developer program subscription (or other test tenant) to make i
 
 ## Before you start
 
-If you don't already have a test tenant, you will need to join the Office 365 developer program and sign up for a developer subscription. You'll also need to install the necessary powershell modules. For whatever tenant you use you'll need to have global administrator permissions to run the scripts.
+If you don't already have a test tenant, you will need to join the Office 365 developer program and sign up for a developer subscription. You'll also need to install the necessary PowerShell modules. For whatever tenant you use you'll need to have global administrator permissions to run the scripts.
 
 1. [Join the Office 365 Developer Program](/office/developer-program/office-365-developer-program)
 2. [Set up a Microsoft 365 Developer Subscription](/office/developer-program/office-365-developer-program-get-started)
