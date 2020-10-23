@@ -35,7 +35,7 @@ The activity feed API is a Microsoft Teams and Microsoft Graph integration that 
 * Copy and save the **tenantId** value from the string.
 
 >[!NOTE]
-> You may need to replace other parameters as appropriate such as `username`, `password`, etc.
+> You may need to replace other parameters as appropriate such as `username`, `password`, `chatId`,  etc.
 
 > [!div class="checklist"]
 >* [Prepare your Office 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).  
