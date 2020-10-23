@@ -1,6 +1,6 @@
 ---
-title: Testing resource-specific consent in Teams
-description: Details testing resource-specific consent in Teams using Postman
+title: Test resource-specific consent in Teams
+description: How to test resource-specific consent in Teams using Postman
 localization_priority:  Normal
 author: laujan
 ms.author: lajanuar
