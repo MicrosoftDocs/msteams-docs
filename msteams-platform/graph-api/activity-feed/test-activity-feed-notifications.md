@@ -41,13 +41,30 @@ The activity feed API is a Microsoft Teams and Microsoft Graph integration that 
 > [!div class="checklist"]
 >
 >* [Prepare your Office 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).  
->* [Upload your app package](../../concepts/deploy-and-publish/apps-upload.md#upload-your-package-into-a-team-using-the-apps-tab) directly to a specific team, one-to-one chat, or group chat using the `Apps` tab or by selecting click the `More apps` icon on the left-rail app bar and choosing the `Upload a custom app link`.
+>* [Upload your app package directly to a specific team,](../../concepts/deploy-and-publish/apps-upload.md#upload-your-package-into-a-team-using-the-apps-tab)  one-to-one chat, or group chat using the `Apps` tab or by selecting click the `More apps` icon on the left-rail app bar and choosing the `Upload a custom app link`. <br/> 
+> * You can also upload the app to your own personal version of Teams as follows: 
+<br/> &emsp; &bull; select **Apps** -> **Upload a Custom App** -> **Upload for me or my teams**. 
+<br/>  &emsp; &bull; Upload your app.
+<br/>  &emsp; &bull; Select **Add**.
 > * Open the [Postman](https://www.postman.com) app:
 
 * Select **File** -> **Import** -> **Upload Files** to upload the JSON file from your environment.  
 * Select the **Collections** tab.
 * Select the chevron (>) next to **Activity Feed** to expand the details view and see the API requests.
 * Select the authentication request.
-* Select an API.
+* Select an API. **NOTE**: The API you choose depends on where you uploaded your custom app:
+<!-- markdownlint-disable MD036 -->
+
+**API for app uploaded to a team**
+
+```http
+/teams/{teamId}/sendActivityNotification
+```
+
+**API for app uploaded to a personal app**
+
+```http
+/users/{userId}/teamwork/sendActivityNotification
+```
 
  Check the response status codes to confirm that the activity feed notification behavior in your app meets expectations.
