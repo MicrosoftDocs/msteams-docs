@@ -26,6 +26,11 @@ This article addresses common reasons submitted apps fail validation. While it's
 * Any material that you associate with your experience, such as descriptions and support documentation, must be accurate. Use correct spelling, capitalization, punctuation, and grammar in your descriptions and materials.
 * Provide help and support information. It's highly recommended that your app include a help/FAQ link for the first-run user experience. For all personal apps, we recommend providing your help page as a personal tab for a better user experience.
 * Increment your app version number in the manifest if you make any manifest changes to your submission.
+* App must not take users out of Teams for core user scenarios. Link targets in apps must not link to an external browser but should link to div elements contained within Teams e.g. inside Task Modules and tabs.
+* Meeting extensibility apps test cases.
+* Personal apps provide an affordance to share content from a personal app experience with other team members.
+* Channel tabs must not provide an app bar with icons in the left rail that conflicts with the main Teams navigation.
+* Channel tabs that have complex editing capabilities within the app should open the editor view in multi-window rather than a tab.
 
 ### &#9989;  Provide a clear and simple sign in/sign out and sign-up experience
 
@@ -107,9 +112,13 @@ Your bot should be responsive to any command and not dead-end the user. Here are
 * **Include help content or guidance when your bot is lost**. When your bot can't understand the user input, it should suggest an alternative action. For example, *"I'm sorry, I don't understand. Type "help" for more information."* Don't respond with an error message or simply, *"I don't understand"*. Use this chance to teach your users.
 
 * **Use adaptive cards and task modules to make your bot response clear and actionable**
-[Adaptive cards with buttons invoking task modules](/task-modules-and-cards/task-modules/task-modules-bots) enhance the bot user experience. These cards and buttons are easier to use in a mobile device as opposed to your user typing the commands
+[Adaptive cards with buttons invoking task modules](/task-modules-and-cards/task-modules/task-modules-bots) enhance the bot user experience. These cards and buttons are easier to use in a mobile device as opposed to your user typing the commands. Also bot responses should not be textual with long text. Bots must make use of Adaptive cards & task modules instead of conversational chat based user interface and lengthy text responses
 
 * **Think through all scopes**. Be sure that your bot provides appropriate responses when mentioned (`@*botname*`) in a channel and in personal conversations. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](~/resources/schema/manifest-schema.md#bots).)
+
+* **Not push sensitive data**. Bots must not push sensitive data to a Team, a group chat or a 1:1 conversation where there is an audience who should not be able to view that data
+
+* **Provide a welcome message**. Bot must provide an FRE welcome message that includes an interactive tutorial with carousel cards or "try it" buttons, to encourage engagement.
 
 ### &#9989; Personal bots must send a welcome message on first launch
 
