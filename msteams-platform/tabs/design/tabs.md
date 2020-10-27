@@ -124,6 +124,50 @@ Whenever possible, cards and bots should deep link to richer data in a hosted ta
 
 In many cases, the name of your app will make a great tab name. But, also consider naming your tabs according to the functionality they provide.
 
+### Multi-window
+
+Channel tabs that have complex editing capabilities must open the editor view in multi-window rather than a tab.
+
+### No horizontal scrolling
+
+Tab should not have horizontal scrolling.
+
+### Easy navigation
+
+Navigation inside a tab app must be easy to follow i.e. pages have the following where necessary/applicable:
+* Back buttons
+* Page headers
+* Breadcrumbs
+* Hamburger menus
+
+### Undo last action
+
+User must be able to undo their last action in the app.
+
+### Share content
+
+Personal apps should provide an affordance to share content from a personal app experience with other team members. Channel tab must provide navigation that complements the main Teams navigation, rather than conflicting with it (such as left rail nav-bars).
+
+### Single view
+
+Personal apps should aggregate content from team or group chat scoped instances of that app in a single view e.g. a Trello user should be able to see all instances of Trello boards they participate in at a team level in their personal app.
+
+### No app bar
+
+Tabs should not provide an app bar with icons in the left rail that conflicts with the main Teams navigation
+
+### Navigation
+
+Tabs should not have more than 3 levels of navigation within the app
+
+### L2/L3 view
+
+Secondary and tertiary pages in a tab should be opened in an L2/L3 view in the main tab area that is navigated via the breadcrumb
+
+### No link to external browser
+
+Link targets in tabs should not link to an external browser but should link to div elements contained within Teams e.g. inside Task Modules, tabs, etc
+
 ## Notifications for tabs
 
 There are two modes of notification for tab content changes:
