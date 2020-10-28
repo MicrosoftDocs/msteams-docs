@@ -180,7 +180,7 @@ There are two modes of notification for tab content changes:
 
 Sending a message to a tab thread increases the awareness of activity to all users without explicitly notifying everyone. This is awareness without noise. In addition, when you `@mention`  specific users the same notification will be placed in their feed, deep linking them to the tab thread directly.
 
-## Tab design best practices
+### Tab design best practices
 
 * Personal/Static tabs should provide an affordance to share content from a personal app experience with another team members.
 * Personal/Static tabs may aggregate content from team or group chat scoped instances of that app in a single view.
