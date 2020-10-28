@@ -122,6 +122,58 @@ bot.on('conversationUpdate', (msg) => {
 }
 ```
 
+### User Added to a meeting
+
+The `conversationUpdate` event with the `membersAdded` object in the payload is sent when a user is added to a private scheduled meeting. The event details will be sent even when anonymous users join the meeting. 
+
+> [!NOTE]
+>
+>* When an anonymous user is added to a meeting, membersAdded payload object does not have `aadObjectId` field.
+>* When an anonymous user is added to a meeting, `from` object in the payload always have the id of the meeting organizer, even if the anonymous user was added by another presenter.
+
+#### Schema example: User added to meeting
+
+```json
+{   
+
+  "membersAdded": [   
+    {   
+      "id": "29:1Z_XHWBMhDuehhDBYoPQD6Y1DSFsTtqOZx-SA5Jh9Y4zHKm4VbFGRn7-rK7SWiW1JECwxkMdrWpHoBut2sSyQPA"   
+    }   
+
+  ],   
+
+  "type": "conversationUpdate",   
+  "timestamp": "2020-09-29T21:11:38.6542339Z",   
+  "id": "f:a8cd1b51-9ddb-bd35-624b-7f7474165df8",   
+  "channelId": "msteams",   
+  "serviceUrl": "https://canary.botapi.skype.com/amer/",   
+  "from": {   
+    "id": "29:1siKxZhSoTapsXvI0gyf7Gywm_HM-4kEQW4BJnWuFYVIVu87xCNP99nidgQRCcwD3L3p_schiMShzx8IDRzf8mw",   
+    "aadObjectId": "f30ba569-abef-4e97-8762-35f85cbae706"   
+  },   
+  "conversation": {   
+    "isGroup": true,   
+    "tenantId": "e15762ef-a8d8-416b-871c-25516354f1fe",   
+    "id": "19:meeting_MWJlNGViOTgtMGExYi00NDA3LWExODgtOTZhMWNlYjM4ZTRj@thread.v2"   
+  },   
+  "recipient": {   
+    "id": "28:3af3604a-d4fc-486b-911e-86fab41aa91c",   
+    "name": "EchoBot1_Rename"   
+  },   
+  "channelData": {   
+    "tenant": {   
+      "id": "e15762ef-a8d8-416b-871c-25516354f1fe"   
+    },   
+    "source": null,   
+    "meeting": {   
+      "id": "MCMxOTptZWV0aW5nX01XSmxOR1ZpT1RndE1HRXhZaTAwTkRBM0xXRXhPRGd0T1RaaE1XTmxZak00WlRSakB0aHJlYWQudjIjMA=="   
+    }   
+  }   
+}  
+
+```
+
 ### Bot added for personal context only
 
 Your bot receives a `conversationUpdate` with `membersAdded` when a user adds it directly for personal chat. In this case, the payload that your bot receives doesn't contain the `channelData.team` object. You should use this as a filter in case you want your bot to offer a different [welcome message](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations) depending on scope.
@@ -209,6 +261,52 @@ The `conversationUpdate` event with the `membersRemoved` object in the payload i
     }
 }
 ```
+
+### User removed from a meeting
+
+The `conversationUpdate` event with the `membersRemoved` object in the payload is sent when a user is removed from a private scheduled meeting. The event details will be sent even when anonymous users join the meeting. 
+
+> [!NOTE]
+>
+>* When an anonymous user is removed from a meeting, membersRemoved payload object does not have `aadObjectId` field.
+>* When an anonymous user is removed from a meeting, `from` object in the payload always have the id of the meeting organizer, even if the anonymous user was removed by another presenter.
+
+#### Schema example: User removed from meeting
+
+{   
+      "membersRemoved": 
+        {  
+          "id": "29:1Z_XHWBMhDuehhDBYoPQD6Y1DSFsTtqOZx-SA5Jh9Y4zHKm4VbFGRn7-rK7SWiW1JECwxkMdrWpHoBut2sSyQPA"   
+        }   
+      ],   
+      "type": "conversationUpdate",   
+      "timestamp": "2020-09-29T21:15:08.6391139Z",   
+      "id": "f:ee8dfdf3-54ac-51de-05da-9d49514974bb",   
+      "channelId": "msteams",   
+      "serviceUrl": "https://canary.botapi.skype.com/amer/",   
+      "from": {   
+        "id": "29:1siKxZhSoTapsXvI0gyf7Gywm_HM-4kEQW4BJnWuFYVIVu87xCNP99nidgQRCcwD3L3p_schiMShzx8IDRzf8mw",   
+        "aadObjectId": "f30ba569-abef-4e97-8762-35f85cbae706"   
+      },   
+      "conversation": {    
+        "isGroup": true,   
+        "tenantId": "e15762ef-a8d8-416b-871c-25516354f1fe",   
+        "id": "19:meeting_MWJlNGViOTgtMGExYi00NDA3LWExODgtOTZhMWNlYjM4ZTRj@thread.v2"   
+      },   
+      "recipient": {   
+        "id": "28:3af3604a-d4fc-486b-911e-86fab41aa91c",   
+        "name": "EchoBot1_Rename"   
+      },   
+      "channelData": {   
+        "tenant": {   
+          "id": "e15762ef-a8d8-416b-871c-25516354f1fe"   
+        },   
+        "source": null,   
+        "meeting": {   
+          "id": "MCMxOTptZWV0aW5nX01XSmxOR1ZpT1RndE1HRXhZaTAwTkRBM0xXRXhPRGd0T1RaaE1XTmxZak00WlRSakB0aHJlYWQudjIjMA=="   
+        }   
+      }   
+}   
 
 ## Team name updates
 
