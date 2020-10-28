@@ -175,6 +175,20 @@ There are two modes of notification for tab content changes:
 > [!div class="checklist"]
 >
 > * **Use the app api to notify users of changes**. This message will show up in the user’s activity feed and deep link to the tab. *See*  [Create deep links to content and features in Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
+
 > * **Use a bot**. This method is preferred especially if the Tab thread is targeted. The result will be that the tab’s threaded conversation will be moved into view as recently active. This method also allows for some sophistication in how the notification is sent.
 
-  Sending a message to a tab thread increases the awareness of activity to all users without explicitly notifying everyone. This is awareness without noise. In addition, when you `@mention`  specific users the same notification will be placed in their feed, deep linking them to the tab thread directly.
+Sending a message to a tab thread increases the awareness of activity to all users without explicitly notifying everyone. This is awareness without noise. In addition, when you `@mention`  specific users the same notification will be placed in their feed, deep linking them to the tab thread directly.
+
+## Tab design best practices
+
+* Personal/Static tabs should provide an affordance to share content from a personal app experience with another team members.
+* Personal/Static tabs may aggregate content from team or group chat scoped instances of that app in a single view.
+* Link targets in tabs should not link to an external browser but should link to div elements contained within Teams (example-inside, Task Modules, tabs, etc).
+* Tabs should be responsive to Team’s themes . When the Teams theme is changed, the theme within the app should also change to reflect that theme.
+* Tabs should use Teams styled components where possible. It means adopting Teams fonts, type ramps, color palettes, grid system, motion, tone of voice, etc.
+* Tabs should use Teams interaction behaviors for in page navigation, position and use of dialogs, information hierarchies, etc.
+* Tabs should use the standard Teams hamburger menu and/or breadcrumb for in-app navigation. Tabs should not provide an app bar with icons in the left rail that conflicts with the main Teams navigation.
+* Tabs should not have more than three levels of navigation within the app.
+* Secondary and tertiary pages in a tab should be opened in an L2/L3 view in the main tab area that is navigated via the breadcrumb.
+* Tabs that have complex editing capabilities within the app should open the editor view in multi-window rather than a tab (for desktop and web).
