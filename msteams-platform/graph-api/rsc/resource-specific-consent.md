@@ -49,21 +49,15 @@ The steps for enabling RSC in your application are as follows:
 
 ## Configure group owner consent settings in the Azure AD portal
 
-You can enable or disable  [group owner consent](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-to-apps-accessing-group-data) directly within the Azure portal:
+You can enable or disable [group owner consent](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-to-apps-accessing-group-data) directly within the Azure portal:
 
 > [!div class="checklist"]
 >
 >- Sign in to the [Azure portal](https://portal.azure.com) as a [Global Administrator/Company Administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles.md#global-administrator--company-administrator).  
- > - Select **Azure Active Directory** =>**Enterprise applications** =>**User settings**.
-> - Enable, disable, or limit user consent with the control labeled **Users can consent to apps accessing company data for the groups they own** (This capability is enabled by default).
+ > - Select **Azure Active Directory** =>**Enterprise applications** =>**Consent and permissions** => **User consent settings**.
+> - Enable, disable, or limit user consent with the control labeled **Group owner consent for apps accessing data** (The default is **Allow group owner consent for all group owners**). For a team owner to install an app using RSC, group owner consent must be enabled for that user.
 
 ![azure rsc configuration](../../assets/images/azure-rsc-configuration.svg)
-
-| Value | Description|
-|--- | --- |
-|Yes | Enable group-specific consent for all group owners.|
-|No |Disable group-specific consent for all users.| 
-|Limited | Enable group-specific consent for members of a selected group.|
 
 To enable or disable group owner consent within the Azure portal using PowerShell, follow the steps outlined in [Configure group owner consent using PowerShell](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-using-powershell).
 
