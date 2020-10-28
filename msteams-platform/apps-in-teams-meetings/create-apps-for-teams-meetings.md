@@ -91,7 +91,7 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 #### Response Payload
 <!-- markdownlint-disable MD036 -->
 
-**meetingRole** can be *Organizer*, *Presenter*, or *Attendee*.
+**role** under "meeting" can be *Organizer*, *Presenter*, or *Attendee*.
 
 **Example 1**
 
