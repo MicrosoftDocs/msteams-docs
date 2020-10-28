@@ -19,19 +19,18 @@ Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration t
 |Application permission| Action |
 | ----- | ----- |
 |TeamSettings.Read.Group | Get the settings for this team.|
-|TeamSettings.Edit.Group|Update the settings for this team.|
+|TeamSettings.ReadWrite.Group|Update the settings for this team.|
 |ChannelSettings.Read.Group|Get the channel names, channel descriptions, and channel settings for this team​.|
 |ChannelSettings.ReadWrite.Group|Update the channel names, channel descriptions, and channel settings for this team.​|
 |Channel.Create.Group|Create channels in this team.​|
 |Channel.Delete.Group|Delete channels in this team.​|
 |ChannelMessage.Read.Group |Get this team's channel messages.​|
-|TeamsApp.Read.Group|Get a list of this team's installed apps.|
+|TeamsAppInstallation.Read.Group|Get a list of this team's installed apps.|
 |TeamsTab.Read.Group|Get a list of this team's tabs.|
 |TeamsTab.Create.Group|Create tabs in this team.​|
 |TeamsTab.ReadWrite.Group|Update this team's tabs.​|
 |TeamsTab.Delete.Group|Delete this team's tabs.​|
-|Member.Read.Group|Get this team's members.​|
-|Owner.Read.Group|Get this team's owners.​|
+|TeamMember.Read.Group|Get this team's members.​|
 
 >[!NOTE]
 >Resource-specific permissions are only available to Teams apps installed on the Teams client and are currently not part of the Azure Active Directory portal.
