@@ -148,7 +148,7 @@ POST /v3/conversations/{conversationId}/activities
 
 > [!NOTE]
 >
-> The completionBotId in the externalResourceUrl in the requeste payload below is an optional parameter. It is the Bot ID that is declared in the manifest. The bot will receive a result object
+> The completionBotId in the externalResourceUrl in the requeste payload below is an optional parameter. It is the Bot ID that is declared in the manifest. The bot will receive a result object.
 
 # [JSON](#tab/json)
 
