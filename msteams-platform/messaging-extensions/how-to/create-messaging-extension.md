@@ -1,11 +1,11 @@
 ---
-title: Create a messaging extension for teams
+title: Create a messaging extension using App Studio
 author: clearab
-description: Learn how to create a Teams messaging extension
+description: Learn how to create a Microsoft Teams messaging extension using App Studio.
 ms.topic: conceptual
 ms.author: anclear
 ---
-# Create a messaging extension for Microsoft Teams
+# Create a messaging extension using App Studio
 
 > [!TIP]
 > Looking for a faster way to get started? Create a [messaging extension](../../build-your-first-app/build-messaging-extension.md) using the Microsoft Teams Toolkit.
@@ -129,7 +129,7 @@ Once a meeting begins, Teams participants can interact directly with your messag
 
 1. **Command type**. If your message extension uses [action-based commands](../../messaging-extensions/what-are-messaging-extensions.md#action-commands), it should follow tabs [single sign-on](../../tabs/how-to/authentication/auth-aad-sso.md) authentication.
 
-1. **User experience**. You should determine the intended the end-user experience for messaging extensions invoked during a meeting chat.
+1. **User experience**. You messaging extension should look and behave the same as it would outside a meeting.
 
 ## Next steps
 
@@ -148,7 +148,7 @@ Try it out in a quickstart:
   * [Messaging extension with action-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)
   * [Messaging extension with search-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)
 
-Learn more about messaging extensions concepts:
+Learn more about Teams development concepts:
 
-* [Understand Teams app capabilities ?](~/concepts/extensibility-points.md)
+* [Understand Teams app capabilities](../../concepts/capabilities-overview.md)
 * [What are messaging extensions?](~/messaging-extensions/what-are-messaging-extensions.md)

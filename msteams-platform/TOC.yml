@@ -164,7 +164,7 @@
     - name: 'How-to guides'
       expanded: true
       items:
-        - name: Create a tab for Teams
+        - name: Create a tab using App Studio
           href: tabs/how-to/add-tab.md
         - name: 'Create tab pages'
           items:
@@ -215,7 +215,7 @@
     - name: 'How-to guides'
       expanded: true
       items:
-      - name: Create a bot for Teams
+      - name: Create a bot using App Studio
         href: bots/how-to/create-a-bot-for-teams.md
       - name: Integrate your Power Virtual Agent chatbot with Teams
         href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
@@ -292,7 +292,7 @@
     - name: 'How-to guides'
       expanded: true
       items:
-        - name: Create a messaging extension for Teams
+        - name: Create a messaging extension using App Studio
           href: messaging-extensions/how-to/create-messaging-extension.md
         - name: 'Action-based commands'
           items:
@@ -363,7 +363,7 @@
       href: apps-in-teams-meetings/design/designing-in-meeting-dialog.md
     - name: In-meeting tab
       href: apps-in-teams-meetings/design/designing-in-meeting-tab.md
-- name: 'Teams Graph REST APIs'
+- name: 'Microsoft Graph REST API integration'
   items:
     - name: Resource Specific consent
       items:

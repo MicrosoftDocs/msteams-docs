@@ -1,12 +1,12 @@
 ---
-title: Create a tab for teams
+title: Create a tab using App Studio
 author: laujan
-description: Learn how to create a Teams tab 
+description: Learn how to create a Microsoft Teams tab using App Studio.
 keywords: teams tabs group channel configurable 
 ms.topic: conceptual
 ms.author: lajanuar
 ---
-# Create a tab for Microsoft Teams
+# Create a tab using App Studio
 
 > [!TIP]
 > Looking for a faster way to get started? Create a [personal](../../build-your-first-app/build-personal-tab.md) or [channel and group](../../build-your-first-app/build-channel-tab.md) tab using the Microsoft Teams Toolkit.
