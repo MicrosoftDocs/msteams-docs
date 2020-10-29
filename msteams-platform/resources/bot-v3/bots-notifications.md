@@ -3,6 +3,7 @@ title: Handle bot events
 description: Describes how to handle events in bots for Microsoft Teams
 keywords: teams bots events
 ms.date: 05/20/2019
+author: laujan
 ---
 # Handle bot events in Microsoft Teams
 
