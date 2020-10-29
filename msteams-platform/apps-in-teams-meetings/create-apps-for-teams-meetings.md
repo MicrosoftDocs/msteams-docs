@@ -91,7 +91,7 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 #### Response Payload
 <!-- markdownlint-disable MD036 -->
 
-**meetingRole** can be *Organizer*, *Presenter*, or *Attendee*.
+**role** under "meeting" can be *Organizer*, *Presenter*, or *Attendee*.
 
 **Example 1**
 
@@ -107,6 +107,7 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
       "email": "Allan.Deyoung@microsoft.com",
       "userPrincipalName": "Allan.Deyoung@microsoft.com",
       "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+      "userRole": "user"
   },
   "meeting":
   {
@@ -143,9 +144,12 @@ POST /v3/conversations/{conversationId}/activities
 |Value|Type|Required|Description|
 |---|---|----|---|
 |**conversationId**| string | Yes | The conversation identifier is available as part of bot invoke |
-|**completionBotId**| string | No | This field is the Bot ID that is declared in the manifest. The bot will receive a result object |
 
 #### Request Payload
+
+> [!NOTE]
+>
+> The completionBotId in the externalResourceUrl in the requeste payload below is an optional parameter. It is the Bot ID that is declared in the manifest. The bot will receive a result object.
 
 # [JSON](#tab/json)
 
