@@ -73,7 +73,7 @@ async def _show_members(
 
 # [JSON](#tab/json)
 
-You can directly issue a GET request on `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}`, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value for `serviceUrl`. The response payload will also inform is the user is a regular or an anonymous user.
+You can directly issue a GET request on `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}`, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value for `serviceUrl`. The response payload will also indicate if the user is a regular or anonymous user.
 
 ```http
 GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/pagedmembers?pageSize=100&continuationToken=asdfasdfalkdsjfalksjdf
