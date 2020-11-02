@@ -6,7 +6,7 @@ keywords: teams deep link deeplink
 
 # Create deep links to content and features in Microsoft Teams
 
-You can create links to information and features within the Teams client. Examples of where this may be useful:
+You can create links to information and features within Teams. Examples of where this may be useful:
 
 * Navigating the user to content within one of your app's tabs. For instance, your app may have a bot that sends messages notifying the user of an important activity. When the user taps on the notification, the deep link navigates to the tab so the user can view more details about the activity.
 * Your app automates or simplifies certain user tasks, such as creating a chat or scheduling a meeting, by pre-populating the deep links with required parameters. This avoids the need for users to manually enter information.
@@ -15,7 +15,7 @@ You can create links to information and features within the Teams client. Exampl
 
 You can create deep links to entities in Teams. Typically, this is used to create links that navigate to content and information within your tab. For example, if your tab contains a task list team members may create and share links to individual tasks. When clicked, the link navigates to your tab which focuses on the specific item. To implement this, you add a "copy link" action to each item, in whatever way best suits your UI. When the user takes this action, you call `shareDeepLink()` to display a dialog box containing a link that the user can copy to the clipboard. When you make this call, you also pass an ID for your item, which you get back in the [context](~/tabs/how-to/access-teams-context.md) when the link is followed and your tab is reloaded.
 
-Alternatively, you can also generate deep links programmatically, using the format specified later in this topic. You might want to use these in [bot](~/bots/what-are-bots.md) and [Connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) messages that inform users about changes to your tab, or to items within it.
+Alternatively, you can also generate deep links programmatically, using the format specified later in this topic. You might want to use these in [bot](~/bots/what-are-bots.md) and [connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) messages that inform users about changes to your tab, or to items within it.
 
 > [!NOTE]
 > This is different from the links provided by the **Copy link to tab** menu item, which just generates a deep link that points to this tab.
@@ -37,7 +37,7 @@ Provide these fields:
 > [!NOTE]
 > Deep links work properly only if the tab was configured using the v0.4 or later library and because of that has an entity ID. Deep links to tabs without entity IDs still navigate to the tab but can't provide the sub-entity ID to the tab.
 
-Use this format for a deep link that you can use in a bot, Connector, or messaging extension card:
+Use this format for a deep link that you can use in a bot, connector, or messaging extension card:
 
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 

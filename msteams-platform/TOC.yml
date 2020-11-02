@@ -68,30 +68,16 @@
     href: samples/shifts-wfm-connectors.md 
 - name: App fundamentals
   items:
-  - name: Overview
-    href: concepts/app-fundamentals-overview.md
   - name: App capabilities
-    items:
-    - name: Overview
-      href: concepts/capabilities-overview.md
-    - name: Tabs
-      href: tabs/what-are-tabs.md
-    - name: Bots
-      href: bots/what-are-bots.md
-    - name: Messaging extensions
-      href: messaging-extensions/what-are-messaging-extensions.md
-    - name: Webhooks and connectors
-      href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
-    - name: Apps in meetings
-      href: apps-in-teams-meetings/teams-apps-in-meetings.md
+    href: concepts/capabilities-overview.md
   - name: App entry points
     href: concepts/extensibility-points.md
-  - name: Personal vs. shared apps
-    href: concepts/design/personal-apps.md
   - name: Understand your use cases
     href: concepts/design/understand-use-cases.md
   - name: Map use cases to Teams features
     href: concepts/design/map-use-cases.md
+  - name: Deep linking
+    href: concepts/build-and-test/deep-links.md
 - name: Integrate with Teams
   items:
   - name: Web apps
@@ -146,95 +132,105 @@
       href: concepts/design/components/color.md
     - name: Typography
       href: concepts/design/components/typography.md
-- name: Build your app
+- name: Build tabs
   items:
   - name: Overview
-    href: concepts\build-and-test\build-app-overview.md
-  - name: Tabs
-    items:
-    - name: Create a content page
-      href: tabs/how-to/create-tab-pages/content-page.md
-    - name: Create a configuration page
-      href: tabs/how-to/create-tab-pages/configuration-page.md
-    - name: Create a removal page
-      href: tabs/how-to/create-tab-pages/removal-page.md
-    - name: Use the Teams client SDK
-      href: tabs/how-to/using-teams-client-sdk.md
-    - name: Get additional Teams context
-      href: tabs/how-to/access-teams-context.md
-    - name: Request device permissions
-      href: tabs/how-to/native-device-permissions.md
-    - name: Developer tools for tabs
-      href: tabs/how-to/developer-tools.md
-  - name: Messaging extensions
-    items:
-    - name: Define action commands
-      href: messaging-extensions/how-to/action-commands/define-action-command.md
-    - name: Create task module for action commands
-      href: messaging-extensions/how-to/action-commands/create-task-module.md
-    - name: Respond to action commands
-      href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
-    - name: Define search commands
-      href: messaging-extensions/how-to/search-commands/define-search-command.md
-    - name: Receive and respond to search queries
-      href: messaging-extensions/how-to/search-commands/respond-to-search.md
-    - name: Link unfurling
-      href: messaging-extensions/how-to/link-unfurling.md
-    - name: Add a configuration page
-      href: messaging-extensions/how-to/add-configuration-page.md
-  - name: Bots
-    items:
-    - name: How bots work
-      href: bots/bot-basics.md
-    - name: Conversation basics
-      href: bots/how-to/conversations/conversation-basics.md
-    - name: Subscribe to conversation events
-      href: bots/how-to/conversations/subscribe-to-conversation-events.md
-    - name: Channel and group conversations
-      href: bots/how-to/conversations/channel-and-group-conversations.md
-    - name: Send proactive messages
-      href: bots/how-to/conversations/send-proactive-messages.md
-    - name: Send and receive files
-      href: bots/how-to/conversations/send-and-receive-files.md
-    - name: Format your bot message
-      href: bots/how-to/format-your-bot-messages.md
-    - name: Update and delete bot messages
-      href: bots/how-to/update-and-delete-bot-messages.md     
-    - name: Get Teams context for your bot
-      href: bots/how-to/get-teams-context.md
-    - name: Create a commands menu for your bot
-      href: bots/how-to/create-a-bot-commands-menu.md     
-    - name: Handle bot rate limiting
-      href: bots/how-to/rate-limit.md
-    - name: Calling and meeting bots overview
-      href: bots/calls-and-meetings/calls-meetings-bots-overview.md
-    - name: Real-time media concepts
-      href: bots/calls-and-meetings/real-time-media-concepts.md
-    - name: Register a calling bot
-      href: bots/calls-and-meetings/registering-calling-bot.md
-    - name: Incoming call notifications
-      href: bots/calls-and-meetings/call-notifications.md
-    - name: Application-hosted media
-      href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-    - name: Supported media formats
-      href: resources/media-formats.md
-    - name: Bot API changes for team and chat members
-      href: resources/team-chat-member-api-changes.md 
-  - name: Webhooks and connectors
-    items:
-    - name: Create an incoming webhook
-      href: webhooks-and-connectors/how-to/add-incoming-webhook.md
-    - name: Create an outgoing webhook
-      href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
-    - name: Create an O365 Connector
-      href: webhooks-and-connectors/how-to/connectors-creating.md
-    - name: Send messages to connectors and webhooks
-      href: webhooks-and-connectors/how-to/connectors-using.md
-  - name: Meeting extensions
+    href: tabs/what-are-tabs.md
+  - name: Create a content page
+    href: tabs/how-to/create-tab-pages/content-page.md
+  - name: Create a configuration page
+    href: tabs/how-to/create-tab-pages/configuration-page.md
+  - name: Create a removal page
+    href: tabs/how-to/create-tab-pages/removal-page.md
+  - name: Use the Teams client SDK
+    href: tabs/how-to/using-teams-client-sdk.md
+  - name: Get additional Teams context
+    href: tabs/how-to/access-teams-context.md
+  - name: Request device permissions
+    href: tabs/how-to/native-device-permissions.md
+  - name: Developer tools for tabs
+    href: tabs/how-to/developer-tools.md
+- name: Build bots
+  items:
+  - name: Overview
+    href: bots/what-are-bots.md
+  - name: How bots work
+    href: bots/bot-basics.md
+  - name: Conversation basics
+    href: bots/how-to/conversations/conversation-basics.md
+  - name: Subscribe to conversation events
+    href: bots/how-to/conversations/subscribe-to-conversation-events.md
+  - name: Channel and group conversations
+    href: bots/how-to/conversations/channel-and-group-conversations.md
+  - name: Send proactive messages
+    href: bots/how-to/conversations/send-proactive-messages.md
+  - name: Send and receive files
+    href: bots/how-to/conversations/send-and-receive-files.md
+  - name: Format your bot message
+    href: bots/how-to/format-your-bot-messages.md
+  - name: Update and delete bot messages
+    href: bots/how-to/update-and-delete-bot-messages.md     
+  - name: Get Teams context for your bot
+    href: bots/how-to/get-teams-context.md
+  - name: Create a commands menu for your bot
+    href: bots/how-to/create-a-bot-commands-menu.md     
+  - name: Handle bot rate limiting
+    href: bots/how-to/rate-limit.md
+  - name: Calling and meeting bots overview
+    href: bots/calls-and-meetings/calls-meetings-bots-overview.md
+  - name: Real-time media concepts
+    href: bots/calls-and-meetings/real-time-media-concepts.md
+  - name: Register a calling bot
+    href: bots/calls-and-meetings/registering-calling-bot.md
+  - name: Incoming call notifications
+    href: bots/calls-and-meetings/call-notifications.md
+  - name: Application-hosted media
+    href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
+  - name: Supported media formats
+    href: resources/media-formats.md
+  - name: Bot API changes for team and chat members
+    href: resources/team-chat-member-api-changes.md 
+- name: Build messaging extensions
+  items:
+  - name: Overview
+    href: messaging-extensions/what-are-messaging-extensions.md
+  - name: Define action commands
+    href: messaging-extensions/how-to/action-commands/define-action-command.md
+  - name: Create task module for action commands
+    href: messaging-extensions/how-to/action-commands/create-task-module.md
+  - name: Respond to action commands
+    href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
+  - name: Define search commands
+    href: messaging-extensions/how-to/search-commands/define-search-command.md
+  - name: Receive and respond to search queries
+    href: messaging-extensions/how-to/search-commands/respond-to-search.md
+  - name: Link unfurling
+    href: messaging-extensions/how-to/link-unfurling.md
+  - name: Add a configuration page
+    href: messaging-extensions/how-to/add-configuration-page.md
+- name: Build webhooks and connectors
+  items:
+  - name: Overview
+    href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
+  - name: Create an incoming webhook
+    href: webhooks-and-connectors/how-to/add-incoming-webhook.md
+  - name: Create an outgoing webhook
+    href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
+  - name: Create an O365 Connector
+    href: webhooks-and-connectors/how-to/connectors-creating.md
+  - name: Send messages to connectors and webhooks
+    href: webhooks-and-connectors/how-to/connectors-using.md
+- name: Build apps for Teams meetings
+  items:
+  - name: Overview
+    href: apps-in-teams-meetings/teams-apps-in-meetings.md
+  - name: Create apps for meetings
     href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
+- name: Build cards and task modules
+  items:
   - name: Cards
     items:
-    - name: What are cards?
+    - name: Overview
       href: task-modules-and-cards/what-are-cards.md
     - name: Format card text
       href: task-modules-and-cards/cards/cards-format.md
@@ -244,30 +240,12 @@
       href: task-modules-and-cards/cards/cards-reference.md
   - name: Task modules
     items:
-    - name: What are task modules?
+    - name: Overview
       href: task-modules-and-cards/what-are-task-modules.md
     - name: Using task modules in tabs
       href: task-modules-and-cards/task-modules/task-modules-tabs.md
     - name: Using task modules in bots
       href: task-modules-and-cards/task-modules/task-modules-bots.md
-  - name: Deep linking
-    href: concepts/build-and-test/deep-links.md
-  - name: Localization
-    href: concepts/build-and-test/apps-localization.md
-  - name: Test your app
-    items:
-    - name: Prepare your Microsoft 365 tenant
-      href: concepts/build-and-test/prepare-your-o365-tenant.md
-    - name: Test and debug your app
-      href: concepts/build-and-test/debug.md
-    - name: Add test data to your environment
-      href: concepts/build-and-test/test-data.md
-    - name: Debug your bot locally with an IDE
-      href: bots/how-to/debug/locally-with-an-ide.md
-    - name: Debug your bot with inspection middleware
-      href: /azure/bot-service/bot-service-debug-inspection-middleware
-    - name: Debug your calling and meeting bot locally
-      href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
 - name: Add authentication
   items:
   - name: Overview
@@ -308,17 +286,31 @@
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
   - name: Import third-party messages
     href: graph-api/import-messages/import-external-messages-to-teams.md
-- name: Publish your app
+- name: Test and publish your app
   items:
-  - name: Choose your distribution methods
+  - name: Test your app
+    items:
+    - name: Prepare your Microsoft 365 tenant
+      href: concepts/build-and-test/prepare-your-o365-tenant.md
+    - name: Test and debug your app
+      href: concepts/build-and-test/debug.md
+    - name: Add test data to your environment
+      href: concepts/build-and-test/test-data.md
+    - name: Debug your bot locally with an IDE
+      href: bots/how-to/debug/locally-with-an-ide.md
+    - name: Debug your bot with inspection middleware
+      href: /azure/bot-service/bot-service-debug-inspection-middleware
+    - name: Debug your calling and meeting bot locally
+      href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
+  - name: Choose how to distribute your app
     href: concepts/deploy-and-publish/overview.md
   - name: Create your app package
     href: concepts/build-and-test/apps-package.md
   - name: Upload your app for a team or user
     href: concepts/deploy-and-publish/apps-upload.md
-  - name: Publish your app to your organization
+  - name: Publish to your organization
     href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json
-  - name: Publish your app to Teams store (AppSource)
+  - name: Publish to the Teams store (AppSource)
     items:
     - name: Understanding AppSource submission 
       href: concepts/deploy-and-publish/appsource/publish.md
@@ -334,7 +326,7 @@
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
     - name: Application Certification program
       href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
-- name: SDKs and tools
+- name: Tools and SDKs
   items:
   - name: Teams Toolkit for Visual Studio Code
     href: toolkit/visual-studio-code-overview.md
@@ -400,8 +392,12 @@
   items:
     - name: App manifest schema
       href: resources/schema/manifest-schema.md
-    - name: Localization JSON schema
-      href: resources/schema/localization-schema.md
+    - name: Localization
+      items:
+      - name: Localize your app
+        href: concepts/build-and-test/apps-localization.md
+      - name: Localization JSON schema
+        href: resources/schema/localization-schema.md
     - name: Public developer preview
       items:
         - name: Overview
