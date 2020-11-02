@@ -3,6 +3,7 @@ title: Handle bot events
 description: Describes how to handle events in bots for Microsoft Teams
 keywords: teams bots events
 ms.date: 05/20/2019
+ms.author: lajanuar
 author: laujan
 ---
 # Handle bot events in Microsoft Teams
@@ -36,7 +37,7 @@ The following table lists the events that your bot can receive and take action o
 
 ## Team member or bot addition
 
-The [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate) event is sent to your bot when it receives information on membership updates for teams where it has been added. It also receives an update when it has been added for the first time specifically for personal conversations. Note that the user information (`Id`) is unique for your bot and can be cached for future use by your service (such as sending a message to a specific user).
+The [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true) event is sent to your bot when it receives information on membership updates for teams where it has been added. It also receives an update when it has been added for the first time specifically for personal conversations. Note that the user information (`Id`) is unique for your bot and can be cached for future use by your service (such as sending a message to a specific user).
 
 ### Bot or user added to a team
 
@@ -88,39 +89,89 @@ bot.on('conversationUpdate', (msg) => {
 
 ```json
 {
-    "membersAdded": [
-        {
-            "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0"
-        }
-    ],
-    "type": "conversationUpdate",
-    "timestamp": "2017-02-23T19:38:35.312Z",
-    "localTimestamp": "2017-02-23T12:38:35.312-07:00",
-    "id": "f:5f85c2ad",
-    "channelId": "msteams",
-    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
-    "from": {
-        "id": "29:1I9Is_Sx0OIy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA"
-    },
-    "conversation": {
-        "isGroup": true,
-        "conversationType": "channel",
-        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
-    },
-    "recipient": {
-        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
-        "name": "SongsuggesterBot"
-    },
-    "channelData": {
-        "team": {
-            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
-        },
-        "eventType": "teamMemberAdded",
-        "tenant": {
-            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
-        }
-    }
+   "membersAdded":[
+      {
+         "id":"28:f5d48856-5b42-41a0-8c3a-c5f944b679b0"
+      }
+   ],
+   "type":"conversationUpdate",
+   "timestamp":"2017-02-23T19:38:35.312Z",
+   "localTimestamp":"2017-02-23T12:38:35.312-07:00",
+   "id":"f:5f85c2ad",
+   "channelId":"msteams",
+   "serviceUrl":"https://smba.trafficmanager.net/amer-client-ss.msg/",
+   "from":{
+      "id":"29:1I9Is_Sx0OIy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA"
+   },
+   "conversation":{
+      "isGroup":true,
+      "conversationType":"channel",
+      "id":"19:efa9296d959346209fea44151c742e73@thread.skype"
+   },
+   "recipient":{
+      "id":"28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+      "name":"SongsuggesterBot"
+   },
+   "channelData":{
+      "team":{
+         "id":"19:efa9296d959346209fea44151c742e73@thread.skype"
+      },
+      "eventType":"teamMemberAdded",
+      "tenant":{
+         "id":"72f988bf-86f1-41af-91ab-2d7cd011db47"
+      }
+   }
 }
+```
+
+### User Added to a meeting
+
+The `conversationUpdate` event with the `membersAdded` object in the payload is sent when a user is added to a private scheduled meeting. The event details will be sent even when anonymous users join the meeting. 
+
+> [!NOTE]
+>
+>* When an anonymous user is added to a meeting, membersAdded payload object does not have `aadObjectId` field.
+>* When an anonymous user is added to a meeting, `from` object in the payload always have the id of the meeting organizer, even if the anonymous user was added by another presenter.
+
+#### Schema example: User added to meeting
+
+```json
+{
+   "membersAdded":[
+      {
+         "id":"229:1Z_XHWBMhDuehhDBYoPQD6Y1DSFsTtqOZx-SA5Jh9Y4zHKm4VbFGRn7-rK7SWiW1JECwxkMdrWpHoBut2sSyQPA"
+      }
+   ],
+   "type":"conversationUpdate",
+   "timestamp":"2017-02-23T19:38:35.312Z",
+   "localTimestamp":"2020-09-29T21:11:38.6542339Z",
+   "id":"f:a8cd1b51-9ddb-bd35-624b-7f7474165df8",
+   "channelId":"msteams",
+   "serviceUrl":"https://canary.botapi.skype.com/amer/",
+   "from":{
+      "id":"29:1siKxZhSoTapsXvI0gyf7Gywm_HM-4kEQW4BJnWuFYVIVu87xCNP99nidgQRCcwD3L3p_schiMShzx8IDRzf8mw",
+      "aadObjectId":"f30ba569-abef-4e97-8762-35f85cbae706"
+   },
+   "conversation":{
+      "isGroup":true,
+      "tenantId":"e15762ef-a8d8-416b-871c-25516354f1fe",
+      "id":"19:meeting_MWJlNGViOTgtMGExYi00NDA3LWExODgtOTZhMWNlYjM4ZTRj@thread.v2"
+   },
+   "recipient":{
+      "id":"28:3af3604a-d4fc-486b-911e-86fab41aa91c",
+      "name":"EchoBot1_Rename"
+   },
+   "channelData":{
+      "tenant":{
+         "id":"e15762ef-a8d8-416b-871c-25516354f1fe"
+      },
+      "source":null,
+      "meeting":{
+         "id":"MCMxOTptZWV0aW5nX01XSmxOR1ZpT1RndE1HRXhZaTAwTkRBM0xXRXhPRGd0T1RaaE1XTmxZak00WlRSakB0aHJlYWQudjIjMA=="
+      }
+   }
+}
+
 ```
 
 ### Bot added for personal context only
@@ -210,6 +261,52 @@ The `conversationUpdate` event with the `membersRemoved` object in the payload i
     }
 }
 ```
+
+### User removed from a meeting
+
+The `conversationUpdate` event with the `membersRemoved` object in the payload is sent when a user is removed from a private scheduled meeting. The event details will be sent even when anonymous users join the meeting. 
+
+> [!NOTE]
+>
+>* When an anonymous user is removed from a meeting, membersRemoved payload object does not have `aadObjectId` field.
+>* When an anonymous user is removed from a meeting, `from` object in the payload always have the id of the meeting organizer, even if the anonymous user was removed by another presenter.
+
+#### Schema example: User removed from meeting
+
+{   
+      "membersRemoved": 
+        {  
+          "id": "29:1Z_XHWBMhDuehhDBYoPQD6Y1DSFsTtqOZx-SA5Jh9Y4zHKm4VbFGRn7-rK7SWiW1JECwxkMdrWpHoBut2sSyQPA"   
+        }   
+      ],   
+      "type": "conversationUpdate",   
+      "timestamp": "2020-09-29T21:15:08.6391139Z",   
+      "id": "f:ee8dfdf3-54ac-51de-05da-9d49514974bb",   
+      "channelId": "msteams",   
+      "serviceUrl": "https://canary.botapi.skype.com/amer/",   
+      "from": {   
+        "id": "29:1siKxZhSoTapsXvI0gyf7Gywm_HM-4kEQW4BJnWuFYVIVu87xCNP99nidgQRCcwD3L3p_schiMShzx8IDRzf8mw",   
+        "aadObjectId": "f30ba569-abef-4e97-8762-35f85cbae706"   
+      },   
+      "conversation": {    
+        "isGroup": true,   
+        "tenantId": "e15762ef-a8d8-416b-871c-25516354f1fe",   
+        "id": "19:meeting_MWJlNGViOTgtMGExYi00NDA3LWExODgtOTZhMWNlYjM4ZTRj@thread.v2"   
+      },   
+      "recipient": {   
+        "id": "28:3af3604a-d4fc-486b-911e-86fab41aa91c",   
+        "name": "EchoBot1_Rename"   
+      },   
+      "channelData": {   
+        "tenant": {   
+          "id": "e15762ef-a8d8-416b-871c-25516354f1fe"   
+        },   
+        "source": null,   
+        "meeting": {   
+          "id": "MCMxOTptZWV0aW5nX01XSmxOR1ZpT1RndE1HRXhZaTAwTkRBM0xXRXhPRGd0T1RaaE1XTmxZak00WlRSakB0aHJlYWQudjIjMA=="   
+        }   
+      }   
+}   
 
 ## Team name updates
 
