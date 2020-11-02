@@ -6,7 +6,7 @@ keywords: camera image capabilities
 
 # Using Camera and image capabilities in Teams Javascript client SDK
 
-The [Microsoft Teams JavaScript client SDK](https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/using-teams-client-sdk), part of the [Microsoft Teams developer platform](https://docs.microsoft.com/en-us/microsoftteams/platform/), makes it easy to integrate external services with Teams. The SDK provides many tools necessary to build web apps on Teams, including access to native device capabilities such as camera, storage, mic, location, etc. This reduces the barrier to 3P app development, speeds-up development-cycle, and provides new scenarios/use-cases for the developer community.
+The [Microsoft Teams JavaScript client SDK](https://docs.microsoft.com/microsoftteams/platform/tabs/how-to/using-teams-client-sdk), part of the [Microsoft Teams developer platform](https://docs.microsoft.com/microsoftteams/platform/), makes it easy to integrate external services with Teams. The SDK provides many tools necessary to build web apps on Teams, including access to native device capabilities such as camera, storage, mic, location, etc. This reduces the barrier to 3P app development, speeds-up development-cycle, and provides new scenarios/use-cases for the developer community.
 
 The image APIs (selectMedia, getMedia, and viewImages) help web app developers leverage native camera/image capabilities and use them right out of the client SDK. With these capabilities a Teams web app developer would now be able to:
 * Leverage native **camera control** to let users **capture and attach images** in a go
@@ -21,7 +21,7 @@ The image APIs (selectMedia, getMedia, and viewImages) help web app developers l
 
 ## Getting started
 
-[Update your app manifest](https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/native-device-permissions?tabs=mobile#properties) with “media” permissions, so Teams knows the device capability your app requires access to. This allows your app to ask for requisite permissions from end-users before they use the camera to capture the image or open gallery to pick an image and submit as an attachment. Note that the permission prompt gets shown automatically when an appropriate Teams API is leveraged, and no effort is needed on your end. For more details, refer [permission behavior](https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/native-device-permissions?tabs=desktop).
+[Update your app manifest](https://docs.microsoft.com/microsoftteams/platform/tabs/how-to/native-device-permissions?tabs=mobile#properties) with “media” permissions, so Teams knows the device capability your app requires access to. This allows your app to ask for requisite permissions from end-users before they use the camera to capture the image or open gallery to pick an image and submit as an attachment. Note that the permission prompt gets shown automatically when an appropriate Teams API is leveraged, and no effort is needed on your end. For more details, refer [permission behavior](https://docs.microsoft.com/microsoftteams/platform/tabs/how-to/native-device-permissions?tabs=desktop).
 
 ## Using camera and image capabilities
 
