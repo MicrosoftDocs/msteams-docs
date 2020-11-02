@@ -76,13 +76,11 @@
     href: concepts/design/understand-use-cases.md
   - name: Map use cases to Teams features
     href: concepts/design/map-use-cases.md
-  - name: Deep linking
-    href: concepts/build-and-test/deep-links.md
 - name: Integrate with Teams
   items:
-  - name: Web apps
+  - name: Integrate web apps
     href: samples/integrating-web-apps.md
-  - name: Power platform
+  - name: Integrate Power Platform apps
     items:
     - name: Overview
       href: samples/teams-low-code-solutions.md
@@ -90,10 +88,12 @@
       href: bots/how-to/add-power-virtual-agents-bot-to-teams.md  
     - name: Virtual Assistant for Teams
       href: samples/virtual-assistant.md 
-  - name: Share-to-Teams button
+  - name: Create a Share-to-Teams button
     href: concepts/build-and-test/share-to-teams.md
-  - name: Teams tabs and SharePoint
+  - name: Add a Teams tab to SharePoint
     href: tabs/how-to/tabs-in-sharepoint.md
+  - name: Create deep links
+    href: concepts/build-and-test/deep-links.md
 - name: Design your app
   items:
   - name: Get started

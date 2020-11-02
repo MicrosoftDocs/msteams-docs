@@ -1,5 +1,5 @@
 ---
-title: Create deep links
+title: Create deep links to content
 description: Describes deep links and how to use them in your apps
 keywords: teams deep link deeplink
 ---
@@ -33,7 +33,8 @@ Provide these fields:
 ### Generating a deep link to your tab
 
 > [!NOTE]
-> Static tabs have a scope of "personal" and configurable tabs have a scope of "team". The two tab types have a slightly different syntax since only the configurable tab has a `channel` property associated with its context object. See the [Manifest](~/resources/schema/manifest-schema.md) reference for more information on personal and team scopes.
+> Personal tabs have a `personal` scope, while channel and group tabs use `team` or `group` scopes. The two tab types have a slightly different syntax since only the configurable tab has a `channel` property associated with its context object. See the [manifest](~/resources/schema/manifest-schema.md) reference for more information on tab scopes.
+
 > [!NOTE]
 > Deep links work properly only if the tab was configured using the v0.4 or later library and because of that has an entity ID. Deep links to tabs without entity IDs still navigate to the tab but can't provide the sub-entity ID to the tab.
 
@@ -98,7 +99,7 @@ As an example use case, if you are returning an Office 365 user profile from you
 
 ### Generating a deep link to a chat
 
-Use this format for a deep link that you can use in a bot, Connector, or messaging extension card:
+Use this format for a deep link that you can use in a bot, connector, or messaging extension card:
 
 `https://teams.microsoft.com/l/chat/0/0?users=<user1>,<user2>,...&topicName=<chat name>&message=<precanned text>`
 
@@ -106,9 +107,9 @@ Example: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@conto
 
 The query parameters are:
 
-* `users`&emsp;The comma-separated list of user IDs representing the participants of the chat. The user performing the action is always included as a participant. The User ID field currently only supports the Azure AD UserPrincipalName (typically an email address).
-* `topicName`&emsp;An optional field for chat's display name, in the case of a chat with 3 or more users. If this field is not specified, the chat's display name will be based on the names of the participants.
-* `message`&emsp;An optional field for the message text that you want to insert into the current user's compose box while the chat is in a draft state.
+* `users`: The comma-separated list of user IDs representing the participants of the chat. The user performing the action is always included as a participant. The User ID field currently only supports the Azure AD UserPrincipalName (typically an email address).
+* `topicName`: An optional field for chat's display name, in the case of a chat with 3 or more users. If this field is not specified, the chat's display name will be based on the names of the participants.
+* `message`: An optional field for the message text that you want to insert into the current user's compose box while the chat is in a draft state.
 
 To use this deep link with your bot, you can specify this as the URL target in your card's button or tap action through the `openUrl` action type.
 
@@ -117,7 +118,7 @@ To use this deep link with your bot, you can specify this as the URL target in y
 > [!Note]
 > This feature is currently in developer preview.
 
-You can create deep links to the Teams client's built-in scheduling dialog. This is especially useful if your app helps the user complete calendar or scheduling-related tasks.
+You can create deep links to the Teams built-in scheduling dialog. This is especially useful if your app helps the user complete calendar or scheduling-related tasks.
 
 ### Generating a deep link to the scheduling dialog
 
@@ -128,11 +129,11 @@ Example: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&atten
 
 The query parameters are:
 
-* `attendees`&emsp;The optional comma-separated list of user IDs representing the attendees of the meeting. The user performing the action is the meeting organizer. The User ID field currently only supports the Azure AD UserPrincipalName (typically an email address).
-* `startTime`&emsp;The optional start time of the event. This should be in [long ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601), for example “2018-03-12T23:55:25+02:00”.
-* `endTime`&emsp;The optional end time of the event, also in ISO 8601 format.
-* `subject`&emsp;An optional field for the meeting subject.
-* `content`&emsp;An optional field for the meeting details field.
+* `attendees`: The optional comma-separated list of user IDs representing the attendees of the meeting. The user performing the action is the meeting organizer. The User ID field currently only supports the Azure AD UserPrincipalName (typically an email address).
+* `startTime`: The optional start time of the event. This should be in [long ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601), for example “2018-03-12T23:55:25+02:00”.
+* `endTime`: The optional end time of the event, also in ISO 8601 format.
+* `subject`: An optional field for the meeting subject.
+* `content`: An optional field for the meeting details field.
 
 Currently, specifying the location is not supported. When generating your start and end times be sure to specify the UTC offset (time zones).
 
