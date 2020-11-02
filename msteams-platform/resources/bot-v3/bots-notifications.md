@@ -136,43 +136,41 @@ The `conversationUpdate` event with the `membersAdded` object in the payload is 
 #### Schema example: User added to meeting
 
 ```json
-{   
-
-  "membersAdded": [   
-    {   
-      "id": "29:1Z_XHWBMhDuehhDBYoPQD6Y1DSFsTtqOZx-SA5Jh9Y4zHKm4VbFGRn7-rK7SWiW1JECwxkMdrWpHoBut2sSyQPA"   
-    }   
-
-  ],   
-
-  "type": "conversationUpdate",   
-  "timestamp": "2020-09-29T21:11:38.6542339Z",   
-  "id": "f:a8cd1b51-9ddb-bd35-624b-7f7474165df8",   
-  "channelId": "msteams",   
-  "serviceUrl": "https://canary.botapi.skype.com/amer/",   
-  "from": {   
-    "id": "29:1siKxZhSoTapsXvI0gyf7Gywm_HM-4kEQW4BJnWuFYVIVu87xCNP99nidgQRCcwD3L3p_schiMShzx8IDRzf8mw",   
-    "aadObjectId": "f30ba569-abef-4e97-8762-35f85cbae706"   
-  },   
-  "conversation": {   
-    "isGroup": true,   
-    "tenantId": "e15762ef-a8d8-416b-871c-25516354f1fe",   
-    "id": "19:meeting_MWJlNGViOTgtMGExYi00NDA3LWExODgtOTZhMWNlYjM4ZTRj@thread.v2"   
-  },   
-  "recipient": {   
-    "id": "28:3af3604a-d4fc-486b-911e-86fab41aa91c",   
-    "name": "EchoBot1_Rename"   
-  },   
-  "channelData": {   
-    "tenant": {   
-      "id": "e15762ef-a8d8-416b-871c-25516354f1fe"   
-    },   
-    "source": null,   
-    "meeting": {   
-      "id": "MCMxOTptZWV0aW5nX01XSmxOR1ZpT1RndE1HRXhZaTAwTkRBM0xXRXhPRGd0T1RaaE1XTmxZak00WlRSakB0aHJlYWQudjIjMA=="   
-    }   
-  }   
-}  
+{
+   "membersAdded":[
+      {
+         "id":"229:1Z_XHWBMhDuehhDBYoPQD6Y1DSFsTtqOZx-SA5Jh9Y4zHKm4VbFGRn7-rK7SWiW1JECwxkMdrWpHoBut2sSyQPA"
+      }
+   ],
+   "type":"conversationUpdate",
+   "timestamp":"2017-02-23T19:38:35.312Z",
+   "localTimestamp":"2020-09-29T21:11:38.6542339Z",
+   "id":"f:a8cd1b51-9ddb-bd35-624b-7f7474165df8",
+   "channelId":"msteams",
+   "serviceUrl":"https://canary.botapi.skype.com/amer/",
+   "from":{
+      "id":"29:1siKxZhSoTapsXvI0gyf7Gywm_HM-4kEQW4BJnWuFYVIVu87xCNP99nidgQRCcwD3L3p_schiMShzx8IDRzf8mw",
+      "aadObjectId":"f30ba569-abef-4e97-8762-35f85cbae706"
+   },
+   "conversation":{
+      "isGroup":true,
+      "tenantId":"e15762ef-a8d8-416b-871c-25516354f1fe",
+      "id":"19:meeting_MWJlNGViOTgtMGExYi00NDA3LWExODgtOTZhMWNlYjM4ZTRj@thread.v2"
+   },
+   "recipient":{
+      "id":"28:3af3604a-d4fc-486b-911e-86fab41aa91c",
+      "name":"EchoBot1_Rename"
+   },
+   "channelData":{
+      "tenant":{
+         "id":"e15762ef-a8d8-416b-871c-25516354f1fe"
+      },
+      "source":null,
+      "meeting":{
+         "id":"MCMxOTptZWV0aW5nX01XSmxOR1ZpT1RndE1HRXhZaTAwTkRBM0xXRXhPRGd0T1RaaE1XTmxZak00WlRSakB0aHJlYWQudjIjMA=="
+      }
+   }
+}
 
 ```
 
