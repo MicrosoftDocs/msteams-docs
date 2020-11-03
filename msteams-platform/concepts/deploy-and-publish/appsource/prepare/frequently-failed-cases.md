@@ -13,7 +13,7 @@ This article addresses common reasons submitted apps fail validation. While it's
 >[!NOTE]
 >**[Section 1140](/legal/marketplace/certification-policies#1140-teams)** is specific to Microsoft Teams and **[sub-section 1140.4](https://docs.microsoft.com/legal/marketplace/certification-policies#11404-functionality)** addresses functionality requirements for Teams apps.
 
-## Validation guidelines
+## Validation guidelines & most failed test cases
 
 ### &#9989; General considerations
 
