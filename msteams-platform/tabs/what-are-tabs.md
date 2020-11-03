@@ -5,7 +5,7 @@ description: An overview of custom tabs on the Teams platform
 ms.topic: overview
 ms.author: lajanuar
 ---
-# What are Microsoft Teams custom tabs?
+# What are Microsoft Teams tabs?
 
 Tabs are Teams-aware webpages embedded in Microsoft Teams. They are simple iframes that point to domains declared in the app manifest and can be added as part of a channel inside a team, a group chat, or as a personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams and add Teams-specific functionality to your web content. *See* [Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
 

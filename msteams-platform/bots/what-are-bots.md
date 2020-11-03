@@ -5,7 +5,7 @@ description: An overview of conversational bots in Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
 ---
-# What are conversational bots?
+# What are conversational bots in Microsoft Teams?
 
 Conversational bots allow users to interact with your web service through text, interactive cards, and task modules. They're incredibly flexible — conversational bots can be scoped to handling a few simple commands or complex, artificial-intelligence-powered and natural-language-processing virtual assistants. They can be one aspect of a larger application, or completely stand-alone.
 
