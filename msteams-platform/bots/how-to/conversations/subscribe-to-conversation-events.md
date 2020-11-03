@@ -108,7 +108,7 @@ export class MyBot extends TeamsActivityHandler {
 # [Python](#tab/python)
 
 ```python
-async def on_teams_channel_created_activity(
+async def on_teams_channel_created(
 	self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
 ):
 	return await turn_context.send_activity(
@@ -190,7 +190,7 @@ export class MyBot extends TeamsActivityHandler {
 # [Python](#tab/python)
 
 ```python
-async def on_teams_channel_renamed_activity(
+async def on_teams_channel_renamed(
 	self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
 ):
 	return await turn_context.send_activity(
@@ -272,7 +272,7 @@ export class MyBot extends TeamsActivityHandler {
 # [Python](#tab/python)
 
 ```python
-async def on_teams_channel_deleted_activity(
+async def on_teams_channel_deleted(
 	self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
 ):
 	return await turn_context.send_activity(
@@ -412,7 +412,7 @@ This is the message your bot will receive when the bot is added **to a one-to-on
 # [Python](#tab/python)
 
 ```python
-async def on_teams_members_added_activity(
+async def on_teams_members_added(
 	self, teams_members_added: [TeamsChannelAccount], turn_context: TurnContext
 ):
 	for member in teams_members_added:
@@ -519,7 +519,7 @@ export class MyBot extends TeamsActivityHandler {
 # [Python](#tab/python)
 
 ```python
-async def on_teams_members_removed_activity(
+async def on_teams_members_removed(
 	self, teams_members_removed: [TeamsChannelAccount], turn_context: TurnContext
 ):
 	for member in teams_members_removed:
@@ -600,7 +600,7 @@ export class MyBot extends TeamsActivityHandler {
 # [Python](#tab/python)
 
 ```python
-async def on_teams_team_renamed_activity(
+async def on_teams_team_renamed(
 	self, team_info: TeamInfo, turn_context: TurnContext
 ):
 	return await turn_context.send_activity(
