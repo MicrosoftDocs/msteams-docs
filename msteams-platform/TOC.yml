@@ -275,9 +275,9 @@
 - name: Utilize Teams data with Microsoft Graph
   items:
   - name: Overview
-    href: https://docs.microsoft.com/en-us/graph/teams-concept-overview
+    href: https://docs.microsoft.com/graph/teams-concept-overview
   - name: Get started
-    href: https://docs.microsoft.com/en-us/graph/toolkit/get-started/build-a-microsoft-teams-tab
+    href: https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab
   - name: Enable resource-specific consent
     href: graph-api/rsc/resource-specific-consent.md
   - name: Test resource-specific consent permissions
