@@ -6,7 +6,7 @@ keywords: token, user token, SSO support for bots
 
 # Single Sign-On (SSO) support for bots
 
-Silent authentication in Azure Active Directory (Azure AD) minimizes the number of times a user needs to enter their login credentials by silently refreshing the authentication token. If a user agrees to use your app, they will not have to consent again on another device and will be signed in automatically. The flow is very similar to the [Teams tab SSO support]( ../../../tabs/how-to/authentication/auth-aad-sso). The difference is the protocol for  how a bot requests tokens and receives the response.
+Silent authentication in Azure Active Directory (Azure AD) minimizes the number of times a user needs to enter their login credentials by silently refreshing the authentication token. If a user agrees to use your app, they will not have to consent again on another device and will be signed in automatically. The flow is very similar to the [Teams tab SSO support]( ../../../tabs/how-to/authentication/auth-aad-sso.md). The difference is the protocol for  how a bot requests tokens and receives the response.
 
 OAuth 2.0 is an open standard for authentication and authorization used by Azure Active Directory (Azure AD) and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.
 
@@ -40,14 +40,14 @@ The SSO support currently requires the app to be installed in personal scope. To
 
 #### Create an Azure account
 
-This step is similar to the [tab SSO](https://docs.microsoft.com/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso) flow. Please follow [Create the azure active directory application]( https://docs.microsoft.com/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso#1-create-your-azure-active-directory-azure-ad-application) to create the aad application. At step 5 in the instructions;
+This step is similar to the [tab SSO flow](../../../tabs/how-to/authentication/auth-aad-sso.md) flow. Please follow [Create the azure active directory application]( ../../../tabs/how-to/authentication/auth-aad-sso.md#1-create-your-azure-active-directory-azure-ad-application) to create the aad application. At step 5 in the instructions;
 
 * If you are building a standalone bot, set the Application ID URI to `api://botid-{YourBotId}` .
 * If you are building an app with a bot and a tab, set the Application ID URI to `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
 
 #### Update your app manifest
 
-Please follow [Update your Microsoft Teams application manifest]( https://docs.microsoft.com/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso#2-update-your-microsoft-teams-application-manifest) for guidance.
+Please follow [Update your Microsoft Teams application manifest]( ../../../tabs/how-to/authentication/auth-aad-sso.md#2-update-your-microsoft-teams-application-manifest) for guidance.
 
 #### Request and receive a bot token
 
@@ -55,7 +55,7 @@ To implement the bot SSO flow, you can use the bot framework OAuthPrompt or impl
 
 #### Requesting a bot token
 
-The request to get the token is a normal post message request (using the existing message schema). It includes in the attachments of an OAuth card. The schema for the OAuth card is defined [here]( https://docs.microsoft.com/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable) and it is very similar to a sign-in card. Teams will treat this request as a silent token acquisition if the TokenExchangeResource property is populated on the card. For Teams channel we honor only the Id property, which uniquely identifies a token request.
+The request to get the token is a normal post message request (using the existing message schema). It includes in the attachments of an OAuth card. The schema for the OAuthCard class is defined in [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) and it is very similar to a sign-in card. Teams will treat this request as a silent token acquisition if the TokenExchangeResource property is populated on the card. For Teams channel we honor only the Id property, which uniquely identifies a token request.
 
 If this is the first time the user is using your application and the user consent is required, the user will be shown a dialog to continue with the consent experience similar to the one below. When the user selects **Continue**, two different things occur depending on whether the bot is defined or not and a sign-in button on the OAuth card.
 
@@ -116,7 +116,7 @@ protected override async Task<InvokeResponse> OnInvokeActivity
         }
 ```
 
-The turnContext.activity.value is of type [TokenExchangeInvokeRequest](https://docs.microsoft.com/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable) and contains the token that can be further used by the developer. Store the tokens securely for performance reasons and refresh them.
+The turnContext.activity.value is of type [TokenExchangeInvokeRequest](/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable&preserve-view=true) and contains the token that can be further used by the developer. Store the tokens securely for performance reasons and refresh them.
 
 #### Update the azure portal with the oauth connection
 
@@ -142,7 +142,7 @@ The turnContext.activity.value is of type [TokenExchangeInvokeRequest](https://d
 
 #### Update the auth sample
 
-Start with the teams auth sample from [here](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth)
+Start with the [teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth).
 
 1. Update the TeamsBot to include the following. To handle the deduping of the incoming request, see below:
 
