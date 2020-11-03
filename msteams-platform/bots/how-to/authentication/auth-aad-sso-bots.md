@@ -1,10 +1,10 @@
 ---
-title: Support Single Sign-On for bots - Phase 1 (1:1 chats)
+title: Single sign-on support for bots 
 description: Describes how to get a user token. Currently, a bot developer can use a sign in card or the azure bot service with the OAuth card support.
 keywords: token, user token, SSO support for bots
 ---
 
-# Single Sign-On (SSO) support for bots
+# Single sign-on (SSO) support for bots
 
 Silent authentication in Azure Active Directory (Azure AD) minimizes the number of times a user needs to enter their login credentials by silently refreshing the authentication token. If a user agrees to use your app, they will not have to consent again on another device and will be signed in automatically. The flow is very similar to the [Teams tab SSO support]( ../../../tabs/how-to/authentication/auth-aad-sso.md). The difference is the protocol for  how a bot requests tokens and receives the response.
 
