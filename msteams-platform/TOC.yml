@@ -243,6 +243,8 @@
           href: bots/how-to/authentication/auth-flow-bot.md
         - name: Add authentication to your bot
           href: bots/how-to/authentication/add-authentication.md
+        - name: Single sign-on support for bots
+          href: bots/how-to/authentication/auth-aad-sso-bots.md
       - name: Format your bot message
         href: bots/how-to/format-your-bot-messages.md
       - name: Update and delete bot messages
