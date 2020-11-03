@@ -126,7 +126,7 @@ Please see below section for Welcome message requirements.
 * Provide way-forward guidance for using the app.
 * Include guidance on how to Sign up and configure your app
 * Present easy-to-read text and straightforward dialogue — preferably a card with an actionable welcome tour button that loads a task module.
-* Keep it simple and usable with buttons and cards - avoid long text, chatty dialogue.
+* Keep it simple and usable with buttons and cards — avoid long text, chatty dialogue.
 * Include adaptive cards and buttons to make the welcome message more usable.
 * Invoke the welcome message  with one ping, not two or more simultaneous pings.
 * A welcome message must only be shown to the user who configured the app, preferably in a 1:1 personal chat.
