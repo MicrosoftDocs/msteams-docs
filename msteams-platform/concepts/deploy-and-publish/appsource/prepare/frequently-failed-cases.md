@@ -13,7 +13,7 @@ This article addresses common reasons submitted apps fail validation. While it's
 >[!NOTE]
 >**[Section 1140](/legal/marketplace/certification-policies#1140-teams)** is specific to Microsoft Teams and **[sub-section 1140.4](https://docs.microsoft.com/legal/marketplace/certification-policies#11404-functionality)** addresses functionality requirements for Teams apps.
 
-## Validation guidelines
+## Validation guidelines & most failed test cases
 
 ### &#9989; General considerations
 
@@ -25,6 +25,7 @@ This article addresses common reasons submitted apps fail validation. While it's
 * Your app must not automatically download, install, or launch any executable code in the user environment. All downloads should seek explicit permission from the user.
 * Any material that you associate with your experience, such as descriptions and support documentation, must be accurate. Use correct spelling, capitalization, punctuation, and grammar in your descriptions and materials.
 * Provide help and support information. It's highly recommended that your app include a help/FAQ link for the first-run user experience. For all personal apps, we recommend providing your help page as a personal tab for a better user experience.
+* Apps must not take user out of Teams for core user scenarios. Using task modules amd tabs is recommended to display information to the user within Teams.
 * Increment your app version number in the manifest if you make any manifest changes to your submission.
 
 ### &#9989;  Provide a clear and simple sign in/sign out and sign-up experience
@@ -111,9 +112,10 @@ Your bot should be responsive to any command and not dead-end the user. Here are
 
 * **Think through all scopes**. Be sure that your bot provides appropriate responses when mentioned (`@*botname*`) in a channel and in personal conversations. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](~/resources/schema/manifest-schema.md#bots).)
 
-### &#9989; Personal bots must send a welcome message on first launch
+### &#9989; Personal bots must always send a welcome message on first launch
 
 A welcome messages is the best way to set the tone for your personal/chat bot. This is the first interaction a user has with the bot. A good welcome message can encourage the user to keep exploring the app. If the welcome or introductory message is confusing or unclear, users won't see the value of the app immediately and lose interests.
+Please see below section for Welcome message requirements.
 
 > [!Note]
 > A welcome message is optional for a channel bot.
@@ -121,19 +123,21 @@ A welcome messages is the best way to set the tone for your personal/chat bot. T
 ### Welcome message requirements
 
 * Include a value proposition with the welcome tour.
-* Provide way-forward guidance for using the bot.
+* Provide way-forward guidance for using the app.
+* Include guidance on how to Sign up and configure your app
 * Present easy-to-read text and straightforward dialogue — preferably a card with an actionable welcome tour button that loads a task module.
-* Keep it simple, avoid wordy/chatty dialogue.
+* Keep it simple and usable with buttons and cards — avoid long text, chatty dialogue.
 * Include adaptive cards and buttons to make the welcome message more usable.
 * Invoke the welcome message  with one ping, not two or more simultaneous pings.
 * A welcome message must only be shown to the user who configured the app, preferably in a 1:1 personal chat.
-* Never send a personal chat to every member in the team.
+* Personal apps must always provide a welcome message to a user.
+* Never send a personal chat to every member in the team - this is considered spam.
 * Never send the welcome message more than once. Repeating the same welcome message over regular intervals is not allowed and is considered spamming.
 
 #### Avoid welcome message spamming
 
 * **Channel message by bot**. Don't spam users by creating separate new chat posts. Create a single thread post with replies in the same thread.
-* **Personal chat by bot**. Don't send multiple messages. Send one message with complete information.
+* **Personal chat by bot**. Don't send multiple messages. Send one message with complete information. Repeating the same welcome message over regular intervals is not allowed and is considered spamming.
 
 #### Notification-only bot welcome messages
 
@@ -149,6 +153,24 @@ Notification-only bots must send a welcome message that includes a message conve
 #### Welcome messages in the team/channel  scope
 
 Things are a little bit different when the bot is first added to a channel. Normally, you shouldn't send a 1:1 message to everyone on the team, but the bot can send a welcome message in the channel.
+
+### &#9989; Mobile responsiveness, no direct upsell or payment
+* Your tabs, adaptive cards, bot messages and content in task modules must be responsive for varios mobile device screens sizes.
+* Apps that support iOS must be fully functional on the latest iPad device using the latest version of iOS.
+* Must not include any direct references to in-app purchases, trial offers, UI that aims to upsell to paid versions, or links to any online stores where users can purchase or acquire other content, apps, or add-ins from your Teams app on mobile OS (Android, iOS).
+* The iOS or Android version of the add-in must not show any UI or language or link to any other apps, add-ins, or website that ask the user to pay.
+* The associated Privacy Policy and Terms of Use pages must also be free of any commerce UI or Store links.
+
+### &#9989; Do not post sensitive data to an audience not intended to view the data
+Your Teams app must not post sensitive information such as Credit card / financial payment instrument, Personal Identifiable Information, Health or contact tracing information to an audience not intended to view that data.
+
+### &#9989; Do not transmit financial payment details or complete financial transactions via your Teams app
+* Your Teams app must not ask users to make a payment directly within Teams interface
+* Apps may not transmit financial instrument details through the user on the app interface. Apps may only transmit links to secure payment services to users if this is disclosed in the app's Terms of Use, Privacy Policy, and any profile page or website for the app before a user agrees to use the app.
+
+### &#9989; Clear warning before downloading any files or exes into user’s environment
+Please warn the users before your app downloads any files or exes into the user's machine or environment
+
 
 > [!div class="nextstepaction"]
 > [Learn more about Teams app approval policies](/legal/marketplace/certification-policies#1140-teams) 
