@@ -48,6 +48,7 @@ This article addresses common reasons submitted apps fail validation. While it's
   * Authorize an account/service => deauthorize/deny an account/service.
   * Register an account/service => unregister/unsubscribe an account/service.
 * If your app requires an account or service, you must provide a way for the user to sign up or to create a sign-up request. An exception may be granted if your app is an Enterprise application.
+* Make sure you provide clear-way-forward guidance to a new user on how to sign up to use your app services. If a ready sign up link is not available, a clear way forward may be provided in the app's description page, welcome message, help message, and the sign-in window where you ask a user to sign in to your services. Apps that do not have an easy sign up flow may also include a help tab or link to a web page where a new user can see detailed guidance on how to configure your app with Microsoft Teams.  This is to ensure a new user is not shown a roadblock when trying your app for the first time.
 * Sign in/sign out functionality must work on mobile clients. Ensure you're using the [Microsoft Teams SDK](https://www.npmjs.com/package/@microsoft/teams-js) version 1.4.1 or later.
 
 For additional information on authentication see:
