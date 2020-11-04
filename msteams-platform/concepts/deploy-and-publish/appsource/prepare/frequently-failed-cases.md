@@ -27,7 +27,7 @@ This article addresses common reasons submitted apps fail validation. While it's
 * Provide help and support information. It's highly recommended that your app include a help/FAQ link for the first-run user experience. For all personal apps, we recommend providing your help page as a personal tab for a better user experience.
 * Increment your app version number in the manifest if you make any manifest changes to your submission.
 * App must not take users out of Teams for core user scenarios. Link targets in apps must not link to an external browser but should link to div elements contained within Teams e.g. inside Task Modules and tabs.
-* Personal apps provide an affordance to share content from a personal app experience with other team members.
+* Personal apps enable users to share content from a personal app experience with other team members.
 * Channel tabs must not provide an app bar with icons in the left rail that conflicts with the main Teams navigation.
 * Channel tabs that have complex editing capabilities within the app should open the editor view in multi-window rather than a tab.
 
