@@ -73,6 +73,8 @@ For additional information on authentication see:
 * Tabs must not present an app bar with icons in the left rail that conflict with the main Teams navigation.
 * Tabs that have complex editing capabilities within the app should open the editor view in multi-windows rather than in the tab.
 * If there are multiple view options, consider having a tab config menu for the user to choose from. For example, instead of embedding a menu inside the tab, put the menu in the configuration page so the actual tab view is clean and focused.
+* Please include a  Help tab as a static tab to advise users on how to configure, sign up, and use the app.
+* Please include a Settings tab available from the app header.
 
 ![Wide idea configuration page](~/assets/images/faq/wideidea.png)
 
@@ -111,6 +113,8 @@ Your bot should be responsive to any command and not dead-end the user. Here are
 [Adaptive cards with buttons invoking task modules](/task-modules-and-cards/task-modules/task-modules-bots) enhance the bot user experience. These cards and buttons are easier to use in a mobile device as opposed to your user typing the commands
 
 * **Think through all scopes**. Be sure that your bot provides appropriate responses when mentioned (`@*botname*`) in a channel and in personal conversations. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](~/resources/schema/manifest-schema.md#bots).)
+
+* **Include team, group chat or 1:1 conversation**. Bot notifications should include a Team, a group chat, or a one to one conversation with relevant content for that audience.
 
 ### &#9989; Personal bots must always send a welcome message on first launch
 
@@ -171,13 +175,24 @@ Your Teams app must not post sensitive information such as Credit card / financi
 ### &#9989; Clear warning before downloading any files or exes into user’s environment
 Please warn the users before your app downloads any files or exes into the user's machine or environment.
 
-### Usability test cases - Tips and Tricks
+### &#9989; Messaging Extension should provide help text and be readable
 * The search-based messaging extension should provide help text on how to effectively search (e.g., show example input).
 * Task modules must include an icon and a short name that they are contained in or created from the app.
 * Message extension @mention executables should be clear, easy to understand, and readable.
-* Bot notifications should include a Team, a group chat, or a one to one conversation with relevant content for that audience.
-* Please include a  Help tab as a static tab to advise users on how to configure, sign up, and use the app.
-* Please include a Settings tab available from the app header.
+![Message extension](~/assets/images/faq/message-extension.png)
+
+## App category mapping
+
+| Teams Category       | PC Categories  |
+|:---------------------|:---------------|
+| Analytics and BI | Analytics, Data Visualization and BI |
+| Developer and IT | Developer Tools, IT Admin |
+| Education | Education |
+| Human resources | Human Resources and Recruiting |
+| Productivity | Content Management, Files and documents, Productivity, Training and Tutorial, and Utilities |
+| Project management | Communication, ProjectManagement, Workflow and Business Management |
+| Sales and support | Customer and ContactManagement, Customer Support, Financial Management, Sales and Marketing |
+| Social and fun | Image and Video Galleries, Lifestyle, News and Weather, Social, Travel and Navigation |
 
 > [!div class="nextstepaction"]
 > [Learn more about Teams app approval policies](/legal/marketplace/certification-policies#1140-teams) 
