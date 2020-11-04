@@ -169,8 +169,15 @@ Your Teams app must not post sensitive information such as Credit card / financi
 * Apps may not transmit financial instrument details through the user on the app interface. Apps may only transmit links to secure payment services to users if this is disclosed in the app's Terms of Use, Privacy Policy, and any profile page or website for the app before a user agrees to use the app.
 
 ### &#9989; Clear warning before downloading any files or exes into user’s environment
-Please warn the users before your app downloads any files or exes into the user's machine or environment
+Please warn the users before your app downloads any files or exes into the user's machine or environment.
 
+### Usability test cases - Tips and Tricks
+* The search-based messaging extension should provide help text on how to effectively search (e.g., show example input).
+* Task modules must include an icon and a short name that they are contained in or created from the app.
+* Message extension @mention executables should be clear, easy to understand, and readable.
+* Bot notifications should include a Team, a group chat, or a one to one conversation with relevant content for that audience.
+* Please include a  Help tab as a static tab to advise users on how to configure, sign up, and use the app.
+* Please include a Settings tab available from the app header.
 
 > [!div class="nextstepaction"]
 > [Learn more about Teams app approval policies](/legal/marketplace/certification-policies#1140-teams) 
