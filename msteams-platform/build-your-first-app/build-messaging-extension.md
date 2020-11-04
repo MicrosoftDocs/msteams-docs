@@ -21,7 +21,7 @@ Your organization's help desk communicates with users through Teams, but the tic
 > [!div class="checklist"]
 >
 > * Create an app project and messaging extension bot using the Microsoft Teams Toolkit for Visual Studio Code
-> * Identify the app manifest properties and some of the scaffolding relevant to messaging extensions
+> * Identify the app configurations and some of the scaffolding relevant to messaging extensions
 > * Host an app locally
 > * Configure the bot for your messaging extension
 > * Sideload and test a messaging extension in Teams
