@@ -74,9 +74,7 @@ With this URL, Teams (which requires HTTPS connections) will be able tunnel to w
 
 ## 4. Configure the bot for your messaging extension
 
-Messaging extensions rely on bots to send and process user requests from Teams to your hosted service.
-
-The bot must be registered with the Azure Bot Service, which was done when you set up your app using the Teams Toolkit.
+Messaging extensions rely on bots to send and process user requests from Teams to your hosted service. The bot must be registered with the Azure Bot Service, which was done when you set up your app using the Teams Toolkit.
 
 You still must specify a bot endpoint URL to receive and process search queries in your messaging extension. Typically, the URL looks like `https://HOST_URL/api/messages`. You can configure this quickly in the toolkit.
 
@@ -102,9 +100,9 @@ If successful, you see the following message indicating your messaging extension
 With your messaging extension running, you can install it in Teams.
 
 > [!TIP]
-> If you haven't sideloaded a Teams app before and run into issues, follow these [instructions](../build-your-first-app/build-and-run.md#5-sideload-your-app-in-teams).
+> If you haven't sideloaded a Teams app before and run into issues, follow these [instructions](../build-your-first-app/build-and-run.md#4-sideload-your-app-in-teams).
 
-1. Press the **F5** key to launch a Teams web client.
+1. In Visual Studio Code, press the **F5** key to launch a Teams web client.
 1. In the app install dialog, select **Add for me**.
 
 ## 7. Test your messaging extension
@@ -112,7 +110,7 @@ With your messaging extension running, you can install it in Teams.
 Learn how messaging extensions work in a Teams chat.
 
 1. Start a new chat. In the compose box, select **More** :::image type="icon" source="../assets/icons/teams-client-more.png"::: and choose the messaging extension app you just sideloaded.
-1. Try searching for something (for example, "Tickets"). If your app is working, you'll see sample search results (you can add your own later).<br/>
+1. Try searching for something (for example, **Tickets**). If your app is working, you'll see sample search results (you can add your own later).<br/>
    :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="A screenshot showing how a search-based messaging extension is used in the Teams compose box.":::
 
 ## Well done

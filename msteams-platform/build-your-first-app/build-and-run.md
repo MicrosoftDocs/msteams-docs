@@ -35,7 +35,7 @@ If you create a tab during setup, for example, the `App.js` file in the `src/com
 
 ### App ID
 
-Your Teams app ID is needed to configure your app with App Studio. You can find the ID in the `teamsAppId` object, which is located in the root directory of your project.
+Your Teams app ID is needed to configure your app with App Studio. You can find the ID in the `teamsAppId` object, which is located in your project's `package.json` file.
 
 ## 3. Build and run your app
 
@@ -46,7 +46,7 @@ In the interest of time, you'll build and run your app locally.
 1. In a terminal, go to the root directory of your app project and run `npm install`.
 1. Run `npm start`.
 
-Once complete, there's a **Compiled successfully!** message in the terminal. Your app is running at `https://localhost:3000`.
+Once complete, there's a **Compiled successfully!** message in the terminal. Your app is running on `https://localhost:3000`.
 
 ## 4. Sideload your app in Teams
 
@@ -55,7 +55,7 @@ Your app is ready to test in Teams. To do this, you must have an account that al
 > [!TIP]
 > Before sideloading your app, check for issues using the [validation feature in App Studio](../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool), which is included in the toolkit. Errors must be fixed to successfully sideload the app.
 
-1. Press the **F5** key to launch a Teams web client.
+1. In Visual Studio Code, press the **F5** key to launch a Teams web client.
 1. To display your app content in Teams, specify that where your app is running (`localhost`) is trustworthy:
    1. Open a new tab in the same browser window (Google Chrome by default) which opened after pressing **F5**.
    1. Go to `https://localhost:3000/tab` and proceed to the page.

@@ -155,13 +155,13 @@ In the interest of time, you'll build and run your app locally.
 1. In a terminal, go to the root directory of your app project and run `npm install`.
 1. Run `npm start`.
 
-Once complete, there's a **Compiled successfully!** message in the terminal. Your app is running at `https://localhost:3000`.
+Once complete, there's a **Compiled successfully!** message in the terminal. Your app is running on `https://localhost:3000`.
 
 ## 7. Sideload your app in Teams
 
 Your app is ready to test in Teams. To do this, you must have an account that allows app sideloading. (If you aren't sure you have that, learn about getting a [Teams development account](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account).)
 
-1. Press the **F5** key to launch a Teams web client.
+1. In Visual Studio Code, press the **F5** key to launch a Teams web client.
 1. To display your app content in Teams, specify that where your app is running (`localhost`) is trustworthy:
    1. Open a new tab in the same browser window (Google Chrome by default) which opened after pressing **F5**.
    1. Go to `https://localhost:3000/tab` and proceed to the page.
