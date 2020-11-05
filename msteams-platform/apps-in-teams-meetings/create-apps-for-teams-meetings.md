@@ -149,7 +149,9 @@ POST /v3/conversations/{conversationId}/activities
 
 > [!NOTE]
 >
-> The completionBotId in the externalResourceUrl in the requeste payload below is an optional parameter. It is the Bot ID that is declared in the manifest. The bot will receive a result object.
+> * The completionBotId in the externalResourceUrl in the requeste payload below is an optional parameter. It is the Bot ID that is declared in the manifest. The bot will receive a result object.
+> * The width and height parameter as part of the externalResourceUrl must be in pixels. Refer to the [design guidelines](design/designing-in-meeting-dialog.md) to ensure the dimensions are within the allowed limits
+
 
 # [JSON](#tab/json)
 
@@ -161,7 +163,7 @@ POST /v3/conversations/{conversationId}/activities
     "channelData": {
         "notification": {
             "alertInMeeting": true,
-            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID"
+            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
         }
     },
     "replyToId": "1493070356924"
@@ -175,7 +177,7 @@ Activity activity = MessageFactory.Text("This is a meeting signal test");
 MeetingNotification notification = new MeetingNotification
   {
     AlertInMeeting = true,
-    ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID"
+    ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
   };
 activity.ChannelData = new TeamsChannelData
   {
@@ -192,7 +194,7 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
 replyActivity.channelData = {
     notification: {
         alertInMeeting: true,
-        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID’
+        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID’
     }
 };
 await context.sendActivity(replyActivity);
