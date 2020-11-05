@@ -223,4 +223,4 @@ For information on accessibility, see <a href="https://www.figma.com/community/f
 If you plan to publish your app to AppSource, you should understand the design issues that commonly cause apps to fail during submission.
 
 > [!div class="nextstepaction"]
-> [Check design validation guidelines](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md)
+> [Check design validation guidelines](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)
