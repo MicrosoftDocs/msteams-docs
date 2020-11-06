@@ -119,7 +119,7 @@ Tab content adjusts to the in-meeting tab layout and location.
 
 #### Do: Design for a dark theme
 
-Teams meetings are optimized for dark mode to help reduce visual and cognitive noise so users can focus on the discussion and shared content.
+Teams meetings are optimized for dark mode to help reduce visual and cognitive noise so users can focus on the discussion and shared content. The in-meeting tab should apply a dark theme and should follow theming guidelines.
 
    :::column-end:::
    :::column span="":::
