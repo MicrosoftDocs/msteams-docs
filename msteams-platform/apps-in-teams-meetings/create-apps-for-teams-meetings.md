@@ -49,6 +49,7 @@ Please refer to our [Get context for your Teams tab](../tabs/how-to/access-teams
 >
 > * Support for the Bot Framework SDK is coming soon.
 
+
 #### Request
 
 ```http
@@ -127,7 +128,12 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 **403**: the app is not allowed to get participant information. This will be the most common error response and is triggered when the app is not installed in the meeting such as when the app is disabled by tenant admin or blocked during live site mitigation.  
 **200**: participant information successfully retrieved  
 **401**: invalid token  
-**404**: the meeting doesn't exist or participant can’t be found.
+**404**: Participant cannot be found. 
+**500**: The meeting is either expired (more than 60 days since the meeting ended) or the participant does not have permissions based on their role
+
+**Coming Soon**
+
+**404**: the meeting has either expired or participant cannot be found. 
 
 <!-- markdownlint-disable MD024 -->
 ### NotificationSignal API
