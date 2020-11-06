@@ -291,8 +291,6 @@ Users with organizer and/or presenter roles add tabs to a meeting using the plus
 
 ✔ As part of the notification request payload, include the URL where the content to be showcased is hosted.
 
-✔ 
-
 > [!NOTE]
 >
 > * In-meeting dialog must not use task module.
