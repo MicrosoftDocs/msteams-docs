@@ -21,9 +21,9 @@ keywords: teams apps meetings user participant role api
 
 1. Some meeting APIs, such as `GetParticipant` will require a [bot registration and bot app ID](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) to generate auth tokens.
 
-1. Developers must adhere to general [Teams tab design guidelines](../tabs/design/tabs.md) for pre- and post-meeting scenarios as well as the [in-meeting dialog guidelines](design/designing-in-meeting-dialog.md) for in-meeting dialog triggered during a Teams meeting.
+1. As a developer, you must adhere to general [Teams tab design guidelines](../tabs/design/tabs.md) for pre- and post-meeting scenarios as well as the [in-meeting dialog guidelines](design/designing-in-meeting-dialog.md) for in-meeting dialog triggered during a Teams meeting.
 
-1. Developers must note that in order for their apps to be updated in real-time, they must be up to date based on event happening in the meeting. These events can be within the in-meeting dialog (refer to completion bot Id parameter in Notification Signal API) and other surfaces across the meeting lifecycle
+1. Please note that in order for your app to be updated in real-time, it must be up-to-date based on event activities in the meeting. These events can be within the in-meeting dialog (refer to completion `bot Id` parameter in `Notification Signal API`) and other surfaces across the meeting lifecycle
 
 ## Meeting apps API reference
 
@@ -125,11 +125,11 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 ```
 #### Response Codes
 
-**403**: the app is not allowed to get participant information. This will be the most common error response and is triggered when the app is not installed in the meeting such as when the app is disabled by tenant admin or blocked during live site mitigation.  
-**200**: participant information successfully retrieved  
-**401**: invalid token  
+**403**: The app is not allowed to get participant information. This will be the most common error response and is triggered when the app is not installed in the meeting such as when it is disabled by tenant admin or blocked during live site mitigation.  
+**200**: Participant information successfully retrieved.  
+**401**: Invalid token.  
 **404**: Participant cannot be found. 
-**500**: The meeting is either expired (more than 60 days since the meeting ended) or the participant does not have permissions based on their role
+**500**: The meeting is either expired (more than 60 days since the meeting ended) or the participant does not have permissions based on their role.
 
 **Coming Soon**
 
@@ -157,9 +157,9 @@ POST /v3/conversations/{conversationId}/activities
 
 > [!NOTE]
 >
-> * The completionBotId in the externalResourceUrl in the requeste payload below is an optional parameter. It is the Bot ID that is declared in the manifest. The bot will receive a result object.
-> * The width and height parameter as part of the externalResourceUrl must be in pixels. Refer to the [design guidelines](design/designing-in-meeting-dialog.md) to ensure the dimensions are within the allowed limits
-> * The url is the page loaded as an <iframe> inside the in-meeting dialog. The URL's domain must be in the app's validDomains array in your app's manifest.
+> *  In the requested payload below, the `completionBotId` parameter of the `externalResourceUrl`is an optional. It is the `Bot ID` that is declared in the manifest. The bot will receive a result object.
+> * The externalResourceUrl width and height parameters must be in pixels. Refer to the [design guidelines](design/designing-in-meeting-dialog.md) to ensure the dimensions are within the allowed limits.
+> * The URL is the page loaded as an `<iframe>` inside the in-meeting dialog. The URL's domain must be in the app's `validDomains` array in your app manifest.
 
 
 # [JSON](#tab/json)
