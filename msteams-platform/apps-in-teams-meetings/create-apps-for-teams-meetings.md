@@ -23,7 +23,7 @@ keywords: teams apps meetings user participant role api
 
 1. Developers must adhere to general [Teams tab design guidelines](../tabs/design/tabs.md) for pre- and post-meeting scenarios as well as the [in-meeting dialog guidelines](design/designing-in-meeting-dialog.md) for in-meeting dialog triggered during a Teams meeting.
 
-1. Developers must note that the tab must be up to date based on event happening in the meeting. These events can be within the in-meeting dialog (refer to completion bot Id parameter in Notification Signal API) and other surfaces across the meeting lifecycle
+1. Developers must note that in order for their apps to be updated in real-time, they must be up to date based on event happening in the meeting. These events can be within the in-meeting dialog (refer to completion bot Id parameter in Notification Signal API) and other surfaces across the meeting lifecycle
 
 ## Meeting apps API reference
 
