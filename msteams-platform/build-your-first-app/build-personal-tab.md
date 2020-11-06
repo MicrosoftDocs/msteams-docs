@@ -100,7 +100,7 @@ The [Teams JavaScript client SDK](https://docs.microsoft.com/javascript/api/@mic
 
 ### Get context about the Teams client
 
-In your `Tab.js` file, there's a `microsoftTeams.getContext()` call that provides some [`context`](https://docs.microsoft.com/en-us/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest) about, among other details, the configured client theme. Thanks to the app scaffolding, use this code as is to access the `context` interface and its properties.
+In your `Tab.js` file, there's a `microsoftTeams.getContext()` call that provides some [`context`](https://docs.microsoft.com/en-us/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) about, among other details, the configured client theme. Thanks to the app scaffolding, use this code as is to access the `context` interface and its properties.
 
 ```JavaScript
 componentDidMount(){
