@@ -155,7 +155,7 @@ Notification-only bots must send a welcome message that includes a message conve
 Things are a little bit different when the bot is first added to a channel. Normally, you shouldn't send a 1:1 message to everyone on the team, but the bot can send a welcome message in the channel.
 
 ### &#9989; Mobile responsiveness, no direct upsell or payment
-* Your tabs, adaptive cards, bot messages and content in task modules must be [responsive](https://docs.microsoft.com/microsoftteams/platform/tabs/design/tabs-mobile#design-considerations) for varios mobile device screens sizes.
+* Your tabs, adaptive cards, bot messages and content in task modules must be [responsive](../../../../tabs/design/tabs-mobile#design-considerations) for a variety of mobile device screens sizes.
 * Apps that support iOS must be fully functional on the latest iPad device using the latest version of iOS.
 * Must not include any direct references to in-app purchases, trial offers, UI that aims to upsell to paid versions, or links to any online stores where users can purchase or acquire other content, apps, or add-ins from your Teams app on mobile OS (Android, iOS).
 * The iOS or Android version of the add-in must not show any UI or language or link to any other apps, add-ins, or website that ask the user to pay.
