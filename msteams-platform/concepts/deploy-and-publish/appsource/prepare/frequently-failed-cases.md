@@ -25,7 +25,7 @@ This article addresses common reasons submitted apps fail validation. While it's
 * Your app must not automatically download, install, or launch any executable code in the user environment. All downloads should seek explicit permission from the user.
 * Any material that you associate with your experience, such as descriptions and support documentation, must be accurate. Use correct spelling, capitalization, punctuation, and grammar in your descriptions and materials.
 * Provide help and support information. It's highly recommended that your app include a help/FAQ link for the first-run user experience. For all personal apps, we recommend providing your help page as a personal tab for a better user experience.
-* Apps must not take user out of Teams for core user scenarios. Using task modules and tabs is recommended to display information to the user within Teams.
+* Apps must not take the user out of Teams for core user scenarios. Using task modules and tabs is recommended to display information to the user within Teams.
 * Increment your app version number in the manifest if you make any manifest changes to your submission.
 
 ### &#9989;  Provide a clear and simple sign in/sign out and sign-up experience
@@ -33,7 +33,7 @@ This article addresses common reasons submitted apps fail validation. While it's
 *See also* [Section 1100.5 — Customer control](/legal/marketplace/certification-policies#11005-customer-control)
 
 * If your app or add-in depends on external accounts or services, the sign in/sign out and sign-up experience must be apparent and reachable across all capabilities in your app.
-* If there is an explicit sign-in option provided to the user, there must be a corresponding sign-out option (even if the app is using SSO/[silent authentication](~/tabs/how-to/authentication/auth-silent-aad.md)).
+* If there is an explicit sign-in option provided to the user, there must be a corresponding sign-out option (even if the app is using [silent authentication](../../../../tabs/how-to/authentication/auth-silent-aad.md)).
 * The sign-out option must only sign the user out of your app's capability and not out of the Teams client.
 * At a minimum, the sign-out option must sign the user out of the same capabilities accessed with the sign-in option. For example, if the sign-in option includes both a messaging extension and tab, then the sign-out option must include both the messaging extension and tab.
 
@@ -66,17 +66,17 @@ For additional information on authentication see:
 
 * Tabs should provide focused content and avoid needless UI elements. In general, this usually refers to unnecessary nested/layered navigation, an extraneous or irrelevant UI next to the content, or any links that take the user to unrelated content. For example, below is a tab view that omits navigation menus and only showcases the main content:
 
-![SharePoint web view](~/assets/images/faq/web-sp.png)  
-![SharePoint tab view](~/assets/images/faq/tab-sp.png)
+![SharePoint web view](../../../../assets/images/faq/web-sp.png)  
+![SharePoint tab view](../../../../assets/images/faq/tab-sp.png)
 
 * Tabs should be light in nature and not include complex navigation.
 * Tabs must not present an app bar with icons in the left rail that conflict with the main Teams navigation.
 * Tabs that have complex editing capabilities within the app should open the editor view in multi-windows rather than in the tab.
 * If there are multiple view options, consider having a tab config menu for the user to choose from. For example, instead of embedding a menu inside the tab, put the menu in the configuration page so the actual tab view is clean and focused.
-* Please include a  Help tab as a static tab to advise users on how to configure, sign up, and use the app.
-* Please include a Settings tab available from the app header.
+* Please include a *Help* tab as a static tab to advise users how to configure, sign up, and use your app.
+* Please include a *Settings* tab that is available from the app header.
 
-![Wide idea configuration page](~/assets/images/faq/wideidea.png)
+![Wide idea configuration page](../../../../assets/images/faq/wideidea.png)
 
 ### &#9989; Tab configuration must happen in the configuration screen
 
@@ -89,11 +89,11 @@ For additional information on authentication see:
 * The configuration experience must remain within the Teams context. The user shouldn’t have to leave the configuration experience to create content and then return to Teams to pin it.
 * Use the available viewport area efficiently. Do not waste it on using huge logos inside the configuration pop up
 
-![OneNote allows users to paste a OneNote link in case notes can not be found](~/assets/images/faq/tab-onenote-config.png)
+![OneNote allows users to paste a OneNote link in case notes can not be found](../../../../assets/images/faq/tab-onenote-config.png)
 
-![Users can always create new plan on planner in case there no existing ones](~/assets/images/faq/tab-planner-config.png)
+![Users can always create new plan on planner in case there no existing ones](../../../../assets/images/faq/tab-planner-config.png)
 
-![SharePoint also allows user to directly paste a SharePoint link](~/assets/images/faq/tab-sp-config.png)
+![SharePoint also allows user to directly paste a SharePoint link](../../../../assets/images/faq/tab-sp-config.png)
 
 ### &#9989; Bots must always be responsive and fail gracefully
 
@@ -101,20 +101,20 @@ Your bot should be responsive to any command and not dead-end the user. Here are
 
 * **Use command lists**. Analyzing user input or predicting user intent is hard. Instead of letting users guess what your bot can do, provide a list of commands your bot understands.
 
-![Flow command list](~/assets/images/faq/flow-bot.png)
+![Flow command list](../../../../assets/images/faq/flow-bot.png)
 
 * **Include a help command**. Users are likely to type "Help" when they are lost or when your bot doesn't respond as expected. Include a help command that describes how your app's value will be experienced along with all valid commands.
 
-![Flow help command](~/assets/images/faq/flow-help.png)
+![Flow help command](../../../../assets/images/faq/flow-help.png)
 
 * **Include help content or guidance when your bot is lost**. When your bot can't understand the user input, it should suggest an alternative action. For example, *"I'm sorry, I don't understand. Type "help" for more information."* Don't respond with an error message or simply, *"I don't understand"*. Use this chance to teach your users.
 
 * **Use adaptive cards and task modules to make your bot response clear and actionable**
 [Adaptive cards with buttons invoking task modules](/task-modules-and-cards/task-modules/task-modules-bots) enhance the bot user experience. These cards and buttons are easier to use in a mobile device as opposed to your user typing the commands
 
-* **Think through all scopes**. Be sure that your bot provides appropriate responses when mentioned (`@*botname*`) in a channel and in personal conversations. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](~/resources/schema/manifest-schema.md#bots).)
+* **Think through all scopes**. Be sure that your bot provides appropriate responses when mentioned (`@*botname*`) in a channel and in personal conversations. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](../../../../resources/schema/manifest-schema.md#bots).)
 
-* **Include team, group chat or 1:1 conversation**. Bot notifications should include a Team, a group chat, or a one to one conversation with relevant content for that audience.
+* **Include team, group chat, or 1:1 conversation**. Bot notifications should include a Team, a group chat, or a one-to-one conversation with relevant content for your audience.
 
 ### &#9989; Personal bots must always send a welcome message on first launch
 
@@ -150,7 +150,7 @@ Notification-only bots must send a welcome message that includes a message conve
 #### Welcome messages in the personal scope
 
 * **Make your message concise and informative**.  Most likely, user experience with and knowledge of your app will vary. A user may have used your app on another platform or know nothing about your app. You want to tailor your message to all audiences and in a couple sentences explain what your bot does and the ways to interact with it. You should also explain the value of the app and how the users will benefit from using it.
-![Cafe and Dinning bot](~/assets/images/faq/cafe-bot.png)
+![Cafe and Dinning bot](../../../../assets/images/faq/cafe-bot.png)
 
 * **Make your message actionable**. Think about the first thing you want users to do after installing your app. Is there a cool command they should try? Is there another onboarding experience they should know about? Do they need to sign in? You can add actions on an adaptive card or provide specific examples such as *“Try asking….”*, *“This is what I can do…”*.
 
@@ -159,27 +159,32 @@ Notification-only bots must send a welcome message that includes a message conve
 Things are a little bit different when the bot is first added to a channel. Normally, you shouldn't send a 1:1 message to everyone on the team, but the bot can send a welcome message in the channel.
 
 ### &#9989; Mobile responsiveness, no direct upsell or payment
-* Your tabs, adaptive cards, bot messages and content in task modules must be responsive for varios mobile device screens sizes.
+
+* Your tabs, adaptive cards, bot messages and content in task modules must be responsive for a variety of mobile device screens sizes.
 * Apps that support iOS must be fully functional on the latest iPad device using the latest version of iOS.
-* Must not include any direct references to in-app purchases, trial offers, UI that aims to upsell to paid versions, or links to any online stores where users can purchase or acquire other content, apps, or add-ins from your Teams app on mobile OS (Android, iOS).
+* Must not include any direct references to in-app purchases, trial offers, offers for paid versions, or links to any online stores where users can purchase or acquire other content, apps, or add-ins from your Teams app on mobile OS (Android, iOS).
 * The iOS or Android version of the add-in must not show any UI or language or link to any other apps, add-ins, or website that ask the user to pay.
 * The associated Privacy Policy and Terms of Use pages must also be free of any commerce UI or Store links.
 
 ### &#9989; Do not post sensitive data to an audience not intended to view the data
-Your Teams app must not post sensitive information such as Credit card / financial payment instrument, Personal Identifiable Information, Health or contact tracing information to an audience not intended to view that data.
+
+Your Teams app must not post sensitive data such as credit card / financial payment instrument, Personal Identifiable Information (PIN), health, or contact tracing information to an audience not intended to view that data.
 
 ### &#9989; Do not transmit financial payment details or complete financial transactions via your Teams app
+
 * Your Teams app must not ask users to make a payment directly within Teams interface
 * Apps may not transmit financial instrument details through the user on the app interface. Apps may only transmit links to secure payment services to users if this is disclosed in the app's Terms of Use, Privacy Policy, and any profile page or website for the app before a user agrees to use the app.
 
-### &#9989; Clear warning before downloading any files or exes into user’s environment
-Please warn the users before your app downloads any files or exes into the user's machine or environment.
+### &#9989; Clear warning before downloading any files or executable (`.exe`) into a user’s environment
 
-### &#9989; Messaging Extension should provide help text and be readable
+Please warn users before your app downloads any files or executable (`.exe`  )into the user's machine or environment.
+
+### &#9989; Messaging extensions should provide help text and be easy to read
+
 * The search-based messaging extension should provide help text on how to effectively search (e.g., show example input).
 * Task modules must include an icon and a short name that they are contained in or created from the app.
-* Message extension @mention executables should be clear, easy to understand, and readable.
-![Message extension](~/assets/images/faq/message-extension.png)
+* The message extension `@mention` executables should be clear, easy to understand, and easy to read.
+![Message extension](../../../../assets/images/faq/message-extension.png)
 
 ## App category mapping
 
@@ -189,10 +194,10 @@ Please warn the users before your app downloads any files or exes into the user'
 | Developer and IT | Developer Tools, IT Admin |
 | Education | Education |
 | Human resources | Human Resources and Recruiting |
-| Productivity | Content Management, Files and documents, Productivity, Training and Tutorial, and Utilities |
-| Project management | Communication, ProjectManagement, Workflow and Business Management |
-| Sales and support | Customer and ContactManagement, Customer Support, Financial Management, Sales and Marketing |
+| Productivity | Content Management, Files and documents, Productivity, Training and Tutorials, and Utilities |
+| Project management | Communication, Project Management, Workflow and Business Management |
+| Sales and support | Customer and Contact Management, Customer Support, Financial Management, Sales and Marketing |
 | Social and fun | Image and Video Galleries, Lifestyle, News and Weather, Social, Travel and Navigation |
 
 > [!div class="nextstepaction"]
-> [Learn more about Teams app approval policies](/legal/marketplace/certification-policies#1140-teams) 
+> [Learn more about Teams app approval policies](/legal/marketplace/certification-policies#1140-teams)
