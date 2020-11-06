@@ -153,7 +153,7 @@ POST /v3/conversations/{conversationId}/activities
 >
 > * The completionBotId in the externalResourceUrl in the requeste payload below is an optional parameter. It is the Bot ID that is declared in the manifest. The bot will receive a result object.
 > * The width and height parameter as part of the externalResourceUrl must be in pixels. Refer to the [design guidelines](design/designing-in-meeting-dialog.md) to ensure the dimensions are within the allowed limits
-> * The <url> is the page loaded as an <iframe> inside the in-meeting dialog. The URL's domain must be in the app's validDomains array in your app's manifest.
+> * The url is the page loaded as an <iframe> inside the in-meeting dialog. The URL's domain must be in the app's validDomains array in your app's manifest.
 
 
 # [JSON](#tab/json)
