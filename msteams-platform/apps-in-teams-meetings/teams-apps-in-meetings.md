@@ -58,7 +58,9 @@ Teams’ meeting app extensibility centers on three concepts:
 
 ✔ When loaded in the context of a meeting, apps will be able to leverage the Teams Client SDK to access the `meetingId`, `userMri`, and `frameContext` to appropriately render the experience.
 
-✔ For an app can be visible in a Teams meeting in two areas:
+✔ Exporting a result of a survey or polls should notify the users stating, ‘results successfully downloaded’.
+
+✔ For an app to be visible in a Teams meeting in two areas:
 
 &emsp;&emsp;&#9679; **Side panel**. </br>
 
