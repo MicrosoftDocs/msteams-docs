@@ -30,6 +30,9 @@ Teams’ meeting app extensibility centers on three concepts:
 > [!NOTE]
 > Mobile clients support Tabs only in Pre and Post Meeting Surfaces. The In-meeting experiences (in-meeting dialog and panel) on mobile will be available soon
 
+> [!NOTE]
+> For Pre-meeting and post-meeting experience, tab layout should be in an organized state if there are more polls or surveys (more than ten polls).
+
 ### Pre-meeting app experience
 
 **Pre-meeting experience:**
