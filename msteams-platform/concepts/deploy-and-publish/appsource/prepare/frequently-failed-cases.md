@@ -25,7 +25,7 @@ This article addresses common reasons submitted apps fail validation. While it's
 * Your app must not automatically download, install, or launch any executable code in the user environment. All downloads should seek explicit permission from the user.
 * Any material that you associate with your experience, such as descriptions and support documentation, must be accurate. Use correct spelling, capitalization, punctuation, and grammar in your descriptions and materials.
 * Provide help and support information. It's highly recommended that your app include a help/FAQ link for the first-run user experience. For all personal apps, we recommend providing your help page as a personal tab for a better user experience.
-* Apps must not take user out of Teams for core user scenarios. Using task modules/tabs is recommended to display information to the user within Teams.
+* Apps must not take the user out of Teams for core user scenarios. Using task modules/tabs is recommended to display information to users within Teams.
 * Increment your app version number in the manifest if you make any manifest changes to your submission.
 * App must not take users out of Teams for core user scenarios. Link targets in apps must not link to an external browser but should link to div elements contained within Teams e.g. inside Task Modules and tabs.
 * Personal apps enable users to share content from a personal app experience with other team members.
@@ -44,14 +44,18 @@ This article addresses common reasons submitted apps fail validation. While it's
   * Link an account/service => unlink an account/service.
   * Connect an account/service => disconnect an account/service.
   * Authorize an account/service => deauthorize/deny an account/service.
-  * Register an account/service => unregister/unsubscribe an account/service.
-* If your app requires an account or service, you must provide a way for the user to sign up or to create a sign-up request. An exception may be granted if your app requires license to use. But such scenarios, a clear way forward for a new user sign up must be provided.
-* Make sure you provide clear-way-forward guidance to a new user on how to sign up to use your app services. If a ready sign up link is not available, a clear way forward may be provided in the 
-  * app's description sections 
-  * welcome message 
-  * help message 
-  * sign-in window where you ask a user to sign in to your services. 
-  * Apps that do not have an easy sign up flow may also include a help tab or link to a web page where a new user can see detailed guidance on how to configure your app with Microsoft Teams.  This is to ensure a new user is not shown a roadblock when trying your app for the first time.
+  * Register an account/service => deregister/unsubscribe an account/service.
+* If your app requires an account or service, you must provide a way for the user to sign up or to create a sign-up request. An exception may be granted if your app requires a license to use. But such scenarios, a clear way forward for a new user sign up must be provided.
+* Make sure you provide clear-way-forward guidance to a new user on how to sign up to use your app services. If a ready sign-up link is not available, a clear way forward may be provided in the following areas
+
+> [!div class="checklist"]
+>
+> * within your app's description sections;
+> * in your app's welcome message;
+> * in your app's help message;
+> * in the window where you ask a user to sign in to your services;
+
+* Apps that do not have an easy sign-up flow may also include a help tab or link to a web page where a new user can see detailed guidance on how to configure your app with Microsoft Teams.  This is to ensure a new user is not blocked when trying your app for the first time.
 * Sign in/sign out functionality must work on mobile clients. Ensure you're using the [Microsoft Teams SDK](https://www.npmjs.com/package/@microsoft/teams-js) version 1.4.1 or later.
 
 For additional information on authentication see:
@@ -78,10 +82,10 @@ For additional information on authentication see:
 ![SharePoint tab view](~/assets/images/faq/tab-sp.png)
 
 * Tabs should be light in nature and not include complex navigation.
-* Channel tabs that have complex editing capabilities within the app should open the editor view in multi-window rather than a tab.
+* Channel tabs that have complex editing capabilities within the app should open the editor view in a multi-window rather than a tab.
 * Channel tabs must not provide an app bar with icons in the left rail that conflicts with the main Teams navigation.
 * Tabs must not present an app bar with icons in the left rail that conflict with the main Teams navigation.
-* Tabs that have complex editing capabilities within the app should open the editor view in multi-windows rather than in the tab.
+* Tabs that have complex editing capabilities within the app should open the editor view in a multi-window rather than in the tab.
 * If there are multiple view options, consider having a tab config menu for the user to choose from. For example, instead of embedding a menu inside the tab, put the menu in the configuration page so the actual tab view is clean and focused.
 
 ![Wide idea configuration page](~/assets/images/faq/wideidea.png)
