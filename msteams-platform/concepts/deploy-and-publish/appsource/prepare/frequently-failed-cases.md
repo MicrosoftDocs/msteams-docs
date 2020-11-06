@@ -27,6 +27,10 @@ This article addresses common reasons submitted apps fail validation. While it's
 * Provide help and support information. It's highly recommended that your app include a help/FAQ link for the first-run user experience. For all personal apps, we recommend providing your help page as a personal tab for a better user experience.
 * Apps must not take the user out of Teams for core user scenarios. Using task modules and tabs is recommended to display information to the user within Teams.
 * Increment your app version number in the manifest if you make any manifest changes to your submission.
+* App must not take users out of Teams for core user scenarios. Link targets in apps must not link to an external browser but should link to div elements contained within Teams e.g. inside Task Modules and tabs.
+* Personal apps enable users to share content from a personal app experience with other team members.
+* Channel tabs must not provide an app bar with icons in the left rail that conflicts with the main Teams navigation.
+* Channel tabs that have complex editing capabilities within the app should open the editor view in multi-window rather than a tab.
 
 ### &#9989;  Provide a clear and simple sign in/sign out and sign-up experience
 
@@ -44,6 +48,7 @@ This article addresses common reasons submitted apps fail validation. While it's
   * Authorize an account/service => deauthorize/deny an account/service.
   * Register an account/service => unregister/unsubscribe an account/service.
 * If your app requires an account or service, you must provide a way for the user to sign up or to create a sign-up request. An exception may be granted if your app is an Enterprise application.
+* Make sure you provide clear-way-forward guidance to a new user on how to sign up to use your app services. If a ready sign up link is not available, a clear way forward may be provided in the app's description page, welcome message, help message, and the sign-in window where you ask a user to sign in to your services. Apps that do not have an easy sign up flow may also include a help tab or link to a web page where a new user can see detailed guidance on how to configure your app with Microsoft Teams.  This is to ensure a new user is not shown a roadblock when trying your app for the first time.
 * Sign in/sign out functionality must work on mobile clients. Ensure you're using the [Microsoft Teams SDK](https://www.npmjs.com/package/@microsoft/teams-js) version 1.4.1 or later.
 
 For additional information on authentication see:
@@ -110,11 +115,15 @@ Your bot should be responsive to any command and not dead-end the user. Here are
 * **Include help content or guidance when your bot is lost**. When your bot can't understand the user input, it should suggest an alternative action. For example, *"I'm sorry, I don't understand. Type "help" for more information."* Don't respond with an error message or simply, *"I don't understand"*. Use this chance to teach your users.
 
 * **Use adaptive cards and task modules to make your bot response clear and actionable**
-[Adaptive cards with buttons invoking task modules](/task-modules-and-cards/task-modules/task-modules-bots) enhance the bot user experience. These cards and buttons are easier to use in a mobile device as opposed to your user typing the commands
+[Adaptive cards with buttons invoking task modules](/task-modules-and-cards/task-modules/task-modules-bots) enhance the bot user experience. These cards and buttons are easier to use in a mobile device as opposed to your user typing the commands. Also bot responses should not be textual with long text. Bots must make use of Adaptive cards & task modules instead of conversational chat based user interface and lengthy text responses
 
 * **Think through all scopes**. Be sure that your bot provides appropriate responses when mentioned (`@*botname*`) in a channel and in personal conversations. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](../../../../resources/schema/manifest-schema.md#bots).)
 
 * **Include team, group chat, or 1:1 conversation**. Bot notifications should include a Team, a group chat, or a one-to-one conversation with relevant content for your audience.
+
+* **Do not push sensitive data**. Bots must not push sensitive data to a Team, a group chat or a 1:1 conversation where there is an audience who should not be able to view that data
+
+* **Provide a welcome message**. Bot must provide an FRE welcome message that includes an interactive tutorial with carousel cards or "try it" buttons, to encourage engagement.
 
 ### &#9989; Personal bots must always send a welcome message on first launch
 

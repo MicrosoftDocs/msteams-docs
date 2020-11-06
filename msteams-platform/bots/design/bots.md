@@ -32,6 +32,7 @@ It is critical that bots introduce themselves and convey what they can do for us
 #### Welcome messages
 
 Welcome messages are the best way to set your bot's tone and should be used in personal and team or group scenarios. The message states what the bot does and some common ways to interact with it. Use specific capability examples like,  “*Try asking ….*” in a bulleted list. Whenever possible, these suggestions should return stored responses. It's critical that the capability examples work without requiring users to sign in.
+Please *see* [welcome message requirements](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases#-personal-bots-must-always-send-a-welcome-message-on-first-launch) for additional guidance.
 
 #### Tours
 
