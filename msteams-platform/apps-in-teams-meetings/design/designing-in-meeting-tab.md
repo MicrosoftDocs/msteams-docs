@@ -21,6 +21,9 @@ People might use the in-meeting tab to:
 
 The following example shows the in-meeting tab displaying survey app content.
 
+> [!NOTE]
+> Exporting a result of a survey (or) polls should notify the users stating, ‘results successfully downloaded’.
+
 :::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-organizer-view.png" alt-text="Example shows what the meeting in-meeting tab might look like from a meeting organizer's perspective.":::
 
 <a href="https://www.figma.com/community/file/888593778835180533" target="_blank">See the full scenario (Figma)</a>
@@ -77,6 +80,8 @@ Selection controls | Use checkboxes for multiple choices or radio buttons and to
 Alerts | Whether displaying an urgent message, error state, or warning, the message should be short and won't interrupt the user's current task | Display issue when submitting a response
 
 ## Theming
+
+In-meeting tab should apply a dark theme and should follow theming guidelines.
 
 ### Colors
 
