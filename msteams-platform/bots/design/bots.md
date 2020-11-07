@@ -13,17 +13,17 @@ Bots are conversational apps that perform a narrow or specific set of tasks. The
 
 ### Bot design guidelines
 
-* Bot should provide relevant notifications when there has been activity.
-* Bots must not push sensitive data to a Team, a group chat or a 1:1 conversation where there is an audience who should not be able to view that data.
-* Bot notifications should include meaningful information to inform a user on the relevance of the notification.
-* Bots should use the Teams tone of voice as defined in the guidelines.
-* Bots should provide an FRE welcome message that highlights the value of the bot and what its primary functions are, this might be in the form of a "take a tour" interactive tutorial with carousel cards or "try it" buttons.
+* Bots should provide relevant notifications when there has been activity.
+* Bots must not push sensitive data to a team, group chat, or 1:1 conversation to an audience that should not view that data.
+* Bot notifications should include meaningful data to inform the relevance of the notification to users.
+* The bot's tone should reflect the Teams voice, as defined in the guidelines.
+* Bots should provide an first-run-experience welcome message that highlights the value of the bot and what its primary functions are, this might be in the form of "take a tour", an interactive tutorial with carousel cards, or "try it" buttons.
 * Bot text must not have any spelling mistakes or grammatical errors.
-* Bot must provide a set of predefined bot commands that are actionable.
+* Bots must provide a set of predefined bot commands that are actionable.
 * Bot messages should be easy to understand and actionable.
 * Bots must provide fallback help commands when a message is not understood.
-* Forms embedded in cards sent by a bot should provide deterministic form inputs that do not require sequential updating as this requires card validation and refresh with any validation errors.
-* Bot notifications should be scoped to a Team, a group chat or a 1:1 conversation with relevant content for that audience.
+* Forms, embedded in cards, sent by a bot should provide deterministic inputs that do not require sequential updating.
+* Bot notifications should be scoped to a team, group chat, or 1:1 conversation with relevant content for the audience.
 
 ### Avatars
 
