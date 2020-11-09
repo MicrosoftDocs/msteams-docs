@@ -281,6 +281,10 @@ Users with organizer and/or presenter roles add tabs to a meeting using the plus
 
 ✔ Refer to the [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md). Authentication flow for tabs is very similar to the auth flow for websites. Thus, tabs can use OAuth 2.0 directly. *See also*, [Microsoft identity platform and OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
+✔ Message extension should work as expected when a user is in an in-meeting view and should be able to post compose message extension cards.
+
+✔ AppName in-meeting - Tooltip should state the app name in-meeting U-bar.
+
 #### **in-meeting dialog**
 
 ✔ You must adhere to the [in-meeting dialog design guidelines](design/designing-in-meeting-dialog.md).
