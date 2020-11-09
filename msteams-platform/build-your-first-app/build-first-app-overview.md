@@ -46,6 +46,9 @@ Verify you have the right account for building Teams apps and install some recom
 
 You need a Teams account that allows custom app sideloading. (Your account may already provide this.)
 
+> [!Note]
+> While registering your app in Teams, if you are unable to add an app, refer [Enable custom Teams apps and turn on custom app uploading](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
+
 1. If you have a Teams account, verify if you can sideload apps in Teams:
     1. In the Teams client, select **Apps**.
     1. Look for an option to **Upload a custom app**.
