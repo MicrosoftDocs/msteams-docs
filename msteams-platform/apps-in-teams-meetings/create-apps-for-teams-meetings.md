@@ -125,7 +125,7 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 ```
 #### Response Codes
 
-**403**: The app is not allowed to get participant information. This will be the most common error response and is triggered when the app is not installed in the meeting such as when it is disabled by tenant admin or blocked during live site mitigation.  
+**403**: The app is not allowed to get participant information. This will be the most common error response and is triggered when the app is not installed in the meeting such as when it is disabled by tenant admin or blocked during live site migration.  
 **200**: Participant information successfully retrieved.  
 **401**: Invalid token.  
 **404**: Participant cannot be found. 
