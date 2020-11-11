@@ -39,7 +39,7 @@ You can reuse your existing web configuration experience or create a separate ve
 #### `GetSettings()` response properties
 
 >[!Note]
->The parameters returned by the `getSettings` call here are different than if you were to invoke this method from a tab, and differ from those documented [here](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest).
+>The parameters returned by the `getSettings` call here are different than if you were to invoke this method from a tab, and differ from those documented [here](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true).
 
 | Parameter   | Details |
 |-------------|---------|
@@ -85,7 +85,7 @@ The following manifest.json file contains the basic elements needed to test and 
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "id": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
   "version": "1.0",

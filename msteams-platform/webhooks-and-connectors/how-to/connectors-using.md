@@ -180,7 +180,7 @@ The following manifest.json file contains the basic elements needed to test and 
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "id": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
   "version": "1.0",
