@@ -302,7 +302,7 @@ Incident Reporter is a [Microsoft Teams bot](../bots/what-are-bots.md)  that opt
 
 ## New Employee Onboarding&#9734;
 
-New Employee Onboarding is an integrated Microsoft Teams and [SharePoint New Employee Onboarding Solution](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19) that enables your organization to provide a consistent, high-quality onboarding experience for employees on their new-hire journey. The app can be used by human resource teams and hiring managers to provide relevant information throughout the orientation and induction process and new hires to share feedback, provide introductions, and complete onboarding tasks.
+New Employee Onboarding is an integrated Microsoft Teams and [SharePoint New Employee Onboarding Solution](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19) that enables your organization to provide a consistent, high-quality onboarding experience for employees on their new-hire journey. The app can be used by human resource teams and hiring managers to provide relevant information throughout the orientation and induction process and by new hires to share feedback, provide introductions, and complete onboarding tasks.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-newemployeeonboarding)
 
