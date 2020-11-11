@@ -21,7 +21,9 @@ keywords: teams apps meetings user participant role api
 
 1. Some meeting APIs, such as `GetParticipant` will require a [bot registration and bot app ID](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) to generate auth tokens.
 
-1. Developers must adhere to general [Teams tab design guidelines](../tabs/design/tabs.md) for pre- and post-meeting scenarios as well as the [in-meeting dialog guidelines](design/designing-in-meeting-dialog.md) for in-meeting dialog triggered during a Teams meeting.
+1. As a developer, you must adhere to general [Teams tab design guidelines](../tabs/design/tabs.md) for pre- and post-meeting scenarios as well as the [in-meeting dialog guidelines](design/designing-in-meeting-dialog.md) for in-meeting dialog triggered during a Teams meeting.
+
+1. Please note that in order for your app to be updated in real-time, it must be up-to-date based on event activities in the meeting. These events can be within the in-meeting dialog (refer to completion `bot Id` parameter in `Notification Signal API`) and other surfaces across the meeting lifecycle
 
 ## Meeting apps API reference
 
@@ -46,6 +48,7 @@ Please refer to our [Get context for your Teams tab](../tabs/how-to/access-teams
 > * Teams does not currently support large distribution lists or roster sizes of more than 350 participants for the `GetParticipant` API.
 >
 > * Support for the Bot Framework SDK is coming soon.
+
 
 #### Request
 
@@ -122,10 +125,15 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 ```
 #### Response Codes
 
-**403**: the app is not allowed to get participant information. This will be the most common error response and is triggered when the app is not installed in the meeting such as when the app is disabled by tenant admin or blocked during live site mitigation.  
-**200**: participant information successfully retrieved  
-**401**: invalid token  
-**404**: the meeting doesn't exist or participant can’t be found.
+**403**: The app is not allowed to get participant information. This will be the most common error response and is triggered when the app is not installed in the meeting such as when it is disabled by tenant admin or blocked during live site migration.  
+**200**: Participant information successfully retrieved.  
+**401**: Invalid token.  
+**404**: Participant cannot be found. 
+**500**: The meeting is either expired (more than 60 days since the meeting ended) or the participant does not have permissions based on their role.
+
+**Coming Soon**
+
+**404**: the meeting has either expired or participant cannot be found. 
 
 <!-- markdownlint-disable MD024 -->
 ### NotificationSignal API
@@ -149,7 +157,10 @@ POST /v3/conversations/{conversationId}/activities
 
 > [!NOTE]
 >
-> The completionBotId in the externalResourceUrl in the requeste payload below is an optional parameter. It is the Bot ID that is declared in the manifest. The bot will receive a result object.
+> *  In the requested payload below, the `completionBotId` parameter of the `externalResourceUrl`is an optional. It is the `Bot ID` that is declared in the manifest. The bot will receive a result object.
+> * The externalResourceUrl width and height parameters must be in pixels. Refer to the [design guidelines](design/designing-in-meeting-dialog.md) to ensure the dimensions are within the allowed limits.
+> * The URL is the page loaded as an `<iframe>` inside the in-meeting dialog. The URL's domain must be in the app's `validDomains` array in your app manifest.
+
 
 # [JSON](#tab/json)
 
@@ -161,7 +172,7 @@ POST /v3/conversations/{conversationId}/activities
     "channelData": {
         "notification": {
             "alertInMeeting": true,
-            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID"
+            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
         }
     },
     "replyToId": "1493070356924"
@@ -175,7 +186,7 @@ Activity activity = MessageFactory.Text("This is a meeting signal test");
 MeetingNotification notification = new MeetingNotification
   {
     AlertInMeeting = true,
-    ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID"
+    ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
   };
 activity.ChannelData = new TeamsChannelData
   {
@@ -192,7 +203,7 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
 replyActivity.channelData = {
     notification: {
         alertInMeeting: true,
-        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID’
+        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID’
     }
 };
 await context.sendActivity(replyActivity);
