@@ -39,7 +39,7 @@ You can reuse your existing web configuration experience or create a separate ve
 #### `GetSettings()` response properties
 
 >[!Note]
->The parameters returned by the `getSettings` call here are different than if you were to invoke this method from a tab, and differ from those documented [here](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest).
+>The parameters returned by the `getSettings` call here are different than if you were to invoke this method from a tab, and differ from those documented [here](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true).
 
 | Parameter   | Details |
 |-------------|---------|
