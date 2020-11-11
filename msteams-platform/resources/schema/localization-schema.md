@@ -7,13 +7,13 @@ ms.date: 05/20/2019
 
 # Reference: Localization file JSON schema
 
-The Microsoft Teams localization file describes language translations that will be served based on the client language settings. Your file must conform to the schema hosted at [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.7/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.7/MicrosoftTeams.Localization.schema.json). For additional information see [app localization](~/concepts/build-and-test/apps-localization.md).
+The Microsoft Teams localization file describes language translations that will be served based on the client language settings. Your file must conform to the schema hosted at [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json). For additional information see [app localization](~/concepts/build-and-test/apps-localization.md).
 
 ## Sample
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
   "name.short": "Le App Studio",
   "name.full": "App Studio pour Microsoft Teams",
   "description.short": "Créez d'excellentes applications pour Microsoft Teams avec App Studio.",
@@ -35,7 +35,7 @@ The schema defines the following properties:
 The https:// URL referencing the JSON Schema for the manifest.
 
 > [!TIP]
-> Specify the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor: `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",`
+> Specify the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor: `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
 
 ## name.short
 
