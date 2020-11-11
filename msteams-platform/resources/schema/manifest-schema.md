@@ -285,7 +285,7 @@ The https:// URL referencing the JSON Schema for the manifest.
 
 **Required** — string
 
-The version of the manifest schema this manifest is using. It should be "1.5".
+The version of the manifest schema this manifest is using. It should be "1.7".
 
 ## version
 

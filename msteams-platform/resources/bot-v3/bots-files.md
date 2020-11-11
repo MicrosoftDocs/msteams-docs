@@ -40,10 +40,6 @@ The definition will look like this: `"supportsFiles": true`. If your bot does no
 
 When a user sends a file to your bot, the file is first uploaded to the user's OneDrive for Business storage. Your bot will then receive a message activity notifying you of the user upload. The activity will contain file metadata, such as its name and the content URL. You can directly read from this URL to fetch its binary content.
 
-### Send and receive files through bot on Teams mobile app
-> [!NOTE] 
-> Sending and receiving files to bots on mobile devices is not supported.
-
 #### Message activity with file attachment example
 
 ```json
@@ -83,9 +79,13 @@ Uploading a file to a user involves the following steps:
 
 #### Message requesting permission to upload
 
-This message contains a simple attachment object requesting user permission to upload the file.
+This desktop message contains a simple attachment object requesting user permission to upload the file:
 
-![Screenshot of consent card requesting user permission to upload file](~/assets/images/bots/bot-file-consent-card.png)
+![Screenshot of consent card requesting user permission to upload file](../../assets/images/bots/bot-file-consent-card.png)
+
+This mobile message contains an attachment object requesting user permission to upload the file:
+
+![Screenshot of consent card requesting user permission to upload file on mobile](../../assets/images/bots/mobile-bot-file-consent-card.png)
 
 ```json
 {
@@ -173,7 +173,7 @@ After uploading a file to the user's OneDrive, whether you use the mechanism des
 }
 ```
 
-The following table describes the content properties of the attachment: 
+The following table describes the content properties of the attachment:
 
 | Property | Purpose |
 | --- | --- |

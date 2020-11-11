@@ -108,7 +108,7 @@ export class MyBot extends TeamsActivityHandler {
 # [Python](#tab/python)
 
 ```python
-async def on_teams_channel_created_activity(
+async def on_teams_channel_created(
 	self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
 ):
 	return await turn_context.send_activity(
@@ -190,7 +190,7 @@ export class MyBot extends TeamsActivityHandler {
 # [Python](#tab/python)
 
 ```python
-async def on_teams_channel_renamed_activity(
+async def on_teams_channel_renamed(
 	self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
 ):
 	return await turn_context.send_activity(
@@ -272,7 +272,7 @@ export class MyBot extends TeamsActivityHandler {
 # [Python](#tab/python)
 
 ```python
-async def on_teams_channel_deleted_activity(
+async def on_teams_channel_deleted(
 	self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
 ):
 	return await turn_context.send_activity(
@@ -412,7 +412,7 @@ This is the message your bot will receive when the bot is added **to a one-to-on
 # [Python](#tab/python)
 
 ```python
-async def on_teams_members_added_activity(
+async def on_teams_members_added(
 	self, teams_members_added: [TeamsChannelAccount], turn_context: TurnContext
 ):
 	for member in teams_members_added:
@@ -428,7 +428,7 @@ async def on_teams_members_added_activity(
 
 The `teamMemberRemoved` event is sent to your bot if it is removed from a team and every time any user is removed from a team that your bot is a member of. You can determine if the new member removed was the bot itself or a user by looking at the `Activity` object of the `turnContext`.  If the `Id` field of the `MembersRemoved` object is the same as the `Id` field of the `Recipient` object, then the member removed is the bot, otherwise it is a user.  The bot's `Id` will generally be: `28:<MicrosoftAppId>`
 
-[!Note] When a user is removed from a tenant, `membersRemoved converstaionUpdate` event is triggered.
+[!Note] When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -519,7 +519,7 @@ export class MyBot extends TeamsActivityHandler {
 # [Python](#tab/python)
 
 ```python
-async def on_teams_members_removed_activity(
+async def on_teams_members_removed(
 	self, teams_members_removed: [TeamsChannelAccount], turn_context: TurnContext
 ):
 	for member in teams_members_removed:
@@ -600,7 +600,7 @@ export class MyBot extends TeamsActivityHandler {
 # [Python](#tab/python)
 
 ```python
-async def on_teams_team_renamed_activity(
+async def on_teams_team_renamed(
 	self, team_info: TeamInfo, turn_context: TurnContext
 ):
 	return await turn_context.send_activity(

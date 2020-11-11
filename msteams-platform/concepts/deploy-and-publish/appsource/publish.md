@@ -1,8 +1,9 @@
 ---
 title: Microsoft Teams app approval submission process guidance
 description: Describes the submission approval process for getting your app published to the Microsoft Teams app store
-keywords: teams publish store office publishing publish AppSource partner center account verification
+keywords: teams publish store office publishing publish AppSource partner center account verification apps account not publish eligible 
 ---
+
 # Submit your app to AppSource
 
 ## Teams app submission
@@ -10,7 +11,8 @@ keywords: teams publish store office publishing publish AppSource partner center
 Publishing  your app to [AppSource](https://appsource.microsoft.com) makes it available in the Teams app catalog and on the web. At a high level, the process for submitting your app to AppSource is:
 
 1. Develop your app following our [design guidelines](~/concepts/design/understand-use-cases.md). Tabs should follow our [tab design guidelines](~/tabs/design/tabs.md). Bots should follow the [bot design guidelines](~/bots/design/bots.md).
-1. Ensure your app meets the app [validation policies](/legal/marketplace/certification-policies) for Microsoft Teams.
+1. Ensure your app meets the app [validation policies](/legal/marketplace/certification-policies) for Microsoft Teams. 
+1. Self test your app with the [Manifest validation tool](https://docs.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist#teams-app-validation-tool) .
 1. [Set up a developer account](/office/dev/store/open-a-developer-account) in [Partner Center](https://support.microsoft.com/help/4499930/partner-center-overview). *See also* [How do I create a Partner Center account](#how-do-i-create-a-partner-center-account) in the FAQ section, below.
 1. Prepare your app for submission by following our [submission checklist](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md).
 1. Review our [tips for a successful app submission](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md).
@@ -70,6 +72,12 @@ You'll receive the above error message when your [account verification status](/
 During the account verification process the status of each required step —  Email Ownership, Employment Verification, and Business Verification — will be displayed. Once the verification process has been successfully completed, the verification status of your enrollment on the profile page will change from "pending" to "authorized," and the process steps will no longer be displayed.
 
 ![Partner Center verification error](../../../assets/images/partner-center-acct-verification-error.png)
+
+## What is verified in Partner Center account verification process and how to respond?
+There are three verification areas - Email Ownership, Employment and Business. Please see the details of [What is verified and how to respond](/partner-center/verification-responses#what-is-verified-and-how-to-respond)
+If you are the primary contact (Global admin or Account admin), we recommend that you go to your Partner Profile to monitor verification status and track progress.
+
+Once the verification process is complete, the verification status of your enrollment on the profile page will change from *pending* to *authorized* and the process steps with status, displayed on that page, will disappear. The primary contact will receive an email from Microsoft within a few business days after the verification is completed.
 
 ## My account Verification status has not advanced beyond Email Ownership in Partner Center. How should I proceed?
 

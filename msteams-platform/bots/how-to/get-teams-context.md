@@ -1,9 +1,9 @@
 ---
 title: Get Team's specific context for your bot
-author: clearab
+author: laujan
 description: How to get Microsoft Team's specific context for your bot, including the conversation roster, details, and channel list.
 ms.topic: overview
-ms.author: anclear
+ms.author: lajanuar
 ---
 # Get Team's specific context for your bot
 
@@ -73,37 +73,42 @@ async def _show_members(
 
 # [JSON](#tab/json)
 
-You can directly issue a GET request on `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}`, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value for `serviceUrl`.
+You can directly issue a GET request on `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}`, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value for `serviceUrl`. The response payload will also indicate if the user is a regular or anonymous user.
 
 ```http
-GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/pagedmembers?pageSize=100&continuationToken=asdfasdfalkdsjfalksjdf
+GET /v3/conversations/19:meeting_N2QzYTA3YmItYmMwOC00OTJmLThkYzMtZWMzZGU0NGIyZGI0@thread.v2/pagedmembers?pageSize=100&continuationToken=asdfasdfalkdsjfalksjdf
 
 Response body
 {
-    "continuationToken": "asdfqwerueiqpiewr",
-    "members":
-        [{
-            "id": "29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc",
-            "objectId": "9d3e08f9-a7ae-43aa-a4d3-de3f319a8a9c",
-            "givenName": "Larry",
-            "surname": "Brown",
-            "email": "Larry.Brown@fabrikam.com",
-            "userPrincipalName": "labrown@fabrikam.com"
-        }, {
-            "id": "29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk",
-            "objectId": "76b0b09f-d410-48fd-993e-84da521a597b",
-            "givenName": "John",
-            "surname": "Patterson",
-            "email": "johnp@fabrikam.com",
-            "userPrincipalName": "johnp@fabrikam.com"
-        }, {
-            "id": "29:1URzNQM1x1PNMr1D7L5_lFe6qF6gEfAbkdG8_BUxOW2mTKryQqEZtBTqDt10-MghkzjYDuUj4KG6nvg5lFAyjOLiGJ4jzhb99WrnI7XKriCs",
-            "objectId": "6b7b3b2a-2c4b-4175-8582-41c9e685c1b5",
-            "givenName": "Rick",
-            "surname": "Stevens",
-            "email": "Rick.Stevens@fabrikam.com",
-            "userPrincipalName": "rstevens@fabrikam.com"
-        }]
+   "continuationToken":"asdfqwerueiqpiewr",
+   "members":[
+      {
+         "id":"29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc",
+         "name":"Anon1 (Guest)",
+         "tenantId":"29:1UX7p8Fkx7p93MZlBFS71swTB9juQOCfnXf2L3wxOUITCcIGpFcRX-JiFjLDVZhxGpEfzSTGNsZeEyTKr1iu3Vw",
+         "userRole":"anonymous"
+      },
+      {
+         "id":"29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk",
+         "objectId":"76b0b09f-d410-48fd-993e-84da521a597b",
+         "givenName":"John",
+         "surname":"Patterson",
+         "email":"johnp@fabrikam.com",
+         "userPrincipalName":"johnp@fabrikam.com",
+         "tenantId":"29:1UX7p8Fkx7p93MZlBFS71swTB9juQOCfnXf2L3wxOUITCcIGpFcRX-JiFjLDVZhxGpEfzSTGNsZeEyTKr1iu3Vw",
+         "userRole":"user"
+      },
+      {
+         "id":"29:1URzNQM1x1PNMr1D7L5_lFe6qF6gEfAbkdG8_BUxOW2mTKryQqEZtBTqDt10-MghkzjYDuUj4KG6nvg5lFAyjOLiGJ4jzhb99WrnI7XKriCs",
+         "objectId":"6b7b3b2a-2c4b-4175-8582-41c9e685c1b5",
+         "givenName":"Rick",
+         "surname":"Stevens",
+         "email":"Rick.Stevens@fabrikam.com",
+         "userPrincipalName":"rstevens@fabrikam.com",
+         "tenantId":"29:1UX7p8Fkx7p93MZlBFS71swTB9juQOCfnXf2L3wxOUITCcIGpFcRX-JiFjLDVZhxGpEfzSTGNsZeEyTKr1iu3Vw",
+         "userRole":"user"
+      }
+   ]
 }
 ```
 
@@ -153,10 +158,12 @@ async def _show_members(
 
 # [JSON](#tab/json)
 
-You can directly issue a GET request on `/v3/conversations/{conversationId}/members/{userId}`, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value for `serviceUrl`.
+You can directly issue a GET request on `/v3/conversations/{conversationId}/members/{userId}`, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value for `serviceUrl`. This can be used for regualr users and anonymous users.
+
+Below is a response sample for regular user
 
 ```http
-GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/labrown@fabrikam.com"
+GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc
 
 Response body
 {
@@ -165,7 +172,23 @@ Response body
     "givenName": "Larry",
     "surname": "Brown",
     "email": "Larry.Brown@fabrikam.com",
-    "userPrincipalName": "labrown@fabrikam.com"
+    "userPrincipalName": "labrown@fabrikam.com",
+    "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47", 
+    "userRole":"user"
+}
+```
+
+Below is response for anonymous user
+
+```http
+GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/<anonymous user id>"
+
+Response body
+{
+    "id": "29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc",
+    "name": "Anon1 (Guest)",
+    "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47", 
+    "userRole":"anonymous"
 }
 ```
 
@@ -220,9 +243,9 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def _show_details(self, turn_context: TurnContext):
-	team_details = await TeamsInfo.get_team_details(turn_context)
-	reply = MessageFactory.text(f"The team name is {team_details.name}. The team ID is {team_details.id}. The AADGroupID is {team_details.aad_group_id}.")
-	await turn_context.send_activity(reply)
+    team_details = await TeamsInfo.get_team_details(turn_context)
+    reply = MessageFactory.text(f"The team name is {team_details.name}. The team ID is {team_details.id}. The AADGroupID is {team_details.aad_group_id}.")
+    await turn_context.send_activity(reply)
 ```
 
 # [JSON](#tab/json)

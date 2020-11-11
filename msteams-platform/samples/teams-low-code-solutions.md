@@ -3,7 +3,7 @@ title: Low code solutions for Teams custom apps
 author: laujan 
 description: Detail the available Microsoft low and no code solutions for Teams
 ms.author: lajanuar
-ms.topic: overview
+ms.topic: conceptual
 ---
 # Create low-code custom apps for Microsoft Teams
 
@@ -88,3 +88,8 @@ Virtual Assistant is a Microsoft open-source template that enables you to create
 [Announcing Power Platform and Teams updates to help customers adapt to remote work](https://cloudblogs.microsoft.com/powerplatform/2020/05/19/announcing-power-platform-and-teams-updates-to-help-customers-adapt-to-remote-work/)
 
 [Teams is shaping the future of work with low code features to enhance your digital workspace](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180)
+
+### ✔ Managing Power Platform apps
+
+> [!div class="nextstepaction"]
+> [Manage Microsoft Power Platform apps in the Microsoft Teams admin center](/microsoftteams/manage-power-platform-apps)
