@@ -300,6 +300,25 @@ Incident Reporter is a [Microsoft Teams bot](../bots/what-are-bots.md)  that opt
 :::column-end:::
 :::row-end:::
 
+## New Employee Onboarding&#9734;
+
+New Employee Onboarding is an integrated Microsoft Teams and [SharePoint New Employee Onboarding Solution](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19) that enables your organization to provide a consistent, high-quality onboarding experience for employees on their new-hire journey. The app can be used by human resource teams and hiring managers to provide relevant information throughout the orientation and induction process and by new hires to share feedback, provide introductions, and complete onboarding tasks.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-newemployeeonboarding)
+
+:::row:::
+  :::column span="2":::
+    **New employee welcome card**
+    ![Image of new employee welcome card](../assets/images/new-employee-welcome-card.png)
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    **New employee checklist**
+    ![Image of new employee checklist](../assets/images/new-employee-checklist.png)  
+:::column-end:::
+:::row-end:::
+
 ## Open Badges
 
 Open Badges is a Microsoft Teams app that enables individuals to earn digital learning credential badges within the Teams context and share them everywhere. Using capabilities from the third-party digital badge issuing authority, [Badgr](https://badgr.org/), awarded badges are recorded in a recipient's Badgr profile and available to build and share a rich picture of lifetime learning journeys.
