@@ -4,7 +4,7 @@ description: Details testing resource-specific consent in Teams using Postman
 localization_priority:  Normal
 author: laujan
 ms.author: lajanuar
-ms.topic: How-to
+ms.topic: tutorial
 keywords: teams authorization OAuth SSO AAD rsc Postman Graph
 ---
 

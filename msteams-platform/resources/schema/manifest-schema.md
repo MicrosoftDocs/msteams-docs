@@ -5,9 +5,10 @@ keywords: teams manifest schema
 author: laujan
 ms.author: lajanuar
 ---
+
 # Reference: Manifest schema for Microsoft Teams
 
-The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json). Previous versions 1.0-1.6 are also supported (using "v1.x" in the URL).
+The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json). Previous versions 1.0-1.4 are also supported (using "v1.x" in the URL).
 
 The following schema sample shows all extensibility options.
 
@@ -15,8 +16,8 @@ The following schema sample shows all extensibility options.
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.7",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.8",
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%",
   "packageName": "com.example.myapp",
@@ -57,8 +58,19 @@ The following schema sample shows all extensibility options.
         "groupchat"
       ],
       "canUpdateConfiguration": true,
+      "context":[
+        "channelTab",
+        "privateChatTab",
+        "meetingChatTab",
+        "meetingDetailsTab",
+        "meetingSidePanel",
+        "meetingStage"
+      ],
       "sharePointPreviewImage": "Relative path to a tab preview image for use in SharePoint — 1024px X 768",
-      "supportedSharePointHosts": "Define how your tab wil be made available in SharePoint (full page or web part)"
+      "supportedSharePointHosts": [
+         "sharePointFullPage",
+         "sharePointWebPart"
+      ]
     }
   ],
   "staticTabs": [
@@ -67,9 +79,14 @@ The following schema sample shows all extensibility options.
       "scopes": [
         "personal"
       ],
+      "context":[
+        "personalTab",
+        "channelTab"
+        ],
       "name": "Display name of tab",
       "contentUrl": "https://contoso.com/content (displayed in Teams canvas)",
-      "websiteUrl": "https://contoso.com/content (displayed in web browser"
+      "websiteUrl": "https://contoso.com/content (displayed in web browser)",
+       "searchUrl":  "https://contoso.com/content (displayed in web browser)"
     }
   ],
   "bots": [
@@ -83,6 +100,8 @@ The following schema sample shows all extensibility options.
       "needsChannelSelector": false,
       "isNotificationOnly": false,
       "supportsFiles": true,
+      "supportsCalling": false,
+      "supportsVideo": true,
       "commandLists": [
         {
           "scopes": [
@@ -376,10 +395,11 @@ Used when your app experience has a team channel tab experience that requires ex
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 characters|✔|The https:// URL to use when configuring the tab.|
-|`scopes`|array of enum|1|✔|Currently, configurable tabs support only the `team` and `groupchat` scopes. |
+|`scopes`|array of enums|1|✔|Currently, configurable tabs support only the `team` and `groupchat` scopes. |
 |`canUpdateConfiguration`|boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: **true**.|
+|`context` |array of enums|6||The set of `contextItem` scopes where a tab is supported. Default: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
-|`supportedSharePointHosts`|array of enum|1||Defines how your tab will be made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart` |
+|`supportedSharePointHosts`|array of enums|1||Defines how your tab will be made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart` |
 
 ## staticTabs
 
@@ -393,9 +413,11 @@ This item is an array (maximum of 16 elements) with all elements of the type `ob
 |---|---|---|---|---|
 |`entityId`|string|64 characters|✔|A unique identifier for the entity that the tab displays.|
 |`name`|string|128 characters|✔|The display name of the tab in the channel interface.|
-|`contentUrl`|string|2048 characters|✔|The https:// URL that points to the entity UI to be displayed in the Teams canvas.|
-|`websiteUrl`|string|2048 characters||The https:// URL to point at if a user opts to view in a browser.|
-|`scopes`|array of enum|1|✔|Currently, static tabs support only the `personal` scope, which means it can be provisioned only as part of the personal experience.|
+|`contentUrl`|string||✔|The https:// URL that points to the entity UI to be displayed in the Teams canvas.|
+|`websiteUrl`|string|||The https:// URL to point to if a user opts to view in a browser.|
+|`searchUrl`|string|||The https:// URL to point to for a user's search queries.|
+|`scopes`|array of enums|1|✔|Currently, static tabs support only the `personal` scope, which means it can be provisioned only as part of the personal experience.|
+|`context` | array of enums| 2|| The set of `contextItem` scopes where a tab is supported.|
 
 > [!NOTE]
 > If your tabs require context-dependent information to display relevant content or for initiating an authentication flow, *see* [Get context for your Microsoft Teams tab](../../tabs/how-to/access-teams-context.md).
@@ -411,10 +433,12 @@ The item is an array (maximum of only 1 element&mdash;currently only one bot is 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`botId`|string|64 characters|✔|The unique Microsoft app ID for the bot as registered with the Bot Framework. This may well be the same as the overall [app ID](#id).|
-|`scopes`|array of enum|3|✔|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupchat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
+|`scopes`|array of enums|3|✔|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupchat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
 |`needsChannelSelector`|boolean|||Describes whether or not the bot utilizes a user hint to add the bot to a specific channel. Default: **`false`**|
 |`isNotificationOnly`|boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. Default: `**false**`|
 |`supportsFiles`|boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. Default: **`false`**|
+|`supportsCalling`|boolean|||A value indicating where a bot supports audio calling. **IMPORTANT**: This property is currently experimental. Experimental properties may not be complete, and may undergo changes before becoming fully available.  It is provided for testing and exploration purposes only and should not be used in production applications. Default: **`false`**|
+|`supportsVideo`|boolean|||A value indicating where a bot supports video calling. **IMPORTANT**: This property is currently experimental. Experimental properties may not be complete, and may undergo changes before becoming fully available.  It is provided for testing and exploration purposes only and should not be used in production applications. Default: **`false`**|
 
 ### bots.commandLists
 
@@ -422,7 +446,7 @@ An optional list of commands that your bot can recommend to users. The object is
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`items.scopes`|array of enum|3|✔|Specifies the scope for which the command list is valid. Options are `team`, `personal`, and `groupchat`.|
+|`items.scopes`|array of enums|3|✔|Specifies the scope for which the command list is valid. Options are `team`, `personal`, and `groupchat`.|
 |`items.commands`|array of objects|10|✔|An array of commands the bot supports:<br>`title`: the bot command name (string, 32)<br>`description`: a simple description or example of the command syntax and its argument (string, 128)|
 
 ### bots.commandLists.commands
@@ -443,7 +467,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 characters|✔|The https:// URL to use when configuring the connector.|
-|`scopes`|array of enum|1|✔|Specifies whether the Connector offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). Currently, only the `team` scope is supported.|
+|`scopes`|array of enums|1|✔|Specifies whether the Connector offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). Currently, only the `team` scope is supported.|
 |`connectorId`|string|64 characters|✔|A unique identifier for the Connector that matches its ID in the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).|
 
 ## composeExtensions

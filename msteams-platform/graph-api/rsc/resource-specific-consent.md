@@ -4,7 +4,7 @@ description: Describes resource-specific consent in Teams and how to make advant
 localization_priority:  Normal
 author: laujan
 ms.author: lajanuar
-ms.topic: Overview
+ms.topic: reference
 keywords: teams authorization OAuth SSO AAD rsc Graph
 ---
 # Resource-specific consent (RSC)
