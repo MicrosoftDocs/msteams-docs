@@ -3,6 +3,8 @@ title: Microsoft Teams app templates
 description: Links and descriptions of app templates for the Microsoft Teams platform
 ms.topic: reference
 keywords: Microsoft Teams templates samples demo
+ms.author: lajanuar
+author: laujan
 ---
 
 # App Templates for Microsoft Teams
@@ -297,6 +299,25 @@ Incident Reporter is a [Microsoft Teams bot](../bots/what-are-bots.md)  that opt
 :::row:::
 :::column span="2":::
     ![Incident reporter personal scope view](../assets/images/incident-reporter-01.jpg)
+:::column-end:::
+:::row-end:::
+
+## New Employee Onboarding&#9734;
+
+New Employee Onboarding is an integrated Microsoft Teams and [SharePoint New Employee Onboarding Solution](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19) that enables your organization to provide a consistent, high-quality onboarding experience for employees on their new-hire journey. The app can be used by human resource teams and hiring managers to provide relevant information throughout the orientation and induction process and by new hires to share feedback, provide introductions, and complete onboarding tasks.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-newemployeeonboarding)
+
+:::row:::
+  :::column span="2":::
+    **New employee welcome card**
+    ![Image of new employee welcome card](../assets/images/new-employee-welcome-card.png)
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    **New employee checklist**
+    ![Image of new employee checklist](../assets/images/new-employee-checklist.png)  
 :::column-end:::
 :::row-end:::
 
