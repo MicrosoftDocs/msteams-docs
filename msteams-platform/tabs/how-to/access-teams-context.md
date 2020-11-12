@@ -42,6 +42,11 @@ Use placeholders in your configuration or content URLs. Microsoft Teams replaces
 * {groupId}: The ID of the Office 365 Group in which the tab resides.
 * {tid}: The Azure AD tenant ID of the current user.
 * {locale}: The current locale of the user formatted as languageId-countryId (for example, en-us).
+* {hostClientType}: The type of the host client.(Possible values are: android, ios, web, desktop, and rigel.)
+* {frameContext}: The context where the tab url is loaded (content, task, setting, remove, sidePanel).
+* {sharepoint}: This is only available when hosted in SharePoint.
+* {meetingId}: It is used by tab when running in meeting context.
+* {userLicenseType} The license type for the current user.
 
 >[!NOTE]
 >The previous `{upn}` placeholder is now deprecated. For backward compatibility, it is currently a synonym for `{loginHint}`.
