@@ -91,6 +91,7 @@ This section describes the tasks involved in creating a Teams tab that uses SSO.
     * offline_access
     * OpenId
     * profile
+    > [!NOTE] These permissions are from the Microsoft Graph Api.
 
 13. Navigate to **Authentication**
 
@@ -142,7 +143,7 @@ Here's what the authentication API looks like:
 ```javascript
 var authTokenRequest = {
   successCallback: function(result) { console.log("Success: " + result); },
-  failureCallback: function(error) { console.log("Failure: " + error); },
+  failureCallback: function(error) { console.log("Failure: " + error); }
 };
 microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```
