@@ -3,6 +3,8 @@ title: Microsoft Teams app templates
 description: Links and descriptions of app templates for the Microsoft Teams platform
 ms.topic: reference
 keywords: Microsoft Teams templates samples demo
+ms.author: lajanuar
+author: laujan
 ---
 
 # App Templates for Microsoft Teams
