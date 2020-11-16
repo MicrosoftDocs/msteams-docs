@@ -71,40 +71,9 @@ Modifying your the **app details** page or updating the **manifest**, or **.env*
 
 Refer to the **Build and Run* content in your project homepage for detailed instructions for packaging and testing your app. In general, you need to install your app's server, get it running, then setup a tunneling solution so that Teams can access content running from localhost.
 
-## Add a trusted certificate for localhost
+## Enabling development from localhost
 
-If you wish to debug your tab based app on localhost using https, you will need to add a certificate for localhost to `Trusted Root Certification Authorities` catalog. You only need to complete this step once per machine.</br></br>
-
-**Create and install a trusted certificate:**
-<details>
-  <summary>Expand here</summary>
-
-* Build and run your app
-  * Follow the instuctions in the **Build and Run** section of your project Readme so that it's being served from https://localhost:3000/tab. Generally, this will involve executing `npm install` then `npm start`
-  * Navigate to https://localhost:3000/tab from Google Chrome or Edge Chromium.
-
-* Acquire the SSL certificate:
-  * Open the Chrome Developer Tools window (`ctrl + shift + i` / `cmd + option + i`).
-  * Click on the `Security` tab
-  * Click on `View certificate` and you’ll have the option to download the certificate — either by dragging it to your desktop in OS X, or by clicking on the `Details` tab in Windows and clicking `Copy to File…`
-  * Name the file <*anything*>.cer and save it to a folder that doesn't require admin consent to perform a write action.
-  
-* Install the certificate on **Windows**
-  * Choose the `DER encoded binary X.509 (.CER)` option (the first one) and save it.
-  * Double click on the certificate and install it.
-  * Choose `Local Machine`
-  * Select `Place all certificates in the following store`
-  * Choose `Trusted Root Certification Authorities`
-  * Confirm your installation
-  
-* Install the certificate **Mac OS X**
-  * On OS X, open the Keychain Access utility and select `System` from the menu on the left. Click the lock icon to enable changes.
-  * Click the plus button near the bottom to add a new certificate, and select the `localhost.cer` file you dragged to the desktop. Click `Always Trust` in the dialog that appears.
-  * After adding the certificate to the system keychain, double-click the certificate and expand the `Trust` section of the certificate details. Select `Always Trust` for every option.
-
-> [!IMPORTANT]
-> If you receive a security certificate warning, navigate to https://localhost:3000/tab. If the site is still not trusted, reboot your machine and localhost should be accepted as trusted.
-</details>
+If you wish to debug your tab based app on localhost using https, you will need to tell your browser to trust the app being served from https://localhost. Naviate to https://localhost:3000/tab. If you see a warning indicating that the site isn't trusted, choose the option to proceed anyway. Your app should now be accessible from the Teams client.
 
 ## Run your app in Teams
 - Prerequisites:
@@ -113,14 +82,6 @@ If you wish to debug your tab based app on localhost using https, you will need 
 1. Navigate to the activity bar on the left side of the Visual Studio Code window.
 1. Select the **Run** icon to display the **Run and Debug** view.
 1. You can also use the keyboard shortcut `Ctrl+Shift+D`.
-
-## Validate your app
-
-The **Validate** page allows you to check your app package before submitting your app to AppSource. Simply upload the manifest package and the validation tool will check your app against all manifest related test cases. For each failed tests, the description provides a documentation link to help you fix the error. For the tests that are hard to automate, the **Preliminary checklist** details 7 of the most common failed test cases as well as link to a complete submission checklist.
-
-## Publish your app to Teams
-
-On your project home page, you can upload your app to a team, submit your app to your company custom app store for users in your organization, or submit your app to App Source for all Teams users. Your IT admin will review these submissions. You can return to the *Publish* page to check on your submission status and learn if your app was approved or rejected by your IT admin. This is also where you'll come to submit updates to your app or cancel any currently active submissions.
 
 > [!div class="nextstepaction"]
 > [Next step: Maintaining and supporting your published app](../concepts/deploy-and-publish/appsource/post-publish/overview.md)

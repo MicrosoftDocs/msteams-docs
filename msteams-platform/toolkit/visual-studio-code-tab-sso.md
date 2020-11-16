@@ -19,6 +19,9 @@ Create a new project in the toolkit, and select tab as the type of extension you
 
 To enable SSO within Teams, your app must have an Azure app registration resource. The Teams Toolkit will provision the app registrtion on your behalf. Enter the URL where your app will be hosted and hit next. Your app registration will be configured using the provided URL. The app registration's configuration details will be stored in the *.env* files in your project's source code.
 
+If you would like to learn exactly how your Azure app registration will be provisioned, you can learn more by reading [this document](https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso).
+
+
 > [!TIP]
 > You will need to go to **Azure App Registrations** and update your *API URI* and *redirect URLs* whenever you change this URL.
 
@@ -27,7 +30,9 @@ To enable SSO within Teams, your app must have an Azure app registration resourc
 1. `npm istall` from the **api-server** folder. Then `npm start`.
 1. `npm istall` from the **src** folder. Then `npm start`.
 1. If you are using a tunneling service like ngrok, run it and make sure the URL matches what you entered in the project creation wizard. If it doesn't, you will need to update your API URI and redirect URL in the app registeation that was create in Azure for this app.
-1. Hit **F5** to launch the app.
+1. Navigate to the activity bar on the left side of the Visual Studio Code window.
+1. Select the **Run** icon to display the **Run and Debug** view.
+1. You can also use the keyboard shortcut `Ctrl+Shift+D`.
 
 > [!TIP]
 > You may not see the app install dialogue in the browser if popups are disabled for your browser. If this happens, enable popups and refresh the page.
