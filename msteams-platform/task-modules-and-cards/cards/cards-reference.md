@@ -41,7 +41,7 @@ Your card can contain an inline image by including a link to your publicly avail
 
 Images are scaled up or down in size while maintaining the aspect ratio to cover the image area, and then cropped from center to achieve the appropriate aspect ratio for the card.
 
-Images must be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF is not officially supported.
+Images must be at most 1024×1024 in PNG, JPEG, or GIF format; animated GIF is not officially supported.
 
 | Property | Type  | Description |
 | --- | --- | --- |
