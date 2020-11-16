@@ -42,7 +42,32 @@ Use placeholders in your configuration or content URLs. Microsoft Teams replaces
 * {groupId}: The ID of the Office 365 Group in which the tab resides.
 * {tid}: The Azure AD tenant ID of the current user.
 * {locale}: The current locale of the user formatted as languageId-countryId (for example, en-us).
-* {hostClientType}: The type of the host client.(Possible values are: android, ios, web, desktop, and rigel.)
+* {osLocaleInfo}: More detailed locale info from the user's OS if available. Can be used together with:
+    * the @microsoft/globe NPM package to ensure your app respects the user's OS date and
+    * time format configuration.
+* {sessionId}: Unique ID for the current Teams session for use in correlating telemetry data.
+* {channelId}: The Microsoft Teams ID for the channel with which the content is associated.
+* {channelName}: The name for the channel with which the content is associated.
+* {chatId}: The Microsoft Teams ID for the chat with which the content is associated.
+* {url}: Content URL of this tab.
+* {websiteUrl}: Website URL of this tab.
+* {favoriteChannelsOnly}: Flag allowing to select favorite channels only.
+* {favoriteTeamsOnly}: Flag allowing to select favorite teams only.
+* {userTeamRole}: Role of current user in the team.
+* {teamType}: The type of the team.
+* {isTeamLocked}: The locked status of the team.
+* {isTeamArchived}: The archived status of the team
+* {isFullScreen}: Indication whether the tab is in full-screen mode.
+* {teamSiteUrl}: The root SharePoint site associated with the team.
+* {teamSiteDomain}: The domain of the root SharePoint site associated with the team.
+* {teamSitePath}: The relative path to the SharePoint site associated with the team.
+* {channelRelativeUrl}: The relative path to the SharePoint folder associated with the channel.
+* {tenantSKU}: The type of license for the current users tenant.
+* {ringId}: Current ring ID
+* {appSessionId}: Unique ID for the current session for use in correlating telemetry data.
+* {completionBotId}: Specifies a bot ID to send the result of the user's interaction with the task module.
+* {conversationId}: The Id of the conversation.
+* {hostClientType}: Type of the host client.(Possible values are: android, ios, web, desktop, and rigel.)
 * {frameContext}: The context where the tab url is loaded (content, task, setting, remove, sidePanel).
 * {sharepoint}: This is only available when hosted in SharePoint.
 * {meetingId}: It is used by tab when running in meeting context.
