@@ -223,6 +223,9 @@ Adaptive Cards support three action types:
 
 In addition to the actions mentioned above, you can modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using a `msteams` property in the `data` object of `Action.Submit`. The below sections detail how to use existing Bot Framework actions with Adaptive Cards.
 
+> [!NOTE]
+> Adding `msteams` to data, with a Bot Framework action, does not work with an Adaptive Card task module.
+
 ### Adaptive Cards with messageBack action
 
 To include a `messageBack` action with an Adaptive Card include the following details in the `msteams` object. Note that you can include additional hidden properties in the `data` object if needed.
