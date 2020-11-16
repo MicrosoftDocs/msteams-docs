@@ -56,14 +56,14 @@ Use placeholders in your configuration or content URLs. Microsoft Teams replaces
 * {userTeamRole}: Role of current user in the team.
 * {teamType}: The type of the team.
 * {isTeamLocked}: The locked status of the team.
-* {isTeamArchived}: The archived status of the team
+* {isTeamArchived}: The archived status of the team.
 * {isFullScreen}: Indication whether the tab is in full-screen mode.
 * {teamSiteUrl}: The root SharePoint site associated with the team.
 * {teamSiteDomain}: The domain of the root SharePoint site associated with the team.
 * {teamSitePath}: The relative path to the SharePoint site associated with the team.
 * {channelRelativeUrl}: The relative path to the SharePoint folder associated with the channel.
 * {tenantSKU}: The type of license for the current users tenant.
-* {ringId}: Current ring ID
+* {ringId}: Current ring ID.
 * {appSessionId}: Unique ID for the current session for use in correlating telemetry data.
 * {completionBotId}: Specifies a bot ID to send the result of the user's interaction with the task module.
 * {conversationId}: The Id of the conversation.
