@@ -92,6 +92,7 @@ This section describes the tasks involved in creating a Teams tab that uses SSO.
     * OpenId
     * profile
 > [!NOTE] These permissions are from the Microsoft Graph Api.
+
 13. Navigate to **Authentication**
 
     If an app hasn't been granted IT admin consent, users will have to provide consent the first time they use an app.
