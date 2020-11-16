@@ -48,6 +48,8 @@ Teams’ meeting app extensibility centers on three concepts:
 
 ✔ Tab apps are accessible in meetings **Details** and **Chats** pages using a plus icon (➕) button.|
 
+✔  Tab layout should be in an organized state if there are more than ten polls or surveys.
+
 ### In-meeting app experience
 
 ✔ Meeting apps will be hosted in the top upper bar of the chat window and as in-meeting tab experience via the in-meeting tab. When users add a tab to a meeting through the tab gallery, apps that are **during meeting** experiences will be surfaced.
@@ -56,7 +58,9 @@ Teams’ meeting app extensibility centers on three concepts:
 
 ✔ When loaded in the context of a meeting, apps will be able to leverage the Teams Client SDK to access the `meetingId`, `userMri`, and `frameContext` to appropriately render the experience.
 
-✔ For an app can be visible in a Teams meeting in two areas:
+✔ Exporting a result of a survey or polls should notify the users stating, ‘results successfully downloaded’.
+
+✔ For an app to be visible in a Teams meeting in two areas:
 
 &emsp;&emsp;&#9679; **Side panel**. </br>
 
@@ -81,7 +85,11 @@ Teams’ meeting app extensibility centers on three concepts:
 
 ![post meeting view](../assets/images/apps-in-meetings/PostMeeting.png)
 
-The post-meeting app scenario is similar to the current post-meeting experience with the added benefit of having tabs exist within the surface. Permissioned users can add apps from the tab gallery to a meeting via the **Details** tab on the Teams scheduling form and the meeting **Chat** tab in an existing meeting.
+✔ The post-meeting app scenario is similar to the current post-meeting experience with the added benefit of having tabs that exist within the surface. 
+
+✔ Permissioned users can add apps from the tab gallery to a meeting via the **Details** tab on the Teams scheduling form and the meeting **Chat** tab in an existing meeting.
+
+✔  Tab layout should be in an organized state if there are more than ten polls or surveys.
 
 ### Bots
 
