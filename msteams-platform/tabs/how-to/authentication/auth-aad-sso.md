@@ -85,13 +85,12 @@ This section describes the tasks involved in creating a Teams tab that uses SSO.
 11. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. Select *Add a client application*. Enter each of the following client IDs and select the authorized scope you created in the previous step:
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Teams mobile/desktop application)
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Teams web application)
-12. Navigate to **API Permissions**. Select *Add a permission* > *Microsoft Graph* > *Delegated permissions*, then add the following permissions:
+12. Navigate to **API Permissions**. Select *Add a permission* > *Microsoft Graph* > *Delegated permissions*, then add the following permissions from Microsoft Graph API:
     * User.Read (enabled by default)
     * email
     * offline_access
     * OpenId
     * profile
-> [!NOTE] These permissions are from the Microsoft Graph Api.
 
 13. Navigate to **Authentication**
 
