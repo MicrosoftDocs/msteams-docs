@@ -164,6 +164,25 @@ E-Prescriptions is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app)-
 :::column-end:::
 :::row-end:::
 
+## Employee Training &#9734; 
+
+Employee training is a Microsoft Teams app that enables organizers to easily publish,  track, and promote learning and training events for your organization.  With the app, event planners can send reminders and notifications to event registrants and employees can indicate interest in upcoming events, stay updated on current events, and share event details with colleagues via the Teams messaging extension.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-employeetraining)
+
+:::row:::
+:::column span="2":::
+    **View employee training events**
+    ![Employee training tab image](../assets/images/employee-training-discover-tab.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    **Manage employee training events**
+    ![Employee training manage events tab image](../assets/images/employee-training-manage-events-tab.png)
+:::column-end:::
+:::row-end:::
+
 ## Expert Finder
 
 Expert Finder is a [Microsoft Teams bot](../bots/what-are-bots.md) that identifies specific organization members based on their skills, interests, and education attributes. Members find experts within an organization  that match a keyword search of Azure Active Directory user profiles.
