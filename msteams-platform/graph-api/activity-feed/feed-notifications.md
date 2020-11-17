@@ -7,10 +7,7 @@ ms.author: lajanuar
 ms.topic: Overview
 keywords: teams notifications feed activity Graph
 ---
-# Microsoft Teams activity feed notifications  — Developer Preview
-
->[!NOTE]
->Microsoft Teams Graph API activity feed notifications are currently available in desktop and Android clients after Developer Preview has been enabled. See [How do I enable Developer Preview](../../resources/dev-preview/developer-preview-intro.md) for more information.
+# Microsoft Teams activity feed notifications 
 
 The activity feed is an essential feature of the Microsoft Teams experience. It is the central place to notify team members of relevant activities and events within a team or chat.  The activity feed API is a Microsoft Teams and Microsoft Graph integration that enables your app to use API endpoints to send activity feed notifications to  Teams users. Activity feed notifications can range from identifying tasks requiring a user's attention, to actions taken by others that affect the user or a set of users.
 

@@ -42,8 +42,8 @@ The activity feed API is a Microsoft Teams and Microsoft Graph integration that 
 >
 >* [Prepare your Office 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).  
 >* [Upload your app package directly to a specific team,](../../concepts/deploy-and-publish/apps-upload.md#upload-your-package-into-a-team-using-the-apps-tab)  one-to-one chat, or group chat using the `Apps` tab or by selecting click the `More apps` icon on the left-rail app bar and choosing the `Upload a custom app link`. <br/> 
-> * You can also upload the app to your own personal version of Teams as follows: 
-<br/> &emsp; &bull; select **Apps** -> **Upload a Custom App** -> **Upload for me or my teams**. 
+> * You can also upload the app to your own personal version of Teams as follows:
+<br/> &emsp; &bull; Select **Apps** -> **Upload a Custom App** -> **Upload for me or my teams**. 
 <br/>  &emsp; &bull; Upload your app.
 <br/>  &emsp; &bull; Select **Add**.
 > * Open the [Postman](https://www.postman.com) app:
