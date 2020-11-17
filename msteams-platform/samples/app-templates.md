@@ -360,12 +360,16 @@ Quick Responses is a Microsoft Teams app that delivers a robust solution for eff
 
 ## Reflect &#9734;
 
-Reflect is a custom Microsoft Teams [messaging extension](../messaging-extensions/what-are-messaging-extensions.md) app that provides a safe and inclusive resource for your team members to share the state of their emotional well-being with colleagues and/or group leaders directly within a Teams. The app is available in channel, group, meeting, and 1:1 chats and the check-in response can be set to public, private-to-sender, or fully anonymous.
+Reflect is a custom Microsoft Teams [messaging extension](../messaging-extensions/what-are-messaging-extensions.md) app that provides a safe and inclusive resource for your team members to share the state of their emotional well-being with colleagues and/or group leaders directly within Teams. The app is available in channel, group, meeting, and 1:1 chats and the check-in response can be set to public, private-to-sender, or fully anonymous.
 
 [Get it on GitHub](https://github.com/OfficeDev/Microsoft-Teams-App-Reflect)
 
+:::row:::
+    :::column:::
 **Well-being poll**
 ![Reflect app user poll](../assets/images/reflect-app-user-poll.png)
+    :::column-end:::
+:::row-end:::
 
 ## Remote Support
 
