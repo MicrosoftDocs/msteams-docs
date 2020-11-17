@@ -358,6 +358,15 @@ Quick Responses is a Microsoft Teams app that delivers a robust solution for eff
 
 ![Sample view of responses](../assets/images/quick-responses.png)
 
+## Reflect &#9734;
+
+Reflect is a custom Microsoft Teams [messaging extension](../messaging-extensions/what-are-messaging-extensions.md) app that provides a safe and inclusive resource for your team members to share the state of their emotional well-being with colleagues and/or group leaders directly within a Teams. The app is available in channel, group, meeting, and 1:1 chats and the check-in response can be set to public, private-to-sender, or fully anonymous.
+
+[Get it on GitHub](https://github.com/OfficeDev/Microsoft-Teams-App-Reflect)
+
+**Well-being poll**
+![Reflect app user poll](../assets/images/reflect-app-user-poll.png)
+
 ## Remote Support
 
 Remote Support is a [Microsoft Teams bot](../bots/what-are-bots.md) that provides a focused interface between support requesters throughout your organization and the internal support team.  End-users can submit, edit, or withdraw requests for support and the support team can respond, manage, and update requests all within the Teams platform.
