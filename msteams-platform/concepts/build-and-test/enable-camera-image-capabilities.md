@@ -1,14 +1,17 @@
 ---
-title: Using camera and image capabilities in Teams
-description: How to use camera and image capabilities in Teams Javascript client SDK
+title: Enable camera and image capabilities in Teams
+description: How to use Teams Javascript client SDK to enable camera and image capabilities
 keywords: camera image capabilities
+ms.topic: how-to
+ms.author: laujan
 ---
 
-# Using Camera and image capabilities in Teams Javascript client SDK
+# Enable camera and image capabilities in Teams
 
-The [Microsoft Teams JavaScript client SDK](https://docs.microsoft.com/microsoftteams/platform/tabs/how-to/using-teams-client-sdk), part of the [Microsoft Teams developer platform](https://docs.microsoft.com/microsoftteams/platform/), makes it easy to integrate external services with Teams. The SDK provides many tools necessary to build web apps on Teams, including access to native device capabilities such as camera, storage, mic, location, etc. This reduces the barrier to 3P app development, speeds-up development-cycle, and provides new scenarios/use-cases for the developer community.
+You can use the  [Microsoft Teams JavaScript client SDK](https://docs.microsoft.com/microsoftteams/platform/tabs/how-to/using-teams-client-sdk), to easily integrate camera and image capabilities within your Teams app. The SDK provides the tools necessary for your app to access a user’s [device permissions](../../tabs/how-to/native-device-permissions.md?tabs=desktop#device-permissions) and build a richer experience.
 
-The image APIs (selectMedia, getMedia, and viewImages) help web app developers leverage native camera/image capabilities and use them right out of the client SDK. With these capabilities a Teams web app developer would now be able to:
+The [selectMedia](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_), [getMedia](/javascript/api/@microsoft/teams-js/_media?view=msteams-client-js-latest#getMedia__error__SdkError__blob__Blob_____void_), and [viewImages](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#viewImages_ImageUri_____error___SdkError_____void_) help web app developers leverage native camera/image capabilities and use them right out of the client SDK. With these capabilities a Teams web app developer would now be able to:
+
 * Leverage native **camera control** to let users **capture and attach images** in a go
 * Leverage native **gallery support** to let users **pick device images** as attachments
 * Leverage native **image viewer control** to **preview multiple images** at a time
