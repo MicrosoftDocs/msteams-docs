@@ -172,13 +172,13 @@ Employee training is a Microsoft Teams app that enables organizers to easily pub
 
 :::row:::
 :::column span="2":::
-    **Employee training events tab**
+    **View employee training events**
     ![Employee training tab image](../assets/images/employee-training-discover-tab.png)  
 :::column-end:::
 :::row-end:::
 :::row:::
 :::column span="2":::
-    **Employee training manage events tab**
+    **Manage employee training events**
     ![Employee training manage events tab image](../assets/images/employee-training-manage-events-tab.png)
 :::column-end:::
 :::row-end:::
