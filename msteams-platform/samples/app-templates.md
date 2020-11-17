@@ -367,6 +367,7 @@ Reflect is a custom Microsoft Teams [messaging extension](../messaging-extension
 :::row:::
     :::column:::
     **Well-being poll**
+    
     ![Reflect app user poll](../assets/images/reflect-app-user-poll.png)
     :::column-end:::
 :::row-end:::
