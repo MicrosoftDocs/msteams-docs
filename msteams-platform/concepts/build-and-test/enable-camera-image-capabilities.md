@@ -2,8 +2,8 @@
 title: Enable camera and image capabilities in Teams
 description: How to use Teams Javascript client SDK to enable camera and image capabilities
 keywords: camera image capabilities
-ms.topic: how-to
-ms.author: laujan
+ms.topic: conceptual
+ms.author: lajanuar
 ---
 
 # Enable camera and image capabilities in Teams
