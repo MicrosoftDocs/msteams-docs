@@ -60,7 +60,7 @@ Microsoft Graph exposes granular permissions controlling the access that apps ha
 
 ### Assigning permissions
 
-You must configure the application permissions for your bot in advance. We recommend using the [Microsoft App Registration Portal](https://apps.dev.microsoft.com/) as described [here](/graph/auth_register_app_v2) because that's where your bot was configured; however, you can still use the [Azure portal](https://aka.ms/aadapplist) if you prefer to use the [Azure AD V1 endpoint](/azure/active-directory/develop/azure-ad-endpoint-comparison).
+You must configure the application permissions for your bot in advance by using the [Azure portal](https://aka.ms/aadapplist) if you prefer to use the [Azure AD V1 endpoint](/azure/active-directory/develop/azure-ad-endpoint-comparison).
 
 ### Getting tenant administrator consent
 

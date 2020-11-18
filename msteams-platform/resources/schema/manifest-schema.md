@@ -1,10 +1,11 @@
 ---
 title: Manifest schema reference
-description: Describes the schema supported by the Microsoft Teams manifest
+description: Describes the manifest schema for Microsoft Teams
 keywords: teams manifest schema
 author: laujan
 ms.author: lajanuar
 ---
+
 # Reference: Manifest schema for Microsoft Teams
 
 The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json). Previous versions 1.0-1.4 are also supported (using "v1.x" in the URL).
@@ -566,7 +567,7 @@ Specify your AAD App ID and Graph information to help users seamlessly sign into
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`|string|36 characters|✔|AAD application id of the app. This id must be a GUID.|
-|`resource`|string|2048 characters||Resource url of app for acquiring auth token for SSO.|
+|`resource`|string|2048 characters|✔|Resource url of app for acquiring auth token for SSO.|
 |`applicationPermissions`|array of strings|128 characters||Specify granular [resource specific consent](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions)|
 
 ## showLoadingIndicator

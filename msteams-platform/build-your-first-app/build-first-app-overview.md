@@ -69,6 +69,9 @@ You can get a free Teams test account that allows app sideloading by joining the
 
 </details>
 
+> [!Note]
+> If you still can't sideload apps, refer to [Enable custom Teams apps and turn on custom app uploading](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
+
 ### Install your development tools
 
 You can build Teams apps with your preferred tools, but these lessons show how you can get started quickly with the Microsoft Teams Toolkit for Visual Studio Code.

@@ -17,9 +17,9 @@ OAuth 2.0 is an open standard for authentication and authorization used by Azure
 1. The bot sends a message with an OAuthCard that contains the `tokenExchangeResource` property. It tells Teams to obtain an authentication token for the bot application. The user receives messages at all the active endpoints of the user.
 
 > [!NOTE]
-> ✔ A user can have more than one active endpoint at a time.  
-> ✔ The bot token is received from every active endpoint of the user.
-> ✔ Single sign-on support currently requires the app to be installed in personal scope.
+>* A user can have more than one active endpoint at a time.  
+>* The bot token is received from every active endpoint of the user.
+>* Single sign-on support currently requires the app to be installed in personal scope.
 
 2. If it is the first time the current user has used your bot application, there will be a request prompt to consent (if consent is required) or to handle step-up authentication (such as two-factor authentication).
 
@@ -31,17 +31,17 @@ OAuth 2.0 is an open standard for authentication and authorization used by Azure
   
 6. The token will be parsed in the bot application to extract the needed information, such as the user's email address.
   
-## Develop an Single sign-on Microsoft Teams bot
+## Develop a Single sign-on Microsoft Teams bot
   
 The following steps: are required to develop an SSO Microsoft Teams bot:
 
-1. [Create a Azure free account](#create-an-azure-account)
+1. [Create an Azure free account](#create-an-azure-account)
 2. [Update your Teams app manifest](#update-your-app-manifest)
 3. [Add the code to request and receive the bot token](#request-a-bot-token)
 
 ### Create an Azure account
 
-This step is similar to the [tab SSO flow](../../../tabs/how-to/authentication/auth-aad-sso.md) flow:
+This step is similar to the [tab SSO flow](../../../tabs/how-to/authentication/auth-aad-sso.md):
 
 1. Get your [Azure AD Application ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
 2. Specify the permissions that your application needs for the Azure AD endpoint and, optionally, Microsoft Graph.
