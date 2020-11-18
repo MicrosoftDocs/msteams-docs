@@ -95,6 +95,8 @@
         href: concepts/build-and-test/apps-localization.md
       - name: Create a Share-to-Teams button for your website
         href: concepts/build-and-test/share-to-teams.md
+      - name: Enable camera image capabilities
+        href: concepts/build-and-test/enable-camera-image-capabilities.md
     - name: 'Deploy and publish your app'
       items:
       - name: Choose your distribution methods
