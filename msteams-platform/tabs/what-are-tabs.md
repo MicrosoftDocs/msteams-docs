@@ -7,7 +7,7 @@ ms.author: lajanuar
 ---
 # What are Microsoft Teams custom tabs?
 
-Tabs are Teams-aware webpages embedded in Microsoft Teams. They are simple HTML <iframe\> tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, a group chat, or as a personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams and add Teams-specific functionality to your web content. *See* [Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
+Tabs are Teams-aware webpages embedded in Microsoft Teams. They are simple HTML <iframe\> tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, a group chat, or as a personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. *See* [Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
 
 > [!NOTE]
 > Chrome 80, scheduled for release in early 2020, introduces new cookie values and imposes cookie policies by default. It's recommended that you set the intended use for your cookies rather than rely on default browser behavior. *See* [SameSite cookie attribute (2020 update)](../resources/samesite-cookie-update.md).
