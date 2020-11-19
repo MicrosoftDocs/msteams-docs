@@ -19,11 +19,11 @@ There are two types of tabs available in Teams - channel/group and personal. Cha
 > [!div class="checklist"]
 >
 > * If a tab is added to an app that also has a bot, the bot is added to the team as well.
-> * Awareness of AAD ID of the current user.
+> * Awareness of Azure Active Dirctory (Azure AD) ID of the current user.
 > * Locale awareness for the user to indicate language, i.e., `en-us`. 
-> * SSO capability, if supported.
+> * Single sign-on (SSO) capability, if supported.
 > * Ability to use bots or app notifications to deep link to the tab or to a sub-entity within the service, e.g., an individual work item.
-> * The ability to open a Task module from links within a tab.
+> * The ability to open a task module from links within a tab.
 > * Reuse of SharePoint web parts within the tab.
 
 ## Tabs user scenarios
