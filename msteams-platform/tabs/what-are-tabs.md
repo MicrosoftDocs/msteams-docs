@@ -12,14 +12,14 @@ Tabs are Teams-aware webpages embedded in Microsoft Teams. They are simple HTML 
 > [!NOTE]
 > Chrome 80, scheduled for release in early 2020, introduces new cookie values and imposes cookie policies by default. It's recommended that you set the intended use for your cookies rather than rely on default browser behavior. *See* [SameSite cookie attribute (2020 update)](../resources/samesite-cookie-update.md).
 
-There are two types of tabs available in Teams - channel/group and personal. Channel/group tabs deliver content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content. Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left navigation bar for easy access.
+There are two types of tabs available in Teams — channel/group and personal. Channel/group tabs deliver content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content. Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left navigation bar for easy access.
 
 ## Lesser known tab features
 
 > [!div class="checklist"]
 >
 > * If a tab is added to an app that also has a bot, the bot is added to the team as well.
-> * Awareness of Azure Active Dirctory (Azure AD) ID of the current user.
+> * Awareness of Azure Active Directory (Azure AD) ID of the current user.
 > * Locale awareness for the user to indicate language, i.e., `en-us`. 
 > * Single sign-on (SSO) capability, if supported.
 > * Ability to use bots or app notifications to deep link to the tab or to a sub-entity within the service, e.g., an individual work item.
