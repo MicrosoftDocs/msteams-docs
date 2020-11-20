@@ -58,7 +58,7 @@ For more information on  hyperlinks and file paths, please *see* [Use links in d
 > &emsp;&#x2714; Use a relative path that begins with a forward slash.<br>
 > &emsp;&#x2714; Don't include the file extension. <br> 
 > Ex:  **/docset/address-to-file-location** —> `[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`<br><br>
-> To reference an page outside of the Microsoft Docs library, such as GitHub, use the full file path.<br>
+> To reference a page outside of the Microsoft Docs library, such as GitHub, use the full file path.<br>
 
 ## Code Samples and Snippets
 
