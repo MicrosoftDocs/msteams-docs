@@ -204,18 +204,3 @@ Please warn users before your app downloads any files or executable (`.exe`  )in
 * The message extension `@mention` executables should be clear, easy to understand, and easy to read.
 ![Message extension](../../../../assets/images/faq/message-extension.png)
 
-## App category mapping
-
-| Teams Category       | PC Categories  |
-|:---------------------|:---------------|
-| Analytics and BI | Analytics, Data Visualization and BI |
-| Developer and IT | Developer Tools, IT Admin |
-| Education | Education |
-| Human resources | Human Resources and Recruiting |
-| Productivity | Content Management, Files and documents, Productivity, Training and Tutorials, and Utilities |
-| Project management | Communication, Project Management, Workflow and Business Management |
-| Sales and support | Customer and Contact Management, Customer Support, Financial Management, Sales and Marketing |
-| Social and fun | Image and Video Galleries, Lifestyle, News and Weather, Social, Travel and Navigation |
-
-> [!div class="nextstepaction"]
-> [Learn more about Teams app approval policies](/legal/marketplace/certification-policies#1140-teams)
