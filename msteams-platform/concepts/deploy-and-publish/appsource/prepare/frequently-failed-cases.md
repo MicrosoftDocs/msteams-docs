@@ -204,3 +204,5 @@ Please warn users before your app downloads any files or executable (`.exe`  )in
 * The message extension `@mention` executables should be clear, easy to understand, and easy to read.
 ![Message extension](../../../../assets/images/faq/message-extension.png)
 
+> [!div class="nextstepaction"]
+> [Learn more about Teams app approval policies](/legal/marketplace/certification-policies#1140-teams)
