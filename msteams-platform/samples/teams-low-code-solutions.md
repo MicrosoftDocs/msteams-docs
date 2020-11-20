@@ -68,8 +68,8 @@ Virtual Assistant is a Microsoft open-source template that enables you to create
 |[Power BI for App Makers](/learn/browse/?expanded=power-platform&products=power-bi&roles=maker)|
 |[Power BI for Developers](/learn/browse/?expanded=power-platform&products=power-bi&roles=developer)|
 |**Power Apps**|
-|[Power Apps for app makers](/learn/browse/?products=power-apps&roles=maker)|
-|[Power Apps for app developers](/learn/browse/?products=power-apps)|
+|[Power Apps for App Makers](/learn/browse/?products=power-apps&roles=maker)|
+|[Power Apps for Developers](/learn/browse/?products=power-apps)|
 |**Power Automate**|
 |[Power Automate for App Makers](/learn/browse/?expanded=power-platform&products=power-automate&roles=maker)|
 |[Power Automate for Developers](/learn/browse/?expanded=power-platform&products=power-automate&roles=developer)|
