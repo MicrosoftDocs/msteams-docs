@@ -57,26 +57,10 @@
       href: concepts/capabilities-overview.md
     - name: App entry points
       href: concepts/extensibility-points.md
-    - name: 'Design your app'
-      items:
-        - name: 'Understand your use cases'
-          href: concepts/design/understand-use-cases.md
-        - name: 'Map use cases to features'
-          href: concepts/design/map-use-cases.md
-        - name: Personal apps
-          href: concepts/design/personal-apps.md
-        - name: UI Components 
-          items:
-          - name: 'Colors'
-            href: concepts/design/components/color.md
-          - name: 'Buttons, links and controls'
-            href: concepts/design/components/buttons.md
-          - name: 'Typography'
-            href: concepts/design/components/typography.md
-          - name: 'Fields and Flyouts'
-            href: concepts/design/components/fields.md
-          - name: Dialogs
-            href: concepts/design/components/dialogs.md
+    - name: 'Understand your use cases'
+      href: concepts/design/understand-use-cases.md
+    - name: 'Map use cases to features'
+      href: concepts/design/map-use-cases.md
     - name: 'Build and test your app'
       items:
       - name: Prepare your Office 365 tenant
@@ -131,6 +115,38 @@
           href: concepts/authentication/authentication.md
         - name: 'Configure identity providers'
           href: concepts/authentication/configure-identity-provider.md
+- name: Design your app
+  items:
+  - name: Overview
+    href: concepts/design/design-teams-app-overview.md
+  - name: Fundamentals
+    href: concepts/design/design-teams-app-fundamentals.md
+  - name: Basic UI components
+    href: concepts/design/design-teams-app-basic-ui-components.md
+  - name: Adaptive Cards
+    href: task-modules-and-cards/cards/design-effective-cards.md
+  - name: Bots
+    href: bots/design/bots.md
+  - name: Meetings
+    items:
+    - name: In-meeting dialog
+      href: apps-in-teams-meetings/design/designing-in-meeting-dialog.md
+    - name: In-meeting tab
+      href: apps-in-teams-meetings/design/designing-in-meeting-tab.md
+  - name: Messaging extensions
+    href: messaging-extensions/design/messaging-extension-design.md
+  - name: Personal apps
+    href: concepts/design/personal-apps.md
+  - name: Tabs
+    items: 
+    - name: Desktop and web
+      href: tabs/design/tabs.md
+    - name: Mobile
+      href: tabs/design/tabs-mobile.md
+  - name: Task modules
+    href: task-modules-and-cards/task-modules/design-teams-task-modules.md
+  - name: UI templates
+    href: concepts/design/design-teams-app-ui-templates.md
 - name: 'Tabs — embedded web experiences'
   items:
     - name: 'What are custom tabs?'
@@ -155,12 +171,6 @@
             href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
           - name: 'Create a personal tab'
             href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-    - name: Design your tabs
-      items:
-        - name: Design overview
-          href: tabs/design/tabs.md
-        - name: Tabs on mobile
-          href: tabs/design/tabs-mobile.md
     - name: 'How-to guides'
       expanded: true
       items:
@@ -208,10 +218,6 @@
           href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot
         - name: Teams conversation bot in Python
           href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot
-    - name: 'Design your bot'
-      items:
-        - name: 'Design overview'
-          href: bots/design/bots.md
     - name: 'How-to guides'
       expanded: true
       items:
@@ -273,10 +279,6 @@
   items:
     - name: 'What are Messaging Extensions?'
       href: messaging-extensions/what-are-messaging-extensions.md
-    - name: Design
-      items:
-      -  name: 'Messaging extensions design guidelines'
-         href: messaging-extensions/design/messaging-extension-design.md  
     - name: Quickstarts
       items:
         - name: 'With action command'
@@ -324,8 +326,6 @@
       href: task-modules-and-cards/what-are-cards.md
     - name: 'Cards'
       items:
-        - name: Design effective cards
-          href: task-modules-and-cards/cards/design-effective-cards.md
         - name: Format card text
           href: task-modules-and-cards/cards/cards-format.md
         - name: Add and respond to card actions
@@ -359,12 +359,6 @@
     href: apps-in-teams-meetings/teams-apps-in-meetings.md
   - name: Create apps for Teams meetings
     href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
-  - name: Design your in-meeting app
-    items:
-    - name: In-meeting dialog
-      href: apps-in-teams-meetings/design/designing-in-meeting-dialog.md
-    - name: In-meeting tab
-      href: apps-in-teams-meetings/design/designing-in-meeting-tab.md
 - name: 'Microsoft Graph REST API integration'
   items:
     - name: Resource Specific consent
