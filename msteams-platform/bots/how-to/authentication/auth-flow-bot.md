@@ -20,6 +20,8 @@ for an example that demonstrates authentication flow for bots using Node.js and 
     * Like other application auth flows in Teams, the start page must be in a domain that's on your `validDomains` list, and in the same domain as the post-login redirect page.
     * **IMPORTANT**: The OAuth 2.0 authorization code grant flow calls for a `state` parameter in the authentication request which contains a unique session token to prevent a [cross-site request forgery attack](https://en.wikipedia.org/wiki/Cross-site_request_forgery). The example uses a randomly-generated GUID.
 4. When the user selects the *signin* button, Teams opens a popup window and navigates to the start page.
+> [!NOTE]
+> The size of the popup can be controlled through width and height query string parameters in the URL. For example if you add width=500 and height=500, you'll get a popup that's 500x500 pixels. Teams will show the popup with the given pixel size, up to a maximum that's a percentage of the size of the main window.
 5. The start page redirects the user to the identity provider's `authorize` endpoint. ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/public/html/auth-start.html#L51-L56))
 6. On the provider's site, the user signs in and grants access to the bot.
 7. The provider takes the user to the bot's OAuth redirect page with an authorization code.
