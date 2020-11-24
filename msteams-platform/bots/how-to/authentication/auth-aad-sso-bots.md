@@ -78,7 +78,7 @@ Add new properties to your Microsoft Teams manifest:
 The request to get the token is a normal POST message request (using the existing message schema). It is included in the attachments of an OAuthCard. The schema for the OAuthCard class is defined in [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) and it is very similar to a sign-in card. Teams will treat this request as a silent token acquisition if the `TokenExchangeResource` property is populated on the card. For the Teams channel we honor only the `Id` property, which uniquely identifies a token request.
 
 >[!NOTE]
-> The `OAuthPrompt` or the `MultiProviderAuthDialog` for the Bot Framework is supported work for single sign-on (SSO) authentication.
+> The Bot Framework `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for single sign-on (SSO) authentication.
 
 If this is the first time the user is using your application and the user consent is required, the user will be shown a dialog to continue with the consent experience similar to the one below. When the user selects **Continue**, two different things occur depending on whether the bot is defined or not and a sign-in button on the OAuthCard.
 
