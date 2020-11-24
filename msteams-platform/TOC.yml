@@ -21,13 +21,16 @@
   - name: Build a messaging extension
     href: build-your-first-app/build-messaging-extension.md
 - name: Microsoft Teams Toolkit extension
+  expanded: true
   items:
   - name: Teams Toolkit extension for Visual Studio Code
     href: toolkit/visual-studio-code-overview.md
   - name: Tabs SSO with Toolkit extension for Visual Studio Code
     href: toolkit/visual-studio-code-tab-sso.md  
   - name: Teams Toolkit extension for Visual Studio
-    href: toolkit/visual-studio-overview.md    
+    href: toolkit/visual-studio-overview.md  
+- name: Production-ready app templates
+  href: samples/app-templates.md     
 - name: Tutorials and code samples
   items:
   - name: Create an app using C#
@@ -44,8 +47,6 @@
     href: samples/integrating-web-apps.md
   - name: Create low-code apps
     href: samples/teams-low-code-solutions.md
-  - name: Production-ready app templates
-    href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
     href: samples/shifts-wfm-connectors.md 
   - name: Create a Virtual Assistant for Teams
