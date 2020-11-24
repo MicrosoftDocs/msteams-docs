@@ -25,10 +25,10 @@
   items:
   - name: Teams Toolkit extension for Visual Studio Code
     href: toolkit/visual-studio-code-overview.md
-  - name: Tabs SSO with Toolkit extension for Visual Studio Code
-    href: toolkit/visual-studio-code-tab-sso.md  
   - name: Teams Toolkit extension for Visual Studio
     href: toolkit/visual-studio-overview.md  
+  - name: Tabs SSO with Toolkit extension for Visual Studio Code
+    href: toolkit/visual-studio-code-tab-sso.md  
 - name: Production-ready app templates
   href: samples/app-templates.md     
 - name: Tutorials and code samples
