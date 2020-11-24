@@ -43,7 +43,7 @@ The following steps: are required to develop an SSO Microsoft Teams bot:
 
 This step is similar to the [tab SSO flow](../../../tabs/how-to/authentication/auth-aad-sso.md):
 
-1. Get your [Azure AD Application ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in) of Teams desktop, Teams web, and Teams mobile.
+1. Get your [Azure AD Application ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in) for Teams desktop, Teams web, or Teams mobile client.
 2. Specify the permissions that your application needs for the Azure AD endpoint and, optionally, Microsoft Graph.
 3. [Grant permissions](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) for Teams desktop, web, and mobile applications.
 4. Add a client app by selecting the **Add a scope** button and in the panel that opens, enter `access_as_user` as the **Scope name**.
@@ -52,7 +52,7 @@ This step is similar to the [tab SSO flow](../../../tabs/how-to/authentication/a
 > The "access_as_user" scope used to add a client app is for "Administrators and users".
 
 > [!IMPORTANT]
-> * If you are building a standalone bot, set the Application ID URI to `api://botid-{YourBotId}` Here YourBotId refers to Azure AD Application ID.
+> * If you are building a standalone bot, set the Application ID URI to `api://botid-{YourBotId}` Here, **YourBotId** refers your Azure AD application ID.
 > * If you are building an app with a bot and a tab, set the Application ID URI to `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
 
 ### Update your app manifest
@@ -78,7 +78,7 @@ Add new properties to your Microsoft Teams manifest:
 The request to get the token is a normal POST message request (using the existing message schema). It is included in the attachments of an OAuthCard. The schema for the OAuthCard class is defined in [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) and it is very similar to a sign-in card. Teams will treat this request as a silent token acquisition if the `TokenExchangeResource` property is populated on the card. For the Teams channel we honor only the `Id` property, which uniquely identifies a token request.
 
 >[!NOTE]
-> `OAuthPrompt` or the `MultiProviderAuthDialog` of the Bot Framework will work for the purpose of the SSO.
+> The `OAuthPrompt` or the `MultiProviderAuthDialog` for the Bot Framework is supported work for single sign-on (SSO) authentication.
 
 If this is the first time the user is using your application and the user consent is required, the user will be shown a dialog to continue with the consent experience similar to the one below. When the user selects **Continue**, two different things occur depending on whether the bot is defined or not and a sign-in button on the OAuthCard.
 
