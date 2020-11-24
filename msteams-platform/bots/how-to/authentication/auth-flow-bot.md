@@ -2,8 +2,9 @@
 title: Microsoft Teams Authentication flow for bots
 description: Describes Microsoft Teams authentication flow in bots
 keywords: teams authentication flow bots
-ms.date: 03/01/2018
+ms.topic: overview
 ---
+
 # Authentication flow for bots in Microsoft Teams
 
 OAuth 2.0 is an open standard for authentication and authorization used by Azure Active Directory (Azure AD) and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams; [here's a good overview](https://aaronparecki.com/oauth-2-simplified/) that's easier to follow than the [formal specification](https://oauth.net/2/). Authentication flow for tabs and bots is a little different — tabs are very similar to websites so they can use OAuth 2.0 directly, while bots aren't and must do a few things differently — but the core concepts are identical.
