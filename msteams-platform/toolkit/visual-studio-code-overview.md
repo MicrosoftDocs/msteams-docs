@@ -2,9 +2,10 @@
 title: Build apps with the Microsoft Teams Toolkit and Visual Studio Code
 description: Get started building great custom apps directly within Visual Studio Code with the Microsoft Teams Toolkit
 keywords: teams visual studio code toolkit
-
+ms.topic: overview
+ms.author: lajanuar
 ---
-# Build apps with the Microsoft Teams Toolkit and Visual Studio Code
+# Build apps with the Teams Toolkit and Visual Studio Code
 
 The Microsoft Teams Toolkit enables you to create custom Teams apps directly within the Visual Studio Code environment. The toolkit guides you through the process and provides everything you need to build, debug, and launch your Teams app.
 
@@ -20,8 +21,6 @@ The Microsoft Teams Toolkit for Visual Studio Code is available for download fro
 - [Set up a new project](#set-up-a-new-teams-project)
 - [Import an existing project](#import-an-existing-teams-app-project)
 - [Configure your app](#configure-your-app)
-- [Package your app](#package-your-app)
-- [Run your app in Teams](#run-your-app-in-teams)
 - [Package your app](#package-your-app)
 - [Run your app locally or in Teams](#run-your-app)
 
@@ -61,11 +60,11 @@ When an app is installed, the Teams client parses the manifest file to determine
 
 1. To configure your app, navigate to the **Microsoft Teams Toolkit** tab in Visual Studio Code.
 1. Select **Edit app package** to view the **App details** page.
-1. Editing the fields in the App details page updates the contents of the manifest.json file that will ultimately ship as part of the app package. [Learn more](https://aka.ms/teams-toolkit-manifest)
+1. Editing the fields in the App details page updates the contents of the manifest.json file that will ultimately ship as part of the app package. *See* [App Studio manifest editor](https://aka.ms/teams-toolkit-manifest)
 
 ## Package your app
 
-Modifying your the **app details** page or updating the **manifest**, or **.env** files in your app's  **.publish** folder will automatically generate your **Development.zip** file. You'll need to include [two icons](../concepts/build-and-test/apps-package.md#icons) in that same folder.
+Modifying the **app details** page or updating the **manifest**, or **.env** files in your app's  **.publish** folder will automatically generate your **Development.zip** file. You'll need to include [two icons](../concepts/build-and-test/apps-package.md#icons) in that same folder.
 
 ## Run your app
 
@@ -75,12 +74,11 @@ Refer to the **Build and Run* content in your project homepage for detailed inst
 
 ### Enable development from localhost
 
-If you wish to debug your tab based app on localhost using https, you will need to tell your browser to trust the app being served from <https://localhost>. Navigate to <https://localhost:3000/tab>. If you see a warning indicating that the site isn't trusted, choose the option to proceed anyway. Your app should now be accessible from the Teams client.
+If you wish to debug your tab based app on localhost using HTTPS, you will need to tell your browser to trust the app being served from <https://localhost>. Navigate to <https://localhost:3000/tab>. If you see a warning indicating that the site isn't trusted, choose the option to proceed anyway. Your app should now be accessible from the Teams client.
 
 ### Run your app in Teams
 
-- Prerequisites:
-  - [Enable Teams developer preview mode](https://aka.ms/teams-toolkit-enable-devpreview)
+Prerequisites: [Enable Teams developer preview mode](https://aka.ms/teams-toolkit-enable-devpreview)
 
 1. Navigate to the activity bar on the left side of the Visual Studio Code window.
 1. Select the **Run** icon to display the **Run and Debug** view.
