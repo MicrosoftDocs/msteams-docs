@@ -283,7 +283,8 @@ Users with organizer and/or presenter roles add tabs to a meeting using the plus
 
 ✔ In your app manifest add **sidePanel** to the **context** array as described above.
 
-✔ In the meeting as well as in all scenarios, the app will be rendered in an in-meeting tab that is 320px in width. Your tab must be optimized for this. *See*, [FrameContext interface](https://docs.microsoft.com/en-us/javascript/api/@microsoft/teams-js/framecontext?view=msteams-client-js-latest)
+✔ In the meeting as well as in all scenarios, the app will be rendered in an in-meeting tab that is 320px in width. Your tab must be optimized for this. *See*, [FrameContext interface](https://docs.microsoft.com/en-us/javascript/api/@microsoft/teams-js/framecontext?view=msteams-client-js-latest&preserve-view=true
+)
 
 ✔Refer to the [Teams SDK](../tabs/how-to/access-teams-context.md#user-context) to use the **userContext** API to route requests accordingly.
 
