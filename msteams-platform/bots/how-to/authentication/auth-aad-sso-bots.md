@@ -43,13 +43,16 @@ The following steps: are required to develop an SSO Microsoft Teams bot:
 
 This step is similar to the [tab SSO flow](../../../tabs/how-to/authentication/auth-aad-sso.md):
 
-1. Get your [Azure AD Application ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
+1. Get your [Azure AD Application ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in) of Teams desktop, Teams web, and Teams mobile.
 2. Specify the permissions that your application needs for the Azure AD endpoint and, optionally, Microsoft Graph.
 3. [Grant permissions](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) for Teams desktop, web, and mobile applications.
-4. Pre-authorize Teams by selecting the **Add a scope** button and in the panel that opens, enter `access_as_user` as the **Scope name**.
+4. Add a client app by selecting the **Add a scope** button and in the panel that opens, enter `access_as_user` as the **Scope name**.
+
+>[!NOTE]
+> The "access_as_user" scope used to add a client app is for "Administrators and users".
 
 > [!IMPORTANT]
-> * If you are building a standalone bot, set the Application ID URI to `api://botid-{YourBotId}` .
+> * If you are building a standalone bot, set the Application ID URI to `api://botid-{YourBotId}` Here YourBotId refers to Azure AD Application ID.
 > * If you are building an app with a bot and a tab, set the Application ID URI to `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
 
 ### Update your app manifest
@@ -73,6 +76,9 @@ Add new properties to your Microsoft Teams manifest:
 ### Request a bot token
 
 The request to get the token is a normal POST message request (using the existing message schema). It is included in the attachments of an OAuthCard. The schema for the OAuthCard class is defined in [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) and it is very similar to a sign-in card. Teams will treat this request as a silent token acquisition if the `TokenExchangeResource` property is populated on the card. For the Teams channel we honor only the `Id` property, which uniquely identifies a token request.
+
+>[!NOTE]
+> `OAuthPrompt` or the `MultiProviderAuthDialog` of the Bot Framework will work for the purpose of the SSO.
 
 If this is the first time the user is using your application and the user consent is required, the user will be shown a dialog to continue with the consent experience similar to the one below. When the user selects **Continue**, two different things occur depending on whether the bot is defined or not and a sign-in button on the OAuthCard.
 
@@ -111,14 +117,14 @@ The response with the token is sent through an invoke activity with the same sch
 **C# code to respond to handle the invoke activity**:
 
 ```csharp
-protected override async Task<InvokeResponse> OnInvokeActivity
+protected override async Task<InvokeResponse> OnInvokeActivityAsync
   (ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
         {
             try
             {
                 if (turnContext.Activity.Name == SignInConstants.TokenExchangeOperationName && turnContext.Activity.ChannelId == Channels.Msteams)
                 {
-                    await OnTokenResponse(turnContext, cancellationToken);
+                    await OnTokenResponseEventAsync(turnContext, cancellationToken);
                     return new InvokeResponse() { Status = 200 };
                 }
                 else
@@ -150,6 +156,10 @@ The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet
 > * Enter a name for your new Connection Setting. This will be the name that gets referenced inside the settings of your bot service code in **step 5**.
 > * In the Service Provider dropdown, select **Azure Active Directory V2**.
 >* Enter the client credentials for the AAD application.
+
+>[!NOTE]
+> **Implicit grant** may be required in the AAD application.
+
 >* For the Token Exchange URL, use the scope value defined in the previous step of your AAD application. The presence of the Token Exchange URL is indicating to the SDK that this AAD application is configured for SSO.
 >* Specify "common" as the **Tenant ID**.
 >* Add all the scopes configured when specifying permissions to downstream APIs for your AAD application. With the client id and client secret provided, token store will exchange the token for a graph token with defined permissions for you.
