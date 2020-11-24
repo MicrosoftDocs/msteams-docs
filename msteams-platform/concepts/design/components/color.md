@@ -47,6 +47,9 @@ See the Pen [Microsoft Teams design guidelines - dark theme color ramp](https://
 <iframe height='798' scrolling='no' title='Microsoft Teams design guidelines - dark theme color ramp' src='//codepen.io/msteams/embed/BmBwjx/?height=846&theme-id=31655&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/msteams/pen/BmBwjx/'>Microsoft Teams design guidelines - dark theme color ramp</a> by Microsoft Teams (<a href='https://codepen.io/msteams'>@msteams</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
+> **Note:** The msteams-ui-styles-core library has the actual values coded as variables. These variables will be helpful if the colors are ever updated.
+
+
 ### Other dark theme colors
 
 See the Pen [Microsoft Teams design guidelines - other dark theme colors](https://codepen.io/msteams/pen/zPOEXN/) on CodePen.

@@ -273,6 +273,7 @@ The `conversationUpdate` event with the `membersRemoved` object in the payload i
 
 #### Schema example: User removed from meeting
 
+```
 {   
       "membersRemoved": 
         {  
@@ -306,7 +307,8 @@ The `conversationUpdate` event with the `membersRemoved` object in the payload i
           "id": "MCMxOTptZWV0aW5nX01XSmxOR1ZpT1RndE1HRXhZaTAwTkRBM0xXRXhPRGd0T1RaaE1XTmxZak00WlRSakB0aHJlYWQudjIjMA=="   
         }   
       }   
-}   
+}
+```
 
 ## Team name updates
 
