@@ -42,7 +42,7 @@ During setup, the toolkit initially configured your tab content page, which is w
 
 The app scaffolding provides the components for rendering your personal tab in Teams. There's a lot you can work with, but for now you only need to focus on the following:
 
-* `Tab.js` file in the `src/components` directory of your project. This is for for rendering your tab content page.
+* `Tab.js` file in the `src/components` directory of your project. This is for rendering your tab content page.
 * Microsoft Teams JavaScript client SDK, which comes pre-loaded in your project's front-end components.
 
 ## 2. Customize your tab content page
