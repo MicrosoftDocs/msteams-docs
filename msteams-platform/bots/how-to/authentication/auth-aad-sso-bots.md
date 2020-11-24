@@ -52,7 +52,7 @@ This step is similar to the [tab SSO flow](../../../tabs/how-to/authentication/a
 > The "access_as_user" scope used to add a client app is for "Administrators and users".
 
 > [!IMPORTANT]
-> * If you are building a standalone bot, set the Application ID URI to `api://botid-{YourBotId}` Here, **YourBotId** refers your Azure AD application ID.
+> * If you are building a standalone bot, set the Application ID URI to `api://botid-{YourBotId}` Here, **YourBotId** refers to your Azure AD application ID.
 > * If you are building an app with a bot and a tab, set the Application ID URI to `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
 
 ### Update your app manifest
