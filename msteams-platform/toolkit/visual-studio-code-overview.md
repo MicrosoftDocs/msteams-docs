@@ -22,7 +22,7 @@ The Microsoft Teams Toolkit for Visual Studio Code is available for download fro
 - [Configure your app](#configure-your-app)
 - [Package your app](#package-your-app)
 - [Run your app in Teams](#run-your-app-in-teams)
-- [Publish your app](#publish-your-app-to-teams)
+- [Package your app](#package-your-app)
 - [Run your app locally or in Teams](#run-your-app)
 
 ## Set up a new Teams project
