@@ -22,8 +22,8 @@ The Microsoft Teams Toolkit for Visual Studio Code is available for download fro
 - [Configure your app](#configure-your-app)
 - [Package your app](#package-your-app)
 - [Run your app in Teams](#run-your-app-in-teams)
-- [Validate your app](#validate-your-app)
 - [Publish your app](#publish-your-app-to-teams)
+- [Run your app locally or in Teams](#run-your-app)
 
 ## Set up a new Teams project
 
@@ -67,15 +67,17 @@ When an app is installed, the Teams client parses the manifest file to determine
 
 Modifying your the **app details** page or updating the **manifest**, or **.env** files in your app's  **.publish** folder will automatically generate your **Development.zip** file. You'll need to include [two icons](../concepts/build-and-test/apps-package.md#icons) in that same folder.
 
-## Install and run your app locally
+## Run your app
+
+### Install and run your app locally
 
 Refer to the **Build and Run* content in your project homepage for detailed instructions on how to package and test your app. In general, you need to install your app's server, get it running, then setup a tunneling solution so that Teams can access content running from localhost.
 
-## Enabling development from localhost
+### Enable development from localhost
 
-If you wish to debug your tab based app on localhost using https, you will need to tell your browser to trust the app being served from https://localhost. Navigate to <https://localhost:3000/tab>. If you see a warning indicating that the site isn't trusted, choose the option to proceed anyway. Your app should now be accessible from the Teams client.
+If you wish to debug your tab based app on localhost using https, you will need to tell your browser to trust the app being served from <https://localhost>. Navigate to <https://localhost:3000/tab>. If you see a warning indicating that the site isn't trusted, choose the option to proceed anyway. Your app should now be accessible from the Teams client.
 
-## Run your app in Teams
+### Run your app in Teams
 
 - Prerequisites:
   - [Enable Teams developer preview mode](https://aka.ms/teams-toolkit-enable-devpreview)
