@@ -40,11 +40,6 @@ The `color` icon is used throughout Microsoft Teams (in app and tab galleries, b
 
 The `outline` icon is used in these places: the app bar and messaging extensions the user has marked as a "favorite." This icon must be 32x32 pixels. Your outline icon must contain only white and transparency (no other colors). The icon can be white with transparent background or transparent with a white background. The outline icon should not have extra padding surrounding the icon and should be as tightly cropped as possible while still maintaining the 32x32 dimensions. Here are a few good examples:
 
-> [!TIP]
->  * Color must be "White" in RGB, (Red: 255, Green: 255, Blue: 255).
->  * All other part of icon should be transparent.
->  * For passing, small icon must be full transparent, Alpha channel to be 0 and any other value is a fail.
-
 ![Sample outline icons](~/assets/images/icons/sample20x20s.png)
 
 For example, say your company is Contoso. You'd submit two icons:
@@ -64,3 +59,9 @@ Here's how the icons would appear in the UI:
 #### App bar and home screen
 
 ![Sample Contoso app bar homescreen](~/assets/images/icons/appbarhomescreen.png)
+
+#### Guidance to create transparent icon
+
+* Color must be "White" in RGB, (Red: 255, Green: 255, Blue: 255).
+* All other part of icon should be transparent.
+* For passing, small icon must be full transparent, Alpha channel to be 0 and any other value is a fail.
