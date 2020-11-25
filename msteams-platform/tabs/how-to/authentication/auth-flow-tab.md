@@ -29,7 +29,7 @@ For an example that demonstrates authentication flow for tabs and bots using Nod
 
 ## Treat tab context as hints
 
-Although the tab context provides useful information regarding the user, don't use this information to authenticate the user whether you get it as URL parameters to your tab content URL or by calling the `microsoftTeams.getContext()` function in the Microsoft Teams client SDK. A malicious actor could invoke your tab content URL with its own parameters, and a web page impersonating Microsoft Teams could load your tab content URL in an iframe and return its own data to the `getContext()` function. You should treat the identity-related information in the tab context simply as hints and validate them before use. Refer to the notes in [Navigate to the authorization page from your popup page](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page).
+Although the tab context provides useful information regarding the user, don't use this information to authenticate the user whether you get it as URL parameters to your tab content URL or by calling the `microsoftTeams.getContext()` function in the Microsoft Teams client SDK. A malicious actor could invoke your tab content URL with its own parameters, and a web page impersonating Microsoft Teams could load your tab content URL in an iframe and return its own data to the `getContext()` function. You should treat the identity-related information in the tab context simply as hints and validate them before use. Refer to the notes in [Navigate to the authorization page from your popup page](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page).
 
 ## Samples
 
@@ -42,5 +42,5 @@ For sample code showing the tab authentication process see:
 
 For a detailed implementation walkthrough for tab authentication targeting Azure Active Directory see:
 
-* [Authenticate a user in a Microsoft Teams tab](~/tabs/how-to/authentication/auth-tab-aad.md)
+* [Authenticate a user in a Microsoft Teams tab](~/tabs/how-to/authentication/auth-tab-AAD.md)
 * [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md)
