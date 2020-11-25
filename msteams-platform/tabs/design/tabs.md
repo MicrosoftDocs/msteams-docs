@@ -166,7 +166,7 @@ Secondary and tertiary pages in a tab should be opened in an L2/L3 view in the m
 
 ### No link to external browser
 
-Link targets in tabs should not link to an external browser but should link to div elements contained within Teams, e.g., inside task Modules, tabs, etc.
+Link targets in tabs should not link to an external browser but should link to div elements contained within Teams. For example, inside task Modules, tabs, etc.
 
 ## Notifications for tabs
 
