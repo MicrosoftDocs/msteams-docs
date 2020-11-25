@@ -15,42 +15,52 @@ Quickly learn about the fundamentals of Teams app design. For more information a
 
 :::row:::
 
-   :::column span="":::
+   :::column span="3":::
 
-      A 4-pixel base unit allows components to scale consistently across display sizes. In this example, the corner radius of the buttons also use 4 pixels.
+      Teams relies on a grid layout to ensure consistent and elegant relationships between design components.
 
-      <a href="https://www.figma.com/file/UwN095fVIvwZDNtzTtUE3E/?node-id=1%3A2" target="_blank">See more in the design kit (Figma)</a>
+      The grid’s 4-pixel base unit allows components to scale consistently across all display sizes in Teams.
+
+      <a href="https://www.figma.com/file/UwN095fVIvwZDNtzTtUE3E/?node-id=1%3A2" target="_blank">See more in the Microsoft Teams UI Design Kit (Figma)</a>
 
    :::column-end:::
-   :::column span="2":::
-      :::image type="content" source="../../assets/images/design-basics/teams-design-layout.png" alt-text="<alt text>" border="false":::
+   :::column span="1":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-layout.png" alt-text="<alt text>" border="false":::
    :::column-end:::
+
 :::row-end:::
 
 ## Colors
 
-For a consistent experience, apply Teams color principles and schemes to your app.
+:::row:::
 
-<a href="https://www.figma.com/file/UwN095fVIvwZDNtzTtUE3E/?node-id=1%3A3" target="_blank">See the design kit (Figma)</a>
+   :::column span="3":::
 
-<a href="https://fluentsite.z22.web.core.windows.net/colors" target="_blank">See the Fluent color palette and scheme</a> :::image type="icon" source="../../assets/icons/fluent_logo_regular.svg":::
+      Teams web and desktop supports default (light), dark, and high-contrast themes, while Teams mobile supports light and dark themes. Each theme has its own color scheme.
+
+      <a href="https://www.figma.com/file/UwN095fVIvwZDNtzTtUE3E/?node-id=1%3A2" target="_blank">See color guidelines and tokens in the Microsoft Teams UI Design Kit (Figma)</a>
+
+   :::column-end:::
+   :::column span="1":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-color.png" alt-text="<alt text>" border="false":::
+   :::column-end:::
+
+:::row-end:::
 
 ## Avatars
 
 :::row:::
 
-   :::column span="":::
+   :::column span="1":::
 
-      An avatar is a graphical representation of a user, team, or entity. The medium avatar (32x32 pixels) is the default size in most components.
-
-      <a href="https://www.figma.com/file/UwN095fVIvwZDNtzTtUE3E/?node-id=383%3A10115" target="_blank">See more in the design kit (Figma)</a>
-
-      <a href="https://fluentsite.z22.web.core.windows.net/colors" target="_blank">Try it in Fluent</a> :::image type="icon" source="../../assets/icons/fluent_logo_regular.svg":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-avatars.png" alt-text="<alt text>" border="false":::
 
    :::column-end:::
-   :::column span="2":::
+   :::column span="3":::
 
-      :::image type="content" source="../../assets/images/design-basics/teams-design-avatars.png" alt-text="<alt text>" border="false":::
+      An avatar is a graphical representation of a person, team, bot, or entity in Teams. An avatar group is often used to convey live activity or a represent a roster in a way that preserves vertical space. 
+
+      <a href="https://www.figma.com/file/UwN095fVIvwZDNtzTtUE3E/?node-id=383%3A10115" target="_blank">See more in the Microsoft Teams UI Design Kit (Figma)</a>
 
    :::column-end:::
 :::row-end:::
