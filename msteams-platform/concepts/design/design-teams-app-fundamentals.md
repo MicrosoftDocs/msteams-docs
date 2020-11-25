@@ -9,8 +9,6 @@ ms.topic: overview
 
 Quickly learn about the fundamentals of Teams app design. For more information and examples, see the <a href="" target="_blank">Microsoft Teams UI Design Kit (Figma)</a>.
 
-[GRAPHICS WILL BE ABSTRACT]
-
 ## Layout
 
 :::row:::
