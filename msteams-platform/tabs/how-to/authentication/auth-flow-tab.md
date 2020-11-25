@@ -11,7 +11,7 @@ keywords: teams authentication flow tabs
 
 OAuth 2.0 is an open standard for authentication and authorization used by Azure AD and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams; [here's a good overview](https://aaronparecki.com/oauth-2-simplified/) that's easier to follow than the [formal specification](https://oauth.net/2/). Authentication flow for tabs and bots are a little different because tabs are very similar to websites so they can use OAuth 2.0 directly; bots are not and must do a few things differently, but the core concepts are identical.
 
-For an example that demonstrates authentication flow for tabs and bots using Node using the [OAuth 2.0 implicit grant type](https://oauth.net/2/grant-types/implicit/). Refer [Initiate authentication flow for tabs](~/tabs/how-to/authentication/auth-tab-aad.md#Initiateauthenticationflow).
+For an example that demonstrates authentication flow for tabs and bots using Node using the [OAuth 2.0 implicit grant type](https://oauth.net/2/grant-types/implicit/). Refer [Initiate authentication flow for tabs](../auth-tab-aad.md#Initiateauthenticationflow).
 
 ![Tab authentication sequence diagram](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
@@ -29,7 +29,7 @@ For an example that demonstrates authentication flow for tabs and bots using Nod
 
 ## Treat tab context as hints
 
-Although the tab context provides useful information regarding the user, don't use this information to authenticate the user whether you get it as URL parameters to your tab content URL or by calling the `microsoftTeams.getContext()` function in the Microsoft Teams client SDK. A malicious actor could invoke your tab content URL with its own parameters, and a web page impersonating Microsoft Teams could load your tab content URL in an iframe and return its own data to the `getContext()` function. You should treat the identity-related information in the tab context simply as hints and validate them before use. Refer to the notes in [Navigate to the authorization page from your popup page](~/tabs/how-to/authentication/auth-tab-aad.md#Navigate to the authorization page from your popup page)
+Although the tab context provides useful information regarding the user, don't use this information to authenticate the user whether you get it as URL parameters to your tab content URL or by calling the `microsoftTeams.getContext()` function in the Microsoft Teams client SDK. A malicious actor could invoke your tab content URL with its own parameters, and a web page impersonating Microsoft Teams could load your tab content URL in an iframe and return its own data to the `getContext()` function. You should treat the identity-related information in the tab context simply as hints and validate them before use. Refer to the notes in [Navigate to the authorization page from your popup page](../auth-tab-aad.md#Navigatetotheauthorizationpagefromyourpopuppage).
 
 ## Samples
 
