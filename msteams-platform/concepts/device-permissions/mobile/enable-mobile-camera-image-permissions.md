@@ -121,4 +121,4 @@ media.getMedia((error: microsoftTeams.SdkError, blob: Blob) => {
 ```
 
 > [!div class="nextstepaction"]
-> [Learn more:  Request device permissions for your Microsoft Teams tab](.././../tabs/how-to/native-device-permissions.md?tabs=desktop#device-permissions)
+> [Learn more:  Request device permissions for your Microsoft Teams tab](../../../tabs/how-to/native-device-permissions.md?tabs=desktop#device-permissions)
