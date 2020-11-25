@@ -42,6 +42,12 @@ The `outline` icon is used in these places: the app bar and messaging extensions
 
 ![Sample outline icons](~/assets/images/icons/sample20x20s.png)
 
+[!TIP to create transparent icon]
+
+* Color must be "White" in RGB, (Red: 255, Green: 255, Blue: 255).
+* All other part of icon should be transparent.
+* For passing, small icon must be full transparent, Alpha channel to be 0 and any other value is a fail.
+
 For example, say your company is Contoso. You'd submit two icons:
 
 ![Icon showcase](~/assets/images/framework/framework_submit_icon.png)
@@ -59,9 +65,3 @@ Here's how the icons would appear in the UI:
 #### App bar and home screen
 
 ![Sample Contoso app bar homescreen](~/assets/images/icons/appbarhomescreen.png)
-
-#### Guidance to create transparent icon
-
-* Color must be "White" in RGB, (Red: 255, Green: 255, Blue: 255).
-* All other part of icon should be transparent.
-* For passing, small icon must be full transparent, Alpha channel to be 0 and any other value is a fail.
