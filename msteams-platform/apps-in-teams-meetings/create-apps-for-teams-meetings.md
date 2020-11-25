@@ -117,6 +117,7 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
   "conversation":
   {
       "id": "<conversation id>"
+      "isGroup":true
   }
 }
 ```
