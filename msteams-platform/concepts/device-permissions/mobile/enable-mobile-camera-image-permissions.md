@@ -103,21 +103,21 @@ let y = attachments[0];
 **Calling `getMedia` API from a web app**
 
 ```javascript
-let media: microsoftTeams.Media = attachments[0]     
+let media: microsoftTeams.Media = attachments[0]
 media.getMedia((error: microsoftTeams.SdkError, blob: Blob) => {
-        if (blob) {
-          if (blob.type.includes("image")) {
-          img.src = (URL.createObjectURL(blob));
-          }
-      }
-      if (error) {
-          if (error.message) {
+    if (blob) {
+        if (blob.type.includes("image")) {
+            img.src = (URL.createObjectURL(blob));
+        }
+    }
+    if (error) {
+        if (error.message) {
             alert(" ErrorCode: " + error.errorCode + error.message);
-          } else {
+        } else {
             alert(" ErrorCode: " + error.errorCode);
-          }
-      }
-      });
+        }
+    }
+});
 ```
 
 > [!div class="nextstepaction"]
