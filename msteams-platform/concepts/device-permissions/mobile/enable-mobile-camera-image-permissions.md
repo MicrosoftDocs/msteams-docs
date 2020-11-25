@@ -1,12 +1,12 @@
 ---
-title: Enable native camera and image capabilities in Teams
-description: How to use Teams Javascript client SDK to enable camera and image capabilities
-keywords: camera image capabilities
+title: Enable mobile device camera and image permissions in Teams
+description: How to use Teams Javascript client SDK to enable native camera and image capabilities
+keywords: camera image capabilities native device permissions
 ms.topic: conceptual
 ms.author: lajanuar
 ---
 
-# Enable native camera and image capabilities in Teams
+# Enable mobile device camera and image permissions in Teams
 
 You can use the  [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), to easily integrate camera and image capabilities within your Microsoft Teams app. The SDK provides the tools necessary for your app to access a user’s [device permissions](../../tabs/how-to/native-device-permissions.md?tabs=desktop#device-permissions) and build a richer experience.
 

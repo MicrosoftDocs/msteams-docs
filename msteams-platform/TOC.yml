@@ -95,8 +95,6 @@
         href: concepts/build-and-test/apps-localization.md
       - name: Create a Share-to-Teams button for your website
         href: concepts/build-and-test/share-to-teams.md
-      - name: Enable native camera image capabilities
-        href: concepts/build-and-test/enable-camera-image-capabilities.md
     - name: 'Deploy and publish your app'
       items:
       - name: Choose your distribution methods
@@ -133,6 +131,12 @@
           href: concepts/authentication/authentication.md
         - name: 'Configure identity providers'
           href: concepts/authentication/configure-identity-provider.md
+    - name: 'Enable device permissions'
+      items:
+      - name: mobile
+        items:
+        - name: Enable native camera and image permissions
+          href: concepts/device-permissions/mobile/enable-mobile-camera-image-permissions.md
 - name: 'Tabs — embedded web experiences'
   items:
     - name: 'What are custom tabs?'
