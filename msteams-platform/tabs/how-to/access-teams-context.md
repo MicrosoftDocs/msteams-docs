@@ -20,7 +20,7 @@ Context about the user, team or company can be especially useful when
 * You want to initiate an authentication flow against Azure Active Directory or other identity provider, and you don't want to require the user to enter their username again. (For more information on authenticating within your Microsoft Teams tab, see [Authenticate a user in your Microsoft Teams tab](~/concepts/authentication/authentication.md).)
 
 > [!IMPORTANT]
-> Although this user information can help provide a smooth user experience, you should *not* use it as proof of identity. For example, an attacker could you load your page in a "bad browser" and provide it with any information they want.
+> Although this user information can help provide a smooth user experience, you should *not* use it as proof of identity. For example, an attacker could load your page in a "bad browser" and provide it with any information they want.
 
 ## Accessing context
 
@@ -103,6 +103,9 @@ When your content page is loaded in a private channel, the data you receive from
 * `teamSiteUrl` - Set to the URL of a distinct, unique SharePoint site for the private channel
 * `teamSitePath` - Set to the path of a distinct, unique SharePoint site for the private channel
 * `teamSiteDomain` - Set to the domain of a distinct, unique SharePoint site domain for the private channel
+
+> [!Note]
+>  teamSiteUrl works well for standard channels also.
 
 ## Theme change handling
 
