@@ -11,7 +11,9 @@ You can create links to information and features within the Teams client. Exampl
 * Navigating the user to content within one of your app's tabs. For instance, your app may have a bot that sends messages notifying the user of an important activity. When the user taps on the notification, the deep link navigates to the tab so the user can view more details about the activity.
 * Your app automates or simplifies certain user tasks, such as creating a chat or scheduling a meeting, by pre-populating the deep links with required parameters. This avoids the need for users to manually enter information.
 
-> [!NOTE] The deeplink launches the browser first before navigating to content and information for the following:
+> [!NOTE] 
+
+> The deeplink launches the browser first before navigating to content and information for the following:
 
 > **Tab**: Directly navigates to deeplink url
 
