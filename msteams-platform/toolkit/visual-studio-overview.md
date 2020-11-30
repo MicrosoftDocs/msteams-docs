@@ -14,7 +14,7 @@ The Microsoft Teams Toolkit enables you to create custom Teams apps directly wit
 
 1. [Enable developer preview](../resources/dev-preview/developer-preview-intro.md#enable-developer-preview)
 
-1. Make sure that the **<span>ASP.NE</span>T and web development module** has been added to your Visual Studio instance. You can check by following the steps in the [Modify Visual Studio by adding or removing workloads and component](/visualstudio/install/modify-visual-studio?view=vs-2019) documentation.
+1. Make sure that the **<span>ASP.NE</span>T and web development module** has been added to your Visual Studio instance. You can check by following the steps in the [Modify Visual Studio by adding or removing workloads and component](/visualstudio/install/modify-visual-studio?view=vs-2019&preserve-view=true) documentation.
 
 ![visual studio asp.net module](../assets/images/visual-studio-web-dev-module.png)
 
