@@ -9,7 +9,8 @@ ms.author: lajanuar
 # Mobile device camera and image permissions in Teams
 
 >[!IMPORTANT]
-> At present, Teams support for camera and image capabilities is only available for mobile clients.
+> * At present, Teams support for camera and image capabilities is only available for mobile clients.
+>* The `selectMedia`, `getMedia`, and `viewImages` APIs can be invoked from multiple Teams surfaces such as task modules, tabs, and personal apps. For more details, _see_ [Entry points for Teams apps](../../..concepts/extensibility-points)
 
 You can use the  [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), to easily integrate camera and image capabilities within your Microsoft Teams mobile app. The SDK provides the tools necessary for your app to access a user’s [device permissions](native-device-permissions.md?tabs=desktop#device-permissions) and build a richer experience.
 
@@ -35,7 +36,7 @@ Update your Teams app [manifest.json](../../../resources/schema/manifest-schema.
 ```
 
 > [!NOTE]
-> The permission prompt is automatically displayed when a relevant Teams API is initiated. For more details, *see* [permission behavior across login sessions](native-device-permissions.md#permission-behavior-across-login-sessions).
+> The _Request Permissions_ prompt is automatically displayed when a relevant Teams API is initiated. For more details, *see* [permission behavior across login sessions](native-device-permissions.md#permission-behavior-across-login-sessions).
 
 ## Using camera and image capability APIs
 
@@ -69,41 +70,41 @@ You should understand the API response error codes and handle them appropriately
 
 ## Sample code snippets
 
-**Calling `selectMedia` API from a web app**
+**Calling `selectMedia` API**
 
 ```javascript
-let imageProp: ImageProps = {
-    sources: [SelectImageSource.Camera, SelectImageSource.Gallery],
-    startMode: SelectImageMode.Photo,
+let imageProp: microsoftTeams.media.ImageProps = {
+    sources: [microsoftTeams.media.Source.Camera, microsoftTeams.media.Source.Gallery],
+    startMode: microsoftTeams.media.CameraStartMode.Photo,
     ink: false,
     cameraSwitcher: false,
     textSticker: false,
     enableFilter: true,
 };
-let mediaInput: MediaInputs = {
-    mediaType: MediaType.Image,
+let mediaInput: microsoftTeams.media.MediaInputs = {
+    mediaType: microsoftTeams.media.MediaType.Image,
     maxMediaCount: 10,
     imageProps: imageProp
 };
-microsoftTeams.selectMedia(mediaInput, (error: microsoftTeams.SdkError, attachments: microsoftTeams.Media[]) => {
-          if (error) {
-            if (error.message) {
-              alert(" ErrorCode: " + error.errorCode + error.message);
-            } else {
-              alert(" ErrorCode: " + error.errorCode);
-            }
+microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
+    if (error) {
+        if (error.message) {
+            alert(" ErrorCode: " + error.errorCode + error.message);
+        } else {
+            alert(" ErrorCode: " + error.errorCode);
         }
+    }
     if (attachments) {
-let y = attachments[0];
-          img.src = ("data:" + y.mimeType + ";base64," + y.preview);
+        let y = attachments[0];
+        img.src = ("data:" + y.mimeType + ";base64," + y.preview);
     }
 });
 ```
 
-**Calling `getMedia` API from a web app**
+**Calling `getMedia` API**
 
 ```javascript
-let media: microsoftTeams.Media = attachments[0]
+let media: microsoftTeams.media.Media = attachments[0]
 media.getMedia((error: microsoftTeams.SdkError, blob: Blob) => {
     if (blob) {
         if (blob.type.includes("image")) {
@@ -118,6 +119,75 @@ media.getMedia((error: microsoftTeams.SdkError, blob: Blob) => {
         }
     }
 });
+```
+
+**Calling `viewImages`  API by ID**
+
+```javascript
+view images by id:
+    assumption: attachmentArray = select Media API Outputlet uriList = [];
+if (attachmentArray && attachmentArray.length > 0) {
+    for (let i = 0; i < attachmentArray.length; i++) {
+        let file = attachmentArray[i];
+        if (file.mimeType.includes("image")) {
+            let imageUri = {
+                value: file.content,
+                type: 1,
+            }
+            uriList.push(imageUri);
+        } else {
+            alert("File type is not image");
+        }
+    }
+}
+if (uriList.length > 0) {
+    microsoftTeams.media.viewImages(uriList, (error: microsoftTeams.SdkError) => {
+        if (error) {
+            if (error.message) {
+                output(" ErrorCode: " + error.errorCode + error.message);
+            } else {
+                output(" ErrorCode: " + error.errorCode);
+            }
+        }
+    });
+} else {
+    output("Url list is empty");
+}
+```
+
+**Calling viewImages API by URL**
+
+```javascript
+View Images by URL:
+    // Assumption 2 urls, url1 and url2let uriList = [];
+    if (URL1 != null && URL1.length > 0) {
+        let imageUri = {
+            value: URL1,
+            type: 2,
+        }
+        uriList.push(imageUri);
+    }
+if (URL2 != null && URL2.length > 0) {
+    let imageUri = {
+        value: URL2,
+        type: 2,
+    }
+    uriList.push(imageUri);
+}
+if (uriList.length > 0) {
+    microsoftTeams.media.viewImages(uriList, (error: microsoftTeams.SdkError) => {
+        if (error) {
+            if (error.message) {
+                output(" ErrorCode: " + error.errorCode + error.message);
+            } else {
+                output(" ErrorCode: " + error.errorCode);
+            }
+        }
+    });
+} else {
+    output("Url list is empty");
+}
+}
 ```
 
 > [!div class="nextstepaction"]
