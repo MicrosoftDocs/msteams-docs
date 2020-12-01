@@ -1,17 +1,17 @@
 ---
-title: Enable mobile device camera and image permissions in Teams
+title: Mobile device camera and image permissions in Teams
 description: How to use Teams Javascript client SDK to enable native camera and image capabilities
 keywords: camera image capabilities native device permissions
 ms.topic: conceptual
 ms.author: lajanuar
 ---
 
-# Enable mobile device camera and image permissions in Teams
+# Mobile device camera and image permissions in Teams
 
 >[!IMPORTANT]
 > At present, Teams support for camera and image capabilities is only available for mobile clients.
 
-You can use the  [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), to easily integrate camera and image capabilities within your Microsoft Teams mobile app. The SDK provides the tools necessary for your app to access a user’s [device permissions](../../../tabs/how-to/native-device-permissions.md?tabs=desktop#device-permissions) and build a richer experience.
+You can use the  [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), to easily integrate camera and image capabilities within your Microsoft Teams mobile app. The SDK provides the tools necessary for your app to access a user’s [device permissions](native-device-permissions.md?tabs=desktop#device-permissions) and build a richer experience.
 
 The [selectMedia](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true), [getMedia](/javascript/api/@microsoft/teams-js/_media?view=msteams-client-js-latest#getMedia__error__SdkError__blob__Blob_____void_&preserve-view=true), and [viewImages](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#viewImages_ImageUri_____error___SdkError_____void_&preserve-view=true) APIs enable you to use native camera/image capabilities as follows:
 
@@ -35,7 +35,7 @@ Update your Teams app [manifest.json](../../../resources/schema/manifest-schema.
 ```
 
 > [!NOTE]
-> The permission prompt is automatically displayed when a relevant Teams API is initiated. For more details, *see* [permission behavior across login sessions](../../../tabs/how-to/native-device-permissions.md#permission-behavior-across-login-sessions).
+> The permission prompt is automatically displayed when a relevant Teams API is initiated. For more details, *see* [permission behavior across login sessions](native-device-permissions.md#permission-behavior-across-login-sessions).
 
 ## Using camera and image capability APIs
 
@@ -121,4 +121,4 @@ media.getMedia((error: microsoftTeams.SdkError, blob: Blob) => {
 ```
 
 > [!div class="nextstepaction"]
-> [Learn more:  Request device permissions for your Microsoft Teams tab](../../../tabs/how-to/native-device-permissions.md?tabs=desktop#device-permissions)
+> [Learn more:  Request device permissions for your Microsoft Teams tab](native-device-permissions.md?tabs=desktop#device-permissions)

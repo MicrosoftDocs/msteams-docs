@@ -131,12 +131,6 @@
           href: concepts/authentication/authentication.md
         - name: 'Configure identity providers'
           href: concepts/authentication/configure-identity-provider.md
-    - name: 'Enable device permissions'
-      items:
-      - name: mobile
-        items:
-        - name: Enable native camera and image permissions
-          href: concepts/device-permissions/mobile/enable-mobile-camera-image-permissions.md
 - name: 'Tabs — embedded web experiences'
   items:
     - name: 'What are custom tabs?'
@@ -198,8 +192,12 @@
           href: tabs/how-to/developer-tools.md
         - name: 'Add your custom tab to SharePoint'
           href: tabs/how-to/tabs-in-sharepoint.md
-        - name: Request device permissions
-          href: tabs/how-to/native-device-permissions.md          
+        - name: Enable device capabilities
+          items:
+          - name:  Request device permissions
+            href: tabs/how-to/device-capabilities/native-device-permissions.md    
+          - name:   'Mobile device camera and image permissions in Teams'
+            href: tabs/how-to/device-capabilities/mobile-camera-image-permissions.md             
 - name: 'Bots — conversation-based interactions'
   items:
     - name: What are bots in Microsoft Teams?

@@ -18,8 +18,8 @@ You might want to enrich your tab with features that require access native devic
 > [!IMPORTANT]
 >
 > * Currently, Teams mobile client only supports `camera` and `location`  through native device capabilities and is available on all app constructs including tabs. </br>
-> * Support for `camera` image capture is enabled by the [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-).
-> * The [**geolocation API**](../../resources/schema/manifest-schema.md#devicepermissions) is currently not fully supported on all desktop clients.
+> * Support for `camera` image capture is enabled by the [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true).
+> * The [**geolocation API**](../../../resources/schema/manifest-schema.md#devicepermissions) is currently not fully supported on all desktop clients.
 
 ## Device permissions
 
@@ -40,7 +40,7 @@ While access to these features are standard in most modern web browsers, you nee
 1. Select **Settings** -> **Permissions** from the drop-down menu.
 1. Choose your desired settings.
 
-![Device permissions desktop settings screen](../../assets/images/tabs/device-permissions.png)
+![Device permissions desktop settings screen](../../../assets/images/tabs/device-permissions.png)
 
 # [Mobile](#tab/mobile)
 
@@ -49,7 +49,7 @@ While access to these features are standard in most modern web browsers, you nee
 1. Select **Settings** -> **Devices**.
 1. Choose your desired settings.
 
-![Device permissions mobile settings screen](../../assets/images/tabs/mobile-device-permissions-screen.png)
+![Device permissions mobile settings screen](../../../assets/images/tabs/mobile-device-permissions-screen.png)
 
 ---
 
