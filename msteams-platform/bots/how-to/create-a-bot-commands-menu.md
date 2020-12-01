@@ -177,4 +177,4 @@ modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 * **Keep it short**: Menu options shouldn’t be extremely long and complex natural language statements — they should be simple commands.
 * **Keep it invokable**: Bot menu actions/commands should always be available, regardless of the state of the conversation or the dialog the bot is in.
 
-> **Note** If you remove the command from your manifest, you will need to redeploy your app for the changes to take effect. In general, any changes to the manifest require this.
+> **Note** If you remove any commands from your manifest, you will need to redeploy your app for the changes to take effect. In general, any changes to the manifest require this.
