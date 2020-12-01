@@ -20,6 +20,9 @@ Alternatively, you can also generate deep links programmatically, using the form
 > [!NOTE]
 > This is different from the links provided by the **Copy link to tab** menu item, which just generates a deep link that points to this tab.
 
+>[!NOTE]
+> Currently, shareDeepLink does not work on mobile platforms.
+
 ### Showing a deep link to an item within your tab
 
 To show a dialog box that contains a deep link to an item within your tab, call `microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })`
