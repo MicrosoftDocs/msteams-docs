@@ -9,8 +9,9 @@ ms.author: lajanuar
 # Mobile device camera and image permissions in Teams
 
 >[!IMPORTANT]
+>
 > * At present, Teams support for camera and image capabilities is only available for mobile clients.
->* The `selectMedia`, `getMedia`, and `viewImages` APIs can be invoked from multiple Teams surfaces such as task modules, tabs, and personal apps. For more details, _see_ [Entry points for Teams apps](../../..concepts/extensibility-points)
+>* The `selectMedia`, `getMedia`, and `viewImages` APIs can be invoked from multiple Teams surfaces such as task modules, tabs, and personal apps. For more details, _see_ [Entry points for Teams apps](../../..concepts/extensibility-points.md)
 
 You can use the  [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), to easily integrate camera and image capabilities within your Microsoft Teams mobile app. The SDK provides the tools necessary for your app to access a user’s [device permissions](native-device-permissions.md?tabs=desktop#device-permissions) and build a richer experience.
 
