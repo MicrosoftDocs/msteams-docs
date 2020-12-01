@@ -23,7 +23,7 @@ Use the Microsoft Teams Toolkit in Visual Studio Code to set up your first app p
 
 > [!NOTE]
 
-> For Installation of your app package after creating a new project in the toolkit, press F5/run. It will launch Chrome and install your package. The package is stored in App Studio and installed using its id.
+> To install your app package after creating a new project in the toolkit, press F5/run. It will launch Chrome and install your package. The package is stored in App Studio and installed using the `appId`.
 
 ## 2. Understand important app project components
 
