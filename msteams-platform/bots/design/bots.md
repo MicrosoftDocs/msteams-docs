@@ -11,6 +11,20 @@ Bots are conversational apps that perform a narrow or specific set of tasks. The
 
 ## Guidelines
 
+### Bot design guidelines
+
+* Bots should provide relevant notifications when there has been activity.
+* Bots must not push sensitive data to a team, group chat, or 1:1 conversation to an audience that should not view that data.
+* Bot notifications should include meaningful data to inform the relevance of the notification to users.
+* The bot's tone should reflect the Teams voice, as defined in the guidelines.
+* Bots should provide an first-run-experience welcome message that highlights the value of the bot and what its primary functions are, this might be in the form of "take a tour", an interactive tutorial with carousel cards, or "try it" buttons.
+* Bot text must not have any spelling mistakes or grammatical errors.
+* Bots must provide a set of predefined bot commands that are actionable.
+* Bot messages should be easy to understand and actionable.
+* Bots must provide fallback help commands when a message is not understood.
+* Forms, embedded in cards, sent by a bot should provide deterministic inputs that do not require sequential updating.
+* Bot notifications should be scoped to a team, group chat, or 1:1 conversation with relevant content for the audience.
+
 ### Avatars
 
 Bot avatars in Teams are shaped like hexagons so people can quickly tell that they’re talking to a bot instead of a person. You’ll submit your avatar as a square and we’ll crop it for you. When it comes to avatars, we recommend making yours legible from 2 feet away and using a higher contrast.
@@ -32,6 +46,7 @@ It is critical that bots introduce themselves and convey what they can do for us
 #### Welcome messages
 
 Welcome messages are the best way to set your bot's tone and should be used in personal and team or group scenarios. The message states what the bot does and some common ways to interact with it. Use specific capability examples like,  “*Try asking ….*” in a bulleted list. Whenever possible, these suggestions should return stored responses. It's critical that the capability examples work without requiring users to sign in.
+Please *see* [welcome message requirements](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-personal-bots-must-always-send-a-welcome-message-on-first-launch) for additional guidance.
 
 #### Tours
 

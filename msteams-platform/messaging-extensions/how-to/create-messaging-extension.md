@@ -121,6 +121,9 @@ When your users trigger your messaging extension you'll need to handle the initi
 
 ## Messaging extensions in Teams meetings
 
+> [!NOTE]
+> If a meeting or group chat has federated users in the roster, Teams suppresses access to messaging extensions for all users, including the organizer.
+
 Once a meeting begins, Teams participants can interact directly with your messaging extension during a live call. Consider the following when building your in-meeting messaging extension:
 
 1. **Location**. Your messaging extension can be invoked from the compose message area, the command box, or @mentioned in the meeting chat.

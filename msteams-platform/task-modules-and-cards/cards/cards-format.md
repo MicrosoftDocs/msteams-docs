@@ -74,7 +74,7 @@ The date and localization features mentioned in this topic are not supported in 
 
 ``` json
 {
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
     "type": "AdaptiveCard",
     "version": "1.0",
     "body": [
@@ -98,7 +98,7 @@ The date and localization features mentioned in this topic are not supported in 
         },
         {
             "type": "TextBlock",
-            "text": "Check out [Adaptive Cards](http://adaptivecards.io)"
+            "text": "Check out [Adaptive Cards](https://adaptivecards.io)"
         }
     ]
 }
@@ -134,7 +134,7 @@ To include a mention in an Adaptive Card your app needs to include the following
         "text": "Hi <at>John Doe</at>"
       }
     ],
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
     "version": "1.0",
     "msteams": {
       "entities": [
@@ -197,7 +197,7 @@ On Android, Markdown formatting for connector cards looks like this:
   "contentType": "application/vnd.microsoft.teams.card.o365connector",
   "content": {
     "@type": "MessageCard",
-    "@context": "http://schema.org/extensions",
+    "@context": "https://schema.org/extensions",
     "summary": "Summary",
     "title": "Connector Card Markdown formatting",
     "sections": [
@@ -220,7 +220,7 @@ On Android, Markdown formatting for connector cards looks like this:
             "text": "Link: [Bing](https://www.bing.com)"
         },
         {
-            "text": "embedded image link: ![Duck on a rock](http://aka.ms/Fo983c)"
+            "text": "embedded image link: ![Duck on a rock](https://aka.ms/Fo983c)"
         },
         {
             "text": "`preformatted text`"
@@ -256,7 +256,7 @@ Connector cards support limited Markdown and HTML formatting. Markdown is descri
 | preformatted text | `text` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
 | hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| image link | <img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| image link | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 In connector cards, newlines are rendered in HTML using the `<p>` tag.
 
@@ -286,7 +286,7 @@ On Android, HTML formatting looks like this:
   "contentType": "application/vnd.microsoft.teams.card.o365connector",
   "content": {
     "@type": "MessageCard",
-    "@context": "http://schema.org/extensions",
+    "@context": "https://schema.org/extensions",
     "summary": "Summary",
     "title": "Connector Card HTML formatting",
     "sections": [
@@ -312,7 +312,7 @@ On Android, HTML formatting looks like this:
             "text": "hyperlink <a href=\"https://www.bing.com/\">Bing</a>"
         },
         {
-            "text": "embedded image <img src=\"http://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img>"
+            "text": "embedded image <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img>"
         },
         {
             "text": "preformatted text <pre>text</pre>"
@@ -344,7 +344,7 @@ HTML tags are supported for simple cards such as the hero and thumbnail card. Ma
 | preformatted text | `text` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
 | hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| image link |<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| image link |<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 ### Mobile and desktop differences for simple cards
 
@@ -372,6 +372,6 @@ Character formatting like bold and italic display correctly on Android.
 
 These screenshots were created using Teams AppStudio, where the text property of a hero card was set to the following string. You can test formatting in your own cards by modifying this code.
 
-`<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"http://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
+`<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
 
 ---

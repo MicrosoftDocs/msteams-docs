@@ -119,7 +119,7 @@ Tab content adjusts to the in-meeting tab layout and location.
 
 #### Do: Design for a dark theme
 
-Teams meetings are optimized for dark mode to help reduce visual and cognitive noise so users can focus on the discussion and shared content.
+Teams meetings are optimized for dark mode to help reduce visual and cognitive noise so users can focus on the discussion and shared content. The in-meeting tab should apply a dark theme and should follow theming guidelines.
 
    :::column-end:::
    :::column span="":::
@@ -223,4 +223,4 @@ For information on accessibility, see <a href="https://www.figma.com/community/f
 If you plan to publish your app to AppSource, you should understand the design issues that commonly cause apps to fail during submission.
 
 > [!div class="nextstepaction"]
-> [Check design validation guidelines](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines)
+> [Check design validation guidelines](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

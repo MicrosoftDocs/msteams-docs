@@ -77,6 +77,7 @@ You can also register your web service by creating a Bot Channels Registration r
 
 The [Bot Framework portal](https://dev.botframework.com) is optimized for registering bots in Microsoft Azure. Here are some things to know:
 
+* Be sure to add Microsoft Teams as a channel from the featured channels list after creating your bot.
 * The Microsoft Teams channel for bots registered on Azure is **free**. Messages sent over the Teams channel will NOT count towards the consumed messages for the bot.
 * If you register your bot using Microsoft Azure, your bot code doesn't need to be *hosted* on Microsoft Azure.
 * If you do register a bot using Microsoft Azure portal, you must have a Microsoft Azure account. You can [create one for free](https://azure.microsoft.com/free/). To verify your identity when you create an Azure account, you must provide a credit card, but it won't be charged; it's always free to create and use bots with Microsoft Teams.

@@ -3,7 +3,7 @@ title: Contributing to Microsoft Teams documentation
 description: steps for creating and publishing Teams documentation
 author: laujan
 ms.author: lajanuar
-ms.topic: how to
+ms.topic: contributor-guide
 ---
 
 # Contributing to Microsoft Teams documentation
@@ -29,7 +29,7 @@ ms.topic: how to
 
 ## Review the Microsoft Docs Contributors Guide
 
-The [contributors guide](/contribute) offers direction for creating, publishing, and updating technical content on Microsoft /docs. *See also*, [Docs style and voice quick start](/contribute/style-quick-start) .
+The [contributors guide](/contribute) offers direction for creating, publishing, and updating technical content on the Microsoft Docs platform. *See also*, [Docs style and voice quick start](/contribute/style-quick-start) .
 
 ## Microsoft Writing, Style, and Content Guides
 
@@ -54,11 +54,11 @@ For more information on  hyperlinks and file paths, please *see* [Use links in d
 > &emsp;&#x2714; Use a relative path without a leading forward slash.<br>
 > &emsp;&#x2714; Include the Markdown file extension.<br>
 >Ex:  **parent directory/directory/path-to-article.md** —> `[Building an app for Microsoft Teams](../concepts/building-an-app.md)` <br><br>
-> To reference a Microsoft Docs library (<https://docs.microsoft.com/>) article that *isn't part of* the Teams platform docset:<br>
+> To reference a Microsoft Docs library article that *is not part of* the Teams platform docset:<br>
 > &emsp;&#x2714; Use a relative path that begins with a forward slash.<br>
 > &emsp;&#x2714; Don't include the file extension. <br> 
-> Ex:  **/docset/address-to-file-location** —> `[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`
->
+> Ex:  **/docset/address-to-file-location** —> `[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`<br><br>
+> To reference a page outside of the Microsoft Docs library, such as GitHub, use the full `https` file path.<br>
 
 ## Code Samples and Snippets
 

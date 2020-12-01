@@ -10,7 +10,7 @@ For your tab to display in Teams, you must include the **Microsoft Teams JavaScr
 ```
 
 >[!IMPORTANT]
->Don't copy/paste the `<script src="...">` URLs from this page, as they may not represent the latest version. To get the latest version of the SDK, always go to: [Microsoft Teams JavaScript API](https://www.npmjs.com/package/@microsoft/teams-js.com).
+>Don't copy/paste the `<script src="...">` URLs from this page, as they may not represent the latest version. To get the latest version of the SDK, always go to: [Microsoft Teams JavaScript API](https://www.npmjs.com/package/@microsoft/teams-js).
 
 ### Tab.cshtml
 

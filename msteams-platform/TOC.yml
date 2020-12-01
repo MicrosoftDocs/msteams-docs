@@ -14,12 +14,23 @@
     href: build-your-first-app/build-and-run.md
   - name: Build a personal tab
     href: build-your-first-app/build-personal-tab.md
-  - name: Build a channel tab
+  - name: Build a channel and group tab
     href: build-your-first-app/build-channel-tab.md
   - name: Build a bot
     href: build-your-first-app/build-bot.md
   - name: Build a messaging extension
     href: build-your-first-app/build-messaging-extension.md
+- name: Microsoft Teams Toolkit extension
+  expanded: true
+  items:
+  - name: Teams Toolkit extension for Visual Studio Code
+    href: toolkit/visual-studio-code-overview.md
+  - name: Teams Toolkit extension for Visual Studio
+    href: toolkit/visual-studio-overview.md  
+  - name: Tabs SSO with Toolkit extension for Visual Studio Code
+    href: toolkit/visual-studio-code-tab-sso.md  
+- name: Production-ready app templates
+  href: samples/app-templates.md     
 - name: Tutorials and code samples
   items:
   - name: Create an app using C#
@@ -36,20 +47,12 @@
     href: samples/integrating-web-apps.md
   - name: Create low-code apps
     href: samples/teams-low-code-solutions.md
-  - name: Production-ready app templates
-    href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
     href: samples/shifts-wfm-connectors.md 
   - name: Create a Virtual Assistant for Teams
     href: samples/virtual-assistant.md
   - name: Integrate Power Virtual Agents chatbot with Teams
     href: bots/how-to/add-power-virtual-agents-bot-to-teams.md   
-  - name: Microsoft Teams Toolkit extension
-    items:
-    - name: Teams Toolkit extension for Visual Studio Code
-      href: toolkit/visual-studio-code-overview.md
-    - name: Teams Toolkit extension for Visual Studio
-      href: toolkit/visual-studio-overview.md
 - name: Concepts
   expanded: true
   items:
@@ -233,8 +236,6 @@
           href: bots/how-to/conversations/channel-and-group-conversations.md
         - name: Send proactive messages
           href: bots/how-to/conversations/send-proactive-messages.md
-        - name: Send and receive files
-          href: bots/how-to/conversations/send-and-receive-files.md
       - name: Debug your bot
         items:
         - name: Debug locally with an IDE
@@ -247,6 +248,8 @@
           href: bots/how-to/authentication/auth-flow-bot.md
         - name: Add authentication to your bot
           href: bots/how-to/authentication/add-authentication.md
+        - name: Single sign-on support for bots
+          href: bots/how-to/authentication/auth-aad-sso-bots.md
       - name: Format your bot message
         href: bots/how-to/format-your-bot-messages.md
       - name: Update and delete bot messages

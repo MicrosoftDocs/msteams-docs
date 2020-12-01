@@ -5,9 +5,9 @@ description: A quickstart guide to creating a custom personal tab with ASP.NET C
 ms.topic: quickstart
 ms.author: lajanuar
 ---
-# Create a Custom Personal Tab with ASP.NET Core
+# Create a personal tab with ASP.NET Core
 
-In this quickstart we'll walk-through creating a custom personal tab with C# and ASP.Net Core Razor pages. We'll also use [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest and deploy your tab to Teams.
+In this quickstart, we'll walk-through creating a custom personal tab with C# and ASP.Net Core Razor pages. We'll also use [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest and deploy your tab to Teams.
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
@@ -62,11 +62,11 @@ This folder contains the following required app package files:
 - A **transparent outline icon** measuring 32 x 32 pixels.
 - A **manifest.json** file that specifies the attributes of your app.
 
-These files need to be zipped in an app package for use in uploading your tab to Teams. Microsoft Teams will load the `contentUrl` specified in your manifest, embed it in an IFrame, and render it in your tab.
+These files need to be zipped in an app package for use in uploading your tab to Teams. Microsoft Teams will load the `contentUrl` specified in your manifest, embed it in an <iframe\>, and render it in your tab.
 
 ### .csproj
 
-In the Visual Studio Solution Explorer window right-click on the project and select **Edit Project File**. At the bottom of the file you'll see the code that creates and updates your zip folder when the application builds:
+In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the bottom of the file you'll see the code that creates and updates your zip folder when the application builds:
 
 ```xml
 <PropertyGroup>
@@ -98,7 +98,7 @@ ngrok http https://localhost:44325 -host-header="localhost:44325"
 
 - Ngrok will listen to requests from the internet and will route them to your application when it is running on port 44325.  It should resemble `https://y8rPrT2b.ngrok.io/` where *y8rPrT2b* is replaced by your ngrok alpha-numeric HTTPS URL.
 
-- Be sure to keep the command prompt with ngrok running, and to make a note of the URL—you'll need it later.
+- Be sure to keep the command prompt with ngrok running, and to make a note of the URL — you'll need it later.
 
 - Verify that *ngrok* is running and working properly by opening your browser and going to your content page via the ngrok HTTPS URL that was provided in your command prompt window.
 

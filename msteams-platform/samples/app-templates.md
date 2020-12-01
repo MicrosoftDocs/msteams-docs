@@ -3,6 +3,8 @@ title: Microsoft Teams app templates
 description: Links and descriptions of app templates for the Microsoft Teams platform
 ms.topic: reference
 keywords: Microsoft Teams templates samples demo
+ms.author: lajanuar
+author: laujan
 ---
 
 # App Templates for Microsoft Teams
@@ -162,6 +164,25 @@ E-Prescriptions is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app)-
 :::column-end:::
 :::row-end:::
 
+## Employee Training &#9734;
+
+Employee training is a Microsoft Teams app that enables organizers to easily publish,  track, and promote learning and training events for your organization.  With the app, event planners can send reminders and notifications to event registrants and employees can indicate interest in upcoming events, stay updated on current events, and share event details with colleagues via the Teams messaging extension.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-employeetraining)
+
+:::row:::
+:::column span="2":::
+    **View employee training events**
+    ![Employee training tab image](../assets/images/employee-training-discover-tab.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    **Create employee training event**
+    ![Employee training create event form](../assets/images/employee-training-create-event.jpg)
+:::column-end:::
+:::row-end:::
+
 ## Expert Finder
 
 Expert Finder is a [Microsoft Teams bot](../bots/what-are-bots.md) that identifies specific organization members based on their skills, interests, and education attributes. Members find experts within an organization  that match a keyword search of Azure Active Directory user profiles.
@@ -300,6 +321,25 @@ Incident Reporter is a [Microsoft Teams bot](../bots/what-are-bots.md)  that opt
 :::column-end:::
 :::row-end:::
 
+## New Employee Onboarding &#9734;
+
+New Employee Onboarding is an integrated Microsoft Teams and [SharePoint New Employee Onboarding Solution](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19) that enables your organization to provide a consistent, high-quality onboarding experience for employees on their new-hire journey. The app can be used by human resource teams and hiring managers to provide relevant information throughout the orientation and induction process and by new hires to share feedback, provide introductions, and complete onboarding tasks.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-newemployeeonboarding)
+
+:::row:::
+  :::column span="2":::
+    **New employee welcome card**
+    ![Image of new employee welcome card](../assets/images/new-employee-welcome-card.png)
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    **New employee checklist**
+    ![Image of new employee checklist](../assets/images/new-employee-checklist.png)  
+:::column-end:::
+:::row-end:::
+
 ## Open Badges
 
 Open Badges is a Microsoft Teams app that enables individuals to earn digital learning credential badges within the Teams context and share them everywhere. Using capabilities from the third-party digital badge issuing authority, [Badgr](https://badgr.org/), awarded badges are recorded in a recipient's Badgr profile and available to build and share a rich picture of lifetime learning journeys.
@@ -336,6 +376,20 @@ Quick Responses is a Microsoft Teams app that delivers a robust solution for eff
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-quickresponses)
 
 ![Sample view of responses](../assets/images/quick-responses.png)
+
+## Reflect &#9734;
+
+Reflect is a custom Microsoft Teams [messaging extension](../messaging-extensions/what-are-messaging-extensions.md) app that provides a safe and inclusive resource for your team members to share the state of their emotional well-being with colleagues and/or group leaders directly within Teams. The app is available in channel, group, meeting, and 1:1 chats and the check-in response can be set to public, private-to-sender, or fully anonymous.
+
+[Get it on GitHub](https://github.com/OfficeDev/Microsoft-Teams-App-Reflect)
+
+:::row:::
+    :::column:::
+    **Well-being poll**
+    
+    ![Reflect app user poll](../assets/images/reflect-app-user-poll.png)
+    :::column-end:::
+:::row-end:::
 
 ## Remote Support
 
