@@ -191,5 +191,8 @@ if (uriList.length > 0) {
 }
 ```
 
+**Webapp experience**
+![device camera and image experience in Teams](../../assets/images/tabs/image-capability-screenshot.jpg)
+
 > [!div class="nextstepaction"]
 > [Learn more:  Request device permissions for your Microsoft Teams tab](native-device-permissions.md?tabs=desktop#device-permissions)
