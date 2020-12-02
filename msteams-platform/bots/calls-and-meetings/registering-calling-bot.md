@@ -49,7 +49,7 @@ Microsoft Graph exposes granular permissions controlling the access that apps ha
 |_Calls.AccessMedia.All_ <sup>_see below_</sup>|Access media streams in a call as an app (preview)|Allows the app to get direct access to media streams in a call, without a signed-in user.|Yes|
 
 > [!IMPORTANT]
-> You **cannot** use the Microsoft.Graph.Calls.Media API to record or otherwise persist media content from calls or meetings that your bot accesses.
+> You **cannot** use the Media Access API to record or otherwise persist media content from calls or meetings that your application accesses, or data derived from that media content ("record" or "recording"), without first calling the [`updateRecordingStatus` API](/graph/api/call-updaterecordingstatus) to indicate that recording has begun, and receiving a success reply from that API. If your application begins recording any meeting/call, it must end the recording prior to calling the `updateRecordingStatus` API to indicate that the recording has ended.
 
 ### Application permissions: online meetings
 
