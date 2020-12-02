@@ -97,27 +97,25 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 ```json
 {
-  "user":
-  {
-      "id": "29:1JKiJGPAX9TTxtGxhVo0wLx_zwzo-gG8Z-X03306vBwi9p-xMTEbDXsT6KH7-0kkTS8cD-2zkrsoV6f5WJ6_aYw",
-      "aadObjectId": "6aebbad0-e5a5-424a-834a-20fb051f3c1a",
-      "name": "Allan Deyoung",
-      "givenName": "Allan",
-      "surname": "Deyoung",
-      "email": "Allan.Deyoung@microsoft.com",
-      "userPrincipalName": "Allan.Deyoung@microsoft.com",
-      "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
-      "userRole": "user"
-  },
-  "meeting":
-  {
-      "role ": "Presenter",
+   "user":{
+      "id":"29:1JKiJGPAX9TTxtGxhVo0wLx_zwzo-gG8Z-X03306vBwi9p-xMTEbDXsT6KH7-0kkTS8cD-2zkrsoV6f5WJ6_aYw",
+      "aadObjectId":"6aebbad0-e5a5-424a-834a-20fb051f3c1a",
+      "name":"Allan Deyoung",
+      "givenName":"Allan",
+      "surname":"Deyoung",
+      "email":"Allan.Deyoung@microsoft.com",
+      "userPrincipalName":"Allan.Deyoung@microsoft.com",
+      "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47",
+      "userRole":"user"
+   },
+   "meeting":{
+      "role ":"Presenter",
       "inMeeting":true
-  },
-  "conversation":
-  {
-      "id": "<conversation id>"
-  }
+   },
+   "conversation":{
+      "id":"<conversation id>",
+      "isGroup":true
+   }
 }
 ```
 #### Response Codes

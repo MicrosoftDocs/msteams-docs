@@ -17,6 +17,12 @@ Users sign in to Microsoft Teams via their work, school, or Microsoft accounts (
 >
 > For the best experience with Teams, please use the latest version of iOS and Android.
 
+>[!NOTE]
+> **Quickstart**  
+>
+> The simplest path to getting started with tab SSO is with the Microsoft Teams Toolkit for Visual Studio Code. [Learn more](../../../toolkit/visual-studio-code-tab-sso.md)
+
+
 ## How SSO works at runtime
 
 The following diagram shows how the SSO process works:

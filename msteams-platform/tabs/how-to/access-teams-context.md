@@ -20,7 +20,7 @@ Context about the user, team or company can be especially useful when
 * You want to initiate an authentication flow against Azure Active Directory or other identity provider, and you don't want to require the user to enter their username again. (For more information on authenticating within your Microsoft Teams tab, see [Authenticate a user in your Microsoft Teams tab](~/concepts/authentication/authentication.md).)
 
 > [!IMPORTANT]
-> Although this user information can help provide a smooth user experience, you should *not* use it as proof of identity. For example, an attacker could you load your page in a "bad browser" and provide it with any information they want.
+> Although this user information can help provide a smooth user experience, you should *not* use it as proof of identity. For example, an attacker could load your page in a "bad browser" and render harmful information or requests.
 
 ## Accessing context
 
@@ -31,7 +31,7 @@ You can access context information in two ways:
 
 ### Getting context by inserting URL placeholder values
 
-Use placeholders in your configuration or content URLs. Microsoft Teams replaces the placeholders with the relevant values when determining the actual configuration or content URL to navigate to. The available placeholders include all fields on the [Context](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) object. Common placeholders include the following:
+Use placeholders in your configuration or content URLs. Microsoft Teams replaces the placeholders with the relevant values when determining the actual configuration or content URL. The available placeholders include all fields on the [Context](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) object. Common placeholders include the following:
 
 * {entityId}: The ID you supplied for the item in this tab when first [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md).
 * {subEntityId}: The ID you supplied when generating a [deep link](~/concepts/build-and-test/deep-links.md) for a specific item _within_ this tab. This should be used to restore to a specific state within an entity; for example, scrolling to or activating a specific piece of content.
@@ -103,6 +103,9 @@ When your content page is loaded in a private channel, the data you receive from
 * `teamSiteUrl` - Set to the URL of a distinct, unique SharePoint site for the private channel
 * `teamSitePath` - Set to the path of a distinct, unique SharePoint site for the private channel
 * `teamSiteDomain` - Set to the domain of a distinct, unique SharePoint site domain for the private channel
+
+> [!Note]
+>  teamSiteUrl works well for standard channels also.
 
 ## Theme change handling
 
