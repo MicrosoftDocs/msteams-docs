@@ -138,7 +138,7 @@
       items:
         - name:  Request device permissions
           href: concepts/device-capabilities/native-device-permissions.md    
-        - name:   'Mobile device camera and image permissions in Teams'
+        - name:   'Mobile device camera and image capabilities'
           href: concepts/device-capabilities/mobile-camera-image-permissions.md         
 - name: 'Tabs — embedded web experiences'
   items:
