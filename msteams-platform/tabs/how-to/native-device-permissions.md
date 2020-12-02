@@ -74,7 +74,7 @@ Each property will allow you to prompt the user to ask for their consent:
 
 | Property      | Description   |
 | --- | --- |
-| media         | permission to use the camera, microphone and speakers |
+| media         | permission to use the camera, microphone and speakers (add Storage/Photos) |
 | geolocation   | permission to return the user's location      |
 | notifications | permission to send the user notifications      |
 | midi          | permission to send and receive midi information from a digital musical instrument   |
