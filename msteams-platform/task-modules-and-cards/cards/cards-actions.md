@@ -301,3 +301,27 @@ To include a `signin` action with an Adaptive Card include the following details
   }
 }
 ```
+
+### Adaptive Cards with invoke action
+ 
+To include a `invoke` action with an Adaptive Card include the following details in the `msteams` object. Note that you can include additional hidden properties in the `data` object if needed.
+
+| Property | Description |
+| --- | --- |
+| `type` | Set to `signin` |
+| `data` | Set the value  |
+
+#### Example
+
+```json
+{
+    "type": "Action.Submit",
+    "data": {
+    "msteams": {
+         "type": "task/fetch"
+               },
+         "data": "value"
+            },
+    "title": "submit"
+}
+```
