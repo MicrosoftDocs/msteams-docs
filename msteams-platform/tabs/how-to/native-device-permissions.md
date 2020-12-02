@@ -6,7 +6,7 @@ keywords: teams tabs development
 
 # Request device permissions for your Microsoft Teams tab
 
-You might want to enrich your tab with features that require access native device functionality like:
+You might want to enrich your tab with features that require access to native device functionality like:
 
 > [!div class="checklist"]
 >
@@ -17,7 +17,7 @@ You might want to enrich your tab with features that require access native devic
 
 > [!IMPORTANT]
 >
-> * Currently, Teams mobile client only supports `camera` and `location`  through native device capabilities and is available on all app constructs including tabs. </br>
+> * Currently, Microsoft Teams mobile client only supports `camera` and `location`  through native device capabilities and is available on all app constructs including tabs. </br>
 > * Support for `camera` image capture is enabled by the [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-).
 > * The [**geolocation API**](../../resources/schema/manifest-schema.md#devicepermissions) is currently not fully supported on all desktop clients.
 
@@ -29,7 +29,7 @@ Accessing a user’s device permissions allows you to build much richer experien
 * Record short audio memos and save them for later
 * Use user location information to display relevant information
 
-While access to these features are standard in most modern web browsers, you need to let Teams know which features you’d like to use by updating your app manifest. This will allow you to ask for permissions, the same way you would in a browser, while your app is running on the Teams desktop client.
+While access to these features is standard in most modern web browsers, you need to let Teams know which features you’d like to use by updating your app manifest. This will allow you to ask for permissions, the same way you would in a browser, while your app is running on the Teams desktop client.
 
 ## Manage permissions
 
@@ -49,7 +49,7 @@ While access to these features are standard in most modern web browsers, you nee
 1. Select **Settings** -> **Devices**.
 1. Choose your desired settings.
 
-![Device permissions mobile settings screen](../../assets/images/tabs/mobile-device-permissions-screen.png)
+![Device permissions mobile settings screen](../../assets/images/tabs/DeviceSettings.png)
 
 ---
 
@@ -68,9 +68,9 @@ Update your app's `manifest.json` by adding `devicePermissions` and specifying w
 ```
 > [!Note]
 >
-> Media is also used for camera permissions in mobile.
+> Media is also used for camera permissions on mobile.
 
-Each property will allow you to prompt the user to ask for their consent
+Each property will allow you to prompt the user to ask for their consent:
 
 | Property      | Description   |
 | --- | --- |
@@ -104,25 +104,25 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 ## Prompting the user
 
-In order to show a prompt to get consent to access device permissions you need to leverage the appropriate HTML5 or Teams API. For example, in order to prompt the user to access their camera you need to call `getCurrentPosition`
+To show a prompt to get consent to access device permissions you need to leverage the appropriate HTML5 or Teams API. For example, to prompt the user to access their camera you need to call `getCurrentPosition`:
 
 ```Javascript
 navigator.geolocation.getCurrentPosition(function (position) { /*... */ });
 ```
 
-To use camera on desktop or web, Teams will show a permission prompt when you call getUserMedia
+To use the camera on desktop or web, Teams will show a permission prompt when you call getUserMedia:
 
 ```Javascript
 navigator.mediaDevices.getUserMedia({ audio: true, video: true });
 ```
 
-To capture image on mobile, Teams mobile will ask for permission when called captureImage()
+To capture the image on mobile, Teams mobile will ask for permission when called captureImage():
 
 ```Typescript
 function captureImage(callback: (error: SdkError, files: File[]) => void)
 ```
 
-Notifications will prompt the user when you call `requestPermission`
+Notifications will prompt the user when you call `requestPermission`:
 
 ```Javascript
 Notification.requestPermission(function(result) { /* ... */ });
@@ -132,4 +132,4 @@ Notification.requestPermission(function(result) { /* ... */ });
 
 ## Permission behavior across login sessions
 
-Native device permissions are stored per login session. This means that if you log into another instance of Teams (ex: on another computer), your device permissions from your previous sessions will not be available. Instead, you will need to re-consent to device permissions for the new login session. This also means, if you log out of Teams (or switch tenants inside of Teams), your device permissions will be deleted for that previous login session. Please keep this in mind when developing native device permissions: the native capabilities you consent to are only for your _current_ login session.
+Native device permissions are stored for every login session. It means that if you log into another instance of Teams (ex: on another computer), your device permissions from your previous sessions will not be available. Instead, you will need to re-consent to device permissions for the new login session. It also means, if you log out of Teams (or switch tenants inside of Teams), your device permissions will be deleted for that previous login session. Please keep this in mind when developing native device permissions: the native capabilities you consent to are only for your _current_ login session.
