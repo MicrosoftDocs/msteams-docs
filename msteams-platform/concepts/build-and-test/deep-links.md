@@ -11,21 +11,21 @@ You can create links to information and features within the Teams client. Exampl
 * Navigating the user to content within one of your app's tabs. For instance, your app may have a bot that sends messages notifying the user of an important activity. When the user taps on the notification, the deep link navigates to the tab so the user can view more details about the activity.
 * Your app automates or simplifies certain user tasks, such as creating a chat or scheduling a meeting, by pre-populating the deep links with required parameters. This avoids the need for users to manually enter information.
 
-> [!NOTE] 
-
-> The deeplink launches the browser first before navigating to content and information for the following:
-
-> **Tab**: Directly navigates to deeplink url
-
-> **Bot**:</br>
-   Deeplink in card body - Opens in browser first</br>
-   Deeplink added to OpenURL action in Adaptive Card - Directly navigates to deeplink url</br>   
-   Hyperlink markdwn text in the card - Opens in browser first
-   
- > Text message hyperlink markdown : Directly navigates to deeplink url
-   
-> **Chat**:
-   Link pasted in general chat conversation - Directly navigates to deeplink url
+> [!NOTE]
+>
+> A deeplink launches the browser first before navigating to content and information as follows:
+>
+> **Tab**:  
+> ✔ Directly navigates to the deeplink url.
+>
+> **Bot**:  
+> ✔ Deeplink in card body - Opens in browser first.  
+> ✔ Deeplink added to OpenURL action in Adaptive Card - Directly navigates to the deeplink url.  
+> ✔ Hyperlink markdown text in the card - Opens in browser first.  
+>
+> **Chat**:  
+> ✔ Text message hyperlink markdown : Directly navigates to deeplink url.  
+> ✔ Link pasted in general chat conversation - Directly navigates to deeplink url.
 
 ## Deep linking to your tab
 
