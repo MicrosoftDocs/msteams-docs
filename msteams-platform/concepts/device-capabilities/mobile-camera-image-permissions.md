@@ -1,12 +1,12 @@
 ---
-title: Mobile device camera and image permissions in Teams
+title: Camera and image capabilities in Teams
 description: How to use Teams Javascript client SDK to enable native camera and image capabilities
 keywords: camera image capabilities native device permissions
 ms.topic: conceptual
 ms.author: lajanuar
 ---
 
-# Camera and image permissions in Teams
+# Camera and image capabilities in Teams
 
 >[!IMPORTANT]
 >
@@ -37,7 +37,7 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 ```
 
 > [!NOTE]
-> The _Request Permissions_ prompt is automatically displayed when a relevant Teams API is initiated. For more details, *see* [permission behavior across login sessions](native-device-permissions.md#permission-behavior-across-login-sessions).
+> The _Request Permissions_ prompt is automatically displayed when a relevant Teams API is initiated. For more details, *see* [Request device permissions](native-device-permissions).
 
 ## Using camera and image capability APIs
 
@@ -193,6 +193,3 @@ if (uriList.length > 0) {
 }
 }
 ```
-
-> [!div class="nextstepaction"]
-> [Learn more:  Request device permissions for your Microsoft Teams tab](native-device-permissions.md?tabs=desktop#device-permissions)
