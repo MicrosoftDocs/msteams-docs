@@ -165,14 +165,14 @@ POST /v3/conversations/{conversationId}/activities
 
 ```csharp
 Activity activity = MessageFactory.Text("This is a meeting signal test");
-MeetingNotification notification = new MeetingNotification
-  {
-    AlertInMeeting = true,
-    ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
-  };
+
 activity.ChannelData = new TeamsChannelData
   {
-    Notification = notification
+    Notification = new NotificationInfo()
+                    {
+                        AlertInMeeting = true,
+                        ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
+                    }
   };
 await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```
