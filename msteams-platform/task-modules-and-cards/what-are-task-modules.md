@@ -44,7 +44,7 @@ Task modules can be invoked from tabs, bots or deep links and what appears in on
 | **Deep link URL** <br/>[URL syntax](#task-module-deep-link-syntax) | 1. Teams invokes the task module; the URL that appears inside the `<iframe>` specified in the `url` parameter of the deep link. There is no `submitHandler` callback. <br/><br/> 2. Within the JavaScript of the page in the task module, call `tasks.submitTask()` to close it with a `result` object as a parameter, the same as when invoking it from a tab or a bot card button. Completion logic is slightly different, however. If your completion logic resides on the client (i.e. if there is no bot) there is no `submitHandler` callback, so any completion logic must be in the code preceding the call to `tasks.submitTask()`. Invocation errors are only reported via the console. If you have a bot, then you can specify a `completionBotId` parameter in the deep link to send the `result` object via a `task/submit` event. | 1. Teams invokes the task module; the JSON card body of the Adaptive card is specified as a URL-encoded value of the `card` parameter of the deep link. <br/><br/> 2. The user closes the task module by clicking on the X at the upper right of the task module or by pressing an `Action.Submit` button on the card. Since there is no `submitHandler` to call, you must have a bot to send the value of the Adaptive card fields to. You use the `completionBotId` parameter in the deep link to specify the bot to send the data to via a `task/submit invoke` event. |
 
 > [!NOTE]
-> Invoking a task module from JavaScript is not supported on mobile. *See*, [Request device permissions](/concepts/device-capabilities/native-device-permissions.md) and [Mobile device camera and image capabilities](/concepts/device-capabilities/mobile-camera-image-permissions.md).
+> Invoking a task module from JavaScript is not supported on mobile.
 
 ## The TaskInfo object
 
@@ -234,3 +234,9 @@ Microsoft Teams will ensure that keyboard navigation works properly from the tas
 
 * [Node.js/TypeScript sample](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs)
 * [C#/.NET sample](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp)
+
+> [!div class="nextstepaction"]
+> [Learn  more: Request device permissions](/concepts/device-capabilities/native-device-permissions.md)
+
+> [!div class="nextstepaction"]
+>[Learn more: Camera and image gallery permissions](/concepts/device-capabilities/mobile-camera-image-permissions.md)

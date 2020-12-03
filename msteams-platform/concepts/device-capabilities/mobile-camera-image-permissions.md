@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.author: lajanuar
 ---
 
-# Mobile device camera and image permissions in Teams
+# Camera and image permissions in Teams
 
 >[!IMPORTANT]
 >
@@ -48,6 +48,9 @@ You can use the following set of APIs to enable camera and image device capabili
 | [**selectMedia**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest&branch=master#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true)| This API allows users to **capture or select media from a native device** and return to the web-app. Users may choose to edit, crop, rotate, annotate, or draw over images before submission. In response to **selectMedia**, the web-app will receive media ids of selected images and may receive a thumbnail of the selected media. |
 | [**getMedia**](/javascript/api/@microsoft/teams-js/_media?view=msteams-client-js-latest&branch=master#getMedia__error__SdkError__blob__Blob_____void_&preserve-view=true)| This API retrieves the media in chunks irrespective of size. These chunks are assembled and sent back to the web app as a file/blob. With this API an image is broken into smaller chunks to facilitate large image transfer. |
 | [**viewImages**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#viewImages_ImageUri_____error___SdkError_____void_&preserve-view=true)| This API enables the user to view images full-screen mode as a scrollable list.|
+
+**Web app experience for selectMedia API**
+![device camera and image experience in Teams](../../assets/images/tabs/image-capability-screenshot.jpg)
 
 ## Error handling
 
@@ -190,9 +193,6 @@ if (uriList.length > 0) {
 }
 }
 ```
-
-**Webapp experience**
-![device camera and image experience in Teams](../../assets/images/tabs/image-capability-screenshot.jpg)
 
 > [!div class="nextstepaction"]
 > [Learn more:  Request device permissions for your Microsoft Teams tab](native-device-permissions.md?tabs=desktop#device-permissions)
