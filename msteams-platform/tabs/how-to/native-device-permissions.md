@@ -17,9 +17,9 @@ You might want to enrich your tab with features that require access to native de
 
 > [!IMPORTANT]
 >
-> * Currently, Microsoft Teams mobile client only supports `camera` and `location`  through native device capabilities and is available on all app constructs including tabs. </br>
-> * Support for `camera` image capture is enabled by the [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-).
-> * The [**geolocation API**](../../resources/schema/manifest-schema.md#devicepermissions) is currently not fully supported on all desktop clients.
+> * Currently, Teams mobile client only supports access to <camera>, <gallery>, <mic> and <location> through native device capabilities and is available on all app constructs including tabs. </br>
+> * Support for <camera>, <gallery> and <mic> is enabled through [<selectMedia> API](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_). For single image capture you may use [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-).
+> * Support for <location> is enabled through [<getLocation> API](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_). It's recommended you use this API as [**geolocation API**](../../resources/schema/manifest-schema.md#devicepermissions) is currently not fully supported on all desktop clients.
 
 ## Device permissions
 
@@ -45,11 +45,11 @@ While access to these features is standard in most modern web browsers, you need
 # [Mobile](#tab/mobile)
 
 1. Open Teams.
-1. In the upper left corner of the screen, select the &#9776; menu icon.
-1. Select **Settings** -> **Devices**.
+1. Go to **Settings** -> **App Permissions**.
+1. Select app you need to choose settings for.
 1. Choose your desired settings.
 
-![Device permissions mobile settings screen](../../assets/images/tabs/DeviceSettings.png)
+![Device permissions mobile settings screen](../../assets/images/tabs/MobilePermissions.png)
 
 ---
 
@@ -128,7 +128,13 @@ Notifications will prompt the user when you call `requestPermission`:
 Notification.requestPermission(function(result) { /* ... */ });
 ```
 
-![Tabs device permissions prompt](~/assets/images/tabs/device-permissions-prompt.png)
+# [Desktop](#tab/desktop)
+
+![Tabs desktop device permissions prompt](~/assets/images/tabs/device-permissions-prompt.png)
+
+# [Mobile](#tab/mobile)
+
+![Tabs mobile device permissions prompt](../../assets/images/tabs/MobileLocationPermission.png)
 
 ## Permission behavior across login sessions
 
