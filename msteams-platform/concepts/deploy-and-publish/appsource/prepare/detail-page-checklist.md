@@ -153,6 +153,16 @@ Here's a view in [App Studio](https://aka.ms/InstallTeamsAppStudio):
 `at the end of a line.`<br>
  >**Escape.** Use an inline backslash to escape special characters.. `\*asterisk`.
 
+**Example in Markdown format**
+
+|Syntax |Markdown format |Normal text view|
+|:---------|:---------------|:---------|
+|Link  |` [App name guide](https://docs.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist#app-name)`| [App name guide](https://docs.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist#app-name) |
+|Image |` ![App long description store view](~/assets/images/store-detail-page/LongDescription-02.png)`| ![App long description store view](~/assets/images/store-detail-page/LongDescription-02.png)|
+|Bold |` **HR Tools**` | **HR Tools**  |
+|Italics |`*HR Tools*` |*HR Tools*|
+|Newline |` HR Tools provide wide range of solutions that help your organization to manage day-to-day HR activities effectively. <br/> No more flipping through paper records or juggling among 5 different apps.` |HR Tools provide wide range of solutions that help your organization to manage day-to-day HR activities effectively. <br/>  No more flipping through paper records or juggling among 5 different apps.|
+
 **Don'ts:**
 
 * Don't put too many keywords in your description — it's distracting and won't help your app's discoverability.
@@ -171,15 +181,6 @@ Here's a view in [App Studio](https://aka.ms/InstallTeamsAppStudio):
 * Logo must not wrongly depict the app as an official Microsoft product/ feature or mimic any of the existing or upcoming Microsoft products.
 
 ![App long description store view](~/assets/images/store-detail-page/LongDescription-02.png)
-
-**Example in Markdown format** 
-```
-	Link: [App name guide](https://docs.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist#app-name)<br/>
-	Image: ![App long description store view](~/assets/images/store-detail-page/LongDescription-02.png)<br/>
-	Bold: **Use two asterisks (**) at the beginning and end of a word/sentence.** <br/>
-	Italics: *Use single asterisk (*) at the beginning and end of a word/sentence.* <br/>
-	Newline : Place two empty spaces or a backslash "\" at the end of a line.
-```
 
 Here's a view in [App Studio](https://aka.ms/InstallTeamsAppStudio):
 
