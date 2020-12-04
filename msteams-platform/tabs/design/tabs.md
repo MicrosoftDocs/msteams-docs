@@ -7,7 +7,7 @@ ms.topic: conceptual
 
 Tabs are essentially focused webpages that facilitate collaboration. To guide your app design, the following information describes and illustrates how people can add, use, and manage tabs.
 
-## Get the Microsoft Teams UI Kit
+## Microsoft Teams UI Kit
 
 You can find comprehensive tab design guidelines, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit. The kit also covers essential topics such as accessibility and responsive sizing.
 
@@ -157,11 +157,68 @@ A tab isn’t a webpage someone might view once. A tab should display your most 
    :::column-end:::
 :::row-end:::
 
+### Navigation
+
 :::row:::
    :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-do.png" alt-text="Illustration showing what to do with tab navigation design." border="false":::
+
+#### Do: Limit tasks and data
+
+Tabs work best when they address specific needs. Include a limited set of tasks and data relevant to the team or group.
+
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-caution.png" alt-text="Illustration showing that you need to be cautious when using modals (i.e., task modules) in the in-meeting tab given the limited space." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-dont.png" alt-text="Illustration showing what not to do with tab navigation design." border="false":::
+
+#### Don't: Embed your entire app
+
+Using a tab to display an entire app with multi-level navigation and complex interactions leads to information overload.
+
+   :::column-end:::
+:::row-end:::
+
+### Setup
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-setup-do.png" alt-text="Illustration showing what to do with tab setup design." border="false":::
+
+#### Do: Keep it simple
+
+If your app requires authentication, try integrating Microsoft single sign-on (SSO) for a more seamless sign-in experience. Also, only include essential information and steps to add the tab. 
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-setup-dont.png" alt-text="Illustration showing what not to do with tab setup design." border="false":::
+
+#### Don't: Have too many steps
+
+Remove any unnecessary steps for adding a tab.
+
+   :::column-end:::
+:::row-end:::
+
+### Theming
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="Illustration showing what to do with tab theming." border="false":::
+
+#### Do: Take advantage of Teams color tokens
+
+Each Teams theme has its own color scheme. To handle theme changes automatically, use [color tokens](https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme) in your design.
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="Illustration showing what not to do with tab theming." border="false":::
+
+#### Don't: Hard code color values
+
+If you don’t use Teams color tokens, your designs will be less scalable and take more time to manage.
+
+   :::column-end:::
+:::row-end:::
 
 ## Validate your design
 
