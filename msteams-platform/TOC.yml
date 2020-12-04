@@ -123,18 +123,6 @@
     href: concepts/design/design-teams-app-fundamentals.md
   - name: Basic UI components
     href: concepts/design/design-teams-app-basic-ui-components.md
-  - name: Adaptive Cards
-    href: task-modules-and-cards/cards/design-effective-cards.md
-  - name: Bots
-    href: bots/design/bots.md
-  - name: Meetings
-    items:
-    - name: In-meeting dialog
-      href: apps-in-teams-meetings/design/designing-in-meeting-dialog.md
-    - name: In-meeting tab
-      href: apps-in-teams-meetings/design/designing-in-meeting-tab.md
-  - name: Messaging extensions
-    href: messaging-extensions/design/messaging-extension-design.md
   - name: Personal apps
     href: concepts/design/personal-apps.md
   - name: Tabs
@@ -143,8 +131,20 @@
       href: tabs/design/tabs.md
     - name: Mobile
       href: tabs/design/tabs-mobile.md
+  - name: Messaging extensions
+    href: messaging-extensions/design/messaging-extension-design.md  
+  - name: Bots
+    href: bots/design/bots.md
+  - name: Meeting extensions
+    items:
+    - name: In-meeting dialog
+      href: apps-in-teams-meetings/design/designing-in-meeting-dialog.md
+    - name: In-meeting tab
+      href: apps-in-teams-meetings/design/designing-in-meeting-tab.md  
   - name: Task modules
     href: task-modules-and-cards/task-modules/design-teams-task-modules.md
+  - name: Adaptive Cards
+    href: task-modules-and-cards/cards/design-effective-cards.md
   - name: UI templates
     href: concepts/design/design-teams-app-ui-templates.md
 - name: 'Tabs — embedded web experiences'
