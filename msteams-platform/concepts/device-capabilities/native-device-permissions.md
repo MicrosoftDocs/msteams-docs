@@ -18,7 +18,7 @@ You might want to enrich your tab with features that require access native devic
 > [!IMPORTANT]
 >
 > * Currently, Teams mobile client only supports `camera` and `location`  through native device capabilities and is available on all app constructs including tabs. </br>
-> * Support for `camera` image capture is enabled by the [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-).
+> * Support for `camera` image capture is enabled by the [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true).
 > * The [**geolocation API**](../../resources/schema/manifest-schema.md#devicepermissions) is currently not fully supported on all desktop clients.
 
 ## Device permissions

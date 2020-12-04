@@ -60,21 +60,8 @@ GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 **C# Example**
 
 ```csharp
-string meetingId = "meetingid?";
-string participantId = "participantidhere";
-var connectorClient = turnContext.TurnState.Get<IConnectorClient>();
-var creds = connectorClient.Credentials as AppCredentials;
-var bearerToken = await creds.GetTokenAsync().ConfigureAwait(false);
-var request = new HttpRequestMessage();
-request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
-request.Method = new HttpMethod("GET");
-request.RequestUri = new System.Uri(Path.Combine(connectorClient.BaseUri.OriginalString, $"/meetings/{meetingId}/participants/{participantId}"));
-HttpResponseMessage response = await (connectorClient as ServiceClient<ConnectorClient>).HttpClient.SendAsync(request, cancellationToken).ConfigureAwait(false);
-if (response.StatusCode == System.Net.HttpStatusCode.OK)
-{
-    var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-    var theObject = Rest.Serialization.SafeJsonConvert.DeserializeObject<WhateverObjectIsReturned>(content, connectorClient.DeserializationSettings);
-}
+   // Get role for the user who sent a message to your bot
+   var senderRole = await TeamsInfo.GetMeetingParticipantAsync(turnContext);
 ```
 
 * * *
@@ -178,14 +165,14 @@ POST /v3/conversations/{conversationId}/activities
 
 ```csharp
 Activity activity = MessageFactory.Text("This is a meeting signal test");
-MeetingNotification notification = new MeetingNotification
-  {
-    AlertInMeeting = true,
-    ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
-  };
+
 activity.ChannelData = new TeamsChannelData
   {
-    Notification = notification
+    Notification = new NotificationInfo()
+                    {
+                        AlertInMeeting = true,
+                        ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
+                    }
   };
 await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```

@@ -192,4 +192,4 @@ Sending a message to a tab thread increases the awareness of activity to all use
 * Tabs should not have more than three levels of navigation within the app.
 * Secondary and tertiary pages in a tab should be opened in an L2/L3 view in the main tab area that is navigated via the breadcrumb.
 * Tabs that have complex editing capabilities within the app should open the editor view in multi-window rather than a tab (for desktop and web).
-* For improved user experience include a personal bot that sends a welcome message to the user on the first run and responds to the **hi**, **help**, and **hello** commands. You can refer to the documentation on [conversational bots](../../bots/what-are-bots#in-a-one-to-one-chat) for further assistance.
+* For improved user experience include a personal bot that sends a welcome message to the user on the first run and responds to the **hi**, **help**, and **hello** commands. You can refer to the documentation on [conversational bots](../../bots/what-are-bots.md#in-a-one-to-one-chat) for further assistance.
