@@ -18,8 +18,8 @@ You might want to enrich your tab with features that require access to native de
 > [!IMPORTANT]
 >
 > * Currently, Teams mobile client only supports access to `camera`, `gallery`, `mic` and `location` through native device capabilities and is available on all app constructs including tabs. </br>
-> * Support for `camera`, `gallery` and `mic` is enabled through [`selectMedia` API](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_). For single image capture you may use [**captureImage API**](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-).
-> * Support for `location` is enabled through [`getLocation` API](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_). It's recommended you use this API as [**geolocation API**](../../resources/schema/manifest-schema.md#devicepermissions) is currently not fully supported on all desktop clients.
+> * Support for `camera`, `gallery` and `mic` is enabled through [**selectMedia API**](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_). For single image capture you may use [**captureImage API**](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-).
+> * Support for `location` is enabled through [**getLocation API**](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_). It's recommended you use this API as [**geolocation API**](../../resources/schema/manifest-schema.md#devicepermissions) is currently not fully supported on all desktop clients.
 
 ## Device permissions
 
@@ -104,7 +104,9 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 ## Prompting the user
 
-To show a prompt to get consent to access device permissions you need to leverage the appropriate HTML5 or Teams API. For example, to prompt the user to access their camera you need to call `getCurrentPosition`:
+To show a prompt to get consent to access device permissions you need to leverage the appropriate HTML5 or Teams API. 
+
+For example, to prompt the user to access their location you need to call `getCurrentPosition`:
 
 ```Javascript
 navigator.geolocation.getCurrentPosition(function (position) { /*... */ });
@@ -116,16 +118,42 @@ To use the camera on desktop or web, Teams will show a permission prompt when yo
 navigator.mediaDevices.getUserMedia({ audio: true, video: true });
 ```
 
-To capture the image on mobile, Teams mobile will ask for permission when called `captureImage()`:
+To capture the image on mobile, Teams mobile will ask for permission when you call `captureImage()`:
 
-```Typescript
-function captureImage(callback: (error: SdkError, files: File[]) => void)
+```Javascript
+microsoftTeams.media.captureImage((error: microsoftTeams.SdkError, files: microsoftTeams.media.File[]) => {
+  /* ... */
+});
 ```
 
 Notifications will prompt the user when you call `requestPermission`:
 
 ```Javascript
 Notification.requestPermission(function(result) { /* ... */ });
+```
+
+To use camera or access photo gallery, Teams mobile will ask permission when you call `selectMedia()`:
+
+```JavaScript
+microsoftTeams.media.selectMedia({ maxMediaCount: 10, mediaType: microsoftTeams.media.MediaType.Image }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
+  /* ... */
+});
+```
+
+To use mic, Teams mobile will ask permission when you call `selectMedia()`:
+
+```JavaScript 
+microsoftTeams.media.selectMedia({ maxMediaCount: 1, mediaType: microsoftTeams.media.MediaType.Audio }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
+  /* ... */
+});
+```
+
+To prompt user to share location on map interface, Teams mobile will ask permission when you call `getLocation()`:
+
+```JavaScript 
+microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
+  /* ... *
+/});
 ```
 
 # [Desktop](#tab/desktop)
