@@ -37,7 +37,7 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 ```
 
 > [!NOTE]
-> The _Request Permissions_ prompt is automatically displayed when a relevant Teams API is initiated. For more details, *see* [Request device permissions](native-device-permissions).
+> The _Request Permissions_ prompt is automatically displayed when a relevant Teams API is initiated. For more details, *see* [Request device permissions](native-device-permissions.md).
 
 ## Using camera and image capability APIs
 
