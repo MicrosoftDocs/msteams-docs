@@ -17,7 +17,7 @@ You might want to enrich your tab with features that require access to native de
 
 > [!IMPORTANT]
 >
-> * Currently, Teams mobile client only supports access to `camera`, `gallery`, `mic` and `location` through native device capabilities and is available on all app constructs including tabs. </br>
+> * Currently, Teams mobile client only supports access to `camera`, `gallery`, `mic`, and `location` through native device capabilities and is available on all app constructs including tabs. </br>
 > * Support for `camera`, `gallery` and `mic` is enabled through [**selectMedia API**](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_). For single image capture you may use [**captureImage API**](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-).
 > * Support for `location` is enabled through [**getLocation API**](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_). It's recommended you use this API as [**geolocation API**](../../resources/schema/manifest-schema.md#devicepermissions) is currently not fully supported on all desktop clients.
 
@@ -46,7 +46,7 @@ While access to these features is standard in most modern web browsers, you need
 
 1. Open Teams.
 1. Go to **Settings** -> **App Permissions**.
-1. Select app you need to choose settings for.
+1. Select the app you need to choose settings for.
 1. Choose your desired settings.
 
 ![Device permissions mobile settings screen](../../assets/images/tabs/MobilePermissions.png)
