@@ -164,6 +164,7 @@ microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }
 
 ![Tabs mobile device permissions prompt](../../assets/images/tabs/MobileLocationPermission.png)
 
+
 ## Permission behavior across login sessions
 
 Native device permissions are stored for every login session. It means that if you log into another instance of Teams (ex: on another computer), your device permissions from your previous sessions will not be available. Instead, you will need to re-consent to device permissions for the new login session. It also means, if you log out of Teams (or switch tenants inside of Teams), your device permissions will be deleted for that previous login session. Please keep this in mind when developing native device permissions: the native capabilities you consent to are only for your _current_ login session.
