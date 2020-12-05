@@ -24,10 +24,10 @@ The table below shows which types of responses are available based on the invoke
 
 |Response Type | compose | command bar | message |
 |--------------|:-------------:|:-------------:|:---------:|
-|Card response | x | x | x |
-|Another task module | x | x | x |
-|Bot with Adaptive Card | x |  | x |
-| No response | x | x | x |
+|Card response | ✔ | ✔ | ✔ |
+|Another task module | ✔ | ✔ | ✔ |
+|Bot with Adaptive Card | ✔ |  | ✔ |
+| No response | ✔ | ✔ | ✔ |
 
 ## The submitAction invoke event
 
