@@ -12,7 +12,7 @@ Tabs are essentially focused webpages that facilitate collaboration. To guide yo
 You can find comprehensive tab design guidelines, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit. The kit also covers essential topics such as accessibility and responsive sizing.
 
 > [!div class="nextstepaction"]
-> [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/888593778835180533)
+> [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## Add a tab
 
@@ -207,7 +207,7 @@ Remove any unnecessary steps for adding a tab.
 
 #### Do: Take advantage of Teams color tokens
 
-Each Teams theme has its own color scheme. To handle theme changes automatically, use [color tokens](https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme) in your design.
+Each Teams theme has its own color scheme. To handle theme changes automatically, use <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">color tokens (Fluent UI)</a> in your design.
 
    :::column-end:::
    :::column span="":::
