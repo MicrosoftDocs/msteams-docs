@@ -1,11 +1,12 @@
 ---
 title: Designing your tab for desktop and web
-description: Design guidelines for Microsoft Teams tabs (desktop and web).
+description: Learn how to design a Teams tab (desktop and web) and get the Microsoft Teams UI Kit.
 ms.topic: conceptual
+ms.author: lajanuar
 ---
 # Designing your tab for Microsoft Teams desktop and web
 
-Tabs are essentially focused webpages that facilitate collaboration. To guide your app design, the following information describes and illustrates how people can add, use, and manage tabs.
+Tabs are essentially focused webpages that facilitate collaboration. To guide your app design, the following information describes and illustrates how people can add, use, and manage tabs in Teams.
 
 ## Microsoft Teams UI Kit
 

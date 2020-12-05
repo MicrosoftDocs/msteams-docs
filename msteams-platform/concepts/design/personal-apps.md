@@ -1,14 +1,14 @@
 ---
 title: Designing your personal app
-description: Design guidelines for Microsoft Teams personal apps.
+description: Learn how to design a Teams personal app and get the Microsoft Teams UI Kit.
 ms.topic: conceptual
 ms.author: lajanuar
 --- 
-# Personal apps
+# Designing your personal app for Microsoft Teams
 
 A personal app can be a bot, private workspace, or both. Sometimes it functions like place to create or view content, other times it offers the user a bird’s eye view of everything that’s theirs when the app has been configured as a tab in multiple channels.
 
-To guide your app design, the following information describes and illustrates how people can add, use, and manage personal apps.
+To guide your app design, the following information describes and illustrates how people can add, use, and manage personal apps in Teams.
 
 ## Microsoft Teams UI Kit
 
@@ -31,7 +31,7 @@ With a private workspace, you can view app content that's meaningful to you in a
 
 ### Anatomy: Personal app (private workspace)
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="Example shows personal tab component anatomy." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="Example shows personal tab's component anatomy." border="false":::
 
 |Counter|Description|
 |----------|-----------|
@@ -40,14 +40,14 @@ With a private workspace, you can view app content that's meaningful to you in a
 |C|**Popout view**: Pushes your app content from a parent window to a standalone child window.|
 |D|**More menu**: Includes additional app information and options. (You could alternatively make **Settings** a tab.)|
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="Example shows personal tab structural anatomy." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="Example shows personal tab's structural anatomy." border="false":::
 
 |Counter|Description|
 |----------|-----------|
 |A|**Tabs**: Provides navigation for your personal app.|
 |1|**iframe**: Displays your app content.|
 
-## Designing with UI templates
+### Designing with UI templates
 
 Use one of the following Teams UI templates to help design your personal tab:
 
