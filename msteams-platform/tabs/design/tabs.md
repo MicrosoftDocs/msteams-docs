@@ -187,7 +187,7 @@ Using a tab to display an entire app with multi-level navigation and complex int
 
 #### Do: Keep it simple
 
-If your app requires authentication, try integrating Microsoft single sign-on (SSO) for a more seamless sign-in experience. Also, only include essential information and steps to add the tab. 
+If your app requires authentication, try integrating Microsoft single sign-on (SSO) for a more seamless sign-in experience. Also, only include essential information and steps to add the tab.
 
    :::column-end:::
    :::column span="":::

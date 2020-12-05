@@ -66,7 +66,7 @@ In a personal app, a carousel can provide an effective overview of your bot and 
 
 #### Channels and group chats
 
-In channels and group chats, a tour should open in a modal (also known as a [task module](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)) so it doesn’t interrupt ongoing conversations. This also gives you the option to implement role-based views for your tour.
+In channels and group chats, a tour should open in a modal (also known as a [task module](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) so it doesn’t interrupt ongoing conversations. This also gives you the option to implement role-based views for your tour.
 
 :::image type="content" source="../../assets/images/bots/bot-tour-channel.png" alt-text="Example shows a bot tour in a channel." border="false":::
 
@@ -140,6 +140,12 @@ A tab can make your bot easier to use. For example, if your bot can create work 
 
 :::image type="content" source="../../assets/images/bots/bot-with-tab.png" alt-text="Example shows how a tab can help organize bot content." border="false":::
 
+## Manage a bot
+
+Users should be able to change a bot's settings. You can provide this functionality with bot commands, but it's usually more efficient to include all settings in a [task module](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) (as shown in the following example).
+
+:::image type="content" source="../../assets/images/bots/manage-bot-task-module.png" alt-text="Example shows a task module for configuring a bot's settings." border="false":::
+
 ## Understanding what people are saying
 
 Use a thesaurus and get people from as many different backgrounds as possible to help you generate different interpretations of standard queries.
@@ -180,6 +186,119 @@ Learn what users say when chatting with your bot. This will be an ongoing, itera
 
 * [Understanding LUIS](https://docs.microsoft.com/azure/cognitive-services/luis/artificial-intelligence): Find out how LUIS uses AI to provide natural language understanding (NLU) to your app data.
 * [Integrating with LUIS](https://www.luis.ai/user/tutorial): Add natural language capabilities to your bot without the complex process of creating machine learning models.
+
+## Best practices
+
+### Content
+
+:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="Example showing a bot best practice." border="false":::
+
+#### Do: Establish a clear persona
+
+Is your bot's tone friendly and light, “just the facts”, or super quirky? How should it respond in different scenarios? Planning and documenting your bot's persona makes it easier to write responses that seem natural and cohesive.
+
+See more about writing for bots in the <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Microsoft Teams UI Kit (Figma).</a>
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="Example showing a bot best practice." border="false":::
+
+#### Do: Clearly convey what your bot can do
+
+Welcome messages and tours help people understand what they can do with your bot.
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="Example showing a bot best practice." border="false":::
+
+#### Don't: Obscure your bot’s features
+
+First impressions matter. People will likely be confused or suspicious when presented with a nondescript sign-in message.
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="Example showing a bot best practice." border="false":::
+
+#### Do: Recognize non-questions
+
+Your bot should be able to respond to messages like "Hi", "Help", and "Thanks" while also accounting for common misspellings and colloquialisms.
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="Example showing a bot best practice." border="false":::
+
+#### Don't: Miss out on opportunities to delight
+
+Some people expect conversations to flow naturally like they would with a real person. Try to avoid clumsy responses to simple messages.
+
+   :::column-end:::
+:::row-end:::
+
+### Troubleshooting
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="Example showing a bot best practice." border="false":::
+
+#### Do: Provide help
+
+If your bot can’t satisfy a request, provide ways for a user to educate themselves about interacting with your bot.
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="Example showing a bot best practice." border="false":::
+
+#### Don't: Leave users stranded
+
+People will quickly abandon your bot if they can’t troubleshoot issues.
+
+   :::column-end:::
+:::row-end:::
+
+### Complex interactions
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="Example showing a bot best practice." border="false":::
+
+#### Do: Use task modules or tabs
+
+If your bot provides an answer that requires a few more steps, you can link to a task module or tab to complete the task or flow.
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="Example showing a bot best practice." border="false":::
+
+#### Don't: Make multi-turn interactions tedious
+
+An extensive conversation to complete a single task is slow and overly complex. It also requires the developer to account for state changes (such as the conversation timing out or you sending a “Cancel” message).
+
+   :::column-end:::
+:::row-end:::
+
+### Privacy
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="Example showing a bot best practice." border="false":::
+
+#### Do: Only show sensitive info in a personal context
+
+If your bot is in a group chat or channel, we recommend directing users to a private location (such as a task module, tab, or browser) to view sensitive information.
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="Example showing a bot best practice." border="false":::
+
+#### Don't: Some content isn’t meant to be seen by everyone
+
+Your bot shouldn’t reveal sensitive information to a group of people.
+
+   :::column-end:::
+:::row-end:::
 
 ## Learn more
 
