@@ -156,6 +156,31 @@ Use a thesaurus and get people from as many different backgrounds as possible to
    :::column-end:::
 :::row-end:::
 
+### Extracting intent and data from messages
+
+Design your bot to recognize intent, which captures what someone wants from a bot in response to a message or query. Intent classifies a message or query as a single action with one or more data objects that are affected by the action. 
+
+The following examples outline the user intent and data in messages sent to bots.
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-intent-1.png" alt-text="Example showing in sentence 'Book a flight to Seattle', user intent is 'book a flight' and data is 'Seattle'." border="false":::
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-intent-2.png" alt-text="Example showing in sentence 'When does the store open', user intent is 'when' and data is 'open'." border="false":::
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-intent-3.png" alt-text="Example showing in sentence 'Schedule a meeting at 1pm with Bob in Distribution', user intent is 'schedule a meeting' and data is '1pm' and 'Bob in Distribution'." border="false":::
+   :::column-end:::
+:::row-end:::
+
+### Analyze and improve
+
+Learn what users say when chatting with your bot. This will be an ongoing, iterative process as your user base grows in different locations and orgs. You can tune your bot's language recognition and intent mapping with Microsoft Language Understanding (LUIS).
+
+* [Understanding LUIS](https://docs.microsoft.com/azure/cognitive-services/luis/artificial-intelligence): Find out how LUIS uses AI to provide natural language understanding (NLU) to your app data.
+* [Integrating with LUIS](https://www.luis.ai/user/tutorial): Add natural language capabilities to your bot without the complex process of creating machine learning models.
+
 ## Learn more
 
 These other guidelines may help with your bot design:
