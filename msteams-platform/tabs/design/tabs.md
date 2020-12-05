@@ -16,7 +16,7 @@ You can find comprehensive tab design guidelines, including elements that you ca
 
 ## Add a tab
 
-You can add a tab from the Teams store or in one of the following contexts:
+You can add a tab from the Teams store (AppSource) or in one of the following contexts:
 
 * Chat
 * Channel
@@ -55,13 +55,13 @@ You can add a step in which users must first sign in with their Microsoft creden
 
 :::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="Example shows a tab authentication screen." border="false":::
 
-### Designing your tab setup with UI templates
+### Designing a tab setup with UI templates
 
 Use one of the following Teams UI templates to help design your tab setup experience:
 
-* [List](../../concepts/design/design-teams-app-ui-templates.md): Lists can display related items in a scannable format and allow users to take actions on an entire list or individual items.
-* [Form](../../concepts/design/design-teams-app-ui-templates.md): Forms are for collecting, validating, and submitting user input in a structured way.
-* [Empty state](../../concepts/design/design-teams-app-ui-templates.md): The empty state template can be used for many scenarios, including sign in, first-run experiences, error messages, and more.
+* [List](../../concepts/design/design-teams-app-ui-templates.md#list): Lists can display related items in a scannable format and allow users to take actions on an entire list or individual items.
+* [Form](../../concepts/design/design-teams-app-ui-templates.md#form): Forms are for collecting, validating, and submitting user input in a structured way.
+* [Empty state](../../concepts/design/design-teams-app-ui-templates.md#empty-state): The empty state template can be used for many scenarios, including sign in, first-run experiences, error messages, and more.
 
 ## View a tab
 
@@ -80,16 +80,16 @@ Tabs provide a full-screen web experience in Teams where you can display collabo
 |3|**Tab chat**: Opens a chat thread on the right, allowing users to have a conversation next to the content.|
 |4|**iframe**: Displays your tab’s content.
 
-### Designing your tab with UI templates
+### Designing a tab with UI templates
 
 Use one of the following Teams UI templates to help design your tab experience:
 
-* [List](../../concepts/design/design-teams-app-ui-templates.md): Lists can display related items in a scannable format and allow users to take actions on an entire list or individual items.
-* [Task board](../../concepts/design/design-teams-app-ui-templates.md): A task board, sometimes called a kanban board or swim lanes, is a collection of cards often used to track the status of work items or tickets.
-* [Dashboard](../../concepts/design/design-teams-app-ui-templates.md): A dashboard is a canvas containing multiple cards that provide an overview of data or content.
-* [Form](../../concepts/design/design-teams-app-ui-templates.md): Forms are for collecting, validating, and submitting user input in a structured way.
-* [Empty state](../../concepts/design/design-teams-app-ui-templates.md): The empty state template can be used for many scenarios, including sign in, first-run experiences, error messages, and more.
-* [Left nav](../../concepts/design/design-teams-app-ui-templates.md): The left nav template can help if your tab requires some navigation. In general, you should keep tab navigation to a minimum.
+* [List](../../concepts/design/design-teams-app-ui-templates.md#list): Lists can display related items in a scannable format and allow users to take actions on an entire list or individual items.
+* [Task board](../../concepts/design/design-teams-app-ui-templates.md#task-board): A task board, sometimes called a kanban board or swim lanes, is a collection of cards often used to track the status of work items or tickets.
+* [Dashboard](../../concepts/design/design-teams-app-ui-templates.md#dashboard): A dashboard is a canvas containing multiple cards that provide an overview of data or content.
+* [Form](../../concepts/design/design-teams-app-ui-templates.md#form): Forms are for collecting, validating, and submitting user input in a structured way.
+* [Empty state](../../concepts/design/design-teams-app-ui-templates.md#empty-state): The empty state template can be used for many scenarios, including sign in, first-run experiences, error messages, and more.
+* [Left nav](../../concepts/design/design-teams-app-ui-templates.md#left-nav): The left nav template can help if your tab requires some navigation. In general, you should keep tab navigation to a minimum.
 
 ## Use a tab to collaborate
 

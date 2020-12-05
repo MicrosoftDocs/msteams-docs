@@ -35,9 +35,9 @@ A dashboard displays different types of content in a central location (Teams per
 
 ### Top use cases
 
-* Analyzing data
-* Reporting metrics
-* Organizing different information in one place
+* Analyze data
+* Report metrics
+* Organize different information in one place
 
 ## Form
 
