@@ -1,17 +1,121 @@
 ---
-title: Design your app - Basic UI components
+title: Designing task modules
 author: heath-hamilton
-description: Learn about the primitive UI components commonly used to build Microsoft Teams apps.
+description: Learn how to design task modules for Teams apps and get the Microsoft Teams UI Kit.
 ms.author: lajanuar
 ms.topic: reference
 ---
-# Basic UI components for Microsoft Teams apps
+# Designing task modules for your Microsoft Teams app
 
-Teams apps are typically created with the following set of standard UI components.
+You can create modal popup experiences in your Teams app with task modules. Use this capability to display rich media and information or complete a complex task.
 
-Component | Description
- - | -
-[Buttons](https://fluentsite.z22.web.core.windows.net/components/button/definition) | Primary and secondary buttons can be medium or small
-Input | Field for brief user input. Label text can include an icon
-Dropdown | Select one or more options from a list. Can include search and multi-selection features
-Alert | Whether displaying an urgent message, error state, or warning, the message should be short and won't interrupt the user's current task
+:::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="Example shows a task module." border="false":::
+
+## Microsoft Teams UI Kit
+
+You can find comprehensive task module design guidelines, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit.
+
+> [!div class="nextstepaction"]
+> [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
+
+## Open a task module
+
+Task modules can be launched from almost anywhere in your app.
+
+* **Tab**: A task module can be launched from any link within a tab or iframe. Use in scenarios where you want the user to focus on an interaction.
+* **Bot**: A task module can be launched from a link inside a bot message.
+* **Adaptive Card**: A task module can be launched from an Adaptive Card (sent with a messaging extension or by a bot) when a user selects a button.
+* **Messaging extension (action commands)**: Messaging extensions allow you to take a particular action on message content. Selecting an action opens a task module.
+* **Messaging extension (compose box context)**: In the compose box, you can design a messaging extension to open a task module instead of the typical flyout. Reserve task modules for complex interactions, such as completing a form.
+
+## Anatomy
+
+:::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="Illustration showing the UI anatomy of a task module." border="false":::
+
+Task modules are very flexible surfaces. They can be built with iframes, pulling in other UI templates, to host partner-built experiences. This is preferred for the most polished experience.
+
+They can also be built with the [Adaptive Card](../../task-modules-and-cards/cards/design-effective-cards.md) framework, which can be a simpler and faster way to execute common scenarios (such as forms).
+
+|Counter|Description|
+|----------|-----------|
+|1|**App icon**|
+|2|**App name**: Full name of your app.|
+|3|**Header**: Make headers clear and concise. Describe the task you want users to complete.
+|4|**Close button**: Allows users to find app content they want to insert.|
+|5|**iframe**: Responsive space that hosts your app content.|
+|6|**Actions (optional)**: Buttons related to your app content.|
+
+## Designing with UI templates
+
+Consider using templates for common layouts inside your task modules. Each one is made up of smaller components to create an elegant, responsive design that can be used out of the box or customized for your scenario or with your brand look and feel.
+
+* [List](../../concepts/design/design-teams-app-ui-templates.md#list): Lists can display related items in a scannable format and allow users to take actions on an entire list or individual items.
+* [Form](../../concepts/design/design-teams-app-ui-templates.md#form): Forms are for collecting, validating, and submitting user input in a structured way.
+* [Empty state](../../concepts/design/design-teams-app-ui-templates.md#empty-state): The empty state template can be used for many scenarios, including sign in, first-run experiences, error messages, and more.
+
+## Examples
+
+### List
+
+Lists work nicely in a task module because they’re easy to scan.
+
+:::image type="content" source="../../assets/images/task-module/list.png" alt-text="Example list in a task module." border="false":::
+
+### Form
+
+Task modules are a great place to surface forms with sequential user inputs and inline validation. You can leverage Adaptive Cards as a way to embed form elements.
+
+:::image type="content" source="../../assets/images/task-module/form.png" alt-text="Example form in a task module." border="false":::
+
+### Sign in
+
+Create a focused sign in or sign-up flow with a series of task modules, letting users move easily through sequential steps.
+
+:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Example sign in experience in a task module." border="false":::
+
+### Media
+
+Embed media content in a task module for a focused viewing experience.
+
+:::image type="content" source="../../assets/images/task-module/media.png" alt-text="Example media content in a task module." border="false":::
+
+### Empty state
+
+Use for welcome, error, and success messages.
+
+:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="Example empty state in a task module." border="false":::
+
+### Image gallery
+
+Embed a gallery carousel inside an iframe.
+
+:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="Example image gallery in a task module." border="false":::
+
+### Poll
+
+This example shows poll results launched from an Adaptive Card.
+
+:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="Example poll in a task module." border="false":::
+
+## Best practices
+
+### Usability
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="Example showing a task module best practice." border="false":::
+
+#### Do: Use one task module at a time
+
+The goal is to focus the user on completing a task after all!
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="Example showing a messaging extension best practice." border="false":::
+
+#### Don't: Pop a dialog on top of a task module
+
+This creates an unfocused, confusing user experience.ge.
+
+   :::column-end:::
+:::row-end:::

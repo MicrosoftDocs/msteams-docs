@@ -3,7 +3,7 @@ title: Designing your app with UI templates
 author: heath-hamilton
 description: Design your app faster with standardized UI components, layouts, and patterns commonly seen across Microsoft Teams.
 ms.author: lajanuar
-ms.topic: overview
+ms.topic: reference
 ---
 # Designing your Microsoft Teams app with UI templates
 
@@ -160,7 +160,7 @@ A toolbar is a container for grouping a set of controls.
 
 Stage offers a way for users to open an entity—like an image, file, or website—in Teams instead of opening it in another app or browser. The primary use case of stage is viewing; the surface should not be used for complex interactions.
 
-(Implementation note: Build your stage using a large task module.)
+(Implementation note: Build your stage using a large [task module](../../task-modules-and-cards/task-modules/design-teams-task-modules.md).)
 
 :::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="Example shows a stage template." border="false":::
 

@@ -1,6 +1,7 @@
 ---
 title: Designing your personal app
 description: Learn how to design a Teams personal app and get the Microsoft Teams UI Kit.
+author: heath-hamilton
 ms.topic: conceptual
 ms.author: lajanuar
 --- 

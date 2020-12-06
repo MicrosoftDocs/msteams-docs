@@ -2,6 +2,7 @@
 title: Design your app - Understanding the fundamentals
 author: heath-hamilton
 description: Learn about the basics of designing your Microsoft Teams app, including layout, color scheme, and more.
+author: heath-hamilton
 ms.author: lajanuar
 ms.topic: overview
 ---

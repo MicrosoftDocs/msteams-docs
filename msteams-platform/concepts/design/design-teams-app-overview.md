@@ -116,25 +116,26 @@ Learn the [fundamentals of Teams app design](design-teams-app-fundamentals.md), 
 
 ## Basic UI components
 
-Based on the Fluent Design System, these are the [core elements for creating familiar Teams interfaces](design-teams-app-basic-ui-components.md).
+Based on Fluent UI, these are the [core elements for creating familiar Teams interfaces](design-teams-app-basic-ui-components.md).
 
 ## App capabilities
 
-Understand how people add and use Teams apps to make the most of each capability in your design.
+Understand how people add, use, and manage Teams apps to make the most of each capability in your design.
 
-* [Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md)
-* [Bots](../../bots/design/bots.md)
-* [Meetings](../../apps-in-teams-meetings/design/designing-in-meeting-dialog.md)
-* [Messaging extensions](../../messaging-extensions/design/messaging-extension-design.md)
 * [Personal apps](../../concepts/design/personal-apps.md)
 * [Tabs](../../tabs/design/tabs.md)
+* [Messaging extensions](../../messaging-extensions/design/messaging-extension-design.md)
+* [Bots](../../bots/design/bots.md)
+* [Meeting extensions](../../apps-in-teams-meetings/design/designing-in-meeting-dialog.md)
+* [Task modules](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
+* [Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md)
 
 ## UI templates
 
 Quickly create complex, high-fidelity designs with [templates for common Teams use cases and workflows](design-teams-app-ui-templates.md).
 
 ## Resources
-<!-- Need link to Figma style guide. -->
-* [Microsoft Teams UI Design Kit](www.example.com)
-* [Fluent Design System](https://fluentsite.z22.web.core.windows.net/)
+
+* [Microsoft Teams UI Design Kit](https://www.figma.com/community/file/916836509871353159)
+* [Fluent UI](https://fluentsite.z22.web.core.windows.net/)
 * [Adaptive Card designer](https://adaptivecards.io/designer)

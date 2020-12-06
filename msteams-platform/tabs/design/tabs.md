@@ -1,6 +1,7 @@
 ---
 title: Designing your tab for desktop and web
 description: Learn how to design a Teams tab (desktop and web) and get the Microsoft Teams UI Kit.
+author: heath-hamilton
 ms.topic: conceptual
 ms.author: lajanuar
 ---
