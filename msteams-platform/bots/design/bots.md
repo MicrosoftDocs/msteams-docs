@@ -27,7 +27,7 @@ Bots are available in chats, channels, and personal apps. You can add a bot one 
 
 :::image type="content" source="../../assets/images/bots/add-bot-chat-at-mention.png" alt-text="Example shows how to add a bot in a group chat using an @mention." border="false":::
 
-## Bot introductions
+## Introduce a bot
 
 It’s critical that your bot introduces itself and describes what it can do. This initial exchange helps people understand what to do with the bot, find out its limitations and, most importantly, get comfortable interacting with it.
 
@@ -37,9 +37,9 @@ In personal contexts, welcome messages set your bot's tone. The message includes
 
 :::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="Example shows a bot introduction in a personal app." border="false":::
 
-### Introductions in chats and channels
+### Introductions in group chats and channels
 
-Your bot’s introduction should be slightly little different in chats and channels compared to a personal context (like a personal app). In real life, if you entered a room full of people; you’d introduce yourself instead of welcoming everyone who’s already there. Carry that thinking into your bot design.
+Your bot's introduction should be slightly little different in group chats and channels compared to a personal context (like a personal app). In real life, if you entered a room full of people; you’d introduce yourself instead of welcoming everyone who’s already there. Carry that thinking into your bot design.
 
 :::image type="content" source="../../assets/images/bots/bot-group-welcome.png" alt-text="Example shows a bot introduction in a collaborative context." border="false":::
 
@@ -70,9 +70,18 @@ In channels and group chats, a tour should open in a modal (also known as a [tas
 
 :::image type="content" source="../../assets/images/bots/bot-tour-channel.png" alt-text="Example shows a bot tour in a channel." border="false":::
 
-## Chatting with a bot
+## Chat with a bot
 
 Bots integrate directly into Team’s messaging framework. Users can chat with a bot to get their questions answered or type commands to have the bot perform a narrow or specific set of tasks. Bots can proactively notify users about changes or updates to your app via chat.
+
+### Chat with a bot in different contexts
+
+You can use bots in the following contexts:
+
+* **Personal apps**: In a personal app, a bot has a dedicated chat tab.
+* **One-on-one chat**: A user can initiate a private conversation with a bot. It's the same experience as using a bot in a personal app.
+* **Group chat**: People can interact with a bot in a group chat by @mentioning the bot.
+* **Channel**: People can interact with a bot in a channel. by @mentioning the bot name in the compose box. Remember, in this context, the bot is available to the entire team, not just the channel.
 
 ### Anatomy
 
@@ -97,15 +106,6 @@ The command menu must always be available regardless of the state of the convers
 
 :::image type="content" source="../../assets/images/bots/bot-command-menu.png" alt-text="Example shows a bot's command menu." border="false":::
 
-### Chatting with a bot in different contexts
-
-You can use bots in the following contexts:
-
-* **Personal apps**: In a personal app, a bot has a dedicated chat tab.
-* **One-on-one chat**: A user can initiate a private conversation with a bot. It's the same experience as using a bot in a personal app.
-* **Group chat**: People can interact with a bot in a group chat by @mentioning the bot.
-* **Channel**: People can interact with a bot in a channel. by @mentioning the bot name in the compose box. Remember, in this context, the bot is available to the entire team, not just the channel.
-
 ## Use cases
 
 ### Simple queries
@@ -122,7 +122,7 @@ In the following example, the bot responds to each message with options for what
 
 :::image type="content" source="../../assets/images/bots/bot-multi-turn.png" alt-text="Example shows a multi-turn interaction with a bot." border="false":::
 
-### Reaching out to users
+### Reach out to users
 
 With proactive messaging, your bot can act like a digest that sends notifications relevant to an individual, group chat, or channel at a specific frequency. A bot may send a message when something has changed in a document or a work item is closed.
 
@@ -134,7 +134,7 @@ Now in that channel, the user can read their message from the bot.
 
 :::image type="content" source="../../assets/images/bots/bot-proactive-message.png" alt-text="Example shows the user looking at the bot's proactive message." border="false":::
 
-### Using tabs with bots
+### Use tabs with bots
 
 A tab can make your bot easier to use. For example, if your bot can create work items, it would be nice to show all those items in a central location inside a tab. See more about [designing tabs](../../tabs/design/tabs.md).
 
@@ -146,7 +146,7 @@ Users should be able to change a bot's settings. You can provide this functional
 
 :::image type="content" source="../../assets/images/bots/manage-bot-task-module.png" alt-text="Example shows a task module for configuring a bot's settings." border="false":::
 
-## Understanding what people are saying
+## Understand what people are saying
 
 Use a thesaurus and get people from as many different backgrounds as possible to help you generate different interpretations of standard queries.
 
@@ -162,7 +162,7 @@ Use a thesaurus and get people from as many different backgrounds as possible to
    :::column-end:::
 :::row-end:::
 
-### Extracting intent and data from messages
+### Extract intent and data from messages
 
 Design your bot to recognize intent, which captures what someone wants from a bot in response to a message or query. Intent classifies a message or query as a single action with one or more data objects that are affected by the action. 
 
@@ -211,7 +211,7 @@ Welcome messages and tours help people understand what they can do with your bot
    :::column span="":::
 :::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="Example showing a bot best practice." border="false":::
 
-#### Don't: Obscure your bot’s features
+#### Don't: Obscure your bot's features
 
 First impressions matter. People will likely be confused or suspicious when presented with a nondescript sign-in message.
 
