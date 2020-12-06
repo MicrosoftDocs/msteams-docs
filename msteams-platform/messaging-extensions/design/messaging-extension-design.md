@@ -90,17 +90,11 @@ The following scenarios show the primary ways people use messaging extensions.
 
 **1. Select a messaging extension**. Users can search for the content they want to share from the compose box.
 
-:::image type="content" source="../../assets/images/messaging-extension/insert-content-search-test.svg" alt-text="Example shows a user searching for content to insert from the compose box." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="Example shows a user searching for content to insert from the compose box." border="false":::
 
 **2. Insert content**. Once posted, others can reply or select the content to see more information in your app.
 
-:::row:::
-   :::column span="3":::
-      :::image type="content" source="../../assets/images/messaging-extension/insert-content-posted.png" alt-text="Example shows a user posting content into a channel conversation." border="false":::
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../assets/images/messaging-extension/insert-content-posted.png" alt-text="Example shows a user posting content into a channel conversation." border="false":::
 
 ### Take action on a message
 
