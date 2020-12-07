@@ -136,7 +136,7 @@
   - name: Bots
     href: bots/design/bots.md
   - name: Meeting extensions
-    href: apps-in-teams-meetings/designing-apps-in-meetings
+    href: apps-in-teams-meetings/designing-apps-in-meetings.md
   - name: Task modules
     href: task-modules-and-cards/task-modules/design-teams-task-modules.md
   - name: Adaptive Cards
