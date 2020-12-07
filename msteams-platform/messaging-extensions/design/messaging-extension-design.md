@@ -135,7 +135,7 @@ The following example is a messaging extension opened from the compose box.
 |1|**App logo**: Color icon of your app logo.|
 |2|**App name**: Full name of your app.|
 |3|**Action commands menu icon (optional)**: Opens a list of action commands for your messaging extension (if you specify any).
-|4|**Search box**: Allows users to find app content they want to insert.
+|4|**Search box**: Allows users to find app content they want to insert.|
 |5|**Tab menu (optional)**: Provides multiple content categories.|
 |6|**Action commands menu (optional)**: Displays list of action commands (if you specify any).|
 |7|**App content**: Primarily to display search results. The example here is using the list layout (grid layout is another option).|

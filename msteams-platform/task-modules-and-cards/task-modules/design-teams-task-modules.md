@@ -111,11 +111,74 @@ The goal is to focus the user on completing a task after all!
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="Example showing a messaging extension best practice." border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="Example showing a task module best practice." border="false":::
 
 #### Don't: Pop a dialog on top of a task module
 
-This creates an unfocused, confusing user experience.ge.
+This creates an unfocused, confusing user experience.
+
+   :::column-end:::
+:::row-end:::
+
+### Responsive
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="Example showing a task module best practice." border="false":::
+
+#### Do: Make sure the content is responsive
+
+While Adaptive Cards hosted in a task module render well on mobile devices, if you choose to use an iframe to host app content, make sure the UI is responsive and works well across devices.
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="Example showing a task module best practice." border="false":::
+
+#### Don't: Use horizontal scrollbars
+
+It's a best practice to keep content focused and not too lengthy. If a scroll is necessary, scroll vertically and not horizontally.
+
+   :::column-end:::
+:::row-end:::
+
+### Simplicity
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="Example showing a task module best practice." border="false":::
+
+#### Do: Keep it short
+
+You can easily create a multi-step wizard, but that doesn't necessarily mean you should! A multi-screen task module can be problematic because incoming messages are distracting and tempt users to exit. If your task is really involved, pop out to a full webpage instead of a task module.
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="Example showing a task module best practice." border="false":::
+
+#### Don't: Do long interactions
+
+Try to keep your interactions short and to the point.
+
+   :::column-end:::
+:::row-end:::
+
+### Error messages
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="Example showing a task module best practice." border="false":::
+
+#### Do: Use inline error messages
+
+See the forms UI template for guidelines on inline error handling.
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="Example showing a task module best practice." border="false":::
+
+#### Don't: Put error messages in dialogs
+
+Don't pop an error message in a dialog on top of a task modules. It creates a confusing user experience.
 
    :::column-end:::
 :::row-end:::
