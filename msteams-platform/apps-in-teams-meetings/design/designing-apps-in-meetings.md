@@ -5,7 +5,7 @@ description: Learn how to design apps in Teams meetings and get the Microsoft Te
 ms.author: lajanuar
 ms.topic: conceptual
 ---
-# Design your Microsoft Teams meeting extension
+# Designing your Microsoft Teams meeting extension
 
 You can create apps to make meetings more productive. For example, ask people to complete a survey during a call or send a quick reminder that doesn’t interrupt the flow of the meeting.
 
