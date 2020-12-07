@@ -28,7 +28,7 @@ You can add a personal app from the Teams store (AppSource) or the app flyout by
 
 With a private workspace, you can view app content that's meaningful to you in a central location without leaving Teams.
 
-(Implementation note: The private workspace is based on the *personal tab* capability.)
+(Implementation note: The private workspace is based on the [*personal tab*](../../build-your-first-app/build-personal-tab.md) capability.)
 
 ### Anatomy: Personal app (private workspace)
 

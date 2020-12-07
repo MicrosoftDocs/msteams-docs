@@ -9,7 +9,7 @@ ms.topic: overview
 
 :::image type="content" source="../../assets/images/design-guidelines-overview.png" alt-text="Conceptual image introducing the Microsoft Teams design guidelines.":::
 
-Whether you're a designer, product manager, developer, or maker using low-code tools, these guidelines can help you quickly make the right design decisions for your Teams app.
+Whether you're a designer, product manager, developer, or maker using low-code tools, these guidelines can help you quickly make the right design decisions for your Microsoft Teams app.
 
 ## Teams app design principles
 
@@ -102,9 +102,9 @@ Text, icons, and images make it clear what the app is for and how to use it.
 
 ## Creating a cohesive experience
 
-Designing a Teams app is like designing a conventional web app—but also a little different. An effective design highlights the app's unique attributes and fits naturally with Teams features and contexts.
+Designing a Teams app is like designing a conventional web app—but also a little different. An effective design highlights your app's unique attributes while fitting naturally with Teams features and contexts.
 
-These guidelines and resources can help you strike that balance. You'll understand what to do and what to avoid when designing your Teams app (such as multi-level navigation in a tab).
+These guidelines and resources can help you strike that balance. You'll know what to do and what to avoid when designing your Teams app (such as multi-level navigation in a tab).
 
 ## Planning your app
 
@@ -136,7 +136,7 @@ Quickly create complex, high-fidelity designs with [templates for common Teams u
 
 ## Get started with the Microsoft Teams UI Kit
 
-The Microsoft Teams UI Kit has Teams UI components, templates, and examples that you can drag, drop, and modify as needed, giving you more time to figure out the best experience for your users. It also includes comprehensive information about how apps should look and behave in different scenarios.
+The Microsoft Teams UI Kit has UI components, templates, and examples that you can drag, drop, and modify as needed. The UI kit also includes comprehensive information about how apps should look and behave in different Teams scenarios.
 
 > [!div class="nextstepaction"]
 > [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
@@ -147,14 +147,14 @@ To learn more, try one of the following resources.
 
 ### Fluent UI
 
-Get code samples and implementation information for Teams UI components.
+Get code samples and implementation details for Teams UI components.
 
 > [!div class="nextstepaction"]
 > [Try out Teams UI components (Fluent UI)](https://fluentsite.z22.web.core.windows.net/)
 
 ### Adaptive Cards designer
 
-Design Adaptive Cards with our web-based tool.
+Design Adaptive Cards in a web-based tool.
 
 > [!div class="nextstepaction"]
 > [Try the Adaptive Cards designer](https://adaptivecards.io/designer/)

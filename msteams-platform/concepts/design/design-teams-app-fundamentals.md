@@ -8,7 +8,7 @@ ms.topic: overview
 ---
 # Microsoft Teams app design fundamentals
 
-Quickly learn about the fundamentals of Teams app design. You can find comprehensive guidance and examples in the <a href="" target="_blank">Microsoft Teams UI Kit (Figma)</a>.
+Quickly learn about the fundamentals of Teams app design. You can find comprehensive guidance and examples in the <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Microsoft Teams UI Kit (Figma)</a>.
 
 ## Layout
 
@@ -18,7 +18,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
 
       Teams relies on a grid layout to ensure consistent and elegant relationships between design components. The grid’s 4-pixel base unit allows components to scale consistently across all display sizes in Teams.
 
-      <a href="https://www.figma.com/file/UwN095fVIvwZDNtzTtUE3E/?node-id=1%3A2" target="_blank">See full layout guidelines (Figma)</a>
+      <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full layout guidelines (Figma)</a>
 
    :::column-end:::
    :::column span="1":::
@@ -35,7 +35,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
 
       An avatar is a graphical representation of a person, team, bot, or entity in Teams. An avatar group is often used to convey live activity or a represent a roster in a way that preserves vertical space. 
 
-      <a href="https://www.figma.com/file/UwN095fVIvwZDNtzTtUE3E/?node-id=383%3A10115" target="_blank">See full avatar guidelines (Figma)</a>
+      <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full avatar guidelines (Figma)</a>
 
    :::column-end:::
    :::column span="1":::
@@ -53,7 +53,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
 
       Teams web and desktop supports default (light), dark, and high-contrast themes, while Teams mobile supports light and dark themes. Each theme has its own color scheme.
 
-      <a href="https://www.figma.com/file/UwN095fVIvwZDNtzTtUE3E/?node-id=1%3A2" target="_blank">See full color guidelines and available color tokens (Figma)</a>
+      <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full color guidelines and available color tokens (Figma)</a>
 
    :::column-end:::
    :::column span="1":::
@@ -72,7 +72,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
 
 ### Resources
 
-      * <a href="https://www.figma.com/community/file/836835755999342788" target="_blank">See the latest Fluent icons (Figma)</a>
+      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See the latest Fluent icons (Figma)</a>
       * <a href="https://aka.ms/fluent-ui-icons" target="_blank">Try out Fluent icons (Fluent UI)</a>
       * <a href="https://aka.ms/fluent-ui-icons" target="_blank">Get the Fluent icon library (GitHub)</a>
 
@@ -92,7 +92,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
 
       Teams uses Segoe UI for its type ramp and different font sizes and weights to help create hierarchy and ensure readability.
 
-      <a href="https://www.figma.com/file/UwN095fVIvwZDNtzTtUE3E/?node-id=383%3A10115" target="_blank">See full typography guidelines (Figma)</a>
+      <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full typography guidelines (Figma)</a>
 
    :::column-end:::
    :::column span="1":::
@@ -110,7 +110,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
 
       To feel part of Teams, your app copy in general should follow these [Microsoft voice principles](https://docs.microsoft.com/style-guide/brand-voice-above-all-simple-human): warm and relaxed, crisp and clear, and ready to lend hand.
 
-      <a href="https://www.figma.com/file/UwN095fVIvwZDNtzTtUE3E/?node-id=383%3A10115" target="_blank">See full copy and content guidelines—including writing for bots (Figma)</a>
+      <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full copy and content guidelines—including writing for bots (Figma)</a>
 
    :::column-end:::
    :::column span="1":::
@@ -128,7 +128,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
 
       Your app icon can go a long way in conveying your brand to Teams users. Getting your icon design right is also important for [publishing your app](../../concepts/build-and-test/apps-package.md) to AppSource.
 
-      <a href="https://www.figma.com/file/UwN095fVIvwZDNtzTtUE3E/?node-id=383%3A10115" target="_blank">See full brand expression guidelines (Figma)</a>
+      <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full brand expression guidelines (Figma)</a>
 
    :::column-end:::
    :::column span="1":::

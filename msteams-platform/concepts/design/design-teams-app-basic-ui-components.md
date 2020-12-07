@@ -5,7 +5,7 @@ description: Learn about the primitive UI components commonly used to build Micr
 ms.author: lajanuar
 ms.topic: reference
 ---
-# Basic UI components for Microsoft Teams apps
+# Designing your Microsoft Teams app with basic UI components
 
 Teams apps are typically created with the following standard UI components. Designed as flat as possible, these components can work across different use cases, themes, and screen sizes.
 

@@ -7,7 +7,7 @@ ms.topic: reference
 ---
 # Designing your Microsoft Teams app with UI templates
 
-Design your Microsoft Teams app faster with UI templates. The templates are a collection of basic UI components that work across Teams, giving you more time to figure out the best experience for your users.
+Design your Microsoft Teams app faster with UI templates. The templates are a collection of basic UI components that work across common Teams use cases, giving you more time to figure out the best experience for your users.
 
 ## Microsoft Teams UI Kit
 
