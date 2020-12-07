@@ -65,7 +65,7 @@ When an app is installed, the Teams client parses the manifest file to determine
 
 ## Package your app
 
-Modifying your the **app details** page or updating the **manifest**, or **.env** files in your app's  **.publish** folder will automatically generate your **Development.zip** file. You'll need to include [two icons](../concepts/build-and-test/apps-package.md#icons) in that same folder.
+Modifying your the **app details** page or updating the **manifest**, or **.env** files in your app's  **.publish** folder will automatically generate your **Development.zip** file. You'll need to include [two icons](../concepts/build-and-test/apps-package.md#app-icons) in that same folder.
 
 ## Install and run your app locally
 

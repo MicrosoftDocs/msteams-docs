@@ -10,8 +10,8 @@ Apps in Teams are defined by an app manifest JSON file, and bundled in an app pa
 
 A Teams app package is a .zip file containing the following:
 
-* A manifest file named "manifest.json", which specifies attributes of your app and points to required resources for your experience, such the location of its tab configuration page or the Microsoft app ID for its bot.
-* A transparent "outline" icon and a full "color" icon. See [Icons](#icons) later in this topic for more information.
+* A manifest file named `manifest.json`, which specifies attributes of your app and points to required resources for your experience, such the location of its tab configuration page or the Microsoft app ID for its bot.
+* [Color and outline icons for your app](#app-icons).
 
 ## Creating a manifest
 
@@ -44,7 +44,7 @@ Teams automatically crops your icon to display a square with rounded corners in 
 An outline icon displays in two scenarios:
 
 * When your app is in use and “hoisted” on the app bar on the left of Teams.
-* when a user pins your app’s messaging extension.
+* when a user pins your app's messaging extension.
 
 The icon must be 32x32 pixels. It can be white with a transparent background or transparent with a white background (no other colors are permitted). The outline icon should not have any extra padding around the symbol.
 

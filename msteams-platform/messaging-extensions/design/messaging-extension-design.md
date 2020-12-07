@@ -50,7 +50,7 @@ With search commands, people can use your messaging extension to quickly find ex
 
 #### Compose box layout options
 
-You have some options for displaying messaging extension search results, including [list and grid views](../messaging-extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests).
+You have some options for displaying messaging extension search results, including [list and grid views](../../messaging-Ask about extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests).
 
 :::image type="content" source="../../assets/images/messaging-extension/search-result-layout.png" alt-text="Illustrations showing layout options for messaging extension search results." border="false":::
 
