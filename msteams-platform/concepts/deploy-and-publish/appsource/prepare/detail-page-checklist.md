@@ -60,7 +60,7 @@ This is one of the first elements that users see. It should be attractive and ey
 
 ## Outline icon
 
-This icon is used for pinned messaging extensions and when your app displays on the left of Teams. See [design guidance for the outline icon](../../../../concepts/build-and-test/apps-package.md##outline-icon).
+This icon is used for pinned messaging extensions and when your app displays on the left of Teams. See [design guidance for the outline icon](../../../../concepts/build-and-test/apps-package.md#outline-icon).
 
 ![App icon outline store view](../../../../assets/images/store-detail-page/AppIconOutline-02.png)
 ![App icon outline App Studio view](../../../../assets/images/store-detail-page/AppIconOutline-01.png)
