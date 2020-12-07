@@ -24,7 +24,7 @@ You can find comprehensive design guidelines for Adaptive Cards in Teams, includ
 You also can start designing your Adaptive Cards directly in the browser.
 
 > [!div class="nextstepaction"]
-> [Try the Adaptive Cards designer)](https://adaptivecards.io/designer/)
+> [Try the Adaptive Cards designer](https://adaptivecards.io/designer/)
 
 ## Types of Adaptive Cards
 

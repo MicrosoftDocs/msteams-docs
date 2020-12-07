@@ -134,7 +134,7 @@ Jump right in with our first app tutorials or find out how to integrate and impo
 ## Resources
 
 * [Add a Share to Teams button to your website](concepts/build-and-test/share-to-teams.md)
-* [Fluent Design System](https://fluentsite.z22.web.core.windows.net/)
+* <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI</a>
 * [Microsoft Teams JavaScript client SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
 * [Bot Framework SDK for JavaScript](https://github.com/Microsoft/botbuilder-js) and [Bot Framework SDK for .NET](https://github.com/Microsoft/botbuilder-dotnet/)
 * [Publish your app to an organization or AppSource](concepts/deploy-and-publish/overview.md)

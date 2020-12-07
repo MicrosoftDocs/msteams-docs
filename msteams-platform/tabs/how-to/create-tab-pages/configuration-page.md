@@ -160,7 +160,7 @@ Supported removal options can further refine the user experience. You can enable
 
 ## Mobile clients
 
-If you choose to have your channel/group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property (see below). Full support for tabs on mobile clients will be released soon. To prepare for the update, follow the [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md) when creating your tabs.
+If you choose to have your channel/group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property (see below). See [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md).
 
 Microsoft Teams setSettings() configuration for removal page and/or mobile clients:
 

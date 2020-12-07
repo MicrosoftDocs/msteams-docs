@@ -1,9 +1,9 @@
 ---
 title: Design your custom app
 author: heath-hamilton
-description: Learn how to design Microsoft Teams apps. Resources include a UI kit, best practices, and more.
+description: Learn how to design Microsoft Teams apps. Resources include the Microsoft Teams UI Kit, best practices, examples, and more.
 ms.author: lajanuar
-ms.topic: conceptual
+ms.topic: overview
 ---
 # Design your Microsoft Teams app
 
@@ -108,7 +108,7 @@ These guidelines and resources can help you strike that balance. You'll understa
 
 ## Planning your app
 
-You can't design a high-quality Teams app without first knowing what you want the app to do and how you think people will use it. If you haven't already, you should properly [plan your app](../../concepts/extensibility-points.md).
+To design a high-quality Teams app, you must first understand what you want your app to do and how you think people will use it. If you haven't already, take some time to properly [plan your app](../../concepts/extensibility-points.md).
 
 ## Design fundamentals
 
@@ -134,8 +134,27 @@ Understand how people add, use, and manage Teams apps to make the most of each c
 
 Quickly create complex, high-fidelity designs with [templates for common Teams use cases and workflows](design-teams-app-ui-templates.md).
 
-## Resources
+## Get started with the Microsoft Teams UI Kit
 
-* [Microsoft Teams UI Design Kit](https://www.figma.com/community/file/916836509871353159)
-* [Fluent UI](https://fluentsite.z22.web.core.windows.net/)
-* [Adaptive Card designer](https://adaptivecards.io/designer)
+The Microsoft Teams UI Kit has Teams UI components, templates, and examples that you can drag, drop, and modify as needed, giving you more time to figure out the best experience for your users. It also includes comprehensive information about how apps should look and behave in different scenarios.
+
+> [!div class="nextstepaction"]
+> [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
+
+## Other resources
+
+To learn more, try one of the following resources.
+
+### Fluent UI
+
+Get code samples and implementation information for Teams UI components.
+
+> [!div class="nextstepaction"]
+> [Try out Teams UI components (Fluent UI)](https://fluentsite.z22.web.core.windows.net/)
+
+### Adaptive Cards designer
+
+Design Adaptive Cards with our web-based tool.
+
+> [!div class="nextstepaction"]
+> [Try the Adaptive Cards designer](https://adaptivecards.io/designer/)
