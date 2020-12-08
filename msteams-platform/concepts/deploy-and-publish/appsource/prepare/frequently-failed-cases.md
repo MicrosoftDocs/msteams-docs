@@ -207,8 +207,8 @@ Please warn users before your app downloads any files or executable (`.exe`  )in
 ### M365 Publisher Attestation
 #### Complete the Publisher Attestation in Partner Center
 * Refer to the [attestation program documentation](../../microsoft-365-app-certification/docs/attestation) for more details.
-* Follow the [user guide for completing the work-flow ](../../microsoft-365-app-certification/docs/userguide#3publisher-attestation-workflow).
-* Refer to the [troubleshooting guide](../../azure/active-directory/develop/troubleshoot-publisher-verification) for additional information.
+* Follow the steps in the [Publisher Attestation Workflow](../../microsoft-365-app-certification/docs/userguide#3publisher-attestation-workflow) section to complete the publisher attestation process.
+* Refer to the [Troubleshooting guide](../../azure/active-directory/develop/troubleshoot-publisher-verification) for additional information.
 
 > [!div class="nextstepaction"]
 > [Learn more about Teams app approval policies](/legal/marketplace/certification-policies#1140-teams)
