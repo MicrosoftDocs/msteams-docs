@@ -17,7 +17,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 |11/30/2020|New: Identity platform integration with Teams Toolkit and Visual Studio Code for tabs|[Single sign-on authentication with Teams Toolkit and Visual Studio Code for tabs](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|Teams app manifest updated to version 1.8|Reference: Manifest schema for Microsoft Teams|[Reference: Manifest schema for Microsoft Teams](resources/schema/manifest-schema.md)|
 |11/11/2020| Manifest Schema updated to version 1.8| [Reference: Manifest schema for Microsoft Teams](resources/schema/manifest-schema.md)|
-|11/10/2020|Teams bot design guidelines|[Bot design guidelines](bots/design/bots.md#bot-design-guidelines)|
+|11/10/2020|Teams bot design guidelines|[Bot design guidelines](bots/design/bots.md)|
 |9/30/2020|Sending and receiving files to bots on mobile devices is now supported.|[Send and receive files through your bot](resources/bot-v3/bots-files.md)|
 |09/22/2020|New "Get Started with Teams" guidance|[Build your first Teams app overview](build-your-first-app/build-first-app-overview.md)|
 |9/18/2020|Support for in-meeting Teams apps (Release Preview)|[Create apps for Teams meetings](apps-in-teams-meetings/create-apps-for-teams-meetings.md) and [Apps in Teams meetings](apps-in-teams-meetings/teams-apps-in-meetings.md)|
