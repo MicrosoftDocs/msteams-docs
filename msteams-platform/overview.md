@@ -13,8 +13,16 @@ Microsoft Teams apps bring key information, common tools, and trusted processes 
 
 Apps are how you extend Teams to fit your needs. Create something brand new for Teams or integrate an existing app.
 
+:::row:::
+   :::column span="1":::
+   :::column-end:::
+   :::column span="1":::
 > [!div class="nextstepaction"]
 > [Start here](build-your-first-app/build-first-app-overview.md)
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
+:::row-end:::
 
 ## What are Teams apps?
 
