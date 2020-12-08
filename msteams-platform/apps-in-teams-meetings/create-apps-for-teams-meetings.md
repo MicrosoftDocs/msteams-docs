@@ -18,7 +18,7 @@ keywords: teams apps meetings user participant role api
 
 1. Some meeting APIs, such as `GetParticipant` will require a [bot registration and bot app ID](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) to generate auth tokens.
 
-1. As a developer, you must adhere to general [Teams tab design guidelines](../tabs/design/tabs.md) for pre- and post-meeting scenarios as well as the [in-meeting dialog guidelines](design/designing-in-meeting-dialog.md) for in-meeting dialog triggered during a Teams meeting.
+1. As a developer, you must adhere to general [Teams tab design guidelines](../tabs/design/tabs.md) for pre- and post-meeting scenarios as well as the [in-meeting dialog guidelines](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog) for in-meeting dialog triggered during a Teams meeting.
 
 1. Please note that in order for your app to be updated in real-time, it must be up-to-date based on event activities in the meeting. These events can be within the in-meeting dialog (refer to completion `bot Id` parameter in `Notification Signal API`) and other surfaces across the meeting lifecycle
 
@@ -57,7 +57,7 @@ GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 
 <!-- markdownlint-disable MD025 -->
 
-**C# Example**
+**C# example**
 
 ```csharp
    // Get role for the user who sent a message to your bot
@@ -105,7 +105,8 @@ GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
    }
 }
 ```
-#### Response Codes
+
+#### Response codes
 
 **403**: The app is not allowed to get participant information. This will be the most common error response and is triggered when the app is not installed in the meeting such as when it is disabled by tenant admin or blocked during live site migration.  
 **200**: Participant information successfully retrieved.  
@@ -135,12 +136,12 @@ POST /v3/conversations/{conversationId}/activities
 |---|---|----|---|
 |**conversationId**| string | Yes | The conversation identifier is available as part of bot invoke |
 
-#### Request Payload
+#### Request payload
 
 > [!NOTE]
 >
 > *  In the requested payload below, the `completionBotId` parameter of the `externalResourceUrl`is an optional. It is the `Bot ID` that is declared in the manifest. The bot will receive a result object.
-> * The externalResourceUrl width and height parameters must be in pixels. Refer to the [design guidelines](design/designing-in-meeting-dialog.md) to ensure the dimensions are within the allowed limits.
+> * The externalResourceUrl width and height parameters must be in pixels. Refer to the [design guidelines](design/designing-apps-in-meetings.md) to ensure the dimensions are within the allowed limits.
 > * The URL is the page loaded as an `<iframe>` inside the in-meeting dialog. The URL's domain must be in the app's `validDomains` array in your app manifest.
 
 
@@ -250,9 +251,9 @@ The tab `context` and `scopes` properties work in harmony to allow you to determ
 > [!NOTE]
 > * For your app to be visible in the tab gallery it needs to **support configurable tabs** and the **group chat scope**.
 >
-> * Mobile clients support Tabs only in Pre and Post Meeting Surfaces. The In-meeting experiences (in-meeting dialog and panel) on mobile will be available soon. Follow the [guidance for tabs on mobile](../tabs/design/tabs-mobile.md) when creating your tabs for mobile. 
+> * Mobile clients support Tabs only in Pre and Post Meeting Surfaces. The in-meeting experiences (in-meeting dialog and tab) on mobile will be available soon. Follow the [guidance for tabs on mobile](../tabs/design/tabs-mobile.md) when creating your tabs for mobile.
 
-### Pre-meeting
+### Before a meeting
 
 Users with organizer and/or presenter roles add tabs to a meeting using the plus ➕ button in the meeting **Chat** and meeting **details** pages. Messaging extensions are added to via the ellipses/overflow menu &#x25CF;&#x25CF;&#x25CF; located beneath the compose message area in the chat. Bots are added to a meeting chat using the "**@**" key and selecting **Get bots**.
 
@@ -262,7 +263,7 @@ Users with organizer and/or presenter roles add tabs to a meeting using the plus
 
 > **NOTE**: Role assignments can be changed while a meeting is in progress.  *See* [Roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019). 
 
-### In-meeting
+### During a meeting
 
 #### **sidePanel**
 
@@ -279,9 +280,9 @@ Users with organizer and/or presenter roles add tabs to a meeting using the plus
 
 ✔ AppName in-meeting - Tooltip should state the app name in-meeting U-bar.
 
-#### **in-meeting dialog**
+#### **In-meeting dialog**
 
-✔ You must adhere to the [in-meeting dialog design guidelines](design/designing-in-meeting-dialog.md).
+✔ You must adhere to the [in-meeting dialog design guidelines](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).
 
 ✔ Refer to the [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md).
 
@@ -297,7 +298,7 @@ Users with organizer and/or presenter roles add tabs to a meeting using the plus
 >
 > * If you want your app to support anonymous users, your initial invoke request payload must rely on the `from.id`  (ID of the user) request metadata in the `from` object, not the `from.aadObjectId` (Azure Active Directory ID of the user) request metadata. *See* [Using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [Create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
-### Post-meeting
+### After a meeting
 
 The post-meeting and pre-meeting configurations are equivalent.
 

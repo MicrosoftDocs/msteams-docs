@@ -168,7 +168,7 @@ The following steps use PowerShell. We assume that you have this installed and a
 2. If the POST succeeds, you should see a simple **1** output by `Invoke-RestMethod`.
 3. Check the Microsoft Teams channel associated with the webhook URL. You should see the new card posted to the channel.
 
-- Include two icons, following the instructions in [Icons](~/concepts/build-and-test/apps-package.md#icons).
+- [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
 - Modify the `icons` portion of the manifest to refer to the file names of the icons instead of URLs.
 
 The following manifest.json file contains the basic elements needed to test and submit your app.

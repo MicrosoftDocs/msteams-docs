@@ -371,7 +371,7 @@ An array of objects specifying additional language translations.
 
 **Required** — object
 
-Icons used within the Teams app. The icon files must be included as part of the upload package. See [Icons](~/concepts/build-and-test/apps-package.md#icons) for more information.
+Icons used within the Teams app. The icon files must be included as part of the upload package. See [Icons](../../concepts/build-and-test/apps-package.md#app-icons) for more information.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
