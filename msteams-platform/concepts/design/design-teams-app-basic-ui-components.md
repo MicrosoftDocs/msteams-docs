@@ -1,29 +1,22 @@
 ---
-title: Design your app with basic UI components
+title: Design your app with basic Fluent UI components
 author: heath-hamilton
 description: Learn about the primitive UI components commonly used to build Microsoft Teams apps and get the Microsoft Teams UI Kit. 
 ms.author: lajanuar
 ms.topic: reference
 ---
-# Designing your Microsoft Teams app with basic UI components
+# Designing your Microsoft Teams app with basic Fluent UI components
 
-Teams apps are typically created with the following standard UI components. Designed as flat as possible, these components can work across different use cases, themes, and screen sizes.
+Teams apps are typically built with the following basic Fluent UI components. Designed as flat as possible, these components can work across different use cases, themes, and screen sizes.
 
-The illustrations on this page show components in Teams default (light) and dark themes.
+The illustrations on this page show how components look in Teams default (light) and dark themes.
 
 ## Microsoft Teams UI Kit
 
-With the Microsoft Teams UI Kit, you can take the components listed here and add them directly into your design. The kit also provides more examples of how you can use each component.
+Based on [Fluent UI](https://fluentsite.z22.web.core.windows.net/0.51.2), the Microsoft Teams UI Kit includes components and patterns that are designed specifically for building Teams apps. In the UI kit, you can grab and insert the components listed here directly into your design and see more examples of how to use each component.
 
 > [!div class="nextstepaction"]
 > [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
-
-## Fluent UI
-
-You can find code samples and implementation information for some of the components listed here.
-
-> [!div class="nextstepaction"]
-> [Try out Teams basic UI components (Fluent UI)](https://fluentsite.z22.web.core.windows.net/)
 
 ## Alert
 
@@ -130,3 +123,10 @@ Note: In Fluent UI, toggle is a type of checkbox.
 ## Tooltip
 
 :::image type="content" source="../../assets/images/components/tooltip.png" alt-text="Example shows a tooltip UI component." border="false":::
+
+## Other resources
+
+Get code samples and implementation details for some of the components listed here and in the Microsoft Teams UI Kit.
+
+> [!div class="nextstepaction"]
+> [Try the components (Fluent UI)](https://fluentsite.z22.web.core.windows.net/)

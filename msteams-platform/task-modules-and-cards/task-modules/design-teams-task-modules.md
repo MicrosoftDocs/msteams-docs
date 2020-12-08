@@ -13,7 +13,7 @@ You can create modal popup experiences in your Teams app with task modules. Use 
 
 ## Microsoft Teams UI Kit
 
-You can find comprehensive task module design guidelines, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit.
+You can find more comprehensive task module design guidelines, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit.
 
 > [!div class="nextstepaction"]
 > [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)

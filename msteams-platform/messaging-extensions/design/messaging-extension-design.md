@@ -158,7 +158,7 @@ The following example is a messaging extension opened from the compose box.
    :::column span="":::
 :::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="Example showing a messaging extension best practice." border="false":::
 
-#### Do: Integrate with Microsoft single sign-on (SSO)
+#### Do: Integrate with single-sign on
 
 SSO makes the sign-in process easier, faster, and secure. Also, if a user has already signed in to your personal app, they don’t have to also sign in again to access the messaging extension.
 

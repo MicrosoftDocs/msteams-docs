@@ -7,13 +7,13 @@ ms.author: lajanuar
 --- 
 # Designing your personal app for Microsoft Teams
 
-A personal app can be a bot, private workspace, or both. Sometimes it functions like place to create or view content, other times it offers the user a bird’s eye view of everything that’s theirs when the app has been configured as a tab in multiple channels.
+A personal app can be a bot, private workspace, or both. Sometimes it functions like a place to create or view content, other times it offers the user a bird’s eye view of everything that’s theirs when the app has been configured as a tab in multiple channels.
 
 To guide your app design, the following information describes and illustrates how people can add, use, and manage personal apps in Teams.
 
 ## Microsoft Teams UI Kit
 
-You can find comprehensive personal app design guidelines, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit. The kit also covers essential topics such as accessibility and responsive sizing.
+You can find comprehensive personal app design guidelines, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit. The UI kit also has essential topics such as accessibility and responsive sizing that aren't covered here.
 
 > [!div class="nextstepaction"]
 > [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)

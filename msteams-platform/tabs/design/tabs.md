@@ -7,11 +7,11 @@ ms.author: lajanuar
 ---
 # Designing your tab for Microsoft Teams desktop and web
 
-Tabs are essentially focused webpages that facilitate collaboration. To guide your app design, the following information describes and illustrates how people can add, use, and manage tabs in Teams.
+A tab is a large canvas for content that facilitates collaboration. To guide your app design, the following information describes and illustrates how people can add, use, and manage tabs in Teams.
 
 ## Microsoft Teams UI Kit
 
-You can find comprehensive tab design guidelines, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit. The kit also covers essential topics such as accessibility and responsive sizing.
+You can find comprehensive tab design guidelines, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit. The UI kit also has essential topics such as accessibility and responsive sizing that aren't covered here.
 
 > [!div class="nextstepaction"]
 > [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)

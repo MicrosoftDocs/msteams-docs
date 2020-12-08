@@ -14,7 +14,7 @@ The Adaptive Card framework is used across many Microsoft products, including Te
 
 ## Microsoft Teams UI Kit
 
-You can find comprehensive design guidelines for Adaptive Cards in Teams, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit. The kit also covers essential topics such as theming, accessibility, and responsive sizing.
+You can find more comprehensive design guidelines for Adaptive Cards in Teams, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit. The UI kit also covers essential topics such as theming, accessibility, and responsive sizing.
 
 > [!div class="nextstepaction"]
 > [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)

@@ -7,13 +7,13 @@ ms.author: lajanuar
 ---
 # Designing your bot for Microsoft Teams
 
-Bots are conversational apps that perform a specific set of tasks. They communicate with users, respond to their questions, and proactively notify them about changes and other events. They’re a great way to reach out.
+Bots are conversational apps that perform a specific set of tasks. Based on the [Microsoft Bot Framework](https://dev.botframework.com/), bots communicate with users, respond to their questions, and proactively notify them about changes and other events. They're a great way to reach out.
 
 To guide your app design, the following information describes and illustrates how people can add, use, and manage bots in Teams.
 
 ## Microsoft Teams UI Kit
 
-You can find comprehensive bot design guidelines, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit.
+You can find more comprehensive bot design guidelines, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit.
 
 > [!div class="nextstepaction"]
 > [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
@@ -107,46 +107,6 @@ The command menu must always be available regardless of the state of the convers
 
 :::image type="content" source="../../assets/images/bots/bot-command-menu.png" alt-text="Example shows a bot's command menu." border="false":::
 
-## Use cases
-
-### Simple queries
-
-Bots can deliver an exact match to a query or a group of related matches to help with disambiguation. For related matches, group the content using a list card.
-
-:::image type="content" source="../../assets/images/bots/bot-simple-query.png" alt-text="Example shows a simple query interaction with a bot." border="false":::
-
-### Multi-turn interactions
-
-While your bot can support complete requests and questions, it should also be able to handle multi-turn interactions. Anticipating possible next steps makes it much easier for people to a complete task flow (rather than expecting them to craft a comprehensive request).
-
-In the following example, the bot responds to each message with options for what might want to do next.
-
-:::image type="content" source="../../assets/images/bots/bot-multi-turn.png" alt-text="Example shows a multi-turn interaction with a bot." border="false":::
-
-### Reach out to users
-
-With proactive messaging, your bot can act like a digest that sends notifications relevant to an individual, group chat, or channel at a specific frequency. A bot may send a message when something has changed in a document or a work item is closed.
-
-In the following example, a user gets a toast notification that a bot messaged them in another channel.
-
-:::image type="content" source="../../assets/images/bots/bot-proactive-message-toast.png" alt-text="Example shows a toast of a bot proactively messaging a user from another channel." border="false":::
-
-Now in that channel, the user can read their message from the bot.
-
-:::image type="content" source="../../assets/images/bots/bot-proactive-message.png" alt-text="Example shows the user looking at the bot's proactive message." border="false":::
-
-### Use tabs with bots
-
-A tab can make your bot easier to use. For example, if your bot can create work items, it would be nice to show all those items in a central location inside a tab. See more about [designing tabs](../../tabs/design/tabs.md).
-
-:::image type="content" source="../../assets/images/bots/bot-with-tab.png" alt-text="Example shows how a tab can help organize bot content." border="false":::
-
-## Manage a bot
-
-Users should be able to change a bot's settings. You can provide this functionality with bot commands, but it's usually more efficient to include all settings in a [task module](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) (as shown in the following example).
-
-:::image type="content" source="../../assets/images/bots/manage-bot-task-module.png" alt-text="Example shows a task module for configuring a bot's settings." border="false":::
-
 ## Understand what people are saying
 
 Use a thesaurus and get people from as many different backgrounds as possible to help you generate different interpretations of standard queries.
@@ -187,6 +147,46 @@ Learn what users say when chatting with your bot. This will be an ongoing, itera
 
 * [Understanding LUIS](https://docs.microsoft.com/azure/cognitive-services/luis/artificial-intelligence): Find out how LUIS uses AI to provide natural language understanding (NLU) to your app data.
 * [Integrating with LUIS](https://www.luis.ai/user/tutorial): Add natural language capabilities to your bot without the complex process of creating machine learning models.
+
+## Use cases
+
+### Simple queries
+
+Bots can deliver an exact match to a query or a group of related matches to help with disambiguation. For related matches, group the content using a list card.
+
+:::image type="content" source="../../assets/images/bots/bot-simple-query.png" alt-text="Example shows a simple query interaction with a bot." border="false":::
+
+### Multi-turn interactions
+
+While your bot can support complete requests and questions, it should also be able to handle multi-turn interactions. Anticipating possible next steps makes it much easier for people to a complete task flow (rather than expecting them to craft a comprehensive request).
+
+In the following example, the bot responds to each message with options for what might want to do next.
+
+:::image type="content" source="../../assets/images/bots/bot-multi-turn.png" alt-text="Example shows a multi-turn interaction with a bot." border="false":::
+
+### Reach out to users
+
+With proactive messaging, your bot can act like a digest that sends notifications relevant to an individual, group chat, or channel at a specific frequency. A bot may send a message when something has changed in a document or a work item is closed.
+
+In the following example, a user gets a toast notification that a bot messaged them in another channel.
+
+:::image type="content" source="../../assets/images/bots/bot-proactive-message-toast.png" alt-text="Example shows a toast of a bot proactively messaging a user from another channel." border="false":::
+
+Now in that channel, the user can read their message from the bot.
+
+:::image type="content" source="../../assets/images/bots/bot-proactive-message.png" alt-text="Example shows the user looking at the bot's proactive message." border="false":::
+
+### Use tabs with bots
+
+A tab can make your bot easier to use. For example, if your bot can create work items, it would be nice to show all those items in a central location inside a tab. See more about [designing tabs](../../tabs/design/tabs.md).
+
+:::image type="content" source="../../assets/images/bots/bot-with-tab.png" alt-text="Example shows how a tab can help organize bot content." border="false":::
+
+## Manage a bot
+
+Users should be able to change a bot's settings. You can provide this functionality with bot commands, but it's usually more efficient to include all settings in a [task module](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) (as shown in the following example).
+
+:::image type="content" source="../../assets/images/bots/manage-bot-task-module.png" alt-text="Example shows a task module for configuring a bot's settings." border="false":::
 
 ## Best practices
 

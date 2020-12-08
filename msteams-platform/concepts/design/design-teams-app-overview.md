@@ -114,7 +114,7 @@ To design a high-quality Teams app, you must first understand what you want your
 
 Learn the [fundamentals of Teams app design](design-teams-app-fundamentals.md), including layout, color schemes, and more.
 
-## Basic UI components
+## Basic Fluent UI components for Teams
 
 Based on Fluent UI, these are the [core elements for creating familiar Teams interfaces](design-teams-app-basic-ui-components.md).
 
@@ -147,7 +147,7 @@ To learn more, try one of the following resources.
 
 ### Fluent UI
 
-Get code samples and implementation details for Teams UI components.
+Get code samples and implementation details for the Fluent UI-based components used to build Teams experiences.
 
 > [!div class="nextstepaction"]
 > [Try out Teams UI components (Fluent UI)](https://fluentsite.z22.web.core.windows.net/)
