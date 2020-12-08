@@ -60,21 +60,8 @@ GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 **C# example**
 
 ```csharp
-string meetingId = "meetingid?";
-string participantId = "participantidhere";
-var connectorClient = turnContext.TurnState.Get<IConnectorClient>();
-var creds = connectorClient.Credentials as AppCredentials;
-var bearerToken = await creds.GetTokenAsync().ConfigureAwait(false);
-var request = new HttpRequestMessage();
-request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
-request.Method = new HttpMethod("GET");
-request.RequestUri = new System.Uri(Path.Combine(connectorClient.BaseUri.OriginalString, $"/meetings/{meetingId}/participants/{participantId}"));
-HttpResponseMessage response = await (connectorClient as ServiceClient<ConnectorClient>).HttpClient.SendAsync(request, cancellationToken).ConfigureAwait(false);
-if (response.StatusCode == System.Net.HttpStatusCode.OK)
-{
-    var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-    var theObject = Rest.Serialization.SafeJsonConvert.DeserializeObject<WhateverObjectIsReturned>(content, connectorClient.DeserializationSettings);
-}
+   // Get role for the user who sent a message to your bot
+   var senderRole = await TeamsInfo.GetMeetingParticipantAsync(turnContext);
 ```
 
 * * *
@@ -97,27 +84,25 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 ```json
 {
-  "user":
-  {
-      "id": "29:1JKiJGPAX9TTxtGxhVo0wLx_zwzo-gG8Z-X03306vBwi9p-xMTEbDXsT6KH7-0kkTS8cD-2zkrsoV6f5WJ6_aYw",
-      "aadObjectId": "6aebbad0-e5a5-424a-834a-20fb051f3c1a",
-      "name": "Allan Deyoung",
-      "givenName": "Allan",
-      "surname": "Deyoung",
-      "email": "Allan.Deyoung@microsoft.com",
-      "userPrincipalName": "Allan.Deyoung@microsoft.com",
-      "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
-      "userRole": "user"
-  },
-  "meeting":
-  {
-      "role ": "Presenter",
+   "user":{
+      "id":"29:1JKiJGPAX9TTxtGxhVo0wLx_zwzo-gG8Z-X03306vBwi9p-xMTEbDXsT6KH7-0kkTS8cD-2zkrsoV6f5WJ6_aYw",
+      "aadObjectId":"6aebbad0-e5a5-424a-834a-20fb051f3c1a",
+      "name":"Allan Deyoung",
+      "givenName":"Allan",
+      "surname":"Deyoung",
+      "email":"Allan.Deyoung@microsoft.com",
+      "userPrincipalName":"Allan.Deyoung@microsoft.com",
+      "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47",
+      "userRole":"user"
+   },
+   "meeting":{
+      "role ":"Presenter",
       "inMeeting":true
-  },
-  "conversation":
-  {
-      "id": "<conversation id>"
-  }
+   },
+   "conversation":{
+      "id":"<conversation id>",
+      "isGroup":true
+   }
 }
 ```
 
@@ -181,14 +166,14 @@ POST /v3/conversations/{conversationId}/activities
 
 ```csharp
 Activity activity = MessageFactory.Text("This is a meeting signal test");
-MeetingNotification notification = new MeetingNotification
-  {
-    AlertInMeeting = true,
-    ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
-  };
+
 activity.ChannelData = new TeamsChannelData
   {
-    Notification = notification
+    Notification = new NotificationInfo()
+                    {
+                        AlertInMeeting = true,
+                        ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
+                    }
   };
 await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```
@@ -284,7 +269,8 @@ Users with organizer and/or presenter roles add tabs to a meeting using the plus
 
 ✔ In your app manifest add **sidePanel** to the **context** array as described above.
 
-✔ In the meeting as well as in all scenarios, the app will be rendered in an in-meeting tab that is 320px in width. Your tab must be optimized for this. *See*, [FrameContext interface](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)
+✔ In the meeting as well as in all scenarios, the app will be rendered in an in-meeting tab that is 320px in width. Your tab must be optimized for this. *See*, [FrameContext interface](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/framecontext?view=msteams-client-js-latest&preserve-view=true
+)
 
 ✔Refer to the [Teams SDK](../tabs/how-to/access-teams-context.md#user-context) to use the **userContext** API to route requests accordingly.
 

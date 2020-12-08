@@ -14,7 +14,10 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+|11/30/2020|New: Identity platform integration with Teams Toolkit and Visual Studio Code for tabs|[Single sign-on authentication with Teams Toolkit and Visual Studio Code for tabs](toolkit/visual-studio-code-tab-sso.md)|
+|11/16/2020|Teams app manifest updated to version 1.8|Reference: Manifest schema for Microsoft Teams|[Reference: Manifest schema for Microsoft Teams](resources/schema/manifest-schema.md)|
 |11/11/2020| Manifest Schema updated to version 1.8| [Reference: Manifest schema for Microsoft Teams](resources/schema/manifest-schema.md)|
+|11/10/2020|Teams bot design guidelines|[Bot design guidelines](bots/design/bots.md#bot-design-guidelines)|
 |9/30/2020|Sending and receiving files to bots on mobile devices is now supported.|[Send and receive files through your bot](resources/bot-v3/bots-files.md)|
 |09/22/2020|New "Get Started with Teams" guidance|[Build your first Teams app overview](build-your-first-app/build-first-app-overview.md)|
 |9/18/2020|Support for in-meeting Teams apps (Release Preview)|[Create apps for Teams meetings](apps-in-teams-meetings/create-apps-for-teams-meetings.md) and [Apps in Teams meetings](apps-in-teams-meetings/teams-apps-in-meetings.md)|
@@ -23,7 +26,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 |08/10/2020|Get started building Teams apps with the Visual Studio Toolkit.|[Build apps with the Microsoft Teams Toolkit and Visual Studio Code](toolkit/visual-studio-overview.md) |
 |08/06/2020|Support for Tabs SSO authentication|[Develop an SSO Microsoft Teams Tab](tabs/how-to/authentication/auth-aad-sso.md#develop-an-sso-microsoft-teams-tab) |
 |07/27/2020 | Graph proactive bots and messages (Public Preview)|[Enable proactive bot installation and proactive messaging in Teams with Microsoft Graph](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
-| 07/22/2020 |Mobile device capability updates.|[Request device permissions for your Microsoft Teams tab](~/tabs/how-to/native-device-permissions.md) |
+| 07/22/2020 |Mobile device capability updates.|[Request device permissions for your Microsoft Teams tab](concepts/device-capabilities/native-device-permissions.md) |
 |07/20/2020|Teams App Validation Tool for AppSource submissions.|[Teams App Validation Tool](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool)
 |07/15/2020|Create a virtual assistant for Teams|[Virtual Assistant for Microsoft Teams](samples/virtual-assistant.md)|
 |07/14/2020|Surfacing a native loading indicator documentation|[Showing a native loading indicator](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)

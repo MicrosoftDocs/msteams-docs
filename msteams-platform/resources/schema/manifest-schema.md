@@ -562,7 +562,7 @@ The object is an array with all elements of the type `string`.
 
 **Optional** — object
 
-Specify your AAD App ID and Graph information to help users seamlessly sign into your AAD app.
+Specify your Azure Active Directory (Azure AD) App ID and Microsoft Graph information to help users seamlessly sign into your app. If your app is registered in Azure AD, you must provide the App ID, so that administrators can easily review permissions and grant consent in Teams admin center.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
