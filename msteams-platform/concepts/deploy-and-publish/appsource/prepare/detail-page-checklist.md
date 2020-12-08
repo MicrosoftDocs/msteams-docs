@@ -25,8 +25,8 @@ The details page presents the first impression of your app to users. Each elemen
 >
 >* Use these resources for guidance:
 
-* [App name guide](../../platform/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist#app-name)
-* [Microsoft Trademark and Brand Guidelines](../../legal/intellectualproperty/trademarks/usage/general)
+* [App name guide](/platform/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist#app-name)
+* [Microsoft Trademark and Brand Guidelines](/legal/intellectualproperty/trademarks/usage/general)
 
 **Do's:**
 
