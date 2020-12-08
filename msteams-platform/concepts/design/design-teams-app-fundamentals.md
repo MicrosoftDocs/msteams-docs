@@ -71,9 +71,9 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
 
 ### Resources
 
-      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See the latest Fluent icons (Figma)</a>
+      * <a href="https://www.figma.com/community/file/836835755999342788" target="_blank">See the latest Fluent icons (Figma)</a>
       * <a href="https://aka.ms/fluent-ui-icons" target="_blank">Try out Fluent icons (Fluent UI)</a>
-      * <a href="https://aka.ms/fluent-ui-icons" target="_blank">Get the Fluent icon library (GitHub)</a>
+      * <a href="https://github.com/microsoft/fluentui-system-icons" target="_blank">Get the Fluent icon library (GitHub)</a>
 
    :::column-end:::
    :::column span="1":::

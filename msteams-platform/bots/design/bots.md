@@ -5,7 +5,7 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.author: lajanuar
 ---
-# Designing your bot for Microsoft Teams
+# Designing your Microsoft Teams bot
 
 Bots are conversational apps that perform a specific set of tasks. Based on the <a href="https://dev.botframework.com/" target="_blank">Microsoft Bot Framework</a>, bots communicate with users, respond to their questions, and proactively notify them about changes and other events. They're a great way to reach out.
 
@@ -146,7 +146,7 @@ The following examples outline the user intent and data in messages sent to bots
 Learn what users say when chatting with your bot. This will be an ongoing, iterative process as your user base grows in different locations and orgs. You can tune your bot's language recognition and intent mapping with Microsoft Language Understanding (LUIS).
 
 * [Understanding LUIS](https://docs.microsoft.com/azure/cognitive-services/luis/artificial-intelligence): Find out how LUIS uses AI to provide natural language understanding (NLU) to your app data.
-* [Integrating with LUIS](https://www.luis.ai/user/tutorial): Add natural language capabilities to your bot without the complex process of creating machine learning models.
+* [Integrating with LUIS](https://www.luis.ai/): Add natural language capabilities to your bot without the complex process of creating machine learning models.
 
 ## Use cases
 
