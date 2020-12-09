@@ -56,7 +56,7 @@ You can view and update your app configurations using App Studio, which is inclu
 
 During setup, the toolkit initially configured two essential components of channel and group tabs:
 
-* **Configuration page**: The dialog for adding a tab to a channel or chat. (In App Studio, you can find this page by going to **Tabs > Team tab**.)
+* **Configuration page**: The modal for adding a tab to a channel or chat. (In App Studio, you can find this page by going to **Tabs > Team tab**.)
 * **Content page**: Where you display your primary content. (In App Studio, you can find this page by going to **Tabs > Add a personal tab**.)
 
 ### App scaffolding
@@ -113,7 +113,7 @@ a {
 
 ## 4. Customize your tab configuration page
 
-Every tab in a channel or chat has a configuration page, a dialog with at least one setup option that displays when users add your app. The configuration page by default asks users if they want to notify the channel or chat when the tab is installed.
+Every tab in a channel or chat has a configuration page, a modal with at least one setup option that displays when users add your app. The configuration page by default asks users if they want to notify the channel or chat when the tab is installed.
 
 Add some custom content to your configuration page. Go to your project's `src/components` directory, open `TabConfig.js`, and update the placeholder content inside `return()` (as shown in the following example).
 
@@ -165,8 +165,8 @@ Your app is ready to test in Teams. To do this, you must have an account that al
 1. To display your app content in Teams, specify that where your app is running (`localhost`) is trustworthy:
    1. Open a new tab in the same browser window (Google Chrome by default) which opened after pressing **F5**.
    1. Go to `https://localhost:3000/tab` and proceed to the page.
-1. Go back to Teams. In the dialog, select **Add to a team** or **Add to a chat** and locate a channel or chat you can use for testing.
-1. Select **Set up a tab**. The configuration page displays in a dialog.<br/>
+1. Go back to Teams. In the modal, select **Add to a team** or **Add to a chat** and locate a channel or chat you can use for testing.
+1. Select **Set up a tab**. The configuration page displays in a modal.<br/>
    :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="Screenshot of a channel tab configuration page.":::
 1. Select **Save** to configure the tab. The content page displays.<br/>
    :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content-installed.png" alt-text="Screenshot of a channel tab with static content view.":::

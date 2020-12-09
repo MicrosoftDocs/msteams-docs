@@ -73,7 +73,7 @@ You can optionally execute an event handler when the user removes an existing co
 
 You can download the auto-generated Teams app manifest from the portal. Before you can use it to test or publish your app, though, you must do the following:
 
-- Include two icons, following the instructions in [Icons](~/concepts/build-and-test/apps-package.md#icons).
+- [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
 - Modify the `icons` portion of the manifest to refer to the file names of the icons instead of URLs.
 
 The following manifest.json file contains the basic elements needed to test and submit your app.
