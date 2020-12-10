@@ -208,9 +208,9 @@ Please warn users before your app downloads any files or executable (`.exe`  )in
 
 #### Complete the Publisher Attestation in Partner Center
 
-* Refer to the [Complete Publisher Attestation](/microsoft-365-app-certification/docs/attestation) program documentation for more details.
-* Follow the steps in the [Publisher Attestation Workflow](/microsoft-365-app-certification/docs/userguide#3publisher-attestation-workflow) section to complete the publisher attestation process. For any clarification, write to appcert@microsoft.com.
-* Refer to the [Troubleshooting guide](/azure/active-directory/develop/troubleshoot-publisher-verification) for additional information.
+* Refer to the [Complete Publisher Attestation](/microsoft-365-app-certification/docs/attestation&preserve-view=true) program documentation for more details.
+* Follow the steps in the [Publisher Attestation Workflow](/microsoft-365-app-certification/docs/userguide#3publisher-attestation-workflow&preserve-view=true) section to complete the publisher attestation process. For any clarification, write to appcert@microsoft.com.
+* Refer to the [Troubleshooting guide](/azure/active-directory/develop/troubleshoot-publisher-verification&preserve-view=true) for additional information.
 * Self Attestation can be completed via Partner Center. Fill out the Self-Assessment Questionnaire under **App Compliance**
 
 > [!div class="nextstepaction"]
