@@ -32,12 +32,12 @@ The following steps assume you've already [created a messaging extension](~/mess
 
 1. From the Microsoft Teams client, open **App Studio** and select the **Manifest Editor** tab.
 2. If you've already created your app package in App Studio, chose it from the list. If not, you can import an existing app package.
-3. Click the **Add** button in the Command section.
+3. Select the **Add** button in the Command section.
 4. Choose **Allow users to query your service for information and insert that into a message**.
 5. Add a **Command Id** and a **Title**.
 6. Select where you want your search command to be triggered from. Selecting **message** does not currently alter the behavior of your search command.
 7. Add your search parameter.
-8. Click **Save**.
+8. Select **Save**.
 
 ### Manually create a command
 
