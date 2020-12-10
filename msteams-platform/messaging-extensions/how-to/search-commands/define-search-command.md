@@ -11,9 +11,11 @@ ms.author: anclear
 
 Messaging extension search commands allow your users to search external systems and insert the results of that search into a message in the form of a card.
 
+[!Note] Result card size limit is 28kb. If the result card adds up over 28kb, it will not be sent.
+
 ## Choose messaging extension invoke locations
 
-The first thing you need to decide is where your search command can be triggered (or more specifically, *invoked*) from. Your search command can be invoked from one or both of the following locations:
+The first thing you need to decide is where your search command can be triggered (or specifically, *invoked*) from. Your search command can be invoked from one or both of the following locations:
 
 * The buttons at the bottom of the compose message area
 * By @mentioning in the command box
@@ -33,13 +35,13 @@ The following steps assume you've already [created a messaging extension](~/mess
 3. Click the **Add** button in the Command section.
 4. Choose **Allow users to query your service for information and insert that into a message**.
 5. Add a **Command Id** and a **Title**.
-6. Select where you want your search command to be triggered from. Selecting **message** does not currently alter the behavior of your search command.
+6. Select where you want your search command to be triggered. Selecting **message** does not currently alter the behavior of your search command.
 7. Add your search parameter.
 8. Click Save.
 
 ### Manually create a command
 
-To manually add your messaging extension search command to your app manifest, you'll need to add the follow parameters to your `composeExtension.commands` array of objects.
+To manually add your messaging extension search command to your app manifest, you'll need to add the following parameters to your `composeExtension.commands` array of objects.
 
 | Property name | Purpose | Required? | Minimum manifest version |
 |---|---|---|---|
@@ -62,7 +64,7 @@ You'll also need to add the details of the search parameter, which will define t
 
 #### App manifest example
 
-The below is an example of a `composeExtensions` object defining a search command. It is not an example of the complete manifest, for the full app manifest schema see: [App manifest schema](~/resources/schema/manifest-schema.md).
+Below is an example of a `composeExtensions` object defining a search command. It is not an example of the complete manifest, for the full app manifest schema see: [App manifest schema](~/resources/schema/manifest-schema.md).
 
 ```json
 {
