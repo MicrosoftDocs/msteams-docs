@@ -2,7 +2,7 @@
 title: Add authentication to your Teams bot
 author: clearab
 description: How to add OAuth authentication to a bot in Microsoft Teams.
-ms.topic: overview
+ms.topic: how-to
 ms.author: lajanuar
 ---
 
