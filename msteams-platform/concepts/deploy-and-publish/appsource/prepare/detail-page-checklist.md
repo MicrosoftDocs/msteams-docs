@@ -154,7 +154,7 @@ Here's a view in [App Studio](https://aka.ms/InstallTeamsAppStudio):
 
 **Example in Markdown format**
 
-|Syntax |Markdown format |Normal text view|
+|What you do |Markdown format |Displayed text|
 |:---------|:---------------|:-------------|
 |Link  |` [App name guide](../../platform/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist#app-name)`| [App name guide](https://docs.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist#app-name) |
 |Image |` ![App long description store view](~/assets/images/store-detail-page/LongDescription-02.png)`| ![App long description store view](~/assets/images/store-detail-page/LongDescription-02.png)|
