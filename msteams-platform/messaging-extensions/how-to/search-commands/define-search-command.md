@@ -35,7 +35,7 @@ The following steps assume you've already [created a messaging extension](~/mess
 3. Click the **Add** button in the Command section.
 4. Choose **Allow users to query your service for information and insert that into a message**.
 5. Add a **Command Id** and a **Title**.
-6. Select where you want your search command to be triggered. Selecting **message** does not currently alter the behavior of your search command.
+6. Select where you want your search command to be triggered from. Selecting **message** does not currently alter the behavior of your search command.
 7. Add your search parameter.
 8. Click Save.
 
