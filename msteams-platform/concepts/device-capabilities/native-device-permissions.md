@@ -15,6 +15,8 @@ You might want to enrich your tab with features that require access to native de
 > * Location
 > * Notifications
 
+> [!Note] To integrate camera and image capabilities within your Microsoft Teams mobile app, refer [Camera and image capabilities in Teams.](/microsoftteams/platform/concepts/device-capabilities/mobile-camera-image-permissions&preserve-view=true)
+
 > [!IMPORTANT]
 >
 > * At present, Teams mobile client only supports access to `camera`, `gallery`, `mic`, and `location` through native device capabilities and is available on all app constructs including tabs. </br>
