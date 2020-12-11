@@ -11,7 +11,7 @@ ms.author: anclear
 
 Messaging extension search commands allow your users to search external systems and insert the results of that search into a message in the form of a card.
 
-[!Note] Result card size limit is 28kb. If the result card adds up over 28kb, it will not be sent.
+[!Note] Result card size limit is 28kb. If the result card size is over 28kb, it will not be sent.
 
 ## Choose messaging extension invoke locations
 
