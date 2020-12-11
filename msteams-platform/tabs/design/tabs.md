@@ -1,195 +1,230 @@
 ---
-title: Design guidelines for tabs
-description: Describes the guidelines for creating tabs for content and collaboration
-keywords: teams design guidelines reference framework tabs configuration channel tab static tab simple tab design Teams tab 
+title: Designing your tab for desktop and web
+description: Learn how to design a Teams tab (desktop and web) and get the Microsoft Teams UI Kit.
+author: heath-hamilton
+ms.topic: conceptual
+ms.author: lajanuar
 ---
-# Content and conversations, all at once using tabs
+# Designing your tab for Microsoft Teams desktop and web
 
-> [!Important]
-> **Tabs on Mobile Clients**
->
-> Follow the [guidance for tabs on mobile](./tabs-mobile.md) when creating your tabs. If your tab uses authentication, you must upgrade your Teams JavaScript SDK to version 1.4.1 or later, or authentication will fail.
->
-> **Channel/group (configurable) tabs on mobile:**
->
-> * Mobile clients only show configurable tabs that have a value for `websiteUrl`. If you want your tab to appear on the Teams mobile clients, you must set the value of `websiteUrl`.
-> * Default open behavior on mobile is to open outside in browser using the `websiteUrl`. For apps published to the public App Store, if you want your channel tab to open inside teams by default, follow the [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md), and reach out to your support rep to request to be whitelisted.
+A tab is a large canvas for content that facilitates collaboration. To guide your app design, the following information describes and illustrates how people can add, use, and manage tabs in Teams.
 
-Tabs are canvases that you can use to share content, hold conversations, and host third-party services, all within a team’s organic workflow. When you build a tab in Microsoft Teams, it puts your web app front and center where it’s easily accessible from key conversations.
+## Microsoft Teams UI Kit
 
-## Guidelines
+You can find comprehensive tab design guidelines, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit. The UI kit also has essential topics such as accessibility and responsive sizing that aren't covered here.
 
-A good tab should display the following characteristics:
+> [!div class="nextstepaction"]
+> [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
-### Focused functionality
+## Add a tab
 
-Tabs work best when they’re built to address a specific need. Focus on a small set of tasks or a subset of data that’s relevant to the channel the tab is in.
+You can add a tab from the Teams store (AppSource) or in one of the following contexts:
 
-### Reduced chrome
+* Chat
+* Channel
+* Meeting (before, during, or after the meeting)
 
-Avoid creating multiple panels in a tab, adding layers of navigation, or requiring users to scroll both vertically and horizontally in one tab. In other words, try not to have tabs in your tab.
+The following example shows how a tab is added in a channel.
 
-### Integration
+:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="Example shows a tab being added in a channel." border="false":::
 
-Find ways to notify users about tab activity by posting [adaptive cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards) to a conversation.
+## Set up a tab
 
-### Conversational
+There's a short setup process to add an app as a channel, chat, or meeting tab. The experience is largely up to you. For example, you could have a description of how to use the app and some optional settings. Include a sign-in step here if you need to authenticate users.
 
-Find a way to facilitate conversation around a tab. This ensures that conversations center on the content, data, or process at hand.
+### Tab configuration modal
 
-### Streamlined access
+:::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="Example shows a tab configuration modal." border="false":::
 
-Make sure you’re granting access to the right people at the right time. Keeping your sign-in process simple will avoid creating barriers to contribution and collaboration.
+### Anatomy: Tab configuration modal
 
-### Responsiveness to window sizing
+:::image type="content" source="../../assets/images/tabs/test.png" alt-text="Illustration showing the UI anatomy of a tab configuration modal." border="false":::
 
-Teams can be used in window sizes as small as 720px, so making sure that a tab is usable in a small window is just as important as usability at very high resolutions.
+|Counter|Description|
+|----------|-----------|
+|1|**App logo**: Full color app logo of your app.|
+|2|**App name**: Full name of your app.|
+|3|**iframe**: Responsive space for your app’s content (for example, tab settings or authentication).|
+|4|**About link**: Opens a dialog showing more information about the app, such as a full description, permissions required by the app, and links to your privacy policy and terms of service.
+|5|**Close button**: Closes the modal.|
+|6|**Notify team members option**: The modal asks if you want to create a post letting others know you added a tab.|
+|7|**Back button**: Goes to the previous step based on where the dialog opened.|
+|8|**Save button**: Completes tab setup.|
 
-### Flat navigation
+### Tab authentication with single sign-on
 
-We ask developers not to add their entire portal to a tab. Keeping the navigation relatively flat helps maintain a simpler conversational model. In other words, the conversation is about a list of things, such as triaged work items, or a single thing, like a spec.
+You can add a step in which users must first sign in with their Microsoft credentials. This authentication method is called single sign-on (SSO).
 
-There are inherent navigational challenges with deep navigation hierarchy, within threaded conversations. For the best user experience, your tab navigation should be kept to a minimum and be designed as follows:
+:::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="Example shows a tab authentication screen." border="false":::
 
-> [!div class="checklist"]
->
-> * **Opens a task module such as an individual work item or entity**. This precludes chat entirely and is the best option to keep chat specifically about the tab and not the sub-entities or editing experiences.
->* **Opens a pseudo dialog in an iframe**. If used with a screened background we recommend using the lighter color rather than the dark. The `app-gray-10 at 30%` transparency works well.
->* **Opens a browser page**.
+### Designing a tab setup with UI templates
 
-### Personality
+Use one of the following Teams UI templates to help design your tab setup experience:
 
-Your tab canvas presents a great opportunity to brand your experience. Your logo is an important part of your identity and connection with your users., so be sure to include it:
+* [List](../../concepts/design/design-teams-app-ui-templates.md#list): Lists can display related items in a scannable format and allow users to take actions on an entire list or individual items.
+* [Form](../../concepts/design/design-teams-app-ui-templates.md#form): Forms are for collecting, validating, and submitting user input in a structured way.
+* [Empty state](../../concepts/design/design-teams-app-ui-templates.md#empty-state): The empty state template can be used for many scenarios, including sign in, first-run experiences, error messages, and more.
 
-> [!div class="checklist"]
->
->* Place your logo in the left or right corner or along the bottom edge
-> * Keep your logo small and unobtrusive
+## View a tab
 
-Incorporating your own colors and layouts twill also aid in communicating personality.
+Tabs provide a full-screen web experience in Teams where you can display collaborative content—such task boards and dashboards—and important information.
 
-> [!TIP]
-> Please work with our visual style so your service feels like a part of Teams. *See*, for example [Teams Colors](../../concepts/design/components/color.md)
+:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="Example shows a tab with a task board." border="false":::
 
----
+### Anatomy: Tab
 
-## Tab layouts
+:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Illustration showing the UI anatomy of a tab." border="false":::
 
-[!INCLUDE [Tab layouts](../../includes/design/tab-layouts.html)]
+|Counter|Description|
+|----------|-----------|
+|1|**Tab name**: Navigation label for your tab.|
+|2|**Tab overflow**: Opens tab actions, such as rename and remove.|
+|3|**Tab chat**: Opens a chat thread on the right, allowing users to have a conversation next to the content.|
+|4|**iframe**: Displays your tab’s content.
 
----
+### Designing a tab with UI templates
 
-## Types of tabs
+Use one of the following Teams UI templates to help design your tab experience:
 
-[!INCLUDE [Tab types](../../includes/design/tab-types.html)]
+* [List](../../concepts/design/design-teams-app-ui-templates.md#list): Lists can display related items in a scannable format and allow users to take actions on an entire list or individual items.
+* [Task board](../../concepts/design/design-teams-app-ui-templates.md#task-board): A task board, sometimes called a kanban board or swim lanes, is a collection of cards often used to track the status of work items or tickets.
+* [Dashboard](../../concepts/design/design-teams-app-ui-templates.md#dashboard): A dashboard is a canvas containing multiple cards that provide an overview of data or content.
+* [Form](../../concepts/design/design-teams-app-ui-templates.md#form): Forms are for collecting, validating, and submitting user input in a structured way.
+* [Empty state](../../concepts/design/design-teams-app-ui-templates.md#empty-state): The empty state template can be used for many scenarios, including sign in, first-run experiences, error messages, and more.
+* [Left nav](../../concepts/design/design-teams-app-ui-templates.md#left-nav): The left nav template can help if your tab requires some navigation. In general, you should keep tab navigation to a minimum.
 
----
+## Use a tab to collaborate
 
-## Configuration page height
+Tabs help facilitate conversations about content in a central location.
 
->[!IMPORTANT]
->In September 2018, the height for the tab [configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md) was increased while the width remained unchanged. If your app is designed for the older size your tab configuration page will have a great deal of vertical whitespace. Legacy store apps exempted from this change will need to contact Microsoft after updating to accommodate the new dimensions.
+### Thread discussion
 
-The dimensions of the tab configuration page:
+Users can automatically post to a channel or chat once they’ve added a new tab. This not only notifies team members of the new content and provides a link to tab, it allows people to start talking about the tab.
 
+:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="Example shows a tab being discussed in a channel thread." border="false":::
 
-<img width="450px" title="Sizes for configuration tabs" src="~/assets/images/tabs/config-dialog-Contoso2.png" alt="sizes for config tabs" />
+### Side-by-side discussion
 
+Users can have a conversation next while viewing the tab’s content.
 
-### Guidelines for tab configuration page format
+:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="Example shows a tab with a chat open on the right side." border="false":::
 
-* Base the minimum height of your content area of your tab configuration page on fixed-height graphic elements.
-* Calculate available vertical space (the height of the content area in the configuration page) using `window.innerHeight`. This returns the size of the `<iframe>` in which your configuration page resides, which may change in future releases. By using this value your content will adjust automatically to future changes.
-* Allocate vertical space to the variable-height elements minus what's needed for the fixed-height elements.
-* For the *login* state, vertically and horizontally center the content.
-* If you want a background image, you need either a new image, sized to fit the area (preferred), or you can keep the same image and choose between:
-  * aligning to the upper left hand corner.
-  * scaling the image to fit.
+### Permissions and role-based views
 
-When properly sized, your tab configuration page should look similar to this:
+The tab experience may be different for users depending on their permissions. For example, one user can access the tab without having to sign in. Another user, however, must sign and will see slightly different content.
 
-<img width="450px" title="New configuration tab" src="~/assets/images/tabs/config-dialog-Contoso.png" alt="new config tab"/>
+## Manage a tab
+
+You can include options to rename, remove, or modify a tab.
+
+### Anatomy: Tab menu
+
+:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Illustration showing the UI anatomy of a tab menu." border="false":::
+
+|Counter|Description|
+|----------|-----------|
+|1|**Settings**: (Optional) Allows users to modify a tab’s settings after it’s been added.|
+|2|**Rename**: Allows users to give the tab a name that’s more meaningful to the team.|
+|3|**Remove**: Removes the tab from the channel, chat, or meeting.|
+
+## Tab notifications and deep linking
+
+You can send a message with a deep link to your tab. For example, a card shows a summary of bug data a user can select to see the entire bug in a tab. Sending messages about tab activity increases awareness without explicitly notifying everyone (i.e., activity without noise). You also can @mention specific users if needed.
+
+Notify users of tab activity one of the following ways:
+
+* **Bot**: This method is preferred especially if the tab thread is targeted. The tab’s threaded conversation is moved into view as recently active. This method also allows for some sophistication in how the notification is sent.
+* **Message**: A message shows up in the user’s activity feed with a [deep link to the tab](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true).
 
 ## Best practices
 
-### Always include a default state
+### Collaboration
 
-Include a default state to make tabs easy to set up even if your tab is configurable.
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-do.png" alt-text="Illustration showing what to do with tab navigation design." border="false":::
 
-### Deep linking
+#### Do: Facilitate conversation
 
-Whenever possible, cards and bots should deep link to richer data in a hosted tab. For example, a card may show a summary of bug data, but clicking it can shows the entire bug in a tab.
+Include content and components people can talk about. If it doesn’t fit within the context of a chat, channel, or meeting, it doesn’t belong in your tab.
 
-### Naming
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-dont.png" alt-text="Illustration showing what not to do with tab navigation design." border="false":::
 
-In many cases, the name of your app will make a great tab name. But, also consider naming your tabs according to the functionality they provide.
+#### Don't: Treat your tab like any other webpage
 
-### Multi-window
+A tab isn’t a webpage someone might view once. A tab should display your most important, relevant content that people need to accomplish something together.
 
-Channel tabs that have complex editing capabilities must open the editor view in multi-window rather than a tab.
-
-### No horizontal scrolling
-
-Tab should not have horizontal scrolling.
-
-### Easy navigation
-
-Navigation inside a tab app must be easy to follow i.e. pages have the following where necessary/applicable:
-* Back buttons
-* Page headers
-* Breadcrumbs
-* Hamburger menus
-
-### Undo last action
-
-User must be able to undo their last action in the app.
-
-### Share content
-
-Personal apps should enable users to share content from a personal app experience with other team members. Channel tab must provide navigation that complements the main Teams navigation, rather than conflicting with it (such as left rail nav-bars).
-
-### Single view
-
-Personal apps should present content from team or group chat scoped instances of that app in a single view, e.g., a Trello user should be able to see all instances of Trello boards they participate in at a team level in their personal app.
-
-### No app bar
-
-Tabs should not provide an app bar with icons in the left rail that conflicts with the main Teams navigation.
+   :::column-end:::
+:::row-end:::
 
 ### Navigation
 
-Tabs should not have more than 3 levels of navigation within the app.
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-do.png" alt-text="Illustration showing what to do with tab navigation design." border="false":::
 
-### L2/L3 view
+#### Do: Limit tasks and data
 
-Secondary and tertiary pages in a tab should be opened in an L2/L3 view in the main tab area that is navigated via the breadcrumb.
+Tabs work best when they address specific needs. Include a limited set of tasks and data relevant to the team or group.
 
-### No link to external browser
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-dont.png" alt-text="Illustration showing what not to do with tab navigation design." border="false":::
 
-Link targets in tabs should not link to an external browser but should link to div elements contained within Teams. For example, inside task Modules, tabs, etc.
+#### Don't: Embed your entire app
 
-## Notifications for tabs
+Using a tab to display an entire app with multi-level navigation and complex interactions leads to information overload.
 
-There are two modes of notification for tab content changes:
+   :::column-end:::
+:::row-end:::
 
-> [!div class="checklist"]
->
-> * **Use the app API to notify users of changes**. This message will show up in the user’s activity feed and deep link to the tab. *See*  [Create deep links to content and features in Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
+### Setup
 
-> * **Use a bot**. This method is preferred especially if the Tab thread is targeted. The result will be that the tab’s threaded conversation will be moved into view as recently active. This method also allows for some sophistication in how the notification is sent.
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-setup-do.png" alt-text="Illustration showing what to do with tab setup design." border="false":::
 
-Sending a message to a tab thread increases the awareness of activity to all users without explicitly notifying everyone. This is awareness without noise. In addition, when you `@mention`  specific users the same notification will be placed in their feed, deep linking them to the tab thread directly.
+#### Do: Keep it simple
 
-### Tab design best practices
+If your app requires authentication, try integrating Microsoft single sign-on (SSO) for a more seamless sign-in experience. Also, only include essential information and steps to add the tab.
 
-* Personal/Static tabs should enable users to share content from a personal app experience with another team members.
-* Personal/Static tabs may present content from team or group chat scoped instances of that app in a single view.
-* Link targets in tabs should not link to an external browser but should link to div elements contained within Teams (example-inside, task modules, tabs, etc).
-* Tabs should be responsive to Team’s themes. When the Teams theme is changed, the theme within the app should also change to reflect that theme.
-* Tabs should use Teams-styled components where possible. It means adopting Teams fonts, type ramps, color palettes, grid system, motion, tone of voice, etc.
-* Tabs should use Teams interaction behaviors for in-page navigation, position, and use of dialogs, information hierarchies, etc.
-* Tabs should use the standard Teams hamburger menu and/or breadcrumb for in-app navigation. Tabs should not provide an app bar with icons in the left rail that conflicts with the main Teams navigation.
-* Tabs should not have more than three levels of navigation within the app.
-* Secondary and tertiary pages in a tab should be opened in an L2/L3 view in the main tab area that is navigated via the breadcrumb.
-* Tabs that have complex editing capabilities within the app should open the editor view in multi-window rather than a tab (for desktop and web).
-* For improved user experience include a personal bot that sends a welcome message to the user on the first run and responds to the **hi**, **help**, and **hello** commands. You can refer to the documentation on [conversational bots](../../bots/what-are-bots.md#in-a-one-to-one-chat) for further assistance.
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-setup-dont.png" alt-text="Illustration showing what not to do with tab setup design." border="false":::
+
+#### Don't: Have too many steps
+
+Remove any unnecessary steps for adding a tab.
+
+   :::column-end:::
+:::row-end:::
+
+### Theming
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="Illustration showing what to do with tab theming." border="false":::
+
+#### Do: Take advantage of Teams color tokens
+
+Each Teams theme has its own color scheme. To handle theme changes automatically, use <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">color tokens (Fluent UI)</a> in your design.
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="Illustration showing what not to do with tab theming." border="false":::
+
+#### Don't: Hard code color values
+
+If you don’t use Teams color tokens, your designs will be less scalable and take more time to manage.
+
+   :::column-end:::
+:::row-end:::
+
+## Validate your design
+
+If you plan to publish your app to AppSource, you should understand the design issues that commonly cause apps to fail during submission.
+
+> [!div class="nextstepaction"]
+> [Check design validation guidelines](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

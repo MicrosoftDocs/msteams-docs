@@ -519,6 +519,10 @@
     {
      "source_path": "msteams-platform/graph-permissions/test-rsc-json-file.md",
      "redirect_url": "/microsoftteams/platform/graph-api/rsc/test-rsc-json-file"
-     }
+    },
+    {
+     "source_path": "msteams-platform/apps-in-teams-meetings/design/designing-in-meeting-tab.md",
+     "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/design/designing-apps-in-meetings"
+    }
   ]
 }
