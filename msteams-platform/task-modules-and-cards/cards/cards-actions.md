@@ -5,7 +5,7 @@ keywords: teams bots cards actions
 ---
 # Card actions
 
-Cards used by bots and messaging extensions in Teams support the following activity ([`CardAction`](https://docs.microsoft.com/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards)) types. Note that these actions differ from `potentialActions` for Office 365 Connector cards when used from Connectors.
+Cards used by bots and messaging extensions in Teams support the following activity ([`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards)) types. Note that these actions differ from `potentialActions` for Office 365 Connector cards when used from Connectors.
 
 | Type | Action |
 | --- | --- |
@@ -18,7 +18,7 @@ Cards used by bots and messaging extensions in Teams support the following activ
 > [!NOTE]
 >* Teams does not support `CardAction` types not listed in the preceding table.
 >* Teams does not support the `potentialActions` property.
->* Card actions are different than [suggested actions](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) in Bot Framework/Azure Bot Service. Suggested actions are not supported in Microsoft Teams: if you want buttons to appear on a Teams bot message, use a card.
+>* Card actions are different than [suggested actions](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) in Bot Framework/Azure Bot Service. Suggested actions are not supported in Microsoft Teams: if you want buttons to appear on a Teams bot message, use a card.
 >* If you're using a card action as part of a messaging extension, the actions will be not work until the card is submitted to the channel (they will not work while the card is in the compose message box).
 
 Teams also supports [Adaptive Cards actions](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions), which are only used by Adaptive Cards. These actions are listed in their own section at the end of this reference.
@@ -299,5 +299,29 @@ To include a `signin` action with an Adaptive Card include the following details
         "value": "https://signin.com"
     }
   }
+}
+```
+
+### Adaptive Cards with invoke action
+ 
+To include a `invoke` action with an Adaptive Card include the following details in the `msteams` object. Note that you can include additional hidden properties in the `data` object if needed.
+
+| Property | Description |
+| --- | --- |
+| `type` | Set to `signin` |
+| `data` | Set the value  |
+
+#### Example
+
+```json
+{
+    "type": "Action.Submit",
+    "data": {
+    "msteams": {
+         "type": "task/fetch"
+               },
+         "data": "value"
+            },
+    "title": "submit"
 }
 ```
