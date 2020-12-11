@@ -28,19 +28,6 @@ Publishing  your app to [AppSource](https://appsource.microsoft.com) makes it av
 
 ## FAQs — Teams apps and Partner account verification process in Partner Center
 
-### App category mapping
-
-| Teams Category       | PC Categories  |
-|:---------------------|:---------------|
-| Analytics and BI | Analytics, Data Visualization and BI |
-| Developer and IT | Developer Tools, IT Admin |
-| Education | Education |
-| Human resources | Human Resources and Recruiting |
-| Productivity | Content Management, Files and documents, Productivity, Training and Tutorials, and Utilities |
-| Project management | Communication, Project Management, Workflow and Business Management |
-| Sales and support | Customer and Contact Management, Customer Support, Financial Management, Sales and Marketing |
-| Social and fun | Image and Video Galleries, Lifestyle, News and Weather, Social, Travel and Navigation |
-
 ## How do I create a Partner Center account?
 
 There are two ways to create a Partner Center account:
@@ -138,6 +125,19 @@ Please send an email to **<teamsubm@microsoft.com>** with the following details:
     * Support ticket number:
     * Your seller ID:
     * A screen shot of the issue (if possible):
+    
+## App category mapping
+
+| Teams Category       | PC Categories  |
+|:---------------------|:---------------|
+| Analytics and BI | Analytics, Data Visualization and BI |
+| Developer and IT | Developer Tools, IT Admin |
+| Education | Education |
+| Human resources | Human Resources and Recruiting |
+| Productivity | Content Management, Files and documents, Productivity, Training and Tutorials, and Utilities |
+| Project management | Communication, Project Management, Workflow and Business Management |
+| Sales and support | Customer and Contact Management, Customer Support, Financial Management, Sales and Marketing |
+| Social and fun | Image and Video Galleries, Lifestyle, News and Weather, Social, Travel and Navigation |
 
 >
 > [!div class="nextstepaction"]
