@@ -156,7 +156,7 @@ Here's a view in [App Studio](https://aka.ms/InstallTeamsAppStudio):
 
 |Markdown format for |Markdown format |Displayed text|
 |:---------|:---------------|:-------------|
-|Link  |` [App name guide](../../platform/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist#app-name)`| [App name guide](https://docs.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist#app-name) |
+|Link  |` [App name guide](../concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md#app-name&preserve-view=true)`| [App name guide](../concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md#app-name&preserve-view=true) |
 |Image |` ![App long description store view](~/assets/images/store-detail-page/LongDescription-02.png)`| ![App long description store view](~/assets/images/store-detail-page/LongDescription-02.png)|
 |Bold |` **HR Tools**` | **HR Tools**  |
 |Italics |`*HR Tools*` |*HR Tools*|
