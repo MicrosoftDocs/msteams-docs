@@ -7,7 +7,7 @@ ms.author: lajanuar
 ---
 # Designing your tab for Microsoft Teams desktop and web
 
-A tab is a large canvas for content that facilitates collaboration. To guide your app design, the following information describes and illustrates how people can add, use, and manage tabs in Teams.
+A tab is a large canvas for your content. To guide your app design, the following information describes and illustrates how people can add, use, and manage tabs in Teams.
 
 ## Microsoft Teams UI Kit
 

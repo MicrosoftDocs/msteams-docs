@@ -186,7 +186,7 @@ A single in-meeting dialog with multiple interactions can distract from the call
    :::column span="":::
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-layout-do.png" alt-text="Example showing a meeting extension best practice." border="false":::
 
-#### Do: Use single-column layouts
+#### Do: Use a single-column dialog layout
 
 Since the dialogs are at the center of the meeting stage, task completion should be fast and simple to avoid user frustration.
 
@@ -205,7 +205,7 @@ Dense or overly structured content can be distracting and overwhelming, especial
    :::column span="":::
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-do.png" alt-text="Example showing a meeting extension best practice." border="false":::
 
-#### Do: Use single columns
+#### Do: Use a single-column tab layout
 
 Given the in-meeting tab's narrow nature, we strongly recommend displaying the contents in a single column.
 
@@ -228,7 +228,7 @@ Due to the limited space of the in-meeting tab, layouts with more than one colum
 
 #### Do: Right align the primary action
 
-We recommend positioining the most visually heavy action to the right-most location.
+We recommend positioning the most visually heavy action to the right-most location.
 
    :::column-end:::
    :::column span="":::
@@ -270,7 +270,7 @@ Horizontal scrolling isn’t an expected behavior in Teams. Other canvases in th
 
 #### Do: Surface complex scenarios in the in-meeting tab
 
-If your app includes multiple tasks, we strongly recommend a single-column layout in an in-meeting tab.
+If your app includes multiple tasks, we strongly recommend using an in-meeting tab with a single-column layout.
 
    :::column-end:::
    :::column span="":::

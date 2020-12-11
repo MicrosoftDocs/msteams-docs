@@ -22,7 +22,7 @@ You can find more comprehensive task module design guidelines, including element
 
 Task modules can be launched from almost anywhere in your app.
 
-* **Tab**: A task module can be launched from any link within a tab or iframe. Use in scenarios where you want the user to focus on an interaction.
+* **Tab**: A task module can be launched from any link within a tab. Use in scenarios where you want the user to focus on an interaction.
 * **Bot**: A task module can be launched from a link inside a bot message.
 * **Adaptive Card**: A task module can be launched from an Adaptive Card (sent with a messaging extension or by a bot) when a user selects a button.
 * **Messaging extension (action commands)**: Messaging extensions allow you to take a particular action on message content. Selecting an action opens a task module.
@@ -87,13 +87,13 @@ Use for welcome, error, and success messages.
 
 ### Image gallery
 
-Embed a gallery carousel inside an iframe.
+Embed a gallery carousel in an iframe.
 
 :::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="Example image gallery in a task module." border="false":::
 
 ### Poll
 
-This example shows poll results launched from an Adaptive Card.
+This example shows poll results launched from an Adaptive Card. The poll can be placed inside a task module, too.
 
 :::image type="content" source="../../assets/images/task-module/poll.png" alt-text="Example poll in a task module." border="false":::
 
@@ -134,7 +134,7 @@ While Adaptive Cards hosted in a task module render well on mobile devices, if y
    :::column span="":::
 :::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="Example showing a task module best practice." border="false":::
 
-#### Don't: Use horizontal scrollbars
+#### Don't: Use horizontal scroll bars
 
 It's a best practice to keep content focused and not too lengthy. If a scroll is necessary, scroll vertically and not horizontally.
 
