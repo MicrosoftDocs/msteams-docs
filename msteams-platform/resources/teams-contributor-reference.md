@@ -70,3 +70,9 @@ Code samples play an important role in helping developers successfully use APIs 
 ### Test 
 
 **Hello World**
+
+[More info](#setup-your-workspace)
+
+[lets try out](../concepts/authentication/authentication.md)
+
+lets try out 2 push a commit
