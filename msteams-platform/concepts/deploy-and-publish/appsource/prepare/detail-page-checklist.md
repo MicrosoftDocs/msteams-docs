@@ -25,8 +25,8 @@ The details page presents the first impression of your app to users. Each elemen
 >
 >* Use these resources for guidance:
 
-* [App name guide](/platform/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist#app-name)
-* [Microsoft Trademark and Brand Guidelines](/legal/intellectualproperty/trademarks/usage/general)
+* [App name guide](../concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md#app-name&preserve-view=true)
+* [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)
 
 **Do's:**
 
@@ -60,7 +60,7 @@ This is one of the first elements that users see. It should be attractive and ey
 
 ## Outline icon
 
-This is used in messaging extensions, apps marked as favorite by the user, and the left navigation menu. Make sure it's simple and recognizable. Your outline icon must contain only white color and be transparent. For required specifications, *See* [Create an app package for your Microsoft Teams app - Icons](../../../build-and-test/apps-package.md#icons).
+This is used in messaging extensions, apps marked as favorite by the user, and the left navigation menu. Make sure it's simple and recognizable. Your outline icon must contain only white color and be transparent. For required specifications, *See* [Create an app package for your Microsoft Teams app - Icons](../../../../concepts/build-and-test/apps-package.md#icons).
 
 ![App icon outline store view](../../../../assets/images/store-detail-page/AppIconOutline-02.png)
 ![App icon outline App Studio view](../../../../assets/images/store-detail-page/AppIconOutline-01.png)
@@ -156,7 +156,7 @@ Here's a view in [App Studio](https://aka.ms/InstallTeamsAppStudio):
 
 |Markdown format for |Markdown format |Displayed text|
 |:---------|:---------------|:-------------|
-|Link  |` [App name guide](../concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md#app-name&preserve-view=true)`| [App name guide](../concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md#app-name&preserve-view=true) |
+|Link  |` [App name guide](../concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md&preserve-view=true)`| [App name guide](../concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md&preserve-view=true) |
 |Image |` ![App long description store view](~/assets/images/store-detail-page/LongDescription-02.png)`| ![App long description store view](~/assets/images/store-detail-page/LongDescription-02.png)|
 |Bold |` **HR Tools**` | **HR Tools**  |
 |Italics |`*HR Tools*` |*HR Tools*|
