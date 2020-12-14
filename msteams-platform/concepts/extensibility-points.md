@@ -1,20 +1,20 @@
 ---
 title: Entry points for Teams apps
 author: heath-hamilton
-description: Describes how and where people use your app in Teams.
+description: Describes where people can discover and use your app in Teams.
 ms.topic: conceptual
 ms.author: lajanuar
 ms.date: 09/22/2020
 ---
 # Entry points for Teams apps
 
-The Teams platform provides a flexible set of entry points where people can discover and use your app. Your app can be as simple as embedding an existing website in a personal tab or a multi-faceted app that users interact with across several entry points.
+The Teams platform provides a flexible set of entry points where people can discover and use your app. Your app can be as simple as embedding existing web content in a tab or a multi-faceted app that users interact with across several contexts.
 
 The most successful apps feel native to Teams, so it's important to carefully plan your app's entry points.
 
-## Teams, channels, and group chats
+## Teams, channels, and chats
 
-Teams, channels, and group chats are collaboration spaces. Apps that use these entry points are available to all members and typically focus on additional workflows or unlocking new social interactions.
+Teams, channels, and chats are collaboration spaces. Apps in these contexts are available to everyone in that space and typically focus on additional workflows or unlocking new social interactions.
 
 Here's how Teams app capabilities are commonly used in collaborative contexts:
 
@@ -30,36 +30,17 @@ Here's how Teams app capabilities are commonly used in collaborative contexts:
 
 ## Personal apps
 
-[Personal apps](~/concepts/design/personal-apps.md) focus on interactions with a single user. The experience in this context is unique to each user. Users can pin personal apps to the left navigation rail for quick access.
+[Personal apps](~/concepts/design/personal-apps.md) focus on interactions with a single user. The experience in this context is unique to each user.
 
 Here's how Teams capabilities are commonly used in personal contexts:
 
-* [**Bots**](~/bots/what-are-bots.md) have one-on-one conversations with a user. Bots that require multi-turn conversations or provide notifications relevant only to a specific user are best suited in personal contexts.
+* [**Bots**](~/bots/what-are-bots.md) have one-on-one conversations with a user. Bots that require multi-turn conversations or provide notifications relevant only to a specific user are best suited in personal apps.
 
-* [**Tabs**](~/tabs/what-are-tabs.md) provide a full-screen embedded web experience that's meaningful to individual users.
+* [**Tabs**](~/tabs/what-are-tabs.md) provide a full-screen embedded web experience that's meaningful to the user looking at it.
 
-## UI components
+## Examples
 
-Apps typically exhibit one or more standard Teams UI components. Building out your app using these components leads to rich experiences that feel native to Teams users.
+The Teams app design guidelines provide detailed visuals showing you where people can find and use Teams apps.
 
-### Cards
-
-[Cards](~/task-modules-and-cards/what-are-cards.md) are UI containers defined by JSON that can contain formatted text, media, controls (like dropdowns and radio buttons) and buttons that trigger an action.
-
-Card actions can send payloads to your app's API, open a link, initiate authentication flows, or send messages to conversations. The Teams platform supports multiple cards, including Adaptive Cards, hero cards, thumbnail cards, and more. You can combine card collections and display in a list or carousel.
-
-### Task modules
-
-[Task modules](~/task-modules-and-cards/what-are-task-modules.md) provide modal experiences in Teams. They are especially useful for initiating workflows, collecting user input, or displaying rich information such as videos or Power BI dashboards. In task modules, you can run custom front-end code, display an `<iframe>` widget, or show an Adaptive Card.
-
-When considering how you want to build your app, remember that modals are natural for users to enter information or complete tasks compared to a tab or a conversation-based bot experience.
-
-### Deep links
-
-Your app can create [URL deep links](~/concepts/build-and-test/deep-links.md) to help navigate your user through your app, and the Teams client. You can create a deep link for most entities within Teams, and some (like a new meeting request) allow you to pre-populate information using query strings in the URL.
-
-For example, your conversational bot could send a message to a channel with a deep link to a task module that results in a card being sent as a one-to-one message to a user, that in turn contains a deep link to create a new meeting with a specific user at a certain date/time. Use deep links to connect across the various extension points available to your app, keeping your user in the correct context at all times.
-
-### Web-based content
-
-[Web-based content](~/tabs/how-to/create-tab-pages/content-page.md) is a webpage you host that can be embedded in a tab or task module.
+> [!div class="nextstepaction"]
+> [See the Teams app design guidelines](../concepts/design/design-teams-app-overview.md)
