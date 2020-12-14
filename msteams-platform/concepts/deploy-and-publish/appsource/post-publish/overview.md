@@ -41,3 +41,15 @@ When a user installs your application one of the first things they do is consent
 > * A new configurable group/channel tab was added.
 > * The `webApplicationInfo` values changed.
 >
+
+### Images of user consent flow:
+
+**Set up a connecter** - This screen will appear only for teams.
+
+![Consent flow setup a connector diagram](../../../assets/images/connector-teams-consentflow.png)
+
+**User consent flow** - This screen is common for both personal and teams scope.
+
+Select the **Consent on behalf of your organization** checkbox and choose **Accept**.
+
+![Permissions diagram](../../../assets/images/user-consent-flow.png)
