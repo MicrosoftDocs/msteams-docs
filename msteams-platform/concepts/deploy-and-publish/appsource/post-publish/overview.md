@@ -44,7 +44,7 @@ When a user installs your application one of the first things they do is consent
 
 ### Images of user consent flow:
 
-**Set up a connecter** - This screen will appear only for teams.
+**Set up a connector** - This screen will appear only for the teams users.
 
 ![Consent flow setup a connector diagram](../../../assets/images/connector-teams-consentflow.png)
 
