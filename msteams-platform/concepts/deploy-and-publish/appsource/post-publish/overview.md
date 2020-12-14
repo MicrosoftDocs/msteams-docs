@@ -48,8 +48,6 @@ When a user installs your application one of the first things they do is consent
 
 ![Consent flow setup a connector diagram](../../../assets/images/connector-teams-consentflow.png)
 
-**User consent flow** - This screen is common for both personal and teams scope.
-
-Select the **Consent on behalf of your organization** checkbox and choose **Accept**.
+**User consent flow** - This screen is common for both personal and teams scope. Here, select the **Consent on behalf of your organization** checkbox and choose **Accept**.
 
 ![Permissions diagram](../../../assets/images/user-consent-flow.png)
