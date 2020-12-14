@@ -46,8 +46,8 @@ When a user installs your application one of the first things they do is consent
 
 **Set up a connector** —  This screen will appear only for Teams users.
 
-![Consent flow setup a connector diagram](../../../assets/images/connector-teams-consentflow.png)
+![Consent flow setup a connector diagram](../../../../assets/images/connector-teams-consentflow.png)
 
 **User consent flow** - This screen is common for both personal and group scope. Here, select the **Consent on behalf of your organization** checkbox and choose **Accept**.
 
-![Permissions diagram](../../../assets/images/user-consent-flow.png)
+![Permissions diagram](../../../../assets/images/user-consent-flow.png)
