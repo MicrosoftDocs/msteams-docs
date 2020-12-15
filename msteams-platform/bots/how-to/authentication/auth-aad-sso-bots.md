@@ -43,9 +43,9 @@ The following steps are required to develop an SSO Microsoft Teams bot:
 
 This step is similar to the [tab SSO flow](../../../tabs/how-to/authentication/auth-aad-sso.md):
 
-1. Get your [Azure AD Application ID](/microsoft-graph-docs/concepts/auth-register-app-v2.md) for Teams desktop, web, or mobile client.
+1. Get your [Azure AD Application ID](/concepts/auth-register-app-v2.md) for Teams desktop, web, or mobile client.
 2. Specify the permissions that your application needs for the Azure AD endpoint and, optionally, Microsoft Graph.
-3. [Grant permissions](/microsoft-graph-docs/azure-docs/articles/active-directory/develop/v2-permissions-and-consent.md) for Teams desktop, web, and mobile applications.
+3. [Grant permissions](/azure-docs/articles/active-directory/develop/v2-permissions-and-consent.md) for Teams desktop, web, and mobile applications.
 4. Add a scope by selecting the **Add a scope** button.
 5. In the panel that opens, add a client app by entering `access_as_user` as the **Scope name**.
 
