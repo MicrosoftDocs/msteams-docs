@@ -268,7 +268,7 @@
       - name: Application-hosted media
         href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
     - name: Universal Bots in Microsoft Teams
-      href: bots/Universal-Bots-in-Teams.md
+      href: bots/universal-bots-in-teams.md
 - name: 'Messaging extensions — task-oriented interactions'
   items:
     - name: 'What are Messaging Extensions?'
