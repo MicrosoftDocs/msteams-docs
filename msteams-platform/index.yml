@@ -162,12 +162,7 @@ tools:
     # Card
     - title: Yeoman Generator for Microsoft Teams
       imageSrc: ./assets/icons/Yeoman.png
-      url: https://github.com/OfficeDev/generator-teams 
-    # Card
-    - title: Moodle Instructions for Microsoft Teams
-      imageSrc: ./assets/images/MoodleInstructions/moodle-and-teams.png
-      url: /microsoftteams/platform/moodleInstructions
-            
+      url: https://github.com/OfficeDev/generator-teams         
 # additionalContent (optional)
 
 
