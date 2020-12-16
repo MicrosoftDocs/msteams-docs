@@ -68,7 +68,7 @@ Next, you'll need to register Moodle as an application in your Azure Active Dire
 
 ### Moodle tab for Microsoft Teams information flow
 
-<img width="530px" src="assets/images/MoodleTabInformationFlow.png" alt-text="Moodle tab for Microsoft Teams information flow" />
+<img width="530px" src="assets/images/MoodleTabInformationFlow.png" alt="Moodle tab for Microsoft Teams information flow" />
 
 1. From the Microsoft Office 365 Integration plugin page select the **Setup** tab.
 
@@ -146,7 +146,7 @@ The free Moodle Assistant Bot for Microsoft Teams helps teachers and students an
 
 ### Moodle bot information flow
 
-<img width="530px" src="assets/images/MoodleBotInformationFlow.png" title="Moodle bot for Microsoft Teams information flow" />
+<img width="530px" src="assets/images/MoodleBotInformationFlow.png" alt="Moodle bot for Microsoft Teams information flow" />
 
 To install the bot, you'll first need to register it on the [Microsoft Identity Platform](https://identity.microsoft.com/Landing). This allows your Bot to authenticate against your Microsoft endpoints. To register your bot:
 
@@ -196,7 +196,8 @@ Before you can install the app you'll need to make sure external apps and upload
 
 1. Select the **Upload a custom app** link from the list of options.
 
-> [!Note] If you're logged in as a global administrator you'll have the option of uploading the app to your organization's app store, otherwise you'll only be able to load the app for a team of which you are a member.
+> [!Note]
+> If you're logged in as a global administrator you'll have the option of uploading the app to your organization's app store, otherwise you'll only be able to load the app for a team of which you are a member.
 
 4. Select the `manifest.zip` package you downloaded previously and select **Save**. If you haven't yet downloaded the manifest package, you can do so from the **Team Settings** tab of the plugin configuration page in Moodle.
 

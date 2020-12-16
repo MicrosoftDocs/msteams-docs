@@ -165,7 +165,7 @@ tools:
       url: https://github.com/OfficeDev/generator-teams 
     # Card
     - title: Moodle Instructions for Microsoft Teams
-      imageSrc: ./assets/images/MoodleInstructions/moodle-and-teams
+      imageSrc: ./assets/images/MoodleInstructions/moodle-and-teams.png
       url: /microsoftteams/platform/moodleInstructions
             
 # additionalContent (optional)
