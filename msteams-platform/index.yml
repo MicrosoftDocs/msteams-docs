@@ -162,7 +162,7 @@ tools:
     # Card
     - title: Yeoman Generator for Microsoft Teams
       imageSrc: ./assets/icons/Yeoman.png
-      url: https://github.com/OfficeDev/generator-teams         
+      url: https://github.com/OfficeDev/generator-teams 
 # additionalContent (optional)
 
 
