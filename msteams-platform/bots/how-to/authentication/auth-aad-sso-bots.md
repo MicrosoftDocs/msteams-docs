@@ -191,7 +191,7 @@ Start with the [teams auth sample](https://github.com/microsoft/BotBuilder-Sampl
 
 #### Additional code samples
 
-* [C# sample using the Bot Framework SDK](../../BotBuilder-Samples/experimental/teams-sso/csharp_dotnetcore).
+* [C# sample using the Bot Framework SDK](../BotBuilder-Samples/experimental/teams-sso/csharp_dotnetcore).
 
 * [C# sample using the Bot Framework SDK to deduplicate the token request](https://microsoft.sharepoint.com/:u:/t/ExtensibilityandFundamentals/Ea36rUGiN1BGt1RiLOb-mY8BGMF8NwPtronYGym0sCGOTw?e=4bB682).
 
