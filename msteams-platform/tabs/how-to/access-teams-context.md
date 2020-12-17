@@ -73,7 +73,7 @@ The context variable will look like the following example.
     "teamName": "The name of the current team",
     "channelId": "The channel ID in the format 19:[id]@thread.skype",
     "channelName": "The name of the current channel",
-    "chatId": "The chat ID in the in the format 19:[id]@thread.skype",
+    "chatId": "The chat ID in the format 19:[id]@thread.skype",
     "locale": "The current locale of the user formatted as languageId-countryId (for example, en-us)",
     "entityId": "The developer-defined unique ID for the entity this content points to",
     "subEntityId": "The developer-defined unique ID for the sub-entity this content points to",
@@ -84,9 +84,26 @@ The context variable will look like the following example.
     "groupId": "Guid identifying the current O365 Group ID",
     "theme": "The current UI theme: default | dark | contrast",
     "isFullScreen": "Indicates whether the tab is in full-screen mode",
-    "userLicenseType": "Indicates the user licence type in the given SKU (for example, student or teacher)",
-    "tenantSKU": "Indicates the SKU category of the tenant (for example, EDU)",
-    "channelType": "microsoftTeams.ChannelType.Private | microsoftTeams.ChannelType.Regular"
+    "teamType": "The type of the team",
+    "teamSiteUrl": "The root SharePoint site associated with the team",
+    "teamSiteDomain": "The domain of the root SharePoint site associated with the team",
+    "teamSitePath": "The relative path to the SharePoint site associated with the team",
+    "channelRelativeUrl": "The relative path to the SharePoint folder associated with the channel",
+    "sessionId": "Unique ID for the current Teams session for use in correlating telemetry data",
+    "userTeamRole": "The user's role in the team",
+    "isTeamArchived": "Indicates whether team is archived",
+    "hostClientType": "The type of the host client. Possible values are android, ios, web, desktop, rigel",
+    "frameContext": "The context where tab url is loaded (content, task, setting, remove, sidePanel)",
+    "sharepoint": "SharePoint context available only when hosted in SharePoint",
+    "tenantSKU": "The type of license for the current users tenant",
+    "userLicenseType": "The license type for the current user",
+    "parentMessageId": "The ID of the parent message from which this task module was launched",
+    "ringId": "Current ring ID",
+    "appSessionId": "Unique ID for the current session for use in correlating telemetry data",
+    "isCallingAllowed": "Represents whether calling is allowed for the current logged in User",
+    "isPSTNCallingAllowed": "Represents whether PSTN calling is allowed for the current logged in User",
+    "meetingId": "Meeting Id used by tab when running in meeting context",
+    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel"
 }
 ```
 
