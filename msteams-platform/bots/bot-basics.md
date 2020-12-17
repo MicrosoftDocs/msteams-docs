@@ -33,11 +33,11 @@ To implement your logic for Teams specific activity handlers, you'll override th
 
 # [Python](#tab/python)
 
-As with any bot created using the Microsoft Bot Framework, if the bot receives a message activity, the turn handler sees that incoming activity and sends it to the `on_message_activity` activity handler. In Teams, this functionality remains the same. If the bot receives a conversation update activity, the turn handler sees that incoming activity and sends it to the `on_conversation_update_activity` *Teams* activity handler that will first check for any Teams specific events and pass it along to the Bot Framework's activity handler if none are found.
+As with any bot created using the Microsoft Bot Framework, if it receives a message activity, the turn handler sees that incoming activity and sends it to the `on_message_activity` activity handler. In Teams, this functionality remains the same. If the bot receives a conversation update activity, the turn handler sees that incoming activity and sends it to the `on_conversation_update_activity`. The *Teams* activity handler will first check for any Teams specific events and pass it along to the Bot Framework's activity handler, if none are found.
 
-In the Teams activity handler class, there are two primary Teams activity handlers, `on_conversation_update_activity` that routes all conversation update activities, and `on_invoke_activity` that routes all Teams invoke activities.
+In the Teams activity handler class, there are two primary Teams activity handlers, `on_conversation_update_activity` that routes all conversation update activities and `on_invoke_activity` that routes all Teams invoke activities.
 
-To implement your logic for Teams specific activity handlers, you'll override these methods in your bot as shown in the [Bot logic](#bot-logic) section below. For each of these handlers, there is no base implementation, so just add the logic that you want in your override.
+To implement your logic for Teams specific activity handlers, you will override these methods in your bot as shown in the [Bot logic](#bot-logic) section. For each of these handlers, there is no base implementation, so just add the logic that you want in your override.
 
 ---
 
@@ -93,7 +93,7 @@ Here is a list of all of the Teams activity handlers called from the `OnInvokeAc
 | task/fetch                      | `OnTeamsTaskModuleFetchAsync`        | Teams Task Module Fetch. |
 | task/submit                     | `OnTeamsTaskModuleSubmitAsync`       | Teams Task Module Submit. |
 
-The invoke activities listed above are for conversational bots in Teams. The Bot Framework SDK also supports invokes specific to messaging extensions. For more information see [What are messaging extensions](https://aka.ms/azure-bot-what-are-messaging-extensions)
+The invoke activities listed above are for conversational bots in Teams. The Bot Framework SDK also supports invokes specific to messaging extensions. For more information, see [What are messaging extensions](https://aka.ms/azure-bot-what-are-messaging-extensions).
 
 # [JavaScript](#tab/javascript)
 
@@ -143,15 +143,15 @@ Here is a list of all of the Teams activity handlers called from the `onInvokeAc
 | task/fetch                      | `handleTeamsTaskModuleFetch`        | Teams Task Module Fetch. |
 | task/submit                     | `handleTeamsTaskModuleSubmit`       | Teams Task Module Submit. |
 
-The invoke activities listed above are for conversational bots in Teams. The Bot Framework SDK also supports invocations specific to messaging extensions. For more information see [What are messaging extensions](https://aka.ms/azure-bot-what-are-messaging-extensions)
+The invoke activities listed above are for conversational bots in Teams. The Bot Framework SDK also supports invocations specific to messaging extensions. For more information, see [What are messaging extensions](https://aka.ms/azure-bot-what-are-messaging-extensions).
 
 # [Python](#tab/python)
 
 #### Core Bot Framework handlers
 
-All of the activity handlers described below will continue to work as they do with a non-Teams bot, with the exception of handling members *added* and members *removed* activities, these will be different in the context of a team, where the new member is added to the team as opposed to a message thread.
+All of the activity handlers described in this section will continue to work as they do with a non-Teams bot, with the exception of handling members *added* and members *removed* activities. Activity handlers will be different in the context of a team, where the new member is added to the team as opposed to a message thread.
 
-The handlers defined in `ActivityHandler` are outlined below.
+Here is a list of the handlers defined in `ActivityHandler`:
 
 | Event | Handler | Description |
 | :-- | :-- | :-- |
@@ -167,7 +167,7 @@ The handlers defined in `ActivityHandler` are outlined below.
 
 #### Teams-specific handlers
 
-The `TeamsActivityHandler` extends the list of handlers above to include the following:
+The `TeamsActivityHandler` extends the list of handlers from the [Core Bot Framework handlers](#core-bot-framework-handlers) section to include the following:
 
 | Event | Handler | Description |
 | :-- | :-- | :-- |
@@ -178,7 +178,7 @@ The `TeamsActivityHandler` extends the list of handlers above to include the fol
 | MembersAdded | `on_teams_members_added` | Calls the `OnMembersAddedAsync` method in `ActivityHandler`. Override this to handle members joining a team. For more information see [Team member added](https://aka.ms/azure-bot-subscribe-to-conversation-events#Team-Member-Added) in [Conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
 | MembersRemoved | `on_teams_members_removed` | Calls the `OnMembersRemovedAsync` method in `ActivityHandler`. Override this to handle members leaving a team. For more information see [Team member removed](https://aka.ms/azure-bot-subscribe-to-conversation-events#Team-Member-Removed) in [Conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
 
-#### Teams invoke  activities
+#### Teams invoke activities
 
 Here is a list of all of the Teams activity handlers called from the `OnInvokeActivityAsync` _Teams_ activity handler:
 
@@ -193,6 +193,6 @@ Here is a list of all of the Teams activity handlers called from the `OnInvokeAc
 | task/fetch                      | `on_teams_task_module_fetch`        | Teams Task Module Fetch. |
 | task/submit                     | `on_teams_task_module_submit`       | Teams Task Module Submit. |
 
-The invoke activities listed above are for conversational bots in Teams. The Bot Framework SDK also supports invokes specific to messaging extensions. For more information see [What are messaging extensions](https://aka.ms/azure-bot-what-are-messaging-extensions).
+The invoke activities listed in the [Teams invoke activities](#teams-invoke-activities) section are for conversational bots in Teams. The Bot Framework SDK also supports invoke activities specific to messaging extensions. For more information, see [What are messaging extensions](https://aka.ms/azure-bot-what-are-messaging-extensions).
 
 ---
