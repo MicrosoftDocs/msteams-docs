@@ -25,7 +25,7 @@ The details page presents the first impression of your app to users. Each elemen
 >
 >* Use these resources for guidance:
 
-* [App name guide](https://docs.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist#app-name)
+* [App name guide](#app-name)
 * [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)
 
 **Do's:**
@@ -149,9 +149,19 @@ Here's a view in [App Studio](https://aka.ms/InstallTeamsAppStudio):
 <br>`1.third`<br>
 >**[Unordered List](https://www.markdownguide.org/basic-syntax/#unordered-lists)**<br>
 ` - short` <br>`- bulleted` <br>`- list`<br>
->**Newline**. `Place two empty spaces or a backslash \`  \
-`at the end of a line.`<br>
- >**Escape.** Use an inline backslash to escape special characters.. `\*asterisk`.
+>**Newline**. `Place <br> at the end of a line.` <br> 
+ >**Escape.** Use an inline backslash to escape special characters. `\*asterisk`.
+
+**Example in Markdown format**
+
+|Markdown format for |Markdown format |Displayed text|
+|:---------|:---------------|:-------------|
+|Link  |` [App name guide](#app-name)`| [App name guide](#app-name) |
+|Image |` ![App long description store view](~/assets/images/store-detail-page/LongDescription-02.png)`| ![App long description store view](~/assets/images/store-detail-page/LongDescription-02.png)|
+|Bold |` **HR Tools**` | **HR Tools**  |
+|Italics |`*HR Tools*` |*HR Tools*|
+|Newline |` HR Tools provide wide range of solutions that help your organization to manage day-to-day HR activities effectively. <br> No more flipping through paper records or juggling among 5 different apps.` |HR Tools provide wide range of solutions that help your organization to manage day-to-day HR activities effectively. <br>  No more flipping through paper records or juggling among 5 different apps.|
+|Escape|`\*Payroll tools that help you manage your payroll and tax documents.` |\*Payroll tools that help you manage your payroll and tax documents. 
 
 **Don'ts:**
 

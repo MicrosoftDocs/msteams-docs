@@ -36,7 +36,7 @@ Some apps are simple (send notifications), while others are complex (manage pati
 
 ### Messaging extensions
 
-**Make it easier to multitask**: With [messaging extensions](messaging-extensions/what-are-messaging-extensions.md), you can quickly share external information in a conversation. You also can act on a message, such as creating a help ticket based on the content of a channel post.
+**Make it easier to multitask**: With [messaging extensions](messaging-extensions/what-are-messaging-extensions.md), you can quickly insert external content in a conversation. You also can act on a message, such as creating a help ticket based on the content of a channel post.
 
 :::image type="content" source="assets\images\overview-messaging.png" alt-text="Conceptual representation of what messaging extensions look like in the Teams client." border="false":::
 
@@ -130,9 +130,6 @@ Jump right in with our first app tutorials or find out how to integrate and impo
 
    :::column-end:::
 :::row-end:::
-
-:::row:::
-   :::column span="2":::
 
 ## Resources
 

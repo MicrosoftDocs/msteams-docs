@@ -289,9 +289,9 @@ The `teamMemberAdded` event is sent to your bot the first time it is added to a 
 # [C#/.NET](#tab/dotnet)
 
 ```csharp
-protected override async Task OnTeamsMembersAddedAsync(IList<ChannelAccount> membersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded , TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 {
-    foreach (TeamsChannelAccount member in membersAdded)
+    foreach (TeamsChannelAccount member in teamsMembersAdded)
     {
         if (member.Id == turnContext.Activity.Recipient.Id)
         {
@@ -426,7 +426,7 @@ async def on_teams_members_added(
 
 ### Team members removed
 
-The `teamMemberRemoved` event is sent to your bot if it is removed from a team and every time any user is removed from a team that your bot is a member of. You can determine if the new member removed was the bot itself or a user by looking at the `Activity` object of the `turnContext`.  If the `Id` field of the `MembersRemoved` object is the same as the `Id` field of the `Recipient` object, then the member removed is the bot, otherwise it is a user.  The bot's `Id` will generally be: `28:<MicrosoftAppId>`
+The `teamMemberRemoved` event is sent to your bot if it is removed from a team and every time any user is removed from a team that your bot is a member of. You can determine if the new member removed was the bot itself or a user by looking at the `Activity` object of the `turnContext`.  If the `Id` field of the `MembersRemoved` object is the same as the `Id` field of the `Recipient` object, then the member removed is the bot, otherwise, it is a user.  The bot's `Id` will generally be: `28:<MicrosoftAppId>`
 
 [!Note] When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
 

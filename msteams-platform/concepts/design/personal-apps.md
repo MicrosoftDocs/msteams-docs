@@ -7,7 +7,7 @@ ms.author: lajanuar
 --- 
 # Designing your personal app for Microsoft Teams
 
-A personal app can be a bot, private workspace, or both. Sometimes it functions like a place to create or view content, other times it offers the user a bird’s eye view of everything that’s theirs when the app has been configured as a tab in multiple channels.
+A personal app can be a bot, private workspace, or both. Sometimes it functions like a place to create or view content, other times it offers the user a bird’s eye view of everything that's theirs when the app has been configured as a tab in multiple channels.
 
 To guide your app design, the following information describes and illustrates how people can add, use, and manage personal apps in Teams.
 
