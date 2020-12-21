@@ -380,6 +380,8 @@
           href: graph-api/import-messages/import-external-messages-to-teams.md
 - name: Resources
   items:
+    - name: Moodle instructions for Microsoft Teams
+      href: resources/moodleInstructions.md
     - name: Bots - v3 SDK
       href: resources/bot-v3/bots-overview.md
       items:
