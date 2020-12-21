@@ -203,7 +203,7 @@ Now that you have your bot deployed to Azure and configured to talk to your Mood
 
 Before you can install the app you'll need to make sure external apps and uploading of apps is enabled. To do so, you can follow the steps in the Teams [Prepare your Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md) documentation. Once you've ensured that external apps are enabled, you can follow the steps below to deploy your app:
 
-1. Open **Microsoft Teams**.
+1. Open **Microsoft Teams**. 
 
 1. Select the **App** icon on the lower-left area of the navigation bar.
 
