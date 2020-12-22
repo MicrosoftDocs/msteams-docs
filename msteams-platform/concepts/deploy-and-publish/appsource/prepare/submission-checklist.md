@@ -7,29 +7,27 @@ keywords: teams publish store office publishing checklist submission Teams apps 
 
 To be listed on AppSource, your app must go through an approval process. This is a free service provided by the Microsoft Teams group that verifies that your app works as described, contains all appropriate metadata, and provides content that would be valuable to an end user. To help you achieve rapid approval, ensure your app meets the following requirements and guidelines:
 
-* **Distribution method:** Make sure your app is meant for publication on a store platform. There are [other options](../../overview.md) to distribute your app without publishing to AppSource.
-* **Validation policies:** Your app must pass all current [AppSource validation policies](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams) before submission. Please note that these policies are subject to change. 
-* **Self test your app with the [Manifest validation tool](#teams-app-validation-tool) .
-* **App detail page:** Your app must align with the  [App detail page checklist](detail-page-checklist.md).
-* **Tips and frequently failed cases:** Pay extra attention to the listed [Tips and frequently failed cases](frequently-failed-cases.md)  to improve your app submission and approval time.
-* **App manifest:** Check your app manifest against the [App manifest checklist](app-manifest-checklist.md).
-* **Testing and debugging:** Make certain that you have fully [tested and debugged your app](../../../build-and-test/debug.md).
-* **Testing notes:** Include your [test notes for validation](#test-notes-for-validation)
-* **Privacy policies:** Ensure your [privacy policy, terms of use and support URLs](#privacy-policy-terms-of-use-and-support-urls) follow our guidelines.
+* **Distribution method**: Make sure your app is meant for publication on a store platform. There are [other options](../../overview.md) to distribute your app without publishing to AppSource.
+* **Validation policies**: Your app must pass all current [AppSource validation policies](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams) before submission. Please note that these policies are subject to change.
+* **Self test** your app with the [Microsoft Teams App Validator](#teams-app-validation-tool).
+* **App detail page**: Your app must align with the  [App detail page checklist](detail-page-checklist.md).
+* **Tips and frequently failed cases**: Pay extra attention to the listed [Tips and frequently failed cases](frequently-failed-cases.md)  to improve your app submission and approval time.
+* **App manifest**: Check your app manifest against the [app manifest checklist](app-manifest-checklist.md).
+* **Testing and debugging**: Make certain that you have fully [tested and debugged your app](../../../build-and-test/debug.md).
+* **Testing notes**: Include your [test notes for validation](#test-notes-for-validation)
+* **Privacy policies**: Ensure your [privacy policy, terms of use and support URLs](#privacy-policy-terms-of-use-and-support-urls) follow our guidelines.
 
 Once you have completed all of the above requirements, submit your package to AppSource through [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource).
 
-## Teams App Validation Tool
+## Teams App Validator
 
-The app validation tool consists of an [app validator](#teams-app-validator) and a [preliminary checklist](#preliminary-checklist). The tool replicates the same test cases used by [AppSource](/office/dev/store/submit-to-appsource-via-partner-center) to evaluate your app submission. Therefore,  it's crucial to pass all the test cases prior to submitting your solution to AppSource for approval.The tool can be found in several areas within the Teams platform:
+The Microsoft Teams App Validator includes a [validation tool](#teams-app-validator) and [app submission checklist](#preliminary-checklist). The tool replicates the same test cases used by [AppSource](/office/dev/store/submit-to-appsource-via-partner-center) to evaluate your app submission, so it's crucial to pass all the test cases prior to submitting your solution to AppSource for approval. You can find the tool in several areas within the Teams platform:
 
-> [!div class="checklist"]
->
-> * [**App Validator homepage**](https://dev.teams.microsoft.com/appvalidation.html)
-> * [**Teams Visual Studio Code toolkit**](/toolkit/visual-studio-code-overview.md)
-> * [**App Studio**](/concepts/build-and-test/app-studio-overview.md)
+* [**App Validator homepage**](https://dev.teams.microsoft.com/appvalidation.html)
+* [**Teams Toolkit for Visual Studio Code**](/toolkit/visual-studio-code-overview.md)
+* [**App Studio**](/concepts/build-and-test/app-studio-overview.md)
 
-### Teams app validator
+### Validation tool
 
 The **Validate** page allows you to check your app package before submission to AppSource. Simply upload your app package and the validation tool will check your app against all manifest-related test cases. For each failed test, the description provides a documentation link to help you fix the error.
 
@@ -77,10 +75,10 @@ Please include the following:
 
 * You may choose to upload your test notes to SharePoint. If so, please provide a public link to the file.
 
-* **Test Accounts**. A test account is required if your app only allows licensed accounts or safelisting from the backend. Also, if there is a team/group chat scope allowed in your app,  two test accounts in the same tenant are required to validate the team collaboration scenario.
+* **Test Accounts**. A test account is required if your app only allows licensed accounts or safe-listing from the backend. Also, if there is a team/group chat scope allowed in your app,  two test accounts in the same tenant are required to validate the team collaboration scenario.
 
-* **Integration steps**. If pre-configuration by a tenant admin is required to use the app, include the steps and/or provide configured admin and non-admin accounts for validation. Note: you can sign up for an [Office 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) subscription. It's *free* for 90 days and will continually renew as long as you're using it for development activity.
+* **Integration steps**. If pre-configuration by a Teams tenant admin is required to use the app, include the steps and/or provide configured admin and non-admin accounts for validation. Note: you can sign up for an [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) subscription. It's *free* for 90 days and will continually renew as long as you're using it for development activity.
 
 * **Notes regarding the app features in Teams**: Detail all of the capabilities the app offers within Teams and steps for testing each feature.
 
-* **Video showing the app functionality (Optional)**: You can provide a video recording of the product for us to fully understand the functionality of the app.
+* **Video showing the app functionality (optional)**: You can provide a video recording of the product for us to fully understand the functionality of the app.

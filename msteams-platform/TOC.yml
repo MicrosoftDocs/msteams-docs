@@ -92,20 +92,20 @@
         href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json
       - name: Create a SaaS offer for your Teams app
         href: concepts/deploy-and-publish/add-saas-offer.md  
-      - name: Publish your app on AppSource
+      - name: Publish your app to AppSource
         items:
         - name: Understanding AppSource submission 
           href: concepts/deploy-and-publish/appsource/publish.md
         - name: Prepare your app
-          items: 
+          items:
+          - name: Am I ready to publish?
+            href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
           - name: Pre-submission checklist
             href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
           - name: App detail page checklist
             href: concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md
           - name: App manifest checklist
             href: concepts/deploy-and-publish/appsource/prepare/app-manifest-checklist.md
-          - name: Frequently failed cases
-            href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
         - name: After publishing your app
           items:
           - name: What to do after publishing your app
