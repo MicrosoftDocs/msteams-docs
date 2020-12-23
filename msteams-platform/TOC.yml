@@ -20,7 +20,7 @@
     href: build-your-first-app/build-bot.md
   - name: Build a messaging extension
     href: build-your-first-app/build-messaging-extension.md
-- name: Quickstarts and samples
+- name: Tutorials and code samples
   items:
   - name: Overview
     href: tutorials/code-samples.md   
@@ -30,42 +30,6 @@
     href: tutorials/get-started-nodejs-app-studio.md
   - name: Create an app with the Yeoman Generator
     href: tutorials/get-started-yeoman.md
-  - name: Tab quickstarts
-    items:
-    - name: Personal tab with Node.js/React
-      href: tabs/quickstarts/create-personal-tab-node-yeoman.md
-    - name: Personal tab with C#/ASP.NET Core
-      href: tabs/quickstarts/create-personal-tab-dotnet-core.md
-    - name: Personal tab with C#/ASP.NET MVC
-      href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-    - name: Channel tab with Node.js/React
-      href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
-    - name: Channel tab with C#/ASP.NET Core
-      href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
-    - name: Channel tab with C#/ASP.NET MVC
-      href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
-  - name: Bot quickstarts
-    items:
-    - name: Chatbot with C# (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot
-    - name: Chatbot with JavaScript (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot
-    - name: Chatbot with Python (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot
-  - name: Messaging extension quickstarts
-    items:
-    - name: Action commands with C#/.NET (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action
-    - name: Action commands with TypeScript/Node.js (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action
-    - name: Search commands with C#/.NET (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search
-    - name: Search commands with TypeScript/Node.js (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search
-  - name: Production-ready app templates
-    href: samples/app-templates.md
-  - name: Production-ready Shifts Connectors
-    href: samples/shifts-wfm-connectors.md 
 - name: App fundamentals
   items:
   - name: App capabilities
@@ -76,6 +40,16 @@
     href: concepts/design/understand-use-cases.md
   - name: Map use cases to Teams features
     href: concepts/design/map-use-cases.md
+  - name: Common tools
+    items:
+    - name: Teams Toolkit for Visual Studio Code
+      href: toolkit/visual-studio-code-overview.md
+    - name: Teams Toolkit for Visual Studio
+      href: toolkit/visual-studio-overview.md
+    - name: App Studio
+      href: concepts/build-and-test/app-studio-overview.md
+    - name: Yeoman Generator for Teams (GitHub)
+      href: https://github.com/pnp/generator-teams
 - name: Integrate with Teams
   items:
   - name: Integrate web apps
@@ -88,6 +62,10 @@
       href: bots/how-to/add-power-virtual-agents-bot-to-teams.md  
     - name: Virtual Assistant for Teams
       href: samples/virtual-assistant.md 
+  - name: Production-ready app templates
+    href: samples/app-templates.md
+  - name: Production-ready Shifts Connectors
+    href: samples/shifts-wfm-connectors.md 
   - name: Create a Share-to-Teams button
     href: concepts/build-and-test/share-to-teams.md
   - name: Add a Teams tab to SharePoint
@@ -136,6 +114,20 @@
   items:
   - name: Overview
     href: tabs/what-are-tabs.md
+  - name: Quickstarts
+    items:
+    - name: Personal tab with Node.js/React
+      href: tabs/quickstarts/create-personal-tab-node-yeoman.md
+    - name: Personal tab with C#/ASP.NET Core
+      href: tabs/quickstarts/create-personal-tab-dotnet-core.md
+    - name: Personal tab with C#/ASP.NET MVC
+      href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
+    - name: Channel tab with Node.js/React
+      href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
+    - name: Channel tab with C#/ASP.NET Core
+      href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
+    - name: Channel tab with C#/ASP.NET MVC
+      href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
   - name: Create a content page
     href: tabs/how-to/create-tab-pages/content-page.md
   - name: Create a configuration page
@@ -154,6 +146,14 @@
   items:
   - name: Overview
     href: bots/what-are-bots.md
+  - name: Quickstarts
+    items:
+    - name: Chatbot with C# (GitHub)
+      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot
+    - name: Chatbot with JavaScript (GitHub)
+      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot
+    - name: Chatbot with Python (GitHub)
+      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot
   - name: How bots work
     href: bots/bot-basics.md
   - name: Conversation basics
@@ -196,6 +196,16 @@
   items:
   - name: Overview
     href: messaging-extensions/what-are-messaging-extensions.md
+  - name: Quickstarts
+    items:
+    - name: Action commands with C#/.NET (GitHub)
+      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action
+    - name: Action commands with TypeScript/Node.js (GitHub)
+      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action
+    - name: Search commands with C#/.NET (GitHub)
+      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search
+    - name: Search commands with TypeScript/Node.js (GitHub)
+      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search
   - name: Define action commands
     href: messaging-extensions/how-to/action-commands/define-action-command.md
   - name: Create task module for action commands
@@ -288,57 +298,49 @@
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
   - name: Import third-party messages
     href: graph-api/import-messages/import-external-messages-to-teams.md
-- name: Test and publish your app
+- name: Test your app
   items:
-  - name: Test your app
+  - name: Prepare your Microsoft 365 tenant
+    href: concepts/build-and-test/prepare-your-o365-tenant.md
+  - name: Test and debug your app
+    href: concepts/build-and-test/debug.md
+  - name: Add test data to your environment
+    href: concepts/build-and-test/test-data.md
+  - name: Debug your bot locally with an IDE
+    href: bots/how-to/debug/locally-with-an-ide.md
+  - name: Debug your bot with inspection middleware
+    href: /azure/bot-service/bot-service-debug-inspection-middleware
+  - name: Debug your calling and meeting bot locally
+    href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
+- name: Publish your app
+  items:    
+  - name: Choose how to distribute your app
+    href: concepts/deploy-and-publish/overview.md
+  - name: Create your app package
+    href: concepts/build-and-test/apps-package.md
+  - name: Upload your app for a team or user
+    href: concepts/deploy-and-publish/apps-upload.md
+  - name: Publish to your organization
+    href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json
+  - name: Publish to the Teams store (AppSource)
     items:
-    - name: Prepare your Microsoft 365 tenant
-      href: concepts/build-and-test/prepare-your-o365-tenant.md
-    - name: Test and debug your app
-      href: concepts/build-and-test/debug.md
-    - name: Add test data to your environment
-      href: concepts/build-and-test/test-data.md
-    - name: Debug your bot locally with an IDE
-      href: bots/how-to/debug/locally-with-an-ide.md
-    - name: Debug your bot with inspection middleware
-      href: /azure/bot-service/bot-service-debug-inspection-middleware
-    - name: Debug your calling and meeting bot locally
-      href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
-  - name: Publish your app
-    items:    
-    - name: Choose how to distribute your app
-      href: concepts/deploy-and-publish/overview.md
-    - name: Create your app package
-      href: concepts/build-and-test/apps-package.md
-    - name: Upload your app for a team or user
-      href: concepts/deploy-and-publish/apps-upload.md
-    - name: Publish to your organization
-      href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json
-    - name: Publish to the Teams store (AppSource)
-      items:
-      - name: Understanding AppSource submission 
-        href: concepts/deploy-and-publish/appsource/publish.md
-      - name: Pre-submission checklist
-        href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
-      - name: App detail page checklist
-        href: concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md
-      - name: App manifest checklist
-        href: concepts/deploy-and-publish/appsource/prepare/app-manifest-checklist.md
-      - name: Frequently failed cases
-        href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
-      - name: What to do after publishing your app
-        href: concepts/deploy-and-publish/appsource/post-publish/overview.md
-      - name: Application Certification program
-        href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
-- name: Tools and SDKs
+    - name: Understanding AppSource submission 
+      href: concepts/deploy-and-publish/appsource/publish.md
+    - name: Pre-submission checklist
+      href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
+    - name: App detail page checklist
+      href: concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md
+    - name: App manifest checklist
+      href: concepts/deploy-and-publish/appsource/prepare/app-manifest-checklist.md
+    - name: Frequently failed cases
+      href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
+    - name: What to do after publishing your app
+      href: concepts/deploy-and-publish/appsource/post-publish/overview.md
+    - name: Application Certification program
+      href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
+- name: SDK reference
   items:
-  - name: Teams Toolkit for Visual Studio Code
-    href: toolkit/visual-studio-code-overview.md
-  - name: Teams Toolkit for Visual Studio
-    href: toolkit/visual-studio-overview.md
-  - name: App Studio
-    href: concepts/build-and-test/app-studio-overview.md
-  - name: Teams JavaScript SDK for tabs
+  - name: Teams JavaScript SDK
     href: https://docs.microsoft.com/en-us/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest
   - name: Node.js Bot Framework for bots and messaging extensions (GitHub)
     href: https://github.com/Microsoft/botbuilder-js
@@ -346,8 +348,6 @@
     href: https://github.com/Microsoft/botbuilder-dotnet
   - name: Microsoft Graph SDKs
     href: https://docs.microsoft.com/en-us/graph/sdks/sdks-overview
-  - name: Yeoman Generator for Teams (GitHub)
-    href: https://github.com/pnp/generator-teams
   - name: Legacy SDKs
     items:
     - name: Bots SDK (v3)
