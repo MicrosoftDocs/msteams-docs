@@ -94,7 +94,7 @@ The request will return a `teamsApp`  object. The returned object's `id`  is the
 
 **2.**  If your app has already been uploaded/sideloaded for a user in the personal scope, you can retrieve the `teamsAppId` as follows:
 
-**Microsoft Graph page reference:** [List apps installed for user](/graph/api/user-list-teamsappinstallation?view=graph-rest-beta&tabs=http)
+**Microsoft Graph page reference:** [List apps installed for user](/graph/api/userteamwork-list-installedapps?view=graph-rest-beta&tabs=http)
 
 **HTTP GET** request:
 
@@ -117,7 +117,7 @@ GET https://graph.microsoft.com/beta/teams/{team-id}/installedApps?$expand=teams
 
 ### ✔ Determine whether your bot is currently installed for a message recipient
 
-**Microsoft Graph page reference:** [List apps installed for user](/graph/api/user-list-teamsappinstallation?view=graph-rest-beta&tabs=http)
+**Microsoft Graph page reference:** [List apps installed for user](/graph/api/userteamwork-list-installedapps?view=graph-rest-beta&tabs=http)
 
 **HTTP GET** request:
 
@@ -129,7 +129,7 @@ This request will return an empty array if the app is not installed, or an array
 
 ### ✔ Install your app
 
-**Microsoft Graph reference:** [Install app for user](/graph/api/user-add-teamsappinstallation?view=graph-rest-beta&tabs=http)
+**Microsoft Graph page reference:** [Install app for user](/graph/api/userteamwork-post-installedapps?view=graph-rest-beta&tabs=http)
 
 **HTTP POST** request:
 
@@ -148,7 +148,7 @@ When your app is installed for the user, the bot will receive a `conversationUpd
 
 The `chatId` can also be retrieved as follows:
 
-**Microsoft Graph reference:** [Get chat](/graph/api/chat-get?view=graph-rest-beta&tabs=http)
+**Microsoft Graph page reference:** [Get chat](/graph/api/chat-get?view=graph-rest-beta&tabs=http)
 
 **1.** You will need your app's `{teamsAppInstallationId}`. If you don't have it, use the following:
 
