@@ -36,9 +36,9 @@
     href: concepts/capabilities-overview.md
   - name: App entry points
     href: concepts/extensibility-points.md
-  - name: Understand your use cases
+  - name: Understanding your use cases
     href: concepts/design/understand-use-cases.md
-  - name: Map use cases to Teams features
+  - name: Mapping use cases to Teams features
     href: concepts/design/map-use-cases.md
   - name: Common tools
     items:
@@ -52,15 +52,15 @@
       href: https://github.com/pnp/generator-teams
 - name: Integrate with Teams
   items:
-  - name: Integrate web apps
+  - name: Web apps
     href: samples/integrating-web-apps.md
-  - name: Integrate Power Platform apps
+  - name: Power Platform apps
     items:
     - name: Overview
       href: samples/teams-low-code-solutions.md
-    - name: Power Virtual Agents chatbot
+    - name: Add a Power Virtual Agents chatbot
       href: bots/how-to/add-power-virtual-agents-bot-to-teams.md  
-    - name: Virtual Assistant for Teams
+    - name: Create a Virtual Assistant
       href: samples/virtual-assistant.md 
   - name: Production-ready app templates
     href: samples/app-templates.md
@@ -74,8 +74,6 @@
     href: concepts/build-and-test/deep-links.md
 - name: Design your app
   items:
-  - name: Get started
-    href: concepts/design/designing-overview.md
   - name: Tabs
     items:
     - name: Tabs on desktop and web
@@ -142,6 +140,38 @@
     href: tabs/how-to/native-device-permissions.md
   - name: Developer tools for tabs
     href: tabs/how-to/developer-tools.md
+- name: Build messaging extensions
+  items:
+  - name: Overview
+    href: messaging-extensions/what-are-messaging-extensions.md
+  - name: Quickstarts
+    items:
+    - name: Action commands with C#/.NET (GitHub)
+      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action
+    - name: Action commands with TypeScript/Node.js (GitHub)
+      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action
+    - name: Search commands with C#/.NET (GitHub)
+      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search
+    - name: Search commands with TypeScript/Node.js (GitHub)
+      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search
+  - name: Action-based messaging extensions
+    items:
+    - name: Define action commands
+      href: messaging-extensions/how-to/action-commands/define-action-command.md
+    - name: Create a task module
+      href: messaging-extensions/how-to/action-commands/create-task-module.md
+    - name: Respond to action commands
+      href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
+  - name: Search-based messaging extensions
+    items:
+    - name: Add a configuration page
+      href: messaging-extensions/how-to/add-configuration-page.md
+    - name: Define search commands
+      href: messaging-extensions/how-to/search-commands/define-search-command.md
+    - name: Receive and respond to search queries
+      href: messaging-extensions/how-to/search-commands/respond-to-search.md
+  - name: Link unfurling
+    href: messaging-extensions/how-to/link-unfurling.md
 - name: Build bots
   items:
   - name: Overview
@@ -156,25 +186,27 @@
       href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot
   - name: How bots work
     href: bots/bot-basics.md
-  - name: Conversation basics
-    href: bots/how-to/conversations/conversation-basics.md
-  - name: Subscribe to conversation events
-    href: bots/how-to/conversations/subscribe-to-conversation-events.md
-  - name: Channel and group conversations
-    href: bots/how-to/conversations/channel-and-group-conversations.md
-  - name: Send proactive messages
-    href: bots/how-to/conversations/send-proactive-messages.md
-  - name: Send and receive files
-    href: bots/how-to/conversations/send-and-receive-files.md
-  - name: Format your bot message
-    href: bots/how-to/format-your-bot-messages.md
-  - name: Update and delete bot messages
-    href: bots/how-to/update-and-delete-bot-messages.md     
-  - name: Get Teams context for your bot
+  - name: Bot conversations
+    items:
+    - name: Conversation basics
+      href: bots/how-to/conversations/conversation-basics.md
+    - name: Create a commands menu for your bot
+      href: bots/how-to/create-a-bot-commands-menu.md
+    - name: Channel and group conversations
+      href: bots/how-to/conversations/channel-and-group-conversations.md
+    - name: Subscribe to conversation events
+      href: bots/how-to/conversations/subscribe-to-conversation-events.md
+    - name: Send proactive messages
+      href: bots/how-to/conversations/send-proactive-messages.md
+    - name: Formatting your bot messages
+      href: bots/how-to/format-your-bot-messages.md
+    - name: Send and receive files
+      href: bots/how-to/conversations/send-and-receive-files.md
+    - name: Update and delete bot messages
+      href: bots/how-to/update-and-delete-bot-messages.md     
+  - name: Get context for your bot
     href: bots/how-to/get-teams-context.md
-  - name: Create a commands menu for your bot
-    href: bots/how-to/create-a-bot-commands-menu.md     
-  - name: Handle bot rate limiting
+  - name: Handling bot rate limiting
     href: bots/how-to/rate-limit.md
   - name: Calling and meeting bots
     items:
@@ -192,34 +224,12 @@
       href: resources/media-formats.md
   - name: Bot API changes for team and chat members
     href: resources/team-chat-member-api-changes.md 
-- name: Build messaging extensions
+- name: Build apps for Teams meetings
   items:
   - name: Overview
-    href: messaging-extensions/what-are-messaging-extensions.md
-  - name: Quickstarts
-    items:
-    - name: Action commands with C#/.NET (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action
-    - name: Action commands with TypeScript/Node.js (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action
-    - name: Search commands with C#/.NET (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search
-    - name: Search commands with TypeScript/Node.js (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search
-  - name: Define action commands
-    href: messaging-extensions/how-to/action-commands/define-action-command.md
-  - name: Create task module for action commands
-    href: messaging-extensions/how-to/action-commands/create-task-module.md
-  - name: Respond to action commands
-    href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
-  - name: Define search commands
-    href: messaging-extensions/how-to/search-commands/define-search-command.md
-  - name: Receive and respond to search queries
-    href: messaging-extensions/how-to/search-commands/respond-to-search.md
-  - name: Link unfurling
-    href: messaging-extensions/how-to/link-unfurling.md
-  - name: Add a configuration page
-    href: messaging-extensions/how-to/add-configuration-page.md
+    href: apps-in-teams-meetings/teams-apps-in-meetings.md
+  - name: Create apps for meetings
+    href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
 - name: Build webhooks and connectors
   items:
   - name: Overview
@@ -232,12 +242,6 @@
     href: webhooks-and-connectors/how-to/connectors-creating.md
   - name: Send messages to connectors and webhooks
     href: webhooks-and-connectors/how-to/connectors-using.md
-- name: Build apps for Teams meetings
-  items:
-  - name: Overview
-    href: apps-in-teams-meetings/teams-apps-in-meetings.md
-  - name: Create apps for meetings
-    href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
 - name: Build cards and task modules
   items:
   - name: Cards
