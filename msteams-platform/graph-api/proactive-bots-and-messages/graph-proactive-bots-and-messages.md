@@ -104,7 +104,7 @@ GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$exp
 
 **3.** If your app has already been uploaded/sideloaded for a channel in the team scope, you can retrieve the `teamsAppId` as follows:
 
-**Microsoft Graph page reference:** [List apps in team](/graph/api/teamsappinstallation-list?view=graph-rest-beta&tabs=http)
+**Microsoft Graph page reference:** [List apps in team](/graph/api/team-list-installedapps?view=graph-rest-beta&tabs=http)
 
 **HTTP GET** request:
 
