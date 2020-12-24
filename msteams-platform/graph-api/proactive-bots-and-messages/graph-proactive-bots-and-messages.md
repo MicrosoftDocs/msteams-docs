@@ -113,7 +113,7 @@ GET https://graph.microsoft.com/beta/teams/{team-id}/installedApps?$expand=teams
 ```
 
 >[!TIP]
-> You can filter on any of the fields of the [**teamsApp**](/graph/api/resources/teamsapp?view=graph-rest-1.0) object to narrow the list of results.
+> You can filter on any of the fields of the [**teamsApp**](/graph/api/resources/teamsapp?view=graph-rest-1.0&preserve-view=true) object to narrow the list of results.
 
 ### ✔ Determine whether your bot is currently installed for a message recipient
 
