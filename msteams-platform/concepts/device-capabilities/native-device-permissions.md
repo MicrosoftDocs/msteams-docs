@@ -15,7 +15,7 @@ You might want to enrich your tab with features that require access to native de
 > * Location
 > * Notifications
 
-[!Note] To integrate camera and image capabilities within your Microsoft Teams mobile app, refer [Camera and image capabilities in Teams.](/concepts/device-capabilities/mobile-camera-image-permissions.md&preserve-view=true)
+[!Note] To integrate camera and image capabilities within your Microsoft Teams mobile app, refer [Camera and image capabilities in Teams.](../concepts/device-capabilities/mobile-camera-image-permissions.md)
 
 > [!IMPORTANT]
 >
