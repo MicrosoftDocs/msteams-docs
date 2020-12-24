@@ -132,13 +132,13 @@
     href: tabs/how-to/create-tab-pages/configuration-page.md
   - name: Create a removal page
     href: tabs/how-to/create-tab-pages/removal-page.md
-  - name: Use the Teams client SDK
+  - name: Using the Teams JavaScript client SDK
     href: tabs/how-to/using-teams-client-sdk.md
-  - name: Get additional Teams context
+  - name: Getting additional context
     href: tabs/how-to/access-teams-context.md
   - name: Request device permissions
     href: tabs/how-to/native-device-permissions.md
-  - name: Developer tools for tabs
+  - name: Tab developer tools
     href: tabs/how-to/developer-tools.md
 - name: Build messaging extensions
   items:
@@ -154,7 +154,7 @@
       href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search
     - name: Search commands with TypeScript/Node.js (GitHub)
       href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search
-  - name: Action-based messaging extensions
+  - name: Create action commands
     items:
     - name: Define action commands
       href: messaging-extensions/how-to/action-commands/define-action-command.md
@@ -162,7 +162,7 @@
       href: messaging-extensions/how-to/action-commands/create-task-module.md
     - name: Respond to action commands
       href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
-  - name: Search-based messaging extensions
+  - name: Create search commands
     items:
     - name: Add a configuration page
       href: messaging-extensions/how-to/add-configuration-page.md
@@ -170,7 +170,7 @@
       href: messaging-extensions/how-to/search-commands/define-search-command.md
     - name: Receive and respond to search queries
       href: messaging-extensions/how-to/search-commands/respond-to-search.md
-  - name: Link unfurling
+  - name: Add link unfurling
     href: messaging-extensions/how-to/link-unfurling.md
 - name: Build bots
   items:
@@ -228,7 +228,7 @@
   items:
   - name: Overview
     href: apps-in-teams-meetings/teams-apps-in-meetings.md
-  - name: Create apps for meetings
+  - name: Build an app for meetings
     href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
 - name: Build webhooks and connectors
   items:
@@ -238,7 +238,7 @@
     href: webhooks-and-connectors/how-to/add-incoming-webhook.md
   - name: Create an outgoing webhook
     href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
-  - name: Create an O365 Connector
+  - name: Create an Office 365 Connector
     href: webhooks-and-connectors/how-to/connectors-creating.md
   - name: Send messages to connectors and webhooks
     href: webhooks-and-connectors/how-to/connectors-using.md
