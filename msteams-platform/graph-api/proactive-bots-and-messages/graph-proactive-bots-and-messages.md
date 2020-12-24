@@ -21,7 +21,7 @@ Proactive messages are initiated by bots to start conversations with a user. The
 |Ad-hoc proactive message| The bot interjects a message without interrupting the conversation flow.|
 |Dialog-based proactive message | The bot creates a new dialog thread, takes control of a conversation, delivers the proactive message, closes, and returns control to the previous dialog.|
 
-*See*, [Send proactive notifications to users SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp)
+*See*, [Send proactive notifications to users SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
 
 ## Proactive app installation in Teams
 
@@ -29,7 +29,7 @@ Before your bot can proactively message a user, it needs to be installed either 
 
 ## Permissions
 
-Microsoft Graph [teamsAppInstallation resource type](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0) permissions allow you to manage your app's installation lifecycle for all user (personal) or team (channel) scopes within the Microsoft Teams platform:
+Microsoft Graph [teamsAppInstallation resource type](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true) permissions allow you to manage your app's installation lifecycle for all user (personal) or team (channel) scopes within the Microsoft Teams platform:
 
 |Application permission | Description|
 |------------------|---------------------|
@@ -68,7 +68,7 @@ To get started, you will need a [bot for Teams](../../bots/how-to/create-a-bot-f
 
 The `teamsAppId` can be retrieved from your organization's app catalog:
 
-**Microsoft Graph page reference:** [teamsApp resource type](/graph/api/resources/teamsapp?view=graph-rest-1.0)
+**Microsoft Graph page reference:** [teamsApp resource type](/graph/api/resources/teamsapp?view=graph-rest-1.0&preserve-view=true)
 
 **HTTP GET** request:
 
@@ -94,7 +94,7 @@ The request will return a `teamsApp`  object. The returned object's `id`  is the
 
 **2.**  If your app has already been uploaded/sideloaded for a user in the personal scope, you can retrieve the `teamsAppId` as follows:
 
-**Microsoft Graph page reference:** [List apps installed for user](/graph/api/user-list-teamsappinstallation?view=graph-rest-beta&tabs=http)
+**Microsoft Graph page reference:** [List apps installed for user](/graph/api/userteamwork-list-installedapps?view=graph-rest-beta&tabs=http&preserve-view=true)
 
 **HTTP GET** request:
 
@@ -104,7 +104,7 @@ GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$exp
 
 **3.** If your app has already been uploaded/sideloaded for a channel in the team scope, you can retrieve the `teamsAppId` as follows:
 
-**Microsoft Graph page reference:** [List apps in team](/graph/api/teamsappinstallation-list?view=graph-rest-beta&tabs=http)
+**Microsoft Graph page reference:** [List apps in team](/graph/api/team-list-installedapps?view=graph-rest-beta&tabs=http&preserve-view=true)
 
 **HTTP GET** request:
 
@@ -113,11 +113,11 @@ GET https://graph.microsoft.com/beta/teams/{team-id}/installedApps?$expand=teams
 ```
 
 >[!TIP]
-> You can filter on any of the fields of the [**teamsApp**](/graph/api/resources/teamsapp?view=graph-rest-1.0) object to narrow the list of results.
+> You can filter on any of the fields of the [**teamsApp**](/graph/api/resources/teamsapp?view=graph-rest-1.0&preserve-view=true) object to narrow the list of results.
 
 ### ✔ Determine whether your bot is currently installed for a message recipient
 
-**Microsoft Graph page reference:** [List apps installed for user](/graph/api/user-list-teamsappinstallation?view=graph-rest-beta&tabs=http)
+**Microsoft Graph page reference:** [List apps installed for user](/graph/api/userteamwork-list-installedapps?view=graph-rest-beta&tabs=http&preserve-view=true)
 
 **HTTP GET** request:
 
@@ -125,11 +125,11 @@ GET https://graph.microsoft.com/beta/teams/{team-id}/installedApps?$expand=teams
 GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
 ```
 
-This request will return an empty array if the app is not installed, or an array with a single [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-beta) object if it has been installed.
+This request will return an empty array if the app is not installed, or an array with a single [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-beta&preserve-view=true) object if it has been installed.
 
 ### ✔ Install your app
 
-**Microsoft Graph reference:** [Install app for user](/graph/api/user-add-teamsappinstallation?view=graph-rest-beta&tabs=http)
+**Microsoft Graph page reference:** [Install app for user](/graph/api/userteamwork-post-installedapps?view=graph-rest-beta&tabs=http&preserve-view=true)
 
 **HTTP POST** request:
 
@@ -148,7 +148,7 @@ When your app is installed for the user, the bot will receive a `conversationUpd
 
 The `chatId` can also be retrieved as follows:
 
-**Microsoft Graph reference:** [Get chat](/graph/api/chat-get?view=graph-rest-beta&tabs=http)
+**Microsoft Graph page reference:** [Get chat](/graph/api/chat-get?view=graph-rest-beta&tabs=http&preserve-view=true)
 
 **1.** You will need your app's `{teamsAppInstallationId}`. If you don't have it, use the following:
 
@@ -180,7 +180,7 @@ GET https://graph.microsoft.com/beta/users/{user-id}/chats?$filter=installedApps
 
 ### ✔ Send proactive messages
 
-Once your bot has been added for a user or team and has acquired the necessary user  information, it can begin to [send proactive messages](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp).
+Once your bot has been added for a user or team and has acquired the necessary user  information, it can begin to [send proactive messages](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true).
 
 # [C# / .NET](#tab/csharp)
 
