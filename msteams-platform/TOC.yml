@@ -94,20 +94,6 @@
       href: apps-in-teams-meetings/design/designing-in-meeting-tab.md
   - name: Cards and task modules
     href: task-modules-and-cards/cards/design-effective-cards.md
-  - name: Components
-    items:
-    - name: Buttons, links, and controls
-      href: concepts/design/components/buttons.md
-    - name: Fields and flyouts
-      href: concepts/design/components/fields.md
-    - name: Dialogs
-      href: concepts/design/components/dialogs.md
-  - name: Theming
-    items:
-    - name: Colors
-      href: concepts/design/components/color.md
-    - name: Typography
-      href: concepts/design/components/typography.md
 - name: Build tabs
   items:
   - name: Overview
