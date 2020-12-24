@@ -244,7 +244,7 @@
     href: webhooks-and-connectors/how-to/connectors-using.md
 - name: Build cards and task modules
   items:
-  - name: Cards
+  - name: Build cards
     items:
     - name: Overview
       href: task-modules-and-cards/what-are-cards.md
@@ -254,7 +254,7 @@
       href: task-modules-and-cards/cards/cards-actions.md
     - name: Cards reference
       href: task-modules-and-cards/cards/cards-reference.md
-  - name: Task modules
+  - name: Build task modules
     items:
     - name: Overview
       href: task-modules-and-cards/what-are-task-modules.md
@@ -306,7 +306,7 @@
   items:
   - name: Prepare your Microsoft 365 tenant
     href: concepts/build-and-test/prepare-your-o365-tenant.md
-  - name: Test and debug your app
+  - name: Choosing a test setup
     href: concepts/build-and-test/debug.md
   - name: Add test data to your environment
     href: concepts/build-and-test/test-data.md
