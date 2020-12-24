@@ -39,7 +39,7 @@
     href: tutorials/get-started-nodejs-app-studio.md
   - name: Create an app with the Yeoman generator
     href: tutorials/get-started-yeoman.md
-  - name: Tutorials and all code samples
+  - name: Tutorials and code samples
     href: tutorials/code-samples.md   
 - name: Integrations and templates
   items:
