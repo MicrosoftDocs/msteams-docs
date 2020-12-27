@@ -523,6 +523,10 @@
     {
      "source_path": "msteams-platform/apps-in-teams-meetings/design/designing-in-meeting-tab.md",
      "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/design/designing-apps-in-meetings"
+    },
+    {
+     "source_path": "msteams-platform/moodleinstructions.md",
+     "redirect_url": "/microsoftteams/platform/resources/moodleinstructions"
     }
   ]
 }
