@@ -69,7 +69,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 ```
 
-# [JavaScript/Node.js](#tab/javascript)
+# [JavaScript](#tab/javascript)
 
 ```typescript
 
