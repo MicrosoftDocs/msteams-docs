@@ -69,7 +69,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 ```
 
-# [TypeScript/Node.js](#tab/typescript)
+# [JavaScript/Node.js](#tab/javascript)
 
 ```typescript
 
@@ -224,6 +224,7 @@ The meetings app capabilities are declared in your app manifest via the **config
 > * Please use [Developer Preview manifest schema](../resources/schema/manifest-schema-dev-preview.md) to try this in your app manifest.
 
 ```json
+
 "configurableTabs": [
     {
       "configurationUrl": "https://contoso.com/teamstab/configure",
