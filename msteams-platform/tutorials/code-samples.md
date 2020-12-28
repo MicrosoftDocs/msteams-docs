@@ -42,7 +42,7 @@ As always, the project's README file should have more information on specific ne
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
-[!INCLUDE [All Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/README.md)] 
+[!INCLUDE [All Samples](https://github.com/OfficeDev/microsoft-teams-sample-connector-csharp/blob/master/README.md)] 
 
 >[!TIP]
 >Visit the [Bot Framework Samples repository](https://github.com/Microsoft/BotBuilder-Samples) to view Microsoft Bot Framework v4 SDK task-focused samples for C#, JavaScript, TypeScript, and Python.
