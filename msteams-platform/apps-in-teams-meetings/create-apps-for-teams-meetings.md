@@ -126,15 +126,15 @@ The response body is:
 
 #### Response codes
 
-**403**: The app is not allowed to get participant information. This will be the most common error response and is triggered when the app is not installed in the meeting such as when it is disabled by tenant admin or blocked during live site migration.
-**200**: Participant information successfully retrieved.
-**401**: Invalid token.
-**404**: Participant cannot be found.
-**500**: The meeting is either expired (more than 60 days since the meeting ended) or the participant does not have permissions based on their role.
+* **403**: The app is not allowed to get participant information. This will be the most common error response and is triggered when the app is not installed in the meeting such as when it is disabled by tenant admin or blocked during live site migration.
+* **200**: Participant information successfully retrieved.
+* **401**: Invalid token.
+* **404**: Participant cannot be found.
+* **500**: The meeting is either expired (more than 60 days since the meeting ended) or the participant does not have permissions based on their role.
 
 **Coming Soon**
 
-**404**: the meeting has either expired or participant cannot be found.
+* **404**: the meeting has either expired or participant cannot be found.
 
 <!-- markdownlint-disable MD024 -->
 ### NotificationSignal API
@@ -209,10 +209,10 @@ POST /v3/conversations/{conversationId}/activities
 
 #### Response Codes
 
-**201**: activity with signal is successfully sent  
-**401**: invalid token  
-**403**: the app is not allowed to send the signal. In this case, the payload should contain more detail error message. There can be many reasons: app disabled by tenant admin, blocked during live site mitigation, etc.  
-**404**: meeting chat doesn't exist  
+* **201**: activity with signal is successfully sent  
+* **401**: invalid token  
+* **403**: the app is not allowed to send the signal. In this case, the payload should contain more detail error message. There can be many reasons: app disabled by tenant admin, blocked during live site mitigation, etc.  
+* **404**: meeting chat doesn't exist  
 
 ## Enable your app for Teams meetings
 
