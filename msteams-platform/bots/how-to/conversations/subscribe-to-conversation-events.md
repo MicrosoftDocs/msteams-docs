@@ -19,7 +19,7 @@ Microsoft Teams sends notifications to your bot for events that happen in scopes
 ## Conversation update events
 
 > [!Important]
-> New events can be added at eny time, and your bot will begin to receive them.
+> New events can be added at any time, and your bot will begin to receive them.
 > You should design for the possibility of receiving unexpected events.
 > If you are using the Bot Framework SDK, your bot will automatically respond with a `200 - OK` to any events you do not choose to handle.
 
