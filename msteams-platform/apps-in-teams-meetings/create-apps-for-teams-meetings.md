@@ -43,29 +43,6 @@ Please refer to our [Get context for your Teams tab](../tabs/how-to/access-teams
 > * Do not cache participant roles since the meeting organizer can change a role at any point in time.
 >
 > * Teams does not currently support large distribution lists or roster sizes of more than 350 participants for the `GetParticipant` API.
->
-> * Support for the Bot Framework SDK is coming soon.
-
-
-#### Request
-
-```http
-GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
-```
-
-*See* the [Bot Framework API reference](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true).
-
-<!-- markdownlint-disable MD025 -->
-
-**C# example**
-
-```csharp
-   // Get role for the user who sent a message to your bot
-   var senderRole = await TeamsInfo.GetMeetingParticipantAsync(turnContext);
-```
-
-* * *
-<!-- markdownlint-disable MD001 -->
 
 #### Query parameters
 
@@ -75,24 +52,63 @@ GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 |**participantId**| string | Yes | This field is the User ID and it is available in Tab SSO, Bot Invoke, and Teams Client SDK. Tab SSO is highly recommended|
 |**tenantId**| string | Yes | This required for tenant users. It is available in Tab SSO, Bot Invoke, and Teams Client SDK. Tab SSO is highly recommended|
 
-#### Response Payload
-<!-- markdownlint-disable MD036 -->
+#### Example
 
-**role** under "meeting" can be *Organizer*, *Presenter*, or *Attendee*.
+# [C#/.NET](#tab/dotnet)
 
-**Example 1**
+```csharp
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+  TeamsMeetingParticipant participant = GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourTenantId");
+  TeamsChannelAccount member = participant.User;
+  MeetingParticipantInfo meetingInfo = participant.Meeting;
+  ConversationAccount conversation = participant.Conversation;
+
+  await turnContext.SendActivityAsync(MessageFactory.Text($"The participant role is: {meetingInfo.Role}"), cancellationToken);
+}
+
+```
+
+# [TypeScript/Node.js](#tab/typescript)
+
+```typescript
+
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onMessage(async (context, next) => {
+            TeamsMeetingParticipant participant = GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourTenantId");
+            let member = participant.user;
+            let meetingInfo = participant.meeting;
+            let conversation = participant.conversation;
+            
+            await context.sendActivity(`The participant role is: '${meetingInfo.role}'`);
+            await next();
+        });
+    }
+}
+
+```
+
+# [JSON](#tab/json)
+
+```http
+GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
+```
+
+The response body is:
 
 ```json
 {
    "user":{
       "id":"29:1JKiJGPAX9TTxtGxhVo0wLx_zwzo-gG8Z-X03306vBwi9p-xMTEbDXsT6KH7-0kkTS8cD-2zkrsoV6f5WJ6_aYw",
-      "aadObjectId":"6aebbad0-e5a5-424a-834a-20fb051f3c1a",
-      "name":"Allan Deyoung",
-      "givenName":"Allan",
-      "surname":"Deyoung",
-      "email":"Allan.Deyoung@microsoft.com",
-      "userPrincipalName":"Allan.Deyoung@microsoft.com",
-      "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47",
+      "aadObjectId":"e236c4bf-88b1-4f3a-b1d7-8891dfc332b5",
+      "name":"Bob Young",
+      "givenName":"Bob",
+      "surname":"Young",
+      "email":"Bob.young@microsoft.com",
+      "userPrincipalName":"Bob.young@microsoft.com",
+      "tenantId":"2fe477ab-0efc-4dfd-bde2-484374e2c373",
       "userRole":"user"
    },
    "meeting":{
@@ -106,17 +122,19 @@ GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 }
 ```
 
+* * *
+
 #### Response codes
 
-**403**: The app is not allowed to get participant information. This will be the most common error response and is triggered when the app is not installed in the meeting such as when it is disabled by tenant admin or blocked during live site migration.  
-**200**: Participant information successfully retrieved.  
-**401**: Invalid token.  
-**404**: Participant cannot be found. 
+**403**: The app is not allowed to get participant information. This will be the most common error response and is triggered when the app is not installed in the meeting such as when it is disabled by tenant admin or blocked during live site migration.
+**200**: Participant information successfully retrieved.
+**401**: Invalid token.
+**404**: Participant cannot be found.
 **500**: The meeting is either expired (more than 60 days since the meeting ended) or the participant does not have permissions based on their role.
 
 **Coming Soon**
 
-**404**: the meeting has either expired or participant cannot be found. 
+**404**: the meeting has either expired or participant cannot be found.
 
 <!-- markdownlint-disable MD024 -->
 ### NotificationSignal API
@@ -124,43 +142,19 @@ GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 > [!NOTE]
 > When an in-meeting dialog is invoked, the same content will also be presented as a chat message.
 
-#### Request
-
-```http
-POST /v3/conversations/{conversationId}/activities
-```
-
 #### Query parameters
 
 |Value|Type|Required|Description|
 |---|---|----|---|
 |**conversationId**| string | Yes | The conversation identifier is available as part of bot invoke |
 
-#### Request payload
+#### Example
 
 > [!NOTE]
 >
-> *  In the requested payload below, the `completionBotId` parameter of the `externalResourceUrl`is an optional. It is the `Bot ID` that is declared in the manifest. The bot will receive a result object.
+> * In the requested payload below, the `completionBotId` parameter of the `externalResourceUrl`is an optional. It is the `Bot ID` that is declared in the manifest. The bot will receive a result object.
 > * The externalResourceUrl width and height parameters must be in pixels. Refer to the [design guidelines](design/designing-apps-in-meetings.md) to ensure the dimensions are within the allowed limits.
-> * The URL is the page loaded as an `<iframe>` inside the in-meeting dialog. The URL's domain must be in the app's `validDomains` array in your app manifest.
-
-
-# [JSON](#tab/json)
-
-```json
-{
-    "type": "message",
-    "text": "John Phillips assigned you a weekly todo",
-    "summary": "Don't forget to meet with Marketing next week",
-    "channelData": {
-        "notification": {
-            "alertInMeeting": true,
-            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
-        }
-    },
-    "replyToId": "1493070356924"
-}
-```
+> * The URL is the page loaded as an `<iframe>` inside the in-meeting dialog. The domain **must be** in the app's `validDomains` array in your app manifest.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -192,10 +186,26 @@ replyActivity.channelData = {
 await context.sendActivity(replyActivity);
 ```
 
-* * *
+# [JSON](#tab/json)
 
-> [!IMPORTANT]
-> The URL in the content bubble (taskInfo URL) must be included in the [valid domains](../resources/schema/manifest-schema.md#validdomains) list included in the Teams app manifest.
+```http
+POST /v3/conversations/{conversationId}/activities
+
+{
+    "type": "message",
+    "text": "John Phillips assigned you a weekly todo",
+    "summary": "Don't forget to meet with Marketing next week",
+    "channelData": {
+        "notification": {
+            "alertInMeeting": true,
+            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
+        }
+    },
+    "replyToId": "1493070356924"
+}
+```
+
+* * *
 
 #### Response Codes
 
