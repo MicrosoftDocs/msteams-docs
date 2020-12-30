@@ -48,7 +48,7 @@ Please refer to our [Get context for your Teams tab](../tabs/how-to/access-teams
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**meetingId**| string | Yes | The meeting identifier is available via Bot Invoke and Teams Client SDK.|
+|**meetingId**| string | Yes | The meeting identifier is available through Bot Invoke and Teams Client SDK.|
 |**participantId**| string | Yes | This field is the User ID and it is available in Tab SSO, Bot Invoke, and Teams Client SDK. Tab SSO is highly recommended|
 |**tenantId**| string | Yes | This required for tenant users. It is available in Tab SSO, Bot Invoke, and Teams Client SDK. Tab SSO is highly recommended|
 
