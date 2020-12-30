@@ -28,8 +28,26 @@
     href: tutorials/get-started-dotnet-app-studio.md
   - name: Create an app using Node.js
     href: tutorials/get-started-nodejs-app-studio.md
-  - name: Create an app with the Yeoman Generator
+  - name: Create an app using the Yeoman Generator
     href: tutorials/get-started-yeoman.md
+  - name: Bot samples
+    items:
+    - name: Chatbot with C# (GitHub)
+      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot
+    - name: Chatbot with JavaScript (GitHub)
+      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot
+    - name: Chatbot with Python (GitHub)
+      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot
+  - name: Messaging extension samples
+    items:
+    - name: Action commands with C#/.NET (GitHub)
+      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action
+    - name: Action commands with TypeScript/Node.js (GitHub)
+      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action
+    - name: Search commands with C#/.NET (GitHub)
+      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search
+    - name: Search commands with TypeScript/Node.js (GitHub)
+      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search
 - name: App fundamentals
   items:
   - name: App capabilities
@@ -40,7 +58,7 @@
     href: concepts/design/understand-use-cases.md
   - name: Mapping use cases to Teams features
     href: concepts/design/map-use-cases.md
-  - name: Common tools
+  - name: Choosing tools
     items:
     - name: Teams Toolkit for Visual Studio Code
       href: toolkit/visual-studio-code-overview.md
@@ -130,14 +148,6 @@
   items:
   - name: Overview
     href: bots/what-are-bots.md
-  - name: Quickstarts
-    items:
-    - name: Chatbot with C# (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot
-    - name: Chatbot with JavaScript (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot
-    - name: Chatbot with Python (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot
   - name: How bots work
     href: bots/bot-basics.md
   - name: Bot conversations
@@ -182,16 +192,6 @@
   items:
   - name: Overview
     href: messaging-extensions/what-are-messaging-extensions.md
-  - name: Quickstarts
-    items:
-    - name: Action commands with C#/.NET (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action
-    - name: Action commands with TypeScript/Node.js (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action
-    - name: Search commands with C#/.NET (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search
-    - name: Search commands with TypeScript/Node.js (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search
   - name: Create action commands
     items:
     - name: Define action commands
@@ -256,7 +256,7 @@
     href: concepts/authentication/configure-identity-provider.md
   - name: Tabs
     items:
-    - name: Authentication flow
+    - name: Authentication flow in tabs
       href: tabs/how-to/authentication/auth-flow-tab.md
     - name: Use Azure AD authentication
       href: tabs/how-to/authentication/auth-tab-aad.md
