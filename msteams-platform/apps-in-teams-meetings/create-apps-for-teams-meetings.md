@@ -49,8 +49,8 @@ Please refer to our [Get context for your Teams tab](../tabs/how-to/access-teams
 |Value|Type|Required|Description|
 |---|---|----|---|
 |**meetingId**| string | Yes | The meeting identifier is available through Bot Invoke and Teams Client SDK.|
-|**participantId**| string | Yes | This field is the User ID and it is available in Tab SSO, Bot Invoke, and Teams Client SDK. Tab SSO is highly recommended|
-|**tenantId**| string | Yes | This required for tenant users. It is available in Tab SSO, Bot Invoke, and Teams Client SDK. Tab SSO is highly recommended|
+|**participantId**| string | Yes | The participantId is the user ID. It is available in Tab SSO, Bot Invoke, and Teams Client SDK. It is highly recommended to get a participantId from the Tab SSO. |
+|**tenantId**| string | Yes | The tenantId is required for the tenant users. It is available in Tab SSO, Bot Invoke, and Teams Client SDK. It is highly recommended to get a tenantId from the Tab SSO. |
 
 #### Example
 
@@ -126,15 +126,16 @@ The response body is:
 
 #### Response codes
 
-* **403**: The app is not allowed to get participant information. This will be the most common error response and is triggered when the app is not installed in the meeting such as when it is disabled by tenant admin or blocked during live site migration.
+* **403**: The app is not allowed to get participant information.  This is the most common error response and is triggered if the app is not installed in the meeting. For example, if the app is disabled by tenant admin or blocked during live site migration.
 * **200**: Participant information successfully retrieved.
 * **401**: Invalid token.
 * **404**: Participant cannot be found.
-* **500**: The meeting is either expired (more than 60 days since the meeting ended) or the participant does not have permissions based on their role.
+* **500**: The meeting has either expired (more than 60 days since the meeting ended) or the participant does not have permissions based on their role.
+
 
 **Coming Soon**
 
-* **404**: the meeting has either expired or participant cannot be found.
+* **404**: The meeting has either expired or participant cannot be found.
 
 <!-- markdownlint-disable MD024 -->
 ### NotificationSignal API
@@ -152,9 +153,9 @@ The response body is:
 
 > [!NOTE]
 >
-> * In the requested payload below, the `completionBotId` parameter of the `externalResourceUrl`is an optional. It is the `Bot ID` that is declared in the manifest. The bot will receive a result object.
+The `completionBotId` parameter of the `externalResourceUrl` is optional in the requested payload example. `Bot ID` is declared in the manifest and the bot receives a result object.
 > * The externalResourceUrl width and height parameters must be in pixels. Refer to the [design guidelines](design/designing-apps-in-meetings.md) to ensure the dimensions are within the allowed limits.
-> * The URL is the page loaded as an `<iframe>` inside the in-meeting dialog. The domain **must be** in the app's `validDomains` array in your app manifest.
+> * The URL is the page loaded as an `<iframe>` in the in-meeting dialog. The domain must be in the app's `validDomains` array in your app manifest.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -211,7 +212,10 @@ POST /v3/conversations/{conversationId}/activities
 
 * **201**: activity with signal is successfully sent  
 * **401**: invalid token  
-* **403**: the app is not allowed to send the signal. In this case, the payload should contain more detail error message. There can be many reasons: app disabled by tenant admin, blocked during live site mitigation, etc.  
+* **201**: Activity with signal is successfully sent. 
+* **401**: Invalid token.
+* **403**: The app is unable to send the signal. This can happen due to various reasons such as the tenant admin disables the app, the app is blocked during live site migration, and so on. In this case, the payload contains a detailed error message. 
+* **404**: Meeting chat doesn't exist.
 * **404**: meeting chat doesn't exist  
 
 ## Enable your app for Teams meetings
