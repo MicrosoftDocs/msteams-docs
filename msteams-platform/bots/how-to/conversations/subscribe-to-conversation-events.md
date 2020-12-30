@@ -786,7 +786,7 @@ async def on_teams_team_archived(
 
 ### Team restored
 
-Your bot is notified when the team it is in has been restored. It receives a `conversationUpdate` event with `eventType.teamrestored` in the `channelData` object.
+The bot receives a notification when the team it is installed in is restored. It receives a `conversationUpdate` event with `eventType.teamrestored` in the `channelData` object.
 
 # [C#/.NET](#tab/dotnet)
 
