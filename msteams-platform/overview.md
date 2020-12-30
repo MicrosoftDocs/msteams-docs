@@ -29,18 +29,7 @@ Some apps are simple (send notifications), while others are complex (manage pati
 :::image type="content" source="assets/images/overview-tabs.png" alt-text="Conceptual representation of what tabs look like in the Teams client." border="false":::
 
    :::column-end:::
-   :::column span="":::
 
-### Messaging extensions
-
-**Make it easier to multitask**: With [messaging extensions](messaging-extensions/what-are-messaging-extensions.md), you can quickly share external information in a conversation. You also can act on a message, such as creating a help ticket based on the content of a channel post.
-
-:::image type="content" source="assets\images\overview-messaging.png" alt-text="Conceptual representation of what messaging extensions look like in the Teams client." border="false":::
-
-   :::column-end:::
-:::row-end:::
-
-:::row:::
    :::column span="":::
 
 ### Bots
@@ -50,6 +39,21 @@ Some apps are simple (send notifications), while others are complex (manage pati
 :::image type="content" source="assets/images/overview-bots.png" alt-text="Conceptual representation of what bots look like in the Teams client." border="false":::
 
    :::column-end:::
+
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+### Messaging extensions
+
+**Make it easier to multitask**: With [messaging extensions](messaging-extensions/what-are-messaging-extensions.md), you can quickly share external information in a conversation. You also can act on a message, such as creating a help ticket based on the content of a channel post.
+
+:::image type="content" source="assets\images\overview-messaging.png" alt-text="Conceptual representation of what messaging extensions look like in the Teams client." border="false":::
+
+   :::column-end:::
+
    :::column span="":::
 
 ### Webhooks
