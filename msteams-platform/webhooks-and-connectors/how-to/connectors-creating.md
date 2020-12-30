@@ -2,6 +2,7 @@
 title: Office 365 Connectors
 description: Describes how to get started with Office 365 Connectors in Microsoft Teams
 keywords: teams o365 connector
+ms.topic: conceptual
 ms.date: 04/19/2019
 ---
 # Creating Office 365 Connectors for Microsoft Teams
@@ -35,6 +36,63 @@ You can reuse your existing web configuration experience or create a separate ve
 4. Call `microsoftTeams.settings.setSettings()` to save the connector settings. What's saved here is also what will be shown in the configuration dialog if the user tries to update an existing configuration for your connector.
 5. Call `microsoftTeams.settings.getSettings()` to fetch webhook properties, including the URL itself. You should call this  In addition to during the save event, you should also call this when your page is first loaded in the case of a re-configuration.
 6. (Optional) Register a `microsoftTeams.settings.registerOnRemoveHandler()` event handler, which gets called when the user removes your connector. This event gives your service an opportunity to perform any cleanup actions.
+
+#### Code sample
+```
+<h2>Send notifications when tasks are:</h2>
+<div class="col-md-8">
+    <section id="configSection">
+        <form id="configForm">
+            <input type="radio" name="notificationType" value="Create" onclick="onClick()"> Created
+            <br>
+            <br>
+            <input type="radio" name="notificationType" value="Update" onclick="onClick()"> Updated
+        </form>
+    </section>
+</div>
+
+<script src="https://statics.teams.microsoft.com/sdk/v1.5.2/js/MicrosoftTeams.min.js" crossorigin="anonymous"></script>
+<script src="/Scripts/jquery-1.10.2.js"></script>
+
+<script type="text/javascript">
+
+        function onClick() {
+            microsoftTeams.settings.setValidityState(true);
+        }
+
+        microsoftTeams.initialize();
+        microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
+            var radios = document.getElementsByName('notificationType');
+
+            var eventType = '';
+            if (radios[0].checked) {
+                eventType = radios[0].value;
+            } else {
+                eventType = radios[1].value;
+            }
+
+            microsoftTeams.settings.setSettings({
+                 entityId: eventType,
+                contentUrl: "https://YourSite/Connector/Setup",
+                removeUrl:"https://YourSite/Connector/Setup",
+                 configName: eventType
+                });
+
+            microsoftTeams.settings.getSettings(function (settings) {
+                // We get the Webhook URL in settings.webhookUrl which needs to be saved. 
+                // This can be used later to send notification.
+            });
+
+            saveEvent.notifySuccess();
+        });
+
+        microsoftTeams.settings.registerOnRemoveHandler(function (removeEvent) {
+            var removeCalled = true;
+            alert("Removed" + JSON.stringify(removeEvent));
+        });
+
+</script>
+```
 
 #### `GetSettings()` response properties
 
