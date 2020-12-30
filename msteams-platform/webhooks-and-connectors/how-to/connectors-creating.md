@@ -37,7 +37,6 @@ You can reuse your existing web configuration experience or create a separate ve
 5. Call `microsoftTeams.settings.getSettings()` to fetch webhook properties, including the URL itself. You should call this  In addition to during the save event, you should also call this when your page is first loaded in the case of a re-configuration.
 6. (Optional) Register a `microsoftTeams.settings.registerOnRemoveHandler()` event handler, which gets called when the user removes your connector. This event gives your service an opportunity to perform any cleanup actions.
 
-#### Sample HTML to create Connector configuration
 Here's a sample HTML to create a Connector configuration page without the CSS.
 
 ```html
