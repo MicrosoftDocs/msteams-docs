@@ -153,17 +153,14 @@ The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet
 
 3. Complete the **Connection Setting** form:
 
+    >[!NOTE]
+    > **Implicit grant** may be required in the AAD application.
+
     > [!div class="checklist"]
     >
     > * Enter a name for your new Connection Setting. This will be the name that gets referenced inside the settings of your bot service code in **step 5** of the [Bot SSO at runtime](#bot-sso-at-runtime) section.
     > * In the Service Provider dropdown, select **Azure Active Directory V2**.
     > * Enter the client credentials for the AAD application.
-
-    >[!NOTE]
-    > **Implicit grant** may be required in the AAD application.
-
-    > [!div class="checklist"]
-
     > * For the Token Exchange URL use the scope value defined in the previous step of your AAD application. The Token Exchange URL indicates to the SDK that this AAD application is configured for SSO.
     > * Specify "common" as the **Tenant ID**.
     > * Add all the scopes configured when specifying permissions to downstream APIs for your AAD application. With the client id and client secret provided, the token store will exchange the token for a graph token with defined permissions for you.
