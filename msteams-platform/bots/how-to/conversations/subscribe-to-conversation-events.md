@@ -708,7 +708,7 @@ async def on_teams_team_renamed(
 
 ### Team archived
 
-Your bot is notified when the team it is in has been archived. It receives a `conversationUpdate` event with `eventType.teamarchived` in the `channelData` object.
+The bot receives a notification when the team it is installed in is archived. It receives a `conversationUpdate` event with `eventType.teamarchived` in the `channelData` object.
 
 # [C#/.NET](#tab/dotnet)
 
