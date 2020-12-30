@@ -2,7 +2,7 @@
 title: Single sign-on support for bots 
 description: Describes how to get a user token. Currently, a bot developer can use a sign in card or the azure bot service with the OAuth card support.
 keywords: token, user token, SSO support for bots
-ms.topic: how-to
+ms.topic: conceptual
 ---
 
 # Single sign-on (SSO) support for bots
