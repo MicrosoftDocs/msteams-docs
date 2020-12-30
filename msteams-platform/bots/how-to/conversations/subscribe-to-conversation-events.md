@@ -572,7 +572,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-The `channelData` object in the payload below is based on a member being added to a team, rather than a group chat or initiating a new one-to-one conversation.
+The `channelData` object in the following payload example is based on adding a member to a team rather than a group chat, or initiating a new one-to-one conversation:
 
 ```json
 {
