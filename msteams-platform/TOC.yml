@@ -10,17 +10,17 @@
   items:
   - name: Overview and prerequisites
     href: build-your-first-app/build-first-app-overview.md
-  - name: Build a "Hello, World!" app
+  - name: Create a "Hello, World!" app
     href: build-your-first-app/build-and-run.md
-  - name: Build a personal tab
+  - name: Create a personal tab
     href: build-your-first-app/build-personal-tab.md
-  - name: Build a channel and group tab
+  - name: Create a channel and group tab
     href: build-your-first-app/build-channel-tab.md
-  - name: Build a bot
+  - name: Create a bot
     href: build-your-first-app/build-bot.md
-  - name: Build a messaging extension
+  - name: Create a messaging extension
     href: build-your-first-app/build-messaging-extension.md
-- name: Tutorials and code samples
+- name: Tutorials and samples
   items:
   - name: Overview
     href: tutorials/code-samples.md   
@@ -328,7 +328,7 @@
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
     - name: Application Certification program
       href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
-- name: SDK reference
+- name: Reference
   items:
   - name: Teams JavaScript SDK
     href: https://docs.microsoft.com/en-us/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest
