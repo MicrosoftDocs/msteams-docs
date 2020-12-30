@@ -58,7 +58,7 @@
     href: concepts/design/understand-use-cases.md
   - name: Mapping use cases to Teams features
     href: concepts/design/map-use-cases.md
-  - name: Development tools
+  - name: Tools
     items:
     - name: Teams Toolkit for Visual Studio Code
       href: toolkit/visual-studio-code-overview.md
@@ -142,8 +142,6 @@
     href: tabs/how-to/access-teams-context.md
   - name: Request device permissions
     href: tabs/how-to/native-device-permissions.md
-  - name: Tab developer tools
-    href: tabs/how-to/developer-tools.md
 - name: Build bots
   items:
   - name: Overview
@@ -264,14 +262,14 @@
       href: tabs/how-to/authentication/auth-silent-aad.md
     - name: Use single sign-on authentication
       href: tabs/how-to/authentication/auth-aad-sso.md
-  - name: Messaging extensions
-    href: messaging-extensions/how-to/add-authentication.md
   - name: Bots
     items:
     - name: Authentication flow in bots
       href: bots/how-to/authentication/auth-flow-bot.md
     - name: Add authentication to your bot
       href: bots/how-to/authentication/add-authentication.md
+  - name: Messaging extensions
+    href: messaging-extensions/how-to/add-authentication.md
 - name: Utilize Teams data with Microsoft Graph
   items:
   - name: Overview
@@ -296,6 +294,8 @@
     href: concepts/build-and-test/debug.md
   - name: Add test data to your environment
     href: concepts/build-and-test/test-data.md
+  - name: Debug your tab with DevTools
+    href: tabs/how-to/developer-tools.md
   - name: Debug your bot locally with an IDE
     href: bots/how-to/debug/locally-with-an-ide.md
   - name: Debug your bot with inspection middleware
@@ -330,8 +330,6 @@
       href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
 - name: SDKs
   items:
-  - name: Teams JavaScript SDK
-    href: https://docs.microsoft.com/en-us/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest
   - name: Node.js Bot Framework for bots and messaging extensions (GitHub)
     href: https://github.com/Microsoft/botbuilder-js
   - name: .NET Bot Framework for bots and messaging extensions (GitHub)
