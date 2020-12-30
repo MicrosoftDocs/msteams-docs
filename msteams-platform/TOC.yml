@@ -328,7 +328,7 @@
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
     - name: Application Certification program
       href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
-- name: Reference
+- name: SDKs
   items:
   - name: Teams JavaScript SDK
     href: https://docs.microsoft.com/en-us/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest
