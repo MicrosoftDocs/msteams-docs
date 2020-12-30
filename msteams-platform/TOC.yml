@@ -58,16 +58,16 @@
     href: concepts/design/understand-use-cases.md
   - name: Mapping use cases to Teams features
     href: concepts/design/map-use-cases.md
-  - name: Choosing tools
+  - name: Development tools
     items:
     - name: Teams Toolkit for Visual Studio Code
       href: toolkit/visual-studio-code-overview.md
     - name: Teams Toolkit for Visual Studio
       href: toolkit/visual-studio-overview.md
-    - name: App Studio
-      href: concepts/build-and-test/app-studio-overview.md
     - name: Yeoman Generator for Teams (GitHub)
       href: https://github.com/pnp/generator-teams
+    - name: App Studio
+      href: concepts/build-and-test/app-studio-overview.md
 - name: Integrate with Teams
   items:
   - name: Web apps
