@@ -292,7 +292,7 @@ async def on_teams_channel_deleted(
 
 ### Channel restored
 
-The channel restored event is sent to your bot whenever a channel that was previously deleted is restored in a team your bot is installed in.
+The channel restored event is sent to your bot whenever a channel that was previously deleted is restored in a team that your bot is already installed in.
 
 # [C#/.NET](#tab/dotnet)
 
