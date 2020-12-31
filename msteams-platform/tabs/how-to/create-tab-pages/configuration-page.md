@@ -90,7 +90,7 @@ This code allows Teams to know that the configuration requirements have been sat
 
 Your tab might require contextual information to display relevant content. This information can further enhance your tab's appeal by providing a more customized user experience.
 
-The Teams [Context interface](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest) defines the properties that can be used for your tab configuration. Collect the values of context data variables in two ways:
+The Teams [Context interface](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) defines the properties that can be used for your tab configuration. Collect the values of context data variables in two ways:
 
 1. Insert URL query string placeholders in your manifest's `configurationURL`.
 
@@ -133,7 +133,7 @@ document.write(getId());
 
 ### Use the `getContext()` function to retrieve context
 
-When invoked, the `microsoftTeams.getContext((context) => {})` function retrieves the [Context interface](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest).You can add this function to your configuration page to retrieve context values:
+When invoked, the `microsoftTeams.getContext((context) => {})` function retrieves the [Context interface](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true). You can add this function to your configuration page to retrieve context values:
 
 ```html
 <!-- `userPrincipalName` will render in the span with the id "user". -->
