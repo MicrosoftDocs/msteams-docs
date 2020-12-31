@@ -133,7 +133,7 @@ document.write(getId());
 
 ### Use the `getContext()` function to retrieve context
 
-When invoked, the `microsoftTeams.getContext((context) => {})` function retrieves the [Context interface](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true).You can add this function to your configuration page to retrieve context values:
+When invoked, the `microsoftTeams.getContext((context) => {})` function retrieves the [Context interface](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest).You can add this function to your configuration page to retrieve context values:
 
 ```html
 <!-- `userPrincipalName` will render in the span with the id "user". -->
