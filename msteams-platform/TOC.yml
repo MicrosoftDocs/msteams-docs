@@ -58,16 +58,6 @@
     href: concepts/design/understand-use-cases.md
   - name: Mapping use cases to Teams features
     href: concepts/design/map-use-cases.md
-  - name: Tools
-    items:
-    - name: Teams Toolkit for Visual Studio Code
-      href: toolkit/visual-studio-code-overview.md
-    - name: Teams Toolkit for Visual Studio
-      href: toolkit/visual-studio-overview.md
-    - name: Yeoman Generator for Teams (GitHub)
-      href: https://github.com/pnp/generator-teams
-    - name: App Studio
-      href: concepts/build-and-test/app-studio-overview.md
 - name: Integrate with Teams
   items:
   - name: Web apps
@@ -112,6 +102,66 @@
       href: apps-in-teams-meetings/design/designing-in-meeting-tab.md
   - name: Cards and task modules
     href: task-modules-and-cards/cards/design-effective-cards.md
+- name: Tools and SDKs
+  items:
+  - name: Teams Toolkit for Visual Studio Code
+    href: toolkit/visual-studio-code-overview.md
+  - name: Teams Toolkit for Visual Studio
+    href: toolkit/visual-studio-overview.md
+  - name: Yeoman Generator for Teams (GitHub)
+    href: https://github.com/pnp/generator-teams
+  - name: App Studio
+    href: concepts/build-and-test/app-studio-overview.md
+  - name: Node.js Bot Framework for bots and messaging extensions (GitHub)
+    href: https://github.com/Microsoft/botbuilder-js
+  - name: .NET Bot Framework for bots and messaging extensions (GitHub)
+    href: https://github.com/Microsoft/botbuilder-dotnet
+  - name: Microsoft Graph SDKs
+    href: https://docs.microsoft.com/en-us/graph/sdks/sdks-overview
+  - name: Legacy SDKs
+    items:
+    - name: Bots SDK (v3)
+      href: resources/bot-v3/bots-overview.md
+      items:
+      - name: Create a bot
+        href: resources/bot-v3/bots-create.md
+      - name: Conversations
+        href: resources/bot-v3/bot-conversations/bots-conversations.md
+        items:
+        - name: Personal conversations with bots
+          href: resources/bot-v3/bot-conversations/bots-conv-personal.md
+        - name: Channel and group conversations with bots
+          href: resources/bot-v3/bot-conversations/bots-conv-channel.md
+        - name: Starting a conversation
+          href: resources/bot-v3/bot-conversations/bots-conv-proactive.md
+      - name: Cards and card actions
+        href: resources/bot-v3/bots-cards.md
+      - name: Message formatting
+        href: resources/bot-v3/bots-message-format.md
+      - name: Bot events
+        href: resources/bot-v3/bots-notifications.md
+      - name: Context for bots
+        href: resources/bot-v3/bots-context.md
+      - name: Send and receiving files
+        href: resources/bot-v3/bots-files.md
+      - name: Notification-only bots
+        href: resources/bot-v3/bots-notification-only.md
+      - name: Bot menus
+        href: resources/bot-v3/bots-menus.md
+      - name: Bots with tabs
+        href: resources/bot-v3/bots-with-tabs.md
+      - name: Format bot messages
+        href: resources/bot-v3/bots-text-formats.md  
+      - name: Test a bot
+        href: resources/bot-v3/bots-test.md
+    - name: Messaging extensions SDK (v3)
+      items:
+      - name: Messaging extensions SDK (v3)
+        href: resources/messaging-extension-v3/messaging-extensions-overview.md
+      - name: Search extensions
+        href: resources/messaging-extension-v3/search-extensions.md
+      - name: Action extensions
+        href: resources/messaging-extension-v3/create-extensions.md
 - name: Build tabs
   items:
   - name: Overview
@@ -328,58 +378,6 @@
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
     - name: Application Certification program
       href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
-- name: SDKs
-  items:
-  - name: Node.js Bot Framework for bots and messaging extensions (GitHub)
-    href: https://github.com/Microsoft/botbuilder-js
-  - name: .NET Bot Framework for bots and messaging extensions (GitHub)
-    href: https://github.com/Microsoft/botbuilder-dotnet
-  - name: Microsoft Graph SDKs
-    href: https://docs.microsoft.com/en-us/graph/sdks/sdks-overview
-  - name: Legacy SDKs
-    items:
-    - name: Bots SDK (v3)
-      href: resources/bot-v3/bots-overview.md
-      items:
-      - name: Create a bot
-        href: resources/bot-v3/bots-create.md
-      - name: Conversations
-        href: resources/bot-v3/bot-conversations/bots-conversations.md
-        items:
-        - name: Personal conversations with bots
-          href: resources/bot-v3/bot-conversations/bots-conv-personal.md
-        - name: Channel and group conversations with bots
-          href: resources/bot-v3/bot-conversations/bots-conv-channel.md
-        - name: Starting a conversation
-          href: resources/bot-v3/bot-conversations/bots-conv-proactive.md
-      - name: Cards and card actions
-        href: resources/bot-v3/bots-cards.md
-      - name: Message formatting
-        href: resources/bot-v3/bots-message-format.md
-      - name: Bot events
-        href: resources/bot-v3/bots-notifications.md
-      - name: Context for bots
-        href: resources/bot-v3/bots-context.md
-      - name: Send and receiving files
-        href: resources/bot-v3/bots-files.md
-      - name: Notification-only bots
-        href: resources/bot-v3/bots-notification-only.md
-      - name: Bot menus
-        href: resources/bot-v3/bots-menus.md
-      - name: Bots with tabs
-        href: resources/bot-v3/bots-with-tabs.md
-      - name: Format bot messages
-        href: resources/bot-v3/bots-text-formats.md  
-      - name: Test a bot
-        href: resources/bot-v3/bots-test.md
-    - name: Messaging extensions SDK (v3)
-      items:
-      - name: Messaging extensions SDK (v3)
-        href: resources/messaging-extension-v3/messaging-extensions-overview.md
-      - name: Search extensions
-        href: resources/messaging-extension-v3/search-extensions.md
-      - name: Action extensions
-        href: resources/messaging-extension-v3/create-extensions.md
 - name: Resources
   items:
     - name: App manifest schema
