@@ -379,7 +379,7 @@ Quick Responses is a Microsoft Teams app that delivers a robust solution for eff
 
 ## Rapid Assist &#9734;
 
-Rapid Assist is a Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)-based app that allows customer facing associates to rapidly connect with the experts to get quick answers, search for information, follow up open requests and allows experts to receive notifications to quickly get on a call to help answer questions. The app, built using Microsoft [Power Apps](/powerapps/powerapps-overview), and [Power Automate](/power-automate/getting-started), deeply integrates with Microsoft Teams to enable organizations to easily connect frontline workers with corporate liasions to resolve customer queries and deliver a great customer experience.  
+Rapid Assist is a Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) based app that allows customer facing associates to rapidly connect with the experts to get quick answers, search for information, follow up open requests, and allow experts to receive notifications to quickly get on a call to help answer questions. The app built using Microsoft [Power Apps](/powerapps/powerapps-overview) and [Power Automate](/power-automate/getting-started), deeply integrates with Microsoft Teams to enable organizations to easily connect frontline workers with corporate liaisons to resolve customer queries and deliver a great customer experience. 
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-rapid-assist/)
 
