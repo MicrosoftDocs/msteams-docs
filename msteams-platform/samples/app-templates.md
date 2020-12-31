@@ -102,9 +102,7 @@ Checklist is a custom Microsoft Teams [messaging extension](../messaging-extensi
 
 ## Classroom Drop-in
 
-Classroom Drop-in is a Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)-based app that enables system leaders to find class teams (virtual classrooms) and add themselves or others to these class teams for a specified drop-in period, as needed. The app, built using Microsoft [Power Apps](/powerapps/powerapps-overview), and [Power Automate](/power-automate/getting-started), deeply integrates with Microsoft Teams and enables educational institutes to ensure relevant stakeholders have access to class teams for required periods of time to ensure smooth operations in a hybrid learning environment.
-
-
+Classroom Drop-in is a Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)-based app that enables system leaders to find class teams (virtual classrooms) and add themselves or others to these class teams for a specified drop-in period, as needed. The app built using Microsoft [Power Apps](/powerapps/powerapps-overview) and [Power Automate](/power-automate/getting-started), deeply integrates with Microsoft Teams to ensure educational institutes can optimize their operations in a hybrid learning environment by providing access to relevant stakeholders for class teams per business requirements.
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-classroom-dropin)
 
 ![Classroom drop-in request](../assets/images/classroom-drop-in-request.png)
