@@ -371,7 +371,6 @@ The employees use the Issue reporting app to log issues and details required to 
 
 ![Issue reporting team view](../assets/images/issue-reporting-team-view.png)  
 
-
 ## New Employee Onboarding 
 
 New Employee Onboarding is an integrated Microsoft Teams and [SharePoint New Employee Onboarding Solution](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19) that enables your organization to provide a consistent, high-quality onboarding experience for employees on their new-hire journey. The app can be used by human resource teams and hiring managers to provide relevant information throughout the orientation and induction process and by new hires to share feedback, provide introductions, and complete onboarding tasks.
@@ -433,7 +432,6 @@ Quick Responses is a Microsoft Teams app that delivers a robust solution for eff
 Rapid Assist is a Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) based app that allows customer facing associates to rapidly connect with the experts to get quick answers, search for information, follow up open requests, and allow experts to receive notifications to quickly get on a call to help answer questions. The app built using Microsoft [Power Apps](/powerapps/powerapps-overview) and [Power Automate](/power-automate/getting-started), deeply integrates with Microsoft Teams to enable organizations to easily connect frontline workers with corporate liaisons to resolve customer queries and deliver a great customer experience. 
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-rapid-assist)
-
 
 :::row:::
    :::column span="":::
