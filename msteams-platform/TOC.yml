@@ -50,13 +50,13 @@
       href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search
 - name: App fundamentals
   items:
-  - name: App capabilities
+  - name: Teams app capabilities
     href: concepts/capabilities-overview.md
-  - name: App entry points
+  - name: Teams app entry points
     href: concepts/extensibility-points.md
   - name: Understanding your use cases
     href: concepts/design/understand-use-cases.md
-  - name: Mapping use cases to Teams features
+  - name: Mapping use cases to Teams app capabilities
     href: concepts/design/map-use-cases.md
 - name: Integrate with Teams
   items:
@@ -73,35 +73,49 @@
   - name: Production-ready app templates
     href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
-    href: samples/shifts-wfm-connectors.md 
+    href: samples/shifts-wfm-connectors.md
+  - name: Install Moodle LMS
+    href: resources/moodleInstructions.md
   - name: Create a Share-to-Teams button
     href: concepts/build-and-test/share-to-teams.md
   - name: Add a Teams tab to SharePoint
     href: tabs/how-to/tabs-in-sharepoint.md
   - name: Create deep links
     href: concepts/build-and-test/deep-links.md
+  - name: Device capabilities
+    items:
+    - name: Request device permissions
+      href: concepts/device-capabilities/native-device-permissions.md    
+    - name: Using the camera and photo gallery
+      href: concepts/device-capabilities/mobile-camera-image-permissions.md
 - name: Design your app
   items:
+  - name: Overview
+    href: concepts/design/design-teams-app-overview.md
+  - name: Design fundamentals
+    href: concepts/design/design-teams-app-fundamentals.md
+  - name: Basic UI components
+    href: concepts/design/design-teams-app-basic-ui-components.md
+  - name: UI templates
+    href: concepts/design/design-teams-app-ui-templates.md
+  - name: Personal apps
+    href: concepts/design/personal-apps.md
   - name: Tabs
-    items:
-    - name: Tabs on desktop and web
+    items: 
+    - name: Desktop and web
       href: tabs/design/tabs.md
-    - name: Tabs on mobile
+    - name: Mobile
       href: tabs/design/tabs-mobile.md
   - name: Messaging extensions
-    href: messaging-extensions/design/messaging-extension-design.md
+    href: messaging-extensions/design/messaging-extension-design.md  
   - name: Bots
     href: bots/design/bots.md
-  - name: Webhooks and connectors
-    href: webhooks-and-connectors/design/design-webhooks-connectors.md
   - name: Meeting extensions
-    items:
-    - name: In-meeting dialog
-      href: apps-in-teams-meetings/design/designing-in-meeting-dialog.md
-    - name: In-meeting tab
-      href: apps-in-teams-meetings/design/designing-in-meeting-tab.md
-  - name: Cards and task modules
+    href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
+  - name: Adaptive Cards
     href: task-modules-and-cards/cards/design-effective-cards.md
+  - name: Task modules
+    href: task-modules-and-cards/task-modules/design-teams-task-modules.md
 - name: Tools and SDKs
   items:
   - name: Teams Toolkit for Visual Studio Code
@@ -310,8 +324,10 @@
       href: tabs/how-to/authentication/auth-tab-aad.md
     - name: Use silent authentication
       href: tabs/how-to/authentication/auth-silent-aad.md
-    - name: Use single sign-on authentication
+    - name: Use SSO authentication
       href: tabs/how-to/authentication/auth-aad-sso.md
+    - name: Add SSO with Teams Toolkit for Visual Studio Code
+      href: toolkit/visual-studio-code-tab-sso.md 
   - name: Bots
     items:
     - name: Authentication flow in bots

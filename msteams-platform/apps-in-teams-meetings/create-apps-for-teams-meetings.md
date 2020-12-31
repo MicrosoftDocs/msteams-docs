@@ -6,10 +6,7 @@ ms.topic: conceptual
 ms.author: lajanuar
 keywords: teams apps meetings user participant role api 
 ---
-# Create apps for Teams meetings (Preview)
-
->[!IMPORTANT]
-> Features included in Microsoft Teams preview are provided for early-access, testing, and feedback purposes only. They may undergo changes before becoming available in the public release and should not be used in production applications.
+# Create apps for Teams meetings
 
 ## Prerequisites and considerations
 
@@ -21,7 +18,13 @@ keywords: teams apps meetings user participant role api
 
 * Some meeting APIs, such as `GetParticipant`, require a [bot registration and ID](../build-your-first-app/build-bot.md) to generate auth tokens.
 
+<<<<<<< HEAD
 * Developers must adhere to general [Teams tab design guidelines](../tabs/design/tabs.md) for pre- and post-meeting scenarios as well as during meetings (see [in-meeting dialog](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md) and [in-meeting tab](../apps-in-teams-meetings/design/designing-in-meeting-tab.md) design guidelines).
+=======
+1. As a developer, you must adhere to general [Teams tab design guidelines](../tabs/design/tabs.md) for pre- and post-meeting scenarios as well as the [in-meeting dialog guidelines](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog) for in-meeting dialog triggered during a Teams meeting.
+
+1. Please note that in order for your app to be updated in real-time, it must be up-to-date based on event activities in the meeting. These events can be within the in-meeting dialog (refer to completion `bot Id` parameter in `Notification Signal API`) and other surfaces across the meeting lifecycle
+>>>>>>> f08a406f36cd8a8faadbb678b0f27882916834d3
 
 ## Meeting apps API reference
 
@@ -44,131 +47,133 @@ Please refer to our [Get context for your Teams tab](../tabs/how-to/access-teams
 > * Do not cache participant roles since the meeting organizer can change a role at any point in time.
 >
 > * Teams does not currently support large distribution lists or roster sizes of more than 350 participants for the `GetParticipant` API.
->
-> * Support for the Bot Framework SDK is coming soon.
 
-#### Request
+#### Query parameters
+
+|Value|Type|Required|Description|
+|---|---|----|---|
+|**meetingId**| string | Yes | The meeting identifier is available through Bot Invoke and Teams Client SDK.|
+|**participantId**| string | Yes | The participantId is the user ID. It is available in Tab SSO, Bot Invoke, and Teams Client SDK. It is highly recommended to get a participantId from the Tab SSO. |
+|**tenantId**| string | Yes | The tenantId is required for the tenant users. It is available in Tab SSO, Bot Invoke, and Teams Client SDK. It is highly recommended to get a tenantId from the Tab SSO. |
+
+#### Example
+
+# [C#/.NET](#tab/dotnet)
+
+```csharp
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+  TeamsMeetingParticipant participant = GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourTenantId");
+  TeamsChannelAccount member = participant.User;
+  MeetingParticipantInfo meetingInfo = participant.Meeting;
+  ConversationAccount conversation = participant.Conversation;
+
+  await turnContext.SendActivityAsync(MessageFactory.Text($"The participant role is: {meetingInfo.Role}"), cancellationToken);
+}
+
+```
+
+# [JavaScript](#tab/javascript)
+
+```typescript
+
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onMessage(async (context, next) => {
+            TeamsMeetingParticipant participant = GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourTenantId");
+            let member = participant.user;
+            let meetingInfo = participant.meeting;
+            let conversation = participant.conversation;
+            
+            await context.sendActivity(`The participant role is: '${meetingInfo.role}'`);
+            await next();
+        });
+    }
+}
+
+```
+
+# [JSON](#tab/json)
 
 ```http
 GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 ```
 
-*See* the [Bot Framework API reference](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true).
+The response body is:
 
-<!-- markdownlint-disable MD025 -->
-
-**C# Example**
-
-```csharp
-string meetingId = "meetingid?";
-string participantId = "participantidhere";
-var connectorClient = turnContext.TurnState.Get<IConnectorClient>();
-var creds = connectorClient.Credentials as AppCredentials;
-var bearerToken = await creds.GetTokenAsync().ConfigureAwait(false);
-var request = new HttpRequestMessage();
-request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
-request.Method = new HttpMethod("GET");
-request.RequestUri = new System.Uri(Path.Combine(connectorClient.BaseUri.OriginalString, $"/meetings/{meetingId}/participants/{participantId}"));
-HttpResponseMessage response = await (connectorClient as ServiceClient<ConnectorClient>).HttpClient.SendAsync(request, cancellationToken).ConfigureAwait(false);
-if (response.StatusCode == System.Net.HttpStatusCode.OK)
+```json
 {
-    var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-    var theObject = Rest.Serialization.SafeJsonConvert.DeserializeObject<WhateverObjectIsReturned>(content, connectorClient.DeserializationSettings);
+   "user":{
+      "id":"29:1JKiJGPAX9TTxtGxhVo0wLx_zwzo-gG8Z-X03306vBwi9p-xMTEbDXsT6KH7-0kkTS8cD-2zkrsoV6f5WJ6_aYw",
+      "aadObjectId":"e236c4bf-88b1-4f3a-b1d7-8891dfc332b5",
+      "name":"Bob Young",
+      "givenName":"Bob",
+      "surname":"Young",
+      "email":"Bob.young@microsoft.com",
+      "userPrincipalName":"Bob.young@microsoft.com",
+      "tenantId":"2fe477ab-0efc-4dfd-bde2-484374e2c373",
+      "userRole":"user"
+   },
+   "meeting":{
+      "role ":"Presenter",
+      "inMeeting":true
+   },
+   "conversation":{
+      "id":"<conversation id>",
+      "isGroup":true
+   }
+}
 ```
 
 * * *
-<!-- markdownlint-disable MD001 -->
 
-#### Query parameters
+#### Response codes
 
-**meetingId**. The meeting identifier is required.  
-**participantId**. The participant identifier is required.  
-**tenantId**. [Tenant id](/onedrive/find-your-office-365-tenant-id) of the participant. Required for tenant user.
+* **403**: The app is not allowed to get participant information.  This is the most common error response and is triggered if the app is not installed in the meeting. For example, if the app is disabled by tenant admin or blocked during live site migration.
+* **200**: Participant information successfully retrieved.
+* **401**: Invalid token.
+* **404**: Participant cannot be found.
+* **500**: The meeting has either expired (more than 60 days since the meeting ended) or the participant does not have permissions based on their role.
 
-#### Response Payload
-<!-- markdownlint-disable MD036 -->
 
-**Example 1**
+**Coming Soon**
 
-```json
-{
-   "meetingRole":"Presenter",
-   "conversation":{
-      "isGroup":true,
-      "id":"19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
-   }
-}
-```
+* **404**: The meeting has either expired or participant cannot be found.
 
-**meetingRole** can be *Organizer*, *Presenter*, or *Attendee*.
 
-**Example 2**
-
-```json
-{
-   "meetingRole":"Attendee",
-   "conversation":{
-      "isGroup":true,
-      "id":"19:meeting_OWIyYWVhZWMtM2ExMi00ZTc2LTg0OGEtYWNhMTM4MmZlZTNj@thread.v2"
-   }
-}
-```
-
-#### Response Codes
-
-**403**: the app is not allowed to get participant information. This will be the most common error response and is triggered when the app is not installed in the meeting such as when the app is disabled by tenant admin or blocked during live site mitigation.  
-**200**: participant information successfully retrieved  
-**401**: invalid token  
-**404**: the meeting doesn't exist or participant can’t be found.
-
-<!-- markdownlint-disable MD024 -->
 ### NotificationSignal API
 
 > [!NOTE]
 > When an in-meeting dialog is invoked, the same content will also be presented as a chat message.
 
-#### Request
-
-```http
-POST /v3/conversations/{conversationId}/activities
-```
-
 #### Query parameters
 
-**conversationId**: The conversation identifier. Required
+|Value|Type|Required|Description|
+|---|---|----|---|
+|**conversationId**| string | Yes | The conversation identifier is available as part of bot invoke |
 
-#### Request Payload
+#### Example
 
-# [JSON](#tab/json)
-
-```json
-{
-   "type":"message",
-   "text":"John Phillips assigned you a weekly todo",
-   "summary":"Don't forget to meet with Marketing next week",
-   "channelData":{
-      "notification":{
-         "alert":true,
-         "externalResourceUrl":"https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<TaskInfo.title>"
-      }
-   },
-   "replyToId":"1493070356924"
-}
-```
+> [!NOTE]
+>
+The `completionBotId` parameter of the `externalResourceUrl` is optional in the requested payload example. `Bot ID` is declared in the manifest and the bot receives a result object.
+> * The externalResourceUrl width and height parameters must be in pixels. Refer to the [design guidelines](design/designing-apps-in-meetings.md) to ensure the dimensions are within the allowed limits.
+> * The URL is the page loaded as an `<iframe>` in the in-meeting dialog. The domain must be in the app's `validDomains` array in your app manifest.
 
 # [C#/.NET](#tab/dotnet)
 
 ```csharp
 Activity activity = MessageFactory.Text("This is a meeting signal test");
-MeetingNotification notification = new MeetingNotification
-{
-    AlertInMeeting = true,
-    ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<TaskInfo.title>"
-};
+
 activity.ChannelData = new TeamsChannelData
-{
-    Notification = notification
-};
+  {
+    Notification = new NotificationInfo()
+                    {
+                        AlertInMeeting = true,
+                        ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
+                    }
+  };
 await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```
 
@@ -177,26 +182,45 @@ await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```javascript
 
 const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive card instead
-        replyActivity.channelData = {​​
-            notification: {​​
-                alertInMeeting: true,
-                externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>’
-            }​​
-        }​​;
-        await context.sendActivity(replyActivity);
+replyActivity.channelData = {
+    notification: {
+        alertInMeeting: true,
+        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID’
+    }
+};
+await context.sendActivity(replyActivity);
+```
+
+# [JSON](#tab/json)
+
+```http
+POST /v3/conversations/{conversationId}/activities
+
+{
+    "type": "message",
+    "text": "John Phillips assigned you a weekly todo",
+    "summary": "Don't forget to meet with Marketing next week",
+    "channelData": {
+        "notification": {
+            "alertInMeeting": true,
+            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
+        }
+    },
+    "replyToId": "1493070356924"
+}
 ```
 
 * * *
 
-> [!IMPORTANT]
-> The URL in the content bubble (taskInfo URL) must be included in the [valid domains](../resources/schema/manifest-schema.md#validdomains) list included in the Teams app manifest.
-
 #### Response Codes
 
-**201**: activity with signal is successfully sent  
-**401**: invalid token  
-**403**: the app is not allowed to send the signal. In this case, the payload should contain more detail error message. There can be many reasons: app disabled by tenant admin, blocked during live site mitigation, etc.  
-**404**: meeting chat doesn't exist  
+* **201**: activity with signal is successfully sent  
+* **401**: invalid token  
+* **201**: Activity with signal is successfully sent. 
+* **401**: Invalid token.
+* **403**: The app is unable to send the signal. This can happen due to various reasons such as the tenant admin disables the app, the app is blocked during live site migration, and so on. In this case, the payload contains a detailed error message. 
+* **404**: Meeting chat doesn't exist.
+ 
 
 ## Enable your app for Teams meetings
 
@@ -204,7 +228,11 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
 
 The meetings app capabilities are declared in your app manifest via the **configurableTabs** -> **scopes** and **context** arrays. *Scope* defines to whom and *context* defines where your app will be available.
 
+> [!NOTE]
+> Please use [Developer Preview manifest schema](../resources/schema/manifest-schema-dev-preview.md) to try this in your app manifest.
+
 ```json
+
 "configurableTabs": [
     {
       "configurationUrl": "https://contoso.com/teamstab/configure",
@@ -226,7 +254,7 @@ The meetings app capabilities are declared in your app manifest via the **config
 
 ### Context property
 
-The tab `context` and `scopes` properties work in harmony to allow you to determine where you want your app to appear. While tabs in the `personal` scope can only have one context, i.e., `personalTab`,  `team` or `groupchat` scoped tabs can have more than one context. The possible values for the context property are as follows:
+The tab `context` and `scopes` properties work in harmony to allow you to determine where you want your app to appear. Tabs in the `team` or `groupchat` scope can have more than one context. The possible values for the context property are as follows:
 
 * **channelTab**: a tab in the header of a team channel.
 * **privateChatTab**: a tab in the header of a group chat between a set of users not in the context of a team or meeting.
@@ -234,12 +262,17 @@ The tab `context` and `scopes` properties work in harmony to allow you to determ
 * **meetingDetailsTab**: a tab in the header of the meeting details view of the calendar.
 * **meetingSidePanel**: an in-meeting panel opened via the unified bar (u-bar).
 
+> [!NOTE]
+> "Context" property is currently not supported and thus will be ignored on mobile clients
+
 ## Configure your app for meeting scenarios
 
 > [!NOTE]
-> For your app to be visible in the tab gallery it needs to **support configurable tabs** and the **group chat scope**.
+> * For your app to be visible in the tab gallery it needs to **support configurable tabs** and the **group chat scope**.
+>
+> * Mobile clients support Tabs only in Pre and Post Meeting Surfaces. The in-meeting experiences (in-meeting dialog and tab) on mobile will be available soon. Follow the [guidance for tabs on mobile](../tabs/design/tabs-mobile.md) when creating your tabs for mobile.
 
-### Pre-meeting
+### Before a meeting
 
 Users with organizer and/or presenter roles add tabs to a meeting using the plus ➕ button in the meeting **Chat** and meeting **details** pages. Messaging extensions are added to via the ellipses/overflow menu &#x25CF;&#x25CF;&#x25CF; located beneath the compose message area in the chat. Bots are added to a meeting chat using the "**@**" key and selecting **Get bots**.
 
@@ -249,21 +282,26 @@ Users with organizer and/or presenter roles add tabs to a meeting using the plus
 
 > **NOTE**: Role assignments can be changed while a meeting is in progress.  *See* [Roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019). 
 
-### In-meeting
+### During a meeting
 
-#### **side-panel**
+#### **sidePanel**
 
-✔ In your app manifest add **sidePanel** to the **meetingSurfaces** array as described above.
+✔ In your app manifest add **sidePanel** to the **context** array as described above.
 
-✔ In the meeting as well as in all scenarios, the app will be rendered in an in-meeting tab that is 320px in width. Your tab must be optimized for this. *See*, [FrameContext interface](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)
+✔ In the meeting as well as in all scenarios, the app will be rendered in an in-meeting tab that is 320px in width. Your tab must be optimized for this. *See*, [FrameContext interface](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/framecontext?view=msteams-client-js-latest&preserve-view=true
+)
 
 ✔Refer to the [Teams SDK](../tabs/how-to/access-teams-context.md#user-context) to use the **userContext** API to route requests accordingly.
 
 ✔ Refer to the [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md). Authentication flow for tabs is very similar to the auth flow for websites. Thus, tabs can use OAuth 2.0 directly. *See also*, [Microsoft identity platform and OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
-#### **in-meeting dialog**
+✔ Message extension should work as expected when a user is in an in-meeting view and should be able to post compose message extension cards.
 
-✔ You must adhere to the [in-meeting dialog design guidelines](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md).
+✔ AppName in-meeting - Tooltip should state the app name in-meeting U-bar.
+
+#### **In-meeting dialog**
+
+✔ You must adhere to the [in-meeting dialog design guidelines](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).
 
 ✔ Refer to the [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md).
 
@@ -271,10 +309,15 @@ Users with organizer and/or presenter roles add tabs to a meeting using the plus
 
 ✔ As part of the notification request payload, include the URL where the content to be showcased is hosted.
 
-> [!NOTE]
-> These notifications are persistent in nature. You must invoke the [**submitTask()**](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) function to auto-dismiss after a user takes an action in the web-view. This is a requirement for app submission. *See also*, [Teams SDK: task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
+✔ In-meeting dialog must not use task module.
 
-### Post-meeting
+> [!NOTE]
+>
+> * These notifications are persistent in nature. You must invoke the [**submitTask()**](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) function to auto-dismiss after a user takes an action in the web-view. This is a requirement for app submission. *See also*, [Teams SDK: task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
+>
+> * If you want your app to support anonymous users, your initial invoke request payload must rely on the `from.id`  (ID of the user) request metadata in the `from` object, not the `from.aadObjectId` (Azure Active Directory ID of the user) request metadata. *See* [Using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [Create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+
+### After a meeting
 
 The post-meeting and pre-meeting configurations are equivalent.
 

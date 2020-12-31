@@ -13,6 +13,9 @@ Microsoft Teams apps bring key information, common tools, and trusted processes 
 
 Apps are how you extend Teams to fit your needs. Create something brand new for Teams or integrate an existing app.
 
+> [!div class="nextstepaction"]
+> [Start here](build-your-first-app/build-first-app-overview.md)
+
 ## What are Teams apps?
 
 Teams apps are a combination of [capabilities](concepts/capabilities-overview.md) and [entry points](concepts/extensibility-points.md). For example, people can chat with your app's *bot* (capability) in a *channel* (entry point).
@@ -34,7 +37,11 @@ Some apps are simple (send notifications), while others are complex (manage pati
 
 ### Bots
 
+<<<<<<< HEAD
 **Turn words into actions**: Conversations often result in the need to do something (generate an order, review my code, check ticket status, etc.). A [bot](bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.
+=======
+**Make it easier to multitask**: With [messaging extensions](messaging-extensions/what-are-messaging-extensions.md), you can quickly insert external content in a conversation. You also can act on a message, such as creating a help ticket based on the content of a channel post.
+>>>>>>> f08a406f36cd8a8faadbb678b0f27882916834d3
 
 :::image type="content" source="assets/images/overview-bots.png" alt-text="Conceptual representation of what bots look like in the Teams client." border="false":::
 
@@ -128,13 +135,10 @@ Some apps are simple (send notifications), while others are complex (manage pati
    :::column-end:::
 :::row-end:::
 
-:::row:::
-   :::column span="2":::
-
 ## Resources
 
 * [Add a Share to Teams button to your website](concepts/build-and-test/share-to-teams.md)
-* [Fluent Design System](https://fluentsite.z22.web.core.windows.net/)
+* <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI</a>
 * [Microsoft Teams JavaScript client SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
 * [Bot Framework SDK for JavaScript](https://github.com/Microsoft/botbuilder-js) and [Bot Framework SDK for .NET](https://github.com/Microsoft/botbuilder-dotnet/)
 * [Publish your app to an organization or AppSource](concepts/deploy-and-publish/overview.md)

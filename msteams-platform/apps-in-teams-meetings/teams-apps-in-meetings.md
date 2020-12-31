@@ -1,15 +1,16 @@
 ---
+<<<<<<< HEAD
 title: Apps in Teams meetings 
+=======
+title: Apps in teams meetings 
+>>>>>>> f08a406f36cd8a8faadbb678b0f27882916834d3
 author: laujan
 description: overview of apps in Teams meetings based on participant and user role
 ms.topic: overview
 ms.author: lajanuar
 keywords: teams apps meetings user participant role api  
 ---
-# Apps in Teams meetings (Preview)
-
->[!IMPORTANT]
-> Features included in Microsoft Teams preview are provided for early-access, testing, and feedback purposes only. They may undergo changes before becoming available in the public release and should not be used in production applications.
+# Apps in Teams meetings
 
 Meetings are key to productivity in Teams. They enable collaboration, partnership, informed communication, and shared feedback in an inclusive and active forum. As a developer, you can create [configurable tab](../tabs/what-are-tabs.md#how-do-tabs-work), [bot](../bots/what-are-bots.md), and [message extension](../messaging-extensions/what-are-messaging-extensions.md) applications to enhance and enrich a Teams meeting experience. Meeting users can access apps, via the tab gallery, to enable relevant scenarios such as pre-staging a Kanban board, launching an in-meeting actionable dialog, or creating a post-meeting poll. Your meeting app can deliver a user experience for each stage of the meeting lifecycle based upon attendee status.
 
@@ -26,6 +27,9 @@ Teams’ meeting app extensibility centers on three concepts:
 
 > [!IMPORTANT]
 > As with all tab applications, Your app will need to follow the Teams [SSO authentication flow](../tabs/how-to/authentication/auth-aad-sso.md) for tabs.
+
+> [!NOTE]
+> Mobile clients support Tabs only in Pre and Post Meeting Surfaces. The In-meeting experiences (in-meeting dialog and panel) on mobile will be available soon
 
 ### Pre-meeting app experience
 
@@ -45,6 +49,8 @@ Teams’ meeting app extensibility centers on three concepts:
 
 ✔ Tab apps are accessible in meetings **Details** and **Chats** pages using a plus icon (➕) button.|
 
+✔  Tab layout should be in an organized state if there are more than ten polls or surveys.
+
 ### In-meeting app experience
 
 ✔ Meeting apps will be hosted in the top upper bar of the chat window and as in-meeting tab experience via the in-meeting tab. When users add a tab to a meeting through the tab gallery, apps that are **during meeting** experiences will be surfaced.
@@ -53,12 +59,14 @@ Teams’ meeting app extensibility centers on three concepts:
 
 ✔ When loaded in the context of a meeting, apps will be able to leverage the Teams Client SDK to access the `meetingId`, `userMri`, and `frameContext` to appropriately render the experience.
 
-✔ For an app can be visible in a Teams meeting in two areas:
+✔ Exporting a result of a survey or polls should notify the users stating, ‘results successfully downloaded’.
+
+✔ For an app to be visible in a Teams meeting in two areas:
 
 &emsp;&emsp;&#9679; **Side panel**. </br>
 
 > [!NOTE]
-> If your _app manifest_ specifies that your tab is [optimized for side panel](create-apps-for-teams-meetings.md#in-meeting), that is where it will be displayed. It can also be part of a share-tray experience, subject to specified design guidelines.
+> If your _app manifest_ specifies that your tab is [optimized for side panel](create-apps-for-teams-meetings.md#during-a-meeting), that is where it will be displayed. It can also be part of a share-tray experience, subject to specified design guidelines.
 
 &emsp;&emsp;&#9679; **In-meeting dialog**. Use the in-meeting dialog to showcase actionable content for meeting participants. *See* [Create Apps for Teams meetings](create-apps-for-teams-meetings.md).
 
@@ -78,7 +86,11 @@ Teams’ meeting app extensibility centers on three concepts:
 
 ![post meeting view](../assets/images/apps-in-meetings/PostMeeting.png)
 
-The post-meeting app scenario is similar to the current post-meeting experience with the added benefit of having tabs exist within the surface. Permissioned users can add apps from the tab gallery to a meeting via the **Details** tab on the Teams scheduling form and the meeting **Chat** tab in an existing meeting.
+✔ The post-meeting app scenario is similar to the current post-meeting experience with the added benefit of having tabs that exist within the surface. 
+
+✔ Permissioned users can add apps from the tab gallery to a meeting via the **Details** tab on the Teams scheduling form and the meeting **Chat** tab in an existing meeting.
+
+✔  Tab layout should be in an organized state if there are more than ten polls or surveys.
 
 ### Bots
 

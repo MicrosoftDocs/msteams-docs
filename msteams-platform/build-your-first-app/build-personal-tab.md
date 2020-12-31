@@ -1,12 +1,12 @@
 ---
-title: Build a Teams personal tab
+title: Get started - Build a personal tab
 author: heath-hamilton
-description: Learn how to build a personal tab for your first Microsoft Teams app.
+description: Quickly create a Microsoft Teams personal tab using the Microsoft Teams Toolkit.
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 11/03/2020
 ms.topic: tutorial
 ---
-# Build a Teams personal tab
+# Build a personal tab for Microsoft Teams
 
 Tabs are a simple way to surface content in your app by essentially embedding a webpage in Teams.
 
@@ -24,40 +24,26 @@ People in your organization have trouble finding basic contact information for i
 
 > [!div class="checklist"]
 >
-> * Identify some of the app manifest properties and scaffolding relevant to personal tabs
+> * Identify some of the app configurations and scaffolding relevant to personal tabs
 > * Create tab content
 > * Update a tab's color theme based on user preference
 
 ## 1. Identify relevant app project components
 
-Much of the app manifest and scaffolding are set up automatically when you create your project with the Teams Toolkit. Let's look at the main components for building a personal tab.
+Much of the app configurations and scaffolding are set up automatically when you create your project with the Teams Toolkit. Let's look at the main components for building a personal tab.
 
-### App manifest
+### App configurations
 
-The following snippet from the app manifest (the `manifest.json` file in your project's `.publish` directory) shows [`staticTabs`](../resources/schema/manifest-schema.md#statictabs), which includes properties and default values relevant to personal tabs.
+You can view and update your app configurations using App Studio, which is included in the toolkit.
 
-```JSON
-"staticTabs": [
-    {
-        "entityId": "index",
-        "name": "Personal Tab",
-        "contentUrl": "{baseUrl0}/tab",
-        "scopes": [ "personal" ]
-    }
-],
-```
-
-* `entityId`: A unique identifier for the page displayed by the tab.
-* `name`: The tab's display name (for example, "My Contacts").
-* `contentUrl`: The host URL the tab content page (must be HTTPS).
-* `scopes`: Specifies the tab is for personal use only.
+During setup, the toolkit initially configured your tab content page, which is where you display your primary content. In the toolkit, go to **App Studio** and select **Tabs** to see the configuration.
 
 ### App scaffolding
 
-The app scaffolding provides the components for rendering your tab in Teams. There's a lot you can work with, but for now you only need to focus on the following:
+The app scaffolding provides the components for rendering your personal tab in Teams. There's a lot you can work with, but for now you only need to focus on the following:
 
-* `Tab.js` file in the `src/components` directory of your project
-* Microsoft Teams JavaScript client SDK, which comes pre-loaded in your project's front-end components
+* `Tab.js` file in the `src/components` directory of your project. This is for rendering your tab content page.
+* Microsoft Teams JavaScript client SDK, which comes pre-loaded in your project's front-end components.
 
 ## 2. Customize your tab content page
 
@@ -114,7 +100,7 @@ The [Teams JavaScript client SDK](https://docs.microsoft.com/javascript/api/@mic
 
 ### Get context about the Teams client
 
-In your `Tab.js` file, there's a `microsoftTeams.getContext()` call that provides some [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) about, among other details, the configured client theme. Thanks to the app scaffolding, use this code as is to access the `context` interface and its properties.
+In your `Tab.js` file, there's a `microsoftTeams.getContext()` call that provides some [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) about, among other details, the configured client theme. Thanks to the app scaffolding, use this code as is to access the `context` interface and its properties.
 
 ```JavaScript
 componentDidMount(){
@@ -187,8 +173,13 @@ Congratulations! You have a Teams app with a personal tab that makes it easier t
 * [Embed content from an existing web app or webpage](../tabs/how-to/tab-requirements.md): We showed you how to create new content for a personal tab, but you can also load content from an external URL.
 * [Create a seamless experience for your tab](../tabs/design/tabs.md): See the recommended guidelines for designing Teams tabs.
 * [Build tabs for mobile](../tabs/design/tabs-mobile.md): Understand how to develop tabs for phones and tablets.
+<<<<<<< HEAD
 * [Integrate with the Microsoft Graph API](https://docs.microsoft.com/graph/teams-concept-overview)
 * [Create a tab without the toolkit](../tabs/quickstarts/create-channel-group-tab-node-yeoman.md)
+=======
+* [Utilize Teams data with the Microsoft Graph API](https://docs.microsoft.com/graph/teams-concept-overview)
+* [Create a tab without the toolkit](../tabs/how-to/add-tab.md)
+>>>>>>> f08a406f36cd8a8faadbb678b0f27882916834d3
 
 ## Next lesson
 

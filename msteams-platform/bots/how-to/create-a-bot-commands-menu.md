@@ -142,6 +142,8 @@ Another valid approach for creating a command menu is to create it directly in t
 
 Bots in a group or channel respond only when they are mentioned ("@botname") in a message. As a result, every message received by a bot when in a group or channel scope will contain its own name in the message text returned. You need to ensure your message parsing handles that before handling the command being returned.
 
+> **Note** For handling the commands in code, they are sent to your bot as a regular message. So you need to handle them as you would do for any other message from your users. They are purely a UI treatment that inserts pre-configured text into the text box. The user must then send that text as they would do for any other message.
+
 # [C#/.NET](#tab/dotnet)
 
 You can parse out the **\@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework — a method of the `Activity` class named `RemoveRecipientMention`.
@@ -174,3 +176,5 @@ modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 * **Keep it simple**: The bot menu is meant to present the key capabilities of your bot.
 * **Keep it short**: Menu options shouldn’t be extremely long and complex natural language statements — they should be simple commands.
 * **Keep it invokable**: Bot menu actions/commands should always be available, regardless of the state of the conversation or the dialog the bot is in.
+
+> **Note** If you remove any commands from your manifest, you will need to redeploy your app for the changes to take effect. In general, any changes to the manifest require this.

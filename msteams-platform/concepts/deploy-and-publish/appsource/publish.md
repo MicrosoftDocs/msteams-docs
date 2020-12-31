@@ -1,8 +1,9 @@
 ---
 title: Microsoft Teams app approval submission process guidance
 description: Describes the submission approval process for getting your app published to the Microsoft Teams app store
-keywords: teams publish store office publishing publish AppSource partner center account verification
+keywords: teams publish store office publishing publish AppSource partner center account verification apps account not publish eligible 
 ---
+
 # Submit your app to AppSource
 
 ## Teams app submission
@@ -10,13 +11,14 @@ keywords: teams publish store office publishing publish AppSource partner center
 Publishing  your app to [AppSource](https://appsource.microsoft.com) makes it available in the Teams app catalog and on the web. At a high level, the process for submitting your app to AppSource is:
 
 1. Develop your app following our [design guidelines](~/concepts/design/understand-use-cases.md). Tabs should follow our [tab design guidelines](~/tabs/design/tabs.md). Bots should follow the [bot design guidelines](~/bots/design/bots.md).
-1. Ensure your app meets the app [validation policies](/legal/marketplace/certification-policies) for Microsoft Teams.
+1. Ensure your app meets the app [validation policies](/legal/marketplace/certification-policies) for Microsoft Teams. 
+1. Self test your app with the [Manifest validation tool](prepare/submission-checklist.md#teams-app-validation-tool) .
 1. [Set up a developer account](/office/dev/store/open-a-developer-account) in [Partner Center](https://support.microsoft.com/help/4499930/partner-center-overview). *See also* [How do I create a Partner Center account](#how-do-i-create-a-partner-center-account) in the FAQ section, below.
-1. Prepare your app for submission by following our [submission checklist](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md).
-1. Review our [tips for a successful app submission](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md).
+1. Prepare your app for submission by following our [submission checklist](prepare/submission-checklist.md).
+1. Review the [most failed test cases for a quicker app quality approval](prepare/frequently-failed-cases.md).
 1. Submit your package to [AppSource through Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource).
 1. Track the approval process on your Partner Center dashboard. *See* [Partner Center Overview](https://support.microsoft.com/help/4499930/partner-center-overview).
-1. Post submission — review our guidance for [Maintaining and supporting your published app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md).
+1. Post submission — review our guidance for [Maintaining and supporting your published app](post-publish/overview.md).
 
 >[!NOTE]
 >
@@ -71,6 +73,12 @@ During the account verification process the status of each required step —  Em
 
 ![Partner Center verification error](../../../assets/images/partner-center-acct-verification-error.png)
 
+## What is verified in Partner Center account verification process and how to respond?
+There are three verification areas - Email Ownership, Employment and Business. Please see the details of [What is verified and how to respond](/partner-center/verification-responses#what-is-verified-and-how-to-respond)
+If you are the primary contact (Global admin or Account admin), we recommend that you go to your Partner Profile to monitor verification status and track progress.
+
+Once the verification process is complete, the verification status of your enrollment on the profile page will change from *pending* to *authorized* and the process steps with status, displayed on that page, will disappear. The primary contact will receive an email from Microsoft within a few business days after the verification is completed.
+
 ## My account Verification status has not advanced beyond Email Ownership in Partner Center. How should I proceed?
 
 During the **Email Ownership** verification process, a verification email is sent to the primary contact email address. Please check your primary contact inbox for an email  from **maccount@<span>microsoft</span>.com** with the subject  line *Action needed: Verify your email account with Microsoft*, requesting that you complete the email verification process. The verification email will be sent to the email address listed  in your account settings page in Partner Center.
@@ -117,6 +125,19 @@ Please send an email to **<teamsubm@microsoft.com>** with the following details:
     * Support ticket number:
     * Your seller ID:
     * A screen shot of the issue (if possible):
+    
+## App category mapping
+
+| Teams Category       | PC Categories  |
+|:---------------------|:---------------|
+| Analytics and BI | Analytics, Data Visualization and BI |
+| Developer and IT | Developer Tools, IT Admin |
+| Education | Education |
+| Human resources | Human Resources and Recruiting |
+| Productivity | Content Management, Files and documents, Productivity, Training and Tutorials, and Utilities |
+| Project management | Communication, Project Management, Workflow and Business Management |
+| Sales and support | Customer and Contact Management, Customer Support, Financial Management, Sales and Marketing |
+| Social and fun | Image and Video Galleries, Lifestyle, News and Weather, Social, Travel and Navigation |
 
 >
 > [!div class="nextstepaction"]

@@ -13,6 +13,9 @@ If your bot's sole purpose is to deliver notification to users and is not conver
 * Users cannot message your notification-only bot.
 * Users cannot @mention the bot.
 
+> [!NOTE]
+> The bot-only apps will surface in the personal app tray in both cases: `isNotificationOnly: true` or `isNotificationOnly: false`.
+
 ## App manifest
 
 To enable this, set `isNotificationOnly` to `true`.

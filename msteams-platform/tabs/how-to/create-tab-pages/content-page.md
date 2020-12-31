@@ -22,7 +22,7 @@ Your tab's overall objective should be to provide access to meaningful and engag
 
 ## Integrate your code with Teams
 
-For your page to display in Teams, you must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) and include a call to `microsoftTeams.initialize()` after your page loads. That is how your page and the Teams client communicate:
+For your page to display in Teams, you must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latestadd &preserve-view=true) and include a call to `microsoftTeams.initialize()` after your page loads. That is how your page and the Teams client communicate:
 
 ```html
 <!DOCTYPE html>
@@ -46,7 +46,7 @@ For your page to display in Teams, you must include the [Microsoft Teams JavaScr
 
 ### Using the SDK to interact with Teams
 
-The [Teams client JavaScript SDK](~/tabs/how-to/using-teams-client-sdk.md) provides many additional functions you may find useful while developer your content page.
+The [Teams client JavaScript SDK](~/tabs/how-to/using-teams-client-sdk.md) provides many additional functions you may find useful while developing your content page.
 
 ### Deep links
 
@@ -65,7 +65,9 @@ Ensure that the all URL domains used in your tabs are included in the `validDoma
 Starting with [manifest schema v1.7](../../../resources/schema/manifest-schema.md), you can provide a [native loading indicator](../../../resources/schema/manifest-schema.md#showloadingindicator) wherever your web content is loaded in Teams, e.g., [tab content page](#integrate-your-code-with-teams), [configuration page](configuration-page.md), [removal page](removal-page.md) and [task modules in tabs](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 > [!NOTE]
-> If you indicate  `"showLoadingIndicator : true`  in your app manifest, then all tab configuration, content, and removal pages and all iframe-based task modules must follow the mandatory protocol, below:
+> 1. The native loading indicator is not yet supported on mobile devices.
+> 2. If you indicate  `"showLoadingIndicator : true`  in your app manifest, then all tab configuration, content, and removal pages and all iframe-based task modules must follow the mandatory protocol, below:
+
 
 1. To show the loading indicator, add `"showLoadingIndicator": true` to your manifest. 
 2. Remember to call `microsoftTeams.initialize();`.

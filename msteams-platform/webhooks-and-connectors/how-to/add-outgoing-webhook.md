@@ -34,6 +34,12 @@ Outgoing webhooks are scoped to the `team` level and are visible to all members 
 
 ### 2. Create a method to verify the outgoing webhook HMAC token
 
+#### HMAC signature for testing with code example
+
+Using example of inbound message and id : "contoso" of  SigningKeyDictionary of {"contoso", "vqF0En+Z0ucuRTM/01o2GuhMH3hKKk/N2bOmlM31zaA=" }.
+
+Use the value "HMAC 03TCao0i55H1eVKUusZOTZRjtvYTs+mO41mPL+R1e1U=" in the authorization of request header.
+
 To ensure that your service is receiving calls only from actual Teams clients, Teams provides an HMAC Code in the HTTP `hmac` header that should always be  included in your authentication protocol.
 
 Your code should always validate the HMAC signature included in the request:

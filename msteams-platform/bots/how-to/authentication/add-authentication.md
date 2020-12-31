@@ -2,7 +2,7 @@
 title: Add authentication to your Teams bot
 author: clearab
 description: How to add OAuth authentication to a bot in Microsoft Teams.
-ms.topic: overview
+ms.topic: how-to
 ms.author: lajanuar
 ---
 
@@ -416,7 +416,7 @@ This manifest contains information needed by Microsoft Teams to connect with the
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "version": "1.0.0",
   "id": "",
@@ -561,16 +561,16 @@ Within the following dialog step, check for the presence of a token in the resul
 ---
 
 > [!div class="nextstepaction"]
-> [Learn about adding adding authentication via Azure Bot Service](https://aka.ms/azure-bot-add-authentication)
+> [Learn about adding authentication via Azure Bot Service](https://aka.ms/azure-bot-add-authentication)
 
 <!-- Footnote-style links -->
 
 [azure-portal]: https://ms.portal.azure.com
 
-[concept-basics]: https://docs.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0
-[concept-state]: https://docs.microsoft.com/azure/bot-service/bot-builder-concept-state?view=azure-bot-service-4.0
-[concept-dialogs]: https://docs.microsoft.com/azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0
-[simple-dialog]: https://docs.microsoft.com/azure/bot-service/bot-builder-dialog-manage-conversation-flow?view=azure-bot-service-4.0
+[concept-basics]: https://docs.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true
+[concept-state]: https://docs.microsoft.com/azure/bot-service/bot-builder-concept-state?view=azure-bot-service-4.0&preserve-view=true
+[concept-dialogs]: https://docs.microsoft.com/azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0&preserve-view=true
+[simple-dialog]: https://docs.microsoft.com/azure/bot-service/bot-builder-dialog-manage-conversation-flow?view=azure-bot-service-4.0&preserve-view=true
 
 [teams-auth-bot-cs]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth
 

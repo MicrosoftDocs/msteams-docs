@@ -1,7 +1,7 @@
 ---
 title: Post publishing 
 description: What to do after you have published your app 
-keywords: teams post publish update certificate
+keywords: teams post publish update certification app update manifest 
 ---
 
 # Maintain and support your published app 
@@ -14,7 +14,7 @@ The [Microsoft 365 App Compliance Program](./application-certification.md), is a
 
 ## Add a download button to your product site
 
-If your app is in the Microsoft Teams store, you can generate a link for your website that launches Teams and shows a consent and installation dialog for users to add the app.
+If your app is in the Microsoft Teams global store, you can generate a link for your website that launches Teams and shows a consent and installation dialog for users to add the app.
 The format is:  `https://teams.microsoft.com/l/app/<appId>` where appID is the GUID they declare in the submitted manifest.
 Example: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd` is the link to install Trello.
 
@@ -22,7 +22,7 @@ Example: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd
 
 * Do not use the *Add a new app* button to resubmit your app. Use the tile for your app on the Overview tab instead.
 * The appId in the updated manifest should be the same as in the current manifest, with an incremented version number.
-* Increment your version number in the manifest if you make any manifest changes to your submission.
+* Increment your version number in the manifest if you make any changes to your submission including app name or any metadata in the manifest.
 * Updated submissions are required to undergo a new review and validation process.
 
 ## App updates and the user consent flow
@@ -41,3 +41,13 @@ When a user installs your application one of the first things they do is consent
 > * A new configurable group/channel tab was added.
 > * The `webApplicationInfo` values changed.
 >
+
+### Images of user consent flow:
+
+**Set up a connector** —  This screen will appear only for Teams users.
+
+![Consent flow setup a connector diagram](../../../../assets/images/connector-teams-consentflow.png)
+
+**User consent flow** - This screen is common for both personal and group scope. Here, select the **Consent on behalf of your organization** checkbox and choose **Accept**.
+
+![Permissions diagram](../../../../assets/images/user-consent-flow.png)

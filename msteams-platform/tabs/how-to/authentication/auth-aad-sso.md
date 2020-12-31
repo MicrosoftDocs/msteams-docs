@@ -1,12 +1,12 @@
 ---
-title: Single Sign-On
+title: Single sign-on support for tabs
 description: Describes single sign-on (SSO)
 keywords: teams authentication SSO AAD single sign-on api
 ---
 
-# Single Sign-On (SSO)
+# Single sign-on (SSO) support for tabs
 
-Users sign in to Microsoft Teams via their work, school, or Microsoft accounts (Office 365, Outlook, etc). You can take advantage of this by allowing a single sign-on to authorize your Microsoft Teams tab (or task module) on desktop or mobile clients. Thus, if a user consents to use your app, they won’t have to consent again on another device — they will signed in be automatically. In addition, we prefetch your access token to improve performance and load times.
+Users sign in to Microsoft Teams via their work, school, or Microsoft accounts (Office 365, Outlook, etc). You can take advantage of this by allowing a single sign-on to authorize your Microsoft Teams tab (or task module) on desktop or mobile clients. Thus, if a user consents to use your app, they won’t have to consent again on another device — they will be signed in automatically. In addition, we prefetch your access token to improve performance and load times.
 
 >[!NOTE]
 > **Teams mobile client versions supporting SSO**  
@@ -16,6 +16,12 @@ Users sign in to Microsoft Teams via their work, school, or Microsoft accounts (
 > ✔Teams for iOS (_Version_: 2.0.18 and later)  
 >
 > For the best experience with Teams, please use the latest version of iOS and Android.
+
+>[!NOTE]
+> **Quickstart**  
+>
+> The simplest path to getting started with tab SSO is with the Microsoft Teams Toolkit for Visual Studio Code. [Learn more](../../../toolkit/visual-studio-code-tab-sso.md)
+
 
 ## How SSO works at runtime
 
@@ -85,7 +91,7 @@ This section describes the tasks involved in creating a Teams tab that uses SSO.
 11. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. Select *Add a client application*. Enter each of the following client IDs and select the authorized scope you created in the previous step:
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Teams mobile/desktop application)
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Teams web application)
-12. Navigate to **API Permissions**. Select *Add a permission* > *Microsoft Graph* > *Delegated permissions*, then add the following permissions:
+12. Navigate to **API Permissions**. Select *Add a permission* > *Microsoft Graph* > *Delegated permissions*, then add the following permissions from Microsoft Graph API:
     * User.Read (enabled by default)
     * email
     * offline_access
@@ -105,7 +111,7 @@ This section describes the tasks involved in creating a Teams tab that uses SSO.
     ✔ ID Token  
     ✔ Access Token  
     
-Congratulations! You have completed the app registration prerequsities to proceed with your tab SSO app.     
+Congratulations! You have completed the app registration prerequisites to proceed with your tab SSO app.     
 
 > [!NOTE]
 >
@@ -142,7 +148,7 @@ Here's what the authentication API looks like:
 ```javascript
 var authTokenRequest = {
   successCallback: function(result) { console.log("Success: " + result); },
-  failureCallback: function(error) { console.log("Failure: " + error); },
+  failureCallback: function(error) { console.log("Failure: " + error); }
 };
 microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```
@@ -157,7 +163,7 @@ Once you've received the access token in the success callback you can decode the
 
 ## Sample code
 
-Visit our sample application: [MSTeams Tabs SSO Sample - Nodejs](https://github.com/OfficeDev/msteams-tabs-sso-sample-nodejs)
+Visit our sample application: [MSTeams PnP SSO Sample](https://github.com/pnp/teams-dev-samples/tree/master/samples/tab-sso)
 
 The README explains how to set up your development environment and how to configure your application in Azure AD. You can also find further information on how the sample is structured in the [app structure section](https://github.com/OfficeDev/msteams-tabs-sso-sample-nodejs#app-structure) to help familiarize yourself with the codebase.
 

@@ -41,7 +41,7 @@ Your card can contain an inline image by including a link to your publicly avail
 
 Images are scaled up or down in size while maintaining the aspect ratio to cover the image area, and then cropped from center to achieve the appropriate aspect ratio for the card.
 
-Images must be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF is not officially supported.
+Images must be at most 1024×1024 in PNG, JPEG, or GIF format; animated GIF is not officially supported.
 
 | Property | Type  | Description |
 | --- | --- | --- |
@@ -229,8 +229,8 @@ A card that typically contains a single large image, one or more buttons and tex
 
 | Property | Type  | Description |
 | --- | --- | --- |
-| title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
-| subtitle | Rich text | Subtitle of the card. Maximum 2 lines; formatting not currently supported |
+| title | Rich text | Title of the card. Maximum 2 lines. |
+| subtitle | Rich text | Subtitle of the card. Maximum 2 lines.|
 | text | Rich text | Text appears just below the subtitle; see [Card formatting](~/task-modules-and-cards/cards/cards-format.md) for formatting options |
 | images | Array of images | Image displayed at top of card. Aspect ratio 16:9 |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
@@ -275,7 +275,7 @@ A card that typically contains a single large image, one or more buttons and tex
 Bot Framework reference:
 
 * [Hero card Node](https://docs.microsoft.com/javascript/api/botframework-schema/herocard)
-* [Hero card C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.herocard?view=botbuilder-dotnet-3.0)
+* [Hero card C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.herocard?view=botbuilder-dotnet-3.0&preserve-view=true)
 
 ## List card
 
@@ -292,10 +292,9 @@ The list card has been added by Teams to provide functions beyond what the list 
 
 | Property | Type  | Description |
 | --- | --- | --- |
-| title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
+| title | Rich text | Title of the card. Maximum 2 lines.|
 | items | Array of list items  ||
-| buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6. Does not render on mobile. |
-|
+| buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6. |
 
 ### Example List card
 
@@ -368,8 +367,8 @@ The Office 365 Connector card provides a flexible layout with multiple sections,
 
 | Property | Type  | Description |
 | --- | --- | --- |
-| title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
-| summary | Rich text | Summary of the card. Maximum 2 lines; formatting not currently supported |
+| title | Rich text | Title of the card. Maximum 2 lines. |
+| summary | Rich text | Summary of the card. Maximum 2 lines. |
 | text | Rich text | Text appears just below the subtitle; see [Card formatting](~/task-modules-and-cards/cards/cards-format.md) for formatting options |
 | themeColor | HEX string | color that overrides the accentColor provided from the application manifest |
 
@@ -486,8 +485,8 @@ A card that enables a bot to provide a receipt to the user. It typically contain
 
 Bot Framework reference:
 
-* [Receipt card Node](https://docs.microsoft.com/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest)
-* [Receipt card C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.receiptcard?view=botbuilder-dotnet-3.0)
+* [Receipt card Node](https://docs.microsoft.com/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
+* [Receipt card C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.receiptcard?view=botbuilder-dotnet-3.0&preserve-view=true)
 
 ## Signin card
 
@@ -506,8 +505,8 @@ The *signin action* can be used from any card in Teams, not just the signin card
 
 Bot Framework reference:
 
-* [Signin card Node](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest)
-* [Signin card C#](/dotnet/api/microsoft.bot.connector.signincard?view=botbuilder-dotnet-3.0)
+* [Signin card Node](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
+* [Signin card C#](/dotnet/api/microsoft.bot.connector.signincard?view=botbuilder-dotnet-3.0&preserve-view=true)
 
 ## Thumbnail card
 
@@ -526,8 +525,8 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 
 | Property | Type  | Description |
 | --- | --- | --- |
-| title | Rich text | Title of the card. Maximum 2 lines; formatting not currently supported |
-| subtitle | Rich text | Subtitle of the card. Maximum 2 lines; formatting not currently supported |
+| title | Rich text | Title of the card. Maximum 2 lines.|
+| subtitle | Rich text | Subtitle of the card. Maximum 2 lines.|
 | text | Rich text | Text appears just below the subtitle; see [Card formatting](~/task-modules-and-cards/cards/cards-format.md) for formatting options |
 | images | Array of images | Image displayed at top of card. Aspect ratio 1:1 (square) |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6 |
@@ -581,8 +580,8 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 
 Bot Framework reference:
 
-* [Thumbnail card Node](https://docs.microsoft.com/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest)
-* [Thumbnail card C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.thumbnailcard?view=botbuilder-dotnet-3.0)
+* [Thumbnail card Node](https://docs.microsoft.com/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest&preserve-view=true)
+* [Thumbnail card C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.thumbnailcard?view=botbuilder-dotnet-3.0&preserve-view=true)
 
 ## Card collections
 
@@ -592,7 +591,7 @@ Card collections are provided by the Bot Framework: `builder.AttachmentLayout.ca
 
 ## Carousel collection
 
-The [carousel layout](/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card-attachments?view=azure-bot-service-3.0) shows a carousel of cards, optionally with associated action buttons.
+The [carousel layout](/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card-attachments?view=azure-bot-service-3.0&preserve-view=true) shows a carousel of cards, optionally with associated action buttons.
 
 ### Support for Carousel collections
 
