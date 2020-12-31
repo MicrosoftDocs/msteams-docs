@@ -137,7 +137,7 @@ The response body is:
 
 * **404**: The meeting has either expired or participant cannot be found.
 
-<!-- markdownlint-disable MD024 -->
+
 ### NotificationSignal API
 
 > [!NOTE]
@@ -216,7 +216,7 @@ POST /v3/conversations/{conversationId}/activities
 * **401**: Invalid token.
 * **403**: The app is unable to send the signal. This can happen due to various reasons such as the tenant admin disables the app, the app is blocked during live site migration, and so on. In this case, the payload contains a detailed error message. 
 * **404**: Meeting chat doesn't exist.
-* **404**: meeting chat doesn't exist  
+ 
 
 ## Enable your app for Teams meetings
 
