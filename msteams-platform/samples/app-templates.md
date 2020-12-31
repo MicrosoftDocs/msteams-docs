@@ -100,6 +100,14 @@ Checklist is a custom Microsoft Teams [messaging extension](../messaging-extensi
 :::column-end:::
 :::row-end:::
 
+## Classroom Drop-in &#9734;
+
+Classroom Drop-in is a Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)-based app that enables system leaders to find class teams (virtual classrooms) and add themselves or others to these class teams for a specified drop-in period, as needed. The app built using Microsoft [Power Apps](/powerapps/powerapps-overview) and [Power Automate](/power-automate/getting-started), deeply integrates with Microsoft Teams to ensure educational institutes can optimize their operations in a hybrid learning environment by providing access to relevant stakeholders for class teams per business requirements.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-classroom-dropin)
+
+![Classroom drop-in request](../assets/images/classroom-drop-in-request.png)
+
 ## Company Communicator
 
 The Company Communicator app enables corporate teams to create and send messages intended for multiple teams or large number of employees over chat allowing organization to reach employees right where they collaborate. Utilize this template for multiple scenarios such as new initiative announcements, employee onboarding, modern learning and development or organization-wide broadcasts.
@@ -147,7 +155,7 @@ This app also enables easy sharing of images/GIFs/stickers across teams without 
 
 ![Stickers app](../assets/images/stickers.png)
 
-## Employee Ideas
+## Employee Ideas &#9734;
 
 The Employee Ideas app is the PowerApps version of the Azure based Great Ideas app template. The app enables the Teams users to set up and configure an idea campaign. An idea campaign is a category for grouping ideas around common themes.
 
@@ -419,6 +427,22 @@ Quick Responses is a Microsoft Teams app that delivers a robust solution for eff
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-quickresponses)
 
 ![Sample view of responses](../assets/images/quick-responses.png)
+
+## Rapid Assist &#9734;
+
+Rapid Assist is a Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) based app that allows customer facing associates to rapidly connect with the experts to get quick answers, search for information, follow up open requests, and allow experts to receive notifications to quickly get on a call to help answer questions. The app built using Microsoft [Power Apps](/powerapps/powerapps-overview) and [Power Automate](/power-automate/getting-started), deeply integrates with Microsoft Teams to enable organizations to easily connect frontline workers with corporate liaisons to resolve customer queries and deliver a great customer experience. 
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-rapid-assist)
+
+
+:::row:::
+   :::column span="":::
+     ![End user request interface](../assets/images/EndUserHome.png)
+   :::column-end:::
+   :::column span="":::
+      ![Expert request view](../assets/images/ExpertViewRequests.png)
+   :::column-end:::
+:::row-end:::
 
 ## Reflect 
 
