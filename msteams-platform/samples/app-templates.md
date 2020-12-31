@@ -384,6 +384,22 @@ Quick Responses is a Microsoft Teams app that delivers a robust solution for eff
 
 ![Sample view of responses](../assets/images/quick-responses.png)
 
+## Rapid Assist &#9734;
+
+Rapid Assist is a Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) based app that allows customer facing associates to rapidly connect with the experts to get quick answers, search for information, follow up open requests, and allow experts to receive notifications to quickly get on a call to help answer questions. The app built using Microsoft [Power Apps](/powerapps/powerapps-overview) and [Power Automate](/power-automate/getting-started), deeply integrates with Microsoft Teams to enable organizations to easily connect frontline workers with corporate liaisons to resolve customer queries and deliver a great customer experience. 
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-rapid-assist/)
+
+
+:::row:::
+   :::column span="":::
+     ![End user request interface](../assets/images/EndUserHome.png)
+   :::column-end:::
+   :::column span="":::
+      ![Expert request view](../assets/images/ExpertViewRequests.png)
+   :::column-end:::
+:::row-end:::
+
 ## Reflect &#9734;
 
 Reflect is a custom Microsoft Teams [messaging extension](../messaging-extensions/what-are-messaging-extensions.md) app that provides a safe and inclusive resource for your team members to share the state of their emotional well-being with colleagues and/or group leaders directly within Teams. The app is available in channel, group, meeting, and 1:1 chats and the check-in response can be set to public, private-to-sender, or fully anonymous.
