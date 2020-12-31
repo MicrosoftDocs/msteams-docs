@@ -1,11 +1,10 @@
 ---
 title: Build apps for the Microsoft Teams platform
 author: heath-hamilton
-description: Overview of how developers can extend and customize Microsoft Teams features with custom apps.
+description: Get an overview of how developers can extend Microsoft Teams features with custom apps.
 ms.topic: overview
 ms.author: lajanuar
 ms.date: 09/22/2020
-#Customer intent: As a developer, I want to understand why I would want to build a Teams app so that I can solve business problems.
 ---
 # Build apps for Microsoft Teams
 
@@ -37,11 +36,7 @@ Some apps are simple (send notifications), while others are complex (manage pati
 
 ### Bots
 
-<<<<<<< HEAD
 **Turn words into actions**: Conversations often result in the need to do something (generate an order, review my code, check ticket status, etc.). A [bot](bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.
-=======
-**Make it easier to multitask**: With [messaging extensions](messaging-extensions/what-are-messaging-extensions.md), you can quickly insert external content in a conversation. You also can act on a message, such as creating a help ticket based on the content of a channel post.
->>>>>>> f08a406f36cd8a8faadbb678b0f27882916834d3
 
 :::image type="content" source="assets/images/overview-bots.png" alt-text="Conceptual representation of what bots look like in the Teams client." border="false":::
 
@@ -137,7 +132,7 @@ Some apps are simple (send notifications), while others are complex (manage pati
 
 ## Resources
 
-* [Add a Share to Teams button to your website](concepts/build-and-test/share-to-teams.md)
+* [Add a Share-to-Teams button to your website](concepts/build-and-test/share-to-teams.md)
 * <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI</a>
 * [Microsoft Teams JavaScript client SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
 * [Bot Framework SDK for JavaScript](https://github.com/Microsoft/botbuilder-js) and [Bot Framework SDK for .NET](https://github.com/Microsoft/botbuilder-dotnet/)

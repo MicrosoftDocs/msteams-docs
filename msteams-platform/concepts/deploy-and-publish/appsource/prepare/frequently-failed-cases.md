@@ -3,12 +3,7 @@ title: App submission tips and frequently failed cases
 description: Describes tips for a successful Teams store submission and common reasons submissions fail.
 author: laujan
 ms.author: lajanuar
-<<<<<<< HEAD
 ms.topic: reference
-=======
-ms.topic: how to
-keywords: Teams apps validation most failed test cases rapid approval appsource publish
->>>>>>> f08a406f36cd8a8faadbb678b0f27882916834d3
 ---
 # Tips for a successful Microsoft Teams app submission
 

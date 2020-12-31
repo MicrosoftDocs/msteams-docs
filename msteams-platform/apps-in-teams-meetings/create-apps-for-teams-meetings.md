@@ -18,13 +18,9 @@ keywords: teams apps meetings user participant role api
 
 * Some meeting APIs, such as `GetParticipant`, require a [bot registration and ID](../build-your-first-app/build-bot.md) to generate auth tokens.
 
-<<<<<<< HEAD
-* Developers must adhere to general [Teams tab design guidelines](../tabs/design/tabs.md) for pre- and post-meeting scenarios as well as during meetings (see [in-meeting dialog](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md) and [in-meeting tab](../apps-in-teams-meetings/design/designing-in-meeting-tab.md) design guidelines).
-=======
-1. As a developer, you must adhere to general [Teams tab design guidelines](../tabs/design/tabs.md) for pre- and post-meeting scenarios as well as the [in-meeting dialog guidelines](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog) for in-meeting dialog triggered during a Teams meeting.
+* You must adhere to general [Teams tab design guidelines](../tabs/design/tabs.md) for pre- and post-meeting scenarios. For experiences during meetings, refer to the [in-meeting tab](../apps-in-teams-meetings/design/designing-apps-in-meetings#use-an-in-meeting-tab.md) and [in-meeting dialog](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog) design guidelines.
 
-1. Please note that in order for your app to be updated in real-time, it must be up-to-date based on event activities in the meeting. These events can be within the in-meeting dialog (refer to completion `bot Id` parameter in `Notification Signal API`) and other surfaces across the meeting lifecycle
->>>>>>> f08a406f36cd8a8faadbb678b0f27882916834d3
+* For your app to update in real time, it must be up-to-date based on event activities in the meeting. These events can be within the in-meeting dialog (refer to completion `bot Id` parameter in `Notification Signal API`) and other surfaces across the meeting lifecycle
 
 ## Meeting apps API reference
 

@@ -69,12 +69,7 @@ Use one of the following Teams UI templates to help design your tab setup experi
 
 Tabs provide a full-screen web experience in Teams where you can display collaborative content—such task boards and dashboards—and important information.
 
-<<<<<<< HEAD
-> [!TIP]
-> Please work with our visual style so your service feels like a part of Teams.
-=======
 :::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="Example shows a tab with a task board." border="false":::
->>>>>>> f08a406f36cd8a8faadbb678b0f27882916834d3
 
 ### Anatomy: Tab
 

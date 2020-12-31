@@ -42,11 +42,6 @@ For consistency across Teams apps, you can't customize the sign-in screen. If yo
 
 Messaging extensions can have search commands, action commands, or both. Your commands depend on your app's features and how those fit within Teams use cases.
 
-<<<<<<< HEAD
-### Keep users within Teams
-
-If a card doesn't provide enough space for your content, consider launching a [tab](../../tabs/what-are-tabs.md) and not a browser for a better user experience.
-=======
 ### Search commands
 
 With search commands, people can use your messaging extension to quickly find external content and insert into a message. Search commands are commonly made available in the compose box. For example, you can start or add to a discussion by sharing a piece of content—without ever leaving Teams.
@@ -265,4 +260,3 @@ If you plan to publish your app to AppSource, you should understand the design i
 
 > [!div class="nextstepaction"]
 > [Check design validation guidelines](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)
->>>>>>> f08a406f36cd8a8faadbb678b0f27882916834d3

@@ -1,22 +1,12 @@
 ---
-<<<<<<< HEAD
-title: Getting started - Building your first app
-author: heath-hamilton
-description: Get a quick overview of Microsoft Teams app development and set up your environment.
-=======
 title: Get started - Build your first app overview and prerequisites
 author: heath-hamilton
 description: Learn how to get started with Microsoft Teams app development and set up your environment.
->>>>>>> f08a406f36cd8a8faadbb678b0f27882916834d3
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: quickstart
 ---
-<<<<<<< HEAD
-# Getting started with building your first Teams app
-=======
 # Build your first Microsoft Teams app overview
->>>>>>> f08a406f36cd8a8faadbb678b0f27882916834d3
 
 In the **get started** lessons, you learn how to create basic Teams apps. Each tutorial walks through how to build a simple, real-world Teams app while introducing you to common tools, fundamental concepts, and more advanced features.
 
@@ -38,7 +28,7 @@ Before you begin the tutorials, you should know the following about building app
 
 ### Apps can have multiple capabilities and entry points
 
-A Teams app is made up of one or more [platform capabilities](../concepts/capabilities-overview.md) (how people use the app) and [entry points](../concepts/extensibility-points.md) (where people discover the app).
+A Teams app is made up of one or more [platform capabilities](../concepts/capabilities-overview.md) (how people use the app) and [entry points](../concepts/extensibility-points.md) (where people use the app).
 
 ### Teams doesn't host your app
 
