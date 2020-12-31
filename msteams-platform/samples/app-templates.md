@@ -383,9 +383,15 @@ Rapid Assist is a Microsoft [Power Platform](https://powerapps.microsoft.com/blo
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-rapid-assist/)
 
-![End user request interface](../assets/images/EndUserHome.png)
 
-![Expert request view](../assets/images/ExpertViewRequests.png)
+:::row:::
+   :::column span="":::
+     ![End user request interface](../assets/images/EndUserHome.png)
+   :::column-end:::
+   :::column span="":::
+      ![Expert request view](../assets/images/ExpertViewRequests.png)
+   :::column-end:::
+:::row-end:::
 
 ## Reflect &#9734;
 
