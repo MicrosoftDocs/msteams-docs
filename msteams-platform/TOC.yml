@@ -67,7 +67,7 @@
     - name: Overview
       href: samples/teams-low-code-solutions.md
     - name: Add a Power Virtual Agents chatbot
-      href: bots/how-to/add-power-virtual-agents-bot-to-teams.md  
+      href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
     - name: Create a Virtual Assistant
       href: samples/virtual-assistant.md 
   - name: Production-ready app templates
@@ -85,7 +85,7 @@
   - name: Device capabilities
     items:
     - name: Request device permissions
-      href: concepts/device-capabilities/native-device-permissions.md    
+      href: concepts/device-capabilities/native-device-permissions.md
     - name: Using the camera and photo gallery
       href: concepts/device-capabilities/mobile-camera-image-permissions.md
 - name: Design your app
@@ -204,8 +204,6 @@
     href: tabs/how-to/using-teams-client-sdk.md
   - name: Getting additional context
     href: tabs/how-to/access-teams-context.md
-  - name: Request device permissions
-    href: tabs/how-to/native-device-permissions.md
 - name: Build bots
   items:
   - name: Overview
@@ -226,8 +224,6 @@
       href: bots/how-to/conversations/send-proactive-messages.md
     - name: Formatting your bot messages
       href: bots/how-to/format-your-bot-messages.md
-    - name: Send and receive files
-      href: bots/how-to/conversations/send-and-receive-files.md
     - name: Update and delete bot messages
       href: bots/how-to/update-and-delete-bot-messages.md     
   - name: Get context for your bot
@@ -344,10 +340,6 @@
     href: https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab
   - name: Enable resource-specific consent
     href: graph-api/rsc/resource-specific-consent.md
-  - name: Test resource-specific consent permissions
-    href: graph-api/rsc/test-resource-specific-consent.md 
-  - name: RSC JSON test file
-    href: graph-api/rsc/test-rsc-json-file.md
   - name: Enable proactive bot installation and messaging
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
   - name: Import third-party messages
@@ -360,14 +352,24 @@
     href: concepts/build-and-test/debug.md
   - name: Add test data to your environment
     href: concepts/build-and-test/test-data.md
-  - name: Debug your tab with DevTools
-    href: tabs/how-to/developer-tools.md
-  - name: Debug your bot locally with an IDE
-    href: bots/how-to/debug/locally-with-an-ide.md
-  - name: Debug your bot with inspection middleware
-    href: /azure/bot-service/bot-service-debug-inspection-middleware
-  - name: Debug your calling and meeting bot locally
-    href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
+  - name: Tabs
+    items:
+    - name: Debug your tab with DevTools
+      href: tabs/how-to/developer-tools.md
+  - name: Bots
+    items:
+    - name: Debug your bot locally with an IDE
+      href: bots/how-to/debug/locally-with-an-ide.md
+    - name: Debug your bot with inspection middleware
+      href: /azure/bot-service/bot-service-debug-inspection-middleware
+    - name: Debug your calling and meeting bot locally
+      href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
+  - name: Microsoft Graph
+    items:
+    - name: Test resource-specific consent permissions
+      href: graph-api/rsc/test-resource-specific-consent.md 
+    - name: Resource-specific consent JSON test file
+      href: graph-api/rsc/test-rsc-json-file.md
 - name: Publish your app
   items:    
   - name: Choose how to distribute your app
@@ -414,7 +416,7 @@
           href: resources/dev-preview/developer-preview-features.md
     - name: SameSite cookie attribute (2020 update)
       href: resources/samesite-cookie-update.md
-    - name: Teams contributor guide
+    - name: Contributing to Teams docs
       href: resources/teams-contributor-reference.md
 - name: Support and feedback
   href: feedback.md
