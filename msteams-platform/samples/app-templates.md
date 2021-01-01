@@ -137,6 +137,15 @@ The Contact Group Lookup app provides a convenient and useful approach to creati
 :::column-end:::
 :::row-end:::
 
+## Coworker Appreciation 
+
+Using the co-worker appreciation template in Microsoft teams, users can recognize their colleague's achievements right within the Teams' context. WHen they can click to reward a colleague, recipients and other team members are notified about the award details in the channel by tagging them in a channel conversation. The awards are recorded in the team app which is secure, portable and easily shareable. This can be considered as the PowerApps based version of the Open Badges app template, with a leaderboard.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-coworker-appreciation)
+
+![Overall](https://github.com/OfficeDev/microsoft-teams-apps-coworker-appreciation/blob/main/Coworker%20Appreciation%20Demo%20Image%202.png)
+![In Teams](https://github.com/OfficeDev/microsoft-teams-apps-coworker-appreciation/blob/main/Coworker%20Appreciation%20Demo%20Image.png)
+
 ## CrowdSourcer
 
 CrowdSourcer is a [Microsoft Teams bot](../bots/what-are-bots.md) that gives teams queried information sourced collaboratively from group members. It's a great way to answer frequently asked questions while enabling participants to actively engage in and contribute to a fun and helpful information resource.
