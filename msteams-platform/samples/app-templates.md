@@ -559,6 +559,16 @@ Survey is a custom Microsoft Teams [messaging extension](../messaging-extensions
 :::column-end:::
 :::row-end:::
 
+## Virtual Rounding
+
+Hospital and emergency room providers make dozens, and often hundreds of “rounds” per day. These quick check-ins on patients are intended to provide a status check on how the patient is doing and ensure that the patient’s concerns are addressed. While rounding is an essential practice to ensure patients are being monitored by multiple types of providers, they represent a huge drain on PPE, because for each visit, from each provider, a new mask, and new set of gloves must be used. With this app templates, medical workers can easily conduct rounds virtually, through a Microsoft Teams meeting between the provider and the patient.
+
+This is the Virtual Rounding solution referenced in the Microsoft Health &amp; Life Sciences [blog post](https://aka.ms/teamsvirtualrounding). 
+
+[Get it on GitHub](https://github.com/SmartterHealth/Virtual-Rounding)
+
+![Virtual Rounding](https://techcommunity.microsoft.com/t5/image/serverpage/image-id/180717i11D637722373C11D/image-size/large?v=1.0&px=999)
+
 ## Visitor Management
 
 The Visitor Management app enables your organization and employees to easily and efficiently manage the on-site visitor process, directly from Microsoft Teams. The app enables employees to create visitor requests, centrally track a request status through the visitor dashboard, and receive real-time notifications when a visitor arrives.
