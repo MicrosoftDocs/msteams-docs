@@ -137,7 +137,7 @@ The Contact Group Lookup app provides a convenient and useful approach to creati
 :::column-end:::
 :::row-end:::
 
-## Coworker Appreciation 
+## Co-worker Appreciation &#9734;
 
 Using the co-worker appreciation template in Microsoft teams, users can recognize their colleague's achievements right within the Teams' context. WHen they can click to reward a colleague, recipients and other team members are notified about the award details in the channel by tagging them in a channel conversation. The awards are recorded in the team app which is secure, portable and easily shareable. This can be considered as the PowerApps based version of the Open Badges app template, with a leaderboard.
 
