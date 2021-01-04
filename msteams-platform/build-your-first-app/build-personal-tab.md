@@ -34,9 +34,7 @@ Much of the app configurations and scaffolding are set up automatically when you
 
 ### App configurations
 
-You can view and update your app configurations using App Studio, which is included in the toolkit.
-
-During setup, the toolkit initially configured your tab content page, which is where you display your primary content. In the toolkit, go to **App Studio** and select **Tabs** to see the configuration.
+In the toolkit, you can go to **App Studio** to view and update your app configurations.
 
 ### App scaffolding
 
