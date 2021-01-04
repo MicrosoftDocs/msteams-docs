@@ -567,7 +567,7 @@ This is the Virtual Rounding solution referenced in the Microsoft Health and Lif
 
 [Get it on GitHub](https://github.com/SmartterHealth/Virtual-Rounding)
 
-![Virtual Rounding](https://techcommunity.microsoft.com/t5/image/serverpage/image-id/180717i11D637722373C11D/image-size/large?v=1.0&px=999)
+![Virtual Rounding](../assets/images/virtual-rounding-overview.png)
 
 ## Visitor Management
 
