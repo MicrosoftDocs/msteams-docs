@@ -144,8 +144,8 @@ Using the co-worker appreciation template in Microsoft Teams, users can recogniz
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-coworker-appreciation)
 
-![Overall](https://github.com/OfficeDev/microsoft-teams-apps-coworker-appreciation/blob/main/Coworker%20Appreciation%20Demo%20Image%202.png)
-![In Teams](https://github.com/OfficeDev/microsoft-teams-apps-coworker-appreciation/blob/main/Coworker%20Appreciation%20Demo%20Image.png)
+![Overall](../assets/images/coworker-appreciation-1.png)
+![In Teams](../assets/images/coworker-appreciation-2.png)
 
 ## CrowdSourcer
 
