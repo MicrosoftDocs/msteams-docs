@@ -8,8 +8,9 @@ keywords: teams publish store office publishing checklist submission Teams apps 
 To be listed on AppSource, your app must go through an approval process. This is a free service provided by the Microsoft Teams group that verifies that your app works as described, contains all appropriate metadata, and provides content that would be valuable to an end user. To help you achieve rapid approval, ensure your app meets the following requirements and guidelines:
 
 * **Distribution method:** Make sure your app is meant for publication on a store platform. There are [other options](../../overview.md) to distribute your app without publishing to AppSource.
-* **Validation policies:** Your app must pass all current [AppSource validation policies](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams) before submission. Please note that these policies are subject to change. 
-* **Self test your app with the [Manifest validation tool](#teams-app-validation-tool) .
+* **Validation policies:** Your app must pass all current [AppSource validation policies](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams) before submission. Please note that these policies are subject to change.
+* **Mobile readiness:** Your app must be mobile-responsive. If your app contains any tabs, they should follow our [mobile design guidelines](~/tabs/design/tabs-mobile.md) and your app should comply with [no upsell requirements](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-mobile-responsiveness-no-direct-upsell-or-payment) on mobile OS (iOS and Android).
+* **Self test your app** with the [Manifest validation tool](#teams-app-validation-tool) .
 * **App detail page:** Your app must align with the  [App detail page checklist](detail-page-checklist.md).
 * **Tips and frequently failed cases:** Pay extra attention to the listed [Tips and frequently failed cases](frequently-failed-cases.md)  to improve your app submission and approval time.
 * **App manifest:** Check your app manifest against the [App manifest checklist](app-manifest-checklist.md).
