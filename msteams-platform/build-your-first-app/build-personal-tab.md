@@ -133,13 +133,13 @@ Your theme change handler is in place, but you need some code that responds to t
 > [!NOTE]
 > The following example is just one way you might apply styles to your tab. Use the code as is, expand on it, or write your own.
 
-Store the state provided by the theme change handler in `isTheme`.
+In the `render()` function, store the state provided by the theme change handler in `isTheme`.
 
 ```JavaScript
   const isTheme = this.state.theme
 ```
 
-Provide some conditional logic to render your tab's styles based on the current theme. The following example shows a basic way to do this by 1) checking the current theme in `isTheme`, 2) creating a `newTheme` object with CSS properties relevant to the current theme, and 3) applying the CSS to your tab content's root HTML element (`<div>`).
+Below that, provide some conditional logic to render your tab's styles based on the current theme. The following example shows a basic way to do this by 1) checking the current theme in `isTheme`, 2) creating a `newTheme` object with CSS properties relevant to the current theme, and 3) applying the CSS to your tab content's root HTML element (`<div>`).
 
 ```JavaScript
 let newTheme
