@@ -73,17 +73,17 @@ Your application must reference the [Microsoft Teams JavaScript client SDK](/jav
 ...
 ```
 
-The user can select either **Select Gray** or **Select Red** button. This displays the tab content with either a gray or red icon based on the selection. Choosing the respective button fires either `saveGray()` or `saveRed()` and invokes the following:
+The user can select either **Select Gray** or **Select Red** button. This displays the tab content with either a gray or red icon based on the selection. Choosing the respective button gets either `saveGray()` or `saveRed()` and requests the following:
 
 1. The `settings.setValidityState(true)` is set to true.
 1. The `microsoftTeams.settings.registerOnSaveHandler()` event handler is triggered.
 1. The **Save** button on the app's configuration page, uploaded in Teams, is enabled.
 
-This code allows Teams to know that the configuration requirements have been satisfied and the installation can proceed. When the user selects **Save**, the parameters of `settings.setSettings()` are set, as defined by the `Settings` interface, for the current instance. For more information, see [Settings interface](/javascript/api/@microsoft/teams-js/_settings?view=msteams-client-js-latest&preserve-view=true). Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
+This code allows the Teams to know that the configuration requirements have been satisfied and the installation can proceed. When the user selects **Save**, the parameters of `settings.setSettings()` are set for this example, as defined by the `Settings` interface. For more information, see [Settings interface](/javascript/api/@microsoft/teams-js/_settings?view=msteams-client-js-latest&preserve-view=true). Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
 
 >[!NOTE]
 >
->* If you register a save handler using `microsoftTeams.settings.registerOnSaveHandler()`, the callback must invoke `saveEvent.notifySuccess()` or `saveEvent.notifyFailure()` to indicate the outcome of the configuration.
+>* If you register a save handler using `microsoftTeams.settings.registerOnSaveHandler()`, this returns a request for `saveEvent.notifySuccess()` or `saveEvent.notifyFailure()` to indicate the effect of the configuration.
 >* If you don't register a save handler, the `saveEvent.notifySuccess()` call is automatically made immediately when the user selects **Save**.
 
 ### Get context data for your tab settings
@@ -116,7 +116,7 @@ Context interface placeholders can be added to your base `configurationUrl`. For
 ...
 ```
 
-After your page uploads, Teams updates the query string placeholders with the relevant values. You can include logic in your configuration page to retrieve and use those values. For more information on working with URL query strings, see [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) in MDN web docs. The following example describes the way to extract a value from the `configurationURL` property:
+After your page uploads, the Teams updates the query string placeholders with the relevant values. You can include logic in your configuration page to retrieve and use those values. For more information on working with URL query strings, see [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) in MDN web docs. The following example describes the way to extract a value from the `configurationURL` property:
 
 ```html
 <script>
@@ -133,7 +133,7 @@ document.write(getId());
 
 ### Use the `getContext()` function to retrieve context
 
-When invoked, the `microsoftTeams.getContext((context) => {})` function retrieves the [Context interface](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true). You can add this function to your configuration page to retrieve context values:
+When requested, the `microsoftTeams.getContext((context) => {})` function retrieves the [Context interface](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true). You can add this function to your configuration page to retrieve context values:
 
 ```html
 <!-- `userPrincipalName` will render in the span with the id "user". -->
@@ -151,16 +151,16 @@ When invoked, the `microsoftTeams.getContext((context) => {})` function retrieve
 
 ## Context and Authentication
 
-You might require authentication before allowing a user to configure your app. Otherwise, your content might include sources that have their own authentication protocols. For more information, see [Authenticate a user in a Microsoft Teams tab](~/tabs/how-to/authentication/auth-flow-tab.md). Context information can be used to help construct authentication requests and authorization page URLs.
+You might require authentication before allowing a user to configure your app. Otherwise, your content might include sources that have their own authentication protocols. For more information, see [Authenticate a user in a Microsoft Teams tab](~/tabs/how-to/authentication/auth-flow-tab.md). Context information can be used to help in constructing the authentication requests and authorization page URLs.
 Ensure that all domains used in your tab pages are listed in the `manifest.json` `validDomains` array.
 
 ## Modify or remove a tab
 
-Supported removal options can further refine the user experience. You can enable users to modify, reconfigure, or rename a group or channel tab by setting your manifest's `canUpdateConfiguration` property to `true`. Also, you can designate what happens to the content when a tab is removed. This is done by including a removal options page in your app and setting a value for the `removeUrl` property in the  `setSettings()` configuration (see Mobile clients section). Personal tabs can't be modified but can be uninstalled by the user. For more information, see [Create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
+Supported removal options can further refine the user experience. You can enable users to modify, reconfigure, or rename a group or channel tab by setting your manifest's `canUpdateConfiguration` property to `true`. Also, you can indicate what happens to the content when a tab is removed. This is done by including a removal options page in your app and setting a value for the `removeUrl` property in the  `setSettings()` configuration (see Mobile clients section). Personal tabs can't be modified but can be uninstalled by the user. For more information, see [Create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
 
 ## Mobile clients
 
-If you choose to have your channel or group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property. See [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md).
+If you choose to have your channel or group tab appear on the Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property. See [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md).
 
 Microsoft Teams setSettings() configuration for removal page or mobile clients:
 
