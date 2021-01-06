@@ -137,6 +137,14 @@ The Contact Group Lookup app provides a convenient and useful approach to creati
 :::column-end:::
 :::row-end:::
 
+## Co-worker Appreciation &#9734;
+
+Using the co-worker appreciation template in Microsoft Teams, users can recognize their colleagues' achievements within the Teams’ context. When co-workers select to reward a colleague, recipients and other team members are tagged in a channel conversation and they receive a notification about the channel's award details. The awards are recorded in the Teams app, which is secure, portable, and easily shareable. This can be considered as the PowerApps based version of the Open Badges app template, with a leaderboard.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-coworker-appreciation)
+
+![Overall](../assets/images/coworker-appreciation-1.png)
+
 ## CrowdSourcer
 
 CrowdSourcer is a [Microsoft Teams bot](../bots/what-are-bots.md) that gives teams queried information sourced collaboratively from group members. It's a great way to answer frequently asked questions while enabling participants to actively engage in and contribute to a fun and helpful information resource.
@@ -558,6 +566,16 @@ Survey is a custom Microsoft Teams [messaging extension](../messaging-extensions
     ![Create survey in Teams view](../assets/images/survey-app-template-compose-view.gif)
 :::column-end:::
 :::row-end:::
+
+## Virtual Rounding &#9734;
+
+Hospital and emergency room providers make dozens, and often hundreds of “rounds” per day. These quick check-ins on patients are intended to provide a status check on how the patient is doing and ensure that the patient’s concerns are addressed. While rounding is an essential practice to ensure patients are being monitored by multiple types of providers, they represent a huge drain on PPE, because for each visit, from each provider, a new mask, and new set of gloves must be used. With this app templates, medical workers can easily conduct rounds virtually, through a Microsoft Teams meeting between the provider and the patient.
+
+The Virtual Rounding solution is also referenced in the Microsoft Health and Life Sciences [blog post](https://aka.ms/teamsvirtualrounding).
+
+[Get it on GitHub](https://github.com/SmartterHealth/Virtual-Rounding)
+
+![Virtual Rounding](../assets/images/virtual-rounding-overview.png)
 
 ## Visitor Management
 
