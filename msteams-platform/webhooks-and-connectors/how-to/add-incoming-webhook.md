@@ -26,9 +26,6 @@ Incoming webhooks are special type of Connector in Teams that provide a simple w
 |Independent HTTPS messaging support| Cards are a great way to present information in a clear and consistent way. Any tool or framework that can send HTTPS POST requests can send messages to Teams via an incoming webhook.|
 |Markdown support|All text fields in actionable messaging cards support basic Markdown. **Don't use HTML markup in your cards**. HTML is ignored and treated as plain text.|
 
-> [!Note]  
-> Teams bots, messaging extensions, and the Bot Framework support Adaptive Cards, an open cross-card platform framework. Teams connectors do not currently support Adaptive Cards. However, it is possible to create a [flow](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) that posts adaptive cards to a Teams channel.
-
 ## Add an incoming webhook to a Teams channel
 
 > [!Important]  
