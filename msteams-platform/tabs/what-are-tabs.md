@@ -54,10 +54,11 @@ If you choose to have your channel/group tab appear on Teams mobile clients, the
 | **App Capability** | **Behavior if app is approved** | **Behavior if app is not approved** |
 | --- | --- | --- |
 | **Static Tabs** | App will show up in the bottom bar of mobile clients. Tabs will open within the Teams client. | App will not show up in the bottom bar of mobile clients. |
-| **Configurable Tabs** | The tab will open within Teams client using the contentUrl. | The tab will open outside Teams client in the default browser using the websiteUrl. |
+| **Configurable Tabs** | The tab will open within Teams client using the contentUrl. | The tab will open outside Teams client in a browser using the websiteUrl. |
 
 > [!NOTE]
 > The above behavior is only applicable to apps distributed via AppSource. For other [distribution methods](~/concepts/deploy-and-publish/overview.md), there is no approval process and all tabs, by default, will open with the Teams client.
+
 > To initiate an evaluation of your app for mobile-friendliness, please reach out to teamsubm@microsoft.com with app details.
 
 > [!div class="nextstepaction"]
