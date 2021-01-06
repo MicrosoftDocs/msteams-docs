@@ -57,10 +57,12 @@ Apps that are [distributed via Appsource](~/concepts/deploy-and-publish/appsourc
 | **Static Tabs** | App will show up in the bottom bar of mobile clients. Tabs will open within the Teams client. | App will not show up in the bottom bar of mobile clients. |
 | **Configurable Tabs** | The tab will open within Teams client using the contentUrl. | The tab will open outside Teams client in a browser using the websiteUrl. |
 
+
 >[!NOTE]
 >
->-The above behavior is only applicable to apps distributed via AppSource. For other [distribution methods](~/concepts/deploy-and-publish/overview.md), there is no approval process and all tabs, by default, will open with the Teams client.
->-To initiate an evaluation of your app for mobile-friendliness, please reach out to teamsubm@microsoft.com with app details.
+>- The above behavior is only applicable to apps distributed via AppSource. For other [distribution methods](~/concepts/deploy-and-publish/overview.md), there is no approval process and all tabs, by default, will open with the Teams client.
+>- To initiate an evaluation of your app for mobile-friendliness, please reach out to teamsubm@microsoft.com with app details.
+
 
 > [!div class="nextstepaction"]
 > [Learn  more: Request device permissions](/concepts/device-capabilities/native-device-permissions.md)
