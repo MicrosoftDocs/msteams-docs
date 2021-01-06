@@ -10,7 +10,7 @@ keywords: teams publish store office publishing publish AppSource partner center
 
 Publishing  your app to [AppSource](https://appsource.microsoft.com) makes it available in the Teams app catalog and on the web. At a high level, the process for submitting your app to AppSource is:
 
-1. Develop your app following our [design guidelines](~/concepts/design/understand-use-cases.md). Tabs should follow our [tab design guidelines](~/tabs/design/tabs.md) for both desktop/web and mobile. Bots should follow the [bot design guidelines](~/bots/design/bots.md).
+1. Develop your app following our [design guidelines](~/concepts/design/understand-use-cases.md). Tabs should follow our tab design guidelines for both [desktop/web](~/tabs/design/tabs.md) and [mobile](~/tabs/design/tabs-mobile.md) . Bots should follow the [bot design guidelines](~/bots/design/bots.md).
 1. Ensure your app meets the app [validation policies](/legal/marketplace/certification-policies) for Microsoft Teams. 
 1. Self test your app with the [Manifest validation tool](prepare/submission-checklist.md#teams-app-validation-tool) .
 1. [Set up a developer account](/office/dev/store/open-a-developer-account) in [Partner Center](https://support.microsoft.com/help/4499930/partner-center-overview). *See also* [How do I create a Partner Center account](#how-do-i-create-a-partner-center-account) in the FAQ section, below.
