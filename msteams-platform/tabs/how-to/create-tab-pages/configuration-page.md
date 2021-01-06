@@ -8,7 +8,7 @@ ms.author: lajanuar
 ---
 # Create a configuration page
 
-A configuration page is a special type of [content page](content-page.md) that allows your users to configure some aspects of Microsoft Teams app. It allows you to collect information from your users and set the `contentUrl` of the content page to display. These aspects are used as part of the following:
+A configuration page is a special type of [content page](content-page.md) that allows your users to configure some aspects of Microsoft Teams app. It allows you to collect the information from your users and set the `contentUrl` of the content page to display. These aspects are used as part of the following:
 
 * A channel or group chat tab  
 * A [messaging extension](~/messaging-extensions/what-are-messaging-extensions.md)
@@ -73,7 +73,7 @@ Your application must reference the [Microsoft Teams JavaScript client SDK](/jav
 ...
 ```
 
-The user can select either **Select Gray** or **Select Red** button. This displays the tab content with either a gray or red icon based on the selection. Choosing the respective button gets either `saveGray()` or `saveRed()` and requests the following:
+The user can select either **Select Gray** or **Select Red** button. This displays the tab content with either a gray or red icon based on the selection. Choosing the respective button gets either `saveGray()` or `saveRed()` and triggers the following actions:
 
 1. The `settings.setValidityState(true)` is set to true.
 1. The `microsoftTeams.settings.registerOnSaveHandler()` event handler is triggered.
