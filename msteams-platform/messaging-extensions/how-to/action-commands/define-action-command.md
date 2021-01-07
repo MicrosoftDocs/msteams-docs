@@ -1,7 +1,7 @@
 ---
 title: Define messaging extension action commands
 author: clearab
-description: An overview of messaging extensions on the Microsoft Teams platform
+description: An overview of messaging extension action commands
 ms.topic: conceptual
 ms.author: anclear
 ---
