@@ -484,11 +484,11 @@ The item is an array (maximum of 1 element) with all elements of type `object`. 
 |Name| Type | Maximum Size | Required | Description|
 |---|---|---|---|---|
 |`botId`|string|64|✔|The unique Microsoft app ID for the bot that backs the messaging extension, as registered with the Bot Framework. This may well be the same as the overall App ID.|
-|`commands`|array of objects|10|✔|array of commands the messaging extension supports|
+|`commands`|array of objects|10|✔|Array of commands the messaging extension supports|
 |`canUpdateConfiguration`|boolean|||A value indicating whether the configuration of a messaging extension can be updated by the user. Default: **false**.|
-|`messageHandlers`|array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`|
+|`messageHandlers`|array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `messageHandlerDomains`|
 |`messageHandlers.type`|string|||The type of message handler. Must be `"link"`.|
-|`messageHandlers.value.domains`|array of Strings|||array of domains that the link message handler can register for.|
+|`messageHandlers.value.domains`|array of Strings|||Array of domains that the link message handler can register for.|
 
 ### composeExtensions.commands
 
