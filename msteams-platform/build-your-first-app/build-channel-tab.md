@@ -48,7 +48,7 @@ Select **Group or Teams channel tab**.
 
 ## 2. Identify relevant app project components
 
-Much of the app configurations and scaffolding are set up automatically when you create your project with the Teams Toolkit. Let's look at the main components for building a channel tab.
+Much of the app configurations and scaffolding are set up automatically when you create your project with the toolkit. Let's look at the main components for building a channel tab.
 
 ### App configurations
 
