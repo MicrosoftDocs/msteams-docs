@@ -34,7 +34,7 @@ Much of the app configurations and scaffolding are set up automatically when you
 
 ### App configurations
 
-In the toolkit, you can go to **App Studio** to view and update your app configurations.
+In the toolkit, go to **App Studio** to view and update your app configurations.
 
 ### App scaffolding
 
