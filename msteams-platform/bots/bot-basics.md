@@ -70,7 +70,7 @@ The list of handlers defined in `ActivityHandler` include the following:
 
 #### Teams specific activity handlers
 
-The `TeamsActivityHandler` extends the list of handlers in the Core Bot Framework handlers section to include the following:
+The `TeamsActivityHandler` extends the list of handlers in the [Core Bot Framework handlers](#core-bot-framework-handlers) section to include the following:
 
 | Event | Handler | Description |
 | :-- | :-- | :-- |
@@ -122,7 +122,7 @@ The list of handlers defined in `ActivityHandler` include the following:
 
 #### Teams specific activity handlers
 
-The `TeamsActivityHandler` extends the list of handlers in the Core Bot Framework handlers section to include the following:
+The `TeamsActivityHandler` extends the list of handlers in the [Core Bot Framework handlers](#core-bot-framework-handlers) section to include the following:
 
 | Event | Handler | Description |
 | :-- | :-- | :-- |
@@ -175,7 +175,7 @@ The list of handlers defined in `ActivityHandler` include the following:
 
 #### Teams specific activity handlers
 
-The `TeamsActivityHandler` extends the list of handlers from the Core Bot Framework handlers section to include the following:
+The `TeamsActivityHandler` extends the list of handlers from the [Core Bot Framework handlers](#core-bot-framework-handlers) section to include the following:
 
 | Event | Handler | Description |
 | :-- | :-- | :-- |
