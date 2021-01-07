@@ -567,7 +567,7 @@ Specify your Azure Active Directory (Azure AD) App ID and Microsoft Graph inform
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`|string|36 characters|✔|AAD application id of the app. This id must be a GUID.|
-|`resource`|string|2048 characters|✔|Resource url of app for acquiring auth token for SSO.|
+|`resource`|string|2048 characters|✔|Resource URL of app for acquiring auth token for SSO. Provide a dummy string if you are not using SSO, for example, https://notapplicable. </br> **NOTE:** To avoid an error response, ensure that you add this field with an actual or a dummy string value to your app manifest. |
 |`applicationPermissions`|array of strings|128 characters||Specify granular [resource specific consent](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions)|
 
 ## showLoadingIndicator
