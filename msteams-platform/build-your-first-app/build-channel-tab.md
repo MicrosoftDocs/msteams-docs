@@ -43,7 +43,7 @@ The Microsoft Teams Toolkit helps configure your app and set up scaffolding rele
 1. When prompted, sign in with your Microsoft 365 development account.
 1. On the **Add capabilities** screen, select **Tab** then **Next**.
 1. Enter a name for your Teams app. (This is the default name for your app and also the name of the app project directory on your local machine.)
-1. Check the **Group or Teams channel tab** option.
+Select **Group or Teams channel tab**.
 1. Select **Finish** at the bottom of the screen to configure your project.  
 
 ## 2. Identify relevant app project components
