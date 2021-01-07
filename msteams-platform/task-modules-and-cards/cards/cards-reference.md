@@ -778,7 +778,7 @@ Properties of a Carousel card are same as those of the Hero and Thumbnail cards.
 
 ### Syntax for Carousel collections
 
-`"builder.AttachmentLayoutTypes.Carousel"`
+`builder.AttachmentLayoutTypes.Carousel`
 
 ## List collection
 
