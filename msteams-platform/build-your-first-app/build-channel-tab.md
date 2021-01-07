@@ -132,7 +132,9 @@ When you add a channel tab, by default the app name displays (for example, **fir
 
 This may be fine depending on what you call your app, but you may want to provide a name that makes more sense in the context of group collaboration (for example, **Team Contacts**).
 
-In `TabConfig.js`, go to `microsoftTeams.settings.setSettings`. Add the `suggestedDisplayName` property with the tab name you want to display by default. Use the provided name below or create your own. (By default, users can change the name.)
+1. In `TabConfig.js`, go to `microsoftTeams.settings.setSettings`.
+2. Add the `suggestedDisplayName` property with the tab name you want to display by default. 
+3. Use the name provided in the following example or type your name. (By default, users can change the name.)
 
 ```JavaScript
 microsoftTeams.settings.setSettings({
