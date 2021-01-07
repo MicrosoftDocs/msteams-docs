@@ -605,7 +605,7 @@ The [carousel layout](/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card
 
 ### Properties of a Carousel card
 
-Properties are the same as for the hero or thumbnail card.
+Properties of a Carousel card are same as those of the Hero and Thumbnail cards.
 
 ### Example Carousel collection
 
