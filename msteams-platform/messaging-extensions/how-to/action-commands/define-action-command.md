@@ -107,7 +107,7 @@ The below is an example of a `composeExtensions` object defining two action comm
         "title": "Create To Do",
         "type": "action",
         "context": ["commandBox", "message", "compose"],
-        "fetchTask": false,
+        "fetchTask": true,
         "parameters": [
           {
             "name": "Name",
