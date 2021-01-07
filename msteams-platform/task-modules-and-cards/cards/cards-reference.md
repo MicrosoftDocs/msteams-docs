@@ -587,7 +587,7 @@ Bot Framework reference:
 
 Card collections are supported in Teams.
 
-Card collections: `builder.AttachmentLayout.carousel` and `builder.AttachmentLayout.list`. These collections can contain Adaptive, Hero, or Thumbnail cards.
+Card collections: `builder.AttachmentLayout.carousel` and `builder.AttachmentLayout.list`. The Bot Framework provides the Card collections. These collections contain Adaptive, Hero, or Thumbnail cards.
 
 ## Carousel collection
 
