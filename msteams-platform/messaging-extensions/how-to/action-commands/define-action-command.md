@@ -1,7 +1,7 @@
 ---
 title: Define messaging extension action commands
 author: clearab
-description: An overview of messaging extensions on the Microsoft Teams platform
+description: An overview of messaging extension action commands
 ms.topic: conceptual
 ms.author: anclear
 ---
@@ -107,7 +107,7 @@ The below is an example of a `composeExtensions` object defining two action comm
         "title": "Create To Do",
         "type": "action",
         "context": ["commandBox", "message", "compose"],
-        "fetchTask": false,
+        "fetchTask": true,
         "parameters": [
           {
             "name": "Name",
