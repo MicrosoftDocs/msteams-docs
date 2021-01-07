@@ -139,7 +139,10 @@ In the `render()` function, store the state provided by the theme change handler
   const isTheme = this.state.theme
 ```
 
-Below that, provide some conditional logic to render your tab's styles based on the current theme. The following example shows a basic way to do this by 1) checking the current theme in `isTheme`, 2) creating a `newTheme` object with CSS properties relevant to the current theme, and 3) applying the CSS to your tab content's root HTML element (`<div>`).
+After storing the state provided by the theme change handler, provide some conditional logic to render your tab's styles based on the current theme. The following example shows a basic way to do this:
+1. Check the current theme in `isTheme`.
+2. Create a `newTheme` object with CSS properties relevant to the current theme.
+3. Apply the CSS to your tab content's root HTML element (`<div>`).
 
 ```JavaScript
 let newTheme
