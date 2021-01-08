@@ -19,7 +19,7 @@ Here's an idea of what you'll know after going through the lessons.
   > * **Get up and running quickly with the Teams Toolkit**: The Microsoft Teams Toolkit for Visual Studio Code takes care of creating your app project and scaffolding so you can have a running app in minutes.
   > * **Configure your app with App Studio**: Specify the capabilities and services your Teams app uses.
   > * **Scope your app's audience**: Build a Teams app for personal use, collaboration, or both.
-  > * **Get experience with Teams tools and SDKs**: Customize your app (for example, change its color scheme to match the Teams theme) with help from the Teams JavaScript SDK. Also, learn about common tools for creating and managing bots.
+> * **Get experience with Teams tools and SDKs**: Customize your app with help from the Teams JavaScript client SDK. For example, change your app's color scheme to match the Teams theme. Also, learn about common tools for creating and managing bots.
   > * **Expand on your app**: Throughout the lessons, you'll find related topics you're probably interested in (such as authentication and design guidelines).
 
 ## Teams app fundamentals
@@ -70,7 +70,7 @@ You can get a free Teams test account that allows app sideloading by joining the
 </details>
 
 > [!Note]
-> If you still can't sideload apps, refer to [Enable custom Teams apps and turn on custom app uploading](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
+> If you still can't sideload apps, see [enable custom Teams apps and turn on custom app uploading](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 
 ### Install your development tools
 

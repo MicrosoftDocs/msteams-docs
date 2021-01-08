@@ -21,7 +21,7 @@ You can make this information easier to find by building a channel tab, which wi
 > [!div class="checklist"]
 >
 > * Create an app project using the Microsoft Teams Toolkit for Visual Studio Code
-> * Identify some of the app configurations and scaffolding relevant to channel and group tabs
+> * Identify some of the app configurations and scaffolding relevant to channel tabs
 > * Create tab content
 > * Create content for a tab's configuration page
 > * Provide a suggested tab name
@@ -43,25 +43,20 @@ The Microsoft Teams Toolkit helps configure your app and set up scaffolding rele
 1. When prompted, sign in with your Microsoft 365 development account.
 1. On the **Add capabilities** screen, select **Tab** then **Next**.
 1. Enter a name for your Teams app. (This is the default name for your app and also the name of the app project directory on your local machine.)
-1. Check the **Personal tab** and **Group or Teams channel tab** options. (You'll soon learn why you need both types of tabs.)
+Select **Group or Teams channel tab**.
 1. Select **Finish** at the bottom of the screen to configure your project.  
 
 ## 2. Identify relevant app project components
 
-Much of the app configurations and scaffolding are set up automatically when you create your project with the Teams Toolkit. Let's look at the main components for building a channel and group tab.
+Much of the app configurations and scaffolding are set up automatically when you create your project with the toolkit. Let's look at the main components for building a channel tab.
 
 ### App configurations
 
-You can view and update your app configurations using App Studio, which is included in the toolkit.
-
-During setup, the toolkit initially configured two essential components of channel and group tabs:
-
-* **Configuration page**: The modal for adding a tab to a channel or chat. (In App Studio, you can find this page by going to **Tabs > Team tab**.)
-* **Content page**: Where you display your primary content. (In App Studio, you can find this page by going to **Tabs > Add a personal tab**.)
+In the toolkit, go to **App Studio** to view and update your app configurations.
 
 ### App scaffolding
 
-The app scaffolding provides the components for rendering your personal tab in Teams. There's a lot you can work with, but for now you only need to focus on the following:
+The app scaffolding provides the components for rendering your channel tab in Teams. There's a lot you can work with, but for now you only need to focus on the following:
 
 * Two files located in the `src/components` directory of your project:
   * `Tab.js` for rendering your tab's content page.
@@ -133,11 +128,13 @@ return (
 
 ## 5. Provide a suggested tab name
 
-When you add a channel or group tab, by default the app name displays (for example, **first-app**).
+When you add a channel tab, by default the app name displays (for example, **first-app**).
 
 This may be fine depending on what you call your app, but you may want to provide a name that makes more sense in the context of group collaboration (for example, **Team Contacts**).
 
-In `TabConfig.js`, go to `microsoftTeams.settings.setSettings`. Add the `suggestedDisplayName` property with the tab name you want to display by default (as shown). Use the provided name or create your own. (By default, users to change the name if they want.)
+1. In `TabConfig.js`, go to `microsoftTeams.settings.setSettings`.
+2. Add the `suggestedDisplayName` property with the tab name you want to display by default. 
+3. Use the name provided in the following example or type your name. (By default, users can change the name.)
 
 ```JavaScript
 microsoftTeams.settings.setSettings({
@@ -178,8 +175,8 @@ Congratulations! You have a Teams app with a tab for displaying useful content i
 ## Learn more
 
 * [Authenticate tab users with SSO](../tabs/how-to/authentication/auth-aad-sso.md): If you only want authorized users viewing your tab, set up single sign-on (SSO) through Azure Active Directory (AD).
-* [Embed content from an existing web app or webpage](../tabs/how-to/add-tab.md#tab-requirements): We showed you how to create new content for a personal tab, but you can also load content from an external URL.
-* [Create a seamless experience for your tab](../tabs/design/tabs.md): See the recommended guidelines for designing Teams tabs.
+* [Embed content from an existing web app or webpage](../tabs/how-to/add-tab.md#tab-requirements): We showed you how to create new content for a tab, but you can also load content from an external URL.
+* [Create a seamless tab experience](../tabs/design/tabs.md): See the recommended guidelines for designing Teams tabs.
 * [Build tabs for mobile](../tabs/design/tabs-mobile.md): Understand how to develop tabs for phones and tablets.
 * [Utilize Teams data with the Microsoft Graph API](https://docs.microsoft.com/graph/teams-concept-overview)
 * [Create a tab without the toolkit](../tabs/how-to/add-tab.md)
