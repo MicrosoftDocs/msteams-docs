@@ -28,7 +28,8 @@ The app template integrates with Microsoft Bookings for easy appointment managem
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-appointment-manager)
 
-![Appointment Manager Overview](../assets/images/appointment-manager-app.png)
+![Appointment Manager Overview](../assets/images/appointment-manager-overview.png)
+![Appointment Manager in Teams](../assets/images/appointment-manager-2.png)
 
 ## Ask Away
 
