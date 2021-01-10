@@ -20,6 +20,17 @@ App templates are production-ready apps for Microsoft Teams that are community d
 * **Customizable and extensible:** While all app templates are ready to deploy as they are, we provide the entire code base and deployment scripts so that you can easily customize or extend them to fit your unique needs.
 * **Detailed documentation & support:** All app templates are accompanied by end-to-end documentation on solution architecture, deployment, and configuration steps. The repositories are monitored as well, so please report any issues you encounter by raising an Issue on GitHub.
 
+## Appointment Manager &#9734;
+
+Appointment Manager is a Teams app template to help businesses create, manage, and conduct virtual appointments with consumers through Teams. New appointment requests from consumers are visible in Teams channels, where they can quickly be assigned and reassigned to staff in a team. Appointment requests can be viewed at team or personal levels through custom tabs. Every appointment is associated with a Teams online meeting, hence the staff and consumers can easily join the meeting at the scheduled time.
+
+The app template integrates with Microsoft Bookings for easy appointment management. Scheduled appointments automatically appear on assigned staff members' calendars, and consumers receive customizable email notifications and reminders with embedded meeting links.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-appointment-manager)
+
+![Appointment Manager Overview](../assets/images/appointment-manager-overview.png)
+![Appointment Manager in Teams](../assets/images/appointment-manager-2.png)
+
 ## Ask Away
 
 Ask Away is a [Microsoft Teams bot](../bots/what-are-bots.md) that enables users to conduct Q&A (Question and Answer) sessions within Teams. Using the Ask Away bot, team members can submit and up-vote questions shared by colleagues allowing Q&A hosts to easily gather top-of-mind questions within a channel or chat. The bot can be used to conduct a real-time Q&A session in a Teams meeting and allows attendees to submit questions live via chat.
