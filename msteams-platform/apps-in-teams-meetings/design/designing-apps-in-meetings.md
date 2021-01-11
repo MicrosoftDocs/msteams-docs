@@ -18,11 +18,11 @@ You can find more comprehensive design guidelines, including elements that you c
 
 ## Add a meeting extension
 
-You can add a meeting extension before and during meetings. You also can an app for a specific meeting directly from the Teams store (AppSource).
+You can add a meeting extension before and during meetings. You also can add an app for a specific meeting directly from the Teams store (AppSource).
 
 ### Add before a meeting
 
-Before a meeting, the meeting details select **Add a tab +** to open the app flyout and find apps optimized for meetings.
+In the meeting details, select **Add a tab +** to open the app flyout and find apps optimized for meetings.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-before-meeting.png" alt-text="Example shows how to add a meeting extension before a meeting." border="false":::
 
@@ -249,7 +249,7 @@ This deviates from the standard Teams pattern for control placement in a dialog 
 
 #### Do: Scroll vertically
 
-We recommend positioning the most visually heavy action to the right-most location.
+Users anticipate vertical scrolling in Teams (and elsewhere).
 
    :::column-end:::
    :::column span="":::
@@ -276,7 +276,7 @@ If your app includes multiple tasks, we strongly recommend using an in-meeting t
    :::column span="":::
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-workflow-dont.png" alt-text="Example showing a meeting extension best practice." border="false":::
 
-#### Don't: Package complex scenarios in the in-meeting dialog
+#### Don't: Make in-meeting dialogs complex
 
 In-meeting dialogs are intended for brief interactions.
 
@@ -297,9 +297,9 @@ Teams meetings are optimized for dark mode to help reduce visual and cognitive n
    :::column span="":::
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-dont.png" alt-text="Example showing a meeting extension best practice." border="false":::
 
-#### Don't: Include another dismiss button
+#### Don't: Hard code hex values
 
-Providing an option to close in-meeting tab content may cause issues since there’s already a button in the header to dismiss the in-meeting tab itself.
+If you don’t use Teams color tokens, your designs will be less scalable and take more time to manage.
 
    :::column-end:::
 :::row-end:::
