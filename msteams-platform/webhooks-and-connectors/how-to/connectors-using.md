@@ -62,6 +62,11 @@ You can also use this JSON to create cards containing rich inputs, such as text 
             "name": "Save",
             "target": "http://..."
         }]
+        {
+            "@type": "OpenUri",
+            "name": "Learn More",
+            "targets": [{ "os": "default", "uri": "https://docs.microsoft.com/outlook/actionable-messages" }]
+        }
     }, {
         "@type": "ActionCard",
         "name": "Change status",
@@ -103,8 +108,6 @@ Connector cards support three types of actions:
 - `ActionCard` Presents one or more input types and associated actions
 - `HttpPOST` Sends a POST request to a URL
 - `OpenUri` Opens a URI in a separate browser or app; optionally targets different URIs based on operating systems
-
-(A fourth action, `ViewAction`, is still supported but no longer needed; use `OpenUri` instead.)
 
 The `ActionCard` action supports three input types:
 

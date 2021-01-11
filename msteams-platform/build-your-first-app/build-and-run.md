@@ -21,10 +21,6 @@ Use the Microsoft Teams Toolkit in Visual Studio Code to set up your first app p
 1. Enter a name for your Teams app. (This is the default name for your app and also the name of the app project directory on your local machine.)
 1. Check only the **Personal tab** option and select **Finish** at the bottom of the screen to configure your project.
 
-> [!NOTE]
-
-> To install your app package after creating a new project in the toolkit, press F5/run. It will launch Chrome and install your package. The package is stored in App Studio and installed using the `appId`.
-
 ## 2. Understand important app project components
 
 Once the toolkit configures your project, you have the components to build a basic personal tab for Teams. The project directories and files display in the Explorer area of Visual Studio Code.
@@ -35,7 +31,7 @@ Once the toolkit configures your project, you have the components to build a bas
 
 The toolkit automatically creates scaffolding for you in the `src` directory based on the capabilities you added during setup.
 
-If you create a tab during setup, for example, the `App.js` file in the `src/components` directory is important because it handles the initialization and routing of your app. It calls the [Microsoft Teams SDK](../tabs/how-to/using-teams-client-sdk.md) to establish communication between your app and Teams.
+If you create a tab during setup, for example, the `App.js` file in the `src/components` directory is important because it handles the initialization and routing of your app. It calls the [Microsoft Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md) to establish communication between your app and Teams.
 
 ### App ID
 
