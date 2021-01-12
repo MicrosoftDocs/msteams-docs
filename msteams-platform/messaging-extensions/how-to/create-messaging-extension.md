@@ -115,6 +115,107 @@ The example below is a simple messaging extension object in the app manifest wit
 ...
 ```
 
+#### Complete app manifest example
+
+```json
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.5",
+  "version": "1.0",
+  "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
+  "packageName": "com.microsoft.teams.samples.Todo",
+  "developer": {
+    "name": "John Developer",
+    "websiteUrl": "http://todobotservice.azurewebsites.net/",
+    "privacyUrl": "http://todobotservice.azurewebsites.net/privacy",
+    "termsOfUseUrl": "http://todobotservice.azurewebsites.net/termsofuse"
+  },
+  "name": {
+    "short": "To Do",
+    "full": "To Do"
+  },
+  "description": {
+    "short": "Find or create a new task in To Do",
+    "full": "Find or create a new task in To Do"
+  },
+  "icons": {
+    "outline": "todo-outline.jpg",
+    "color": "todo-color.jpg"
+  },
+  "accentColor": "#ff6a00",
+  "composeExtensions": [
+    {
+      "botId": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
+      "canUpdateConfiguration": true,
+      "commands": [
+        {
+          "id": "searchCmd",
+          "description": "Search you Todo's",
+          "title": "Search",
+          "initialRun": true,
+          "context": ["commandBox", "compose"],
+          "parameters": [
+            {
+              "name": "searchKeyword",
+              "description": "Enter your search keywords",
+              "title": "Keywords"
+            }
+          ]
+        },
+        {
+          "id": "addTodo",
+          "description": "Create a To Do item",
+          "title": "Create To Do",
+          "type": "action",
+          "context": ["commandBox", "message", "compose"],
+          "parameters": [
+            {
+              "name": "Name",
+              "description": "To Do Title",
+              "title": "Title",
+              "inputType": "text"
+            },
+            {
+              "name": "Description",
+              "description": "Description of the task",
+              "title": "Description",
+              "inputType": "textarea"
+            },
+            {
+              "name": "Date",
+              "description": "Due date for the task",
+              "title": "Date",
+              "inputType": "date"
+            }
+          ]
+        },
+        {
+          "id": "reassignTodo",
+          "description": "Reassign a todo item",
+          "title": "Reassign a todo item",
+          "type": "action",
+          "fetchTask": true,
+          "parameters": [
+            {
+              "name": "Name",
+              "title": "Title"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "todobotservice.azurewebsites.net",
+    "*.todobotservice.azurewebsites.net"
+  ]
+}
+```
+
 ## Add your invoke message handlers
 
 When your users trigger your messaging extension you'll need to handle the initial invoke message, collect some information from the user, then process that information and respond appropriately. To do that, you'll first need to decide what kind of commands you want to add to your messaging extension and either [add an action commands](~/messaging-extensions/how-to/action-commands/define-action-command.md) or [add a search commands](~/messaging-extensions/how-to/search-commands/define-search-command.md).
