@@ -111,7 +111,7 @@ Business verification takes up to two business days to complete, provided all th
 
 ## If I reach out to the support team, will my ticket be expedited?
 
-Support tickets will be resolved within a week. Check for the updates sent to the email id provided when raising the support ticket.
+Support tickets are resolved in a week. Check for updates sent to the email id provided when raising the support ticket.
 
 ## My issue is not listed here.  Are there other pages I can reference for Partner Center issues?
 
