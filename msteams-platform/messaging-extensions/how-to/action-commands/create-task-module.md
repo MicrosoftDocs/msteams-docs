@@ -462,11 +462,11 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 ```
 ### Request to install your conversational bot
 
-If your app also contains a conversational bot, it may be necessary to ensure that your bot is installed in the conversation before loading your task module. This can be useful in situations where you need to get additional context for your task module. For example, you may need to fetch the roster to populate a people picker control, or the list of channels in a team.
+If the app also contains a conversational bot, it may be necessary to ensure that the bot is installed in the conversation before loading the task module. This is useful in situations where there is a need to get additional context for the task module. For example, fetching the roster to populate a people picker control, or the list of channels in a team.
 
-When your messaging extension first receives the `composeExtension/fetchTask` invoke, check if your bot is installed in the current context to facilitate this flow. You could accomplish this by attempting the get roster call. If your bot is not installed, you return an Adaptive Card with an action that requests the user to install your bot. See the following example. This requires the user should have permission to install apps in that location. If they could not install apps, they will be presented with a message, asking them to contact their administrator.
+When the messaging extension first receives the `composeExtension/fetchTask` invoke, check if the bot is installed in the current context to facilitate this flow. This is done   by attempting the get roster call. If the bot is not installed, you return an Adaptive Card with an action that requests the user to install the bot. See the following example. This requires the user should have permission to install apps in that location. If they could not install apps, they get a message to contact the administrator.
 
-Here's an example of the response:
+Example of the response:
 
 ```json
 {
@@ -494,7 +494,7 @@ Here's an example of the response:
 
 Once the user completes the installation, your bot will receive another invoke message with `name = composeExtension/submitAction`, and `value.data.msteams.justInTimeInstall = true`.
 
-Here's an example of the invoke:
+Example of the invoke:
 
 ```json
 {
@@ -520,141 +520,11 @@ Here's an example of the invoke:
 
 You should respond to this invoke with the same task response you would have responded with, if the bot was already installed.
 
-## Responding to submit
-
-Once a user completes entering their input your bot will receive a `composeExtension/submitAction` event with the command id and parameter values set.
-
-These are the different expected responses to a `submitAction`.
-
-### Task Module response
-
-This is used when your extension needs to chain dialogs together to get more information. The response is exactly the same as `fetchTask` mentioned earlier.
-
-### Compose extension auth/config response
-
-This is used when your extension needs to either authenticate or configure to continue. For more details, See [authentication section](~/resources/messaging-extension-v3/search-extensions.md#authentication) in the search section.
-
-### Compose extension result response
-
-This is used to insert a card into the compose box as a result of the command. It is the same response that is used in the search command, but it is limited to one card or one result in the array.
-
-```json
-{
-  "composeExtension": {
-    "type": "result",
-    "attachmentLayout": "list",
-    "preview": {
-          "contentType": "application/vnd.microsoft.card.thumbnail",
-          "content": {
-            "title": "85069: Create a cool app",
-            "images": [
-              {
-                "url": "https://placekitten.com/200/200"
-              }
-            ]
-          }
-        },
-    "attachments": [
-      {  
-        "contentType": "application/vnd.microsoft.teams.card.o365connector",
-        "content": {
-          "sections": [
-            {
-              "activityTitle": "[85069]: Create a cool app",
-              "activityImage": "https://placekitten.com/200/200"
-            },
-            {
-              "title": "Details",
-              "facts": [
-                {
-                  "name": "Assigned to:",
-                  "value": "[Larry Brown](mailto:larryb@example.com)"
-                },
-                {
-                  "name": "State:",
-                  "value": "Active"
-                }
-              ]
-            }
-          ]
-        }
-      }
-    ]
-  }
-}
-```
-
-### Respond with an adaptive card message sent from a bot
-
-Respond to the submit action by inserting a message with an Adaptive Card into the channel with a bot. Your user will preview the message before submitting it, and p edit or interact with it. This is useful in scenarios where you want to gather information from your users before creating an adaptive card response. The following scenario shows how to  use this flow to configure a poll without including the configuration steps in the channel message.
-
-1. The user selects the messaging extension to trigger the task module.
-1. The user uses the task module to configure the poll.
-1. After submitting the configuration task module, the app uses the information provided in the task module to craft an adaptive card and sends it as a `botMessagePreview` response to the client.
-1. The user can preview the adaptive card message before the bot will insert it into the channel. If the bot is not already a member of the channel, selecting `Send` will add the bot.
-1. Interacting with the adaptive card will change the message before sending it.
-1. Once the user selects `Send`, the bot will post the message to the channel.
-
-To enable this flow, your task module should respond as in the following example, which will present the preview message to the user.
-
->[!Note]
->The `activityPreview` must contain a `message` activity with exactly 1 adaptive card attachment.
-
-```json
-{
-  "composeExtension": {
-    "type": "botMessagePreview",
-    "activityPreview": {
-      "type": "message",
-      "attachments":  [
-        {
-          "contentType": "application/vnd.microsoft.card.adaptive",
-          "content": << Card Payload >>
-        }
-      ]
-    }
-  }
-}
-```
-
-Your message extension will now need to respond to two new types of interactions, `value.botMessagePreviewAction = "send"` and `value.botMessagePreviewAction = "edit"`.  The following section is an example of the `value` object you will need to process:
-
-```json
-{
-  "name": "composeExtension/submitAction",
-  "type": "invoke",
-  "conversation": { "id": "19:c366b75791784100b6e8b515fd55b063@thread.skype" },
-  "imdisplayname": "Pranav Smith",
-  ...
-  "value": {
-    "botMessagePreviewAction": "send" | "edit",
-    "botActivityPreview": [
-      {
-        "type": "message/card",
-        "attachments": [
-          {
-            "content":
-              {
-                "type": "AdaptiveCard",
-                "body": [{<<card payload>>}]
-              },
-            "contentType" : "application/vnd.microsoft.card.adaptive"
-          }
-        ],
-        "context": { "theme": "default" }
-      }
-    ],
-  }
-}
-```
-
-When responding to the `edit` request, you should respond with a `task` response with the values populated with the information the user has already submitted. When responding to the `send` request, you should send a message to the channel containing the finalized adaptive card.
-
 * * *
 
 ## Next steps
 
-If you allow your users to send a response back from the task module, you will need to handle the submit action.
+If you allow your users to send a response back from the task module, you have to handle the submit action.
 
 * [Create and respond with a task module](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
