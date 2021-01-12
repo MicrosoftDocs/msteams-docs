@@ -90,7 +90,7 @@ This code informs Teams that the configuration requirements are satisfied and th
 
 Your tab might require contextual information to display relevant content. Contextual information further enhances your tab's appeal by providing a more customized user experience.
 
-The Teams [Context interface](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) defines the properties that can be used for your tab configuration. Collect the values of context data variables in two ways:
+The Teams [Context interface](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) defines the properties that can be used for your tab configuration. Collect the values of context data variables in the following two ways:
 
 1. Insert URL query string placeholders in your manifest's `configurationURL`.
 
