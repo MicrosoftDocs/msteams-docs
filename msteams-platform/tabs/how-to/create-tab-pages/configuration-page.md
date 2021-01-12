@@ -151,8 +151,8 @@ When requested, the `microsoftTeams.getContext((context) => {})` function retrie
 
 ## Context and Authentication
 
-You might require authentication before allowing a user to configure your app. Otherwise, your content might include sources that have their own authentication protocols. For more information, see [Authenticate a user in a Microsoft Teams tab](~/tabs/how-to/authentication/auth-flow-tab.md). Context information can be used to help in constructing the authentication requests and authorization page URLs.
-Ensure that all domains used in your tab pages are listed in the `manifest.json` `validDomains` array.
+You require authentication before allowing a user to configure your app or your content might include sources that have their own authentication protocols. For more information, see [Authenticate a user in a Microsoft Teams tab](~/tabs/how-to/authentication/auth-flow-tab.md). Use Context information to help construct the authentication requests and authorization page URLs.
+Ensure that all domains used in your tab pages are listed in the `manifest.json` and `validDomains` array.
 
 ## Modify or remove a tab
 
