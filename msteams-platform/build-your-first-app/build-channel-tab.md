@@ -178,8 +178,8 @@ Congratulations! You have a Teams app with a tab for displaying useful content i
 * [Embed content from an existing web app or webpage](../tabs/how-to/add-tab.md#tab-requirements): We showed you how to create new content for a tab, but you can also load content from an external URL.
 * [Create a seamless tab experience](../tabs/design/tabs.md): See the recommended guidelines for designing Teams tabs.
 * [Build tabs for mobile](../tabs/design/tabs-mobile.md): Understand how to develop tabs for phones and tablets.
-* [Utilize Teams data with the Microsoft Graph API](https://docs.microsoft.com/graph/teams-concept-overview)
-* [Create a tab without the toolkit](../tabs/how-to/add-tab.md)
+* [Create a tab without the toolkit](../tabs/quickstarts/create-channel-group-tab-node-yeoman.md)
+* [Utilize Teams data with Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview)
 
 ## Next lesson
 
