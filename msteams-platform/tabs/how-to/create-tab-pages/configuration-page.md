@@ -79,7 +79,7 @@ To display the tab content with a gray or red icon, choose either **Select Gray*
 1. The `microsoftTeams.settings.registerOnSaveHandler()` event handler is triggered.
 1. The **Save** button on the app's configuration page, uploaded in Teams, is enabled.
 
-This code allows the Teams to know that the configuration requirements have been satisfied and the installation can proceed. When the user selects **Save**, the parameters of `settings.setSettings()` are set for this example, as defined by the `Settings` interface. For more information, see [Settings interface](/javascript/api/@microsoft/teams-js/_settings?view=msteams-client-js-latest&preserve-view=true). Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
+This code informs Teams that the configuration requirements are satisfied and the installation can proceed. When the user selects **Save**, the parameters of `settings.setSettings()` are set, as defined by the `Settings` interface. For more information, see [Settings interface](/javascript/api/@microsoft/teams-js/_settings?view=msteams-client-js-latest&preserve-view=true). In the last step, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
 
 >[!NOTE]
 >
