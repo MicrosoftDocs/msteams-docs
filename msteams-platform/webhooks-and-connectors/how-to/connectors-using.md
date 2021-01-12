@@ -246,7 +246,7 @@ The following manifest.json file contains the basic elements needed to test and 
             "body":[
                 {
                 "type": "TextBlock",
-                "text": "For Samples and Templates, see https://adaptivecards.io/samples](https://adaptivecards.io/samples)",
+                "text": "For Samples and Templates, see [https://adaptivecards.io/samples](https://adaptivecards.io/samples)",
                 }
             ]
          }
