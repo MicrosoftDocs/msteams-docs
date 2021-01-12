@@ -116,11 +116,7 @@ Context interface placeholders can be added to your base `configurationUrl`. For
 ...
 ```
 
-<<<<<<< Updated upstream
 After your page uploads, the Teams updates the query string placeholders with relevant values. Include logic in your configuration page to retrieve and use those values. For more information on working with URL query strings, see [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) in MDN web docs. The following example describes the way to extract a value from the `configurationURL` property:
-=======
-After your page uploads, the Teams updates the query string placeholders with the relevant values. You can include logic in your configuration page to retrieve and use those values. For more information on working with URL query strings, see [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) in MDN Web Docs. The following example describes the way to extract a value from the `configurationURL` property:
->>>>>>> Stashed changes
 
 ```html
 <script>
@@ -160,11 +156,7 @@ Ensure that all domains used in your tab pages are listed in the `manifest.json`
 
 ## Modify or remove a tab
 
-<<<<<<< Updated upstream
-Supported removal options further refine the user experience. Allow users to modify, reconfigure, or rename a group or channel tab by setting your manifest's `canUpdateConfiguration` property to `true`. In addition, indicate what happens to the content when a tab is removed by including a removal options page in the app and setting a value for the `removeUrl` property in the  `setSettings()` configuration, see [Mobile clients](). User can uninstall the Personal tabs but cannot modify it. For more information, see [Create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
-=======
-Supported removal options can further refine the user experience. You can enable users to modify, reconfigure, or rename a group or channel tab by setting your manifest's `canUpdateConfiguration` property to `true`. Also, you can indicate what happens to the content when a tab is removed. This is done by including a removal options page in your app and setting a value for the `removeUrl` property in the  `setSettings()` configuration see [Mobile clients section](../../tabs/how-to/create-tab-pages/configuration-page.md#Mobile clients). Personal tabs can't be modified but can be uninstalled by the user. For more information, see [Create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
->>>>>>> Stashed changes
+Supported removal options further refine the user experience. Allow users to modify, reconfigure, or rename a group or channel tab by setting your manifest's `canUpdateConfiguration` property to `true`. In addition, indicate what happens to the content when a tab is removed by including a removal options page in the app and setting a value for the `removeUrl` property in the  `setSettings()` configuration, see [Mobile clients](./../tabs/how-to/create-tab-pages/configuration-page.md#Mobile clients). User can uninstall the Personal tabs but cannot modify it. For more information, see [Create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
 
 ## Mobile clients
 
