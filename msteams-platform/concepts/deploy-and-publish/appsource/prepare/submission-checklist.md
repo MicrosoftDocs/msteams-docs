@@ -12,7 +12,7 @@ To be listed on AppSource, your app must go through an approval process. This is
   > [!NOTE] 
   > The Appsource validation policies are subject to change.
 * **Mobile readiness:** Your app must be mobile responsive. If your app contains tabs, they must follow the [mobile design guidelines](~/tabs/design/tabs-mobile.md) and your app must comply with [no upsell requirements](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-mobile-responsiveness-no-direct-upsell-or-payment) on mobile OS (iOS and Android).
-* **Self test your app** with the [Manifest validation tool](#teams-app-validation-tool) .
+* **Self test your app:** Test your app using the [Manifest validation tool](#teams-app-validation-tool).
 * **App detail page:** Your app must align with the  [App detail page checklist](detail-page-checklist.md).
 * **Tips and frequently failed cases:** Pay extra attention to the listed [Tips and frequently failed cases](frequently-failed-cases.md)  to improve your app submission and approval time.
 * **App manifest:** Check your app manifest against the [App manifest checklist](app-manifest-checklist.md).
