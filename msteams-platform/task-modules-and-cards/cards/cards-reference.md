@@ -70,8 +70,8 @@ A customizable card that can contain any combination of text, speech, images, bu
 |
 
 > [!NOTE]
-> Media elements are currently not supported in Adaptive cards v1.2 on the Teams platform.
-
+> * Teams platform supports v1.2 or earlier of Adaptive card features.
+> * Media elements are currently not supported in Adaptive card v1.2 on the Teams platform.
 ### Example Adaptive card
 
 ![Example of a adaptive card card](~/assets/images/cards/adaptivecard.png)
@@ -587,7 +587,7 @@ Bot Framework reference:
 
 Card collections are supported in Teams.
 
-Card collections are provided by the Bot Framework: `builder.AttachmentLayout.carousel` and `builder.AttachmentLayout.list`. These collections can contain Adaptive, Hero, or Thumbnail cards.
+Card collections: `builder.AttachmentLayout.carousel` and `builder.AttachmentLayout.list`. These collections contain Adaptive, Hero, or Thumbnail cards.
 
 ## Carousel collection
 
@@ -603,15 +603,182 @@ The [carousel layout](/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card
 > [!NOTE]
 > A carousel can display a maximum of 10 cards per message.
 
+### Properties of a Carousel card
+
+Properties of a Carousel card are same as those of the Hero and Thumbnail cards.
+
 ### Example Carousel collection
 
 ![Example of a carousel of cards](~/assets/images/cards/carousel.png)
 
-Properties are the same as for the hero or thumbnail card.
+```json
+{
+ "attachmentLayout": "carousel",
+ "attachments":[
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+          {
+            "type": "Container",
+            "items": [
+              {
+                "type": "TextBlock",
+                "size": "extraLarge",
+                "weight": "bolder",
+                "text": "Welcome to Employee Connect",
+                "height": "stretch"
+              },
+              {
+                "type": "TextBlock",
+                "size": "medium",
+                "weight": "bolder",
+                "text": "Add events to your calendar",
+                "height": "stretch"
+              },
+              {
+                "type": "TextBlock",
+                "weight": "bolder",
+                "text": "The bot can send \r\rnotification to remind \r\ryou about the latest \r\revents and trainings.",
+                "wrap": true,
+                "height": "stretch"
+              },
+              {
+                "type": "ColumnSet",
+                "columns": [
+                  {
+                    "type": "Column",
+                    "items": [],
+                    "height": "stretch"
+                  }
+                ]
+              },
+              {
+                "type": "ColumnSet",
+                "columns": [
+                  {
+                    "type": "Column",
+                    "items": [],
+                    "height": "stretch"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "type": "Action.Submit",
+            "title": "Let's get started"
+          }
+        ]
+      }
+    },
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "type": "AdaptiveCard",
+        "version": "1.2",
+        "body": [
+          {
+            "type": "Container",
+            "items": [
+              {
+                "type": "TextBlock",
+                "size": "large",
+                "weight": "bolder",
+                "text": "Employee connect"
+              },
+              {
+                "type": "TextBlock",
+                "text": "The bot can send notifications \r\rto remind you about the latest \r\r events and trainings",
+                "wrap": true,
+                "maxWidth": 2
+              },
+              {
+                "type": "ColumnSet",
+                "columns": [
+                  {
+                    "type": "Column",
+                    "items": [],
+                    "height": "stretch"
+                  }
+                ]
+              },
+              {
+                "type": "ColumnSet",
+                "columns": [
+                  {
+                    "type": "Column",
+                    "items": [],
+                    "height": "stretch"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "type": "Action.Submit",
+            "title": "Let's get started"
+          }
+        ]
+      }
+    },
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+          {
+            "type": "Container",
+            "items": [
+              {
+                "type": "TextBlock",
+                "size": "large",
+                "weight": "bolder",
+                "text": "Employee Connect final"
+              },
+              {
+                "type": "TextBlock",
+                "weight": "bolder",
+                "text": "Create and manage your tasks",
+                "wrap": true
+              },
+              {
+                "type": "TextBlock",
+                "text": "The app identifies all your pending tasks \r\r and helps you manage everything at \r\r one place.",
+                "wrap": true
+              },
+              {
+                "type": "TextBlock",
+                "weight": "bolder",
+                "text": "Try these commands \r\r- Pending Submissions \r\r- Pending Approvals- My Tools",
+                "wrap": true,
+                "height": "stretch"
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "type": "Action.Submit",
+            "title": "Let's get started"
+          }
+        ]
+      }
+    }
+  ]
+}
+```
 
 ### Syntax for Carousel collections
 
-`builder.AttachmentLayout.carousel`
+`builder.AttachmentLayoutTypes.Carousel`
 
 ## List collection
 

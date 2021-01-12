@@ -20,6 +20,17 @@ App templates are production-ready apps for Microsoft Teams that are community d
 * **Customizable and extensible:** While all app templates are ready to deploy as they are, we provide the entire code base and deployment scripts so that you can easily customize or extend them to fit your unique needs.
 * **Detailed documentation & support:** All app templates are accompanied by end-to-end documentation on solution architecture, deployment, and configuration steps. The repositories are monitored as well, so please report any issues you encounter by raising an Issue on GitHub.
 
+## Appointment Manager &#9734;
+
+Appointment Manager is a Teams app template to help businesses create, manage, and conduct virtual appointments with consumers through Teams. New appointment requests from consumers are visible in Teams channels, where they can quickly be assigned and reassigned to staff in a team. Appointment requests can be viewed at team or personal levels through custom tabs. Every appointment is associated with a Teams online meeting, hence the staff and consumers can easily join the meeting at the scheduled time.
+
+The app template integrates with Microsoft Bookings for easy appointment management. Scheduled appointments automatically appear on assigned staff members' calendars, and consumers receive customizable email notifications and reminders with embedded meeting links.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-appointment-manager)
+
+![Appointment Manager Overview](../assets/images/appointment-manager-overview.png)
+![Appointment Manager in Teams](../assets/images/appointment-manager-2.png)
+
 ## Ask Away
 
 Ask Away is a [Microsoft Teams bot](../bots/what-are-bots.md) that enables users to conduct Q&A (Question and Answer) sessions within Teams. Using the Ask Away bot, team members can submit and up-vote questions shared by colleagues allowing Q&A hosts to easily gather top-of-mind questions within a channel or chat. The bot can be used to conduct a real-time Q&A session in a Teams meeting and allows attendees to submit questions live via chat.
@@ -136,6 +147,14 @@ The Contact Group Lookup app provides a convenient and useful approach to creati
     ![Contact Group Lookup start chat demo](../assets/images/contact-group-lookup-chat.png)
 :::column-end:::
 :::row-end:::
+
+## Co-worker Appreciation &#9734;
+
+Using the co-worker appreciation template in Microsoft Teams, users can recognize their colleagues' achievements within the Teams’ context. When co-workers select to reward a colleague, recipients and other team members are tagged in a channel conversation and they receive a notification about the channel's award details. The awards are recorded in the Teams app, which is secure, portable, and easily shareable. This can be considered as the PowerApps based version of the Open Badges app template, with a leaderboard.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-coworker-appreciation)
+
+![Overall](../assets/images/coworker-appreciation-1.png)
 
 ## CrowdSourcer
 
@@ -558,6 +577,16 @@ Survey is a custom Microsoft Teams [messaging extension](../messaging-extensions
     ![Create survey in Teams view](../assets/images/survey-app-template-compose-view.gif)
 :::column-end:::
 :::row-end:::
+
+## Virtual Rounding &#9734;
+
+Hospital and emergency room providers make dozens, and often hundreds of “rounds” per day. These quick check-ins on patients are intended to provide a status check on how the patient is doing and ensure that the patient’s concerns are addressed. While rounding is an essential practice to ensure patients are being monitored by multiple types of providers, they represent a huge drain on PPE, because for each visit, from each provider, a new mask, and new set of gloves must be used. With this app templates, medical workers can easily conduct rounds virtually, through a Microsoft Teams meeting between the provider and the patient.
+
+The Virtual Rounding solution is also referenced in the Microsoft Health and Life Sciences [blog post](https://aka.ms/teamsvirtualrounding).
+
+[Get it on GitHub](https://github.com/SmartterHealth/Virtual-Rounding)
+
+![Virtual Rounding](../assets/images/virtual-rounding-overview.png)
 
 ## Visitor Management
 
