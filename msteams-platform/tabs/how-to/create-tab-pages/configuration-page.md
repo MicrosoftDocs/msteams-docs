@@ -73,7 +73,7 @@ Your application must reference the [Microsoft Teams JavaScript client SDK](/jav
 ...
 ```
 
-The user can select either **Select Gray** or **Select Red** button. This displays the tab content with either a gray or red icon based on the selection. Choosing the respective button gets either `saveGray()` or `saveRed()` and triggers the following actions:
+To display the tab content with a gray or red icon, choose either **Select Gray** or **Select Red**. Choosing the relative option fires either `saveGray()` or `saveRed()` and invokes the following:
 
 1. The `settings.setValidityState(true)` is set to true.
 1. The `microsoftTeams.settings.registerOnSaveHandler()` event handler is triggered.
