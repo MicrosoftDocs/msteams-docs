@@ -18,7 +18,7 @@ Make your app available in the Microsoft Teams app catalog and on the web by pub
 1. Review the [most failed test cases for a quicker app quality approval](prepare/frequently-failed-cases.md).
 1. Submit your package to [AppSource through Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource).
 1. Track the approval process on your Partner Center dashboard. *See* [Partner Center Overview](https://support.microsoft.com/help/4499930/partner-center-overview).
-1. Review the guidance for [Maintaining and supporting your published app](post-publish/overview.md) after submission.
+1. After submission, review the guidance for [Maintaining and supporting your published app](post-publish/overview.md) after submission.
 
 >[!NOTE]
 >
