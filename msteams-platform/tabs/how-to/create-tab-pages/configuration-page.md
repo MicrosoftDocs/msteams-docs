@@ -8,7 +8,7 @@ ms.author: lajanuar
 ---
 # Create a configuration page
 
-A configuration page is a special type of [content page](content-page.md) that allows your users to configure some aspects of Microsoft Teams app. It allows you to collect the information from your users and set the `contentUrl` of the content page to display. These aspects are used as part of the following:
+A configuration page is a special type of [content page](content-page.md) that allows your users to configure some aspects of the Teams app. It collects information from users and sets the `contentUrl` of the content page that appears. These aspects are part of the following:
 
 * A channel or group chat tab  
 * A [messaging extension](~/messaging-extensions/what-are-messaging-extensions.md)
