@@ -8,7 +8,7 @@ keywords: teams publish store office publishing publish AppSource partner center
 
 ## Teams app submission
 
-Publishing  your app to [AppSource](https://appsource.microsoft.com) makes it available in the Microsoft Teams app catalog and on the web. At a high level, the process for submitting your app to AppSource is:
+Make your app available in the Microsoft Teams app catalog and on the web by publishing it to [AppSource](https://appsource.microsoft.com). At a high level, the process for submitting your app to AppSource is as follows:
 
 1. Develop your app by following the [design guidelines](~/concepts/design/understand-use-cases.md). Tabs should follow our [tab design guidelines](~/tabs/design/tabs.md). Bots should follow the [bot design guidelines](~/bots/design/bots.md).
 1. Ensure your app meets the app [validation policies](/legal/marketplace/certification-policies) for Microsoft Teams. 
