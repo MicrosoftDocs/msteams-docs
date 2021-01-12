@@ -156,7 +156,7 @@ Ensure that all domains used in your tab pages are listed in the `manifest.json`
 
 ## Modify or remove a tab
 
-Supported removal options can further refine the user experience. You can enable users to modify, reconfigure, or rename a group or channel tab by setting your manifest's `canUpdateConfiguration` property to `true`. Also, you can indicate what happens to the content when a tab is removed. This is done by including a removal options page in your app and setting a value for the `removeUrl` property in the  `setSettings()` configuration (see Mobile clients section). Personal tabs can't be modified but can be uninstalled by the user. For more information, see [Create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
+Supported removal options further refine the user experience. Allow users to modify, reconfigure, or rename a group or channel tab by setting your manifest's `canUpdateConfiguration` property to `true`. In addition, indicate what happens to the content when a tab is removed by including a removal options page in the app and setting a value for the `removeUrl` property in the  `setSettings()` configuration, see [Mobile clients](). User can uninstall the Personal tabs but cannot modify it. For more information, see [Create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
 
 ## Mobile clients
 
