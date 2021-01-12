@@ -32,7 +32,7 @@ Make your app available in the Microsoft Teams app catalog and on the web by pub
 
 There are two ways to create a Partner Center account:
 
-- If you are new to Partner Center and don't have an account  within the Microsoft network, create an account using the [Partner Center enrollment page](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
+- If you are new to Partner Center and don't have an account in the Microsoft network, create an account using the [Partner Center enrollment page](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
 - If you are already enrolled in the Partner Network, create an account directly in Partner Center using an [ existing enrollment page](/office/dev/store/).
 
 ## What if I cannot find my Office Store account in Partner Center?
