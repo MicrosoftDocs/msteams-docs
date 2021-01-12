@@ -116,7 +116,7 @@ Context interface placeholders can be added to your base `configurationUrl`. For
 ...
 ```
 
-After your page uploads, the Teams updates the query string placeholders with the relevant values. You can include logic in your configuration page to retrieve and use those values. For more information on working with URL query strings, see [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) in MDN web docs. The following example describes the way to extract a value from the `configurationURL` property:
+After your page uploads, the Teams updates the query string placeholders with relevant values. Include logic in your configuration page to retrieve and use those values. For more information on working with URL query strings, see [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) in MDN web docs. The following example describes the way to extract a value from the `configurationURL` property:
 
 ```html
 <script>
