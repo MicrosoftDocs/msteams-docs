@@ -49,7 +49,7 @@ You can have a maximum of one (1) channel/group tab and up to sixteen (16) perso
 
 ## Mobile clients
 
-If you choose to have your channel/group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property. To ensure optimal user experience, you should follow the [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md) when creating your tabs. 
+If you choose to have your channel or group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property. To ensure optimal user experience, you must follow the [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md) when creating your tabs. 
 Apps that are [distributed via Appsource](~/concepts/deploy-and-publish/appsource/publish.md) have a separate approval process for mobile clients. The default behavior of such apps is as below:
 
 | **App Capability** | **Behavior if app is approved** | **Behavior if app is not approved** |
