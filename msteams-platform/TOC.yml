@@ -34,19 +34,19 @@
     items:
     - name: Chatbot with C# (GitHub)
       href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot
-    - name: Chatbot with JavaScript (GitHub)
+    - name: Chatbot with Node.js (GitHub)
       href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot
     - name: Chatbot with Python (GitHub)
       href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot
   - name: Messaging extension samples
     items:
-    - name: Action commands with C#/.NET (GitHub)
+    - name: Action commands with C# (GitHub)
       href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action
-    - name: Action commands with TypeScript/Node.js (GitHub)
+    - name: Action commands with Node.js (GitHub)
       href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action
-    - name: Search commands with C#/.NET (GitHub)
+    - name: Search commands with C# (GitHub)
       href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search
-    - name: Search commands with TypeScript/Node.js (GitHub)
+    - name: Search commands with Node.js (GitHub)
       href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search
 - name: App fundamentals
   items:
@@ -74,7 +74,7 @@
     href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
     href: samples/shifts-wfm-connectors.md
-  - name: Install Moodle LMS
+  - name: Install the Moodle LMS
     href: resources/moodleInstructions.md
   - name: Create a Share-to-Teams button
     href: concepts/build-and-test/share-to-teams.md
@@ -126,12 +126,14 @@
     href: https://github.com/pnp/generator-teams
   - name: App Studio
     href: concepts/build-and-test/app-studio-overview.md
+  - name: Teams JavaScript client SDK
+    href: tabs/how-to/using-teams-client-sdk.md
   - name: Node.js Bot Framework for bots and messaging extensions (GitHub)
     href: https://github.com/Microsoft/botbuilder-js
   - name: .NET Bot Framework for bots and messaging extensions (GitHub)
     href: https://github.com/Microsoft/botbuilder-dotnet
   - name: Microsoft Graph SDKs
-    href: https://docs.microsoft.com/en-us/graph/sdks/sdks-overview
+    href: https://docs.microsoft.com/graph/sdks/sdks-overview
   - name: Legacy SDKs
     items:
     - name: Bots SDK (v3)
@@ -182,17 +184,17 @@
     href: tabs/what-are-tabs.md
   - name: Quickstarts
     items:
-    - name: Personal tab with Node.js/React
+    - name: Personal tab with Node.js
       href: tabs/quickstarts/create-personal-tab-node-yeoman.md
     - name: Personal tab with C#/ASP.NET Core
       href: tabs/quickstarts/create-personal-tab-dotnet-core.md
-    - name: Personal tab with C#/ASP.NET MVC
+    - name: Personal tab with C#/ASP.NET Core MVC
       href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-    - name: Channel tab with Node.js/React
+    - name: Channel tab with Node.js
       href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
     - name: Channel tab with C#/ASP.NET Core
       href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
-    - name: Channel tab with C#/ASP.NET MVC
+    - name: Channel tab with C#/ASP.NET Core MVC
       href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
   - name: Create a content page
     href: tabs/how-to/create-tab-pages/content-page.md
@@ -200,9 +202,7 @@
     href: tabs/how-to/create-tab-pages/configuration-page.md
   - name: Create a removal page
     href: tabs/how-to/create-tab-pages/removal-page.md
-  - name: Using the Teams JavaScript client SDK
-    href: tabs/how-to/using-teams-client-sdk.md
-  - name: Getting additional context
+  - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
 - name: Build bots
   items:
