@@ -54,8 +54,8 @@ Apps that are [distributed through Appsource](~/concepts/deploy-and-publish/apps
 
 | **App Capability** | **Behavior if app is approved** | **Behavior if app is not approved** |
 | --- | --- | --- |
-| **Static Tabs** | App will show up in the bottom bar of mobile clients. Tabs will open within the Teams client. | App will not show up in the bottom bar of mobile clients. |
-| **Configurable Tabs** | The tab will open within Teams client using the contentUrl. | The tab will open outside Teams client in a browser using the websiteUrl. |
+| **Static Tabs** | App appears in the bottom bar of the mobile clients. Tabs open in the Teams client. | App does not appear in the bottom bar of the mobile clients. |
+| **Configurable Tabs** | The tab opens in the Teams client using `contentUrl`. | The tab opens in a browser outside the Teams client using `websiteUrl`. |
 
 
 >[!NOTE]
