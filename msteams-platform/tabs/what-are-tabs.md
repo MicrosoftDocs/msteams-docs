@@ -60,8 +60,8 @@ Apps that are [distributed through Appsource](~/concepts/deploy-and-publish/apps
 
 >[!NOTE]
 >
->- The above behavior is only applicable to apps distributed via AppSource. For other [distribution methods](~/concepts/deploy-and-publish/overview.md), there is no approval process and all tabs, by default, will open with the Teams client.
->- To initiate an evaluation of your app for mobile-friendliness, please reach out to teamsubm@microsoft.com with app details.
+>- The default behavior of the apps is only applicable if they are distributed through AppSource. There is no approval process for apps distributed through other [distribution methods](~/concepts/deploy-and-publish/overview.md). By default, all tabs open in the Teams client.
+>- To initiate an evaluation of your app for mobile-friendliness, reach out to teamsubm@microsoft.com with your app details.
 
 
 > [!div class="nextstepaction"]
