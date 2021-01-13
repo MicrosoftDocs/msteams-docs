@@ -1,25 +1,24 @@
 ---
-title: Channel and group conversations
+title: Channel and group conversations with a bot
 author: clearab
 description: How to send, receive, and handle messages for a bot in a channel or group chat.
 ms.topic: overview
 ms.author: anclear
 ---
-
-# Channel and Group chat conversations with a Microsoft Teams bot
+# Channel and group chat conversations with a Microsoft Teams bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
 By adding the `teams` or `groupchat` scope to your bot, it can be available to be installed in a team or group chat. This allows all members of the conversation to interact with your bot. Once installed, it will also have access to metadata about the conversation like the list of conversation members, and when installed in a team details about that team and the full list of channels.
 
-Bots in a group or channel only receive messages when they are mentioned ("@botname"), they do not receive any other messages sent to the conversation.
+Bots in a group or channel only receive messages when they are mentioned (@botname), they do not receive any other messages sent to the conversation.
 
 > [!NOTE]
 > The bot must be @mentioned directly. Your bot will not receive a message when the team or channel is mentioned, or when someone replies to a message from your bot without @mentioning it.
 
-## Design considerations
+## Design guidelines
 
-A bot should provide information that is both appropriate and relevant to all members in a group or channel. Conversations with it are visible to everyone that is a part of the group or channel. A well designed bot can add value to all users while not inadvertently sharing information that is more appropriate in a one-to-one conversation. Multi-turn conversations like dialogs should be avoided - use cards and/or task modules to collect information instead.
+See how to [design bot conversations in channels and chats](~/bots/design/bots.md).
 
 ## Creating new conversation threads
 

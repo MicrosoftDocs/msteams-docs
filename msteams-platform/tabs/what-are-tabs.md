@@ -5,7 +5,7 @@ description: An overview of custom tabs on the Teams platform
 ms.topic: overview
 ms.author: lajanuar
 ---
-# What are Microsoft Teams custom tabs?
+# What are Microsoft Teams tabs?
 
 Tabs are Teams-aware webpages embedded in Microsoft Teams. They are simple HTML <iframe\> tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. *See* [Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
 
@@ -49,7 +49,20 @@ You can have a maximum of one (1) channel/group tab and up to sixteen (16) perso
 
 ## Mobile clients
 
-If you choose to have your channel/group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property. To ensure optimal user experience, you should follow the [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md) when creating your tabs.
+If you choose to have your channel or group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property. To ensure optimal user experience, you must follow the [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md) when creating your tabs. 
+Apps that are [distributed through Appsource](~/concepts/deploy-and-publish/appsource/publish.md) have a separate approval process for mobile clients. The default behavior of such apps is as follows:
+
+| **App Capability** | **Behavior if app is approved** | **Behavior if app is not approved** |
+| --- | --- | --- |
+| **Static Tabs** | App appears in the bottom bar of the mobile clients. Tabs open in the Teams client. | App does not appear in the bottom bar of the mobile clients. |
+| **Configurable Tabs** | The tab opens in the Teams client using `contentUrl`. | The tab opens in a browser outside the Teams client using `websiteUrl`. |
+
+
+>[!NOTE]
+>
+>- The default behavior of the apps is only applicable if they are distributed through AppSource. There is no approval process for apps distributed through other [distribution methods](~/concepts/deploy-and-publish/overview.md). By default, all tabs open in the Teams client.
+>- To initiate an evaluation of your app for mobile-friendliness, reach out to teamsubm@microsoft.com with your app details.
+
 
 > [!div class="nextstepaction"]
 > [Learn  more: Request device permissions](/concepts/device-capabilities/native-device-permissions.md)

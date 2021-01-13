@@ -484,11 +484,11 @@ The item is an array (maximum of 1 element) with all elements of type `object`. 
 |Name| Type | Maximum Size | Required | Description|
 |---|---|---|---|---|
 |`botId`|string|64|✔|The unique Microsoft app ID for the bot that backs the messaging extension, as registered with the Bot Framework. This may well be the same as the overall App ID.|
-|`commands`|array of objects|10|✔|array of commands the messaging extension supports|
+|`commands`|array of objects|10|✔|Array of commands the messaging extension supports|
 |`canUpdateConfiguration`|boolean|||A value indicating whether the configuration of a messaging extension can be updated by the user. Default: **false**.|
-|`messageHandlers`|array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`|
+|`messageHandlers`|array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met.|
 |`messageHandlers.type`|string|||The type of message handler. Must be `"link"`.|
-|`messageHandlers.value.domains`|array of Strings|||array of domains that the link message handler can register for.|
+|`messageHandlers.value.domains`|array of Strings|||Array of domains that the link message handler can register for.|
 
 ### composeExtensions.commands
 
@@ -567,8 +567,8 @@ Specify your Azure Active Directory (Azure AD) App ID and Microsoft Graph inform
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`|string|36 characters|✔|AAD application id of the app. This id must be a GUID.|
-|`resource`|string|2048 characters|✔|Resource url of app for acquiring auth token for SSO.|
-|`applicationPermissions`|array of strings|128 characters||Specify granular [resource specific consent](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions)|
+|`resource`|string|2048 characters|✔|Resource URL of app for acquiring auth token for SSO. </br> **NOTE:** If you are not using SSO, ensure that you enter a dummy string value in this field to your app manifest, for example, https://notapplicable to avoid an error response. |
+|`applicationPermissions`|array of strings|128 characters||Specify granular [resource specific consent](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions).|
 
 ## showLoadingIndicator
 

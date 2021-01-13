@@ -18,6 +18,11 @@ Microsoft Teams sends notifications to your bot for events that happen in scopes
 
 ## Conversation update events
 
+> [!Important]
+> New events can be added at any time, and your bot will begin to receive them.
+> You must design for the possibility of receiving unexpected events.
+> If you are using the Bot Framework SDK, your bot will automatically respond with a `200 - OK` to any events you do not choose to handle.
+
 A bot receives a `conversationUpdate` event when it has been added to a conversation, other members have been added to or removed from a conversation, or conversation metadata has changed.
 
 The `conversationUpdate` event is sent to your bot when it receives information on membership updates for teams where it has been added. It also receives an update when it has been added for the first time specifically for personal conversations.
@@ -29,9 +34,12 @@ The following table shows a list of Teams conversation update events, with links
 | channel created     | channelCreated    | OnTeamsChannelCreatedAsync | [A channel was created](#channel-created) | Team |
 | channel renamed     | channelRenamed    | OnTeamsChannelRenamedAsync | [A channel was renamed](#channel-renamed) | Team |
 | channel deleted     | channelDeleted    | OnTeamsChannelDeletedAsync | [A channel was deleted](#channel-deleted) | Team |
-| team members added   | teamMemberAdded   | OnTeamsMembersAddedAsync   | [A Member added to team](#team-members-added)   | All |
-| team members removed | teamMemberRemoved | OnTeamsMembersRemovedAsync | [A Member was removed from team](#team-members-removed) | groupChat & team |
+| channel restored    | channelRestored    | OnTeamsChannelRestoredAsync | [A channel was restored](#channel-deleted) | Team |
+| members added   | membersAdded   | OnTeamsMembersAddedAsync   | [A member added](#team-members-added)   | All |
+| members removed | membersRemoved | OnTeamsMembersRemovedAsync | [A member was removed](#team-members-removed) | groupChat & team |
 | team renamed        | teamRenamed       | OnTeamsTeamRenamedAsync    | [A Team was renamed](#team-renamed)       | Team |
+| team archived        | teamArchived       | OnTeamsTeamArchivedAsync    | [A Team was archived](#team-archived)       | Team |
+| team restored        | teamRestored      | OnTeamsTeamRestoredAsync    | [A Team was renamed](#team-renamed)       | Team |
 
 ### Channel created
 
@@ -282,6 +290,93 @@ async def on_teams_channel_deleted(
 
 * * *
 
+### Channel restored
+
+The channel restored event is sent to your bot whenever a channel that was previously deleted is restored in a team that your bot is already installed in.
+
+# [C#/.NET](#tab/dotnet)
+
+```csharp
+protected override async Task OnTeamsChannelRestoredAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+    var heroCard = new HeroCard(text: $"{channelInfo.Name} is the Channel restored.");
+    await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
+}
+```
+
+# [TypeScript/Node.js](#tab/typescript)
+
+<!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
+
+```typescript
+
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onTeamsChannelRestoredEvent(async (channelInfo: ChannelInfo, teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+            const card = CardFactory.heroCard('Channel Restored', `${channelInfo.name} is the Channel restored`);
+            const message = MessageFactory.attachment(card);
+            await turnContext.sendActivity(message);
+            await next();
+        });
+    }
+}
+
+```
+
+# [JSON](#tab/json)
+
+```json
+{
+    "type": "conversationUpdate",
+    "timestamp": "2017-02-23T19:34:07.478Z",
+    "localTimestamp": "2017-02-23T12:34:07.478-07:00",
+    "id": "f:dd6ec311",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+    "from": {
+        "id": "29:1wR7IdIRIoerMIWbewMi75JA3scaMuxvFon9eRQW2Nix5loMDo0362st2IaRVRirPZBv1WdXT8TIFWWmlQCizZQ"
+    },
+    "conversation": {
+        "isGroup": true,
+        "conversationType": "channel",
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+    },
+    "recipient": {
+        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+        "name": "SongsuggesterBot"
+    },
+    "channelData": {
+        "channel": {
+            "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",
+            "name": "FunDiscussions"
+        },
+        "team": {
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+        },
+        "eventType": "channelRestored",
+        "tenant": {
+            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+    }
+}
+```
+
+# [Python](#tab/python)
+
+```python
+async def on_teams_channel_restored(
+	self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
+):
+	return await turn_context.send_activity(
+		MessageFactory.text(
+			f"The restored channel is {channel_info.name}. The channel id is {channel_info.id}"
+		)
+	)
+```
+
+* * *
+
 ### Team members added
 
 The `teamMemberAdded` event is sent to your bot the first time it is added to a conversation and every time a new user is added to a team or group chat that your bot is installed in. The user information (ID) is unique for your bot and can be cached for future use by your service (such as sending a message to a specific user).
@@ -477,6 +572,8 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
+The `channelData` object in the following payload example is based on adding a member to a team rather than a group chat, or initiating a new one-to-one conversation:
+
 ```json
 {
     "membersRemoved": [
@@ -524,7 +621,7 @@ async def on_teams_members_removed(
 ):
 	for member in teams_members_removed:
 		await turn_context.send_activity(
-			MessageFactory.text(f"Say goodbye to your team member {member.id}")
+			MessageFactory.text(f"Say goodbye to {member.id}")
 		)
 	return
 ```
@@ -596,7 +693,6 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-
 # [Python](#tab/python)
 
 ```python
@@ -605,6 +701,162 @@ async def on_teams_team_renamed(
 ):
 	return await turn_context.send_activity(
 		MessageFactory.text(f"The new team name is {team_info.name}")
+	)
+```
+
+* * *
+
+### Team archived
+
+The bot receives a notification when the team it is installed in is archived. It receives a `conversationUpdate` event with `eventType.teamarchived` in the `channelData` object.
+
+# [C#/.NET](#tab/dotnet)
+
+```csharp
+protected override async Task OnTeamsTeamArchivedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+    var heroCard = new HeroCard(text: $"{teamInfo.Name} is the team name");
+    await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
+}
+```
+
+# [TypeScript/Node.js](#tab/typescript)
+
+```typescript
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onTeamsTeamArchivedEvent(async (teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+            const card = CardFactory.heroCard('Team archived', `${teamInfo.name} is the team name`);
+            const message = MessageFactory.attachment(card);
+            await turnContext.sendActivity(message);
+            await next();
+        });
+    }
+}
+```
+
+# [JSON](#tab/json)
+
+```json
+{ 
+    "type": "conversationUpdate",
+    "timestamp": "2017-02-23T19:35:56.825Z",
+    "localTimestamp": "2017-02-23T12:35:56.825-07:00",
+    "id": "f:1406033e",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/", 
+    "from": { 
+        "id": "29:1I9Is_Sx0O-Iy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA"
+    }, 
+    "conversation": {
+        "isGroup": true,
+        "conversationType": "channel",
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+    },
+    "recipient": { 
+        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+        "name": "SongsuggesterLocal"
+    },
+    "channelData": {
+        "team": {
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype",
+            "name": "Team Name"
+        },
+        "eventType": "teamArchived",
+        "tenant": { 
+           "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+    }
+}
+```
+
+# [Python](#tab/python)
+
+```python
+async def on_teams_team_archived(
+	self, team_info: TeamInfo, turn_context: TurnContext
+):
+	return await turn_context.send_activity(
+		MessageFactory.text(f"The team name is {team_info.name}")
+	)
+```
+
+* * *
+
+### Team restored
+
+The bot receives a notification when the team it is installed in is restored. It receives a `conversationUpdate` event with `eventType.teamrestored` in the `channelData` object.
+
+# [C#/.NET](#tab/dotnet)
+
+```csharp
+protected override async Task OnTeamsTeamrestoredAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+    var heroCard = new HeroCard(text: $"{teamInfo.Name} is the team name");
+    await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
+}
+```
+
+# [TypeScript/Node.js](#tab/typescript)
+
+```typescript
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onTeamsTeamrestoredEvent(async (teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+            const card = CardFactory.heroCard('Team restored', `${teamInfo.name} is the team name`);
+            const message = MessageFactory.attachment(card);
+            await turnContext.sendActivity(message);
+            await next();
+        });
+    }
+}
+```
+
+# [JSON](#tab/json)
+
+```json
+{ 
+    "type": "conversationUpdate",
+    "timestamp": "2017-02-23T19:35:56.825Z",
+    "localTimestamp": "2017-02-23T12:35:56.825-07:00",
+    "id": "f:1406033e",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/", 
+    "from": { 
+        "id": "29:1I9Is_Sx0O-Iy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA"
+    }, 
+    "conversation": {
+        "isGroup": true,
+        "conversationType": "channel",
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+    },
+    "recipient": { 
+        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+        "name": "SongsuggesterLocal"
+    },
+    "channelData": {
+        "team": {
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype",
+            "name": "Team Name"
+        },
+        "eventType": "teamrestored",
+        "tenant": { 
+           "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+    }
+}
+```
+
+# [Python](#tab/python)
+
+```python
+async def on_teams_team_restored(
+	self, team_info: TeamInfo, turn_context: TurnContext
+):
+	return await turn_context.send_activity(
+		MessageFactory.text(f"The team name is {team_info.name}")
 	)
 ```
 

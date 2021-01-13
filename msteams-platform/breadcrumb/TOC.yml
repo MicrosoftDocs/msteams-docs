@@ -5,3 +5,14 @@
   - name: Developer platform
     tocHref: /microsoftteams/platform/
     topicHref: /microsoftteams/platform/index
+    items:
+    - name: Utilize Teams data with Microsoft Graph
+      tocHref: /microsoftteams/platform/graph-api/
+      topicHref: /microsoftteams/platform/graph-api/
+      items:
+      - name: Overview
+        tocHref: /microsoftteams/platform/graph-api/overview/
+        topicHref: /microsoftgraph/microsoft-graph-docs/concepts/teams-concept-overview
+      - name: Get started
+        tocHref: /microsoftteams/platform/graph-api/get-started/
+        topicHref: /microsoftgraph/microsoft-graph-docs/concepts/toolkit/get-started/build-a-microsoft-teams-tab

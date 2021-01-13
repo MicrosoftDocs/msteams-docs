@@ -509,24 +509,36 @@
         "redirect_url": "/microsoftteams/platform/tutorials/code-samples"
       },
       {
-      "source_path": "msteams-platform/graph-permissions/resource-specific-consent.md",
-     "redirect_url": "/microsoftteams/platform/graph-api/rsc/resource-specific-consent"
-    },
-    {
-     "source_path": "msteams-platform/graph-permissions/test-resource-specific-consent.md",
-     "redirect_url": "/microsoftteams/platform/graph-api/rsc/test-resource-specific-consent"
-    },
-    {
-     "source_path": "msteams-platform/graph-permissions/test-rsc-json-file.md",
-     "redirect_url": "/microsoftteams/platform/graph-api/rsc/test-rsc-json-file"
-    },
-    {
-     "source_path": "msteams-platform/apps-in-teams-meetings/design/designing-in-meeting-tab.md",
-     "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/design/designing-apps-in-meetings"
-    },
-    {
-     "source_path": "msteams-platform/moodleinstructions.md",
-     "redirect_url": "/microsoftteams/platform/resources/moodleinstructions"
-    }
-  ]
+        "source_path": "msteams-platform/graph-permissions/resource-specific-consent.md",
+        "redirect_url": "/microsoftteams/platform/graph-api/rsc/resource-specific-consent"
+      },
+      {
+        "source_path": "msteams-platform/graph-permissions/test-resource-specific-consent.md",
+        "redirect_url": "/microsoftteams/platform/graph-api/rsc/test-resource-specific-consent"
+      },
+      {
+        "source_path": "msteams-platform/graph-permissions/test-rsc-json-file.md",
+        "redirect_url": "/microsoftteams/platform/graph-api/rsc/test-rsc-json-file"
+      },
+      {
+        "source_path": "msteams-platform/tabs/how-to/add-tab.md",
+        "redirect_url": "/microsoftteams/platform/build-your-first-app/build-personal-tab"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/create-a-bot-for-teams.md",
+        "redirect_url": "/microsoftteams/platform/build-your-first-app/build-bot"
+      },
+      {
+        "source_path": "msteams-platform/messaging-extensions/how-to/create-messaging-extension.md",
+        "redirect_url": "/microsoftteams/platform/build-your-first-app/build-messaging-extension"
+      },
+      {
+        "source_path": "msteams-platform/apps-in-teams-meetings/design/designing-in-meeting-tab.md",
+        "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/design/designing-apps-in-meetings"
+      },
+      {
+        "source_path": "msteams-platform/moodleinstructions.md",
+        "redirect_url": "/microsoftteams/platform/resources/moodleinstructions"
+      }
+    ]
 }
