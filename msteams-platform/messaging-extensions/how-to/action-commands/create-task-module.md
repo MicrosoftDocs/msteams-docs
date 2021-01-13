@@ -464,7 +464,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 If the app contains a conversational bot, install the bot in the conversation before loading the task module. It is useful to get additional context for the task module. The example for this scenario is to fetch the roster to populate a people picker control or the list of channels in a team.
 
-When the messaging extension receives the `composeExtension/fetchTask` invoke, check if the bot is installed in the current context to facilitate this flow. Check this with a get roster call. If the bot is not installed, return an Adaptive Card with an action that requests the user to install the bot. The user should have permission to install apps in that location for checking. If the app installation is unsuccessful, the user receives a message to contact the administrator. See the following example.
+When the messaging extension receives the `composeExtension/fetchTask` invoke, check if the bot is installed in the current context to facilitate the flow. For example, check the flow with a get roster call. If the bot is not installed, return an Adaptive Card with an action that requests the user to install the bot. See the action in the following example. The user must have permission to install the apps in that location for checking. If the app installation is unsuccessful, the user receives a message to contact the administrator.
 
 Example of the response:
 
@@ -492,7 +492,7 @@ Example of the response:
 }
 ```
 
-Once the user completes the installation, your bot will receive another invoke message with `name = composeExtension/submitAction`, and `value.data.msteams.justInTimeInstall = true`.
+After the installation, the bot receives another invoke message with `name = composeExtension/submitAction`, and `value.data.msteams.justInTimeInstall = true`.
 
 Example of the invoke:
 
@@ -518,7 +518,7 @@ Example of the invoke:
 }
 ```
 
-You should respond to this invoke with the same task response you would have responded with, if the bot was already installed.
+Task response to the invoke must be similar to that of the installed bot.
 
 * * *
 
