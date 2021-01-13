@@ -462,7 +462,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 ```
 ### Request to install your conversational bot
 
-If the app contains a conversational bot, install the bot in the conversation before loading the task module. It is useful to get additional context for the task module. The example for this scenario is to fetch the roster to populate a people picker control or the list of channels in a team.
+If the app contains a conversational bot, install the bot in the conversation before loading the task module. It is useful to get additional context for the task module. Typical example for this scenario is to fetch the roster to populate a people picker control or the list of channels in a team.
 
 When the messaging extension receives the `composeExtension/fetchTask` invoke, check if the bot is installed in the current context to facilitate the flow. For example, check the flow with a get roster call. If the bot is not installed, return an Adaptive Card with an action that requests the user to install the bot. See the action in the following example. The user must have permission to install the apps in that location for checking. If the app installation is unsuccessful, the user receives a message to contact the administrator.
 
