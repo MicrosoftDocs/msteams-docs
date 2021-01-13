@@ -249,7 +249,7 @@ This deviates from the standard Teams pattern for control placement in a dialog 
 
 #### Do: Scroll vertically
 
-Users anticipate vertical scrolling in Teams (and elsewhere).
+Users expect vertical scrolling in Teams (and elsewhere).
 
    :::column-end:::
    :::column span="":::
