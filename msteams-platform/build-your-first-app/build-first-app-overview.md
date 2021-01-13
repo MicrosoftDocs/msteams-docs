@@ -8,7 +8,7 @@ ms.topic: quickstart
 ---
 # Build your first Microsoft Teams app overview
 
-In the **build your first app** lessons, you create basic Teams apps. Each tutorial walks through how to build a simple, real-world Teams app while introducing you to common tools, fundamental concepts, and more advanced features.
+In the **get started** lessons, you learn how to create basic Teams apps. Each tutorial walks through how to build a simple, real-world Teams app while introducing you to common tools, fundamental concepts, and more advanced features.
 
 ## What you'll learn
 
@@ -28,7 +28,7 @@ Before you begin the tutorials, you should know the following about building app
 
 ### Apps can have multiple capabilities and entry points
 
-A Teams app is made up of one or more [platform capabilities](../concepts/capabilities-overview.md) (how people use the app) and [entry points](../concepts/extensibility-points.md) (where people discover the app).
+A Teams app is made up of one or more [platform capabilities](../concepts/capabilities-overview.md) (how people use the app) and [entry points](../concepts/extensibility-points.md) (where people use the app).
 
 ### Teams doesn't host your app
 
@@ -87,9 +87,9 @@ Teams displays app content only through HTTPS connections. To debug certain type
 
 ## About the tutorials
 
-You can start with any of the Teams **build your first app** lessons. If you're not sure where to go first, follow our beginner friendly path and build a "Hello, World!" app.
+You can start with any of the Teams **get started** lessons. If you're not sure where to go first, follow our beginner friendly path and build a "Hello, World!" app.
 
-:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Skill tree showing learning paths for the Teams 'build your first app' tutorials." border="false":::
+:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Skill tree showing learning paths for the Teams 'get started' lessons." border="false":::
 
 ## Next step
 
