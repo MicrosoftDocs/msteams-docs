@@ -460,6 +460,9 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
   }
 }
 ```
+
+* * *
+
 ### Request to install your conversational bot
 
 If the app contains a conversational bot, install the bot in the conversation before loading the task module. It is useful to get additional context for the task module. Typical example for this scenario is to fetch the roster to populate a people picker control or the list of channels in a team.
