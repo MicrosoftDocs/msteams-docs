@@ -518,7 +518,7 @@ Example of the invoke:
 }
 ```
 
-Task response to the invoke must be similar to that of the installed bot.
+The task response to the invoke must be similar to that of the installed bot.
 
 * * *
 
