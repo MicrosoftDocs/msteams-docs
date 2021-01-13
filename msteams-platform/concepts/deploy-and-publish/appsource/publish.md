@@ -1,6 +1,7 @@
 ---
 title: Microsoft Teams app approval submission process guidance
 description: Describes the approval submission process for getting your app published to the Microsoft Teams app store
+ms.topic: conceptual
 keywords: teams publish store office publishing publish AppSource partner center account verification apps account not publish eligible app submission
 ---
 
@@ -10,21 +11,21 @@ keywords: teams publish store office publishing publish AppSource partner center
 
 Make your app available in the Microsoft Teams app catalog and on the web by publishing it to [AppSource](https://appsource.microsoft.com). At a high level, the process for submitting your app to AppSource is as follows:
 
-1. Develop your app by following the [design guidelines](~/concepts/design/understand-use-cases.md). Tabs should follow our [tab design guidelines](~/tabs/design/tabs.md). Bots should follow the [bot design guidelines](~/bots/design/bots.md).
+1. Develop your app by following the [design guidelines](~/concepts/design/understand-use-cases.md). Tabs must follow the [tab design guidelines](~/tabs/design/tabs.md). Bots must follow the [bot design guidelines](~/bots/design/bots.md).
 1. Ensure your app meets the app [validation policies](/legal/marketplace/certification-policies) for Microsoft Teams. 
 1. Test your app with the [Manifest validation tool](prepare/submission-checklist.md#teams-app-validation-tool) .
 1. Set up a [developer account](/office/dev/store/open-a-developer-account) in [Partner Center](https://support.microsoft.com/help/4499930/partner-center-overview). *See also* [How do I create a Partner Center account](#how-do-i-create-a-partner-center-account) in the FAQ section.
-1. Prepare your app for submission by following our [submission checklist](prepare/submission-checklist.md).
+1. Prepare your app for submission by following the [submission checklist](prepare/submission-checklist.md).
 1. Review the [most failed test cases for a quicker app quality approval](prepare/frequently-failed-cases.md).
 1. Submit your package to [AppSource through Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource).
 1. Track the approval process on your Partner Center dashboard. *See* [Partner Center Overview](https://support.microsoft.com/help/4499930/partner-center-overview).
-1. After submission, review the guidance for [Maintaining and supporting your published app](post-publish/overview.md) after submission.
+1. After submission, review the guidance for [Maintaining and supporting your published app](post-publish/overview.md)
 
 >[!NOTE]
 >
 >- If your Teams app contains a bot, you must comply with the Bot Developer Framework [Code of Conduct](https://aka.ms/bf-conduct).
 >- If your app contains an Office 365 Connector, additional terms may apply. *See* [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard) and [App Developer Agreement](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm).
->- To make your app available for GCC users and avoid duplicate app listings in the store, the auth process or flow should identify and route the user to the specified or expected content URL for GCC users.
+>- To make your app available for GCC users and avoid duplicate app listings in the store, the auth process or flow must identify and route the user to the specified or expected content URL for GCC users.
 
 ## FAQs — Teams apps and Partner account verification process in Partner Center
 
@@ -77,7 +78,7 @@ During the account verification process, the status of each required step such a
 There are three verification areas - **Email Ownership**, **Employment**, and **Business**. See the details of [What is verified and how to respond](/partner-center/verification-responses#what-is-verified-and-how-to-respond).
 If you are the primary contact (Global admin or Account admin), go to your Partner Profile to monitor verification status and track progress.
 
-After the verification process is complete, the verification status of your enrollment on the profile page will change from *pending* to *authorized* and the process steps with status, displayed on that page, will disappear. The primary contact will receive an email from Microsoft within a few business days after the verification is completed.
+After the verification process is complete, the verification status of your enrollment on the profile page changes from *pending* to *authorized* and the process steps with status, displayed on that page,  disappears. The primary contact receives an email from Microsoft within a few business days after the verification is completed.
 
 ## My account Verification status has not advanced beyond Email Ownership in Partner Center. How should I proceed?
 
@@ -96,8 +97,8 @@ Visit the [Support for the Commercial Marketplace program in Partner Center](/az
 
 Try the following:
 * Check your junk or spam folder.
-* Clear the browser cache, go to your Partner Center account dashboard, and select  the **Resend verification email** link to have the verification email resent to your email address.
-* Try accessing the  **Resend verification email** link  from a different browser.
+* Clear the browser cache, go to your Partner Center account dashboard, and select the **Resend verification email** link to have the verification email resent to your email address.
+* Try accessing the **Resend verification email** link from a different browser.
 * Work with your IT department to ensure that the verification emails are not blocked by the email server.
 * Adjust your server's spam filter to allow or safe-list all emails from **maccount@microsoft.<span></span>com**.
 
@@ -107,7 +108,7 @@ If all the submitted details are correct, employment verification can be complet
 
 ## How long does the “Business Verification” process usually take?
 
-Business verification takes up to two business days to complete, provided all the required documents have been submitted.
+Business verification takes one to two business days to complete, provided all the required documents have been submitted.
 
 ## If I reach out to the support team, will my ticket be expedited?
 
