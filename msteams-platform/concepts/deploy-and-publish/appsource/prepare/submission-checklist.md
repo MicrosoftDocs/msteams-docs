@@ -1,6 +1,7 @@
 ---
 title: Submission checklist 
 description: The checklist to use before publishing your Microsoft Teams app to AppSource
+ms.topic: conceptual
 keywords: teams publish store office publishing checklist submission Teams apps appsource validation
 ---
 # Prepare for AppSource submission  

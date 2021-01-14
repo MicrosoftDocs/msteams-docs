@@ -1,6 +1,7 @@
 ---
 title: Run and debug your app
 description: Describes the steps to be taken to run and debug Microsoft Teams apps
+ms.topic: conceptual
 keywords: teams run debug apps
 ms.topic: conceptual
 ---

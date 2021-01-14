@@ -1,6 +1,7 @@
 ---
 title: Configuring OAuth 2.0 identity providers
 description: Describes how to configure identity providers with a focus on Azure AD
+ms.topic: conceptual
 keywords: teams authentication AAD oauth identity provider
 ---
 # Configuring identity providers

@@ -1,6 +1,7 @@
 ---
 title: Create a bot
 description: Describes how to create bots in Microsoft Teams
+ms.topic: reference
 keywords: teams bots creation
 ms.date: 12/07/2018
 ---

@@ -1,6 +1,7 @@
 ---
 title: Upload your custom app in Microsoft Teams
 description: Describes how to upload your app in Microsoft Teams
+ms.topic: conceptual
 keywords: teams apps Upload
 ---
 # Upload an app package to Microsoft Teams

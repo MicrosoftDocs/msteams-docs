@@ -1,6 +1,7 @@
 ---
 title: Add bots to Microsoft Teams apps
 description: Describes how to get started developing bots in Microsoft Teams
+ms.topic: reference
 keywords: teams bots development
 ms.date: 05/20/2018
 ---
