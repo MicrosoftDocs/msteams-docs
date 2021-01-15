@@ -471,8 +471,6 @@ When the messaging extension receives the `composeExtension/fetchTask` invoke, c
 
 #### Example of the response:
 
-# [JSON](#tab)
-
 ```json
 {
   "type": "AdaptiveCard",
@@ -501,8 +499,6 @@ After the installation, the bot receives another invoke message with `name = com
 
 #### Example of the invoke:
 
-# [JSON](#tab)
-
 ```json
 {
   "value": {
@@ -528,8 +524,6 @@ After the installation, the bot receives another invoke message with `name = com
 The task response to the invoke must be similar to that of the installed bot.
 
 #### Example of just-in time installation of app with Adaptive card: 
-
-# [C#](#tab)
 
 ```csharp
 private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
