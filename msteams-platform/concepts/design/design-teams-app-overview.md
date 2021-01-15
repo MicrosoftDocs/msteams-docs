@@ -134,18 +134,33 @@ Understand how people add, use, and manage Teams apps to make the most of each c
 
 Quickly create complex, high-fidelity designs with [templates for common Teams use cases and workflows](design-teams-app-ui-templates.md).
 
-## Get started with the Microsoft Teams UI Kit
+## Tools and samples
 
-The Microsoft Teams UI Kit has UI components, templates, and examples that you can drag, drop, and modify as needed. The UI kit also includes comprehensive information about how apps should look and behave in different Teams scenarios.
+The following tools can help designers and developers get started.
+
+### Microsoft Teams UI Kit
+
+The Microsoft Teams UI Kit has UI components, templates, and examples that you can drag, drop, and modify as needed for your app design. The UI kit also includes comprehensive information about how apps should look and behave in different Teams scenarios.
 
 > [!div class="nextstepaction"]
 > [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
+
+### Microsoft Teams UI Library
+
+
+
+### Microsoft Teams Sample App
+
+View and test high-quality UI templates that work across common use cases (such as dashboards or forms) directly in Teams.
+
+> [!div class="nextstepaction"]
+> [Get the Teams Sample App (GitHub)](https://github.com/OfficeDev/microsoft-teams-app-sample)
 
 ## Other resources
 
 To learn more, try one of the following resources.
 
-### Fluent UI
+### Fluent UI documentation
 
 Get code samples and implementation details for the Fluent UI-based components used to build Teams experiences.
 

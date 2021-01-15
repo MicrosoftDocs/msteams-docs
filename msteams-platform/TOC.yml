@@ -182,6 +182,8 @@
   items:
   - name: Overview
     href: tabs/what-are-tabs.md
+  - name: Tab requirements
+    href: tabs/how-to/tab-requirements.md
   - name: Quickstarts
     items:
     - name: Personal tab with Node.js
