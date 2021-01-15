@@ -527,11 +527,11 @@ The task response to the invoke must be similar to that of the installed bot.
 
 ```csharp
 private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
-        {
-            //Read the card json and create attachment.
-            string[] paths = { ".", "Resources", fileName };
-            var adaptiveCardJson = File.ReadAllText(Path.Combine(paths));
-            var adaptiveCardAttachment = new Attachment()
+  {
+      //Read the card json and create attachment.
+         string[] paths = { ".", "Resources", fileName };
+         var adaptiveCardJson = File.ReadAllText(Path.Combine(paths));
+         var adaptiveCardAttachment = new Attachment()
             {
                 ContentType = "application/vnd.microsoft.card.adaptive",
                 Content = JsonConvert.DeserializeObject(adaptiveCardJson),
