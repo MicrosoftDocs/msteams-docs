@@ -48,7 +48,7 @@ The following steps are required to develop an SSO Teams bot:
 The following steps are required to register your app through the AAD portal. These steps are similar to the [tab SSO flow](../../../tabs/how-to/authentication/auth-aad-sso.md):
 
 1. Register a new application in the [Azure Active Directory – App Registrations](https://go.microsoft.com/fwlink/?linkid=2083908) portal.
-2. Select **New Registration** and on the *register an application* page, enter the following values:
+2. Select **New Registration** and on the **Register an application** page, enter the following values:
     1. Enter a **Name** for your app.
     2. Choose the **Supported account types** (any account type will work).
 
@@ -101,7 +101,7 @@ The following steps are required to update the Azure portal with the OAuth conne
     >[!NOTE]
     > **Implicit grant** may be required in the AAD application.
 
-    1. Enter a **Name** for your new Connection Setting. This is the name that is referred to inside the settings of your bot service code in **step 5** of the [Bot SSO at runtime](#bot-sso-at-runtime) section.
+    1. Enter a **Name** for your new Connection Setting. This is the name that is referred to inside the settings of your bot service code in *step 5* of the [Bot SSO at runtime](#bot-sso-at-runtime) section.
     2. From the **Service Provider** drop-down, select **Azure Active Directory v2**.
     3. Enter the client credentials for the AAD application.
     4. For the **Token Exchange URL** use the scope value defined in the [Update your Teams application manifest for your bot](#update-your-teams-application-manifest-for-your-bot) section. The Token Exchange URL indicates to the SDK that this AAD application is configured for SSO.
@@ -132,12 +132,10 @@ If your application contains a bot and a tab, then the following code is require
         }
 ```
 
-**WebApplicationInfo** is the parent of the following elements:
+**webApplicationInfo** is the parent of the following elements:
 
-> [!div class="checklist"]
->
-> * **id** - The client ID of the application. This is the application ID that you obtained as part of registering the application with AAD.
-> * **resource** - The domain and subdomain of your application. This is the same URI (including the `api://` protocol) that you registered when creating your `scope` in the [Register your app through the AAD portal](#register-your-app-through-the-aad-portal) section. You should not include the `access_as_user` path in your resource. The domain part of this URI should match the domain and subdomains, used in the URLs of your Teams application manifest.
+* **id** - The client ID of the application. This is the application ID that you obtained as part of registering the application with AAD.
+* **resource** - The domain and subdomain of your application. This is the same URI (including the `api://` protocol) that you registered when creating your `scope` in the [Register your app through the AAD portal](#register-your-app-through-the-aad-portal) section. You should not include the `access_as_user` path in your resource. The domain part of this URI should match the domain and subdomains, used in the URLs of your Teams application manifest.
 
 ### Add the code to request and receive a bot token
 
@@ -152,7 +150,7 @@ If the user is using your application for the first time and user consent is req
 
 ![Consent dialog box](../../../assets/images/bots/bots-consent-dialogbox.png)
 
-When the user selects **Continue**, two different things occur depending on whether the bot is defined or not, and a sign-in button is shown on the OAuthCard.
+When the user selects **Continue**, two different things occur depending on if the bot is defined or not, and a sign-in button appears on the OAuthCard.
 
 If the bot defines a sign-in button, the sign in flow for bots is triggered similar to the sign in flow from a card button in a message stream. It is up to the developer to decide which permissions require user's consent. This approach is recommended if you need a token with permissions beyond `openId`. For example, if you want to exchange the token for graph resources.
 
