@@ -87,7 +87,7 @@ Your messaging extension should declare one or more commands, which define where
 
 #### Simple manifest example
 
-The example below is a simple messaging extension object in the app manifest with a search command. This is not the entire app manifest file, just the part specific to messaging extensions. See [app manifest schema](~/resources/schema/manifest-schema.md) for a complete example.
+The following example is a simple messaging extension object in the app manifest with a search command. This is not the entire app manifest file, just the part specific to messaging extensions. See [app manifest schema](~/resources/schema/manifest-schema.md) for a complete example.
 
 ```json
 ...
