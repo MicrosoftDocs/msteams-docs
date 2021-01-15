@@ -22,7 +22,7 @@ Grab UI templates for your app design from the Microsoft Teams UI Kit, which als
 
 ### UI template playground
 
-View and test individual UI templates in your browser.
+View and test individual Teams UI templates in your browser.
 
 > [!div class="nextstepaction"]
 > [Try UI templates in a browser (Storybook)](https://dev-int.teams.microsoft.com/storybook/main/index.html)

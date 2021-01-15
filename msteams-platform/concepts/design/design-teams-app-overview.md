@@ -154,7 +154,7 @@ View and test individual Teams UI templates in your browser.
 
 ### Microsoft Teams Sample App
 
-View and test high-quality UI templates that work across common use cases (such as dashboards or forms) directly in your Teams client.
+Install the Microsoft Teams Sample App to see how UI templates look and behave within Teams contexts.
 
 > [!div class="nextstepaction"]
 > [Get the Teams Sample App (GitHub)](https://github.com/OfficeDev/microsoft-teams-app-sample)
