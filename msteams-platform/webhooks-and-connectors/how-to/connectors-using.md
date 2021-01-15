@@ -21,7 +21,7 @@ You can also use this JSON to create cards containing rich inputs, such as text 
     "themeColor": "0076D7",
     "summary": "Larry Bryant created a new task",
     "sections": [{
-        "activityTitle": "![TestImage](https://47a92947.ngrok.io/Content/Images/default.png)Larry Bryant created a new task",
+        "activityTitle": "Larry Bryant created a new task",
         "activitySubtitle": "On Project Tango",
         "activityImage": "https://teamsnodesample.azurewebsites.net/static/img/image5.png",
         "facts": [{
@@ -48,7 +48,7 @@ You can also use this JSON to create cards containing rich inputs, such as text 
         "actions": [{
             "@type": "HttpPOST",
             "name": "Add comment",
-            "target": "http://..."
+            "target": "https://docs.microsoft.com/outlook/actionable-messages"
         }]
     }, {
         "@type": "ActionCard",
@@ -61,7 +61,12 @@ You can also use this JSON to create cards containing rich inputs, such as text 
         "actions": [{
             "@type": "HttpPOST",
             "name": "Save",
-            "target": "http://..."
+            "target": "https://docs.microsoft.com/outlook/actionable-messages"
+        },
+        {
+            "@type": "OpenUri",
+            "name": "Learn More",
+            "targets": [{ "os": "default", "uri": "https://docs.microsoft.com/outlook/actionable-messages" }]
         }]
     }, {
         "@type": "ActionCard",
@@ -85,7 +90,7 @@ You can also use this JSON to create cards containing rich inputs, such as text 
         "actions": [{
             "@type": "HttpPOST",
             "name": "Save",
-            "target": "http://..."
+            "target": "https://docs.microsoft.com/outlook/actionable-messages"
         }]
     }]
 }
@@ -104,8 +109,6 @@ Connector cards support three types of actions:
 - `ActionCard` Presents one or more input types and associated actions
 - `HttpPOST` Sends a POST request to a URL
 - `OpenUri` Opens a URI in a separate browser or app; optionally targets different URIs based on operating systems
-
-(A fourth action, `ViewAction`, is still supported but no longer needed; use `OpenUri` instead.)
 
 The `ActionCard` action supports three input types:
 
@@ -244,7 +247,7 @@ The following manifest.json file contains the basic elements needed to test and 
             "body":[
                 {
                 "type": "TextBlock",
-                "text": "For Samples and Templates, see https://adaptivecards.io/samples](https://adaptivecards.io/samples)",
+                "text": "For Samples and Templates, see [https://adaptivecards.io/samples](https://adaptivecards.io/samples)",
                 }
             ]
          }

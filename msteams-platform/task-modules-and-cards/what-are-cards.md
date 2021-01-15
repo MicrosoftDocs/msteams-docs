@@ -27,11 +27,10 @@ Teams uses cards in three different places:
 ## Adaptive cards and incoming webhooks
 
 > [!NOTE]
-> Adaptive cards are supported in incoming webhooks as part of the [public developer preview program](../resources/dev-preview/developer-preview-intro.md). Public previews are available for early-access and feedback. Although the release is stable and has undergone extensive testing, it is not intended for use in production.
 >
-> ✔ Within the developer preview, all native adaptive card schema elements, except `Action.Submit`, are fully supported.
+> ✔ All native adaptive card schema elements, except `Action.Submit`, are fully supported.
 >
-> ✔ The supported Actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), and [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
+> ✔ The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), and [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
 
 ## Cards in Connectors
 

@@ -34,9 +34,7 @@ Much of the app configurations and scaffolding are set up automatically when you
 
 ### App configurations
 
-You can view and update your app configurations using App Studio, which is included in the toolkit.
-
-During setup, the toolkit initially configured your tab content page, which is where you display your primary content. In the toolkit, go to **App Studio** and select **Tabs** to see the configuration.
+In the toolkit, go to **App Studio** to view and update your app configurations.
 
 ### App scaffolding
 
@@ -135,13 +133,16 @@ Your theme change handler is in place, but you need some code that responds to t
 > [!NOTE]
 > The following example is just one way you might apply styles to your tab. Use the code as is, expand on it, or write your own.
 
-Store the state provided by the theme change handler in `isTheme`.
+In the `render()` function, store the state provided by the theme change handler in `isTheme`.
 
 ```JavaScript
   const isTheme = this.state.theme
 ```
 
-Provide some conditional logic to render your tab's styles based on the current theme. The following example shows a basic way to do this by 1) checking the current theme in `isTheme`, 2) creating a `newTheme` object with CSS properties relevant to the current theme, and 3) applying the CSS to your tab content's root HTML element (`<div>`).
+After storing the state provided by the theme change handler, provide some conditional logic to render your tab's styles based on the current theme. The following example shows a basic way to do this:
+1. Check the current theme in `isTheme`.
+2. Create a `newTheme` object with CSS properties relevant to the current theme.
+3. Apply the CSS to your tab content's root HTML element (`<div>`).
 
 ```JavaScript
 let newTheme
@@ -170,11 +171,11 @@ Congratulations! You have a Teams app with a personal tab that makes it easier t
 ## Learn more
 
 * [Authenticate tab users with SSO](../tabs/how-to/authentication/auth-aad-sso.md): If you only want authorized users viewing your tab, set up single sign-on (SSO) through Azure Active Directory (AD).
-* [Embed content from an existing web app or webpage](../tabs/how-to/add-tab.md#tab-requirements): We showed you how to create new content for a personal tab, but you can also load content from an external URL.
+* [Embed content from an existing web app or webpage](../tabs/how-to/tab-requirements.md): We showed you how to create new content for a personal tab, but you can also load content from an external URL.
 * [Create a seamless experience for your tab](../tabs/design/tabs.md): See the recommended guidelines for designing Teams tabs.
 * [Build tabs for mobile](../tabs/design/tabs-mobile.md): Understand how to develop tabs for phones and tablets.
-* [Utilize Teams data with the Microsoft Graph API](https://docs.microsoft.com/graph/teams-concept-overview)
-* [Create a tab without the toolkit](../tabs/how-to/add-tab.md)
+* [Utilize Teams data with Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview)
+* [Create a tab without the toolkit](../tabs/quickstarts/create-channel-group-tab-node-yeoman.md)
 
 ## Next lesson
 

@@ -1,5 +1,5 @@
 ---
-title: Apps in teams meetings 
+title: Apps in Teams meetings 
 author: laujan
 description: overview of apps in Teams meetings based on participant and user role
 ms.topic: overview
@@ -128,7 +128,9 @@ You can access the  **Meeting options** page as follows:
 1. **Federated/External**. A federated user is an external Teams user in another organization who has been invited to join a meeting. Since these users have valid credentials with federated partners, they are treated as authenticated by Teams but do not have access to your teams or other shared resources from your organization. If you want external users to have access to teams and channels, guest access might be a better option. _See_ [Manage external access in Microsoft Teams](/microsoftteams/manage-external-access)
 1. **Anonymous**. Anonymous users do not have an Active Directory identity and are not federated with a tenant. The anonymous participant is like an external user, but their identity is not projected into the meeting. Anonymous users will not be able to access apps in a meeting window.
 
-## Next Steps
+## Next steps
 
 > [!div class="nextstepaction"]
-> [Create apps for Teams meetings](create-apps-for-teams-meetings.md)
+> [Design your app](create-apps-for-teams-meetings.md)
+> [!div class="nextstepaction"]
+> [Build your app](create-apps-for-teams-meetings.md)
