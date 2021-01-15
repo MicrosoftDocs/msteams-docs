@@ -469,7 +469,9 @@ If the app contains a conversational bot, install the bot in the conversation be
 
 When the messaging extension receives the `composeExtension/fetchTask` invoke, check if the bot is installed in the current context to facilitate the flow. For example, check the flow with a get roster call. If the bot is not installed, return an Adaptive Card with an action that requests the user to install the bot. See the action in the following example. The user must have permission to install the apps in that location for checking. If the app installation is unsuccessful, the user receives a message to contact the administrator.
 
-Example of the response:
+#### Example of the response:
+
+# [JSON](#tab/json)
 
 ```json
 {
@@ -497,7 +499,9 @@ Example of the response:
 
 After the installation, the bot receives another invoke message with `name = composeExtension/submitAction`, and `value.data.msteams.justInTimeInstall = true`.
 
-Example of the invoke:
+#### Example of the invoke:
+
+# [JSON](#tab/json)
 
 ```json
 {
@@ -522,6 +526,25 @@ Example of the invoke:
 ```
 
 The task response to the invoke must be similar to that of the installed bot.
+
+#### Example of just-in time installation of app with Adaptive card: 
+
+# [C#](#tab/c#)
+
+```csharp
+private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
+        {
+            //Read the card json and create attachment.
+            string[] paths = { ".", "Resources", fileName };
+            var adaptiveCardJson = File.ReadAllText(Path.Combine(paths));
+            var adaptiveCardAttachment = new Attachment()
+            {
+                ContentType = "application/vnd.microsoft.card.adaptive",
+                Content = JsonConvert.DeserializeObject(adaptiveCardJson),
+            };
+            return adaptiveCardAttachment;
+        }
+```
 
 * * *
 
