@@ -13,20 +13,20 @@ Make your app available in the Microsoft Teams app catalog and on the web by pub
 
 1. Develop your app by following the [design guidelines](~/concepts/design/understand-use-cases.md). Tabs must follow the tab design guidelines for both, [desktop and web](~/tabs/design/tabs.md) and [mobile](~/tabs/design/tabs-mobile.md). Bots must follow the [bot design guidelines](~/bots/design/bots.md).
 1. Ensure your app meets the app [validation policies](/legal/marketplace/certification-policies) for Microsoft Teams. 
-1. Test your app with the [Manifest validation tool](prepare/submission-checklist.md#teams-app-validation-tool) .
+1. Test your app with the [Manifest validation tool](prepare/submission-checklist.md#teams-app-validation-tool).
 1. Set up a [developer account](/office/dev/store/open-a-developer-account) in [Partner Center](https://support.microsoft.com/help/4499930/partner-center-overview). *See also* [How do I create a Partner Center account](#how-do-i-create-a-partner-center-account) in the FAQ section.
 1. Prepare your app for submission by following the [submission checklist](prepare/submission-checklist.md).
 1. Review the [most failed test cases for a quicker app quality approval](prepare/frequently-failed-cases.md).
 1. Submit your package to [AppSource through Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource).
 1. Track the approval process on your Partner Center dashboard. *See* [Partner Center Overview](https://support.microsoft.com/help/4499930/partner-center-overview).
-1. After submission, review the guidance for [Maintaining and supporting your published app](post-publish/overview.md)
+1. After submission, review the guidance for [Maintaining and supporting your published app](post-publish/overview.md).
 
 >[!NOTE]
 >
->- Your Teams app must be mobile responsive and comply with [no upsell requirements](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-mobile-responsiveness-no-direct-upsell-or-payment) on mobile OS (iOS and Android). 
+>- Your Teams app must be mobile-responsive and comply with [no upsell requirements](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-mobile-responsiveness-no-direct-upsell-or-payment) on mobile OS (iOS and Android). 
 >- If your Teams app contains a bot, you must comply with the Bot Developer Framework [Code of Conduct](https://aka.ms/bf-conduct).
->- If your app contains an Office 365 Connector, additional terms may apply. *See* [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard) and [App Developer Agreement](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm).
->- To make your app available for GCC users and avoid duplicate app listings in the store, the auth process or flow must identify and route the user to the specified or expected content URL for GCC users.
+>- If your app contains an Office 365 Connector, additional terms may apply. See [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard) and [App Developer Agreement](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm).
+>- To make your app available for Government Community Cloud (GCC) users and avoid duplicate app listings in the store, the auth process or flow must identify and route the user to the specified or expected content URL for GCC users.
 
 ## FAQs — Teams apps and Partner account verification process in Partner Center
 
@@ -53,11 +53,11 @@ Visit the [publishers support page](https://aka.ms/marketplacepublishersupport) 
 
 ## How do I manage my Office Store account in Partner Center?
 
-Visit the  [Manage your Office Store account through Partner Center](/office/dev/store/manage-account-settings-and-profile) for guidance.
+Visit the [Manage your Office Store account through Partner Center](/office/dev/store/manage-account-settings-and-profile) for guidance.
 
 ## How do I add my phone number to the partner profile contact section?
 
-The phone number has three parts — country code, area code, and the telephone number. If your phone number doesn't include an area code, then leave the second box empty, and complete the third box.
+The phone number has three parts, country code, area code, and telephone number. If your phone number doesn't include an area code, then leave the second box empty, and complete the third box.
 
 ## How do I manage my account settings and partner profile in Partner Center?
 
@@ -65,36 +65,36 @@ Visit the [Manage account settings and profile info](/windows/uwp/publish/manage
 
 ## Why do I receive the message, "This account is not publish eligible," when I try to submit my add-in through Partner Center?
 
-You will receive the above error message when your [account verification status](/partner-center/verification-responses) is pending. Check your account verification status in the Partner Center  [dashboard](https://partner.microsoft.com/dashboard). Select the **Settings** option (the gear icon in the upper-right corner of the page header shell). Choose **Developer settings** => **Account**  => **Account settings** .
+You receive the above error message when your [account verification status](/partner-center/verification-responses) is pending. Check your account verification status in the Partner Center  [dashboard](https://partner.microsoft.com/dashboard). Select **Settings**, the gear icon in the upper-right corner of the page header shell. Choose **Developer settings** => **Account**  => **Account settings**.
 
 ![Partner Center account settings page](../../../assets/images/partner-center-accts-page.png)
 
 ![Partner Center verification status](../../../assets/images/partner-center-verification-status.png)
 
-During the account verification process, the status of each required step such as **Email Ownership**, **Employment Verification**, and **Business Verification** will be displayed. After the verification process has been completed, the verification status of your enrollment on the profile page will change from *pending* to *authorized*. The process steps will not be displayed.
+The status of each required step, such as **Email Ownership**, **Employment Verification**, and **Business Verification**, are displayed in the account verification process. After the verification process is complete, the verification status of your enrollment on the profile page will change from *pending* to *authorized*. The process steps are no longer displayed.
 
 ![Partner Center verification error](../../../assets/images/partner-center-acct-verification-error.png)
 
 ## What is verified in Partner Center account verification process and how to respond?
-There are three verification areas - **Email Ownership**, **Employment**, and **Business**. See the details of [What is verified and how to respond](/partner-center/verification-responses#what-is-verified-and-how-to-respond).
-If you are the primary contact (Global admin or Account admin), go to your Partner Profile to monitor verification status and track progress.
+There are three verification areas, **Email Ownership**, **Employment**, and **Business**. For more information on the verification process, see [What is verified and how to respond](/partner-center/verification-responses#what-is-verified-and-how-to-respond).
+If you are the primary contact, Global admin, or Account admin, go to your Partner Profile to monitor verification status and track the progress.
 
-After the verification process is complete, the verification status of your enrollment on the profile page changes from *pending* to *authorized* and the process steps with status, displayed on that page,  disappears. The primary contact receives an email from Microsoft within a few business days after the verification is completed.
+After the verification process is complete, the verification status of your enrollment on the profile page changes from *pending* to *authorized*. After authorization, the process steps and their status are no longer available on the page. The primary contact receives an email from Microsoft within a few business days after the verification is complete.
 
 ## My account Verification status has not advanced beyond Email Ownership in Partner Center. How should I proceed?
 
-During the **Email Ownership** verification process, a verification email is sent to the primary contact email address. Check your primary contact inbox for an email  from **maccount@<span>microsoft</span>.com** with the subject  line *Action needed: Verify your email account with Microsoft*. Complete the email verification process. The verification email will be sent to the email address listed on your account settings page in Partner Center.
+During the **Email Ownership** verification process, a verification email is sent to the primary contact email address. Check your primary contact inbox for an email from **maccount@<span>microsoft</span>.com** with the subject line *Action needed: Verify your email account with Microsoft*. Complete the email verification process. The verification email is sent to the email address listed on your account settings page in Partner Center.
 
 > [!NOTE]
-> * The email verification link is only valid for 7 days. 
+> * The email verification link is only valid for seven days. 
 > * You can request us to resend the email by visiting your partner profile page and selecting the **Resend verification email** link.
-> * To ensure that the email is received, safe-list email from microsoft.com as a secure domain, and check your junk email folders.
+> * To ensure that email is received, safe list the email from microsoft.com as a secure domain, and check your junk email folders.
 
 ## How do I get further support for my account related issues?
 
 Visit the [Support for the Commercial Marketplace program in Partner Center](/azure/marketplace/partner-center-portal/support) page for guidance and steps to create a support ticket.
 
-## I've checked my mail folders and haven't received the verification email. What should I do next?
+## I've checked my mail folders and haven't received the verification email. What must I do next?
 
 Try the following:
 * Check your junk or spam folder.
@@ -105,17 +105,17 @@ Try the following:
 
 ## How long does the employment verification process usually take?
 
-If all the submitted details are correct, employment verification can be completed in two hours.
+If all the submitted details are correct, the employment verification process takes around two hours to complete.
 
-## How long does the “Business Verification” process usually take?
+## How long does the business verification process usually take?
 
-Business verification takes one to two business days to complete, provided all the required documents have been submitted.
+If all the required documents are submitted, business verification takes one to two business days to complete.
 
 ## If I reach out to the support team, will my ticket be expedited?
 
-Support tickets are resolved in a week. Check for updates sent to the email id provided when raising the support ticket.
+Support tickets get resolved in a week. Check for updates sent to the email ID provided when raising the support ticket.
 
-## My issue is not listed here.  Are there other pages I can reference for Partner Center issues?
+## My issue is not listed here. Are there other pages I can reference for Partner Center issues?
 
 See the [commercial marketplace documentation](/azure/marketplace/) for more help.
 
