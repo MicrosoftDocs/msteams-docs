@@ -48,23 +48,23 @@ The following steps are required to develop an SSO Teams bot:
 The following steps are required to register your app through the AAD portal. These steps are similar to the [tab SSO flow](../../../tabs/how-to/authentication/auth-aad-sso.md):
 
 1. Register a new application in the [Azure Active Directory – App Registrations](https://go.microsoft.com/fwlink/?linkid=2083908) portal.
-2. Select **New Registration** and on the *register an application page*, set following values:
-    * Enter a **name** for your app.
-    * Choose the **supported account types** (any account type will work).
+2. Select **New Registration** and on the *register an application* page, enter the following values:
+    1. Enter a **Name** for your app.
+    2. Choose the **Supported account types** (any account type will work).
 
-    > [!NOTE]
-    >
-    > * If your Azure AD app is registered in the _same_ tenant where you're making an authentication request in Teams, the user consent is not asked and an access token is granted right away. Users only need to consent to these permissions if the Azure AD app is registered in a different tenant.
+        > [!NOTE]
+        >
+        > If your AAD app is registered in the same tenant where you're making an authentication request in Teams, the user consent is not asked and an access token is granted right away. If the AAD app is registered in a different tenant, users need to provide consent to these permissions.
 
-    * Choose **Register**.
+    3. Choose **Register**.
 3. On the overview page, copy and save the **Application (client) ID**. You need it later when updating your Teams application manifest.
 4. Under **Manage**, select **Expose an API**. 
 
    > [!IMPORTANT]
-    > * If you are building a standalone bot, set the Application ID URI to `api://botid-{YourBotId}`. Here **YourBotId** is your AAD application ID.
-    > * If you are building an app with a bot and a tab, set the Application ID URI to `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
+    > * If you are building a standalone bot, enter the Application ID URI as `api://botid-{YourBotId}`. Here **YourBotId** is your AAD application ID.
+    > * If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
 
-5. Specify the permissions that your application needs for the AAD endpoint and, optionally, for Microsoft Graph.
+5. Select the permissions that your application needs for the AAD endpoint and, optionally, for Microsoft Graph.
 6. [Grant permissions](/azure/active-directory/develop/v2-permissions-and-consent) for Teams desktop, web, and mobile applications.
 7. Select **Add a scope**.
 8. In the panel that opens, add a client app by entering `access_as_user` as the **Scope name**.
@@ -74,18 +74,18 @@ The following steps are required to register your app through the AAD portal. Th
     >
     > You need to be aware of these important restrictions:
     >
-    > * Only user-level Microsoft Graph API permissions, i.e., email, profile, offline_access, and OpenId are supported. If you need access to other Microsoft Graph scopes (such as `User.Read` or `Mail.Read`), see our [recommended workaround](../../../tabs/how-to/authentication/auth-aad-sso.md#apps-that-require-additional-microsoft-graph-scopes).
-    > * Your application's domain name needs to be the same as the domain name, which you have registered for your Azure AD application.
+    > * Only user-level Microsoft Graph API permissions, i.e., email, profile, offline_access, and OpenId are supported. If you need access to other Microsoft Graph scopes such as `User.Read` or `Mail.Read`, see our [recommended workaround](../../../tabs/how-to/authentication/auth-aad-sso.md#apps-that-require-additional-microsoft-graph-scopes).
+    > * Your application's domain name needs to be same as the domain name, which you have registered for your AAD application.
     > * Multiple domains per app are currently not supported.
-    > * Applications that use the `azurewebsites.net` domain are not supported because it is too common and may be a security risk.
+    > * Applications that use the `azurewebsites.net` domain are not supported because it is common and may be a security risk.
 
 #### Update the Azure portal with the OAuth connection
 
 The following steps are required to update the Azure portal with the OAuth connection:
 
-1. In the Azure Portal, navigate back to **Bot Channels Registration**.
+1. In the Azure Portal, navigate to **Bot Channels Registration**.
 
-2. Go to **API Permissions**. Select *Add a permission* > *Microsoft Graph* > *Delegated permissions*, then add the following permissions from Microsoft Graph API:
+2. Go to **API Permissions**. Select **Add a permission** > **Microsoft Graph** > **Delegated permissions**, then add the following permissions from Microsoft Graph API:
     * User.Read (enabled by default)
     * email
     * offline_access
@@ -100,20 +100,20 @@ The following steps are required to update the Azure portal with the OAuth conne
 
     >[!NOTE]
     > **Implicit grant** may be required in the AAD application.
-    
-    1. Enter a name for your new Connection Setting. This is the name that gets referenced inside the settings of your bot service code in **step 5** of the [Bot SSO at runtime](#bot-sso-at-runtime) section.
-    2. From the **Service Provider** drop-down, select **Azure Active Directory V2**.
+
+    1. Enter a **Name** for your new Connection Setting. This is the name that is referred to inside the settings of your bot service code in **step 5** of the [Bot SSO at runtime](#bot-sso-at-runtime) section.
+    2. From the **Service Provider** drop-down, select **Azure Active Directory v2**.
     3. Enter the client credentials for the AAD application.
-    4. For the Token Exchange URL use the scope value defined in the [Update your Teams application manifest for your bot](#update-your-teams-application-manifest-for-your-bot) section. The Token Exchange URL indicates to the SDK that this AAD application is configured for SSO.
+    4. For the **Token Exchange URL** use the scope value defined in the [Update your Teams application manifest for your bot](#update-your-teams-application-manifest-for-your-bot) section. The Token Exchange URL indicates to the SDK that this AAD application is configured for SSO.
     5. In the **Tenant ID** box, enter *common*.
-    6. Add all the scopes configured when specifying permissions to downstream APIs for your AAD application. With the client ID and client secret provided, the token store exchanges the token for a graph token with defined permissions for you.
+    6. Add all the **Scopes** configured when specifying permissions to downstream APIs for your AAD application. With the **Client id** and **Client secret** provided, the token store exchanges the token for a graph token with defined permissions for you.
     7. Select **Save**.
 
     ![VuSSOBotConnection setting view](../../../assets/images/bots/bots-vuSSOBotConnection-settings.png)
 
 ### Update your Teams application manifest for your bot
 
-If your application contains a standalone bot then the following code is required to add new properties to your Teams application manifest:
+If your application contains a standalone bot, then the following code is required to add new properties to your Teams application manifest:
 
 ```json
     "webApplicationInfo": 
@@ -122,7 +122,7 @@ If your application contains a standalone bot then the following code is require
             "resource": "api://botid-00000000-0000-0000-0000-000000000000"
         }
 ```
-If your application contains a bot and a tab then the following code is required to add new properties to your Teams application manifest:
+If your application contains a bot and a tab, then the following code is required to add new properties to your Teams application manifest:
 
 ```json
     "webApplicationInfo": 
@@ -132,11 +132,11 @@ If your application contains a bot and a tab then the following code is required
         }
 ```
 
-**WebApplicationInfo** - The parent of the following elements:
+**WebApplicationInfo** is the parent of the following elements:
 
 > [!div class="checklist"]
 >
-> * **id** - The client ID of the application. This is the application ID that you obtained as part of registering the application with Azure AD.
+> * **id** - The client ID of the application. This is the application ID that you obtained as part of registering the application with AAD.
 > * **resource** - The domain and subdomain of your application. This is the same URI (including the `api://` protocol) that you registered when creating your `scope` in the [Register your app through the AAD portal](#register-your-app-through-the-aad-portal) section. You should not include the `access_as_user` path in your resource. The domain part of this URI should match the domain and subdomains, used in the URLs of your Teams application manifest.
 
 ### Add the code to request and receive a bot token
@@ -146,11 +146,13 @@ If your application contains a bot and a tab then the following code is required
 The request to get the token is a normal POST message request (using the existing message schema). It is included in the attachments of an OAuthCard. The schema for the OAuthCard class is defined in [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) and it is similar to a sign-in card. Teams treats this request as a silent token acquisition if the `TokenExchangeResource` property is populated on the card. For the Teams channel, we honor only the `Id` property, which uniquely identifies a token request.
 
 >[!NOTE]
-> The Bot Framework `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for SSO authentication.
+> The Microsoft Bot Framework `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for SSO authentication.
 
-If this is the first time the user is using your application and user consent is required, the following dialog box is shown to continue with the consent experience. When the user selects **Continue**, two different things occur depending on whether the bot is defined or not and a sign-in button is shown on the OAuthCard.
+If the user is using your application for the first time and user consent is required, the following dialog box is shown to continue with the consent experience:
 
 ![Consent dialog box](../../../assets/images/bots/bots-consent-dialogbox.png)
+
+When the user selects **Continue**, two different things occur depending on whether the bot is defined or not, and a sign-in button is shown on the OAuthCard.
 
 If the bot defines a sign-in button, the sign in flow for bots is triggered similar to the sign in flow from a card button in a message stream. It is up to the developer to decide which permissions require user's consent. This approach is recommended if you need a token with permissions beyond `openId`. For example, if you want to exchange the token for graph resources.
 
@@ -230,7 +232,7 @@ You need to open [Teams auth sample](https://github.com/microsoft/BotBuilder-Sam
     ```
   
 2. Update `appsettings.json` to include the `botId`, password, and the connection name defined in the [Update the Azure portal with the OAuth connection](#update-the-azure-portal-with-the-oauth-connection) section.
-3. Update the manifest and ensure that `token.botframework.com` is in the valid domains list. For more information, see [teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth).
+3. Update the manifest and ensure that `token.botframework.com` is in the valid domains list. For more information, see [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth).
 4. Zip the manifest with the profile images and install it in Teams.
 
 #### Additional code samples
