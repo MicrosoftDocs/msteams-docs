@@ -9,12 +9,37 @@ ms.topic: reference
 
 Design your Microsoft Teams app faster with UI templates. The templates are a collection of Fluent UI-based components that work across common Teams use cases, giving you more time to figure out the best experience for your users.
 
-## Microsoft Teams UI Kit
+## Get started with tools and samples
 
-You can grab UI templates from the Microsoft Teams UI Kit, which also includes extensive information about usage, anatomy, accessibility, and best practices.
+The following resources can help you design and develop your app using UI templates.
+
+### Microsoft Teams UI Kit
+
+Grab UI templates for your app design from the Microsoft Teams UI Kit, which also includes extensive information about usage, anatomy, accessibility, and best practices.
 
 > [!div class="nextstepaction"]
 > [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
+
+### UI template playground
+
+View and test individual UI templates in your browser.
+
+> [!div class="nextstepaction"]
+> [Try UI templates in a browser (Storybook)](https://dev-int.teams.microsoft.com/storybook/main/index.html)
+
+### Microsoft Teams Sample App
+
+Install the Microsoft Teams Sample App to see how UI templates look and behave within Teams contexts.
+
+> [!div class="nextstepaction"]
+> [Try UI templates in Teams (GitHub)](https://github.com/OfficeDev/microsoft-teams-app-sample)
+
+### Microsoft Teams UI Library
+
+Import production-ready UI templates directly into your app project.
+
+> [!div class="nextstepaction"]
+> [Get the Microsoft Teams UI Library (GitHub)](https://github.com/OfficeDev/microsoft-teams-ui-component-library)
 
 ## List
 
@@ -168,7 +193,3 @@ Stage offers a way for users to open an entity—like an image, file, or website
 
 * Open an entity in Teams instead of another app or browser
 * Spotlight media or other content
-
-## Microsoft Teams UI Library (coming soon)
-
-The Microsoft Teams UI Library will allow you to import these production-ready UI templates directly into your app project.

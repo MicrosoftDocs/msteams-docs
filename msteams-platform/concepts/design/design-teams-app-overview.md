@@ -118,6 +118,10 @@ Learn the [fundamentals of Teams app design](design-teams-app-fundamentals.md), 
 
 Based on Fluent UI, these are the [core elements for creating familiar Teams interfaces](design-teams-app-basic-ui-components.md).
 
+## UI templates
+
+Quickly create complex, high-fidelity designs with [templates for common Teams use cases and workflows](design-teams-app-ui-templates.md).
+
 ## App capabilities
 
 Understand how people add, use, and manage Teams apps to make the most of each capability in your design.
@@ -130,31 +134,37 @@ Understand how people add, use, and manage Teams apps to make the most of each c
 * [Task modules](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
 * [Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md)
 
-## UI templates
-
-Quickly create complex, high-fidelity designs with [templates for common Teams use cases and workflows](design-teams-app-ui-templates.md).
-
 ## Tools and samples
 
 The following tools can help designers and developers get started.
 
 ### Microsoft Teams UI Kit
 
-The Microsoft Teams UI Kit has UI components, templates, and examples that you can drag, drop, and modify as needed for your app design. The UI kit also includes comprehensive information about how apps should look and behave in different Teams scenarios.
+Design a Teams app with UI components, templates, and examples that you can drag, drop, and modify as needed. The UI kit also includes comprehensive information about how apps should look and behave in different Teams scenarios.
 
 > [!div class="nextstepaction"]
 > [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
-### Microsoft Teams UI Library
+### UI template playground
 
+View and test individual Teams UI templates in your browser.
 
+> [!div class="nextstepaction"]
+> [Try Teams UI templates (Storybook)](https://dev-int.teams.microsoft.com/storybook/main/index.html)
 
 ### Microsoft Teams Sample App
 
-View and test high-quality UI templates that work across common use cases (such as dashboards or forms) directly in Teams.
+View and test high-quality UI templates that work across common use cases (such as dashboards or forms) directly in your Teams client.
 
 > [!div class="nextstepaction"]
 > [Get the Teams Sample App (GitHub)](https://github.com/OfficeDev/microsoft-teams-app-sample)
+
+### Microsoft Teams UI Library
+
+Import production-ready UI templates directly into your app project.
+
+> [!div class="nextstepaction"]
+> [Get the Microsoft Teams UI Library (GitHub)](https://github.com/OfficeDev/microsoft-teams-ui-component-library)
 
 ## Other resources
 
@@ -165,11 +175,11 @@ To learn more, try one of the following resources.
 Get code samples and implementation details for the Fluent UI-based components used to build Teams experiences.
 
 > [!div class="nextstepaction"]
-> [Try out Teams UI components (Fluent UI)](https://fluentsite.z22.web.core.windows.net/)
+> [Try Teams UI components (Fluent UI)](https://fluentsite.z22.web.core.windows.net/)
 
 ### Adaptive Cards designer
 
-Design Adaptive Cards in a web-based tool.
+Design Adaptive Cards in our web-based tool.
 
 > [!div class="nextstepaction"]
 > [Try the Adaptive Cards designer](https://adaptivecards.io/designer/)

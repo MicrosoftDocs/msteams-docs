@@ -174,10 +174,10 @@ Congratulations! You have a Teams app with a tab for displaying useful content i
 
 ## Learn more
 
-* [Authenticate tab users with SSO](../tabs/how-to/authentication/auth-aad-sso.md): If you only want authorized users viewing your tab, set up single sign-on (SSO) through Azure Active Directory (AD).
-* [Create a seamless tab experience](../tabs/design/tabs.md): See the recommended guidelines for designing Teams tabs.
-* [Build tabs for mobile](../tabs/design/tabs-mobile.md): Understand how to develop tabs for phones and tablets.
-* [Utilize Teams data with Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview)
+* Follow our [design guidelines](../tabs/design/tabs.md) and build with [production-ready UI templates](../concepts/design/design-teams-app-ui-templates.md) to create a seamless experience.
+* Understand [mobile considerations](../tabs/design/tabs-mobile.md) for tabs.
+* [Add SSO authentication to your tab](../tabs/how-to/authentication/auth-aad-sso.md).
+* Utilize Teams data with [Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview).
 * [Create a tab without the toolkit](../tabs/quickstarts/create-channel-group-tab-node-yeoman.md)
 
 ## Next lesson
