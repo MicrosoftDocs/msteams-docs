@@ -150,7 +150,7 @@ Design a Teams app with UI components, templates, and examples that you can drag
 View and test individual Teams UI templates in your browser.
 
 > [!div class="nextstepaction"]
-> [Try Teams UI templates (Storybook)](https://dev-int.teams.microsoft.com/storybook/main/index.html)
+> [Try Teams UI templates (Storybook)](https://dev.teams.microsoft.com/storybook/main/index.html)
 
 ### Microsoft Teams Sample App
 
