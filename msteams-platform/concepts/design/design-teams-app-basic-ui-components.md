@@ -98,9 +98,9 @@ Based on <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">
 
 :::image type="content" source="../../assets/images/components/scrollbar.png" alt-text="Example shows a scrollbar UI component." border="false":::
 
-## Searchbox
+## Search box
 
-:::image type="content" source="../../assets/images/components/searchbox.png" alt-text="Example shows a searchbox UI component." border="false":::
+:::image type="content" source="../../assets/images/components/searchbox.png" alt-text="Example shows a search box UI component." border="false":::
 
 ## Side panel
 

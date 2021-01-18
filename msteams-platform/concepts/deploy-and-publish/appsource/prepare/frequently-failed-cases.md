@@ -1,12 +1,11 @@
 ---
-title: Tips and frequently failed cases 
-description: Describes tips for submission and most failed policies 
+title: App submission tips and frequently failed cases
+description: Describes tips for a successful Teams store submission and common reasons submissions fail.
 author: laujan
 ms.author: lajanuar
-ms.topic: how to
-keywords: Teams apps validation most failed test cases rapid approval appsource publish
+ms.topic: reference
 ---
-# Tips for a successful app submission
+# Tips for a successful Microsoft Teams app submission
 
 This article addresses common reasons submitted apps fail validation. While it's not intended to be an exhaustive list of all potential issues with your app, following this guide will increase the likelihood that your app submission will pass the first time. *See* [Commercial marketplace certification policies](/legal/marketplace/certification-policies) for an extensive list of validation policies.
 
@@ -204,14 +203,14 @@ Please warn users before your app downloads any files or executable (`.exe`  )in
 * The message extension `@mention` executables should be clear, easy to understand, and easy to read.
 ![Message extension](../../../../assets/images/faq/message-extension.png)
 
-### M365 Publisher Attestation
+## M365 Publisher Attestation
 
-#### Complete the Publisher Attestation in Partner Center
+### &#9989; Complete the Publisher Attestation in Partner Center
 
 * Refer to the [Complete Publisher Attestation](/microsoft-365-app-certification/docs/attestation) program documentation for more details.
-* Follow the steps in the [Publisher Attestation Workflow](/microsoft-365-app-certification/docs/userguide#3publisher-attestation-workflow) section to complete the publisher attestation process. For any clarification, write to appcert@microsoft.com.
+* Follow the steps in the [Publisher Attestation Workflow](/microsoft-365-app-certification/docs/userguide#3publisher-attestation-workflow) section to complete the publisher attestation process. Write to appcert@microsoft.com for any questions.
 * Refer to the [Troubleshooting guide](/azure/active-directory/develop/troubleshoot-publisher-verification) for additional information.
-* Self Attestation can be completed via Partner Center. Fill out the Self-Assessment Questionnaire under **App Compliance**
+* Complete the self attestation through partner center. Fill the Self-Assessment questionnaire under **App Compliance**.
 
 > [!div class="nextstepaction"]
 > [Learn more about Teams app approval policies](/legal/marketplace/certification-policies#1140-teams)

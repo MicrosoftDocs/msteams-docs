@@ -67,7 +67,7 @@ microsoftTeams.getContext(function (context) {
         client_id: "YOUR_APP_ID_HERE",
         response_type: "id_token token",
         response_mode: "fragment",
-        resource: "https://graph.microsoft.com/User.Read openid",
+        scope: "https://graph.microsoft.com/User.Read openid",
         redirect_uri: window.location.origin + "/tab-auth/simple-end",
         nonce: _guid(),
         state: state,

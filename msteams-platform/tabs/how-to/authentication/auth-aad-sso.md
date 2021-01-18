@@ -163,7 +163,7 @@ Once you've received the access token in the success callback you can decode the
 
 ## Sample code
 
-Visit our sample application: [MSTeams Tabs SSO Sample - Nodejs](https://github.com/OfficeDev/msteams-tabs-sso-sample-nodejs)
+Visit our sample application: [MSTeams PnP SSO Sample](https://github.com/pnp/teams-dev-samples/tree/master/samples/tab-sso)
 
 The README explains how to set up your development environment and how to configure your application in Azure AD. You can also find further information on how the sample is structured in the [app structure section](https://github.com/OfficeDev/msteams-tabs-sso-sample-nodejs#app-structure) to help familiarize yourself with the codebase.
 

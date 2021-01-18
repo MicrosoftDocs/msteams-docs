@@ -308,20 +308,34 @@ To include a `invoke` action with an Adaptive Card include the following details
 
 | Property | Description |
 | --- | --- |
-| `type` | Set to `signin` |
+| `type` | Set to `task/fetch` |
 | `data` | Set the value  |
 
 #### Example
 
 ```json
 {
-    "type": "Action.Submit",
-    "data": {
+  "type": "Action.Submit",
+  "title": "submit"
+  "data": {
     "msteams": {
-         "type": "task/fetch"
-               },
-         "data": "value"
-            },
-    "title": "submit"
+        "type": "task/fetch"
+    }
+  }
+}
+```
+
+#### Example 2 (with additional payload data)
+
+```json
+{
+  "type": "Action.Submit",
+  "title": "submit"
+  "data": {
+    "msteams": {
+        "type": "task/fetch"
+    },
+    "Value1": "some value"
+  }
 }
 ```

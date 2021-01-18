@@ -341,46 +341,48 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 # [JSON](#tab/json)
 
 ```json
-{
-  "task": {
+ {​
+  "task": {​
     "type": "continue",
-    "value": {
-      "card":
-      {
+    "value": {​
+      "title": "Task module title",
+      "height": 500,
+      "width": "medium",
+      "card": {​
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
         "type": "AdaptiveCard",
         "version": "1.0",
         "body": [
-          {
+          {​
             "type": "Input.Text",
             "placeholder": "FormField1",
             "id": "FormField1"
-          },
-          {
+          }​,
+          {​
             "type": "Input.Text",
             "placeholder": "FormField2",
             "id": "FormField2"
-          },
-          {
+          }​,
+          {​
             "type": "Input.Text",
             "placeholder": "FormField3",
             "id": "FormField3"
-          },
-          {
+          }​,
+          {​
             "type": "ActionSet",
             "actions": [
-              {
+              {​
                 "type": "Action.Submit",
                 "title": "Action.Submit",
                 "id": "submitAction"
-              }
+              }​
             ]
-          }
-        ],
-        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
-      }
-    }
-  }
-}
+          }​
+        ]
+      }​
+    }​
+  }​
+}​
 ```
 
 * * *

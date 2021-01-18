@@ -92,7 +92,7 @@ Use to gather multiple inputs from the user.
 
 :::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="Illustration showing the UI anatomy of an Adaptive Card." border="false":::
 
-Adaptive Cards have a lot of flexibility. But at a minimum, we strongly suggest including the following components in every card:
+Adaptive Cards have a lot of flexibility. But at minimum, we strongly suggest including the following components in every card:
 
 |Counter|Description|
 |----------|-----------|
