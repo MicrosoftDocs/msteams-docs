@@ -33,7 +33,7 @@ Complete the following steps to get authentication and bot application tokens:
 
 4. AAD sends the bot application token to the Teams application.
 
-5. Teams sends the token to the bot as part of the value object returned by the invoke activity with the name sign-in/tokenExchange.
+5. Teams sends the token to the bot as part of the value object returned by the invoke activity with the name **sign-in/tokenExchange**.
   
 6. The parsed token in the bot application provides the required information, such as the user's email address.
   
@@ -75,7 +75,7 @@ The steps to register your app through the AAD portal are similar to the [tab SS
     >[!NOTE]
     > The "access_as_user" scope used to add a client app is for "Administrators and users".
     >
-    > You need to be aware of the following important restrictions:
+    > You must be aware of the following important restrictions:
     >
     > * Only user-level Microsoft Graph API permissions, such as email, profile, offline_access, and OpenId are supported. If you need access to other Microsoft Graph scopes, such as `User.Read` or `Mail.Read`, see [recommended workaround](../../../tabs/how-to/authentication/auth-aad-sso.md#apps-that-require-additional-microsoft-graph-scopes).
     > * Your application's domain name must be same as the domain name that you have registered for your AAD application.
@@ -153,9 +153,9 @@ If the user is using the application for the first time and user consent is requ
 
 ![Consent dialog box](../../../assets/images/bots/bots-consent-dialogbox.png)
 
-When the user selects **Continue**, the following things occur:
+When the user selects **Continue**, the following events occur:
 
-* If the bot defines a sign-in button, the sign in flow for bots is triggered similar to the sign in flow from a OAuth card button in a message stream. The developer must decide which permissions require user's consent. This approach is recommended if you require a token with permissions beyond `openId`. For example, if you want to exchange the token for graph resources.
+* If the bot defines a sign-in button, the sign in flow for bots is triggered similar to the sign in flow from an OAuth card button in a message stream. The developer must decide which permissions require user's consent. This approach is recommended if you require a token with permissions beyond `openId`. For example, if you want to exchange the token for graph resources.
 
 * If the bot is not providing a sign-in button on the OAuth card, user consent is required for a minimal set of permissions. This token is useful for basic authentication and to get the user's email address.
 
