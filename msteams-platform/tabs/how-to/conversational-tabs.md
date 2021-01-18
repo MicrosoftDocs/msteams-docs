@@ -40,7 +40,7 @@ microsoftTeams.conversations.openConversation({“subEntityId”:”task-1”, �
 
 This will open the conversation panel.
 
-![Conversationl Sub Entities - Start Conversation](~/assets/images/tabs/conversational-subentities/open-conversation.png)
+![Conversationl Sub Entities - Start Conversation](~/assets/images/tabs/conversational-subentities/start-conversation.png)
 
 If the user starts a conversation, it’s important to listen for the callback of that event in order  to retrieve and save the conversationId:
 
