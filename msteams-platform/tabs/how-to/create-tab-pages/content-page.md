@@ -60,6 +60,28 @@ A task module is a modal popup-like experience that you can trigger from your ta
 
 Ensure that the all URL domains used in your tabs are included in the `validDomains` array in your [manifest](~/concepts/build-and-test/apps-package.md). For more information, see [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the manifest schema reference. However, be mindful that the core functionality of your tab exists within Teams and not outside of Teams.
 
+## Reorder static personal tabs
+
+Starting with manifest version 1.7 developers can rearrange all tabs in their personal app. In particular, a developer can move the “bot chat” tab (which has always defaulted to the first position) anywhere in the personal app tab header. We’ve declared two reserved tab entityId keywords: “conversations” and “about”.
+
+If you create a bot with a “personal” scope, it will show up in the first tab position in a personal app by default. If you wish to move it to another position, you need to add a static tab object to your manifest with the reserved keyword “conversations”. Wherever you add the “conversations” tab in the “staticTabs” array, that’s where the conversation tab will appear on web and desktop. 
+
+```json
+{
+   "staticTabs":[
+      {
+         
+      },
+      {
+         "entityId":"conversations",
+         "scopes":[
+            "personal"
+         ]
+      }
+   ]
+}
+```
+
 ## Show a native loading indicator
 
 Starting with [manifest schema v1.7](../../../resources/schema/manifest-schema.md), you can provide a [native loading indicator](../../../resources/schema/manifest-schema.md#showloadingindicator) wherever your web content is loaded in Teams, e.g., [tab content page](#integrate-your-code-with-teams), [configuration page](configuration-page.md), [removal page](removal-page.md) and [task modules in tabs](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
