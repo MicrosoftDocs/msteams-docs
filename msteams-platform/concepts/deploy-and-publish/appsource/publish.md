@@ -26,7 +26,7 @@ Make your app available in the Microsoft Teams app catalog and on the web by pub
 >- Your Teams app must be mobile-responsive and comply with [no upsell requirements](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-mobile-responsiveness-no-direct-upsell-or-payment) on mobile OS (iOS and Android). 
 >- If your Teams app contains a bot, you must comply with the Bot Developer Framework [Code of Conduct](https://aka.ms/bf-conduct).
 >- If your app contains an Office 365 Connector, additional terms may apply. See [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard) and [App Developer Agreement](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm).
->- To make your app available for Government Community Cloud (GCC) users and avoid duplicate app listings in the store, the auth process or flow must identify and route the user to the specified or expected content URL for GCC users.
+>- To make your app available for Government Community Cloud (GCC) users and to avoid duplicate app listings in the store, the auth process or flow must identify and route the user to the specified or expected content URL for GCC users.
 
 ## FAQs — Teams apps and Partner account verification process in Partner Center
 
@@ -71,17 +71,17 @@ You receive the above error message when your [account verification status](/par
 
 ![Partner Center verification status](../../../assets/images/partner-center-verification-status.png)
 
-The status of each required step, such as **Email Ownership**, **Employment Verification**, and **Business Verification**, are displayed in the account verification process. After the verification process is complete, the verification status of your enrollment on the profile page will change from *pending* to *authorized*. The process steps are no longer displayed.
+The status of each required step, such as **Email Ownership**, **Employment Verification**, and **Business Verification**, are displayed in the account verification process. After the verification process is complete, the verification status of your enrollment on the profile page changes from *pending* to *authorized*. The process steps are no longer displayed.
 
 ![Partner Center verification error](../../../assets/images/partner-center-acct-verification-error.png)
 
-## What is verified in Partner Center account verification process and how to respond?
+## What is verified in the Partner Center account verification process and how to respond?
 There are three verification areas, **Email Ownership**, **Employment**, and **Business**. For more information on the verification process, see [What is verified and how to respond](/partner-center/verification-responses#what-is-verified-and-how-to-respond).
 If you are the primary contact, Global admin, or Account admin, go to your Partner Profile to monitor verification status and track the progress.
 
 After the verification process is complete, the verification status of your enrollment on the profile page changes from *pending* to *authorized*. After authorization, the process steps and their status are no longer available on the page. The primary contact receives an email from Microsoft within a few business days after the verification is complete.
 
-## My account Verification status has not advanced beyond Email Ownership in Partner Center. How should I proceed?
+## My account Verification status has not advanced beyond Email Ownership in the Partner Center. How should I proceed?
 
 During the **Email Ownership** verification process, a verification email is sent to the primary contact email address. Check your primary contact inbox for an email from **maccount@<span>microsoft</span>.com** with the subject line *Action needed: Verify your email account with Microsoft*. Complete the email verification process. The verification email is sent to the email address listed on your account settings page in Partner Center.
 
@@ -127,7 +127,7 @@ Send an email to **<teamsubm@microsoft.com>** with the following details:
 * **Email body**:
     * Support ticket number
     * Your seller ID
-    * A screen shot of the issue (if possible)
+    * A screenshot of the issue (if possible)
     
 ## App category mapping
 
@@ -138,9 +138,9 @@ Send an email to **<teamsubm@microsoft.com>** with the following details:
 | Education | Education |
 | Human resources | Human Resources and Recruiting |
 | Productivity | Content Management, Files and documents, Productivity, Training and Tutorials, and Utilities |
-| Project management | Communication, Project Management, Workflow and Business Management |
+| Project management | Communication, Project Management, Workflow, and Business Management |
 | Sales and support | Customer and Contact Management, Customer Support, Financial Management, Sales and Marketing |
-| Social and fun | Image and Video Galleries, Lifestyle, News and Weather, Social, Travel and Navigation |
+| Social and fun | Image and Video Galleries, Lifestyle, News and Weather, Social, Travel, and Navigation |
 
 >
 > [!div class="nextstepaction"]
