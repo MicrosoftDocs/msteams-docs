@@ -1,7 +1,7 @@
 ---
 title: Create deep links to content
 description: Describes deep links and how to use them in your apps
-ms.topic: how-to guides
+ms.topic: how-to
 keywords: teams deep link deeplink
 ---
 
