@@ -73,7 +73,7 @@ A customizable card that can contain any combination of text, speech, images, bu
 > * Teams platform supports v1.2 or earlier of Adaptive card features.
 > * Media elements are currently not supported in Adaptive card v1.2 on the Teams platform.
 
-### Example adaptive card
+### Example of an adaptive card
 
 ![Example of an adaptive card](~/assets/images/cards/adaptivecard.png)
 
@@ -238,7 +238,7 @@ A card that typically contains a single large image, one or more buttons and tex
 | tap | Action object | This action will be activated when the user taps on the card itself. |
 |
 
-### Example hero card
+### Example of a hero card
 
 ![Example of a hero card](~/assets/images/cards/hero.png)
 
@@ -297,7 +297,7 @@ The list card has been added by Teams to provide functions beyond what the list 
 | items | Array of list items  ||
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6. |
 
-### Example list card
+### Example of a list card
 
 ```json
 {
@@ -406,7 +406,7 @@ For all other details about connector card properties, see the [Actionable messa
 * `originator`
 * `correlationId`
 
-### Example Office 365 connector card
+### Example of an Office 365 connector card
 
 ```json
 {
@@ -475,13 +475,13 @@ Receipt card is supported in Teams.
 
 It is a card that enables a bot to provide a receipt to the user. It typically contains the list of items to include on the receipt, such as tax and total information.
 
-### Support for Receipts cards
+### Support for receipt cards
 
 | Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
-### Example receipt card
+### Example of a receipt card
 
 ![Example of a receipt card](~/assets/images/cards/receipt.png)
 
@@ -530,6 +530,7 @@ It is a card that enables a bot to provide a receipt to the user. It typically c
         ]
       }
 }
+```
 
 ### More information on receipt cards
 
@@ -583,7 +584,7 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 | tap | Action object | This action will be activated when the user taps on the card itself. |
 |
 
-### Example thumbnail card
+### Example of a thumbnail card
 
 ```json
 {
@@ -657,7 +658,7 @@ The [carousel layout](/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card
 
 Properties of a Carousel card are same as those of the Hero and Thumbnail cards.
 
-### Example carousel collection
+### Example of a carousel collection
 
 ![Example of a carousel of cards](~/assets/images/cards/carousel.png)
 
@@ -841,7 +842,7 @@ The list layout shows a vertically stacked list of cards, optionally with associ
 | ✔ | ✔ | ✖ | ✔ |
 |
 
-### Example list collection
+### Example of a list collection
 
 ![Example of a list of cards](~/assets/images/cards/list.png)
 
