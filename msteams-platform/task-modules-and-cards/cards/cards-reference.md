@@ -353,7 +353,7 @@ The list card has been added by Teams to provide functions beyond what the list 
 
 ## Office 365 connector card
 
-The Office 365 Connector card is upported in Teams, not in Bot Framework.
+The Office 365 Connector card is supported in Teams, not in Bot Framework.
 
 This card provides a flexible layout with multiple sections, fields, images, and actions. This card encapsulates a connector card so that it can be used by bots. See the notes section for differences between connector cards and the O365 card.
 
