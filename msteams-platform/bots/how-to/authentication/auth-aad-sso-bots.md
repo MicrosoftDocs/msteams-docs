@@ -104,10 +104,10 @@ Complete the following steps to update the Azure portal with the OAuth connectio
     >[!NOTE]
     > **Implicit grant** may be required in the AAD application.
 
-    1. Enter a **Name** for your new Connection Setting. This is the name that is referred to inside the settings of your bot service code in *step 5* of the [Bot SSO at runtime](#bot-sso-at-runtime) section.
+    1. Enter a **Name** for your new Connection Setting. This is the name that is referred to inside the settings of your bot service code in *step 5* of the [Bot SSO at runtime](#bot-sso-at-runtime).
     2. From the **Service Provider** drop-down, select **Azure Active Directory v2**.
     3. Enter the client credentials for the AAD application.
-    4. For the **Token Exchange URL**, use the scope value defined in the [Update your Teams application manifest for your bot](#update-your-teams-application-manifest-for-your-bot) section. The Token Exchange URL indicates to the SDK that this AAD application is configured for SSO.
+    4. For the **Token Exchange URL**, use the scope value defined in [Update your Teams application manifest for your bot](#update-your-teams-application-manifest-for-your-bot). The **Token Exchange URL** indicates to the SDK that this AAD application is configured for SSO.
     5. In the **Tenant ID** box, enter *common*.
     6. Add all the **Scopes** configured when specifying permissions to downstream APIs for your AAD application. With the **Client id** and **Client secret** provided, the token store exchanges the token for a graph token with defined permissions for you.
     7. Select **Save**.
@@ -138,7 +138,7 @@ If your application contains a bot and a tab, then use the following code to add
 **webApplicationInfo** is the parent of the following elements:
 
 * **id** - The client ID of the application. This is the application ID that you obtained as part of registering the application with AAD.
-* **resource** - The domain and subdomain of your application. This is the same URI, including the `api://` protocol that you registered when creating your `scope` in the [Register your app through the AAD portal](#register-your-app-through-the-aad-portal) section. You must not include the `access_as_user` path in your resource. The domain part of this URI must match the domain and subdomains used in the URLs of your Teams application manifest.
+* **resource** - The domain and subdomain of your application. This is the same URI, including the `api://` protocol that you registered when creating your `scope` in [Register your app through the AAD portal](#register-your-app-through-the-aad-portal). You must not include the `access_as_user` path in your resource. The domain part of this URI must match the domain and subdomains used in the URLs of your Teams application manifest.
 
 ### Add the code to request and receive a bot token
 
@@ -217,7 +217,7 @@ The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet
 
 ### Update the auth sample
 
-Open [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth). Complete the following steps to update the auth sample:
+Open [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) and then complete the following steps to update it:
 
 1. Update the TeamsBot to handle the deduping of the incoming request by including the following code:
 
@@ -232,7 +232,7 @@ Open [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/ma
             }
     ```
   
-2. Update `appsettings.json` to include the `botId`, password, and the connection name defined in the [Update the Azure portal with the OAuth connection](#update-the-azure-portal-with-the-oauth-connection) section.
+2. Update `appsettings.json` to include the `botId`, password, and the connection name defined in [Update the Azure portal with the OAuth connection](#update-the-azure-portal-with-the-oauth-connection).
 3. Update the manifest and ensure that `token.botframework.com` is in the valid domains list. For more information, see [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth).
 4. Zip the manifest with the profile images and install it in Teams.
 
