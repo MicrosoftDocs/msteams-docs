@@ -9,7 +9,7 @@ ms.topic: reference
 
 Design your Microsoft Teams app faster with UI templates. The templates are a collection of Fluent UI-based components that work across common Teams use cases, giving you more time to figure out the best experience for your users.
 
-## Get started with tools and samples
+## Getting started with tools and samples
 
 The following resources can help you design and develop your app using UI templates.
 
@@ -25,7 +25,7 @@ Grab UI templates for your app design from the Microsoft Teams UI Kit, which als
 View and test individual Teams UI templates and related components in your browser.
 
 > [!div class="nextstepaction"]
-> [Try the UI library (Storybook)](https://dev.teams.microsoft.com/storybook/main/index.html)
+> [Try the UI library (dev playground)](https://dev.teams.microsoft.com/storybook/main/index.html)
 
 Import these templates and related components directly into your Teams app project.
 
