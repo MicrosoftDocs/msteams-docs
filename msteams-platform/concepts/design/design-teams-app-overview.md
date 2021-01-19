@@ -143,28 +143,26 @@ The following tools can help designers and developers get started.
 Design a Teams app with UI components, templates, and examples that you can drag, drop, and modify as needed. The UI kit also includes comprehensive information about how apps should look and behave in different Teams scenarios.
 
 > [!div class="nextstepaction"]
-> [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
-
-### UI template playground
-
-View and test individual Teams UI templates in your browser.
-
-> [!div class="nextstepaction"]
-> [Try Teams UI templates (Storybook)](https://dev.teams.microsoft.com/storybook/main/index.html)
-
-### Microsoft Teams Sample App
-
-Install the Microsoft Teams Sample App to see how UI templates look and behave within Teams contexts.
-
-> [!div class="nextstepaction"]
-> [Get the Teams Sample App (GitHub)](https://github.com/OfficeDev/microsoft-teams-app-sample)
+> [Get the UI kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ### Microsoft Teams UI Library
 
-Import production-ready UI templates directly into your app project.
+View and test individual Teams UI templates and related components in your browser.
 
 > [!div class="nextstepaction"]
-> [Get the Microsoft Teams UI Library (GitHub)](https://github.com/OfficeDev/microsoft-teams-ui-component-library)
+> [Try the UI library (Storybook)](https://dev.teams.microsoft.com/storybook/main/index.html)
+
+Import these templates and related components directly into your Teams app project.
+
+> [!div class="nextstepaction"]
+> [Get the UI library (GitHub)](https://github.com/OfficeDev/microsoft-teams-ui-component-library)
+
+### Sample app
+
+Install a sample app to see how UI templates look and behave within Teams contexts.
+
+> [!div class="nextstepaction"]
+> [Get the sample app (GitHub)](https://github.com/OfficeDev/microsoft-teams-app-sample)
 
 ## Other resources
 
