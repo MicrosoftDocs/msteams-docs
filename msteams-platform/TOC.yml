@@ -84,9 +84,11 @@
     href: concepts/build-and-test/deep-links.md
   - name: Device capabilities
     items:
+    - name: Overview
+      href: concepts/device-capabilities/device-capabilities-overview.md
     - name: Request device permissions
       href: concepts/device-capabilities/native-device-permissions.md
-    - name: Using the camera and photo gallery
+    - name: Media capabilities in Teams
       href: concepts/device-capabilities/mobile-camera-image-permissions.md
 - name: Design your app
   items:
