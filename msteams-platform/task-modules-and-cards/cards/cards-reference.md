@@ -6,7 +6,7 @@ ms.topic: reference
 ---
 # Cards reference
 
-The cards listed in this section are supported in bots for Teams. They are based on cards defined by the Bot Framework, but Teams does not support all Bot Framework cards and has added some of its own. Differences are called out in the references in this document.
+The cards listed in this section are supported in bots for Microsoft Teams. They are based on cards defined by the Bot Framework, but Teams does not support all Bot Framework cards and has added some of its own. Differences are called out in the references in this document.
 
 ## Card examples
 
@@ -23,22 +23,22 @@ You can find additional information on how to use cards in the documentation for
 
 This table shows the types of cards available to you:
 
-| Card Type | Description |
+| Card type | Description |
 | --- | --- |
-| [Adaptive Card](#adaptive-card) | Highly customizable card that can contain any combination of text, speech, images, buttons and input fields. |
-| [Hero Card](#hero-card) | Typically contains a single large image, one or more buttons, and a small amount of text. |
-| [List Card](#list-card) | A scrolling list of items. |
-| [Office 365 Connector Card](#office-365-connector-card) | Flexible layout with multiple sections, fields, images and actions. |
-| [Receipt Card](#receipt-card) | Provides a receipt to the user. |
-| [Signin Card](#signin-card) | Enables a bot to request that a user sign in. |
-| [Thumbnail Card](#thumbnail-card) | Typically contains a single thumbnail image, some short text, and one or more buttons. |
-| [Card Collections](#card-collections) | Used to return multiple items in a single response. |
+| [Adaptive card](#adaptive-card) | Highly customizable card that can contain any combination of text, speech, images, buttons and input fields. |
+| [Hero card](#hero-card) | Typically contains a single large image, one or more buttons, and a small amount of text. |
+| [List card](#list-card) | A scrolling list of items. |
+| [Office 365 connector card](#office-365-connector-card) | Flexible layout with multiple sections, fields, images and actions. |
+| [Receipt card](#receipt-card) | Provides a receipt to the user. |
+| [Signin card](#signin-card) | Enables a bot to request that a user sign in. |
+| [Thumbnail card](#thumbnail-card) | Typically contains a single thumbnail image, some short text, and one or more buttons. |
+| [Card collections](#card-collections) | Used to return multiple items in a single response. |
 
 ## Common properties for all cards
 
 ### Inline card images
 
-Your card can contain an inline image by including a link to your publicly available image. For performance purposes it is highly recommended you host your image on a public content-delivery network (CDN).
+The card can contain an inline image by including a link to the publicly available image. For performance purposes, it is highly recommended you host the image on a public content-delivery network (CDN).
 
 Images are scaled up or down in size while maintaining the aspect ratio to cover the image area, and then cropped from center to achieve the appropriate aspect ratio for the card.
 
@@ -61,11 +61,11 @@ See [Card Formatting](~/task-modules-and-cards/cards/cards-format.md) for more i
 
 ## Adaptive card
 
-A customizable card that can contain any combination of text, speech, images, buttons, and input fields. See [Adaptive Cards v1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0).
+An adaptive card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. See [Adaptive Cards v1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0).
 
 ### Support for adaptive cards
 
-| Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
+| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -210,9 +210,9 @@ A customizable card that can contain any combination of text, speech, images, bu
 }
 ```
 
-#### More information on adaptive cards
+#### Additional information on adaptive cards
 
-* [Adaptive Cards Overview](/adaptive-cards/)
+* [Adaptive cards overview](/adaptive-cards/)
 * [Adaptive card actions in Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 
 ## Hero card
@@ -224,7 +224,6 @@ A card that typically contains a single large image, one or more buttons and tex
 | Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
-|
 
 ### Properties of a hero card
 
@@ -236,7 +235,6 @@ A card that typically contains a single large image, one or more buttons and tex
 | images | Array of images | Image displayed at top of card. Aspect ratio 16:9. |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6. |
 | tap | Action object | This action will be activated when the user taps on the card itself. |
-|
 
 ### Example of a hero card
 
@@ -271,7 +269,7 @@ A card that typically contains a single large image, one or more buttons and tex
 
 ```
 
-### More information on hero cards
+### Additional information on hero cards
 
 Bot Framework reference:
 
@@ -284,10 +282,9 @@ The list card has been added by Teams to provide functions beyond what the list 
 
 ### Support for list cards
 
-| Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
+| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ |✔ |
-|
 
 ### Properties of a list card
 
@@ -353,16 +350,13 @@ The list card has been added by Teams to provide functions beyond what the list 
 
 ## Office 365 connector card
 
-The Office 365 Connector card is supported in Teams, not in Bot Framework.
-
-This card provides a flexible layout with multiple sections, fields, images, and actions. This card encapsulates a connector card so that it can be used by bots. See the notes section for differences between connector cards and the O365 card.
+The Office 365 Connector card is supported in Teams, not in Bot Framework. This card provides a flexible layout with multiple sections, fields, images, and actions. This card encapsulates a connector card so that it can be used by bots. See the notes section for differences between connector cards and the O365 card.
 
 ### Support for Office 365 connector cards
 
-| Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
+| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✔ | ✖ |
-|
 
 ### Properties of the Office 365 connector card
 
@@ -471,13 +465,11 @@ For all other details about connector card properties, see the [Actionable messa
 
 ## Receipt card
 
-Receipt card is supported in Teams.
-
-It is a card that enables a bot to provide a receipt to the user. It typically contains the list of items to include on the receipt, such as tax and total information.
+Teams supports receipt card. It is a card that enables a bot to provide a receipt to the user. It typically contains the list of items to include on the receipt, such as tax and total information.
 
 ### Support for receipt cards
 
-| Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
+| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -532,7 +524,7 @@ It is a card that enables a bot to provide a receipt to the user. It typically c
 }
 ```
 
-### More information on receipt cards
+### Additional information on receipt cards
 
 Bot Framework reference:
 
@@ -547,12 +539,11 @@ The *signin action* can be used from any card in Teams, not just the signin card
 
 ### Support for Signin cards
 
-| Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
+| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
-|
 
-### More information on signin cards
+### Additional information on signin cards
 
 Bot Framework reference:
 
@@ -565,10 +556,9 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 
 ### Support for thumbnail cards
 
-| Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
+| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
-|
 
 ![Example of a thumbnail card](~/assets/images/cards/thumbnail.png)
 
@@ -582,7 +572,6 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 | images | Array of images | Image displayed at top of card. Aspect ratio 1:1 (square). |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6. |
 | tap | Action object | This action will be activated when the user taps on the card itself. |
-|
 
 ### Example of a thumbnail card
 
@@ -627,7 +616,7 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 }
 ```
 
-### For more information
+### Additional information
 
 Bot Framework reference:
 
@@ -636,7 +625,7 @@ Bot Framework reference:
 
 ## Card collections
 
-Card collections are supported in Teams.
+Teams supports Card collections.
 
 Card collections: `builder.AttachmentLayout.carousel` and `builder.AttachmentLayout.list`. These collections contain adaptive, hero, or thumbnail cards.
 
@@ -646,10 +635,9 @@ The [carousel layout](/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card
 
 ### Support for carousel collections
 
-| Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
+| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
-|
 
 > [!NOTE]
 > A carousel can display a maximum of 10 cards per message.
@@ -837,10 +825,9 @@ Properties of a Carousel card are same as those of the Hero and Thumbnail cards.
 
 The list layout shows a vertically stacked list of cards, optionally with associated action buttons.
 
-| Bots in Teams | Messaging Extensions  | Connectors | Bot Framework |
+| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
-|
 
 ### Example of a list collection
 
