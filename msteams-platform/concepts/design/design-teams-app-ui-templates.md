@@ -124,7 +124,7 @@ A wizard guides a user through several screens to complete a task (such as a set
 
 The empty state template can be used for many scenarios, including sign in, first-run experiences, error messages, and more. It’s highly flexible⁠—adapt it to use one, a few, or all of the components in the following design.
 
-:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="Example shows a wizard UI template." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="Example shows an empty state UI template." border="false":::
 
 ### Top use cases
 
