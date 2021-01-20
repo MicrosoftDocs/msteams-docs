@@ -68,7 +68,7 @@ As always, the project's README file should have more information on specific ne
 | Sample | Description
 |--------|-------------
 | [Sample connector for Node.js](https://github.com/OfficeDev/microsoft-teams-sample-connector-nodejs) | This sample, written in Node.js, showcases how to build a connector for Microsoft Teams using GitHub as an example to generate connector notifications.
-| [Sample connector for C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-connector-csharp) | This sample, written in C#, showcases how to build a connector for Microsoft Teams using a sample task list app as an example to generate connector notifications.
+| [Sample connector for C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-connector-csharp) | This sample, written in C#, showcases how to build a connector for Microsoft Teams using a sample task list app as an example to generate connector notifications. This sample also shows how to implement login functionality in connector configuration page. 
 
 ## Graph API
 
