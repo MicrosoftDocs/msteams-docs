@@ -9,12 +9,35 @@ ms.topic: reference
 
 Design your Microsoft Teams app faster with UI templates. The templates are a collection of Fluent UI-based components that work across common Teams use cases, giving you more time to figure out the best experience for your users.
 
-## Microsoft Teams UI Kit
+## Getting started with tools and samples
 
-You can grab UI templates from the Microsoft Teams UI Kit, which also includes extensive information about usage, anatomy, accessibility, and best practices.
+The following resources can help you design and develop your app using UI templates.
+
+### Microsoft Teams UI Kit
+
+Grab UI templates for your app design from the Microsoft Teams UI Kit, which also includes extensive information about usage, anatomy, accessibility, and best practices.
 
 > [!div class="nextstepaction"]
-> [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Get the UI kit (Figma)](https://www.figma.com/community/file/916836509871353159)
+
+### Microsoft Teams UI Library
+
+View and test individual Teams UI templates and related components in your browser.
+
+> [!div class="nextstepaction"]
+> [Try the UI library (playground)](https://dev-int.teams.microsoft.com/storybook/main/index.html)
+
+Import these templates and related components directly into your Teams app project.
+
+> [!div class="nextstepaction"]
+> [Get the UI library (GitHub)](https://github.com/OfficeDev/microsoft-teams-ui-component-library)
+
+### Sample app
+
+Install a sample app to see how UI templates look and behave within Teams contexts.
+
+> [!div class="nextstepaction"]
+> [Get the sample app (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
 ## List
 
@@ -101,7 +124,7 @@ A wizard guides a user through several screens to complete a task (such as a set
 
 The empty state template can be used for many scenarios, including sign in, first-run experiences, error messages, and more. It’s highly flexible⁠—adapt it to use one, a few, or all of the components in the following design.
 
-:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="Example shows a wizard UI template." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="Example shows an empty state UI template." border="false":::
 
 ### Top use cases
 
@@ -168,7 +191,3 @@ Stage offers a way for users to open an entity—like an image, file, or website
 
 * Open an entity in Teams instead of another app or browser
 * Spotlight media or other content
-
-## Microsoft Teams UI Library (coming soon)
-
-The Microsoft Teams UI Library will allow you to import these production-ready UI templates directly into your app project.
