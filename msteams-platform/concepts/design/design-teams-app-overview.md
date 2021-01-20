@@ -150,7 +150,7 @@ Design a Teams app with UI components, templates, and examples that you can drag
 View and test individual Teams UI templates and related components in your browser.
 
 > [!div class="nextstepaction"]
-> [Try the UI library (dev playground)](https://dev.teams.microsoft.com/storybook/main/index.html)
+> [Try the UI library (dev playground)](https://dev-int.teams.microsoft.com/storybook/main/index.html)
 
 Import these templates and related components directly into your Teams app project.
 
@@ -162,7 +162,7 @@ Import these templates and related components directly into your Teams app proje
 Install a sample app to see how UI templates look and behave within Teams contexts.
 
 > [!div class="nextstepaction"]
-> [Get the sample app (GitHub)](https://github.com/OfficeDev/microsoft-teams-app-sample)
+> [Get the sample app (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
 ## Other resources
 
