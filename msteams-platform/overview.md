@@ -133,7 +133,7 @@ Some apps are simple (send notifications), while others are complex (manage pati
 ## Resources
 
 * [Add a Share-to-Teams button to your website](concepts/build-and-test/share-to-teams.md)
-* <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI</a>
+* [Design your Teams app](concepts/design/design-teams-app-overview.md)
 * [Microsoft Teams JavaScript client SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
-* [Bot Framework SDK for JavaScript](https://github.com/Microsoft/botbuilder-js) and [Bot Framework SDK for .NET](https://github.com/Microsoft/botbuilder-dotnet/)
-* [Publish your app to an organization or AppSource](concepts/deploy-and-publish/overview.md)
+* Bot Framework SDK for [JavaScript](https://github.com/Microsoft/botbuilder-js) and [.NET](https://github.com/Microsoft/botbuilder-dotnet/)
+* [Publish your Teams app](concepts/deploy-and-publish/overview.md)
