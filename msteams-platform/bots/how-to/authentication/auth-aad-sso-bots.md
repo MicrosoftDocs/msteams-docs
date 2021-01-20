@@ -116,7 +116,7 @@ Complete the following steps to update the Azure portal with the OAuth connectio
 
 ### Update your Teams application manifest for your bot
 
-If your application contains a standalone bot, then use the following code to add new properties to your Teams application manifest:
+If the application contains a standalone bot, then use the following code to add new properties to the Teams application manifest:
 
 ```json
     "webApplicationInfo": 
@@ -125,7 +125,7 @@ If your application contains a standalone bot, then use the following code to ad
             "resource": "api://botid-00000000-0000-0000-0000-000000000000"
         }
 ```
-If your application contains a bot and a tab, then use the following code to add new properties to your Teams application manifest:
+If the application contains a bot and a tab, then use the following code to add new properties to the Teams application manifest:
 
 ```json
     "webApplicationInfo": 
@@ -183,7 +183,7 @@ When the user selects **Continue**, the following events occur:
 
 #### Receive the bot token
 
-The response with the token is sent through an invoke activity with the same schema as other invoke activities that the bots receive today. The only difference is the invoke name, **sign-in/tokenExchange** and the **value** field, which contains the **Id**, a string of the initial request to get the token and the **token** field, a string value including the token.
+The response with the token is sent through an invoke activity with the same schema as other invoke activities that the bots receive today. The only difference is the invoke name, **sign-in/tokenExchange** and the **value** field. The **value** field contains the **Id**, a string of the initial request to get the token and the **token** field, a string value including the token.
 
 >[!NOTE]
 > You might receive multiple responses for a given request if the user has multiple active endpoints. You must deduplicate the responses with the token.
