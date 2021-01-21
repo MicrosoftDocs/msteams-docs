@@ -1,12 +1,12 @@
 ---
-title: Request device permissions for your Microsoft Teams tab
+title: Request device permissions for your Microsoft Teams app
 description: How to update your app manifest in order to request access to native features that usually require user consent
-keywords: teams tabs development
+keywords: teams apps development
 ---
 
-# Request device permissions for your Microsoft Teams tab
+# Request device permissions for your Microsoft Teams app
 
-You might want to enrich your tab with features that require access to native device functionality like:
+You might want to enrich your app with features that require access to native device functionality like:
 
 > [!div class="checklist"]
 >
@@ -15,11 +15,13 @@ You might want to enrich your tab with features that require access to native de
 > * Location
 > * Notifications
 
-[!Note] To integrate camera and image capabilities within your Microsoft Teams mobile app, refer [Camera and image capabilities in Teams.](../../concepts/device-capabilities/mobile-camera-image-permissions.md)
+[!Note] 
+* To integrate your native device media capabilities within Teams mobile app, see [Media capabilities in Teams.](../../concepts/device-capabilities/mobile-camera-image-permissions.md)
+* The device permissions work in the same way for apps hosted on Tab, and Task Module.
 
 > [!IMPORTANT]
 >
-> * At present, Teams mobile client only supports access to `camera`, `gallery`, `mic`, and `location` through native device capabilities and is available on all app constructs including tabs. </br>
+> * Currently, Teams mobile client only supports access to `camera`, `gallery`, `mic`, and `location` through native device capabilities and is available on all app constructs. </br>
 > * Support for `camera`, `gallery`, and `mic` is enabled through [**selectMedia API**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true). For single image capture you may use [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true).
 > * Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). It's recommended you use this API as [**geolocation API**](../../resources/schema/manifest-schema.md#devicepermissions) is currently not fully supported on all desktop clients.
 
@@ -82,7 +84,7 @@ Each property will allow you to prompt the user to ask for their consent:
 | midi          | permission to send and receive midi information from a digital musical instrument   |
 | openExternal  | permission to open links in external applications  |
 
-## Checking permissions from your tab
+## Checking permissions from your app
 
 Once you’ve added `devicePermissions` to your app manifest, you can check permissions using the HTML5 “permissions” API without causing a prompt.
 

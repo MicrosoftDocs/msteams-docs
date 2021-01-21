@@ -8,7 +8,7 @@ ms.topic: overview
 ---
 # What are device capabilities? 
 
-Use your device's media capability, such as mobile and desktop along with the Microsoft Teams platform for a rich collaborative experience. You must follow a two-step process if you want to use device capabilities.
+Use your device's (mobile) media capability, along with the Microsoft Teams platform for a rich collaborative experience. You must follow a two-step process if you want to use device capabilities.
 
 In the first step, get permission to access the device's features, such as camera, microphone, location, QR code, and notification. For more information, see [how to request device permissions](../native-device-permissions.md).
 
