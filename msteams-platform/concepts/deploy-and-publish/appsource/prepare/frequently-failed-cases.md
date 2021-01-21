@@ -23,8 +23,8 @@ This article addresses common reasons submitted apps fail validation. While it's
 * Your app must not stop responding, end unexpectedly, or contain programming errors. If an issue is encountered, your app should fail gracefully and provide a valid-way-forward message to the user.
 * Your app must not automatically download, install, or launch any executable code in the user environment. All downloads should seek explicit permission from the user.
 * Any material that you associate with your experience, such as descriptions and support documentation, must be accurate. Use correct spelling, capitalization, punctuation, and grammar in your descriptions and materials.
-* Provide help and support information. It's highly recommended that your app include a help/FAQ link for the first-run user experience. For all personal apps, we recommend providing your help page as a personal tab for a better user experience.
-* Apps must not take the user out of Teams for core user scenarios. Using task modules/tabs is recommended to display information to users within Teams.
+* Provide help and support information. It's highly recommended that your app include a help or FAQ link for the first-run user experience. For all personal apps, we recommend providing your help page as a personal tab for a better user experience.
+* Apps must not take the user out of Teams for core user scenarios. Using task modules or tabs is recommended to display information to users within Teams.
 * All apps must have a visual tour such as “Take a Tour” or an “App Guide” in its configuration screen that talks about the app features and necessary integration in the following places:
     * The store listing page (Long Description).
     * Tab configuration screen.
