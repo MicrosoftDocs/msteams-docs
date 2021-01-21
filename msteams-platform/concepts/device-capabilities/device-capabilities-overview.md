@@ -8,42 +8,20 @@ ms.topic: overview
 ---
 # Device capabilities - Overview
 
-The app developers get an overview of how to request the user's device permissions and integrate the capabilities within their Teams mobile app to enrich the Tab. 
+The Microsoft Teams platform has extension points, called **capabilities**.
+Use the capabilities to build apps in Teams. There are many core capabilities in Teams such as: 
+* Tabs
+* Bots 
+* Messaging extensions
 
-Enrich the tab with features that require access to native device functionalities such as: 
-* Camera 
-* Microphone 
-* Location 
-* Notification
+Tabs are one of the core capabilities in the Teams platform. 
+Device capability is a feature that a device must have to perform certain functionalities. Use the device capability in Teams to get a rich collaborative experience. For using the device capabilities, you must follow two steps.
 
-You must perform the following tasks to enrich the Tab: 
+The first step is requesting the permission to access device features, such as camera, microphone, location, and notification. For more information, see [how to request device permissions](../native-device-permissions.md).
 
-1. Request the device permission.
-1. Integrate the media capabilities within Teams desktop and mobile app.
+After accessing the user’s device permission, as the second step, integrate the media capabilities within Teams desktop and mobile app. For more information on how to integrate media capabilities, see [Camera and image capabilities in Teams](/mobile-camera-image-permissions.md). 
 
-In addition to that, see [Error handling](#error-handling) to understand the API response error codes generated, while working with APIs for device capabilities. 
-
-## Device permissions
-
-Update the app manifest with **media permission** so that the Teams knows the list of device capabilities the app requires to access. For more information, see [update your app manifest](../tabs/how-to/native-device-permissions?tabs=mobile#properties)
-
-Access an end user’s device permissions that allows you to: 
-
-* Record and share short videos. 
-* Record short audio memos and save them for later use.
-* Use the location information of the user to display relevant information. 
-
-The process of getting the **device permission** is the same for both mobile and desktop clients.
-For more information, see [how to request device permissions](../native-device-permissions.md).
- 
-## Media capabilities
-
-Currently, the Teams supports the following media capabilities for desktop and mobile clients:
-* Camera
-* Image
-* Microphone
-
-Integrate the media capabilities within the Teams app, using [Camera and image capabilities in Teams](/mobile-camera-image-permissions.md). 
+In addition to that, see [Error handling](#error-handling) to understand and handle the API response error codes generated, while working with the APIs for media capabilities.
 
 ## Error handling
 
