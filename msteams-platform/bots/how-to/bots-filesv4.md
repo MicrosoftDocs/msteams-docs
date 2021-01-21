@@ -10,14 +10,14 @@ ms.topic: how-to
 > [!IMPORTANT]
 > The articles in this document are based on the v4 Bot Framework SDK.
 
-There are two ways to send files to and from a bot:
+There are two ways to send files to and receive files from a bot:
 
 * Using the Microsoft Graph APIs. This method works for bots in all scopes in Teams:
   * `personal`
   * `channel`
   * `groupchat`
-* Using the Teams APIs. These only support files in one context:
-  * `personal`
+
+* Using the Teams APIs. These only support files in `personal` context.
 
 ## Using the Microsoft Graph APIs
 
@@ -32,7 +32,7 @@ Post messages with card attachments that refer to existing SharePoint files, usi
 
 Using Teams APIs, the bot can directly send and receive files with users in the `personal` context, also known as personal chats. Implement features, such as expense reporting, image recognition, file archival, and e-signatures involving the editing of file content. Files shared in Teams typically appear as cards and allow rich in-app viewing.
 
-The following sections describe how to send file content as a result of direct user interaction, like sending a message. This API is provided as part of the Microsoft Teams bot platform.
+The following sections describe how to send file content as a direct user interaction, like sending a message. This API is provided as part of the Microsoft Teams bot platform.
 
 ### Configuring the bot to support files
 
@@ -121,12 +121,10 @@ The following table describes the content properties of the attachment:
 
 An invoke activity is sent to the bot if and when the user accepts the file. It contains the OneDrive for Business placeholder URL that the bot can then issue a `PUT` into to transfer the file contents. For information on uploading to the OneDrive URL, read [Upload bytes to the upload session](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
 
-The following example shows an abridged version of the invoke activity that the bot will receive:
+The following example shows a concise version of the invoke activity that the bot will receive:
 
 ```json
 {
-  ...
-
   "name": "fileConsent/invoke",
   "value": {
     "type": "fileUpload",
@@ -161,7 +159,7 @@ Similarly, if the user declines the file, the bot will receive the following eve
 
 ### Notifying the user about an uploaded file
 
-After uploading a file to the user's OneDrive, whether you use the mechanism described earlier or OneDrive user delegated APIs, send a confirmation message to the user. This message must contain a `FileCard` attachment that the user can click on, either to preview it, open it in OneDrive, or download locally.
+After uploading a file to the user's OneDrive, send a confirmation message to the user. This message must contain a `FileCard` attachment that the user can click on, either to preview it, open it in OneDrive, or download locally.
 
 ```json
 {
