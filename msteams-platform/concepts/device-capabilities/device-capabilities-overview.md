@@ -1,7 +1,8 @@
 ---
 title: Overview of device capabilities
-description: Learn how to access native device capabilities and integrate into Microsoft Teams apps.
-keywords: camera image microphone capabilities native device permissions media capabilities
+description:  Overview of native device capabilities.
+keywords: camera image media microphone capabilities native device permissions 
+author: rajeshwari.V 
 ms.author: surbhi gupta 
 ms.topic: overview
 ---
