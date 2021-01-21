@@ -11,11 +11,11 @@ ms.author: lajanuar
 >[!IMPORTANT]
 >
 >* Currently, the Microsoft Teams support for media capabilities is only available for mobile clients.
->* The `selectMedia`, `getMedia`, and `viewImages` APIs can be invoked from multiple Teams surfaces such as task modules, tabs, and personal apps. For more details, _see_ [Entry points for Teams apps](../extensibility-points.md)
+>* The `selectMedia`, `getMedia`, and `viewImages` APIs can be invoked from multiple Teams surfaces such as task modules, tabs, and personal apps. For more details, _see_ [Entry points for Teams apps](../extensibility-points.md).
 
 You must use the  [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), to easily integrate media  capabilities within your Teams mobile app. The SDK provides the tools necessary for your app to access a user’s [device permissions](native-device-permissions.md?tabs=desktop#device-permissions) and build a richer experience.
 
-The [selectMedia](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true), [getMedia](/javascript/api/@microsoft/teams-js/_media?view=msteams-client-js-latest#getMedia__error__SdkError__blob__Blob_____void_&preserve-view=true), and [viewImages](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#viewImages_ImageUri_____error___SdkError_____void_&preserve-view=true) APIs enable you to use native camera/image capabilities as follows:
+The [selectMedia](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true), [getMedia](/javascript/api/@microsoft/teams-js/_media?view=msteams-client-js-latest#getMedia__error__SdkError__blob__Blob_____void_&preserve-view=true), and [viewImages](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#viewImages_ImageUri_____error___SdkError_____void_&preserve-view=true) APIs enable you to use native media capabilities as follows:
 
 * Use native **camera control** to allow users to **capture and attach images** on the go.
 * Use native **gallery support** to allow users to **select device images** as attachments.
@@ -25,10 +25,11 @@ The [selectMedia](/javascript/api/@microsoft/teams-js/media?view=msteams-client-
   * Scan document, whiteboard, business cards, etc., through the camera.
   * Crop and rotate the images.
   * Add text, ink, or freehand annotation to the image.
+* Use native **microphone** to allow users to **talk and record conversations**.
 
 ## Get started
 
-Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions`  property and specifying `media`. This allows your app to ask for requisite permissions from end-users before they use the camera to capture the image or open the gallery to select an image to submit as an attachment.
+Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions`  property and specifying `media`. This allows your app to ask for requisite permissions from users before they use the camera to capture the image or open the gallery to select an image to submit as an attachment.
 
 ``` json
 "devicePermissions": [
@@ -39,9 +40,9 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 > [!NOTE]
 > The _Request Permissions_ prompt is automatically displayed when a relevant Teams API is initiated. For more details, *see* [Request device permissions](native-device-permissions.md).
 
-## Using camera and image capability APIs
+## Using media capability APIs
 
-You must use the following set of APIs to enable camera and image device capabilities:
+You must use the following set of APIs to enable your device's media capabilities:
 
 | API      | Description   |
 | --- | --- |
