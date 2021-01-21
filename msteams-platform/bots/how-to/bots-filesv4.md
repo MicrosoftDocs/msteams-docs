@@ -67,7 +67,7 @@ The following table describes the content properties of the attachment:
 | Property | Purpose |
 | --- | --- |
 | `downloadUrl` | OneDrive URL for fetching the content of the file. The user can issue an `HTTP GET` directly from this URL. |
-| `uniqueId` | Unique file ID. This will be the OneDrive drive item ID, in the case of the user sending a file to your bot. |
+| `uniqueId` | Unique file ID. This will be the OneDrive drive item ID, in the case of the user sending a file to the bot. |
 | `fileType` | File type, such as .pdf or .docx. |
 
 As a best practice, acknowledge the file upload by sending a message back to the user.
@@ -78,7 +78,7 @@ The following steps are required to upload a file to a user:
 
 1. Send a message to the user requesting permission to write the file. This message must contain a `FileConsentCard` attachment with the name of the file to be uploaded.
 2. If the user accepts the file download, the bot will receive an invoke activity with a location URL.
-3. To transfer the file, your bot performs an `HTTP POST` directly into the provided location URL.
+3. To transfer the file, the bot performs an `HTTP POST` directly into the provided location URL.
 4. Optionally, remove the original consent card if you do not want the user to accept further uploads of the same file.
 
 #### Message requesting permission to upload
@@ -114,8 +114,8 @@ The following table describes the content properties of the attachment:
 | --- | --- |
 | `description` | Description of the file. Shown to the user to describe its purpose or to summarize its content. |
 | `sizeInBytes` | Provides the user an estimate of the file size and the amount of space it will take in OneDrive. |
-| `acceptContext` | Additional context that will be silently transmitted to your bot when the user accepts the file. |
-| `declineContext` | Additional context that will be silently transmitted to your bot when the user declines the file. |
+| `acceptContext` | Additional context that will be silently transmitted to the bot when the user accepts the file. |
+| `declineContext` | Additional context that will be silently transmitted to the bot when the user declines the file. |
 
 #### Invoke activity when the user accepts the file
 
@@ -186,7 +186,7 @@ The following table describes the content properties of the attachment:
 
 ### Basic example in C#
 
-The following sample shows how you can handle file uploads and send file consent requests in the bot's dialog:
+The following sample shows how to handle file uploads and send file consent requests in the bot's dialog:
 
 ```csharp
 
