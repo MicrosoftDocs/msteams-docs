@@ -41,8 +41,9 @@ This article addresses common reasons submitted apps fail validation. While it's
 * App must not take users out of Teams for core user scenarios. Link targets in apps must not link to an external browser, it must link to div elements contained within Teams example, inside Task Modules and tabs.
 * All core and non-core scenarios must be completed within the Teams environment except for:
   * Privacy Policy
-  * ToU
-  * Website links and sign-up
+  * Terms Of Use (TOU)
+  * Website link
+  * Sign-up process
 
 * Personal apps enable users to share content from a personal app experience with other team members.
 
@@ -144,10 +145,12 @@ Your bot should be responsive to any command and not dead-end the user. Here are
 
 * **Include help content or guidance when your bot is lost**. When your bot cannot understand the user input, it must suggest an alternative action. For example, *"I'm sorry, I don't understand. Type "help" for more information."* Don't respond with an error message or simply, *"I don't understand"*.
 
-    * Help Command must be precise.
-    * The app responses must be in an adaptive card format with an actionable content for at least six commands. If an app has less than six commands, check if all the commands are present in the adaptive card.
+### &#9989; Help command response
 
-    ![Help command sample](../../../../assets/images/faq/helpcommand.png)
+   * Help Command must be precise and the app responses must be in an adaptive card format with an actionable content for at least six commands.
+   * If an app has less than six commands, check if all the commands are present in the adaptive card.
+
+   ![Help command sample](../../../../assets/images/faq/helpcommand.png)
 
 * **Use adaptive cards and task modules to make your bot response clear and actionable**
 [Adaptive cards with buttons invoking task modules](/task-modules-and-cards/task-modules/task-modules-bots) enhance the bot user experience. These cards and buttons are easier to use in a mobile device as opposed to your user typing the commands. Also bot responses should not be textual with long text. Bots must make use of Adaptive cards and task modules instead of conversational chat based user interface and lengthy text responses.
