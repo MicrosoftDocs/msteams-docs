@@ -2,7 +2,6 @@
 title: Overview of device capabilities
 description:  Overview of native device  capabilities.
 keywords: camera image media microphone capabilities native device permissions 
-ms.author: surbhigupta12 
 ms.topic: overview
 ---
 # What are device capabilities? 
