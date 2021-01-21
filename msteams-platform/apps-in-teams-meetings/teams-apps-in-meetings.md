@@ -131,6 +131,6 @@ You can access the  **Meeting options** page as follows:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Design your app](create-apps-for-teams-meetings.md)
+> [Design your app](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 > [!div class="nextstepaction"]
 > [Build your app](create-apps-for-teams-meetings.md)
