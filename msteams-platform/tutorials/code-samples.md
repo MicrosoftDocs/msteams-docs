@@ -5,7 +5,7 @@ keywords: Microsoft Teams developer samples
 ---
 # Tutorials for the Microsoft Teams developer platform
 
-Here you will find a list of tutorials and code samples that demonstrate how you can extend the Teams developer platform capabilities by creating custom apps.
+Here you will find a list of tutorials that demonstrate how you can extend the Teams developer platform capabilities by creating custom apps.
 
 ## Getting started with Microsoft Learn
 
