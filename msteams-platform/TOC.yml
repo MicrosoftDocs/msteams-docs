@@ -22,7 +22,7 @@
     href: build-your-first-app/build-messaging-extension.md
 - name: Tutorials and code samples
   items:
-  - name: Overview
+  - name: Tutorials
     href: tutorials/code-samples.md   
   - name: Create an app using C#
     href: tutorials/get-started-dotnet-app-studio.md
