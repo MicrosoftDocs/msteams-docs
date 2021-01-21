@@ -172,7 +172,7 @@ Please see below section for Welcome message requirements.
 
 * Include a value proposition with the welcome tour.
 * Provide way-forward guidance for using the app.
-* Include guidance on how to Sign up and configure your app
+* Include guidance on how to Sign up and configure your app.
 * Present easy-to-read text and straightforward dialogue — preferably a card with an actionable welcome tour button that loads a task module.
 * Keep it simple and usable with buttons and cards — avoid long text, chatty dialogue.
 * Include adaptive cards and buttons to make the welcome message more usable.
@@ -216,7 +216,7 @@ Your Teams app must not post sensitive data such as credit card / financial paym
 
 ### &#9989; Do not transmit financial payment details or complete financial transactions via your Teams app
 
-* Your Teams app must not ask users to make a payment directly within Teams interface
+* Your Teams app must not ask users to make a payment directly within Teams interface.
 * Apps may not transmit financial instrument details through the user on the app interface. Apps may only transmit links to secure payment services to users if this is disclosed in the app's Terms of Use, Privacy Policy, and any profile page or website for the app before a user agrees to use the app.
 
 ### &#9989; Clear warning before downloading any files or executable (`.exe`) into a user’s environment
