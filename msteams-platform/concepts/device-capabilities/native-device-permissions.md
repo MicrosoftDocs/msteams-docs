@@ -15,7 +15,7 @@ You might want to enrich your app with features that require access to native de
 > * Location
 > * Notifications
 
-[!Note] 
+[!NOTE] 
 * To integrate your native device media capabilities within Teams mobile app, see [Media capabilities in Teams.](../../concepts/device-capabilities/mobile-camera-image-permissions.md)
 * The device permissions work in the same way for apps hosted on Tab, and Task Module.
 
