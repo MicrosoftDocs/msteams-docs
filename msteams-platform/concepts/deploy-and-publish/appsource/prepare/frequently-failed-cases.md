@@ -34,8 +34,8 @@ This article addresses common reasons submitted apps fail validation. While it's
 
 * The visual tour can be a video, screenshot, a link to a static tab with app details. But all these references should be within Teams environment.
 
-![Sample App 1](../../../../assets/images/faq/Sampleapp1.png)
-![Sample App 2](../../../../assets/images/faq/Sampleapp2.png)
+    ![Sample App 1](../../../../assets/images/faq/Sampleapp1.png)
+    ![Sample App 2](../../../../assets/images/faq/Sampleapp2.png)
 
 * Increment your app version number in the manifest if you make any manifest changes to your submission.
 * App must not take users out of Teams for core user scenarios. Link targets in apps must not link to an external browser but should link to div elements contained within Teams e.g. inside Task Modules and tabs.
