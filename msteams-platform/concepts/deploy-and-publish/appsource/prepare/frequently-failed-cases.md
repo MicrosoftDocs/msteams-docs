@@ -1,9 +1,9 @@
 ---
 title: App submission tips and frequently failed cases
 description: Describes tips for a successful Teams store submission and common reasons submissions fail.
-author: laujan
-ms.author: lajanuar
 ms.topic: reference
+ms.author: lajanuar
+keywords: app submission tips frequently failed cases validation guidelines
 ---
 # Tips for a successful Microsoft Teams app submission
 
@@ -20,13 +20,30 @@ This article addresses common reasons submitted apps fail validation. While it's
 
 * Ensure you are using version 1.4.1 or later of the [Microsoft Teams SDK](https://www.npmjs.com/package/@microsoft/teams-js).
 * Don't make changes to your app while the validation process is in progress. Doing so will require a complete revalidation of your app.
-* Your app  must not stop responding, end unexpectedly, or contain programming errors. If an issue is encountered, your app should fail gracefully and provide a valid-way-forward message to the user.
+* Your app must not stop responding, end unexpectedly, or contain programming errors. If an issue is encountered, your app should fail gracefully and provide a valid-way-forward message to the user.
 * Your app must not automatically download, install, or launch any executable code in the user environment. All downloads should seek explicit permission from the user.
 * Any material that you associate with your experience, such as descriptions and support documentation, must be accurate. Use correct spelling, capitalization, punctuation, and grammar in your descriptions and materials.
 * Provide help and support information. It's highly recommended that your app include a help/FAQ link for the first-run user experience. For all personal apps, we recommend providing your help page as a personal tab for a better user experience.
 * Apps must not take the user out of Teams for core user scenarios. Using task modules/tabs is recommended to display information to users within Teams.
+* All apps must have a visual tour such as “Take a Tour” or an “App Guide” in its configuration screen that talks about the app features and necessary integration in the following places:
+    * The store listing page (Long Description).
+    * Tab configuration screen.
+    * Welcome message for a bot.
+    * App source metadata.
+    * Connector configuration screen.
+
+* The visual tour can be a video, screenshot, a link to a static tab with app details. But all these references should be within Teams environment.
+
+![Sample App 1](../../../../assets/images/faq/Sampleapp1.png)
+![Sample App 2](../../../../assets/images/faq/Sampleapp2.png)
+
 * Increment your app version number in the manifest if you make any manifest changes to your submission.
 * App must not take users out of Teams for core user scenarios. Link targets in apps must not link to an external browser but should link to div elements contained within Teams e.g. inside Task Modules and tabs.
+* All core and non-core scenarios must be completed within the Teams environment except for:
+  * Privacy Policy
+  * ToU
+  * Website links and sign-up
+
 * Personal apps enable users to share content from a personal app experience with other team members.
 
 ### &#9989;  Provide a clear and simple sign in/sign out and sign-up experience
@@ -36,7 +53,7 @@ This article addresses common reasons submitted apps fail validation. While it's
 * If your app or add-in depends on external accounts or services, the sign in/sign out and sign-up experience must be apparent and reachable across all capabilities in your app.
 * If there is an explicit sign-in option provided to the user, there must be a corresponding sign-out option (even if the app is using [silent authentication](../../../../tabs/how-to/authentication/auth-silent-aad.md)).
 * The sign-out option must only sign the user out of your app's capability and not out of the Teams client.
-* At a minimum, the sign-out option must sign the user out of the same capabilities accessed with the sign-in option. For example, if the sign-in option includes both a messaging extension and tab, then the sign-out option must include both the messaging extension and tab.
+* At a minimum, the sign-out option must sign the user out of the same capabilities accessed with the sign-in option. For example, if the sign-in option includes both messaging extension and tab, then the sign-out option must include both messaging extension and tab.
 
 * Make sure there is always a way to reverse the following (or similar) behaviors:
   * Sign-in => sign-out.
@@ -45,17 +62,17 @@ This article addresses common reasons submitted apps fail validation. While it's
   * Authorize an account/service => deauthorize/deny an account/service.
   * Register an account/service => deregister/unsubscribe an account/service.
 * If your app requires an account or service, you must provide a way for the user to sign up or to create a sign-up request. An exception may be granted if your app requires a license to use. But such scenarios, a clear way forward for a new user sign up must be provided.
-* Make sure you provide clear-way-forward guidance to a new user on how to sign up to use your app services. If a ready sign-up link is not available, a clear way forward may be provided in the following areas
+* Make sure you provide clear-way-forward guidance to a new user on how to sign up to use your app services. Provide clear-way-forward guidance to a new user on how to sign up to use your app services. If a ready sign-up link is not available, provide precise guidance in the following areas:
 
 > [!div class="checklist"]
 >
-> * within your app's description sections;
-> * in your app's welcome message;
-> * in your app's help message;
-> * in the window where you ask a user to sign in to your services;
+> * within your app's description section.
+> * in your app's welcome message.
+> * in your app's help message.
+> * in the window where you ask a user to sign in to your services.
 
-* Apps that do not have an easy sign-up flow may also include a help tab or link to a web page where a new user can see detailed guidance on how to configure your app with Microsoft Teams.  This is to ensure a new user is not blocked when trying your app for the first time.
-* Sign in/sign out functionality must work on mobile clients. Ensure you're using the [Microsoft Teams SDK](https://www.npmjs.com/package/@microsoft/teams-js) version 1.4.1 or later.
+* Apps that do not have an easy sign-up flow may also include a help tab or link to a web page where a new user can see detailed guidance on configuring your Teams app. It is to ensure a new user is not blocked when trying your app for the first time.
+* Sign-in and sign-out functionality must work on mobile clients. Ensure to use the [Microsoft Teams SDK](https://www.npmjs.com/package/@microsoft/teams-js) version 1.4.1 or later.
 
 For additional information on authentication see:
 
@@ -94,19 +111,24 @@ For additional information on authentication see:
 ### &#9989; Tab configuration must happen in the configuration screen
 
 * The configuration screen should clearly explain the value of the experience and how to configure the tab.
-* The configuration process should always provide a way for users to continue not dead-end the user experience. For example, do not show an empty board after the user has configured the tab
-* The user sign-in process must be part of the configuration process and should complete in the Tab UI. After the user has completed configuration and loaded your tab, no further action should be required.
+* The configuration process should always provide a way for the users to continue and not end the user experience. For example, do not show an empty board after the user has configured the tab.
+* The user sign-in process must be a part of the configuration process. Ensure to complete it in the Tab UI. After the user has completed the configuration and loaded the tab, no further action is required.
 * Don't show your entire webpage within the sign-in configuration pop-up window.
 * A user should always be able to finish the configuration experience, even if they can’t immediately find the content they’re looking for.
 * The configuration experience should provide options for the user to find their content, pin a URL, or create new content if it doesn’t exist.
 * The configuration experience must remain within the Teams context. The user shouldn’t have to leave the configuration experience to create content and then return to Teams to pin it.
-* Use the available viewport area efficiently. Do not waste it on using huge logos inside the configuration pop up
+* Use the available viewport area efficiently. Do not waste it on using huge logos inside the configuration pop up.
 
 ![OneNote allows users to paste a OneNote link in case notes can not be found](../../../../assets/images/faq/tab-onenote-config.png)
 
 ![Users can always create new plan on planner in case there no existing ones](../../../../assets/images/faq/tab-planner-config.png)
 
 ![SharePoint also allows user to directly paste a SharePoint link](../../../../assets/images/faq/tab-sp-config.png)
+
+### &#9989; Tabs in channel - Member access
+
+* A tab configured by a member in a channel scope should be accessible to the other members without having to seek permissions from the person who configured the tab.
+* The app must provide the permission management options upfront if the tab is for private or restricted use or requires any permissions from the person who configured the tab.
 
 ### &#9989; Bots must always be responsive and fail gracefully
 
@@ -120,16 +142,21 @@ Your bot should be responsive to any command and not dead-end the user. Here are
 
 ![Flow help command](../../../../assets/images/faq/flow-help.png)
 
-* **Include help content or guidance when your bot is lost**. When your bot can't understand the user input, it should suggest an alternative action. For example, *"I'm sorry, I don't understand. Type "help" for more information."* Don't respond with an error message or simply, *"I don't understand"*. Use this chance to teach your users.
+* **Include help content or guidance when your bot is lost**. When your bot cannot understand the user input, it should suggest an alternative action. For example, *"I'm sorry, I don't understand. Type "help" for more information."* Don't respond with an error message or simply, *"I don't understand"*.
+
+    * Help Command should be precise.
+    * The app responses should be in an adaptive card format with actionable content for at least six commands (if an app has less than six commands, check if all the commands are present in the adaptive card).
+
+    ![Help command sample](../../../../assets/images/faq/helpcommand.png)
 
 * **Use adaptive cards and task modules to make your bot response clear and actionable**
-[Adaptive cards with buttons invoking task modules](/task-modules-and-cards/task-modules/task-modules-bots) enhance the bot user experience. These cards and buttons are easier to use in a mobile device as opposed to your user typing the commands. Also bot responses should not be textual with long text. Bots must make use of Adaptive cards & task modules instead of conversational chat based user interface and lengthy text responses
+[Adaptive cards with buttons invoking task modules](/task-modules-and-cards/task-modules/task-modules-bots) enhance the bot user experience. These cards and buttons are easier to use in a mobile device as opposed to your user typing the commands. Also bot responses should not be textual with long text. Bots must make use of Adaptive cards and task modules instead of conversational chat based user interface and lengthy text responses.
 
 * **Think through all scopes**. Be sure that your bot provides appropriate responses when mentioned (`@*botname*`) in a channel and in personal conversations. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](../../../../resources/schema/manifest-schema.md#bots).)
 
 * **Include team, group chat, or 1:1 conversation**. Bot notifications should include a Team, a group chat, or a one-to-one conversation with relevant content for your audience.
 
-* **Do not push sensitive data**. Bots must not push sensitive data to a Team, a group chat or a 1:1 conversation where there is an audience who should not be able to view that data
+* **Do not push sensitive data**. Bots must not push sensitive data to a Team, a group chat or a 1:1 conversation where there is an audience who should not be able to view that data.
 
 * **Provide a welcome message**. Bot must provide an FRE welcome message that includes an interactive tutorial with carousel cards or "try it" buttons, to encourage engagement.
 
