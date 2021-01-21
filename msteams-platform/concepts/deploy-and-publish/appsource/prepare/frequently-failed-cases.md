@@ -32,13 +32,13 @@ This article addresses common reasons submitted apps fail validation. While it's
     * App source metadata.
     * Connector configuration screen.
 
-* The visual tour can be a video, screenshot, a link to a static tab with app details. But all these references should be within Teams environment.
+* The visual tour can be a video, screenshot, a link to a static tab with app details. But all these references must be within Teams environment.
 
     ![Sample App 1](../../../../assets/images/faq/Sampleapp1.png)
     ![Sample App 2](../../../../assets/images/faq/Sampleapp2.png)
 
 * Increment your app version number in the manifest if you make any manifest changes to your submission.
-* App must not take users out of Teams for core user scenarios. Link targets in apps must not link to an external browser, but should link to div elements contained within Teams example, inside Task Modules and tabs.
+* App must not take users out of Teams for core user scenarios. Link targets in apps must not link to an external browser, it must link to div elements contained within Teams example, inside Task Modules and tabs.
 * All core and non-core scenarios must be completed within the Teams environment except for:
   * Privacy Policy
   * ToU
@@ -142,10 +142,10 @@ Your bot should be responsive to any command and not dead-end the user. Here are
 
 ![Flow help command](../../../../assets/images/faq/flow-help.png)
 
-* **Include help content or guidance when your bot is lost**. When your bot cannot understand the user input, it should suggest an alternative action. For example, *"I'm sorry, I don't understand. Type "help" for more information."* Don't respond with an error message or simply, *"I don't understand"*.
+* **Include help content or guidance when your bot is lost**. When your bot cannot understand the user input, it must suggest an alternative action. For example, *"I'm sorry, I don't understand. Type "help" for more information."* Don't respond with an error message or simply, *"I don't understand"*.
 
-    * Help Command should be precise.
-    * The app responses should be in an adaptive card format with actionable content for at least six commands (if an app has less than six commands, check if all the commands are present in the adaptive card).
+    * Help Command must be precise.
+    * The app responses must be in an adaptive card format with an actionable content for at least six commands. If an app has less than six commands, check if all the commands are present in the adaptive card.
 
     ![Help command sample](../../../../assets/images/faq/helpcommand.png)
 
