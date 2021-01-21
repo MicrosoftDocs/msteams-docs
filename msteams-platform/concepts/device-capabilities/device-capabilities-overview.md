@@ -6,20 +6,18 @@ ms.topic: overview
 ---
 # What are device capabilities? 
 
-Use your device's (mobile) media capability, along with the Microsoft Teams platform for a rich collaborative experience. You must follow a two-step process if you want to use device capabilities.
+Device capabilities in Microsoft Teams allows you to access peripheral and internal devices, such as camera and microphone. The integration of device capability within Teams is used to enhance the user experience. It allows users to connect and collaborate with other users or groups on the go.
 
-In the first step, get permission to access the device's features, such as camera, microphone, location, QR code, and notification. For more information, see [how to request device permissions](native-device-permissions.md).
+Currently, Teams mobile client only supports access to camera, gallery, and microphone through native device capabilities and is available on all app constructs, such as messaging extensions, tabs, and personal apps.
 
-In the second step, integrate the media capabilities within Teams desktop and mobile app. For more information on integrating media capabilities, see [Camera and image capabilities in Teams](mobile-camera-image-permissions.md). 
-
-Also, see [Error handling](#error-handling) to understand and handle the API response error codes generated, while working with the APIs for media capabilities.
+For integrating the native device capability within Teams, you must have the required [permissions](native-device-permissions.md) to access the devices, and then [integrate these capabilites](mobile-camera-image-permissions.md). It is also important to understand the [API response errors](#error-handling) that are generated and how to handle them. 
 
 ## Error handling
 
-You must understand the API response error codes and handle them appropriately. The Teams platform returns the following error codes: 
+The following table lists the error codes and under what conditions they are generated:
 
 |Error code |  Error Name     | Condition|
-| --- | --- | --- |
+| --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API is not supported on the current platform.|
 | **404** | FILE_NOT_FOUND | File specified is not found in the given location.|
 | **500** | INTERNAL_ERROR | Internal error is encountered while performing the required operation.|
