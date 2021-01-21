@@ -38,7 +38,7 @@ This article addresses common reasons submitted apps fail validation. While it's
     ![Sample App 2](../../../../assets/images/faq/Sampleapp2.png)
 
 * Increment your app version number in the manifest if you make any manifest changes to your submission.
-* App must not take users out of Teams for core user scenarios. Link targets in apps must not link to an external browser but should link to div elements contained within Teams e.g. inside Task Modules and tabs.
+* App must not take users out of Teams for core user scenarios. Link targets in apps must not link to an external browser, but should link to div elements contained within Teams example, inside Task Modules and tabs.
 * All core and non-core scenarios must be completed within the Teams environment except for:
   * Privacy Policy
   * ToU
