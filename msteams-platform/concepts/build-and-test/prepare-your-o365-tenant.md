@@ -1,7 +1,7 @@
 ---
 title: Prepare your Microsoft 365 tenant
 description: How to get started with Teams in Microsoft 365
-ms.topic: conceptual
+ms.topic: how-to
 keywords: Configure Microsoft 365 tenant Teams uploading
 ---
 # Prepare your Microsoft 365 tenant
