@@ -1,6 +1,6 @@
 ---
-title: Send and receive files through a bot
-description: Describes how to send and receive files through a bot
+title: Send and receive files through the bot
+description: Describes how to send and receive files through the bot
 keywords: teams bots files send receive
 ms.date: 05/20/2019
 ms.topic: how-to
