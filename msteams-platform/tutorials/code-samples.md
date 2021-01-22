@@ -1,5 +1,5 @@
 ---
-title: Microsoft Teams code samples
+title: App code samples
 description: Links and descriptions of sample applications for the Microsoft Teams developer platform
 s.topic: tutorial
 keywords: Microsoft Teams developer samples
