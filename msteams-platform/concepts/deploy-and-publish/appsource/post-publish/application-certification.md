@@ -1,5 +1,5 @@
 ---
-title: App Certification
+title: Microsoft 365 App Certification
 description: Describes the Microsoft 365 App Compliance program from store apps
 ms.topic: tutorial
 keywords: teams compliance appsource store app certification partner center
