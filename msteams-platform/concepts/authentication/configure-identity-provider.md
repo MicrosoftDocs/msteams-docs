@@ -4,7 +4,7 @@ description: Describes how to configure identity providers with a focus on Azure
 ms.topic: conceptual
 keywords: teams authentication AAD oauth identity provider
 ---
-# Configuring identity providers
+# Configure identity providers
 
 ## Configuring an application to use Azure Active Directory as an identity provider
 
