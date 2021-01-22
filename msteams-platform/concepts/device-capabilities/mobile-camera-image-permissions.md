@@ -47,7 +47,7 @@ You must use the following set of APIs to enable your device's media capabilitie
 
 | API      | Description   |
 | --- | --- |
-| [**selectMedia**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest&branch=master#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true)| * This API allows users to **capture or select media from a native device** and return to the web-app. Users may choose to edit, crop, rotate, annotate, or draw over images before submission. In response to **selectMedia**, the web-app receives media ids of selected images and a thumbnail of the selected media. <br/> * It also allows users to record audio from a native device and return to the web-app. Users may choose to pause, re-record, and play recording preview before submission. In response to **selectMedia**, the web-app receives media IDs of selected audio recording. Media type must be set to 4 for audio.<br/> >[!NOTE] Use `maxDuration`, if you require to configure a duration in minutes for recording the conversation. Current duration for recording is 10 minutes after which the recording terminates.  |
+| [**selectMedia**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest&branch=master#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true)| This API allows users to **capture or select media from a native device** and return to the web-app. Users may choose to edit, crop, rotate, annotate, or draw over images before submission. In response to **selectMedia**, the web-app receives media ids of selected images and a thumbnail of the selected media. <br/><br/>  It also allows users to record audio from a native device and return to the web-app. Users may choose to pause, re-record, and play recording preview before submission. In response to **selectMedia**, the web-app receives media IDs of selected audio recording. Media type must be set to 4 for audio. <br/> Use `maxDuration`, if you require to configure a duration in minutes for recording the conversation. Current duration for recording is 10 minutes after which the recording terminates.  |
 | [**getMedia**](/javascript/api/@microsoft/teams-js/_media?view=msteams-client-js-latest&branch=master#getMedia__error__SdkError__blob__Blob_____void_&preserve-view=true)| This API retrieves the media in chunks irrespective of size. These chunks are assembled and sent back to the web app as a file or blob. With this API an image is broken into smaller chunks to facilitate large image transfer. |
 | [**viewImages**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#viewImages_ImageUri_____error___SdkError_____void_&preserve-view=true)| This API enables the user to view images full-screen mode as a scrollable list.|
 
@@ -56,12 +56,6 @@ You must use the following set of APIs to enable your device's media capabilitie
 
 **Web app experience for selectMedia API for microphone capability**
 ![web app experience for microphone capability](../../assets/images/tabs/microphone-capability.png)
-
-## Configurations
-
-| Configuration-`selectMedia` | Description |
-| --- | --- |
-| maxDuration | Maximum duration in minutes after which the recording terminates (max limit 10) 
 
 ## Sample code snippets
 
