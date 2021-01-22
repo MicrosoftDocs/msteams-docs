@@ -13,7 +13,7 @@ If you are not populating your task module with parameters defined in your app m
 
 ## The initial invoke request
 
-Using this method you service will receive an `Activity` object of type `composeExtension/fetchTask`, and you'll need to respond with a `task` object containing either the adaptive card or a URL to the embedded web view. In addition to the standard bot activity properties, the initial invoke payload contains the following request metadata:
+Using this method your service will receive an `Activity` object of type `composeExtension/fetchTask`, and you'll need to respond with a `task` object containing either the adaptive card or a URL to the embedded web view. In addition to the standard bot activity properties, the initial invoke payload contains the following request metadata:
 
 |Property name|Purpose|
 |---|---|
@@ -25,6 +25,89 @@ Using this method you service will receive an `Activity` object of type `compose
 |`channelData.tenant.id`| Azure Active Directory tenant ID. |
 |`channelData.channel.id`| Channel ID (if the request was made in a channel). |
 |`channelData.team.id`| Team ID (if the request was made in a channel). |
+|`value.commandId` | Contains the Id of the command that was invoked. |
+|`value.commandContext` | The context that triggered the event. Will be `compose`. |
+|`value.context.theme` | The user's client theme, useful for embedded web view formatting. Will be `default`, `contrast` or `dark`. |
+
+### Payload activity properties when invoked a task module from 1:1 chat are listed in the following section:
+
+|Property name|Purpose|
+|---|---|
+|`type`| Type of request; must be `invoke`. |
+|`name`| Type of command that is issued to your service. Will be `composeExtension/fetchTask`. |
+|`from.id`| ID of the user that sent the request. |
+|`from.name`| Name of the user that sent the request. |
+|`from.aadObjectId`| Azure Active Directory object id of the user that sent the request. |
+|`channelData.tenant.id`| Azure Active Directory tenant ID. |
+|`channelData.source.name`| The source name from where task module is invoked. |
+|`ChannelData.legacy. replyToId`| Gets or sets the ID of the message to which this message is a reply. |
+|`value.commandId` | Contains the Id of the command that was invoked. |
+|`value.commandContext` | The context that triggered the event. Will be `compose`. |
+|`value.context.theme` | The user's client theme, useful for embedded web view formatting. Will be `default`, `contrast` or `dark`. |
+
+### Payload activity properties when invoked a task module from a group chat are listed in the following section:
+
+|Property name|Purpose|
+|---|---|
+|`type`| Type of request; must be `invoke`. |
+|`name`| Type of command that is issued to your service. Will be `composeExtension/fetchTask`. |
+|`from.id`| ID of the user that sent the request. |
+|`from.name`| Name of the user that sent the request. |
+|`from.aadObjectId`| Azure Active Directory object id of the user that sent the request. |
+|`channelData.tenant.id`| Azure Active Directory tenant ID. |
+|`channelData.source.name`| The source name from where task module is invoked. |
+|`ChannelData.legacy. replyToId`| Gets or sets the ID of the message to which this message is a reply. |
+|`value.commandId` | Contains the Id of the command that was invoked. |
+|`value.commandContext` | The context that triggered the event. Will be `compose`. |
+|`value.context.theme` | The user's client theme, useful for embedded web view formatting. Will be `default`, `contrast` or `dark`. |
+
+### Payload activity properties when invoked a task module from a channel (new post) are listed in the following section:
+
+|Property name|Purpose|
+|---|---|
+|`type`| Type of request; must be `invoke`. |
+|`name`| Type of command that is issued to your service. Will be `composeExtension/fetchTask`. |
+|`from.id`| ID of the user that sent the request. |
+|`from.name`| Name of the user that sent the request. |
+|`from.aadObjectId`| Azure Active Directory object id of the user that sent the request. |
+|`channelData.tenant.id`| Azure Active Directory tenant ID. |
+|`channelData.channel.id`| Channel ID (if the request was made in a channel). |
+|`channelData.team.id`| Team ID (if the request was made in a channel). |
+|`channelData.source.name`| The source name from where task module is invoked. |
+|`ChannelData.legacy. replyToId`| Gets or sets the ID of the message to which this message is a reply. |
+|`value.commandId` | Contains the Id of the command that was invoked. |
+|`value.commandContext` | The context that triggered the event. Will be `compose`. |
+|`value.context.theme` | The user's client theme, useful for embedded web view formatting. Will be `default`, `contrast` or `dark`. |
+
+### Payload activity properties when invoked a task module from a channel (reply to thread) are listed in the following section:
+
+|Property name|Purpose|
+|---|---|
+|`type`| Type of request; must be `invoke`. |
+|`name`| Type of command that is issued to your service. Will be `composeExtension/fetchTask`. |
+|`from.id`| ID of the user that sent the request. |
+|`from.name`| Name of the user that sent the request. |
+|`from.aadObjectId`| Azure Active Directory object id of the user that sent the request. |
+|`channelData.tenant.id`| Azure Active Directory tenant ID. |
+|`channelData.channel.id`| Channel ID (if the request was made in a channel). |
+|`channelData.team.id`| Team ID (if the request was made in a channel). |
+|`channelData.source.name`| The source name from where task module is invoked. |
+|`ChannelData.legacy. replyToId`| Gets or sets the ID of the message to which this message is a reply. |
+|`value.commandId` | Contains the Id of the command that was invoked. |
+|`value.commandContext` | The context that triggered the event. Will be `compose`. |
+|`value.context.theme` | The user's client theme, useful for embedded web view formatting. Will be `default`, `contrast` or `dark`. |
+
+### Payload activity properties when invoked a task module from a command box are listed in the following section:
+
+|Property name|Purpose|
+|---|---|
+|`type`| Type of request; must be `invoke`. |
+|`name`| Type of command that is issued to your service. Will be `composeExtension/fetchTask`. |
+|`from.id`| ID of the user that sent the request. |
+|`from.name`| Name of the user that sent the request. |
+|`from.aadObjectId`| Azure Active Directory object id of the user that sent the request. |
+|`channelData.tenant.id`| Azure Active Directory tenant ID. |
+|`channelData.source.name`| The source name from where task module is invoked. |
 |`value.commandId` | Contains the Id of the command that was invoked. |
 |`value.commandContext` | The context that triggered the event. Will be `compose`. |
 |`value.context.theme` | The user's client theme, useful for embedded web view formatting. Will be `default`, `contrast` or `dark`. |
