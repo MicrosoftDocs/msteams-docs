@@ -384,20 +384,26 @@
     href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json
   - name: Publish to the Teams store (AppSource)
     items:
-    - name: Understanding AppSource submission 
+    - name: Understand the store submission process
       href: concepts/deploy-and-publish/appsource/publish.md
-    - name: Pre-submission checklist
-      href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
-    - name: App detail page checklist
-      href: concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md
-    - name: App manifest checklist
-      href: concepts/deploy-and-publish/appsource/prepare/app-manifest-checklist.md
-    - name: Frequently failed cases
+    - name: Requirements for store listings
       href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
-    - name: What to do after publishing your app
+    - name: Recommendations for store listings
+      href: concepts/deploy-and-publish/appsource/prepare/store-listing-recommendations.md
+    - name: Create app documentation
+      href: concepts/deploy-and-publish/appsource/prepare/create-app-docs.md
+    - name: Create store listing details
+      href: concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md
+    - name: Prepare your store submission
+      href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
+    - name: Submit your app to the store
+      href: concepts/deploy-and-publish/appsource/submit-your-app.md
+    - name: Check store submission status
+      href: concepts/deploy-and-publish/appsource/check-submission-status.md
+    - name: Fix issues with your submission
+      href: concepts/deploy-and-publish/appsource/fix-submission-issues.md
+    - name: Maintain and support your published app
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
-    - name: Application Certification program
-      href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
 - name: Resources
   items:
     - name: App manifest schema
