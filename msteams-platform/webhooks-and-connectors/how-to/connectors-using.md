@@ -62,11 +62,13 @@ You can also use this JSON to create cards containing rich inputs, such as text 
             "@type": "HttpPOST",
             "name": "Save",
             "target": "https://docs.microsoft.com/outlook/actionable-messages"
-        },
-        {
-            "@type": "OpenUri",
-            "name": "Learn More",
-            "targets": [{ "os": "default", "uri": "https://docs.microsoft.com/outlook/actionable-messages" }]
+        }]
+    }, {
+        "@type": "OpenUri",
+        "name": "Learn More",
+        "targets": [{
+            "os": "default",
+            "uri": "https://docs.microsoft.com/outlook/actionable-messages"
         }]
     }, {
         "@type": "ActionCard",

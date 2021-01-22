@@ -128,3 +128,9 @@ At this point, the window closes and control is passed to the Teams client. The 
 }
 ```
 
+## Samples
+For sample code showing the messaging-extensions authentication process, see:
+
+[Microsoft Teams messaging-extensions authentication sample](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)
+
+ 
