@@ -1,5 +1,5 @@
 ---
-title: Authenticate a user in Teams
+title: Authenticating app users
 description: Describes authentication in Teams and how to use it in your apps
 ms.topic: conceptual
 keywords: teams authentication OAuth SSO AAD
