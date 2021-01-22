@@ -1,5 +1,5 @@
 ---
-title: Share to Teams embedded button
+title: Create a Share-to-Teams button
 description: How to add the Share to Teams embedded button on your website
 ms.topic: reference
 keywords: Share Teams Share-to-Teams
