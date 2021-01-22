@@ -1,7 +1,7 @@
 ---
 title: App code samples
 description: Links and descriptions of sample applications for the Microsoft Teams developer platform
-s.topic: tutorial
+ms.topic: reference
 keywords: Microsoft Teams developer samples
 ---
 # Tutorials and code samples for the Microsoft Teams developer platform
