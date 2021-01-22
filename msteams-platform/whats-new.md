@@ -1,7 +1,7 @@
 ---
 title: What's new
 description: Describes all the new developer features in Microsoft Teams
-ms.topic: overview
+ms.topic: reference
 keywords: teams what's new latest
 ---
 # What's new for developers in Microsoft Teams
