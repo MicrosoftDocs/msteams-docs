@@ -83,7 +83,7 @@ Each property allows you to prompt the user to ask for their consent:
 | midi          | Permission to send and receive midi information from a digital musical instrument.   |
 | openExternal  | Permission to open links in external applications.  |
 
-## Checking permissions from your app
+## Check permissions from your app
 
 After you’ve added `devicePermissions` to your app manifest, check permissions using the HTML5 “permissions” API without causing a prompt.
 
@@ -105,7 +105,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 });
 ```
 
-## Prompting the user
+## Prompt the user
 
 To show a prompt to get consent to access device permissions you must leverage the appropriate HTML5 or Teams API. 
 
