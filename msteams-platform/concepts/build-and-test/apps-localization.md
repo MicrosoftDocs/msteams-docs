@@ -1,5 +1,5 @@
 ---
-title: Localization for Team apps
+title: Localization for your app
 description: Describes issues around localizing your app
 ms.topic: conceptual
 keywords: teams publish store office publishing AppSource localization language
