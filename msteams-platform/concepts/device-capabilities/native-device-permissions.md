@@ -1,5 +1,5 @@
 ---
-title: Request device permissions for your Microsoft Teams tab
+title: Request device permissions for your tab
 description: How to update your app manifest in order to request access to native features that usually require user consent
 ms.topic: conceptual
 keywords: teams tabs development
