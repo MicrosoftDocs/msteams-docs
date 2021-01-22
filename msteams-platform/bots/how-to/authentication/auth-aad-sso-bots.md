@@ -86,7 +86,7 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 
 Complete the following steps to update the Azure portal with the OAuth connection:
 
-1. In the Azure Portal, navigate to **Bot Channels Registration**.
+1. In the Azure Portal, navigate to **App registrations**.
 
 2. Go to **API Permissions**. Select **Add a permission** > **Microsoft Graph** > **Delegated permissions**, then add the following permissions from Microsoft Graph API:
     * User.Read (enabled by default)
@@ -95,11 +95,13 @@ Complete the following steps to update the Azure portal with the OAuth connectio
     * OpenId
     * profile
 
-3. Select **Settings** on the left pane and choose **Add Setting** under the **OAuth Connection Settings** section.
+3. In the Azure Portal, navigate to **Bot Channels Registration**.
+
+4. Select **Settings** on the left pane and choose **Add Setting** under the **OAuth Connection Settings** section.
 
     ![SSOBotHandle2 view](../../../assets/images/bots/bots-vuSSOBotHandle2-settings.png)
 
-4. Perform the following steps to complete the **New Connection Setting** form:
+5. Perform the following steps to complete the **New Connection Setting** form:
 
     >[!NOTE]
     > **Implicit grant** may be required in the AAD application.
