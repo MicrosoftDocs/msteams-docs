@@ -63,6 +63,10 @@ The following table describes which Teams app capabilities are supported on vari
 |Adaptive Cards|[Y/N]  |[Y/N]|[Y/N]|Important callouts.|
 |Task modules|[Y/N]  |[Y/N]|[Y/N]|Important callouts.|
 
+## FAQ
+
+Common questions related to Teams mobile development.
+
 ## Related
 
 * Related link 1
