@@ -16,6 +16,8 @@ A configuration page is a special type of [content page](content-page.md). The u
 
 ## Configuring a channel or group chat tab
 
+# [Desktop](#tab/desktop)
+
 The application must reference the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) and call `microsoft.initialize()`. Also, the URLs used must be secured HTTPS endpoints and available from the cloud. The following code is an example of a configuration page:
 
 ```html
@@ -85,6 +87,12 @@ The configuration page code informs the Teams that the configuration requirement
 >
 >* If you register a save handler using `microsoftTeams.settings.registerOnSaveHandler()`, the callback must invoke `saveEvent.notifySuccess()` or `saveEvent.notifyFailure()` to indicate the outcome of the configuration.
 >* If you don't register a save handler, the `saveEvent.notifySuccess()` call is made automatically when the user selects **Save**.
+
+# [Mobile](#tab/mobile)
+
+Mobile-specific implementation steps.
+
+---
 
 ### Get context data for your tab settings
 
