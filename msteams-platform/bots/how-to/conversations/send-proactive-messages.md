@@ -48,7 +48,7 @@ Once you have the user/channel information, you'll need to create the conversati
 
 ## Get the conversation ID
 
-Once the conversation has been created, you must use either the `conversationReference` object or the `conversationId` and the `tenantId` to send the message. You can get this ID by either creating the conversation, or storing it from any Activity sent to you from that context. Make certain that you store this Id.
+After the conversation is created, use either the `conversationReference` object or `conversationId` and `tenantId` to send the message. You can get this ID by either creating the conversation or storing it from any Activity sent to you from that context. Make certain that you store this ID.
 
 ## Send the message
 
