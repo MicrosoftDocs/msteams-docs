@@ -70,7 +70,7 @@ Remember, poor welcome messages can lead to users blocking your bot. Spend plent
 
 ### Notification messages
 
-When using proactive messaging to send notifications you need to make sure your users have a clear path to take common actions based on your notification and a clear understanding of why the notification occurred. Good notification messages generally include:
+When using proactive messaging to send notifications you must ensure your users have a clear path to take common actions based on your notification and a clear understanding of why the notification occurred. Good notification messages generally include:
 
 * **What happened.** A clear indication of what happened to cause the notification.
 * **What was the result.** It must be clear what item or thing was updated to cause the notification.
