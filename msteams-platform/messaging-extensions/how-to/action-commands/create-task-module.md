@@ -9,16 +9,16 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-If you are not populating your task module with parameters defined in your app manifest, you'll need to create the task module to be presented to your users. You can use either an Adaptive Card or an embedded web view.
+If you are not populating the task module with parameters defined in the app manifest, you must create the task module for users. Use either an Adaptive Card or an embedded web view.
 
 ## The initial invoke request
 
-Using this method your service will receive an `Activity` object of type `composeExtension/fetchTask`, and you'll need to respond with a `task` object containing either the adaptive card or a URL to the embedded web view. In addition to the standard bot activity properties, the initial invoke payload contains the following request metadata:
+Using this method your service will receive an `Activity` object of type `composeExtension/fetchTask`, and you must respond with a `task` object containing either the adaptive card or a URL to the embedded web view. Along with the standard bot activity properties, the initial invoke payload contains the following request metadata:
 
 |Property name|Purpose|
 |---|---|
-|`type`| Type of request; must be `invoke`. |
-|`name`| Type of command that is issued to your service. Will be `composeExtension/fetchTask`. |
+|`type`| Type of request. It must be `invoke`. |
+|`name`| Type of command that is issued to your service. It must be `composeExtension/fetchTask`. |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
 |`from.aadObjectId`| Azure Active Directory object id of the user that sent the request. |
@@ -26,15 +26,15 @@ Using this method your service will receive an `Activity` object of type `compos
 |`channelData.channel.id`| Channel ID (if the request was made in a channel). |
 |`channelData.team.id`| Team ID (if the request was made in a channel). |
 |`value.commandId` | Contains the Id of the command that was invoked. |
-|`value.commandContext` | The context that triggered the event. Will be `compose`. |
-|`value.context.theme` | The user's client theme, useful for embedded web view formatting. Will be `default`, `contrast` or `dark`. |
+|`value.commandContext` | The context that triggered the event. It must be `compose`. |
+|`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
 
 ### Payload activity properties when invoked a task module from 1:1 chat are listed in the following section:
 
 |Property name|Purpose|
 |---|---|
-|`type`| Type of request; must be `invoke`. |
-|`name`| Type of command that is issued to your service. Will be `composeExtension/fetchTask`. |
+|`type`| Type of request. It must be `invoke`. |
+|`name`| Type of command that is issued to your service. It must be `composeExtension/fetchTask`. |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
 |`from.aadObjectId`| Azure Active Directory object id of the user that sent the request. |
@@ -42,15 +42,15 @@ Using this method your service will receive an `Activity` object of type `compos
 |`channelData.source.name`| The source name from where task module is invoked. |
 |`ChannelData.legacy. replyToId`| Gets or sets the ID of the message to which this message is a reply. |
 |`value.commandId` | Contains the Id of the command that was invoked. |
-|`value.commandContext` | The context that triggered the event. Will be `compose`. |
-|`value.context.theme` | The user's client theme, useful for embedded web view formatting. Will be `default`, `contrast` or `dark`. |
+|`value.commandContext` | The context that triggered the event. It must be `compose`. |
+|`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
 
 ### Payload activity properties when invoked a task module from a group chat are listed in the following section:
 
 |Property name|Purpose|
 |---|---|
-|`type`| Type of request; must be `invoke`. |
-|`name`| Type of command that is issued to your service. Will be `composeExtension/fetchTask`. |
+|`type`| Type of request. It must be `invoke`. |
+|`name`| Type of command that is issued to your service. It must be `composeExtension/fetchTask`. |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
 |`from.aadObjectId`| Azure Active Directory object id of the user that sent the request. |
@@ -58,15 +58,15 @@ Using this method your service will receive an `Activity` object of type `compos
 |`channelData.source.name`| The source name from where task module is invoked. |
 |`ChannelData.legacy. replyToId`| Gets or sets the ID of the message to which this message is a reply. |
 |`value.commandId` | Contains the Id of the command that was invoked. |
-|`value.commandContext` | The context that triggered the event. Will be `compose`. |
-|`value.context.theme` | The user's client theme, useful for embedded web view formatting. Will be `default`, `contrast` or `dark`. |
+|`value.commandContext` | The context that triggered the event. It must be `compose`. |
+|`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
 
 ### Payload activity properties when invoked a task module from a channel (new post) are listed in the following section:
 
 |Property name|Purpose|
 |---|---|
-|`type`| Type of request; must be `invoke`. |
-|`name`| Type of command that is issued to your service. Will be `composeExtension/fetchTask`. |
+|`type`| Type of request. It must be `invoke`. |
+|`name`| Type of command that is issued to your service. It must be `composeExtension/fetchTask`. |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
 |`from.aadObjectId`| Azure Active Directory object id of the user that sent the request. |
@@ -76,15 +76,15 @@ Using this method your service will receive an `Activity` object of type `compos
 |`channelData.source.name`| The source name from where task module is invoked. |
 |`ChannelData.legacy. replyToId`| Gets or sets the ID of the message to which this message is a reply. |
 |`value.commandId` | Contains the Id of the command that was invoked. |
-|`value.commandContext` | The context that triggered the event. Will be `compose`. |
-|`value.context.theme` | The user's client theme, useful for embedded web view formatting. Will be `default`, `contrast` or `dark`. |
+|`value.commandContext` | The context that triggered the event. It must be `compose`. |
+|`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
 
 ### Payload activity properties when invoked a task module from a channel (reply to thread) are listed in the following section:
 
 |Property name|Purpose|
 |---|---|
-|`type`| Type of request; must be `invoke`. |
-|`name`| Type of command that is issued to your service. Will be `composeExtension/fetchTask`. |
+|`type`| Type of request. It must be `invoke`. |
+|`name`| Type of command that is issued to your service. It must be `composeExtension/fetchTask`. |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
 |`from.aadObjectId`| Azure Active Directory object id of the user that sent the request. |
@@ -94,23 +94,23 @@ Using this method your service will receive an `Activity` object of type `compos
 |`channelData.source.name`| The source name from where task module is invoked. |
 |`ChannelData.legacy. replyToId`| Gets or sets the ID of the message to which this message is a reply. |
 |`value.commandId` | Contains the Id of the command that was invoked. |
-|`value.commandContext` | The context that triggered the event. Will be `compose`. |
-|`value.context.theme` | The user's client theme, useful for embedded web view formatting. Will be `default`, `contrast` or `dark`. |
+|`value.commandContext` | The context that triggered the event. It must be `compose`. |
+|`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
 
 ### Payload activity properties when invoked a task module from a command box are listed in the following section:
 
 |Property name|Purpose|
 |---|---|
-|`type`| Type of request; must be `invoke`. |
-|`name`| Type of command that is issued to your service. Will be `composeExtension/fetchTask`. |
+|`type`| Type of request. It must be `invoke`. |
+|`name`| Type of command that is issued to your service. It must be `composeExtension/fetchTask`. |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
 |`from.aadObjectId`| Azure Active Directory object id of the user that sent the request. |
 |`channelData.tenant.id`| Azure Active Directory tenant ID. |
 |`channelData.source.name`| The source name from where task module is invoked. |
 |`value.commandId` | Contains the Id of the command that was invoked. |
-|`value.commandContext` | The context that triggered the event. Will be `compose`. |
-|`value.context.theme` | The user's client theme, useful for embedded web view formatting. Will be `default`, `contrast` or `dark`. |
+|`value.commandContext` | The context that triggered the event. It must be `compose`. |
+|`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
 
 ### Example fetchTask request
 
@@ -196,7 +196,7 @@ class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
 
 ## Initial invoke request from a message
 
-When your bot is invoked from a message rather than the compose area or the command bar, the `value` object in the initial request will contain the details of the message your messaging extension was invoked from. An example of this object is below. The `reactions` and `mentions` arrays are optional, and will not be present if there are no reactions or mentions in the original message.
+When your bot is invoked from a message rather than the compose area or the command bar, the `value` object in the initial request must contain the details of the message your messaging extension is invoked from. See the following section  for the example of this object . The `reactions` and `mentions` arrays are optional, and they are not present if there are no reactions or mentions in the original message.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -308,15 +308,15 @@ The schema for the taskInfo object is:
 |Property name|Purpose|
 |---|---|
 |`title`| The title of the task module.|
-|`height`| Can be either an integer (in pixels), or `small`, `medium`, `large`.|
-|`width`| Can be either an integer (in pixels), or `small`, `medium`, `large`.|
+|`height`| It must be either an integer (in pixels), or `small`, `medium`, `large`.|
+|`width`| It must be either an integer (in pixels), or `small`, `medium`, `large`.|
 |`card`| The adaptive card defining the form (if using one).
 |`url`| The URL to be opened inside of the task module as an embedded web view.|
 |`fallbackUrl`| If a client does not support the task module feature, this URL is opened in a browser tab. |
 
 ### With an adaptive card
 
-When using an adaptive card, you'll need to respond with a `task` object with the `value` object containing an adaptive card.
+When using an adaptive card, you must respond with a `task` object with the `value` object containing an adaptive card.
 
 #### Example fetchTask response with an adaptive card
 
@@ -472,7 +472,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### With an embedded web view
 
-When using an embedded web view, you'll need to respond with a `task` object with the `value` object containing the URL to the web form you'd like to load. The domains of any URL you want to load must be included in the `validDomains` array in your app's manifest. See the [task module documentation](~/task-modules-and-cards/what-are-task-modules.md) for complete information on building your embedded web view.
+When using an embedded web view, you must respond with a `task` object with the `value` object containing the URL to the web form you'd like to load. The domains of any URL you want to load must be included in the `validDomains` array in your app's manifest. See the [task module documentation](~/task-modules-and-cards/what-are-task-modules.md) for complete information on building your embedded web view.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -548,7 +548,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ## Next steps
 
-If you allow your users to send a response back from the task module, you'll need to handle the submit action.
+If you allow your users to send a response back from the task module, you must handle the submit action.
 
 * [Create and respond with a task module](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
