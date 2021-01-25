@@ -76,7 +76,7 @@ When using proactive messaging to send notifications you need to make sure your 
 * **What was the result.** It must be clear what item or thing was updated to cause the notification.
 * **Who/what triggered it.** Who or what took action that caused the notification to be sent.
 * **What can users do in response.** Make it easy for your users to take actions based on your notifications.
-* **How can users opt-out.** You need to provide a path for users to opt-out of additional notifications.
+* **How can users opt out.** You must provide a path for users to opt out of additional notifications.
 
 ## Proactively install your app using Graph
 
