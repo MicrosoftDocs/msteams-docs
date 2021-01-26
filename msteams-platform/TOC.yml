@@ -58,8 +58,8 @@
     href: concepts/design/understand-use-cases.md
   - name: Mapping use cases to Teams app capabilities
     href: concepts/design/map-use-cases.md
-  - name: Mobile considerations
-    href: concepts/mobile-considerations.md
+  - name: Platform interoperability
+    href: concepts/platform-interoperability.md
 - name: Integrate with Teams
   items:
   - name: Web apps

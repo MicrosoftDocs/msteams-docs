@@ -88,9 +88,13 @@ The configuration page code informs the Teams that the configuration requirement
 >* If you register a save handler using `microsoftTeams.settings.registerOnSaveHandler()`, the callback must invoke `saveEvent.notifySuccess()` or `saveEvent.notifyFailure()` to indicate the outcome of the configuration.
 >* If you don't register a save handler, the `saveEvent.notifySuccess()` call is made automatically when the user selects **Save**.
 
-# [Mobile](#tab/mobile)
+# [iOS](#tab/ios)
 
-Mobile-specific implementation steps.
+iOS-specific implementation steps.
+
+# [Android](#tab/android)
+
+Android-specific implementation steps.
 
 ---
 
