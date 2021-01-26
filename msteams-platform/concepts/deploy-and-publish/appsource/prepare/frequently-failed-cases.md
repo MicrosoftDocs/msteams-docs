@@ -7,7 +7,7 @@ keywords: app submission tips frequently failed cases validation guidelines
 ---
 # Tips for a successful Microsoft Teams app submission
 
-This article addresses common reasons submitted apps fail validation. While it's not intended to be an exhaustive list of all potential issues with your app, following this guide will increase the likelihood that your app submission will pass the first time. *See* [Commercial marketplace certification policies](/legal/marketplace/certification-policies) for an extensive list of validation policies.
+This article addresses common reasons submitted apps fail validation. While it's not intended to be an exhaustive list of all potential issues with your app, following this guide will increase the likelihood that your app submission will pass the first time. See [Commercial marketplace certification policies](/legal/marketplace/certification-policies) for an extensive list of validation policies.
 
 >[!NOTE]
 >**[Section 1140](/legal/marketplace/certification-policies#1140-teams)** is specific to Microsoft Teams and **[sub-section 1140.4](https://docs.microsoft.com/legal/marketplace/certification-policies#11404-functionality)** addresses functionality requirements for Teams apps.
@@ -25,7 +25,7 @@ See also [Section 100 — General](/legal/marketplace/certification-policies#100
 * Any material that you associate with your experience, such as descriptions and support documentation, must be accurate. Use correct spelling, capitalization, punctuation, and grammar in your descriptions and materials.
 * Provide help and support information. It's highly recommended that your app include a help or FAQ link for the first-run user experience. For all personal apps, we recommend providing your help page as a personal tab for a better user experience.
 * Apps must not take the user out of Teams for core user scenarios. Using task modules or tabs is recommended to display information to users within Teams.
-* All apps must have a visual tour such as “Take a Tour” or an “App Guide” in its configuration screen that talks about the app features and necessary integration in the following places:
+* All apps must have a visual tour, such as **Take a Tour** or an **App Guide** in its configuration screen that talks about the app features and necessary integration in the following places:
     * The store listing page (Long Description).
     * Tab configuration screen.
     * Welcome message for a bot.
@@ -51,7 +51,7 @@ See also [Section 100 — General](/legal/marketplace/certification-policies#100
 
 See also [Section 1100.5 — Customer control](/legal/marketplace/certification-policies#11005-customer-control)
 
-* If your app or add-in depends on external accounts or services, the sign-in/sign-out and sign-up experience must be apparent and reachable across all capabilities in your app.
+* If your app or add-in depends on external accounts or services, the sign-in, sign-out and sign-up experience must be apparent and reachable across all capabilities in your app.
 * If there is an explicit sign-in option provided to the user, there must be a corresponding sign-out option (even if the app is using [silent authentication](../../../../tabs/how-to/authentication/auth-silent-aad.md)).
 * The sign-out option must only sign the user out of your app's capability and not out of the Teams client.
 * At a minimum, the sign-out option must sign the user out of the same capabilities accessed with the sign-in option. For example, if the sign-in option includes both messaging extension and tab, then the sign-out option must include both messaging extension and tab.
@@ -93,7 +93,7 @@ For additional information on authentication see:
 
 ### &#9989; Tab content must not have excessive chrome or layered navigation
 
-* Tabs must provide focused content and avoid needless UI elements. In general, this usually refers to unnecessary nested/layered navigation, an extraneous or irrelevant UI next to the content, or any links that take the user to unrelated content. For example, below is a tab view that omits navigation menus and only showcases the main content:
+* Tabs must provide focused content and avoid needless UI elements. This usually refers to unnecessary nested or layered navigation, an extraneous or irrelevant UI next to the content, or any links that take the user to unrelated content. For example, the following tab view omits navigation menus and only showcases the main content:
 
 ![SharePoint web view](../../../../assets/images/faq/web-sp.png)  
 ![SharePoint tab view](../../../../assets/images/faq/tab-sp.png)
@@ -128,8 +128,8 @@ For additional information on authentication see:
 
 ### &#9989; Tabs in channel - Member access
 
-* A tab configured by a member in a channel scope must be accessible to the other members without having to seek permissions from the person who configured the tab.
-* The app must provide the permission management options upfront if the tab is for private or restricted use or requires any permissions from the person who configured the tab.
+* A tab configured by a member in a channel scope must be accessible to the other members without having to seek permissions from the member who configured the tab.
+* The app must provide the permission management options upfront if the tab is for private or restricted use or requires any permissions from the member who configured the tab.
 
 ### &#9989; Bots must always be responsive and fail gracefully
 
@@ -153,7 +153,7 @@ Your bot must be responsive to any command and not dead-end the user. Here are s
    ![Help command sample](../../../../assets/images/faq/helpcommand.png)
 
 * **Use adaptive cards and task modules to make your bot response clear and actionable**
-[Adaptive cards with buttons invoking task modules](/task-modules-and-cards/task-modules/task-modules-bots) enhance the bot user experience. These cards and buttons are easier to use in a mobile device as opposed to your user typing the commands. Also bot responses must not be textual with long text. Bots must make use of Adaptive cards and task modules instead of conversational chat based user interface and lengthy text responses.
+[Adaptive cards with buttons invoking task modules](/task-modules-and-cards/task-modules/task-modules-bots) enhance the bot user experience. These cards and buttons are easier to use in a mobile device as opposed to your user typing the commands. Also bot responses must not be textual with long text. Bots must make use of adaptive cards and task modules instead of conversational chat based user interface and lengthy text responses.
 
 * **Think through all scopes**. Be sure that your bot provides appropriate responses when mentioned (`@*botname*`) in a channel and in personal conversations. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](../../../../resources/schema/manifest-schema.md#bots).)
 
@@ -165,8 +165,8 @@ Your bot must be responsive to any command and not dead-end the user. Here are s
 
 ### &#9989; Personal bots must always send a welcome message on first launch
 
-A welcome messages is the best way to set the tone for your personal/chat bot. This is the first interaction a user has with the bot. A good welcome message can encourage the user to keep exploring the app. If the welcome or introductory message is confusing or unclear, users won't see the value of the app immediately and lose interests.
-Please see below section for Welcome message requirements.
+A welcome messages is the best way to set the tone for your personal chat bot. This is the first interaction a user has with the bot. A good welcome message can encourage the user to keep exploring the app. If the welcome or introductory message is confusing or unclear, users won't see the value of the app immediately and lose interest.
+See the following section for welcome message requirements.
 
 > [!Note]
 > A welcome message is optional for a channel bot.
@@ -182,7 +182,7 @@ Please see below section for Welcome message requirements.
 * Invoke the welcome message  with one ping, not two or more simultaneous pings.
 * A welcome message must only be shown to the user who configured the app, preferably in a 1:1 personal chat.
 * Personal apps must always provide a welcome message to a user.
-* Never send a personal chat to every member in the team - this is considered spam.
+* Never send a personal chat to every member of the team; it is considered spam.
 * Never send the welcome message more than once. Repeating the same welcome message over regular intervals is not allowed and is considered spamming.
 
 #### Avoid welcome message spamming
