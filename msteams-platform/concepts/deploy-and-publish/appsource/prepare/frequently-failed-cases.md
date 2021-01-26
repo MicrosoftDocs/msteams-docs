@@ -16,7 +16,7 @@ This article addresses common reasons submitted apps fail validation. While it's
 
 ### &#9989; General considerations
 
-*See also* [Section 100 — General](/legal/marketplace/certification-policies#100-general)
+See also [Section 100 — General](/legal/marketplace/certification-policies#100-general)
 
 * Ensure you are using version 1.4.1 or later of the [Microsoft Teams SDK](https://www.npmjs.com/package/@microsoft/teams-js).
 * Don't make changes to your app while the validation process is in progress. Doing so will require a complete revalidation of your app.
@@ -38,7 +38,7 @@ This article addresses common reasons submitted apps fail validation. While it's
     ![Sample App 2](../../../../assets/images/faq/Sampleapp2.png)
 
 * Increment your app version number in the manifest if you make any manifest changes to your submission.
-* App must not take users out of Teams for core user scenarios. Link targets in apps must not link to an external browser, it must link to div elements contained within Teams example, inside Task Modules and tabs.
+* App must not take users out of Teams for core user scenarios. Link targets in apps must not link to an external browser, it must link to div elements contained within Teams example, inside task modules and tabs.
 * All core and non-core scenarios must be completed within the Teams environment except for:
   * Privacy Policy
   * Terms Of Use (TOU)
@@ -47,11 +47,11 @@ This article addresses common reasons submitted apps fail validation. While it's
 
 * Personal apps enable users to share content from a personal app experience with other team members.
 
-### &#9989;  Provide a clear and simple sign in/sign out and sign-up experience
+### &#9989; Provide a clear and simple sign-in, sign-out, and sign-up experience
 
-*See also* [Section 1100.5 — Customer control](/legal/marketplace/certification-policies#11005-customer-control)
+See also [Section 1100.5 — Customer control](/legal/marketplace/certification-policies#11005-customer-control)
 
-* If your app or add-in depends on external accounts or services, the sign in/sign out and sign-up experience must be apparent and reachable across all capabilities in your app.
+* If your app or add-in depends on external accounts or services, the sign-in/sign-out and sign-up experience must be apparent and reachable across all capabilities in your app.
 * If there is an explicit sign-in option provided to the user, there must be a corresponding sign-out option (even if the app is using [silent authentication](../../../../tabs/how-to/authentication/auth-silent-aad.md)).
 * The sign-out option must only sign the user out of your app's capability and not out of the Teams client.
 * At a minimum, the sign-out option must sign the user out of the same capabilities accessed with the sign-in option. For example, if the sign-in option includes both messaging extension and tab, then the sign-out option must include both messaging extension and tab.
@@ -62,17 +62,17 @@ This article addresses common reasons submitted apps fail validation. While it's
   * Connect an account/service => disconnect an account/service.
   * Authorize an account/service => deauthorize/deny an account/service.
   * Register an account/service => deregister/unsubscribe an account/service.
-* If your app requires an account or service, you must provide a way for the user to sign up or to create a sign-up request. An exception may be granted if your app requires a license to use. But such scenarios, a clear way forward for a new user sign up must be provided.
-* Make sure you provide clear-way-forward guidance to a new user on how to sign up to use your app services. Provide clear-way-forward guidance to a new user on how to sign up to use your app services. If a ready sign-up link is not available, provide precise guidance in the following areas:
+* If your app requires an account or service, you must provide a way for the user to sign-up or create a sign-up request. An exception may be granted if your app requires a license to use. In such scenarios, provide clear instructions for a new user to sign-up.
+* Provide clear way-forward guidance to a new user on how to sign-up to use your app services. If a ready sign-up link is not available, provide precise guidance in the following areas:
 
 > [!div class="checklist"]
 >
 > * within your app's description section.
 > * in your app's welcome message.
 > * in your app's help message.
-> * in the window where you ask a user to sign in to your services.
+> * in the window where you ask a user to sign-in to your services.
 
-* Apps that do not have an easy sign-up flow may also include a help tab or link to a web page where a new user can see detailed guidance on configuring your Teams app. It is to ensure a new user is not blocked when trying your app for the first time.
+* Apps without an easy sign-up flow must also include a help tab or link to a web page, where a new user can see detailed guidance on configuring your Teams app. Provide detailed information to ensure a new user is not blocked when trying your app for the first time.
 * Sign-in and sign-out functionality must work on mobile clients. Ensure to use the [Microsoft Teams SDK](https://www.npmjs.com/package/@microsoft/teams-js) version 1.4.1 or later.
 
 For additional information on authentication see:
@@ -104,7 +104,7 @@ For additional information on authentication see:
 * Tabs must not present an app bar with icons in the left rail that conflict with the main Teams navigation.
 * Tabs that have complex editing capabilities within the app must open the editor view in a multi-window rather than in the tab.
 * If there are multiple view options, consider having a tab config menu for the user to choose from. For example, instead of embedding a menu inside the tab, put the menu in the configuration page so the actual tab view is clean and focused.
-* Please include a *Help* tab as a static tab to advise users how to configure, sign up, and use your app.
+* Please include a *Help* tab as a static tab to advise users how to configure, sign-up, and use your app.
 * Please include a *Settings* tab that is available from the app header.
 
 ![Wide idea configuration page](../../../../assets/images/faq/wideidea.png)
@@ -175,7 +175,7 @@ Please see below section for Welcome message requirements.
 
 * Include a value proposition with the welcome tour.
 * Provide way-forward guidance for using the app.
-* Include guidance on how to Sign up and configure your app.
+* Include guidance on how to sign-up and configure your app.
 * Present easy-to-read text and straightforward dialogue — preferably a card with an actionable welcome tour button that loads a task module.
 * Keep it simple and usable with buttons and cards — avoid long text, chatty dialogue.
 * Include adaptive cards and buttons to make the welcome message more usable.
@@ -199,7 +199,7 @@ Notification-only bots must send a welcome message that includes a message conve
 * **Make your message concise and informative**.  Most likely, user experience with and knowledge of your app will vary. A user may have used your app on another platform or know nothing about your app. You want to tailor your message to all audiences and in a couple sentences explain what your bot does and the ways to interact with it. You must also explain the value of the app and how the users will benefit from using it.
 ![Cafe and Dinning bot](../../../../assets/images/faq/cafe-bot.png)
 
-* **Make your message actionable**. Think about the first thing you want users to do after installing your app. Is there a cool command they must try? Is there another onboarding experience they must know about? Do they need to sign in? You can add actions on an adaptive card or provide specific examples such as *“Try asking….”*, *“This is what I can do…”*.
+* **Make your message actionable**. Think about the first thing you want users to do after installing your app. Is there a cool command they must try? Is there another onboarding experience they must know about? Do they need to sign-in? You can add actions on an adaptive card or provide specific examples such as *“Try asking….”*, *“This is what I can do…”*.
 
 #### Welcome messages in the team/channel  scope
 
