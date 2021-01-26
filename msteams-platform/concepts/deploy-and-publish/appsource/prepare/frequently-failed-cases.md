@@ -20,8 +20,8 @@ This article addresses common reasons submitted apps fail validation. While it's
 
 * Ensure you are using version 1.4.1 or later of the [Microsoft Teams SDK](https://www.npmjs.com/package/@microsoft/teams-js).
 * Don't make changes to your app while the validation process is in progress. Doing so will require a complete revalidation of your app.
-* Your app must not stop responding, end unexpectedly, or contain programming errors. If an issue is encountered, your app should fail gracefully and provide a valid-way-forward message to the user.
-* Your app must not automatically download, install, or launch any executable code in the user environment. All downloads should seek explicit permission from the user.
+* Your app must not stop responding, end unexpectedly, or contain programming errors. If an issue occurs, your app must fail and provide valid way-forward information to the user.
+* Your app must not automatically download, install, or launch any executable code in the user environment. All downloads must seek explicit permission from the user.
 * Any material that you associate with your experience, such as descriptions and support documentation, must be accurate. Use correct spelling, capitalization, punctuation, and grammar in your descriptions and materials.
 * Provide help and support information. It's highly recommended that your app include a help or FAQ link for the first-run user experience. For all personal apps, we recommend providing your help page as a personal tab for a better user experience.
 * Apps must not take the user out of Teams for core user scenarios. Using task modules or tabs is recommended to display information to users within Teams.
@@ -32,7 +32,7 @@ This article addresses common reasons submitted apps fail validation. While it's
     * App source metadata.
     * Connector configuration screen.
 
-* The visual tour can be a video, screenshot, a link to a static tab with app details. But all these references must be within Teams environment.
+* The visual tour can be a video, screenshot, a link to a static tab with app details. All these references must be within the Teams environment.
 
     ![Sample App 1](../../../../assets/images/faq/Sampleapp1.png)
     ![Sample App 2](../../../../assets/images/faq/Sampleapp2.png)
@@ -93,16 +93,16 @@ For additional information on authentication see:
 
 ### &#9989; Tab content must not have excessive chrome or layered navigation
 
-* Tabs should provide focused content and avoid needless UI elements. In general, this usually refers to unnecessary nested/layered navigation, an extraneous or irrelevant UI next to the content, or any links that take the user to unrelated content. For example, below is a tab view that omits navigation menus and only showcases the main content:
+* Tabs must provide focused content and avoid needless UI elements. In general, this usually refers to unnecessary nested/layered navigation, an extraneous or irrelevant UI next to the content, or any links that take the user to unrelated content. For example, below is a tab view that omits navigation menus and only showcases the main content:
 
 ![SharePoint web view](../../../../assets/images/faq/web-sp.png)  
 ![SharePoint tab view](../../../../assets/images/faq/tab-sp.png)
 
-* Tabs should be light in nature and not include complex navigation.
-* Channel tabs that have complex editing capabilities within the app should open the editor view in a multi-window rather than a tab.
+* Tabs must be light in nature and not include complex navigation.
+* Channel tabs that have complex editing capabilities within the app must open the editor view in a multi-window rather than a tab.
 * Channel tabs must not provide an app bar with icons in the left rail that conflicts with the main Teams navigation.
 * Tabs must not present an app bar with icons in the left rail that conflict with the main Teams navigation.
-* Tabs that have complex editing capabilities within the app should open the editor view in a multi-window rather than in the tab.
+* Tabs that have complex editing capabilities within the app must open the editor view in a multi-window rather than in the tab.
 * If there are multiple view options, consider having a tab config menu for the user to choose from. For example, instead of embedding a menu inside the tab, put the menu in the configuration page so the actual tab view is clean and focused.
 * Please include a *Help* tab as a static tab to advise users how to configure, sign up, and use your app.
 * Please include a *Settings* tab that is available from the app header.
@@ -111,12 +111,12 @@ For additional information on authentication see:
 
 ### &#9989; Tab configuration must happen in the configuration screen
 
-* The configuration screen should clearly explain the value of the experience and how to configure the tab.
-* The configuration process should always provide a way for the users to continue and not end the user experience. For example, do not show an empty board after the user has configured the tab.
+* The configuration screen must clearly explain the value of the experience and how to configure the tab.
+* The configuration process must always provide a way for the users to continue and not end the user experience. For example, do not show an empty board after the user has configured the tab.
 * The user sign-in process must be a part of the configuration process. Ensure to complete it in the Tab UI. After the user has completed the configuration and loaded the tab, no further action is required.
 * Don't show your entire webpage within the sign-in configuration pop-up window.
-* A user should always be able to finish the configuration experience, even if they can’t immediately find the content they’re looking for.
-* The configuration experience should provide options for the user to find their content, pin a URL, or create new content if it doesn’t exist.
+* A user must always be able to finish the configuration experience, even if they can’t immediately find the content they’re looking for.
+* The configuration experience must provide options for the user to find their content, pin a URL, or create new content if it doesn’t exist.
 * The configuration experience must remain within the Teams context. The user shouldn’t have to leave the configuration experience to create content and then return to Teams to pin it.
 * Use the available viewport area efficiently. Do not waste it on using huge logos inside the configuration pop up.
 
@@ -128,12 +128,12 @@ For additional information on authentication see:
 
 ### &#9989; Tabs in channel - Member access
 
-* A tab configured by a member in a channel scope should be accessible to the other members without having to seek permissions from the person who configured the tab.
+* A tab configured by a member in a channel scope must be accessible to the other members without having to seek permissions from the person who configured the tab.
 * The app must provide the permission management options upfront if the tab is for private or restricted use or requires any permissions from the person who configured the tab.
 
 ### &#9989; Bots must always be responsive and fail gracefully
 
-Your bot should be responsive to any command and not dead-end the user. Here are some tips to help your bot intelligently respond to users:
+Your bot must be responsive to any command and not dead-end the user. Here are some tips to help your bot intelligently respond to users:
 
 * **Use command lists**. Analyzing user input or predicting user intent is hard. Instead of letting users guess what your bot can do, provide a list of commands your bot understands.
 
@@ -153,13 +153,13 @@ Your bot should be responsive to any command and not dead-end the user. Here are
    ![Help command sample](../../../../assets/images/faq/helpcommand.png)
 
 * **Use adaptive cards and task modules to make your bot response clear and actionable**
-[Adaptive cards with buttons invoking task modules](/task-modules-and-cards/task-modules/task-modules-bots) enhance the bot user experience. These cards and buttons are easier to use in a mobile device as opposed to your user typing the commands. Also bot responses should not be textual with long text. Bots must make use of Adaptive cards and task modules instead of conversational chat based user interface and lengthy text responses.
+[Adaptive cards with buttons invoking task modules](/task-modules-and-cards/task-modules/task-modules-bots) enhance the bot user experience. These cards and buttons are easier to use in a mobile device as opposed to your user typing the commands. Also bot responses must not be textual with long text. Bots must make use of Adaptive cards and task modules instead of conversational chat based user interface and lengthy text responses.
 
 * **Think through all scopes**. Be sure that your bot provides appropriate responses when mentioned (`@*botname*`) in a channel and in personal conversations. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](../../../../resources/schema/manifest-schema.md#bots).)
 
-* **Include team, group chat, or 1:1 conversation**. Bot notifications should include a Team, a group chat, or a one-to-one conversation with relevant content for your audience.
+* **Include team, group chat, or 1:1 conversation**. Bot notifications must include a team, a group chat, or a one-to-one conversation with relevant content for your audience.
 
-* **Do not push sensitive data**. Bots must not push sensitive data to a Team, a group chat or a 1:1 conversation where there is an audience who should not be able to view that data.
+* **Do not push sensitive data**. Bots must not push sensitive data to a team, a group chat or a 1:1 conversation where there is an audience who should not be able to view that data.
 
 * **Provide a welcome message**. Bot must provide an FRE welcome message that includes an interactive tutorial with carousel cards or "try it" buttons, to encourage engagement.
 
@@ -196,10 +196,10 @@ Notification-only bots must send a welcome message that includes a message conve
 
 #### Welcome messages in the personal scope
 
-* **Make your message concise and informative**.  Most likely, user experience with and knowledge of your app will vary. A user may have used your app on another platform or know nothing about your app. You want to tailor your message to all audiences and in a couple sentences explain what your bot does and the ways to interact with it. You should also explain the value of the app and how the users will benefit from using it.
+* **Make your message concise and informative**.  Most likely, user experience with and knowledge of your app will vary. A user may have used your app on another platform or know nothing about your app. You want to tailor your message to all audiences and in a couple sentences explain what your bot does and the ways to interact with it. You must also explain the value of the app and how the users will benefit from using it.
 ![Cafe and Dinning bot](../../../../assets/images/faq/cafe-bot.png)
 
-* **Make your message actionable**. Think about the first thing you want users to do after installing your app. Is there a cool command they should try? Is there another onboarding experience they should know about? Do they need to sign in? You can add actions on an adaptive card or provide specific examples such as *“Try asking….”*, *“This is what I can do…”*.
+* **Make your message actionable**. Think about the first thing you want users to do after installing your app. Is there a cool command they must try? Is there another onboarding experience they must know about? Do they need to sign in? You can add actions on an adaptive card or provide specific examples such as *“Try asking….”*, *“This is what I can do…”*.
 
 #### Welcome messages in the team/channel  scope
 
@@ -226,11 +226,11 @@ Your Teams app must not post sensitive data such as credit card / financial paym
 
 Please warn users before your app downloads any files or executable (`.exe`  )into the user's machine or environment.
 
-### &#9989; Messaging extensions should provide help text and be easy to read
+### &#9989; Messaging extensions must provide help text and be easy to read
 
-* The search-based messaging extension should provide help text on how to effectively search (e.g., show example input).
+* The search-based messaging extension must provide help text on how to effectively search (e.g., show example input).
 * Task modules must include an icon and a short name that they are contained in or created from the app.
-* The message extension `@mention` executables should be clear, easy to understand, and easy to read.
+* The message extension `@mention` executables must be clear, easy to understand, and easy to read.
 ![Message extension](../../../../assets/images/faq/message-extension.png)
 
 ## M365 Publisher Attestation
