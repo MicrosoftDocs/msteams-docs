@@ -8,7 +8,7 @@ ms.topic: conceptual
 ---
 # Building tabs and other hosted experiences with the Microsoft Teams JavaScript client SDK
 
-The Microsoft Teams JavaScript client SDK can help you create hosted experiences in Teams, which means displaying app content in an iframe.
+The Microsoft Teams JavaScript client SDK can help you create hosted experiences in Teams, which means displaying your app content in an iframe.
 
 The SDK is helpful for developing apps with any of the following Teams capabilities:
 
@@ -28,7 +28,7 @@ Do one of the following depending on your development preferences:
 
 See the following tables to understand commonly used SDK functions. The [SDK reference documentation](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest) provides more comprehensive information.
 
-## Basic functions
+### Basic functions
 
 | Function  | Description          | Documentation|
 | -----     | -----     | -----    |
@@ -44,7 +44,7 @@ See the following tables to understand commonly used SDK functions. The [SDK ref
 |`microsoftTeams.executeDeepLink(deepLink: string, onComplete?: (status: boolean, reason?: string))`|Takes a required **deepLink** as input and navigates user to a URL or triggers a client action—such as opening or installing—an app *within Teams*.|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#executedeeplink-string---status--boolean--reason---string-----void-&preserve-view=true)|
 |`microsoftTeams.navigateToTab(tabInstance: TabInstance, onComplete?: (status: boolean, reason?: string))`|Takes the **TabInstance** object as input and navigates to a specified tab instance.|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#navigatetotab-tabinstance-&preserve-view=true)<br/>[tabInstance obj](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/tabinstance?view=msteams-client-js-latest&preserve-view=true)|
 
-## Authentication namespace
+### Authentication namespace
 
 | Function  | Description          | Documentation|
 | -----     | -----     | -----    |
@@ -52,7 +52,7 @@ See the following tables to understand commonly used SDK functions. The [SDK ref
 |`microsoftTeams.authentication.notifySuccess(result?: string, callbackUrl?: string)`|Notifies the frame that initiated the authentication request that the request was successful and closes the authentication window|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/authentication?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.authentication.notifyFailure(reason?: string, callbackUrl?: string)`|Notifies the frame that initiated the authentication request that the request failed and closes the authentication window.|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/authentication?view=msteams-client-js-latest&preserve-view=true)|
 
-## Settings namespace
+### Settings namespace
 
 | Function  | Description          | Documentation|
 | -----     | -----     | -----    |
@@ -62,7 +62,7 @@ See the following tables to understand commonly used SDK functions. The [SDK ref
 |`microsoftTeams.settings.registerOnSaveHandler(handler: (evt: SaveEvent)`|The handler that is registered when the user selects the **Save** button. This handler should be used to create or update the underlying resource powering the content.|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.settings.registerOnRemoveHandler(handler: (evt: RemoveEvent)`|The handler that is registered when the user selects the **Remove** button. This handler should be used to remove the underlying resource powering the content.|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest&preserve-view=true)|
 
-## Task modules namespace
+### Task modules namespace
 
 | Function  | Description          | Documentation|
 | -----     | -----     | -----    |
