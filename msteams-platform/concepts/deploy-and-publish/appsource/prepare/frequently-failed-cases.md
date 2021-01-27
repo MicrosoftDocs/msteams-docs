@@ -1,6 +1,6 @@
 ---
 title: App submission tips and frequently failed cases
-description: Describes tips for a successful Teams store submission and common reasons submissions fail
+description: describes tips for a successful Teams store submission and common reasons submissions fail
 ms.topic: reference
 ms.author: lajanuar
 keywords: app submission tips frequently failed cases validation guidelines
@@ -147,10 +147,10 @@ Your bot must be responsive to any command and not dead-end the user. Here are s
 
 ### &#9989; Help command response
 
-   * Help Command must be precise and the app responses must be in an adaptive card format with an actionable content for at least six commands.
-   * If an app has less than six commands, check if all the commands are present in the adaptive card.
+* Help Command must be precise and the app responses must be in an adaptive card format with an actionable content for at least six commands.
+* If an app has less than six commands, check if all the commands are present in the adaptive card.
 
-   ![Help command sample](../../../../assets/images/faq/helpcommand.png)
+  ![Help command sample](../../../../assets/images/faq/helpcommand.png)
 
 * **Use adaptive cards and task modules to make your bot response clear and actionable**
 [Adaptive cards with buttons invoking task modules](/task-modules-and-cards/task-modules/task-modules-bots) enhance the bot user experience. These cards and buttons are easier to use in a mobile device as opposed to your user typing the commands. Also bot responses must not be textual with long text. Bots must make use of adaptive cards and task modules instead of conversational chat based user interface and lengthy text responses.
