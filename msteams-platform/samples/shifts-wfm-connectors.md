@@ -1,6 +1,7 @@
 ---
 title: Teams Shifts Connectors
 description: Workforce management Shifts connectors for Teams
+ms.topic: reference
 author: laujan
 ms.date: 03/09/2020
 keywords: Microsoft Teams connectors kronos
