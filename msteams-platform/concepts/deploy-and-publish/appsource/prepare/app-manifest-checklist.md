@@ -1,6 +1,7 @@
 ---
 title: App manifest checklist
 description: The checklist for your app manifest for publishing your Microsoft Teams app to AppSource
+ms.topic: reference
 keywords: teams publish store office publishing checklist
 ---
 # App manifest checklist

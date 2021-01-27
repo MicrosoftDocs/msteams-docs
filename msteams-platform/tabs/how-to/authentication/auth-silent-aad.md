@@ -1,6 +1,7 @@
 ---
 title: Silent authentication
 description: Describes silent authentication
+ms.topic: conceptual
 keywords: teams authentication SSO silent AAD
 ---
 # Silent authentication

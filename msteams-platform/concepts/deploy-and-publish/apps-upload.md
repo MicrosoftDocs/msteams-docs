@@ -1,6 +1,7 @@
 ---
-title: Upload your custom app in Microsoft Teams
+title: Upload your custom app
 description: Describes how to upload your app in Microsoft Teams
+ms.topic: how-to
 keywords: teams apps Upload
 ---
 # Upload an app package to Microsoft Teams
@@ -120,4 +121,3 @@ If you change manifest information, you must first remove the app and then add t
 ## Troubleshooting notes
 
 * If the manifest doesn't load, please double-check that you followed all the instructions in [Create the package](../../concepts/build-and-test/apps-package.md) and validated your manifest against the [schema](../../resources/schema/manifest-schema.md).
-
