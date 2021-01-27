@@ -63,7 +63,7 @@ See also [Section 1100.5 — Customer control](/legal/marketplace/certification-
   * Authorize an account/service => deauthorize/deny an account/service.
   * Register an account/service => deregister/unsubscribe an account/service.
 * If your app requires an account or service, you must provide a way for the user to sign-up or create a sign-up request. An exception may be granted if your app requires a license to use. In such scenarios, provide clear instructions for a new user to sign-up.
-* Provide clear way-forward guidance to a new user on how to sign-up to use your app services. If a ready sign-up link is not available, provide precise guidance in the following areas:
+* Provide clear guidance on the way-forward to a new user on how to sign-up to use your app services. If a ready sign-up link is not available, provide precise guidance in the following areas:
 
 > [!div class="checklist"]
 >
