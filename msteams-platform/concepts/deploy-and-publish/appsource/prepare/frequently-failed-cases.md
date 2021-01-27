@@ -37,7 +37,8 @@ See also [Section 100 — General](/legal/marketplace/certification-policies#100
     ![Sample App 2](../../../../assets/images/faq/Sampleapp2.png)
 
 * Increment your app version number in the manifest if you make any manifest changes to your submission.
-* The app must not take users out of Teams for core user scenarios. Link targets in apps must not link to an external browser. Link targets must link to div elements contained within Teams, for example, task modules and tabs. Using task modules or tabs is suggested to display information to users within Teams.
+* The app must not take users out of Teams for core user scenarios. Link targets in apps must not link to an external browser. Link targets must link to div elements contained within Teams, for example, task modules and tabs. 
+* Using task modules or tabs is suggested to display information to users within Teams.
 * All core and non-core scenarios must be completed within the Teams environment except for:
   * Privacy Policy
   * Terms Of Use (TOU)
