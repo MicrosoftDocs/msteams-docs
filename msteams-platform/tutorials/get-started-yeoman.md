@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Create your first app using the Yeoman Generator
+title: Tutorial - Create your first app using the Yeoman generator
 description: Learn how to get started building Microsoft Teams apps with the Yeoman generator.
 keywords: getting started node.js nodejs yeoman
 ms.topic: tutorial
@@ -37,17 +37,15 @@ Open up a command prompt and type the following:
 npm install yo gulp-cli --global
 ```
 
-## Install the Microsoft Teams Apps generator - Yo Teams
+## Install the generator
 
-The Yeoman generator for Microsoft Teams apps are installed with the following command:
+Install the Teams Yeoman generator with the following command:
 
 ```bash
 npm install generator-teams --global
 ```
 
-#### Install preview versions
-
-If you want to install preview versions of the Teams generator with this command:
+To install preview versions of the generator, run this command:
 
 ```bash
 npm install generator-teams@preview --global
@@ -55,7 +53,9 @@ npm install generator-teams@preview --global
 
 ## Generate your project
 
-Open up a command prompt and create a new directory where you want to create your project and in that directory type the command `yo teams`. This will start the Teams Apps generator and you will be asked a set of questions.
+Open up a command prompt and create a new directory where you want to create your project and in that directory run the command `yo teams`.
+
+This starts the generator, which prompts you with a set of questions.
 
 ![yo teams](~/assets/yeoman-images/teams-first-app-1.png)
 
@@ -129,4 +129,4 @@ Choose your tab and follow the instructions to add it. Notice that you have a cu
 
 ![running tab in teams](~/assets/yeoman-images/teams-first-app-6.png)
 
-**Congrats! You built and deployed your first Microsoft Teams App**
+**Congrats! You built and deployed your first Microsoft Teams app**
