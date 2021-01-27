@@ -1,18 +1,25 @@
 ---
-title: Using the Teams client SDK
+title: Using the Teams JavaScript client SDK
 author: laujan
-description: How to use the Teams client SDK to add Teams-aware functionality to your custom tabs
+description: The Microsoft Teams JavaScript client SDK can help you create hosted experiences in Teams.
 keywords: teams tabs group channel configurable static SDK JavaScript personal
 ms.topic: conceptual
 ---
-# Using the Teams client SDK
+# Using the Microsoft Teams client SDK for hosted experiences
 
-The **Teams JavaScript client SDK**  and **Teams JavaScript Library** are part of the [Microsoft Teams developer platform](/microsoftteams/platform/) and provide tools and processes to facilitate Teams application creation. The Teams client SDK is distributed as an npm package. The latest version can be found here:
-<https://www.npmjs.com/package/@microsoft/teams-js>. The Teams Library is located at <https://github.com/OfficeDev/microsoft-teams-library-js>.
+The *Microsoft Teams JavaScript client SDK* can help if you need to host your app content in an `<iframe>`, which is commonly used in the following Teams app capabilities:
 
-The following table outlines the Teams Library functions typically used in tabs development:
+* Tabs
+* Task modules
 
-## Teams SDK public API 
+You can find the latest version of the SDK at the following locations:
+
+* [npm](https://www.npmjs.com/package/@microsoft/teams-js)
+* [GitHub](https://github.com/OfficeDev/microsoft-teams-library-js)
+
+The following tables outline the SDK functions typically used in tabs development.
+
+## Teams SDK public API
 
 | Function  | Description          | Documentation|
 | -----     | -----     | -----    |

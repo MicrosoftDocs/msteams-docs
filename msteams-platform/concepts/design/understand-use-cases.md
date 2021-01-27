@@ -1,6 +1,6 @@
 ---
-title: Understand your use cases
-author: clearab
+title: Understanding your app's use cases
+author: heath-hamilton
 description: Decide how to distribute your app
 ms.topic: conceptual
 ms.author: anclear

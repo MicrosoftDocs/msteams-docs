@@ -1,11 +1,11 @@
 ---
 title: Map your use cases to app capabilities
 author: clearab
-description: Decide how to distribute your app
+description: Identifying how your app can work within the Teams experience is essential.
 ms.topic: conceptual
 ms.author: anclear
 ---
-# Map your use cases to teams app capabilities
+# Map your use cases to Teams app capabilities
 
 If you haven't already, make sure you've [considered your use cases](~/concepts/design/map-use-cases.md) carefully. You should also have a good understanding of the [extensibility points and UI elements](~/concepts/extensibility-points.md) available for your app. Once you've figured out *what* your trying to solve, and *who* you're solving it for, it is time to start thinking about *how*.
 
@@ -13,7 +13,7 @@ Below you'll find some common scenarios, and a selection of extensibility points
 
 ## Create, share and collaborate on items in an external system
 
-App for Microsoft Teams are a great way to interact with your data, and there are a variety of integration points to choose from.
+Teams apps are a great way to interact with your data and there are a variety of integration points to choose from.
 
 * Messaging extensions with search commands - Search external systems and share the results as an interactive card.
 
@@ -21,7 +21,7 @@ App for Microsoft Teams are a great way to interact with your data, and there ar
 
 * Tabs - Create embedded web experiences to view, work with, and share data.
 
-* Connectors and webhooks - A simple way to push data into, and send data out of the Teams client.
+* Webhooks and connectors - A simple way to push data into, and send data out of the Teams client.
 
 * Task modules - Interactive modal forms from wherever you need them to collect or display information.
 

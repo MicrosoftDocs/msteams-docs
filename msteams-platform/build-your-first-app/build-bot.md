@@ -132,4 +132,4 @@ It's important to understand that this isn't the same as a channel in Teams. In 
 * Follow our [design guidelines](../bots/design/bots.md) and build with [production-ready UI templates](../concepts/design/design-teams-app-ui-templates.md) to create a seamless experience.
 * [Bot authentication in Teams](../bots/how-to/authentication/auth-flow-bot.md)
 * [Microsoft Bot Framework](https://dev.botframework.com/)
-* [Create a bot without the toolkit](../bots/how-to/create-a-bot-for-teams.md)
+* [Create a bot without the toolkit](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)
