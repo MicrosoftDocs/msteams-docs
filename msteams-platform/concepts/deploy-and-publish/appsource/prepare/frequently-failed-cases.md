@@ -159,7 +159,7 @@ Your bot must be responsive to any command and not dead-end the user. Here are s
 
 * **Include team, group chat, or 1:1 conversation**. Bot notifications must include a team, a group chat, or a one-to-one conversation with relevant content for your audience.
 
-* **Do not push sensitive data**. Bots must not push sensitive data to a team, a group chat or a 1:1 conversation where there is an audience who should not be able to view that data.
+* **Do not push sensitive data**. Bots must not push sensitive data to a team, a group chat, or a 1:1 conversation, where there is an audience who must not view that data.
 
 * **Provide a welcome message**. Bot must provide an FRE welcome message that includes an interactive tutorial with carousel cards or "try it" buttons, to encourage engagement.
 
@@ -196,7 +196,7 @@ Notification-only bots must send a welcome message that includes a message conve
 
 #### Welcome messages in the personal scope
 
-* **Make your message concise and informative**.  Most likely, user experience with and knowledge of your app will vary. A user may have used your app on another platform or know nothing about your app. You want to tailor your message to all audiences and in a couple sentences explain what your bot does and the ways to interact with it. You must also explain the value of the app and how the users will benefit from using it.
+   * **Make your message concise and informative**. The user experience and the knowledge of your app will vary. A user may have used your app on another platform or know nothing about your app. You want to tailor your message to all audiences and in a couple sentences explain what your bot does and the ways to interact with it. You must also explain the value of the app and how the users will benefit from using it.
 ![Cafe and Dinning bot](../../../../assets/images/faq/cafe-bot.png)
 
 * **Make your message actionable**. Think about the first thing you want users to do after installing your app. Is there a cool command they must try? Is there another onboarding experience they must know about? Do they need to sign-in? You can add actions on an adaptive card or provide specific examples such as *“Try asking….”*, *“This is what I can do…”*.
