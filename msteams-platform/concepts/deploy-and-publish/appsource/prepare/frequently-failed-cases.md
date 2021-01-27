@@ -201,7 +201,7 @@ Notification-only bots must send a welcome message that includes a message conve
 
 * **Make your message actionable**. Think about the first thing you want users to do after installing your app. Is there a cool command they must try? Is there another onboarding experience they must know about? Do they need to sign-in? You can add actions on an adaptive card or provide specific examples such as *“Try asking….”*, *“This is what I can do…”*.
 
-#### Welcome messages in the team/channel  scope
+#### Welcome messages in the team or channel  scope
 
 Things are a little bit different when the bot is first added to a channel. Normally, you shouldn't send a 1:1 message to everyone on the team, but the bot can send a welcome message in the channel.
 
@@ -215,7 +215,7 @@ Things are a little bit different when the bot is first added to a channel. Norm
 
 ### &#9989; Do not post sensitive data to an audience not intended to view the data
 
-Your Teams app must not post sensitive data such as credit card / financial payment instrument, Personal Identifiable Information (PIN), health, or contact tracing information to an audience not intended to view that data.
+Your Teams app must not post sensitive data such as credit card or financial payment instrument, Personal Identifiable Information (PIN), health, or contact tracing information to an audience not intended to view that data.
 
 ### &#9989; Do not transmit financial payment details or complete financial transactions via your Teams app
 
