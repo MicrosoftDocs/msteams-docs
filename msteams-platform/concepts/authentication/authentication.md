@@ -1,9 +1,10 @@
 ---
-title: Authenticate a user in Teams
+title: Authenticating app users
 description: Describes authentication in Teams and how to use it in your apps
+ms.topic: conceptual
 keywords: teams authentication OAuth SSO AAD
 ---
-# Authentication in Teams
+# Authenticating users in Microsoft Teams
 
 > [!Note]
 > Web-based authentication on mobile clients requires version 1.4.1 or later of the Teams JavaScript SDK.
