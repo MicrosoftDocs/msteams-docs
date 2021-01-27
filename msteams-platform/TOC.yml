@@ -28,7 +28,7 @@
     href: tutorials/get-started-dotnet-app-studio.md
   - name: Create an app using Node.js
     href: tutorials/get-started-nodejs-app-studio.md
-  - name: Create an app using the Yeoman Generator
+  - name: Create an app using the Yeoman generator
     href: tutorials/get-started-yeoman.md
   - name: Bot samples
     items:

@@ -15,7 +15,7 @@ The SDK is helpful for developing apps with any of the following Teams capabilit
 * [Tabs](../../tabs/what-are-tabs.md)
 * [Task modules](../../task-modules-and-cards/what-are-task-modules.md)
 
-For example, the SDK can make your [tab react to theme changes](../../build-your-first-app/build-channel-tab.md#3-update-the-tab-theme) your users make in the Teams client.
+For example, the SDK can make your [tab react to theme changes](../../build-your-first-app/build-personal-tab.md#3-update-the-tab-theme) your users make in the Teams client.
 
 ## Getting started
 

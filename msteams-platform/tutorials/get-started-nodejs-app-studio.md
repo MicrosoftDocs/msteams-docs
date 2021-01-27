@@ -1,16 +1,14 @@
 ---
-title: Get started with App Studio and Node.js
-description: Get started building great apps in Microsoft Teams using Node.js and App Studio
+title: Tutorial - Create your first app using Node.js
+description: Learn how to get started building Microsoft Teams apps with Node.js.
 keywords: getting started node.js nodejs App Studio
 ms.topic: tutorial
 ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
 ---
 
-# Get started on the Microsoft Teams platform with Node.js and App Studio
+# Create your first Microsoft Teams app using Node.js
 
-The [Microsoft Teams](/microsoftteams/) developer platform makes it easy for you to extend Teams and integrate your own applications and services seamlessly into the Teams workspace. These apps can then be distributed to your enterprise or for teams around the world.
-
-To extend Microsoft Teams, you need to create a Microsoft Teams app. A Microsoft Teams app is a web application that you host. This app can then be integrated into the user's workspace in Teams.
+This tutorial helps you get started creating a Microsoft Teams app using Node.js.
 
 [!include [prepare your environment](~/includes/prepare-environment.md)]
 

@@ -1,27 +1,27 @@
 ---
-title: Get started with the Yeoman generator for Microsoft Teams
-description: Get started building great apps with the Yeoman generator for Microsoft Teams
+title: Tutorial - Create your first app using the Yeoman Generator
+description: Learn how to get started building Microsoft Teams apps with the Yeoman generator.
 keywords: getting started node.js nodejs yeoman
 ms.topic: tutorial
 ms.custom: scenarios:getting-started
 ---
 
-# Build your First Microsoft Teams App
+# Create your first Microsoft Teams app using the Yeoman generator
 
 >[!Note]
->This tutorial comes from the [yeoman generator for Teams wiki](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)
+>This tutorial comes from the [Yeoman generator for Teams wiki](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App).
 
-In this tutorial we will walk through creating your very first Microsoft Teams app using the Microsoft Teams Yeoman generator. It assumes that you have [enabled side-loading of Microsoft Teams apps](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+In this tutorial we will walk through creating your very first Microsoft Teams app using the Microsoft Teams Yeoman generator. It assumes that you have a Teams account that allows [app sideloading](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
 ![yeoman generator git](~/assets/yeoman-demo.gif)
 
 ## Setup and prepare your machine
 
-You need to install the following on your machine before starting to use the Teams Generator.
+You need to install the following on your machine before starting to use the Yeoman generator.
 
-### Install Node
+### Install Node.js
 
-You need to have NodeJS installed on your machine. You should use the latest [LTS version](https://nodejs.org).
+You need to have Node.js installed on your machine. You should use the latest [LTS version](https://nodejs.org).
 
 ### Install a code editor
 
