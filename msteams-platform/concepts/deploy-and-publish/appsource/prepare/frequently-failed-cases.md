@@ -51,7 +51,7 @@ See also [Section 100 — General](/legal/marketplace/certification-policies#100
 
 See also [Section 1100.5 — Customer control](/legal/marketplace/certification-policies#11005-customer-control)
 
-* If your app or add-in depends on external accounts or services, the sign-in, sign-out and sign-up experience must be apparent and reachable across all capabilities in your app.
+* If your app or add-in depends on external accounts or services, the sign-in, sign-out, and sign-up experience must be apparent and reachable across all capabilities in your app.
 * If there is an explicit sign-in option provided to the user, there must be a corresponding sign-out option (even if the app is using [silent authentication](../../../../tabs/how-to/authentication/auth-silent-aad.md)).
 * The sign-out option must only sign the user out of your app's capability and not out of the Teams client.
 * At a minimum, the sign-out option must sign the user out of the same capabilities accessed with the sign-in option. For example, if the sign-in option includes both messaging extension and tab, then the sign-out option must include both messaging extension and tab.
