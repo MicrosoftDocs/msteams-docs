@@ -20,7 +20,7 @@ See also [Section 100 — General](/legal/marketplace/certification-policies#100
 
 * Ensure you are using version 1.4.1 or later of the [Microsoft Teams SDK](https://www.npmjs.com/package/@microsoft/teams-js).
 * Don't make changes to your app while the validation process is in progress. Doing so will require a complete revalidation of your app.
-* Your app must not stop responding, end unexpectedly, or contain programming errors. If an issue occurs, your app must fail and provide valid way-forward information to the user.
+* Your app must not stop responding, end unexpectedly, or contain programming errors. If an issue occurs, your app must fail and provide valid information for the way-forward to the user.
 * Your app must not automatically download, install, or launch any executable code in the user environment. All downloads must seek explicit permission from the user.
 * Any material that you associate with your experience, such as descriptions and support documentation, must be accurate. Use correct spelling, capitalization, punctuation, and grammar in your descriptions and materials.
 * Provide help and support information. It's highly recommended that your app include a help or FAQ link for the first-run user experience. For all personal apps, we recommend providing your help page as a personal tab for a better user experience.
