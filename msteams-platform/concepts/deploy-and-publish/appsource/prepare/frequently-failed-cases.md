@@ -24,7 +24,6 @@ See also [Section 100 — General](/legal/marketplace/certification-policies#100
 * Your app must not automatically download, install, or launch any executable code in the user environment. All downloads must seek explicit permission from the user.
 * Any material that you associate with your experience, such as descriptions and support documentation, must be accurate. Use correct spelling, capitalization, punctuation, and grammar in your descriptions and materials.
 * Provide help and support information. It's highly recommended that your app include a help or FAQ link for the first-run user experience. For all personal apps, we recommend providing your help page as a personal tab for a better user experience.
-* Apps must not take the user out of Teams for core user scenarios. Using task modules or tabs is recommended to display information to users within Teams.
 * All apps must have a visual tour, such as **Take a Tour** or an **App Guide** in its configuration screen that talks about the app features and necessary integration in the following places:
     * The store listing page (Long Description).
     * Tab configuration screen.
@@ -32,13 +31,13 @@ See also [Section 100 — General](/legal/marketplace/certification-policies#100
     * App source metadata.
     * Connector configuration screen.
 
-* The visual tour can be a video, screenshot, a link to a static tab with app details. All these references must be within the Teams environment.
+* The visual tour can be a  video, screenshot, a link to a static tab with app details. All these references must be within the Teams environment.
 
     ![Sample App 1](../../../../assets/images/faq/Sampleapp1.png)
     ![Sample App 2](../../../../assets/images/faq/Sampleapp2.png)
 
 * Increment your app version number in the manifest if you make any manifest changes to your submission.
-* The app must not take users out of Teams for core user scenarios. Link targets in apps must not link to an external browser. Link targets must link to div elements contained within Teams, for example, inside task modules and tabs.
+* The app must not take users out of Teams for core user scenarios. Link targets in apps must not link to an external browser. Link targets must link to div elements contained within Teams, for example, task modules and tabs. Using task modules or tabs is suggested to display information to users within Teams.
 * All core and non-core scenarios must be completed within the Teams environment except for:
   * Privacy Policy
   * Terms Of Use (TOU)
