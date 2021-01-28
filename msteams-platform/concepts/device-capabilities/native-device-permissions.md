@@ -13,22 +13,25 @@ Microsoft Teams supports the following media capabilities:
   * Gallery
   * Location
 
-To access these media capabilities of a device, you must request and manage the device permissions. The device permissions work similarly for all app constructs, such as tabs or messaging extensions.
+You must request and manage the device permissions to access these media capabilities of a device. The device permissions work similarly for all app constructs, such as tabs or messaging extensions.
 
-Accessing a user’s device permissions allows you to build much richer experiences, for example:
+Build much richer experiences on Teams platform  by accessing a user’s device permissions, such as:
 
 * Record and share short videos
-* Record short audio memos and save them for later
+* Record short audio memos and save them for later use
 * Use user location information to display relevant information
 
-While access to these features is standard in most modern web browsers, you must let Teams know which features you’d like to use by updating your app manifest. This allows you to ask for permissions, the same way you would in a browser, while your app is running on the Teams desktop client.
+While access to these features is standard in most of the modern web browsers, you must inform 
+Teams about the features that you are using, by updating your app manifest. This allows you to ask for permissions, while your app is running on the Teams desktop client.
+> [!NOTE] 
+> Currently, the Microsoft Teams support for media capabilities, is only available for mobile clients.
 
 ## Manage permissions
 
 # [Desktop](#tab/desktop)
 
 1. Open Teams.
-1. In the upper right corner of the window, select your profile icon.
+1. Select your profile icon in the upper right corner of the window.
 1. Select **Settings** > **Permissions** from the drop-down menu.
 1. Select your desired settings.
 
@@ -38,7 +41,7 @@ While access to these features is standard in most modern web browsers, you must
 
 1. Open Teams.
 1. Go to **Settings** > **App Permissions**.
-1. Select the app you need to choose settings for.
+1. Select the app for which you need to choose the settings.
 1. Select your desired settings.
 
     ![Device permissions mobile settings screen](../../assets/images/tabs/MobilePermissions.png)
@@ -47,7 +50,7 @@ While access to these features is standard in most modern web browsers, you must
 
 ## Properties
 
-Update your app's `manifest.json` by adding `devicePermissions` and specifying which of the five properties you’d want to use in your application:
+Update your app's `manifest.json` by adding `devicePermissions` and specifying which of the five properties that you use in your application:
 
 ``` json
 "devicePermissions": [
@@ -94,11 +97,11 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 });
 ```
 
-You must leverage the appropriate HTML5 or Teams API, to display a prompt for getting a consent to access device permissions,. 
+You must leverage the appropriate HTML5 or Teams API, to display a prompt for getting a consent to access device permissions. 
+
 > [!IMPORTANT]
->
 > * Support for `camera`, `gallery`, and `microphone` is enabled through [**selectMedia API**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true). Use [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) for a single image capture.
-> * Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). It is recommended you use this API as [**geolocation API**](../../resources/schema/manifest-schema.md#devicepermissions) is currently not fully supported on all desktop clients.
+> * Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). You must use this API for location as [**geolocation API**](../../resources/schema/manifest-schema.md#devicepermissions) is currently not fully supported on all desktop clients.
 
 For example:
  * To prompt the user to access their location you must call `getCurrentPosition`:
@@ -130,37 +133,29 @@ For example:
 
 
 
-To use camera or access photo gallery, Teams mobile asks permission when you call `selectMedia()`:
+* To use camera or access photo gallery, Teams mobile asks permission when you call `selectMedia()`:
 
-```JavaScript
-microsoftTeams.media.selectMedia({ maxMediaCount: 10, mediaType: microsoftTeams.media.MediaType.Image }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
-  /* ... */
-});
-```
+    ```JavaScript
+    microsoftTeams.media.selectMedia({ maxMediaCount: 10, mediaType: microsoftTeams.media.MediaType.Image }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
+      /* ... */
+    );
+    ```
 
-To use mic, Teams mobile asks permission when you call `selectMedia()`:
+* To use mic, Teams mobile asks permission when you call `selectMedia()`:
 
-```JavaScript 
-microsoftTeams.media.selectMedia({ maxMediaCount: 1, mediaType: microsoftTeams.media.MediaType.Audio }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
-  /* ... */
-});
-```
+    ```JavaScript 
+    microsoftTeams.media.selectMedia({ maxMediaCount: 1, mediaType: microsoftTeams.media.MediaType.Audio }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
+      /* ... */
+    });
+    ```
 
-To prompt user to share location on map interface, Teams mobile asks permission when you call `getLocation()`:
+* To prompt user to share location on map interface, Teams mobile asks permission when you call `getLocation()`:
 
-```JavaScript 
-microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
-  /* ... *
-/});
-```
-
-## Permission behavior across login sessions
-
-Device permissions are stored for every login session. This means that if you sign in to another instance of Teams, for example, on another computer, your device permissions from your previous sessions are not available. Therefore, you must re-consent to device permissions for the new session. This also means, if you sign out of Teams or switch tenants in Teams, your device permissions are deleted for the previous login session. 
-
-> [!NOTE]
-> When you give consent to the native device permissions , it is valid for your _current_ login session only.
-
+    ```JavaScript 
+    microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
+      /* ... *
+    /});
+    ```
 # [Desktop](#tab/desktop)
 
 ![Tabs desktop device permissions prompt](~/assets/images/tabs/device-permissions-prompt.png)
@@ -168,6 +163,14 @@ Device permissions are stored for every login session. This means that if you si
 # [Mobile](#tab/mobile)
 
 ![Tabs mobile device permissions prompt](../../assets/images/tabs/MobileLocationPermission.png)
+
+
+## Permission behavior across login sessions
+
+Device permissions are stored for every login session. This means that if you sign in to another instance of Teams, for example, on another computer, your device permissions from your previous sessions are not available. Therefore, you must re-consent to device permissions for the new session. This also means, if you sign out of Teams or switch tenants in Teams, your device permissions are deleted for the previous login session. 
+
+> [!NOTE]
+> When you give consent to the native device permissions, it is valid only for your _current_ login session.
 
 ## See also
 [Media capabilities in Teams](mobile-camera-image-permissions.md)

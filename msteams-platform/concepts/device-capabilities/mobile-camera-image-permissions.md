@@ -8,7 +8,9 @@ ms.author: lajanuar
 
 # Integrate media capabilities 
 
-Integrate the media capabilities within your Teams mobile app by using the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true). The SDK provides the tools necessary for your app to access the user’s [device permissions](native-device-permissions.md) and build a richer experience. After accessing device permissions, integrate media capabilities by updating the app manifest file and using the media capability APIs. It is important to understand [sample code snippets](#sample-code-snippets) for calling the respective APIs which enable you to use native media capabilities.
+The [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) provides the tools necessary for your Teams mobile app to access the user’s [device permissions](native-device-permissions.md) and build a richer experience. After accessing device permissions, integrate media capabilities by updating the app manifest file and using the media capability APIs. It is important to understand [sample code snippets](#sample-code-snippets) for calling the respective APIs which allow you to use native media capabilities.
+> [!NOTE] 
+> Currently, the Microsoft Teams support for media capabilities, is only available for mobile clients.
 
 ## Updating manifest
 
@@ -25,10 +27,6 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 
 ## Using media capability APIs
 
-[!IMPORTANT]
->* The `selectMedia`, `getMedia`, and `viewImages` APIs can be invoked from multiple Teams surfaces such as task modules, tabs, and personal apps. For more details, see [Entry points for Teams apps](../extensibility-points.md).
->* `selectMedia` API has been extended to support mic and audio properties.
-
 The [selectMedia](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true), [getMedia](/javascript/api/@microsoft/teams-js/_media?view=msteams-client-js-latest#getMedia__error__SdkError__blob__Blob_____void_&preserve-view=true), and [viewImages](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#viewImages_ImageUri_____error___SdkError_____void_&preserve-view=true) APIs enable you to use native media capabilities as follows:
 
 * Use native **microphone** to allow users to **record audio** (record 10 minutes of conversation) from the device.
@@ -41,13 +39,18 @@ The [selectMedia](/javascript/api/@microsoft/teams-js/media?view=msteams-client-
   * Crop and rotate the images.
   * Add text, ink, or freehand annotation to the image.
 
+> [!IMPORTANT]
+>* The `selectMedia`, `getMedia`, and `viewImages` APIs must be invoked from multiple Teams surfaces such as task modules, tabs, and personal apps. For more details, see [Entry points for Teams apps](../extensibility-points.md).
+>* `selectMedia` API has been extended to support mic and audio properties.
+
 You must use the following set of APIs to enable your device's media capabilities:
 
 | API      | Description   |
 | --- | --- |
-| [**selectMedia**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest&branch=master#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true)| This API allows users to **capture or select media from a native device** and return to the web-app. The users can choose to edit, crop, rotate, annotate, or draw over images before submission. In response to **selectMedia**, the web-app receives media ids of selected images and a thumbnail of the selected media. <br/><br/>  This API also allows the users to record audio from a native device and return to the web-app. The users can choose to pause, re-record, and play recording preview before submission. In response to **selectMedia**, the web-app receives media IDs of the selected audio recording. The media type must be set to 4 for audio. <br/> Use `maxDuration`, if you require to configure a duration in minutes for recording the conversation. The current duration for recording is 10 minutes after which the recording terminates.  |
-| [**getMedia**](/javascript/api/@microsoft/teams-js/_media?view=msteams-client-js-latest&branch=master#getMedia__error__SdkError__blob__Blob_____void_&preserve-view=true)| This API retrieves the media in chunks irrespective of  the size. These chunks are assembled and sent back to the web app as a file or blob. With this API, an image is broken into smaller chunks to facilitate large image transfer. |
-| [**viewImages**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#viewImages_ImageUri_____error___SdkError_____void_&preserve-view=true)| This API enables the user to view images full-screen mode as a scrollable list.|
+| [**selectMedia**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest&branch=master#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true)| This API allows users to **capture or select media from a native device** and return to the web-app. The users edit, crop, rotate, annotate, or draw over images before submission. In response to **selectMedia**, the web-app receives the media IDs of selected images and a thumbnail of the selected media. <br/><br/>  This API also allows the users to record audio from a native device and return to the web-app. The users pause, re-record, and play recording preview before submission. In response to **selectMedia**, the web-app receives media IDs of the selected audio recording. Set the media type to four for audio. <br/> Use `maxDuration`, if you require to configure a duration in minutes for recording the conversation. The current duration for recording is 10 minutes, after which the recording terminates.  |
+| [**getMedia**](/javascript/api/@microsoft/teams-js/_media?view=msteams-client-js-latest&branch=master#getMedia__error__SdkError__blob__Blob_____void_&preserve-view=true)| This API retrieves the media in chunks irrespective of  the size. These chunks are assembled and sent back to the web app as a file or blob. This API breaks an image into smaller chunks,ss to facilitate large image transfer. |
+| [**viewImages**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#viewImages_ImageUri_____error___SdkError_____void_&preserve-view=true)| This API enables the user to view images in  full-screen mode as a scrollable list.|
+
 
 **Web app experience for selectMedia API for image capability**
 ![device camera and image experience in Teams](../../assets/images/tabs/image-capability.png)
