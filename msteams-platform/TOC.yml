@@ -230,6 +230,8 @@
       href: bots/how-to/update-and-delete-bot-messages.md     
   - name: Get context for your bot
     href: bots/how-to/get-teams-context.md
+  - name: Send and receive files
+    href: bots/how-to/bots-filesv4.md
   - name: Handling bot rate limiting
     href: bots/how-to/rate-limit.md
   - name: Calling and meeting bots
