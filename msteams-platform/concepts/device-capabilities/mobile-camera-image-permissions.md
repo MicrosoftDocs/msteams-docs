@@ -1,16 +1,31 @@
 ---
-title: Media capabilities in Teams
+title: Integrate media capabilities in Teams
 description: How to use Teams Javascript client SDK to enable media capabilities
 keywords: camera image microphone capabilities native device permissions media
 ms.topic: conceptual
 ms.author: lajanuar
 ---
 
-# Media capabilities in Teams
+# Integrate media capabilities in Teams
 
-This document guides you on how to integrate the media capabilities within Teams platform. To   integrate media capabilities, you have to update manifest, use media capability APIs. See the [sample code snippets](#sample-code-snippets) for calling the APIs.
+To integrate media capabilities, update the manifest file and use the media capability APIs. To understand how to call the APIs, see the [sample code snippets](#sample-code-snippets).
 
-You must use the  [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), to easily integrate media  capabilities within your Teams mobile app. The SDK provides the tools necessary for your app to access a user’s [device permissions](native-device-permissions.md?tabs=desktop#device-permissions) and build a richer experience.
+You must use the  [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), to easily integrate media  capabilities within your Teams mobile app. The SDK provides the tools necessary for your app to access a user’s [device permissions](native-device-permissions.md) and build a richer experience.
+
+## Updating manifest
+
+Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `media`. This allows your app to ask for requisite permissions from users before they use the camera to capture the image, open the gallery to select an image to submit as an attachment, or use the microphone to record the conversation.
+
+``` json
+"devicePermissions": [
+    "media",
+],
+```
+
+> [!NOTE]
+> The _Request Permissions_ prompt is automatically displayed when a relevant Teams API is initiated. For more details, see [Request device permissions](native-device-permissions.md).
+
+## Using media capability APIs
 
 [!IMPORTANT]
 >* The `selectMedia`, `getMedia`, and `viewImages` APIs can be invoked from multiple Teams surfaces such as task modules, tabs, and personal apps. For more details, see [Entry points for Teams apps](../extensibility-points.md).
@@ -27,21 +42,6 @@ The [selectMedia](/javascript/api/@microsoft/teams-js/media?view=msteams-client-
   * Scan document, whiteboard, business cards, etc., through the camera.
   * Crop and rotate the images.
   * Add text, ink, or freehand annotation to the image.
-
-## Updating manifest
-
-Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `media`. This allows your app to ask for requisite permissions from users before they use the camera to capture the image, open the gallery to select an image to submit as an attachment, or use the microphone to record the conversation.
-
-``` json
-"devicePermissions": [
-    "media",
-],
-```
-
-> [!NOTE]
-> The _Request Permissions_ prompt is automatically displayed when a relevant Teams API is initiated. For more details, see [Request device permissions](native-device-permissions.md).
-
-## Using media capability APIs
 
 You must use the following set of APIs to enable your device's media capabilities:
 
