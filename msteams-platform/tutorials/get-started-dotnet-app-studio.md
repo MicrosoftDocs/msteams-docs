@@ -1,19 +1,15 @@
 ---
-title: Get started with C#/.NET
-description: Get started building great apps in Microsoft Teams using C#/.NET
+title: Tutorial - Create your first app using C#
+description: Learn how to get started building Microsoft Teams apps with C#/.NET.
 keywords: getting started .net c# csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.topic: tutorial
 ms.date: 11/09/2018
 ---
 
-# Get started on the Microsoft Teams platform with C#/.NET and App Studio
+# Create your first Microsoft Teams app using C#
 
-The [Microsoft Teams](/microsoftteams/) developer platform makes it easy for you to extend Teams and integrate your own applications and services seamlessly into the Teams workspace. These apps can then be distributed to your enterprise or for teams around the world.
-
-To extend Microsoft Teams, you will need to create a Microsoft Teams app. A Microsoft Teams app is a web application that you host. This app can then be integrated into the user's workspace in Teams.
-
-This tutorial helps you get started creating a Microsoft Teams app using C# on .NET. You can test the app by loading it into a Team that you have permissions for, or into a test tenant created using the Office Developer Program.
+This tutorial helps you get started creating a Microsoft Teams app using C# on .NET.
 
 [!include [prepare your environment](~/includes/prepare-environment.md)]
 

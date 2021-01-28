@@ -28,7 +28,7 @@
     href: tutorials/get-started-dotnet-app-studio.md
   - name: Create an app using Node.js
     href: tutorials/get-started-nodejs-app-studio.md
-  - name: Create an app using the Yeoman Generator
+  - name: Create an app using the Yeoman generator
     href: tutorials/get-started-yeoman.md
   - name: Bot samples
     items:
@@ -122,7 +122,7 @@
     href: toolkit/visual-studio-code-overview.md
   - name: Teams Toolkit for Visual Studio
     href: toolkit/visual-studio-overview.md
-  - name: Yeoman Generator for Teams (GitHub)
+  - name: Yeoman generator for Teams (GitHub)
     href: https://github.com/pnp/generator-teams
   - name: App Studio
     href: concepts/build-and-test/app-studio-overview.md
