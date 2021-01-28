@@ -173,5 +173,5 @@ Device permissions are stored for every login session. This means that if you si
 > When you give consent to the native device permissions, it is valid only for your _current_ login session.
 
 ## See also
-[Media capabilities in Teams](mobile-camera-image-permissions.md)
+* [Media capabilities in Teams](mobile-camera-image-permissions.md)
 to integrate your native device media capabilities within Teams mobile app.
