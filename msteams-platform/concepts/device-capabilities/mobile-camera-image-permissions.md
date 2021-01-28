@@ -1,12 +1,12 @@
 ---
-title: Integrate media capabilities in Teams
+title: Integrate media capabilities 
 description: How to use Teams Javascript client SDK to enable media capabilities
 keywords: camera image microphone capabilities native device permissions media
 ms.topic: conceptual
 ms.author: lajanuar
 ---
 
-# Integrate media capabilities in Teams
+# Integrate media capabilities 
 
 To integrate media capabilities, update the manifest file and use the media capability APIs. To understand how to call the APIs, see the [sample code snippets](#sample-code-snippets).
 

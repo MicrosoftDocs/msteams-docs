@@ -88,7 +88,7 @@
       href: concepts/device-capabilities/device-capabilities-overview.md
     - name: Request device permissions
       href: concepts/device-capabilities/native-device-permissions.md
-    - name: Media capabilities in Teams
+    - name: Integrate media capabilities
       href: concepts/device-capabilities/mobile-camera-image-permissions.md
 - name: Design your app
   items:
