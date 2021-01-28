@@ -8,18 +8,13 @@ keywords: teams tabs development
 
 # Request device permissions for your Microsoft Teams app
 
-This document guides you on what are the permissions required for accessing the media capabilities of a device and how to request and manage the permissions.
+Microsoft Teams supports the following media capabilities:
+  * Camera
+  * Microphone
+  * Gallery
+  * Location
 
-[!NOTE] 
-* Currently, only the following media capabilities are supported:
-    * Camera
-    * Microphone
-    * Gallery
-    * Location
- 
-* The device permissions work in the same way for all app constructs, such as tabs or messaging extensions.
-
-## Device permissions
+To access these media capabilities of a device, you must request and manage the device permissions. The device permissions work similarly for all app constructs, such as tabs or messaging extensions.
 
 Accessing a user’s device permissions allows you to build much richer experiences, for example:
 
@@ -35,19 +30,19 @@ While access to these features is standard in most modern web browsers, you must
 
 1. Open Teams.
 1. In the upper right corner of the window, select your profile icon.
-1. Select **Settings** -> **Permissions** from the drop-down menu.
+1. Select **Settings** > **Permissions** from the drop-down menu.
 1. Select your desired settings.
 
-![Device permissions desktop settings screen](../../assets/images/tabs/device-permissions.png)
+   ![Device permissions desktop settings screen](../../assets/images/tabs/device-permissions.png)
 
 # [Mobile](#tab/mobile)
 
 1. Open Teams.
-1. Go to **Settings** -> **App Permissions**.
+1. Go to **Settings** > **App Permissions**.
 1. Select the app you need to choose settings for.
 1. Select your desired settings.
 
-![Device permissions mobile settings screen](../../assets/images/tabs/MobilePermissions.png)
+    ![Device permissions mobile settings screen](../../assets/images/tabs/MobilePermissions.png)
 
 ---
 
@@ -80,7 +75,7 @@ Each property allows you to prompt the user to ask for their consent:
 
 ## Check permissions from your app
 
-After you’ve added `devicePermissions` to your app manifest, check permissions using the HTML5 “permissions” API without causing a prompt.
+After you’ve added `devicePermissions` to your app manifest, check permissions using the HTML5 “permissions” API without causing a prompt:
 
 ``` Javascript
 // Different query options:
@@ -100,40 +95,41 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 });
 ```
 
-## Prompt the user
-
 To show a prompt to get consent to access device permissions you must leverage the appropriate HTML5 or Teams API. 
-
-For example, to prompt the user to access their location you must call `getCurrentPosition`:
-
-```Javascript
-navigator.geolocation.getCurrentPosition(function (position) { /*... */ });
-```
-
-To use the camera on desktop or web, Teams displays a permission prompt when you call `getUserMedia`:
-
-```Javascript
-navigator.mediaDevices.getUserMedia({ audio: true, video: true });
-```
-
-To capture the image on mobile, Teams mobile asks for permission when you call `captureImage()`:
-
-```Javascript
-microsoftTeams.media.captureImage((error: microsoftTeams.SdkError, files: microsoftTeams.media.File[]) => {
-  /* ... */
-});
-```
-
-Notifications will prompt the user when you call `requestPermission`:
-
-```Javascript
-Notification.requestPermission(function(result) { /* ... */ });
-```
-
 > [!IMPORTANT]
 >
 > * Support for `camera`, `gallery`, and `microphone` is enabled through [**selectMedia API**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true). For single image capture you may use [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true).
 > * Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). It's recommended you use this API as [**geolocation API**](../../resources/schema/manifest-schema.md#devicepermissions) is currently not fully supported on all desktop clients.
+
+For example:
+* To prompt the user to access their location you must call `getCurrentPosition`:
+
+    ```Javascript
+    navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
+    ```
+
+* To use the camera on desktop or web, Teams displays a permission prompt when you call `getUserMedia`:
+
+    ```Javascript
+    navigator.mediaDevices.getUserMedia({ audio: true, video: true });
+    ```
+
+* To capture the image on mobile, Teams mobile asks for permission when you call `captureImage()`:
+
+    ```Javascript
+    microsoftTeams.media.captureImage((error: microsoftTeams.SdkError, files: microsoftTeams.media.File[]) => {
+      /* ... */
+    });
+    ```
+
+* Notifications will prompt the user when you call `requestPermission`:
+
+    ```Javascript
+    Notification.requestPermission(function(result) { /* ... */ });
+    ```
+
+
+
 
 To use camera or access photo gallery, Teams mobile will ask permission when you call `selectMedia()`:
 
@@ -170,11 +166,11 @@ microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }
 
 ## Permission behavior across login sessions
 
-Native device permissions are stored for every login session. It means that if you log into another instance of Teams, for example, on another computer, your device permissions from your previous sessions are not available. Instead, you must re-consent to device permissions for the new login session. It also means, if you log out of Teams or switch tenants in Teams, your device permissions are deleted for the previous login session. 
+Device permissions are stored for every login session. This means that if you sign in to another instance of Teams, for example, on another computer, your device permissions from your previous sessions are not available. Therefore, you must re-consent to device permissions for the new session. This also means, if you sign out of Teams or switch tenants in Teams, your device permissions are deleted for the previous login session. 
 
-[!NOTE]
-When developing native device permissions, the native capabilities you consent to are only for your _current_ login session.
+> [!NOTE]
+When you develop native device permissions, the native capabilities you consent to are only for your _current_ login session.
 
 ## See also
- [Media capabilities in Teams.](mobile-camera-image-permissions.md)
+[Media capabilities in Teams](mobile-camera-image-permissions.md)
 to integrate your native device media capabilities within Teams mobile app.
