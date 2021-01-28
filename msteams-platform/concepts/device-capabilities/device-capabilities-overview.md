@@ -29,5 +29,5 @@ The following table lists the error codes and under what conditions they are gen
 | **6000** |INSUFFICIENT_RESOURCES | Operation couldn't be completed due to insufficient resources.|
 |**7000** | THROTTLE | Platform throttles the request because the API is invoked too frequently.|
 |  **8000** | USER_ABORT |User aborts the operation.|
-| **9000**| OLD_PLATFORM | Platform code is outdated and doesn't implement this API.|
+| **9000**| OLD_PLATFORM | Platform code is outdated and does not implement this API.|
 | **10000**| SIZE_EXCEEDED |  Return value is too big and has exceeded the platform size boundaries.|
