@@ -6,7 +6,7 @@ ms.topic: overview
 ---
 # What are device capabilities? 
 
-Device capabilities in Microsoft Teams allows you to access peripheral and internal devices, such as camera and microphone. The integration of device capability within Teams is used to enhance the user experience. It allows users to connect and collaborate with other users or groups on the go.
+Device capabilities in Microsoft Teams allows you to access peripheral and internal devices, such as camera and microphone. The integration of device capabilities within Teams is used to enhance the user experience. This integration enables users to connect and collaborate with other users or groups on the go.
 
 Currently, Teams mobile client only supports access to `camera`, `microphone`, `gallery`, and `location` through native device capabilities and is available on all app constructs, such as messaging extensions, tabs, and personal apps.
 
