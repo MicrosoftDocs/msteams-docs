@@ -4,6 +4,7 @@ description: Describes tips for a successful Teams store submission and common r
 author: laujan
 ms.author: lajanuar
 ms.topic: reference
+keywords: Teams apps validation most failed test cases rapid approval appsource publish
 ---
 # Tips for a successful Microsoft Teams app submission
 
