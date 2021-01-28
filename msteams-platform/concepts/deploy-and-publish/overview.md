@@ -13,6 +13,7 @@ Once you've created your app there are three options for distributing it:
 3. [Publish your app through AppSource](#publish-to-appsource).
 
 ## Enterprise organizations
+Test information
 
 ### Upload your app directly
 
