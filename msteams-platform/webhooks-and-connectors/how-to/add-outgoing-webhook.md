@@ -21,6 +21,37 @@ Webhooks are a great way for Teams to integrate with external apps. A webhook is
 |Standard HTTP message exchange|Responses will appear in the same chain as the original request message and can include any Bot Framework message content (rich text, images, cards, and emojis). **Note**: Although outgoing webhooks can use cards, they cannot use any card actions except for `openURL`.|
 | Teams API method support|In Teams, outgoing webhooks send an HTTP POST to a web service and process a response back. They cannot access any other APIs like retrieve the roster or list of channels in a team.|
 
+## Creating actionable messages
+
+The example in the preceding section includes three visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions. Each `ActionCard` contains an input type; a text field, a date picker, or a multi-choice list. Each `ActionCard` action has an associated action, for example, `HttpPOST`.
+
+Connector cards support three types of actions:
+
+- `ActionCard` Presents one or more input types and associated actions.
+- `HttpPOST` Sends a POST request to a URL.
+- `OpenUri` Opens a URI in a separate browser or app, optionally targets different URIs based on operating systems.
+
+The `ActionCard` action supports three input types:
+
+- `TextInput` A single-line or multiline text field with an optional length limit.
+- `DateInput` A date selector with an optional time selector.
+- `MultichoiceInput` An enumerated list of choices offering either a single selection or multiple selections.
+
+`MultichoiceInput` supports a `style` property that controls whether the list initially appears fully expanded. The default value of `style` depends on the value of `isMultiSelect`.
+
+| `isMultiSelect` | `style` default |
+| --- | --- |
+| `false` or not specified | `compact` |
+| `true` | `expanded` |
+
+Specify both `"isMultiSelect": true` and `"style": true` if you want the multi-select list to be displayed in a compact style.
+
+> [!NOTE]
+> * Specifying `compact` for the `style` property in Microsoft Teams is the same as specifying `normal` for the `style` property in Microsoft Outlook.
+> * Webhooks support only Office 365 (message back) cards and adaptive cards.
+
+For all other details about connector card actions, see **[Actions](/outlook/actionable-messages/card-reference#actions)** in the actionable message card reference.
+
 ## Adding outgoing webhook processing to your app
 
 **Scenario**: Push change status notifications on a Teams channel database server to your app.  
