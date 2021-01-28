@@ -8,23 +8,16 @@ keywords: teams tabs development
 
 # Request device permissions for your Microsoft Teams app
 
-Enrich your app with features that require access to native device functionality, such as:
-
-> [!div class="checklist"]
->
-> * Camera
-> * Microphone
-> * Gallery
-> * Location
+This document guides you on what are the permissions required for accessing the media capabilities of a device and how to request and manage the permissions.
 
 [!NOTE] 
-* To integrate your native device media capabilities within Teams mobile app, see [Media capabilities in Teams.](mobile-camera-image-permissions.md)
+* Currently, only the following media capabilities are supported:
+    * Camera
+    * Microphone
+    * Gallery
+    * Location
+ 
 * The device permissions work in the same way for all app constructs, such as tabs or messaging extensions.
-
-> [!IMPORTANT]
->
-> * Support for `camera`, `gallery`, and `microphone` is enabled through [**selectMedia API**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true). For single image capture you may use [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true).
-> * Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). It's recommended you use this API as [**geolocation API**](../../resources/schema/manifest-schema.md#devicepermissions) is currently not fully supported on all desktop clients.
 
 ## Device permissions
 
@@ -137,6 +130,11 @@ Notifications will prompt the user when you call `requestPermission`:
 Notification.requestPermission(function(result) { /* ... */ });
 ```
 
+> [!IMPORTANT]
+>
+> * Support for `camera`, `gallery`, and `microphone` is enabled through [**selectMedia API**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true). For single image capture you may use [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true).
+> * Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). It's recommended you use this API as [**geolocation API**](../../resources/schema/manifest-schema.md#devicepermissions) is currently not fully supported on all desktop clients.
+
 To use camera or access photo gallery, Teams mobile will ask permission when you call `selectMedia()`:
 
 ```JavaScript
@@ -176,3 +174,7 @@ Native device permissions are stored for every login session. It means that if y
 
 [!NOTE]
 When developing native device permissions, the native capabilities you consent to are only for your _current_ login session.
+
+## See also
+ [Media capabilities in Teams.](mobile-camera-image-permissions.md)
+to integrate your native device media capabilities within Teams mobile app.

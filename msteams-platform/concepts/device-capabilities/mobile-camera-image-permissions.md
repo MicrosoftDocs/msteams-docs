@@ -8,13 +8,13 @@ ms.author: lajanuar
 
 # Media capabilities in Teams
 
->[!IMPORTANT]
->
->* Currently, the Microsoft Teams support for media capabilities, such as camera, image, location, and Microphone is only available for mobile clients.
->* The `selectMedia`, `getMedia`, and `viewImages` APIs can be invoked from multiple Teams surfaces such as task modules, tabs, and personal apps. For more details, see [Entry points for Teams apps](../extensibility-points.md).
->* `selectMedia` API has been extended to support mic and audio properties. 
+This document guides you on how to integrate the media capabilities within Teams platform. To   integrate media capabilities, you have to update manifest, use media capability APIs. See the [sample code snippets](#sample-code-snippets) for calling the APIs.
 
 You must use the  [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), to easily integrate media  capabilities within your Teams mobile app. The SDK provides the tools necessary for your app to access a user’s [device permissions](native-device-permissions.md?tabs=desktop#device-permissions) and build a richer experience.
+
+[!IMPORTANT]
+>* The `selectMedia`, `getMedia`, and `viewImages` APIs can be invoked from multiple Teams surfaces such as task modules, tabs, and personal apps. For more details, see [Entry points for Teams apps](../extensibility-points.md).
+>* `selectMedia` API has been extended to support mic and audio properties.
 
 The [selectMedia](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true), [getMedia](/javascript/api/@microsoft/teams-js/_media?view=msteams-client-js-latest#getMedia__error__SdkError__blob__Blob_____void_&preserve-view=true), and [viewImages](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#viewImages_ImageUri_____error___SdkError_____void_&preserve-view=true) APIs enable you to use native media capabilities as follows:
 
@@ -28,7 +28,7 @@ The [selectMedia](/javascript/api/@microsoft/teams-js/media?view=msteams-client-
   * Crop and rotate the images.
   * Add text, ink, or freehand annotation to the image.
 
-## Get started
+## Updating manifest
 
 Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `media`. This allows your app to ask for requisite permissions from users before they use the camera to capture the image, open the gallery to select an image to submit as an attachment, or use the microphone to record the conversation.
 
