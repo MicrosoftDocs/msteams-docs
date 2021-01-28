@@ -10,7 +10,7 @@ Device capabilities in Microsoft Teams allows you to access peripheral and inter
 
 Currently, Teams mobile client only supports access to `camera`, `microphone`, `gallery`, and `location` through native device capabilities and is available on all app constructs, such as messaging extensions, tabs, and personal apps.
 
-For integrating the native device capability within Teams, you must have the required [permissions](native-device-permissions.md) to access the devices, and then [integrate these capabilites](mobile-camera-image-permissions.md). It is also important to understand the [API response errors](#error-handling) that are generated and how to handle them. 
+To integrate the native device capabilities within Teams, you must have the required [permissions](native-device-permissions.md) to access the devices, and then [integrate these capabilities](mobile-camera-image-permissions.md). 
 
 ## Error handling
 
