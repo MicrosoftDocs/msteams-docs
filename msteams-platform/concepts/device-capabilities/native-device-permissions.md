@@ -101,19 +101,19 @@ To show a prompt to get consent to access device permissions you must leverage t
 > * Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). It's recommended you use this API as [**geolocation API**](../../resources/schema/manifest-schema.md#devicepermissions) is currently not fully supported on all desktop clients.
 
 For example:
-* To prompt the user to access their location you must call `getCurrentPosition`:
+ * To prompt the user to access their location you must call `getCurrentPosition`:
 
     ```Javascript
     navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
     ```
 
-* To use the camera on desktop or web, Teams displays a permission prompt when you call `getUserMedia`:
+ * To use the camera on desktop or web, Teams displays a permission prompt when you call `getUserMedia`:
 
     ```Javascript
     navigator.mediaDevices.getUserMedia({ audio: true, video: true });
     ```
 
-* To capture the image on mobile, Teams mobile asks for permission when you call `captureImage()`:
+ * To capture the image on mobile, Teams mobile asks for permission when you call `captureImage()`:
 
     ```Javascript
     microsoftTeams.media.captureImage((error: microsoftTeams.SdkError, files: microsoftTeams.media.File[]) => {
@@ -121,7 +121,7 @@ For example:
     });
     ```
 
-* Notifications will prompt the user when you call `requestPermission`:
+ * Notifications will prompt the user when you call `requestPermission`:
 
     ```Javascript
     Notification.requestPermission(function(result) { /* ... */ });
@@ -154,6 +154,13 @@ microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }
 /});
 ```
 
+## Permission behavior across login sessions
+
+Device permissions are stored for every login session. This means that if you sign in to another instance of Teams, for example, on another computer, your device permissions from your previous sessions are not available. Therefore, you must re-consent to device permissions for the new session. This also means, if you sign out of Teams or switch tenants in Teams, your device permissions are deleted for the previous login session. 
+
+> [!NOTE]
+When you develop native device permissions, the native capabilities you consent to are only for your _current_ login session.
+
 # [Desktop](#tab/desktop)
 
 ![Tabs desktop device permissions prompt](~/assets/images/tabs/device-permissions-prompt.png)
@@ -161,14 +168,6 @@ microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }
 # [Mobile](#tab/mobile)
 
 ![Tabs mobile device permissions prompt](../../assets/images/tabs/MobileLocationPermission.png)
-
-
-## Permission behavior across login sessions
-
-Device permissions are stored for every login session. This means that if you sign in to another instance of Teams, for example, on another computer, your device permissions from your previous sessions are not available. Therefore, you must re-consent to device permissions for the new session. This also means, if you sign out of Teams or switch tenants in Teams, your device permissions are deleted for the previous login session. 
-
-> [!NOTE]
-When you develop native device permissions, the native capabilities you consent to are only for your _current_ login session.
 
 ## See also
 [Media capabilities in Teams](mobile-camera-image-permissions.md)
