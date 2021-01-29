@@ -1,5 +1,3 @@
-### YamlMime:Landing
-
 ---
 title: Build apps for the Microsoft Teams platform
 author: heath-hamilton
@@ -20,9 +18,7 @@ landingContent:
       - linkListType: concept
         links:
           - text: Build your first Microsoft Teams app overview
-            url: build-first-app-overview
-          - text: Designing your Microsoft Teams app
-            url: ../design-teams-app-overview.md
+            url: ./build-first-app-overview.md
       - linkListType: video
         links:
           - text: MS
