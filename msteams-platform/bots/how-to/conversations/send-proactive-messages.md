@@ -36,7 +36,7 @@ To create a new conversation or conversation thread in a channel, you need the c
 1. When a new user is added to a context where your app is installed, you'll receive a [`onMembersAdded` Activity](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 1. You can retrieve the [list of channels](~/bots/how-to/get-teams-context.md) in a team your app is installed.
 1. You can retrieve the [list of members](~/bots/how-to/get-teams-context.md) of a team your app is installed.
-Every Activity your bot receives must contain the required information.
+1. Every Activity your bot receives must contain the required information.
 
 Regardless of how you gain the information, you'll need to store the `tenantId` and either the `userId` or `channelId` to create a new conversation. You can also use the `teamId` to create a new conversation thread in the general or default channel of a team.
 
