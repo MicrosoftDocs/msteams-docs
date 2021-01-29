@@ -13,7 +13,6 @@ Device capabilities in the Microsoft Teams allow you to access the following cap
     * Gallery
     * Video
 * Location
-* QR bar code 
 
 The integration of device capabilities within Teams enhances the user experience. This integration enables users to connect and collaborate with other users or groups on the go.
 

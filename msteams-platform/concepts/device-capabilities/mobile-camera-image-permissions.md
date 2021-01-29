@@ -8,7 +8,9 @@ ms.author: lajanuar
 
 # Integrate media capabilities 
 
-The [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) provides the tools necessary for your Teams mobile app to access the user’s [device permissions](native-device-permissions.md) and build a richer experience. After accessing device permissions, integrate media capabilities by updating the app manifest file and using the media capability APIs. It is important to understand [sample code snippets](#sample-code-snippets) for calling the respective APIs which allow you to use native media capabilities.
+The [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) provides the tools necessary for your Teams mobile app to access the user’s [device permissions](native-device-permissions.md) and build a richer experience. After accessing device permissions, integrate media capabilities by updating the app manifest file and using the media capability APIs. 
+
+It is important to understand [sample code snippets](#sample-code-snippets) for calling the respective APIs which allow you to use native media capabilities.
 > [!NOTE] 
 > Currently, the Microsoft Teams support for media capabilities, is only available for mobile clients.
 
@@ -33,19 +35,19 @@ The [selectMedia](/javascript/api/@microsoft/teams-js/media?view=msteams-client-
 * Use native **camera control** to allow users to **capture and attach images** on the go.
 * Use native **gallery support** to allow users to **select device images** as attachments.
 * Use native **image viewer control** to **preview multiple images** at one time.
-* Support **large image transfer** (from 1 MB to 50 MB) via the SDK bridge
+* Support **large image transfer** (from 1 MB to 50 MB) through the SDK bridge.
 * Support **advanced image capabilities** allowing users to preview and edit images:
-  * Scan document, whiteboard, business cards, etc., through the camera.
+  * Scan document, whiteboard, and business cards  through the camera.
   * Crop and rotate the images.
   * Add text, ink, or freehand annotation to the image.
 
 > [!IMPORTANT]
->* The `selectMedia`, `getMedia`, and `viewImages` APIs must be invoked from multiple Teams surfaces such as task modules, tabs, and personal apps. For more details, see [Entry points for Teams apps](../extensibility-points.md).
+>*   The `selectMedia`, `getMedia`, and `viewImages` APIs must be invoked from multiple Teams surfaces such as task modules, tabs, and personal apps. For more details, see [Entry points for Teams apps](../extensibility-points.md).
 >* `selectMedia` API has been extended to support mic and audio properties.
 
 You must use the following set of APIs to enable your device's media capabilities:
 
-| API      | Description   |
+| API      | Description   |API usage examples  |
 | --- | --- |
 | [**selectMedia**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest&branch=master#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true)| This API allows users to **capture or select media from a native device** and return to the web-app. The users edit, crop, rotate, annotate, or draw over images before submission. In response to **selectMedia**, the web-app receives the media IDs of selected images and a thumbnail of the selected media. <br/><br/>  This API also allows the users to record audio from a native device and return to the web-app. The users pause, re-record, and play recording preview before submission. In response to **selectMedia**, the web-app receives media IDs of the selected audio recording. Set the media type to four for audio. <br/> Use `maxDuration`, if you require to configure a duration in minutes for recording the conversation. The current duration for recording is 10 minutes, after which the recording terminates.  |
 | [**getMedia**](/javascript/api/@microsoft/teams-js/_media?view=msteams-client-js-latest&branch=master#getMedia__error__SdkError__blob__Blob_____void_&preserve-view=true)| This API retrieves the media in chunks irrespective of  the size. These chunks are assembled and sent back to the web app as a file or blob. This API breaks an image into smaller chunks,ss to facilitate large image transfer. |

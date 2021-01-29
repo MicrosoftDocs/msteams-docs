@@ -7,12 +7,6 @@ ms.topic: how-to
 
 # Request device permissions for your Microsoft Teams app
 
-Microsoft Teams supports the following media capabilities:
-  * Camera
-  * Microphone
-  * Gallery
-  * Location
-
 You must request and manage the device permissions to access these media capabilities of a device. The device permissions work similarly for all app constructs, such as tabs or messaging extensions.
 
 Build much richer experiences on Teams platform  by accessing a user’s device permissions, such as:
@@ -158,11 +152,11 @@ For example:
     ```
 # [Desktop](#tab/desktop)
 
-![Tabs desktop device permissions prompt](~/assets/images/tabs/device-permissions-prompt.png)
+   ![Tabs desktop device permissions prompt](~/assets/images/tabs/device-permissions-prompt.png)
 
 # [Mobile](#tab/mobile)
 
-![Tabs mobile device permissions prompt](../../assets/images/tabs/MobileLocationPermission.png)
+   ![Tabs mobile device permissions prompt](../../assets/images/tabs/MobileLocationPermission.png)
 
 * * * 
 
@@ -174,5 +168,4 @@ Device permissions are stored for every login session. This means that if you si
 > When you give consent to the native device permissions, it is valid only for your _current_ login session.
 
 ## See also
-[Media capabilities in Teams](mobile-camera-image-permissions.md)
-to integrate your native device media capabilities within Teams mobile app.
+[Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
