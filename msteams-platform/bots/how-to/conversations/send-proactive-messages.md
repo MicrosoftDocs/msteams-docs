@@ -30,7 +30,7 @@ The code snippets in the [examples](#examples) section are for creating a one-to
 
 ## Get the user ID or team/channel ID
 
-If you need to create a new conversation or conversation thread in a channel you'll first need the right ID to create the conversation. You can receive/retrieve this ID in multiple ways:
+To create a new conversation or conversation thread in a channel, you need the correct ID. You can receive or retrieve this ID in multiple ways:
 
 1. When your app is installed in any particular context, you'll receive a [`onMembersAdded` Activity](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 1. When a new user is added to a context where your app is installed, you'll receive a [`onMembersAdded` Activity](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
