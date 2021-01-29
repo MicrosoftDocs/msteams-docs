@@ -49,7 +49,7 @@ Once complete, there's a **Compiled successfully!** message in the terminal. You
 
 ## 4. Sideload your app in Teams
 
-Your app is ready to test in Teams. To do this, you must have an account that allows app sideloading. If you are not sure you have that account, learn about getting a [Teams development account](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account). Sideload your app in Teams using the following steps:
+Your app is ready to test in Teams. To do this, you must have a Microsoft 365 development account that allows app sideloading. For more information on account opening, see [Teams development account](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account). Sideload your app in Teams using the following steps:
 
 > [!TIP]
 > Check for issues before sideloading your app, using the [validation feature in App Studio](../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool), which is included in the toolkit. Fix the errors to successfully sideload the app.
