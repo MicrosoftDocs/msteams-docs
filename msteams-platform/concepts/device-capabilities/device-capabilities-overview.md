@@ -34,7 +34,7 @@ The following table lists the error codes and the conditions under which they ar
 | **500** | INTERNAL_ERROR | Internal error is encountered while performing the required operation.|
 | **1000** | PERMISSION_DENIED |Permission is denied by the user.|
 | **2000** |NETWORK_ERROR | Network issue.|
-| **3000** | NO_HW_SUPPORT | Underlying hardware doesn't support the capability.|
+| **3000** | NO_HW_SUPPORT | Underlying hardware does not support the capability.|
 | **4000**| INVALID_ARGUMENTS | One or more arguments are invalid.|
 | **5000** | UNAUTHORIZED_USER_OPERATION | User is not authorized to complete this operation.|
 | **6000** |INSUFFICIENT_RESOURCES | Operation couldn't be completed due to insufficient resources.|
