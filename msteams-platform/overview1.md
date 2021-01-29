@@ -1,3 +1,5 @@
+### YamlMime:Landing
+
 ---
 title: Build apps for the Microsoft Teams platform
 author: heath-hamilton
