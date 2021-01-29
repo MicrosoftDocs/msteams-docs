@@ -121,7 +121,7 @@ The following table describes the content properties of the attachment:
 
 #### Invoke activity when the user accepts the file
 
-An invoke activity is sent to the bot if and when the user accepts the file. It contains the OneDrive for Business placeholder URL that the bot can then issue a `PUT` into to transfer the file contents. For information on uploading to the OneDrive URL, see [Upload bytes to the upload session](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
+An invoke activity is sent to the bot if and when the user accepts the file. It contains the OneDrive for Business placeholder URL that the bot can then issue a `PUT` into to transfer the file contents. For information on uploading to the OneDrive URL, see [upload bytes to the upload session](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
 
 The following example shows a concise version of the invoke activity that the bot receives:
 
@@ -184,6 +184,47 @@ The following table describes the content properties of the attachment:
 | `uniqueId` | OneDrive or SharePoint drive item ID. |
 | `fileType` | Type of file, such as .pdf or .docx. |
 
+### Fetching inline images from message
+
+Fetch inline images that are part of the message using the Bot's access token.
+
+![Inline image](../../assets/images/bots/inline-image.png)
+
+```csharp
+private async Task ProcessInlineImage(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{​​​​​
+    var attachment = turnContext.Activity.Attachments[0];
+    var client = _clientFactory.CreateClient();
+    // Get Bot's access token to fetch inline image. 
+    var token = await new MicrosoftAppCredentials(microsoftAppId, microsoftAppPassword).GetTokenAsync();
+    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+    var responseMessage = await client.GetAsync(attachment.ContentUrl);
+    // Save the inline image to Files directory.
+    var filePath = Path.Combine("Files", "ImageFromUser.png");
+    using (var fileStream = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None))
+    {​​​​​
+        await responseMessage.Content.CopyToAsync(fileStream);
+    }​​​​​
+    // Create reply with image.
+    var reply = MessageFactory.Text($"Attachment of {​​​​​attachment.ContentType}​​​​​ type and size of {​​​​​responseMessage.Content.Headers.ContentLength}​​​​​ bytes received.");
+    reply.Attachments = new List<Attachment>() {​​​​​ 
+        GetInlineAttachment() 
+    }​​​​​;
+    await turnContext.SendActivityAsync(reply, cancellationToken);
+}​​​​​
+private static Attachment GetInlineAttachment()
+{​​​​​
+    var imagePath = Path.Combine("Files", "ImageFromUser.png");
+    var imageData = Convert.ToBase64String(File.ReadAllBytes(imagePath));
+    return new Attachment
+    {​​​​​
+        Name = @"ImageFromUser.png",
+        ContentType = "image/png",
+        ContentUrl = $"data:image/png;base64,{​​​​​imageData}​​​​​",
+    }​​​​​;
+}​​​​​
+```
+
 ### Basic example in C#
 
 The following sample shows how to handle file uploads and send file consent requests in the bot's dialog:
@@ -192,20 +233,57 @@ The following sample shows how to handle file uploads and send file consent requ
 
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
-    string filename = "teams-logo.png";
-    string filePath = Path.Combine("Files", filename);
-    long fileSize = new FileInfo(filePath).Length;
-    await SendFileCardAsync(turnContext, filename, fileSize, cancellationToken);
+    if (turnContext.Activity.Attachments?[0].ContentType.Contains("image/*") == true)
+    {
+        // Inline image.
+        await ProcessInlineImage(turnContext, cancellationToken);
+    }
+    else
+    {
+        string filename = "teams-logo.png";
+        string filePath = Path.Combine("Files", filename);
+        long fileSize = new FileInfo(filePath).Length;
+        await SendFileCardAsync(turnContext, filename, fileSize, cancellationToken);
+    }
 }
-
+private async Task ProcessInlineImage(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+    var attachment = turnContext.Activity.Attachments[0];
+    var client = _clientFactory.CreateClient();
+    // Get Bot's access token to fetch inline image. 
+    var token = await new MicrosoftAppCredentials(microsoftAppId, microsoftAppPassword).GetTokenAsync();
+    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+    var responseMessage = await client.GetAsync(attachment.ContentUrl);
+    // Save the inline image to Files directory.
+    var filePath = Path.Combine("Files", "ImageFromUser.png");
+    using (var fileStream = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None))
+    {
+        await responseMessage.Content.CopyToAsync(fileStream);
+    }
+    // Create reply with image.
+    var reply = MessageFactory.Text($"Attachment of {attachment.ContentType} type and size of {responseMessage.Content.Headers.ContentLength} bytes received.");
+    reply.Attachments = new List<Attachment>() { GetInlineAttachment() };
+    await turnContext.SendActivityAsync(reply, cancellationToken);
+}
+private static Attachment GetInlineAttachment()
+{
+    var imagePath = Path.Combine("Files", "ImageFromUser.png");
+    var imageData = Convert.ToBase64String(File.ReadAllBytes(imagePath));
+    return new Attachment
+    {
+        Name = @"ImageFromUser.png",
+        ContentType = "image/png",
+        ContentUrl = $"data:image/png;base64,{imageData}",
+    };
+}
 private async Task SendFileCardAsync(ITurnContext turnContext, string filename, long filesize, CancellationToken cancellationToken)
 {
     var consentContext = new Dictionary<string, string>
     {
-        { "filename", filename 
+        { 
+            "filename", filename 
         },
     };
-
     var fileCard = new FileConsentCard
     {
         Description = "This is the file I want to send you",
@@ -213,82 +291,16 @@ private async Task SendFileCardAsync(ITurnContext turnContext, string filename, 
         AcceptContext = consentContext,
         DeclineContext = consentContext,
     };
-
     var asAttachment = new Attachment
     {
         Content = fileCard,
         ContentType = FileConsentCard.ContentType,
         Name = filename,
     };
-
     var replyActivity = turnContext.Activity.CreateReply();
-    replyActivity.Attachments = new List<Attachment>() { asAttachment 
-    };
+    replyActivity.Attachments = new List<Attachment>() { asAttachment };
     await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 }
-
-protected override async Task OnTeamsFileConsentAcceptAsync(ITurnContext<IInvokeActivity> turnContext, FileConsentCardResponse fileConsentCardResponse, CancellationToken cancellationToken)
-{
-    try
-    {
-        JToken context = JObject.FromObject(fileConsentCardResponse.Context);
-
-        string filePath = Path.Combine("Files", context["filename"].ToString());
-        long fileSize = new FileInfo(filePath).Length;
-        var client = _clientFactory.CreateClient();
-        using (var fileStream = File.OpenRead(filePath))
-        {
-            var fileContent = new StreamContent(fileStream);
-            fileContent.Headers.ContentLength = fileSize;
-            fileContent.Headers.ContentRange = new ContentRangeHeaderValue(0, fileSize - 1, fileSize);
-            await client.PutAsync(fileConsentCardResponse.UploadInfo.UploadUrl, fileContent, cancellationToken);
-        }
-
-        await FileUploadCompletedAsync(turnContext, fileConsentCardResponse, cancellationToken);
-    }
-    catch (Exception e)
-    {
-        await FileUploadFailedAsync(turnContext, e.ToString(), cancellationToken);
-    }
-}
-
-protected override async Task OnTeamsFileConsentDeclineAsync(ITurnContext<IInvokeActivity> turnContext, FileConsentCardResponse fileConsentCardResponse, CancellationToken cancellationToken)
-{
-    JToken context = JObject.FromObject(fileConsentCardResponse.Context);
-
-    var reply = MessageFactory.Text($"Declined. We won't upload file <b>{context["filename"]}</b>.");
-    reply.TextFormat = "xml";
-    await turnContext.SendActivityAsync(reply, cancellationToken);
-}
-
-private async Task FileUploadCompletedAsync(ITurnContext turnContext, FileConsentCardResponse fileConsentCardResponse, CancellationToken cancellationToken)
-{
-    var downloadCard = new FileInfoCard
-    {
-        UniqueId = fileConsentCardResponse.UploadInfo.UniqueId,
-        FileType = fileConsentCardResponse.UploadInfo.FileType,
-    };
-
-    var asAttachment = new Attachment
-    {
-        Content = downloadCard,
-        ContentType = FileInfoCard.ContentType,
-        Name = fileConsentCardResponse.UploadInfo.Name,
-        ContentUrl = fileConsentCardResponse.UploadInfo.ContentUrl,
-    };
-
-    var reply = MessageFactory.Text($"<b>File uploaded.</b> Your file <b>{fileConsentCardResponse.UploadInfo.Name}</b> is ready to download");
-    reply.TextFormat = "xml";
-    reply.Attachments = new List<Attachment> { asAttachment 
-    };
-
-    await turnContext.SendActivityAsync(reply, cancellationToken);
-}
-
-private async Task FileUploadFailedAsync(ITurnContext turnContext, string error, CancellationToken cancellationToken)
-{
-    var reply = MessageFactory.Text($"<b>File upload failed.</b> Error: <pre>{error}</pre>");
-    reply.TextFormat = "xml";
-    await turnContext.SendActivityAsync(reply, cancellationToken);
-}
 ```
+
+For Bot Framework v4 bot sample for Teams, see [updates sample](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/56.teams-file-upload).
