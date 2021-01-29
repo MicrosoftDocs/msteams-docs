@@ -1,17 +1,19 @@
 ### YamlMime:Landing
----
-title: Build apps for the Microsoft Teams platform
-author: heath-hamilton
-description: Get an overview of how developers can extend Microsoft Teams features with custom apps.
-ms.topic: overview
-ms.author: lajanuar
-ms.date: 09/22/2020
----
-# Build apps for Microsoft Teams
 
-Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work.
+title: uild apps for the Microsoft Teams platform
+summary: Learn how to authenticate and work with permissions to securely access data through Microsoft Teams. Explore the documentation below to learn about app registration, authentication libraries, authorization, and other parts of the Microsoft identity platform that support Microsoft Graph development.
 
-Apps are how you extend Teams to fit your needs. Create something brand new for Teams or integrate an existing app.
+metadata: 
+  ms.topic: overview
+  ms.date: 05/07/2020
+  author: lajanuar
+  ms.author: celested
+  services: active-directory
+  ms.service: active-directory
+  ms.workload: identity
+  ms.reviewer: jawoods  
+  ms.custom: graphiamtop20   
+
 
 landingContent:
   - title: Overview
