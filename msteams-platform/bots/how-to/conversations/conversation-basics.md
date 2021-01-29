@@ -338,6 +338,37 @@ We recommend that you specify the height and width of each image by using XML. I
 * Use - `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
 * Don't use - `![Duck on a rock](http://aka.ms/Fo983c)`
 
+## Adaptive cards
+
+Use the following code to send a simple adaptive card:
+
+```json
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+    {
+        "items": [
+        {
+            "size": "large",
+            "text": " Simple Adaptivecard Example with a Textbox",
+            "type": "TextBlock",
+            "weight": "bolder",
+            "wrap": true
+        },
+        ],
+        "spacing": "extraLarge",
+        "type": "Container",
+        "verticalContentAlignment": "center"
+    }
+    ]
+}
+```
+
+To know more about cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).
+When a response contains both text messages and attachments, both responses are sent separately. The text message is sent first, followed by the attachment.
+
 ## Next steps
 
 * [Sending proactive messages](~/bots/how-to/conversations/send-proactive-messages.md)
