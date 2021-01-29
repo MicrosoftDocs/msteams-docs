@@ -4,7 +4,7 @@ description: Describes authentication in Teams and how to use it in the apps
 ms.topic: conceptual
 keywords: teams authentication OAuth SSO AAD
 ---
-# Authenticating users in Microsoft Teams
+# Authenticate users in Microsoft Teams
 
 > [!NOTE]
 > Web-based authentication on mobile clients requires version 1.4.1 or later of the Microsoft Teams JavaScript SDK.
@@ -29,7 +29,7 @@ The Azure Bot Framework’s OAuthPrompt makes authentication easier for apps usi
 
 For more information on using the OAuthPrompt, see:
 
-* [Bot authentication flow overview](~/bots/how-to/authentication/auth-flow-bot.md) describes how authentication works within a bot in the app in Teams. This shows a non-web-based authentication flow used for bots on all versions of Teams (web, desktop app, and mobile apps).
+* [Bot authentication flow overview](~/bots/how-to/authentication/auth-flow-bot.md) describes how authentication works within a bot in the app in Teams. This shows a non-web-based authentication flow used for bots on Teams web, desktop app, and mobile apps.
 * [Bot authentication](~/bots/how-to/authentication/add-authentication.md) describes how to add OAuth authentication to the Teams bot.
 * [.Net or C#](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) or [JavaScript or Node.js](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) provides Bot authentication v3 SDK sample.
 
