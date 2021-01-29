@@ -26,7 +26,7 @@ At a high level the steps you'll need to complete to send a proactive message ar
 1. [Get the conversation ID](#get-the-conversation-id).
 1. [Send the message](#send-the-message).
 
-The code snippets in the [examples](#examples) section are for creating a one-to-one conversation, see the [references](#references) section for links to complete working samples for both one-to-one conversations and group or channels.
+The code snippets in the [examples](#examples) section are for creating a one-to-one conversation. For links to complete working samples for both one-to-one conversations and group or channels , see [references](#references).
 
 ## Get the user ID or team/channel ID
 
