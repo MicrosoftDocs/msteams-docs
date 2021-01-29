@@ -44,7 +44,7 @@ The `userId` is unique to your bot Id and a particular user, you cannot re-use t
 
 ## Create the conversation
 
-After you have the user or channel information, you'll need to create the conversation if it doesn't already exist or you don't know the `conversationId`. You must only create the conversation once and make sure you store the `conversationId` value or `conversationReference` object to use in the future.
+After you have the user or channel information, you need to create the conversation if it doesn't already exist or you don't know the `conversationId`. You must only create the conversation once and make sure you store the `conversationId` value or `conversationReference` object to use in the future.
 
 ## Get the conversation ID
 
