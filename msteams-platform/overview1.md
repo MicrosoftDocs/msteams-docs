@@ -19,10 +19,10 @@ landingContent:
     linkLists:     
       - linkListType: concept
         links:
-          - text: Authentication and authorization basics
-            url: 
-          - text: App registration
-            url: 
+          - text: Build your first Microsoft Teams app overview
+            url: build-first-app-overview
+          - text: Designing your Microsoft Teams app
+            url: ../design-teams-app-overview.md
       - linkListType: video
         links:
           - text: MS
