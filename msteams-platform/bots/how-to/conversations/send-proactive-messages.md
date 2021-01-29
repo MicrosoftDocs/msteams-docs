@@ -17,7 +17,7 @@ A proactive message is any message sent by a bot that is not in direct response 
 
 For your bot to send a proactive message, it must have access to the user, group chat, or team that you want to send the message to. For a group chat or team, this means the app that contains your bot must be installed to that location first. You can [proactively install your app using Graph](#proactively-install-your-app-using-graph) in a team, if required or use an [app policy](/microsoftteams/teams-custom-app-policies-and-settings) to push apps out to teams and users in your tenant. For users, your app either must be installed for the user or your user must be part of a team where your app is installed.
 
-Sending a proactive message is different than sending a regular message. In that, there is no active `turnContext` to use for a reply. You may also need to create the conversation (for example a new one-to-one chat, or a new conversation thread in a channel) before sending the message. You cannot create a new group chat or a new channel in a team with proactive messaging.
+Sending a proactive message is different than sending a regular message. In that, there is no active `turnContext` to use for a reply. You may also need to create the conversation before sending the message. For example, a new one-to-one chat or a new conversation thread in a channel. You cannot create a new group chat or a new channel in a team with proactive messaging.
 
 At a high level the steps you'll need to complete to send a proactive message are:
 
