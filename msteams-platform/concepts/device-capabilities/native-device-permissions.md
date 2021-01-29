@@ -1,6 +1,7 @@
 ---
-title: Request device permissions for your Microsoft Teams tab
+title: Request device permissions for your tab
 description: How to update your app manifest in order to request access to native features that usually require user consent
+ms.topic: how-to
 keywords: teams tabs development
 ---
 
@@ -15,7 +16,8 @@ You might want to enrich your tab with features that require access to native de
 > * Location
 > * Notifications
 
-[!Note] To integrate camera and image capabilities within your Microsoft Teams mobile app, refer [Camera and image capabilities in Teams.](../../concepts/device-capabilities/mobile-camera-image-permissions.md)
+> [!NOTE]
+> To integrate camera and image capabilities within your Microsoft Teams mobile app, see [Camera and image capabilities in Teams.](../../concepts/device-capabilities/mobile-camera-image-permissions.md)
 
 > [!IMPORTANT]
 >

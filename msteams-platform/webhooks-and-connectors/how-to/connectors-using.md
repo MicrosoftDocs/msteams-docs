@@ -1,6 +1,7 @@
 ---
 title: Sending messages to Connectors and Webhooks
 description: Describes how to use Office 365 Connectors in Microsoft Teams
+ms.topic: how-to
 localization_priority: Priority
 keywords: teams o365 connector
 ---
@@ -20,7 +21,7 @@ You can also use this JSON to create cards containing rich inputs, such as text 
     "themeColor": "0076D7",
     "summary": "Larry Bryant created a new task",
     "sections": [{
-        "activityTitle": "![TestImage](https://47a92947.ngrok.io/Content/Images/default.png)Larry Bryant created a new task",
+        "activityTitle": "Larry Bryant created a new task",
         "activitySubtitle": "On Project Tango",
         "activityImage": "https://teamsnodesample.azurewebsites.net/static/img/image5.png",
         "facts": [{
@@ -47,7 +48,7 @@ You can also use this JSON to create cards containing rich inputs, such as text 
         "actions": [{
             "@type": "HttpPOST",
             "name": "Add comment",
-            "target": "http://..."
+            "target": "https://docs.microsoft.com/outlook/actionable-messages"
         }]
     }, {
         "@type": "ActionCard",
@@ -60,13 +61,15 @@ You can also use this JSON to create cards containing rich inputs, such as text 
         "actions": [{
             "@type": "HttpPOST",
             "name": "Save",
-            "target": "http://..."
+            "target": "https://docs.microsoft.com/outlook/actionable-messages"
         }]
-        {
-            "@type": "OpenUri",
-            "name": "Learn More",
-            "targets": [{ "os": "default", "uri": "https://docs.microsoft.com/outlook/actionable-messages" }]
-        }
+    }, {
+        "@type": "OpenUri",
+        "name": "Learn More",
+        "targets": [{
+            "os": "default",
+            "uri": "https://docs.microsoft.com/outlook/actionable-messages"
+        }]
     }, {
         "@type": "ActionCard",
         "name": "Change status",
@@ -89,7 +92,7 @@ You can also use this JSON to create cards containing rich inputs, such as text 
         "actions": [{
             "@type": "HttpPOST",
             "name": "Save",
-            "target": "http://..."
+            "target": "https://docs.microsoft.com/outlook/actionable-messages"
         }]
     }]
 }

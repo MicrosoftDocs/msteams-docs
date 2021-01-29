@@ -18,11 +18,11 @@ You can find more comprehensive design guidelines, including elements that you c
 
 ## Add a meeting extension
 
-You can add a meeting extension before and during meetings. You also can an app for a specific meeting directly from the Teams store (AppSource).
+You can add a meeting extension before and during meetings. You also can add an app for a specific meeting directly from the Teams store (AppSource).
 
 ### Add before a meeting
 
-Before a meeting, the meeting details select **Add a tab +** to open the app flyout and find apps optimized for meetings.
+In the meeting details, select **Add a tab +** to open the app flyout and find apps optimized for meetings.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-before-meeting.png" alt-text="Example shows how to add a meeting extension before a meeting." border="false":::
 
@@ -163,7 +163,7 @@ You can go back to a meeting after it ends and view app content. In this example
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/interaction-do.png" alt-text="Example showing a meeting extension best practice." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-do.png" alt-text="Example showing how to limit the number of interactions." border="false":::
 
 #### Do: Limit the number of interactions
 
@@ -171,7 +171,7 @@ For in-meeting dialogs, remove unnecessary content that doesn't help users accom
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/interaction-dont.png" alt-text="Example showing a meeting extension best practice." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-dont.png" alt-text="Example showing how not to introduce unnecessary elements." border="false":::
 
 #### Don't: Introduce unnecessary elements
 
@@ -184,7 +184,7 @@ A single in-meeting dialog with multiple interactions can distract from the call
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-layout-do.png" alt-text="Example showing a meeting extension best practice." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-layout-do.png" alt-text="Example showing how you should use a single-column dialog layout." border="false":::
 
 #### Do: Use a single-column dialog layout
 
@@ -192,7 +192,7 @@ Since the dialogs are at the center of the meeting stage, task completion should
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-layout-dont.png" alt-text="Example showing a meeting extension best practice." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-layout-dont.png" alt-text="Example showing you shouldn't clutter the space of a meeting extension." border="false":::
 
 #### Don't: Clutter the space
 
@@ -203,7 +203,7 @@ Dense or overly structured content can be distracting and overwhelming, especial
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-do.png" alt-text="Example showing a meeting extension best practice." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-do.png" alt-text="Example showing a single-column tab layout." border="false":::
 
 #### Do: Use a single-column tab layout
 
@@ -211,7 +211,7 @@ Given the in-meeting tab's narrow nature, we strongly recommend displaying the c
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-dont.png" alt-text="Example showing a meeting extension best practice." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-dont.png" alt-text="Example showing a tab with multiple columns." border="false":::
 
 #### Don't: Use multiple columns
 
@@ -224,7 +224,7 @@ Due to the limited space of the in-meeting tab, layouts with more than one colum
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-controls-do.png" alt-text="Example showing a meeting extension best practice." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-controls-do.png" alt-text="Example showing how to right align primary controls." border="false":::
 
 #### Do: Right align the primary action
 
@@ -232,7 +232,7 @@ We recommend positioning the most visually heavy action to the right-most locati
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-controls-dont.png" alt-text="Example showing a meeting extension best practice." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-controls-dont.png" alt-text="Example showing how you shouldn't left align primary controls." border="false":::
 
 #### Don't: Left or center align actions
 
@@ -245,15 +245,15 @@ This deviates from the standard Teams pattern for control placement in a dialog 
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-do.png" alt-text="Example showing a meeting extension best practice." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-do.png" alt-text="Example showing vertical scrolling in an in-meeting tab." border="false":::
 
 #### Do: Scroll vertically
 
-We recommend positioning the most visually heavy action to the right-most location.
+Users expect vertical scrolling in Teams (and elsewhere).
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-dont.png" alt-text="Example showing a meeting extension best practice." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-dont.png" alt-text="Example showing horizontal scrolling in an in-meeting tab." border="false":::
 
 #### Don't: Scroll horizontally
 
@@ -266,7 +266,7 @@ Horizontal scrolling isn’t an expected behavior in Teams. Other canvases in th
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-workflow-do.png" alt-text="Example showing a meeting extension best practice." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-workflow-do.png" alt-text="Example showing complex scenario in an in-meeting tab." border="false":::
 
 #### Do: Surface complex scenarios in the in-meeting tab
 
@@ -274,9 +274,9 @@ If your app includes multiple tasks, we strongly recommend using an in-meeting t
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-workflow-dont.png" alt-text="Example showing a meeting extension best practice." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-workflow-dont.png" alt-text="Example showing complex scenarios in an in-meeting dialog." border="false":::
 
-#### Don't: Package complex scenarios in the in-meeting dialog
+#### Don't: Make in-meeting dialogs complex
 
 In-meeting dialogs are intended for brief interactions.
 
@@ -287,7 +287,7 @@ In-meeting dialogs are intended for brief interactions.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-do.png" alt-text="Example showing a meeting extension best practice." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-do.png" alt-text="Example showing a meeting extension with the dark theme." border="false":::
 
 #### Do: Use Teams color tokens
 
@@ -295,11 +295,11 @@ Teams meetings are optimized for dark mode to help reduce visual and cognitive n
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-dont.png" alt-text="Example showing a meeting extension best practice." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-dont.png" alt-text="Example showing a meeting extension with a default (light) theme." border="false":::
 
-#### Don't: Include another dismiss button
+#### Don't: Hard code hex values
 
-Providing an option to close in-meeting tab content may cause issues since there’s already a button in the header to dismiss the in-meeting tab itself.
+If you don’t use Teams color tokens, your designs will be less scalable and take more time to manage.
 
    :::column-end:::
 :::row-end:::
@@ -308,7 +308,7 @@ Providing an option to close in-meeting tab content may cause issues since there
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-do.png" alt-text="Example showing a meeting extension best practice." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-do.png" alt-text="Example showing a meeting extension with a back button." border="false":::
 
 #### Do: Have a back button
 
@@ -316,7 +316,7 @@ If you have more than one layer of navigation in an in-meeting tab, users must b
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-dont.png" alt-text="Example showing a meeting extension best practice." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-dont.png" alt-text="Example showing a meeting extension with two dismiss buttons." border="false":::
 
 #### Don't: Include another dismiss button
 
@@ -329,7 +329,7 @@ Providing an option to close in-meeting tab content may cause issues since there
    :::column span="":::
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-caution.png" alt-text="Example showing a meeting extension best practice." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-caution.png" alt-text="Example showing modals (or task modules) within an in-meeting tab." border="false":::
 
 #### Caution: Avoid modals within the in-meeting tab
 

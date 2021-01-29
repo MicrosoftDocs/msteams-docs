@@ -28,7 +28,7 @@
     href: tutorials/get-started-dotnet-app-studio.md
   - name: Create an app using Node.js
     href: tutorials/get-started-nodejs-app-studio.md
-  - name: Create an app using the Yeoman Generator
+  - name: Create an app using the Yeoman generator
     href: tutorials/get-started-yeoman.md
   - name: Bot samples
     items:
@@ -122,7 +122,7 @@
     href: toolkit/visual-studio-code-overview.md
   - name: Teams Toolkit for Visual Studio
     href: toolkit/visual-studio-overview.md
-  - name: Yeoman Generator for Teams (GitHub)
+  - name: Yeoman generator for Teams (GitHub)
     href: https://github.com/pnp/generator-teams
   - name: App Studio
     href: concepts/build-and-test/app-studio-overview.md
@@ -182,6 +182,8 @@
   items:
   - name: Overview
     href: tabs/what-are-tabs.md
+  - name: Tab requirements
+    href: tabs/how-to/tab-requirements.md
   - name: Quickstarts
     items:
     - name: Personal tab with Node.js
@@ -228,6 +230,8 @@
       href: bots/how-to/update-and-delete-bot-messages.md     
   - name: Get context for your bot
     href: bots/how-to/get-teams-context.md
+  - name: Send and receive files
+    href: bots/how-to/bots-filesv4.md
   - name: Handling bot rate limiting
     href: bots/how-to/rate-limit.md
   - name: Calling and meeting bots
@@ -330,6 +334,8 @@
       href: bots/how-to/authentication/auth-flow-bot.md
     - name: Add authentication to your bot
       href: bots/how-to/authentication/add-authentication.md
+    - name: Use SSO authentication
+      href: bots/how-to/authentication/auth-aad-sso-bots.md
   - name: Messaging extensions
     href: messaging-extensions/how-to/add-authentication.md
 - name: Utilize Teams data with Microsoft Graph

@@ -60,12 +60,11 @@ Apps that are [distributed through Appsource](~/concepts/deploy-and-publish/apps
 
 >[!NOTE]
 >
->- The default behavior of the apps is only applicable if they are distributed through AppSource. There is no approval process for apps distributed through other [distribution methods](~/concepts/deploy-and-publish/overview.md). By default, all tabs open in the Teams client.
+>- The default behavior of the apps is only applicable if they are distributed through the Teams store (AppSource). There is no approval process for apps distributed through other [distribution methods](~/concepts/deploy-and-publish/overview.md). By default, all tabs open in the Teams client.
 >- To initiate an evaluation of your app for mobile-friendliness, reach out to teamsubm@microsoft.com with your app details.
 
+> [!div class="nextstepaction"]
+> [Learn  more: Request device permissions](../concepts/device-capabilities/native-device-permissions.md)
 
 > [!div class="nextstepaction"]
-> [Learn  more: Request device permissions](/concepts/device-capabilities/native-device-permissions.md)
-
-> [!div class="nextstepaction"]
->[Learn more: Camera and image gallery permissions](/concepts/device-capabilities/mobile-camera-image-permissions.md)
+>[Learn more: Camera and image gallery permissions](../concepts/device-capabilities/mobile-camera-image-permissions.md)

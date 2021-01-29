@@ -1,6 +1,7 @@
 ---
-title: Microsoft Teams code samples
+title: App code samples
 description: Links and descriptions of sample applications for the Microsoft Teams developer platform
+ms.topic: reference
 keywords: Microsoft Teams developer samples
 ---
 # Tutorials and code samples for the Microsoft Teams developer platform
@@ -68,7 +69,7 @@ As always, the project's README file should have more information on specific ne
 | Sample | Description
 |--------|-------------
 | [Sample connector for Node.js](https://github.com/OfficeDev/microsoft-teams-sample-connector-nodejs) | This sample, written in Node.js, showcases how to build a connector for Microsoft Teams using GitHub as an example to generate connector notifications.
-| [Sample connector for C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-connector-csharp) | This sample, written in C#, showcases how to build a connector for Microsoft Teams using a sample task list app as an example to generate connector notifications.
+| [Sample connector for C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-connector-csharp) | This sample, written in C#, showcases how to build a connector for Microsoft Teams using a sample task list app as an example to generate connector notifications. This sample also shows how to implement the login functionality in the connector configuration page. 
 
 ## Graph API
 
