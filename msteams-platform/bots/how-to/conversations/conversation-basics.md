@@ -367,7 +367,7 @@ Use the following code to send a simple adaptive card:
 ```
 
 To know more about cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).
-When a response contains both text messages and attachments, both responses are sent separately. The text message is sent first, followed by the attachment.
+When a response contains text messages and attachments, both responses are sent separately. The attachment is sent after the text message.
 
 ## Next steps
 
