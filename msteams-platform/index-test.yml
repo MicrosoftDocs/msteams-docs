@@ -21,6 +21,7 @@ highlightedContent:
     - title: New to Microsoft Teams development? 🚀Start here! 
       itemType: get-started
       url:   /microsoftteams/platform/overview
+    - title: What is Teams!
       itemType: video
       url: https://www.microsoft.com/en-us/videoplayer/embed/RE4Jqbg
     - title:  Tabs — embedded web experiences
@@ -45,7 +46,7 @@ highlightedContent:
       itemType: overview
       url:  /microsoftteams/platform/samples/teams-low-code-solutions/
 
-highlightedContent2:
+highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
    items: 
     - title: capabilities 
