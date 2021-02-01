@@ -45,10 +45,6 @@ highlightedContent:
     - title:  Low-code apps, bots, flows, and reports using Microsoft Power Platform
       itemType: overview
       url:  /microsoftteams/platform/samples/teams-low-code-solutions/
-
-highlightedContent:
-# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
-   items: 
     - title: capabilities 
     - title:  Tabs — embedded web experiences
       itemType:  overview
