@@ -50,7 +50,7 @@ Specify both `"isMultiSelect": true` and `"style": true` if you want the multi-s
 > * Specifying `compact` for the `style` property in Microsoft Teams is the same as specifying `normal` for the `style` property in Microsoft Outlook.
 > * Webhooks support only Office 365 (message back) cards and adaptive cards.
 
-For all other details about connector card actions, see **[Actions](/outlook/actionable-messages/card-reference#actions)** in the actionable message card reference.
+For all other details about connector card actions, see **[Actions]**(/outlook/actionable-messages/card-reference#actions) in the actionable message card reference.
 
 ## Adding outgoing webhook processing to your app
 
