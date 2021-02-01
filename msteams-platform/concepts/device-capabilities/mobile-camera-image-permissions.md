@@ -47,7 +47,7 @@ The [selectMedia](/javascript/api/@microsoft/teams-js/media?view=msteams-client-
 
 You must use the following set of APIs to enable your device's media capabilities:
 
-| API      | Description   |API usage examples  |
+| API      | Description   |
 | --- | --- |
 | [**selectMedia**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest&branch=master#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true)| This API allows users to **capture or select media from a native device** and return to the web-app. The users edit, crop, rotate, annotate, or draw over images before submission. In response to **selectMedia**, the web-app receives the media IDs of selected images and a thumbnail of the selected media. <br/><br/>  This API also allows the users to record audio from a native device and return to the web-app. The users pause, re-record, and play recording preview before submission. In response to **selectMedia**, the web-app receives media IDs of the selected audio recording. Set the media type to four for audio. <br/> Use `maxDuration`, if you require to configure a duration in minutes for recording the conversation. The current duration for recording is 10 minutes, after which the recording terminates.  |
 | [**getMedia**](/javascript/api/@microsoft/teams-js/_media?view=msteams-client-js-latest&branch=master#getMedia__error__SdkError__blob__Blob_____void_&preserve-view=true)| This API retrieves the media in chunks irrespective of  the size. These chunks are assembled and sent back to the web app as a file or blob. This API breaks an image into smaller chunks,ss to facilitate large image transfer. |
@@ -180,4 +180,41 @@ if (uriList.length > 0) {
     output("Url list is empty");
 }
 }
+```
+
+**Calling selectMedia and getMedia API for recording audio through microphone**
+
+```javascript
+let mediaInput: microsoftTeams.media.MediaInputs = {
+    mediaType: microsoftTeams.media.MediaType.Audio,
+    maxMediaCount: 1,
+};
+microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
+    if (error) {
+        if (error.message) {
+            alert(" ErrorCode: " + error.errorCode + error.message);
+        } else {
+            alert(" ErrorCode: " + error.errorCode);
+        }
+    }
+    // If you want to directly use the audio file (for smaller file sizes (~4MB))    if (attachments) {
+        let audioResult = attachments[0];
+        var videoElement = document.createElement("video");
+        videoElement.setAttribute("src", ("data:" + y.mimeType + ";base64," + y.preview));
+        //To use the audio file via get Media API for bigger audio file sizes greater than 4MB        audioResult.getMedia((error: microsoftTeams.SdkError, blob: Blob) => {
+            if (blob) {
+                if (blob.type.includes("video")) {
+                    videoElement.setAttribute("src", URL.createObjectURL(blob));
+                }
+            }
+            if (error) {
+                if (error.message) {
+                    alert(" ErrorCode: " + error.errorCode + error.message);
+                } else {
+                    alert(" ErrorCode: " + error.errorCode);
+                }
+            }
+        });
+    }
+});
 ```
