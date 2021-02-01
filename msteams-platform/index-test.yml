@@ -1,0 +1,194 @@
+### YamlMime:Hub
+
+title: Microsoft Teams developer documentation # < 60 chars
+# brand: aspnet | azure | dotnet | dynamics | m365 | ms-graph | office | power-bi | power-platform | sql | sql-server | vs | visual-studio | windows | xamarin
+brand: teams
+
+metadata:
+  title: Microsoft Teams Platform developer documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services to improve productivity, make decisions faster, provide focus (by reducing context switching), and create collaboration around existing content and workflows. . # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: msteams #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: hub-page # Required
+  ms.collection: collection # Optional; Remove if no collection is used.
+  author: laujan #Required; your GitHub user alias, with correct capitalization.
+  ms.author: lajanuar #Required; microsoft alias of author; optional team alias.
+  ms.date: 05/29/2020 #Required; mm/dd/yyyy format.
+
+highlightedContent:
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+   items: 
+    - title: New to Microsoft Teams development? 🚀Start here! 
+      itemType: get-started
+      url:   /microsoftteams/platform/overview
+    - title:  Tabs — embedded web experiences
+      itemType:  overview
+      url:   /microsoftteams/platform/tabs/what-are-tabs
+    - title:  Bots — conversation-based interactions
+      itemType:  overview
+      url:  /microsoftteams/platform/bots/what-are-bots
+    - title:  Messaging extensions — task oriented interactions
+      itemType: overview
+      url:  /microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
+    - title: Task modules and cards — rich messaging and notifications
+      itemType: overview
+      url:  /microsoftteams/platform/task-modules-and-cards/what-are-task-modules  
+    - title: Webhooks and connectors — programmed messaging and notifications
+      itemType: overview
+      url:  /microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors 
+    - title:  Microsoft Teams and Microsoft Graph API
+      itemType: overview
+      url:  /graph/teams-concept-overview
+    - title:  Low-code apps, bots, flows, and reports using Microsoft Power Platform
+      itemType: overview
+      url:  /microsoftteams/platform/samples/teams-low-code-solutions/
+
+highlightedContent:
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+   items: 
+    - title: New to Microsoft Teams development? 🚀Start here! 
+      itemType: get-started
+      url:   /microsoftteams/platform/overview
+    - title:  Tabs — embedded web experiences
+      itemType:  overview
+      url:   /microsoftteams/platform/tabs/what-are-tabs
+    - title:  Bots — conversation-based interactions
+      itemType:  overview
+      url:  /microsoftteams/platform/bots/what-are-bots
+    - title:  Messaging extensions — task oriented interactions
+      itemType: overview
+      url:  /microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
+    - title: Task modules and cards — rich messaging and notifications
+      itemType: overview
+      url:  /microsoftteams/platform/task-modules-and-cards/what-are-task-modules  
+    - title: Webhooks and connectors — programmed messaging and notifications
+      itemType: overview
+      url:  /microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors 
+    - title:  Microsoft Teams and Microsoft Graph API
+      itemType: overview
+      url:  /graph/teams-concept-overview
+    - title:  Low-code apps, bots, flows, and reports using Microsoft Power Platform
+      itemType: overview
+      url:  /microsoftteams/platform/samples/teams-low-code-solutions/
+   
+# conceptualContent section
+conceptualContent:
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+   title: Guides and Resources
+   items:
+   # Card
+    - title: Explore
+      links:
+        - url: /microsoftteams/platform/concepts/building-an-app
+          itemType: concept
+          text: Build a Microsoft Teams app
+        - url: /microsoftteams/platform/concepts/extensibility-points
+          itemType: concept
+          text: Capability points in Microsoft Teams
+        - url: /microsoftteams/platform/concepts/design/understand-use-cases
+          itemType: concept
+          text: Understand Microsoft Teams use cases
+        - url:  /microsoftteams/platform/concepts/design/map-use-cases
+          itemType: concept
+          text: Map use cases to Microsoft Teams capabilities
+        - url:  /microsoftteams/platform/whats-new 
+          itemType: whats-new
+          text: What's new
+      
+    # Card
+    - title: Learn
+      links:
+        - url: /learn/modules/intro-microsoft-teams-apps
+          itemType: learn
+          text: Build apps for Microsoft Teams — introduction
+        - url: /learn/modules/embedded-web-experiences
+          itemType: learn
+          text: Tabs — create embedded web experiences 
+        - url:  /learn/modules/msteams-conversation-bots/
+          itemType: learn
+          text: Bots — create conversational interactions
+        - url: /learn/modules/msteams-messaging-extensions/
+          itemType: learn
+          text: Messaging extensions — create task-oriented interactions 
+        - url: /learn/modules/msteams-task-modules/
+          itemType: learn
+          text: Task modules — collect input and gather information
+        - url: /learn/modules/msteams-webhooks-connectors/
+          itemType: learn
+          text: Webhooks and Office 365 connectors — connect web services to channels and teams
+    # Card
+    - title: Develop
+      links:
+        - url: /microsoftteams/platform/tutorials/get-started-nodejs-app-studio
+          itemType: get-started
+          text: Build a Teams app using JavaScript/Node.js and App Studio
+        - url: /microsoftteams/platform/tutorials/get-started-dotnet-app-studio
+          itemType: get-started
+          text: Build a Teams app using C#/.NET and App Studio
+     # Card
+    - title: Deploy
+      links:
+        - url: /microsoftteams/platform/samples/app-templates
+          itemType: deploy
+          text: Teams app templates — production-ready applications
+        - url:  /microsoftteams/platform/samples/shifts-wfm-connectors
+          itemType: deploy
+          text: Teams shifts connectors - production-ready integrations
+        - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
+          itemType: deploy
+          text: Integrate your Power Virtual Agents bot with Teams     
+    # Card
+    - title: Connect
+      links:
+        - url: https://developer.microsoft.com/microsoft-teams/blogs/
+          itemType: overview
+          text: Microsoft Teams developer blog
+        - url: https://aka.ms/microsoftteamscommunitycall
+          itemType: overview
+          text: Microsoft Teams Community Calls
+    # Card
+    - title: Community Help
+      links:
+        - url: /microsoftteams/platform/feedback
+          itemType: overview
+          text: Microsoft Teams Developer Community and response
+
+# tools section
+tools:
+  title: SDKs & Tools # < 60 chars (optional)
+  items:
+  # Card
+    - title: Microsoft Teams Toolkit extension for Visual Studio Code
+      # imageSrc should be square in ratio with no whitespace
+      imageSrc: /media/logos/logo_vs-code.svg
+      url: /microsoftteams/platform/toolkit/visual-studio-code-overview
+  # Card
+    - title: Microsoft Teams Toolkit extension for Visual Studio
+      # imageSrc should be square in ratio with no whitespace
+      imageSrc: /media/logos/logo_vs-ide.svg
+      url: /microsoftteams/platform/toolkit/visual-studio-overview
+    # Card
+    - title: JavaScript SDK for Tabs
+      # imageSrc should be square in ratio with no whitespace
+      imageSrc: ./assets/icons/logo_js.png
+      url: /javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest
+    # Card
+    - title: Node.js Bot Framework SDK for bots and messaging extensions
+      imageSrc: ./assets/icons/logo_nodejs.png
+      url: https://github.com/Microsoft/botbuilder-js
+    # Card
+    - title: .NET Bot Framework SDK for bots and messaging extensions
+      imageSrc: ./assets/icons/logo_net.png
+      url: https://github.com/Microsoft/botbuilder-dotnet/
+    # Card
+    - title: Microsoft Graph SDKs
+      imageSrc: ./assets/icons/graph-icon-1.png
+      url: https://docs.microsoft.com/graph/sdks/sdks-overview
+    # Card
+    - title: Microsoft Teams App Studio
+      imageSrc: ./assets/icons/AppStudioIcon.png
+      url: /microsoftteams/platform/concepts/build-and-test/app-studio-overview
+    # Card
+    - title: Yeoman Generator for Microsoft Teams
+      imageSrc: ./assets/icons/Yeoman.png
+      url: https://github.com/OfficeDev/generator-teams 
+# additionalContent (optional)
