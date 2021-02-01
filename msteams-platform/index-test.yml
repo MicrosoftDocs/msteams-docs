@@ -18,34 +18,31 @@ metadata:
 highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
    items: 
-    - title: New to Microsoft Teams development? 🚀Start here! 
-      itemType: get-started
-      url:   /microsoftteams/platform/overview
     - title: What is Teams!
       itemType: video
       url: https://www.microsoft.com/en-us/videoplayer/embed/RE4Jqbg
-    - title:  Tabs — embedded web experiences
+    - title: New to Microsoft Teams development? 🚀Start here! 
+      itemType: get-started
+      url: /microsoftteams/platform/overview
+    - title: Capabilities
       itemType:  overview
-      url:   /microsoftteams/platform/tabs/what-are-tabs
-    - title:  Bots — conversation-based interactions
+      url: /microsoftteams/platform/concepts/design/map-use-cases
+    - title:  Design your apps
       itemType:  overview
-      url:  /microsoftteams/platform/bots/what-are-bots
-    - title:  Messaging extensions — task oriented interactions
+      url:  /microsoftteams/platform/concepts/design/design-teams-app-overview.md
+    - title:  Authenticate
       itemType: overview
-      url:  /microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
-    - title: Task modules and cards — rich messaging and notifications
+      url:  /microsoftteams/platform/concepts/authentication/authentication.md
+    - title: Deploy and publish your apps
       itemType: overview
-      url:  /microsoftteams/platform/task-modules-and-cards/what-are-task-modules  
-    - title: Webhooks and connectors — programmed messaging and notifications
-      itemType: overview
-      url:  /microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors 
+      url:  /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish.md 
     - title:  Microsoft Teams and Microsoft Graph API
       itemType: overview
       url:  /graph/teams-concept-overview
     - title:  Low-code apps, bots, flows, and reports using Microsoft Power Platform
       itemType: overview
       url:  /microsoftteams/platform/samples/teams-low-code-solutions/
-      
+
    
 # conceptualContent section
 conceptualContent:
