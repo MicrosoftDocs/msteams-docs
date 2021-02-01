@@ -19,6 +19,16 @@ landingContent:
         links:
           - text: Microsoft Graph and app registration (7:29)
             url: https://www.youtube.com/watch?v=93j0MmRruFo
+  - title: Design  Guidelines
+    linkLists:     
+      - linkListType: concept
+        links:
+          - text: Frequently failed cases
+            url: ./concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
+      - linkListType: video
+        links:
+          - text: App registration (7:29)
+            url: https://www.youtube.com/watch?v=93j0MmRruFo
   - title: App Store Publish
     linkLists:
       - linkListType: concept

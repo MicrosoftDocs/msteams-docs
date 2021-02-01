@@ -388,6 +388,8 @@
     href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json
   - name: Publish to the Teams store (AppSource)
     items:
+    - name: Overview 
+      href: overview-landing-apppublish.yml
     - name: Understanding AppSource submission 
       href: concepts/deploy-and-publish/appsource/publish.md
     - name: Pre-submission checklist
