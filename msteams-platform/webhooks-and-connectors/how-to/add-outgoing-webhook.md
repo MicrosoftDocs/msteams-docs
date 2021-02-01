@@ -43,10 +43,10 @@ The `ActionCard` action supports three input types:
 
 `MultichoiceInput` supports a `style` property that controls the display of a fully expanded list. The default value of `style` depends on the `isMultiSelect` value.
 
-| If  | Then  |
+| `isMultiSelect` value  | `style` default value  |
 | --- | --- |
-| `isMultiSelect` value is `false` or not specified | the `style` default value is `compact`|
-| `isMultiSelect` value is `true` | the `style` default value is `expanded` |
+| `false` or not specified | The default style is `compact`|
+| `true` | The default style is `expanded` |
 
 > [!NOTE]
 > * Enter both `"isMultiSelect": true` and `"style": true`, if you want the multi-select list to be displayed in a compact style.
