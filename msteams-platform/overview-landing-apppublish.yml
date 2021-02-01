@@ -14,7 +14,7 @@ landingContent:
       - linkListType: concept
         links:
           - text: Frequently failed cases
-            url: ../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
+            url: ./concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
       - linkListType: video
         links:
           - text: Microsoft Graph and app registration (7:29)
@@ -24,17 +24,17 @@ landingContent:
       - linkListType: Teams app submission
         links:
           - text: Submit your app to AppSourcer
-            url: ../concepts/deploy-and-publish/appsource/publish.md
+            url: ./concepts/deploy-and-publish/appsource/publish.md
       - linkListType: reference
         links:
-          - text: Permissions reference
-            url: ../permissions-reference.md
+          - text: Frequently failed cases
+            url: ./concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
   - title: White Glove Service
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Frequently failed cases
-            url: ../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
+            url: ./concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
   - title: Microsoft 365 Certificate
     linkLists:
       - linkListType: download
