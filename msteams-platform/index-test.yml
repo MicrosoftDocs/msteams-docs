@@ -14,12 +14,15 @@ metadata:
   ms.author: lajanuar #Required; microsoft alias of author; optional team alias.
   ms.date: 05/29/2020 #Required; mm/dd/yyyy format.
 
+
 highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
    items: 
     - title: New to Microsoft Teams development? 🚀Start here! 
       itemType: get-started
       url:   /microsoftteams/platform/overview
+      itemType: video
+      url: https://www.microsoft.com/en-us/videoplayer/embed/RE4Jqbg
     - title:  Tabs — embedded web experiences
       itemType:  overview
       url:   /microsoftteams/platform/tabs/what-are-tabs
@@ -42,7 +45,7 @@ highlightedContent:
       itemType: overview
       url:  /microsoftteams/platform/samples/teams-low-code-solutions/
 
-highlightedContent:
+highlightedContent2:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
    items: 
     - title: capabilities 
