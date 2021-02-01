@@ -23,7 +23,7 @@ Webhooks are a great way for Teams to integrate with external apps. A webhook is
 
 ## Creating actionable messages
 
-The example in the preceding section includes three visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions. Each `ActionCard` contains an input type; a text field, a date picker, or a multi-choice list. Each `ActionCard` action has an associated action, for example, `HttpPOST`.
+The connector cards include three visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions. Each `ActionCard` contains an input type; a text field, a date picker, or a multi-choice list. Each `ActionCard` action has an associated action, for example, `HttpPOST`.
 
 Connector cards support three types of actions:
 
@@ -41,17 +41,16 @@ The `ActionCard` action supports three input types:
 | `DateInput` | A date selector with an optional time selector. |
 | `MultichoiceInput` | An enumerated list of choices, offering either a single selection or multiple selections.|
 
-`MultichoiceInput` supports a `style` property that controls whether the list initially appears fully expanded. The default value of `style` depends on the value of `isMultiSelect`.
+`MultichoiceInput` supports a `style` property that controls the display of a fully expanded list. The default value of `style` depends on the `isMultiSelect` value.
 
-| `isMultiSelect` | `style` default |
+| If  | Then  |
 | --- | --- |
-| `false` or not specified | `compact` |
-| `true` | `expanded` |
-
-Specify both `"isMultiSelect": true` and `"style": true` if you want the multi-select list to be displayed in a compact style.
+| `isMultiSelect` value is `false` or not specified | the `style` default value is `compact`|
+| `isMultiSelect` value is `true` | the `style` default value is `expanded` |
 
 > [!NOTE]
-> * Specifying `compact` for the `style` property in Microsoft Teams is the same as specifying `normal` for the `style` property in Microsoft Outlook.
+> * Enter both `"isMultiSelect": true` and `"style": true`, if you want the multi-select list to be displayed in a compact style.
+> * Selecting `compact` for the `style` property in Microsoft Teams is the same as selecting `normal` for the `style` property in Microsoft Outlook.
 > * Webhooks support only Office 365 message back cards and adaptive cards.
 
 For all other details about connector card actions, see **[Actions](/outlook/actionable-messages/card-reference#actions)** in the actionable message card reference.
