@@ -1,28 +1,43 @@
 ### YamlMime:Landing
 
-title: Build apps for the Microsoft Teams platform
-summary: Learn how to authenticate and work with permissions to securely access data through Microsoft Teams. Explore the documentation below to learn about app registration, authentication libraries, authorization, and other parts of the Microsoft identity platform that support Microsoft Graph development.
+title: App Validation and Publishing
+summary: Make your app available in the Microsoft Teams app catalog and on the web by publishing it to AppSource. At a high level, the process for submitting your app to AppSource.
 
 metadata: 
   ms.topic: overview
   ms.date: 02/01/2021
   author: surbhigupta12
-  ms.author: celested
-  services: active-directory
-  ms.service: active-directory
-  ms.workload: identity
-  ms.reviewer: jawoods  
-  ms.custom: graphiamtop20   
-
 
 landingContent:
-  - title: Overview
+  - title: Validation Guidelines
     linkLists:     
       - linkListType: concept
         links:
-          - text: Build your first Microsoft Teams app overview
-            url: ../build-first-app-overview.md
+          - text: Frequently failed cases
+            url: ../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
       - linkListType: video
         links:
-          - text: MS
+          - text: Microsoft Graph and app registration (7:29)
             url: https://www.youtube.com/watch?v=93j0MmRruFo
+  - title: App Store Publish
+    linkLists:
+      - linkListType: Teams app submission
+        links:
+          - text: Submit your app to AppSourcer
+            url: ../concepts/deploy-and-publish/appsource/publish.md
+      - linkListType: reference
+        links:
+          - text: Permissions reference
+            url: ../permissions-reference.md
+  - title: White Glove Service
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Frequently failed cases
+            url: ../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
+  - title: Microsoft 365 Certificate
+    linkLists:
+      - linkListType: download
+        links:
+          - text: 365 Certificate
+            url: https://docs.microsoft.com/en-us/microsoft-365-app-certification/docs/certification
