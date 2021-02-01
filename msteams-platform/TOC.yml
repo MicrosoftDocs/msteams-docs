@@ -386,6 +386,8 @@
     href: concepts/deploy-and-publish/apps-upload.md
   - name: Publish to your organization
     href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json
+  - name: Create a SaaS offer for your app
+    href: concepts/deploy-and-publish/add-saas-offer.md
   - name: Publish to the Teams store (AppSource)
     items:
     - name: Understanding AppSource submission 

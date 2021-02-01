@@ -8,7 +8,7 @@ ms.date: 09/22/2020
 ---
 # Entry points for Teams apps
 
-The Teams platform provides a flexible set of entry points where people can discover and use your app. Your app can be as simple as embedding existing web content in a tab or a multi-faceted app that users interact with across several contexts.
+Microsoft Teams provides a flexible set of entry points where people can discover and use your app. Your app can be as simple as embedding existing web content in a tab or a multi-faceted app that users interact with across several contexts.
 
 The most successful apps feel native to Teams, so it's important to carefully plan your app's entry points.
 
@@ -26,8 +26,6 @@ Here's how Teams app capabilities are commonly used in collaborative contexts:
 
 * [**Webhooks and connectors**](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) allow an external service to post messages into a conversation and users to send messages to a service.
 
-* [**Microsoft Graph REST API**](https://docs.microsoft.com/graph/teams-concept-overview) for getting data about teams, channels, and group chats to help automate and manage Teams processes.
-
 ## Personal apps
 
 [Personal apps](~/concepts/design/personal-apps.md) focus on interactions with a single user. The experience in this context is unique to each user.
@@ -36,7 +34,7 @@ Here's how Teams capabilities are commonly used in personal contexts:
 
 * [**Bots**](~/bots/what-are-bots.md) have one-on-one conversations with a user. Bots that require multi-turn conversations or provide notifications relevant only to a specific user are best suited in personal apps.
 
-* [**Tabs**](~/tabs/what-are-tabs.md) provide a full-screen embedded web experience that's meaningful to the user looking at it.
+* [**Tabs**](~/tabs/what-are-tabs.md) provide a full-screen embedded web experience with a personalized view for each user.
 
 ## Examples
 

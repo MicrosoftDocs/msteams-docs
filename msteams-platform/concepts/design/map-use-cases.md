@@ -5,7 +5,7 @@ description: Decide how to distribute your app
 ms.topic: conceptual
 ms.author: anclear
 ---
-# Map your use cases to teams app capabilities
+# Map your use cases to Teams app capabilities
 
 If you haven't already, make sure you've [considered your use cases](~/concepts/design/map-use-cases.md) carefully. You should also have a good understanding of the [extensibility points and UI elements](~/concepts/extensibility-points.md) available for your app. Once you've figured out *what* your trying to solve, and *who* you're solving it for, it is time to start thinking about *how*.
 
@@ -21,7 +21,7 @@ App for Microsoft Teams are a great way to interact with your data, and there ar
 
 * Tabs - Create embedded web experiences to view, work with, and share data.
 
-* Connectors and webhooks - A simple way to push data into, and send data out of the Teams client.
+* Connectors and webhooks - A simple way to push data in and send data out of Teams.
 
 * Task modules - Interactive modal forms from wherever you need them to collect or display information.
 

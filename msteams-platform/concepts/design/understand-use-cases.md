@@ -1,25 +1,59 @@
 ---
-title: Understand your use cases
-author: clearab
-description: Decide how to distribute your app
+title: Plan your app
+author: heath-hamilton
+description: What to do before you strt
 ms.topic: conceptual
 ms.author: anclear
 ---
-# Understand your use cases
+# Plan your Microsoft Teams app
 
-The Microsoft Teams platform offers a large variety of [extensibility points and UI elements](~/concepts/extensibility-points.md) your app can take advantage of. If you don't already have a good understanding of what is possible on the Teams platform, you should read that article first.
+Microsoft Teams is a collaboration platform with hundreds of millions of daily active users. Building a Teams app can significantly grow your user base and drive engagement for your product or service.
 
-Each method of interacting with your users has it's own strengths and weaknesses. Building an awesome Teams app is all about finding the right combination to meet your user's needs. If you're going to meet those needs, you first need to understand them.
+Before you start designing or write a single line of code, though, read through the following guidelines to help you plan an effective app.
+
+## 1. Identify your use cases
+
+It's important to understand who your users are and what a Teams app can do for them.
+
+Start with a problem you'd like to solve for your users. Identify personas and scenarios to build for, then focus on a persona with many users. What are their goals? What's a common scenario for them? What industry do they work in? Be as specific as possible&#8212;you don't have to build everything for everyone at once.
+
+Draft these scenarios as user stories or journeys. Don't worry about specifying where or how the scenarios happen&#8212;that comes next.
+
+## 2. Determine your app's capabilities
+
+Teams has a variety of extension points (referred to as [capabilities](~/concepts/extensibility-points.md)) and UI components your app. If you don't already have a good understanding of what is possible on the Teams platform, you should read that article first.
+
+Each method of interacting with your users has its strengths and weaknesses. Building an effective Teams app is all about finding the right combination to meet your user's needs. If you're going to meet those needs, you first need to understand them.
+
+## 3. Consider common Teams app scenarios
+
+Start thinking about how your app may handle some common Teams scenarios (if applicable).
+
+### Should my entire app be in Teams?
+
+Whether you're creating something new or [integrating an existing app](~/samples/integrating-web-apps.md), you must determine if the experience will happen completely inside Teams or just a portion of it. Remember who your users are and the problem you're trying to solve for them. You can build a complex app that runs completely inside Teams, but maybe that doesn't make sense for them. For example, if their current system solves most of the problem, you could enhance the experience by including a subset of functionality in Teams that focuses on collaboration or workflows.
+
+### What's the onboarding experience?
+
+Your first-run experience can determine whether your app succeeds or fails. For each app capability and the contexts where users can add your app, you must have a plan for how the app introduces itself. For example, how you introduce a conversational bot in a [channel](../../bots/design/bots.md#introductions-in-group-chats-and-channels) with a thousand people should be different than a [one-on-one chat](../../bots/design/bots.md#welcome-message-in-a-one-on-one-chat).
+
+Understand your users' familiarity with your app. If your app is established and most have used it before in another context, the onboarding experience will likely be different than if you're introducing a brand-new app. Also, remember that users discover Teams apps in a variety of ways. Account for users who add your app and users who learn about your app when a teammate uses it to share content.
+
+For specific information on creating an effective onboarding experience, see the [Teams app design guidelines](../../concepts/design/design-teams-app-overview.md).
+
+### Do I need authentication?
+
+xxx
 
 ## What problem are you trying to solve?
 
-Every good app has a core problem (or need) it is trying to solve - before you start building you need to articulate what that problem is. At it's heart, Teams is a collaboration platform, so apps looking to solve collaboration problems are a great fit. It's also a social platform, is natively cross-platform, sits at the heart of Office 365, and offers a personal canvas for you to create apps on. There is an incredibly wide variety of needs that can be solved with a Teams app, just be sure you understand which one you're trying to solve.
+Every good app has a core problem (or need) it is trying to solve - before you start building you need to articulate what that problem is. At its heart, Teams is a collaboration platform, so apps looking to solve collaboration problems are a great fit. It's also a social platform, is natively cross-platform, sits at the heart of Office 365, and offers a personal canvas for you to create apps on. There is an incredibly wide variety of needs that can be solved with a Teams app, just be sure you understand which one you're trying to solve.
 
 ## Who are you solving it for?
 
-Sometimes this can be  obvious - "My team's monitoring system needs to send alerts somewhere, we need to be able to discuss them really quickly, and none of us want to check our email." Sometimes your target audience can grow over time - "Our sister team is really jealous of our alerting system, and now they want in on the action." Understanding who your users are will help you identify the right distribution model, but more importantly will help you identify *how they use Teams*. Are they primarily front-line workers on mobile clients? Do you expect a lot of guest users to need access to your app? Do they use teams and channels, or primarily group chats? How technically sophisticated are they? Will you need a thorough on-boarding experience, or will a few pointers do?
+Sometimes this can be obvious "Our monitoring system sends alerts, but 30 percent of our customers tell us the alerts get lost in email." Sometimes your target audience can grow over time - "Our sister team is really jealous of our alerting system, and now they want in on the action." Understanding who your users are will help you identify the right distribution model, but more importantly will help you identify *how they use Teams*. Are they primarily front-line workers on mobile clients? Do you expect a lot of guest users to need access to your app? Do they use teams and channels, or primarily group chats? How technically sophisticated are they? Will you need a thorough on-boarding experience, or will a few pointers do?
 
-Sometimes the answer is "We want to solve this problem for all Team's users everywhere." If that's the case for you you'll want to spend some time understanding [what it takes to get published to AppSource](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md).
+Sometimes the answer is "We want to solve this problem for all Teams users everywhere." If that's the case for you you'll want to spend some time understanding [what it takes to get published to AppSource](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md).
 
 ## Do you need authentication?
 
@@ -31,7 +65,11 @@ Whether you're building something entirely new, or bringing an existing solution
 
 ## What will the onboarding experience be like?
 
-Your onboarding experience can be the difference between success or failure for your app. For each capability of your app, and for each context that capability can be installed in, you should have a plan for how you're going to introduce yourself. How you introduce your conversational bot when it is installed in a channel with a thousand people will probably be different than when it is installed in a one-to-one chat. What happens when a user first configures your tab in a channel? If you're sharing cards with a messaging extension, does it make sense to add a small link to a "learn more" page to help introduce users to what else your app can do?
+Your first-run experience can determine whether your app succeeds or fails. For each app capability and each context where users can add your app, you must have a plan for how the app introduces itself. Some examples:
+
+* Introducing a conversational bot in a channel with a thousand people should probably be different than in a one-on-one chat.
+* What happens when a user adds a tab top a channel?
+* If you're sharing cards with a messaging extension, does it make sense to add a small link to a "learn more" page to help introduce users to what else your app can do?
 
 Knowing who your users are will help you craft the right experience. Do you expect most people to already have some context of what your app is for, or to have already used your services in another context? Or are they coming to your app with no prior knowledge? Craft your onboarding experience with your key users in mind.
 
