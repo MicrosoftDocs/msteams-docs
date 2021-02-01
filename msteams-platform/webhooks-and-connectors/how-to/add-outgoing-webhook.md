@@ -27,15 +27,19 @@ The example in the preceding section includes three visible buttons on the card.
 
 Connector cards support three types of actions:
 
-- `ActionCard` Presents one or more input types and associated actions.
-- `HttpPOST` Sends a POST request to a URL.
-- `OpenUri` Opens a URI in a separate browser or app, optionally targets different URIs based on operating systems.
+| Action | Description |
+| ------- | ----------- |
+| `ActionCard` |Presents one or more input types and associated actions.|
+| `HttpPOST` | Sends a POST request to a URL. |
+| `OpenUri` |  Opens a URI in a separate browser or app, optionally targets different URIs based on operating systems.|
 
 The `ActionCard` action supports three input types:
 
-- `TextInput` A single-line or multiline text field with an optional length limit.
-- `DateInput` A date selector with an optional time selector.
-- `MultichoiceInput` An enumerated list of choices, offering either a single selection or multiple selections.
+| Input type | Description |
+| ------- | ----------- |
+| `TextInput` | A single-line or multiline text field with an optional length limit. |
+| `DateInput` | A date selector with an optional time selector. |
+| `MultichoiceInput` | An enumerated list of choices, offering either a single selection or multiple selections.|
 
 `MultichoiceInput` supports a `style` property that controls whether the list initially appears fully expanded. The default value of `style` depends on the value of `isMultiSelect`.
 
