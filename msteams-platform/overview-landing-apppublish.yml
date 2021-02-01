@@ -5,8 +5,8 @@ summary: Learn how to authenticate and work with permissions to securely access 
 
 metadata: 
   ms.topic: overview
-  ms.date: 05/07/2020
-  author: lajanuar
+  ms.date: 02/01/2021
+  author: surbhigupta12
   ms.author: celested
   services: active-directory
   ms.service: active-directory
@@ -21,7 +21,7 @@ landingContent:
       - linkListType: concept
         links:
           - text: Build your first Microsoft Teams app overview
-            url: ./build-first-app-overview.md
+            url: ../build-first-app-overview.md
       - linkListType: video
         links:
           - text: MS
