@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 
-title: uild apps for the Microsoft Teams platform
+title: Build apps for the Microsoft Teams platform
 summary: Learn how to authenticate and work with permissions to securely access data through Microsoft Teams. Explore the documentation below to learn about app registration, authentication libraries, authorization, and other parts of the Microsoft identity platform that support Microsoft Graph development.
 
 metadata: 
