@@ -7,20 +7,23 @@ ms.topic: how-to
 
 # Request device permissions for your Microsoft Teams app
 
-You must request and manage the device permissions to access these media capabilities of a device. The device permissions work similarly for all app constructs, such as tabs or messaging extensions.
+## Why do you need device permissions?
+
+You must request and manage the device permissions to access the media capabilities of a device. The device permissions work similarly for all app constructs, such as tabs or messaging extensions.
 
 Build much richer experiences on Teams platform  by accessing a user’s device permissions, such as:
 
-* Record and share short videos
-* Record short audio memos and save them for later use
-* Use user location information to display relevant information
+* Record and share short videos.
+* Record short audio memos and save them for later use.
+* Use the location information of the user to display relevant information.
 
 While access to these features is standard in most of the modern web browsers, you must inform 
-Teams about the features that you are using, by updating your app manifest. This allows you to ask for permissions, while your app is running on the Teams desktop client.
+Teams about the features that you are using, by updating your app manifest. This update allows you to ask for permissions, while your app is running on the Teams desktop client.
+
 > [!NOTE] 
 > Currently, the Microsoft Teams support for media capabilities, is only available for mobile clients.
 
-## Manage permissions
+## Managing permissions
 
 # [Desktop](#tab/desktop)
 
@@ -42,7 +45,7 @@ Teams about the features that you are using, by updating your app manifest. This
 
 ---
 
-## Properties
+## Specifying properties
 
 Update your app's `manifest.json` by adding `devicePermissions` and specifying which of the five properties that you use in your application:
 
@@ -55,9 +58,6 @@ Update your app's `manifest.json` by adding `devicePermissions` and specifying w
     "openExternal"
 ],
 ```
-> [!NOTE]
->
-> Media is also used for camera permissions on mobile.
 
 Each property allows you to prompt the user to ask for their consent:
 
@@ -69,9 +69,9 @@ Each property allows you to prompt the user to ask for their consent:
 | midi          | Permission to send and receive midi information from a digital musical instrument.   |
 | openExternal  | Permission to open links in external applications.  |
 
-## Check permissions from your app
+## Checking permissions from your app
 
-After adding `devicePermissions` to your app manifest, check permissions using the HTML5 permissions API without causing a prompt:
+After adding `devicePermissions` to your app manifest, check permissions using the **HTML5 permissions API** without causing a prompt:
 
 ``` Javascript
 // Different query options:
@@ -95,16 +95,16 @@ You must leverage the appropriate HTML5 or Teams API, to display a prompt for ge
 
 > [!IMPORTANT]
 > * Support for `camera`, `gallery`, and `microphone` is enabled through [**selectMedia API**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true). Use [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) for a single image capture.
-> * Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). You must use this API for location as [**geolocation API**](../../resources/schema/manifest-schema.md#devicepermissions) is currently not fully supported on all desktop clients.
+> * Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). You must use this `getLocation API` for location, as [**geolocation API**](../../resources/schema/manifest-schema.md#devicepermissions) is currently not fully supported on all desktop clients.
 
 For example:
- * To prompt the user to access their location you must call `getCurrentPosition`:
+ * To prompt the user to access their location you must call `getCurrentPosition()`:
 
     ```Javascript
     navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
     ```
 
- * To use the camera on desktop or web, Teams displays a permission prompt when you call `getUserMedia`:
+ * To use the camera on desktop or web, Teams displays a permission prompt when you call `getUserMedia()`:
 
     ```Javascript
     navigator.mediaDevices.getUserMedia({ audio: true, video: true });
@@ -118,7 +118,7 @@ For example:
     });
     ```
 
- * Notifications will prompt the user when you call `requestPermission`:
+ * Notifications will prompt the user when you call `requestPermission()`:
 
     ```Javascript
     Notification.requestPermission(function(result) { /* ... */ });

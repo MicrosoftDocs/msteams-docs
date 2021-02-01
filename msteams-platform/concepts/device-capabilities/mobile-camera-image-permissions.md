@@ -8,9 +8,13 @@ ms.author: lajanuar
 
 # Integrate media capabilities 
 
-The [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) provides the tools necessary for your Teams mobile app to access the user’s [device permissions](native-device-permissions.md) and build a richer experience. After accessing device permissions, integrate media capabilities by updating the app manifest file and using the media capability APIs. 
+## Why do you integrate media capabilities?
+
+ After accessing device permissions, integrate media capabilities by updating the app manifest file and using the media capability APIs. 
 
 It is important to understand [sample code snippets](#sample-code-snippets) for calling the respective APIs which allow you to use native media capabilities.
+
+Before you proceed further, it is important to familiarize yourself with the [API response errors](#error-handling) that are generated while calling the APIs and the methods to handle them.
 > [!NOTE] 
 > Currently, the Microsoft Teams support for media capabilities, is only available for mobile clients.
 
@@ -50,7 +54,7 @@ You must use the following set of APIs to enable your device's media capabilitie
 | API      | Description   |
 | --- | --- |
 | [**selectMedia**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest&branch=master#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true)| This API allows users to **capture or select media from a native device** and return to the web-app. The users edit, crop, rotate, annotate, or draw over images before submission. In response to **selectMedia**, the web-app receives the media IDs of selected images and a thumbnail of the selected media. <br/><br/>  This API also allows the users to record audio from a native device and return to the web-app. The users pause, re-record, and play recording preview before submission. In response to **selectMedia**, the web-app receives media IDs of the selected audio recording. Set the media type to four for audio. <br/> Use `maxDuration`, if you require to configure a duration in minutes for recording the conversation. The current duration for recording is 10 minutes, after which the recording terminates.  |
-| [**getMedia**](/javascript/api/@microsoft/teams-js/_media?view=msteams-client-js-latest&branch=master#getMedia__error__SdkError__blob__Blob_____void_&preserve-view=true)| This API retrieves the media in chunks irrespective of  the size. These chunks are assembled and sent back to the web app as a file or blob. This API breaks an image into smaller chunks,ss to facilitate large image transfer. |
+| [**getMedia**](/javascript/api/@microsoft/teams-js/_media?view=msteams-client-js-latest&branch=master#getMedia__error__SdkError__blob__Blob_____void_&preserve-view=true)| This API retrieves the media in chunks irrespective of  the size. These chunks are assembled and sent back to the web app as a file or blob. This API breaks an image into smaller chunks, to facilitate large image transfer. |
 | [**viewImages**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#viewImages_ImageUri_____error___SdkError_____void_&preserve-view=true)| This API enables the user to view images in  full-screen mode as a scrollable list.|
 
 
@@ -113,7 +117,7 @@ media.getMedia((error: microsoftTeams.SdkError, blob: Blob) => {
 });
 ```
 
-**Calling `viewImages`  API by ID**
+**Calling `viewImages` API by ID**
 
 ```javascript
 view images by id:
@@ -147,7 +151,7 @@ if (uriList.length > 0) {
 }
 ```
 
-**Calling viewImages API by URL**
+**Calling `viewImages` API by URL**
 
 ```javascript
 View Images by URL:
@@ -182,7 +186,7 @@ if (uriList.length > 0) {
 }
 ```
 
-**Calling selectMedia and getMedia API for recording audio through microphone**
+**Calling `selectMedia` and `getMedia` APIs for recording audio through microphone**
 
 ```javascript
 let mediaInput: microsoftTeams.media.MediaInputs = {
@@ -218,3 +222,23 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
     }
 });
 ```
+
+## Error handling
+
+The following table lists the error codes and the conditions under which they are generated:
+
+|Error code |  Error name     | Condition|
+| --------- | --------------- | -------- |
+| **100** | NOT_SUPPORTED_ON_PLATFORM | API is not supported on the current platform.|
+| **404** | FILE_NOT_FOUND | File specified is not found in the given location.|
+| **500** | INTERNAL_ERROR | Internal error is encountered while performing the required operation.|
+| **1000** | PERMISSION_DENIED |Permission is denied by the user.|
+| **2000** |NETWORK_ERROR | Network issue.|
+| **3000** | NO_HW_SUPPORT | Underlying hardware does not support the capability.|
+| **4000**| INVALID_ARGUMENTS | One or more arguments are invalid.|
+| **5000** | UNAUTHORIZED_USER_OPERATION | User is not authorized to complete this operation.|
+| **6000** |INSUFFICIENT_RESOURCES | Operation could not be completed due to insufficient resources.|
+|**7000** | THROTTLE | Platform throttled the request as the API was invoked frequently.|
+|  **8000** | USER_ABORT |User aborts the operation.|
+| **9000**| OLD_PLATFORM | Platform code is outdated and does not implement this API.|
+| **10000**| SIZE_EXCEEDED |  Return value is too big and has exceeded the platform size boundaries.|
