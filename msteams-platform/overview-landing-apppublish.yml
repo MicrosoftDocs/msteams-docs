@@ -23,8 +23,8 @@ landingContent:
     linkLists:     
       - linkListType: concept
         links:
-          - text: Frequently failed cases
-            url: ./concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
+          - text: Designing your Microsoft Teams app
+            url: ./concepts/design/design-teams-app-overview.md
       - linkListType: video
         links:
           - text: App registration (7:29)
