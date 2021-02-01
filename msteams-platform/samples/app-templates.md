@@ -211,15 +211,13 @@ E-Prescriptions is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app)-
 :::row-end:::
 
 
-## Emergency Button App 
+## Emergency Button Power &#9734;
 
-The Emergency Button Power App can be used by organisations who are using Microsoft Teams to enable any set of users to request assistance from supervisors. Features include:
-
+The Emergency Button Power app can be used by organizations that are using Microsoft Teams, to enable any set of users to request assistance from supervisors. This app includes various features, such as:
 -   Requesting assistance on different categories from a Power App
--   Notifications sent to requestor informing them of who has been assigned 
--   Notifications sent to assigned supervisor informing them of who needs assistance 
--   Audit trail held in SharePoint site
--   And many more.
+-   Notifications sent to requestors informing them of who has been assigned 
+-   Notifications sent to assigned supervisors informing them of who needs assistance 
+-   Viewing audit trails held in SharePoint
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-emergency-button-app)
 
