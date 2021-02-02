@@ -1,19 +1,19 @@
 ---
-title: Store (AppSource) review guidelines
+title: Store (AppSource) submission guidelines
 description: Describes the guidelines every app submitted to the Teams store (AppSource) must follow.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ---
-# Microsoft Teams store (AppSource) review guidelines
+# Microsoft Teams store (AppSource) submission guidelines
 
-Following these guidelines increases the chances your app will pass Microsoft Teams store (and AppSource) submission. The information here complements the Microsoft [commercial marketplace certification policies](https://docs.microsoft.com/legal/marketplace/certification-policies) but is specific to Teams apps. It will be updated frequently to reflect new Teams capabilities, user feedback, and changes to business rules.
+Following these guidelines increases the chances your app will pass Microsoft Teams store (and AppSource) submission. The information here, which complements the Microsoft [commercial marketplace certification policies](https://docs.microsoft.com/legal/marketplace/certification-policies), is specific to Teams apps and will be updated frequently to reflect new Teams capabilities, user feedback, and changes to business rules.
 
 Submit feedback on these guidelines [here](NEED LINK).
 
-If your app doesn't pass submission according to these guidelines and the commercial marketplace certification policies, the Microsoft validation team will contact you with a report of why your submission failed. The team works 24 hours a day, five days a week and can provide white-glove service to help your app meet our criteria.
+If your app doesn't pass review according to these guidelines and the commercial marketplace certification policies, the Microsoft validation team will contact you with a report on why your submission failed. The team works 24 hours a day, five days a week and can provide white-glove service to help your app meet our criteria.
 
-## Using this doc
+## Using these guidelines
 
 Some of these guidelines may not be applicable to you. For example, if your app doesn't have a bot, you can ignore those guidelines.
 
