@@ -93,6 +93,6 @@ Some text
 
 Some text
 
-## Design
+## 4.0 Design
 
 Some text
