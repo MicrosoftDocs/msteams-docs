@@ -9,13 +9,17 @@ ms.topic: how-to
 
 ## Why do you need device permissions?
 
-You must request and manage the device permissions to access the media capabilities of a device. The device permissions work similarly for all app constructs, such as tabs or messaging extensions.
-
 Build much richer experiences on Teams platform  by accessing a user’s device permissions, such as:
 
 * Record and share short videos.
 * Record short audio memos and save them for later use.
 * Use the location information of the user to display relevant information.
+
+You must request and manage the device permissions to access the media capabilities of a device. The device permissions work similarly for all app constructs, such as tabs or messaging extensions.
+
+## Accessing device permissions
+
+The [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) provides the tools necessary for your Teams mobile app to access the user’s [device permissions](native-device-permissions.md) and build a richer experience.
 
 While access to these features is standard in most of the modern web browsers, you must inform 
 Teams about the features that you are using, by updating your app manifest. This update allows you to ask for permissions, while your app is running on the Teams desktop client.
@@ -91,7 +95,8 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 });
 ```
 
-You must leverage the appropriate HTML5 or Teams API, to display a prompt for getting a consent to access device permissions. 
+## Using Teams APIs to get device permissions
+You must leverage the  to get appropriate HTML5 or Teams API, to display a prompt for getting a consent to access device permissions. 
 
 > [!IMPORTANT]
 > * Support for `camera`, `gallery`, and `microphone` is enabled through [**selectMedia API**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true). Use [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) for a single image capture.
