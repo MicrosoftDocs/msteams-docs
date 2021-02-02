@@ -13,6 +13,8 @@ It creates your virtual image and places it in a virtual environment where you c
 
 This document covers best practices, user experience, developer experience, steps to build a scene in Microsoft Scene Design Studio, how to assemble a scene package, and create an app package and try the scene in Teams.
 
+To collaborate on Teams using Together Mode, see [Teams group chat software](https://www.microsoft.com/en-in/microsoft-teams/group-chat-software).
+
 ### Best practices
 
 To get the most from Together Mode, follow these best practices:
@@ -47,20 +49,24 @@ The following diagram gives an overview of how the scene appears:
 
 ![Addingscenetoapp](../../../assets/images/apps-in-meetings/Scene-added-to-app.png)
 
-For more information, see Build a scene.
+For more information, see [Build a scene](#build-a-scene).
 
 >[!NOTE]
-> Have multiple scenes as part of a single app package that appears as a flat list of scenes to users. 
+> Have multiple scenes as part of a single app package that appears as a flat list of scenes to users.
 
 Developers must have the ability to ship a scene package that includes the following:
 
-* **Role based scene** – within a scene package, a developer must be able to render an experience preview, for example, for the teacher and the students.
+* **Role based scene:** within a scene package, a developer must be able to render an experience preview, for example, for the teacher and the students.
 
     ![Role based scene](../../../assets/images/apps-in-meetings/role-based-scene.png)
 
-* **In-scene configuration** – The JSON package assumes a single image with seat assignment. For example, in the picture below, the astronaut “seat” can by default be applied to the organizer through `participantRole` API, but the teacher can dynamically move this around using the class roster:
+* **In-scene configuration:** The JSON package assumes a single image with seat assignment. For example, in the following picture, the astronaut “seat” can by default be applied to the organizer through `participantRole` API, but the teacher can dynamically move this around using the class roster:
 
     ![In-Scene configuration](../../../assets/images/apps-in-meetings/role-based-scene.png)
+
+* **Moving images:** Developers must be able to support scenes that are in-motion to simulate moving objects. A brute force method of doing this is to support gif format in Together Mode. Advanced scene rendering will be more like a movie being played. 
+
+* **Stretch visual no-code designer experience:** Snap has made is simple through GUI for users to build their own filters. One of the challenges is that a developer may or may not be able to ship a scene generic enough for all teachers to use it. This is a time when teachers themselves can create custom scenes that serve the purpose.
 
 ## Build a scene
 
