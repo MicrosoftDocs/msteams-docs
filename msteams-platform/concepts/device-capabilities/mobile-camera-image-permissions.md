@@ -8,22 +8,24 @@ ms.author: lajanuar
 
 # Integrate media capabilities 
 
-The process with which you combine the native device capabilities, such as camera, and microphone along with Teams platform to is called integration. 
+This document gives a walkthrough on integrating  native device capabilities with Teams platform.
 
-## Integrate media capabilities - Purpose
+The process with which you combine the native device capabilities, such as **camera**, and **microphone** along with Teams platform is called integration of media capabilities. 
 
-The main purpose of integrating device capabilities with Teams platform is to enhance Teams collaboration for enriched experience.
-After accessing device permissions, integrate media capabilities by updating the app manifest file and using the media capability APIs. 
+## Integrate media capabilities - Advantage
 
-It is important to understand [code snippets](#code-snippets) for calling the respective APIs which allow you to use native media capabilities.
+The main advantage of integrating device capabilities with Teams platform is to enhance and enrich Teams collaborative experience.
+After accessing device permissions, integrate media capabilities by updating the app manifest file and calling the media capability APIs. 
 
-Before you proceed further, it is important to familiarize yourself with the [API response errors](#handle-errors) that are generated while calling the APIs and the methods to handle them.
+Have a good understanding on [code snippets](#code-snippets) for calling the respective APIs which allow you to use native media capabilities.
+
+Before you proceed further, it is important to familiarize yourself with the [API response errors](#error-handling) that are generated while calling the APIs and the methods to handle them.
 > [!NOTE] 
 > Currently, the Microsoft Teams support for media capabilities, is only available for mobile clients.
 
 ## Update manifest
 
-Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `media`. This allows your app to ask for requisite permissions from users before they use the camera to capture the image, open the gallery to select an image to submit as an attachment, or use the microphone to record the conversation.
+Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `media`. This allows your app to ask for requisite permissions from users before they use the **camera** to capture the image, open the gallery to select an image to submit as an attachment, or use the **microphone** to record the conversation.
 
 ``` json
 "devicePermissions": [
@@ -56,7 +58,8 @@ You must use the following set of APIs to enable your device's media capabilitie
 
 | API      | Description   |
 | --- | --- |
-| [**selectMedia**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest&branch=master#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true)| This API allows users to **capture or select media from a native device** and return to the web-app. The users edit, crop, rotate, annotate, or draw over images before submission. In response to **selectMedia**, the web-app receives the media IDs of selected images and a thumbnail of the selected media. <br/><br/>  This API also allows the users to record audio from a native device and return to the web-app. The users pause, re-record, and play recording preview before submission. In response to **selectMedia**, the web-app receives media IDs of the selected audio recording. Set the media type to four for audio. <br/> Use `maxDuration`, if you require to configure a duration in minutes for recording the conversation. The current duration for recording is 10 minutes, after which the recording terminates.  |
+| [**selectMedia**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest&branch=master#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true) for image capturing in camera| This API allows users to **capture or select media from a native device** and return to the web-app. The users edit, crop, rotate, annotate, or draw over images before submission. In response to **selectMedia**, the web-app receives the media IDs of selected images and a thumbnail of the selected media.|
+| [**selectMedia**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest&branch=master#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true) for audio recording in **Microphone**| This API also allows the users to record audio from a native device and return to the web-app. The users pause, re-record, and play recording preview before submission. In response to **selectMedia**, the web-app receives media IDs of the selected audio recording. Set the media type to four for audio. <br/> Use `maxDuration`, if you require to configure a duration in minutes for recording the conversation. The current duration for recording is 10 minutes, after which the recording terminates.  |
 | [**getMedia**](/javascript/api/@microsoft/teams-js/_media?view=msteams-client-js-latest&branch=master#getMedia__error__SdkError__blob__Blob_____void_&preserve-view=true)| This API retrieves the media in chunks irrespective of  the size. These chunks are assembled and sent back to the web app as a file or blob. This API breaks an image into smaller chunks, to facilitate large image transfer. |
 | [**viewImages**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#viewImages_ImageUri_____error___SdkError_____void_&preserve-view=true)| This API enables the user to view images in  full-screen mode as a scrollable list.|
 
@@ -67,7 +70,7 @@ You must use the following set of APIs to enable your device's media capabilitie
 **Web app experience for selectMedia API for microphone capability**
 ![web app experience for microphone capability](../../assets/images/tabs/microphone-capability.png)
 
-## Handle Errors 
+## Error handling
 
 The following table lists the error codes and the conditions under which they are generated:
 
@@ -89,7 +92,7 @@ The following table lists the error codes and the conditions under which they ar
 
 ## Code snippets
 
-* **Calling `selectMedia` API** for capturing images using camera
+**Calling `selectMedia` API** for capturing images using camera
 
 ```javascript
 let imageProp: microsoftTeams.media.ImageProps = {
@@ -120,7 +123,7 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 });
 ```
 
-* **Calling `getMedia` API** for capturing images using camera
+**Calling `getMedia` API** for capturing images using camera
 
 ```javascript
 let media: microsoftTeams.media.Media = attachments[0]
@@ -140,7 +143,7 @@ media.getMedia((error: microsoftTeams.SdkError, blob: Blob) => {
 });
 ```
 
-* **Calling `viewImages` API by ID**
+**Calling `viewImages` API by ID**
 
 ```javascript
 view images by id:
@@ -174,7 +177,7 @@ if (uriList.length > 0) {
 }
 ```
 
-* **Calling `viewImages` API by URL**
+**Calling `viewImages` API by URL**
 
 ```javascript
 View Images by URL:
@@ -209,7 +212,7 @@ if (uriList.length > 0) {
 }
 ```
 
-* **Calling `selectMedia` and `getMedia` APIs for recording audio through microphone**
+**Calling `selectMedia` and `getMedia` APIs for recording audio through microphone**
 
 ```javascript
 let mediaInput: microsoftTeams.media.MediaInputs = {

@@ -7,9 +7,9 @@ ms.topic: how-to
 
 # Request device permissions for your Microsoft Teams app
 
-If you want to enhance Teams collaborative experience, you must integrate native device capabilities with Teams platform. You must request for access to the capabilities to proceed further.
+If you want to enhance Teams collaborative experience, you must integrate native device capabilities with Teams platform. For that, you must request for access to the capabilities to proceed further.
 
-This document is useful for developers to request the device permissions .
+This document is useful for developers to request and access the native device permissions .
 
 ## Native device permissions
 
