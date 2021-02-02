@@ -58,7 +58,7 @@ Developers must have the ability to ship a scene package that includes the follo
 
     ![Role based scene](../../../assets/images/apps-in-meetings/role-based-scene.png)
 
-* **In-scene configuration** – The JSON package assumes a single image with seat assignment. For example, in the picture below, the astronaut “seat” can by default be applied to the organizer through participantRole API, but the teacher can dynamically move this around using the class roster:
+* **In-scene configuration** – The JSON package assumes a single image with seat assignment. For example, in the picture below, the astronaut “seat” can by default be applied to the organizer through `participantRole` API, but the teacher can dynamically move this around using the class roster:
 
     ![In-Scene configuration](../../../assets/images/apps-in-meetings/role-based-scene.png)
 
