@@ -69,9 +69,6 @@ Your app is ready to test in Teams. To do this, you must have a Microsoft 365 de
 
 Expand on the personal tab you just created or build another type of Teams app.
 
-> [!div class="nextstepaction"]
-> [Add to your personal tab](../build-your-first-app/build-personal-tab.md)
-> [!div class="nextstepaction"]
-> [Build a channel tab](../build-your-first-app/build-channel-tab.md)
-> [!div class="nextstepaction"]
-> [Build a bot](../build-your-first-app/build-bot.md)
+> * [Add to your personal tab](../build-your-first-app/build-personal-tab.md)
+> * [Build a channel tab](../build-your-first-app/build-channel-tab.md)
+> * [Build a bot](../build-your-first-app/build-bot.md)
