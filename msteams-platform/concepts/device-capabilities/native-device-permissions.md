@@ -7,7 +7,11 @@ ms.topic: how-to
 
 # Request device permissions for your Microsoft Teams app
 
-## Why do you need device permissions?
+If you want to enhance Teams collaborative experience, you must integrate native device capabilities with Teams platform. You must request for access to the capabilities to proceed further.
+
+This document is useful for developers to request the device permissions .
+
+## Native device permissions
 
 Build much richer experiences on Teams platform  by accessing a user’s device permissions, such as:
 
@@ -17,7 +21,7 @@ Build much richer experiences on Teams platform  by accessing a user’s device 
 
 You must request and manage the device permissions to access the media capabilities of a device. The device permissions work similarly for all app constructs, such as tabs or messaging extensions.
 
-## Accessing device permissions
+## Access device permissions
 
 The [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) provides the tools necessary for your Teams mobile app to access the user’s [device permissions](native-device-permissions.md) and build a richer experience.
 
@@ -27,7 +31,7 @@ Teams about the features that you are using, by updating your app manifest. This
 > [!NOTE] 
 > Currently, the Microsoft Teams support for media capabilities, is only available for mobile clients.
 
-## Managing permissions
+## Manage permissions
 
 # [Desktop](#tab/desktop)
 
@@ -49,7 +53,7 @@ Teams about the features that you are using, by updating your app manifest. This
 
 ---
 
-## Specifying properties
+## Specify properties
 
 Update your app's `manifest.json` by adding `devicePermissions` and specifying which of the five properties that you use in your application:
 
@@ -73,7 +77,7 @@ Each property allows you to prompt the user to ask for their consent:
 | midi          | Permission to send and receive midi information from a digital musical instrument.   |
 | openExternal  | Permission to open links in external applications.  |
 
-## Checking permissions from your app
+## Check permissions from your app
 
 After adding `devicePermissions` to your app manifest, check permissions using the **HTML5 permissions API** without causing a prompt:
 
@@ -95,7 +99,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 });
 ```
 
-## Using Teams APIs to get device permissions
+## Use Teams APIs to get device permissions
 You must leverage the  to get appropriate HTML5 or Teams API, to display a prompt for getting a consent to access device permissions. 
 
 > [!IMPORTANT]
