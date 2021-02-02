@@ -53,7 +53,7 @@ Teams about the features that you are using, by updating your app manifest. This
 
 ---
 
-## Specify properties
+## Specify permissions
 
 Update your app's `manifest.json` by adding `devicePermissions` and specifying which of the five properties that you use in your application:
 

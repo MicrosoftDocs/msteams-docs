@@ -67,9 +67,29 @@ You must use the following set of APIs to enable your device's media capabilitie
 **Web app experience for selectMedia API for microphone capability**
 ![web app experience for microphone capability](../../assets/images/tabs/microphone-capability.png)
 
+## Handle Errors 
+
+The following table lists the error codes and the conditions under which they are generated:
+
+|Error code |  Error name     | Condition|
+| --------- | --------------- | -------- |
+| **100** | NOT_SUPPORTED_ON_PLATFORM | API is not supported on the current platform.|
+| **404** | FILE_NOT_FOUND | File specified is not found in the given location.|
+| **500** | INTERNAL_ERROR | Internal error is encountered while performing the required operation.|
+| **1000** | PERMISSION_DENIED |Permission is denied by the user.|
+| **2000** |NETWORK_ERROR | Network issue.|
+| **3000** | NO_HW_SUPPORT | Underlying hardware does not support the capability.|
+| **4000**| INVALID_ARGUMENTS | One or more arguments are invalid.|
+| **5000** | UNAUTHORIZED_USER_OPERATION | User is not authorized to complete this operation.|
+| **6000** |INSUFFICIENT_RESOURCES | Operation could not be completed due to insufficient resources.|
+|**7000** | THROTTLE | Platform throttled the request as the API was invoked frequently.|
+|  **8000** | USER_ABORT |User aborts the operation.|
+| **9000**| OLD_PLATFORM | Platform code is outdated and does not implement this API.|
+| **10000**| SIZE_EXCEEDED |  Return value is too big and has exceeded the platform size boundaries.|
+
 ## Code snippets
 
-* **Calling `selectMedia` API**
+* **Calling `selectMedia` API** for capturing images using camera
 
 ```javascript
 let imageProp: microsoftTeams.media.ImageProps = {
@@ -100,7 +120,7 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 });
 ```
 
-* **Calling `getMedia` API**
+* **Calling `getMedia` API** for capturing images using camera
 
 ```javascript
 let media: microsoftTeams.media.Media = attachments[0]
@@ -225,23 +245,3 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
     }
 });
 ```
-
-## Handle Errors 
-
-The following table lists the error codes and the conditions under which they are generated:
-
-|Error code |  Error name     | Condition|
-| --------- | --------------- | -------- |
-| **100** | NOT_SUPPORTED_ON_PLATFORM | API is not supported on the current platform.|
-| **404** | FILE_NOT_FOUND | File specified is not found in the given location.|
-| **500** | INTERNAL_ERROR | Internal error is encountered while performing the required operation.|
-| **1000** | PERMISSION_DENIED |Permission is denied by the user.|
-| **2000** |NETWORK_ERROR | Network issue.|
-| **3000** | NO_HW_SUPPORT | Underlying hardware does not support the capability.|
-| **4000**| INVALID_ARGUMENTS | One or more arguments are invalid.|
-| **5000** | UNAUTHORIZED_USER_OPERATION | User is not authorized to complete this operation.|
-| **6000** |INSUFFICIENT_RESOURCES | Operation could not be completed due to insufficient resources.|
-|**7000** | THROTTLE | Platform throttled the request as the API was invoked frequently.|
-|  **8000** | USER_ABORT |User aborts the operation.|
-| **9000**| OLD_PLATFORM | Platform code is outdated and does not implement this API.|
-| **10000**| SIZE_EXCEEDED |  Return value is too big and has exceeded the platform size boundaries.|

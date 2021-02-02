@@ -7,11 +7,7 @@ ms.topic: overview
 
 # Device capabilities 
 
-Device capability is a feature that a device must have to perform certain additional functionalities. 
-
-## Device capabilities
-
-Device capabilities in the Microsoft Teams allow you to access media and location capabilities of mobile or desktop. Media capabilities include camera, microphone, gallery and video.
+Teams platform is continuously enhancing developer capabilities aligning with built-in 1P experiences. With the same vision, we have enhanced Teams platform to make it simpler for our partners to integrate device capabilities like camera, photo gallery, mic, and location into their webapps. This greatly lowers the barrier to app development, quickens-up development-cycle, and lights up new scenarios/use-cases for the entire developer community.
 
 ## Get device permissions
 
