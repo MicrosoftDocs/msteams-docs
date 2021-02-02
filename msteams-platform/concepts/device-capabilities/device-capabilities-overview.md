@@ -4,25 +4,23 @@ description:  Overview of native device  capabilities.
 keywords: camera image media microphone capabilities native device permissions 
 ms.topic: overview
 ---
+
 # Device capabilities 
 
-## What are device capabilities?
-Device capabilities in the Microsoft Teams allow you to access the following capabilities of mobile or desktop:
-* Media capabilities, such as
-    * Camera 
-    * Microphone
-    * Gallery
-    * Video
-* Location
+Device capability is a feature that a device must have to perform certain additional functionalities. 
 
-## Getting device permissions
+## Device capabilities
 
-It is important to get the prior [permissions](native-device-permissions.md)  to access and use the media capabilities of the device that you want to integrate with Teams.Teams supports access to your device's media capabilities, through native device capabilities. The main advantages of accessing device permissions are:
+Device capabilities in the Microsoft Teams allow you to access media and location capabilities of mobile or desktop. Media capabilities include camera, microphone, gallery and video.
+
+## Get device permissions
+
+Access and use the media capabilities of the device that you want to integrate with Teams. It is important to get the prior [permissions](native-device-permissions.md)  Teams supports access to your device's media capabilities, through native device capabilities. The main advantages of accessing device permissions are:
 * Record, store, and share short videos, and audios
 * Capture and share images
 * Share the location information. 
  
-## Integrating device capabilities
+## Integrate device capabilities
 
 The integration of device capabilities within Teams enables users to connect and collaborate with other users or groups on the go.
 
