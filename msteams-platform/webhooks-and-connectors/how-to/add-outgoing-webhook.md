@@ -1,25 +1,26 @@
 ---
 title: Add custom bots to Microsoft Teams with outgoing webhooks
-author: laujan
-description: how to add an outgoing webhook
-keywords: teams tabs outgoing webhook*
+description: describes how to add an outgoing webhook
 ms.topic: conceptual
 ms.author: lajanuar
+keywords: teams tabs outgoing webhook actionable message verify webhook
 ---
-# Add custom bots to Microsoft Teams with outgoing webhooks
+# Add custom bots to Teams with outgoing webhooks
 
 ## What are outgoing webhooks in Teams?
 
-Webhooks are an eminent way for Teams to integrate with external apps. A webhook is essentially a POST request sent to a callback URL. In Teams, outgoing webhooks provide a simple way to allow users to send messages to your web service without going through the full process of creating bots via the [Microsoft Bot Framework](https://dev.botframework.com/). Outgoing webhook sends data from Teams to any chosen service capable of accepting a JSON payload. After adding the outgoing webhooks to a team, it acts as a bot, listening in channels for messages using **\@mention**, sending notifications to external web services, and responding with rich messages, which include cards and images.
+Webhooks are an eminent way for Teams to integrate with external apps. A webhook is essentially a POST request sent to a callback URL. Outgoing webhooks allow users to send messages to your web service without going through the full process of creating bots via the [Microsoft Bot Framework](https://dev.botframework.com/).
+
+Outgoing webhook sends data from Teams to any chosen service capable of accepting a JSON payload. After adding the outgoing webhooks to a team, it acts as a bot and looks for messages in channels using **\@mention**. It sends notifications to external web services and responds with rich messages, which include cards and images.
 
 ## Outgoing webhook key features
 
 | Feature | Description |
 | ------- | ----------- |
-| Scoped Configuration| Webhooks are scoped at the team level. You must go through the setup process for each team you want to add your outgoing webhook to. |
-| Reactive Messaging| Users must use @mention for the webhook to receive messages. Currently users can only message an outgoing webhook in public channels and not within the personal or private scope. |
-|Standard HTTP message exchange|Responses will appear in the same chain as the original request message and can include any bot framework message content, for example, rich text, images, cards, and emojis. Note: Although outgoing webhooks can use cards, they cannot use any card actions except for `openURL`.|
-| Teams API method support|In Teams, outgoing webhooks send an HTTP POST to a web service and process a response back. They cannot access any other APIs like retrieve the roster or list of channels in a team.|
+| Scoped configuration| Webhooks are scoped at the team level. You must go through the setup process for each team where you want to add your outgoing webhook. |
+| Reactive messaging| Users must use @mention for the webhook to receive messages. Currently, users can only message an outgoing webhook in public channels and not within the personal or private scope. |
+|Standard HTTP message exchange|Responses appear in the same chain as the original request message and can include any bot framework message content, for example, rich text, images, cards, and emojis. Although outgoing webhooks can use cards, they cannot use any card actions except for `openURL`.|
+| Teams API method support|Outgoing webhook sends an HTTP POST to a web service and process a response back. They cannot access any other APIs like retrieve the roster or list of channels in a team.|
 
 ## Creating actionable messages
 
@@ -62,7 +63,8 @@ For all other details about connector card actions, see **[Actions](/outlook/act
 
 ### 1. Create a URL on your app's server to accept and process a POST request with a JSON payload
 
-Your service will receive messages in the standard Azure bot service messaging schema. The Bot Framework connector is a RESTful service that enables your service to process the interchange of JSON formatted messages via HTTPS protocols as documented in the [Azure Bot Service API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference). Alternatively, you can follow the [Microsoft Bot Framework SDK] to process and parse messages. See also [About Azure Bot Service](/azure/bot-service/bot-service-overview-introduction?view=azure-bot-service-4.0).
+Your service receives messages in a standard Azure bot service messaging schema. The bot framework connector is a RESTful service that empowers your service to process the interchange of JSON formatted messages via HTTPS protocols as documented in the [Azure Bot Service API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference). Alternatively, you can follow the [Microsoft Bot Framework SDK] to process and parse messages. See also [About Azure Bot Service](/azure/bot-service/bot-service-overview-introduction?view=azure-bot-service-4.0).
+
 
 Outgoing webhooks are scoped to the `team` level and are visible to all the team members. Just like a bot, users need to **\@mention** the name of the outgoing webhook to invoke it in the channel.
 
@@ -76,16 +78,16 @@ Use the value "HMAC 03TCao0i55H1eVKUusZOTZRjtvYTs+mO41mPL+R1e1U=" in the authori
 
 To ensure that your service is receiving calls only from actual Teams clients, Teams provides an HMAC code in the HTTP `hmac` header. Always included the code in your authentication protocol.
 
-Your code should always validate the HMAC signature included in the request:
+Your code must always validate the HMAC signature included in the request:
 
-* Generate the HMAC token from the request body of the message. There are standard libraries to do this on most platforms (see [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) for Node.js or see [Teams Webhook Sample](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) for C\#). Microsoft Teams uses standard SHA256 HMAC cryptography . You will need to convert the body to a byte array in UTF8.
+* Generate the HMAC token from the request body of the message. There are standard libraries to do this on most platforms (see [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) for Node.js or see [Teams Webhook Sample](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) for C\#). Microsoft Teams uses standard SHA256 HMAC cryptography. You need to convert the body to a byte array in UTF8.
 * Compute the hash from the byte array of the security token **provided by Teams** when you registered the outgoing webhook in the Teams client]. See [Create an outgoing webhook](#create-an-outgoing-webhook).
 * Convert the hash to a string using UTF-8 encoding.
 * Compare the string value of the generated hash with the value provided in the HTTP request.
 
 ### 3. Create a method to send a success or failure response
 
-Responses from your outgoing webhook will appear in the same reply chain as the original message. When the user performs a query, Microsoft Teams issues a synchronous HTTP request to your service and your code will have five seconds to respond to the message before the connection times out and terminates.
+Responses from your outgoing webhooks appear in the same reply chain as the original message. When the user performs a query, Microsoft Teams issues a synchronous HTTP request to your service and your code gets five seconds to respond to the message before the connection times out and terminates.
 
 ### Example response
 
@@ -104,12 +106,12 @@ Responses from your outgoing webhook will appear in the same reply chain as the 
 1. In the resulting popup window complete the required fields:
 
 >* **Name** - The webhook title and @mention tap.
->* **Callback URL** - The HTTPS endpoint that accepts JSON payloads and will receive POST requests from Teams.
->* **Description** - A detailed string that will appear in the profile card and the team-level App dashboard.
->* **Profile Picture** (optional) an app icon for your webhook.
->* Select the **Create** button from lower right corner of the pop-up window and the outgoing webhook will be added to the current team's channels.
->* The next dialog window will display an [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) security token that will be used to authenticate calls between Teams and the designated outside service.
->* If the URL is valid and the server and client authentication tokens are equal (i.e., an HMAC handshake), the outgoing webhook will be available to the team's users.
+>* **Callback URL** - The HTTPS endpoint that accepts JSON payloads and receives POST requests from Teams.
+>* **Description** - A detailed string that appear in the profile card and the team-level App dashboard.
+>* **Profile Picture** an optional app icon for your webhook.
+>* Select the **Create** button from the lower right corner of the pop-up window and the outgoing webhook are added to the current team's channels.
+>* The next dialog window displays an [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) security token that is used to authenticate calls between Teams and the designated outside service.
+>* The outgoing webhook is available to the team's users, only if the URL is valid and the server and client authentication tokens are equal for example, an HMAC handshake.
 
 ## Code samples
 
