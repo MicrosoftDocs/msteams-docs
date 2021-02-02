@@ -301,7 +301,7 @@ Users with organizer and/or presenter roles add tabs to a meeting using the plus
 
 ✔ Refer to the [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md).
 
-✔ Use the [notification](create-apps-for-teams-meetings.md#notificationsignal-api) API to signal that a bubble notification needs to be triggered.
+✔ Use the [NotificationSignal API](create-apps-for-teams-meetings.md#notificationsignal-api) to signal that a bubble notification needs to be triggered.
 
 ✔ As part of the notification request payload, include the URL where the content to be showcased is hosted.
 
