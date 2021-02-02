@@ -114,14 +114,14 @@ Bots and messaging extensions can include mentions within the card content in [T
 > * [Media elements](https://adaptivecards.io/explorer/Media.html) are currently not supported in Adaptive cards v1.2 on the Teams platform.
 > * Channel & Team mentions are not supported in bot messages.
 
-### Constructing mentions
+#### Constructing mentions
 
 To include a mention in an Adaptive Card your app needs to include the following elements
 
 * `<at>username</at>` in the supported adaptive card elements
 * The `mention` object inside of an `msteams` property in the card content, which includes the Teams user id of the user being mentioned
 
-### Sample Adaptive card with a mention
+#### Sample Adaptive card with a mention
 
 ``` json
 {
@@ -149,6 +149,37 @@ To include a mention in an Adaptive Card your app needs to include the following
       ]
     }
   }
+}
+```
+
+### Full width Adaptive Cards
+You can use this proprety to expand the width of an adaptive card and make use of addtional canvas space (see example below).
+
+#### Constructing full width cards
+To make a full width Adaptive Card your app needs to include the following elements
+
+* The `width` object inside of an `msteams` property in the card content should be set to `Full`
+
+#### Sample adaptive card with full width
+
+``` json
+{
+    "type": "AdaptiveCard",
+    "body": [{
+        "type": "Container",
+        "items": [{
+            "type": "TextBlock",
+            "text": "Digest card",
+            "size": "Large",
+            "weight": "Bolder"
+        }]
+    }],
+    
+    "msteams": {
+        "width": "Full"
+    },
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2"
 }
 ```
 
