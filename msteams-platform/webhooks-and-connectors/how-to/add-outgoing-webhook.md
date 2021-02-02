@@ -63,7 +63,7 @@ For all other details about connector card actions, see **[Actions](/outlook/act
 
 ### 1. Create a URL on your app's server to accept and process a POST request with a JSON payload
 
-Your service receives messages in a standard Azure bot service messaging schema. The bot framework connector is a RESTful service that empowers your service to process the interchange of JSON formatted messages via HTTPS protocols as documented in the [Azure Bot Service API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference). Alternatively, you can follow the [Microsoft Bot Framework SDK] to process and parse messages. See also [About Azure Bot Service](/azure/bot-service/bot-service-overview-introduction?view=azure-bot-service-4.0).
+Your service receives messages in a standard Azure bot service messaging schema. The bot framework connector is a RESTful service that empowers your service to process the interchange of JSON formatted messages via HTTPS protocols as documented in the [Azure Bot Service API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference). Alternatively, you can follow the [Microsoft Bot Framework SDK] to process and parse messages. See also [About Azure Bot Service](/azure/bot-service/bot-service-overview-introduction).
 
 
 Outgoing webhooks are scoped to the `team` level and are visible to all the team members. Just like a bot, users need to **\@mention** the name of the outgoing webhook to invoke it in the channel.
