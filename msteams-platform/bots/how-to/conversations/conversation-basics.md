@@ -331,7 +331,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## Picture messages
 
-Pictures are sent by adding attachments to a message. You can find more information on attachments in the [Bot Framework documentation](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0).
+Pictures are sent by adding attachments to a message. You can find more information on attachments in the [Bot Framework documentation](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
 
 Pictures can be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format. Animated GIF is not supported.
 
