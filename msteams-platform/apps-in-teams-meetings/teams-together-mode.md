@@ -118,7 +118,7 @@ Step 1
 …
 Step N 
 
-Create an app package and try the scene in Teams
+## Create an app package and try the scene in Teams
 
 An app package contains the scene package. App Studio makes it easy to package an app.
 
