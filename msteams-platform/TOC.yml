@@ -386,7 +386,7 @@
     items:
     - name: Understand the store submission process
       href: concepts/deploy-and-publish/appsource/publish.md
-    - name: Requirements for store listings
+    - name: Store review guidelines
       href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
     - name: Create app documentation
       href: concepts/deploy-and-publish/appsource/prepare/create-app-docs.md
