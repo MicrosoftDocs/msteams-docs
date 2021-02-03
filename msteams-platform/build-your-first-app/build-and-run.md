@@ -56,7 +56,7 @@ Your app is ready to test in Teams. To do this, you must have a Microsoft 365 de
 
 > [!NOTE]
 > Follow the steps to [Turn on app sideloading](../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading), if the side loading is not enabled.
-1. Press the **F5** key to launch a Teams web client in Visual Studio Code.
+1. Select the **F5** key to launch a Teams web client in Visual Studio Code.
 1. To display your app content in Teams, specify that where your app is running (`localhost`) is trustworthy:
    1. Open a new tab in the same browser window (Google Chrome by default) which opened after pressing **F5**.
    1. Go to `https://localhost:3000/tab` and proceed to the page.
