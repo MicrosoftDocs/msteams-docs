@@ -271,7 +271,51 @@ The following schema sample shows all extensibility options.
         "templateText": "<team member> mentioned you"
       }
     ]
-  }
+  },
+  "defaultInstallScope": {
+     "type": "string",
+     "enum": [
+        "personal",
+        "team",
+        "groupchat",
+        "meetings"
+      ],
+      "description": "The install scope is defined for this app by default. It is the option displayed on the button when a user tries to add the app."
+    },
+  "defaultGroupCapability": {
+      "type": "object",
+      "properties": {
+        "team": {
+          "type": "string",
+          "enum": [
+            "tab",
+            "bot",
+            "connector"
+          ],
+          "description": "When the install scope selected is Team, this field specifies the default capability available."
+    },
+    "groupchat": {
+      "type": "string",
+      "enum": [
+            "tab",
+            "bot",
+            "connector"
+      ],
+      "description": "When the install scope selected is GroupChat, this field specifies the default capability available."
+    },
+    "meetings": {
+      "type": "string",
+      "enum": [
+            "tab",
+            "bot",
+            "connector"
+      ],
+      "description": "When the install scope selected is Meetings, this field specifies the default capability available."
+      }
+    },
+    "description": "When a group install scope is selected, this will define the default capability when the user installs the app",
+    "additionalProperties": false
+
 }
 ```
 
