@@ -237,12 +237,12 @@ You must supply the user ID and the tenant ID. If the call succeeds, the API ret
 
 The official proactive messaging samples are as follows:
 
-|  No.  | Sample Name           | Description                                                                      | .NET    | JavaScript   | Python  |
-|:--:|:----------------------|:---------------------------------------------------------------------------------|:--------|:-------------|:--------|
-|57|Teams Conversation Basics  | Demonstrates basics of conversations in Teams, including sending one-to-one proactive messages.|[.NET&nbsp;Core](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [Python](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot)|
-|58|Start new thread in a channel     | Demonstrates creating a new thread in a channel. |[.NET&nbsp;Core](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
+| Sample Name           | Description                                                                      | .NET    | JavaScript   | Python  |
+|:----------------------|:---------------------------------------------------------------------------------|:--------|:-------------|:--------|
+|Teams Conversation Basics  | Demonstrates basics of conversations in Teams, including sending one-to-one proactive messages.|[.NET&nbsp;Core](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [Python](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot)|
+|Start new thread in a channel     | Demonstrates creating a new thread in a channel. |[.NET&nbsp;Core](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
 
-The following sample demonstrates the minimal amount of information needed to send a proactive message without using a `conversationReference` object. This sample can be useful if you're using REST API calls directly or haven't been storing full `conversationReference` objects.
+The following sample demonstrates the minimal amount of information needed to send a proactive message without using a `conversationReference` object. This sample can be useful if you're using REST API calls directly or haven't been storing full `conversationReference` objects:
 
 * [Teams Proactive Messaging](https://github.com/clearab/teamsProactiveMessaging)
 
