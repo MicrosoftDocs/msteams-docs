@@ -49,13 +49,16 @@ Once complete, there's a **Compiled successfully!** message in the terminal. You
 
 ## 4. Sideload your app in Teams
 
-Your app is ready to test in Teams. To do this, you must have a Microsoft 365 development account that allows app sideloading. For more information on account opening, see [Teams development account](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account). Sideload your app in Teams using the following steps:
+Your app is ready to test in Teams. To do this, you must have a Microsoft 365 development account that allows app sideloading. For more information on account opening, see [Teams development account](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account). 
 
 > [!TIP]
 > Check for issues before sideloading your app, using the [validation feature in App Studio](../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool), which is included in the toolkit. Fix the errors to successfully sideload the app.
 
+Sideload your app in Teams using the following steps:
+
 > [!NOTE]
-> Follow the steps to [Turn on app sideloading](../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading), if the side loading is not enabled.
+> To enable sideloading before you sideload your app in Teams, follow the steps in [Turn on app sideloading](../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
+
 1. Select the **F5** key to launch a Teams web client in Visual Studio Code.
 1. To display your app content in Teams, specify that where your app is running (`localhost`) is trustworthy:
    1. Open a new tab in the same browser window (Google Chrome by default) which opened after pressing **F5**.
