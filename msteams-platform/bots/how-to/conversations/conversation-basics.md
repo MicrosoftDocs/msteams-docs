@@ -371,6 +371,11 @@ Use the following code to send a simple adaptive card:
 To know more about cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).
 When a response contains text messages and attachments, both responses are sent separately. The attachment is sent after the text message.
 
+## Code sample
+|**Sample name** | **Description** | **.NETCore** | **Javascript** | **Python**|
+|----------------|-----------------|--------------|----------------|-----------|
+| Teams Conversation Bot | Messaging and conversation event handling. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+
 ## Next steps
 
 * [Sending proactive messages](~/bots/how-to/conversations/send-proactive-messages.md)

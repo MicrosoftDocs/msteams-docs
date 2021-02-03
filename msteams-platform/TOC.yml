@@ -20,9 +20,9 @@
     href: build-your-first-app/build-bot.md
   - name: Create a messaging extension
     href: build-your-first-app/build-messaging-extension.md
-- name: Tutorials and samples
+- name: Tutorials and code samples
   items:
-  - name: Overview
+  - name: Tutorials
     href: tutorials/code-samples.md   
   - name: Create an app using C#
     href: tutorials/get-started-dotnet-app-studio.md
@@ -30,24 +30,8 @@
     href: tutorials/get-started-nodejs-app-studio.md
   - name: Create an app using the Yeoman generator
     href: tutorials/get-started-yeoman.md
-  - name: Bot samples
-    items:
-    - name: Chatbot with C# (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot
-    - name: Chatbot with Node.js (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot
-    - name: Chatbot with Python (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot
-  - name: Messaging extension samples
-    items:
-    - name: Action commands with C# (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action
-    - name: Action commands with Node.js (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action
-    - name: Search commands with C# (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search
-    - name: Search commands with Node.js (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search
+  - name: Code samples
+    href: https://github.com/OfficeDev/Microsoft-Teams-Samples
 - name: App fundamentals
   items:
   - name: Teams app capabilities
