@@ -148,7 +148,7 @@ After the team and channel have been created, you can begin sending back-in-time
 
 > [!NOTE]
 > * `createdDateTime` must be unique across messages in the same thread.
-> * `createdDateTime` supports timestamps with milliseconds precision. For example, if the incoming request message has `createdDateTime` 2020-09-16T05:50:31.0025302Z, then it would be converted to 2020-09-16T05:50:31.002Z when ingested.
+> * `createdDateTime` supports timestamps with milliseconds precision. For example, if the incoming request message has `createdDateTime` as 2020-09-16T05:50:31.0025302Z, then it would be converted to 2020-09-16T05:50:31.002Z when ingested.
 
 #### Request (POST message that is text-only)
 
