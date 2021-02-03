@@ -7,13 +7,13 @@ ms.topic: how-to
 
 # Request device permissions for your Microsoft Teams app
 
-If you want to enhance Teams collaborative experience, you must integrate native device capabilities with Teams platform. For that, you must request for access to the capabilities to proceed further.
+A mobile or desktop device has additional built-in devices, such as camera and microphone. you can access these devices and integrate with Microsoft Teams these to enhance the collaborative experience. You must request for access to the capabilities to proceed further.
 
-This document is useful for developers to request and access the native device permissions .
+This document guides the developers to request and access the native device permissions .
 
 ## Native device permissions
 
-Build much richer experiences on Teams platform  by accessing a user’s device permissions, such as:
+Build much richer experiences on Teams platform by accessing a user’s device permissions, such as:
 
 * Record and share short videos.
 * Record short audio memos and save them for later use.
@@ -25,8 +25,7 @@ You must request and manage the device permissions to access the media capabilit
 
 The [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) provides the tools necessary for your Teams mobile app to access the user’s [device permissions](native-device-permissions.md) and build a richer experience.
 
-While access to these features is standard in most of the modern web browsers, you must inform 
-Teams about the features that you are using, by updating your app manifest. This update allows you to ask for permissions, while your app is running on the Teams desktop client.
+While access to these features is standard in most of the modern web browsers, you must inform Teams about the features that you are using, by updating your app manifest. This update allows you to ask for permissions,  while your app is running on the Teams desktop client.
 
 > [!NOTE] 
 > Currently, the Microsoft Teams support for media capabilities, is only available for mobile clients.

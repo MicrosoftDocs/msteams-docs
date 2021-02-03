@@ -8,7 +8,7 @@ ms.author: lajanuar
 
 # Integrate media capabilities 
 
-This document gives a walkthrough on integrating  native device capabilities with Teams platform.
+This document covers the process of integrating native device capabilities with Teams platform to achieve rich collaborative experience.
 
 The process with which you combine the native device capabilities, such as **camera**, and **microphone** along with Teams platform is called integration of media capabilities. 
 
