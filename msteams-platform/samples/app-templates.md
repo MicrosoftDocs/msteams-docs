@@ -20,8 +20,6 @@ App templates are production-ready apps for Microsoft Teams that are community d
 * **Customizable and extensible:** While all app templates are ready to deploy as they are, we provide the entire code base and deployment scripts so that you can easily customize or extend them to fit your unique needs.
 * **Detailed documentation & support:** All app templates are accompanied by end-to-end documentation on solution architecture, deployment, and configuration steps. The repositories are monitored as well, so please report any issues you encounter by raising an Issue on GitHub.
 
-## Adopt Bot &#9734;
-
 ## Adoption Bot &#9734;
 
 Adoption Bot is a user care chat bot built with Power Virtual Agent for Teams (PVA). It can be considered as the PVA version of FAQPlus. Adoption Bot answers 100+ common questions about Microsoft 365 and Teams. You can edit the included topics, add your own topics, and ingest existing FAQs. If users need additional help, Adoption Bot can connect them to experts or even be extended to open service tickets with premium flow connectors.
