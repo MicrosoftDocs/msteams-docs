@@ -46,7 +46,7 @@ The steps for enabling RSC in your application are as follows:
 
 ## Configure group owner consent settings in the Azure AD portal
 
-You can enable or disable [group owner consent](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-to-apps-accessing-group-data) directly within the Azure portal:
+You can enable or disable [group owner consent](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal) directly within the Azure portal:
 
 > [!div class="checklist"]
 >
@@ -56,7 +56,7 @@ You can enable or disable [group owner consent](/azure/active-directory/manage-a
 
 ![azure rsc configuration](../../assets/images/azure-rsc-configuration.png)
 
-To enable or disable group owner consent within the Azure portal using PowerShell, follow the steps outlined in [Configure group owner consent using PowerShell](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-using-powershell).
+To enable or disable group owner consent using PowerShell, follow the steps outlined in [Configure group owner consent using PowerShell](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-powershell).
 
 ## Register your app with Microsoft identity platform via the Azure AD portal
 

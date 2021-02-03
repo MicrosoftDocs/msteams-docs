@@ -8,11 +8,12 @@ ms.topic: quickstart
 ---
 # Build and run your first Microsoft Teams app
 
-You can jump right into Microsoft Teams development by building a personal tab that displays "Hello, World!"
+Start Microsoft Teams development by building a personal tab that displays "Hello, World!".
+Build and run your first Teams app using the following steps:
 
 ## 1. Create your app project
 
-Use the Microsoft Teams Toolkit in Visual Studio Code to set up your first app project.
+Use the Microsoft Teams Toolkit in Visual Studio Code to set up your first app project. Create your app project using the following steps:
 
 1. In Visual Studio Code, select **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: on the left Activity Bar and choose **Create a new Teams app**.
 1. When prompted, sign in with your Microsoft 365 development account.
@@ -35,13 +36,11 @@ If you create a tab during setup, for example, the `App.js` file in the `src/com
 
 ### App ID
 
-Your Teams app ID is needed to configure your app with App Studio. You can find the ID in the `teamsAppId` object, which is located in your project's `package.json` file.
+Configure your app with App Studio using the Teams app ID. Find the ID in the `teamsAppId` object, which is located in your project's `package.json` file.
 
 ## 3. Build and run your app
 
-In the interest of time, you'll build and run your app locally.
-
-(This information is also available in the toolkit `README`.)
+Build and run your app locally to save time. This information is also available in the toolkit `README`. Build and run your app using the following steps:
 
 1. In a terminal, go to the root directory of your app project and run `npm install`.
 1. Run `npm start`.
@@ -50,12 +49,17 @@ Once complete, there's a **Compiled successfully!** message in the terminal. You
 
 ## 4. Sideload your app in Teams
 
-Your app is ready to test in Teams. To do this, you must have an account that allows app sideloading. (If you aren't sure you have that, learn about getting a [Teams development account](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account).)
+Your app is ready to test in Teams. To do this, you must have a Microsoft 365 development account that allows app sideloading. For more information on account opening, see [Teams development account](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account). 
 
 > [!TIP]
-> Before sideloading your app, check for issues using the [validation feature in App Studio](../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool), which is included in the toolkit. Errors must be fixed to successfully sideload the app.
+> Check for issues before sideloading your app, using the [validation feature in App Studio](../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool), which is included in the toolkit. Fix the errors to successfully sideload the app.
 
-1. In Visual Studio Code, press the **F5** key to launch a Teams web client.
+Sideload your app in Teams using the following steps:
+
+> [!NOTE]
+> To enable sideloading before you sideload your app in Teams, follow the steps in [Turn on app sideloading](../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
+
+1. Select the **F5** key to launch a Teams web client in Visual Studio Code.
 1. To display your app content in Teams, specify that where your app is running (`localhost`) is trustworthy:
    1. Open a new tab in the same browser window (Google Chrome by default) which opened after pressing **F5**.
    1. Go to `https://localhost:3000/tab` and proceed to the page.
