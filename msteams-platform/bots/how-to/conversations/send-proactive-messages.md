@@ -26,7 +26,7 @@ At a high level the steps you'll need to complete to send a proactive message ar
 1. [Get the conversation ID](#get-the-conversation-id).
 1. [Send the message](#send-the-message).
 
-The code snippets in the [examples](#examples) section are for creating a one-to-one conversation. For links to complete working samples for both one-to-one conversations and group or channels , see [references](#references).
+The code snippets in the [examples](#examples) section are for creating a one-to-one conversation. For links to complete working samples for both one-to-one conversations and group or channels , see [code samples](#code-samples).
 
 ## Get the user ID or team/channel ID
 
@@ -52,7 +52,7 @@ After the conversation is created, use either the `conversationReference` object
 
 ## Send the message
 
-Now that you have the right address information, you can send your message. If you're using the SDK, you'll do so using the `continueConversation` method, and the `conversationId` and `tenantId` to make a direct API call. You must set the `conversationParameters` correctly to successfully send your message. See the [examples](#examples) section or use one of the samples listed in the [references](#references) section.
+Now that you have the right address information, you can send your message. If you're using the SDK, you'll do so using the `continueConversation` method, and the `conversationId` and `tenantId` to make a direct API call. You must set the `conversationParameters` correctly to successfully send your message. See the [examples](#examples) section or use one of the samples listed in the [code samples](#code-samples) section.
 
 ## Best practices for proactive messaging
 
