@@ -10,6 +10,8 @@ ms.topic: how-to
 If you want to enrich your Teams app with features that require access to native device functionalities, such as camera, microphone, and  location then you must request for user consent to access the capabilities before proceeding further.
 
 This document guides the developers to request the user consent and access the native device permissions.
+> [!NOTE]
+> To integrate media capabilities within your Microsoft Teams mobile app, see [Integrate media capabilities](mobile-camera-image-permissions.md).
 
 ## Native device permissions
 
@@ -23,7 +25,7 @@ You must request the device permissions to access native device capabilities. Th
 
 ## Access device permissions
 
-The [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) provides the tools necessary for your Teams mobile app to access the user’s [device permissions](native-device-permissions.md) and build a richer experience.
+The [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) provides the tools necessary for your Teams mobile app to access the user’s [device permissions](#manage-permissions) and build a richer experience.
 
 While access to these features is standard in most of the modern web browsers, you must inform Teams about the features that you are using, by updating your app manifest. This update allows you to ask for permissions,  while your app is running on the Teams desktop client.
 

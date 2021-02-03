@@ -7,7 +7,7 @@ ms.topic: overview
 
 # Device capabilities 
 
-Microsoft Teams platform is continuously enhancing developer capabilities aligning with built-in first-party  experiences. With the same vision, Teams platform has been enhanced to allow partners to integrate device capabilities like camera, photo gallery, microphone, and location into their webapps easily. This integration greatly lowers the barrier to app development, speeds-up development-cycle, and creates new scenarios or use-cases for the developer community.
+Microsoft Teams platform is continuously enhancing developer capabilities aligning with built-in first-party  experiences. With the same vision, Teams platform has been enhanced to allow partners to integrate device capabilities, such as camera, photo gallery, microphone, and location into their webapps easily. This integration greatly reduces the barrier to app development, speeds-up development-cycle, and creates new scenarios or use-cases for the developer community.
 
 ## Native device capabilities
 
@@ -22,7 +22,7 @@ Microsoft Teams allow you to access the following device capabilities on mobile 
 
 ## Request device permissions
 
-To access native device capabilities it is important to request for requisite [permissions](native-device-permissions.md) first. While access to these features is standard in most of the modern web browsers, you must inform Teams about the features that you are using by updating your app manifest. This allows you to ask for permissions, while your app is running on Teams mobile or desktop clients.
+You must request for the required [permissions](native-device-permissions.md) to access the native device capabilities. While access to these features is standard in most of the modern web browsers, you must inform Teams about the features that you are using by updating your app manifest. This allows you to ask for permissions, while your app is running on Teams mobile or desktop clients.
  
  ## Integrate device capabilities
 
