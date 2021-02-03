@@ -43,6 +43,8 @@ Turn on custom app sideloading for your developer tenant as follows:
 
 4. Toggle **upload custom apps** to the **on** position.
 
+5. Select **Save** to save the changes.
+
 That's it! Your test tenant will now allow custom app sideloading.
 
 > [!Note] 
