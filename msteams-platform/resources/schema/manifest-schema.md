@@ -340,9 +340,9 @@ Specifies the default capability for each collaboration scope your app supports.
 
 |Name| Type|Required | Description|
 |---|---|---|---|
-|`team`|enum||Accepted values include `tab`, `bot`, and `connector`.|
-|`groupchat`|enum||Accepted values include `tab`, `bot`, and `connector`.|
-|`meetings`|enum||Accepted values include `tab`, `bot`, and `connector`.|
+|`team`|enum||Accepted values include `tab` (default), `bot`, and `connector`.|
+|`groupchat`|enum||Accepted values include `tab` (default), `bot`, and `connector`.|
+|`meetings`|enum||Accepted values include `tab` (default), `bot`, and `connector`.|
 
 Your manifest won't validate if you specify a capability that isn't configured for the related scope.
 
