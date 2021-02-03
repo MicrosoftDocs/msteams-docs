@@ -7,19 +7,19 @@ ms.topic: how-to
 
 # Request device permissions for your Microsoft Teams app
 
-A mobile or desktop device has additional built-in devices, such as camera and microphone. You can access these devices and integrate with Microsoft Teams platform to enhance the collaborative experience. You must request for access to the capabilities to proceed further.
+If you want to enrich your Teams app with features that require access to native device functionalities, such as camera, microphone, and  location then you must request for user consent to access the capabilities before proceeding further.
 
-This document guides the developers to request and access the native device permissions .
+This document guides the developers to request the user consent and access the native device permissions.
 
 ## Native device permissions
 
-Build much richer experiences on Teams platform by accessing a user’s device permissions, such as:
-
+By accessing device capabilities you can build richer experiences on Teams platform, such as:
+* Capture and view images
 * Record and share short videos.
-* Record short audio memos and save them for later use.
+* Record audio memos and save them for later use.
 * Use the location information of the user to display relevant information.
 
-You must request and manage the device permissions to access the media capabilities of a device. The device permissions work similarly for all app constructs, such as tabs or messaging extensions.
+You must request the device permissions to access native device capabilities. The device permissions work similarly for all app constructs, such as tabs or messaging extensions. The user must go to permissions page in Teams settings to manage device permissions.
 
 ## Access device permissions
 
@@ -32,6 +32,8 @@ While access to these features is standard in most of the modern web browsers, y
 
 ## Manage permissions
 
+A user can manage device permissions in Teams settings by selecting **Allow** or **Deny** permissions to specific apps.
+ 
 # [Desktop](#tab/desktop)
 
 1. Open Teams.
@@ -99,7 +101,8 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 ```
 
 ## Use Teams APIs to get device permissions
-You must leverage the  to get appropriate HTML5 or Teams API, to display a prompt for getting a consent to access device permissions. 
+
+Leverage appropriate HTML5 or Teams API, to display a prompt for getting a consent to access device permissions.
 
 > [!IMPORTANT]
 > * Support for `camera`, `gallery`, and `microphone` is enabled through [**selectMedia API**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true). Use [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) for a single image capture.
@@ -112,7 +115,7 @@ For example:
     navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
     ```
 
- * To use the camera on desktop or web, Teams displays a permission prompt when you call `getUserMedia()`:
+ * To prompt user to access their camera on desktop or web you must call `getUserMedia()`:
 
     ```Javascript
     navigator.mediaDevices.getUserMedia({ audio: true, video: true });

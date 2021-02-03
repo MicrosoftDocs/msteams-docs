@@ -13,7 +13,7 @@ Microsoft Teams platform is continuously enhancing developer capabilities aligni
 
 A mobile or desktop device has additional built-in devices, such as camera and microphone, called capabilities. You can access these devices and integrate with Microsoft Teams platform to enhance the collaborative experience. You must request for access to the capabilities to proceed further.
 
-Microsoft Teams allow you to access the following device capabilities on mobile or desktop through dedicated APIs available in [Microsoft Teams JavaScript client SDK](https://review.docs.microsoft.com/en-us/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true):
+Microsoft Teams allow you to access the following device capabilities on mobile or desktop through dedicated APIs available in [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true):
 * Media capabilities, such as
     * Camera
     * Microphone
@@ -22,11 +22,11 @@ Microsoft Teams allow you to access the following device capabilities on mobile 
 
 ## Request device permissions
 
-Enhance the Teams platform experience along with native device capabilities. For this enhancement, it is important to get the prior [permissions](native-device-permissions.md) to access and use the media capabilities of the device. Teams supports access to your device's media capabilities, through native device capabilities. The main advantages of accessing device permissions are:
+To access native device capabilities it is important to request for requisite [permissions](native-device-permissions.md) first. While access to these features is standard in most of the modern web browsers, you must inform Teams about the features that you are using by updating your app manifest. This allows you to ask for permissions, while your app is running on Teams mobile or desktop clients.
  
  ## Integrate device capabilities
 
-After getting access to device capabilities, [integrate these capabilities](mobile-camera-image-permissions.md) with Teams platform to enhance the user experience. These functionalities allows your app to:
+After getting access to device capabilities, [integrate the capabilities](mobile-camera-image-permissions.md) with Teams platform to enhance the user experience. These functionalities allows your app to:
 
 * Capture and share images
 * Record audio through microphone
