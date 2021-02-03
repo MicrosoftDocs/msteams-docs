@@ -130,3 +130,7 @@ For authentication to work on mobile clients, you must upgrade you Teams JavaScr
 ### Low bandwidth and intermittent connections
 
 Mobile clients regularly need to function with low bandwidth and intermittent connections. Your app should handle any timeouts appropriately by providing a contextual message to the user. You should also user progress indicators to provide feedback to your users for any long-running processes.
+
+> [!NOTE]
+> Tabs are enabled on mobile only after the application is added to an allow list, based on the input of the approval team. 
+> To check mobile responsiveness, reach out to teamsubm@microsoft.com. 
