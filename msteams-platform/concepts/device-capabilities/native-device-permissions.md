@@ -7,7 +7,7 @@ ms.topic: how-to
 
 # Request device permissions for your Microsoft Teams app
 
-A mobile or desktop device has additional built-in devices, such as camera and microphone. you can access these devices and integrate with Microsoft Teams these to enhance the collaborative experience. You must request for access to the capabilities to proceed further.
+A mobile or desktop device has additional built-in devices, such as camera and microphone. You can access these devices and integrate with Microsoft Teams platform to enhance the collaborative experience. You must request for access to the capabilities to proceed further.
 
 This document guides the developers to request and access the native device permissions .
 
