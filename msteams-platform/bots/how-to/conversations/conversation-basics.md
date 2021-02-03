@@ -372,7 +372,7 @@ To know more about cards and cards in bots, see [cards documentation](~/task-mod
 When a response contains text messages and attachments, both responses are sent separately. The attachment is sent after the text message.
 
 ## Code sample
-|**Sample name** | **Description** | **.NETCore** | **Javascript** | **Python**|
+|**Sample name** | **Description** | **.NETCore** | **JavaScript** | **Python**|
 |----------------|-----------------|--------------|----------------|-----------|
 | Teams Conversation Bot | Messaging and conversation event handling. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
