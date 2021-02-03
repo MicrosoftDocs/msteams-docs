@@ -278,8 +278,8 @@
     href: apps-in-teams-meetings/teams-apps-in-meetings.md
   - name: Build an app for meetings
     href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
-  - name: Work with Together Mode
-    href: apps-in-teams-meetings/teams-together-mode.md    
+  - name: Work in Together Mode in Teams
+    href: apps-in-teams-meetings/teams-together-mode.md        
 - name: Build webhooks and connectors
   items:
   - name: Overview
