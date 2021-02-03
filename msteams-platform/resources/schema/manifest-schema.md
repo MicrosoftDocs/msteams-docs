@@ -7,21 +7,27 @@ author: laujan
 ms.author: lajanuar
 ---
 
-# Reference: Manifest schema for Microsoft Teams
+# Microsoft Teams app manifest schema reference
 
-The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json). Previous versions 1.0-1.4 are also supported (using "v1.x" in the URL).
+The app manifest describes how your app integrates with Microsoft Teams. Your manifest must conform to the latest schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json). Previous versions are also supported (just update the "v1.x" in the URL).
 
-The following schema sample shows all extensibility options.
+The following schema sample shows all available capabilities.
 
 ## Sample full manifest
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.8",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.9",
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%",
   "packageName": "com.example.myapp",
+  "defaultInstallScope": "team",
+  "defaultGroupCapability": {
+    "team": "bot",
+    "groupchat": "tab",
+    "meetings": "tab"
+  },
   "localizationInfo": {
     "defaultLanguageTag": "en-us",
     "additionalLanguages": [
@@ -305,6 +311,60 @@ This version string must follow the [semver](http://semver.org/) standard (MAJOR
 
 The unique Microsoft-generated identifier for this app. If you have registered a bot via the Microsoft Bot Framework, or your tab's web app already signs in with Microsoft, you should already have an ID and should enter it here. Otherwise, you should generate a new ID at the Microsoft Application Registration Portal ([My Applications](https://apps.dev.microsoft.com)), enter it here, and then reuse it when you add a bot.Note: If you are submitting an update to your existing app in AppSource, the ID in your manifest must not be modified.
 
+## packageName
+
+**Optional** — string
+
+A unique identifier for this app in reverse domain notation; for example, `com.example.myapp`. Maximum length: 64 characters.
+
+## defaultInstallScope
+
+**Optional** — enum
+
+Specifies the first option for where users can install your app. The **Add for me** option displays by default, but this may not make sense if your app is intended primarily for collaboration. For example, you can configure `defaultInstallScope` with a value of `groupchat` so that the first option when a user installs your app is **Add to a chat**.
+
+Supported values include:
+
+* `personal` (default)
+* `team`
+* `groupchat`
+* `meeting`
+
+Your manifest won't validate if you specify a scope that isn't configured for any of your app's capabilities.
+
+## defaultGroupCapability
+
+**Optional** — object
+
+Specifies the default capability for each collaboration scope your app supports.
+
+|Name| Type|Required | Description|
+|---|---|---|---|
+|`team`|enum||Accepted values include `tab`, `bot`, and `connector`.|
+|`groupchat`|enum||Accepted values include `tab`, `bot`, and `connector`.|
+|`meetings`|enum||Accepted values include `tab`, `bot`, and `connector`.|
+
+Your manifest won't validate if you specify a capability that isn't configured for the related scope.
+
+## localizationInfo
+
+**Optional** — object
+
+Specifies a default language and pointers to files of other supported language. See [localization](~/concepts/build-and-test/apps-localization.md) for more information.
+
+|Name| Maximum size | Required | Description|
+|---|---|---|---|
+|`defaultLanguageTag`||✔|The language tag of the strings in this top level manifest file.|
+
+### localizationInfo.additionalLanguages
+
+An array of objects specifying additional language translations.
+
+|Name| Maximum size | Required | Description|
+|---|---|---|---|
+|`languageTag`||✔|The language tag of the strings in the provided file.|
+|`file`||✔|A relative file path to a the .json file containing the translated strings.|
+
 ## developer
 
 **Required** — object
@@ -342,31 +402,6 @@ Ensure that your description accurately describes your experience and provides i
 |---|---|---|---|
 |`short`|80 characters|✔|A short description of your app experience, used when space is limited.|
 |`full`|4000 characters|✔|The full description of your app.|
-
-## packageName
-
-**Optional** — string
-
-A unique identifier for this app in reverse domain notation; for example, com.example.myapp. Maximum length: 64 characters.
-
-## localizationInfo
-
-**Optional** — object
-
-Allows the specification of a default language, as well as pointers to additional language files. See [localization](~/concepts/build-and-test/apps-localization.md).
-
-|Name| Maximum size | Required | Description|
-|---|---|---|---|
-|`defaultLanguageTag`||✔|The language tag of the strings in this top level manifest file.|
-
-### localizationInfo.additionalLanguages
-
-An array of objects specifying additional language translations.
-
-|Name| Maximum size | Required | Description|
-|---|---|---|---|
-|`languageTag`||✔|The language tag of the strings in the provided file.|
-|`file`||✔|A relative file path to a the .json file containing the translated strings.|
 
 ## icons
 
