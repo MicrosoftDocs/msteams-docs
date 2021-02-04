@@ -224,7 +224,7 @@ If you don’t use Teams color tokens, your designs will be less scalable and ta
 
 ## Validate your design
 
-If you plan to publish your app to AppSource, you should understand the design issues that commonly cause apps to fail during submission.
+If you plan to publish your app to the Teams store (AppSource), you should understand the design issues that commonly cause apps to fail during submission.
 
 > [!div class="nextstepaction"]
-> [Check design validation guidelines](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)
+> [Check design validation guidelines](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md)

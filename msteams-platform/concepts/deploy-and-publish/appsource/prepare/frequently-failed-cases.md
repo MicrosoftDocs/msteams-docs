@@ -9,8 +9,6 @@ ms.topic: reference
 
 Following these guidelines increases the chances your app will pass Microsoft Teams store (and AppSource) submission. These guidelines, which complement the Microsoft [commercial marketplace certification policies](https://docs.microsoft.com/legal/marketplace/certification-policies), are specific to Teams apps and will be updated frequently to reflect new Teams capabilities, user feedback, and changes to business rules.
 
-Submit feedback on these guidelines [here](NEED LINK).
-
 If your app doesn't pass review according to these guidelines and the commercial marketplace certification policies, the Microsoft validation team will contact you with a report on why your submission failed. The team works 24 hours a day, five days a week and can provide white-glove service to help your app meet our criteria.
 
 > [!TIP]
@@ -114,7 +112,7 @@ Teams apps must respond within a reasonable timeframe, which varies depending on
 
 #### 3.5.1 Signing out
 
-* The ability to sign out from any authenticated external services must be present within the app. For more information, see [authentication in Teams](../../concepts/authentication/authentication.md).
+* The ability to sign out from any authenticated external services must be present within the app. For more information, see [authentication in Teams](~/concepts/authentication/authentication.md).
 * When a user logs out, they should log out only from the app and not the Teams client.
 
 #### 3.5.2 Unsharing content
