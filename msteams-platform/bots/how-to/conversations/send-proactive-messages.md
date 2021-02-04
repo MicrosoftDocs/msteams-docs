@@ -246,7 +246,7 @@ The following sample demonstrates the minimal amount of information needed to se
 
 * [Teams Proactive Messaging](https://github.com/clearab/teamsProactiveMessaging)
 
-## View additional code
+## View additional code samples
 >
 > [!div class="nextstepaction"]
 > [**Teams proactive messaging code samples**](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
