@@ -152,7 +152,7 @@ The app descriptions in your manifest and store should be same and follow these 
 
 #### 4.1.4 Localization
 
-Your package must include a localization file that includes language translations that display based on the Teams language settings. The file must conform to the [Teams localization schema](~/concepts/build-and-test/apps-localization).
+Your package must include a localization file that includes language translations that display based on the Teams language settings. The file must conform to the [Teams localization schema](~/concepts/build-and-test/apps-localization.md).
 
 ### 4.2 Tabs
 
@@ -227,7 +227,7 @@ Adaptive Cards are a common way to display bot messages. Your cards must be ligh
 See the following resources for more information:
 
 * [Designing Adaptive Cards](~/task-modules-and-cards/cards/design-effective-cards.md)
-* [Cards reference](~/task-modules-and-cards/cards/cards-reference#types-of-cards)
+* [Cards reference](~/task-modules-and-cards/cards/cards-reference.md#types-of-cards)
 
 ### 4.4 Messaging extensions
 
@@ -266,12 +266,12 @@ See comprehensive [meeting extension design guidelines](~/apps-in-teams-meetings
 
 * Tabs must adhere to general [tab design guidelines](~/tabs/design/tabs.md).
 * Tabs must not have horizontal scrolling.
-* Tabs should have an organized layout when displaying multiple items (for instance, more than 10 polls or surveys). [See an example layout](../../apps-in-teams-meetings/design/designing-apps-in-meetings#after-a-meeting).
+* Tabs should have an organized layout when displaying multiple items (for instance, more than 10 polls or surveys). [See an example layout](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md#after-a-meeting).
 * Your app must notify users when the results of a survey or poll are exported by stating, "Results successfully downloaded".
 
 #### 4.6.3 In-meeting experience
 
-* Apps must [only use a dark theme](~/apps-in-teams-meetings/design/designing-apps-in-meetings#theming) during meetings.
+* Apps must [only use a dark theme](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#theming) during meetings.
 * A tooltip should display the app name when hovering over the app icon during meetings.
 * Messaging extensions must function the same during meetings as they do outside meetings.
 
