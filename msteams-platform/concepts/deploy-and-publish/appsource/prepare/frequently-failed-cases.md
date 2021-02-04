@@ -121,7 +121,7 @@ Teams apps that depend on authentication with an external service to allow conte
 
 ## 4.0 Design
 
-Your app can fail validation for not following [Teams app design guidelines](../../concepts/design/design-teams-app-overview.md) or issues that impede the Teams experience.
+Your app can fail validation for not following [Teams app design guidelines](~/concepts/design/design-teams-app-overview.md) or issues that impede the Teams experience.
 
 ### 4.1 App package
 
@@ -129,15 +129,15 @@ App packages must be correctly formatted and include all required information an
 
 #### 4.1.1 App manifest
 
-* The app manifest must conform to the [latest manifest schema](../../resources/schema/manifest-schema.md).
+* The app manifest must conform to the [latest manifest schema](~/resources/schema/manifest-schema.md).
 * If your app includes a bot or messaging extension, the manifest must be consistent with Bot Framework metadata, including bot name, logo, privacy policy link, and terms of service link.
-* If your app uses Azure Active Directory (AD) for authentication, include the Azure AD ID in the manifest ([see how](../../resources/schema/manifest-schema.md#webapplicationinfo)).
+* If your app uses Azure Active Directory (AD) for authentication, include the Azure AD ID in the manifest ([see how](~/resources/schema/manifest-schema.md#webapplicationinfo)).
 
 #### 4.1.2 App icons
 
 * Your app package must include two PNG versions of your app icon: a color icon and an outline icon.
 * A correctly sized and formatted icons must be specified in the app package or manifest. The icons in the package or manifest must match the icon submitted with the offer metadata.
-* For detailed information, refer to the [icons documentation](../../concepts/build-and-test/apps-package.md#app-icons).
+* For detailed information, refer to the [icons documentation](~/concepts/build-and-test/apps-package.md#app-icons).
 
 #### 4.1.3 App description
 
@@ -146,17 +146,17 @@ The app descriptions in your manifest and store should be same and follow these 
 * Use "Microsoft Teams" on first reference. Subsequent references can be shortened to ”Teams”.
 * Do not abbreviate "Microsoft" (such as "MS" or "MSFT").
 * Avoid unnecessary capitalization and language errors.
-* Follow the [short description guidelines](../../concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md#short-description).
-* Follow the [long description guidelines](../../concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md#long-description).
+* Follow the [short description guidelines](~/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md#short-description).
+* Follow the [long description guidelines](~/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md#long-description).
 * Clearly describe any limitations, conditions, or exceptions to the functionality, features, and deliverables described in the listing and related materials before the customer acquires your offer. The capabilities you declare must relate to the core functions and description of your offer.
 
 #### 4.1.4 Localization
 
-Your package must include a localization file that includes language translations that display based on the Teams language settings. The file must conform to the [Teams localization schema](../../concepts/build-and-test/apps-localization).
+Your package must include a localization file that includes language translations that display based on the Teams language settings. The file must conform to the [Teams localization schema](~/concepts/build-and-test/apps-localization).
 
 ### 4.2 Tabs
 
-See comprehensive [tab design guidelines](../../tabs/design/tabs.md).
+See comprehensive [tab design guidelines](~/tabs/design/tabs.md).
 
 #### 4.2.1 Setup
 
@@ -193,7 +193,7 @@ Tabs must have a Help tab with instructions on how to do things such as sign up,
 
 ### 4.3 Bots
 
-See comprehensive [bot design guidelines](../../bots/design/bots.md).
+See comprehensive [bot design guidelines](~/bots/design/bots.md).
 
 #### 4.3.1 Bot commands
 
@@ -203,7 +203,7 @@ See comprehensive [bot design guidelines](../../bots/design/bots.md).
 
 #### 4.3.2 Bot welcome messages
 
-Bots should almost always send first-run welcome messages. For the best experience, the message should include the value proposition of your bot, how to configure the bot, and briefly describe all supported bot commands. You can display the messaging using an Adaptive Card with buttons for better readability. [How to trigger a bot welcome message](../../bots/how-to/conversations/send-proactive-messages.md).
+Bots should almost always send first-run welcome messages. For the best experience, the message should include the value proposition of your bot, how to configure the bot, and briefly describe all supported bot commands. You can display the messaging using an Adaptive Card with buttons for better readability. [How to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md).
 
 Channel bot welcome messages are optional during first run, especially if bot is available in personal scope performing similar actions. This bot must not send a personal message to all members of the team or channel as that will be considered as spamming. The welcome message should also mention the person who installed/added the bot to the channel.
 
@@ -226,12 +226,12 @@ Adaptive Cards are a common way to display bot messages. Your cards must be ligh
 
 See the following resources for more information:
 
-* [Designing Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md)
-* [Cards reference](../../task-modules-and-cards/cards/cards-reference#types-of-cards)
+* [Designing Adaptive Cards](~/task-modules-and-cards/cards/design-effective-cards.md)
+* [Cards reference](~/task-modules-and-cards/cards/cards-reference#types-of-cards)
 
 ### 4.4 Messaging extensions
 
-See comprehensive [messaging extension design guidelines](../../messaging-extensions/design/messaging-extension-design.md).
+See comprehensive [messaging extension design guidelines](~/messaging-extensions/design/messaging-extension-design.md).
 
 #### 4.4.1 Action commands
 
@@ -244,34 +244,34 @@ Action-based messaging extensions should do the following:
 
 Messaging extensions should preview recognized links in the Teams compose box. Do not add domains that are outside your control (either absolute URLs or wildcards). For example, `yourapp.onmicrosoft.com` is valid but `*.onmicrosoft.com` is not valid. Top-level domains also are prohibited (for example, `*.com` or `*.org`).
 
-See how to [implement link unfurling](../../messaging-extensions/how-to/link-unfurling.md).
+See how to [implement link unfurling](~/messaging-extensions/how-to/link-unfurling.md).
 
 #### 4.4.3 Search commands
 
 Search-based messaging extensions must provide text that helps users effectively search.
 
-For more information, see the [design best practices for search commands](../../messaging-extensions/design/messaging-extension-design.md#searches).
+For more information, see the [design best practices for search commands](~/messaging-extensions/design/messaging-extension-design.md#searches).
 
 ### 4.5 Task modules
 
 A task module must include an icon and short name of the app in which it is associated.
 
-See comprehensive [task module design guidelines](../../task-modules-and-cards/task-modules/design-teams-task-modules.md).
+See comprehensive [task module design guidelines](~/task-modules-and-cards/task-modules/design-teams-task-modules.md).
 
 ### 4.6 Meeting extensions
 
-See comprehensive [meeting extension design guidelines](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md).
+See comprehensive [meeting extension design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
 
 #### 4.6.1 Pre- and post-meeting experience
 
-* Tabs must adhere to general [tab design guidelines](../../tabs/design/tabs.md).
+* Tabs must adhere to general [tab design guidelines](~/tabs/design/tabs.md).
 * Tabs must not have horizontal scrolling.
 * Tabs should have an organized layout when displaying multiple items (for instance, more than 10 polls or surveys). [See an example layout](../../apps-in-teams-meetings/design/designing-apps-in-meetings#after-a-meeting).
 * Your app must notify users when the results of a survey or poll are exported by stating, "Results successfully downloaded".
 
 #### 4.6.3 In-meeting experience
 
-* Apps must [only use a dark theme](../../apps-in-teams-meetings/design/designing-apps-in-meetings#theming) during meetings.
+* Apps must [only use a dark theme](~/apps-in-teams-meetings/design/designing-apps-in-meetings#theming) during meetings.
 * A tooltip should display the app name when hovering over the app icon during meetings.
 * Messaging extensions must function the same during meetings as they do outside meetings.
 
