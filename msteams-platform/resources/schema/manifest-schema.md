@@ -1,15 +1,14 @@
 ---
 title: Manifest schema reference
-description: Describes the manifest schema for Microsoft Teams
+description: describes the manifest schema for Microsoft Teams
 ms.topic: reference
-keywords: teams manifest schema
-author: laujan
 ms.author: lajanuar
+keywords: teams manifest schema
 ---
 
 # Reference: Manifest schema for Microsoft Teams
 
-The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json). Previous versions 1.0-1.4 are also supported (using "v1.x" in the URL).
+The Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json). Previous versions 1.0-1.4 are also supported (using "v1.x" in the URL).
 
 The following schema sample shows all extensibility options.
 
@@ -313,7 +312,7 @@ The following schema sample shows all extensibility options.
       "description": "When the install scope selected is Meetings, this field specifies the default capability available."
       }
     },
-    "description": "When a group install scope is selected, this will define the default capability when the user installs the app",
+    "description": "When a group install scope is selected, this defines the default capability when the user installs the app.",
     "additionalProperties": false
 
 }
@@ -323,7 +322,7 @@ The schema defines the following properties:
 
 ## $schema
 
-*Optional, but recommended* — string
+Optional, but recommended — string
 
 The https:// URL referencing the JSON Schema for the manifest.
 
@@ -331,15 +330,15 @@ The https:// URL referencing the JSON Schema for the manifest.
 
 **Required** — string
 
-The version of the manifest schema this manifest is using. It should be "1.7".
+The version of manifest schema this manifest is using. It should be "1.7".
 
 ## version
 
 **Required** — string
 
-The version of the specific app. If you update something in your manifest, the version must be incremented as well. This way, when the new manifest is installed, it will overwrite the existing one and the user will get the new functionality. If this app was submitted to the store, the new manifest will have to be re-submitted and re-validated. Then, users of this app will get the new updated manifest automatically in a few hours, after it is approved.
+The version of a specific app. If you update something in your manifest, the version must be incremented too. This way, when the new manifest is installed, it overwrites the existing one and the user receives the new functionality. If this app was submitted to the store, the new manifest will have to be re-submitted and re-validated. The app users receive the new updated manifest automatically within few hours after the manifest is approved.
 
-If the app requested permissions change, users will be prompted to upgrade and re-consent to the app.
+If the app requests for permissions change, the users are prompted to upgrade and re-consent to the app.
 
 This version string must follow the [semver](http://semver.org/) standard (MAJOR.MINOR.PATCH).
 
@@ -347,13 +346,16 @@ This version string must follow the [semver](http://semver.org/) standard (MAJOR
 
 **Required** — Microsoft app ID
 
-The unique Microsoft-generated identifier for this app. If you have registered a bot via the Microsoft Bot Framework, or your tab's web app already signs in with Microsoft, you should already have an ID and should enter it here. Otherwise, you should generate a new ID at the Microsoft Application Registration Portal ([My Applications](https://apps.dev.microsoft.com)), enter it here, and then reuse it when you add a bot.Note: If you are submitting an update to your existing app in AppSource, the ID in your manifest must not be modified.
+The unique Microsoft-generated identifier for this app. If your bot is registered via the Microsoft Bot Framework or your tab's web app already signs in with Microsoft, you already have an ID and must enter it here. Otherwise, you must generate a new ID at the Microsoft Application Registration Portal ([My Applications](https://apps.dev.microsoft.com)), enter it here, and then reuse it when you add a bot.
+
+> [!NOTE]
+> If you are submitting an update to your existing app in AppSource, the ID in your manifest must not be modified.
 
 ## developer
 
 **Required** — object
 
-Specifies information about your company. For apps submitted to AppSource (formerly Office Store), these values must match the information in your AppSource entry. See our [publishing guidelines](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md) for additional information.
+Gives information about your company. For apps submitted to AppSource (formerly Office Store), these values must match the information in your AppSource entry. See our [publishing guidelines](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md) for additional information.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -367,7 +369,7 @@ Specifies information about your company. For apps submitted to AppSource (forme
 
 **Required** — object
 
-The name of your app experience, displayed to users in the Teams experience. For apps submitted to AppSource, these values must match the information in your AppSource entry. The values of `short` and `full` should not be the same.
+The name of your app experience, displayed to users in the Teams experience. For apps submitted to AppSource, these values must match the information in your AppSource entry. The values of `short` and `full` must be different.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -380,7 +382,7 @@ The name of your app experience, displayed to users in the Teams experience. For
 
 Describes your app to users. For apps submitted to AppSource, these values must match the information in your AppSource entry.
 
-Ensure that your description accurately describes your experience and provides information to help potential customers understand what your experience does. You should also note, in the full description, if an external account is required for use. The values of `short` and `full` should not be the same.  Your short description must not be repeated within the long description and must not include any other app name.
+Ensure that your description accurately describes your experience and provides information to help potential customers understand what your experience does. You must note in the full description, if an external account is required for use. The values of `short` and `full` must be different. Your short description must not be repeated within the long description and must not include any other app name.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -391,7 +393,7 @@ Ensure that your description accurately describes your experience and provides i
 
 **Optional** — string
 
-A unique identifier for this app in reverse domain notation; for example, com.example.myapp. Maximum length: 64 characters.
+A unique identifier for the app in reverse domain notation; for example, com.example.myapp. Maximum length: 64 characters.
 
 ## localizationInfo
 
