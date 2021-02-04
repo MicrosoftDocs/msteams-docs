@@ -6,7 +6,7 @@ keywords: teams authentication OAuth SSO AAD
 # Authentication in Teams
 
 > [!Note]
-> Web-based authentication on mobile clients requires version 1.4.1 or later of the Teams JavaScript SDK.
+> Web-based authentication on mobile clients requires version 1.4.1 or later of the Teams JavaScript client SDK.
 
 In order for your app to access user information protected by Azure Active Directory, as well as access data from other services like Facebook and Twitter, your app will have to establish a trusted connection with those providers. If your app needs to use Microsoft Graph APIs in the user scope, you'll also need to authenticate the user to retrieve the appropriate authentication tokens.
 
