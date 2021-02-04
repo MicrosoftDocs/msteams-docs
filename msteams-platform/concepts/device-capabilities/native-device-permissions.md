@@ -7,16 +7,17 @@ ms.topic: how-to
 
 # Request device permissions for your Microsoft Teams app
 
-If you want to enrich your Teams app with features that require access to native device functionalities, such as camera, microphone, and  location, then you must request user consent to access the capabilities before proceeding further.
+You can enrich your Teams app with native device functionalities, such as camera, microphone, and location. You must request user consent to access the functionalities.
 
 This document guides the developers to request  user consent and access the native device permissions.
+
 > [!NOTE]
 > To integrate media capabilities within your Microsoft Teams mobile app, see [Integrate media capabilities](mobile-camera-image-permissions.md).
 
 ## Native device permissions
 
-By accessing the device capabilities you can build richer experiences on the Teams platform, such as:
-* Capture and view images
+By accessing the device capabilities, you can build richer experiences on the Teams platform, such as:
+* Capture and view images.
 * Record and share short videos.
 * Record audio memos and save them for later use.
 * Use the location information of the user to display relevant information.
@@ -27,10 +28,10 @@ You must request the device permissions to access native device capabilities. Th
 
 The [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) provides the tools necessary for your Teams mobile app to access the user’s [device permissions](#manage-permissions) and build a richer experience.
 
-While access to these features is standard in modern web browsers, you must inform Teams about the features that you are using, by updating your app manifest. This update allows you to ask for permissions,  while your app is running on the Teams desktop client.
+While access to these features is standard in modern web browsers, you must inform Teams about the features you use by updating your app manifest. This update allows you to ask for permissions while your app runs on the Teams desktop client.
 
 > [!NOTE] 
-> Currently, the Microsoft Teams support for media capabilities, is only available for mobile clients.
+> Currently, the Microsoft Teams support for media capabilities is only available for mobile clients.
 
 ## Manage permissions
 
@@ -38,7 +39,7 @@ A user can manage device permissions in Teams settings by selecting **Allow** or
  
 # [Desktop](#tab/desktop)
 
-1. Open Teams.
+1. Open your Teams app.
 1. Select your profile icon in the upper right corner of the window.
 1. Select **Settings** > **Permissions** from the drop-down menu.
 1. Select your desired settings.
@@ -178,7 +179,7 @@ For example:
 Device permissions are stored for every login session. It means that if you sign in to another instance of Teams, for example, on another computer, your device permissions from your previous sessions are not available. Therefore, you must re-consent to device permissions for the new session. It also means, if you sign out of Teams or switch tenants in Teams, your device permissions are deleted from the previous login session.  
 
 > [!NOTE]
-> When you give consent to the native device permissions, it is valid only for your _current_ login session.
+> When you consent to the native device permissions, it is valid only for your _current_ login session.
 
 ## See also
 [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)

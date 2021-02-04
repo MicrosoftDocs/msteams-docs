@@ -19,9 +19,9 @@ You can use the [Microsoft Teams JavaScript client SDK](/javascript/api/overview
 The main advantage of integrating device capabilities with the Teams platform is to enhance and enrich its innovative experience.
 After accessing device permissions, integrate media capabilities by updating the app manifest file and calling the media capability APIs. 
 
-For effective integration, you must have a good understanding of [code snippets](#code-snippets) for calling the respective APIs which allow you to use native media capabilities.
+For effective integration, you must have a good understanding of [code snippets](#code-snippets) for calling the respective APIs, which allow you to use native media capabilities.
 
-See [code snippets](#code-snippets) to build a  good understanding on how to make calls to different media APIs. It is also important to familiarize yourself with the [API response errors](#error-handling) to handle them appropriately in your Teams app.
+It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors  in your Teams app.
 
 > [!NOTE] 
 > Currently, the Microsoft Teams support for media capabilities is only available for mobile clients.
