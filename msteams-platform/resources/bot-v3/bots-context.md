@@ -18,7 +18,7 @@ Your bot can access additional context about the team or chat, such as user prof
 
 ## Fetch the team roster
 
-Your bot can query for the list of team members and their basic profiles. The basic profiles include Teams user IDs and Azure Active Directory (AAD) information such as name and object ID. You can use this information to correlate user identities. For example, to check if a user logged into a tab through AAD credentials is a team member.
+Your bot can query for the list of team members and their basic profiles. The basic profiles include Teams user IDs and Azure Active Directory (AAD) information such as name and object ID. You can use this information to correlate user identities. For example, check if a user logged into a tab through AAD credentials is a team member.
 
 ### REST API example
 
