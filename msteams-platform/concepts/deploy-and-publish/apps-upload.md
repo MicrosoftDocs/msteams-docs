@@ -67,7 +67,7 @@ The uploaded package should now be available for use in the team or conversation
 
 If your app does not load, the most common reason is an error in the manifest, particularly ids for the app, bot and messaging extensions.
 
-## Accessing your uploaded configurable tab
+## Access your uploaded configurable tab
 
 If the app contains tabs, users can pin them to any conversation or team channel using the standard tab gallery flow:
 
@@ -81,7 +81,7 @@ If the app contains tabs, users can pin them to any conversation or team channel
 
   ![The Add a tab dialog box, featuring a gallery of available tabs](../../assets/images/tab_gallery.png)
 
-## Accessing your uploaded bot
+## Access your uploaded bot
 
 When you add a bot to a team, it should be usable by anyone on that team, inside and outside the team channels, depending on bot scope definition. You and other team members will see a post in the General channel indicating that the bot has been added to the team.
 
@@ -91,7 +91,7 @@ To test direct chats with your bot, you can either access it via the App home, @
 
 When you add your bot to a conversation To test direct chats with your bot, you can @mention it in a conversation, or search for it in the **New Chat** window.
 
-## Accessing your uploaded Connector
+## Access your uploaded Connector
 
 With the app loaded in the team or conversation, users can set up a Connector using the standard Connectors gallery flow:
 
@@ -103,13 +103,28 @@ With the app loaded in the team or conversation, users can set up a Connector us
 
   ![The Add a tab dialog box, featuring a gallery of available tabs.](../../assets/images/connector_gallery.png)
 
-## Accessing your uploaded messaging extension
+## Access your uploaded messaging extension
 
 An uploaded app with a messaging extension automatically appears in the *More options* (*&#8943;*) menu in the compose box.
 
 ![Messaging extensions](../../assets/images/compose-extensions/cesampleapp.png)
 
-## Removing or updating your app
+## Add an app
+
+Although installing an app in the personal scope works for most apps, some of the apps in Teams Store support both personal and team scopes.
+Some of these apps are intended to work in a team or a group chat, with the personal app experience being secondary.
+Hence, the default install scope selection helps you to specify the "defaultInstallScope" for the apps that you publish. The app installation experience makes the default options available to the user, while the rest is moved under the chevron.
+
+![Add an app](../../assets/images/compose-extensions/addanapp.png)
+
+In the specified app manifest, the property “defaultInstallScope” supports values like the personal, team, group chat, or meeting.
+
+> [!NOTE]
+> The validation fails if an app specifies a defaultInstallScope which is unsupported by one capability in the app. In other words, every single capability in an app must support the default installation scope. Otherwise, the behavior reverts to the experience where no default installation scope is provided.
+
+“DefaultGroupCapability” allows you to specify which capability can be installed by default. For each group scope,  choose from the capability of either tab, bot, or connector to be the default capability of the app. If the specific scope does not support the default capability, then the app validation fails. 
+
+## Remove or update your app
 
 If you want to remove your app, select the trash-can icon next to the app name in the View Teams bots list.
 
