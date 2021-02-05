@@ -2,6 +2,7 @@
 title: Upload your custom app
 description: Describes how to upload your app in Microsoft Teams
 ms.topic: how-to
+ms.author: 
 keywords: teams apps Upload
 ---
 # Upload an app package to Microsoft Teams
@@ -112,17 +113,17 @@ An uploaded app with a messaging extension automatically appears in the *More op
 ## Add an app
 
 Although installing an app in the personal scope works for most apps, some of the apps in Teams Store support both personal and team scopes.
-Some of these apps are intended to work in a team or a group chat, with the personal app experience being secondary.
-Hence, the default install scope selection helps you to specify the "defaultInstallScope" for the apps that you publish. The app installation experience makes the default options available to the user, while the rest is moved under the chevron.
+Some of these apps are intended to work in a team or a group chat, with personal app experience being secondary.
+Hence, the default install scope selection helps you to specify the `defaultInstallScope` for the apps that you publish. The app installation experience makes the default options available to the user, while the rest is moved under the chevron as highlighted in the image.
 
 ![Add an app](../../assets/images/compose-extensions/addanapp.png)
 
-In the specified app manifest, the property “defaultInstallScope” supports values like the personal, team, group chat, or meeting.
+In the specified app manifest, the property `defaultInstallScope` supports values like personal, team, group chat, or meeting.
 
 > [!NOTE]
-> The validation fails if an app specifies a defaultInstallScope which is unsupported by one capability in the app. In other words, every single capability in an app must support the default installation scope. Otherwise, the behavior reverts to the experience where no default installation scope is provided.
+> Ensure your app specifies a `defaultInstallScope` that is supported by all the capabilities in the app for the validation to pass. In other words, every single capability in an app must support the `defaultInstallScope`. Otherwise, the behavior reverts to the experience where no default installation scope is provided.
 
-“DefaultGroupCapability” allows you to specify which capability can be installed by default. For each group scope,  choose from the capability of either tab, bot, or connector to be the default capability of the app. If the specific scope does not support the default capability, then the app validation fails. 
+`defaultGroupCapability` allows you to specify which capability can be installed by default. For each group scope, choose either tab, bot, or connector as the default capability of the app. If the specific scope does not support the default capability, then the app validation fails.
 
 ## Remove or update your app
 
