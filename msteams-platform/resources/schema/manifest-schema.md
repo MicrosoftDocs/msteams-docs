@@ -358,7 +358,7 @@ The unique Microsoft-generated identifier for this app. If your bot is registere
 
 **Required** — object
 
-Gives information about your company. For apps submitted to AppSource (formerly Office Store), these values must match the information in your AppSource entry. See our [publishing guidelines](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md) for additional information.
+Gives information about your company. For apps submitted to AppSource (formerly Office Store), these values must match the information in your AppSource entry. See the [publishing guidelines](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md) for additional information.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
