@@ -266,7 +266,7 @@ See comprehensive [meeting extension design guidelines](~/apps-in-teams-meetings
 
 * Tabs must adhere to general [tab design guidelines](~/tabs/design/tabs.md).
 * Tabs must not have horizontal scrolling.
-* Tabs should have an organized layout when displaying multiple items (for instance, more than 10 polls or surveys). [See an example layout](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md#after-a-meeting).
+* Tabs should have an organized layout when displaying multiple items (for instance, more than 10 polls or surveys). [See an example layout](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#after-a-meeting).
 * Your app must notify users when the results of a survey or poll are exported by stating, "Results successfully downloaded".
 
 #### 4.6.3 In-meeting experience
