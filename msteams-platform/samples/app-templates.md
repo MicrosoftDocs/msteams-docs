@@ -256,6 +256,18 @@ Conversational Q&A bots are an easy way to provide answers to frequently asked q
 
 ![FAQ Plus gif](../assets/images/FAQPlusEndUser.gif)
 
+## Get Support App &#9734;
+
+The Get Support app can be used by organizations that are using Microsoft Teams, to enable any set of users to request assistance from supervisors. This app includes various features, such as:
+-   Requesting assistance on different categories from a Power App
+-   Notifications sent to requestors informing them of who has been assigned 
+-   Notifications sent to assigned supervisors informing them of who needs assistance 
+-   Analyzing escalations and patterns in SharePoint and PowerBI
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-app-get-support/)
+
+![Get Support Gif](../assets/images/get-support.gif)
+
 ## Goal Tracker
 
 The Goal Tracker app is a comprehensive solution for your organization to support establishing goals, observing progress, and acknowledging success within Microsoft Teams. The app enables users to set, track, and update objectives on a professional, personal, and team level. Team members also receive timely reminders and status updates to remain focused and stay on track.
@@ -565,18 +577,6 @@ Staff Check-ins is a [Power Apps](/powerapps/powerapps-overview)-based app that 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-staffcheckins)
 
 ![Create check-in view](../assets/images/staff-check-ins-create.png)
-
-## Get Support App &#9734;
-
-The Get Support app can be used by organizations that are using Microsoft Teams, to enable any set of users to request assistance from supervisors. This app includes various features, such as:
--   Requesting assistance on different categories from a Power App
--   Notifications sent to requestors informing them of who has been assigned 
--   Notifications sent to assigned supervisors informing them of who needs assistance 
--   Analyzing escalations and patterns in SharePoint and PowerBI
-
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-app-get-support/)
-
-![Get Support Gif](../assets/images/get-support.gif)
 
 ## Survey
 
