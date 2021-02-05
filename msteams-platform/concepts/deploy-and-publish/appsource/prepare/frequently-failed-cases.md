@@ -4,6 +4,8 @@ description: Describes the guidelines every app submitted to the Teams store (Ap
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
+ms.author: lajanuar
+keywords: app submission tips frequently failed cases validation guidelines
 ---
 # Microsoft Teams store (AppSource) validation guidelines
 
@@ -313,5 +315,5 @@ Follow these guidelines if your app uses the [activity feed APIs provided by Mic
 
 #### 4.7.4 Navigation and layout
 
-* The right pane experience in the feed must be self-contained and not break the feed experience. 
+* The right pane experience in the feed must be self-contained and not break the feed experience.
 * On click, user must be directed to the relevant content within the Teams app and should not be taken out of Teams experience.

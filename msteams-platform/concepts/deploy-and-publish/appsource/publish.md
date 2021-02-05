@@ -1,8 +1,9 @@
 ---
-title: Microsoft Teams app approval submission process guidance
+title: Understanding the Teams store submission process
 description: Describes the approval submission process for getting your app published to the Microsoft Teams app store
-ms.topic: conceptual
+ms.topic: overview
 keywords: teams publish store office publishing publish AppSource partner center account verification apps account not publish eligible app submission
+
 ---
 
 # Submit your app to AppSource

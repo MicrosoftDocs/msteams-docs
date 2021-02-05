@@ -1,29 +1,38 @@
 ---
-title: Using the Teams JavaScript client SDK
-author: laujan
-description: The Microsoft Teams JavaScript client SDK can help you create hosted experiences in Teams.
+title: Building tabs and other hosted experiences with the JavaScript client SDK
+author: heath-hamilton
+ms.author: surbhigupta
+description: Overview of the Microsoft Teams JavaScript client SDK, which can help you build Teams app experiences hosted in an <iframe>.
 keywords: teams tabs group channel configurable static SDK JavaScript personal
 ms.topic: conceptual
 ---
-# Using the Microsoft Teams client SDK for hosted experiences
+# Building tabs and other hosted experiences with the Microsoft Teams JavaScript client SDK
 
-The *Microsoft Teams JavaScript client SDK* can help if you need to host your app content in an `<iframe>`, which is commonly used in the following Teams app capabilities:
+The Microsoft Teams JavaScript client SDK can help you create hosted experiences in Teams, which means displaying your app content in an iframe.
 
-* Tabs
-* Task modules
+The SDK is helpful for developing apps with any of the following Teams capabilities:
 
-You can find the latest version of the SDK at the following locations:
+* [Tabs](../../tabs/what-are-tabs.md)
+* [Task modules](../../task-modules-and-cards/what-are-task-modules.md)
 
-* [npm](https://www.npmjs.com/package/@microsoft/teams-js)
-* [GitHub](https://github.com/OfficeDev/microsoft-teams-library-js)
+For example, the SDK can make your [tab react to theme changes](../../build-your-first-app/build-personal-tab.md#3-update-the-tab-theme) your users make in the Teams client.
 
-The following tables outline the SDK functions typically used in tabs development.
+## Getting started
 
-## Teams SDK public API
+Do one of the following depending on your development preferences:
+
+* [Install the SDK with npm or Yarn](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest)
+* [Clone the SDK (GitHub)](https://github.com/OfficeDev/microsoft-teams-library-js)
+
+## Common SDK functions
+
+See the following tables to understand commonly used SDK functions. The [SDK reference documentation](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest) provides more comprehensive information.
+
+### Basic functions
 
 | Function  | Description          | Documentation|
 | -----     | -----     | -----    |
-| `microsoftTeams.initialize()` | Initializes the Teams library. This function must be called before any other SDK calls.|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#initialize-any-&preserve-view=true)|
+| `microsoftTeams.initialize()` | Initializes the SDK. This function must be called before any other SDK calls.|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#initialize-any-&preserve-view=true)|
 |`microsoftTeams.getContext(callback: (context: Context)`| Gets the current state in which the page is running. The callback retrieves the **Context** object.|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#getcontext--context--context-----void-&preserve-view=true)<br/>[context obj](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true)|
 | `microsoftTeams.initializeWithContext({contentUrl: string, websiteUrl: string})` | Initializes the Teams library and sets the tab's [frame context](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true) depending on the contentUrl and websiteUrl. This ensures the go-to-website/reload functionality operates on the correct URL.|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#initializewithframecontext-framecontext--------void--string---&preserve-view=true)|
 | `microsoftTeams.setFrameContext({contentUrl: string, websiteUrl: string})` | Sets the tab's [frame context](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true) depending on the contentUrl and websiteUrl. This ensures the go-to-website/reload functionality operates on the correct URL.|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#setframecontext-framecontext-&preserve-view=true)|
@@ -35,7 +44,7 @@ The following tables outline the SDK functions typically used in tabs developmen
 |`microsoftTeams.executeDeepLink(deepLink: string, onComplete?: (status: boolean, reason?: string))`|Takes a required **deepLink** as input and navigates user to a URL or triggers a client action—such as opening or installing—an app *within Teams*.|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#executedeeplink-string---status--boolean--reason---string-----void-&preserve-view=true)|
 |`microsoftTeams.navigateToTab(tabInstance: TabInstance, onComplete?: (status: boolean, reason?: string))`|Takes the **TabInstance** object as input and navigates to a specified tab instance.|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#navigatetotab-tabinstance-&preserve-view=true)<br/>[tabInstance obj](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/tabinstance?view=msteams-client-js-latest&preserve-view=true)|
 
-## Authentication namespace
+### Authentication namespace
 
 | Function  | Description          | Documentation|
 | -----     | -----     | -----    |
@@ -43,7 +52,7 @@ The following tables outline the SDK functions typically used in tabs developmen
 |`microsoftTeams.authentication.notifySuccess(result?: string, callbackUrl?: string)`|Notifies the frame that initiated the authentication request that the request was successful and closes the authentication window|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/authentication?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.authentication.notifyFailure(reason?: string, callbackUrl?: string)`|Notifies the frame that initiated the authentication request that the request failed and closes the authentication window.|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/authentication?view=msteams-client-js-latest&preserve-view=true)|
 
-## Settings namespace
+### Settings namespace
 
 | Function  | Description          | Documentation|
 | -----     | -----     | -----    |
@@ -53,7 +62,7 @@ The following tables outline the SDK functions typically used in tabs developmen
 |`microsoftTeams.settings.registerOnSaveHandler(handler: (evt: SaveEvent)`|The handler that is registered when the user selects the **Save** button. This handler should be used to create or update the underlying resource powering the content.|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.settings.registerOnRemoveHandler(handler: (evt: RemoveEvent)`|The handler that is registered when the user selects the **Remove** button. This handler should be used to remove the underlying resource powering the content.|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest&preserve-view=true)|
 
-## Tasks namespace
+### Task modules namespace
 
 | Function  | Description          | Documentation|
 | -----     | -----     | -----    |
