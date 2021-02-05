@@ -24,7 +24,9 @@ A scene is an artifact that contains the following:
 * Each seat and image has width and height.
 * Optionally, you can reserve a spot for the meeting organizer and a set of reserved spots for participants.
 
-To view how Together Mode works, see [Teams group chat software](https://www.microsoft.com/en-in/microsoft-teams/group-chat-software).
+To view how Together Mode works, see the following video:
+
+> [!VIDEO https://www.microsoft.com/en-in/microsoft-teams/teams-for-work]
 
 ### Create or extend apps
 
