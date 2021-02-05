@@ -4,7 +4,6 @@ description: Describes the guidelines every app submitted to the Teams store (Ap
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.author: lajanuar
 keywords: app submission tips frequently failed cases validation guidelines
 ---
 # Microsoft Teams store (AppSource) validation guidelines
