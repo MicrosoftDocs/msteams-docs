@@ -42,7 +42,7 @@ There are two ways to upload your app to Teams:
 
    ![Add menu](../../assets/images/NewappAddmenudropdown.png)
 
-The uploaded package should now be available for use in the team or conversation specified in the consent dialog. If your app does not appear, the most common reason is an error in the manifest, particularly ids for the app, bot and messaging extensions. If the app is not scoped for conversations, that option will not appear.
+The uploaded package must be available for use in the team or conversation specified in the consent dialog. If your app does not appear, the most common reason is an error in the manifest, particularly IDs for the app, bot and messaging extensions. If the app is not scoped for conversations, that option will not appear.
 
 >[!NOTE]
 > Apps in conversations is currently in [Developer Preview](../../resources/dev-preview/developer-preview-intro.md), and the option will not appear if Teams is not running in that mode.
@@ -118,12 +118,11 @@ Hence, the default install scope selection helps you to specify the `defaultInst
 
 ![Add an app](../../assets/images/compose-extensions/addanapp.png)
 
-In the specified app manifest, the property `defaultInstallScope` supports values like personal, team, group chat, or meeting.
-
 > [!NOTE]
-> Ensure your app specifies a `defaultInstallScope` that is supported by all the capabilities in the app for the validation to pass. It means, every single capability in an app must support the `defaultInstallScope`. Otherwise, the behavior reverts to the experience where no default installation scope is provided.
+> The `defaultInstallScope` supports values, such as personal, team, group chat, or meeting.
+> For a successful validation, specify a `defaultInstallScope` that supports all capabilities. Each capability in an app must support the `defaultInstallScope`, else the app acts as it would if the default installation scope is excluded.
 
-`defaultGroupCapability` defines which capabilities are installed by default. For each group scope, select either tab, bot, or connector as the default capability of the app. If the specific scope does not support the default capability, then the app validation fails.
+`defaultGroupCapability` defines capabilities that are installed by default. Choose tab, bot, or connector as the default capability of the app for each group scope. The app validation fails if any of the scopes do not support the default capability.
 
 ## Remove or update your app
 

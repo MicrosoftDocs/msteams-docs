@@ -318,8 +318,7 @@ The following schema sample shows all extensibility options.
 }
 ```
 
-> [!Note]
-> For an updated version of the schema, see also: https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json.
+For an updated version of the schema, see [MicrosoftTeams.schema.json](https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json).
 
 The schema defines the following properties:
 
