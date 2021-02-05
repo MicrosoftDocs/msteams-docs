@@ -300,7 +300,7 @@ The following schema sample shows all extensibility options.
             "bot",
             "connector"
       ],
-      "description": "When the install scope selected is GroupChat, this field specifies the default capability available."
+      "description": "When the install scope selected is Group Chat, this field specifies the default capability available."
     },
     "meetings": {
       "type": "string",
@@ -319,7 +319,7 @@ The following schema sample shows all extensibility options.
 ```
 
 > [!Note]
-> For an updated version of the schema see also: https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json.
+> For an updated version of the schema, see also: https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json.
 
 The schema defines the following properties:
 
