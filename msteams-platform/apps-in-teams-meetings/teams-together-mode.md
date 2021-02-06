@@ -8,11 +8,17 @@ ms.topic: conceptual
 
 Microsoft Teams Together Mode provides a simple, innovative, and user-friendly meeting environment. It enhances your virtual meeting experience.
 
-This document covers steps to create or extend apps in Together Mode, get started with Microsoft Scene Design Studio, assemble a scene package, create an app package and use the scene in Teams, and activate Together Mode.
+Together Mode digitally combines participants into a single virtual space instead of being shown separately in boxes. It creates your virtual image and places the image in a virtual environment where you can easily interact with your peers. This mode makes video meetings more viable as most users report less meeting fatigue.
+
+To view how Together Mode works, see the following video:
+
+<div style="width: 50%; float: right;">
+https://www.youtube.com/watch?v=MGsNmYKgeTA
+</div>
+
+This document covers steps to create or extend apps in Together Mode, build a scene using Microsoft Scene Design Studio, assemble a scene package, create an app package and use the scene in Teams, and activate Together Mode.
 
 ## Understand Together Mode
-
-Together Mode digitally combines participants into a single virtual space instead of being shown separately in boxes. It creates your virtual image and places the image in a virtual environment where you can easily interact with your peers. This mode makes video meetings more viable as most users report less meeting fatigue.
 
 Together Mode allows you to apply different scenes while conducting meetings in a virtual environment.
 
@@ -24,22 +30,16 @@ A scene is an artifact that contains the following:
 * Each seat and image has width and height.
 * Optionally, you can reserve a spot for the meeting organizer and a set of reserved spots for participants.
 
-To view how Together Mode works, see the following video:
-
-> [!VIDEO https://www.microsoft.com/en-in/microsoft-teams/teams-for-work]
-
-### Create or extend apps
+## Create or extend apps
 
 To create apps in Together Mode, you can create scene only apps or extend your current app to have scenes for Together Mode.
 
 >[!NOTE]
 > It is recommended to have scene only apps as the acquisition experience for users is more seamless.
 
-The following image shows how the scene is built, the app is created, the app is uploaded, and the scene is immersed in the app:
+The following workflow shows how the scene is built, the app is created, the app is uploaded, and the scene is immersed in the app:
 
 ![Addingscenetoapp](../../../assets/images/apps-in-meetings/Scene-added-to-app.png)
-
-For more information, see [Build a scene](~/apps-in-teams-meetings/build-a-scene.md).
 
 >[!NOTE]
 > Multiple scenes in a single app package appear as a flat list of scenes to users.
@@ -58,7 +58,7 @@ You must have the ability to ship a scene package that includes the following:
 
 * **Visual no-code designer experience:** Snap has made it simple through GUI for users to build their own filters. It is a challenge to ship a scene generic enough for all teachers to use it. At present teachers are able to create custom scenes that serve the purpose.
 
-### Get started with Scene Design Studio
+### Build a scene using Scene Design Studio
 
 ![Scene Design Studio](../../../assets/images/apps-in-meetings/scene-design-studio.png)
 
@@ -84,7 +84,7 @@ After setting-up dev.teams.microsoft.com, complete the following steps to get st
 
     ![Alignment for images](../../../assets/images/apps-in-meetings/image-alignment.png)
 
-### Scene package
+## Scene package
 
 A scene package is a collection of all assets particularly images. It is used to build the scene and a scene JSON to indicate the exact position of the seats. In the Scene Design Studio, there is an option to simply get the scene package that is a zip file.
 Use the following scene JSON sample:
@@ -134,11 +134,7 @@ Get end-to-end information of how a user engages with scenes in Together Mode. T
 
     ![Scene applied](../../../assets/images/apps-in-meetings/scene-applied.png)
 
-To use the Together Mode to its fullest, there are certain best practices that you must follow.
-
-### Best practices
-
-To get the most from Together Mode, follow these best practices:
+To use the Together Mode to its fullest, follow these best practices:
 
 * Keep an open mind and encourage your participants to interact more.
 * Request users not to walk around during the session.
