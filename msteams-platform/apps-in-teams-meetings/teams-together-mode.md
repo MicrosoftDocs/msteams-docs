@@ -37,7 +37,7 @@ To create apps in Together Mode, you can create scene only apps or extend your c
 
 The following workflow shows how the scene is built, the app is created, the app is uploaded, and the scene is immersed in the app:
 
-![Add scene to app](../../../assets/images/apps-in-meetings/scene-added-to-app.png)
+![Add scene to app](../assets/images/apps-in-meetings/scene-added-to-app.png)
 
 >[!NOTE]
 > Multiple scenes in a single app package appear as a flat list of scenes to users.
@@ -54,11 +54,11 @@ A scene is an artifact that contains the following:
 * Each seat and image has width and height.
 * Optionally, you can reserve a spot for the meeting organizer and a set of reserved spots for participants.
 
-![Scene Design Studio](../../../assets/images/apps-in-meetings/scene-design-studio.png)
+![Scene Design Studio](../assets/images/apps-in-meetings/scene-design-studio.png)
 
 In the Scene Design Studio, each seat represents an avatar for design purposes. Each seat and image has a placement in the third dimension that is the Z-axis to give a sense of depth in scenes that demand them.
 
-![Build a scene](../../../assets/images/apps-in-meetings/build-a-scene.png)
+![Build a scene](../assets/images/apps-in-meetings/build-a-scene.png)
 
 After setting-up dev.teams.microsoft.com, complete the following steps to build a scene using the Scene Design Studio:
 
@@ -70,17 +70,17 @@ After setting-up dev.teams.microsoft.com, complete the following steps to build 
 
 4. Add background images to the scene using **Add images**. The assets can also be dragged and dropped into the environment as displayed in the following image:
 
-    ![Drag into the scene](../../../assets/images/apps-in-meetings/drag-and-drop-scene.png)
+    ![Drag into the scene](../assets/images/apps-in-meetings/drag-and-drop-scene.png)
 
 5. Select any participant image that you have placed in the scene.
 
 6. From the rightmost corner, select an alignment for the image or use the **Size & rotation** slider to adjust the image size. Alternately, you can drag the images around the scene and place them in the required position and resize them using the resize arrow.
 
-    ![Alignment for images](../../../assets/images/apps-in-meetings/image-alignment.png)
+    ![Alignment for images](../assets/images/apps-in-meetings/image-alignment.png)
 
 7. Select any participant image, select the **Assign Spot** check box, and choose **Meeting Organizer** and **Presenter** to assign that spot to the participant. Alternately, you can choose either **Meeting Organizer** or **Presenter** options for that participant.
 
-    ![Assign spot](../../../assets/images/apps-in-meetings/assign-spot.png)
+    ![Assign spot](../assets/images/apps-in-meetings/assign-spot.png)
 
 8. In the **Scene Name** box, enter a name for the scene.
 
@@ -96,11 +96,11 @@ You must have the ability to ship a scene package that includes the following:
 
 * **Role based scene:** Within a scene package, you must be able to render an experience preview, for example, for the teacher and the students.
 
-    ![Role based scene](../../../assets/images/apps-in-meetings/role-based-scene.png)
+    ![Role based scene](../assets/images/apps-in-meetings/role-based-scene.png)
 
 * **In scene configuration:** The JSON package assumes a single image with seat assignment. For example, in the following picture, the astronaut seat can be applied by default to the organizer through `participantRole` API, but the teacher can dynamically move this around using the class roster:
 
-    ![In scene configuration](../../../assets/images/apps-in-meetings/in-scene-configuration.png)
+    ![In scene configuration](../assets/images/apps-in-meetings/in-scene-configuration.png)
 
 * **Moving images:** You must be able to support scenes that are in motion to simulate moving objects. A brute force method of doing this is to support gif format in Together Mode. Advanced scene rendering is more like a movie being played.
 
@@ -109,7 +109,7 @@ You must have the ability to ship a scene package that includes the following:
 A scene package is used to build the scene and a scene JSON to indicate the exact position of the seats. In the Scene Design Studio, there is an option to simply get the scene package that is a zip file.
 Use the following scene JSON sample:
 
-![JSON sample](../../../assets/images/apps-in-meetings/json-sample.png)
+![JSON sample](../assets/images/apps-in-meetings/json-sample.png)
 
 Each scene has a unique ID and name. The scene JSON also contains information on all the assets used for the scene. Each asset contains a filename, width, height, and positions on the X and Y-axis. Similarly, each seat contains a seat ID, width, height, and positions on the X and Y-axis. The seating order is generated automatically for each seat when it is created. Hence, the seating order must be altered according to the preferred order.
 
@@ -124,7 +124,7 @@ Now that you have assembled a scene package, you can create an app package and a
 
 An app package contains the scene package. App Studio simplifies app packaging.
 
-![App Studio](../../../assets/images/apps-in-meetings/app-studio.png)
+![App Studio](../assets/images/apps-in-meetings/app-studio.png)
 
 After you build a scene, complete the following steps:
 
@@ -148,13 +148,13 @@ Get end-to-end information of how a user engages with scenes in Together Mode. T
 
 2. From **Choose a scene**, select the scene you want to use for your meeting.
 
-    ![Scene picker](../../../assets/images/apps-in-meetings/scene-picker.png)
+    ![Scene picker](../assets/images/apps-in-meetings/scene-picker.png)
 
 3. Choose **Switch all participants to together mode** in the meeting.
 
 4. Select **Apply**. Teams installs the app for the user and applies the scene.
 
-    ![Scene applied](../../../assets/images/apps-in-meetings/scene-applied.png)
+    ![Scene applied](../assets/images/apps-in-meetings/scene-applied.png)
 
 To use the Together Mode to its fullest, follow these best practices:
 
