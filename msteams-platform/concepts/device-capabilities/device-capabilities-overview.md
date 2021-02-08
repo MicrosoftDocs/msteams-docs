@@ -22,11 +22,11 @@ After getting access to the device capabilities, you can integrate them with Tea
 
 ## Request device permissions
 
-You must request the required [permissions](native-device-permissions.md) to access the native device capabilities. While access to these features is standard in modern web browsers, you must inform Teams about the features that you are using by updating your app manifest. This update  allows you to request permissions, while your app is running on Teams mobile or desktop clients.
+Use the tools present in [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) to  request the required  [permissions](native-device-permissions.md) for  accessing the native device capabilities. While access to these capabilities is standard in modern web browsers, you must inform Teams about the capabilities that you are using by updating your app manifest. This update allows you to request permissions while your app runs on Teams mobile or desktop clients.
  
  ## Integrate device capabilities
 
-After getting access to device capabilities, use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) to [integrate the capabilities](mobile-camera-image-permissions.md) with Teams platform to enhance the user experience. These functionalities allow your app to:
+After getting access to device capabilities,use **Teams media capability APIs** to [integrate the capabilities](mobile-camera-image-permissions.md) with Teams platform to enhance the user experience. These integrated capabilities allow your app to:
 
 * Capture and share images
 * Record audio through microphone

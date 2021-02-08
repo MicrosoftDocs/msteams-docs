@@ -7,9 +7,7 @@ ms.topic: how-to
 
 # Request device permissions for your Microsoft Teams app
 
-You can enrich your Teams app with native device capabilities, such as camera, microphone, and location. 
-
-This document guides you on how to request user consent and access the native device permissions.
+You can enrich your Teams app with native device capabilities, such as camera, microphone, and location. This document guides you on how to request user consent and access the native device permissions.
 
 > [!NOTE]
 > To integrate media capabilities within your Microsoft Teams mobile app, see [Integrate media capabilities](mobile-camera-image-permissions.md).
