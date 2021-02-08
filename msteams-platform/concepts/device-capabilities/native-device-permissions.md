@@ -7,7 +7,7 @@ ms.topic: how-to
 
 # Request device permissions for your Microsoft Teams app
 
-You can enrich your Teams app with native device capabilioties, such as camera, microphone, and location. You must request the device permissions to access the native device capabilities. The device permissions work similarly for all app constructs, such as tabs, task modules or messaging extensions. The user must go to the permissions page in Teams settings to manage device permissions.
+You can enrich your Teams app with native device capabilities, such as camera, microphone, and location. 
 
 This document guides you on how to request user consent and access the native device permissions.
 
@@ -16,6 +16,7 @@ This document guides you on how to request user consent and access the native de
 
 ## Native device permissions
 
+You must request the device permissions to access native device capabilities. The device permissions work similarly for all app constructs, such as tabs, task modules, or messaging extensions. The user must go to the permissions page in Teams settings to manage device permissions.
 By accessing the device capabilities, you can build richer experiences on the Teams platform, such as:
 * Capture and view images.
 * Record and share short videos.

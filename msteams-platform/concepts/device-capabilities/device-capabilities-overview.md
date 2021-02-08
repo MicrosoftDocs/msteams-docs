@@ -26,7 +26,7 @@ You must request the required [permissions](native-device-permissions.md) to acc
  
  ## Integrate device capabilities
 
-After getting access to device capabilities, [integrate the capabilities](mobile-camera-image-permissions.md) with Teams platform to enhance the user experience. These functionalities allow your app to:
+After getting access to device capabilities, use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) to [integrate the capabilities](mobile-camera-image-permissions.md) with Teams platform to enhance the user experience. These functionalities allow your app to:
 
 * Capture and share images
 * Record audio through microphone
