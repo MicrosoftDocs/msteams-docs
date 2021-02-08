@@ -291,7 +291,7 @@ The following schema sample shows all extensibility options.
             "bot",
             "connector"
           ],
-          "description": "When the install scope selected is Team, this field specifies the default capability available."
+          "description": "When the selected install scope is Team, this field specifies the default capability available."
     },
     "groupchat": {
       "type": "string",
@@ -300,7 +300,7 @@ The following schema sample shows all extensibility options.
             "bot",
             "connector"
       ],
-      "description": "When the install scope selected is Group Chat, this field specifies the default capability available."
+      "description": "When the selected install scope is Group Chat, this field specifies the default capability available."
     },
     "meetings": {
       "type": "string",
@@ -309,7 +309,7 @@ The following schema sample shows all extensibility options.
             "bot",
             "connector"
       ],
-      "description": "When the install scope selected is Meetings, this field specifies the default capability available."
+      "description": "When the selected install scope is Meetings, this field specifies the default capability available."
       }
     },
     "description": "When a group install scope is selected, this defines the default capability when the user installs the app.",
@@ -332,13 +332,13 @@ The https:// URL referencing the JSON Schema for the manifest.
 
 **Required** — string
 
-The version of manifest schema this manifest is using. It should be "1.7".
+The version of manifest schema this manifest is using. It must be "1.7".
 
 ## version
 
 **Required** — string
 
-The version of a specific app. If you update something in your manifest, the version must be incremented too. This way, when the new manifest is installed, it overwrites the existing one and the user receives the new functionality. If this app was submitted to the store, the new manifest will have to be re-submitted and re-validated. The app users receive the new updated manifest automatically within few hours after the manifest is approved.
+The version of a specific app. If you update something in your manifest, the version must be incremented too. This way, when the new manifest is installed, it overwrites the existing one and the user receives the new functionality. If this app was submitted to the store, the new manifest must be re-submitted and re-validated. The app users receive the new updated manifest automatically within few hours after the manifest is approved.
 
 If the app requests for permissions change, the users are prompted to upgrade and re-consent to the app.
 
@@ -362,7 +362,7 @@ Gives information about your company. For apps submitted to AppSource (formerly 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
 |`name`|32 characters|✔|The display name for the developer.|
-|`websiteUrl`|2048 characters|✔|The https:// URL to the developer's website. This link should take users to your company or product-specific landing page.|
+|`websiteUrl`|2048 characters|✔|The https:// URL to the developer's website. This link must take users to your company or product-specific landing page.|
 |`privacyUrl`|2048 characters|✔|The https:// URL to the developer's privacy policy.|
 |`termsOfUseUrl`|2048 characters|✔|The https:// URL to the developer's terms of use.|
 |`mpnId`|10 characters| |**Optional** The Microsoft Partner Network ID that identifies the partner organization building the app.|
@@ -448,7 +448,7 @@ Used when your app experience has a team channel tab experience that requires ex
 |`canUpdateConfiguration`|boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: **true**.|
 |`context` |array of enums|6||The set of `contextItem` scopes where a tab is supported. Default: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
-|`supportedSharePointHosts`|array of enums|1||Defines how your tab will be made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart` |
+|`supportedSharePointHosts`|array of enums|1||Defines how your tab is made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart` |
 
 ## staticTabs
 
@@ -486,8 +486,8 @@ The item is an array (maximum of only 1 element&mdash;currently only one bot is 
 |`needsChannelSelector`|boolean|||Describes whether or not the bot utilizes a user hint to add the bot to a specific channel. Default: **`false`**|
 |`isNotificationOnly`|boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. Default: **`false`**|
 |`supportsFiles`|boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. Default: **`false`**|
-|`supportsCalling`|boolean|||A value indicating where a bot supports audio calling. **IMPORTANT**: This property is currently experimental. Experimental properties may not be complete, and may undergo changes before becoming fully available.  It is provided for testing and exploration purposes only and should not be used in production applications. Default: **`false`**|
-|`supportsVideo`|boolean|||A value indicating where a bot supports video calling. **IMPORTANT**: This property is currently experimental. Experimental properties may not be complete, and may undergo changes before becoming fully available.  It is provided for testing and exploration purposes only and should not be used in production applications. Default: **`false`**|
+|`supportsCalling`|boolean|||A value indicating where a bot supports audio calling. **IMPORTANT**: This property is currently experimental. Experimental properties may not be complete, and may undergo changes before becoming fully available.  It is provided for testing and exploration purposes only and must not be used in production applications. Default: **`false`**|
+|`supportsVideo`|boolean|||A value indicating where a bot supports video calling. **IMPORTANT**: This property is currently experimental. Experimental properties may not be complete, and may undergo changes before becoming fully available.  It is provided for testing and exploration purposes only and must not be used in production applications. Default: **`false`**|
 
 ### bots.commandLists
 
@@ -541,7 +541,7 @@ The item is an array (maximum of 1 element) with all elements of type `object`. 
 
 ### composeExtensions.commands
 
-Your messaging extension should declare one or more commands. Each command appears in Microsoft Teams as a potential interaction from the UI-based entry point. There is a maximum of 10 commands.
+Your messaging extension must declare one or more commands. Each command appears in Microsoft Teams as a potential interaction from the UI-based entry point. There is a maximum of 10 commands.
 
 Each command item is an object with the following structure:
 
@@ -551,9 +551,9 @@ Each command item is an object with the following structure:
 |`title`|string|32 characters|✔|The user-friendly command name.|
 |`type`|string|64 characters||Type of the command. One of `query` or `action`. Default: **query**.|
 |`description`|string|128 characters||The description that appears to users to indicate the purpose of this command.|
-|`initialRun`|boolean|||A boolean value that indicates whether the command should be run initially with no parameters. Default: **false**.|
-|`context`|array of Strings|3||Defines where the message extension can be invoked from. Any combination of`compose`,`commandBox`,`message` . Default is `["compose","commandBox"]`.|
-|`fetchTask`|boolean|||A boolean value that indicates if it should fetch the task module dynamically. Default: **false**.|
+|`initialRun`|boolean|||A boolean value indicates whether the command runs initially with no parameters. Default is **false**.|
+|`context`|array of Strings|3||Defines where the message extension can be invoked from. Any combination of`compose`,`commandBox`,`message`. Default is `["compose","commandBox"]`.|
+|`fetchTask`|boolean|||A boolean value that indicates if it must fetch the task module dynamically. Default is **false**.|
 |`taskInfo`|object|||Specify the task module to pre-load when using a messaging extension command.|
 |`taskInfo.title`|string|64 characters||Initial dialog title.|
 |`taskInfo.width`|string|||Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
@@ -573,18 +573,18 @@ Each command item is an object with the following structure:
 
 **Optional** — array of strings
 
-An array of `string` which specifies which permissions the app requests, which lets end users know how the extension will perform. The following options are non-exclusive:
+An array of `string` which specifies which permissions the app requests, which lets end users know how the extension performs. The following options are non-exclusive:
 
 * `identity` &emsp; Requires user identity information
 * `messageTeamMembers` &emsp; Requires permission to send direct messages to team members
 
-Changing these permissions when updating your app will cause your users to repeat the consent process the first time they run the updated app. See [Updating your app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md) for more information.
+Changing these permissions during app update, causes your users to repeat the consent process after they run the updated app. See [Updating your app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md) for more information.
 
 ## devicePermissions
 
 **Optional** — array of strings
 
-Specifies the native features on a user's device that your app may request access to. Options are:
+Provides the native features on a user's device that your app requests access to. Options are:
 
 * `geolocation`
 * `media`
@@ -596,14 +596,14 @@ Specifies the native features on a user's device that your app may request acces
 
 **Optional**, except **Required** where noted
 
-A list of valid domains for websites the app expects to load within the Teams client. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`. If your tab configuration or content UI needs to navigate to any other domain besides the one use for tab configuration, that domain must be specified here.
+A list of valid domains for websites the app expects to load within the Teams client. Domain listings can include wildcards, for example, `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`. If your tab configuration or content UI needs to navigate to any other domain besides the one use for tab configuration, that domain must be specified here.
 
-It is **not** necessary to include the domains of identity providers you want to support in your app, however. For example, to authenticate using a Google ID, it's necessary to redirect to accounts.google.com, but you should not include accounts.google.com in `validDomains[]`.
+It is **not** necessary to include the domains of identity providers you want to support in your app. For example, to authenticate using a Google ID, it is required to redirect to accounts.google.com, however, you must not include accounts.google.com in `validDomains[]`.
 
-Teams apps that require their own sharepoint URLs to function well, may include "{teamsitedomain}" in their valid domain list.
+Teams apps that require their own sharepoint URLs to function well, includes "{teamsitedomain}" in their valid domain list.
 
 > [!IMPORTANT]
-> Do not add domains that are outside your control, either directly or via wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid.
+> Do not add domains that are outside your control, either directly or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, however, `*.onmicrosoft.com` is not valid.
 
 The object is an array with all elements of the type `string`.
 
@@ -611,7 +611,7 @@ The object is an array with all elements of the type `string`.
 
 **Optional** — object
 
-Specify your Azure Active Directory (Azure AD) App ID and Microsoft Graph information to help users seamlessly sign into your app. If your app is registered in Azure AD, you must provide the App ID, so that administrators can easily review permissions and grant consent in Teams admin center.
+Provide your Azure Active Directory (AAD) App ID and Microsoft Graph information to help users seamlessly sign into your app. If your app is registered in AAD, you must provide the App ID, so that administrators can easily review permissions and grant consent in Teams admin center.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -623,26 +623,26 @@ Specify your Azure Active Directory (Azure AD) App ID and Microsoft Graph inform
 
 **Optional** — boolean
 
-Indicate whether or not to show the loading indicator when an app/tab is loading. Default: **false**.
+Indicates whether or not to show the loading indicator when an app or tab is loading. Default is **false**.
 >[!NOTE]
->If you set "showLoadingIndicator : true" in your app manifest, then for the page to load correctly, you must modify the content pages of your tabs and task modules as per the protocol described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
+>If you select`showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
 
 
 ## isFullScreen
 
  **Optional** — boolean
 
-Indicate where a personal app is rendered with or without a tab-header bar. Default: **false**.
+Indicate where a personal app is rendered with or without a tab header bar. Default is **false**.
 
 ## activities
 
 **Optional** — object
 
-Define the properties your app will use to post to a user activity feed.
+Define the properties your app uses to post a user activity feed.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`activityTypes`|array of Objects|128 items| | Specify the types of activities that your app can post to a users activity feed.|
+|`activityTypes`|array of Objects|128 items| | Provide the types of activities that your app can post to a users activity feed.|
 
 ### activities.activityTypes
 
