@@ -8,7 +8,7 @@ keywords: teams apps meetings user participant role api
 ---
 # Apps in Teams meetings
 
-Meetings are key to productivity in Teams. They enable collaboration, partnership, informed communication, and shared feedback in an inclusive and active forum. With the Microsoft Teams Together Mode feature you can collaborate with your team in one place without being separated by boxes. For more information on Together Mode, see [Together Mode in Teams](teams-together-mode.md)
+Meetings are key to productivity in Teams. They enable collaboration, partnership, informed communication, and shared feedback in an inclusive and active forum. With the Microsoft Teams Together Mode feature you can collaborate with your team in one place without being separated by boxes. For more information on Together Mode, see [Together Mode in Teams](teams-together-mode.md).
 
 As a developer, you can create [configurable tab](../tabs/what-are-tabs.md#how-do-tabs-work), [bot](../bots/what-are-bots.md), and [message extension](../messaging-extensions/what-are-messaging-extensions.md) applications to enhance and enrich a Teams meeting experience. Meeting users can access apps, via the tab gallery, to enable relevant scenarios such as pre-staging a Kanban board, launching an in-meeting actionable dialog, or creating a post-meeting poll. Your meeting app can deliver a user experience for each stage of the meeting lifecycle based upon attendee status.
 

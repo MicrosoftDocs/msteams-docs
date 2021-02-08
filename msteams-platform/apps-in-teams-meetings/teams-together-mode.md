@@ -18,7 +18,7 @@ You can create apps in Together Mode or extend your current app to have scenes.
 
 To view how Together Mode works, see the following video:
 
-> [!VIDEO https://www.youtube.com/watch?v=MGsNmYKgeTA]
+> [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
 
 This document covers prerequisites, steps to create or extend apps in Together Mode, build a scene using Microsoft Scene Design Studio, assemble a scene package, create an app package and use the scene in Teams, and activate Together Mode.
 
