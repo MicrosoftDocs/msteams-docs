@@ -26,7 +26,7 @@ If you see an option to add `git` to the PATH during installation, choose to do 
 
 Verify your `git` installation by running the following in a terminal window:
 > [!NOTE]
-> Use the terminal window that you are most comfortable with on your platform. These examples use Bash, but will run on most platforms.
+> Use the terminal window that you are most comfortable with on your platform. These examples use Bash but will run on most platforms.
 
 ```bash
 $ git --version
@@ -59,10 +59,10 @@ Once the repo is cloned, use Visual Studio to open the solution file `Microsoft.
 
 When the app starts, you will see a browser window open with the root of the app launched. You can navigate to the following URLs to verify that all the app URLs are loading:
 
-- [http://localhost:3333](http://localhost:3333)
-- [http://localhost:3333/hello](http://localhost:3333/hello)
-- [http://localhost:3333/first](http://localhost:3333/first)
-- [http://localhost:3333/second](http://localhost:3333/second)
+- [https://localhost:44327/](https://localhost:44327/)
+- [https://localhost:44327/hello](https://localhost:44327/hello)
+- [https://localhost:44327/first](https://localhost:44327/first)
+- [https://localhost:44327/second]https://localhost:44327/second)
 
 <a name="HostSample"></a>
 
@@ -71,19 +71,19 @@ When the app starts, you will see a browser window open with the root of the app
 
 ## Host the sample app
 
-Remember that apps in Microsoft Teams are web applications exposing one or more capabilities. For the Teams platform to load your app, your app must be reachable from the internet. To make your app reachable from the internet, you need to host your app. You can either host it in Microsoft Azure for free or create a tunnel to the local process on your development machine using `ngrok`. When you finish hosting your app make a note of its root URL. It will look something like: `https://yourteamsapp.ngrok.io` or `https://yourteamsapp.azurewebsites.net`.
+Remember that apps in Microsoft Teams are web applications exposing one or more capabilities. For the Teams platform to load your app, your app must be reachable from the internet. To make your app reachable from the internet, you need to host your app. You can either host it in Microsoft Azure for free or create a tunnel to the local process on your development machine using `ngrok`. When you finish hosting your app make a note of its root URL. It will look something like `https://yourteamsapp.ngrok.io` or `https://yourteamsapp.azurewebsites.net`.
 
 ### Tunnel using ngrok
 
-For quick testing you can run the app on your local machine and create a tunnel to it through a web endpoint. [ngrok](https://ngrok.com) is a free tool that lets you do just that. With ngrok you can get a web address such as `https://d0ac14a5.ngrok.io` (this URL is just an example). You can [download and install](https://ngrok.com/download) ngrok for your environment. Make sure you add it to a location in your `PATH`.
+For quick testing, you can run the app on your local machine and create a tunnel to it through a web endpoint. [ngrok](https://ngrok.com) is a free tool that lets you do just that. With ngrok you can get a web address such as `https://d0ac14a5.ngrok.io` (this URL is just an example). You can [download and install](https://ngrok.com/download) ngrok for your environment. Make sure you add it to a location in your `PATH`.
 
-Once you install it, you can open a new terminal window and run the following command to create a tunnel. The sample uses port 3333, so be sure to specify it here.
+Once you install it, you can open a new terminal window and run the following command to create a tunnel. The sample uses port 44327, so be sure to specify it here.
 
 ```bash
-ngrok http 3333 -host-header=localhost:3333
+ngrok http 44327 -host-header=localhost:44327
 ```
 
-Ngrok will listen to requests from the internet and will route them to your app running on port 3333. You can verify by opening your browser and going to `https://d0ac14a5.ngrok.io/hello` to load your app's hello page. Please be sure to use the forwarding address displayed by ngrok in your console session instead of this URL.
+Ngrok will listen to requests from the internet and will route them to your app running on port 44327. You can verify by opening your browser and going to `https://d0ac14a5.ngrok.io/hello` to load your app's hello page. Please be sure to use the forwarding address displayed by ngrok in your console session instead of this URL.
 
 > [!NOTE]
 > If you have used a different port in the [build and run](#build-and-run-the-sample) step above, make sure you use the same port number to setup the `ngrok` tunnel.
