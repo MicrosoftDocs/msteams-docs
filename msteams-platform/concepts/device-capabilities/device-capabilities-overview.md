@@ -11,14 +11,14 @@ Microsoft Teams platform is continuously enhancing developer capabilities aligni
 
 ## Native device capabilities
 
-A mobile or desktop device has built-in devices, such as a camera and microphone, called capabilities. You can access these devices and integrate them with Microsoft Teams platform to enhance the collaborative experience. You must request access to the capabilities to proceed further.
-
-Microsoft Teams allow you to access the following device capabilities on mobile or desktop through dedicated APIs available in [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true):
+A mobile or desktop device has built-in devices, such as a camera and microphone, called capabilities. You can access the following device capabilities on mobile or desktop through dedicated APIs available in [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true):
 * Media capabilities, such as
     * Camera
     * Microphone
     * Gallery
 * Location
+
+After getting access to the device capabilities, you can integrate them with Teams platform to enhance the collaborative experience. 
 
 ## Request device permissions
 
