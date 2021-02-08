@@ -216,18 +216,6 @@ E-Prescriptions is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app)-
 :::column-end:::
 :::row-end:::
 
-
-## Emergency Button Power &#9734;
-
-The Emergency Button Power app can be used by organizations that are using Microsoft Teams, to enable any set of users to request assistance from supervisors. This app includes various features, such as:
--   Requesting assistance on different categories from a Power App
--   Notifications sent to requestors informing them of who has been assigned 
--   Notifications sent to assigned supervisors informing them of who needs assistance 
--   Viewing audit trails held in SharePoint
-
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-emergency-button-app)
-
-
 ## Employee Training 
 
 Employee training is a Microsoft Teams app that enables organizers to easily publish,  track, and promote learning and training events for your organization.  With the app, event planners can send reminders and notifications to event registrants and employees can indicate interest in upcoming events, stay updated on current events, and share event details with colleagues via the Teams messaging extension.
@@ -273,6 +261,18 @@ Conversational Q&A bots are an easy way to provide answers to frequently asked q
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
 
 ![FAQ Plus gif](../assets/images/FAQPlusEndUser.gif)
+
+## Get Support App &#9734;
+
+The Get Support app can be used by organizations that are using Microsoft Teams, to enable any set of users to request assistance from supervisors. This app includes various features, such as:
+-   Requesting assistance on different categories from a Power App
+-   Notifications sent to requestors informing them of who has been assigned 
+-   Notifications sent to assigned supervisors informing them of who needs assistance 
+-   Analyzing escalations and patterns in SharePoint and PowerBI
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-app-get-support/)
+
+![Get Support Gif](../assets/images/get-support.gif)
 
 ## Goal Tracker
 
