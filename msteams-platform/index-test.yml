@@ -27,19 +27,19 @@ highlightedContent:
       url: /microsoftteams/platform/overview
     - title: Plan your app
       itemType: overview
-      url: /microsoftteams/platform/concepts/design/understand-use-cases.md
+      url: /microsoftteams/concepts/design/understand-use-cases.md
     - title: Design your app
       itemType: overview
-      url: /microsoftteams/platform/concepts/design/design-teams-app-overview.md
+      url: /microsoftteams/concepts/design/design-teams-app-overview.md
     - title: Extend your app with Microsoft Graph
       itemType: overview
       url: /graph/teams-concept-overview
     - title: Authenticate
       itemType: overview
-      url:  /microsoftteams/platform/concepts/authentication/authentication.md
+      url:  /microsoftteams/concepts/authentication/authentication.md
     - title: Deploy and publish your app
       itemType: overview
-      url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish.md 
+      url: /microsoftteams/concepts/deploy-and-publish/appsource/publish.md 
     - title: Low-code apps, bots, flows, and reports using Microsoft Power Platform
       itemType: overview
       url: /microsoftteams/platform/samples/teams-low-code-solutions/
