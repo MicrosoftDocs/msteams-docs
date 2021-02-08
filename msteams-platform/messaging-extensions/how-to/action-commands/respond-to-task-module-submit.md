@@ -95,7 +95,6 @@ The most common way to respond to the `composeExtension/submitAction` request is
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionSubmitActionAsync(
   ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
 {
-    dynamic Data = JObject.Parse(action.Data.ToString());
     var response = new MessagingExtensionActionResponse
     {
         ComposeExtension = new MessagingExtensionResult
@@ -104,13 +103,13 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
             Type = "result",
         },
     };
-    var card = new HeroCard
-    {
-        Title = Data["formField1"] as string,
-        Subtitle = Data["formField2"]  as string,
-        Text = Data["formField3"]  as string,
-    };
-
+    var createCardData = ((JObject)action.Data).ToObject<CreateCardData>();
+var card = new HeroCard
+{
+     Title = createCardData.Title,
+     Subtitle = createCardData.Subtitle,
+     Text = createCardData.Text,
+};
     var attachments = new List<MessagingExtensionAttachment>();
     attachments.Add(new MessagingExtensionAttachment
     {
@@ -118,11 +117,8 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
         ContentType = HeroCard.ContentType,
         Preview = card.ToAttachment(),
     });
-
     response.ComposeExtension.Attachments = attachments;
-
     return response;
-
 }
 ```
 
