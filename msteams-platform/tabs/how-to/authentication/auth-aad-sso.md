@@ -161,11 +161,15 @@ Once you've received the access token in the success callback you can decode the
     <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
 </p>
 
-## Sample code
+## Code sample
 
 Visit our sample application: [MSTeams PnP SSO Sample](https://github.com/pnp/teams-dev-samples/tree/master/samples/tab-sso)
 
 The README explains how to set up your development environment and how to configure your application in Azure AD. You can also find further information on how the sample is structured in the [app structure section](https://github.com/OfficeDev/msteams-tabs-sso-sample-nodejs#app-structure) to help familiarize yourself with the codebase.
+
+|**Sample name**|**Description**|**C#**|**TypeScript**|
+|---------------|---------------|------|--------------|
+| Tab SSO |Microsoft Teams sample app for tabs Azure AD SSO| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tabs-sso/nodejs)</br>[Teams Toolkit](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/visual-studio-code-tab-sso)|
 
 ## Known Limitations
 
