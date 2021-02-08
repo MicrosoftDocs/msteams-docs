@@ -37,7 +37,7 @@ To create apps in Together Mode, you can create scene only apps or extend your c
 
 The following workflow shows how the scene is built, the app is created, the app is uploaded, and the scene is immersed in the app:
 
-![Addingscenetoapp](../../../assets/images/apps-in-meetings/Scene-added-to-app.png)
+![Add scene to app](../../../assets/images/apps-in-meetings/scene-added-to-app.png)
 
 >[!NOTE]
 > Multiple scenes in a single app package appear as a flat list of scenes to users.
@@ -66,11 +66,11 @@ After setting-up dev.teams.microsoft.com, complete the following steps to build 
 
 2. Select **Participants** under **Layers** in the upper-right corner.
 
-3. Select the number of participants for this scene from the **Number of participants** box and select **Modify**. Once the scene is shipped, the avatar placements are replaced with actual participant video streams.
+3. Select the number of participants for this scene from the **Number of participants** box and select **Add**. Once the scene is shipped, the avatar placements are replaced with actual participant video streams.
 
 4. Add background images to the scene using **Add images**. The assets can also be dragged and dropped into the environment as displayed in the following image:
 
-    ![Dragging into the scene](../../../assets/images/apps-in-meetings/drag-and-drop-scene.png)
+    ![Drag into the scene](../../../assets/images/apps-in-meetings/drag-and-drop-scene.png)
 
 5. Select any participant image that you have placed in the scene.
 
@@ -80,7 +80,11 @@ After setting-up dev.teams.microsoft.com, complete the following steps to build 
 
 7. Select any participant image, select the **Assign Spot** check box, and choose **Meeting Organizer** and **Presenter** to assign that spot to the participant. Alternately, you can choose either **Meeting Organizer** or **Presenter** options for that participant.
 
-8. Select **Save** or select **Export the Scene** from the **Save** drop-down menu. If you select **Export the Scene**, a .zip file is downloaded.
+    ![Assign spot](../../../assets/images/apps-in-meetings/assign-spot.png)
+
+8. In the **Scene Name** box, enter a name for the scene.
+
+9. Select **Save** or select **Export the Scene** from the **Save** drop-down menu. If you select **Export the Scene**, a .zip file is downloaded.
 
 Now that you have built a scene using the Scene Design Studio, you can assemble a scene package to indicate the exact position of the seats.
 
@@ -96,7 +100,7 @@ You must have the ability to ship a scene package that includes the following:
 
 * **In scene configuration:** The JSON package assumes a single image with seat assignment. For example, in the following picture, the astronaut seat can be applied by default to the organizer through `participantRole` API, but the teacher can dynamically move this around using the class roster:
 
-    ![In-Scene configuration](../../../assets/images/apps-in-meetings/role-based-scene.png)
+    ![In scene configuration](../../../assets/images/apps-in-meetings/in-scene-configuration.png)
 
 * **Moving images:** You must be able to support scenes that are in motion to simulate moving objects. A brute force method of doing this is to support gif format in Together Mode. Advanced scene rendering is more like a movie being played.
 
@@ -124,17 +128,15 @@ An app package contains the scene package. App Studio simplifies app packaging.
 
 After you build a scene, complete the following steps:
 
-1. Save the scene.
+1. Go to **Apps** in App Studio.
 
-2. Go to **Apps** in App Studio.
+2. Create a new app and enter the necessary details.
 
-3. Create a new app and enter the necessary details.
+3. Go to **Scenes** under **Configuration** in **Apps**.
 
-4. Go to **Scenes** under **Configuration** in **Apps**.
+4. Select the scene you built and import the package.
 
-5. Select the scene you built and import the package.
-
-6. Sideload this package in Teams.
+5. Sideload this package in Teams.
 
 Now that you have created an app package and used the scene in Teams, you can activate the Together Mode to engage in scenes in the mode.
 
