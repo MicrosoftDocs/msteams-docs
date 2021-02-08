@@ -33,7 +33,7 @@ highlightedContent:
       url: /microsoftteams/platform/concepts/design/design-teams-app-overview
     - title: Extend your app with Microsoft Graph
       itemType: overview
-      url:  /graph/teams-concept-overview
+      url: /graph/teams-concept-overview/
     - title: Deploy and publish your app
       itemType: overview
       url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
