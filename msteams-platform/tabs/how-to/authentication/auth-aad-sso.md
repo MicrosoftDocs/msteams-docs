@@ -169,7 +169,7 @@ The README explains how to set up your development environment and how to config
 
 |**Sample name**|**Description**|**C#**|**TypeScript**|
 |---------------|---------------|------|--------------|
-| Tab SSO |Microsoft Teams sample app for tabs Azure AD SSO| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs)</br>[Teams Toolkit](../microsoftteams/platform/toolkit/visual-studio-code-tab-sso.md)|
+| Tab SSO |Microsoft Teams sample app for tabs Azure AD SSO| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs)</br>[Teams Toolkit](../../toolkit/visual-studio-code-tab-sso.md)|
 
 ## Known Limitations
 
