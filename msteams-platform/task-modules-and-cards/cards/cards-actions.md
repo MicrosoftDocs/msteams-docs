@@ -226,6 +226,14 @@ In addition to the actions mentioned above, you can modify the Adaptive Card `Ac
 > [!NOTE]
 > Adding `msteams` to data, with a Bot Framework action, does not work with an Adaptive Card task module.
 
+## Adaptive Cards and incoming webhooks
+
+> [!NOTE]
+>
+> ✔ All native Adaptive Card schema elements, except `Action.Submit`, are fully supported.
+>
+> ✔ The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), and [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
+
 ### Adaptive Cards with messageBack action
 
 To include a `messageBack` action with an Adaptive Card include the following details in the `msteams` object. Note that you can include additional hidden properties in the `data` object if needed.

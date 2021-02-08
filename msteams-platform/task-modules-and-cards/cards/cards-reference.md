@@ -1,10 +1,10 @@
 ---
-title: Cards Reference
-description: Describes all the cards and card actions available to bots in Teams
+title: Cards reference for apps
+description: Describes supported card frameworks, types, actions, and more in Microsoft Teams apps.
 keywords: bots cards reference
 ms.topic: reference
 ---
-# Cards reference
+# Cards reference for Microsoft Teams apps
 
 The cards listed in this section are supported in bots for Microsoft Teams. They are based on cards defined by the Bot Framework, but Teams does not support all Bot Framework cards and has added some of its own. Differences are called out in the references in this document.
 
@@ -28,9 +28,9 @@ This table shows the types of cards available to you:
 | [Adaptive card](#adaptive-card) | Highly customizable card that can contain any combination of text, speech, images, buttons and input fields. |
 | [Hero card](#hero-card) | Typically contains a single large image, one or more buttons, and a small amount of text. |
 | [List card](#list-card) | A scrolling list of items. |
-| [Office 365 connector card](#office-365-connector-card) | Flexible layout with multiple sections, fields, images and actions. |
+| [Office 365 Connector card](#office-365-connector-card) | Flexible layout with multiple sections, fields, images and actions. |
 | [Receipt card](#receipt-card) | Provides a receipt to the user. |
-| [Signin card](#signin-card) | Enables a bot to request that a user sign in. |
+| [Sign-in card](#signin-card) | Enables a bot to request that a user sign in. |
 | [Thumbnail card](#thumbnail-card) | Typically contains a single thumbnail image, some short text, and one or more buttons. |
 | [Card collections](#card-collections) | Used to return multiple items in a single response. |
 
@@ -59,9 +59,9 @@ See [Card Actions](~/task-modules-and-cards/cards/cards-actions.md) for more inf
 
 See [Card Formatting](~/task-modules-and-cards/cards/cards-format.md) for more information on text formatting in cards.
 
-## Adaptive card
+## Adaptive Cards
 
-An adaptive card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. See [Adaptive Cards v1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0).
+An Adaptive Card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. See [Adaptive Cards v1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0).
 
 ### Support for adaptive cards
 
@@ -531,13 +531,13 @@ Bot Framework reference:
 * [Receipt card Node](https://docs.microsoft.com/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
 * [Receipt card C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.receiptcard?view=botbuilder-dotnet-3.0&preserve-view=true)
 
-## Signin card
+## Sign-in card
 
-Signin card enables a bot to request a user to sign in. Supported in Teams in a slightly different form than is found in the Bot Framework. The signin card in Teams is similar to the signin card in the Bot Framework except that the signin card in Teams only supports two actions: `signin` and `openUrl`.
+A sign-in card enables a bot to request a user to sign in. The Teams sign-in card is similar to the Bot Framework sign-in card except that it only supports two actions: `signin` and `openUrl`.
 
-The *signin action* can be used from any card in Teams, not just the signin card. For more details on authentication, see [Microsoft Teams authentication flow for bots](~/bots/how-to/authentication/auth-flow-bot.md).
+The `signin` action can be used from any card in Teams, not just the sign-in card. For information on authentication, see [Teams authentication flow for bots](~/bots/how-to/authentication/auth-flow-bot.md).
 
-### Support for Signin cards
+### Support for sign-in cards
 
 | Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
