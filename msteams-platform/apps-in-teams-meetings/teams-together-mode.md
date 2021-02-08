@@ -8,17 +8,21 @@ ms.topic: conceptual
 
 Be together even when you are apart with the Microsoft Teams Together Mode.
 
-Teams Together Mode provides a simple, innovative, and user-friendly meeting environment. It enhances your virtual meeting experience.
-
-Together Mode digitally combines participants into a single virtual space instead of being shown separately in boxes. It creates your virtual image and places the image in a virtual environment where you can easily interact with your peers. This mode makes video meetings more viable as most users report less meeting fatigue.
-
-It is a change from the usual video conferencing method used to collaborate with a team. It makes meetings more engaging with the auditorium view.
-
-You can create apps in Together Mode or extend your current app to have scenes.
-
-To view how Together Mode works, see the following video:
+Teams Together Mode provides a simple, innovative, and user-friendly meeting environment. It digitally combines participants into a single virtual space instead of being shown separately in boxes. It creates your virtual image and places the image in a virtual environment where you can easily interact with your peers. It makes meetings more engaging in the auditorium view.
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
+
+As a developer, you can create scene only apps in Together Mode or extend your current app to have scenes for Together Mode. A scene is a virtual view of the auditorium or meeting venue where the attendees are placed and includes the seats of meeting attendees.
+
+>[!NOTE]
+> Scene only apps are recommended as the acquisition experience for scene only apps is more seamless.
+
+The following image gives an overview of adding a scene to an app:
+
+![Add scene to app](../assets/images/apps-in-meetings/scene-added-to-app.png)
+
+>[!NOTE]
+> Multiple scenes in a single app package appear as a flat list of scenes to users.
 
 This document covers prerequisites, steps to create or extend apps in Together Mode, build a scene using Microsoft Scene Design Studio, assemble a scene package, create an app package and use the scene in Teams, and activate Together Mode.
 
@@ -26,21 +30,9 @@ This document covers prerequisites, steps to create or extend apps in Together M
 
 The following are the prerequisites for using Together Mode:
 
-
-
-## Create or extend apps
-
-To create apps in Together Mode, you can create scene only apps or extend your current app to have scenes for Together Mode.
-
->[!NOTE]
-> It is recommended to have scene only apps as the acquisition experience for users is more seamless.
-
-The following workflow shows how the scene is built, the app is created, the app is uploaded, and the scene is immersed in the app:
-
-![Add scene to app](../assets/images/apps-in-meetings/scene-added-to-app.png)
-
->[!NOTE]
-> Multiple scenes in a single app package appear as a flat list of scenes to users.
+* As a developer you must have a basic understanding of what is a scene, what is a Scene Design Studio, and how to create apps in App Studio.
+* Prerequisite 2
+* Prerequisite 3
 
 ## Build a scene using Scene Design Studio
 
