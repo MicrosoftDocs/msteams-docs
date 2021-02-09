@@ -56,16 +56,16 @@ conceptualContent:
       links:
         - url: /microsoftteams/?view=msteams-client-js-latest
           itemType: concept
-          text: IT Admins
+          text: IT admins
         - url: /microsoftteams/microsoft-teams
           itemType: concept
           text: Developers
+        - url: /microsoftteams/platform/concepts/prepare-your-o365-tenant
+          itemType: concept
+          text: Microsoft 365 subscribers
         - url: /microsoftteams/support.microsoft.com/en-us/teams?ui=en-us&rs=en-us&ad=us
           itemType: concept
           text: End users
-        - url: /microsoftteams/platform/concepts/prepare-your-o365-tenant
-          itemType: concept
-          text: Microsoft 365 subscriber
 
    # Card
     - title: Explore
@@ -112,16 +112,19 @@ conceptualContent:
       links:
         - url:  /microsoftteams/platform/samples/integrating-web-apps
           itemType: deploy
-          text: Integrate web apps with Teams
+          text: Integrate web apps with Microsoft Teams
+        - url:  /microsoftteams/platform/resources/schema/manifest-schema
+          itemType: deploy
+          text: Integrate apps with Microsoft Teams
         - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
           itemType: deploy
-          text: Integrate your Power Virtual Agents bot with Teams
+          text: Integrate your Power Virtual Agents bot with Microsoft Teams
         - url: /microsoftteams/platform/tabs/how-to/tabs-in-sharepoint
           itemType: deploy
-          text: Integrate Teams and SharePoint 
+          text: Integrate Microsoft Teams and SharePoint 
         - url: /microsoftteams/platform/resources/moodleinstructions
           itemType: deploy
-          text: Integrate Teams and Moodle    
+          text: Integrate Microsoft Teams and Moodle    
         - url: /microsoftteams/platform/samples/app-templates
           itemType: deploy
           text: Teams app templates — production-ready applications
@@ -147,6 +150,9 @@ conceptualContent:
         - url: /microsoftteams/platform/feedback
           itemType: overview
           text: Microsoft Teams Developer Community and response
+        - url: /microsoftteams/platform/resources/teams-contributor-reference
+          itemType: overview
+          text: Contribute to Microsoft Teams documentation
 
 # tools section
 tools:
