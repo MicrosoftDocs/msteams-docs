@@ -136,4 +136,4 @@ If you change manifest information, first remove the app and then add the update
 
 ## Troubleshooting notes
 
-If the manifest fails to load, check that you have followed all the instructions in [Create the package](../../concepts/build-and-test/apps-package.md) and validated your manifest against the [schema](../../resources/schema/manifest-schema.md).
+If the manifest fails to load, check if you have followed all the instructions in [Create the package](../../concepts/build-and-test/apps-package.md) and validated your manifest against the [schema](../../resources/schema/manifest-schema.md).
