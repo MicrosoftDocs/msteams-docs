@@ -18,7 +18,7 @@ For development and AppSource, formerly Office Store, submission you must create
 
 To create an upload package, see [Create the package for your Microsoft Teams app](../build-and-test/apps-package.md).
 
-After you have created the package, upload it into a team. When the package is uploaded it is only available to all the users of that selected team.
+After you create the package, upload it into a team. The uploaded package is only available to the users of the selected team.
 
 ## Load your package into Teams
 
