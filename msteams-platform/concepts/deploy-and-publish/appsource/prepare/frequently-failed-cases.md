@@ -102,7 +102,7 @@ Teams apps must respond within a reasonable timeframe, which varies depending on
 * Apps must be fully responsive to a variety of screen sizes.
 * App must not include any direct references to in-app purchases, trial offers, offers for paid versions, or links to any online stores where users can purchase or acquire other content, apps, or add-ins from your Teams app on mobile OS (Android, iOS).
 * The iOS or Android version of the app must not show any UI or language or link to any other apps, add-ins, or websites that ask the user to pay.
-* The associated Privacy Policy and Terms of Use pages must also be free of any commerce UI or Store links.
+* The associated privacy policy and terms of use pages must also be free of any commerce UI or store links.
 * If your app contains tabs, they must follow the mobile design guidelines.
 * App should function on the following platforms:
     * iOS 9.0 and later
@@ -120,27 +120,23 @@ Teams apps must respond within a reasonable timeframe, which varies depending on
 
 Teams apps that depend on authentication with an external service to allow content sharing in channels must clearly state in their help documentation or similar resources how a user can disconnect or unshare any content if the same feature is supported on the external service. The ability to unshare content does not have to be present in your app, but the process should be clearly documented in a location that's accessible from the app.
 
-## 4.0 Design
-
-Your app can fail validation for not following [Teams app design guidelines](~/concepts/design/design-teams-app-overview.md) or issues that impede the Teams experience.
-
-### 4.1 App package
+## 4.0 App package and store listing
 
 App packages must be correctly formatted and include all required information and components.
 
-#### 4.1.1 App manifest
+### 4.1 App manifest
 
 * The app manifest must conform to the [latest manifest schema](~/resources/schema/manifest-schema.md).
 * If your app includes a bot or messaging extension, the manifest must be consistent with Bot Framework metadata, including bot name, logo, privacy policy link, and terms of service link.
 * If your app uses Azure Active Directory (AD) for authentication, include the Azure AD ID in the manifest ([see how](~/resources/schema/manifest-schema.md#webapplicationinfo)).
 
-#### 4.1.2 App icons
+### 4.2 App icons
 
 * Your app package must include two PNG versions of your app icon: a color icon and an outline icon.
 * A correctly sized and formatted icons must be specified in the app package or manifest. The icons in the package or manifest must match the icon submitted with the offer metadata.
 * For detailed information, refer to the [icons documentation](~/concepts/build-and-test/apps-package.md#app-icons).
 
-#### 4.1.3 App description
+### 4.3 App description
 
 The app descriptions in your manifest and store should be same and follow these guidelines:
 
@@ -151,15 +147,15 @@ The app descriptions in your manifest and store should be same and follow these 
 * Follow the [long description guidelines](~/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md#long-description).
 * Clearly describe any limitations, conditions, or exceptions to the functionality, features, and deliverables described in the listing and related materials before the customer acquires your offer. The capabilities you declare must relate to the core functions and description of your offer.
 
-#### 4.1.4 Localization
+### 4.4 Localization
 
 Your package must include a localization file that includes language translations that display based on the Teams language settings. The file must conform to the [Teams localization schema](~/concepts/build-and-test/apps-localization.md).
 
-### 4.2 Tabs
+## 5.0 Tab design
 
 See comprehensive [tab design guidelines](~/tabs/design/tabs.md).
 
-#### 4.2.1 Setup
+### 5.1 Setup
 
 Tab set up must not dead-end the new user. A way forward message should be provided to complete the workflow.
 
@@ -167,13 +163,13 @@ Authentication should happen during tab setup and not after.
 
 Tabs must have a Help tab with instructions on how to do things such as sign up, configure, and use your app.
 
-#### 4.2.2 Views
+### 5.2 Views
 
 * The available tab sign-in screen area use must not use large logos or display an entire webpage.
 * The tab view can be simplified by breaking them into multiple tabs to reduce the complexity.
 * The personal app should not have a duplicate header. Remove the logo from the iframe since the personal app framework already displays the app icon and app name.
 
-#### 4.2.3 Navigation
+### 5.3 Navigation
 
 * Tabs must not have more than three levels of navigation.
 * The secondary and tertiary pages in a tab must be opened in a level two and level three view in the main tab area that is navigated via breadcrumbs or a left nav. You can also include these components to aid tab navigation:
@@ -183,7 +179,7 @@ Tabs must have a Help tab with instructions on how to do things such as sign up,
 * Tab should not have horizontal scroll.
 * Deep links in tabs must not link to an external webpage but instead link somewhere within Teams (for example, task modules or other tabs).
 
-#### 4.2.4 Usability
+### 5.4 Usability
 
 * Users must be able to undo their last action in the app.
 * Personal apps may aggregate content from team or group chat scoped instances of that app in a single view.
@@ -192,17 +188,17 @@ Tabs must have a Help tab with instructions on how to do things such as sign up,
 * Please include a Settings tab in the app header.
 * Tabs can use Teams interaction behaviors (in-page navigation, position and use of dialogs, information hierarchies, etc.) whenever possible.
 
-### 4.3 Bots
+## 6.0 Bot design
 
 See comprehensive [bot design guidelines](~/bots/design/bots.md).
 
-#### 4.3.1 Bot commands
+### 6.1 Bot commands
 
 * All commands that your bot supports must work correctly, including the Hi, Hello, Help command. 
 * Supported bot commands must be listed in the app manifest.
 * Use command lists. Analyzing user input or predicting user intent is hard. Instead of letting users guess what your bot can do, provide a list of commands your bot understands.
 
-#### 4.3.2 Bot welcome messages
+### 6.2 Bot welcome messages
 
 Bots should almost always send first-run welcome messages. For the best experience, the message should include the value proposition of your bot, how to configure the bot, and briefly describe all supported bot commands. You can display the messaging using an Adaptive Card with buttons for better readability. [How to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md).
 
@@ -210,18 +206,18 @@ Channel bot welcome messages are optional during first run, especially if bot is
 
 Notification-only bots must send a welcome message that includes a message conveying, "I am a notification-only bot and will not be able to reply to your chats".
 
-#### 4.3.3 Bot message spamming
+### 6.3 Bot message spamming
 
 Bots must not spam users by sending multiple messages in short succession.
 
 * **Bot channel messages**: Don't spam users by creating separate new chat posts. Create a single thread post with replies in the same thread.
 * **Bot personal messages**: Don't send multiple messages. Send one message with complete information. Repeating the same welcome message over regular intervals is not allowed and is considered spamming.
 
-#### 4.3.4 Bot notifications
+### 6.4 Bot notifications
 
 Bot notifications must include content relevant for the scope you define for the bot (`team`, `groupchat`, or `personal`).
 
-#### 4.3.4 Bots and Adaptive Cards
+### 6.5 Bots and Adaptive Cards
 
 Adaptive Cards are a common way to display bot messages. Your cards must be lightweight and include only 1-3 actions. If you need to display more content, consider using a task module or tab.
 
@@ -230,60 +226,60 @@ See the following resources for more information:
 * [Designing Adaptive Cards](~/task-modules-and-cards/cards/design-effective-cards.md)
 * [Cards reference](~/task-modules-and-cards/cards/cards-reference.md#types-of-cards)
 
-### 4.4 Messaging extensions
+## 7.0 Messaging extension design
 
 See comprehensive [messaging extension design guidelines](~/messaging-extensions/design/messaging-extension-design.md).
 
-#### 4.4.1 Action commands
+### 7.1 Action commands
 
 Action-based messaging extensions should do the following:
 
 * Allow users to trigger actions on a message without specifying intermediate steps, such as signing in.
 * Pass the message context to the next work state.
 
-#### 4.4.2 Preview links (link unfurling)
+### 7.2 Preview links (link unfurling)
 
 Messaging extensions should preview recognized links in the Teams compose box. Do not add domains that are outside your control (either absolute URLs or wildcards). For example, `yourapp.onmicrosoft.com` is valid but `*.onmicrosoft.com` is not valid. Top-level domains also are prohibited (for example, `*.com` or `*.org`).
 
 See how to [implement link unfurling](~/messaging-extensions/how-to/link-unfurling.md).
 
-#### 4.4.3 Search commands
+### 7.3 Search commands
 
 Search-based messaging extensions must provide text that helps users effectively search.
 
 For more information, see the [design best practices for search commands](~/messaging-extensions/design/messaging-extension-design.md#searches).
 
-### 4.5 Task modules
+## 8.0 Task module design
 
 A task module must include an icon and short name of the app in which it is associated.
 
 See comprehensive [task module design guidelines](~/task-modules-and-cards/task-modules/design-teams-task-modules.md).
 
-### 4.6 Meeting extensions
+## 9.0 Meeting extension design
 
 See comprehensive [meeting extension design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
 
-#### 4.6.1 Pre- and post-meeting experience
+### 9.1 Pre- and post-meeting experience
 
 * Tabs must adhere to general [tab design guidelines](~/tabs/design/tabs.md).
 * Tabs must not have horizontal scrolling.
 * Tabs should have an organized layout when displaying multiple items (for instance, more than 10 polls or surveys). [See an example layout](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#after-a-meeting).
 * Your app must notify users when the results of a survey or poll are exported by stating, "Results successfully downloaded".
 
-#### 4.6.3 In-meeting experience
+### 9.2 In-meeting experience
 
 * Apps must [only use a dark theme](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#theming) during meetings.
 * A tooltip should display the app name when hovering over the app icon during meetings.
 * Messaging extensions must function the same during meetings as they do outside meetings.
 
-#### 4.6.4 In-meeting tabs
+### 9.3 In-meeting tabs
 
 * Must be responsive and adapt within the provided space. Make sure to maintain padding and component sizes.
 * Must have a back button if there is more than one layer of navigation.
 * Must not include more than one dismiss or close button. This may confuse users since there's already a built-in header button in the header to dismiss the tab.
 * Must not have horizontal scrolling.
 
-#### 4.6.5 In-meeting dialogs
+### 9.4 In-meeting dialogs
 
 * Should be used sparingly and for scenarios that are light and task-oriented.
 * Must display content in a single column and not have multiple navigation levels.
@@ -291,28 +287,28 @@ See comprehensive [meeting extension design guidelines](~/apps-in-teams-meetings
 * Should align with the center of the meeting stage.
 * Should be dismissed once a user selects a button or performs an action.
 
-### 4.7 Notifications
+## 10.0 Notification design
 
 Follow these guidelines if your app uses the [activity feed APIs provided by Microsoft Graph](https://docs.microsoft.com/graph/teams-send-activityfeednotifications).
 
-#### 4.7.1 General
+### 10.1 General
 
 * All the notification triggers specified in your app manifest should get a notification in the app.
 * The notifications must be localized as per the supported languages declared in the app manifest.
 * A notification must load within 5 seconds of a user action.
 
-#### 4.7.2 Avatars
+### 10.2 Avatars
 
 * The notification avatar should match the app icon provided in the manifest.
 * Notifications triggered by an app user should contain the avatar of the user who initiated it.
 
-#### 4.7.3 Spamming
+### 10.3 Spamming
 
 * Apps must not send more than 10 notifications per minute to an individual user.
 * Bots and the activity feed should not trigger duplicate notifications.
 * Notifications must provide some value to users and not be used for trivial or irrelevant events.
 
-#### 4.7.4 Navigation and layout
+### 10.4 Navigation and layout
 
 * The right pane experience in the feed must be self-contained and not break the feed experience.
 * On click, user must be directed to the relevant content within the Teams app and should not be taken out of Teams experience.

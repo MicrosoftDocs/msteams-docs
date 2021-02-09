@@ -25,7 +25,7 @@ Once you have completed all of the above requirements, submit your package to Ap
 
 ## Teams App Validation Tool
 
-The app validation tool consists of an [app validator](#teams-app-validator) and a [preliminary checklist](#preliminary-checklist). The tool replicates the same test cases used by [AppSource](/office/dev/store/submit-to-appsource-via-partner-center) to evaluate your app submission. Therefore,  it's crucial to pass all the test cases prior to submitting your solution to AppSource for approval.The tool can be found in several areas within the Teams platform:
+The app validation tool consists of an [app validator](#teams-app-validator) and a [preliminary checklist](#preliminary-checklist). The tool replicates the same test cases used by [AppSource](/office/dev/store/submit-to-appsource-via-partner-center) to evaluate your app submission. Therefore,  it's crucial to pass all the test cases prior to submitting your solution to AppSource for approval. The tool can be found in several areas within the Teams platform:
 
 > [!div class="checklist"]
 >
@@ -44,28 +44,6 @@ The **Validate** page allows you to check your app package before submission to 
 For test scenarios that are difficult to automate, the preliminary checklist surfaces seven of the most commonly failed test cases.
 
 ![Preliminary checklist](../../../../assets/images/validation-tool/preliminary-checklist.png)
-
-## Privacy policy, terms of use and support URLs
-
-### Privacy policy
-
-Privacy policy guidelines:
-
-> [!div class="checklist"]
->
-> * The privacy policy can be specific to your app and/or an overall policy for all of your services.
-> * If you use a generic privacy policy, it must reference "services", "applications", and "platforms" to include your Teams app as well as your website.
-> * It must include how you handle user data storage, user data retention, deletion, and security controls.
-> * It must include your contact information.
-> * It should not contain broken links, beta URLs, or staging URLs.
-
-### Terms of use
-
-Your terms of use statement should be specific and applicable to your app and/or add-in offering.
-
-### Support URLs
-
-Your support URLs should not require authentication or login credential to contact you for any issues with your app.
 
 ## Test notes for validation
 
