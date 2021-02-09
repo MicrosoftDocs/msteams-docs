@@ -121,7 +121,7 @@ conceptualContent:
           itemType: overview
           text: Microsoft Teams community calls
     # Card
-    - title: Community Help
+    - title: Community help
       links:
         - url: /microsoftteams/platform/feedback
           itemType: overview
