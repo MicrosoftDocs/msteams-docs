@@ -26,7 +26,7 @@ highlightedContent:
       itemType: whats-new
       url: /microsoftteams/platform/whats-new
     - title: Plan your app
-      itemType: concept
+      itemType: overview
       url: /microsoftteams/platform/concepts/design/understand-use-cases
     - title: Build your app 
       itemType: learn
@@ -35,7 +35,7 @@ highlightedContent:
       itemType: overview
       url: /microsoftteams/platform/concepts/design/design-teams-app-overview
     - title: Enhance your app with Microsoft Graph
-      itemType: overview
+      itemType: concept
       url:  /graph/teams-concept-overview
     - title: Deploy and publish your app
       itemType: deploy
