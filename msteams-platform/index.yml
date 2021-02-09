@@ -56,14 +56,14 @@ conceptualContent:
       links:
         - url: /microsoftteams/?view=msteams-client-js-latest
           itemType: concept
-          text: IT Pro
+          text: IT Professionals
         - url: /microsoftteams/microsoft-teams
           itemType: concept
           text: Developers
         - url: /microsoftteams/platform/concepts/prepare-your-o365-tenant
           itemType: concept
           text: Microsoft 365 subscribers
-        - url: /microsoftteams/support.microsoft.com/en-us/teams?ui=en-us&rs=en-us&ad=us
+        - url: /microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant
           itemType: concept
           text: End users
 
