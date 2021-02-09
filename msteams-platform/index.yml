@@ -50,6 +50,20 @@ conceptualContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
    title: Guides and Resources
    items:
+
+  # Card
+    - title: Audience
+      links:
+        - url: /microsoftteams/?view=msteams-client-js-latest
+          itemType: concept
+          text: IT Admins
+        - url: /microsoftteams/microsoft-teams
+          itemType: concept
+          text: Developers
+        - url: /microsoftteams/support.microsoft.com/en-us/teams?ui=en-us&rs=en-us&ad=us
+          itemType: concept
+          text: End users
+
    # Card
     - title: Explore
       links:
