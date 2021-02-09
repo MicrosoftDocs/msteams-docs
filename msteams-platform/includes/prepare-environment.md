@@ -1,3 +1,3 @@
 ## Prepare your development environment
 
-The first thing you'll need to do is prepare your development environment. You'll need to make sure custom app uploading is enabled for the Office 365 organization you want to build your app in. If you need a dedicated development tenant, you can sign up for the [Office 365 developer program](https://developer.microsoft.com/office/dev-program). For additional information see [Setup your development environment](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+The first thing to do is to prepare your development environment. Make sure custom app uploading is enabled for the Office 365 organization where you want to build your app. If you need a dedicated development tenant, you can sign up for the [Office 365 developer program](https://developer.microsoft.com/office/dev-program). For more information, see [setup your development environment](~/concepts/build-and-test/prepare-your-o365-tenant.md).
