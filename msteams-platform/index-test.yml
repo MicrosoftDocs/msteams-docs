@@ -55,7 +55,7 @@ conceptualContent:
       links:
         - url: /microsoftteams/platform/concepts/building-an-app
           itemType: concept
-          text: Build a Microsoft Teams app
+          text: Microsoft Teams app development overview
         - url: /microsoftteams/platform/concepts/extensibility-points
           itemType: concept
           text: Capability points in Microsoft Teams
