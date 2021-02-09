@@ -146,8 +146,8 @@ media.getMedia((error: microsoftTeams.SdkError, blob: Blob) => {
 **Calling `viewImages` API by ID returned by `selectMedia` API**:
 
 ```javascript
-view images by id:
-    assumption: attachmentArray = select Media API Outputlet uriList = [];
+//view images by id:
+//    assumption: attachmentArray = select Media API Outputlet uriList = [];
 if (attachmentArray && attachmentArray.length > 0) {
     for (let i = 0; i < attachmentArray.length; i++) {
         let file = attachmentArray[i];
@@ -180,7 +180,7 @@ if (uriList.length > 0) {
 **Calling `viewImages` API by URL**:
 
 ```javascript
-View Images by URL:
+ // View Images by URL:
     // Assumption 2 urls, url1 and url2let uriList = [];
     if (URL1 != null && URL1.length > 0) {
         let imageUri = {
