@@ -129,7 +129,7 @@ The `defaultInstallScope` property supports values, such as personal, team, grou
 
 To remove your app, select the delete icon next to the app name in the View Teams bots list.
 
-If you change manifest information, you must first remove the app and then add the updated package per [Load your package into a team](#load-your-package-into-teams). Code changes on your service do not require you to re-upload your manifest, unless those changes require manifest updates, such as changes to the URL or the Microsoft app ID for its bot.
+If you change manifest information, first remove the app and then add the updated package, see [Load your package into a team](#load-your-package-into-teams). Code changes on your service do not require you to upload your manifest again. However, if the code changes require manifest updates, such as changes to the URL or the Microsoft app ID for its bot, you must upload the manifest again.
 
 > [!NOTE]
 > You cannot remove a bot from a personal context entirely. If the bot is removed and added again, additional communication with the bot appends to the previous conversation.
