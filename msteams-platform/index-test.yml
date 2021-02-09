@@ -142,7 +142,7 @@ tools:
       imageSrc: /media/logos/logo_vs-ide.svg
       url: /microsoftteams/platform/toolkit/visual-studio-overview
     # Card
-    - title: JavaScript SDK for Tabs
+    - title: JavaScript client SDK for tabs and other hosted experiences
       # imageSrc should be square in ratio with no whitespace
       imageSrc: ./assets/icons/logo_js.png
       url: /javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest
