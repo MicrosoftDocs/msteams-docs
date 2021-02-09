@@ -67,21 +67,24 @@ conceptualContent:
    # Card
     - title: Explore
       links:
-        - url: /microsoftteams/platform/concepts/building-an-app
-          itemType: concept
-          text: Microsoft Teams app development overview
         - url: /microsoftteams/platform/concepts/capabilities-overview
           itemType: concept
           text: Teams app capabilities
-        - url: /microsoftteams/platform/concepts/design/understand-use-cases
+        - url: /microsoftteams/platform/concepts/design/map-use-cases
           itemType: concept
-          text: Understand your Teams app use cases
-        - url:  /microsoftteams/platform/samplesintegrating-web-apps
+          text: Map use cases to Microsoft Teams capabilities
+        - url:  /microsoftteams/platform/samples/integrating-web-apps
           itemType: concept
           text: Integrate web apps with Teams
-        - url:  /microsoftteams/platform/whats-new 
-          itemType: whats-new
-          text: What's new
+        - url: /microsoftteams/platform/tutorials/get-started-nodejs-app-studio
+          itemType: get-started
+          text: Build a Teams app using JavaScript/Node.js and App Studio
+        - url: /microsoftteams/platform/tutorials/get-started-dotnet-app-studio
+          itemType: get-started
+          text: Build a Teams app using C#/.NET and App Studio
+        - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
+          itemType: deploy
+          text: Integrate your Power Virtual Agents bot with Teams
       
     # Card
     - title: Learn
