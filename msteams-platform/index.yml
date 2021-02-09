@@ -119,7 +119,7 @@ conceptualContent:
         - url: /microsoftteams/platform/tabs/how-to/tabs-in-sharepoint
           itemType: deploy
           text: Integrate Teams and SharePoint 
-          - url: /microsoftteams/platform/resources/moodleinstructions
+        - url: /microsoftteams/platform/resources/moodleinstructions
           itemType: deploy
           text: Integrate Teams and Moodle    
         - url: /microsoftteams/platform/samples/app-templates
