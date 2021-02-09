@@ -64,7 +64,7 @@ conceptualContent:
           text: Understand your Teams app use cases
         - url:  /microsoftteams/platform/samplesintegrating-web-apps
           itemType: concept
-          text: Map use cases to Microsoft Teams capabilities
+          text: Integrate web apps with Teams
         - url:  /microsoftteams/platform/whats-new 
           itemType: whats-new
           text: What's new
