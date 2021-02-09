@@ -163,7 +163,7 @@ tools:
       imageSrc: ./assets/icons/AppStudioIcon.png
       url: /microsoftteams/platform/concepts/build-and-test/app-studio-overview
     # Card
-    - title: Yeoman Generator for Microsoft Teams
+    - title: Yeoman generator for Microsoft Teams
       imageSrc: ./assets/icons/Yeoman.png
       url: https://github.com/OfficeDev/generator-teams 
 # additionalContent (optional)
