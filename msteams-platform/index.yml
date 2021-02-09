@@ -29,7 +29,7 @@ highlightedContent:
       itemType: overview
       url: /microsoftteams/platform/concepts/design/understand-use-cases
     - title: Build your app 
-      itemType: learn
+      itemType: how-to-guide
       url: /microsoftteams/platform/overview
     - title: Design your app
       itemType: overview
@@ -71,19 +71,19 @@ conceptualContent:
     - title: Explore
       links:
         - url: /microsoftteams/platform/concepts/capabilities-overview
-          itemType: concept
+          itemType: overview
           text: Teams app capabilities
         - url: /microsoftteams/platform/concepts/design/map-use-cases
-          itemType: concept
+          itemType: overview
           text: Map use cases to Microsoft Teams capabilities
         - url: /microsoftteams/platform/tutorials/get-started-nodejs-app-studio
-          itemType: get-started
+          itemType: how-to-guide
           text: Build a Teams app using JavaScript/Node.js and App Studio
         - url: /microsoftteams/platform/tutorials/get-started-dotnet-app-studio
-          itemType: get-started
+          itemType: how-to-guide
           text: Build a Teams app using C#/.NET and App Studio
         - url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
-          itemType: overview
+          itemType: how-to-guide
           text: Build low-code apps, bots, and flows with Microsoft Power Platform
       
     # Card
@@ -91,45 +91,45 @@ conceptualContent:
       links:
         - url: /learn/modules/intro-microsoft-teams-apps
           itemType: learn
-          text: Build apps for Microsoft Teams — introduction
+          text: Build apps for Microsoft Teams
         - url: /learn/modules/embedded-web-experiences
           itemType: learn
-          text: Tabs — create embedded web experiences 
+          text: Create embedded web experiences with tabs
         - url:  /learn/modules/msteams-conversation-bots/
           itemType: learn
-          text: Bots — create conversational interactions
+          text: Create conversational interactions with bots
         - url: /learn/modules/msteams-messaging-extensions/
           itemType: learn
-          text: Messaging extensions — create task-oriented interactions 
+          text: Create task-oriented interactions with messaging extensions
         - url: /learn/modules/msteams-task-modules/
           itemType: learn
-          text: Task modules — collect input and gather information
+          text: Collect input and gather information with task modules
         - url: /learn/modules/msteams-webhooks-connectors/
           itemType: learn
-          text: Webhooks and Office 365 connectors — connect web services to channels and teams
+          text: Connect web services to channels and teams with webhooks and Office 365 connectors
     # Card
     - title: Integrate
       links:
         - url:  /microsoftteams/platform/samples/integrating-web-apps
-          itemType: deploy
+          itemType: reference
           text: Integrate web apps with Microsoft Teams
         - url:  /microsoftteams/platform/resources/schema/manifest-schema
-          itemType: deploy
+          itemType: reference
           text: Integrate apps with Microsoft Teams
         - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
-          itemType: deploy
+          itemType: reference
           text: Integrate your Power Virtual Agents bot with Microsoft Teams
         - url: /microsoftteams/platform/tabs/how-to/tabs-in-sharepoint
-          itemType: deploy
+          itemType: reference
           text: Integrate Microsoft Teams and SharePoint 
         - url: /microsoftteams/platform/resources/moodleinstructions
-          itemType: deploy
+          itemType: reference
           text: Integrate Microsoft Teams and Moodle    
         - url: /microsoftteams/platform/samples/app-templates
-          itemType: deploy
+          itemType: reference
           text: Teams app templates — production-ready applications
         - url:  /microsoftteams/platform/samples/shifts-wfm-connectors
-          itemType: deploy
+          itemType: reference
           text: Teams shifts connectors - production-ready integrations
 
     # Card
