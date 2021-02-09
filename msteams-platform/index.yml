@@ -116,18 +116,19 @@ conceptualContent:
         - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
           itemType: deploy
           text: Integrate your Power Virtual Agents bot with Teams
+        - url: /microsoftteams/platform/tabs/how-to/tabs-in-sharepoint
+          itemType: deploy
+          text: Integrate Teams and SharePoint 
+          - url: /microsoftteams/platform/resources/moodleinstructions
+          itemType: deploy
+          text: Integrate Teams and Moodle    
         - url: /microsoftteams/platform/samples/app-templates
           itemType: deploy
           text: Teams app templates — production-ready applications
         - url:  /microsoftteams/platform/samples/shifts-wfm-connectors
           itemType: deploy
           text: Teams shifts connectors - production-ready integrations
-        - url: /microsoftteams/platform/tabs/how-to/tabs-in-sharepoint
-          itemType: deploy
-          text: Integrate Teams and SharePoint 
-        - url: /microsoftteams/platform/resources/moodleinstructions
-          itemType: deploy
-          text: Integrate Teams and Moodle    
+
     # Card
     - title: Connect
       links:
@@ -137,6 +138,9 @@ conceptualContent:
         - url: https://aka.ms/microsoftteamscommunitycall
           itemType: overview
           text: Microsoft Teams community calls
+        - url: https://docs.microsoft.com/en-us/teamblog/
+          itemType: whats-new
+          text: Announcements
     # Card
     - title: Community help
       links:
