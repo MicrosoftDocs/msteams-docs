@@ -63,6 +63,9 @@ conceptualContent:
         - url: /microsoftteams/support.microsoft.com/en-us/teams?ui=en-us&rs=en-us&ad=us
           itemType: concept
           text: End users
+        - url: /microsoftteams/platform/concepts/prepare-your-o365-tenant
+          itemType: concept
+          text: Microsoft 365 subscriber
 
    # Card
     - title: Explore
@@ -73,18 +76,15 @@ conceptualContent:
         - url: /microsoftteams/platform/concepts/design/map-use-cases
           itemType: concept
           text: Map use cases to Microsoft Teams capabilities
-        - url:  /microsoftteams/platform/samples/integrating-web-apps
-          itemType: concept
-          text: Integrate web apps with Teams
         - url: /microsoftteams/platform/tutorials/get-started-nodejs-app-studio
           itemType: get-started
           text: Build a Teams app using JavaScript/Node.js and App Studio
         - url: /microsoftteams/platform/tutorials/get-started-dotnet-app-studio
           itemType: get-started
           text: Build a Teams app using C#/.NET and App Studio
-        - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
-          itemType: deploy
-          text: Integrate your Power Virtual Agents bot with Teams
+        - url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
+          itemType: overview
+          text: Build low-code apps, bots, and flows with Microsoft Power Platform
       
     # Card
     - title: Learn
@@ -108,26 +108,26 @@ conceptualContent:
           itemType: learn
           text: Webhooks and Office 365 connectors — connect web services to channels and teams
     # Card
-    - title: Develop
+    - title: Integrate
       links:
-        - url: /microsoftteams/platform/tutorials/get-started-nodejs-app-studio
-          itemType: get-started
-          text: Build a Teams app using JavaScript/Node.js and App Studio
-        - url: /microsoftteams/platform/tutorials/get-started-dotnet-app-studio
-          itemType: get-started
-          text: Build a Teams app using C#/.NET and App Studio
-     # Card
-    - title: Deploy
-      links:
+        - url:  /microsoftteams/platform/samples/integrating-web-apps
+          itemType: deploy
+          text: Integrate web apps with Teams
+        - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
+          itemType: deploy
+          text: Integrate your Power Virtual Agents bot with Teams
         - url: /microsoftteams/platform/samples/app-templates
           itemType: deploy
           text: Teams app templates — production-ready applications
         - url:  /microsoftteams/platform/samples/shifts-wfm-connectors
           itemType: deploy
           text: Teams shifts connectors - production-ready integrations
-        - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
+        - url: /microsoftteams/platform/tabs/how-to/tabs-in-sharepoint
           itemType: deploy
-          text: Integrate your Power Virtual Agents bot with Teams     
+          text: Integrate Teams and SharePoint 
+        - url: /microsoftteams/platform/resources/moodleinstructions
+          itemType: deploy
+          text: Integrate Teams and Moodle    
     # Card
     - title: Connect
       links:
