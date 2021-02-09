@@ -19,15 +19,18 @@ metadata:
 highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
    items: 
-    - title: What is Teams?
-      itemType: video
-      url: https://www.microsoft.com/en-us/videoplayer/embed/RE4Jqbg
     - title: New to Teams development? 🚀Start here! 
       itemType: get-started
       url: /microsoftteams/platform/overview
+    - title: What's new?
+      itemType: whats-new
+      url: /microsoftteams/platform/whats-new
     - title: Plan your app
-      itemType: overview
+      itemType: concept
       url: /microsoftteams/platform/concepts/design/understand-use-cases
+    - title: Build your app 
+      itemType: learn
+      url: /microsoftteams/platform/overview
     - title: Design your app
       itemType: overview
       url: /microsoftteams/platform/concepts/design/design-teams-app-overview
@@ -35,13 +38,10 @@ highlightedContent:
       itemType: overview
       url:  /graph/teams-concept-overview
     - title: Deploy and publish your app
-      itemType: overview
+      itemType: deploy
       url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
-    - title: Create low-code apps, bots, and flows with Microsoft Power Platform
-      itemType: overview
-      url: /microsoftteams/platform/samples/teams-low-code-solutions
     - title: Tutorials and code samples
-      itemType: overview
+      itemType: sample
       url:  /microsoftteams/platform/tutorials/code-samples
 
    
