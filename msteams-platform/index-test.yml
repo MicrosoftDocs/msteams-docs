@@ -58,7 +58,7 @@ conceptualContent:
           text: Microsoft Teams app development overview
         - url: /microsoftteams/platform/concepts/capabilities-overview
           itemType: concept
-          text: Capability points in Microsoft Teams
+          text: Teams app capabilities
         - url: /microsoftteams/platform/concepts/design/understand-use-cases
           itemType: concept
           text: Understand Microsoft Teams use cases
