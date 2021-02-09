@@ -110,7 +110,7 @@ An uploaded app with a messaging extension automatically appears in the **More o
 
 ![Messaging extensions](../../assets/images/compose-extensions/cesampleapp.png)
 
-## Add an app
+## Add a default install scope and group capability
 
 Although installing an app in the personal scope works for most apps, some of the apps in Teams Store support both personal and team scopes.
 Some of these apps are intended to work in a team or a group chat, with personal app experience being secondary.
