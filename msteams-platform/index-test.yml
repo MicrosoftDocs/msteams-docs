@@ -61,7 +61,7 @@ conceptualContent:
           text: Teams app capabilities
         - url: /microsoftteams/platform/concepts/design/understand-use-cases
           itemType: concept
-          text: Understand Microsoft Teams use cases
+          text: Understand your Teams app use cases
         - url:  /microsoftteams/platform/concepts/design/map-use-cases
           itemType: concept
           text: Map use cases to Microsoft Teams capabilities
