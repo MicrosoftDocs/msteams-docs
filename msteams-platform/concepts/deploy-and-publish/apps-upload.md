@@ -56,7 +56,7 @@ The uploaded package must be available for use in the team or conversation speci
    > [!NOTE]
    > You must be the team owner or the owner must allow users to add the appropriate app types for this functionality to appear.
 
-2. Select the Apps tab and choose **Upload a custom app** on the lower right.
+2. Select the **Apps** tab and choose **Upload a custom app** on the lower right.
 
    ![Upload entry point](../../assets/images/UploadACustomApp.png)
 
