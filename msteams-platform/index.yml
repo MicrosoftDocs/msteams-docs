@@ -82,7 +82,7 @@ conceptualContent:
         - url: /microsoftteams/platform/tutorials/get-started-dotnet-app-studio
           itemType: how-to-guide
           text: Build a Teams app using C#/.NET and App Studio
-        - url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
+        - url: /microsoftteams/platform/samples/teams-low-code-solutions
           itemType: how-to-guide
           text: Build low-code apps, bots, and flows with Microsoft Power Platform
       
