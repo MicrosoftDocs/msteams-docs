@@ -28,12 +28,12 @@ highlightedContent:
     - title: Plan your app
       itemType: overview
       url: /microsoftteams/platform/concepts/design/understand-use-cases
-    - title: Build your app 
-      itemType: how-to-guide
-      url: /microsoftteams/platform/overview
     - title: Design your app
       itemType: overview
       url: /microsoftteams/platform/concepts/design/design-teams-app-overview
+    - title: Build your app 
+      itemType: how-to-guide
+      url: /microsoftteams/platform/overview
     - title: Enhance your app with Microsoft Graph
       itemType: concept
       url:  /graph/teams-concept-overview
@@ -56,7 +56,7 @@ conceptualContent:
       links:
         - url: /microsoftteams/?view=msteams-client-js-latest
           itemType: concept
-          text: IT admins
+          text: IT Pro
         - url: /microsoftteams/microsoft-teams
           itemType: concept
           text: Developers
