@@ -130,7 +130,7 @@ conceptualContent:
           text: Teams app templates — production-ready applications
         - url:  /microsoftteams/platform/samples/shifts-wfm-connectors
           itemType: reference
-          text: Teams shifts connectors - production-ready integrations
+          text: Teams shifts connectors — production-ready integrations
 
     # Card
     - title: Connect
