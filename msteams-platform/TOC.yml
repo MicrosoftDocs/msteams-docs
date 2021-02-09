@@ -372,7 +372,7 @@
     href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json
   - name: Publish to the Teams store (AppSource)
     items:
-    - name: Understand the store submission process
+    - name: Overview
       href: concepts/deploy-and-publish/appsource/publish.md
     - name: Store validation guidelines
       href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
