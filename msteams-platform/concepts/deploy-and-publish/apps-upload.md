@@ -51,7 +51,7 @@ The uploaded package must be available for use in the team or conversation speci
 
 ## Upload your package into a team using the Apps tab
 
-1. In the target team, choose **More options** (**&#8943;**) and choose **Manage team**.
+1. In the target team, choose **More options** (**&#8943;**) and select **Manage team**.
 
    > [!NOTE]
    > You must be the team owner or the owner must allow users to add the appropriate app types for this functionality to appear.
