@@ -22,7 +22,7 @@ highlightedContent:
     - title: What is Teams?
       itemType: video
       url: https://www.microsoft.com/en-us/videoplayer/embed/RE4Jqbg
-    - title: New to Microsoft Teams development? 🚀Start here! 
+    - title: New to Teams development? 🚀Start here! 
       itemType: get-started
       url: /microsoftteams/platform/overview
     - title: Plan your app
@@ -167,4 +167,3 @@ tools:
       imageSrc: ./assets/icons/Yeoman.png
       url: https://github.com/OfficeDev/generator-teams 
 # additionalContent (optional)
-
