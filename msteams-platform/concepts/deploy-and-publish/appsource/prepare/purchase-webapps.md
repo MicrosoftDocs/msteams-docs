@@ -33,12 +33,12 @@ See the documentation on [how to create a SaaS offer in the commercial marketpla
 
 * After users navigate to an app that supports purchases, they are provided with an option to view subscription plans supported by the offer.
 
-![Purchase experience](~/assets/images/calls-and-meetings/purchaseexp.png)
+![Subscription plan](~/assets/images/subscriptionplan.png)
 
 * Users can view the respective plans and pricing supported by the offer and purchase it.
 
-![Purchase experience](~/assets/images/calls-and-meetings/purchaseexp.png)
+![View plan](~/assets/images/viewplan.png)
 
 * After successfully purchasing the offer, the users are redirected to the URL provided to activate their offer and manage their license agreement.
 
-![Purchase experience](~/assets/images/calls-and-meetings/purchaseexp.png)
+![Configure now](~/assets/images/configurenow.png)
