@@ -348,7 +348,7 @@ This version string must follow the [semver](http://semver.org/) standard (MAJOR
 
 **Required** — Microsoft app ID
 
-The unique Microsoft-generated identifier for this app. If your bot is registered via the Microsoft Bot Framework or your tab's web app already signs in with Microsoft, you already have an ID and must enter it here. Otherwise, you must generate a new ID at the Microsoft Application Registration Portal ([My Applications](https://apps.dev.microsoft.com)), enter it here, and then reuse it when you add a bot.
+The ID is a unique Microsoft-generated identifier for the app. You have an ID if your bot is registered through the Microsoft Bot Framework or your tab's web app already signs in with Microsoft. You must enter the ID here. Otherwise, you must generate a new ID at the Microsoft Application Registration Portal ([My Applications](https://apps.dev.microsoft.com)). Use the same ID if you add a bot.
 
 > [!NOTE]
 > If you are submitting an update to your existing app in AppSource, the ID in your manifest must not be modified.
