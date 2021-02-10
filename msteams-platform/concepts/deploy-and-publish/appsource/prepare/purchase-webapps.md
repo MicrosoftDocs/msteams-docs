@@ -1,7 +1,7 @@
 ---
 title: Publish purchasable web apps
-description: describes how to publish the purchasable web apps from Microsoft Teams client experience
-ms.author: Lajaunar
+description: Describes how to publish the purchasable web apps from Microsoft Teams client experience
+ms.author: lajanuar
 ms.topic: conceptual
 keywords: purchase web apps appstore appsource 
 ---
