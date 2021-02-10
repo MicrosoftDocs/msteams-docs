@@ -13,8 +13,8 @@ Teams web apps are free to install, however, some apps require purchasing servic
 ## How to publish purchasable web app?
 
 Before you start with the publishing process for web apps on Teams, ensure that you familiarize yourself with the following processes:
-- [How to submit your app on AppSource](../../../../appsource/publish.md)
-- [How to create a software as a service (SaaS) offer in the Microsoft commercial marketplace](/azure/marketplace/create-new-saas-offer)
+- [How to submit your app on AppSource](../../../../appsource/publish.md).
+- [How to create a software as a service (SaaS) offer in the Microsoft commercial marketplace](/azure/marketplace/create-new-saas-offer).
 
 To publish your purchasable web app, following are the steps involved:
 
@@ -29,9 +29,9 @@ To submit your app to the AppSource and subsequently to the Teams App Store, ens
 For more information on the submission checklist for submitting an app to AppSource, see:
 
 * [Prepare for AppSource submission](submission-checklist.md)
-* [Build a great app details page](add link)
+* [Build a great app details page](detail-page-checklist.md)
 * [App manifest checklist](app-manifest-checklist.md)
-* [Manifest schema](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema) to include the information about your purchasable web app on Teams
+* [Manifest schema](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema) to include the information about your purchasable web app on Teams.
 
 ## Publish purchasable web apps
 
@@ -46,12 +46,13 @@ The purchasable web apps are available for purchase and installation on the Team
 To purchase an app, as a user you can follow these steps:
 
 1. Navigate to an app that supports purchases and click **Subscription plans**.
+
     ![Subscription plan](~/assets/images/subscriptionplan.png)
 
 2. In the **Choose a subscription plan** window that appears, view the respective plans and pricing supported by the offer and purchase it.
 
     ![View plan](~/assets/images/viewplan.png)
 
-After successfully purchasing the offer, you are redirected to the URL provided to activate the offer and manage the license agreement.
+3. After successfully purchasing the offer, you are redirected to the URL provided to activate the offer and manage the license agreement.
 
-![Configure now](~/assets/images/configurenow.png)
+    ![Configure now](~/assets/images/configurenow.png)
