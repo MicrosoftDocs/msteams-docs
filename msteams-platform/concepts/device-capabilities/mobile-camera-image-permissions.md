@@ -146,8 +146,9 @@ media.getMedia((error: microsoftTeams.SdkError, blob: Blob) => {
 **Calling `viewImages` API by ID returned by `selectMedia` API**:
 
 ```javascript
-//view images by id:
-//    assumption: attachmentArray = select Media API Outputlet uriList = [];
+// View images by id:
+// Assumption: attachmentArray = select Media API Output
+let uriList = [];
 if (attachmentArray && attachmentArray.length > 0) {
     for (let i = 0; i < attachmentArray.length; i++) {
         let file = attachmentArray[i];
@@ -180,15 +181,16 @@ if (uriList.length > 0) {
 **Calling `viewImages` API by URL**:
 
 ```javascript
- // View Images by URL:
-    // Assumption 2 urls, url1 and url2let uriList = [];
-    if (URL1 != null && URL1.length > 0) {
-        let imageUri = {
-            value: URL1,
-            type: 2,
-        }
-        uriList.push(imageUri);
+// View Images by URL:
+// Assumption 2 urls, url1 and url2
+let uriList = [];
+if (URL1 != null && URL1.length > 0) {
+    let imageUri = {
+        value: URL1,
+        type: 2,
     }
+    uriList.push(imageUri);
+}
 if (URL2 != null && URL2.length > 0) {
     let imageUri = {
         value: URL2,
@@ -209,7 +211,6 @@ if (uriList.length > 0) {
 } else {
     output("Url list is empty");
 }
-}
 ```
 
 **Calling `selectMedia` and `getMedia` APIs for recording audio through microphone**:
@@ -228,23 +229,21 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
         }
     }
     // If you want to directly use the audio file (for smaller file sizes (~4MB))    if (attachments) {
-        let audioResult = attachments[0];
-        var videoElement = document.createElement("video");
-        videoElement.setAttribute("src", ("data:" + y.mimeType + ";base64," + y.preview));
-        //To use the audio file via get Media API for bigger audio file sizes greater than 4MB        audioResult.getMedia((error: microsoftTeams.SdkError, blob: Blob) => {
-            if (blob) {
-                if (blob.type.includes("video")) {
-                    videoElement.setAttribute("src", URL.createObjectURL(blob));
-                }
-            }
-            if (error) {
-                if (error.message) {
-                    alert(" ErrorCode: " + error.errorCode + error.message);
-                } else {
-                    alert(" ErrorCode: " + error.errorCode);
-                }
-            }
-        });
+    let audioResult = attachments[0];
+    var videoElement = document.createElement("video");
+    videoElement.setAttribute("src", ("data:" + y.mimeType + ";base64," + y.preview));
+    //To use the audio file via get Media API for bigger audio file sizes greater than 4MB        audioResult.getMedia((error: microsoftTeams.SdkError, blob: Blob) => {
+    if (blob) {
+        if (blob.type.includes("video")) {
+            videoElement.setAttribute("src", URL.createObjectURL(blob));
+        }
+    }
+    if (error) {
+        if (error.message) {
+            alert(" ErrorCode: " + error.errorCode + error.message);
+        } else {
+            alert(" ErrorCode: " + error.errorCode);
+        }
     }
 });
 ```
