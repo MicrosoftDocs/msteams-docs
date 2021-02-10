@@ -13,8 +13,8 @@ Teams web apps are free to install, however, some apps require purchasing servic
 ## How to publish purchasable web app?
 
 Before you start with the publishing process for web apps on Teams, ensure that you familiarize yourself with the following processes:
-- [How to submit your app on AppSource](../publish.md).
-- [How to create a software as a service (SaaS) offer in the Microsoft commercial marketplace](/azure/marketplace/create-new-saas-offer).
+- [How to submit your app on AppSource](../publish.md)
+- [How to create a software as a service (SaaS) offer in the Microsoft commercial marketplace](/azure/marketplace/create-new-saas-offer)
 
 To publish your purchasable web app, following are the steps involved:
 
@@ -24,14 +24,14 @@ To publish your purchasable web app, following are the steps involved:
 
 ## Submit the web app to AppSource
 
-To submit your web app to the AppSource and subsequently to the Teams App Store, ensure tha your web app completes the approval process provided by Microsoft Teams. This approval process verifies whether your web app works as described and contains the relevant metadata and content that is valuable to the users.
+To submit your web app to the AppSource and subsequently to the Teams App Store, ensure that your web app completes the approval process provided by Microsoft Teams. This approval process verifies whether your web app works as described and contains the relevant metadata and content that is valuable to the users.
 
 For more information on the submission checklist for submitting an app to AppSource, see:
 
 * [Prepare for AppSource submission](submission-checklist.md)
 * [Build a great app details page](detail-page-checklist.md)
 * [App manifest checklist](app-manifest-checklist.md)
-* [Manifest schema](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema) to include the information about your purchasable web app on Teams.
+* [Manifest schema](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema) to include the information about your purchasable web app on Teams
 
 ## Publish purchasable web apps
 
