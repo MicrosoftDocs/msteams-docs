@@ -8,12 +8,11 @@ keywords: purchase web apps appstore appsource
 
 # Purchasable web apps
 
-Application software that runs on a web server is called a web app. Users can access these web apps through a web browser and an active internet connection. You can publish your web apps on AppSource and Microsoft Teams app store. After the app is authenticated and published on AppSource, end-users can purchase the app subscription directly from the Teams app store.
+Publish your web apps on AppSource and Microsoft Teams app store. Teams apps are free to install, however, some apps require purchasing service subscriptions to experience the application's full functionality and scope. To publish your purchasable web app, you must submit your Software as a Service (SaaS) offer and pass the validation. After you submit the app to AppSource, you can publish your purchasable web app. Users can purchase the app subscription directly from the Teams app store after the app is authenticated and published on AppSource.
 
-## Software as a Service (SaaS) on Teams app store
+## Software as a Service on Teams app store
 
-Teams apps are free to install, however, some apps require purchasing service subscriptions to experience the application's full functionality and scope. These service subscriptions are called SaaS offers, which are available for purchase through AppSource and now through the Microsoft Teams app store.
-
+The service subscriptions are called SaaS offers, which are available for purchase through AppSource and now through the Microsoft Teams app store.
 When you submit your offer to Partner Center along with the appropriate plans for the offer, a review is conducted. After the app passes the validation, it is available for you to test and publish to our commercial marketplace. In the commercial marketplace, your offer is automatically available for purchase from the Teams app store along with AppSource and Azure Marketplace. To publish your purchasable web apps, follow the pre-submission checklist in the next section.
 
 ## Submit app to AppSource
@@ -32,6 +31,7 @@ See the documentation on [how to create a SaaS offer in the commercial marketpla
 
 ## User purchase experience
 
+This section covers the process a user needs to follow to subscribe the web app.
 * After users navigate to an app that supports purchases, an option is provided to view subscription plans supported by the offer.
 
 ![Subscription plan](~/assets/images/subscriptionplan.png)
