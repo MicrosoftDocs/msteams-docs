@@ -1,6 +1,6 @@
 ---
 title: Manifest schema reference
-description: describes the manifest schema for Microsoft Teams
+description: Describes the manifest schema for Microsoft Teams
 ms.topic: reference
 ms.author: lajanuar
 keywords: teams manifest schema
