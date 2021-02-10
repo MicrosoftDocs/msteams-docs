@@ -27,10 +27,10 @@ Follow the submission checklist for submitting an app to AppSource:
 ## Publish purchasable web apps
 
 Publish your web apps on the app store for users to purchase them directly from the Teams client experience. These apps have all the capabilities provided by the Teams platform, like web apps that are available on AppSource.
-Get started with the publishing process for web apps on Teams, follow the steps mentioned in [submitting your app on Partner Center](~/concepts/deploy-and-publish/appsource/publish.md).
-See the documentation on [how to create a SaaS offer in the commercial marketplace](https://docs.microsoft.com/azure/marketplace/create-new-saas-offer).
+Get started with the publishing process for web apps on Teams, follow the steps mentioned in [submitting your app on Partner Center](../../../../appsource/publish.md).
+See the documentation on [how to create a SaaS offer in the commercial marketplace](/azure/marketplace/create-new-saas-offer).
 
-## End-user purchase experience
+## User purchase experience
 
 * After users navigate to an app that supports purchases, an option is provided to view subscription plans supported by the offer.
 
