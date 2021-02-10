@@ -8,7 +8,7 @@ keywords: purchase web apps appstore appsource
 
 # Publish purchasable web apps
 
-Teams web apps are free to install, however, some apps require purchasing service subscriptions to experience the application's full functionality and scope. After you submit the app to AppSource, subsequently Teams enables you to publish your web apps on the App Store for users to purchase them directly from the Teams client experience. These web apps can have any of the capabilities provided by the Teams platform, such as web apps that are available on AppSource.
+Teams web apps are free to install, however, some apps require purchasing service subscriptions to experience the application's full functionality and scope. After you submit the web app to AppSource, subsequently Teams enables you to publish your web apps on the App Store for users to purchase them directly from the Teams client experience. These web apps can have any of the capabilities provided by the Teams platform, such as web apps that are available on AppSource.
 
 ## How to publish purchasable web app?
 
@@ -18,13 +18,13 @@ Before you start with the publishing process for web apps on Teams, ensure that 
 
 To publish your purchasable web app, following are the steps involved:
 
-1. Submit your app to AppSource and pass the validation.
+1. Submit your web app to AppSource and pass the validation.
 2. Publish your purchasable web app.
-3. Users can purchase the app subscription directly from the Teams app store after the app is authenticated and published on AppSource.
+3. Users can purchase the web app subscription directly from the Teams app store after the app is authenticated and published on AppSource.
 
-## Submit app to AppSource
+## Submit the web app to AppSource
 
-To submit your app to the AppSource and subsequently to the Teams App Store, ensure tha your app completes the approval process provided by Microsoft Teams. This approval process verifies whether your app works as described and contains the relevant metadata and content that is valuable to the users.
+To submit your web app to the AppSource and subsequently to the Teams App Store, ensure tha your web app completes the approval process provided by Microsoft Teams. This approval process verifies whether your web app works as described and contains the relevant metadata and content that is valuable to the users.
 
 For more information on the submission checklist for submitting an app to AppSource, see:
 
@@ -35,9 +35,9 @@ For more information on the submission checklist for submitting an app to AppSou
 
 ## Publish purchasable web apps
 
-After your offer has been submitted on AppSource along with the appropriate plans for the offer, the validation team reviews it and after it passes our validation, the app is available for you to test and publish it to our commercial marketplace.
+After your offer has been submitted on AppSource along with the appropriate plans for the offer, the validation team reviews it and after it passes our validation, the web app is available for you to test and publish it to our commercial marketplace.
 
-After the app is available on our commercial marketplace, your app (SaaS offer) is automatically available for purchase from the Teams App Store along with AppSource and Azure Marketplace.
+After the app is available on our commercial marketplace, your web app (SaaS offer) is automatically available for purchase from the Teams App Store along with AppSource and Azure Marketplace.
 
 ## User purchase experience
 
