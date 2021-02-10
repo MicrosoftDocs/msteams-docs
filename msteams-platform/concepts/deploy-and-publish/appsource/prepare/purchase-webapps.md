@@ -13,7 +13,7 @@ Teams web apps are free to install, however, some apps require purchasing servic
 ## How to publish purchasable web app?
 
 Before you start with the publishing process for web apps on Teams, ensure that you familiarize yourself with the following processes:
-- [How to submit your app on AppSource](../../../../appsource/publish.md).
+- [How to submit your app on AppSource](../publish.md).
 - [How to create a software as a service (SaaS) offer in the Microsoft commercial marketplace](/azure/marketplace/create-new-saas-offer).
 
 To publish your purchasable web app, following are the steps involved:
@@ -35,9 +35,9 @@ For more information on the submission checklist for submitting an app to AppSou
 
 ## Publish purchasable web apps
 
-After your offer has been submitted on AppSource along with the appropriate plans for the offer, the validation team will review it and after it passes our validation, the app will be available for you to test and publish it to our commercial marketplace.
+After your offer has been submitted on AppSource along with the appropriate plans for the offer, the validation team reviews it and after it passes our validation, the app is available for you to test and publish it to our commercial marketplace.
 
-After the app is available on our commercial marketplace, your app (SaaS offer) will automatically be available for purchase from the Teams App Store along with AppSource and Azure Marketplace.
+After the app is available on our commercial marketplace, your app (SaaS offer) is automatically available for purchase from the Teams App Store along with AppSource and Azure Marketplace.
 
 ## User purchase experience
 

@@ -386,6 +386,8 @@
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
     - name: Application Certification program
       href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
+  - name: Publish purchasable web app 
+    href: concepts/deploy-and-publish/appsource/prepare/purchase-webapps.md
 - name: Resources
   items:
     - name: App manifest schema
