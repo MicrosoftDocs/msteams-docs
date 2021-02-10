@@ -6,40 +6,52 @@ ms.topic: conceptual
 keywords: purchase web apps appstore appsource 
 ---
 
-# Purchasable web apps
+# Publish purchasable web apps
 
-Publish your web apps on AppSource and Microsoft Teams app store. Teams apps are free to install, however, some apps require purchasing service subscriptions to experience the application's full functionality and scope. To publish your purchasable web app, you must submit your Software as a Service (SaaS) offer and pass the validation. After you submit the app to AppSource, you can publish your purchasable web app. Users can purchase the app subscription directly from the Teams app store after the app is authenticated and published on AppSource.
+Teams web apps are free to install, however, some apps require purchasing service subscriptions to experience the application's full functionality and scope. After you submit the app to AppSource, subsequently Teams enables you to publish your web apps on the App Store for users to purchase them directly from the Teams client experience. These web apps can have any of the capabilities provided by the Teams platform, such as web apps that are available on AppSource.
 
-## Software as a Service on Teams app store
+## How to publish purchasable web app?
 
-The service subscriptions are called SaaS offers, which are available for purchase through AppSource and now through the Microsoft Teams app store.
-When you submit your offer to Partner Center along with the appropriate plans for the offer, a review is conducted. After the app passes the validation, it is available for you to test and publish to our commercial marketplace. In the commercial marketplace, your offer is automatically available for purchase from the Teams app store along with AppSource and Azure Marketplace. To publish your purchasable web apps, follow the pre-submission checklist in the next section.
+Before you start with the publishing process for web apps on Teams, ensure that you familiarize yourself with the following processes:
+- [How to submit your app on AppSource](../../../../appsource/publish.md)
+- [How to create a software as a service (SaaS) offer in the Microsoft commercial marketplace](/azure/marketplace/create-new-saas-offer)
+
+To publish your purchasable web app, following are the steps involved:
+
+1. Submit your app to AppSource and pass the validation.
+2. Publish your purchasable web app.
+3. Users can purchase the app subscription directly from the Teams app store after the app is authenticated and published on AppSource.
 
 ## Submit app to AppSource
 
-AppSource helps business users to find and try SaaS apps from Microsoft and its partners. Microsoft AppSource apps include web apps and apps built on Microsoft dynamics. Your app must be listed on AppSource and the Teams app store. You must complete the approval process provided by Microsoft Teams that verifies your app works as described and contains the relevant metadata and content that is valuable to the other.
-Follow the submission checklist for submitting an app to AppSource:
-* [Pre-submission checklist](submission-checklist.md)
+To submit your app to the AppSource and subsequently to the Teams App Store, ensure tha your app completes the approval process provided by Microsoft Teams. This approval process verifies whether your app works as described and contains the relevant metadata and content that is valuable to the users.
+
+For more information on the submission checklist for submitting an app to AppSource, see:
+
+* [Prepare for AppSource submission](submission-checklist.md)
+* [Build a great app details page](add link)
 * [App manifest checklist](app-manifest-checklist.md)
-* See [guidelines](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema) and follow the app manifest schema to include the information about your purchasable web app on Teams.
+* [Manifest schema](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema) to include the information about your purchasable web app on Teams
 
 ## Publish purchasable web apps
 
-Publish your web apps on the app store for users to purchase them directly from the Teams client experience. These apps have all the capabilities provided by the Teams platform, like web apps that are available on AppSource.
-Get started with the publishing process for web apps on Teams, follow the steps mentioned in [submitting your app on Partner Center](../../../../appsource/publish.md).
-See the documentation on [how to create a SaaS offer in the commercial marketplace](/azure/marketplace/create-new-saas-offer).
+After your offer has been submitted on AppSource along with the appropriate plans for the offer, the validation team will review it and after it passes our validation, the app will be available for you to test and publish it to our commercial marketplace.
+
+After the app is available on our commercial marketplace, your app (SaaS offer) will automatically be available for purchase from the Teams App Store along with AppSource and Azure Marketplace.
 
 ## User purchase experience
 
-This section covers the process a user needs to follow to subscribe the web app.
-* After users navigate to an app that supports purchases, an option is provided to view subscription plans supported by the offer.
+The purchasable web apps are available for purchase and installation on the Teams App Store.
 
-![Subscription plan](~/assets/images/subscriptionplan.png)
+To purchase an app, as a user you can follow these steps:
 
-* Users can view the respective plans and pricing supported by the offer and purchase it.
+1. Navigate to an app that supports purchases and click **Subscription plans**.
+    ![Subscription plan](~/assets/images/subscriptionplan.png)
 
-![View plan](~/assets/images/viewplan.png)
+2. In the **Choose a subscription plan** window that appears, view the respective plans and pricing supported by the offer and purchase it.
 
-* After successfully purchasing the offer, the users are redirected to the URL provided to activate the offer and manage their license agreement.
+    ![View plan](~/assets/images/viewplan.png)
+
+After successfully purchasing the offer, you are redirected to the URL provided to activate the offer and manage the license agreement.
 
 ![Configure now](~/assets/images/configurenow.png)
