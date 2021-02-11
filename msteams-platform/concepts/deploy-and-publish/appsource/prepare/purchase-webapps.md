@@ -20,7 +20,7 @@ To publish your purchasable web app, following are the steps involved:
 
 1. Submit your web app to AppSource and pass the validation.
 2. Publish your purchasable web app.
-3. Users can purchase the web app subscription directly from the Teams app store after the app is authenticated and published on AppSource.
+3. Users can purchase the web app subscription directly from the Teams App Store after the app is authenticated and published on AppSource.
 
 ## Submit the web app to AppSource
 
