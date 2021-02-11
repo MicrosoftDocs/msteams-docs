@@ -4,7 +4,7 @@ description: Develop universal bot action model.
 ms.topic: conceptual
 ---
 
-# Universal bot action model
+# Develop universal bot action model
 
 The universal bot action model provides the following:
 

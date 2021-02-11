@@ -8,13 +8,13 @@ ms.topic: overview
 
 A universal bot action model is a model that makes adaptive cards available across different platforms like Outlook, Teams, WebChat, Cortana, Timeline, and your applications through one `Action.Execute` command. Layout and rendering were already provided universally and now action handling is also provided.
 
-Adaptive cards are a combination of content such as text and graphics, and actions that can be performed by a user. As a developer you can add adaptive cards to a conversation through a bot or messaging extension. Adaptive cards are cross-platform and cross-app snippets of UI, authored using a lightweight JSON format, that apps and services can share. For more information, see [adaptivecards.io](http://adaptivecards.io/).
+Adaptive cards are a combination of content such as text and graphics, and actions that can be performed by a user. As a developer you can add adaptive cards to a conversation through a bot or messaging extension. Adaptive cards are cross-platform and cross-app snippets of UI, authored using a lightweight JSON format, that apps and services can share. For more information, see [adaptivecards](http://adaptivecards.io/).
 
 ## Lifecycle of an adaptive card
 
-![Inconsistent action model lifecycle](../assets/images/bots/inconsistent-action-model-lifecycle.png)
+![Inconsistent action model lifecycle](~/assets/images/bots/inconsistent-action-model-lifecycle.png)
 
-![Universal action model lifecycle](../assets/images/bots/universal-action-model-lifecycle.png)
+![Universal action model lifecycle](~/assets/images/bots/universal-action-model-lifecycle.png)
 
 ## Enhancements
 
@@ -39,23 +39,23 @@ Before using the `Action.Execute` model, different hosts used different action m
 * Outlook uses the `Action.Http` model where the way to communicate with the backend service is explicitly specified in the adaptive card payload
 * Search currently does not support actions.
 
-![Inconsistent action model](../assets/images/bots/inconsistent-action-model.png)
+![Inconsistent action model](~/assets/images/bots/inconsistent-action-model.png)
 
 The new `Action.Execute` model solves these problems as the developer can use one model for action handling throughout different platforms.
 
-![New universal action model](../assets/images/bots/new-universal-action-model.png)
+![New universal action model](~/assets/images/bots/new-universal-action-model.png)
 
 ### Contextual views
 
 Contextual views or role-based views refers to the ability of a card to look or behave differently depending on the user that views it. For instance, a poll author might see a read-only view of the overall poll results while a poll responder might see a set of inputs allowing them to respond to the poll.
 
-![Contextual views](../assets/images/bots/contextual-views.png)
+![Contextual views](~/assets/images/bots/contextual-views.png)
 
 ### Sequential workflow support
 
 Sequential workflow is a progressive workflow scenario where any user part of a chat or channel can take action on their specific card and progress through a set of cards stepwise without modifying the card for other users. With sequential workflow support now in Teams, users can go through their respective workflows without modifying the card for other users.
 
-![Sequential workflow](../assets/images/bots/sequentialworkflow.png)
+![Sequential workflow](~/assets/images/bots/sequentialworkflow.png)
 
 ## Next steps
 
