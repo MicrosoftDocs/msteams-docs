@@ -88,8 +88,6 @@ The following example highlights where an app's long description displays in a s
 
 :::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="Example screenshot highlights where an app's long description displays in a store listing.":::
 
-![App long description store view](~/assets/images/store-detail-page/LongDescription-02.png)
-
 #### Usage examples
 
 The following phrases are examples of what's allowed when writing long descriptions:
@@ -179,5 +177,5 @@ If you include a video, it displays before your screenshots in the listing.
 ## Related
 
 * [Create effective Microsoft 365 Stores listings](/office/dev/store/create-effective-office-store-listings)
-* Teams app design guidelines for [copy and content](../../concepts/design/design-teams-app-fundamentals.md#copy-and-content) and [brand expression](../../concepts/design/design-teams-app-fundamentals.md#brand-expression)
+* Teams app design guidelines for [copy and content](~/concepts/design/design-teams-app-fundamentals.md#copy-and-content) and [brand expression](~/concepts/design/design-teams-app-fundamentals.md#brand-expression)
 * [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)
