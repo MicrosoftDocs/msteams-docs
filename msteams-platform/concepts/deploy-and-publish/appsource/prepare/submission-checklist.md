@@ -1,10 +1,11 @@
 ---
-title: Store submission checklist
-description: The checklist to use before publishing your Microsoft Teams app to AppSource
-ms.topic: reference
-keywords: teams publish store office publishing checklist submission Teams apps appsource validation
+title: Prepare your store (AppSource) submission  
+description: Describes the final steps before submitting your Microsoft Teams app to be listed on the store.
+ms.topic: how-to
+author: heath-hamilton
+ms.author: surbhigupta
 ---
-# Prepare for AppSource submission  
+# Prepare your Teams store submission  
 
 To be listed on AppSource, your app must go through an approval process. This is a free service provided by the Microsoft Teams group that verifies that your app works as described, contains all appropriate metadata, and provides content that would be valuable to an end user. To help you achieve rapid approval, ensure your app meets the following requirements and guidelines:
 

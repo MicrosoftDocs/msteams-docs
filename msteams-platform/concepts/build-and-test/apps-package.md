@@ -71,6 +71,10 @@ The color icon submitted in your app package must be square. Don’t round the c
    :::column-end:::
 :::row-end:::
 
+#### Don't: Copy other brands
+
+Your icons must not mimic any copyrighted products that you don't own (for example, a design similar to a Microsoft product or brand).
+
 ### Examples
 
 Here's how app icons appear in different Teams capabilities and contexts.
