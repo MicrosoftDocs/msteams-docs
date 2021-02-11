@@ -235,7 +235,11 @@
   - name: Bot API changes for team and chat members
     href: resources/team-chat-member-api-changes.md
   - name: Universal bot action model
-    href: resources/Universal-bot-action-model.md    
+    items:
+    - name: Overview
+      href: bots/Universal-bot-action-model/overview.md
+    - name: Develop universal bot action model
+      href: bots/Universal-bot-action-model/Develop-universal-bot-action-model.md
 - name: Build messaging extensions
   items:
   - name: Overview
