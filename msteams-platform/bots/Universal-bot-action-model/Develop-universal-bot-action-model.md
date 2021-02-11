@@ -14,7 +14,7 @@ The universal bot action model provides the following:
     * The ability for a card to be refreshed at the time it is displayed.
     * The ability for `Action.Execute` actions to return an updated card to be immediately displayed in the client.
 
-For more information, see [actionable message documentation](https://docs.microsoft.com/en-us/outlook/actionable-messages/send-via-email).
+For more information, see [actionable message documentation](https://docs.microsoft.com/outlook/actionable-messages/send-via-email).
 
 >[!NOTE]
 > If you are already using adaptive cards on Teams with bot, you can use the same bot with a few changes to support `Action.Execute`. If you are using actionable messages on Outlook, you will need to develop a bot that supports `Action.Execute`.
@@ -89,7 +89,7 @@ When authoring adaptive cards, use `Action.Execute` in place of both `Action.Sub
 | fallback | <action object>, "drop" | No | Describes what to do when `Action.Execute` is unsupported by the client displaying the card. |
 | requires | Dictionary<string> | No | A series of key or value pairs indicating features that the item requires corresponding minimum version. When a feature is missing or is of a previous version, fallback is triggered. |
 
-## Refresh feature
+## Refresh mechanism
 
 Along with `Action.Execute` a new refresh mechanism is now supported, making it possible to create adaptive cards that automatically update at the time they are displayed. This ensures that users always see up to date data. A typical refresh use case is an approval request: once approved, it is best that users are not presented with a card prompting them to approve when it's already been done, but instead provides information on the time the request was approved and by whom.
 
