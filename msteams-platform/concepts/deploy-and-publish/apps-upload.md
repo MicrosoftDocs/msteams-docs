@@ -121,7 +121,7 @@ Hence, the default install scope selection helps you to specify the `defaultInst
 The `defaultInstallScope` property supports values, such as personal, team, group chat, or meeting.
 
 > [!NOTE]
-> For a successful validation, specify a `defaultInstallScope` that supports all capabilities. Each capability in an app must support the `defaultInstallScope`, else the app acts as it would without the default installation scope.
+>For a successful validation, ensure that all capabilities support the `defaultInstallScope` property. If even one capability fails to support the property, the app behavior will revert to the experience where no default installation scope is provided.
 
 `defaultGroupCapability` defines capabilities that are installed by default. Choose tab, bot, or connector as the default capability of the app for each group scope. The app validation fails if any of the scopes do not support the default capability.
 
