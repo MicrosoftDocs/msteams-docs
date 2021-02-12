@@ -54,7 +54,7 @@
       href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
     - name: Create a Virtual Assistant
       href: samples/virtual-assistant.md 
-  - name: Production-ready app templates
+  - name: App templates for Microsoft Teams
     href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
     href: samples/shifts-wfm-connectors.md
