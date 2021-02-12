@@ -7,7 +7,7 @@ keywords: teams deep link deeplink
 
 # Create deep links to content and features in Microsoft Teams
 
-You can create links to information and features within Teams. The following section is an example where creating deep links are useful:
+You can create links to information and features within Teams. Examples where creating deep links are useful are as follows:
 
 * Navigating the user to content within one of your app's tabs. For instance, your app can have a bot that sends messages notifying the user of an important activity. When the user taps on the notification, the deep link navigates to the tab so the user can view more details about the activity.
 * Your app automates or simplifies certain user tasks, such as creating a chat or scheduling a meeting, by pre-populating the deep links with required parameters. This avoids the need for users to manually enter information.
@@ -105,7 +105,7 @@ You can deeplink to content in Teams from your tab. This is useful if your tab n
 microsoftTeams.executeDeepLink(/*deepLink*/);
 ```
 
-This will navigate you to the correct URL, or trigger a client action, such as opening a scheduling or app install dialog. See the following example:
+This call navigates you to the correct URL, or trigger a client action, such as opening a scheduling or app install dialog. See the following example:
 
 ```Javascript
 // Open a scheduling dialog from your tab
@@ -117,7 +117,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 ## Deep linking to a chat
 
-You can create deep links to private chats between users by specifying the set of participants. If a chat does not exist with the specified participants, the link will navigate the user to an empty new chat. New chats are  created in draft state until the user sends the first message. Otherwise, you can specify the name of the chat if it does not already exist, along with text that should be inserted into the user's compose box. You can think of this feature as a shortcut for the user taking the manual action of navigating to or creating the chat, and then typing out the message.
+You can create deep links to private chats between users by specifying the set of participants. If a chat does not exist with the specified participants, the link navigates the user to an empty new chat. New chats are  created in draft state until the user sends the first message. Otherwise, you can specify the name of the chat if it does not already exist, along with text that should be inserted into the user's compose box. You can think of this feature as a shortcut for the user taking the manual action of navigating to or creating the chat, and then typing out the message.
 
 As an example use case, if you are returning an Office 365 user profile from your bot as a card, this deep link can allow the user to easily chat with that person.
 
