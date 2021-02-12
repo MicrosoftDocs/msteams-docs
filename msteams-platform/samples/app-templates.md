@@ -18,10 +18,10 @@ You, not Microsoft must license and support apps created from app templates for 
 
 ### Key benefits
 
-* **Deploy directly to the cloud:** All app templates include deployments scripts that will allow you to host all necessary services in Microsoft Azure or the Power Platform. 
-* **Recommended sample code:** The app templates conform to recommended best practices around security and infrastructure, and all community submitted changes to them are reviewed to ensure conformance.
+* **Deploy directly to the cloud:** All app templates include deployment scripts that allows you to host all required services in Microsoft Azure or the Power Platform. 
+* **Recommended sample code:** The app templates conform to recommended best practices around security and infrastructure. All community submitted changes to the app templates are reviewed to ensure conformance.
 * **Customizable and extensible:** While all app templates can be deployed with minimal configuration, we provide the entire code base and deployment scripts so that you can easily customize or extend them to fit your unique needs.
-* **Detailed documentation:** All app templates are accompanied by end-to-end documentation on solution architecture, deployment, and configuration steps. 
+* **Detailed documentation:** All app templates are accompanied by end-to-end documentation on solution architecture, deployment, and configuration steps.  
 
 ## Adoption Bot &#9734;
 
