@@ -60,13 +60,13 @@ The uploaded package must be available for use in the team or conversation speci
 
    ![Upload entry point](../../assets/images/UploadACustomApp.png)
 
-3. Browse to and select your .zip package from the computer.
+3. Select your .zip package from the computer.
 
-4. After a while you can see your uploaded app in the list.
+4. You can see your uploaded app in the list.
 
    ![Example of bot in list of uploaded bots](../../assets/images/botinlist.jpg)
 
-If your app does not load, the most common reason is an error in the manifest, particularly IDs for the app, bot and messaging extensions.
+If your app does not load, the most common reason is an error in the manifest, particularly IDs for the app, bot, and messaging extensions.
 
 ## Access your uploaded configurable tab
 
@@ -84,7 +84,7 @@ If the app contains tabs, users can pin them to any conversation or team channel
 
 ## Access your uploaded bot
 
-The bot added to a team must be usable by anyone on that team or inside and outside the team channels, depending on bot scope definition. All team members can see a post in the **General** channel indicating that the bot is added to the team.
+After adding the bot to a team, it must be usable by anyone on that team, inside and outside the team channels, depending on bot scope definition. All team members can see a post in the **General** channel indicating that the bot has been added to the team.
 
 For a Teams bot, you can start by invoking your bot by @mentioning the name of the bot.
 
