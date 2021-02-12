@@ -28,11 +28,12 @@ This document covers prerequisites, steps to build a scene using Microsoft Scene
 
 ## Prerequisites
 
-The following are the prerequisites for using Together Mode:
+As a developer you must have a basic understanding of the following prerequisites for using Together Mode:
 
-* As a developer you must have a basic understanding of what is a scene, what is a Scene Design Studio, and how to create apps in App Studio.
-* Prerequisite 2
-* Prerequisite 3
+* What is a scene?
+* What is a Scene Design Studio?
+* How to create apps in App Studio?
+* How to sideload or upload apps in Teams?
 
 ## Build a scene using Scene Design Studio
 
@@ -76,13 +77,13 @@ After setting-up dev.teams.microsoft.com, complete the following steps to build 
 
 8. In the **Scene Name** box, enter a name for the scene.
 
-9. Select **Save** or select **Export the Scene** from the **Save** drop-down menu. If you select **Export the Scene**, a .zip file is downloaded.
+9. Select **Save** or select **Export the Scene** from the **Save** drop-down menu. If you select **Export the Scene**, a .zip file that is the scene package is downloaded.
 
 Now that you have built a scene using the Scene Design Studio, you can assemble a scene package to indicate the exact position of the seats.
 
 ## Assemble a scene package
 
-A scene package is a collection of all assets particularly images.
+A scene package is a collection of images, scene JSON and all assets used to build the scene.
 
 You must have the ability to ship a scene package that includes the following:
 
@@ -118,13 +119,13 @@ An app package contains the scene package. App Studio simplifies app packaging.
 
 ![App Studio](../assets/images/apps-in-meetings/app-studio.png)
 
-After you build a scene, complete the following steps:
+Complete the following steps to create an app package and use the scene in Teams:
 
-1. Go to **Apps** in App Studio.
+1. Go to **Apps** in **App Studio** in Teams.
 
 2. Create a new app and enter the necessary details.
 
-3. Go to **Scenes** under **Configuration** in **Apps**.
+3. In the **Microsoft Teams Developer Center** page, go to **Scenes** under **Configuration** in **Apps**.
 
 4. Select the scene you built and import the package.
 
