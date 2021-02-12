@@ -124,7 +124,7 @@ conceptualContent:
           text: Integrate with the Moodle learning management system
         - url: /microsoftteams/platform/samples/app-templates
           itemType: reference
-          text: Teams app templates — production-ready applications
+          text: Integrate production-ready app templates
         - url:  /microsoftteams/platform/samples/shifts-wfm-connectors
           itemType: reference
           text: Teams shifts connectors — production-ready integrations
