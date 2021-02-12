@@ -10,10 +10,15 @@ Here you will find a list of tutorials that demonstrate how you can extend the T
 
 ## Getting started with Microsoft Learn
 
-| Capability| Learn module|
+| **Capability**| **Learn module**|
 |--------|-------------|
 | Tabs  — embedded web experiences  |  [Create embedded web experiences with tabs for Microsoft Teams](https://docs.microsoft.com/learn/modules/embedded-web-experiences/) |
 | Webhooks and connectors  |  [Connect web services to Microsoft Teams with webhooks and Office 365 Connectors](https://docs.microsoft.com/learn/modules/msteams-webhooks-connectors/) |
 |Messaging extensions  | [Task-oriented interactions in Microsoft Teams with messaging extensions](https://docs.microsoft.com/learn/modules/msteams-messaging-extensions/)  |
 | Task modules |  [Collect input in Microsoft Teams with Task Modules](https://docs.microsoft.com/learn/modules/msteams-task-modules/) |
 | Conversational bots  | [Create interactive conversational bots for Microsoft Teams](https://docs.microsoft.com/learn/modules/msteams-conversation-bots/)  |
+
+## Code samples
+| **Sample name**| **Description**| **Nodejs** |
+|----------------|----------------|------------|
+| Connector configuration | |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
