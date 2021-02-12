@@ -111,7 +111,7 @@ conceptualContent:
     - title: Integrate
       links:
         - url:  /microsoftteams/platform/samples/integrating-web-apps
-          itemType: reference
+          itemType: concept
           text: Integrate web apps with Microsoft Teams
         - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
           itemType: how-to-guide
