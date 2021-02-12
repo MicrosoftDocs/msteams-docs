@@ -120,7 +120,7 @@ conceptualContent:
           itemType: reference
           text: Integrate Microsoft Teams and SharePoint 
         - url: /microsoftteams/platform/resources/moodleinstructions
-          itemType: reference
+          itemType: how-to-guide
           text: Integrate with the Moodle learning management system
         - url: /microsoftteams/platform/samples/app-templates
           itemType: reference
