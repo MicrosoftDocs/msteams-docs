@@ -106,7 +106,7 @@ conceptualContent:
           text: Collect input and gather information with task modules
         - url: /learn/modules/msteams-webhooks-connectors/
           itemType: learn
-          text: Connect web services to channels and teams with webhooks and Office 365 connectors
+          text: Connect web services to channels and teams with webhooks and Office 365 Connectors
     # Card
     - title: Integrate
       links:
