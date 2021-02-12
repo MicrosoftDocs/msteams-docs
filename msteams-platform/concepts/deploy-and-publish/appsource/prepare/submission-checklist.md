@@ -5,26 +5,17 @@ ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ---
-# Prepare your Teams store submission  
+# Prepare your Microsot Teams store (AppSource) submission  
 
-To be listed on AppSource, your app must go through an approval process. This is a free service provided by the Microsoft Teams group that verifies that your app works as described, contains all appropriate metadata, and provides content that would be valuable to an end user. To help you achieve rapid approval, ensure your app meets the following requirements and guidelines:
+You've designed, built, and tested your Microsoft Teams app. Now you want people from all the over the world to use it.
 
-* **Distribution method:** Make sure your app is meant for publication on a store platform. There are [other options](../../overview.md) to distribute your app without publishing to AppSource.
-* **Validation policies:** Your app must pass all current [AppSource validation policies](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams) before submission. 
-  > [!NOTE] 
-  > The Appsource validation policies are subject to change.
-* **Mobile readiness:** Your app must be mobile responsive. If your app contains tabs, they must follow the [mobile design guidelines](~/tabs/design/tabs-mobile.md) and your app must comply with [no upsell requirements](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md) on mobile OS (iOS and Android).
-* **Self test your app:** Test your app using the [Manifest validation tool](#teams-app-validation-tool).
-* **App detail page:** Your app must align with the  [App detail page checklist](detail-page-checklist.md).
-* **Tips and frequently failed cases:** Pay extra attention to the listed [Tips and frequently failed cases](frequently-failed-cases.md)  to improve your app submission and approval time.
-* **App manifest:** Check your app manifest against the [App manifest checklist](app-manifest-checklist.md).
-* **Testing and debugging:** Make certain that you have fully [tested and debugged your app](../../../build-and-test/debug.md).
-* **Testing notes:** Include your [test notes for validation](#test-notes-for-validation)
-* **Privacy policies:** Ensure your [privacy policy, terms of use and support URLs](#privacy-policy-terms-of-use-and-support-urls) follow our guidelines.
+Before you submit your app to [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource), go through the following instructions.
 
-Once you have completed all of the above requirements, submit your package to AppSource through [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource).
+## 1. Check your app manifest
 
-## Teams App Validation Tool
+xxxx
+
+### Teams App Validation Tool
 
 The app validation tool consists of an [app validator](#teams-app-validator) and a [preliminary checklist](#preliminary-checklist). The tool replicates the same test cases used by [AppSource](/office/dev/store/submit-to-appsource-via-partner-center) to evaluate your app submission. Therefore,  it's crucial to pass all the test cases prior to submitting your solution to AppSource for approval. The tool can be found in several areas within the Teams platform:
 
@@ -46,7 +37,13 @@ For test scenarios that are difficult to automate, the preliminary checklist sur
 
 ![Preliminary checklist](../../../../assets/images/validation-tool/preliminary-checklist.png)
 
-## Test notes for validation
+## 2. Create your app package
+
+Link back to app package doc.
+
+## 3. Compile your test notes
+
+Link back to test section.
 
 Please include the following:
 
