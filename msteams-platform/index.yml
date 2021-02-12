@@ -59,7 +59,7 @@ conceptualContent:
           text: Developers
         - url: /microsoftteams/?view=msteams-client-js-latest
           itemType: concept
-          text: IT Professionals
+          text: IT professionals
         - url: https://support.microsoft.com/en-us/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-US&rs=en-US&ad=US#PickTab=Basics
           itemType: concept
           text: End users
