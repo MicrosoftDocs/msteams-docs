@@ -35,3 +35,4 @@ After getting access to device capabilities,use **Teams media capability APIs** 
 Use **`ScanBarCode` API** to experience the [integration of QRcode or Barcode scanner capability](qr-barcode-scanner-capability.md) using device camera with Teams platform.
 
 
+
