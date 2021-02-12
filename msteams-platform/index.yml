@@ -30,7 +30,7 @@ highlightedContent:
       url: /microsoftteams/platform/concepts/design/design-teams-app-overview
     - title: Build your app 
       itemType: how-to-guide
-      url: /microsoftteams/platform/overview
+      url: /microsoftteams/platform/overview#start-building
     - title: Enhance your app with Microsoft Graph
       itemType: how-to-guide
       url:  /graph/teams-concept-overview
