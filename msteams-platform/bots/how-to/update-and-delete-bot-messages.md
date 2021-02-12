@@ -10,7 +10,7 @@ ms.author: anclear
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-## Updating messages
+## Update messages
 
 Rather than have your messages be static snapshots of data, your bot can dynamically update messages after sending them. You can use dynamic message updates for scenarios such as poll updates, modifying available actions after a button press, or any other asynchronous state change.
 
@@ -53,7 +53,7 @@ update_result = await context.update_activity(new_activity)
 >[!NOTE]
 >You can develop Teams apps in any web-programming technology and directly call the [Bot Connector service REST APIs](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0). To do so, you'll need to implement [Authentication](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0) security procedures with your API requests.
 
-To update an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint. To complete this scenario, you should cache the activity ID returned by the original POST call.
+To update an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint. To complete this scenario, you must cache the activity ID returned by the original POST call.
 
 ```http
 PUT /v3/conversations/{conversationId}/activities/{activityId}
@@ -66,7 +66,47 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 
 ---
 
-## Deleting messages
+## Update adaptive cards
+
+Follow the steps to update the adaptive card on click on button:
+
+1. Create an adaptive card and add unique ID (GUID) in the adaptive card action.
+
+```json
+var Card = new AdaptiveCard()
+{
+    Body = new List<AdaptiveElement>()
+    {
+        new AdaptiveTextBlock(){Text="This is a test adaptive card"},
+    },
+    Actions = new List<AdaptiveAction>()
+    {
+    new AdaptiveSubmitAction()
+    {
+        Title="UpdateMe",
+        DataJson= @"{'id':'uniqueId'}"
+    }
+    }
+};
+```
+
+2. After sending the message, continue mapping the adaptive card's unique ID and message ID.
+
+```json
+connector = new ConnectorClient(new Uri(activity.ServiceUrl));
+reply = activity.CreateReply();
+reply.Attachments.Add(Card.ToAttachment());
+var msgToUpdate = await connector.Conversations.ReplyToActivityAsync(reply);
+// Keep mapping of uniqueId and messageToUpdate.Id
+// UniqueId1 => messageId1
+// UniqueId2 => messageId2
+```
+
+3. When a user selects **UpdateMe** action button, check the mapping for `uniqueId` in the `activity.Value`.
+
+4. Create new card and call `connector.Conversations.UpdateActivityAsync` with the updated code.
+
+## Delete messages
 
 In the Bot Framework, every message has its own unique activity identifier.
 Messages can be deleted using the Bot Framework's `DeleteActivity` method as shown here.
