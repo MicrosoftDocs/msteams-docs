@@ -20,7 +20,7 @@ To integrate QRcode or Barcode scanner capability, you must update the app manif
 
 For effective integration, you must have a good understanding of [code snippets](#code-snippets) for calling the `scanner` API, which allows you to use native QRcode or Barcode scanner capabilities.
 
-It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
+It is important to familiarize yourself with the [API response errors](mobile-camera-image-permissions.md#error-handling) to handle the errors in your Teams app.
 
 > [!NOTE] 
 > Currently, Microsoft Teams support for QRcode or Barcode scanner capability is only available for mobile clients.
