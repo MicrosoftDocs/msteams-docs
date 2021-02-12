@@ -8,7 +8,7 @@ keywords: purchase web apps appstore appsource
 
 # Publish purchasable web apps
 
-Teams web apps are free to install, however, some apps require purchasing service subscriptions to experience the application's full functionality and scope. After you submit the web app to AppSource, subsequently Teams enables you to publish your web apps on the App Store for users to purchase them directly from the Teams client experience. These web apps can have any of the capabilities provided by the Teams platform, such as web apps that are available on AppSource.
+Teams web apps are free to install, however, some apps require subscription purchasing to experience the application's full functionality and scope. After you submit the web app to AppSource, subsequently Teams enables you to publish your web apps on the App Store for users to purchase them directly from the Teams client experience. These web apps can have any of the capabilities provided by the Teams platform, such as web apps that are available on AppSource.
 
 ## How to publish purchasable web app?
 
@@ -20,7 +20,8 @@ To publish your purchasable web app, following are the steps involved:
 
 1. Submit your web app to AppSource and pass the validation.
 2. Publish your purchasable web app.
-3. Users can purchase the web app subscription directly from the Teams App Store after the app is authenticated and published on AppSource.
+
+After the app is validated and published on AppSource, users can purchase the web app subscription directly from the Teams App Store.
 
 ## Submit the web app to AppSource
 
@@ -47,16 +48,16 @@ To purchase an app, as a user you can follow these steps:
 
 1. Navigate to an app that supports purchases and click **Subscription plans**.
 
-    ![Subscription plan](~/assets/images/subscriptionplan.png)
+    ![Subscription plan image required]
 
 2. In the **Choose a subscription plan** window that appears, view the respective plans and pricing supported by the offer and purchase it.
 
-    ![View plan](~/assets/images/viewplan.png)
+    ![View plan image required]
 
-3. After successfully purchasing the offer, you are redirected to the URL provided to activate the offer and manage the license agreement.
+3. After successfully purchasing the offer, you are redirected to the URL provided to activate the offer and manage the licenses purchased.
 
-    ![Configure now](~/assets/images/configurenow.png)
+    ![Configure now image required]
 
 ## See also
 
-[Maintaining and supporting your published app](https://docs.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/post-publish/overview)
+[Maintaining and supporting your published app](../post-publish/overview.md).
