@@ -7,7 +7,7 @@ ms.author: lajanuar
 author: laujan
 ---
 
-# App Templates for Microsoft Teams
+# App templates for Microsoft Teams
 
 App templates are examples of complete apps for Microsoft Teams that are open-source and available on GitHub. Each app template contains detailed instructions for deploying and installing that app for your organization. It also provides a sample app that you can install and begin using immediately. The complete source code is available too, which allows you to explore it in detail or fork the code and alter it to meet your specific requirements.
 All app templates are provided under the [MIT License](https://github.com/OfficeDev/microsoft-teams-apps-eprescription/blob/master/LICENSE) terms.
