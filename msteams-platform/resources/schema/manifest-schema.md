@@ -330,7 +330,7 @@ The https:// URL referencing the JSON Schema for the manifest.
 
 **Required** — string
 
-The version of manifest schema this manifest is using. It must be "1.7".
+The version of manifest schema this manifest is using. It must be 1.7.
 
 ## version
 
