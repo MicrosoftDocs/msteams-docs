@@ -154,3 +154,8 @@ Once the app has been installed to a team, you can use [Graph Explorer](https://
 > [!div class="nextstepaction"]
 > [**Resource-specific consent in Microsoft Teams for admins**](/MicrosoftTeams/resource-specific-consent)
 > 
+
+## Code sample
+| **Sample name** | **Description** | **C#** |
+|-----------------|-----------------|----------------|
+| Resource Specific Consent (RSC) | Use RSC to call Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|
