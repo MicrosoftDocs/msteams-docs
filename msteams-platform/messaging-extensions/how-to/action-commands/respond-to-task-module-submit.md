@@ -563,7 +563,7 @@ To use user attribution in teams, you need to add the `OnBehalfOf` mention entit
 
 * * *
 
-Below is a description of the entities in the `OnBehalfOf` of Array:
+The following section is a description of the entities in the `OnBehalfOf` of Array:
 
 #### Details of  `OnBehalfOf` entity schema
 
