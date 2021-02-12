@@ -81,7 +81,7 @@ conceptualContent:
           text: Build a Teams app using C#/.NET and App Studio
         - url: /microsoftteams/platform/samples/teams-low-code-solutions
           itemType: how-to-guide
-          text: Build low-code apps, bots, and flows with Microsoft Power Platform
+          text: Build low-code Teams apps, bots, and flows with Microsoft Power Platform
         - url:  /microsoftteams/platform/resources/schema/manifest-schema
           itemType: reference
           text: Manifest schema for Microsoft Teams
