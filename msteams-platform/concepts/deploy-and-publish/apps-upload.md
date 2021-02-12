@@ -90,7 +90,7 @@ For a Teams bot, you can start by invoking your bot by @mentioning the name of t
 
 To test direct chats with your bot, you can either access it through the App home, @mention it in a channel, or search for it in the **New Chat** window.
 
-After adding your bot to a conversation, you can @mention it in a conversation or search for it in the **New Chat** window to test direct chats with your bot.
+You can @mention the bot in a conversation or search for it in the **New Chat** window to test direct chats with your bot.
 
 ## Access your uploaded Connector
 
@@ -100,7 +100,7 @@ With the app loaded in the team or conversation, users can set up a Connector us
 
 2. Select your Connector from the **Sideloaded** section at the bottom.
 
-3. Configure your Connector through its [configuration page](../../webhooks-and-connectors/how-to/connectors-creating.md) and select **Save**.
+3. Configure your connector through its [configuration page](../../webhooks-and-connectors/how-to/connectors-creating.md) and select **Save**.
 
   ![The Add a tab dialog box, featuring a gallery of available tabs.](../../assets/images/connector_gallery.png)
 
