@@ -18,7 +18,4 @@ Here you will find a list of tutorials that demonstrate how you can extend the T
 | Task modules |  [Collect input in Microsoft Teams with Task Modules](https://docs.microsoft.com/learn/modules/msteams-task-modules/) |
 | Conversational bots  | [Create interactive conversational bots for Microsoft Teams](https://docs.microsoft.com/learn/modules/msteams-conversation-bots/)  |
 
-## Code samples
-| **Sample name**| **Description**| **Nodejs** |
-|----------------|----------------|------------|
-| Connector configuration | |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
+
