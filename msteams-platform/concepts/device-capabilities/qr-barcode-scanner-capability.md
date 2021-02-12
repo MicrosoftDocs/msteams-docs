@@ -73,3 +73,4 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
     output(decodedText);
   }
 }, config);
+```
