@@ -9,7 +9,6 @@ metadata:
   author: surbhigupta12
 
 landingContent:
-  - landingContent.imageSrc: ./assets/images/activity-feed
   - title: Validation Guidelines
     linkLists:     
       - linkListType: concept
