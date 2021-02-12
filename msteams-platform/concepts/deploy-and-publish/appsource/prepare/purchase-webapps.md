@@ -56,3 +56,7 @@ To purchase an app, as a user you can follow these steps:
 3. After successfully purchasing the offer, you are redirected to the URL provided to activate the offer and manage the license agreement.
 
     ![Configure now](~/assets/images/configurenow.png)
+
+## See also
+
+[Maintaining and supporting your published app](https://docs.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/post-publish/overview)
