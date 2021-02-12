@@ -114,7 +114,7 @@ conceptualContent:
           itemType: reference
           text: Integrate web apps with Microsoft Teams
         - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
-          itemType: reference
+          itemType: how-to-guide
           text: Integrate your Power Virtual Agents bot with Microsoft Teams
         - url: /microsoftteams/platform/tabs/how-to/tabs-in-sharepoint
           itemType: reference
