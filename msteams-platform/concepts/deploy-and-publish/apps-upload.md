@@ -84,7 +84,7 @@ If the app contains tabs, users can pin them to any conversation or team channel
 
 ## Access your uploaded bot
 
-After adding the bot to a team, it must be usable by anyone on that team, inside and outside the team channels, depending on bot scope definition. All team members can see a post in the **General** channel indicating that the bot has been added to the team.
+The bot added to a team must be usable by anyone on that team or inside and outside the team channels, depending on bot scope definition. All team members can see a post in the **General** channel indicating that the bot is added to the team.
 
 For a Teams bot, you can start by invoking your bot by @mentioning the name of the bot.
 
