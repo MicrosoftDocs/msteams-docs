@@ -189,4 +189,4 @@ Partner Center supports [localized store listings](https://docs.microsoft.com/of
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Create a store listing](~/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md)
+> [Prepare your store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)

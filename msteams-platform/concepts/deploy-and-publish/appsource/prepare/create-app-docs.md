@@ -32,4 +32,4 @@ Your support URLs should not require authentication for a user to get help or co
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Create app documentation](~/concepts/deploy-and-publish/appsource/prepare/create-app-docs.md)
+> [Create a store listing](~/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md)
