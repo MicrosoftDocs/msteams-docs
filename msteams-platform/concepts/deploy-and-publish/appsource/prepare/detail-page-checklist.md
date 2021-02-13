@@ -122,7 +122,7 @@ The following phrases are examples of what's allowed when writing long descripti
   * "... certified for ..."
   * " ... powered by ..."
 
-## 3. Design icons
+## 3. Adhere to icon design guidelines
 
 Icons are one of the main elements users see when browsing the store. Your icons should communicate your app's brand purpose while also adhering to Teams requirements.
 
@@ -174,8 +174,19 @@ If you include a video, it displays before your screenshots in the listing.
 * Keep your video between 30-90 seconds.
 * Aim for quality. In a listing, users will see your video before screenshots.
 
+## 6. Localize your store listing
+
+Partner Center supports [localized store listings](https://docs.microsoft.com/office/dev/store/prepare-localized-solutions).
+
+[See how to localize your Teams app listing](~/concepts/build-and-test/apps-localization)
+
 ## Related
 
 * [Create effective Microsoft 365 Stores listings](/office/dev/store/create-effective-office-store-listings)
 * Teams app design guidelines for [copy and content](~/concepts/design/design-teams-app-fundamentals.md#copy-and-content) and [brand expression](~/concepts/design/design-teams-app-fundamentals.md#brand-expression)
 * [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create a store listing](~/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md)

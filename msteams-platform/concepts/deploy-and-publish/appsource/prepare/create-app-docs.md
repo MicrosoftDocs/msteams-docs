@@ -28,3 +28,8 @@ Your terms of use should be specific and applicable to your app offering.
 ## 3. Include support links
 
 Your support URLs should not require authentication for a user to get help or contact you.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create app documentation](~/concepts/deploy-and-publish/appsource/prepare/create-app-docs.md)

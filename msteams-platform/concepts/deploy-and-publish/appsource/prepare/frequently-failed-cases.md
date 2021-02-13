@@ -4,7 +4,6 @@ description: Describes the guidelines every app submitted to the Teams store (Ap
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-keywords: app submission tips frequently failed cases validation guidelines
 ---
 # Microsoft Teams store (AppSource) validation guidelines
 
@@ -59,11 +58,26 @@ Tunneling services and domains outside of an organization’s control, including
 
 Apps that request permissions during the Azure Active Directory (Azure AD) consent process must provide business justification for these requests.
 
-### 2.6 Health information sources
+### 2.6 Authentication
+
+#### 2.6.1 Signing out
+
+* The ability to sign out from any authenticated external services must be present within the app. For more information, see [authentication in Teams](~/concepts/authentication/authentication.md).
+* When a user logs out, they should log out only from the app and not the Teams client.
+
+#### 2.6.2 Unsharing content
+
+Teams apps that depend on authentication with an external service to allow content sharing in channels must clearly state in their help documentation or similar resources how a user can disconnect or unshare any content if the same feature is supported on the external service. The ability to unshare content does not have to be present in your app, but the process should be clearly documented in a location that's accessible from the app.
+
+#### 2.6.3 Government Community Cloud listings
+
+To make your app available for Government Community Cloud (GCC) users (and to avoid duplicate app listings in the store), the authentication process must identify and route GCC users to the specified or expected content URL.
+
+### 2.7 Health information sources
 
 Apps catering to a patient’s health records, diseases, wellness, nutrition, or pandemic-related information must abide with the user's local health laws. In addition, the information provided by such apps must always be from trusted sources such as the World Health Organization (WHO) or a government website.
 
-### 2.7 Sensitive content
+### 2.8 Sensitive content
 
 Your app must not post sensitive data such as credit card/financial payment instrument, personally identifiable information (PII), health, or contact tracing information to an audience not intended to view that data.
 
@@ -108,17 +122,6 @@ Teams apps must respond within a reasonable timeframe, which varies depending on
     * iOS 9.0 and later
     * Android 4.4 and later
     * Windows Phone 10.0.10586 and later
-
-### 3.5 Authentication
-
-#### 3.5.1 Signing out
-
-* The ability to sign out from any authenticated external services must be present within the app. For more information, see [authentication in Teams](~/concepts/authentication/authentication.md).
-* When a user logs out, they should log out only from the app and not the Teams client.
-
-#### 3.5.2 Unsharing content
-
-Teams apps that depend on authentication with an external service to allow content sharing in channels must clearly state in their help documentation or similar resources how a user can disconnect or unshare any content if the same feature is supported on the external service. The ability to unshare content does not have to be present in your app, but the process should be clearly documented in a location that's accessible from the app.
 
 ## 4.0 App package and store listing
 
@@ -194,7 +197,7 @@ See comprehensive [bot design guidelines](~/bots/design/bots.md).
 
 ### 6.1 Bot commands
 
-* All commands that your bot supports must work correctly, including the Hi, Hello, Help command. 
+* All commands that your bot supports must work correctly, including the "Hi", "Hello", and "Help" command.
 * Supported bot commands must be listed in the app manifest.
 * Use command lists. Analyzing user input or predicting user intent is hard. Instead of letting users guess what your bot can do, provide a list of commands your bot understands.
 
@@ -312,3 +315,8 @@ Follow these guidelines if your app uses the [activity feed APIs provided by Mic
 
 * The right pane experience in the feed must be self-contained and not break the feed experience.
 * On click, user must be directed to the relevant content within the Teams app and should not be taken out of Teams experience.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create app documentation](~/concepts/deploy-and-publish/appsource/prepare/create-app-docs.md)

@@ -374,7 +374,7 @@
     items:
     - name: Overview
       href: concepts/deploy-and-publish/appsource/publish.md
-    - name: Store validation guidelines
+    - name: Review store validation guidelines
       href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
     - name: Create app documentation
       href: concepts/deploy-and-publish/appsource/prepare/create-app-docs.md
@@ -384,9 +384,7 @@
       href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
     - name: Submit your app
       href: concepts/deploy-and-publish/appsource/submit-your-app.md
-    - name: Fix issues with your submission
-      href: concepts/deploy-and-publish/appsource/fix-submission-issues.md
-    - name: Maintain and support your published app
+    - name: Maintain and support your app
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
 - name: Resources
   items:

@@ -7,30 +7,45 @@ ms.topic: how-to
 ---
 # Submit your Microsoft Teams app to Partner Center
 
-Some intro text
+After preparing your store submission, you can officially submit your app for review.
 
-## Set up a Partner Center account
+## 1. Create a Partner Center account
 
-xxx
+To publish your app to the Teams store and AppSource, you must [first set up a developer account](https://docs.microsoft.com/office/dev/store/open-a-developer-account).
 
-Link to official docs?
+## 2. Submit your app
 
-## Submit your app
+Follow these [step-by-step store submission instructions](https://docs.microsoft.com/office/dev/store/add-in-submission-guide). When creating a new submission, specify you're submitting a Teams app.
 
-xxx
+### App category mapping
 
-Link to official docs?
+During submission, you're asked to categorize your app. The following table maps Teams store categories to the categories listed in Partner Center.
+
+| Teams categories       | Partner Center categories  |
+|:---------------------|:---------------|
+| Analytics and BI | Analytics, Data Visualization and BI |
+| Developer and IT | Developer Tools, IT Admin |
+| Education | Education |
+| Human resources | Human Resources and Recruiting |
+| Productivity | Content Management, Files and documents, Productivity, Training and Tutorials, and Utilities |
+| Project management | Communication, Project Management, Workflow, and Business Management |
+| Sales and support | Customer and Contact Management, Customer Support, Financial Management, Sales and Marketing |
+| Social and fun | Image and Video Galleries, Lifestyle, News and Weather, Social, Travel, and Navigation |
+
+### 3. Fix issues with your submission
+
+If your app fails submission, you receive a failure report so you know what to fix and resubmit. Microsoft also provides a white-glove service to help get your app listed.
 
 ## Frequently asked questions
 
 ### How do I create a Partner Center account?
 
-There are two ways to create a Partner Center account:
+You can create a Partner Center account one of the following ways:
 
-- If you are new to Partner Center and don't have an account in the Microsoft network, create an account using the [Partner Center enrollment page](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
-- If you are already enrolled in the Partner Network, create an account directly in Partner Center using an [ existing enrollment page](/office/dev/store/).
+- If you're new to Partner Center and don't have an account in the Microsoft network, create an account using the [Partner Center enrollment page](/office/dev/store/open-a-developer-account#create-an-account-using-the-partner-center-enrollment-page).
+- If you're already enrolled in the Partner Network, create an account directly in Partner Center using an [existing enrollment page](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
 
-### What if I cannot find my Office Store account in Partner Center?
+### What if I can't find my Office Store account in Partner Center?
 
 Open a [Partner Center support ticket](https://partner.microsoft.com/support/v2/?stage=1) and select the following from the drop-down menus:
 
@@ -69,6 +84,7 @@ The status of each required step, such as **Email Ownership**, **Employment Veri
 ![Partner Center verification error](../../../assets/images/partner-center-acct-verification-error.png)
 
 ### What is verified in the Partner Center account verification process and how to respond?
+
 There are three verification areas, **Email Ownership**, **Employment**, and **Business**. For more information on the verification process, see [What is verified and how to respond](/partner-center/verification-responses#what-is-verified-and-how-to-respond).
 If you are the primary contact, Global admin, or Account admin, go to your Partner Profile to monitor verification status and track the progress.
 
@@ -112,7 +128,7 @@ Support tickets get resolved in a week. Check for updates sent to the email ID p
 
 See the [commercial marketplace documentation](/azure/marketplace/) for more help.
 
-### I've created a support ticket, it has been 7 business days, and I haven't received an update. Where can I get additional help?
+### I've created a support ticket and I haven't received an update in 7 business days. Where can I get help?
 
 Send an email to **<teamsubm@microsoft.com>** with the following details:
 
@@ -121,16 +137,8 @@ Send an email to **<teamsubm@microsoft.com>** with the following details:
     * Support ticket number
     * Your seller ID
     * A screenshot of the issue (if possible)
-    
-### App category mapping
 
-| Teams Category       | PC Categories  |
-|:---------------------|:---------------|
-| Analytics and BI | Analytics, Data Visualization and BI |
-| Developer and IT | Developer Tools, IT Admin |
-| Education | Education |
-| Human resources | Human Resources and Recruiting |
-| Productivity | Content Management, Files and documents, Productivity, Training and Tutorials, and Utilities |
-| Project management | Communication, Project Management, Workflow, and Business Management |
-| Sales and support | Customer and Contact Management, Customer Support, Financial Management, Sales and Marketing |
-| Social and fun | Image and Video Galleries, Lifestyle, News and Weather, Social, Travel, and Navigation |
+## Next step
+
+> [!div class="nextstepaction"]
+> [Maintain and support your app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)

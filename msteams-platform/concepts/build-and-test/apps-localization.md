@@ -7,15 +7,17 @@ ms.date: 05/15/2018
 ---
 # Localization for Microsoft Teams apps
 
-When localizing your Microsoft Teams app there are three major areas you need to consider.
+When localizing your Microsoft Teams app, you must consider the following:
 
-1. Your AppSource listing (if you're publishing to the app store).
+1. Your Teams store listing (if applicable).
 1. The end-user facing strings in your app manifest (for example bot commands).
 1. Responding to localized text submitted from your users.
 
 ## Localizing your AppSource listing
 
-If you're publishing to the app store, you need to be aware that localizing your AppSource listing is not yet supported. However, in preparation for support for localized listings in the app store you can add additional languages to your listing. Currently only the default (English) language information you provide in [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center) for your listing will appear in the [AppSource website](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) listing for your app.
+If you're publishing to the store, you need to be aware that localizing your AppSource listing is not yet supported. However, in preparation for support for localized listings in the app store you can add additional languages to your listing. Currently only the default (English) language information you provide in [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center) for your listing will appear in the [AppSource website](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) listing for your app.
+
+### Example of configuring localization
 
 To configure an additional language for your app, in [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center), select both English and the additional language of the app. French is used in this example.
 
