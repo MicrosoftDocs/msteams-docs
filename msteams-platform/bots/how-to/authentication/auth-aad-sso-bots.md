@@ -217,6 +217,49 @@ The response with the token is sent through an invoke activity with the same sch
 
 The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable&preserve-view=true) and contains the token that can be further used by your bot. You must store the tokens for performance reasons and refresh them.
 
+### Token exchange failure
+
+In case of token exchange failure, use the following code:
+
+```json
+{​​ "status": "<response code>", "body": {​​ "id":"<unique Id>", "connectionName": "<connection Name on the bot (from the OAuth Card)>", "failureDetail": "<failure reason if status code is not 200, null otherwise>" }​​ }​​
+```
+
+To understand what the bot should do when the token exchange fails to trigger a consent prompt, analyze the following steps:
+
+1. The client starts a conversation with the bot triggering an OAuth scenario.
+2. The bot sends back an OAuth Card to the client.
+3. The client intercepts the OAuth card before displaying it to the user and checks if it contains a `TokenExchangeResource` property.
+4. If the property exists, the client sends a `TokenExchangeInvokeRequest` to the bot. The client must have an exchangeable token for the user, which must be an Azure AD v2 token and whose audience must be the same as `TokenExchangeResource.Uri` property. The client sends an invoke activity to the bot with the following code:
+
+```json
+{
+    "type": "Invoke",
+    "name": "signin/tokenExchange",
+    "value": {
+        "id": "<any unique Id>",
+        "connectionName": "<connection Name on the skill bot (from the OAuth Card)>",
+        "token": "<exchangeable token>"
+    }
+}
+```
+
+5. The bot processes the `TokenExchangeInvokeRequest` and returns a `TokenExchangeInvokeResponse` back to the client. The client should wait till it receives the `TokenExchangeInvokeResponse`.
+
+```json
+{
+    "status": "<response code>",
+    "body": {
+        "id":"<unique Id>",
+        "connectionName": "<connection Name on the skill bot (from the OAuth Card)>",
+        "failureDetail": "<failure reason if status code is not 200, null otherwise>"
+    }
+}
+```
+
+6. If the `TokenExchangeInvokeResponse` has a `status` of `200`, then the client does not show the OAuth card. See the [normal flow image](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction). For any other `status` or if the `TokenExchangeInvokeResponse` is not received, then the client shows the OAuth card to the user. See the [fallback flow image](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction). This ensures that the SSO flow falls back to normal OAuthCard flow in case of any errors or unmet dependencies like user consent.
+
+
 ### Update the auth sample
 
 Open [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) and then complete the following steps to update it:
@@ -237,21 +280,6 @@ Open [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/ma
 2. Update `appsettings.json` to include the `botId`, password, and the connection name defined in [Update the Azure portal with the OAuth connection](#update-the-azure-portal-with-the-oauth-connection).
 3. Update the manifest and ensure that `token.botframework.com` is in the valid domains list. For more information, see [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth).
 4. Zip the manifest with the profile images and install it in Teams.
-
-### Token exchange failure
-
-In case of token exchange failure, use the following code:
-
-{​​ "status": "<response code>", "body": {​​ "id":"<unique Id>", "connectionName": "<connection Name on the bot (from the OAuth Card)>", "failureDetail": "<failure reason if status code is not 200, null otherwise>" }​​ }​​
-
-To understand what the bot should do when the token exchange fails to trigger a consent prompt, analyze the following steps:
-
-1. The client starts a conversation with the bot triggering an OAuth scenario.
-2. The bot sends back an OAuth Card to the client.
-3. The client intercepts the OAuth card before displaying it to the user and checks if it contains a `TokenExchangeResource` property.
-4. If the property exists, the client sends a `TokenExchangeInvokeRequest` to the bot. The client must have an exchangeable token for the user, which must be an Azure AD v2 token and whose audience must be the same as `TokenExchangeResource.Uri` property. The client sends an invoke activity to the bot.
-
-For more information, see [Azure bot service 4.0](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0)
 
 #### Additional code samples
 
