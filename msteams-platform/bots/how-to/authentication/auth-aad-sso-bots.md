@@ -257,7 +257,7 @@ To understand what the bot should do when the token exchange fails to trigger a 
 }
 ```
 
-6. If the `TokenExchangeInvokeResponse` has a `status` of `200`, then the client does not show the OAuth card. See the [normal flow image](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction). For any other `status` or if the `TokenExchangeInvokeResponse` is not received, then the client shows the OAuth card to the user. See the [fallback flow image](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction). This ensures that the SSO flow falls back to normal OAuthCard flow in case of any errors or unmet dependencies like user consent.
+6. If the `TokenExchangeInvokeResponse` has a `status` of `200`, then the client does not show the OAuth card. See the [normal flow image](https://docs.microsoft.com/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). For any other `status` or if the `TokenExchangeInvokeResponse` is not received, then the client shows the OAuth card to the user. See the [fallback flow image](https://docs.microsoft.com/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). This ensures that the SSO flow falls back to normal OAuthCard flow in case of any errors or unmet dependencies like user consent.
 
 
 ### Update the auth sample
