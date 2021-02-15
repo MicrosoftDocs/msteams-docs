@@ -35,7 +35,11 @@ As a developer you must have a basic understanding of the following prerequisite
 * How to create apps in App Studio?
 * How to sideload or upload apps in Teams?
 
+Now you can create or build a scene in the Scene Design Studio using Scene editor, where you can add meeting participants, add background images and align images to the scene.
+
 ## Build a scene using Scene Design Studio
+
+Microsoft offers a tool that helps you build scenes. This tool is available from the [Teams Dev Center](https://dev.teams.microsoft.com/home). To open Scene Design Studio, from the left-hand section, select **Tools** and then select **Scene editor** under **Tools**.
 
 Together Mode allows you to apply different scenes while conducting meetings in a virtual environment.
 
@@ -53,13 +57,13 @@ In the Scene Design Studio, each seat represents an avatar for design purposes. 
 
 ![Build a scene](../assets/images/apps-in-meetings/build-a-scene.png)
 
-After setting-up dev.teams.microsoft.com, complete the following steps to build a scene using the Scene Design Studio:
+Complete the following steps to build a scene using the Scene Design Studio:
 
-1. Select **Scenes Editor** and choose **Create a new scene** to display the Scene Design Studio.
+1. From the **Scenes Editor** page, choose **Create a new scene** to display the Scene Design Studio.
 
 2. Select **Participants** under **Layers** in the upper-right corner.
 
-3. Select the number of participants for this scene from the **Number of participants** box and select **Add**. Once the scene is shipped, the avatar placements are replaced with actual participant video streams.
+3. Select the number of participants for this scene from the **Number of participants** box and select **Add**. After the scene is shipped, the avatar placements are replaced with actual participant video streams.
 
 4. Add background images to the scene using **Add images**. The assets can also be dragged and dropped into the environment as displayed in the following image:
 
@@ -83,7 +87,7 @@ Now that you have built a scene using the Scene Design Studio, you can assemble 
 
 ## Assemble a scene package
 
-A scene package is a collection of images, scene JSON and all assets used to build the scene.
+A scene package is a collection of images, scene JSON and all assets used to build the scene. A scene package is used to build the scene and a scene JSON to indicate the exact position of the seats.
 
 You must have the ability to ship a scene package that includes the following:
 
@@ -95,12 +99,11 @@ You must have the ability to ship a scene package that includes the following:
 
     ![In scene configuration](../assets/images/apps-in-meetings/in-scene-configuration.png)
 
-* **Moving images:** You must be able to support scenes that are in motion to simulate moving objects. A brute force method of doing this is to support gif format in Together Mode. Advanced scene rendering is more like a movie being played.
+* **Moving images:** You must be able to support scenes that are in motion to simulate moving objects. One way of doing this is to support gif format in Together Mode. Advanced scene rendering is more like a movie being played.
 
 * **Visual no-code designer experience:** Snap has made it simple through GUI for users to build their own filters. It is a challenge to ship a scene generic enough for all teachers to use it. At present teachers are able to create custom scenes that serve the purpose.
 
-A scene package is used to build the scene and a scene JSON to indicate the exact position of the seats. In the Scene Design Studio, there is an option to simply get the scene package that is a zip file.
-Use the following scene JSON sample:
+In the Scene Design Studio, there is an option to simply get the scene package that is a zip file. Use the following scene JSON sample:
 
 ![JSON sample](../assets/images/apps-in-meetings/json-sample.png)
 
@@ -115,7 +118,7 @@ Now that you have assembled a scene package, you can create an app package and a
 
 ## Create an app package and use the scene in Teams
 
-An app package contains the scene package. App Studio simplifies app packaging.
+An app package contains the scene package. In other words a scene package is a subset of the app package. App Studio simplifies app packaging.
 
 ![App Studio](../assets/images/apps-in-meetings/app-studio.png)
 
@@ -131,11 +134,11 @@ Complete the following steps to create an app package and use the scene in Teams
 
 5. Sideload this package in Teams.
 
-Now that you have created an app package and used the scene in Teams, you can activate the Together Mode to engage in scenes in the mode.
+Now that you have created an app package and used the scene in Teams, it completes your scene where you integrate it in Teams. Now from an end user perspective, you can activate the Together Mode to engage in scenes in the mode.
 
 ## Activate the Together Mode
 
-Get end-to-end information of how a user engages with scenes in Together Mode. To do this, complete the following steps to choose scenes and activate the Together mode:
+Get end-to-end information of how an end user engages with scenes in Together Mode. To do this, complete the following steps to choose scenes and activate the Together Mode:
 
 1. From the **Gallery** drop-down in the upper-left corner, select **Change scene** to change the default scene. The **Choose a scene** dialog box appears.
 
@@ -149,7 +152,7 @@ Get end-to-end information of how a user engages with scenes in Together Mode. T
 
     ![Scene applied](../assets/images/apps-in-meetings/scene-applied.png)
 
-To use the Together Mode to its fullest, follow these best practices:
+As an end user to use the Together Mode to its fullest, follow these best practices:
 
 * Keep an open mind and encourage your participants to interact more.
 * Request users not to walk around during the session.
