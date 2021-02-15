@@ -21,7 +21,7 @@ Proactive messages are initiated by bots to start conversations with a user. The
 |Ad-hoc proactive message| The bot interjects a message without interrupting the conversation flow.|
 |Dialog-based proactive message | The bot creates a new dialog thread, takes control of a conversation, delivers the proactive message, closes, and returns control to the previous dialog.|
 
-See, [Send proactive notifications to users SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
+See, [Send proactive notifications to users SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true).
 
 ## Proactive app installation in Teams
 
