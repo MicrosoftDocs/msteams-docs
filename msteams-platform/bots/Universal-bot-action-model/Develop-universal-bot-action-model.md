@@ -19,7 +19,7 @@ For more information, see [actionable message documentation](https://docs.micros
 >[!NOTE]
 > If you are already using adaptive cards on Teams with bot, you can use the same bot with a few changes to support `Action.Execute`. If you are using actionable messages on Outlook, you must develop a bot that supports `Action.Execute`.
 
-This document covers the schema used to develop universal bot action model, JSON sample of Action.Execute command, refresh mechanism, adaptiveCard/action invoke activity, and backward compatibility.
+This document covers the schema used to develop universal bot action model, JSON sample of `Action.Execute` command, refresh mechanism, `adaptiveCard/action` invoke activity, and backward compatibility.
 
 ## Schema for universal bot action model
 
@@ -33,7 +33,7 @@ If you use the `refresh` property, use the `Action.Execute` command, and specify
 | Client | Behavior |
 | :-- | :-- |
 | Outlook | Your card stops working. `refresh` is not honored and `Action.Execute` does not render or your card is rejected. |
-| Teams | Your card stops working. `refresh` is not honored, and the `Action.Execute` action does not render depending on the version of the Teams client. To ensure maximum compatibility in Teams, define your `Action.Execute` actions with an `Action.Submit` action in the fallback property. |
+| Teams | Your card stops working. `refresh` is not honored and the `Action.Execute` action does not render depending on the version of the Teams client. To ensure maximum compatibility in Teams, define your `Action.Execute` actions with an `Action.Submit` action in the fallback property. |
 
 For more information, see [backward compatibility](#backward-compatibility).
 
@@ -88,7 +88,7 @@ When authoring adaptive cards, use `Action.Execute` in place of both `Action.Sub
 | verb | string | No | A convenience string used by developer to identify the action. |
 | data | string, object | No | Initial data that input fields are combined with. These are essentially hidden properties. |
 | title | string | No | Label for button or link that represents this action. |
-| iconUrl | uri | No | Optional icon shown on the action along with the title. Supports data URI in adaptive cards version 1.2+. |
+| iconUrl | uri | No | Optional icon shown on the action along with the title. Supports data URI in adaptive cards version 1.2 or higher. |
 | style | ActionStyle | No | Controls the style of an action, which influences how the action is displayed and spoken. |
 | fallback | <action object>, "drop" | No | Describes what to do when `Action.Execute` is not supported by the client displaying the card. |
 | requires | Dictionary<string> | No | A series of key or value pairs indicating features that the item requires depending on minimum version. When a feature is missing or is of a previous version, fallback is triggered. |
@@ -97,7 +97,7 @@ Now that you have identified the `Action.Execute` command and its properties, yo
 
 ## Refresh mechanism
 
-To allow an adaptive card to automatically refresh, define its refresh property, which embeds an action of type `Action.Execute` and a `userIds` array.
+To automatically refresh your adaptive card, define its refresh property, which embeds an action of type `Action.Execute` and a `userIds` array.
 
 | Property | Type | Required | Description |
 | :-- | :-- | :-- | :-- |
@@ -105,7 +105,7 @@ To allow an adaptive card to automatically refresh, define its refresh property,
 | userIds | Array<string> | Yes | An array of `MRIs` of users for whom auto refresh must be enabled. |
 
 >[!IMPORTANT]
-> If the `userIds` list property is not included in the refresh section of the card, the card is not automatically refreshed. Instead, a button is displayed to the user to manually refresh the card. This is because channels in Teams can include a large number of members. If many members are all viewing the channel at the same time, an unconditional automatic refresh would result in many concurrent calls to the bot. To avoid this, the `userIds` property must always be included to identify which users must get an automatic refresh, with a maximum of five user IDs currently being allowed.
+> If the `userIds` list property is not included in the refresh section of the card, the card is not automatically refreshed. Instead, a button is displayed to the user to manually refresh the card. This is because channels in Teams can include a large number of members. If many members are all viewing the channel at the same time, an unconditional automatic refresh would result in many concurrent calls to the bot. To avoid this, the `userIds` property must always be included to identify which users must get an automatic refresh, with a maximum of five user IDs.
 
 >[!NOTE]
 > The `userIds` property is ignored in Outlook, and the refresh property is always automatically honored. There is no scale issue in Outlook because users view the card at different times.
@@ -164,7 +164,7 @@ Now you can work with the `adaptiveCard/action` invoke activity to understand wh
 
 ## `adaptiveCard/action` invoke activity
 
-When an `Action.Execute` is executed in the client whether it is the refresh action or an action explicitly taken by a user by clicking a button, a new type of Invoke activity `adaptiveCard/action` is made to your bot. The following code provides a typical `adaptiveCard/action` invoke activity request:
+When `Action.Execute` is executed whether it is the refresh action or an action taken by selecting a button, a new type of Invoke activity `adaptiveCard/action` is made to your bot. The following code provides a typical `adaptiveCard/action` invoke activity request:
 
 ### Request format
 
@@ -190,11 +190,11 @@ When an `Action.Execute` is executed in the client whether it is the refresh act
 | Field | Description |
 | :-- | :-- |
 | value.action | A copy of the action as defined in the adaptive card. Like with `Action.Submit`, the data property of the action includes the values of the various inputs in the card, if there are any. |
-| value.trigger | Indicates if the action was triggered explicitly by the user clicking a button or implicitly through automatic refresh |
+| value.trigger | Indicates if the action was triggered explicitly by the user selecting a button or implicitly through automatic refresh. |
 
 ### Response format
 
-If the bot processes an incoming `adaptiveCard/action Invoke` activity, the HTTP response's status code returned by the bot must be equal to 200. Also the body of the HTTP response must be formatted as follows:
+If the bot processes an incoming `adaptiveCard/action Invoke` activity, the HTTP response's status code returned by the bot must be equal to 200. Also, the body of the HTTP response must be formatted as follows:
 
 ```json
 {
@@ -206,7 +206,7 @@ If the bot processes an incoming `adaptiveCard/action Invoke` activity, the HTTP
 
 | Field | Description |
 | :-- | :-- |
-| statusCode | An HTTP response status code of 200 does NOT necessarily mean the bot was able to successfully process the request. A client application must always look at the `statusCode` property in the response's body to know how the Bot processed the request. `statusCode` is a number ranging from 200-599 that mirrors HTTP status code values and is meant to be a sub-status for the result of the bot processing the invoke. A missing, null, or undefined value for `statusCode` implies a 200 success. |
+| statusCode | An HTTP response status code of 200 does not necessarily mean the bot was able to successfully process the request. A client application must always look at the `statusCode` property in the response's body to know how the bot processed the request. `statusCode` is a number ranging from 200-599 that mirrors HTTP status code values and is meant to be a sub-status for the result of the bot processing the invoke. A missing, null, or undefined value for `statusCode` implies a 200 success. |
 | type | A set of string constants that describe the expected shape of the value property. |
 | value | An object that is specific to the type of response body. |
 
@@ -219,14 +219,14 @@ Now that you have worked on the `adaptiveCard/action` invoke activity you can de
 The new `Action.Execute` universal action model is a departure from the `Action.Http` model currently used by Outlook actionable messages, where actions are encoded in the adaptive card as explicit HTTP calls. The `Action.Execute` model can be used to implement scenarios for both Outlook and Teams. Actionable message scenarios can either use the `Action.Http` model or the new `Action.Execute` model, but not both. Scenarios that use the universal `Action.Execute` model must be implemented as bots and subscribe to Outlook actionable messages channel.
 
 >[!IMPORTANT]
-> * Scenarios implemented using the universal `Action.Execute` model are not compatible with older versions of Outlook.
+> Scenarios implemented using the universal `Action.Execute` model are not compatible with older versions of Outlook.
 
 ### Teams
 
 For your cards to be backward compatible and work for users on older versions of Teams, your `Action.Execute` actions must include a fallback property defined as an `Action.Submit`. Your bot must be coded in such a way that it can process both `Action.Execute` and `Action.Submit`.
 
 >[!IMPORTANT]
-> * Some older Teams clients do not support fallback property when not wrapped in an `ActionSet`. It is recommended that you wrap all your `Action.Execute` in `ActionSet`.
+> Some older Teams clients do not support fallback property when not wrapped in an `ActionSet`. It is recommended that you wrap all your `Action.Execute` in `ActionSet`.
 
 The version property of the card is set to 1.2 and `Action.Execute` is defined with an `Action.Submit` as its fallback. When rendered in a Teams client that supports Adaptive Cards 1.4, the `Action.Execute` renders and works as expected. In Teams clients that do not support Adaptive Cards 1.4, the `Action.Submit` is rendered in place of `Action.Execute`.
 
