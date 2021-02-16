@@ -25,7 +25,7 @@ See, [Send proactive notifications to users SDK v4](/azure/bot-service/bot-build
 
 ## Proactive app installation in Teams
 
-Before your bot can proactively message a user, it needs to be installed either as a personal app, or in a team where the user is a member. At times,  you may need to proactively message users that have not installed or previously interacted with your app. For instance, the need to message vital information to everyone in your organization. For such scenarios, you can use the Microsoft Graph API to proactively install your bot for your users.
+Before your bot can proactively message a user, it must be installed either as a personal app or in a team where the user is a member. At times, you need to proactively message users that have not installed or previously interacted with your app. For example, the need to message vital information to everyone in your organization. For such scenarios, you can use the Microsoft Graph API to proactively install your bot for your users.
 
 ## Permissions
 
