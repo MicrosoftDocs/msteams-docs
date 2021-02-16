@@ -113,7 +113,7 @@ An uploaded app with a messaging extension automatically appears in the **More o
 ## Add a default install scope and group capability
 
 Although installing an app in the personal scope works for most apps, some of the apps in Teams Store support both personal and team scopes.
-Some of these apps are intended to work in a team or a group chat, with personal app experience being secondary.
+Some of these apps are intended to work in a team, meetings, or a groupchat, with personal app experience being secondary.
 Hence, the default install scope selection helps you to specify the `defaultInstallScope` for the apps that you publish. The app installation experience makes the default options available to the user, while the rest is moved under the chevron as highlighted in the image.
 
 ![Add an app](../../assets/images/compose-extensions/addanapp.png)
@@ -121,8 +121,7 @@ Hence, the default install scope selection helps you to specify the `defaultInst
 The `defaultInstallScope` property supports values, such as personal, team, group chat, or meeting.
 
 > [!NOTE]
->For a successful validation, ensure that all capabilities support the `defaultInstallScope` property. If even one capability fails to support the property, the app behavior will revert to the experience where no default installation scope is provided.
-
+>`defaultGroupCapability` provides the default capability that is added to the team, groupchat, or meeting. Choose a tab, bot, or connector as the default capability for your app, but you must ensure that you have provided the selected capability in your app definition.
 `defaultGroupCapability` defines capabilities that are installed by default. Choose tab, bot, or connector as the default capability of the app for each group scope. The app validation fails if any of the scopes do not support the default capability.
 
 ## Remove or update your app
