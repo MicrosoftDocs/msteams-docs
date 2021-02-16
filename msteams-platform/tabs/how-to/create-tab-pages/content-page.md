@@ -64,7 +64,7 @@ Ensure that the all URL domains used in your tabs are included in the `validDoma
 
 Starting with manifest version 1.7, developers can rearrange all tabs in their personal app. In particular, a developer can move the *bot chat* tab, which always defaults to the first position, anywhere in the personal app tab header. We’ve declared two reserved tab entityId keywords, *conversations* and *about*.
 
-If you create a bot with a “personal” scope, it will show up in the first tab position in a personal app by default. If you wish to move it to another position, you need to add a static tab object to your manifest with the reserved keyword “conversations”. Wherever you add the “conversations” tab in the “staticTabs” array, that’s where the conversation tab will appear on web and desktop. 
+If you create a bot with a *personal* scope, it will show up in the first tab position in a personal app by default. If you wish to move it to another position, you must add a static tab object to your manifest with the reserved keyword, *conversations*. The *conversation* tab appears on web or desktop based on where you add the *conversation* tab in the `staticTabs` array. 
 
 ```json
 {
