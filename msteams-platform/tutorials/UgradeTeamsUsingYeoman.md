@@ -4,8 +4,8 @@ In this tutorial, we will walk you through upgrading your current Microsoft Team
 ```PowerShell
  yo teams --version
 ```
-## Update teams
-The yo command lists out various options ranging from creating project to upate generator , use the below command to select updtae generator
+## Update Teams
+The yo command lists out various options ranging from creating project to updating generator. Use the following command to select update generator:
 ```PowerShell
  yo
 ```
