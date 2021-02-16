@@ -45,7 +45,7 @@ To use these permissions, you must add a [webApplicationInfo](../../resources/sc
 >
 >[!NOTE]
 >
-> * Your bot requires application and not user delegated permissions because the installation is for others.
+> * Your bot requires *application* and not *user delegated* permissions because the installation is for others.
 >
 > * An Azure AD tenant administrator must [explicitly grant permissions to an application](/graph/security-authorization#grant-permissions-to-an-application). After an application is granted permissions, _all_ members of the Azure AD tenant gains the granted permissions.
 
