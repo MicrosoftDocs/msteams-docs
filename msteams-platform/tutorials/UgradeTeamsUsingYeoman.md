@@ -1,5 +1,5 @@
-# Upgrade teams using yeoman generator
-This article helps you to upgrade teams from current version to the latest version
+# Upgrade Teams using Microsoft Teams Yeoman generator
+In this tutorial, we will walk you through upgrading your current Microsoft Teams app version to the latest version using the Microsoft Teams Yeoman generator. 
 ## Get current version of teams
 ```
  yo teams --version
