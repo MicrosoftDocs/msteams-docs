@@ -1,13 +1,13 @@
 ---
 title: Overview of device capabilities
 description:  Overview of native device  capabilities.
-keywords: camera image media microphone qrcode barcode capabilities native device permissions 
+keywords: camera image media microphone qrcode barcode scanner capabilities native device permissions 
 ms.topic: overview
 ---
 
 # Device capabilities 
 
-Microsoft Teams platform is continuously enhancing developer capabilities aligning with built-in first-party experiences. The enhanced Teams platform allows partners to integrate device capabilities, such as camera, photo gallery, microphone, and location, with their web apps. This integration reduces the barrier to app development, speeds-up development-cycle, and creates new scenarios or use-cases for the developer community.
+Microsoft Teams platform is continuously enhancing developer capabilities aligning with built-in first-party experiences. The enhanced Teams platform allows partners to integrate device capabilities, such as camera, photo gallery, microphone, qr or barcode scanner and location, with their web apps. This integration reduces the barrier to app development, speeds-up development-cycle, and creates new scenarios or use-cases for the developer community.
 
 ## Native device capabilities
 
@@ -32,7 +32,8 @@ After getting access to device capabilities,use **Teams media capability APIs** 
 * Record audio through microphone
 * Share the location information
 
-Use **`ScanBarCode` API** to experience the [integration of QRcode or Barcode scanner capability](qr-barcode-scanner-capability.md) using device camera with Teams platform.
+Make your life easier by quickly capturing the product information stored in the form of QR or barcode, using the [QR or barcode scanner capability](qr-barcode-scanner-capability.md) in Teams platform.
+
 
 
 
