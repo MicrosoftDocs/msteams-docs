@@ -111,6 +111,11 @@ Once your page is published, you can explore [turning your Teams app into a more
 
 ![Image of Tabs in Sharepoint](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
 
+## Code sample
+| **Sample name** | **Description** | **SPFx** |
+|-----------------|-----------------|----------|
+| SPFx web part | SPFx web part samples for tabs, channels, and groups. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group/spfx)
+
 ## More information
 
 - [Building Microsoft Teams tab using SharePoint Framework - Tutorial](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)

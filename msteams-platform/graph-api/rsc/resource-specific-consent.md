@@ -143,7 +143,12 @@ Once the app has been installed to a team, you can use [Graph Explorer](https://
 > - Log into **Graph Explorer**.
 > - Make a **GET** call to the following endpoint: `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants`. The clientAppId field in the response will map to the appId specified in the Teams app manifest.
   ![Graph explorer response to GET call.](../../assets/images/graph-permissions.png)
- 
+
+## Code sample
+| **Sample name** | **Description** | **C#** |
+|-----------------|-----------------|----------------|
+| Resource Specific Consent (RSC) | Use RSC to call Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|
+
 ## Test resource-specific consent
  
 > [!div class="nextstepaction"]
@@ -154,3 +159,4 @@ Once the app has been installed to a team, you can use [Graph Explorer](https://
 > [!div class="nextstepaction"]
 > [**Resource-specific consent in Microsoft Teams for admins**](/MicrosoftTeams/resource-specific-consent)
 > 
+
