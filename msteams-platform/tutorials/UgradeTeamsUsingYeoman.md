@@ -9,7 +9,7 @@ The yo command lists out various options ranging from creating project to updati
 ```PowerShell
  yo
 ```
-Use the arrow keys to choose Update Generators
+Use the arrow keys to choose **Update Generators**.
 ![image](https://github.com/divya-akula/msteams-docs/blob/master/msteams-platform/assets/images/Update-Teams/YoSelectUpdateGen.png)
 
 This should listdown all the generators available , you should select a specific generator by using space bar to select and deselect teams from the available options
