@@ -35,7 +35,7 @@ There are two ways to upload your app to Teams:
 
 ## Upload your package into a team or conversation using the Store
 
-1. In the lower left corner of Teams, choose the Store icon. On the Store page, choose "Upload a custom app".
+1. In the lower left corner of Teams, choose the **Store** icon. On the Store page, choose **Upload a custom app**.
 
   ![View team](../../assets/images/store-upload-a-custom-app2.png)
 
@@ -55,7 +55,7 @@ The uploaded package must be available for use in the team or conversation speci
 1. In the target team, choose **More options** (**&#8943;**) and select **Manage team**.
 
    > [!NOTE]
-   > You must be the team owner or the owner must allow users to add the appropriate app types for this functionality to appear.
+   > You must be the team owner or the owner must give access to users to add the appropriate app types for this functionality to appear.
 
 2. Select the **Apps** tab and choose **Upload a custom app** on the lower right.
 
@@ -127,7 +127,7 @@ The `defaultInstallScope` property supports values, such as personal, team, grou
 
 ## Remove or update your app
 
-To remove your app, select the delete icon next to the app name in the View Teams bots list. If you change manifest information, first remove the app and then add the updated package, see [Load your package into a team](#load-your-package-into-teams). Code changes on your service do not require you to upload your manifest again. However, if the code changes require manifest updates, such as changes to the URL or the Microsoft app ID for its bot, you must upload the manifest again.
+To remove your app, select the delete icon next to the app name in the **View Teams** bots list. If you change manifest information, first remove the app and then add the updated package, see [Load your package into a team](#load-your-package-into-teams). Code changes on your service do not require you to upload your manifest again. However, if the code changes require manifest updates, such as changes to the URL or the Microsoft app ID for its bot, you must upload the manifest again.
 
 > [!NOTE]
 > You cannot remove a bot from a personal context entirely. If the bot is removed and added again, additional communication with the bot appends to the previous conversation.
