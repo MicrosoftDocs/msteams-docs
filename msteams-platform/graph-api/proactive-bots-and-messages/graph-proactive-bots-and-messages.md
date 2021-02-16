@@ -63,7 +63,7 @@ To get started, you must need a [bot for Teams](../../bots/how-to/create-a-bot-f
 
 ### ✔ Get the `teamsAppId` for your app
 
-**1.** You must need the `teamsAppId` for the next steps.
+**1.** You need the `teamsAppId` for the next steps.
 
 The `teamsAppId` can be retrieved from your organization's app catalog:
 
@@ -101,7 +101,7 @@ The request must return a `teamsApp`  object. The returned object's `id`  is the
 GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{IdFromManifest}'
 ```
 
-**3.** If your app has already been uploaded/sideloaded for a channel in the team scope, you can retrieve the `teamsAppId` as follows:
+**3.** If your app has already been uploaded or sideloaded for a channel in the team scope, you can retrieve the `teamsAppId` as follows:
 
 **Microsoft Graph page reference:** [List apps in team](/graph/api/team-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
@@ -112,7 +112,7 @@ GET https://graph.microsoft.com/v1.0/teams/{team-id}/installedApps?$expand=teams
 ```
 
 >[!TIP]
-> You can filter on any of the fields of the [**teamsApp**](/graph/api/resources/teamsapp?view=graph-rest-1.0&preserve-view=true) object to narrow the list of results.
+> You can filter on any of the fields of [**teamsApp**](/graph/api/resources/teamsapp?view=graph-rest-1.0&preserve-view=true) object to narrow the list of results.
 
 ### ✔ Determine whether your bot is currently installed for a message recipient
 
