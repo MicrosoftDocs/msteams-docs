@@ -12,7 +12,7 @@ The yo command lists out various options ranging from creating project to updati
 Use the arrow keys to choose **Update Generators**.
 ![image](https://github.com/divya-akula/msteams-docs/blob/master/msteams-platform/assets/images/Update-Teams/YoSelectUpdateGen.png)
 
-This should listdown all the generators available , you should select a specific generator by using space bar to select and deselect teams from the available options
+The list displays all the available generators. To select or unselect Teams version from the available options, use the **space bar** and choose a specific generator.
 ![image](https://github.com/divya-akula/msteams-docs/blob/master/msteams-platform/assets/images/Update-Teams//UseSpaceToSelectGenerators.png)
 
 It takes a while to install teams, may be a few seconds to minutes
