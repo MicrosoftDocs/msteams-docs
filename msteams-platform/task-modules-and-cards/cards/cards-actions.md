@@ -220,7 +220,7 @@ Adaptive Cards support four action types:
 * [Action.OpenUrl](http://adaptivecards.io/explorer/Action.OpenUrl.html)
 * [Action.Submit](http://adaptivecards.io/explorer/Action.Submit.html)
 * [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
-* [Action.Execute](~/bots/Universal-bot-action-model/Develop-universal-bot-action-model.md#action.execute-command)
+* [Action.Execute](~/bots/Universal-bot-action-model/Develop-universal-bot-action-model.md#actionexecute-command)
 
 In addition to the actions mentioned above, you can modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using a `msteams` property in the `data` object of `Action.Submit`. The below sections detail how to use existing Bot Framework actions with Adaptive Cards.
 
