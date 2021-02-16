@@ -5,16 +5,17 @@ ms.topic: how-to
 ms.author: lajanuar
 keywords: teams apps upload
 ---
+
 # Upload an app package to Microsoft Teams
 
-To test your app experience within Microsoft Teams, you need to upload your app to Teams. Uploading adds the app to the team you select, and you and your team members can interact with it like end users.
+To test your app experience within Microsoft Teams, you need to upload your app to Teams. Uploading adds the app to the selected team and all the team members can interact with it like end users.
 
 > [!NOTE]
 > Uploading an updated package for an existing app with a bot might not show tab changes when viewed through the conversations window. You can access the app through the apps fly-out or test in a clean environment.
 
 ## Create your upload package
 
-For development and AppSource, formerly Office Store, submission you must create a package that you can upload. The package must contain the information to describe your experience. The package is a .zip file that contains the application manifest and icons that uniquely define your experience.
+For development and AppSource submission, you must create a package that you can upload. The package must contain the information to describe your experience. The package is a .zip file that contains the application manifest and icons that uniquely define your experience.
 
 To create an upload package, see [Create the package for your Microsoft Teams app](../build-and-test/apps-package.md).
 
@@ -38,7 +39,7 @@ There are two ways to upload your app to Teams:
 
   ![View team](../../assets/images/store-upload-a-custom-app2.png)
 
-2. In the *Open* dialog, navigate to the package you want to upload and choose *Open*.
+2. In the **Open** dialog, navigate to the package you want to upload and choose Open.
 
    ![Add menu](../../assets/images/NewappAddmenudropdown.png)
 
@@ -118,7 +119,7 @@ Hence, the default install scope selection helps you to specify the `defaultInst
 
 ![Add an app](../../assets/images/compose-extensions/addanapp.png)
 
-The `defaultInstallScope` property supports values, such as personal, team, group chat, or meeting.
+The `defaultInstallScope` property supports values, such as personal, team, groupchat, or meeting.
 
 > [!NOTE]
 >`defaultGroupCapability` provides the default capability that is added to the team, groupchat, or meeting. Choose a tab, bot, or connector as the default capability for your app, but you must ensure that you have provided the selected capability in your app definition.
