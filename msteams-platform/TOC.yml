@@ -74,7 +74,7 @@
       href: concepts/device-capabilities/native-device-permissions.md
     - name: Integrate media capabilities
       href: concepts/device-capabilities/mobile-camera-image-permissions.md
-    - name: Integrate media capabilities
+    - name: Integrate qr-barcode-scanner-capability
       href: concepts/device-capabilities/qr-barcode-scanner-capability.md
 - name: Design your app
   items:
