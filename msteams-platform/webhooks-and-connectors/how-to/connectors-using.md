@@ -1,6 +1,7 @@
 ---
 title: Sending messages to Connectors and Webhooks
 description: Describes how to use Office 365 Connectors in Microsoft Teams
+ms.topic: how-to
 localization_priority: Priority
 keywords: teams o365 connector
 ---
@@ -248,7 +249,7 @@ The following manifest.json file contains the basic elements needed to test and 
             "body":[
                 {
                 "type": "TextBlock",
-                "text": "For Samples and Templates, see [https://adaptivecards.io/samples](https://adaptivecards.io/samples)",
+                "text": "For Samples and Templates, see [https://adaptivecards.io/samples](https://adaptivecards.io/samples)"
                 }
             ]
          }

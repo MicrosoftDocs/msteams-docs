@@ -20,34 +20,18 @@
     href: build-your-first-app/build-bot.md
   - name: Create a messaging extension
     href: build-your-first-app/build-messaging-extension.md
-- name: Tutorials and samples
+- name: Tutorials and code samples
   items:
-  - name: Overview
+  - name: Tutorials
     href: tutorials/code-samples.md   
   - name: Create an app using C#
     href: tutorials/get-started-dotnet-app-studio.md
   - name: Create an app using Node.js
     href: tutorials/get-started-nodejs-app-studio.md
-  - name: Create an app using the Yeoman Generator
+  - name: Create an app using the Yeoman generator
     href: tutorials/get-started-yeoman.md
-  - name: Bot samples
-    items:
-    - name: Chatbot with C# (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot
-    - name: Chatbot with Node.js (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot
-    - name: Chatbot with Python (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot
-  - name: Messaging extension samples
-    items:
-    - name: Action commands with C# (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action
-    - name: Action commands with Node.js (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action
-    - name: Search commands with C# (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search
-    - name: Search commands with Node.js (GitHub)
-      href: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search
+  - name: Code samples
+    href: https://github.com/OfficeDev/Microsoft-Teams-Samples
 - name: App fundamentals
   items:
   - name: Teams app capabilities
@@ -70,7 +54,7 @@
       href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
     - name: Create a Virtual Assistant
       href: samples/virtual-assistant.md 
-  - name: Production-ready app templates
+  - name: App templates for Microsoft Teams
     href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
     href: samples/shifts-wfm-connectors.md
@@ -84,9 +68,11 @@
     href: concepts/build-and-test/deep-links.md
   - name: Device capabilities
     items:
+    - name: Overview
+      href: concepts/device-capabilities/device-capabilities-overview.md
     - name: Request device permissions
       href: concepts/device-capabilities/native-device-permissions.md
-    - name: Using the camera and photo gallery
+    - name: Integrate media capabilities
       href: concepts/device-capabilities/mobile-camera-image-permissions.md
 - name: Design your app
   items:
@@ -122,7 +108,7 @@
     href: toolkit/visual-studio-code-overview.md
   - name: Teams Toolkit for Visual Studio
     href: toolkit/visual-studio-overview.md
-  - name: Yeoman Generator for Teams (GitHub)
+  - name: Yeoman generator for Teams (GitHub)
     href: https://github.com/pnp/generator-teams
   - name: App Studio
     href: concepts/build-and-test/app-studio-overview.md
@@ -182,6 +168,8 @@
   items:
   - name: Overview
     href: tabs/what-are-tabs.md
+  - name: Tab requirements
+    href: tabs/how-to/tab-requirements.md
   - name: Quickstarts
     items:
     - name: Personal tab with Node.js
@@ -228,6 +216,8 @@
       href: bots/how-to/update-and-delete-bot-messages.md     
   - name: Get context for your bot
     href: bots/how-to/get-teams-context.md
+  - name: Send and receive files
+    href: bots/how-to/bots-filesv4.md
   - name: Handling bot rate limiting
     href: bots/how-to/rate-limit.md
   - name: Calling and meeting bots
@@ -330,6 +320,8 @@
       href: bots/how-to/authentication/auth-flow-bot.md
     - name: Add authentication to your bot
       href: bots/how-to/authentication/add-authentication.md
+    - name: Use SSO authentication
+      href: bots/how-to/authentication/auth-aad-sso-bots.md
   - name: Messaging extensions
     href: messaging-extensions/how-to/add-authentication.md
 - name: Utilize Teams data with Microsoft Graph

@@ -1,6 +1,7 @@
 ---
 title: Distribute your app
 description: Describes the three options for distributing your app`
+ms.topic: conceptual
 keywords: teams publish store office distribute AppSource sideload upload app
 ---
 # Distribute your Microsoft Teams app

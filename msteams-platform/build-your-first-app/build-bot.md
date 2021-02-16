@@ -129,6 +129,7 @@ It's important to understand that this isn't the same as a channel in Teams. In 
 
 * [See what else Teams bots can do with one of our samples](https://github.com/microsoft/BotBuilder-Samples#teams-samples)
 * [Bot conversation basics](../bots/how-to/conversations/conversation-basics.md)
+* Follow our [design guidelines](../bots/design/bots.md) and build with [production-ready UI templates](../concepts/design/design-teams-app-ui-templates.md) to create a seamless experience.
 * [Bot authentication in Teams](../bots/how-to/authentication/auth-flow-bot.md)
 * [Microsoft Bot Framework](https://dev.botframework.com/)
-* [Create a bot without the toolkit](../bots/how-to/create-a-bot-for-teams.md)
+* [Create a bot without the toolkit](../resources/bot-v3/bots-create.md)

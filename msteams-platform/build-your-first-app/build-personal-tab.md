@@ -142,7 +142,7 @@ In the `render()` function, store the state provided by the theme change handler
 After storing the state provided by the theme change handler, provide some conditional logic to render your tab's styles based on the current theme. The following example shows a basic way to do this:
 1. Check the current theme in `isTheme`.
 2. Create a `newTheme` object with CSS properties relevant to the current theme.
-3. Apply the CSS to your tab content's root HTML element (`<div>`).
+3. Apply the CSS to your tab content's root HTML element (`<div style={newTheme}>`).
 
 ```JavaScript
 let newTheme
@@ -170,12 +170,11 @@ Congratulations! You have a Teams app with a personal tab that makes it easier t
 
 ## Learn more
 
-* [Authenticate tab users with SSO](../tabs/how-to/authentication/auth-aad-sso.md): If you only want authorized users viewing your tab, set up single sign-on (SSO) through Azure Active Directory (AD).
-* [Embed content from an existing web app or webpage](../tabs/how-to/tab-requirements.md): We showed you how to create new content for a personal tab, but you can also load content from an external URL.
-* [Create a seamless experience for your tab](../tabs/design/tabs.md): See the recommended guidelines for designing Teams tabs.
-* [Build tabs for mobile](../tabs/design/tabs-mobile.md): Understand how to develop tabs for phones and tablets.
-* [Utilize Teams data with Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview)
-* [Create a tab without the toolkit](../tabs/quickstarts/create-channel-group-tab-node-yeoman.md)
+* Follow our [design guidelines](../tabs/design/tabs.md) and build with [production-ready UI templates](../concepts/design/design-teams-app-ui-templates.md) to create a seamless experience.
+* Understand [mobile considerations](../tabs/design/tabs-mobile.md) for tabs.
+* [Add SSO authentication to your tab](../tabs/how-to/authentication/auth-aad-sso.md).
+* Utilize Teams data with [Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview).
+* [Create a tab without the toolkit](../tabs/quickstarts/create-personal-tab-node-yeoman.md).
 
 ## Next lesson
 

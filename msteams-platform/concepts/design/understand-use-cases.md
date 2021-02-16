@@ -1,7 +1,7 @@
 ---
 title: Understand your use cases
 author: clearab
-description: Decide how to distribute your app
+description: Understand your use cases
 ms.topic: conceptual
 ms.author: anclear
 ---
@@ -42,7 +42,7 @@ Above all else, remember that nobody likes spam. Blasting away with personal and
 ## Next steps
 
 * [Map your use cases to functionality](~/concepts/design/map-use-cases.md)
-* [Choose how to distribute your app](~/concepts/deploy-and-publish/apps-publish.md)
+* [Choose how to distribute your app](../deploy-and-publish/overview.md)
 
 ## Learn More
 

@@ -1,6 +1,7 @@
 ---
-title: Submission checklist 
+title: Store submission checklist
 description: The checklist to use before publishing your Microsoft Teams app to AppSource
+ms.topic: reference
 keywords: teams publish store office publishing checklist submission Teams apps appsource validation
 ---
 # Prepare for AppSource submission  
@@ -30,7 +31,7 @@ The app validation tool consists of an [app validator](#teams-app-validator) and
 >
 > * [**App Validator homepage**](https://dev.teams.microsoft.com/appvalidation.html)
 > * [**Teams Visual Studio Code toolkit**](/toolkit/visual-studio-code-overview.md)
-> * [**App Studio**](/concepts/build-and-test/app-studio-overview.md)
+> * [**App Studio**](../../../build-and-test/app-studio-overview.md)
 
 ### Teams app validator
 

@@ -1,6 +1,7 @@
 ---
 title: Prepare your Microsoft 365 tenant
 description: How to get started with Teams in Microsoft 365
+ms.topic: how-to
 keywords: Configure Microsoft 365 tenant Teams uploading
 ---
 # Prepare your Microsoft 365 tenant
@@ -41,6 +42,8 @@ Turn on custom app sideloading for your developer tenant as follows:
 ![turn on sideload view](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
 
 4. Toggle **upload custom apps** to the **on** position.
+
+5. Select **Save** to save the changes.
 
 That's it! Your test tenant will now allow custom app sideloading.
 
