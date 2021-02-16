@@ -172,7 +172,7 @@ tools:
     - title: JavaScript client SDK for tabs and other hosted experiences
       # imageSrc should be square in ratio with no whitespace
       imageSrc: ./assets/icons/logo_js.png
-      url: /javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest
+      url: /microsoftteams/platform/tabs/how-to/using-teams-client-sdk
     # Card
     - title: Node.js Bot Framework SDK for bots and messaging extensions
       imageSrc: ./assets/icons/logo_nodejs.png
