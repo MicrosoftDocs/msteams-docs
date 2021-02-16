@@ -17,7 +17,7 @@ This should listdown all the generators available , you should select a specific
 
 It takes a while to install teams, may be a few seconds to minutes
 
-Once the installation is complete , you can use the below command to check the version
+After the installation is complete, use the following command to check the installed version:
 
 ```PowerShell
 yo teams --version
