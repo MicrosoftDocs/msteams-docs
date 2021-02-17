@@ -203,7 +203,7 @@ See comprehensive [bot design guidelines](~/bots/design/bots.md).
 
 ### 6.2 Bot welcome messages
 
-Bots should almost always send first-run welcome messages. For the best experience, the message should include the value proposition of your bot, how to configure the bot, and briefly describe all supported bot commands. You can display the messaging using an Adaptive Card with buttons for better readability. [How to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md).
+Bots should almost always send first-run welcome messages. For the best experience, the message should include the value proposition of your bot, how to configure the bot, and briefly describe all supported bot commands. You can display the messaging using an Adaptive Card with buttons for better usability. [How to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md).
 
 Channel bot welcome messages are optional during first run, especially if bot is available in personal scope performing similar actions. This bot must not send a personal message to all members of the team or channel as that will be considered as spamming. The welcome message should also mention the person who installed/added the bot to the channel.
 
