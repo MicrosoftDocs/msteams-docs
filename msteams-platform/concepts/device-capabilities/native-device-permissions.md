@@ -180,7 +180,7 @@ Device permissions are stored for every login session. It means that if you sign
 > [!NOTE]
 > When you consent to the native device permissions, it is valid only for your _current_ login session.
 
-## Next step
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
