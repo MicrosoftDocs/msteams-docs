@@ -43,13 +43,13 @@ The `ScanBarCode` API invokes scanner control that enables the user to scan diff
 To customize the barcode scanning experience, optional barcode configuration is passed as input to `ScanBarCode` API. You can specify the scan time-out interval in seconds using **timeOutIntervalInSec**. Its default value is 30 seconds and the maximum value is 60 seconds.
 
 The **scanBarCode()** API supports the following barcode types:
-Barcode Type | Supported on Android | Supported on iOS
+| Barcode Type | Supported on Android | Supported on iOS |
 | -- | -- | -- |
-|Aztec | No | No
+|Aztec | No | No |
 |Codebar | Yes | No |
 |Code 39 | Yes | Yes | 
 |Code 93 | Yes | Yes |
-|Code 128 | Yes | Yes|
+|Code 128 | Yes | Yes |
 |Data Matrix | No | No |
 |EAN-13 | Yes | Yes |
 |EAN-8 | Yes | Yes |
