@@ -189,7 +189,6 @@ A full width Adaptive Card appears as follows:
 If you have not set the `width` property to *Full*, then the default view of the Adaptive Card is as follows:
 ![Small width Adaptive Card view](../../assets/images/cards/small-width-adaptive-card.png)
 
-
 # [**Markdown formatting: O365 Connector Cards**](#tab/connector-md)
 
 Connector cards support limited Markdown and HTML formatting. HTML support is described in the last section.
