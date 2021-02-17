@@ -77,6 +77,7 @@ Virtual Assistant is a Microsoft open-source template that enables you to create
 |[Power Virtual Agents for App Makers and Developers](/learn/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)
 
 ### ✔ Project Oakdale (preview)
+
 > ![NOTE]
 > Project **Oakdale** is renamed to project **Dataverse for Teams**.
 
