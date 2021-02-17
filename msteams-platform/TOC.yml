@@ -103,11 +103,7 @@
   - name: Personal apps
     href: concepts/design/personal-apps.md
   - name: Tabs
-    items: 
-    - name: Desktop and web
-      href: tabs/design/tabs.md
-    - name: Mobile
-      href: tabs/design/tabs-mobile.md
+    href: tabs/design/tabs.md
   - name: Messaging extensions
     href: messaging-extensions/design/messaging-extension-design.md  
   - name: Bots
