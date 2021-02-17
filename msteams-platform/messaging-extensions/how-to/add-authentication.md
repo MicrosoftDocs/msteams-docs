@@ -129,7 +129,7 @@ At this point, the window closes and control is passed to the Teams client. The 
 ```
 
 ## Code sample
-|**Sample name** | **Description** |**NETCore** | **JavaScript**|
+|**Sample name** | **Description** |**.NETCore** | **JavaScript**|
 |----------------|-----------------|--------------|----------------|
 |Messaging extensions - auth and config | A Messaging Extension that has a configuration page, accepts search requests, and returns results after the user has signed in. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
 
