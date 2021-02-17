@@ -68,14 +68,14 @@ You can continue to use this terminal window to run the commands that follow in 
 
 ### Download the sample
 
-We have provided a simple [Hello, World!](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) sample to get you started. In a terminal window, run the following command to clone the sample repository to your local machine:
+We have provided a simple [Hello, World!](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/nodejs) sample to get you started. In a terminal window, run the following command to clone the sample repository to your local machine:
 
 ```bash
-git clone https://github.com/OfficeDev/msteams-samples-hello-world-nodejs.git
+git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 ```
 
 > [!TIP]
-> You can [fork](https://help.github.com/articles/fork-a-repo/) this [repo](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) if you want to modify and check in your changes to your GitHub repo for future reference.
+> You can [fork](https://help.github.com/articles/fork-a-repo/) this [repo](https://github.com/OfficeDev/Microsoft-Teams-Samples) if you want to modify and check in your changes to your GitHub repo for future reference.
 
 <a name="BuildRun"></a>
 
@@ -84,7 +84,7 @@ git clone https://github.com/OfficeDev/msteams-samples-hello-world-nodejs.git
 Once the repo is cloned, change to the directory that holds the sample:
 
 ```bash
-cd msteams-samples-hello-world-nodejs
+cd Microsoft-Teams-Samples/samples/app-hello-world/nodejs/
 ```
 
 In order to build the sample, you need to install all its dependencies. Run the following command to do this:
