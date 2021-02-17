@@ -230,10 +230,10 @@ With HTML/JavaScript-based task modules it is your responsibility to ensure your
 
 Microsoft Teams will ensure that keyboard navigation works properly from the task module header into your HTML and vice-versa.
 
-## Task module samples
-
-* [Node.js/TypeScript sample](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs)
-* [C#/.NET sample](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp)
+## Code sample
+|**Sample name** | **Description** |**C#** | **Node.js**|
+|----------------|-----------------|--------------|----------------|
+|Task module sample | Samples for creating task modules. |[View](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp)|[View](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs)| 
 
 > [!div class="nextstepaction"]
 > [Learn  more: Request device permissions](../concepts/device-capabilities/native-device-permissions.md)
