@@ -73,6 +73,12 @@ Personal apps can include a bot for one-on-one conversations and private notific
 |B|**Bot message**: Bots often send messages and notifications in the form of a card (such as an Adaptive Card).|
 |C|**Compose box**: Input field for sending messages to the bot.|
 
+## Manage a personal tab
+
+On the left side of Teams, users can right click the personal app to pin, remove, and configure other app options.
+
+:::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="Example shows options for managing a personal app." border="false":::
+
 ## Best practices
 
 ### Tab priority
@@ -150,12 +156,6 @@ Your app should focus on core tasks in Teams, but you can still view the full, s
 Unless you created your app specifically for Teams, you probably have features that don’t make sense in a collaboration tool.
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="Example shows a personal app best practice." border="false":::
-
-## Manage a personal tab
-
-On the left side of Teams, users can right click the personal app to pin, remove, and configure other app options.
-
-:::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="Example shows options for managing a personal app." border="false":::
 
 ## Learn more
 

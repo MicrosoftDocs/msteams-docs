@@ -1,11 +1,11 @@
 ---
-title: Designing your tab for desktop and web
+title: Designing tabs for desktop and web
 description: Learn how to design a Teams tab (desktop and web) and get the Microsoft Teams UI Kit.
 author: heath-hamilton
 ms.topic: conceptual
 ms.author: lajanuar
 ---
-# Designing your tab for Microsoft Teams desktop and web
+# Designing tabs for Microsoft Teams
 
 A tab is a large canvas for your content. To guide your app design, the following information describes and illustrates how people can add, use, and manage tabs in Teams.
 
@@ -32,13 +32,13 @@ The following example shows how a tab is added in a channel.
 
 There's a short setup process to add an app as a channel, chat, or meeting tab. The experience is largely up to you. For example, you could have a description of how to use the app and some optional settings. Include a sign-in step here if you need to authenticate users.
 
-### Tab configuration modal
+### Tab configuration dialog
 
-:::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="Example shows a tab configuration modal." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="Example shows a tab configuration dialog." border="false":::
 
-### Anatomy: Tab configuration modal
+### Anatomy: Tab configuration dialog
 
-:::image type="content" source="../../assets/images/tabs/test.png" alt-text="Illustration showing the UI anatomy of a tab configuration modal." border="false":::
+:::image type="content" source="../../assets/images/tabs/test.png" alt-text="Illustration showing the UI anatomy of a tab configuration dialog." border="false":::
 
 |Counter|Description|
 |----------|-----------|
@@ -69,7 +69,15 @@ Use one of the following Teams UI templates to help design your tab setup experi
 
 Tabs provide a full-screen web experience in Teams where you can display collaborative content—such task boards and dashboards—and important information.
 
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="Example shows a tab with a task board." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/tabs/mobile-tab.png" alt-text="Illustration showing a Teams mobile tab." border="false":::
+
+---
 
 ### Anatomy: Tab
 
@@ -135,6 +143,28 @@ Notify users of tab activity one of the following ways:
 
 * **Bot**: This method is preferred especially if the tab thread is targeted. The tab’s threaded conversation is moved into view as recently active. This method also allows for some sophistication in how the notification is sent.
 * **Message**: A message shows up in the user’s activity feed with a [deep link to the tab](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true).
+
+## Mobile considerations
+
+On mobile, tab content takes up all of the screen besides the main Teams navigation.
+
+### Single canvas layout
+
+This is one large area where work gets done. The Teams Wiki app follows this pattern. If you have an app that doesn’t separate content into smaller components this would be a good fit.
+
+:::image type="content" source="../../assets/images/tabs/mobile-tab-single-canvas.png" alt-text="Illustration showing a Teams mobile single canvas tab." border="false":::
+
+### List layout
+
+Lists are great for sorting and filtering large quantities of data and are great at keeping the most important things at the top. It is helpful to use sortable columns. Actions can be added to each list item under the ellipsis menu.
+
+:::image type="content" source="../../assets/images/tabs/mobile-tab-list.png" alt-text="Illustration showing a Teams mobile list tab." border="false":::
+
+### Grid layout
+
+Grids are useful for showing elements which are highly visual. It helps to include a filter or search control at the top.
+
+:::image type="content" source="../../assets/images/tabs/mobile-tab-grid.png" alt-text="Illustration showing a Teams mobile tab with a grid layout." border="false":::
 
 ## Best practices
 
