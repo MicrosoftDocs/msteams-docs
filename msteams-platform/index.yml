@@ -75,7 +75,7 @@ conceptualContent:
           text: Map use cases to Microsoft Teams capabilities
         - url: /microsoftteams/platform/tutorials/get-started-nodejs-app-studio
           itemType: how-to-guide
-          text: Build a Teams app using JavaScript/Node.js and App Studio
+          text: Build a Teams app using Node.js
         - url: /microsoftteams/platform/tutorials/get-started-dotnet-app-studio
           itemType: how-to-guide
           text: Build a Teams app using C#/.NET and App Studio
